@@ -289,7 +289,7 @@ The settings below influence the behavior of the Mendix web client.
 
 ## Metrics Settings{#metrics-settings}
 
-The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide10/metrics/) for more information and the specification of the settings format. 
+The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide10/metrics/) for more information and the specification of the settings format.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -314,8 +314,8 @@ These settings can be set either as JVM properties or as custom Runtime settings
 | --- | --- | --- |
 | <a id="httpproxyHost" href="#httpproxyHost">http.proxyHost</a> | Defines the hostname of the HTTP proxy server. | |
 | <a id="httpproxyPort" href="#httpproxyPort">http.proxyPort</a> | Defines the port number of the HTTP proxy server. | |
-| <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | | 
-| <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | | 
+| <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | |
+| <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | |
 
 {{% alert color="info" %}}
 The `http.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
@@ -333,9 +333,9 @@ These settings have to be set as JVM properties, not as custom runtime settings.
 | --- | --- | --- |
 | <a id="httpsproxyHost" href="#httpsproxyHost">https.proxyHost</a> | Defines the hostname of the HTTPS proxy server. | |
 | <a id="httpsproxyPort" href="#httpsproxyPort">https.proxyPort</a> | Defines the port number of the HTTPS proxy server. | |
-| <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | | 
-| <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | | 
-| <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | Defines a list of hosts that should be reached directly, bypassing the proxy. This is a list of host names separated by '&#x007C;'. | | 
+| <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | |
+| <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | |
+| <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | Defines a list of hosts that should be reached directly, bypassing the proxy. This is a list of host names separated by '&#x007C;'. | |
 
 {{% alert color="info" %}}
 The `https.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.

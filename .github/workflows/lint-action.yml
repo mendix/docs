@@ -20,12 +20,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repo
-        uses: actions/checkout@v4
-      # Installs NodeJS v20 in runner environment (upgraded from v16 in Feb 2024)
+        uses: actions/checkout@v6
+      # Installs NodeJS v24 in runner environment (upgraded from v20 in Jun 2026)
       - name: Install NodeJS
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '20'
+          node-version: '24'
       # Installs linting tool via npm
       # Look at using the related GitHub action here: https://github.com/DavidAnson/markdownlint-cli2-action
       - name: Install markdown linter
@@ -44,9 +44,9 @@ jobs:
           echo "VER<<EOF" >> $GITHUB_ENV
           echo "$VER" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      # Creates PR for linted content changes - needs version > 4 for NodeJS 20
+      # Creates PR for linted content changes - needs version > 6 for NodeJS 24
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: Run markdownlint-cli2 on docs to find (and correct) linting errors. 
           title: '[Auto] Lint docs'

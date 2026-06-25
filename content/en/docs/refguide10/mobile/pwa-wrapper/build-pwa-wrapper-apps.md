@@ -126,9 +126,9 @@ On Windows, PWA Wrapper can prepare the iOS bundle but not complete the final si
 
 On Windows, use the same steps 1 through 7 as in [Steps for iOS on macOS](#steps-on-mac), then continue as follows:
 
-8. Open the output folder and locate the portable signing ZIP.
-9. Copy the portable signing ZIP to a Mac.
-10. Complete the final signing step on macOS as described in [Complete Signing on macOS](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#complete-signing-on-macos) in *Sign PWA Wrapper Apps*.
+1. Open the output folder and locate the portable signing ZIP.
+2. Copy the portable signing ZIP to a Mac.
+3. Complete the final signing step on macOS as described in [Complete Signing on macOS](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#complete-signing-on-macos) in *Sign PWA Wrapper Apps*.
 
 ### iOS Notes
 

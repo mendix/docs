@@ -21,7 +21,7 @@ Amazon Bedrock is a fully managed service that makes foundation models (FMs) fro
 * Generating images based on text prompts and displaying them in the Mendix app.
 * Generating embedding vectors for text inputs.
 
-Typical use cases for generative AI are described in the [Typical LLM Use Cases](/appstore/modules/genai/get-started/#llm-use-cases).
+Typical use cases for generative AI are described in the [Typical LLM Use Cases](/agents/get-started/#llm-use-cases).
 
 ### Prerequisites {#prerequisites}
 
@@ -107,7 +107,8 @@ Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and 
 
 ### Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. The most important actions are available in the toolbox or in the [GenAI Commons](/appstore/modules/genai/genai-for-mx/commons/#microflows) module.
+After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. The most important actions are available in the toolbox or in the [GenAI Commons](/agents/genai-for-mx/commons/#microflows) module.
+
 The **USE_ME** folder contains several subfolders containing operations. The following example microflows have been created for each of these inside the **ExampleImplementations** folder:
 
 * EXAMPLE_ChatCompletions_FunctionCalling
@@ -146,7 +147,7 @@ You can follow a similar approach to implement any of the other operations in **
 
 ### Chatting with Large Language Models using the ChatCompletions Operation
 
-A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The **ChatCompletions (without history / with history)** operations offer an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operations are built on top of Bedrock's Converse API, allowing you to talk to different models without the need of a model-specific implementation. For more information on the ChatCompletion operations, see [GenAI Commons: Chat Completions](/appstore/modules/genai/genai-for-mx/commons/#genai-generate).
+A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The **ChatCompletions (without history / with history)** operations offer an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operations are built on top of Bedrock's Converse API, allowing you to talk to different models without the need of a model-specific implementation. For more information on the ChatCompletion operations, see [GenAI Commons: Chat Completions](/agents/genai-for-mx/commons/#genai-generate).
 
 For an overview of supported models and model-specific capabilities and limitations, see [Amazon Bedrock Converse API](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS documentation.
 
@@ -173,7 +174,7 @@ You can find several implementation examples for the ChatCompletions operations 
 
 ### Advanced: Invoking Specific Models by Using the InvokeModel Operation
 
-If you need Bedrock specific capabilities that you cannot execute through the normal [GenAI Commons](/appstore/modules/genai/) operations, you can use the operations inside the **Amazon Bedrock** sections. In most cases, the standard procedures outlined in *GenAI Commons Operations* should be sufficient to address your needs. You can use most text models with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS Bedrock documentation.
+If you need Bedrock specific capabilities that you cannot execute through the normal [GenAI Commons](/agents/) operations, you can use the operations inside the **Amazon Bedrock** sections. In most cases, the standard procedures outlined in *GenAI Commons Operations* should be sufficient to address your needs. You can use most text models with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS Bedrock documentation.
 
 To invoke a specific model that is not covered by the ChatCompletions operation, you can make use of the **Invoke Model** operation by performing the following steps:
 
@@ -192,7 +193,7 @@ To invoke a specific model that is not covered by the ChatCompletions operation,
     The export mapping creates a JSON from the request-related objects (specific to the model that you want to invoke). The JSON must be added as the request body of the `InvokeModelRequest` object provided as input parameter to the **Invoke Model** operation. The import mapping maps the response returned by the **Invoke Model** operation to your model-specific response objects. To create import or export mappings, perform the following steps:
     1. Right-click the target folder.
     2. Click **Add other** > **Import/Export mapping**.
-    3. In the dialogue window, select the **Schema source**.
+    3. In the dialog box, select the **Schema source**.
     4. Click **JSON structure** and select the appropriate request/response JSON structure.
     5. Select the relevant schema elements.
     6. Click **OK**.
@@ -226,14 +227,13 @@ To invoke a Bedrock agent for your Mendix app, do the following steps:
 
 ### Token Usage {#tokenusage}
  
-[Token usage](/appstore/modules/genai/genai-for-mx/commons/#token-usage) monitoring is now possible for the following operations: 
+[Token usage](/agents/genai-for-mx/commons/#token-usage) monitoring is now possible for the following operations: 
 
 * Chat Completions with History
 * Chat Completion without History
 * Embeddings with Cohere Embed
-* Embeddings with Amazon Titan Embeddings
 
-For more information about using this feature, refer to the [GenAI commons documentation](/appstore/modules/genai/genai-for-mx/commons/#token-usage).
+For more information about using this feature, refer to the [GenAI commons documentation](/agents/genai-for-mx/commons/#token-usage).
 
 ## Technical Reference {#technical-reference}
 
@@ -252,30 +252,30 @@ For additional information about available operations, refer to the sections bel
 
 #### ChatCompletions (With History) and ChatCompletions (Without History) {#chat-completions}
 
-The [ChatCompletions (with history)](/appstore/modules/genai/genai-for-mx/commons/#chat-completions-with-history) and [ChatCompletions (without history)](/appstore/modules/genai/genai-for-mx/commons/#chat-completions-without-history) activities can be used with a variety of supported LLMs.
+The [ChatCompletions (with history)](/agents/genai-for-mx/commons/#chat-completions-with-history) and [ChatCompletions (without history)](/agents/genai-for-mx/commons/#chat-completions-without-history) activities can be used with a variety of supported LLMs.
 
 Some capabilities of the chat completions operations are currently only available for specific models:
 
-* **Function Calling** - You can use function calling in all chat completions operations. To do this, use a [supported model](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html) by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-for-mx/commons/#add-function-to-request) operation. You can also first retrieve data from a knowledge base and then call `ChatCompletions` with the information required using the connector's function calling properties. In order to use a function calling pattern with knowledge bases, add a knowledge base to your Request using [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request). Here the collection identifier that needs to be passed is the `KnowledgeBaseID`.
-For additional general information about function calling, see [Function Calling](/appstore/modules/genai/function-calling/). 
+* **Function Calling** - You can use function calling in all chat completions operations. To do this, use a [supported model](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html) by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/agents/genai-for-mx/commons/#add-function-to-request) operation. You can also first retrieve data from a knowledge base and then call `ChatCompletions` with the information required using the connector's function calling properties. In order to use a function calling pattern with knowledge bases, add a knowledge base to your Request using [Tools: Add Knowledge Base](/agents/genai-for-mx/commons/#add-knowledge-base-to-request). Here the collection identifier that needs to be passed is the `KnowledgeBaseID`.
+For additional general information about function calling, see [Function Calling](/agents/function-calling/). 
 
 **Function calling microflows**: A microflow used as a tool for function calling must satisfy the following conditions:
 
 1. At least one of the following:
 
    * Either none, one, or multiple primitive input parameters (such as Boolean, Datetime, Decimal, Enumeration, Integer and String)
-   * [Request](/appstore/modules/genai/genai-for-mx/commons/#request) object
-   * [Tool](/appstore/modules/genai/genai-for-mx/commons/#tool) object
+   * [Request](/agents/genai-for-mx/commons/#request) object
+   * [Tool](/agents/genai-for-mx/commons/#tool) object
 
 2. Return value of the type String.
 
-* **Vision** - This operation supports the *vision* capability for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` to the `Message` using the [Files: Initialize Collection with File](/appstore/modules/genai/genai-for-mx/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/genai-for-mx/commons/#add-file-to-collection) operation. Make sure to set the `FileType` attribute to **image**.
+* **Vision** - This operation supports the *vision* capability for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` to the `Message` using the [Files: Initialize Collection with File](/agents/genai-for-mx/commons/#initialize-filecollection) or the [Files: Add to Collection](/agents/genai-for-mx/commons/#add-file-to-collection) operation. Make sure to set the `FileType` attribute to **image**.
 
-* **Document Chat** - This operation supports the ability to chat with documents for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). To send a document to the model add a `FileCollection` with a `System.FileDocument` to the `Message` using the [Files: Initialize Collection with File](/appstore/modules/genai/genai-for-mx/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/genai-for-mx/commons/#add-file-to-collection) operation. For Document Chat, it is not supported to create a `FileContent` from an URL using the above mentioned operations; Please use the `System.FileDocument` option. Make sure to set the `FileType` attribute to **document**.
+* **Document Chat** - This operation supports the ability to chat with documents for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). To send a document to the model add a `FileCollection` with a `System.FileDocument` to the `Message` using the [Files: Initialize Collection with File](/agents/genai-for-mx/commons/#initialize-filecollection) or the [Files: Add to Collection](/agents/genai-for-mx/commons/#add-file-to-collection) operation. For Document Chat, it is not supported to create a `FileContent` from an URL using the above mentioned operations; Please use the `System.FileDocument` option. Make sure to set the `FileType` attribute to **document**.
 
 ##### Tool Choice
 
-All [tool choice types](/appstore/modules/genai/genai-for-mx/commons/#enum-toolchoice) of GenAI Commons for the [Tools: Set Tool Choice](/appstore/modules/genai/genai-for-mx/commons/#set-toolchoice) action are supported. For API mapping reference, see the table below:
+All [tool choice types](/agents/genai-for-mx/commons/#enum-toolchoice) of GenAI Commons for the [Tools: Set Tool Choice](/agents/genai-for-mx/commons/#set-toolchoice) action are supported. For API mapping reference, see the table below:
 
 | GenAI Commons (Mendix) | Amazon Bedrock |
 | --- | --- |
@@ -312,7 +312,7 @@ Prompt templates address this constraint by allowing you to include orchestratio
 
 For a deeper understanding of prompt templates and their implementation, refer to the [Amazon documentation on prompt templates](https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html#kb-test-config-sysprompt), which provides comprehensive guidance on their usage and best practices.
 
-For more information about how to structure your prompts, see [Prompt engineering](/appstore/modules/genai/prompt-engineering/).
+For more information about how to structure your prompts, see [Prompt engineering](/agents/prompt-engineering/).
 
 #### Chatting with History {#retrieve-and-generate-with-history}
 
@@ -326,29 +326,29 @@ The history can be enabled using the `SessionId` parameter on the RetrieveAndGen
 This activity was introduced in Amazon Bedrock Connector version 3.1.0.
 {{% /alert %}}
 
-The [Generate Image](/appstore/modules/genai/genai-for-mx/commons/#generate-image) operation can be used to generate one or more images. Currently *Amazon Titan Image Generator G1* is the only supported model for image generation of the Amazon Bedrock Connector. 
+The [Generate Image](/agents/genai-for-mx/commons/#generate-image) operation can be used to generate one or more images. Currently *Amazon Titan Image Generator G1* is the only supported model for image generation of the Amazon Bedrock Connector. 
 
-`GenAICommons.ImageOptions` can be an empty object. If provided, it allows you to set additional options for Image Generation and can be created by using the [Image: Create Options](/appstore/modules/genai/genai-for-mx/commons/#imageoptions-create) operation of GenAI Commons.
+`GenAICommons.ImageOptions` can be an empty object. If provided, it allows you to set additional options for Image Generation and can be created by using the [Image: Create Options](/agents/genai-for-mx/commons/#imageoptions-create) operation of GenAI Commons.
 
-To retrieve actual image objects from the response, you can use the [Image: Get Generated Image (Single)](/appstore/modules/genai/genai-for-mx/commons/#image-get-single) or [Image: Get Generated Images (List)](/appstore/modules/genai/genai-for-mx/commons/#image-get-list) helper operations from GenAI Commons. 
+To retrieve actual image objects from the response, you can use the [Image: Get Generated Image (Single)](/agents/genai-for-mx/commons/#image-get-single) or [Image: Get Generated Images (List)](/agents/genai-for-mx/commons/#image-get-list) helper operations from GenAI Commons. 
 
 For Titan Image models, the `Image Generation: Add Titan Image Extension` operation can be used to configure Titan image-specific values (currently only *NegativeText*). 
 
 #### Generate Embeddings (String) {#embeddings-single-string}
 
-The [Generate Embeddings (String)](/appstore/modules/genai/genai-for-mx/commons/#embeddings-string) activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models or Titan Embeddings v2.
+The [Generate Embeddings (String)](/agents/genai-for-mx/commons/#embeddings-string) activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models.
 
-For Cohere Embed and Titan Embeddings, the request can be associated to their respective EmbeddingsOptions extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs.
+For Cohere Embed, the request can be associated to their respective EmbeddingsOptions extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs.
 
-Currently, embeddings are available for the Cohere Embed family and or Titan Embeddings v2.
+Currently, embeddings are available for the Cohere Embed family.
 
 #### Generate Embeddings (Chunk Collection) {#embeddings-chunk-collection}
 
-The [Generate Embeddings (Chunk Collection)](/appstore/modules/genai/genai-for-mx/commons/#embeddings-chunk-collection) activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models or Titan Embeddings v2.
+The [Generate Embeddings (Chunk Collection)](/agents/genai-for-mx/commons/#embeddings-chunk-collection) activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models.
 
-For each model family, the request can be associated to an extension of the EmbeddingsOptions object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs.
+For each model family, the request can be associated to an extension of the EmbeddingsOptions object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs.
 
-Currently, embeddings are available for the Cohere Embed family and Titan Embeddings v2.
+Currently, embeddings are available for the Cohere Embed family.
 
 #### Retrieve {#retrieve}
 
@@ -441,16 +441,6 @@ This operation corresponds to the **CohereEmbedOptions_Extension_Create** microf
 | Input | Output |
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
-
-#### Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
-
-Use this microflow to add a new TitanEmbeddingsOptions_Extension object to your `EmbeddingsOptions` object. You can use it to include parameters that are unique to Titan Embeddings models.
-
-This operation corresponds to the **TitanEmbeddingsOptions_Extension_Create** microflow.
-
-| Input | Output |
-| --- | --- |
-| `GenAICommons.EmbeddingsOptions (object)`, `Normalize (boolean)`| `TitanEmbeddingsOptions_Extension (object)`|
 
 #### Set Bedrock Retrieve Options {#add-r-extension}
 
@@ -712,7 +702,7 @@ The input and output for this service are shown in the table below:
 
 The Amazon Bedrock Connector offers a range of operations to retrieve and store metadata information in the Mendix app's database.
 
-This can be useful to e.g. associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabilities on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
+This can be useful to, for example, associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabilities on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
 
 The syncing process works the same for all of these operations:
 
@@ -724,7 +714,7 @@ The available operations are described in the following sections.
 
 #### Sync Models {#sync-models}
 
-The `Sync Models` activity allows you to retrieve and store metadata about available models on Amazon Bedrock in your app's database. The model information is persistent in the `BedrockDeployedModel` entity which is mandatory for chat completions or embeddings operations from GenAI Commons.
+The `Sync Models` activity lets you retrieve and store metadata about available models on Amazon Bedrock in your app's database. The model information is persistent in the `BedrockDeployedModel` entity which is mandatory for chat completions or embeddings operations from GenAI Commons.
 
 Information about the model's input modalities are stored as associations to the `InputModality` entity and its output modality is stored to the `OutputModality` attribute. The input modality describes which form of data can be sent to the model. The output modality describes which form of data the model will return. 
 
@@ -843,7 +833,7 @@ To solve this issue, follow these steps:
 
 After the status of the models changes to **Access Granted**, you can use it with the Amazon Bedrock connector.
 
-### Error code 403 - AccessDeniedException
+### Error Code 403 - AccessDeniedException
 
 When invoking a model, the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
 
@@ -857,7 +847,7 @@ Possible root causes for this error include the following:
 
 To solve this issue, ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?#/modelaccess) section of your Amazon Bedrock environment.
 
-### Error code 404 - ResourceNotFoundException
+### Error Code 404 - ResourceNotFoundException
 
 When invoking a model, the error code *404 - Resource not found* indicates that the targeted resource was not found.
 

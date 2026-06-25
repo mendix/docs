@@ -13,6 +13,10 @@ The registration process is a necessary first step when enabling this crucial fu
 
 Mendix Workstation supports both individual registration of local Workstation clients, and bulk rollouts for large production environments.
 
+{{% alert color="info" %}}
+After a Workstation Client is registered, any changes that you make in Workstation Management (such as adding new devices, or setting the **Detect Card Readers** toggle to **Off**) will be immediately synchronized with the Client. To change this behavior, see [Client's Auto-Refresh](/mendix-workstation/installation/#auto-refresh).
+{{% /alert %}}
+
 ## Registering a Single Workstation Client
 
 If you are developing or testing Workstation configurations, you can register a single Workstation Client for your local computer by performing the following steps:

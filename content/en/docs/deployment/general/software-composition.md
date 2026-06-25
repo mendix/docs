@@ -20,17 +20,28 @@ The **Software Composition** page is visible to all members of the Mendix app.
 
 ## Prerequisites {#prerequisites}
 
-To be able to see the software composition information, make sure that you meet the following prerequisites:
+To access Software Composition information, make sure you meet the following prerequisites:
 
-* Software Bill of Materials (SBOM) generation and the associated Software Composition capabilities are compatible with the following versions of Studio Pro: 9.24.26 and above, 10.6.12 and above, 10.12.3 and above.
+* SBOM generation and the associated Software Composition capabilities are compatible with the following versions of Studio Pro: 
 
-    {{% alert color="warning" %}}Make sure you upgrade to a compatible Studio Pro version to continue to use Software Composition. Previously supported Studio Pro versions (9.24.22 to 9.24.25, 10.6.9 to 10.6.11, 10.10.0 to 10.12.2, and 10.13) will no longer result in SBOM generation and visibility in Software Composition. Any historical data within Software Composition remains accessible regardless of the upgrade.{{% /alert %}}
+    * 11.9.1 and above
+    * 11.6.6
+    * 10.24.18 and above 
+    * 9.24.43 and above
+
+   SBOMs created on older versions may contain inaccuracies. Software Composition flags SBOMs and findings created on older versions.    
+   To make sure you have an SBOM without inaccuracies, upgrade to one of the supported versions. Upon upgrade, the model is checked and fixed, resulting in a corrected SBOM.    
    
-* Software composition visibility is only possible for deployment packages created via the platform services. It is not available if you manually upload the locally-created deployment package. SBOMs are created behind the scenes for each deployment package. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
+   **Known limitation** – Some issues cannot be fixed automatically. The corresponding components remain flagged. To fix any flagged components that remain after the upgrade, take one of these actions:
 
-* You must be using free or licensed Mendix Cloud or Mendix Cloud Dedicated, or Mendix on Kubernetes.
+    * Update the component in your project.
+    * If the previous action does not work, remove the component and add it again.
 
-* If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page.
+* Software composition visibility is only available for deployment packages created via the platform services. It is not available if you manually upload a locally created deployment package. SBOMs are created for each deployment package. For more information, refer to [Create Deployment Package](/refguide/create-deployment-package-dialog/).
+
+* You must be using free or licensed Mendix Cloud or Mendix Cloud Dedicated, or Mendix on Kubernetes. 
+
+* If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package to populate the software composition information on this page.
 
 ## Software Composition Generation {#software-composition-generation}
 
@@ -83,6 +94,7 @@ The list contains the following information:
 * **Runtime** — The Mendix Runtime version.
 * **Findings** — The number of findings of each type, color-coded according to severity level.    
   {{% alert color="warning" %}}Findings are calculated for all software packages that are built. However, if a package is not deployed, we will stop updating its findings after 30 days. These findings will be grayed out and displayed as 0.{{% /alert %}}
+* **Policy Status** – The number of policies that the app violates. For details on each policy, click this line item, then go to the [Policy Status tab](#policy-status) of the app.
 * **Version** — The version of the deployment package on this app environment.
 * **Technical Contact** — The Technical Contact of the app.
 * **Target Cloud** —  The type of cloud where the deployment package is deployed. Currently, the following types of cloud are supported:
@@ -114,7 +126,54 @@ Different versions of Studio Pro support different component dependencies. For d
 The page is divided into two tabs: **Findings** and **Component Usage**. For details on the available fields, refer to the Control Center documentation:
 
 * [Findings](/control-center/overview-tab/#overview-findings)
-* [Component Usage](/control-center/overview-tab/#overviw-component-usage)
+* [Component Usage](/control-center/overview-tab/#overview-component-usage)
+
+#### Finding and Component Details
+
+If a finding is marked as **Vulnerable**, its corresponding component has a **View Details** button. Clicking it opens a window which includes two sections:
+
+* **Finding Details** – This includes the following details:
+
+    * **Severity** – The severity of the finding, as computed on the [Scoring Criteria](/control-center/scoring-criteria-tab/) tab.
+    * **CVE-ID** – The unique ID which identifies the finding on the **Security Advisories** page.
+    * **CVSS Score 3.1** and **CVSS Score 4.0** – The CVSS score, as computed based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework.
+    * **Age** – The number of days since the date when the CVSS score was computed.
+    * **Created on** – The date when the component was created.
+    * **Description** – The reason why the component was marked as vulnerable.
+
+* **Components Details** – This includes the following details:
+
+    * **Current Version** – The version of the component affected by this finding.
+    * **Type** – The type of the component affected by this finding.
+    * **Publisher** – The entity that published the component affected by this finding.
+
+* **Mendix Guidance** – AI-generated guidance which describes the vulnerability, outlines the reasons why it is important to fix it, and recommends solutions.
+
+### Policy Status {#policy-status}
+
+The **Policy Status** tab at the deployment package level displays a list of the policies that the specific package violates, with the following information for each:
+
+* **Status** – The status of the violation.
+* **Policy Name** – The name of the violated policy.
+* **View Details** – This opens the **Policy Details** pane, which displays the following details about the violated policy:
+
+    * **Policy ID** – The unique ID of the policy.
+    * **Policy Name** – The name of the policy.
+    * **Description** – A short description of the policy, which includes the reason why it is violated.
+    * **Status** – Whether the policy is active or not.
+    * **Scope** – The apps that the policy applies to. A breakdown of these is displayed on the **Policy Scope** tab of this pane.
+    * **Created by** – The unique ID of the user who created the policy.
+    * **Created on** – The date when the policy was created.
+    * **Last modified by** – The unique ID of the user who most recently updated the policy.
+    * **Last modified on** – The date when the policy was most recently updated.
+    * **Failure Condition(s)** – The conditions under which the policy is considered violated.
+    * **Checkpoints & Action(s)** – The trigger which causes the policy to be checked, and the action that is taken if the policy is violated.
+
+* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+
+You can search a policy by its name, and export all information on this tab to an Excel file.
+
+For details on defining policies, refer to [Policies](/control-center/policies/).
 
 ## Components {#all-components}
 
@@ -155,7 +214,7 @@ The component list contains the following information:
 * **Version** — The version of the component that is being used.
 * **Findings** — The number of findings of each type, color-coded according to severity level.
 * **License** — For components derived from the Mendix Marketplace, this is the end-user license for the component.
-* **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is available only via your [Company Content](/appstore/home-page/#company-content) page.
+* **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is only available for your organisation. On the Marketplace homepage, you can use the **Visibility** filter to display specific components.
 * **Latest version** — For components derived from the Mendix Marketplace, this is the latest version of the component.
 * **Publisher** — For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
 * **View details** — Clicking this opens the [Component App Details](#component-usage) page.
@@ -203,6 +262,26 @@ The finding list contains the following information:
 
 * Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
+##### Finding and Component Details
+
+If a finding is marked as **Vulnerable**, its corresponding component has a **View Details** button. Clicking it opens a window which includes these sections:
+
+* **Finding Details** – This includes the following details:
+
+    * **Severity** – The severity of the finding, as computed on the [Scoring Criteria](/control-center/scoring-criteria-tab/) tab.
+    * **CVE-ID** – The unique ID which identifies the finding on the **Security Advisories** page.
+    * **CVSS Score 3.1** and **CVSS Score 4.0** – The CVSS score, as computed based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework.
+    * **Age** – The number of days since the date when the CVSS score was computed.
+    * **Created on** – The date when the component was created.
+    * **Description** – The reason why the component was marked as vulnerable.
+
+* **Components Details** – This includes the following details:
+
+    * **Current Version** – The version of the component affected by this finding.
+    * **Type** – The type of the component affected by this finding.
+
+* **Mendix Guidance** – AI-generated guidance which describes the vulnerability, outlines the reasons why it is important to fix it, and recommends solutions.
+
 #### Component Usage {#component-component-usage}
 
 The **Component Usage** tab displays a detailed view of all environments where the component is used.    
@@ -221,3 +300,14 @@ The component usage list contains the following information:
 * **Version** — The version of the impacted deployment package.
 * **Target Cloud** — The type of cloud where the deployment package is deployed.
 * Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+
+## Policy Status
+
+The **Policy Status** tab lists the policies that apply to all the deployment packages of the app, along with the number of times each policy was violated. Clicking a policy name opens the list of all app artifacts and environments which violated that specific policy, with the following details:
+
+* **Status** – The type of violation.
+* **Package Name** – The name of the package which violated the policy.
+* **Environment Name** – If applicable, the name of the environment where the violating app package is deployed.
+* **Runtime** – The runtime version of the deployment package.
+* **Target Cloud** — The type of cloud where the deployment package is deployed.
+* **Last Checked On** – The date when the policy was last checked.

@@ -19,19 +19,19 @@ The pane consists of a top bar and a results table.
 
 The top bar contains the following buttons:
 
-* **Check now** – scans your app for Java deprecations and refreshes the results list
-* **Marketplace Modules** – includes Marketplace modules in the scan results
-* **Export** – exports the current scan results
+* **Check now** – scan your app for Java deprecations and refresh the results list
+* **Marketplace Modules** – include Marketplace modules in the scan results
+* **Export** – export the current scan results
 
 ## Results Table {#results-table}
 
 The results table lists each detected deprecation and contains the following columns:
 
-* **Type** – shows a Java icon for Java deprecations
-* **Message** – shows the deprecation message
-* **Module** – shows the module that contains the issue
-* **Document** – shows the affected document, such as a Java action
-* **File path** – shows the path to the affected Java file
+* **Type** – a Java icon for Java deprecations
+* **Message** – the deprecation message
+* **Module** – the module that contains the issue
+* **Document** – the affected document, such as a Java action
+* **File path** – the path to the affected Java file
 
 Long messages and file paths can be truncated in the table. Double-click a row to open the full details for that result.
 
@@ -39,7 +39,7 @@ Long messages and file paths can be truncated in the table. Double-click a row t
 
 Click **Export** to export the detected deprecations to an `.xlsx` file.
 
-The exported workbook contains one sheet named `Document deprecations`. The sheet contains the following columns:
+The exported workbook contains one sheet named `Document deprecations` with the following columns:
 
 * `Message` – the deprecation message
 * `Module` – the module that contains the issue
@@ -52,14 +52,14 @@ The exported workbook contains one sheet named `Document deprecations`. The shee
 
 ## Deprecation Details {#deprecation-details}
 
-Double-click a row to open a deprecation details dialog for that file.
+Double-click a row to open a deprecation details dialog box for that file.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/update-assistant/deprecation-details-dialog.png" alt="Deprecation details dialog showing the issue, file path, and highlighted deprecated code" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/update-assistant/deprecation-details-dialog.png" alt="Deprecation details dialog box showing the issue, file path, and highlighted deprecated code" class="no-border" >}}
 
-This dialog shows the following information:
+This dialog box shows the following information:
 
 * **Identified issue** – the deprecation message
-* **File path** – the full path to the affected Java file; you can copy this path from the dialog
+* **File path** – the full path to the affected Java file; you can copy this path from the dialog box
 * **Problem highlight** – a code snippet with the deprecated code highlighted
 
 The highlighted code helps you locate the deprecated call in the file and update it.

@@ -52,6 +52,10 @@ If you select **Use connection string**, enter the following:
 
 The password you provide when using one of the above connection methods will be stored in a constant, which can be altered upon deployment on a Cloud node. You can indicate which constants contain private or sensitive information to ensure this information is saved locally, and that it is not shared on the TeamServer or Cloud Portal.
 
+### Using Integrated Security for SQL Server
+
+If you plan to connect to SQL Server using integrated security, ensure the JDBC driver in the `userlib` folder or version mentioned in the module settings matches the version supplied with Studio Pro (via the `runtime/bundles/` folder inside the Mendix installation directory).
+
 ## External Database Connection Document {#external-database-document}
 
 After entering your database information in the Database Connection wizard, the external database connection document opens in Studio Pro. 

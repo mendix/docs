@@ -11,28 +11,28 @@ The [Markdown Viewer](https://marketplace.mendix.com/link/component/230248/) wid
 
 The widget does the following:
 
-- Displays markdown-formatted text as rendered HTML, supporting headings, bold, italic, lists, links, images, tables, code blocks, blockquotes, and horizontal rules
-- Applies typographic enhancements such as smart quotes, em dashes, en dashes, and ellipses
-- Automatically converts URLs in the text to clickable links
-- Shows a loading indicator while the data source is being retrieved
+* Displays markdown-formatted text as rendered HTML, supporting headings, bold, italic, lists, links, images, tables, code blocks, blockquotes, and horizontal rules
+* Applies typographic enhancements such as smart quotes, em dashes, en dashes, and ellipses
+* Automatically converts URLs in the text to clickable links
+* Shows a loading indicator while the data source is being retrieved
 
 ### Typical Use Cases
 
 This widget is often used in use cases like:
 
-- Displaying user-authored markdown content such as knowledge base articles or notes
-- Rendering formatted text stored in a database attribute
-- Showing `README.md`-style documentation within a Mendix application
+* Displaying user-authored markdown content such as knowledge base articles or notes
+* Rendering formatted text stored in a database attribute
+* Showing `README.md`-style documentation within a Mendix application
 
 ### Features
 
 This widget leverages the following features:
 
-- Standard markdown syntax rendering, including headings, emphasis, lists, links, images, tables, code blocks, blockquotes, and horizontal rules
-- Typographic replacements (smart quotes, em dashes, en dashes, ellipses)
-- Automatic URL-to-link conversion (linkification)
-- Offline capable
-- Conditional visibility support
+* Standard markdown syntax rendering, including headings, emphasis, lists, links, images, tables, code blocks, blockquotes, and horizontal rules
+* Typographic replacements (smart quotes, em dashes, en dashes, ellipses)
+* Automatic URL-to-link conversion (linkification)
+* Offline capable
+* Conditional visibility support
 
 ## Configuration
 
@@ -47,16 +47,16 @@ Use an unlimited string data type for the **Value attribute** to avoid truncatio
 
 Optionally, you can configure the widget further:
 
-- Navigate to the **Label** section to add a label for the widget
-- Navigate to the **Conditional visibility** section to control when the widget is displayed
+* Navigate to the **Label** section to add a label for the widget
+* Navigate to the **Conditional visibility** section to control when the widget is displayed
 
 ## Styling
 
 The widget renders its content inside a container with the `widget-markdown` CSS class. The following default styles are applied:
 
-- **Tables** — rendered with borders, padding, and left-aligned text. Header cells have a light gray background
-- **Images** — render at a maximum of 35% of the container width by default
-- **Horizontal rules** — span the full width of the container
+* **Tables** — rendered with borders, padding, and left-aligned text. Header cells have a light gray background
+* **Images** — render at a maximum of 35% of the container width by default
+* **Horizontal rules** — span the full width of the container
 
 You can override these styles by targeting the `.widget-markdown` class in your custom SCSS or theme.
 
@@ -64,10 +64,10 @@ You can override these styles by targeting the `.widget-markdown` class in your 
 
 This widget has the following limitations:
 
-- The widget is read-only, and does not provide editing or input capabilities
-- Code blocks render as plain monospace text without syntax highlighting
-- Custom HTML tags within markdown content are not supported
+* The widget is read-only, and does not provide editing or input capabilities
+* Code blocks render as plain monospace text without syntax highlighting
+* Custom HTML tags within markdown content are not supported
 
 ## Read More
 
-- [markdown-it](https://github.com/markdown-it/markdown-it): the markdown parsing library used by this widget
+* [markdown-it](https://github.com/markdown-it/markdown-it): the markdown parsing library used by this widget

@@ -2,11 +2,12 @@
 title: "Create a Dockable Pane Using Web API"
 linktitle: "Dockable Pane"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/dockable-pane-api/
+description: "Describes how to create and manage a dockable pane using the web extensions API in Studio Pro."
 ---
 
 ## Introduction
 
-This how-to describes creating and managing a dockable pane using the web extensions API. A dockable pane is a web view that can be docked and moved within the Studio Pro user interface. Examples of dockable panes in Studio Pro include the following:
+This how-to describes how to create and manage a dockable pane using the web extensions API. A dockable pane is a web view that can be docked and moved within Studio Pro. Examples of dockable panes in Studio Pro include the following:
 
 * Marketplace
 * Errors
@@ -15,12 +16,12 @@ This how-to describes creating and managing a dockable pane using the web extens
 
 ## Prerequisites
 
-{{% alert="info" %}}
+{{% alert color="info" %}}
 If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
-{{% /alert%}}
+{{% /alert %}}
 
 * This how-to uses the app created in [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one.
-* Be familiar with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
+* Familiarize yourself with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
 ## Creating a Dockable Pane
 
@@ -100,7 +101,7 @@ Alter the `build-extension.mjs` and `manifest.json` files to bind to the correct
 
 ### Altering `build-extension.mjs`
 
-Instruct esbuild to produce JavaScript modules that correspond to `src/ui/tab.tsx` and `src/ui/dockablepane.tsx`. To do this, change the call to `entryPoints.push` in line 16:
+Instruct esbuild to produce JavaScript modules that correspond to `src/ui/tab.tsx` and `src/ui/dockablepane.tsx`. To do this, change the call to `entryPoints.push` on line 16:
 
 ```typescript
 entryPoints.push({
@@ -157,7 +158,7 @@ else {
 }
 ```
 
-This ensures esbuild considers these two `.tsx` files as entrypoints and produces JavaScript modules in the `dist` folder corresponding to the name in `out`.
+This ensures that esbuild considers these two `.tsx` files as entry points and produces JavaScript modules in the `dist` folder corresponding to the name in `out`.
 
 ### Altering `src/manifest.json`
 
@@ -285,6 +286,6 @@ The `loaded` method should now look like this:
 
 ## Extensibility Feedback
 
-If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback)
+If you would like to provide additional feedback, you can complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback)
 
 Any feedback is appreciated.

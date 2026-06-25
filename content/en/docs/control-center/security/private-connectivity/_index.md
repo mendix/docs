@@ -3,12 +3,13 @@ title: "Private Connectivity"
 linktitle: "Private Connectivity"
 url: /control-center/private-connectivity/
 description: "Describes the Private Connectivity section in the Mendix Control Center."
-weight: 30
+weight: 40
 beta: true
 ---
 
 {{% alert color="warning" %}}
-Private Connectivity is currently in Public Beta, and will be out of Public Beta on May 31, 2026. After that date, the service will no longer be available, and Mendix will start preparing it for General Availability (GA). Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
+Private Connectivity is out of Public Beta, and being prepared for General Availability (GA). The feature cannot be used until it is released as GA.     
+Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
 {{% /alert %}}
 
 ## Introduction

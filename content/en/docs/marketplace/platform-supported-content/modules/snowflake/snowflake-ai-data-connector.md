@@ -302,7 +302,7 @@ This statement returns data from a Snowflake table with the columns named as spe
 
 ## Configuring Snowflake Cortex Analyst {#cortex-analyst}
 
-[Snowflake Cortex Analyst](/appstore/modules/genai/snowflake-cortex/) is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
+[Snowflake Cortex Analyst](/agents/snowflake-cortex/) is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
 
 {{% alert color="info" %}}
 Snowflake Cortex Analyst is now generally available. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
@@ -312,8 +312,8 @@ Snowflake Cortex Analyst is now generally available. For more information, refer
 
 * Make sure that you have access to Cortex Analyst. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
 * Create a semantic model, semantic model view, or inline semantic model for Cortex Analyst. For more information, refer to:
-  * [Creating Semantic Models for Snowflake Cortex Analyst](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/)
-  * [Using Semantic Model Views](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst#understanding-semantic-views)
+    * [Creating Semantic Models for Snowflake Cortex Analyst](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/)
+    * [Using Semantic Model Views](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst#understanding-semantic-views)
 * Set up one of the following supported authentication methods for Cortex Analyst:
     * OAUTH
     * KEYPAIR_JWT
@@ -379,4 +379,4 @@ To configure your Mendix app for Snowflake Cortex Search, perform the following 
 
 ### Example Implementation
 
- The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains example implementations of the Analyst, ANOMALY DETECTION, COMPLETE and TRANSLATE functionalities. For more information, see [Snowflake Cortex Analyst](/appstore/modules/genai/snowflake-cortex/#functionalities).
+ The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains example implementations of the Analyst, ANOMALY DETECTION, COMPLETE and TRANSLATE functionalities. For more information, see [Snowflake Cortex Analyst](/agents/snowflake-cortex/#functionalities).

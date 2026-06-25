@@ -67,7 +67,7 @@ After you confirm the change:
 * The sub-process is re-created with a start event of the specified type, along with all the event sub-process activities. The new start event can be triggered after the workflow is redeployed and is in progress.
 * The workflow becomes incompatible if the changed event sub-process is already being executed in one of the ongoing workflow instances.
 
-The event sub-process is re-created upon type switch because in-place conversion can result in states that contradict BPMN 2.0 concepts. According to BPMN, an interrupting event sub-process cancels the parent process scope and all other active sub-processes when triggered, while a non-interrupting one runs in parallel without affecting them. These are mutually exclusive execution models: an event sub-process instance belongs to exactly one of them from the moment it starts. Changing the type in place for an already-active instance would leave it in a state that is neither valid interrupting nor valid non-interrupting behavior, violating the fundamental BPMN distinction between the two.
+The event sub-process is re-created upon type switch because in-place conversion can result in invalid states. An interrupting event sub-process cancels the parent process scope and all other active sub-processes when triggered, while a non-interrupting one runs in parallel without affecting them. These are mutually exclusive execution models: an event sub-process instance belongs to exactly one of them from the moment it starts. Changing the type in place for an already-active instance would leave it in a state that is neither valid interrupting nor valid non-interrupting behavior.
 
 #### Concurrency Limitation
 
@@ -90,11 +90,21 @@ To add an **Event sub-process** to a workflow, follow these steps:
 * The flow can contain the same types of activities as the main process flow (for example, **User Task**, **Call Microflow**, **Decision**).
 * It must start with a **Start** event (triggered by a notification) and end with at least one **End** event.
 
+### Rearranging Event Sub-Processes
+
+In Studio Pro 11.11 and above, you can rearrange event sub-processes by right-clicking an event sub-process to open its context menu and clicking **Move event sub-process left** or **Move event sub-process right**, or you can use the <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Left arrow or <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Right arrow shortcut keys.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/arrange-in-editor.png" max-width=90% alt="Event sub-process arrange in editor" >}}
+
+{{% alert color="info" %}}
+This does not change the order of execution of the sub-processes, as this is dependent on when the sub-process is triggered.
+{{% /alert %}}
+
 ## Execution
 
 To start an event sub-process, create a **Notify workflow** microflow activity and point it to the event sub-process start event.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/notify-workflow.png" alt="Notify workflow example" width="400" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/notify-workflow.png" alt="Notify workflow example" max-width=90% >}}
 
 ### Operational Lifecycle Management
 
@@ -117,8 +127,8 @@ Event sub-processes have specific restrictions regarding [Jump activity](/refgui
 
 * Between processes: It is not possible to jump into a sub-process from the main process (or vice versa), nor between different sub-processes.
 * Within a sub-process: Jumps within the same sub-process are permitted.
-    * **Jump to Start Event**: Aborts the current sub-process instance and returns it to a waiting state.
-    * **Jump to End Event**: Completes the sub-process instance immediately.
+    * **Jump to Start Event**: Aborts the current sub-process instance and returns it to a waiting state. If no other activities are in progress in the workflow instance after the jump, the workflow is aborted.
+    * **Jump to End Event**: Completes the sub-process instance immediately. If no other activities are in progress in the workflow instance after the jump to the sub-process end event, the workflow is completed.
 
 ## Domain Model Structure
 

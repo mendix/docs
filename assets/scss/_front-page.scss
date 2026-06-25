@@ -2,31 +2,68 @@
 
 .td-main main.lp {
     padding: 2rem 2.5rem;
-    padding-top:5.25rem !important;
+    padding-top: 0 !important; // top clearance handled by lp-mobile-bar (mobile) and lp-hero (desktop)
+
+    @include media-breakpoint-up(md) {
+        padding-top: 0 !important;
+    }
 }
 
 div.lp-container {
     padding: 0;
     margin: 0;
+    max-width: none;
 }
 
 .lp-row{
     margin-bottom: 2rem !important;
 }
 
+.lp-hero {
+    background-color: $dark;
+    min-height: 350px;
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 2rem 2.5rem;
+
+    @include media-breakpoint-down(md) {
+        min-height: unset;
+    }
+}
+
+.hero-text  {
+    flex: 0 0 100%;
+    // Stretch out text once image disappears (smaller viewports)
+    @include media-breakpoint-up(lg) {
+        flex: 0 0 auto;
+        max-width: 60%;
+    }
+}
+
 h1.page-title {
     font-weight: $font-weight-normal;
     font-size: 2rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 h5.lp-description {
     font-size: 1rem;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 .lp-container img {
     border-style: none;
+    max-width: 100%;
+    height: auto;
+}
+
+.lp-container .hero-image img {
+    height: 220px;
+    width: auto;
+    max-width: unset;
+    flex-shrink: 0;
+
 }
 
 img.card-icon {
@@ -98,4 +135,20 @@ p.rn-date {
     font-size: 0.75rem;
     font-weight: 400;
     margin-bottom: 0rem;
+}
+
+// Mobile hamburger bar on landing page — matches hero background
+.lp-mobile-bar {
+    background-color: $dark;
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 4rem 2.5rem 0.75rem;
+    color: white;
+
+    .btn {
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin-bottom: 0rem;
+    }
 }

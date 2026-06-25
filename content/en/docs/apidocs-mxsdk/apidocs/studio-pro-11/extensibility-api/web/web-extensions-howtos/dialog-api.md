@@ -12,9 +12,9 @@ It also describes how to show a progress dialog that follows a sequence of steps
 
 ## Prerequisites
 
-{{% alert="info" %}}
+{{% alert color="info" %}}
 If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
-{{% /alert%}}
+{{% /alert %}}
 
 Before starting this how-to, complete the following prerequisites:
 
@@ -23,11 +23,11 @@ Before starting this how-to, complete the following prerequisites:
 
 ## Opening a Modal Dialog
 
-Create a menu item to open the dialog inside the `loaded` event in the main entry point (`src/main/index.ts`). For more information, see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
+To open a modal dialog, create a menu item inside the `loaded` event in the main entry point (`src/main/index.ts`). For more information, see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
-In a listener event called `menuItemActivated`, the `studioPro.ui.dialogs.showModal(<dialogInfo>, <uiSpec>)` call opens a new dialog. The parameters are:
+In the `menuItemActivated` listener event, call `studioPro.ui.dialogs.showModal(<dialogInfo>, <uiSpec>)` to open a new dialog. The parameters are:
 
-* `<dialogInfo>` – An object containing the `title` of the dialog, which is shown in the title bar of your dialog in Studio Pro. It also contains the `contentSize` object, where you can provide `height` and `width` dimensions for the dialog.
+* `<dialogInfo>` – An object containing the `title` of the dialog (shown in the title bar of your dialog in Studio Pro) and the `contentSize` object, where you can provide `height` and `width` dimensions for the dialog.
 * `<uiSpec>` – An object containing two required properties and one optional property:
 
     * `componentName` – The name of the extension prefixed with `extension/`. For example, `extension/myextension`.
@@ -40,7 +40,7 @@ When the `showModal` method is called, it returns a `Promise` of `unknown` or `n
 In the example below, the dialog contains a form where an object is modified and then returned when the dialog closes.
 {{% /alert %}}
 
-An example of the main entry point (`src/main/index.ts`) to open a modal dialog called *My Extension Dialog* looks similar to the following:
+The following example shows the main entry point (`src/main/index.ts`) that opens a modal dialog:
 
 ```typescript
 import { IComponent, getStudioProApi } from "@mendix/extensions-api";
@@ -74,7 +74,7 @@ export const component: IComponent = {
 };
 ```
 
-## Filling the Dialog With Content
+## Filling the Dialog with Content
 
 In the previous example, the `uiEntryPoint` property of the `<uispec>` object has the value `dialog`. This value must match the one in the manifest. The following example shows the dialog under the `ui` property:
 
@@ -197,8 +197,7 @@ In the previous example, the `uiEntryPoint` property of the `<uispec>` object ha
 
 The `dialogId` property is retrieved from the query parameters of the web page. This value is generated when the dialog API is first called. It is then passed back to the web content so the `close` or `closeWithResult` methods can be called successfully. The dialog API needs this ID to close the correct dialog.
 
-This simple form contains two text boxes for `firstName` and `lastName`. When you submit the form, it closes the dialog and passes the content of the object modified by the form.
-The form also contains a **Close** button, which calls the `close` method without any extra data, except the required `dialogId`.
+This form contains two text boxes for `firstName` and `lastName`. When you submit the form, it closes the dialog and passes the content of the object modified by the form. The form also contains a **Close** button, which calls the `close` method without any extra data, except the required `dialogId`.
 
 After you build and install the extension in Studio Pro, the dialog opens when you click the menu and displays the web content from the `dialog.tsx` file.
 
@@ -220,11 +219,11 @@ You can modify the dimensions of a dialog using the `update` method. To do this,
 </button>
 ```
 
-You can also modify the dialog's dimensions while it is open.
+You can modify the dialog's dimensions while it is open.
 
 ## Showing a Progress Dialog {#process-dialog}
 
- To show a progress dialog, call the method `studioPro.ui.dialogs.showProgressDialog(<title>, <steps>)`. The parameters are:
+To show a progress dialog, call the method `studioPro.ui.dialogs.showProgressDialog(<title>, <steps>)`. The parameters are:
 
 * `<title>` – A string that is displayed in the title bar of the dialog.
 * `<steps>` – An array of `ProgressDialogStep` objects, which run in the same order provided in the array. A `ProgressDialogStep` object contains the following properties:
@@ -247,7 +246,7 @@ The `FailedProgressStepResult` object contains the following properties:
 * `stepTitle` – The title of the step that failed, causing the whole process to fail.
 * `error` – A string that describes the error or exception that occurred during step execution.
 
-The following example creates a menu to show the modal progress dialog and runs three steps inside the `loaded` event in the main entry point (`src/main/index.ts`).
+The following example creates a menu to show the modal progress dialog and runs three steps inside the `loaded` event in the main entry point (`src/main/index.ts`):
 
 ```typescript
 import { ComponentContext, IComponent, ProgressDialogStep, getStudioProApi } from "@mendix/extensions-api";
@@ -332,10 +331,11 @@ const step: ProgressDialogStep = {
 ```
 
 When running, the progress dialog looks like this:
+
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/dialogs/sample-progress-dialog.png" alt="Sample progress dialog showing three steps" width="300" >}}
 
 ## Extensibility Feedback
 
-If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
+If you would like to provide additional feedback, you can complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
 Any feedback is appreciated.

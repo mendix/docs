@@ -81,6 +81,8 @@ Improved package management is available for [Studio Pro 11.12](/releasenotes/st
 
 Studio Pro 11.12 introduces improved package management to enable reliable module tracking and updates.
 
+For more information on how to use package management when updating modules, see [Updating Marketplace Modules](https://github.com/mendix/docs/blob/development/refguide/updating-marketplace-modules).
+
 Key improvements are delivered through new module properties and a new `manifest.json` file format in module packages (*.mpk* files):
 
 * **Package identification** – Each module receives a [Module ID](#module-id) that uniquely identifies it across all versions. This allows Studio Pro to reliably track modules across updates, even if the module name changes.
@@ -139,6 +141,7 @@ The legacy `package.xml` metadata file is not mentioned in `manifest.json` but i
 ## Read More
 
 * [Modules](/refguide/modules/)
+* [Update modules](refguide/updating-marketplace-modules)
 * [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
 * [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/)
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)

@@ -19,7 +19,7 @@ Agents Kit 1 provides a comprehensive set of Mendix components for building agen
 The following components are available in Agents Kit 1.
 
 {{% alert color="info" %}}
-The *Latest Released Version* column shows the most recent version compatible with Agents Kit 1. Newer versions of these apps and modules are part of [Agents Kit 2](/agents/agents-kit-2/).
+The *Latest Released Version* column shows the most recent version for Agents Kit 1. Newer versions of these apps and modules are part of [Agents Kit 2](/agents/agents-kit-2/).
 {{% /alert %}}
 
 ### Starter Apps {#starter-apps}

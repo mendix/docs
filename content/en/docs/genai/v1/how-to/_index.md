@@ -1,9 +1,8 @@
 ---
-title: "How to Build Smarter Apps Using GenAI"
+title: "Building Smarter Apps Using GenAI"
 url: /agents/agents-kit-1/how-to/
-linktitle: "How to Build Smarter Apps using GenAI"
 weight: 20
-description: "Agents Kit 1: Tutorial on how to get started with GenAI for Smarter Apps"
+description: "Agents Kit 1: Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors."
 no_list: false
 aliases:
     - /appstore/modules/genai/using-genai/
@@ -16,7 +15,7 @@ Looking for Mendix's newest agentic and generative AI features? [This page has b
 
 ## Introduction
 
-Generative Artificial Intelligence (GenAI) transforms business applications, empowering developers and technologists to create smarter, more dynamic solutions. This document provides the knowledge and tools needed to make your first GenAI-powered application and guides developers and business technologists in integrating GenAI into their Mendix applications.
+Generative artificial intelligence (GenAI) transforms business applications, empowering developers and technologists to create smarter, more dynamic solutions. This document provides the knowledge and tools needed to make your first GenAI-powered application and guides developers and business technologists in integrating GenAI into their Mendix applications.
 
 ## Key Resources to Continue Your GenAI Journey
 
@@ -40,8 +39,8 @@ Generative Artificial Intelligence (GenAI) transforms business applications, emp
 ### Additional Resources
 
 * Basic documentation on [GenAI Concepts](/agents/get-started/) is an essential resource for anyone beginning their GenAI journey.
-* The [GenAICommons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) module as a prerequisite for all GenAI components.
-* The [ConversationalUI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) module that offers UI snippets for chat, token consumption monitoring and prompt management.
+* The [GenAICommons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) module is a prerequisite for all GenAI components.
+* The [ConversationalUI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) module offers UI snippets for chat, token consumption monitoring, and prompt management.
 * The [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) to learn how to quickly access GenAI capabilities from a Mendix app.
 * The [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) provides essential information about the OpenAI connector.
 * The [Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/) provides key information about the AWS Bedrock connector.
@@ -72,4 +71,4 @@ For more information, see [Mendix's AI blog posts](https://www.mendix.com/tag/ai
 
 * [Use MCP to Bring Mendix Business Logic into Claude for Desktop](https://www.mendix.com/blog/how-to-use-mcp-to-bring-mendix-business-logic-into-claude-for-desktop/)
 
-## Documents in this Category
+## Documents in This Category

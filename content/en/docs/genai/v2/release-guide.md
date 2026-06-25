@@ -41,11 +41,11 @@ Agents Kit 2 requires Studio Pro 11.12 or higher.
 
 #### Agent Editor and Studio Pro Agents
 
-Studio Pro agents, built using [Agent Editor](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/), are now the preferred way to build agents. Agent Editor lets you define and develop agents locally in Studio Pro, then deploy them directly to cloud environments using the app model.
+Studio Pro agents, built using [Agent Editor](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/), are now the preferred way to build agents with Mendix Cloud GenAI resources. Agent Editor lets you define and develop agents locally in Studio Pro, then deploy them directly to cloud environments using the app model.
 
 ##### Migrating from Runtime Agents to Studio Pro Agents {#runtime-to-studio-pro}
 
-If your app uses runtime agents (built with the [Agent Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-commons/) module) and Mendix Cloud GenAI Resources, you can migrate them to Studio Pro agents by following these steps:
+If your app uses runtime agents (built with the [Agent Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-commons/) module) and Mendix Cloud GenAI resources, you can migrate them to Studio Pro agents by following these steps:
 
 1. Ensure your app uses Studio Pro 11.12 or higher.
 2. Open Agent Editor in Studio Pro.

@@ -1,7 +1,7 @@
 ---
-title: "Gemini"
+title: "Google Gemini"
 url: /agents/agents-kit-1/reference-guide/external-connectors/gemini/
-linktitle: "Gemini"
+linktitle: "Google Gemini"
 description: "Agents Kit 1: Describes the configuration and usage of the Google Gemini Connector, which allows you to integrate generative AI into your Mendix app."
 weight: 20
 aliases:

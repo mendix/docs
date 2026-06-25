@@ -3,7 +3,6 @@ title: "Agent Commons"
 url: /agents/agents-kit-2/reference-guide/genai-for-mx/agent-commons/
 linktitle: "Agent Commons"
 description: "Agents Kit 2: Reference documentation for the Agent Commons module, which enables building, testing, and refining agents at runtime."
-weight: 20
 aliases:
     - /agents/genai-for-mx/commons/
     - /appstore/modules/genai/genai-for-mx/agent-commons/

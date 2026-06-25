@@ -2,7 +2,6 @@
 title: "Conversational UI"
 url: /agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/
 linktitle: "Conversational UI"
-weight: 20
 description: "Agents Kit 2: Reference documentation for the Conversational UI module, which provides chat interface components and token monitoring."
 aliases:
     - /agents/genai-for-mx/conversational-ui/

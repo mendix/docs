@@ -67,8 +67,12 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 
 * [Building Smarter Apps Using GenAI](/agents/agents-kit-2/how-to/)
 
-    Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors
+    Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors.
 
-* [Reference Guide](/agents/agents-kit-2/reference-guide/)
+* [Reference Guides](/agents/agents-kit-2/reference-guide/)
 
-    Technical reference documentation for the Mendix components in Agents Kit 2
+    Technical reference documentation for the Mendix Marketplace components in Agents Kit 2.
+
+* [Release Guide](/agents/agents-kit-2/reference-guide/genai-for-mx/release-guide/)
+
+    Describes the transition from Agents Kit 1 to Agents Kit 2.

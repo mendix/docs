@@ -69,7 +69,11 @@ Older versions of some modules and the GenAI Showcase App are available in Studi
 
 * [How to Build Smarter Apps Using GenAI](/agents/agents-kit-1/how-to/)
 
-    Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors
-* [Reference Guide](/agents/agents-kit-1/reference-guide/)
+    Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors.
+* [Reference Guides](/agents/agents-kit-1/reference-guide/)
 
-    Technical reference documentation for the Mendix components in Agents Kit 1
+    Technical reference documentation for the Mendix Marketplace components in Agents Kit 1.
+
+* [Release and Migration Guide for GenAI Modules](/agents/agents-kit-1/reference-guide/genai-for-mx/migration-guide/)
+
+    Describes the combined releases of various GenAI-related modules and their inter-module dependencies. Also includes migration steps and notices about deprecations and removals.

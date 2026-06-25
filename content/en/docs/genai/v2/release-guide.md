@@ -3,7 +3,7 @@ title: "Release Guide for Agents Kit 2"
 url: /agents/agents-kit-2/reference-guide/genai-for-mx/release-guide/
 linktitle: "Release Guide"
 description: "Describes the transition from Agents Kit 1 to Agents Kit 2."
-weight: 1
+weight: 80
 aliases:
     - /agents/genai-for-mx/migration-guide/
     - /appstore/modules/genai/genai-for-mx/migration-guide/

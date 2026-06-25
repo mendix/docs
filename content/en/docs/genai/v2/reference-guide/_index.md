@@ -1,7 +1,7 @@
 ---
-title: "Reference Guide"
+title: "Reference Guides"
 url: /agents/agents-kit-2/reference-guide/
-linktitle: "Reference Guide"
+linktitle: "Reference Guides"
 weight: 20
 description: "Agents Kit 2: Technical reference documentation for Agents Kit 2 modules and connectors."
 no_list: false

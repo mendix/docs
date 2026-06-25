@@ -50,7 +50,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
     2. Determine the type of request.
     
         * Case A: The user is asking for general information. Use either the `RetrieveNumberOfTicketsInStatus` or the `RetrieveTicketByIdentifier` tool, based on the specific user request.
-        * Case B: The user is trying to solve an IT-related issue. Use the `FindSimilarTickets` tool to base your response on relevant historical tickets.
+        * Case B: The user is trying to solve an IT-related issue. Use the `RetrieveSimilarTickets` knowledge base to base your response on relevant historical tickets.
   
     If the retrieved results are not helpful to answer the request, inform the user in a user-friendly way.
     ```

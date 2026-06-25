@@ -8,6 +8,8 @@ no_list: false
 description_list: true
 aliases:
     - /appstore/modules/genai/
+cascade:
+    - content_type: "Agents"
 ---
 
 {{% alert color="info" %}}

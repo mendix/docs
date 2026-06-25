@@ -135,6 +135,7 @@ If you are using Mendix version 10.21.1, use User Commons module version 2.1.0 o
     {{% /alert %}}
 
 * [Events](https://marketplace.mendix.com/link/component/224259) – see [Events](/appstore/widgets/events/) documentation (applicable to version 4.0.0 and above for Mx10 and version 3.3.0 and above for Mx9).
+* [Mx Model reflection](https://marketplace.mendix.com/link/component/69) (for version 4.2.1 and below) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation.
 
 Versions below 2.3.0 also require [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) – see [Native Mobile Resources](/appstore/modules/native-mobile-resources/) documentation.
 

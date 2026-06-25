@@ -1,7 +1,7 @@
 ---
 title: "List Values"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/
-description: A guide to understanding the list of objects for the datasource property in Mx10.
+description: A guide to understanding the list of objects for the datasource property.
 ---
 
 ## Introduction

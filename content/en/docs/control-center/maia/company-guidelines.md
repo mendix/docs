@@ -26,7 +26,7 @@ When you upload company guideline documents, the system extracts and categorizes
 
 To upload, review, and create company guidelines, follow these steps:
 
-1. Click **Upload Document**. You can upload .md, .pdf, .docx, .xlsx, and .txt format documents. For an example of what constitutes a good guideline document, check out <a href="/originals/control-center/company-guidelines/Evora Development Guidelines.pdf" target="_blank" rel="noopener noreferrer">this sample .pdf</a>.
+1. Click **Upload Document**. You can upload .md, .pdf, .docx, .xlsx, and .txt format documents. For an example of what constitutes a good guideline document, check out <a href="/originals/control-center/company-guidelines/Company Guidelines - Example Document.pdf" target="_blank" rel="noopener noreferrer">this sample .pdf</a>.
 
 2. Once you are done uploading, click **Process Documents**. The newly uploaded documents are displayed in the **Documents that need your attention** section, pending processing and review.
 
@@ -40,9 +40,17 @@ To upload, review, and create company guidelines, follow these steps:
     * In the contextual menu, click **Edit** if you want to edit a guideline and its categories.
     * In the contextual menu, click **Remove** if you want to discard the guideline.
 
-    You can search by guideline text, or filter by category and status.
+    You can search by guideline text, or filter by category and approval status.
 
-4. After you have reviewed all the guidelines in the list, click **Create Guidelines**. The guidelines are now listed on the **Company Guidelines** tab of the main page.
+4. While reviewing the guidelines in the list, you have the following options:
+
+* **Save and exit** – Saves the current state of the reviewed guidelines. This allows you to review the remaining guidelines later, or have someone else also review them before applying.
+* **Apply reviewed** – Only adds reviewed guidelines to the guideline library. Any unreviewed guidelines are discarded.     
+    Conflicts with existing guidelines or duplicates are not automatically detected. Mendix recommends reviewing the library if needed.
+* **Apply all** – Adds all guidelines to the guideline library, even if they are not marked as reviewed.    
+     Conflicts with existing guidelines or duplicates are not automatically detected. Mendix recommends reviewing the library if needed.
+
+Applied guidelines are now listed on the **Company Guidelines** tab of the main page.
 
 ### Guideline Categories {#guideline-categories}
 

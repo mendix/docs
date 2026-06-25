@@ -8,6 +8,10 @@ aliases:
     - /appstore/modules/genai/reference-guide/connectors/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/connectors/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 The Mendix platform provides seamless integration with various platforms through specialized connectors. These connectors enable you to extend the functionality of your applications by leveraging external services and data sources.

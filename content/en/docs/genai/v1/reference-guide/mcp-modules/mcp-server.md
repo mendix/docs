@@ -9,6 +9,10 @@ aliases:
     - /appstore/modules/genai/mcp-modules/mcp-server/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/mcp-modules/mcp-server/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 The [MCP Server](https://marketplace.mendix.com/link/component/240380) module provides easy low-code capability to set up an MCP ([Model Context Protocol](/agents/mcp/)) server within a Mendix app. An MCP server can seamlessly expose resources (such as tools or prompts) to other external AI applications that support MCP. The Mendix MCP Server module builds a bridge between Mendix and MCP client applications, such as Claude Desktop, through the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation, it is possible to:

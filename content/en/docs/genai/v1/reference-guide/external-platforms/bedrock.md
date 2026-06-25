@@ -8,6 +8,10 @@ aliases:
     - /appstore/modules/genai/reference-guide/external-connectors/bedrock/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 The [Amazon Bedrock connector](https://marketplace.mendix.com/link/component/215042) enables you to enrich your Mendix app with generative AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/).

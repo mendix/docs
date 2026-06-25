@@ -10,6 +10,10 @@ aliases:
     - /appstore/modules/genai/reference-guide/external-connectors/openai/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/external-connectors/openai/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction {#introduction}
 
 The [OpenAI connector](https://marketplace.mendix.com/link/component/220472) lets you generative AI capabilities into Mendix apps. It is compatible with [OpenAI's platform](https://platform.openai.com/) and [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-ai-foundry), where you can access OpenAI models. 

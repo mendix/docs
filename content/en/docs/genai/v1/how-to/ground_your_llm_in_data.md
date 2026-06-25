@@ -8,6 +8,10 @@ aliases:
     - /appstore/modules/genai/how-to/howto-groundllm/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/how-to/howto-groundllm/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 This document explains how to add data to your smart app to integrate with a Large Language Model (LLM). To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/) guide to start from scratch.

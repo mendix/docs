@@ -9,6 +9,10 @@ aliases:
     - /appstore/modules/genai/how-to/howto-prompt-engineering/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/how-to/howto-prompt-engineering/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 This document explains how to integrate the prompt engineering capabilities of the [Agent Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-commons/) module into your app.

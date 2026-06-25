@@ -7,6 +7,10 @@ aliases:
     - /appstore/modules/genai/genai-for-mx/agent-editor/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 The [Agent Editor](https://marketplace.mendix.com/link/component/257918) module enables you to develop, test, and optimize GenAI use cases by creating agents that interact with large language models (LLMs).

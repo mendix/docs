@@ -7,6 +7,11 @@ weight: 80
 aliases:
     - /appstore/modules/genai/genai-for-mx/migration-guide/
 ---
+
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/genai-for-mx/release-guide/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 During most regular release cycles, upgrading Agents Kit modules is seamless and requires no manual intervention. However, in some cases, breaking changes to the database or code are unavoidable in order to enable future improvements. 

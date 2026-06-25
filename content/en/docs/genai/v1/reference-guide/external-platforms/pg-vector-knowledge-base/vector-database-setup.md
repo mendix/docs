@@ -9,6 +9,10 @@ aliases:
     - /appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/external-connectors/pgvector-setup/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 Vector databases play an important role in embeddings-based AI use cases. They efficiently store, retrieve, and manipulate high-dimensional vectors that represent text or semantic information. A crucial step in these use cases, such as semantic search and retrieval-augmented generation (RAG), is to find the most similar pieces of information to a given input. Standard databases cannot perform these similarity and distance calculations between high-dimensional vectors efficiently, so a vector database is needed.

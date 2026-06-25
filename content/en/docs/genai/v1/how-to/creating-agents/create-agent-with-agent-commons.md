@@ -7,6 +7,10 @@ aliases:
     - /appstore/modules/genai/how-to/create-agent-with-agent-commons/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/how-to/create-agent-with-agent-commons/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 This approach uses the Agent Commons UI to define and manage agents at runtime. Create agents, configure prompts, and connect tools and knowledge bases through the web interface, enabling versioning and rapid experimentation without redeployment. This approach is useful when you need to iterate on agent definitions independently from the app development cycle.

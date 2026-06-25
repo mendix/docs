@@ -9,6 +9,10 @@ aliases:
     - /appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) lets you use [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) directly within your Mendix application. You can integrate generative AI by dragging and dropping common operations from its toolbox. 

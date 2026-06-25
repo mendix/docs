@@ -10,6 +10,10 @@ aliases:
     - /appstore/modules/genai/genai-for-mx/conversational-ui/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction {#introduction}
 
 With the [Conversational UI](https://marketplace.mendix.com/link/component/239450) module you can create a GenAI-based chat user interface. It contains the needed data model, pages, snippets, and building blocks. You can integrate with any LLM and knowledge base to create your full-screen, sidebar, or modal chat. It integrates with the Atlas framework and is the basis for the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926). It is also included in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), and the [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917).

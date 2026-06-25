@@ -8,6 +8,10 @@ aliases:
     - /appstore/modules/genai/mcp-modules/mcp-client/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/mcp-modules/mcp-client/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 The [MCP Client](https://marketplace.mendix.com/link/component/244893) module provides easy low-code capability to set up an MCP ([Model Context Protocol](/agents/mcp/)) client connection within a Mendix app. An MCP client can consume resources (such as tools or prompts) from other external AI applications that support MCP. The Mendix MCP Client module builds a bridge between Mendix and MCP server applications such as other Mendix apps, through the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation, it is possible to:

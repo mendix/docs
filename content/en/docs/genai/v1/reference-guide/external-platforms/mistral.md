@@ -8,6 +8,10 @@ aliases:
     - /appstore/modules/genai/reference-guide/external-connectors/mistral/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/external-connectors/mistral/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 The [Mistral connector](https://marketplace.mendix.com/link/component/248276) lets you integrate generative AI capabilities into Mendix apps. Because the Mistral API is compatible with the [OpenAI API](https://platform.openai.com/), this module focuses on Mistral-specific UI while reusing operations from the OpenAI connector. 

@@ -7,6 +7,10 @@ aliases:
     - /appstore/modules/genai/genai-for-mx/agent-commons/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-commons/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 The [Agent Commons](https://marketplace.mendix.com/link/component/240371) module enables users to develop, test, and optimize their GenAI use cases by creating effective agents that interact with large language models (LLMs).

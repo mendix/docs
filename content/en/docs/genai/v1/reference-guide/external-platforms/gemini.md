@@ -8,6 +8,10 @@ aliases:
     - /appstore/modules/genai/reference-guide/external-connectors/gemini/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/external-connectors/gemini/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 The [Google Gemini Connector](https://marketplace.mendix.com/link/component/254741) allows you to integrate generative AI capabilities into your Mendix application. Since the Gemini API is compatible with the [OpenAI API](https://platform.openai.com/), this module mainly focuses on Gemini specific UI while reusing the operations inside the OpenAI connector. 

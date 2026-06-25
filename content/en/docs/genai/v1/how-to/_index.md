@@ -10,6 +10,10 @@ aliases:
     - /appstore/modules/genai/how-to/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/how-to/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 Generative Artificial Intelligence (GenAI) transforms business applications, empowering developers and technologists to create smarter, more dynamic solutions. This document provides the knowledge and tools needed to make your first GenAI-powered application and guides developers and business technologists in integrating GenAI into their Mendix applications.

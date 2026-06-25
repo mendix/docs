@@ -10,6 +10,10 @@ aliases:
     - /appstore/modules/genai/reference-guide/external-connectors/pgvector/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction {#introduction}
 
 The [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It lets you easily store vectors and perform cosine similarity calculations from your Mendix app. You can use knowledge bases to enhance your app functionality by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, large language models (LLMs), and embeddings, this is a key component in natural language processing (NLP) patterns such as retrieval augmented generation (RAG), recommendation algorithms, and similarity search operations.

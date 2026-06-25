@@ -7,6 +7,10 @@ aliases:
     - /appstore/modules/genai/how-to/create-agent-with-agent-editor/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/how-to/create-agent-with-agent-editor/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 This approach uses [Agent Editor](https://marketplace.mendix.com/link/component/257918) in Studio Pro to create and manage agents as part of your app model. You define agents as documents in your app, alongside related resources such as models, knowledge bases, and consumed MCP services. This is the recommended approach for most use cases because it leverages existing platform capabilities.

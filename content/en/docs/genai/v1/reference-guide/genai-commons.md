@@ -9,6 +9,10 @@ aliases:
     - /appstore/modules/genai/genai-for-mx/commons/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction {#introduction}
 
 The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) module.

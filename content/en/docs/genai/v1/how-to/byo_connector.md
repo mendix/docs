@@ -8,6 +8,10 @@ aliases:
     - /appstore/modules/genai/how-to/byo-connector/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/how-to/byo-connector/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 If you want to create your own connection to the LLM model of your choice while leveraging the chat UI capabilities of the [ConversationalUI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) module, which is built using entities from [GenAICommons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/), then this document will guide you on how to get started with building your own GenAI Commons connector.

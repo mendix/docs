@@ -9,6 +9,10 @@ aliases:
     - /appstore/modules/genai/how-to/creating-agents/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/how-to/creating-agents/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 This guide explains how to create an agent in your Mendix app that combines [knowledge base retrieval (RAG)](/agents/rag/) and [function calling](/agents/function-calling/) capabilities from Mendix Agents Kit.

@@ -7,6 +7,10 @@ aliases:
     - /appstore/modules/genai/snowflake-cortex/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/snowflake-cortex/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 [Snowflake Cortex AI](https://docs.snowflake.com/en/guides-overview-ai-features) allows users to quickly analyze data and build generative AI applications using fully managed LLMs, vector search, and fully managed text-to-SQL services. It also enables multiple users to use AI models with no-code, SQL, and Python interfaces.

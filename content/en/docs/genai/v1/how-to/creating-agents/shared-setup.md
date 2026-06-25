@@ -7,6 +7,10 @@ aliases:
     - /appstore/modules/genai/how-to/creating-agents/shared-setup/
 ---
 
+{{% alert color="info" %}}
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/how-to/creating-agents/shared-setup/), which is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
 ## Introduction
 
 This guide describes the shared setup steps for the example IT helpdesk agent. Complete these steps before choosing one of three implementation approaches. For more information about the agent use case and implementation options, see [Creating Your First Agent](/agents/agents-kit-1/how-to/creating-agents/).

@@ -1,5 +1,5 @@
 ---
-title: "Mendix inside Teamcenter"
+title: "Mendix Inside Teamcenter"
 url: /refguide/mendix-client/mendix-inside-teamcenter/
 description: "Describes how to embed a Mendix web app as a native component inside Siemens Teamcenter Active Workspace using the embedded client."
 weight: 40
@@ -8,13 +8,13 @@ beta: true
 
 ## Introduction
 
-Mendix inside Teamcenter lets you embed a Mendix web app as a native component inside Siemens Teamcenter Active Workspace (AWC). The Mendix app runs directly in the AWC page as a micro-frontend using the [Embedded Client](/refguide/mendix-client/embedding-the-client/) feature.
+{{% alert color="info" %}}
+Mendix inside Teamcenter is available in Mendix version 11.12.0 and above and is currently in public Beta. See the [prerequisites](#prerequisites) for more version requirements.
+{{% /alert %}}
+
+Mendix inside Teamcenter lets you embed a Mendix web app as a native component inside Siemens Teamcenter Active Workspace. The Mendix app runs directly in the Active Workspace page as a micro-frontend using the [Embedded Client](/refguide/mendix-client/embedding-the-client/) feature.
 
 This integration requires the [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/) to connect the Mendix app to Teamcenter data and to handle authentication.
-
-{{% alert color="info" %}}
-Mendix inside Teamcenter is in public Beta. See the [prerequisites](#prerequisites) for required versions.
-{{% /alert %}}
 
 ## Prerequisites {#prerequisites}
 
@@ -48,21 +48,25 @@ To add an Embedded navigation profile:
 3. Select **Embedded** and click **OK**.
 4. Configure the **Default home page** for the embedded app.
 
-For more information about navigation profiles, see [Setting Up the Navigation Structure](/refguide/setting-up-the-navigation-structure/).
+For more information about navigation profiles, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
 
-### Configuring CORS
+### Configuring Cross-Origin Resource Sharing (CORS)
 
-The Mendix app must allow cross-origin requests from Active Workspace, because the browser loads the Mendix client bundle from the Mendix runtime origin while the page is served from the Teamcenter origin.
+The Mendix app must allow cross-origin resource sharing (CORS) from Active Workspace. This allows the browser to load the Mendix client bundle from the Mendix runtime origin from a page that is served from the Teamcenter origin. You will need to set up the following:
 
-Configure the following [custom runtime settings](/refguide/custom-settings/). Replace `https://your-teamcenter.example.com` with the actual origin of your Active Workspace deployment, including scheme and port if applicable.
+
 
 #### Runtime Settings
+
+Configure the following [custom runtime setting](/refguide/custom-settings/). 
 
 | Name | Value |
 | --- | --- |
 | `com.mendix.core.SameSiteCookies` | `None` |
 
 #### Custom HTTP Response Headers
+
+Configure the following HTTP Response Headers in your [local runtime configuration](/refguide/configurations-tab/#headers) or your cloud environment. Replace `https://your-teamcenter.example.com` with the actual origin of your Active Workspace deployment, including scheme and port if applicable.
 
 | Header | Value |
 | --- | --- |
@@ -75,11 +79,11 @@ Configure the following [custom runtime settings](/refguide/custom-settings/). R
 Both the Mendix runtime and the Active Workspace server must be served over HTTPS. When `SameSiteCookies` is set to `None`, the `Secure` attribute is automatically added to cookies, which requires HTTPS on both origins.
 {{% /alert %}}
 
-Restart the Mendix app after changing these settings. For background on how CORS works in the Mendix runtime, see [Configuring CORS](/refguide/configure-cors/).
+Restart the Mendix app after changing these settings. For background on how CORS works in the Mendix runtime, see [Configuring CORS in the Mendix Runtime](https://docs.mendix.com/refguide/configure-cors/).
 
 ## Installing the Mendix Component in Active Workspace
 
-The Mendix-inside-Teamcenter AWC component (`MendixEmbedded`) is a custom Active Workspace web component that loads the Mendix embedded client bundle and mounts the Mendix app inside the AWC page.
+The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a custom Active Workspace web component that loads the Mendix embedded client bundle and mounts the Mendix app inside the Active Workspace page.
 
 ### Adding the Component to Active Workspace
 
@@ -93,7 +97,7 @@ To verify the component was picked up correctly, check that its view model entry
 
 ### Registering the Component on a Page
 
-To display the Mendix app on an Active Workspace page, add a card definition for it to the relevant `layoutsViewModel.json` file in your AWC stage repository. Set `declarativeKeyContext` to the URL of your Mendix runtime:
+To display the Mendix app on an Active Workspace page, add a card definition for it to the relevant `layoutsViewModel.json` file in your Active Workspace stage repository. Set `declarativeKeyContext` to the URL of your Mendix runtime:
 
 ```json
 "Mendix": {
@@ -110,7 +114,7 @@ To display the Mendix app on an Active Workspace page, add a card definition for
 
 Add `"Mendix"` to the relevant layout handler grid and rebuild Active Workspace. If the Mendix card does not appear after rebuilding, clear the browser cache to ensure the new chunk is loaded.
 
-Detailed AWC customization and build steps are outside the scope of this documentation. Refer to the Siemens Active Workspace documentation for instructions.
+Detailed Active Workspace customization and build steps are outside the scope of this documentation. Refer to the Siemens Active Workspace documentation for instructions.
 
 ## Configuring the Content Security Policy in Teamcenter
 
@@ -161,9 +165,9 @@ Follow these steps to configure authentication. Steps 1–3 require Teamcenter a
 
 ## Passing Context from Teamcenter {#passing-context}
 
-The `MendixEmbedded` AWC component passes Teamcenter object context to the Mendix app as startup parameters. These are configured in the AWC component and forwarded to the Mendix `render()` call as the `parameters` object.
+The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. These are configured in the Active Workspace component and forwarded to the Mendix `render()` call as the `parameters` object.
 
-The following example shows how the AWC component passes a selected Teamcenter item UID to the Mendix app:
+The following example shows how the Active Workspace component passes a selected Teamcenter item UID to the Mendix app:
 
 ```js
 const MENDIX_URL = "https://your-mendix-runtime.example.com/";

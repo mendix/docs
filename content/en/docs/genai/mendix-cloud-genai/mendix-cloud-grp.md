@@ -62,7 +62,7 @@ Customers looking to leverage other models in addition to the above can also tak
 If you have questions about upcoming regions or want to explore making models available in your specific region, reach out to [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com).
 {{% /alert %}}
 
-### GenAI Units and Model Pricing
+### GenAI Units and Model Exchange
 
 Text generation and embeddings resources use a flexible consumption model based on [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units). When you provision a resource, you choose a monthly GenAI Unit capacity in Mendix Cloud Tokens. The system converts your selection to GenAI Units at a fixed rate of 100 GenAI Units per Cloud Token. All consumption is then deducted from this GenAI Units balance at a model-specific exchange rate. For more information, see [Provisioning GenAI Resources](/control-center/genai-resources-self-service/#provisioning-genai-resources).
 

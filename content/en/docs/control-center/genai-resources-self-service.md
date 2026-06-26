@@ -50,7 +50,7 @@ When provisioning a new resource, enter the following information:
 
 {{< figure src="/attachments/control-center/genai-resources/provisioning.jpg" alt="" >}}
 
-After filling in the required fields, review all the entered details in **Resource Specification**. If the entered Cloud Token amount exceeds your available balance, **Cloud Tokens Consumption** turns red and the **Provision Resource** button is disabled. To learn more about GenAI Unit allocation, see [GenAI Units and Model Pricing](/agents/mx-cloud-genai/resource-packs/#genai-units-and-model-pricing).
+After filling in the required fields, review all the entered details in **Resource Specification**. If the entered Cloud Token amount exceeds your available balance, **Cloud Tokens Consumption** turns red and the **Provision Resource** button is disabled. To learn more about GenAI Unit allocation, see [GenAI Units and Model Exchange](/agents/mx-cloud-genai/resource-packs/#genai-units-and-model-exchange).
 
 Click **Provision** to proceed. Before provisioning is finalized, a **Resource Summary** confirmation dialog shows a read-only overview of all entered details. Review the summary and click **Provision** to complete provisioning. You are taken back to the **GenAI Resources** page, where the newly created resource is displayed in the list. Selecting the newly provisioned resource opens its details directly in the Mendix Cloud GenAI Portal in a new tab.
 

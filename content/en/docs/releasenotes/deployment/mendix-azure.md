@@ -10,6 +10,13 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+## Release date: July 2, 2026
+* We have improved managed app creation in the Mendix on Azure portal.
+* We have added infrastructure cost estimation guidance to the Mendix on Azure docs.
+* We have added a production or non-production indicator for Mendix on Azure clusters.
+* We have fixed a preflight check issue where backend logs showed success but the frontend showed an error with no remediation steps.
+* We have fixed cluster sort order on the Cluster Overview page after refresh.
+
 ## Release date: May 7, 2026
 
 * We have fixed an issue where an unavailable VM could be selected.

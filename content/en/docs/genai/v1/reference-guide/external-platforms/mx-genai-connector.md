@@ -28,7 +28,7 @@ Typical use cases for generative AI are described in more detail in the [Typical
 To use this connector, you need configuration keys to authenticate to the Mendix Cloud GenAI services. You can generate keys in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com). Alternatively, ask someone with access to generate keys for you or add you to their team so you can generate keys yourself.
 
 {{% alert color="info" %}}
-The Mendix Cloud GenAI Connector requires at least version 3.0.0. To use multiple models from a single resource, upgrade to V6.2.0 or later.
+The Mendix Cloud GenAI Connector requires at least version 3.0.0. To use multiple models from a single resource, upgrade to version 6.2.0 or above.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -72,7 +72,7 @@ When using an Embeddings Model Resource together with a Knowledge Base Resource,
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If you are using connector V6.2.0 or later, you can select which model to use per agent or microflow from all available models on the resource. If you are using an older version, the connector automatically uses the default model configured on the resource. You do not need to update your app unless you want to use a different model explicitly.
+If you are using connector version 6.2.0 or above, you can select which model to use per agent or job from all available models on the resource. If you are using an older version, the connector automatically uses the default model configured on the resource. You do not need to update your app unless you want to use a different model explicitly.
 {{% /alert %}}
 
 ## Operations

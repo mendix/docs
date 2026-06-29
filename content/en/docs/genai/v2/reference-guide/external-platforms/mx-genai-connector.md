@@ -63,7 +63,7 @@ When using an Embeddings Model Resource together with a Knowledge Base Resource,
 {{% /alert %}}
 
 {{% alert color="info" %}}
-You can select which model to use per agent or microflow from all available models on the resource.
+You can select which model to use per agent or job from all available models on the resource.
 {{% /alert %}}
 
 ## Operations

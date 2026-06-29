@@ -34,7 +34,7 @@ Before you build an agent in your app, make sure your scenario meets the followi
 * Basic understanding of GenAI concepts – Review [Enrich Your Mendix App with Agentic Capabilities](/agents/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/agents/get-started/) and [agents](/agents/agents/)
 * Basic understanding of function calling and prompt engineering – Learn about [Function Calling](/agents/function-calling/) and [Prompt Engineering](/agents/get-started/#prompt-engineering) to use them within the Mendix ecosystem
 * Optional – If you are not yet familiar with implementing specific GenAI concepts with Agents Kit, follow these GenAI documents: [Grounding Your LLM in Data](/agents/agents-kit-2/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/agents/agents-kit-2/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/agents/agents-kit-2/how-to/howto-functioncalling/)
-* Optional – Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the related Mendix modules: [MCP Server module](/agents/agents-kit-2/mcp-modules/mcp-server/) and [MCP Client module](/agents/agents-kit-2/mcp-modules/mcp-client/)
+* Optional – Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the related Mendix modules: [MCP Server module](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/) and [MCP Client module](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-client/)
 
 ## Setting Up Your Application
 

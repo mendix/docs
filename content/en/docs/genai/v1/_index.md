@@ -64,8 +64,8 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
-| [MCP Client](/agents/agents-kit-1/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 3.1.0 |
-| [MCP Server](/agents/agents-kit-1/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 4.1.1 |
+| [MCP Client](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 3.1.0 |
+| [MCP Server](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 4.1.1 |
 
 {{% alert color="info" %}}
 Older versions of some modules and the GenAI Showcase App are available in Studio Pro 9.24.2.

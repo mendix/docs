@@ -1,6 +1,6 @@
 ---
 title: "MCP Client"
-url: /agents/agents-kit-1/mcp-modules/mcp-client/
+url: /agents/agents-kit-1/reference-guide/mcp-modules/mcp-client/
 linktitle: "MCP Client"
 description: "Agents Kit 1: This document describes the purpose, configuration, and usage of the MCP Client module from Mendix Marketplace that allows developers to consume tools and prompts from external MCP servers."
 weight: 20
@@ -9,7 +9,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/mcp-modules/mcp-client/), which is available for Studio Pro 11.12 and above.
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-client/), which is available for Studio Pro 11.12 and above.
 {{% /alert %}}
 
 ## Introduction

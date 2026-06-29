@@ -45,7 +45,7 @@ Generative artificial intelligence (GenAI) transforms business applications, emp
 * The [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) to learn how to quickly access GenAI capabilities from a Mendix app.
 * The [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) provides essential information about the OpenAI connector.
 * The [Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/) provides key information about the AWS Bedrock connector.
-* The [MCP Server Module](/agents/agents-kit-1/mcp-modules/mcp-server/) provides reusable operations to create and initialize an MCP server within a Mendix app to expose tools and prompts to external clients.
+* The [MCP Server Module](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-server/) provides reusable operations to create and initialize an MCP server within a Mendix app to expose tools and prompts to external clients.
 * The [PGVector Knowledge Base](/agents/agents-kit-1/reference-guide/external-connectors/pgvector/) offers the option for a private knowledge base outside of the LLM infrastructure.
 
 ### Featured Blog Posts

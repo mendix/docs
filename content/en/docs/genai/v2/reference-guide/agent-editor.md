@@ -289,7 +289,7 @@ Agent documents created in Studio Pro are imported through after-startup logic. 
 
 If **List tools** fails, verify the consumed MCP service configuration: endpoint constant value, protocol version, and credentials microflow (when authentication is required). For technical details, the log files in the `/agent-editor` folder of the app directory can be inspected.
 
-If possible, confirm that the target endpoint is reachable from the running app runtime. You can do this, for example, by temporarily configuring it manually in the [MCP Client module](/agents/agents-kit-2/mcp-modules/mcp-client/) and checking the **Console** pane in Studio Pro for logs.
+If possible, confirm that the target endpoint is reachable from the running app runtime. You can do this, for example, by temporarily configuring it manually in the [MCP Client module](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-client/) and checking the **Console** pane in Studio Pro for logs.
 
 If calling the tools fails at runtime while testing the agent, check the **Console** pane in Studio Pro for error logs.
 

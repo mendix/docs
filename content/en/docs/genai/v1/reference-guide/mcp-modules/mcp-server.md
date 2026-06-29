@@ -1,6 +1,6 @@
 ---
 title: "MCP Server"
-url: /agents/agents-kit-1/mcp-modules/mcp-server/
+url: /agents/agents-kit-1/reference-guide/mcp-modules/mcp-server/
 linktitle: "MCP Server"
 description: "Agents Kit 1: This document describes the purpose, configuration, and usage of the MCP Server module from Mendix Marketplace that allows developers to expose Mendix logic to external MCP clients and AI systems."
 weight: 20
@@ -10,7 +10,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/mcp-modules/mcp-server/), which is available for Studio Pro 11.12 and above.
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/), which is available for Studio Pro 11.12 and above.
 {{% /alert %}}
 
 ## Introduction
@@ -71,7 +71,7 @@ The `User` returned in the microflow is used for all subsequent prompt and tool 
 When creating an MCP server, you need to specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The latest version of the MCP Server module currently only supports `v2025-03-26` and the Streamable HTTP transport. MCP Clients that need to connect to a Mendix MCP server should support the same version. Note that Mendix follows the offered capabilities of the MCP Java SDK.
 
 {{% alert color="info" %}}
-Since version 4.0.0 of the module, the protocol version `v2024-11-05` was replaced by `v2025-03-26`, which changed the transport from HTTP + SSE to Streamable HTTP because HTTP + SSE is officially deprecated. Most clients already support the new transport, such as the Mendix [MCP Client](/agents/agents-kit-1/mcp-modules/mcp-client/) module.
+Since version 4.0.0 of the module, the protocol version `v2024-11-05` was replaced by `v2025-03-26`, which changed the transport from HTTP + SSE to Streamable HTTP because HTTP + SSE is officially deprecated. Most clients already support the new transport, such as the Mendix [MCP Client](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-client/) module.
 {{% /alert %}}
 
 ### Add Tools

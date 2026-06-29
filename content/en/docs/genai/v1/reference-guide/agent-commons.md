@@ -142,7 +142,7 @@ For more technical details, see the [Function Calling](/agents/function-calling/
 
 ##### Adding Tools from MCP Servers
 
-Besides microflow tools, tools exposed by MCP servers are also supported. To add MCP tools to an agent version, select an MCP server configuration from the [MCP Client module](/agents/agents-kit-1/mcp-modules/mcp-client/). You can then choose one of two ways to add MCP tools: 
+Besides microflow tools, tools exposed by MCP servers are also supported. To add MCP tools to an agent version, select an MCP server configuration from the [MCP Client module](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-client/). You can then choose one of two ways to add MCP tools: 
 
 * **Use all available tools**: Imports the entire server, including all tools it provides. This also means less control over individual tools, and if tools are added in the future, they get added automatically on agent execution.
 * **Select Tools**: Lets you import specific tools from the server and change specific fields for individual tools.

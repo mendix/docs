@@ -1,11 +1,11 @@
 ---
 title: "MCP Client"
-url: /agents/agents-kit-2/mcp-modules/mcp-client/
+url: /agents/agents-kit-2/reference-guide/mcp-modules/mcp-client/
 linktitle: "MCP Client"
 description: "Agents Kit 2: Reference documentation for the MCP Client module, which consumes tools and prompts from external MCP servers."
 weight: 20
 aliases:
-    - /agents/mcp-modules/mcp-client/
+    - /agents/reference-guide/mcp-modules/mcp-client/
     - /appstore/modules/genai/mcp-modules/mcp-client/
 ---
 

@@ -210,7 +210,7 @@ A knowledge base span is created for each knowledge base retrieval tool call req
 
 #### `MCPSpan` {#mcp-span}
 
-An MCP span is created for each tool invocation over the Model Context Protocol via the [MCP Client module](/agents/agents-kit-2/mcp-modules/mcp-client/). The tool call is processed on the MCP server, usually outside of this application, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
+An MCP span is created for each tool invocation over the Model Context Protocol via the [MCP Client module](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-client/). The tool call is processed on the MCP server, usually outside of this application, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
 
 | Attribute | Description |
 | --- | --- |

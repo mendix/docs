@@ -1,6 +1,7 @@
 ---
 title: "Building Smarter Apps Using GenAI"
 url: /agents/agents-kit-1/how-to/
+linktitle: "Building Smarter Apps"
 weight: 20
 description: "Agents Kit 1: Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors."
 no_list: false

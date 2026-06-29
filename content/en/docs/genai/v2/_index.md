@@ -64,7 +64,7 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 
 ## Documents in This Section
 
-* [Building Smarter Apps Using GenAI](/agents/agents-kit-2/how-to/)
+* [Building Smarter Apps Using AI](/agents/agents-kit-2/how-to/)
 
     Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors.
 

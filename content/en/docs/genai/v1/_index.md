@@ -73,7 +73,7 @@ Older versions of some modules and the GenAI Showcase App are available in Studi
 
 ## Documents in This Section
 
-* [How to Build Smarter Apps Using GenAI](/agents/agents-kit-1/how-to/)
+* [Building Smarter Apps Using GenAI](/agents/agents-kit-1/how-to/)
 
     Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors.
 * [Reference Guides](/agents/agents-kit-1/reference-guide/)

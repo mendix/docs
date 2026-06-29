@@ -42,10 +42,10 @@ The *Latest Released Version* column shows the most recent version for Agents Ki
 
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
-| [Agent Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 3.2.0 |
-| [Agent Editor](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. Available in Studio Pro 11.9 and above. | 1.3.0 |
-| [Conversational UI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 6.3.0 |
-| [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 6.2.1 |
+| [Agent Commons](/agents/agents-kit-1/reference-guide/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 3.2.0 |
+| [Agent Editor](/agents/agents-kit-1/reference-guide/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. Available in Studio Pro 11.9 and above. | 1.3.0 |
+| [Conversational UI](/agents/agents-kit-1/reference-guide/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 6.3.0 |
+| [GenAI Commons](/agents/agents-kit-1/reference-guide/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 6.2.1 |
 
 ### Connector Modules {#connectors}
 
@@ -64,8 +64,8 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
-| [MCP Client](/agents/agents-kit-1/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 3.1.0 |
-| [MCP Server](/agents/agents-kit-1/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 4.1.1 |
+| [MCP Client](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 3.1.0 |
+| [MCP Server](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 4.1.1 |
 
 {{% alert color="info" %}}
 Older versions of some modules and the GenAI Showcase App are available in Studio Pro 9.24.2.
@@ -80,6 +80,6 @@ Older versions of some modules and the GenAI Showcase App are available in Studi
 
     Technical reference documentation for the Mendix Marketplace components in Agents Kit 1.
 
-* [Release and Migration Guide for GenAI Modules](/agents/agents-kit-1/reference-guide/genai-for-mx/migration-guide/)
+* [Release and Migration Guide for GenAI Modules](/agents/agents-kit-1/reference-guide/migration-guide/)
 
     Describes the combined releases of various GenAI-related modules and their inter-module dependencies. Also includes migration steps and notices about deprecations and removals.

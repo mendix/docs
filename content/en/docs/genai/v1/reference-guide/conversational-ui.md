@@ -1,6 +1,6 @@
 ---
 title: "Conversational UI"
-url: /agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/
+url: /agents/agents-kit-1/reference-guide/conversational-ui/
 linktitle: "Conversational UI"
 description: "Agents Kit 1: Describes the Conversational UI Marketplace module that assists developers in implementing conversational use cases such as an AI Bot."
 aliases:
@@ -11,7 +11,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/), which is available for Studio Pro 11.12 and above.
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/conversational-ui/), which is available for Studio Pro 11.12 and above.
 {{% /alert %}}
 
 ## Introduction {#introduction}
@@ -21,7 +21,7 @@ With the [Conversational UI](https://marketplace.mendix.com/link/component/23945
 Mendix has produced a [Conversational AI Design Checklist](/howto/front-end/conversation-checklist/) with some best practices for introducing conversational AI into your app.
 
 {{% alert color="info" %}}
-Prompt Management used to be a capability of the Conversational UI module. Since version 4.0.0, it is no longer part of the module, and has been moved to the [Agent Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-commons/) module. Existing prompts can be exported from the Prompt Management overview page and imported into the Agent Builder interface.
+Prompt Management used to be a capability of the Conversational UI module. Since version 4.0.0, it is no longer part of the module, and has been moved to the [Agent Commons](/agents/agents-kit-1/reference-guide/agent-commons/) module. Existing prompts can be exported from the Prompt Management overview page and imported into the Agent Builder interface.
 {{% /alert %}}
 
 ### Typical Use Cases {#use-cases}
@@ -47,7 +47,7 @@ The Conversational UI module provides the following functionalities:
 
 * Operations to set up your context, interact with the model, and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information  
-* Integration with any model that is compatible with [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/)
+* Integration with any model that is compatible with [GenAI Commons](/agents/agents-kit-1/reference-guide/commons/)
 * Support for comprehensive traceability and monitoring of GenAI interactions
 
 ### Limitations {#limitations}
@@ -67,7 +67,7 @@ You must also ensure you have the other prerequisite modules that Conversational
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-Finally, you must also set up a connector that is compatible with [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/). One option is to use the [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449). For more information on how to configure this connector, see the [Configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration) section of *Mendix Cloud GenAI connector*. Additionally, Mendix offers platform-supported integration with [(Azure) OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/). If desired, you need to download these integrations manually from the Marketplace. Alternatively, you can integrate with custom models by creating your own connector and making its operations and object structure compatible with the [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) `Request` and `Response`.
+Finally, you must also set up a connector that is compatible with [GenAI Commons](/agents/agents-kit-1/reference-guide/commons/). One option is to use the [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449). For more information on how to configure this connector, see the [Configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration) section of *Mendix Cloud GenAI connector*. Additionally, Mendix offers platform-supported integration with [(Azure) OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/). If desired, you need to download these integrations manually from the Marketplace. Alternatively, you can integrate with custom models by creating your own connector and making its operations and object structure compatible with the [GenAI Commons](/agents/agents-kit-1/reference-guide/commons/) `Request` and `Response`.
 
 ## Installation {#installation}
 
@@ -161,7 +161,7 @@ If you need custom attributes or settings in your action microflow required for 
 
 Depending on the implementation, you can create this object using a microflow that opens the page or using a datasource microflow on the page itself. The following are the operations in the toolbox for creating the ChatContext:
 
-* `New Chat` creates a new `ChatContext` and a new `ProviderConfig`. The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally, the action microflow of the new `ProviderConfig` is set. A [DeployedModel](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#deployed-model) needs to be passed in order to access the right model. Via the association `ProviderConfig_DeployedModel` the DeployedModel can be retrieved and used to pass to the [Chat Completions (with history)](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#chat-completions-with-history) later in the Action Microflow.
+* `New Chat` creates a new `ChatContext` and a new `ProviderConfig`. The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally, the action microflow of the new `ProviderConfig` is set. A [DeployedModel](/agents/agents-kit-1/reference-guide/commons/#deployed-model) needs to be passed in order to access the right model. Via the association `ProviderConfig_DeployedModel` the DeployedModel can be retrieved and used to pass to the [Chat Completions (with history)](/agents/agents-kit-1/reference-guide/commons/#chat-completions-with-history) later in the Action Microflow.
 * `New Chat with Existing Config` creates a new `ChatContext` and sets a given `ProviderConfig` to active.
 * `New Chat with Additional Configs` creates a new `ChatContext`, adds a `ProviderConfig` to the `ChatContext`, and sets it to active. In addition, a list of `ProviderConfig` can be added to the `ChatContext` (non-active, but selectable in the UI).
 
@@ -189,7 +189,7 @@ Add the action microflow to an existing `ProviderConfig` by using the **Set Chat
 A typical action microflow is responsible for the following:
 
 * Convert the `ChatContext` with user input to a `Request` structure for the chat completions operation. This module provides the **Default Preprocessing** toolbox action to take care of that in basic cases; for more advanced or custom cases you need to create your own logic based on this.
-* Execute the [Chat Completions (with history)](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#chat-completions-with-history) operation. To pass a [DeployedModel](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#deployed-model), you can use the `ProviderConfig_DeployedModel` association of the active `ProviderConfig` for the `ChatContext`.
+* Execute the [Chat Completions (with history)](/agents/agents-kit-1/reference-guide/commons/#chat-completions-with-history) operation. To pass a [DeployedModel](/agents/agents-kit-1/reference-guide/commons/#deployed-model), you can use the `ProviderConfig_DeployedModel` association of the active `ProviderConfig` for the `ChatContext`.
 * Update the `ChatContext` structure based on the response so that the user can see the result in the UI. This module provides the **Update Assistant Response** microflow action in the toolbox. It is only required to execute this logic in successful model interactions, make sure to pass the response object. In the case of an unhappy scenario, the action microflow should return false and the module logic will take care of setting the applicable error status and no response object is needed. 
 
 The example action microflow in this module, to be found in the **USE_ME > ConversationalUI > Action microflow examples** folder follows this basic structure.
@@ -206,14 +206,14 @@ If you want to create your custom action microflow, keep the following considera
 The following operations can be found in the toolbox for changing the [ChatContext](#chat-context) in a (custom) action microflow:
 
 * `Set Topic` sets the `Topic` of the `ChatContext`. This attribute can be used in the **History** sidebar while making historical chats visible to users.
-* `Default Preprocessing` sets a default `Topic` for `ChatContext` and creates a sample [Request](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#request).
+* `Default Preprocessing` sets a default `Topic` for `ChatContext` and creates a sample [Request](/agents/agents-kit-1/reference-guide/commons/#request).
 * `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for a chat with history within [Retrieve and Generate with Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/#retrieve-and-generate).
 
 ##### Request Operations {#request-operations}
 
 The following operations are used in a (custom) action microflow:
 
-* `Create Request with Chat History` creates a [Request](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#request) object that is used as an input parameter in a [Chat Completions (with history)](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#chat-completions-with-history) operation as part of the [action microflow](#action-microflow).
+* `Create Request with Chat History` creates a [Request](/agents/agents-kit-1/reference-guide/commons/#request) object that is used as an input parameter in a [Chat Completions (with history)](/agents/agents-kit-1/reference-guide/commons/#chat-completions-with-history) operation as part of the [action microflow](#action-microflow).
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow) because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Update Assistant Response` processes the response of the model and adds the new message and any sources to the UI. This is typically one of the last steps of the logic in an [action microflow](#action-microflow). It only needs to be included at the end of the happy flow of an action microflow. Make sure to pass the response object.
 
@@ -223,17 +223,17 @@ Since version 6.0.0, the module stores messages from tool calling persistently i
 
 This changes how action microflows are used, because they are called each time a tool is called and the UI changes for the user, for example, displaying a tool call or waiting for a user decision if a tool can be executed. Logic that only needs to happen right after the user sends their message (preprocessing) or after the final assistant's message was returned (postprocessing), should perhaps only be executed for those cases.
 
-If no [user-visibility](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#enum-useraccessapproval) is configured for tools and you would like not to store tool messages (and therefore retain the behavior from versions before 6.0.0), you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
+If no [user-visibility](/agents/agents-kit-1/reference-guide/commons/#enum-useraccessapproval) is configured for tools and you would like not to store tool messages (and therefore retain the behavior from versions before 6.0.0), you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-1/reference-guide/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-1/reference-guide/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
 
 ### Human in the loop {#human-in-the-loop}
 
-When using the [Function Calling](/agents/function-calling/) pattern by adding tools to the request, you can control when those tools get executed and if they are visible to the user by setting [user access approval](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#enum-useraccessapproval) per tool. Human in the loop describes a pattern where the AI can perform powerful tasks, but still requires humans to take certain decisions and oversee the agent's behavior. When using the ConversationalUI module, its basic action microflow pattern to execute requests with history and UI snippets to display the chat, human in the loop works out of the box. Note that action microflows are called until there is a final assistant's response as described in the [Using Tool or Knowledge Base Calling](#action-microflow-tool-calling) section above, even if all tools are executed without user interaction.
+When using the [Function Calling](/agents/function-calling/) pattern by adding tools to the request, you can control when those tools get executed and if they are visible to the user by setting [user access approval](/agents/agents-kit-1/reference-guide/commons/#enum-useraccessapproval) per tool. Human in the loop describes a pattern where the AI can perform powerful tasks, but still requires humans to take certain decisions and oversee the agent's behavior. When using the ConversationalUI module, its basic action microflow pattern to execute requests with history and UI snippets to display the chat, human in the loop works out of the box. Note that action microflows are called until there is a final assistant's response as described in the [Using Tool or Knowledge Base Calling](#action-microflow-tool-calling) section above, even if all tools are executed without user interaction.
 
-If you are not using the ConversationalUI module for [chat with history executions](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#chat-completions-with-history) or your use case does not contain a chat history, but is [task-based (without history)](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#chat-completions-without-history), you need to implement the following actions:
+If you are not using the ConversationalUI module for [chat with history executions](/agents/agents-kit-1/reference-guide/commons/#chat-completions-with-history) or your use case does not contain a chat history, but is [task-based (without history)](/agents/agents-kit-1/reference-guide/commons/#chat-completions-without-history), you need to implement the following actions:
 
-1. Store the tool calls from the returned [Response](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#response) in your database. You can either use your own entities or reuse `ToolMessage` from ConversationalUI. The microflow `Response_CreateOrUpdateMessage` updates or creates a `Message` object with its corresponding tool messages, based on the response from the LLM.
-2. If `UserConfirmationRequired` was enabled for a tool in the [user access approval](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#enum-useraccessapproval) setting, you can use the tool messages to display the information and wait for the user to decide. The `pending` status of the tool message indicates that a user needs to take action. The `ToolMessage_UserConfirmation_Example` page shows an example as a popup. You can duplicate the page and modify to your own. The buttons for confirmation or rejection should recall the whole action.
-3. Add the content of the tool messages to the request. [Add a message](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#chat-add-message-to-request) with role `assistant` that contains the tool call information and messages with role `tool` for the tool results. You can use the `Request_AddMessage_ToolMessages` microflow to pass the same message from the first step.
+1. Store the tool calls from the returned [Response](/agents/agents-kit-1/reference-guide/commons/#response) in your database. You can either use your own entities or reuse `ToolMessage` from ConversationalUI. The microflow `Response_CreateOrUpdateMessage` updates or creates a `Message` object with its corresponding tool messages, based on the response from the LLM.
+2. If `UserConfirmationRequired` was enabled for a tool in the [user access approval](/agents/agents-kit-1/reference-guide/commons/#enum-useraccessapproval) setting, you can use the tool messages to display the information and wait for the user to decide. The `pending` status of the tool message indicates that a user needs to take action. The `ToolMessage_UserConfirmation_Example` page shows an example as a popup. You can duplicate the page and modify to your own. The buttons for confirmation or rejection should recall the whole action.
+3. Add the content of the tool messages to the request. [Add a message](/agents/agents-kit-1/reference-guide/commons/#chat-add-message-to-request) with role `assistant` that contains the tool call information and messages with role `tool` for the tool results. You can use the `Request_AddMessage_ToolMessages` microflow to pass the same message from the first step.
 4. Recall the chat completions action. Be aware that the response might contain new tool calls and not the final message yet, so you need to follow the above steps again. A recursive loop might be helpful, for example, as shown in the `Request_CallWithoutHistory_ToolUserConfirmation_Example` microflow.
 
 For a task-based (without history) use case, you can review the [GenAI Showcase App's](https://marketplace.mendix.com/link/component/220475) function calling example, especially the microflows `Task_ProcessWithFunctionCalling` and `Task_CallWithoutHistory`. Alternatively, refer to the [Creating Your First Agent](/agents/agents-kit-1/how-to/creating-agents/) documentation for a similar example and a step by step guide.
@@ -305,14 +305,14 @@ If you are using a custom layout in your application, you may need to use a layo
 
 ### Token Consumption Monitor Snippets {#snippet-token-monitor}
 
-A separate set of snippets has been made available to display and export token usage information in the running application. This is applicable for LLM connectors that follow the principles of [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#token-usage) and as a result store token usage information. The following snippets can be added to (admin) pages independently from the conversation logic described in earlier sections. 
+A separate set of snippets has been made available to display and export token usage information in the running application. This is applicable for LLM connectors that follow the principles of [GenAI Commons](/agents/agents-kit-1/reference-guide/commons/#token-usage) and as a result store token usage information. The following snippets can be added to (admin) pages independently from the conversation logic described in earlier sections. 
 
 * **Snippet_TokenMonitor** - This snippet can be used to display token usage information in charts and contains several other snippets that you can use to build your token consumption monitor dashboard. To display the token usage data, users will need the `UsageMonitoring` user role.
 * **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage information in a grid and export it as *.xlsx*. 
 
 ### Traceability {#traceability}
 
-The ConversationalUI module supports traceability functionality that helps you monitor and analyze GenAI interactions for debugging and compliance purposes. This functionality builds on the [traceability features](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#traceability) provided by the GenAI Commons module.
+The ConversationalUI module supports traceability functionality that helps you monitor and analyze GenAI interactions for debugging and compliance purposes. This functionality builds on the [traceability features](/agents/agents-kit-1/reference-guide/commons/#traceability) provided by the GenAI Commons module.
 
 #### Overview {#traceability-overview}
 
@@ -336,7 +336,7 @@ Trace data may contain sensitive and personally identifiable information. You sh
 
 #### Configuration {#traceability-configuration}
 
-Traceability is controlled by the `StoreTraces` constant in the GenAI Commons module. When set to *true*, detailed trace information will be stored for all GenAI operations. For more information about configuring traceability, see the [Traceability](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#traceability) section of *GenAI Commons*.
+Traceability is controlled by the `StoreTraces` constant in the GenAI Commons module. When set to *true*, detailed trace information will be stored for all GenAI operations. For more information about configuring traceability, see the [Traceability](/agents/agents-kit-1/reference-guide/commons/#traceability) section of *GenAI Commons*.
 
 To enable users to view traceability data, grant the `TraceMonitoring` module role to the applicable user roles.
 
@@ -349,7 +349,7 @@ The ConversationalUI module includes a dedicated page in the **USE_ME > Traceabi
 These pages are designed for administrators and developers who need to monitor GenAI usage and investigate specific interactions. They provide the primary interface for accessing traceability data without requiring custom development.
 
 {{% alert color="info" %}}
-If you are using the GenAI Commons module version 5.3.0 and set the `StoreTraces` constant to true, traces that contain errors might not be shown in the traceability UI. To migrate existing data, you need to create Usage objects for those [Traces](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#trace), setting the tokens to 0 and associating them to the trace.
+If you are using the GenAI Commons module version 5.3.0 and set the `StoreTraces` constant to true, traces that contain errors might not be shown in the traceability UI. To migrate existing data, you need to create Usage objects for those [Traces](/agents/agents-kit-1/reference-guide/commons/#trace), setting the tokens to 0 and associating them to the trace.
 {{% /alert %}}
 
 ## Technical Reference {#technical-reference}

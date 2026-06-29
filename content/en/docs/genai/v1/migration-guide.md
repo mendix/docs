@@ -1,6 +1,6 @@
 ---
 title: "Release and Migration Guide for GenAI Modules"
-url: /agents/agents-kit-1/reference-guide/genai-for-mx/migration-guide/
+url: /agents/agents-kit-1/reference-guide/migration-guide/
 linktitle: "Release and Migration Guide"
 description: "Agents Kit 1: Describes the combined releases of various GenAI-related modules and their inter-module dependencies. It also includes migration steps and notices about deprecations and removals."
 weight: 80
@@ -9,7 +9,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/genai-for-mx/release-guide/), which is available for Studio Pro 11.12 and above.
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/release-guide/), which is available for Studio Pro 11.12 and above.
 {{% /alert %}}
 
 ## Introduction

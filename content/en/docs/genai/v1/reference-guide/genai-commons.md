@@ -1,6 +1,6 @@
 ---
 title: "GenAI Commons"
-url: /agents/agents-kit-1/reference-guide/genai-for-mx/commons/
+url: /agents/agents-kit-1/reference-guide/commons/
 linktitle: "GenAI Commons"
 description: "Agents Kit 1: Describes the purpose, configuration, and usage of the GenAI Commons module from Mendix Marketplace, which allows developers to integrate common generative AI principles and patterns into Mendix apps."
 aliases:
@@ -10,12 +10,12 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/), which is available for Studio Pro 11.12 and above.
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/commons/), which is available for Studio Pro 11.12 and above.
 {{% /alert %}}
 
 ## Introduction {#introduction}
 
-The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) module.
+The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/agents/agents-kit-1/reference-guide/conversational-ui/) module.
 
 Connectors that adhere to the GenAI Commons module can be easily swapped, reducing dependency on model providers. The connectors provide a drag-and-drop experience for implementing AI capabilities and help you get started quickly. The module exposes useful operations for building requests to a large language model (LLM) and handling responses.
 
@@ -49,7 +49,7 @@ GenAI Commons can store usage data, allowing admins to understand token usage. U
 
 To clean up usage data in a deployed app, enable the daily scheduled event `ScE_Usage_Cleanup` in the Mendix Cloud Portal. Use the `Usage_CleanUpAfterDays` constant to control how long token usage data is persisted. 
 
-The [Conversational UI module](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) provides pages, snippets, and logic to display and export token usage information. For this to work, assign the module roles `UsageMonitoring` from both Conversational UI and GenAI Commons to the applicable project roles.
+The [Conversational UI module](/agents/agents-kit-1/reference-guide/conversational-ui/) provides pages, snippets, and logic to display and export token usage information. For this to work, assign the module roles `UsageMonitoring` from both Conversational UI and GenAI Commons to the applicable project roles.
 
 ### Traceability {#traceability}
 
@@ -97,7 +97,7 @@ Furthermore, it contains the name of the microflow to be run to do a retrieval f
 
 As these objects are created as a specialization by the logic in connectors themselves (specializations), such a specialization typically contains more specific data required for the connection to the resource according to the provider infrastructure details, such as endpoints and credentials. Admins need to configure this at runtime.
 
-The `ConsumedKnowledgeBase` entity was introduced in module version 6.0.0. To migrate data from earlier versions, refer to the [GenAI migration guide](/agents/agents-kit-1/reference-guide/genai-for-mx/migration-guide/#march-2026).
+The `ConsumedKnowledgeBase` entity was introduced in module version 6.0.0. To migrate data from earlier versions, refer to the [GenAI migration guide](/agents/agents-kit-1/reference-guide/migration-guide/#march-2026).
 
 | Attribute | Description |
 | --- | --- |
@@ -227,7 +227,7 @@ A knowledge base span is created for each knowledge base retrieval tool call req
 
 #### `MCPSpan` {#mcp-span}
 
-An MCP span is created for each tool invocation over the Model Context Protocol via the [MCP Client module](/agents/agents-kit-1/mcp-modules/mcp-client/). The tool call is processed on the MCP server, usually outside of this application, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
+An MCP span is created for each tool invocation over the Model Context Protocol via the [MCP Client module](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-client/). The tool call is processed on the MCP server, usually outside of this application, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
 
 | Attribute | Description |
 | --- | --- |
@@ -458,7 +458,7 @@ It is recommended that you adapt to the same interface when developing custom ch
 
 ##### Chat Completions (With History) {#chat-completions-with-history}
 
-The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/#human-in-the-loop) module, this is automatically handled.
+The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop) module, this is automatically handled.
 
 ###### Input Parameters
 
@@ -475,7 +475,7 @@ The `Chat Completions (with history)` operation supports more complex use cases 
 
 ##### Chat Completions (Without History) {#chat-completions-without-history}
 
-The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/#human-in-the-loop).
+The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop).
 
 ###### Input Parameters
 

@@ -40,12 +40,12 @@ Generative artificial intelligence (GenAI) transforms business applications, emp
 ### Additional Resources
 
 * Basic documentation on [GenAI Concepts](/agents/get-started/) is an essential resource for anyone beginning their GenAI journey.
-* The [GenAICommons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) module is a prerequisite for all GenAI components.
-* The [ConversationalUI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) module offers UI snippets for chat, token consumption monitoring, and prompt management.
+* The [GenAICommons](/agents/agents-kit-1/reference-guide/commons/) module is a prerequisite for all GenAI components.
+* The [ConversationalUI](/agents/agents-kit-1/reference-guide/conversational-ui/) module offers UI snippets for chat, token consumption monitoring, and prompt management.
 * The [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) to learn how to quickly access GenAI capabilities from a Mendix app.
 * The [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) provides essential information about the OpenAI connector.
 * The [Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/) provides key information about the AWS Bedrock connector.
-* The [MCP Server Module](/agents/agents-kit-1/mcp-modules/mcp-server/) provides reusable operations to create and initialize an MCP server within a Mendix app to expose tools and prompts to external clients.
+* The [MCP Server Module](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-server/) provides reusable operations to create and initialize an MCP server within a Mendix app to expose tools and prompts to external clients.
 * The [PGVector Knowledge Base](/agents/agents-kit-1/reference-guide/external-connectors/pgvector/) offers the option for a private knowledge base outside of the LLM infrastructure.
 
 ### Featured Blog Posts

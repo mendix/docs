@@ -11,9 +11,9 @@ aliases:
 
 ## Introduction
 
-This guide explains how to build a custom connector that uses [GenAICommons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) entities to integrate the large language model (LLM) of your choice with the [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/) module.
+This guide explains how to build a custom connector that uses [GenAICommons](/agents/agents-kit-2/reference-guide/commons/) entities to integrate the large language model (LLM) of your choice with the [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/) module.
 
-Build a custom connector when you need to integrate an LLM provider that is not supported by the existing [Agents Kit connectors](/agents/agents-kit-2/#connectors). Building a connector that follows the [GenAICommons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) interface means that your connector is compatible with other Agents Kit modules, so you can reuse chat UI components from [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/), build agentic functionality with [Agent Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-commons/), and set up quickly using [starter apps](/agents/agents-kit-2/#starter-apps) such as the Blank GenAI App.
+Build a custom connector when you need to integrate an LLM provider that is not supported by the existing [Agents Kit connectors](/agents/agents-kit-2/#connectors). Building a connector that follows the [GenAICommons](/agents/agents-kit-2/reference-guide/commons/) interface means that your connector is compatible with other Agents Kit modules, so you can reuse chat UI components from [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/), build agentic functionality with [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/), and set up quickly using [starter apps](/agents/agents-kit-2/#starter-apps) such as the Blank GenAI App.
 
 {{< figure src="/attachments/genai/howto-byo/connectors_diagram.png" alt="" >}}
 
@@ -48,13 +48,13 @@ If your provider's API is identical or very similar to OpenAI's, you may be able
 * Adding additional query parameters in the URL or payload
 * Adapting the authentication mechanism (for example, switching from API Key to OAuth) 
 
-This approach reuses a well-structured connector, minimizes development effort, and ensures compatibility with [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/) and [GenAICommons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/).
+This approach reuses a well-structured connector, minimizes development effort, and ensures compatibility with [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/) and [GenAICommons](/agents/agents-kit-2/reference-guide/commons/).
 
 ### Building from Scratch
 
 If your provider's API differs significantly from OpenAI's, start from scratch or use the Echo connector found in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). Use this approach if the provider requires a different protocol. Different protocols often result in substantial differences in communication structure and authentication methods. In such cases, building a new connector from scratch is more efficient than modifying an existing REST-based connector.
 
-Refer to the [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) to explore available out-of-the-box components that accelerate development. Pay close attention to the following:
+Refer to the [GenAI Commons](/agents/agents-kit-2/reference-guide/commons/) to explore available out-of-the-box components that accelerate development. Pay close attention to the following:
 
 * The domain model (data structure) to see how existing entities can be reused
 * The **Connector Building** folders, which contain useful microflows and helper activities for working with the provided entities
@@ -64,7 +64,7 @@ To explore the [GenAICommons](https://marketplace.mendix.com/link/component/2279
 ## Building Your Own Connector
 
 {{% alert color="info" %}}
-The Echo connector is a module in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). Use it as a starting point to build your own connector. It contains example pages to configure access and models at runtime and provides a foundation for compatibility with [GenAICommons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) and [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/).
+The Echo connector is a module in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). Use it as a starting point to build your own connector. It contains example pages to configure access and models at runtime and provides a foundation for compatibility with [GenAICommons](/agents/agents-kit-2/reference-guide/commons/) and [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/).
 {{% /alert %}}
 
 ### Chat Completions: With History
@@ -77,12 +77,12 @@ To enable chat completion, the key microflow to consider is `ChatCompletions_Wit
 
 To integrate properly, the microflow must supply two essential input objects:
 
-* [DeployedModel](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#deployed-model) – Represents the specific model being used and determines which connector (microflow) is being called.
-* [Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#request) – Contains the details of the user's input and conversation history as well as other configurations.
+* [DeployedModel](/agents/agents-kit-2/reference-guide/commons/#deployed-model) – Represents the specific model being used and determines which connector (microflow) is being called.
+* [Request](/agents/agents-kit-2/reference-guide/commons/#request) – Contains the details of the user's input and conversation history as well as other configurations.
 
 And one output object:
 
-* [Response](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#response) – Contains the details of the LLM's results.
+* [Response](/agents/agents-kit-2/reference-guide/commons/#response) – Contains the details of the LLM's results.
 
 Since this structure is already standardized, the `Request` entity needs no modifications. Instead, when implementing a new connector, map the request data from the existing `Request` object to the format required by the specific provider—in this case, the Echo connector.
 
@@ -93,7 +93,7 @@ Just as the `Request` entity structures input for the LLM, the `Response` entity
 The `Response` entity includes key attributes such as:
 
 * Message – A single message that the model generated
-* Tool Call – A request from the model to call one or multiple tools (for example, a microflow). Available tools are defined in the request via the [ToolCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#toolcollection).
+* Tool Call – A request from the model to call one or multiple tools (for example, a microflow). Available tools are defined in the request via the [ToolCollection](/agents/agents-kit-2/reference-guide/commons/#toolcollection).
 
 Because different providers return responses in different formats, map the provider’s response to match the `Response` entity’s structure when implementing a new connector. If you need additional attributes on the `Request` or `Response` entity, extend those entities in your own connector by creating an association or a specialization. For example, both patterns are applied in the OpenAIConnector (association to `Request`) and AmazonBedrockConnector (specialization of `Response`).
 
@@ -142,7 +142,7 @@ As mentioned earlier, in the Echo connector, the microflow returns the input pro
 Because the microflow follows the same input parameters and returns a `Response` object, it remains fully compatible with the reusable components in the GenAICommons and ConversationalUI modules. Responses are seamlessly processed and displayed in existing chat interfaces without additional UI customization.
 
 {{% alert color="info" %}}
-To track the consumption usage of tokens for your models, see the `GenAICommons.Usage_Create_TextAndFiles` microflow and related [documentation](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#token-usage). Add this microflow at the end of your microflow.
+To track the consumption usage of tokens for your models, see the `GenAICommons.Usage_Create_TextAndFiles` microflow and related [documentation](/agents/agents-kit-2/reference-guide/commons/#token-usage). Add this microflow at the end of your microflow.
 {{% /alert %}}
 
 ### Testing the Echo Connector

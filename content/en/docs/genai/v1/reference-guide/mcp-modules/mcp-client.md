@@ -1,6 +1,6 @@
 ---
 title: "MCP Client"
-url: /agents/agents-kit-1/mcp-modules/mcp-client/
+url: /agents/agents-kit-1/reference-guide/mcp-modules/mcp-client/
 linktitle: "MCP Client"
 description: "Agents Kit 1: This document describes the purpose, configuration, and usage of the MCP Client module from Mendix Marketplace that allows developers to consume tools and prompts from external MCP servers."
 weight: 20
@@ -9,7 +9,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/mcp-modules/mcp-client/), which is available for Studio Pro 11.12 and above.
+Looking for Mendix's newest agentic and generative AI features? [This page has been updated for Agents Kit 2](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-client/), which is available for Studio Pro 11.12 and above.
 {{% /alert %}}
 
 ## Introduction
@@ -39,7 +39,7 @@ If you start from a standard Mendix blank app or have an existing project, you m
 ## Dependencies {#dependencies}
 
 * Mendix Studio Pro version 10.24.0 or above
-* [GenAI Commons module](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/)
+* [GenAI Commons module](/agents/agents-kit-1/reference-guide/commons/)
 
 ## Configuration
 
@@ -73,7 +73,7 @@ For both actions, you can pass an `ArgumentCollection` if the prompt or tool req
 
 To add all tools from an MCP server to a `GenAICommons.Request`, you can use the `Request: Add all tools from MCP server` toolbox action. This action will first list all tools from the provided MCP server configuration, iterate over them, and adding them one by one to the tool collection. The request can then be passed to a Chat Completions operation. 
 
-You can also find an example [action microflow](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/#action-microflow) `ChatCompletions_MCPClient_ActionMicroflow` in the **Example Implementations** folder of the module. This microflow demonstrates how a Conversational UI chat action including MCP tools can be facilitated. Duplicate and include this microflow into your custom module and modify it according to your requirements.
+You can also find an example [action microflow](/agents/agents-kit-1/reference-guide/conversational-ui/#action-microflow) `ChatCompletions_MCPClient_ActionMicroflow` in the **Example Implementations** folder of the module. This microflow demonstrates how a Conversational UI chat action including MCP tools can be facilitated. Duplicate and include this microflow into your custom module and modify it according to your requirements.
 
 Currently, there is no out of the box solution available for using prompts from MCP. You can get inspired by the MCP Client example in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), where the prompts are displayed to the user to start a conversation in a chat interface.
 

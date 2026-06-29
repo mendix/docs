@@ -5,7 +5,7 @@ linktitle: "MCP Server"
 description: "Agents Kit 2: Reference documentation for the MCP Server module, which exposes Mendix logic to external MCP clients and AI systems."
 weight: 20
 aliases:
-    - /agents/mcp-modules/mcp-server/
+    - /agents/reference-guide/mcp-modules/mcp-server/
     - /appstore/modules/genai/genai-for-mx/mcp-server/
     - /appstore/modules/genai/mcp-modules/mcp-server/
 ---

@@ -33,17 +33,17 @@ For more information, see [OpenAI: Function Calling](https://platform.openai.com
 
 ### User Control {#user-control}
 
-Sometimes, tool calls should not run immediately but first require confirmation from the user—for example, when actions are taken on behalf of the user, such as sending an email or triggering a workflow. In such cases, tools can be configured for [User Access and Approval](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#enum-useraccessapproval) to pause function execution until the user decides. If the user rejects the call, the LLM is informed of the decision and may find another way to fulfill the request.
+Sometimes, tool calls should not run immediately but first require confirmation from the user—for example, when actions are taken on behalf of the user, such as sending an email or triggering a workflow. In such cases, tools can be configured for [User Access and Approval](/agents/agents-kit-2/reference-guide/commons/#enum-useraccessapproval) to pause function execution until the user decides. If the user rejects the call, the LLM is informed of the decision and may find another way to fulfill the request.
 
 ## Tool Calling with the GenAI Commons Module and the LLM Connectors {#llm-connector}
 
-All platform-supported connectors ([Mendix Cloud GenAI](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/), [OpenAI](/agents/agents-kit-2/reference-guide/external-connectors/openai/), and [Amazon Bedrock Connector](/agents/reference-guide/external-connectors/bedrock/)) support tool calling by leveraging the [GenAI Commons module](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/). Tool calling is supported for all chat completions operations. All entity, attribute, and activity names in this section refer to the GenAI Commons module.
+All platform-supported connectors ([Mendix Cloud GenAI](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/), [OpenAI](/agents/agents-kit-2/reference-guide/external-connectors/openai/), and [Amazon Bedrock Connector](/agents/reference-guide/external-connectors/bedrock/)) support tool calling by leveraging the [GenAI Commons module](/agents/agents-kit-2/reference-guide/commons/). Tool calling is supported for all chat completions operations. All entity, attribute, and activity names in this section refer to the GenAI Commons module.
 
-Functions in Mendix are microflows that can be registered within the request to the LLM. The LLM connector handles the tool call response and runs the function microflows until the LLM returns the final assistant's response. Function microflows can have no, one, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer, or String. They may also accept the [Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#request) or [Tool](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#tool) objects as inputs. The microflow can only return a String value.
+Functions in Mendix are microflows that can be registered within the request to the LLM. The LLM connector handles the tool call response and runs the function microflows until the LLM returns the final assistant's response. Function microflows can have no, one, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer, or String. They may also accept the [Request](/agents/agents-kit-2/reference-guide/commons/#request) or [Tool](/agents/agents-kit-2/reference-guide/commons/#tool) objects as inputs. The microflow can only return a String value.
 
 To enable tool calling, a `ToolCollection` object must be added to the request, associated with one or more `Function` objects.
 
-A helper operation is available in [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) to construct the `ToolCollection` with a list of `Functions`:
+A helper operation is available in [GenAI Commons](/agents/agents-kit-2/reference-guide/commons/) to construct the `ToolCollection` with a list of `Functions`:
 
 * `Tools: Add Function to Request` initializes a new `ToolCollection` and adds a new `Function` to enable tool calling.
 

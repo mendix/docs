@@ -68,7 +68,7 @@ To integrate a PgVector knowledge base into a Mendix app, perform the following 
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **GenAICommons.User** to any user roles that need read access directly on retrieved entities.
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
-3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/agents/agents-kit-1/reference-guide/external-connectors/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*. Selecting an embeddings model is optional and only required if you plan to use PgVector for the [Tools: Add Knowledge Base](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#add-knowledge-base-to-request) action.
+3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/agents/agents-kit-1/reference-guide/external-connectors/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*. Selecting an embeddings model is optional and only required if you plan to use PgVector for the [Tools: Add Knowledge Base](/agents/agents-kit-1/reference-guide/commons/#add-knowledge-base-to-request) action.
 
 {{% alert color="info" %}}
 It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same `DatabaseConfiguration`.
@@ -76,24 +76,24 @@ It is possible to have multiple knowledge bases in the same database in parallel
 
 ### General Operations {#general-operations-configuration} 
 
-After completing the general setup above, you can use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, 11 operations (microflows and Java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Studio Pro. These can be split into three categories corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(Re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [Retrieve](#retrieve)), and deleting chunk data or a whole knowledge base (for example, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#metadatacollection-entity) can be provided to enable additional filtering.
+After completing the general setup above, you can use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, 11 operations (microflows and Java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Studio Pro. These can be split into three categories corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(Re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [Retrieve](#retrieve)), and deleting chunk data or a whole knowledge base (for example, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/agents/agents-kit-1/reference-guide/commons/#metadatacollection-entity) can be provided to enable additional filtering.
 
 Additionally, there is one activity to prepare the connection input, which is a required input parameter for all operations and exposed separately in the **Toolbox** in Studio Pro. The following section describes this operation:
 
 #### `DeployedKnowledgeBase: Create` {#create-pgvectordeployedknowledgebase}
 
-All operations that include knowledge base interaction need the connection details to the knowledge base. This information is conveyed in a specialization of the GenAI Commons [DeployedKnowledgeBase](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#deployed-knowledge-base) entity and the [ConsumedKnowledgeBase](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#consumed-knowledge-base) (see the [Technical Reference](#technical-reference) section). After instantiating the `PgVectorKnowledgeBase` based on custom logic or front-end logic, you can use this object for the actual knowledge base operations. For operations where collection identifiers are needed in combination with a `ConsumedKnowledgeBase` object, the `Name` of the KnowledgeBase (see the `PgVectorKnowledgeBase` entity) must be passed as string.
+All operations that include knowledge base interaction need the connection details to the knowledge base. This information is conveyed in a specialization of the GenAI Commons [DeployedKnowledgeBase](/agents/agents-kit-1/reference-guide/commons/#deployed-knowledge-base) entity and the [ConsumedKnowledgeBase](/agents/agents-kit-1/reference-guide/commons/#consumed-knowledge-base) (see the [Technical Reference](#technical-reference) section). After instantiating the `PgVectorKnowledgeBase` based on custom logic or front-end logic, you can use this object for the actual knowledge base operations. For operations where collection identifiers are needed in combination with a `ConsumedKnowledgeBase` object, the `Name` of the KnowledgeBase (see the `PgVectorKnowledgeBase` entity) must be passed as string.
 
 ### (Re)populate Operations {#repopulate-operations-configuration}
 
-To add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#genai-knowledgebase-content). After you create the knowledge base chunks and [generate embedding vectors for them](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#add-knowledge-base-to-request), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example, the `(Re)populate Knowledge Base` operation. 
+To add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/agents/agents-kit-1/reference-guide/commons/#genai-knowledgebase-content). After you create the knowledge base chunks and [generate embedding vectors for them](/agents/agents-kit-1/reference-guide/commons/#add-knowledge-base-to-request), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example, the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
-1. Create a new `ChunkCollection`. See the [Initialize ChunkCollection](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) section.
+1. Create a new `ChunkCollection`. See the [Initialize ChunkCollection](/agents/agents-kit-1/reference-guide/commons/) section.
 2. For each knowledge item that needs to be inserted, do the following:
-    * Use [Initialize MetadataCollection with Metadata](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) and [Add Metadata to MetadataCollection](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) to create a collection of the necessary metadata for the knowledge base item.
-    * With both collections as input parameters, use [Add KnowledgeBaseChunk to ChunkCollection](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) for the knowledge item.
+    * Use [Initialize MetadataCollection with Metadata](/agents/agents-kit-1/reference-guide/commons/) and [Add Metadata to MetadataCollection](/agents/agents-kit-1/reference-guide/commons/) to create a collection of the necessary metadata for the knowledge base item.
+    * With both collections as input parameters, use [Add KnowledgeBaseChunk to ChunkCollection](/agents/agents-kit-1/reference-guide/commons/) for the knowledge item.
 3. Call an embeddings endpoint with the `ChunkCollection` to generate an embedding vector for each `KnowledgeBaseChunk`
 4. With the `ChunkCollection`, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the chunks.
 
@@ -107,7 +107,7 @@ This operation handles the following:
 * Creating the empty knowledge base if it does not exist
 * Inserting all provided knowledge base chunks with their metadata into the knowledge base
 
-The population handles a whole collection of chunks at once, and this `ChunkCollection` should be created using the [Initialize ChunkCollection](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) and [Add KnowledgeBaseChunk to ChunkCollection](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) operations. 
+The population handles a whole collection of chunks at once, and this `ChunkCollection` should be created using the [Initialize ChunkCollection](/agents/agents-kit-1/reference-guide/commons/) and [Add KnowledgeBaseChunk to ChunkCollection](/agents/agents-kit-1/reference-guide/commons/) operations. 
 
 #### `Insert` {#insert}
 
@@ -123,16 +123,16 @@ Currently, four operations are available for on-demand retrieval of data chunks 
 
 A typical pattern for retrieval from a knowledge base uses GenAI Commons operations and can be illustrated as follows:
 
-1. Use [Initialize MetadataCollection with Metadata](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
-2. Use [Add Metadata to MetadataCollection](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) (iteratively) to create a collection of the necessary metadata.
+1. Use [Initialize MetadataCollection with Metadata](/agents/agents-kit-1/reference-guide/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
+2. Use [Add Metadata to MetadataCollection](/agents/agents-kit-1/reference-guide/commons/) (iteratively) to create a collection of the necessary metadata.
 3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
 For scenarios where the created chunks were based on Mendix objects at the time of population and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association toward the original object, if applicable.
 
 A typical pattern for this retrieval is as follows:
 
-1. Use [Initialize MetadataCollection with Metadata](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
-2. Use [Add Metadata to MetadataCollection](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) (iteratively) to create a collection of the necessary metadata.
+1. Use [Initialize MetadataCollection with Metadata](/agents/agents-kit-1/reference-guide/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
+2. Use [Add Metadata to MetadataCollection](/agents/agents-kit-1/reference-guide/commons/) (iteratively) to create a collection of the necessary metadata.
 3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
 4. For each retrieved chunk, retrieve the original Mendix object and do custom logic.
 

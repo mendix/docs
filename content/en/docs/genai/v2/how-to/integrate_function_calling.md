@@ -154,7 +154,7 @@ Optionally, you can change the [system prompt](/agents/glossary/#system-prompt) 
 
 ### Optional: Setting User Access and Approval
 
-When adding tools to a request, you can optionally set a [User Access Approval](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#enum-useraccessapproval) value to control if the user first needs to confirm the tool before execution or if the tool is even visible to the user. To show different title and description for the tool, you may modify the `DiplayTitle` and `DisplayDescription` which are only used for display and can thus be less technical or detailed than the `Name` and `Description` of the tool.
+When adding tools to a request, you can optionally set a [User Access Approval](/agents/agents-kit-2/reference-guide/commons/#enum-useraccessapproval) value to control if the user first needs to confirm the tool before execution or if the tool is even visible to the user. To show different title and description for the tool, you may modify the `DiplayTitle` and `DisplayDescription` which are only used for display and can thus be less technical or detailed than the `Name` and `Description` of the tool.
 
 ## Testing and Troubleshooting {#testing-troubleshooting}
 

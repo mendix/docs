@@ -37,10 +37,10 @@ The following components are available in Agents Kit 2.
 
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
-| [Agent Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 4.0.0 |
-| [Agent Editor](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 2.0.0 |
-| [Conversational UI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 7.0.0 |
-| [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 7.0.0 |
+| [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 4.0.0 |
+| [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 2.0.0 |
+| [Conversational UI](/agents/agents-kit-2/reference-guide/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 7.0.0 |
+| [GenAI Commons](/agents/agents-kit-2/reference-guide/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 7.0.0 |
 
 ### Connector Modules {#connectors}
 
@@ -72,6 +72,6 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 
     Technical reference documentation for the Mendix Marketplace components in Agents Kit 2.
 
-* [Release Guide](/agents/agents-kit-2/reference-guide/genai-for-mx/release-guide/)
+* [Release Guide](/agents/agents-kit-2/reference-guide/release-guide/)
 
     Describes the transition from Agents Kit 1 to Agents Kit 2.

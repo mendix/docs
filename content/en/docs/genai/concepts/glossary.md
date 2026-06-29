@@ -44,7 +44,7 @@ When an LLM generates incorrect, nonsensical, or fabricated information that is 
 
 A design pattern where an agent pauses at defined points to request human input such as approval, correction, or a decision. The human actively participates in the agent’s execution rather than passively observing.
 
-In Mendix, this is implemented through user access approval settings on [tools](#tool-calling), which control when tools get executed and whether they are visible to the user. For example, a tool that deletes records might require explicit user confirmation before execution. The ConversationalUI module supports human-in-the-loop interactions out of the box. For implementation details, see [Human in the Loop](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/#human-in-the-loop).
+In Mendix, this is implemented through user access approval settings on [tools](#tool-calling), which control when tools get executed and whether they are visible to the user. For example, a tool that deletes records might require explicit user confirmation before execution. The ConversationalUI module supports human-in-the-loop interactions out of the box. For implementation details, see [Human in the Loop](/agents/agents-kit-2/reference-guide/conversational-ui/#human-in-the-loop).
 
 ## Knowledge Base {#knowledge-base}
 
@@ -88,7 +88,7 @@ Also known as tool use or function calling, a capability that allows LLMs to cal
 
 A structured record of execution across a system or workflow. In the context of an agent, a trace captures the sequence of inputs, reasoning steps, tool calls, intermediate actions, and outputs that led to a result. It also records token consumption, the duration of each step, and whether the execution was successful.
 
-In Mendix, tracing is supported by the [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#traceability) module to help debug and monitor agent behavior.
+In Mendix, tracing is supported by the [GenAI Commons](/agents/agents-kit-2/reference-guide/commons/#traceability) module to help debug and monitor agent behavior.
 
 ## User Prompt {#user-prompt}
 

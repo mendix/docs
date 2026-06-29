@@ -24,7 +24,7 @@ To understand the basics of MCP, it is important to know the common terminology.
 
 ### MCP Host
 
-The MCP host is typically the application that facilitates interaction with LLMs. While a chat interface is the most common use case, the host can support a variety of interaction use cases. The host takes care of the communication between users and models, while enabling users to manage their AI use, for example, managing credentials or historical chat conversations. A host can be a Mendix application that uses [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) and a compatible connector to interact with LLMs, for example, a chat interface built with [Conversational UI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/).
+The MCP host is typically the application that facilitates interaction with LLMs. While a chat interface is the most common use case, the host can support a variety of interaction use cases. The host takes care of the communication between users and models, while enabling users to manage their AI use, for example, managing credentials or historical chat conversations. A host can be a Mendix application that uses [GenAI Commons](/agents/agents-kit-2/reference-guide/commons/) and a compatible connector to interact with LLMs, for example, a chat interface built with [Conversational UI](/agents/agents-kit-2/reference-guide/conversational-ui/).
 
 ### MCP Client
 

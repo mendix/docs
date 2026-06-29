@@ -54,10 +54,12 @@ If your app uses runtime agents (built with the [Agent Commons](/agents/agents-k
 4. Copy the agent definition from your runtime agent into the new Studio Pro agent.
 5. In your microflows and other logic, replace any runtime toolbox actions with the corresponding Agent Editor toolbox actions.
 
-#### RFP Assistant Starter App Updates
-
-The [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917) now supports Studio Pro agents if you are using [Mendix Cloud GenAI](/agents/mx-cloud-genai/).
-
 #### Atlas UI 4 Compatibility
 
 Agents Kit 2 modules are compatible with [Atlas UI 4](/refguide/frontend/atlas4-migration/), Mendix's updated UI framework.
+
+## General Notes
+
+* Feature parity between Agent Builder in Runtime and Agent Editor in Studio Pro is still in progress, particularly for external provider support and human-in-the-loop capabilities.
+* The [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917) now supports Studio Pro agents and requires [Mendix Cloud GenAI](/agents/mx-cloud-genai/).
+* The latest version of the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) remains available in Studio Pro 10.24 and has not been upgraded for Agents Kit 2, as its use case does not rely on agents.

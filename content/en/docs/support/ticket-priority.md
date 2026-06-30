@@ -2,7 +2,7 @@
 title: "Support Ticket Priority"
 url: /support/ticket-priority/
 weight: 50
-description: "Describes how priority levels are determined for Mendix Support."
+description: "Describes how priority levels are determined for Mendix Support tickets."
 aliases:
     - /developerportal/support/ticket-priority/
     - /community-tools/support/ticket-priority/

@@ -95,10 +95,6 @@ As part of the widget scaffolding, the generator builds the widget for the first
 
 There is also a watcher available that will rebuild your widget as you make changes to files. Start the watcher by running `npm start`.
 
-{{% alert color="info" %}}
-NPM version 7 changed the resolution behavior of peerDependencies. Try adding `--legacy-peer-deps` to your install command if it results in peer dependency resolution errors.
-{{% /alert %}}
-
 ### Using the Widget
 
 When the build script completes it will package your widget as a `.mpk` file and copy it to the `widgets/` directory in your Mendix app. Now that the generator has finished its job it is time to use the widget in Studio Pro. To use the widget, do the following:

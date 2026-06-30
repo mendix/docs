@@ -54,8 +54,6 @@ For more information about navigation profiles, see [Setting Up Navigation](/ref
 
 The Mendix app must allow cross-origin resource sharing (CORS) from Active Workspace. This allows the browser to load the Mendix client bundle from the Mendix runtime origin from a page that is served from the Teamcenter origin. You will need to set up the following:
 
-
-
 #### Runtime Settings
 
 Configure the following [custom runtime setting](/refguide/custom-settings/). 
@@ -74,6 +72,7 @@ Configure the following HTTP Response Headers in your [local runtime configurati
 | `Access-Control-Allow-Headers` | `Content-Type, x-csrf-token` |
 | `Access-Control-Allow-Methods` | `POST, GET, OPTIONS` |
 | `Access-Control-Allow-Origin` | `https://your-teamcenter.example.com` |
+
 {{% alert color="info" %}}
 For the Mendix public cloud do not use the HTTP Header configuration in the cloud portal. Instead set the custom runtime configuration setting `Headers` to the following:
 ```json
@@ -91,9 +90,9 @@ See [custom settings](https://docs.mendix.com/refguide/custom-settings/#Headers)
 Both the Mendix runtime and the Active Workspace server must be served over HTTPS. When `SameSiteCookies` is set to `None`, the `Secure` attribute is automatically added to cookies, which requires HTTPS on both origins.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-Both the Mendix runtime and the Active Workspace server must be served over HTTPS. When `SameSiteCookies` is set to `None`, the `Secure` attribute is automatically added to cookies, which requires HTTPS on both origins.
-{{% /alert %}}
+#### CORS for TcSSO Published REST Service
+
+Configure the [CORS settings](/refguide/cors-settings/) for the TcSSO Published REST Service that is included in the Teamcenter Connector and add your teamcenter host `https://your-teamcenter.example.com` to the Allowed Origins.
 
 Restart the Mendix app after changing these settings. For background on how CORS works in the Mendix runtime, see [Configuring CORS in the Mendix Runtime](https://docs.mendix.com/refguide/configure-cors/).
 
@@ -107,9 +106,9 @@ The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a 
 2. Install the component into your Active Workspace stage repository under `src/repo`.
 3. Configure the component with the URL of your Mendix runtime.
 4. Optionally, set up context passing. For more information, see [Passing Context from Teamcenter](#passing-context).
-5. Rebuild Active Workspace.
+5. Rebuild Active Workspace using `awbuild.cmd`.
 
-To verify the component was picked up correctly, check that its view model entry exists in the `pathMap.json` registry file in the build output.
+To verify the component was picked up correctly, check that its view model entry exists in the `src/repo/out/pathMap.json` registry file in the build output.
 
 ### Registering the Component on a Page
 
@@ -155,10 +154,10 @@ If Teamcenter returns `HTTP 401 Unauthorized` with a JWT signature error after r
 
 ## Configuring Authentication {#authentication}
 
-During Beta, authentication uses the Teamcenter Connector's Teamcenter SSO flow. The Mendix app login page shows an SSO button. When a user clicks it, they are redirected to Teamcenter Security Services (TcSS) for authentication. After a successful login, TcSS redirects back to the Mendix app, where the user is provisioned or matched to an existing Mendix account and a Teamcenter Connector session is established.
+During Beta, authentication uses the Teamcenter Connector's Teamcenter SSO flow. Upon accessing the Mendix application, a popup is opened automatically for authentication. After successful login (which in most cases will happen automatically), the popup is closed and the Mendix application and Teamcenter Connector are authenticated.
 
 {{% alert color="info" %}}
-Because the Mendix app runs inside Active Workspace, the SSO redirect opens in a popup window. The popup can be automated to require zero additional clicks after the user is already signed in to TcSS. The planned GA release targets a fully invisible authentication flow with no popup.
+For the GA release we plan to offer an alternative authentication flow that is fully invisible and does not require a popup.
 {{% /alert %}}
 
 Follow these steps to configure authentication. Steps 1–3 require Teamcenter administrator access.
@@ -166,38 +165,98 @@ Follow these steps to configure authentication. Steps 1–3 require Teamcenter a
 1. **Register the Mendix App with Teamcenter Security Services**:
 
     Register the Mendix app in the Teamcenter Deployment Center so TcSS can authenticate it. For instructions, see [Registering Your App for Teamcenter SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#register-your-app-for-teamcenter-sso).
+    
+    This step requires administrator access to Teamcenter.
 
 1. **Configure the Teamcenter Connector Connection**:
 
     In your Mendix app, configure a Teamcenter Connector connection using **Teamcenter SSO** as the authentication method. For instructions, see [Configuring the Connection to Teamcenter](/appstore/modules/siemens-plm/configuring-connection-2512/).
 
+    This step requires administrator access to your Mendix application.
+
 1. **Configure User Provisioning**:
 
-    Set up user provisioning so that Mendix accounts are matched to Teamcenter users on login. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
+    Set up user provisioning by example of the `EXAMPLE_UserProvisioningAnonymous` Microflow so that Mendix accounts are matched to Teamcenter users on login. Anonymous users should be disabled in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
 
-1. **Add an SSO Login Button to the Login Page**:
+1. **Add the following required customizationss**:
     
-    Add a Teamcenter SSO login button to the Mendix app's `login.html` so users can initiate the TcSS authentication flow. For instructions, see [Adding an SSO Login Button to Your Login Page](/appstore/modules/siemens-plm/configuring-connection-2512/#add-sso-login-button). Optionally, use JavaScript to trigger the authentication automatically. Note that browsers may block the popup unless it is triggered directly by a user action.
+    - Create a JavaScript action called JS_CloseWindow with the following:
+        ```
+        export async function JS_CloseWindow() {  
+            // BEGIN USER CODE  
+            window.close();  
+            // END USER CODE  
+        }
+        ```
+    - Add a Nanoflow that calls this JavaScript action
+    - Add an empty page called `AuthSuccess` to the application which contains an `Component load` event that calls this Nanoflow
+    - Change the `DL_HandleSSOLoginMicroflow` to show `AuthSuccess` instead of the home page as the last action in the Microflow.
+    - For instructions, see [Adding an SSO Login Button to Your Login Page](/appstore/modules/siemens-plm/configuring-connection-2512/#add-sso-login-button).
+    - Optionally, use JavaScript to trigger the authentication automatically. Note that browsers may block the popup unless it is triggered directly by a user action.
 
 ## Passing Context from Teamcenter {#passing-context}
 
 The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. These are configured in the Active Workspace component and forwarded to the Mendix `render()` call as the `parameters` object.
 
-The following example shows how the Active Workspace component passes a selected Teamcenter item UID to the Mendix app:
+The following example shows how to change the Active Workspace component to pass the selected Teamcenter item UID to the Mendix app (the required changes are prefixed with `>>`):
 
 ```js
-const MENDIX_URL = "https://your-mendix-runtime.example.com/";
+export const mendixRenderFunction = (props) => {
+    const [error, setError] = useState(null);
+    >> const selectedItem = props.ctx?.selected?.uid ?? '';
 
-export async function mountMendixInTeamcenter(container, tcContext) {
-    const embeddedModule = await import(`${MENDIX_URL}dist/embedded-index.js`);
-    return embeddedModule.render(container, {
-        remoteUrl: MENDIX_URL,
-        minHeight: "620px",
-        parameters: {
-            itemUID: tcContext.selected.uid
+    const mendixUrl = getMendixUrl(props);
+    if (mendixUrl === undefined) {
+        setError('There is no Mendix URL configured. Contact support to resolve this issue.');
+    }
+
+    const retryError = () => {
+        setError(null);
+    };
+
+
+    const load = useCallback(async (container) => {
+        mendixCleanupFunction();
+
+        if (!container) {
+            return;
         }
-    });
-}
+
+        try {
+            if (REQUIRE_SESSION) {
+                await ensureHasValidSession(mendixUrl);
+            }
+
+            const app = await import(/* webpackIgnore: true */ `${mendixUrl}dist/embedded-index.js`);
+            const cleanup = await app.render(container, { remoteUrl: mendixUrl, minHeight: '100vh',
+            >> parameters: { SelectedItem: selectedItem }
+            });
+
+            const onReload = () => load(container);
+            container.addEventListener(RELOAD_EVENT, onReload, { once: true });
+
+            currentMendixCleanup = () => {
+                container.removeEventListener(RELOAD_EVENT, onReload);
+                cleanup?.();
+            };
+        } catch (error) {
+            setError(error);
+        }
+    }, [mendixUrl, 
+        >> selectedItem
+    ]);
+
+    if (error) {
+        if (error.code === 'POPUP_BLOCKED') {
+            return <PopupBlockedView subPanelContext={{ retry: retryError }} />;
+        }
+
+        return <GeneralErrorViewModel subPanelContext={{ errorMessage: error.message ?? 'An unexpected error occurred.', retry: retryError }} />;
+    }
+
+
+    return <div ref={load} style={{ width: '100%', height: '100vh' }} />;
+};
 ```
 
 The `parameters` object is available to the Mendix app at startup. Use a JavaScript action on the home page to read parameters and pass them to your application logic.

@@ -29,6 +29,8 @@ For more information on how to ensure optimal performance of Maia, see the [Best
 
 Mendix applies fair use limits to maintain a reliable experience for all users. If usage exceeds these limits, your Maia access may be temporarily paused. Account access is reviewed on a weekly schedule. Your account will be automatically reactivated within seven days once the review period concludes.
 
+If you need uninterrupted access to Maia capabilities, you can [configure a custom AI provider](/refguide/maia-make/#custom-provider) to use your own LLM provider.
+
 ## Network Configuration Requirements {#maia-network-requirement}
 
 To ensure the smooth operation of Mendix AI Assistance (Maia), the following network requirements must be met:
@@ -53,6 +55,7 @@ Guidance:
 * **Maia Learn** – helps you to quickly learn Mendix core concepts and get started with Studio Pro. For more information, see [Maia Learn](/refguide/maia-learn/).
 * **Maia Explain** – helps you easily understand a microflow or a nanoflow. It explains the general purpose of the logic and highlights specific technical details to help you understand the logic further. For more information, see [Maia Explain](/refguide/maia-explain/).
 * **Maia Agent Skills** – lets you define modular, reusable instructions that extend Maia with domain-specific knowledge. Maia applies them automatically whenever relevant, eliminating the need to repeat the same context across conversations. For more information, see [Maia Agent Skills](/refguide/maia-agent-skills/).
+* **Maia Agent Instructions** – allows you to define project- or module-level instructions (AGENTS.md) that steer agent behavior. You can use them to set common context for your prompts, such as company conventions or environment restrictions. For more information, see [Maia Agent Instructions](/refguide/maia-instructions/).
 
 Recommenders:
 

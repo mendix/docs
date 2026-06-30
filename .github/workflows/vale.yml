@@ -39,7 +39,10 @@ jobs:
       - name: Get changed files
         id: changed-files
         run: |
-          FILES=$(gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files[].path' | grep '^content/en/docs/.*\.md$' | paste -sd, -)
+          FILES=$(gh pr view ${{ github.event.pull_request.number }} --json files \
+            --jq '.files[] | select(.changeType != "DELETED") | .path' \
+            | grep '^content/en/docs/.*\.md$' \
+            | paste -sd, -)
           echo "files=$FILES" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ github.token }}

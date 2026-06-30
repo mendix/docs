@@ -196,7 +196,7 @@ To use it:
 For a chat agent, the chat context can be created based on the agent in one convenient operation. Use the `New Chat for Agent` operation from the **Toolbox** under the **Agents Kit** category. Retrieve the agent (for example, by name) and pass it with your custom context object to the operation. Note that this sets the system prompt for the chat context, making it applicable to the entire (future) conversation. Similar to other chat context operations, an action microflow needs to be selected for this microflow action. For more information, see the [Creating a Custom Action Microflow](/agents/agents-kit-2/reference-guide/conversational-ui/#action-microflow) section of Conversational UI.
 
 {{% alert color="info" %}}
-Download the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369) from the Marketplace for a detailed example of how to use the **Call Agent** activity in an action microflow of a chat interface.
+Download the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369) for a detailed example of how to use the **Call Agent** activity in an action microflow of a chat interface.
 {{% /alert %}}
 
 ##### Call Agent (Runtime) w/o History {#call-agent-without-history}

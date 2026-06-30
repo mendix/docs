@@ -14,13 +14,9 @@ aliases:
 
 ## Introduction {#introduction}
 
-With the [Conversational UI](https://marketplace.mendix.com/link/component/239450) module you can create a GenAI-based chat user interface. It contains the needed data model, pages, snippets, and building blocks. You can integrate with any LLM and knowledge base to create your full-screen, sidebar, or modal chat. It integrates with the Atlas framework and is the basis for the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926). It is also included in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), and the [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917).
+With the [Conversational UI](https://marketplace.mendix.com/link/component/239450) module, you can create a GenAI-based chat user interface. It contains the needed data model, pages, snippets, and building blocks. You can integrate with any LLM and knowledge base to create your full-screen, sidebar, or modal chat. It integrates with the [Atlas UI](/refguide/frontend/atlas4-migration/) framework and is included in the [Agents Kit starter apps](/agents/agents-kit-2/#starter-apps).
 
 Mendix has produced a [Conversational AI Design Checklist](/howto/front-end/conversation-checklist/) with some best practices for introducing conversational AI into your app.
-
-{{% alert color="info" %}}
-Prompt Management used to be a capability of the Conversational UI module. Since version 4.0.0, it is no longer part of the module, and has been moved to the [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) module. Existing prompts can be exported from the Prompt Management overview page and imported into the Agent Builder interface.
-{{% /alert %}}
 
 ### Typical Use Cases {#use-cases}
 
@@ -57,7 +53,7 @@ This module is intended to simplify the process of building chat interactions be
 
 This page documents Conversational UI module versions [compatible with Agents Kit 2](/agents/agents-kit-2/#core-modules), so make sure to use an app running on Studio Pro 11.12 or above.
 
-Ensure that you have the prerequisite modules that Conversational UI requires. These modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), and the [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917). If you do not have the following modules, install them manually.
+Ensure that you have the prerequisite modules that Conversational UI requires. These modules are included by default in the [Agents Kit starter apps](/agents/agents-kit-2/#starter-apps). If you do not have the following modules, install them manually.
 
 * [GenAI Commons](https://marketplace.mendix.com/link/component/239448)
 * [Agent Commons](https://marketplace.mendix.com/link/component/240371)
@@ -145,7 +141,7 @@ The following additional snippets can be used to give the user more control over
 * **Snippet_ChatContext_SelectActiveProviderConfig** - With this snippet, users can select an active [Provider Config](#provider-config) from all associated configurations, for example, to let them select a model.
 * **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view to show past conversations. It displays the **topic** of the chat context as well as a delete icon on hover. For details on how to set the topic, see [ChatContext operations](#chatcontext-operations).
 
-See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
+For a demonstration of how to use those snippets, see the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 ### Providing the Chat Context {#chat-context}
 
@@ -218,15 +214,15 @@ The following operations are used in a (custom) action microflow:
 
 ##### Using Tool or Knowledge Base Calling {#action-microflow-tool-calling}
 
-Since version 6.0.0, the module stores messages from tool calling persistently in the database which will be sent along next chat messages. This makes the model aware of previously called tools (and their results). Additionally, if a tool is visible to the user or needs user confirmation before execution, the `ToolMessage` entity is used to display those tool calls. Note that this may increase token consumption as all information sent to an LLM usually counts as input tokens.
+The module stores messages from tool calling persistently in the database which will be sent along next chat messages. This makes the model aware of previously called tools (and their results). Additionally, if a tool is visible to the user or needs user confirmation before execution, the `ToolMessage` entity is used to display those tool calls. Note that this may increase token consumption as all information sent to an LLM usually counts as input tokens.
 
 This changes how action microflows are used, because they are called each time a tool is called and the UI changes for the user, for example, displaying a tool call or waiting for a user decision if a tool can be executed. Logic that only needs to happen right after the user sends their message (preprocessing) or after the final assistant's message was returned (postprocessing), should perhaps only be executed for those cases.
 
-If no [user-visibility](/agents/agents-kit-2/reference-guide/commons/#enum-useraccessapproval) is configured for tools and you would like not to store tool messages (and therefore retain the behavior from versions before 6.0.0), you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-2/reference-guide/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-2/reference-guide/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
+If no [user-visibility](/agents/agents-kit-2/reference-guide/commons/#enum-useraccessapproval) is configured for tools and you want to avoid storing tool messages, you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-2/reference-guide/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-2/reference-guide/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
 
 ### Human in the Loop {#human-in-the-loop}
 
-When using the [Function Calling](/agents/function-calling/) pattern by adding tools to the request, you can control when those tools get executed and if they are visible to the user by setting [user access approval](/agents/agents-kit-2/reference-guide/commons/#enum-useraccessapproval) per tool. [Human in the loop](/agents/glossary/#human-in-the-loop) describes a pattern where the AI can perform powerful tasks, but still requires humans to take certain decisions and oversee the agent's behavior. When using the ConversationalUI module, its basic action microflow pattern to execute requests with history and UI snippets to display the chat, human in the loop works out of the box. Note that action microflows are called until there is a final assistant's response as described in the [Using Tool or Knowledge Base Calling](#action-microflow-tool-calling) section above, even if all tools are executed without user interaction.
+When using the [Function Calling](/agents/function-calling/) pattern by adding tools to the request, you can control when those tools get executed and if they are visible to the user by setting [user access approval](/agents/agents-kit-2/reference-guide/commons/#enum-useraccessapproval) per tool. [Human in the loop](/agents/glossary/#human-in-the-loop) describes a pattern where the AI can perform powerful tasks, but still requires humans to take certain decisions and oversee the agent's behavior. When using the ConversationalUI module, its basic action microflow pattern to execute requests with history and UI snippets to display the chat, human in the loop works out of the box. Note that action microflows are called until there is a final assistant's response as described in [Using Tool or Knowledge Base Calling](#action-microflow-tool-calling) section above, even if all tools are executed without user interaction.
 
 If you are not using the ConversationalUI module for [chat with history executions](/agents/agents-kit-2/reference-guide/commons/#chat-completions-with-history) or your use case does not contain a chat history, but is [task-based (without history)](/agents/agents-kit-2/reference-guide/commons/#chat-completions-without-history), you need to implement the following actions:
 
@@ -346,10 +342,6 @@ To manage trace data retention, you can enable the daily scheduled event `ScE_Tr
 The ConversationalUI module includes a dedicated page in the **USE_ME > Traceability** folder for viewing trace data. the page **Trace_Overview** provides a high-level view of all traces in the system, allowing administrators to browse and search through GenAI traces. It displays key information such as trace ID, agent information (if applicable), start time, duration. You can filter for specific traces and agents' invocations. The data can be visualized over time to identify patterns or anomalies. By double-clicking, users are navigated to the details page to learn more about a particular trace, including all associated spans, tool calls, and performance metrics.
 
 These pages are designed for administrators and developers who need to monitor GenAI usage and investigate specific interactions. They provide the primary interface for accessing traceability data without requiring custom development.
-
-{{% alert color="info" %}}
-If you are using the GenAI Commons module version 5.3.0 and set the `StoreTraces` constant to true, traces that contain errors might not be shown in the traceability UI. To migrate existing data, you need to create Usage objects for those [Traces](/agents/agents-kit-2/reference-guide/commons/#trace), setting the tokens to 0 and associating them to the trace.
-{{% /alert %}}
 
 ## Technical Reference {#technical-reference}
 

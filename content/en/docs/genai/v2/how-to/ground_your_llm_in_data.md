@@ -17,8 +17,9 @@ This document explains how to add data to your smart app to integrate with a lar
 
 Before implementing this capability into your app, ensure you meet the following requirements:
 
-* Use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built.
-    * If you are not using a GenAI starter app, install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules from Mendix Marketplace. The starter apps have these dependencies preinstalled.
+* Be on Mendix Studio Pro 11.12 or higher
+* Use an [Agents Kit starter app](/agents/agents-kit-2/#starter-apps) such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built.
+    * If you are not using an Agents Kit starter app, install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules from Mendix Marketplace. The starter apps have these dependencies preinstalled.
 * Set up a knowledge base resource within the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
 * Set up data to add to your LLM. This example uses a modified and streamlined version of the demo data. This data is available in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) and located in the **ExampleMicroflows** module > **Ground in data - Mendix Cloud** > **Example data set**. If you need to create the demo data yourself, you need a basic understanding of import mappings and JSON structures.
 * Intermediate understanding of GenAI concepts: See [Getting Started](/agents/#getting-started).
@@ -170,13 +171,14 @@ To use the knowledge in a chat interface, create and adjust microflows as shown 
     {{< figure src="/attachments/genai/howto-ground-llm/tool-addknowledgebase-example.png" alt="Tools: Add Knowledge Base dialog box with configuration for historical IT tickets knowledge base" >}}
 
 Leave the remaining actions as they are currently set. Now that everything is implemented, you can test the chat with enriched knowledge.
+
 ### Navigation Setup
 
 Add a way to call the following microflows from your navigation menu or homepage:
 
 * **Chatbot** – The `MyFirstModule.ACT_FullScreenChat_Open` microflow created in the [Chat Setup](#chatsetup) section.
 * **Create Demo Data and Populate KB** – The `MyFirstModule.ACT_CreateDemoData_LoadAllIntoKnowledgeBase` created in the [Joining the Microflows](#joining-microflows) section.
-* **Mendix Cloud Configuration** – If you started from a GenAI starter app, this configuration page is already included. If you started from an existing app, add the `Configuration_Overview` page.
+* **Mendix Cloud Configuration** – If you started from an Agents Kit starter app, this configuration page is already included. If you started from an existing app, add the `Configuration_Overview` page.
 
 Assign these module roles to your admin role: `MxGenAIConnector.Administrator`, `ConversationalUI.User`, and `MyFirstModule.Administrator`.
 

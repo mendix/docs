@@ -20,7 +20,7 @@ Agent Editor is compatible with the Agent Commons module. Using this module, you
 The Agent Editor module includes a Studio Pro extension that you can use to define GenAI agents as documents in the app model. The Agent Editor Commons module, which is installed as part of the same package, includes logic and activities to call these agents from microflows in a running app.
 
 {{% alert color="info" %}}
-Currently, Agent Editor supports only Mendix Cloud GenAI as a provider. Support for other providers, such as (Azure) OpenAI and Amazon Bedrock, is planned for future releases.
+Agent Editor supports only Mendix Cloud GenAI as a provider. Support for other providers, such as (Azure) OpenAI and Amazon Bedrock, is planned for future releases.
 {{% /alert %}}
 
 ### Typical Use Cases {#use-cases}

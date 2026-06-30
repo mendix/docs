@@ -25,7 +25,7 @@ This document will help you with the following:
 Before integrating Agent Commons into your app, make sure you meet the following requirements:
 
 * Be on Mendix Studio Pro 11.12 or higher
-* An existing app: use a GenAI starter app such as the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
+* Use an [Agents Kit starter app](/agents/agents-kit-2/#starter-apps) such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built.
 * Access to an LLM of your choice, using Mendix Cloud GenAI or another compatible connector
 * Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page for foundational knowledge and to familiarize yourself with [GenAI Concepts](/agents/get-started/)
 * Basic understanding of Mendix: knowledge of simple page building, microflow modeling, and domain model creation
@@ -42,7 +42,7 @@ This use case is a simplified version of the *Generate Product Description* exam
 
 Agent Commons enables users to create powerful agents at runtime, enriching requests to an LLM with tools, knowledge bases, prompts and more. This example focuses mainly on prompt engineering at runtime.
 
-If you are using a GenAI starter app such as the Blank GenAI app, you can skip ahead to [the next section](#configuration) because the following steps are already completed. Otherwise, follow these setup steps to add Agent Commons capabilities to your app and navigation:
+If you are using an Agents Kit starter app, you can skip ahead to [the next section](#configuration) because the following steps are already completed. Otherwise, follow these setup steps to add Agent Commons capabilities to your app and navigation:
 
 1. Install the [Agent Commons module](/agents/agents-kit-2/reference-guide/agent-commons/) module and its dependencies from Mendix Marketplace.
 2. Open your app's [Security](/refguide/security/#user-role) settings and edit the user role that you want to be able to create agents at runtime. This is typically the Administrator role, but this may vary depending on your use case. Follow these steps:
@@ -60,7 +60,7 @@ If you are using a GenAI starter app such as the Blank GenAI app, you can skip a
 
 ## Configuring a GenAI Connector {#configuration}
 
-To enable generative AI capabilities, install and configure the [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) and its dependencies from Mendix Marketplace. If you are using a GenAI starter app such as the Blank GenAI app, you can skip the installation and just follow the [configuration instructions](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/#configuration).
+To enable generative AI capabilities, install and configure the [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) and its dependencies from Mendix Marketplace. If you are using an Agents Kit starter app, you can skip the installation and just follow the [configuration instructions](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/#configuration).
 
 {{% alert color="info" %}}
 This example uses the Mendix Cloud GenAI Connector. Alternatively, you can install and configure an [external connector](/agents/agents-kit-2/reference-guide/connectors/) for any provider with a connector that is compatible with [GenAICommons](/agents/agents-kit-2/reference-guide/commons/). This includes [OpenAI](/agents/agents-kit-2/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/). 

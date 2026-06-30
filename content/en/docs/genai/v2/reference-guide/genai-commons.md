@@ -2,7 +2,7 @@
 title: "GenAI Commons"
 url: /agents/agents-kit-2/reference-guide/commons/
 linktitle: "GenAI Commons"
-description: "Agents Kit 2: Reference documentation for the GenAI Commons module, which provides the foundation for all Menidx GenAI connectors and modules."
+description: "Agents Kit 2: Reference documentation for the GenAI Commons module, which provides the foundation for all Mendix GenAI connectors and modules."
 aliases:
     - /agents/reference-guide/commons/
     - /agents/genai-for-mx/commons/
@@ -25,15 +25,15 @@ The current scope of the module focuses on text and image generation, [embedding
 
 ### Dependencies {#dependencies}
 
-This page documents GenAI Commons module versions [compatible with Agents Kit 2](/agents/agents-kit-2/#core-modules), so make sure to use an app running on Studio Pro 11.12 or above.
+ This page documents GenAI Commons module versions [compatible with Agents Kit 2](/agents/agents-kit-2/#core-modules), so make sure to use an app running on Studio Pro 11.12 or above.
 
-Download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
+The [Community Commons](https://marketplace.mendix.com/link/component/170) module is a required dependency for this module.
 
 ## Installation {#installation}
 
-If you start from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934) or the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the GenAI Commons module is already included and does not need to be downloaded manually.
+If you are using one of the [Agents Kit starter apps](/agents/agents-kit-2/#starter-apps), the GenAI Commons module and its dependencies are already included and do not need to be downloaded manually.
 
-If you start from a blank app or have an existing app where you want to include a connector that requires the GenAI Commons module, you must install GenAI Commons manually. First, install the [Community Commons](/appstore/modules/community-commons-function-library/) module. Then follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module.
+Otherwise, follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install GenAI Commons and its [dependencies](#dependencies).
 
 ## Implementation {#implementation}
 
@@ -41,7 +41,7 @@ GenAI Commons is the foundation of large language model implementations within t
 
 GenAI Commons defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling). Whether these capabilities are implemented and supported by the LLM depends on the connector module you choose. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 
-### Token Usage
+### Token Usage {#token-usage}
 
 GenAI Commons can store usage data, allowing admins to understand token usage. Usage data is persisted only if the constant `StoreUsageMetrics` is set to *true* or if [StoreTraces](#traceability) is set to *true*. This is only supported for chat completions and embedding operations.
 

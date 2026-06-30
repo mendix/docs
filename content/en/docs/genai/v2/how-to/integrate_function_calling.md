@@ -24,8 +24,8 @@ Through this document, you will:
 Before integrating function calling into your app, make sure you meet the following requirements:
 
 * Be on Mendix Studio Pro 11.12 or higher
-* Use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built.
-    * If you are not using a GenAI starter app, install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules from Mendix Marketplace. The starter apps have these dependencies preinstalled.
+* Use an [Agents Kit starter app](/agents/agents-kit-2/#starter-apps) such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built.
+    * If you are not using an Agents Kit starter app, install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules from Mendix Marketplace. The starter apps have these dependencies preinstalled.
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules.
 

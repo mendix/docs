@@ -30,7 +30,7 @@ After you complete these steps, continue to one of the implementation approach g
 Before you build an agent in your app, make sure your scenario meets the following requirements:
 
 * Be on Mendix Studio Pro 11.12 or higher
-* An existing app – Use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
+* An existing app – Use an [Agents Kit starter app](/agents/agents-kit-2/#starter-apps) such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
 * Intermediate understanding of Mendix – Knowledge of simple page building, microflow modeling, domain model creation, and import/export mappings
 * Basic understanding of GenAI concepts – Review [Enrich Your Mendix App with Agentic Capabilities](/agents/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/agents/get-started/) and [agents](/agents/agents/)
 * Basic understanding of function calling and prompt engineering – Learn about [Function Calling](/agents/function-calling/) and [Prompt Engineering](/agents/get-started/#prompt-engineering) to use them within the Mendix ecosystem
@@ -43,7 +43,7 @@ Before you build an agent in your app, make sure your scenario meets the followi
 This guide uses the Mendix Cloud GenAI Connector for text generation. You can also use alternative [supported connectors](/agents/agents-kit-2/#connectors), such as [Amazon Bedrock](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/) or [OpenAI](/agents/agents-kit-2/reference-guide/external-connectors/openai/). For knowledge base operations, this guide uses the Mendix Cloud Knowledge Base, but the [pgVector Knowledge Base](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/) is also supported. As long as you configure access to a provider and knowledge base according to the connector documentation, and the knowledge base supports inserting chunks from a microflow, the remaining steps in this guide apply.
 {{% /alert %}}
 
-If you are using a GenAI starter app such as the Blank GenAI Starter App, you can skip ahead to [Creating the Agent's Functional Prerequisites](#creating-functional-prerequisites) because the following setup steps are completed by default. Otherwise, follow these steps to add the required modules and configuration to your app:
+If you are using an Agents Kit starter app, you can skip ahead to [Creating the Agent's Functional Prerequisites](#creating-functional-prerequisites) because the following setup steps are completed by default. Otherwise, follow these steps to add the required modules and configuration to your app:
 
 1. Set your app's [security level](/refguide/app-security/) to **Production**.
 2. Install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448), [Agent Commons](https://marketplace.mendix.com/link/component/240371), [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449), and [ConversationalUI](https://marketplace.mendix.com/link/component/239450) modules from Marketplace. You also need to install their dependencies, including [MCP Client](https://marketplace.mendix.com/link/component/244893), [Community Commons](https://marketplace.mendix.com/link/component/170), and [Encryption](https://marketplace.mendix.com/link/component/1011).

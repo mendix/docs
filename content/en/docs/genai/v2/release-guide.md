@@ -42,17 +42,18 @@ Agents Kit 2 requires Studio Pro 11.12 or higher.
 
 #### Agent Editor and Studio Pro Agents
 
-Studio Pro agents, built using [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/), are now the preferred way to build agents with Mendix Cloud GenAI resources. Agent Editor lets you define and develop agents locally in Studio Pro, then deploy them directly to cloud environments using the app model.
+Studio Pro agents, built using [Agent Editor](https://marketplace.mendix.com/link/component/257918), are now the preferred way to build agents with Mendix Cloud GenAI resources. Agent Editor lets you define and develop agents locally in Studio Pro, then deploy them directly to cloud environments using the app model.
 
 ##### Migrating from Runtime Agents to Studio Pro Agents {#runtime-to-studio-pro}
 
 If your app uses runtime agents (built with the [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) module) and Mendix Cloud GenAI resources, you can migrate them to Studio Pro agents by following these steps:
 
 1. Ensure your app uses Studio Pro 11.12 or higher.
-2. Open Agent Editor in Studio Pro.
+2. Open [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) in Studio Pro.
 3. Create a new Studio Pro agent for each runtime agent you want to migrate.
 4. Copy the agent definition from your runtime agent into the new Studio Pro agent.
-5. In your microflows and other logic, replace any runtime toolbox actions with the corresponding Agent Editor toolbox actions.
+5. Add any tools your runtime agent used to the new Studio Pro agent: In the **Tools** section of the Agent document, select any microflows used as tools. If your agent used knowledge bases or consumed MCP services, create a dedicated document for each and then select it as a tool.
+6. In your microflows and other logic, replace any runtime toolbox actions with the corresponding Agent Editor toolbox actions.
 
 #### Atlas UI 4 Compatibility
 

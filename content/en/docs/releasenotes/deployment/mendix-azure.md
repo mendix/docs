@@ -17,6 +17,8 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 * We have added a production or non-production indicator for Mendix on Azure clusters.
 * We have fixed a preflight check issue where backend logs showed success but the frontend showed an error with no remediation steps.
 * We have fixed cluster sort order on the Cluster Overview page after refresh.
+* We have upgraded managed Grafana to version 12.0.
+
 
 ## Release date: May 7, 2026
 

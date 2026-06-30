@@ -50,7 +50,7 @@ Generative artificial intelligence (GenAI) transforms business applications, emp
 
 ### Featured Blog Posts
 
-For more information, see [Mendix's AI blog posts](https://www.mendix.com/tag/ai/), or explore the following selected posts.
+For more information, see [Mendix's Agentic Applications blog posts](https://www.mendix.com/tag/agentic-applications/), or explore the following selected posts.
 
 #### Basics
 

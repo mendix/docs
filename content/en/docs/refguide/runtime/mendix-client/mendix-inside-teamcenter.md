@@ -22,7 +22,7 @@ The following versions are required:
 
 | | Mendix | Teamcenter | Teamcenter Connector |
 | --- | --- | --- | --- |
-| **Beta** | 11.12 | 2512 | 2512.1.0 or above |
+| **Beta** | 11.12 | 2512 | 2606.0.0 or above |
 | **GA (planned)** | 11.18 | 2612 | TBD |
 
 In addition, the following requirements must be met:
@@ -74,6 +74,22 @@ Configure the following HTTP Response Headers in your [local runtime configurati
 | `Access-Control-Allow-Headers` | `Content-Type, x-csrf-token` |
 | `Access-Control-Allow-Methods` | `POST, GET, OPTIONS` |
 | `Access-Control-Allow-Origin` | `https://your-teamcenter.example.com` |
+{{% alert color="info" %}}
+For the Mendix public cloud do not use the HTTP Header configuration in the cloud portal. Instead set the custom runtime configuration setting `Headers` to the following:
+```json
+{
+  "Access-Control-Allow-Credentials": "true",
+  "Access-Control-Allow-Headers": "Content-Type, x-csrf-token",
+  "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+  "Access-Control-Allow-Origin": "https://your-teamcenter.example.com"
+}
+```
+See [custom settings](https://docs.mendix.com/refguide/custom-settings/#Headers) for details.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Both the Mendix runtime and the Active Workspace server must be served over HTTPS. When `SameSiteCookies` is set to `None`, the `Secure` attribute is automatically added to cookies, which requires HTTPS on both origins.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 Both the Mendix runtime and the Active Workspace server must be served over HTTPS. When `SameSiteCookies` is set to `None`, the `Secure` attribute is automatically added to cookies, which requires HTTPS on both origins.

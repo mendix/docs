@@ -31,6 +31,8 @@ The Mistral connector supports knowledge bases from providers such as pgVector, 
 
 To use this connector, you need to sign up for a Mistral account and create an API key. For more information, see the [Quickstart guide](https://docs.mistral.ai/getting-started/quickstart).
 
+This page documents Mistral connector versions [compatible with Agents Kit 2](/agents/agents-kit-2/#connectors), so make sure to use an app running on Studio Pro 11.12 or above.
+
 ### Dependencies {#dependencies}
 
 * [GenAI Commons module](/agents/agents-kit-2/reference-guide/commons/)

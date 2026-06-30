@@ -35,6 +35,8 @@ If you start from a standard Mendix blank app or have an existing project, you m
 
 ## Dependencies {#dependencies}
 
+This page documents MCP Client module versions [compatible with Agents Kit 2](/agents/agents-kit-2/#mcp-modules), so make sure to use an app running on Studio Pro 11.12 or above.
+
 * [GenAI Commons module](/agents/agents-kit-2/reference-guide/commons/)
 
 ## Configuration

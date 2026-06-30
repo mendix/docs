@@ -35,6 +35,8 @@ By integrating Azure AI Search, the OpenAI connector enables knowledge base retr
 
 To use this connector, you need to either sign up for an [OpenAI account](https://platform.openai.com/) or have access to a [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-ai-foundry) project with OpenAI models deployed.
 
+This page documents OpenAI connector versions [compatible with Agents Kit 2](/agents/agents-kit-2/#connectors), so make sure to use an app running on Studio Pro 11.12 or above.
+
 ### Dependencies {#dependencies}
 
 * [GenAI Commons module](/agents/agents-kit-2/reference-guide/commons/)

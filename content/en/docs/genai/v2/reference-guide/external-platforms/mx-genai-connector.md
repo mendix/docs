@@ -26,6 +26,8 @@ To use this connector, you need configuration keys to authenticate to the Mendix
 The Mendix Cloud GenAI Connector module generates embeddings internally when interacting with a knowledge base. You do not need to create embedding keys yourself when interacting with a Mendix Cloud knowledge base. Direct embedding operations are only required if additional processes are needed, such as using the generated vectors instead of text. For example, a similar search algorithm could use vector distances to calculate relatedness.
 {{% /alert %}}
 
+This page documents Mendix Cloud GenAI connector versions [compatible with Agents Kit 2](/agents/agents-kit-2/#connectors), so make sure to use an app running on Studio Pro 11.12 or above.
+
 ### Dependencies {#dependencies}
 
 * [GenAICommons](https://marketplace.mendix.com/link/component/239448)

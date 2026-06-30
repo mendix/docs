@@ -24,6 +24,7 @@ This document will help you with the following:
 
 Before integrating Agent Commons into your app, make sure you meet the following requirements:
 
+* Be on Mendix Studio Pro 11.12 or higher
 * An existing app: use a GenAI starter app such as the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
 * Access to an LLM of your choice, using Mendix Cloud GenAI or another compatible connector
 * Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page for foundational knowledge and to familiarize yourself with [GenAI Concepts](/agents/get-started/)

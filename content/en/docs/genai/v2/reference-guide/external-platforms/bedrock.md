@@ -34,9 +34,11 @@ Typical use cases for generative AI are described in the [Typical LLM Use Cases]
 
 To authenticate with Amazon Web Services (AWS), you must install and configure the [AWS Authentication connector version 4.1.1 or above](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
+This page documents Bedrock connector versions [compatible with Agents Kit 2](/agents/agents-kit-2/#connectors), so make sure to use an app running on Studio Pro 11.12 or above.
+
 You must have the latest [GenAI Commons](https://marketplace.mendix.com/link/component/239448) version. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAI Commons module.
 
-To ensure that your app can connect to Bedrock, you must also install and configure the [Encryption module](/appstore/modules/encryption/#configuration). 
+To ensure that your app can connect to Bedrock, you must also install and configure the [Encryption module](/appstore/modules/encryption/#configuration).
 
 ### Licensing and Cost
 

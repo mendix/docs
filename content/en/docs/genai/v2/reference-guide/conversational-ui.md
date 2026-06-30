@@ -55,6 +55,8 @@ This module is intended to simplify the process of building chat interactions be
 
 ### Prerequisites {#prerequisites}
 
+This page documents Conversational UI module versions [compatible with Agents Kit 2](/agents/agents-kit-2/#core-modules), so make sure to use an app running on Studio Pro 11.12 or above.
+
 Ensure that you have the prerequisite modules that Conversational UI requires. These modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), and the [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917). If you do not have the following modules, install them manually.
 
 * [GenAI Commons](https://marketplace.mendix.com/link/component/239448)

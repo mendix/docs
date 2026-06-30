@@ -49,6 +49,8 @@ Agent Editor provides the following features:
 
 ### Dependencies {#dependencies}
 
+This page documents Agent Editor module versions [compatible with Agents Kit 2](/agents/agents-kit-2/#core-modules), so make sure to use an app running on Studio Pro 11.12 or above.
+
 The following modules are required dependencies for the supported capabilities of Agent Editor and need to be installed:
 
 * [Administration](https://marketplace.mendix.com/link/component/23513)

@@ -29,6 +29,7 @@ After you complete these steps, continue to one of the implementation approach g
 
 Before you build an agent in your app, make sure your scenario meets the following requirements:
 
+* Be on Mendix Studio Pro 11.12 or higher
 * An existing app – Use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
 * Intermediate understanding of Mendix – Knowledge of simple page building, microflow modeling, domain model creation, and import/export mappings
 * Basic understanding of GenAI concepts – Review [Enrich Your Mendix App with Agentic Capabilities](/agents/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/agents/get-started/) and [agents](/agents/agents/)

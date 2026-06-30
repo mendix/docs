@@ -36,6 +36,8 @@ If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/li
 
 If you start from a standard Mendix blank app, or have an existing project, you must install the MCP Server module manually. Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install the [MCP Server](https://marketplace.mendix.com/link/component/240380) module from the Marketplace.
 
+This page documents MCP Server module versions [compatible with Agents Kit 2](/agents/agents-kit-2/#mcp-modules), so make sure to use an app running on Studio Pro 11.12 or above.
+
 ## Configuration
 
 ### Create MCP Server {#create-server}

@@ -21,6 +21,7 @@ Build a custom connector when you need to integrate an LLM provider that is not 
 
 Before starting this guide, complete the following prerequisites:
 
+* Be on Mendix Studio Pro 11.12 or higher
 * Basic understanding of GenAI concepts – Review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page to gain foundational knowledge and become familiar with the key [concepts](/agents/get-started/).
 * Understanding Large Language Models (LLMs) and prompt engineering – Read about [LLMs](/agents/get-started/#llm) and [prompt engineering](/agents/get-started/#prompt-engineering).
 

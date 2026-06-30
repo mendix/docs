@@ -43,6 +43,8 @@ You must have access to your own (remote) PostgreSQL database server with the [p
 
 {{% alert color="info" %}}This module cannot be used with the Mendix Cloud app database. It only works if you are using your own database server or Amazon RDS.{{% /alert %}}
 
+This page documents PgVector Knowledge Base module versions [compatible with Agents Kit 2](/agents/agents-kit-2/#connectors), so make sure to use an app running on Studio Pro 11.12 or above.
+
 ### Dependencies {#dependencies}
 
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module

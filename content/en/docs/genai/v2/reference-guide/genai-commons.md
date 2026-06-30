@@ -25,6 +25,8 @@ The current scope of the module focuses on text and image generation, [embedding
 
 ### Dependencies {#dependencies}
 
+This page documents GenAI Commons module versions [compatible with Agents Kit 2](/agents/agents-kit-2/#core-modules), so make sure to use an app running on Studio Pro 11.12 or above.
+
 Download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
 
 ## Installation {#installation}

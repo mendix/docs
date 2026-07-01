@@ -12,7 +12,7 @@ This feature is in Public Beta. For more information, refer to [Release Status](
 
 ## Introduction
 
-Without centralized guidelines, developers must manually apply your organization's architectural patterns, compliance policies, and naming conventions to every Mendix project. The **Company Guidelines** page solves this by teaching Maia your company's standards. You define guidelines in a central location, and Maia automatically applies them across all projects. This ensures consistent, compliant outputs, which are aligned with your organization's standards.
+**Company Guidelines** provides a central location where you define, manage, and maintain the standards that govern how your teams build with Mendix. Without this shared foundation, Maia operates without knowledge of your company's standards, producing outputs that require repeated manual adjustment to align with your architectural patterns, compliance policies, and naming conventions. When you define guidelines in the **Company Guidelines** central library, Maia becomes aware of them and can surface relevant guidance when generating outputs. This helps ensure that AI-generated content is informed by your company's standards across the software delivery lifecycle.
 
 Company guidelines define the following:
 
@@ -20,25 +20,42 @@ Company guidelines define the following:
 * Reusable assets and conventions – Architecture and integration standards, development and design best practices.
 * Shared terminology – Domain language and company-specific terminology.
 
-When you upload company guideline documents, the system extracts and categorizes guidelines, which you can then review and approve. Once approved, these guidelines are stored in a central library, and are automatically served to Maia services. This ensures consistent AI generation across your software delivery lifecycle.
+When you upload company guideline documents, the system extracts and categorizes guidelines, which you can then review and apply. Once applied, these guidelines are stored in a central library. This ensures consistent AI generation across your software delivery lifecycle.
 
-## Managing Company Guidelines
+## Adding Company Guidelines
 
-To upload, review, and create company guidelines, follow these steps:
+You can manually add guidelines, or you can upload a guideline document, review its items, then apply them. For details, follow the steps in these sections.
 
-1. Click **Upload Document**. You can upload .md, .pdf, .docx, .xlsx, and .txt format documents. For an example of what constitutes a good guideline document, check out <a href="/originals/control-center/company-guidelines/Company Guidelines - Example Document.pdf" target="_blank" rel="noopener noreferrer">this sample .pdf</a>.
+### Manually Adding Guidelines
 
-2. Once you are done uploading, click **Process Documents**. The newly uploaded documents are displayed in the **Documents that need your attention** section, pending processing and review.
+Follow these steps to manually add guidelines:
+
+1. Click **Add Guideline**. The **New Guideline** window is displayed.
+2. In the **Guideline** field, enter a description.
+3. From the **Category** drop-down list, select up to three categories to be assigned to the guideline.
+4. Click **Create Guideline**. The new guideline is added to the **Guidelines Library** tab.
+
+### Uploading Guideline Documents
+
+Follow these steps to add guidelines in bulk by uploading a guideline document:
+
+1. Click **Upload Guidelines**. The **Upload and Process Guidelines** window is displayed.
+2. Upload one or more .md, .pdf, .docx, .xlsx, and .txt format documents. For an example of what constitutes a good guideline document, check out <a href="/originals/control-center/company-guidelines/Company Guidelines - Example Document.pdf" target="_blank" rel="noopener noreferrer">this sample .pdf</a>.
+
+2. Click **Process Documents**. The newly uploaded documents are displayed in the **Documents that need your attention** section, pending processing and review.
 
     Mendix parses and processes the uploaded documents in the background. During this time, the status of the documents is **Processing**. After processing is complete, the status changes to **Pending Review**, and a **Review Guidelines** button is displayed on the document card.
 
-3. Click **Review Guidelines** to go through the pre-processed list of guidelines and approve them. The **Review Proposed Guidelines** page is displayed, showing a list of all the guidelines in the document, along with the categories they fall under. These categories are generated and assigned by Mendix AI agents. For details on the available categories, refer to the [Guideline Categories](#guideline-categories) section of this page.
+3. Click **Review Guidelines** to go through the pre-processed list of guidelines and review and apply them. The **Review Proposed Guidelines** page is displayed, showing a list of all the guidelines in the document, along with the categories they fall under. These categories are generated and assigned by Mendix AI agents. For details on the available categories, refer to the [Guideline Categories](#guideline-categories) section of this page.
 
     You can perform the following actions for each guideline in the list:
     
     * Click **Mark as Reviewed** if you want to keep the guideline and its assigned categories.
-    * In the contextual menu, click **Edit** if you want to edit a guideline and its categories.
-    * In the contextual menu, click **Remove** if you want to discard the guideline.
+    * In the contextual menu:
+    
+        * Click **Edit** if you want to edit a guideline and its categories.
+        * Click **Clear Review Status** if you want to revoke the reviewed status of the guideline.
+        * Click **Remove** if you want to discard the guideline.
 
     You can search by guideline text, or filter by category and approval status.
 
@@ -50,7 +67,7 @@ To upload, review, and create company guidelines, follow these steps:
 * **Apply all** – Adds all guidelines to the guideline library, even if they are not marked as reviewed.    
      Conflicts with existing guidelines or duplicates are not automatically detected. Mendix recommends reviewing the library if needed.
 
-Applied guidelines are now listed on the **Company Guidelines** tab of the main page.
+Applied guidelines are now listed on the **Guidelines Library** tab of the main page.
 
 ### Guideline Categories {#guideline-categories}
 
@@ -66,21 +83,21 @@ After a document is parsed, guidelines are automatically assigned to one or more
 
 ## Company Guidelines Page Tabs
 
-The main **Company Guidelines** page includes the **Company Guidelines** and **Source Documents** tabs.
+The main **Company Guidelines** page includes the **Guidelines Library** and **Source Documents** tabs.
 
-### Company Guidelines Tab 
+### Guidelines Library Tab 
 
-The **Company Guidelines** tab lists all the guidelines that have been processed and approved, along with their categories. Each guideline has the following details:
+The **Guidelines Library** tab lists all the guidelines that have been processed and applied, along with their categories. Each guideline has the following details:
 
-* The approver
-* The source document
+* The user who reviewed and appied the guideline
+* The source document, if the guideline is extracted from an uploaded document
 * A contextual menu which includes the options to edit or delete the guideline
 
-You can search by guideline text, or filter by category and source file.
+You can search by guideline text, or filter by category and source document.
 
 ### Source Documents Tab 
 
-The **Source Documents** tab lists the documents from which approved guidelines originate, along with the following details:
+The **Source Documents** tab lists the documents from which applied guidelines originate, along with the following details:
 
 * **Document name** – The name of the uploaded document.
 * **Uploaded by** – The name of the user who uploaded the document.
@@ -89,4 +106,5 @@ The **Source Documents** tab lists the documents from which approved guidelines 
     * **Processing**
     * **Pending Review** – Click **Review** to go through the list of guidelines.
     * **Applied**
+    * **Failed**
 * **Delete** – Delete the document. This deletes all of its associated guidelines.

@@ -102,12 +102,14 @@ This option becomes available if **Use custom repositories** is set to **Yes**.
 
 You can specify which repositories to use for Gradle. The content of this field should be specified using Groovy syntax and is what is inside the `repositories { }` section in a Gradle build file. By default, this field contains `mavenCentral()` and `gradlePluginPortal()`. 
 
-## Maia Tab
+## AI Tab
 
-### Generative AI
+### Maia
+
+#### Generative AI
 
 * **Enable Maia** - When enabled, you can access all Maia capabilities in Studio Pro. It is enabled by default.
-* **Enable web tools** (in Studio Pro 11.11 and above) - When enabled, you can use the [Maia Web Fetch](/refguide/maia-web-fetch/) feature to fetch and read content from public websites and APIs. It is enabled by default. Restart Studio Pro for the change to take effect.
+* **Enable web tools** (in Studio Pro 11.11 and above) - When enabled, you can use the [Maia Web Fetch](/refguide/maia-web-fetch/) feature to fetch and read content from public websites and APIs. It is enabled by default. Restart Studio Pro for the change to take effect. For Studio Pro 11.12 and above, the changes take effect immediately and do not require restart. 
 
 In Studio Pro 11.7 and below, the **Generative AI** section contains the following settings:
 
@@ -119,17 +121,13 @@ In Studio Pro 11.7 and below, the **Generative AI** section contains the followi
 * **Enable Maia for Workflows** – when enabled, you can use it to generate workflows by adding and configuring activities. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/). It is disabled by default.
 * **Enable translation generator** – when enabled, you can use it to translate your model into different languages through the **Batch translate** option under the **Language** menu or to translate [system texts](/refguide/system-texts/). For more information, see [Translation Generator](/refguide/translation-generator/). It is disabled by default.
 
-### In-Editor Recommender
-
-The **In-Editor Recommender** section contains the following settings:
+#### In-Editor Recommender
 
 * **Enable for microflow, nanoflow, and rule editors** – this allows you to enable and disable [Logic Recommender](/refguide/logic-recommender/) in the microflow, nanoflow, and rule editors. It is enabled by default. 
 * **Enable for workflow editor** – this allows you to enable and disable [Workflow Recommender](/refguide/workflow-recommender/) in the workflow editor. It is enabled by default.
 * **Enable for page editor** - this allows you to enable and disable the [UI Recommender](/refguide/ui-recommender/). It is enabled by default.
 
-### Best Practice Recommender
-
-The **Best Practice Recommender** section contains the following settings:
+#### Best Practice Recommender
 
 * **Show recommendation in editors** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) highlights elements that contain anti-patterns in visual editors. It is enabled by default.
 

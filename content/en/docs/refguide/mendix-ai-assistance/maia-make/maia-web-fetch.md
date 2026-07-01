@@ -23,7 +23,9 @@ When Maia wants to fetch content from the web, it asks for your permission first
 
 ## Enabling or Disabling Web Tools
 
-In Studio Pro 11.11 and above, you can enable or disable this feature by navigating to **Preferences** > **Maia**, and selecting or deselecting **Enable web tools**. Restart Studio Pro for the change to take effect.
+In Studio Pro 11.11 and above, you can enable or disable this feature by navigating to **Preferences** > **Maia**, and selecting or deselecting **Enable web tools**. Restart Studio Pro for the change to take effect. 
+
+For Studio Pro 11.12 and above, the changes take effect immediately and do not require restart. 
 
 ## What Maia Can Fetch
 

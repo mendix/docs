@@ -51,6 +51,7 @@ The following how-tos help you get started:
 * [How to Exchange Information Between Active Views](/apidocs-mxsdk/apidocs/web-extensibility-api-11/message-passing-api/)
 * [How to Show Version Control Information](/apidocs-mxsdk/apidocs/web-extensibility-api-11/version-control-api/)
 * [How to Introduce a New Document Type](/apidocs-mxsdk/apidocs/web-extensibility-api-11/custom-blob-document-api/)
+* [How to Create Consistency Checks for Custom Document Types](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/)
 * [How to Listen for Connection Changes](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-controller-api/)
 * [How to Access Runtime Constants](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-configuration-api/)
 * [How to Use Extension Permissions in Overview Pane](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/)

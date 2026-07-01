@@ -36,7 +36,7 @@ If you are an existing customer, you should deploy to your licensed cloud node.
 
 ## Deploying a Licensed App {#deploy-licensed-app}
 
- Deploying a licensed app is usually a two-step process:
+Deploying a licensed app is usually a two-step process:
 
 * First, create a deployment package
 * Second, deploy it to a node environment where you can run your app
@@ -100,6 +100,10 @@ The app is now deployed. You can configure the administrative account.
 ## Deploying a Free App {#deploy-free-app}
 
 Deploying a Free App is a single-stage process that is completed from Studio Pro. This process is described in detail below.
+
+{{% alert color="info" %}}
+Free App deployment can be disabled at the [organization level](/control-center/security-settings/#free-app-deployment). If you cannot deploy a Free App, contact your Mendix Admin.
+{{% /alert %}}
 
 ### Prerequisites
 

@@ -171,7 +171,7 @@ Navigate to the **Settings** page in a workspace to configure settings that are 
 
 Log settings are available in Workstation Management at **Settings > Log Settings**.
 
-The Workstation Client always stores logs to the file system it is installed on (c.f. [Troubleshooting - Workstation Client](/mendix-workstation/troubleshooting/#workstation-client)). No logs are send to the Workstation Management. However, you can configure the log level and retention policy of all the Workstation Clients that are registered to stations in the workspace.
+The Workstation Client always stores logs to the file system it is installed on (for more information, see [Troubleshooting the Workstation Client](/mendix-workstation/troubleshooting-workstation-client/)). No logs are send to the Workstation Management. However, you can configure the log level and retention policy of all the Workstation Clients that are registered to stations in the workspace.
 
 ##### Log Level
 

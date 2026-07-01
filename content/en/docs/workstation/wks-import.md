@@ -12,7 +12,7 @@ You can manage and share station and workspace data across various workspaces an
 
 ### Workspace Roles and Permissions
 
-Different user roles are granted various levels of access to import and export tasks. For more information, see [Workspace Team and Collaboration](/mendix-workstation/installation/#collaboration).
+Different user roles are granted various levels of access to import and export tasks. For more information, see [Managing the Team](/mendix-workstation/management-team/).
 
 ## Importing and Exporting Stations in Bulk
 

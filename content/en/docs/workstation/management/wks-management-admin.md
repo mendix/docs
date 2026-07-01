@@ -109,5 +109,5 @@ When Developer Mode is enabled, users of the Workstation Client have access to:
 * Developer tools (accessible by pressing *Ctrl + Shift + I*).
 
 {{% alert color="info" %}}
-For production environments, it is strongly recommended to disable Developer Mode.  This prevents Workstation operators from accidentally quitting or unlinking the Workstation Client and restricts access to debugging tools that are not needed in a live operational setting.
+For production environments, it is strongly recommended to disable Developer Mode. This prevents Workstation operators from accidentally quitting or unlinking the Workstation Client and restricts access to debugging tools that are not needed in a live operational setting.
 {{% /alert %}}

@@ -92,7 +92,7 @@ The **Stations** page now shows your station's status as **Computer Registered**
 
     {{< figure src="/attachments/workstation/wks-install10.png" class="no-border" >}}
 
-Any changes that you make in Workstation Management (such as adding new devices, or setting the **Detect Card Readers** toggle to **Off**) will be immediately synchronized with the Workstation Client. To change this behavior, see [Client's Auto-Refresh](#auto-refresh).
+Any changes that you make in Workstation Management (such as adding new devices, or setting the **Detect Card Readers** toggle to **Off**) will be immediately synchronized with the Workstation Client. To change this behavior, see [Client's Auto-Refresh](/mendix-workstation/management-settings/#auto-refresh).
 
 ### Configuring and Testing Virtual Devices
 
@@ -146,9 +146,9 @@ After configuring the server and client pair, test their connectivity by perform
 8. In the same way, send a message from the **Test Server** to the **Test Client** device.
 
 {{% alert color="info" %}}
-Different device types have different requirements for the message syntax. For more information, see [Message Syntax for File, Smart Card, and Bluetooth Devices](/mendix-workstation/device-syntax/).
+Different device types have different requirements for the message syntax. For more information, see [Configuring Devices](/mendix-workstation/management-devices/).
 {{% /alert %}}
 
 ### Quitting the Workstation Client
 
-The Workstation Client runs automatically at system startup. The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if [Developer Mode](#developer-mode) is enabled. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.
+The Workstation Client runs automatically at system startup. The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.

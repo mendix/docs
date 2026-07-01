@@ -97,9 +97,9 @@ Card readers are handled uniquely within Workstation Management. They are not co
 
 Auto detecting card readers is enabled by default. You can toggle the **Detect Card Readers** setting on the **Station Detail Page** to **Off** if you do not want the Workstation Client to automatically detect smart card readers for this specific station.
 
-### Station Developer Mode {#developer-mode}
+### Developer Mode {#developer-mode}
 
-Developer mode can be configured on a **Station** page by toggling **Enable Developer Mode**. 
+Developer mode can be configured on the **Station** page by toggling **Enable Developer Mode**. 
 
 When Developer Mode is enabled, users of the Workstation Client have access to:
 

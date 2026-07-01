@@ -14,7 +14,7 @@ This section details how to configure various device types for the current stati
 
 Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 
 
-Auto detecting card readers is enabled by default. This setting can be configured on a **Station** page by toggling **Detect Card Readers**. 
+Auto detecting card readers is enabled by default. This setting can be configured on a **Station** page by unselecting **Detect Card Readers**. 
 
 ### Message Syntax {#card-readers}
 

@@ -24,7 +24,9 @@ To create a workspace and a station, perform the following steps:
 
     {{< figure src="/attachments/workstation/wks-install1.png" class="no-border" >}}
 
-3. Enter a name for your new workspace, and then click **Create Workspace**.
+3. Enter a name for your new workspace, specify the environment type (**Test**, **Acceptance** or **Production**), and then click **Create Workspace**.
+
+    Workspaces created with the Test environment type have [Developer Mode](/mendix-workstation/management-stations/#developer-mode) for their stations enabled by default. Changing the environment type after creation does not disable or enable Developer Mode.
 
     {{< figure src="/attachments/workstation/wks-install2.png" class="no-border" >}}
 

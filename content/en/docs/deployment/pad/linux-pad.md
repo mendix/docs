@@ -1,5 +1,5 @@
 ---
-title: "Reference Guide for Linux Deployments"
+title: "Best Practices for Linux Deployments"
 url: /developerportal/deploy/linux-pad/
 description: "How to install and configure Mendix on a Linux system using Mendix Portable Runtime."
 weight: 80

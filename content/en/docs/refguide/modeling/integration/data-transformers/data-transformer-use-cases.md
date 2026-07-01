@@ -3,7 +3,6 @@ title: "Data Transformer Use Cases"
 url: /refguide/data-transformer-use-cases/
 weight: 60
 description: "Provides practical examples of common JSLT transformation patterns for Data Transformers."
-beta: true
 ---
 
 ## Introduction
@@ -11,10 +10,6 @@ beta: true
 This document shows a variety of use cases that [Data Transformer documents](/refguide/data-transformers/) can address. It contains practical, example-driven walkthroughs of common JSLT transformation patterns. 
 
 Each walkthrough focuses on a specific use case you may encounter when working with real-world API responses, such as restructuring nested data, renaming fields, or combining metadata with data. Rather than covering every detail of the JSLT language, the walkthroughs are hands-on and immediately applicable. They show a concrete input, the expected output, and the transformation that connects the two.
-
-{{% alert color="info" %}}
-The [Data Transformer document](/refguide/data-transformers/) feature is in beta. 
-{{% /alert %}}
 
 ## Filtering Out Unused Fields {#filtering-out-unused-fields}
 

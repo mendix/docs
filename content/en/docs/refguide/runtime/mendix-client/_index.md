@@ -29,6 +29,8 @@ The Mendix Dojo Client is bootstrapped by loading a `mxui.js` script from an HTM
 
 The Mendix React client is bootstrapped in different way. It loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files that contain page, layout, and nanoflow definitions will be loaded after this.
 
+From Mendix version 11.12.0, when you want to mount a Mendix web app inside another web application, you can also use the embedded client. For more information, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
+
 For **mobile applications**, the Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 
 The three supported types of wrappers for mobile applications are as follows:
@@ -75,7 +77,7 @@ Logic runs client-side logic, which is defined in the model's nanoflows.
 
 ### Platform APIs
 
-Platform APIs are functions of the environment in which the Mendix Client is running. In most cases these will be a function of a mobile device, such as the camera or GPS location. However, they can also include making calls to Mendix Native APIs or browser functions (such as accessing an image file).
+Platform APIs are functions of the environment in which the Mendix Client is running. These are usually a function of a mobile device, such as the camera or GPS location. However, they can also include making calls to Mendix Native APIs or browser functions (such as accessing an image file).
 
 ### Client Config
 
@@ -105,7 +107,7 @@ For more information on offline-first app types, see [Introduction to Mobile Tec
 
 For more information about the communication between the Mendix Client and the Runtime Server, see [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/).
 
-The three functions (state, sync, and session) are described separately, below.
+The three functions (state, sync, and session) are described below.
 
 #### State Handling
 
@@ -203,7 +205,7 @@ How the Mendix Client is launched is described in the sections below.
 
 ### Launching Mendix Client in a Browser
 
-In a browser, the environment is built on an initial page, the "shell", on which code is bootstrapped.
+In a browser, the environment is built on an initial page, the "shell," on which code is bootstrapped.
 
 #### Launch Flow
 
@@ -245,7 +247,7 @@ The React client dynamically loads these chunks when needed for optimal performa
 
 When the app is deployed, the static resources are placed in a separate structure. This includes the following:
 
-* *index.html* – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app).
+* *index.html* – the initial HTML page which is loaded when the end-user starts the Mendix Client—this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app).
 * App styling/Atlas – the app-specific CSS styling and static visual elements which define how a page is displayed.
 * Widgets – both native and web core widgets which are used by this app.
 * The Dojo client has the following resources:
@@ -259,11 +261,11 @@ When the app is deployed, the static resources are placed in a separate structur
 
 When the Mendix client is running, it sets a number of technical cookies to record information about the session. These can include:
 
-| Name  | Source | Purpose | Path | Duration | HttpOnly | 
+| Name | Source | Purpose | Path | Duration | HttpOnly | 
 | --- | --- | --- | --- | --- | --- |
 | **mx-cookie-test** | Client | Tests whether the browser supports cookies | `/` | deleted immediately after setting it | `false` |
-| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions¹ |  `false` | 
-| **originURI** | index.html | Tells the client where to redirect to if a user is required to log in | `/` | until user closes their browser (session cookie) |  `false` | 
+| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to sign out on the next request | `/` | 1 year for offline sessions¹ |  `false` | 
+| **originURI** | index.html | Tells the client where to redirect to if a user is required to sign in | `/` | until user closes their browser (session cookie) |  `false` | 
 | **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | 1 year |  `true` | 
 | **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | 1 year |  `true` | 
 | **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the session | `/` | until user closes their browser (session cookie) |  `true` | 

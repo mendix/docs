@@ -1,7 +1,7 @@
 ---
-title: "Best Practices for Managing Configuration File Precedence"
+title: "General Best Practices for Managing Configuration File Precedence"
 url: /developerportal/deploy/portable-app-distribution-deploy/best-practices/
-linktitle: "Best Practices"
+linktitle: "General Best Practices"
 weight: 20
 description: "Describes the best practices for managing the configuration order for Mendix Portable Runtime."
 ---
@@ -10,7 +10,7 @@ description: "Describes the best practices for managing the configuration order 
 
 This section clarifies how configuration files are processed, particularly concerning the order of application and how to manage environment variables and custom settings effectively.
 
-## Key Principle
+## Key Principles
 
 The core concept governing configuration file processing is *last definition wins.* This means that if the same configuration setting is defined in multiple files, the value from the file processed last overrides all previous definitions.
 

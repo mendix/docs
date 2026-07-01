@@ -1,5 +1,5 @@
 ---
-title: "Mendix Portable Runtime for Kubernetes"
+title: "Best practices for Kubernetes"
 url: /developerportal/deploy/docker-deploy-k8s/
 weight: 60
 description: "Describes how to use Mendix Portable Runtime to deploy on Kubernetes without installing the Mendix Operator."

@@ -71,7 +71,11 @@ Version is available for all module types for Studio Pro 11.12 and above. In ear
 
 This is the version number of the module. The version should be a semantic version, consisting of at least three parts: major, minor, and patch version. For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
 
-Mendix recommends setting a new version every time you make changes to the module.
+Mendix recommends setting a new version every time you make changes to the module. For modules that will be published to the Marketplace, the version must be set before exporting the package.
+
+{{% alert color="info" %}}
+The Marketplace automatically uses the version from the exported package. You cannot change this manually. If the version is already in use, the Marketplace rejects the package.
+{{% /alert %}}  
 
 ## Package {#package}
 

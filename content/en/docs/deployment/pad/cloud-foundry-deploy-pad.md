@@ -1,5 +1,5 @@
 ---
-title: "Reference Guide for Cloud Foundry Deployments"
+title: "Best Practices for Cloud Foundry Deployments"
 url: /developerportal/deploy/cloud-foundry-pad/
 weight: 70
 description: "Describes how to deploy to a Cloud Foundry environment by using Mendix Portable Runtime."

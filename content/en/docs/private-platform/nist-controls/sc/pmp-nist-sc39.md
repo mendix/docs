@@ -90,3 +90,35 @@ For more information, see the following topics:
 
 * [Custom JVM Heap Memory](/developerportal/deploy/private-cloud-deploy/#custom-jvm-heap-memory)
 * [Out of Memory Killed Error](/developerportal/deploy/private-cloud-deploy/#out-of-memory-killed-error)
+
+### DtapMode Production Enforcement
+
+For more information, see the following topics:
+
+* [Security](/developerportal/deploy/private-cloud-deploy/#security)
+* [App Security and Production](/developerportal/deploy/private-cloud-deploy/#app-security-and-production)
+
+### Mendix SOC 3 Compliance Report 
+
+A report detailing infrastructure architecture with a different setup for Demilitarized Zone (DMZ), containment, and isolation and routing and network encryption (TLS) is available in [Conveyor (page 38-39)](https://app.conveyor.com/profile/mendix/d/mendix-isae-3000-soc-3/H68STe).
+
+### Global STRICT MTLS Policy
+
+The cluster-wide `PeerAuthentication` manifest (called `default` in the `istio-system` namespace) enforces a Global STRICT mTLS policy. This ensures that all internal communications across all namespaces are encrypted and authenticated, effectively preventing unauthorized or unencrypted information transfer at the internal system boundaries.
+
+{{< figure src="/attachments/private-platform/nist-sc/nist-sc-2801-2.png" class="no-border" >}}
+
+### Workload Isolation
+
+Use Kubernetes **Namespaces** and **Network Policies** to delineate logical boundaries between different environment tiers (for example, *Testing*, *Staging*, *Production*) and to isolate Private Mendix Platform management traffic from other cluster workloads. For more information, see [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/).
+
+### Traffic Isolation
+
+You can configure Private Mendix Platform to offload administrative functions (ports *8800/8900*) to dedicated sidecars, ensuring the management plane is logically separated from the application data plane (port *8080*).
+
+For more information about port 8900 of the Mendix App Sidecar, see the following topics:
+
+* [Enable Metrics Scraping](/developerportal/deploy/private-cloud-monitor/#enable-metrics-scraping )
+* [Customize Liveness Probe to Resolve Crash Loopback Scenarios](/developerportal/deploy/private-cloud-cluster/#customize-liveness)
+
+For more information about port 8080 of the Mendix App Runtime container, see [Firewall Settings](/refguide/system-requirements/#firewall-settings).

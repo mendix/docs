@@ -34,11 +34,11 @@ Create and configure the required Model and Agent documents in Studio Pro, inclu
 
 4. In the **Configurations** tab of **App Settings**, add a new configuration that sets the constant's value to your text generation [resource key](/agents/mx-cloud-genai/Navigate-MxGenAI/#keys) from the Mendix Cloud GenAI Portal.
 
-5. In the **Connection** section, click **Test** to verify that the model can be reached.
+5. Click **List Models** to verify that the model resource can be reached. A table shows the available models in the resource.
 
 6. In the **App Explorer**, right-click your module and select **Add other** > **Agent**. Set a clear name, for example, `IT_Ticket_Helper`.
 
-7. In the **Model** field, select the Model document you created in the previous steps.
+7. In the **Resource** field of the **Model** section, select the Model document you created in the previous steps. In the **Version** field, select the model version you want to use, for example, `Anthropic Claude Sonnet V4.6`.
 
 8. For the **Context entity**, select the `TicketHelper` entity created in [Set Up Your App for Agent Creation](/agents/how-to/creating-agents/shared-setup/#domain-model-setup). This entity contains an attribute `UserInput` that matches the variable placeholder.
 

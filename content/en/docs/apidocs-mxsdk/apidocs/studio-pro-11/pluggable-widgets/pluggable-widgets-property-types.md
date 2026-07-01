@@ -480,9 +480,11 @@ Then the Studio Pro UI for the property appears like this:
 
 The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.
 
-If a `dataSource` attribute is not specified, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
+If a `dataSource` attribute is not specified, the client will receive an [`ActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#actionvalue) representing the action or `undefined` if the **Do nothing** action was selected.
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listactionvalue). For more information, see the [Datasource](#datasource) section below.
+
+Action properties can be preconfigured using the `defaultValue` and `defaultType` attributes. This is particularly useful when the widget is intended to be used with a specific microflow, nanoflow, or page. When the property [exposes action variables](#action-xml-elements), they are automatically mapped to parameters of matching name and type.
 
 #### XML Attributes {#xml-attributes}
 
@@ -496,7 +498,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements {#action-xml-elements}
 
-`<actionVariables>` — Defines variables a widget provides when calling [execute() on an ActionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#execute). The variables are made available in Studio Pro when configuring [Call a Microflow](/refguide/on-click-event/#call-microflow) and [Call a Nanoflow](/refguide/on-click-event/#call-nanoflow) actions.
+`<actionVariables>` — Defines variables a widget provides when calling [execute() on an ActionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#execute). The variables are made available in Studio Pro when configuring [Call a Microflow](/refguide/on-click-event/#call-microflow) and [Call a Nanoflow](/refguide/on-click-event/#call-nanoflow) actions. Action variables are automatically mapped to parameters of the same name (`key`) and type.
 
 `<actionVariable>` (required one or more) — Represents a primitive value provided by the widget as an argument when calling `ActionValue.execute()`. The variable is defined by the following attributes:
 

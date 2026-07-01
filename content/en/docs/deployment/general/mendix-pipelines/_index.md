@@ -351,10 +351,6 @@ Mendix Pipeline failure notifications only send if the user who triggered the Me
 
 Mendix Pipelines time out if they run for more than three hours. In other words, if the cumulative execution time of all operations in your Mendix Pipeline exceeds this limit, the Mendix Pipeline will fail.
 
-Existing Mendix Pipeline users can view previously created webhooks that trigger Mendix Pipelines from [Teamserver push (Git)](/developerportal/deploy/webhooks/#teamserver-push-git) by clicking **Webhooks** in the [navigation pane](/developerportal/#navigation-pane).
-
-These webhooks can be safely deleted without affecting the functionality of your Teamserver push (Git) triggers and are not visible to first-time Mendix Pipeline users.
-
 ### Known Issues and Limitations
 
 * **Mendix Pipelines maintenance behavior** – Mendix Pipeline runs are not picked up and executed if the Mendix Pipelines functionality is undergoing maintenance.

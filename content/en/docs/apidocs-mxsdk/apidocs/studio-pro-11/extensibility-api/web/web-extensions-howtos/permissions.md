@@ -52,6 +52,48 @@ When a user installs an extension that requests permissions, they can manage tho
 3. Find the extension in the list.
 4. In the **Permissions** section under the extension details, select or clear the checkbox next to each permission to grant or revoke access.
 
+## Reacting to Permission Changes
+
+Extensions can subscribe to the `permissionsChanged` event on `IExtensionPermissionsApi` to be notified whenever the user grants or revokes permissions for any extension. This allows you to reactively update your extension's behavior without requiring a restart.
+
+The event carries no arguments. When it fires, call `getPermissions()` to retrieve the current state.
+Update your `main/index.ts` to the following to detect when a permission changes.
+
+```typescript
+import { IComponent, getStudioProApi } from "@mendix/extensions-api";
+
+export const component: IComponent = {
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
+
+        const permissionsApi = studioPro.ui.extensionPermissions;
+
+        let currentPermissions = await permissionsApi.getPermissions();
+        
+        permissionsApi.addEventListener("permissionsChanged", async () => {
+            const permissionsAfterChange = await permissionsApi.getPermissions();
+
+            for (const permission of permissionsAfterChange) {
+                if (currentPermissions.find(p => p.name === permission.name)?.granted !== permission.granted) {
+                    if (permission.name === "runtime-configuration-private" && permission.granted === false) {
+                        studioPro.ui.notifications.show({
+                            title: "This extension requires a permission",
+                            message: "We need the 'runtime-configuration-private' permission to be granted",
+                            displayDurationInSeconds: 3
+                        });
+                    }
+                }
+            }
+
+            currentPermissions = permissionsAfterChange;
+        });
+    }
+};
+```
+The `permissionsChanged` event fires for all extensions whenever any permission is granted or revoked anywhere in the system, not just for your extension. This means multiple extensions may respond to the same event simultaneously.
+
+To check if a change affects your extension, compare the old granted state against the new one for each permission name your extension declared. Without this check, your extension fires a notification every time any permission changes, including changes unrelated to your extension.
+
 ## Available Permissions
 
 The following permissions are available for web extensions:

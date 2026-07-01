@@ -158,8 +158,23 @@ This device type requires the following message and response:
 
 #### Message
 
-A print command, for example, `P#TESTHELLO#RAW#aGVsbG8=`.
+* `P#PrintJobDocName#Format#DataPayloadInBase64` - Submit a print job.
+* `S` - Get printer status and queued jobs.
+* `C#JobId` - Cancel print job.
 
 #### Response
 
-The output of the print command, for example, `hello` in a *TESTHELLO.prn* file.
+* `P#DocName#JobId` - Print job accepted by OS print interface.
+* `S#State#StateReason1,...#NumJobs#JobId1:JobName1:JobState1,...` - Printer state and job list summary.
+* `E#ErrorMessage` - Error.
+
+#### Example
+
+The sample print command `P#TESTHELLO#RAW#aGVsbG8=` contains the following elements:
+
+1. `P (command prefix)` - Tells the Workstation Client that the incoming instruction is a Print command.
+2. Separator
+3. `TESTHELLOFILE` (file name) - Name assigned to the print job. The client uses this to create the temporary file (for example, `TESTHELLOFILE.prn`) before sending it to the printer spooler.
+4. Separator
+5. `RAW` (format type) - Tells the Workstation Client that the following data is a Raw Printer Command (such as ZPL for Zebra printers, EPL, or PCL) rather than a standard document like a PDF or a Word file. Printing in RAW bypasses the standard printer drivers' formatting. It sends the exact code the printer needs to generate labels, barcodes, or specific layouts.
+6. `aGVsbG8=` (payload) - A data string encoded to Base64. Base64 decoded, it translates to the text `hello`. If you are testing this and the printer is not reacting, verify that the string you are encoding in Base64 matches the specific language your printer speaks. For example, a Zebra printer cannot process a plain text `hello` unless it is wrapped in ZPL commands like `^XA^FO50,50^A0N,50,50^FDhello^FS^XZ`).

@@ -15,7 +15,7 @@ Please note that this documentation is provided as a guide only. Mendix offers s
 
 ## Prerequisites
 
-Before beginning this guide, do the following:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * [Sign up for an Appcircle account](https://auth.appcircle.io/signup) 
 * Confirm you created the native template project for your app by reading [Using Mendix Native Mobile Builder to Set Up Your Local App](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#using-mendix-native-mobile-builder-to-set-up-your-local-app).
@@ -31,10 +31,11 @@ Appcircle uses separate build profiles for iOS and Android. Create one profile p
 1. Choose how to connect your repository. Appcircle supports GitHub, GitLab, Bitbucket, Azure DevOps, and direct SSH URL connections:
 
     {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/add-build-profile.png" alt="Repository connection options in Appcircle" class="no-border" >}}
-1. Select the branch you want to build from. Appcircle automatically fetches the repository and fills in the build configuration.
+
+1. Select the branch from which you want to build. Appcircle automatically fetches the repository and fills in the build configuration.
 1. Review the auto-filled configuration, adjust if needed, and finish creating the profile.
 
-Repeat these steps to create a profile for the other platform if needed. For more information, see [Appcircle's build profile documentation](https://docs.appcircle.io/build/manage-the-connections/adding-a-build-profile/).
+Repeat these steps to create a profile for the other platform if needed. For more information, see Appcircle's [build profile documentation](https://docs.appcircle.io/build/manage-the-connections/adding-a-build-profile/).
 
 ## Set Up Code Signing for iOS {#code-signing-ios}
 
@@ -46,13 +47,13 @@ To add a certificate, do the following:
 
 1. Go to the **Signing Identities** module from the left navigation menu and select **Apple Certificates**.
 1. Click **Add New** and choose one of the following:
-   * **Create an Apple Certificate** — generates a certificate via your App Store Connect API Key. Select a Certificate Signing Request (CSR) or generate one, then choose the certificate type (Apple Distribution).
-   * **Upload Certificate Bundle (.p12)** — upload a pre-existing *.p12* file directly.
+   * **Create an Apple Certificate** — Generates a certificate via your App Store Connect API Key. Select a Certificate Signing Request (CSR) or generate one, then choose the certificate type (Apple Distribution).
+   * **Upload Certificate Bundle (.p12)** — Upload a pre-existing *.p12* file directly.
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/apple-certificates.png" alt="Repository connection options in Appcircle" class="no-border" >}}
 
 {{% alert color="warning" %}}
-Avoid using special characters such as `$` or `#` in your certificate password, as these can cause failures during import.
+Avoid using any special characters (such as `$` or `#`) in your certificate password, as these can cause failures during import.
 {{% /alert %}}
 
 ### Add a Provisioning Profile
@@ -60,50 +61,50 @@ Avoid using special characters such as `$` or `#` in your certificate password, 
 To add a provisioning profile, do the following:
 
 1. In the **Signing Identities** module, select **Apple Profiles**.
-1. Choose one of the following methods:
-   * **Register a New Profile** — select a distribution method (App Store, Ad Hoc, or Enterprise), an App ID, and a certificate. Appcircle registers the profile on the Apple Developer Portal automatically.
-   * **Fetch from App Store Connect** — select **Get Provisioning Profiles from App Store Connect** and import profiles from your account.
-   * **Upload manually** — upload one or more *.mobileprovision* files. Profiles are automatically matched with certificates; a green checkmark indicates a match.
+1. Enact one of the following methods:
+   * **Register a New Profile** — Select a distribution method (App Store, Ad Hoc, or Enterprise), an App ID, and a certificate. Appcircle registers the profile on the Apple Developer Portal automatically.
+   * **Fetch from App Store Connect** — Select **Get Provisioning Profiles from App Store Connect** and import profiles from your account.
+   * **Upload manually** — Upload one or more *.mobileprovision* files. Profiles are automatically matched with certificates; a green checkmark indicates a match.
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/apple-profiles.png" alt="Repository connection options in Appcircle" class="no-border" >}}
 
 ### Assign to the Build Profile
 
-In the Build module, open the iOS build profile and go to **Build Configuration**. Under the **Signing** section, choose one of the following signing methods:
+In the **Build** module, open the iOS build profile and go to **Build Configuration**. Under the **Signing** section, choose one of the following signing methods:
 
-* **Automatic Signing** — Appcircle automatically handles provisioning profile management during the build. This requires:
-  * Xcode 13 or later
-  * A Developer or Distribution certificate
-  * An App Store Connect API key (configured in the **API Integrations** settings)
+* **Automatic Signing** — Appcircle automatically handles provisioning profile management during the build. This process requires the following prerequisites be met:
+  * Xcode 13 or above
+  * A **Developer** or **Distribution** certificate
+  * An **App Store Connect API key** (configured in the **API Integrations** settings)
   * The bundle identifier must already be registered in your Apple Developer account
-* **Manual Signing** — you manually select the certificate and provisioning profile for each build configuration. This gives you full control over which profiles are used. Select your bundle identifier from the dropdown, then choose the provisioning profile you added in the **Signing Identities** module. The certificate will be automatically matched based on the profile.
+* **Manual Signing** — You manually select the certificate and provisioning profile for each build configuration. This gives you full control over which profiles are used. Select your bundle identifier from the dropdown, then choose the provisioning profile you added in the **Signing Identities** module. The certificate will be automatically matched based on the profile.
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/assign-code-signing.png" alt="Repository connection options in Appcircle" class="no-border" >}}
 
-For more details, follow [Appcircle's iOS code signing guide](https://docs.appcircle.io/signing-identities/apple-certificates).
+For more details, follow Appcircle's [iOS code signing guide](https://docs.appcircle.io/signing-identities/apple-certificates).
 
 ## Set Up Code Signing for Android {#code-signing-android}
 
 Applications distributed to Android devices must be signed with a keystore. To distribute via the Play Store, you will also need to [register as an Android developer](https://play.google.com/console/signup).
 
-Appcircle lets you either upload an existing keystore or generate a new one directly within the platform.
+Appcircle lets you either upload an existing keystore or generate a new one directly within the platform. See below for instructions on either method.
 
 To generate a new keystore within Appcircle, do the following:
 
 1. Go to the **Signing Identities** module and select **Android Keystores**.
 1. Click **Add New** and select the generate option.
 1. Fill in the required details:
-   * **Keystore Password** — password to protect the keystore file (minimum 6 characters)
-   * **Key Alias** — identifier for the signing key (for example, `my-app-key`)
-   * **Key Password** — password to protect the signing key (minimum 6 characters)
+   * **Keystore Password**: password to protect the keystore file (minimum 6 characters)
+   * **Key Alias**: identifier for the signing key (for example, `my-app-key`)
+   * **Key Password**: password to protect the signing key (minimum 6 characters)
    * Certificate information:
-     * **Common Name (CN)** — your name or organization name
-     * **Organizational Unit (OU)** — your department or division (optional)
-     * **Organization (O)** — your organization name (optional)
-     * **Locality (L)** — your city (optional)
-     * **State (ST)** — your state or province (optional)
-     * **Country Code (C)** — two-letter country code (for example, `US`)
-   * **Validity (years)** — how long the keystore remains valid (default is 25 years; Google requires at least 25 years for Play Store apps)
+     * **Common Name (CN)**: your name or organization name
+     * **Organizational Unit (OU)**: your department or division (optional)
+     * **Organization (O)**: your organization name (optional)
+     * **Locality (L)**: your city (optional)
+     * **State (ST)**: your state or province (optional)
+     * **Country Code (C)**: two-letter country code (for example, `US`)
+   * **Validity (years)**: how long the keystore remains valid (default is 25 years; Google requires at least 25 years for Play Store apps)
 1. Save the keystore. Appcircle generates the keystore file and stores it securely.
 
 {{% alert color="warning" %}}
@@ -119,7 +120,7 @@ To upload an existing keystore instead, do the following:
 
 After generating or uploading the keystore, open the Android build profile's workflow editor and ensure the **Sign Application** step is enabled and configured to use the keystore from Signing Identities.
 
-For more details, follow [Appcircle's Android code signing guide](https://docs.appcircle.io/signing-identities/android-keystores).
+For more details, follow Appcircle's [Android code signing guide](https://docs.appcircle.io/signing-identities/android-keystores).
 
 ## Configure Environment Variables {#environment-variables}
 
@@ -134,10 +135,9 @@ Appcircle provides two levels of environment variable configuration:
 
 For Mendix native apps, you might use environment variables for:
 
-* **Runtime URLs** — different backend endpoints for dev, test, and production environments
-* **App configuration** — feature flags, API keys, or service endpoints
-* **Build configuration** — version numbers, build identifiers, or platform-specific settings
-
+* Runtime URLs: different backend endpoints for dev, test, and production environments
+* App configuration: feature flags, API keys, or service endpoints
+* Build configuration: version numbers, build identifiers, or platform-specific settings
 
 ### Add Global Environment Variables
 
@@ -172,8 +172,8 @@ To configure environment variables for a specific build profile, do the followin
 
 Environment variables configured in Appcircle are available during the build process. How you access them depends on your app's configuration:
 
-* **React Native environment files** — if your app uses *.env* files or libraries like `react-native-config`, you can pass Appcircle environment variables to these configuration files using custom build scripts
-* **Build scripts** — environment variables are accessible in workflow steps and custom scripts using standard environment variable syntax (for example, `$RUNTIME_URL` in shell scripts)
+* **React Native environment files** — If your app uses *.env* files or libraries like `react-native-config`, you can pass Appcircle environment variables to these configuration files using custom build scripts.
+* **Build scripts** — Environment variables are accessible in workflow steps and custom scripts using standard environment variable syntax (for example, `$RUNTIME_URL` in shell scripts).
 
 For more details on environment variable management and advanced configurations, see [Appcircle's environment variables documentation](https://docs.appcircle.io/environment-variables/).
 
@@ -221,6 +221,8 @@ The Appcircle build module provides a centralized tracking system through its hi
 For more detailed information, please visit [Build History](https://docs.appcircle.io/build/build-history) and [Build Activity Log](https://docs.appcircle.io/build/build-activity-log) documentations.
 
 ## Read More
+
+For more information on building and distributing apps, see the following guides:
 
 * [Distribute a Mendix Native App with Appcircle](/refguide/mobile/distributing-mobile-apps/distributing-with-appcircle/)
 * [Publish a Mendix Native App with Appcircle](/refguide/mobile/distributing-mobile-apps/publishing-with-appcircle/)

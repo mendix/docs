@@ -46,7 +46,7 @@ The same integration pattern works in React, Vue, plain JavaScript, and other fr
 
 ## Example Host Apps
 
-See the [embedded-mendix-demo-apps](https://github.com/mendix/embedded-mendix-demo-apps) GitHub repository for an example Mendix application that has been configured to be embedded, together with example host applications using Vue, React, and vanilla JavaScript.
+See the [embedded-mendix-demo-apps](https://github.com/mendixlabs/embedded-mendix-demo-apps) GitHub repository for an example Mendix application that has been configured to be embedded, together with example host applications using Vue, React, and vanilla JavaScript.
 
 ## Configuring the Embedded App
 

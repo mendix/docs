@@ -10,10 +10,15 @@ description: Describes how to integrate with Appcircle to build a Mendix native 
 This guide helps you set up [Appcircle](https://appcircle.io) to automate building a Mendix native app in the cloud. Appcircle is a mobile CI/CD platform that provides fast, flexible build pipelines for iOS and Android apps.
 
 {{% alert color="info" %}}
-Please note that this documentation is provided as a guide only. Mendix offers support if issues arise with the Mendix build process itself, but cannot provide support for problems related to the Appcircle platform or other third-party tools described in this guide.
+Please note that this documentation is provided as a guide only. Mendix offers support if issues arise with **the Mendix build process**, but cannot provide support for problems related to the Appcircle platform or other third-party tools described in this guide.
 {{% /alert %}}
 
-Before starting, [sign up for an Appcircle account](https://auth.appcircle.io/signup) and make sure you have created the native template project for your app by following [Using Mendix Native Mobile Builder to Set Up Your Local App](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#using-mendix-native-mobile-builder-to-set-up-your-local-app).
+## Prerequisites
+
+Before beginning this guide, do the following:
+
+* [Sign up for an Appcircle account](https://auth.appcircle.io/signup) 
+* Confirm you created the native template project for your app by reading [Using Mendix Native Mobile Builder to Set Up Your Local App](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#using-mendix-native-mobile-builder-to-set-up-your-local-app).
 
 After building your app, you can distribute it to testers or publish it to the app stores using Appcircle. For more information, see [Distribute a Mendix Native App with Appcircle](/refguide/mobile/distributing-mobile-apps/distributing-with-appcircle/) and [Publish a Mendix Native App with Appcircle](/refguide/mobile/distributing-mobile-apps/publishing-with-appcircle/).
 

@@ -2,7 +2,7 @@
 title: "Maia Resources"
 url: /control-center/maia-resources/
 description: "Describes how to provision and deprovision Maia Resources using self-service."
-weight: 25
+weight: 10
 ---
 
 ## Introduction
@@ -25,7 +25,7 @@ The overview page provides a centralized view of all Maia Units currently provis
 * Capacity (Maia Units) – The number of Maia Units per month your organization can use
 * State – Whether the resources is active, or ready to be downgraded or deprovisioned
 
-{{< figure src="/attachments/control-center/maia-resources/overview.jpeg" alt="" >}}
+{{< figure src="/attachments/control-center/maia/maia-resources-overview.png" alt="" >}}
 
 ## Increasing Your Maia Units Capacity {#increase-maia-units}
 
@@ -48,17 +48,17 @@ You can provision any Maia resources directly within the Control Center using th
 
 This allows you to select how many Cloud Token to use to provision Maia Units. Every Cloud Token provisions 100 Maia Units per month.
 
-{{< figure src="/attachments/control-center/maia-resources/provision.jpeg" alt="" >}}
+{{< figure src="/attachments/control-center/maia/provision-resources.png" alt="" >}}
 
 Click **Provision** to select an amount of cloud tokens. An pop-up shows the Maia Units capacity that will be added. Clicking **Provision** again completes the process. You are taken back to the **Maia Resource** page where the newly provisioned Maia Units appear in the list.
 
-{{< figure src="/attachments/control-center/maia-resources/resource-summary.jpeg" alt="" width="300" >}}
+{{< figure src="/attachments/control-center/maia/resource-summary.png" alt="" width="300" >}}
 
 ## Upgrading Maia Units {#upgrading-maia-units}
 
 To upgrade your provisioned Maia Units, select a plan of type **Provisioned** from your resources overview and click **Edit Resource**. This opens the page of your current resource, showing the amount of allotted Cloud Tokens. Increase the amount of Cloud Tokens to upgrade your provisioned Maia Units, then click **Save Changes**. Upgrades will take effect immediately.
 
-{{< figure src="/attachments/control-center/maia-resources/upgrade.jpeg" alt="" >}}
+{{< figure src="/attachments/control-center/maia/edit-resource.png" alt="" >}}
 
 ## Downgrading Maia Units {#downgrading-maia-units}
 

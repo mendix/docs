@@ -96,7 +96,8 @@ General Availability means that a feature is available for all users. This type 
 | Access data in offline apps while syncing | General Availability: Mx 11.6 |
 | Embed a Mendix application into another Mendix application as a web component | Public Beta: 2027 |
 | Theme Customizer | General Availability: Mx 11.12 |
-| Menditect UI testing | Public Beta: Q2 2025<br/>General Availability: H2 2025 |
+| Menditect MCP server | Release: Q3 2026 |
+| Menditect Airgapped deployment | Release: Q4 2026 |
 | Bulk DML | General Availability: Mx 11.7 |
 | Increased decimal precision | General Availability: Mx 11.6 |
 | Consumed OpenAPI and API discovery | Public Beta: Q2 2025<br/>General Availability: H2 2026 |

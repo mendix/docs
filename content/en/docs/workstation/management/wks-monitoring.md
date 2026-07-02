@@ -3,7 +3,7 @@ title: "Monitoring Mendix Workstation"
 linktitle: "Monitoring"
 url: /mendix-workstation/monitoring/
 description: "Describes how to access and use the Usage Report page of Mendix Workstation."
-weight: 35
+weight: 110
 ---
 
 ## Introduction

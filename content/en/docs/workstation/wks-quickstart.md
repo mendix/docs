@@ -1,12 +1,16 @@
 ---
-title: "Installing and Configuring Mendix Workstation"
-linktitle: "Installation and Configuration"
-url: /mendix-workstation/installation/
-description: "Quick start and advanced guide for installing and configuring Mendix Workstation, including setting up workspaces, stations, and devices for initial testing from the Workstation Management."
-weight: 20
+title: "Getting Started with Mendix Workstation"
+linktitle: "Getting Started"
+url: /mendix-workstation/quickstart/
+description: "Provides a step-by-step walkthrough through a simple installation and configuration process for Mendix Workstation."
+aliases:
+    - /mendix-workstation/installation/
+weight: 10
 ---
 
 ## Introduction
+
+Use this guide to help you get started with Mendix Workstation. Review the system, access, and network prerequisites, and then follow a step-by-step walkthrough to help you set up and test the connection.
 
 This guide helps you configure and test a minimum working version of Mendix Workstation. By following these steps, you will complete the following:
 
@@ -15,18 +19,16 @@ This guide helps you configure and test a minimum working version of Mendix Work
 * Install the Workstation Client on your computer.
 * Verify the connection between your virtual devices directly from Workstation Management.
 
-### Creating a Workspace and Station
+## Creating a Workspace and Station {#create-workspace}
 
-To create a workspace and a station, perform the following steps:
+A *station* represents a workstation on the shop floor. It can connect to one or more apps or devices. A *workspace* is a grouping of one or more stations. For example, a workspace may group together all the stations which belong to the same factory or factory line.
 
 1. Go to [Mendix Workstation Management](https://workstation.home.mendix.com/) and sign in with your Mendix account.
 2. In **Workspace Overview**, click **Create Workspace**.
 
     {{< figure src="/attachments/workstation/wks-install1.png" class="no-border" >}}
 
-3. Enter a name for your new workspace, specify the environment type (**Test**, **Acceptance** or **Production**), and then click **Create Workspace**.
-
-    Workspaces created with the Test environment type have [Developer Mode](/mendix-workstation/management-stations/#developer-mode) for their stations enabled by default. Changing the environment type after creation does not disable or enable Developer Mode.
+3. Enter a name for your new workspace, and then click **Create Workspace**.
 
     {{< figure src="/attachments/workstation/wks-install2.png" class="no-border" >}}
 
@@ -38,46 +40,48 @@ To create a workspace and a station, perform the following steps:
 
     {{< figure src="/attachments/workstation/wks-install4.png" class="no-border" >}}
 
-6. Optional: If you do not want Workstation Management to detect smart card readers, in **Station** view, set the **Detect Card Readers** toggle to **Off**.
+6. Optional: If you do not want Workstation Management to detect smart card readers, perform the following steps:
 
-    {{< figure src="/attachments/workstation/wks-install16.png" class="no-border" >}}
+    1. In **Station** view, click the **three dots** icon.
+    2. Click **Edit Station**.
+    3. Clear the **Detect Card Readers** check box.
 
-### Downloading and Running the Workstation Client
+## Installing the Workstation Client
 
-The Workstation Client is a connector between the devices and your local PC. You can download and enable the client by performing the following steps:
+The Workstation Client is a connector between between a Mendix app and various devices. You must install it on a computer, and then register it in Workstation Management.
 
-1. Open the station that you created, and click **Register Computer**.
+{{% alert color="info" %}}
+The following instructions assume that your operating system is Windows, and that you have Windows administrator rights that allow you to perform a global installation. If you do not have administrator rights, or if you want to install the Client on a Linux machine, see [Installing the Workstation Client](/mendix-workstation/install-client/) for instructions.
+{{% /alert %}}
+
+1. Open the [station that you created](#create-workspace) and click **Register Computer**.
 
     {{< figure src="/attachments/workstation/wks-install5.png" class="no-border" >}}
 
 2. In the **Computer Registration** dialog, click **Download**.
 
-    This will open the Mendix Marketplace page for the [Workstation Client Windows Installer](https://marketplace.mendix.com/link/component/247448). Alternatively, you can find the component on the Mendix Marketplace by searching for "Workstation Client". You can also find the [portable](https://marketplace.mendix.com/link/component/247456) and [Linux](https://marketplace.mendix.com/link/component/247459) version by using the search, or navigate to them through the above links. 
-
     {{< figure src="/attachments/workstation/wks-install6.png" class="no-border" >}}
 
-3. Perform one of the following actions:
+3. Run the Workstation Client installer. 
+4. If you get a prompt from Windows User Account Control, click **Yes** to allow Workstation Client to be installed. 
 
-    * For Windows:
-
-        * If you have administrator rights for your computer, click **Download** and run the Workstation Client installer in the form of an NSIS installer package. If you get a prompt from Windows User Account Control, click **Yes** to allow Workstation Client to be installed; for a silent installation, you can also run the installer as an administrator with the `/S` argument, that is, `MendixWorkstationX.Y.Z.exe /S`. The default installation folder is *C:\Program Files\Mendix Workstation*. The app data folder can be found at *C:\ProgramData\Mendix Workstation*. The client runs automatically after the installation is completed.
-        * If you do not have administrator rights for your computer, download the [Workstation Client Portable](https://marketplace.mendix.com/link/component/247456) instead. As a best practice, put the portable client in  a new folder (for example, in your Documents folder), and then click the .exe file to run the client.
+    For a silent installation, you can also run the installer as an administrator with the `/S` argument, that is, `MendixWorkstationX.Y.Z.exe /S`. 
     
-    * For Linux:
-        * Download the [Linux](https://marketplace.mendix.com/link/component/247459) version of the Client
-        * Run the following command to install: `sudo apt install ./MendixWorkstation_X.X.X.X_arm64.deb` (replace *X.X.X.X* with the actual version and build number of the downloaded .deb package)
-        * Install card reader dependencies: `sudo apt install pcscd libcap2-bin`
-        * Enable card reader dependencies: `sudo systemctl enable pcscd --now`
-        * Start the application from the applications menu > **Accessories > Mendix Workstation**
-        * Bluetooth support requires starting the application with `CAP_NET_RAW` privilege (for raw network packet access): `sudo capsh --user=$(whoami) --iab="^cap_net_raw" -- -c "'/opt/Mendix Workstation/Mendix Workstation'"`
+The default installation folder is *C:\Program Files\Mendix Workstation*. The app data folder can be found at *C:\ProgramData\Mendix Workstation*. The client runs automatically after the installation is completed.
     
 ### Registering your Computer
 
 With the Workstation Client running on your computer, you must now register your computer in the Workstation Management.
 
-1. Go to [Mendix Workstation Management](https://workstation.home.mendix.com/) and navigate to the **Station Overview** in the workspace which contains the station that you want to register to your computer. 
-2. Click the menu associated with your station in the overview, and then select **Register computer**.
-3. Click **Copy** to copy the registration token to your clipboard.
+{{% alert color="info" %}}
+The following instructions assume that you are registering a single computer for testing purposes. If you want to register multiple Workstation clients and their host computers in a single rollout, see [Registering Workstation Clients](/mendix-workstation/register/) for instructions.
+{{% /alert %}}
+
+1. Open the [Workspaces](https://workstation.home.mendix.com/) page.
+2. Click the workspace where you want to register the Clients.
+3. On the **Stations** page, edit or create a station representing the computer where you installed the Workstation Client.
+4. Click the **Register Computer** button in the top right corner of the screen.
+5. Click **Copy** to copy the registration token to your clipboard.
 
     {{< figure src="/attachments/workstation/wks-install7.png" class="no-border" >}}
 
@@ -94,8 +98,6 @@ The **Stations** page now shows your station's status as **Computer Registered**
 
     {{< figure src="/attachments/workstation/wks-install10.png" class="no-border" >}}
 
-Any changes that you make in Workstation Management (such as adding new devices, or setting the **Detect Card Readers** toggle to **Off**) will be immediately synchronized with the Workstation Client. To change this behavior, see [Client's Auto-Refresh](/mendix-workstation/management-settings/#auto-refresh).
-
 ### Configuring and Testing Virtual Devices
 
 After registering your computer, test your connectivity by creating a pair of virtual devices: a TCP/IP server that will emulate a device, and a TCP/IP client that will connect to the emulated device.
@@ -103,7 +105,7 @@ After registering your computer, test your connectivity by creating a pair of vi
 #### Creating a TCP/IP Server
 
 1. Go to [Mendix Workstation Management](https://workstation.home.mendix.com/).
-2. In the **Station Details** page, click **Add Device**.
+2. In the **Station** page, click **Add Device**.
 3. Select **TCP/IP Server** as the **Device Type**, and then click **Next**.
 4. In the **Device Name** field, enter **Test Server**
 5. In the **Device Class** field, select or create a class (for example, *Virtual*), and then click **Next**.
@@ -119,7 +121,7 @@ The emulated device, a local TCP/IP server listening on port 1705, is added to t
 #### Creating a TCP/IP Client
 
 1. Go to [Mendix Workstation Management](https://workstation.home.mendix.com/).
-2. In the **Station Details** page, click **Add Device**.
+2. In the **Station** page, click **Add Device**.
 3. Select **TCP/IP Client** as the **Device Type**, and then click **Next**.
 4. In the **Device Name** field, enter **Test Client**, and then click **Next**.
 5. In the **Device Class** field, select or create a class (for example, *Virtual*), and then click **Next**.
@@ -151,6 +153,21 @@ After configuring the server and client pair, test their connectivity by perform
 Different device types have different requirements for the message syntax. For more information, see [Configuring Devices](/mendix-workstation/management-devices/).
 {{% /alert %}}
 
-### Quitting the Workstation Client
+## Best Practices for Working with Mendix Workstation
 
-The Workstation Client runs automatically at system startup. The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.
+As you begin your work with Mendix Workstation, keep in mind the following best practices to help you.
+
+### Security Recommendations
+
+For more information, see [Security Best Practices for Mendix Workstation](/mendix-workstation/security/).
+
+### Performance Optimization
+
+* Ensure stations meet the recommended hardware specifications.
+* Minimize background processes to improve performance.
+* When building app logic reusing the Connectors nanoflows, minimize the amount of microflow calls and [other actions](/refguide/nanoflows/#logic-where-no-connection-is-needed) that require a server connection. One key benefit of Mendix Workstation is client-sided data processing. Every call to the Mendix runtime adds an performance overhead.  
+
+### Maintenance Guidelines
+
+* Periodically review and update workstation and device configurations.
+* Monitor workstation health and resolve any connectivity issues promptly.

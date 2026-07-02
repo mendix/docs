@@ -1,14 +1,16 @@
 ---
-title: "Building an App for Mendix Workstation"
-linktitle: "Building an App"
-url: /mendix-workstation/build-app/
+title: "Mendix Workstation Connector"
+linktitle: "Workstation Connector"
+url: /mendix-workstation/connector/
 description: "Describes how to install the Workstation Connector and build an app to work with Mendix Workstation."
-weight: 30
+aliases:
+    - /mendix-workstation/build-app/
+weight: 12
 ---
 
 ## Introduction
 
-After you have [installed the Workstation Client](/mendix-workstation/installation/), you must either build a Mendix application that will send data or commands to your devices, or extend an existing app accordingly. In order to do that, you must download, install, and configure the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460) from the Mendix Marketplace.
+After you have [installed the Workstation Client](/mendix-workstation/install-client/), you must either build a Mendix application that will send data or commands to your devices, or extend an existing app accordingly. In order to do that, you must download, install, and configure the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460) from the Mendix Marketplace.
 
 ### How the Connection Works
 
@@ -22,7 +24,7 @@ The Workstation Connector connects with Workstation Client using a local WebSock
 
 ## Prerequisites
 
-* Mendix Workstation 3.0.0
+* Mendix Workstation 3.0.0 or newer
 * Mendix Studio Pro 9.24.11 or newer
 
 ## Installing and Configuring the Workstation Connector

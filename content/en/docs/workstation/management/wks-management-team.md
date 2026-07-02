@@ -12,9 +12,25 @@ weight: 90
 Collaborating with other users in a workspace requires a Workstation license.
 {{% /alert %}}
 
-On the **Team** page, you can invite and manage members of a workspace. Only users who have signed into Workstation Management can be invited by email. 
+On the **Team** page, you can invite other Workstation Management users to your workspace to share configurations and collaborate. Only users who have signed into Workstation Management can be invited by email.
 
 {{< figure src="/attachments/workstation/wks-team1.png" class="no-border" >}}
+
+## Inviting Users
+
+To invite a user, perform the following steps:
+
+1. In Workstation Management, in the left navigation menu, click **Team** to open the **Team** page.
+2. Click **Invite Team Member**. 
+3. Enter the user's email address and select a role. 
+
+For more information about the available roles, see [User Roles](#user-roles).
+
+## Managing Users
+
+To change a user's role or remove them from the workspace, click the three-dot icon in the right column of the user list. This action requires the Owner or Workspace Admin role.
+
+## User Roles {#user-roles}
 
 You can assign the following roles to your users:
 

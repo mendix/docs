@@ -5,7 +5,7 @@ url: /mendix-workstation/management/
 description: "Provides an overview of Mendix Workstation Management."
 no_list: false 
 description_list: true 
-weight: 30
+weight: 11
 ---
 
 ## Introduction
@@ -21,5 +21,9 @@ For more information about the terms used in this document, such as *station* or
 ## Users
 
 Workstation Management is used by central IT and application support teams.
+
+## Accessing Workstation Management
+
+Workstation Management is an online portal available at [https://workstation.home.mendix.com/](https://workstation.home.mendix.com/).
 
 ## Read More

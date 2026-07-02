@@ -106,19 +106,19 @@ All apps running within Insights Hub need to be registered. When you open your a
 
     | **Insights Hub application role** | **Admin** | **User** |
     | ------------------------------- | --------- | -------- |
-    | mdsp:core:assetmanagement.standarduser | X |  X |
-    | mdsp:core:em.eventcreator | X |   |
-    | mdsp:core:em.eventmanager | X |   |
-    | mdsp:core:em.eventviewer | X |  X |
-    | mdsp:core:iot.filAdmin | X |   |
-    | mdsp:core:iot.filUser | X |  X |
-    | mdsp:core:.iot.tsaUser | X |  X |
-    | mdsp:core:.iot.timUser | X |  X |
-    | mdsp:core:mindconnect.fullaccess | X |   |
-    | mdsp:core:mindconnect.readonly | X |  X |
-    | mdsp:core:tm.tenantUser | X |  X |
-    | mdsp:core:tsm.full-access | X |   |
-    | mdsp:core:tsm.read-only | X |  X |
+    | mdsp:core:assetmanagement.standarduser | X | X |
+    | mdsp:core:em.eventcreator | X | |
+    | mdsp:core:em.eventmanager | X | |
+    | mdsp:core:em.eventviewer | X | X |
+    | mdsp:core:iot.filAdmin | X | |
+    | mdsp:core:iot.filUser | X | X |
+    | mdsp:core:.iot.tsaUser | X | X |
+    | mdsp:core:.iot.timUser | X | X |
+    | mdsp:core:mindconnect.fullaccess | X | |
+    | mdsp:core:mindconnect.readonly | X | X |
+    | mdsp:core:tm.tenantUser | X | X |
+    | mdsp:core:tsm.full-access | X | |
+    | mdsp:core:tsm.read-only | X | X |
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/devcockpit-mdsp-api-roles.png" alt="Choose app registration" >}}
 

@@ -40,7 +40,7 @@ console.log(`App created with ID: ${app.appId}`);
 You can pass the following options to `createNewApp`:
 
 | Name | Description | 
-|--- | --- |
+| --- | --- |
 | `repositoryType` | The type of repository to be used. Possible values: `svn` and `git`. |
 | `summary` | A short description of the app. |
 | `image` | The Base64-encoded data of the app image (height and width between 200px and 400px, with a maximum size of 5 MB). |
@@ -112,7 +112,7 @@ Working copy creation a resource intensive process, consider reusing previously 
 You can pass the following options to `createTemporaryWorkingCopy`:
 
 | Name | Description |
-|--- | --- |
+| --- | --- |
 | `commitId` | The ID of the commit on which the working copy should be based. If not passed, the working copy is created from the last commit in the specified branch. |
 
 ## Opening the Working Copy Model {#opening-working-copy}
@@ -135,7 +135,7 @@ await workingCopy.commitToRepository();
 You can pass the following options to `commitToRepository`:
 
 | Name | Description |
-|--- | --- |
+| --- | --- |
 | `branchName` | You can specify a branch other than the working copy base branch. In that case, set `force` to `true`. |
 | `commitMessage` | Specify a custom commit message instead of the default message ("Imported model changes from online working copy"). |
 | `targetCommitId` | This commit ID will be set to the working copy base commit ID if not specified. |

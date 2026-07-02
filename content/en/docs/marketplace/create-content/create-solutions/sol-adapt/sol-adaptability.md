@@ -51,8 +51,8 @@ You can make logic, that is microflows, nanoflows, and workflows, adaptable by p
 | Split (re-)usable core logic into (reusable) microflows | Solution module (usable) | Open application module |
 | Make part of the hidden core logic adaptable | Solution module (hidden) | Open application module |
 | Make part of the (re-)usable core adaptable | Solution module (usable) | Open application module |
-| Reuse core logic in an adaptable microflow | Open application module  | Solution module (usable) |
-| Split adaptable microflow | Open application module  | Open application module (newly created flow) |
+| Reuse core logic in an adaptable microflow | Open application module | Solution module (usable) |
+| Split adaptable microflow | Open application module | Open application module (newly created flow) |
 
 {{% alert color="info" %}}
 All document types can be part of the solution module, but only nanoflows, microflows, and Java actions can be made usable.

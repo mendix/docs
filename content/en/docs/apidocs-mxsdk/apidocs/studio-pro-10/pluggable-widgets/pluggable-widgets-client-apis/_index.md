@@ -301,7 +301,7 @@ Call `setFormatter(undefined)` to reset the formatter to the platform default.
 ##### Quick Reference
 
 | Formatter type | `type` value | `withConfig` | `getFormatPlaceholder` | Applies to |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | `DateTimeFormatter` | `"datetime"` | ✅ `DateTimeFormatterConfig` | ✅ | `Date` |
 | `NumberFormatter` | `"number"` | ✅ `NumberFormatterConfig` | ❌ | `Big` (Decimal, Integer, Long) |
 | `SimpleFormatter` | `undefined` | ❌ | ❌ | `string`, `boolean`, Enum |

@@ -146,14 +146,14 @@ Please refer to [JCo Property Settings](https://help.sap.com/viewer/a33d7bdbf6b8
 
 The following JCo Properties map directly to these constants in the module:
 
-| Constant Name | JCO Property  |
+| Constant Name | JCO Property |
 | ------------- | ------------- |
-| Language   | jco.client.lang   |
+| Language | jco.client.lang |
 | Client | jco.client.client |
-| Username   | jco.client.user   |
-| Password   | jco.client.passwd |
-| Host   | jco.client.ashost |
-| SystemNumber  | jco.client.sysnr  |
+| Username | jco.client.user |
+| Password | jco.client.passwd |
+| Host | jco.client.ashost |
+| SystemNumber | jco.client.sysnr |
 | RouterAddress | jco.client.saprouter |
 
 ##### Additional JCoProperties{#jco-properties}
@@ -171,13 +171,13 @@ The values for the properties can be found in the **Connection Properties** of t
 
 | Property | Value | Source |
 | --- | --- | --- |
-| jco.client.snc_mode | `1` – enable SNC<br />`2` – disable SNC |  |
+| jco.client.snc_mode | `1` – enable SNC<br />`2` – disable SNC | |
 | jco.client.snc_partnername | sncname | Expert Settings |
 | jco.client.snc_qop | sncqop | Expert Settings |
 | jco.client.snc_myname | Server Name | Distinguished Name(DN) of client PSE |
 | jco.client.snc_lib | The path and file name for the SAP Cryptography library | Usually `C:\Program Files\SAP\FrontEnd\SecureLogin\lib\` |
 | jco.client.mshost | Message Server | System Tab |
-| jco.client.r3name | System | System Tab  |
+| jco.client.r3name | System | System Tab |
 
 ## Configuring XSUAA Security When Using the SAP Cloud Connector
 
@@ -349,12 +349,12 @@ This microflow action is used to call a BAPI function.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/call-bapi-properties-2.png" alt="The CallBAPI action" class="no-border" >}}
 
-| Parameters  | Description   |
+| Parameters | Description |
 | --- | --- |
-| Destination  | `JCoDestination` object. |
+| Destination | `JCoDestination` object. |
 | BAPI request object | Input object to call the BAPI with the desired import parameters. This object will be of an entity type defined in your BAPI module domain model. |
 | Response type | Type of the `BAPIResponseObject` having export parameters set.<br>The entity type is defined in your BAPI module domain model. |
-| Commit transaction  | Setting this `true` will call `BAPI_COMMIT_TRANSACTION` to commit changes. Not required for Get calls. |
+| Commit transaction | Setting this `true` will call `BAPI_COMMIT_TRANSACTION` to commit changes. Not required for Get calls. |
 
 ### CallBAPISequence
 
@@ -364,8 +364,8 @@ Use this microflow action when you want to call more than one BAPI in a given or
 
 | Parameters | Description |
 | --- | --- |
-| Destination | `JCoDestination` object.  |
-| List of BAPI requests | A list of `BAPIRequest` objects.   |
+| Destination | `JCoDestination` object. |
+| List of BAPI requests | A list of `BAPIRequest` objects. |
 | Output | A Boolean indicating the success or failure of the BAPI call sequence. If you use the return value, the result will be returned as `Variable name`. |
 
 ### GetBAPIResponse
@@ -376,7 +376,7 @@ This microflow action is used together with `CallBAPISequence`. It returns the r
 
 | Parameters | Description
 | --- | --- |
-| BAPI request | One `BAPIRequest` object specialization which was supplied to the `CallBAPISequence` action.   |
+| BAPI request | One `BAPIRequest` object specialization which was supplied to the `CallBAPISequence` action. |
 | Return entity type | The `BAPIResponse` specialization entity associated with the `BAPIRequest` entity given in request. <br>This entity will be defined in your BAPI module domain model. |
 | Output | An object of the entity type mentioned in **Return entity type** |
 

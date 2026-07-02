@@ -157,7 +157,7 @@ These are the different data types in ATS:
 | Number | A whole number. | 123, 4423 |
 | Boolean | A truth value. | true, false |
 | Date/Time | ⚠ The Date/Time type is deprecated and should not be used. | N/A |
-| Page Element | Represents a DOM element. | (See the image below this table.)|
+| Page Element | Represents a DOM element. | (See the image below this table.) |
 | Any | Lets the user choose the data type. | Choose String for "Helloworld!" |
 | Drop-Down | One of the values of the given drop-down menu. | Red, Green, Blue; Todo, Running, Done |
 | Float | ⚠ The Float type is deprecated and should not be used. | N/A |

@@ -9,19 +9,19 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 ## Widget – Set
 
-| Function         | Supported Widgets | Description                              |
+| Function | Supported Widgets | Description |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Set BooleanSlider Value          | BooleanSlider                    | ⚠ Deprecated in favor of **Set Value**.<br /> Checks if the given value is available for the BooleanSlider and sets the value. |
-| Set BootstrapRTE Value           | BootstrapRTE                     | ⚠ Deprecated in favor of **Set Value**.<br /> Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via html-code. |
-| Set Checkbox Set Selector Value  | Checkbox Set Selector            | Checks/clears the **Select all** checkbox. |
-| Set Checkbox Set Selector Value (all) | Checkbox Set Selector       | Checks/clears the **Select all** checkbox. |
-| Set Checkbox Value               | Checkbox                         | Sets the value of a checkbox. |
-| Set CKEditor Value               | CKEditor                         | ⚠ Deprecated in favor of **Set Value**.<br /> Sets the CKEditor content value. |
-| Set File Manager                 | FileManager                      | Sets the file manager to the given file path to upload a file. |
-| Set Grid Selector Checkbox Value | Grid Selector                    | Checks/clears the checkbox for a given column and row caption in a grid selector widget. |
-| Set Grid Selector Radiobutton checked  | Grid Selector              | Selects the radio button for the given column and row caption. |
-| Set InputReferenceSelector Value | InputReferenceSelector            | ⚠ Deprecated in favor of **Set Value**.<br /> Sets the input reference selector to the given value. |
-| Set Row Cell Value               | DataGrid                         | Set the cell value for a particular column in a data grid row. |
+| Set BooleanSlider Value | BooleanSlider | ⚠ Deprecated in favor of **Set Value**.<br /> Checks if the given value is available for the BooleanSlider and sets the value. |
+| Set BootstrapRTE Value | BootstrapRTE | ⚠ Deprecated in favor of **Set Value**.<br /> Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via html-code. |
+| Set Checkbox Set Selector Value | Checkbox Set Selector | Checks/clears the **Select all** checkbox. |
+| Set Checkbox Set Selector Value (all) | Checkbox Set Selector | Checks/clears the **Select all** checkbox. |
+| Set Checkbox Value | Checkbox | Sets the value of a checkbox. |
+| Set CKEditor Value | CKEditor | ⚠ Deprecated in favor of **Set Value**.<br /> Sets the CKEditor content value. |
+| Set File Manager | FileManager | Sets the file manager to the given file path to upload a file. |
+| Set Grid Selector Checkbox Value | Grid Selector | Checks/clears the checkbox for a given column and row caption in a grid selector widget. |
+| Set Grid Selector Radiobutton checked | Grid Selector | Selects the radio button for the given column and row caption. |
+| Set InputReferenceSelector Value | InputReferenceSelector | ⚠ Deprecated in favor of **Set Value**.<br /> Sets the input reference selector to the given value. |
+| Set Row Cell Value | DataGrid | Set the cell value for a particular column in a data grid row. |
 | Set Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Checks/clears the checkbox found by a given entity attribute value. |
 | Set Value¹ | Standard widgets: TextBox, TextArea, DropDown, RadioButton, DatePicker², ReferenceSelector, SearchInput Text, SearchInput DropDown.<br /> Marketplace widgets: OnChange Inputbox, BooleanSlider, Bootstrap Wysiwyg Editor (Bootstrap RTE), CK Editor For Mendix, Input Reference Selector, Radiobutton List, Switch³, AutoComplete. | Sets the value of all supported widgets. |
 | Set Value (by index) | Drop-Down, Reference Selector, Search Input Drop-Down | Sets the value of all supported drop-down widgets by index. |
@@ -32,10 +32,10 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 ## Widget – Get
 
-| Function         | Supported Widgets | Description                              |
+| Function | Supported Widgets | Description |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Get Active Tab Caption  | TabContainer                       | Returns the caption of the active tab page. |
-| Get BooleanSlider Value | BooleanSlider                      | ⚠ Deprecated in favor of **Get Value**.<br /> Returns the current value of the BooleanSlider as a string. |
+| Get Active Tab Caption | TabContainer | Returns the caption of the active tab page. |
+| Get BooleanSlider Value | BooleanSlider | ⚠ Deprecated in favor of **Get Value**.<br /> Returns the current value of the BooleanSlider as a string. |
 | Get BootstrapRTE Value | BootstrapRTE | ⚠ Deprecated in favor of **Get Value**.<br /> Returns the current BootstrapRTE value as an HTML string. |
 | Get Checkbox Set Selector Value | Checkbox Set Selector | Finds the checkbox by column caption and cell value and returns its value. |
 | Get Checkbox Set Selector Value (all) | Checkbox Set Selector | Returns the **Select all** checkbox value. |
@@ -48,9 +48,9 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Get Item/Row Index | DataGrid, TemplateGrid, ListView | Gets the index of a row in a data grid or an item in a template grid or list view. |
 | Get Row Cell Value | DataGrid | Gets the cell value of a data grid row for a given column name. |
 | Get Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Returns the current value of the checkbox found by the entity attribute value. |
-| Get Total Item/Row Count | DataGrid, TemplateGrid, ListView | Gets the total grid count from the paging status. Does not work if pagination is not shown.|
+| Get Total Item/Row Count | DataGrid, TemplateGrid, ListView | Gets the total grid count from the paging status. Does not work if pagination is not shown. |
 | Get Validation Message | All widgets | Returns the validation message of a widget. |
-| Get Value | Standard widgets: TextBox, TextArea, DropDown, RadioButtons, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, Input Reference Set Selector.<br /> Marketplace widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix¹, InputReferenceSelector, RadiobuttonList, Switch², AutoComplete, Format String, Custom String. | Returns the current value of all supported widgets.|
+| Get Value | Standard widgets: TextBox, TextArea, DropDown, RadioButtons, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, Input Reference Set Selector.<br /> Marketplace widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix¹, InputReferenceSelector, RadiobuttonList, Switch², AutoComplete, Format String, Custom String. | Returns the current value of all supported widgets. |
 | Get Visible Item/Row Count | DataGrid, TemplateGrid, ListView | Returns the number of currently visible items/rows in a template grid, data grid, or list view. |
 | Groupbox is Collapsed | GroupBox | Gets the group box collapsed state: true if collapsed, otherwise false. |
 
@@ -59,7 +59,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 ## Widget – Assert
 
-| Function         | Supported Widgets | Description                              |
+| Function | Supported Widgets | Description |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Assert Active Tab Caption | TabContainer | Asserts a certain value for the caption of an active tab page. |
 | Assert BooleanSlider Value | BooleanSlider | ⚠ Deprecated in favor of **Assert Value**.<br /> Asserts that the BooleanSlider is set to the given value. |
@@ -78,7 +78,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 ## Widget – Find
 
-| Function         | Supported Widgets | Description                              |
+| Function | Supported Widgets | Description |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Find/Assert DataGrid Row | DataGrid | Finds/asserts a data grid row by a certain column value (or values). |
 | Find/Assert Dialog | Window, DialogMessage, ConfirmationDialog | Finds/asserts a dialog by Title or Type. |
@@ -95,7 +95,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 ## Widget – Other
 
-| Function         | Supported Widgets | Description                              |
+| Function | Supported Widgets | Description |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Cancel Dialog | ConfirmationDialog | Clicks **Cancel** on a confirmation dialog. |
 | Click DataGrid Row | DataGrid | Clicks a data grid row by column value. |
@@ -119,7 +119,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 ## Mendix
 
-| Function         | Supported Widgets | Description                              |
+| Function | Supported Widgets | Description |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Assert Current Page | N/A | Asserts that a certain page is open by checking the current page title. Note that the page title may depend on the user's language! For dialog boxes, use the Find/Assert Dialog function. |
 | Get Current Page Title | N/A | Returns the current page/form title. |
@@ -130,9 +130,9 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 ## Web
 
-| Function         | Description                              |
+| Function | Description |
 | ---------------- | ---------------------------------------- |
-|Assert Element Attribute Equals| Asserts that an attribute of the given element equals the specified value. |
+| Assert Element Attribute Equals | Asserts that an attribute of the given element equals the specified value. |
 | Assert Element matches Selector | Mx4/Mx5 - Returns whether given element matches the selector. |
 | Close Window | Closes the currently active window. Does not switch to another window automatically. |
 | Close Window & Auto-Switch | Closes the currently active window and automatically switches to the next one. |
@@ -146,7 +146,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Find Element by Sizzle | Finds a web element by Sizzle. Optionally restrict search to the specified SearchContext element. The occurrence lets you specify which element to fetch from the result list, starting at 1 for the first element (defaults to the first element). |
 | Get Current Window Handle | Returns the handle (meaning, the identifier) of the currently active window. |
 | Get Property Value | Returns the property value from the web element. (Does not have access to Dojo widget properties). |
-| Get Selected Option Index   | Returns the index of the first selected option in a select element. |
+| Get Selected Option Index | Returns the index of the first selected option in a select element. |
 | Get Selected Option Text | Returns the text of the first selected option in a select element. |
 | Get Selected Option Value | Returns the value of the first selected option in a select element. |
 | Get Text | Gets the visible (meaning, not hidden by CSS) innerText of this element, including sub-elements, without any leading or trailing whitespace. |
@@ -167,12 +167,12 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Switch to Next Window | Switches to the next open window. An error is thrown if there is only one window. Returns the window handle (meaning, the identifier) of the new active window. |
 | Switch to Window | Switches to the window via its identifier. An error is thrown if the window is not found. |
 | Unfocus WebElement | Removes focus from a web element by calling the blur method. |
-| Wait for Condition | Repeatedly runs the condition JavaScript snippet every Interval (in milliseconds) until one of the following is fulfilled: <br /><ul><li>The snippet returns neither null nor false</li><li>The snippet throws an unignored exception</li><li> The timeout (in milliseconds) expires</li></ul>|
+| Wait for Condition | Repeatedly runs the condition JavaScript snippet every Interval (in milliseconds) until one of the following is fulfilled: <br /><ul><li>The snippet returns neither null nor false</li><li>The snippet throws an unignored exception</li><li> The timeout (in milliseconds) expires</li></ul> |
 | Wait for Condition JS | Waits until the given expression returns true. |
 
 ## Mouse & Keyboard
 
-| Function         | Supported Widgets | Description                              |
+| Function | Supported Widgets | Description |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Accept Browser Alert | N/A | Accepts the alert available. |
 | Clear WebElement | WebElement | Clears a web element (input or text area). |
@@ -184,12 +184,12 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Focus and Clear Element Value | WebElement | Sets an input element to an empty string. |
 | Focus WebElement | WebElement | Focuses the web element and performs a wait afterwards. |
 | Hover | WebElement | Hovers a web element. |
-| Send Enter | N/A                  | Simulates pressing <kbd>Enter</kbd> in the element. |
-| Send Keys | N/A                  | Simulates typing <kbd>Text</kbd> into the element. |
+| Send Enter | N/A | Simulates pressing <kbd>Enter</kbd> in the element. |
+| Send Keys | N/A | Simulates typing <kbd>Text</kbd> into the element. |
 
 ## Logic
 
-| Function         | Supported Widgets | Description                              |
+| Function | Supported Widgets | Description |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Assert | N/A | ⚠ Deprecated.<br /> A hamcrest assert. |
 | Assert 1 | N/A | ⚠ Deprecated in favor of **Assert equalTo**.<br /> Asserts that the value is 1. `([null]=0)`. |
@@ -233,7 +233,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 ## Generators
 
-| Function         | Supported Widgets | Description                              |
+| Function | Supported Widgets | Description |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Generate GUID | N/A | Generates and returns a globally unique identifierGUID. |
 | Get Current DateTime String | N/A | Returns the current date and time in the supplied format (Java date format) (for example, `yyyy-MM-dd HH:mm:ss`. |

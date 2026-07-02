@@ -533,7 +533,7 @@ This section addresses common problems you might encounter during the Atlas 4 mi
 For information on SASS functions and their CSS equivalents, see the table below:
 
 | SASS Function | CSS Equivalent | Example |
-|--------------|----------------|---------|
+| -------------- | ---------------- | --------- |
 | `$variable` | `var(--variable)` | `color: var(--brand-primary);` |
 | `mix($color1, $color2, 50%)` | `color-mix(in srgb, var(--color1) 50%, var(--color2))` | `color-mix(in srgb, var(--brand-primary) 50%, white)` |
 | `darken($color, 20%)` | `color-mix(in srgb, var(--color) 80%, black)` | `color-mix(in srgb, var(--brand-primary) 80%, black)` |
@@ -546,7 +546,7 @@ For information on SASS functions and their CSS equivalents, see the table below
 Use these regex patterns in your code editor's **find/replace** function:
 
 | Purpose | Regex Pattern | Replacement |
-|---------|--------------|-------------|
+| --------- | -------------- | ------------- |
 | Find SASS variables | `\$([a-zA-Z0-9_-]+)` | `var(--$1)` |
 | Find SASS variable declarations | `^\s*\$([a-zA-Z0-9_-]+):\s*(.+);` | `--$1: $2;` (wrap in `:root {}`) |
 | Find darken() usage | `darken\(\$([a-zA-Z0-9_-]+),\s*(\d+)%\)` | Manual conversion needed |

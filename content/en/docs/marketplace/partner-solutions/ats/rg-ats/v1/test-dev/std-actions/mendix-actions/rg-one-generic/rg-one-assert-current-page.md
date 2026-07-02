@@ -14,6 +14,6 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 
 ## Input Parameters
 
-Name | Datatype | Required| Description
+Name | Datatype | Required | Description
 --- | --- | --- | ---
 Page Title | String | yes | The title the page has to have

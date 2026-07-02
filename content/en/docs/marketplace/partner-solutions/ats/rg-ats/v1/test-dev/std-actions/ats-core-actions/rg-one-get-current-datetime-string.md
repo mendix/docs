@@ -14,7 +14,7 @@ Pass the format for the datetime. For more information about formatting datetime
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
+---- | -------- | ------- | ---------------
 Datetime Format | String | yes | The Java datetime format definition to format the datetime (for example, `dd.MM.yyyy`).
 
 ## Return Value

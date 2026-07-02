@@ -79,7 +79,7 @@ This guide provides the step-by-step process of integrating the Mobile Single Si
     | **User Role** | **Mobile SSO Module Role** |
     | --- | --- |
     | Anonymous | MobileSSO.Anonymous |
-    | User| MobileSSO.User |
+    | User | MobileSSO.User |
 
     {{% alert color="info" %}} Make sure to assign *Anonymous* user role to the OIDC SSO module. For more information, see the [Configuring Roles](/appstore/modules/oidc/#configuring-roles) section of *OIDC SSO*.{{% /alert %}}
 

@@ -74,7 +74,7 @@ The list below is provided to enable you to quickly evaluate whether Mendix supp
 
 | Language | Region | Locale | Available Since |
 | --- | --- | --- | --- |
-| Afrikaans | South Africa| af_ZA | 10.4.0 |
+| Afrikaans | South Africa | af_ZA | 10.4.0 |
 | Albanian | Albania | sq_AL | 9.0.5 |
 | Amharic | Ethiopia | am_ET | 9.2.0 |
 | Arabic | Algeria | ar_DZ | 9.0.5 |
@@ -183,7 +183,7 @@ The list below is provided to enable you to quickly evaluate whether Mendix supp
 | Sinhala | Sri Lanka | si_LK | 9.3.0 |
 | Slovak | Slovakia | sk_SK | 9.0.5 |
 | Slovenian | Slovenia | sl_SI | 9.0.5 |
-| Somali | Somalia | so_SO | 9.2.0|
+| Somali | Somalia | so_SO | 9.2.0 |
 | Southern Ndebele | South Africa | nr_ZA | 10.4.0 |
 | Southern Sotho | Lesotho | st_LS | 10.4.0 |
 | Southern Sotho | South Africa | st_ZA | 10.4.0 |

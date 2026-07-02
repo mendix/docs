@@ -14,9 +14,9 @@ A GraphQL service's response content type is `application/json` with character s
 
 | Mendix Data Type | GraphQL Type |
 | --- | --- |
-| ID (not supported)  |   |
+| ID (not supported) | |
 | AutoNumber | Long (a scalar defined in the schema) |
-| Binary (not supported)  |   |
+| Binary (not supported) | |
 | Boolean | Boolean |
 | Date and time | DateTime, as specified by [GraphQL DateTime Scalar spec](https://www.graphql-scalars.com/date-time) |
 | Decimal | Decimal (a scalar defined in the schema) |

@@ -53,11 +53,11 @@ The following log nodes are used by Mendix when writing log messages.
 This list is currently incomplete and is being updated.
 {{% /alert %}}
 
-| Log Node | Description|
+| Log Node | Description |
 | --- | --- |
 | ActionManager | Logs messages related to action scheduling (for example, scheduled events) and action execution (for example, running microflows). |
 | Client | Logs from the Mendix client. |
-| Client_\* | For example *Client_NanoflowDebugger* are logs from specific parts of the Mendix client.  |
+| Client_\* | For example *Client_NanoflowDebugger* are logs from specific parts of the Mendix client. |
 | Configuration | Logging related to the configuration of the Mendix app that is read in at startup. |
 | ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix. |
 | ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries. |

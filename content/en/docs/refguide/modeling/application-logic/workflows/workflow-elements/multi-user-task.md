@@ -99,7 +99,7 @@ With this property, you specify how the outcomes of the individual participants 
 The table below briefly describes the available decision methods:
 
 | Decision Method | Description |
-| ---| --- |
+| --- | --- |
 | [Consensus](#consensus) | Select this decision method when all participants should be in agreement with one provided outcome. |
 | [Veto](#veto) | Select this decision method when the multi-user task should complete with the veto outcome when anyone selects the veto outcome. |
 | [Majority](#majority) | Select this decision method when the multi-user task should result in an outcome based on an absolute or relative majority number of votes. |
@@ -310,7 +310,7 @@ Possible options are described in the table below:
 
 | Completion Moment | Description |
 | --- | --- |
-| When outcome is known <br><br>(*Default*)<br><br>| The completion condition is evaluated after each participant selects an outcome. When a participant selects an outcome and this already determines the final outcome, the multi-user task will be completed and will be removed from the inbox of the remaining participants (if there are any), as their votes will not change the final outcome of the multi-user task. |
+| When outcome is known <br><br>(*Default*)<br><br> | The completion condition is evaluated after each participant selects an outcome. When a participant selects an outcome and this already determines the final outcome, the multi-user task will be completed and will be removed from the inbox of the remaining participants (if there are any), as their votes will not change the final outcome of the multi-user task. |
 | When all participants completed their task | The completion condition is evaluated after all participants have selected an outcome. This means that only after **all** participants have completed their task, the final outcome of the multi-user task will be set. |
 
 {{% alert color="info" %}}

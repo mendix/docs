@@ -26,17 +26,17 @@ To add a resource document, do the following:
 
 The **Resources** category contain various document types that can be used in different editors of Studio Pro:
 
-| Element            | Is used in                      | Description                                                  |
+| Element | Is used in | Description |
 | ------------------ | -------------------------------------- | ------------------------------------------------------------ |
-| [Java action](/refguide9/java-actions/) | Microflows                             | Java actions can extend the functionality of your application. They can be called from microflows. |
-| [JavaScript action](/refguide9/javascript-actions/) | Nanoflow                               | JavaScript actions can extend the functionality of your application. They can be called from nanoflows. |
-| [Rule](/refguide9/rules/)      | Microflows                             | Rules contain the application logic that should result in an enumeration or a Boolean. They are used in decisions in microflows. |
-| [Enumeration](/refguide9/enumerations/) | Domain model                           | Enumerations are used to define attributes of an enumeration type. |
-| [Dataset](/refguide9/data-sets/) | Pages                                  | Datasets define the data shown in reports widgets.        |
-| [Constant](/refguide9/constants/) | Microflow expressions and Consumed web services | Constants are used to define configuration values.           |
-| [Regular expression](/refguide9/regular-expressions/) | Domain model                           | Regular expressions are used in validation rules to define criteria that a string should match to pass the validation. They cannot be used in other places which require regular expressions (for example, the *isMatch()* function). |
-| [Scheduled event](/refguide9/scheduled-events/) | Microflows                     | Scheduled events let the runtime execute a microflow at a specific moment in time. |
-| [Document template](/refguide9/document-templates/) | Microflows                             | Document template is used to format the document in a client and to download or print it. |
+| [Java action](/refguide9/java-actions/) | Microflows | Java actions can extend the functionality of your application. They can be called from microflows. |
+| [JavaScript action](/refguide9/javascript-actions/) | Nanoflow | JavaScript actions can extend the functionality of your application. They can be called from nanoflows. |
+| [Rule](/refguide9/rules/) | Microflows | Rules contain the application logic that should result in an enumeration or a Boolean. They are used in decisions in microflows. |
+| [Enumeration](/refguide9/enumerations/) | Domain model | Enumerations are used to define attributes of an enumeration type. |
+| [Dataset](/refguide9/data-sets/) | Pages | Datasets define the data shown in reports widgets. |
+| [Constant](/refguide9/constants/) | Microflow expressions and Consumed web services | Constants are used to define configuration values. |
+| [Regular expression](/refguide9/regular-expressions/) | Domain model | Regular expressions are used in validation rules to define criteria that a string should match to pass the validation. They cannot be used in other places which require regular expressions (for example, the *isMatch()* function). |
+| [Scheduled event](/refguide9/scheduled-events/) | Microflows | Scheduled events let the runtime execute a microflow at a specific moment in time. |
+| [Document template](/refguide9/document-templates/) | Microflows | Document template is used to format the document in a client and to download or print it. |
 
 ## Read More
 

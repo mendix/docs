@@ -48,7 +48,7 @@ Let us say you have an app with two modules: System and ProjectManagement (PM). 
 | --- | --- |
 | System.User | System.User |
 | ProjectManagement.TeamMember | ProjectManagement.TeamLeader |
-|   | ProjectManagement.Administrator |
+| | ProjectManagement.Administrator |
 
 {{% /alert %}}
 

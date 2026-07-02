@@ -14,8 +14,8 @@ At the top of the dialog box you will see the branch which you are committing. T
 
 | Branch Description | Notes |
 | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-main.png" alt="Main line icon" class="no-border" >}} |  you are committing the main line |
-| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-branch.png" alt="Commit branch icon" class="no-border" >}} |  you are committing the specified branch |
+| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-main.png" alt="Main line icon" class="no-border" >}} | you are committing the main line |
+| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-branch.png" alt="Commit branch icon" class="no-border" >}} | you are committing the specified branch |
 
 ## Message
 

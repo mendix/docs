@@ -21,7 +21,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 Name | Datatype | Required | Description
 --- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid
-Column Name | String | yes |The name of the column in which the column value is located
+Column Name | String | yes | The name of the column in which the column value is located
 Column Value | String | yes | The column value which defines the row
 Search Context | WebElement | no | Limit the search to the given WebElement
 

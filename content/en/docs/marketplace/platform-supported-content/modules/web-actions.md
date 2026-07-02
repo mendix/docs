@@ -13,7 +13,7 @@ The [Web Actions](https://marketplace.mendix.com/link/component/114337/) module 
 | --- | --- |
 | Focus next | Moves the keyboard focus to the next element that can be focused. |
 | Focus previous | Moves the keyboard focus to the previous element that can be focused. |
-| Scroll to | Scrolls the window to make a targeted element visible. For this action, you need to provide a target selector. This target could be an element containing a class (for example, `.mx-class-name`, `.my-class-name`), an HTML element (for example, `td`, `div`, `a`), or an element ID (for example, `#my-element-id`).  |
+| Scroll to | Scrolls the window to make a targeted element visible. For this action, you need to provide a target selector. This target could be an element containing a class (for example, `.mx-class-name`, `.my-class-name`), an HTML element (for example, `td`, `div`, `a`), or an element ID (for example, `#my-element-id`). |
 | Set focus | Sets the focus to the element found with the selector. The element should be able to hold focus like a link, button, or input. For this action, you need to provide a target selector. This target could be an element containing a class (for example, `.mx-class-name`, `.my-class-name`), an HTML element (for example, `td`, `div`, `a`), or an element ID (for example, `#my-element-id`). |
 | Take picture | Allows users to take a picture from the back and front camera in a web or PWA app. |
 

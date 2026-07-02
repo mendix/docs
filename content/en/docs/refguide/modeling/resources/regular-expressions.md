@@ -79,12 +79,12 @@ The number of times that a subexpression may occur in a string is indicated by a
 
 The following quantifiers can be used:
 
-| Quantifier | Description  |
+| Quantifier | Description |
 | --- | --- |
 | ? | The preceding subexpression should occur not or once. |
 | * | The preceding subexpression occurs any number of times. |
 | + | The preceding subexpression should occur once or more. |
-|   | No quantifier means that the preceding subexpression should occur exactly once. |
+| | No quantifier means that the preceding subexpression should occur exactly once. |
 
 ## Read More
 

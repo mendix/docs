@@ -20,7 +20,7 @@ Set checked to true or false.
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
+---- | -------- | ------- | ---------------
 Widget Name | String | Yes | The name of the widget.
 Column Caption | String | Yes | The caption of the desired checkbox column.
 Value | String | Yes | The cell value of the checkbox row.

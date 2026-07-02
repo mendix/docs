@@ -59,8 +59,8 @@ Multiplicity can be of the following types:
 | Multiplicity | Meaning | Equivalent of |
 | --- | --- | --- |
 | One-to-one | One X object is associated with one Y object | An association of type **Reference** with owner set to **Both** |
-| One-to-many *(default)*| One X object is associated with multiple Y object | An association of type **Reference** with owner set to **Default** |
-| Many-to-many | Multiple X objects are associated with multiple Y objects |  An association of type **Reference set** – in this case ownership is set by the **Navigability** property |
+| One-to-many *(default)* | One X object is associated with multiple Y object | An association of type **Reference** with owner set to **Default** |
+| Many-to-many | Multiple X objects are associated with multiple Y objects | An association of type **Reference set** – in this case ownership is set by the **Navigability** property |
 
 For more information about association types, see the [Type](/refguide9/association-member-properties/#type) section in *Association Tab Properties*, and for information on ownership, see the [Owner](/refguide9/association-member-properties/#owner) section in *Association Tab Properties*.
 

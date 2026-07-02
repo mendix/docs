@@ -196,8 +196,8 @@ The following shortcut keys are available in the microflow and nanoflow editors:
 | <kbd>Ctrl</kbd> + arrow&nbsp;keys | Moves the currently selected item up/down or left/right. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
-| <kbd>Shift</kbd>  | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
-| <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
+| <kbd>Shift</kbd> | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
+| <kbd>Ctrl</kbd> | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
 ### Debugger Shortcut Keys {#debugger-shortcuts}
 

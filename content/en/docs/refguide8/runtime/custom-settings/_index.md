@@ -30,15 +30,15 @@ The following custom settings can be configured:
 | **UploadedFilesPath** | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
 | **ApplicationRootUrl** | Can be used within Java actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending emails from a scheduled event. | In Mendix Cloud, https://\[domain\].mendixcloud.com |
 | **ScheduledEventExecution** | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. | NONE |
-| **MyScheduledEvents** | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). |   |
+| **MyScheduledEvents** | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). | |
 | **PersistentSessions** | Defines whether sessions will be persisted in the database or not. When sessions are persisted, statistics will be made about logged-in users. When the Runtime server restarts, sessions still exist and users don't have to sign in again. In a clustered environment you must have persistent sessions. The only exception is for on-premises installations which have implemented sticky sessions. The value can be true or false. | true |
 | **TrackWebServiceUserLastLogin** | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
 | **JavaKeyStorePassword** | Password for the default Java keystore. | changeit |
-| <a id="ca-certificates"></a>**CACertificates** | A comma-separated list of paths to CA certificates. |   |
-| **ClientCertificates** | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |  |
-| **ClientCertificatePasswords** | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
-| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. See **NoClientCertificateUsages** if you want to make sure that no client certificate is used for a certain host or web service. The value of **ClientCertificateUsages** must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet.png" class="no-border" >}} |   |
-| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |   |
+| <a id="ca-certificates"></a>**CACertificates** | A comma-separated list of paths to CA certificates. | |
+| **ClientCertificates** | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` | |
+| **ClientCertificatePasswords** | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` | |
+| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. See **NoClientCertificateUsages** if you want to make sure that no client certificate is used for a certain host or web service. The value of **ClientCertificateUsages** must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet.png" class="no-border" >}} | |
+| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. | |
 | **com.mendix.core.SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `"Strict"`, `"Lax"`, and `"None"`. At present, `"None"` is the default, but this will change to `"Strict"` in the next major Mendix release. Setting it to `"None"` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `"None"`. If the connection is plain HTTP, then this setting must be changed to `"Strict"` (recommended) or `"Lax"`. This setting is available in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11/#8110) and above. | |
 | **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
 | **HashAlgorithm** | Specifies the hash algorithm used to generate hash values for attributes of the HashString type, such as the password of a user. This setting overrides the setting in Studio Pro, see [Hash Algorithm](/refguide8/project-settings/#hash-algorithm). Possible values are `BCRYPT`, `SSHA256`, `SHA256` (not recommended) and `MD5` (not recommended). To override the default BCrypt cost, you can specify `BCRYPT:cost`, where 'cost' is a number between 10 and 30. An example value is `BCRYPT:12`. | BCRYPT |
@@ -50,7 +50,7 @@ The following custom settings can be configured:
 | **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session ID. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
 | **EnableApacheCommonsLogging** | Some libraries used by the Mendix runtime use [Apache Commons](https://commons.apache.org/) for logging. By default these log messages are suppressed. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. This setting is available in Mendix 8.18.6 and later. | false |
-| **EnableFileDocumentCaching** | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. This setting is available in Studio Pro 8.18.12 and above.| false |
+| **EnableFileDocumentCaching** | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. This setting is available in Studio Pro 8.18.12 and above. | false |
 | **RequestHandling.AllowLegacyCookies** | Allows violations of RFC 6265 which is enforced since Studio Pro 8.18.25. See [RFC6265_LEGACY CookieCompliance mode](https://www.eclipse.org/jetty/javadoc/jetty-10/org/eclipse/jetty/http/CookieCompliance.html#RFC6265_LEGACY) for more information. Be aware of the fact that enabling this custom setting exposes your app to CVE-2023-26049. This setting is available in Studio Pro 8.18.25 and above. | false |
 
 ## Log File Settings
@@ -69,17 +69,17 @@ The settings below influence the behavior of the log files. These settings can o
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **ClientQueryTimeout** | Defines the timeout in seconds for most of the database queries which are executed to load data into client widgets, like data grids. After the duration as specified here, a query will be canceled and an exception will be thrown. |   |
+| **ClientQueryTimeout** | Defines the timeout in seconds for most of the database queries which are executed to load data into client widgets, like data grids. After the duration as specified here, a query will be canceled and an exception will be thrown. | |
 | **DatabaseType** | Defines the database engine which is used as the Mendix database. Valid values are `DB2`, `HSQLDB`, `MYSQL`, `ORACLE,` `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
 | **DatabaseUserName** | Name required for authentication to the database. | |
 | **DatabasePassword** | Password for the `DatabaseUserName` supplied above. | |
 | **DatabaseHost** | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`, and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply `DatabaseJdbcUrl`. | |
 | **DatabaseName** | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
-| **DatabaseJdbcUrl** | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
+| **DatabaseJdbcUrl** | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). | |
 | **DatabaseUseSsl** | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
 | **DatabaseUseIntegratedSecurity** | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used. | false |
-| **LogMinDurationQuery** | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to `TRACE` to show more information about the page or the microflow which leads to this query. |   |
-| **OracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS. |   |
+| **LogMinDurationQuery** | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to `TRACE` to show more information about the page or the microflow which leads to this query. | |
+| **OracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS. | |
 | **DataStorage.EnableDiagnostics** | This setting can be used to generate a uniqueness constraint violation report. | false |
 | **UseNetworkTimeout** | This setting is applied to PostgreSQL and DB2. It affects the timeout mechanism used when reserving new ids for Mendix objects. If set to true, the socket level request timeout is used. In that case, the request timeout is handled within the operating system. If set to false, the timeout is handled by Mendix runtime. For other databases, timeouts are always handled by Mendix runtime. | true |
 | **JdbcLoginTimeout** | This setting defines the database connection establishment time in milliseconds. | 5000 |
@@ -108,16 +108,16 @@ Before the data copy process starts, the source database will also be brought in
 
 | Name | Value | Default Value |
 | --- | --- | --- |
-| **SourceBuiltInDatabasePath** | Defines the file location of the built-in source database. This setting is only necessary if a non-default location of the built-in database has to be used to copy the data from.  | [deployment folder]/data/database |
-| **SourceDatabaseHost** | The host name and optionally the TCP port number of the source database. Use a colon as separator between host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`, or `10.0.0.5:1433`. It's possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`). |   |
-| **SourceDatabaseJdbcUrl** | Defines the JDBC URL to use for the source database connection (which overrides the other source database connection settings). This feature is not supported for PostgreSQL databases. |   |
-| **SourceDatabaseName** | The name of the source database. |   |
-| **SourceDatabasePassword** | The password for the connection to the source database. |   |
-| **SourceDatabaseType** | The type of the source database. Possible values: `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, or `SQLSERVER`. |   |
+| **SourceBuiltInDatabasePath** | Defines the file location of the built-in source database. This setting is only necessary if a non-default location of the built-in database has to be used to copy the data from. | [deployment folder]/data/database |
+| **SourceDatabaseHost** | The host name and optionally the TCP port number of the source database. Use a colon as separator between host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`, or `10.0.0.5:1433`. It's possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`). | |
+| **SourceDatabaseJdbcUrl** | Defines the JDBC URL to use for the source database connection (which overrides the other source database connection settings). This feature is not supported for PostgreSQL databases. | |
+| **SourceDatabaseName** | The name of the source database. | |
+| **SourceDatabasePassword** | The password for the connection to the source database. | |
+| **SourceDatabaseType** | The type of the source database. Possible values: `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, or `SQLSERVER`. | |
 | **SourceDatabaseUseIntegratedSecurity** | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used. | false |
 | **SourceDatabaseUseSsl** | For PostgreSQL databases, defines whether the connection to the source database will be made using SSL. | false |
-| **SourceDatabaseUserName** | The user name for the connection to the source database. |   |
-| **SourceOracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. |   |
+| **SourceDatabaseUserName** | The user name for the connection to the source database. | |
+| **SourceOracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. | |
 
 ## S3 Storage Service Settings {#amazon-s3-storage-service-settings}
 
@@ -125,15 +125,15 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **com.mendix.storage.s3.AccessKeyId** | Acts as the username to authenticate with the S3 service. |   |
-| **com.mendix.storage.s3.SecretAccessKey** | Acts as the password to authenticate with the S3 service. |   |
-| **com.mendix.storage.s3.BucketName** | Name of the bucket where the files are stored on S3. |   |
-| **com.mendix.storage.s3.ResourceNamePrefix** | Prefix for the keys under which objects are stored. Separators are not added automatically to keys. For keys like `prefix/key1`, `com.mendix.storage.s3.ResourceNamePrefix` should have value `prefix/`. This setting is available in Mendix version 8.18.29 and above. |   |
-| **com.mendix.storage.s3.ResourceNameSuffix** | Suffix for the keys under which objects are stored. This can be used when S3 buckets are divided into different segments for different users with different credentials (for example, store objects as `[key].customer1` for customer1 and as `[key].customer2` for customer2). Separators are not added automatically to keys. For keys like `key1.customer1`, `com.mendix.storage.s3.ResourceNameSuffix` should have value `.customer1`. |   |
-| <a id="s3-region"></a>**com.mendix.storage.s3.Region** | Sets the region in which the S3 bucket is located. This will be used to determine the service endpoint, unless overridden in **com.mendix.storage.s3.EndPoint**. This setting will also be used as the signing region for requests. ||
-| **com.mendix.storage.s3.EndPoint** | Overrides the default endpoint. This setting is required when the storage is on a non-AWS location (for example, IBM Cloud Object Storage). Both the endpoint (for example, `s3.example.com`) or the full URL (including the protocol) are supported (for example, `https://s3.example.com`). Note that when setting a custom endpoint, path style access will be enabled. For more information, see [Class S3ClientOptions](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
+| **com.mendix.storage.s3.AccessKeyId** | Acts as the username to authenticate with the S3 service. | |
+| **com.mendix.storage.s3.SecretAccessKey** | Acts as the password to authenticate with the S3 service. | |
+| **com.mendix.storage.s3.BucketName** | Name of the bucket where the files are stored on S3. | |
+| **com.mendix.storage.s3.ResourceNamePrefix** | Prefix for the keys under which objects are stored. Separators are not added automatically to keys. For keys like `prefix/key1`, `com.mendix.storage.s3.ResourceNamePrefix` should have value `prefix/`. This setting is available in Mendix version 8.18.29 and above. | |
+| **com.mendix.storage.s3.ResourceNameSuffix** | Suffix for the keys under which objects are stored. This can be used when S3 buckets are divided into different segments for different users with different credentials (for example, store objects as `[key].customer1` for customer1 and as `[key].customer2` for customer2). Separators are not added automatically to keys. For keys like `key1.customer1`, `com.mendix.storage.s3.ResourceNameSuffix` should have value `.customer1`. | |
+| <a id="s3-region"></a>**com.mendix.storage.s3.Region** | Sets the region in which the S3 bucket is located. This will be used to determine the service endpoint, unless overridden in **com.mendix.storage.s3.EndPoint**. This setting will also be used as the signing region for requests. | |
+| **com.mendix.storage.s3.EndPoint** | Overrides the default endpoint. This setting is required when the storage is on a non-AWS location (for example, IBM Cloud Object Storage). Both the endpoint (for example, `s3.example.com`) or the full URL (including the protocol) are supported (for example, `https://s3.example.com`). Note that when setting a custom endpoint, path style access will be enabled. For more information, see [Class S3ClientOptions](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). | |
 | **com.mendix.storage.s3.UseV2Auth** | Lets the authentication policy use `Signature Version 2` instead of the default `Signature Version 4`. Set this setting to `true` when the endpoint does not support `Signature Version 4`. | false |
-| **com.mendix.storage.s3.EncryptionKeys** | List of keys which can be used to encrypt and decrypt data at rest in S3. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: {{< figure src="/attachments/refguide8/runtime/custom-settings/code_snippet_2.png" class="no-border" >}} |   |
+| **com.mendix.storage.s3.EncryptionKeys** | List of keys which can be used to encrypt and decrypt data at rest in S3. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: {{< figure src="/attachments/refguide8/runtime/custom-settings/code_snippet_2.png" class="no-border" >}} | |
 | **com.mendix.storage.s3.ForceGlobalBucketAccessEnabled** | The value `true` allows the server to route requests to a different region than specified in these settings (`false` disallows it). This setting is available in Studio Pro [8.12.0](/releasenotes/studio-pro/8.12/#8120) and above. | true |
 | **com.mendix.storage.s3.MaxConnections** | Overrides the default maximum connections limit in the S3 service. The default value is enough for most applications, so we do not recommend explicitly setting this to a custom value unless a larger maximum connections limit is absolutely necessary. | [DEFAULT_MAX_CONNECTIONS](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#DEFAULT_MAX_CONNECTIONS) field of the ClientConfiguration interface in the AWS SDK for Java. |
 | **com.mendix.storage.s3.ClientExecutionTimeout** | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. A value of `0` means no timeout. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setClientExecutionTimeout-int-). | 0 (no timeout) |
@@ -150,11 +150,11 @@ First, you need to create an Azure SQL database (for information on how to do th
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **DatabaseType** | `SQLSERVER` |   |
-| **DatabaseHost** | `"your-database-host.database.windows.net:1433"` |   |
-| **DatabaseName** | `your-databasename` |   |
-| **DatabaseUserName** | `your-username` |   |
-| **DatabasePassword** | `your-password` |   |
+| **DatabaseType** | `SQLSERVER` | |
+| **DatabaseHost** | `"your-database-host.database.windows.net:1433"` | |
+| **DatabaseName** | `your-databasename` | |
+| **DatabaseUserName** | `your-username` | |
+| **DatabasePassword** | `your-password` | |
 
 ## Microsoft Azure Blob Storage Settings
 
@@ -162,12 +162,12 @@ These settings can be used to store files using the Microsoft Azure blob storage
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **com.mendix.core.StorageService** | Has to be set to `com.mendix.storage.azure` to select Azure as the storage service. |   |
-| **com.mendix.storage.azure.AccountName** | Account name to authenticate with the Azure blob storage service. |   |
-| **com.mendix.storage.azure.AccountKey** | Account key to authenticate with the Azure blob storage service. |   |
-| **com.mendix.storage.azure.SharedAccessSignature** | Provides delegated access to resources in your storage account. For more information, see [Shared Access Signature on docs.microsoft.com](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1). |   |
-| **com.mendix.storage.azure.BlobEndpoint** | Set the blob endpoint. This setting is required when authentication by `SharedAccessSignature` is used. |   |
-| **com.mendix.storage.azure.Container** | Name of the container containing the blob. |   |
+| **com.mendix.core.StorageService** | Has to be set to `com.mendix.storage.azure` to select Azure as the storage service. | |
+| **com.mendix.storage.azure.AccountName** | Account name to authenticate with the Azure blob storage service. | |
+| **com.mendix.storage.azure.AccountKey** | Account key to authenticate with the Azure blob storage service. | |
+| **com.mendix.storage.azure.SharedAccessSignature** | Provides delegated access to resources in your storage account. For more information, see [Shared Access Signature on docs.microsoft.com](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1). | |
+| **com.mendix.storage.azure.BlobEndpoint** | Set the blob endpoint. This setting is required when authentication by `SharedAccessSignature` is used. | |
+| **com.mendix.storage.azure.Container** | Name of the container containing the blob. | |
 | **com.mendix.storage.azure.CreateContainerIfNotExists** | Indicates whether to check if the container exists, and creates it if it does not exist. This setting was introduced in Studio Pro [8.7.0](/releasenotes/studio-pro/8.7/#870). | `true` |
 | **com.mendix.storage.azure.ParallelismFactor** | Maximum number of parallel multi-part file uploads/downloads. We advise not changing this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 | **com.mendix.storage.azure.UseHttps** | For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
@@ -198,5 +198,5 @@ The settings below allow you to use a proxy.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **http.proxyHost** | Defines the hostname of the proxy server. |  |
-| **http.proxyPort** | Defines the port number of the proxy server. |  |
+| **http.proxyHost** | Defines the hostname of the proxy server. | |
+| **http.proxyPort** | Defines the port number of the proxy server. | |

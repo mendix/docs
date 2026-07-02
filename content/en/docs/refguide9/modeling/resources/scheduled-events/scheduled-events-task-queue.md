@@ -128,7 +128,7 @@ This allows you to run the event every hour, or number of hours. It also allows 
 | Property | Description |
 | --- | --- |
 | Interval | The number of hours in between executions of the event. This must be a divisor of 24. |
-| Offset (minutes) | The offset in minutes from the start time of an event period. For instance, set to 90 in order to execute halfway during a 3 hour interval. The offset must be shorter than the specified interval|
+| Offset (minutes) | The offset in minutes from the start time of an event period. For instance, set to 90 in order to execute halfway during a 3 hour interval. The offset must be shorter than the specified interval |
 | On overlap | See explanation of options in [Long-running Events](#long-events). |
 
 Example times will be shown in the dialog to illustrate the effects of the offset.

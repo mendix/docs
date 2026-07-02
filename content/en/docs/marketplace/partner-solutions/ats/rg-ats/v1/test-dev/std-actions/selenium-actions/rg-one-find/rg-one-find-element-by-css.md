@@ -15,8 +15,8 @@ Optionally restrict the search to a specified SearchContext element.
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
-CSS Selector | String | yes |  CSS selector which matches the elements you want to find
+---- | -------- | ------- | ---------------
+CSS Selector | String | yes | CSS selector which matches the elements you want to find
 Search Context | WebElement | no | Limit the search to the given WebElement
 Occurrence | Integer | no | Index of the result-list value you want to get (defaults to the first element)
 

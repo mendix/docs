@@ -71,7 +71,7 @@ The **Recurrence** property allows a non-interrupting timer boundary event to ru
 | Type | Description |
 | --- | --- |
 | Interval | You can set a certain duration for the timer. With the **Repeat every** setting, you can indicate the number of minutes, hours, days, weeks or months the timer interval duration is. Possible values for the setting are:<br /><ul><li>Minutes</li><li>Hours</li><li>Days</li><li>Weeks</li><li>Months</li> </ul> |
-| Max occurrences | The maximum number of occurrences, including the first boundary event execution.|
+| Max occurrences | The maximum number of occurrences, including the first boundary event execution. |
 
 {{% alert color="info" %}}
 When recurrence is set, the non-interrupting boundary event is first executed after the specified timer duration. From that point onward, it recurs with the set interval.

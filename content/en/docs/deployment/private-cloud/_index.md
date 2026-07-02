@@ -65,7 +65,7 @@ The table below shows the differences between the capabilities for apps deployed
 
 | Capability | Mendix Cloud | Mendix on Kubernetes Connected | Mendix on Kubernetes Standalone |
 | --- | --- | --- | --- |
-| Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
+| Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer |
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Portal | Mendix Portal | Custom Resources via Mendix Operator |
 | Mendix app/deployment package deployment | Mendix Portal and Studio Pro | Mendix Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
 | Backup and restore | Mendix Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |

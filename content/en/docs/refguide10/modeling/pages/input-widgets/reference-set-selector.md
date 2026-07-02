@@ -133,7 +133,7 @@ The selection mode determines whether and how the user can select items in the r
 
 | Value | Description |
 | --- | --- |
-| No selection | The user cannot select items. Of this is chosen, then you cannot have a **Remove** button in your reference set selector|
+| No selection | The user cannot select items. Of this is chosen, then you cannot have a **Remove** button in your reference set selector |
 | Single selection  *(default)* | The user can select a single item by clicking on it. Clicking another item will make that item the selection. Clicking a selected item will deselect it. |
 | Single selection and maintain | The user can select a single item by clicking on it. The first item is always selected by default. Clicking another item will make that item the selection. Clicking a selected item will not deselect it. |
 | Multi-selection | The user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking on other items. Clicking an item without the <kbd>Ctrl</kbd> key will deselect all other selected items and make the clicked item the selection. |

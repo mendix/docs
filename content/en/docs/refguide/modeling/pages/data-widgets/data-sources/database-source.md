@@ -38,7 +38,7 @@ If the goal is to restrict access to a particular subset of the data for users t
 | --- | --- |
 | Never | No search bar or search button are ever shown. Effectively disables search. |
 | With button (initially open) | An end-user can open and close the search bar using the [**Search** button](/refguide/control-bar/#search-button); the search bar is initially open. |
-| With button (initially closed) *(default)*  | The user can open and close the search bar using the search button; the search bar is initially closed. |
+| With button (initially closed) *(default)* | The user can open and close the search bar using the search button; the search bar is initially closed. |
 | Always | The search bar is always visible and cannot be close, nor is there a search button. |
 
 #### Wait for Search

@@ -65,7 +65,7 @@ Note that Model SDK 2.6.1 and 2.6.2 have been skipped (and unpublished from NPM)
 
 | Impact | Description |
 | --- | --- |
-| Low |  `getFilePaths` has been deprecated and renamed to `getFiles`. |
+| Low | `getFilePaths` has been deprecated and renamed to `getFiles`. |
 | Low | Improved the typings of some (internal) APIs. |
 | None | Added support for Mendix 6.6.0. |
 | None | `getFilePaths` accepts an option objects which can define `format` (either `zip` or `json`), `filter` (glob pattern) and `path` (output filename if format is `zip`). |

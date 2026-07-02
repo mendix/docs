@@ -25,7 +25,7 @@ Before you continue, you should first set up a test app, and populate it with te
         | Attribute name | Attribute type |
         | --- | --- |
         | *CustomerID* | String |
-        | *Name*| String |
+        | *Name* | String |
         | *Address* | String |
         | *ZipCode* | String |
         | *City* | String |

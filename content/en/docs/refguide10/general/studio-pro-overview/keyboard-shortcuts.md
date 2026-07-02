@@ -66,7 +66,7 @@ The following key combinations work in the panes of Studio Pro:
 
 In most dialog boxes for editing properties, the following shortcut keys can be used:
 
-| Windows | Mac                               | Description |
+| Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Command</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
 | <kbd>Esc</kbd> | Not available | Cancels all changes and closes the dialog box. Works as if the **Cancel** button was clicked. |
@@ -74,7 +74,7 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 
 In most edit grids (such as the list of attributes in the entity properties), the following shortcut keys can be used:
 
-| Windows | Mac                            | Description |
+| Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Edits the currently selected item. |
@@ -86,7 +86,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 
 The following shortcut keys are available in the domain model editor:
 
-| Windows | Mac                                     | Description |
+| Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Edits the name of the selected entity, attribute, or association. |
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>Command</kbd> + <kbd>A</kbd> | Selects all entities. |
@@ -100,7 +100,7 @@ The following shortcut keys are available in the page editor:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| Arrow keys | Arrow keys| Moves the selection box to the widget or element in the direction of the arrow key. For example, if currently a label is selected and you press the right arrow key, the text box to the right of it becomes selected. |
+| Arrow keys | Arrow keys | Moves the selection box to the widget or element in the direction of the arrow key. For example, if currently a label is selected and you press the right arrow key, the text box to the right of it becomes selected. |
 | <kbd>Ctrl</kbd> + arrow&nbsp;keys | Not available | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, data grid and data view buttons, search fields, etc. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Edits the caption of a label or button, or the contents of text, inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
@@ -133,7 +133,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | <kbd>Shift</kbd> + Mouse scroll wheel | <kbd>Shift</kbd> + Mouse scroll wheel | Scroll left or right. |
 | <kbd>Space</kbd> + Mouse button | <kbd>Space</kbd> + Mouse button | Drag screen. |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zoom in or out. |
-| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | <kbd>Command</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out.  |
+| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | <kbd>Command</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out. |
 | <kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>Command</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
 
 #### Element Manipulation
@@ -142,11 +142,11 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | --- | --- | --- |
 | <kbd>Enter</kbd> - on an element | <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
 | <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | The selected item is added on the sequence flow. The Logic Recommender dialog box is shown again for the next action to be added. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item | The selected item is added on the sequence flow. The element’s property dialog box is opened. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item | <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item | The selected item is added on the sequence flow. The element’s property dialog box is opened. |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Rename the variable returned by the selected element. |
 | <kbd>Shift</kbd> + <kbd>F2</kbd> (or just start typing: in Studio Pro 10.22 and above) | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F2</kbd> (or just start typing: in Studio Pro 10.22 and above) | Open the **Properties** pane and edit the caption of the selected element. |
-| Context-menu key (or <kbd>Shift</kbd> + <kbd>F10</kbd>: in Studio Pro 10.22 and above)  | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F10</kbd> (in Studio Pro 10.22 and above) | Open the context-menu for the currently selected element. |
-| <kbd>Shift</kbd> (in Studio Pro 10.24 and above) | <kbd>Shift</kbd> (in Studio Pro 10.24 and above) | When holding <kbd>Shift</kbd>, connection points are shown while hovering over elements.<br><br>{{% alert color="info" %}}This keyboard shortcut does not work out of the box when running Studio Pro in Parallels on MacOS. To resolve the issue, navigate to the virtual machine **configuration** > **Hardware** > **Mouse & Keyboard** and enable the **Optimize for games** option. This ensures that an event is sent to the virtual machine whenever a modifier key is pressed.{{% /alert %}}|
+| Context-menu key (or <kbd>Shift</kbd> + <kbd>F10</kbd>: in Studio Pro 10.22 and above) | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F10</kbd> (in Studio Pro 10.22 and above) | Open the context-menu for the currently selected element. |
+| <kbd>Shift</kbd> (in Studio Pro 10.24 and above) | <kbd>Shift</kbd> (in Studio Pro 10.24 and above) | When holding <kbd>Shift</kbd>, connection points are shown while hovering over elements.<br><br>{{% alert color="info" %}}This keyboard shortcut does not work out of the box when running Studio Pro in Parallels on MacOS. To resolve the issue, navigate to the virtual machine **configuration** > **Hardware** > **Mouse & Keyboard** and enable the **Optimize for games** option. This ensures that an event is sent to the virtual machine whenever a modifier key is pressed.{{% /alert %}} |
 
 ### Studio Pro 10.5 and Below
 
@@ -173,10 +173,10 @@ The following shortcut keys are available in the workflow editor:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| Mouse scroll wheel| Mouse scroll wheel | Scroll up or down. |
+| Mouse scroll wheel | Mouse scroll wheel | Scroll up or down. |
 | <kbd>Shift</kbd> + Mouse scroll wheel | <kbd>Shift</kbd> + Mouse scroll wheel | Scroll left or right. |
-|<kbd>Ctrl</kbd> + Mouse scroll wheel<br>(in Studio Pro 10.15.0 and above) | <kbd>Command</kbd> + Mouse scroll wheel<br>(in Studio Pro 10.15.0 and above) | Zoom in or out. |
-| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | <kbd>Command</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out.  |
+| <kbd>Ctrl</kbd> + Mouse scroll wheel<br>(in Studio Pro 10.15.0 and above) | <kbd>Command</kbd> + Mouse scroll wheel<br>(in Studio Pro 10.15.0 and above) | Zoom in or out. |
+| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | <kbd>Command</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out. |
 | <kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>Command</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
 | <kbd>Ctrl</kbd> + Left/Right arrow<br>(in Studio Pro 10.15.0 and above) | <kbd>Command</kbd> + Left/Right arrow<br>(in Studio Pro 10.15.0 and above) | Move a [boundary event](/refguide10/workflow-boundary-events/) left or right. |
 
@@ -210,7 +210,7 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>F7</kbd> | <kbd>Fn</kbd> + <kbd>F7</kbd> | Creates a deployment package. |
 | <kbd>F8</kbd> | <kbd>Fn</kbd> + <kbd>F8</kbd> | Highlights the next error in the **Errors** pane and open it in an editor. |
 | <kbd>Shift</kbd> + <kbd>F8</kbd> | <Kbd>Shift</Kbd> + <kbd>Fn</kbd> + <kbd>F6</kbd> | Highlights the previous error result in the **Errors** pane and open it in an editor. |
-| <kbd>F9</kbd> | <kbd>Fn</kbd> + <kbd>F9</kbd>| Shows the currently running app in the browser (responsive). |
+| <kbd>F9</kbd> | <kbd>Fn</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (responsive). |
 | <kbd>Ctrl</kbd> + <kbd>F9</kbd> | <kbd>Ctrl</kbd> + <kbd>Fn</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (phone simulation). |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (tablet simulation). |
 | <kbd>F11</kbd> | <kbd>Fn</kbd> + <kbd>F11</kbd> | Enables and disable full screen mode. |

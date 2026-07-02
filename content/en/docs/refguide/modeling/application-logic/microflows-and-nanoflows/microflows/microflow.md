@@ -128,7 +128,7 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 
 | Option | Description |
 | --- | --- |
-| Disabled *(default)*  | It is possible to execute the microflow more than once concurrently. |
+| Disabled *(default)* | It is possible to execute the microflow more than once concurrently. |
 | Enabled | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
 
 #### Error Message

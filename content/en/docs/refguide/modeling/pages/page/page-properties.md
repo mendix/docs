@@ -66,7 +66,7 @@ The **Autofocus** property determines which element (if any) receives focus when
 However, autofocus can interfere with accessibility tools (particularly screen readers) and may disorient users by unexpectedly moving their focus position. Therefore, we recommended disabling it on most pages. Note that even with autofocus disabled, users can still navigate through interactive elements using the **Tab** key for keyboard navigation. You can choose to enable autofocus only for desktop platforms or across all devices, depending on your specific needs.
 
 | Value | Behavior |
-|-------|----------|
+| ------- | ---------- |
 | Off | No autofocus |
 | Desktop only | Autofocus is only enabled on desktop devices (computers/laptops) |
 | All platforms | Autofocus is enabled on all devices (desktop, mobile, tablets) |

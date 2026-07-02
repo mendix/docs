@@ -51,16 +51,16 @@ A *ConfirmationDialog* is shown when a delete or microflow action requires a con
 
 | Action | Supported Widgets | Description |
 | --- | --- | --- |
-| Assert Current Page |   | Asserts that a certain page is open, by checking the current page title. Note that the page title may depend on the user’s language! For dialogs use the Find/Assert dialog action. |
+| Assert Current Page | | Asserts that a certain page is open, by checking the current page title. Note that the page title may depend on the user’s language! For dialogs use the Find/Assert dialog action. |
 | Assert Validation Message | All widgets | Asserts a validation message with a certain text |
 | Click/Doubleclick | All web elements | Perform a click or doubleclick and wait for Mendix activities |
 | Click Widgets | All widgets | Click on a Mendix Widget (for example, Button, Link, Image) by its name |
 | Click Widget Button | ListView, ReferenceSelector | Refresh Button / Loadmore / ClearSearchField (ListView) Goto, / Add (ReferenceSelector) |
 | Find/Assert Widget | All widgets | Find/Assert a Mendix Widget by its given name. It is possible to use a sequence of names as a path. |
 | Get Validation Message | All widgets | Returns the validation message of a widget |
-| Login |   | Login to Mendix Application with standard login page or on Cloud using MxID |
-| Logout |   | Trigger logout/logoff from application via client API. Use this keyword in teardown of your test cases to end the user session. This will work regardless of the UI state. |
-| Open Application |   | Opens a Mendix application at [Website URL] in a browser with Mendix specific settings |
+| Login | | Login to Mendix Application with standard login page or on Cloud using MxID |
+| Logout | | Trigger logout/logoff from application via client API. Use this keyword in teardown of your test cases to end the user session. This will work regardless of the UI state. |
+| Open Application | | Opens a Mendix application at [Website URL] in a browser with Mendix specific settings |
 
 ## GroupBox
 
@@ -98,8 +98,8 @@ A *ConfirmationDialog* is shown when a delete or microflow action requires a con
 | --- | --- | --- |
 | Find Widget Child Node | All widgets | Find a Node within a Mendix Widget. Also matches the widget node itself. |
 | Focus WebElement | All web elements | Focus WebElement and perform a Mendix wait afterwards |
-| Get Current Page Title |   | Returns the Current Page/Form Title. |
-| Mendix wait |   | Inject Mendix Scripts and Wait |
+| Get Current Page Title | | Returns the Current Page/Form Title. |
+| Mendix wait | | Inject Mendix Scripts and Wait |
 
 ## Tab
 

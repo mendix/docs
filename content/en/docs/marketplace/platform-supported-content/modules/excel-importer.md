@@ -244,10 +244,10 @@ If the reference set is represented by multiple column groups (object entries) o
 
 This is an example of this situation for `(User N – 0 Group)`:
 
-| Person | Group1 (Key for Group) | Group2 (Key for Group) | Group3 (Key for Group)     |
+| Person | Group1 (Key for Group) | Group2 (Key for Group) | Group3 (Key for Group) |
 | ---- | ---- | ---- | ---- |
 | John | Users | Admin | Manager |
-| Jack | Users |  Manager |      |
+| Jack | Users | Manager | |
 
 ### I Have Some Data at the Bottom of My Sheet That Is a Summary, and the Importer Does Not Accept This. Can I Tell It to Stop at a Certain Row?
 

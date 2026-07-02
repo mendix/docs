@@ -39,7 +39,7 @@ If you did not receive the message, check the application's logs to see if the m
 ## Troubleshooting Notification Issues {#troubleshoot}
 
 | Issue | Cause | Solution |
-|-----|----|-----|
+| ----- | ---- | ----- |
 | Sending a message causes a **SenderId mismatch** error or **403: Forbidden**. | Your native mobile app registered the device within your Mendix applications, but not with Firebase. | Follow the [Build Native App](/refguide10/mobile/using-mobile-capabilities/push-notifications/notif-implement-native/#build-native-app) section, and make sure you add the *google-services.json* file. |
 | Sending a message causes a **Request contains an invalid argument** error or **400: Bad Request**. | Your **Project ID** does not match the **project_id** in your private key *json* file. | Upload the correct file or [generate a new private key](/refguide10/mobile/using-mobile-capabilities/push-notifications/setting-up-google-firebase-cloud-messaging-server/#setting-up-a-service-account) in Firebase and upload it. |
 | Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty**. | This module depends on the **Encryption** module, which requires a key. | Set the constant **EncryptionKey** in the **Encryption** module with a key of exactly 32 characters. |

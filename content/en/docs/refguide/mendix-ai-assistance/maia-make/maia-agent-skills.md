@@ -117,7 +117,6 @@ successfully, including any error message, references found, and the module the 
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-agent-skills/skills-pane.png" width="400px">}}
 
-
 Updates to skills, whether you add a new skill or change an existing one, appear only after you start a new session.
 To apply the updated skills immediately, click the **Sync** button in the **Skills**  pane.
 

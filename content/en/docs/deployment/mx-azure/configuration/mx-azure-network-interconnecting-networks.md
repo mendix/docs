@@ -33,7 +33,7 @@ The table below compares the possibilities and constraints of both supported met
 | --- | --- | --- |
 | Primary Use | Connect entire virtual networks | Secure access to specific services |
 | Security Level | High (exposes entire vNet) | Highest (exposes only a single endpoint) |
-| Overlapping IP space | Not supported | Supported (exposes one endpoint using NAT)  |
+| Overlapping IP space | Not supported | Supported (exposes one endpoint using NAT) |
 | Supported use-cases | All use-cases | All except direct database access |
 
 ## Implementing Supported Private Connectivity Methods

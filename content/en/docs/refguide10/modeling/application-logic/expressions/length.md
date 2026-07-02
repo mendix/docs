@@ -37,5 +37,5 @@ The output is described in the table below:
 | `length('thisismystring')` | 14 |
 | `length($MyString)` and `MyString = 'qwer'` | 4 |
 | `length($MyString)` and `MyString` is empty | 0 |
-| `length($EntityAList)` and `EntityAList = '[MxObject, MxObject, MxObject]'`| 3 |
-| `length($EntityAList)` and `EntityAList = '[]'`| 0 |
+| `length($EntityAList)` and `EntityAList = '[MxObject, MxObject, MxObject]'` | 3 |
+| `length($EntityAList)` and `EntityAList = '[]'` | 0 |

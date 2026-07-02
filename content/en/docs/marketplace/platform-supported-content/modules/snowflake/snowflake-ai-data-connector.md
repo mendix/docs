@@ -281,7 +281,7 @@ To showcase this, we have created an example entity in the domain model of the c
 | `ATTR_BOOL` (Boolean) |
 | `ATTR_DECI` (decimal) |
 | `ATTR_ENUM` (enumeration) |
-| `ParsedDate` (date and time)|
+| `ParsedDate` (date and time) |
 
 This entity is only an example. You must review properties such as the naming of the attributes, what datatypes they have or in which order they are added, and configure them according to your needs. This information is important after the entity has been decided on and the data will be received from a Snowflake account. The order in which you receive the columns from a Snowflake table, the name of these columns as well as the datatypes of these values must match the entity that you have selected.
 

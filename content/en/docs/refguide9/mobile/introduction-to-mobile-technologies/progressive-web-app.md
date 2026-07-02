@@ -88,11 +88,11 @@ Google Chrome and Microsoft Edge (Chromium edition) fully support running offlin
 
 For example, when a Phone Web Offline profile is configured and the app is opened in the browser, the following scenarios can occur:
 
-| Device and Browser         | Result                                                                                                                                                         |
+| Device and Browser | Result |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Desktop browser          | Responsive Web profile is loaded                                                                                                                               |
-| Android - Chrome browser | Phone Web Offline profile is loaded                                                                                                                            |
-| iOS - Any browser        | Phone Web Offline profile is loaded                                                                                                                            |
+| Desktop browser | Responsive Web profile is loaded |
+| Android - Chrome browser | Phone Web Offline profile is loaded |
+| iOS - Any browser | Phone Web Offline profile is loaded |
 
 Next to that, it is possible to force a profile by providing the profile name in the URL as a query parameter: for example `http://localhost:8080/?profile=PhoneOffline`. Possible profile values are as follows:
 
@@ -145,7 +145,7 @@ This table lists the most used device features and APIs, and also documents thei
 * Not compatible: {{< icon name="remove-circle-filled" color="red" >}}
 
 | Feature | Chrome/Edge | Firefox | Safari |
-|---------|-----------|-------|------|
+| --------- | ----------- | ------- | ------ |
 | [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
 | [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
 | [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="remove-circle-filled" color="red" >}} |

@@ -16,7 +16,7 @@ You have to define the min(included) and max (excluded).
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
+---- | -------- | ------- | ---------------
 Min | Integer | yes | The lower bound for the outcome
 Max | Integer | yes | The upper bound for the outcome
 

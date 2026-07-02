@@ -255,9 +255,9 @@ Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 
 Pages that are called when a [user task](/refguide9/user-task/) in a workflow is executed, have suffix **_Workflow**. There is one task page per user task. These pages always have a WorkflowUserTask data view and are specific to performing workflow tasks. 
 
-| Page Purpose                             | Suffix |
-|-------------------------------------------|--------|
-| List objects of a single entity type  | \_Overview |
+| Page Purpose | Suffix |
+| ------------------------------------------- | -------- |
+| List objects of a single entity type | \_Overview |
 | Create an object | \_New |
 | Update an object | \_Edit |
 | Create *or* Update an object | \_NewEdit |

@@ -80,7 +80,7 @@ Now that you have everything set up, it is time to deploy your native app. See [
 
     These files contain the information and private keys necessary to enable push notifications in your iOS and Android apps. 
 
-    | **File**    | **Source**   | **Usage**      |
+    | **File** | **Source** | **Usage** |
     | -------- | -------- | ------- |
     | **google-services.json** | Google Firebase | Firebase configuration and private key, bundled as part of your Android application. |
     | **GoogleServices-Info.plist** | Google Firebase | Firebase configuration and private key, bundled as part of your iOS application. |

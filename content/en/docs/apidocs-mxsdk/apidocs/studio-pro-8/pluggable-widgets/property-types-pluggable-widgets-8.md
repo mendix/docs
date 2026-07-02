@@ -553,12 +553,12 @@ The object property type allows to create an arbitrary list of properties.
 
 #### XML Attributes
 
-| Attribute | Required | Attribute Type | Description                                                                                                                                                          |
+| Attribute | Required | Attribute Type | Description |
 | ---------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`     | Yes      | String         | Must be `object`                                                                                                                                                     |
-| `key`      | Yes      | String         | See [key](#key) |
-| `isList`   | Yes      | Boolean        | Must be `true`                                                                                                                                                       |
-| `required` | No       | Boolean        | This decides if the user is required to specify items in the list, `true` by default |
+| `type` | Yes | String | Must be `object` |
+| `key` | Yes | String | See [key](#key) |
+| `isList` | Yes | Boolean | Must be `true` |
+| `required` | No | Boolean | This decides if the user is required to specify items in the list, `true` by default |
 
 #### XML Elements
 

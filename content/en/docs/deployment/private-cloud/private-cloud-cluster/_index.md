@@ -39,7 +39,7 @@ All services listed in the table below use the HTTPS protocol (port 443).
 {{% /alert %}}
 
 | URL | Description |
-|-----|-------------|
+| ----- | ------------- |
 | `https://interactor-bridge.private-cloud.api.mendix.com` | Websocket based main communication API |
 | `https://package-store-prod-2.s3-accelerate.amazonaws.com/` | Registry for downloading MDA artifacts |
 | `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |

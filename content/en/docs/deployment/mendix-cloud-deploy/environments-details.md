@@ -246,16 +246,16 @@ Earlier versions of Mendix Cloud had a setting that let you prevent embedding yo
 
 Mendix Cloud supports the following HTTP headers in the Mendix Portal:
 
-| Header                        | Description |
+| Header | Description |
 | ----------------------------- | ----------- |
 | `Access-Control-Allow-Origin` | Indicates whether the response can be shared with requesting code from the given origin. |
-| `Content-Security-Policy`     | Allows website administrators to control resources the user agent is allowed to load for a given page. Requires a string value.<br/>For more information, see [Content Security Policy](#csp), below. |
-| `Origin-Trial`                | Used to enable experimental web platform features for your environment as part of Google's [Origin Trials](https://developer.chrome.com/docs/web-platform/origin-trials/) program. |
-| `Referrer-Policy`             | Governs which referrer information should be included with requests made. |
-| `X-Content-Type-Options`      | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
-| `X-Frame-Options`             | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>`, or `<object>`. The default is not to allow apps to be rendered inside frames. This was the value set previously to prevent embedding in an iframe.<br/>For details on running your app inside an iframe, see [Running Your App in an Iframe](#iframe), below. |
+| `Content-Security-Policy` | Allows website administrators to control resources the user agent is allowed to load for a given page. Requires a string value.<br/>For more information, see [Content Security Policy](#csp), below. |
+| `Origin-Trial` | Used to enable experimental web platform features for your environment as part of Google's [Origin Trials](https://developer.chrome.com/docs/web-platform/origin-trials/) program. |
+| `Referrer-Policy` | Governs which referrer information should be included with requests made. |
+| `X-Content-Type-Options` | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
+| `X-Frame-Options` | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>`, or `<object>`. The default is not to allow apps to be rendered inside frames. This was the value set previously to prevent embedding in an iframe.<br/>For details on running your app inside an iframe, see [Running Your App in an Iframe](#iframe), below. |
 | `X-Permitted-Cross-Domain-Policies` | Specifies whether the page can load resources from a different domain. |
-| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.<br/>{{% alert color="warning" %}}This header is [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) and not recommended for new implementations.{{% /alert %}} |
+| `X-XSS-Protection` | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.<br/>{{% alert color="warning" %}}This header is [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) and not recommended for new implementations.{{% /alert %}} |
 
 There are three types of values for these headers:
 
@@ -281,9 +281,9 @@ Mendix and the deployment environment automatically add some non-configurable re
 
 | Response Header | Added In |
 | --------------- | -------- |
-| `cache-control`| The buildpack for *index.html* and *login.html* – the Mendix Runtime for other pages |
+| `cache-control` | The buildpack for *index.html* and *login.html* – the Mendix Runtime for other pages |
 | `permissions-policy: interest-cohort=()` | Exclude from Federated Learning of Cohorts (FLoC) calculation |
-| `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` (365 days, in seconds)|
+| `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` (365 days, in seconds) |
 | `X-Request-ID` | Kubernetes to track requests through the Mendix Cloud platform |
 
 #### Running Your App in an Iframe {#iframe}

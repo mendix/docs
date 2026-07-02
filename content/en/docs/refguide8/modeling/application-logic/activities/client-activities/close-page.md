@@ -49,7 +49,7 @@ This property allows you to control how many pages should be closed.
 | Value | Description |
 | --- | --- |
 | Single | Close one page (default behavior). |
-| Multiple | Close multiple pages at once, showing only a single animation. This number can be configured using an expression.  |
+| Multiple | Close multiple pages at once, showing only a single animation. This number can be configured using an expression. |
 
 ## Common Section {#common}
 

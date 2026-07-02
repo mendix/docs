@@ -43,11 +43,11 @@ To get to a functionality, you have to walk through four different pages. This i
 
 This chapter explains why you must not use dependencies between test cases by defining the impact on your tests. The criteria for a good test case is used. The first example of the first chapter is used, in which there are the TC.01 - Create New Expense and TC.02 - Delete Expense test cases, but TC.02 can only be run after TC.01.
 
-| Aspect       | Consequence of Having Dependencies |
+| Aspect | Consequence of Having Dependencies |
 | :----------- | :--------------------------------- |
 | Availability | <ul><li>If TC.01 is broken or in maintenance, TC.02 is not available.</li><li>You also have to run TC.01 first.</li></ul> |
-| Speed        | <ul><li>TC.02 can only run after TC.01 has finished.</li><li>TC.01 and TC.02 cannot run parallel.</li></ul> |
-| Reliability  | <ul><li>If TC.01 is unreliable, then TC.02 is also unreliable.</li><li>If you change TC.01, this may affect TC.02.</li></ul> |
+| Speed | <ul><li>TC.02 can only run after TC.01 has finished.</li><li>TC.01 and TC.02 cannot run parallel.</li></ul> |
+| Reliability | <ul><li>If TC.01 is unreliable, then TC.02 is also unreliable.</li><li>If you change TC.01, this may affect TC.02.</li></ul> |
 | Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | <ul><li>If TC.02 fails, you must test TC.01 and TC.02 for bugs.</li><li>If TC.02 fails, the problem may be in TC.01 or TC.02.</li></ul> |
 
 As you see, this does not line up with testing standards; therefore, you must not use it. For this same reason, ATS does not allow data sharing between test cases. In the next section, different options are explained.
@@ -85,7 +85,7 @@ This is TC.01 - Create New Expense as a setup step:
 
 This table presents the conclusions:
 
-| Positive       | Negative |
+| Positive | Negative |
 | :------------ | :--------------------------------- |
 | No dependence between the test cases, they can run in any order and parallel. | Functional dependency, if you cannot create an expense you cannot delete it. |
 | Use of combined actions for better maintainability. | Execution time of TC.02 is raised, it has to perform extra steps. |
@@ -93,11 +93,11 @@ This table presents the conclusions:
 
 This table presents aspects against the good test case criteria:
 
-| Aspect       | Result                             |
+| Aspect | Result |
 | :----------- | :--------------------------------- |
 | Availability | <ul><li>If TC.01 is broken or in maintenance, TC.02 is still available.</li><li>You don't have to run TC.01 first.</li></ul> |
-| Speed        | <ul><li>TC.02 can run at the same time as TC.01 and also parallel.</li></ul> |
-| Reliability  | <ul><li>If TC.01 is unreliable, it has no effect on TC.02.</li><li>If you change TC.01, this does not affect TC.02.</li></ul> |
+| Speed | <ul><li>TC.02 can run at the same time as TC.01 and also parallel.</li></ul> |
+| Reliability | <ul><li>If TC.01 is unreliable, it has no effect on TC.02.</li><li>If you change TC.01, this does not affect TC.02.</li></ul> |
 | Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | <ul><li>If TC.02 fails, you don't have to check TC.01.</li><li>If TC.02 fails, the problem can only be in TC.02.</li></ul> |
 
 Option 1 is the best option.
@@ -112,11 +112,11 @@ These are the two scenarios:
 
 This table presents aspects against the good test case criteria:
 
-| Aspect       | Result                             |
+| Aspect | Result |
 | :----------- | :--------------------------------- |
 | Availability | <ul><li>There is no dependency to other test cases. But if one of the scenarios within the test case fails, the other scenarios will not be run.</li></ul> |
-| Speed        | <ul><li>No parallelization is possible, because there is only one test case. But, you save the time of having the same setup procedure in multiple test cases.</li></ul> |
-| Reliability  | <ul><li>The more scenarios you put into a single test case, the less reliable your outcomes will be, because there can be side-effects between the scenarios.</li></ul> |
+| Speed | <ul><li>No parallelization is possible, because there is only one test case. But, you save the time of having the same setup procedure in multiple test cases.</li></ul> |
+| Reliability | <ul><li>The more scenarios you put into a single test case, the less reliable your outcomes will be, because there can be side-effects between the scenarios.</li></ul> |
 | Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | <ul><li>If the test case fails, you always need to check the test log to find out the scenario in which the cause of this failure is located.</li></ul> |
 
 #### Option 3 – Separate Test Cases with Dependency

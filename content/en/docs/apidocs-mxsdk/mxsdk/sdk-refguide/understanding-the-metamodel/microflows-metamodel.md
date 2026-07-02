@@ -68,12 +68,12 @@ Annotation flows are used to connect annotations to other microflow objects.
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842853.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
-| --- | ---  |
+| --- | --- |
 | [Sequence Flow](/refguide/sequence-flow/) | [Flow](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Flow.html) |
 | [Annotation flow](/refguide/annotation/#annotation-flow) | [SequenceFlow](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SequenceFlow.html) |
-| |[AnnotationFlow](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AnnotationFlow.html) |
-| |Properties [`origin`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Flow.html#origin) and [`destination`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Flow.html#destination) of Flow |
-| |[CaseValue](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CaseValue.html) and its inheritance hierarchy |
+| | [AnnotationFlow](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AnnotationFlow.html) |
+| | Properties [`origin`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Flow.html#origin) and [`destination`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Flow.html#destination) of Flow |
+| | [CaseValue](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CaseValue.html) and its inheritance hierarchy |
 
 ### Decisions
 
@@ -92,13 +92,13 @@ A decision conditionally splits on either an expression or a rule. In case of a 
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- | 
-| [Decision](/refguide/decision/) |[ExclusiveSplit](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ExclusiveSplit.html) |
-| [Object Type Decision](/refguide/object-type-decision/) |[InheritanceSplit](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.InheritanceSplit.html) |
-| [Merge](/refguide/merge/) |[ExclusiveMerge](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ExclusiveMerge.html) |
-| [Rules](/refguide/rules/) |[ExpressionSplitCondition](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ExpressionSplitCondition.html) |
-| |[RuleSplitCondition](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RuleSplitCondition.html) |
-| |[RuleCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RuleCall.html) |
-| |[RuleCallParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RuleCallParameterMapping.html) |
+| [Decision](/refguide/decision/) | [ExclusiveSplit](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ExclusiveSplit.html) |
+| [Object Type Decision](/refguide/object-type-decision/) | [InheritanceSplit](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.InheritanceSplit.html) |
+| [Merge](/refguide/merge/) | [ExclusiveMerge](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ExclusiveMerge.html) |
+| [Rules](/refguide/rules/) | [ExpressionSplitCondition](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ExpressionSplitCondition.html) |
+| | [RuleSplitCondition](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RuleSplitCondition.html) |
+| | [RuleCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RuleCall.html) |
+| | [RuleCallParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RuleCallParameterMapping.html) |
 
 ## Microflow Activities
 
@@ -114,9 +114,9 @@ Object attributes can be updated with a change action, both in a create action a
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Create Object](/refguide/create-object/) |[CreateObjectAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CreateObjectAction.html) and [ChangeObjectAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ChangeObjectAction.html) ([ChangeMembersAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ChangeMembersAction.html), [MemberChange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MemberChange.html))
+[Create Object](/refguide/create-object/) | [CreateObjectAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CreateObjectAction.html) and [ChangeObjectAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ChangeObjectAction.html) ([ChangeMembersAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ChangeMembersAction.html), [MemberChange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MemberChange.html))
 [Change Object](/refguide/change-object/) | [DeleteAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.DeleteAction.html)
-[Rollback Object](/refguide/rollback-object/) |[CommitAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CommitAction.html) and [RollbackAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RollbackAction.html)
+[Rollback Object](/refguide/rollback-object/) | [CommitAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CommitAction.html) and [RollbackAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RollbackAction.html)
 
 ### Retrieving Objects
 
@@ -128,11 +128,11 @@ A retrieve action is either an association-based retrieve or a database-based re
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Retrieve object(s)](/refguide/retrieve-objects/) |[RetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RetrieveSource.html) |
-| [XPath](/refguide/xpath/) constraints |[AssociationRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AssociationRetrieveSource.html) |
-| |[DatabaseRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.DatabaseRetrieveSource.html) |
-| |[Range](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Range.html), [ConstantRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ConstantRange.html) and [CustomRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CustomRange.html) |
-| |[SortItemList](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SortItemList.html) and [SortItem](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SortItem.html) |
+| [Retrieve object(s)](/refguide/retrieve-objects/) | [RetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RetrieveSource.html) |
+| [XPath](/refguide/xpath/) constraints | [AssociationRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AssociationRetrieveSource.html) |
+| | [DatabaseRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.DatabaseRetrieveSource.html) |
+| | [Range](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Range.html), [ConstantRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ConstantRange.html) and [CustomRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CustomRange.html) |
+| | [SortItemList](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SortItemList.html) and [SortItem](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SortItem.html) |
 
 ### Microflow Calls
 
@@ -144,9 +144,9 @@ Microflows can call other microflows by defining a mapping of expressions to par
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Call Microflow](/refguide/microflow-call/) |[MicroflowCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MicroflowCallAction.html) |
-| |[MicroflowCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MicroflowCall.html) |
-| |[MicroflowCallParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MicroflowCallParameterMapping.html) |
+| [Call Microflow](/refguide/microflow-call/) | [MicroflowCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MicroflowCallAction.html) |
+| | [MicroflowCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MicroflowCall.html) |
+| | [MicroflowCallParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MicroflowCallParameterMapping.html) |
 
 ### Web Client Activities
 
@@ -158,11 +158,11 @@ Microflows can trigger behavior in the browser: showing and closing pages, showi
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Show Page](/refguide/show-page/) and [Show Home Page](/refguide/show-home-page/) |[ShowPageAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ShowPageAction.html) and [ShowHomePageAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ShowHomePageAction.html)
-[Close Page](/refguide/close-page/) |[CloseFormAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CloseFormAction.html)
-[Show Message](/refguide/show-message/) |[ShowMessageAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ShowMessageAction.html)
-[Validation Feedback](/refguide/validation-feedback/) |[ValidationFeedbackAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ValidationFeedbackAction.html)
-[Download File](/refguide/download-file/) |[DownloadFileAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.DownloadFileAction.html)
+[Show Page](/refguide/show-page/) and [Show Home Page](/refguide/show-home-page/) | [ShowPageAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ShowPageAction.html) and [ShowHomePageAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ShowHomePageAction.html)
+[Close Page](/refguide/close-page/) | [CloseFormAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CloseFormAction.html)
+[Show Message](/refguide/show-message/) | [ShowMessageAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ShowMessageAction.html)
+[Validation Feedback](/refguide/validation-feedback/) | [ValidationFeedbackAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ValidationFeedbackAction.html)
+[Download File](/refguide/download-file/) | [DownloadFileAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.DownloadFileAction.html)
 
 ### App Service Calls
 
@@ -175,9 +175,9 @@ An app service call action points to a specific app service action (which is par
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
 | | [AppServiceCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AppServiceCallAction.html) |
-| |[AppServiceAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/appservices.AppServiceAction.html) |
-| |[AppServiceCallParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AppServiceCallParameterMapping.html) |
-| |[AppServiceActionParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/appservices.AppServiceActionParameter.html) |
+| | [AppServiceAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/appservices.AppServiceAction.html) |
+| | [AppServiceCallParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AppServiceCallParameterMapping.html) |
+| | [AppServiceActionParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/appservices.AppServiceActionParameter.html) |
 
 ### Web Service Calls
 
@@ -191,9 +191,9 @@ See the following diagrams for details on the HTTP configuration, request handli
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Call Web Service](/refguide/call-web-service-action/) |[WebServiceCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.WebServiceCallAction.html) |
-| |[HttpConfiguration](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.HttpConfiguration.html) |
-| |[RequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RequestHandling.html) and [ResultHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ResultHandling.html) |
+| [Call Web Service](/refguide/call-web-service-action/) | [WebServiceCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.WebServiceCallAction.html) |
+| | [HttpConfiguration](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.HttpConfiguration.html) |
+| | [RequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RequestHandling.html) and [ResultHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ResultHandling.html) |
 
 ### Web Service Calls – Request HTTP Configuration
 
@@ -205,8 +205,8 @@ An HTTP configuration has an optional custom endpoint location, authentication c
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Call Web Service](/refguide/call-web-service-action/) |[HttpConfiguration](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.HttpConfiguration.html) |
-| |[HttpHeaderEntry](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.HttpHeaderEntry.html) |
+| [Call Web Service](/refguide/call-web-service-action/) | [HttpConfiguration](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.HttpConfiguration.html) |
+| | [HttpHeaderEntry](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.HttpHeaderEntry.html) |
 
 ### Web Service Calls – Request Handling
 
@@ -223,11 +223,11 @@ A web service operation request needs to be mapped from Mendix app concepts to t
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Call Web Service](/refguide/call-web-service-action/) |[RequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RequestHandling.html) |
-| |[SimpleRequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SimpleRequestHandling.html) - [WebServiceOperationSimpleParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.WebServiceOperationSimpleParameterMapping.html) |
-| |[AdvancedRequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AdvancedRequestHandling.html) - [WebServiceOperationAdvancedParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.WebServiceOperationAdvancedParameterMapping.html) |
-| |[MappingRequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MappingRequestHandling.html) |
-| |[CustomRequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CustomRequestHandling.html) |
+| [Call Web Service](/refguide/call-web-service-action/) | [RequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.RequestHandling.html) |
+| | [SimpleRequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SimpleRequestHandling.html) - [WebServiceOperationSimpleParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.WebServiceOperationSimpleParameterMapping.html) |
+| | [AdvancedRequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AdvancedRequestHandling.html) - [WebServiceOperationAdvancedParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.WebServiceOperationAdvancedParameterMapping.html) |
+| | [MappingRequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.MappingRequestHandling.html) |
+| | [CustomRequestHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CustomRequestHandling.html) |
 
 ### Web Service Calls – Response Handling
 
@@ -239,10 +239,10 @@ The result of a web service operation needs to be mapped to Mendix app concepts 
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Call Web Service](/refguide/call-web-service-action/) |[ResultHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ResultHandling.html) |
-| |[ImportMappingCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ImportMappingCall.html) |
-| |[ImportMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/importmappings.ImportMapping.html) |
-| |[Range](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Range.html) |
+| [Call Web Service](/refguide/call-web-service-action/) | [ResultHandling](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ResultHandling.html) |
+| | [ImportMappingCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ImportMappingCall.html) |
+| | [ImportMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/importmappings.ImportMapping.html) |
+| | [Range](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Range.html) |
 
 ### Variables
 
@@ -254,8 +254,8 @@ Microflow variables can be created and changed with specific actions. A create v
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Create Variable](/refguide/create-variable/) |[CreateVariableAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CreateVariableAction.html)
-[Change Variable](/refguide/change-variable/) |[ChangeVariableAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ChangeVariableAction.html)
+[Create Variable](/refguide/create-variable/) | [CreateVariableAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CreateVariableAction.html)
+[Change Variable](/refguide/change-variable/) | [ChangeVariableAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ChangeVariableAction.html)
 
 ### Lists
 
@@ -267,11 +267,11 @@ Lists can be created, changed and deleted with specific actions. List aggregatio
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Create List](/refguide/create-list/) |[CreateListAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CreateListAction.html) |
-| [Change List](/refguide/change-list/) |[ChangeListAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ChangeListAction.html) |
-| [Aggregate List](/refguide/aggregate-list/) |[DeleteAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.DeleteAction.html) |
-| [List Operation](/refguide/list-operation/) |[AggregateListAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AggregateListAction.html) |
-| |[ListOperationAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ListOperationAction.html) and [ListOperation](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ListOperation.html) |
+| [Create List](/refguide/create-list/) | [CreateListAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.CreateListAction.html) |
+| [Change List](/refguide/change-list/) | [ChangeListAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ChangeListAction.html) |
+| [Aggregate List](/refguide/aggregate-list/) | [DeleteAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.DeleteAction.html) |
+| [List Operation](/refguide/list-operation/) | [AggregateListAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.AggregateListAction.html) |
+| | [ListOperationAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ListOperationAction.html) and [ListOperation](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ListOperation.html) |
 
 ### Lists – Operations
 
@@ -283,10 +283,10 @@ Lists can be manipulated with different types of operations. Lists can be sorted
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [List Operation](/refguide/list-operation/) |[ListOperation](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ListOperation.html) |
-| |[Head](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Head.html) and [Tail](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Tail.html) |
-| |[Sort](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Sort.html), [SortItemList](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SortItemList.html) and [SortItem](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SortItem.html) |
-| |[Filter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Filter.html) and [Find](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Find.html) |
+| [List Operation](/refguide/list-operation/) | [ListOperation](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ListOperation.html) |
+| | [Head](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Head.html) and [Tail](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Tail.html) |
+| | [Sort](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Sort.html), [SortItemList](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SortItemList.html) and [SortItem](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.SortItem.html) |
+| | [Filter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Filter.html) and [Find](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Find.html) |
 
 ### Lists – Binary Operations
 
@@ -298,12 +298,12 @@ Lists can be manipulated with several binary operations, which take two lists as
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [List Operation](/refguide/list-operation/) |[BinaryListOperation](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.BinaryListOperation.html) |
-| |[Contains](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Contains.html) |
-| |[Intersect](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Intersect.html) |
-| |[ListEquals](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ListEquals.html) |
-| |[Subtract](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Subtract.html) |
-| |[Union](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Union.html) |
+| [List Operation](/refguide/list-operation/) | [BinaryListOperation](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.BinaryListOperation.html) |
+| | [Contains](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Contains.html) |
+| | [Intersect](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Intersect.html) |
+| | [ListEquals](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.ListEquals.html) |
+| | [Subtract](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Subtract.html) |
+| | [Union](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.Union.html) |
 
 ### Java Action Calls
 
@@ -315,10 +315,10 @@ Java action calls point to a specific Java action and have a parameter mapping w
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Call Java Action](/refguide/call-java-action/) |[JavaAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/javaactions.JavaAction.html) |
-| |[JavaActionParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/javaactions.JavaActionParameter.html) |
-| |[JavaActionCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.JavaActionCallAction.html) |
-| |[JavaActionParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.JavaActionParameterMapping.html) |
+| [Call Java Action](/refguide/call-java-action/) | [JavaAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/javaactions.JavaAction.html) |
+| | [JavaActionParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/javaactions.JavaActionParameter.html) |
+| | [JavaActionCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.JavaActionCallAction.html) |
+| | [JavaActionParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.JavaActionParameterMapping.html) |
 
 ### Logging
 
@@ -330,10 +330,10 @@ Logging actions target a single log node on a specific log level. The log messag
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Log Message](/refguide/log-message/) |[LogMessageAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.LogMessageAction.html) |
-| |[LogLevel](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.LogLevel.html) |
-| |[StringTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.StringTemplate.html) |
-| |[TemplateArgument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.TemplateArgument.html) |
+| [Log Message](/refguide/log-message/) | [LogMessageAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.LogMessageAction.html) |
+| | [LogLevel](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.LogLevel.html) |
+| | [StringTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.StringTemplate.html) |
+| | [TemplateArgument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.TemplateArgument.html) |
 
 ### Importing and Exporting XML
 
@@ -364,6 +364,6 @@ Documents are generated from a document template. Such a template has parameters
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Generate Document](/refguide/generate-document/) |[GenerateDocumentAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.GenerateDocumentAction.html) |
-| |[DocumentTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/documenttemplates.DocumentTemplate.html) |
-| |[DocumentTemplateParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.DocumentTemplateParameterMapping.html) |
+| [Generate Document](/refguide/generate-document/) | [GenerateDocumentAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.GenerateDocumentAction.html) |
+| | [DocumentTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/documenttemplates.DocumentTemplate.html) |
+| | [DocumentTemplateParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.DocumentTemplateParameterMapping.html) |

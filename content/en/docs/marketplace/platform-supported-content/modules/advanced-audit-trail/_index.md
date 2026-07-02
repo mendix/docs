@@ -155,10 +155,10 @@ Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsern
 Use the formatter microflows to change how externally-stored values will be displayed inside your Mendix application.
 
 | Microflow | Formatter | Description |
-| --------- | -------- |---|
-| **GetAttributes_ConvertDate** | Date formatter |Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year).|
-| **GetAttributes_ConvertDecimal** | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period—".") to separate an integer from its partial fractional part.|
-| **GetAttributes_ConvertMxIdentifier** | Mendix object identifier formatter |Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference.|
+| --------- | -------- | --- |
+| **GetAttributes_ConvertDate** | Date formatter | Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year). |
+| **GetAttributes_ConvertDecimal** | Decimal formatter | Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period—".") to separate an integer from its partial fractional part. |
+| **GetAttributes_ConvertMxIdentifier** | Mendix object identifier formatter | Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference. |
 
 ### Getting Microflow Stack Trace (Optional)
 
@@ -192,13 +192,13 @@ The table below provides a detailed comparison between the Advanced Audit Trail 
 | Implementation in app model | Event Handler | Inheritance |
 | Data storage efficiency | High (1 serialized JSON per change) | Low (1 log object per changed attribute) |
 | List commit handling | Optimized | Not optimized |
-| Saving action stack upon change (e.g. showing related changes and triggering microflow)| Yes | No |
+| Saving action stack upon change (e.g. showing related changes and triggering microflow) | Yes | No |
 | Standard overview screen searchable per entity | Yes | No |
-| Ability to show custom attribute value when viewing associations in an audit trail snapshot| Yes | No |
+| Ability to show custom attribute value when viewing associations in an audit trail snapshot | Yes | No |
 | Developer can delete audit trail data unnoticed | No | Yes |
-| Guaranteed completeness of audit trail in case of disaster| Yes | No |
-| Additional custom data can be added to an audit trail snapshot (e.g. "on behalf of" in case of REST service)| Yes | No |
-| Built-in features for username and hash (e.g. password) scrambling| Yes | No |
+| Guaranteed completeness of audit trail in case of disaster | Yes | No |
+| Additional custom data can be added to an audit trail snapshot (e.g. "on behalf of" in case of REST service) | Yes | No |
+| Built-in features for username and hash (e.g. password) scrambling | Yes | No |
 
 ## Search Criteria and Advanced Filtering
 

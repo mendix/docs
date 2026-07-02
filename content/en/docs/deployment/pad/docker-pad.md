@@ -176,9 +176,9 @@ You can configure the Mendix Runtime by using environment variables. For example
 
 | Environment Variable | Description |
 | --- | --- |
-| `RUNTIME_PARAMS_DATABASE_TYPE` | The type of the database (for example, PostgreSQL, MySQL)|
+| `RUNTIME_PARAMS_DATABASE_TYPE` | The type of the database (for example, PostgreSQL, MySQL) |
 | `RUNTIME_PARAMS_DATABASE_HOST` | The host name and port of the database server |
-| `RUNTIME_PARAMS_DATABASE_NAME` |The name of the database |
+| `RUNTIME_PARAMS_DATABASE_NAME` | The name of the database |
 
 For more information, see [Runtime Customization](/refguide/custom-settings/#introduction).
 

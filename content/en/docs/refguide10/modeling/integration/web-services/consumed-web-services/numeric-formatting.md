@@ -22,13 +22,13 @@ Mendix does not enforce compliance to these restrictions unless **Validate again
 
 | Original Value | Total Digits | Fraction Digits | Formatted Value | Comment |
 | --- | --- | --- | --- | --- |
-| 20.0055 | 3 | Undefined | 20 |   |
-| 20.0055 | Undefined | 3 | 20.006 |   |
-| 0.0 | Undefined | Undefined | 0 |   |
-| 110.9555 | 5 | 3 | 110.96 |   |
-| -110.9555 | 5 | 3 | -110.96 |   |
-| 0.0000001 | Undefined | 6 | 0 |   |
-| 99.99 | 3 | Undefined | 100 |   |
+| 20.0055 | 3 | Undefined | 20 | |
+| 20.0055 | Undefined | 3 | 20.006 | |
+| 0.0 | Undefined | Undefined | 0 | |
+| 110.9555 | 5 | 3 | 110.96 | |
+| -110.9555 | 5 | 3 | -110.96 | |
+| 0.0000001 | Undefined | 6 | 0 | |
+| 99.99 | 3 | Undefined | 100 | |
 | 99.99 | 2 | Undefined | 99.99 | Not possible to format correctly, so left untouched |
 | 999.99 | 2 | 1 | 999.99 | Not possible to format correctly, so left untouched |
-| 1.19E-17 | Undefined | Undefined | 0.0000000000000000119 |   |
+| 1.19E-17 | Undefined | Undefined | 0.0000000000000000119 | |

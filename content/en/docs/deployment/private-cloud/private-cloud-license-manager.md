@@ -505,7 +505,7 @@ Which would reply with something similar to this:
 | LICENSE-ID | NAMESPACE | APP-ID | TYPE | CREATED-AT |
 | --- | --- | --- | --- | --- |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator | yyyy-mm-dd hh:mm:ss |
-| `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  | yyyy-mm-dd hh:mm:ss |
+| `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime | yyyy-mm-dd hh:mm:ss |
 
 #### From Mendix Application Custom Resources Installed in the Namespace
 
@@ -571,10 +571,10 @@ mx-pclm-cli license list-usage -s <pclm-http-url> \
 
 This will indicate that licenses have been applied to the operator and apps in the selected namespace:
 
-| License-ID                           | Namespace  | App-ID   | Type        |
+| License-ID | Namespace | App-ID | Type |
 | ------------------------------------ | ---------- | -------- | ----------- |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator |
-| `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  |
+| `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime |
 
 ## Upgrade PCLM Server
 

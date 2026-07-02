@@ -19,10 +19,10 @@ The **Run** menu items are described in the table below:
 | --- | --- | --- |
 | **Run Locally** | Runs the app locally so you can view the app. | <kbd>F5</kbd> |
 | **Stop** | Stops the currently running app. | <kbd>Shift</kbd> + <kbd>F5</kbd> |
-| **Configuration**               | Sets the configuration level (**Default**).                  |                                                    |
-| **Default Log Level** | Allows setting the default log level before running the app locally. The options are **Trace**, **Debug**, **Info** (default), **Warning**, **Error**, **Critical**. |  |
-| **Publish** | Deploys the app to cloud. The **Console** pane is activated and this shows the output of the server that runs the app. |  |
-|**Run on Cloud Foundry (⚠ deprecated)**      | Opens the **Edit Cloud Foundry Settings** dialog box so you can run your app on Cloud Foundry. |  |
+| **Configuration** | Sets the configuration level (**Default**). | |
+| **Default Log Level** | Allows setting the default log level before running the app locally. The options are **Trace**, **Debug**, **Info** (default), **Warning**, **Error**, **Critical**. | |
+| **Publish** | Deploys the app to cloud. The **Console** pane is activated and this shows the output of the server that runs the app. | |
+| **Run on Cloud Foundry (⚠ deprecated)** | Opens the **Edit Cloud Foundry Settings** dialog box so you can run your app on Cloud Foundry. | |
 | **Edit Cloud Foundry Settings (⚠ deprecated)** | Opens the **Edit Cloud Foundry Settings** dialog box so you can edit your Cloud Foundry settings. For more information on this dialog box, see [Edit Cloud Foundry Settings](/refguide10/edit-cloud-foundry-settings-dialog/). | |
 | **Debug** | Allows you to connect the [Debugger](/refguide10/view-menu/#debugger). | |
 | **Responsive Web** | Shows the web client for the currently running app in the browser. | <kbd>F9</kbd> |

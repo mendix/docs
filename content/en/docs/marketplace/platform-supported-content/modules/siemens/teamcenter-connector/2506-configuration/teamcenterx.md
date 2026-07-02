@@ -45,7 +45,7 @@ Ensure that the [Mendix OIDC module](/appstore/modules/oidc/) and its dependent 
 Setup SAMAuth registration in the configuration folder of the OIDC module by [setting the following constants](/appstore/modules/oidc/#deploy-time-idps-for-sso-and-api-security-configuration).
 
 | **Field** | **Description** |
-| --------- | ----------------|
+| --------- | ---------------- |
 | **Client Alias** | A custom name for the client. |
 | **Client Id** | The ID for the Mendix app registered with SamAuth. |
 | **Client Secret** | The secret key for the Mendix app registered with SamAuth. |

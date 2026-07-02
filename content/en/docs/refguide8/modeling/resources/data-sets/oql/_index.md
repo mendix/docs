@@ -27,9 +27,9 @@ An OQL query can use these components:
 
 | Query Part | OQL | Purpose |
 | --- | --- | --- |
-| [Select clause](/refguide8/oql-select-clause/) (required)  | `SELECT AVG(TotalPrice)` | Determines which attributes of the object being queried are retrieved. Any functions that need to be performed on the retrieved data should also be defined here.  |
-| [From clause](/refguide8/oql-from-clause/) (required)  | `FROM Sales.Order`  | Designates the source entity from which the data will be retrieved.  |
-| [Where clause](/refguide8/oql-where-clause/) (optional) | `WHERE IsPaid = 1` | Constrains the data being retrieved.  |
-| [Group by clause](/refguide8/oql-group-by-clause/) (optional) | `GROUP BY Department` | Group rows on the values of the specified attributes.  |
-| [Order by clause](/refguide8/oql-order-by-clause/) (optional) | `ORDER BY Date` | Sorts rows on the specified attributes.  |
-| [Limit clause](/refguide8/oql-limit-clause/) (optional) | `LIMIT 50 OFFSET 30` | Limits rows to a subset of the total amount.  |
+| [Select clause](/refguide8/oql-select-clause/) (required) | `SELECT AVG(TotalPrice)` | Determines which attributes of the object being queried are retrieved. Any functions that need to be performed on the retrieved data should also be defined here. |
+| [From clause](/refguide8/oql-from-clause/) (required) | `FROM Sales.Order` | Designates the source entity from which the data will be retrieved. |
+| [Where clause](/refguide8/oql-where-clause/) (optional) | `WHERE IsPaid = 1` | Constrains the data being retrieved. |
+| [Group by clause](/refguide8/oql-group-by-clause/) (optional) | `GROUP BY Department` | Group rows on the values of the specified attributes. |
+| [Order by clause](/refguide8/oql-order-by-clause/) (optional) | `ORDER BY Date` | Sorts rows on the specified attributes. |
+| [Limit clause](/refguide8/oql-limit-clause/) (optional) | `LIMIT 50 OFFSET 30` | Limits rows to a subset of the total amount. |

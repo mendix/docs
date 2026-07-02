@@ -274,7 +274,7 @@ You can use the following classes in your custom stylesheets to create SCSS sele
 | `chat-btn-suggested-prompt` | a suggested prompt for the user to click instead of typing |
 | `chat-input-wrapper` | the container around the user chat input box |
 | `user-input-instructions` | the additional information text below the user chat input box |
-| `message--assistant` | an assistant message in the conversation| 
+| `message--assistant` | an assistant message in the conversation | 
 | `chat-bubble-wrapper--assistant` | an assistant message in the pop-up and sidebar chat |  
 | `message--user` | a user message in the conversation |  
 | `chat-bubble-wrapper--user` | a user message in the pop-up and sidebar chat |  

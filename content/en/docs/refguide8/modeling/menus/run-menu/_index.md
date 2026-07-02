@@ -23,7 +23,7 @@ The **Run** menu items are described in the table below:
 | **Run Locally** | Runs the project locally so you can view the app. | <kbd>F5</kbd> |
 | **Stop** | Stops the currently running project. | <kbd>Shift</kbd> + <kbd>F5</kbd> |
 | **Configuration** | Sets the configuration level (**Default**). | |
-| **Default log level** | Allows setting the default log level before running the project locally. The options are **Trace**, **Debug**, **Info** (default), **Warning**, **Error**, **Critical**. |   |
+| **Default log level** | Allows setting the default log level before running the project locally. The options are **Trace**, **Debug**, **Info** (default), **Warning**, **Error**, **Critical**. | |
 | **Debug** | Allows you to connect the [Debugger](/refguide8/view-menu/#debugger). | |
 | **Responsive Browser** | Shows the web client for the currently running project in the browser. | <kbd>F9</kbd> |
 | **Tablet Browser** | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |

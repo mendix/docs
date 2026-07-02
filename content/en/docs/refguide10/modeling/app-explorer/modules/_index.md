@@ -39,14 +39,14 @@ There are the following type of modules:
 | --- | --- | --- |
 | [Pages](/refguide10/pages/) | [Data view](/refguide10/data-view/), [data grid](/refguide10/data-grid/), [table](/refguide10/table/), [text box](/refguide10/text-box/) | Forms are used to create a user interface for the end-user. They are composed of components that are called widgets. |
 | [Microflows](/refguide10/microflows/) | [Activities](/refguide10/activities/), [sequence Flow](/refguide10/sequence-flow/) | Microflows describe the logic of your app. They are composed of activities that manipulate objects and interact with the client. |
-| [Enumerations](/refguide10/enumerations/) |   | An enumeration is a set of predefined values (for example, in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
+| [Enumerations](/refguide10/enumerations/) | | An enumeration is a set of predefined values (for example, in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
 
 ## Page Resources
 
 | Document type | Description |
 | --- | --- |
 | [Images](/refguide10/images/) | Images can be used to brighten up your app. Navigation items and the various kinds of buttons have small images (icons) to the left of their captions. |
-| [Layouts](/refguide10/layout/) | Layouts specify what comes where. Each [page](/refguide10/page/) is based on a layout. The layout contains widgets and structures that return on every page based on that layout.  |
+| [Layouts](/refguide10/layout/) | Layouts specify what comes where. Each [page](/refguide10/page/) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. |
 | [Menus](/refguide10/menu/) | A menu document defines a navigation menu that can be used by a [menu widget](/refguide10/menu-widgets/). |
 | [Snippets](/refguide10/snippet/) | Snippets define reusable interface parts. They can be used on [pages](/refguide10/page/) and [layouts](/refguide10/layout/). |
 
@@ -68,8 +68,8 @@ There are the following type of modules:
 | Document type | Description |
 | --- | --- |
 | [Consumed Web Services](/refguide10/consumed-web-services/) | Importing web services of other applications (Mendix or otherwise) enables calling those web services from your microflows. |
-|  | A domain-to-XML mapping defines a translation from domain model objects to XML objects. |
-|  | An XML-to-domain mapping defines a translation from XML objects to domain model objects. |
+| | A domain-to-XML mapping defines a translation from domain model objects to XML objects. |
+| | An XML-to-domain mapping defines a translation from XML objects to domain model objects. |
 | [XML Schemas](/refguide10/xml-schemas/) | An XML schema is defined in an XML schema definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. |
 
 ## Published Services

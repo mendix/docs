@@ -14,7 +14,7 @@ Pass the parent WebElement of which you want to get the currently selected optio
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
+---- | -------- | ------- | ---------------
 Select Element | WebElement | yes | The parent WebElement, for example, select
 
 ## Return Value

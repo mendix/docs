@@ -24,8 +24,8 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 Name | Datatype | Required | Description
 --- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid, TemplateGrid or Listview
-Index | Integer |yes | The index of the Item/Row to find
-Search Context | WebElement | no |Limit the search to the given WebElement
+Index | Integer | yes | The index of the Item/Row to find
+Search Context | WebElement | no | Limit the search to the given WebElement
 
 ## Return Value
 

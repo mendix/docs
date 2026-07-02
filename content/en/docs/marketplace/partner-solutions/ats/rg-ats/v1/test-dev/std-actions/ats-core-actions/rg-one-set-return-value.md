@@ -15,5 +15,5 @@ Pass the value you want to set as return value as parameter.
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
+---- | -------- | ------- | ---------------
 Value | any | yes | The value you want to set as return value

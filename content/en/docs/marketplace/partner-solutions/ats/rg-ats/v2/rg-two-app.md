@@ -37,11 +37,11 @@ For data-driven tests, the dataset is displayed in the **test data** column. The
 
 The results of your test cases are displayed as the following labels:
 
-| Label| Meaning |
+| Label | Meaning |
 | ---- | ------- |
 | Passed | The test was completed successfully. |
 | Failed | The test has failed. |
-| Not Executed| The execution of this test was skipped or it has not been run yet. |
+| Not Executed | The execution of this test was skipped or it has not been run yet. |
 
 The following three icons exist for test cases, test suites, and data-driven test cases:
 

@@ -53,10 +53,10 @@ In the **Language** menu, you can add alternative languages to your app so that 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
 | **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
-| **Help Contents** | Opens the home page of the documentation in the default web browser. |   |
-| **Ask a Question** | Opens the [Mendix Community](https://community.mendix.com/p/questions) in the default web browser. |   |
-| **Open Log File Directory** | Opens the log files for your app locally. |   |
-| **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
+| **Help Contents** | Opens the home page of the documentation in the default web browser. | |
+| **Ask a Question** | Opens the [Mendix Community](https://community.mendix.com/p/questions) in the default web browser. | |
+| **Open Log File Directory** | Opens the log files for your app locally. | |
+| **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. | |
 
 ## Read More
 

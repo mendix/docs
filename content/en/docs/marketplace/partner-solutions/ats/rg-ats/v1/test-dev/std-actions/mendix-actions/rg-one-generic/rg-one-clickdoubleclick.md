@@ -21,4 +21,4 @@ Optionally you can specify if a doubleclick should be performed or not.
 Name | Datatype | Required | Description
 --- | --- | --- | ---
 Element | WebElement | yes | The WebElement you want to click/doubleclick
-Doubleclick | Boolean |no | Perform a doubleclick
+Doubleclick | Boolean | no | Perform a doubleclick

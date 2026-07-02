@@ -124,7 +124,7 @@ The repository has three tabs:
 | Tab | Description |
 | --- | --- |
 | **Tests** | Where you can view all the test suites and test cases within a project and start creating a new test case or test suite. |
-| **All objects** | Where you can create folders, actions, and enumerations.  |
+| **All objects** | Where you can create folders, actions, and enumerations. |
 | **Test data** | Where all your test data is saved and maintained. |
 
 In this how-to, only the **Tests** tab is described.

@@ -17,10 +17,10 @@ You have to pass a DataGrid row as WebElement and the column name to determine w
 
 ## Input Parameters
 
-Name | Datatype | Required| Description
+Name | Datatype | Required | Description
 --- | --- | --- | ---
-DataGrid Row | WebElement |yes| The DataGrid row of the cell
-Column Name | String | yes |The column name of the cell
+DataGrid Row | WebElement | yes | The DataGrid row of the cell
+Column Name | String | yes | The column name of the cell
 
 ## Return Value
 

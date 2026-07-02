@@ -71,12 +71,12 @@ These are the `OPTIONS`:
 When used without options, the command deletes all private values. The options filter the list of private values to be deleted.
 
 | Option | Result |
-| ---  | --- |
+| --- | --- |
 | `--not-on-disk` | Deletes only private values whose path cannot be found on disk. |
-| `--path`        | Deletes only private values for the given path. |
-| `--version`     | Deletes only private values of the given Studio Pro version. |
-| `--key`         | Deletes only private values with the given key. |
-| `--item`        | Specifies the path, version, and key, separated by whitespace, of a specific private value to be deleted. |
+| `--path` | Deletes only private values for the given path. |
+| `--version` | Deletes only private values of the given Studio Pro version. |
+| `--key` | Deletes only private values with the given key. |
+| `--item` | Specifies the path, version, and key, separated by whitespace, of a specific private value to be deleted. |
 
 ### Examples
 

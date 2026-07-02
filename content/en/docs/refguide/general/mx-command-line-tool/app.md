@@ -198,10 +198,10 @@ These are the `OPTIONS`:
 
 | Option | Shortcut | Result |
 | --- | --- | --- |
-| `--help`| | Shows help for the `mx check` command and exits. |
+| `--help` | | Shows help for the `mx check` command and exits. |
 | `--warnings` | `-w` | Includes warnings in the output. |
 | `--deprecations` | `-d` | Includes deprecations in the output. |
-| `--performance`  | `-p` | Includes performance checks in the output. Performance recommendations are only included if there are no errors. |
+| `--performance` | `-p` | Includes performance checks in the output. Performance recommendations are only included if there are no errors. |
 
 {{% alert color="info" %}}
 Errors in the *.mpr* are always reported.
@@ -267,8 +267,8 @@ These are the required parameters:
 | --- | --- | --- |
 | `--import-translations` | `-i` | Imports translations from the specified translation directory. This is required if `--export-translations` is not specified. |
 | `--export-translations` | `-e` | Exports translations to the specified translation directory. This is required if `--import-translations` is not specified. |
-| `--type`  | `-t` | Specifies the file type. This can be either `xlsx` or `po`. |
-| `--source-language-code`| `-s` | Specifies the ISO 639 language code (for example, `en_US`) to use as the source language. |
+| `--type` | `-t` | Specifies the file type. This can be either `xlsx` or `po`. |
+| `--source-language-code` | `-s` | Specifies the ISO 639 language code (for example, `en_US`) to use as the source language. |
 
 For `PROJECT`, enter a single *.mpr* file.
 
@@ -278,8 +278,8 @@ These are the `OPTIONS`:
 
 | Option | Shortcut | Result |
 | --- | --- | --- |
-| `--force-import`  | `-f` | Accepts some warnings and errors and continues the import process. |
-| `--loose-version-check`  | `-l` | Converts the project to the version of the mx.exe if the versions differ. |
+| `--force-import` | `-f` | Accepts some warnings and errors and continues the import process. |
+| `--loose-version-check` | `-l` | Converts the project to the version of the mx.exe if the versions differ. |
 | `--include-marketplace-modules` | `-m` | Includes Marketplace modules in the output. By default, Marketplace modules are excluded. |
 
 {{% alert color="info" %}}

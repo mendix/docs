@@ -107,16 +107,16 @@ Input CSV File
 
 | Source Type | Target- String | Target- Int | Target- Long | Target- Decimal | Target- Boolean | Target- DateTime |
 | :-------- | :------- | :-------- | :------- | :-------- | :------- | :-------- |
-| String  | Yes    | Partial    | Partial    | Partial    | Partial    | No    |
+| String | Yes | Partial | Partial | Partial | Partial | No |
 
 Input Excel File
 
 | Source Type | Target- String | Target- Int | Target- Long | Target- Decimal | Target- Boolean | Target- DateTime |
 | :-------- | :------- | :-------- | :------- | :-------- | :------- | :-------- |
-| String  | Yes    | Partial    | Partial    | Partial    | Partial    | No    |
-| Boolean  | Yes    | No    | No    | No    | Yes    | No    |
-| Decimal  | Yes    | Partial    | Partial    | Yes    | No    | No    |
-| DateTime  | Yes    | No    | No    | No    | No    | Yes    |
+| String | Yes | Partial | Partial | Partial | Partial | No |
+| Boolean | Yes | No | No | No | Yes | No |
+| Decimal | Yes | Partial | Partial | Yes | No | No |
+| DateTime | Yes | No | No | No | No | Yes |
 
 **Partial** - If source data is valid and within range, it will be converted into the target data type.
 

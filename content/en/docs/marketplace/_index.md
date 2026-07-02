@@ -29,15 +29,15 @@ To stay up to date with changes, see the [Marketplace release notes](/releasenot
 
 The Marketplace offers the following content types: 
 
-| Type                              | Description                                                  |
+| Type | Description |
 | --------------------------------- | ------------------------------------------------------------ |
-| [Module](/appstore/modules/)      | Software functionality that can include a data model, logic, and UI with a portable security model. |
-| [Widget](/appstore/widgets/)      | Single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
-| [Service](/appstore/services/)                       | Software functionality that can be re-used for different use cases. Services usually include APIs that you can interact with by configuring a connection in the app’s module. |
+| [Module](/appstore/modules/) | Software functionality that can include a data model, logic, and UI with a portable security model. |
+| [Widget](/appstore/widgets/) | Single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
+| [Service](/appstore/services/) | Software functionality that can be re-used for different use cases. Services usually include APIs that you can interact with by configuring a connection in the app’s module. |
 | [Solution](/appstore/creating-content/sol-solutions-guide/) | Out-of-the-box solutions that are aimed at industry and domain problems, delivering instant value. These solutions are usually at least 80% ready for use, and need minimal adaptation to make them work for a customer-specific use case. |
-| **Sample**                        | A project that provides an overview of the capabilities a product can perform. The project can act as an example, sales play, demo, or template. |
-| **Starter Template**              | Sample projects that have certain capabilities in place to provide a basis for you to start developing your own app. You do not need to create an app from a blank template, as you can use a template that already has some features configured. In addition, a template can have a personalized style that can be shared and used to enrich other apps with a specific design. |
-| **Industry Template**             | Accelerators for implementing industry-specific processes. Industry templates increase speed-to-value and time-to-market, and are great starting points for common use cases within the relevant industry. Contrary to solutions, industry templates are starter templates intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They usually cover around 20% of the process. |
+| **Sample** | A project that provides an overview of the capabilities a product can perform. The project can act as an example, sales play, demo, or template. |
+| **Starter Template** | Sample projects that have certain capabilities in place to provide a basis for you to start developing your own app. You do not need to create an app from a blank template, as you can use a template that already has some features configured. In addition, a template can have a personalized style that can be shared and used to enrich other apps with a specific design. |
+| **Industry Template** | Accelerators for implementing industry-specific processes. Industry templates increase speed-to-value and time-to-market, and are great starting points for common use cases within the relevant industry. Contrary to solutions, industry templates are starter templates intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They usually cover around 20% of the process. |
 
 ## Marketplace and Mendix Connect {#marketplace-mx-connect}
 

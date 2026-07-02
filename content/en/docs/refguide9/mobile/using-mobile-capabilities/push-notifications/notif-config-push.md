@@ -26,7 +26,7 @@ The first time you open this page it will present you with a wizard to set up th
 
 When selecting a platform to support, the wizard will ask for the Google Firebase project ID and service account private key. Upload the private key file here.
 
-| **File**    | **Source**   | **Usage**      |
+| **File** | **Source** | **Usage** |
 | -------- | -------- | ------- |
 | **{project_id}-firebase-adminsdk-{identifier}.json** | Google Firebase | Private key for the Firebase service account, used in runtime configuration. |  
 

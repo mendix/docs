@@ -54,7 +54,7 @@ Under **Properties**, you see the extra settings for the input parameter:
 | Property Name | Description |
 | --- | --- |
 | Datatype | The specified data type of the input parameter. |
-| Show as password | If set to **Yes**, ATS displays the value of the input parameter as asterisks.  |
+| Show as password | If set to **Yes**, ATS displays the value of the input parameter as asterisks. |
 | Required/Optional | If set to **Required**, the user must set the input parameter in the test step details. Otherwise, ATS does not execute the action. |
 
 #### Output Parameter

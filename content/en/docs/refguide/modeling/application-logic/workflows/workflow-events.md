@@ -77,13 +77,13 @@ The event types listed in the tables below correspond to the enumeration values 
 ### Workflow Lifecycle Events
 
 | Event Type | Description | Examples |
-| --- | --- |--- |
+| --- | --- | --- |
 | Workflow Completed | Triggered when a workflow completes successfully | |
 | Workflow Initiated | Triggered when a new workflow instance is initiated | |
 | Workflow Restarted | Triggered when a workflow is restarted | See the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State* |
 | Workflow Failed | Triggered when a workflow instance fails | When a user task fails, the workflow fails |
 | Workflow Aborted | Triggered when a workflow is aborted | See the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State* |
-| Workflow Paused  | Triggered when a workflow is paused | See the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State* |
+| Workflow Paused | Triggered when a workflow is paused | See the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State* |
 | Workflow Unpaused | Triggered when a paused workflow is resumed | See the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State* |
 | Workflow Retried | Triggered when a workflow is retried after being failed or incompatible | See the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State* |
 | Workflow Updated | Triggered when a parent workflow is put back into progress after the sub-workflow is retried, restarted, or when jump-to option is applied | See the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State* |
@@ -96,18 +96,18 @@ The event types listed in the tables below correspond to the enumeration values 
 
 | Event Type | Description | Examples |
 | --- | --- | --- |
-| Start Event Executed | Triggered when the start event is executed  | |
+| Start Event Executed | Triggered when the start event is executed | |
 | End Event Executed | Triggered when the end event is executed | |
 | Decision Executed | Triggered when a **Decision** is executed | See [Decision in Workflows](/refguide/decision-in-workflows/) |
 | Jump Executed | Triggered when a **Jump** activity is executed | See [Jump Activity](/refguide/jump-activity/) |
 | Parallel Split Executed | Triggered when a **Parallel split** activity is started | See [Parallel Split](/refguide/parallel-split/) |
-| Parallel Merge Executed | Triggered when all parallel split paths are completed |                                                                         |
+| Parallel Merge Executed | Triggered when all parallel split paths are completed | |
 | Call Workflow Started | Triggered in the following cases:<br /><ul><li>Sub-workflow is successfully instantiated</li><li>Sub-workflow definition is not found (in this case it is triggered together with **Call Workflow Ended** event)</li><li>Sub-workflow is retried, restarted, or when jump-to option is applied | See [Call Workflow](/refguide/call-workflow/) |
 | Call Workflow Ended | Triggered in the following cases:<br /><ul><li>Workflow is **Completed**, **Failed**, or **Aborted**</li><li>Sub-workflow definition is not found (in this case it is triggered together with **Call Workflow Started** event)</li><li>Workflow suspended on **Call workflow** activity is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing **Call workflow** activity is removed and workflow is continued</li> </ul> | See [Call Workflow](/refguide/call-workflow/) |
 | Call Microflow Started | Triggered when **Call microflow** activity is started | See [Call Microflow](/refguide/call-microflow/) |
-| Call Microflow Ended | Triggered in the following situations:<br /><ul><li>Microflow is executed successfully with a valid outcome</li><li>Workflow suspended on **Call microflow** activity is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing **Call microflow** activity is removed and workflow is continued</li><li>Microflow is executed with an invalid outcome | See [Call Microflow](/refguide/call-microflow/)  |
+| Call Microflow Ended | Triggered in the following situations:<br /><ul><li>Microflow is executed successfully with a valid outcome</li><li>Workflow suspended on **Call microflow** activity is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing **Call microflow** activity is removed and workflow is continued</li><li>Microflow is executed with an invalid outcome | See [Call Microflow](/refguide/call-microflow/) |
 | Wait for Notification Started | Triggered when **Wait for notification** activity is started | See [Wait for Notification](/refguide/wait-for-notification/) |
-| Wait for Notification Ended | Triggered in the following situations:<br /><ul><li>Notification is received successfully</li><li>Workflow suspended on **Wait for notification** activity is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing **Wait for notification** activity is removed and workflow is continued  | See [Wait for Notification](/refguide/wait-for-notification/) | 
+| Wait for Notification Ended | Triggered in the following situations:<br /><ul><li>Notification is received successfully</li><li>Workflow suspended on **Wait for notification** activity is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing **Wait for notification** activity is removed and workflow is continued | See [Wait for Notification](/refguide/wait-for-notification/) | 
 | Timer Started | Triggered in the following cases:<br /><ul><li>Timer is successfully scheduled</li><li>Delay expression results in an empty value</li><li>Delay expression is invalid (for example, divide by zero error in an expression) | See [Timer](/refguide/timer/) |
 | Timer Ended | Triggered in following cases:<br /><ul><li>Timer has expired</li><li>Delay expression results in an empty value</li><li>Delay expression in invalid (for example, divide by zero error in expression)</li><li>Workflow suspended on **Timer** activity is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing **Timer** activity is removed and workflow is continued | See [Timer](/refguide/timer/) |
 | Non-Interrupting Timer Event Executed | Triggered when the scheduled timer for the non-interrupting boundary event expires | See [Boundary Events](/refguide/workflow-boundary-events/) |

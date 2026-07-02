@@ -17,7 +17,7 @@ You have to pass the DataGrid and the column name to determine the DataGrid widg
 
 ## Input Parameters
 
-Name | Datatype |Required| Description
+Name | Datatype | Required | Description
 --- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid
-Column Name | String |yes| The name of the column for sorting
+Column Name | String | yes | The name of the column for sorting

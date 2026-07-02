@@ -67,21 +67,21 @@ The following table lists the properties used as keys for database and storage-r
 | Database Password | `database-password` | `Welc0me!` | ✓ (only for password authentication) |
 | Storage service name | `storage-service-name` | `com.mendix.storage.s3` | ✓ |
 | S3 Storage endpoint | `storage-endpoint` | `https://my-app-bucket.s3.eu-west-1.amazonaws.com` | ✓ (only for S3) |
-| S3 Storage access key id | `storage-access-key-id` | `AKIA################` |  |
-| S3 Storage secret access key | `storage-secret-access-key` | `A#######################################` |  |
+| S3 Storage access key id | `storage-access-key-id` | `AKIA################` | |
+| S3 Storage secret access key | `storage-secret-access-key` | `A#######################################` | |
 | S3 subdirectory (or bucket name for S3-like storage systems) | `storage-bucket-name` | `subdirectory` | ✓ (only for S3) |
 | Azure storage account | `storage-azure-account-name` | `example` | ✓ (only for Azure Blob Storage with static authentication) |
 | Azure storage account key | `storage-azure-account-key` | `aw==` | ✓ (only for Azure Blob Storage with static authentication) |
 | Azure storage container name | `storage-azure-container` | `examplecontainer` | ✓ (only for Azure Blob Storage) |
 | Azure storage blob endpoint | `storage-azure-blob-endpoint` | `https://example.blob.core.windows.net/` | ✓ (only for Azure Blob Storage with managed identity auth) |
 | Use managed identity auth for Azure blob storage | `storage-azure-use-default-azure-credential` | `true` | ✓ (only for Azure Blob Storage with managed identity auth) |
-| Use HTTP for Azure | `storage-azure-use-https` | `true` |  |
-| Use configured CA trust for file storage | `storage-use-ca-certificates` | `true` |  |
-| Delete files from storage when deleted in the app | `storage-perform-delete` | `true` |  |
-| Mendix Admin Password | `mx-admin-password` | `Welc0me!` |  |
-| Mendix Debugger Password | `mx-debugger-password` | `Welc0me!` |  |
-| App constant `{name}` | `mx-const-{name}` | `mx-const-MyFirstModule.WelcomePageTitle` |  |
-| Runtime custom setting `{name}` | `mx-runtime-{name}` | `mx-runtime-com.mendix.storage.s3.EncryptionKeys` |  |
+| Use HTTP for Azure | `storage-azure-use-https` | `true` | |
+| Use configured CA trust for file storage | `storage-use-ca-certificates` | `true` | |
+| Delete files from storage when deleted in the app | `storage-perform-delete` | `true` | |
+| Mendix Admin Password | `mx-admin-password` | `Welc0me!` | |
+| Mendix Debugger Password | `mx-debugger-password` | `Welc0me!` | |
+| App constant `{name}` | `mx-const-{name}` | `mx-const-MyFirstModule.WelcomePageTitle` | |
+| Runtime custom setting `{name}` | `mx-runtime-{name}` | `mx-runtime-com.mendix.storage.s3.EncryptionKeys` | |
 
 `storage-service-name` must specify one of the following supported blob storage providers:
 

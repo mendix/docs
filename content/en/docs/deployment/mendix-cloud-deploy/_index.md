@@ -125,9 +125,9 @@ Apps that run on Mendix Cloud are automatically assigned their own URLs. The for
 
 | License Type | Environment | URL Format | Example URL |
 | ------------ | ----------- | ---------- | ----------- |
-| Licensed app | Production  | Depends on the region:<br /> `{app-name}.mendixcloud.com`<br />or<br />`{app-name}.apps.{region}.mendixcloud.com` | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
+| Licensed app | Production | Depends on the region:<br /> `{app-name}.mendixcloud.com`<br />or<br />`{app-name}.apps.{region}.mendixcloud.com` | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
 | Licensed app | Test, acceptance, flexible environments | Depends on the region:<br /> `{app-name}-{environment-type}.mendixcloud.com`<br />or<br />`{app-name}-{environment-type}.apps.{region}.mendixcloud.com` | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
-| Free App     | N/A         | `{app-name}-sandbox.mxapps.io`<br />or<br />`{app-name}.mxapps.io` | `myfreeappname.mxapps.io` |
+| Free App | N/A | `{app-name}-sandbox.mxapps.io`<br />or<br />`{app-name}.mxapps.io` | `myfreeappname.mxapps.io` |
 
 {{% alert color="info" %}}Licensed apps run in clusters deployed on AWS. You can select the region for your app, but not for the cluster. Note that there can be multiple clusters in a region, and the URL of an app on some clusters in a region contains `apps.{region}`.{{% /alert %}}
 
@@ -171,17 +171,17 @@ If you have a Standard, Premium, or Premium Plus plan, you can redeem virtual cr
 
 The technical details for the cloud resource packs are listed below.
 
-| Pack                                                                   | App RAM | App vCPU | DB RAM  | DB vCPU | DB Storage | File Storage |
+| Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | ---------------------------------------------------------------------- | ------- | -------- | ------- | ------- | ---------- | ------------ |
-| XS21 Standard                                                                   | 1 GiB   | 0.25     | 1 GiB   | 2       | 5 GiB      | 10 GiB       |
-| S21 Standard,<br>S21 Premium                                                    | 2 GiB   | 0.5      | 2 GiB   | 2       | 10 GiB     | 20 GiB       |
-| M21 Standard,<br>M21 Premium                                                    | 4 GiB   | 1        | 4 GiB   | 2       | 20 GiB     | 40 GiB       |
-| L21 Standard,<br>L21 Premium                                                    | 8 GiB   | 2        | 8 GiB   | 2       | 40 GiB     | 80 GiB       |
-| XL21 Standard,<br>XL21 Premium,<br>XL21 Premium Plus                            | 16 GiB  | 4        | 16 GiB  | 4       | 80 GiB     | 160 GiB      |
-| XXL21 Standard,<br>XXL21 Premium,<br>XXL21 Premium Plus                         | 32 GiB  | 8        | 32 GiB  | 4       | 160 GiB    | 320 GiB      |
-| XXXL21 Standard,<br>XXXL21 Premium,<br>XXXL21 Premium Plus                      | 64 GiB  | 16       | 64 GiB  | 8       | 320 GiB    | 640 GiB      |
-| XXXXL21 Standard,<br>XXXXL21 Premium,<br>XXXXL21 Premium Plus                   | 128 GiB | 32       | 128 GiB | 16      | 640 GiB    | 1280 GiB     |
-| XXXXL21-5XLDB Standard,<br>XXXXL21-5XLDB Premium,<br>XXXXL21-5XLDB Premium Plus | 128 GiB | 32       | 256 GiB | 32      | 1280 GiB   | 1280 GiB     |
+| XS21 Standard | 1 GiB | 0.25 | 1 GiB | 2 | 5 GiB | 10 GiB |
+| S21 Standard,<br>S21 Premium | 2 GiB | 0.5 | 2 GiB | 2 | 10 GiB | 20 GiB |
+| M21 Standard,<br>M21 Premium | 4 GiB | 1 | 4 GiB | 2 | 20 GiB | 40 GiB |
+| L21 Standard,<br>L21 Premium | 8 GiB | 2 | 8 GiB | 2 | 40 GiB | 80 GiB |
+| XL21 Standard,<br>XL21 Premium,<br>XL21 Premium Plus | 16 GiB | 4 | 16 GiB | 4 | 80 GiB | 160 GiB |
+| XXL21 Standard,<br>XXL21 Premium,<br>XXL21 Premium Plus | 32 GiB | 8 | 32 GiB | 4 | 160 GiB | 320 GiB |
+| XXXL21 Standard,<br>XXXL21 Premium,<br>XXXL21 Premium Plus | 64 GiB | 16 | 64 GiB | 8 | 320 GiB | 640 GiB |
+| XXXXL21 Standard,<br>XXXXL21 Premium,<br>XXXXL21 Premium Plus | 128 GiB | 32 | 128 GiB | 16 | 640 GiB | 1280 GiB |
+| XXXXL21-5XLDB Standard,<br>XXXXL21-5XLDB Premium,<br>XXXXL21-5XLDB Premium Plus | 128 GiB | 32 | 256 GiB | 32 | 1280 GiB | 1280 GiB |
 
 {{% alert color="info" %}}Premium plans provide multi-AZ fallback, and Premium Plus plans provide multi-region fallback. For more details, see [Additional Resources](#additional-resources), below.{{% /alert %}}
 

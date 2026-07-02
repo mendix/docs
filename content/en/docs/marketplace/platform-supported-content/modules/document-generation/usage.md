@@ -95,7 +95,7 @@ If no time zone is configured for the user that is passed in the `Generate as us
 The following page-related design properties are available in the **Styling** tab of the properties panel.
 
 | Design property | Description |
-|-----------------|-------------|
+| ----------------- | ------------- |
 | **Page orientation** | This design property enables you to set the page orientation for your documents. |
 | **Page size** | This design property enables you to set the page size for your documents. |
 | **Show page numbers** | This design property enables you to show page numbers in your documents. <br>{{% alert color="info" %}}At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage{{% /alert %}} |

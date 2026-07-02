@@ -122,8 +122,8 @@ The mapping in the app template is:
 
 | **Insights Hub application scope** | **is mapped to Mendix User role** |
 | -------------------------------- | --------------------------------- |
-| {app_name}.admin                | Admin                             |
-| {app_name}.user                 | User                              |
+| {app_name}.admin | Admin |
+| {app_name}.user | User |
 
 In Insights Hub, these roles will look like this:
 

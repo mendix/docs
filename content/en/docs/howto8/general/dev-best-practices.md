@@ -233,9 +233,9 @@ Pages that are used to make a selection of one object have a suffix of **_Select
 
 Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 
-| Page Purpose                             | Suffix |
-|-------------------------------------------|--------|
-| List objects of a single entity type  | \_Overview |
+| Page Purpose | Suffix |
+| ------------------------------------------- | -------- |
+| List objects of a single entity type | \_Overview |
 | Create an object | \_New |
 | Update an object | \_Edit |
 | Create *or* Update an object | \_NewEdit |

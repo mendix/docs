@@ -21,7 +21,7 @@ The table below summarizes the monitoring capabilities each tool supports:
 | [Datadog](https://www.datadoghq.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | 7.15 ¹ |
 | [New Relic](https://www.newrelic.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
 | [OpenTelemetry](https://opentelemetry.io/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | 10.24.12, 11.5 |
-| [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
+| [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
 
 <small>¹ Logs and metrics are available from Mendix 7.15 and above. Tracing requires Mendix 10.24.12 or 11.5 and above.</small>
 

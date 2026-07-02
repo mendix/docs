@@ -77,7 +77,7 @@ Boolean | True or false. | Boolean |
 Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. | Date and time |
 Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
 Enumeration | A list of predefined attributes. For more information, see [Enumerations](/refguide8/enumerations/). | Enumeration |
-Hashed string | A string which is hashed using the algorithm specified in the [project settings](/refguide8/project-settings/#hash-algorithm). This can be used to store password hashes, for example, so that the original password is not recorded in the database.  | String |
+Hashed string | A string which is hashed using the algorithm specified in the [project settings](/refguide8/project-settings/#hash-algorithm). This can be used to store password hashes, for example, so that the original password is not recorded in the database. | String |
 Integer | A whole number that can be positive (maximum 2³¹-1, thus 2147483647), negative (minimum -2³¹, thus -2147483648), or zero. | Integer/Long |
 Long | A whole number that can be positive (maximum 2⁶³-1), negative (minimum -2⁶³), or zero. | Integer/Long |
 String *(default)* | A text containing letters, spaces, numbers and other characters. | String |
@@ -180,15 +180,15 @@ The **Default value** property defines the value of this attribute when an objec
 | Type of Attribute | Default Value When Not Specified | Additional Comments |
 | --- | --- | --- |
 | AutoNumber | 1 | Starting value of this attribute. If there are already objects of this entity, the AutoNumber values will be based on the right 32 bits of the id column value. This can cause gaps in the AutoNumber ranges with jumps of 100, because id values are reserved by the Runtime in blocks of 100. |
-| Binary | N/A |   |
-| Boolean | False |   |
+| Binary | N/A | |
+| Boolean | False | |
 | Date and time | (empty) | The default value can either be a UTC date with the format `year-month-day` (suffixed optionally by `hour:minute`, or `hours:minute:second`), or `[%CurrentDateTime%]` (which sets the value of this attribute to the date and time when the object is created). |
-| Decimal | 0 |   |
-| Enumeration | (empty) |   |
-| Hashed string | (empty) |   |
-| Integer | 0 |   |
-| Long | 0 |   |
-| String | (empty) |   |
+| Decimal | 0 | |
+| Enumeration | (empty) | |
+| Hashed string | (empty) | |
+| Integer | 0 | |
+| Long | 0 | |
+| String | (empty) | |
 
 ### Limitations {#limitations}
 

@@ -301,7 +301,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request (object)`, `GenAICommons.DeployedModel (object)`| `GenAICommons.Response (object)`|
+| `GenAICommons.Request (object)`, `GenAICommons.DeployedModel (object)` | `GenAICommons.Response (object)` |
 
 The request object passed to this operation must include a KnowledgeBaseTool object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation.
 
@@ -368,7 +368,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request (object)`| `GenAICommons.Response (object)`|
+| `GenAICommons.Request (object)` | `GenAICommons.Response (object)` |
 
 ### GenAI Commons Helper Operations
 
@@ -450,7 +450,7 @@ This operation corresponds to the **CohereEmbedOptions_Extension_Create** microf
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
+| `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)` |
 
 #### Set Bedrock Retrieve Options {#add-r-extension}
 
@@ -486,7 +486,7 @@ This operation corresponds to the **Request_CreateResponseFieldRequest** microfl
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request (object)`, `FieldName (string)`| `none` |
+| `GenAICommons.Request (object)`, `FieldName (string)` | `none` |
 
 If the used model supports that response field, it will be returned as a ChatCompletionsResponse object as part of the response.
 
@@ -500,7 +500,7 @@ This operation corresponds to the **Response_GetRequestedResponseFields** microf
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Response (object)`| `RequestedResponseField (list)` |
+| `GenAICommons.Response (object)` | `RequestedResponseField (list)` |
 
 #### Response: Get NextToken {#get-next-token}
 
@@ -510,7 +510,7 @@ This operation corresponds to the **Response_GetNextToken** microflow.
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Response (object)`| `NextToken (string)` |
+| `GenAICommons.Response (object)` | `NextToken (string)` |
 
 #### Response: Cast RetrieveAndGenerateResponse {#cast-rag-response}
 
@@ -522,7 +522,7 @@ This operation corresponds to the **Response_Cast_RetrieveAndGenerateResponse** 
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Response (object)`| `RetrieveAndGenerateResponse (object)` |
+| `GenAICommons.Response (object)` | `RetrieveAndGenerateResponse (object)` |
 
 ### Other Operations
 
@@ -534,7 +534,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)`|
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)` |
 
 #### InvokeModel {#invoke-model}
 

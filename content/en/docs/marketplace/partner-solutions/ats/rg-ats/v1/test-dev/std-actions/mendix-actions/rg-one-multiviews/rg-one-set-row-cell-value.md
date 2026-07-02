@@ -17,8 +17,8 @@ You have to pass a DataGrid row as WebElement and the column name to determine w
 
 ## Input Parameters
 
-Name | Datatype |Required| Description
+Name | Datatype | Required | Description
 --- | --- | --- | ---
-DataGrid Row | WebElement |yes| The DataGrid row to insert the value into
-Value | String |yes| The value to insert into the Cell
-Column Name | String |yes| The column name to define the cell in which the value gets inserted
+DataGrid Row | WebElement | yes | The DataGrid row to insert the value into
+Value | String | yes | The value to insert into the Cell
+Column Name | String | yes | The column name to define the cell in which the value gets inserted

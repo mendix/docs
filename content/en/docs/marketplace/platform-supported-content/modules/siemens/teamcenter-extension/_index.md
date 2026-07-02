@@ -49,7 +49,7 @@ Compatibility among Teamcenter Extension, Teamcenter Connector, and Studio Pro i
 | 2.0.0 | 2406.0.0 | 10.12, patch versions 1 and above and 10.16.0 and above |
 | 3.0.0 thru 4.1.0 | 2406.3.0 and above | 10.12 patch version 6 and above and 10.16.0 and above |
 | 4.1.1 | 2406.3.0 and above | 10.24.0 and above |
-| 4.2.0 | 2406.3.0 and above |  10.24.8 and above |
+| 4.2.0 | 2406.3.0 and above | 10.24.8 and above |
 
 {{% alert color="info" %}}
 Teamcenter Extension is not compatible with Studio Pro versions between 10.8 and 10.11, as well as 10.13.x, 10.14.x, and 10.15.x. If you use one of these Studio Pro versions, a possible workaround is to use Teamcenter Extension in one of the compatible versions of Studio Pro first, create the necessary artifacts, and then import them into your version. However, Mendix always recommends using the latest MTS or LTS Studio Pro version.

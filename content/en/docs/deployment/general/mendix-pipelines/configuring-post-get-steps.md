@@ -33,7 +33,7 @@ Before running a request step in Mendix Pipelines, Mendix recommends testing the
 The following table summarizes the available configuration fields.
 
 | Field | Required? | Description | Example |
-|------------------------|---:|-------------------------------------------------------------------------------------------------|-----------|
+| ------------------------ | ---: | ------------------------------------------------------------------------------------------------- | ----------- |
 | **Base URL path** | Yes | Base endpoint of the external system to call. Must start with the protocol. Must end with `/` when using the **Additional URL Path**. | `https://api.com/1/JobID/` |
 | **Additional URL path** | No | String or variable to append to the **Base URL Path**. Can reference a stored variable. | `$POST Request.Result1` or `a12f3` |
 | **HTTP header key-value pairs** | No | HTTP headers to include with the request as metadata. Values can reference stored variables. | `Authorization` = `$API_Key` |

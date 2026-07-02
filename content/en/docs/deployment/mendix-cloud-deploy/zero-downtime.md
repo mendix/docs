@@ -79,12 +79,12 @@ For these scenarios, the Cloud Portal will display the standard restart message 
 
 The table below illustrates the expected behavior for various types of deployment changes:
 
-| Scenario                                        | Expected Behavior                                                    |
+| Scenario | Expected Behavior |
 | :------------------------------------------------------ | :------------------------------------------------------------------- |
-| Changing constants, environment variables, or log levels | Deployment completes without downtime.                              |
-| Adjusting CPU or memory settings                        | App remains available while the update completes.                    |
-| Uploading a new MDA or changing the data model          | Application restarts briefly (standard restart required).            |
-| Upgrading to a new Mendix Runtime version               | Standard restart required.                                           |
+| Changing constants, environment variables, or log levels | Deployment completes without downtime. |
+| Adjusting CPU or memory settings | App remains available while the update completes. |
+| Uploading a new MDA or changing the data model | Application restarts briefly (standard restart required). |
+| Upgrading to a new Mendix Runtime version | Standard restart required. |
 
 ### Before Deployment
 

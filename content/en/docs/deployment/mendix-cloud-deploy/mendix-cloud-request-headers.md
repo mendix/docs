@@ -34,10 +34,10 @@ This ensures consistent handling regardless of the casing used in incoming reque
 
 The following headers are usually set by the HTTP client. Mendix Cloud does not touch the value of these headers. This also means that they might not be available if the HTTP client does not set them.
 
-| Header name                                 | Example values                                             | Description |
+| Header name | Example values | Description |
 | ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Host**                                    | `custom-domain.example.com`                                  | The domain name that was used by the client to access the application |
-| **User-Agent**                              | `Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0` | The user agent, describing itself |
+| **Host** | `custom-domain.example.com` | The domain name that was used by the client to access the application |
+| **User-Agent** | `Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0` | The user agent, describing itself |
 
 ### Available Request Headers Inserted by Mendix Cloud
 

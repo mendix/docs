@@ -388,7 +388,7 @@ The table below lists all supported constants. Mandatory constants must be set a
 | `Default_PrincipalEntityAttribute` | the attribute holding the unique identifier of an authenticated user | Optional | `Name` |
 | `Default_PrincipalIdPAttribute` | the IdP claim which is the unique identifier of an authenticated user | Optional | `ExternalId` |
 | `Default_UserIdMapping` | sets the mapping entity attribute to the Identity provider attribute | Optional | No default Value |
-| `Default_UserNameMapping` | sets the mapping entity attribute to the Identity provider attribute |  Optional | No default Value |
+| `Default_UserNameMapping` | sets the mapping entity attribute to the Identity provider attribute | Optional | No default Value |
 | `Default_UserRole` | sets the mapping entity attribute to the Identity provider attribute | Optional | `User` |
 | `Default_UserType` | sets the mapping entity attribute to the Identity provider attribute | Optional | `Internal` |
 | `DisableMxAdmin` | deactivates Mx admin | Optional | `True` |

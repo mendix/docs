@@ -31,7 +31,7 @@ The table below describes which CAST conversions are supported:
 * ✘ – the conversion is not supported
 
 | From \ To | BOOLEAN | DATETIME | DECIMAL | INTEGER | LONG | STRING (unlimited) | STRING (limited) |
-|------| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
+| ------ | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
 | BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔* | ✔*¹ |
 | DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔* | ✔*² |
 | DECIMAL | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*² |

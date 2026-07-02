@@ -25,7 +25,7 @@ The input parameters are described in the table below:
 
 The output is described in the table below:
 
-| Value    | Type    |
+| Value | Type |
 | ---------- | ------- |
 | Returns whether the object is empty | Boolean |
 
@@ -71,7 +71,7 @@ $object1/member1 = empty
 
 Assuming $object1 is a domain entity that has a member called 'member1', the table below shows the output:
 
-|   | member1 has a value | member1 does not have a value |
+| | member1 has a value | member1 does not have a value |
 | --- | --- | --- |
 | $object1 has a value | false | true |
 | $object1 has no value | N/A | true |

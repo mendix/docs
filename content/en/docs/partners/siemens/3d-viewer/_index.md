@@ -17,7 +17,7 @@ This app service does the heavy-lifting for you so you do not have to build a 3D
 Here is an overview of what the 3DViewer contains:
 
 | Item | Name |
-| ---  | --- |
+| --- | --- |
 | [Predefined entities](/partners/siemens/3d-viewer/installation-configuration/#predefined-entities) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
 | [Constants](/partners/siemens/3d-viewer/installation-configuration/#constants) | HTTPEndpoint / Endpoint, LicenseToken, ModelSourceType |
 | [Microflow](/partners/siemens/3d-viewer/installation-configuration/#microflow) | DeleteModelFromMendix, DownloadMarkup |

@@ -56,7 +56,6 @@ The following table lists Maia Make Standalone Capabilities and the Studio Pro v
 | [Maia Agent Skills](/refguide/maia-agent-skills/) | Extends Maia with reusable knowledge. | Studio Pro 11.11 | |
 | [Maia Agent Instructions](/refguide/maia-instructions/) | Extends Maia with instructions to be followed with every prompt | Studio Pro 11.12 | |
 
-
 ### Maia Make General Capabilities
 
 The following table lists the general capabilities of Maia Make and the Studio Pro version in which support for each capability was introduced:

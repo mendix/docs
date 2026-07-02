@@ -15,7 +15,7 @@ Optionally you can pass a post- or prefix and the length for the generated strin
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
+---- | -------- | ------- | ---------------
 Prefix | String | no | The string to put in front of the generated string.
 Postfix | String | no | The string to append to the generated string.
 Length | Integer | no | The length of the generated string.

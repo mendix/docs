@@ -14,7 +14,7 @@ This document describes how Private Mendix Platform fulfills the AC-10 control.
 | --- | --- |
 | Control category | AC - Access Control |
 | Requirement baseline | FEDRAMP MODERATE |
-| Responsibility and ownership |  Mendix - Private Mendix Platform, Customer - Org |
+| Responsibility and ownership | Mendix - Private Mendix Platform, Customer - Org |
 
 ## Control
 

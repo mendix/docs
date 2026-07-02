@@ -22,9 +22,9 @@ Mendix on Azure supports various ingress and egress network configurations that 
 
 | Configuration Option | Default Value | Effect | Changeable After Deployment | Microsoft Documentation Reference |
 | --- | --- | --- | --- | --- |
-| **Internal Load Balancer** | False | When true, Mendix apps are exposed only internally within the AKS cluster IP CIDR range via ILB.| Yes | [Internal Load Balancer](https://learn.microsoft.com/en-us/azure/aks/internal-lb) |
+| **Internal Load Balancer** | False | When true, Mendix apps are exposed only internally within the AKS cluster IP CIDR range via ILB. | Yes | [Internal Load Balancer](https://learn.microsoft.com/en-us/azure/aks/internal-lb) |
 | **Network Isolated Cluster** | False | When true, outbound traffic (egress) is blocked by default unless configured otherwise. | No | [Network Isolated Cluster](https://learn.microsoft.com/en-us/azure/aks/concepts-network-isolated) |
-| **AKS Node IP CIDR Range** | `192.168.0.0/22` | IP range for the cluster network; must be unique and ideally /22 or larger to avoid IP shortages.| No | [IP Address Planning](https://learn.microsoft.com/en-us/azure/aks/concepts-network-ip-address-planning) |
+| **AKS Node IP CIDR Range** | `192.168.0.0/22` | IP range for the cluster network; must be unique and ideally /22 or larger to avoid IP shortages. | No | [IP Address Planning](https://learn.microsoft.com/en-us/azure/aks/concepts-network-ip-address-planning) |
 
 ## Cluster Networking Modes Overview {#networking-overview}
 
@@ -34,7 +34,7 @@ The configuration options in the previous section can be combined into four poss
 | --- | --- | --- | --- |
 | **Fully Public Cluster** | False | False | Hosting Mendix apps publicly without private network integration. | 
 | **Semi Public Cluster** | False | True | Public access with restricted or blocked outbound traffic. | 
-| **Semi Private Cluster** | True | False | Apps accessible only internally with allowed outbound traffic.  | 
+| **Semi Private Cluster** | True | False | Apps accessible only internally with allowed outbound traffic. | 
 | **Fully Private Cluster** | True | True | Private apps with no outbound internet access without extra setup. | 
 
 ## Detailed Networking Modes Description {#networking-modes-description}

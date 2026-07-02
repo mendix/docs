@@ -739,7 +739,7 @@ The table below describes which `CAST` conversions are supported:
 * ✘ – the conversion is not supported
 
 | From \ To | BOOLEAN | DATETIME | DECIMAL | INTEGER | LONG | STRING (unlimited) | STRING (limited) |
-|------| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
+| ------ | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
 | BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔*³ | ✔*¹ ³ |
 | DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔*³ | ✔*² ³ |
 | DECIMAL⁴ | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*² |
@@ -1126,11 +1126,11 @@ Always test usages of `DATEPARSE` with the database engine on which your app run
 
 #### Examples{#oql-dateparse-example}
 
-| Function call                                 | Result | Notes |
-|--------------|------|-----|
-| `DATEPARSE('20 Mar 2026', 'dd MMM yyyy')`       | 2026-03-20 00:00:00.000 | This format works for all databases. It matches SQL Server style 102. |
-| `DATEPARSE('2026-03-20 14:30:45', 'yyyy-MM-dd HH:mm:ss')`       | 2026-03-20 14:30:45.000 | This format works for all databases. It matches SQL Server style 120. |
-| `DATEPARSE('20/03/2026 14:30:45.123', 'dd/MM/yyyy HH:mm:ss.SSS')`       | 2026-03-20 14:30:45.123 | This format does not work in MySQL and MariaDB due to unsupported letter `S`. It does not work in SQL Server because there is no matching datetime style. |
+| Function call | Result | Notes |
+| -------------- | ------ | ----- |
+| `DATEPARSE('20 Mar 2026', 'dd MMM yyyy')` | 2026-03-20 00:00:00.000 | This format works for all databases. It matches SQL Server style 102. |
+| `DATEPARSE('2026-03-20 14:30:45', 'yyyy-MM-dd HH:mm:ss')` | 2026-03-20 14:30:45.000 | This format works for all databases. It matches SQL Server style 120. |
+| `DATEPARSE('20/03/2026 14:30:45.123', 'dd/MM/yyyy HH:mm:ss.SSS')` | 2026-03-20 14:30:45.123 | This format does not work in MySQL and MariaDB due to unsupported letter `S`. It does not work in SQL Server because there is no matching datetime style. |
 
 ### DATEPART {#datepart-function}
 
@@ -1438,7 +1438,6 @@ SELECT LPAD('hello', 10) AS padded FROM Sales.Order
 | ·····hello |
 
 Where `·` represents the space character.
-
 
 ```sql
 SELECT LPAD('hello', 10, 'x') AS padded FROM Sales.Order

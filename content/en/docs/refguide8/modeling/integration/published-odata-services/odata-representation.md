@@ -9,15 +9,15 @@ This document describes how entities are represented in a published OData servic
 
 | Mendix Data Type | Edm Type | Attribute Value | Atom XML Representation |
 | --- | --- | --- | --- |
-| Id ¹ ²| Edm.Int64 | 3940649673954387 | 3940649673954387 |
+| Id ¹ ² | Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | Autonumber | Edm.Int64 | 1 | 1 |
-| Binary (not supported) ³ |   |   |   |
+| Binary (not supported) ³ | | | |
 | Boolean | Edm.Boolean | true | true |
 | Date and time | Edm.DateTimeOffset | Fri, 19 Dec 2014 10:27:27 GMT | 2014-12-19T10:27:27.000Z |
 | Enumeration | Edm.String | Color.Blue | Blue |
-| Big decimal  | Edm.Decimal | 0.3333333333333333333333333333333333 | 0.3333333333333333333333333333333333 |
+| Big decimal | Edm.Decimal | 0.3333333333333333333333333333333333 | 0.3333333333333333333333333333333333 |
 | Hashed string | Edm.String | HashPassword | HashPassword |
-| Integer  | Edm.Int64 | 50 | 50 |
+| Integer | Edm.Int64 | 50 | 50 |
 | Long ² | Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | String ⁴ | Edm.String | John | John |
 

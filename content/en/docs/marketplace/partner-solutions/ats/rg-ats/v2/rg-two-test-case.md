@@ -27,7 +27,7 @@ In the top right corner of the screen, you will find the **Export** and **Run** 
 
 ### Export
 
-| Name                   | Description                              |
+| Name | Description |
 | ---------------------- | ---------------------------------------- |
 | Export Test Definition | Creates an XML representation of your test case. You can import this into another app. |
 | Export Documentation | Creates a PDF document that contains all the test steps of your test case and their parameters. |

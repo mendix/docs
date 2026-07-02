@@ -27,10 +27,10 @@ Note the following terminology differences described in the table below:
 
 | Catalog | Studio Pro |
 | -------- | ---------- |
-| Create   | Insertable |
-| Read     | Readable   |
-| Update   | Updatable  |
-| Delete   | Deletable  |
+| Create | Insertable |
+| Read | Readable |
+| Update | Updatable |
+| Delete | Deletable |
 
 ## Prerequisites
 

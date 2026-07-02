@@ -178,7 +178,7 @@ New agents will be created in the draft status by default, meaning they are stil
 For most use cases, a `Call Agent` microflow activity can be used. You can find these actions in Studio Pro **Toolbox**, under the **Agents Kit** category while editing a microflow. Take a look at the table below if you are unsure which action to use based on your [agent type](#define-agent):
 
 | Toolbox action name | Supported agent types | Description |
-|---|---|---|
+| --- | --- | --- |
 | [Call Agent with History](#call-agent-with-history) | Task, Chat | This action returns the assistant response for a single user message or based on a conversation history. The user message or an alternating chat history of the user and assistant message needs to be added to the request before calling this action. See [Add Message to Request](/agents/agents-kit-1/reference-guide/commons/#chat-add-message-to-request) <br> This operation is designed for chat agents, but will work for task agents as well; note that in that case, the user prompt defined on the agent version is ignored. |
 | [Call Agent without History](#call-agent-without-history) | Task | This action returns the assistant response for a single user message. For Task agents, the user message is already part of the agent version and thus does not need to be passed explicitly or added to the optional request. |
 

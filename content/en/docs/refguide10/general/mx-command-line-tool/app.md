@@ -202,10 +202,10 @@ These are the `OPTIONS`:
 
 | Option | Shortcut | Result |
 | --- | --- | --- |
-| `--help`| | Shows help for the `mx check` command and exits. |
+| `--help` | | Shows help for the `mx check` command and exits. |
 | `--warnings` | `-w` | Includes warnings in the output. |
 | `--deprecations` | `-d` | Includes deprecations in the output. |
-| `--performance`  | `-p` | Includes performance checks in the output (performance recommendations are only outputted if there are no errors). |
+| `--performance` | `-p` | Includes performance checks in the output (performance recommendations are only outputted if there are no errors). |
 
 {{% alert color="info" %}}
 Errors in the *.mpr* are always reported.
@@ -272,8 +272,8 @@ These are the required parameters:
 | --- | --- | --- |
 | `--import-translations` | `-i` | Imports the translations from the directory specified as the translation directory. This is required if export is not specified. |
 | `--export-translations` | `-e` | Exports the translations from the directory specified as the translation directory. This is required if import is not specified. |
-| `--type`  | `-t` | Specifies the file type to use. This can be either `xlsx` or `po`. |
-| `--source-language-code`| `-s` | Specifies the ISO 639 language code to use (for example,`en_US` as the source language to translate from). This will be used as the text that needs to be translated. |
+| `--type` | `-t` | Specifies the file type to use. This can be either `xlsx` or `po`. |
+| `--source-language-code` | `-s` | Specifies the ISO 639 language code to use (for example,`en_US` as the source language to translate from). This will be used as the text that needs to be translated. |
 
 For `PROJECT`, enter a single *.mpr* file.
 For `TRANSLATION_PATH`, enter a filepath to import or export the translation files from.
@@ -282,8 +282,8 @@ These are the `OPTIONS`:
 
 | Option | Shortcut | Result |
 | --- | --- | --- |
-| `--force-import`  | `-f` | Accepts some warnings and errors and tries to continue the import process. |
-| `--loose-version-check`  | `-l` | Converts the project to the version of the mx.exe, if it is a different version. |
+| `--force-import` | `-f` | Accepts some warnings and errors and tries to continue the import process. |
+| `--loose-version-check` | `-l` | Converts the project to the version of the mx.exe, if it is a different version. |
 | `--include-marketplace-modules` | `-m` | By default, the export does not include Marketplace modules. Adding this option will include them in the output. |
 
 {{% alert color="info" %}}

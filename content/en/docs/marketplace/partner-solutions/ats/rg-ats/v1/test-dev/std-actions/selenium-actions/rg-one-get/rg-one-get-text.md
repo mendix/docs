@@ -14,7 +14,7 @@ Pass the WebElement you want to get the text value from.
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
+---- | -------- | ------- | ---------------
 Web Element | WebElement | yes | The WebElement you want to get the text value from.
 
 ## Return Value

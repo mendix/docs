@@ -17,13 +17,13 @@ To create a secure environment it is important to make a clear distinction betwe
 
     | | Create Databases | Create Users | Database Maintenance | Complete Maintenance |
     | --- | --- | --- | --- | --- |
-    | `dbcreator` | **X** |  |  | |
-    | `diskadmin` | **X** |  |  | |
-    | `processadmin` |  |  |  | |
-    | `securityadmin` | | **X** |  | |
-    | `serveradmin` |  |  | **X** | |
-    | `setupadmin` |  |  |  | |
-    | `sysadmin` |  |  |  | **X** |
+    | `dbcreator` | **X** | | | |
+    | `diskadmin` | **X** | | | |
+    | `processadmin` | | | | |
+    | `securityadmin` | | **X** | | |
+    | `serveradmin` | | | **X** | |
+    | `setupadmin` | | | | |
+    | `sysadmin` | | | | **X** |
 
 * **Define the user mapping for the administrator:** Associate all the databases related to Mendix with the administrator. The template for these databases should be `dbo` and the role of the administrator should be: `db_owner`.
 * **Create (a) database user(s) for each Mendix application:** Each Mendix application should have its own database user (or users).

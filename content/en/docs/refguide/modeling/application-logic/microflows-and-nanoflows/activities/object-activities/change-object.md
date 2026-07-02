@@ -45,7 +45,7 @@ You can also open the dialog box by double-clicking the activity, or right-click
 | --- | --- |
 | **Yes with event handlers** | The object is saved in the database and the [event handlers](/refguide/event-handlers/) are triggered |
 | **Yes without event handlers** | The object is saved in the database, but the [event handlers](/refguide/event-handlers/) are not triggered |
-| **No** (default)| The object is changed without being saved in the database |
+| **No** (default) | The object is changed without being saved in the database |
 
 This option is not shown for [external entities](/refguide/external-entities/) because they cannot be committed. Use the [Send External Object](/refguide/send-external-object/) activity to save changes to external entities.
 

@@ -63,7 +63,7 @@ After you install the Mistral and OpenAI connectors, you can find them in the **
 
 The following inputs are required for the Mistral configuration: 
 
-| Parameter   | Value                                                        |
+| Parameter | Value |
 | ----------- | ------------------------------------------------------------ |
 | Display name | The name identifier of a configuration (for example, *MyConfiguration*). |
 | Endpoint | The API endpoint (for example, `https://api.mistral.ai/agents-kit-1/`). |
@@ -81,7 +81,7 @@ A [deployed model](/agents/agents-kit-1/reference-guide/commons/#deployed-model)
     | Display name | The reference for app users when selecting the model. |
     | Model name | The technical reference of the model. For Mistral, this equals the [model ID](https://docs.mistral.ai/getting-started/models) (for example, `mistral-medium-2508`). |
     | Output modality | The output of the model. This connector currently supports text, embedding, and image. |
-    | Input modality| The input modalities accepted by the model. This connector currently supports text and image. |
+    | Input modality | The input modalities accepted by the model. This connector currently supports text and image. |
     
 3. Close the **Manage Deployed Models** dialog box and test the configuration with the newly created deployed models.
 

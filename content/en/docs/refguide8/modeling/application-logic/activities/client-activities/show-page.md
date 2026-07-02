@@ -72,7 +72,7 @@ Often you need to have control of page history, for example to show the correct 
 
 | Value | Description |
 | --- | --- |
-| None | Do not remove any pages from history. This is the default behavior.|
+| None | Do not remove any pages from history. This is the default behavior. |
 | Single | After navigating to the **target page**, remove the **source page** from history. |
 | Multiple | After navigating to the **target page**, remove the **source page** and one or more pages before it from history. Configure the total number of pages removed using an expression. |
 | Clear history | Prevent the user from navigating back altogether. This is especially useful when navigating away from a login or tutorial flow. |

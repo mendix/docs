@@ -60,7 +60,7 @@ The **Type** property indicates how the end-user will be able to use the file ma
 | --- | --- |
 | Upload | The file manager can only be used to upload a file. |
 | Download | The file manager can only be used to download a file. |
-| Both *(default)*  | The file manager can be used to both upload and download a file. |
+| Both *(default)* | The file manager can be used to both upload and download a file. |
 
 #### Max File Size (MB)
 

@@ -126,9 +126,9 @@ Backup archives are compatible with Mendix Cloud backups allowing migration from
 
 | Frequency | Timing | Type | Retention Period |
 | --- | --- | --- | --- |
-| Nightly | Every night | Automatic| 14 days (from previous day) |
-| Weekly | Every Sunday | Automatic| 3 months (from previous day) |
-| Monthly | First Sunday of each month | Automatic| 1 year (on that Sunday) |
+| Nightly | Every night | Automatic | 14 days (from previous day) |
+| Weekly | Every Sunday | Automatic | 3 months (from previous day) |
+| Monthly | First Sunday of each month | Automatic | 1 year (on that Sunday) |
 | On demand | When triggered | Manual | 14 days (from previous day) |
 
 Backups older than retention are deleted automatically but can be manually removed earlier. To keep backups longer, download them locally.

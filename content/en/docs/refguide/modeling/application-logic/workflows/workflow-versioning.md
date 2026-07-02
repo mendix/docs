@@ -58,23 +58,23 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 
 | Conflict Type/Mitigation | Abort | Restart | Mark-as-Resolved | Jump To Different Activities |
 | --- | --- | --- | --- | --- |
-| *Non-resolvable:* |  |  |  |  |
+| *Non-resolvable:* | | | | |
 | Context Entity Replaced | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A | N/A |
 | Context Object Not Found | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A | N/A |
 | Workflow Definition Deleted | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A | N/A |
-| *Partially resolvable*: |  |  |  |  |
+| *Partially resolvable*: | | | | |
 | Current Activity Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Current Parallel Split Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A |
 | Current Activity Moved out of Path | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A |
 | Parallel Split Introduced in Executed Path | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A |
-| *Resolvable*: |  |  |  |  |
+| *Resolvable*: | | | | |
 | Parallel Path Introduced | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A |
 | Selected Outcome Replaced | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Multi-User Task Outcome Changed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Activities Introduced in Executed Path              | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Activities Introduced in Executed Path | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Executed Activities Moved to Re-executable Position | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Parallel Split Path Removed                         | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Non-Interrupting Boundary Event Path Removed        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Parallel Split Path Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Non-Interrupting Boundary Event Path Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Current Event Sub-Process Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 
 #### Context Entity Replaced

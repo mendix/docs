@@ -161,7 +161,7 @@ This property defines whether the entity has the system association 'changedBy'.
 | Option | Description |
 | --- | --- |
 | True | Entity has the system association 'changedBy'. |
-| False *(default)*  | Entity does not have the system association 'changedBy'. |
+| False *(default)* | Entity does not have the system association 'changedBy'. |
 
 ## Tabs in the Entity Dialog Box{#dialog-box}
 

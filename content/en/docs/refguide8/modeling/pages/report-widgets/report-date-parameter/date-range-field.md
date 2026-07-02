@@ -36,7 +36,7 @@ The **Label** property specifies the text that is displayed beside the date rang
 | Quarter² | Allows the end-user to select a quarter of the year. | 2019 > 2 | 1 April 2019 to 30 June 2019 |
 | Month² | Allows the end-user to select a month of the year. | 2019 > May | 1 May 2019 to 31 May 2019 |
 | Week² | Allows the end-user to select a week of the year. | 2019 > Week 19 | 5 May 2019 to 12 May 2019 |
-| Period² | *The Period date range field is being deprecated. It is recommended that you use one of the other types of date range field.*  | | |
+| Period² | *The Period date range field is being deprecated. It is recommended that you use one of the other types of date range field.* | | |
 
 | **Notes** |
 | --- |

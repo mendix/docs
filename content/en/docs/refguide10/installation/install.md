@@ -68,7 +68,7 @@ The prerequisites are the following:
 
     | Studio Pro 10.0.0 - 10.1.0 | Studio Pro 10.2.0 - 10.9 | Studio Pro 10.6.10 (MTS), 10.10 to 10.20 | Studio Pro 10.21.0 and above |
     | --- | --- | --- | --- |
-    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)|[2.48.1](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe)|
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1) | [2.48.1](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe) |
 
 {{% alert color="info" %}}
 You do not need to install Git for all operations, but you may need to install the Git CLI if you perform certain actions. For example, [rebase](/refguide10/merge-algorithm/#rebase) will not work without Git being installed. 
@@ -82,7 +82,7 @@ Starting from Studio Pro 10.21.0, Git version 2.48.1 or above is required. This 
 
     | Studio Pro 10.0.0 - 10.9.0 | Studio Pro 10.10.0 and above |
     | --- | --- |
-    | Gradle 7.6.3 or above | Gradle 8.5  |
+    | Gradle 7.6.3 or above | Gradle 8.5 |
 
 Depending on the error message you get from the installer, you can choose to install a single prerequisite, or you can install them all.
 

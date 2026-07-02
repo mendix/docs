@@ -19,7 +19,7 @@ The full stack is depicted in the table below. This indicates which components a
 | **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
 | **Commun&shy;ity Support&shy;ed Marketplace content** | | | | | | | |
 | **Runtime** | Mendix | Mendix | Mendix | Mendix | Certified Mendix Partner or Certified Customer² | Mendix | Mendix |
-| **Deploy&shy;ment Pipe&shy;line** | Mendix | Mendix | Mendix | | Certified Mendix Partner or Certified Customer²  | | |
+| **Deploy&shy;ment Pipe&shy;line** | Mendix | Mendix | Mendix | | Certified Mendix Partner or Certified Customer² | | |
 | **Backups/ Logs/ Metrics** | Mendix | Mendix | | | Certified Mendix Partner or Certified Customer² | Mendix Partner¹ | |
 | **Appli&shy;cation Opera&shy;tion** | Mendix | Mendix | Mendix | Mendix | Certified Mendix Partner or Certified Customer² | Mendix | |
 | **Buildpack** | Mendix | Mendix | Mendix | Mendix | Certified Mendix Partner or Certified Customer² | Mendix | Mendix |

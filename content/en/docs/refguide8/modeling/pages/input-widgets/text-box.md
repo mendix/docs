@@ -134,7 +134,7 @@ Attributes of the data type `String` or `Hashed string` can have their value hid
 
 | Value | Description |
 | --- | --- |
-| False *(default)*| Normal text box |
+| False *(default)* | Normal text box |
 | True | Typed characters are not shown to the end-user, instead an asterisk is shown for every typed character |
 
 #### Input Mask

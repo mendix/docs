@@ -105,9 +105,9 @@ The priority is based on the combination of impact and urgency:
 
 | Urgency | Description |
 | ------- | ------- |
-| High    | The operational functionality is severely disrupted. |
-| Medium  | The operational functionality is fairly disrupted. |
-| Low     | The operational functionality is hardly disrupted. |
+| High | The operational functionality is severely disrupted. |
+| Medium | The operational functionality is fairly disrupted. |
+| Low | The operational functionality is hardly disrupted. |
 
 You can set the priority to the following levels:
 

@@ -18,7 +18,7 @@ Pass the name of the widget, the value connected to the checkbox, and if the che
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
+---- | -------- | ------- | ---------------
 Widget Name | String | Yes | The name of the widget.
 Value | String | Yes | The value connected to the checkbox.
 Checked | Boolean | Yes | Assert that the checkbox is checked or cleared.

@@ -78,11 +78,11 @@ The following log nodes are used by Mendix when writing log messages:
 
 | Log Node | Description |
 | --- | --- |
-| Client_Auth | Logs messages related to the different authentication states and user actions.|
+| Client_Auth | Logs messages related to the different authentication states and user actions. |
 | Client | The default log node when no log node is provided. |
 | Client_Database | Logs messages related to different read/write operations on the local database. |
-| Client_FileSystem | Logs messages related to different read/write operations on the local file system (for example downloading a file and storing it in the file system, moving a file, or removing a file).|
-| Client_Nanoflow | Logs messages related to nanoflows being executed.|  
+| Client_FileSystem | Logs messages related to different read/write operations on the local file system (for example downloading a file and storing it in the file system, moving a file, or removing a file). |
+| Client_Nanoflow | Logs messages related to nanoflows being executed. |  
 | Client_NanoflowDebugger | Logs messages related to different steps and available variables while debugging a nanoflow. |
 | Client_Navigation | Logs messages related to the navigation behavior in the app. |
 | Client_Network | Logs messages related to the different interactions between the client and runtime over the network. |

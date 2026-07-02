@@ -87,17 +87,17 @@ Any check type that does not display as *OK* needs to be investigated. Some aler
 ### Application Status {#app-status}
 
 Application Status | |
-:---|:---|
-Description | The application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system generates an alert.|
+:--- | :--- |
+Description | The application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system generates an alert. |
 Example message | No runtime heartbeat received for 8m45s.
-Warning Threshold | Not used.                                              |
+Warning Threshold | Not used. |
 Critical Threshold | If the runtime heartbeat of the application has not been received for 5 minutes, a critical alert will be generated.
-First actions to take | Check the application logs for issues. Also check [Mendix Platform Status](https://status.mendix.com/) for any planned maintenance.                         |
+First actions to take | Check the application logs for issues. Also check [Mendix Platform Status](https://status.mendix.com/) for any planned maintenance. |
 
 ### Application Container Disk Percentage {#app-container-disk-pct}
 
 Application Container Disk Percentage | |
-:---|:---|
+:--- | :--- |
 Also called | Container disk overload |
 Description | Track the disk utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high disk usage: 90.5
@@ -108,7 +108,7 @@ First actions to take | Inspect the metrics for **Disk usage** combined with all
 ### Application Container Memory Percentage {#app-container-memory-pct}
 
 Application Container Memory Percentage | |
-:---|:---|
+:--- | :--- |
 Also called | Container memory overload |
 Description | Track the memory utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high memory usage: 90.5
@@ -119,7 +119,7 @@ First actions to take | Inspect the metrics for **Memory usage** combined with a
 ### Critical Logs {#critical-logs}
 
 Critical Logs | |
-:---|:---|
+:--- | :--- |
 Description | The CRITICAL log level is reserved for issuing messages in rare cases where the application may not be able to function reliably anymore. For example, there is a chance of data corruption when the application continues to be running. Internal JVM errors are logged to this level. Out of memory errors (which are JVM errors) must be treated as harmful to the stability and integrity of your Mendix application process.
 Example message | Critical errors count is 2.
 Warning Threshold | Not used.
@@ -129,7 +129,7 @@ First actions to take | Inspect the application log file and look up the CRITICA
 ### Database CPU Utilization {#dbase-cpu-pct}
 
 Database CPU Utilization | |
-:---|:---|
+:--- | :--- |
 Description | Track the CPU utilization for the database belonging to the application
 Example message | Database has 95% CPU utilization.
 Warning Threshold | Not used.
@@ -139,7 +139,7 @@ First actions to take | Inspect the metrics for **CPU utilization of the databas
 ### Database Free Space {#dbase-free-space}
 
 Database Free Space | |
-:---|:---|
+:--- | :--- |
 Description | Track the amount of disk space used for the database belonging to the application.
 Example message | Database has less than 5% free space.
 Warning Threshold | Database has less than 25% and more than 10% free space available. 
@@ -149,7 +149,7 @@ First actions to take | Check if there is a sudden increase or a slow increase o
 ### Database Freeable Memory {#dbase-freeable-memory}
 
 Database Freeable Memory | |
-:---|:---|
+:--- | :--- |
 Description | Track the amount of freeable memory for the database belonging to the application.
 Example message | Database has 35% freeable memory.
 Warning Threshold | Not used.
@@ -159,7 +159,7 @@ First actions to take | Inspect the metrics graph **Database memory** for anomal
 ### Database IOPS Burst Balance {#dbase-iops}
 
 Database IOPS Burst Balance | |
-:---|:---|
+:--- | :--- |
 Description | Track the available IOPS burst balance credit for the database belonging to the application.
 Example message | Database has 10% IOPS burst balance.
 Warning Threshold | Not used.
@@ -169,7 +169,7 @@ First actions to take | Inspect the metrics graph **Database IOPS Burst Balance*
 ### Health Check {#health-check}
 
 Health Check | |
-:---|:---|
+:--- | :--- |
 Description | Each application can define a health check microflow. This microflow is called every 10 seconds by the Mendix Runtime to determine if the application is still healthy. This can be used to check for application-specific health indicators.
 Example message | Health: the nightly import job took more than an hour to complete!
 Warning Threshold | If the health check microflow returns a non-empty string value, this means the application is not healthy and a WARNING alert is generated.
@@ -179,7 +179,7 @@ First actions to take | Because the health check microflow is specific to your a
 ### Virtual Machine Error {#virtual-machine-error}
 
 Virtual Machine Error | |
-:---|:---|
+:--- | :--- |
 Description | Show the state of the application's virtual machine (JVM), or an error state if there is an issue with JVM.
 Example message | Your application's virtual machine died because of non-recoverable error in the last 5 minutes.
 Warning Threshold | Not used.
@@ -189,7 +189,7 @@ First actions to take | Check the log files and application metrics for a possib
 ### Virtual Machine Out Of Memory {#virtual-machine-memory}
 
 Virtual Machine Out Of Memory | |
-:---|:---|
+:--- | :--- |
 Description | Show the state of the application's virtual machine (JVM), or an error state when the issue occurs with a JVM.
 Example message | Your application's virtual machine ran out of memory and died in the last 5 minutes.
 Warning Threshold | Not used.

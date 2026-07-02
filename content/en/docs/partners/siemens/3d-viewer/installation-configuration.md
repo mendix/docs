@@ -62,7 +62,7 @@ The **ModelDocument** entity is a conceptual entity that incorporates all the in
 | **FileSize** | The size of the model in bytes. |
 | **FileType** | The 3D model format. |
 | **Status** | Used specifically for models uploaded and stored in Mendix file storage. The **Status** has three values: **Complete** (indicates the uploading of a model to Mendix file storage is complete), **InProgress** (indicates the uploading is in progress), and **Error** (indicates the uploading failed). |
-| **ErrorReason**  | The reason for the model upload error.|
+| **ErrorReason** | The reason for the model upload error. |
 
 The **Pagination** entity serves as an input parameter of the **GetModelListFromMendix** nanoflow. This allows you to paginate the model list returned by the nanoflow. If the values of the **Pagination** attributes are not specifically set, **GetModelListFromMendix** will return a full list of the models.
 

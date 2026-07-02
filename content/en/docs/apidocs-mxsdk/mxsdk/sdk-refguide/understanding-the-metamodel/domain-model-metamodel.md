@@ -20,7 +20,7 @@ The entities can also relate to each other through generalizations. Finally, you
 
 | Studio Pro Guide | Model SDK API Docs |
 | --- | --- |
-| [Domain Model](/refguide/domain-model/) | TypeScript module [domainmodels](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/domainmodels.html)  |
+| [Domain Model](/refguide/domain-model/) | TypeScript module [domainmodels](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/domainmodels.html) |
 | [Entities](/refguide/entities/) | [DomainModel](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.DomainModel.html) |
 | [Attributes](/refguide/attributes/) | [Entity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Entity.html) |
 | [Associations](/refguide/associations/) | [Association](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Association.html) |
@@ -40,7 +40,7 @@ Entities can have multiple attributes. Each attribute has a specific type.
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Attributes](/refguide/attributes/) | Property [`attributes`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Entity.html#attributes) of entity  |
+| [Attributes](/refguide/attributes/) | Property [`attributes`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Entity.html#attributes) of entity |
 | | [Attribute](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Attribute.html) |
 | | [AttributeType](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.AttributeType.html) |
 

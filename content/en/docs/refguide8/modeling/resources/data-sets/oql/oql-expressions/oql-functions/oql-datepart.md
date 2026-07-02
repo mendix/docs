@@ -13,12 +13,12 @@ DATEPART ( datepart , date_expression )
 
 | datepart | definition | example when used for Friday July 1, 2005, 16:34:20 |
 | --- | --- | --- |
-| `YEAR` |   | 2005 |
+| `YEAR` | | 2005 |
 | `QUARTER` | 1, 2, 3 or 4 | 3 |
 | `MONTH` | 1 to 12 | 7 |
-| `DAYOFYEAR` | 1 to 366 |   |
+| `DAYOFYEAR` | 1 to 366 | |
 | `DAY` | 1 to 31 | 5 |
-| `WEEK` | 1 to 53 (depends on the database implementation) |   |
+| `WEEK` | 1 to 53 (depends on the database implementation) | |
 | `WEEKDAY` | 1 to 7 (1 = Sunday, 7 = Saturday) | 6 |
 | `HOUR` | 0 to 23 | 16 |
 | `MINUTE` | 0 to 59 | 34 |

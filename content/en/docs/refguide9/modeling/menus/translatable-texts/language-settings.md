@@ -175,7 +175,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Sinhala | Sri Lanka | si_LK | 9.3.0 |
 | Slovak | Slovakia | sk_SK | 9.0.5 |
 | Slovenian | Slovenia | sl_SI | 9.0.5 |
-| Somali | Somalia | so_SO | 9.2.0|
+| Somali | Somalia | so_SO | 9.2.0 |
 | Spanish | Argentina | es_AR | 9.0.5 |
 | Spanish | Bolivia | es_BO | 9.0.5 |
 | Spanish | Chile | es_CL | 9.0.5 |

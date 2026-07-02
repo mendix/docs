@@ -68,7 +68,7 @@ The following table lists the sources you can use to target users:
 
 | Source | Description |
 | --- | --- |
-| Database | Allows you to use XPath constraints to filter which users should see the user task in their inbox. For example, you can target a certain task only to users in a specific department (assuming such information is available in your domain model). You can use any attributes of the **User Entity** set in [App Settings](/refguide/workflow-tab/).|
+| Database | Allows you to use XPath constraints to filter which users should see the user task in their inbox. For example, you can target a certain task only to users in a specific department (assuming such information is available in your domain model). You can use any attributes of the **User Entity** set in [App Settings](/refguide/workflow-tab/). |
 | Microflow | Allows you to use a microflow to target the user task to certain users. You can check, for example, which users have the right to approve user tasks and are currently not on vacation, and assign the task only to users who passed the check. <br/> The return type of the microflow should be a list of the **User Entity** set in [App Settings](/refguide/workflow-tab/). |
 
 {{% alert color="warning" %}}
@@ -93,8 +93,8 @@ The following table lists the sources you can use to target groups of users:
 
 | Source | Description |
 | --- | --- |
-|Database | Allows you to use XPath constraints to filter groups of users who should see the user task in their inbox. For example, you can target a specific **Managers** group, which associates only the users with a management role. You should use workflow group tokens instead of the **Name** attribute. So, use `[ id = '[%WorkflowGroup_Managers%]' ]` instead of `[ Name = 'Managers' ]`. The latter will NOT be updated automatically if a group is renamed.|
-| Microflow | Allows you to use a microflow to target the user tasks to specific groups. You can check, for example, which groups are associated to a specific department (assuming such information is available in your domain model). <br/> The return type of the microflow should be a list of **System.WorkflowGroup** objects.  |
+| Database | Allows you to use XPath constraints to filter groups of users who should see the user task in their inbox. For example, you can target a specific **Managers** group, which associates only the users with a management role. You should use workflow group tokens instead of the **Name** attribute. So, use `[ id = '[%WorkflowGroup_Managers%]' ]` instead of `[ Name = 'Managers' ]`. The latter will NOT be updated automatically if a group is renamed. |
+| Microflow | Allows you to use a microflow to target the user tasks to specific groups. You can check, for example, which groups are associated to a specific department (assuming such information is available in your domain model). <br/> The return type of the microflow should be a list of **System.WorkflowGroup** objects. |
 
 {{% alert color="warning" %}}
 If an XPath constraint or a microflow results in an empty list (0 objects), the workflow fails. For more information on how to handle such issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.

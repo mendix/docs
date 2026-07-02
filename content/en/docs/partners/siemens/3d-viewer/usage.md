@@ -233,7 +233,7 @@ You can add multiple section planes to cut the model in different directions. Af
 An advanced end-user can enable the SectionManipulator to move / rotate the section plane using [advanced configuration](/partners/siemens/3d-viewer/advanced-configuration/). There are two flavors as illustrated below:
 
 | enable SectionManipulator | enable SectionHandle |
-| ---  | --- |
+| --- | --- |
 | {{< figure src="/attachments/partners/siemens/3d-viewer/sectionManipulator.png" alt="sectionManipulator" class="no-border" >}} | {{< figure src="/attachments/partners/siemens/3d-viewer/sectionHandle.png" alt="sectionHandle" class="no-border" >}} |
 
 ## Performing 3D Measurements {#perform-measurements}

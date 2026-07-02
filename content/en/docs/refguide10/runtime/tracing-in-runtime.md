@@ -69,7 +69,7 @@ Below we list the ones that are supported by the Mendix runtime. See [Configure 
 In Mendix 10.19.0 and above, the Java Agent can be configured through system properties, which can be added to the **Extra JVM parameters** field (for example, `-Dotel.exporter.otlp.traces.endpoint`), or set through environment variables. 
 
 | Name | Description | Default |
-|------|-------------|---------|
+| ------ | ------------- | --------- |
 | `otel.service.name` | The name of the service. | `runtimelauncher` *(In Mendix 10.18 `unknown_service:java`)* |
 | `otel.resource.attributes` | Extra resource attributes to include in every span. Example: `attribute1=value1,attribute2=value2` | |
 | `otel.traces.exporter` | Comma-separated list of span exporters. Supported values are: `otlp`, `console`, `logging-otlp`, and `none`. | `otlp` |
@@ -78,4 +78,4 @@ In Mendix 10.19.0 and above, the Java Agent can be configured through system pro
 | `otel.exporter.otlp.traces.certificate` | The path to the file containing trusted certificates to use when verifying a trace server's TLS credentials. The file should contain one or more X.509 certificates in PEM format. | By default the host platform's trusted root certificates are used. |
 | `otel.exporter.otlp.traces.client.key` | The path to the file containing the private client key to use when verifying a trace client's TLS credentials. The file should contain one private key in PKCS8 PEM format. | By default no client key file is used. |
 | `otel.exporter.otlp.traces.client.certificate` | The path to the file containing trusted certificates to use when verifying a trace client's TLS credentials. The file should contain one or more X.509 certificates in PEM format. | By default no certificate file is used. |
-| `OpenTelemetry.Enabled` *(Mendix 10.18 only)*| Can be set to `true` or `false` in order to disable or enable tracing. | `false` |
+| `OpenTelemetry.Enabled` *(Mendix 10.18 only)* | Can be set to `true` or `false` in order to disable or enable tracing. | `false` |

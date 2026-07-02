@@ -79,7 +79,7 @@ The `DeployedModel` entity replaces the capabilities that the `Connection` entit
 | `Architecture` | The architecture of the deployed model (for example, OpenAI or Amazon Bedrock). |
 | `Model` | The model identifier of the LLM provider. |
 | `OutputModality` | The type of information the model returns. |
-| `Microflow` |  The microflow to execute for the specified model and modality. |
+| `Microflow` | The microflow to execute for the specified model and modality. |
 | `SupportsSystemPrompt` | Enum to specify if the model supports system prompts. |
 | `SupportsConversationsWithHistory` | Enum to specify if the model supports conversation with history. |
 | `SupportsFunctionCalling` | Enum to specify if the model supports function calling. |
@@ -116,7 +116,7 @@ The `DeployedKnowledgeBase` entity replaces the capabilities covered by the `Con
 | `DisplayName` | The display name of the deployed knowledge base. | 
 | `Name` | The name of the deployed knowledge base. |
 | `Architecture` | The architecture of the deployed model, for example, Mendix Cloud or Amazon Bedrock. |
-| `Microflow` |  The microflow to run to retrieve information for the specified knowledge base. |
+| `Microflow` | The microflow to run to retrieve information for the specified knowledge base. |
 | `IsActive` | Boolean to specify if the knowledge base is active and usable with the current authentication settings and user preference. |
 
 #### `InputModality` {#Usage}
@@ -232,7 +232,7 @@ The `Request` is an input object for the chat completions operations defined in 
 | `TopP` | An alternative to temperature for controlling the randomness of the model response. `TopP` defines a probability threshold so that only words with probabilities greater than or equal to the threshold will be included in the response. Mendix recommends steering either the temperature or `TopP`, but not both. |
 | `ToolChoice` | Controls which (if any) tool is called by the model. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values. |
 | `_AgentVersionId` | The `AgentVersionId`, set if the execution of the request was called from an Agent. |
-| `SaveToolCallHistory` | Indicates if the tool calls are stored for later continuation (must be implemented).  |
+| `SaveToolCallHistory` | Indicates if the tool calls are stored for later continuation (must be implemented). |
 
 #### `Message` {#message}
 
@@ -242,7 +242,7 @@ A message that is part of the request or the response. Each instance contains da
 | --- | --- |
 | `Role` | The role of the message's author. For more information, see the [ENUM_Role](#enum-messagerole) section. |
 | `Content` | The text content of the message. |
-| `MessageType` | The type of the message can be either text or file. File means that the associated FileCollection is taken into account. For more information, see the [ENUM_MessageType](#enum-messagetype) section.|
+| `MessageType` | The type of the message can be either text or file. File means that the associated FileCollection is taken into account. For more information, see the [ENUM_MessageType](#enum-messagetype) section. |
 | `ToolCallId` | The ID of the tool call proposed by the model that this message is responding to. Only applicable for messages with the role `tool`. |
 
 #### `FileCollection` {#filecollection}
@@ -345,7 +345,7 @@ An optional reference for a response message.
 | `Content` | The content of the reference. |
 | `Source` | The source of the reference (for example, a URL). | 
 | `SourceType` | The type of the source. For more information, see [ENUM_SourceType](#enum-sourcetype). |
-| `Index` | Used to make references identifiable and sortable.| 
+| `Index` | Used to make references identifiable and sortable. | 
 
 #### `Citation` {#citation}
 
@@ -405,7 +405,7 @@ An optional input object for the embedding operations to set optional request at
 
 | Attribute | Description |
 | --- | --- |
-| `Dimensions`| The number of dimensions the resulting output embeddings should have. |
+| `Dimensions` | The number of dimensions the resulting output embeddings should have. |
 
 #### `EmbeddingsResponse` {#embeddingsresponse-entity}
 
@@ -447,7 +447,7 @@ The `Chat Completions (with history)` operation supports more complex use cases 
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-| --- | --- | --- |--- |
+| --- | --- | --- | --- |
 | `DeployedModel` | [DeployedModel](#deployed-model) | mandatory | The DeployedModel entity replaces the Connection entity. It contains the name of the microflow to run for the specified model and other information relevant to connect to a model. The OutputModality of the DeployedModel needs to be Text. |
 | `Request` | [Request](#request) | mandatory | An object that contains messages, optional attribute, and an optional [ToolCollection](#toolcollection). |
 
@@ -464,7 +464,7 @@ The `Chat Completions (without history)` operation supports scenarios where ther
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-| --- | --- | ---| --- |
+| --- | --- | --- | --- |
 | `UserPrompt` | String | mandatory | A user message is the input from a user. |
 | `DeployedModel` | [DeployedModel](#deployed-model) | mandatory | The DeployedModel entity replaces the Connection entity. It contains the name of the microflow to run for the specified model and other information relevant to connecting to a model. The OutputModality of the DeployedModel needs to be Text. |
 | `OptionalRequest` | [Request](#request) | optional | An optional object that contains optional attributes and an optional [ToolCollection](#toolcollection). If no Request is passed, one is created. |
@@ -474,7 +474,7 @@ The `Chat Completions (without history)` operation supports scenarios where ther
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](#response) | A `Response` object that contains the assistant's response.|
+| `Response` | [Response](#response) | A `Response` object that contains the assistant's response. |
 
 ##### Generate Embeddings (Chunk Collection) {#embeddings-chunk-collection}
 
@@ -483,7 +483,7 @@ The `Generate Embeddings (Chunk Collection)` operation allows the invocation of 
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-| --- | --- | ---| --- |
+| --- | --- | --- | --- |
 | `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | A ChunkCollection with Chunks for which an embedding vector should be generated. Use operations from GenAI commons to create a ChunkCollection and add Chunks or KnowledgeBaseChunks to it. |
 | `DeployedModel` | [DeployedModel](#deployed-model) | mandatory | The DeployedModel entity replaces the Connection entity. It contains the name of the microflow to run for the specified model and other information relevant to connecting to a model. The OutputModality needs to be Embeddings. |
 | `EmbeddingOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | optional | Can be used to pass optional request attributes. |
@@ -501,10 +501,10 @@ The `Generate Embeddings (String)` operation allows the invocation of the embedd
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-| --- | --- | ---| --- |
+| --- | --- | --- | --- |
 | `InputText` | String | mandatory | Input text to create the embedding vector. |
 | `DeployedModel` | [DeployedModel](#deployed-model) | mandatory | The DeployedModel entity replaces the Connection entity. It contains the name of the microflow to run for the specified model and other information relevant to connecting to a model. The OutputModality needs to be Embeddings. |
-| `EmbeddingOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | optional | Can be used to pass optional request attributes.|
+| `EmbeddingOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | optional | Can be used to pass optional request attributes. |
 
 ###### Return Value
 
@@ -519,7 +519,7 @@ The `Generate Image` operation supports the generation of images based on a `Use
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-| --- | --- | --- |--- |
+| --- | --- | --- | --- |
 | `DeployedModel` | [DeployedModel](#deployed-model) | mandatory | The DeployedModel entity replaces the Connection entity. It contains the name of the microflow to run for the specified model and other information relevant to connect to a model. The OutputModality needs to be Image. |
 | `UserPrompt` | String | mandatory | The description the image will be based on. |
 | `ImageOptions` | [ImageOptions](#imageoptions-entity) | optional | Can be used to pass optional request attributes. |
@@ -528,7 +528,7 @@ The `Generate Image` operation supports the generation of images based on a `Use
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` which needs to be used in [Get Generated Image (Single)](#image-get-single) or [Get Generated Images (List)](#image-get-list).|
+| `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` which needs to be used in [Get Generated Image (Single)](#image-get-single) or [Get Generated Images (List)](#image-get-list). |
 
 #### GenAI (Request Building) {#genai-request-building}
 
@@ -689,7 +689,7 @@ This operation processes a response that was created by an image generation oper
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `ResponseImageEntity` | Entity | mandatory | Specifies the entity of the returned image. Must be of type `System.Image` or its specializations. |
 | `Response` | [Response](#response) | mandatory | The response that was returned by an image generation operation. It points to a message with the FileContent to create the image. |
 
@@ -706,7 +706,7 @@ This operation processes a response that was created by an image generation oper
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `ResponseImageEntity` | Entity | mandatory | Specifies the entity of the returned image. Must be of type `System.Image` or its specializations. |
 | `Response` | [Response](#response) | mandatory | The response that was returned by an image generation operation. It points to a message with the FileContent to create the image. |
 
@@ -757,7 +757,7 @@ This microflow can be used to add an optional [StopSequence](#stopsequence) to t
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `Request` | [Request](#request) | mandatory | The request object that contains the functional input for the model to generate a response. |
 | `StopSequence` | String | mandatory | The stop sequence string, which is used to make the model stop generating tokens at a desired point. |
 
@@ -772,7 +772,7 @@ This microflow creates new [ImageOptions](#imageoptions-entity).
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | `Height` | Integer/Long | optional | To set Width. |
 | `Width` | Integer/Long | optional | To set Height. |
 | `NumberOfImages` | Integer/Long | optional | To set NumberOfImages to create. |
@@ -780,7 +780,7 @@ This microflow creates new [ImageOptions](#imageoptions-entity).
 ###### Return Value
 
 | Name | Type | Description |
-|--- |--- |--- |
+| --- | --- | --- |
 | `ImageOptions` | [ImageOptions](#imageoptions-entity) | The newly created ImageOptions object. |
 
 #### GenAI Knowledge Base (Content) {#genai-knowledgebase-content}
@@ -794,14 +794,14 @@ This microflow adds a new [Chunk](#chunk-entity) to the [ChunkCollection](#chunk
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | `InputText` | String | mandatory | Input text to generate an embedding vector. |
 | `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | The ChunkCollection to add the new Chunks to. |
 
 ###### Return Value
 
 | Name | Type | Description |
-|--- |--- |--- |
+| --- | --- | --- |
 | `Chunk` | [Chunk](#chunk-entity) | The added Chunk object. |
 
 ##### Chunks: Add KnowledgeBaseChunk to ChunkCollection{#chunkcollection-add-knowledgebasechunk}
@@ -811,7 +811,7 @@ This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to 
 ###### Input Parameters
 
 | Name | Type | Notes | Documentation |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | The ChunkCollection to which the KnowledgebaseChunk will be added. This ChunkCollection is the input for other operations. |
 | `InputText` | String | mandatory | Input text to generate an embedding vector. |
 | `HumanReadableID` | String | mandatory | A front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here. |
@@ -821,7 +821,7 @@ This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to 
 ###### Return Value
 
 | Name | Type | Description |
-|--- |--- |--- |
+| --- | --- | --- |
 | `KnowledgeBaseChunk` | [KnowledgeBaseChunk](#knowledgebasechunk-entity) | The added KnowledgeBaseChunk object. |
 
 ##### Chunks: Initialize ChunkCollection {#chunkcollection-create}
@@ -835,7 +835,7 @@ This microflow has no input parameters.
 ###### Return Value
 
 | Name | Type | Description |
-|--- |--- |--- |
+| --- | --- | --- |
 | `ChunkCollection` | [ChunkCollection](#chunkcollection) | The newly created ChunkCollection object. |
 
 ##### Embeddings: Create EmbeddingsOptions {#embeddingsoptions-create}
@@ -845,13 +845,13 @@ This microflow creates new [EmbeddingsOptions](#embeddingsoptions-entity).
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | `Dimensions` | Integer/Long | optional | The number of dimensions the resulting output embedding vectors should have. See connector documentation for supported values and models. |
 
 ###### Return Value
 
 | Name | Type | Description |
-|--- |--- |--- |
+| --- | --- | --- |
 | `EmbeddingsOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | The newly created EmbeddingsOptions object. |
 
 ##### Embeddings: Get First Vector from Response {#embeddings-get-first-vector}
@@ -861,13 +861,13 @@ This microflow gets the first embedding vector from the response of an embedding
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | mandatory | Response object that gets returned by the embeddings operations. |
 
 ###### Return Value
 
 | Name | Type | Description |
-|--- |--- |--- |
+| --- | --- | --- |
 | `Vector` | String | The first vector from the response. |
 
 ##### Knowledge Base: Add Metadata to MetadataCollection {#knowledgebase-add-metadata}
@@ -877,7 +877,7 @@ This microflow adds a new [Metadata](#metadatacollection-entity) object to a giv
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | `Key` | String | mandatory | The name of the metadata; typically indicates how to interpret the value. |
 | `Value` | String | mandatory | The value of the metadata that provides additional information about the chunk in the context of the given key. |
 | `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | mandatory | The MetadataCollection to which the new Metadata object will be added. |
@@ -893,14 +893,14 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 ###### Input Parameters
 
 | Name | Type | Notes | Description |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | `Key` | String | mandatory | The name of the metadata; typically indicates how to interpret the value. |
 | `Value` | String | mandatory | The value of the metadata that provides additional information about the chunk in the context of the given key. |
 
 ###### Return Value
 
 | Name | Type | Description |
-|--- |--- |--- |
+| --- | --- | --- |
 | `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | The newly created MetadataCollection object. |
 
 ### Enumerations {#enumerations} 

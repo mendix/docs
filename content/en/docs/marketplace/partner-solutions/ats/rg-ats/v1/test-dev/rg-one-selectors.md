@@ -12,11 +12,11 @@ For the [Find Widget Child Node action](/appstore/partner-solutions/ats/rg-one-f
 
 You can use the custom ATS selectors like CSS3 selectors in your custom actions.
 
-Pattern |Name | Meaning
------|---------|--------
+Pattern | Name | Meaning
+----- | --------- | --------
 :clickable | Clickable pseudo-class | Selects a user interface element whose CSS visibility property is set to visible.
 :containsExact(*text*) | ContainsExact pseudo-class | Selects an element whose inner HTML is exactly equal to the given text (**not** case sensitive)
-:containsExactCase(*text*) | ContainsExactCase pseudo-class |Selects an element whose inner HTML is exactly equal to the given text (case sensitive)
+:containsExactCase(*text*) | ContainsExactCase pseudo-class | Selects an element whose inner HTML is exactly equal to the given text (case sensitive)
 :containsRegex(*regex*) | ContainsRegex pseudo-class | Selects an element whose inner HTML matches the given regex.  
 :containsText(*text*) | ContainsText pseudo-class | Selects an element whose inner text value is equal to the given text. Can only be used on text, CDATA and element nodes
 :val(*text*) | Value pseudo-class | Selects an input, select or textarea whose value is equal to the given text
@@ -26,7 +26,7 @@ Pattern |Name | Meaning
 You can use any CSS Selector defined in CSS3 and supported by your browser. The following table shows some of the commonly used CSS3 selectors in ATS.
 
 | Pattern | Name | Meaning |
-| -----|---------|-------- |
+| ----- | --------- | -------- |
 | .myClass | Class Selector | Selects every element with class **myClass** |
 | #myID | ID Selector | Selects every element with ID **myID** |
 | E[foo="bar"] | Attribute Selector | Selects every element E whose "**foo**" attribute value is equal to "**bar**" |
@@ -48,8 +48,8 @@ In the [Execute JavaScript actions](/appstore/partner-solutions/ats/rg-one-execu
 
 The following table shows some of the additional JQuery selectors you can use in ATS.      
 
-Pattern |Name | Meaning
------|---------|--------
+Pattern | Name | Meaning
+----- | --------- | --------
  :animated | Animated Selector | Selects all elements that are in the progress of an animation at the time the selector is run
  :checkbox | Checkbox Selector | Selects all elements of type checkbox.
  :input | Input Selector | Selects all input, textarea, select and button elements.

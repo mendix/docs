@@ -171,7 +171,7 @@ This property defines whether the entity has the system association 'changedBy'.
 | Option | Description |
 | --- | --- |
 | True | Entity has the system association 'changedBy'. |
-| False *(default)*  | Entity does not have the system association 'changedBy'. |
+| False *(default)* | Entity does not have the system association 'changedBy'. |
 
 {{% alert color="info" %}}
 Data grids do not directly display the associated System.User entity or its specializations.

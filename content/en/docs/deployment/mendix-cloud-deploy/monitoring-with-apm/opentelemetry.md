@@ -39,7 +39,7 @@ To connect your Mendix Cloud environment to an OpenTelemetry backend:
 5. In the **Custom Environment Variables** section, add the following environment variables:
 
     | Variable | Description | Default |
-    |---|---|---|
+    | --- | --- | --- |
     | `MX_OTEL_ENABLED` | Master switch. Set to `true` to enable the integration. | `false` |
     | `MX_OTEL_EXPORTER_OTLP_ENDPOINT` | OTLP ingestion URL for all signals (traces, metrics, and logs). | — |
     | `MX_OTEL_EXPORTER_OTLP_HEADERS` | HTTP headers sent with every request. Used for authentication. Format: `key1=value1,key2=value2`. | — |
@@ -94,7 +94,7 @@ When not set explicitly, the exporter for each signal is inferred from the endpo
 If your backend requires different endpoints, headers, or protocols per signal, you can override the base OTLP configuration for each signal individually:
 
 | Base variable | Traces override | Metrics override | Logs override |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `MX_OTEL_EXPORTER_OTLP_ENDPOINT` | `MX_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT` | `MX_OTEL_EXPORTER_OTLP_METRICS_ENDPOINT` | `MX_OTEL_EXPORTER_OTLP_LOGS_ENDPOINT` |
 | `MX_OTEL_EXPORTER_OTLP_HEADERS` | `MX_OTEL_EXPORTER_OTLP_TRACES_HEADERS` | `MX_OTEL_EXPORTER_OTLP_METRICS_HEADERS` | `MX_OTEL_EXPORTER_OTLP_LOGS_HEADERS` |
 | `MX_OTEL_EXPORTER_OTLP_PROTOCOL` | `MX_OTEL_EXPORTER_OTLP_TRACES_PROTOCOL` | `MX_OTEL_EXPORTER_OTLP_METRICS_PROTOCOL` | `MX_OTEL_EXPORTER_OTLP_LOGS_PROTOCOL` |
@@ -146,11 +146,11 @@ MX_OTEL_SERVICE_NAME=my-mendix-app
 These variables control the resource attributes attached to all telemetry. They determine how your app is identified in your observability backend.
 
 | Variable | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | `MX_OTEL_SERVICE_NAME` | App subdomain | Service name (`service.name` attribute). Defaults to the subdomain of the app's first route (for example, `my-app` from `my-app.mendixcloud.com`). Set this variable to override it. |
 | `MX_OTEL_SERVICE_VERSION` | Model version | Service version (`service.version` attribute). Defaults to the Mendix model version. Falls back to the `version` application tag if set, otherwise `unversioned`. |
 | `MX_OTEL_DEPLOYMENT_ENV` | `env` tag or `none` | Deployment environment (`deployment.environment.name` attribute). Defaults to the `env` application tag if set, otherwise `none`. |
-| `MX_OTEL_RESOURCE_ATTRIBUTES` | _(from app tags)_ | Additional resource attributes as comma-separated `key=value` pairs. Automatically populated from the application tags set in the Developer Portal. Can be set directly to override the tag-derived value. |
+| `MX_OTEL_RESOURCE_ATTRIBUTES` | *(from app tags)* | Additional resource attributes as comma-separated `key=value` pairs. Automatically populated from the application tags set in the Developer Portal. Can be set directly to override the tag-derived value. |
 
 ### OpenTelemetry Issues
 

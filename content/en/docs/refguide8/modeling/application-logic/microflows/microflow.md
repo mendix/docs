@@ -41,7 +41,7 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 
 | Option | Description |
 | --- | --- |
-| No *(default)*  | It is possible to execute the microflow more than once concurrently. |
+| No *(default)* | It is possible to execute the microflow more than once concurrently. |
 | Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
 
 #### Error Message
@@ -71,7 +71,7 @@ To indicate whether or not an object should be committed, you can use Boolean as
 | Option | Description |
 | --- | --- |
 | Yes | Entity access is applied to retrieving and manipulating objects. The rights of current user are taken into account. |
-| No  *(default)*  | Entity access is not applied. |
+| No  *(default)* | Entity access is not applied. |
 
 {{% alert color="info" %}}
 By default entity access is not applied. Set **Apply entity access** to **Yes** if you want to perform some actions that respect the access rights of the current user.

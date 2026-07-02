@@ -48,14 +48,14 @@ Attribute types have to be primitive (not complex, collections, or enumerations)
 
 | OData Type | Mendix Type |
 | --- | --- |
-| Binary                         | Binary (but see 3.4) |
-| Boolean                        | Boolean ¹ |
-| Byte, SByte, Int16, Int32      | Integer |
+| Binary | Binary (but see 3.4) |
+| Boolean | Boolean ¹ |
+| Byte, SByte, Int16, Int32 | Integer |
 | DateTime, DateTimeOffset, Time | Date/time |
-| Decimal, Double, Single        | Decimal ² |
-| Int64                          | Long |
-| String, Guid                   | String |
-| (Other)                        | (Ignored) |
+| Decimal, Double, Single | Decimal ² |
+| Int64 | Long |
+| String, Guid | String |
+| (Other) | (Ignored) |
 
 {{% alert color="warning" %}}
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide8/call-rest-action/) activity to call these operations.

@@ -23,7 +23,7 @@ It is possible to use a sequence of names as a path.
 Name | Datatype | Required | Description
 --- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
-Value | String |no | The value of the widget
+Value | String | no | The value of the widget
 Visible Only | Boolean | no | Limit the possible return value to only visible widgets
 Search Context | WebElement | no | Limit the search to the given WebElement
 

@@ -18,7 +18,7 @@ Pass the name of the widget, the column and row caption, and the value you want 
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- | -------- | ------- |---------------
+---- | -------- | ------- | ---------------
 Widget Name | String | Yes | The name of the widget.
 Column Caption | String | Yes | The column caption of the checkbox cell you want to assert.
 Row Caption | String | Yes | The row caption of the checkbox cell you want to assert.

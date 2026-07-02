@@ -57,11 +57,11 @@ Flows form the connection between elements.
 
 Decisions deal with making choices and merging different paths again.
 
-| Graphic                                                      | Name                                         | Description                                                  |
+| Graphic | Name | Description |
 | ------------------------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------ |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/decision.png" link="/refguide9/decision/" class="no-border" >}} | [Decision](/refguide9/decision/)                         | A decision makes a decision based on a condition and follows one and only one of the outgoing flows. There is no parallel execution in microflows. |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/decision.png" link="/refguide9/decision/" class="no-border" >}} | [Decision](/refguide9/decision/) | A decision makes a decision based on a condition and follows one and only one of the outgoing flows. There is no parallel execution in microflows. |
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/object-type-decision.png" link="/refguide9/object-type-decision/" class="no-border" >}} | [Object Type Decision](/refguide9/object-type-decision/) | An object type decision is an element that makes a choice based on the [specialization](/refguide9/entities/) of the selected object. You can give the specialized object a name using a [cast object](/refguide9/cast-object/) action. |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/merge.png" link="/refguide9/merge/" class="no-border" >}} | [Merge](/refguide9/merge/)                               | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/merge.png" link="/refguide9/merge/" class="no-border" >}} | [Merge](/refguide9/merge/) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ### Activities{#activities}
 

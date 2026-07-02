@@ -209,7 +209,7 @@ For microflows that are used within a data widget, setting **Abort on Validation
 
 | Value | Description |
 | --- | --- |
-| Yes *(default)*| This will prevent the microflow from executing if there are any validation errors on the page. |
+| Yes *(default)* | This will prevent the microflow from executing if there are any validation errors on the page. |
 | Only for this widget | This will prevent the microflow from executing if there are validation errors in the current widget. |
 | No | The microflow will always be executed. |
 

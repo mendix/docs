@@ -60,7 +60,7 @@ Level 1 displays all documents that differ between the selected revision and you
 The task bar contains the following buttons:
 
 | Button | Action | When Enabled |
-|--------|--------|--------------|
+| -------- | -------- | -------------- |
 | **Back** | Returns to the previous level | Always disabled at Level 1 (to prevent layout shift) |
 | **Go to** | Opens the selected document and navigates to Level 2 or 3 | Enabled when a document is selected |
 | **Stop comparison** | Closes the comparison and returns to the blank state | Always enabled during an active comparison |
@@ -74,7 +74,7 @@ Right-click any cell in the grid to access the **Copy** option, which copies the
 The document list grid contains the following columns:
 
 | Column | Description | Elements It Shows |
-|--------|-------------|---------------|
+| -------- | ------------- | --------------- |
 | **Status** | The type of change | An icon and label indicating whether the document was **Added**, **Modified**, or **Deleted** |
 | **Item** | The document name | The name of the changed document (for example, a page, a microflow, or a domain model) |
 | **Module** | The module location | The module that contains the document |
@@ -84,7 +84,7 @@ The document list grid contains the following columns:
 The **Status** column shows one of the following types:
 
 | Status | Icon | Meaning | When It Appears |
-|--------|------|---------|-----------------|
+| -------- | ------ | --------- | ----------------- |
 | **Added** | Green circle | A new document was created | The document exists in the current state but not in the selected revision |
 | **Modified** | Yellow circle | Changes were made to an existing document | The document exists in both revisions but has differences |
 | **Deleted** | Red circle with minus | A document was removed | The document existed in the selected revision but not in the current state |
@@ -100,7 +100,7 @@ Double-click a document in Level 1 to navigate to Level 2 and Level 3, which app
 The task bar at Level 2 and 3 contains the following buttons:
 
 | Button | Action | When Enabled |
-|--------|--------|--------------|
+| -------- | -------- | -------------- |
 | **Back** | Returns to Level 1 | Always enabled |
 | **Go to** | Focuses on the selected element in the document | Enabled when an element is selected; remains active even for deleted elements to support cross-tab navigation |
 | **Expand all** | Expands all collapsed property tree rows in Level 3 | Always enabled when viewing Level 3 |
@@ -127,7 +127,7 @@ Hover over any cell to see the full value in a tooltip.
 The Level 3 grid shows the property-level differences for the element selected in Level 2:
 
 | Column | Description | What It Shows |
-|--------|-------------|---------------|
+| -------- | ------------- | --------------- |
 | **Property** | The property name | The name of the property that changed, shown as a tree structure |
 | **Older** | The value in the selected revision | The property value as it was in the historical revision |
 | **Newer** | The value in the current state | The property value as it is in your current working state |

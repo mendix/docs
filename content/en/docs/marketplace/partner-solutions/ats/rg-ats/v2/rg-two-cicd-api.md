@@ -18,7 +18,7 @@ CI/CD Templates are predefined configurations for a remote job run. The remote j
 {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-cicd-api/CICD_JobTemplateOverview.png" class="no-border" >}}
 
 | Name | Description |
-|------|-------------|
+| ------ | ------------- |
 | Type Icon | Test case, test suite. |
 | Name | Test case name, test suite name, or custom name. |
 | Browser | Firefox, Chrome. |
@@ -31,11 +31,11 @@ You can add new CI/CD Templates by clicking **Add Testcase** or **Add Testsuite*
 Configure the following options in the **New CI/CD Template** dialog box:
 
 | Name | Description |
-|------|-------------|
+| ------ | ------------- |
 | Name | By default, the name of the test case/test suite. Customizable. |
 | Environment | The environment to test. |
 | Selenium Hub | The Selenium hub where the test is completed. |
-| Browser | The browser that is used for the test: Firefox or Chrome.|
+| Browser | The browser that is used for the test: Firefox or Chrome. |
 
 For supported Selenium hubs, like BrowserStack, further options are available. For more details, see [Supported Selenium Hub Provider](/appstore/partner-solutions/ats/rg-two-supported-selenium-hub-provider/).
 
@@ -101,7 +101,7 @@ The following table shows the data contained in the response of the Run Job serv
 
 | Name | Description |
 | --- | --- |
-| Started | True if the test has already started. Otherwise, false.  |
+| Started | True if the test has already started. Otherwise, false. |
 | ErrorMessage | Contains the error message if the test failed to start. Empty if the test started successfully. |
 | JobID | The unique ID of the job. This ID is used to retrieve the result of the test with the **Get Job Status** service. |
 
@@ -140,7 +140,7 @@ You must include the following information in the request:
 | AppAPIToken | The key for the CI/CD API. Generated on the **App Settings** page. |
 | JobID | The unique ID of the job returned by the Run Job service. |
 | AppID | The ID of your Mendix app. |
-| IncludeExecutionFlags¹| Indicates whether to include execution flags (canceled, warning) in the response. |
+| IncludeExecutionFlags¹ | Indicates whether to include execution flags (canceled, warning) in the response. |
 | IncludeExecutionResultBreakdown¹ | Indicates whether to include the number of passed/failed/not run test cases in the response. |
 | IncludeDetailsPerTestCase¹ | Indicates whether to include details (for example, name, result, duration) for each test case that was run in the response. |
 
@@ -227,7 +227,7 @@ The following table shows the data contained in the response of the **Get Job St
 
 | Name | Description |
 | --- | --- |
-| ExecutionStatus| Status of the execution: **Running** or **Queued**. |
+| ExecutionStatus | Status of the execution: **Running** or **Queued**. |
 | ErrorMessage | Contains the error message if the test failed to start. Empty if the test started successfully. |
 | ExecutionResult | Result of the execution: **Passed** or **Failed**. |
 | ExecutionFlags¹ | Status of the canceled and warning flags for the job. |

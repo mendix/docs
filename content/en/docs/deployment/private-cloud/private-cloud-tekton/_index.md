@@ -230,12 +230,12 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
     --set triggerType=generic | kubectl apply -f - -n $NAMESPACE_WITH_PIPELINES
 ```
 
-| Parameter | Explanation                                                                                            |
-| --- |--------------------------------------------------------------------------------------------------------|
-| `name` | All created Kubernetes objects will have this suffix                                                   |
+| Parameter | Explanation |
+| --- | -------------------------------------------------------------------------------------------------------- |
+| `name` | All created Kubernetes objects will have this suffix |
 | `pipelineName` | Name of the pipeline to trigger. `build-pipeline` is the default pipeline name from the pipeline chart |
-| `triggerType` | Supported types - `generic` (as used in this section) and `gitlabwebhook` (see next section)           |
-| `$NAMESPACE_WITH_PIPELINES` | Namespace from section 6.                                                                              |
+| `triggerType` | Supported types - `generic` (as used in this section) and `gitlabwebhook` (see next section) |
+| `$NAMESPACE_WITH_PIPELINES` | Namespace from section 6. |
 
 You can use one Generic trigger with several environments. To use it with several environments you just need to pass the correct parameters in the HTTP request body.
 
@@ -268,7 +268,7 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | `gitlabwebhook.protocol` | Git protocol. Available options: `http` or `ssh` |
 | `gitlabwebhook. scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` do not exist<br/>`auto` – removes scheduled events listed in `myScheduledEvents` if they do not exist |
 | `gitlabwebhook.constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
-| `$NAMESPACE_WITH_PIPELINES` | Namespace from section 6.                                                                              |
+| `$NAMESPACE_WITH_PIPELINES` | Namespace from section 6. |
 
 To use GitLab triggers on several environments, you need to create a new trigger for every environment and provide the correct parameters during installation of the trigger.
 
@@ -574,15 +574,15 @@ curl -X POST \
 }'
 ```
 
-| Parameter | Explanation                                                                                                                                                                                                                                                         |
-| --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `repo.url` | The URL of Git repository that will be fetched                                                                                                                                                                                                                          |
-| `repo.revision` | A Git revision (for example, branch, tag, or SHA) that will be fetched                                                                                                                                                                                              |
-| `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                                                                                                                                         |
-| `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name`                                                                                                                       |
+| Parameter | Explanation |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `repo.url` | The URL of Git repository that will be fetched |
+| `repo.revision` | A Git revision (for example, branch, tag, or SHA) that will be fetched |
+| `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
+| `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
 | `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` in the MendixApp CR do not exist in the Mendix MPR<br/><br/>`auto` – removes scheduled events listed in `myScheduledEvents` in the MendixApp CR if they do not exist in the Mendix MPR |
-| `constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator                                                                                 |
-| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                                                                                                                                         |
+| `constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
+| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled. |
 
 #### Build Pipeline Using a GitLab Webhook Trigger
 
@@ -622,21 +622,21 @@ curl -X POST \
 }'
 ```
 
-| Parameter | Explanation                                                                                                                                   |
-| --- |-----------------------------------------------------------------------------------------------------------------------------------------------|
-| `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                   |
+| Parameter | Explanation |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `namespace` | name of the Kubernetes namespace where Mendix Operator runs |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
-| `source-url` *(Optional)* | .mda file url or oci-image (using `oci-image://` scheme) url. If empty, the url is not changed                                                |
-| `mx-admin-password` | Mendix admin password     |
-| `replicas` *(Optional)* | number of replicas. If empty, the number of replicas remains the same                                                                         |
-| `dtap-mode` *(Optional)* | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development       |
-| `set-constants` *(Optional)* | constants to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"}                                     |
-| `add-constants` *(Optional)* | constants to add provided as a JSON map. Example: {"KEY":"VALUE"}                                                                             |
-| `remove-constants` *(Optional)* | constants to delete provided as a JSON array. Example: ["KEY1","KEY2"]                                                                        |
-| `set-env-vars` *(Optional)* | environment variables to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"}                         |
-| `add-env-vars` *(Optional)* | environment variables to add provided as a JSON map. Example: {"KEY":"VALUE"}                                                                 |
-| `remove-env-vars` *(Optional)* | environment variables to delete as JSON array. Example: ["KEY1","KEY2"]                                                                       |
-| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                               |
+| `source-url` *(Optional)* | .mda file url or oci-image (using `oci-image://` scheme) url. If empty, the url is not changed |
+| `mx-admin-password` | Mendix admin password |
+| `replicas` *(Optional)* | number of replicas. If empty, the number of replicas remains the same |
+| `dtap-mode` *(Optional)* | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development |
+| `set-constants` *(Optional)* | constants to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"} |
+| `add-constants` *(Optional)* | constants to add provided as a JSON map. Example: {"KEY":"VALUE"} |
+| `remove-constants` *(Optional)* | constants to delete provided as a JSON array. Example: ["KEY1","KEY2"] |
+| `set-env-vars` *(Optional)* | environment variables to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"} |
+| `add-env-vars` *(Optional)* | environment variables to add provided as a JSON map. Example: {"KEY":"VALUE"} |
+| `remove-env-vars` *(Optional)* | environment variables to delete as JSON array. Example: ["KEY1","KEY2"] |
+| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled. |
 
 ### Delete App Pipeline
 
@@ -654,11 +654,11 @@ curl -X POST \
 }'
 ```
 
-| Parameter | Explanation                                                                                                                                     |
-| --- |-------------------------------------------------------------------------------------------------------------------------------------------------|
-| `namespace` | name of the Kubernetes namespace where the Mendix Operator runs                                                                                 |
+| Parameter | Explanation |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `namespace` | name of the Kubernetes namespace where the Mendix Operator runs |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names using the command `kubectl get mendixapps -n $namespace_name` |
-| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                         |
+| `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled. |
 
 ## Troubleshooting {#troubleshooting}
 

@@ -23,7 +23,7 @@ To see a list of commands, use the command `mx --help`.
 
 These are the available [app commands](/refguide/mx-command-line-tool/app/):
 
-| Command  | Description |
+| Command | Description |
 | --- | --- |
 | [check](/refguide/mx-command-line-tool/app/#check) | Checks the app for issues. |
 | [convert](/refguide/mx-command-line-tool/app/#convert) | Converts the Mendix app. |
@@ -38,7 +38,7 @@ These are the available [app commands](/refguide/mx-command-line-tool/app/):
 
 These are the available [adaptable solutions commands](/refguide/mx-command-line-tool/adaptable/):
 
-| Command | Description|
+| Command | Description |
 | --- | --- |
 | [show-app-version](/refguide/mx-command-line-tool/adaptable/#show-app-version) | Shows the application version of the app. |
 | [set-app-version](/refguide/mx-command-line-tool/adaptable/#set-app-version) | Sets the application version of the app. |
@@ -47,8 +47,8 @@ These are the available [adaptable solutions commands](/refguide/mx-command-line
 
 These are the available [module commands](/refguide/mx-command-line-tool/module/):
 
-|  Command | Description |
-|---|---|
+| Command | Description |
+| --- | --- |
 | [show-module-version](/refguide/mx-command-line-tool/module/#show-module-version) | Shows the version of a module. |
 | [set-module-version](/refguide/mx-command-line-tool/module/#set-module-version) | Sets the version of a module. |
 | [module-import](/refguide/mx-command-line-tool/module/#module-import) | Imports a module from an mpk package into an app. |
@@ -57,7 +57,7 @@ These are the available [module commands](/refguide/mx-command-line-tool/module/
 
 These are the available [export package commands](/refguide/mx-command-line-tool/export/):
 
-|  Command | Description |
+| Command | Description |
 | --- | --- |
 | [create-project-package](/refguide/mx-command-line-tool/export/#create-project-package) | Exports an app package. |
 | [create-solution-package](/refguide/mx-command-line-tool/export/#create-solution-package) | Exports a solution package. |
@@ -67,7 +67,7 @@ These are the available [export package commands](/refguide/mx-command-line-tool
 
 These are the available [merging and diffing commands](/refguide/mx-command-line-tool/merge/):
 
-|   Command | Description |
+| Command | Description |
 | --- | --- |
 | [merge](/refguide/mx-command-line-tool/merge/#merge) | Merges the *.mpr* files. |
 | [diff](/refguide/mx-command-line-tool/merge/#diff) | Shows the diff of the *.mpr* files. |
@@ -77,7 +77,7 @@ These are the available [merging and diffing commands](/refguide/mx-command-line
 
 These are the available [private values commands](/refguide/mx-command-line-tool/private-values/):
 
-|   Command | Description |
+| Command | Description |
 | --- | --- |
 | [show-private-values](/refguide/mx-command-line-tool/private-values/#show-private-values) | Shows private values. |
 | [delete-private-values](/refguide/mx-command-line-tool/private-values/#delete-private-values) | Deletes private values. |

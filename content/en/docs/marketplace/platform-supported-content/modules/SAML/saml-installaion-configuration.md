@@ -178,38 +178,38 @@ The table below shows you the different attributes and their values for quick re
 | --- | --- | --- |
 | **Alias** (mandatory) | This represents IdPconfiguration Alias | |
 | **IdPMetadataURL** (mandatory) | This represents the URL of the IdPMetadataURL | |
-| **IdPConfiguration_MicroflowName**  | This constant specifies a custom microflow that returns a list of IdP configurations and is used to create SAML IdP configurations at deploy time. | `SAML.Default_CreateIDPConfiguration` |
-| **ResponseProtocolBinding**  | Response protocol binding contains a caption value of SAML20.Enum_ProtocolBinding | POST_BINDING |
+| **IdPConfiguration_MicroflowName** | This constant specifies a custom microflow that returns a list of IdP configurations and is used to create SAML IdP configurations at deploy time. | `SAML.Default_CreateIDPConfiguration` |
+| **ResponseProtocolBinding** | Response protocol binding contains a caption value of SAML20.Enum_ProtocolBinding | POST_BINDING |
 | **EnableAssertionConsumerServiceIndex** | EnableAssertionConsumerService Concept contains caption value of SAML20.Enum_AssertionConsumerServiceIndex | NO |
 | **AssertionConsumerServiceIndex** | This should hold the same value for the SAML configuration and the IdPs. | 0 |
 | **EnableInitialLoginAttributeConsumingService** | This will be returned when the end-user initially signs in | FALSE | 
-| **InitialLoginServiceName** |  It represents the Initial login Attribute Consuming Service name | Service1 | 
+| **InitialLoginServiceName** | It represents the Initial login Attribute Consuming Service name | Service1 | 
 | **InitialLoginAttributeConsumingServiceIndex** | It represents the Initial login Attribute Consuming Service Index | 1 | 
 | **InitialLoginDep_SPAttribute_Dep_IdPConfiguration** | It will display the details of Value, Name, IsRequired details | | 
 | **EnableInSessionAttributeConsumingService** | To enable this feature, configure at least one request attribute for the in-session attribute consuming service. | FALSE | 
 | **InSessionServiceName** | It represents the In-Session Attribute Consuming Service name | Service2 |  
-| **InSessionAttributeConsumingServiceIndex** |  It represents the In-Session Attribute Consuming Service Index | 2 | 
-| **InSessionDep_SPAttribute_Dep_IdPConfiguration**| It will display the details of Value, Name, IsRequired details | | 
+| **InSessionAttributeConsumingServiceIndex** | It represents the In-Session Attribute Consuming Service Index | 2 | 
+| **InSessionDep_SPAttribute_Dep_IdPConfiguration** | It will display the details of Value, Name, IsRequired details | | 
 | **PreferredEntityDescriptor** | It represents the entityID of the EntityDescriptor | | 
 | **AllowIdpInitiatedAuthentication** | Authentication should start at this application, which generates an ID. The authenticated response should match this generated Id. If no request can be found that matches the response Id the information is rejected. If your IdP can initiate a new transaction (with a new or no Id) and you want to allow this you can check this box. | FALSE |
 | **EnableForceAuthentication** | will force the SAML IdP to (re)authenticate end-users, even if they are already signed in at the SAML IdP. | FALSE |
 | **EnableMobileAuthToken** | If enabled, an auth token cookie will be set on login that can be used by Mendix hybrid mobile apps to log in after the app is closed. | FALSE |
 | DelegatedAuthenticationURL | This will allow you to use a SAML token and delegate the authentication through SAML. | |
-| **CustomPrepareInSessionAuthenticationMicroflow**  | This represents the Custom Prepare In-Session Authentication microflow. It sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app. | |
-| **CustomEvaluateInSessionAuthenticationMicroflow**  | It implements the logic that handles the authentication details of the in-session authentication. | |
+| **CustomPrepareInSessionAuthenticationMicroflow** | This represents the Custom Prepare In-Session Authentication microflow. It sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app. | |
+| **CustomEvaluateInSessionAuthenticationMicroflow** | It implements the logic that handles the authentication details of the in-session authentication. | |
 | **NameIDFormat** | This attribute represents the Description of SAML20.NameIDFormat. Disable NameID policy is true when this attribute (NameIDFormat) is invalid. | |
 | **AuthenticationContext** | It represents Authentication context comparison contains the caption value of SAML20.TypeOfAuthnContext | Exact (Default) |
 | **UserEntity** | The Mendix entity in which you will store and look up the user account. | Administration.Account |
 | **UserPrincipalAttribute** | Determines the attribute on which you want to do the lookup in Entity attributes. | Name |
 | **UserIdPPrincipalAttribute** | We need to provide the attribute that contains the user name that uniquely identifies the user. It should be Assertion Name | UseNameID |
 | **CreateUsers** | The module will always search for the user, based on the Identifying Assertion. You can allow the module to create users with a predefined user role. If you allow the module to create users, it will automatically create a new user account if the user cannot be found. If the module is not allowed to create users, it will present a message to the user stating that the login action was successful but no user has been configured. | true |
-| **UserRoleName**  | This role will be assigned to newly created users. | User |
+| **UserRoleName** | This role will be assigned to newly created users. | User |
 | **UserType** | Assign user type to the created users | Internal |
-| **CustomUserProvisioning**  | This is an optional configuration to run a microflow to persist user information in your app model using some of your own specific logic. First, you need to develop a custom microflow in your app and select it for the CustomUserProvisioning. | |
-| **CustomAfterSigninLogic**  | Checking the box will execute the `CustomAfterSigninLogic microflow`. You can replace the default with your custom microflow below. This microflow runs after a new session is created, allowing you to copy or review data from the original (anonymous) session to the new session or user. This functionality is similar to the after-sign-in microflow in Mendix project security. Only custom microflows starting with 'Custom' will appear in the list. | |
-| **UseEncryption**  | Enable better security for app | TRUE |
-| **EncryptionMethod**  | This represents the Encryption Algorithm | SHA256 - RSA |
-| **EncryptionKeyLength**  | This constant represents the Encryption length | 2048 bits |
+| **CustomUserProvisioning** | This is an optional configuration to run a microflow to persist user information in your app model using some of your own specific logic. First, you need to develop a custom microflow in your app and select it for the CustomUserProvisioning. | |
+| **CustomAfterSigninLogic** | Checking the box will execute the `CustomAfterSigninLogic microflow`. You can replace the default with your custom microflow below. This microflow runs after a new session is created, allowing you to copy or review data from the original (anonymous) session to the new session or user. This functionality is similar to the after-sign-in microflow in Mendix project security. Only custom microflows starting with 'Custom' will appear in the list. | |
+| **UseEncryption** | Enable better security for app | TRUE |
+| **EncryptionMethod** | This represents the Encryption Algorithm | SHA256 - RSA |
+| **EncryptionKeyLength** | This constant represents the Encryption length | 2048 bits |
 | Active | After completion of IdP config it will make the Toggle Active | true |
 
 Deploy the application and log in with the SSO. For more information, see the [Deploy the Application and Login with SSO](#deploy-application) section above.

@@ -62,7 +62,7 @@ This property determines what happens when the content of a region does not fit 
 
 | Value | Description |
 | --- | --- |
-| Per region *(default)*  | Every region will show its own scroll bar in case its content does not fit. |
+| Per region *(default)* | Every region will show its own scroll bar in case its content does not fit. |
 | Full widget | The scroll container will grow to fit its contents and will leave scrolling to its parent. |
 
 {{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}

@@ -46,7 +46,7 @@ This table shows the solutions you can use when you want to connect Mendix apps 
 | Category | Solution |
 | --- | --- |
 | Platform-supported protocols | Connect to two or more Mendix applications using platform-supported facilities:<br> <ul><li>SOAP web services (see [Published Web Services](/refguide/published-web-services/) and [Consumed Web Services](/refguide/consumed-web-services/))</li> <li>REST web services (see [Published REST Services](/refguide/published-rest-service/) and [Consumed REST Service](/refguide/consumed-rest-service/))</li> <li>OData (see [Published OData Services](/refguide/published-odata-services/) and [Consumed OData Services](/refguide/consumed-odata-services/))</li> <li>Catalog (see the [Catalog Guide](/catalog/))</li></ul> | 
-| Unsupported protocols   | Build a module to connect either with alternative protocols, or by encapsulating one of the platform supported protocols. You can do this with [Java actions](/refguide/java-actions/) or [JavaScript actions](/refguide/javascript-actions/).  | 
+| Unsupported protocols | Build a module to connect either with alternative protocols, or by encapsulating one of the platform supported protocols. You can do this with [Java actions](/refguide/java-actions/) or [JavaScript actions](/refguide/javascript-actions/). | 
 
 #### Connecting Mendix Apps to Third-Party Systems  
 
@@ -54,9 +54,9 @@ This table shows the solutions you can use when you want to connect Mendix apps 
 
 | Category | Solution |
 | --- | --- |
-| Platform-supported protocols | Connect a Mendix application to one or more third party applications using platform-supported facilities: <ul><li>SOAP web services</li> <li>REST web services</li> <li>OData</li></ul>       | 
-| eQube-supported protocols   | Use eQube-supported facilities: <ul><li>Web services</li> <li>REST</li> <li>OData</li></ul> | 
-| Unsupported protocols   | Build a module to connect either via alternative protocols, or by encapsulating one of the platform supported protocols. |
+| Platform-supported protocols | Connect a Mendix application to one or more third party applications using platform-supported facilities: <ul><li>SOAP web services</li> <li>REST web services</li> <li>OData</li></ul> | 
+| eQube-supported protocols | Use eQube-supported facilities: <ul><li>Web services</li> <li>REST</li> <li>OData</li></ul> | 
+| Unsupported protocols | Build a module to connect either via alternative protocols, or by encapsulating one of the platform supported protocols. |
 
 {{% alert color="info" %}}
 The [Catalog](/catalog/) is a hub for shared registered assets made available in your organization. At the moment, it supports OData, REST, and Business Events.

@@ -50,7 +50,7 @@ In **Error handling type**, you can choose the type of error handling for the ac
 The **Disabled** property allows you to skip the activity from a flow.
 
 | Option | Description | 
-| --- |--- |
+| --- | --- |
 | Yes | The activity is shown as faded out and errors are ignored. When running your microflow, the disabled activity is skipped, also while debugging. |
 | No *(default)* | The activity works as usual. | 
 

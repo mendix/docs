@@ -11,133 +11,133 @@ description: "Lists and describes the Teamcenter Connector reference parameters.
 
 | Name | Generalization | Documentation |
 | --- | --- | --- |
-| `TcSession` |  | Represents the data required for maintaining a session with a Teamcenter server. |
-| `Cookie` |  | HTTP Cookie |
-| `SoaServiceRequest` |  | This entity is used by TcConnector published APIs internally. |
-| `Credentials` |  | Credentials of the Teamcenter user. |
-| `TcServerInfo` |  | Entity to store the Teamcenter server information.  <br>(Deprecated) |
-|  `BaseCreateInput` |  | An input entity representing the createInputs key for forming request for the Core-2015-07-DataManagement/createRelateAndSubmitObjects2 Teamcenter service.  <br>  <br>This is an abstract entity representing object properties common across Teamcenter types. |
+| `TcSession` | | Represents the data required for maintaining a session with a Teamcenter server. |
+| `Cookie` | | HTTP Cookie |
+| `SoaServiceRequest` | | This entity is used by TcConnector published APIs internally. |
+| `Credentials` | | Credentials of the Teamcenter user. |
+| `TcServerInfo` | | Entity to store the Teamcenter server information.  <br>(Deprecated) |
+| `BaseCreateInput` | | An input entity representing the createInputs key for forming request for the Core-2015-07-DataManagement/createRelateAndSubmitObjects2 Teamcenter service.  <br>  <br>This is an abstract entity representing object properties common across Teamcenter types. |
 | `CreateInput` | TcConnector.BaseCreateInput | Represents input entity for Core-2015-07-DataManagement/createRelateAndSubmitObjects2 Teamcenter service. |
 | `CompndCreateInput` | TcConnector.BaseCreateInput | Input entity representing the createInputs/compoundCreateInput key for forming request for the Core-2015-07-DataManagement/createRelateAndSubmitObjects2 Teamcenter service.  <br>  <br>This entity holds type referenced property name available on the CreateInput descriptor of the business object type. |
 | `ItemCreateInput` | TcConnector.CreateInput | Input entity representing the createInputs key for forming request for the Core-2015-07-DataManagement/createRelateAndSubmitObjects2 Teamcenter service for creating Teamcenter Item.  <br>  <br>This entity can only have the properties available on CreateInput descriptor of the business object type Item. |
 | `ItemRevisionCompoundCreateInput` | TcConnector.CompndCreateInput | Input entity representing the createInputs/compoundCreateInput key for forming request for the Core-2015-07-DataManagement/createRelateAndSubmitObjects2 Teamcenter service for creating Teamcenter Item.  <br>  <br>This entity holds the name of the type of Item Revision business object to be created. It has the same properties as available on CreateInput descriptor of the ItemRevision type. |
-| `ModelObject` |  | Represents an abstract entity representing a Teamcenter business object. |
-| `Property` |  | Represents name of the property. |
-| `PropertyValue` |  | Represents value of the property |
+| `ModelObject` | | Represents an abstract entity representing a Teamcenter business object. |
+| `Property` | | Represents name of the property. |
+| `PropertyValue` | | Represents value of the property |
 | `User` | TcConnector.ModelObject | Represents the User business object type from Teamcenter. |
-| `ServiceData` |  | ServiceData is part of ServiceResponse, It contains information regarding created, updated and deleted objects. It also has partial error information. |
-| `UID` |  | Represents unique identifier for Teamcenter business object. |
+| `ServiceData` | | ServiceData is part of ServiceResponse, It contains information regarding created, updated and deleted objects. It also has partial error information. |
+| `UID` | | Represents unique identifier for Teamcenter business object. |
 | `ItemRevision` | TcConnector.WorkspaceObject | Represents the ItemRevision business object type from Teamcenter. |
 | `WorkspaceObject` | TcConnector.POM_application_object | Represents the Workspaceobject business object type from Teamcenter. |
 | `POM_application_object` | TcConnector.ModelObject | Represents the POM_application_object business object type from Teamcenter. |
-| `Pair` |  | Represents name value pair. |
-| `SearchInput` |  | Input entity for the Query-2014-11-Finder/performSearch Teamcenter service. |
-| `SearchCriteriaInput` |  | The criteria used to perform search (string/string). For example, for object set search, the search criteria are parentUid and object set source string. |
-| `FindSavedQueryInput` |  | Input entity for the Query-2010-04-SavedQuery/findSavedQueries Teamcenter service. |
+| `Pair` | | Represents name value pair. |
+| `SearchInput` | | Input entity for the Query-2014-11-Finder/performSearch Teamcenter service. |
+| `SearchCriteriaInput` | | The criteria used to perform search (string/string). For example, for object set search, the search criteria are parentUid and object set source string. |
+| `FindSavedQueryInput` | | Input entity for the Query-2010-04-SavedQuery/findSavedQueries Teamcenter service. |
 | `SearchCriteria_SavedQuery` | TcConnector.SearchCriteriaInput | Represents common search criteria for saved queries.  <br>This is active workspace provider |
 | `GeneralQuery` | TcConnector.SearchCriteria_SavedQuery | Represents input criteria for General Query.  <br>This entity is used for the active workspace provider. |
 | `ItemSimpleQuery` | TcConnector.SearchCriteria_SavedQuery | Represents input criteria for Item Simple Query.  <br>This entity is used for the active workspace provider. |
 | `ImanQuery` | TcConnector.POM_application_object | Represents the ImanQuery business object type from Teamcenter. |
 | `Item` | TcConnector.WorkspaceObject | Represents the Item business object type from Teamcenter. |
-| `ListOfModelObject` |  | Represents a list of ModelObjects. This list is introduced to access objects to be displayed on the page through association. |
+| `ListOfModelObject` | | Represents a list of ModelObjects. This list is introduced to access objects to be displayed on the page through association. |
 | `Group` | TcConnector.ModelObject | Represents the Group business object type from Teamcenter. |
-| `ReviseInputs` |  | Input entity for the Core-2013-05-DataManagement/reviseObjects Teamcenter service. |
+| `ReviseInputs` | | Input entity for the Core-2013-05-DataManagement/reviseObjects Teamcenter service. |
 | `ReviseItemRevision` | TcConnector.ReviseInputs | Map of property name (key) and property values (values) in string format, to be set on new object being created with revise. |
-| `TeamcenterConfiguration` |  | Entity to store the Teamcenter configuration. |
+| `TeamcenterConfiguration` | | Entity to store the Teamcenter configuration. |
 | `Dataset` | TcConnector.WorkspaceObject | Represents the Dataset business object type in Teamcenter. |
 | `PSBOMView` | TcConnector.WorkspaceObject | Represents the PSBOMView business object type from Teamcenter. |
 | `RevisionRule` | TcConnector.WorkspaceObject | Represents the RevisionRule business object type from Teamcenter. |
 | `BOMLine` | TcConnector.ModelObject | Represents the BOMLine business object type in Teamcenter. |
-| `CreateRelationInput` |  | Input entity for the Core-2006-03-DataManagement/createRelations Teamcenter service.  <br>Primary object, Secondary object and RelationType is input for the service. |
+| `CreateRelationInput` | | Input entity for the Core-2006-03-DataManagement/createRelations Teamcenter service.  <br>Primary object, Secondary object and RelationType is input for the service. |
 | `SessionUser` | TcConnector.User | Represents the Teamcenter session user.  <br>(Deprecated) |
-| `ServiceResponse` |  | Represents an abstract entity representing a Teamcenter service response. |
+| `ServiceResponse` | | Represents an abstract entity representing a Teamcenter service response. |
 | `SearchResponse` | TcConnector.ServiceResponse | Response entity for the Query-2014-11-Finder/performSearch Teamcenter service. |
-| `ErrorStack` |  | Represents the Teamcenter error stack. |
+| `ErrorStack` | | Represents the Teamcenter error stack. |
 | `ImanRelation` | TcConnector.POM_application_object | Represents the ImanRelation business object type from Teamcenter. |
 | `CreateRelationResponse` | TcConnector.ServiceResponse | Entity representing a response returned by the Core-2006-03-DataManagement/createRelations Teamcenter service.  <br>  <br>Created relation is output of the service and can be retrieved using TcConnector.relation association with this entity. |
 | `FindSavedQueryResponse` | TcConnector.ServiceResponse | Response entity for the Query-2010-04-SavedQuery/findSavedQueries Teamcenter service. |
 | `ReviseObjectsResponse` | TcConnector.ServiceResponse | Response entity for the Core-2013-05-DataManagement/reviseObjects Teamcenter service. |
-| `ReviseOutputResponse` |  | The target object and the newly created revised objects. |
-| `ReviseTreesResponse` |  | List corresponding to the input target objects that holds mapping between the original objects and the copied objects. |
-| `CreateBomWindowInput` |  | Input entity for Cad-2007-01-StructureManagement/createBOMWindows Teamcenter service.  <br>Item Revision and Revision Rule is input for the service. |
+| `ReviseOutputResponse` | | The target object and the newly created revised objects. |
+| `ReviseTreesResponse` | | List corresponding to the input target objects that holds mapping between the original objects and the copied objects. |
+| `CreateBomWindowInput` | | Input entity for Cad-2007-01-StructureManagement/createBOMWindows Teamcenter service.  <br>Item Revision and Revision Rule is input for the service. |
 | `CreateBomWindowResponse` | TcConnector.ServiceResponse | Response entity for Cad-2007-01-StructureManagement/createBOMWindows Teamcenter service.  <br>BOMLine entity is the output for the service. |
-| `ExpandPSOneLevelInput` |  | Input entity for the Cad-2007-01-StructureManagement/expandPSOneLevel Teamcenter service.  <br>BOMLine is input for the service. |
+| `ExpandPSOneLevelInput` | | Input entity for the Cad-2007-01-StructureManagement/expandPSOneLevel Teamcenter service.  <br>BOMLine is input for the service. |
 | `ExpandPSOneLevelResponse` | TcConnector.ServiceResponse | Response entity for the Cad-2007-01-StructureManagement/expandPSOneLevel Teamcenter service.  <br>First level children (as list of BOMLines) of given parent BOMLines is the output of the service. |
 | `ReleaseStatus` | TcConnector.ModelObject | Represents the release status maturity of a WorkspaceObject. ReleaseStatus adds effectivity information used by Teamcenter assembly features for configuration. |
 | `FileDocument` | System.FileDocument | Represents the subtype of System.FileDocument object. |
-| `SavedGeneralQuery` |  | Represents the input criteria for General Query. |
-| `SavedItemSimpleQuery` |  | Represents the input criteria for Item Simple Query. |
+| `SavedGeneralQuery` | | Represents the input criteria for General Query. |
+| `SavedItemSimpleQuery` | | Represents the input criteria for Item Simple Query. |
 | `BOMWindow` | TcConnector.ModelObject | Represents the BOMWindow business object type in Teamcenter. |
-| `Relation_BOMLine` |  | Dataset object references attached by given relation name are returned. |
-| `ChildrenObject` |  | List of ExpandPSData children found for the associated parent. |
+| `Relation_BOMLine` | | Dataset object references attached by given relation name are returned. |
+| `ChildrenObject` | | List of ExpandPSData children found for the associated parent. |
 | `GetRevisionRulesResponse` | TcConnector.ServiceResponse | Response entity for the Cad-2007-01-StructureManagement/getRevisionRules Teamcenter service.  <br>It contains RevisionRuleInfo |
-| `RevisionRulesResponseOutput` |  | List of RevisionRuleInfo which contains Revision rule. |
-| `CreateWorkflowInput` |  | Input entity for Workflow-2014-10-Workflow/createWorkflow Teamcenter service. |
+| `RevisionRulesResponseOutput` | | List of RevisionRuleInfo which contains Revision rule. |
+| `CreateWorkflowInput` | | Input entity for Workflow-2014-10-Workflow/createWorkflow Teamcenter service. |
 | `CreateWorkflowResponse` | TcConnector.ServiceResponse | Response entity for Workflow-2014-10-Workflow/createWorkflow Teamcenter service. |
 | `EPMTask` | TcConnector.WorkspaceObject | Represents the EPMTask business object type from Teamcenter. |
-| `createWorkflowtRelationTypes` |  | Entity to represent Attachment Relation Types, This has association with CreateWorkflowInput entity. |
-| `GetAllTasksInput` |  | Input entity for Workflow-2008-06-Workflow/getAllTasks Teamcenter service. |
+| `createWorkflowtRelationTypes` | | Entity to represent Attachment Relation Types, This has association with CreateWorkflowInput entity. |
+| `GetAllTasksInput` | | Input entity for Workflow-2008-06-Workflow/getAllTasks Teamcenter service. |
 | `EPMJob` | TcConnector.WorkspaceObject | Represents the EPMJob business object type from Teamcenter. |
 | `GetAllTasksResponse` | TcConnector.ServiceResponse | Response entity for Workflow-2008-06-Workflow/getAllTasks Teamcenter service. |
-| `PerformActionInput` |  | Input entity for Workflow-2012-10-Workflow/performAction2 Teamcenter service. |
-| `StringObject]` |  | Entity represnt the the string array in the response. |
-| `IntegerObject` |  | Entity represnt the the integer array in the response. |
-| `UpdatedPropertiesInput` |  | List of PropInfo structure which consists of information about the objects and the property values to set. |
-| `ValuesInput` |  | Values of the property |
+| `PerformActionInput` | | Input entity for Workflow-2012-10-Workflow/performAction2 Teamcenter service. |
+| `StringObject]` | | Entity represnt the the string array in the response. |
+| `IntegerObject` | | Entity represnt the the integer array in the response. |
+| `UpdatedPropertiesInput` | | List of PropInfo structure which consists of information about the objects and the property values to set. |
+| `ValuesInput` | | Values of the property |
 | `FindUsersTasksResponse` | TcConnector.ServiceResponse | Response entity for FindUsersTasksTeamcenter service. |
 | `TaskInbox` | TcConnector.WorkspaceObject | Represents the TaskInbox business object type from Teamcenter. |
-| `GetWorkflowTemplatesInput` |  | Input entity for Workflow-2008-06-Workflow/getWorkflowTemplates Teamcenter service. |
+| `GetWorkflowTemplatesInput` | | Input entity for Workflow-2008-06-Workflow/getWorkflowTemplates Teamcenter service. |
 | `GetWorkflowTemplatesResponse` | TcConnector.ServiceResponse | Response entity for Workflow-2008-06-Workflow/getWorkflowTemplates Teamcenter service. |
 | `EPMTaskTemplate` | TcConnector.POM_application_object | Represents the EPMTaskTemplate business object type from Teamcenter. |
 | `TC_Project` | TcConnector.POM_application_object | Represents the TC_Project business object type from Teamcenter. |
 | `VariantRule` | TcConnector.WorkspaceObject | Represents the VariantRule business object type from Teamcenter. |
 | `ConfigurationContext` | TcConnector.WorkspaceObject | Represents the ConfigurationContext business object type from Teamcenter. |
-| `BomWindowPropFlagMap` |  | Map of property name (key) and property values (values) in string format, to be set on info input to create BOM window. |
-| `ParentObject` |  | List of ExpandPSData children found for the associated parent. |
-| `ExpandPSAllLevelsOutput` |  | Response entity for the Cad-2007-01-StructureManagement/expandPSOneLevel Teamcenter service.  <br>First level children (as list of BOMLines) of given parent BOMLines is the output of the service. |
+| `BomWindowPropFlagMap` | | Map of property name (key) and property values (values) in string format, to be set on info input to create BOM window. |
+| `ParentObject` | | List of ExpandPSData children found for the associated parent. |
+| `ExpandPSAllLevelsOutput` | | Response entity for the Cad-2007-01-StructureManagement/expandPSOneLevel Teamcenter service.  <br>First level children (as list of BOMLines) of given parent BOMLines is the output of the service. |
 | `ExpandPSAllLevelsResponse` | TcConnector.ServiceResponse | Response entity for the Cad-2007-01-StructureManagement/expandPSOneLevel Teamcenter service.  <br>First level children (as list of BOMLines) of given parent BOMLines is the output of the service. |
 | `TcServerInformation` | TcConnector.ServiceResponse | Entity to store the Teamcenter server information which is response entity for Core-2007-01-Session/getTCSessionInfo teamcenter service |
-| `ExtraInfo` |  | Represents additional teamcenter session infomation. |
+| `ExtraInfo` | | Represents additional teamcenter session infomation. |
 | `Role` | TcConnector.POM_application_object | Represents the Role business object type from Teamcenter. |
-| `PSBOMViewRevision` | TcConnector.WorkspaceObject |  |
-| `CloseBOMWindowslInput` |  |  |
-| `HomePage` |  |  |
-| `GetItemFromIdResponse` | TcConnector.ServiceResponse |  |
-| `ItemRevisionOutput` |  |  |
-| `GetItemFromIdInput` |  |  |
-| `RevisionIDs` |  |  |
-| `ObjectTypeNames` |  |  |
-| `ExpandGRMInput` |  |  |
-| `ExpandGRMResponse` | TcConnector.ServiceResponse |  |
-| `Relation__` |  |  |
-| `relationshipObject` |  |  |
-| `RootTargetAttachments` | TcConnector.WorkspaceObject |  |
-| `ExpandPSOneLevel2Input` |  |  |
-| `ExpandPSOneLevel2Response` | TcConnector.ServiceResponse |  |
-| `ParentChildWrapper` |  |  |
-| `Parent__` |  |  |
-| `Child` |  |  |
-| `relatedObjectsEntity` |  |  |
-| `namedRefListEntity` |  |  |
-| `ExpandBOMParentChild` |  |  |
-| `WhereUsedInput` |  |  |
-| `WhereUsedResponseInfo` |  |  |
-| `BooleanObject` |  |  |
-| `GetInitialLOVValuesInputEntity` |  |  |
-| `LovInputEntity` |  |  |
-| `LOVFilterDataInputEntity` |  |  |
-| `GetLOVValuesResponse` | TcConnector.ServiceResponse |  |
-| `LOVDataEntity` |  |  |
-| `LOVValuesEntity` |  |  |
-| `LOVInternalValue` |  |  |
-| `LOVInternalValueType` |  |  |
-| `LOVDisplayValue` |  |  |
-| `LOVFilterDataOutputEntity` |  |  |
-| `ListOfValues` | TcConnector.ModelObject |  |
-| `DummyModelObject` | TcConnector.ModelObject |  |
-| `ImanFile` |  |  |
-| `Image` | System.Image |  |
-| `OAuthToken` |  |  |
+| `PSBOMViewRevision` | TcConnector.WorkspaceObject | |
+| `CloseBOMWindowslInput` | | |
+| `HomePage` | | |
+| `GetItemFromIdResponse` | TcConnector.ServiceResponse | |
+| `ItemRevisionOutput` | | |
+| `GetItemFromIdInput` | | |
+| `RevisionIDs` | | |
+| `ObjectTypeNames` | | |
+| `ExpandGRMInput` | | |
+| `ExpandGRMResponse` | TcConnector.ServiceResponse | |
+| `Relation__` | | |
+| `relationshipObject` | | |
+| `RootTargetAttachments` | TcConnector.WorkspaceObject | |
+| `ExpandPSOneLevel2Input` | | |
+| `ExpandPSOneLevel2Response` | TcConnector.ServiceResponse | |
+| `ParentChildWrapper` | | |
+| `Parent__` | | |
+| `Child` | | |
+| `relatedObjectsEntity` | | |
+| `namedRefListEntity` | | |
+| `ExpandBOMParentChild` | | |
+| `WhereUsedInput` | | |
+| `WhereUsedResponseInfo` | | |
+| `BooleanObject` | | |
+| `GetInitialLOVValuesInputEntity` | | |
+| `LovInputEntity` | | |
+| `LOVFilterDataInputEntity` | | |
+| `GetLOVValuesResponse` | TcConnector.ServiceResponse | |
+| `LOVDataEntity` | | |
+| `LOVValuesEntity` | | |
+| `LOVInternalValue` | | |
+| `LOVInternalValueType` | | |
+| `LOVDisplayValue` | | |
+| `LOVFilterDataOutputEntity` | | |
+| `ListOfValues` | TcConnector.ModelObject | |
+| `DummyModelObject` | TcConnector.ModelObject | |
+| `ImanFile` | | |
+| `Image` | System.Image | |
+| `OAuthToken` | | |
 
 #### Entity `TcSession`
 
@@ -147,17 +147,17 @@ Represents the data required for maintaining a session with a Teamcenter server.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| HostAddress | String (200) |  | The HTTP(S) address of the Teamcenter server. |
-| UserName | String (50) |  | The Teamcenter user name for this session. |
+| HostAddress | String (200) | | The HTTP(S) address of the Teamcenter server. |
+| UserName | String (50) | | The Teamcenter user name for this session. |
 | RequestCount | Long | 1 | Sequential count of service requests made to the Teamcenter server. This is used for creating the unique log correlation ID. |
-| SSOEnabled | Boolean | false |  |
-| SSORedirectURL | String (1024) |  |  |
+| SSOEnabled | Boolean | false | |
+| SSORedirectURL | String (1024) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| TeamcenterSession | System.Session | OneToMany |  |
+| TeamcenterSession | System.Session | OneToMany | |
 
 #### Entity `Cookie`
 
@@ -167,8 +167,8 @@ HTTP Cookie
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| Name | String (200) |  | The cookie name |
-| Value | String (200) |  | The cookie value |
+| Name | String (200) | | The cookie name |
+| Value | String (200) | | The cookie value |
 | Path | String (200) | / | The relative path to be applied to the cookie on subsequent requests |
 | Secure | Boolean | false | If true the cookie should only be used on secure (HTTPS) requests. |
 
@@ -176,7 +176,7 @@ HTTP Cookie
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| Cookies | TcConnector.TcSession | OneToMany |  |
+| Cookies | TcConnector.TcSession | OneToMany | |
 
 #### Entity `SoaServiceRequest`
 
@@ -186,10 +186,10 @@ This entity is used by TcConnector published APIs internally.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| ServiceURL | String (200) |  |  |
-| Cookies | String (2000) |  |  |
-| LogCorrelationID | String (1000) |  |  |
-| Body | String (unlimited) |  |  |
+| ServiceURL | String (200) | | |
+| Cookies | String (2000) | | |
+| LogCorrelationID | String (1000) | | |
+| Body | String (unlimited) | | |
 
 ##### Associations
 
@@ -203,13 +203,13 @@ Credentials of the Teamcenter user.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| user | String (200) |  | The Teamcenter user name of the user. |
-| password | String (2048) |  | The Teamcenter password or SSO token of the user. |
-| group | String (200) |  | The group ID for this session. |
-| role | String (200) |  | The role the user is performing in the group. |
-| locale | String (20) |  | The locale to be used by the Teamcenter server process for this session. |
-| descrimator | String (200) |  | Client defined identifier for this session. |
-| LastError | String (2000) |  |  |
+| user | String (200) | | The Teamcenter user name of the user. |
+| password | String (2048) | | The Teamcenter password or SSO token of the user. |
+| group | String (200) | | The group ID for this session. |
+| role | String (200) | | The role the user is performing in the group. |
+| locale | String (20) | | The locale to be used by the Teamcenter server process for this session. |
+| descrimator | String (200) | | Client defined identifier for this session. |
+| LastError | String (2000) | | |
 
 ##### Associations
 
@@ -224,17 +224,17 @@ Entity to store the Teamcenter server information.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| Version | String (200) |  |  |
-| Group | String (200) |  |  |
-| Syslog | String (200) |  |  |
-| ServerID | String (200) |  |  |
-| Locale | String (200) |  |  |
+| Version | String (200) | | |
+| Group | String (200) | | |
+| Syslog | String (200) | | |
+| ServerID | String (200) | | |
+| Locale | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| _user | TcConnector.TcServerInfo | OneToOne |  |
+| _user | TcConnector.TcServerInfo | OneToOne | |
 
 #### Entity `BaseCreateInput`
 
@@ -246,9 +246,9 @@ This is an abstract entity representing object properties common across Teamcent
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| __boName | String (200) |  | Type name of the business object. |
-| object_name | String (128) |  | Name of the Teamcenter business object to be created. |
-| object_desc | String (240) |  | Description of the Teamcenter business object to be created. |
+| __boName | String (200) | | Type name of the business object. |
+| object_name | String (128) | | Name of the Teamcenter business object to be created. |
+| object_desc | String (240) | | Description of the Teamcenter business object to be created. |
 
 ##### Associations
 
@@ -270,7 +270,7 @@ Entity `CreateInput` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| compoundCreateInput__0 | TcConnector.CompndCreateInput | OneToOne |  |
+| compoundCreateInput__0 | TcConnector.CompndCreateInput | OneToOne | |
 
 #### Entity `CompndCreateInput`
 
@@ -286,13 +286,13 @@ TcConnector.BaseCreateInput
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| __referencePropName | String (200) |  | This entity holds type referenced property name available on the CreateInput descriptor of the Teamcenter business object type. |
+| __referencePropName | String (200) | | This entity holds type referenced property name available on the CreateInput descriptor of the Teamcenter business object type. |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| compoundCreateInput__0 | TcConnector.CompndCreateInput | OneToOne |  |
+| compoundCreateInput__0 | TcConnector.CompndCreateInput | OneToOne | |
 
 #### Entity `ItemCreateInput`
 
@@ -308,13 +308,13 @@ TcConnector.CreateInput
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| item_id | String (128) |  | Identifier of the Teamcenter Item to be created. |
+| item_id | String (128) | | Identifier of the Teamcenter Item to be created. |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| compoundCreateInput__0 | TcConnector.CompndCreateInput | OneToOne |  |
+| compoundCreateInput__0 | TcConnector.CompndCreateInput | OneToOne | |
 
 #### Entity `ItemRevisionCompoundCreateInput`
 
@@ -330,13 +330,13 @@ TcConnector.CompndCreateInput
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| item_revision_id | String (32) |  | Revision Identifier of the Teamcenter Item Revision to be created. |
+| item_revision_id | String (32) | | Revision Identifier of the Teamcenter Item Revision to be created. |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| compoundCreateInput__0 | TcConnector.CompndCreateInput | OneToOne |  |
+| compoundCreateInput__0 | TcConnector.CompndCreateInput | OneToOne | |
 
 #### Entity `ModelObject`
 
@@ -346,9 +346,9 @@ Represents an abstract entity representing a Teamcenter business object.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| UID | String (1000) |  |  |
-| _Type | String (200) |  |  |
-| ClassName | String (200) |  |  |
+| UID | String (1000) | | |
+| _Type | String (200) | | |
+| ClassName | String (200) | | |
 
 ##### Associations
 
@@ -357,32 +357,32 @@ Represents an abstract entity representing a Teamcenter business object.
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `Property`
 
@@ -392,14 +392,14 @@ Represents name of the property.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| Name | String (200) |  |  |
+| Name | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| Properties | TcConnector.ModelObject | OneToMany |  |
-| Property_Property | TcConnector.Property | OneToMany |  |
+| Properties | TcConnector.ModelObject | OneToMany | |
+| Property_Property | TcConnector.Property | OneToMany | |
 
 #### Entity `PropertyValue`
 
@@ -409,14 +409,14 @@ Represents value of the property
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| Value | String (200) |  |  |
+| Value | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| UIValues | TcConnector.Property | OneToMany |  |
-| DBValues | TcConnector.Property | OneToMany |  |
+| UIValues | TcConnector.Property | OneToMany | |
+| DBValues | TcConnector.Property | OneToMany | |
 
 #### Entity `User`
 
@@ -430,45 +430,45 @@ TcConnector.ModelObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| person | String (200) |  |  |
-| userid | String (200) |  |  |
+| person | String (200) | | |
+| userid | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| workflowOwner | TcConnector.CreateWorkflowInput | OneToOne |  |
-| taskinbox__ | TcConnector.TaskInbox | OneToOne |  |
-| user__ | TcConnector.User | OneToOne |  |
+| workflowOwner | TcConnector.CreateWorkflowInput | OneToOne | |
+| taskinbox__ | TcConnector.TaskInbox | OneToOne | |
+| user__ | TcConnector.User | OneToOne | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `ServiceData`
 
@@ -482,7 +482,7 @@ Entity `ServiceData` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `UID`
 
@@ -492,13 +492,13 @@ Represents unique identifier for Teamcenter business object.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| UID | String (200) |  |  |
+| UID | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| Deleted | TcConnector.ServiceData | OneToMany |  |
+| Deleted | TcConnector.ServiceData | OneToMany | |
 
 #### Entity `ItemRevision`
 
@@ -512,54 +512,54 @@ TcConnector.WorkspaceObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| item_id | String (128) |  |  |
-| item_revision_id | String (32) |  |  |
+| item_id | String (128) | | |
+| item_revision_id | String (32) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| items_tag | TcConnector.ItemRevision | OneToOne |  |
+| items_tag | TcConnector.ItemRevision | OneToOne | |
 | itemRev__BOMWindow | TcConnector.ItemRevision | OneToOne | ItemRevision object reference. |
-| itemRevOfBOMLine | TcConnector.ItemRevision | OneToOne |  |
-| itemRevOfBOMLine__Parent | TcConnector.ItemRevision | OneToOne |  |
-| parentItemRev | TcConnector.WhereUsedResponseInfo | OneToOne |  |
-| bl_revision | TcConnector.ItemRevision | OneToOne |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| itemRevOfBOMLine | TcConnector.ItemRevision | OneToOne | |
+| itemRevOfBOMLine__Parent | TcConnector.ItemRevision | OneToOne | |
+| parentItemRev | TcConnector.WhereUsedResponseInfo | OneToOne | |
+| bl_revision | TcConnector.ItemRevision | OneToOne | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `WorkspaceObject`
 
@@ -573,51 +573,51 @@ TcConnector.POM_application_object
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| object_name | String (128) |  |  |
-| object_desc | String (240) |  |  |
-| date_released | Date and time |  |  |
-| checked_out | String (200) |  |  |
-| checked_out_date | Date and time |  |  |
+| object_name | String (128) | | |
+| object_desc | String (240) | | |
+| date_released | Date and time | | |
+| checked_out | String (200) | | |
+| checked_out_date | Date and time | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `POM_application_object`
 
@@ -631,47 +631,47 @@ TcConnector.ModelObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| creation_date | Date and time |  |  |
-| last_mod_date | Date and time |  |  |
-| object_string | String (4000) |  |  |
+| creation_date | Date and time | | |
+| last_mod_date | Date and time | | |
+| object_string | String (4000) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `Pair`
 
@@ -681,8 +681,8 @@ Represents name value pair.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| Name | String (unlimited) |  |  |
-| Value | String (unlimited) |  |  |
+| Name | String (unlimited) | | |
+| Value | String (unlimited) | | |
 
 ##### Associations
 
@@ -696,18 +696,18 @@ Input entity for the Query-2014-11-Finder/performSearch Teamcenter service.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| providerName | String (200) | Awp0SavedQuerySearchProvider |  |
-| startIndex | Integer | 0 |  |
-| maxToLoad | Integer | 50 |  |
-| internalPropertyName | String (200) | `` |  |
-| maxToReturn | Integer | 50 |  |
-| searchFilterFieldSortType | String (200) | Priority |  |
+| providerName | String (200) | Awp0SavedQuerySearchProvider | |
+| startIndex | Integer | 0 | |
+| maxToLoad | Integer | 50 | |
+| internalPropertyName | String (200) | `` | |
+| maxToReturn | Integer | 50 | |
+| searchFilterFieldSortType | String (200) | Priority | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne |  |
+| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne | |
 
 #### Entity `SearchCriteriaInput`
 
@@ -721,7 +721,7 @@ Entity `SearchCriteriaInput` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne |  |
+| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne | |
 
 #### Entity `FindSavedQueryInput`
 
@@ -731,7 +731,7 @@ Input entity for the Query-2010-04-SavedQuery/findSavedQueries Teamcenter servic
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| queryNames | String (200) |  |  |
+| queryNames | String (200) | | |
 
 ##### Associations
 
@@ -750,18 +750,18 @@ TcConnector.SearchCriteriaInput
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| utcOffset | String (200) | 330 |  |
-| searchID | String (200) | `` |  |
-| totalObjectsFoundReportedToClient | String (200) | `` |  |
-| lastEndIndex | String (200) | `` |  |
-| typeOfSearch | String (200) | ADVANCED_SEARCH |  |
-| queryUID | String (200) |  |  |
+| utcOffset | String (200) | 330 | |
+| searchID | String (200) | `` | |
+| totalObjectsFoundReportedToClient | String (200) | `` | |
+| lastEndIndex | String (200) | `` | |
+| typeOfSearch | String (200) | ADVANCED_SEARCH | |
+| queryUID | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne |  |
+| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne | |
 
 #### Entity `GeneralQuery`
 
@@ -794,7 +794,7 @@ TcConnector.SearchCriteria_SavedQuery
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne |  |
+| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne | |
 
 #### Entity `ItemSimpleQuery`
 
@@ -809,16 +809,16 @@ TcConnector.SearchCriteria_SavedQuery
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| Name | String (200) |  |  |
-| ItemID | String (200) |  |  |
-| Description | String (200) |  |  |
-| _Type | String (200) |  |  |
+| Name | String (200) | | |
+| ItemID | String (200) | | |
+| Description | String (200) | | |
+| _Type | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne |  |
+| searchCriteria | TcConnector.SearchCriteriaInput | OneToOne | |
 
 #### Entity `ImanQuery`
 
@@ -832,47 +832,47 @@ TcConnector.POM_application_object
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| query_name | String (128) |  |  |
-| query_desc | String (512) |  |  |
+| query_name | String (128) | | |
+| query_desc | String (512) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| savedQueries | TcConnector.FindSavedQueryResponse | OneToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| savedQueries | TcConnector.FindSavedQueryResponse | OneToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `Item`
 
@@ -886,48 +886,48 @@ TcConnector.WorkspaceObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| item_id | String (128) |  |  |
+| item_id | String (128) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| items_tag | TcConnector.ItemRevision | OneToOne |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| items_tag | TcConnector.ItemRevision | OneToOne | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `ListOfModelObject`
 
@@ -941,7 +941,7 @@ Entity `ListOfModelObject` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| PrimaryOrSecondaryObjects | TcConnector.ListOfModelObject | OneToOne |  |
+| PrimaryOrSecondaryObjects | TcConnector.ListOfModelObject | OneToOne | |
 
 #### Entity `Group`
 
@@ -955,43 +955,43 @@ TcConnector.ModelObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| name | String (128) |  |  |
-| roles | String (unlimited) |  |  |
+| name | String (128) | | |
+| roles | String (unlimited) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| group__ | TcConnector.Group | OneToOne |  |
+| group__ | TcConnector.Group | OneToOne | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `ReviseInputs`
 
@@ -1017,9 +1017,9 @@ TcConnector.ReviseInputs
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| item_revision_id | String (200) |  |  |
-| object_name | String (200) |  |  |
-| object_desc | String (200) |  |  |
+| item_revision_id | String (200) | | |
+| object_name | String (200) | | |
+| object_desc | String (200) | | |
 
 ##### Associations
 
@@ -1033,20 +1033,20 @@ Entity to store the Teamcenter configuration.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| ConfigName | String (200) |  |  |
-| TCURL | String (200) |  | Teamcenter URL |
-| FMSURL | String (200) |  |  |
-| SSOEnabled | Boolean | false |  |
-| SSOLoginURL | String (200) |  |  |
-| SSOIdentityURL | String (200) |  |  |
-| SSOTCAppId | String (200) |  |  |
-| SSOMendixAppId | String (200) |  |  |
-| Active | Boolean | false |  |
-| IsTcX | Boolean | false |  |
-| TcxClientId | String (200) |  |  |
-| TokenExchangeClientId | String (200) |  |  |
-| TokenExchangeClientSecret | String (200) |  |  |
-| TokenExchTokenEndPt | String (unlimited) |  |  |
+| ConfigName | String (200) | | |
+| TCURL | String (200) | | Teamcenter URL |
+| FMSURL | String (200) | | |
+| SSOEnabled | Boolean | false | |
+| SSOLoginURL | String (200) | | |
+| SSOIdentityURL | String (200) | | |
+| SSOTCAppId | String (200) | | |
+| SSOMendixAppId | String (200) | | |
+| Active | Boolean | false | |
+| IsTcX | Boolean | false | |
+| TcxClientId | String (200) | | |
+| TokenExchangeClientId | String (200) | | |
+| TokenExchangeClientSecret | String (200) | | |
+| TokenExchTokenEndPt | String (unlimited) | | |
 
 ##### Associations
 
@@ -1064,53 +1064,53 @@ TcConnector.WorkspaceObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| dataset_type | String (32) |  |  |
+| dataset_type | String (32) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| datasets | TcConnector.ChildrenObject | OneToMany |  |
-| parentDatasets | TcConnector.ParentObject | OneToMany |  |
-| Documents | TcConnector.FileDocument | ManyToMany |  |
-| datasets__ | TcConnector.ItemRevisionOutput | OneToMany |  |
-| relatedObject | TcConnector.relatedObjectsEntity | OneToOne |  |
-| Images | TcConnector.Image | ManyToMany |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| datasets | TcConnector.ChildrenObject | OneToMany | |
+| parentDatasets | TcConnector.ParentObject | OneToMany | |
+| Documents | TcConnector.FileDocument | ManyToMany | |
+| datasets__ | TcConnector.ItemRevisionOutput | OneToMany | |
+| relatedObject | TcConnector.relatedObjectsEntity | OneToOne | |
+| Images | TcConnector.Image | ManyToMany | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `PSBOMView`
 
@@ -1128,42 +1128,42 @@ Entity `PSBOMView` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| bom_view | TcConnector.PSBOMView | OneToOne |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| bom_view | TcConnector.PSBOMView | OneToOne | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `RevisionRule`
 
@@ -1182,44 +1182,44 @@ Entity `RevisionRule` has no attributes.
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
 | revRule__BOMWindow | TcConnector.RevisionRule | OneToOne | The RevisionRule object used for configuration of this BOMWindow object. |
-| revRule | TcConnector.RevisionRule | OneToOne |  |
-| rule | TcConnector.WhereUsedInput | OneToOne |  |
-| revision_rule | TcConnector.RevisionRule | OneToOne |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| revRule | TcConnector.RevisionRule | OneToOne | |
+| rule | TcConnector.WhereUsedInput | OneToOne | |
+| revision_rule | TcConnector.RevisionRule | OneToOne | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `BOMLine`
 
@@ -1233,57 +1233,57 @@ TcConnector.ModelObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| object_string | String (4000) |  | Stores the Display Name value of the business objects. |
-| bl_rev_object_name | String (200) |  |  |
+| object_string | String (4000) | | Stores the Display Name value of the business objects. |
+| bl_rev_object_name | String (200) | | |
 | bl_has_children | Boolean | false | Has children? |
-| bl_quantity | String (200) |  | Quantity. Value is integer if unit of measure of the line is each. Quantities of packed lines are accumulated to the master line. |
-| bl_variant_state | String (200) |  |  |
-| bl_plmxml_abs_xform | String (1000) |  |  |
-| bl_item_item_revision | String (400) |  |  |
+| bl_quantity | String (200) | | Quantity. Value is integer if unit of measure of the line is each. Quantities of packed lines are accumulated to the master line. |
+| bl_variant_state | String (200) | | |
+| bl_plmxml_abs_xform | String (1000) | | |
+| bl_item_item_revision | String (400) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
 | bomLine__BOMWindow | TcConnector.CreateBomWindowResponse | OneToOne | Object reference for the created BOMLine |
-| bomLine__ExpandPSOneLevel | TcConnector.BOMLine | OneToOne |  |
-| bomLine__ExpandPSAllLevel | TcConnector.BOMLine | OneToOne |  |
-| bomLine__Parent | TcConnector.Parent__ | OneToOne |  |
-| BOMLineAttachments | TcConnector.FileDocument | ManyToMany |  |
-| bomLine__Child | TcConnector.Child | OneToOne |  |
-| ChildBOMLines | TcConnector.ExpandBOMParentChild | OneToMany |  |
-| ParentBOMLIne | TcConnector.ExpandBOMParentChild | OneToOne |  |
-| bl_revision | TcConnector.ItemRevision | OneToOne |  |
-| top_line | TcConnector.BOMLine | OneToOne |  |
+| bomLine__ExpandPSOneLevel | TcConnector.BOMLine | OneToOne | |
+| bomLine__ExpandPSAllLevel | TcConnector.BOMLine | OneToOne | |
+| bomLine__Parent | TcConnector.Parent__ | OneToOne | |
+| BOMLineAttachments | TcConnector.FileDocument | ManyToMany | |
+| bomLine__Child | TcConnector.Child | OneToOne | |
+| ChildBOMLines | TcConnector.ExpandBOMParentChild | OneToMany | |
+| ParentBOMLIne | TcConnector.ExpandBOMParentChild | OneToOne | |
+| bl_revision | TcConnector.ItemRevision | OneToOne | |
+| top_line | TcConnector.BOMLine | OneToOne | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `CreateRelationInput`
 
@@ -1294,7 +1294,7 @@ Primary object, Secondary object and RelationType is input for the service.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| relationType | String (200) |  | Name of the relation type to create. |
+| relationType | String (200) | | Name of the relation type to create. |
 
 ##### Associations
 
@@ -1321,39 +1321,39 @@ Entity `SessionUser` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| _user | TcConnector.TcServerInfo | OneToOne |  |
-| workflowOwner | TcConnector.CreateWorkflowInput | OneToOne |  |
-| taskinbox__ | TcConnector.TaskInbox | OneToOne |  |
-| user__ | TcConnector.User | OneToOne |  |
+| _user | TcConnector.TcServerInfo | OneToOne | |
+| workflowOwner | TcConnector.CreateWorkflowInput | OneToOne | |
+| taskinbox__ | TcConnector.TaskInbox | OneToOne | |
+| user__ | TcConnector.User | OneToOne | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `ServiceResponse`
 
@@ -1367,7 +1367,7 @@ Entity `ServiceResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `SearchResponse`
 
@@ -1381,14 +1381,14 @@ TcConnector.ServiceResponse
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| totalFound | Integer | 0 |  |
-| totalLoaded | Integer | 0 |  |
+| totalFound | Integer | 0 | |
+| totalLoaded | Integer | 0 | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `ErrorStack`
 
@@ -1398,18 +1398,18 @@ Represents the Teamcenter error stack.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| ClientID | String (200) |  |  |
-| ClientIndex | Integer | 0 |  |
-| Code | Integer | 0 |  |
-| Level | Integer | 0 |  |
-| Message | String (unlimited) |  |  |
+| ClientID | String (200) | | |
+| ClientIndex | Integer | 0 | |
+| Code | Integer | 0 | |
+| Level | Integer | 0 | |
+| Message | String (unlimited) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| PartialErrors | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
+| PartialErrors | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
 
 #### Entity `ImanRelation`
 
@@ -1428,41 +1428,41 @@ Entity `ImanRelation` has no attributes.
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
 | relation | TcConnector.CreateRelationResponse | OneToMany | The newly created relation. |
-| primary_object | TcConnector.ImanRelation | OneToOne |  |
-| secondary_object | TcConnector.ImanRelation | OneToOne |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| primary_object | TcConnector.ImanRelation | OneToOne | |
+| secondary_object | TcConnector.ImanRelation | OneToOne | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `CreateRelationResponse`
 
@@ -1482,7 +1482,7 @@ Entity `CreateRelationResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `FindSavedQueryResponse`
 
@@ -1500,7 +1500,7 @@ Entity `FindSavedQueryResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `ReviseObjectsResponse`
 
@@ -1518,7 +1518,7 @@ Entity `ReviseObjectsResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `ReviseOutputResponse`
 
@@ -1532,7 +1532,7 @@ Entity `ReviseOutputResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| output | TcConnector.ReviseObjectsResponse | OneToMany |  |
+| output | TcConnector.ReviseObjectsResponse | OneToMany | |
 
 #### Entity `ReviseTreesResponse`
 
@@ -1546,10 +1546,10 @@ Entity `ReviseTreesResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| reviseTrees | TcConnector.ReviseObjectsResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| childReviseNodes | TcConnector.ReviseTreesResponse | OneToMany |  |
+| reviseTrees | TcConnector.ReviseObjectsResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| childReviseNodes | TcConnector.ReviseTreesResponse | OneToMany | |
 
 #### Entity `CreateBomWindowInput`
 
@@ -1566,9 +1566,9 @@ Entity `CreateBomWindowInput` has no attributes.
 | --- | --- | --- | --- |
 | itemRev__BOMWindow | TcConnector.ItemRevision | OneToOne | ItemRevision object reference. |
 | revRule__BOMWindow | TcConnector.RevisionRule | OneToOne | The RevisionRule object used for configuration of this BOMWindow object. |
-| configContext | TcConnector.CreateBomWindowInput | OneToOne |  |
-| bomWinPropFlagMap | TcConnector.BomWindowPropFlagMap | OneToOne |  |
-| CreateBomWindowInput_CreateBomWindowResponse | TcConnector.CreateBomWindowResponse | OneToOne |  |
+| configContext | TcConnector.CreateBomWindowInput | OneToOne | |
+| bomWinPropFlagMap | TcConnector.BomWindowPropFlagMap | OneToOne | |
+| CreateBomWindowInput_CreateBomWindowResponse | TcConnector.CreateBomWindowResponse | OneToOne | |
 
 #### Entity `CreateBomWindowResponse`
 
@@ -1588,9 +1588,9 @@ Entity `CreateBomWindowResponse` has no attributes.
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
 | bomLine__BOMWindow | TcConnector.CreateBomWindowResponse | OneToOne | Object reference for the created BOMLine |
-| bomWindow__BOMWindow | TcConnector.BOMWindow | OneToOne |  |
-| CreateBomWindowInput_CreateBomWindowResponse | TcConnector.CreateBomWindowResponse | OneToOne |  |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| bomWindow__BOMWindow | TcConnector.BOMWindow | OneToOne | |
+| CreateBomWindowInput_CreateBomWindowResponse | TcConnector.CreateBomWindowResponse | OneToOne | |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `ExpandPSOneLevelInput`
 
@@ -1601,7 +1601,7 @@ BOMLine is input for the service.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| RelationName | String (200) |  |  |
+| RelationName | String (200) | | |
 
 ##### Associations
 
@@ -1624,7 +1624,7 @@ Entity `ExpandPSOneLevelResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `ReleaseStatus`
 
@@ -1638,44 +1638,44 @@ TcConnector.ModelObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| name | String (32) |  |  |
-| effectivity_text | String (1000) |  | The property “effectivity_text” is a runtime string which represents the start to end effectivity of the “ReleaseStatus” object. “effectivity_text” will be displayed in an easy to understand format so that the user can easily identify the start date and end date effectivity of the “ReleaseStatus” object. “effectivity_text” will also display the start serial number and end serial numbers of the “ReleaseStatus” object. “effectivity_text” has a hard-coded length of up to 256 characters (This is incorrect, so the size here is limited to 1000) |
-| date_released | Date and time |  |  |
+| name | String (32) | | |
+| effectivity_text | String (1000) | | The property “effectivity_text” is a runtime string which represents the start to end effectivity of the “ReleaseStatus” object. “effectivity_text” will be displayed in an easy to understand format so that the user can easily identify the start date and end date effectivity of the “ReleaseStatus” object. “effectivity_text” will also display the start serial number and end serial numbers of the “ReleaseStatus” object. “effectivity_text” has a hard-coded length of up to 256 characters (This is incorrect, so the size here is limited to 1000) |
+| date_released | Date and time | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `FileDocument`
 
@@ -1689,8 +1689,8 @@ System.FileDocument
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| datasetUID | String (200) |  |  |
-| imanFileID | String (200) |  |  |
+| datasetUID | String (200) | | |
+| imanFileID | String (200) | | |
 
 ##### Associations
 
@@ -1730,10 +1730,10 @@ Represents the input criteria for Item Simple Query.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| Name | String (200) |  |  |
-| ItemID | String (200) |  |  |
-| Description | String (200) |  |  |
-| _Type | String (200) |  |  |
+| Name | String (200) | | |
+| ItemID | String (200) | | |
+| Description | String (200) | | |
+| _Type | String (200) | | |
 
 ##### Associations
 
@@ -1755,39 +1755,39 @@ Entity `BOMWindow` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| bomWindow__BOMWindow | TcConnector.BOMWindow | OneToOne |  |
-| BOMWindow_CloseBOMWindowslInput | TcConnector.CloseBOMWindowslInput | OneToMany |  |
-| top_line | TcConnector.BOMLine | OneToOne |  |
-| revision_rule | TcConnector.RevisionRule | OneToOne |  |
+| bomWindow__BOMWindow | TcConnector.BOMWindow | OneToOne | |
+| BOMWindow_CloseBOMWindowslInput | TcConnector.CloseBOMWindowslInput | OneToMany | |
+| top_line | TcConnector.BOMLine | OneToOne | |
+| revision_rule | TcConnector.RevisionRule | OneToOne | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `Relation_BOMLine`
 
@@ -1797,13 +1797,13 @@ Dataset object references attached by given relation name are returned.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| relationName | String (200) |  |  |
+| relationName | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| info | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
+| info | TcConnector.ExpandPSOneLevelInput | OneToMany | |
 
 #### Entity `ChildrenObject`
 
@@ -1817,10 +1817,10 @@ Entity `ChildrenObject` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| children | TcConnector.ExpandPSOneLevelResponse | OneToMany |  |
-| itemRevOfBOMLine | TcConnector.ItemRevision | OneToOne |  |
-| bomLine__ExpandPSOneLevel | TcConnector.BOMLine | OneToOne |  |
-| children__ExpandPSAllLevels | TcConnector.ExpandPSAllLevelsOutput | OneToMany |  |
+| children | TcConnector.ExpandPSOneLevelResponse | OneToMany | |
+| itemRevOfBOMLine | TcConnector.ItemRevision | OneToOne | |
+| bomLine__ExpandPSOneLevel | TcConnector.BOMLine | OneToOne | |
+| children__ExpandPSAllLevels | TcConnector.ExpandPSAllLevelsOutput | OneToMany | |
 
 #### Entity `GetRevisionRulesResponse`
 
@@ -1839,7 +1839,7 @@ Entity `GetRevisionRulesResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `RevisionRulesResponseOutput`
 
@@ -1853,8 +1853,8 @@ Entity `RevisionRulesResponseOutput` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| output__GetRevisionRule | TcConnector.GetRevisionRulesResponse | OneToMany |  |
-| revRule | TcConnector.RevisionRule | OneToOne |  |
+| output__GetRevisionRule | TcConnector.GetRevisionRulesResponse | OneToMany | |
+| revRule | TcConnector.RevisionRule | OneToOne | |
 
 #### Entity `CreateWorkflowInput`
 
@@ -1864,17 +1864,17 @@ Input entity for Workflow-2014-10-Workflow/createWorkflow Teamcenter service.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| processName | String (200) |  |  |
-| processDescription | String (200) |  |  |
-| processTemplate | String (200) |  |  |
-| dueDate | Date and time |  |  |
+| processName | String (200) | | |
+| processDescription | String (200) | | |
+| processTemplate | String (200) | | |
+| dueDate | Date and time | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| workflowOwner | TcConnector.CreateWorkflowInput | OneToOne |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
+| workflowOwner | TcConnector.CreateWorkflowInput | OneToOne | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
 
 #### Entity `CreateWorkflowResponse`
 
@@ -1892,9 +1892,9 @@ Entity `CreateWorkflowResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| workflowTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| workflowTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `EPMTask`
 
@@ -1908,60 +1908,60 @@ TcConnector.WorkspaceObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| priority | Integer | 0 |  |
-| task_name | String (32) |  |  |
-| due_date | Date and time |  |  |
-| task_duration | Integer | 0 |  |
-| comments | String (4000) |  |  |
-| fnd0StartDate | Date and time |  |  |
-| fnd0EndDate | Date and time |  |  |
-| job_name | String (200) |  |  |
+| priority | Integer | 0 | |
+| task_name | String (32) | | |
+| due_date | Date and time | | |
+| task_duration | Integer | 0 | |
+| comments | String (4000) | | |
+| fnd0StartDate | Date and time | | |
+| fnd0EndDate | Date and time | | |
+| job_name | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| workflowTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| allTasks | TcConnector.GetAllTasksResponse | OneToMany |  |
-| task | TcConnector.PerformActionInput | OneToOne |  |
-| tasks_to_track | TcConnector.TaskInbox | OneToMany |  |
-| tasks_to_perform | TcConnector.TaskInbox | OneToMany |  |
-| parent_process | TcConnector.EPMTask | OneToOne |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| workflowTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| allTasks | TcConnector.GetAllTasksResponse | OneToMany | |
+| task | TcConnector.PerformActionInput | OneToOne | |
+| tasks_to_track | TcConnector.TaskInbox | OneToMany | |
+| tasks_to_perform | TcConnector.TaskInbox | OneToMany | |
+| parent_process | TcConnector.EPMTask | OneToOne | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `createWorkflowtRelationTypes`
 
@@ -1971,13 +1971,13 @@ Entity to represent Attachment Relation Types, This has association with CreateW
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| attachmentRelationTypes | String (200) |  |  |
+| attachmentRelationTypes | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| relationTypes | TcConnector.CreateWorkflowInput | OneToMany |  |
+| relationTypes | TcConnector.CreateWorkflowInput | OneToMany | |
 
 #### Entity `GetAllTasksInput`
 
@@ -1987,13 +1987,13 @@ Input entity for Workflow-2008-06-Workflow/getAllTasks Teamcenter service.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| state | Integer | 0 |  |
+| state | Integer | 0 | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| process | TcConnector.GetAllTasksInput | OneToOne |  |
+| process | TcConnector.GetAllTasksInput | OneToOne | |
 
 #### Entity `EPMJob`
 
@@ -2011,43 +2011,43 @@ Entity `EPMJob` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| process | TcConnector.GetAllTasksInput | OneToOne |  |
-| parent_process | TcConnector.EPMTask | OneToOne |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| process | TcConnector.GetAllTasksInput | OneToOne | |
+| parent_process | TcConnector.EPMTask | OneToOne | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `GetAllTasksResponse`
 
@@ -2065,7 +2065,7 @@ Entity `GetAllTasksResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `PerformActionInput`
 
@@ -2075,17 +2075,17 @@ Input entity for Workflow-2012-10-Workflow/performAction2 Teamcenter service.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| action | String (200) |  |  |
-| comments | String (200) |  |  |
-| password | String (200) |  |  |
-| supportingValue | String (200) |  |  |
+| action | String (200) | | |
+| comments | String (200) | | |
+| password | String (200) | | |
+| supportingValue | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| task | TcConnector.PerformActionInput | OneToOne |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
+| task | TcConnector.PerformActionInput | OneToOne | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
 
 #### Entity `StringObject`
 
@@ -2095,14 +2095,14 @@ Entity represnt the the string array in the response.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| value | String (unlimited) |  |  |
+| value | String (unlimited) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| lov_values__0 | TcConnector.LOVInternalValue | OneToMany |  |
-| lov_values__1 | TcConnector.LOVDisplayValue | OneToMany |  |
+| lov_values__0 | TcConnector.LOVInternalValue | OneToMany | |
+| lov_values__1 | TcConnector.LOVDisplayValue | OneToMany | |
 
 #### Entity `IntegerObject`
 
@@ -2112,7 +2112,7 @@ Entity represnt the the integer array in the response.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| value | Integer | 0 |  |
+| value | Integer | 0 | |
 
 ##### Associations
 
@@ -2126,13 +2126,13 @@ List of PropInfo structure which consists of information about the objects and t
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| name | String (200) |  |  |
+| name | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| objectsSetProperties | TcConnector.ModelObject | OneToMany |  |
+| objectsSetProperties | TcConnector.ModelObject | OneToMany | |
 
 #### Entity `ValuesInput`
 
@@ -2142,13 +2142,13 @@ Values of the property
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| value | String (unlimited) |  |  |
+| value | String (unlimited) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| values | TcConnector.UpdatedPropertiesInput | OneToMany |  |
+| values | TcConnector.UpdatedPropertiesInput | OneToMany | |
 
 #### Entity `FindUsersTasksResponse`
 
@@ -2166,7 +2166,7 @@ Entity `FindUsersTasksResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `TaskInbox`
 
@@ -2184,44 +2184,44 @@ Entity `TaskInbox` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| taskinbox__ | TcConnector.TaskInbox | OneToOne |  |
-| subscribed_inboxes | TcConnector.User | OneToMany |  |
-| TaskInbox_FindUsersTasksResponse | TcConnector.FindUsersTasksResponse | OneToMany |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| taskinbox__ | TcConnector.TaskInbox | OneToOne | |
+| subscribed_inboxes | TcConnector.User | OneToMany | |
+| TaskInbox_FindUsersTasksResponse | TcConnector.FindUsersTasksResponse | OneToMany | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `GetWorkflowTemplatesInput`
 
@@ -2231,7 +2231,7 @@ Input entity for Workflow-2008-06-Workflow/getWorkflowTemplates Teamcenter servi
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| allOrAssignedCriteria | String (200) | SOA_EPM_All |  |
+| allOrAssignedCriteria | String (200) | SOA_EPM_All | |
 
 ##### Associations
 
@@ -2253,7 +2253,7 @@ Entity `GetWorkflowTemplatesResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `EPMTaskTemplate`
 
@@ -2276,40 +2276,40 @@ TcConnector.POM_application_object
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| workflowTemplates | TcConnector.GetWorkflowTemplatesResponse | OneToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| workflowTemplates | TcConnector.GetWorkflowTemplatesResponse | OneToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `TC_Project`
 
@@ -2323,49 +2323,49 @@ TcConnector.POM_application_object
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| project_name | String (32) |  |  |
-| project_desc | String (240) |  |  |
-| project_id | String (64) |  |  |
+| project_name | String (32) | | |
+| project_desc | String (240) | | |
+| project_id | String (64) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| project_list | TcConnector.ItemRevision | OneToMany |  |
-| project | TcConnector.TC_Project | OneToOne |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| project_list | TcConnector.ItemRevision | OneToMany | |
+| project | TcConnector.TC_Project | OneToOne | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `VariantRule`
 
@@ -2379,49 +2379,49 @@ TcConnector.WorkspaceObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| contents | String (200) |  |  |
+| contents | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| objectsForConfigure | TcConnector.CreateBomWindowInput | OneToMany |  |
-| variantRulesForItemRevision | TcConnector.ItemRevision | OneToMany |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| objectsForConfigure | TcConnector.CreateBomWindowInput | OneToMany | |
+| variantRulesForItemRevision | TcConnector.ItemRevision | OneToMany | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `ConfigurationContext`
 
@@ -2439,42 +2439,42 @@ Entity `ConfigurationContext` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| configContext | TcConnector.CreateBomWindowInput | OneToOne |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| configContext | TcConnector.CreateBomWindowInput | OneToOne | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `BomWindowPropFlagMap`
 
@@ -2484,19 +2484,19 @@ Map of property name (key) and property values (values) in string format, to be 
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| show_unconfigured_variants | String (200) | false |  |
-| show_unconfigured_changes | String (200) | true |  |
-| show_suppressed_occurrences | String (200) | true |  |
-| is_packed_by_default | String (200) | true |  |
-| show_out_of_context_lines | String (200) | true |  |
-| fnd0show_uncnf_occ_eff | String (200) | true |  |
-| fnd0bw_in_cv_cfg_to_load_md | String (200) | true |  |
+| show_unconfigured_variants | String (200) | false | |
+| show_unconfigured_changes | String (200) | true | |
+| show_suppressed_occurrences | String (200) | true | |
+| is_packed_by_default | String (200) | true | |
+| show_out_of_context_lines | String (200) | true | |
+| fnd0show_uncnf_occ_eff | String (200) | true | |
+| fnd0bw_in_cv_cfg_to_load_md | String (200) | true | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| bomWinPropFlagMap | TcConnector.BomWindowPropFlagMap | OneToOne |  |
+| bomWinPropFlagMap | TcConnector.BomWindowPropFlagMap | OneToOne | |
 
 #### Entity `ParentObject`
 
@@ -2510,9 +2510,9 @@ Entity `ParentObject` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| bomLine__ExpandPSAllLevel | TcConnector.BOMLine | OneToOne |  |
-| itemRevOfBOMLine__Parent | TcConnector.ItemRevision | OneToOne |  |
-| parent | TcConnector.ExpandPSAllLevelsOutput | OneToOne |  |
+| bomLine__ExpandPSAllLevel | TcConnector.BOMLine | OneToOne | |
+| itemRevOfBOMLine__Parent | TcConnector.ItemRevision | OneToOne | |
+| parent | TcConnector.ExpandPSAllLevelsOutput | OneToOne | |
 
 #### Entity `ExpandPSAllLevelsOutput`
 
@@ -2527,8 +2527,8 @@ Entity `ExpandPSAllLevelsOutput` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ExpandAllLevelsOutput | TcConnector.ExpandPSAllLevelsResponse | OneToMany |  |
-| parent | TcConnector.ExpandPSAllLevelsOutput | OneToOne |  |
+| ExpandAllLevelsOutput | TcConnector.ExpandPSAllLevelsResponse | OneToMany | |
+| parent | TcConnector.ExpandPSAllLevelsOutput | OneToOne | |
 
 #### Entity `ExpandPSAllLevelsResponse`
 
@@ -2547,7 +2547,7 @@ Entity `ExpandPSAllLevelsResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `TcServerInformation`
 
@@ -2565,12 +2565,12 @@ Entity `TcServerInformation` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| group__ | TcConnector.Group | OneToOne |  |
-| user__ | TcConnector.User | OneToOne |  |
-| extraInfo__ | TcConnector.TcServerInformation | OneToOne |  |
-| role__ | TcConnector.Role | OneToOne |  |
-| project | TcConnector.TC_Project | OneToOne |  |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| group__ | TcConnector.Group | OneToOne | |
+| user__ | TcConnector.User | OneToOne | |
+| extraInfo__ | TcConnector.TcServerInformation | OneToOne | |
+| role__ | TcConnector.Role | OneToOne | |
+| project | TcConnector.TC_Project | OneToOne | |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `ExtraInfo`
 
@@ -2580,16 +2580,16 @@ Represents additional teamcenter session infomation.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| DisplayVersion | String (200) |  |  |
-| syslogFile | String (200) |  |  |
-| TcServerID | String (200) |  |  |
-| TCServerLocale | String (200) |  |  |
+| DisplayVersion | String (200) | | |
+| syslogFile | String (200) | | |
+| TcServerID | String (200) | | |
+| TCServerLocale | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| extraInfo__ | TcConnector.TcServerInformation | OneToOne |  |
+| extraInfo__ | TcConnector.TcServerInformation | OneToOne | |
 
 #### Entity `Role`
 
@@ -2603,48 +2603,48 @@ TcConnector.POM_application_object
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| role_name | String (32) |  |  |
-| object_name | String (200) |  |  |
-| description | String (240) |  |  |
+| role_name | String (32) | | |
+| object_name | String (200) | | |
+| description | String (240) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| role__ | TcConnector.Role | OneToOne |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| role__ | TcConnector.Role | OneToOne | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `PSBOMViewRevision`
 
@@ -2660,43 +2660,43 @@ Entity `PSBOMViewRevision` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| bom_view | TcConnector.PSBOMView | OneToOne |  |
-| structure_revisions | TcConnector.ItemRevision | OneToMany |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| bom_view | TcConnector.PSBOMView | OneToOne | |
+| structure_revisions | TcConnector.ItemRevision | OneToMany | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `CloseBOMWindowslInput`
 
@@ -2732,8 +2732,8 @@ Entity `GetItemFromIdResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `ItemRevisionOutput`
 
@@ -2745,8 +2745,8 @@ Entity `ItemRevisionOutput` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| itemRevOutput | TcConnector.GetItemFromIdResponse | OneToMany |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
+| itemRevOutput | TcConnector.GetItemFromIdResponse | OneToMany | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
 
 #### Entity `GetItemFromIdInput`
 
@@ -2754,9 +2754,9 @@ Entity `ItemRevisionOutput` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| ItemId | String (200) |  |  |
-| NumberOfRevision | Integer | -1 |  |
-| RelationTypeName | String (200) |  |  |
+| ItemId | String (200) | | |
+| NumberOfRevision | Integer | -1 | |
+| RelationTypeName | String (200) | | |
 
 ##### Associations
 
@@ -2768,13 +2768,13 @@ Entity `GetItemFromIdInput` does not own any associations.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| RevisionIDs | String (200) |  |  |
+| RevisionIDs | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| revIds | TcConnector.GetItemFromIdInput | OneToMany |  |
+| revIds | TcConnector.GetItemFromIdInput | OneToMany | |
 
 #### Entity `ObjectTypeNames`
 
@@ -2782,14 +2782,14 @@ Entity `GetItemFromIdInput` does not own any associations.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| ObjectTypeNames | String (200) |  |  |
+| ObjectTypeNames | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| objectTypeNames__ | TcConnector.GetItemFromIdInput | OneToMany |  |
-| objectTypeNames__ExpandPS | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
+| objectTypeNames__ | TcConnector.GetItemFromIdInput | OneToMany | |
+| objectTypeNames__ExpandPS | TcConnector.ExpandPSOneLevelInput | OneToMany | |
 
 #### Entity `ExpandGRMInput`
 
@@ -2801,7 +2801,7 @@ Entity `ExpandGRMInput` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| PrimaryOrSecondaryObjects | TcConnector.ListOfModelObject | OneToOne |  |
+| PrimaryOrSecondaryObjects | TcConnector.ListOfModelObject | OneToOne | |
 
 #### Entity `ExpandGRMResponse`
 
@@ -2817,7 +2817,7 @@ Entity `ExpandGRMResponse` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `Relation__`
 
@@ -2825,13 +2825,13 @@ Entity `ExpandGRMResponse` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| relationTypeName | String (200) |  |  |
+| relationTypeName | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| relations | TcConnector.ExpandGRMInput | OneToMany |  |
+| relations | TcConnector.ExpandGRMInput | OneToMany | |
 
 #### Entity `relationshipObject`
 
@@ -2843,9 +2843,9 @@ Entity `relationshipObject` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| relationshipObjects | TcConnector.ExpandGRMResponse | OneToMany |  |
-| otherSideObject | TcConnector.ModelObject | OneToMany |  |
-| _relation | TcConnector.ImanRelation | OneToMany |  |
+| relationshipObjects | TcConnector.ExpandGRMResponse | OneToMany | |
+| otherSideObject | TcConnector.ModelObject | OneToMany | |
+| _relation | TcConnector.ImanRelation | OneToMany | |
 
 #### Entity `RootTargetAttachments`
 
@@ -2861,42 +2861,42 @@ Entity `RootTargetAttachments` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| root_target_attachments | TcConnector.EPMTask | OneToMany |  |
-| checked_out_user | TcConnector.User | OneToMany |  |
-| release_status_list | TcConnector.WorkspaceObject | ManyToMany |  |
-| owning_user | TcConnector.User | OneToMany |  |
-| last_mod_user | TcConnector.User | OneToMany |  |
-| owning_group | TcConnector.Group | OneToMany |  |
-| owning_role | TcConnector.Role | OneToMany |  |
+| root_target_attachments | TcConnector.EPMTask | OneToMany | |
+| checked_out_user | TcConnector.User | OneToMany | |
+| release_status_list | TcConnector.WorkspaceObject | ManyToMany | |
+| owning_user | TcConnector.User | OneToMany | |
+| last_mod_user | TcConnector.User | OneToMany | |
+| owning_group | TcConnector.Group | OneToMany | |
+| owning_role | TcConnector.Role | OneToMany | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `ExpandPSOneLevel2Input`
 
@@ -2904,9 +2904,9 @@ Entity `RootTargetAttachments` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| RelationName | String (200) |  |  |
-| NamedRefHandler | String (200) | AllNamedRefs |  |
-| ObjectTypeName | String (200) |  |  |
+| RelationName | String (200) | | |
+| NamedRefHandler | String (200) | AllNamedRefs | |
+| ObjectTypeName | String (200) | | |
 
 ##### Associations
 
@@ -2926,7 +2926,7 @@ Entity `ExpandPSOneLevel2Response` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `ParentChildWrapper`
 
@@ -2938,8 +2938,8 @@ Entity `ParentChildWrapper` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| output__ExpandPSOneLevel2Response | TcConnector.ExpandPSOneLevel2Response | OneToMany |  |
-| parent__ParentChildWrapper | TcConnector.ParentChildWrapper | OneToOne |  |
+| output__ExpandPSOneLevel2Response | TcConnector.ExpandPSOneLevel2Response | OneToMany | |
+| parent__ParentChildWrapper | TcConnector.ParentChildWrapper | OneToOne | |
 
 #### Entity `Parent__`
 
@@ -2951,8 +2951,8 @@ Entity `Parent__` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| parent__ParentChildWrapper | TcConnector.ParentChildWrapper | OneToOne |  |
-| bomLine__Parent | TcConnector.Parent__ | OneToOne |  |
+| parent__ParentChildWrapper | TcConnector.ParentChildWrapper | OneToOne | |
+| bomLine__Parent | TcConnector.Parent__ | OneToOne | |
 
 #### Entity `Child`
 
@@ -2964,10 +2964,10 @@ Entity `Child` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| children__ParentChildWrapper | TcConnector.ParentChildWrapper | OneToMany |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| BOMLine_childrenObj | TcConnector.BOMLine | OneToMany |  |
-| bomLine__Child | TcConnector.Child | OneToOne |  |
+| children__ParentChildWrapper | TcConnector.ParentChildWrapper | OneToMany | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| BOMLine_childrenObj | TcConnector.BOMLine | OneToMany | |
+| bomLine__Child | TcConnector.Child | OneToOne | |
 
 #### Entity `relatedObjectsEntity`
 
@@ -2979,8 +2979,8 @@ Entity `relatedObjectsEntity` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| relatedObjects | TcConnector.Child | OneToMany |  |
-| relatedObject | TcConnector.relatedObjectsEntity | OneToOne |  |
+| relatedObjects | TcConnector.Child | OneToMany | |
+| relatedObject | TcConnector.relatedObjectsEntity | OneToOne | |
 
 #### Entity `namedRefListEntity`
 
@@ -2988,16 +2988,16 @@ Entity `relatedObjectsEntity` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| namedReferenceType | String (200) |  |  |
-| namedReferenceName | String (200) |  |  |
-| fileTicket | String (1000) |  |  |
+| namedReferenceType | String (200) | | |
+| namedReferenceName | String (200) | | |
+| fileTicket | String (1000) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| namedRefList | TcConnector.relatedObjectsEntity | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
+| namedRefList | TcConnector.relatedObjectsEntity | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
 
 #### Entity `ExpandBOMParentChild`
 
@@ -3009,7 +3009,7 @@ Entity `ExpandBOMParentChild` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| ParentBOMLIne | TcConnector.ExpandBOMParentChild | OneToOne |  |
+| ParentBOMLIne | TcConnector.ExpandBOMParentChild | OneToOne | |
 
 #### Entity `WhereUsedInput`
 
@@ -3017,14 +3017,14 @@ Entity `ExpandBOMParentChild` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| numLevels | Integer | 1 |  |
-| whereUsedPrecise | Boolean | false |  |
+| numLevels | Integer | 1 | |
+| whereUsedPrecise | Boolean | false | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| rule | TcConnector.WhereUsedInput | OneToOne |  |
+| rule | TcConnector.WhereUsedInput | OneToOne | |
 
 #### Entity `WhereUsedResponseInfo`
 
@@ -3032,14 +3032,14 @@ Entity `ExpandBOMParentChild` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| level | Integer | 0 |  |
+| level | Integer | 0 | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| parentItemRev | TcConnector.WhereUsedResponseInfo | OneToOne |  |
-| WhereUsedResponseInfo_ModelObject | TcConnector.ModelObject | OneToMany |  |
+| parentItemRev | TcConnector.WhereUsedResponseInfo | OneToOne | |
+| WhereUsedResponseInfo_ModelObject | TcConnector.ModelObject | OneToMany | |
 
 #### Entity `BooleanObject`
 
@@ -3047,7 +3047,7 @@ Entity `ExpandBOMParentChild` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| value | Boolean | false |  |
+| value | Boolean | false | |
 
 ##### Associations
 
@@ -3059,16 +3059,16 @@ Entity `BooleanObject` does not own any associations.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| propertyName | String (200) |  |  |
+| propertyName | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| lovInput | TcConnector.LovInputEntity | OneToOne |  |
-| filterData__0 | TcConnector.LOVFilterDataInputEntity | OneToOne |  |
-| lov__0 | TcConnector.ListOfValues | OneToOne |  |
+| lov | TcConnector.ModelObject | OneToOne | |
+| lovInput | TcConnector.LovInputEntity | OneToOne | |
+| filterData__0 | TcConnector.LOVFilterDataInputEntity | OneToOne | |
+| lov__0 | TcConnector.ListOfValues | OneToOne | |
 
 #### Entity `LovInputEntity`
 
@@ -3076,15 +3076,15 @@ Entity `BooleanObject` does not own any associations.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| operationName | String (200) |  |  |
-| boName | String (200) |  |  |
+| operationName | String (200) | | |
+| boName | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovInput | TcConnector.LovInputEntity | OneToOne |  |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovInput | TcConnector.LovInputEntity | OneToOne | |
 
 #### Entity `LOVFilterDataInputEntity`
 
@@ -3092,17 +3092,17 @@ Entity `BooleanObject` does not own any associations.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| filterString | String (200) |  |  |
-| maxResults | Integer | 2000 |  |
-| numberToReturn | Integer | 25 |  |
-| order | Integer | 1 |  |
-| sortPropertyName | String (200) |  |  |
+| filterString | String (200) | | |
+| maxResults | Integer | 2000 | |
+| numberToReturn | Integer | 25 | |
+| order | Integer | 1 | |
+| sortPropertyName | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| filterData__0 | TcConnector.LOVFilterDataInputEntity | OneToOne |  |
+| filterData__0 | TcConnector.LOVFilterDataInputEntity | OneToOne | |
 
 #### Entity `GetLOVValuesResponse`
 
@@ -3114,14 +3114,14 @@ TcConnector.ServiceResponse
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| moreValuesExist | Boolean | false |  |
+| moreValuesExist | Boolean | false | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| lovData | TcConnector.GetLOVValuesResponse | OneToOne |  |
-| ResponseData | TcConnector.ServiceResponse | OneToOne |  |
+| lovData | TcConnector.GetLOVValuesResponse | OneToOne | |
+| ResponseData | TcConnector.ServiceResponse | OneToOne | |
 
 #### Entity `LOVDataEntity`
 
@@ -3129,16 +3129,16 @@ TcConnector.ServiceResponse
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| style | String (200) |  |  |
-| additionalValuesSkipped | Boolean | false |  |
-| currentIndex | Integer | 0 |  |
+| style | String (200) | | |
+| additionalValuesSkipped | Boolean | false | |
+| currentIndex | Integer | 0 | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| lovData | TcConnector.GetLOVValuesResponse | OneToOne |  |
-| filterData__1 | TcConnector.LOVFilterDataOutputEntity | OneToOne |  |
+| lovData | TcConnector.GetLOVValuesResponse | OneToOne | |
+| filterData__1 | TcConnector.LOVFilterDataOutputEntity | OneToOne | |
 
 #### Entity `LOVValuesEntity`
 
@@ -3150,10 +3150,10 @@ Entity `LOVValuesEntity` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| lovValues | TcConnector.GetLOVValuesResponse | OneToMany |  |
-| propInternalValues | TcConnector.LOVValuesEntity | OneToOne |  |
-| propInternalValueTypes | TcConnector.LOVInternalValueType | OneToOne |  |
-| propDisplayValues | TcConnector.LOVValuesEntity | OneToOne |  |
+| lovValues | TcConnector.GetLOVValuesResponse | OneToMany | |
+| propInternalValues | TcConnector.LOVValuesEntity | OneToOne | |
+| propInternalValueTypes | TcConnector.LOVInternalValueType | OneToOne | |
+| propDisplayValues | TcConnector.LOVValuesEntity | OneToOne | |
 
 #### Entity `LOVInternalValue`
 
@@ -3165,7 +3165,7 @@ Entity `LOVInternalValue` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| propInternalValues | TcConnector.LOVValuesEntity | OneToOne |  |
+| propInternalValues | TcConnector.LOVValuesEntity | OneToOne | |
 
 #### Entity `LOVInternalValueType`
 
@@ -3173,13 +3173,13 @@ Entity `LOVInternalValue` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| lov_values | Integer | 8 |  |
+| lov_values | Integer | 8 | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| propInternalValueTypes | TcConnector.LOVInternalValueType | OneToOne |  |
+| propInternalValueTypes | TcConnector.LOVInternalValueType | OneToOne | |
 
 #### Entity `LOVDisplayValue`
 
@@ -3191,7 +3191,7 @@ Entity `LOVDisplayValue` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| propDisplayValues | TcConnector.LOVValuesEntity | OneToOne |  |
+| propDisplayValues | TcConnector.LOVValuesEntity | OneToOne | |
 
 #### Entity `LOVFilterDataOutputEntity`
 
@@ -3199,17 +3199,17 @@ Entity `LOVDisplayValue` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| filterString | String (200) |  |  |
-| maxResults | Integer | 2000 |  |
-| numberToReturn | Integer | 25 |  |
-| order | Integer | 1 |  |
-| sortPropertyName | String (200) |  |  |
+| filterString | String (200) | | |
+| maxResults | Integer | 2000 | |
+| numberToReturn | Integer | 25 | |
+| order | Integer | 1 | |
+| sortPropertyName | String (200) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| filterData__1 | TcConnector.LOVFilterDataOutputEntity | OneToOne |  |
+| filterData__1 | TcConnector.LOVFilterDataOutputEntity | OneToOne | |
 
 #### Entity `ListOfValues`
 
@@ -3221,46 +3221,46 @@ TcConnector.ModelObject
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| lov_desc | String (240) |  |  |
-| lov_name | String (128) |  |  |
-| lov_type | String (32) |  |  |
-| lov_usage | Integer | 0 |  |
-| lov_value_type | Integer | 0 |  |
+| lov_desc | String (240) | | |
+| lov_name | String (128) | | |
+| lov_type | String (32) | | |
+| lov_usage | Integer | 0 | |
+| lov_value_type | Integer | 0 | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| lov__0 | TcConnector.ListOfValues | OneToOne |  |
+| lov__0 | TcConnector.ListOfValues | OneToOne | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `DummyModelObject`
 
@@ -3276,37 +3276,37 @@ Entity `DummyModelObject` has no attributes.
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| primary_object | TcConnector.ImanRelation | OneToOne |  |
-| secondary_object | TcConnector.ImanRelation | OneToOne |  |
+| primary_object | TcConnector.ImanRelation | OneToOne | |
+| secondary_object | TcConnector.ImanRelation | OneToOne | |
 | primaryObject | TcConnector.ModelObject | OneToOne | The primary object to create the relation from |
 | secondaryObject | TcConnector.ModelObject | OneToOne | The secondary object to create the relation to |
 | userData | TcConnector.ModelObject | OneToOne | The user data object used to create the relation. This parameter is optional. |
-| searchResults | TcConnector.SearchResponse | OneToMany |  |
-| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany |  |
-| Plain | TcConnector.ServiceData | OneToMany |  |
-| Updated | TcConnector.ServiceData | OneToMany |  |
-| Created | TcConnector.ServiceData | OneToMany |  |
-| ClientObject | TcConnector.ErrorStack | OneToOne |  |
-| revise_objects | TcConnector.ReviseOutputResponse | OneToMany |  |
-| originalObject | TcConnector.ModelObject | OneToOne |  |
-| objectCopy | TcConnector.ModelObject | OneToOne |  |
-| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany |  |
-| attachments | TcConnector.CreateWorkflowInput | OneToMany |  |
-| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne |  |
-| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany |  |
-| supportingObject | TcConnector.PerformActionInput | OneToOne |  |
-| ModelObject_TcSession | TcConnector.TcSession | OneToMany |  |
-| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne |  |
-| assignedUser | TcConnector.CreateWorkflowInput | OneToMany |  |
-| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne |  |
-| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne |  |
-| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany |  |
-| referenceObject | TcConnector.namedRefListEntity | OneToOne |  |
-| objectOfBOMLine | TcConnector.Child | OneToOne |  |
-| objects | TcConnector.WhereUsedInput | OneToMany |  |
-| lov | TcConnector.ModelObject | OneToOne |  |
-| owningObject | TcConnector.ModelObject | OneToOne |  |
-| lovs | TcConnector.LOVDataEntity | OneToMany |  |
+| searchResults | TcConnector.SearchResponse | OneToMany | |
+| ListOfModelObjects | TcConnector.ListOfModelObject | OneToMany | |
+| Plain | TcConnector.ServiceData | OneToMany | |
+| Updated | TcConnector.ServiceData | OneToMany | |
+| Created | TcConnector.ServiceData | OneToMany | |
+| ClientObject | TcConnector.ErrorStack | OneToOne | |
+| revise_objects | TcConnector.ReviseOutputResponse | OneToMany | |
+| originalObject | TcConnector.ModelObject | OneToOne | |
+| objectCopy | TcConnector.ModelObject | OneToOne | |
+| parentBomLines | TcConnector.ExpandPSOneLevelInput | OneToMany | |
+| attachments | TcConnector.CreateWorkflowInput | OneToMany | |
+| workflowRootTask | TcConnector.CreateWorkflowResponse | OneToOne | |
+| targets | TcConnector.GetWorkflowTemplatesInput | OneToMany | |
+| supportingObject | TcConnector.PerformActionInput | OneToOne | |
+| ModelObject_TcSession | TcConnector.TcSession | OneToMany | |
+| responsibleParty | TcConnector.CreateWorkflowInput | OneToOne | |
+| assignedUser | TcConnector.CreateWorkflowInput | OneToMany | |
+| Items_GetItemFromIdResponse | TcConnector.GetItemFromIdResponse | OneToOne | |
+| itemRevision__ | TcConnector.ItemRevisionOutput | OneToOne | |
+| parentBomLines__ | TcConnector.ExpandPSOneLevel2Input | OneToMany | |
+| referenceObject | TcConnector.namedRefListEntity | OneToOne | |
+| objectOfBOMLine | TcConnector.Child | OneToOne | |
+| objects | TcConnector.WhereUsedInput | OneToMany | |
+| lov | TcConnector.ModelObject | OneToOne | |
+| owningObject | TcConnector.ModelObject | OneToOne | |
+| lovs | TcConnector.LOVDataEntity | OneToMany | |
 
 #### Entity `ImanFile`
 
@@ -3314,17 +3314,17 @@ Entity `DummyModelObject` has no attributes.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| fileID | String (200) |  |  |
-| name | String (200) |  |  |
-| size | String (200) |  |  |
-| creationDate | Date and time |  |  |
-| lastModifiedDate | Date and time |  |  |
+| fileID | String (200) | | |
+| name | String (200) | | |
+| size | String (200) | | |
+| creationDate | Date and time | | |
+| lastModifiedDate | Date and time | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| imanFiles | TcConnector.Dataset | OneToMany |  |
+| imanFiles | TcConnector.Dataset | OneToMany | |
 
 #### Entity `Image`
 
@@ -3336,8 +3336,8 @@ System.Image
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| datasetUID | String (200) |  |  |
-| imanFileID | String (200) |  |  |
+| datasetUID | String (200) | | |
+| imanFileID | String (200) | | |
 
 ##### Associations
 
@@ -3349,13 +3349,13 @@ Entity `Image` does not own any associations.
 
 | Name | Type | Default value | Documentation |
 | --- | --- | --- | --- |
-| AccessToken | String (unlimited) |  |  |
+| AccessToken | String (unlimited) | | |
 
 ##### Associations
 
 | Name | Connected to | Multiplicity | Documentation |
 | --- | --- | --- | --- |
-| TcTokens | TcConnector.TcSession | OneToMany |  |
+| TcTokens | TcConnector.TcSession | OneToMany | |
 
 #### Annotations
 
@@ -3391,29 +3391,29 @@ Entity `Image` does not own any associations.
 | `ExecuteAdminLogin` | Boolean | This microflow enables the configuration option for administrators. Other users will not see the configuration page. |
 | `ExecuteLogout` | Nothing | Microflow to perform Teamcenter log out for given teamcenter configuration. |
 | `ShowLoginPage` | Boolean | This microflow displays the login page. |
-| `PerformTokenExchangeAndLoginToTC` | Boolean |  |
+| `PerformTokenExchangeAndLoginToTC` | Boolean | |
 | `ExecuteLogin` | Nothing | Microflow to perform Teamcenter login. |
 | `AreMultipleTcConfigActive` | Boolean | Microflow to returns true if multiple teamcenter congigurations are active else returns false. |
 | `RetrieveTeamcenterConifgurationFromTcSession` | TcConnector.TeamcenterConfiguration | Microflow to retrieve Teamcenter configuration from database. |
 | `RetrieveTeamcenterConifgurationByName` | TcConnector.TeamcenterConfiguration | Microflow to retrieve Teamcenter configuration from database. |
-| `RetrieveHttpHeaderList` | List of System.HttpHeader |  |
+| `RetrieveHttpHeaderList` | List of System.HttpHeader | |
 | `RetrieveConfigNameFromSingleActiveConfiguration | String | Microflow to retrieve Teamcenter configuration if single teamcenter configuration is active. |
 | `RetrieveTcSessionBasedOnConfigName` | TcConnector.TcSession | Microflow to retrieve Tc session from database for given Teamcenter configuration. |
-| `DownloadFile` | Boolean |  |
-| `CloseBOMWindow` | TcConnector.ServiceResponse |  |
-| `HandleActiveConfigErrors` | Nothing |  |
+| `DownloadFile` | Boolean | |
+| `CloseBOMWindow` | TcConnector.ServiceResponse | |
+| `HandleActiveConfigErrors` | Nothing | |
 | `ShowPartialErrors` | Nothing | This microflow retrieves partial errors from service data. |
 | `HandleServiceErrors` | Nothing | Microflow to handle service errors. |
-| `GetBlankCredential` | TcConnector.Credentials |  |
-| `SaveTeamcenterConfiguration` | Nothing |  |
+| `GetBlankCredential` | TcConnector.Credentials | |
+| `SaveTeamcenterConfiguration` | Nothing | |
 | `SSO_CreateRedirectURL` | String | This microflow constructs Teamcenter SSO redirect URL. |
-| `UpdateSession` | Nothing |  |
-| `GetStatusofConfiguration` | TcConnector.Cookie |  |
-| `CreateBlankHomePage` | TcConnector.HomePage |  |
+| `UpdateSession` | Nothing | |
+| `GetStatusofConfiguration` | TcConnector.Cookie | |
+| `CreateBlankHomePage` | TcConnector.HomePage | |
 | `LoginToMultipleTeamcenters` | Nothing | Microflow to perform Teamcenter log in if multiiple teamcenter configurations are active. |
-| `SendService` | System.HttpResponse |  |
+| `SendService` | System.HttpResponse | |
 | `ChangeActiveTeamcenterConfiguration` | Nothing | Microflow to set Teamcenter configuration as active. |
-| `TeamcenterConfiguration_ValidateMandatorySSOAttributes` | Boolean |  |
+| `TeamcenterConfiguration_ValidateMandatorySSOAttributes` | Boolean | |
 | `TeamcenterConfiguration_EnsureSingleTCConfigurationsIsActive]` | Boolean | Event handler to validate the only single configuration is active if EnableMultipleActiveConfig is set to false. |
 
 #### Microflow `SSO_RegisterRequestHandlers`
@@ -3472,7 +3472,7 @@ Microflow to perform Teamcenter log out for given teamcenter configuration.
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration |  |
+| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration | |
 
 ##### Return type
 
@@ -3496,11 +3496,11 @@ Boolean
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| AccessToken | String |  |
-| TcXConfigName | String |  |
-| TcSession | TcConnector.TcSession |  |
-| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration |  |
-| TcSessionObj | TcConnector.TcSession |  |
+| AccessToken | String | |
+| TcXConfigName | String | |
+| TcSession | TcConnector.TcSession | |
+| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration | |
+| TcSessionObj | TcConnector.TcSession | |
 
 ##### Return type
 
@@ -3515,7 +3515,7 @@ Microflow to perform Teamcenter login.
 | Name | Type | Documentation |
 | --- | --- | --- |
 | Credentials | TcConnector.Credentials | Teamcenter credentials. |
-| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration |  |
+| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration | |
 
 ##### Return type
 
@@ -3541,7 +3541,7 @@ Microflow to retrieve Teamcenter configuration from database.
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| TcSession | TcConnector.TcSession |  |
+| TcSession | TcConnector.TcSession | |
 
 ##### Return type
 
@@ -3555,7 +3555,7 @@ Microflow to retrieve Teamcenter configuration from database.
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| ConfigName | String |  |
+| ConfigName | String | |
 
 ##### Return type
 
@@ -3591,7 +3591,7 @@ Microflow to retrieve Tc session from database for given Teamcenter configuratio
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| ConfigName | String |  |
+| ConfigName | String | |
 
 ##### Return type
 
@@ -3603,9 +3603,9 @@ TcConnector.TcSession
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| Dataset | TcConnector.Dataset |  |
-| ConfigurationName | String |  |
-| FileDownloadType | Enumeration TcConnector.FileDownloadType |  |
+| Dataset | TcConnector.Dataset | |
+| ConfigurationName | String | |
+| FileDownloadType | Enumeration TcConnector.FileDownloadType | |
 
 ##### Return type
 
@@ -3617,8 +3617,8 @@ Boolean
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| BOMWindow | TcConnector.BOMWindow |  |
-| configName | String |  |
+| BOMWindow | TcConnector.BOMWindow | |
+| configName | String | |
 
 ##### Return type
 
@@ -3630,7 +3630,7 @@ TcConnector.ServiceResponse
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| ConfigException | System.Error |  |
+| ConfigException | System.Error | |
 
 ##### Return type
 
@@ -3644,7 +3644,7 @@ This microflow retrieves partial errors from service data.
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| ServiceResponse | TcConnector.ServiceResponse |  |
+| ServiceResponse | TcConnector.ServiceResponse | |
 
 ##### Return type
 
@@ -3658,7 +3658,7 @@ Microflow to handle service errors.
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| ServiceException | System.Error |  |
+| ServiceException | System.Error | |
 
 ##### Return type
 
@@ -3680,7 +3680,7 @@ TcConnector.Credentials
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration |  |
+| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration | |
 
 ##### Return type
 
@@ -3706,7 +3706,7 @@ String
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| TcSession | TcConnector.TcSession |  |
+| TcSession | TcConnector.TcSession | |
 
 ##### Return type
 
@@ -3718,7 +3718,7 @@ Nothing
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration |  |
+| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration | |
 
 ##### Return type
 
@@ -3742,7 +3742,7 @@ Microflow to perform Teamcenter log in if multiiple teamcenter configurations ar
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration |  |
+| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration | |
 
 ##### Return type
 
@@ -3754,7 +3754,7 @@ Nothing
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| SoaServiceRequest | TcConnector.SoaServiceRequest |  |
+| SoaServiceRequest | TcConnector.SoaServiceRequest | |
 
 ##### Return type
 
@@ -3780,7 +3780,7 @@ Nothing
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration |  |
+| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration | |
 
 ##### Return type
 
@@ -3794,7 +3794,7 @@ Event handler to validate the only single configuration is active if EnableMulti
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration |  |
+| TeamcenterConfiguration | TcConnector.TeamcenterConfiguration | |
 
 ##### Return type
 
@@ -3848,7 +3848,7 @@ Boolean
 | `ReviseObjects` | TcConnector.ReviseObjectsResponse | SOA URL:  <br>Core-2015-07-DataManagement/getDeepCopyData  <br>Core-2013-05-DataManagement/reviseObjects  <br>  <br>Description:  <br>This is a generic revise operation for revisable business objects. This operation revises the given objects and copies or creates new objects using the data for the property values and deep copy data, assuming the reviseInput for the object is provided. The input for revise object is passed through reviseInput entity.  <br>  <br>Returns:  <br>An entity of type ReviseObjectsResponse. Revised objects can be retrieved using association TcConnector.revise_output and the revise tree can be retrieved using TcConnector.reviseTrees. Partial errors can be retrieved using association TcConnector.ResponseData/TcConnector.PartialErrors. |
 | `ExpandGRMRelationsForSecondary` | TcConnector.ExpandGRMResponse | SOA URL:  <br>Core-2007-09-DataManagement/expandGRMRelationsForSecondary  <br>  <br>Description:  <br>This action returns the primary objects that are related to the input secondary objects  <br>  <br>Returns:  <br>An entity of type ExpandGRMResponse, relationshipObject can be retrieved using association TcConnector.relationshipObjects. Partial errors can be retrieved using association TcConnector.ResponseData/TcConnector.PartialErrors. |
 | `DownloadFiles` | Boolean | SOA URL:  <br>Core-2006-03-DataManagement/getProperties  <br>Core-2006-03-FileManagement/getFileReadTickets  <br>  <br>Downloads all the files associated with the Dataset as TcConnector.FileDocument entity  <br>  <br>Input -  <br>- Dataset object having UID  <br>  <br>Output -  <br>- Action returns True or False in case of success and failure respectively.  <br>- Input object's Dataset.Documents association will be updated to point to downloaded files if any. |
-| `__SSOCallBackRequest` | Boolean |  |
+| `__SSOCallBackRequest` | Boolean | |
 | `CloseBOMWindows` | TcConnector.ServiceResponse | SOA URL:  <br>Cad-2007-01-StructureManagement/closeBOMWindows  <br>  <br>Description:  <br>Closes a BOMWindow. Must be used to close the BOMWindow created during Create BOM Window after calls to Expand Product Structure services are complete.  <br>  <br>Returns:  <br>Partial errors can be retrieved using association TcConnector.ResponseData/TcConnector.PartialErrors. |
 
 #### Java action `ExpandPSAllLevels`
@@ -4445,9 +4445,9 @@ This has no type parameters.
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| typeName | String |  |
-| propertyName | String |  |
-| configurationName | String |  |
+| typeName | String | |
+| propertyName | String | |
+| configurationName | String | |
 
 ##### Return type
 
@@ -4633,7 +4633,7 @@ This has no type parameters.
 | --- | --- | --- |
 | UserCredentials | TcConnector.Credentials | Credentials to use for Logging int to Teamcenter. |
 | ConfigurationName | String | The teamcenter configuration name for which the action is to be performed. In case of single active connection pass the configuration name or empty value. |
-| TcSession | TcConnector.TcSession |  |
+| TcSession | TcConnector.TcSession | |
 
 ##### Return type
 
@@ -5176,7 +5176,7 @@ This has no type parameters.
 
 | Name | Type | Documentation |
 | --- | --- | --- |
-| contextPath | String |  |
+| contextPath | String | |
 
 ##### Return type
 
@@ -5213,7 +5213,7 @@ TcConnector.ServiceResponse
 
 | Name | Documentation |
 | --- | --- |
-| `FileDownloadType` |  |
+| `FileDownloadType` | |
 
 #### Enumeration `FileDownloadType`
 
@@ -5248,13 +5248,13 @@ TcConnector.ServiceResponse
 | Name | Value | Documentation |
 | --- | --- | --- |
 | EnableMultipleActiveConfig | False | Set to true to use multiple configuration active at same time, false value with only allow single active configuration. |
-| Version | 2412.0225.0 |  |
-| SSO_ContextURLPath | TCSSO |  |
+| Version | 2412.0225.0 | |
+| SSO_ContextURLPath | TCSSO | |
 | UseSharedSession | True | Set to true to share a single TcServer session for a given user across all Mendix sessions.  <br>When set to false, a new TcServer is assinged for each Mendix session. |
 
 ### Snippets
 
 | Name | Documentation |
 | --- | --- |
-| _TCSSO_Connector_Documentation |  |
-| _TCX_Connector_Documentation |  |
+| _TCSSO_Connector_Documentation | |
+| _TCX_Connector_Documentation | |

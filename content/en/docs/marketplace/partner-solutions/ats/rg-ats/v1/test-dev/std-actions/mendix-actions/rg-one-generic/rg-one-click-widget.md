@@ -21,5 +21,5 @@ Optionally you can specify if a doubleclick should be performed or not and you c
 Name | Datatype | Required | Description
 --- | --- | --- | ---
 Widget Name | String | yes | The name of the widget you want to click/doubleclick
-Doubleclick | Boolean |no | Perform a doubleclick
+Doubleclick | Boolean | no | Perform a doubleclick
 Search Context | WebElement | no | Limit the search to the given WebElement

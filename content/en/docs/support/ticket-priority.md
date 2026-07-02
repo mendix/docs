@@ -23,9 +23,9 @@ The priority levels are based on the impact and urgency of the request.
 
 | Urgency | Description |
 | ------- | ------- |
-| High    | The operational functionality is severely disrupted. |
-| Medium  | The operational functionality is fairly disrupted. |
-| Low     | The operational functionality is hardly disrupted. |
+| High | The operational functionality is severely disrupted. |
+| Medium | The operational functionality is fairly disrupted. |
+| Low | The operational functionality is hardly disrupted. |
 
 ## Priority Matrix
 

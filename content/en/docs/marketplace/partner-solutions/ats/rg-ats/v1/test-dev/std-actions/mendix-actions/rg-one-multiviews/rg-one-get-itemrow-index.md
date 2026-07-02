@@ -19,9 +19,9 @@ You have to provide an Item/Row as WebElement. To get the DataGrid row or Templa
 
 ## Input Parameters
 
-Name | Datatype | Required| Description
+Name | Datatype | Required | Description
 --- | --- | --- | ---
-Item/Row | WebElement |yes| The DataGrid row or TemplateGrid/ListView Item
+Item/Row | WebElement | yes | The DataGrid row or TemplateGrid/ListView Item
 
 ## Return Value
 

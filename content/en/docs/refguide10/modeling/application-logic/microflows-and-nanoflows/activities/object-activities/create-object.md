@@ -45,7 +45,7 @@ The entity of which you want to create an object.
 | --- | --- |
 | Yes with event handlers | The object is saved in the database and the [event handlers](/refguide10/event-handlers/) are triggered. |
 | Yes without event handlers | The object is saved in the database, but the [event handlers](/refguide10/event-handlers/) are not triggered. |
-| No *(default)*  | The object is changed without being saved in the database. |
+| No *(default)* | The object is changed without being saved in the database. |
 
 #### Commits in Nanoflows
 

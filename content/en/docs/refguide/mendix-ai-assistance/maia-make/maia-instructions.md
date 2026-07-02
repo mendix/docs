@@ -25,11 +25,11 @@ Maia Instructions follow the [AGENTS.md standard](https://agents.md) for agent i
 
 Maia supports both [agent skills](/refguide/maia-agent-skills/) and agent instructions. The following table summarizes their differences:
 
-| Aspects               | Instructions                                                                                        | Skills                                                                                   |
+| Aspects | Instructions | Skills |
 | ------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Loading       | Deterministically loaded, whenever working with the given project or module.                         | Agent decides to load skills on demand, based on their name and description.                       |
+| Loading | Deterministically loaded, whenever working with the given project or module. | Agent decides to load skills on demand, based on their name and description. |
 | Applicability | Project or module-wide instructions that should always be part of context (for example, company preferences). | Instructions that are applicable only in certain situations (for example, microflow conventions). |
-| Organization  | Single file, should be kept as short as possible.                                                    | Allows you to split instructions into the core skill and additional references that Maia reads on demand as needed. |
+| Organization | Single file, should be kept as short as possible. | Allows you to split instructions into the core skill and additional references that Maia reads on demand as needed. |
 
 ## Creating a New Maia Instruction {#creating-instructions}
 
@@ -55,6 +55,6 @@ Project-level instructions are stored as `skillssource/AGENTS.md`, while module-
 
 ## Read More
 
-- [Agent Skills](/refguide/maia-agent-skills/)
-- [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-- [Maia Chat](/refguide/maia-chat/)
+* [Agent Skills](/refguide/maia-agent-skills/)
+* [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
+* [Maia Chat](/refguide/maia-chat/)

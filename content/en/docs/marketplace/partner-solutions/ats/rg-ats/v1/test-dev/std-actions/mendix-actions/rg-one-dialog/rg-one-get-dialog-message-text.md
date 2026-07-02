@@ -20,7 +20,7 @@ You have to pass the dialog as WebElement to the action. To get the dialog as We
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---
-Dialog| WebElement | yes | The dialog as WebElement of which you want to get the message text
+Dialog | WebElement | yes | The dialog as WebElement of which you want to get the message text
 
 ## Return Value
 

@@ -27,6 +27,9 @@ jobs:
       - run: python _scripts/removeUnusedAttachments.py
 
       # Creates pull request
+      # NOTE: If you upgrade the version of this action, you must also update the
+      # GitHub Actions allowlist in mendix/docs > Settings > Actions > General
+      # to permit the new version tag, otherwise the workflow will fail.
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:

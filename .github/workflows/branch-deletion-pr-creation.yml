@@ -113,6 +113,9 @@ jobs:
           echo "BRANCHES_TOO_RECENT=$(printf -- '- %s\n' "${BRANCHES_TOO_RECENT[@]}" | jq -Rs .)" >> $GITHUB_ENV
           echo "UNMERGED_BRANCHES=$(printf -- '- %s\n' "${UNMERGED_BRANCHES[@]}" | jq -Rs .)" >> $GITHUB_ENV
 
+      # NOTE: If you upgrade the version of this action, you must also update the
+      # GitHub Actions allowlist in mendix/docs > Settings > Actions > General
+      # to permit the new version tag, otherwise the workflow will fail.
       - name: Create Deletion PR
         if: env.HAS_BRANCHES == 'true'
         uses: peter-evans/create-pull-request@v8

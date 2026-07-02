@@ -44,7 +44,10 @@ jobs:
           echo "VER<<EOF" >> $GITHUB_ENV
           echo "$VER" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      # Creates PR for linted content changes - needs version > 6 for NodeJS 24
+      # Creates PR for linted content changes
+      # NOTE: If you upgrade the version of this action, you must also update the
+      # GitHub Actions allowlist in mendix/docs > Settings > Actions > General
+      # to permit the new version tag, otherwise the workflow will fail.
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
         with:

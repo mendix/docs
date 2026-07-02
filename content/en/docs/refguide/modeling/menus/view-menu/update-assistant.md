@@ -66,7 +66,7 @@ The highlighted code helps you locate the deprecated call in the file and update
 
 ## Fixing Mendix Java API Deprecations and Removals {#fixing-deprecations}
 
-You can use the [Java Migration Tool](/refguide/java-migration-tool/) — a command-line utility that rewrites deprecated Mendix Java API calls in your project's source files. Use the Update Assistant pane to identify what needs fixing, then run the tool to apply the changes.
+Use the [Java Migration Tool](/refguide/java-migration-tool/), a command-line utility that rewrites deprecated Mendix Java API calls, in your app's source files. Use the **Update Assistant** pane to identify what needs fixing, then run the tool to apply the changes.
 
 ## Read More
 

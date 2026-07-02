@@ -7,25 +7,25 @@ description: Describes how to use Appcircle's Publish module to submit your Mend
 
 ## Introduction
 
-Once you have [built your Mendix native app with Appcircle](/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/), you can publish it directly to the App Store or Google Play using Appcircle's built-in **Publish to Stores** module. This lets you manage the entire release pipeline — from build to store submission — within a single platform.
+Once you have [built your Mendix native app with Appcircle](/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/), you can publish it directly to the App Store or Google Play using Appcircle's built-in **Publish to Stores** module. This lets you manage the entire release pipeline—from build to store submission—within a single platform.
 
 {{% alert color="info" %}}
-Please note that this documentation is provided as a guide only. Mendix offers support if issues arise with the Mendix build process itself, but cannot provide support for problems related to the Appcircle platform or other third-party tools described in this guide.
+Please note that this documentation is provided as a guide only. Mendix offers support if issues arise with **the Mendix build process**, but cannot provide support for problems related to the Appcircle platform or other third-party tools described in this guide.
 {{% /alert %}}
 
 ## Prerequisites
 
-Before starting this guide, make sure you have completed the following:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Set up a build profile and built your app by following [Build a Mendix Native App with Appcircle](/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/)
-* For iOS: have an [App Store Connect API key](https://developer.apple.com/documentation/appstoreconnectapi/creating-api-keys-for-app-store-connect-api)
-* For Android: have a [Google Play service account key](https://developers.google.com/android-publisher/getting_started)
+* iOS: have an [App Store Connect API key](https://developer.apple.com/documentation/appstoreconnectapi/creating-api-keys-for-app-store-connect-api)
+* Android: have a [Google Play service account key](https://developers.google.com/android-publisher/getting_started)
 
 ## Set Up Store Connections {#store-connections}
 
-Before creating a publish profile, set up your store credentials under **Credentials** in the Appcircle organization settings. To access this:
+Before creating a publish profile, set up your store credentials under **Credentials** in the Appcircle organization settings. To access this, do the following:
 
-1. Click on your organazation icon in the bottom-left corner.
+1. Click on your organization icon in the bottom-left corner.
 1. Select **Security** on the left panel.
 1. Go to the **Credentials** section.
 1. Choose the appropriate integration:
@@ -52,7 +52,7 @@ Before creating a publish profile, set up your store credentials under **Credent
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/gcp-credentials.png" alt="Testing Distribution module in Appcircle" class="no-border" >}}
 
 {{% alert color="info" %}}
-Additionally, Appcircle supports Huawei AppGallary and Microsoft Intune integrations. Same settings can be applied for these stores. Please visit Appcircle credentials [documentation](https://docs.appcircle.io/account/my-organization/security/credentials).
+Additionally, Appcircle supports Huawei AppGallary and Microsoft Intune integrations. The same settings can be applied for these stores. For more information, see Appcircle's [credentials documentation](https://docs.appcircle.io/account/my-organization/security/credentials).
 {{% /alert %}}
 
 Once these integrations are configured, you can use them when creating publish profiles.
@@ -67,15 +67,16 @@ To create a publish profile, do the following:
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/publish.png" alt="Testing Distribution module in Appcircle" class="no-border" >}}
 
-**For iOS:**
+### For iOS
 
-* **Option 1 - Create Profile Manually:**
+For iOS, you have two options:
+
+* Create a profile manually:
   1. Select **Create Profile Manually**.
   1. Enter a **Profile Name** (for example, `My App - iOS`).
   1. Enter the **Bundle ID** (must exactly match the Bundle ID in your Xcode project and provisioning profile).
   1. Create the profile.
-
-* **Option 2 - Create From App Store Connect:**
+* Create from App Store Connect:
   1. Select **Create from App Store Connect**.
   1. Choose the App Store Connect credential you configured in credential integrations.
   1. Select the app from the list of apps in your App Store Connect account.
@@ -83,15 +84,17 @@ To create a publish profile, do the following:
 
   {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/ios-profile-create.png" alt="Testing Distribution module in Appcircle" class="no-border" >}}
 
-**For Android:**
+### For Android
 
-* **Option 1 - Create Profile Manually:**
+For Android, you have two options:
+
+* Create Profile Manually:
   1. Select **Create Profile Manually**.
   1. Enter a **Profile Name** (for example, `My App - Android`).
   1. Enter the **Package Name** (must exactly match the Package Name in your Android project).
   1. Create the profile.
 
-* **Option 2 - Create from Google Play Console:**
+* Create from Google Play Console:
   1. Select **Create from Google Play Console**.
   1. Choose the Google Play Console credential you configured in credential integrations.
   1. Select the app from the list of apps in your Google Play Console account.
@@ -127,11 +130,11 @@ Once a build appears in your publish profile, you can start the store submission
 
 ## Publish Report and Activity Log
 
-The Publish Report provides a detailed overview of all actions performed within the Publish to Stores Module. It allows users to monitor, filter, and export publish-related activities across different platforms, trigger types, and stores.
+The **Publish Report** provides a detailed overview of all actions performed within the **Publish to Stores** module. It allows users to monitor, filter, and export publish-related activities across different platforms, trigger types, and stores.
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/publish-report.png" alt="Testing Distribution module in Appcircle" class="no-border" >}}
 
-You can also view Publish to Stores module actions such as Publish Flow and Publish Step statutes, along with resign binary operations within the Organizations or Sub Organizations in the Activity Log section.
+You can also view **Publish to Stores** module actions such as **Publish Flow** and **Publish Step** statutes, along with resign binary operations within the **Organizations** or **Sub-Organizations** in the **Activity Log** section.
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/publish-activity.png" alt="Testing Distribution module in Appcircle" class="no-border" >}}
 

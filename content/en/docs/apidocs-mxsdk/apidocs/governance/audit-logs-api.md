@@ -7,12 +7,7 @@ no_list: false
 description_list: true
 description: "Provides the documentation for the Audit Logging API."
 linktitle: "Audit Logs"
-beta: true
 ---
-
-{{% alert color="warning" %}}
-This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 

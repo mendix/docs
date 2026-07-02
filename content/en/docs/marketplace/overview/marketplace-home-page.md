@@ -14,7 +14,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-For more information about content support, see [Marketplace Content Support](/appstore/marketplace-content-support/).
+For more information about content support, refer to [Marketplace Content Support](/appstore/marketplace-content-support/).
 {{% /alert %}}
 
 ## Introduction
@@ -36,9 +36,7 @@ You can refine search results using the following filters:
 * **Compatibility** – Choose between Studio Pro major versions.
 * **Rating** – Display components based on their ratings in user [reviews](#my-reviews).
 
-{{% alert color="info" %}}
 For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/use-content/#downloading) section of *Using Marketplace Content*.
-{{% /alert %}}
 
 ## Manage Components
 
@@ -46,7 +44,8 @@ The **Manage Components** category contains the items described in the following
 
 ### Published {#published}
 
-This page includes all components that you have access to, along with the following information for each:
+The **Published** page includes all the components you can manage, based on your role. For an overview of who can manage components based on their role, refer to the [Company Groups](#content-groups) section on this page.    
+The following details are displayed for each component:
 
 * **Name** – The component's name. Clicking the name of a component in the list opens its [details page](/appstore/component-details/).
 * **Visibility** – Indicates whether the component is public or private.     
@@ -76,11 +75,8 @@ From this page, you can also upload a new component by clicking **Upload Compone
 
 ### Drafts {#my-drafts}
 
-Clicking **Drafts** opens the **My Drafts** page, where you can see and manage the drafts for all the Marketplace content you have started.
-
-{{% alert color="info" %}}
+Clicking **Drafts** opens the **My Drafts** page, where you can see and manage the drafts for all the Marketplace content you have started.    
 Only drafts that have been active over the last 30 days are displayed. Drafts are automatically removed if they have been inactive for more than 30 days.
-{{% /alert %}}
 
 You can also find details on how many total drafts you have, which drafts are ready to publish or are awaiting approval, and which drafts have been declined.
 

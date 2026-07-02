@@ -16,7 +16,29 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## June 2026
 
+### June 28, 2026
+
+#### Fixes
+
+* We fixed an issue that affected the visibility of logged-in users in the application. (Tickets #280616 , #280642, #280682, #280707, #280716, #280733, #280829, #280942, #280951, #281022, #281024, #281051, #281119, #281142, #281144, #281157, #281164, #281253, #281280,  #281465, #281537 , #281704 , #281754 , #281764)         
+
+### June 25, 2026
+
+#### New Features
+
+* Mendix Cloud APIs now support Model Context Protocol (MCP). AI coding assistants such as Claude Code and VS Code with GitHub Copilot can connect to your Mendix Cloud environments and manage deployments, environments, backups, and the app lifecycle through natural language. For more information, refer to [Using Mendix Deploy APIs with AI Agents (MCP)](/developerportal/deploy/deploy-apis-with-ai-agents/).
+
+### June 24, 2026
+
+#### New Features
+
+* You can now view and take action on policy violations, which are automatically detected and reported in Software Composition. Policies are defined in Control Center, allowing you to check for conditions like finding severity, Mendix runtime version, and Marketplace component licenses and support types. For details, refer to [Policies](/control-center/policies/), [Policy Status](/control-center/policy-status/), and [Software Composition](/developerportal/deploy/software-composition/).
+
 ### June 17, 2026
+
+#### New Features
+
+* [Software Composition](/developerportal/deploy/software-composition/) is now enhanced with the ability to view details on components marked as **Vulnerable**. This provides valuable information about the severity and CVSS score of the finding.
 
 #### Fixes
 

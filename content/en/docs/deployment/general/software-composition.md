@@ -94,6 +94,7 @@ The list contains the following information:
 * **Runtime** — The Mendix Runtime version.
 * **Findings** — The number of findings of each type, color-coded according to severity level.    
   {{% alert color="warning" %}}Findings are calculated for all software packages that are built. However, if a package is not deployed, we will stop updating its findings after 30 days. These findings will be grayed out and displayed as 0.{{% /alert %}}
+* **Policy Status** – The number of policies that the app violates. For details on each policy, click this line item, then go to the [Policy Status tab](#policy-status) of the app.
 * **Version** — The version of the deployment package on this app environment.
 * **Technical Contact** — The Technical Contact of the app.
 * **Target Cloud** —  The type of cloud where the deployment package is deployed. Currently, the following types of cloud are supported:
@@ -127,7 +128,6 @@ The page is divided into two tabs: **Findings** and **Component Usage**. For det
 * [Findings](/control-center/overview-tab/#overview-findings)
 * [Component Usage](/control-center/overview-tab/#overview-component-usage)
 
-<!--
 #### Finding and Component Details
 
 If a finding is marked as **Vulnerable**, its corresponding component has a **View Details** button. Clicking it opens a window which includes two sections:
@@ -148,7 +148,32 @@ If a finding is marked as **Vulnerable**, its corresponding component has a **Vi
     * **Publisher** – The entity that published the component affected by this finding.
 
 * **Mendix Guidance** – AI-generated guidance which describes the vulnerability, outlines the reasons why it is important to fix it, and recommends solutions.
--->
+
+### Policy Status {#policy-status}
+
+The **Policy Status** tab at the deployment package level displays a list of the policies that the specific package violates, with the following information for each:
+
+* **Status** – The status of the violation.
+* **Policy Name** – The name of the violated policy.
+* **View Details** – This opens the **Policy Details** pane, which displays the following details about the violated policy:
+
+    * **Policy ID** – The unique ID of the policy.
+    * **Policy Name** – The name of the policy.
+    * **Description** – A short description of the policy, which includes the reason why it is violated.
+    * **Status** – Whether the policy is active or not.
+    * **Scope** – The apps that the policy applies to. A breakdown of these is displayed on the **Policy Scope** tab of this pane.
+    * **Created by** – The unique ID of the user who created the policy.
+    * **Created on** – The date when the policy was created.
+    * **Last modified by** – The unique ID of the user who most recently updated the policy.
+    * **Last modified on** – The date when the policy was most recently updated.
+    * **Failure Condition(s)** – The conditions under which the policy is considered violated.
+    * **Checkpoints & Action(s)** – The trigger which causes the policy to be checked, and the action that is taken if the policy is violated.
+
+* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+
+You can search a policy by its name, and export all information on this tab to an Excel file.
+
+For details on defining policies, refer to [Policies](/control-center/policies/).
 
 ## Components {#all-components}
 
@@ -237,7 +262,6 @@ The finding list contains the following information:
 
 * Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
-<!--
 ##### Finding and Component Details
 
 If a finding is marked as **Vulnerable**, its corresponding component has a **View Details** button. Clicking it opens a window which includes these sections:
@@ -257,7 +281,6 @@ If a finding is marked as **Vulnerable**, its corresponding component has a **Vi
     * **Type** – The type of the component affected by this finding.
 
 * **Mendix Guidance** – AI-generated guidance which describes the vulnerability, outlines the reasons why it is important to fix it, and recommends solutions.
--->
 
 #### Component Usage {#component-component-usage}
 
@@ -277,3 +300,14 @@ The component usage list contains the following information:
 * **Version** — The version of the impacted deployment package.
 * **Target Cloud** — The type of cloud where the deployment package is deployed.
 * Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+
+## Policy Status
+
+The **Policy Status** tab lists the policies that apply to all the deployment packages of the app, along with the number of times each policy was violated. Clicking a policy name opens the list of all app artifacts and environments which violated that specific policy, with the following details:
+
+* **Status** – The type of violation.
+* **Package Name** – The name of the package which violated the policy.
+* **Environment Name** – If applicable, the name of the environment where the violating app package is deployed.
+* **Runtime** – The runtime version of the deployment package.
+* **Target Cloud** — The type of cloud where the deployment package is deployed.
+* **Last Checked On** – The date when the policy was last checked.

@@ -43,6 +43,10 @@ To access Grafana dashboards, the user must have the Grafana Admin permissions a
 
 Azure Managed Prometheus is provisioned automatically to collect application and Platform metrics. Logs are collected by Azure Monitor and stored in the Log Analytics Workspace.
 
+{{% alert color="info" %}}  
+Logs and metrics are retained for **30 days** by default.  
+{{% /alert %}}
+
 To view the logs, perform the following steps:
 
 1. In Grafana, go to **Dashboards > Mendix**.

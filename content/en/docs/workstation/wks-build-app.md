@@ -59,7 +59,7 @@ This feature is only available to licensed Mendix Workstation users. For more in
 
 You can invite other Workstation Management users to your workspace to share configurations and collaborate. This feature requires a Workstation license.
 
-To invite a user, click **Team** in the left navigation menu, then click **Invite Team Member**. Enter the user's email address and select a role. For more information about the available roles, see [Workspace Team and Collaboration](/mendix-workstation/installation/#collaboration).
+To invite a user, click **Team** in the left navigation menu, then click **Invite Team Member**. Enter the user's email address and select a role. For more information about the available roles, see [Managing the Team](/mendix-workstation/management-team/).
 
 To change a user's role or remove them from the workspace, click the three-dot icon in the right column of the user list. This action requires the Owner or Workspace Admin role.
 
@@ -81,7 +81,7 @@ The following section provides more information about using the nanoflows and Ja
 
 #### SendDeviceMessage
 
-Call `SendDeviceMessage` to send a message to a device. For more information about the supported message syntax, see [Message Syntax for File, Smart Card, and Bluetooth Devices](/mendix-workstation/device-syntax/). This action has the following parameters:
+Call `SendDeviceMessage` to send a message to a device. For more information about the supported message syntax, see [Configuring Devices](/mendix-workstation/management-devices/). This action has the following parameters:
 
 * `device` 
 * `message`

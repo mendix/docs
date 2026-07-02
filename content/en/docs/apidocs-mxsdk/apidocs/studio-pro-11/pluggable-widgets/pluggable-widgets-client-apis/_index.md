@@ -2,7 +2,7 @@
 title: "Client APIs"
 linktitle: "Client APIs for Pluggable Widgets"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/
-description: A guide for understanding the client APIs available to pluggable widgets in Mx10.
+description: A guide for understanding the client APIs available to pluggable widgets.
 weight: 20
 aliases:
     - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets

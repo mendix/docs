@@ -84,7 +84,7 @@ To register a new document type, do the following:
     import type { PersonInfo } from "../model/PersonInfo";
 
     function PersonEditor(input : { studioPro: StudioProApi, documentId: string }) {
-        const {studioPro,documentId} = input;
+        const {studioPro, documentId} = input;
         const [person, setPerson] = useState<PersonInfo>({
             firstName: "",
             lastName: "",
@@ -95,7 +95,7 @@ To register a new document type, do the following:
 
         useEffect(() => {
             studioPro.app.model.customBlobDocuments.addEventListener("documentsChanged", ({ documents }) => {
-                if (documents.some(doc => doc.id === documentId)) {
+                if (documents.some(doc => doc.documentId === documentId)) {
                     setDocumentVersion(v => v + 1); // Trigger re-fetch of the document
                 }
             });

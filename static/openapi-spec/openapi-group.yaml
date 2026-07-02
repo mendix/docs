@@ -55,7 +55,8 @@ paths:
               Input group name or description:
                 value:
                   name: GroupA
-                  description: GroupA description
+                  description: Test Group
+                  parentGroupName: GroupB
       responses:
         '200':
           $ref: '#/components/responses/group'
@@ -138,8 +139,9 @@ paths:
             examples:
               Group creation requestE:
                 value:
-                  name: Group A
-                  description: The description of Group A
+                  name: GroupA
+                  description: Test Group
+                  parentGroupName: GroupB
       responses:
         '201':
           $ref: '#/components/responses/group'
@@ -260,9 +262,11 @@ paths:
               Add group members:
                 value:
                   - name: John
-                    role: Group_Admin
+                    directRole: Operator
+                    isGroupAdmin: true
                   - name: Jack
-                    role: Group_Member
+                    directRole: Developer
+                    isGroupAdmin: false
               Remove group members:
                 value:
                   - name: John
@@ -406,19 +410,23 @@ components:
                 type: string
               memberCount:
                 type: integer
+              parentGroup:
+                type: string
             x-examples:
               Example 1:
                 id: 36279c9b-9b5a-4599-b548-7fe09d792f76
                 name: GroupA
-                description: GroupA changed
+                description: Test group
                 memberCount: 7
+                parentGroup: GroupB
           examples:
             Group:
               value:
                 id: 36279c9b-9b5a-4599-b548-7fe09d792f76
                 name: GroupA
-                description: GroupA changed
+                description: Test group
                 memberCount: 7
+                parentGroup: GroupB
     groups:
       description: Group list
       content:
@@ -436,35 +444,43 @@ components:
                   type: string
                 memberCount:
                   type: integer
+                parentGroup:
+                  type: string
             x-examples:
               Example 1:
                 - id: 7f040a46-b222-4e3e-bf9a-dd8b12babfe5
                   name: GroupC
-                  description: GroupC changed
+                  description: QA Group
                   memberCount: 3
+                  parentGroup: GroupX
                 - id: 34f14ca6-1369-4bbe-9715-35e9ec635f64
                   name: GroupB
-                  description: GroupB changed
+                  description: Test Group
                   memberCount: 4
+                  parentGroup: GroupY
                 - id: 36279c9b-9b5a-4599-b548-7fe09d792f76
                   name: GroupA
-                  description: GroupA changed
+                  description: Developer Group
                   memberCount: 7
+                  parentGroup: GroupZ
           examples:
             Group list:
               value:
                 - id: 7f040a46-b222-4e3e-bf9a-dd8b12babfe5
                   name: GroupC
-                  description: GroupC changed
+                  description: QA Group
                   memberCount: 3
+                  parentGroup: GroupX
                 - id: 34f14ca6-1369-4bbe-9715-35e9ec635f64
                   name: GroupB
-                  description: GroupB changed
+                  description: Test Group
                   memberCount: 4
+                  parentGroup: GroupY
                 - id: 36279c9b-9b5a-4599-b548-7fe09d792f76
                   name: GroupA
-                  description: GroupA changed
+                  description: Developer Group
                   memberCount: 7
+                  parentGroup: GroupZ
     members:
       description: Group member list
       content:
@@ -480,58 +496,68 @@ components:
                   type: string
                 email:
                   type: string
-                roles:
+                memberRoles:
                   type: array
                   items:
                     type: object
                     properties:
-                      role:
+                      directRole:
                         type: string
+                      isGroupAdmin:
+                        type: boolean
             x-examples:
               Example 1:
                 - id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
                   name: tom
                   email: tom@lato-bycicles.com
-                  roles:
-                    - role: Group_Member
+                  memberRoles:
+                    - directRole: Developer
+                      isGroupAdmin: false
                 - id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
                   name: kean
                   email: kean.li@lato-bycicles.com
-                  roles:
-                    - role: Group_Member
+                  memberRoles:
+                    - directRole: Developer
+                      isGroupAdmin: false
                 - id: cdcbd426-dfb7-4689-9939-3312521f13ff
                   name: john
                   email: john@lato-bycicles.com
-                  roles:
-                    - role: Group_Admin
+                  memberRoles:
+                    - directRole: Owner
+                      isGroupAdmin: true
                 - id: af50eaf8-ff62-4910-b5b0-3e685f520fc8
                   name: jack
                   email: jack@lato-bycicles.com
-                  roles:
-                    - role: Group_Member
+                  memberRoles:
+                    - directRole: Developer
+                      isGroupAdmin: false
           examples:
             Group member list:
               value:
                 - id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
                   name: tom
                   email: tom@lato-bycicles.com
-                  roles:
-                    - role: Group_Member
+                  memberRoles:
+                    - directRole: Developer
+                      isGroupAdmin: false
                 - id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
                   name: kean
                   email: kean.li@lato-bycicles.com
-                  roles:
-                    - role: Group_Member
+                  memberRoles:
+                    - directRole: Developer
+                      isGroupAdmin: false
                 - id: cdcbd426-dfb7-4689-9939-3312521f13ff
                   name: john
                   email: john@lato-bycicles.com
-                  roles:
-                    - role: Group_Admin
+                  memberRoles:
+                    - directRole: Owner
+                      isGroupAdmin: true
                 - id: af50eaf8-ff62-4910-b5b0-3e685f520fc8
                   name: jack
                   email: jack@lato-bycicles.com
-                  roles:
-                    - role: Group_Member
+                  memberRoles:
+                    - directRole: Developer
+                      isGroupAdmin: false
     member:
       description: Group member
       content:
@@ -545,28 +571,32 @@ components:
                 type: string
               email:
                 type: string
-              roles:
+              memberRoles:
                 type: array
                 items:
                   type: object
                   properties:
-                    role:
+                    directRole:
                       type: string
+                    isGroupAdmin:
+                      type: boolean
             x-examples:
               Example 1:
                 id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
                 name: kean
                 email: kean.li@lato-bycicles.com
-                roles:
-                  - role: Group_Member
+                memberRoles:
+                  - directRole: Developer
+                    isGroupAdmin: false
           examples:
             Group member:
               value:
                 id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
                 name: kean
                 email: kean.li@lato-bycicles.com
-                roles:
-                  - role: Group_Member
+                memberRoles:
+                  - directRole: Developer
+                    isGroupAdmin: false
   schemas:
     GroupInput:
       type: object
@@ -579,17 +609,26 @@ components:
           pattern: '^[\w-][\w- ]+$'
           minLength: 1
           maxLength: 100
-          example: Group A
+          example: GroupA
         description:
           type: string
           description: Group description
           maxLength: 250
+        parentGroupName:
+          type: string
+          description: Parent group name
+          pattern: '^[\w-][\w- ]+$'
+          minLength: 1
+          maxLength: 100
+          example: GroupB
       required:
         - name
+        - parentGroupName
       x-examples:
         Group creation request:
           name: Group name
           description: Group description
+          parentGroupName: Parent group name
       xml:
         name: GroupInput
     GroupMemberRoleInput:
@@ -597,18 +636,19 @@ components:
       title: GroupMemberRoleInput
       description: Group member role change request
       properties:
-        role:
-          enum:
-            - Group_Admin
-            - Group_Member
+        directRole:
+          type: string
           description: Group member role
-      required:
-        - role
+          example: Developer
+        isGroupAdmin:
+          type: boolean
+          description: Indicates if the user is a group admin
+          example: true
       x-examples:
         Group member role change request:
-          role: Group_Member
+          directRole: Operator
         Change group admin role request:
-          role: Group_Admin
+          isGroupAdmin: true
       xml:
         name: MemberInput
     ObjectInput:
@@ -623,17 +663,16 @@ components:
           minLength: 1
           maxLength: 100
           example: GroupA
-        role:
-          enum:
-            - Group_Admin
-            - Group_Member
-          description: Group object(member user) role
+        isGroupAdmin:
+          type: boolean
+          description: Indicates if the user is a group admin
+          example: true
       required:
         - name
       x-examples:
         Group object(member user) change(add or delete) request:
-          name: User_Name
-          role: Group_Admin
+          name: John
+          isGroupAdmin: true
       xml:
         name: ObjectInput
     error:
@@ -671,7 +710,8 @@ components:
           title: Bad Request
           detail: Please see invalid-params list
           invalid-params:
-            - name: groupName
+            - name: name
               reason: Group name can not be empty
 security:
+  - basicAuth: []
   - mxtoken: []

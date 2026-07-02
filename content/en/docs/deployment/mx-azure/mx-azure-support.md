@@ -158,6 +158,10 @@ Node-level OS components receive weekly security patches through Microsoft's Nod
 
 These automated upgrade cadences cannot be modified by customers.
 
+{{% alert color="info" %}}
+During automated upgrades, application containers may restart. However, built-in redundancy ensures that at least one replica remains available at all times, so no downtime occurs.
+{{% /alert %}}
+
 ## Mendix Support Coverage Examples
 
 ### Example Supported Scenarios

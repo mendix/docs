@@ -26,6 +26,7 @@ To create a cluster in your OpenShift context, you need the following:
 * A supported Kubernetes platform; for more information, see [Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#supported-versions)
 * An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
+* **STACKIT CLI** [installed](https://github.com/stackitcloud/stackit-cli/blob/main/INSTALLATION.md) if you are creating clusters on STACKIT
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
 
@@ -216,123 +217,7 @@ If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (an
 
 ### Endpoint (network) Configuration {#advanced-network-settings}
 
-The OperatorConfiguration contains the following user-editable options for network configuration:
-
-When using **Ingress** for network endpoints:
-
-```yaml
-apiVersion: privatecloud.mendix.com/v1alpha1
-kind: OperatorConfiguration
-# ...
-# omitted lines for brevity
-# ...
-spec:
-  # Endpoint (Network) configuration
-  endpoint:
-    # Endpoint type: ingress, openshiftRoute or service
-    type: ingress
-    # Optional, can be omitted: Service annotations
-    serviceAnnotations:
-      # example: custom AWS CLB configuration
-      service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
-      service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:account:certificate/id
-      service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
-    # Ingress configuration: used only when type is set to ingress
-    ingress:
-      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
-      annotations:
-        # default annotation: allow uploads of files up 500 MB in the NGINX Ingress Controller
-        nginx.ingress.kubernetes.io/proxy-body-size: 500m
-        # example: use the specified cert-manager ClusterIssuer to generate TLS certificates with Let's Encrypt
-        cert-manager.io/cluster-issuer: staging-issuer
-        # example: deny access to /rest-doc
-        nginx.ingress.kubernetes.io/configuration-snippet: |
-          location /rest-doc {
-            deny all;
-            return 403;
-          }
-      # App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
-      domain: mendix.example.com
-      # Enable or disable TLS
-      enableTLS: true
-      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
-      # This example is a template which lets cert-manager to generate a unique certificate for each app
-      tlsSecretName: '{{.Name}}-tls'
-      # Optional: specify the Ingress class name
-      ingressClassName: alb
-      # Optional, can be omitted : specify the Ingress path
-      path: "/"
-      # Optional, can be omitted : specify the Ingress pathType
-      pathType: ImplementationSpecific
-# ...
-# omitted lines for brevity
-# ...
-```
-
-When using **OpenShift Routes** for network endpoints:
-
-```yaml
-apiVersion: privatecloud.mendix.com/v1alpha1
-kind: OperatorConfiguration
-spec:
-  # Endpoint (Network) configuration
-  endpoint:
-    # Endpoint type: ingress, openshiftRoute, or service
-    type: openshiftRoute
-    # OpenShift Route configuration: used only when type is set to openshiftRoute
-    openshiftRoute:
-      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
-      annotations:
-        # example: use HSTS headers
-        haproxy.router.openshift.io/hsts_header: max-age=31536000;includeSubDomains;preload
-      # Optional: App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
-      domain: mendix.example.com
-      # Enable or disable TLS
-      enableTLS: true
-      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
-      # This example is the name of an existing secret, which should be a wildcard matching subdomains of the domain name
-      tlsSecretName: 'mendixapps-tls'
-```
-
-When using **Services** for network endpoints (without an Ingress or OpenShift route):
-
-```yaml
-apiVersion: privatecloud.mendix.com/v1alpha1
-kind: OperatorConfiguration
-spec:
-  # Endpoint (Network) configuration
-  endpoint:
-    # Endpoint type: ingress, openshiftRoute, or service
-    type: service
-    # Optional, can be omitted: the Service type
-    serviceType: LoadBalancer
-    # Optional, can be omitted: Service annotations
-    serviceAnnotations:
-      # example: annotations required for AWS NLB
-      service.beta.kubernetes.io/aws-load-balancer-type: external
-      service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
-      service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
-    # Optional, can be omitted: Service ports
-    servicePorts:
-      - 80
-      - 443
-```
-
-You can change the following options:
-
-* **type**: – select the Endpoint type, possible options are `ingress`, `openshiftRoute` and `service`; this parameter is also configured through the **Configuration Tool**
-* **ingress**: - specify the Ingress configuration, required when **type** is set to `ingress`
-* **openshiftRoute**: - specify the OpenShift Route configuration, required when **type** is set to `openshiftRoute`
-* **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app, and {{.Domain}} will be replaced with the application's domain name
-* **serviceAnnotations**: - optional, can be used to specify the Service annotations, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app, and {{.Domain}} will be replaced with the application's domain name
-* **ingressClassName**: - optional, can be used to specify the Ingress Class name
-* **path**: - optional, can be used to specify the Ingress path; default value is `/`
-* **pathType**: - optional, can be used to specify the Ingress pathType; if not set, no pathType will be specified in Ingress objects
-* **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Configuration Tool**
-* **enableTLS**: - allows you to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
-* **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
-* **serviceType**: - can be used to specify the Service type, possible options are `ClusterIP` and `LoadBalancer`; if not specified, Services will be created with the `ClusterIP` type
-* **servicePorts**: - can be used to specify a list of custom ports for the Service; if not specified, Services will use be created with port `8080`
+For information on using advanced network configuration settings, see [Network Ingress Settings section](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
 
 {{% alert color="info" %}}
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
@@ -549,7 +434,7 @@ Starting from Mendix Operator 2.23.0, environments running in `leaderless` mode 
 When another **runtimeLeaderSelection** mode is used (default, unspecified `assigned` mode, or `none`), the healthcheck microflow is used, as described above.
 {{% /alert %}}
 
-#### Customize Liveness Probe to Resolve Crash Loopback Scenarios
+#### Customize Liveness Probe to Resolve Crash Loopback Scenarios{#customize-liveness}
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
 
@@ -937,6 +822,54 @@ Alternatively, for Standalone clusters, pod labels can be specified in the `Mend
 {{% alert color="warning" %}}
 The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
 {{% /alert %}}
+
+### Pod Annotations (General) {#pod-annotations}
+
+Mendix Operator version 2.27.0 or above allows you to specify default pod annotations for task pods (build and storage provisioners) and runtime (app) pods.
+
+To specify the default pod annotations for a namespace, specify them in `customPodAnnotations.general` in `OperatorConfiguration`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: custom pod annotations
+  customPodAnnotations:
+    # Optional: general pod annotations (applied to all app-related pods)
+    general:
+      # Example: use FQDN instead of IP addresses when communicating with the Kubernetes API server
+      kubernetes.azure.com/set-kube-service-host-fqdn: "true"
+```
+
+Alternatively, for Standalone clusters, pod annotations for an app can be specified in the `MendixApp` CR.
+
+{{% alert color="warning" %}}
+The Mendix Operator uses some annotations for internal use. To avoid conflicts with these internal pod annotations, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
+{{% /alert %}}
+
+### Node Selector (General) {#node-selector}
+
+Mendix Operator version 2.27.0 or above allows you to specify the default `nodeSelector` for task pods (build and storage provisioners) and runtime (app) pods.
+
+To configure the default pod `nodeSelector` for a namespace, specify them in `customPodNodeSelector.general` in `OperatorConfiguration`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: custom pod nodeSelector
+  customPodNodeSelector:
+    # Optional: general pod nodeSelector (applied to all app-related pods)
+    general:
+      # Example: use Amazon EKS Auto Mode
+      eks.amazonaws.com/compute-type: auto
+```
+
+Alternatively, for Standalone clusters, pod `nodeSelector` configuration can be specified in the `MendixApp` CR for a specific app.
 
 ### Delaying App Shutdown {#termination-delay}
 

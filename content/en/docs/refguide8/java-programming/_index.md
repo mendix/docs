@@ -13,7 +13,7 @@ With Java actions, you can extend the functionality of your application in situa
 
 For a deep-dive look into Java programming in Mendix, check out this video:
 
-{{< vidyard "aDNqicHTbTMAqYkQvvxAjc?" >}}
+{{< vidyard id="aDNqicHTbTMAqYkQvvxAjc?" >}}
 
 For information about Java actions in Studio Pro, see [Java Actions](/refguide8/java-actions/).
 

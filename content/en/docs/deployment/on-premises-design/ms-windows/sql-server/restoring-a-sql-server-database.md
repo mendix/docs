@@ -15,7 +15,7 @@ This how-to teaches you how to do the following:
 
 For a deep-dive look into this action, check out this video:
 
-{{< vidyard "WZu7QtHZPjtYUTdcV58PKr?" >}}
+{{< vidyard id="WZu7QtHZPjtYUTdcV58PKr?" >}}
 
 ## Prerequisites
 

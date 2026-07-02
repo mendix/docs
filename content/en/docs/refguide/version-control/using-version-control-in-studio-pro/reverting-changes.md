@@ -18,7 +18,7 @@ Deletes of documents, folders, and modules can also be reverted. This brings the
 
 You can revert changes in the **Changes** pane, from **Version Control** > **Revert All Changes**, or from the right-click menu on the document you want to revert.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revertx2.png" alt="Two ways of reverting" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revertx2.png" alt="Two ways of reverting"  >}}
 
 {{% alert color="info" %}}
 You can also **Revert All Changes** while [merging](/refguide/resolving-conflicts/#merge). This will restore your app to the most recent commit, discarding changes creating by the merging process.

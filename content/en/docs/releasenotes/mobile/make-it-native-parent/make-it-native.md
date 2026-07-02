@@ -6,7 +6,34 @@ description: "These release notes showcase each release of the iOS and Android M
 #ki: "Augmented Reality (AR) Feature" - MOO-1312
 ---
 
-Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
+Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to get the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
+
+## Android 11.11.0 / iOS 11.11.0
+
+**Release date: June 3, 2026**
+
+### Improvements 
+
+* We upgraded the core stack to React Native 0.84.1 and aligned related React dependencies.
+  
+## Android 11.10.0 / iOS 11.10.0
+
+**Release date: May 20, 2026**
+
+### Fixes 
+
+* We upgraded the core stack to React Native 0.83.4 and aligned related React dependencies.
+* We fixed a CocoaPods installation issue that was caused by xcodeproj object version 70.
+* We fixed an issue where version log events were not recorded in Firebase for Android.
+* We fixed an issue which occurred when building apps in Xcode 26.4 and above.
+
+## Android 11.9.0 / iOS 11.9.0
+
+**Release date: April 10, 2026**
+
+### Fixes 
+
+* We fixed an issue where debug builds crashed with a `SIGABRT` error on Xcode 26 when passing data through F14 hash maps under the new architecture.
 
 ## Android 11.8.0 / iOS 11.8.0
 

@@ -1,0 +1,1091 @@
+openapi: 3.0.1
+info:
+  title: Deploy Service v1
+  description: "The deploy service API is for creating and managing app environment resources for app package deployment. \r\n"
+  version: 1.0.0
+servers:
+  - url: https://pmp-dev-sgp.mxplatform.net/deployservice/v1
+paths:
+  /apps/{appId}/environments:
+    post:
+      tags:
+        - apps
+      summary: 'Create a new environment for the application'
+      description: 'Create a new environment with the specified configuration and resources for the specified application.'
+      parameters:
+        - name: appId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnvironmentRequestNew'
+            examples:
+              Input environment information:
+                value:
+                  displayName: Project-A-Env
+                  clusterName: eks-test
+                  namespace: test-ns
+                  storagePlanName: bk-plan
+                  databasePlanName: db-plan
+                  deploymentPurpose: Development
+                  deploymentPackageName: e2e-app-deploy-portunus-146465ba.mda
+                  coreResourcePlan: low-level
+      responses:
+        '200':
+          $ref: '#/components/responses/Environment'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+    get:
+      tags:
+        - apps
+      summary: 'Retrieve all environments for the application'
+      description: 'Retrieve information and status of all existing environments for the specified application.'
+      parameters:
+        - name: appId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/Environments'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+  /apps/{appId}/environments/{environmentID}:
+    get:
+      tags:
+        - apps
+      summary: 'Retrieve a specified environment for the application'
+      description: 'Retrieve information and status of a specified environment for the application.'
+      parameters:
+        - name: appId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: environmentID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/Environment'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+    patch:
+      tags:
+        - apps
+      summary: 'Update a specified environment for the application'
+      description: 'Update configuration and settings of a specified environment for the application.'
+      parameters:
+        - name: appId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: environmentID
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnvironmentRequestPatch'
+            examples:
+              Input environment information:
+                value:
+                  displayName: Project-A-Env
+                  replicas: 1
+                  appUrl: https://project-a-env.portunus.mxplatform.net/
+                  CustomEnvironmentVariables:
+                    - name: cev1
+                      value: 12345
+                    - name: cev2
+                      value: abcdef
+                  CustomRuntimeSettings:
+                    - name: crs1
+                      value: 789
+                    - name: crs2
+                      value: xyz
+                  CustomJVMOptions: 
+                    name: JAVA_TOOL_OPTIONS
+                    value: "-Xmx512m -Xms256m"
+                  CustomJettyOptions: 
+                    name: jettyOptions
+                    value: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
+                  Debugger: 
+                    password: debugPassword123!
+                  LogLevels: 
+                    - node: LogEnv
+                      level: INFO
+                  CustomTLSConfig: 
+                    enableTLS: true
+                    tlsConfig: TlsCustom
+                    useExistingSecret: UseExistedSecret
+                    secretName: tls-secret
+                  CoreResource: 
+                    coreResourceSize: Custom
+                    cpuRequest: 0.1
+                    cpuLimit: 1
+                    memRequest: 0.512
+                    memLimit: 1
+                    ephemeralRequest: 10
+                    ephemeralLimit: 20
+      responses:
+        '200':
+          $ref: '#/components/responses/Environment'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+    delete:
+      tags:
+        - apps
+      summary: 'Delete a specified environment for the application'
+      description: 'Delete a specified environment for the application.'
+      parameters:
+        - name: appId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: environmentID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+        '401':
+          $ref: '#/components/responses/error-401'
+components:
+  parameters:
+    appId:
+      name: appId
+      in: path
+      description: Application ID
+      required: true
+      schema:
+        type: string
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+    environmentID:
+      name: environmentID
+      in: path
+      description: Environment ID
+      required: true
+      schema:
+        type: string
+        example: eynu0q2x
+  responses:
+    error-401:
+      description: Authentication information is missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+    error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid environment info:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: displayName
+                    reason: Invalid environment display name
+                  - name: databasePlanName
+                    reason: Invalid database plan name
+            400 - Invalid cluster info:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: clusterName
+                    reason: Incorrect cluster name
+                  - name: namespace
+                    reason: Invalid namespace
+    error-403:
+      description: User has no permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+    error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - Environment not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Environment not found
+    Environment:
+      description: Environment information
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              environmentID:
+                type: string
+              internalName:
+                type: string
+              displayName:
+                type: string
+              clusterName:
+                type: string
+              namespace:
+                type: string
+              storagePlanName:
+                type: string
+              databasePlanName:
+                type: string
+              deploymentPurpose:
+                enum:
+                   - Development
+                   - Test
+                   - Acceptance
+                   - Production
+                type: string
+              dtapMode:
+                type: string
+              appName:
+                type: string
+              appUrl:
+                type: string
+              status:
+                 enum:
+                   - Creating
+                   - Running
+                   - Deleting
+                   - Deleted
+                   - Failed
+                 type: string
+              readyReplicas:
+                type: integer
+              replicas:
+                type: integer
+              isAppStopped:
+                type: boolean
+              isManualDeploy:
+                type: boolean
+              buildStatus:
+                type: string
+              runtimeStatus:
+                type: string
+              networkStatus:
+                type: string
+              databaseStatus:
+                type: string
+              storageStatus:
+                type: string
+              licenseStatus:
+                type: string
+              creationStatus:
+                type: string
+              resourceStatus:
+                type: string
+              runtimeVersion:
+                type: string
+              lastStartTime:
+                type: string
+              buildExplanation:
+                type: string
+              storageExplanation:
+                type: string
+              runtimeExplanation:
+                type: string                
+              MDA:
+                type: object
+                properties:
+                  fileUrl:
+                    type: string
+                  status:
+                    type: string
+                  ociEnable:
+                    type: boolean
+                  ociName:
+                    type: string
+              CustomEnvironmentVariables:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    value:
+                      type: string
+              CustomRuntimeSettings:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    value:
+                      type: string
+              CustomJVMOptions:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  value:
+                    type: string
+              CustomJettyOptions:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  value:
+                    type: string
+              Debugger:
+                type: object
+                properties:
+                  url:
+                     type: string
+              LogLevels:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    node:
+                      type: string
+                    level:
+                      type: string                                        
+              CustomTLSConfig:
+                type: object
+                properties:
+                  enableTLS:
+                    type: boolean
+                  tlsConfig:
+                    type: string
+                  useExistingSecret:
+                    type: string
+              CoreResource:
+                type: object
+                properties:
+                  coreResourcePlan:
+                    type: string
+                  coreResourceSize:
+                    enum:
+                      - Small
+                      - Medium
+                      - Large
+                      - Custom
+                    type: string
+                  cpuRequest:
+                    type: number
+                  cpuLimit:
+                    type: number
+                  memRequest:
+                    type: number
+                  memLimit:
+                    type: number
+                  ephemeralRequest:
+                    type: number
+                  ephemeralLimit:
+                    type: number
+            x-examples:
+              Example 1:
+                environmentID: l48bv05l
+                internalName: l48bv05l
+                displayName: Project-A-Env
+                clusterName: eks-test
+                namespace: "test-ns"
+                storagePlanName: "bk-plan"
+                databasePlanName: "db-plan"
+                deploymentPurpose: Development
+                dtapMode: Development
+                appName: "E2E-App-Deploy-Portunus"
+                appUrl: "https://l48bv05l.portunus.mxplatform.net/"
+                status: Ready
+                readyReplicas: 1
+                replicas: 1
+                isAppStopped: false
+                isManualDeploy: false
+                buildStatus: Ready
+                runtimeStatus: Ready
+                networkStatus: Ready
+                databaseStatus: Ready
+                storageStatus: Ready
+                licenseStatus: Licensed
+                creationStatus: Created
+                resourceStatus: Ready
+                runtimeVersion: "11.6.2"
+                lastStartTime: "2026-04-14T18:17:10.666Z"
+                runtimeExplanation: "master: available: MinimumReplicasAvailable (Deployment has minimum availability)"
+                buildExplanation: "Build succeeded"
+                storageExplanation: "Successfully created secret"
+                MDA: 
+                  fileUrl: "e2e-app-deploy-portunus-146465ba.mda"
+                  status: Success
+                  ociEnable: true
+                  ociName: "oci-image://docker.io/kyleliu/e2e-app-deploy-portunus:146465ba"
+                CustomEnvironmentVariables: 
+                  - name: cev1
+                    value: 12345
+                  - name: cev2
+                    value: abcdef
+                CustomRuntimeSettings: 
+                  - name: crs1
+                    value: 789
+                  - name: crs2
+                    value: xyz
+                CustomJVMOptions: 
+                  name: JAVA_TOOL_OPTIONS
+                  value: "-Xmx512m -Xms256m"
+                CustomJettyOptions: 
+                  name: jettyOptions
+                  value: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
+                Debugger: 
+                  url: "https://l48bv05l.portunus.mxplatform.net/debugger/"
+                LogLevels: 
+                  - node: LogEnv
+                    level: INFO
+                CustomTLSConfig: 
+                  enableTLS: true
+                  tlsConfig: TlsCustom
+                  useExistingSecret: UseExistedSecret
+                  secretName: tls-secret
+                CoreResource: 
+                  coreResourcePlan: "low-level"
+                  cpuRequest: 0.1
+                  cpuLimit: 1
+                  memRequest: 0.512
+                  memLimit: 1
+                  ephemeralRequest: 10
+                  ephemeralLimit: 20
+          examples:
+            Environment:
+              value:
+                environmentID: l48bv05l
+                internalName: l48bv05l
+                displayName: Project-A-Env
+                clusterName: eks-test
+                namespace: "test-ns"
+                storagePlanName: "bk-plan"
+                databasePlanName: "db-plan"
+                deploymentPurpose: Development
+                dtapMode: Development
+                appName: "E2E-App-Deploy-Portunus"
+                appUrl: "https://l48bv05l.portunus.mxplatform.net/"
+                status: Ready
+                readyReplicas: 1
+                replicas: 1
+                isAppStopped: false
+                isManualDeploy: false
+                buildStatus: Ready
+                runtimeStatus: Ready
+                networkStatus: Ready
+                databaseStatus: Ready
+                storageStatus: Ready
+                licenseStatus: Licensed
+                creationStatus: Created
+                resourceStatus: Ready
+                runtimeVersion: "11.6.2"
+                lastStartTime: "2026-04-14T18:17:10.666Z"
+                runtimeExplanation: "master: available: MinimumReplicasAvailable (Deployment has minimum availability)"
+                buildExplanation: "Build succeeded"
+                storageExplanation: "Successfully created secret"
+                MDA: 
+                  fileUrl: "e2e-app-deploy-portunus-146465ba.mda"
+                  status: Success
+                  ociEnable: true
+                  ociName: "oci-image://docker.io/kyleliu/e2e-app-deploy-portunus:146465ba"
+                CustomEnvironmentVariables: 
+                  - name: cev1
+                    value: 12345
+                  - name: cev2
+                    value: abcdef
+                CustomRuntimeSettings: 
+                  - name: crs1
+                    value: 789
+                  - name: crs2
+                    value: xyz
+                CustomJVMOptions: 
+                  name: JAVA_TOOL_OPTIONS
+                  value: "-Xmx512m -Xms256m"
+                CustomJettyOptions: 
+                  name: jettyOptions
+                  value: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
+                Debugger: 
+                  url: "https://l48bv05l.portunus.mxplatform.net/debugger/"
+                LogLevels: 
+                  - node: LogEnv
+                    level: INFO
+                CustomTLSConfig: 
+                  enableTLS: true
+                  tlsConfig: TlsCustom
+                  useExistingSecret: UseExistedSecret
+                  secretName: tls-secret
+                CoreResource: 
+                  coreResourcePlan: "low-level"
+                  cpuRequest: 0.1
+                  cpuLimit: 1
+                  memRequest: 0.512
+                  memLimit: 1
+                  ephemeralRequest: 10
+                  ephemeralLimit: 20
+    Environments:
+      description: Environment list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                environmentID:
+                  type: string
+                internalName:
+                  type: string
+                displayName:
+                  type: string
+                clusterName:
+                  type: string
+                namespace:
+                  type: string
+                storagePlanName:
+                  type: string
+                databasePlanName:
+                  type: string
+                deploymentPurpose:
+                  enum:
+                    - Development
+                    - Test
+                    - Acceptance
+                    - Production
+                  type: string
+                dtapMode:
+                  type: string
+                appName:
+                  type: string
+                appUrl:
+                  type: string
+                status:
+                  enum:
+                    - Creating
+                    - Running
+                    - Deleting
+                    - Deleted
+                    - Failed
+                  type: string
+                readyReplicas:
+                  type: integer
+                replicas:
+                  type: integer
+                isAppStopped:
+                  type: boolean
+                isManualDeploy:
+                  type: boolean
+                buildStatus:
+                  type: string
+                runtimeStatus:
+                  type: string
+                networkStatus:
+                  type: string
+                databaseStatus:
+                  type: string
+                storageStatus:
+                  type: string
+                licenseStatus:
+                  type: string
+                creationStatus:
+                  type: string
+                resourceStatus:
+                  type: string
+                runtimeVersion:
+                  type: string
+                lastStartTime:
+                  type: string
+                buildExplanation:
+                  type: string
+                storageExplanation:
+                  type: string
+                runtimeExplanation:
+                  type: string                
+                MDA:
+                  type: object
+                  properties:
+                    fileUrl:
+                      type: string
+                    status:
+                      type: string
+                    ociEnable:
+                      type: boolean
+                    ociName:
+                      type: string
+                CustomEnvironmentVariables:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      value:
+                        type: string
+                CustomRuntimeSettings:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      value:
+                        type: string
+                CustomJVMOptions:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    value:
+                      type: string
+                CustomJettyOptions:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    value:
+                      type: string
+                Debugger:
+                  type: object
+                  properties:
+                    url:
+                      type: string
+                LogLevels:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      node:
+                        type: string
+                      level:
+                        type: string                                        
+                CustomTLSConfig:
+                  type: object
+                  properties:
+                    enableTLS:
+                      type: boolean
+                    tlsConfig:
+                      type: string
+                    useExistingSecret:
+                      type: string
+                CoreResource:
+                  type: object
+                  properties:
+                    coreResourcePlan:
+                      type: string
+                    coreResourceSize:
+                      enum:
+                        - Small
+                        - Medium
+                        - Large
+                        - Custom
+                      type: string
+                    cpuRequest:
+                      type: number
+                    cpuLimit:
+                      type: number
+                    memRequest:
+                      type: number
+                    memLimit:
+                      type: number
+                    ephemeralRequest:
+                      type: number
+                    ephemeralLimit:
+                      type: number
+
+            x-examples:
+              Example 1:
+                - environmentID: l48bv05l
+                  internalName: l48bv05l
+                  displayName: Project-A-Env
+                  clusterName: eks-test
+                  namespace: "test-ns"
+                  storagePlanName: "bk-plan"
+                  databasePlanName: "db-plan"
+                  deploymentPurpose: Development
+                  dtapMode: Development
+                  appName: "E2E-App-Deploy-Portunus"
+                  appUrl: "https://l48bv05l.portunus.mxplatform.net/"
+                  status: Ready
+                  readyReplicas: 1
+                  replicas: 1
+                  isAppStopped: false
+                  isManualDeploy: false
+                  buildStatus: Ready
+                  runtimeStatus: Ready
+                  networkStatus: Ready
+                  databaseStatus: Ready
+                  storageStatus: Ready
+                  licenseStatus: Licensed
+                  creationStatus: Created
+                  resourceStatus: Ready
+                  runtimeVersion: "11.6.2"
+                  lastStartTime: "2026-04-14T18:17:10.666Z"
+                  runtimeExplanation: "master: available: MinimumReplicasAvailable (Deployment has minimum availability)"
+                  buildExplanation: "Build succeeded"
+                  storageExplanation: "Successfully created secret"
+                  MDA: 
+                    fileUrl: "e2e-app-deploy-portunus-146465ba.mda"
+                    status: Success
+                    ociEnable: true
+                    ociName: "oci-image://docker.io/kyleliu/e2e-app-deploy-portunus:146465ba"
+                  CustomEnvironmentVariables: 
+                    - name: cev1
+                      value: 12345
+                    - name: cev2
+                      value: abcdef
+                  CustomRuntimeSettings: 
+                    - name: crs1
+                      value: 789
+                    - name: crs2
+                      value: xyz
+                  CustomJVMOptions: 
+                    name: JAVA_TOOL_OPTIONS
+                    value: "-Xmx512m -Xms256m"
+                  CustomJettyOptions: 
+                    name: jettyOptions
+                    value: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
+                  Debugger: 
+                    url: "https://l48bv05l.portunus.mxplatform.net/debugger/"
+                  LogLevels: 
+                    - node: LogEnv
+                      level: INFO
+                  CustomTLSConfig: 
+                    enableTLS: true
+                    tlsConfig: TlsCustom
+                    useExistingSecret: UseExistedSecret
+                    secretName: tls-secret
+                  CoreResource: 
+                    coreResourcePlan: "low-level"
+                    cpuRequest: 0.1
+                    cpuLimit: 1
+                    memRequest: 0.512
+                    memLimit: 1
+                    ephemeralRequest: 10
+                    ephemeralLimit: 20
+          examples:
+            Environments:
+              value:
+                - environmentID: l48bv05l
+                  internalName: l48bv05l
+                  displayName: Project-A-Env
+                  clusterName: eks-test
+                  namespace: "test-ns"
+                  storagePlanName: "bk-plan"
+                  databasePlanName: "db-plan"
+                  deploymentPurpose: Development
+                  dtapMode: Development
+                  appName: "E2E-App-Deploy-Portunus"
+                  appUrl: "https://l48bv05l.portunus.mxplatform.net/"
+                  status: Ready
+                  readyReplicas: 1
+                  replicas: 1
+                  isAppStopped: false
+                  isManualDeploy: false
+                  buildStatus: Ready
+                  runtimeStatus: Ready
+                  networkStatus: Ready
+                  databaseStatus: Ready
+                  storageStatus: Ready
+                  licenseStatus: Licensed
+                  creationStatus: Created
+                  resourceStatus: Ready
+                  runtimeVersion: "11.6.2"
+                  lastStartTime: "2026-04-14T18:17:10.666Z"
+                  runtimeExplanation: "master: available: MinimumReplicasAvailable (Deployment has minimum availability)"
+                  buildExplanation: "Build succeeded"
+                  storageExplanation: "Successfully created secret"
+                  MDA: 
+                    fileUrl: "e2e-app-deploy-portunus-146465ba.mda"
+                    status: Success
+                    ociEnable: true
+                    ociName: "oci-image://docker.io/kyleliu/e2e-app-deploy-portunus:146465ba"
+                  CustomEnvironmentVariables: 
+                    - name: cev1
+                      value: 12345
+                    - name: cev2
+                      value: abcdef
+                  CustomRuntimeSettings: 
+                    - name: crs1
+                      value: 789
+                    - name: crs2
+                      value: xyz
+                  CustomJVMOptions: 
+                    name: JAVA_TOOL_OPTIONS
+                    value: "-Xmx512m -Xms256m"
+                  CustomJettyOptions: 
+                    name: jettyOptions
+                    value: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
+                  Debugger: 
+                    url: "https://l48bv05l.portunus.mxplatform.net/debugger/"
+                  LogLevels: 
+                    - node: LogEnv
+                      level: INFO
+                  CustomTLSConfig: 
+                    enableTLS: true
+                    tlsConfig: TlsCustom
+                    useExistingSecret: UseExistedSecret
+                    secretName: tls-secret
+                  CoreResource: 
+                    coreResourcePlan: "low-level"
+                    cpuRequest: 0.1
+                    cpuLimit: 1
+                    memRequest: 0.512
+                    memLimit: 1
+                    ephemeralRequest: 10
+                    ephemeralLimit: 20
+  schemas:
+    EnvironmentRequestNew:
+      title: EnvironmentRequestNew
+      type: object
+      properties:
+        displayName:
+          type: string
+        clusterName:
+          type: string
+        namespace:
+          type: string
+        storagePlanName:
+          type: string
+        databasePlanName:
+          type: string
+        deploymentPackageName:
+          type: string
+        deploymentPurpose:
+          enum:
+            - Development
+            - Test
+            - Acceptance
+            - Production
+          type: string
+        coreResourcePlan:
+          type: string
+        coreResourceSize:
+          enum:
+            - Small
+            - Medium
+            - Large
+            - Custom
+          type: string
+      xml:
+        name: EnvironmentRequest
+    EnvironmentRequestPatch:
+      title: EnvironmentRequestPatch
+      type: object
+      properties:
+        displayName:
+          type: string
+        dtapMode:
+          type: string
+        replicas:
+          type: integer
+          format: int32
+        appUrl:
+          type: string
+        CustomEnvironmentVariables:
+          type: array
+          items:
+            title: CustomEnvironmentVariable
+            type: object
+            properties:
+              name:
+                type: string
+              value:
+                type: string
+            xml:
+              name: CustomEnvironmentVariable
+        CustomRuntimeSettings:
+          type: array
+          items:
+            title: CustomRuntimeSetting
+            type: object
+            properties:
+              name:
+                type: string
+              value:
+                type: string
+            xml:
+              name: CustomRuntimeSetting
+        CustomJVMOptions:
+          title: ''
+          type: object
+          properties:
+            value:
+              type: string
+        CustomJettyOptions:
+          title: ''
+          type: object
+          properties:
+            name:
+              type: string
+            value:
+              type: string
+        Debugger:
+          title: ''
+          type: object
+          properties:
+            password:
+              type: string
+        LogLevels:
+          type: array
+          items:
+            title: LogLevels
+            type: object
+            properties:
+              node:
+                type: string
+              level:
+                enum:
+                  - CRITICAL
+                  - ERROR
+                  - WARNING
+                  - INFO
+                  - DEBUG
+                  - TRACE
+                type: string
+            xml:
+              name: LogLevels
+        CustomTLSConfig:
+          title: ''
+          type: object
+          properties:
+            enableTLS:
+              type: boolean
+              default: false
+            tlsConfig:
+              enum:
+                - TlsDefault
+                - TlsCustom
+              type: string
+            secretName:
+              type: string
+            tlsCertificate:
+              type: string
+            tlsPrivateKey:
+              type: string
+            useExistingSecret:
+              enum:
+                - UseExistedSecret
+                - AddNewKeyCertificate
+              type: string
+        CoreResource:
+          title: ''
+          type: object
+          properties:
+            coreResourcePlan:
+              type: string
+            coreResourceSize:
+              enum:
+                - Small
+                - Medium
+                - Large
+                - Custom
+              type: string
+            cpuRequest:
+              type: number
+            cpuLimit:
+              type: number
+            memRequest:
+              type: number
+            memLimit:
+              type: number
+            ephemeralRequest:
+              type: number
+            ephemeralLimit:
+              type: number
+      xml:
+        name: EnvironmentPatchRequest
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+        invalid-params:
+          type: array
+          description: "(Optional) JSON list List of name, reason keys for invalid attribute values.\r\n"
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: "Parameter name.\r\n"
+              reason:
+                type: string
+                description: "Reason for error.\r\n"
+      required:
+        - status
+        - title
+        - detail
+      x-examples:
+        Error response:
+          status: 400
+          title: Bad Request
+          detail: Please see invalid-params list
+          invalid-params:
+            - name: name
+              reason: Name can not be empty
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+security:
+  - basicAuth: []
+  - mxtoken: []
+tags:
+  - name: apps
+    description: ''

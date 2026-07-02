@@ -16,7 +16,7 @@ To deploy Mendix on Azure, make sure you have the following available:
 * A Mendix platform account
 * An Azure account with the following permissions:
     * Permission to grant admin consent on the Mendix on Azure portal app registration (e.g. Global Administrator in Entra ID)
-    * Owner role assigned on the target subscription (temporary elevated Privileged Identity Management - PIM - access does not suffice)
+    * Owner role assigned on the target subscription
 * In case you want to integrate the Mendix on Azure environment into your existing corporate network, be sure to consider the [network configuration options](/developerportal/deploy/mendix-on-azure/configuration/#networking-settings) that cannot be changed after initial environment deployment
 
 ## Estimating Infrastructure Costs {#estimating-costs}
@@ -78,6 +78,10 @@ To deploy the solution, perform the following steps:
     {{< figure src="/attachments/deployment/mx-azure/available-clusters.png" class="no-border" >}}
 
 7. Identify the entry belonging to the Managed Application you deployed in previous steps. In the **Actions** column, click the dropdown menu icon, and then select **Initialize**. 
+
+    {{% alert color="info" %}}
+    For information about how cluster visibility and editing permissions work based on user roles and Azure RBAC, see [Cluster Visibility and Permissions](/developerportal/deploy/mendix-on-azure/cluster-visibility/).
+    {{% /alert %}}
 
     The preflight check launches to verify the conditions are in place to successfully initialize a Mendix on Azure cluster. 
 

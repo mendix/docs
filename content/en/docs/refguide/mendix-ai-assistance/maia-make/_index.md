@@ -95,12 +95,51 @@ The Maia ({{% icon name="sparkles" %}} ) icon on the right side of the top bar d
 
 ### Maia Make Capabilities Interface Overview
 
-The conversational interface includes the following options:
+The conversational interface includes the following features.
 
-* **New chat** - It allows you to clear the messages and start a new conversation which does not reference your current chat.
-* **Configure MCP Connections** ({{% icon name="plug" %}} icon) - It allows you to connect external [MCP](https://modelcontextprotocol.io/introduction) servers to Maia, giving it access to third-party tools during chat. For more information on how to configure MCP connections, see [Maia MCP Client](/refguide/maia-mcp/).
-* **{{% icon name="paperclip" %}} Add** (Image, Story, PDF) - With this option, you can attach images, PDFs, or user stories to help Maia understand your requirements better.
-* **Add file to Maia Chat** (@ icon) - It allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer** and it appears in the context menu.
+#### New Chat
+
+Clicking **New Chat** allows you to clear the messages and start a new conversation that does not reference your current chat.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/new-chat.jpg" width="250px" >}}
+
+#### Configure MCP Connections 
+
+This option ({{% icon name="plug" %}}) allows you to connect external [MCP](https://modelcontextprotocol.io/introduction) servers to Maia, giving it access to third-party tools during chat. For more information on how to configure MCP connections, see [Maia MCP Client](/refguide/maia-mcp/).
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/configure.jpg" width="250px" >}}
+
+#### Add
+
+**{{% icon name="paperclip" %}} Add** allows you to attach images, PDFs, or user stories to help Maia understand your requirements better.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add.jpg" width="250px" >}}
+
+#### Add file to Maia Chat 
+
+This option (@ icon) allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer** and it appears in the context menu.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add-files.jpg" width="250px" >}}
+
+#### Changed List
+
+A list of items added or changed by Maia appears above the chat box. Click an entry to open the relevant document. To undo all changes, click **Undo all**. To undo a single change, click the undo button on the right side of that item.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/changed-list.png" width="250px" >}}
+
+#### Clarifying Questions
+
+{{% alert color="info" %}}
+This feature is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
+When Maia needs more information, it will ask clarifying questions through a dedicated UI to improve the quality of its response.
+
+## Save a Maia Session {#save-maia-session}
+
+A Maia session contains your conversation history and context, which can help analyze Maia's responses and behavior for troubleshooting or support purposes. To save a Maia session, go to **Help** > **Support Tools** > **Capture Maia Agent Session**.
+
+In Studio Pro 11.9 - 11.11, this option is found at **Help** > **Support Tools** > **Dump Maia Agent Session**.
 
 ## Configuring a Custom AI Provider {#custom-provider}
 
@@ -146,12 +185,6 @@ To configure an OpenAI-compatible provider, follow these steps:
 4. Enter the **Model ID**.
 5. Optional: Enter your **API Key**. Studio Pro stores this key securely across sessions.
 6. Click **Save Config**.
-
-## Save a Maia Session {#save-maia-session}
-
-A Maia session contains your conversation history and context, which can help analyze Maia's responses and behavior for troubleshooting or support purposes. To save a Maia session, go to **Help** > **Support Tools** > **Capture Maia Agent Session**.
-
-In Studio Pro 11.9 - 11.11, this option is found at **Help** > **Support Tools** > **Dump Maia Agent Session**.
 
 ## Read More
 

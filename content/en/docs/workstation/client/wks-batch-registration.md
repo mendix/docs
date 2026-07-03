@@ -1,38 +1,44 @@
 ---
 title: "Registering Workstation Clients"
 url: /mendix-workstation/register/
-description: "Describes how to register and pre-configurer multiple Workstation Clients."
-weight: 30
+description: "Describes how to register and pre-configure multiple Workstation Clients."
+weight: 35
 ---
 
 ## Introduction
 
-Installed on each local workstation, the Mendix Workstation Client acts as a bridge between the Mendix app and local hardware. The goal of the Workstation Client is to establish a secure and reliable connection between the Mendix Application Client and the hardware, peripherals, or local data sources attached to that workstation. This connection is facilitated by the Workstation Connector and the Workstation Client.
-
-The registration process is a necessary first step when enabling this crucial functionality. It onboards your local Workstation Client installation into your Mendix Workstation Management environment. This onboarding allows for centralized management, configuration deployment, and monitoring of your clients, ensuring they are properly set up to bridge your Mendix applications with the physical world.
+After [installing the Workstation Client](/mendix-workstation/install-client/), you must register it in Workstation Management. Registering the client onboards your local Workstation Client installation into your Mendix Workstation Management environment. This onboarding allows for centralized management, configuration deployment, and monitoring of your clients, ensuring that they are properly set up to bridge your Mendix applications with the physical world.
 
 Mendix Workstation supports both individual registration of local Workstation clients, and bulk rollouts for large production environments.
 
 {{% alert color="info" %}}
-After a Workstation Client is registered, any changes that you make in Workstation Management (such as adding new devices, or setting the **Detect Card Readers** toggle to **Off**) will be immediately synchronized with the Client. To change this behavior, see [Client's Auto-Refresh](/mendix-workstation/management-settings/#auto-refresh).
+After a Workstation Client is registered, any changes that you make in Workstation Management (such as adding new devices, or disabling the **Detect Card Readers** option) will be immediately synchronized with the Client. To change this behavior, see [Client's Auto-Refresh](/mendix-workstation/management-settings/#auto-refresh).
 {{% /alert %}}
 
 ## Registering a Single Workstation Client
 
 If you are developing or testing Workstation configurations, you can register a single Workstation Client for your local computer by performing the following steps:
 
-1. Navigate to the **Workspaces** page in [Workstation Management](https://workstation.home.mendix.com/).
-2. Click **Create Workspace**, or select an existing workspace from the overview.
-3. Click **Create Station**, or select an existing station for which no computer is yet registered.
-4. In the top right corner of the banner, click **Register Computer** to register your computer.
-5. Click **Download** to navigate to the Workstation Client listing in the Marketplace, download the Client installer for Windows, install it, and launch it. You can find the listing at the following links:
+1. Open the [Workspaces](https://workstation.home.mendix.com/) page.
+2. Click the workspace where you want to register the Clients.
+3. On the **Stations** page, edit or create a station representing the computer where you installed the Workstation Client.
+4. Click the **Register Computer** button in the top right corner of the screen.
+5. Click **Copy** to copy the registration token to your clipboard.
 
-    * [Windows](https://marketplace.mendix.com/link/component/247448)
-    * [Windows (portable version)](https://marketplace.mendix.com/link/component/247456)
-    * [Linux ARM64](https://marketplace.mendix.com/link/component/247459)
-    * [MacOS](https://marketplace.mendix.com/link/component/253905)
+    {{< figure src="/attachments/workstation/wks-install7.png" class="no-border" >}}
 
-6. Copy the registration token and paste it into the [Workstation Client](/mendix-workstation/installation/) registration field.
+4. Open the Workstation Client and paste the copied registration token into the **Enter your registration token** field.
+5. Click **Register computer**.
+
+    {{< figure src="/attachments/workstation/wks-install8.png" class="no-border" >}}
+
+6. In Workstation Management, in the **Computer Registration** dialog, click **Done**.
+
+    {{< figure src="/attachments/workstation/wks-install9.png" class="no-border" >}}
+
+The **Stations** page now shows your station's status as **Computer Registered**.
+
+    {{< figure src="/attachments/workstation/wks-install10.png" class="no-border" >}}
 
 ## Bulk-Registering Workstation Clients
 
@@ -45,7 +51,7 @@ This feature is only available to licensed Mendix Workstation users. For more in
 To bulk-register Workstation Clients, perform the following steps:
 
 1. Open the [Workspaces](https://workstation.home.mendix.com/) page.
-2. Click the workspace where you want to register the clients.
+2. Click the workspace where you want to register the Clients.
 3. On the **Stations** page, click the three-dot menu in the top right corner of the screen, and then click **Bulk Register**.
 
     The **Create Bulk Registration Token** dialog opens. You can use it to activate a time-limited token which can then be entered into the registration field of multiple Workstation Clients.

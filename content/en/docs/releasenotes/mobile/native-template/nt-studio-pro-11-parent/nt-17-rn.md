@@ -11,7 +11,7 @@ description: "Native Template 17"
 
 ### Improvements
 
-* We added the LocationWhenInUse permission to the iOS configuration to support react-native-permissions.
+* We added the `LocationWhenInUse` permission to the iOS configuration to support `react-native-permissions`.
 
 ## 17.0.3 {#1703}
 

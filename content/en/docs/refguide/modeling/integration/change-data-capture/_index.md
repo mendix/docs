@@ -31,6 +31,30 @@ To move the streamed data to a destination such as Azure Blob Storage or AWS S3,
 3. Deploy the app. The runtime creates Kafka topics for each tracked entity automatically.
 4. In the [Event Broker Manager](https://broker.mendix.com/), configure an [Event Broker Bridge](/appstore/services/event-broker/#manage-mx-broker-bridge) to route CDC events to your destination.
 
+## Runtime Configuration {#runtime-configuration}
+
+CDC requires runtime settings to connect to a Kafka broker. Set these in Studio Pro under **App Settings** > **Configurations** > **Custom**, or via your deployment environment's custom runtime settings.
+
+### Running Locally {#local-configuration}
+
+When running the app locally, only the bootstrap server address is required:
+
+| Name | Description | Default Value |
+| --- | --- | --- |
+| `Kafka.BootstrapServers` | The address of the Kafka broker, in the format `host:port`. | |
+
+### Bring Your Own Kafka (BYOK) {#byok-configuration}
+
+When connecting to a BYOK Kafka cluster, provide the bootstrap server address and credentials for authentication. The supported authentication method is SASL/SCRAM-SHA-512.
+
+| Name | Description | Default Value |
+| --- | --- | --- |
+| `Kafka.BootstrapServers` | The address of the Kafka broker, in the format `host:port`. | |
+| `Kafka.Username` | The username for SASL/SCRAM-SHA-512 authentication with the Kafka cluster. | |
+| `Kafka.Password` | The password for SASL/SCRAM-SHA-512 authentication with the Kafka cluster. | |
+
+For details on setting up a BYOK cluster with the Mendix Event Broker, see [Mendix Event Broker](/appstore/services/event-broker/).
+
 ## Read More
 
 * [Published CDC Services](/refguide/published-cdc-services/)

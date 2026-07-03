@@ -21,3 +21,11 @@ The Private Mendix Platform Project API allows you to manage pipelines in Privat
 * Approve or reject a manual step of a waiting pipeline.
 
 ## API Reference
+
+### Version 2
+
+{{< swaggerui src="/openapi-spec/openapi-pipeline-v2.yaml"  >}}
+
+### Version 1
+
+{{< swaggerui src="/openapi-spec/openapi-pipeline-v1.yaml"  >}}

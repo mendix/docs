@@ -28,7 +28,7 @@ On Linux, the *Mendix Workstation/logs* folder is located at either `$XDG_CONFIG
 
 ### Diagnostics
 
-When [Developer Mode](/mendix-workstation/installation/#developer-mode) is enabled, the Client also shows a **Diagnostics** page. This page displays information about the available devices, credentials, station configuration, system info, and log levels, which you can use to help you troubleshoot any issues.
+When [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled, the Client also shows a **Diagnostics** page. This page displays information about the available devices, credentials, station configuration, system info, and log levels, which you can use to help you troubleshoot any issues.
 
 ## Registration Token Could Not Be Parsed
 

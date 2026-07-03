@@ -8,10 +8,6 @@ weight: 20
 
 ## Introduction
 
-This document outlines the installation and basic configuration of Mendix Workstation. It provides a quick-start guide for initial setup, followed by detailed instructions on advanced configurations for workspaces and stations.
-
-## Quick Start Guide 
-
 This guide helps you configure and test a minimum working version of Mendix Workstation. By following these steps, you will complete the following:
 
 * Create a basic configuration within Workstation Management.
@@ -21,14 +17,16 @@ This guide helps you configure and test a minimum working version of Mendix Work
 
 ### Creating a Workspace and Station
 
-A *station* represents a workstation on the shop floor. It can connect to one or more apps or devices. A *workspace* is a grouping of one or more stations. For example, a workspace may group together all the stations which belong to the same factory or factory line.
+To create a workspace and a station, perform the following steps:
 
 1. Go to [Mendix Workstation Management](https://workstation.home.mendix.com/) and sign in with your Mendix account.
 2. In **Workspace Overview**, click **Create Workspace**.
 
     {{< figure src="/attachments/workstation/wks-install1.png" class="no-border" >}}
 
-3. Enter a name for your new workspace, and then click **Create Workspace**.
+3. Enter a name for your new workspace, specify the environment type (**Test**, **Acceptance** or **Production**), and then click **Create Workspace**.
+
+    Workspaces created with the Test environment type have [Developer Mode](/mendix-workstation/management-stations/#developer-mode) for their stations enabled by default. Changing the environment type after creation does not disable or enable Developer Mode.
 
     {{< figure src="/attachments/workstation/wks-install2.png" class="no-border" >}}
 
@@ -96,7 +94,7 @@ The **Stations** page now shows your station's status as **Computer Registered**
 
     {{< figure src="/attachments/workstation/wks-install10.png" class="no-border" >}}
 
-Any changes that you make in Workstation Management (such as adding new devices, or setting the **Detect Card Readers** toggle to **Off**) will be immediately synchronized with the Workstation Client. To change this behavior, see [Client's Auto-Refresh](#auto-refresh).
+Any changes that you make in Workstation Management (such as adding new devices, or setting the **Detect Card Readers** toggle to **Off**) will be immediately synchronized with the Workstation Client. To change this behavior, see [Client's Auto-Refresh](/mendix-workstation/management-settings/#auto-refresh).
 
 ### Configuring and Testing Virtual Devices
 
@@ -150,174 +148,9 @@ After configuring the server and client pair, test their connectivity by perform
 8. In the same way, send a message from the **Test Server** to the **Test Client** device.
 
 {{% alert color="info" %}}
-Different device types have different requirements for the message syntax. For more information, see [Message Syntax for File, Smart Card, and Bluetooth Devices](/mendix-workstation/device-syntax/).
+Different device types have different requirements for the message syntax. For more information, see [Configuring Devices](/mendix-workstation/management-devices/).
 {{% /alert %}}
 
 ### Quitting the Workstation Client
 
-The Workstation Client runs automatically at system startup. The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if [Developer Mode](#developer-mode) is enabled. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.
-
-## Advanced Configurations
-
-### Workspace Apps
-
-It is crucial to configure the Mendix apps that are allowed to connect to the Workstation Client via the Workstation Connector. To do so, apps are managed on a workspace level and can be enabled or disabled for all stations in workspace, by station station groups, or individually per station.
-
-### Workspace Settings
-
-Navigate to the **Settings** page in a workspace to configure settings that are applied to all stations in that workspace.
-
-#### Log Settings
-
-Log settings are available in Workstation Management at **Settings > Log Settings**.
-
-The Workstation Client always stores logs to the file system it is installed on (for more information, see [Troubleshooting the Workstation Client](/mendix-workstation/troubleshooting-workstation-client/)). No logs are send to the Workstation Management. However, you can configure the log level and retention policy of all the Workstation Clients that are registered to stations in the workspace.
-
-##### Log Level
-
-Configure the log level of the logs stored by the Workstation Client(s).
-
-* Info (default) - Logs normal operation and key application events. For example, the time when the Client was launched or terminated.
-* Warn - Info logs and potential issues or suboptimal conditions. For example, if a request to refresh the Client's configuration timed out.
-* Error - Warning logs and visible problem, something is not working as expected. For example, if a port to connect to a device is already in use.
-* Debug - Error logs and detailed internal state for developer diagnostics. For example, requests to the Workstation Management, communication with devices.
-
-By default, the unregistered Workstation Client is set to the Debug log level. After the client is registered, the log level as configured in the Workspace settings is applied.
-
-#### Retention Policy
-
-Verbosity and thus log file size increases with each log level. To constrain this, the logs are limited to 10 MB in size and stored for 7 days by default. 
-
-Modify these settings to the needs of your logging policy, especially if you require to keep debug level logs in production for retrospective troubleshooting.
-
-#### Client's Auto-Refresh {#auto-refresh}
-
-Auto-refresh settings are available in Workstation Management at **Settings > Client's Auto-Refresh**.
-
-By default, the Workstation Client operates in auto-refresh mode. That is, any changes made to the configuration in Workstation Management are immediately reflected in the Client. 
-
-To change this behavior, set the **Auto-Refresh Mode** toggle to **Off**. You can then force the configuration to refresh by clicking **Refresh on Computer** in Workstation Management, or by clicking **Refresh** in the Workstation Client.
-
-The **Check Interval** setting is only available when the auto-refresh mode is enabled. It specifies how often a Workstation Client that is disconnected due to a web socket failure should automatically refresh its configuration by polling Workstation Management. By default, this happens every 60 minutes.
-
-#### Local Device Testing
-
-Local device testing settings are available in Workstation Management at **Settings > Local Device Testing**.
-
-By default, the Workstation Management is pre-configured as an allowed app to connect to the Workstation Client on the **Test your Station** page in a workspace. To disable this setting, toggle it off. 
-
-### Workspace Team and Collaboration {#collaboration}
-
-{{% alert color="info" %}}
-Collaborating with other users in a workspace requires a Workstation license.
-{{% /alert %}}
-
-Invite and manage members of a Workspace on the Team page. Only users who have signed into Workstation Management can be invited via email. One of the following roles can be assigned:
-
-* Owner - The owner has full rights to manage the workspace. They can perform the following tasks:
-
-    * Reading and editing configurations
-    * Managing the team
-    * Registering and deregistering computers to and from stations
-    * Refreshing computer configurations
-    * Managing workspace settings
-    * Deleting a workspace or transfering ownership to a new owner
-    
-        By default, the user who created a workspace is assigned the owner role. Contact Mendix Support if a Workspace owner has left the company to transfer the ownership. 
-    
-    * Viewing bulk registration tokens
-    * Copying existing bulk registration tokens
-    * Creating new bulk registration tokens
-    * Modifying bulk registration tokens
-    * Revoking bulk registration tokens
-    * Exporting and importing stations (single and in bulk)
-    * Linking imported stations to existing workspace apps
-    * Creating apps during station import.
-
-* Workspace admin - The workspace admin can manage the workspace in the same way as the owner, but they cannot delete the workspace or change its ownership.
-* Station admin - Station admins can perform the following tasks:
-
-    * Viewing and editing station configurations
-    * Registering and deregistering computers to and from stations
-    * Refreshing computer configurations
-    * Viewing bulk registration tokens
-    * Copying existing bulk registration tokens
-    * Creating new bulk registration tokens
-    * Modifying bulk registration tokens
-    * Revoking bulk registration tokens
-    * Exporting and importing stations (single and in bulk)
-    * Linking imported stations to existing workspace apps. 
-
-* Computer admin - Computer admins can perform the following tasks:
-
-    * Viewing configurations without editing them
-    * Registering and deregistering computers to and from stations
-    * Refreshing computer configurations
-    * Viewing bulk registration tokens
-    * Copying existing bulk registration tokens
-    * Exporting stations (single and in bulk).
-
-* View only - This role can perform the following tasks:
-
-    * Viewing configurations without editing them
-    * Exporting stations (single and in bulk).
-
-All members except for the Workspace owner can leave a workspace. 
-
-### Advanced Station Settings
-
-#### Station Developer Mode {#developer-mode}
-
-Developer mode can be configured on a **Station** page by toggling **Enable Developer Mode**. 
-
-*Developer Mode* is enabled by default for each station. This allows users of the Workstation Client to 
-
-* quit the program from the start menu, 
-* unlink the Workstation Client so that it can be registered to another station,
-* gives access to debug level live logs displayed in the **Logs** pane of the Workstation Client even if the workspace's log level is set to a different level,
-* give access to developer tools (available by pressing *Ctrl + Shift + I*). 
-
-For production environments, it is recommended to disable *Developer Mode* to prevent Workstation operators from accidentally quitting or unlinking the Workstation Client. 
-
-#### Device Settings
-
-##### Card Readers
-
-Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 
-
-Auto detecting card readers is enabled by default. This setting can be configured on a **Station** page by toggling **Detect Card Readers**. 
-
-Refer to [Message Syntax - Card Readers](/mendix-workstation/device-syntax/#card-readers) for a more in-depth explaination how to communicate with card readers.
-
-##### File Device
-
-This section explains the configuration of a file device. Refer to [Message Syntax - File Device](/mendix-workstation/device-syntax/#file-device) for a more in-depth explaination how to communicate with file devices.
-
-###### Allowed Folder Configuration
-
-The *Allowed Folder* feature supports flexible path configuration through environment variables, providing cross-platform compatibility for both Windows and Unix-based systems. This functionality allows administrators to define the allowed folder where the Workstation Client can perform actions. 
-
-###### Environment Variable Support
-
-The system accepts environment variables in the allowed folder configuration within the Workstation Management interface. Both Windows and Unix syntax formats are supported on all platforms, meaning you can use Windows-style environment variables on Unix systems and vice versa.
-
-###### Supported Path Formats
-
-Windows and Unix-style paths can be used independently of the operating system the Workstation Client is running on. The following examples demonstrate the various syntax options available:
-
-###### Basic Examples
-
-* **Windows-style with backslash**: `%AppData%\test`
-* **Windows-style with forward slash**: `%AppData%/test`
-* **Unix-style with backslash**: `$EnvVar\test`
-* **Unix-style with forward slash**: `$EnvVar/test`
-
-###### Allowed Actions
-
-The administrator can choose to allow either one or a combination of the following permissions: subscribe to change events, read files, and write files.
-
-##### Bluetooth Devices
-
-Simply add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact device name as displayed in your OS' device manager 
-
-Refer to [Message Syntax - Bluetooth](/mendix-workstation/device-syntax/#bluetooth) for a more in-depth explaination how to communicate with bluetooth devices.
+The Workstation Client runs automatically at system startup. The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.

@@ -10,16 +10,22 @@ weight: 10
 
 ## Introduction
 
-This guide helps you configure and test a minimum working version of Mendix Workstation. By following these steps, you will complete the following:
+This guide helps you configure and test a minimum working version of [Mendix Workstation](/mendix-workstation/) to help you develop or test Workstation configurations. By following these steps, you will complete the following:
 
 * Create a basic configuration within Workstation Management.
 * Set up a pair of virtual TCP/IP Client and Server devices for testing.
 * Install the Workstation Client on your computer.
 * Verify the connection between your virtual devices directly from Workstation Management.
 
+For more detailed information about implementing Mendix Workstation in a production setting, refer to the following topics:
+
+* [Workstation Management](/mendix-workstation/management/)
+* [Workstation Client](/mendix-workstation/client/)
+* [Workstation Connector](/mendix-workstation/connector/)
+
 ## Prerequisites
 
-For information about the system and access requirements, see [Installing the Workstation Client: Prerequisites](/mendix-workstation/install-client/#prerequisites)
+For information about the system and access requirements specific to Mendix Workstation, see [Installing the Workstation Client: Prerequisites](/mendix-workstation/install-client/#prerequisites).
 
 ## Creating a Workspace and Station {#create-workspace}
 

@@ -1,7 +1,7 @@
 ---
 title: "Company Guidelines"
 url: /control-center/company-guidelines/
-description: "Describes the Company Guidelines page in the Mendix Control Center."
+description: "Describes how to add company-wide guidelines which govern how teams build apps with Mendix."
 weight: 10
 beta: true
 ---

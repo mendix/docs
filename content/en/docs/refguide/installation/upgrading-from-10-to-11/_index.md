@@ -101,11 +101,19 @@ In a Microflow, this distinction exists and the expression would yield `false`.
 
 Moreover, on the client side a String attribute with a value set to `empty` would be treated as if it contains `''`. This made it impossible to check in a Nanoflow whether an attribute is `empty` or if it has an empty String value `''`.
 
+#### Mendix 11.0.0
+
 In Mendix 11.0.0, we have made this behavior consistent. Now, strings are handled in the same way no matter where you use them. 
 
 We understand that this change might cause unexpected changes in existing applications migrated from older versions of Mendix. 
 
-We recommend carefully analyzing all expressions that are comparing strings against `''` or `empty` and doing extensive testing after the migration. 
+#### Mendix 11.6.3
+
+In Mendix 11.6.3, we introduced [an option](/refguide/runtime-tab/#new-string-behavior) to toggle between the old and the new client-side String attribute behaviors. Projects migrating from Mendix 10 to 11 will retain the old String behavior unless you manually switch to the new one.
+
+It is recommended to migrate your pre-existing projects to use the new behavior as soon as possible. The new behavior will improve consistency between nanoflows and microflows, which will lead to fewer bugs in your applications.
+
+Make sure to carefully analyze all expressions that are comparing strings against `''` or `empty` and do extensive testing after the migration. 
 
 #### Example 1
 
@@ -140,15 +148,15 @@ In Mendix 11.0 you won’t run into any ambiguity around this anymore.
 #### Example 3
 
 ```
-$User/Name + "@mendix.com"
+$User/Name + "@siemens.com"
 ```
 
-In this example, Mendix will handle string concatenation correctly no matter if `$User/Name` is `empty` or `''`. The resulting string will be `@mendix.com`.
+In this example, Mendix will handle string concatenation correctly no matter if `$User/Name` is `empty` or `''`. The resulting string will be `@siemens.com`.
 
 In this particular example, if you want to prevent the generation of email addresses without the first part you should add a validation check before doing concatenation: 
 
 ```
-if trim($User/Name) = '' then '' else $User/Name + "@mendix.com"
+if trim($User/Name) = '' then '' else $User/Name + "@siemens.com"
 ```
 
 ### React 19 {#react-19}
@@ -169,7 +177,7 @@ After the upgrade, your app may report the following new error: `A microflow tha
 
 You can resolve the error by enabling entity access for the microflow that calls the **ShowHomePage** microflow. However, this may not always align with your intended access control strategy. Alternatively, you can create a custom microflow that includes the [Show home page](/refguide/show-home-page/) activity without enabling entity access. You can then call this new microflow instead of the one in the **System** module. Another approach is to call the **Show home page** activity directly within your microflow.
 
-### Amazon S3 SDK Upgrade
+### Amazon S3 SDK Upgrade {#amazon-s3-sdk-upgrade}
 
 In Mendix 11.6.0 we upgraded the AWS SDK used for accessing S3 storage from version 1 to version 2. SDK version 2 has some [differences](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/migration-s3.html) which affects our S3 storage implementation.
 
@@ -228,5 +236,5 @@ If you use an encryption algorithm other than `AES`, then all existing files sho
 * When COALESCE function in OQL has attributes of different numeric types, the result type is defined according to type precedence. Before, the result type would match the type of the first argument.
 * Client API `mx.logger` is no longer supported. All calls to it should be replaced with standard `console.log`, `console.warn`, and other such standard calls. All widgets that use the `mx.logger` need to be updated.
 * We no longer convert `empty` values sent to the client into empty strings. All client side expressions must be adjusted accordingly.
-* We no longer support the runtime API class `com.mendix.modules.email.EmailModule` which was deprecated in [Mendix 10.12](https://docs.mendix.com/releasenotes/studio-pro/10.12/#deprecate-email). We recommend using the [Email Connector](https://marketplace.mendix.com/link/component/120739) module instead.
+* We no longer support the runtime API class `com.mendix.modules.email.EmailModule` which was deprecated in [Mendix 10.12](/releasenotes/studio-pro/10.12/#deprecate-email). We recommend using the [Email Connector](https://marketplace.mendix.com/link/component/120739) module instead.
 * The [Deep Link module](https://marketplace.mendix.com/link/component/43) is deprecated, and no longer receives active support starting with Studio Pro 11. The functionality this module offers has been replaced with built-in features of the Mendix Platform, such as Page URLs and Microflow URLs. Refer to the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section in *Deep Link* for details on how to migrate to these built-in features.

@@ -12,7 +12,7 @@ aliases:
 
 Scrum Masters can migrate apps from SVN version control system to Git. For more information on version control, see [Version Control](/refguide/version-control/) in the *Studio Pro Guide*. 
 
-Git is a more modern version control system that has several advantages over SVN. For more information, see [Version Control FAQ](/refguide/version-control-faq/).
+Git is a more modern version control system that has several advantages over SVN. For more information, see [Version Control FAQ](/refguide/version-control/).
 
 If your main line is Studio Pro version 9.24.28 or above and your team role is Scrum Master, you see a notification on a possible migration at the top of the **Team Server** page for your app. Click **Migrate to Git** to check for migration eligibility and to start the migration.
 
@@ -200,4 +200,3 @@ The most likely reason your migration has failed is that you have branches that 
 ## Read More
 
 * [Version Control](/refguide/version-control/)
-* [Version Control FAQ](/refguide/version-control-faq/)

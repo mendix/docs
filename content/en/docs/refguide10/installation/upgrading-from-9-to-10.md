@@ -140,7 +140,7 @@ In Studio Pro 10, published OData, REST, and Web services use sessions that do n
 
 ### Java Version
 
-Studio Pro 10.21 and above requires your application to use Java 21. The Java version of an application can be configured in the runtime settings. Java 21 is available in 9.24.23 and above. Please consider the [Java Version Migration](https://docs.mendix.com/refguide10/java-version-migration/) guide for a list of changes between Java versions. For on-premises deployments, ensure that JDK 21 is installed in the environments where Mendix 10 applications are deployed.
+Studio Pro 10.21 and above requires your application to use Java 21. The Java version of an application can be configured in the runtime settings. Java 21 is available in 9.24.23 and above. Please consider the [Java Version Migration](/refguide10/java-version-migration/) guide for a list of changes between Java versions. For on-premises deployments, ensure that JDK 21 is installed in the environments where Mendix 10 applications are deployed.
 
 ## Read More
 

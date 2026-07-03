@@ -68,8 +68,8 @@ The following table lists the sources you can use to target users:
 
 | Source | Description |
 | --- | --- |
-| Database | Allows you to use XPath constraints to filter which users should see the user task in their inbox. For example, you can target a certain task only to users in a specific department (assuming such information is available in your domain model). You can use any attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows).|
-| Microflow | Allows you to use a microflow to target the user task to certain users. You can check, for example, which users have the right to approve user tasks and are currently not on vacation, and assign the task only to users who passed the check. <br/> The return type of the microflow should be a list of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| Database | Allows you to use XPath constraints to filter which users should see the user task in their inbox. For example, you can target a certain task only to users in a specific department (assuming such information is available in your domain model). You can use any attributes of the **User Entity** set in [App Settings](/refguide/workflow-tab/).|
+| Microflow | Allows you to use a microflow to target the user task to certain users. You can check, for example, which users have the right to approve user tasks and are currently not on vacation, and assign the task only to users who passed the check. <br/> The return type of the microflow should be a list of the **User Entity** set in [App Settings](/refguide/workflow-tab/). |
 
 {{% alert color="warning" %}}
 If an XPath constraint or a microflow results in an empty list (0 objects), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
@@ -200,7 +200,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### Boundary Events Section {#boundary-events}
 
-For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
+Boundary events can be attached to this element and are triggered by certain events to handle exceptional situations during its execution. For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

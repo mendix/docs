@@ -10,7 +10,7 @@ aliases:
 {{% alert color="warning" %}}
 This document is for the Mendix Feedback module which is compatible with Studio Pro 9.18.6 and above.
 
-If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Feedback Widget Docs](#legacy-feedback-docs) sections below.
+If you are using the deprecated Mendix Feedback widget, refer to the [Legacy Feedback Widget Docs](#legacy-feedback-docs) sections in this document.
 
 All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade).
 
@@ -80,13 +80,15 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
     * **Model pop-up type** – This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
     * **App ID** – This is the unique identifier of your app. You can find it under **Project ID** in your app’s [Settings](/developerportal/general-settings/) in Apps.
     
-        {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
+        {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, refer to [Updating App ID](#update-app-id) below.
         {{% /alert %}}
         
-    * **Show advanced settings** – The advanced settings control html2canvas, a backup screen capture tool the Mendix Feedback widget uses when the default browser screenshot tool fails. By default, this is set to **No**. If you select **Yes**, the following items appear:
+    * **Show advanced settings** – These advanced settings allow you to customize where the widget renders and how screenshots are captured when the default behavior does not work as expected. By default, this is set to **No**. If you select **Yes**, the following items are displayed:
       
+        * **Target container selector** – This allows you to manually choose where the feedback widget is displayed within the app. To do that, add a CSS selector here to specify the location.    
+            By default, this field is set to `.mx-scrollcontainer-center`.
         * **Enable object rendering** – By default, this is set to **No**. Only select **Yes**, when you experience problems with creating screenshots. Then it will enable the `foreignObjectRendering` method which helps rendering complex HTML, including styles, SVGs, and embedded elements.
-        * **CSS scrollable area**– If your app does not use the default scrolling behavior in Studio Pro, the screenshot feature may not work correctly. You can add a CSS selector here to specify which element on your page scrolls the content.
+        * **CSS scrollable area** – If your app does not use the default scrolling behavior in Studio Pro, the screenshot feature may not work correctly. You can add a CSS selector here to specify which element on your page scrolls the content.
 * **Customize Button** tab
     * **Feedback and screenshot button labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
     * **Feedback Button Styling** – This controls how the **Feedback** button is rendered. There are three options:
@@ -107,7 +109,7 @@ To edit the styling of the feedback page, you can add the necessary styling to t
 
 You can connect the Feedback module to another service.
 
-To do this, you set your own API call inside the microflow `SUB_Feedback_SendToServer`. Depending on the service, you may need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/feedback-api-v2/).
+To do this, you set your own API call inside the microflow `SUB_Feedback_SendToServer`. Depending on the service, you may need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](/apidocs-mxsdk/apidocs/feedback-api-v2/).
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-feedback/Feedback_SendToServer.png" width="500px" class="no-border" >}} 
 
@@ -125,7 +127,7 @@ The image is allowed up to 5MB in one of the following formats: JPG, JPEG, PNG, 
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-feedback/feedback-submit-button.png" width="500px" class="no-border" >}} 
 
-After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/app-insights/feedback/) page of the app in [Apps](https://sprintr.home.mendix.com/). Once you see the final page, you have successfully submitted your feedback.
+After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/app-insights/feedback/) page of the app in [Apps](https://sprintr.home.mendix.com/). Once the final page is displayed, you have successfully submitted your feedback.
 
 ## Upgrading the Deprecated Feedback Widget to the Feedback Module {#upgrade}
 
@@ -147,11 +149,11 @@ If it did not change to your app ID because of an unexpected error, you can upda
 
 ### Feedback Item Does Not Show in Apps
 
-If you cannot see your feedback items on the **Feedback** page after opening your app in [Apps](https://sprintr.home.mendix.com/), it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuring the Feedback Widget](#configuration) section above.
+If your feedback items are not displayed on the **Feedback** page after opening your app in [Apps](https://sprintr.home.mendix.com/), it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuring the Feedback Widget](#configuration) section above.
 
 ### Widget Cannot Be Read 
 
-If you see the following error, click **close** and then remove the duplicate old widget from your app’s folder ‘/widgets’. Look for ‘SprintrFeedbackWidget.mpk’. 
+If the following error is displayed, click **close** and then remove the duplicate old widget from your app’s folder ‘/widgets’. Look for ‘SprintrFeedbackWidget.mpk’. 
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-feedback/widget-error.png" width="600px" class="no-border" >}}
 
@@ -174,7 +176,7 @@ To show the Feedback button, do as follows:
 4. Set **Show in Design mode** to **Yes**.
 5. Click **OK** to save the change.
 
-### Users Do not See Their Image Afte Uploading a File from Their Computer
+### Users Do not See Their Image After Uploading a File from Their Computer
 
 1. In [Apps](https://sprintr.home.mendix.com/link/myapps), open your app.
 2. In your **Apps** [navigation pane](/developerportal/#navigation-pane), go to **Environments**.
@@ -219,41 +221,46 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 
 You can configure the widget for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the widget. The feedback feature requires the following properties to be set:
 
-* **Project** tab
+1. **Project** tab
     * **App ID** – the unique identifier of your app, which you can find under **Project ID** in your app’s [Settings](/developerportal/general-settings/) in [Apps](https://sprintr.home.mendix.com/)l
 
-        {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#legacy-update-app-id) below.
+        {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, refer to [Updating App ID](#legacy-update-app-id) below.
         {{% /alert %}}
 
         **Allow screenshots** – controls whether the app user can take a screenshot or not
-* **Advanced** tab
+2. **Advanced** tab
     * **Feedback server location** – the URL of the feedback server (usually `https://feedback-api.mendix.com`), which you should only change when you are using a different environment
     * **Screenshot Foreign Rendering**
         * **No** (default)
         * **Yes** – only used when the page includes sensitive information
     
-* **Authentication** tab
+3. **Authentication** tab
 
-    {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.</br></br>You need to enter the value of authentication items manually as currently the widget does not support a drop-down menu for selecting microflow or the attributes of an entity.{{% /alert %}}
+    {{% alert color="info" %}}For the best user experience, configure your app to use the Mendix Feedback widget version 8.2.1 or above with a supported authentication method. Enter the value of authentication items manually as currently the widget does not support a drop-down menu for selecting microflow or the attributes of an entity.{{% /alert %}}
 
-    * **MendixSSO** – if Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without having to enter their name and email address
-        * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module. 
-        {{% alert color="info" %}}If you are using MendixSSO 3, follow the [Create a New Microflow to Retrieve DecryptedToken](#create-a-new-microflow-to-retrieve-decryptedtoken) section below.{{% /alert %}}
-        * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module). 
-
-        See the screenshot below for an example:
-
-        {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-feedback/mendixsso-authentication.png" class="no-border" >}}
-
-    * **Custom Authentication** – if you are using an SSO solution other than the Mendix SSO module, you should configure the following settings. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
+    * **Custom Authentication**: This is the recommended authentication method. With these settings, you can provide a microflow that should return a valid username and email when the end-user is signed in with your authentication solution. If the end-user is not signed in (meaning the **User Object Provider** microflow returns an empty username or an invalid email address) the end-user will have to manually enter their name and email address when they leave feedback.
         * **User object microflow** – selects the microflow that returns **User** entity from your module
         * **User object** – selects the **User** entity
         * **User name attribute**– selects the attribute of **name** from the **User** entity
         * **Email attribute** – selects the attribute of **email** from the **User** entity
 
-        See the screenshot below for an example:
+        Refer to this screenshot for an example:
 
         {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-feedback/custom-authentication.png" class="no-border" >}}
+
+    * **MendixSSO**:
+
+    {{% alert color="info" %}}The Mendix SSO module is deprecated as of May 1, 2026. **Custom Authentication** is the recommended approach going forward. You may alternatively use [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/) modules for authentication integration.{{% /alert %}}
+    
+    If Mendix SSO is applied and the following settings are configured correctly, the end-user can leave feedback without having to enter their name and mail address.
+      * **ID token microflow** – recommended that you select the **DS_GetCurrentIdToken** microflow from the Mendix SSO module.
+    {{% alert color="info" %}}If you are using MendixSSO 3, follow the [Create a New Microflow to Retrieve DecryptedToken](#create-a-new-microflow-to-retrieve-decryptedtoken) section below.{{% /alert %}}
+
+      * **Decrypted Token Value** – recommended that you select the **Value** attribute from it (the default if **Value** in the MendixSSO module).    
+       
+    Refer to this screenshot for an example:
+
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-feedback/mendixsso-authentication.png" class="no-border" >}}
 
 ### Usage
 
@@ -306,7 +313,7 @@ The Feedback widget uses the HTML2Canvas library which attempts to make an image
 
 #### Feedback Item Does Not Show in Apps
 
-If you cannot see your feedback items on the **Feedback** page after opening your app in [Apps](https://sprintr.home.mendix.com/), it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuration](#legacy-configuration) section above.
+If your feedback items are not displayed on the **Feedback** page after opening your app in [Apps](https://sprintr.home.mendix.com/), it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuration](#legacy-configuration) section above.
 
 #### Creating a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
 
@@ -321,6 +328,6 @@ The **tokenType** argument is **MendixSSO.TokenType.ID_TOKEN**:
 
 #### Widget Cannot Be Read 
 
-If you see the following error, click **close** and then go to your widget folder to remove the duplicate old widget. 
+If the following error is displayed, click **close** and then go to your widget folder to remove the duplicate old widget. 
 
 {{< figure src="/attachments/appstore/platform-supported-content/widgets/mendix-feedback/widget-error.png" width="600px" class="no-border" >}}

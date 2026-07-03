@@ -25,7 +25,7 @@ When working on projects, the following defaults for association storage apply:
 * **Upgraded projects** – for projects which are upgraded from an older version of Mendix, all new associations continue to be implemented as association tables
 
 {{% alert color="info" %}}
-In your app settings you can [change the default](/refguide/app-settings/#miscellaneous) for all new associations. Existing associations will not be affected. Please note that some associations managed in the System module will be updated even if you haven't created new associations.
+In your app settings you can [change the default](/refguide/miscellaneous-tab/) for all new associations. Existing associations will not be affected. Please note that some associations managed in the System module will be updated even if you haven't created new associations.
 {{% /alert %}}
 
 ## Advantages of Direct Associations
@@ -48,7 +48,7 @@ You cannot replace association tables with direct associations for all types of 
 Enabling direct associations is simple, and has the following features:
 
 * The choice is reversible – you can decide to revert to using association tables (but see things to think about [before switching to direct associations](#before))
-* You can [change the default](/refguide/app-settings/#miscellaneous) for all new associations
+* You can [change the default](/refguide/miscellaneous-tab/) for all new associations
 * You can enable it for specific associations
 
 For more information, see the [Association Storage](/refguide/association-properties/#storage) section of *Association Properties*.

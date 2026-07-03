@@ -106,4 +106,29 @@ window.markmap = {
 {{ end -}}
 
 <script src='{{ "js/tabpane-persist.js" | relURL }}'></script>
+<!-- Olu - Mobile sidebar toggle script -->
+<script>
+  (function () {
+    var openBtn = document.getElementById('td-mobile-sidebar-btn');
+    var closeBtn = document.getElementById('td-mobile-sidebar-close');
+    var overlay = document.getElementById('td-sidebar-overlay');
+    var sectionNav = document.getElementById('td-section-nav');
+    function toggleSidebar() {
+      document.body.classList.toggle('td-sidebar-open');
+      if (sectionNav) {
+        sectionNav.classList.toggle('show');
+      }
+    }
+    function closeSidebar() {
+      document.body.classList.remove('td-sidebar-open');
+      if (sectionNav) {
+        sectionNav.classList.remove('show');
+      }
+    }
+    if (openBtn) openBtn.addEventListener('click', toggleSidebar);
+    if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+    if (overlay) overlay.addEventListener('click', closeSidebar);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSidebar(); });
+  })();
+</script>
 {{ partial "hooks/body-end.html" . -}}

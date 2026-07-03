@@ -6,7 +6,7 @@ weight: 10
 
 ## Introduction
 
-Use the **Create Branch Line** dialog box to create a new [branch line](/refguide/version-control/#branches) via the **Branch Line Manager**:
+Use the **Create Branch Line** dialog box to create a new [branch line](/refguide/version-control/glossary/#branches) via the **Branch Line Manager**:
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" class="no-border" width="550" >}}
 

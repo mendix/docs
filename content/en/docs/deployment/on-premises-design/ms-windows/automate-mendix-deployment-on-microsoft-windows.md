@@ -180,6 +180,48 @@ $appName = 'Name of Mendix app'
 Install-MxService $appName
 ```
 
+### Sample Script - Set App Runtime Settings
+
+The following script example demonstrates how to set runtime settings for your app. It applies custom runtime configuration settings to your application using a hashtable of key-value pairs.
+
+```text
+$appName = 'Name of Mendix app'
+$settings = @{
+    'MaxJavaHeapSize' = '2048'           
+    'DatabaseHost' = 'localhost'        
+}      
+
+# Set runtime settings
+Set-MxAppRuntimeSettings $appName -Settings $settings
+```
+
+### Sample Script - Set App Constant
+
+The following script example demonstrates how to set an application constant for your app. It updates a specific constant value in your Mendix app configuration.
+
+```text
+$appName = '{Name of your app}'
+$constants = @{
+    'constantName' = 'constantValue'
+    'constantName2' = 'constantValue2'
+}
+
+# Set application constant
+Set-MxAppConstants $appName -Constants $constants
+```
+
+### Sample Script - Get Server Id
+
+The `Start-MxApp` cmdlet automatically retrieves the Server ID (License ID) when starting a Mendix app. You can use this unique identifier for license tracking and application monitoring. The following script example demonstrates the process required to retrieve Server Id.
+
+```text
+# Start the Mendix app and get Server ID
+$app = Start-MxApp "MyAppName" -NoService -SynchronizeDatabase
+
+# Display the Server ID
+Write-Host "Server ID: $($app.ServerId)"
+```
+
 ## Troubleshooting
 
 If you encounter any issues while automating Mendix deployment on Windows using cmdlets, use the following troubleshooting tips to help you solve them.

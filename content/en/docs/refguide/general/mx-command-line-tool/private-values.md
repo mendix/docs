@@ -9,7 +9,7 @@ description: "Describes the commands related to private values for the mx comman
 
 The commands in this group are related to showing and deleting private values.
 
-Studio Pro stores private values, such as values for [private constants](/refguide/configuration/#constants), in an encrypted way in the user's local app data. These private values are defined by:
+Studio Pro stores private values, such as values for [private constants](/refguide/configurations-tab/#constants), in an encrypted way in the user's local app data. These private values are defined by:
 
 * The path of the `.mpr` file of the app
 * The version of Studio Pro
@@ -85,7 +85,7 @@ When used without options, the command deletes all private values. The options f
 | `mx delete-private-values -n` | Shows all private values, but does not delete them (Same as `mx show-private-values`). |
 | `mx delete-private-values -f --not-on-disk` | Deletes all private values for which the path cannot be found on disk. This is useful when you have deleted one or more apps from your disk. |
 | `mx delete-private-values -f --path="C:\Users\John.Doe\Mendix\MyBikesApp\MyBikesApp-main.mpr" --version=10.12.0` | Deletes private values that were stored for the app `MyBikesApp-main.mpr` for Studio Pro version 10.12.0. This is useful after you have upgraded that app to a later version. |
-| `mx delete-private-values -f --version=10.12.0` | Deletes private values for Studio Pro version 10.21.0. This is useful after you have upgraded all your apps to later versions. |
+| `mx delete-private-values -f --version=10.12.0` | Deletes private values for Studio Pro version 10.12.0. This is useful after you have upgraded all your apps to later versions. |
 | `mx delete-private-values -f --item="C:\Users\John.Doe\Mendix\MyProductApp\MyProductApp-main.mpr 10.12.0 StudioPro.Settings.Configuration.ConstantValue.MyFirstModule.MyConstant"` | Deletes a specific private value (Same as specifying `--path=`, `version=` and `key=`). |
 
 ### Return Codes

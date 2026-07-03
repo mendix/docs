@@ -1,7 +1,7 @@
 ---
 title: "Documentation References"
 url: /appstore/modules/siemens-plm/references/
-weight: 7
+weight: 9
 description: "Provides information on obtaining additional documentation."
 ---
 

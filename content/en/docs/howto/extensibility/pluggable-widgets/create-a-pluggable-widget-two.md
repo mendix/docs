@@ -76,7 +76,7 @@ To add these restrictions, follow the instructions below:
 4. In *components/TextInput.tsx*, add the `disabled` property to the `TextInputProps` interface and set the HTML input attribute to `disabled`:
 
     ```tsx
-    import { createElement, CSSProperties, ReactElement } from "react";
+    import { CSSProperties, ReactElement } from "react";
     
     export interface TextInputProps {
         value: string;
@@ -146,7 +146,7 @@ This section teaches you how to add validation to your TextBox widget. Using mic
 3. To render the message, create a new component *components/Alert.tsx*:
 
     ```tsx
-    import { FunctionComponent, createElement, ReactNode } from "react";
+    import { FunctionComponent, ReactNode } from "react";
 
     export interface AlertProps {
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
@@ -194,7 +194,7 @@ This section teaches you how to add validation to your TextBox widget. Using mic
 5. Add `Fragment` to the current React import (shown below), and add a new `Alert` import underneath the existing imports in *TextBox.tsx*:
 
     ```tsx
-    import { createElement, ReactElement, Fragment } from "react";
+    import { ReactElement, Fragment } from "react";
     import { Alert } from "./components/Alert";
     ```
 
@@ -314,7 +314,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 2. In *TextBox.tsx*, check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
 
     ```tsx
-    import { createElement, Fragment, ReactElement, useEffect } from "react";
+    import { Fragment, ReactElement, useEffect } from "react";
     import { TextBoxContainerProps } from "../typings/TextBoxProps";
     import { TextInput } from "./components/TextInput";
     
@@ -357,7 +357,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 3. In *components/TextInput.tsx*, introduce a state for input changes and use the `onBlur` function to call the `onLeave` function by replacing the `onUpdate` function:
 
     ```tsx
-    import { createElement, CSSProperties, ReactElement, useEffect, useState } from "react";
+    import { CSSProperties, ReactElement, useEffect, useState } from "react";
 
     export interface TextInputProps {
         value: string;
@@ -546,7 +546,7 @@ To easily view changes to your widget while in Studio Pro's **Design mode**, you
 To add preview mode functionality, create a new file *src/TextBox.editorPreview.tsx* and add this code to it:
 
    ```tsx
-   import { createElement, ReactElement } from "react";
+   import { ReactElement } from "react";
    import { TextBoxPreviewProps } from "../typings/TextBoxProps";
    import { TextInput } from "./components/TextInput";
    

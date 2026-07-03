@@ -281,7 +281,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### Payload
 
-The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
+The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control/#which-team-server).
 
 An object with the following key-value pairs:
 

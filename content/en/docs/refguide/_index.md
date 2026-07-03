@@ -44,7 +44,7 @@ For more information on options for deploying your app see [Deploying Apps](/dep
 
 ## Version Control
 
-[Version Control](/refguide/version-control/) allows you to manage your app development and work on multiple development lines. For information on how Studio Pro handles versioning of apps, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
+[Version Control](/refguide/version-control/) allows you to manage your app development and work on multiple development lines. For information on how Studio Pro handles versioning of apps, see the [Versioning an App Deployed to the Cloud](/refguide/versioning-cloud-app/) section in *Using Version Control in Studio Pro*. 
 
 ## Mendix Runtime
 

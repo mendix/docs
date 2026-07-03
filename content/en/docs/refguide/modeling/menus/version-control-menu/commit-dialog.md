@@ -76,3 +76,7 @@ These files are generated based on the Documents in the app. In some cases gener
 To ensure generated content is up to date and generation is complete before committing the changes to the repository, Mendix has introduced an additional step in **Prepare commit process**. This last step of the commit synchronizes the commit content. The **Progress** section shows the current type of synchronization.
 
 If any synchronization fails during this step, you are asked if the commit should continue or be cancelled, along with an explanation of the failures and statuses. Only synchronizations that have failed are shown.
+
+## Read More
+
+* [Pulling, Committing, and Pushing](/refguide/pushing-pulling/)

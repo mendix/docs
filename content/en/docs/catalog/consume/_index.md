@@ -16,4 +16,4 @@ Common tasks for users who want to consume services from the Catalog include the
 * Using the [Integration pane](/refguide/integration-pane/)
 * Understanding how sources are related in the [Landscape](/data-hub/data-hub-landscape/)
 
-For an overview on consuming services, see [Consume Registered Assets](/catalog/consume/consume-registered-assets/). 
+For an overview on consuming services, see [Consume Registered Assets](/catalog/consume/consume-registered-assets/).

@@ -10,19 +10,20 @@ description: "How to use an APM (application performance monitoring) tool to mon
 
 There are several application performance monitoring (APM) tools for cloud applications available through a software as a service (SaaS) based data analytics platform. These APM tools provide comprehensive monitoring of servers, databases, tools, and services.
 
-Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, Splunk Cloud Platform, and New Relic to provide additional monitoring for your Mendix Apps running on Mendix Cloud.
+Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, Splunk Cloud Platform, New Relic, and OpenTelemetry to provide additional monitoring for your Mendix Apps running on Mendix Cloud.
 
-{{% alert color="info" %}}
-[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
+The table below summarizes the monitoring capabilities each tool supports:
 
-[Dynatrace](https://www.dynatrace.com/) OneAgent is used to collect metrics. Additionally, in Mendix 9.7 and above, custom application runtime and database metrics are supported.
+| APM Tool | Logs | Metrics | Traces | Min. Mendix Version |
+| --- | :---: | :---: | :---: | --- |
+| [AppDynamics](https://www.appdynamics.com/) | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
+| [Dynatrace](https://www.dynatrace.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
+| [Datadog](https://www.datadoghq.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | 7.15 ¹ |
+| [New Relic](https://www.newrelic.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
+| [OpenTelemetry](https://opentelemetry.io/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | 10.24.12, 11.5 |
+| [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
 
-[Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix 7.15 and above.
-
-[Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported for analyzing runtime application logs.
-
-[New Relic](https://www.newrelic.com/) logging and application metrics are supported in Mendix 9.7 and above. Custom application runtime and database metrics are supported.
-{{% /alert %}}
+<small>¹ Logs and metrics are available from Mendix 7.15 and above. Tracing requires Mendix 10.24.12 or 11.5 and above.</small>
 
 This document explains what information can be provided to a SaaS-based data analytics platform.
 
@@ -31,8 +32,9 @@ For details on how to add a specific APM tool to your app, see one of the follow
 * [AppDynamics for Mendix Cloud](/developerportal/operate/appdynamics-metrics/)
 * [Datadog for Mendix Cloud](/developerportal/operate/datadog-metrics/)
 * [Dynatrace for Mendix Cloud](/developerportal/operate/dynatrace-metrics/)
-* [Splunk for Mendix Cloud](/developerportal/operate/splunk-metrics/)
 * [New Relic for Mendix Cloud](/developerportal/operate/newrelic-metrics/)
+* [OpenTelemetry for Mendix Cloud](/developerportal/operate/opentelemetry/)
+* [Splunk for Mendix Cloud](/developerportal/operate/splunk-metrics/)
 
 {{% alert color="info" %}}
 These third-party integrations require an agent to run alongside your runtime container, gathering and sending metrics. This agent consumes resources from your [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).

@@ -130,6 +130,10 @@ If the Technical Contact cancels a request, the plan change process is canceled 
 
 ## Scheduling a Plan Change {#scheduling-a-plan-change}
 
+{{% alert color="warning" %}}
+Before scheduling a plan change request, check the [Mendix Status Page](https://status.mendix.com) for planned platform maintenance or Cloud Portal releases. Scheduling a plan change during maintenance windows may cause the request to fail.
+{{% /alert %}}
+
 If your request status is **Pending Schedule**:
 
 1. Open **Request Details** by clicking **Details** in the **Change Requests** tab.
@@ -157,7 +161,6 @@ After scheduling, once the plan change process starts:
 2. If the request fails required validations, the status changes to **Ineligible**.
 3. If the request passes all required validations, the status progresses to **Completed** (if successful) or **Failed** (if an execution error occurs).
  
-
 {{% alert color="info" %}}
 After a plan change is applied, you cannot change to a new plan for the same environment for the next 6 hours.
 {{% /alert %}}

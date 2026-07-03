@@ -9,16 +9,7 @@ weight: 90
 
 ## Introduction
 
-**Workflow Commons** is a workflow-specific module that contains a lot of preconfigured documents, such as pages, snippets, page templates, and microflows. You can download the [Workflow Commons module](https://marketplace.mendix.com/link/component/117066) from the Mendix Marketplace and integrate it in your app, however, this requires some preparation first. 
-
-Before adding the Workflow Commons module to your app, make sure you have completed the following:
-
-* Use an app built with Studio Pro 11. If the app was built with Studio Pro 10, make sure to [upgrade it to Studio Pro 11](/refguide/upgrading-from-10-to-11/)
-* Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it 
-* As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas Core, Atlas Web Content, and Data Widgets
-* Dashboards and metrics in Workflow Commons v2.1.0 and above depend on state change microflows. Make sure to configure the following state change microflows in the **App Settings** > **Workflows** tab:
-    * Set **Workflow state change** to *OCh_Workflow_State*
-    * Set **User task state change** to *OCh_WorkflowUserTask_State*
+**Workflow Commons** is a workflow-specific module that contains preconfigured documents such as pages, snippets, page templates, and microflows. You can download the [Workflow Commons module](https://marketplace.mendix.com/link/component/117066) from the Mendix Marketplace and integrate it in your app. For the setup requirements and configuration details, see [Workflow Commons](/appstore/modules/workflow-commons/).
 
 ## Workflow Commons Components {#components}
 
@@ -34,7 +25,7 @@ Depending on the required user roles for your application, you may have the need
 2. Link the user role to the **Administrator** module role in Workflow Commons.
 3. Link the user role to both the **User** and **WorkflowAdministrator** module roles in the System module.
 
-Finally, go to the Workflows tab in your [app settings](/refguide/app-settings/#workflows) and select the same user entity as the one you are using in Workflow Commons. You can then use the properties of this entity to filter the users that can pick up a task in the task's user assignment property. For more information on user task properties, see [User Task](/refguide/user-task/).
+Finally, go to the Workflows tab in your [app settings](/refguide/workflow-tab/) and select the same user entity as the one you are using in Workflow Commons. You can then use the properties of this entity to filter the users that can pick up a task in the task's user assignment property. For more information on user task properties, see [User Task](/refguide/user-task/).
 
 ## Customizing Workflow Commons
 

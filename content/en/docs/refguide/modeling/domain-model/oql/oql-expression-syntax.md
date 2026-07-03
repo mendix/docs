@@ -685,14 +685,22 @@ These are the currently supported functions:
 
 * CAST
 * COALESCE
+* DATEADD
 * DATEDIFF
 * DATEPART
+* DATETRUNC
 * LENGTH
+* LOCATE
 * LOWER
+* LPAD
+* LTRIM
 * RANGEBEGIN
 * RANGEEND
 * REPLACE
 * ROUND
+* RPAD
+* RTRIM
+* TRIM
 * UPPER
 
 ### CAST{#cast}
@@ -848,6 +856,92 @@ FROM Sales.CustomerInfo
 
 ²In OQL v1, the expression gets the type of the first argument. If you use OQL v1, the type of `AgeOrAmount` in the example above is Integer, not Decimal.
 
+### DATEADD {#dateadd-function}
+
+The `DATEADD` function adds a specified period of time to an expression of type `DATETIME`. The return type is `DATETIME`.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.9.0. It is supported only in Java actions.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+DATEADD ( datepart , length_expression , date_expression [, timezone ] )
+```
+
+##### datepart
+
+`datepart` specifies the interval in which `length_expression` is measured.
+
+Supported options are `YEAR`, `QUARTER`, `MONTH`, `WEEK`, `DAY`, `HOUR`, `MINUTE`, `SECOND`.
+
+##### length_expression
+
+`length_expression` specifies the number of `datepart` intervals to add. For example, `DATEADD ( WEEK , 3 , OrderDate )` adds 3 weeks to an attribute `OrderDate`. You can provide a negative number to subtract a period. Expressions that resolve to Integer or Long are allowed.
+
+##### date_expression
+
+`date_expression` specifies the date to add intervals to. The expression should resolve to a `DATETIME` value. String representations of `DATETIME` are accepted.
+
+##### timezone
+
+`timezone` specifies the time zone to use for the operation. This parameter is optional and defaults to the user time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
+
+For the `DATEADD` function, this parameter affects the difference between standard time and daylight saving time. See [Examples](#oql-dateadd-example), below.
+
+{{% alert color="info" %}}
+The user time zone is usually different from UTC. To get the result in the UTC time zone, explicitly specify `'UTC'` in this parameter. For details on time zone handling in Mendix Runtime, see [Date and Time Handling](/refguide/date-and-time-handling/).
+{{% /alert %}}
+
+#### Examples{#oql-dateadd-example}
+
+Assume the entity `Sales.Period` has 2 objects:
+
+```sql
+SELECT * FROM Sales.Period
+```
+
+| ID | Start               | End                 | Revenue |                                                        
+|:---|---------------------|---------------------|--------:|
+| -  | 2024-05-02 00:00:00 | 2025-07-05 00:00:00 | 28      |
+| -  | 2024-05-02 00:00:00 | 2024-06-02 15:12:45 | 10      |
+
+You can use `DATEADD` to add or subtract intervals from date values:
+
+```sql
+SELECT
+	DATEADD(QUARTER, 3, End) AS EndPlus3Quarters,
+	DATEADD(DAY, -5, End) AS EndMinus5Days,
+	DATEADD(MINUTE, 15, End) AS EndPlus15Minutes,
+FROM
+	Sales.Period
+```
+
+| EndPlus3Quarters    | EndMinus5Days       | EndPlus15Minutes    |                                                        
+|:--------------------|---------------------|--------------------:|
+| 2026-04-05 00:00:00 | 2025-06-30 00:00:00 | 2025-07-05 00:15:00 |
+| 2025-03-02 15:12:45 | 2024-05-29 15:12:45 | 2024-06-02 15:27:45 |
+
+The optional time zone parameter affects the difference between standard time and daylight saving time. For example, let's assume that a user in the time zone `Europe/Berlin` is running the OQL query below. In 2024, daylight saving time in that time zone ended on 27th of October at 02:00. Before that moment, the offset was `UTC+2h`, and after that it was `UTC+1h`. In `UTC` time zone, there was no clock change, and the offset was always `UTC+0h`. That explains the 1-hour difference between the results of the `DATEADD` function with the default time zone value `Europe/Berlin` and with the explicitly specified value `UTC`.
+
+```sql
+SELECT
+	Start,
+	DATEADD(MONTH, 6, Start) AS StartPlus6MonthsBerlin,
+	DATEADD(MONTH, 6, Start, 'UTC') AS StartPlus6MonthsUTC,
+FROM
+	Sales.Period
+WHERE
+	Revenue = 28
+```
+
+| Start               | StartPlus6MonthsBerlin  | StartPlus6MonthsUTC  |                                                        
+|:--------------------|-------------------------|---------------------:|
+| 2024-05-02 00:00:00 | 2024-11-02 00:00:00     | 2024-11-01 23:00:00  |
+
 ### DATEDIFF {#datediff-function}
 
 The `DATEDIFF` function returns the difference between two given `DATETIME` expressions. The difference is given in the specified unit.
@@ -875,7 +969,7 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 * `MINUTE`,
 * `SECOND`
 * `MILLISECOND`.
-        
+
 For more information on `DATETIME` values, see the [example section under *DATEPART*](#oql-datepart-example), below.
 
 ##### startdate_expression
@@ -888,7 +982,11 @@ For more information on `DATETIME` values, see the [example section under *DATEP
 
 ##### timezone
 
-`timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an [IANA time zone](https://www.iana.org/time-zones). GMT offset time zones are not supported.
+`timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the user time zone. It should be a string literal containing an [IANA time zone](https://www.iana.org/time-zones). GMT offset time zones are not supported.
+
+{{% alert color="info" %}}
+The user time zone is usually different from UTC. To get the result in the UTC time zone, explicitly specify `'UTC'` in this parameter. For details on time zone handling in Mendix Runtime, see [Date and Time Handling](/refguide/date-and-time-handling/).
+{{% /alert %}}
 
 #### Examples
 
@@ -929,6 +1027,111 @@ SELECT Revenue : DATEDIFF(MONTH, End, Start ) as avg_revenue FROM Sales.Period
 The way the difference is calculated depends on the database. The `YEAR` difference between "2002-01-01" and "2001-12-31" will be `1` with some databases and `0` with others.
 {{% /alert %}}
 
+### DATEFORMAT {#dateformat-function}
+
+The `DATEFORMAT` function formats values of type Date and time as strings using a specified pattern.
+
+This function was introduced in Mendix version 11.12.0.
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+DATEFORMAT ( expression , pattern )
+```
+
+`expression` is a value of type Date and time.
+
+`pattern` is a pattern used to convert `expression` to a string value. Only string literals and parameters are allowed.
+
+#### Pattern Syntax
+
+The `DATEFORMAT` OQL function uses the same pattern syntax, with the differences noted below, as date parsing functions in Studio Pro. See [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/) for more information.
+
+#### Limitations and Database-Specific Differences
+
+When an OQL query is executed, `DATEFORMAT` is converted to the corresponding database function. Due to implementation specifics of database engines, different limitations apply:
+
+1. Format letters `u`, `F`, `G`, `k`, `K` are not supported.
+2. SQL Server does not support format letters `D`, `Y`, `w`, `W`.
+3. MySQL and MariaDB do not support format letters `S` and `W`.
+4. SAP HANA does not support format letters `Y` and `w`.
+5. Format letter `h` results in different values per database:
+
+    1. HSQLDB uses zero-based indexing and returns values `0` to `11`
+    2. Other databases use one-based indexing and return values `1` to `12`
+    
+6. In addition to listed limitations, there are minor implementation differences between database engines such as:
+
+    1. Casing (`SUN 3:12 PM` in PostgreSQL, `Sun 3:12 PM` in SQL Server and `Sun 3:12 pm` in HSQLDB)
+    2. Year formatting (`YY` is formatted as `2026` in MySQL, as `26` in HSQLDB and PostgreSQL, and is not supported at all in SQL Server and SAP HANA).
+
+{{% alert color="warning" %}}
+Always test usages of `DATEFORMAT` with the database engine on which your app runs. OQL queries with `DATEFORMAT` may return different results in HSQLDB and in the production database.
+{{% /alert %}}
+
+#### Examples{#oql-dateformat-example}
+
+Let's assume that an object has an attribute `StartDate` of type Date and time with value `30 December 2025 13:02:15.300`.
+
+| Function call                                 | Result | Notes |
+|--------------|------|-----|
+| `DATEFORMAT(StartDate, 'dd MMM yyyy')`       | 30 Dec 2025 |  |
+| `DATEFORMAT(StartDate, 'yyyy-MM-dd hh:mm:ss a')`       | 2025-12-30 01:02:15 PM |  |
+| `DATEFORMAT(StartDate, 'EEE-ww-YYYY')`       | Tue-01-2026 | ISO date format is not supported by SAP HANA and SQL Server. `w` stands for the ISO week number, and `Y` stands for ISO year. |
+
+### DATEPARSE {#dateparse-function}
+
+The `DATEPARSE` function parses string values to Date and time using a specified pattern.
+
+This function was introduced in Mendix version 11.10.0. It is currently supported only in Java actions.
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+DATEPARSE ( expression , pattern )
+```
+
+`expression` is a value of type String.
+
+`pattern` is a pattern used to convert `expression` to a Date and time value. Only string literals and parameters are allowed.
+
+#### Pattern Syntax
+
+The `DATEPARSE` OQL function uses the same pattern syntax, with the differences noted below, as date parsing functions in Studio Pro. See [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/) for more information.
+
+#### Limitations and Database-Specific Differences
+
+When an OQL query is executed, `DATEPARSE` is converted to the corresponding database function. Due to implementation specifics of database engines, different limitations apply:
+
+1. Format letters `u`, `F`, `G`, `k`, `K` are not supported.
+2. MySQL and MariaDB do not support format letters `S` and `W`.
+3. SAP HANA does not support format letters `Y` and `w`.
+4. For SQL Server, `DATEPARSE` accepts only patterns that match SQL Server styles 0 to 7, 9 to 13, 100 to 107, 109 to 113, 120 and 121. See [SQL Server documentation](https://learn.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver17#date-and-time-styles) for the list of supported styles.
+5. Format letter `h` accepts different ranges of values per database:
+
+    1. HSQLDB uses zero-based indexing and accepts values `0` to `11`
+    2. Other databases use one-based indexing and accept values `1` to `12`
+    
+6. The date format should contain enough information to derive the date. For example, `dd/yyyy` is not allowed, but `dd/MM/yyyy` is allowed.
+7. If the format contains a unit of time, all units of time of greater magnitude should also be included. For example, `dd/MM/yyyy mm` is not allowed, but `dd/MM/yyyy HH:mm` is allowed.
+8. In addition to listed limitations, there are other implementation differences between database engines related to corner cases such as format strings where the same information is included more than once (for example, if the format string contains both `YYYY` and `yyyy`) or format strings where there is enough information to derive the date, but that information is not of the usual format (`DATEPARSE('365/12/13', 'DD/MM/yy')` would lead to an exception in SAP HANA).
+
+{{% alert color="warning" %}}
+Always test usages of `DATEPARSE` with the database engine on which your app runs. OQL queries with `DATEPARSE` may return different results in HSQLDB and in the production database.
+{{% /alert %}}
+
+#### Examples{#oql-dateparse-example}
+
+| Function call                                 | Result | Notes |
+|--------------|------|-----|
+| `DATEPARSE('20 Mar 2026', 'dd MMM yyyy')`       | 2026-03-20 00:00:00.000 | This format works for all databases. It matches SQL Server style 102. |
+| `DATEPARSE('2026-03-20 14:30:45', 'yyyy-MM-dd HH:mm:ss')`       | 2026-03-20 14:30:45.000 | This format works for all databases. It matches SQL Server style 120. |
+| `DATEPARSE('20/03/2026 14:30:45.123', 'dd/MM/yyyy HH:mm:ss.SSS')`       | 2026-03-20 14:30:45.123 | This format does not work in MySQL and MariaDB due to unsupported letter `S`. It does not work in SQL Server because there is no matching datetime style. |
+
 ### DATEPART {#datepart-function}
 
 The `DATEPART` function retrieves a specified element from `DATETIME` values. The return type is `INTEGER`.
@@ -945,7 +1148,7 @@ DATEPART ( datepart , date_expression [, timezone ] )
 
 ##### datepart
 
-`datepart` specifies the part of the `DATETIME` value to retrieve. For possible values, see the [Example](#oql-datepart-example) below.
+`datepart` specifies the part of the `DATETIME` value to retrieve. For possible values, see [Examples](#oql-datepart-example), below.
 
 ##### date_expression
 
@@ -953,7 +1156,11 @@ DATEPART ( datepart , date_expression [, timezone ] )
 
 ##### timezone
 
-`timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
+`timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the user time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
+
+{{% alert color="info" %}}
+The user time zone is usually different from UTC. To get the result in the UTC time zone, explicitly specify `'UTC'` in this parameter. For details on time zone handling in Mendix Runtime, see [Date and Time Handling](/refguide/date-and-time-handling/).
+{{% /alert %}}
 
 #### Examples{#oql-datepart-example}
 
@@ -980,6 +1187,68 @@ SELECT End FROM Sales.Period WHERE DATEPART(YEAR, End) = 2025
 |  End                |
 |---------------------|
 | 2025-07-05 00:00:00 |
+
+### DATETRUNC {#datetrunc-function}
+
+The `DATETRUNC` function truncates a `DATETIME` value to a specified datepart. The return type is `DATETIME`.
+
+This function was introduced in Mendix version 11.9.0. It is currently supported only in Java actions.
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+DATETRUNC ( datepart , date_expression [, timezone ] )
+```
+
+##### datepart
+
+`datepart` specifies the part to which the `DATETIME` value is truncated.
+
+Supported options are `YEAR`, `QUARTER`, `MONTH`, `WEEK`, `DAY`, `HOUR`, `MINUTE`, `SECOND`. See [Examples](#oql-datetrunc-example), below.
+
+##### date_expression
+
+`date_expression` specifies the date to retrieve an element from. The expression should resolve to a `DATETIME` value. String representations of `DATETIME` are accepted.
+
+##### timezone
+
+`timezone` specifies the time zone to use for truncation. This parameter is optional and defaults to the user time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
+
+{{% alert color="info" %}}
+The user time zone is usually different from UTC. To get the result in the UTC time zone, explicitly specify `'UTC'` in this parameter. For details on time zone handling in Mendix Runtime, see [Date and Time Handling](/refguide/date-and-time-handling/).
+{{% /alert %}}
+
+#### Examples{#oql-datetrunc-example}
+
+| datepart     | Truncation result for `2005-09-03T16:34:20.356` |
+|--------------|-------------------------------------------------|
+| `YEAR`       | `2005-01-01T00:00:00.000`                       |
+| `QUARTER`    | `2005-07-01T00:00:00.000`                       |
+| `MONTH`      | `2005-09-01T00:00:00.000`                       |
+| `DAY`        | `2005-09-03T00:00:00.000`                       |
+| `WEEK`*      | `2005-08-29T00:00:00.000`                       |
+| `HOUR`       | `2005-09-03T16:00:00.000`                       |
+| `MINUTE`     | `2005-09-03T16:34:00.000`                       |
+| `SECOND`     | `2005-09-03T16:34:20.000`                       |
+
+The `DATETRUNC` function can be used to group data by time periods:
+
+```sql
+SELECT
+	DATETRUNC(QUARTER, End) AS PeriodEndQuarter,
+	SUM(Revenue) AS QuarterPeriodRevenue
+FROM
+	Sales.Period
+GROUP BY
+	DATETRUNC(QUARTER, End)
+```
+
+|  PeriodEndQuarter   | QuarterPeriodRevenue |
+|---------------------|----------------------|
+| 2024-04-01 00:00:00 | 10                   |
+| 2025-07-01 00:00:00 | 28                   |
 
 ### LENGTH {#length-function}
 
@@ -1023,6 +1292,65 @@ SELECT Text, LENGTH(Text) as text_length FROM Sales.Reports
 | "Performance is satisfactory" | 27          |
 | "Order has been completed"    | 24          |
 
+### LOCATE{#locate-function}
+
+#### Description
+
+Returns the index of the first occurrence of a substring in a string. The index is 1-based. If the substring is not in the string, it returns 0.
+
+This function was introduced in Mendix version 11.9.0. It is currently supported only in Java actions.
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+LOCATE ( expression , substring [, offset ] )
+```
+
+`expression` specifies the string to be searched. Expressions that resolve to String are allowed.
+
+`substring` specifies the substring to search for. Expressions that resolve to String are allowed.
+
+`offset` specifies how many characters in the beginning of `expression` should be ignored. This parameter is optional, and its default value is 0. Expressions that resolve to Integer or Long are allowed.
+
+{{% alert color="info" %}}
+Like with other String functions, case sensitivity of the `LOCATE` function depends on the database. See [Behavior of Case Sensitivity by Database Type](/refguide/case-sensitive-database-behavior/#behavior-of-case-sensitivity-by-database-type) for details.
+{{% /alert %}}
+
+#### Example
+
+You can use `LOCATE` to find a substring in a string:
+
+```sql
+SELECT
+	LastName,
+	LOCATE(LastName, 'se') AS LocateSe,
+FROM Sales.Order
+```
+
+| LastName | LocateSe |
+|:---------|:--------:|
+| Doe      | 0        |
+| Doe      | 0        |
+| Moose    | 4        |
+
+If you specify an offset, `LOCATE` will not search the first part of the string:
+
+```sql
+SELECT
+	LOCATE('dendrochronological', 'logic') AS LocateLogic,
+	LOCATE('dendrochronological', 'chrono') AS LocateChrono,
+	LOCATE('dendrochronological', 'logic', 10) AS LocateLogicAt10,
+	LOCATE('dendrochronological', 'chrono', 10) AS LocateChronoAt10,
+FROM Sales.Order
+ORDER BY LastName LIMIT 1
+```
+
+| LocateLogic | LocateChrono | LocateLogic10 | LocateChrono10 |
+|:-----------:|:------------:|:-------------:|:--------------:|
+| 13          | 7            | 13            | 0              |
+
 ### LOWER{#lower-function}
 
 #### Description
@@ -1062,6 +1390,112 @@ SELECT * FROM Sales.Customer WHERE LOWER(LastName) = 'doe'
 {{% alert color="info" %}}
 This query can no longer take advantage of an index for `LastName` for comparison, resulting in a performance decrease.
 {{% /alert %}}
+
+### LPAD {#lpad-function}
+
+#### Description
+
+Pads a string on the left side with a specified character to reach a target length. If no character is specified for padding, the space character is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.12.0.
+{{% /alert %}}
+
+#### Syntax
+
+```sql
+LPAD ( expression , length_expression [, pad_expression ] )
+```
+
+#### expression
+
+`expression` specifies the expression of type `string` to pad.
+This function returns `NULL` if `expression` is `NULL`.
+The behavior for the empty string is database specific.
+
+#### length_expression
+
+`length_expression` specifies the length of the resulting string. The expression must be of type `integer` or `long`.
+This function returns `NULL` if `length_expression` is `NULL`.
+
+{{% alert color="info" %}}
+If `length_expression` is smaller than the length of `expression`, this function truncates it. This behavior is database specific.
+{{% /alert %}}
+
+#### pad_expression
+
+`pad_expression` is an optional parameter that specifies the character or string to pad with. If not specified, the space character is used.
+If `pad_expression` is `NULL` or the empty string, the behavior is database specific.
+
+#### Examples
+
+```sql
+SELECT LPAD('hello', 10) AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| ·····hello |
+
+Where `·` represents the space character.
+
+
+```sql
+SELECT LPAD('hello', 10, 'x') AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| xxxxxhello |
+
+```sql
+SELECT LPAD('hello', 10, 'abc') AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| abcabhello |
+
+### LTRIM{#ltrim}
+
+Removes one or more leading characters from a `string`. If no character is specified for trimming, space is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.11.0.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+LTRIM ( expression [, character ] )
+```
+
+##### expression
+
+`expression` is any string expression to be trimmed. If `expression` is `NULL`, the function will return `NULL`.
+
+##### character
+
+`character` is an optional single character string expression containing the character to remove from the start of the string. If omitted, the space character is used instead.
+
+{{% alert color="info" %}}
+Only a single character is supported. `character` parameters with more than one character may not work in all supported databases.
+{{% /alert %}}
+
+If the expression string consists entirely of `character`, everything will be trimmed and the function will return a zero-length string.
+
+#### Examples
+
+```sql
+SELECT LTRIM(LastName, 'D') FROM Sales.Order WHERE Price = 1.50000001
+```
+
+| LastName |
+|:---------|
+| oe       |
+| Moose    |
 
 ### Ranges in Datasets
 
@@ -1152,14 +1586,14 @@ The REPLACE function takes an input string and replaces all occurrences of a spe
 The syntax is as follows:
 
 ```sql
-REPLACE ( expression, pattern, replacement )
+REPLACE ( expression, substring, replacement )
 ```
 
 `expression` specifies the string to be searched.
 
-`pattern` specifies the substring to search for. In the function output, all occurrences of the substring will be replaced with the value of `replacement`.
+`substring` specifies the substring to search for. In the function output, all occurrences of the substring will be replaced with the value of `replacement`.
 
-`replacement` specifies the string to replace the pattern.
+`replacement` specifies the string to replace the substring.
 
 #### Database-specific limitations
 
@@ -1240,6 +1674,204 @@ SELECT ROUND((Price : 7), 2) as RoundedPrice, Price : 7 FROM Sales.Order
 | 0.21         | 0.21428571 |
 | 0.33         | 3.33333333 |
 | 1.17         | 1.17142857 |
+
+### RPAD {#rpad-function}
+
+#### Description
+
+Pads a string on the right side with a specified character to reach a target length. If no character is specified for padding, the space character is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.12.0.
+{{% /alert %}}
+
+#### Syntax
+
+```sql
+RPAD ( expression , length_expression [, pad_expression ] )
+```
+
+#### expression
+
+`expression` specifies the expression of type `string` to pad.
+This function returns `NULL` if `expression` is `NULL`.
+The behavior for the empty string is database specific.
+
+#### length_expression
+
+`length_expression` specifies the length of the resulting string. The expression must be of type `integer` or `long`.
+This function returns `NULL` if `length_expression` is `NULL`.
+
+{{% alert color="info" %}}
+If `length_expression` is smaller than the length of `expression`, this function truncates it.
+{{% /alert %}}
+
+#### pad_expression
+
+`pad_expression` is an optional parameter that specifies the character or string to pad with. If not specified, the space character is used.
+If `pad_expression` is `NULL` or the empty string, the behavior is database specific.
+
+#### Examples
+
+```sql
+SELECT RPAD('hello', 10) AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| hello····· |
+
+Where `·` represents the space character.
+
+```sql
+SELECT RPAD('hello', 10, 'x') AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| helloxxxxx |
+
+```sql
+SELECT RPAD('hello', 10, 'abc') AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| helloabcab |
+
+### RTRIM{#rtrim}
+
+Removes one or more trailing characters from a `string`. If no `character` is specified for trimming, space is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.11.0.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+RTRIM ( expression [, character ] )
+```
+
+##### expression
+
+`expression` is any string expression to be trimmed. If `expression` is `NULL`, the function will return `NULL`.
+
+##### character
+
+`character` is an optional single character string expression containing the character to remove from the end of the string. If omitted, the space character is used instead.
+
+{{% alert color="info" %}}
+Only a single character is supported. `character` parameters with more than one character may not work in all supported databases.
+{{% /alert %}}
+
+If the expression string consists entirely of `character`, everything will be trimmed and the function will return a zero-length string.
+
+#### Examples
+
+```sql
+SELECT RTRIM(LastName, 'e') FROM Sales.Order WHERE Price = 1.50000001
+```
+
+| LastName |
+|:---------|
+| Do       |
+| Moos     |
+
+### SUBSTRING{#substring-function}
+
+#### Description
+
+Returns part of a string starting at specified character index.
+
+This function was introduced in Mendix version 11.9.0. It is currently supported only in Java actions.
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+SUBSTRING ( expression , start_char [, length ] )
+```
+
+`expression` specifies the string to be searched. Expressions that resolve to String are allowed.
+
+`start_char` specifies the 1-based index of the first character of the resulting substring. Expressions that resolve to Integer or Long are allowed.
+
+`length` specifies the maximum length of the resulting substring. If the result would be longer than `length` it will be truncated. If the `length` argument is not specified, all characters starting with `start_char` are returned. Expressions that resolve to Integer or Long are allowed.
+
+#### Example
+
+```sql
+SELECT
+	LastName,
+	SUBSTRING(UPPER(LastName), 3, 2) AS Substring_3_2,
+FROM Sales.Customer
+```
+
+| LastName | Substring_3_2 |
+|:---------|:--------------|
+| Doe      | E             |
+| Moose    | OS            |
+
+If the string is shorter than the value of `start_char`, the result is an empty string. If it is shorter than `start_char + length`, the result is shorter than `length`:
+
+```sql
+SELECT
+	SUBSTRING('dendrochronological', 13) AS Substring_13,
+	SUBSTRING('dendrochronological', 13, 5) AS Substring_13_5,
+	SUBSTRING('dendrochronological', 13, 10) AS Substring_13_10,
+	SUBSTRING('dendrochronological', 20) AS Substring_20,
+FROM Sales.Customer
+ORDER BY LastName LIMIT 1
+```
+
+| Substring_13 | Substring_13_5 | Substring_13_10 | Substring_20     |
+|:-------------|:---------------|:----------------|:-----------------|
+| logical      | logic          | logical         | *(empty string)* |
+
+### TRIM{#trim}
+
+Removes one or more leading and trailing characters from a `string`. If no `character` is specified for trimming, space is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.11.0.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+TRIM ( expression [, character ] )
+```
+
+##### expression
+
+`expression` is any string expression to be trimmed. If `expression` is `NULL`, the function will return `NULL`.
+
+##### character
+
+`character` is an optional single character string expression containing the character which will be removed from the beginning and end of the string. If omitted, the space character is used.
+
+{{% alert color="info" %}}
+Only a single character is supported. `character` parameters with more than one character may not work in all supported databases.
+{{% /alert %}}
+
+If the expression string consists entirely of `character`, everything will be trimmed and the function will return a zero-length string.
+
+#### Examples
+
+```sql
+SELECT TRIM(TRIM(LastName, 'e'), 'D') FROM Sales.Order WHERE Price = 1.50000001
+```
+
+| LastName |
+|:---------|
+| o        |
+| Moos     |
 
 ### UPPER
 

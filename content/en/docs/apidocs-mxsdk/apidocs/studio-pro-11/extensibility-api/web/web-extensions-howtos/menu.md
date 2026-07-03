@@ -1,5 +1,5 @@
 ---
-title: "Menus in the Extensibiity API"
+title: "Menus in the Extensibility API"
 linktitle: "Menus"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/menu/
 ---

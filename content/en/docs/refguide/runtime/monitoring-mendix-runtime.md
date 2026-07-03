@@ -22,7 +22,11 @@ For deployments to Mendix Cloud, you can get the same information from various p
 
 You can change the admin port from Studio Pro by navigating to **App** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
 
-The request needs to be of the **POST** type with **No Authorization** and the following headers:
+The following sections explain which monitoring actions are supported.
+
+### Authorization Headers{#auth-headers}
+
+Requests need to be of the **POST** type with **No Authorization** and the following headers:
 
 * Content-Type: **application/json**
 * X-M2EE-Authentication: **yourM2EEPassword_Base64Encoded**
@@ -30,8 +34,6 @@ The request needs to be of the **POST** type with **No Authorization** and the f
     The M2EE password is NOT the super administrator password, but a separate password. This can be retrieved from the `M2EE_ADMIN_PASS` environment variable in your `javaw.exe` or `java` process.
 
     Remember to Base64 encode the password before passing it as the value for `X-M2EE-Authentication`
-
-The next sections explain which monitoring actions are supported.
 
 ## Current Executions
 
@@ -553,7 +555,7 @@ For that you need to do three things:
 
  [//]: # (<!-- markdownlint-disable no-duplicate-heading -->)
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -579,7 +581,7 @@ If the `feedback` is not empty use the name of your current log subscriber in th
 {"action": "remove_log_subscriber", "params": {"name": "ConsoleLogSubscriber"}}
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -590,7 +592,7 @@ If the `feedback` is not empty use the name of your current log subscriber in th
 
 It is possible to have multiple log subscribers running simultaneously, if several log subscribers were created then each of them will be writing the same log lines. 
 
-### Request to Create New Log Subscriber in Json Format
+### Request to Create New Log Subscriber in JSON Format
 
 ```json
 {
@@ -607,7 +609,7 @@ It is possible to have multiple log subscribers running simultaneously, if sever
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -616,7 +618,7 @@ It is possible to have multiple log subscribers running simultaneously, if sever
 }
 ```
 
-This will write logs to standard output in Json format. If you need to add extra static fields to tag logs then you can add them into `tags`, in this example `ddtags` and `service` are added.
+This will write logs to standard output in JSON format. If you need to add extra static fields to tag logs then you can add them into `tags`, in this example `ddtags` and `service` are added.
 This configuration will produce logs similar to these:
 
 ```json
@@ -637,7 +639,7 @@ This configuration will produce logs similar to these:
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -649,3 +651,60 @@ This configuration will produce logs similar to these:
 This will write logs to standard output in simple text format.
 
 [//]: # (<!-- markdownlint-enable no-duplicate-heading -->)
+
+### Request to Create New Log Subscriber in Open Telemetry Format {#new-log-sub-opentelemetry}
+
+```json
+{
+  "action": "create_log_subscriber",
+  "params": {
+    "type": "opentelemetry",
+    "name": "OpenTelemetrySubscriber",
+    "autosubscribe": "INFO"
+  }
+}
+```
+
+#### Example Response
+
+```json
+{
+  "feedback": {},
+  "result": 0
+}
+```
+
+This will send logs to the registered OpenTelemetry collector. See [Tracing](/refguide/tracing-in-runtime/) for a guide on how to enable OpenTelemetry.
+
+## Set Log Levels{#log-levels}
+
+This action allows you to programmatically set log levels for specific log nodes without restarting the runtime.
+
+### Request
+
+```json
+{
+  "action": "set_log_level",
+  "params": {
+    "subscriber": "*",
+    "nodes": [
+      {
+        "name": "<LogNode>",
+        "level": "<LogLevel>"
+      },
+      …
+    ],
+    "force": true
+  }
+}
+```
+
+{{% alert color="info" %}}
+`LogLevel` can be one of: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, or `CRITICAL`.
+
+The `force` parameter allows you to set log levels for log nodes that do not yet exist in the runtime.
+{{% /alert %}}
+
+### Response
+
+The request will always return an empty JSON object (`{}`) with status code 200, if successful.

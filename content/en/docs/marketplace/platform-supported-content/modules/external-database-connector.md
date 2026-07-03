@@ -87,7 +87,7 @@ For example: `*Database*_DBsource.`
 Values for these constants are stored in the active configuration of the user. The password is stored as a private value.
 
 {{% alert color="info" %}}
-Constants are an environment variable whose values can differ per environment, When you deploy an app on Mendix Cloud, values for constants are not added. For more information, see [Constants](/refguide/configuration/#constants).
+Constants are an environment variable whose values can differ per environment, When you deploy an app on Mendix Cloud, values for constants are not added. For more information, see [Constants](/refguide/configurations-tab/#constants).
 
 For free apps, make sure to add the default values to the constant in Studio Pro. For more information, see the [Deploying a Free App](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app) section of *Deploying an App to Mendix Cloud*. {{% /alert %}}
 
@@ -202,7 +202,7 @@ The certificates below are required for server configuration and the SSL mode se
 
 You can configure custom settings that are only used when you run your app locally. To do this, follow these steps: 
 
-1. Add the authority certificate (CA) to the **Certificates** tab in the App Settings. See the [Certificates Tab](/refguide/app-settings/#certificates-tab) section of *App Settings* for information about adding certificates. 
+1. Add the authority certificate (CA) to the **Certificates** tab in the App Settings. See the [Certificates Tab](/refguide/certificates-tab/) section of *App Settings* for information about adding certificates. 
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/certificates-tab.png" class="no-border" >}}
 

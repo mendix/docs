@@ -107,7 +107,7 @@ We advise limiting the amount of data stored in persistable entities, and passin
 
 Actions that may be batched or divided over multiple threads due to a large load or volume should be offloaded to the [task queue](/refguide/task-queue/). Using this method, you can simultaneously offload multiple tasks to multiple instances, and over multiple threads. You can also run these tasks in the background without having to wait for a user request. Make sure that the end user is aware that something is going on by setting a certain Task Status, or by implementing a progress log.
 
-If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide9/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
+Refer to the [Replacing Process Queue](/refguide9/task-queue/#process-queue) section of *Task Queue* for the difference between task queue and process queue.
 
 ## ConnectionDetails Entity
 

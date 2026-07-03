@@ -7,7 +7,19 @@ weight: 20
 numberless_headings: true
 ---
 
-## 1.0.2 (`latest`)
+## 1.0.4 (`latest`)
+
+**Release date: May 18, 2026**
+
+This release includes routine security updates, which do not pose any apparent risk to Mendix customers.
+
+## 1.0.3
+
+**Release date: March 06, 2026**
+
+This release includes routine security updates, which do not pose any apparent risk to Mendix customers.
+
+## 1.0.2
 
 **Release date: September 04, 2025**
 

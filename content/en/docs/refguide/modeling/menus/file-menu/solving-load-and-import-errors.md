@@ -2,7 +2,7 @@
 title: "Solve Load and Import Errors"
 url: /refguide/solving-load-and-import-errors/
 weight: 11
-description: "Describes how to solve problems that may occur when opening an app."
+description: "Describes how to solve load and import errors that occur when opening an app in Studio Pro."
 aliases:
     - /howto/solving-load-and-import-errors.html/
     - /howto/solving-load-and-import-errors/
@@ -12,49 +12,49 @@ aliases:
 
 ## Introduction
 
-This how-to will help you to solve problems that may occur when opening an app in Mendix Studio Pro.
+This document describes how to solve problems that can occur when opening an app in Studio Pro.
 
-One possible cause of errors that prevent loading is the usage of the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/) for creating or editing the app. With the Mendix Model SDK it's possible to edit your app in such a way that its format becomes invalid, and in the process preventing Studio Pro from opening it. When this happens the following message is shown:
+One possible cause of errors that prevent loading is using the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/) to create or edit the app. The Mendix Model SDK can edit your app so its format becomes invalid, which prevents Studio Pro from opening it. When this happens, the following message appears:
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/solving-load-and-import-errors/18580055.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/solving-load-and-import-errors/18580055.png" alt="" class="no-border" >}}
 
-Read on to find out how to determine the origin of these errors, and possible ways to solve them.
+This document explains how to determine the origin of these errors and possible ways to solve them.
 
 ## Determining the Actual Problems
 
-Click the **Details >>** button to show the actual errors that occurred while loading your app:
+Click **Details** to show the actual errors that occurred while loading your app:
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/solving-load-and-import-errors/18580052.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/solving-load-and-import-errors/18580052.png" alt="" class="no-border" >}}
 
 These detailed messages tell you the following:
 
-* The module and document in which the error occurred (for example, the domain model of the module 'Transportation').
-* The model element that caused the error (for example, the entity 'Vehicle').
-* What the actual problem is (for example, there's an index that doesn't contain any attributes, which is not permitted).
+* The module and document where the error occurred (for example, the domain model of the module *Transportation*)
+* The model element that caused the error (for example, the entity *Vehicle*)
+* What the actual problem is (for example, an index that does not contain any attributes, which is not permitted)
 
 ## Determining the Origin of Your App
 
-Before trying to solve the problems, it is useful to discover the origin of the app, because the errors may be introduced by someone else. Go through the following possibilities:
+Before trying to solve the problems, discover the origin of the app because someone else may have introduced the errors. Go through the following possibilities:
 
 ### Is This a Team Server App?
 
-If your app is a [Team Server](/developerportal/repository/team-server/) app, and you just did a [download or update](/refguide/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit on the [Team Server](/developerportal/repository/team-server/) page of your app in [Apps](https://sprintr.home.mendix.com).
+If your app is a [Team Server](/developerportal/repository/team-server/) app and you just did a [download or update](/refguide/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit on the [Team Server](/developerportal/repository/team-server/) page of your app in [Apps](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 
 ### Did You Obtain the Model from Someone Else?
 
-If you received the model from someone else, for example as an app package (.mpk) file, then it is possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
+If you received the model from someone else (for example, as an app package (*.mpk*) file), they may have created the model with the Mendix Model SDK. Inform them about the problem and ask them for a solution.
 
 ### Did You Create the App Yourself?
 
-If you created or edited the app yourself, you will want to read the next section of this how-to to find out what you can do to solve the problem.
+If you created or edited the app yourself, read the next section to find out how to solve the problem.
 
 ## Solving the Problems
 
-The problems described in this how-to can't be solved by editing the app in Mendix Studio Pro, because the app's file format is invalid in a way that prevents Studio Pro from reading it. This also means the problems are probably not caused by working on the app with Studio Pro.
+The problems described in this document cannot be solved by editing the app in Studio Pro, because the app file format is invalid in a way that prevents Studio Pro from reading it. This also means the problems were probably not caused by working on the app with Studio Pro.
 
-The most likely cause for these kinds of errors is a faulty script that was run on the Mendix Model SDK and, if this is the case, means you will also need to use the SDK to fix the problems. If you created or edited the model yourself using the Mendix Model SDK, you will probably know what to do to solve the problems by carefully reading the messages in the error dialog, and locating the relevant part of you SDK code, after which you can change your SDK script to make the app valid again. Be sure to check the [Mendix Model SDK documentation](/apidocs-mxsdk/mxsdk/) if you need information about constructing or altering models with SDK scripts.
+The most likely cause for these kinds of errors is a faulty script that was run on the Mendix Model SDK. If this is the case, you need to use the SDK to fix the problems. If you created or edited the model yourself using the Mendix Model SDK, carefully read the messages in the error dialog and locate the relevant part of your SDK code. Then change your SDK script to make the app valid again. For information about constructing or altering models with SDK scripts, see the [Mendix Model SDK documentation](/apidocs-mxsdk/mxsdk/).
 
 ## Read More
 

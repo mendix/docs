@@ -1,7 +1,7 @@
 ---
 title: "Teamcenter Connector Reference"
 url: /appstore/modules/siemens-plm/teamcenter-reference/
-weight: 8
+weight: 10
 description: "Lists and describes the Teamcenter Connector reference parameters."
 ---
 
@@ -3854,7 +3854,7 @@ Boolean
 #### Java action `ExpandPSAllLevels`
 
 SOA URL:  
-`Cad-2007-01-StructureManagement/expandPSAllLevels ` 
+`Cad-2007-01-StructureManagement/expandPSAllLevels` 
   
 Description:  
 This actions finds the chilren at all levels given parent bomline.  

@@ -40,7 +40,7 @@ The runtime generates spans for the following:
 ### Minimal Configuration {#min-configuration}
 
 {{% alert color="info" %}}
-The OpenTelemetry tab was named Tracing before 11.12.0.
+The **OpenTelemetry** tab was named **Tracing** in Mendix versions below 11.12.0.
 {{% /alert %}}
 
 You can enable OpenTelemetry tracing and logging from the `App Settings` -> `Configuration` dialog. In the `OpenTelemetry` tab, you can enable tracing and logging and specify an **Endpoint** and **Service Name**.
@@ -77,9 +77,9 @@ For Grafana, you can use the all-in-one Docker image `grafana/otel-lgtm`. After 
 docker run --name otel-grafana -d -p 3000:3000 -p 4317:4317 -p 4318:4318 grafana/otel-lgtm
 ```
 
-Alternatively, you can set up the [OpenTelemetry collector](https://opentelemetry.io/docs/collector/), which will also listen to the default endpoint and can be configured to send to backends which support OpenTelemetry. Check with your APM vendor to confirm that OpenTelemetry is supported. The free online collector configuration tool [OTelBin](https://github.com/dash0hq/otelbin) can help with collector configuration.
+Alternatively, you can set up the [OpenTelemetry collector](https://opentelemetry.io/docs/collector/), which will also listen to the default endpoint and can be configured to send to backends which support OpenTelemetry. Check with your Application Performance Monitoring (APM) vendor to confirm that OpenTelemetry is supported. The free online collector configuration tool [OTelBin](https://github.com/dash0hq/otelbin) can help with collector configuration.
 
-### All settings
+### All Settings
 
 The following settings are supported by the Mendix runtime. See [Configure the SDK](https://opentelemetry.io/docs/languages/java/configuration/#environment-variables-and-system-properties) for more information about the settings that are prefixed with `otel.`.
 
@@ -230,18 +230,18 @@ To send logs and traces from a Mendix on Kubernetes environment to an OpenTeleme
 -javaagent:/opt/mendix/runtime/agents/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/opt/mendix/runtime/agents/mendix-opentelemetry-agent-extension.jar -Dotel.service.name=${APP_NAME} -Dotel.exporter.otlp.traces.endpoint=http://${OTEL_HOST}:4318/v1/traces -Dotel.exporter.otlp.traces.protocol=http/protobuf
 ```
 
-Replace `${APP_NAME}` with a meaninful identifier for your environment (service), and `${OTEL_HOST}` with the hostname of the OpenTelemetry Collector.
+Replace `${APP_NAME}` with a meaningful identifier for your environment (service), and `${OTEL_HOST}` with the hostname of the OpenTelemetry Collector.
 
 Depending on how the OpenTelemetry Collector is configured, the values of `-Dotel.exporter.otlp.traces.endpoint` and `-Dotel.exporter.otlp.traces.protocol` might need to be modified.
 
-## Include Logs in OpenTelemetry
+## Including Logs in OpenTelemetry
 
-You can use OpenTelemetry to collect logs. For local development enable logs in the [OpenTelemetry configuration](#min-configuration).
-Once enabled the logs will be send to the configured endpoint.
+You can use OpenTelemetry to collect logs. For local development, enable logs in the [OpenTelemetry configuration](#min-configuration).
+Once enabled, the logs will be sent to the configured endpoint.
 
 For deployment, see [Request to Create New Log Subscriber in Open Telemetry Format](/refguide/monitoring-mendix-runtime/#new-log-sub-opentelemetry) in *Monitoring Mendix Runtime*.
 
-## Include Metrics in OpenTelemetry
+## Including Metrics in OpenTelemetry
 
 You can use OpenTelemetry to collect metrics data (CPU load, memory, and others). For more information about setting up metrics with OpenTelemetry, see the [OpenTelemetry](/refguide/metrics/#opentelemetry) section of *Metrics*.
 

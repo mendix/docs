@@ -22,7 +22,7 @@ When you are deploying your application to a server or Mendix Cloud, you will ha
 ## Configuration Settings 
 
 {{% alert color="info" %}}
-The OpenTelemetry tab was named Tracing before 11.12.0.
+The **OpenTelemetry** tab was named **Tracing** in Mendix versions below 11.12.0.
 {{% /alert %}}
 
 A configuration contains the following:
@@ -92,7 +92,7 @@ Only use this functionality if you know what you are doing. Wrong values can sto
 
 Each header consists of a name and a value. By default, when configuring a custom header it can be selected from the drop-down menu. A custom header can be specified by selecting **Custom...** in the dropdown menu. In most cases, the header will be returned for all responses from the Mendix Runtime.
 
-#### Special headers
+#### Special Headers
 
 The following headers are considered special and are handled differently from other custom headers.
 

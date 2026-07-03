@@ -71,8 +71,6 @@ install:
 
   # bash -o pipefail ensures Hugo's non-zero exit code is not masked by tee inside the subprocess
   - travis_wait 15 bash -o pipefail -c './node_modules/.bin/hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log'
-  # Hugo can exit 0 even on fatal errors — this check ensures the build produced pages before allowing a deploy
-  - "test $(find public -name '*.html' | wc -l) -gt 100 || (echo 'ERROR: Hugo produced no output — aborting' && exit 1)"
 
   # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.

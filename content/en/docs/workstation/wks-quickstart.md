@@ -140,7 +140,7 @@ After configuring the server and client pair, test their connectivity by perform
 1. In the left navigation menu of the current workspace, click **Settings**, and ensure that the **Enable Local Device Testing** toggle is set to **On**.
 2. In the left navigation menu, click **Test Your Station**.
 
-    The page refreshes and displays a list of all your devices. This includes detected smart card readers available on your computer if you did not [disable detecting card readers](#creating-a-workspace-and-station).
+    The page refreshes and displays a list of all your devices. This includes detected smart card readers available on your computer if you did not [disable detecting card readers](#create-workspace).
 
 3. In your web browser, duplicate the tab where you have opened the **Test Your Station** page.
 4. Arrange the two opened tabs so that you can view the two **Test Your Station** pages side by side.

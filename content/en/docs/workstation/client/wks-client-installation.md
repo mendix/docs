@@ -11,7 +11,7 @@ aliases:
 
 After [creating one or more workspaces](/mendix-workstation/management-config/) for your organization, you can proceed by installing the Workstation Client on the computers which you want to register as stations in Workstation Management.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Before you install the Workstation Client, ensure that you fulfill the following prerequisites.
 

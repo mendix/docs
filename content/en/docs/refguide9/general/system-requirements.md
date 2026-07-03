@@ -203,7 +203,7 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [IBM DB2](/refguide8/db2/) 11.5 for Linux, Unix, and Windows
+* [IBM DB2](/refguide9/db2/) 11.5 for Linux, Unix, and Windows
 * [MariaDB](/refguide9/mysql/): 10.6, 10.11, 11.4, 11.8
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher

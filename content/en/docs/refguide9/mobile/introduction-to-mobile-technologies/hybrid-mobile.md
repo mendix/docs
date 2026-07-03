@@ -23,5 +23,4 @@ For more information see this [Hybrid Mobile Apps Deprecation with Mendix 9](htt
 
 For hybrid mobile documentation see these Mendix 8 documents:
 
-* [Hybrid Mobile How To Documentation](/howto8/mobile/hybrid-mobile/)
-* [Hybrid Mobile Reference Guide](/refguide8/hybrid-mobile/)
+* [Hybrid Mobile Reference Guide](/refguide9/hybrid-mobile/)

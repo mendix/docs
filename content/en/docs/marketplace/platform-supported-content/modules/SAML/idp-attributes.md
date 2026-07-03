@@ -138,7 +138,7 @@ Checking this box will force the SAML IdP to (re)authenticate end-users, even if
 
 ### Enable Mobile Authentication Token
 
-If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app and you enable this, you can sign in to your Mendix hybrid mobile app after the app is closed, using an authentication token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app and you enable this, you can sign in to your Mendix hybrid mobile app after the app is closed, using an authentication token cookie. Only check this if you are using SAML on a hybrid mobile app.
 
 ### ⚠ Enable Delegated Authentication {#delegated-auth}
 

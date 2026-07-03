@@ -19,8 +19,6 @@ This page is divided into three tabs:
 {{% alert color="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
-To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
-
 To publish your app in an app store, Mendix recommends building native iOS apps instead. For more information, see [Build Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
 {{% /alert %}}
 

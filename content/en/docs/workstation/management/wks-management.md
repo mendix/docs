@@ -27,6 +27,10 @@ To start using Mendix Workstation, you must first create a workspace and a stati
 
     {{< figure src="/attachments/workstation/wks-install4.png" class="no-border" >}}
 
-6. Optional: If you do not want Workstation Management to detect smart card readers, in **Station** view, set the **Detect Card Readers** toggle to **Off**.
+6. Optional: If you do not want Workstation Management to detect smart card readers, perform the following steps:
 
-    {{< figure src="/attachments/workstation/wks-install16.png" class="no-border" >}}
+    1. In **Station** view, click the **three dots** icon.
+    2. Click **Edit Station**.
+    3. Clear the **Detect Card Readers** check box.
+
+After you create a workspace and station, you can proceed with installing the Workstation Clients on the computers which you want to connect to your devices. For more information, see [Mendix Workstation Client](/mendix-workstation/client/).

@@ -61,20 +61,8 @@ Using Mendix Workstation offers the following benefits for your organization:
 Mendix Workstation consists of the following components:
 
 * [Workstation Management](/mendix-workstation/management/) - Allows centralized configuration.
-* Workstation Client - Allows real-time communication with local hardware.
-
-    Used by central IT, support teams, operators, and supervisors. Installed on each local workstation, the Workstation Client acts as a bridge between the Mendix client app and local hardware. It handles the traffic between connected devices and the client application using the configurations provided by the Workstation Management.
-
-* Workstation Connector - Allows app integration.
-
-    Used by Mendix developers. The App Connector is a plug-and-play Mendix module that allows developers to connect their apps to local devices using nanoflows. It establishes a connection with the Workstation Client, which acts as the intermediary between the Mendix app and the local devices. Once this connection is established, the module facilitates seamless data exchange by routing messages and events back and forth between the app and the devices.
-
-    The connector handles the following tasks:
-
-    * Retrieving local station configuration (name and device list)
-    * Connecting and disconnecting devices
-    * Exchanging messages with devices
-    * Subscribing for triggering app logic on event when receiving messages from a device
+* [Workstation Client](/mendix-workstation/client/) - Allows real-time communication with local hardware.
+* [Workstation Connector](/mendix-workstation/connector/) - Allows app integration.
 
 {{< figure src="/attachments/workstation/WorkstationDiagram.png" class="no-border" >}}
 
@@ -86,6 +74,6 @@ The following functionalities are only available with a license:
 
 * [Bulk import of stations](/mendix-workstation/import-export/)
 * [Bulk registration of Workstation Clients](/mendix-workstation/register/)
-* [Inviting users](/mendix-workstation/build-app/#invite-users)
+* [Inviting users](/mendix-workstation/connector/#invite-users)
 
 ## Read More

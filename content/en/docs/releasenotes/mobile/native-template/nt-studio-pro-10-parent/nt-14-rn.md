@@ -11,7 +11,7 @@ description: "Native Template 14"
 
 ### Improvements
 
-* We added the `LocationWhenInUse` permission to the iOS configuration to support react-native-permissions.
+* We added the `LocationWhenInUse` permission to the iOS configuration to support `react-native-permissions`.
 
 ## 14.1.11 {#1421}
 

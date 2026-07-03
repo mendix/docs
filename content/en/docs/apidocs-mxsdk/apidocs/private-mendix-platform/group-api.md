@@ -16,13 +16,17 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 The Private Mendix Platform Group API allows you to manage user groups in Private Mendix Platform. You can use the API to do the following:
 
-* Get a group by ID
-* Get a list of all groups for the current user
-* Create, update, or delete a group
-* Retrieve a list of all users in a group
-* Update group member roles
-* Add or remove members from a group
+* Get a group by ID.
+* Get a list of all groups for the current user.
+* Create, update, or delete a group.
+* Retrieve a list of all users in a group.
+* Update group member roles.
+* Add or remove members from a group.
+* Retrieve all cluster namespaces assigned to a group.
+* Assign a cluster namespace to a group.
+* Update the deployment purpose of cluster namespace.
+* Remove cluster namespaces from the group.
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/openapi-group.yaml"  >}}
+{{< swaggerui src="/openapi-spec/openapi-group-v2.yaml"  >}}

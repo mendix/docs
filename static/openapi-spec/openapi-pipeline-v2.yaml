@@ -1,19 +1,20 @@
 openapi: 3.0.3
 info:
-  title: Pipeline Service v1
-  description: "The Pipeline API is for managing the Pipeline resources. The Pipeline can be used to build app package and deploy app package image into a specific environment. \r\n"
-  version: 1.0.0
+  title: Pipeline Service v2
+  description: "Provide services for managing the Pipeline resources. The Pipeline can be used to build app package and deploy app package image into a specific environment. \r\n"
+  version: 2.0.0
+
 servers:
-- url: https://pmp-demo.mxplatform.net/pipelineservice
+- url: https://pmp-demo.mxplatform.net/pipelineservice/v2
 security:
 - {}
 - basicAuth: []
 - mxtoken: []
+
 tags:
 - name: pipelines
-  description: ""
-- name: pipeline
-  description: ""
+  description: "For managing build and deploy pipeline resources"
+
 paths:
   /pipelines/{pipelineId}:
     get:
@@ -24,7 +25,7 @@ paths:
       parameters:
       - name: pipelineId
         in: path
-        description: get current status of a pipeline
+        description: Pipeline Id
         required: true
         schema:
           type: string
@@ -42,6 +43,7 @@ paths:
       parameters:
       - name: pipelineId
         in: path
+        description: Pipeline Id
         required: true
         schema:
           type: string
@@ -69,7 +71,7 @@ paths:
       tags:
       - pipelines
       summary: Create and run a new pipeline for build or deploy
-      description: Create and run a new pipeline for build or deploy. This API is only available when Build Utility is "Kubernetes" and Deployment Method is "Private Cloud Standalone".
+      description: Create a pipeline for build or deployment. This API is only available when Build Utility is "Kubernetes".
       operationId: CreatePipeline
       requestBody:
         content:
@@ -82,19 +84,22 @@ paths:
                   pipelineType: Build
                   appId: ff4c5472-50bc-45ad-b1e1-817217111628
                   branchName: main
-                  revisionId: "44728096"
+                  revisionId: c6d5bd3d
+                  majorVersion: 1
+                  minorVersion: 0
+                  patchVersion: 2
               Request a pipeline for deploy:
                 value:
                   pipelineType: Deploy
                   appId: ff4c5472-50bc-45ad-b1e1-817217111628
-                  packageName: sgp-v1069-c6d5bd3.mda
+                  packageName: sgp-v1069-1.0.2.c6d5bd3d.mda
                   envInternalName: sgpv1069
       responses:
-        "200":
+        "202":
           $ref: "#/components/responses/CreatePipeline"
         "401":
           $ref: "#/components/responses/UnauthorizedError"
-  /pipelines/manual_approve:
+  /pipelines/manual-approvals:
     post:
       tags:
       - pipelines
@@ -104,7 +109,7 @@ paths:
       parameters:
       - name: pipelineId
         in: query
-        description: The pipeline id which is waiting for manual approval.
+        description: The pipeline Id which is waiting for manual approval.
         required: false
         schema:
           type: string
@@ -117,7 +122,7 @@ paths:
           default: false
       responses:
         "200":
-          description: successful operation
+          description: successful operation, Pipeline Step Approved or Rejected
         "401":
           $ref: "#/components/responses/UnauthorizedError"
 components:
@@ -152,6 +157,15 @@ components:
         revisionId:
           type: string
           description: The revision ID of the app code to build, only required for Build pipeline
+        majorVersion:
+          type: integer
+          description: The major version of the app code to build, only required for Build pipeline
+        minorVersion:
+          type: integer
+          description: The minor version of the app code to build, only required for Build pipeline
+        patchVersion:
+          type: integer
+          description: The patch version of the app code to build, only required for Build pipeline
         packageName:
           type: string
           description: The name of the app package to deploy, only required for Deploy pipeline
@@ -164,7 +178,10 @@ components:
           appId: ff4c5472-50bc-45ad-b1e1-817217111628
           branchName: main
           revisionId: c6d5bd3d
-          packageName: sgp-v1069-c6d5bd3.mda
+          majorVersion: 1
+          minorVersion: 0
+          patchVersion: 2
+          packageName: sgp-v1069-1.0.2.c6d5bd3d.mda
           envInternalName: sgpv1069
   responses:
     UnauthorizedError:

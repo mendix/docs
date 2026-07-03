@@ -95,10 +95,6 @@ As part of the widget scaffolding, the generator builds the widget for the first
 
 There is also a watcher available that will rebuild your widget as you make changes to files. Start the watcher by running `npm start`.
 
-{{% alert color="info" %}}
-NPM version 7 changed the resolution behavior of peerDependencies. Try adding `--legacy-peer-deps` to your install command if it results in peer dependency resolution errors.
-{{% /alert %}}
-
 ### Using the Widget
 
 When the build script completes it will package your widget as a `.mpk` file and copy it to the `widgets/` directory in your Mendix app. Now that the generator has finished its job it is time to use the widget in Studio Pro. To use the widget, do the following:
@@ -118,9 +114,9 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 1. Remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
 2. The generator creates the widget definition file `src/TextBox.xml` with preset properties. Replace the `sampleText` property following this snippet:
 
-    ```xml
+    ```xml {hl_lines=["7-15"]}
     <?xml version="1.0" encoding="utf-8" ?>
-    <widget id="mendix.textbox.TextBox" pluginWidget="true" needsEntityContext="true" supportedPlatform="Web" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../xsd/widget.xsd">
+    <widget id="mendix.textbox.TextBox" pluginWidget="true" needsEntityContext="true" supportedPlatform="Web" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
         <name>Text Box</name>
         <description>Edit text input</description>
         <icon/>
@@ -141,7 +137,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
     Explaining the code:
 
     * *TextBox.xml* is the [widget definition file](/apidocs-mxsdk/apidocs/pluggable-widgets/#widget-definition) used in Studio Pro which reads the widget's capabilities
-    * The property `pluginWidget=true` will make the widget work with the new widget API
+    * The property `pluginWidget=true` will make the widget work with the [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)
     * The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
     * The property of the [type attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) only allows the selection of string attributes from the domain model
 
@@ -156,7 +152,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
     Paste the following [React function component](https://react.dev/learn/your-first-component) into the newly create `TextInput.tsx` file.
 
     ```tsx
-    import { createElement, ReactElement } from "react";
+    import { ReactElement } from "react";
 
     export interface TextInputProps {
         value: string;
@@ -172,14 +168,14 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 5. The container component *src/TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In *TextBox.tsx* update the component to look like this:
 
     ```tsx
-    import { createElement, ReactElement } from "react"; 
+    import { ReactElement } from "react"; 
     import { TextBoxContainerProps } from "../typings/TextBoxProps";
     import { TextInput } from "./components/TextInput";
 
     import "./ui/TextBox.css";
 
     export function TextBox(props: TextBoxContainerProps): ReactElement {
-        const value = props.textAttribute.value || "";
+        const value = props.textAttribute.value ?? "";
         return <TextInput value={value} />;
     }
     ```
@@ -193,7 +189,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 6. Pluggable Widgets also have a Preview component, which is used in the design mode of the Studio Pro page editor. Update *src/TextBox.editorPreview.tsx* such that the deleted `HelloWorldSample` component is replaced by our `TextInput` component. This will resolve the errors thrown by `npm start`.
 
     ```tsx
-    import { ReactElement, createElement } from "react";
+    import { ReactElement } from "react";
     import { TextBoxPreviewProps } from "../typings/TextBoxProps";
     import { TextInput } from "./components/TextInput";
 
@@ -224,7 +220,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
     ```tsx
     export function TextBox(props: TextBoxContainerProps): ReactElement {
-        const value = props.textAttribute.value || "";
+        const value = props.textAttribute.value ?? "";
         return <TextInput 
             value={value} 
             style={props.style} 
@@ -239,7 +235,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 2. Until we update the type of our TextInputProps, Typescript will display errors in *TextBox.tsx*. In *src/components/TextInput.tsx*, add the missing properties to the interface and pass them to the `input` component:
 
     ```tsx
-    import { createElement, CSSProperties, ReactElement } from "react";
+    import { CSSProperties, ReactElement } from "react";
 
     export interface TextInputProps {
         value: string;
@@ -282,8 +278,11 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
 
 1. Open *src/TextBox.tsx* and remove the `style` and `className` props from `TextInput`. Now that the widget is a labeled input, it should no longer have the layout styling applied to it. In fact, the `pluggable-widget-tools` removed them from the type definition in *typings/TextBoxProps.d.ts*.
 
-    ```tsx
-    return <TextInput value={value} tabIndex={props.tabIndex} />;
+    ```tsx {hl_lines=[3]}
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value ?? "";
+        return <TextInput value={value} tabIndex={props.tabIndex} />;
+    }
     ```
 
 1. **Synchronize** your project and **update** all widgets. Now open the widget **Properties** and open the **Label** tab.
@@ -344,7 +343,7 @@ Our widget now looks like a Mendix widget, but does not behave like one yet. Whi
 
     ```tsx {hl_lines=5}
     export function TextBox(props: TextBoxContainerProps): ReactElement {
-        const value = props.textAttribute.value || "";
+        const value = props.textAttribute.value ?? "";
         return <TextInput 
             value={value} 
             onChange={props.textAttribute.setValue} 

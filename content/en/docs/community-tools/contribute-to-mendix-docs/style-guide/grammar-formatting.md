@@ -4,8 +4,9 @@ url: /community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/
 weight: 20
 description: "Guidelines on grammar, formatting, capitalization, punctuation, lists, headings, and other writing conventions for Mendix documentation."
 ---
+<!-- vale off -->
 
-## Acronyms and Initialisms
+## Acronyms and Initialisms {#acronyms-and-initialisms}
 
 Define technical or obscure acronyms and initialisms. Write them out fully the first time they are used in a document.
 
@@ -85,7 +86,7 @@ When referencing punctuation or code in a sentence, state its name, put it in pa
 
 Keep the diversity of users in mind and avoid using colloquial language.
 
-## Conditional Adverbs
+## Conditional Adverbs {#conditional-adverbs}
 
 Avoid the following conditional adverbs in technical writing:
 
@@ -156,7 +157,7 @@ When cross-referencing a section of another document, add the link to the sectio
 
 > For details, see the `[Section Name](/path/to/page/#anchor-id)` section in *Document Title*.
 
-### Hyperlinks
+### Hyperlinks {#hyperlinks}
 
 For static links to external websites, use the site or page name as the link text instead of the full URL, unless emphasizing the URL format matters.
 
@@ -179,7 +180,7 @@ Use an en dash with spaces around it to set off introductory text in list items.
 > * **Decline** – Click this button to reject the request. You can also add a reason. After you decline the request, the submitter will receive a notification.
 > * **Download** – Click this button to download the MPK file of the component.
 
-### Em Dash
+### Em Dash {#em-dash}
 
 Use an em dash (`—`) to set off a parenthetical phrase with more emphasis than parentheses provide. Do not add spaces around an em dash.
 
@@ -193,7 +194,7 @@ To insert an em dash, use the keyboard shortcut <kbd>Alt</kbd> + <kbd>0151</kbd>
 
 Write dates in the format **month day, year**, where:
 
-* Month is the full month or a three-letter abbreviation
+* Month is the full month name
 * [Day is the cardinal number](#numbers) (16), not the ordinal number (16th)
 * Year is four digits
 
@@ -291,9 +292,9 @@ Bold folder names.
 
 > In the **config** folder
 
-## Headings and Titles
+## Headings and Titles {#headings-and-titles}
 
-### Capitalization
+### Capitalization {#capitalization}
 
 Use title case for titles and headings: capitalize all words except articles, short prepositions, and conjunctions. Capitalize prepositions in phrasal verbs (for example, "Set Up").
 
@@ -365,7 +366,7 @@ Capitalize languages. This makes languages consistent with [File Formats](#file-
 
 > HTML, XML, XSC, WSDL
 
-## Latin Abbreviations
+## Latin Abbreviations {#latin-abbreviations}
 
 Do not use "e.g." Use "For example,…" instead.
 
@@ -461,11 +462,21 @@ Do not use ordinal numbers for dates (see [Dates](#dates)).
 
 ## Person
 
-Address the reader of your documents using the second person instead of the first person: use "you" or "your" instead of "we", "our", or "us".
+Use imperative mood for instructions and second person (you, your) to address the reader. Use "you" instead of "user", or use "end-user" when referring to the user of a Mendix app built on the Mendix Platform.
 
-Assume your reader is the person doing the tasks that you are documenting. Use "you" instead of "user", or use "end-user" when referring to the user of a Mendix app built on the Mendix Platform.
+Avoid first-person plural (we, us, our, let's) in all documentation except release notes.
 
-Always use "Mendix" instead of "we" in the regular documentation. Use "we" only in the Studio Pro release notes, which are written from the perspective of PMs or developers.
+> Create a microflow. (Instead of "Let's create a microflow.")
+>
+> Add validation rules. (Instead of "We can add validation rules.")
+
+When you need to emphasize that Mendix is the speaker, use phrasing like "Mendix recommends".
+
+> Mendix recommends using the latest LTS version for production environments.
+
+Release notes are an exception: they are written from Mendix's perspective and use "we" consistently.
+
+> We fixed a bug where the debugger would crash when inspecting large objects.
 
 ## Procedures and Examples
 

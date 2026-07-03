@@ -5,17 +5,13 @@ weight: 30
 description: "Overview of the capabilities exposed by the bundled PWA Wrapper JavaScript actions."
 ---
 
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
-
 ## Introduction
 
 PWA Wrapper includes bundled JavaScript actions that a Mendix PWA can call from nanoflows. These actions expose device features through a combination of wrapper-native bridges and supported Web APIs.
 
 Support can vary by platform, operating system version, browser engine, and configured permissions. Always test the capabilities you depend on using the actual devices you plan to support.
 
-In the current beta release, PWA Wrapper capabilities are documented for Android and iOS.
+PWA Wrapper capabilities are documented for Android and iOS.
 
 ## Supported Capabilities
 

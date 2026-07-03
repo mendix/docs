@@ -36,7 +36,7 @@ Before reverting to an older revision, you can compare your current changes to a
 
 To check if your recent uncommitted changes affected a specific area of your app, do the following:
 
-1. Open the **History** dialog and select your most recent commit (HEAD).
+1. Open the **History** pane and select your most recent commit (HEAD).
 2. Right-click and select **Compare to current state**.
 3. Look for the documents or elements you are concerned about.
 

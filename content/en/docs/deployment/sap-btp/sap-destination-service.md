@@ -1,7 +1,7 @@
 ---
 title: "SAP Destination Service"
 url: /developerportal/deploy/sap-cloud-platform/sap-destination-service/
-weight: 20
+weight: 40
 description: "Reference for using SAP Destination Services within the OData Connector for SAP solutions."
 aliases:
     - /partners/sap/sap-destination-service/

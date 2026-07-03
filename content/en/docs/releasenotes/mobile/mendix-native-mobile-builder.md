@@ -29,6 +29,14 @@ To fix this issue, do the following:
 4. Remove **config.json**.
 5. Reopen the Mendix Native Mobile Builder.
 
+## Release 1.0.146 {#10146}
+
+**Release date: June 29, 2026**
+
+## Changes
+
+* We removed the app preview feature, which included QR code generation for APK downloads over LAN. This feature was designed for the AppCenter workflow (which shut down in 2025) and is no longer functional. The removal eliminates the Windows location permission dialog that was triggered on every launch when enumerating network interfaces.
+
 ## Release 1.0.145 {#10145}
 
 **Release date: January 28, 2026**

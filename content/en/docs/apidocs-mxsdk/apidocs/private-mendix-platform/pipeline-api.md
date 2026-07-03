@@ -16,11 +16,8 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 The Private Mendix Platform Project API allows you to manage pipelines in Private Mendix Platform. You can use the API to do the following:
 
-* Get pipeline running information.
 * Set the current step status of the pipeline.
-* Create a pipeline for build or deployment.
+* Create and run a pipeline for build or deployment.
 * Approve or reject a manual step of a waiting pipeline.
 
 ## API Reference
-
-{{< swaggerui src="/openapi-spec/pmp-pipeline.yaml"  >}}

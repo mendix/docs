@@ -19,7 +19,7 @@ Each custom setting consists of a name and a value. For example, to set the hash
 If you are running your app on Mendix Cloud or SAP Business Technology Platform, you can access these settings by opening your app in [Apps](https://sprintr.home.mendix.com/) and choosing **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
 * the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about Mendix Cloud
-* the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) section of *SAP Business Technology Platform* for information about the SAP BTP
+* the [Runtime tab](/developerportal/deploy/sap-cloud-platform/environments/#runtime-tab) section of *Environment Details on SAP BTP* for information about the SAP BTP
 
 When you are running your app locally, you can set these values in a [Configuration](/refguide10/configuration/#custom).
 
@@ -206,6 +206,7 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settin
 | <a id="commendixstorages3SocketTimeout" href="#commendixstorages3SocketTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>SocketTimeout</a> | Sets the amount of time to wait (in milliseconds) for data to be transferred over an established, open connection before the connection times out and is closed.  A value of `0` means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setSocketTimeout-int-). | 50.000 (50 seconds) |
 | <a id="commendixstorages3RequestTimeout" href="#commendixstorages3RequestTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>RequestTimeout</a> | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of `0` means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 | <a id="commendixstorages3UseCACertificates" href="#commendixstorages3UseCACertificates">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseCACertificates</a> | Set this value to `true` to use the configured [CACertificates](#CACertificates) for the connection to the S3 service. | false |
+| <a id="FileStorageS3DisableChunkedEncoding" href="#FileStorageS3DisableChunkedEncoding">FileStorage.<wbr>S3.<wbr>DisableChunkedEncoding</a> | Set this value to `true` to disable chunked transfer encoding when uploading files to S3 storage. This setting can be useful when working with S3-compatible storage services that do not fully support chunked encoding.`<br />*This setting was introduced in Mendix version 10.24.17* | false |
 
 ## Microsoft Azure SQL {#azure-sql}
 
@@ -288,7 +289,7 @@ The settings below influence the behavior of the Mendix web client.
 
 ## Metrics Settings{#metrics-settings}
 
-The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide10/metrics/) for more information and the specification of the settings format. 
+The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide10/metrics/) for more information and the specification of the settings format.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -313,8 +314,8 @@ These settings can be set either as JVM properties or as custom Runtime settings
 | --- | --- | --- |
 | <a id="httpproxyHost" href="#httpproxyHost">http.proxyHost</a> | Defines the hostname of the HTTP proxy server. | |
 | <a id="httpproxyPort" href="#httpproxyPort">http.proxyPort</a> | Defines the port number of the HTTP proxy server. | |
-| <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | | 
-| <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | | 
+| <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | |
+| <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | |
 
 {{% alert color="info" %}}
 The `http.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
@@ -332,9 +333,9 @@ These settings have to be set as JVM properties, not as custom runtime settings.
 | --- | --- | --- |
 | <a id="httpsproxyHost" href="#httpsproxyHost">https.proxyHost</a> | Defines the hostname of the HTTPS proxy server. | |
 | <a id="httpsproxyPort" href="#httpsproxyPort">https.proxyPort</a> | Defines the port number of the HTTPS proxy server. | |
-| <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | | 
-| <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | | 
-| <a id="httpsnonProxyHosts" href="#httpsnonProxyHosts">https.nonProxyHosts</a> | Defines a list of hosts that should be reached directly, bypassing the proxy. This is a list of patterns separated by '&#x007C;'. The patterns may start or end with a '*' for wildcards. | | 
+| <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | |
+| <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | |
+| <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | Defines a list of hosts that should be reached directly, bypassing the proxy. This is a list of host names separated by '&#x007C;'. | |
 
 {{% alert color="info" %}}
 The `https.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.

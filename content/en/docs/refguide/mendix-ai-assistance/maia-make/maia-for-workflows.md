@@ -59,6 +59,8 @@ Below are some examples of prompts you can use to ask Maia for further explanati
 * Can you make the timer wait for 5 days?
 * I want the process to run in parallel.
 
+Note: When generating workflows using AI, you may experience longer generation times in some cases. We are aware of this issue and are working on improving performance in a future release.
+
 ## Limitations {#limitation}
 
 Maia for Workflows currently has some limitations.

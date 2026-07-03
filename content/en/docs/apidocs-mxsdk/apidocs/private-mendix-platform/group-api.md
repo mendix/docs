@@ -29,4 +29,10 @@ The Private Mendix Platform Group API allows you to manage user groups in Privat
 
 ## API Reference
 
+### Version 2
+
 {{< swaggerui src="/openapi-spec/openapi-group-v2.yaml"  >}}
+
+### Version 1
+
+{{< swaggerui src="/openapi-spec/openapi-group-v1.yaml"  >}}

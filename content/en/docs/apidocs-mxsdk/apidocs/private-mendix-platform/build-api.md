@@ -16,7 +16,7 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 The Private Mendix Platform Build API allows you to manage app packages in Private Mendix Platform. You can use the API to do the following:
 
-* Start the Build pipeline to create an app package.
+* Start the build pipeline to create an app package.
 * Retrieve all packages for the application.
 * Retrieve a specified package for the application.
 * Delete a specified package for the application.
@@ -25,5 +25,7 @@ The Private Mendix Platform Build API allows you to manage app packages in Priva
 * Lock or unlock a specified package.
 
 ## API Reference
+
+### Version 1
 
 {{< swaggerui src="/openapi-spec/openapi-build-v1.yaml"  >}}

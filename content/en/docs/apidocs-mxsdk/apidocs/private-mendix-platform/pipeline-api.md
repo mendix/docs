@@ -22,4 +22,10 @@ The Private Mendix Platform Project API allows you to manage pipelines in Privat
 
 ## API Reference
 
+### Version 2
+
 {{< swaggerui src="/openapi-spec/openapi-pipeline-v2.yaml  >}}
+
+### Version 1
+
+{{< swaggerui src="/openapi-spec/openapi-pipeline-v1.yaml  >}}

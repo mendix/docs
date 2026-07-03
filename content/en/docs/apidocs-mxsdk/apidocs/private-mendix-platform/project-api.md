@@ -28,4 +28,10 @@ The Private Mendix Platform Project API allows you to manage projects in Private
 
 ## API Reference
 
+### Version 2
+
 {{< swaggerui src="/openapi-spec/openapi-project-v2.yaml"  >}}
+
+### Version 1
+
+{{< swaggerui src="/openapi-spec/openapi-project-v1.yaml"  >}}

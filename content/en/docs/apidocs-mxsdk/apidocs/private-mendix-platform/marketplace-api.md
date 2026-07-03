@@ -34,4 +34,6 @@ The Private Mendix Platform Marketplace API allows you to manage the Marketplace
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/openapi-marketplace.yaml"  >}}
+### Version 1
+
+{{< swaggerui src="/openapi-spec/openapi-marketplace-v1.yaml"  >}}

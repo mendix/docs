@@ -23,4 +23,6 @@ The Private Mendix Platform User API allows you to manage users in Private Mendi
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/openapi-user.yaml"  >}}
+### Version 1
+
+{{< swaggerui src="/openapi-spec/openapi-user-v1.yaml"  >}}

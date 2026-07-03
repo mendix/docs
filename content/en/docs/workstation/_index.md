@@ -86,6 +86,6 @@ The following functionalities are only available with a license:
 
 * [Bulk import of stations](/mendix-workstation/import-export/)
 * [Bulk registration of Workstation Clients](/mendix-workstation/register/)
-* [Inviting users](/mendix-workstation/build-app/#invite-users)
+* [Inviting users](/mendix-workstation/connector/#invite-users)
 
 ## Read More

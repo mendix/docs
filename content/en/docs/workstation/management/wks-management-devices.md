@@ -10,6 +10,22 @@ weight: 60
 
 This section details how to configure various device types for the current station. For each device type, you will find instructions on how to set it up in the Management UI, along with the specific message syntax required for Mendix applications to communicate with it through the Workstation Client.
 
+## Device Connectivity
+
+Before connecting devices with Mendix Workstation, perform the following steps:
+
+1. Make sure the devices are correctly set up and connected to your computer.
+2. Verify that all device drivers are installed and updated.
+3. Obtain the connection parameters used by the devices:
+
+    * For Serial Port connection - baud rate, data bits, parity and stop bits, flow control.
+    * For TCP/IP connection - IP address and port.
+
+4. Obtain the manual and technical documentation for your devices, including chapters describing the communication protocol and how to configure it.
+5. Test the connection and protocol on your operating system using the tool recommended in the device technical documentation or using common tool such as PuTTY.
+    * For Serial Port connection - Open the device and test device basic commands.
+    * For TCP/IP connection - Ping the device to make sure that it is reachable on the network and not blocked by a firewall, and then test the basic device commands.
+
 ## Card Readers
 
 Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 

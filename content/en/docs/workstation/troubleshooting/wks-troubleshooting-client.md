@@ -80,7 +80,7 @@ The Client request to Workstation Management is not forwarded to the Workstation
 
 ### Solution 
 
-Verify whether your computer's network traffic is routed through a proxy server and configure your proxy settings accordingly. See [Network Configuration](/mendix-workstation/prerequisites/#network-configuration).
+Verify whether your computer's network traffic is routed through a proxy server and configure your proxy settings accordingly. See [Network Configuration](/mendix-workstation/network-configuration/).
 
 ## Workstation Management URL cannot be resolved
 

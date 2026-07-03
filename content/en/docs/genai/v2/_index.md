@@ -31,7 +31,6 @@ The following components are available in Agents Kit 2.
 | App | Description | Latest Released Version |
 | --- | --- | --- |
 | [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Explore example use cases for Agents Kit connectors and modules, including multi-agent patterns, exposing and consuming tools via MCP, interactive chatbots, RAG, function calling, image generation, and semantic search. | 10.0.0 |
-| [Snowflake Showcase App](https://marketplace.mendix.com/link/component/225845) | Learn how to use Snowflake connectors to read and write data, leverage Snowflake Cortex ML and LLM capabilities, chat with structured data using Cortex Analyst, and implement role-based access control. | 5.0.0 |
 
 ### Core Modules {#core-modules}
 

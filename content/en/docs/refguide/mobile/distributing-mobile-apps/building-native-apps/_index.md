@@ -19,7 +19,8 @@ Many of these guides use the Mendix Native Mobile Builder UI tool included in Me
 * [Build a Mendix Native App Locally Manually](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/) – Follow this guide to build your apps locally and without an internet connection.
 * [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) – Create a custom developer app (a substitute for the Make It Native app) which accommodates custom dependencies such as native widgets or fonts.
 * [Native Template](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-template/) – The Native Template describes the native dependencies your app needs, and it includes two native apps (one for iOS and one for Android) that can be independently built to create the finished apps.
-* [Build a Mendix Native App with Bitrise](/refguide/mobile/distributing-mobile-apps/building-native-apps/bitrise/) – This guide explains how to set up Bitrise to build a Mendix native mobile app. 
+* [Build a Mendix Native App with Bitrise](/refguide/mobile/distributing-mobile-apps/building-native-apps/bitrise/) – This guide explains how to set up Bitrise to build a Mendix native mobile app.
+* [Build a Mendix Native App with Appcircle](/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/) – This guide explains how to set up Appcircle to build a Mendix native mobile app.
 
 {{% alert color="info" %}}
 The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services. For more information, see the [Firewall Settings](/refguide/system-requirements/#firewall-settings) section of System Requirements.

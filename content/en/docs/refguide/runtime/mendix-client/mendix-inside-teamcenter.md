@@ -22,7 +22,7 @@ The following versions are required:
 
 | | Mendix | Teamcenter | Teamcenter Connector |
 | --- | --- | --- | --- |
-| **Beta** | 11.12 | 2512 | 2606.0.0 or above |
+| **Beta** | 11.12 or above | 2512 | 2606.0.0 or above |
 | **GA (planned)** | 11.18 | 2612 | TBD |
 
 In addition, the following requirements must be met:
@@ -75,6 +75,7 @@ Configure the following HTTP Response Headers in your [local runtime configurati
 
 {{% alert color="info" %}}
 For the Mendix public cloud do not use the HTTP Header configuration in the cloud portal. Instead set the custom runtime configuration setting `Headers` to the following:
+
 ```json
 {
   "Access-Control-Allow-Credentials": "true",
@@ -83,7 +84,8 @@ For the Mendix public cloud do not use the HTTP Header configuration in the clou
   "Access-Control-Allow-Origin": "https://your-teamcenter.example.com"
 }
 ```
-See [custom settings](https://docs.mendix.com/refguide/custom-settings/#Headers) for details.
+
+See [custom settings](\/refguide/custom-settings/#Headers) for details.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -92,7 +94,7 @@ Both the Mendix runtime and the Active Workspace server must be served over HTTP
 
 #### CORS for TcSSO Published REST Service
 
-Configure the [CORS settings](/refguide/cors-settings/) for the TcSSO Published REST Service that is included in the Teamcenter Connector and add your teamcenter host `https://your-teamcenter.example.com` to the Allowed Origins.
+Configure the [CORS settings](/refguide/cors-settings/) for the TcSSO Published REST Service that is included in the Teamcenter Connector and add your Teamcenter host `https://your-teamcenter.example.com` to the **Allowed Origins**.
 
 Restart the Mendix app after changing these settings. For background on how CORS works in the Mendix runtime, see [Configuring CORS in the Mendix Runtime](https://docs.mendix.com/refguide/configure-cors/).
 
@@ -101,6 +103,8 @@ Restart the Mendix app after changing these settings. For background on how CORS
 The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a custom Active Workspace web component that loads the Mendix embedded client bundle and mounts the Mendix app inside the Active Workspace page.
 
 ### Adding the Component to Active Workspace
+
+{{% todo %}}Need a link to GitHub{{% /todo %}}
 
 1. Obtain the `MendixEmbedded` component from [GitHub](TBD).
 2. Install the component into your Active Workspace stage repository under `src/repo`.
@@ -112,7 +116,7 @@ To verify the component was picked up correctly, check that its view model entry
 
 ### Registering the Component on a Page
 
-To display the Mendix app on an Active Workspace page, add a card definition for it to the relevant `layoutsViewModel.json` file in your Active Workspace stage repository. Set `declarativeKeyContext` to the URL of your Mendix runtime:
+To display the Mendix app on an Active Workspace page, add its card definition to the relevant `layoutsViewModel.json` file in your Active Workspace stage repository. Set `declarativeKeyContext` to the URL of your Mendix runtime:
 
 ```json
 "Mendix": {
@@ -129,9 +133,9 @@ To display the Mendix app on an Active Workspace page, add a card definition for
 
 Add `"Mendix"` to the relevant layout handler grid and rebuild Active Workspace. If the Mendix card does not appear after rebuilding, clear the browser cache to ensure the new chunk is loaded.
 
-Detailed Active Workspace customization and build steps are outside the scope of this documentation. Refer to the Siemens Active Workspace documentation for instructions.
+Detailed Active Workspace customization and build steps are outside the scope of this documentation. Refer to the Siemens [Active Workspace Customization](https://docs.sw.siemens.com/en-US/doc/282219420/PL20250520748650994.Configuration/yiv1688486682769) documentation for instructions (link requires authentication).
 
-## Configuring the Content Security Policy in Teamcenter
+## Configuring the Content Security Policy (CSP) in Teamcenter
 
 Active Workspace enforces a Content Security Policy that must be updated to allow Mendix content to load.
 
@@ -154,10 +158,10 @@ If Teamcenter returns `HTTP 401 Unauthorized` with a JWT signature error after r
 
 ## Configuring Authentication {#authentication}
 
-During Beta, authentication uses the Teamcenter Connector's Teamcenter SSO flow. Upon accessing the Mendix application, a popup is opened automatically for authentication. After successful login (which in most cases will happen automatically), the popup is closed and the Mendix application and Teamcenter Connector are authenticated.
+While Mendix in Teamcenter is in Beta, authentication uses the Teamcenter Connector's Teamcenter Single Sign On (SSO) flow. Upon accessing the Mendix application, a popup is opened automatically for authentication. After successful login (which will usually happen automatically), the popup is closed and the Mendix application and Teamcenter Connector are authenticated.
 
 {{% alert color="info" %}}
-For the GA release we plan to offer an alternative authentication flow that is fully invisible and does not require a popup.
+In the GA release an alternative authentication flow that is invisible to the end-user is planned.
 {{% /alert %}}
 
 Follow these steps to configure authentication. Steps 1–3 require Teamcenter administrator access.
@@ -176,31 +180,37 @@ Follow these steps to configure authentication. Steps 1–3 require Teamcenter a
 
 1. **Configure User Provisioning**:
 
-    Set up user provisioning by example of the `EXAMPLE_UserProvisioningAnonymous` Microflow so that Mendix accounts are matched to Teamcenter users on login. Anonymous users should be disabled in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
+    Set up user provisioning by example of the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. Anonymous users should be disabled in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
 
-1. **Add the following required customizationss**:
+1. **Add the following required customizations**:
     
-    - Create a JavaScript action called JS_CloseWindow with the following:
-        ```
+    1. Create a JavaScript action called JS_CloseWindow containing the following code:
+
+        ```javascript
         export async function JS_CloseWindow() {  
             // BEGIN USER CODE  
             window.close();  
             // END USER CODE  
         }
         ```
-    - Add a Nanoflow that calls this JavaScript action
-    - Add an empty page called `AuthSuccess` to the application which contains an `Component load` event that calls this Nanoflow
-    - Change the `DL_HandleSSOLoginMicroflow` to show `AuthSuccess` instead of the home page as the last action in the Microflow.
-    - For instructions, see [Adding an SSO Login Button to Your Login Page](/appstore/modules/siemens-plm/configuring-connection-2512/#add-sso-login-button).
-    - Optionally, use JavaScript to trigger the authentication automatically. Note that browsers may block the popup unless it is triggered directly by a user action.
+
+    1. Add a nanoflow that calls this JavaScript action.
+    1. Add an empty page called `AuthSuccess` to the application which contains an `Component load` event that calls this nanoflow.
+    1. Change the `DL_HandleSSOLoginMicroflow` to show the `AuthSuccess` page instead of the home page as the last action in the microflow.
+
+        For instructions, see the [Adding an SSO Login Button to Your Login Page](/appstore/modules/siemens-plm/configuring-connection-2512/#add-sso-login-button) section of *Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above*.
+
+    1. Optionally, use JavaScript to trigger the authentication automatically. 
+    
+        {{% alert color="warning" %}}Browsers may block the popup if it is not triggered directly by a user action.{{% /alert %}}
 
 ## Passing Context from Teamcenter {#passing-context}
 
 The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. These are configured in the Active Workspace component and forwarded to the Mendix `render()` call as the `parameters` object.
 
-The following example shows how to change the Active Workspace component to pass the selected Teamcenter item UID to the Mendix app (the required changes are prefixed with `>>`):
+The following example shows how to change the Active Workspace component to pass the selected Teamcenter item UID to the Mendix app (the required changes are highlighted and prefixed with `>>`):
 
-```js
+```js {hl_lines=[3,29, 43]}
 export const mendixRenderFunction = (props) => {
     const [error, setError] = useState(null);
     >> const selectedItem = props.ctx?.selected?.uid ?? '';
@@ -265,9 +275,9 @@ For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/
 
 ### Best Practices for Context Parameters
 
-* **Use persistable object IDs only.** Pass Item UIDs or ItemRevision UIDs. These are stable and unique across sessions.
+* **Use persistable object IDs only.** Pass `Item` UIDs or `ItemRevision` UIDs. These are stable and unique across sessions.
 * **Avoid non-persistable IDs.** BOM line IDs are runtime calculation results that lose synchronization when Teamcenter configuration rules change. Do not use them as parameters.
-* **Prefer Item IDs over ItemRevision IDs** where possible. Item IDs are context-independent and do not depend on the revision rule in effect.
+* **Prefer `Item` IDs over `ItemRevision` IDs** where possible. `Item` IDs are context-independent and do not depend on the revision rule in effect.
 * **Discover available parameters** by referring to the Active Workspace documentation for a list of available context parameters.
 
 ## Known Limitations (Beta)

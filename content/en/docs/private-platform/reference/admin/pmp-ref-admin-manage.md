@@ -61,6 +61,10 @@ Each app is owned by a specific user, who can change settings such as the applic
 
 In addition to specifying the owner, you can also assign ownership of the app to a specific group. If an app is owned by a group, the owner must be a user who belongs to that group.
 
+{{% alert color="info" %}}
+Ownership of Private Mendix Platform apps created through Studio Pro is automatically given to the `Mendix` root user group. If required, you can transfer the ownership to another group after creation.
+{{% /alert %}}
+
 ##### Sharing the App with Selected User Groups {#share}
 
 You can share your app with any user groups by selecting the **More Actions** > **Share with Groups** option from the **App Management** page. Sharing makes the app visible to groups that otherwise may not be able to see or access your app. Members of the group with which you have shared the app do not have automatic access. Instead, they can request access from the app's owner.

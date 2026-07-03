@@ -33,7 +33,9 @@ To move the streamed data to a destination such as Azure Blob Storage or AWS S3,
 
 ## Runtime Configuration {#runtime-configuration}
 
-CDC requires runtime settings to connect to a Kafka broker. Set these in Studio Pro under **App Settings** > **Configurations** > **Custom**, or via your deployment environment's custom runtime settings.
+CDC requires runtime settings to connect to a Kafka broker. In Studio Pro, open **App** > **Settings**, go to the **Configurations** tab, select or create a configuration, and open the **Custom** tab to add the settings below. For deployed environments, set these via your environment's custom runtime settings.
+
+{{< figure src="/attachments/refguide/modeling/integration/change-data-capture/cdc-custom-configuration.png" alt="Edit Configuration dialog in Studio Pro showing the Custom tab with Kafka.BootstrapServers set to an IP address and port" >}}
 
 ### Running Locally {#local-configuration}
 

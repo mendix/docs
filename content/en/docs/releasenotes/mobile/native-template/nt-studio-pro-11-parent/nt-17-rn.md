@@ -9,13 +9,13 @@ description: "Native Template 17"
 
 **Release date: June 23, 2026**
 
-* We fixed an issue that caused **iOS** apps to restart repeatedly after an OTA update.
+* We fixed an issue that caused iOS apps to restart repeatedly after an OTA update.
 
 ## 17.3.0
 
 **Release date: June 3, 2026**
 
-* We fixed an issue that caused **Android** apps to restart repeatedly after an OTA update.
+* We fixed an issue that caused Android apps to restart repeatedly after an OTA update.
 
 
 ## 17.2.1

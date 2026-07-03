@@ -104,9 +104,7 @@ The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a 
 
 ### Adding the Component to Active Workspace
 
-{{% todo %}}Need a link to GitHub{{% /todo %}}
-
-1. Obtain the `MendixEmbedded` component from [GitHub](TBD).
+1. Obtain the `MendixEmbedded` component from [GitHub](https://github.com/mendixlabs/mendix-inside-teamcenter).
 2. Install the component into your Active Workspace stage repository under `src/repo`.
 3. Configure the component with the URL of your Mendix runtime.
 4. Optionally, set up context passing. For more information, see [Passing Context from Teamcenter](#passing-context).
@@ -208,68 +206,8 @@ Follow these steps to configure authentication. Steps 1–3 require Teamcenter a
 
 The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. These are configured in the Active Workspace component and forwarded to the Mendix `render()` call as the `parameters` object.
 
-The following example shows how to change the Active Workspace component to pass the selected Teamcenter item UID to the Mendix app (the required changes are highlighted and prefixed with `>>`):
 
-```js {hl_lines=[3,29, 43]}
-export const mendixRenderFunction = (props) => {
-    const [error, setError] = useState(null);
-    >> const selectedItem = props.ctx?.selected?.uid ?? '';
-
-    const mendixUrl = getMendixUrl(props);
-    if (mendixUrl === undefined) {
-        setError('There is no Mendix URL configured. Contact support to resolve this issue.');
-    }
-
-    const retryError = () => {
-        setError(null);
-    };
-
-
-    const load = useCallback(async (container) => {
-        mendixCleanupFunction();
-
-        if (!container) {
-            return;
-        }
-
-        try {
-            if (REQUIRE_SESSION) {
-                await ensureHasValidSession(mendixUrl);
-            }
-
-            const app = await import(/* webpackIgnore: true */ `${mendixUrl}dist/embedded-index.js`);
-            const cleanup = await app.render(container, { remoteUrl: mendixUrl, minHeight: '100vh',
-            >> parameters: { SelectedItem: selectedItem }
-            });
-
-            const onReload = () => load(container);
-            container.addEventListener(RELOAD_EVENT, onReload, { once: true });
-
-            currentMendixCleanup = () => {
-                container.removeEventListener(RELOAD_EVENT, onReload);
-                cleanup?.();
-            };
-        } catch (error) {
-            setError(error);
-        }
-    }, [mendixUrl, 
-        >> selectedItem
-    ]);
-
-    if (error) {
-        if (error.code === 'POPUP_BLOCKED') {
-            return <PopupBlockedView subPanelContext={{ retry: retryError }} />;
-        }
-
-        return <GeneralErrorViewModel subPanelContext={{ errorMessage: error.message ?? 'An unexpected error occurred.', retry: retryError }} />;
-    }
-
-
-    return <div ref={load} style={{ width: '100%', height: '100vh' }} />;
-};
-```
-
-The `parameters` object is available to the Mendix app at startup. Use a JavaScript action on the home page to read parameters and pass them to your application logic.
+Please see `mx-in-tc-context` on [GitHub](https://github.com/mendixlabs/mendix-inside-teamcenter) for an example of how to pass the identifier of the selected object to the embedded Mendix application.
 
 For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 

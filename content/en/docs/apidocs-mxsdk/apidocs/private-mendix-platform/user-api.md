@@ -1,5 +1,5 @@
 ---
-title: "Private Mendix Platform User API"
+title: "Private Mendix Platform User API - Version 1"
 url: /apidocs-mxsdk/apidocs/private-platform-user-api/
 type: swagger
 description: "This API allows you to manage users in Private Mendix Platform."
@@ -22,7 +22,5 @@ The Private Mendix Platform User API allows you to manage users in Private Mendi
 * Change the password of a user with a specific ID.
 
 ## API Reference
-
-### Version 1
 
 {{< swaggerui src="/openapi-spec/openapi-user-v1.yaml"  >}}

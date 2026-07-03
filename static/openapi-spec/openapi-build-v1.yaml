@@ -1,4 +1,4 @@
-openapi: 3.0.4
+openapi: 3.0.1
 info:
   title: Build Service v1
   description: "Provide services for build, retrive, lock, unlock and download app packages and sbom files. \r\n"

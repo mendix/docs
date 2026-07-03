@@ -1,11 +1,11 @@
 ---
-title: "Private Mendix Platform Build API"
+title: "Private Mendix Platform Build API - Version 1"
+linktitle: "Build API"
 url: /apidocs-mxsdk/apidocs/private-platform-build-api/
 type: swagger
 description: "This API allows you to manage packages in Private Mendix Platform."
 restapi: true
 weight: 60
-linktitle: "Build API"
 ---
 
 {{% alert color="info" %}}
@@ -25,7 +25,5 @@ The Private Mendix Platform Build API allows you to manage app packages in Priva
 * Lock or unlock a specified package.
 
 ## API Reference
-
-### Version 1
 
 {{< swaggerui src="/openapi-spec/openapi-build-v1.yaml"  >}}

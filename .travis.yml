@@ -70,7 +70,7 @@ install:
   # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
 
   - echo $(date) | tee -a $TRAVIS_BUILD_DIR/hugo.log
-  - travis_wait 30 bash -c  './node_modules/.bin/hugo --environment $TRAVIS_BRANCH --logLevel debug --templateMetrics --templateMetricsHints --printMemoryUsage 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log'
+  - travis_wait 30 bash -c  './node_modules/.bin/hugo --environment $TRAVIS_BRANCH --logLevel debug 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log'
   - echo $(date) | tee -a $TRAVIS_BUILD_DIR/hugo.log
 
   # normal htmltest takes too much memory - using a modified version which strips <aside> tag content

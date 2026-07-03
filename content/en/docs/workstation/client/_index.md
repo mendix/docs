@@ -3,7 +3,7 @@ title: "Mendix Workstation Client"
 linktitle: "Workstation Client"
 url: /mendix-workstation/client/
 description: "Describes how to set up and administer the Mendix Workstation Client."
-weight: 31
+weight: 12
 ---
 
 ## Introduction

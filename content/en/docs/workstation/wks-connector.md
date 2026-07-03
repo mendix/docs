@@ -5,7 +5,7 @@ url: /mendix-workstation/connector/
 description: "Describes how to install the Workstation Connector and build an app to work with Mendix Workstation."
 aliases:
     - /mendix-workstation/build-app/
-weight: 12
+weight: 13
 ---
 
 ## Introduction

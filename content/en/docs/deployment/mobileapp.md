@@ -92,9 +92,9 @@ Take note of the required resolutions and file types for the image files, as the
 
 Once you begin the app building wizard and choose the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, and run on emulators.
 
-For iOS please follow the instructions in the [Building Your iOS App Locally](/howto8/mobile/build-hybrid-locally/#building-ios-locally) section of *How to Build a Mendix Hybrid App Locally*.
+For iOS, follow the instructions in the [Building an iOS App with Xcode](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#building-ios-app) section of *Build a Mendix Native App Locally*.
 
-For Android please follow the instructions in the [Building Your Android App Locally](/howto8/mobile/build-hybrid-locally/#building-android-locally) section of *How to Build a Mendix Hybrid App Locally*.
+For Android, follow the instructions in the [Building an Android App with Android Studio](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#building-android-app) section of *Build a Mendix Native App Locally*.
 
 ## Read More
 

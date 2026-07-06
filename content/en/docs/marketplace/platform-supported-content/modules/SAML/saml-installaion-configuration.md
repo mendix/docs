@@ -43,7 +43,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
         * If you use the SAML module in your hybrid app, you must change the `SAML20.HybridAppLoginTimeOutInMinutes` constant to change the validity of the authentication token used by the hybrid mobile app.
         * If you use both the default login handler and the SAML module in your hybrid app, you must change both so that they match. This is because, when you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value and thus requires the constant value to be set.
 
-            Only use this setting if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your IdP Configuration as well as changes to the hybrid app package as described in [How to Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+            Only use this setting if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your IdP Configuration as well as changes to the hybrid app package. Hybrid mobile apps are [deprecated](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) however, so we encourage building native or progressive web apps instead. 
 
         {{% alert color="warning" %}}Hybrid mobile apps are not available in Mendix 10.{{% /alert %}}
 

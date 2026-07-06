@@ -239,6 +239,10 @@ The table below compares the primary user-identifying attribute used by SCIM (i.
 | Okta | SAML | SCIM.externalID and SAML.Use Name ID contain the same value. <br> Note: Configure Application username to Custom with user.getInternalProperty("id"). |
 | EntraID | SAML | SCIM.externalID and SAML.Use Name ID contain the same value. <br> Note: Map Unique User Identifier as user.objectid in SSO Configuration. |
 
+{{% alert color="info" %}}
+To ensure the SCIM module works as expected, configure your Identity Provider (IdP) to map `externalId` to an immutable attribute (for example, `oid`) and `userName` to a unique attribute. Then map these values to the corresponding fields in your application's **User** entity.
+{{% /alert %}}
+
 #### Advanced Attribute Mapping {#advanced-attribute-mapping}
 
 Starting from version 4.1.0, the SCIM module provides enhanced support for handling both single-value and multi-value attributes, as well as SCIM extension schemas.

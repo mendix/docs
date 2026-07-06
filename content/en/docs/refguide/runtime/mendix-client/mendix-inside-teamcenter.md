@@ -168,13 +168,13 @@ Follow these steps to configure authentication.
 
     Register the Mendix app in the Teamcenter Deployment Center so TcSS can authenticate it. For instructions, see [Registering Your App for Teamcenter SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#register-your-app-for-teamcenter-sso).
     
-    This step requires administrator access to Teamcenter.
+    {{% alert color="info" %}}This step requires administrator access to Teamcenter.{{% /alert %}}
 
 2. **Configure the Teamcenter Connector Connection**:
 
     In your Mendix app, configure a Teamcenter Connector connection using **Teamcenter SSO** as the authentication method. For instructions, see [Configuring the Connection to Teamcenter](/appstore/modules/siemens-plm/configuring-connection-2512/).
 
-    This step requires administrator access to your Mendix application.
+    {{% alert color="info" %}}This step requires administrator access to your Mendix application.{{% /alert %}}
 
 3. **Configure User Provisioning**:
 

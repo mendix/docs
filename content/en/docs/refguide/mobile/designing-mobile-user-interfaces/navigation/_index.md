@@ -6,6 +6,7 @@ weight: 20
 description: "General information for native navigation in Mendix."
 aliases:
     - /refguide/native-navigation/
+    - /howto/native-navigation/
 ---
 
 ## Introduction

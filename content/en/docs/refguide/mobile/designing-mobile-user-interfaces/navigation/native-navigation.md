@@ -19,7 +19,7 @@ By switching to native navigation, your app will immediately benefit from the fo
 * **Authentic Platform UX**: Get the user experience your users expect right out of the box. This includes default gestures like the back-swipe on iOS, large header titles, and native Android transition animations without any extra configuration.
 * **Optimized View Hierarchy**: The new navigation system reduces the complexity and depth of the view hierarchy. This not only improves performance but also enhances compatibility with automation tools like Appium that can have restrictions on view depth.
 
-## Breaking Changes & Customization Limits
+## Breaking Changes and Customization Limits
 
 To achieve these native performance gains, we can no longer support certain JavaScript-based customizations. The following `stack.Navigator` properties have been deprecated and will not work with the new native navigation system.
 

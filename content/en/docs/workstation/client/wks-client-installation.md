@@ -101,8 +101,4 @@ To install the Workstation Client on a Linux machine, perform the following step
     sudo capsh --user=$(whoami) --iab="^cap_net_raw" -- -c "'/opt/Mendix Workstation/Mendix Workstation'"
     ```
 
-The Workstation Client runs automatically at system startup. To modify this behavior, see [Stopping the Workstation Client](#stop-client).
-
-### Stopping the Workstation Client {#stop-client}
-
-The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.
+The Workstation Client runs automatically at system startup. To modify this behavior, see [Autostart Configuration for the Workstation Client](/mendix-workstation/network-configuration/).

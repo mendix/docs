@@ -94,7 +94,7 @@ Both the Mendix runtime and the Active Workspace server must be served over HTTP
 
 #### CORS for TcSSO Published REST Service
 
-Configure the [CORS settings](/refguide/cors-settings/) for the TcSSO Published REST Service that is included in the Teamcenter Connector and add your Teamcenter host `https://your-teamcenter.example.com` to the **Allowed Origins**.
+Configure the [CORS settings](/refguide/cors-settings/) for the TcSSO Published REST Service (Internal/Resources/ServiceHandlers/TCSSO) that is included in the Teamcenter Connector and add your Teamcenter host `https://your-teamcenter.example.com` to the **Allowed Origins**.
 
 Restart the Mendix app after changing these settings. For background on how CORS works in the Mendix runtime, see [Configuring CORS in the Mendix Runtime](https://docs.mendix.com/refguide/configure-cors/).
 

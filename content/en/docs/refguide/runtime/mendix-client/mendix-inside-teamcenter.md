@@ -162,7 +162,7 @@ While Mendix in Teamcenter is in Beta, authentication uses the Teamcenter Connec
 In the GA release an alternative authentication flow that is invisible to the end-user is planned.
 {{% /alert %}}
 
-Follow these steps to configure authentication. Steps 1–3 require Teamcenter administrator access.
+Follow these steps to configure authentication.
 
 1. **Register the Mendix App with Teamcenter Security Services**:
 
@@ -170,17 +170,17 @@ Follow these steps to configure authentication. Steps 1–3 require Teamcenter a
     
     This step requires administrator access to Teamcenter.
 
-1. **Configure the Teamcenter Connector Connection**:
+2. **Configure the Teamcenter Connector Connection**:
 
     In your Mendix app, configure a Teamcenter Connector connection using **Teamcenter SSO** as the authentication method. For instructions, see [Configuring the Connection to Teamcenter](/appstore/modules/siemens-plm/configuring-connection-2512/).
 
     This step requires administrator access to your Mendix application.
 
-1. **Configure User Provisioning**:
+3. **Configure User Provisioning**:
 
     Set up user provisioning by example of the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. Anonymous users should be disabled in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
 
-1. **Add the following required customizations**:
+4. **Add the following required customizations**:
     
     1. Create a JavaScript action called JS_CloseWindow containing the following code:
 
@@ -192,13 +192,13 @@ Follow these steps to configure authentication. Steps 1–3 require Teamcenter a
         }
         ```
 
-    1. Add a nanoflow that calls this JavaScript action.
-    1. Add an empty page called `AuthSuccess` to the application which contains an `Component load` event that calls this nanoflow.
-    1. Change the `DL_HandleSSOLoginMicroflow` to show the `AuthSuccess` page instead of the home page as the last action in the microflow.
+    2. Add a nanoflow that calls this JavaScript action.
+    3. Add an empty page called `AuthSuccess` to the application which contains an `Component load` event that calls this nanoflow.
+    4. Change the `DL_HandleSSOLoginMicroflow` to show the `AuthSuccess` page instead of the home page as the last action in the microflow.
 
         For instructions, see the [Adding an SSO Login Button to Your Login Page](/appstore/modules/siemens-plm/configuring-connection-2512/#add-sso-login-button) section of *Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above*.
 
-    1. Optionally, use JavaScript to trigger the authentication automatically. 
+    5. Optionally, use JavaScript to trigger the authentication automatically. 
     
         {{% alert color="warning" %}}Browsers may block the popup if it is not triggered directly by a user action.{{% /alert %}}
 

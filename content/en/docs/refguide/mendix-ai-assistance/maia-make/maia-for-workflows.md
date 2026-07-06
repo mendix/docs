@@ -59,7 +59,7 @@ Below are some examples of prompts you can use to ask Maia for further explanati
 * Can you make the timer wait for 5 days?
 * I want the process to run in parallel.
 
-{{% alert type="info” %}}
+{{% alert type="info" %}}
 Workflow generation may take longer than other Maia features. Performance improvements are planned for a future release.
 {{% /alert %}}
 

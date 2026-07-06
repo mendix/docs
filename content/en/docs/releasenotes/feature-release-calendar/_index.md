@@ -28,7 +28,7 @@ General Availability means that a feature is available for all users. This type 
 | MCP Server | General Availability: Mx 11.0 + Mx 10.24 |
 | MCP Client | General Availability: Mx 11.2 + Mx 10.24 |
 | Mendix Cloud GenAI Resource Packs | General Availability: Mx 11.2 + Mx 10.24 |
-| Mendix Cloud GenAI Resource Packs Guardrails | Private Beta: Mx 11.15 |
+| Mendix Cloud GenAI Resource Packs Guardrails | General Availability: H2 2026 |
 | Agent Editor in Studio Pro<sup>1</sup> | General Availability: Mx 11.9 |
 | Agent Observability | General Availability: Mx 11.5 + Mx 10.24 |
 | Model Agents as part of your Workflow | General Availability: Mx 11.9 |

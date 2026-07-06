@@ -6,9 +6,9 @@ weight: 10
 
 ## Introduction
 
-Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
+Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app supports.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/app-settings.png" width="550px" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/app-settings.png" alt="" width="550px" >}}
 
 You can reach this tab in two ways:
 
@@ -17,12 +17,12 @@ You can reach this tab in two ways:
 
 ## Setting Default Language
 
-There must be a default app language. Select the **Default language** from the drop-down list. This will contain all languages which have been added to your app. It is recommended that you do this when you start developing your app.
+There must be a default app language. Select the **Default language** from the drop-down list. This contains all languages that have been added to your app. Mendix recommends that you do this when you start developing your app.
 
 Setting the default language has two functions:
 
-* It sets the language which will be displayed to the end-user if the end-user is not associated with a Language entity, or if the end-user's language is not enabled in the app
-* It sets the language which will be used if there is no translation of a translatable text in the end-user's language, even if the app has the language enabled
+* It sets the language that is displayed to the end-user if the end-user is not associated with a Language entity, or if the end-user's language is not enabled in the app
+* It sets the language that is used if there is no translation of a translatable text in the end-user's language, even if the app has the language enabled
 
 The initial default language is *English, United States*.
 
@@ -30,9 +30,9 @@ The initial default language is *English, United States*.
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" width="500px" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" alt="" width="500px" >}}
 
-Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. 
+Most languages are added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. 
 
 ## Advanced Language Settings{#advanced}
 
@@ -42,9 +42,9 @@ You can set each language in your app to have additional settings.
 
 ### Check Completeness
 
-If you check the **Check completeness** box, you will get a warning (or error) message in the [Errors pane](/refguide/errors-pane/) for every text which has no entry in this language's dictionary.
+If you select the **Check completeness** box, you get a warning (or error) message in the [Errors pane](/refguide/errors-pane/) for every text that has no entry in this language's dictionary.
 
-If this is the default language, the **Check completeness** box will be checked and you will not be able to uncheck it.
+If this is the default language, the **Check completeness** box is selected and you cannot clear it.
 
 ### Custom Date and Time Formatting
 
@@ -54,9 +54,9 @@ You can set a custom format for the following:
 * **Time format**
 * **Date and time format**
 
-Type a format string in the relevant box and you will see an example of how a date will be formatted underneath.
+Type a format string in the relevant box and you see an example of how a date is formatted underneath.
 
-Click **Edit…** to open a dialog box which will provide a full reference for the format string:
+Click **Edit…** to open a dialog box that provides a full reference for the format string:
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" >}}
 
@@ -64,15 +64,13 @@ The list of supported tokens can be found in [Parse and Format Date Function Cal
 
 ## List of Supported Languages {#supported-languages}
 
-The most up-to-date list of supported languages in your version of Studio Pro is the one in the add languages menu. 
+The most up-to-date list of supported languages in your version of Studio Pro is the one in the add languages menu.
 
 {{% alert color="info" %}}
-
-You cannot add custom languages that are not listed in supported languages below. 
-
+You cannot add custom languages that are not listed in supported languages below.
 {{% /alert %}}
 
-The list below is provided to enable you to quickly evaluate if Mendix supports your desired language.
+The list below is provided to enable you to quickly evaluate whether Mendix supports your desired language.
 
 | Language | Region | Locale | Available Since |
 | --- | --- | --- | --- |

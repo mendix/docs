@@ -20,15 +20,15 @@ jobs:
 
       # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repo
-        uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+        uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.10' 
       - run: python _scripts/removeUnusedAttachments.py
 
       # Creates pull request
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: Run removeUnusedAttachments.py on docs
           title: '[Auto] Remove unused attachments'

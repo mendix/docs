@@ -9,7 +9,8 @@ beta: true
 ---
 
 {{% alert color="warning" %}}
-This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
+Private Connectivity is out of Public Beta, and being prepared for General Availability (GA). The feature cannot be used until it is released as GA.     
+Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
 {{% /alert %}}
 
 ## Introduction
@@ -23,15 +24,22 @@ This page describes how Technical Contacts can request and manage connections to
 Before requesting a connection, the following conditions must be met:
 
 * You are the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for the Mendix application.
-* A Mendix Admin has created and configured the necessary private network in the [Control Center](/control-center/configure-private-connectivity/). This includes installing agents and exposing the specific external resource you want to access.
+* A Mendix Admin has created and configured the necessary private network in the [Control Center](/control-center/configure-private-connectivity/). This includes installing agents and [exposing the specific external resource](/control-center/configure-private-connectivity/#private-connectivity-resources-expose) you want to access.
 
 ## Connections {#connections}
 
 Mendix Cloud Connect Connections allow applications on Mendix Cloud to connect to Mendix Cloud Connect Resources over Mendix Cloud Connect Networks. Each connection request must be initiated by a Technical Contact and approved by a Mendix Admin before the application on Mendix Cloud can connect to the resource.
 
-An application on Mendix Cloud can establish multiple connections to various resources. You can view and manage all connections and their statuses on the [Connectivity](/developerportal/deploy/environments-details/#connections) or [Change Requests](/developerportal/deploy/connecting-to-external-resource/#view-connection-details) tab.
+Connections use a private Tailscale network called [Tailnet](https://tailscale.com/docs/concepts/tailnet). Within this Tailnet, a subnet router provides access to a subnet/CIDR range, enabling your Mendix Cloud application to securely route traffic to specific applications on your organization’s network. All connectivity remains within the private Tailnet.
 
-{{% alert color="info" %}} An application environment can only connect to a single private network at a time. This means that all external resources you connect to from an application environment must be on the same private network.{{% /alert %}}
+An application on Mendix Cloud can establish multiple connections to different resources. You can view and manage all connections and their statuses on the [Connectivity](/developerportal/deploy/environments-details/#connections) or [Change Requests](/developerportal/deploy/connecting-to-external-resource/#view-connection-details) tab.
+
+{{% alert color="info" %}} 
+
+* An application environment can only connect to a single private network at a time. This means that all external resources you connect to from an application environment must be on the same private network.
+* Mendix does not support connections from your organization's network to Mendix Cloud applications.
+* Connections between [agents](/control-center/private-connectivity/#agents) are not supported.
+{{% /alert %}}
 
 ### Requesting a New Connection {#connection-request}
 

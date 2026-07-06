@@ -2,20 +2,16 @@
 title: "PWA Wrapper Limitations"
 url: /refguide/mobile/pwa-wrapper/pwa-wrapper-limitations/
 weight: 35
-description: "Known limitations and platform constraints for PWA Wrapper in the current beta release."
+description: "Known limitations and platform constraints for PWA Wrapper."
 ---
-
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 
-This page summarizes the main limitations of PWA Wrapper in the current beta release.
+This page summarizes the main limitations of PWA Wrapper.
 
 Use this page together with [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/), [Sign PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/), and [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/).
 
-## Beta Scope Limitations
+## Scope Limitations
 
 Keep the following product-level limitations in mind:
 

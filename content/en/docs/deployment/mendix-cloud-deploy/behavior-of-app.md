@@ -61,7 +61,6 @@ Therefore, do not assume that an established WebSocket connection will remain op
     * Implement robust reconnection logic to gracefully handle connectivity loss and automatically reestablish dropped connections.
 * For WebSocket connections, a specific client always communicates with the same application instance. However, different connections, such as those from multiple browsers or after a page refresh, may be routed to different application instances.
 
-
 ## Move to Kubernetes
 
 * Only [supported Mendix versions](/releasenotes/studio-pro/lts-mts/) are able to move to Kubernetes.

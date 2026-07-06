@@ -22,7 +22,7 @@ The header for a component includes the following details:
     * **Recommended**: If the header contains this label, it means that the component meets your company's policies and guidelines, and therefore is recommended by your Mendix Admins.
     
 * The name of the component
-* **Save** – Click this to add the component to your [Saved Content](/appstore/home-page/#personal) list.
+* **Save** – Click this to add the component to your **Saved** list.
 * Depending on the content type:
 
     * **Use in Studio Pro** for modules and widgets – Click this to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/use-content/#current-sp).

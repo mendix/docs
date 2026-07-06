@@ -1,0 +1,33 @@
+# Mendix custom rule: Deprecated product names
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide.md
+extends: substitution
+message: "Use '%s' instead of '%s'"
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide/
+level: error
+ignorecase: false
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
+swap:
+  # Main product deprecated names
+  'Mendix for Private Cloud': 'Mendix on Kubernetes'
+  'Business Engine': 'Mendix Runtime'
+  'Mendix Business Server': 'Mendix Runtime'
+  'Mendix Server': 'Mendix Runtime'
+  'Sprintr': 'Apps'
+  'Developer Portal': 'Apps'
+  'Platform Portal': 'Apps'
+  'Mendix App Platform': 'Apps'
+  'Data Hub': 'Catalog'
+  'Mendix Forum': 'Mendix Community'
+  'Developer Profile': 'Mendix Profile'
+  'Mendix Mobile app': 'Mendix Developer App'
+  'Mendix Administrator': 'Mendix Admin'
+  'Native Oven': 'Native Builder'
+  'MxAssist': 'Maia'
+  'Mendix Assist': 'Maia'

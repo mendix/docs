@@ -82,6 +82,10 @@ Specific steps for configuring different cloud platforms are provided here:
 
 ## Access Management {#managing-app-users}
 
+{{% alert color="warning" %}}
+The Mendix SSO module has been deprecated as of May 1, 2026. As part of this deprecation, **Access Management** is also deprecated. You may alternatively use [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/) for Mendix SSO. For **Access Management**, use user groups or roles configured within your Identity Provider (IdP) of choice.
+{{% /alert %}}
+
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
 To manage users or invite users for an app deployed on a specific environment, click **Manage Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) sections on this page.

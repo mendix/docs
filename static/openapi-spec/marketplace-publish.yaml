@@ -1,0 +1,474 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Publish API
+  description: The API to upload new releases of existing Marketplace components.
+  termsOfService: https://www.mendix.com/terms-of-use/
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+servers:
+  - url: "https://marketplace-api.mendix.com/v1"
+paths:
+  /releases/{releaseId}:
+    get:
+      tags:
+        - components
+      summary: Returns the status and metadata of a specific release.
+      description: |-
+        Retrieves the current status and metadata of a specific release. This allows Marketplace component publishers to monitor the release status progress and make informed decisions about next steps.
+
+        **Authorization:** The user must have access to view the release.
+
+        **Status Values:**
+        - `Draft`: The release is in `Draft` state and hasn't been submitted for review or published yet.
+        - `InReview`: The release is under review.
+          - For private components, it is ready to be reviewed by a Mendix Admin if private approval is enabled for the related company.
+          - For public components, it undergoes security scanning and review by the security system.
+        - `Declined`: The release is declined.
+          - For private components, the release is declined by a Mendix Admin.
+          - For public components, the security checks did not pass for the release.
+        - `Published`: The release is published to the Marketplace and ready to be consumed.
+      operationId: getReleaseStatus
+      parameters:
+        - $ref: '#/components/parameters/releaseId'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/releaseStatus'
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+        '500':
+          $ref: '#/components/responses/error500'
+    delete:
+      tags:
+        - components
+      summary: Unpublishes a specific release of the component.
+      description: |-
+        Unpublishes a release from Marketplace. This allows component developers to remove releases when needed, either for corrections or for component retirement.
+
+        **Supported States:** It is supported for releases in any state (`Draft`, `InReview`, `Declined`, `Published`).
+
+        **Authorization:** The user must have access to manage the component. The user is a developer of the component and meets user group rules.
+
+        **Special Cases:**
+        - If the client attempts to unpublish the only remaining release of a non-deprecated component, a `409 Conflict` response is returned. The component must first be deprecated before deleting its last remaining release.
+        - If the last remaining release of a deprecated component is unpublished, the whole component is automatically unpublished and removed from Marketplace.
+      operationId: unpublishRelease
+      parameters:
+        - $ref: '#/components/parameters/releaseId'
+      responses:
+        '204':
+          description: The release was successfully unpublished. No content is returned.
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+        '409':
+          $ref: '#/components/responses/error409'
+        '500':
+          $ref: '#/components/responses/error500'
+  /components/{componentId}/releases:
+    post:
+      tags:
+        - components
+      summary: Creates a new release for a component.
+      description: |-
+        Creates a new release in `Draft` state for a specific component. This allows Marketplace component publishers to prepare a new version of their component.
+
+        **Authorization:** The user must have permission to create releases for the component. The user is a developer of the component and meets user group rules. 
+
+        **Parameters:**
+        - The componentId: The corresponding component must exist in Marketplace.
+       
+        **Response:** Returns HTTP 201 Created with a Location header containing the URI of the created release.
+      operationId: createRelease
+      parameters:
+        - $ref: '#/components/parameters/componentId'
+      requestBody:
+        description: |-
+           The release metadata for the new release. Provide the following fields in the request body.
+
+           The `versionNumber` field must include the version number of the release. It must be unique across all releases (no existing release with the same version in any state), and must follow the semantic versioning format: `major.minor.patch` (for example, `2.0.0`).
+
+           The `mendixVersion` field must include the Mendix Studio Pro version the release is built on. It must follow the semantic versioning format: `major.minor.patch` (for example, `11.0.0`).
+
+           The `releaseNotes` field must include human-readable information about the release. This field is required and must be a non-empty string describing the changes introduced in the release.
+
+           The `publishManually` field must include a boolean flag that controls what happens after a source file is uploaded using the `PUT /releases/{releaseId}/source-file` endpoint. If `publishManually` is false or omitted (default), the release may be automatically submitted for processing, and will transition to either `InReview` or `Published` depending on the component and Marketplace rules. If `publishManually` is true, the release remains in `Draft` after the source file is uploaded, and must be manually published by the user.
+
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/createReleaseRequest'
+      responses:
+        '201':
+          description: The release was successfully created and it is in `Draft` state. The `Location` header contains the URI of the new release.
+          headers:
+            Location:
+              description: The URI of the newly created release (for example, `https://marketplace-api.mendix.com/v1/releases/{releaseId}`).
+              schema:
+                type: string
+                example: "https://marketplace-api.mendix.com/v1/releases/{releaseId}/v1/releases/3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        '400':
+          description: |-
+            The request contains invalid or missing data.
+
+            Possible reasons include:
+            - Invalid `versionNumber` format. This must be `major.minor.patch` (for example, `2.0.0`).
+            - Invalid `mendixVersion` format.
+            - Missing required fields (`versionNumber`, `mendixVersion`, `releaseNotes`)
+            - Empty request body.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                invalid-version-format:
+                  value:
+                    error:
+                      code: 400
+                      message: Bad Request
+                      detail: "Invalid version number format. Must be `major.minor.patch` (for example, 2.0.0)."
+                missing-required-field:
+                  value:
+                    error:
+                      code: 400
+                      message: Bad Request
+                      detail: "Missing required field: versionNumber"
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+        '409':
+          description: |-
+            A release with the same version number already exists.
+
+            This error occurs when attempting to create a release with a `versionNumber` that is already used by another release, which can be in any state: `Draft`, `InReview`, `Declined`, or `Published`.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                duplicate-version:
+                  value:
+                    error:
+                      code: 409
+                      message: Conflict
+                      detail: "A release with the same version number already exists."
+        '500':
+          $ref: '#/components/responses/error500'
+
+  /releases/{releaseId}/source-file:
+    put:
+      tags:
+        - components
+      summary: Uploads or updates the source file for a release.
+      description: |-
+        Uploads or updates the source file for a specific release. This allows Marketplace component publishers to provide the component package and to transition the release from `Draft` or `Declined` to `InReview` or `Published`.
+
+        **Authorization:** The user must have access to manage the component. The user is a developer of the component and meets user group rules.
+
+        **Validation:**
+        - A release with the given `releaseId` must exist in Marketplace.
+        - The release must be in `Draft` or `Declined`. Cannot update the source file if it is already in `InReview` or `Published`.
+        - The source file is validated (for example, widget validation, file name extension validation).
+
+        **State Transition:**
+        After a successful upload, the release transitions to one of the following states:
+        - `Draft`
+          - If the `publishManually` field was set to `true` when the release was created.
+        - `InReview`
+          - Mendix Admin approval is required (for private components) or
+          - A security scan is required (for public components).
+        - `Published`
+          - Mendix Admin approval is not required (for private components) and
+          - A security scan is not required.
+
+        A release in the `InReview` state is automatically published to Marketplace and transitions to `Published` once all required review conditions have been satisfied.
+        
+        **Supported File Types:**
+        - For platform-supported components and private components, any file type.
+        - For non-platform-supported components and public components, only the following file types are supported:
+          - `.mpk` - Mendix Package file
+          - `.mxmodule` - Mendix Module file
+          - `.mxsolution` - Mendix Solution file
+      operationId: uploadReleaseSourceFile
+      parameters:
+        - $ref: '#/components/parameters/releaseId'
+        - $ref: '#/components/parameters/fileName'
+      requestBody:
+        description: The binary content of the source file to upload.
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '202':
+          description: The source file was successfully uploaded and the release is now in `InReview` or `Published`.
+        '400':
+          description: |-
+            The request contains invalid data or the validation failed.
+
+            Possible reasons include:
+            - Invalid file format or extension
+            - Widget validation errors (for example, widget name already taken)
+            - Missing required header (file-name)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                widget-name-taken:
+                  value:
+                    error:
+                      code: 400
+                      message: Bad Request
+                      detail: "Widget name is already taken."
+                invalid-file-extension:
+                  value:
+                    error:
+                      code: 400
+                      message: Bad Request
+                      detail: "Invalid file extension."
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+        '409':
+          description: |-
+            The request could not be completed due to a conflict with the current state of the release.
+
+            This error occurs when trying to upload a source file for a release that is already in `InReview` or `Published`.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                invalid-state:
+                  value:
+                    error:
+                      code: 409
+                      message: Conflict
+                      detail: "The source file cannot be updated for the release with `InReview` or `Published` state."
+        '500':
+          $ref: '#/components/responses/error500'
+
+components:
+  parameters:
+    componentId:
+      name: componentId
+      in: path
+      description: "This is the numeric ID of the component."
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 12345
+    releaseId:
+      name: releaseId
+      in: path
+      description: "This is the UUID of the release."
+      required: true
+      schema:
+        type: string
+        format: uuid
+    fileName:
+      name: file-name
+      in: header
+      description: "The name of the source file being uploaded, including the file extension (for example, 'MyWidget.mpk', 'MyModule.mxmodule'). Supported extensions are: .mpk, .mxmodule, .mxsolution."
+      required: true
+      schema:
+        type: string
+        example: "MyComponent.mpk"
+   
+  responses:
+    error400:
+      description: |-
+        The request may contain invalid or missing data.
+
+        The error message gives additional information.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-400:
+              value:
+                error:
+                  code: 400
+                  message: Bad Request
+                  detail: "The request could not be processed by the server because the input parsing/processing failed."
+    error401:
+      description: |-
+        No usable authentication credentials were found.
+
+        The error message gives additional information.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-401:
+              value:
+                error:
+                  code: 401
+                  message: Unauthorized
+    error404:
+      description: |-
+        The required item could not be found.
+
+        The error message provides additional information.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-404:
+              value:
+                error:
+                  code: 404
+                  message: Not Found
+    error409:
+      description: |-
+        The request could not be completed due to a conflict with the current state of the resource.
+
+        The error message provides additional information.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-409:
+              value:
+                error:
+                  code: 409
+                  message: Conflict
+                  detail: "Cannot unpublish the only remaining release of a non-deprecated component. Deprecate the component first before deleting its last release."
+    error500:
+      description: |-
+        An error occurred during the processing of the request.
+
+        The error message provides additional information.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            example-500:
+              value:
+                error:
+                  code: 500
+                  message: Internal Server Error
+                  detail: "Something went wrong."
+  schemas:
+    createReleaseRequest:
+      type: object
+      description: "Request body for creating a new release."
+      required:
+        - versionNumber
+        - mendixVersion
+        - releaseNotes
+      properties:
+        versionNumber:
+          type: string
+          pattern: "^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"
+          example: "2.0.0"
+          description: "The `versionNumber` is the version number of the release. It must be unique across all releases (in any state) and must follow the semantic versioning format: `major.minor.patch` (for example, `2.0.0`)."
+        mendixVersion:
+          type: string
+          pattern: "^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"
+          example: "10.6.0"
+          description: "The `mendixVersion` is the Mendix Studio Pro version the release is built on. It must follow the semantic versioning format: `major.minor.patch` (for example, `11.0.0`)."
+        releaseNotes:
+          type: string
+          example: "Bug fixes and performance improvements."
+          description: "The `releaseNotes` contains human-readable information about the release. This field is required and must be a non-empty string describing the changes in this release."
+        publishManually:
+          type: boolean
+          default: false
+          example: true
+          description: "The `publishManually` is a boolean flag that controls the publishing behavior after a source file upload. If `true`, the release remains in `Draft` and must be published manually. If `false` (default), the release may be automatically submitted for processing and transition to `InReview` or `Published` depending on Marketplace rules."
+
+    error:
+      type: object
+      properties:
+        code:
+          type: integer
+          minimum: 0
+          example: 400
+        message:
+          type: string
+          example: Bad Request
+        detail:
+          type: string
+          example: Malformed request body
+
+    releaseStatus:
+      type: object
+      description: "The status and metadata of a specific release. This schema is used to track the lifecycle state of a release from draft to publication."
+      required:
+        - name
+        - status
+        - releaseId
+        - versionNumber
+        - minSupportedMendixVersion
+      properties:
+        name:
+          type: string
+          example: "3d Viewer"
+          description: "This is the name of the release of the component."
+        status:
+          type: string
+          enum:
+            - Draft
+            - InReview
+            - Declined
+            - Published
+          example: "Draft"
+          description: "The current status of the release. Possible values are: `Draft` (being prepared), `InReview` (submitted for review), `Declined` (reviewed and declined), `Published` (approved and publicly available)."
+        releaseId:
+          type: string
+          format: uuid
+          example: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+          description: "This is the UUID of the release."
+        versionNumber:
+          type: string
+          pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})(?:-[a-zA-Z]+)?\\b$"
+          example: '10.1.1'
+          description: "This is the version number of the release. The format is `major.minor.patch` (for example, `2.0.0`)."
+        minSupportedMendixVersion:
+          type: string
+          pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})\\b$"
+          example: '10.1.1'
+          description: "This is the Studio Pro version selected during the onboarding. This means that any Studio Pro version equal to or greater than this version is compatible with the latest release of the component."
+        publicationDate:
+          type: string
+          format: yyyy-MM-ddTHH-mm-ssZ
+          example: '2023-09-01T09:04:00Z'
+          description: "The date when the release was published. This field is only present for releases with the `Published` status."
+        releaseNotes:
+          type: string
+          example: "These are the release notes for this release."
+          description: "The release notes for this release."
+
+  securitySchemes:
+    PersonalAccessToken:
+      name: Authorization
+      type: apiKey
+      in: header
+      description: 'For more information about requesting and using a token, refer to the [documentation](https://docs.mendix.com/portal/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'        
+
+security:
+  - PersonalAccessToken: []
+
+tags:
+  - name: components

@@ -5,8 +5,8 @@ weight: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 ---
 
-{{% alert color="info" %}}
-Make It Native 8 should only be used with the LTS version of Mendix 8.
+{{% alert color="warning" %}}
+Make It Native 8 is no longer available in Mendix Marketplace and is not supported. 
 {{% /alert %}}
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide9/getting-the-make-it-native-app/).

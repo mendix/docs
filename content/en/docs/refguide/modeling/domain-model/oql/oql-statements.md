@@ -14,15 +14,7 @@ This can be much faster than retrieving the objects in a microflow and then upda
 This feature is currently only accessible through the Java API by writing a Java action.
 
 {{% alert color="info" %}}
-From Mendix version 11.1, you can delete objects in bulk using OQL `DELETE` statements.
-
-From Mendix version 11.3, you can also update object attributes in bulk using OQL `UPDATE` statements.
-
-From Mendix version 11.4, you can update object associations as well as attributes in bulk using OQL `UPDATE` statements.
-
-From Mendix version 11.6, you can insert new objects with attributes in bulk using OQL `INSERT` statements.
-
-In  Mendix versions below 11.8, this feature was considered experimental. From Mendix version 11.8, it is generally available.
+These statements are not available from Mendix 11.0.0. See the summary in the [Version Reference](/refguide/oql/#statement-versions) section of the *OQL* document, or refer to the individual statements, below, to see which Mendix version you need.
 {{% /alert %}}
 
 ## Java API for OQL updates

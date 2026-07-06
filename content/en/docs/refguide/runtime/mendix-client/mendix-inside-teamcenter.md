@@ -33,7 +33,7 @@ In addition, the following requirements must be met:
 * The browser allows cross-site cookies for the Mendix domain. This can be configured per-domain via organization policy (for example, using Intune).
 * There is bidirectional network connectivity between the user's browser and both the Mendix runtime and the Teamcenter server.
 
-For Teamcenter Connector prerequisites, see [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/).
+For Teamcenter Connector prerequisites, see [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/#prerequisites).
 
 ## Setting Up the Mendix App
 
@@ -156,7 +156,7 @@ If Teamcenter returns `HTTP 401 Unauthorized` with a JWT signature error after r
 
 ## Configuring Authentication {#authentication}
 
-While Mendix in Teamcenter is in Beta, authentication uses the Teamcenter Connector's Teamcenter Single Sign On (SSO) flow. Upon accessing the Mendix application, a popup is opened automatically for authentication. After successful login (which will usually happen automatically), the popup is closed and the Mendix application and Teamcenter Connector are authenticated.
+While Mendix in Teamcenter is in Beta, authentication uses the Teamcenter Connector's Teamcenter Single Sign On (SSO) flow. Upon accessing the Mendix application, a pop-up window is opened automatically for authentication. After successful login (which will usually happen automatically), the pop-up window is closed and the Mendix application and Teamcenter Connector are authenticated.
 
 {{% alert color="info" %}}
 In the GA release an alternative authentication flow that is invisible to the end-user is planned.
@@ -200,7 +200,7 @@ Follow these steps to configure authentication.
 
     5. Optionally, use JavaScript to trigger the authentication automatically. 
     
-        {{% alert color="warning" %}}Browsers may block the popup if it is not triggered directly by a user action.{{% /alert %}}
+        {{% alert color="warning" %}}Browsers may block the pop-up window if it is not triggered directly by a user action.{{% /alert %}}
 
 ## Passing Context from Teamcenter {#passing-context}
 
@@ -221,7 +221,7 @@ For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/
 ## Known Limitations (Beta)
 
 * **Cross-site cookies:** The browser must allow cross-site cookies for the Mendix domain. This is required because the Mendix app runs on a different origin than Active Workspace. Configure this per-domain via organization policy (for example, Intune).
-* **Authentication popup:** During Beta, the Teamcenter Connector SSO flow opens a popup window. This can be automated to require zero additional clicks after the user is already authenticated with TcSS.
+* **Authentication pop-up:** During Beta, the Teamcenter Connector SSO flow opens a pop-up window. This can be automated to require zero additional clicks after the user is already authenticated with TcSS.
 * **Optional parameters fallback:** If an optional startup parameter is omitted, the embedded client shows the fallback page rather than using the parameter's default value. This is a known issue with the embedded client. See [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 
 ## Read More

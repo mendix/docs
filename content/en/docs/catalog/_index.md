@@ -27,9 +27,6 @@ Learn about updates and improvements in the [Catalog](/releasenotes/data-hub/) r
 {{% alert color="info" %}}
 If you deploy your Mendix apps in an alternative environment, like on-prem or Mendix on Kubernetes, you can use the Catalog APIs to register your apps and services in the Catalog to enable visibility of your deployed APIs. For information about using Catalog for local deployment, see [Register Services without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).{{% /alert %}}
 
-{{% alert color="info" %}}
-The Catalog and [external entities](/refguide/external-entities/) are supported in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above.{{% /alert %}}
-
 ## Catalog and Mendix Connect {#catalog-mx-connect}
 
 [Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The [Catalog](/catalog/) is a part of the Mendix Connect ecosystem as a user-friendly way to view, share, and use data within your organization. 

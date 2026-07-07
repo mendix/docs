@@ -240,7 +240,12 @@ The table below compares the primary user-identifying attribute used by SCIM (i.
 | EntraID | SAML | SCIM.externalID and SAML.Use Name ID contain the same value. <br> Note: Map Unique User Identifier as user.objectid in SSO Configuration. |
 
 {{% alert color="info" %}}
-To ensure the SCIM module works as expected, configure your Identity Provider (IdP) to map `externalId` to an immutable attribute (for example, `oid`) and `userName` to a unique attribute. Then map these values to the corresponding fields in your application's **User** entity.
+To ensure the SCIM module functions correctly, configure your Identity Provider (IdP) to:
+
+* map `externalId` to an immutable and unique identifier (for example, `oid` in Microsoft Entra ID).
+* map `userName` to a unique user attribute.
+
+Both `externalId` and `userName` are mandatory attributes and must be included in the SCIM request payload.
 {{% /alert %}}
 
 #### Advanced Attribute Mapping {#advanced-attribute-mapping}

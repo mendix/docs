@@ -51,9 +51,9 @@ Depending on the Mendix version your app is developed in and the device you want
 
 * This new version is compatible with Mendix 11.7.0
 
-## Android 11.6.6 / iOS 11.6.6
+## Android 11.6.6
 
-**Release date: July 7, 2026**
+**Release date: July 6, 2026**
 
 ### Fixes
 

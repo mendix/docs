@@ -1,0 +1,1007 @@
+openapi: 3.0.1
+info:
+  version: 2.0.0
+  title: Group Service v2
+  description: "Provide services for managing the governance for certain resources. Group can be used to restrict access and modification of a set of apps or marketplace contents to a specific set of people.\r\n"
+servers:
+  - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v2'
+paths:
+  /groups:
+    get:
+      tags:
+        - groups
+      summary: Get all groups of the current user
+      description: Get all groups of the current user
+      operationId: getGroups
+      responses:
+        '200':
+          $ref: '#/components/responses/groups'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    post:
+      tags:
+        - groups
+      summary: Create a new group
+      description: |-
+        ## Create a new group
+
+        Name field is mandatory. Name can only be alphanumeric, spaces, underscores, or dashes. Max length for name field is 100 characters. Max length for Description is 250 characters.
+      operationId: createGroup
+      requestBody:
+        description: Group creation request
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroupCreateRequest'
+            examples:
+              Group creation request:
+                value:
+                  name: GroupA
+                  description: Test Group
+                  parentGroupName: GroupB
+      responses:
+        '201':
+          $ref: '#/components/responses/group'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  '/groups/{groupId}':
+    get:
+      tags:
+        - groups
+      summary: Get a group
+      description: Get a single group by group Id
+      operationId: getGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/group'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    put:
+      tags:
+        - groups
+      summary: Edit a group
+      description: "## Use this operation to edit a group\r\n\r\n- If a field is omitted in the request body, it is not updated. To set field to empty specify with empty string.\r\n"
+      operationId: changeGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Group name, description or parent group change request
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroupChangeRequest'
+            examples:
+              Input group name or description:
+                value:
+                  name: GroupA
+                  description: Test Group
+                  parentGroupName: GroupB
+      responses:
+        '200':
+          $ref: '#/components/responses/group'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    delete:
+      tags:
+        - groups
+      summary: Deletes a group
+      description: Delete a group
+      operationId: deleteGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Group deleted successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  '/groups/{groupId}/members':
+    get:
+      tags:
+        - groups
+      summary: Retrieve all members in group
+      description: Retrieve all members in group
+      operationId: getGroupMembers
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/members'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    post:
+      tags:
+        - groups
+      summary: 'Add users into group '
+      description: Add specified users into the group
+      operationId: addUserIntoGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/MembersAddRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/members'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    delete:
+      tags:
+        - groups
+      summary: Remove users from group
+      description: Remove specified users from the group
+      operationId: removeUsersFromGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/MembersRemoveRequest'
+      responses:
+        '204':
+          description: Group member user removed successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /groups/{groupId}/members/{userId}:
+    patch:
+      tags:
+        - groups
+      summary: Update group member role
+      description: Update member role in the group.
+      operationId: updateGroupMemberRole
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+        - name: userId
+          in: path
+          description: Group member user id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Group member role change request
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemberRolePatchRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/member'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    delete:
+      tags:
+        - groups
+      summary: Remove a user from group
+      description: Remove a specified user from the group
+      operationId: removeUserFromGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+        - name: userId
+          in: path
+          description: Group member user id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Group member user removed successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /groups/{groupId}/namespaces:
+    get:
+      tags:
+        - groups
+      summary: Retrive all cluster namespaces assigned to group
+      description: Retrive all cluster namespaces assigned to the group
+      operationId: getNamespacesOfGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/namespaces'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    post:
+      tags:
+        - groups
+      summary: Assign cluster namespace to group
+      description: Assign specified cluster namespace to the group
+      operationId: assignNamespacesToGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/NamespacesAddRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/namespaces'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    patch:
+      tags:
+        - groups
+      summary: Update deployment purpose of cluster namespace
+      description: Update deployment purpose of the specified cluster namespace
+      operationId: updateNamespacesDeployPurposes
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/NamespacesPatchRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/namespaces'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    delete:
+      tags:
+        - groups
+      summary: Remove cluster namespaces from group
+      description: Remove specified cluster namespaces from the group
+      operationId: removeNamespacesFromGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Group Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/NamespacesRemoveRequest'
+      responses:
+        '204':
+          description: Cluster namespaces removed successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+
+components:
+  parameters:
+    groupId:
+      name: groupId
+      in: path
+      description: Group Id
+      required: true
+      schema:
+        type: string
+        format: uuid
+        pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+    memberId:
+      name: memberId
+      in: path
+      description: Group Member Id
+      required: true
+      schema:
+        type: string
+        format: uuid
+        pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+
+
+  responses:
+    error-401:
+      description: Authentication information is missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+    error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid group id:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: groupId
+                    reason: Invalid group id
+            400 - Invalid group member user id:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: userId
+                    reason: Invalid group member user id
+            400 - Invalid parameters:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: groupId
+                    reason: Invalid group id
+                  - name: userId
+                    reason: Invalid group member user id
+    error-403:
+      description: User has no permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+    error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - Group not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Group not found
+            404 - Group member not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Group member user not found
+
+    group:
+      description: Group
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: Group Id
+                example: 36279c9b-9b5a-4599-b548-7fe09d792f76
+              name:
+                type: string
+                description: Group name
+                example: GroupA
+              description:
+                type: string
+                description: Group description
+                example: Test group
+              memberCount:
+                type: integer
+                description: Group member count
+                example: 7
+              parentGroup:
+                type: string
+                description: Parent group name
+                example: GroupB
+          examples:
+            Group:
+              value:
+                id: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                name: GroupA
+                description: Test group
+                memberCount: 7
+                parentGroup: GroupB
+
+    groups:
+      description: Group list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Group Id
+                  example: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                name:
+                  type: string
+                  description: Group name
+                  example: GroupA
+                description:
+                  type: string
+                  description: Group description
+                  example: Test group
+                memberCount:
+                  type: integer
+                  description: Group member count
+                  example: 7
+                parentGroup:
+                  type: string
+                  description: Parent group name
+                  example: GroupB
+          examples:
+            Group list:
+              value:
+                - id: 7f040a46-b222-4e3e-bf9a-dd8b12babfe5
+                  name: GroupC
+                  description: QA Group
+                  memberCount: 3
+                  parentGroup: GroupX
+                - id: 34f14ca6-1369-4bbe-9715-35e9ec635f64
+                  name: GroupB
+                  description: Test Group
+                  memberCount: 4
+                  parentGroup: GroupY
+                - id: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                  name: GroupA
+                  description: Developer Group
+                  memberCount: 7
+                  parentGroup: GroupZ
+
+    members:
+      description: Group member list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Group member user Id
+                  example: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
+                name:
+                  type: string
+                  description: Group member user name
+                  example: kean
+                email:
+                  type: string
+                  description: Group member user email
+                  example: kean.li@lato-bycicles.com
+                memberRoles:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      directRole:
+                        type: string
+                        description: Direct role of the user in the group
+                        example: Developer
+                      isGroupAdmin:
+                        type: boolean
+                        description: Indicates if the user is a group admin
+                        example: false
+          examples:
+            Group member list:
+              value:
+                - id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
+                  name: tom
+                  email: tom@lato-bycicles.com
+                  memberRoles:
+                    - directRole: Developer
+                      isGroupAdmin: false
+                - id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
+                  name: kean
+                  email: kean.li@lato-bycicles.com
+                  memberRoles:
+                    - directRole: Developer
+                      isGroupAdmin: false
+                - id: cdcbd426-dfb7-4689-9939-3312521f13ff
+                  name: john
+                  email: john@lato-bycicles.com
+                  memberRoles:
+                    - directRole: Owner
+                      isGroupAdmin: true
+                - id: af50eaf8-ff62-4910-b5b0-3e685f520fc8
+                  name: jack
+                  email: jack@lato-bycicles.com
+                  memberRoles:
+                    - directRole: Developer
+                      isGroupAdmin: false
+
+    member:
+      description: Group member
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: Group member user Id
+                example: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
+              name:
+                type: string
+                description: Group member user name
+                example: kean
+              email:
+                type: string
+                description: Group member user email
+                example: kean.li@lato-bycicles.com
+              memberRoles:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    directRole:
+                      type: string
+                      description: Direct role of the user in the group
+                      example: Developer
+                    isGroupAdmin:
+                      type: boolean
+                      description: Indicates if the user is a group admin
+                      example: false
+          examples:
+            Group member:
+              value:
+                id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
+                name: kean
+                email: kean.li@lato-bycicles.com
+                memberRoles:
+                  - directRole: Developer
+                    isGroupAdmin: false
+
+    namespaces:
+      description: Group namespace list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                deployMethod:
+                  enum:
+                    - Standalone
+                    - Connected
+                  type: string
+                  description: Deployment method for the namespace
+                  example: Connected
+                clusterName:
+                  type: string
+                  description: Name of the cluster
+                  example: test-cluster
+                namespace:
+                  type: string
+                  description: Name of the namespace
+                  example: test-namespace
+                DeployPurposes:
+                  title: DeployPurposes
+                  type: object
+                  properties:
+                    isDevelopment:
+                      type: boolean
+                      default: false
+                    isTest:
+                      type: boolean
+                      default: false
+                    isAcceptance:
+                      type: boolean
+                      default: false
+                    isProduction:
+                      type: boolean
+                      default: false
+          examples:
+            Group namespace list:
+              value:
+                - deployMethod: Standalone
+                  clusterName: test-cluster
+                  namespace: dev-namespace
+                  DeployPurposes:
+                      isDevelopment: true
+                      isTest: false
+                      isAcceptance: false
+                      isProduction: false
+                - deployMethod: Connected
+                  clusterName: test-cluster
+                  namespace: test-namespace
+                  DeployPurposes:
+                      isDevelopment: false
+                      isTest: true
+                      isAcceptance: false
+                      isProduction: false
+  schemas:
+    GroupCreateRequest:
+      type: object
+      title: GroupCreateRequest
+      description: Group creation request
+      properties:
+        name:
+          type: string
+          description: Group name
+          example: GroupA
+        description:
+          type: string
+          description: Group description
+          maxLength: 250
+        parentGroupName:
+          type: string
+          description: Parent group name
+          example: GroupB
+      required:
+        - name
+        - parentGroupName
+
+    GroupChangeRequest:
+      type: object
+      title: GroupChangeRequest
+      description: Group change request
+      properties:
+        name:
+          type: string
+          description: Group name
+          example: GroupA
+        description:
+          type: string
+          description: Group description
+          maxLength: 250
+        parentGroupName:
+          type: string
+          description: Parent group name
+          example: GroupB
+      required:
+        - name
+        - parentGroupName
+
+    MemberRolePatchRequest:
+      type: object
+      title: MemberRolePatchRequest
+      description: Group member role change request
+      properties:
+        directRole:
+          type: string
+          description: Group member role
+          example: Operator
+        isGroupAdmin:
+          type: boolean
+          description: Indicates if the user is a group admin
+          example: true
+
+    MembersAddRequest:
+      title: MembersAddRequest
+      type: object
+      properties:
+        userId:
+          type: string
+          description: Group member user id
+          example: 4cf55181-cfea-47bc-b798-3a51
+        directRole:
+          type: string
+          description: Group member role
+          example: Operator
+        isGroupAdmin:
+          type: boolean
+          description: Indicates if the user is a group admin
+          default: false
+          example: true
+
+    MembersRemoveRequest:
+      title: MembersRemoveRequest
+      type: object
+      properties:
+        userId:
+          type: string
+          description: Group member user id
+          example: 4cf55181-cfea-47bc-b798-3a51
+
+    NamespacesAddRequest:
+      title: NamespacesAddRequest
+      type: object
+      description: Cluster namespaces input for group assignment
+      properties:
+        deployMethod:
+          enum:
+            - Standalone
+            - Connected
+          type: string
+          description: Deployment method for the namespace
+          example: Connected
+        clusterName:
+          type: string
+          description: Name of the cluster
+          example: test-cluster
+        namespace:
+          type: string
+          description: Name of the namespace
+          example: test-namespace
+        DeployPurposes:
+          title: DeployPurposes
+          type: object
+          properties:
+            isDevelopment:
+              type: boolean
+              default: false
+            isTest:
+              type: boolean
+              default: false
+            isAcceptance:
+              type: boolean
+              default: false
+            isProduction:
+              type: boolean
+              default: false
+
+    NamespacesPatchRequest:
+      title: NamespacesPatchRequest
+      type: object
+      description: Request to update deployment purpose of cluster namespaces
+      properties:
+        deployMethod:
+          enum:
+            - Standalone
+            - Connected
+          type: string
+          description: Deployment method for the namespace
+          example: Connected
+        clusterName:
+          type: string
+          description: Name of the cluster
+          example: test-cluster
+        namespace:
+          type: string
+          description: Name of the namespace
+          example: test-namespace
+        DeployPurposes:
+          title: DeployPurposes
+          type: object
+          properties:
+            isDevelopment:
+              type: boolean
+              default: false
+            isTest:
+              type: boolean
+              default: false
+            isAcceptance:
+              type: boolean
+              default: false
+            isProduction:
+              type: boolean
+              default: false
+
+    NamespacesRemoveRequest:
+      title: NamespacesRemoveRequest
+      type: object
+      description: Cluster namespaces input for group unassignment
+      properties:
+        deployMethod:
+          enum:
+            - Standalone
+            - Connected
+          type: string
+          description: Deployment method for the namespace
+          example: Connected
+        clusterName:
+          type: string
+          description: Name of the cluster
+          example: test-cluster
+        namespace:
+          type: string
+          description: Name of the namespace
+          example: test-namespace
+
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+          example: 400
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+          example: Bad Request
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+          example: Please see invalid-params list
+        invalid-params:
+          type: array
+          description: '(Optional) JSON list List of name, reason keys for invalid attribute values.'
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Parameter name.
+                example: groupId
+              reason:
+                type: string
+                description: Reason for error.
+                example: Invalid group id
+      required:
+        - status
+        - title
+        - detail
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+security:
+  - basicAuth: []
+  - mxtoken: []
+tags:
+  - name: groups
+    description: 'For managing groups access certain restricted resources include app, marketplace contents and cluster namespaces'

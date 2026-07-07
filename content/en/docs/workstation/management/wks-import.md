@@ -3,7 +3,7 @@ title: "Managing and Sharing Workspace and Station Data"
 linktitle: "Managing and Sharing Data"
 url: /mendix-workstation/import-export/
 description: "Describes how to import and export workspace and station data across workspaces and environments."
-weight: 30
+weight: 100
 ---
 
 ## Introduction

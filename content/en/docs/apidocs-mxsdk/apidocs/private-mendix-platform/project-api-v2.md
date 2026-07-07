@@ -1,7 +1,7 @@
 ---
-title: "Private Mendix Platform Project API - Version 1"
-linktitle: "Project API - Version 1"
-url: /apidocs-mxsdk/apidocs/private-platform-project-api/
+title: "Private Mendix Platform Project API - Version 2"
+linktitle: "Project API - Version 2"
+url: /apidocs-mxsdk/apidocs/private-platform-project-api-v2/
 type: swagger
 description: "This API allows you to manage projects in Private Mendix Platform."
 restapi: true
@@ -14,7 +14,7 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## Introduction
 
-The Private Mendix Platform Project API version 1 allows you to manage projects in Private Mendix Platform. You can use the API to do the following:
+The Private Mendix Platform Project API version 2 allows you to manage projects in Private Mendix Platform. You can use the API to do the following:
 
 * Get a project by ID.
 * Get a list of all projects for the current user.
@@ -23,12 +23,13 @@ The Private Mendix Platform Project API version 1 allows you to manage projects 
 * Change the project name, description, or status.
 * Change the owning user and group of a project.
 * Get all project team members.
+* Get the groups or users with which the project is shared.
 * Add or remove members and groups from a project.
 
 {{% alert color="info" %}}
-For information about Project API version 2, see [Project API - Version 2](/apidocs-mxsdk/apidocs/private-platform-project-api-v2/).
+For information about Project API version 1, see [Project API - Version 1](/apidocs-mxsdk/apidocs/private-platform-project-api/).
 {{% /alert %}}
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/openapi-project-v1.yaml"  >}}
+{{< swaggerui src="/openapi-spec/openapi-project-v2.yaml"  >}}

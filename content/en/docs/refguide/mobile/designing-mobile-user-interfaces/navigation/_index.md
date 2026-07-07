@@ -1,11 +1,12 @@
 ---
-title: "Navigation In Native Mobile Apps"
-linktitle: "Navigation"
+title: "Navigation in Native Mobile Apps"
+linktitle: "Navigation in Native Mobile Apps"
 url: /refguide/mobile/designing-mobile-user-interfaces/navigation/
 weight: 20
 description: "General information for native navigation in Mendix."
 aliases:
     - /refguide/native-navigation/
+    - /howto/native-navigation/
 ---
 
 ## Introduction

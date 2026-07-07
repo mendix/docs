@@ -10,7 +10,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ## Android 11.12.0 / iOS 11.12.0
 
-**Release date: July X, 2026**
+**Release date: July 6, 2026**
 
 ### Improvements 
 

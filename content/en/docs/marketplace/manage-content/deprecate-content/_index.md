@@ -1,7 +1,7 @@
 ---
 title: "Deprecating Marketplace Content"
 url: /appstore/deprecate-content/
-weight: 4
+weight: 30
 description_list: true
 description: "Describes how to deprecate components on the Mendix Marketplace."
 ---

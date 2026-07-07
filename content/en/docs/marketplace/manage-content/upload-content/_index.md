@@ -1,7 +1,7 @@
 ---
-title: "Uploading Content to the Marketplace"
+title: "Uploading Content to Marketplace"
 url: /appstore/submit-content/
-weight: 3
+weight: 20
 description_list: true
 description: "Describes how to submit content to the Mendix Marketplace."
 tags: ["marketplace", "public marketplace", "private marketplace", widget", "module"]
@@ -18,7 +18,7 @@ The Mendix Marketplace is driven by contributions from community members who sha
 
 ## Prerequisites
 
-Before diving in, make sure you have read [Marketplace Overview](/appstore/overview/) and [Using Marketplace Content](/appstore/use-content/).
+Before diving in, make sure you have read [Marketplace Home Page](/appstore/home-page/), [Component Details Page](/appstore/component-details/) and [Using Marketplace Content](/appstore/use-content/).
 
 ## Adding New Marketplace Content {#adding}
 

@@ -2,7 +2,7 @@
 title: "Creating Marketplace Content"
 url: /appstore/creating-content/
 description: "Present details on creating content for the Mendix Marketplace."
-weight: 2
+weight: 10
 no_list: false
 description_list: true
 ---

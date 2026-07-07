@@ -88,10 +88,6 @@ The left side of the grid contains the following columns:
 
 The zoomed-in level for conflicted documents is split into two grids, with conflicting elements on the left and conflicting properties on the right.
 
-{{% alert color="info" %}}
-Mendix 9 has an improved conflict resolution method compared to Mendix 8. You can turn this off in the **Edit > Preferences > New features** dialog. 
-{{% /alert %}}
-
 There are two sorts of conflict:
 
 * For a standard conflict a change has been made to the same element in each branch and Mendix cannot automatically choose which is the desired change after the merge

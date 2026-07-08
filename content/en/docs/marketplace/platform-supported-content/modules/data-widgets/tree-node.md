@@ -24,7 +24,7 @@ Mendix recommends using multiple Tree Node widgets in a nested matter. In this w
 
 Starting from data widgets version 3.11.0, Tree Node offers 2 ways of rendering child nodes:
 
-* **Manual child rendering** – This is the current available configuration. The end user needs to put tree node widget (child) inside another treenode widget (parent) and set data source accordingly.
+* **Manual child rendering** – This is the current available configuration. The end-user needs to put tree node widget (child) inside another treenode widget (parent) and set data source accordingly.
 * **Infinite tree node** – This is a recursive mode whereas the children have self reference to the same entity as the parent. In this mode, the widget will render child automatically. Data with empty parents will be automatically used as root.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/treenode/infinite_treenode.png" alt="self reference entity for treenode" class="no-border" >}}

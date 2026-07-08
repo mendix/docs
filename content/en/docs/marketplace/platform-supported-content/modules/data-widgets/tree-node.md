@@ -57,8 +57,8 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 
 * **Data source** – the data source of the widget, which can also be optionally used as the data source for the header and content of the widget
     * Required
-* **Parent association** – the association used to select parent. If set, tree node will automatically use infinite tree node child detection modes. 
-* **Header type** – defines the type of the header
+* **Parent association** – the association used to select a parent. If set, tree node will automatically use infinite tree node child detection modes. 
+* **Header type** – defines the type of the header:
     * Default: **Text**
     * When set to **Text**, you can configure the **Header caption** property
     * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
@@ -75,7 +75,7 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 * **Start expanded** – determines whether the content of the current level of tree nodes starts expanded or collapsed
     * Configurable when **Has children** is set to **Yes**; default: **No**
 
-    {{% alert color="info" %}}On infinite tree node child detection modes, it is recommended to set this to **No** on big data set. Otherwise it will force tree node to expand directly and load all data at once.{{% /alert %}}
+    {{% alert color="info" %}}On infinite tree node child detection modes, we recommend setting **Has children** to **No** for large data sets. Otherwise, the setting will force the tree node to expand directly, loading all data at once.{{% /alert %}}
 
 * **Animate** – defines whether the content is animated when a tree node expands and collapses
     * Default: **Yes**

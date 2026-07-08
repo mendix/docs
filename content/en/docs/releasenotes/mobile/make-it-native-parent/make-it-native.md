@@ -8,6 +8,15 @@ description: "These release notes showcase each release of the iOS and Android M
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to get the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
+## Android 11.12.0 / iOS 11.12.0
+
+**Release date: July 6, 2026**
+
+### Improvements 
+
+* We improved the build time on iOS for Make it Native by using prebuilt `react-native` binaries.
+* On Android, `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO` were explicitly removed following [Google Play's Photo and Video Permissions policy](https://support.google.com/googleplay/android-developer/answer/14115180).
+
 ## Android 11.11.0 / iOS 11.11.0
 
 **Release date: June 3, 2026**

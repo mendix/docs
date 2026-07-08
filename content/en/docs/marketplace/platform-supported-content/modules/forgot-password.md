@@ -15,7 +15,7 @@ This module allows the end-user to enter their email address, and an email will 
 Versions of the Forgot Password module below 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. Mendix recommends upgrading to the later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below.
 {{% /alert %}}
 
-There are below versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro 8, or 9 and above. These all work in the same way, and require the dependencies specified below.
+There are below versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro 9 and above. These all work in the same way, and require the dependencies specified below.
 
 | Mendix Version | Forgot Password Version |
 | --- | --- |

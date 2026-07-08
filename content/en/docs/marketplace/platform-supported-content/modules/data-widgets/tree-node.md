@@ -18,16 +18,16 @@ Mendix recommends using multiple Tree Node widgets in a nested matter. In this w
 * Allows you to nest tree nodes to map out your entire domain model into a tree view
 * Delivers out-of-the-box performance and network optimizations through lazy loading and caching of tree nodes
 * Offers additional styling customizations through Atlas UI
-* Display infinite level of tree nodes by using self-reference entity (available from data widgets version 3.11.0 and above)
+* Displays an infinite amount of tree nodes by using self-reference entity (available from data widgets version 3.11.0 and above)
 
-### Child detection mode
+### Child Detection Mode
 
-Starting from data widgets version 3.11.0, treenode offers 2 ways of rendering child nodes.
-* **Manual child rendering** – this is the current available configurations. User needs to put tree node widget (child) inside another treenode widget (parent) and set datasource accordingly.
-* **Infinite tree node** – this is a recursive mode whereas the children have self reference to the same entity as the parent. In this mode, the widget will render child automatically. Data with empty parents will be automatically used as root.
+Starting from data widgets version 3.11.0, Tree Node offers 2 ways of rendering child nodes:
+
+* **Manual child rendering** – This is the current available configuration. The end user needs to put tree node widget (child) inside another treenode widget (parent) and set data source accordingly.
+* **Infinite tree node** – This is a recursive mode whereas the children have self reference to the same entity as the parent. In this mode, the widget will render child automatically. Data with empty parents will be automatically used as root.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/treenode/infinite_treenode.png" alt="self reference entity for treenode" class="no-border" >}}
-
 
 ### Lazy Loading
 

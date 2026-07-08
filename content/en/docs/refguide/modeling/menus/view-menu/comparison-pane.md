@@ -17,7 +17,7 @@ For more information on comparing scenarios, refer to [Comparing Revisions](/ref
 
 ## Accessing the Comparison Pane and Version Compatibility
 
-You can start a comparison in two ways:
+You can start a comparison in the following ways:
 
 To compare a revision to your current state, do the following:
 
@@ -31,7 +31,7 @@ To compare any two commits, do the following:
 
 1. Open the **History** pane by clicking **View** > **History**.
 2. Select the first commit in the list.
-3. Hold **Ctrl** (Windows/Linux) or **Cmd** (Mac), and select the second commit.
+3. Hold <kbd>Ctrl</kbd> (Windows/Linux) or <kbd>Cmd</kbd> (Mac), and select the second commit.
 4. Open the **Compare** dropdown and select **Compare revisions (2/2 selected)**, or right-click a selected row, point to **Compare...**, and select **Compare revisions (2/2 selected)**.
 
 The **Comparison** pane opens and shows all differences between the two selected commits. The compare options are unavailable until exactly two commits are selected.

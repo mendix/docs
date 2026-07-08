@@ -11,14 +11,10 @@ You can compare revisions in your version-controlled app using the [Comparison p
 
 The comparison shows differences between:
 
-* **Older revision** – the first selected commit from the **History** pane
+* **Older revision** – the historical revision you selected or the first selected commit when comparing commits
 * **Newer revision** – your current working state (for **Compare to current state**) or the second selected commit (for **Compare revisions (2/2 selected)**)
 
 When you compare to your current state, the comparison includes your uncommitted changes.
-
-{{% alert color="warning" %}}
-To compare any two commits, select the first commit, then hold **Ctrl** (Windows/Linux) or **Cmd** (Mac) and select the second commit. Then select **Compare revisions (2/2 selected)** from the **Compare** dropdown, or right-click a selected row, point to **Compare...**, and select **Compare revisions (2/2 selected)**. These options are unavailable until exactly two commits are selected.
-{{% /alert %}}
 
 For more information on the **Comparison** pane and its detailed overview, refer to [Comparison Pane](/refguide/comparison-pane/).
 

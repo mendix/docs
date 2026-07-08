@@ -44,15 +44,17 @@ By selecting a revision in this grid, the tabs below the grid will be filled wit
 
 ### Comparing Revisions
 
-Revisions can be compared in two ways:
+Revisions can be compared in the following ways:
 
 * To compare a revision to your current working state, right-click a revision and select **Compare to current state**. This opens the [Comparison pane](/refguide/comparison-pane/), which shows all differences between the selected revision and your current state, including uncommitted changes.
 
-* To compare any two commits, select the first commit, then hold **Ctrl** (Windows/Linux) or **Cmd** (Mac) and select the second commit. When two commits are selected, open the **Compare** dropdown and select **Compare revisions (2/2 selected)**, or right-click a selected row, point to **Compare...**, and select **Compare revisions (2/2 selected)**. This opens the [Comparison pane](/refguide/comparison-pane/). These options are unavailable until exactly two commits are selected.
+* To compare any two commits, do the following: 
+    * Select the first commit, hold <kbd>Ctrl</kbd> (Windows/Linux) or <kbd>Cmd</kbd> (Mac) and then select the second commit. 
+    * When two commits are selected, open the **Compare** dropdown and select **Compare revisions (2/2 selected)**, or right-click a selected row, point to **Compare...**, and select **Compare revisions (2/2 selected)**. This opens the [Comparison pane](/refguide/comparison-pane/). These options are unavailable until exactly two commits are selected.
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/comparison-pane/history-right-click-menu.png" alt="Right-click menu showing Compare options" class="no-border" >}}
 
-For more information, see [Comparing Revisions](/refguide/comparing-revisions/).
+For more information, see [Comparison Pane](/refguide/comparison-pane/).
 
 #### Revision{#revision}
 

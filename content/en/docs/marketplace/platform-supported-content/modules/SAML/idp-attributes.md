@@ -29,7 +29,6 @@ To use artifact binding, select the ARTIFACT_BINDING option for **Response proto
 Using artifact binding for SAML responses at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.3.0/v3.3.1 and above for Mendix 9 and 10
-* v2.3.0 and above for Mendix 8
 
 `POST_BINDING` is the default value when using an [Easy Default Flow](/appstore/modules/saml/installation-configuration/#easy-flow).
 
@@ -58,7 +57,6 @@ When using an [Easy Default Flow](/appstore/modules/saml/installation-configurat
 Requesting user attributes at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.3.0/v3.3.1 and above for Mendix 9 and 10
-* v2.3.0 and above for Mendix 8
 
 ## Encryption Settings{#encryption-settings}
 
@@ -164,7 +162,6 @@ In-session authentication is a process that takes place within a session that wa
 In-session authentication at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.3.0/v3.3.1 and above for Mendix 9 and 10
-* v2.3.0 and above for Mendix 8
 
 Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, the end-user can select their IDP. In-session authentication uses the setting `ForceAuthn=true`, which means that the IdP will always authenticate an end-user even if the IdP already has a session for that end-user.
 

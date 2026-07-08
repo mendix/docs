@@ -40,7 +40,7 @@ The listening widget only listens while the page is active, so it cannot receive
 
 ### React Client Compatibility
 
-Versions earlier than v4 do not support React client apps. Starting with v4, this module includes a new widget that supports React client apps while the legacy widget remains available. Both widgets can be used side by side while migrating to React client. The runtime parts stay the same for both widgets. The new widget is compatible with Mendix 11.11 and later.
+Versions below v4 do not support React client apps. Starting with v4, this module includes a new widget that supports React client apps while the legacy widget remains available. Both widgets can be used side by side while migrating to React client. The runtime parts stay the same for both widgets. The new widget is compatible with Mendix [11.11](/releasenotes/studio-pro/11.11/) and above.
 
 ## Setting Up the Pusher App
 
@@ -71,7 +71,7 @@ After you import this module from the Marketplace, configure both parts:
 Follow these steps to configure the server side:
 
 1. Add the **Pusher User** [module role](/refguide/module-security/#module-role) to the relevant app security [user role](/refguide/security/#user-role).
-2. Update the **Pusher** service constants in the **Configuration** folder with the app keys.
+2. Update the pusher service constants in the **Configuration** folder with the app keys.
 3. Create a microflow that executes the **Notify** action with these input parameters:
     * Key settings
     * **Action name** that matches the action name configured in the widget
@@ -99,7 +99,7 @@ To receive notify messages in the client, place a widget on a page inside a [dat
 
 You can use a microflow to retrieve data changed by other users, as long as the data is committed and the transaction is complete.
 
-In this example the `$Message` variable contains the object in session state. Use the `[id = $Message]` XPath query to retrieve the object from the database. The change action refreshes the client, which triggers an update on the client page.
+In this example, the `$Message` variable contains the object in session state. Use the `[id = $Message]` XPath query to retrieve the object from the database. The change action refreshes the client, which triggers an update on the client page:
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/pusher/RefreshMicroflowSample.png" alt="Sample refresh microflow that retrieves updated data for the current page" class="no-border" >}}
 

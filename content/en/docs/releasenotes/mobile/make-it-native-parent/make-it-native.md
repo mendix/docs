@@ -57,7 +57,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ### Fixes
 
-* We addressed a Google Play Policy change related to [this case](https://support.google.com/googleplay/android-developer/answer/16935362?visit_id=639189272133535581-612682188&rd=1).
+* We addressed a Google Play Policy change related to [restricted permissions](https://support.google.com/googleplay/android-developer/answer/16935362?visit_id=639189272133535581-612682188&rd=1).
 
 ## Android 11.6.4 / iOS 11.6.4
 

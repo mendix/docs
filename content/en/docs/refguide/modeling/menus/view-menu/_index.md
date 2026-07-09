@@ -101,6 +101,10 @@ The non-blocking History pane shows commits in your repository and allows you to
 
 The [Integration pane](/refguide/integration-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) and [external actions](/refguide/call-external-action/) to your app via this pane and see entities and data sources already consumed in your app. 
 
+### Maia
+
+The **Maia** pane displays the Maia Chat interface where you can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/).
+
 ### Marketplace
 
 For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content](/appstore/use-content/).

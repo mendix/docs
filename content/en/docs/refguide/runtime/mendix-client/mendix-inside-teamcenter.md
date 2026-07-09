@@ -70,7 +70,7 @@ Configure the following [custom runtime setting](/refguide/custom-settings/).
 
 #### Custom HTTP Response Headers
 
-Configure the following HTTP Response Headers in your [local runtime configuration](/refguide/configurations-tab/#headers) or your cloud environment. Replace `https://your-teamcenter.example.com` with the actual origin of your Active Workspace deployment, including scheme and port if applicable.
+Configure the following HTTP Response Headers in your [local runtime configuration](/refguide/configurations-tab/#Headers) or your cloud environment. Replace `https://your-teamcenter.example.com` with the actual origin of your Active Workspace deployment, including scheme and port if applicable.
 
 | Header | Value |
 | --- | --- |
@@ -210,10 +210,6 @@ Follow these steps to configure authentication.
     4. Change the `DL_HandleSSOLoginMicroflow` to show the `AuthSuccess` page instead of the home page as the last action in the microflow.
 
         For instructions, see the [Adding an SSO Login Button to Your Login Page](/appstore/modules/siemens-plm/configuring-connection-2512/#add-sso-login-button) section of *Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above*.
-
-    5. Optionally, use JavaScript to trigger the authentication automatically. 
-    
-        {{% alert color="warning" %}}Browsers may block the pop-up window if it is not triggered directly by a user action.{{% /alert %}}
 
 ## Passing Context from Teamcenter {#passing-context}
 

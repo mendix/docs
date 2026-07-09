@@ -1,6 +1,6 @@
 ---
 title: "AI Log Summary"
-url: /developerportal/deploy/maia-operate/ai-log-summary/
+url: /developerportal/maia-operate/ai-log-summary/
 description: "Describes the AI Log Summary feature, which provides a daily AI-generated digest of application log activity for Mendix applications running on Mendix Cloud."
 weight: 10
 ---

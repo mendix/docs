@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### New Features
 
-* AI Log Summary is now available on the **Environments** page. It provides an overview of your application's log activity from the previous 24 hours, including error patterns, lifecycle events, and security signals. For more information, refer to [AI Log Summary](/developerportal/deploy/maia-operate/ai-log-summary/).
+* AI Log Summary is now available on the **Environments** page. It provides an overview of your application's log activity from the previous 24 hours, including error patterns, lifecycle events, and security signals. For more information, refer to [AI Log Summary](/developerportal/maia-operate/ai-log-summary/).
 
 ## June 2026
 

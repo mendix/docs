@@ -9,7 +9,11 @@ beta: true
 ## Introduction
 
 {{% alert color="info" %}}
-Mendix inside Teamcenter is available in Mendix version 11.12.0 and above and is currently in public Beta. See the [prerequisites](#prerequisites) for more version requirements.
+Mendix inside Teamcenter is available in Mendix version 11.12.0 and above and is currently in public Beta.
+
+The Teamcenter connector version 2606.0.0 is required but is not yet published so this documentation is currently for information purposes only.
+
+See the [prerequisites](#prerequisites) for other version requirements.
 {{% /alert %}}
 
 Mendix inside Teamcenter lets you embed a Mendix web app as a native component inside Siemens Teamcenter Active Workspace. The Mendix app runs directly in the Active Workspace page as a micro-frontend using the [Embedded Client](/refguide/mendix-client/embedding-the-client/) feature.
@@ -22,10 +26,12 @@ The following versions are required:
 
 | | Mendix | Teamcenter | Teamcenter Connector |
 | --- | --- | --- | --- |
-| **Beta** | 11.12 or above | 2512 | 2606.0.0 or above |
+| **Beta** | 11.12 or above | 2512 | 2606.0.0 or above¹ |
 | **GA (planned)** | 11.18 | 2612 | TBD |
 
-In addition, the following requirements must be met:
+¹ This version is not yet published.
+
+The following requirements must also be met:
 
 * The Teamcenter Active Workspace instance is customizable and can be rebuilt and redeployed.
 * The Teamcenter Content Security Policy (CSP) is configurable.
@@ -85,7 +91,7 @@ For the Mendix public cloud do not use the HTTP Header configuration in the clou
 }
 ```
 
-See [custom settings](\/refguide/custom-settings/#Headers) for details.
+See [custom settings](/refguide/custom-settings/#Headers) for details.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -102,7 +108,7 @@ Restart the Mendix app after changing these settings. For background on how CORS
 
 The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a custom Active Workspace web component that loads the Mendix embedded client bundle and mounts the Mendix app inside the Active Workspace page.
 
-### Adding the Component to Active Workspace
+### Adding the Component to Active Workspace{#adding-component}
 
 1. Obtain the `MendixEmbedded` component from [GitHub](https://github.com/mendixlabs/mendix-inside-teamcenter).
 2. Install the component into your Active Workspace stage repository under `src/repo`.
@@ -129,7 +135,14 @@ To display the Mendix app on an Active Workspace page, add its card definition t
 }
 ```
 
-Add `"Mendix"` to the relevant layout handler grid and rebuild Active Workspace. If the Mendix card does not appear after rebuilding, clear the browser cache to ensure the new chunk is loaded.
+* Mendix recommends that you use `Mendix` as the object key name, although you can change this if required
+* `title` will be used as the card label
+
+    {{< figure src="/attachments/refguide/runtime/mendix-client/mendix-inside-teamcenter/card-titles.png" alt="Mendix card displayed in Active Workspace with the title shown as the card label" >}}
+
+* `view` is the name of the Mendix-inside-Teamcenter Active Workspace component obtained in the [previous section](#adding-component), that is "MendixEmbedded"
+
+Add the **Mendix** JSON object (or the name you gave it) to the relevant layout handler grid and rebuild Active Workspace. If the Mendix card does not appear after rebuilding, clear the browser cache to ensure the new chunk is loaded.
 
 Detailed Active Workspace customization and build steps are outside the scope of this documentation. Refer to the Siemens [Active Workspace Customization](https://docs.sw.siemens.com/en-US/doc/282219420/PL20250520748650994.Configuration/yiv1688486682769) documentation for instructions (link requires authentication).
 
@@ -178,7 +191,7 @@ Follow these steps to configure authentication.
 
 3. **Configure User Provisioning**:
 
-    Set up user provisioning by example of the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. Anonymous users should be disabled in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
+    Set up user provisioning by example of the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. DO not allow anonymous users in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
 
 4. **Add the following required customizations**:
     
@@ -205,7 +218,6 @@ Follow these steps to configure authentication.
 ## Passing Context from Teamcenter {#passing-context}
 
 The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. These are configured in the Active Workspace component and forwarded to the Mendix `render()` call as the `parameters` object.
-
 
 Please see `mx-in-tc-context` on [GitHub](https://github.com/mendixlabs/mendix-inside-teamcenter) for an example of how to pass the identifier of the selected object to the embedded Mendix application.
 

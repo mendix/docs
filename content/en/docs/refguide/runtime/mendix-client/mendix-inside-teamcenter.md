@@ -91,7 +91,7 @@ For the Mendix public cloud do not use the HTTP Header configuration in the clou
 }
 ```
 
-See [custom settings](/refguide/custom-settings/#Headers) for details.
+See [custom settings](/refguide/custom-settings/#headers) for details.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -191,7 +191,7 @@ Follow these steps to configure authentication.
 
 3. **Configure User Provisioning**:
 
-    Set up user provisioning by example of the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. DO not allow anonymous users in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
+    Set up user provisioning based on the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. DO not allow anonymous users in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
 
 4. **Add the following required customizations**:
     

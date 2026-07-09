@@ -109,6 +109,10 @@ The **Maia** pane displays the Maia Chat interface where you can ask questions a
 
 For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content](/appstore/use-content/).
 
+### MCP Settings
+
+The **MCP Settings** pane allows you to connect Maia to External Model Context Protocol (MCP) servers. For more information, see [Maia MCP Client](/refguide/maia-mcp/).
+
 ### OpenAPI Documentation {#api-documentation}
 
 The **OpenAPI Documentation** pane displays the auto-generated OpenAPI documentation for the currently opened [Published OData service](/refguide/published-odata-services/) or [Published REST service](/refguide/published-rest-service/). This allows you to preview the REST operations that will be available once your app is published.
@@ -130,6 +134,14 @@ For [Team Server](/developerportal/repository/team-server/) apps, the **Stories*
 The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](/refguide/data-widgets/)) by dragging them from the **Toolbox** onto your page.
 
 The **Toolbox** has a tile view showing larger icons and a list view showing a list of elements. You can switch between the tile and list view modes in the lower-right corner of the **Toolbox**. 
+
+### Updata Assistant 
+
+{{% alert color="info" %}}
+This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
+{{% /alert %}}
+
+The **Update Assistant** pane scans the Java code in your app for deprecated APIs. For more information, see [Update Assistant](/refguide/update-assistant/).
 
 ### Widget Developer Console
 

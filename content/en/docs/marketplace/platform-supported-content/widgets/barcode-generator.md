@@ -40,7 +40,7 @@ The following sections describe the available properties and how to configure th
 
 ### General Tab {#general}
 
-The **General** tab configures the value to encode, the code format, and the download button.
+The **General** tab configures the value to encode, the code format, and the download button:
 
 * **Dynamic value** (required) – The string to encode as a barcode or QR code.
 * **Barcode Format** (required) – The type of code to generate. Choose **Barcode** to render a standard linear barcode, **QR Code** to render a QR code, or **Custom** to select a specific linear format on the **Advanced** tab.
@@ -97,7 +97,7 @@ The **Display** tab configures the size and appearance of the rendered code.
     * **Image Y position** (required) – The vertical position of the image.
     * **Image height** (required) – The height of the image, in pixels.
     * **Image width** (required) – The width of the image, in pixels.
-    * **Image opacity** (required) – The opacity of the image, from 0.0 to 1.0.
+    * **Image opacity** (required) – The opacity of the image, ranging from 0.0 to 1.0.
     * **Excavate background** (required) – When enabled, removes the QR code dots behind the image.
 
 ## Supported Barcode Formats
@@ -141,4 +141,4 @@ When a value does not match the requirements of the selected format, the widget 
 
 Even without additional configuration, the Barcode Generator widget works out of the box with the necessary styling. Enable the **Show as card** property to display the code inside a bordered, padded container with a background.
 
-For further customization or personalization, installing Atlas UI is required.
+For further customization or personalization, installing [Atlas UI](/howto/front-end/get-started/) is required.

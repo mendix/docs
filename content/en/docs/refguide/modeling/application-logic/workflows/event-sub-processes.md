@@ -8,7 +8,7 @@ weight: 20
 
 An event sub-process is a separate execution flow that is not part of the normal sequence flow of a workflow. It resides inside the workflow and starts executing upon receiving a specific trigger. It is crucial to understand that an event sub-process is part of the same workflow instance. It is not a separate workflow but a single workflow instance that can contain multiple concurrent processes.
 
-Below is an example of an event sub-process, shown inside the dashed rectangle:
+Below is an example of event sub-processes, shown inside the dashed rectangles:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/event-sub-process-example.png" alt="Event sub-process example" width="400" >}}
 
@@ -34,7 +34,7 @@ Event sub-processes are particularly useful in the following scenarios:
 
 #### Lifecycle
 
-An event sub-process is initialized (but not started) as soon as the main process starts and remains in a waiting state until a notification is received.
+An event sub-process is initialized (but not started) as soon as the main process starts and remains in a waiting state until triggered by its configured start event.
 
 {{% alert color="info" %}}
 A workflow instance remains **In Progress** as long as at least ONE of the following conditions is met:
@@ -45,9 +45,14 @@ A workflow instance remains **In Progress** as long as at least ONE of the follo
 
 The workflow will NOT complete until all active execution paths, both the main flow and any triggered event sub-processes, have reached their respective end events.
 
-#### Triggers and Notifications
+#### Start Event Types {#start-event-types}
 
-Event sub-processes are triggered by a [Notify workflow](/refguide/notify-workflow/) microflow activity. When the trigger is received, the sub-process becomes **In Progress**.
+Event sub-processes can be triggered by one of the following start event types:
+
+* **Notification start event** – The sub-process is triggered by a [Notify workflow](/refguide/notify-workflow/) microflow activity.
+* **Timer start event** – The sub-process is triggered automatically when the configured duration elapses or the configured date and time is reached. The timer configuration follows the same rules as the standalone [Timer](/refguide/timer/) activity. For more information, see the [Timer](/refguide/timer/#timer) section in *Timer*.
+
+When the trigger is received, the sub-process becomes **In Progress**.
 
 #### Interrupting vs. Non-Interrupting
 
@@ -58,7 +63,7 @@ Event sub-processes can be configured as either interrupting or non-interrupting
 
 ##### Implications of Changing the Sub-Process Start Event Type {#event-type-change}
 
-For an existing event sub-process, when you change the type of its start event from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a notification start event from non-interrupting to interrupting, you will see the following warning dialog:
+For an existing event sub-process, when you change the type of its start event from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a start event from non-interrupting to interrupting, you will see the following warning dialog:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/security-dialog.png" alt="Security Dialog when changing type" width="450">}}
 
@@ -71,7 +76,7 @@ The event sub-process is re-created upon type switch because in-place conversion
 
 #### Concurrency Limitation
 
-Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger that same sub-process via the **Notify workflow** activity will return `false`. No new instances will be created for that specific sub-process while one is **In Progress**. A new instance can only be initiated once the active sub-process has completed its execution path.
+Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger it — either via the **Notify workflow** activity or by a timer firing again — will be ignored. No new instances will be created for that specific sub-process while one is **In Progress**. A new instance can only be initiated once the active sub-process has completed its execution path.
 
 If your workflow has multiple, distinct event sub-processes defined (for example, one for "Address Change" and one for "Document Upload"), each one can have its own active instance simultaneously. One being active does not prevent a different one from being triggered.
 
@@ -81,14 +86,18 @@ If your workflow has multiple, distinct event sub-processes defined (for example
 
 To add an **Event sub-process** to a workflow, follow these steps:
 
-* Select an event sub-process from the **Sub-processes** section in the workflow **Toolbox**.
-* Drag it onto a dashed drop zone adjacent to the main workflow process.
+1. Select an event sub-process from the **Sub-processes** section in the workflow **Toolbox**.
+1. Drag it onto a dashed drop zone adjacent to the main workflow process.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/drag-and-drop.png" alt="Add Event sub-process example" width="500" >}}
 
-* The sub-process flow is contained within a dashed rectangle. This dashed border around the sub-process start event indicates that it is a non-interrupting sub-process.
+1. In the **Select Events** dialog, choose the type of start event for the sub-process: **Timer (Interrupting)**, **Timer (Non-Interrupting)**, **Notification (Interrupting)**, or **Notification (Non-Interrupting)**.
+
+   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/select-event-dialog.png" alt="Select Event Dialog" width="500" >}}
+
+1. The sub-process flow is contained within a dashed rectangle. The border around the sub-process start event indicates its interrupting behavior: a dashed border indicates a non-interrupting sub-process, and a solid border indicates an interrupting sub-process.
 * The flow can contain the same types of activities as the main process flow (for example, **User Task**, **Call Microflow**, **Decision**).
-* It must start with a **Start** event (triggered by a notification) and end with at least one **End** event.
+* It must start with a **Start** event (triggered by a notification or a timer) and end with at least one **End** event.
 
 ### Rearranging Event Sub-Processes
 
@@ -102,9 +111,13 @@ This does not change the order of execution of the sub-processes, as this is dep
 
 ## Execution
 
-To start an event sub-process, create a **Notify workflow** microflow activity and point it to the event sub-process start event.
+How an event sub-process is started depends on its start event type:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/notify-workflow.png" alt="Notify workflow example" max-width=90% >}}
+* **Notification start event** – Create a **Notify workflow** microflow activity and point it to the event sub-process start event.
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/notify-workflow.png" alt="Notify workflow example" max-width=90% >}}
+
+* **Timer start event** – The sub-process starts automatically when the configured duration elapses or the configured date and time is reached. No additional configuration outside the sub-process is required.
 
 ### Operational Lifecycle Management
 
@@ -114,8 +127,8 @@ The following table outlines how top-level workflow operations and system states
 
 | Event or Operation | Effect on Event Sub-Process | System Behavior |
 | --- | --- | --- |
-| Abort Workflow | Aborted | The sub-process is permanently stopped and cannot be re-notified. |
-| Restart Workflow | Aborted and Reset | The active sub-process instance is aborted. It returns to a waiting state and can be notified again. |
+| Abort Workflow | Aborted | The sub-process is permanently stopped and cannot be triggered again. |
+| Restart Workflow | Aborted and Reset | The active sub-process instance is aborted. It returns to a waiting state and can be triggered again. |
 | Pause Workflow | Execution Halted | Execution of the sub-process halts immediately. Logic resumes from the same point once the workflow is Unpaused. |
 | Workflow Incompatible | Execution Halted | The sub-process is "frozen" due to a version conflict. Execution resumes from the current point once the conflict is Resolved. |
 | Error Inside Sub-process | Failed | The sub-process activity enters a Failed state. After the issue is fixed and the workflow is Retried, the sub-process resumes from the failed activity. |
@@ -157,7 +170,7 @@ The `WorkflowSubProcessDefinition` entity represents the metadata of a sub-proce
 
 ### WorkflowSubProcess
 
-The `WorkflowSubProcess` entity represents a specific runtime instance of an event sub-process. A `WorkflowSubProcess` object is created only after an event sub-process is notified and started its execution.
+The `WorkflowSubProcess` entity represents a specific runtime instance of an event sub-process. A `WorkflowSubProcess` object is created only after an event sub-process has been triggered and started its execution.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/domain-model/workflow-sub-process.png" class="no-border" >}}
 
@@ -197,6 +210,7 @@ The `WorkflowSubProcessState` enumeration defines the possible lifecycle phases 
 ## Read more
 
 * [Notify Workflow](/refguide/notify-workflow/)
+* [Timer](/refguide/timer/)
 * [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/)
 * [Jump activity](/refguide/jump-activity/)
 * [Jump to](/refguide/jump-to/)

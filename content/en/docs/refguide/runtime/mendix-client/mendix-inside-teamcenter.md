@@ -70,7 +70,7 @@ Configure the following [custom runtime setting](/refguide/custom-settings/).
 
 #### Custom HTTP Response Headers
 
-Configure the following HTTP Response Headers in your [local runtime configuration](/refguide/configurations-tab/#Headers) or your cloud environment. Replace `https://your-teamcenter.example.com` with the actual origin of your Active Workspace deployment, including scheme and port if applicable.
+Configure the following HTTP Response Headers in your [local runtime configuration](/refguide/configurations-tab/#headers) or your cloud environment. Replace `https://your-teamcenter.example.com` with the actual origin of your Active Workspace deployment, including scheme and port if applicable.
 
 | Header | Value |
 | --- | --- |
@@ -91,7 +91,7 @@ For the Mendix public cloud do not use the HTTP Header configuration in the clou
 }
 ```
 
-See [custom settings](/refguide/custom-settings/#headers) for details.
+See [custom settings](/refguide/custom-settings/#Headers) for details.
 {{% /alert %}}
 
 {{% alert color="info" %}}

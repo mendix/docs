@@ -71,10 +71,6 @@ This pane has two levels, so when you zoom into a changed document, you can revi
 
 The [Comparison pane](/refguide/comparison-pane/) shows the differences between a selected historical revision and your current working state, which allows you to see what documents, elements, and properties changed.
 
-### History {#history-pane}
-
-The non-blocking History pane shows commits in your repository and allows you to search and navigate to modified documents without closing the history view.
-
 ### Connector {#connector}
 
 The **Connector** pane displays elements that can be connected to the currently selected element. For example, when you select a button, the **Connector** shows microflows that you can drag onto the button to connect them.
@@ -97,21 +93,21 @@ This pane displays the results of the latest find action. You can search for tex
 
 There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 
+### History {#history-pane}
+
+The non-blocking History pane shows commits in your repository and allows you to search and navigate to modified documents without closing the history view.
+
 ### Integration {#data-hub}
 
 The [Integration pane](/refguide/integration-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) and [external actions](/refguide/call-external-action/) to your app via this pane and see entities and data sources already consumed in your app. 
 
-### OpenAPI Documentation {#api-documentation}
-
-The **OpenAPI Documentation** pane displays the auto-generated OpenAPI documentation for the currently opened [Published OData service](/refguide/published-odata-services/) or [Published REST service](/refguide/published-rest-service/). This allows you to preview the REST operations that will be available once your app is published.
-
-### Maia
-
-The **Maia** pane displays the Maia Chat interface where you can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/).
-
 ### Marketplace
 
 For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content](/appstore/use-content/).
+
+### OpenAPI Documentation {#api-documentation}
+
+The **OpenAPI Documentation** pane displays the auto-generated OpenAPI documentation for the currently opened [Published OData service](/refguide/published-odata-services/) or [Published REST service](/refguide/published-rest-service/). This allows you to preview the REST operations that will be available once your app is published.
 
 ### Page Explorer
 

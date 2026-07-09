@@ -295,7 +295,9 @@ Select this option to use the modernized (web) Runtime console. You must restart
 
 ### Debugger
 
-Select this option to use the modernized Debug Windows. You must restart Studio Pro to use this feature.
+Select this option to use the modernized Debugger pane, which includes the new Breakpoints, Debugger, and Variables panes.
+
+You must restart Studio Pro to use this feature.
 
 ### Errors Pane
 
@@ -307,7 +309,7 @@ This setting is enabled by default. The editor allows the user to write rich tex
 
 ### Find Results
 
-Select this option to use the modernized Find Results. You must restart Studio Pro to use this feature.
+Select this option to use the modernized Find Results pane. You must restart Studio Pro to use this feature.
 
 ### GraphQL {#graphql}
 
@@ -319,7 +321,7 @@ Select this option to use the modernized version of the JavaScript action editor
 
 ### Maia
 
-Select this option to enable the ability to use a custom AI provider for Maia.
+Select this option to use a custom AI provider for Maia.
 
 ### Mapping Editor
 

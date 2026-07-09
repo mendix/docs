@@ -2,15 +2,29 @@
 title: "Mendix Cloud GenAI Resource Packs Release Notes"
 linktitle: "Mendix GenAI Resources"
 url: /releasenotes/genai-resource-packs/
-description: "Release notes for Mendix Cloud GenAI Resource Packs"
+description: "Describes changes and improvements made to Mendix Cloud GenAI Resource Packs."
 weight: 25
 numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
+These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
 
 ## 2026
+
+### June 25, 2026
+
+#### New Features
+
+* We introduced multi-model support for Text Generation Resources. Company Admins can now [provision resources](/control-center/genai-resources-self-service/#provisioning-genai-resources) that support multiple models, and increase or decrease the capacity of existing resources.
+* We introduced flexible pricing using [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units). Users can now view their GenAI Units balance, usage, and consumption metrics directly on the **Consumption** overview page.
+
+### May 7, 2026
+
+#### Fixes
+
+* We fixed an issue where the Company Admin was not always able to view the external members added to a resource.
+* We fixed a styling issue where the resource card content was not fully visible.
 
 ### April 9, 2026
 
@@ -28,7 +42,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### New Features
 
-* It is now possible to downgrade the plan of a GenAI resource directly through self-service in the Control Center. For more information, see [Downgrading GenAI Resource Plan Size](/control-center/genai-resources-self-service/#downgrading-genai-resource-plan-size) section of *GenAI Resources*.
+* It is now possible to downgrade the plan of a GenAI resource directly through self-service in the Control Center.
 
 #### Fixes
 
@@ -38,7 +52,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### New Features
 
-* It is now possible to upgrade the plan of a GenAI resource directly through self-service in the Control Center. For more information, see [Upgrading GenAI Resource Plan Size](/control-center/genai-resources-self-service/#upgrading-genai-resource-plan-size) section of *GenAI Resources*.
+* It is now possible to upgrade the plan of a GenAI resource directly through self-service in the Control Center.
 
 #### Fixes
 
@@ -89,7 +103,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### New Features
 
-* [Mendix GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/) are now generally available. They enable seamless integration of GenAI into your Mendix ecosystem by leveraging GenAI Models and Knowledge Bases. With these packs, you can accelerate advanced use cases such as Retrieval-Augmented Generation (RAG) and Agentic AI.
+* [Mendix GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) are now generally available. They enable seamless integration of GenAI into your Mendix ecosystem by leveraging GenAI Models and Knowledge Bases. With these packs, you can accelerate advanced use cases such as Retrieval-Augmented Generation (RAG) and Agentic AI.
 You can access them through the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
 
 #### Improvements

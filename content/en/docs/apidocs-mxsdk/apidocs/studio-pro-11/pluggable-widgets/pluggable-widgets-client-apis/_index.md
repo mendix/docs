@@ -2,7 +2,7 @@
 title: "Client APIs"
 linktitle: "Client APIs for Pluggable Widgets"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/
-description: A guide for understanding the client APIs available to pluggable widgets in Mx10.
+description: A guide for understanding the client APIs available to pluggable widgets.
 weight: 20
 aliases:
     - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets
@@ -344,10 +344,6 @@ export interface EditableImageValue<T extends ImageValue> extends EditableFileVa
 ```
 
 `EditableImageValue` provides upload capabilities to [`ImageValue`](#imagevalue), similarly to how [`EditableFileValue`](#editable-file-value) for [`FileValue`](#filevalue). Also it adds `setThumbnailSize`  method which enables a component to request the Mendix Platform to return an image with specific dimensions. The Mendix Platform will take care of resizing the image while keeping the aspect ratio intact. When a thumbnail size is set, the `value` field of `EditableImageValue` will contain a resized image. When a thumbnail size is not set, the `value` field will contain an original image.
-
-{{% alert color="warning" %}}
-`EditableImageValue` does not support `NativeImage`.
-{{% /alert %}}
 
 ### ModifiableValue {#modifiable-value}
 

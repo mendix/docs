@@ -60,13 +60,8 @@ The Make It Native app allows developers to preview, test, and debug native mobi
 Depending on your app's Mendix version, you must use a different version of the Make It Native app:
 
 * Mendix 11:
-    * **11.12.0 - 11.x.x** - Latest and LTS version of Make It Native ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native/id6450037464))
-    * **11.6.x** — MTS version of Make It Native ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
-
-* Mendix 10:
-    * **10.24.x** - Make It Native LTS is part of Github releases and Testflight (previous) builds ([Android](https://github.com/mendix/make-it-native/releases), [iOS](https://testflight.apple.com/join/bQfLf27w)).  
-        * **Previous Builds** on Testflight can be found here:
-            {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/min-testflight.png" alt="Previous Builds on Testflight MIN" class="no-border" >}}
+    * **11.11.0 - 11.x.x** — Use the latest version of Make It Native ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native/id6450037464))
+    * **11.6.x** - MTS version of Make It Native ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
 
     * **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [Building Your Own Make It Native App](https://github.com/mendix/make-it-native)
 
@@ -79,14 +74,7 @@ Download the latest version (current LTS 11.12) of Make It Native using these QR
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
 | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
-|   [Latest Version](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [Latest Version](https://apps.apple.com/us/app/make-it-native/id6450037464)         |
-
-Download the 10.24 version of Make it Native using these QR codes:
-
-|                                  Android                                  |                                iOS                                |
-| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
-|   [10.24 Version](https://github.com/mendix/make-it-native/releases)    |        [10.24 Version (previous builds)](https://testflight.apple.com/join/bQfLf27w)         |
+|   [Latest Version](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [Latest Version](https://apps.apple.com/us/app/make-it-native/id6450037464)         |        |
 
 ### Using the Versions of Make It Native
 

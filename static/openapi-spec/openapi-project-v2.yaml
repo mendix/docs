@@ -1,0 +1,1141 @@
+openapi: 3.0.1
+info:
+  version: 2.0.0
+  title: Project Service v2
+  description: "Provide services for managing Project app, team members, sharing users and sharing groups access.\r\n"
+servers:
+  - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v2'
+paths:
+  /projects:
+    get:
+      tags:
+        - projects
+      summary: Get my projects
+      description: Get my project list
+      operationId: getMyProjects
+      parameters:
+        - name: status
+          in: query
+          description: Get my active projects or archived projects
+          schema:
+            enum:
+              - Active
+              - Archived
+      responses:
+        '200':
+          $ref: '#/components/responses/projects'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+    post:
+      tags:
+        - projects
+      summary: Create a new project
+      description: 'Create a new project with input app name, summary, template id'
+      operationId: createProject
+      requestBody:
+        description: Create new project request
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProjectCreateRequest'
+            examples:
+              Create a new project with template version uuid:
+                value:
+                  name: Project-A
+                  description: Project A
+                  group: Group-X
+                  useAppTemplate: true
+                  appTemplate:
+                    versionUUID: "344ac863-6510-46f5-b3de-06ce7e8489d3"
+              Create a new project with template id and template version:
+                value:
+                  name: Project-A
+                  description: Project A
+                  group: Group-X
+                  useAppTemplate: true
+                  appTemplate:
+                    templateId: "1"
+                    templateVersion: "10.24.90436"
+              Create a new blank project without template:
+                value:
+                  name: Project-A
+                  description: Project A
+                  group: Group-X
+                  useAppTemplate: false
+ 
+      responses:
+        '202':
+          $ref: '#/components/responses/job'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+       
+  '/projects/jobs/{jobId}':
+    get:
+      tags:
+        - projects
+      summary: Get project creation status
+      description: Get project creation status
+      operationId: getJob
+      parameters:
+        - name: jobId
+          in: path
+          description: Job Id of project creation task
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Get project creation job status successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  projectId:
+                    type: string
+                    description: Project id created by the job.
+                    example: ec603b34-2ceb-4011-9c9c-d7c10ef1ca4e
+                  status:
+                    type: string
+                    description: Project creation job status, such as "Open", "Success", "Failed".
+                  errorMessage:
+                    type: string
+                    description: Error message for failed project creation jobs.
+                    example: ''
+                required:
+                  - projectId
+                  - status
+              examples:
+                Job status:
+                  value:
+                    projectId: ec603b34-2ceb-4011-9c9c-d7c10ef1ca4e
+                    status: Success
+                    errorMessage: ''
+
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          description: Project creation job not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 404
+                  message:
+                    type: string
+                    example: Project creation job not found
+              examples:
+                Error 404 - Job not found:
+                  value:
+                    code: 404
+                    message: Project creation job not found
+        
+  '/projects/{projectId}':
+    get:
+      tags:
+        - projects
+      summary: Get a project with project Id
+      description: Get a project details with project Id
+      operationId: getProject
+      parameters:
+        - name: status
+          in: query
+          description: Get active project or archived project with project Id
+          schema:
+            enum:
+              - Active
+              - Archived
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/project'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+    patch:
+      tags:
+        - projects
+      summary: Change project info and status
+      description: 'Change project name, description or status'
+      operationId: changeProjectInfoOrStatus
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Change project request
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProjectPatchRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/project'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+       
+    delete:
+      tags:
+        - projects
+      summary: Delete project with project Id
+      description: Delete project with project Id
+      operationId: deleteProject
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Project deleted successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+  '/projects/{projectId}/owner':
+    put:
+      tags:
+        - projects
+      summary: Change owner user and group of project
+      description: Change owner user and group of project
+      operationId: changeProjectOwner
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Input owner user and group name of project
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OwnerChangeRequest'
+            examples:
+              Project owner user and group:
+                value:
+                  userName: User1
+                  groupName: Group1
+      responses:
+        '200':
+          $ref: '#/components/responses/project'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+  /projects/{projectId}/sharing-groups:
+    post:
+      tags:
+        - projects
+      summary: Add groups into sharing groups of project
+      description: Add the specified groups into the sharing groups of the project.
+      operationId: addProjectSharingGroups
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SharingGroupsAddRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/sharing-groups'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+    get:
+      tags:
+        - projects
+      summary: Get the sharing groups of the project
+      description: Get the sharing groups of the project
+      operationId: getProjectShareGroups
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/sharing-groups'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+    delete:
+      tags:
+        - projects
+      summary: Remove groups from sharing groups of project
+      description: Remove the specified groups from the sharing groups of the project.
+      operationId: removeProjectSharingGroups
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SharingGroupsRemoveRequest'
+      responses:
+        '204':
+          description: Project sharing groups removed successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+  /projects/{projectId}/sharing-users:
+    post:
+      tags:
+        - projects
+      summary: Add users into sharing users of project
+      description: Add the specified users into the sharing users of the project.
+      operationId: addProjectSharingUsers
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SharingUsersAddRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/sharing-users'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+    get:
+      tags:
+        - projects
+      summary: Get sharing users of project
+      description: Get the sharing groups of the project
+      operationId: getProjectSharingUsers
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/sharing-users'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+    delete:
+      tags:
+        - projects
+      summary: Remove users from sharing users of project
+      description: Remove the specified users from the sharing users of the project.
+      operationId: removeProjectSharingUsers
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SharingUsersRemoveRequest'
+      responses:
+        '204':
+          description: Project sharing users removed successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+  /projects/{projectId}/team:
+    post:
+      tags:
+        - projects
+      summary: Invite users into project team
+      description: Invite the specified users into the project team.
+      operationId: inviteProjectTeamMembers
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/TeamMembersInviteRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/team-members'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+    get:
+      tags:
+        - projects
+      summary: Get the team members of the project
+      description: Get the team members of the project
+      operationId: getProjectTeamMembers
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/team-members'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+    delete:
+      tags:
+        - projects
+      summary: Remove users from project team.
+      description: Remove the specified users from the project team.
+      operationId: removeProjectTeamMembers
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/TeamMembersRemoveRequest'
+      responses:
+        '204':
+          description: Project sharing users removed successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+  /projects/{projectId}/team/{userId}:
+    delete:
+      tags:
+        - projects
+      summary: Remove a user from project team
+      description: Remove a specified user from the project team.
+      operationId: removeProjectTeamMember
+      parameters:
+        - name: projectId
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+        - name: userId
+          in: path
+          description: User Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Project sharing user removed successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+
+components:
+  parameters:
+    projectId:
+      name: projectId
+      in: path
+      description: Project Id
+      required: true
+      schema:
+        type: string
+        format: uuid
+        pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+    jobId:
+      name: jobId
+      in: path
+      description: Job Id of project creation task
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 20
+        example: '123'
+
+  responses:
+    Error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid project id:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: projectId
+                    reason: Invalid project id
+            400 - Invalid project creation request:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: name
+                    reason: Invalid project name
+                  - name: templateId
+                    reason: Invalid project template id
+                  - name: templateVersion
+                    reason: Invalid project template version
+            400 - Invalid project owner change request:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: userId
+                    reason: Invalid project owner user id
+                  - name: groupId
+                    reason: Invalid project owner group id
+            400 - Invalid project team member user:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: userId
+                    reason: Invalid project team member user id
+            400 - Invalid project share group:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: groupId
+                    reason: Invalid project share group id
+    Error-401:
+      description: Authentication information missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+    Error-403:
+      description: No permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+    Error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - Project not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Project not found
+            404 - Project member not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Project team member not found
+            404 - Project share group not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Project share group not found
+
+    projects:
+      description: Project list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Project id.
+                  example: d8e4086c-8a5c-4372-9781-03a83c87defb
+                name:
+                  type: string
+                  description: Project name.
+                  example: App-test-1
+                description:
+                  type: string
+                  description: Project description.
+                  example: This project was created by Mendix Studio Pro.
+                ownerUserName:
+                  type: string
+                  description: Project owner username.
+                  example: Peter
+                ownerGroupName:
+                  type: string
+                  description: Project owner group name.
+                  example: IT
+                memberCount:
+                  type: integer
+                  description: Number of members in the project.
+                  example: 2
+                repositoryId:
+                  type: string
+                  description: Repository id.
+                  example: '172'
+                repositoryName:
+                  type: string
+                  description: Repository name.
+                  example: App-test-1
+                repositoryURL:
+                  type: string
+                  description: Repository URL.
+                  example: 'https://gitlab.com/lato/App-test-1.git'
+                isActive:
+                  type: boolean
+                  description: Indicates if the project is active.
+                  example: true
+                createdDate:
+                  type: string
+                  description: The date and time when the project was created.
+                  example: '2023-08-13T06:06:55.196Z'
+
+          examples:
+            Project list:
+              value:
+                - id: d8e4086c-8a5c-4372-9781-03a83c87defb
+                  name: App-test-1
+                  description: This project was created by Mendix Studio Pro.
+                  ownerUserName: Peter
+                  ownerGroupName: IT
+                  memberCount: 2
+                  repositoryId: '172'
+                  repositoryName: App-test-1
+                  repositoryURL: 'https://gitlab.com/lato/App-test-1.git'
+                  isActive: true
+                  createdDate: '2023-08-13T06:06:55.196Z'
+                - id: c6af395b-be22-4cfc-a473-5e30d255fb6d
+                  name: App-test-2
+                  description: This project was created by Mendix Studio Pro.
+                  ownerUserName: Peter
+                  ownerGroupName: IT
+                  memberCount: 2
+                  repositoryId: '552'
+                  repositoryName: App-test-2
+                  repositoryURL: 'https://gitlab.com/org/App-test-2.git'
+                  isActive: true
+                  createdDate: '2023-08-13T06:06:55.211Z'
+    job:
+      description: Project creation job
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: Project creation job id.
+                example: '123'
+          examples:
+            Project creation job:
+              value:
+                id: '123'
+                
+    project:
+      description: Project
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Project'
+          examples:
+            Project:
+              value:
+                id: d8e4086c-8a5c-4372-9781-03a83c87defb
+                name: App-test-1
+                description: This project was created by Mendix Studio Pro.
+                ownerUserName: Peter
+                ownerGroupName: IT
+                memberCount: 2
+                repositoryId: '172'
+                repositoryName: App-test-1
+                repositoryURL: 'https://gitlab.com/lato/App-test-1.git'
+                isActive: true
+                createdDate: '2023-08-13T06:06:55.196Z'
+
+    sharing-groups:
+      description: Project sharing groups
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Project sharing group id
+                  example: 205b6ffd-34cf-453e-aa45-2782d2f8cf9c
+                name:
+                  type: string
+                  description: Project sharing group name
+                  example: Group-IT
+          examples:
+            Project sharing groups list:
+              value:
+                - id: 205b6ffd-34cf-453e-aa45-2782d2f8cf9c
+                  name: Group-IT
+                - id: 10d0a84a-0c13-4efa-a09f-948e49462be9
+                  name: Group-QA
+
+    sharing-users:
+      description: Project sharing users
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Project sharing user id
+                  example: 05ab1238-407c-478b-9dd3-05f4256702b1
+                name:
+                  type: string
+                  description: Project sharing user name
+                  example: Peter
+                email:
+                  type: string
+                  description: Project sharing user email
+                  example: peter@example.com
+          examples:
+            Project sharing users list:
+              value:
+                - id: 05ab1238-407c-478b-9dd3-05f4256702b1
+                  name: John
+                  email: john@example.com
+                - id: cf77fc69-d303-446d-b045-d2aa6fb54937
+                  name: Peter
+                  email: peter@example.com
+
+    team-members:
+      description: Project team members
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Project team member id
+                  example: 05ab1238-407c-478b-9dd3-05f4256702b1
+                name:
+                  type: string
+                  description: Project team member name
+                  example: Peter
+                email:
+                  type: string
+                  description: Project team member email
+                  example: peter@example.com
+          examples:
+            Project team members list:
+              value:
+                - id: 05ab1238-407c-478b-9dd3-05f4256702b1
+                  name: John
+                  email: john@example.com
+                - id: cf77fc69-d303-446d-b045-d2aa6fb54937
+                  name: Peter
+                  email: peter@example.com
+
+  schemas:
+    ProjectCreateRequest:
+      type: object
+      description: Project creation request
+      properties:
+        name:
+          type: string
+          description: Project name.
+          example: App-Test-1
+        description:
+          type: string
+          description: Project description.
+          example: My test app 1
+        group:
+          type: string
+          description: Project owner group name.
+          example: Group-Dev
+        useAppTemplate:
+          type: boolean
+          description: 'If true, app template will be used for project creation.'
+          example: true
+        appTemplate:
+          type: object
+          description: App template.
+          properties:
+            templateId:
+              type: string
+              description: (Will be depreciated) App template id that can be got via Marketplace UI or API.
+              example: '438'
+            templateVersion:
+              type: string
+              description: (Will be depreciated) App template version that can be got via Marketplace UI or API.
+              example: '10.24.81004'
+            versionUUID:
+              type: string
+              description: App template version UUID that can be got via Marketplace UI or API.
+              example: "344ac863-6510-46f5-b3de-06ce7e8489d3"
+            
+      required:
+        - name
+
+    ProjectPatchRequest:
+      type: object
+      description: Project change request
+      properties:
+        name:
+          type: string
+          description: Project name
+          example: App-Test-1
+        description:
+          type: string
+          description: Project description
+          example: My test app 1
+        isActive:
+          type: boolean
+          description: Project status (Active or Inactive)
+          example: true
+
+    OwnerChangeRequest:
+      type: object
+      title: OwnerChangeRequest
+      description: Project owner change request
+      properties:
+        userId:
+          type: string
+          description: Project owner user id.
+          example: 759bdc29-7a1c-4a5e-96a8-b44b2876b9e9
+        groupId:
+          type: string
+          description: Project owner group id
+          example: 4ca3f8ff-e498-40da-b230-360716e701a6
+
+    SharingGroupsAddRequest:
+      title: SharingGroupsAddRequest
+      type: object
+      description: Project sharing group add request
+      properties:
+        groupId:
+          type: string
+          description: Project sharing group id
+          example: 4ca3f8ff-e498-40da-b230-360716e701a6
+
+    SharingGroupsRemoveRequest:
+      title: SharingGroupsRemoveRequest
+      type: object
+      description: Project sharing group removal request
+      properties:
+        groupId:
+          type: string
+          description: Project sharing group id
+          example: 4ca3f8ff-e498-40da-b230-360716e701a6
+
+    SharingUsersAddRequest:
+      title: SharingUsersAddRequest
+      type: object
+      description: Project sharing user add request
+      properties:
+        userId:
+          type: string
+          description: Project sharing user id
+          example: 759bdc29-7a1c-4a5e-96a8-b44b2876b9e9
+
+    SharingUsersRemoveRequest:
+      title: SharingUsersRemoveRequest
+      type: object
+      description: Project sharing user removal request
+      properties:
+        userId:
+          type: string
+          description: Project sharing user id
+          example: 759bdc29-7a1c-4a5e-96a8-b44b2876b9e9
+
+    TeamMembersInviteRequest:
+      title: TeamMembersInviteRequest
+      type: object
+      description: Project team members invite request
+      properties:
+        userId:
+          type: string
+          description: Project team member user id
+          example: 759bdc29-7a1c-4a5e-96a8-b44b2876b9e9
+        directRole:
+          type: string
+          description: 'Direct role assigned to the team member, such as "Developer", "Operator", etc.'
+          example: Developer
+
+    TeamMembersRemoveRequest:
+      title: TeamMembersRemoveRequest
+      type: object
+      description: Project team members removal request
+      properties:
+        userId:
+          type: string
+          description: Project team member user id
+          example: 759bdc29-7a1c-4a5e-96a8-b44b2876b9e9
+
+    Project:
+      type: object
+      description: Project
+      properties:
+        id:
+          type: string
+          description: Project id.
+          example: d8e4086c-8a5c-4372-9781-03a83c87defb
+        name:
+          type: string
+          description: Project name.
+          example: App-test-1
+        description:
+          type: string
+          description: Project description.
+          example: This project was created by Mendix Studio Pro.
+        ownerUserName:
+          type: string
+          description: Project owner's username.
+          example: Peter
+        ownerGroupName:
+          type: string
+          description: Project owner's group name.
+          example: IT
+        memberCount:
+          type: integer
+          description: Number of members in the project.
+          example: 2
+        repositoryId:
+          type: string
+          description: Repository id.
+          example: '172'
+        repositoryName:
+          type: string
+          description: Repository name.
+          example: App-test-1
+        repositoryURL:
+          type: string
+          description: Repository URL.
+          example: 'https://gitlab.com/lato/App-test-1.git'
+        isActive:
+          type: boolean
+          description: Indicates if the project is active.
+          example: true
+        createdDate:
+          type: string
+          description: Date when the project was created.
+          example: '2023-08-13T06:06:55.196Z'
+
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+          example: 400
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+          example: Bad Request
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+          example: Please see invalid-params list
+        invalid-params:
+          type: array
+          description: "(Optional) JSON list List of name, reason keys for invalid attribute values.\r\n"
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: "Parameter name.\r\n"
+                example: name
+              reason:
+                type: string
+                description: "Reason for error.\r\n"
+                example: Project name can not be empty
+      required:
+        - status
+        - title
+        - detail
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+security:
+  - basicAuth: []
+  - mxtoken: []
+tags:
+  - name: projects
+    description: 'For managing Project app, team members, sharing users and sharing groups access'

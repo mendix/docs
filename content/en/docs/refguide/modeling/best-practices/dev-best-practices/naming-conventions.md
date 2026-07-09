@@ -15,7 +15,7 @@ This document provides basic advice on logical, scalable naming conventions for 
 
 ### Module Names
 
-Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have UpperCamelCase names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
+Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have UpperCamelCase names that identify the responsibility of the module, for example **CustomerManagement** or **SharePointIntegration**.
 
 ### Module Roles
 
@@ -25,15 +25,19 @@ The [module roles](/refguide/module-security/#module-role) should have logical n
 
 ### Entity Names
 
-Most of the time, an [entity](/refguide/entities/) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes app-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use UpperCamelCase, for example, **HousekeepingRecord** or **LogEntry**.
+Most of the time, an [entity](/refguide/entities/) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes app-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. 
+
+Mendix advises using names which avoid abbreviations and underscores. Entity names should use PascalCase, for example **HousekeepingRecord** or **LogEntry**.
 
 {{% alert color="info" %}}
-Following these entity naming conventions will prevent issues with naming conflicts between modules and entities. For example, if a module named **Customer** contains an entity named **customer** (note the lower-case "c"), there will be a Java compilation error and the app will not run. Renaming the entity to **Customer** will solve the problem.
+Following these entity naming conventions will prevent issues with naming conflicts between modules and entities. For example, Java packages are generated for each module using lowercase names. This means that if a module named **Customer** contains an entity named **customer** (note the lower-case "c"), there will be a Java compilation error and the app will not run. Renaming the entity to **Customer** solves the problem.
 {{% /alert %}}
 
 ### Entity Attributes
 
-The entity [attribute](/refguide/attributes/) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use UpperCamelCase, for example, **FirstName** or **TelephoneNumber**.
+The entity [attribute](/refguide/attributes/) should reflect a property of a real-world object that people can relate to and fits the purpose of that property.
+
+Mendix advises using names which avoid abbreviations and underscores in the names (except in the case described in the next paragraph). Entity attributes should use PascalCase, for example **FirstName** or **TelephoneNumber**.
 
 Attributes that do not reflect business-related data, but are only necessary for technical reasons, should start with an underscore (`_`).
 
@@ -65,7 +69,7 @@ Keep in mind that folders do not affect the full path of the resource. For examp
 
 ### Folder Structure
 
-The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. 
+The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application as you will be able to find required documents faster and will be able to develop and fix faster. 
 
 The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. Mendix recommends combining the guidelines below in a way that fits your app.
 
@@ -75,7 +79,7 @@ Every app consists of processes. Structure your documents for these processes in
 
 #### Entity-Related Sources
 
-Every app has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
+Every app has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example **events** and **pages**.
 
 ## Microflows {#microflow-naming-conventions}
 
@@ -108,16 +112,16 @@ The microflows related to such an event handler should have the following prefix
 
 For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that does the calculation, you should use **CAL_** as a prefix and refer to the entity and attribute which is being calculated. The calculation is triggered when you show the entity on a page or use it in a microflow. On a page, the object's calculation attribute refreshes if you navigate away from the object and back to it in any way (via pagination buttons or tabs or by re-entering the page).
 
-| Event Type      | Prefix               |
-| ----------------| -------------------- |
+| Event Type      | Prefix                             |
+| ----------------| ---------------------------------- |
 | Calculation     | CAL_{Entity name}_{Attribute name} |
 
 ### Page-Based Microflows
 
 [Pages](/refguide/pages/) have a number of events that can trigger a microflow. See the following list for the examples and prefixes:
 
-| Event Type                | Prefix          | Used In |
-| ------------------------- |---------------- |-------- |
+| Event Type                | Prefix          | Used In          |
+| ------------------------- |---------------- |----------------- |
 | On enter event            | OEN_{Purpose}   | Input elements   |
 | On change event           | OCH_{Purpose}   | Input elements   |
 | On leave event            | OLE_{Purpose}   | Input elements   |
@@ -152,7 +156,7 @@ For the microflow that you use in your [scheduled events](/refguide/scheduled-ev
 
 ### App Microflows {#app-microflows}
 
-Your [app settings](/refguide/app-settings/) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
+Your [app settings](/refguide/app-settings/) provide three events that can trigger a microflow. In these cases Mendix advises writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
 | Event Type      | Microflow Name | Sub-Microflow Prefix |
 | --------------- | -------------- | -------------------- |
@@ -245,7 +249,7 @@ Pages that are called when a [user task](/refguide/user-task/) in a workflow is 
 | List objects of a single entity type | _Overview    |
 | Create an object                     | _New         |
 | Update an object                     | _Edit        |
-| Create or update an object         | _NewEdit     |
+| Create or update an object           | _NewEdit     |
 | View an object (read-only)           | _View        |
 | Select a single object               | _Select      |
 | Select multiple objects              | _MultiSelect |
@@ -267,7 +271,7 @@ Documents used to support integration should have the prefixes listed below.
 {{% alert color="warning" %}}
 The [Deep Link](/appstore/modules/deep-link/) module is deprecated. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to page and microflow URLs, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section in *Deep Link*.
 
-We will continue to actively support this module for Studio Pro 9.
+Mendix will continue to actively support this module for Studio Pro 9.
 {{% /alert %}}
 
 ## Home Pages

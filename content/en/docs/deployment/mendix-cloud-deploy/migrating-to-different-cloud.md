@@ -8,7 +8,7 @@ aliases:
     - /developerportal/howto/migrating-to-v4.html
     - /developerportal/howto/migrating-to-v4
     - /developerportal/deploy/migrating-to-v4
-# Original of diagram is in a powerpoint slide under /static/originals/…
+# Original of diagram is in a powerpoint slide under /source_files/…
 ---
 
 ## Introduction

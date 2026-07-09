@@ -17,7 +17,8 @@ At the top of the page, you can find key information about your app, such as its
 On the right side of the page, you can find the following information about your app:
 
 * The size of your **Team** and your team members. Up to 5 team members can be displayed here at a time.
-* The **Project Details** section, which displays the categories assigned to the project. The assigned categories allow you to easily classify and search apps on the [Apps](/developerportal/) page.     
+* The **Details** section, which displays the company owning the project, the deployment provider, the last commit date, and the current Mendix version of the main branch line. The Mendix version is presented as a clickable link that takes you directly to the Mendix Marketplace, where you can download the corresponding Mendix version.
+* The **Categories** section, which displays the categories assigned to the project. The assigned categories allow you to easily classify and search apps on the [Apps](/developerportal/) page.     
     If you have the **App Settings** permission, you can change the assigned categories on the [Settings](/developerportal/general-settings/) page.
 * The **App Insights** section displays a summary of the latest feedback items and Mini Survey responses received for the app.
 

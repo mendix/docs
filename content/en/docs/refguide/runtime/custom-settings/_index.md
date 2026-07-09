@@ -23,7 +23,7 @@ Each custom setting consists of a name and a value. For example, to set the hash
 If you are running your app on Mendix Cloud or SAP Business Technology Platform, you can access these settings by opening your app in [Apps](https://sprintr.home.mendix.com/) and choosing **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
 * the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about Mendix Cloud
-* the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) section of *SAP Business Technology Platform* for information about the SAP BTP
+* the [Runtime tab](/developerportal/deploy/sap-cloud-platform/environments/#runtime-tab) section of *Environment Details on SAP BTP* for information about the SAP BTP
 
 When you are running your app locally, you can set these values in a [Configuration](/refguide/configurations-tab/#custom).
 

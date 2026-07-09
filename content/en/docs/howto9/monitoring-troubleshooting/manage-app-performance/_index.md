@@ -25,5 +25,5 @@ Outside Mendix Cloud, you can use the following monitoring tools:
 
 * Datadog
 * New Relic – see [Manage App Performance with New Relic](/howto9/monitoring-troubleshooting/manage-app-performance-with-new-relic/)
-* Dynatrace – for example on [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/#runtime-tab)
+* Dynatrace – for example on [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/environments/#runtime-tab)
 * Other tools – you can see these under [Telemetry Configuration](https://github.com/mendix/cf-mendix-buildpack#telemetry-configuration) in the Mendix *Cloud Foundry Buildpack*.

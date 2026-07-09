@@ -379,4 +379,4 @@ To configure your Mendix app for Snowflake Cortex Search, perform the following 
 
 ### Example Implementation
 
- The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains example implementations of the Analyst, ANOMALY DETECTION, COMPLETE and TRANSLATE functionalities. For more information, see [Snowflake Cortex Analyst](/agents/snowflake-cortex/#functionalities).
+ The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains example implementations of the Analyst, ANOMALY DETECTION, COMPLETE and TRANSLATE functionalities. For more information, see [Snowflake Cortex Analyst](/agents/snowflake-cortex/).

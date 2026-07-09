@@ -8,6 +8,13 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.12.0
+
+* We removed the elements helper methods (`add*()`, `get*()`, `getContainer()`, and `delete()`) from the Model API types.
+* We added a `permissionsChanged` event to the [Permissions API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/) that notifies you when the user changes the permissions of your extension.
+* We added the `documentsChanged` event, which notifies you when a document that your extension depends on is modified in Studio Pro.
+* The Studio Pro version is now available through the [Preferences API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/preference-api/).
+
 ## Version 11.11.0
 
 * We added a **New** button to the [Element Selector API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/), which allows users to add new documents and entities from the element selector.

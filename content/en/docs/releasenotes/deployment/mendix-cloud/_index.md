@@ -14,6 +14,14 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
 
+## July 2026
+
+### July 16, 2026
+
+#### New Features
+
+* AI Log Summary is now available on the **Environments** page. It provides an overview of your application's log activity from the previous 24 hours, including error patterns, lifecycle events, and security signals. For more information, refer to [AI Log Summary](/developerportal/deploy/maia-operate/ai-log-summary/).
+
 ## June 2026
 
 ### June 28, 2026

@@ -17,7 +17,7 @@ After installing the Workstation Client, you can modify its autostart settings b
 For more information, refer to the documentation of your operating system, such as the following topics:
 
 * Modifying autostart settings in Microsoft Windows - [Configure Startup applications in Windows](https://support.microsoft.com/en-us/windows/experience/startup-boot/configure-startup-applications-in-windows)
-* Modifying login items in MacOS - [Change Login Items & Extensions settings on Mac](https://support.apple.com/guide/mac-help/change-login-items-extensions-settings-mtusr003/mac)
+* Modifying login items in macOS - [Change Login Items & Extensions settings on Mac](https://support.apple.com/guide/mac-help/change-login-items-extensions-settings-mtusr003/mac)
 
 ## Stopping the Workstation Client Manually {#stop-client}
 

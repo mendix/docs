@@ -24,6 +24,10 @@ aliases:
 {{% alert color="warning" %}} 
 Cloud Foundry buildpack deployment from Studio Pro is deprecated in version 10 and removed in version 11. Consider using the [Mendix Portable Runtime for Cloud Foundry](/developerportal/deploy/cloud-foundry-pad/) option instead. 
 
+With the release of Mendix Portable Runtime, we are transitioning away from the Cloud Foundry buildpack toward a modern, container-native approach that packages Mendix applications. As part of this shift, the Cloud Foundry Buildpack will begin deprecating support for Mendix 12 and future Runtime versions.
+
+For more information, see [Mendix Portable Runtime: Deployment, Simplified](https://www.mendix.com/blog/mendix-portable-runtime/).
+
 The following documentation is provided for reference purposes only.
 {{% /alert %}}
 

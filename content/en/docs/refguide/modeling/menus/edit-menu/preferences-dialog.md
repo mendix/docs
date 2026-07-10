@@ -293,11 +293,9 @@ Select this option to use the modernized version of the App Explorer. You must r
 
 Select this option to use the modernized (web) Runtime console. You must restart Studio Pro to use this feature.
 
-### Debugger
+### Debug Windows
 
-Select this option to use the modernized Debugger pane, which includes the new Breakpoints, Debugger, and Variables panes.
-
-You must restart Studio Pro to use this feature.
+Select this option to use the modernized Debugger pane, which includes the new Breakpoints, Debugger, and Variables panes. You must restart Studio Pro to use this feature.
 
 ### Errors Pane
 

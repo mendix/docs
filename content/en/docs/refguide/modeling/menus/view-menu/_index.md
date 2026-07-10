@@ -87,6 +87,10 @@ The **Documentation** pane displays the documentation for the currently selected
 
 The [Errors pane](/refguide/errors-pane/) displays the [errors](/refguide/consistency-errors/), warnings, and deprecations that exist in your app.
 
+### Extensions
+
+The **Extensions** pane allows you to manage the extensions installed in your app. For more information on extensions, see [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/).
+
 ### Find Results
 
 This pane displays the results of the latest find action. You can search for text, usages of an element (for example, an attribute), and unused items.

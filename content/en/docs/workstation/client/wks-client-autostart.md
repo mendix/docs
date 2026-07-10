@@ -21,6 +21,6 @@ For more information, refer to the documentation of your operating system, such 
 
 ## Stopping the Workstation Client Manually {#stop-client}
 
-The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available in [Developer Mode](/mendix-workstation/management-stations/#developer-mode). 
+The **Close** button closes the Client window but does not terminate the application. It continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available in [Developer Mode](/mendix-workstation/management-stations/#developer-mode). 
 
 Alternatively, you can stop the Workstation Client process by using Windows Task Manager.

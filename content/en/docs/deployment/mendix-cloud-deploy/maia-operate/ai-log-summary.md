@@ -9,14 +9,15 @@ beta: true
 {{% alert color="warning" %}}
 This feature is in Public Beta. For more information, see [Release Status](/releasenotes/release-status/).
 {{% /alert %}}
+
 ## Introduction
 
-AI Log Summary is a feature of Maia Operate that provides an AI-generated daily digest of your application's log activity for a single Mendix environment. By analyzing the previous 24 hours of log data, it generates a summary of error patterns, application lifecycle events, and security signals, giving you a quick operational overview without the need to manually download or review raw log files.
+AI Log Summary is a feature of Maia Operate that provides an AI-generated overview of your application's log activity for a single Mendix environment. By analyzing the previous 24 hours of log data, it generates a summary of error patterns, application lifecycle events, and security signals, giving you a quick operational overview without the need to manually download or review raw log files.
 
 Summaries are generated on demand and are intended to help identify areas that may require further investigation. They provide a starting point for troubleshooting and should be used alongside the underlying log data, not as a replacement for it.
 
 {{% alert color="info" %}}
-AI Log Summary is only available for apps running on Kubernetes clusters. It is not available for apps running on Mendix Cloud V3 or other non-Kubernetes environments.
+AI Log Summary is currently not available in Mendix Cloud Africa (Cape Town).
 {{% /alert %}}
 
 ## Prerequisites
@@ -27,16 +28,11 @@ To use AI Log Summary, you must have **Access to Monitoring** permission for the
 
 To generate an AI Log Summary:
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
-2. Go to the **Environments** page.
-3. In the **Overview** tab, locate the target environment.
-4. Click **Explain**.
+1. Open your app in [Mendix Cloud](https://cloud.home.mendix.com).
+2. In the **Overview** tab, locate the target environment.
+3. Click **Explain**.
 
 Analysis typically takes 10–30 seconds. AI Log Summary displays a progress indicator while the analysis is running.
-
-{{% alert color="info" %}}
-AI Log Summary is currently not available in Mendix Cloud Africa (Cape Town).
-{{% /alert %}}
 
 ## Understanding the Summary {#understand}
 
@@ -48,7 +44,7 @@ When the AI analysis is complete, the summary opens in a read-only window. It is
 * **Security signals** – patterns in HTTP access logs that may indicate unusual activity, such as repeated failed authentication attempts or suspected probes
 
 {{% alert color="warning" %}}
-Summaries are best-effort and may miss edge cases or omit patterns that appear infrequently in the log data. Always verify findings against the raw log data before taking action. Do not use summaries as the sole basis for application changes, compliance decisions, or security assessments.
+Summaries are AI-generated and may miss edge cases or omit patterns that appear infrequently in the log data. Always verify findings against the raw log data before taking action. Do not use summaries as the sole basis for application changes, compliance decisions, or security assessments.
 {{% /alert %}}
 
 ## Data Handling {#data-handling}

@@ -119,6 +119,6 @@ To configure the Workstation Client on a macOS machine, perform the following st
 
 ### Stopping the Workstation Client {#stop-client}
 
-The Workstation Client sets up the required auto-start settings during the first, manual start. Afterwards, it runs automatically on system startup.
+The Workstation Client sets up the required auto-start settings during the first, manual start. Afterward, it runs automatically on system startup.
 
 The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.

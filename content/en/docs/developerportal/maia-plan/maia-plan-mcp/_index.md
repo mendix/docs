@@ -104,7 +104,7 @@ To configure Claude Code to connect to the Maia Plan MCP Server, follow these st
 
 For detailed instructions, refer to the [Claude Code documentation](https://claude.com/docs/connectors/building/mcp).
 
-#### Configuring Visual Studio Code Copilot 
+#### Configuring Visual Studio Code Copilot {#configuring-visual-studio-code-copilot}
 
 To configure Visual Studio Code Copilot to connect to the Maia Plan MCP server, follow these steps:
 

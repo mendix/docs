@@ -12,11 +12,13 @@ If you encounter issues with Maia Plan as MCP Server, use the following troubles
 
 ## 401 or 403 Errors
 
-Your PAT is invalid or expired. Regenerate the token in [User Settings](/portal/user-settings/#pat) and update the `MENDIX_TOKEN` environment variable.
+Your personal access tokem (PAT) is invalid or expired. Regenerate the PAT in [User Settings](/portal/user-settings/#pat), then update the `MENDIX_TOKEN` environment variable.
 
 ## Tools Do Not Appear in Copilot
 
-Confirm that `mcp.json` is in the correct location (see [Configuring Visual Studio Code Copilot](#configuring-visual-studio-code-copilot)), then open **Command Palette** and run **MCP: Reset Cached Tools**.
+Confirm that `mcp.json` is in the correct location, then open **Command Palette** and run **MCP: Reset Cached Tools**.
+
+Refer to [Configuring Visual Studio Code Copilot](/developerportal/maia-plan-mcp/#configuring-visual-studio-code-copilot) for details.
 
 ## Server Does Not Start
 

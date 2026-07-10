@@ -2,7 +2,7 @@
 title: "Registering Workstation Clients"
 url: /mendix-workstation/register/
 description: "Describes how to register and pre-configure multiple Workstation Clients."
-weight: 35
+weight: 40
 ---
 
 ## Introduction

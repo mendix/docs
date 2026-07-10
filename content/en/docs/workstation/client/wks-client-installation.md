@@ -62,7 +62,7 @@ If you have administrator rights for your Windows computer, install the Workstat
     
     The default installation folder is *C:\Program Files\Mendix Workstation*. The app data folder can be found at *C:\ProgramData\Mendix Workstation*. The client runs automatically after the installation is completed.
 
-4. After the installation finishes, start the Workstation Client manually.
+4. After the installation finishes, start the Workstation Client.
 
 ### Windows Portable
 
@@ -71,7 +71,7 @@ If you do not have administrator rights for your Windows computer, create a port
 1. Download the [portable Microsoft Windows version of the installer](https://marketplace.mendix.com/link/component/247456). 
 2. As a best practice, create a new folder for the Client (for example, in your *Documents* folder).
 3. Extract the Client to the target folder, and then click the *.exe* file to run the Client.
-4. After the installation finishes, start the Workstation Client manually.
+4. After the installation finishes, start the Workstation Client.
 
 ### Linux
     
@@ -104,7 +104,7 @@ To install the Workstation Client on a Linux machine, perform the following step
     sudo capsh --user=$(whoami) --iab="^cap_net_raw" -- -c "'/opt/Mendix Workstation/Mendix Workstation'"
     ```
 
-6. After the installation finishes, start the Workstation Client manually.
+6. After the installation finishes, start the Workstation Client.
 
 ### MacOS
 
@@ -115,10 +115,8 @@ To configure the Workstation Client on a macOS machine, perform the following st
 
     The macOS version of the Workstation Client is not yet notarized by Apple, so you will see a warning during the installation. For information about resolving the issue, see [Open a Mac app from an unknown developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac) in the macOS documentation.
 
-3. After the installation finishes, start the Workstation Client manually.
+3. After the installation finishes, start the Workstation Client.
 
-### Stopping the Workstation Client {#stop-client}
+## Stopping the Workstation Client
 
-The Workstation Client sets up the required auto-start settings during the first, manual start. Afterward, it runs automatically on system startup.
-
-The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.
+The Workstation Client sets up the required auto-start settings during the first start. Afterward, it runs automatically on system startup. To change this behavior, see [Autostart Configuration for the Workstation Client](/mendix-workstation/autostart-configuration/)

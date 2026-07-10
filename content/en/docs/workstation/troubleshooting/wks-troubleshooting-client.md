@@ -14,8 +14,6 @@ This document provides troubleshooting instructions for some potential issues re
 
 By default, the Client retains logs of up to 10 MB for the past seven days locally on your computer. To access the logs, open the Client and select the **Logs** option from the **three dots** menu in the top right corner, then optionally select the level of logs you want to see. 
 
-Opening the Client's console through the browser developer tools (**Ctrl + Shift + I**) can also provide additional information about encountered errors in the UI of the Client.
-
 Log files are also available by day in the Client's app data folder. On Windows, press **Win + R** and enter:
 
 * If you installed the Client using the installer for all users: `%ProgramData%\Mendix Workstation\logs`

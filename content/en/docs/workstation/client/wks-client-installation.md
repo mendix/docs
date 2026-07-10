@@ -108,7 +108,13 @@ The Workstation Client runs automatically at system startup. To modify this beha
 To configure the Workstation Client on a macOS machine, perform the following steps:
 
 1. Download the [macOS version of the installer](https://marketplace.mendix.com/link/component/253905).
-2. 
+2. Double-click the installer to start the installation process.
+
+    The macOS version of the Workstation Client is not yet notarized by Apple, so you will see a warning during the installation. For information about resolving the issue, see [Open a Mac app from an unknown developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac) in the macOS documentation.
+
+3. After the installation finishes, start the Workstation Client manually.
+
+    On macOS, the Client sets up the required auto-start settings during the first, manual start. Afterwards, it runs automatically on system startup.
 
 ### Stopping the Workstation Client {#stop-client}
 

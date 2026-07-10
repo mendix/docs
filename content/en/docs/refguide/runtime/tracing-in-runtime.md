@@ -2,6 +2,8 @@
 title: "OpenTelemetry"
 url: /refguide/opentelemetry-in-runtime/
 description: "Describes how to setup and use OpenTelemetry in the Mendix Runtime."
+aliases:
+   - /refguide/tracing-in-runtime/
 ---
 
 ## Introduction

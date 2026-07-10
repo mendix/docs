@@ -293,6 +293,10 @@ Select this option to use the modernized version of the App Explorer. You must r
 
 Select this option to use the modernized (web) Runtime console. You must restart Studio Pro to use this feature.
 
+### Debug Windows
+
+Select this option to use the modernized Debugger pane, which includes the new Breakpoints, Debugger, and Variables panes. You must restart Studio Pro to use this feature.
+
 ### Errors Pane
 
 Select this option to use the modernized version of the Errors Pane. You must restart Studio Pro to use this feature.
@@ -300,6 +304,10 @@ Select this option to use the modernized version of the Errors Pane. You must re
 ### Expression Editor
 
 This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+
+### Find Results
+
+Select this option to use the modernized Find Results pane. You must restart Studio Pro to use this feature.
 
 ### GraphQL {#graphql}
 
@@ -309,21 +317,23 @@ You can publish data as a GraphQL service. When you enable this feature, you can
 
 Select this option to use the modernized version of the JavaScript action editor. You must close all open JavaScript actions to use this feature.
 
+### Maia
+
+Select this option to use a custom AI provider for Maia.
+
 ### Mapping Editor
 
 This setting allows you to set the beta version as the default editor.
+
+### Project Loading
+
+Select this option to enable optimizations during project loading.
 
 ### System Texts Editor
 
 This option allows you to use the web version of the system texts editor. It is enabled by default.
 
 If Translation Generator is also enabled, you can use it in this editor. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
-
-### Workflow
-
-In Studio Pro 11.8, select **Enable workflow event sub-processes (beta)** to allow adding [event sub-processes](/refguide/workflow-event-sub-processes/) to your workflow in the workflow editor.
-
-In Studio Pro 11.9 and above, this option is removed. Workflow event sub-processes are in general availability and enabled by default.
 
 ## Read More
 

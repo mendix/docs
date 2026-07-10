@@ -24,7 +24,7 @@ AI Log Summary is currently not available in Mendix Cloud Africa (Cape Town).
 
 To use AI Log Summary, you must have **Access to Monitoring** permission for the environment. For more information, refer to [Node Permissions](/developerportal/deploy/node-permissions/#access-to-monitoring).
 
-## Generating a Log Summary {#generate}
+## Generating a Log Summary {#generate-log-summary}
 
 To generate an AI Log Summary:
 
@@ -34,7 +34,7 @@ To generate an AI Log Summary:
 
 Analysis typically takes 10–30 seconds. AI Log Summary displays a progress indicator while the analysis is running.
 
-## Understanding the Summary {#understand}
+## Understanding the Log Summary {#understand-log-summary}
 
 When the AI analysis is complete, the summary opens in a read-only window. It is presented in plain language, which can be copied for use in tickets or documentation. It includes the following sections:
 

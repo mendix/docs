@@ -80,6 +80,10 @@ Mendix workflows currently support a **single concurrent instance** per defined 
 
 If your workflow has multiple, distinct event sub-processes defined (for example, one for "Address Change" and one for "Document Upload"), each one can have its own active instance simultaneously. One being active does not prevent a different one from being triggered.
 
+{{% alert color="info" %}}
+Currently, a timer start event fires only once. Support for recurring timers may be added in the future.
+{{% /alert %}}
+
 ## Getting started
 
 ### Adding Event Sub-Processes

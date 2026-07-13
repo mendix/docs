@@ -99,9 +99,11 @@ Auto detecting card readers is enabled by default. You can toggle the **Detect C
 
 ### Developer Mode {#developer-mode}
 
-Developer mode can be configured on the **Station** page by selecting **Enable Developer Mode**. 
+Developer mode can be configured on the **Station** page by selecting **Enable Developer Mode**.
 
-When Developer Mode is enabled, users of the Workstation Client can perform the following actions:
+Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Mendix Workstation Management](/mendix-workstation/management-config/).
+
+When developer mode is enabled, users of the Workstation Client can perform the following actions:
 
 * Quit the program from the Start menu.
 * Deregister the Workstation Client, allowing it to be registered to another station.

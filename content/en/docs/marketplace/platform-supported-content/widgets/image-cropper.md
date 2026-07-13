@@ -81,14 +81,12 @@ The **Events** section allows you to configure what happens each time the crop i
 
 The **Canvas** section is used to configure the on-screen size of the crop area. It includes the following properties:
 
-- **Canvas max width (px)** – the maximum on-screen width of the crop area
-  - Default: _800_
-  - The image scales down to fit, and the canvas wraps the rendered image so that smaller crops produce a smaller canvas with no blank gaps
-  - This property does not change the saved image size
-- **Canvas max height (px)** – the maximum on-screen height of the crop area
-  - Default: _800_
-  - The image scales down to fit, and the canvas wraps the rendered image so that smaller crops produce a smaller canvas with no blank gaps
-  - This property does not change the saved image size
+- **Canvas max width (px)** (default **800**) – Sets the maximum on-screen width of the crop area.
+  - The image scales down to fit, and the canvas wraps the rendered image so that smaller crops produce a smaller canvas with no blank gaps.
+  - This property does not change the saved image size.
+- **Canvas max height (px)** (default **800**) – the maximum on-screen height of the crop area.
+  - The image scales down to fit, and the canvas wraps the rendered image so that smaller crops produce a smaller canvas with no blank gaps.
+  - This property does not change the saved image size.
 
 ### Behavior Tab {#behavior}
 
@@ -96,23 +94,19 @@ The **Canvas** section is used to configure the on-screen size of the crop area.
 
 The **Interaction** section is used to configure how the end-user interacts with the crop selection. It includes the following property:
 
-- **Resizable handles** – lets the end-user resize the selection by dragging its corners
-  - Default: **Yes**
+- **Resizable handles** (default **Yes**) – Allows the end-user to resize the selection by dragging its corners.
   - When set to **No**, the selection cannot be resized by dragging its corners
 
 #### Buttons Section
 
 The **Buttons** section is used to configure the editing buttons shown in the toolbar. It includes the following properties:
 
-- **Enable rotation** – shows rotate-left and rotate-right buttons that rotate the image in 90-degree steps
-  - Default: **Yes**
-  - The rotation is baked into the saved image
-- **Enable grayscale** – shows a grayscale toggle
-  - Default: **No**
-  - When the toggle is on, the saved image is converted to grayscale (black and white)
-- **Enable reset** – shows a **Reset** button that restores the original image and clears zoom, rotation, and grayscale
-  - Default: **Yes**
-  - The button is available only when the original image could be captured
+- **Enable rotation** (default **Yes**) – Shows rotate-left and rotate-right buttons that rotate the image in 90-degree increments.
+  - The rotation is baked into the saved image.
+- **Enable grayscale** (default **No**) – Shows a grayscale toggle.
+  - When the toggle is on, the saved image is converted to grayscale (black and white).
+- **Enable reset** (default **Yes**) – Shows a **Reset** button that restores the original image and clears zoom, rotation, and grayscale.
+  - The button is available only when the original image could be captured.
 
 #### Zoom Section
 

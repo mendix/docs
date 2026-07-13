@@ -236,7 +236,7 @@ For more information, see [Nanoflows](/mendix-workstation/connector/#javascript-
 
 * Automatic suffixing for duplicate workstations – To make managing your workstations even smoother, we have implemented automatic suffixing for imported workstations that have duplicate names. This helps prevent naming conflicts and keeps your environment tidy.
 * Feedback module replaced by the new Forum Space – We have removed the Feedback function in the Workstation Management. Don't worry, your voice is still incredibly important to us! Please share your questions, ideas, and feedback in the new dedicated [Mendix Forum Space for Mendix Workstation](https://community.mendix.com/link/spaces/mendix-workstation-client). This change will help us centralize discussions and provide better support.
-* Special characters in Workspace names – You can now use special characters in your Workspace names, giving you more flexibility and personalization.
+* Special characters in workspace names – You can now use special characters in your workspace names, giving you more flexibility and personalization.
 * Unique auto-accepted computer names – We have added a uniqueness validation to the **Auto-Accepted Computer Name** field used for bulk registration. This ensures that each computer name is distinct, preventing potential conflicts during the registration process.
 
 #### Fixes
@@ -362,7 +362,7 @@ Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limit
 
 #### Logging Is Configurable in Workspace Settings
 
-The level of logs written to log files and visible in the client is configurable in Workspace Settings. You can configure the following:
+The level of logs written to log files and visible in the client is configurable in workspace Settings. You can configure the following:
 
 * Log level: Info, Warn, Error, Debug.
 * Log retention policy: Maximum log folder size (in MB) and maximum number of stored days.
@@ -611,7 +611,7 @@ The second pre-release of Mendix Workstation is available under the conditions o
 #### Breaking Changes
 
 * The new connector is incompatible with the previous releases. Your Mendix app must be refactored to adopt the new pattern.
-* Due to the introduction of the Workspace, existing station configurations are deleted. Stations must be reconfigured.
+* Due to the introduction of the workspace, existing station configurations are deleted. Stations must be reconfigured.
 * The Workstation Management is no longer compatible with the Workstation Client version 2.0. Clients must be updated to version 2.1.
 
 #### App Upgrade

@@ -12,22 +12,18 @@ Navigate to the **Settings** page in a workspace to configure settings that are 
 
 ## Log Settings
 
-Log settings are available in Workstation Management at **Settings > Log Settings**.
-
 The Workstation Client always stores logs to the file system it is installed on (for more information, see [Troubleshooting the Workstation Client](/mendix-workstation/troubleshooting-workstation-client/)). No logs are send to the Workstation Management. However, you can configure the log level and retention policy of all the Workstation Clients that are registered to stations in the workspace.
-
-{{< figure src="/attachments/workstation/wks-settings1.png" class="no-border" >}}
 
 ### Log Level
 
-Configure the log level of the logs stored by the Workstation Client(s).
+Configure the log level of the logs stored by the Workstation Clients.
 
-* Info (default) - Logs normal operation and key application events. For example, the time when the Client was launched or terminated.
-* Warn - Info logs and potential issues or suboptimal conditions. For example, if a request to refresh the Client's configuration timed out.
-* Error - Warning logs and visible problem, something is not working as expected. For example, if a port to connect to a device is already in use.
-* Debug - Error logs and detailed internal state for developer diagnostics. For example, requests to the Workstation Management, communication with devices.
+* **Info** - This is the default log level. Logs normal operations and key application events. For example, the time when the Client was launched or terminated.
+* **Warn** - Logs potential issues, suboptimal conditions, and other situations that require attention, for example, if a request to refresh the Client's configuration timed out.
+* **Error** - Logs visible problems where something is not working as expected, for example, device failures.
+* **Debug** - Logs detailed internal states for developer diagnostics, for example, requests made to the Workstation Management, or communication with devices.
 
-By default, the unregistered Workstation Client is set to the **Debug** log level. After the client is registered, the log level as configured in the Workspace settings is applied.
+By default, unregistered Workstation Clients are set to the **Debug** log level. After a Client is registered, the log level as configured in the Workspace settings is applied.
 
 ## Retention Policy
 
@@ -37,10 +33,6 @@ Modify these settings to the needs of your logging policy, especially if you req
 
 ## Client's Auto-Refresh {#auto-refresh}
 
-Auto-refresh settings are available in Workstation Management at **Settings > Client's Auto-Refresh**.
-
-{{< figure src="/attachments/workstation/wks-settings2.png" class="no-border" >}}
-
 By default, the Workstation Client operates in auto-refresh mode. That is, any changes made to the configuration in Workstation Management are immediately reflected in the Client. 
 
 To change this behavior, change the **Auto-Refresh Mode** setting to **Off**. You can then force the configuration to refresh by clicking **Refresh on Computer** in Workstation Management, or by clicking **Refresh** in the Workstation Client.
@@ -49,8 +41,12 @@ The **Check Interval** setting is only available when the auto-refresh mode is e
 
 ## Local Device Testing
 
-Local device testing settings are available in Workstation Management at **Settings > Local Device Testing**.
+When enabled, this allows local device communication between the Workstation Client and Workstation Management App to use the **Test Your Station** feature of Studio Pro. You can use this option to test your devices.
 
-{{< figure src="/attachments/workstation/wks-settings3.png" class="no-border" >}}
+## Delete Workspace
 
-By default, the Workstation Management is pre-configured as an allowed app to connect to the Workstation Client on the **Test your Station** page in a workspace. To disable this setting, toggle it off.
+The option to delete a workspace is available only to the workspace [Owner](/mendix-workstation/management-team/#user-roles).
+
+{{% alert color="warning" %}}
+Deleting a workspace cannot be reverted. The entire repository and all associated cloud environments are deleted permanently. Selecting this option makes the project inaccessible to all team members, including the workspace Owner.
+{{% /alert %}}

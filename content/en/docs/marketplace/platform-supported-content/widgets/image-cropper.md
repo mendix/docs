@@ -114,23 +114,21 @@ The **Zoom** section is used to configure how the end-user zooms the image. It i
 
 - **Enable zoom** (default **Yes**) – The primary switch for zooming.
   - When set to **No**, the slider and mouse-wheel zoom are disabled and the image stays at **1x**.
-- **Show zoom slider**  (default **Yes**)– shows the zoom slider below the crop area.
+- **Show zoom slider**  (default **Yes**) – shows the zoom slider below the crop area.
   - Configurable when **Enable zoom** is set to **Yes**.
   - Turn this off to keep mouse-wheel zoom while hiding the slider.
 - **Mouse wheel zoom** (default **On (hold Ctrl)**) – Determines whether the mouse wheel zooms the image.
-  - Configurable when **Enable zoom** is set to **Yes**
-  - When set to **On (hold Ctrl)**, the wheel zooms only while Ctrl is held, so page scroll keeps working.
+  - Configurable when **Enable zoom** is set to **Yes**.
+  - When set to **On (hold Ctrl)**, the wheel zooms only while <kbd>Ctrl</kbd> is held, so page scroll keeps working.
   - When set to **On**, the wheel always zooms.
   - When set to **Off**, the wheel never zooms.
-- **Minimum zoom** – the smallest zoom level
-  - Default: _1_
-  - Configurable when **Enable zoom** is set to **Yes**
-  - A value of _1_ means the image fits the canvas; a value below _1_ lets the end-user zoom out further
-- **Maximum zoom** – the largest zoom level
-  - Default: _4_
-  - Configurable when **Enable zoom** is set to **Yes**
-  - A value of _4_ means the image can be zoomed up to four times the canvas size
-  - This value must be greater than **Minimum zoom**
+- **Minimum zoom** (default **1**) – Sets the smallest zoom level.
+  - Configurable when **Enable zoom** is set to **Yes**.
+  - A value of _1_ means the image fits the canvas; a value below _1_ lets the end-user zoom out further.
+- **Maximum zoom** (default **4**) – Sets the largest zoom level.
+  - Configurable when **Enable zoom** is set to **Yes**.
+  - A value of _4_ means the image can be zoomed up to four times the canvas size.
+  - This value must be greater than **Minimum zoom**.
 
 ### Output Tab {#output}
 

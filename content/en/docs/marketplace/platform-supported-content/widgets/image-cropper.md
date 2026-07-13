@@ -58,7 +58,7 @@ The **Crop area** section is used to configure the shape and proportions of the 
 - **Aspect ratio** – Locks the crop proportions.
   * ***Free** (default) – The end-user can resize the selection to any proportion.
   * **1:1**, **16:9**, **4:3**, or **3:4** – When set to one of these predetermined ratios, the selection is locked to that ratio during resize.
-  * ***Custom** – When enabled, the selection is locked to the ratio defined by **Custom aspect width** and **Custom aspect height**
+  * ***Custom** – When enabled, the selection is locked to the ratio defined by **Custom aspect width** and **Custom aspect height**.
 - **Custom aspect width** (default **1**) – The width side of the ratio (for example, _3_ in 3:2).
   - Configurable when **Aspect ratio** is set to **Custom**.
   - When either the custom width or custom height is not greater than _0_, the selection falls back to a free-form shape.
@@ -95,7 +95,7 @@ The **Canvas** section is used to configure the on-screen size of the crop area.
 The **Interaction** section is used to configure how the end-user interacts with the crop selection. It includes the following property:
 
 - **Resizable handles** (default **Yes**) – Allows the end-user to resize the selection by dragging its corners.
-  - When set to **No**, the selection cannot be resized by dragging its corners
+  - When set to **No**, the selection cannot be resized by dragging its corners.
 
 #### Buttons Section
 
@@ -164,4 +164,3 @@ The widget is shipped with default styles and works out of the box without Atlas
 ## Read More
 
 - [Image](/appstore/widgets/image/)
-- [Image Crop](/appstore/modules/image-crop/)

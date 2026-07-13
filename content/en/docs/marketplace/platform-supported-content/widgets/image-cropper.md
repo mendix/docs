@@ -12,7 +12,7 @@ The [Image Cropper](https://marketplace.mendix.com/link/component/<COMPONENT_ID>
 All editing is done client-side on an HTML canvas. There is no separate apply or save button: the crop is saved back to the image attribute automatically as the end-user works.
 
 {{% alert color="info" %}}
-This widget replaces the legacy [Image Crop](../modules/image-crop.md) module.
+This widget replaces the legacy [Image Crop](/appstore/modules/image-crop/) module.
 {{% /alert %}}
 
 {{< figure src="/attachments/appstore/platform-supported-content/widgets/image-cropper/image-cropper-demo.gif" alt="Cropping an image with a rectangular crop shape" class="no-border" >}}
@@ -22,7 +22,7 @@ This widget replaces the legacy [Image Crop](../modules/image-crop.md) module.
 - Crop with a rectangular or circular crop shape
 - Constrain the crop to a fixed aspect ratio (1:1, 16:9, 4:3, 3:4), a custom ratio, or a free selection
 - Zoom with a slider and/or the mouse wheel
-- Rotate the image in 90-degree steps
+- Rotate the image in 90-degree increments
 - Convert the image to grayscale
 - Reset the image back to its original state
 - Save the result as PNG or JPEG at the source or on-screen resolution
@@ -36,7 +36,7 @@ This widget replaces the legacy [Image Crop](../modules/image-crop.md) module.
 
 ## Configuration
 
-The following sections will describe the different available widget properties and how to configure the widget using them.
+The following sections will describe the different available widget properties and configurations.
 
 ### General Tab {#general}
 
@@ -44,23 +44,21 @@ The following sections will describe the different available widget properties a
 
 The **Source** section (required) is used to configure the image the widget edits. It has the following property:
 
-- **Image attribute** – the image to crop
-  - The cropped result is saved back to this same attribute
-  - The attribute is both the source and the destination for the widget
+- **Image attribute** – Specifies the image the end-user wants to crop.
+  - The cropped result is saved back to this same attribute.
+  - The attribute is both the source and the destination for the widget.
 
 #### Crop Area Section
 
 The **Crop area** section is used to configure the shape and proportions of the crop selection. It includes the following properties:
 
-- **Crop shape** – the shape of the crop
-  - Default: **Rectangle**
-  - When set to **Rectangle**, the full crop rectangle is saved
-  - When set to **Circle**, the corners are masked and the saved image is clipped to an ellipse inscribed in the crop rectangle
-- **Aspect ratio** – locks the crop proportions
-  - Default: **Free**
-  - When set to **Free**, the end-user can resize the selection to any proportion
-  - When set to **1:1**, **16:9**, **4:3**, or **3:4**, the selection is locked to that ratio during resize
-  - When set to **Custom**, the selection is locked to the ratio defined by **Custom aspect width** and **Custom aspect height**
+* **Crop shape** – Defines the shape of the crop.
+  * **Rectangle** (default) – When enabled, the full crop rectangle is saved.
+  * **Circle** – When enabled, the corners are masked and the saved image is clipped to an ellipse inscribed in the crop rectangle.
+- **Aspect ratio** – Locks the crop proportions.
+  * ***Free** (default) – The end-user can resize the selection to any proportion.
+  * **1:1**, **16:9**, **4:3**, or **3:4** – When set to one of these predetermined ratios, the selection is locked to that ratio during resize.
+  * ***Custom** – When enabled, the selection is locked to the ratio defined by **Custom aspect width** and **Custom aspect height**
 - **Custom aspect width** – the width side of the ratio (for example, _3_ in 3:2)
   - Default: _1_
   - Configurable when **Aspect ratio** is set to **Custom**

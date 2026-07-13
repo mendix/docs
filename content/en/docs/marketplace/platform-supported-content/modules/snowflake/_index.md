@@ -9,7 +9,45 @@ description_list: true
 
 ## Introduction
 
-Mendix has several options available for users who want to integrate their app with Snowflake in order to create data-driven enterprise applications.
+Mendix has several options available for users who want to integrate their app with Snowflake in order to create AI-powered and data-driven enterprise applications.
+
+## Snowflake AI and Data Integration Options
+
+### AI-Assisted Development
+
+#### Maia and Snowflake MCP
+
+#### MCP Marketplace Add-ons
+
+### Building AI-Powered Applications 
+
+#### Snowflake AI Data Connector
+
+#### External Database Connector
+
+#### Snowflake AI Capabilities
+
+### Building Data-Driven Applications
+
+#### External Database Connector
+
+#### Snowflake AI Data Connector
+
+### Loading Mendix Data into Snowflake
+
+The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIE0/mendix-mendix-data-loader/), available from the [Snowflake Marketplace](https://app.snowflake.com/marketplace), aids in ingesting Mendix data into Snowflake. The application is deployed in your Snowflake environment and interacts with the configured Mendix apps to ingest data that is exposed using an [Published OData Service](/refguide/published-odata-services/). 
+
+### Security and Governance
+
+##### Role Base Access Control (RBAC)
+
+For information about using Snowflake's role-based access control in a Mendix application, see [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
+
+## Documents in This Category
+
+
+
+
 
 ## Snowflake Integration Options
 
@@ -45,12 +83,7 @@ With the Snowflake AI Data Connector, authentication can be done either on syste
 
 The Snowflake AI Data Connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake AI Data Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
 
-##### Role Base Access Control (RBAC)
 
-For information about using Snowflake's role-based access control in a Mendix application, see [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
 
-### Loading Mendix Data into Snowflake
 
-The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIE0/mendix-mendix-data-loader/), available from the [Snowflake Marketplace](https://app.snowflake.com/marketplace), aids in ingesting Mendix data into Snowflake. The application is deployed in your Snowflake environment and interacts with the configured Mendix apps to ingest data that is exposed using an [Published OData Service](/refguide/published-odata-services/). 
 
-## Documents in This Category

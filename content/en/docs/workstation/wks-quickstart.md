@@ -36,7 +36,7 @@ A *station* represents a workstation on the shop floor. It can connect to one or
 
     {{< figure src="/attachments/workstation/wks-install1.png" class="no-border" >}}
 
-3. Enter a name for your new workspace, and then click **Create Workspace**.
+3. Enter a name for your new workspace, specify the environment type (**Test**, **Acceptance** or **Production**), and then click **Create Workspace**.
 
     {{< figure src="/attachments/workstation/wks-install2.png" class="no-border" >}}
 
@@ -145,7 +145,7 @@ The device, which will be used to connect to the TCP/IP server running in Workst
 
 After configuring the server and client pair, test their connectivity by performing the following steps:
 
-1. In the left navigation menu of the current workspace, click **Settings**, and ensure that the **Enable Local Device Testing** toggle is set to **On**.
+1. In the left navigation menu of the current workspace, click **Settings**, and ensure that the **Enable Local Device Testing** setting is enabled.
 2. In the left navigation menu, click **Test Your Station**.
 
     The page refreshes and displays a list of all your devices. This includes detected smart card readers available on your computer if you did not [disable detecting card readers](#create-workspace).

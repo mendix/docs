@@ -987,7 +987,7 @@ If your microflow is not correctly implemented you will be told that **Authentic
 
 ### Configuring Login Redirection
 
-This section describes how to configure the application's `login.html` page to initiate authentication using the OIDC SSO module. By default, the Mendix login.html page does not automatically start the OIDC authentication flow. To enable users to sign in with an OIDC identity provider, you can configure the login page to either automatically redirect users to the identity provider or allow users to choose between local authentication and OIDC SSO.
+This section describes how to configure the application's `login.html` page to initiate authentication using the OIDC SSO module. By default, the Mendix `login.html` page does not automatically start the OIDC authentication flow. To enable users to sign in with an OIDC identity provider, you can configure the login page to either automatically redirect users to the identity provider or allow users to choose between local authentication and OIDC SSO.
 
 #### Automatic Redirection
 
@@ -1001,10 +1001,8 @@ For manual redirection, replace the default `login.html` with the content of `lo
 
 Page URLs and Microflow URLs are supported with OIDC SSO for Mendix version 10.6 and above. To do this, follow the steps below:
 
-1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs, and ensure to remove the Deep Link module from your app to start the app successfully.
-2. Configure **OIDC.Login_Web_Button** as the **Sign-in page** in the **Authentication** section of the app **Navigation**.
-3. The user is redirected to the OIDC login page for authentication.
-4. After successful log in, the user is directed to the desired page using page URLs and microflow URLs within the application.
+1. Redirect users to the authentication flow using automatic or manual redirection and they redirect to the OIDC login page for authentication.
+2. After successful log in, the user is directed to the desired page using page URLs and microflow URLs within the application.
 
 If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above.
 

@@ -104,6 +104,13 @@ GenAI Resource Packs provide turn-key access to Generative AI technology, delive
 | --- | -- |
 | Standard | 48 |
 
+## Maia Units {#maia-units}
+
+Maia Resources is your access point to increase the capacity of Maia Units for using Maia Make in Studio Pro. It allows admins to provision, upgrade, downgrade, and deprovision Maia Units and manage the resources for Maia Make for their company. For technical details, see [Maia Resources](control-center/maia-resources/). 
+| Maia units per month | Mendix Cloud Tokens |
+| --- | -- |
+| 100 | 1 |
+
 ## Key Takeaways
 
 * Mendix Cloud Tokens are a specific type of Token used to access Cloud Resources in the Mendix Platform.

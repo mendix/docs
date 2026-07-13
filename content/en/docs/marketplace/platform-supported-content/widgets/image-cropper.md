@@ -136,18 +136,15 @@ The **Zoom** section is used to configure how the end-user zooms the image. It i
 
 The **Output** section is used to configure the format and resolution of the saved image. It includes the following properties:
 
-- **Output format** – the file format of the saved image
-  - Default: **PNG**
-  - When set to **PNG**, transparency is preserved and **JPEG quality** is ignored
-  - When set to **JPEG**, a white background is filled behind the image and smaller files are produced
-- **JPEG quality (0.0 - 1.0)** – the JPEG compression level
-  - Default: _0.92_
-  - Configurable when **Output format** is set to **JPEG**
-  - A higher value produces a sharper and larger file
-- **Output size** – the resolution of the saved crop
-  - Default: **Original (source resolution)**
-  - When set to **Original (source resolution)**, the crop is saved at the source resolution of the cropped region, which is the sharpest option
-  - When set to **Viewport (canvas dimensions)**, the crop is saved at the on-screen canvas size
+- **Output format** (default **PNG**) – Sets the file format of the saved image.
+  - When set to **PNG**, transparency is preserved and **JPEG quality** is ignored.
+  - When set to **JPEG**, a white background is filled behind the image and smaller files are produced.
+- **JPEG quality (0.0 - 1.0)** (default **0.92**) – Sets the JPEG compression level.
+  - Configurable when **Output format** is set to **JPEG**.
+  - A higher value produces a sharper and larger file.
+- **Output size** (default **Original (source resolution)**) – Sets the resolution of the saved crop.
+  - When set to **Original (source resolution)**, the crop is saved at the source resolution of the cropped region, which is the sharpest option.
+  - When set to **Viewport (canvas dimensions)**, the crop is saved at the on-screen canvas size.
 
 ## Usage
 
@@ -155,10 +152,10 @@ When the widget loads, it shows the image bound to the **Image attribute** with 
 
 The end-user edits the image as follows:
 
-- **Move or resize the crop box** – the crop is saved immediately when the end-user finishes the drag.
-- **Zoom or toggle grayscale** – the change is saved a short moment after the last adjustment.
-- **Rotate** – a live preview is shown immediately, and the rotation is then saved back to the image attribute.
-- **Reset** – the original image is restored and zoom, rotation, and grayscale are cleared. A reset is not saved as a crop and does not trigger the **On crop** action.
+- **Move or resize the crop box** – The crop is saved immediately when the end-user finishes the drag.
+- **Zoom or toggle grayscale** – The change is saved a short moment after the last adjustment.
+- **Rotate** – A live preview is shown immediately, and the rotation is then saved back to the image attribute.
+- **Reset** – The original image is restored and zoom, rotation, and grayscale are cleared. A reset is not saved as a crop and does not trigger the **On crop** action.
 
 ## Styling
 

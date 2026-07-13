@@ -24,11 +24,11 @@ Use agent skills to equip Maia with the domain knowledge and conventions it need
 Starting from Studio Pro 11.12, Maia supports not only project-level skills, but also skills for all application modules. These skills are exportable together with the module in which they are kept
 and can help you split your skills better.
 
-For guidance on writing effective skills, see [Best Practices for Skill Creators](https://agentskills.io/skill-creation/best-practices) and [Optimizing Skill Descriptions](https://agentskills.io/skill-creation/optimizing-descriptions) in the [Agent Skills documentation](https://agentskills.io/).
-
 {{% alert color="info" %}}
 Agents skills are not supported for Add-on and Solution modules.
 {{% /alert %}}
+
+For guidance on writing effective skills, see [Best Practices for Skill Creators](https://agentskills.io/skill-creation/best-practices) and [Optimizing Skill Descriptions](https://agentskills.io/skill-creation/optimizing-descriptions) in the [Agent Skills documentation](https://agentskills.io/).
 
 
 ## Creating an Agent Skill {#creating-a-skill}

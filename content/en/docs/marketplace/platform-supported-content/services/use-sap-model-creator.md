@@ -66,10 +66,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 * For a BAPI you will need to download a BAPI Schema – see [BAPI Schema for Model Creator](/appstore/modules/sap/sap-bapi-connector/#bapi-schema) in *BAPI Connector for SAP Solutions* for more information
 * Obtain authentication credentials, if needed, for the SAP Catalog Service or SAP back-end system you wish to use
 
-{{% alert color="warning" %}}
-The Model Creator for SAP Integrations will produce a module which is in Mendix 8.18.10. To use the module you will have to create your app in, or upgrade your app to, Mendix 8.18.10 or above. <!-- Still applicable? -->
-{{% /alert %}}
-
 ## Generating an OData Data Model
 
 The Model Creator for SAP Integrations is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [Model Creator for SAP Integrations - OData](https://sap-model-creator.home.mendix.com/link/odata). If the app gives you a choice between **SAP OData** and **SAP BAPI**, choose **SAP OData**.

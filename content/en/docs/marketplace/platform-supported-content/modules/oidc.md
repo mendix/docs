@@ -248,8 +248,8 @@ If multiple IdPs are configured in the OIDC module, the following two mechanisms
 1. Depending on deeplink, your application logic may redirect to a IdP-specific endpoint.
 2. In this mechanism, your end users make the selection. Your app logic can use the same URL (`<your-app-url>/oauth/v2/login`) to initiate authentication. End users will first be redirected to an IdP selection page, where they can choose the IdP they want to use for authentication.
 
-{{% alert color="info" %}}
-From version 4.5.0, the `Anonymous` module role has been removed from the module and is no longer available.
+{{% alert color="warning" %}}
+From version 4.5.0, the `Anonymous` module role has been removed from the module and is no longer available. If you are using the module below V4.5.0 and `Anonymous` module role is enabled, configure **Role-based home page** and **Sign-in page** of the **Authentication** section to *none*.
 {{% /alert %}}
 
 ### Configuring Navigation{#configure-nav}
@@ -991,11 +991,11 @@ This section describes how to configure the application's `login.html` page to i
 
 #### Automatic Redirection
 
-To enable authentication using the OIDC SSO module, replace the default `login.html` with the content of `login-with-mendixsso-automatically.html` (located in the `resources\mendixsso\templates` folder) and save it as `login.html`. Use this option when all users should be directly redirected to the OIDC Identity Provider.
+To enable authentication using the OIDC SSO module, replace the default `login.html` with the content of `login-automatic.html` (located in the `resources\mendixsso\templates` folder) and save it as `login.html`. Use this option when all users should be directly redirected to the OIDC Identity Provider.
 
 #### Manual Redirection
 
-For manual redirection, you can use the same method for automatic redirection above and add an onclick event to a button that manually triggers the SSO login. Use this option when users should choose between login in using local credentials and login via OIDC SSO. 
+For manual redirection, replace the default `login.html` with the content of `login-manual.html` (located in the `resources\mendixsso\templates` folder) and save it as `login.html`. Use this option when users should choose between login in using local credentials and login via OIDC SSO. 
 
 #### Using Page and Microflow URLs with OIDC SSO{#page-microflow-url}
 

@@ -59,14 +59,12 @@ The **Crop area** section is used to configure the shape and proportions of the 
   * ***Free** (default) – The end-user can resize the selection to any proportion.
   * **1:1**, **16:9**, **4:3**, or **3:4** – When set to one of these predetermined ratios, the selection is locked to that ratio during resize.
   * ***Custom** – When enabled, the selection is locked to the ratio defined by **Custom aspect width** and **Custom aspect height**
-- **Custom aspect width** – the width side of the ratio (for example, _3_ in 3:2)
-  - Default: _1_
-  - Configurable when **Aspect ratio** is set to **Custom**
-  - When either the custom width or custom height is not greater than _0_, the selection falls back to a free-form shape
-- **Custom aspect height** – the height side of the ratio (for example, _2_ in 3:2)
-  - Default: _1_
-  - Configurable when **Aspect ratio** is set to **Custom**
-  - When either the custom width or custom height is not greater than _0_, the selection falls back to a free-form shape
+- **Custom aspect width** (default **1**) – The width side of the ratio (for example, _3_ in 3:2).
+  - Configurable when **Aspect ratio** is set to **Custom**.
+  - When either the custom width or custom height is not greater than _0_, the selection falls back to a free-form shape.
+- **Custom aspect height** (default **1**) – The height side of the ratio (for example, _2_ in 3:2).
+  - Configurable when **Aspect ratio** is set to **Custom**.
+  - When either the custom width or custom height is not greater than _0_, the selection falls back to a free-form shape.
 
 {{< figure src="/attachments/appstore/platform-supported-content/widgets/image-cropper/image-cropper-circle-demo.gif" alt="Cropping an image with a circular crop shape" class="no-border" >}}
 
@@ -74,9 +72,8 @@ The **Crop area** section is used to configure the shape and proportions of the 
 
 The **Events** section allows you to configure what happens each time the crop is applied. It includes the following property:
 
-- **On crop** – a Mendix action that runs each time the crop is auto-applied to the image attribute
-  - This property is optional
-  - The action runs after a crop is saved back, but not after a rotation or a reset
+- **On crop** (optional) – A Mendix action that runs each time the crop is auto-applied to the image attribute.
+  - The action runs after a crop is saved back, but not after a rotation or a reset.
 
 ### Dimensions Tab {#dimensions}
 

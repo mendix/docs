@@ -112,19 +112,16 @@ The **Buttons** section is used to configure the editing buttons shown in the to
 
 The **Zoom** section is used to configure how the end-user zooms the image. It includes the following properties:
 
-- **Enable zoom** – the master switch for zooming
-  - Default: **Yes**
-  - When set to **No**, the slider and mouse-wheel zoom are disabled and the image stays at 1x
-- **Show zoom slider** – shows the zoom slider below the crop area
-  - Default: **Yes**
+- **Enable zoom** (default **Yes**) – The primary switch for zooming.
+  - When set to **No**, the slider and mouse-wheel zoom are disabled and the image stays at **1x**.
+- **Show zoom slider**  (default **Yes**)– shows the zoom slider below the crop area.
+  - Configurable when **Enable zoom** is set to **Yes**.
+  - Turn this off to keep mouse-wheel zoom while hiding the slider.
+- **Mouse wheel zoom** (default **On (hold Ctrl)**) – Determines whether the mouse wheel zooms the image.
   - Configurable when **Enable zoom** is set to **Yes**
-  - Turn this off to keep mouse-wheel zoom while hiding the slider
-- **Mouse wheel zoom** – determines whether the mouse wheel zooms the image
-  - Default: **On (hold Ctrl)**
-  - Configurable when **Enable zoom** is set to **Yes**
-  - When set to **On (hold Ctrl)**, the wheel zooms only while Ctrl is held, so page scroll keeps working
-  - When set to **On**, the wheel always zooms
-  - When set to **Off**, the wheel never zooms
+  - When set to **On (hold Ctrl)**, the wheel zooms only while Ctrl is held, so page scroll keeps working.
+  - When set to **On**, the wheel always zooms.
+  - When set to **Off**, the wheel never zooms.
 - **Minimum zoom** – the smallest zoom level
   - Default: _1_
   - Configurable when **Enable zoom** is set to **Yes**

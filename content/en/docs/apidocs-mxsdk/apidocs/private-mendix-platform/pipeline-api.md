@@ -1,11 +1,11 @@
 ---
-title: "Private Mendix Platform Pipeline API"
+title: "Private Mendix Platform Pipeline API - Version 1"
+linktitle: "Pipeline API - Version 1"
 url: /apidocs-mxsdk/apidocs/private-platform-pipeline-api/
 type: swagger
 description: "This API allows you to manage pipelines in Private Mendix Platform."
 restapi: true
 weight: 60
-linktitle: "Pipeline API"
 ---
 
 {{% alert color="info" %}}
@@ -14,18 +14,16 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## Introduction
 
-The Private Mendix Platform Project API allows you to manage pipelines in Private Mendix Platform. You can use the API to do the following:
+The Private Mendix Platform Pipeline API version 1 allows you to manage pipelines in Private Mendix Platform. You can use the API to do the following:
 
 * Set the current step status of the pipeline.
-* Create and run a pipeline for build or deployment.
+* Create a pipeline for build or deployment.
 * Approve or reject a manual step of a waiting pipeline.
 
+{{% alert color="info" %}}
+For information about Pipeline API version 2, see [Pipeline API - Version 2](/apidocs-mxsdk/apidocs/private-platform-pipeline-api-v2/).
+{{% /alert %}}
+
 ## API Reference
-
-### Version 2
-
-{{< swaggerui src="/openapi-spec/openapi-pipeline-v2.yaml"  >}}
-
-### Version 1
 
 {{< swaggerui src="/openapi-spec/openapi-pipeline-v1.yaml"  >}}

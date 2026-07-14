@@ -19,6 +19,8 @@ The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://
 Other components of the Mendix Client are the same in both the React and Dojo client. See [Mendix React Client](/refguide/mendix-client/react/) for more information.
 {{% /alert %}}
 
+For information about embedding a Mendix web app as a native component inside Siemens Teamcenter Active Workspace, see [Mendix Inside Teamcenter](/refguide/mendix-client/mendix-inside-teamcenter/). This requires you to be using Mendix version 11.12.0 or above.
+
 ## Description {#description}
 
 The Mendix Client is a part of every application built with Mendix: both web and mobile.

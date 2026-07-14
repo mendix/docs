@@ -1,11 +1,11 @@
 ---
-title: "Private Mendix Platform Marketplace API"
+title: "Private Mendix Platform Marketplace API - Version 1"
+linktitle: "Marketplace API"
 url: /apidocs-mxsdk/apidocs/private-platform-marketplace-api/
 type: swagger
 description: "This API allows you to manage the Marketplace in Private Mendix Platform."
 restapi: true
 weight: 60
-linktitle: "Marketplace API"
 ---
 
 {{% alert color="info" %}}
@@ -33,7 +33,5 @@ The Private Mendix Platform Marketplace API allows you to manage the Marketplace
 * Create, update, or delete a subcategory.
 
 ## API Reference
-
-### Version 1
 
 {{< swaggerui src="/openapi-spec/openapi-marketplace-v1.yaml"  >}}

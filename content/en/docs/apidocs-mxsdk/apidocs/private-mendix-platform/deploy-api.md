@@ -1,11 +1,11 @@
 ---
-title: "Private Mendix Platform Deploy API"
+title: "Private Mendix Platform Deploy API - Version 1"
+linktitle: "Deploy API"
 url: /apidocs-mxsdk/apidocs/private-platform-deploy-api/
 type: swagger
 description: "This API allows you to create and manage environments in Private Mendix Platform."
 restapi: true
 weight: 60
-linktitle: "Deploy API"
 ---
 
 {{% alert color="info" %}}
@@ -25,7 +25,5 @@ The Private Mendix Platform Deploy API allows you to manage environments in Priv
 * Get a dashboard with all environments created for the application.
 
 ## API Reference
-
-### Version 1
 
 {{< swaggerui src="/openapi-spec/openapi-deploy-v1.yaml"  >}}

@@ -28,7 +28,7 @@ General Availability means that a feature is available for all users. This type 
 | MCP Server | General Availability: Mx 11.0 + Mx 10.24 |
 | MCP Client | General Availability: Mx 11.2 + Mx 10.24 |
 | Mendix Cloud GenAI Resource Packs | General Availability: Mx 11.2 + Mx 10.24 |
-| Mendix Cloud GenAI Resource Packs Guardrails | Private Beta: Mx 11.15 |
+| Mendix Cloud GenAI Resource Packs Guardrails | General Availability: H2 2026 |
 | Agent Editor in Studio Pro<sup>1</sup> | General Availability: Mx 11.9 |
 | Agent Observability | General Availability: Mx 11.5 + Mx 10.24 |
 | Model Agents as part of your Workflow | General Availability: Mx 11.9 |
@@ -96,7 +96,8 @@ General Availability means that a feature is available for all users. This type 
 | Access data in offline apps while syncing | General Availability: Mx 11.6 |
 | Embed a Mendix application into another Mendix application as a web component | Public Beta: 2027 |
 | Theme Customizer | General Availability: Mx 11.12 |
-| Menditect UI testing | Public Beta: Q2 2025<br/>General Availability: H2 2025 |
+| Menditect MCP server | Release: Q3 2026 |
+| Menditect air-gapped deployment | Release: Q4 2026 |
 | Bulk DML | General Availability: Mx 11.7 |
 | Increased decimal precision | General Availability: Mx 11.6 |
 | Consumed OpenAPI and API discovery | Public Beta: Q2 2025<br/>General Availability: H2 2026 |

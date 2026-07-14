@@ -23,7 +23,7 @@ You can have multiple CDC service documents in an app — for example, to group 
 
 ### Service Name {#service-name}
 
-The service name uniquely identifies the CDC service within the app. It is used as part of the Kafka topic name.
+The service name uniquely identifies the CDC service within the app.  The App Name is used as part of the topic to ensure uniqueness.
 
 ### Description {#description}
 

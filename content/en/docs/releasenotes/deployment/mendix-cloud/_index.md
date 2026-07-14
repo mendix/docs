@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We updated the [Incoming IP](/developerportal/deploy/mendix-ip-addresses/#global-platform-ips-inbound) used by some services running on Mendix Portal (such as the PDF Document Generation service).
+* We updated the [Incoming IP](/developerportal/deploy/mendix-ip-addresses/#global-platform-ips-inbound) used by some services running on Mendix Portal, such as the PDF Document Generation service.
 
 ## June 2026
 

@@ -67,7 +67,7 @@ The prerequisites are the following:
     | --- | --- | --- |
     |  [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above. | [Microsoft .NET Desktop Runtime 8.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) – Mendix recommends using version 8.0.14 or above. | [.NET Desktop Runtime 10.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) <br/>Mendix recommends using the latest version to ensure you are up to date with security patches.  |
 
-    {{% alert color="info" %}}If .NET Desktop Runtime is not installed on your machine, Mendix will install the version which was the latest at the time this version of Studio Pro was released.{{% /alert %}}
+    {{% alert color="info" %}}If .NET Desktop Runtime is not installed on your machine, Mendix will install a version which was current at the time this version of Studio Pro was released.{{% /alert %}}
     
 * Java JDK
 

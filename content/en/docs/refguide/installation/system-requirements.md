@@ -302,7 +302,7 @@ For native and progressive web apps built with Mendix, the following operating s
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
 
 {{% alert color="warning" %}}
-If a newer iOS or Android version is released during the support lifecycle of a Mendix native mobile app, it is supported only if the Mendix version used by the application remains supported for at least 3 months after the GA release of that mobile operating system. As defined in the [Native Mobile Support Guidelines](/releasenotes/mobile/native-support), native mobile support for a Mendix version is in general limited to 15 months after its release. Otherwise, upgrading to a newer supported Mendix version may be required to ensure compatibility and support.
+iOS and Android versions are not supported with a given Mendix version if they are released less than 3 months before that Mendix version reaches end of support. In such cases, you may need to upgrade to a newer Mendix version to ensure compatibility and support. See the [Native Mobile Support Guidelines](/releasenotes/mobile/native-support/) for more details.
 {{% /alert %}}
 
 You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support, you must demonstrate that your problem also occurs on a supported operating system version. The oldest operating system version where Mendix native mobile apps can run is determined by [React Native](https://github.com/facebook/react-native?tab=readme-ov-file#-requirements).

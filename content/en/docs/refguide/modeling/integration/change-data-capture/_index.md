@@ -69,6 +69,26 @@ When connecting to a BYOK Kafka cluster, provide the bootstrap server address an
 | `EventBroker.CdcProducerTransactionId` | The transactional ID for the Kafka CDC producer, enabling exactly-once delivery semantics. Must be set together with `EventBroker.CdcActiveProducerElectionTopic` and `EventBroker.CdcActiveProducerElectionGroupId` to enable active-producer election mode. | | |
 
 
+### Active-Producer Election {#active-producer-election}
+
+In a horizontally scaled deployment, multiple app instances would otherwise all publish CDC events to the same Kafka topics, producing duplicates. Active-producer election ensures that only one instance publishes at a time.
+
+When all three election settings are configured, each instance joins the same Kafka consumer group and subscribes to the election topic. Kafka assigns partition 0 of that topic to exactly one member of the group — that instance becomes the active producer. All other instances stand by without publishing.
+
+If the active instance stops sending heartbeats (for example, because it crashed or was scaled down), Kafka triggers a rebalance and assigns the partition to another instance, which then starts producing. The departing instance drains any in-flight events before relinquishing the partition to prevent gaps.
+
+The `EventBroker.CdcProducerTransactionId` setting enables Kafka transactions on the active producer, which provides exactly-once delivery guarantees during normal operation and clean handover during failover.
+
+If any of the three settings is missing, the runtime logs a warning and falls back to single-instance mode, where all instances publish independently.
+
+### Message Format {#message-format}
+
+CDC events follow the [Debezium](https://debezium.io/) envelope format. Each message contains an `op` field indicating the operation type (`c` for create, `u` for update, `d` for delete, `r` for read/snapshot), a `before` and `after` payload with the entity attribute values, and a `source` block with metadata such as the timestamp and Mendix version.
+
+Because the format is Debezium-compatible, BYOK consumers that already support Debezium — such as Kafka Connect sink connectors for databases or data warehouses — can consume CDC events without any message transformation.
+
+To parse the messages, the schema for each tracked entity is available as an AsyncAPI document. You can download it from the [Event Broker Manager](https://broker.mendix.com/) on the service details page for the CDC service.
+
 For details on setting up a BYOK cluster with the Mendix Event Broker, see [Mendix Event Broker](/appstore/services/event-broker/).
 
 ## Read More

@@ -2,7 +2,7 @@
 title: "Maia Plan as MCP Server"
 url: /developerportal/maia-plan-mcp/
 description: "Describes how to configure and use Maia Plan as an MCP server to retrieve project scope and solution content."
-weight: 10
+weight: 2
 ---
 
 ## Introduction
@@ -74,12 +74,84 @@ The steps to configure your MCP client depend on the client you are using. The f
 
 To configure Claude Code to connect to the Maia Plan MCP Server, follow these steps:
 
-1. Open your Claude Code configuration file.
-2. Add the Maia Plan MCP Server to the list of available MCP servers.
-3. Specify the server URL and authentication method (using the `MENDIX_TOKEN` environment variable).
-4. Save the configuration file.
+1. Open your Claude Code configuration file. This is available at the following paths:
+
+    * Windows: `C:/Users/<YourUsername>/.claude/settings.json`
+    * macOS/Linux: `~/.claude/settings.json`
+
+2. Add the Maia Plan MCP Server to the list of available MCP servers and specify the server URL and authentication method (using the `MENDIX_TOKEN` environment variable). To do that, add the following server configuration:
+
+    ```json
+    {
+      "servers": {
+        "mendixMcp": {
+          "type": "http",
+          "url": "https://plan.home.mendix.com/mcp-server/mcp",
+          "headers": {
+            "Authorization": "Bearer $MENDIX_TOKEN"
+          }
+        }
+      }
+    }
+    ```
+
+3. Save the configuration file.
+4. Verify the setup by following these steps:
+
+    1. Run the `claude mcp list` command.
+    2. In the Claude Code chat, enter `Show my recent plans`.
+    3. In the Claude Code chat, enter `Show details for plan UUID <your-plan-uuid>`.
 
 For detailed instructions, refer to the [Claude Code documentation](https://claude.com/docs/connectors/building/mcp).
+
+#### Configuring Visual Studio Code Copilot {#configuring-visual-studio-code-copilot}
+
+To configure Visual Studio Code Copilot to connect to the Maia Plan MCP server, follow these steps:
+
+1. Open the Visual Studio Code MCP configuration file:
+
+    * User-level: `C:/Users/<YourUsername>/AppData/Roaming/Code/User/mcp.json`
+    * Workspace-level (optional): `.vscode/mcp.json`
+
+2. Add the Maia Plan MCP Server to the list of available MCP servers and specify the server URL and authentication method (using the `MENDIX_TOKEN` environment variable). To do that, add the following server configuration:
+
+    ```json
+    {
+      "servers": {
+        "mendixMcp": {
+          "type": "http",
+          "url": "https://plan.home.mendix.com/mcp-server/mcp",
+          "headers": {
+            "Authorization": "Bearer ${env:MENDIX_TOKEN}"
+          }
+        }
+      }
+    }
+    ```
+3. In Visual Studio Code, follow these steps:
+
+    1. Open **Command Palette**.
+    2. Run **MCP: List Servers**.
+    3. Select **mendixMCP**.
+    4. Start or restart the server.
+    5. Accept the trust prompt if needed.
+
+4. Verify the setup by entering the following in the Visual Studio Code Copilot chat:
+
+    1. `Show my recent plans`
+    2. `Show details for plan UUID <your-plan-uuid>`
+
+##### Automatically Starting the Copilot MCP
+
+You can optionally choose to automatically start configured MCP servers for Visual Studio Code Copilot chat. To do that, add the following setting to the settings file (found at `C:/Users/<YourUsername>/AppData/Roaming/Code/User/settings.json`):
+
+```json
+"chat.mcp.autostart": true
+```
+
+If the server is not automatically started, reload or restart Visual Studio Code.
+
+If you do not set the automatic start option, you can still start servers using **MCP: List Servers**.
 
 #### Configuring Other MCP Clients
 

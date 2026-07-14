@@ -11,7 +11,7 @@ description_list: true
 
 The Mendix Runtime is an interpreter which runs a [Mendix model](/apidocs-mxsdk/mxsdk/mendix-metamodel/) and serves pages to the user.
 
-Each [patch version](/releasenotes/studio-pro/lts-mts/) of Mendix comes with its own version of the Mendix Runtime which implements the features which are available in that version of Mendix. 
+Each [patch version](/releasenotes/studio-pro/lts-mts/) of Mendix comes with its own version of the Mendix Runtime which implements the features which are available in that version of Mendix. For example, runtimes for Mendix 11.9.0 and 11.9.1 are different and can only run Mendix apps built for that version.
 
 ## Runtime Overview
 

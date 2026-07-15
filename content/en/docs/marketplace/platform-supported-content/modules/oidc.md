@@ -1019,7 +1019,7 @@ The Deep Link module has been deprecated from Studio Pro 10.6 and replaced by [p
 For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section above.
 {{% /alert %}}
 
-To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 8 and 9), you can choose between the following methods of selecting an IdP:
+To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 9), you can choose between the following methods of selecting an IdP:
 
 * You need to set the `LoginLocation` constant of the Deep Link module to the `/oauth/v2/login?cont=`.
 * You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.

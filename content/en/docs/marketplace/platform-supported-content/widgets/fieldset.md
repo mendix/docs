@@ -18,8 +18,3 @@ The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Field
 
 * This widget should only be used to group widgets belonging to a form
 
-## Compatibility
-
-This widget is compatible with the following products:
-
-* Mendix Studio Pro 8.3.1 and above

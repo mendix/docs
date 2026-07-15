@@ -485,6 +485,39 @@ if (selection.type === "Single") {
 
 ## Exposed Modules
 
+ ### Session {#session}
+
+The Mendix Platform exposes a `mendix/session` module for inspecting the current user session. It is available in both web and native.
+
+For instance, `getUserId` returns the current user's GUID as a `string`.
+
+```ts
+function getUserId(): GUID;
+```
+
+---
+
+### Parser {#parser}
+
+The Mendix Platform exposes a `mendix/parser` module that provides locale-aware formatting and parsing of attribute values. These functions use the same locale and formatting settings of the built-in Mendix widgets. It is available in both web and native.
+
+```ts
+import { formatValue, parseValue } from "mendix/parser";
+```
+
+Both functions accept an optional configuration object:
+
+```ts
+interface FormatValueConfig {
+    selector?: "date" | "time" | "datetime";
+    datePattern?: string;
+    places?: number;
+    groups?: boolean;
+}
+```
+
+For the reference of the API, you can refer to the [API documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-parser/).
+
 ### Icon {#icon}
 
 Mendix Platform exposes two versions of an `Icon` react component: `mendix/components/web/Icon` and `mendix/components/native/Icon`. Both components are useful helpers to render `WebIcon` and `NativeIcon` values respectively. They should be passed through an `icon` prop. The native `Icon` component additionally accepts `color` (`string`) and `size` (`number`) props.

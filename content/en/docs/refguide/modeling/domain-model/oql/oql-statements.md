@@ -157,13 +157,16 @@ SET
 ## `INSERT` Statement {#oql-insert}
 
 {{% alert color="info" %}}
-Available from Mendix version 11.6.0
+Available from Mendix version 11.6.0 when sourcing data from an oql query.
+Available from Mendix version 11.13.0 when using `VALUES` to specify rows directly.
 {{% /alert %}}
 
-The syntax of `INSERT` statements is:
+`INSERT` statements can be written with values or queries.
+
+### `INSERT` with query
 
 ```sql
-INSERT INTO <entity> ( <attribute | <association> [ , …n ] ) <oql-query>
+INSERT INTO <entity> ( <attribute> | <association> [ , …n ] ) <oql-query>
 ```
 
 * `entity` is the entity for which new objects will be created.
@@ -180,6 +183,30 @@ Example:
 ```sql
 INSERT INTO Module.Order ( OrderNumber, CustomerNumber, Module.Order_Customer )
 SELECT NewOrderNumber, Loader.TemporaryData_Customer/Loader.Customer/Number, Loader.TemporaryData_Customer FROM Loader.TemporaryData
+```
+
+### `INSERT` with `VALUES`
+
+```sql
+INSERT INTO <entity> ( <attribute> [ , …n ] ) VALUES (<expression 1> [, …<expression n>]) [ …, (<expression 1> [, …<expression n>])]
+```
+
+* `entity` is the entity for which new objects will be created.
+
+* `attribute` is an attribute of the entity that will be inserted.
+
+* `expression n` is any valid OQL expression with literals or OQL parameters.
+Every row must contain the same number of values of compatible types.
+This query can *not* select data from any entities.
+
+Example:
+
+```sql
+INSERT INTO Module.Person ( Name, BirthDate )
+VALUES
+    ( 'Person A', DATEPARSE('01 Jan 1970', 'dd MMM yyyy') ),
+    ( 'Person B', DATEPARSE('20 Mar 1990', 'dd MMM yyyy') ),
+    ( 'Person C', DATEPARSE('14 Jul 1988', 'dd MMM yyyy') )
 ```
 
 ### OQL `INSERT` Limitations

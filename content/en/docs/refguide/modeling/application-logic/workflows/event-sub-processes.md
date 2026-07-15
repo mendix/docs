@@ -2,6 +2,7 @@
 title: "Event Sub-Processes"
 url: /refguide/workflow-event-sub-processes/
 weight: 20
+description: "Describes event sub-processes in Mendix workflows, including start event types, interrupting behavior, concurrency, and domain model structure."
 ---
 
 ## Introduction
@@ -50,7 +51,7 @@ The workflow will NOT complete until all active execution paths, both the main f
 Event sub-processes can be triggered by one of the following start event types:
 
 * **Notification start event** – The sub-process is triggered by a [Notify workflow](/refguide/notify-workflow/) microflow activity.
-* **Timer start event** – The sub-process is triggered automatically when the configured duration elapses or the configured date and time is reached. The timer configuration follows the same rules as the standalone [Timer](/refguide/timer/) activity. For more information, see the [Timer](/refguide/timer/#timer) section in *Timer*.
+* **Timer start event** – The sub-process is triggered automatically when the configured duration elapses or the configured date and time is reached. The timer configuration follows the same rules as the standalone [Timer](/refguide/timer/) activity. For more information, refer to the [Timer](/refguide/timer/#timer) section in *Timer*.
 
 When the trigger is received, the sub-process becomes **In Progress**.
 
@@ -63,7 +64,7 @@ Event sub-processes can be configured as either interrupting or non-interrupting
 
 ##### Implications of Changing the Sub-Process Start Event Type {#event-type-change}
 
-For an existing event sub-process, when you change the type of its start event from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a start event from non-interrupting to interrupting, you will see the following warning dialog:
+When you change the start event of an existing event sub-process from non-interrupting to interrupting, or vice versa, a warning dialog is displayed. For example, changing a start event from non-interrupting to interrupting displays the following warning dialog:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/security-dialog.png" alt="Security Dialog when changing type" width="450">}}
 
@@ -76,7 +77,7 @@ The event sub-process is re-created upon type switch because in-place conversion
 
 #### Concurrency Limitation
 
-Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger it — either via the **Notify workflow** activity or by a timer firing again — will be ignored. No new instances will be created for that specific sub-process while one is **In Progress**. A new instance can only be initiated once the active sub-process has completed its execution path.
+Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger it, either via the **Notify workflow** activity or when a timer fires again, are ignored. No new instances are created for that specific sub-process while one is **In Progress**. A new instance can be initiated only after the active sub-process has completed its execution path.
 
 If your workflow has multiple, distinct event sub-processes defined (for example, one for "Address Change" and one for "Document Upload"), each one can have its own active instance simultaneously. One being active does not prevent a different one from being triggered.
 
@@ -84,22 +85,22 @@ If your workflow has multiple, distinct event sub-processes defined (for example
 Currently, a timer start event fires only once. Support for recurring timers may be added in the future.
 {{% /alert %}}
 
-## Getting started
+## Getting Started
 
 ### Adding Event Sub-Processes
 
 To add an **Event sub-process** to a workflow, follow these steps:
 
 1. Select an event sub-process from the **Sub-processes** section in the workflow **Toolbox**.
-1. Drag it onto a dashed drop zone adjacent to the main workflow process.
+2. Drag it onto a dashed drop zone adjacent to the main workflow process.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/drag-and-drop.png" alt="Add Event sub-process example" width="500" >}}
 
-1. In the **Select Events** dialog, choose the type of start event for the sub-process: **Timer (Interrupting)**, **Timer (Non-Interrupting)**, **Notification (Interrupting)**, or **Notification (Non-Interrupting)**.
+3. In the **Select Events** dialog, choose the type of start event for the sub-process: **Timer (Interrupting)**, **Timer (Non-Interrupting)**, **Notification (Interrupting)**, or **Notification (Non-Interrupting)**.
 
    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/select-event-dialog.png" alt="Select Event Dialog" width="500" >}}
 
-1. The sub-process flow is contained within a dashed rectangle. The border around the sub-process start event indicates its interrupting behavior: a dashed border indicates a non-interrupting sub-process, and a solid border indicates an interrupting sub-process.
+4. The sub-process flow is contained within a dashed rectangle. The border around the sub-process start event indicates its interrupting behavior: a dashed border indicates a non-interrupting sub-process, and a solid border indicates an interrupting sub-process.
 * The flow can contain the same types of activities as the main process flow (for example, **User Task**, **Call Microflow**, **Decision**).
 * It must start with a **Start** event (triggered by a notification or a timer) and end with at least one **End** event.
 

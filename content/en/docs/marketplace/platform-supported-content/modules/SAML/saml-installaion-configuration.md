@@ -13,8 +13,7 @@ There are different versions of the SAML module, depending on which version of M
 
 1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 2. In the **Documentation** tab, the *compatibility guidance* section indicates the latest recommended version for your LTS/MTS Mendix release. These guidelines are updated with each release of the SAML module, and you should refer to them to choose the version of the module that is compatible with your app. For additional information, some general considerations are listed below:
-
-    * For Mendix 8, you should use the latest published versions in the **2.x** range, unless otherwise indicated in the **Documentation** tab.
+    
     * For Mendix 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses:
 
         * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps that were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix 9.
@@ -43,7 +42,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
         * If you use the SAML module in your hybrid app, you must change the `SAML20.HybridAppLoginTimeOutInMinutes` constant to change the validity of the authentication token used by the hybrid mobile app.
         * If you use both the default login handler and the SAML module in your hybrid app, you must change both so that they match. This is because, when you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value and thus requires the constant value to be set.
 
-            Only use this setting if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your IdP Configuration as well as changes to the hybrid app package as described in [How to Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+            Only use this setting if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your IdP Configuration as well as changes to the hybrid app package. Hybrid mobile apps are [deprecated](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) however, so we encourage building native or progressive web apps instead. 
 
         {{% alert color="warning" %}}Hybrid mobile apps are not available in Mendix 10.{{% /alert %}}
 
@@ -320,7 +319,7 @@ The Deep Link module has been deprecated from Studio Pro 10.6.0 and replaced by 
 
 If end-users who use the deep link do not yet have a session in your app, the deep link can trigger the SSO process. If successful, the end-user will be automatically redirected back to the deep link.
 
-For more information on using the Deep Link module (with Mendix 8 and 9), see the [Using Deep Link Module](#using-deeplink) section below.
+For more information on using the Deep Link module (with Mendix 9), see the [Using Deep Link Module](#using-deeplink) section below.
 
 ### Using Page and Microflow URLs with SAML{#page-microflow-url-saml}
 
@@ -356,7 +355,7 @@ Once the above changes are applied, end users can directly navigate to the desir
 
 ### Using the Deep Link Module{#using-deeplink}
 
-When using the SAML module with the Deep link Module (for Mendix 8 and 9), you need to set the `LoginLocation` constant of the Deeplink module to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login.
+When using the SAML module with the Deep link Module (for Mendix 9), you need to set the `LoginLocation` constant of the Deeplink module to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login.
 
 To redirect users through a specific Identity Provider (IdP) and then navigate to a deeplink, include both the `_idp_id` and `cont` parameters:
 

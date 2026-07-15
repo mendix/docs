@@ -84,7 +84,7 @@ You can invite other Workstation Management users to your workspace to share con
 
 To invite a user, click **Team** in the left navigation menu, then click **Invite Team Member**. Enter the user's email address and select a role. For more information about the available roles, see [Managing the Team](/mendix-workstation/management-team/).
 
-To change a user's role or remove them from the workspace, click the three-dot icon in the right column of the user list. This action requires the Owner or Workspace Admin role.
+To change a user's role or remove them from the workspace, click the three-dot icon in the right column of the user list. This action requires the Owner or workspace Admin role.
 
 ## Getting Started with Custom Logic for Device Interaction
 

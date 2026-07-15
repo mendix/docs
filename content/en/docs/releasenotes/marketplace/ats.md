@@ -65,7 +65,7 @@ numberless_headings: true
 ### Improvements
 
 * Apps built with Studio Pro [10.6](/releasenotes/studio-pro/10.6/) can now be tested using ATS.
-* We upgraded to Studio Pro [8.18.27](/releasenotes/studio-pro/8.18/#81827) for security fixes.
+* We upgraded to Studio Pro 8.18.27 for security fixes.
 * We addressed support for the MacOs versions (11, 12, 13) and resolutions (2K, 4K) for Selenium 4.
 * We added support for the [Accordion](/appstore/widgets/accordion/) widget.
 
@@ -132,7 +132,7 @@ numberless_headings: true
 
 ### Improvements
 
-* We upgraded to Mendix [8.18.24](/releasenotes/studio-pro/8.18/#81824) for security fixes.
+* We upgraded to Mendix 8.18.24 for security fixes.
 
 ### Fixes
 
@@ -276,7 +276,7 @@ numberless_headings: true
 
 ### Improvements
 
-* The ATS source code and model has been upgraded to Mendix [8.18.7](/releasenotes/studio-pro/8.18/#8187).
+* The ATS source code and model has been upgraded to Mendix 8.18.7.
 * The ATS Job running web service no longer needs a user name and password combination to authenticate the requests. The API token is enough to authenticate the request.
 
 ## 2.24.0
@@ -502,7 +502,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ### Mendix 8.9 Compatibility
 
-Apps built with [Mendix 8.9](/releasenotes/studio-pro/8.9/) can now be tested and recorded using ATS.
+Apps built with Mendix 8.9 can now be tested and recorded using ATS.
 
 ### Improvements
 
@@ -519,7 +519,7 @@ Apps built with [Mendix 8.9](/releasenotes/studio-pro/8.9/) can now be tested an
 
 ### Mendix 8.2.2 Compatibility
 
-Apps built with [Mendix 8.2.2](/releasenotes/studio-pro/8.2/#822) can now be tested using ATS.
+Apps built with Mendix 8.2.2 can now be tested using ATS.
 
 ### Fixes
 
@@ -568,7 +568,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ### Mendix 8 Compatibility
 
-Apps built with [Studio Pro 8](/releasenotes/studio-pro/8/) can now be tested using ATS.
+Apps built with Studio Pro 8 can now be tested using ATS.
 
 ### Fixes
 

@@ -7,7 +7,13 @@ aliases:
     - /developerportal/deploy/unix-like/
 ---
 
-{{% alert color="warning" %}} Linux deployment is only supported on Debian 10 (buster) for the [Mendix Runtime version 9, 10, and 11](/releasenotes/studio-pro/lts-mts/).  We will not add support for any other versions of the Mendix Runtime. Consider using the [Mendix Portable Runtime for Linux](/developerportal/deploy/linux-pad/) option instead. {{% /alert %}}
+{{% alert color="warning" %}} Linux deployment is only supported on Debian 10 (buster) for the [Mendix Runtime version 9, 10, and 11](/releasenotes/studio-pro/lts-mts/).  We will not add support for any other versions of the Mendix Runtime. Consider using the [Mendix Portable Runtime for Linux](/developerportal/deploy/linux-pad/) option instead. 
+
+With the release of [Mendix Portable Runtime](https://docs.mendix.com/developerportal/deploy/docker-deploy-pad/), we are transitioning away from the M2EE Toolkit toward a modern, container-native approach that packages Mendix applications. As part of this shift, the M2EE Toolkit will begin its deprecation journey by not supporting Mendix 12 and future Runtime versions.
+
+For more information, see [Mendix Portable Runtime: Deployment, Simplified](https://www.mendix.com/blog/mendix-portable-runtime/).
+{{% /alert %}}
+
 
 ## Introduction
 

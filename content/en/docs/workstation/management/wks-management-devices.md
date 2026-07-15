@@ -8,7 +8,7 @@ weight: 60
 
 ## Introduction
 
-This section details how to configure various device types for the current station. For each device type, you will find instructions on how to set it up in the Management UI, along with the specific message syntax required for Mendix applications to communicate with it through the Workstation Client.
+This section details how to configure various device types in Workstation Management, along with the specific message syntax required for Mendix applications to communicate with the device through the Workstation Client.
 
 ## Device Connectivity
 
@@ -30,7 +30,7 @@ Before connecting devices with Mendix Workstation, perform the following steps:
 
 Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 
 
-Auto detecting card readers is enabled by default. This setting can be configured on a **Station** page by unselecting **Detect Card Readers**. 
+Auto detecting card readers is disabled by default. You can enable this setting on a **Station** page by selecting **Detect Card Readers**. 
 
 ### Message Syntax {#card-readers}
 
@@ -47,21 +47,115 @@ Send instruction in hexadecimal as a string, for example, *FFCA000000* to read t
 * `2# Response` - Response from device as raw hexadecimal.
 * `3# Error` - Error message from device.
 
+## Serial Port
+
+Serial Port devices allow you to connect to a device with a serial port.
+
+### Configuring Serial Port Devices
+
+To add a serial port device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device** and, and then click **Serial Port**.
+3. Click **Next**.
+4. Enter a meaningful name for the device.
+5. Optional: Select or create a class to help you manage your devices.
+6. Click **Next**.
+7. In the **Detect Serial Device By** section, select one of the following values, depending on whether the serial port device uses static or dynamic port assignment:
+
+    * For static port assignment, select **Port**.
+    * For dynamic port assignment, select **Identifiers**.
+
+8. For static port assignment, configure the following connection parameters:
+
+    * **Port** - Required; the identifier of the serial port
+    * **Baudrate** - Required; the Bits per Second rate
+    * **Data Bits** - Required; the number of bits per data frame
+    * **Parity** - Optional; the parity mechanism used, that is, the way in which an extra bit is added to each data byte in order to help detect transmission errors
+    * **Flowcontrol** - Optional; the handshake mechanism between the server and receiver, used to prevent data overflow
+    * **Stop Bits** - Required; the bits when data transmission ends.
+
+9. For dynamic port assignment, configure the following connection parameters:
+
+    * At least one of the following required identifiers:
+
+        * **Serial Number** - The serial number of the device
+        * **Friendly Name** - Only available on Windows systems; the device name from Device Manager
+        * **Manufacturer** - The manufacturer of the device
+        * **Plug and Play ID** - The PnPId of the device.
+
+    * **Baudrate** - Required; the Bits per Second rate
+    * **Data Bits** - Required; the number of bits per data frame
+    * **Parity** - Optional; the parity mechanism used, that is, the way in which an extra bit is added to each data byte in order to help detect transmission errors
+    * **Flowcontrol** - Optional; the handshake mechanism between the server and receiver, used to prevent data overflow
+    * **Stop Bits** - Required; the bits when data transmission ends.
+
+10. Click **Next**.
+11. In the **Split Incoming Message By** section, select one of the following options:
+
+    * **Delimiter** - Messages received from the device are split by the specified character or characters marking the end of the message, for example, `\r\n`.
+    * **Time and Size** - Messages received from the device are split by time interval in milliseconds and maximum message size in bytes.
+    * **Do Not Split** - Messages received from the device are not automatically split.
+
+12. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
+13. In the **Encoding** field, select the message encoding.
+14. Click **Add Device**.
+
+## Bluetooth
+
+Add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact device name as displayed in your operating system's Device Manager.
+
+### Configuring Bluetooth Devices
+
+To add a Bluetooth device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device** and, and then click **Bluetooth**.
+3. Click **Next**.
+4. Enter the exact device name as it is displayed in your operating system's Device Manager.
+5. Optional: Select or create a class to help you manage your devices.
+6. Click **Add Device**.
+
+### Message Syntax
+
+This device type requires the following message and response:
+
+#### Message
+
+* `0#ServiceUUID#CharacteristicUUID` - Subscribe to characteristic `CharacteristicUUID` from service `ServiceUUID`.
+* `1#ServiceUUID#CharacteristicUUID` - Unsubscribe from characteristic `CharacteristicUUID` from service `ServiceUUID`.
+* `2#ServiceUUID#CharacteristicUUID` - Read characteristic `CharacteristicUUID` from service `ServiceUUID`.
+* `3#ServiceUUID#CharacteristicUUID` - Write to characteristic `CharacteristicUUID` from service `ServiceUUID`.
+
+### Response
+
+* `CharacteristicUUID#Response`
+
 ## File Device
 
-The File Device allows Mendix applications to interact with the local file system of the computer running the Workstation Client.
+The file device allows Mendix applications to interact with the local file system of the computer running the Workstation Client.
 
-### Configuration in Management UI
+### Configuring File Devices
 
-To add a File Device, perform the following steps:
+To add a file device, perform the following steps:
 
-1. Navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device** and select **File Device**.
-3. Provide a **Device Name** (for example, *Write files to test folder*).
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, and then select **File Device**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
 
-### Allowed Folder Configuration
+    * **Allowed Folder** - The folder in which the Workstation Client can perform actions. The allowed folder supports flexible path configuration through environment variables, providing cross-platform compatibility for both Windows and Unix-based systems. For more information, see [Allowed Folder Configuration](#allowed-folder).
+    * **Allow subscribing to change events** - Allows the Workstation Connector to monitor the allowed folder for changes.
+    * **Allow reading files** - Enables Mendix applications to read the content of files within the allowed folder.
+    * **Allow writing files** - Enables Mendix applications to write content to files within the allowed folder.
 
-The *Allowed Folder* feature supports flexible path configuration through environment variables, providing cross-platform compatibility for both Windows and Unix-based systems. This functionality allows administrators to define the allowed folder where the Workstation Client can perform actions. 
+7. Click **Add Device**.
+
+### Allowed Folder Configuration {#allowed-folder}
+
+For more information about supported environment variables and path formats for the allowed folder, refer to the sections below.
 
 #### Environment Variable Support
 
@@ -76,17 +170,9 @@ Windows and Unix-style paths can be used independently of the operating system t
 * Unix-style with backslash: `$EnvVar\test`
 * Unix-style with forward slash: `$EnvVar/test`
 
-### Allowed Actions
-
-You can grant one or more of the following permissions for the File Device:
-
-* Subscribe to change events - Allow the Workstation Client to monitor the configured folder for changes.
-* Read files - Allow Mendix applications to read the content of files within the allowed folder.
-* Write files - Allow Mendix applications to write content to files within the allowed folder.
-
 ### Message Syntax {#file-device}
 
-Before sending messages to the File Device, review the following points:
+Before sending messages to the file device, review the following points:
 
 * Path handling - You can provide the paths either as absolute (for example, `/var/log/app.log` or `C:\Data\report.txt`), or as relative paths. Relative paths are always interpreted relative to the allowed folder configured in Workstation Management.
 * Delimiter - The `#` character is used as a delimiter within messages. Paths and data may not contain the `#` character. 
@@ -109,18 +195,18 @@ Before sending messages to the File Device, review the following points:
 
 ### Example Test: Verifying File Device Configuration
 
-Follow these steps to verify that your File Device configuration is working correctly:
+Follow these steps to verify that your file device configuration is working correctly:
 
 1. Create a new Workspace in the Workstation Management.
-2. Create a new Station.
-3. Add a `File Device` with the following configuration to this Station:
+2. Create a new station.
+3. Add a file device with the following configuration to this station:
 
     * **Device Name** - A meaningful name, for example, *Write files to test folder*.
     * **Allowed Folder** - For example, on a Windows computer you can use a path like `C:\MyTestFolder`. Ensure this folder exists on the computer where the Workstation Client will run.
     * **Allow writing files** - Select **Yes**.
     * Use the default values for everything else.
 
-4. Register the Station to your computer (assuming the Workstation Client is installed there).
+4. Register the station to your computer (assuming the Workstation Client is installed there).
 5. In your Workspace, navigate to **Test Your Station** and click **Test** by the configured file device.
 6. Enter `3#test.txt#Hello from Mendix` in the **Send Message** field, and then press **Send Message**.
 
@@ -129,44 +215,78 @@ Follow these steps to verify that your File Device configuration is working corr
 7. Go to *C:\MyTestFolder* and verify that it contains the text file.
 8. Open the test file and verify that it contains the text *Hello from Mendix*.
 
-## Bluetooth Devices
+## TCP/IP Client
 
-Bluetooth Low Energy (BLE) devices using the ATT protocol can be integrated with Mendix Workstation.
+TCP/IP clients allow you to connect to remote devices over the network.
 
-### Configuration in Management UI
+### Configuring TCP/IP Clients
 
-To add a Bluetooth Device, perform the following steps:
+To add a TCP/IP client, perform the following steps:
 
-1. Navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device** and select **Bluetooth Device**.
-3. Enter the exact device name as it is displayed in your operating system's device manager.
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, and then select **TCP/IP Client**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
 
-### Message Syntax
+    * **Host** - The host to which the TCP/IP Client connects. For test scenarios, you can use `localhost` to connect to a TCP/IP server on the same machine. For production scenarios, it is usually a local IP address. 
+    * **Port** - The port to which the TCP/IP Client connects. The value must be in the range of `0-65535`.
 
-This device type requires the following message and response:
+7. Click **Next**.
+8. In the **Split Incoming Message By** section, select one of the following options:
 
-#### Message
+    * **Delimiter** - Messages received from the device are split by the specified character or characters marking the end of the message, for example, `\r\n`.
+    * **Time and Size** - Messages received from the device are split by time interval in milliseconds and maximum message size in bytes.
+    * **Do Not Split** - Messages received from the device are not automatically split.
 
-* `0#ServiceUUID#CharacteristicUUID` - Subscribe to characteristic `CharacteristicUUID` from service `ServiceUUID`.
-* `1#ServiceUUID#CharacteristicUUID` - Unsubscribe from characteristic `CharacteristicUUID` from service `ServiceUUID`.
-* `2#ServiceUUID#CharacteristicUUID` - Read characteristic `CharacteristicUUID` from service `ServiceUUID`.
-* `3#ServiceUUID#CharacteristicUUID` - Write to characteristic `CharacteristicUUID` from service `ServiceUUID`.
+9. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
+10. In the **Encoding** field, select the message encoding.
+11. Click **Add Device**.
 
-### Response
+## TCP/IP Server
 
-* `CharacteristicUUID#Response`
+TCP/IP clients allow you to host connections over the network.
+
+### Configuring TCP/IP Servers
+
+To add a TCP/IP server, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, and then select **TCP/IP Server**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
+
+    * **Port** - The port on which the TCP/IP Server is initalized. The value must be in the range of `0-65535`.
+
+7. Click **Next**.
+8. In the **Split Incoming Message By** section, select one of the following options:
+
+    * **Delimiter** - Messages received from the device are split by the specified character or characters marking the end of the message, for example, `\r\n`.
+    * **Time and Size** - Messages received from the device are split by time interval in milliseconds and maximum message size in bytes.
+    * **Do Not Split** - Messages received from the device are not automatically split.
+
+9. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
+10. In the **Encoding** field, select the message encoding.
+11. Click **Add Device**.
 
 ## Printers
 
 You can integrate your Workstations with printer devices.
 
-### Configuration in Management UI
+### Configuring Printers
 
 To add a printer device, perform the following steps:
 
-1. Navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device** and select **Printer**.
-3. Enter the exact device name as it is displayed in your operating system's device manager.
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, and then select **Printer**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Enter the exact device name as it is displayed in your operating system's device manager.
+7. Click **Add Device**.
 
 ### Message Syntax
 
@@ -193,4 +313,4 @@ The sample print command `P#TESTHELLO#RAW#aGVsbG8=` contains the following eleme
 3. `TESTHELLOFILE` (file name) - Name assigned to the print job. The client uses this to create the temporary file (for example, `TESTHELLOFILE.prn`) before sending it to the printer spooler.
 4. Separator
 5. `RAW` (format type) - Tells the Workstation Client that the following data is a Raw Printer Command (such as ZPL for Zebra printers, EPL, or PCL) rather than a standard document like a PDF or a Word file. Printing in RAW bypasses the standard printer drivers' formatting. It sends the exact code the printer needs to generate labels, barcodes, or specific layouts.
-6. `aGVsbG8=` (payload) - A data string encoded to Base64. Base64 decoded, it translates to the text `hello`. If you are testing this and the printer is not reacting, verify that the string you are encoding in Base64 matches the specific language your printer speaks. For example, a Zebra printer cannot process a plain text `hello` unless it is wrapped in ZPL commands like `^XA^FO50,50^A0N,50,50^FDhello^FS^XZ`).
+6. `aGVsbG8=` (payload) - A data string encoded to Base64. Base64 decoded, it translates to the text `hello`. If you are testing this and the printer is not reacting, verify that the string you are encoding in Base64 matches the specific language your printer speaks. For example, a Zebra printer cannot process a plain text `hello` unless it is wrapped in ZPL commands like `^XA^FO50,50^A0N,50,50^FDhello^FS^XZ`.

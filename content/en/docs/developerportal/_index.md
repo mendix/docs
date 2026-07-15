@@ -112,7 +112,7 @@ You get an invitation only when someone invites you to a project from a differen
 
 ## Company Projects {#my-company-projects}
 
-The **Company Project** tab displays all the projects created by members of your [company](/control-center/company-settings/).
+The **Company Projects** tab displays all the projects created by members of your [company](/control-center/company-settings/).
 
 There are also details on the project's [Target Cloud](/deployment/), and the [Total Members](/control-center/members/) who can view or edit the project.
 

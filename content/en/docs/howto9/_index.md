@@ -2,7 +2,7 @@
 title: "Studio Pro 9 How-tos"
 url: /howto9/
 description: "Step-by-step guides on various Mendix topics that teach you how to build and customize apps."
-weight: 65
+weight: 82
 no_list: false
 description_list: true
 cascade:
@@ -12,6 +12,7 @@ cascade:
     - notsitemap: true
     - sitemap:
         priority: 0.3
+    - banner: "If you would like to upgrade to a newer <a href=\"/releasenotes/studio-pro/lts-mts/#lts\">long-term support version</a> of Studio Pro, see <a href=\"/refguide10/upgrading-from-9-to-10/\">Upgrading from Mendix Studio Pro 9 to 10</a>."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

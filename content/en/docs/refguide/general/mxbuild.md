@@ -7,7 +7,7 @@ description: "Describes MxBuild, which is a command-line tool for building and d
 
 ## Introduction
 
-MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
+MxBuild is a Windows, Linux, and macOS command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
 
 The version of MxBuild you need depends on the version of the Mendix model you would like to build, as well as the host operating system you would like to use.
 
@@ -15,14 +15,13 @@ The table below can help you find the correct MxBuild. Copy a URL from the corre
 
 | Operating System | Mendix Version               | URL                                                          |
 | ---------------- | ---------------------------- | ------------------------------------------------------------ |
-| Linux (x64)      | All versions                 | `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`  |
-| Windows (x64)    | All version of Studio Pro 10 | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz` |
+| Linux (x64)      | All                          | `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`  |
+| Windows (x64)    | 11                           | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz` |
 
 {{% alert color="info" %}}
+In Mendix version 11.5.0 and above, `{mxversion}` follows a SemVer pattern `major.minor.patch` with the occasional pre-release suffix (for example, `11.5.0` or `11.6.0-beta.1` for planned pre-releases).
 
-A build number is included in the version, which has to be included in the link path mentioned above (for example, `10.0.0.9976` is the 9976 build of the 10.0.0 Studio Pro release).
-
-You can find the build number in path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\10.0.0.9976`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz](https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz)).
+In Mendix versions below 11.5.0, a build number is included in the version, which has to be included in `{mxversion}` in the link path mentioned above (for example, `11.0.0.73100` is the 73100 build of the 11.0.0 Studio Pro release). You can find the build number in the path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\11.0.0.73100`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-11.0.0.73100.tar.gz](https://cdn.mendix.com/runtime/mxbuild-11.0.0.73100.tar.gz)).
 
 Any public version of Studio Pro in this [Studio Pro Releases List](https://marketplace.mendix.com/link/studiopro/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
 
@@ -34,6 +33,14 @@ For details on the system requirements for MxBuild, see [System Requirements](/r
 
 {{% alert color="info" %}}
 The examples used in this document are for Windows, except when specifically mentioned otherwise.
+{{% /alert %}}
+
+On macOS, the MxBuild tool is distributed only within the `StudioPro.app` bundle. The Studio Pro installer automatically creates a symlink in `/usr/local/bin` with the format `mxbuild{mxversion}` (for example, `mxbuild11.0.0`), where `{mxversion}` does not include the build number. This symlink points to the `mxbuild` executable inside the app bundle, making it accessible from the command-line.
+
+{{% alert color="warning" %}}
+For MxBuild and macOS users:
+
+If you are using the macOS version of Studio Pro and you store your project files on an external drive not formatted using the Apple File System, macOS can generate hidden files and folders that can make Windows versions of Studio Pro or MxBuild not work as expected.
 {{% /alert %}}
 
 ## Command Line
@@ -61,17 +68,18 @@ Command-line options are described in the table below:
 | `-h`, `--help` | Prints a short description of the MxBuild and a list of all available options. |
 | `--java-home=DIRECTORY` | (Required). The directory in which the JDK is installed.<br/>For example, `--java-home=/usr/lib/jvm/java-8-oracle`.<br/>For Windows, *DIRECTORY* should be enclosed in double-quotes `"`. |
 | `--java-exe-path=FILENAME` | (Required). The full path to the Java executable.<br/>For example, `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`.<br/>For Windows, *DIRECTORY* should be enclosed in double-quotes `"` and must contain the complete file name `...\java.exe`. |
-| <code>––target=[package&#124;deploy]</code> | `package`: default if option is omitted; creates a deployment package (*.mda file*).<br/>`deploy`: deploys the app without making a deployment package.<br/>`sbom`: generates a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format for the app. |
+| <code>--target=[package&#124;deploy&#124;sbom&#124;portable-app-package]</code> | `package`: default if option is omitted; creates a deployment package (*.mda file*).<br/>`deploy`: deploys the app without making a deployment package.<br/>`sbom`: generates a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format for the app. <br/> `portable-app-package`: generates a portable app deployment zip file with components and configurations required to run the application.|
 | `--loose-version-check` | Creates a deployment package from an app which was created with a lower Mendix version.<br/>The app will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will not be stored in your app. |
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
 | `--generate-sbom` | Generates a Software Bill of Materials (SBOM) file as a part of the `package` and `deployment` targets. The SBOM will be included in the deployment package if this option is used and is saved under its default location: `deployment\sbom.json` |
 | `--sbom-output-path=VALUE` | The file path to generate a bill of material file for the `package` and `deployment` targets. Use `--output` for the `sbom` target (Default value: `deployment\sbom.json`). <br>This parameter is deprecated and will be removed in Mendix 11 and replaced with the `sbom` target.</br> |
-| `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. | 
+| `--gradle-home=DIRECTORY` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. |
+| `--extra-gradle-arguments=EXTRA_ARGUMENTS` | Adds extra arguments to the Gradle process. |
 
 ### Options When Creating a Package
 
 {{% alert color="info" %}}
-The following options are only applicable with the `--target=package` option.
+The following options are only applicable with the `--target=package` or `--target=portable-app-package` options.
 {{% /alert %}}
 
 Options when creating a package are described in the table below:
@@ -105,6 +113,23 @@ For example, to create a SBOM in the deployment directory of the App with the na
 
 ```bat
 mxbuild --target=sbom --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
+```
+
+### Options When Creating a Portable App Package
+
+{{% alert color="info" %}}
+The following options are only applicable to the `--target=portable-app-package` option, which is available for Studio Pro 11.9 and above.
+{{% /alert %}}
+
+| Option | Description |
+| --- | --- |
+| `--export-secrets` | Emits passwords and private constants to the configuration files. |
+| `-o FILENAME` or<br/>`--output=FILENAME` | The name (with optional relative or absolute path) of the portable app deployment zip file. The extension of the file must be `.zip`. This option is mandatory.|
+
+For example, to create a portable app deployment zip file in the target directory of the app with the name `MyApp_PAD.zip` for the application `MyApp` using the Windows version of MxBuild, you can use the following command:
+
+```bat
+mxbuild --target=portable-app-package --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" -o "C:\Users\username\Documents\Mendix\MyApp\MyApp_PAD.zip"  "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
 ```
 
 ## Return Code
@@ -165,3 +190,7 @@ The location (or locations) associated with the problem have the following prope
 | `element` | A description of the model element in which the problem occurs. |
 | `document` | A description of the document in which the problem occurs. |
 | `module` | A description of the module in which the problem occurs. |
+
+## Troubleshooting {#troubleshooting}
+
+For Studio Pro 11.9.0 and above, MxBuild will load and run web extensions. Web extensions can now fail the build if they raise consistency errors for your app. For security purposes, MxBuild uses Deno to host the web extensions during build time. In some containerized environments, you may run into an `error 13 access denied` when Deno attemps to create its local cache structure. To work around this, you can set the `DENO_DIR` environment variable to a location where MxBuild has write access.

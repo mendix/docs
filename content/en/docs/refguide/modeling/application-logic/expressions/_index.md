@@ -13,7 +13,7 @@ aliases:
 
 Expressions change a value based on a function or combination of functions. 
 
-Named items (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example, `$customer` could refer to an object named `customer`). Expressions can also include Mendix system items which contain information about the current user session. See [System Items](#system-items), below.
+Named items (for example, objects, lists, or variables) can be called in an expression with a dollar sign followed by the name of the item (for example, `$customer` could refer to an object named `customer`). Expressions can also include Mendix system items which contain information about the current user session. See [System Items](#system-items), below.
 
 Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`, and the **CRM.Customer_Order** association of the customer object is referred to as `$customer/CRM.Customer_Order`).
 
@@ -63,7 +63,7 @@ This way the first statement gets evaluated.
 
 Mendix provides you with a number of system items which describe the current user's session. You can use these in the same way as any other named item.
 
-### $currentUser
+### `$currentUser`
 
 This is an object of type `System.User` which contains the attributes for the currently signed-in user.
 
@@ -71,7 +71,7 @@ This is an object of type `System.User` which contains the attributes for the cu
 For performance reasons, this information is cached. If you need the current value of attributes which might have changed during the session, you should retrieve the latest data from the database.
 {{% /alert %}}
 
-### $currentSession
+### `$currentSession`
 
 This is an object of type `System.Session` which contains the attributes for the current user session.
 
@@ -155,17 +155,17 @@ For performance reasons, this information is cached. If you need the current val
 
 ## Begin-of Date Function Calls
 
-* [`BeginOfDay`](/refguide/begin-of-date-function-calls/#beginOfDay) – calculates the beginning of the day compared to the initial date
-* [`BeginOfWeek`](/refguide/begin-of-date-function-calls/#beginOfWeek) – calculates the beginning of the week compared to the initial date
-* [`BeginOfMonth`](/refguide/begin-of-date-function-calls/#beginOfMonth) – calculates the beginning of the month compared to the initial date
-* [`BeginOfYear`](/refguide/begin-of-date-function-calls/#beginOfYear) – calculates the beginning of the year compared to the initial date
+* [`beginOfDay`](/refguide/begin-of-date-function-calls/#beginOfDay) – calculates the beginning of the day compared to the initial date
+* [`beginOfWeek`](/refguide/begin-of-date-function-calls/#beginOfWeek) – calculates the beginning of the week compared to the initial date
+* [`beginOfMonth`](/refguide/begin-of-date-function-calls/#beginOfMonth) – calculates the beginning of the month compared to the initial date
+* [`beginOfYear`](/refguide/begin-of-date-function-calls/#beginOfYear) – calculates the beginning of the year compared to the initial date
 
 ## End-of Date Function Calls
 
-* [`EndOfDay`](/refguide/end-of-date-function-calls/#endOfDay) – calculates the end of the day compared to the initial date
-* [`EndOfWeek`](/refguide/end-of-date-function-calls/#endOfWeek) – calculates the end of the week compared to the initial date
-* [`EndOfMonth`](/refguide/end-of-date-function-calls/#endOfMonth) – calculates the end of the month compared to the initial date
-* [`EndOfYear`](/refguide/end-of-date-function-calls/#endOfYear) – calculates the end of the year compared to the initial date
+* [`endOfDay`](/refguide/end-of-date-function-calls/#endOfDay) – calculates the end of the day compared to the initial date
+* [`endOfWeek`](/refguide/end-of-date-function-calls/#endOfWeek) – calculates the end of the week compared to the initial date
+* [`endOfMonth`](/refguide/end-of-date-function-calls/#endOfMonth) – calculates the end of the month compared to the initial date
+* [`endOfYear`](/refguide/end-of-date-function-calls/#endOfYear) – calculates the end of the year compared to the initial date
 
 ## Between Date Function Calls
 

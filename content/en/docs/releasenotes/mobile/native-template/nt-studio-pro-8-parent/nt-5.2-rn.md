@@ -25,7 +25,7 @@ To target Android 13 (API level 33 or higher), you can update the `compileSdkVer
 
 ### Fixes
 
-* We updated AppCenter configurations.
+* We updated App Center configurations.
   
 ## 5.2.16
 

@@ -1,75 +1,52 @@
 ---
 title: "Environment Details"
 url: /developerportal/deploy/environments-details/
-weight: 7
+weight: 8
 description: "Describes the environmental details of your app and how to manage the environment."
+aliases:
+    - /developerportal/deploy/environments-details-redesign/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-safelist below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
-#The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed. 
 ---
 
 ## Introduction
 
 To open the **Environment Details** page, go to [Apps](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" >}}
+{{% alert color="info" %}}You must have permissions for **Transport Rights** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
 
-{{% alert color="info" %}}You must have permissions for **Transport Rights** or **Access to Monitoring** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
+The **Environment Details** page shows information about the selected environment and includes nine tabs: **General**, **Model Options**, **Network**, **Connectivity**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**. You can also use this page to manage and debug several aspects of the environment.
 
-The **Environment Details** page shows information about the selected environment. You can use this page to manage and debug several aspects of the environment. The page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
+## Actions {#actions}
 
-## The General Tab
-
-In the **General** tab, you can find the following information about your environment:
-
-* **Status**
-    * {{% icon name="checkmark-circle-filled" color="green" %}} – The application in this environment is running.
-    * {{% icon name="subtract-circle-filled" color="gray" %}} – No application has been started yet in this environment, or it has been turned off.
-    * {{% icon name="alert-circle-filled" color="yellow" %}} – The application in this environment is experiencing some difficulties; check the alerts page or logs for more information.
-    * {{% icon name="remove-circle-filled" color="red" %}} – The application in this environment is unstable and probably not usable anymore.
-* **Running since** – the date the app was started, if it is running
-* **Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
-* **Url** – the URL of the app
-* **Project ID** – the unique identifier of the app
-* **Environment ID** – the unique identifier of the environment
-* **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
-* **Java Version** – the JDK version selected for the MDA that is deployed to the environment
-* **Studio Pro Target** – a **Yes** or **No** value indicating whether the environment is the designated deployment target from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
-* **Plan** – the type of plan covered by your license (for more information, see the [Overviews](/developerportal/deploy/environments-details/#overviews) section below)
-* **Instances** – a summary of the number and memory allocation of instances of the environment (for more information, see the [Scaling](#scaling) section below)
-* **Database Version** – the PostgreSQL version supporting the database
-* **Region** – the region of the data center where the app is hosted (for the full list of Mendix Cloud regions, see [Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing))
-* **Secondary Backup Location** – the region where the backup is stored (for more information, see [Data Location](/developerportal/operate/backups/#data-location) in the *Backups* documentation)
-* **Mendix Cloud Version** – the version of Mendix Cloud where the app is hosted
-
-At the bottom of the page, there are three overview grids showing the deployment package details, plan details, and license. These are described in detail below in the [Overviews](#overviews) section.
-
-### Actions {#actions}
-
-On the right side of the screen in the **General** tab, there are buttons that you can use to perform various actions. Some action buttons are visible when your app is running, some are visible when your app is stopped, and some are always visible.
+On the top right side of the screen, there are a number of action buttons and a **More Options** ({{% icon name="three-dots-menu-horizontal"%}}) menu that you can use to perform various actions. Some action buttons are visible when your app is running, some are visible when your app is stopped, and some are always visible.
 
 {{% alert color="info" %}}Depending on your permissions, you may see only some of the action buttons described below. You can adjust your permissions settings on the [Permissions](/developerportal/deploy/node-permissions/) tab of your app's **Environments** page.{{% /alert %}}
 
-When your app is running, you can see the following action buttons:
+### Running App Actions
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/actions-v5.png" alt="Available actions when the app is running" max-width=40% class="no-border" >}}
+When your app is running, you can perform the following actions:
 
-* **Restart Application** – This stops the running application and starts it again. Restarting your app is required for applying new constant values or scheduled events to the environment.
-* **Stop Application** – This stops the application.
-* **Show Logged in Users** – This shows all users who are logged in to your app.
-* **Change Admin Password** – This changes the password for the built-in [administrator](/refguide/administrator/) account. The new password is applied immediately, without the need for a restart, and forces the administrator to pick up any new [roles](/refguide/administrator/#user-role) assigned in the app deployment package.
-* **View Live Log** – This shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
-* **Show Debugger Information** – This shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
-* **Show Running Now** – You can use this to monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
+* **Deploy** – This deploys an application to the environment.
+* **Restart App** – This stops the running application and starts it again. Restarting your app is required for applying new constant values or scheduled events to the environment.
+* **Stop App** – This stops the application.
+* **More Options**:
+    * **Show Logged in Users** – This shows all users who are logged in to your app.
+    * **Change Admin Password** – This changes the password for the built-in [administrator](/refguide/administrator/) account. The new password is applied immediately, without the need for a restart, and forces the administrator to pick up any new [roles](/refguide/administrator/#user-role) assigned in the app deployment package.
+    * **View Live Logs** – This shows a live log of your application and performs the same action as the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
+    * **Show Debugger Info** – This shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
+    * **Show Running Now** – You can use this to monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
 
-When your app is stopped, you see this set of action buttons instead:
+### Stopped App Actions
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/actions-stopped.png" alt="Available actions when the app is stopped" max-width=40% class="no-border" >}}
+When your app is stopped, you can perform these actions:
 
-* **Start Application** – This starts the application.
-* **Stop Application** – This stops the application.
-* **Clear Environment** – This allows you to empty all the data from your database and, optionally, remove the app and file storage from the environment as well. For more information, see [Clearing an Environment](#clear-environment). 
-* **View Live Log** – This shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
+* **Deploy** – This deploys an application to the environment.
+* **Start App** – This starts the application.
+* **More Options**:
+    * **Clear Environment** – This allows you to empty all the data from your database and, optionally, remove the app and file storage from the environment. For more information, see [Clearing an Environment](#clear-environment). 
+    * **View Live Logs** – This shows a live log of your application.
 
 {{% alert color="info" %}}
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.
@@ -99,52 +76,54 @@ To clear your environment, follow these steps:
 3. Confirm that you want to clear your environment by typing the indicated text (*clear database* or *clear model and database*, depending on which option you selected).
 4. Click **Clear Environment**.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/clear-environment.png" alt="Clear Environment options and confirmation" max-width=70% >}}
+## The General Tab {#general-tab}
 
-### Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
+In the **General** tab, you can find four sections that provide information about the [application status](#application-status), [deployment package details](#deployment-package-details), [plan details](#plan-details), and [license](#license).
 
-If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environments.
+### Application Status
 
-To rename an environment, follow these steps:
+In the **Application Status** section of the **General** tab, you can find the following information about your environment:
 
-1. Click **Change** next to the name of the environment.
-2. Enter the new name, which must meet the following requirements:
+* **Status**
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – The application in this environment is running
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – No application has been started yet in this environment, or it has been turned off
+    * {{% icon name="alert-circle-filled" color="yellow" %}} – The application in this environment is experiencing some difficulties; check the alerts page or logs for more information
+    * {{% icon name="remove-circle-filled" color="red" %}} – The application in this environment is unstable and probably not usable anymore
+* **Project ID** – the unique identifier of the app
+* **Environment ID** – the unique identifier of the environment
+* **Running Since** – the date the app was started, if it is running
+* **Display Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
+* **Subdomain Suffix** – the application's subdomain name
+* **URL** – the URL of the app
+* **Custom Domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app; to add a new domain, click **Add Custom Domain**
+* **Studio Pro Target** – a **Yes** or **No** value indicating whether the environment is the designated deployment target from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
+* **Java Version** – the JDK version selected for the MDA that is deployed to the environment
+* **Database Version** – the PostgreSQL version supporting the database
+* **Region** – the data center region where the app is hosted (for the full list of Mendix Cloud regions, see [Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing))
+* **Data Backup Secondary Location** – the region where the backup is stored (for more information, see [Data Location](/developerportal/operate/backups/#data-location) in the *Backups* documentation)
+
+#### Naming of Environments - Flexible Applications in Mendix Cloud {#naming}
+
+{{% alert color="info" %}}
+Renaming an environment's subdomain suffix or display name is only applicable to flexible applications.
+{{% /alert %}}
+
+If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environment’s **Subdomain Suffix** or **Display Name** by clicking **Change** next to either of the options.
+
+* **Display Name requirements**:
+    * Must start and end with an alphanumeric or non-latin character
+    * Must contain two or more alphanumeric or non-latin characters and hyphens (–)
+    * Maximum of 200 characters are allowed
+* **Subdomain Suffix requirements** 
     * Consists of at least two characters
     * Consists of only alphanumeric characters and hyphens (`a-z`, `A-Z`, `0-9`, and `-`)
     * Does not begin or end with a hyphen
 
 {{% alert color="info" %}}
-After you rename an environment, it may take up to 15 minutes before you can access an app via its URL. This is because the URL includes the name of the environment, and the old value needs to be removed from the DNS cache. It may take considerably longer for the change to be visible worldwide.
+After you rename an environment’s subdomain suffix, it may take up to 15 minutes before you can access an app via its URL. This is because the URL includes the subdomain name of the environment, and the old value needs to be removed from the DNS cache. It may take considerably longer for the change to be visible worldwide.
 {{% /alert %}}
 
-### Scaling {#scaling}
-
-To see the options for changing scaling, scroll down to the **Instances** section of the **General** tab and click **Change scaling**.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/change-scaling.png" alt="" class="no-border" >}}
-
-In the **Change scaling** dialog box, there are two sliders that you can control:
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/scale.png" alt="A sample view of the Scaling page" width=400 class="no-border" >}}
-
-* Use the **Instances** slider to increase or decrease the number of instances
-    * The instances are meant for improved resiliency and increased processing power
-    * The minimum amount of RAM per instance is 1 GiB; you can spread the RAM among four instances if you have more than 1 GiB of RAM
-* Use the **Memory per instance** slider to increase or decrease the memory amount per instance
-
-The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
-
-{{% alert color="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GiB. The maximum number of instances depends on the **Memory per instance** you have chosen; the maximum number of instances equals the total allocated memory divided by the memory per instance.{{% /alert %}}
-
-If you have 1 GiB RAM of total allocated memory, you have one instance available to store your memory. To scale your memory over multiple instances, you need more memory.
-
-For more information, see [Scaling Your Environment](/developerportal/deploy/scale-environment/).
-
-### Overviews {#overviews}
-
-At the bottom of the **General** tab, there are three overview grids showing the deployment package details, plan details, and license.
-
-#### Deployment Package Details
+### Deployment Package Details
 
 In this section, you can find information about the deployment package that is loaded into the environment:
 
@@ -152,13 +131,40 @@ In this section, you can find information about the deployment package that is l
 * **Version** of the deployment package
 * **Runtime** version of Mendix used to create the app
 * **Size (MB)** of the deployment package
-* **Upload date** of the deployment package
+* **Upload Date** of the deployment package
 
-#### Plan Details
+### Plan Details
 
-This section shows details of the plan that applies to this environment.
+This section shows details of the plan that applies to this environment.    
+It also includes the option to change your plan. For details, refer to [Changing Plan](/developerportal/deploy/change-plan/).
 
-#### License
+* **Name** – the type of plan associated with your license
+* **Instances** – the number and memory allocation of instances in the environment (for more information, see the [Scaling](#scaling))
+* **Memory** – the total allocated memory of the plan
+* **Database Plan Cores** – the CPU cores allocated to the database
+* **Database Plan Space** – the storage capacity of the database
+* **Database Plan Memory** – the database's RAM size
+* **File Storage** – available size for storing blobs
+* **Multi-AZ Enabled** –  a **Yes** or **No** value indicating whether multiple availability zones are enabled
+
+#### Scaling {#scaling}
+
+To see the options for changing scaling, click **Scale** on the **Instances** row. This will open the **Change Scaling** dialog box, which includes two sliders that you can control:
+
+* Use the **Instances** slider to increase or decrease the number of instances
+    * The instances are meant for improved resiliency and increased processing power
+    * The minimum amount of RAM per instance is 1 GiB; you can spread the RAM among four instances if you have more than 1 GiB of RAM
+* Use the **Memory per instance** slider to increase or decrease the memory amount per instance
+
+The **Total Allocated Memory** is represented by a progress circle that shows how much memory is currently used for scaling.
+
+{{% alert color="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, and it cannot exceed 32 GiB. The maximum number of instances depends on the **Memory per instance** you have chosen; the maximum number of instances equals the total allocated memory divided by the memory per instance.{{% /alert %}}
+
+If you have 1 GiB RAM of total allocated memory, you have one instance to use your memory. To scale your memory over multiple instances, you need more memory.
+
+For more information, see [Scaling Your Environment](/developerportal/deploy/scale-environment/).
+
+### License
 
 The license overview contains the following information:
 
@@ -168,23 +174,7 @@ The license overview contains the following information:
 
 ## The Model Options Tab {#model-options}
 
-On this tab, you can edit the following model options: scheduled events and constants.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/model-options.png" class="no-border" >}}
-
-### Scheduled Events
-
-In this section, you can view your configured scheduled events.
-
-If you select a scheduled event and click **Toggle**, you can switch the scheduled event off and on.
-
-{{% alert color="info" %}}
-For the changes to take effect, you must restart your application.
-{{% /alert %}}
-
-With scheduled events, you can let the Mendix Runtime run a microflow at a specific moment in time. The event can also be repeated with a given interval; for example, you can set it to repeat every day.
-
-For more information, see [Scheduled Events](/refguide/scheduled-events/).
+On this tab, you can edit the model options for constants and scheduled events.
 
 ### Constants {#constants}
 
@@ -192,11 +182,11 @@ In this section, you can view the configured constants. Constants are used to de
 
 To fill in a new value, select the constant and click **Edit** to bring up the **Edit Constant** dialog box.
 
-In the **Edit Constant** dialog box, you can change the constant value using the **New value** field.
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details-beta/edit-constant.png" >}}
 
-You can also set **Mask** to **Yes**. This changes the display settings for **Current value** and **New value**; if masking is enabled, all screens in the Mendix Portal (and in Excel if you export the constants) conceal these values and display a string of asterisks in their place. This lets you keep your constants secret from users who do not have edit rights.
+In the **Edit Constant** dialog box, you can change the constant value using the **New Value** field.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/edit-constant.png" alt="Edit Constants Pop-up window"   width="60%"  class="no-border" >}}
+You can also set **Mask** to **Yes** to change the display settings for **Current Value** and **New Value**. When masking is enabled, all screens in the Mendix Portal (and in Excel if you export the constants) conceal their values and display asterisks in their place. This keeps your constants secret from users with no edit rights.
 
 {{% alert color="info" %}}
 For the changes to take effect, you must restart your application.
@@ -208,23 +198,41 @@ When a constant is first introduced to a cloud deployment, its value is taken fr
 
 For more information, see [Constants](/refguide/constants/).
 
+#### Comparing Constants
+
+You can export the constant values to an Excel file by clicking **Export To Excel**, or compare the values across different environments by clicking **Compare and Edit**.
+
+### Scheduled Events
+
+In this section, you can view your configured scheduled events.
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details-beta/edit-event.png" >}}
+
+If you select a scheduled event and click **Toggle**, you can switch the scheduled event off and on.
+
+{{% alert color="info" %}}
+For the changes to take effect, you must restart your application.
+{{% /alert %}}
+
+With scheduled events, you can let the Mendix Runtime run a microflow at a specific moment in time. The event can also be repeated with a given interval; for example, you can set it to repeat every day.
+
+For more information, see [Scheduled Events](/refguide/scheduled-events/).
+
 ## The Network Tab {#network-tab}
 
 On the **Network** tab, you can manage the elements described below.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/network1.png" alt="" class="no-border" >}}
-
 ### Custom Domains {#custom-domains}
 
-* **Domain name**
+* **Domain Name**
 * **Certificate**
 * **Expire** date
 
 You can perform the following actions:
 
 * **Add** – provide the domain name and select the certificate from a drop-down menu
-* **Edit**
-* **Delete**
+* **Edit** – update the domain details
+* **Delete** – remove domain
 
 For more information, see [Certificates](/developerportal/deploy/certificates/) and [Custom Domains](/developerportal/deploy/custom-domains/).
 
@@ -247,21 +255,21 @@ Mendix Cloud supports the following HTTP headers in the Mendix Portal:
 | `X-Content-Type-Options`      | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
 | `X-Frame-Options`             | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>`, or `<object>`. The default is not to allow apps to be rendered inside frames. This was the value set previously to prevent embedding in an iframe.<br/>For details on running your app inside an iframe, see [Running Your App in an Iframe](#iframe), below. |
 | `X-Permitted-Cross-Domain-Policies` | Specifies whether the page can load resources from a different domain. |
-| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. |
+| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.<br/>{{% alert color="warning" %}}This header is [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) and not recommended for new implementations.{{% /alert %}} |
 
 There are three types of values for these headers:
 
 * Choose a value from a drop-down menu:
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/http-header-dropdown.png" alt="Selecting a value" width=350 class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details-beta/http-header-dropdown.png" alt="Selecting a value" width=450 >}}
 
 * Choose a value from a drop-down menu and specify a URL:
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/http-header-url.png"  alt="Specifying a URL" width=350 class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details-beta/http-header-url.png"  alt="Specifying a URL" width=450 >}}
 
 * Enter the required values as a string:
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/http-header-string.png"  alt="Entering a value" width=350 class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details-beta/http-header-string.png" alt="Entering a value" width=450 >}}
 
 The changes to the headers are implemented when the app is redeployed.
 
@@ -276,7 +284,7 @@ Mendix and the deployment environment automatically add some non-configurable re
 | `cache-control`| The buildpack for *index.html* and *login.html* – the Mendix Runtime for other pages |
 | `permissions-policy: interest-cohort=()` | Exclude from Federated Learning of Cohorts (FLoC) calculation |
 | `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` (365 days, in seconds)|
-| `x-vcap-request-id` | Cloud Foundry to track requests through CF |
+| `X-Request-ID` | Kubernetes to track requests through the Mendix Cloud platform |
 
 #### Running Your App in an Iframe {#iframe}
 
@@ -318,7 +326,11 @@ document.cookie = "originURI=/login.html" + (window.location.protocol === "https
 
 #### Content Security Policy {#csp}
 
-A Content Security Policy informs the client (browser) where your page loads resources from. Setting this can make your app more secure by declaring trusted sources for your resources. For more information, see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/).
+A Content Security Policy (CSP) informs the client (browser) where your page loads resources from. Setting this can make your app more secure by declaring trusted sources for your resources. For more information, see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/).
+
+{{% alert color="info" %}}
+For complete CSP support, including nonce-based CSP, use the [Headers](/refguide/configurations-tab/#headers) custom runtime setting instead of the HTTP Headers UI. For detailed implementation instructions, see [Content Security Policy](/howto/security/csp/).
+{{% /alert %}}
 
 The process for setting a full content security policy depends on what your app does. However, a starting point that declares the content security policy that works with a basic Mendix app is given below:
 
@@ -327,6 +339,32 @@ default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-s
 ```
 
 If you have issues that appear to be related to a content security policy, you can use the console of your browser to investigate them.
+
+### Outgoing Connections Certificates
+
+Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These are used when your application initiates SSL/TLS connections.
+
+## The Connectivity Tab {#connectivity-tab}
+
+On the **Connectivity** tab, you can manage the elements described below.
+
+### Connections {#connections}
+
+You can connect from your applications on Mendix Cloud to resources on your own infrastructure using [Mendix Cloud Private Connectivity](/control-center/private-connectivity/).
+
+The **Connections** tab contains the following information:
+
+* **Resource** – The name of the connected service
+* **Network** – The name of the network associated with the connection
+* **Status** – The connection's current state, such as **Pending Approval**, **Approved** or **Rejected**
+
+You can perform the following actions for connections:
+
+* **Add** a new connection
+* **Cancel** a connection request
+* **Delete** a connection
+
+For more information, refer to [Connecting to External Resources](/developerportal/deploy/connecting-to-external-resource/).
 
 ### Outgoing Connections Safelisting (Mendix Cloud Dedicated) {#connection-safelist}
 
@@ -351,7 +389,7 @@ For each range where you define safelisted IP addresses and ports, you can enter
 * **Protocol** – Select whether the safelisting is for **TCP**, **UDP**, or **ALL** traffic.
 * **Description** – Enter an optional description of this IP range (for example, which API it supports).
 
-Click **Save** to save your range. The new values are applied within a few minutes without needing an app restart.
+Click **Save** to apply your range. The new values take effect within a few minutes without needing an app restart.
 
 #### Valid IP Ranges {#valid-ip}
 
@@ -365,13 +403,26 @@ IP addresses must be within the following ranges:
 | 172.32.0.0  | 192.167.255.255 |
 | 192.169.0.0 | 255.255.255.255 |
 
+### IP Access Restrictions {#ip-access-restrictions}
+
+You can define IP profiles to deny access to your application from specific IP addresses or ranges.
+
+The **IP Access Restrictions** overview contains the following information:
+
+* **Current Restriction Profile**
+* **New Restriction Profile**
+
+You can also **Delete**, **Add**, or **Edit** an IP based access restriction.
+
+For more information, refer to the [IP Restriction Profile](/developerportal/deploy/access-restrictions/#ip-restriction-profiles) section of *Restricting Access for Incoming Requests*.
+
 ### Path-Based Access Restrictions {#path-based-restrictions}
 
-You can restrict access to your application by means of Client Certificates or IP ranges.
+You can restrict access to your application using Client Certificates or IP ranges.
 
-The root path (`/`) restricts access to the entire application. Settings for a specific path override the implicitly inherited profile from other non-root paths.
+The root path (`/`) restricts access to the entire application. If a specific path has it own settings, those will override the profile inherited from other non-root paths.
 
-Custom access restriction profiles are managed at the application level. They can be reused for all environments (acceptance, production, etc).
+Custom access restriction profiles are managed at the application level and can be reused across all environments (acceptance, production, etc).
 
 The **Path Based Access Restrictions** overview contains the following information:
 
@@ -386,25 +437,18 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 * Custom Profile for Client Certificates and/or IP ranges
 * N/A (inherit)
 
-For more information, see [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
-
-### Outgoing Connections Certificates
-
-Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These are used when your application initiates SSL/TLS connections.
+For more information, refer to the [Access Restriction Profiles](/developerportal/deploy/access-restrictions/#access-restriction-profiles) section of *Restricting Access for Incoming Requests*.
 
 ## The Log Levels Tab {#log-levels}
 
-Log levels are used to distinguish the log messages. Log levels highlight the highest-priority log messages so that they can be prioritized accordingly. 
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/loglevels-tab.png" alt="Viewing the log levels" >}}
+Log levels are used to distinguish log messages. Log levels highlight the highest-priority log messages so that they can be prioritized accordingly. 
 
 Custom log nodes appear in the list only after a message has been logged to them. For more information, see [Log Message](/refguide/log-message/#log-node-name).
 
 On this tab, you can perform the following actions:
 
-* Change the log level by selecting a node, clicking **Change level**, and modifying the level in the **Change log level** dialog box
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/loglevels.png" alt="Selecting the log level type" width=50% class="no-border" >}}
-* Click **Set all to Info** to revert all the changes
+* Change the log level by selecting the new value from a drop-down list.
+* Click **Set all to INFO** to revert all the changes.
 
 When using the **Log Levels** tab, bear in mind the following considerations:
 
@@ -412,7 +456,7 @@ When using the **Log Levels** tab, bear in mind the following considerations:
     * For custom nodes, log nodes become visible when your app is restarted and after messages have been logged to them.
 * If you change the log level, this level will continue to be used even if you later restart your app.
 * If you change the log level, the startup logs (the logs that are created while starting the runtime, including the logs that the after-startup microflow generates) are not affected. It is not possible to change the log level of the startup logs for apps hosted on Mendix Cloud. 
-* For an application running a single instance, any changes are applied immediately to the application.
+* For an application running a single instance, changes are applied immediately to the application.
 * For an application running more than one instance, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
 * Log levels may not persist across restarts if you change them outside the Mendix Portal (for example, using an app module).
 
@@ -422,7 +466,7 @@ The log level types are as follows:
 | -------- | ------ | ----------- |
 | Trace    |        | Provides highly detailed information. Trace level messages are written only to logs. |
 | Debug    |        | Provides detailed information, typically of interest only when diagnosing problems. |
-| Info     |        | Confirms that things are working as expected. |
+| Info     |   Blue      | Confirms that things are working as expected. |
 | Warning  | Orange | Indicates that something unexpected happened or warns about an upcoming problem (for example, "disk space low"). The application is still working as expected. |
 | Error    | Red    | Indicates a serious problem that prevented the application from performing some function. |
 | Critical | White text, red background | Indicates that a serious error has occurred; the application may be unable to continue running. |
@@ -431,17 +475,15 @@ For more information about log levels, see [How to Set Log Levels](/howto/monito
 
 ## The Runtime Tab {#runtime-tab}
 
-On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/runtime.png" alt="Viewing the Runtime tab" >}}   
+On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**.  
 
 ### Custom Runtime Settings {#custom-runtime-settings}
 
 Use the **Custom Runtime Settings** section to perform the following actions:
 
-* **Add** a new runtime setting with a new value
+* **Add** a new runtime setting
 * **Edit** the runtime setting
-* **Delete** the runtime settings
+* **Delete** the runtime setting
 
 For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings/) and [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings/) documentation.
 
@@ -481,22 +523,25 @@ Click **Add** and select **Supported** to choose from the following variables:
 
 * **APPMETRICS_TARGET** – This enables sending application runtime and custom business metrics to HTTP endpoints of different monitoring solutions, such as [InfluxDB](https://www.influxdata.com/), while ignoring micrometer endpoints.
 * **DD_API_KEY** – This is the API key used with Datadog.
+* **DD_ENV** – Specifies the application environment for Datadog.
+* **DD_TRACE_ENABLED** – Enables or disables tracing. By default, the value is set to `false`, which means data collection remains active, but no trace is sent to the trace agent.
 * **DD_SITE** – This directs metrics to a specific Datadog region.
 * **DATABASE_CONNECTION_PARAMS** – These are additional JDBC parameters for PostgreSQL databases. For more information, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 * **JVM_GARBAGE_COLLECTOR** – This overrides the automatic configuration of the Java garbage collector. Accepted values are `Serial` or `G1`.
 * **METRICS_AGENT_CONFIG** – This passes a configuration JSON to control the metrics passed to Datadog.
 * **SAMESITE_COOKIE_PRE_MX812** – This sets `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section.
-* **USAGE_METRICS_EMAIL_FIELDS** – If your app uses specializations of the `System.User` entity to store users, use this variable to point to them. This enables Mendix to identify internal and external users of your app.
+* **USAGE_METRICS_EMAIL_FIELDS** (deprecated) – If your app uses specializations of the `System.User` entity to store users, use this variable to point to them. This enables Mendix to identify [internal and external users](/developerportal/deploy/implementing-user-metering/#user-classification) of your app.
+
     * The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app that contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user.
     * If you have multiple specializations of `System.User`, you can specify the values in comma-separated format (that is, `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`). In the following example, there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
 
-To support features that are in beta, click **Add** and select **Unsupported**. Then, you can add an unsupported environment variable. Unsupported environment variables can only be used for controlling Mendix beta features. If you are involved in using a beta feature, you will be informed what **Name** and **Value** to enter.
+    To ensure accurate user metering, it is important to distinguish external users from internal users. The recommended approach is to implement logic in your app to classify users (see [Implementing User Metering](/developerportal/deploy/implementing-user-metering/) and the [User Classification](/appstore/modules/user-classification/) module). A previous method relied on using email domains via the `USAGE_METRICS_EMAIL_FIELDS` constant, as described above. However, this method has now been deprecated. 
+
+Unsupported environment variables can only be used to control Mendix beta features. To configure an unsupported variable, click **Add** and select **Unsupported**. If you are using a beta feature, you will be informed what **Name** and **Value** to enter.
 
 ## The Maintenance Tab {#maintenance-tab}
 
-You can use the **Maintenance** tab to view information about planned maintenance, as well as configure your preferred maintenance window.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/maintenance.png" alt="Viewing the Maintenance tab" >}}   
+Use the **Maintenance** tab to view information about planned maintenance and configure your preferred maintenance window. 
 
 There are two types of maintenance:
 
@@ -509,31 +554,31 @@ You can view and change the preferred maintenance. For more information about ma
 
 ### Planned Maintenance
 
-When a maintenance operation is planned, it appears under **Planned Maintenance**. Each task card will show the purpose of the maintenance, when it is scheduled and its status.
+When a maintenance operation is planned, it appears under **Planned Maintenance**. Each task card will show the purpose of the maintenance, when it is scheduled, and its status.
 
 {{% alert color="info" %}}
-Maintenance topics (for example, "PostgreSQL 14 Upgrade") have a predefined period (start date and deadline). Once the start date is reached, you will get the option to execute it immediately, regardless of the Maintenance Window configured for the environment, by clicking **Execute Now**.
+Maintenance topics (for example, "PostgreSQL 14.11 Minor Upgrade") have a predefined period (start date and deadline). Once the start date is reached, you will get the option to start it immediately, regardless of the Maintenance Window configured for the environment, by clicking **Execute Now**. The maintenance task will be queued and usually runs within a few minutes.
 {{% /alert %}}
 
 The status of a maintenance task can be one of:
 
 * **Succeeded** – the maintenance task was successful
-* **Failed** – the maintenance task failed and the environment requires intervention
-    * Our engineering team should already have been notified about the failed task. If you are still experiencing issues, please create a support ticket with [Mendix Support](https://support.mendix.com/hc/en-us)
-* **Incomplete** – the maintenance task was unsuccessful and no changes were applied
-    * You can operate the environment as usual. Our engineering team should already have been alerted about the incomplete task and will take the appropriate action (which may involve rescheduling the task).
-* **Ineligible** – the maintenance task was unsuccessful because one or more starting criteria were not met
-    * You can operate the environment as usual. This can happen, for example, if the database of your environment was scheduled to be upgraded but it is already on the target version
-
-{{% alert color="info" %}}
-You will automatically receive email notifications about planned maintenance.
-{{% /alert %}}
+    * No further action is required
+* **Failed** – the maintenance task was unsuccessful
+    * The environment requires intervention and our engineering team has been notified, they will recover the environment according to its SLA. If you are still experiencing issues, please create a support ticket with [Mendix Support](https://support.mendix.com/hc/en-us)
+* **Incomplete** – the maintenance task was unsuccessful
+    * No changes were applied, you can operate the environment as usual
+    * Our engineering team has been alerted and will take the appropriate action, which may include rescheduling the task
+* **Ineligible** – the task is not applicable to the environment
+    * No changes were applied, you can operate the environment as usual
+    * This can happen, for example, if the database of your environment was scheduled to be upgraded but it is already on the target version
+* **Canceled**  – the task was canceled
+    * No changes were applied, you can operate the environment as usual
+    * This can happen if circumstances required us to remove the planned task, a new copy of the task will be scheduled at a later point in time
 
 ## The Tags Tab{#tags}
 
 You can set tags on your environment. Tags are arbitrary strings that are not interpreted by the Mendix Portal.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/tags.png" alt="Viewing the Tags tab" >}}
 
 Tags serve two purposes:
 
@@ -546,11 +591,7 @@ If you want to add, edit, or delete a tag, make the change on the **Tags** tab a
 
 ## The Services Tab {#services}
 
-You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
-
-In the **Services** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/services-tab.png" >}}
+In the **Services** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) decides the custom services for each environment. The Technical Contact must first enable a service for the app, after which you can then activate or deactivate these services for individual environments as needed. For more information, see [Services](/developerportal/deploy/environments/#services). 
 
 ### Available Services
 

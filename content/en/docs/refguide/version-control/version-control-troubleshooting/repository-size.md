@@ -10,64 +10,50 @@ description: "Explains consequences and root cause of a large repository size an
 
 In case you are experiencing performance issues when cloning or pulling your app, this may be caused by a large repository size. This document explains why your repository may be large, how Git handles it, and what you can do about this issue.
 
-## Causes of a Large Repository 
+{{% alert color="info" %}}
+From Studio Pro 10.22 and above apps are automatically converted to the MPRv2 storage format. If you manually reverted to the MPRv1 storage format and would like to learn more about it, you can see more information in the [MPR Storage Format](/refguide10/troubleshoot-repository-size/#mpr-format) section in *Troubleshooting Repository Size* in *Studio Pro 10 Guide*.
+{{% /alert %}}
+
+## Causes of a Large Repository
 
 There are several reasons why your repository may be large. The most common reasons for a Mendix app are the following:
 
-* Version control systems tend to store the differences between revisions instead of full copies of each revision. Mendix apps are stored in an *.mpr* binary file, and version control systems are traditionally not well-equipped to deal with large binary files. This means that Git stores a larger difference between revisions than it would for text files. This results in rapid repository growth.
+* Version control systems tend to store the differences between revisions instead of full copies of each revision. With the MPRv1 storage format, which was used until Studio Pro 10.22, version control systems had difficulties to efficiently handle the Mendix *.mpr* file. This led to rapid repository growth, which may have accumulated to a significant repository size over time.
 * Large files committed to version control, such as *.mp4*, *.pdf*, or *.zip* files.
 * Frequent reimporting of modules. Regular module updates do not cause issues, but a module-import heavy workflow can cause a large repository size.
 
 ## Issues with a Large Repository
 
-Issues with a large repository are typically observed when cloning an app or a branch from the repository. You may experience a long download or even a timeout. Having a large repository is not new in Git, but surfaces as Git has different cloning/checkout behavior than SVN. In the centralized SVN system, a local checkout only contains a specific revision and the server needs to be contacted for each change. In the decentralized Git system, a local clone by default contains the full history of the repository.
+Issues with a large repository are typically observed when cloning an app or a branch from the repository. You may experience a long download or even a timeout, as a Git clone by default contains the full history of the repository.
 
 Other places where you might encounter performance issues or timeouts are the following:
 
 * Retrieving a list of branches
 * Cloning on the command line or in a CI/CD pipeline
-* [Team Server](/developerportal/general/team-server/) page in **Apps** in the Mendix Portal, if you are using Team Server as your Git server
+* [Team Server](/developerportal/repository/team-server/) page in **Apps** in the Mendix Portal, if you are using Team Server as your Git server
 
 ## Preventing and Mitigating a Large Repository Size
 
-### Preventing a Large Repository Size in the Future
+### MPR Storage Format {#mpr-format}
 
-The [*.mpr* storage format](/refguide/version-control/#mpr-format) will be changed to reduce the rapid repository growth. Switching to the new storage format will be done under the hood and does not result in functional changes inside Studio Pro.
+In Studio Pro 11, apps are automatically converted to the MPRv2 storage format. For more information of the effects of the MPRv1 storage format, please see the [MPR Storage Format](/refguide10/troubleshoot-repository-size/#mpr-format) section in *Troubleshooting Repository Size* in *Studio Pro 10 Guide*.
 
-#### Traditional MPR Format
+MPRv2 storage format prevents your repository from a rapid growth. Documents such as microflows, are not stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file functions as an index file pointing to all the different files on disk.
+This means that when you change one document, for example, a page, only a small file representing that page will change on disk.
 
-An app modeled in Mendix is traditionally stored in a single *.mpr* file. This is essentially a database which contains data for all documents, such as microflows, workflows, pages. As the Mendix app is stored in a single file, your version control system only sees that a single file is changed. To show the exact documents that have changed inside the *.mpr* file a tool that comprehends the format is required, such as Studio Pro.
+### Decreasing App File Size
 
-#### Effect on Repository Growth
+To decrease the overall file size of your app, consider doing the following:
 
-Version control systems like Git do not store a full copy of a document for every commit. Instead, they store the difference between the two revisions, also called a delta. For binary files such as the *.mpr* file Git cannot effectively calculate the delta. When a microflow is changed, a small delta of a couple of kilobytes is expected, but the storage format results in a delta of a megabyte or more. The consequence of this is that your Git repository grows more rapidly than you expected.
-
-#### MPRv2 Format
-
-Mendix will introduce a new version of the *.mpr* format: MPRv2. The key difference is that all documents, such as microflows, will no longer be stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file will function as an index file pointing to all the different files on disk. 
-
-This means that when you change one document, for example a page, that only the small file representing that page will change on disk. This allows Git to calculate an efficient delta, which results in a more appropriate repository growth. Functionally there will be no differences between the split (v2) or the combined (v1) format inside Studio Pro. 
-
-{{% alert color="warning" %}}
-Manually modifying files belonging to the  [*.mpr* storage format](/refguide/version-control/#mpr-format) such as the *.mpr* file or the *mprcontents* directory (for example, when resolving file conflicts through third-party tooling), will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored.
-{{% /alert %}}
-
-#### Decreasing MPR File Size
-
-When a file exceeds the Git compression threshold, 512 MB by default, Git will store a full copy of the file with each new revision instead of only storing the delta. This results in extremely rapid repository growth with both client and server-side consequences.
-
-As the Mendix model is stored in a single file, this threshold can be exceeded by the *.mpr* file. To decrease the MPR file size, you consider doing the following:
-
-* Remove [excluded and unused documents](/refguide/dev-best-practices/#excluded-and-unused-documents) – If you have a large number of unnecessary documents in your app model, this can significantly increase the size of the MPR file.
+* Remove [excluded and unused documents](/refguide/general-best-practices/#excluded-and-unused-documents) – If you have a large number of unnecessary documents in your app model, this can significantly increase the size of the MPR file.
 * Decrease duplication in pages – If you have a number of pages featuring the same content, such as an advanced datagrid, consider extracting this piece of logic to a widget. Reusing a widget on multiple pages prevents the data from being saved several times and can have a large impact on the size of the MPR file.
-
-You can use [analyze-mpr](/refguide/analyze-mpr/) of the [mx Command-Line Tool](/refguide/mx-command-line-tool/) to analyze how your MPR file is built up. The output will show how many documents of a type (ie. number of pages) exist and how much disk space they represent within the MPR file. We recommend starting with a brief scan to see if there is an unexpected number of occurences (ie 1500 pages) or large number of bytes (over 50.000.000 bytes) for a unit type.
+* You can use [analyze-mpr](/refguide/mx-command-line-tool/analyze-mpr/) of the [mx Command-Line Tool](/refguide/mx-command-line-tool/) to analyze how your MPR file builds up. The output shows how many documents of a certain type (for example, the number of pages) exist and how much disk space they represent within the MPR file. Mendix recommends starting with a quick scan to see whether there is an unexpected number of occurrences (for example, 1500 pages) or a large number of bytes (over 50 000 000 bytes) for a unit type.
 
 ### Working with a Large Repository Size
 
-When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 
+When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded.
 
-As of Mendix 10.12 it is possible to prevent downloading the full history, by changing the [Clone type](/refguide/clone-type/) to use partial clones. A partial clone downloads all data for a specific revision without downloading the contents of all historical commits.
+It is possible to prevent downloading the full history, by changing the [Clone type](/refguide/clone-type/) to use partial clones. A partial clone downloads all data for a specific revision without downloading the contents of all historical commits.
 
 ### Mitigating Large Repository Size
 
@@ -86,28 +72,49 @@ The tool is currently in public beta. The cleanup tool can be downloaded [here](
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page after you open your app in [Apps](https://sprintr.home.mendix.com/), because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
+This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page after you open your app in [Apps](https://sprintr.home.mendix.com/), because of the size restrictions, you can reach out to your CSM to get your app safelisted.
 {{% /alert %}}
 
 ### Cleanup Process
 
 The cleanup tool will reduce the size of the repository to a minimum, by only retaining the latest commit of the main branch. This means that all work on branches that have been merged to main branch are kept, but the commits themselves (author, changes per commit, ...) are not.
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png"  >}}
 
 {{% alert color="info" %}}
 Uncommitted work, or work committed to branches that have not been merged to the main branch, will be permanently removed from the repository.
 {{% /alert %}}
 
+#### Workaround to Retain Branch Contents
+
+During a cleanup, all branches apart from the main branch are removed. As it is not always possible to converge all branches by merging them into the main branch, you can manually back up branch contents and recreate them after the cleanup.
+
+{{% alert color="info" %}}
+Mendix recommends that you first test the steps described below on a dummy project to familiarize yourself with the process.
+{{% /alert %}}
+
+Follow the steps below:
+
+1. For each branch you would like to retain, do the following:
+    1. Check out the branch locally through Studio Pro.
+    2. Merge the latest state of the main branch into the branch you want to retain. This ensures there is a common base, so you can resolve any conflicts on this branch after the cleanup.
+    3. Commit and push your changes.
+    4. Create a compressed *.zip* version of the entire project folder, except for the *.git* folder. Clearly name the *.zip* folder, so you recognize which branch it represents.
+2. Execute the cleanup and push the results to the server.
+3. Recreate the branches you wanted to retain. Do the following for each branch before upgrading the main branch to a different Mendix version:
+    1. Create a new branch from the main branch in Studio Pro and clone it locally.
+    2. Overwrite the contents of the project folder, except for the *.git* folder, with the contents of the *.zip*.
+    3. From Studio Pro, commit your changes with a *Branch recreated* message and push to the server.
+
 #### Deciding on the Cleanup
 
-The cleanup is intended to shrink your repository size to mitigate performance issues. We advise to first check whether you and your team are affected by performance issues, as that largely depends on your situation. 
+The cleanup is intended to shrink your repository size to mitigate performance issues. We advise to first check whether you and your team are affected by performance issues, as that largely depends on your situation.
 
 To conclude whether the situation is acceptable for you, follow these steps:
 
 * Ensure the Git app you are downloading is not yet on your machine
 * Download the branch through Studio Pro, while manually measuring how long the download takes
-  
+
 The first download of a branch on a device is a good indication of the maximum waiting time you or your team member can experience. Subsequent branch downloads use data that is already available locally and will, therefore, be a lot faster.
 
 If the download time was acceptable, or if you have a process where team members do not change often and they do not have to download an app for the first time, you can skip the cleanup.
@@ -158,7 +165,7 @@ Force pushing your results to the server is a separate step, in a separate scrip
 
 If you are using Mendix Team Server as your Git version control server, you can follow the steps below:
 
-* Ensure you have configured a Personal Access Token to use it as described in the [Authenticating to Team Server](/refguide/using-version-control-in-studio-pro/#authenticating) section in *Using Version Control in Studio Pro*. 
+* Ensure you have configured a Personal Access Token to use it as described in the [Authenticating to Team Server](/refguide/version-control-external-tools/#authenticating) section in *Using Version Control in Studio Pro*.
 * Run the second script.
     * When prompted, enable force pushing.
     * Conduct the force push.
@@ -166,7 +173,7 @@ If you are using Mendix Team Server as your Git version control server, you can 
 
 ##### Other Git Platforms
 
-When using another Git platform than Mendix Team Server, such as GitHub or Azure Devops, you can typically enable force pushing in a portal. 
+When using another Git platform than Mendix Team Server, such as GitHub or Azure Devops, you can typically enable force pushing in a portal.
 
 {{% alert color="warning" %}}
 Force pushing allows to make destructive changes to the repository, which can easily lead to unrecoverable errors. We recommend you to give these permissions to as few users as strictly necessary.
@@ -180,7 +187,7 @@ You can follow these steps:
 
 #### Handling Local Copies
 
-After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone. 
+After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone.
 
 For developers on your team this means they have to ensure Studio Pro can no longer find their local folders. The **sp-reset** tool, shipped together with the Cleanup tool, can be used. Alternatively, they can rename their folders of the app to *old*.
 
@@ -202,9 +209,29 @@ We recommend doing the following:
 * Check the local repo location, it should be up-to-date and there should be no uncommitted changes
 * Check your git config settings, especially any setting that involves encoding or text conversions: run `git config --list --show-origin`.
 * Consider moving your local repo, so that its folder has a shorter name
-  
+
 When reaching out to Mendix Support, please include:
 
 * App/Projects ID for your app
 * Log file (you can find its location in the command line output)
 * Version of the tool, for example, `git-fixer v1.16.5.essentials` (you can find the version number in the command line output)
+
+## Recommendation on Avoiding Git Issues {#recommendation}
+
+{{% alert color="info" %}}
+If you manually reverted to the MPRv1 storage format, you can see more information on this format in the [MPR Storage Format](/refguide10/troubleshoot-repository-size/#mpr-format) section in *Troubleshooting Repository Size* in *Studio Pro 10 Guide* and you first must convert to MPRv2.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+If you are still on SVN in Studio Pro 9, see the [Recommendation on Avoiding Git Issues](/refguide10/troubleshoot-repository-size/#recommendation) section in *Troubleshooting Repository Size* in *Studio Pro 10 Guide* for a more detailed migration advice.
+{{% /alert %}}
+
+Follow the decision tree in the image below to troubleshoot Git-related performance issues:
+
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/migration-advice-mx11.png"  >}}
+
+\* In case your *.git* folder is  less than 2GB but you are having performance issues when cloning, please see the [Verify Full Clone Through Git CLI](/refguide/troubleshoot-team-server-issues/#verify-full-clone-through-git-cli) section in *Troubleshooting Team Server Issues* and contact Support with the relevant information.
+
+\** For more information on partial clone, see [Clone Type](/refguide/clone-type/).
+
+\*** For more information on Git cleanup, see the [Cleanup](/refguide/troubleshoot-repository-size/#cleanup-tool) section in *Troubleshooting Repository Size*.

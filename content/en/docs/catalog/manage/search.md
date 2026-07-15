@@ -1,5 +1,5 @@
 ---
-title: "Search in the Catalog"
+title: "Searching in the Catalog"
 url: /catalog/manage/search/
 description: "Describes how to find services and datasets in the Catalog."
 aliases:
@@ -11,264 +11,6 @@ aliases:
 ## Introduction
 
 Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Integration pane](/refguide/integration-pane/) in Studio Pro.  This document describes how you can search in Catalog.
-
-## Search Using the API {#search-api}
-
-To use the Catalog Search API, you need the following:
-
-* A [personal access token](/community-tools/mendix-profile/user-settings/#pat)
-* A search term
-
-For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v5.html#/Search/get_data).
-
-You can see an example of a request below where the search term is `Customer`:
-
-```curl
-curl --location --request GET 'https://catalog.mendix.com/rest/search/v5/data?query=Customer' \
---header 'Content-Type: application/json' \
---header 'Authorization: MxToken <your_Personal_Access_Token>'
-```
-
-A successful `GET` call results in a `200` status code and a JSON response body that includes the details about the search results:
-
-<details><summary><b>Click to see JSON response body</b></summary>
-
-```json
-{
-    "totalResults": 177,
-    "links": [
-        {
-            "rel": "First",
-            "href": "https://catalog.mendix.com/rest/search/v5/data?offset=0&serviceType=OData&query=Customer&limit=20"
-        },
-        {
-            "rel": "Current",
-            "href": "https://catalog.mendix.com/rest/search/v5/data?offset=0&serviceType=OData&query=Customer&limit=20"
-        },
-        {
-            "rel": "Next",
-            "href": "https://catalog.mendix.com/rest/search/v5/data?offset=20&serviceType=OData&query=Customer&limit=20"
-        },
-        {
-            "rel": "Last",
-            "href": "https://catalog.mendix.com/rest/search/v5/data?offset=160&serviceType=OData&query=Customer&limit=20"
-        }
-    ],
-    "data": [
-        {
-            "connections": 11,
-            "validated": true,
-            "description": "Primary data source for customer information. Requires approval for prod use - please contact owner for details.",
-            "totalEntities": 3,
-            "securityClassification": "Internal",
-            "specificationVersion": "3.0",
-            "name": "CustomerApi",
-            "version": "1.1.0",
-            "serviceType": "OData",
-            "environment": {
-                "type": "Production",
-                "uuid": "6e40b8c9-0d70-47ff-ba8c-cf1a074cafaf",
-                "name": "Production",
-                "location": "https://customermanagement103.mendixcloud.com"
-            },
-            "links": [
-                {
-                    "rel": "Self",
-                    "href": "https://catalog.mendix.com/rest/search/v5/endpoints/ca355a57-dae1-4449-873c-51e2d6fd1755"
-                },
-                {
-                    "rel": "Catalog",
-                    "href": "https://catalog.mendix.com/link/endpoint?EndpointUUID=ca355a57-dae1-4449-873c-51e2d6fd1755"
-                }
-            ],
-            "entities": [
-                {
-                    "topSupported": true,
-                    "countable": true,
-                    "skipSupported": true,
-                    "validated": false,
-                    "totalAttributes": 1,
-                    "totalAssociations": 2,
-                    "namespace": "mx.customer.api",
-                    "entityTypeName": "Customer",
-                    "name": "Customer",
-                    "type": "Dataset",
-                    "sortable": true,
-                    "entitySetName": "Customers",
-                    "filterable": true,
-                    "updatable": false,
-                    "links": [
-                        {
-                            "rel": "Catalog",
-                            "href": "https://catalog.mendix.com/link/entity?EndpointUUID=ca355a57-dae1-4449-873c-51e2d6fd1755&EntityUUID=9ef95bd7-198a-444a-958a-89c874443409"
-                        }
-                    ],
-                    "deletable": false,
-                    "attributes": [
-                        {
-                            "countable": true,
-                            "typeName": "Edm.Int64",
-                            "typeKind": "Attribute",
-                            "sortable": true,
-                            "filterable": true,
-                            "updatable": false,
-                            "insertable": false,
-                            "name": "CustomerId"
-                        }
-                    ],
-                    "associations": [
-                        {
-                            "countable": true,
-                            "multiplicity": "*",
-                            "entitySetName": "ContactHistorys",
-                            "updatable": false,
-                            "insertable": false,
-                            "namespace": "mx.customer.api",
-                            "referencedDataset": "ContactHistory",
-                            "name": "ContactHistory_Customer",
-                            "entityTypeName": "ContactHistory"
-                        },
-                        {
-                            "countable": true,
-                            "multiplicity": "0..1",
-                            "entitySetName": "ContactInfos",
-                            "updatable": false,
-                            "insertable": false,
-                            "namespace": "mx.customer.api",
-                            "referencedDataset": "ContactInfo",
-                            "name": "ContactInfo_Customer",
-                            "entityTypeName": "ContactInfo"
-                        }
-                    ],
-                    "insertable": false
-                },
-                {
-                    "topSupported": true,
-                    "countable": true,
-                    "skipSupported": true,
-                    "validated": false,
-                    "totalAttributes": 0,
-                    "totalAssociations": 1,
-                    "namespace": "mx.customer.api",
-                    "entityTypeName": "ContactHistory",
-                    "name": "ContactHistory",
-                    "type": "Dataset",
-                    "sortable": true,
-                    "entitySetName": "ContactHistorys",
-                    "filterable": true,
-                    "updatable": false,
-                    "links": [
-                        {
-                            "rel": "Catalog",
-                            "href": "https://catalog.mendix.com/link/entity?EndpointUUID=ca355a57-dae1-4449-873c-51e2d6fd1755&EntityUUID=325261db-a8c0-427e-ab4c-14768bfd9c9a"
-                        }
-                    ],
-                    "deletable": false,
-                    "associations": [
-                        {
-                            "countable": true,
-                            "multiplicity": "0..1",
-                            "entitySetName": "Customers",
-                            "updatable": false,
-                            "insertable": false,
-                            "namespace": "mx.customer.api",
-                            "referencedDataset": "Customer",
-                            "name": "ContactHistory_Customer",
-                            "entityTypeName": "Customer"
-                        }
-                    ],
-                    "insertable": false
-                },
-                {
-                    "topSupported": true,
-                    "countable": true,
-                    "skipSupported": true,
-                    "validated": false,
-                    "totalAttributes": 0,
-                    "totalAssociations": 1,
-                    "mamespace": "mx.customer.api",
-                    "entityTypeName": "ContactInfo",
-                    "mame": "ContactInfo",
-                    "type": "Dataset",
-                    "sortable": true,
-                    "entitySetName": "ContactInfos",
-                    "filterable": true,
-                    "updatable": false,
-                    "links": [
-                        {
-                            "rel": "Catalog",
-                            "href": "https://catalog.mendix.com/link/entity?EndpointUUID=ca355a57-dae1-4449-873c-51e2d6fd1755&EntityUUID=de5140bd-f181-4b0e-ab60-20664cc6184e"
-                        }
-                    ],
-                    "deletable": false,
-                    "items": [
-                        {
-                            "countable": true,
-                            "multiplicity": "*",
-                            "entitySetName": "Customers",
-                            "updatable": false,
-                            "insertable": false,
-                            "namespace": "mx.customer.api",
-                            "referencedDataset": "Customer",
-                            "name": "ContactInfo_Customer",
-                            "entityTypeName": "Customer"
-                        }
-                    ],
-                    "insertable": false
-                }
-            ],
-            "lastUpdated": "2021-05-26T16:12:52.795Z",
-            "uuid": "ca355a57-dae1-4449-873c-51e2d6fd1755",
-            "application": {
-                "type": "Other",
-                "technicalOwner": {
-                    "email": "andrej.koelewijn@mendix.com",
-                    "uuid": "d9d4b5bc-ffe8-4c5c-b237-7358d01f7981",
-                    "name": "Andrej Koelewijn"
-                },
-                "icon": "https://catalog.mendix.com/resources/logos/other_icon.png",
-                "uuid": "1bed66d2-4477-39a9-9144-d0f848212f1e",
-                "repositoryLocation": "https://sprintr.home.mendix.com/link/project/369386df-35b4-475b-a917-17adcc81c1b5",
-                "businessOwner": {
-                    "email": "andrej.koelewijn@mendix.com",
-                    "uuid": "d9d4b5bc-ffe8-4c5c-b237-7358d01f7981",
-                    "name": "Andrej Koelewijn"
-                },
-                "name": "CustomerApp"
-            },
-            "securityScheme": {
-                "securityTypes": [
-                    {
-                        "name": "Anonymous"
-                    }
-                ],
-                "mxAllowedRoles": [
-                    {
-                        "uuid": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
-                        "name": "Administrator"
-                    },
-                    {
-                        "uuid": "53f5d6fa-6da9-4a71-b011-454ec052cce8",
-                        "name": "User"
-                    }
-                ]
-            },
-            "tags": [
-                {
-                    "name": "customer"
-                },
-                {
-                    "name": "contact"
-                }
-            ]
-        }, 
-    ],
-    "limit": 20,
-    "offset": 0
-}
-```
-
-</details>
 
 ## Search in the Catalog {#search-catalog}
 
@@ -328,13 +70,13 @@ The **Search** screen is divided into the [search](#search-pane) pane on the lef
 
 ### Search Pane {#search-pane}
 
-The collapsible **Search** pane is used to search for registered assets in the Catalog:
+The collapsible **Search** pane is used to search for registered assets in the Catalog.
 
-{{< figure src="/attachments/catalog/search/search-pane.png" alt="search pane"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/catalog/search/search-pane.png" alt="Studio Pro search pane"   width="300"  class="no-border" >}}
 
 #### Specifying the Search
 
-Enter a search string in the **Search** area with a minimum of 3 alphanumeric characters. Searching for the wildcard `*` or the empty string `''` will return all registered items.
+Enter a search string in the **Search** area with a minimum of 3 alphanumeric characters. Searching for the wildcard `*` or the empty string `''` returns all registered items.
 
 #### Filters {#filter}
 
@@ -397,7 +139,7 @@ When a **Dataset** is selected in the search results, the following details are 
 
 The source and endpoint details of the dataset are displayed:
 
-{{< figure src="/attachments/catalog/search/dataset-details.png" alt="associations info" >}}
+{{< figure src="/attachments/catalog/search/dataset-details.png" alt="Sample dataset with example attributes" >}}
 
 * Dataset name
 * **Part of** – a link to the service details page that the dataset is exposed in
@@ -418,7 +160,7 @@ The **Attributes** tab lists the attributes that are exposed for the dataset in 
 
 Under the **Associations** tab for each dataset, the associations are displayed:
 
-{{< figure src="/attachments/catalog/search/attributes-associations.png" alt="associations info" class="no-border" >}}
+{{< figure src="/attachments/catalog/search/attributes-associations.png" alt="Sample dataset with example association" class="no-border" >}}
 
 * **Name** – the name of the association that is exposed in the OData service contract.
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
@@ -428,7 +170,7 @@ Under the **Associations** tab for each dataset, the associations are displayed:
 
 The metadata panel at the right of the asset details screen displays details from the service metadata contract and values that have been curated in the Catalog:
 
-{{< figure src="/attachments/catalog/search/metadata.png" alt="metadata pane"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/catalog/search/metadata.png" alt="Sample Catalog metadata pane"   width="300"  class="no-border" >}}
 
 #### Tags
 
@@ -475,11 +217,11 @@ The environment type indicates the quality and the status of the data that the e
 
 ### Curation Option {#curation-option}
 
-The **Curation Option** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit**, you can edit the information that is displayed in the Catalog for an asset:
+The **Curation Option** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit**, you can edit the information that is displayed in the Catalog for an asset.
 
-{{< figure src="/attachments/catalog/search/curation-option.png" alt="curation option"   width="300"  >}}
+{{< figure src="/attachments/catalog/search/curation-option.png" alt="Sample app curation option"   width="300"  >}}
 
-* For the selected service, you can edit [Application Details](/catalog/manage/curate/#curate-application), [Service Details](/catalog/manage/curate/#service-details), and Authentication
+For the selected service, you can edit the [Application Details](/catalog/manage/curate/#curate-application), the [Service Details](/catalog/manage/curate/#service-details), and the Authentication.
 
 For further details, see the [Discoverable and Validated](/catalog/manage/curate/#discoverability) section of *Curate Registered Assets*.
 
@@ -489,16 +231,20 @@ The service URI is the location of the service contract of the service, also kno
 
 ### Download the Contract of a Service {#download-contract}
 
-For a selected service, you can click **Download** to download the service contract that is located at the service endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
+For a selected service, you can click **Download Contract** to download the service contract that is located at the service endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
 
 The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the service protocol.
 
 Here is an example:
 
-{{< figure src="/attachments/catalog/search/download_example.png" alt="download example" class="no-border" >}}
+{{< figure src="/attachments/catalog/search/download_example.png" alt="Sample app download location" class="no-border" >}}
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains all the metadata files that define the service.
 
 ### Viewing Search Results in the Landscape
 
 When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This provides a graphical representation to indicate the context and relevance of a selected item and the data for the exposed datasets.
+
+## Search using the API
+
+To use the Catalog Search API, see [Search API](/apidocs-mxsdk/apidocs/search-api/).

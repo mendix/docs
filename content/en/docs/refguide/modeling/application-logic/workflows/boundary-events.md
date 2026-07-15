@@ -4,31 +4,37 @@ url: /refguide/workflow-boundary-events/
 weight: 20
 ---
 
-{{% alert color="info" %}}
-Non-interrupting timer boundary events were in public beta in Studio Pro 10.15 and released in GA in Studio Pro 10.16.
-{{% /alert %}}
-
 ## Introduction
 
-Based on Business Process Model and Notation (BPMN) 2.0, boundary events are a type of event that is attached to the boundary of an activity (such as a task or a sub-process) to handle exceptional situations or are triggered by certain behaviors. 
+Boundary events are a type of event that is attached to the boundary of an activity (such as a task or a sub-process) to handle exceptional situations or are triggered by certain behaviors. 
 
-There are two main types of boundary events:
+Boundary events have the following two key characteristics: 
 
-* Non-interrupting boundary events: These events do not interrupt the ongoing activity. When triggered, they allow the activity to continue while simultaneously starting a new path from the boundary event. As per BPMN 2.0 specification, non-interrupting boundary events are visualized as two dashed circles with an icon in the center.
-* Interrupting boundary events: When these events are triggered, they interrupt the normal path of the activity they are attached to. The activity stops and the process flow is redirected to the boundary event's outgoing sequence path. As per BPMN 2.0 specification, interrupting boundary events are visualized as two solid circles. 
-    {{% alert color="info" %}}Interrupting boundary events are not available yet in the current release.{{% /alert %}}
+* A **type** that determines what triggers the event
+* An **interrupting behavior** that determines what happens to the parent activity when the event is triggered
 
-Boundary Events are always displayed by 2 circles (either solid or dashed) and are linked by a dotted line to the parent activity. The icon inside the event indicates the type of event. For example, a clock indicates that it is a timer boundary event.
+### Boundary Event Types
 
-Below is an example of how a timer boundary event looks like:
+The boundary event type determines what triggers the event. The icon inside the event indicates its type. Studio Pro supports the following boundary event types:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
+* [Timer](/refguide/timer/) – triggered after a configured duration or at a specific date and time.
+* [Notification](/refguide/notification/) – triggered when the workflow receives a notification.
 
-Studio Pro now supports the following boundary event:
+### Interrupting Behavior
 
-* [Timer](/refguide/timer/)
+Each boundary event has an interrupting behavior that can be set to either interrupting or non-interrupting:
 
-## Getting started
+* **Non-interrupting**: These events do not interrupt the ongoing activity. When triggered, they allow the activity to continue while simultaneously starting a new path from the boundary event. Use non-interrupting boundary events when the parent activity should remain active, but you would like to do something in parallel. For example, after two days, a reminder should be sent to the assigned user. Non-interrupting boundary events are visualized as two dashed circles with an icon in the center.
+
+* **Interrupting**: When these events are triggered, they interrupt the activity they are attached to, meaning that this activity will be aborted. The process flow is redirected to the boundary event's outgoing sequence path. Use interrupting boundary events in situations where further execution of the activity (and other following activities) is not required and an alternative path should be taken. For example, use an interrupting boundary event to start an escalation or a fast-track path when an activity is not completed two days after the due date. Or when the assigned user does not make a decision within five days, you want to abort the user task and continue the process with a pre-set decision. Interrupting boundary events are visualized as two solid circles.
+
+Boundary events are always displayed by two circles (either solid or dashed) and are linked by a dotted line to the parent activity. The icon inside the event indicates the boundary event type. For example, a clock indicates that it is a timer boundary event, and an envelope indicates that it is a notification boundary event.
+
+Below is an example of what a non-interrupting timer boundary event looks like:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" max-width=80% >}}
+
+## Getting Started
 
 <a id="supported-activities"></a>You can add boundary events to the following activities:
 
@@ -37,6 +43,7 @@ Studio Pro now supports the following boundary event:
 * [Multi-user task](/refguide/multi-user-task/)
 * [Call microflow](/refguide/call-microflow/)
 * [Call workflow](/refguide/call-workflow/)
+* [AI agent task](/refguide/ai-agent-task/) (in Studio Pro 11.9 and above)
 
 {{% alert color="info" %}}
 When a boundary event is added to an activity, this activity is also referred to as the parent activity of the boundary event.
@@ -46,19 +53,67 @@ When a boundary event is added to an activity, this activity is also referred to
 
 To add a boundary event to the [above-listed activities](#supported-activities), choose one of the following ways:
 
-* Select an event from the **Events** section in the workflow **Toolbox** and drag it onto one of the activities listed above.
+* Select an event from the **Events** section in the workflow **Toolbox** and drag it onto one of the activities listed above:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" max-width=80%  >}}
 
-* Right-click one of the above-listed activities to open its context menu, and click **Add boundary event**.
+* Double-click one of the above-listed activities to open its properties dialog box, go to the **Events** tab, and in the **Boundary events** section, click **Add**:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/context-menu.png" alt="Adding boundary events through context menu" width="200" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/edit-dialog.png" alt="Adding boundary events through edit dialog" max-width=80%  >}}
 
-* Double-click one of the above-listed activities to open its properties dialog box, go to the **Events** tab, and in the > **Boundary events** section, click **New** to add a new boundary event.
+* Right-click one of the above-listed activities to open its context menu, and click **Add boundary event**:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/edit-dialog.png" alt="Adding boundary events through edit dialog" width="450" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/context-menu.png" alt="Adding boundary events through context menu" max-width=80%  >}}
 
-To configure the properties of a boundary event, double-click the event to open its properties dialog box. For more information on how to configure the properties of a timer boundary event, see the [Properties](/refguide/timer/#properties) section in *Timer*.
+In the latter two cases, the **Select Event** dialog appears where you choose the type of boundary event you want to add:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/select-event.png" alt="Select Event dialog" max-width=80%  >}}
+
+To configure the properties of a boundary event, double-click the event to open its properties dialog box. For more information on how to configure boundary event properties, see the [Boundary Properties](/refguide/timer/#boundary-properties) section in *Timer* or the [Boundary Properties](/refguide/notification/#boundary-properties) in *Notification*.
+
+#### Adding a Boundary Event to an Ongoing Activity
+
+When a boundary event is added to an ongoing activity, any workflow instances currently executing that activity will schedule the new boundary event accordingly. The only exception occurs when an ongoing boundary event is removed from the ongoing activity, the workflow is redeployed, and then the removal is reverted. In this case, the re-added boundary event will not be scheduled.
+
+### Changing Boundary Event Type {#changing-boundary-event-type}
+
+You can change the type of an existing boundary event using the context menu without having to delete and re-add it. To do this:
+
+1. Right-click the boundary event to open its context menu.
+2. Click **Change event**.
+3. Select one of the available options:
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/context-menu-change-event.png" alt="Changing boundary event type through context menu" width="450" >}}
+
+You can convert between any of the following supported boundary events:
+
+* Notification (Interrupting)
+* Notification (Non-Interrupting)
+* Timer (Interrupting)
+* Timer (Non-Interrupting)
+
+#### Implications of Changing the Interrupting Behavior {#event-type-change}
+
+For an existing boundary event, when you change its interrupting behavior from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a boundary event from non-interrupting to interrupting, you will see the following warning dialog:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/security-dialog.png" alt="Security Dialog when changing type" max-width=80% >}}
+
+After you confirm the change:
+
+* The boundary event is re-created with the specified interrupting behavior. The new boundary event will be scheduled after the workflow is redeployed and becomes in progress.
+* The workflow will become incompatible if the changed boundary event has already been executed. The workflow becomes incompatible for the following reasons:
+    * If the changed boundary event was non-interrupting, you will get the [Non-interrupting Boundary Event Path Removed](/refguide/workflow-versioning/#non-interrupting-boundary-event-path-removed) conflict.
+    * If the changed boundary event was interrupting, you will get the [Current Activity Removed](/refguide/workflow-versioning/#current-activity-removed) conflict.
+
+Boundary events are re-created upon interrupting behavior change because in-place conversion can result in invalid states. An interrupting boundary event must abort its parent activity when triggered, meaning an activity cannot have more than one active interrupting boundary event.
+
+Converting an already-triggered non-interrupting boundary event to interrupting in place violates this rule: the parent activity remains in progress, resulting in an interrupting boundary event whose parent is never aborted. Conversely, converting an already-triggered interrupting boundary event to non-interrupting in place leaves it active on an already-aborted parent activity, contradicting the rule that a non-interrupting boundary event must not abort its parent.
+
+#### Implications of Changing the Boundary Event Type
+
+When you change the type of an ongoing **non-interrupting** boundary event (for example, from Timer to Notification), this causes a partially resolvable [Current Activity Moved out of Path](/refguide/workflow-versioning/#current-activity-moved-out-of-path) conflict. Affected workflow instances cannot be continued. This does not apply to interrupting boundary events.
+
+For more information on how to handle such conflicts, see [Workaround for Non-resolvable and Partially Resolvable Conflicts](/refguide/workflow-versioning/#workaround-for-non-resolvable-and-partially-resolvable-conflicts).
 
 ### Rearranging Boundary Events
 
@@ -66,42 +121,56 @@ You can rearrange boundary events in the following ways:
 
 * Right-click a boundary event to open its context menu and click **Move boundary event left** or **Move boundary event right**, or use the <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Left arrow or <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Right arrow shortcut keys.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/arrange-in-editor.png" width="400px" alt="Timer Event arrange in editor" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/arrange-in-editor.png" max-width=80%  alt="Timer Event arrange in editor" >}}
 
-* Double-click the parent activity to open its properties dialog box and click **Move up** or **Move down**  to change the order of the boundary events' paths.
+* Double-click the parent activity to open its properties dialog box and click **Move up** or **Move down** to change the order of the boundary events' paths.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/arrange-in-dialog.png" width="400px" alt="Arrange non-interrupting boundary event in dialog" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/arrange-in-dialog.png" max-width=80%  alt="Arrange non-interrupting boundary event in dialog" >}}
 
-    {{% alert color="info" %}}This does not change the order execution of the paths, as this is dependent on the expiration of the timer.{{% /alert %}}
+    {{% alert color="info" %}}This does not change the order of execution of the paths, as this is dependent on when the boundary event is triggered.{{% /alert %}}
 
 ## Execution
 
-Boundary events are initiated when their parent activity is initiated. For example, for a timer with a fixed duration, it will start its count down when the parent activity is initiated. When the parent activity is completed before any of the boundary events are triggered, none of the activities in the boundary event path will be executed and all timers will be cancelled.
+Boundary events are initiated when their parent activity is initiated. For example, for a timer boundary event with a fixed duration, it will start its countdown when the parent activity is initiated. When the parent activity is completed before any of the boundary events are triggered, none of the activities in the boundary event path will be executed and all pending boundary events will be cancelled.
 
-With non-interrupting boundary events, the parent activity remains active/in progress when a boundary event is triggered (which means that the parent activity is not interrupted). For example, when a timer boundary event on a user task is triggered after 2 days, this task will remain in progress and the path defined below the timer boundary event is executed. When the boundary event's path reaches the **End of boundary path**, the workflow will await the completion of the parent activity. 
+### Non-Interrupting Boundary Events
+
+With non-interrupting boundary events, the parent activity remains active/in progress when an event is triggered (i.e., the parent activity is not interrupted). For example, when a non-interrupting timer boundary event is set on a user task and is triggered after 2 days, this user task will remain in progress and the path following the timer boundary event is executed. When the boundary event path reaches the **End of Boundary Path** activity, the workflow will await the completion of the parent activity.
+
+### Interrupting Boundary Events
+
+However, with interrupting boundary events, the parent activity is aborted. For example, when an interrupting timer boundary event is set on a user task and is triggered after 2 days, this user task will be aborted, and the path following the timer boundary event will become the active path. 
+
+{{% alert color="info" %}}
+An interrupting boundary event path must end with an **End** event or a **Jump** activity. You can jump back to the path of the parent activity from the interrupting path.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+When there are multiple boundary events attached to an activity and an interrupting boundary event is executed, all the scheduled boundary events will be aborted and all the boundary events that have already started will continue to run until the entire workflow ends.
+{{% /alert %}}
+
+## Jump Rules
+
+Boundary events come with a specific set of rules for jumps. These rules are applicable to both types of jumps - [Jumping to other activities in design time](/refguide/jump-activity/) and [Jumping in running workflow instances](/refguide/jump-to/). The rules are as follows:
+
+* Jump inside a boundary event: not possible
+* Jump outside a boundary event: only possible when jumping from an interrupting boundary event path to its parent or grandparent path
+* Jump within a boundary event: possible
 
 ## Boundary Event Variables
 
-{{% alert color="info" %}}
-Boundary event variables are available starting from Studio Pro version 10.16.
-{{% /alert %}}
-
-Boundary events have dedicated variables that can be used to get direct access to the values of the parent activity if it is either a user task or Call workflow activity. You can get information such as the parent activity's `DueDate`, which can be used in the boundary event flow and its expressions. For instance, you can use the expression `addDays($ParentTask/DueDate, -2)` to configure a timer boundary event so that it is triggered two days before the due date of its parent user task.
+Boundary events have dedicated variables that can be used by activities in the path of the boundary event to get direct access to the values of the parent activity if it is either a user task or Call workflow activity. You can get information such as the parent activity's `DueDate`, which can be used in the boundary event flow and its expressions. For instance, you can use the expression `addDays($ParentTask/DueDate, -2)` to configure a timer boundary event so that it is triggered two days before the due date of its parent user task.
 
 The list of variables is described below: 
 
 * `$ParentTask` – the parent user task of the attached boundary event
 * `$CalledWorkflowInstance` – the parent Call workflow activity of the attached boundary event
 
-## Current Limitation
-
-The current release of boundary events has the following limitation which is actively being developed:
-
-* Non-interrupting timer boundary events currently have no recurrence. They are only executed once and will not repeat.
-
-## Read more
+## Read More
 
 * [Workflows](/refguide/workflows/)
+* [Timer](/refguide/timer/)
+* [Notification](/refguide/notification/)
 * [Add Date Function Calls](/refguide/add-date-function-calls/)
 * [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/)
 * [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/)

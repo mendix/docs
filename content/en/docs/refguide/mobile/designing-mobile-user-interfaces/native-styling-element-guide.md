@@ -641,7 +641,7 @@ The default class to style all reference selector inputs is named `ReferenceSele
 
 Images, videos, and files help your user app manage images and other files. For more information on these widgets, see [Images, Videos, and Files](/refguide/image-and-file-widgets/).
 
-### Image (#new-image)
+### Image {#new-image}
 
 The image widget can be used to show a static or dynamic image or an icon on a page, layout, or snippet.
 
@@ -1288,7 +1288,7 @@ The default class to style all range slider inputs is named `com_mendix_widget_n
 
 ### Safe Area View
 
-The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is only supported on iOS apps. Note that `container` styling will only be applied to the safe area.
+The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is supported for iOS and Android apps. Note that `container` styling will only be applied to the safe area.
 
 The widget's style properties are as follows:
 

@@ -2,7 +2,7 @@
 title: "Mini Surveys"
 url: /developerportal/app-insights/mini-surveys/
 weight: 6
-description: "The app development team can utilize Mendix's user-friendly [Mini Surveys](/appstore/modules/mendix-mini-surveys/) module to integrate surveys into their applications. This empowers the Product Owner (PO), Scrum Master, or the development team to craft surveys with personalized customizations, including survey goals, duration, and questionnaire types. After configuring the survey, end-users can conveniently submit their responses. Subsequently, the Product Owner, Scrum Master, or the team can analyze the survey results, extracting valuable insights."
+description: "The app development team can utilize Mendix's user-friendly [Mini Surveys](/appstore/modules/mendix-mini-surveys/) module to integrate surveys into their applications. This empowers the Product Owner (PO), the Scrum Master, or the development team to craft surveys with personalized customizations, including survey goals, duration, and questionnaire types. After configuring the survey, end-users can conveniently submit their responses. Subsequently, the Product Owner, the Scrum Master, or the team can analyze the survey results, extracting valuable insights."
 ---
 
 ## Introduction
@@ -23,9 +23,9 @@ This document first describes all the pages in Mini Surveys in **Apps**, and the
 
 When you click **Mini Surveys** in the [navigation pane](/developerportal/#navigation-pane) for an app that already has existing mini surveys, the **Survey Overview** page opens first.
 
-On the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Mini Surveys.
+In the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Mini Surveys.
 
-The tabs of the **Survey Overview** page are described below.
+The tabs of the **Survey Overview** page are described in the following sections.
 
 {{< figure src="/attachments/developerportal/app-insights/mini-surveys/mini-surveys-overview.png">}}
 
@@ -47,9 +47,9 @@ Click the mini survey in a row on the list to see its [survey details](#survey-d
 
 A mini survey can have different statuses. You can check the status of a mini survey on the [Active](#active) tab.
 
-Along its lifecycle, a mini survey can have the following statuses:
+Throughout its lifecycle, a mini survey can have the following statuses:
 
-* **Draft** – This status means the mini survey is not finalized. You can still edit the survey and when you finalize it, you need to schedule it. Once you schedule a survey, its status changes to **Scheduled**.
+* **Draft** – This status means the mini survey is not finalized. You can still edit it and, when you finalize it, you need to schedule it. Once you schedule a survey, its status changes to **Scheduled**.
 * **Scheduled** – This status means the mini survey is finalized, but its start time is not reached yet. Once the start time is reached, its status changes to **Active**.
 * **Active** – This status indicates that the mini survey is currently running. After the survey reaches its end time, the status will change to **Finished**.
 
@@ -57,7 +57,7 @@ Along its lifecycle, a mini survey can have the following statuses:
 
 * **Finished** – This status means the mini survey has ended.
 
-{{% alert color="info" %}}When a mini survey has the status of **Draft**, you can still edit everything in the survey. When a mini survey has the status of **Scheduled**, **Active**, or **Finished**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
+{{% alert color="info" %}}When a mini survey has the **Draft** status, you can still edit everything in the survey. When a mini survey has the status of **Scheduled**, **Active**, or **Finished**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
 
 #### Archived Tab {#archived}
 
@@ -75,11 +75,9 @@ Clicking the mini survey in a row on the list shows its [survey details](#survey
 
 ### Survey Details {#survey-details}
 
-When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page of the mini survey opens.
+When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page opens.
 
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-details.png" >}}
-
-On the upper-right corner, you can find the following buttons:
+In the upper-right corner, you can find the following buttons:
 
 * **Share Link** – Clicking **Share Link** copies the link to this page, which allows you to share the survey details with others.
 * **Archive Survey** – Clicking **Archive Survey** archives the survey. Once a survey is archived, you can find it on the [Archived](#archived) tab of the **Survey Overview** page.
@@ -94,15 +92,13 @@ This tab is available for mini surveys with all the statuses. It gives an overvi
 
 #### Responses Tab {#responses}
 
-This tab is available for mini surveys with the status of **Active** or **Finished**. 
+This tab is available for mini surveys with the **Active** or **Finished** status. 
 
 On this tab, you can view all the responses that have been collected for the mini survey.
 
 ### Settings Page {#settings}
 
-When you click {{% icon name="cog" %}} **Settings** at the upper-right corner of the **Survey Overivew** page, the **Settings** page opens. Here you can change all your settings and preferences for the mini survey. There are two tabs available: **Survey Locations** and **API Key**.
-
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/settings-page.png" >}}
+When you click {{% icon name="cog" %}} **Settings** in the upper-right corner of the **Survey Overivew** page, the **Settings** page opens. Here you can change all your settings and preferences for the mini survey. There are two tabs available: **Survey Locations** and **API Key**.
 
 #### Survey Locations {#survey-locations}
 
@@ -112,8 +108,6 @@ You can see all the available survey locations in the list.
 
 To add a new survey location, click **Add Location** above the right corner of the list. This opens a pop-up dialog box where you can enter the name of the new location.
 
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/add-survey-location.png" max-width=60% >}}
-
 To use a newly-created location, make sure that the configuration of the mini survey widget uses exactly the same name as the location name shown in the list here. For more information, see the [Configuration](/appstore/modules/mendix-mini-surveys/#configuration) section in *Mendix Mini Surveys*.
 
 To delete a survey location, click {{% icon name="trash-can" %}} **Delete** at the end of the row of the location in the list. This removes the location from the list. To use this location again, simply create the location again with the same name.
@@ -121,8 +115,6 @@ To delete a survey location, click {{% icon name="trash-can" %}} **Delete** at t
 {{% alert color="info" %}}If a location is used in an active survey or a scheduled survey, you are unable to delete this location.{{% /alert %}}
 
 #### API Key
-
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/api-key.png" >}}
 
 On the **API Key** tab, you can view or generate API keys. The list shows all the active API keys. 
 
@@ -144,7 +136,7 @@ The first time you complete the onboarding, Mendix creates a demo survey for you
 
     * **Context**
         * **Survey Title** – Give the mini survey a name.
-        * **Description** – Descirbe your survey.
+        * **Description** – Describe your survey.
         * **Start date & End date** – Set the start and end time of the mini survey.
         * **Survey Location** – Select the location of the mini survey widget.
     * **Questions** – You can set up to five questions per mini survey.
@@ -152,8 +144,8 @@ The first time you complete the onboarding, Mendix creates a demo survey for you
         * **Score** – Create a question where a user can give a star, emoji or numerical rating.
         * **Multiple Choice** – Create a question where you can set up to 4 answers for the user to pick from.
         * **NPS** – Let the user pick a score between 0 and 10 to rate your app.
-    * **Finalize** – Shows an summary of your survey.
-        * **Toaster Placement** – Set on which corner of the page the mini survey appears.
+    * **Finalize** – Shows a summary of your survey.
+        * **Toaster Placement** – Choose the corner of the page where the mini survey is displayed.
 
 4. Click **Preview** to see how the mini survey looks once it is live.
 5. If the preview looks good, click **Schedule Survey** to complete the creation of the survey.
@@ -209,7 +201,7 @@ To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) mod
 
 ### Viewing or Exporting Responses {#view-export-responses}
 
-When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/global-navigation/#notifications) on how many responses have been collected.
+When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/portal/global-navigation/#notifications) on how many responses have been collected.
 
 To check the responses that have been collected, follow these steps:
 

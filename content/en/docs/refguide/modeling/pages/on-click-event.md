@@ -69,6 +69,7 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Show user task page](#show-user-task-page)
 * [Show workflow admin page](#show-workflow-page)
 * [Complete user task](#complete-task)
+* [Cancel synchronization](#cancel-synchronization)
 
 ### Do Nothing {#do-nothing}
 
@@ -98,7 +99,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 #### Page Arguments
 
-**Page arguments** are automatically configured based on the parameters of the selected page and the available arguments. In general, arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a page is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
+**Page arguments** are automatically configured based on the [parameters](/refguide/page-parameter/) of the selected page and the available arguments. In general, arguments are taken from any enclosing data widget or the page itself.
 
 ### Call a Microflow {#call-microflow}
 
@@ -117,7 +118,7 @@ The [microflow](/refguide/microflow/) that should be executed.
 
 You can either select an existing microflow or create a new microflow by clicking the **New** button from the **Select Microflow** dialog box.
 
-In Studio Pro 10.4.0 and above, when creating a new microflow, a dialog box is shown where you can set the name and select parameters for the new microflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new microflow:
+When creating a new microflow, a dialog box is shown where you can set the name and select parameters for the new microflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new microflow:
 
 {{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-with-parameter.png" width="650px" class="no-border" >}}
 
@@ -137,9 +138,7 @@ This duplicates the [Microflow](#microflow) specified above.
 
 ##### Microflow Arguments
 
-**Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
-
-If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or selection, and defaults to selection. This can be configured via the drop-down menu in the microflow settings page. A grid with single selection always passes all rows to the microflow.
+**Microflow arguments** specify the values that are passed as parameters when the microflow is called. Each argument can be defined using an expression or by choosing a variable that is available on the page. Variables are exposed by the widget itself, surrounding data widgets, a widget with selection, page variables, and page parameters. When the [**Microflow**](#microflow) is set, arguments are automatically filled for parameters with matching candidate variables. Specifically, if the name of the variable matches that of the parameter, or only one variable of the parameter's type is available, then arguments for those parameters will be filled with those candidate values automatically.
 
 ##### Microflow Call Type
 
@@ -224,7 +223,7 @@ Set the **Nanoflow** property to specify a [nanoflow](/refguide/nanoflow/) that 
 
 You can either select an existing nanoflow or create a new nanoflow by clicking the **New** button from the **Select Nanoflow** dialog box.
 
-In Studio Pro 10.4.0 and above, when creating a new nanoflow, a dialog box is shown where you can set the name and select parameters for the new nanoflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new nanoflow.
+**Nanoflow arguments** specify the values that are passed as parameters when the nanoflow is called. Each argument can be defined using an expression or by choosing a variable that is available on the page. Variables are exposed by the widget itself, surrounding data widgets, a widget with selection, page variables, and page parameters. When the **Nanoflow** is set, arguments are automatically filled for parameters with matching candidate variables. Specifically, if the name of the variable matches that of the parameter, or only one variable of the parameter's type is available, then arguments for those parameters will be filled with those candidate values automatically.
 
 If there is nothing to pass to the new nanoflow, then a dialog box is shown where you can only specify the name of the nanoflow.
 
@@ -287,10 +286,6 @@ When placed in the control bar of a [data grid](/refguide/data-grid/), [template
 
 In other situations, the user can select which objects to delete. The object can be from any surrounding data container, [snippet parameter](/refguide/snippet/), [page parameter](/refguide/page-properties/#parameters) or selections of [pluggable widgets](/refguide/mendix-client/#pluggable-widgets) (for example a [Data Grid 2](/appstore/modules/data-grid-2/) or [Gallery](/appstore/modules/gallery/) widget).
 
-{{% alert color="info" %}}
-The option to configure which objects to delete was introduced in Studio Pro 10.4.0.
-{{% /alert %}}
-
 This event cannot be used to delete [external objects](/refguide/external-entities/). Use a microflow with a [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 
 Set the **Close page** property to indicate whether the current page should be closed.
@@ -349,6 +344,10 @@ The following properties are specific for this event:
 * **Outcome** – Lists the outcomes of the selected [user task](/refguide/user-task/) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the data container object should be committed when marking the task as completed.
+
+### Cancel Synchronization {#cancel-synchronization}
+
+The **Cancel synchronization** event cancels a running synchronization. You can trigger another synchronization later.
 
 ## Read More
 

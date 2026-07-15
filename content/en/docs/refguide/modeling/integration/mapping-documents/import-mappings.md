@@ -10,7 +10,7 @@ Please refer to [Mapping Documents](/refguide/mapping-documents/) for an introdu
 
 Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema have been selected using the **Select elements...** dialog. Then, the ReceivedPartners and ReceivedClient entities were added and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is obtained.
 
-{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/import-mappings/16843942.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/import-mappings/im-example.png" class="no-border" >}}
 
 **Figure 1**
 
@@ -18,7 +18,7 @@ Figure 1 depicts an example of an Import Mapping document in which two elements 
 
 For each XML or JSON object, a Mendix object needs to be obtained. You can create one or find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can define how a Mendix object is obtained in the window depicted in Figure 2, which is shown after double-clicking a specific mapping element.
 
-{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/import-mappings/16843943.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/import-mappings/mapping-entity.png" class="no-border" >}}
 
 **Figure 2**
 
@@ -66,13 +66,9 @@ Be aware that lists are not stored ordered in the Mendix database. The XML schem
 
 Each schema value in a selected XML or JSON schema object needs to be mapped to an attribute of an entity to be used in your app. If you don't want to map certain values, uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in Figure 3, which is shown after double-clicking a specific mapping element.
 
-{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/import-mappings/16843943.png" class="no-border" >}}
-
-**Figure 3**
-
 Having defined the mappings for the attributes, these mappings are also shown in the mapping document. When a specific attribute is selected, the schema element is also selected. This works the other way around too. An example of this is shown in Figure 4, where the **dati** attribute is selected in both the entity and the schema element (in this case, dati is mapped to dati).
 
-{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/import-mappings/16843944.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/import-mappings/schema-example.png" class="no-border" >}}
 
 **Figure 4**
 
@@ -103,6 +99,6 @@ If you are importing a very long JSON string, the underlying conversion library 
 
 Mendix uses the Jackson Core XML library when performing the import mapping and this [has a limit of 20 million](https://javadoc.io/static/com.fasterxml.jackson.core/jackson-core/2.15.1/com/fasterxml/jackson/core/StreamReadConstraints.html#DEFAULT_MAX_STRING_LEN) characters (in earlier versions 5 million) in the JSON string.
 
-In Mendix version 10.9.0 and above and Mendix MTS version 10.6, patch releases 10.6.5 and above, you can override this using the [mapping.import.MaxJsonReadingLength](/refguide/custom-settings/#mapping.import.MaxJsonReadingLength) custom setting.
+You can override this using the [mapping.import.MaxJsonReadingLength](/refguide/custom-settings/#mapping.import.MaxJsonReadingLength) custom setting.
 
 Mendix recommends that you only add this setting if you will be getting very long JSON strings as it may result in more memory usage.

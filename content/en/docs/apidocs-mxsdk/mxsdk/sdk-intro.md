@@ -54,12 +54,7 @@ When changing these components, make sure to use the [reverse engineering tool](
 
 ### Quick Setup
 
-To set up the Mendix Platform and Model SDKs, perform the following steps using a command line console.
-
-1. `npm init --yes`
-2. `npm install -g typescript`
-3. `npm install mendixmodelsdk mendixplatformsdk when @types/when --save`
-4. `tsc --init`
+To set up the Mendix Platform and Model SDKs, follow the [Quick Installation](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/#quick-installation) guide.
 
 ### Detailed Resources
 

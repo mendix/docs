@@ -16,13 +16,13 @@ Notice that if the microflow takes more than one parameter of an object or list 
 
 ## Choosing a Resource
 
-After you click **Publish as REST service operation**, you need to select a resource under which to publish the microflow. There are several options:
+After you click **Publish as REST service operation**, select a resource under which to publish the microflow. There are several options:
 
 * If you already have a service and a resource under which to publish the microflow, select it and click **Select**
 * If you already have a service but you want to create a resource, select the service and click **New**
 * If you want to create a new service, select a module or folder and click **New**
 
-The suggested name of the resource is the entity of a parameter of the microflow or the entity result of the microflow.
+The suggested name of the resource is the entity of a parameter of the microflow, or the entity result of the microflow.
 
 ## Editing the Operation
 

@@ -26,7 +26,6 @@ Once your services are registered in the Catalog, they become discoverable to ot
 
 You can manage discoverability on a per-service basis, either from the curation pages or the service detail page. For more information, see the [Discoverable and Validated](/catalog/manage/curate/#discoverability) section of *Curate Registered Assets*.
 
-
 ## Read More
 
 * [Getting Started with the Catalog](/catalog/get-started/) 

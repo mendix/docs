@@ -14,7 +14,7 @@ Most application logic can be developed using [microflows](/refguide/microflows/
 This document teaches you how to do the following:
 
 * Extend your application with custom Java code you can call from a microflow
-* Use the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) to retrieve data from the database using an XPath in a Java action
+* Use the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api-11/) to retrieve data from the database using an XPath in a Java action
 
 ## Prerequisites {#prerequisites}
 
@@ -174,7 +174,7 @@ Now you will add a button to the Product_NewEdit page which uses a microflow to 
 
 ## XPath Retrieval in Java {#xpath}
 
-Using the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/), your Java actions can interact with many parts of your app. One thing that many developers want to do is to retrieve a list of objects using an [XPath Constraint](/refguide/xpath-constraints/). This section describes how to implement an XPath retrieval in a Java action.
+Using the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api-11/), your Java actions can interact with many parts of your app. One thing that many developers want to do is to retrieve a list of objects using an [XPath Constraint](/refguide/xpath-constraints/). This section describes how to implement an XPath retrieval in a Java action.
 
 Using the Domain Model you set up in [Setting Up a Simple App](#simple-app), above, you want to retrieve a list of Products which meet the following criteria:
 
@@ -186,10 +186,10 @@ The example skips many features you would want to add to a real app, but is desi
 
 ### XPath in Microflow
 
-Firstly, a reminder of how this XPath could be implemented in a Retrieve activity. You can use this XPath in a Retrieve activity in a microflow using the following steps:
+Firstly, a reminder of how this XPath could be implemented in a Retrieve object(s) activity. You can use this XPath in a Retrieve object(s) activity in a microflow using the following steps:
 
 1. Create a new microflow in the **Products** module and name it *ListWithRetrieve*.
-2. Add a **Retrieve** activity and configure it as follows:
+2. Add a **Retrieve object(s)** activity and configure it as follows:
 
     * Source: From database
     * Entity: Products.Category
@@ -200,7 +200,7 @@ Firstly, a reminder of how this XPath could be implemented in a Retrieve activit
 
     This will retrieve a category for us to use in the XPath.
 
-3. Add a second **Retrieve** activity and configure it as follows:
+3. Add a second **Retrieve object(s)** activity and configure it as follows:
 
     * Source: From database
     * Entity: Products.Product
@@ -289,7 +289,7 @@ To use this same XPath in a Java action called from a microflow, perform the fol
 6. Select **File** > **Save** to save the Java action in Eclipse.
 7. In Studio Pro, **Duplicate** the **ListWithRetrieve** microflow you created in the previous section and **Rename** it *ListWithJavaAction*.
 8. Edit the **ListWithJavaAction** microflow.
-9. Delete the second **Retrieve** activity.
+9. Delete the second **Retrieve object(s)** activity.
 10. Drag the **findProductByNameAndCategory** Java action to the end of the microflow
 11. Configure the inputs of the **findProductByNameAndCategory** Java action as follows:
 

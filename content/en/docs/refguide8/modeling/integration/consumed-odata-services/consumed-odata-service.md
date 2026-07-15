@@ -17,11 +17,11 @@ The **Consumed OData Service** document that is added to the project displays th
 * Service name and the icon for the source application of the originating app
 * Version number of the consumed service
 * **View in Catalog** link to the **Service Details** where you can see the full service details that are registered
-* **Update/Switch** – you can update the consumed service contract to another version that has been detected in [Mendix Data Hub](/data-hub/) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in Data Hub:
+* **Update/Switch** – you can update the consumed service contract to another version that has been detected in the [Catalog](/catalog/) for the same app and service; the button will show the following, depending on what has been returned for the consumed contract in the Catalog:
     * **Update** – this button is displayed so that you can **Update** the contract that is currently consumed (and shown in the **Consumed OData Service** document). You will be presented with the contract that is currently at the service endpoint. It is good practice that only minor, non-breaking changes are deployed to the same endpoint.
-    * **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in Data Hub and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
+    * **Switch** – this button is shown if other registered instances of the same service (with the same name, from the same app) are available in the Catalog and are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
-    {{% alert color="info" %}}Studio Pro displays the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project**  pane, when a different contract is detected at the service endpoint, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
+    {{% alert color="info" %}}Studio Pro displays the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **Project** pane, when a different contract is detected at the service endpoint, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
     {{% alert color="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:<br />
     {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/data-hub-pane-update-available.png" alt="update service data hub pane" class="no-border" >}}
@@ -78,7 +78,7 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in the *Security and Shared Datasets* document in the Studio Pro 10 guide.
+Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide10/security-shared-datasets/#http-header-validation) in the *Security and Shared Datasets* document in the Studio Pro 10 guide.
 {{% /alert %}}
 
 ## Metadata Tab {#metadata}
@@ -168,7 +168,7 @@ Entities of non-Mendix OData services are identified with a key of one or more f
 
 ### Update or Switch
 
-When minor and major updates to a consumed service are detected in Data Hub the following options are available in the **Consumed OData Service** screen.
+When minor and major updates to a consumed service are detected in the Catalog the following options are available in the **Consumed OData Service** screen.
 
 #### Update
 
@@ -183,7 +183,7 @@ In the **Project** pane this will be shown as follows:
 {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/project-pane-update-available.png" alt="update service project-pane" class="no-border" >}}
 
 * The service version that is *currently consumed* is shown (in this example **1.0.11**)
-* Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the project.
+* Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from the Catalog and this will be loaded for the project.
 * The list of entities that are consumed from the current service version which are shown by the green check-mark
 
 ##### Data Hub Search Results
@@ -194,9 +194,9 @@ In the **Data Hub** pane the search results for the same consumed service displa
 
 * The version of the service that is now at the endpoint, **1.0.12**
 
-* Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from Data Hub and this will be loaded for the project.
+* Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract from the Catalog and this will be loaded for the project.
 
-* The list of entities in this new version in the Data Hub are shown, including the locally consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as the contract for the previous version is currently being consumed. The only option is to click **Update** to retrieve the updated OData Service.
+* The list of entities in this new version in the Catalog are shown, including the locally consumed entities which are marked with a green check-mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model as the contract for the previous version is currently being consumed. The only option is to click **Update** to retrieve the updated OData Service.
 
 ##### Update Service Dialog Box
 
@@ -204,7 +204,7 @@ When you click **Update** on the **Consumed OData Service** document or the upda
 
 {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/update-service-dialog-box.png" alt="update service dhpane" class="no-border" >}}
 
-The consumed OData service that is currently consumed in the project (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Data Hub (**2.0.0**).
+The consumed OData service that is currently consumed in the project (**1.0.0**) is shown on the left, and you can click **Update** to retrieve the new contract from the Catalog (**2.0.0**).
 
 #### Switch
 

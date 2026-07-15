@@ -3,7 +3,7 @@ title: "APD Release Notes"
 linktitle: "APD"
 url: /releasenotes/marketplace/apd/
 description: "The release notes for Mendix Application Performance Diagnostics (APD) with details on new features, bug fixes, and known issues."
-weight: 10
+weight: 40
 numberless_headings: true
 ---
 
@@ -173,9 +173,9 @@ The Mendix 6 version of the agent in release 2.0.3, which contains the Mendix 7 
 
 This major release of APM deals with cloud, end-user measurements, and simplicity.
 
-### Cloud Multi-Tenant
+### Cloud Multitenant
 
-APM 2 is a multi-tenant cloud-based app that is integrated with the Mendix Portal for your project and SSO. 
+APM 2 is a multitenant cloud-based app that is integrated with the Mendix Portal for your project and SSO. 
 
 To use APM, you only need to install the **APMAgent2** module.
 

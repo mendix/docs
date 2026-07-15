@@ -75,18 +75,43 @@ Update-MxApp $appName -LiteralPath $literalPath
 Start-MxApp $appName -SynchronizeDatabase
 ```
 
-{{% alert color="info" %}}
-To start your app as a local process instead of a service, add a `-NoService` argument to the `Start-MxApp` cmdlet, as in the following example:
+{{% alert color="warning" %}}
+Stopping your app before you update it is a necessary part of the process. Do not attempt to extract the deployment package from your app while it is running.
+{{% /alert %}}
 
-```
+You can find the parameters for `Start-MxApp` cmdlet in the sections below:
+
+#### `NoService`
+
+To start your app as a local process instead of a service, add a `NoService` argument to the `Start-MxApp` cmdlet, as in the following example:
+
+```text
 Start-MxApp $appName -NoService -SynchronizeDatabase 
 ```
 
-{{% /alert %}}
+#### `EnableDebugger`
 
-{{% alert color="warning" %}}
-Stopping your app before you update it is a necessary part of the process. Do not attempt to extract the deployment package into your app while the app is running.
-{{% /alert %}}
+The `EnableDebugger` allows Studio Pro to connect to a Mendix app for debugging.
+
+```text
+Start-MxApp $appName -EnableDebugger "Abcd@1234"
+```
+
+#### `LicenseKey`
+
+The `LicenseKey` parameter allows you to activate the license for a Mendix app.
+
+```text
+Start-MxApp $appName -LicenseKey "Abcd@1234"
+```
+
+#### `AdminPassword`
+
+The `AdminPassword` parameter to the Start-MxApp cmdlet sets the administrator password for a Mendix app.
+
+```text
+Start-MxApp $appName -AdminPassword "Abcd@1234"
+```
 
 ### Sample Script - Determine the Mendix Runtime Version
 
@@ -142,6 +167,59 @@ $level = 'Log level which needs to be assigned'
 
 # Set log level for all nodes of a log subscriber at once
 Set-MxLogLevel $appName -SubscriberName $subscriberName -Level $level
+```
+
+### Sample Script - Create a Windows Service for Mendix app
+
+The following script example demonstrates how to create a Windows service for a Mendix app.
+
+```text
+$appName = 'Name of Mendix app'
+
+# Create new Windows service
+Install-MxService $appName
+```
+
+### Sample Script - Set App Runtime Settings
+
+The following script example demonstrates how to set runtime settings for your app. It applies custom runtime configuration settings to your application using a hashtable of key-value pairs.
+
+```text
+$appName = 'Name of Mendix app'
+$settings = @{
+    'MaxJavaHeapSize' = '2048'           
+    'DatabaseHost' = 'localhost'        
+}      
+
+# Set runtime settings
+Set-MxAppRuntimeSettings $appName -Settings $settings
+```
+
+### Sample Script - Set App Constant
+
+The following script example demonstrates how to set an application constant for your app. It updates a specific constant value in your Mendix app configuration.
+
+```text
+$appName = '{Name of your app}'
+$constants = @{
+    'constantName' = 'constantValue'
+    'constantName2' = 'constantValue2'
+}
+
+# Set application constant
+Set-MxAppConstants $appName -Constants $constants
+```
+
+### Sample Script - Get Server Id
+
+The `Start-MxApp` cmdlet automatically retrieves the Server ID (License ID) when starting a Mendix app. You can use this unique identifier for license tracking and application monitoring. The following script example demonstrates the process required to retrieve Server Id.
+
+```text
+# Start the Mendix app and get Server ID
+$app = Start-MxApp "MyAppName" -NoService -SynchronizeDatabase
+
+# Display the Server ID
+Write-Host "Server ID: $($app.ServerId)"
 ```
 
 ## Troubleshooting

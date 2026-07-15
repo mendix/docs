@@ -1,24 +1,28 @@
 ---
-title: "Air-Gapped Installation of Tekton CI/CD for Mendix for Private Cloud"
+title: "Air-Gapped Installation of Tekton CI/CD for Mendix on Kubernetes"
 linktitle: "Air-Gapped Tekton Installation"
 url: /developerportal/deploy/private-cloud-tekton-airgapped/
-description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
+description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in Mendix on Kubernetes"
 weight: 10
 ---
 
+{{% alert color="info" %}}
+Tekton pipelines for Mendix on Kubernetes Standalone are no longer available to new customers. Customers seeking Tekton pipeline support are advised to consider Private Mendix Platform, which includes Tekton pipeline support.
+{{% /alert %}}
+
 ## Introduction
 
-The instructions for setting up Tekton CI/CD for Mendix for Private Cloud differ between environments which are connected to the internet and air-gapped environments. 
+The instructions for setting up Tekton CI/CD for Mendix on Kubernetes differ between environments which are connected to the internet and air-gapped environments. 
 
 This document explains how to install the following on your **air-gapped** environment:
 
 * Tekton
 * Pipelines containing the appropriate tasks and steps to manage apps and environments
 
-After following the steps in this document you con continue with the instructions in [Installing Triggers](/developerportal/deploy/private-cloud-tekton/#installing-triggers) in the *CI/CD for Mendix for Private Cloud using Tekton* document.
+After following the steps in this document you con continue with the instructions in [Installing Triggers](/developerportal/deploy/private-cloud-tekton/#installing-triggers) in the *CI/CD for Mendix on Kubernetes using Tekton* document.
 
 {{% alert color="info" %}}
-Please read [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/deploy/private-cloud-tekton/) first, using these instructions when asked to.
+Please read [CI/CD for Mendix on Kubernetes using Tekton](/developerportal/deploy/private-cloud-tekton/) first, using these instructions when asked to.
 
 All commands used in this document should be executed in a Bash (or bash-compatible) terminal.
 {{% /alert %}}
@@ -27,9 +31,12 @@ All commands used in this document should be executed in a Bash (or bash-compati
 
 To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry. Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download it using one of the following links:
 
-* [Aip for Mac (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-macos-amd64.tar.gz)
-* [Aip for Windows](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-windows-amd64.zip)
-* [Aip for Linux (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-linux-amd64.tar.gz)
+* [Aip for Mac (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-macos-amd64.tar.gz)
+* [[Aip for Mac (arm64)]](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-macos-arm64.tar.gz)
+* [Aip for Windows (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-windows-amd64.zip)
+* [Aip for Windows (arm64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-windows-arm64.zip)
+* [Aip for Linux (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-linux-amd64.tar.gz)
+* [Aip for Linux (arm64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-linux-arm64.tar.gz)
 
 {{% alert color="info" %}}
 The following steps in this section must be done in an environment which has internet access.
@@ -43,7 +50,7 @@ Get the Tekton package:
 
 ```bash
 mkdir tekton && cd tekton
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/tekton-package-v1.0.4.json
+aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/tekton-package-v1.0.5.json
 aip pull
 ```
 
@@ -99,20 +106,24 @@ Get the pipeline package:
 
 ```bash
 mkdir pipeline && cd pipeline
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/pipeline-package-v1.0.4.json
+aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/pipeline-package-v1.0.5.json
 aip pull
 ```
 
-Add build and runtime images for a specific Mendix version, or for a range of versions:
+Add build and runtime images for a specific Mendix version, and a base OS with a specific Java version, or for a range of versions:
 
 ```bash
 # add one specific version (in this example 8.18.11.27969)
 aip addimage mxbuild8.18.11 private-cloud.registry.mendix.com/mxbuild:8.18.11.27969
-aip addimage runtime-base8.18.11 private-cloud.registry.mendix.com/runtime-base:8.18.11.27969-rhel
+aip addimage runtime8.18.11 private-cloud.registry.mendix.com/app-building-blocks:runtime-8.18.11.27969
+aip addimage ubi8-1-java11 private-cloud.registry.mendix.com/app-building-blocks:ubi8-1-jre11-entrypoint
 
 # add multiple versions (in this example all patch versions of 8.18)
 aip addimagesquery private-cloud.registry.mendix.com/mxbuild '^8.18.*'
-aip addimagesquery private-cloud.registry.mendix.com/runtime-base '^8.18.*-rhel$'
+aip addimagesquery private-cloud.registry.mendix.com/app-building-blocks '^runtime-8.18.*$'
+
+# add all base OS images
+aip addimagesquery private-cloud.registry.mendix.com/app-building-blocks '^ubi\d+-\d-jre\d+-entrypoint$'
 
 aip pull
 ```
@@ -193,20 +204,20 @@ cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm install -n $NAMESPACE_WITH_PIPELINES mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG \
-  --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.2 \
-  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
+  --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:gitinit-0.0.3 \
+  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
   --set images.build=$PRIVATE_REGISTRY/mxbuild \
-  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools:imagebuild-0.0.2 \
-  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
-  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
-  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
-  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
-  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 
+  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools:imagebuild-0.0.9 \
+  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
+  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
+  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
+  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
+  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9
 ```
 
 ## Installing Triggers{#installing-triggers}
 
-After following the steps in this document you con continue with the instructions in [Installing Triggers](/developerportal/deploy/private-cloud-tekton/#installing-triggers) in the *CI/CD for Mendix for Private Cloud using Tekton* document. The remaining instructions are the same for both air-gapped and connected environments.
+After following the steps in this document you con continue with the instructions in [Installing Triggers](/developerportal/deploy/private-cloud-tekton/#installing-triggers) in the *CI/CD for Mendix on Kubernetes using Tekton* document. The remaining instructions are the same for both air-gapped and connected environments.
 
 ## Troubleshooting{#troubleshooting}
 

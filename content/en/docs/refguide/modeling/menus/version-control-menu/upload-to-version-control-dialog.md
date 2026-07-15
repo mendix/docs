@@ -20,7 +20,7 @@ Use this setting to select the location where you want to store your app. There 
 
 ### New Mendix Team Server
 
-You can create a new app on [Mendix Team Server](/developerportal/general/team-server/).
+You can create a new app on [Mendix Team Server](/developerportal/repository/team-server/).
 
 * Select **New Mendix Team Server**
 * Enter the name for the new Team Server app and repository in the **App name** field
@@ -50,4 +50,5 @@ If you select **Private server**, enter the address of the repository to which y
 
 ## Read More
 
-* [How to Work with an On-Premises Git Version Control Server](/refguide/on-premises-git/)
+* [Enabling Version Control for Your App](/refguide/version-control/enable/)
+* [Optional: Working with Private Git](/refguide/on-premises-git/)

@@ -7,9 +7,9 @@ url: /refguide/system-texts/
 ## Introduction
 
 {{% alert color="info" %}}
-In Studio Pro 10.14.0, the web version of the system texts editor was released as an [experimental](/releasenotes/beta-features/) feature. You can enable it via **Preferences** > **New Features**. 
+The web version of the system texts editor is enabled by default. You can disable it via **Preferences** > **New Features**. 
 
-If Translation Generator is also enabled, you can use this AI-powered translation tool in the new editor to translate the system texts. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
+If Translation Generator is enabled, you can use this AI-powered translation tool in the new editor to translate the system texts. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
 {{% /alert %}}
 
 System texts are texts that are shown automatically to end-users by the server or the client. 
@@ -18,10 +18,10 @@ For example, if an end-user enters a string into a search field that expects a n
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/app/system-texts/example-invalid-number.png" width="300px" class="no-border" >}}
 
-You can change the system texts in the following way:
+You can change the system texts by following the steps below:
 
-1. Go to the system texts editor: **App Explore** > **App 'AppName'** > **System texts** > **Text**.
-2. Click on the texts in the **Text** column to edit the texts.
+1. Open the systems text editor by opening **App Explorer** > **App 'AppName'** > **System texts** > **Text**.
+2. Click the texts in the **Text** column to edit.
 
 ## Languages
 

@@ -7,11 +7,17 @@ weight: 40
 
 ## Introduction
 
-A **Check box** widget is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *Boolean*. It displays a tick if the value is true and remain empty if it is false. 
+A **Check box** widget is used to display and, optionally, allow the end-user to edit the value of an attribute or variable of [data type](/refguide/data-types/) *Boolean*. It displays a tick if the value is true and remain empty if it is false. 
 
 {{% alert color="info" %}}In native mobile applications, the checkbox widget can be rendered as either a switch (default) or a checkbox. If checkbox, it displays a tick if the value is true and remains empty if it is false. If switch, it displays a track with right-positioned thumb button if the value is true and a left-positioned thumb button if it is false.{{% /alert %}}
 
-A checkbox must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the checkbox widget, between square brackets, and colored blue.
+A checkbox must be placed within a data context to display or edit the intended value:
+
+* A [data container](/refguide/data-widgets/) widget containing an object
+* A snippet containing one or more [parameters](/refguide/page-properties/#parameters)
+* A page or a snippet containing one or more [variables](/refguide/page-properties/#variables)
+
+The name of the configured value is shown inside the checkbox widget, between square brackets, and colored blue.
 
 For example, this checkbox allows you to see, and set, whether someone is subscribed to your newsletter.
 
@@ -103,3 +109,4 @@ The render mode property determines whether the widget renders as a switch or a 
 
 * [Data View](/refguide/data-view/)
 * [Attributes](/refguide/attributes/)
+* [Variables](/refguide/page-properties/#variables)

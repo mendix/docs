@@ -221,19 +221,21 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | Name  | Source | Purpose | Path | Duration | HttpOnly | 
 | --- | --- | --- | --- | --- | --- |
 | **mx-cookie-test** | Client | Tests whether the browser supports cookies | `/` | deleted immediately after setting it | `false` |
-| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions<sup><small>1</small></sup> |  `false` | 
+| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions¹ |  `false` | 
 | **originURI** | index.html | Tells the client where to redirect to if a user is required to log in | `/` | until user closes their browser (session cookie) |  `false` | 
-| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | until user closes their browser (session cookie) |  `true` | 
-| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | In Mendix 9.12 and above, 1 year. Below Mendix 9.12, until user closes their browser (session cookie) |  `true` | 
+| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | In Mendix 9.12 and above, 1 year. Below Mendix 9.12, until user closes their browser (session cookie) |  `true` | 
 | **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the session | `/` | until user closes their browser (session cookie) |  `true` | 
 | **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` | 
 | **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page | `/` | until user closes their browser (session cookie) |  `true` | 
-| **XASSESSIONID**<sup><small>2</small></sup> | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions<sup><small>1</small></sup>, otherwise based on the session timeout |  `true` | 
-| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application—*introduced for apps created in Mendix version 9.24.24 and above* | `/` | until client starts or end-user closes their browser | `false` | 
+| **XASSESSIONID**² | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions¹, otherwise based on the session timeout |  `true` | 
+| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application—*introduced for apps created in Mendix version 9.24.24 and above* | `/` | until client starts or end-user closes their browser | `false`³ | 
 
-<sup><small>1</small></sup>*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide9/navigation/#profiles).
+¹*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide9/navigation/#profiles).
 
-<sup><small>2</small></sup>The name of the **XASSESSIONID** can be changed by changing the value of the **com.mendix.core.SessionIdCookieName** [custom setting](/refguide9/custom-settings/).
+²The name of the **XASSESSIONID** can be changed by changing the value of the **com.mendix.core.SessionIdCookieName** [custom setting](/refguide9/custom-settings/).
+
+³The **clear_cache** cookie does not contain any sensitive information and always has value of 1. Therefore, there is no need for this cookie to be marked as **Secure** or **HttpOnly**.
 
 ### Launching Native Mendix Client
 
@@ -245,10 +247,9 @@ The flow described here is for production apps. During development, the flow is 
 2. The shell app loads a native bundle. This is the equivalent of the Mendix Client resources used by the Mendix Client running in a browser. It contains, for example, the Mendix Client code and page definitions. However, it is held locally on the device rather than centrally with the Runtime Server.
 3. If there is not a valid authentication token on the device, the Mendix Client contacts the Runtime Server and authenticates the end-user and gets any additional configuration required from the Runtime Server.
 4. If this is the first time the app has been started, or the first time after an update to the app, the Mendix Client performs a synchronization with the Runtime Server.
-5. The Mendix Client checks the resources stored in Visual Studio App Center for updates to the native bundle. This enables the app to keep up-to-date without needing to download new versions of the app from the app store.
 
     *The Mendix Client is now ready to start interacting with the end-user and will repeat the following steps for as long as the continues to run.*
 
-6. The Mendix Client prepares a page using the data on the device.
-7. The Mendix Client presents the page to the end-user.
-8. The Mendix Client reacts to the end-user input.
+5. The Mendix Client prepares a page using the data on the device.
+6. The Mendix Client presents the page to the end-user.
+7. The Mendix Client reacts to the end-user input.

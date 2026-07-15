@@ -11,11 +11,17 @@ When building a Mendix app, you use many reusable components such as Widgets and
 
 ## Generating an SBOM
 
-You can generate an SBOM by using [MxBuild](/refguide/mxbuild/). This generates an `sbom.json` file as part of your deployment folder or your package `.mda`. Bundling the SBOM together with your deployment ensures the components that were present during the build are clearly represented.
+You can generate an SBOM by using either of the following options:
 
-```bat
-mxbuild --java-home="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot" --java-exe-path="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot\bin\java.exe" --generate-sbom  "C:\Mendix\MyApp\MyApp.mpr"
-```
+1. [MxBuild](/refguide/mxbuild/)
+
+    ```bat
+   mxbuild --java-home="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot" --java-exe-path="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot\bin\java.exe" --generate-sbom  "C:\Mendix\MyApp\MyApp.mpr"
+   ```
+
+2. Menu option **App -> Tools -> Generate Bill of Materials**
+
+Both of these generate an `sbom.json` file in the deployment folder of your package `.mda`. Bundling the SBOM together with your deployment ensures that the SBOM represents the components that were present during the build.
 
 ## SBOM Format
 
@@ -40,10 +46,10 @@ Since a full SBOM contains all project details, this is only a partial represent
       "author": "",
       "publisher": "",
       "name": "Mendix-Runtime",
-      "version": "10.10.0.34429",
+      "version": "11.10.0.34429",
       "licenses": [],
       "copyright": "",
-      "purl": "pkg:mendix/Mendix-Runtime@10.10.0.34429?type=framework",
+      "purl": "pkg:mendix/Mendix-Runtime@11.10.0.34429?type=framework",
       "components": []
     },
     {
@@ -74,7 +80,7 @@ Since a full SBOM contains all project details, this is only a partial represent
 
 The table below describes what components are currently covered in the generated SBOM, and from what version. It is recommended to use version `10.10`, `9.24.22`, or `10.6.9` and above.
 
-| Feature | Description | Version
+| Feature | Version | Description
 | --- | --- | --- |
 | Mendix Modules | `9.24.14`, `10.4.0` | Mendix Modules imported from the Marketplace. This does not include Add-on Modules, Solutions, Extensions, or manually imported modules. |
 | [Java Dependencies](/refguide/managed-dependencies/) | `9.24.14`, `10.4.0` | Java libraries imported into your project using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the `userlib` folder. Libraries added through managed dependencies will have access to information of the package manager and will include more details, such as the used license. |

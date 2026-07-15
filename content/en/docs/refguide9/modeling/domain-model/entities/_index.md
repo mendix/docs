@@ -155,6 +155,10 @@ The 'changedDate' property is updated when a value is set.  [In Mendix 9.5.0 and
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+The `changedDate` value is not updated if you update the object directly in Java using calls which resolve to use the [`com.mendix.systemwideinterfaces.core.IMendixObject.setValue​(IContext context, java.lang.String memberName, java.lang.Object value)`](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/systemwideinterfaces/core/IMendixObject.html#setValue(com.mendix.systemwideinterfaces.core.IContext,java.lang.String,java.lang.Object)) method (for example, `Entity.setValue(IContext, String)`). If you need `changedDate` to be updated when using Java, use the [`com.mendix.core.Core.change​(IContext context, IMendixObject object, java.util.Map<java.lang.String,​java.lang.String> changes)`](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#change(com.mendix.systemwideinterfaces.core.IContext,com.mendix.systemwideinterfaces.core.IMendixObject,java.util.Map)) method.
+{{% /alert %}}
+
 #### Store 'owner' {#store-owner}
 
 This property defines whether the entity has the system association 'owner'. This is an association to the system entity 'User' that (initially) stores a reference to the user that created the object. This association is automatically set by the server upon creating an object.

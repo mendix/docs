@@ -41,7 +41,7 @@ You can select the following operations that represent the new state of the work
 
 * **Continue workflow** – This operation continues the processing of the workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance will no longer be in the *Incompatible* state. If the task is no longer in the new workflow definition, this action results in an error.
 
-* **Pause workflow** – This operation pauses further processing of the workflow. User tasks cannot be completed when the workflow instance is in the *Pause* state. Use the **Resume workflow** operation to resume processing of the workflow.
+* **Pause workflow** – This operation pauses further processing of the workflow. User tasks cannot be completed when the workflow instance is in the *Pause* state. Use the **Unpause workflow** operation to resume processing of the workflow.
 
 * **Unpause workflow** – This operation resumes the workflow after it has been paused with the **Pause workflow** operation. User tasks can be completed again.
 
@@ -50,7 +50,7 @@ You can select the following operations that represent the new state of the work
 * **Retry workflow** – This operation allows you to retry the failed workflow. **Retry workflow** differs from **Restart workflow** – **Restart workflow** starts the same workflow from the beginning, while **Retry workflow** retries the failed activity to see whether the workflow can get back into the in-progress state. There can be the following use cases:
     * If the failed activity is a user task activity, **Retry workflow** attempts to get the user task back to the state it had before it failed. 
     * If the user task failed due to an execution error in the event handling microflow (for more information, see the [Events Section](/refguide/user-task/#events) in *User Task* and the [User Task State Change](/refguide/workflow-properties/#user-task-state-change) section in *Workflow Properties*), the failed microflow is re-executed. 
-    * If the user task failed because no users were targeted by a microflow or XPath expression (for more information, see the [Target Users Using](/refguide/user-task/#target-users) section in *User Task*), there are two ways to fix this:
+    * If the user task failed because no users were targeted by a microflow or XPath expression (for more information, see the [Targeted Users](/refguide/user-task/#targeted-users) section in *User Task*), there are two ways to fix this:
         * Change the data that is used by the targeting microflow or the XPath expression so that it results in one or more users (for example, making sure each role has at least one user). After that the **Retry workflow** will re-execute the targeting microflow or XPath expression.
         * Add targeted users to the **System.WorkflowUserTask_TargetUsers** association (for example, from the **DefaultWorkflowAdmin** page in the [Workflow Commons](/appstore/modules/workflow-commons/) module or from your own functionality). In this case the **Retry workflow** puts the workflow into the in-progress state and does not execute the targeting microflow or XPath expression again.
     * If the multi-user task failed because too few users were targeted by a microflow or XPath expression, there are three ways to fix this:

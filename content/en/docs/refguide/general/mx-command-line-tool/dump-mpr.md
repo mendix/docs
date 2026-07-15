@@ -1,13 +1,13 @@
 ---
 title: "MPR Dump"
-url: /refguide/mx-command-line-tool/dump-mpr
+url: /refguide/mx-command-line-tool/dump-mpr/
 weight: 60
-description: "Describes the command used to create a JSON description of the model of a Mendix App."
+description: "Describes the command used to create a JSON description of the model of a Mendix app."
 ---
 
 ## Introduction
 
-The `mx dump-mpr` command enables you to export the app model of Mendix in the form of JSON. This command is available as of Mendix 10.4.
+The `mx dump-mpr` command enables you to export the app model of Mendix in the form of JSON.
 
 ## Usage
 
@@ -19,10 +19,10 @@ These are the `OPTIONS`:
 
 | Option | Value | Result |
 | --- | --- | --- |
-| `--unit-type` | A single unit type, or a comma-separated list of unit types. To find a specific unit type, refer to the [Model SDK API documentation](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Each unit includes a `structureTypeName`  property that identifies its type. For example, the unit type for a [Page document](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Page.html#structureTypeName-1) is `Pages$Page`, as indicated in the documentation. Additionally, the unit type is included in the output JSON in the `$Type` field. You can use the command without this argument to list the unit types in your project. | Filters the results on the supplied unit types and limits the JSON export. |
-| `--exclude-system-module` | | Exclude the system module from the JSON export. (Available from Mendix 10.12.0) |
-| `--exclude-protected-modules` | | Exclude protected modules from the JSON export. (Available from Mendix 10.12.0) |
-| `--module-names` | A single module name, or a comma-separated list of module names. | Filters the results on the supplied modules and limits the JSON export. (Available from Mendix 10.16.0) |
+| `--unit-type` | A single unit type, or a comma-separated list of unit types. To find a specific unit type, refer to the [Model SDK API documentation](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Each unit includes a `structureTypeName` property that identifies its type. For example, the unit type for a [Page document](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Page.html#structureTypeName-1) is `Pages$Page`, as indicated in the documentation. Additionally, the unit type is included in the output JSON in the `$Type` field. You can use the command without this argument to list the unit types in your project. | Filters the results on the supplied unit types and limits the JSON export. |
+| `--exclude-system-module` | | Exclude the system module from the JSON export. |
+| `--exclude-protected-modules` | | Exclude protected modules from the JSON export. |
+| `--module-names` | A single module name, or a comma-separated list of module names. | Filters the results on the supplied modules and limits the JSON export. |
 
 ### Examples
 

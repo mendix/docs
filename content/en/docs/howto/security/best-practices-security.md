@@ -33,6 +33,8 @@ While the data that should be viewable and editable in which role is application
 * Constraints on widgets in pages should not be used as a measure of security, but can filter out irrelevant data for the context of the page
 * Keep your attributes editable within data views, because if an access rule prohibits write access, your client will display it as non-editable – this way you are aware of the (correct) working of an access rule
 
+You can review and manage your entity access settings in the Security Overview in Mendix Studio Pro. This overview shows you your application's security configuration and allows you to verify which roles have access to specific entities and attributes (for more information, see [Security Overview](/refguide/security-overview/)).
+
 ## Avoiding Injection
 
 Injection occurs when (user) input can be misused to influence the behavior of a system. Common cases are parameters for queries (to influence the results of database queries) or HTML with JavaScript contents (to influence browser behavior).
@@ -139,7 +141,13 @@ This authentication option is not available for Published Web Services and can o
 
 If you choose this option, the API will expect a "X-Csrf-Token" HTTP request header to be set on each incoming request. This authentication option is particularly interesting for custom JavaScript and widget implementations.
 
-The session token can be acquired by calling `mx.session.getConfig("csrftoken")` in JavaScript. This method call should be used before each API call to prevent cross-site request forgery (CSRF/XSRF).
+The session token can be acquired by calling a Mendix Client API method to get the current CSRF token. This method should be called before each API call in your widget or JavaScript action to prevent cross-site request forgery (CSRF/XSRF).
+
+```javascript
+import getCSRFToken from "mx-api/session";
+
+const token = getCSRFToken();
+```
 
 #### Authentication Option 3, Custom {#custom}
 
@@ -171,7 +179,7 @@ You may need to store sensitive information, such as credentials, in your app. T
 * Credentials are recorded in [constants](/refguide/constants/) which can be set when your app is deployed—in the [Mendix Portal](/developerportal/deploy/environments-details/#constants), for example, if you are deploying to Mendix Cloud.
 * The constants should be blank by default (not populated with the credentials) in the app.
 
-    * Values for the constants can be provided during testing by creating a [configuration](/refguide/configuration/#constants).
+    * Values for the constants can be provided during testing by creating a [configuration](/refguide/configurations-tab/#constants).
 
 * Only authorized people should be given access to set the constants when the app is deployed. This is done through the [app roles](/developerportal/general/app-roles/) and (for Mendix Cloud) the [node permissions](/developerportal/deploy/node-permissions/).
 
@@ -235,7 +243,7 @@ An example of an attack is when an application is embedded in an iframe. Applica
 
 By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
-If you are running your Mendix app on Mendix for Private Cloud, you can configure the HTTP headers as part of advanced operator configuration. See the [Endpoint (network) Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) section of *Creating a Private Cloud Cluster*.
+If you are running your Mendix app on Mendix on Kubernetes, you can configure the HTTP headers as part of advanced operator configuration. See the [Endpoint (network) Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) section of *Creating a Mendix on Kubernetes Cluster*.
 
 The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an option to configure HTTP headers](https://github.com/mendix/cf-mendix-buildpack#built-in-proxy-configuration).
 
@@ -268,5 +276,11 @@ Security in Mendix does not include scanning files that end-users upload or down
 
 To scan uploaded files for malicious content, do one of the following:
 
-* Create a custom module and configure the functionality yourself, for example, by using a [before a commit event](/refguide/setting-up-data-validation/#validation-before-commit-event).
+* Create a custom module and configure the functionality yourself, for example, by using a [before commit event](/refguide/setting-up-data-validation/#validation-before-commit-event).
 * Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content](/appstore/use-content/).
+
+## Enable Strict Mode
+
+Enable [strict mode](/refguide/strict-mode/) in your application. Strict mode helps ensure that entities are accessible only in the ways defined within your model, through microflows, nanoflows, widgets, or pages, by restricting certain client APIs.
+
+Configuring access rules is essential for the security of your app. However, accurately setting up these rules can be challenging. By enabling strict mode, you add a safety net in case access rules are misconfigured when your application is deployed, helping to reduce the risk of unintended data access. 

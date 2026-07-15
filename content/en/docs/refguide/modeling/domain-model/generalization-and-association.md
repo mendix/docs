@@ -69,7 +69,7 @@ Making a decision between inheritance and associations is something you should d
 
 ### Inheritance
 
-Using inheritance can make your microflows easier to maintain, you can re-use functionality. However, you do lose flexibility. Once you have applied inheritance to an entity it is difficulty to remove the inheritance and keep all the data using a relationship. Take into account whether a record can change type of subclass, for example an employee specialization object changes and becomes a project manager object. In most scenarios there is no perfect solution and there are always concessions to make, just be aware of the implications when making a choice.
+Using inheritance can make your microflows easier to maintain, you can re-use functionality. However, you do lose flexibility. Once you have applied inheritance to an entity it is difficult to remove the inheritance and keep all the data using a relationship. Take into account whether a record can change type of subclass, for example an employee specialization object changes and becomes a project manager object. In most scenarios there is no perfect solution and there are always concessions to make, just be aware of the implications when making a choice.
 
 Don't just add inheritance because it is easier, or remove it because it is slower. Especially in scenarios where different object types have to go through a similar process, it can be worthwhile to apply inheritance just so you can re-use functionality and increase the consistency and stability of your application.
 
@@ -96,7 +96,7 @@ This explanation might not have given you an explicit answer to the question of 
 There are, however, a few situations where a clear answer can be given:
 
 * Use one-to-one associations for entities with:
-    * a high number of transactions on the different sub entities (we consider multiple changes or creates per second as being high)
+    * a high number of transactions on the different specializations (we consider multiple changes or creates per second as being high)
     * only a handful common attributes — if you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either
 
 * Use inheritance for entities:

@@ -12,7 +12,7 @@ The Build API only works for apps which are deployed to Mendix Cloud.
 
 ## Introduction
 
-The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the [Teamserver API](/apidocs-mxsdk/apidocs/team-server-api/) as input for these API calls.
+The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the  [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) as input for these API calls.
 
 You can use webhooks to trigger CI/CD pipelines which use this API. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
@@ -26,7 +26,7 @@ The Build API requires authentication via API keys that are bound to your Mendix
 
 ### Obtaining an API Key
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+To obtain a Mendix API key, follow the instructions in the [API Keys](/portal/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
 ### Using Authentication Headers
 
@@ -281,7 +281,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### Payload
 
-The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
+The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control/#which-team-server).
 
 An object with the following key-value pairs:
 
@@ -295,7 +295,10 @@ An object with the following key-value pairs:
 * `Description` (String) : Description of the package.
 
 {{% alert color="warning" %}}
-For apps using SVN for version control, this call will build the specified revision even if that revision is not on the specified branch.
+
+* For apps using SVN for version control, this call will build the specified revision even if that revision is not on the specified branch.
+
+* For apps using Git for version control, using a short commit hash can cause timeouts with large repositories. Mendix recommends using the full commit hash
 {{% /alert %}}
 
 ##### Example

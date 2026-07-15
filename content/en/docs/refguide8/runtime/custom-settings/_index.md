@@ -184,7 +184,7 @@ The settings below influence the behavior of the Mendix web client.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **EnableKeepAlive** | Defines whether the web client sends a keep alive request every SessionTimeout/2 milliseconds, to prevent a session timeout. Each click in the browser also acts as KeepAlive. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
+| **EnableKeepAlive** | Defines whether the web client sends a keep alive request every SessionTimeout/2 milliseconds, to prevent a session timeout. Each interaction of the client with the runtime also acts as KeepAlive. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
 | **PhoneUserAgentRegEx** | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a phone. The regular expression is matched against the user-agent header sent by the client's web browser. | Android, Mobile (iPhone, iPod, BlackBerry) |
 | **TabletUserAgentRegEx** | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a tablet. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, iPad |
 | **com.mendix.webui.HybridAppLoginTimeOut** | Determines how many minutes your token will remain valid before re-authenticating using your full credentials. This setting defaults to `-1`, which is equal to no timeout. | -1 |

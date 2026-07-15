@@ -7,7 +7,7 @@ description: "Describes the JSON schemas for operation request bodies and operat
 
 ## Introduction
 
-When you [publish a rest service](/refguide/published-rest-services/), an [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation) is generated for it. It includes a description of the structure of the messages that the service can receive and return. This structure is described using JSON Schema.
+When you [publish a rest service](/refguide/published-rest-services/), an [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation) is generated for it. This page includes a description of the structure of the messages that the service can receive and return. This structure is described using JSON Schema.
 
 Operations that have an import or export mapping defined on it will generate such a schema, but only for mappings that are based on [message definitions](/refguide/message-definitions/).
 
@@ -28,7 +28,7 @@ The OpenAPI schema contains definitions for body parameters and return types. If
 }
 ```
 
-By default, the definition name is the name of the message definition that the mapping is based on. You can choose your own definition name by setting the Public name of a mapping.
+By default, the definition name is the name of the message definition that the mapping is based on. You can choose your own definition name by setting the public name of a mapping.
 
 ### Attribute
 
@@ -76,7 +76,7 @@ If there is no import mapping, or the mapping is not based on a message definiti
 
 The result of an operation has a schema, too. The format of this depends on the type of result.
 
-When there is no export mapping or the export mapping is not based on a message definition: 
+When there is no export mapping, or the export mapping is not based on a message definition: 
 
 ```json
 { "type": "file" }

@@ -7,9 +7,9 @@ description: "The parameters which are passed to the custom authentication micro
 
 ## Introduction
 
-The custom authentication microflow of a published REST service is executed whenever a client calls one of the operation. The client's requests contains headers and may contain query parameters, which can be passed to the authentication microflow. 
+The custom authentication microflow of a published REST service is executed whenever a client calls one of the operations. The client's requests contains headers and may contain query parameters, which can be passed to the authentication microflow. 
 
-When you click the **Parameters** button that is next to the authentication microflow, the **Authentication microflow arguments** dialog box appears. In this dialog box, you can set the parameters.
+When you click **Parameters** next to the authentication microflow, the **Authentication microflow arguments** dialog box appears. In this dialog box, you can set the parameters.
 
 ## Parameters
 

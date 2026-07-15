@@ -41,10 +41,6 @@ The category is used to group building blocks inside the **Toolbox**.
 
 The category weight determines the order of categories inside the **Toolbox** (in ascending order). If building blocks with the same category have different category weights, the lowest is used to determine the position.
 
-### Documentation URL
-
-The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of Studio Pro's **Toolbox**.
-
 ## Common Properties
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}

@@ -20,7 +20,12 @@ Mendix [Studio Pro](/refguide9/modeling/) version 9 is supported on 64-bit versi
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
-* Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
+* Microsoft .NET desktop runtime (x64) and all applicable Windows security patches
+
+    | Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 - 9.24.41 | Studio Pro 9.24.42 and above |
+    | --- | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime | .NET 10 Desktop Runtime |
+    
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11, 17, or 21 - the flavor which will be installed if the correct version of Java is not already installed on your machine—this depends on which version of Studio Pro you are installing
@@ -33,9 +38,11 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 * For Studio Pro 9.24 and above: Gradle version 8.5 or above (if your Java version is 11 or 17, Gradle version 7.6 or above will also work) - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
 
-If you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET 6 in addition to the x64 version listed above:
+If you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET in addition to the x64 version listed above:
 
-* .NET 6 Desktop Runtime (arm64)
+| Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34  - 9.24.41 | Studio Pro 9.24.42 and above |
+| --- | --- | --- |
+| .NET 6 Desktop Runtime (arm64) | .NET 8 Desktop Runtime (arm64) | .NET 10 Desktop Runtime (arm64) |
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
@@ -143,7 +150,7 @@ If you are using the Intel® UHD Graphics 630 graphics processor, please ensure 
 
 ## Team Server {#ts}
 
-The [Team Server](/developerportal/general/team-server/) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+The [Team Server](/developerportal/repository/team-server/) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
@@ -196,19 +203,19 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide9/mysql/): 10.4, 10.5, 10.6, 10.11
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
+* [IBM DB2](/refguide8/db2/) 11.5 for Linux, Unix, and Windows
+* [MariaDB](/refguide9/mysql/): 10.6, 10.11, 11.4, 11.8
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
-* [MySQL](/refguide9/mysql/): 8.0
-* [Oracle Database](/refguide9/oracle/): 19, 21c
-* PostgreSQL: 12, 13, 14, 15, 16
-* [SAP HANA](/refguide9/saphana/): 2.00.040.00.1545918182
-* [IBM DB2](/refguide9/db2/): 11.5 for Linux, Unix, and Windows (please note that support for DB2 is deprecated and will be removed in Studio Pro 10)
+* [MySQL](/refguide9/mysql/): 8.4
+* [Oracle Database](/refguide9/oracle/): 19, 21c, 23ai (including 26ai)
+* PostgreSQL: 13, 14, 15, 16, 17, 18
+* [SAP HANA](/refguide9/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.
 
-If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [Integration](/refguide9/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
+If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by the [Catalog](/refguide/share-data/) or the REST and OData services described in the [Integration](/refguide9/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
 
 For more information on why data cannot be shared between apps see [Data Storage](/refguide9/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
 {{% /alert %}}
@@ -224,8 +231,6 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 * IBM Cloud Object Storage
 * SAP AWS S3 Object Storage
 * SAP Azure Blob Storage
-
-For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
 
 ### Storage Types for Servers
 

@@ -22,4 +22,4 @@ The following are the metrics activities you can use in your microflow:
 
 * [Metric Configuration](/refguide/metrics/)
 * [Activities](/refguide/activities/)
-* [Meter Concepts](https://micrometer.io/docs/concepts)
+* [Meter Concepts](https://docs.micrometer.io/micrometer/reference/concepts.html)

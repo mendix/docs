@@ -137,7 +137,7 @@ function generate(domainModel1: domainmodels.DomainModel, model: IModel) {
 The original code expects a unit as the first argument. The unit is supposed to be the container for the domain model. However, you don't want to create a new domain model, you are going to re-use an existing domain model instead. Therefore, you need to remove this line:
 
 ```ts
-const domainModel1 = domainmodels.DomainModel.createIn(unit);
+var domainModel1 = domainmodels.DomainModel.createIn(unit);
 ```
 
 Remove the last bracket on the last line so your JavaScript code will look like this:

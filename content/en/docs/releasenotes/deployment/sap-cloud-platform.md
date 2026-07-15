@@ -12,6 +12,85 @@ SAP Business Technology Platform deployments also depend on the latest version o
 
 For information on the current status of deployment to SAP BTP and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2026
+
+### June 14, 2026
+
+#### Portal Improvements
+
+* We updated the portal with a new UI.
+
+## 2025
+
+### September 28, 2025
+
+#### Portal Improvements
+
+* The portal is now available in Japanese and Korean, enhancing the user experience for native speakers. Users can change their language preferences under the **Profile** tab of [User Settings](https://user-settings.mendix.com/link/profile).
+* The side navigation in the portal is also available in Japanese and Korean languages.
+
+### July 17, 2025
+
+#### New Features
+
+* We added new actions to the [SAP OData Connector](https://marketplace.mendix.com/link/component/74525) to support [Batch Processing](/appstore/modules/sap/sap-odata-connector/#batch-processing).
+* We updated the [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219) to support the **SAP Cloud Logging** service.
+
+### June 29, 2025
+
+#### New Features
+
+* We added a service configurator for the **SAP Cloud Logging** service.
+
+#### Bug Fixes
+
+* Fixed an issue where changes to the app health check **Timeout** value were not taking effect.
+
+### June 1, 2025
+
+#### New Features
+
+* We added a deprecation message banner for the SAP Application Logging service on the **Environment** details page.
+
+#### Bug Fixes
+
+* We fixed an issue where users were not able to delete redirect URIs from the XSUAA configuration.
+
+### May 25, 2025
+
+#### New Features
+
+* We introduced a new feature that allows users to select their preferred **Logging** service from the portal. For more information, see [Creating a New Environment](/developerportal/deploy/sap-cloud-platform/#NewEnvironment).
+
+### April 18, 2025
+
+#### Portal Improvements
+
+* We updated the portal configuration for the XSUAA service to include a default wildcard (`*`) in the redirect URL. This enables flexible pattern matching to support dynamic endpoints, as per SAP [mandates](https://help.sap.com/whats-new/cf0cb2cb149647329b5d02aa96303f56?locale=en-US&Component=Authorization+and+Trust+Management+Service).
+* We removed the `xsenablesyncservice` property from the XSUAA service configuration, as per SAP mandates.
+
+### February 16, 2025
+
+#### Portal Improvements
+
+* We have implemented a default URL for redirection in compliance with SAP [mandates](https://help.sap.com/whats-new/cf0cb2cb149647329b5d02aa96303f56?locale=en-US&Component=Authorization+and+Trust+Management+Service).
+
+#### Bug Fixes
+
+* We fixed an issue where setting an empty environment constant did not remove the environment variable from the SAP BTP cockpit.
+* We fixed an issue with the icon size for the deployment package.
+  
+### February 02, 2025
+
+#### Portal Improvements
+
+* We integrated [Maia](/refguide/mendix-ai-assistance/), a built-in chat interface powered by Generative AI, into the SAP Deployment Portal.
+
+#### Bug Fixes
+
+* We fixed the MDA download issue in the SAP Deployment Portal.
+* We fixed an issue where the **Load more** button failed to load additional items in the Environment list.
+
 ## 2024
 
 ### August 27, 2024
@@ -55,7 +134,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* You can now add custom Mendix Runtime settings under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab).
+* You can now add custom Mendix Runtime settings under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/environments/#runtime-tab).
     * this replaces the previous method of adding custom settings using User-Provided Variables.
 
 ### June 20, 2022
@@ -82,7 +161,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We added the ability to provide a custom *xs-security.json* file to configure an XSUAA service. This allows you to apply the configuration every time your app is deployed. You can add your configuration by unbinding and rebinding the XSUAA service in the [Services](/developerportal/deploy/sap-cloud-platform/#binding-services) tab.
+* We added the ability to provide a custom *xs-security.json* file to configure an XSUAA service. This allows you to apply the configuration every time your app is deployed. You can add your configuration by unbinding and rebinding the XSUAA service in the [Services](/developerportal/deploy/sap-cloud-platform/environments/#binding-services) tab.
 
 ### August 30, 2021
 
@@ -165,7 +244,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 * We have added support for PostgreSQL on SAP Cloud Platform, Hyperscaler Option for Mendix apps deployed to SAP Cloud Platform.
     * this comes with a configurator to help you create the correct configuration.
-    * see [Running Mendix on PostgreSQL on SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform/#sap-hyperscaler) for more information.
+    * see [Running Mendix on PostgreSQL on SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform/databases/#sap-hyperscaler) for more information.
 * As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 ### October 21, 2020
@@ -195,7 +274,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We added support for using the HANA trial database available in new SAP Cloud Platform trial accounts. See the [Running Mendix on SAP HANA](/developerportal/deploy/sap-cloud-platform/#sap-hana) section of the *SAP Cloud Platform* deployment document for more details.
+* We added support for using the HANA trial database available in new SAP Cloud Platform trial accounts. See the [Running Mendix on SAP HANA](/developerportal/deploy/sap-cloud-platform/databases/#sap-hana) section of the *SAP Cloud Platform* deployment document for more details.
 
 ## 2019
 

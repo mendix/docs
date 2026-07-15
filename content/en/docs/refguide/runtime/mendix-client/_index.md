@@ -12,12 +12,14 @@ The Mendix Client runs on the end-user's device and serves as the interface betw
 The above description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, which works in a conceptually similar way.
 
 {{% alert color="info" %}}
-In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+The Mendix Client has transitioned to a modern implementation using React. In Mendix 11.0 and above, the React Client is the default for new applications and the legacy Dojo Client is deprecated.
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
 
 Other components of the Mendix Client are the same in both the React and Dojo client. See [Mendix React Client](/refguide/mendix-client/react/) for more information.
 {{% /alert %}}
+
+For information about embedding a Mendix web app as a native component inside Siemens Teamcenter Active Workspace, see [Mendix Inside Teamcenter](/refguide/mendix-client/mendix-inside-teamcenter/). This requires you to be using Mendix version 11.12.0 or above.
 
 ## Description {#description}
 
@@ -28,6 +30,8 @@ For **web applications**, the Mendix Client acts as a single page application. T
 The Mendix Dojo Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 
 The Mendix React client is bootstrapped in different way. It loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files that contain page, layout, and nanoflow definitions will be loaded after this.
+
+From Mendix version 11.12.0, when you want to mount a Mendix web app inside another web application, you can also use the embedded client. For more information, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 
 For **mobile applications**, the Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 
@@ -75,7 +79,7 @@ Logic runs client-side logic, which is defined in the model's nanoflows.
 
 ### Platform APIs
 
-Platform APIs are functions of the environment in which the Mendix Client is running. In most cases these will be a function of a mobile device, such as the camera or GPS location. However, they can also include making calls to Mendix Native APIs or browser functions (such as accessing an image file).
+Platform APIs are functions of the environment in which the Mendix Client is running. These are usually a function of a mobile device, such as the camera or GPS location. However, they can also include making calls to Mendix Native APIs or browser functions (such as accessing an image file).
 
 ### Client Config
 
@@ -105,7 +109,7 @@ For more information on offline-first app types, see [Introduction to Mobile Tec
 
 For more information about the communication between the Mendix Client and the Runtime Server, see [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/).
 
-The three functions (state, sync, and session) are described separately, below.
+The three functions (state, sync, and session) are described below.
 
 #### State Handling
 
@@ -120,6 +124,10 @@ Firstly, during deployment, all microflows “reachable” from the client are a
 * Microflows called from the page
 
 This analysis is done based on the microflow parameters and their usages throughout the microflow. Any time an association is used in the microflow, the association is marked, and will also be sent in the request if needed. In some cases, such as Java actions, the analysis is not done as it would be too performance heavy. In that case, all objects associated with the microflow parameters will be sent.
+
+{{% alert color="warning" %}}
+When an object is retrieved in a Java Action or in a microflow that was called dynamically in a Java Action, it is not part of the analyzed state and changes made in the client are not applied. This mainly occurs when objects associated with the current user or session object are updated in the client and are subsequently retrieved from the database in a Java Action. Commit changes to these kinds of objects before calling the Java Action when issue arise from this.
+{{% /alert %}}
 
 Secondly, for other (non-microflow) actions such as committing or deleting objects, a simpler analysis is performed on the client side to determine which associations should be included in the request.
 
@@ -199,7 +207,7 @@ How the Mendix Client is launched is described in the sections below.
 
 ### Launching Mendix Client in a Browser
 
-In a browser, the environment is built on an initial page, the "shell", on which code is bootstrapped.
+In a browser, the environment is built on an initial page, the "shell," on which code is bootstrapped.
 
 #### Launch Flow
 
@@ -215,6 +223,10 @@ When the end-user launches an app in the browser, it triggers the following flow
     The Mendix Client is now ready to start interacting with the end-user.
 
 ##### Dojo Client
+
+{{% alert color="warning" %}}
+In Mendix 11.0 and above, the Dojo Client is deprecated.
+{{% /alert %}}
     
 The Mendix Dojo Client, which is not built entirely using React, will repeat the following steps for as long as the end-user’s session continues.
 
@@ -227,7 +239,7 @@ The Mendix Dojo Client, which is not built entirely using React, will repeat the
 
 ##### React Client
 
-The React client works differently than the Dojo client.
+The React client is the default client used for new applications created with Mendix 11.0 and above, and it works differently than the Dojo client.
 
 During the build process, Studio Pro exports JavaScript files containing JavaScript and React components into the `pages`, `layouts` and `nanoflows` folders. The contents of those folders are bundled into the `dist` folder using [Rollup](https://rollupjs.org/), which generates *chunks*.
 
@@ -237,7 +249,7 @@ The React client dynamically loads these chunks when needed for optimal performa
 
 When the app is deployed, the static resources are placed in a separate structure. This includes the following:
 
-* *index.html* – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app).
+* *index.html* – the initial HTML page which is loaded when the end-user starts the Mendix Client—this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app).
 * App styling/Atlas – the app-specific CSS styling and static visual elements which define how a page is displayed.
 * Widgets – both native and web core widgets which are used by this app.
 * The Dojo client has the following resources:
@@ -251,24 +263,25 @@ When the app is deployed, the static resources are placed in a separate structur
 
 When the Mendix client is running, it sets a number of technical cookies to record information about the session. These can include:
 
-| Name  | Source | Purpose | Path | Duration | HttpOnly | 
+| Name | Source | Purpose | Path | Duration | HttpOnly | 
 | --- | --- | --- | --- | --- | --- |
 | **mx-cookie-test** | Client | Tests whether the browser supports cookies | `/` | deleted immediately after setting it | `false` |
-| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions<sup><small>1</small></sup> |  `false` | 
-| **originURI** | index.html | Tells the client where to redirect to if a user is required to log in | `/` | until user closes their browser (session cookie) |  `false` | 
-| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | until user closes their browser (session cookie) |  `true` | 
-| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to sign out on the next request | `/` | 1 year for offline sessions¹ |  `false` | 
+| **originURI** | index.html | Tells the client where to redirect to if a user is required to sign in | `/` | until user closes their browser (session cookie) |  `false` | 
+| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | 1 year |  `true` | 
+| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | 1 year |  `true` | 
 | **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the session | `/` | until user closes their browser (session cookie) |  `true` | 
-| **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` | 
-| **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page—*not used by apps created in Mendix version 10.9.0 and above* | `/` | until user closes their browser (session cookie) |  `true` | 
-| **XASSESSIONID**<sup><small>2</small></sup> | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions<sup><small>1</small></sup>, otherwise based on the session timeout |  `true` | 
-| **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the end-user closes their browser (session cookie) |  `true` | 
-| **authtoken** | Runtime | Used to hold the authentication token—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the authentication token expires |  `true` | 
-| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application. If the client is not directly used for the sign-in functionality, you can use the newly added Java API, [addSessionCookies](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#addSessionCookies), which sets all necessary cookies related to the session.—*introduced for apps created in Mendix version 10.13.0 and above* | `/` | until client starts or end-user closes their browser | `false` | 
+| **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` |
+| **XASSESSIONID**² | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions¹, otherwise based on the session timeout |  `true` | 
+| **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not | `/` | until the end-user closes their browser (session cookie) |  `true` | 
+| **authtoken** | Runtime | Used to hold the authentication token | `/` | until the authentication token expires |  `true` | 
+| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application. If the client is not directly used for the sign-in functionality, you can use the newly added Java API, [addSessionCookies](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#addSessionCookies), which sets all necessary cookies related to the session. | `/` | until client starts or end-user closes their browser | `false`³ | 
 
-<sup><small>1</small></sup>*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
+¹*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 
-<sup><small>2</small></sup>The name of the **XASSESSIONID** can be changed by changing the value of the **com.mendix.core.SessionIdCookieName** [custom setting](/refguide/custom-settings/).
+²The name of the **XASSESSIONID** can be changed by changing the value of the **com.mendix.core.SessionIdCookieName** [custom setting](/refguide/custom-settings/).
+
+³The **clear_cache** cookie does not contain any sensitive information and always has value of 1. Therefore, there is no need for this cookie to be marked as **Secure** or **HttpOnly**.
 
 ### Launching Native Mendix Client
 

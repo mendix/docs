@@ -16,17 +16,25 @@
                     
                     <!-- Main page content (everything except the left sidebar, top dock, and footer) -->
                     <main class="col lp" role="main" style="border-right: none;">
+                        <!-- Olu - Mobile header row: hamburger (mobile only) -->
+                        <div class="d-flex d-md-none align-items-start lp-mobile-bar">
+                            <button id="td-mobile-sidebar-btn" class="btn btn-link p-0 me-2 align-items-center" aria-label="Open sidebar">
+                                <span class="fas fa-bars fs-4 fa-fw" aria-hidden="true"></span>
+                                <span class="sr-only">Menu</span>
+                            </button>
+                        </div>
                         <div class="container lp-container">
                             
                             <!-- Title, Description, and Illustration -->
-                            <div class="row">
-                                <div class="col-lg-auto d-flex">
-                                    <!-- Title and description from https://github.com/mendix/docs/blob/development/content/en/docs/_index.md -->
-                                    <div class="flex-grow-1">
-                                        <h1 class="page-title">{{ .Page.Title}}</h1>
-                                        <h5 class="lp-description">{{ .Page.Description}}</h5>
-                                    </div>
-                                    <img src="/images/woman-stack-of-books-laptop.svg" alt="" class="d-none d-lg-block ms-4" style="margin-top: -.5rem;">
+                           <div class="lp-hero d-flex align-items-center text-white">
+    
+                                <div class="hero-text">
+                                    <h1 class="page-title">{{ .Page.Title }}</h1>
+                                    <h5 class="lp-description">{{ .Page.Description }}</h5>
+                                </div>
+
+                                <div class="hero-image d-none d-lg-block">
+                                    <img src="/images/lp-hero-image.svg" alt="Person sitting on a stack of books while using a laptop">
                                 </div>
                             </div>
                             

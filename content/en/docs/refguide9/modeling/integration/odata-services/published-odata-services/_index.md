@@ -2,6 +2,8 @@
 title: "Published OData Services"
 url: /refguide9/published-odata-services/
 weight: 10
+aliases:
+    - /refguide9/published-odata-enumeration/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -171,6 +173,10 @@ There are three possible outcomes of the authentication microflow:
 * When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
 
 ###### Mendix SSO {#authentication-mendix-sso}
+
+{{% alert color="warning" %}}
+The Mendix SSO module is deprecated as of May 1, 2026. You may alternatively use [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/).
+{{% /alert %}}
 
 You can configure a published OData service to authenticate with the [Mendix SSO](/appstore/modules/mendix-sso/) module. This is a form of [Custom](#authentication-microflow) authentication.
 

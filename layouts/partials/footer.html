@@ -14,7 +14,12 @@
 
 
 <div id="mx-footer" class="mx-footer" data-test-id="mx-footer">
-        <p class="mx-footer__copyright">© Mendix Technology BV 2024. All rights reserved</p>
+     <p class="mx-footer__copyright">© Siemens Industry Software Netherlands B.V.
+          <script type="text/javascript">
+               var d=new Date();
+               document.write(d.getFullYear() + ". ");
+          </script>
+     All rights reserved</p>
         <ul class="mx-footer__links-list">
     <li>
         <a
@@ -56,7 +61,16 @@
     >EU Digital Services Act Notice</a
          >
     </li>
+    <!-- MvM - Added at request of Marketing to allow cookie settings to be changed. -->
+    <li>
+         <a
+    href="#" onClick="UC_UI.showSecondLayer();"
+    aria-label="Cookie Settings (opens in a popup)"
+    class="mx-footer__link"
+    >Cookie Settings</a
+         >
+    </li>
          </ul>
     </div>
 
-<script src="https://dock-static.mendix.com/main.js" async></script>
+<script src="{{ if eq hugo.Environment "production" }}https://dock-static.mendix.com/main.js{{ else }}https://dock-static-test.mendix.com/main.js{{ end }}" async></script>

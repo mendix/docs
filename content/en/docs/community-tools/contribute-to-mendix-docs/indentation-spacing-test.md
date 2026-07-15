@@ -2,8 +2,10 @@
 title: "Indentation and Spacing Test"
 url: /developerportal/community-tools/indentation-spacing-test/
 draft: true
+banner: "Banner with a link to <a href=\"#spacing\">spacing</a>"
 description: "Various test cases for rendering of indents and spaces. Use this page to test how spacing and indents will render with various elements and shortcodes. Linting has been disabled for this file."
 ---
+
 <!-- markdownlint-disable-file -->
 ## Heading 2
 
@@ -212,9 +214,12 @@ Lists in alerts:
 
 ### TODOs and Comments
 
-Two ways to add comments:
+[//]: # "This is a comment which will not appear in the HTML page."
+<!-- This is a comment which will appear in the HTML page (as a comment) -->
 
-1. With empty Markdown relative link
+Three ways to add comments:
+
+1. With empty Markdown relative link - this will not appear anywhere on the published site
 
     ```text
     [//]: # "my comment here"
@@ -222,6 +227,12 @@ Two ways to add comments:
     OR
 
     [//]: # (my other comment here)
+    ```
+
+1. Using an HTML comment – this will also appear as a comment on the published site
+
+    ```html
+    <!-- my comment here -->
     ```
 
 1. Use todo shortcode, which will output the comment into the Travis log:
@@ -248,11 +259,11 @@ hidden stuff
 
 ### Footnotes
 
-If you need a footnote use `<sup>footnote_number</sup>` to mark the footnote and `<small><sup>footnote_number</sup>My footnote text</small>` around the actual text.
+If you need a footnote use Unicode superscript characters (¹²³etc.) to mark the footnote and `<small>…</small>` around the actual text.
 
-Example<sup>1</sup>
+Example¹
 
-<small><sup>1</sup>My footnote text</small>
+<small>¹My footnote text</small>
 
 ### Key Combination Styling
 

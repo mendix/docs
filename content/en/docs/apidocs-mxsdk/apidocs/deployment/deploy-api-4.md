@@ -32,7 +32,7 @@ Authentication for the Deploy API v4 uses a personal access token (PAT).
 
 ### Generating a PAT
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
 
 Select at least the following as **Deployment Mendix Cloud** scopes:
 
@@ -56,7 +56,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ### Using the API to Change the Technical Contact
 
-{{% alert color="info" %}}Team member access permissions can only be changed by Mendix Admins of the company, the Technical Contact of the app, and any app team members who have **Manage Permissions** enabled.{{% /alert %}}
+{{% alert color="info" %}}The Technical Contact can only be changed by Mendix Admins of the company or the current Technical Contact of the app.{{% /alert %}}
 
 The following steps change the Technical Contact of the app identified by the UUID {appId}.
 

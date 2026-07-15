@@ -23,7 +23,7 @@ Data integration capabilities in Studio Pro is part of [Mendix Connect](#integra
 * [Business Event services](/refguide/business-event-services/)
 * [Published GraphQL services](/refguide/published-odata-services/) (experimental)
 
-In addition to integration capabilities in Studio Pro [10](/releasenotes/studio-pro/10/), Mendix Connect functionalities include:
+In addition to integration capabilities in Studio Pro, Mendix Connect functionalities include:
 
 * The [Catalog](/catalog/#catalog-mx-connect), used to register, manage, and govern data in your organization
 * Platform-supported [connectors and modules](/appstore/#marketplace-mx-connect) available in the [Mendix Marketplace](/appstore/)
@@ -32,5 +32,9 @@ The following services require you to download an external module from the Mendi
 
 * [External Database Connector](https://marketplace.mendix.com/link/component/219862)
 * [Business Event services](https://marketplace.mendix.com/link/component/202649)
+
+## Integrating RapidMiner Graph Studio
+
+In addition to the integration capabilities available in the Studio Pro, Mendix also supports integration with external systems through RapidMiner Graph Studio. The RapidMiner Graph Studio provides a scalable environment for connecting, managing, and analyzing graph-based data. For more information, see [Integrating Mendix with RapidMiner Graph Studio](/refguide/graph-studio/).
 
 ## Documents in This Category

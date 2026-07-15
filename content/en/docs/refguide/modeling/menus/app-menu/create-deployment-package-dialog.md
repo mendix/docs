@@ -16,12 +16,38 @@ Most deployment targets have a limit on the uncompressed size of deployment pack
 | --- | --- |
 | Mendix Cloud | 1 GB |
 | SAP BTP | 1.5 GB |
-| Mendix for Private Cloud | 1024 MB |
+| Mendix on Kubernetes | 1024 MB |
 
 This is the uncompressed size of the deployment package (*.mda* file). You can find the uncompressed size by opening your package file in a file archiving program such as [7-Zip](https://www.7-zip.org/) and looking at the file properties or **Info**.
 
 Unfortunately, from the error shown on the log during deployment, it is not always clear if the package size is a problem. But if you have issues deploying your app, the package size is one possible cause.
 {{% /alert %}}
+
+## Portable Package
+
+Here, you can decide whether you will create a portable deployment package.
+
+A portable deployment package bundles your application code with all its necessary dependencies into a single, self-contained artifact. For more information about portable packages, see [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/).
+
+{{< figure src="/attachments/refguide/modeling/menus/app-menu/create-deployment-package-dialog/create-portable-package.png" alt="Create Deployment Package dialog with the portable option selected" width="500" >}}
+
+{{% alert color="info" %}}
+Unlike regular packages, portable packages are created as .zip files, in order to make their deployment more convenient for cloud environments. For more information about the structure and contents of the .zip file, see [Reference Guide for Mendix Portable Runtime](/developerportal/deploy/portable-apps-distribution/reference/).
+{{% /alert %}}
+
+## Options for Portable Packages
+
+If you are creating a portable package, enter the information outlined below.
+
+## Export Secrets
+
+If you toggle the **Export secrets** option to **Yes**, the created package will include passwords and private constants. Enable or disable this option as required for your application
+
+## File Name
+
+The **Disk location** section displays the location where the deployment package will be saved. This is shown in the **File name** field. This is not editable.
+
+All packages are placed in a **releases** directory inside your app directory. This directory is automatically ignored so that these packages are not committed to the repository. You can always recreate a deployment package (using the Studio Pro version you originally used), so there is no need to put them on the Team Server.
 
 ## Versioned
 

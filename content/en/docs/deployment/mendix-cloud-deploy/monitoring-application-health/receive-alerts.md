@@ -25,9 +25,10 @@ To enable email alerts, follow these steps:
 1. From [Apps](https://sprintr.home.mendix.com), open your app.
 1. Click **Alerts** in the navigation pane.
 1. Select the environment for which you want to set the alerts from the drop-down list at the top of the page. It is possible to set this option separately for each environment.
-1. Select the **Email Alerts** checkbox.  Your changes will save automatically.
+1. Click **Settings** to open the **Settings** tab.
+1. Select (or clear) the **Email Alerts** checkbox.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/receive-alerts/email-alerts.png" alt="The Email Alerts checkbox" width="70%" class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/receive-alerts/email-alerts.png" >}}
 
 ## Alerts Using Webhooks 
 

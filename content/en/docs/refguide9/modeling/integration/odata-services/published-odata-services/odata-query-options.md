@@ -55,7 +55,7 @@ This table describes how to pass values for different attribute types:
 | --- | --- |
 | String | Enclosed in single quotes (for example, `'John'`) |
 | Enumeration | The enumeration member name between single quotes, prefixed with the enum type (for example, `DefaultNamespace.PrimaryColor'Red'`). OData v4.01 syntax without the qualified enum type name is not supported |
-| Datetime | For OData 4: a plain value (for example, `2021-12-31`). For OData 3: Preceded with `datetime` and enclosed in single quotes (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`) |
+| Datetime | For **OData 4**: a plain value (for example, `2021-12-31`). For **OData 3**: Preceded with `datetime` and enclosed in single quotes (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`) |
 | Other | Plain value (for example, 15) |
 
 ### Comparison Operators
@@ -75,7 +75,7 @@ We support the following comparison operators:
 
 | Function     | Example                                 | Returns |
 | ---          | ---                                     | ---     |
-| contains<sup>1</sup> | `/Employees?$filter=contains(Name, 'f')`     | All employees with names that contain an 'f' |
+| contains¹ | `/Employees?$filter=contains(Name, 'f')`     | All employees with names that contain an 'f' |
 | startswith   | `/Employees?$filter=startswith(Name, 'f')`      | All employees with names that start with 'f' |
 | endswith     | `/Employees?$filter=endswith(Name, 'f')`        | All employees with names that end with 'f' |
 | length       | `/Employees?$filter=length(Name) eq 5`          | All employees with names that have a length of 5 |
@@ -86,7 +86,7 @@ We support the following comparison operators:
 | minute       | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour |
 | second       | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
-<small><sup>1</sup> In OData 3, the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`</small>
+<small>¹ In OData 3, the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`</small>
 
 ### Combining Filters
 
@@ -101,7 +101,7 @@ Filters can be combined with `and`, `or`, `not`, and `()`. For example: `?$filte
 
 ### Filtering by Association
 
-You can filter on attributes of an associated entity. The way you do this depends on whether the association exposes one object or a list of objects.
+You can filter on attributes of an associated entity. The way you do this depends on whether the association exposes one object or a list of objects. You only need to include the associated entity’s name in the filter, not the association name.
 
 | Type | Example |
 | --- | --- |

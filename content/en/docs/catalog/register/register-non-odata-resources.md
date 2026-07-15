@@ -1,16 +1,16 @@
 ---
-title: "Register Non-OData Resources in the Catalog"
-linktitle: "Register Non-OData Resources"
-url: /catalog/register/register-non-odata-resources/
-description: "Describes how to convert non-OData resources into OData and then register them in the Catalog."
+title: "Register Services Wrapped in OData in the Catalog"
+linktitle: "Register Services Wrapped in OData"
+url: /catalog/register/register-odata-wrapped-services/
+description: "Describes how to convert non-OData resources into OData and register them in the Catalog."
 weight: 30
 aliases:
-    - /catalog/register-non-odata-resources/
+    - /catalog/register/register-non-odata-resources/
 ---
 
 ## Introduction
 
-The Catalog collects metadata from exposed services and currently supports all OData XML resources. If you want to connect something other than OData, you can do so by wrapping it in OData and then registering the service contract file in the Catalog. Afterwards, you can make it available for being consumed in Mendix Studio Pro. Currently there are two ways to wrap data in OData:
+The Catalog collects metadata from exposed services and currently supports OData, REST, Web Services, and Business Events. If you want to connect something other than the services listed above, you can do so by wrapping it in OData and then registering the service contract file in the Catalog. Afterwards, you can make it available for being consumed in Mendix Studio Pro. Currently there are two ways to wrap data in OData:
 
 * [Expose OData via a Mendix app](#use-mendix-app)
 * [Expose OData via a service wrapper (a custom solution)](#use-service-wrapper)
@@ -29,7 +29,7 @@ There are certain limitations on consumed OData services. For more information o
 
 The diagram below represents how an OData API wrapper can be used to connect a custom app service to a Mendix Studio Pro app:
 
-{{< figure src="/attachments/catalog/register-non-odata-resources/non-odata.png" alt="Catalog connecting to non-OData resources" class="no-border" >}}
+{{< figure src="/attachments/catalog/register-non-odata-resources/non-odata.png" alt="Diagram of Catalog resources connecting to non-OData resources" class="no-border" >}}
 
 Once the OData service is available, find the generated *$metadata* file for your data, and use that to register your service in the Catalog via the connector on the home page. For more information on setting up the connection, see [Published OData Services](/refguide/published-odata-services/).
 

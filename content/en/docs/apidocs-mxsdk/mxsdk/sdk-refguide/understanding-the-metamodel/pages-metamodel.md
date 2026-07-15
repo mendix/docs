@@ -74,9 +74,9 @@ defines where this data comes from. A page variable can either point to a data w
 
 | Studio Pro Guide              | Model SDK API docs                                                                                                   |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [Snippet](/refguide/snippet/) | [Snippet](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippet.html)                                 | 
-|                               | [SnippetCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippetcall.html)                         | 
-|                               | [SnippetCallWidget](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.snippetcallwidget.html)             |
+| [Snippet](/refguide/snippet/) | [Snippet](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Snippet.html)                                 | 
+|                               | [SnippetCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.SnippetCall.html)                         | 
+|                               | [SnippetCallWidget](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.SnippetCallWidget.html)             |
 |                               | [SnippetParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.SnippetParameter.html)               |
 |                               | [SnippetParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.SnippetParameterMapping.html) |
 |                               | [PageVariable](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.PageVariable.html)                       |
@@ -226,7 +226,7 @@ a ListView widget).
 
 The data sources can be divided by how their retrieve their data:
 
-* Querying [the database](/refguide/database-source/), possibly with an [XPath constraint](/refguide/xpath-source/)
+* Querying [the database](/refguide/database-source/), possibly with an [XPath constraint](/refguide/xpath-constraints/)
 * By [context](/refguide/context-source/) from a surrounding data widget or a page (or snippet) parameter
 * By [association](/refguide/association-source/) to an object from a surrounding data widget
 * By a [microflow](/refguide/microflow-source/) or [nanoflow](/refguide/nanoflow-source/)

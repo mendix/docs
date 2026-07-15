@@ -1,5 +1,6 @@
 ---
 title: "XPath quarter-from-dateTime"
+linktitle: "quarter-from-dateTime"
 url: /refguide/xpath-quarter-from-datetime/
 weight: 12
 ---

@@ -572,8 +572,17 @@ Cache busting is where a browser is told by the web server to re-download page r
 Mendix is able to add the `?638184496048312490` query parameter because of the use of a dynamic parameter called `{{cachebust}}` in */deployment/web/index-example.html*, which looks like this:
 
 ```html
-<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}></script>
+<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>
 ```
+
+{{% alert color="info" %}}
+When the [Mendix React Client](/refguide/mendix-client/react/) is enabled, the line in */deployment/web/index.html* is as follows:
+
+```
+<script src="dist/index.js?{{cachebust}}" type="module"></script>
+```
+
+{{% /alert %}}
 
 To ensure cache busting keeps working, whenever you need to customize *index.html* or *login.html*, make sure these files are copied according to the recommendations in [Customizing index.html](#custom-web). Whenever cache busting breaks, it is likely that the query parameters have become hard coded (for example `?638184496048312490`) instead of dynamic (for example `?{{cachebust}}`) due to copying */deployment/web/index.html* instead of the correct filename  */deployment/web/index-example.html*.
 

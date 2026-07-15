@@ -54,8 +54,8 @@ Possible options of this property are described in the table below:
 
 | Option | Description |
 | --- | --- |
-| XPath | Allows you to filter users who should be assigned to the multi-user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
-| Microflow | Allows you to assign the multi-user task to certain users. Using microflow you can check, for example, which users have the right to approve multi-user tasks and are currently not on vacation and assign the task only to users who passed the check.<br><br>The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| XPath | Allows you to filter users who should be assigned to the multi-user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/workflow-tab/). |
+| Microflow | Allows you to assign the multi-user task to certain users. Using microflow you can check, for example, which users have the right to approve multi-user tasks and are currently not on vacation and assign the task only to users who passed the check.<br><br>The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/workflow-tab/). |
 | No assignment | Allows you to not assign the multi-user task to certain users immediately. This can be useful when you, for example, want the multi-user task to be created but have an administrator assign it to certain users later. |
 
 In case **Target users using** (an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
@@ -64,7 +64,7 @@ In case **Target users using** (an XPath or a microflow) results in an empty lis
 
 Specifies the expression used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**. Click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
 
-#### Microflow
+#### Microflow {#microflow-targeting}
 
 Specifies the microflow used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **Microflow**.
 
@@ -78,18 +78,18 @@ Specifies the microflow used to assign the multi-user task. This option is displ
 
 #### Participant Input {#participant-input}
 
-This property determines the maximum number of targeted users that are required to select an outcome to complete the multi-user task. The targeted users that are required to select an outcome for the multi-user task are participants of the multi-user task.
+This property determines the maximum number of participants that are required to select an outcome to complete the multi-user task. The participants are the targeted and assigned users of the user task.
 
 Possible options of participant input are described in the table below:
 
 | Participant Input | Description |
 | --- | --- |
-| All target users | All targeted users should select an outcome to complete the multi-user task. |
-| Absolute number | The specified amount of targeted users who should select an outcome to complete the multi-user task.<br><br>**Amount**: The property that defines the absolute number. |
-| Percentage | The specified percentage of targeted users who should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 targeted users need to select an outcome to complete the multi-user task. |
+| All target users | All participants should select an outcome to complete the multi-user task. |
+| Absolute number | The specified amount of participants who should select an outcome to complete the multi-user task.<br><br>**Amount**: The property that defines the absolute number. |
+| Percentage | The specified percentage of participants who should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 participants and the **Percentage** is set to `50%`, then 10 participants need to select an outcome to complete the multi-user task. |
 
 {{% alert color="warning" %}}
-If the number of [targeted users](#users) is less than the absolute number specified in the [Participant input](#participant-input) section, it is impossible to complete the multi-user task and the workflow will fail.
+If the number of [particpants](#users) is less than the absolute number specified in the [Participant input](#participant-input) section, it is impossible to complete the multi-user task and the workflow will fail.
 {{% /alert %}}
 
 #### Decision Method {#decision-method}
@@ -304,10 +304,6 @@ As an example, consider the trivial case where the quickest participant decides,
 
 #### Completion Moment {#completion-moment}
 
-{{% alert color="warning" %}}
-This property was added in Studio Pro 10.2. In Studio Pro 10.0 and 10.1, the multi-user task is marked as completed as soon as its outcome is known, and adding additional votes is not possible once the outcome is known. 
-{{% /alert %}}
-
 This property determines when the multi-user task is marked as completed. That can either be as soon as the outcome is known, meaning that sufficient participants have completed their task so that the final outcome is already determined, or after all participants have completed their task. This property has no influence on the final outcome of the multi-user task. 
 
 Possible options are described in the table below:
@@ -379,7 +375,12 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" class="no-border" >}}
 
-   {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
+   {{% alert color="info" %}}
+   Make sure that the attribute you use in the expression is of the **String** type. If your attribute is of a different data type, you must convert it using a build-in function:
+
+   * For **Date and time** attributes, use the `formatDateTime()` function to define the desired display format.
+   * For all other types (such as **Integer**, **Decimal**, or **Boolean**), use the `toString()` function.
+   {{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 
@@ -400,7 +401,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### Boundary Events Section {#boundary-events}
 
-For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
+Boundary events can be attached to this element and are triggered by certain events to handle exceptional situations during its execution. For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

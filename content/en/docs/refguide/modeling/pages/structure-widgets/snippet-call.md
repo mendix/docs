@@ -81,6 +81,7 @@ The following are examples of configurations which cannot be correctly inlined:
 
 * A Data view with a *Context* data source using an association of a snippet parameter (if that parameter has been mapped to an object which is not the directly surrounding object of the snippet call)
 * An attribute widget (such as Text box) using an attribute of a snippet parameter (if that parameter has been mapped to a page parameter in the snippet call)
+* A snippet with variables
 
 In such cases, the inlined content needs to be fixed manually by adding or removing a Data view (depending on the configuration) and reconfiguring the affected widgets to refer to the correct object again.
 

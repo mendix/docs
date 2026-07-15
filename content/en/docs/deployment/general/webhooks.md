@@ -3,12 +3,12 @@ title: "Webhooks"
 linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 70
-description: "Creating a webhook to trigger actions from Mendix Cloud and Mendix for Private Cloud."
+description: "Creating a webhook to trigger actions from Mendix Cloud and Mendix on Kubernetes."
 ---
 
 ## Introduction
 
-Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix for Private Cloud to an external app or workflow. You can use this to trigger an automated CI/CD workflow when a new change is committed to the Team Server, for example.
+Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix on Kubernetes to an external app or workflow. You can use this to trigger an automated CI/CD workflow when a new change is committed to the Team Server, for example.
 
 Mendix provides webhooks to send project information when the following events happen to your app:
 
@@ -19,7 +19,7 @@ Mendix provides webhooks to send project information when the following events h
 The webhooks contain a retry mechanism if an error response is received from the endpoint. This helps ensure that the trigger reaches the endpoint.
 
 {{% alert color="info" %}}
-Webhooks are only available for licensed Mendix apps that are deployed to Mendix Cloud or Mendix for Private Cloud.
+Webhooks are only available for licensed Mendix apps that are deployed to Mendix Cloud or Mendix on Kubernetes.
 {{% /alert %}}
 
 ## Configuring a Webhook{#setting-up}
@@ -139,7 +139,7 @@ You can use Mendix to verify your webhook; the [Community Commons](/appstore/mod
 
 ## Package Upload to the Mendix Portal
 
-When you [upload a package to the Mendix Portal](/developerportal/deploy/environments/#package-repository) (including creating a package from the Team Server), and the webhook responds to the event **On package upload**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
+When you [upload a package to the Mendix Portal](/developerportal/deploy/environments/#deployment-packages-tab) (including creating a package from the Team Server), and the webhook responds to the event **On package upload**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
 ```json
 {
@@ -161,12 +161,13 @@ Make sure to use the correct key names when using this payload information to ca
 
 ## Teamserver Push (Git)
 
-When you push a model change to the [Git Team Server](/developerportal/general/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
+When you push a model change to the [Git Team Server](/developerportal/repository/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
 ```json
 {
   "after": "4b76061182bf183281b5107cd753c6071ed00040",
   "before": "0b9cb7a3e9a5ccfffa6c79435441999543ccb8c9",
+  "userId": "b1234df1-1234-1234-1234-12aa345c12e1",
   "branchName": "main",
   "commits": [
     {

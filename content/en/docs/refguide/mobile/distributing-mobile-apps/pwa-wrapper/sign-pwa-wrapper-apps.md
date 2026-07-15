@@ -1,6 +1,6 @@
 ---
 title: "Sign PWA Wrapper Apps"
-url: /refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/
+url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/
 weight: 25
 description: "Configure Android and iOS signing for PWA Wrapper on macOS and Windows."
 aliases:

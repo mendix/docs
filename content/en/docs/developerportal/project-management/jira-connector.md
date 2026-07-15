@@ -23,7 +23,7 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
     * For a team-managed board, the **Stories** pane shows all stories from your board, which may include your backlog. If you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog, and using a separate board to manage your backlog.
 
 * Allows you to change the status of a story or mark a task as **Done** from the [Stories pane](/refguide/stories-pane/) in Studio Pro.
-* Converting your [feedback items](/developerportal/app-insights/feedback/) in App Insights will result in a story in Jira.
+* Converting your [feedback items](/developerportal/app-insights/feedback/) in App Insights results in a story in Jira.
 
 ## Limitations
 
@@ -32,15 +32,16 @@ As we further develop this feature, we may lift these limitations with future re
 {{% /alert %}}
 
 * Feedback issues, and stories from Epics are not migrated to Jira.
-* When a feedback item is being converted to an issue, the story type, title, and description of the issue will be set. If your Jira configuration requires additional mandatory fields, this process might not work.
+* When a feedback item is being converted to an issue, the story type, title, and description of the issue are set. If your Jira configuration requires additional mandatory fields, this process might not work.
 
 ## Prerequisites
 
 * You need to have the [Scrum Master](/developerportal/general/app-roles/#team-roles) role for the app.
 * You need to have an active subscription to Jira Software Cloud.
+      {{% alert color="info" %}} Local or on-premises installations are not supported.{{% /alert %}}
 * You need to have a project in Jira with a Scrum board, a Kanban board, or a team-managed board.
-* You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
-* To convert feedback items to stories in Jira, your project in Jira must have the issue types "Story" and "Bug". For more information on how to set up issue types for your project, see [Associate issue types with projects](https://support.atlassian.com/jira-cloud-administration/docs/associate-issue-types-with-projects/).
+* You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, refer to [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+* To convert feedback items to stories in Jira, your project in Jira must have the issue types **Story** and **Bug**. For more information on how to set up issue types for your project, refer to [Associate issue types with projects](https://support.atlassian.com/jira-cloud-administration/docs/associate-issue-types-with-projects/).
 
 ## Procedure
 
@@ -55,10 +56,10 @@ To connect your app to Jira, perform the following steps:
 4. Click **Connect Jira**. The **Set Up Jira Configuration** dialog box opens.    
    Fill in the information as follows:
 
-    * **URL Jira Environment**: This is the URL of your company’s environment within the Jira platform, as provided by Jira. This URL usually looks like this: `https://my-company.atlassian.net`.
-    * **Project Key**: This is the unique key of your project within the Jira platform.
-    * **Admin User**: This is the login name of a user on the Jira platform with project administration rights.
-    * **API Token**: This is a valid API token issued by the Jira platform and assigned to the above-mentioned admin user. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+    * **URL Jira Environment** – This is the URL of your company’s environment within the Jira platform, as provided by Jira. This URL usually looks like this: `https://my-company.atlassian.net`.
+    * **Project Key** – This is the unique key of your project within the Jira platform.
+    * **Admin User** – This is the login name of a user on the Jira platform with project administration rights.
+    * **API Token** – This is a valid API token issued by the Jira platform and assigned to the above-mentioned admin user. For more information on how to get this API token, refer to [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 
 5. Click **Next**. 
 
@@ -72,7 +73,7 @@ Once the activation is completed, your app is connected to Jira. You can see the
 
     * If you connect your app to a Scrum board in Jira, the **Stories** pane shows all stories from all your active Sprints.
     * If you connect your app to a Kanban board, the **Stories** pane shows all stories from your board, taking the filter and sub-query of the board settings into account, ordered by story key.
-        * You can find the filters and sub-query in the board settings in Jira (for more information, see [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/)).
+        * You can find the filters and sub-query in the board settings in Jira. For more information, refer to [Configure a company-managed board](https://support.atlassian.com/jira-software-cloud/docs/configure-a-company-managed-board/)).
     * If you connect your app to a team-managed board, the **Stories** pane shows all stories from your board, which may include your backlog.
     * If you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog, and using a separate board to manage your backlog.
     * The list of stories is ordered by the Jira story key.
@@ -90,6 +91,6 @@ After you activated the Jira connector, you can review the configuration details
 
 If you need to connect to a different Jira environment, or need to rotate the API key used by the Jira connector, click **Edit Connection Details**. If you want to switch to a different Jira board within the same environment, click **Change Board**.
 
-In order for the Jira connector to work, Mendix caches some information from your Jira board in our system. This include the name of the estimation field that you use to set story points, as well as the status schema that you use in your board. If this information changes in Jira, you may need to refresh the cache by clicking **Reconnect**.
+In order for the Jira connector to work, Mendix caches some information from your Jira board in our system. This includes the name of the estimation field that you use to set story points, as well as the status schema that you use in your board. If this information changes in Jira, you may need to refresh the cache by clicking **Reconnect**.
 
-If you no longer wish to use the Jira connector, simply click **Deactivate Connection**. This will revert your project management tool automatically to [Epics](/developerportal/project-management/epics/).
+If you no longer wish to use the Jira connector, simply click **Deactivate Connection**. This reverts your project management tool automatically to [Epics](/developerportal/project-management/epics/).

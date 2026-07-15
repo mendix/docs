@@ -1,7 +1,7 @@
 ---
 title: "PWA Wrapper"
 url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/
-weight: 45
+weight: 26
 description: "Package Mendix PWAs as native Android and iOS apps and use wrapper capabilities."
 aliases:
     - /refguide/mobile/pwa-wrapper/

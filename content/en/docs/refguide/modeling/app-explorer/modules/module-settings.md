@@ -69,7 +69,7 @@ When the module is set as the solution module, it gets the letter **S** as an ic
 Version is available for all module types for Studio Pro 11.12 and above. In earlier versions of Studio Pro, version is available only for add-on and solution module types. 
 {{% /alert %}}  
 
-This is the version number of the module which will be shown in various places in the Studio Pro user interface, as well as in the Marketplace. 
+This is the version number of the module which is shown in various places in the Studio Pro user interface, as well as in the Marketplace. 
 
 When redistributing a module, you should always change the version number when changes are made. For modules that will be published to the Marketplace, the version must be set before exporting the package.
 
@@ -78,13 +78,15 @@ The Marketplace automatically uses the version from the exported package. You ca
 {{% /alert %}}  
 
 #### Version format
-The version should be a semantic version, consisting of at least three numerical parts: major, minor, and patch version, such as `1.3.7`.
 
-* Increase the MAJOR version when making breaking changes. Examples are removing functionality like an entity or a microflow, or upgrading the module to a new major version of Studio Pro.
-* Increase the MINOR version when adding new features in a backward compatible manner. Examples are adding a microflow or entity that don't interfere with existing behavior.
-* Increase the PATCH version when making backward compatible bug fixes. Examples are fixing a styling issue on a page or changing a calculation in a microflow without changing the parameters and output type.
+The version should be a semantic version, consisting of at least three numerical parts: major, minor, and patch version, such as *1.3.7*.
+Refer to the following guidance when changing the version number:
 
-Aside from the numerical major, minor and patch version, more alphanumerical parts are allowed. This is considered to be an advanced feature, for which we refer you to the documentation of [Semantic Versioning](https://semver.org/). An example advanced version number is `1.3.7-beta.2`.
+* Increase the major version when making breaking changes, such as removing a functionality like an entity or a microflow, or upgrading the module to a new major version of Studio Pro.
+* Increase the minor version when adding new features in a backward compatible manner. For example, when adding a microflow or entity that do not interfere with existing behavior.
+* Increase the patch version when making backward compatible bug fixes, such as fixing a styling issue on a page or changing a calculation in a microflow without changing the parameters and output type.
+
+Next to the numerical major, minor and patch version, alphanumerical characters are allowed. This is considered to be an advanced feature, for more information, please see [Semantic Versioning](https://semver.org/). An example of an advanced version number is *1.3.7-beta.2*.
 
 ## Package {#package}
 

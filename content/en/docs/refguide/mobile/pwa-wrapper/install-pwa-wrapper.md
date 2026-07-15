@@ -1,8 +1,10 @@
 ---
 title: "Install PWA Wrapper"
-url: /refguide/mobile/pwa-wrapper/install-pwa-wrapper/
+url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/
 weight: 10
 description: "Install and enable PWA Wrapper in Mendix Studio Pro."
+aliases:
+    - /refguide/mobile/pwa-wrapper/install-pwa-wrapper/
 ---
 
 ## Introduction

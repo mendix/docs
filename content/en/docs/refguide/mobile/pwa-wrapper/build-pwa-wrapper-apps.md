@@ -1,8 +1,10 @@
 ---
 title: "Build PWA Wrapper Apps"
-url: /refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/
+url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/
 weight: 20
 description: "Build Android APKs and iOS packages with PWA Wrapper."
+aliases:
+    - /refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/
 ---
 
 ## Introduction

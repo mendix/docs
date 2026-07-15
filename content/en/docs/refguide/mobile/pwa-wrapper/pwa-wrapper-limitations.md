@@ -1,8 +1,10 @@
 ---
 title: "PWA Wrapper Limitations"
-url: /refguide/mobile/pwa-wrapper/pwa-wrapper-limitations/
+url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-limitations/
 weight: 35
 description: "Known limitations and platform constraints for PWA Wrapper."
+aliases:
+    - /refguide/mobile/pwa-wrapper/pwa-wrapper-limitations/
 ---
 
 ## Introduction

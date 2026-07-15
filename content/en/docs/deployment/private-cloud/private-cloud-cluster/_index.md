@@ -74,7 +74,7 @@ All services listed in the table below use the HTTPS protocol (port 443).
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/create-cluster.png" class="no-border" >}}
 
-### Adding a Namespace for Connected Cluster {#add-namespace}
+### Adding a Namespace {#add-namespace}
 
 You now need to add a namespace to your cluster. Your cluster can contain several namespaces, see [Containerized Mendix App Architecture](#containerized-architecture), below for more information.
 
@@ -90,43 +90,13 @@ To add a namespace, do the following:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details.PNG" class="no-border" >}}
 
-3. Enter the following details:
-    * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+3. Specify a **Namespace** in your platform. This must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
 
 4. Click **Done** to create the namespace.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/add-namespace.png" class="no-border" >}}
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
-
-### Adding a Namespace for Standalone Cluster {#add-standalone-namespace}
-
-If you would like to add a namespace to be added in the Standalone cluster, do the following:
-
-1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/empty-cluster.png" class="no-border" >}}
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/ClusterDetails.png" class="no-border" >}}
-
-2. Click **Add Namespace**.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details-standalone.png" class="no-border" >}}
-
-3. Enter the following details:
-
-    * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
-    * **Installation type** – Choose **Standalone**.
-
-4. Click **Next**.
-5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/standalone_downloadcli.png" class="no-border" >}}  
-
-    For existing namespaces, if you would like to download the executables for mxpc-cli, you can go [here](https://privatecloud.mendixcloud.com/rest/internal/v1/mxpc-cli?operatorVersion=latest)
-
-    In above page, once you do a JSON format, you will get the links for mxpc-cli for different available versions.
 
 ## Installing and Configuring the Mendix Operator {#install-operator}
 

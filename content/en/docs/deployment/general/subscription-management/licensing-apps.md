@@ -95,17 +95,13 @@ To license an Insights Hub app, you need to provide your **License ID** and **Li
 
 ### Mendix on Kubernetes
 
-To license a Mendix app on Mendix on Kubernetes, you need to supply a **Subscription Secret** or license credentials for your app. See below for how it can be added to either a Connected or Standalone cluster.
+To license a Mendix app on Mendix on Kubernetes, you need to supply a **Subscription Secret** or license credentials for your app. See below for how it can be added to a cluster.
 
 In addition to the licenses for your apps, you will also need to license the Mendix Operator, which helps deploy your app to a Mendix on Kubernetes environment. For details on the Mendix Operator license, see [Licensing Mendix on Kubernetes](/developerportal/deploy/private-cloud/#licensing).
 
-#### Mendix on Kubernetes Connected
+#### Adding the Subscription Secret
 
 You can add the subscription secret when creating an environment on Mendix on Kubernetes. You can also add or change the subscription secret on the **Environment Details** page of the environment you wish to license. For more information, see the [Change Subscription Secret](/developerportal/deploy/private-cloud-deploy/#license-mendix) section of *Deploying a Mendix App to a Mendix on Kubernetes Cluster*.
-
-#### Mendix on Kubernetes Standalone
-
-You will need to add the license credentials and configure the license in the Mendix Custom Resource (CR) for your Mendix on Kubernetes environment. For more information, see the [Editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) section of *Using Command Line to Deploy a Mendix App to a Mendix on Kubernetes Cluster*.
 
 ### Cloud Foundry{#cloudfoundry}
 

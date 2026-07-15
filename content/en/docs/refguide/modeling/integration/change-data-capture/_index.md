@@ -56,18 +56,12 @@ When running the app locally, only the bootstrap server address is required:
 
 When connecting to a BYOK Kafka cluster, provide the bootstrap server address and credentials for authentication. The supported authentication method is SASL/SCRAM-SHA-512.
 
-| Name | Description | Default Value | Required |
+| Name | Description | Default Value |
 | --- | --- | --- | --- |
-| `Kafka.BootstrapServers` | The address of the Kafka broker, in the format `host:port`. | | true |
-| `Kafka.Username` | The username for SASL/SCRAM-SHA-512 authentication with the Kafka cluster. | | true |
-| `Kafka.Password` | The password for SASL/SCRAM-SHA-512 authentication with the Kafka cluster. | | true |
-| `EventBroker.Space` | The Event Broker space in which the app is placed. Defines which other applications can exchange events with this app. | `local` | |
-| `Datastorage.StartSnapshotMinInterval` | The minimum time, in milliseconds, that must have elapsed since the last snapshot before a new snapshot is triggered on startup. If startup occurs within this window, the snapshot is skipped. | `300000` | |
-| `EventBroker.CdcForceSnapshotEntities` | A comma-separated list of entity names (for example, `Module.EntityA,Module.EntityB`) that are always snapshotted on startup, even when no topic change has occurred that would otherwise trigger a snapshot. | | |
-| `EventBroker.CdcActiveProducerElectionTopic` | The Kafka topic used for active-producer election among clustered app instances. When set together with `EventBroker.CdcActiveProducerElectionGroupId` and `EventBroker.CdcProducerTransactionId`, instances coordinate to elect a single active CDC producer. If any of the three settings is missing, the app falls back to single-instance mode. | | |
-| `EventBroker.CdcActiveProducerElectionGroupId` | The Kafka consumer group ID used for active-producer election. Must be set together with `EventBroker.CdcActiveProducerElectionTopic` and `EventBroker.CdcProducerTransactionId` to enable active-producer election mode. | | |
-| `EventBroker.CdcProducerTransactionId` | The transactional ID for the Kafka CDC producer, enabling exactly-once delivery semantics. Must be set together with `EventBroker.CdcActiveProducerElectionTopic` and `EventBroker.CdcActiveProducerElectionGroupId` to enable active-producer election mode. | | |
-
+| `Kafka.BootstrapServers` | The address of the Kafka broker, in the format `host:port`. | |
+| `Kafka.Username` | The username for SASL/SCRAM-SHA-512 authentication with the Kafka cluster. | |
+| `Kafka.Password` | The password for SASL/SCRAM-SHA-512 authentication with the Kafka cluster. | |
+| `EventBroker.Space` | The Event Broker space in which the app is placed. Defines which other applications can exchange events with this app. | `local` |
 
 ### Active-Producer Election {#active-producer-election}
 

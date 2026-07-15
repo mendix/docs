@@ -48,7 +48,7 @@ Each row in the table has the following columns:
 | **Entities** | The domain model entity being tracked. Expand the row to view and select individual attributes and associations. |
 | **Exposed name** | The name used for this entity in the Kafka topic and event payload. Defaults to the entity name. |
 | **Modification** | The pending change state: **Added**, **Changed**, or **Removed**. Blank if the entity is unchanged since the last accepted revision. |
-| **Revision** | The schema version of the entity's event payload. See [Revisions](#revisions). |
+| **Revision** | The schema revision of the entity's event payload. See [Revisions](#revisions). |
 | **Topic** | The Kafka topic name for this entity, in the format `cdc.<app-name>.<ExposedName>.<revision>.{space}`, where `{space}` is replaced at runtime by the Event Broker space name.  See [Bring Your Own Kafka (BYOK)](/refguide/change-data-capture/#byok-configuration) |
 
 ### Adding an Entity {#add-entity}

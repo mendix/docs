@@ -65,7 +65,7 @@ The following controls are related to this control:
 * PM-1
 * PM-7
 * PM-8
-* PM-9
+* PM-09
 * PM-11
 * SA-5
 * SA-17

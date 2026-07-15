@@ -78,10 +78,10 @@ This table presents the default case sensitivity by different database types:
 |------------------:|:--------------:|:-----------:|:--------------------:|
 | HSQLDB            | I              | I           | I                    |
 | POSTGRESQL        | S              | S           | I                    |
-| DB2               | S              | S¹          | I³                   |
+| DB2               | S              | S¹          | I                   |
 | MARIADB and MYSQL | C              | C           | C                    |
 | ORACLE            | C¹             | C           | I                    |
-| SAP HANA          | S¹             | S¹          | I²                   |
+| SAP HANA          | S¹             | S¹          | I                   |
 | SQL SERVER        | C              | C           | C                    |
 
 Where the letters have the following meaning:
@@ -91,5 +91,3 @@ Where the letters have the following meaning:
 * **I** – Case insensitive
 
 ¹Operation not supported on strings of unlimited length.
-²From Mendix 8.11.0
-³From Mendix 8.14.0

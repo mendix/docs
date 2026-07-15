@@ -229,7 +229,6 @@ For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/
 ## Known Limitations (Beta)
 
 * **Authentication pop-up:** During Beta, the Teamcenter Connector SSO flow opens a pop-up window. This can be automated to require zero additional clicks after the user is already authenticated with TcSS.
-* **Optional parameters fallback:** If an optional startup parameter is omitted, the embedded client shows the fallback page rather than using the parameter's default value. This is a known issue with the embedded client. See [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 
 ## Read More
 

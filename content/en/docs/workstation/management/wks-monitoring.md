@@ -8,9 +8,9 @@ weight: 110
 
 ## Introduction
 
-Mendix Workstation provides detailed usage reports that show how stations are being used across your different workspaces and company. This helps you understand and optimize your Workstation deployment.
+Mendix Workstation provides detailed usage reports tracking active Workstation Clients across your different workspaces and company. This helps you understand and optimize your Workstation deployment.
 
-Workstation Clients automatically report their daily active usage to the server, tracking which stations were used and on which days. This data powers the usage reports, giving you valuable insights without extra effort.
+Workstation Clients automatically report their daily active usage to the server. This data powers the usage reports, giving you valuable insights without extra effort.
 
 ## Accessing the Usage Reports
 
@@ -30,4 +30,4 @@ The **Company Usage Report** tab is accessible only to users who have the Mendix
 
     {{< figure src="/attachments/workstation/wks-usage2.png" class="no-border" >}}
 
-The Usage Reports display information about the usage trends for each station both daily and over time.
+The Usage Reports display information about the usage trends for each Workstation Client both daily and over time.

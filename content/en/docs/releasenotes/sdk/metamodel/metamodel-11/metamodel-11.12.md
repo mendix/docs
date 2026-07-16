@@ -84,7 +84,6 @@ weight: 55
 #### ModuleSettings (ModelUnit)
 
 * We introduced the `packageId` property. 
-* We introduced the `originalPackageId` property. 
 * We introduced the `checksum` property. 
 * We introduced the `convertedChecksum` property. 
 * We introduced the `moduleDependencies` property. 

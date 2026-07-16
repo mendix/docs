@@ -43,6 +43,8 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 * Self-hosting option - With this GA release, we are introducing Private Workstation Management, providing you with the option to self-host the management solution. This offers greater control and flexibility over your deployment.
 
+{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Customer Success Manager. {{% /alert %}}
+
 ### Workstation Client
 
 #### New Features

@@ -31,12 +31,21 @@ The Workstation domain model contains the following entities:
 
 The following section provides more information about using the Workstation nanoflows and Java actions in your Mendix application.
 
+#### SendDeviceRequest
+
+Call `SendDeviceRequest` to send a message to a device and return the response or error. Requires Workstation Client 4.0 or later, and a device that supports requests. For more information about the supported message syntax, see [Configuring Devices](/mendix-workstation/management-devices/). This action has the following parameters:
+
+* `device` 
+* `message`
+
 ### SendDeviceMessage
 
 Call `SendDeviceMessage` to send a message to a device. For more information about the supported message syntax, see [Configuring Devices](/mendix-workstation/management-devices/). This action has the following parameters:
 
 * `device` 
 * `message`
+
+Responses are passed through message callbacks. For more information, see `GetCreateDevice` (`onMessage`), `WaitForDeviceMessage`, and `SubscribeToDeviceMessages`.
 
 ### WaitForDeviceMessage 
 

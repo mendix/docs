@@ -35,7 +35,7 @@ This control does not apply to the use of external information systems to access
 
 The following controls are related to this control:
 
-* AC-3
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
 * AC-17
 * AC-19
 * CA-3

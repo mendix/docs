@@ -467,92 +467,92 @@ weight: 97
 
 **Release date: January 15, 2021**
 
-* We added support for Mendix [8.18.0](/releasenotes/studio-pro/8.18/).
-* We added support for Mendix Metamodel [8.18.0](/releasenotes/sdk/metamodel-8.18/).
+* We added support for Mendix 8.18.0.
+* We added support for Mendix Metamodel 8.18.0.
 
 ## 4.44.0 {#444}
 
 **Release date: November 23, 2020**
 
-* We added support for Mendix [8.16.0](/releasenotes/studio-pro/8.16/).
-* We added support for Mendix Metamodel [8.16.0](/releasenotes/sdk/metamodel-8.16/).
+* We added support for Mendix 8.16.0.
+* We added support for Mendix Metamodel 8.16.0.
 
 ## 4.42.0 {#442}
 
 **Release date: October 20, 2020**
 
-* We added support for Mendix [8.15.0](/releasenotes/studio-pro/8.15/).
-* We added support for Mendix Metamodel [8.15.0](/releasenotes/sdk/metamodel-8.15/).
+* We added support for Mendix 8.15.0.
+* We added support for Mendix Metamodel 8.15.0.
 
 ## 4.41.0 {#441}
 
 **Release date: September 21, 2020**
 
-* We added support for Mendix [8.14.0](/releasenotes/studio-pro/8.14/).
-* We added support for Mendix Metamodel [8.14.0](/releasenotes/sdk/metamodel-8.14/).
+* We added support for Mendix 8.14.0.
+* We added support for Mendix Metamodel 8.14.0.
 
 ## 4.38.0 {#438}
 
 **Release date: August 19, 2020**
 
-* We added support for Mendix [8.13.0](/releasenotes/studio-pro/8.13/).
-* We added support for Mendix Metamodel [8.13.0](/releasenotes/sdk/metamodel-8.13/).
+* We added support for Mendix 8.13.0.
+* We added support for Mendix Metamodel 8.13.0.
 
 ## 4.37.0 {#437}
 
 **Release date: July 21, 2020**
 
-* We added support for Mendix [8.12.0](/releasenotes/studio-pro/8.12/).
-* We added support for Mendix Metamodel [8.12.0](/releasenotes/sdk/metamodel-8.12/).
+* We added support for Mendix 8.12.0.
+* We added support for Mendix Metamodel 8.12.0.
 
 ## 4.36.0 {#436}
 
 **Release date: June 30, 2020**
 
-* We added support for Mendix [8.11.0](/releasenotes/studio-pro/8.11/).
-* We added support for Mendix Metamodel [8.11.0](/releasenotes/sdk/metamodel-8.11/).
+* We added support for Mendix 8.11.0.
+* We added support for Mendix Metamodel 8.11.0.
 
 ## 4.35.0 {#435}
 
 **Release date: May 26, 2020**
 
-* We added support for Mendix [8.10.0](/releasenotes/studio-pro/8.10/).
-* We added support for Mendix Metamodel [8.10.0](/releasenotes/sdk/metamodel-8.10/).
+* We added support for Mendix 8.10.0.
+* We added support for Mendix Metamodel 8.10.0.
 
 ## 4.32.0 {#432}
 
 **Release date: April 30, 2020**
 
-* We added support for Mendix [8.9.0](/releasenotes/studio-pro/8.9/).
-* We added support for Mendix Metamodel [8.9.0](/releasenotes/sdk/metamodel-8.9/).
+* We added support for Mendix 8.9.0.
+* We added support for Mendix Metamodel 8.9.0.
 
 ## 4.31.0 {#431}
 
 **Release date: March 27, 2020**
 
-* We added support for Mendix [8.8.0](/releasenotes/studio-pro/8.8/).
-* We added support for Mendix Metamodel [8.8.0](/releasenotes/sdk/metamodel-8.8/).
+* We added support for Mendix 8.8.0.
+* We added support for Mendix Metamodel 8.8.0.
 
 ## 4.30.0 {#430}
 
 **Release date: February 25, 2020**
 
-* We added support for Mendix [8.7.0](/releasenotes/studio-pro/8.7/).
-* We added support for Mendix Metamodel [8.7.0](/releasenotes/sdk/metamodel-8.7/).
+* We added support for Mendix 8.7.0.
+* We added support for Mendix Metamodel 8.7.0.
 
 ## 4.29.0 {#429}
 
 **Release date: January 29, 2020**
 
-* We added support for Mendix [8.6.0](/releasenotes/studio-pro/8.6/).
-* We added support for Mendix Metamodel [8.6.0](/releasenotes/sdk/metamodel-8.6/).
+* We added support for Mendix 8.6.0.
+* We added support for Mendix Metamodel 8.6.0.
 
 ## 4.28.0 {#428}
 
 **Release date: December 13, 2019**
 
-* We added support for Mendix [8.5.0](/releasenotes/studio-pro/8/).
-* We added support for Mendix Metamodel [8.5.0](/releasenotes/sdk/metamodel-8.5/).
+* We added support for Mendix 8.5.0.
+* We added support for Mendix Metamodel 8.5.0.
 
 ## 4.27.1 {#4271}
 
@@ -564,55 +564,55 @@ weight: 97
 
 **Release date: November 22, 2019**
 
-* We added support for Mendix [8.4.0](/releasenotes/studio-pro/8.4/).
-* We added support for Mendix Metamodel [8.4.0](/releasenotes/sdk/metamodel-8.4/).
+* We added support for Mendix 8.4.0.
+* We added support for Mendix Metamodel 8.4.0.
 
 ## 4.26.0 {#426}
 
 **Release date: October 25, 2019**
 
-* We added support for Mendix [8.3.0](/releasenotes/studio-pro/8.3/).
-* We added support for Mendix Metamodel [8.3.0](/releasenotes/sdk/metamodel-8.3/).
+* We added support for Mendix 8.3.0.
+* We added support for Mendix Metamodel 8.3.0.
 
 ## 4.25.0 {#425}
 
 **Release date: September 25, 2019**
 
-* We added support for Mendix [8.2.0](/releasenotes/studio-pro/8.2/).
-* We added support for Mendix Metamodel [8.2.0](/releasenotes/sdk/metamodel-8.2/).
+* We added support for Mendix 8.2.0.
+* We added support for Mendix Metamodel 8.2.0.
 
 ## 4.24.0 {#424}
 
 **Release date: August 29, 2019**
 
-* We added support for Mendix [8.1.0](/releasenotes/studio-pro/8.1/).
-* We added support for Mendix Metamodel [8.1.0](/releasenotes/sdk/metamodel-8.1/).
+* We added support for Mendix 8.1.0.
+* We added support for Mendix Metamodel 8.1.0.
 
 ## 4.23.0 {#423}
 
 **Release date: July 29, 2019**
 
-* We added support for Mendix [8.0.0 GA](/releasenotes/studio-pro/8.0/).
+* We added support for Mendix 8.0.0 GA.
 * We added transaction support, which brings the ability to manually `commit` / `rollback` changes.
 
 ## 4.22.0 {#422}
 
 **Release date: July 2, 2019**
 
-* We added support for Mendix [8.0.0 Beta 3](/releasenotes/studio-pro/8.0/).
+* We added support for Mendix 8.0.0 Beta 3.
 * We improved the performance of loading units.
 
 ## 4.21.0 {#421}
 
 **Release date: June 3, 2019**
 
-* We added support for Mendix [8.0.0 Beta 2](/releasenotes/studio-pro/8.0/).
+* We added support for Mendix 8.0.0 Beta 2.
 
 ## 4.20.0 {#420}
 
 **Release date: April 26, 2019**
 
-* We added support for Mendix [8.0.0 Beta 1](/releasenotes/studio-pro/8.0/).
+* We added support for Mendix 8.0.0 Beta 1.
 * We fixed the rename for by-name references that refer to the base class.
 
 ## 4.19.0 {#419}

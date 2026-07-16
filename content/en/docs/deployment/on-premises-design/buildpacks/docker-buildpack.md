@@ -8,6 +8,12 @@ description: "Describes how to deploy using a Docker image using a Docker Buildp
 
 ## Introduction
 
+{{% alert color="warning" %}}
+With the release of [Mendix Portable Runtime](https://docs.mendix.com/developerportal/deploy/docker-deploy-pad/), we are transitioning away from the Docker Buildpacks toward a modern, container-native approach that packages Mendix applications. As part of this shift, the Docker Buildpack will begin its deprecation journey by not supporting Mendix 12 and future Runtime versions.
+
+For more information, see [Mendix Portable Runtime: Deployment, Simplified](https://www.mendix.com/blog/mendix-portable-runtime/).
+{{% /alert %}}
+
 This page explains how to build a Docker image from your Mendix App using a Docker buildpack. Every time you make changes to your app, you must create a new Docker image that can be pushed through the different stages of your application pipeline.
 
 This how-to teaches you how to do the following:

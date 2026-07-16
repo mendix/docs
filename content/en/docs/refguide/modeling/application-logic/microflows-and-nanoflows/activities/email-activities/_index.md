@@ -10,7 +10,7 @@ These activities can only be used in microflows.
 
 ## Introduction
 
-The **Email Activities** section of the [Toolbox](/refguide/view-menu/#toolbox) contains activities you can use for performing email operations directly from a microflow.
+The activities described in this section are the **Email Activities** section of the **Toolbox**. They contain activities you can use for performing email operations directly from a microflow.
 
 The following are the Email activities you can use in your microflow:
 

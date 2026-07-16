@@ -15,7 +15,7 @@ This feature was released in Studio Pro 11.10.
 To use Studio Pro MCP Server, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
-Studio Pro MCP Server enables you to leverage Maia's capabilities directly from external clients, including AI coding assistants, agents, and other MCP-based LLM tools.
+Studio Pro MCP Server enables bring your own agent (BYO Agent) capabilities, allowing you to leverage Maia's capabilities directly from external clients, including AI coding assistants, agents, and other MCP-based LLM tools.
 
 It has the following key highlights:
 

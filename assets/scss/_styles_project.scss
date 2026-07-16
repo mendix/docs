@@ -24,6 +24,11 @@
     display: flex; // Nested flexbox container
 }
 
+.alert-text {
+    flex: 1;
+    min-width: 0;
+}
+
 .alert-svg { // Format alert icons
     height:1.3rem;
     width:1.3rem;

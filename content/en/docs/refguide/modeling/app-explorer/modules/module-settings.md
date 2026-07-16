@@ -25,6 +25,10 @@ Select the **Export** tab:
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-export.png" class="no-border" >}}
 
+## Configure
+
+The **Configure** tab contains the module's basic settings.
+
 ### Module Type {#module-type}
 
 There are three types of modules, and the choice of type depends on the purpose of the module. You can choose one the following:
@@ -59,15 +63,93 @@ Solution modules are only used for developing a solution and are an inseparable 
 
 When the module is set as the solution module, it gets the letter **S** as an icon.
 
-### Module Version
+### Module Version {#module-version}
 
 {{% alert color="info" %}}
-This setting is available only for add-on and solution module types.
+Version is available for all module types for Studio Pro 11.12 and above. In earlier versions of Studio Pro, version is available only for add-on and solution module types. 
+{{% /alert %}}  
+
+This is the version number of the module which is shown in various places in the Studio Pro user interface, as well as in the Marketplace. 
+
+When redistributing a module, you should always change the version number when changes are made. For modules that will be published to the Marketplace, the version must be set before exporting the package.
+
+{{% alert color="info" %}}
+The Marketplace automatically uses the version from the exported package. You cannot change this manually. If the version is already in use, the Marketplace rejects the package.
+{{% /alert %}}  
+
+#### Version format
+
+The version should be a semantic version, consisting of at least three numerical parts: major, minor, and patch version, such as *1.3.7*.
+Refer to the following guidance when changing the version number:
+
+* Increase the major version when making breaking changes, such as removing a functionality like an entity or a microflow, or upgrading the module to a new major version of Studio Pro.
+* Increase the minor version when adding new features in a backward compatible manner. For example, when adding a microflow or entity that do not interfere with existing behavior.
+* Increase the patch version when making backward compatible bug fixes, such as fixing a styling issue on a page or changing a calculation in a microflow without changing the parameters and output type.
+
+Next to the numerical major, minor and patch version, alphanumerical characters are allowed. This is considered to be an advanced feature, for more information, please see [Semantic Versioning](https://semver.org/). An example of an advanced version number is *1.3.7-beta.2*.
+
+## Package {#package}
+
+{{% alert color="info" %}}
+Improved package management is available for [Studio Pro 11.12](/releasenotes/studio-pro/11.12/) and above.
 {{% /alert %}}
 
-This is the version number of the module. The version should be a semantic version (meaning, it should consist of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
+Studio Pro 11.12 introduces improved package management to enable reliable module tracking and updates.
 
-Mendix recommends setting a new version every time changes are made to the module.
+Key improvements are delivered through new module properties and a new `manifest.json` file format in module packages (*.mpk* files):
+
+* **Package identification** – Each module receives a [Module ID](#module-id) that uniquely identifies it across all versions. This allows Studio Pro to reliably track modules across updates, even if the module name changes.
+* **Package integrity** – Each package includes a checksum (SHA-256 hash) that verifies the integrity of the package itself and the imported module in the app.
+* **Metadata tracking** – The manifest includes information about the package name, version (following semantic versioning), type, and the Mendix metamodel version used to create it.
+
+The **Package** section on the **General** tab displays package identification information for the module. Studio Pro uses this information to track modules across versions, which is the foundation for more reliable module updates.
+
+### Module ID {#module-id}
+
+The module ID is a unique identifier for the module that remains the same across all versions. It determines whether two module packages represent the same module and is therefore the basis for module update compatibility. If two modules share the same module ID, Studio Pro can update one with the other. If the IDs differ, Studio Pro treats them as distinct modules.
+
+#### Automatic Module ID Assignment
+
+The module ID is assigned automatically and is stable across devices, so multiple developers working on the same module independently receive the same value.
+
+* For modules imported from the Marketplace, the module ID is derived from the Marketplace component ID.
+* For all other modules, the module ID is derived from the app ID and the module name. This ensures the ID remains consistent across devices when multiple developers work independently.
+
+When you open an existing app in Studio Pro, every module that does not yet have a module ID receives one automatically. No action is required.
+
+#### Manual Module ID Override
+
+In some cases, you may want to override the automatically assigned module ID. To change it, click {{% icon name="pencil" %}} to open a dialog where you can enter a new value.
+
+{{% alert color="warning" %}}
+Changing the module ID may break existing installations that depend on this module. Only override this value if you understand the implications.
+
+Marketplace does not allow you to publish a module with a module ID that is already used by another publisher.
+
+{{% /alert %}}
+
+### Checksum {#checksum}
+
+The **Checksum** is a read-only SHA-256 hash that uniquely identifies a specific version of the module package. It serves two purposes:
+
+* **Integrity** – It is a hash of the contents of the original module package that Studio Pro uses to detect any user modifications after the module was imported.
+* **Version identification** – It allows you to compare two module packages for equality without inspecting their contents.
+
+The checksum is displayed only for modules imported from a module package. For modules created directly in your app, the checksum is calculated when you export the module and is not displayed in the **Package** section.
+
+### Package Manifest {#package-manifest}
+
+When you export a module package (a *.mpk* file), Studio Pro adds a `manifest.json` file to the package alongside the existing metadata. The manifest contains the following:
+
+* The module ID and module name
+* The module version
+* The checksum of the package
+* The Mendix metamodel version used to create the package
+* The list of files included in the package
+
+{{% alert type="info" %}}
+The legacy `package.xml` metadata file is not mentioned in `manifest.json` but is still included in the package for backward compatibility.
+{{% /alert %}} 
 
 ## Read More
 

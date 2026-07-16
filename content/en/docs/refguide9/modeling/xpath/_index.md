@@ -87,7 +87,7 @@ See below some frequently used XPath functions:
 **How to find the right path to XPath**
 
 {{% alert color="info" %}}
-This video was done with [Studio Pro 8](/refguide8/), but the concepts remain applicable.
+This video was done with Studio Pro 8, but the concepts remain applicable. 
 {{% /alert %}}
 
 {{< youtube sdabUY-w4ZU >}}

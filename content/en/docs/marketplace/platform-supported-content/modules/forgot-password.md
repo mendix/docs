@@ -12,10 +12,10 @@ The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) modul
 This module allows the end-user to enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios (sign up and forgot password). In the sign up case, the end-user is also asked to provide their name. For version 5.3.0 and above of the module, you can specify different templates to be sent, depending on the language in which the end-user is seeing the app.
 
 {{% alert color="info" %}}
-Versions of the Forgot Password module below 4.1.0 (for Mendix 8) and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. Mendix recommends upgrading to the later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below.
+Versions of the Forgot Password module below 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. Mendix recommends upgrading to the later version using the instructions in [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below.
 {{% /alert %}}
 
-There are below versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro 8, or 9 and above. These all work in the same way, and require the dependencies specified below.
+There are below versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro 9 and above. These all work in the same way, and require the dependencies specified below.
 
 | Mendix Version | Forgot Password Version |
 | --- | --- |
@@ -24,7 +24,6 @@ There are below versions of the Forgot Password module, depending on whether you
 | 10.6.0 and above | 6.0.0 |
 | 9.20.0 and above | 5.1.0 |
 | 9.12.7 and above | 5.x.x |
-| 8.18.x | 4.x.x |
 
 If you already use the Forgot Password module in your Mendix 8 app, you can find instructions on how to upgrade in [Upgrading from Mendix 8 to Mendix 9](#upgrade8-9) section below.
 
@@ -32,7 +31,7 @@ If you already use the Forgot Password module in your Mendix 8 app, you can find
 
 The Forgot Password module has the following dependencies:
 
-* [Email Connector](/appstore/modules/email-connector/) – Versions of the Forgot Password module below 4.1.0 (for Mendix 8), and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. If you are using Mendix 8 and above, Mendix recommends upgrading to the latest version using the instructions in the [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below.
+* [Email Connector](/appstore/modules/email-connector/) – Versions of the Forgot Password module below 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. If you are using Mendix 9 and above, Mendix recommends upgrading to the latest version using the instructions in the [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below.
 * [Deep Link](/appstore/modules/deep-link/) – Version of the Forgot Password module 6.0.0 and above (for Mendix 10.6.0 and above) does not require the Deep Link module as a dependency.
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
@@ -76,7 +75,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
         * Administrator
             * **Administration.Administrator**
             * **DeepLink.Admin**
-            * **Email_Connector.EmailConnectorAdmin** or **EmailTemplate.Administrator** - **Email_Connector** permissions are needed if you are using version 4.1.0 or above (for Mendix 8) or version 5.1.0 or above (for Mendix 9 and above). **EmailTemplate** permissions are only needed if using a version which uses the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module
+            * **Email_Connector.EmailConnectorAdmin** or **EmailTemplate.Administrator** - **Email_Connector** permissions are needed if you are using version 5.1.0 or above (for Mendix 9 and above). **EmailTemplate** permissions are only needed if using a version which uses the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module
             * **Encryption.user**
             * **ForgotPassword.Administrator**
             * **MxModelReflection.ModelAdministrator**
@@ -225,7 +224,6 @@ You have now successfully upgraded the Forgot Password Module to work with Mendi
 
 Below versions of the Forgot Password module use the [Email Connector](/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
 
-* Version 4.1.0 (for Mendix 8)
 * Version 5.1.0 (for Mendix 9 and above)
 * Version above 5.1.0
 
@@ -239,7 +237,7 @@ Use these instructions before you upgrade the Forgot Password module. The point 
 
 Migrating to Email Connector Module has the following dependencies:
 
-* An app that uses Mendix 8 or above.
+* An app that uses Mendix 9 or above.
 * The email templates must be set up as follows:
 
     * The reset password template must contain *_Reset* in the template name.
@@ -274,7 +272,7 @@ Follow the [Migration Steps](https://github.com/mendixlabs/EmailConnectorMigrati
 
 #### Actions After the Migration
 
-1. Import the latest version of the Forgot Password module (v4.1.0 or above for Mendix 8, or v5.1.0 or above for Mendix 9 and above). This will have the [Email Connector](/appstore/modules/email-connector/) module as a dependency.
+1. Import the latest version of the Forgot Password module (v5.1.0 or above for Mendix 9 and above). This will have the [Email Connector](/appstore/modules/email-connector/) module as a dependency.
 1. Delete the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
 1. Delete the [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module.
 1. Remove the Administrator user roles for `EmailTemplate` and `MigrationUtility`.

@@ -80,8 +80,6 @@ The **MxModelDocument** and **MxChildDocument** entities are internal entities, 
 
 ### Constants {#constants}
 
-For Studio Pro 8.15, the **HTTPEndpoint** constant with the default value **visualization** is used to restrict the value of the **Endpoint** parameter used in the **Viewer3D/USE_ME/VisServerAction** Java action.
-
 For Studio Pro 9.4 and above, **HTTPEndpoint** is renamed **Endpoint**, and you do not need to configure this constant.
 
 The **ModelSourceType** constant with the value **Mendix** is used to signify the model source. You can use this constant to restrict the value of the **Data source** parameter in the **Uploader** widget, the **Model source type** parameter in the **Viewer** widget, or the value of the **Source** attribute in the **ModelDocument** entity.

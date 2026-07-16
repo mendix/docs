@@ -5,10 +5,6 @@ weight: 10
 description: "Install and enable PWA Wrapper in Mendix Studio Pro."
 ---
 
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
-
 ## Introduction
 
 This page explains how to install and enable PWA Wrapper. After installation, you can open the builder and package your Mendix app as an Android or iOS app.

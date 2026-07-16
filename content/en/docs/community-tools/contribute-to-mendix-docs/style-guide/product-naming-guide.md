@@ -276,7 +276,7 @@ Do not use "Mendix Administrator."
 
 This term replaces "Mendix" and "Mendix Mobile app" (which are not to be used in the product UI or documentation).
 
-Always use "the Mendix Developer App" and cross-reference [Getting the Mendix Developer App](/refguide8/getting-the-mendix-app/) where possible.
+Always use "the Mendix Developer App".
 
 ### Mendix Client
 

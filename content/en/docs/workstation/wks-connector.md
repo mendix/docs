@@ -1,7 +1,7 @@
 ---
-title: "Installing and Configuring the Workstation Connector"
+title: "Installing the Workstation Connector"
 url: /mendix-workstation/install-connector/
-description: "Describes how to install the Workstation Connector and build an app to work with Mendix Workstation."
+description: "Describes how to install the Mendix Workstation Connector."
 weight: 20
 ---
 

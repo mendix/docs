@@ -72,15 +72,18 @@ Each BPMN element is marked with a support level indicator:
 
 * 🟩 Supported – Directly supported in the workflow editor or composable by combining workflow editor constructs and/or platform features
 * 🟦 Planned – Support is planned for an upcoming release
-* ❌ Not Supported – Not currently supported in Mendix
+* {{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported – Not currently supported in Mendix
 
 ### Gateways
 
 * Exclusive Gateway (XOR) – [🟩 Supported](/refguide/bpmn-coverage/#gateways)
 * Parallel Gateway (AND) – [🟩 Supported](/refguide/bpmn-coverage/#gateways)
 * Inclusive Gateway (OR) – [🟩 Supported](/refguide/bpmn-coverage/#gateways)
-* Event-Based Gateway – ❌ Not Supported
-* Complex Gateway – ❌ Not Supported
+* Event-Based Gateway – {{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported
+* Complex Gateway – {{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported
 
 ### Tasks
 
@@ -94,11 +97,14 @@ Each BPMN element is marked with a support level indicator:
 
 ### Subprocesses
 
-* Embedded Subprocess – ❌ Not Supported
+* Embedded Subprocess – {{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported
 * Call Activity – Reusable Subprocess – [🟩 Supported](/refguide/bpmn-coverage/#subprocesses)
 * Event Subprocess – [🟩 Supported](/refguide/bpmn-coverage/#subprocesses)
-* Transaction Subprocess – ❌ Not Supported
-* Ad-hoc Subprocess – ❌ Not Supported
+* Transaction Subprocess – {{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported
+* Ad-hoc Subprocess – {{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported
 
 ### Swimlanes
 
@@ -112,7 +118,8 @@ Each BPMN element is marked with a support level indicator:
 ### Artifacts
 
 * Text Annotation – [🟩 Supported](/refguide/bpmn-coverage/#artifacts)
-* Group – ❌ Not Supported
+* Group – {{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported
 
 ### Events
 
@@ -148,7 +155,8 @@ Each BPMN element is marked with a support level indicator:
       <td></td>
       <td></td>
       <td></td>
-      <td>❌ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
       <td><a href="/refguide/bpmn-coverage/#none-events">🟩 Supported</a></td>
     </tr>
     <!-- MESSAGE -->
@@ -257,7 +265,8 @@ Each BPMN element is marked with a support level indicator:
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#terminate-events">❌ Not Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#terminate-events">{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</a></td>
     </tr>
     <!-- LINK -->
     <tr>
@@ -274,24 +283,38 @@ Each BPMN element is marked with a support level indicator:
     <!-- MULTIPLE -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Multiple</strong></td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
     </tr>
     <!-- MULTIPLE PARALLEL -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Multiple Parallel</strong></td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
-      <td>❌ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
+      <td>{{% icon name="remove-circle-filled" color="red" %}}
+ Not Supported</td>
       <td></td>
       <td></td>
     </tr>

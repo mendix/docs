@@ -11,43 +11,43 @@ Mendix supports a broad range of BPMN constructs, either directly on the Workflo
 
 Each BPMN element is marked with a support level indicator:
 
-* ✅ Workflow Native – Available as a dedicated construct in the workflow editor
+* {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native – Available as a dedicated construct in the workflow editor
 * 🟩 Platform Native – Available by combining workflow editor constructs with other platform editor constructs, such as logic, data, and pages.
 * 🟦 Planned – Support is planned for an upcoming release
-* ❌ Not Supported – Not currently supported in Mendix
+* {{< icon name="remove-circle-filled" color="red" >}} Not Supported – Not currently supported in Mendix
 
 ## Gateways {#gateways}
 
 | Element | Support Level | How |
 |---|---|---|
-| Exclusive Gateway (XOR) | ✅ Workflow Native | [Decision](/refguide/decision-in-workflows/) |
-| Parallel Gateway (AND) | ✅ Workflow Native | [Parallel Split](/refguide/parallel-split/) |
+| Exclusive Gateway (XOR) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Decision](/refguide/decision-in-workflows/) |
+| Parallel Gateway (AND) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Parallel Split](/refguide/parallel-split/) |
 | Inclusive Gateway (OR) | 🟩 Platform Native | Use a [Parallel Split](/refguide/parallel-split/) with a path for each possible condition. On each path, add a [Decision](/refguide/decision-in-workflows/) that checks if the condition is true. If true, execute the activities on that path. If false, the path continues directly to the merge. The workflow waits for all paths to complete before continuing. Note: There is no default or catch-all path – if you need one, model it explicitly with an additional decision. |
-| Event-Based Gateway | ❌ Not Supported | Not supported. |
-| Complex Gateway | ❌ Not Supported | Not supported. |
+| Event-Based Gateway | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Complex Gateway | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
 
 ## Tasks {#tasks}
 
 | Element | Support Level | How |
 |---|---|---|
-| User Task | ✅ Workflow Native | [User Task](/refguide/user-task/) |
-| User Task (Multi-instance Parallel) | ✅ Workflow Native | [Multi-User Task](/refguide/multi-user-task/) |
-| Service Task | ✅ Workflow Native | [Call Microflow](/refguide/call-microflow/) |
-| Script Task | ✅ Workflow Native | [Call Microflow](/refguide/call-microflow/) |
+| User Task | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [User Task](/refguide/user-task/) |
+| User Task (Multi-instance Parallel) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Multi-User Task](/refguide/multi-user-task/) |
+| Service Task | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Call Microflow](/refguide/call-microflow/) |
+| Script Task | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Call Microflow](/refguide/call-microflow/) |
 | Business Rule Task | 🟩 Platform Native | Mendix does not support decision tables. Use [Call Microflow](/refguide/call-microflow/) to build your own decision logic in a [microflow](/refguide/microflows/). The Call Microflow element has built-in branching based on the [microflow return type](/refguide/call-microflow/#outcomes). |
 | Send Task | 🟩 Platform Native | Use [Call Microflow](/refguide/call-microflow/) with a [Notify Workflow](/refguide/notify-workflow/) activity inside to send the message. |
-| Receive Task | ✅ Workflow Native | [Wait for Notification](/refguide/wait-for-notification/) |
+| Receive Task | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Wait for Notification](/refguide/wait-for-notification/) |
 | Manual Task | 🟩 Platform Native | Use [Call Microflow](/refguide/call-microflow/) with no logic inside. It acts as a pass-through and continues automatically when the workflow instance arrives. |
 
 ## Subprocesses {#subprocesses}
 
 | Element | Support Level | How |
 |---|---|---|
-| Embedded Subprocess | ❌ Not Supported | Not supported. |
-| Call Activity (Reusable Subprocess) | ✅ Workflow Native | [Call Workflow](/refguide/call-workflow/) |
-| Event Subprocess | ✅ Workflow Native | [Event Subprocess](/refguide/workflow-event-sub-processes/) |
-| Transaction Subprocess | ❌ Not Supported | Not supported. |
-| Ad-hoc Subprocess | ❌ Not Supported | Not supported. |
+| Embedded Subprocess | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Call Activity (Reusable Subprocess) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Call Workflow](/refguide/call-workflow/) |
+| Event Subprocess | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Event Subprocess](/refguide/workflow-event-sub-processes/) |
+| Transaction Subprocess | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Ad-hoc Subprocess | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
 
 ## Swimlanes {#swimlanes}
 
@@ -66,8 +66,8 @@ Each BPMN element is marked with a support level indicator:
 
 | Element | Support Level | How |
 |---|---|---|
-| Text Annotation | ✅ Workflow Native | Use the **Annotation** element on the Workflow canvas to add descriptive notes. |
-| Group | ❌ Not Supported | Not supported. |
+| Text Annotation | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | Use the **Annotation** element on the Workflow canvas to add descriptive notes. |
+| Group | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
 
 ## Events {#events}
 
@@ -77,17 +77,17 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 
 | Variant | Support Level | How |
 |---|---|---|
-| Start | ✅ Workflow Native | Every workflow has one start event. Start a workflow by providing an object of the entity type that the workflow expects. Use the [Call Workflow](/refguide/on-click-event/#call-workflow) page action (for example, on a button with a data view) or the [Call Workflow](/refguide/workflow-call/) activity in a [microflow](/refguide/microflows/) where you pass the [context object](/refguide/workflow-call/#context-object). |
-| Intermediate Throw | ❌ Not Supported | Not supported. |
-| End | ✅ Workflow Native | [End Event](/refguide/end-event/) |
+| Start | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | Every workflow has one start event. Start a workflow by providing an object of the entity type that the workflow expects. Use the [Call Workflow](/refguide/on-click-event/#call-workflow) page action (for example, on a button with a data view) or the [Call Workflow](/refguide/workflow-call/) activity in a [microflow](/refguide/microflows/) where you pass the [context object](/refguide/workflow-call/#context-object). |
+| Intermediate Throw | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| End | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [End Event](/refguide/end-event/) |
 
 ### Message Events {#message-events}
 
 | Variant | Support Level | How |
 |---|---|---|
 | Start | 🟩 Platform Native | Same as None Start – process the message data in a [microflow](/refguide/microflows/), create or populate an object of the entity type that the workflow expects, and start the workflow using the [Call Workflow](/refguide/workflow-call/) activity by passing that [context object](/refguide/workflow-call/#context-object). Alternatively, use the [Call Workflow](/refguide/on-click-event/#call-workflow) page action on a page. |
-| Event Subprocess (Interrupting) | ✅ Workflow Native | [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) |
-| Event Subprocess (Non-Interrupting) | ✅ Workflow Native | [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) |
+| Event Subprocess (Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) |
+| Event Subprocess (Non-Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) |
 | Intermediate Catch | 🟦 Planned | As Notification Event, use [Wait for Notification](/refguide/wait-for-notification/) activity as an alternative. |
 | Intermediate Boundary (Interrupting) | 🟦 Planned | As Interrupting Notification Event. |
 | Intermediate Boundary (Non-Interrupting) | 🟦 Planned | As Non-Interrupting Notification Event. |
@@ -101,9 +101,9 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 | Start | 🟩 Platform Native | Use a [scheduled event](/refguide/scheduled-events/) to run a [microflow](/refguide/microflows/) that starts the workflow using the [Call Workflow](/refguide/workflow-call/) activity. |
 | Event Subprocess (Interrupting) | 🟦 Planned | As Interrupting Timer Event Subprocess Start. |
 | Event Subprocess (Non-Interrupting) | 🟦 Planned | As Non-Interrupting Timer Event Subprocess Start. |
-| Intermediate Catch | ✅ Workflow Native | [Timer](/refguide/timer/) |
-| Intermediate Boundary (Interrupting) | ✅ Workflow Native | [Interrupting Timer Event](/refguide/timer/) |
-| Intermediate Boundary (Non-Interrupting) | ✅ Workflow Native | [Non-Interrupting Timer Event](/refguide/timer/) |
+| Intermediate Catch | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Timer](/refguide/timer/) |
+| Intermediate Boundary (Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Interrupting Timer Event](/refguide/timer/) |
+| Intermediate Boundary (Non-Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Non-Interrupting Timer Event](/refguide/timer/) |
 
 ### Error Events {#error-events}
 
@@ -168,35 +168,35 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 
 | Variant | Support Level | How |
 |---|---|---|
-| End | ❌ Not Supported | Not Supported. |
+| End | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not Supported. |
 
 ### Link Events {#link-events}
 
 | Variant | Support Level | How |
 |---|---|---|
-| Intermediate Catch | ✅ Workflow Native | [Jump Activity](/refguide/jump-activity/) |
-| Intermediate Throw | ✅ Workflow Native | [Jump Activity](/refguide/jump-activity/) |
+| Intermediate Catch | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Jump Activity](/refguide/jump-activity/) |
+| Intermediate Throw | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Jump Activity](/refguide/jump-activity/) |
 
 ### Multiple Events {#multiple-events}
 
 | Variant | Support Level | How |
 |---|---|---|
-| Start | ❌ Not Supported | Not supported. |
-| Event Subprocess (Interrupting) | ❌ Not Supported | Not supported. |
-| Event Subprocess (Non-Interrupting) | ❌ Not Supported | Not supported. |
-| Intermediate Catch | ❌ Not Supported | Not supported. |
-| Intermediate Boundary (Interrupting) | ❌ Not Supported | Not supported. |
-| Intermediate Boundary (Non-Interrupting) | ❌ Not Supported | Not supported. |
-| Intermediate Throw | ❌ Not Supported | Not supported. |
-| End | ❌ Not Supported | Not supported. |
+| Start | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Event Subprocess (Interrupting) | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Event Subprocess (Non-Interrupting) | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Intermediate Catch | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Intermediate Boundary (Interrupting) | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Intermediate Boundary (Non-Interrupting) | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Intermediate Throw | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| End | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
 
 ### Multiple Parallel Events {#multiple-parallel-events}
 
 | Variant | Support Level | How |
 |---|---|---|
-| Start | ❌ Not Supported | Not supported. |
-| Event Subprocess (Interrupting) | ❌ Not Supported | Not supported. |
-| Event Subprocess (Non-Interrupting) | ❌ Not Supported | Not supported. |
-| Intermediate Catch | ❌ Not Supported | Not supported. |
-| Intermediate Boundary (Interrupting) | ❌ Not Supported | Not supported. |
-| Intermediate Boundary (Non-Interrupting) | ❌ Not Supported | Not supported. |
+| Start | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Event Subprocess (Interrupting) | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Event Subprocess (Non-Interrupting) | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Intermediate Catch | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Intermediate Boundary (Interrupting) | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Intermediate Boundary (Non-Interrupting) | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |

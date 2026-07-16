@@ -29,6 +29,6 @@ Workstation Client is used by central IT, support teams, operators, and supervis
 
 ## Accessing the Workstation Connector
 
-The Workstation Connector is available for download from the Mendix Marketplace. For more information, see [Installing and Configuring the Workstation Connector](#install-connector).
+The Workstation Connector is available for download from the Mendix Marketplace. For more information, see [Installing and Configuring the Workstation Connector](/mendix-workstation/install-connector/#install-connector).
 
 ## Read More

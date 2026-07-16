@@ -277,7 +277,11 @@ The following settings apply to the IdP configuration:
 
 * **Log SAML Requests** – Determines whether all requests and login attempts should be logged and stored in an entity.
 
-When you add a new configuration or change an existing one, you should restart your app. This ensures that the correct configuration is used.
+In versions below 4.1.0, when you add a new configuration or change an existing one, you must restart your app. This ensures that the correct configuration is used by all instances of your app. From version 4.1.0, a restart is no longer required after changing the configuration.
+
+{{% alert color="info" %}}
+In a horizontally-scaled environment, configuration changes made on one instance are not automatically propagated to other instances. To apply changes consistently across all instances, you must restart all instances of your app.
+{{% /alert %}}
 
 ## IdP Configuration
 

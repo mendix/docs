@@ -48,12 +48,7 @@ The **From** address must be an address the configured email server is allowed t
 
 ### Security Method {#security-method}
 
-The **Security method** section determines how the connection authenticates to the email server. The connection uses basic authentication. Configure the following parameters in the table by selecting a row and clicking **Edit** (or double-clicking the row). Each value is defined using a microflow expression.
-
-| Parameter | Type   | Description                                            |
-| --------- | ------ | ------------------------------------------------------ |
-| Username  | String | The username used to authenticate to the email server. |
-| Password  | String | The password used to authenticate to the email server. |
+The **Security method** section determines how the connection authenticates to the email server. The connection uses basic authentication. 
 
 {{% alert color="warning" %}}
 Basic authentication (username and password) is deprecated or disabled by default on several major email providers, including Google Workspace and Microsoft 365, unless the tenant administrator has explicitly re-enabled it. To send emails through these providers, you can:
@@ -61,31 +56,57 @@ Basic authentication (username and password) is deprecated or disabled by defaul
 * Use a provider that supports basic SMTP authentication.
 {{% /alert %}}
 
+#### Username
+
+The **Username** property is the username used to authenticate to the email server.
+
+#### Password
+
+The **Password** property is the password used to authenticate to the email server. 
+
 {{% alert color="warning" %}}
 Avoid hard-coding a password as a literal value in the microflow because it would then be stored in the app model. Instead, provide the credential through a mechanism that keeps it out of the model (for example, a constant whose value is set per environment). Never commit real credentials to version control.
 {{% /alert %}}
 
 ### Connection {#connection}
 
-The **Connection** section configures how Studio Pro reaches the email server.
-
-| Property              | Type        | Default Value | Description                                                                                                                  |
-| --------------------- | ----------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Email Protocol        | String      | SMTP          | The protocol used to send email. This property is read-only.                                                                 |
-| Security Type         | Enumeration | TLS           | The transport security used for the connection: **None**, **SSL**, or **TLS**.                                               |
-| Check Server Identity | Boolean     | No            | Whether to verify the server's identity (certificate). This option is only enabled when **Security Type** is set to **SSL**. |
-| Timeout (ms)          | Integer     | 20000         | The connection timeout (in milliseconds).                                                                                     |
-
-Configure the following parameters in the table by selecting a row and clicking **Edit** (or double-clicking the row). Each value is defined using a microflow expression.
-
-| Parameter   | Type    | Description                             |
-| ----------- | ------- | --------------------------------------- |
-| Server Host | String  | The address of the email (SMTP) server. |
-| Server Port | Integer | The port of the email (SMTP) server.    |
+The **Connection** field configures how Studio Pro reaches the email server.
 
 {{% alert color="info" %}}
 Connection details such as the **Server Host**, **Server Port**, and the **Email ID (From)** are commonly stored as [Constants](/refguide/constants/) so they can differ per environment instead of being hard-coded in the microflow. Referencing the same constants from multiple **Send Email** activities also lets you update the server settings in one place instead of editing each activity individually.
 {{% /alert %}}
+
+#### Email Protocol 
+
+The **Email Protocol** property is the protocol used to send email. This property is read-only. 
+
+Default value: *SMTP*
+
+#### Security Type 
+
+The **Security Type** property is the transport security used for the connection: **None**, **SSL**, or **TLS**. 
+ 
+Default value: *TLS*
+
+#### Check Server Identity
+
+The **Check Server Identity** option defines whether to verify the server's identity (certificate). This option is only enabled when **Security Type** is set to **SSL**.
+
+Default value: *No*
+
+#### Timeout (ms)
+
+The connection timeout (in milliseconds).   
+
+Default value: *20000*
+
+#### Server Host
+
+The **Server Host** property is the address of the email (SMTP) server.
+
+#### Server Port
+
+The **Server Port** property is the port of the email (SMTP) server.
 
 ### Test Connection {#test-connection}
 
@@ -103,11 +124,17 @@ The **Message** tab configures the recipients, custom headers, message content, 
 
 Configure the recipients in the table by selecting a row and clicking **Edit** (or double-clicking the row). Each value is defined using a microflow expression.
 
-| Parameter | Type   | Description                                      |
-| --------- | ------ | ------------------------------------------------ |
-| To        | String | The primary recipient (or recipients) of the email.           |
-| Cc        | String | The carbon-copy recipient (or recipients) of the email.       |
-| Bcc       | String | The blind carbon-copy recipient (or recipients) of the email. |
+#### To
+
+The **To** field is the primary recipient (or recipients) of the email.  
+
+#### Cc
+
+The **Cc** field is the carbon-copy recipient (or recipients) of the email.  
+
+#### Bcc
+
+The **Bcc** field is the blind carbon-copy recipient (or recipients) of the email. 
 
 ### Custom Headers {#custom-headers}
 
@@ -117,24 +144,17 @@ The **Custom headers** section allows you to add custom email headers. Use the t
 * **Edit** – edit the selected custom header
 * **Delete** – remove the selected custom header
 
-Each custom header has the following properties:
+#### Name
 
-| Property | Description                                                                                    |
-| -------- | ---------------------------------------------------------------------------------------------- |
-| Name     | The name of the header. This can only contain letters, digits, and hyphens, and cannot be empty. |
-| Value    | The value of the header. It cannot be empty and cannot contain line breaks.                  |
+The **Name** property is the name of the header. This can only contain letters, digits, and hyphens, and cannot be empty.
+
+#### Value
+
+The **Value** property is the value of the header. It cannot be empty or contain line breaks.  
 
 ### Message Body {#message-body}
 
-Configure the subject and body in the table by selecting a row and clicking **Edit** (or double-clicking the row).
-
-| Parameter                 | Type   | Description                               |
-| ------------------------- | ------ | ----------------------------------------- |
-| Subject                   | String | The subject line of the email.            |
-| Message body (Plain Text) | String | The plain-text version of the email body. |
-| Message body (HTML)       | String | The HTML version of the email body.       |
-
-Each of these fields can be defined either as a plain text or as a string template. A string template is fixed text with `{1}`, `{2}`, … placeholders whose values are of type microflow expression and come from parameter expressions evaluated against the surrounding microflow. For example:
+The following fields can be defined either as plain text or as a string template. A string template is fixed text with `{1}`, `{2}`, … placeholders whose values are of type microflow expression and come from parameter expressions evaluated against the surrounding microflow. For example:
 
 ```text
 Subject: "Order {1} confirmed"
@@ -145,16 +165,31 @@ Body:    "Hi {1}, your order ships on {2}."
   {2} → formatDateTime($Order/ShipDate, 'yyyy-MM-dd')
 ```
 
-Note the following about templates:
+{{% alert color="info" %}}
+Consider the following about templates:
+* The subject, the plain-text body, and the HTML body each have their own template. For a given field, use either the plain value or its template consistently.
+*  Keep placeholder numbering contiguous (`{1}`, `{2}`, …), and make sure every placeholder has a corresponding parameter expression.
+* Only reference variables that exist in the microflow's scope at the activity's position. If the data is not yet available, retrieve it earlier in the flow.
+*  The HTML and plain-text bodies are independent. Populate only the one (or ones) you need.
+{{% /alert %}}
 
-- The subject, the plain-text body, and the HTML body each have their own template. For a given field, use either the plain value or its template consistently.
-- Keep placeholder numbering contiguous (`{1}`, `{2}`, …), and make sure every placeholder has a corresponding parameter expression.
-- Only reference variables that exist in the microflow's scope at the activity's position. If the data is not yet available, retrieve it earlier in the flow.
-- The HTML and plain-text bodies are independent. Populate only the one (or ones) you need.
+#### Subject
+
+The **Subject** property is the subject line of the email.   
+
+#### Message Body (Plain Text)
+
+The **Message Body (Plain Text)** property is the plain-text version of the email body.
+
+#### Message Body (HTML) 
+
+The **Message Body (HTML)** property is the HTML version of the email body. 
 
 ### Attachment {#attachment}
 
 In the **Attachment** section, select a microflow variable to attach to the email.
+
+#### Variable
 
 Only variables of type System.FileDocument, List of System.FileDocument, or their specializations can be attached. The variable must exist in the microflow's scope before the **Send Email** activity (the file must already have been retrieved or created earlier in the flow).
 
@@ -164,22 +199,31 @@ The **Send Email** activity does not impose its own attachment size limit. The m
 
 ## Test Email Tab {#test-email}
 
-The **Test Email** tab lets you send a test email to verify your configuration from Studio Pro without triggering the microflow.
+The **Test Email** tab allows you to send a test email to verify your configuration from Studio Pro without triggering the microflow.
 
 ### Test Email Details {#test-email-details}
 
 #### Use Template for Test Email
 
-When selected, the subject and body fields use the string templates configured on the [Message](#message) tab. Because template placeholders reference microflow variables that are not available while testing, click the Edit icon next to each field to provide test values for the template parameters.
+When **Use Template for Test Email** is selected, the subject and body fields use the string templates configured on the [Message](#message) tab. Because template placeholders reference microflow variables that are not available while testing, click the Edit icon next to each field to provide test values for the template parameters.
 
-When not selected, you can enter the subject and body directly:
+When not selected, you can enter the subject and body directly.
 
-| Property                  | Description                                    |
-| ------------------------- | ---------------------------------------------- |
-| To                        | The recipient of the test email.               |
-| Subject                   | The subject line of the test email.            |
-| Message body (Plain Text) | The plain-text version of the test email body. |
-| Message body (HTML)       | The HTML version of the test email body.       |
+#### To
+
+The **To** property is the recipient of the test email.
+
+#### Subject
+
+The **Subject** property is the subject line of the test email.   
+
+#### Message Body (Plain Text)
+
+The **Message Body (Plain Text)** property is the plain-text version of the test email body.
+
+#### Message Body (HTML) 
+
+The **Message Body (HTML)** property is the HTML version of the test email body. 
 
 ### Send Test Email {#send-test-email}
 

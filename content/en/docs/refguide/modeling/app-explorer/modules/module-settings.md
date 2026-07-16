@@ -85,8 +85,6 @@ Improved package management is available for [Studio Pro 11.12](/releasenotes/st
 
 Studio Pro 11.12 introduces improved package management to enable reliable module tracking and updates.
 
-For more information on how to use package management when updating modules, see [Updating Marketplace Modules](/refguide/updating-marketplace-modules/).
-
 Key improvements are delivered through new module properties and a new `manifest.json` file format in module packages (*.mpk* files):
 
 * **Package identification** – Each module receives a [Module ID](#module-id) that uniquely identifies it across all versions. This allows Studio Pro to reliably track modules across updates, even if the module name changes.
@@ -94,6 +92,8 @@ Key improvements are delivered through new module properties and a new `manifest
 * **Metadata tracking** – The manifest includes information about the package name, version (following semantic versioning), type, and the Mendix metamodel version used to create it.
 
 The **Package** section on the **General** tab displays package identification information for the module. Studio Pro uses this information to track modules across versions, which is the foundation for more reliable module updates.
+
+For more information on how to use package management when updating modules, see [Updating Marketplace Modules](/refguide/updating-marketplace-modules/).
 
 ### Module ID {#module-id}
 

@@ -36,3 +36,5 @@ To install and configure the Workstation Connector, perform the following steps:
 3. Register one or more Workstation Clients. 
 
     For more information, see [Registering Workstation Clients](/mendix-workstation/register/).
+
+4. Configure your application. For more information, see [Integrating with Mendix Studio Pro](/mendix-workstation/configure-connector/).

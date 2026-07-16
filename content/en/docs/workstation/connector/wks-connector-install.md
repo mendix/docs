@@ -17,7 +17,7 @@ The Workstation Connector establishes connection with the device through the Wor
 
 When a client browser or tab instance tries to connect to a device, previously connected browser or tab instances are disconnected from the device.
 
-The Workstation Connector connects with Workstation Client using a local WebSocket on port 8094. Communication with each configured device uses another WebSocket on port 8095 for the first device, 8096 for the second, and so on, so that the range of ports used is port *8094* to *8094+n*, where *n* is the number of devices you have. Make sure that the Runtime or Admin port of your local development server in Studio Pro (**App Settings** > **Configurations** > **Server**) is not configured on a port greater or equal to 8094.  
+Since version 4.0, the Workstation Connector connects with Workstation Client using a single persistent WebSocket for all device communication.  
 
 ## Prerequisites
 

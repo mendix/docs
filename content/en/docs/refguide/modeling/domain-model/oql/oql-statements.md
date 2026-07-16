@@ -156,14 +156,20 @@ SET
 
 ## `INSERT` Statement {#oql-insert}
 
+You can use the `INSERT` statement to insert new entity objects into your data. You can do this in two ways:
+
+* using an OQL query – extracting data and use it to insert one or more new objects
+* using values – specifying explicit values and use these to insert one or more new objects
+
 {{% alert color="info" %}}
-Available from Mendix version 11.6.0 when sourcing data from an oql query.
-Available from Mendix version 11.13.0 when using `VALUES` to specify rows directly.
+Available from Mendix version 11.6.0.
+You can use an OQL query from Mendix version 11.6.0.
+You can use values from Mendix version 11.13.0.
 {{% /alert %}}
 
-`INSERT` statements can be written with values or queries.
+### `INSERT` with OQL Query
 
-### `INSERT` with query
+Insert with OQL query allows you to extract data using an OQL query and insert those values as one or more entity objects.
 
 ```sql
 INSERT INTO <entity> ( <attribute> | <association> [ , …n ] ) <oql-query>
@@ -185,7 +191,9 @@ INSERT INTO Module.Order ( OrderNumber, CustomerNumber, Module.Order_Customer )
 SELECT NewOrderNumber, Loader.TemporaryData_Customer/Loader.Customer/Number, Loader.TemporaryData_Customer FROM Loader.TemporaryData
 ```
 
-### `INSERT` with `VALUES`
+### `INSERT` with Values
+
+Insert with values allows you to insert a list of literals, OQL parameters, and OQL expressions as one or more entity objects.
 
 ```sql
 INSERT INTO <entity> ( <attribute> [ , …n ] ) VALUES (<expression 1> [, …<expression n>]) [ …, (<expression 1> [, …<expression n>])]
@@ -195,9 +203,11 @@ INSERT INTO <entity> ( <attribute> [ , …n ] ) VALUES (<expression 1> [, …<ex
 
 * `attribute` is an attribute of the entity that will be inserted.
 
-* `expression n` is any valid OQL expression with literals or OQL parameters.
-Every row must contain the same number of values of compatible types.
-This query can *not* select data from any entities.
+{{% alert color="info" %}}You cannot insert associations when inserting with values.{{% /alert %}}
+
+* `expression x` is any valid expression consisting solely of literals or OQL expressions. Every row must contain the same number of values of compatible types as the list of attributes you are inserting for each entity object.
+
+{{% alert color="info" %}}This expression cannot use OQL clauses to select data from any entities.{{% /alert %}}
 
 Example:
 

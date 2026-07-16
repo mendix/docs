@@ -34,10 +34,9 @@ During the merge, conflicts may occur if you and the publisher both modified the
 To merge your customizations with the updated module, Studio Pro matches documents between the old and new versions. The method depends on whether the module has package IDs:
 
 * Modules with package IDs – Studio Pro uses embedded GUID mapping to match documents by GUID. This is more reliable because documents can be matched even if they have been renamed.
-* Modules without package IDs – Studio Pro maps documents by name. This works well as long as document names have not changed between versions.
 
 {{% alert color="info" %}}
-Studio Pro 11.12 introduced package IDs and document GUID mappings to make updates more reliable. Updates with customization retention also work for older modules without package IDs through name-based mapping.
+Studio Pro 11.12 introduced package IDs and document GUID mappings to make updates more reliable.
 {{% /alert %}}
 
 For more information on package IDs and how they are assigned, see [Module Settings](/refguide/module-settings/#package).

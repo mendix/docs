@@ -70,55 +70,54 @@ The following sections provide a brief overview of supported and unsupported BPM
 
 Each BPMN element is marked with a support level indicator:
 
-* 🟩 Supported – Directly supported in the workflow editor or composable by combining workflow editor constructs and/or platform features
-* 🟦 Planned – Support is planned for an upcoming release
-* {{% icon name="remove-circle-filled" color="red" %}}
- Not Supported – Not currently supported in Mendix
+* {{< icon name="controls-stop-filled" color="green" >}} Supported – Directly supported in the workflow editor or composable by combining workflow editor constructs and/or platform features
+* {{< icon name="controls-stop-filled" color="blue" >}} Planned – Support is planned for an upcoming release
+* {{< icon name="remove-circle-filled" color="red" >}} Not Supported – Not currently supported in Mendix
 
 ### Gateways
 
-* Exclusive Gateway (XOR) – [🟩 Supported](/refguide/bpmn-coverage/#gateways)
-* Parallel Gateway (AND) – [🟩 Supported](/refguide/bpmn-coverage/#gateways)
-* Inclusive Gateway (OR) – [🟩 Supported](/refguide/bpmn-coverage/#gateways)
-* Event-Based Gateway – {{% icon name="remove-circle-filled" color="red" %}}
+* Exclusive Gateway (XOR) – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#gateways)
+* Parallel Gateway (AND) – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#gateways)
+* Inclusive Gateway (OR) – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#gateways)
+* Event-Based Gateway – {{< icon name="remove-circle-filled" color="red" >}}
  Not Supported
-* Complex Gateway – {{% icon name="remove-circle-filled" color="red" %}}
+* Complex Gateway – {{< icon name="remove-circle-filled" color="red" >}}
  Not Supported
 
 ### Tasks
 
-* User Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
-* Service Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
-* Script Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
-* Business Rule Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
-* Send Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
-* Receive Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
-* Manual Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
+* User Task – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#tasks)
+* Service Task – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#tasks)
+* Script Task – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#tasks)
+* Business Rule Task – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#tasks)
+* Send Task – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#tasks)
+* Receive Task – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#tasks)
+* Manual Task – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#tasks)
 
 ### Subprocesses
 
-* Embedded Subprocess – {{% icon name="remove-circle-filled" color="red" %}}
+* Embedded Subprocess – {{< icon name="remove-circle-filled" color="red" >}}
  Not Supported
-* Call Activity – Reusable Subprocess – [🟩 Supported](/refguide/bpmn-coverage/#subprocesses)
-* Event Subprocess – [🟩 Supported](/refguide/bpmn-coverage/#subprocesses)
-* Transaction Subprocess – {{% icon name="remove-circle-filled" color="red" %}}
+* Call Activity – Reusable Subprocess – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#subprocesses)
+* Event Subprocess – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#subprocesses)
+* Transaction Subprocess – {{< icon name="remove-circle-filled" color="red" >}}
  Not Supported
-* Ad-hoc Subprocess – {{% icon name="remove-circle-filled" color="red" %}}
+* Ad-hoc Subprocess – {{< icon name="remove-circle-filled" color="red" >}}
  Not Supported
 
 ### Swimlanes
 
-* Pool – [🟩 Supported](/refguide/bpmn-coverage/#swimlanes)
-* Lane – [🟩 Supported](/refguide/bpmn-coverage/#swimlanes)
+* Pool – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#swimlanes)
+* Lane – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#swimlanes)
 
 ### Data
 
-* Data Objects / Data Store – [🟩 Supported](/refguide/bpmn-coverage/#data)
+* Data Objects / Data Store – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#data)
 
 ### Artifacts
 
-* Text Annotation – [🟩 Supported](/refguide/bpmn-coverage/#artifacts)
-* Group – {{% icon name="remove-circle-filled" color="red" %}}
+* Text Annotation – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#artifacts)
+* Group – {{< icon name="remove-circle-filled" color="red" >}}
  Not Supported
 
 ### Events
@@ -149,37 +148,37 @@ Each BPMN element is marked with a support level indicator:
     <!-- NONE -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>None</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#none-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#none-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td><a href="/refguide/bpmn-coverage/#none-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#none-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
     <!-- MESSAGE -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Message</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
     <!-- TIMER -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Timer</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -187,35 +186,35 @@ Each BPMN element is marked with a support level indicator:
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Error</strong></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#error-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#error-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#error-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#error-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#error-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#error-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
     <!-- SIGNAL -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Signal</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
     <!-- CONDITIONAL -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Conditional</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -223,25 +222,25 @@ Each BPMN element is marked with a support level indicator:
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Escalation</strong></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟦 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
     <!-- COMPENSATION -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Compensation</strong></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#compensation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#compensation-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟩 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#compensation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#compensation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
     <!-- CANCEL -->
     <tr>
@@ -250,10 +249,10 @@ Each BPMN element is marked with a support level indicator:
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#cancel-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#cancel-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#cancel-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#cancel-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
     <!-- TERMINATE -->
     <tr>
@@ -265,7 +264,7 @@ Each BPMN element is marked with a support level indicator:
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#terminate-events">{{% icon name="remove-circle-filled" color="red" %}}
+      <td><a href="/refguide/bpmn-coverage/#terminate-events">{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</a></td>
     </tr>
     <!-- LINK -->
@@ -274,46 +273,46 @@ Each BPMN element is marked with a support level indicator:
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#link-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#link-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#link-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#link-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
     </tr>
     <!-- MULTIPLE -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Multiple</strong></td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
     </tr>
     <!-- MULTIPLE PARALLEL -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Multiple Parallel</strong></td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
-      <td>{{% icon name="remove-circle-filled" color="red" %}}
+      <td>{{< icon name="remove-circle-filled" color="red" >}}
  Not Supported</td>
       <td></td>
       <td></td>

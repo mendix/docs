@@ -139,6 +139,6 @@ The following widgets allow you to specify when to execute an action:
 
 Logs for the Workstation Management, Client, and Connector are available in case of issues. For more information about accessing the logs, see [Troubleshooting Mendix Workstation](/mendix-workstation/troubleshooting/).
 
-## Deploying your Application
+## Deploying Your Application
 
 There are multiple ways to deploy a Mendix application. You can deploy to your local machine for development and testing. You can deploy to Mendix Cloud, which is the default location for both free and licensed apps. You can also deploy to SAP Business Technology (SAP BTP) Platform, Kubernetes and Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself. For more information, see [Deploying Apps](/deployment/).

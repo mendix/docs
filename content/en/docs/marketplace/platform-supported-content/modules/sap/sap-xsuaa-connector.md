@@ -55,7 +55,7 @@ After you install the connector, you can find it in the **App** > **Marketplace 
 
 You need to provide your own [xs-security.json](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.04/en-US/6d3ed64092f748cbac691abc5fe52985.html) file to add custom configuration to your XSUAA connector.
 
-1. Ensure that the **xsuaa** service is in the status **Services To Be Bound**. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
+1. Ensure that the **xsuaa** service is in the status **Services To Be Bound**. For more information, see the [Services Tab](/developerportal/deploy/sap-cloud-platform/environments/#binding-services) section of *Environment Details on SAP BTP*.
 
 2. Click the three dots **…** next to the **xsuaa** service and select **Add Binding Configuration**.
 

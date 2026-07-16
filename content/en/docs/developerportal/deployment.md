@@ -23,7 +23,7 @@ For details on the **Environments** pages for Mendix Cloud, Mendix on Kubernetes
 
 * Mendix Cloud deployments – [Environments](/developerportal/deploy/environments/)
 * Mendix on Kubernetes deployments – [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/#environment-details)
-* SAP deployments – [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/#EnvironmentDetails)
+* SAP deployments – [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/environments/)
 
 Other platforms are not currently supported on the **Environments** page; instead, you must go to the relevant platform portal to monitor and configure your environments.
 

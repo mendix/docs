@@ -4,6 +4,7 @@ url: /community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide
 weight: 100
 description: "Guidelines on usage, capitalization, and spelling for Mendix product names and terms, including main products and other Mendix-specific terminology."
 ---
+<!-- vale off -->
 
 ## Purpose of This Guide
 
@@ -86,9 +87,9 @@ It is fine to use "Control Center."
 
 ### Mendix Marketplace
 
-Capitalize in all instances, even when just writing "Marketplace."
+Capitalize in all instances, even when just writing "Marketplace." Use "Mendix Marketplace" on first mention in a document, then "Marketplace" for subsequent mentions. When there's risk of confusion with another marketplace (such as Siemens Marketplace), use "Mendix Marketplace" throughout.
 
-It is fine to use "the Mendix Marketplace" or "the Marketplace."
+This is a product name, so don't add a definite article.
 
 ### Mendix Platform
 
@@ -131,20 +132,6 @@ A solution for an air-gapped secure Mendix deployment.
 
 This section contains various Mendix terms that are used in the product UI and documentation.
 
-### application & app
-
-An "application" or "app" can be one of the following:
-
-* A local application
-* A Free App
-* A licensed application hosted on Mendix Cloud; another cloud such as AWS, SAP Cloud, or IBM Cloud Portal; or on the user's own server
-
-Do not capitalize (meaning, do not write "Mendix App").
-
-Do not replace with "app project" (or "project") generically, even when referring to project management-like tasks. **Project** is still used in some UI text, but that usage is being phased out. Using "app" in all instances is prioritized.
-
-The full word "application" has a more well-rounded meaning to it (as in, web and mobile apps), whereas "app" may suggest just mobile apps to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.
-
 ### App ID
 
 Always capitalize.
@@ -155,7 +142,7 @@ Does not need to be capitalized, and "team" should be used without the qualifier
 
 ### app template
 
-This is the term to use to reflect the create-new-app flow UI in the Developer Portal.
+This is the term to use to reflect the create-new-app flow UI in Apps.
 
 Do not use "starter app."
 
@@ -289,7 +276,7 @@ Do not use "Mendix Administrator."
 
 This term replaces "Mendix" and "Mendix Mobile app" (which are not to be used in the product UI or documentation).
 
-Always use "the Mendix Developer App" and cross-reference [Getting the Mendix Developer App](/refguide8/getting-the-mendix-app/) where possible.
+Always use "the Mendix Developer App".
 
 ### Mendix Client
 
@@ -462,12 +449,6 @@ Do not use SBoM.
 ### Sprint
 
 Capitalize in all instances.
-
-### Studio Pro landing page
-
-The Studio Pro landing page refers to the page that contains **My Apps**, **Marketplace**, and **Developer Portal** tabs.
-
-Capitalize "Studio Pro".
 
 ### sub-microflow
 

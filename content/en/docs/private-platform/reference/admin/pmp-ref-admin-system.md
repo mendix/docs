@@ -104,9 +104,13 @@ To enable content import from a Content Delivery Network, follow these steps:
 6. Click **Save** to enable content import from this bundle.
 7. Click **Go to Marketplace Import** to view the available downloads in the **Import Content** > **Import from CDN** tab.
 
-#### Version Support
+#### Version Settings {#version-settings}
 
-In this section, you can view or disable the versions of Mendix Studio Pro that your users are allowed to download.
+In this section, you can perform the following tasks:
+
+* View or disable the versions of Mendix Studio Pro that your users are allowed to download. 
+* Disable the option to download Studio Pro and patch content from the home page, **My Apps** page, and **Get Studio Pro** page.
+* Enter instructions for your users on how to request a Studio Pro download.
 
 ### Integrations
 

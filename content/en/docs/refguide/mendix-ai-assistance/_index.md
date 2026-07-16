@@ -25,9 +25,15 @@ For information on what third-party services Maia uses and what data are sent to
 
 For more information on how to ensure optimal performance of Maia, see the [Best Practice for Maia Performance](#maia-performance-best-practice) section below.
 
-## Fair Use Policy {#fair-use}
+## Maia Usage Limits {#maia-usage}
 
-Mendix applies fair use limits to maintain a reliable experience for all users. If usage exceeds these limits, your Maia access may be temporarily paused. Account access is reviewed on a weekly schedule. Your account will be automatically reactivated within seven days once the review period concludes.
+To ensure a reliable experience with Maia, Mendix provides two ways to manage your usage: purchasing Maia Units and configuring a custom AI provider of your choice. Every company receives 2400 free units per month and can purchase more as needed.
+
+When your free Maia Units allocation or purchased Maia Units have been consumed, you receive a notification in Studio Pro indicating that you need to take action before you can use Maia Make again. Your allocation resets at the start of each month. To increase your capacity, you can purchase additional Maia Units. For more information on purchasing Maia Units, see [Increasing Your Maia Usage Capacity](/control-center/maia-resources/#increase-maia-units). 
+
+If you need uninterrupted access to Maia capabilities, you can [configure a custom AI provider](/refguide/maia-make/#custom-provider) to use your own LLM provider.
+
+Alternatively, you can use the Studio Pro MCP Server's bring your own agent (BYO Agent) capabilities, which allows you to use Maia's capabilities directly from external clients, including AI coding assistants, agents, and other MCP-based LLM tools. For more information on the Studio Pro MCP Server, see [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/).
 
 ## Network Configuration Requirements {#maia-network-requirement}
 
@@ -45,13 +51,15 @@ Starting point for app creation:
 * **Start with Maia** - a starting point in Studio Pro that helps you to start the app development process. Based on a required text description and an optional image or PDF, it generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
 * **Maia Make** - a unified conversational interface in Studio Pro that groups all AI-assisted development capabilities into a single chat experience. With this interface, everything happens in one place. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask it to explain documents for you, including your app logic and pages. 
 
-    This unified conversational interface is released in Studio Pro 11.8. For more information, see [Maia Make](/refguide/maia-make/).
+    This unified conversational interface was released in Studio Pro 11.8. For more information, see [Maia Make](/refguide/maia-make/).
 
 Guidance:
 
 * **Maia Chat** – a built-in chat interface powered by Generative AI in Studio Pro. It answers questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/). 
 * **Maia Learn** – helps you to quickly learn Mendix core concepts and get started with Studio Pro. For more information, see [Maia Learn](/refguide/maia-learn/).
 * **Maia Explain** – helps you easily understand a microflow or a nanoflow. It explains the general purpose of the logic and highlights specific technical details to help you understand the logic further. For more information, see [Maia Explain](/refguide/maia-explain/).
+* **Maia Agent Skills** – lets you define modular, reusable instructions that extend Maia with domain-specific knowledge. Maia applies them automatically whenever relevant, eliminating the need to repeat the same context across conversations. For more information, see [Maia Agent Skills](/refguide/maia-agent-skills/).
+* **Maia Agent Instructions** – allows you to define project- or module-level instructions (AGENTS.md) that steer agent behavior. You can use them to set common context for your prompts, such as company conventions or environment restrictions. For more information, see [Maia Agent Instructions](/refguide/maia-instructions/).
 
 Recommenders:
 
@@ -84,6 +92,10 @@ Various Maia features are available in Mendix Portal. For more information, refe
 Various Maia features are available in Private Mendix Platform. For more information, refer to [Maia in Private Mendix Platform](/private-mendix-platform/maia/).
 
 ## Maia Third-Party Services {#maia-third-party-services}
+
+{{% alert color="info" %}}
+As of Studio Pro 11.12, Maia Make uses Claude Sonnet 4.6.
+{{% /alert %}}
 
 [Maia Make](/refguide/maia-make/) introduced in Studio Pro 11.8 uses Claude Sonnet 4.5. Any Maia Make capability in Studio Pro 11.8 and above uses this model to generate Mendix models. 
 

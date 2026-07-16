@@ -8,6 +8,19 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.12.0
+
+* We removed the elements helper methods (`add*()`, `get*()`, `getContainer()`, and `delete()`) from the Model API types.
+* We added a `permissionsChanged` event to the [Permissions API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/) that notifies you when the user changes the permissions of your extension.
+* We added the `documentsChanged` event, which notifies you when a document that your extension depends on is modified in Studio Pro.
+* The Studio Pro version is now available through the [Preferences API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/preference-api/).
+
+## Version 11.11.0
+
+* We added a **New** button to the [Element Selector API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/), which allows users to add new documents and entities from the element selector.
+* We added a fast reload capability for [Custom Blob documents](/apidocs-mxsdk/apidocs/web-extensibility-api-11/custom-blob-document-api/). When a **Custom Blob** document is saved or updated you can see your changes in your locally running app immediately, without having to stop and restart the app. 
+* We allow [Custom Blob documents](/apidocs-mxsdk/apidocs/web-extensibility-api-11/custom-blob-document-api/) to have a basic properties form with the title and documentation of the **Custom Blob** document.
+
 ## Version 11.10.0
 
 * We added a **Show** button to the [Element Selector API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/), which allows users to navigate to the selected element in the editor.

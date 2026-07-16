@@ -2,13 +2,13 @@
 title: "Optimistic Locking"
 url: /refguide/optimistic-locking/
 description: "Describes optimistic locking support."
-beta: true
 ---
 
 ## Introduction
 
 {{% alert color="info" %}}
-This feature is available in Beta starting with Mendix version 11.5.0.
+This feature is Generally Available in Mendix version 11.11.0 and above.
+This feature was available as Beta since Mendix version 11.5.0.
 {{% /alert %}}
 
 Optimistic locking is a strategy used in concurrent systems to prevent lost updates when multiple users or processes try to modify the same piece of data at the same time. Instead of locking the data immediately, and preventing other users from accessing it, optimistic locking allows multiple users to read, and potentially modify, the same data concurrently. In optimistic locking, the assumption is that conflicts are rare, so it checks for conflicts only at the very last moment, when an update is attempted.
@@ -17,17 +17,25 @@ If a conflict is detected—meaning someone else has modified the data since you
 
 You can decide whether optimistic locking is enabled or disabled for your app.
 
-## Behavior of App with Optimistic Locking Disabled
+### Support Status by App Type
+
+Optimistic locking is supported in the following types of Mendix apps:
+
+* Online apps: supported since [Studio Pro 11.5](/releasenotes/studio-pro/11.5/)
+* Offline apps: supported since [Studio Pro 11.11](/releasenotes/studio-pro/11.11/)
+    * **Additional Information on Optimistic Locking in Offline Apps** — As data can live for a long time in offline apps, changes based on that data that are synchronized from offline apps to the Mendix Runtime Server are committed to the database without optimistic locking to avoid conflicts. As such, offline data synchronization may overwrite changes.
+
+## App Behavior: Optimistic Locking Disabled
 
 When two modifications are saved, they are applied in the order of processing. Only changed attributes are written to the database. This means that if the two commits change different attributes or associations of an object, the changes are not overwritten.
 
 For example, if one user commits changes for `AttributeA` and `AttributeB` and another user commits changes for `AttributeB` and `AttributeC` for the same object, then both `AttributeA` and `AttributeC` are committed according to both users' changes. `AttributeB` is committed based on whichever change was committed later.
 
-## Behavior of App with Optimistic Locking Enabled
+## App Behavior: Optimistic Locking Enabled
 
 The Mendix runtime implements optimistic locking by tracking the version of all objects using the attribute `MxObjectVersion` with type `Long`. Although the `MxObjectVersion` attribute is not write-protected, setting this value does not result in it being saved to the database. Its current value is compared with the value for the same object in the database.
 
-### How to Enable and Use Optimistic Locking
+### Enabling and Using Optimistic Locking
 
 You can enable optimistic locking for your Mendix application in the `Runtime` tab in the **App Settings** dialog:
 

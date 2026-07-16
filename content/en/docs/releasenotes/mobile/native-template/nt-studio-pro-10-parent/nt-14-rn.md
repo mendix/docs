@@ -5,14 +5,30 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.18
+
+**Release date: June 10, 2026**
+
+### Improvements
+
+* We removed the fallback `scijava` Maven repositories.
+
+## 14.1.17
+
+**Release date: May 04, 2026**
+
+### Improvements
+
+* We updated vulnerable `okhttp`, `jackson`, and `security-crypto` dependencies.
+
 ## 14.1.16
 
 **Release date: Apr 29, 2026**
 
 ### Fixes
 
-- We fixed an issue where version logs events were not recorded in Firebase for Android.
-- We fixed an issue which occurred when building apps in Xcode 26.4 and above.
+* We fixed an issue where version logs events were not recorded in Firebase for Android.
+* We fixed an issue which occurred when building apps in Xcode 26.4 and above.
 
 ## 14.1.15 {#1425}
 

@@ -12,11 +12,53 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### June 11, 2026
+
+#### License Manager CLI v0.10.11 {#0.10.11}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+
+#### Mendix Operator v2.27.1 {#2.27.1}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+
+### June 4, 2026
+
+#### Portal Improvements
+
+* We have added a check to prevent enabling **Compatibility Metrics Mode** in **Runtime Metrics Configuration** for Operator version 2.27.0 and above.
+
+### June 2, 2026
+
+#### Mendix Operator v2.27.0 {#2.27.0}
+
+* We have added support for the Kubernetes Gateway API.
+* We have added an option to load client certificates from Kubernetes secrets created on the cluster side.
+* We have added an option to specify default `nodeSelectors` for pods created and managed by the Operator.
+* We have added an option to specify default labels for pods created and managed by the Operator.
+* We have addressed an issue where enabling OpenTelemetry auto-instrumentation would show a **processing** spinner on the Runtime status.
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+* We have updated the list of supported platforms to include Kubernetes 1.36.
+
+#### Deprecations
+
+* We have removed support for the **compatibility** Prometheus metrics mode. Any environments still using **compatibility** metrics should be switched into **native** metrics mode.
+
 ### May 21, 2026
 
 #### License Manager CLI v0.10.10 {#0.10.10}
 
 * We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+#### STACKIT support
+
+* We now officially support deploying Mendix apps to [STACKIT Kubernetes Engine (SKE)](https://stackit.com/en/products/runtime/stackit-kubernetes-engine), with support for [STACKIT PostgreSQL Flex](https://stackit.com/en/products/database/stackit-postgresql-flex), [STACKIT Object Storage](https://docs.stackit.cloud/products/storage/object-storage/) (S3-compatible), and the [STACKIT Container Registry](https://docs.stackit.cloud/products/developer-platform/container-registry/).
+* Customers provision the SKE cluster, PostgreSQL Flex databases, and Object Storage buckets themselves before deploying Mendix. For configuration details, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) and [Storage Plans](/developerportal/deploy/private-cloud-storage-plans/).
+
+##### Known STACKIT Limitations
+
+* STACKIT PostgreSQL Flex does not expose the `CREATEROLE` privilege, so the on-demand PostgreSQL provisioner cannot create users automatically. Use the [Dedicated JDBC plan](/developerportal/deploy/private-cloud-storage-plans/#database-jdbc) and create a dedicated database user per environment using the STACKIT CLI or API.
+* STACKIT Object Storage does not implement `CreateUser`, `CreatePolicy`, or `CreateBucket`, so buckets must be created up front. You can either share one bucket across environments, or pre-create a bucket per environment.
 
 ### May 7, 2026
 
@@ -26,7 +68,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ### May 1, 2026
 
-#### Mendix Ops CLI
+#### Helm Chart UI
 
 * We have released a new mx-ops-cli tool for configuring namespaces and performing base installations by using Helm charts. For more information, see [Installing Components through the Helm Chart UI](/developerportal/deploy/helm-charts/).
 

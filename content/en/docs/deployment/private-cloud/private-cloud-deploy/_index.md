@@ -31,7 +31,6 @@ You can also create environments and deploy and manage apps using the [Mendix on
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-cluster/) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro 8.0.0 (build 56467) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 * Make sure that the security of the app is set to Production. By default, all environments are set to Production mode when created. The DTAP mode is disabled by default. If you want to change it to Developer mode, the cluster manager can enable the DTAP mode from the Cluster Manager page.
 

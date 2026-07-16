@@ -7,7 +7,7 @@ description: "Describes the configuration and usage of the Image Cropper widget,
 
 ## Introduction
 
-The [Image Cropper](https://marketplace.mendix.com/link/component/<COMPONENT_ID>) widget lets an end-user crop, rotate, zoom, and convert an image to grayscale directly in the browser. The edited result is saved back to the same image attribute the widget is bound to.
+The [Image Cropper](https://marketplace.mendix.com/link/component/302076) widget lets an end-user crop, rotate, zoom, and convert an image to grayscale directly in the browser. The edited result is saved back to the same image attribute the widget is bound to.
 
 All editing is done client-side on an HTML canvas. There is no separate apply or save button: the crop is saved back to the image attribute automatically as the end-user works.
 

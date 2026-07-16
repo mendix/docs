@@ -87,7 +87,7 @@ To go to the [licensed environments](/developerportal/deploy/environments/) of y
 
 ### Navigation Pane {#navigation-pane}
 
-You can open a project in [Projects](https://sprintr.home.mendix.com/) by clicking the project tile. After a project is open, you can navigate between sections using the navigation pane on the left side of the screen. 
+You can open a project in [Projects](https://projects.home.mendix.com/) by clicking the project tile. After a project is open, you can navigate between sections using the navigation pane on the left side of the screen. 
 
 The navigation pane is divided into these main categories:
 

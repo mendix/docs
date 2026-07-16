@@ -65,7 +65,7 @@ To find your existing API key or to request a new key for your app as an existin
 
 To send your runtime information to Datadog, you need to provide the Datadog API key to your environment. To do so, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** on the environment you wish to monitor with Datadog. 
 1. Switch to the **Runtime** tab.
 1. Click **Add** in the **Custom Environment Variables** section.
@@ -147,7 +147,7 @@ Mendix recommends using the following tags:
 
 To set these tags, do the following:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** on an environment you are monitoring with Datadog. 
 1. Switch to the **Tags** tab
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/datadog-metrics/set-tags.png" alt="Example metric showing tags in Datadog" class="no-border" >}}
@@ -222,7 +222,7 @@ Enabling Mendix Tracing may significantly affect your Datadog APM costs. Review 
 
 To enable Mendix Tracing, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 2. Click **Details** on the environment you want to monitor.
 3. Switch to the **Runtime** tab.
 4. Click **Add** in the **Custom Environment Variables** section.

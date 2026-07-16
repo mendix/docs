@@ -12,7 +12,6 @@ weight: 90
 Mendix comes with a wide variety of [Widgets](/refguide/pages/#widgets-categories), but sometimes your app requires a widget outside of this set. To support a more advanced UI pattern or create app-specific interactions, you will need to make your own pluggable widget. This documentation will help you achieve that in Studio Pro 10. See these links for other versions' documentation:
 
 * [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/)
-* [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)
 
 Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple apps and distributed through the [Marketplace](/appstore/).
 

@@ -10,13 +10,13 @@ weight: 30
 
 This document provides troubleshooting instructions for some potential issues related to Workstation Management.
 
-## Station Status of Unlinked Workstation Client Is Still "Computer Registered"
+## Station Status of Deregistered Workstation Client Is Still "Computer Registered"
 
 This issue might occur if your Workstation Client could not establish a connection to the Workstation Management, for example, because the computer was not connected to a network. 
 
 ### Solution
 
-Manually unregister the station in Workstation Management.
+Manually deregister the station in Workstation Management.
 
 ## Workspace Owner Account Deactivated 
 

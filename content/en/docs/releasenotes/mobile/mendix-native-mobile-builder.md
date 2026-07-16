@@ -161,6 +161,7 @@ After these steps, run the installer again. You can start Studio Pro again, and 
 
 * We resolved an issue where remote JavaScript debugging failed in custom-built Mendix Native Developer Apps. This happened in cases of improper initialization of Firebase services during the build process. Our fix ensures Firebase dependencies are only included when explicitly required by the application.
   
+
 {{% alert color="warning" %}}
 Please note that this is a breaking change, and thus, requires a mandatory update. You must use the latest Native Template version to implement this fix, as older versions may cause errors in your application. Failure to update could lead to potential app instability and functionality issues.
 {{% /alert %}}
@@ -722,7 +723,7 @@ This release focuses mainly on quality of life bug fixes and features.
 
 **Release date: October 27, 2020**
 
-This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro 8.15](/releasenotes/studio-pro/8.15/) and higher.
+This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in Mendix Studio Pro 8.15 and above.
 
 #### Features
 

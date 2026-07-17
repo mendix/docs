@@ -50,7 +50,7 @@ It is the responsibility of the Infra Implementer to ensure access to infrastruc
 
 Private Mendix Platform provides the integration points (OIDC, SAML) to connect to an Identity Provider. The IdP (for example, Microsoft Azure AD) must be configured to enforce and manage the actual physical access control mechanisms (like PKI cards) during the user authentication process. Mendix then consumes the authenticated user's identity from the IdP:
 
-{{< figure src="/attachments/private-platform/nist-si/nist-pe-0301-1.png" class="no-border" >}}
+{{< figure src="/attachments/private-platform/nist-pe/nist-pe-0301-1.png" class="no-border" >}}
 
 Specific Mendix applications can be configured to connect to the customer's IdP by the App Implementer or Operator by using [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/), both of which allow for physical authentication mechanisms through the customer's IdP.
 

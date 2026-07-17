@@ -8,4 +8,6 @@ no_list: false
 
 ## Introduction
 
+Siemens Industry Components are Mendix Marketplace modules that let you integrate Siemens data and services into Mendix apps built on the Siemens Xcelerator platform.
+
 ## Documents in This Category

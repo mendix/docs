@@ -8,6 +8,11 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.12.1
+* We removed timeouts for Custom Blob Document consistency checks instead of showing a generic error in the Errors Pane. Also added analytics to pinpoint problematic extensions that take longer than the removed timeout.
+* We fixed a bug where the icon next to a tab's title was not showing.
+* We fixed a bug where the Module Settings Form was incorrectly showing modules other than Add-on for packaging an extension into a module.
+
 ## Version 11.12.0
 
 * We removed the elements helper methods (`add*()`, `get*()`, `getContainer()`, and `delete()`) from the Model API types.

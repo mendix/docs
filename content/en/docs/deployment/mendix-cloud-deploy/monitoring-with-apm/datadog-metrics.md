@@ -208,7 +208,7 @@ If the app has more than one instance, you will see lines on the graph for each 
 
 ## Mendix Tracing{#mendix-tracing}
 
-Mendix Tracing uses [OpenTelemetry](/refguide/opentelemetry-in-runtime/) to send Mendix Runtime traces to [Datadog APM](https://docs.datadoghq.com/tracing/), giving you distributed tracing visibility into your app's performance and microflow executions.
+Mendix uses [OpenTelemetry](/refguide/opentelemetry-in-runtime/) to send Mendix Runtime traces to [Datadog APM](https://docs.datadoghq.com/tracing/), giving you an insight into your app's microflow executions and performance.
 
 {{% alert color="info" %}}
 Mendix Tracing requires Mendix Runtime 10.24.12 or above, or 11.5 or above.

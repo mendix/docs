@@ -44,7 +44,7 @@ The organization:
 
 ### Supplemental Guidance
 
- Information system account types include the following:
+Information system account types include the following:
  
 * Individual
 * Shared
@@ -73,27 +73,27 @@ The organization:
  
  The following controls are related to this control:
 
-* AC-3
-* AC-4
-* AC-5
-* AC-6
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
+* AC-04
+* AC-05
+* AC-06
 * AC-10
 * AC-17
 * AC-19
 * AC-20
-* AU-9
-* IA-2
-* IA-4
-* IA-5
-* IA-8
-* CM-5
-* CM-6
-* CM-11
-* MA-3
-* MA-4
-* MA-5
-* PL-4
-* SC-13.
+* AU-09
+* IA-02
+* IA-04
+* IA-05
+* IA-08
+* CM-05
+* CM-06
+* CM-011
+* MA-03
+* MA-04
+* MA-05
+* PL-04
+* SC-13
 
 ## Responsibility
 

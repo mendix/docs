@@ -208,7 +208,7 @@ If the app has more than one instance, you will see lines on the graph for each 
 
 ## Mendix Tracing{#mendix-tracing}
 
-[Mendix Tracing](/refguide/tracing-in-runtime/) sends Mendix Runtime traces to [Datadog APM](https://docs.datadoghq.com/tracing/), giving you distributed tracing visibility into your app's performance and microflow executions.
+Mendix uses [OpenTelemetry](/refguide/opentelemetry-in-runtime/) to send Mendix Runtime traces to [Datadog APM](https://docs.datadoghq.com/tracing/), giving you an insight into your app's microflow executions and performance.
 
 {{% alert color="info" %}}
 Mendix Tracing requires Mendix Runtime 10.24.12 or above, or 11.5 or above.
@@ -232,7 +232,7 @@ To enable Mendix Tracing, follow these steps:
 
 ### Filtering Traces{#filter-traces}
 
-To control which traces are sent to Datadog, set the `MX_TRACING_FILTER` custom environment variable. For available filter options and syntax, see [Tracing in Runtime](/refguide/tracing-in-runtime/#filtering).
+To control which traces are sent to Datadog, set the `MX_TRACING_FILTER` custom environment variable. For available filter options and syntax, see [OpenTelemetry](/refguide/opentelemetry-in-runtime/#filtering).
 
 ## Additional Information{#additional-info}
 
@@ -305,7 +305,7 @@ Previously, when Mendix Cloud ran on Cloud Foundry, hosts were incorrectly regis
 
 * [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/) – a Mendix blog about the capabilities of Datadog and using Datadog with Mendix
 * [Metrics](/developerportal/operate/metrics/)
-* [Tracing in Runtime](/refguide/tracing-in-runtime/) – Mendix documentation
+* [OpenTelemetry](/refguide/opentelemetry-in-runtime/) – Mendix documentation
 * [Java Runtime Metrics](https://docs.datadoghq.com/tracing/runtime_metrics/java/) – Datadog documentation
 * [Postgres](https://docs.datadoghq.com/integrations/postgres/) – Datadog documentation
 * [System Check](https://docs.datadoghq.com/integrations/system/) – Datadog documentation

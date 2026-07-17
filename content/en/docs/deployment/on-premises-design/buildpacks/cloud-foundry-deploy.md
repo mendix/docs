@@ -7,12 +7,10 @@ aliases:
     - /deployment/cloud-foundry/index.html
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
-    - /refguide8/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide9/deploying-a-mendix-app-to-cloud-foundry.html
     - /deployment/cloud-foundry/
     - /howto/deploying-a-mendix-app-to-cloud-foundry
     - /refguide/deploying-a-mendix-app-to-cloud-foundry
-    - /refguide8/deploying-a-mendix-app-to-cloud-foundry 
     - /refguide9/deploying-a-mendix-app-to-cloud-foundry
     - /developerportal/deploy/cloud-foundry-deploy/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

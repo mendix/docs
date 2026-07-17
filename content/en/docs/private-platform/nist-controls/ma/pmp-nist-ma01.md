@@ -38,7 +38,7 @@ The policy can be included as part of the general information security policy fo
 
 The following controls are related to this control:
 
-* PM-9.
+* PM-09.
 
 For more information, refer to the NIST Special Publications 800-12, 800-100.
 

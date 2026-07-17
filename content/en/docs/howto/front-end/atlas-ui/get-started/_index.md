@@ -10,8 +10,6 @@ This section explains Atlas and how developers can get started with the Atlas UI
 
 The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored re-usable design across all your apps.
 
-Atlas 2 corresponds with Mendix 8. If you need information on Atlas 2, see the Mendix 8 how-to documentation for [Atlas 2](/howto8/front-end/atlas-ui/).
-
 ## Design Principles
 
 Atlas UI has a philosophy based on the core principles described below. These principles guide all our design decisions at Mendix, and we encourage every Mendix user to adopt them when building their own apps.

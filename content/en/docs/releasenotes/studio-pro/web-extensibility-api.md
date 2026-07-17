@@ -8,6 +8,12 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.12.2
+
+* We fixed a bug where the Extensions Overview Page would not open if the user was not signed in.
+* We fixed a bug where reloading a Dev extension would cause a crash if tabs previously opened via an extension were not closed before the reload.
+* We fixed an issue where the progress dialogs did not behave as the C# counterpart, where cancelling a step still waited for it to finish and return its result. If the user still wants to exit the step and return the result immediately, they can still do so by passing `resolveImmediatelyOnCancel` to the `IDialogApi.showProgressDialog` method.
+
 ## Version 11.12.0
 
 * We removed the elements helper methods (`add*()`, `get*()`, `getContainer()`, and `delete()`) from the Model API types.

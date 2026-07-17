@@ -180,6 +180,10 @@ On this tab, you can edit the model options for constants and scheduled events.
 
 In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
 
+{{% alert color="warning" %}}
+The combined length of all constant keys and values is limited to 128 KB (approximately 32,000 characters). For more information, refer to [Behavior of Your App in Mendix Cloud](/developerportal/deploy/behavior-of-app/#constants-size-limit).
+{{% /alert %}}
+
 To fill in a new value, select the constant and click **Edit** to bring up the **Edit Constant** dialog box.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details-beta/edit-constant.png" >}}

@@ -62,9 +62,13 @@ The following modules are required dependencies for the supported capabilities o
 * [Encryption](https://marketplace.mendix.com/link/component/1011)
 * [GenAI Commons](https://marketplace.mendix.com/link/component/239448)
 * [MCP Client](https://marketplace.mendix.com/link/component/244893)
-* [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449)
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
+
+Depending on the LLM and Knowledge bases used in your setup, you need to install the corresponding provider module for the app logic to work.
+
+* [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) for **Mendix Cloud GenAI** resources (text generation and knowledge bases)
+* [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) for **   Azure AI Foundry** resources (text generation model deployments supporting chat completions)
 
 In addition, ensure the following widgets are available in your app:
 
@@ -113,17 +117,26 @@ For a step-by-step tutorial, see [Create an Agent with Agent Editor](/agents/age
 
 With Agent Editor, you can define the model as a document in your app model. You can link this model to one or more agents in your app. Defining a Model document is mandatory. Without a Model document, the agent you configure in the next steps cannot run.
 
-Currently, only models provided by Mendix Cloud GenAI are supported.
+Currently, text generation models provided by Mendix Cloud GenAI and Azure AI Foundry are supported.
 
 Model configuration is document-based and can be managed directly in Studio Pro:
 
 * Add a Model document from the **App Explorer** at the module level. Right-click the module or folder where you want to create your Model document, select **Add other**, and find Model in the bottom section.
+* Select the provider. Then follow the provider specific configuration:
+
+#### For Mendix Cloud GenAI {#define-model-mendix}
 * Configure the **Model key** with a String constant that contains the key for a Text Generation resource. Obtain this key from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com).
 * After you select the key, model metadata is imported and shown in the editor.
-* Validate the connectivity in the **Connection** section by clicking **Test**.
+* Click **List Models** to validate the connectivity. A table shows the available models in the resource.
+
+
+#### For Azure AI Foundry {#define-model-azure}
+* Configure the **Project endpoint** and **API Key** fields, each with a String constant that contains the project endpoint and the API key respecively. Obtain the Project Endpoint and the API key from the [Azure AI Foundry Portal](https://ai.azure.com/home). Read more in the documentation of the [OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/#azure-resource-name).
+* Click **List Deployments** to validate the connectivity. A table shows the available model deployments in the Azure resource.
+
 
 {{% alert color="info" %}}
-The value you use for the constant in Studio Pro can be different from the value used in cloud environments. Constant values can be overridden per environment during deployment. For example, you can locally connect to a text generation resource using a different key than the one used for production.
+The value you use for a constant in Studio Pro can be different from the value used in cloud environments. Constant values can be overridden per environment during deployment. For example, you can locally connect to a text generation resource using a different key than the one used for production.
 {{% /alert %}}
 
 ### Defining the Agent With a Prompt, Context Entity, and Model Settings {#define-agent}
@@ -133,7 +146,7 @@ After defining the model, define the Agent document and configure the prompts an
 Defining an agent is also document-based and can be configured using Agent Editor:
 
 * Add an Agent document from the **App Explorer** at the module level. Right-click the module or folder where you want to create your Agent document, then select **Add other** > **Agent**.
-* Select a Model document for an agent to call a text generation resource.
+* Select a **Model** document and model version for the agent to call a text generation resource.
 * Configure the **System prompt**. Additionally, define a **User prompt** for task-style execution. In both prompts, include placeholders with double braces (for example, `{{variable}}`).
 * When you use placeholders, select a **Context entity** to resolve values at runtime. The placeholders used within the prompts must match the attribute names of the selected entity so that attribute values can be inserted instead of the placeholders at runtime.
 * Optionally, adjust the **Model settings** as needed (maximum tokens, temperature, and TopP), based on the supported ranges of the model provider.
@@ -260,7 +273,7 @@ Use version control to view and restore previous agent versions. This lets you i
 
 ## Known Limitations {#limitations}
 
-* Currently, Agent Editor supports only Mendix Cloud GenAI as a provider for text generation models and knowledge bases. Support for other providers, such as (Azure) OpenAI and Amazon Bedrock, is planned for a future release.
+* Currently, Agent Editor supports only Mendix Cloud GenAI and Azure AI Foundry as a provider for text generation models and knowledge bases. Support for other providers, such as OpenAI and Amazon Bedrock, is planned for a future release.
 * Support for Mac users is limited. Some functionalities might not work, such as doing a test call for Model documents. Mendix recommends using Studio Pro on Windows to use all features of Agent Editor.
 * MCP tool support is limited to whole-server integration. Selecting individual tools from a consumed MCP service to be added to an agent is not yet supported. That also means that the tool choice option `Tool` can only refer to a microflow tool currently.
 * If a document referenced by an Agent document is excluded, Studio Pro shows a consistency error. These consistency errors may not be resolved automatically when you include the excluded document again. Resolve this by synchronizing the app directory (<kbd>F4</kbd>) or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again).

@@ -220,3 +220,4 @@ When testing, verify behavior on physical Android and iOS devices to ensure noti
 * [PWA Wrapper](/refguide/mobile/pwa-wrapper/)
 * [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/)
 * [PWA Wrapper Limitations](/refguide/mobile/pwa-wrapper/pwa-wrapper-limitations/)
+* [PWA Wrapper Deep Linking](/refguide/mobile/pwa-wrapper/pwa-wrapper-deep-linking/)

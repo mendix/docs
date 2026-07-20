@@ -30,6 +30,7 @@ This PWA Wrapper documentation section includes the following topics:
 * Signing reference: [Sign PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/) explains the signing step in the build flow
 * Capabilities guide: [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
 * Limitations: [PWA Wrapper Limitations](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-limitations/)
+* Deep linking guide: [PWA Wrapper Deep Linking](/refguide/mobile/pwa-wrapper/pwa-wrapper-deep-linking/) explains how to handle inbound and outbound deep links
 
 ## Typical Use Cases
 

@@ -2,7 +2,7 @@
 title: "Jira"
 url: /developerportal/project-management/jira-connector/
 weight: 5
-description: "Describes how to connect Mendix apps in Apps to Jira."
+description: "Describes how to connect Mendix apps in Projects to Jira."
 aliases:
     -  /developerportal/general/jira-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -47,7 +47,7 @@ As we further develop this feature, we may lift these limitations with future re
 
 To connect your app to Jira, perform the following steps:
 
-1. In [Apps](https://sprintr.home.mendix.com/), open your app.
+1. In [Projects](https://projects.home.mendix.com/), open your app.
 
 2. Go to the [Settings](/developerportal/general-settings/) page.
 
@@ -78,8 +78,8 @@ Once the activation is completed, your app is connected to Jira. You can see the
     * If you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog, and using a separate board to manage your backlog.
     * The list of stories is ordered by the Jira story key.
 
-* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/repository/team-server/#revision-details) in the **Team Server** page after opening your app in **Apps**.
-* You can see the link to your Jira board in the **Project Management** section in the **Apps** [navigation pane](/developerportal/#navigation-pane).
+* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/repository/team-server/#revision-details) in the **Team Server** page after opening your app in **Projects**.
+* You can see the link to your Jira board in the **Project Management** section in the **Projects** [navigation pane](/developerportal/#navigation-pane).
 
     {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png" >}}
 

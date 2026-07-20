@@ -149,7 +149,7 @@ Write as one word.
 
 ## deploy
 
-The act of putting a Mendix app into an environment where it has access to all the resources it needs to run. This is triggered in Apps, or in Studio Pro by clicking **Run** or **Run Locally**.
+The act of putting a Mendix app into an environment where it has access to all the resources it needs to run. This is triggered in Projects, or in Studio Pro by clicking **Run** or **Run Locally**.
 
 Use *deploy to* when referring to a cloud environment.
 
@@ -325,11 +325,11 @@ Use lower-case unless it is part of a term like "Mendix Native Mobile Builder".
 
 ## navigation pane
 
-Use to refer to the navigation interface on the left side of the screen in Apps.
+Use to refer to the navigation interface on the left side of the screen in Projects.
 
 Do not capitalize.
 
-> Select your app in Apps, then click **Backups** in the navigation pane.
+> Select your app in Projects, then click **Backups** in the navigation pane.
 
 ## no-code, no code
 
@@ -461,7 +461,7 @@ When referring to an action which is taking place, use "sign in" and "sign out" 
 
 When referring to a button or other element of the UI, refer to the UI text.
 
-> Sign out of Apps by clicking **Log out** in the menu under your avatar.
+> Sign out of Projects by clicking **Log out** in the menu under your avatar.
 
 ## single sign-on
 

@@ -151,7 +151,7 @@ subjects:
 - kind: ServiceAccount
   name: mxplatform-kube-agent
   namespace: build
-  ```
+```
 
 ### Customer Responsibility
 

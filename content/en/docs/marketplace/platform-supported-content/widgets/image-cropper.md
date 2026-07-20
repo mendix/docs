@@ -56,9 +56,9 @@ The **Crop area** section is used to configure the shape and proportions of the 
   * **Rectangle** (default) – When enabled, the full crop rectangle is saved.
   * **Circle** – When enabled, the corners are masked and the saved image is clipped to an ellipse inscribed in the crop rectangle.
 - **Aspect ratio** – Locks the crop proportions.
-  * ***Free** (default) – The end-user can resize the selection to any proportion.
+  * **Free** (default) – The end-user can resize the selection to any proportion.
   * **1:1**, **16:9**, **4:3**, or **3:4** – When set to one of these predetermined ratios, the selection is locked to that ratio during resize.
-  * ***Custom** – When enabled, the selection is locked to the ratio defined by **Custom aspect width** and **Custom aspect height**.
+  * **Custom** – When enabled, the selection is locked to the ratio defined by **Custom aspect width** and **Custom aspect height**.
 - **Custom aspect width** (default **1**) – The width side of the ratio (for example, _3_ in 3:2).
   - Configurable when **Aspect ratio** is set to **Custom**.
   - When either the custom width or custom height is not greater than _0_, the selection falls back to a free-form shape.

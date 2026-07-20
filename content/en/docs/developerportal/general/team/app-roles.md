@@ -17,7 +17,7 @@ aliases:
 
 ## Introduction
 
-The roles defined in **Projects** for an [app](/developerportal/#my-apps) and [team](/developerportal/general/team/) are described below.
+The roles defined in **Projects** for an [app](/developerportal/#my-projects) and [team](/developerportal/general/team/) are described below.
 
 ## Team Member
 

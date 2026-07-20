@@ -96,7 +96,7 @@ Once a project is marked for deletion, the system applies a grace period of 14 c
 You can prevent this clean up by performing one of the following actions:
 
 * Make changes and commit them to the Team Server
-* [Pin your app](/developerportal/#app-tiles)
+* [Pin your app](/developerportal/#project-tiles)
 * [Invite someone](/developerportal/general/team/#inviting) to collaborate with you on your app
 
 Pinning a project that has been marked for deletion unmarks it immediately. Changes to the other criteria do not affect the mark-for-deletion immediately, but are verified before the actual deletion.

@@ -143,7 +143,7 @@ This feature is not available if your company has enabled single sign-on. If thi
 
 On the [Notification Settings](https://user-settings.mendix.com/link/notifications) page, you can configure how you want to be notified of Mendix Platform activity.
 
-When you click **Configure Watched Apps** at the bottom of the page, you can choose to **Stop Watching** an app. To watch an app again, return to [My Projects](/developerportal/#my-apps).
+When you click **Configure Watched Apps** at the bottom of the page, you can choose to **Stop Watching** an app. To watch an app again, return to [My Projects](/developerportal/#my-projects).
 
 You can also configure your **Buzz Notifications**:
 

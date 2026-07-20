@@ -273,7 +273,7 @@ Use version control to view and restore previous agent versions. This lets you i
 
 ## Known Limitations {#limitations}
 
-* Currently, Agent Editor supports only Mendix Cloud GenAI and Azure AI Foundry as a provider for text generation models and knowledge bases. Support for other providers, such as OpenAI and Amazon Bedrock, is planned for a future release.
+* Currently, Agent Editor supports Mendix Cloud GenAI and Azure AI Foundry as a provider for text generation models and Mendix Cloud GenAI as provider for knowledge bases. Support for other providers, such as OpenAI and Amazon Bedrock, is planned for a future release.
 * Support for Mac users is limited. Some functionalities might not work, such as doing a test call for Model documents. Mendix recommends using Studio Pro on Windows to use all features of Agent Editor.
 * MCP tool support is limited to whole-server integration. Selecting individual tools from a consumed MCP service to be added to an agent is not yet supported. That also means that the tool choice option `Tool` can only refer to a microflow tool currently.
 * If a document referenced by an Agent document is excluded, Studio Pro shows a consistency error. These consistency errors may not be resolved automatically when you include the excluded document again. Resolve this by synchronizing the app directory (<kbd>F4</kbd>) or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again).

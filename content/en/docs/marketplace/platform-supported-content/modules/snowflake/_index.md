@@ -25,39 +25,44 @@ The integration between Mendix and Snowflake offers several options for building
 
 ### AI-Assisted Development
 
-For AI-assisted applications, the [MCP Client Module](/agents/reference-guide/mcp-modules/mcp-client/) and [OpenAI Connector](/agents/reference-guide/external-connectors/openai/) can enable you to 
+Mendix supports the [Model Context Protocol](https://modelcontextprotocol.io/introduction), which is an open protocol that standardizes how Large Language Models (LLMs) can autonomously connect to apps. For more information about the available options, refer to the following topics:
 
-#### MCP Marketplace Add-ons
+* [Integrate a Mendix MCP Server with a Snowflake Cortex Agent](/appstore/modules/snowflake/connect-snowflake-ai-agent-to-mendix/)
+* [Connect a Mendix AI Agent to a Snowflake-Managed MCP Server](/appstore/modules/snowflake/connect-ai-agent-to-snowflake-mcp/)
+* [Bring Your Own Snowflake LLM](/appstore/modules/snowflake/bring-your-own-snowflake-llm/)
 
-### Building AI-Powered Applications 
+### Building AI-Powered Applications
+
+The [Snowflake AI Data Connector](https://marketplace.mendix.com/link/component/225717) is the recommended, purpose-built method of integrating Mendix with Snowflake for the purpose of developing AI-powered Mendix apps.
+
+You can also use the [External Database connector](https://marketplace.mendix.com/link/component/219862) to trigger some Cortex AI functions through SQL queries. For a comparison of the functions of the connectors, refer to the sections below.
 
 #### Snowflake AI Data Connector
 
+The [Snowflake AI Data Connector](https://marketplace.mendix.com/link/component/225717) is the recommended option for building AI-driven applications. It enables you to perform the following tasks:
+
+* Trigger a number of [Snowflake Cortex ML functions](https://docs.snowflake.com/en/guides-overview-ml-functions). For a more detailed list, refer to [Snowflake AI Data Connector: Typical Use Cases](/appstore/connectors/snowflake/snowflake-ai-data-connector/#use-cases).
+* Use [Snowflake Cortex Analyst](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
+* Execute synchroneous calls.
+* Query your Cortex Search services.
+
 #### External Database Connector
+
+The [External Database connector](https://marketplace.mendix.com/link/component/219862) can also be used to support AI-driven applications by allowing you to run SQL queries that call upon some Cortex AI functions, such as *sentiment*. For more information, see [External Database Connector: Using Cortex AI functions](/appstore/modules/snowflake/external-database-connector/).
 
 ### Building Data-Driven Applications {#data-driven}
 
-For data-driven applications, the [External Database connector](https://marketplace.mendix.com/link/component/219862) and the [Snowflake AI Data Connector](https://marketplace.mendix.com/link/component/225717) can enable you to perform the following tasks:
-
-* Read, write, and use data from Snowflake in your application.
-* Execute Java [stored procedures](https://docs.snowflake.com/en/developer-guide/stored-procedure/stored-procedures-overview).
-* Leverage [Cortex Machine Learning](https://docs.snowflake.com/en/guides-overview-ml-functions) and [Cortex Large Language Model](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions) functions.
-
-For a comparison of the functions of the connectors, refer to the sections below.
+The [External Database connector](https://marketplace.mendix.com/link/component/219862) and the [Snowflake AI Data Connector](https://marketplace.mendix.com/link/component/225717) can also be used to build data-driven applications. For a comparison of the functions of the connectors, refer to the sections below.
 
 #### External Database Connector
 
 The [External Database connector](https://marketplace.mendix.com/link/component/219862) is the recommended option for building data-driven applications. It offers a premium developer experience where you can test connections and queries during design time by using a view of all schemas and objects to which you can connect. It makes use of the JDBC protocol and the usage of Python stored procedures in addition to Java. 
 
-The External Database connector only supports system-level authentication. It can authenticate in Snowflake by using the username and password of a single Snowflake user. It also offers key-pair authentication with a private key. The connector does not support role-based access control (RBAC) per end user.
-
-The External Database connector has GA support for Snowflake from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)). Some Cortex functionalities are currently limited when using the External Database connector, but they are on the roadmap.
+The External Database connector has GA support for Snowflake from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)).
 
 #### Snowflake AI Data Connector
 
-The [Snowflake AI Data Connector](https://marketplace.mendix.com/link/component/225717) offers key-pair authentication with a private key file according to PKCS #8 standard and OAuth.
-
-With the Snowflake AI Data Connector, authentication can be done either on system or on end-user level, and the connector supports role-based access control (RBAC) per end user as well.
+The [Snowflake AI Data Connector](https://marketplace.mendix.com/link/component/225717) is primarily used for AI-driven applications, but it can also be used to perform small-scale data updates. This may be useful in cases where you are already using this connector for its AI functionalities, and you would like to do a limited amount of data processing without having to install a new connector for this purpose. However, for reading or writing large amounts of data, it is recommended to use the External Database connector instead.
 
 The Snowflake AI Data Connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake AI Data Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
 

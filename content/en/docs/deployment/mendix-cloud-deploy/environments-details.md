@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-To open the **Environment Details** page, go to [Apps](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to [Projects](https://projects.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{% alert color="info" %}}You must have permissions for **Transport Rights** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
 

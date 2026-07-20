@@ -61,7 +61,7 @@ This section outlines the different ways Free Apps can be deleted from the Mendi
 
 As a [Technical Contact](/developerportal/general/app-roles/#technical-contact) you can manually delete a Free App after publishing it from Studio Pro by following these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 2. Click **More Options** ({{< icon name="three-dots-menu-horizontal" >}}) on the **Sandbox** environment.
 3. Click **Delete**.
 

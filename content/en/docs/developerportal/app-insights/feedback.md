@@ -12,7 +12,7 @@ aliases:
 
 If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback goes to the **Feedback** page. **Feedback** enables your team to view all the feedback. It also allows team members with the right permissions to organize feedback and add feedback manually. 
 
-You can access the **Feedback** page by selecting your app in [Apps](https://sprintr.home.mendix.com/), then clicking **Feedback** in the navigation pane. 
+You can access the **Feedback** page by selecting your app in [Projects](https://projects.home.mendix.com/), then clicking **Feedback** in the navigation pane. 
 
 The **Feedback** page contains two tabs: [Inbox](#inbox) and [Archive](#archive).
 
@@ -310,7 +310,7 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
 
 You can receive a notification when new feedback lands in **Inbox** or when a reporter replies to their feedback. To receive notifications, follow these steps:
 
-1. Watch the app on the [Settings](/developerportal/general-settings/) page after you open it in [Apps](https://sprintr.home.mendix.com/).
+1. Watch the app on the [Settings](/developerportal/general-settings/) page after you open it in [Projects](https://projects.home.mendix.com/).
 2. Go to **Feedback** again.
 3. Click the **Settings** {{% icon name="cog" %}} icon in the upper-right corner of the page.
 4. Turn on the toggle to receive notifications.

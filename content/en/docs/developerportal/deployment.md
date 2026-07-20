@@ -1,7 +1,7 @@
 ---
 title: "Deployment"
 url: /developerportal/deploy/
-description: "Describes the Deployment section of the Apps navigation pane."
+description: "Describes the Deployment section of the Projects navigation pane."
 weight: 10
 no_list: false 
 description_list: true
@@ -9,7 +9,7 @@ description_list: true
 
 ## Introduction
 
-The **Deployment** category in the **Apps** [navigation pane](/developerportal/#navigation-pane) provides access to built-in deployment and monitoring tools for your app. The pages in this category are listed below.
+The **Deployment** category in the **Projects** [navigation pane](/developerportal/#navigation-pane) provides access to built-in deployment and monitoring tools for your app. The pages in this category are listed below.
 
 {{% alert color="info" %}}
 The interface and functionality of these pages vary depending on where your app is deployed. For details about the various deployment options, see the [Deploying Apps](/deployment/) section.

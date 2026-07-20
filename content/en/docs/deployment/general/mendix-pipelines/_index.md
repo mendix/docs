@@ -17,7 +17,7 @@ Once designed and activated from the **Pipelines** page, you can enable automate
 Mendix Pipelines is only available for licensed Mendix apps that are deployed to Mendix Cloud, Mendix on Kubernetes or Mendix on Azure.
 {{% /alert %}}
 
-To access the **Pipelines** page, open your app in [Apps](https://sprintr.home.mendix.com/). Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
+To access the **Pipelines** page, open your app in [Projects](https://projects.home.mendix.com/). Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
 
 The **Pipelines** page has four tabs: **Runs**, **Designs**, **Variables**, and **Settings**. You can see all four tabs as soon as your app has its first Mendix Pipeline saved.
 

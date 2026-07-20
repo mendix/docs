@@ -80,9 +80,10 @@ The `DeployedModel` entity replaces the capabilities that the `Connection` entit
 | `Model` | The model identifier of the LLM provider. |
 | `OutputModality` | The type of information the model returns. |
 | `Microflow` |  The microflow to execute for the specified model and modality. |
-| `SupportsSystemPrompt` | Enum to specify if the model supports system prompts. |
 | `SupportsConversationsWithHistory` | Enum to specify if the model supports conversation with history. |
 | `SupportsFunctionCalling` | Enum to specify if the model supports function calling. |
+| `SupportsStreaming` | An enum to specify if the model supports calling the streaming API. |
+| `SupportsSystemPrompt` | Enum to specify if the model supports system prompts. |
 | `IsActive` | Boolean to specify if the model is active/usable with the current authentication settings and user preference. |
 
 #### `ConsumedKnowledgeBase` {#consumed-knowledge-base}
@@ -233,6 +234,8 @@ The `Request` is an input object for the chat completions operations defined in 
 | `ToolChoice` | Controls which (if any) tool is called by the model. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values. |
 | `_AgentVersionId` | The `AgentVersionId`, set if the execution of the request was called from an Agent. |
 | `SaveToolCallHistory` | Indicates if the tool calls are stored for later continuation (must be implemented).  |
+| `UseStreamingAPI` | Indicates if the LLM call should be called with streaming. |
+| `StreamingResponseWriterId` | Indicates if streaming data should be pushed to the UI. Must not be set manually! This is only set in backend if a ConversationalUI chat interface is being used with an agent that has streaming enabled. |
 
 #### `Message` {#message}
 

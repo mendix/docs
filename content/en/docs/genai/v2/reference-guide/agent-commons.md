@@ -115,6 +115,10 @@ Users can create two types of agents:
 
  {{< figure src="/attachments/genai/agentcommons/agent_builder_task.png" alt="" >}}
 
+#### Control model behavior {#model-settings}
+
+By clicking the icon next to the selected model, you can control model behavior by configuring the temperature, top P, and maximum number of tokens on the version. If the selected model and connector support it (currently only Mendix Cloud GenAI), you can also enable backend streaming to use the model's streaming API, and frontend streaming to send generated chunks to the user interface as they become available (see [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/#streaming) documentation for more). UI streaming is supported only for chat agents and for a chat interface from the Conversational UI module.
+
 #### Defining Context Entity {#define-context-entity}
 
 If your agent's prompt includes variables, your app must define an entity with attributes that match the variable names. An object of this entity serves as the context object, which holds the context data that will be passed when the **call agent** operation is triggered. For more details, see the [Use the agent in the app logic](#app-logic) section below.
@@ -161,7 +165,7 @@ Note that [user access approval](/agents/agents-kit-2/reference-guide/commons/#e
 
 #### Testing and Refining the Agent
 
-While writing the [system prompt](/agents/glossary/#system-prompt) (for both chat and task types) or the [user prompt](/agents/glossary/#user-prompt) (only for the task type), the prompt engineer can include variables by enclosing them in double braces, for example, `{{variable}}`. The actual values of these placeholders are typically known at runtime based on the user's page context. 
+While writing the [system prompt](/agents/glossary/#system-prompt) (for both  and task types) or the [user prompt](/agents/glossary/#user-prompt) (only for the task type), the prompt engineer can include variables by enclosing them in double braces, for example, `{{variable}}`. The actual values of these placeholders are typically known at runtime based on the user's page context. 
 To test the behavior of the prompts, a test can be executed. The prompt engineer must provide test values for all variables defined in the prompts. Additionally, multiple sets of test values for the variables can be defined and run in bulk. Based on the test results, the prompt engineer can add, remove, or rephrase certain parts of the prompt.
 
 ### Using the Agent in the App Logic {#app-logic}

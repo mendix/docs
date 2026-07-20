@@ -94,8 +94,8 @@ While these IP addresses are static, there may still change under exceptional ci
 
 #### Incoming IP {#global-platform-ips-inbound}
 
-* 52.223.19.148
-* 76.223.74.135
+* 166.117.50.136
+* 99.83.157.128
 
 ## Frequently Asked Questions
 

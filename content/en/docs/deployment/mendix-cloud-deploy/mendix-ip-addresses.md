@@ -76,7 +76,7 @@ For Mendix apps deployed to the Kubernetes infrastructure:
 * `10.11.128.0/18`
 * `10.11.192.0/18`
 
-To find whether your app uses Kubernetes or Cloud Foundry, go to [Apps](https://sprintr.home.mendix.com/link/myapps) and check the **Infrastructure** label for your environment.
+To find whether your app uses Kubernetes or Cloud Foundry, go to [Projects](https://projects.home.mendix.com/link/myapps) and check the **Infrastructure** label for your environment.
 
 ### Mendix Portal {#global-platform-ips}
 
@@ -94,8 +94,8 @@ While these IP addresses are static, there may still change under exceptional ci
 
 #### Incoming IP {#global-platform-ips-inbound}
 
-* 52.223.19.148
-* 76.223.74.135
+* 166.117.50.136
+* 99.83.157.128
 
 ## Frequently Asked Questions
 

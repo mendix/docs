@@ -40,7 +40,6 @@ The following diagram shows the architecture of the SAP BAPI connector with the 
 To use the BAPI Connector for SAP Solutions, you need the following:
 
 * An SAP back-end system (for example, SAP Business Suite, SAP S/4HANA, or SAP S/4HANA Cloud) which has Remote Function Modules/BAPI enabled
-* Mendix Studio Pro 8.18.10 or above
 * At least 1 GB memory per instance if running on SAP BTP
 
 Depending on whether you plan to use the SAP Cloud Connector, you also need the following prerequisites:
@@ -49,7 +48,7 @@ Depending on whether you plan to use the SAP Cloud Connector, you also need the 
 
 If you are using the SAP Cloud Connector to facilitate connection to the SAP backend system, you must install the *bapi-service* microservice component. The component minimizes the network complexity and helps make your application is compliant with the recommended SAP security standards.
 
-You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.5.zip) and use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
+You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.6.zip) and use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
 
 ### Required Only When Not Using the SAP Cloud Connector
 
@@ -103,7 +102,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
 To use the BAPI Connector, you have to first set up your environment and configure the connection details by doing the following.
 
 1. Get the [BAPI Connector for SAP solutions module](https://marketplace.mendix.com/link/component/119810).
-2. Import the BAPI Connector for SAP Solutions module into a new or existing application in Mendix Studio Pro 8.18.0 or above. On successful import, the module is visible in your application as **SAPBAPIConnector**.
+2. Import the BAPI Connector for SAP Solutions module into a new or existing application. On successful import, the module is visible in your application as **SAPBAPIConnector**.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/sap-bapi-connector-module.png" alt="The SAPBAPIConnector module in the App Explorer" class="no-border" >}}
 

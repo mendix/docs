@@ -7,19 +7,17 @@ description: "Describes the Comparison Pane in Mendix Studio Pro for comparing a
 
 ## Introduction
 
-The **Comparison** pane shows the differences between a selected historical revision and your current working state in a version-controlled app. This pane displays three levels of detail: which documents have changed, which elements within those documents have been altered, and which property values now differ.
+The **Comparison** pane shows the differences between revisions in a version-controlled app. You can compare a selected historical revision to your current working state, or compare any two selected commits. This pane displays three levels of detail: which documents have changed, which elements within those documents have been altered, and which property values now differ.
 
 This feature requires a version-controlled app. For apps without version control, the **Comparison** pane is disabled.
-
-{{% alert color="warning" %}}
-You can only compare a selected historical revision to your current working state. It is not possible to compare two past revisions to each other.
-{{% /alert %}}
 
 This feature is similar to the [Changes pane](/refguide/changes-pane/), but while the **Changes** pane shows your local modifications since your last commit, the **Comparison** pane shows differences between any historical revision and your current state.
 
 For more information on comparing scenarios, refer to [Comparing Revisions](/refguide/comparing-revisions/).
 
 ## Accessing the Comparison Pane and Version Compatibility
+
+You can start a comparison in the following ways:
 
 To compare a revision to your current state, do the following:
 
@@ -29,11 +27,16 @@ To compare a revision to your current state, do the following:
 
 The **Comparison** pane opens and shows all differences between the selected revision and your current working state, including any uncommitted changes.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/comparison-pane/history-right-click-menu.png" alt="Compare to current state option in History pane right-click menu" class="no-border" >}}
+To compare any two commits, do the following:
 
-{{% alert color="warning" %}}
-When comparing revisions created in older versions of Studio Pro, the models are automatically converted to the current Studio Pro version format. Due to this automatic conversion, the displayed older revision may not be 100% identical to the original model. This is a normal part of the version upgrade process and does not affect your actual stored revisions.
-{{% /alert %}}
+1. Open the **History** pane by clicking **View** > **History**.
+2. Select the first commit in the list.
+3. Hold <kbd>Ctrl</kbd> (Windows/Linux) or <kbd>Cmd</kbd> (Mac), and select the second commit.
+4. Open the **Compare** dropdown and select **Compare revisions (2/2 selected)**, or right-click a selected row, point to **Compare...**, and select **Compare revisions (2/2 selected)**.
+
+The **Comparison** pane opens and shows all differences between the two selected commits. The compare options are unavailable until exactly two commits are selected.
+
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/comparison-pane/history-right-click-menu.png" alt="Compare options in History pane right-click menu" class="no-border" >}}
 
 ## Comparison Pane Overview
 

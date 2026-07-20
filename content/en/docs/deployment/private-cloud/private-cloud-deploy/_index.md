@@ -31,7 +31,6 @@ You can also create environments and deploy and manage apps using the [Mendix on
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-cluster/) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro 8.0.0 (build 56467) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 * Make sure that the security of the app is set to Production. By default, all environments are set to Production mode when created. The DTAP mode is disabled by default. If you want to change it to Developer mode, the cluster manager can enable the DTAP mode from the Cluster Manager page.
 
@@ -41,7 +40,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first [create your app](/developerportal/#create-app), it will be set to deploy to Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image2.png" class="no-border" >}}
 
@@ -63,7 +62,7 @@ Deployment package creation for Mendix versions 7 and below is no longer support
 The deployment package created with Java 17/21 support requires the Mendix Operator to be in version 2.15.0 or above.
 {{% /alert %}}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page and click **Create Deployment Package**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image9.png" class="no-border" >}}
@@ -94,7 +93,7 @@ Alternatively, you can upload an existing MDA by clicking **Upload**.
 
 ### Creating an Environment{#create-environment}
 
-When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Apps](https://sprintr.home.mendix.com/) will show you the current status.
+When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Projects](https://projects.home.mendix.com/) will show you the current status.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image5.png" class="no-border" >}}
 
@@ -221,7 +220,7 @@ You will be taken to the Environment Details page for the selected environment. 
 
 ## Environments Page
 
-After opening your app in [Apps](https://sprintr.home.mendix.com/), you can find the **Environments** page, which contains three sections:
+After opening your app in [Projects](https://projects.home.mendix.com/), you can find the **Environments** page, which contains three sections:
 
 * Deployment Package Repository
 * Environments

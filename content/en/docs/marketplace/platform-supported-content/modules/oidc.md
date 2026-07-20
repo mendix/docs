@@ -991,11 +991,11 @@ This section describes how to configure the application's `login.html` page to i
 
 #### Automatic Redirection
 
-To enable authentication using the OIDC SSO module, replace the default `login.html` with the content of `login-automatic.html` (located in the `resources\mendixsso\templates` folder) and save it as `login.html`. Use this option when all users should be directly redirected to the OIDC Identity Provider.
+To enable authentication using the OIDC SSO module, replace the default `login.html` with the content of <a href="/attachments/appstore/platform-supported-content/modules/oidc/login-automatic.txt" target="_blank">login-automatic.txt</a> file and save it as `login.html`. Use this option when all users should be directly redirected to the OIDC Identity Provider.
 
 #### Manual Redirection
 
-For manual redirection, replace the default `login.html` with the content of `login-manual.html` (located in the `resources\mendixsso\templates` folder) and save it as `login.html`. Use this option when users should choose between login in using local credentials and login via OIDC SSO. 
+For manual redirection, replace the default `login.html` with the content of <a href="/attachments/appstore/platform-supported-content/modules/oidc/login-manual.txt" target="_blank">login-manual.txt</a> file and save it as `login.html`. Use this option when users should choose between login in using local credentials and login via OIDC SSO.
 
 #### Using Page and Microflow URLs with OIDC SSO{#page-microflow-url}
 

@@ -27,8 +27,6 @@ The integration between Mendix and Snowflake offers several options for building
 
 For AI-assisted applications, the [MCP Client Module](/agents/reference-guide/mcp-modules/mcp-client/) and [OpenAI Connector](/agents/reference-guide/external-connectors/openai/) can enable you to 
 
-#### Maia and Snowflake MCP
-
 #### MCP Marketplace Add-ons
 
 ### Building AI-Powered Applications 
@@ -36,8 +34,6 @@ For AI-assisted applications, the [MCP Client Module](/agents/reference-guide/mc
 #### Snowflake AI Data Connector
 
 #### External Database Connector
-
-#### Snowflake AI Capabilities
 
 ### Building Data-Driven Applications {#data-driven}
 

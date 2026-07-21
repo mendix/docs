@@ -61,6 +61,6 @@ To meet these requirements, the customer must carry out the following actions:
 
     The customer must ensure that both physical and logical access controls are in place for change management, including workflow automation, role-based access to deployment pipelines, and media library restrictions. The Infra Implementer, App Implementer, Infra Operator, and App Operator must respect the customer's change control restrictions throughout the system lifecycle per NIST SP 800-128.
 
-Maintain change access records and audit trails.
+3. Maintain change access records and audit trails.
 
     The customer must maintain records of all access granted for change purposes and periodically review these records to detect unauthorized changes. This includes implementing audit logging for all configuration change activities, conducting regular reviews of change access permissions, and enforcing separation of duties as required by PE-03 physical protection requirements.

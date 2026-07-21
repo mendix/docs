@@ -82,7 +82,7 @@ The `DeployedModel` entity replaces the capabilities that the `Connection` entit
 | `Microflow` |  The microflow to execute for the specified model and modality. |
 | `SupportsConversationsWithHistory` | Enum to specify if the model supports conversation with history. |
 | `SupportsFunctionCalling` | Enum to specify if the model supports function calling. |
-| `SupportsStreaming` | An enum to specify if the model supports calling the streaming API. |
+| `SupportsStreaming` | Enum to specify if the model supports calling the streaming API. |
 | `SupportsSystemPrompt` | Enum to specify if the model supports system prompts. |
 | `IsActive` | Boolean to specify if the model is active/usable with the current authentication settings and user preference. |
 

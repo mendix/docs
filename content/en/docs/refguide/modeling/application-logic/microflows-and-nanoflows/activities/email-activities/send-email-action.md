@@ -191,7 +191,7 @@ In the **Attachment** section, select a microflow variable to attach to the emai
 
 #### Variable
 
-Only variables of type System.FileDocument, List of System.FileDocument, or their specializations can be attached. The variable must exist in the microflow's scope before the **Send Email** activity (the file must already have been retrieved or created earlier in the flow).
+Only variables of type `System.FileDocument`, List of `System.FileDocument`, or their specializations can be attached. The variable must exist in the microflow's scope before the **Send Email** activity (the file must already have been retrieved or created earlier in the flow).
 
 {{% alert color="info" %}}
 The **Send Email** activity does not impose its own attachment size limit. The maximum message and attachment size is determined by the receiving email server or provider, which rejects messages that exceed its limit. Check your provider's documentation for the applicable maximum.

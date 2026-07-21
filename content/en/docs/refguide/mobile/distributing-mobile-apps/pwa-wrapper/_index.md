@@ -31,6 +31,7 @@ This PWA Wrapper documentation section includes the following topics:
 * Capabilities guide: [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
 * Limitations: [PWA Wrapper Limitations](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-limitations/)
 * Deep linking guide: [PWA Wrapper Deep Linking](/refguide/mobile/pwa-wrapper/pwa-wrapper-deep-linking/) explains how to handle inbound and outbound deep links
+* Security and network access reference: [PWA Wrapper Security and Network Access](/refguide/mobile/pwa-wrapper/pwa-wrapper-security/) describes what the extension downloads, what local paths it scans, and which binaries it bundles
 
 ## Typical Use Cases
 

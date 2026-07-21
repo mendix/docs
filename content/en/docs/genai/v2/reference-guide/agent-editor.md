@@ -134,7 +134,7 @@ Model configuration is document-based and can be managed directly in Studio Pro:
 #### For Azure AI Foundry {#define-model-azure}
 
 * Configure the **Project endpoint** and **API key**, each with a String constant. Obtain the **Project endpoint** and **API key** from the [Azure AI Foundry Portal](https://ai.azure.com/home). For more information, refer to [OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/#azure-resource-name).
-* Click **List Deployments** to validate the connectivity. A table shows the available model deployments in the Azure resource.
+* Click **List Deployments** to validate the connectivity. A table shows all the available model deployments in the Azure AI resource. Note that only deployments that support chat completions are currently usable by Agents in a Mendix app.
 
 {{% alert color="info" %}}
 The value you use for a constant in Studio Pro can be different from the value used in cloud environments. Constant values can be overridden per environment during deployment. For example, you can locally connect to a text generation resource using a different key than the one used for production.
@@ -147,7 +147,7 @@ After defining the model, define the Agent document and configure the prompts an
 Defining an agent is also document-based and can be configured using Agent Editor:
 
 * Add an Agent document from the **App Explorer** at the module level. Right-click the module or folder where you want to create your Agent document, then select **Add other** > **Agent**.
-* Select a **Model** document and model version for the agent to call a text generation resource.
+* Select a **Model** document for the agent to call a text generation resource. Depending on the platform chosen, an additional dropdown will appear to select a model version (Mendix Cloud GenAI) or deployment (Azure AI Foundry). Make the agent is set up to use a text generation model. 
 * Configure the **System prompt**. Additionally, define a **User prompt** for task-style execution. In both prompts, include placeholders with double braces (for example, `{{variable}}`).
 * When you use placeholders, select a **Context entity** to resolve values at runtime. The placeholders used within the prompts must match the attribute names of the selected entity so that attribute values can be inserted instead of the placeholders at runtime.
 * Optionally, adjust the **Model settings** as needed (maximum tokens, temperature, and TopP), based on the supported ranges of the model provider.

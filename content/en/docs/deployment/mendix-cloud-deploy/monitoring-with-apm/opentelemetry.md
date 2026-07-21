@@ -32,7 +32,7 @@ Before connecting your app to an OpenTelemetry backend, ensure you have:
 
 To connect your Mendix Cloud environment to an OpenTelemetry backend:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/).
+1. Go to [Projects](https://projects.home.mendix.com/).
 2. Click **Environments** on the app of choice.
 3. Click **Details** ({{% icon name="notes-paper-edit" %}}) for the environment you want to configure.
 4. Go to the **Runtime** tab.

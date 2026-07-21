@@ -30,7 +30,7 @@ Before you can manage your SAP BTP using the Mendix Portal, set it up. There are
 
 ### Changing the Cloud Settings {#ChangeCloudSettings}
 
-In this scenario, you have an existing app which is running in another environment, for instance, on Mendix Cloud. To change this, open your app in [Apps](https://sprintr.home.mendix.com/), go to **Settings**, and switch to the **Cloud Settings** tab.
+In this scenario, you have an existing app which is running in another environment, for instance, on Mendix Cloud. To change this, open your app in [Projects](https://projects.home.mendix.com/), go to **Settings**, and switch to the **Cloud Settings** tab.
 
 {{< figure src="/attachments/deployment/sap-btp/sap-cloud-platform/cloud-settings.png" alt="" >}}
 
@@ -110,7 +110,7 @@ After the environment has been created successfully, a confirmation message appe
 
 You can create several environments for your app. For example, you may have created a development environment, but you may want environments for test, acceptance, production, and so forth. Additionally, when you switch from another cloud, you need to create at least one environment for your Mendix application.
 
-You can do this in the **Environments** page after opening your app in [Apps](https://sprintr.home.mendix.com/).
+You can do this in the **Environments** page after opening your app in [Projects](https://projects.home.mendix.com/).
 
 {{< figure src="/attachments/deployment/sap-btp/sap-cloud-platform/finish-environment.png" alt="">}}
 
@@ -192,10 +192,10 @@ If you click **Run** or **Publish** in Studio Pro, this automatically does the f
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-You still have to deploy your app in [Apps](https://sprintr.home.mendix.com/) the first time to ensure that all the services are bound correctly.
+You still have to deploy your app in [Projects](https://projects.home.mendix.com/) the first time to ensure that all the services are bound correctly.
 {{% /alert %}}
 
-1. Open the app in [Apps](https://sprintr.home.mendix.com/). In the **Environments** page, select the **Deployment Packages** tab. This tab shows the list of built packages. 
+1. Open the app in [Projects](https://projects.home.mendix.com/). In the **Environments** page, select the **Deployment Packages** tab. This tab shows the list of built packages. 
 
     {{< figure src="/attachments/deployment/sap-btp/sap-cloud-platform/deployment-package.png" alt="">}}
 
@@ -284,7 +284,7 @@ Click **Next** to continue to the **Runtime** tab. Here, you can **Add**, edit (
 
 ## Deleting an App
 
-If you are the last person to leave a Mendix app, you can delete the app. However, this does not delete the app or resources on SAP BTP. To leave the app, find it on the [My Apps](https://sprintr.home.mendix.com/link/myapps) page in the Mendix Portal and click **Leave app**.
+If you are the last person to leave a Mendix app, you can delete the app. However, this does not delete the app or resources on SAP BTP. To leave the app, find it on the [My Projects](https://projects.home.mendix.com/link/myapps) page in the Mendix Portal and click **Leave app**.
 
 If you are the last member of the app development team, you are asked if you want to delete the app.
 

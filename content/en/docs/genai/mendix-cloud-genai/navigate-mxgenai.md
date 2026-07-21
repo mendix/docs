@@ -30,7 +30,7 @@ Note that periods represent bundle months. A bundle month is the period during w
 
 **Current Consumption** shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 1,521 / 1.6k). **Plan** shows the resource pack model type (for example, Anthropic Claude Opus) and the total GenAI Unit allocation for the bundle month. The bundle refill date is shown at the top of the page.
 
-Below the summary, the page shows **Consumption Over Selected Time Range**. You can switch between weekly (**W**), bundle month (**BM**), month to date (**MTD**), and six months (**6M**) views. The charts show:
+Below the summary, the page shows **Consumption Over Selected Time Range**. You can switch between weekly (**W**), bundle month (**BM**), month to date (**MTD**), and six months (**6M**) views. Use the **Model** dropdown to filter the charts by a specific model, and the **Key** dropdown to filter them by a specific resource key. The charts show the following metrics:
 
 * **Monthly Bundle GenAI Units Consumption** – GenAI Units consumed per day, with a dashed line indicating the monthly allocation limit.
 * **Monthly Bundle Input Consumption** – Raw LLM input tokens consumed per day.

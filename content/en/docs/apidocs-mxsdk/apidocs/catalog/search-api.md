@@ -238,7 +238,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
                 },
                 "icon": "https://catalog.mendix.com/resources/logos/other_icon.png",
                 "uuid": "1bed66d2-4477-39a9-9144-d0f848212f1e",
-                "repositoryLocation": "https://sprintr.home.mendix.com/link/project/369386df-35b4-475b-a917-17adcc81c1b5",
+                "repositoryLocation": "https://projects.home.mendix.com/link/project/369386df-35b4-475b-a917-17adcc81c1b5",
                 "businessOwner": {
                     "email": "john.doe@siemens.com",
                     "uuid": "d9d4b5bc-ffe8-4c5c-b237-7358d01f7981",

@@ -40,7 +40,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first [create your app](/developerportal/#create-app), it will be set to deploy to Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image2.png" class="no-border" >}}
 
@@ -62,7 +62,7 @@ Deployment package creation for Mendix versions 7 and below is no longer support
 The deployment package created with Java 17/21 support requires the Mendix Operator to be in version 2.15.0 or above.
 {{% /alert %}}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page and click **Create Deployment Package**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image9.png" class="no-border" >}}
@@ -93,7 +93,7 @@ Alternatively, you can upload an existing MDA by clicking **Upload**.
 
 ### Creating an Environment{#create-environment}
 
-When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Apps](https://sprintr.home.mendix.com/) will show you the current status.
+When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Projects](https://projects.home.mendix.com/) will show you the current status.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image5.png" class="no-border" >}}
 
@@ -220,7 +220,7 @@ You will be taken to the Environment Details page for the selected environment. 
 
 ## Environments Page
 
-After opening your app in [Apps](https://sprintr.home.mendix.com/), you can find the **Environments** page, which contains three sections:
+After opening your app in [Projects](https://projects.home.mendix.com/), you can find the **Environments** page, which contains three sections:
 
 * Deployment Package Repository
 * Environments

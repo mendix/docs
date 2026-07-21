@@ -203,6 +203,7 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
+| 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |
 | 10.24.0 and above | 4.5.0 | - | New Admin UI and new constants have been introduced. |
 | | | | `Anonymous` module role has been removed. |
 | | | | Supporting multi-domain using constant. See [Configuring Multi-Domain](#multi-domain) for more information. |
@@ -524,6 +525,10 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
     Example: `true`
     
 * **EnablePKCE** (*default: True*) – enables Proof Key for Code Exchange (PKCE)
+
+* **OIDC.NonceCookieSameSite** (*default: Lax*) – specifies the `SameSite` attribute for the OIDC nonce cookie, controlling when the browser includes the cookie during authentication requests.
+
+    Example: `None`
 
 ##### Deploy-Time IdP Configuration for API Security Only
 

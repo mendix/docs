@@ -33,7 +33,7 @@ A configuration contains the following:
 * [Constants](#constants)
 * [Custom](#custom)
 * [Headers](#headers)
-* [OpenTelemetry](/refguide/tracing-in-runtime/#min-configuration)
+* [OpenTelemetry](/refguide/opentelemetry-in-runtime/#min-configuration)
 
 ### Database {#database}
 

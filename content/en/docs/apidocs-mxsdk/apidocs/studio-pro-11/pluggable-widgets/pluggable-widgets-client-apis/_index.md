@@ -516,7 +516,7 @@ interface FormatValueConfig {
 }
 ```
 
-For the reference of the API, you can refer to the [API documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-parser/).
+For the reference of the API, you can refer to the [API documentation](https://apidocs.rnd.mendix.com/11/client-mx-api/module-mx-api_parser.html).
 
 ### Icon {#icon}
 

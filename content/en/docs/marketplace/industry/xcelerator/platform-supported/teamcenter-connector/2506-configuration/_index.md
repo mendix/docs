@@ -11,4 +11,4 @@ The following pages describe the steps needed to configure the connection betwee
 * [Configuring the Connection to Teamcenter](/appstore/modules/siemens-plm/configuring-connection/)
 * [Configuring the Connection to Teamcenter X](/appstore/modules/siemens-plm/teamcenterx/)
 
-For information applying to Teamcenter Connector 2512.0.0 and above, refer to [Configuring the Connection to Teamcenter 2512.0.0 and Above](/appstore/modules/siemens-plm/configuring-connection-2512/).
+For information applying to Teamcenter Connector 2512.0.0 and above, refer to [Configuring the Connection to Teamcenter 2512.0.0 and Above](//appstore/industry/teamcenter-connector/configuring-connection-2512/).

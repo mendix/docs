@@ -50,5 +50,5 @@ To see all the changes in this release, refer to the [Teamcenter Connector](http
     For details on React Client, refer to its [documentation page](/refguide/mendix-client/react/).
 
 6. Set Up the Teamcenter Configuration.    
-    Due to the SSO setup, you need to set up the Teamcenter configuration again when you deploy a new app with Teamcenter Connector 2512.0.0. For details on how to do that, follow the steps in [Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above](/appstore/modules/siemens-plm/configuring-connection-2512/).
+    Due to the SSO setup, you need to set up the Teamcenter configuration again when you deploy a new app with Teamcenter Connector 2512.0.0. For details on how to do that, follow the steps in [Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above](/appstore/industry/teamcenter-connector/configuring-connection-2512/).
     

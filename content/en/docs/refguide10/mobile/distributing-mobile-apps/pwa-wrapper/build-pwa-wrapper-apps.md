@@ -1,19 +1,15 @@
 ---
 title: "Build PWA Wrapper Apps"
-url: /refguide10/mobile/pwa-wrapper/build-pwa-wrapper-apps/
+url: /refguide10/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/
 weight: 20
 description: "Build Android APKs and iOS packages with PWA Wrapper."
 ---
-
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 
 Use PWA Wrapper to generate Android and iOS packages from a Mendix PWA. The builder collects your app resources, applies wrapper configuration, and produces platform-specific build artifacts such as APK and IPA files.
 
-Before following this guide, make sure you have completed [Install PWA Wrapper](/refguide/mobile/pwa-wrapper/install-pwa-wrapper/).
+Before following this guide, make sure you have completed [Install PWA Wrapper](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/).
 
 ## Build an Android APK
 
@@ -27,7 +23,7 @@ Install Android Studio only if you want to use Android emulators for testing.
 
 To generate an Android APK, do the following:
 
-1. [Open the builder](/refguide/mobile/pwa-wrapper/install-pwa-wrapper/#openbuilder) and select **Android**.
+1. [Open the builder](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/#openbuilder) and select **Android**.
 2. In the app information step, enter the app metadata:
 
     * app name
@@ -40,14 +36,14 @@ To generate an Android APK, do the following:
 
     {{< figure src="/attachments/refguide/mobile/pwa-wrapper/app-information.png" alt="Android app information step in the PWA Wrapper builder" max-width="500px" >}}
 
-3. Review the available permissions and enable only the permissions related to the capabilities your app uses. For capability-to-permission guidance, see [Capability to Permission Mapping](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/#capability-to-permission-mapping).
+3. Review the available permissions and enable only the permissions related to the capabilities your app uses. For capability-to-permission guidance, see [Capability to Permission Mapping](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/#capability-to-permission-mapping).
 
     {{< figure src="/attachments/refguide/mobile/pwa-wrapper/permissions.png" alt="Permissions step in the PWA Wrapper builder" max-width="500px" >}}
 
 4. Go to the signing step and do one of the following:
 
     * choose an existing Android signing configuration
-    * create a new signing configuration if this is the first Android build for the app; for platform-specific details, see [Sign Android Apps on Windows and macOS](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#sign-android-apps-on-windows-and-macos)
+    * create a new signing configuration if this is the first Android build for the app; for platform-specific details, see [Sign Android Apps on Windows and macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-android-apps-on-windows-and-macos)
 5. Continue to the packaging step and click **Generate Package**.
 
     {{< figure src="/attachments/refguide/mobile/pwa-wrapper/package-android-app.png" alt="Packaging step for building an Android APK with PWA Wrapper" max-width="500px" >}}
@@ -64,7 +60,7 @@ The signing step is part of the Android build flow. The selected signing configu
 * Unsigned packages are suitable only for limited testing scenarios such as emulators
 * Signed packages are required for device installation and normal distribution workflows
 
-For platform-specific details about the signing step, see [Sign Android Apps on Windows and macOS](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#sign-android-apps-on-windows-and-macos).
+For platform-specific details about the signing step, see [Sign Android Apps on Windows and macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-android-apps-on-windows-and-macos).
 
 ### Android Output{#androidoutput}
 
@@ -96,7 +92,7 @@ iOS packaging for a final signed device build requires macOS. On Windows, you ca
 
 To generate a signed iOS package on macOS, do the following:
 
-1. [Open the builder](/refguide/mobile/pwa-wrapper/install-pwa-wrapper/#openbuilder) and select **iOS**.
+1. [Open the builder](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/#openbuilder) and select **iOS**.
 2. In the app information step, enter the app metadata:
 
     * app name
@@ -108,11 +104,11 @@ To generate a signed iOS package on macOS, do the following:
     * supported devices
     * screen orientation
 
-3. Review the available permissions and enable only the permissions related to the capabilities your app uses. For capability-to-permission guidance, see [Capability to Permission Mapping](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/#capability-to-permission-mapping).
-4. Go to the signing step and create or select an iOS signing configuration. For platform-specific details, see [Sign iOS Apps on macOS](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos).
+3. Review the available permissions and enable only the permissions related to the capabilities your app uses. For capability-to-permission guidance, see [Capability to Permission Mapping](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/#capability-to-permission-mapping).
+4. Go to the signing step and create or select an iOS signing configuration. For platform-specific details, see [Sign iOS Apps on macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos).
 5. Continue to the packaging step and click **Generate Package**.
 
-    {{< figure src="/attachments/refguide/mobile/pwa-wrapper/package-ios-app.png" alt="Packaging step for building an iOS package with PWA Wrapper" max-width="500px" >}}
+    {{< figure src="/attachments/refguide10/mobile/pwa-wrapper/package-ios-app.png" alt="Packaging step for building an iOS package with PWA Wrapper" max-width="500px" >}}
 
 6. Wait for the build to complete.
 7. Open the output directory and retrieve the generated artifacts.
@@ -128,7 +124,7 @@ On Windows, use the same steps 1 through 7 as in [Steps for iOS on macOS](#steps
 
 1. Open the output folder and locate the portable signing ZIP.
 2. Copy the portable signing ZIP to a Mac.
-3. Complete the final signing step on macOS as described in [Complete Signing on macOS](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#complete-signing-on-macos) in *Sign PWA Wrapper Apps*.
+3. Complete the final signing step on macOS as described in [Complete Signing on macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#complete-signing-on-macos) in *Sign PWA Wrapper Apps*.
 
 ### iOS Notes
 
@@ -138,13 +134,13 @@ Keep the following limitations in mind:
 * The builder installation step for iOS is available only on macOS hosts
 * Copying packaged web resources is currently not supported on iOS, so the wrapped app must load its frontend resources from the deployed Mendix runtime
 
-For platform-specific details about the signing step inside this build flow, see [Sign iOS Apps on macOS](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos) in *Sign PWA Wrapper Apps* for macOS builds and [Prepare iOS Apps on Windows](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#prepare-ios-apps-on-windows)  in *Sign PWA Wrapper Apps* for Windows builds.
+For platform-specific details about the signing step inside this build flow, see [Sign iOS Apps on macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos) in *Sign PWA Wrapper Apps* for macOS builds and [Prepare iOS Apps on Windows](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#prepare-ios-apps-on-windows)  in *Sign PWA Wrapper Apps* for Windows builds.
 
 ## Choosing Permissions and Packaging Options
 
 When configuring the wrapper, only enable the permissions and capabilities that your app actually uses. This reduces unnecessary prompts for end users and makes app review easier.
 
-For a practical mapping between capabilities and the permissions you typically need to configure, see [Capability to Permission Mapping](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/#capability-to-permission-mapping).
+For a practical mapping between capabilities and the permissions you typically need to configure, see [Capability to Permission Mapping](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/#capability-to-permission-mapping).
 
 If the builder offers a choice to skip copying web resources, use that option carefully. Skipping resource copy makes packaging faster, but the wrapped app will fetch its frontend resources from the runtime instead of using packaged resources.
 
@@ -159,7 +155,7 @@ For Android:
 3. Click **Install to Device**.
 4. Open the app from the device launcher after installation completes.
 
-    {{< figure src="/attachments/refguide/mobile/pwa-wrapper/run-on-android-emulator.png" alt="Install the generated Android app on an emulator from the PWA Wrapper builder" max-width="500px" >}}
+    {{< figure src="/attachments/refguide10/mobile/pwa-wrapper/run-on-android-emulator.png" alt="Install the generated Android app on an emulator from the PWA Wrapper builder" max-width="500px" >}}
 
 For iOS on macOS:
 
@@ -171,7 +167,7 @@ For iOS on macOS:
 4. Click **Install to Device**.
 5. Launch the app from the device or simulator after installation completes.
 
-    {{< figure src="/attachments/refguide/mobile/pwa-wrapper/run-on-ios-simulator.png" alt="Install the generated iOS app on a simulator from the PWA Wrapper builder" max-width="500px" >}}
+    {{< figure src="/attachments/refguide10/mobile/pwa-wrapper/run-on-ios-simulator.png" alt="Install the generated iOS app on a simulator from the PWA Wrapper builder" max-width="500px" >}}
 
 If installation fails, check the builder error message first. Common causes are missing signing, incompatible provisioning, unavailable devices, or an already installed newer build.
 
@@ -182,7 +178,7 @@ Keep the following testing limitations in mind while validating a wrapped app:
 * Hardware-dependent capabilities often require a physical device for realistic testing
 * Barcode and QR scanning, camera capture, geolocation, and biometric authentication should be validated on physical devices
 * Features such as network information, file download, URL opening, printing, sharing, local notifications, and permission flows can be tested first on simulators and emulators, but final verification should still happen on real devices
-* Web API-backed capabilities such as network information, Share API flows, geolocation, notifications, and permission handling require a secure context. For more information, see [Secure Context](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/#secure-context)
+* Web API-backed capabilities such as network information, Share API flows, geolocation, notifications, and permission handling require a secure context. For more information, see [Secure Context](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/#secure-context)
 * iOS physical-device testing requires a signed IPA
 * Capability behavior can differ between test devices even within the same platform
 
@@ -192,6 +188,6 @@ If your app depends on device hardware, validate the final packaged app on repre
 
 After building the wrapper app, continue with the appropriate distribution process for your target platform.
 
-If you still need platform-specific details for the signing step in the build flow, see [Sign Android Apps on Windows and macOS](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#sign-android-apps-on-windows-and-macos), [Sign iOS Apps on macOS](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos), or [Prepare iOS Apps on Windows](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/#prepare-ios-apps-on-windows).
+If you still need platform-specific details for the signing step in the build flow, see [Sign Android Apps on Windows and macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-android-apps-on-windows-and-macos), [Sign iOS Apps on macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos), or [Prepare iOS Apps on Windows](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#prepare-ios-apps-on-windows).
 
-To understand which capabilities you can use from your Mendix app, see [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/).
+To understand which capabilities you can use from your Mendix app, see [PWA Wrapper Capabilities](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/).

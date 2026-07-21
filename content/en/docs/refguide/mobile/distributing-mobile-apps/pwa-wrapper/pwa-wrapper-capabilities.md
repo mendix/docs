@@ -1,13 +1,11 @@
 ---
 title: "PWA Wrapper Capabilities"
-url: /refguide10/mobile/pwa-wrapper/pwa-wrapper-capabilities/
+url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/
 weight: 30
 description: "Overview of the capabilities exposed by the bundled PWA Wrapper JavaScript actions."
+aliases:
+    - /refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/
 ---
-
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 
@@ -15,7 +13,7 @@ PWA Wrapper includes bundled JavaScript actions that a Mendix PWA can call from 
 
 Support can vary by platform, operating system version, browser engine, and configured permissions. Always test the capabilities you depend on using the actual devices you plan to support.
 
-In the current beta release, PWA Wrapper capabilities are documented for Android and iOS.
+PWA Wrapper capabilities are documented for Android and iOS.
 
 ## Supported Capabilities
 

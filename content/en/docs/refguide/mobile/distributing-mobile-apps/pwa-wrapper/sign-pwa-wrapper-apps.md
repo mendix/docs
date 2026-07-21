@@ -1,23 +1,21 @@
 ---
 title: "Sign PWA Wrapper Apps"
-url: /refguide10/mobile/pwa-wrapper/sign-pwa-wrapper-apps/
+url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/
 weight: 25
 description: "Configure Android and iOS signing for PWA Wrapper on macOS and Windows."
+aliases:
+    - /refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/
 ---
-
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 
 This page explains the signing step within the PWA Wrapper build flow. It covers Android signing on Windows and macOS, iOS signing on macOS, and the Windows-to-macOS handoff required for final iOS signing.
 
-Use this page as a reference while completing [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/).
+Use this page as a reference while completing [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 ## Signing in the Build Flow
 
-PWA Wrapper includes signing as part of the platform build flow. In the current beta release, the following signing scenarios are supported:
+PWA Wrapper includes signing as part of the platform build flow. The following signing scenarios are supported:
 
 | Target Platform | Host Platform | Result |
 | --- | --- | --- |
@@ -102,7 +100,7 @@ Keep the following recommendations in mind:
 
 Final iOS signing is only supported on macOS.
 
-### Before You Start
+### Before You Start {#before-you-start}
 
 Before creating the iOS signing configuration, make sure you have the following:
 
@@ -182,7 +180,7 @@ Before starting the Windows flow, obtain the following files from your Apple sig
 * The `.p12` passphrase
 * A matching `.mobileprovision` file
 
-You can create these files yourself through the Apple Developer workflow, or receive them from the team that manages your Apple signing assets. For Apple-specific certificate, provisioning profile, and Keychain export steps, see the official Apple documentation linked in [Before You Start](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/).
+You can create these files yourself through the Apple Developer workflow, or receive them from the team that manages your Apple signing assets. For Apple-specific certificate, provisioning profile, and Keychain export steps, see the official Apple documentation linked in the [Before You Start](#before-you-start) section above.
 
 If the Apple signing assets are created on a Mac by another team member, confirm that the delivered files are a usable `.p12` export and a matching provisioning profile. A `.cer` file alone is not sufficient for PWA Wrapper.
 

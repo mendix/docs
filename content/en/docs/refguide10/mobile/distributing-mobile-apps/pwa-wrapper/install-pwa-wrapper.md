@@ -1,13 +1,9 @@
 ---
 title: "Install PWA Wrapper"
-url: /refguide10/mobile/pwa-wrapper/install-pwa-wrapper/
+url: /refguide10/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/
 weight: 10
 description: "Install and enable PWA Wrapper in Mendix Studio Pro."
 ---
-
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 
@@ -25,7 +21,7 @@ Before installing [PWA Wrapper](https://marketplace.mendix.com/link/component/25
 
 * You are using Mendix Studio Pro 10.24 or later
 
-Platform-specific build and testing requirements such as Xcode or Xcode Command Line Tools, optional Android emulators or iOS simulators, and Apple signing assets are described in [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/).
+Platform-specific build and testing requirements such as Xcode or Xcode Command Line Tools, optional Android emulators or iOS simulators, and Apple signing assets are described in [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 ## Install PWA Wrapper
 
@@ -56,5 +52,5 @@ Only request the permissions your app actually uses. This keeps the generated wr
 
 ## Read More
 
-* [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/)
-* [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/)
+* [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)
+* [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)

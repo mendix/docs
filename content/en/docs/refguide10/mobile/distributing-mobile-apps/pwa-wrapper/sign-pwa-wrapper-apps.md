@@ -1,6 +1,6 @@
 ---
 title: "Sign PWA Wrapper Apps"
-url: /refguide10/mobile/pwa-wrapper/sign-pwa-wrapper-apps/
+url: /refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/
 weight: 25
 description: "Configure Android and iOS signing for PWA Wrapper on macOS and Windows."
 ---
@@ -9,7 +9,7 @@ description: "Configure Android and iOS signing for PWA Wrapper on macOS and Win
 
 This page explains the signing step within the PWA Wrapper build flow. It covers Android signing on Windows and macOS, iOS signing on macOS, and the Windows-to-macOS handoff required for final iOS signing.
 
-Use this page as a reference while completing [Build PWA Wrapper Apps](/refguide10/mobile/pwa-wrapper/build-pwa-wrapper-apps/).
+Use this page as a reference while completing [Build PWA Wrapper Apps](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 ## Signing in the Build Flow
 

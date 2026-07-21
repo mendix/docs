@@ -5,6 +5,12 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.19
+
+**Release date: Jul 21, 2026**
+
+- We fixed a build failure where `com.google.firebase:firebase-analytics` could not be resolved when Push Notifications or Crashlytics were enabled by properly including the Firebase BoM logic.
+
 ## 14.1.18
 
 **Release date: June 10, 2026**

@@ -8,8 +8,6 @@ no_list: false
 
 ## Introduction
 
-Siemens Industry Components are Mendix Marketplace modules that let you integrate Siemens data and services into Mendix apps built on the Siemens Xcelerator platform.
-
-The information in this chapter describes platform-supported industry components, which are maintained by Mendix, and Siemens-supported components, which are maintained by Siemens.
+Industry components are reusable Mendix Marketplace building blocks, such as modules and widgets, that help developers connect domain-relevant data, services, and capabilities into apps, AI agents, and workflows for manufacturing-related use cases. This chapter explains how developers can use these components to create domain-specific workflows, integrations, and tailored user experiences across engineering, operations, quality, supply chain, and service domains.
 
 ## Documents in This Category

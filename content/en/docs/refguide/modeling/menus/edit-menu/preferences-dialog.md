@@ -237,11 +237,11 @@ This option allows you to change the user interface language you work in while u
 
 | Language               | Introduced | General Availability |
 | ---------------------- | ---------- | -------------------- |
-| Chinese                | 10.17      | 10.24                |
-| German                 | 11.13      | TBD                  |
+| Chinese                | 10.17      | 10.24                |           |
 | Japanese               | 10.17      | 10.24                |
 | Korean                 | 10.17      | 10.24                |
 | Portuguese (Brazilian) | 10.23      | TBD                  |
+| German                 | 11.13      | TBD       
 
 ### Editor Tabs Closing Policy {#closing-policy}
 

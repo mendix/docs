@@ -41,6 +41,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | Navigation | Studio Pro 11.11 | |
 | Menu | Studio Pro 11.11 | |
 | Data Transformers | Studio Pro 11.12 | |
+| JSON Structures | Studio Pro 11.13 | |
 
 ### Maia Make Standalone Capabilities
 
@@ -73,7 +74,6 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Themes and styling | Allows Maia to modify theme variables, create custom styling, and manage design properties. | Studio Pro 11.12 | |
 | Markdown attachment support | Allows you to provide Markdown documents as input to help Maia better understand your requirements. | Studio Pro 11.12 | |
 | Explain and solve consistency errors | Allows you to use Maia to explain or solve problems by right-clicking the item in the **Errors** pane. | Studio Pro 11.12.1 | |
-| JSON structures | Allows you to use Maia to create or change JSON structure documents. | Studio Pro 11.13 | |
 
 ## Using Maia Make Capabilities
 

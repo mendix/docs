@@ -224,9 +224,10 @@ If no [user-visibility](/agents/agents-kit-2/reference-guide/commons/#enum-usera
 
 Conversational UI chats can also be streamed to the UI, which expands the assistant response as the LLM generates new content. To use streaming, use [AgentCommons](/agents/agents-kit-2/reference-guide/agent-commons/) to configure a chat agent in the [model settings](/agents/agents-kit-2/reference-guide/agent-commons/#model-settings), enable the applicable streaming options there, and use that agent when calling the `New Chat for Agent` action and in your action microflow. Not all models and connectors support streaming. Currently, streaming is supported only for Mendix Cloud GenAI.
 
-Note that the following limitations apply for streaming because the logic is called in isolated transactions:
-* Tool microflows can only read and change objects in the database, and user interaction is limited, for example, opening a page.
-* Similarly, action microflows can only read and change objects in the database.
+Note that the following limitations apply for streaming because the microflows are called in isolated transactions:
+* Tool microflows can only read objects from the database and changes to objects are only stored within the microflow if not committed. Additionally, user interaction is limited, for example, opening a page or showing a message to the user.
+* This similarly applies for action microflows.
+A workaround to these limitations would be to make changes to persistent objects, for example the ChatContext which is available in both the action microflow and on the page.
 
 ### Human in the Loop {#human-in-the-loop}
 

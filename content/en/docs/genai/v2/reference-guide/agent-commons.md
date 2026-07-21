@@ -117,7 +117,7 @@ Users can create two types of agents:
 
 #### Control model behavior {#model-settings}
 
-By clicking the icon next to the selected model, you can control model behavior by configuring the temperature, top P, and maximum number of tokens on the version. If the selected model and connector support it (currently only Mendix Cloud GenAI), you can also enable backend streaming to use the model's streaming API, and frontend streaming to send generated chunks to the user interface as they become available (see [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/#streaming) documentation for more). UI streaming is supported only for chat agents and for a chat interface from the Conversational UI module.
+By clicking the icon next to the selected model, you can control model behavior by configuring the temperature, top P, and maximum number of tokens on the version. If the selected model and connector support it (currently only Mendix Cloud GenAI), you can also enable backend streaming to use the model's streaming API, and frontend streaming to send generated chunks to the user interface as they become available (see [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/#streaming) documentation for more). UI streaming is supported only for chat agents and for a chat interface from the Conversational UI module. For task agents only backend streaming is possible because the UI is part of the implementation.s
 
 #### Defining Context Entity {#define-context-entity}
 

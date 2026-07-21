@@ -25,11 +25,11 @@ In summary:
 This PWA Wrapper documentation section includes the following topics:
 
 * Overview: this page explains what PWA Wrapper is and when to use it
-* Installation guide: [Install PWA Wrapper](/refguide/mobile/pwa-wrapper/install-pwa-wrapper/)
-* Build guide: [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/)
-* Signing reference: [Sign PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/) explains the signing step in the build flow
-* Capabilities guide: [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/)
-* Limitations: [PWA Wrapper Limitations](/refguide/mobile/pwa-wrapper/pwa-wrapper-limitations/)
+* Installation guide: [Install PWA Wrapper](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/)
+* Build guide: [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)
+* Signing reference: [Sign PWA Wrapper Apps](//refguide/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/) explains the signing step in the build flow
+* Capabilities guide: [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
+* Limitations: [PWA Wrapper Limitations](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-limitations/)
 
 ## Typical Use Cases
 
@@ -58,11 +58,3 @@ Keep the following limitations in mind:
 * Some integrations use standard Web APIs, which means behavior can vary between devices, operating system versions, and embedded browser engines
 
 For build-specific constraints, see [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/). For capability-specific constraints, see [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/).
-
-## Read More
-
-* [Install PWA Wrapper](/refguide/mobile/pwa-wrapper/install-pwa-wrapper/)
-* [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/)
-* [Sign PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/)
-* [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/)
-* [PWA Wrapper Limitations](/refguide/mobile/pwa-wrapper/pwa-wrapper-limitations/)

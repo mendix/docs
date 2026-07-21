@@ -13,7 +13,6 @@ Mendix comes with a wide variety of [Widgets](/refguide/pages/#widgets-categorie
 
 * [Mendix 10](/apidocs-mxsdk/apidocs/pluggable-widgets-10/)
 * [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/)
-* [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)
 
 Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple apps and distributed through the [Marketplace](/appstore/).
 

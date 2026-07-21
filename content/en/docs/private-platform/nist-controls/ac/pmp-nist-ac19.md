@@ -51,7 +51,7 @@ Organizations are cautioned that the need to provide adequate security for mobil
 
 The following controls are related to this control:
 
-* AC-3
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
 * AC-7
 * AC-18
 * AC-20

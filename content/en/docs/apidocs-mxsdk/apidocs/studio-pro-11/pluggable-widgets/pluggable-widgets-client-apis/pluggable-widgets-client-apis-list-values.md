@@ -197,6 +197,12 @@ It is possible to set filtering conditions for items of a datasource. `setFilter
 
 Some examples of builder functions are `equals`, `greaterThan`, `lessThanOrEqual` for filtering on `DateTime` or `Decimal` attributes. Functions like `startsWith`, `contains` are useful for filtering on `String` attributes. Filtering based on associations is also possible. For example, you can use `equals` with references and `contains` with reference sets.
 
+To use the filter builders in a pluggable widget, import the individual builder functions you need directly from the "mendix/filters/builders" module path:
+
+```ts
+import { attribute, literal, equals, startsWith, and, or } from "mendix/filters/builders";
+```
+
 The following code samples show how to use filter builders and apply filtering to a data source property with three linked attributes and two linked associations:
 
 ```ts

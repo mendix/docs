@@ -12,7 +12,7 @@ This document provides troubleshooting instructions for some potential issues re
 
 ### Logs
 
-By default, the Client retains logs of up to 10 MB for the past seven days locally on your computer. Access logs by clicking the **Logs** button on the Client UI, then optionally selecting the level of logs you want to see. Opening the Client's console through the browser developer tools (**Ctrl + Shift + I**) can also provide additional information about encountered errors in the UI of the Client.
+By default, the Client retains logs of up to 10 MB for the past seven days locally on your computer. To access the logs, open the Client and select the **Logs** option from the **three dots** menu in the top right corner, then optionally select the level of logs you want to see. 
 
 Log files are also available by day in the Client's app data folder. On Windows, press **Win + R** and enter:
 
@@ -28,7 +28,7 @@ On Linux, the *Mendix Workstation/logs* folder is located at either `$XDG_CONFIG
 
 ### Diagnostics
 
-When [Developer Mode](/mendix-workstation/installation/#developer-mode) is enabled, the Client also shows a **Diagnostics** page. This page displays information about the available devices, credentials, station configuration, system info, and log levels, which you can use to help you troubleshoot any issues.
+When [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled, the Client also shows a **Diagnostics** page. This page displays information about the available devices, credentials, station configuration, system info, and log levels, which you can use to help you troubleshoot any issues.
 
 ## Registration Token Could Not Be Parsed
 
@@ -80,7 +80,7 @@ The Client request to Workstation Management is not forwarded to the Workstation
 
 ### Solution 
 
-Verify whether your computer's network traffic is routed through a proxy server and configure your proxy settings accordingly. See [Network Configuration](/mendix-workstation/prerequisites/#network-configuration).
+Verify whether your computer's network traffic is routed through a proxy server and configure your proxy settings accordingly. See [Network Configuration](/mendix-workstation/network-configuration/).
 
 ## Workstation Management URL cannot be resolved
 

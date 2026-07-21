@@ -1,0 +1,1775 @@
+openapi: 3.0.1
+info:
+  title: Deploy Service v1
+  description: "The deploy service API is for creating and managing app environment resources for app package deployment. \r\n"
+  version: 1.0.0
+servers:
+  - url: https://pmp-demo.privateplatform.mendix.com/deployservice/v1
+paths:
+  /apps/{appId}/environments:
+    post:
+      tags:
+        - apps
+      summary: 'Create a new environment for app'
+      description: 'Create a new environment with specified configuration and resources for specified app.'
+      operationId: createEnvironment
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnvironmentCreateRequest'
+            examples:
+              Create environment with Core Resource Size (Connected and Standalone mode):
+                value:
+                  displayName: Project-A-Env
+                  clusterName: eks-test
+                  namespace: ns-test
+                  storagePlanName: bk-plan
+                  databasePlanName: db-plan
+                  deploymentPurpose: Development
+                  deploymentPackageName: e2e-app-deploy-portunus-146465ba.mda
+                  coreResourceSize: Small
+              Create environment with Core Resource Plan (Connected mode only):
+                value:
+                  displayName: Project-A-Env
+                  clusterName: eks-connected
+                  namespace: ns-connected
+                  storagePlanName: bk-plan
+                  databasePlanName: db-plan
+                  deploymentPurpose: Development
+                  deploymentPackageName: e2e-app-deploy-portunus-146465ba.mda
+                  coreResourcePlan: low-level
+                  
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncOperationResponse'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+    get:
+      tags:
+        - apps
+      summary: 'Retrieve all environments for app'
+      description: 'Get all Standalone environments when platform in Standalone mode; Get all Connected environments when platform in Connected mode.'
+      operationId: getEnvironments
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/Environments'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /apps/{appId}/environments/{environmentId}:
+    get:
+      tags:
+        - apps
+      summary: 'Retrieve a specified environment for app'
+      description: 'Retrieve information and status of a specified environment for specified app.'
+      operationId: getEnvironment
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+        - name: environmentId
+          in: path
+          description: Environment id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/Environment'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    delete:
+      tags:
+        - apps
+      summary: 'Delete a specified environment for app'
+      description: 'Delete a specified environment for specified app.'
+      operationId: deleteEnvironment
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+        - name: environmentId
+          in: path
+          description: Environment id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Delete environment successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+
+  /apps/{appId}/environments/{environmentId}/configurations:
+    patch:
+      tags:
+        - apps
+      summary: Update configuration of a specified environment
+      description: >-
+        Update configuration and settings of a specified environment for
+        specified app.
+      operationId: updateConfigurations
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+        - name: environmentId
+          in: path
+          description: Environment id
+          required: true
+          schema:
+            type: string
+
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfigurationPatchRequest'
+            examples:
+              Request to change some configurations:
+                value:
+                  displayName: Project-A-Env
+                  replicas: 1
+                  appUrl: https://project-a-env.portunus.mxplatform.net/
+                  leaderlessMode: true
+
+              Request to change admin password:
+                value:
+                  adminPassword: Project-A-Env
+
+              Request to change Environment Constants:
+                value:
+                  Constants:
+                    - name: const1
+                      newValue: xyz
+
+              Request to enable Scheduled Events:
+                value:
+                  ScheduledEvents:
+                    - name: event1
+                      newEnabled: true
+
+              Request to change Http Headers:
+                value:
+                  CustomHttpHeaders:
+                    - header: key1
+                      newValue: val1
+
+              Request to change Environment Variables:
+                value:
+                  CustomEnvironmentVariables:
+                    - name: cev1
+                      newValue: "12345"
+                    - name: cev2
+                      newValue: abcdef
+
+              Request to change Runtime Settings:
+                value:
+                  CustomRuntimeSettings:
+                    - name: crs1
+                      newValue: "789"
+                    - name: crs2
+                      newValue: xyz
+
+              Request to change JVM and Jetty options:
+                value:
+                  CustomJVMOptions: 
+                    name: JAVA_TOOL_OPTIONS
+                    newValue: "-Xmx512m -Xms256m"
+                  CustomJettyOptions: 
+                    name: jettyOptions
+                    newValue: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
+
+              Request to change Debugger and Log Levels:
+                value:
+                  Debugger:
+                    enabled: true
+                    password: "[Password for connect debugger]"
+                  LogLevels: 
+                    - node: LogEnv
+                      level: INFO
+
+              Request to Add New Client Certificates:
+                value:
+                  ClientCertificates: 
+                    - newEnabled: true
+                      password: "[Password for import client certificate file]"
+                      base64pfxCertFileContent: "[base64 encoded content of pfx format certificate file]"
+
+              Request to Add Web Service for Client Certificates:
+                value:
+                  ClientCertificates: 
+                    - id: 960
+                      CertificateServices:
+                        - webServiceName: wsService1
+
+              Request to disable Client Certificates:
+                value:
+                  ClientCertificates: 
+                    - id: 960
+                      newEnabled: false
+
+              Request to Use Existed Secret for TLS Config:
+                value:
+                  CustomTLSConfig: 
+                    enableTLS: true
+                    tlsConfig: TlsCustom
+                    useExistingSecret: UseExistedSecret
+                    secretName: tls-secret
+
+              Request to Add New Key Certificate for TLS Config:
+                value:
+                  CustomTLSConfig: 
+                    enableTLS: true
+                    tlsConfig: TlsCustom
+                    useExistingSecret: AddNewKeyCertificate
+                    tlsCertificate: "[base64 encoded content of tls Certificate file]"
+                    tlsPrivateKey: "[base64 encoded content of tls Private Key file]"
+
+              Request to change Core Resource:
+                value:
+                  CoreResource: 
+                    coreResourceSize: Custom
+                    cpuRequest: 0.1
+                    cpuLimit: 1
+                    memRequest: 0.512
+                    memLimit: 1
+                    ephemeralRequest: 10
+                    ephemeralLimit: 20
+
+      responses:
+        '200':
+          $ref: '#/components/responses/Environment'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+          
+    delete:
+      tags:
+        - apps
+      summary: Delete configuration and settings of a specified environment
+      description: >-
+        Delete configuration and settings of a specified environment for
+        specified app.
+      operationId: deleteConfigurations
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+        - name: environmentId
+          in: path
+          description: Environment id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfigurationDeleteRequest'
+            examples:
+              Request to delete Environment Variables:
+                value:
+                  CustomEnvironmentVariables:
+                    - name: cev1
+                    - name: cev2
+              Request to delete Runtime Settings:
+                value:
+                  CustomRuntimeSettings:
+                    - name: crs1
+                    - name: crs2
+              Request to delete Http Headers:
+                value:
+                  CustomHttpHeaders:
+                    - header: hd1
+                    - header: hd2
+              Request to delete Log Levels:
+                value:
+                  LogLevels:
+                    - node: nd1
+                    - node: nd2
+              Request to delete Web Service of Client Certificates:
+                value:
+                  ClientCertificates:
+                    - id: 7634128901
+                      CertificateServices: 
+                        - webServiceName: wsService1
+                        - webServiceName: wsService2
+              Request to delete Client Certificates:
+                value:
+                  ClientCertificates:
+                    - id: 7634128901
+
+      responses:
+        '204':
+          description: Delete environment configurations successfully, no content in response body
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /apps/{appId}/environments/{environmentId}/request:
+    post:
+      tags:
+        - apps
+      summary: Deploy package or apply change for a specified environmen
+      description: >-
+        Deploy package or apply change or start/stop/restart a specified
+        environmen for specified app.
+      operationId: requestActionOnAppInEnv
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+        - name: environmentId
+          in: path
+          description: Environment id
+          required: true
+          schema:
+            type: string
+        - name: action
+          in: query
+          description: Deploy package, apply config or start/stop/restart app in the environmen
+          schema:
+            enum:
+              - ApplyConfig
+              - Deploy
+              - Start
+              - Stop
+              - Restart
+            type: string
+        - name: packageId
+          in: query
+          description: Package id
+          schema:
+            type: string
+      responses:
+        '202': 
+          $ref: '#/components/responses/AsyncOperationResponse'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /apps/{appId}/dashboard:
+    get:
+      tags:
+        - apps
+      summary: Get app dashboard include all environments
+      description: Get app dashboard include all environments created in both Standalone and Connected mode
+      operationId: getAppDashboard
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/Dashboards'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+components:
+  parameters:
+    appId:
+      name: appId
+      in: path
+      description: App id
+      required: true
+      schema:
+        type: string
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+    environmentId:
+      name: environmentId
+      in: path
+      description: Environment id
+      required: true
+      schema:
+        type: string
+        example: eynu0q2x
+
+  responses:
+    error-401:
+      description: Authentication information is missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+    error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid environment info:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: displayName
+                    reason: Invalid environment display name
+                  - name: databasePlanName
+                    reason: Invalid database plan name
+            400 - Invalid cluster info:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: clusterName
+                    reason: Incorrect cluster name
+                  - name: namespace
+                    reason: Invalid namespace
+    error-403:
+      description: User has no permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+    error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - Environment not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Environment not found
+
+    AsyncOperationResponse:
+      description: Response for async  operations include create environment, deploy, apply config, start, stop and restart app.
+      content:
+        application/json:        
+          schema:
+            $ref: '#/components/schemas/AsyncOperationResponse'
+          examples:
+            Response from operation - Deploy:
+              value:
+                environmentId: l48bv05l
+                pipelineId: 179862510118532184
+                message: Request accepted, starting to deploy app package into environment
+            Response from operation - ApplyConfig:
+              value:
+                environmentId: l48bv05l
+                pipelineId: 179862510118532185
+                message: Request accepted, starting to apply environment configurations
+            Response from operation - Start:
+              value:
+                environmentId: l48bv05l
+                pipelineId: 179862510118532186
+                message: Request accepted, starting environment app
+            Response from operation - Stop:
+              value:
+                environmentId: l48bv05l
+                pipelineId: 179862510118532187
+                message: Request accepted, stopping environment app
+            Response from operation - Restart:
+              value:
+                environmentId: l48bv05l
+                pipelineId: 179862510118532188
+                message: Request accepted, restarting environment app
+
+    Environment:
+      description: Environment detail information
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Environment'
+          examples:
+            Environment:
+              value:
+                environmentId: l48bv05l
+                internalName: l48bv05l
+                displayName: Project-A-Env
+                clusterName: eks-test
+                namespace: "test-ns"
+                storagePlanName: "bk-plan"
+                databasePlanName: "db-plan"
+                deploymentPurpose: Development
+                dtapMode: Development
+                appName: "E2E-App-Deploy-Portunus"
+                appUrl: "https://l48bv05l.portunus.mxplatform.net/"
+                status: Ready
+                readyReplicas: 1
+                replicas: 1
+                isAppStopped: false
+                isManualDeploy: false
+                leaderlessMode: false
+                buildStatus: Ready
+                runtimeStatus: Ready
+                networkStatus: Ready
+                databaseStatus: Ready
+                storageStatus: Ready
+                licenseStatus: Licensed
+                creationStatus: Created
+                resourceStatus: Ready
+                runtimeVersion: "11.6.2"
+                lastStartTime: "2026-04-14T18:17:10.666Z"
+                runtimeExplanation: "master: MinimumReplicasAvailable"
+                buildExplanation: "Build succeeded"
+                storageExplanation: "Successfully created secret"
+
+                Packages: 
+                  packageName: mh-local-ui102413-5e6a49a5.mda
+                  status: Success
+                  locked: true
+                  packageId: a957ec90-0fb3-4c9a-ace9-89d0fd4f6c2f
+                  branch: main
+                  revision: 5e6a49a5
+                  modelVersion: 5e6a49a5
+                  runtimeVersion: 10.24.13.86719
+                  createdBy: muhong00
+                  createdTime: 2026-01-07T04:35:57.378Z
+
+                Constants: 
+                  - name: const1
+                    currentValue: "1234"
+                    newValue: "12345"
+                ScheduledEvents: 
+                  - name: event1
+                    currentEnabled: false
+                    newEnabled: true
+                CustomHttpHeaders: 
+                  - name: head1
+                    currentValue: val1
+                    newValue: val2
+                CustomEnvironmentVariables: 
+                  - name: var1
+                    currentValue: abcde
+                    newValue: abcdef
+                CustomRuntimeSettings: 
+                  - name: set1
+                    currentValue: "789"
+                    newValue: "7890"
+ 
+                CustomJVMOptions: 
+                  name: JAVA_TOOL_OPTIONS
+                  currentValue: "-Xmx512m -Xms256m"
+                  newValue: "-Xmx512m -Xms512m"
+                CustomJettyOptions: 
+                  name: jettyOptions
+                  currentValue: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
+                  newValue: "{\n\t\"k2\": \"v2\",\n\t\"k4\": \"v4\"\n}"
+                Debugger: 
+                  enabled: true
+                  url: "https://l48bv05l.portunus.mxplatform.net/debugger/"
+                LogLevels: 
+                  - node: LogApp
+                    level: INFO
+
+                ClientCertificates: 
+                  - id: 960
+                    subject: my-tls-client
+                    issuer: mx-tls-client
+                    validFrom: 2026-06-02T08:27:49.000Z
+                    validTo: 2027-06-02T08:27:49.000Z
+                    currentEnabled: false
+                    newEnabled: true
+                    CertificateServices:
+                      - webServiceName: wsService1
+
+                CustomTLSConfig: 
+                  enableTLS: true
+                  tlsConfig: TlsCustom
+                  useExistingSecret: UseExistedSecret
+                  secretName: tls-secret
+                CoreResource: 
+                  coreResourcePlan: "low-level"
+                  cpuRequest: 0.1
+                  cpuLimit: 1
+                  memRequest: 0.512
+                  memLimit: 1
+                  ephemeralRequest: 10
+                  ephemeralLimit: 20
+                  
+    Environments:
+      description: Environment detail list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Environment'
+          examples:
+            Environments:
+              value:
+                - environmentId: l48bv05l 
+                  internalName: l48bv05l
+                  displayName: Project-A-Env
+                  clusterName: eks-test
+                  namespace: "test-ns"
+                  storagePlanName: "bk-plan"
+                  databasePlanName: "db-plan"
+                  deploymentPurpose: Development
+                  dtapMode: Development
+                  appName: "E2E-App-Deploy-Portunus"
+                  appUrl: "https://l48bv05l.portunus.mxplatform.net/"
+                  status: Ready
+                  readyReplicas: 1
+                  replicas: 1
+                  isAppStopped: false
+                  isManualDeploy: false
+                  leaderlessMode: false
+                  buildStatus: Ready
+                  runtimeStatus: Ready
+                  networkStatus: Ready
+                  databaseStatus: Ready
+                  storageStatus: Ready
+                  licenseStatus: Licensed
+                  creationStatus: Created
+                  resourceStatus: Ready
+                  runtimeVersion: "11.6.2"
+                  lastStartTime: "2026-04-14T18:17:10.666Z"
+                  runtimeExplanation: "master: MinimumReplicasAvailable"
+                  buildExplanation: "Build succeeded"
+                  storageExplanation: "Successfully created secret"
+
+                  Packages: 
+                    packageName: mh-local-ui102413-5e6a49a5.mda
+                    status: Success
+                    locked: true
+                    packageId: a957ec90-0fb3-4c9a-ace9-89d0fd4f6c2f
+                    branch: main
+                    revision: 5e6a49a5
+                    modelVersion: 5e6a49a5
+                    runtimeVersion: 10.24.13.86719
+                    createdBy: muhong00
+                    createdTime: 2026-01-07T04:35:57.378Z
+
+                  Constants: 
+                    - name: const1
+                      currentValue: "1234"
+                      newValue: "12345"
+                  ScheduledEvents: 
+                    - name: event1
+                      currentEnabled: false
+                      newEnabled: true
+                  CustomHttpHeaders: 
+                    - name: head1
+                      currentValue: val1
+                      newValue: val2
+                  CustomEnvironmentVariables: 
+                    - name: var1
+                      currentValue: abcde
+                      newValue: abcdef
+                  CustomRuntimeSettings: 
+                    - name: set1
+                      currentValue: "789"
+                      newValue: "7890"
+  
+                  CustomJVMOptions: 
+                    name: JAVA_TOOL_OPTIONS
+                    currentValue: "-Xmx512m -Xms256m"
+                    newValue: "-Xmx512m -Xms512m"
+                  CustomJettyOptions: 
+                    name: jettyOptions
+                    currentValue: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
+                    newValue: "{\n\t\"k2\": \"v2\",\n\t\"k4\": \"v4\"\n}"
+                  Debugger: 
+                    enabled: true
+                    url: "https://l48bv05l.portunus.mxplatform.net/debugger/"
+                  LogLevels: 
+                    - node: LogApp
+                      level: INFO
+
+                  ClientCertificates: 
+                    - id: 960
+                      subject: my-tls-client
+                      issuer: mx-tls-client
+                      validFrom: 2026-06-02T08:27:49.000Z
+                      validTo: 2027-06-02T08:27:49.000Z
+                      currentEnabled: false
+                      newEnabled: true
+                      CertificateServices:
+                        - webServiceName: wsService1
+
+                  CustomTLSConfig: 
+                    enableTLS: true
+                    tlsConfig: TlsCustom
+                    useExistingSecret: UseExistedSecret
+                    secretName: tls-secret
+
+                  CoreResource: 
+                    coreResourcePlan: "low-level"
+                    cpuRequest: 0.1
+                    cpuLimit: 1
+                    memRequest: 0.512
+                    memLimit: 1
+                    ephemeralRequest: 10
+                    ephemeralLimit: 20
+
+    Dashboards:
+      description: App environment dashboard
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Dashboard'
+          examples:
+            App environment dashboard:
+              value:
+                - environmentId: l48bv05l
+                  clusterName: eks-test
+                  namespace: "test-ns"
+                  storagePlanName: "bk-plan"
+                  databasePlanName: "db-plan"
+                  deploymentPurpose: Development
+                  dtapMode: Development
+                  appId: 0521a37c-77f3-4607-94e9-e64a32311833
+                  appName: E2E-App-Deploy-Portunus
+                  appUrl: "https://l48bv05l.portunus.mxplatform.net/"
+                  status: Ready
+                  readyReplicas: 1
+                  replicas: 1
+                  isAppStopped: false
+                  isManualDeploy: false
+                  leaderlessMode: false
+                  buildStatus: Ready
+                  runtimeStatus: Ready
+                  networkStatus: Ready
+                  databaseStatus: Ready
+                  storageStatus: Ready
+                  licenseStatus: Licensed
+                  creationStatus: Created
+                  resourceStatus: Ready
+                  runtimeVersion: "11.6.2"
+                  lastStartTime: "2026-04-14T18:17:10.666Z"
+                  runtimeExplanation: "master: MinimumReplicasAvailable"
+                  buildExplanation: "Build succeeded"
+                  storageExplanation: "Successfully created secret"
+
+                  CoreResource: 
+                    coreResourceSize: "Small"
+                    cpuRequest: 0.1
+                    cpuLimit: 1
+                    memRequest: 0.512
+                    memLimit: 1
+                    ephemeralRequest: 10
+                    ephemeralLimit: 20
+
+  schemas:
+    EnvironmentCreateRequest:
+      title: EnvironmentCreateRequest
+      description: Request to create a new environment.
+      type: object
+      properties:
+        displayName:
+          type: string
+          description: Display name of the environment
+          example: Env-Dev
+        clusterName:
+          type: string
+          description: Cluster name where the environment will be deployed
+          example: cluster-dev
+        namespace:
+          type: string
+          description: Namespace for the environment
+          example: namespace-dev
+        storagePlanName:
+          type: string
+          description: Name of the storage plan for the environment
+          example: storage-dev
+        databasePlanName:
+          type: string
+          description: Name of the database plan for the environment
+          example: database-dev
+        deploymentPackageName:
+          type: string
+          description: Name of the package for the deployment
+          example: mh-local-ui102413-5e6a49a5.mda
+        deploymentPurpose:
+          enum:
+            - Development
+            - Test
+            - Acceptance
+            - Production
+          type: string
+          description: Purpose for the deployment
+          example: Development          
+        coreResourcePlan:
+          type: string
+          description: Core Resource Plan for environment creation, it's only for connected mode.
+          example: low-level
+        coreResourceSize:
+          enum:
+            - Small
+            - Medium
+            - Large
+            # - Custom
+          type: string
+          description: "Core Resource Size for environment, not support Custom Size for environment creation. If need, please use PATCH API to config Custom Size after environment created."
+          default: Small
+      required:
+        - displayName
+        - clusterName
+        - namespace
+        - storagePlanName
+        - databasePlanName
+        - deploymentPackageName
+        - deploymentPurpose
+
+    ConfigurationPatchRequest:
+      title: ConfigurationPatchRequest
+      description: Request to change environment configurations and settings
+      type: object
+      properties:
+        displayName:
+          type: string
+          description: Display name of the environment
+          example: Env-Dev
+        dtapMode:
+          type: string
+          description: DTAP mode of the environment can be Development or Production
+          example: Development
+        replicas:
+          type: integer
+          description: Replicas of the environment
+          example: 1
+        appUrl:
+          type: string
+          description: URL of the app deployed in the environment
+          example: "https://project-a-env.portunus.mxplatform.net/"
+        adminPassword:
+          type: string
+          description: Admin password of the app deployed in the environment
+          example: "[MxAdminPassword]"
+        leaderlessMode:
+          type: boolean
+          description: Indicate if the environment is in leaderless mode
+          example: false
+
+        Constants:
+          description: Constants of the app deployed in the environment
+          type: array
+          items:
+            title: Constants
+            type: object
+            properties:
+              name:
+                type: string
+              newValue:
+                type: string
+
+        ScheduledEvents:
+          description: Scheduled events of the app deployed in the environment
+          type: array
+          items:
+            title: ScheduledEvents
+            type: object
+            properties:
+              name:
+                type: string
+              newEnabled:
+                type: boolean
+
+        CustomEnvironmentVariables:
+          description: Variables of the app deployed in the environment
+          type: array
+          items:
+            title: CustomEnvironmentVariable
+            type: object
+            properties:
+              name:
+                type: string
+              newValue:
+                type: string
+
+        CustomRuntimeSettings:
+          description: Runtime settings of the app deployed in the environment
+          type: array
+          items:
+            title: CustomRuntimeSetting
+            type: object
+            properties:
+              name:
+                type: string
+              newValue:
+                type: string
+
+        CustomHttpHeaders:
+          description: HTTP headers of the environment network
+          type: array
+          items:
+            title: CustomHttpHeaders
+            type: object
+            properties:
+              header:
+                type: string
+              newValue:
+                type: string
+
+        CustomJVMOptions:
+          description: JVM options of the environment model
+          title: CustomJVMOptions
+          type: object
+          properties:
+            newValue:
+              type: string
+
+        CustomJettyOptions:
+          description: Jetty options of the environment model
+          title: CustomJettyOptions
+          type: object
+          properties:
+            name:
+              type: string
+            newValue:
+              type: string
+
+        Debugger:
+          description: Debugger of the app deployed in the environment
+          title: Debugger
+          type: object
+          properties:
+            enabled:
+              type: boolean
+            password:
+              type: string
+
+        LogLevels:
+          description: Log levels of the environment
+          type: array
+          items:
+            title: LogLevels
+            type: object
+            properties:
+              node:
+                type: string
+              level:
+                enum:
+                  - CRITICAL
+                  - ERROR
+                  - WARNING
+                  - INFO
+                  - DEBUG
+                  - TRACE
+                type: string
+
+        ClientCertificates:
+          description: Client certificates of the environment network
+          type: array
+          items:
+            title: ClientCertificates
+            type: object
+            properties:
+              base64pfxCertFileContent:
+                type: string
+              password:
+                type: string
+              newEnabled:
+                type: boolean
+
+        CustomTLSConfig:
+          description: TLS configuration of the environment network
+          title: CustomTLSConfig
+          type: object
+          properties:
+            enableTLS:
+              type: boolean
+              default: false
+            tlsConfig:
+              enum:
+                - TlsDefault
+                - TlsCustom
+              type: string
+            secretName:
+              type: string
+            tlsCertificate:
+              type: string
+            tlsPrivateKey:
+              type: string
+            useExistingSecret:
+              enum:
+                - UseExistedSecret
+                - AddNewKeyCertificate
+              type: string
+
+        CoreResource:
+          description: Core resource of the environment
+          title: CoreResource
+          type: object
+          properties:
+            coreResourcePlan:
+              type: string
+              description: Core Resource Plan for environment, it's only for Connected mode.
+            coreResourceSize:
+              enum:
+                - Small
+                - Medium
+                - Large
+                - Custom
+              type: string
+              description: Core Resource Size for environment, it's for both Connected and Standalone modes.
+            cpuRequest:
+              type: number
+              description: 'Cpu cores request should not be lower than 0.1 CPU'
+            cpuLimit:
+              type: number
+              description: 'Cpu cores limit should not be lower than 0.1 CPU'
+            memRequest:
+              type: number
+              description: 'Memory request should not be lower than 0.512 GB'
+            memLimit:
+              type: number
+              description: 'Memory limit should not be lower than 0.512 GB'
+            ephemeralRequest:
+              type: number
+              description: 'Ephemeral Storage request should not be lower than 1 GB'
+            ephemeralLimit:
+              type: number
+              description: 'Ephemeral storage limit should not be lower than 1 GB'
+
+    ConfigurationDeleteRequest:
+      title: ConfigurationDeleteRequest
+      description: Request to delete environment configurations and settings
+      type: object
+      properties:
+        CustomEnvironmentVariables:
+          description: Variables of the app deployed in the environment
+          type: array
+          items:
+            title: CustomEnvironmentVariable
+            type: object
+            properties:
+              name:
+                type: string
+
+        CustomRuntimeSettings:
+          description: Runtime settings of the app deployed in the environment
+          type: array
+          items:
+            title: CustomRuntimeSetting
+            type: object
+            properties:
+              name:
+                type: string
+
+        CustomHttpHeaders:
+          description: HTTP headers of the environment network
+          type: array
+          items:
+            title: CustomHttpHeaders
+            type: object
+            properties:
+              header:
+                type: string
+
+        LogLevels:
+          description: Log levels of the environment
+          type: array
+          items:
+            title: LogLevels
+            type: object
+            properties:
+              node:
+                type: string
+
+        ClientCertificates:
+          description: Client certificates of the environment network
+          type: array
+          items:
+            title: ClientCertificates
+            type: object
+            properties:
+              id:
+                type: integer
+ 
+
+    AsyncOperationResponse:
+      description: Response for async  operations include create environment, deploy, apply config, start, stop and restart app.
+      type: object
+      properties:
+        environmentId:
+          type: string
+          description: Environment id
+          example: j60vwiju
+        pipelineId:
+          type: integer
+          description: Deploy pipeline id
+          example: 179862510118532184
+        message:
+          type: string
+          description: operations message
+          example: Request accepted, deploy app package started
+
+    Environment:
+      title: Environment
+      description: Environment detail configurations and information.
+      type: object
+      properties:
+          environmentId:
+            type: string
+            description: Environment id
+            example: eynu0q2x
+          internalName:
+            type: string
+            description: Internal name of the environment
+            example: eynu0q2x
+          displayName:
+            type: string
+            description: Display name of the environment
+            example: Env-Dev
+          clusterName:
+            type: string
+            description: Name of the cluster for the environment created
+            example: test-cluster
+          namespace:
+            type: string
+            description: Cluster namespace for the environment created
+            example: test-namespace
+          storagePlanName:
+            type: string
+            description: Name of the storage plan for the environment
+            example: test-storage-plan
+          databasePlanName:
+            type: string
+            description: Name of the database plan for the environment
+            example: test-database-plan
+          deploymentPurpose:
+            enum:
+                - Development
+                - Test
+                - Acceptance
+                - Production
+            type: string
+            description: Purpose of the deployment
+            example: Development
+          dtapMode:
+            type: string
+            description: DTAP mode of the environment can be Development or Production
+            example: Development              
+          appName:
+            type: string
+            description: Name of the application
+            example: MyApp
+          appUrl:
+            type: string
+            description: URL of the application
+            example: https://myapp.example.com
+          status:
+              enum:
+                - Init
+                - Waiting
+                - Building
+                - Processing
+                - Success
+                - Ready
+                - Failed
+                - Unknown
+              type: string
+              description: Status of the environment
+              example: Success
+          readyReplicas:
+            type: integer
+            description: Number of ready replicas for the environment
+            example: 2
+          replicas:
+            type: integer
+            description: Total number of replicas for the environment
+            example: 3
+          isAppStopped:
+            type: boolean
+            description: Indicates if the application is stopped
+            example: false
+          isManualDeploy:
+            type: boolean
+            description: Indicates if the deployment was manual
+            example: true
+          leaderlessMode:
+            type: boolean
+            description: Indicates if the environment was leaderless mode
+            example: true
+          buildStatus:
+            type: string
+            description: Status of the build process
+            example: Processing
+          runtimeStatus:
+            type: string
+            description: Status of the runtime environment
+            example: Ready
+          networkStatus:
+            type: string
+            description: Status of the network configuration
+            example: Ready
+          databaseStatus:
+            type: string
+            description: Status of the database connection
+            example: Ready
+          storageStatus:
+            type: string
+            description: Status of the storage configuration
+            example: Ready
+          licenseStatus:
+            type: string
+            description: Status of the license
+            example: Licensed
+          creationStatus:
+            type: string
+            description: Status of the creation process
+            example: Completed
+          resourceStatus:
+            type: string
+            description: Status of the resources
+            example: Allocated
+          runtimeVersion:
+            type: string
+            description: Version of the runtime environment
+            example: 1.0.0
+          lastStartTime:
+            type: string
+            description: Timestamp of the last start time
+            example: 2023-10-01T12:00:00Z
+          buildExplanation:
+            type: string
+            description: Explanation for the build process
+            example: Build completed successfully
+          storageExplanation:
+            type: string
+            description: Explanation for the storage configuration
+            example: Storage is available and properly configured
+          runtimeExplanation:
+            type: string
+            description: Explanation for the runtime environment
+            example: Runtime environment is running correctly
+
+          Packages:
+            description: App package deployed in the environment
+            type: object
+            properties:
+              packageId:
+                type: string
+                description: Package id
+                example: a957ec90-0fb3-4c9a-ace9-89d0fd4f6c2f
+              packageName:
+                type: string
+                description: Package name
+                example: mh-local-ui102413-5e6a49a5.mda
+              status:
+                type: string
+                description: Package status
+                example: Success
+              locked:
+                type: boolean
+                description: Indicates if the package is locked
+                example: false
+              branch:
+                type: string
+                description: The branch to which the package built from
+                example: main
+              revision:
+                type: string
+                description: The revision to which the package built from
+                example: 5e6a49a5
+              modelVersion:
+                type: string
+                description: The model version of the package
+                example: 5e6a49a5
+              runtimeVersion:
+                type: string
+                description: The runtime version required by the package
+                example: 10.24.13.86719
+              createdBy:
+                type: string
+                description: The user who created the package
+                example: John
+              createdTime:
+                type: string
+                description: The timestamp when the package was created
+                example: 2026-01-07T04:35:57.378Z
+
+          Constants:
+            description: Constants of the app deployed in the environment
+            type: array
+            items:
+              title: Constants
+              type: object
+              properties:
+                name:
+                  type: string
+                currentValue:
+                  type: string
+                newValue:
+                  type: string
+
+          ScheduledEvents:
+            description: Scheduled events of the app deployed in the environment
+            type: array
+            items:
+              title: ScheduledEvents
+              type: object
+              properties:
+                name:
+                  type: string
+                currentEnabled:
+                  type: boolean
+                newEnabled:
+                  type: boolean
+
+          CustomEnvironmentVariables:
+            type: array
+            items:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the environment variable
+                currentValue:
+                  type: string
+                newValue:
+                  type: string
+                  description: The value of the environment variable
+
+          CustomRuntimeSettings:
+            type: array
+            items:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the runtime setting
+                currentValue:
+                  type: string
+                newValue:
+                  type: string
+                  description: The value of the runtime setting
+
+          CustomJVMOptions:
+            type: object
+            properties:
+              name:
+                type: string
+                description: The name of the JVM option
+              currentValue:
+                type: string
+              newValue:
+                type: string
+                description: The value of the JVM option
+                
+          CustomJettyOptions:
+            type: object
+            properties:
+              name:
+                type: string
+                description: The name of the Jetty option
+              currentValue:
+                type: string
+              newValue:
+                type: string
+                description: The value of the Jetty option
+
+          Debugger:
+            type: object
+            properties:
+              enabled:
+                type: boolean                    
+              url:
+                  type: string
+                  description: The URL for accessing the debugger
+
+          LogLevels:
+            description: Log levels of the environment
+            type: array
+            items:
+              type: object
+              properties:
+                node:
+                  type: string
+                  description: The node for which the log level is set
+                level:
+                  type: string
+                  description: The log level for the specified node
+
+          ClientCertificates:
+            description: Client certificates of the environment network
+            type: array
+            items:
+              title: ClientCertificates
+              type: object
+              properties:
+                id:
+                  type: integer
+                issuer:
+                  type: string
+                subject:
+                  type: string
+                validFrom:
+                  type: string
+                validTo:
+                  type: string
+                currentEnabled:
+                  type: boolean
+                newEnabled:
+                  type: boolean
+
+          CustomTLSConfig:
+            description: TLS configuration of the environment network
+            type: object
+            properties:
+              enableTLS:
+                type: boolean
+                description: Whether to enable TLS for the environment
+              tlsConfig:
+                type: string
+                description: The TLS configuration for the environment
+              useExistingSecret:
+                type: string
+                description: The name of the existing secret for TLS configuration
+
+          CoreResource:
+            description: Core resource of the environment
+            type: object
+            properties:
+              coreResourcePlan:
+                type: string
+                description: The core resource plan for the environment
+              coreResourceSize:
+                enum:
+                  - Small
+                  - Medium
+                  - Large
+                  - Custom
+                type: string
+                description: The size of the core resources for the environment
+              cpuRequest:
+                type: number
+                description: The CPU request for the environment
+              cpuLimit:
+                type: number
+                description: The CPU limit for the environment
+              memRequest:
+                type: number
+                description: The memory request for the environment
+              memLimit:
+                type: number
+                description: The memory limit for the environment
+              ephemeralRequest:
+                type: number
+                description: The ephemeral storage request for the environment
+              ephemeralLimit:
+                type: number
+                description: The ephemeral storage limit for the environment
+
+    Dashboard:
+      title: Dashboard
+      description: App environment dashboard information.
+      type: object
+      properties:
+          environmentId:
+            type: string
+            description: Environment id
+            example: eynu0q2x
+          clusterName:
+            type: string
+            description: Name of the cluster for the environment created
+            example: test-cluster
+          namespace:
+            type: string
+            description: Cluster namespace for the environment created
+            example: test-namespace
+          storagePlanName:
+            type: string
+            description: Name of the storage plan for the environment
+            example: test-storage-plan
+          databasePlanName:
+            type: string
+            description: Name of the database plan for the environment
+            example: test-database-plan
+          deploymentPurpose:
+            enum:
+                - Development
+                - Test
+                - Acceptance
+                - Production
+            type: string
+            description: Purpose of the deployment
+            example: Development
+          dtapMode:
+            type: string
+            description: DTAP mode of the environment can be Development or Production
+            example: Development              
+          appId:
+            type: string
+            description: Id of the application
+            example: 0521a37c-77f3-4607-94e9-e64a32311833
+          appName:
+            type: string
+            description: Name of the application
+            example: MyApp
+          appUrl:
+            type: string
+            description: URL of the application
+            example: https://myapp.example.com
+          status:
+              enum:
+                - Init
+                - Waiting
+                - Building
+                - Processing
+                - Success
+                - Ready
+                - Failed
+                - Unknown
+              type: string
+              description: Status of the environment
+              example: Success
+          readyReplicas:
+            type: integer
+            description: Number of ready replicas for the environment
+            example: 2
+          replicas:
+            type: integer
+            description: Total number of replicas for the environment
+            example: 3
+          # isAppStopped:
+          #   type: boolean
+          #   description: Indicates if the application is stopped
+          #   example: false
+          # isManualDeploy:
+          #   type: boolean
+          #   description: Indicates if the deployment was manual
+          #   example: true
+          buildStatus:
+            type: string
+            description: Status of the build process
+            example: Processing
+          runtimeStatus:
+            type: string
+            description: Status of the runtime environment
+            example: Ready
+          networkStatus:
+            type: string
+            description: Status of the network configuration
+            example: Ready
+          databaseStatus:
+            type: string
+            description: Status of the database connection
+            example: Ready
+          storageStatus:
+            type: string
+            description: Status of the storage configuration
+            example: Ready
+          licenseStatus:
+            type: string
+            description: Status of the license
+            example: Licensed
+          creationStatus:
+            type: string
+            description: Status of the creation process
+            example: Completed
+          resourceStatus:
+            type: string
+            description: Status of the resources
+            example: Allocated
+          runtimeVersion:
+            type: string
+            description: Version of the runtime environment
+            example: 1.0.0
+
+          deployedBy:
+            type: string
+            description: Timestamp of the last start time
+            example: Peter
+
+          uptime:
+            type: string
+            description: Timestamp of the last start time
+            example: "0 min"
+
+          uptimeChanged:
+            type: string
+            description: Timestamp of the last start time
+            example: "2023-10-01T12:00:00Z"
+
+          createdDate:
+            type: string
+            description: Timestamp of the last start time
+            example: "2023-10-01T12:00:00Z"
+
+          buildExplanation:
+            type: string
+            description: Explanation for the build process
+            example: Build completed successfully
+          storageExplanation:
+            type: string
+            description: Explanation for the storage configuration
+            example: Storage is available and properly configured
+          runtimeExplanation:
+            type: string
+            description: Explanation for the runtime environment
+            example: Runtime environment is running correctly
+
+          CoreResource:
+            description: Core resource of the environment
+            type: object
+            properties:
+              coreResourceSize:
+                enum:
+                  - Small
+                  - Medium
+                  - Large
+                  - Custom
+                type: string
+                description: The size of the core resources for the environment
+              cpuRequest:
+                type: number
+                description: The CPU request for the environment
+              cpuLimit:
+                type: number
+                description: The CPU limit for the environment
+              memRequest:
+                type: number
+                description: The memory request for the environment
+              memLimit:
+                type: number
+                description: The memory limit for the environment
+              ephemeralRequest:
+                type: number
+                description: The ephemeral storage request for the environment
+              ephemeralLimit:
+                type: number
+                description: The ephemeral storage limit for the environment
+
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+          example: 400
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+          example: Bad Request
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+          example: Invalid parameters
+        invalid-params:
+          type: array
+          description: "(Optional) JSON list List of name, reason keys for invalid attribute values.\r\n"          
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: "Parameter name.\r\n"
+                example: appId
+              reason:
+                type: string
+                description: "Reason for error.\r\n"
+                example: App id can not be empty
+      required:
+        - status
+        - title
+        - detail
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+security:
+  - basicAuth: []
+  - mxtoken: []
+tags:
+  - name: apps
+    description: 'For creating, managing app environment resources and deploy app package'

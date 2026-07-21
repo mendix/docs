@@ -18,6 +18,7 @@ The following table shows which of the more popular platform-supported Marketpla
 | Marketplace Component | React Client Ready | Alternative |
 | --- | --- | --- |
 | [Administration Module](https://marketplace.mendix.com/link/component/23513) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
+| [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [AnyChart](https://marketplace.mendix.com/link/component/106517) | {{< icon name="remove-circle-filled" color="red" >}} | AnyChart is deprecated and will not be made React compatible. Use CustomChart from [Charts](https://marketplace.mendix.com/link/component/105695) instead. |
 | [Atlas Core](https://marketplace.mendix.com/link/component/117187) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Atlas Native Content](https://marketplace.mendix.com/link/component/117175) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
@@ -34,6 +35,7 @@ The following table shows which of the more popular platform-supported Marketpla
 | [Excel Exporter](https://marketplace.mendix.com/link/component/726) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Excel Importer](https://marketplace.mendix.com/link/component/72) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Forgot Password Module](https://marketplace.mendix.com/link/component/1296) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
+| [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Image Crop](https://marketplace.mendix.com/link/component/254) | {{< icon name="remove-circle-filled" color="red" >}} | |
 | [LDAP](https://marketplace.mendix.com/link/component/210270) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Mendix Application Performance Diagnostics](https://marketplace.mendix.com/link/component/6127) | {{< icon name="remove-circle-filled" color="red" >}} | |
@@ -45,16 +47,14 @@ The following table shows which of the more popular platform-supported Marketpla
 | [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [OIDC Provider](https://marketplace.mendix.com/link/component/244687) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [OIDC SSO](https://marketplace.mendix.com/link/component/120371) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
+| [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
+| [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [SAML](https://marketplace.mendix.com/link/component/1174) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [SCIM](https://marketplace.mendix.com/link/component/229630) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [UnitTesting](https://marketplace.mendix.com/link/component/390) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
+| [User Classification](https://marketplace.mendix.com/link/component/245015) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [UserCommons](https://marketplace.mendix.com/link/component/223053) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Web Actions](https://marketplace.mendix.com/link/component/114337) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Workflow Commons](https://marketplace.mendix.com/link/component/117066) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [XSUAA Connector for SAP Cloud Platform](https://marketplace.mendix.com/link/component/78091) | {{< icon name="remove-circle-filled" color="red" >}} | |
-| [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
-| [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
-| [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
-| [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
-| [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) | {{< icon name="checkmark-circle-filled" color="green" >}} | |

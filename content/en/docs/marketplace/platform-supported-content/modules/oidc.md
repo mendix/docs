@@ -203,6 +203,7 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
+| 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |
 | 10.24.0 and above | 4.5.0 | - | New Admin UI and new constants have been introduced. |
 | | | | `Anonymous` module role has been removed. |
 | | | | Supporting multi-domain using constant. See [Configuring Multi-Domain](#multi-domain) for more information. |
@@ -524,6 +525,10 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
     Example: `true`
     
 * **EnablePKCE** (*default: True*) – enables Proof Key for Code Exchange (PKCE)
+
+* **OIDC.NonceCookieSameSite** (*default: Lax*) – specifies the `SameSite` attribute for the OIDC nonce cookie, controlling when the browser includes the cookie during authentication requests.
+
+    Example: `None`
 
 ##### Deploy-Time IdP Configuration for API Security Only
 
@@ -989,7 +994,7 @@ If your microflow is not correctly implemented you will be told that **Authentic
 
 If end-users who use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If successful, the end-user will be automatically redirected back to the deeplink.
 
-For more information on using Deep Link module (with Mendix 8 and 9), see the [Using Deep Link Module](#using-deep-link) section below.
+For more information on using Deep Link module (with Mendix 9), see the [Using Deep Link Module](#using-deep-link) section below.
 
 #### Using Page and Microflow URLs with OIDC SSO{#page-microflow-url}
 
@@ -1036,7 +1041,7 @@ The Deep Link module has been deprecated from Studio Pro 10.6 and replaced by [p
 For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section above.
 {{% /alert %}}
 
-To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 8 and 9), you can choose between the following methods of selecting an IdP:
+To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 9), you can choose between the following methods of selecting an IdP:
 
 * You need to set the `LoginLocation` constant of the Deep Link module to the `/oauth/v2/login?cont=`.
 * You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.

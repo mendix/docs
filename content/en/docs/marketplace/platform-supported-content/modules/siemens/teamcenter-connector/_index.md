@@ -12,6 +12,8 @@ Teamcenter Connector for Mendix enables Mendix developers to access product data
 
 This documentation provides guidance on using Teamcenter Connector for Mendix. It assumes that you are familiar with Mendix concepts, processes, and terminology for application development.
 
+In Mendix version 11.12.0 and above, you can also embed a Mendix web app as a native component inside Siemens Teamcenter Active Workspace. For more information, see [Mendix Inside Teamcenter](/refguide/mendix-client/mendix-inside-teamcenter/).
+
 ## Prerequisites
 
 To use Teamcenter Connector for Mendix, you need the following:

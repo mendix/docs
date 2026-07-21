@@ -203,7 +203,7 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [IBM DB2](/refguide8/db2/) 11.5 for Linux, Unix, and Windows
+* [IBM DB2](/refguide9/db2/) 11.5 for Linux, Unix, and Windows
 * [MariaDB](/refguide9/mysql/): 10.6, 10.11, 11.4, 11.8
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
@@ -252,8 +252,6 @@ For server-based installations, the following storage types mounted by the OS ar
 Internet Explorer is no longer supported in Studio Pro 9. As the market is moving away from Internet Explorer and Mendix continues to align with the best practices of the modern web ecosystem, we have dropped support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved app loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.<br />
 <br />
 As of Studio Pro 9, app end-users still using IE will be shown an **Unsupported Browser** message stating that upgrading to a modern browser is required. You can [customize this message](/howto9/front-end/customize-styling-new/#customize-unsupported-browsers) to meet your needs.<br />
-<br />
-If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) will continue supporting IE11. Mendix recommends using Studio Pro 8 until your app end-users have upgraded their browsers.
 {{% /alert %}}
 
 ## Mobile {#mobile}

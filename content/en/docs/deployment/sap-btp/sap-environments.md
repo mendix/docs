@@ -15,7 +15,7 @@ The **Environment Details** page is the central location for configuring and man
 Use the **Environment Details** page to configure how your app runs, manage Cloud Foundry services, set environment variables, and monitor your app's status. Changes made here persist across deployments and override any temporary changes made directly in the SAP BTP cockpit.
 
 {{% alert color="info" %}}
-To access the Environment Details page, go to **Environments** in [Apps](https://sprintr.home.mendix.com/) and click the details ({{% icon name="pencil-write-paper" %}}) icon next to your environment. You will also be taken to this page when you successfully deploy or transport your app.
+To access the Environment Details page, go to **Environments** in [Projects](https://projects.home.mendix.com/) and click the details ({{% icon name="pencil-write-paper" %}}) icon next to your environment. You will also be taken to this page when you successfully deploy or transport your app.
 {{% /alert %}}
 
 ## Environment Details {#EnvironmentDetails}

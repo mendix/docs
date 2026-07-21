@@ -1,5 +1,5 @@
 ---
-title: "Use the 3D Viewer API"
+title: "Using the 3D Viewer API"
 url: /partners/siemens/3d-viewer-api/
 description: "Describes how to use the 3D Viewer API"
 ---
@@ -77,4 +77,4 @@ Starting from version 2.2.0, 3D Viewer module includes some out-of-box API actio
 
 ## Feedback
 
-If you have problem using the 3D Viewer API listed in [3D Viewer API Reference](https://d102io3ppw18a6.cloudfront.net/), or you would like more APIs to be exposed, raise a ticket in [Mendix Support portal](https://support.mendix.com/). We will address them accordingly. 
+If you encounter issues using the 3D Viewer API listed in the [3D Viewer API Reference](https://d102io3ppw18a6.cloudfront.net/), or if you would like more APIs to be exposed, please contact [Siemens Support](https://customer.sw.siemens.com/en-US).

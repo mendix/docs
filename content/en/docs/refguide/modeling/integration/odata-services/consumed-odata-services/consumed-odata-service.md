@@ -35,31 +35,41 @@ The **Consumed OData Service** document contains the following information:
 You can use either constants or a microflow to set the service URL and proxy settings.
 
 - Use constants when the service URL and proxy settings are always the same.
-- Use a connection microflow when you need more control. See section [connection and headers microflow](#connection-and-headers-microflow) below for more details.
+- Use a connection microflow when you need more control. For more information, see the [Connection and Headers Microflow](#connection-and-headers-microflow) section below.
 
-### Service URL {#service-url}
+#### Service URL {#service-url}
 
 The **Service URL** displays a constant that specifies the URL of the service endpoint:
 
-- Click **Select** to choose another [constant](/refguide/constants/) for the service.
-- Click **Show** to open the **Constant** dialog box displaying the service URL or endpoint.
+- Click **Select** to choose another [constant](/refguide/constants/).
+- Click **Show** to open the **Constant** dialog box and view the service URL or endpoint.
 
-### Connection microflow
+#### Connection microflow
 
-The **Connection microflow** displays the microflow that the app uses to retrieve the service URL, proxy settings and headers. See section [connection and headers microflow](#connection-and-headers-microflow) for details about how to create such a microflow.
+The **Connection microflow** displays the microflow that the app uses to retrieve the service URL, proxy settings and headers. See the [Connection and Headers Microflow](#connection-and-headers-microflow) section below for details about how to create such a microflow.
 
 - Click **Select** to choose another microflow.
 - Click **Show** to navigate to the microflow.
 
-### Proxy Configuration
+### Configuration for Studio Pro 11.12 and below
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/consumed-odata-service/proxy.png" alt="Connection Tab" width="650" class="no-border" >}}
+For Studio Pro 11.12 and below, there are three ways to specify the service URL, headers, and proxy settings: **Constants only**, **Configuration microflow**, and **Headers microflow**.
+
+* **Constants only** – specify the service URL, proxy settings, and headers using constants
+* **Configuration microflow** – specify the service URL, proxy settings, and headers using a microflow that returns a **System.ConsumedODataConfiguration**
+* **Headers microflow** – specify headers using a microflow that returns a list of **System.HttpHeader** and specify the service URL and proxy settings using constants
+
+For more information, see the [Connection and Headers Microflow](#connection-and-headers-microflow) section below.
+
+### Proxy Configuration
 
 **Proxy configuration** allows you to configure a proxy for the request:
 
 - **Follow app settings** – use settings which are defined at the app level (default).
 - **Override app settings** – override the app-level settings for this action by specifying constants for the host, port, user name, and password for the proxy.
 - **No proxy** – do not use a proxy for this service, even if there is a proxy configured at the app level.
+
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/consumed-odata-service/proxy.png" alt="Connection Tab" width="650" class="no-border" >}}
 
 {{% alert color="info" %}}
 In most cases, this setting can be ignored and the default **Follow app settings** can be used.
@@ -69,24 +79,35 @@ In most cases, this setting can be ignored and the default **Follow app settings
 
 {{< figure src="/attachments/refguide/modeling/integration/odata-services/consumed-odata-service/authentication.png" alt="Connection Tab" width="650" class="no-border" >}}
 
-The choice for **Basic authentication** specifies if basic authentication should be used. If selected, specify the following details:
+Select **Basic authentication** to use basic authentication. If selected, specify the following details:
 
-- **User name** – an expression for the user name that will be used for authentication.
-- **Password** – an expression the password that will be used for authentication.
+- **User name** – an expression for the user name used for authentication
+- **Password** – an expression for the password used for authentication
 
-In addition to basic authentication, you can also use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
+You can also use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
 ### HTTP Headers {#http-headers}
 
 {{< figure src="/attachments/refguide/modeling/integration/odata-services/consumed-odata-service/http-headers.png" alt="Connection Tab" width="650" class="no-border" >}}
 
-Choose **Add headers** to add specify additional HTTP request headers to be passed to the endpoint.
+Select **Add HTTP headers** to specify additional HTTP request headers to be passed to the endpoint. The field allows you to add, edit, and delete custom HTTP headers. Each custom header is a pair with a key and a value.
 
-The list allows you to **Add**, **Edit**, or **Delete** custom HTTP headers. Each custom header is a pair with a key and a value.
+The **Headers microflow** allows you to choose a microflow that returns a list of **System.HttpHeader**. For details on how to create such a microflow, see the [Connection and Headers Microflow](#connection-and-headers-microflow) section below.
 
-The **Headers microflow** allows you to choose a microflow that returns a list of **System.HttpHeader**. See section [connection and headers microflow](#connection-and-headers-microflow) for details about how to create such a microflow.
+If the service uses a combination of a connection microflow, a headers microflow, and a list of headers that specify the same header, the headers microflow overwrites the list value and the connection microflow overwrites both.
 
-If the service uses a combination of a connection microflow, a headers microflow and a list of header that specify the same header, then the headers microflow overwrites the value of the list and the connection microflow overwrites both of their values.
+#### Connection and Headers Microflow {#connection-and-headers-microflow}
+
+Choose a microflow that returns one of the following options:
+
+- A **System.ConsumedODataConfiguration** object with associated **System.HttpHeader** objects (for **Configuration microflow**)
+- A list of **System.HttpHeader** objects (for **Headers microflow**)
+
+This microflow can take a parameter of type **System.HttpResponse**. It is called every time a request is made. Initially, the HTTP response parameter is empty. If the service responds with `401 Unauthorized`, the microflow is called with that HTTP response and another request is made with the new HTTP headers.
+
+{{% alert color="info" %}}
+Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For more information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in _Security and Shared Datasets_.
+{{% /alert %}}
 
 ### Advanced
 
@@ -107,19 +128,6 @@ The microflow should have an argument of type `System.HttpResponse`. If the ODat
 The microflow must return a `String` containing the error message. If it returns `empty`, the original generic message is used.
 
 Note for developers of Java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
-
-### Connection microflow and headers microflow{#connection-and-headers-microflow}
-
-Choose a microflow that returns one of the following options:
-
-- A **System.ConsumedODataConfiguration** object with associated **System.HttpHeader** objects (for **Configuration microflow**)
-- A list of **System.HttpHeader** objects (for **Headers microflow**)
-
-This microflow may take a parameter of type **System.HttpResponse**. The microflow is called every time a request is made. Initially, the HTTP response parameter will be empty. If the service responds with `401 Unauthorized`, the microflow is called with that HTTP response and another call is made with the new HTTP headers.
-
-{{% alert color="info" %}}
-Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For more information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in _Security and Shared Datasets_.
-{{% /alert %}}
 
 #### Authenticating with Mendix SSO {#authenticate-mendix-sso}
 

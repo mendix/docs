@@ -74,4 +74,4 @@ When you build a Mendix app with PWA Wrapper capabilities, follow these guidelin
 * Verify native behavior on physical devices, not only simulators or emulators
 * Align the configured wrapper permissions with the JavaScript actions your app calls
 
-For more general guidance on permissions in Mendix mobile apps, see [App Permissions](/refguide/mobile/using-mobile-capabilities/generic-permission-action/).
+For more general guidance on permissions in Mendix mobile apps, see [App Permissions](/refguide10/mobile/using-mobile-capabilities/generic-permission-action/).

@@ -13,7 +13,7 @@ This feature is currently in beta. For more information, refer to [Release Statu
 
 This page explains the signing step within the PWA Wrapper build flow. It covers Android signing on Windows and macOS, iOS signing on macOS, and the Windows-to-macOS handoff required for final iOS signing.
 
-Use this page as a reference while completing [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/).
+Use this page as a reference while completing [Build PWA Wrapper Apps](/refguide10/mobile/pwa-wrapper/build-pwa-wrapper-apps/).
 
 ## Signing in the Build Flow
 
@@ -77,7 +77,7 @@ To create an Android signing configuration, do the following:
 4. Enter a unique signature name such as `test`, `qa`, or `production`.
 5. Click **Create Signature** to save the signature.
 
-{{< figure src="/attachments/refguide/mobile/pwa-wrapper/create-android-signing-config.png" alt="Create a new Android signing configuration in PWA Wrapper" max-width=500px >}}
+{{< figure src="/attachments/refguide10/mobile/pwa-wrapper/create-android-signing-config.png" alt="Create a new Android signing configuration in PWA Wrapper" max-width=500px >}}
 
 PWA Wrapper then creates the local keystore and stores the signing metadata for reuse in later builds.
 
@@ -140,7 +140,7 @@ After you have the Apple signing files, do the following:
 7. Enter the `.p12` passphrase.
 8. Click **Create Signature** to save the signature.
 
-{{< figure src="/attachments/refguide/mobile/pwa-wrapper/create-ios-signing-config.png" alt="Create a new iOS signing configuration in PWA Wrapper" max-width=500px >}}
+{{< figure src="/attachments/refguide10/mobile/pwa-wrapper/create-ios-signing-config.png" alt="Create a new iOS signing configuration in PWA Wrapper" max-width=500px >}}
 
 PWA Wrapper stores the signing configuration for later iOS builds.
 

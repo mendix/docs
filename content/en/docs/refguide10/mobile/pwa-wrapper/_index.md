@@ -3,13 +3,7 @@ title: "PWA Wrapper"
 url: /refguide10/mobile/pwa-wrapper/
 weight: 45
 description: "Package Mendix PWAs as native Android and iOS apps and use wrapper capabilities."
-cascade:
-    beta: true
 ---
-
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 

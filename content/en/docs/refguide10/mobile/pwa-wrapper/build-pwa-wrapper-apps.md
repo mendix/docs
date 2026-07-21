@@ -5,10 +5,6 @@ weight: 20
 description: "Build Android APKs and iOS packages with PWA Wrapper."
 ---
 
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
-
 ## Introduction
 
 Use PWA Wrapper to generate Android and iOS packages from a Mendix PWA. The builder collects your app resources, applies wrapper configuration, and produces platform-specific build artifacts such as APK and IPA files.

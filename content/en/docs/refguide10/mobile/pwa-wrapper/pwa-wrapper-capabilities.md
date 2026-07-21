@@ -5,10 +5,6 @@ weight: 30
 description: "Overview of the capabilities exposed by the bundled PWA Wrapper JavaScript actions."
 ---
 
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
-
 ## Introduction
 
 PWA Wrapper includes bundled JavaScript actions that a Mendix PWA can call from nanoflows. These actions expose device features through a combination of wrapper-native bridges and supported Web APIs.

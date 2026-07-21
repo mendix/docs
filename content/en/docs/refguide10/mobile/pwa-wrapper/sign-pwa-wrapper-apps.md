@@ -5,10 +5,6 @@ weight: 25
 description: "Configure Android and iOS signing for PWA Wrapper on macOS and Windows."
 ---
 
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
-
 ## Introduction
 
 This page explains the signing step within the PWA Wrapper build flow. It covers Android signing on Windows and macOS, iOS signing on macOS, and the Windows-to-macOS handoff required for final iOS signing.

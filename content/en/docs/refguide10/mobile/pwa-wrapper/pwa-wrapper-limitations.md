@@ -5,10 +5,6 @@ weight: 35
 description: "Known limitations and platform constraints for PWA Wrapper in the current beta release."
 ---
 
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
-
 ## Introduction
 
 This page summarizes the main limitations of PWA Wrapper in the current beta release.

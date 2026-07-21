@@ -166,6 +166,6 @@ The wrapper loads the incoming deep link in the webview.
 
 ## Read More
 
-* [PWA Wrapper](/refguide/mobile/pwa-wrapper/)
-* [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/)
-* [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/)
+* [PWA Wrapper](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/)
+* [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
+* [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)

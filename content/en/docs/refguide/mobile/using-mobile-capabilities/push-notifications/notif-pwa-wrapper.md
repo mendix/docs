@@ -16,7 +16,7 @@ In a wrapped PWA, push notifications are handled natively through the device's o
 
 Before starting this guide, make sure you have completed the following:
 
-* [Install PWA Wrapper](/refguide/mobile/pwa-wrapper/install-pwa-wrapper/)
+* [Install PWA Wrapper](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/)
 * Have a Firebase account (https://firebase.google.com)
 
 ## Setting Up Firebase and PWA Wrapper
@@ -41,7 +41,7 @@ When building your wrapped app with PWA Wrapper, enable push notification infras
 1. Upload the appropriate Firebase configuration file:
    * For Android: select and upload `google-services.json`
    * For iOS: select and upload `GoogleService-Info.plist`
-1. Complete the remaining builder steps as described in [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/).
+1. Complete the remaining builder steps as described in [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 This configures the native layer to receive push notifications from Firebase Cloud Messaging (FCM).
 {{% alert color="warning" %}}
@@ -213,7 +213,7 @@ When testing, verify behavior on physical Android and iOS devices to ensure noti
 ## Read More
 
 * [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/)
-* [PWA Wrapper](/refguide/mobile/pwa-wrapper/)
-* [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/)
-* [PWA Wrapper Limitations](/refguide/mobile/pwa-wrapper/pwa-wrapper-limitations/)
+* [PWA Wrapper](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/)
+* [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
+* [PWA Wrapper Limitations](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-limitations/)
 * [PWA Wrapper Deep Linking](/refguide/mobile/pwa-wrapper/pwa-wrapper-deep-linking/)

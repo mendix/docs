@@ -31,7 +31,7 @@ net::ERR_CACHE_MISS
 
 1. In the PWA Wrapper builder, go to the **Permissions** step and enable the **INTERNET** permission.
 
-    For general guidance on permissions, see [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/).
+    For general guidance on permissions, see [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 1. Connect the Android device to your machine via USB and make sure [USB debugging](https://developer.android.com/studio/debug/dev-options) is enabled on the device.
 

@@ -9,7 +9,7 @@ description: "Describes the network access and local filesystem scanning behavio
 
 This page describes two behaviors of PWA Wrapper that are relevant for security reviews and IT governance: what the extension downloads from the network during a build, and what local paths and environment variables it inspects to detect existing developer tool installations.
 
-This information is intended for security engineers, IT administrators, and other reviewers who need a precise account of what the extension does outside its own process boundary. It does not cover general build usage; for that, see [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/).
+This information is intended for security engineers, IT administrators, and other reviewers who need a precise account of what the extension does outside its own process boundary. It does not cover general build usage; for that, see [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 ## Network Downloads During Build
 

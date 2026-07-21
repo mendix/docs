@@ -94,7 +94,7 @@ The steps below are intended for the Microsoft Foundry portal (released in 2026)
 1. Sign in to the [Microsoft Foundry portal](https://ai.azure.com/).
 2. In some cases this brings you to the resource page directly. If this is not the case, select the correct Azure resource of type "Project".
 3. On the resource page, **Project endpoint** is shown. The URL has the following structure: `https://{your-resource-name}.services.ai.azure.com/api/projects/{your-project-name}`. 
-4. If you use the Agent Editor in Studio Pro, you need the full project endpoint.
+4. If you use the Agent Editor in Studio Pro, you need the full project endpoint. Refer to the [Agent editor](/agents/reference-guide/agent-editor/#define-model-azure) documentation for more information.
 5. If you use the configuration page of the connector in the running app, extract the resource name and use it to construct the requested URL format as mentioned in the instruction on the page in the app. 
 
 ##### Obtaining API Keys {#azure-api-keys}

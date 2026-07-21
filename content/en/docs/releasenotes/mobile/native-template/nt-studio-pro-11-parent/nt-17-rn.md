@@ -5,6 +5,12 @@ weight: 8
 description: "Native Template 17"
 ---
 
+## 17.4.0
+
+**Release date: Jul 21, 2026**
+
+- We fixed an issue that could cause apps to restart repeatedly after an OTA update on iOS.
+
 ## 17.4.0 {#1740}
 
 **Release date: June 23, 2026**

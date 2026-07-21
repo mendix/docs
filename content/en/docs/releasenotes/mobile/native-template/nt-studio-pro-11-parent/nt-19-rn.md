@@ -5,6 +5,12 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.1.1
+
+**Release date: Jul 3, 2026**
+
+- We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
+
 ## 19.0.5
 
 **Release date: May 12, 2026**

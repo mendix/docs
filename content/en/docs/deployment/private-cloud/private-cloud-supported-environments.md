@@ -250,7 +250,6 @@ If Strict TLS is enabled, Mendix on Kubernetes will connect to the PostgreSQL se
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -294,7 +293,6 @@ If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TL
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 ### Dedicated JDBC database{#jdbc}

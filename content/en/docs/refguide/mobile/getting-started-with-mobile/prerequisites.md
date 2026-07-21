@@ -60,8 +60,8 @@ The Make It Native app allows developers to preview, test, and debug native mobi
 Depending on your app's Mendix version, you must use a different version of the Make It Native app:
 
 * Mendix 11:
-    * **11.11.0 - 11.x.x** — Use the latest version of Make It Native ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
-    * **11.6.x** - MTS version of Make It Native ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native/id6450037464))
+    * **11.11.0 - 11.x.x** — Use the latest version of Make It Native ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native/id6450037464))
+    * **11.6.x** - MTS version of Make It Native ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
 
     * **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [Building Your Own Make It Native App](https://github.com/mendix/make-it-native)
 
@@ -69,7 +69,7 @@ For information on which mobile operating systems are supported by the Mendix na
 
 ### Direct Download Links {#direct-links}
 
-Download the latest version (current MTS) of Make It Native using these QR codes:
+Download the latest version (current LTS 11.12) of Make It Native using these QR codes:
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
@@ -80,7 +80,7 @@ Download the latest version (current MTS) of Make It Native using these QR codes
 
 The latest version of Make It Native app receives monthly updates, and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to update your application regularly.
 
-To access the LTS version of Make It Native, you must join our official beta testing programs on the Apple App Store and use Github Releases for the Android APK. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
+To access the MTS version of Make It Native, you must join our official beta testing programs on the Apple App Store and use Github Releases for the Android APK. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
 
 Note that it is not possible to install both **LTS** and **MTS** versions on the same device.
 

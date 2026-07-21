@@ -10,6 +10,60 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.0.0
+
+### Release date: July 16, 2026
+
+{{% alert color="info" %}}
+We are thrilled to announce the General Availability (GA) release of our Workstation Management solution. This release brings significant new capabilities, especially around printer management, usage reporting, and introduces the option for private hosting.
+{{% /alert %}}
+
+### Workstation Management
+
+#### New Features
+
+* Default printer usage - You can now create a printer device without specifying a name. The Workstation Client will then automatically connect to the default printer as defined by the operating system, simplifying printer setup.
+* PDF Printing Support (Windows) - We have added support for PDF printing on Windows Workstation Clients, expanding your printing capabilities.
+* Enhanced usage report filters - The usage report now includes a workspace environment type filter (Test, Acceptance, or Production). This allows for more granular analysis of Workstation usage across different stages of your deployment.
+* More accurate usage metrics - We have refined the usage report by switching unique client counting from Station ID to Client ID and added an environment-type filter. This provides more precise and insightful usage data.
+* Downloadable company usage report - You can now download the company usage report, making it easier to analyze and share your Workstation usage data offline.
+* Device class and station group management - We have introduced full Create, Read, Update, and Delete (CRUD) capabilities for device classes and station groups. Newly created station groups and device classes are automatically selected during station creation, editing, or acceptance, streamlining your workflow.
+
+#### Improvements
+
+* Dependency security and updates - We have fixed some vulnerabilities in dependencies, and updated the modules to enhance security and performance.
+
+#### Bug Fixes
+
+* We have fixed a bug that occurred with trailing whitespace in the URLs of imported applications within JSON files, ensuring smoother app imports.
+
+### Private Workstation Management
+
+#### New Features
+
+* Self-hosting option - With this GA release, we are introducing Private Workstation Management, providing you with the option to self-host the management solution. This offers greater control and flexibility over your deployment.
+
+{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Customer Success Manager. {{% /alert %}}
+
+### Workstation Client
+
+#### New Features
+
+* Anonymized Client ID reporting - The Workstation Client now generates and sends an anonymized Client ID, derived from the machine's hardware/OS identifier, to the Management server. This enables more accurate and privacy-conscious usage metrics.
+* Single WebSocket connection for multiple devices - The Workstation Client can now connect to multiple devices over a single WebSocket connection, improving efficiency and reducing overhead.
+* New `SendDeviceRequest` API Support - The client now supports the new `SendDeviceRequest` API, allowing for more direct and streamlined communication with devices.
+
+#### Bug Fixes
+
+* We have fixed some issues with non-UTF-8 delimiter or suffix encoding in serial, TCP-IP client, and TCP-IP server devices, ensuring reliable data transmission.
+
+### Workstation Connector
+
+#### New Features
+
+* Single WebSocket communication - The Workstation Connector now supports communication over a single WebSocket connection, enhancing performance and simplifying network configurations in the future.
+* New `SendDeviceRequest` JSA - A new SendDeviceRequest JSA (JavaScript API) has been introduced. This API returns the device response or error directly, and the request is not passed to the onMessage channel. This feature is applicable only on devices that support requests and requires Workstation Client 4.0 or later for full usage.
+
 ## 3.8.0
 
 ### Release date: June 18, 2026
@@ -236,7 +290,7 @@ For more information, see [Nanoflows](/mendix-workstation/build-app/#javascript-
 
 * Automatic suffixing for duplicate workstations – To make managing your workstations even smoother, we have implemented automatic suffixing for imported workstations that have duplicate names. This helps prevent naming conflicts and keeps your environment tidy.
 * Feedback module replaced by the new Forum Space – We have removed the Feedback function in the Workstation Management. Don't worry, your voice is still incredibly important to us! Please share your questions, ideas, and feedback in the new dedicated [Mendix Forum Space for Mendix Workstation](https://community.mendix.com/link/spaces/mendix-workstation-client). This change will help us centralize discussions and provide better support.
-* Special characters in Workspace names – You can now use special characters in your Workspace names, giving you more flexibility and personalization.
+* Special characters in workspace names – You can now use special characters in your workspace names, giving you more flexibility and personalization.
 * Unique auto-accepted computer names – We have added a uniqueness validation to the **Auto-Accepted Computer Name** field used for bulk registration. This ensures that each computer name is distinct, preventing potential conflicts during the registration process.
 
 #### Fixes
@@ -362,7 +416,7 @@ Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limit
 
 #### Logging Is Configurable in Workspace Settings
 
-The level of logs written to log files and visible in the client is configurable in Workspace Settings. You can configure the following:
+The level of logs written to log files and visible in the client is configurable in workspace Settings. You can configure the following:
 
 * Log level: Info, Warn, Error, Debug.
 * Log retention policy: Maximum log folder size (in MB) and maximum number of stored days.
@@ -611,7 +665,7 @@ The second pre-release of Mendix Workstation is available under the conditions o
 #### Breaking Changes
 
 * The new connector is incompatible with the previous releases. Your Mendix app must be refactored to adopt the new pattern.
-* Due to the introduction of the Workspace, existing station configurations are deleted. Stations must be reconfigured.
+* Due to the introduction of the workspace, existing station configurations are deleted. Stations must be reconfigured.
 * The Workstation Management is no longer compatible with the Workstation Client version 2.0. Clients must be updated to version 2.1.
 
 #### App Upgrade

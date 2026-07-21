@@ -28,11 +28,13 @@ This defines the prop `key` in the client component props which are supplied to 
 
 #### AllowUpload (Optional) {#allow-upload}
 
-This optional attribute applies only to [file](#file) and [image](#image) properties and determines whether users can upload and edit files. When set to the default value of `false`, properties use the legacy read-only behavior. Setting it to `true` unlocks upload and edit capabilities by passing `EditableFileValue<FileValue>` and `EditableImageValue<ImageValue>` types, as props to a client component.
+{{% alert color="info" %}}
+AllowUpload was introduced in Mendix [11.8](/releasenotes/studio-pro/11.8/). Support for native widgets was introduced in Mendix [11.11](/releasenotes/studio-pro/11.11/).
+{{% /alert %}}
 
-{{% alert color="warning" %}} Legacy DynamicValue types for file and image properties are deprecated and will be removed at Mendix 12. Use allowUpload="true" to migrate to the new editable types before Mendix 12. {{% /alert %}}
+This optional attribute applies only to [file](#file) and [image](#image) properties and determines whether users can upload and edit files. When set to the default value of `false`, properties use read-only behavior. Setting it to `true` unlocks upload and edit capabilities by passing `EditableFileValue<FileValue>` and `EditableImageValue<ImageValue>` types, as props to a client component.
 
-Be aware of behavioral differences between the legacy read-only mode (`false`) and the new editable mode (`true`).
+Be aware of behavioral differences between the read-only mode (`false`) and the editable mode (`true`).
 
 #### Type (Required)
 
@@ -269,9 +271,7 @@ Then the Studio Pro UI for the component appears like this:
 
 Image allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an [`EditableImageValue<ImageValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-image-value) prop to a client component. For more information about supported image formats, see the [Images Reference Guide](/refguide/images/).
 
-The user can use the optional attribute [`allowUpload`](#allow-upload) with default value `false` to use the legacy [`Dynamic<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop. Beware of behavioral differences based on the `allowUpload` attribute.
-
-{{% alert color="warning" %}} Legacy DynamicValue types for file and image properties are deprecated and will be removed at Mendix 12. Use allowUpload="true" to migrate to the new editable types before Mendix 12. {{% /alert %}}
+The user can use the optional attribute [`allowUpload`](#allow-upload) with default value `false` to use the [`Dynamic<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop. Beware of behavioral differences based on the `allowUpload` attribute.
 
 #### XML Attributes
 
@@ -710,9 +710,7 @@ Then the Studio Pro UI for the property appears like this:
 
 The file property type allows a user to configure and edit a file from and to an object that is a specialization of **System.File**. It is passed as a [`EditableFileValue<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-file-value) prop to a client component.
 
-The user can use the optional attribute [`allowUpload`](#allow-upload) with default value `false` to use the legacy [`Dynamic<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop. Beware of behavioral differences based on the `allowUpload` attribute.
-
-{{% alert color="warning" %}} Legacy DynamicValue types for file and image properties are deprecated and will be removed at Mendix 12. Use allowUpload="true" to migrate to the new editable types before Mendix 12. {{% /alert %}}
+The user can use the optional attribute [`allowUpload`](#allow-upload) with default value `false` to use the [`Dynamic<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop. Beware of behavioral differences based on the `allowUpload` attribute.
 
 #### XML Attributes
 

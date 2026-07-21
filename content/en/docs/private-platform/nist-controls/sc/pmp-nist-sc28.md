@@ -26,7 +26,7 @@ This control addresses the confidentiality and integrity of information at rest 
 
 The following controls are related to this control:
 
-* AC-3
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
 * AC-6
 * CA-7
 * CM-3

@@ -22,7 +22,7 @@ Model Resource Packs now use a Cloud Token for the GenAI Units conversion that a
 
 * Knowledge Base Resource Packs provide an OpenSearch-based vector database to support Retrieval-Augmented Generation (RAG), Semantic Search, and other Generative AI use cases.
 
-Developers can use the Mendix Cloud GenAI Portal to manage their Mendix Cloud GenAI resources and seamlessly integrate model and knowledge base capabilities into their Mendix apps using the [Mendix Cloud GenAI Connector](/agents/mx-cloud-genai/mxgenai-connector/). Optimized for high performance and low latency, Mendix Cloud GenAI Resource Packs provide the easiest and fastest way to deliver end-to-end Generative AI solutions with Mendix.
+Developers can use the Mendix Cloud GenAI Portal to manage their Mendix Cloud GenAI resources and seamlessly integrate model and knowledge base capabilities into their Mendix apps using the [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/). Optimized for high performance and low latency, Mendix Cloud GenAI Resource Packs provide the easiest and fastest way to deliver end-to-end Generative AI solutions with Mendix.
 
 ### General Availability
 
@@ -56,7 +56,7 @@ The Mendix Cloud GenAI Resource Packs provide access to the following models:
 
 The models are available through the Mendix Cloud, leveraging AWS's highly secure Amazon Bedrock multi-tenant architecture. This architecture employs advanced logical isolation techniques to effectively segregate customer data, requests, and responses, ensuring a level of data protection that aligns with global security compliance requirements. Customer prompts, requests, and responses are neither stored nor used for model training. Your data remains your data.
 
-Customers looking to leverage other models in addition to the above can also take advantage of Mendix's [(Azure) OpenAI Connector](/agents/reference-guide/external-connectors/openai/), Amazon [Bedrock Connector](/agents/reference-guide/external-connectors/bedrock/), and [Mistral Connector](/agents/reference-guide/external-connectors/mistral/) to integrate numerous other models into their apps.
+Customers looking to leverage other models in addition to the above can also take advantage of Mendix's [(Azure) OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/), Amazon [Bedrock Connector](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/), and [Mistral Connector](/agents/agents-kit-2/reference-guide/external-connectors/mistral/) to integrate numerous other models into their apps.
 
 {{% alert color="info" %}}
 If you have questions about upcoming regions or want to explore making models available in your specific region, reach out to [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com).
@@ -136,7 +136,7 @@ Mendix AI services are powered by third-party technologies, including AWS Bedroc
   
 2. Understand AI Usage Policies
    * Anthropic – [Guidelines for responsible AI use](https://anthropic.com/legal)
-   * Cohere – [Responsible use requirements](https://docs.cohere.com/v2/docs/usage-policy)
+   * Cohere – [Responsible use requirements](https://docs.cohere.com/agents-kit-2/docs/usage-policy)
 
 {{% alert color="info" %}}
 Save these links for future reference. Always review the terms before starting development, and check for updates when notified.
@@ -162,7 +162,7 @@ For more information, see [Navigate Through the Mendix Cloud GenAI Portal](/agen
 
 ### Mendix Cloud GenAI Connector
 
-The [Mendix Cloud GenAI connector](/agents/mx-cloud-genai/mxgenai-connector/) lets you use Mendix Cloud GenAI Resource Packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
+The [Mendix Cloud GenAI connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) lets you use Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
 
 * GenAI for Mendix bundle v2.4.1 (Mendix 9) (contains Mendix Cloud GenAI connector) or
 * Mendix Cloud GenAI connector v3.1.1 (no `DeployedKnowledgeBase` support) or
@@ -181,10 +181,3 @@ Data stored in GenAI Knowledge Base Resources resides in a logically isolated da
 Requests (prompts) sent to and responses (answers, embeddings) received from the models are not stored and not used for training. Only metadata—such as token input/output counts—is collected for logging, monitoring, metering, billing, product improvement, and maintenance purposes.
 
 Data sent to the Knowledge Base (vectors, chunks) is stored in a logically isolated, fully secure vector database, following industry-standard practices. This data is exclusively accessible to you and not used by Mendix. Similar to model requests, only metadata about Knowledge Base usage is collected for logging, monitoring, metering, billing, product improvement, and maintenance purposes.
-
-### Read More
-
-* [Enrich Your Mendix App with Agentic Capabilities](/agents/)
-* [Build a Chatbot Using the AI Bot Starter App](/agents/how-to/starter-template/)
-* [Creating Your First Agent](/agents/how-to/creating-agents/)
-* [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/agents/how-to/howto-groundllm/)

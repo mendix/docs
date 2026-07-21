@@ -56,4 +56,4 @@ Easily implement chat interfaces for Cortex Analyst using Conversational UI with
 
 ## Example Implementation
 
- The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains an example implementation of the Cortex Analyst Conversational UI.For more information, see [Snowflake Cortex Analyst](/agents/snowflake-cortex/#functionalities-available-in-the-snowflake-showcase-app).
+ The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains an example implementation of the Cortex Analyst Conversational UI.For more information, see [Snowflake Cortex Analyst](/agents/agents-kit-2/reference-guide/snowflake-cortex/#functionalities-available-in-the-snowflake-showcase-app).

@@ -692,11 +692,13 @@ These are the currently supported functions:
 * LENGTH
 * LOCATE
 * LOWER
+* LPAD
 * LTRIM
 * RANGEBEGIN
 * RANGEEND
 * REPLACE
 * ROUND
+* RPAD
 * RTRIM
 * TRIM
 * UPPER
@@ -1025,6 +1027,60 @@ SELECT Revenue : DATEDIFF(MONTH, End, Start ) as avg_revenue FROM Sales.Period
 The way the difference is calculated depends on the database. The `YEAR` difference between "2002-01-01" and "2001-12-31" will be `1` with some databases and `0` with others.
 {{% /alert %}}
 
+### DATEFORMAT {#dateformat-function}
+
+The `DATEFORMAT` function formats values of type Date and time as strings using a specified pattern.
+
+This function was introduced in Mendix version 11.12.0.
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+DATEFORMAT ( expression , pattern )
+```
+
+`expression` is a value of type Date and time.
+
+`pattern` is a pattern used to convert `expression` to a string value. Only string literals and parameters are allowed.
+
+#### Pattern Syntax
+
+The `DATEFORMAT` OQL function uses the same pattern syntax, with the differences noted below, as date parsing functions in Studio Pro. See [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/) for more information.
+
+#### Limitations and Database-Specific Differences
+
+When an OQL query is executed, `DATEFORMAT` is converted to the corresponding database function. Due to implementation specifics of database engines, different limitations apply:
+
+1. Format letters `u`, `F`, `G`, `k`, `K` are not supported.
+2. SQL Server does not support format letters `D`, `Y`, `w`, `W`.
+3. MySQL and MariaDB do not support format letters `S` and `W`.
+4. SAP HANA does not support format letters `Y` and `w`.
+5. Format letter `h` results in different values per database:
+
+    1. HSQLDB uses zero-based indexing and returns values `0` to `11`
+    2. Other databases use one-based indexing and return values `1` to `12`
+    
+6. In addition to listed limitations, there are minor implementation differences between database engines such as:
+
+    1. Casing (`SUN 3:12 PM` in PostgreSQL, `Sun 3:12 PM` in SQL Server and `Sun 3:12 pm` in HSQLDB)
+    2. Year formatting (`YY` is formatted as `2026` in MySQL, as `26` in HSQLDB and PostgreSQL, and is not supported at all in SQL Server and SAP HANA).
+
+{{% alert color="warning" %}}
+Always test usages of `DATEFORMAT` with the database engine on which your app runs. OQL queries with `DATEFORMAT` may return different results in HSQLDB and in the production database.
+{{% /alert %}}
+
+#### Examples{#oql-dateformat-example}
+
+Let's assume that an object has an attribute `StartDate` of type Date and time with value `30 December 2025 13:02:15.300`.
+
+| Function call                                 | Result | Notes |
+|--------------|------|-----|
+| `DATEFORMAT(StartDate, 'dd MMM yyyy')`       | 30 Dec 2025 |  |
+| `DATEFORMAT(StartDate, 'yyyy-MM-dd hh:mm:ss a')`       | 2025-12-30 01:02:15 PM |  |
+| `DATEFORMAT(StartDate, 'EEE-ww-YYYY')`       | Tue-01-2026 | ISO date format is not supported by SAP HANA and SQL Server. `w` stands for the ISO week number, and `Y` stands for ISO year. |
+
 ### DATEPARSE {#dateparse-function}
 
 The `DATEPARSE` function parses string values to Date and time using a specified pattern.
@@ -1041,11 +1097,11 @@ DATEPARSE ( expression , pattern )
 
 `expression` is a value of type String.
 
-`pattern` is a pattern used to convert `expression` to a Date and time value. Only string literals are allowed.
+`pattern` is a pattern used to convert `expression` to a Date and time value. Only string literals and parameters are allowed.
 
 #### Pattern Syntax
 
-The `DATEPARSE` OQL function uses the same pattern syntax as date parsing functions in Studio Pro, see [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/).
+The `DATEPARSE` OQL function uses the same pattern syntax, with the differences noted below, as date parsing functions in Studio Pro. See [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/) for more information.
 
 #### Limitations and Database-Specific Differences
 
@@ -1053,13 +1109,16 @@ When an OQL query is executed, `DATEPARSE` is converted to the corresponding dat
 
 1. Format letters `u`, `F`, `G`, `k`, `K` are not supported.
 2. MySQL and MariaDB do not support format letters `S` and `W`.
-3. For SQL Server, `DATEPARSE` accepts only patterns that match SQL Server styles 0 to 7, 9 to 13, 100 to 107, 109 to 113, 120 and 121. See [SQL Server documentation](https://learn.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver17#date-and-time-styles) for the list of supported styles.
-4. Format letter `h` accepts different ranges of values per database:
+3. SAP HANA does not support format letters `Y` and `w`.
+4. For SQL Server, `DATEPARSE` accepts only patterns that match SQL Server styles 0 to 7, 9 to 13, 100 to 107, 109 to 113, 120 and 121. See [SQL Server documentation](https://learn.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver17#date-and-time-styles) for the list of supported styles.
+5. Format letter `h` accepts different ranges of values per database:
 
     1. HSQLDB uses zero-based indexing and accepts values `0` to `11`
     2. Other databases use one-based indexing and accept values `1` to `12`
     
-5. In addition to listed limitations, there are other implementation differences between database engines.
+6. The date format should contain enough information to derive the date. For example, `dd/yyyy` is not allowed, but `dd/MM/yyyy` is allowed.
+7. If the format contains a unit of time, all units of time of greater magnitude should also be included. For example, `dd/MM/yyyy mm` is not allowed, but `dd/MM/yyyy HH:mm` is allowed.
+8. In addition to listed limitations, there are other implementation differences between database engines related to corner cases such as format strings where the same information is included more than once (for example, if the format string contains both `YYYY` and `yyyy`) or format strings where there is enough information to derive the date, but that information is not of the usual format (`DATEPARSE('365/12/13', 'DD/MM/yy')` would lead to an exception in SAP HANA).
 
 {{% alert color="warning" %}}
 Always test usages of `DATEPARSE` with the database engine on which your app runs. OQL queries with `DATEPARSE` may return different results in HSQLDB and in the production database.
@@ -1332,6 +1391,71 @@ SELECT * FROM Sales.Customer WHERE LOWER(LastName) = 'doe'
 This query can no longer take advantage of an index for `LastName` for comparison, resulting in a performance decrease.
 {{% /alert %}}
 
+### LPAD {#lpad-function}
+
+#### Description
+
+Pads a string on the left side with a specified character to reach a target length. If no character is specified for padding, the space character is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.12.0.
+{{% /alert %}}
+
+#### Syntax
+
+```sql
+LPAD ( expression , length_expression [, pad_expression ] )
+```
+
+#### expression
+
+`expression` specifies the expression of type `string` to pad.
+This function returns `NULL` if `expression` is `NULL`.
+The behavior for the empty string is database specific.
+
+#### length_expression
+
+`length_expression` specifies the length of the resulting string. The expression must be of type `integer` or `long`.
+This function returns `NULL` if `length_expression` is `NULL`.
+
+{{% alert color="info" %}}
+If `length_expression` is smaller than the length of `expression`, this function truncates it. This behavior is database specific.
+{{% /alert %}}
+
+#### pad_expression
+
+`pad_expression` is an optional parameter that specifies the character or string to pad with. If not specified, the space character is used.
+If `pad_expression` is `NULL` or the empty string, the behavior is database specific.
+
+#### Examples
+
+```sql
+SELECT LPAD('hello', 10) AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| ·····hello |
+
+Where `·` represents the space character.
+
+
+```sql
+SELECT LPAD('hello', 10, 'x') AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| xxxxxhello |
+
+```sql
+SELECT LPAD('hello', 10, 'abc') AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| abcabhello |
+
 ### LTRIM{#ltrim}
 
 Removes one or more leading characters from a `string`. If no character is specified for trimming, space is used.
@@ -1550,6 +1674,70 @@ SELECT ROUND((Price : 7), 2) as RoundedPrice, Price : 7 FROM Sales.Order
 | 0.21         | 0.21428571 |
 | 0.33         | 3.33333333 |
 | 1.17         | 1.17142857 |
+
+### RPAD {#rpad-function}
+
+#### Description
+
+Pads a string on the right side with a specified character to reach a target length. If no character is specified for padding, the space character is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.12.0.
+{{% /alert %}}
+
+#### Syntax
+
+```sql
+RPAD ( expression , length_expression [, pad_expression ] )
+```
+
+#### expression
+
+`expression` specifies the expression of type `string` to pad.
+This function returns `NULL` if `expression` is `NULL`.
+The behavior for the empty string is database specific.
+
+#### length_expression
+
+`length_expression` specifies the length of the resulting string. The expression must be of type `integer` or `long`.
+This function returns `NULL` if `length_expression` is `NULL`.
+
+{{% alert color="info" %}}
+If `length_expression` is smaller than the length of `expression`, this function truncates it.
+{{% /alert %}}
+
+#### pad_expression
+
+`pad_expression` is an optional parameter that specifies the character or string to pad with. If not specified, the space character is used.
+If `pad_expression` is `NULL` or the empty string, the behavior is database specific.
+
+#### Examples
+
+```sql
+SELECT RPAD('hello', 10) AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| hello····· |
+
+Where `·` represents the space character.
+
+```sql
+SELECT RPAD('hello', 10, 'x') AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| helloxxxxx |
+
+```sql
+SELECT RPAD('hello', 10, 'abc') AS padded FROM Sales.Order
+```
+
+| padded     |
+|:-----------|
+| helloabcab |
 
 ### RTRIM{#rtrim}
 

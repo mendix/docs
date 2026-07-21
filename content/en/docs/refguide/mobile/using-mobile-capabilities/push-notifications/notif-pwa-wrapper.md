@@ -191,10 +191,6 @@ Create a new nanoflow (for example, `ACT_InitAppLifecycle`) and add the followin
 1. Set the parameters:
    * **onResume**: select the `ACT_RequestPushNotifications` nanoflow you created earlier
 
-The nanoflow is shown below:
-
-{{< figure src="/attachments/refguide/mobile/push-notifications/notif-pwa-wrapper/pwa-wrapper-lifecycle-nanoflow.png" alt="App lifecycle nanoflow calling ListenToAppLifecycle and ACT_RequestPushNotifications" max-width="80%" >}}
-
 ### Step 4: Add the Events Widget to the Home Page
 
 1. Open your app's default home page in Studio Pro.

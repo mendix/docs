@@ -57,4 +57,4 @@ Keep the following limitations in mind:
 * Platform support varies for individual capabilities, so not every capability behaves the same way on Android and iOS
 * Some integrations use standard Web APIs, which means behavior can vary between devices, operating system versions, and embedded browser engines
 
-For build-specific constraints, see [Build PWA Wrapper Apps](/refguide/mobile/pwa-wrapper/build-pwa-wrapper-apps/). For capability-specific constraints, see [PWA Wrapper Capabilities](/refguide/mobile/pwa-wrapper/pwa-wrapper-capabilities/).
+For build-specific constraints, see [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/). For capability-specific constraints, see [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/).

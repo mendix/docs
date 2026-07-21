@@ -102,7 +102,7 @@ Keep the following recommendations in mind:
 
 Final iOS signing is only supported on macOS.
 
-### Before You Start
+### Before You Start {#before-you-start}
 
 Before creating the iOS signing configuration, make sure you have the following:
 
@@ -182,7 +182,7 @@ Before starting the Windows flow, obtain the following files from your Apple sig
 * The `.p12` passphrase
 * A matching `.mobileprovision` file
 
-You can create these files yourself through the Apple Developer workflow, or receive them from the team that manages your Apple signing assets. For Apple-specific certificate, provisioning profile, and Keychain export steps, see the official Apple documentation linked in [Before You Start](/refguide/mobile/pwa-wrapper/sign-pwa-wrapper-apps/).
+You can create these files yourself through the Apple Developer workflow, or receive them from the team that manages your Apple signing assets. For Apple-specific certificate, provisioning profile, and Keychain export steps, see the official Apple documentation linked in the [Before You Start](#before-you-start) section above.
 
 If the Apple signing assets are created on a Mac by another team member, confirm that the delivered files are a usable `.p12` export and a matching provisioning profile. A `.cer` file alone is not sufficient for PWA Wrapper.
 

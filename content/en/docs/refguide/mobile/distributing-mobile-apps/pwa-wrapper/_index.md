@@ -27,7 +27,7 @@ This PWA Wrapper documentation section includes the following topics:
 * Overview: this page explains what PWA Wrapper is and when to use it
 * Installation guide: [Install PWA Wrapper](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/)
 * Build guide: [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)
-* Signing reference: [Sign PWA Wrapper Apps](//refguide/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/) explains the signing step in the build flow
+* Signing reference: [Sign PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/) explains the signing step in the build flow
 * Capabilities guide: [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
 * Limitations: [PWA Wrapper Limitations](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-limitations/)
 

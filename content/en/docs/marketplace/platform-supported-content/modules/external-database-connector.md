@@ -265,8 +265,9 @@ To connect to PostgreSQL when the application is running in Mendix Cloud, follow
 
 ### Configure Database Schema Information 
 
-The Browse Database Schema tab might not display a comprehensive overview of all available schemas for certain databases. You can customize this behavior using the Configure option. To do so, follow these steps:
+The Browse Database Schema tab might not display a comprehensive overview of all available schemas for certain databases. You can customize this behavior using the Configure option. 
 
+If you are using Studio-pro 11.12 or earlier, Follow below steps
 1. Open the **App** menu and select **Deploy for Eclipse**.
 2. Extend the class MxQueryBasedSchemaInfoProvider.
 3. Override the following methods based on your requirements:
@@ -275,6 +276,16 @@ The Browse Database Schema tab might not display a comprehensive overview of all
     * getProcedureMetaDataQuery
     * getFunctionMetaDataQuery
 4. Use the provided example, MxDb2SchemaInfoProvider for IBM Db2, for a better understanding of how to customize the schema information.
+
+If you are on Studio-pro 11.13 or later version, Please follow below steps:
+1.Use Mendix public API class QueryBasedSchemaInfoProvider to extend your java class.
+for example : Create MxDb2SchemaInfoProvider.java inside \MendixApp\javasource\myfirstmodule\myloader
+2.Override the following methods based on your requirements:
+    * getTableMetaDataQuery
+    * getViewMetaDataQuery
+    * getProcedureMetaDataQuery
+    * getFunctionMetaDataQuery
+
 
 ### Running Queries and Handling Query Responses
 

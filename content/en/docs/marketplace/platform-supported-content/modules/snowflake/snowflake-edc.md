@@ -14,7 +14,7 @@ This how-to describes the steps required to enable your app to use the External 
 
 ## Configuring the Connection Between Your Mendix App and Snowflake
 
-The External Database connector only supports system-level authentication. It can authenticate in Snowflake by using the username and password of a single Snowflake user. It also offers key-pair authentication with a private key. The connector does not support role-based access control (RBAC) per end user.
+The External Database connector only supports system-level authentication. It can authenticate in Snowflake by using the username and password of a single Snowflake user. It also offers key-pair authentication with a private key. The connector does not support role-based access control (RBAC) per end-user.
 
 To configure connect your Mendix application to Snowflake with the External Database connector, follow these steps:
 

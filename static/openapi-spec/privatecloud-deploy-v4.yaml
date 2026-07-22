@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.12.0
+  version: 4.13.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -30,7 +30,7 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-job
+      operationId: get_job
       description: Retrieve status of an asynchronous job which has been initiated by an API call. Each API call which successfully starts a job will return the "id" of the job which can be used in this API call.
   /clusters:
     get:
@@ -46,14 +46,14 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-clusters-manifests
+      operationId: list_cluster_manifests
       description: Retrieves all the clusters for which the user is a Cluster Manager.
       parameters:
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
     post:
       summary: Create Cluster
-      operationId: create-cluster
+      operationId: create_cluster
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -88,11 +88,11 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-cluster-manifest
+      operationId: get_cluster_manifest
       description: Retrieves the manifest of a cluster.
     put:
       summary: Update Cluster
-      operationId: update-cluster
+      operationId: update_cluster
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -115,7 +115,7 @@ paths:
         description: Manifest of a cluster.
     delete:
       summary: Delete Cluster
-      operationId: delete-cluster
+      operationId: delete_cluster
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -146,7 +146,7 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-namespaces-manifests
+      operationId: list_namespace_manifests
       description: Retrieves the manifests of all namespaces of a cluster.
       parameters:
         - $ref: '#/components/parameters/offset'
@@ -154,7 +154,7 @@ paths:
         - $ref: '#/components/parameters/retrieveEnvironments'
     post:
       summary: Create Namespace
-      operationId: create-namespace
+      operationId: create_namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -186,13 +186,13 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-namespace-manifest
+      operationId: get_namespace_manifest
       description: Retrieves the manifest of a namespace.
       parameters:
         - $ref: '#/components/parameters/retrieveEnvironments'
     delete:
       summary: Delete Namespace
-      operationId: delete-namespace
+      operationId: delete_namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -209,7 +209,7 @@ paths:
       description: Deletes a specific namespace.
     put:
       summary: Update Namespace
-      operationId: update-manifest
+      operationId: update_namespace_manifest
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -242,7 +242,7 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-apps-manifests
+      operationId: list_app_manifests
       description: Retrieves the manifests of all the applications for which the user has access.
       parameters:
         - $ref: '#/components/parameters/offset'
@@ -265,7 +265,7 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-app-manifest
+      operationId: get_app_manifest
       description: Retrieves the manifest of an application.
   '/apps/{appId}/environments':
     parameters:
@@ -281,7 +281,7 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-environments-manifests
+      operationId: list_environments_manifests
       description: Retrieves the manifests of all environments of an application.
       tags:
         - environments
@@ -290,7 +290,7 @@ paths:
         - $ref: '#/components/parameters/limit'
     post:
       summary: Create Environment
-      operationId: create-environment
+      operationId: create_environment
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -324,7 +324,7 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-environment-manifest
+      operationId: get_environment_manifest_for_namespace
       description: |-
         Retrieves the manifest of an environment.<br/>
         This should only be used if your application doesn't have environments deployed in multiple namespaces.<br/>
@@ -335,7 +335,7 @@ paths:
       deprecated: true
     delete:
       summary: Delete Environment
-      operationId: delete-environment
+      operationId: delete_environment_for_namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -357,7 +357,7 @@ paths:
       deprecated: true
     put:
       summary: Update Environment
-      operationId: update-environment
+      operationId: update_environment_for_namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -428,13 +428,13 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-environment-manifest-for-namespace
+      operationId: get_environment_manifest_for_namespace
       description: Retrieves the manifest of an environment for a specified namespace.
       tags:
         - environments
     delete:
       summary: Delete Environment for a specified Namespace
-      operationId: delete-environment-for-a-specified-namespace
+      operationId: delete_environment_for_namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -451,7 +451,7 @@ paths:
         - environments
     put:
       summary: Update Environment for a specified Namespace
-      operationId: update-environment-for-a-specified-namespace
+      operationId: update_environment_for_namespace
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -496,7 +496,7 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      operationId: get-cli-versions
+      operationId: list_cli_versions
       description: Retrieves all available versions of mxpc-cli.
       parameters: []
   '/cli/{cliVersionValue}':
@@ -504,7 +504,7 @@ paths:
       - $ref: '#/components/parameters/cliVersionValue'
     post:
       summary: Get/Download mxpc-cli
-      operationId: get-cli
+      operationId: get_cli
       responses:
         '303':
           description: See Other
@@ -1289,6 +1289,7 @@ components:
         - k8s
         - eks
         - aks
+        - stackit
       example: k8s
       x-examples:
         example-os: os

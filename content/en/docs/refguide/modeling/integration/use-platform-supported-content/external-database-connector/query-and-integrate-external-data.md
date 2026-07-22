@@ -22,7 +22,8 @@ This document teaches you how to do the following:
 
 ## Prerequisites
 
-Ensure you have an active connection using the External Database Connection document. For information on how to configure the connector, see [External Database Connector](/appstore/modules/external-database-connector/) in the *Marketplace Guide*. 
+***Studio Pro 11.12 and earlier: Ensure you have an active connection using the External Database Connection document. For information on how to configure the connector, see [External Database Connector](/appstore/modules/external-database-connector/) in the *Marketplace Guide*. 
+***Studio Pro 11.13 and later: External database connectivity is built into Studio Pro — no Marketplace download is required. {{% /alert %}}
 
 * If additional connection properties are required to connect, you can alternatively use **JDBC Connection String**.
 * If certificate-based authentication is required for PostgreSQL connections, ensure that all necessary certificates are added before running the app.

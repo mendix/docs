@@ -11,4 +11,3 @@ weight: 20
 ## Introduction
 
 If you encounter any issues with your Workstation Management, Connector, or Client, use the following troubleshooting tips to help you solve them.
-

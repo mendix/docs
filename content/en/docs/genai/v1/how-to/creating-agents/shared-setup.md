@@ -73,6 +73,7 @@ The agent interacts with data from a knowledge base and the Mendix app. To make 
 Each of these steps is described in the following sections.
 
 To define the agent and generate responses, the steps differ based on your chosen approach and are covered in separate documents.
+
 ### Ingesting Data Into Knowledge Base {#ingest-knowledge-base}
 
 Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Grounding Your LLM in Data](/agents/agents-kit-1/how-to/howto-groundllm/#demodata). The following steps explain the process at a higher level by modifying logic imported from the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). You can find the sample data used in this document in the GenAI Showcase App or use your own data.

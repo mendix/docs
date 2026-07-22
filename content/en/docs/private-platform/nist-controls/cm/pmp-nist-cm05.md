@@ -27,6 +27,7 @@ Any changes to the hardware, software, or firmware components of information sys
 Organizations maintain records of access to ensure that configuration change control is implemented and to support after-the-fact actions should organizations discover any unauthorized changes. Access restrictions for change also include software libraries. 
 
 Examples of access restrictions include the following:
+
 * Physical and logical access controls (for example, AC-03 and PE-03)
 * Workflow automation
 * Media libraries

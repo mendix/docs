@@ -14,7 +14,6 @@ With the release of [Mendix Portable Runtime](https://docs.mendix.com/developerp
 For more information, see [Mendix Portable Runtime: Deployment, Simplified](https://www.mendix.com/blog/mendix-portable-runtime/).
 {{% /alert %}}
 
-
 ## Introduction
 
 Mendix can be installed on premises on systems running Linux. The installation consists of the following:

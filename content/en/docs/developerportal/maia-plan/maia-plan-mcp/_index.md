@@ -128,6 +128,7 @@ To configure Visual Studio Code Copilot to connect to the Maia Plan MCP server, 
       }
     }
     ```
+
 3. In Visual Studio Code, follow these steps:
 
     1. Open **Command Palette**.

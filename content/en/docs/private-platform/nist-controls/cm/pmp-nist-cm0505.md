@@ -19,6 +19,7 @@ This document describes how Private Mendix Platform fulfills the CM-05 (05) cont
 ## Control
 
 The organization: 
+
 * Limits privileges to change information system components and system-related information within a production or operational environment.
 * Reviews and reevaluates privileges at an organization-defined frequency. 
 

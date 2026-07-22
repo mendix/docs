@@ -79,9 +79,9 @@ You can create a policy by defining your own details.
 
 * **Checkpoints & Action(s)** – Select the trigger which causes the policy to be checked, and the action that is taken if the policy is violated. Currently, policy violations are checked at the time of package creation, and violations generate warnings.
 
-3. On the **Policy Scope** tab, select whether you want the policy to apply to all licensed apps, or only to specific apps in your environment.
+1. On the **Policy Scope** tab, select whether you want the policy to apply to all licensed apps, or only to specific apps in your environment.
 
-4. Select one of these actions:
+2. Select one of these actions:
 
     * **Cancel** – Discard the policy.
     * **Save as Inactive** – Save the policy, but do not enforce it yet.

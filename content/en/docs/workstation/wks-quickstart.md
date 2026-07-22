@@ -95,12 +95,12 @@ The following instructions assume that you are registering a single computer for
 
     {{< figure src="/attachments/workstation/wks-install7.png" class="no-border" >}}
 
-4. Open the Workstation Client and paste the copied registration token into the **Enter your registration token** field.
-5. Click **Register computer**.
+6. Open the Workstation Client and paste the copied registration token into the **Enter your registration token** field.
+7. Click **Register computer**.
 
     {{< figure src="/attachments/workstation/wks-install8.png" class="no-border" >}}
 
-6. In Workstation Management, in the **Computer Registration** dialog, click **Done**.
+8. In Workstation Management, in the **Computer Registration** dialog, click **Done**.
 
     {{< figure src="/attachments/workstation/wks-install9.png" class="no-border" >}}
 

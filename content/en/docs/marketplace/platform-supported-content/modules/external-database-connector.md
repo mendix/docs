@@ -142,6 +142,9 @@ WHERE empno IN
 ```
 
 Here, the parameter `EmpIdList` is of type String with the  value `[1,7946,3,4,7942,7943,7945]`.
+{{% alert color="info" %}}
+Parameter names cannot start with a number, following the Mendix naming convention.
+{{% /alert %}}
 
 ### Using Query Response {#use-query-response}
 

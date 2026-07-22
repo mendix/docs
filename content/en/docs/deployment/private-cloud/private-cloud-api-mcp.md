@@ -12,7 +12,7 @@ weight: 100
 For example, you can ask the AI assistant to list your apps, deploy the latest package to an acceptance environment, or stop a production environment, without writing `curl` commands or navigating the Mendix on Kubernetes Portal.
 
 {{% alert color="warning" %}}
-The use of AI tools is non-deterministic, outputs may vary between runs. AI Assistants/Agents will have permissions based on what the Personal Access Token (PAT) have access to. Carefully review and limit the scope of credentials before use.
+The use of AI tools is non-deterministic, outputs may vary between runs. AI assistants (agents) are assigned permissions based on the access rights of the Personal Access Token (PAT). Carefully review and limit the scope of credentials before use.
 {{% /alert %}}
 
 ## Prerequisites
@@ -26,45 +26,54 @@ Before you start, make sure you have the following:
 
 ## Connecting Your AI Assistant {#connecting}
 
+Refer to the following sections for information about connecting your agent.
+
 ### Claude Code {#claude-code}
 
-To add the Mendix MCP server in Claude Code, run the following command in your terminal:
+To add the Mendix MCP server in Claude Code, perform the following steps:
+
+1. Run the following command in your terminal:
+
+    ```bash
+    claude mcp add --scope user --transport http mendix-cloud-mcp-private \
+    https://mcp.home.mendix.com/private \
+    --header "Authorization: MxToken {GENERATED_PAT}"
+    ```
+
+2. Replace the following placeholders with your credentials:
+
+    * `{GENERATED_PAT}` - Replace with the generated Mendix Personal Access Token (PAT)
+
+3. Verify the connection by running the following command:
+
+    ```bash
+    claude mcp get mendix-cloud-mcp-private
+    ```
+
+    A successful connection displays output similar to the following:
+
+    ```bash
+    claude mcp get mendix-cloud-mcp-private
+    mendix-cloud-mcp-private:
+      Scope: User config (available in all your projects)
+      Status: ✔ Connected
+      Type: http
+      URL: https://mcp.home.mendix.com/private
+      Headers:
+        Authorization: MxToken {GENERATED_PAT}
+    ```
+
+4. To remove this server, run the following command:
 
 ```bash
-claude mcp add --scope user --transport http mendix-cloud-mcp-private \
-https://mcp.home.mendix.com/private \
---header "Authorization: MxToken {GENERATED_PAT}"
-```
-
-Replace the following placeholders with your credentials:
-
-* `{GENERATED_PAT}` – the generated Mendix Personal Access Token (PAT)
-
-
-To verify the connection, run the following command:
-
-```bash
-claude mcp get mendix-cloud-mcp-private
-```
-
-A successful connection displays output similar to the following:
-
-```bash
-claude mcp get mendix-cloud-mcp-private
-mendix-cloud-mcp-private:
-  Scope: User config (available in all your projects)
-  Status: ✔ Connected
-  Type: http
-  URL: https://mcp.home.mendix.com/private
-  Headers:
-    Authorization: MxToken {GENERATED_PAT}
-
-To remove this server, run: claude mcp remove mendix-cloud-mcp -s user
+claude mcp remove mendix-cloud-mcp -s user
 ```
 
 ### VS Code with GitHub Copilot {#vs-code}
 
-To add the Mendix on Kubernetes MCP server in VS Code, add the following configuration to your `.vscode/settings.json` file or your VS Code user settings:
+To add the Mendix on Kubernetes MCP server in VS Code, perform the following steps:
+
+1. Add the following configuration to your `.vscode/settings.json` file or your VS Code user settings:
 
 ```json
 {
@@ -82,7 +91,7 @@ To add the Mendix on Kubernetes MCP server in VS Code, add the following configu
 }
 ```
 
-Replace the placeholder values with your credentials as described in the [Claude Code](#claude-code) section above.
+2. Replace the placeholder values with your credentials as described in the [Claude Code](#claude-code) section above.
 
 ## Available Capabilities {#capabilities}
 
@@ -137,7 +146,6 @@ Two authentication methods are used depending on the API:
 Include all three headers in your connection configuration to ensure all tools work correctly.
 {{% /alert %}}
 
-
 ## Client Compatibility {#compatibility}
 
 The Mendix on Kubernetes MCP integration works with any MCP-compatible client that supports HTTP transport (streamable HTTP) and custom headers for authentication.
@@ -150,17 +158,25 @@ Clients that only support OAuth 2.0 authentication without custom header support
 
 The following limitations apply:
 
-| Limitation | Details |
-| --- | --- |
-| File uploads not supported | The MCP gateway does not support `application/octet-stream` content types. APIs that require binary file upload, such as uploading a deployment package, are not supported. Use the Mendix Portal or the Mendix CLI instead. |
-| Rate limiting | Requests are limited to 60 per minute. High-volume automated workflows may exceed this limit. |
-| OAuth-only clients | Clients that exclusively use OAuth 2.0 for MCP authentication cannot connect. |
+### File Uploads Not Supported
+
+The MCP gateway does not support `application/octet-stream` content types. APIs that require binary file upload, such as uploading a deployment package, are not supported. Use the Mendix Portal or the Mendix CLI instead.
+
+### Rate Limiting 
+
+Requests are limited to 60 per minute. High-volume automated workflows may exceed this limit.
+
+### OAuth-only Clients
+
+Clients that exclusively use OAuth 2.0 for MCP authentication cannot connect.
 
 ## Troubleshooting {#troubleshooting}
 
 ### Connection Fails or Times Out
 
-* Make sure the URL is exactly `https://mcp.home.mendix.com/private`
+In case of connection failures or time outs, verify the following:
+
+* Make sure the URL is exactly `https://mcp.home.mendix.com/private.
 * Verify that your JSON configuration uses `"type": "http"` and not `"transport": "http"`.
 
 ### 401 Unauthorized
@@ -185,10 +201,12 @@ https://mcp.home.mendix.com/private \
 
 ### Tools Not Showing Up
 
+If your tools are not discovered after connection, verify the following:
+
 * Wait 10–15 seconds after connecting for tool discovery to complete.
 * Run `claude mcp get mendix-cloud-mcp-private` to check the connection status.
 * If the status shows an error, remove and re-add the connection.
 
 ## Feedback
 
-To report an issue or request additional API coverage, contact your Mendix CSM.Nidhi
+To report an issue or request additional API coverage, contact your Mendix CSM.

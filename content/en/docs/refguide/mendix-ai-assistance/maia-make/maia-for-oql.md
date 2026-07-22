@@ -19,6 +19,8 @@ Maia for OQL is a powerful feature that enables you to generate and manage OQL (
 
 In Studio Pro 11.9 and above, Maia for OQL is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia for OQL. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
+In Studio Pro 11.13 and above, and 11.12.2 and above, a new setting has been added to enable or disable OQL generation with Maia. Note that OQL generation always uses the Mendix Platform regardless of the configured AI provider. For OQL generation to work, both Enable Maia and the Enable OQL Tool setting must be enabled.
+
 ### In Studio Pro 11.8 and Below
 
 In Studio Pro 11.8 and below, to enable Maia for OQL, navigate to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for OQL Generation**.

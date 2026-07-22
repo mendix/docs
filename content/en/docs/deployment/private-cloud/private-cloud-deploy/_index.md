@@ -216,7 +216,7 @@ You can deploy the deployment package of your app by doing the following:
 
 9. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
 
-10. (Optional) Click **View Summary** to see the enhanced deployment package summary, which provides clearer visibility into the changes included in the release.
+10. Optional: Click **View Summary** to see the enhanced deployment package summary, which provides clearer visibility into the changes included in the release.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/DeploymentPackageSummary.png" alt="Enhanced deployment package summary with detailed change information" class="no-border" >}}
 

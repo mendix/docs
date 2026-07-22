@@ -74,7 +74,7 @@ To use the capabilities of Snowflake in a Mendix app with the Snowflake AI Data 
 * RSA key-pair authentication (KEYPAIR_JWT)
 * Programmatic Access Token (PAT)
 
-With the Snowflake AI Data Connector, authentication can be done either on system or on end-user level, and the connector supports role-based access control (RBAC) per end user as well.
+With the Snowflake AI Data Connector, authentication can be done either on system or on end user level, and the connector supports role-based access control (RBAC) per end user as well.
 
 #### Configuring OAUTH Authentication {#setup-OAUTH-snowflake}
 

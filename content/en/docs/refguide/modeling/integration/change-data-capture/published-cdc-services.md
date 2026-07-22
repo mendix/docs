@@ -62,11 +62,11 @@ Each row in the table has the following columns:
 
 Expand an entity row to see each attribute and association with a checkbox. Uncheck an item to exclude it from the event payload. The **Exposed name** column lets you rename individual attributes in the payload independently of their domain model names.
 
-Associations appear as nested data within the parent entity's event payload. They do not produce separate Kafka topics and show no **Revision** or **Topic** values of their own.
+Associations appear as a list of identifiers within the parent entity's event payload. Attributes and associations do not produce separate Kafka topics and show no **Revision** or **Topic** values of their own.
 
 ## Revisions {#revisions}
 
-Each tracked entity has a **Revision** number that identifies the schema version of its event payload. Downstream consumers use the revision to detect and respond to schema changes. The revision is also embedded in the Kafka topic name, so each schema version has its own isolated topic.
+Each tracked entity has a **Revision** number that identifies the schema of its event payload. Downstream consumers use the revision to detect and respond to schema changes. The major revision is also embedded in the Kafka topic name, so only breaking changes result in a new topic.
 
 Studio Pro manages revisions automatically. When you modify the tracked configuration of an entity, Studio Pro marks it as **Changed** and calculates the new revision based on whether the change is breaking or non-breaking:
 
@@ -82,7 +82,7 @@ Pending modifications are not finalized until you click **Accept changes** in th
 Accepting changes confirms the new revision numbers and clears the modification states, leaving the document in a clean state ready for deployment.
 
 {{% alert color="warning" %}}
-A major revision creates a new Kafka topic. Consumers subscribed to the previous topic version will no longer receive events after deployment. Ensure downstream systems are updated before deploying a major revision change.
+A major revision creates a new Kafka topic. Consumers subscribed to the previous topic will no longer receive events after deployment. Ensure downstream systems are updated in coordination of deploying a major revision change.
 {{% /alert %}}
 
 ## Runtime Behavior {#runtime}

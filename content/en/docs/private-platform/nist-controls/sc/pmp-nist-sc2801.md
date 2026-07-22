@@ -141,6 +141,7 @@ The Mendix Operator supports externalizing environment-level secrets (database c
 with each provider's native cryptographic mechanisms at rest.
 
 The following stores are supported:
+
 * HashiCorp Vault
 * AWS Secrets Manager
 * Azure Key Vault

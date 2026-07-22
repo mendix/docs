@@ -7,7 +7,7 @@ weight: 10
 
 ## Introduction
 
-The **Monitoring** category in the [navigation pane](/developerportal/#navigation-pane) of **Apps** provides access to software composition, alerts, logs, and metrics.
+The **Monitoring** category in the [navigation pane](/developerportal/#navigation-pane) of **Projects** provides access to software composition, alerts, logs, and metrics.
 
 ## Software Composition
 

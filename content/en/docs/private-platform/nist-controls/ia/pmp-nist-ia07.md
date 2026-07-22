@@ -35,7 +35,7 @@ For more information, refer to the FIPS Publication 140, and [Cryptographic Modu
 
 ### Mendix Responsibility
 
-The Mendix Runtime and Private Mendix Platform need to allow integrate with the customer’s identity Provider (IdP) to help meet cryptographic module compliance requirements, such as FIPS 140.
+The Mendix Runtime and Private Mendix Platform need to allow integrate with the customer's identity Provider (IdP) to help meet cryptographic module compliance requirements, such as FIPS 140.
 
 ### Customer Responsibility
 

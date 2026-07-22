@@ -249,8 +249,8 @@ If multiple IdPs are configured in the OIDC module, the following two mechanisms
 1. Depending on deeplink, your application logic may redirect to a IdP-specific endpoint.
 2. In this mechanism, your end users make the selection. Your app logic can use the same URL (`<your-app-url>/oauth/v2/login`) to initiate authentication. End users will first be redirected to an IdP selection page, where they can choose the IdP they want to use for authentication.
 
-{{% alert color="info" %}}
-From version 4.5.0, the `Anonymous` module role has been removed from the module and is no longer available.
+{{% alert color="warning" %}}
+From version 4.5.0, the `Anonymous` module role has been removed from the module and is no longer available. If you are using the module below V4.5.0 and `Anonymous` module role is enabled, configure **Role-based home page** and **Sign-in page** of the **Authentication** section to *none*.
 {{% /alert %}}
 
 ### Configuring Navigation{#configure-nav}
@@ -990,20 +990,24 @@ For all versions of the OIDC SSO module, once you have created the microflow (fo
 If your microflow is not correctly implemented you will be told that **Authentication failed!** and will see errors in the log under the OIDC log node.
 {{% /alert %}}
 
-### Using Deep Links
+### Configuring Login Redirection
 
-If end-users who use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If successful, the end-user will be automatically redirected back to the deeplink.
+This section describes how to configure the application's `login.html` page to initiate authentication using the OIDC SSO module. By default, the Mendix `login.html` page does not automatically start the OIDC authentication flow. To enable users to sign in with an OIDC identity provider, you can configure the login page to either automatically redirect users to the identity provider or allow users to choose between local authentication and OIDC SSO.
 
-For more information on using Deep Link module (with Mendix 9), see the [Using Deep Link Module](#using-deep-link) section below.
+#### Automatic Redirection
+
+To enable authentication using the OIDC SSO module, replace the default `login.html` with the content of <a href="/attachments/appstore/platform-supported-content/modules/oidc/login-automatic.txt" target="_blank">login-automatic.txt</a> file and save it as `login.html`. Use this option when all users should be directly redirected to the OIDC Identity Provider.
+
+#### Manual Redirection
+
+For manual redirection, replace the default `login.html` with the content of <a href="/attachments/appstore/platform-supported-content/modules/oidc/login-manual.txt" target="_blank">login-manual.txt</a> file and save it as `login.html`. Use this option when users should choose between login in using local credentials and login via OIDC SSO.
 
 #### Using Page and Microflow URLs with OIDC SSO{#page-microflow-url}
 
 Page URLs and Microflow URLs are supported with OIDC SSO for Mendix version 10.6 and above. To do this, follow the steps below:
 
-1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs, and ensure to remove the Deep Link module from your app to start the app successfully.
-2. Configure **OIDC.Login_Web_Button** as the **Sign-in page** in the **Authentication** section of the app **Navigation**.
-3. The user is redirected to the OIDC login page for authentication.
-4. After successful log in, the user is directed to the desired page using page URLs and microflow URLs within the application.
+1. Redirect users to the OIDC authentication flow using either automatic or manual redirection, allowing them to authenticate through the OIDC login page.
+2. After successful login, the user is directed to the desired page using page URLs and microflow URLs within the application.
 
 If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above.
 
@@ -1012,27 +1016,6 @@ For more information, see the [Migrating to Page and Microflow URLs](/appstore/m
 
 Starting from Studio Pro 10.9.0, you can use the primitive parameters as **Query string** parameters in microflows. Check the checkbox in the parameter table to configure a microflow parameter to use as a **Query string** parameter.
 For more information, see the [URL](/refguide/microflow/#url) section of the *Microflow Properties*.
-
-##### Steps for OIDC SSO Version v4.1.0 and above
-
-In OIDC SSO version 4.1.0 and above, you do not have to enable anonymous users. You can disable this setting by navigating to **Security > Anonymous users** and setting **Allow anonymous users** to **No**. However, from version 4.5.0 of the module, this role has been removed from the module. 
-
-1. To use the Page URL functionality, replace the content of `login.html` with the content of `login-with-mendixsso-automatically.html` (located in the `resources\mendixsso\templates` folder) and save it as `login.html`.
-
-2. To implement the SSO redirection, you will need to replace the code in the `<script>` tag of your login page (for example, `login.html`) with code which does one of the following, depending on whether you want automatic or manual redirection:
-
-    * For automatic redirection, you can use `window.onload` to automatically redirect users to the SSO login page. You could, for example, use the following code:
-
-        ```javascript
-        const cont = window.location.search + window.location.hash;
-        const base = window.location.pathname.replace(/\/login\.html$/, '');
-        const loginUrl = base + '/oauth/v2/login';
-        window.location.href = cont ? loginUrl + '?cont=' + encodeURIComponent(cont) : loginUrl;
-        ```
-
-    * For manual redirection, you can use the same code above and add an onclick event to a button that manually triggers the SSO login.
-
-Once the above changes are applied, end users can directly navigate to the desired page. If not logged in, they will be redirected to the IdP login page for authentication. After successful login, they will be directed to the desired page using page and microflow URLs.
 
 #### Using Deep Link Module{#using-deep-link}
 

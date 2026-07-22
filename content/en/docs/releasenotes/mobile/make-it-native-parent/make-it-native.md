@@ -8,6 +8,26 @@ description: "These release notes showcase each release of the iOS and Android M
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to get the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
+## Android 1.2.3 / iOS 1.2.3
+
+**Release date: Jul 22, 2026**
+
+### Fixes
+
+- We have fixed the textinputs hiding behind on-screen keyboard.
+
+### Changes
+
+-   Migrated from react-native-push-notification to @notifee/react-native for better new architecture compatibility and enhanced push notification features
+-   Removed `@react-native-masked-view/masked-view` dependency.
+-   We migrated from react-native-file-viewer to react-native-file-viewer-turbo for new architecture compatibility
+-   File viewer now uses modal to display content
+-   We migrated from react-native-biometrics to @sbaiahmed1/react-native-biometrics for new architecture compatibility
+-   We have removed react-native-system-navigation-bar dependency. Navigation bar visibility is now handled by the react-native-video package.
+-   We migrated from react-native-fast-image to @d11/react-native-fast-image for new architecture compatibility.
+-   Upgrade react-native-reanimated to v3.16.7.
+-   We migrated from `react-native-splash-screen` to `react-native-bootsplash@6.3.10` for better splash screen support and autolinking compatibility.
+
 ## Android 11.12.0 / iOS 11.12.0
 
 **Release date: July 6, 2026**

@@ -9,6 +9,10 @@ aliases:
 
 ## Introduction
 
+{{% alert color="info" %}}
+You do not need to download this module from the Marketplace if you are using Studio Pro 11.13 or later, as it is included as part of the Studio Pro offering.For more details see [Connect to an External Database](/refguide/external-database-connection/).
+{{% /alert %}}
+
 Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 ## Use Cases

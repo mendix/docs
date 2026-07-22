@@ -7,11 +7,9 @@ description: "Describes how to configure a Published CDC Service document in Stu
 
 ## Introduction
 
-A Published CDC Service document defines the entities whose object changes the Mendix runtime tracks and publishes as Kafka events. Each tracked entity produces a stream of create, update, and delete events on its own Kafka topic.
+{{% alert color="warning" %}} This feature is in beta. For more information, see [Release Status](/releasenotes/release-status/). {{% /alert %}}
 
-{{% alert color="warning" %}}
-Change Data Capture is a beta feature in Mendix 11.12. Its behavior and configuration options may change in future releases.
-{{% /alert %}}
+A Published CDC Service document defines the entities whose object changes the Mendix Runtime tracks and publishes as Kafka events. Each tracked entity produces a stream of create, update, and delete events on its own Kafka topic.
 
 ## Creating a Published CDC Service {#create}
 
@@ -23,7 +21,7 @@ You can have multiple CDC service documents in an app — for example, to group 
 
 ### Service Name {#service-name}
 
-The service name uniquely identifies the CDC service within the app.  The App Name is used as part of the topic to ensure uniqueness.
+The service name uniquely identifies the CDC service within the app. The app name is used as part of the topic to ensure uniqueness.
 
 ### Description {#description}
 
@@ -37,28 +35,34 @@ The **Entities to track** table lists the entities whose object changes are publ
 
 Use the toolbar to manage tracked entities:
 
-* **+ Add** — add an entity from the domain model
-* **Remove** — stop tracking a selected entity
-* **Accept changes** — lock in the current revision numbers after reviewing modifications (see [Revisions](#revisions))
+* {{% icon name="add-filled" %}} **Add** — add an entity from the domain model
+* {{% icon name="subtract-circle" %}} **Remove** — stop tracking a selected entity
+* {{% icon name="refresh" %}} **Accept changes** — lock in the current revision numbers after reviewing modifications (see [Revisions](#revisions))
 
 Each row in the table has the following columns:
 
-| Column | Description |
-| --- | --- |
-| **Entities** | The domain model entity being tracked. Expand the row to view and select individual attributes and associations. |
-| **Exposed name** | The name used for this entity in the Kafka topic and event payload. Defaults to the entity name. |
-| **Modification** | The pending change state: **Added**, **Changed**, or **Removed**. Blank if the entity is unchanged since the last accepted revision. |
-| **Revision** | The schema revision of the entity's event payload. See [Revisions](#revisions). |
-| **Topic** | The Kafka topic name for this entity, in the format `cdc.<app-name>.<ExposedName>.<revision>.{space}`, where `{space}` is replaced at runtime by the Event Broker space name.  See [Bring Your Own Kafka (BYOK)](/refguide/change-data-capture/#byok-configuration) |
+### Entities
 
-### Adding an Entity {#add-entity}
+The domain model entity being tracked. Expand the row to view and select individual attributes and associations
 
-1. Click **+ Add** in the toolbar.
-2. Select a persistable entity from the domain model.
-3. Optionally edit the **Exposed name**.
-4. Expand the row to deselect any attributes or associations you do not want included in the event payload.
+### Exposed Name
 
-### Attribute and Association Selection {#attributes}
+The name used for this entity in the Kafka topic and event payload. Defaults to the entity name.
+
+### Modification
+
+The pending change state: **Added**, **Changed**, or **Removed**. Blank if the entity is unchanged since the last accepted revision.
+
+### Revision
+
+The schema revision of the entity's event payload. See [Revisions](#revisions).
+
+### Topic
+
+The Kafka topic name for this entity, in the format `cdc.<app-name>.<ExposedName>.<revision>.{space}`, where `{space}` is replaced at runtime by the Event Broker space name. See [Bring Your Own Kafka (BYOK)](/refguide/change-data-capture/#byok-configuration).
+
+
+## Attribute and Association Selection {#attributes}
 
 Expand an entity row to see each attribute and association with a checkbox. Uncheck an item to exclude it from the event payload. The **Exposed name** column lets you rename individual attributes in the payload independently of their domain model names.
 
@@ -82,7 +86,7 @@ Pending modifications are not finalized until you click **Accept changes** in th
 Accepting changes confirms the new revision numbers and clears the modification states, leaving the document in a clean state ready for deployment.
 
 {{% alert color="warning" %}}
-A major revision creates a new Kafka topic. Consumers subscribed to the previous topic will no longer receive events after deployment. Ensure downstream systems are updated in coordination of deploying a major revision change.
+A major revision creates a new Kafka topic. Consumers subscribed to the previous topic will no longer receive events after deployment. Ensure downstream systems are updated before or alongside deploying a major revision change.
 {{% /alert %}}
 
 ## Runtime Behavior {#runtime}

@@ -16,21 +16,22 @@ jobs:
         uses: actions/github-script@v9
         with:
           script: |
+            const techWriters = [
+              'ConnorLand',
+              'Karuna-Mendix',
+              'MariaShaposhnikova',
+              'MarkvanMents',
+              'NicoletaComan',
+              'OlufunkeMoronfolu',
+              'Yiyun333',
+              'dbreseman',
+              'katarzyna-koltun-mx',
+              'quinntracy'
+            ];
+
             const author = context.payload.pull_request.user.login;
 
-            let isTechWriter = false;
-            try {
-              const { data: membership } = await github.rest.teams.getMembershipForUserInOrg({
-                org: 'mendix',
-                team_slug: 'technical-writers',
-                username: author
-              });
-              isTechWriter = membership.state === 'active';
-            } catch {
-              isTechWriter = false;
-            }
-
-            if (isTechWriter) {
+            if (techWriters.includes(author)) {
               console.log(`${author} is a Technical Writer — Claude configuration change approved.`);
               return;
             }

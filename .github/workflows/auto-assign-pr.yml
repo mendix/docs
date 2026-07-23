@@ -15,6 +15,19 @@ jobs:
         uses: actions/github-script@v9
         with:
           script: |
+            const techWriters = [
+              'ConnorLand',
+              'Karuna-Mendix',
+              'MariaShaposhnikova',
+              'MarkvanMents',
+              'NicoletaComan',
+              'OlufunkeMoronfolu',
+              'Yiyun333',
+              'dbreseman',
+              'katarzyna-koltun-mx',
+              'quinntracy'
+            ];
+
             const creator = context.payload.pull_request.user.login;
             const prNumber = context.payload.pull_request.number;
             const assignees = context.payload.pull_request.assignees;
@@ -27,19 +40,7 @@ jobs:
               return;
             }
 
-            let isTechWriter = false;
-            try {
-              const { data: membership } = await github.rest.teams.getMembershipForUserInOrg({
-                org: 'mendix',
-                team_slug: 'technical-writers',
-                username: creator
-              });
-              isTechWriter = membership.state === 'active';
-            } catch {
-              isTechWriter = false;
-            }
-
-            if (isTechWriter) {
+            if (techWriters.includes(creator)) {
               console.log(`${creator} is on technical writers team, assigning PR...`);
               await github.rest.issues.addAssignees({
                 owner: context.repo.owner,

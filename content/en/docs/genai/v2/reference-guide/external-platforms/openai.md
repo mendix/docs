@@ -68,12 +68,12 @@ After installing the OpenAI connector, you can find it in the **Marketplace Modu
 
 OpenAI configuration requires the following inputs: 
 
-| Parameter   | Value                                                        |
-| ----------- | ------------------------------------------------------------ |
-| Display name | The name identifier of a configuration (for example, *MyConfiguration*). |
-| API type    | Select `OpenAI`. |
-| Endpoint    | The API endpoint (for example, `https://api.openai.com/v1`). |
-| Token     | The access token to authorize your API call. <br />To get an API key, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
+| Parameter | Value |
+| ----------- | ------ |
+| Display name | The name identifier of a configuration (for example, *MyConfiguration*). | 
+| API type | Select `OpenAI`. |
+| Endpoint | The API endpoint (for example, `https://api.openai.com/v1`). |
+| Token | The access token to authorize your API call. <br />To get an API key, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 
 #### Microsoft Foundry Configuration {#azure-openai-configuration}
 
@@ -87,17 +87,20 @@ Microsoft Foundry configuration requires the following inputs:
 | Azure key type | The type of token entered in the API key field. For Azure OpenAI, two types of keys are currently supported: Microsoft Entra token and API key. <br />For details on generating a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you can use the Azure `api-key` authentication mechanism. For details on obtaining an API key, see the [Obtaining API Keys](#azure-api-keys) section below. For more information, see the [Technical Reference](#technical-reference) section. |
 | Token / API key | The access token to authorize your API call. |
 
-##### Obtaining the Resource Name {#azure-resource-name}
+##### Obtaining the Project Endpoint and Resource Name {#azure-resource-name}
+
+The steps below are intended for the Microsoft Foundry portal (released in 2026). If you are using an older version, see the [Microsoft Documentation](https://learn.microsoft.com/en-us/azure/foundry/how-to/upgrade-azure-openai?tabs=portal) for guidance on upgrading.
 
 1. Sign in to the [Microsoft Foundry portal](https://ai.azure.com/).
-2. In the upper-right corner, select the resource.
-3. On the home page, go to **Resource configuration** to find the **Microsoft Foundry endpoint**.
-4. Click **Copy** ({{% icon name="copy" %}}) and use it as your resource name in the endpoint URL.
+2. In some cases this brings you to the resource page directly. If this is not the case, select the correct Azure resource of type "Project".
+3. On the resource page, **Project endpoint** is shown. The URL has the following structure: `https://{your-resource-name}.services.ai.azure.com/api/projects/{your-project-name}`. 
+4. If you use the Agent Editor in Studio Pro, you need the full project endpoint. Refer to the [Agent editor](/agents/agents-kit-2/reference-guide/agent-editor/#define-model-azure) documentation for more information.
+5. If you use the configuration page of the connector in the running app, extract the resource name and use it to construct the requested URL format as mentioned in the instruction on the page in the app. 
 
 ##### Obtaining API Keys {#azure-api-keys}
 
-1. On the same page where the resource name is located, find your API key information.
-2. View ({{% icon name="view" %}}) and copy ({{% icon name="copy" %}}) the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be visible for everyone in the portal, depending on your organization's security settings. 
+1. On the same page where the **Project endpoint** is located, find your **API key** information.
+2. Copy the **API key** and use it while setting up the configuration. Note that these keys might not be visible for everyone in the portal, depending on your organization's security settings. 
 
 ##### Adding Azure AI Search Resources {#azure-ai-search}  
 

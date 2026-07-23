@@ -68,7 +68,7 @@ The following steps walk you through creating and building a Teamcenter service 
 1. Configure your connection.
 
     1. Navigate to the **Settings** tab of the Teamcenter service document.
-    2. On the **Settings** tab, provide your Teamcenter authentication option along with credentials. For details, refer to the previous [Teamcenter Extension settings page](/appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/#settings-tab) information.
+    2. On the **Settings** tab, provide your Teamcenter authentication option along with credentials. For details, refer to the previous [Teamcenter Extension settings page](/appstore/industry/teamcenter-extension/create-an-integration/#settings-tab) information.
 
 1. Test your connection.    
    Once you have entered your connection details, click **Sign In** to test the connection.    

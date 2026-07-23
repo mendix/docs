@@ -5,112 +5,119 @@ weight: 20
 description: "Describes how to migrate an existing app from Teamcenter Connector 2512 and Extension v4.x to Teamcenter Connector 2606, including pre-migration steps, breaking changes, deprecated microflows and Java actions."
 ---
 
-### Migrating from Teamcenter Connector 2512 and Extension v4.x
+## Introduction
 
-In version 2606 of the Teamcenter Connector contains both the TcConnector module and the extension, meaning that from this version onwards the Teamcenter Extension doesn't need to be downloaded seperately. If you have an existing app using Teamcenter Connector 2512 and Extension v4.x, you can migrate to version 2606. While this migration involves some breaking changes, the benefits—unified module, modern Extension framework, improved security, and better error handling—make it worthwhile.
+Teamcenter Connector 2606 contains both the Teamcenter Connector and the Teamcenter Extension. This means that, from this version onwards, the Teamcenter Extension doesn't need to be downloaded seperately. If you have an existing app using Teamcenter Connector 2512 and the Teamcenter Extension v4.x, you can migrate to version 2606.
 
-**Before you start: Pre-migration checklist**
+This migration involves some breaking changes, but they are outweighted by the benefits:
 
-⚠️ **Follow these steps carefully to avoid issues:**
+* Unified module
+* Modern Extension framework
+* Improved security
+* Better error handling
 
-1. **Upgrade to Mendix 11.12.1 or higher first** — Version 2606 requires Mendix 11.12.1+. If you're on Mendix 10, you must upgrade Studio Pro before importing the new connector. Mendix 10 cannot run 2606.
+## Pre-Migration Checklist
 
-2. **Have only one developer perform the migration** — If multiple developers migrate simultaneously, you'll end up with duplicate generated artifacts. Coordinate with your team and designate one person to handle the migration, then have others pull the updated code from version control.
+Follow these steps carefully to avoid issues:
 
-3. **Migrate from 2512** - If the project still contains an older version of the Teamcenter Connector (2506 or older) first follow the steps in: https://docs.mendix.com/appstore/modules/siemens-plm/upgrade-teamcenter-connector-2506-to-2512/
+1. Upgrade to Studio Pro 11.12.1 or above. If you are using Studio Pro 10, you must upgrade before importing Teamcenter 2606.
+2. Have only one developer perform the migration. If multiple developers migrate simultaneously, there will be duplicate artifacts. Coordinate with your team and designate one person to handle the migration, then have others pull the updated code from version control.
+3. Migrate from Teamcenter 2512. If the project still contains an older version of the Teamcenter Connector, such as 2506 or older, first follow the steps for [Upgrading Teamcenter Connector 2506.0.0 to 2512.0.0](/appstore/industry/teamcenter-connector/upgrade-teamcenter-connector-2506-to-2512/).
+4. Make a backup. Before starting, either create a full backup of your app or commit all current changes to version control. This gives you a safety net in case you need to roll back.
 
-4. **Make a backup** — Before starting, either create a full backup of your app or commit all current changes to version control. This gives you a safety net in case you need to roll back.
+## Migration Process
 
-**Step-by-step migration process**
+Follow these steps in this exact order to ensure a proper migration:
 
-**Step 1: Prepare your environment**
+1. Prepare your environment.
 
-1. Open your app in Studio Pro 11.12.1 or higher
-2. Make sure all changes are committed (if using version control) or backed up
+    1. Open your app in Studio Pro 11.12.1 or above.
+    1. Make sure all changes are committed, if using version control, or backed up.
 
-**Step 2: Move the Toolkit contents to the TcConnector module**
+2. Move the Toolkit contents to the TcConnector module.
 
-3. Remove the old TcConnector module from your project, ignore the errors for now
-4. Rename the old TeamcenterToolkit module to TcConnector, then remove the module. By doing this, the old Toolkit references in the project are now pointing to the TcConnector module.
-> [!NOTE]
-> This step doesn't change the BOMapping, we will fix this in a later step
+    1. Remove the old TcConnector module from your project, and ignore the errors for now.
+    1. Rename the old TeamcenterToolkit module to TcConnector module, then remove the module. By doing this, the old Toolkit references in the project are now pointing to the TcConnector module.
+    {{% alert color="info" %}} This step doesn't change the BOMapping. This will be fixed in a later step. {{% /alert %}} 
 
-**Step 3: Import the new connector**
+3. Import the new connector.
 
-5. Remove the TeamcenterExtension module under add-ons, the old extension is not compatible with the new Teamcenter Connector 2606 module
-6. Download the Teamcenter Connector 2606 from the Mendix Marketplace, this now also contains the new version of the extension
-> [!NOTE]
-> The Teamcenter Extension is not found anymore under Extensions, but it can now be found as a new Service Document, similar as a microflow, it can be found by: Right click > Add other > Teamcenter service__ 
+    1. Remove the TeamcenterExtension module under add-ons, as the old extension is not compatible with version 2606 of the Teamcenter Connector.
+    1. Download the Teamcenter Connector 2606 from Mendix Marketplace. This now also contains the new version of the extension.
+    {{% alert color="info" %}} The Teamcenter Extension is no longer included in Extensions. It is available as a new Service Document, similar to a microflow. You can find it by right-clicking the module, selecting **Add other**, then selecting **Teamcenter service**. {{% /alert %}}
 
-**Step 4: Resolve breaking changes**
+4. Resolve breaking changes.
 
-7. Studio Pro will show you errors where your microflows or domain model reference things that have changed. Work through these systematically. The most common issues you'll encounter:
-   - Errors in microflows that were generated by the Teamcenter Extension can best be re-created by the new version of the extension, see Step 9
-   - Missing microflows/Java actions can be found in the deprecated table below
-   - References to `TeamcenterToolkit.*` — Change these to `TcConnector.*` (because Toolkit was merged into TcConnector)
-   - References to `FileType` — Change these to `NamedReference`
-   - Microflows that handle the Boolean return value from `Login` — Remove this handling, as `Login` now throws an exception instead
-   - See the breaking changes reference below
+    1. Studio Pro will display errors where your microflows or domain model reference things that have changed. Work through these systematically.    
+        The most common issues you will encounter are:
 
-**Step 5: Update security**
+        * Errors in microflows that were generated by the Teamcenter Extension can best be recreated by the new version of the extension. Refer to step 9 for details.
+        * Missing microflows/Java actions can be found in the [Deprecated Microflows and Their Replacements](#deprecated-microflows) and [Deprecated Java Actions and Their Replacements](#deprecated-java) tables.
+        * References to `TeamcenterToolkit.*` — Change these to `TcConnector.*`, because Toolkit was merged into TcConnector.
+        * References to `FileType` — Change these to `NamedReference`.
+        * Microflows that handle the Boolean return value from `Login` — Remove this handling, as `Login` now throws an exception instead.
+        * Refer to [Breaking Changes](#breaking-changes) on this page.
 
-8. Click "Update Security" in Studio Pro (open domain model → Update Security), make sure that all atrributes on persistent entities have read-rights
-9. Remember: the Administrator role now only has access to Teamcenter Configuration, so assign the User role to module roles that need entity access
+5. Update security.
 
-**Step 6: Enable React client**
+    1. Click **Update Security** in Studio Pro. 
+    1. Make sure that all atrributes on persistent entities have read rights. The **Administrator** role now only has access to Teamcenter Configuration, so assign the **User** role to module roles that need entity access.
 
-10. Go to Project → Settings → Runtime
-11. Make sure "Use React client" is turned on
+6. Enable the React client.
 
-**Step 7: Create a Teamcenter Service Document**
+    1. In your App Settings, go to the **Runtime** tab.
+    1. Select **Yes** next to **Use React client**.
 
-12. In the module where your Teamcenter integrations live, right-click and select "Add others" → "Teamcenter Service"
-13. Give it a name (e.g., "MainIntegrations")
+7. Create a Teamcenter Service Document.
 
-**Step 8: Reconfigure your connection**
+    1. In the module where your Teamcenter integrations live, right-click and select **Add others**, then click **Teamcenter Service**.
+    1. Give it a name.
 
-14. Open the Teamcenter Service Document and go to the Settings tab
-15. Enter your Teamcenter URL and authentication settings
-16. Click "Sign In" and login to Teamcenter
+8. Reconfigure your connection.
 
-**Step 9: Recreate your integrations**
+    1. Open the Teamcenter Service Document and go to the **Settings** tab.
+    1. Enter your Teamcenter URL and authentication settings.
+    1. Click **Sign In** and log in to Teamcenter.
 
-17. Your existing domain model entities and microflows are still in your app—they haven't been deleted. However, you'll want to regenerate them using the new Extension to take advantage of improvements and ensure they're compatible with the new connector
-18. In the Service Document, click on '+ Add integration' and start a journey that matches each of your existing integrations
-19. Configure it the same way as before (the journey types and options are the same)
-20. Click "Generate" to save and generate the integration 
-21. Replace the old microflows with the new generated microflows
-22. You can use the "Duplicate" feature in the History tab to create variations of an integration without reconfiguring from scratch
+9. Recreate your integrations.
 
-**Step 10: Test thoroughly**
+    Your existing domain model entities and microflows are still in your app. However, you need to regenerate them using the new Extension to take advantage of improvements and ensure that they are compatible with the new connector. To do that, follow these steps:
 
-23. Run each generated microflow against your Teamcenter instance
-24. Verify that search, create, update, and retrieval operations work as expected
-25. Test error handling by triggering error conditions (e.g., invalid search criteria)
-26. If you have automated tests, run them to ensure integration behavior is correct
+    1. In the Service Document, click **+Add integration** and start a journey that matches each of your existing integrations.
+    1. Configure the integration the same way as before. The journey types and options are the same.
+    1. Click **Generate** to save and generate the integration. 
+    1. Replace the old microflows with the newly generated microflows.
+    1. You can use the **Duplicate** feature on the **History** tab to create variations of an integration without reconfiguring from scratch.
 
-**Breaking changes reference**
+10. Test thoroughly.
 
-Here's a comprehensive table of breaking changes and what you need to do about each one:
+    1. Run each generated microflow against your Teamcenter instance.
+    1. Verify that search, create, update, and retrieval operations work as expected.
+    1. Test error handling by triggering error conditions, such as invalid search criteria.
+    1. If you have automated tests, run them to ensure integration behavior is correct.
+
+## Breaking Changes {#breaking-changes}
+
+This is a comprehensive table of breaking changes and actions to take each one:
 
 | Area | Change | Action required |
-|---|---|---|
-| **Teamcenter Toolkit Module** | Module merged into TcConnector; module no longer exists | Update all references from `TeamcenterToolkit.*` to `TcConnector.*` |
-| **Entity security** | Create and Delete rights removed from all entities | Remove any UI or microflow logic that relied on client-side Create/Delete; use microflows instead |
-| **Input parameter `ConfigName` renamed to `ConfigurationName`** | in generated microflows the input parameter is now called ConfigurationName and is optional | Set the ConfigurationName or leave it empty |
-| **Admin role** | Administrator no longer has entity access | Reassign to User role where needed |
-| **`FileType` / `File Type`** | Renamed to `NamedReference` / `Named Reference` | Update all references in microflows and mappings |
-| **`CreateBOMWindow_Generic`** | Moved to TcConnector; updated to use `CreateOrReconfigureBOMWindows`; pre-configured variants removed | Regenerate BOM microflows via the Extension or update manually to use `TcConnector.CreateBOMWindow_Generic` |
-| **`Login` Java action** | No longer returns Boolean; throws exception on failure | Remove Boolean result handling; wrap in error handler |
-| **`Logout` Java action** | Now returns Boolean | Update callers if return value was previously ignored |
-| **Error messages** | Connector no longer shows in-app messages; throws exceptions instead | Ensure calling microflows have error handlers |
+| --- | --- | --- | 
+| Teamcenter Toolkit Module | The module was merged into TcConnector. The module no longer exists. | Update all references from `TeamcenterToolkit.*` to `TcConnector.*`. |
+| Entity security | The `Create` and `Delete` rights were removed from all entities. | Remove any UI or microflow logic that relied on client-side `Create`/`Delete`. Use microflows instead. |
+| Input parameter `ConfigName` renamed to `ConfigurationName` | In generated microflows, the input parameter is now called `ConfigurationName` and is optional. | Set the `ConfigurationName` or leave it empty. |
+| Admin role | The **Administrator** no longer has entity access. | Assign the **User** role where needed. |
+| `FileType` / `File Type` | This was renamed to `NamedReference` / `Named Reference`. | Update all references in microflows and mappings. |
+| `CreateBOMWindow_Generic` | This was moved to TcConnector, and was updated to use `CreateOrReconfigureBOMWindows`. Pre-configured variants were removed. | Regenerate BOM microflows via the Extension or update manually to use `TcConnector.CreateBOMWindow_Generic`. |
+| `Login` Java action | No longer returns Boolean. Throws exception on failure. | Remove Boolean result handling and wrap in error handler. |
+| `Logout` Java action | Now returns Boolean. | Update callers if return value was previously ignored. |
+| Error messages | Connector no longer shows in-app messages. It throws exceptions instead. | Ensure calling microflows have error handlers. |
 
-**Deprecated microflows — with replacements**
+## Deprecated Microflows and Their Replacements {#deprecated-microflows}
 
-These microflows still exist in the deprecated folder but can't be used anymore (excluded). Replace them with the recommended alternatives:
+These microflows still exist in the deprecated folder, but can no longer be used. Replace them with the recommended alternatives:
 
 | Deprecated | Replacement |
-|---|---|
+| --- | --- |
 | `AreMultipleTcConfigActive` | No replacement |
 | `CloseBOMWindow`| `BOMWindow_Close` |
 | `DownloadFile` | `DownloadFile` / `DownloadImage` Java action |
@@ -118,34 +125,33 @@ These microflows still exist in the deprecated folder but can't be used anymore 
 | `ExecuteLogout` | `Logout` microflow |
 | `HandleActiveConfigErrors` | No replacement |
 | `HandleServiceErrors` | No replacement |
-| `RetrieveConfigNameFromSingleActiveConfiguration` | Use `empty` for configurationName parameter in Java actions, Java actions now handles active configuration in the Java code |
+| `RetrieveConfigNameFromSingleActiveConfiguration` | Use `empty` for the `configurationName` parameter in Java actions. Java actions now handle active configuration in the Java code. |
 | `RetrieveHttpHeaderList` | No replacement |
-| `RetrieveTcSessionBasedOnConfigName` | No replacement, TcSession should not be manually consumed; it is automatically handled by the TcConnector module. |
-| `RetrieveTeamcenterConifgurationByName` | Use `empty` for configurationName parameter in Java actions, Java actions now handles active configuration in the Java code |
-| `RetrieveTeamcenterConifgurationFromTcSession` | No replacement	TcSession should not be manually consumed; it is automatically handled by the TcConnector module |
+| `RetrieveTcSessionBasedOnConfigName` | No replacement. `TcSession` should not be manually consumed. It is automatically handled by the TcConnector module. |
+| `RetrieveTeamcenterConifgurationByName` | Use `empty` for the `configurationName` parameter in Java actions. Java actions now handle active configuration in the Java code. |
+| `RetrieveTeamcenterConifgurationFromTcSession` | No replacement. `TcSession` should not be manually consumed. It is automatically handled by the TcConnector module. |
 | `ShowPartialErrors` | No replacement |
 | `UpdateSession` | No replacement |
 
-**Deprecated Java actions — with replacements**
+## Deprecated Java Actions and Their Replacements {#deprecated-java}
 
-These Java actions still exist in the deprecated folder but can't be used anymore (excluded). Replace them with the recommended alternatives:
+These Java actions still exist in the deprecated folder, but can no longer be used. Replace them with the recommended alternatives:
 
-|Java Action |	Replacement	|
-|---|---|
-| `PerformAction` |	`PerformAction3` |
-| `GetWorkflowTemplates` |	`GetWorkflowTemplates2` |
-| `CreateBOMWindows` |	`CreateOrReConfigureBOMWindows` |
-| `CreateBOMWindows2` |	`CreateOrReConfigureBOMWindows`	|
-| `WhereUsed` |	`WhereUsed2` |
-| `ExpandPSOneLevel` |	`ExpandPSOneLevel2`	|
-| `GetTcSessionInfo` |	`GetTcSessionInformation`	|
-| `GetItemFromId` |	`GetItemAndRelatedObjects` |
+| Java Action | Replacement |
+| --- | --- |
+| `PerformAction` | `PerformAction3` |
+| `GetWorkflowTemplates` | `GetWorkflowTemplates2` |
+| `CreateBOMWindows` | `CreateOrReConfigureBOMWindows` |
+| `CreateBOMWindows2` | `CreateOrReConfigureBOMWindows`	|
+| `WhereUsed` | `WhereUsed2` |
+| `ExpandPSOneLevel` | `ExpandPSOneLevel2`	|
+| `GetTcSessionInfo` | `GetTcSessionInformation`	|
+| `GetItemFromId` | `GetItemAndRelatedObjects` |
 | `RetrieveCookie` | No replacement |
 
-**What carries forward automatically**
+## Automatically Migrated Items
 
-The good news: not everything needs to be rebuilt from scratch.
+Not everything needs to be rebuilt from scratch. These items are automatically migrated as they are:
 
-✅ **Your domain model is preserved** — Entities and associations generated by the previous Extension remain in your module. They're part of your app, so they don't disappear during the migration.
-
-✅ **Your microflows are preserved** — Generated microflows remain in your app. Only those affected by specific breaking changes (input entity naming, Toolkit module references) need regeneration or updates.
+* Domain model — Entities and associations generated by the previous Extension remain in your module. They are part of your app, so they don't disappear during the migration.
+* Microflows  — Generated microflows remain in your app. Only those affected by specific breaking changes, such as input entity naming or Toolkit module references, need to be regenerated or updated.

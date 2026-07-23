@@ -56,19 +56,6 @@ Event sub-processes can be configured as either interrupting or non-interrupting
 * **Interrupting (solid line)** – Immediately cancels the main process flow and all ongoing sub-processes within the workflow instance.
 * **Non-Interrupting (dashed line)** – Runs in parallel with the main flow.
 
-##### Implications of Changing the Sub-Process Start Event Type {#event-type-change}
-
-For an existing event sub-process, when you change the type of its start event from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a notification start event from non-interrupting to interrupting, you will see the following warning dialog:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/security-dialog.png" alt="Security Dialog when changing type" width="450">}}
-
-After you confirm the change:
-
-* The sub-process is re-created with a start event of the specified type, along with all the event sub-process activities. The new start event can be triggered after the workflow is redeployed and is in progress.
-* The workflow becomes incompatible if the changed event sub-process is already being executed in one of the ongoing workflow instances.
-
-The event sub-process is re-created upon type switch because in-place conversion can result in invalid states. An interrupting event sub-process cancels the parent process scope and all other active sub-processes when triggered, while a non-interrupting one runs in parallel without affecting them. These are mutually exclusive execution models: an event sub-process instance belongs to exactly one of them from the moment it starts. Changing the type in place for an already-active instance would leave it in a state that is neither valid interrupting nor valid non-interrupting behavior.
-
 #### Concurrency Limitation
 
 Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger that same sub-process via the **Notify workflow** activity will return `false`. No new instances will be created for that specific sub-process while one is **In Progress**. A new instance can only be initiated once the active sub-process has completed its execution path.
@@ -89,6 +76,36 @@ To add an **Event sub-process** to a workflow, follow these steps:
 * The sub-process flow is contained within a dashed rectangle. This dashed border around the sub-process start event indicates that it is a non-interrupting sub-process.
 * The flow can contain the same types of activities as the main process flow (for example, **User Task**, **Call Microflow**, **Decision**).
 * It must start with a **Start** event (triggered by a notification) and end with at least one **End** event.
+
+### Changing Sub-Process Start Event Type
+
+You can change the type of an existing sub-process start event using the context menu without having to delete and re-add it. To do this:
+
+1. Right-click the sub-process start event to open its context menu.
+2. Click **Change event**.
+3. Select one of the available options:
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/context-menu-change-event.png" alt="Changing sub-process start event type through context menu" width="450" >}}
+
+You can convert between the following supported start event types:
+
+* Notification (Interrupting)
+* Notification (Non-Interrupting)
+* Timer (Interrupting)
+* Timer (Non-Interrupting)
+
+#### Implications of Changing the Interrupting Behavior {#event-type-change}
+
+For an existing sub-process start event, when you change its interrupting behavior from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a sub-process start event from non-interrupting to interrupting, you will see the following warning dialog:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/security-dialog.png" alt="Security Dialog when changing type" width="450">}}
+
+After you confirm the change:
+
+* The event sub-process is re-created with a start event of the specified interrupting behavior. The new sub-process start event can be triggered after the workflow is redeployed and is in progress.
+* The workflow becomes incompatible if the changed event sub-process is already being executed in one of the ongoing workflow instances.
+
+The event sub-process is re-created upon interrupting behavior change because in-place conversion can result in invalid states. An interrupting event sub-process cancels the parent process scope and all other active sub-processes when triggered, while a non-interrupting one runs in parallel without affecting them. These are mutually exclusive execution models: an event sub-process instance belongs to exactly one of them from the moment it starts. Changing the type in place for an already-active instance would leave it in a state that is neither valid interrupting nor valid non-interrupting behavior.
 
 ### Rearranging Event Sub-Processes
 

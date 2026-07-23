@@ -1,10 +1,10 @@
 ---
 title: "Troubleshoot PWA Wrapper"
-url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-troubleshooting/
+url: /refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-troubleshooting/
 weight: 60
 description: "This guide lists known issues for PWA Wrapper, and how to solve them."
 aliases:
-    - /refguide/mobile/pwa-wrapper/pwa-wrapper-troubleshooting/
+    - /refguide10/mobile/pwa-wrapper/pwa-wrapper-troubleshooting/
 ---
 
 ## Introduction
@@ -22,7 +22,7 @@ This page describes known issues you may encounter when building or testing PWA 
     net::ERR_CACHE_MISS
     ```
 
-    {{< figure src="/attachments/refguide/mobile/pwa-wrapper/localhost-cache-miss-error.png" alt="Page Load Error showing net::ERR_CACHE_MISS on Android" max-width="400px" >}}
+    {{< figure src="/attachments/refguide10/mobile/pwa-wrapper/localhost-cache-miss-error.png" alt="Page Load Error showing net::ERR_CACHE_MISS on Android" max-width="400px" >}}
 
 * Cause — Two things are required for a physical Android device to reach a localhost server on your machine:
 
@@ -31,7 +31,7 @@ This page describes known issues you may encounter when building or testing PWA 
 
 * Solution — To solve this issue, do the following:
 
-1. In the PWA Wrapper builder, go to the **Permissions** step and enable the **INTERNET** permission (for general guidance on permissions, see [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
+1. In the PWA Wrapper builder, go to the **Permissions** step and enable the **INTERNET** permission (for general guidance on permissions, see [Build PWA Wrapper Apps](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)).
 1. Connect the Android device to your machine via USB and make sure [USB debugging](https://developer.android.com/studio/debug/dev-options) is enabled on the device.
 1. Run the following ADB command to forward port 8080 from the device to your machine:
 

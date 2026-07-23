@@ -1,17 +1,17 @@
 ---
 title: "PWA Wrapper Security and Network Access"
-url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-security/
+url: /refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-security/
 weight: 50
 description: "Describes the network access and local filesystem scanning behavior of PWA Wrapper for security and IT reviewers."
 aliases:
-	- /refguide/mobile/pwa-wrapper/pwa-wrapper-security/
+	- /refguide10/mobile/pwa-wrapper/pwa-wrapper-security/
 ---
 
 ## Introduction
 
 This guide describes two behaviors of PWA Wrapper technology that are relevant for security reviews and IT governance: what the extension downloads from the network during a build, and what local paths and environment variables it inspects to detect existing developer tool installations.
 
-This information is intended for security engineers, IT administrators, and other reviewers who need a precise description of what the extension does outside its own process boundaries. It does not cover general build usage. For that, see [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
+This information is intended for security engineers, IT administrators, and other reviewers who need a precise description of what the extension does outside its own process boundaries. It does not cover general build usage. For that, see [Build PWA Wrapper Apps](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 ## Network Downloads During Build
 

@@ -15,6 +15,11 @@ jobs:
         uses: actions/github-script@v9
         with:
           script: |
+            const creator = context.payload.pull_request.user.login;
+            const prNumber = context.payload.pull_request.number;
+            const assignees = context.payload.pull_request.assignees;
+
+            // Technical Writers team members
             const techWriters = [
               'ConnorLand',
               'Karuna-Mendix',
@@ -27,10 +32,6 @@ jobs:
               'katarzyna-koltun-mx',
               'quinntracy'
             ];
-
-            const creator = context.payload.pull_request.user.login;
-            const prNumber = context.payload.pull_request.number;
-            const assignees = context.payload.pull_request.assignees;
 
             console.log(`Processing PR #${prNumber} by ${creator}`);
             console.log(`Current assignees: ${assignees.length > 0 ? assignees.map(a => a.login).join(', ') : 'none'}`);
@@ -52,3 +53,4 @@ jobs:
             } else {
               console.log(`${creator} is not on technical writers team, skipping assignment`);
             }
+              

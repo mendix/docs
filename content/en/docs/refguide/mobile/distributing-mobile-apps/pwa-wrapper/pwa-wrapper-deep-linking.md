@@ -9,8 +9,8 @@ description: "How to implement deep linking in your PWA Wrapper app to enable in
 
 Deep linking enables users to jump directly to specific content in your app via URLs or schemes. PWA Wrapper supports two independent deep linking flows:
 
-* **Outbound** — your Mendix app opens a URL or deep link (e.g., jumping to another app)
-* **Inbound** — the operating system launches your wrapped app via a registered deep link scheme, and the wrapper routes it into your app content
+* Outbound: your Mendix app opens a URL or deep link (for example, jumping to another app)
+* Inbound: the operating system launches your wrapped app via a registered deep link scheme, and the wrapper routes it into your app content
 
 This guide covers both flows.
 
@@ -24,7 +24,9 @@ OpenDeepLink(url: string): Promise<boolean>
 
 ### Behavior
 
-**iOS and Android:** Returns `true` or `false` based on success. Catches errors and returns `false` on failure.
+Behavior works as follows:
+
+* **iOS and Android** — This returns `true` or `false` based on success, and catches errors and returns `false` on failure.
 
 ### Important Caveat
 
@@ -36,26 +38,26 @@ Configure deep link schemes and hosts in the PWA Wrapper Builder during the app 
 
 ### Adding a Deep Link Entry
 
-Each deep link entry requires:
+Each deep link entry requires the following:
 
-* **scheme** (required) — e.g., `myapp`, `pwa`, or `https`/`http` for universal/app links
-* **host** (required) — domain or authority to match, e.g., `example.com`
-* **path** fields (optional, pick at most one):
-* **path** — exact path to match (e.g., `/profile`)
-* **pathStartWith** — path prefix to match (e.g., `/jump` catches `/jump/profile`)
-* **linkFeature** — free-text label (metadata only, affects HarmonyOS builds)
+* **scheme** (required) — For example `myapp`, `pwa`, or `https`/`http` for universal/app links
+* **host** (required) — Domain or authority to match, for example `example.com`
+* **path** fields (optional, pick one at most):
+  * **path** — Exact path to match (for example `/profile`)
+  * **pathStartWith** — Path prefix to match (for example `/jump` catches `/jump/profile`)
+* **linkFeature** — Free-text label (metadata only, affects HarmonyOS builds)
 * **platform** — `Android`, `iOS`, `HarmonyOS`, `all`, or unset (unset or `all` applies to every platform)
 
 ### Common Deep Link Patterns
 
-**Custom scheme (works everywhere, no domain ownership needed):**
+Here is an example of a **Custom scheme** (works everywhere, no domain ownership needed):
 
 * scheme: `myapp`
 * host: `example.com`
 * path fields: empty
 * Result: catches `myapp://example.com/...`
 
-**Universal Link / App Link (requires domain ownership):**
+Here is an example of a **Universal Link / App Link scheme** (requires domain ownership):
 
 * scheme: `https`
 * host: `yourapp.com`
@@ -64,25 +66,25 @@ Each deep link entry requires:
 
 ## Part 3: What the Builder Configures Per Platform
 
-The PWA Wrapper builder automatically registers your configured deep links with the operating system. You do not need to manually edit any native configuration files — the builder handles everything behind the scenes.
+The PWA Wrapper builder automatically registers your configured deep links with the operating system. You do not need to manually edit any native configuration files—the builder handles everything behind the scenes.
 
 ## Part 4: Domain Verification Files (Manual Setup Required)
 
 {{% alert color="warning" %}}
-For `https` scheme links (Android App Links and iOS Universal Links), the operating system requires verification files hosted on your own domain. The PWA Wrapper builder does NOT generate or host these files—you must create and publish them yourself.
+For `https` scheme links (Android App Links and iOS Universal Links), the operating system requires verification files hosted on your own domain. The PWA Wrapper builder does not generate or host these files—you must create and publish them yourself.
 
 Without these verification files, `https` links will open in the browser instead of the app. Android may display a disambiguation dialog; iOS Universal Links will fail silently.
 {{% /alert %}}
 
 ### Android: assetlinks.json
 
-Create and host `https://yourdomain.com/.well-known/assetlinks.json` on your web server. The file must be:
+Create and host `https://yourdomain.com/.well-known/assetlinks.json` on your web server. The file must meet the following criteria:
 
-* Valid JSON
-* Served with `Content-Type: application/json`
-* Accessible via `https` only (not `http`)
+* Have a valid JSON
+* Be served with `Content-Type: application/json`
+* Be accessible via `https` only (not `http`)
 
-**Example structure:**
+Here is an example structure:
 
 ```json
 [
@@ -101,13 +103,13 @@ To find your app's SHA-256 fingerprint, use `jarsigner` or the Android Studio Bu
 
 ### iOS: apple-app-site-association
 
-Create and host `https://yourdomain.com/.well-known/apple-app-site-association` on your web server. The file must be:
+Create and host `https://yourdomain.com/.well-known/apple-app-site-association` on your web server. The file must meet the following criteria:
 
-* Valid JSON (no `.json` extension in the path)
-* Served with `Content-Type: application/json`
-* Accessible via `https` only (not `http`)
+* Have a valid JSON (no `.json` extension in the path)
+* Be served with `Content-Type: application/json`
+* Be accessible via `https` only (not `http`)
 
-**Example structure:**
+Here is an example structure:
 
 ```json
 {
@@ -127,10 +129,10 @@ The `appID` format is `TEAM_ID.BUNDLE_ID`. The `paths` array should match the pa
 
 ### Hosting the Files
 
-The `.well-known` directory must be accessible at the root of your domain via `https`. The typical approach is:
+The `.well-known` directory must be accessible at the root of your domain via `https`. The two typical approaches are:
 
-* **Mendix Cloud:** Upload the verification files to your Mendix Cloud environment's static file directory. Refer to [Mendix Cloud documentation](/developerportal/deploy/) for details on serving static files, or contact Mendix Support.
-* **Custom Domain or External Hosting:** If your Mendix app is behind a reverse proxy or hosted on a custom domain, ensure the `.well-known` directory is properly configured to serve these files at the domain root.
+* Mendix Cloud — Upload the verification files to your Mendix Cloud environment's static file directory. Refer to [Mendix Cloud documentation](/developerportal/deploy/) for details on serving static files, or contact Mendix Support.
+* Custom Domain or External Hosting — If your Mendix app is behind a reverse proxy or hosted on a custom domain, ensure the `.well-known` directory is properly configured to serve these files at the domain root.
 
 ### Testing File Accessibility
 
@@ -147,22 +149,21 @@ Both should return HTTP 200 with `Content-Type: application/json`.
 
 Once a deep link is caught by the wrapper, it is routed into your app's runtime. The exact process depends on the platform:
 
-**Android:**
+* Android: the wrapper loads the incoming deep link in the webview
+* iOS: The wrapper loads the incoming deep link in the webview
 
-The wrapper loads the incoming deep link in the webview.
-
-**iOS:**
-
-The wrapper loads the incoming deep link in the webview.
-
-**Implication for your app:** Your Mendix app's routing (pages, deep-link microflows, etc.) must be configured to handle the deep link URL.
+{{% alert color="info" %}}
+One implication of deep links is that your Mendix app's routing (pages, deep-link microflows, etc.) must be configured to handle the deep link URL.
+{{% /alert %}}
 
 ## Common Deep Linking Pitfalls
 
-* **Missing verification files** — forgetting to create and host `assetlinks.json` (Android) or `apple-app-site-association` (iOS) for `https` scheme links is the most common integration failure.
-* **Using https without domain ownership** — `https` scheme links require that you own and control the domain; do not use `https` for domains you do not own.
-* **Misinterpreting the OpenDeepLink return value** — the boolean result only indicates the call succeeded, not whether the target app successfully opened or handled the link.
-* **Mismatched path configuration** — ensure your `path` and `pathStartWith` values match the actual Mendix page URLs or deep-link microflow entry points your app exposes.
+When employing deep linking, watch out for the following pitfalls:
+
+* Missing verification files — Forgetting to create and host `assetlinks.json` (Android) or `apple-app-site-association` (iOS) for `https` scheme links is the most common integration failure.
+* Using https without domain ownership — `https` scheme links require that you own and control the domain; do not use `https` for domains you do not own.
+* Misinterpreting the `OpenDeepLink` return value — The Boolean result only indicates the call succeeded, not whether the target app successfully opened or handled the link.
+* Mismatched path configuration — Ensure your `path` and `pathStartWith` values match the actual Mendix page URLs or `deep-link` microflow entry points your app exposes.
 
 ## Read More
 

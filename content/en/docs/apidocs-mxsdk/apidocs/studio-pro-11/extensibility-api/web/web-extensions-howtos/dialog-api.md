@@ -230,7 +230,7 @@ To show a progress dialog, call the method `studioPro.ui.dialogs.showProgressDia
     * `title` – The title of the step, which is highlighted when the step runs.
     * `description` – The description of the step, which shows at the bottom of the dialog next to the progress bar.
     * `action` – The action the step performs that returns `Promise<true | string>`, where `string` indicates the reason for failure if the step fails, and `true` is returned otherwise.
-* `<resolveImmediatelyOnCancel>` - An optional boolean that, if provided, can only be `true`. If the developer needs the state that exists at the exact time of cancellation, then they can pass `true` for this parameter. The default behavior is that the cancelled step will finish, and the whole dialog will return the state that exists when the cancelled step is completed. If the developer needs the state that exists at the exact time of cancellation, then they can pass `true` for this parameter.
+* `<resolveImmediatelyOnCancel>` – An optional boolean that, if provided, can only be `true`. By default, the canceled step finishes and the dialog returns the state that exists when the step completes. Pass `true` to instead return the state at the exact moment of cancellation.
 
 A checkmark icon appears next to the step title when the step completes successfully. If one of the steps fails, the dialog closes and the remaining steps do not run.
 
@@ -239,10 +239,10 @@ The `showProgressDialog` method returns a `Promise<ProgressDialogResult>`. `Prog
 * `result` – A string that is either `Success`, `Failure`, or `UserCancelled`:
     * `Success` – Returned when all steps return `true`.
     * `Failure` – Returned when one step fails, causing the dialog to close.
-    * `UserCancelled` – Returned when the user closes the dialog and interrupts the process. The cancelled step still finishes executing, and unless `resolveImmediatelyOnCancel` is `true`, the final state of the result will contain the changes performed by the step.
+    * `UserCancelled` – Returned when the user closes the dialog and interrupts the process. By default, the canceled step finishes and the result reflects the state when it completes; if `resolveImmediatelyOnCancel` is `true`, the result reflects the state at the moment of cancellation.
 * `failedStep` (optional) – An object of type `FailedProgressStepResult` that describes the step that failed.
 
-If the last step is cancelled, but it completed successfully, the whole result of the progress dialog will be `Success`.
+If the last step is canceled but completes successfully, the overall result is `Success`.
 
 The `FailedProgressStepResult` object contains the following properties:
 
@@ -316,8 +316,9 @@ export const component: IComponent = {
 };
 ```
 
-To see how `resolveImmediatelyOnCancel` influences the final state of the result, let's use the example above modified to set a value twice for each step into a dictionary called `state`. If `resolveImmediatelyOnCancel` is omitted when calling `showProgressDialog` (which is the default behavior), then the cancelled step will finish executing and the final result will have a value of `2` for the dictionary value set at that step.
-If however, the developer needs the cancelled step to not influence the final result, they should pass `true` for `resolveImmediatelyOnCancel`, and once the user cancels the progress dialog, the `state` dictionary will contain a value of `1` instead of `2` for the cancelled step.
+To see how `resolveImmediatelyOnCancel` influences the result, consider a modified version of the example above that sets a value twice per step into a dictionary called `state`. By default (when `resolveImmediatelyOnCancel` is omitted), the canceled step finishes executing and the result has a value of `2` for the dictionary entry set at that step.
+
+To capture the state before the canceled step completes, pass `true` for `resolveImmediatelyOnCancel`. The `state` dictionary then contains a value of `1` instead of `2` for the canceled step.
 
 ```typescript
 const state: { [step: string]: number } = {};

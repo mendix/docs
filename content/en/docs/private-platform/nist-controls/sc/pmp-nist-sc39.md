@@ -26,7 +26,7 @@ Information systems can maintain separate execution domains for each executing p
 
 The following controls are related to this control:
 
-* AC-3
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
 * AC-4
 * AC-6
 * SA-4

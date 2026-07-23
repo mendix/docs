@@ -2,7 +2,7 @@
 title: "Software Composition"
 linktitle: "Software Composition"
 url: /control-center/software-composition/
-description: "Describes the Software Composition page in the Mendix Control Center."
+description: "Describes the Software Composition page in Mendix Control Center."
 weight: 20
 ---
 
@@ -50,7 +50,7 @@ A software bill of materials (SBOM) is generated in the following circumstances:
 
 Click **View build output** in the deployment package details in the Mendix Portal to open the log details. For more information on SBOM generation, refer to [SBOM Generation](/refguide/sbom-generation/).
 
-You can find the component dependencies for each non-expired deployment package in the [Software Composition](/developerportal/deploy/software-composition/) page of **Apps** in the Mendix Portal. 
+You can find the component dependencies for each non-expired deployment package in the [Software Composition](/developerportal/deploy/software-composition/) page of **Projects** in Mendix Portal. 
 
 After you create a deployment package, the **Software Composition** page usually becomes visible within a few minutes. However, in rare cases, it can take up to a day. Mendix is working to improve performance.
 

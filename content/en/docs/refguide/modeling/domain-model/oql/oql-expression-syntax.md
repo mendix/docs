@@ -1439,7 +1439,6 @@ SELECT LPAD('hello', 10) AS padded FROM Sales.Order
 
 Where `·` represents the space character.
 
-
 ```sql
 SELECT LPAD('hello', 10, 'x') AS padded FROM Sales.Order
 ```

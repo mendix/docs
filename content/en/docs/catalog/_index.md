@@ -54,7 +54,6 @@ From the **Home** screen, you can do the following:
 
 The Catalog is also integrated in Mendix Studio Pro to find and connect to shared services in your apps. For further details on using Catalog in Studio Pro, see [Integration Pane](/refguide/integration-pane/) in the *Studio Pro Guide*.
 
-
 ## Information Available in the Catalog {#available-info}
 
 In the Catalog, all the information for registered assets is displayed in the [Catalog search details](/catalog/manage/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Curators](/catalog/manage/user-roles/#curator), and [Mendix Admins](/catalog/manage/user-roles/#admin).

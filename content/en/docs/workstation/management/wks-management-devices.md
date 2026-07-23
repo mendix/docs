@@ -286,6 +286,9 @@ To add a printer device, perform the following steps:
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Next**.
 6. Enter the exact device name as it is displayed in your operating system's device manager.
+
+    Alternatively, leave the field blank and the Workstation Client will automatically connect to the default printer as defined by the operating system.
+
 7. Click **Add Device**.
 
 ### Message Syntax

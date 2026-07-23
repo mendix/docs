@@ -14,6 +14,14 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
 
+## July 2026
+
+### July 20, 2026
+
+#### Improvements
+
+* We updated the [Incoming IP](/developerportal/deploy/mendix-ip-addresses/#global-platform-ips-inbound) used by some services running on Mendix Portal, such as the PDF Document Generation service.
+
 ## June 2026
 
 ### June 28, 2026

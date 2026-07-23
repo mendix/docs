@@ -14,6 +14,7 @@ Guides in this section will help you build, test and distribute mobile apps. Whi
 
 * [Building Native Apps](/refguide10/mobile/distributing-mobile-apps/building-native-apps/) – The first step to install a native app on a mobile device is to create an application package (IPA on iOS and APK on Android).
 * [Distributing Native Apps](/refguide10/mobile/distributing-mobile-apps/distributing-native-apps/) – To install an application package, it must be signed and submitted to the appropriate app stores (AppStore on iOS or PlayStore on Android) or installed via a mobile device management (MDM) solution.
+* [PWA Wrapper](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/) – Use this guide to package Mendix PWAs as native Android and iOS apps, and use wrapper capabilities.
 * [Updating Native Apps](/refguide10/mobile/distributing-mobile-apps/overtheair-updates/) – Native apps are normally updated by building and distributing the updated version. In some situations (mainly for smaller changes) these steps can be skipped with an over-the-air update.
 * [Debugging Native Apps](/refguide10/mobile/distributing-mobile-apps/native-debug/) – Web applications can be debugged directly in the web browser. For native apps, this is also possible but requires a few extra steps to set up.
 * [Testing Native Apps](/refguide10/mobile/distributing-mobile-apps/testing-mobile-apps/) – To test native apps, third-party software is required. This guide explains how to use Appium to test native apps.

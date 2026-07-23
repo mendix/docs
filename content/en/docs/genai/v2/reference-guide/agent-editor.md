@@ -147,7 +147,7 @@ After defining the model, define the Agent document and configure the prompts an
 Defining an agent is also document-based and can be configured using Agent Editor:
 
 * Add an Agent document from the **App Explorer** at the module level. Right-click the module or folder where you want to create your Agent document, then select **Add other** > **Agent**.
-* Select a **Model** document for the agent to call a text generation resource. Depending on the platform chosen, an additional dropdown will appear to select a model version (Mendix Cloud GenAI) or deployment (Azure AI Foundry). Make the agent is set up to use a text generation model. 
+* Select a **Model** document for the agent to call a text generation resource. Depending on the platform chosen, an additional dropdown will appear to select a model version (Mendix Cloud GenAI) or deployment (Azure AI Foundry). Make sure the agent is set up to use a text generation model. 
 * Configure the **System prompt**. Additionally, define a **User prompt** for task-style execution. In both prompts, include placeholders with double braces (for example, `{{variable}}`).
 * When you use placeholders, select a **Context entity** to resolve values at runtime. The placeholders used within the prompts must match the attribute names of the selected entity so that attribute values can be inserted instead of the placeholders at runtime.
 * Optionally, adjust the **Model settings** as needed (maximum tokens, temperature, and TopP), based on the supported ranges of the model provider.
@@ -304,7 +304,7 @@ Agent documents created in Studio Pro are imported through after-startup logic. 
 
 ### MCP Tools Cannot Be Listed or Called
 
-If **List tools** fails, verify the consumed MCP service configuration: endpoint constant value, protocol version, and credentials microflow (when authentication is required). For technical details, the log files in the `/agent-editor` folder of the app directory can be inspected.
+If **List tools** fails, verify the consumed MCP service configuration: endpoint constant value, protocol version, and credentials microflow (when authentication is required). For technical details, the log files in the `/agenteditor` folder of the app directory can be inspected.
 
 If possible, confirm that the target endpoint is reachable from the running app runtime. You can do this, for example, by temporarily configuring it manually in the [MCP Client module](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-client/) and checking the **Console** pane in Studio Pro for logs.
 

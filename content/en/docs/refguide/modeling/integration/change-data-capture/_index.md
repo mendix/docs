@@ -17,11 +17,11 @@ CDC is intended for developers who need to move Mendix domain model data to exte
 
 A CDC service document in Studio Pro defines which entities the Mendix Runtime should track. On deployment, each tracked entity gets its own Kafka topic. Every time a committed object change occurs (create, update, or delete) the Mendix Runtime publishes an event to the corresponding topic.
 
-Read events are triggered as snapshots during startup or when a stream changes in a way that constitutes a breaking change. Snapshots populate the new topic with the current data of the tracked entity. For more information, see the [Revisions](/refguide/published-cdc-services/#revisions) section below.
+Read events are triggered as snapshots during startup or when a stream changes in a way that constitutes a breaking change. Snapshots populate the new topic with the current data of the tracked entity. For more information, see the [Revisions](/refguide/published-cdc-services/#revisions) section of *Published CDC Services*.
 
 The broker that receives these events is either the [Mendix Event Broker](/appstore/services/event-broker/) or a Bring Your Own Kafka (BYOK) cluster. For BYOK configuration details, see [Mendix Event Broker](/appstore/services/event-broker/).
 
-To move the streamed data to a destination such as Azure Blob Storage or AWS S3, you configure an [Event Broker Bridge](/appstore/services/event-broker/#manage-mx-broker-bridge) separately in the Event Broker Manager after deployment.
+To move the streamed data to a destination (such as Azure Blob Storage or AWS S3), you configure an [Event Broker Bridge](/appstore/services/event-broker/#manage-mx-broker-bridge) separately in the Event Broker Manager after deployment.
 
 ## Prerequisites
 

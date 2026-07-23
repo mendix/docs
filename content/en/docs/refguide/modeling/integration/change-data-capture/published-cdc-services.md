@@ -31,13 +31,14 @@ This is an optional description for the CDC service.
 
 The **Entities to track** table lists the entities whose object changes are published to Kafka.
 
-{{< figure src="/attachments/refguide/modeling/integration/change-data-capture/published-cdc-service.png" alt="Published CDC Service document showing the Entities to track table with columns for Exposed name, Modification, Revision, and Topic" >}}
-
 Use the toolbar to manage tracked entities:
 
 * {{% icon name="add-filled" %}} **Add** – add an entity from the domain model
 * {{% icon name="subtract-circle" %}} **Remove** – stop tracking a selected entity
 * {{% icon name="refresh" %}} **Accept changes** – lock in the current [Revision](#revisions) numbers after reviewing modifications 
+
+
+{{< figure src="/attachments/refguide/modeling/integration/change-data-capture/published-cdc-service.png" alt="Published CDC Service document showing the Entities to track table with columns for Exposed name, Modification, Revision, and Topic" >}}
 
 ### Entities
 
@@ -72,8 +73,8 @@ Each tracked entity has a **Revision** number that identifies the schema of its 
 
 Studio Pro manages revisions automatically. When you modify the tracked configuration of an entity, Studio Pro marks it as **Changed** and calculates the new revision based on whether the change is breaking or non-breaking:
 
-* **Major revision** (for example, `1.0` → `2.0`) — a breaking change such as removing an attribute, renaming an entity's exposed name, or removing an entity from tracking. Consumers must be updated to use the new topic.
-* **Minor revision** (for example, `1.0` → `1.1`) — a non-breaking change such as adding a new attribute. Existing consumers can continue reading the topic without modification.
+* **Major revision** (for example, `1.0` → `2.0`) – a breaking change such as removing an attribute, renaming an entity's exposed name, or removing an entity from tracking. Consumers must be updated to use the new topic.
+* **Minor revision** (for example, `1.0` → `1.1`) – a non-breaking change such as adding a new attribute. Existing consumers can continue reading the topic without modification.
 
 {{< figure src="/attachments/refguide/modeling/integration/change-data-capture/published-cdc-service-changes.png" alt="Published CDC Service document showing entities with Changed and Removed modification states and updated revision numbers" >}}
 

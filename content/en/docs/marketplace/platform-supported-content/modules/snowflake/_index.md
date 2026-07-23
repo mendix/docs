@@ -9,7 +9,7 @@ description_list: true
 
 ## Introduction
 
-You can combine the AI capabilities offered by Menidx and Snowflake to enable the development of low-code agentic enterprise solutions. The integration works in both directions, that is, Snowflake Cortext Agents can invoke Mendix business logic, while Mendix AI agents can connect to Snowflake MCP servers.
+You can combine the AI capabilities offered by Mendix and Snowflake to enable the development of low-code agentic enterprise solutions. The integration works in both directions, that is, Snowflake Cortex Agents can invoke Mendix business logic, while Mendix AI agents can connect to Snowflake MCP servers.
 
 In addition to AI-driven applications, the integration also includes the capability to build data-driven applications. That is, you can use data from Snowflake in your Mendix app with the External Database connector or the Snowflake AI Data connector, as well as ingest your Mendix data into Snowflake by using the Mendix Data Loader.
 
@@ -44,6 +44,7 @@ The [Snowflake AI Data Connector](https://marketplace.mendix.com/link/component/
 * Trigger a number of [Snowflake Cortex ML functions](https://docs.snowflake.com/en/guides-overview-ml-functions). For a more detailed list, refer to [Snowflake AI Data Connector: Typical Use Cases](/appstore/connectors/snowflake/snowflake-ai-data-connector/#use-cases).
 * Use [Snowflake Cortex Analyst](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
 * Execute synchroneous calls.
+* Access Cortex AI functions.
 * Query your Cortex Search services.
 
 #### External Database Connector

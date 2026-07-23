@@ -26,7 +26,6 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 * We added a `permissionsChanged` event to the [Permissions API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/) that notifies you when the user changes the permissions of your extension.
 * We added the `documentsChanged` event, which notifies you when a document that your extension depends on is modified in Studio Pro.
 * The Studio Pro version is now available through the [Preferences API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/preference-api/).
-* We fixed an issue where the progress dialogs did not behave as the C# counterpart, where cancelling a step still waited for it to finish and return its result. If the user still wants to exit the step and return the result immediately, they can still do so by passing `resolveImmediatelyOnCancel` to the `IDialogApi.showProgressDialog` method.
 
 ## Version 11.11.0
 

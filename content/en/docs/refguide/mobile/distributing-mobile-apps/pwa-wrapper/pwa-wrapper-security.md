@@ -7,13 +7,13 @@ description: "Describes the network access and local filesystem scanning behavio
 
 ## Introduction
 
-This page describes two behaviors of PWA Wrapper that are relevant for security reviews and IT governance: what the extension downloads from the network during a build, and what local paths and environment variables it inspects to detect existing developer tool installations.
+This guide describes two behaviors of PWA Wrapper technology that are relevant for security reviews and IT governance: what the extension downloads from the network during a build, and what local paths and environment variables it inspects to detect existing developer tool installations.
 
-This information is intended for security engineers, IT administrators, and other reviewers who need a precise account of what the extension does outside its own process boundary. It does not cover general build usage; for that, see [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
+This information is intended for security engineers, IT administrators, and other reviewers who need a precise description of what the extension does outside its own process boundaries. It does not cover general build usage. For that, see [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 ## Network Downloads During Build
 
-PWA Wrapper itself does not download anything when it is installed or when Studio Pro starts. Network access happens at build time, through platform-standard build tooling, not through custom code in the extension. The following two downloads can occur on the first build for each respective platform.
+PWA Wrapper itself does not download anything when it is installed or when Studio Pro starts. Network access happens at build time, through platform-standard build tooling, not through custom code in the extension. The two downloads described below can occur on the first build for each respective platform.
 
 ### Android: Gradle Wrapper Distribution
 
@@ -33,7 +33,7 @@ To avoid this download in air-gapped environments, pre-populate the Gradle wrapp
 
 ## Bundled Binaries Executed Locally
 
-In addition to the runtime downloads above, PWA Wrapper ships the following binaries inside its own extension package. These are not downloaded at build time — they are included in the extension at install time and are invoked as local subprocesses during Android and HarmonyOS build, signing, and packaging steps. They run with the same operating-system privileges as the Studio Pro process.
+In addition to the runtime downloads above, PWA Wrapper ships the following binaries inside its own extension package. These are not downloaded at build time—they are included in the extension at install time and are invoked as local subprocesses during Android and HarmonyOS build, signing, and packaging steps. They run with the same operating-system privileges as the Studio Pro process.
 
 | Binary | Purpose | Platform |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ When the builder opens, PWA Wrapper inspects the local machine to auto-detect ex
 
 PWA Wrapper needs a Java runtime to execute the build tools listed above. It searches for an installed JDK in the following order and uses the first usable result it finds.
 
-**On macOS:**
+### macOS Method
 
 | Step | Method |
 | --- | --- |
@@ -62,7 +62,7 @@ PWA Wrapper needs a Java runtime to execute the build tools listed above. It sea
 | 3 | Resolve `java` on the shell `PATH` (equivalent to `which java`) |
 | 4 | Scan `/Library/Java/JavaVirtualMachines/` — the standard directory where installers such as Adoptium/Temurin, Oracle, and Azul place JDKs |
 
-**On Windows:**
+### Windows Method
 
 On Windows, JDK discovery does not scan directories. Instead it reads the output of `mx show-java-version` and inspects the Mendix Studio Pro settings database (`Settings.sqlite`) to find the JDK path configured in Studio Pro.
 
@@ -70,13 +70,15 @@ If no usable JDK is found, the build fails with an error that instructs the user
 
 ### Mendix Studio Pro Discovery
 
-PWA Wrapper needs to locate the Mendix Studio Pro installation to access the runtime and SDK files it uses during the build.
+PWA Wrapper needs to locate the Mendix Studio Pro installation to access the runtime and SDK files it uses during the build:
 
-**On macOS:** The extension scans `/Applications/` and `~/Applications/` for app bundles whose names match "Mendix Studio Pro" or "Studio Pro". Among all matches that contain a valid `runtime/` subdirectory, it selects the one with the highest version number.
+* macOS — The extension scans `/Applications/` and `~/Applications/` for app bundles whose names match "Mendix Studio Pro" or "Studio Pro". Among all matches that contain a valid `runtime/` subdirectory, it selects the one with the highest version number.
 
-**On Windows:** Auto-detection is not performed. The Studio Pro path must be provided explicitly via a CLI argument, a `.env` file, or a `.launch` file.
+* Windows — Auto-detection is not performed. The Studio Pro path must be provided explicitly via a CLI argument, a `.env` file, or a `.launch` file.
 
 ## Summary for Reviewers
+
+Consult the following summary for information at a glance:
 
 | Category | What happens | When | Data leaves machine? |
 | --- | --- | --- | --- |

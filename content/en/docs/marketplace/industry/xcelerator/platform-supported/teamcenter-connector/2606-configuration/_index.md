@@ -1,6 +1,6 @@
 ---
 title: "Teamcenter Connector 2606"
-url: /appstore/industry/teamcenter-connector/teamcenter-connector-2606/
+url: /appstore/industry/teamcenter-connector/unified-teamcenter-connector/
 weight: 2
 description: "Describes Teamcenter Connector 2606, a unified Mendix Marketplace module for integrating Mendix with Teamcenter."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Migrating to Teamcenter Connector 2606"
-url: /appstore/industry/teamcenter-connector/migrating-to-teamcenter-connector-2606/
+url: /appstore/industry/teamcenter-connector/migrating-to-unified-teamcenter-connector/
 weight: 20
 description: "Describes how to migrate an existing app from Teamcenter Connector 2512 and Extension v4.x to Teamcenter Connector 2606, including pre-migration steps, breaking changes, deprecated microflows, and Java actions."
 ---

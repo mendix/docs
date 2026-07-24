@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Teamcenter Connector 2606"
 linktitle: "Getting Started"
-url: /appstore/industry/teamcenter-connector/teamcenter-connector-2606-getting-started/
+url: /appstore/industry/teamcenter-connector/unified-teamcenter-connector-getting-started/
 weight: 10
 description: "Describes how to install, configure, and build your first Teamcenter Connector 2606 integration in Mendix Studio Pro, including setup, security, connection settings, and generating microflows and entities from a Teamcenter service document."
 ---

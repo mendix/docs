@@ -74,15 +74,15 @@ Successful responses return a certificate object with the following structure:
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `id` | string (UUID) | Unique certificate identifier |
-| `description` | string | Free-text description (auto-generated from the certificate's subject/SAN if not supplied) |
-| `validFrom` | string (RFC3339) | Certificate validity start |
-| `validTill` | string (RFC3339) | Certificate validity end |
-| `createdAt` | string (RFC3339) | When the certificate was created |
-| `updatedAt` | string (RFC3339) | When the certificate was last modified |
-| `status` | string enum | One of `UPCOMING`, `VALID`, `EXPIRES SOON`, `EXPIRED`. Computed from validity dates; `EXPIRES SOON` applies within 15 days of expiry |
-| `inUse` | boolean | `true` if the certificate is linked to one or more custom domains |
-| `linkedFqdnsCount` | integer | Number of custom domains currently linked to this certificate |
+| `id` | String (UUID) | Unique certificate identifier |
+| `description` | String | Free-text description (auto-generated from the certificate's subject/SAN if not supplied) |
+| `validFrom` | String (RFC3339) | Certificate validity start |
+| `validTill` | String (RFC3339) | Certificate validity end |
+| `createdAt` | String (RFC3339) | When the certificate was created |
+| `updatedAt` | String (RFC3339) | When the certificate was last modified |
+| `status` | String enum | One of `UPCOMING`, `VALID`, `EXPIRES SOON`, `EXPIRED`. Computed from validity dates; `EXPIRES SOON` applies within 15 days of expiry |
+| `inUse` | Boolean | `true` if the certificate is linked to one or more custom domains |
+| `linkedFqdnsCount` | Integer | Number of custom domains currently linked to this certificate |
 
 ## Errors
 
@@ -120,8 +120,8 @@ Returns the central certificates owned by your company, most recently updated fi
 
 | Parameter | Type | Default | Notes |
 | :---: | :---: | :---: | --- |
-| `domain` | string | – | Filter to certificates linked to this domain |
-| `status` | string | – | Filter by status: `UPCOMING`, `VALID`, `EXPIRES SOON`, `EXPIRED` |
+| `domain` | String | – | Filter to certificates linked to this domain |
+| `status` | String | – | Filter by status: `UPCOMING`, `VALID`, `EXPIRES SOON`, `EXPIRED` |
 | `page` | integer | 1 | 1-based page number |
 | `limit` | integer | 10 | Page size, 1–100 |
 
@@ -200,7 +200,7 @@ Rotates a certificate – transfers all custom domains linked to `{certificateId
 {"newCertificateId": "8f14e45f-ceea-467e-8459-b17dc4536f43"}
 ```
 
-**Response:** 200. With the new certificate's object (now carrying the transferred domain links).
+**Response:** 200 with the new certificate's object (now carrying the transferred domain links).
 
 ### Delete a Certificate {#delete-certificate}
 

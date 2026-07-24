@@ -116,7 +116,7 @@ The following steps walk you through creating and building a Teamcenter service 
         * BOM integrations let you configure BOM window properties and revision rules.
 
         Configure these integration-specific settings as needed.    
-        For more information on each of the Teamcenter integrations, refer to the [integration guides](/appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/integrations/).
+        For more information on each of the Teamcenter integrations, refer to the [integration guides](/appstore/industry/teamcenter-extension/create-an-integration/integrations/).
 
 1. Generate your integration.    
     Once you have configured everything, click **Generate**. The Teamcenter service document performs the following actions:

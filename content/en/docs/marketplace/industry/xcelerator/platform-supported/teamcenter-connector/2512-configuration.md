@@ -8,7 +8,7 @@ aliases:
     - /appstore/modules/siemens-plm/configuring-connection-2512/
 ---
 
-{{% alert color="info" %}} The following page describes the steps needed to configure the connection between your Mendix app and your Teamcenter instance using Teamcenter Connector 2512.0.0 and above. For information applying to Teamcenter Connector 2506.0.0 and below, refer to [Configuring the Connection to Teamcenter 2506.0.0 and Below](/appstore/modules/siemens-plm/configuring-connection-2506/). {{% /alert %}}
+{{% alert color="info" %}} The following page describes the steps needed to configure the connection between your Mendix app and your Teamcenter instance using Teamcenter Connector 2512.0.0 and above. For information applying to Teamcenter Connector 2506.0.0 and below, refer to [Configuring the Connection to Teamcenter 2506.0.0 and Below](/appstore/industry/teamcenter-connector/configuring-connection-2506/). {{% /alert %}}
 
 ## Connecting your Mendix App to Teamcenter
 

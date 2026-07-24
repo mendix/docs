@@ -53,3 +53,4 @@ jobs:
             } else {
               console.log(`${creator} is not on technical writers team, skipping assignment`);
             }
+              

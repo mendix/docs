@@ -458,6 +458,53 @@ Compared to gp2, gp3 provides higher baseline storage performance and does not r
 For details on DB storage size for various plans, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
 {{% /alert %}}
 
+### Average Database Bloat Ratio{#Trends-dbavgbloatratio}
+
+The **Average Database Bloat Ratio** graph shows the percentage of database rows across all user tables that are dead but not yet reclaimed by autovacuum. Dead rows accumulate when PostgreSQL updates or deletes data because the previous version of each affected row is kept until autovacuum removes it.
+
+{{% alert color="info" %}}
+You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+{{% /alert %}}
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-avg-bloat-ratio.png" >}}
+
+The value is calculated as the sum of dead rows divided by the sum of live plus dead rows across all user tables, expressed as a percentage. A small amount of bloat is normal on any active database; consistently high values across the database indicate that autovacuum is not keeping up with the mutation load.
+
+Interpret this graph together with the [Database Transactions and Mutations](#Trends-dbpgstatdatabaseVERSIONmain) and [Database Disk Usage](#Trends-dbdfabs) graphs; heavy update or delete traffic combined with rising bloat is a strong signal that reclaim is falling behind.
+
+### Maximum Table Bloat Ratio{#Trends-dbmaxtablebloatratio}
+
+The **Maximum Table Bloat Ratio** graph shows the bloat percentage of the single most bloated table in the database at each point in time. It is split into two series so that Mendix system tables and application tables can be diagnosed independently:
+
+| Series         | Explanation                                                                                                                              |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| **system**     | The most bloated Mendix system or platform table (`system_*` or `mendixsystem_*`). These are managed by the Mendix Runtime.              |
+| **non_system** | The most bloated application table. These are the tables that back your domain model entities.                                           |
+
+{{% alert color="info" %}}
+You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+{{% /alert %}}
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-max-table-bloat-ratio.png" >}}
+
+Only tables larger than 16 MiB are considered, so trivially small tables whose bloat ratio would otherwise appear high are excluded. Each data point is labeled with the name of the specific table that produced the maximum for that time window; hovering over a point reveals the table name.
+
+A sustained high value on the **non_system** series usually points to a specific application table with a heavy update or delete workload. A sustained high value on the **system** series is unusual and typically means Mendix Runtime background tasks (for example, session or scheduled-event tables) are churning faster than autovacuum can reclaim.
+
+### Largest Table Size{#Trends-dblargesttablesize}
+
+The **Largest Table Size** graph shows the size, in bytes, of the single largest table in the database at each point in time.
+
+{{% alert color="info" %}}
+You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+{{% /alert %}}
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-largest-table-size.png" >}}
+
+The size includes both the table's data and its indexes and TOAST storage. Each data point is labeled with the name of the table that was largest at that moment; hovering over a point reveals the table name.
+
+If the largest table changes over the period being viewed, the graph is still a single continuous line, but the tooltip on individual points reveals which table it was at that moment. A steadily growing largest-table value combined with a rising [Database Disk Usage](#Trends-dbdfabs) is a common signal that a specific table needs archiving, partitioning, or a data retention review.
+
 ## Read More
 
 * [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/) – Describes how to use application performance monitoring tools to provide additional monitoring for your Mendix Apps running on Mendix Cloud

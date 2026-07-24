@@ -9,11 +9,33 @@ on:
 jobs:
   check-claude-config:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Check for Claude configuration changes
         uses: actions/github-script@v9
         with:
           script: |
+            const techWriters = [
+              'ConnorLand',
+              'Karuna-Mendix',
+              'MariaShaposhnikova',
+              'MarkvanMents',
+              'NicoletaComan',
+              'OlufunkeMoronfolu',
+              'Yiyun333',
+              'dbreseman',
+              'katarzyna-koltun-mx',
+              'quinntracy'
+            ];
+
+            const author = context.payload.pull_request.user.login;
+
+            if (techWriters.includes(author)) {
+              console.log(`${author} is a Technical Writer — Claude configuration change approved.`);
+              return;
+            }
+
             const comment = `⚠️ **Claude Configuration Warning**
 
             You've modified Claude Code configuration files. These files contain the shared configuration for all contributors. Please revert this change if unintended. **ONLY modify these files if you need to change shared configurations that apply to everyone and have discussed this change with the TW team.**
@@ -34,7 +56,7 @@ jobs:
             \`\`\`
             `;
 
-            github.rest.issues.createComment({
+            await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,

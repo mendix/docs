@@ -17,7 +17,7 @@ For details on how to create your personal access token (PAT), see the [Personal
 Make sure you choose at least the following scopes:
 
 * **Model Repository** – `mx:modelrepository:repo:write`
-* **Sprintr Project API** – `mx:app:create` and `mx:app:delete`
+* **Project API** – `mx:app:create` and `mx:app:delete`
 
 ## Saving the Personal Access Token as an Environment Variable
 

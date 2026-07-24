@@ -45,7 +45,6 @@ Replace the following placeholders with your credentials:
 * `{Mendix-Username}` – the login name of the user making the request, with the required privileges in the Mendix Platform
 * `{Mendix-ApiKey}` – the API key associated with that user
 
-
 To verify the connection, run the following command:
 
 ```bash
@@ -160,7 +159,6 @@ Two authentication methods are used depending on the API:
 {{% alert color="info" %}}
 Include all three headers in your connection configuration to ensure all tools work correctly.
 {{% /alert %}}
-
 
 ## Client Compatibility {#compatibility}
 

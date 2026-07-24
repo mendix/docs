@@ -279,7 +279,6 @@ export const component: IComponent = {
 };
 ```
 
-
 Replace your `src/model/PersonInfo.ts` file with the following:
 
 ```typescript {hl_lines=["6-10"]}
@@ -416,7 +415,6 @@ export const component: IComponent = {
 };
 ```
 
-
 Return `dependentElementIds` to tell Studio Pro which elements your document depends on. When those elements change, your checks rerun automatically.
 
 {{% alert color="info" %}}
@@ -486,7 +484,6 @@ async function checkDependencyWasChanged(dependencies: Dependency[], documents: 
 ```
 
 By checking whether any of the changed documents from the event payload are included in your dependencies, you can trigger the consistency checks to run again by updating the content of your blob document using `studioPro.app.model.customBlobDocuments.updateDocumentContent`. This ensures your checks run again whenever one of your dependencies is modified in Studio Pro.
-
 
 ### Renamed Elements
 

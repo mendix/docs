@@ -22,6 +22,7 @@ Data integration capabilities in Studio Pro is part of [Mendix Connect](#integra
 * [Web services](/refguide/integration/web-services/)
 * [Business Event services](/refguide/business-event-services/)
 * [Published GraphQL services](/refguide/published-odata-services/) (experimental)
+* [Data Importer](/refguide/data-importer/)
 
 In addition to integration capabilities in Studio Pro, Mendix Connect functionalities include:
 

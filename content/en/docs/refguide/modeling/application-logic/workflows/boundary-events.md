@@ -80,7 +80,7 @@ When a boundary event is added to an ongoing activity, any workflow instances cu
 You can change the type of an existing boundary event using the context menu without having to delete and re-add it. To do this:
 
 1. Right-click the boundary event to open its context menu.
-2. Click **Change event**.
+2. Click **Change type**.
 3. Select one of the available options:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/context-menu-change-event.png" alt="Changing boundary event type through context menu" width="450" >}}

@@ -29,7 +29,7 @@ This control applies to information that may be restricted in some manner (for e
 
 The following controls are related to this control:
 
-* AC-3
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
 
 ## Responsibility
 

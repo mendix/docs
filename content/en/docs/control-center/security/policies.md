@@ -43,41 +43,41 @@ You can create a policy by defining your own details.
 
 2. On the **Policy Definition** tab, fill in the following details:
 
-* **Policy Name** – A relevant name for your policy, such as one indicating what the policy checks.
-* **Description** – A description of the goal of the policy, which covers why it needs to be adhered to, and how to fix its violations.
-* **Policy Conditions** – Define the conditions under which the policy is considered violated. These are the available conditions and their values:
+    * **Policy Name** – A relevant name for your policy, such as one indicating what the policy checks.
+    * **Description** – A description of the goal of the policy, which covers why it needs to be adhered to, and how to fix its violations.
+    * **Policy Conditions** – Define the conditions under which the policy is considered violated. These are the available conditions and their values:
 
-    * **Any finding severity is** – Choose which severity level violates the policy. You can select one or more of the following values:
+        * **Any finding severity is** – Choose which severity level violates the policy. You can select one or more of the following values:
 
-        * **LOW**
-        * **MEDIUM**
-        * **HIGH**
-        * **CRITICAL**
+            * **LOW**
+            * **MEDIUM**
+            * **HIGH**
+            * **CRITICAL**
 
-        For example, if you select **CRITICAL**, apps with critical findings violate this policy.
+            For example, if you select **CRITICAL**, apps with critical findings violate this policy.
 
-    * **Mendix runtime version is lower than** – Indicate which Mendix version is the minimum that your apps must use.
+        * **Mendix runtime version is lower than** – Indicate which Mendix version is the minimum that your apps must use.
 
-    * **Marketplace component license is not** – Select the licenses that are acceptable. If a Marketplace component has a license which is not one of the ones you select here, the policy is violated. These are the possible values:
+        * **Marketplace component license is not** – Select the licenses that are acceptable. If a Marketplace component has a license which is not one of the ones you select here, the policy is violated. These are the possible values:
 
-        * MIT
-        * BSD_2_0
-        * APACHE_V2
-        * APACHE_1_0
-        * MENDIX_EULA
-        * PARTNER_LICENSES
-        * CREATIVE_COMMONS_CC0
-        * GNU_GENERAL_PUBLIC_LICENSE_V3
-        * MENDIX_MARKETPLACE_CONTENT_TERMS
+            * MIT
+            * BSD_2_0
+            * APACHE_V2
+            * APACHE_1_0
+            * MENDIX_EULA
+            * PARTNER_LICENSES
+            * CREATIVE_COMMONS_CC0
+            * GNU_GENERAL_PUBLIC_LICENSE_V3
+            * MENDIX_MARKETPLACE_CONTENT_TERMS
 
-    * **Marketplace component support is not** – Select the support types that are acceptable. If a Marketplace component has a support type which is not one of the ones you select here, the policy is violated. These are the possible values:
+        * **Marketplace component support is not** – Select the support types that are acceptable. If a Marketplace component has a support type which is not one of the ones you select here, the policy is violated. These are the possible values:
 
-        * PARTNER
-        * SIEMENS
-        * PLATFORM
-        * COMMUNITY
+            * PARTNER
+            * SIEMENS
+            * PLATFORM
+            * COMMUNITY
 
-* **Checkpoints & Action(s)** – Select the trigger which causes the policy to be checked, and the action that is taken if the policy is violated. Currently, policy violations are checked at the time of package creation, and violations generate warnings.
+    * **Checkpoints & Action(s)** – Select the trigger which causes the policy to be checked, and the action that is taken if the policy is violated. Currently, policy violations are checked at the time of package creation, and violations generate warnings.
 
 3. On the **Policy Scope** tab, select whether you want the policy to apply to all licensed apps, or only to specific apps in your environment.
 

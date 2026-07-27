@@ -33,11 +33,11 @@ This guide does not give insights into the product roadmap or internal company o
 
 These are branded Mendix product names. However, they do not always need "Mendix" in front of them in the documentation.
 
-### Apps
+### Projects
 
 Refers to a section of the Mendix Portal. Capitalize in all instances (when used in this context rather than as the plural of "app").
 
-This term replaces "Developer Portal", "Sprintr", "Platform Portal," and "Mendix App Platform." These terms are not to be used in the product UI or documentation.
+This term replaces "Developer Portal", "Sprintr", "Platform Portal," "Mendix App Platform", and "Apps". These terms are not to be used in the product UI or documentation.
 
 ### Mendix on Kubernetes
 
@@ -93,7 +93,7 @@ This is a product name, so don't add a definite article.
 
 ### Mendix Platform
 
-Describes Mendix as a product and encompasses all the products released by Mendix (as in, Studio Pro, Apps, etc.).
+Describes Mendix as a product and encompasses all the products released by Mendix (as in, Studio Pro, Projects, etc.).
 
 Capitalize "Platform" when used in "Mendix Platform."
 
@@ -105,7 +105,7 @@ It is fine to use "the Mendix Platform," but do not use "the Platform" (or "the 
 
 ### Mendix Portal
 
-The Mendix Portal includes Apps (which replaces "Developer Portal"), Control Center, the Mendix Community, Mendix Marketplace, Catalog, and Mendix Support.
+The Mendix Portal includes Projects (which replaces "Developer Portal" and "Apps"), Control Center, the Mendix Community, Mendix Marketplace, Catalog, and Mendix Support.
 
 ### Mendix Studio Pro
 
@@ -142,7 +142,7 @@ Does not need to be capitalized, and "team" should be used without the qualifier
 
 ### app template
 
-This is the term to use to reflect the create-new-app flow UI in Apps.
+This is the term to use to reflect the create-new-app flow UI in Projects.
 
 Do not use "starter app."
 

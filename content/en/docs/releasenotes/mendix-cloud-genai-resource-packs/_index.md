@@ -12,6 +12,17 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 ## 2026
 
+### July 16, 2026
+
+#### New Features
+
+* We added **Model** and **Key** drop-down menus to the **Token Consumption Monitor** page, allowing you to filter charts by model and resource key.
+
+#### Fixes
+
+* We fixed an issue where the available model versions for a resource were not sorted correctly. Model versions are now displayed in the correct order, making it easier to identify the available versions.
+* We fixed an issue where searching the **Created for** field by email address was not consistently case-insensitive. Searches are now case-insensitive, improving search reliability.
+
 ### June 25, 2026
 
 #### New Features

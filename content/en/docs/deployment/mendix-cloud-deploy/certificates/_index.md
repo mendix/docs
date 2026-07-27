@@ -60,7 +60,7 @@ Virtually all certificate formats can be converted to the PKCS12 format. For mor
 
 You can upload a PKCS12 file by following these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the relevant environment.
 1. Select the **Network** tab of an application environment.
 1. In the **Outgoing Connections Certificates** section, click **Add Client Certificate**.
@@ -87,7 +87,7 @@ By default, Mendix Cloud trusts Certificate Authorities from the [Mozilla CA roo
 
 To upload a certificate authority, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the relevant environment.
 
 1. Select the **Network** tab of an application environment.

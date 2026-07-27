@@ -14,7 +14,7 @@ Your organization may have a requirement to use a private cloud, perhaps as part
 
 You can use Mendix on Kubernetes with the *connected* option to keep the simplicity of one-click deployments from the Mendix Portal, or utilize the *standalone* Mendix Operator to deploy Mendix apps through your own DevOps process, which is particularly useful for private clouds with an *air-gap* isolating them from the internet. See [Connected and Standalone Clusters](#connected-standalone), below, for more information.
 
-Please see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for a list of platforms supported by Mendix on Kubernetes.
+For a list of platforms supported by Mendix on Kubernetes, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
 
 There are two steps required to achieve this, listed below.
 

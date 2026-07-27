@@ -466,7 +466,7 @@ The **Average Database Bloat Ratio** graph shows the percentage of database rows
 You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-avg-bloat-ratio.png" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-avg-bloat-ratio.png" alt="Average Database Bloat Ratio graph" >}}
 
 The value is calculated as the sum of dead rows divided by the sum of live plus dead rows across all user tables, expressed as a percentage. A small amount of bloat is normal on any active database; consistently high values across the database indicate that autovacuum is not keeping up with the mutation load.
 
@@ -485,7 +485,7 @@ The **Maximum Table Bloat Ratio** graph shows the bloat percentage of the single
 You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-max-table-bloat-ratio.png" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-max-table-bloat-ratio.png" alt="Maximum Table Bloat Ratio graph" >}}
 
 Only tables larger than 16 MiB are considered, so trivially small tables whose bloat ratio would otherwise appear high are excluded. Each data point is labeled with the name of the specific table that produced the maximum for that time window; hovering over a point reveals the table name.
 
@@ -499,7 +499,7 @@ The **Largest Table Size** graph shows the size, in bytes, of the single largest
 You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-largest-table-size.png" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-largest-table-size.png" alt="Largest Table Size graph" >}}
 
 The size includes both the table's data and its indexes and TOAST storage. Each data point is labeled with the name of the table that was largest at that moment; hovering over a point reveals the table name.
 

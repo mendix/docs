@@ -39,17 +39,17 @@ You can use either constants or a microflow to set the service URL and proxy set
 
 #### Service URL {#service-url}
 
-The **Service URL** displays a constant that specifies the URL of the service endpoint:
+The **Service URL** displays a constant that specifies the URL of the service endpoint. 
 
-- Click **Select** to choose another [constant](/refguide/constants/).
-- Click **Show** to open the **Constant** dialog box and view the service URL or endpoint.
+- In the **Service URL** field, click **Select** to choose another [constant](/refguide/constants/).
+- Choose a constant or click **New** to create a new one. Then, click **Show** to open the **Constant** dialog box and view the service URL or endpoint.
 
 #### Connection microflow
 
 The **Connection microflow** displays the microflow that the app uses to retrieve the service URL, proxy settings and headers. See the [Connection and Headers Microflow](#connection-and-headers-microflow) section below for details about how to create such a microflow.
 
 - Click **Select** to choose another microflow.
-- Click **Show** to navigate to the microflow.
+- Click **Show** to open the microflow.
 
 ### Configuration for Studio Pro 11.12 and below
 
@@ -63,11 +63,11 @@ For more information, see the [Connection and Headers Microflow](#connection-and
 
 ### Proxy Configuration
 
-**Proxy configuration** allows you to configure a proxy for the request:
+**Proxy configuration** allows you to configure a proxy for the request. There are three options for configuration:
 
-- **Follow app settings** – use settings which are defined at the app level (default).
-- **Override app settings** – override the app-level settings for this action by specifying constants for the host, port, user name, and password for the proxy.
-- **No proxy** – do not use a proxy for this service, even if there is a proxy configured at the app level.
+- **Follow app settings** – Use settings which are defined at the app level (default)
+- **Override app settings** – Override the app-level settings for this action by specifying constants for the host, port, user name, and password for the proxy
+- **No proxy** – Do not use a proxy for this service, even if there is a proxy configured at the app level
 
 {{< figure src="/attachments/refguide/modeling/integration/odata-services/consumed-odata-service/proxy.png" alt="Connection Tab" width="650" class="no-border" >}}
 

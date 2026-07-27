@@ -4,7 +4,7 @@ url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-deep-link
 weight: 40
 description: "How to implement deep linking in your PWA Wrapper app to enable inbound and outbound URL handling."
 aliases:
-  - /refguide/mobile/pwa-wrapper/pwa-wrapper-deep-linking/
+    - /refguide/mobile/pwa-wrapper/pwa-wrapper-deep-linking/
 ---
 
 ## Introduction

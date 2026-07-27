@@ -4,7 +4,7 @@ url: /refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-securit
 weight: 50
 description: "Describes the network access and local filesystem scanning behavior of PWA Wrapper for security and IT reviewers."
 aliases:
-	- /refguide10/mobile/pwa-wrapper/pwa-wrapper-security/
+    - /refguide10/mobile/pwa-wrapper/pwa-wrapper-security/
 ---
 
 ## Introduction

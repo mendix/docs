@@ -458,7 +458,7 @@ Compared to gp2, gp3 provides higher baseline storage performance and does not r
 For details on DB storage size for various plans, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
 {{% /alert %}}
 
-### Average Database Bloat Ratio{#Trends-dbmxdatabaseavgbloatratio}
+### Average Database Bloat Ratio{#Trends-dbavgbloatratio}
 
 The **Average Database Bloat Ratio** graph shows the percentage of database rows across all user tables that are dead but not yet reclaimed by autovacuum. Dead rows accumulate when PostgreSQL updates or deletes data because the previous version of each affected row is kept until autovacuum removes it.
 
@@ -472,7 +472,7 @@ The value is calculated as the sum of dead rows divided by the sum of live plus 
 
 Interpret this graph together with the [Database Transactions and Mutations](#Trends-dbpgstatdatabaseVERSIONmain) and [Database Disk Usage](#Trends-dbdfabs) graphs; heavy update or delete traffic combined with rising bloat is a strong signal that reclaim is falling behind.
 
-### Maximum Table Bloat Ratio{#Trends-dbmxdatabasemaxtablebloatratio}
+### Maximum Table Bloat Ratio{#Trends-dbmaxtablebloatratio}
 
 The **Maximum Table Bloat Ratio** graph shows the bloat percentage of the single most bloated table in the database at each point in time. It is split into two series so that Mendix system tables and application tables can be diagnosed independently:
 
@@ -491,7 +491,7 @@ Only tables larger than 16 MiB are considered, so trivially small tables whose b
 
 A sustained high value on the **non_system** series usually points to a specific application table with a heavy update or delete workload. A sustained high value on the **system** series is unusual and typically means Mendix Runtime background tasks (for example, session or scheduled-event tables) are churning faster than autovacuum can reclaim.
 
-### Largest Table Size{#Trends-dbmxdatabaselargesttablesize}
+### Largest Table Size{#Trends-dblargesttablesize}
 
 The **Largest Table Size** graph shows the size, in bytes, of the single largest table in the database at each point in time.
 

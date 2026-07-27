@@ -16,7 +16,7 @@ Deep linking enables users to jump directly to specific content in your app via 
 
 This guide covers both flows.
 
-## Part 1: Outbound — Opening URLs and Deep Links
+## Part 1: Outbound – Opening URLs and Deep Links
 
 Use the **OpenDeepLink** JavaScript action to open external URLs or deep links from your nanoflows:
 
@@ -28,13 +28,13 @@ OpenDeepLink(url: string): Promise<boolean>
 
 Behavior works as follows:
 
-* **iOS and Android** — This returns `true` or `false` based on success, and catches errors and returns `false` on failure.
+* **iOS and Android** – This returns `true` or `false` based on success, and catches errors and returns `false` on failure.
 
 ### Important Caveat
 
 On both Android and iOS, the result of `OpenDeepLink` (true/false) indicates only that the call succeeded—not whether the target app could actually handle the link. Always test with the actual target apps you expect to open.
 
-## Part 2: Inbound — Registering Deep Link Schemes and Hosts
+## Part 2: Inbound – Registering Deep Link Schemes and Hosts
 
 Configure deep link schemes and hosts in the PWA Wrapper Builder during the app info step. The builder includes a **Deep Link editor** where you define which schemes and hosts your app should respond to.
 

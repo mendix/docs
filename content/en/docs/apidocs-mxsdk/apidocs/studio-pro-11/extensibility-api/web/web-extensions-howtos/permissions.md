@@ -90,6 +90,7 @@ export const component: IComponent = {
     }
 };
 ```
+
 The `permissionsChanged` event fires for all extensions whenever any permission is granted or revoked anywhere in the system, not just for your extension. This means multiple extensions may respond to the same event simultaneously.
 
 To check if a change affects your extension, compare the old granted state against the new one for each permission name your extension declared. Without this check, your extension fires a notification every time any permission changes, including changes unrelated to your extension.

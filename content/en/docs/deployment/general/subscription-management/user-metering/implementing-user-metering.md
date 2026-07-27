@@ -119,7 +119,6 @@ The improved user metering capabilities are introduced in Mendix 11. These capab
 | Multi-app user identification | `system.user.name` | `system.user.name` or `NamedUserIdentifier` in User Commons v2.2.0 and above |
 | SCIM-based user deactivation | SCIM v3.0.0 and above | SCIM v4.0.0 and above |
 
-
 ## Domain Model Entities {#domain-model-entities}
 
 This section explains the entities and their attributes in your application domain model that are relevant for user metering.

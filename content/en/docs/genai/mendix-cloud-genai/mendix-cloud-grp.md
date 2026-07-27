@@ -77,6 +77,7 @@ For example, if you allocate 50 Cloud Tokens per month, your resource receives 5
 | Claude Opus 4.6 | 179.07 | 895.35 |
 | Claude Opus 4.7 | 179.07 | 895.35 |
 | Claude Opus 4.8 | 179.07 | 895.35 |
+| Claude Opus 5 | 179.07 | 895.35 |
 | Cohere Embed V3 English | 30.23 | — |
 | Cohere Embed V3 Multilingual | 30.23 | — |
 | Cohere Embed V4 | 30.23 | — |

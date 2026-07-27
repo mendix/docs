@@ -42,13 +42,13 @@ Configure deep link schemes and hosts in the PWA Wrapper Builder during the app 
 
 Each deep link entry requires the following:
 
-* **scheme** (required) — For example `myapp`, `pwa`, or `https`/`http` for universal/app links
-* **host** (required) — Domain or authority to match, for example `example.com`
+* **scheme** (required) – For example `myapp`, `pwa`, or `https`/`http` for universal/app links
+* **host** (required) – Domain or authority to match, for example `example.com`
 * **path** fields (optional, pick one at most):
-  * **path** — Exact path to match (for example `/profile`)
-  * **pathStartWith** — Path prefix to match (for example `/jump` catches `/jump/profile`)
-* **linkFeature** — Free-text label (metadata only, affects HarmonyOS builds)
-* **platform** — `Android`, `iOS`, `HarmonyOS`, `all`, or unset (unset or `all` applies to every platform)
+  * **path** – Exact path to match (for example `/profile`)
+  * **pathStartWith** – Path prefix to match (for example `/jump` catches `/jump/profile`)
+* **linkFeature** – Free-text label (metadata only, affects HarmonyOS builds)
+* **platform** – `Android`, `iOS`, `HarmonyOS`, `all`, or unset (unset or `all` applies to every platform)
 
 ### Common Deep Link Patterns
 
@@ -133,8 +133,8 @@ The `appID` format is `TEAM_ID.BUNDLE_ID`. The `paths` array should match the pa
 
 The `.well-known` directory must be accessible at the root of your domain via `https`. The two typical approaches are:
 
-* Mendix Cloud — Upload the verification files to your Mendix Cloud environment's static file directory. Refer to [Mendix Cloud documentation](/developerportal/deploy/) for details on serving static files, or contact Mendix Support.
-* Custom Domain or External Hosting — If your Mendix app is behind a reverse proxy or hosted on a custom domain, ensure the `.well-known` directory is properly configured to serve these files at the domain root.
+* Mendix Cloud – Upload the verification files to your Mendix Cloud environment's static file directory. Refer to [Mendix Cloud documentation](/developerportal/deploy/) for details on serving static files, or contact Mendix Support.
+* Custom Domain or External Hosting – If your Mendix app is behind a reverse proxy or hosted on a custom domain, ensure the `.well-known` directory is properly configured to serve these files at the domain root.
 
 ### Testing File Accessibility
 
@@ -162,10 +162,10 @@ One implication of deep links is that your Mendix app's routing (pages, deep-lin
 
 When employing deep linking, watch out for the following pitfalls:
 
-* Missing verification files — Forgetting to create and host `assetlinks.json` (Android) or `apple-app-site-association` (iOS) for `https` scheme links is the most common integration failure.
-* Using https without domain ownership — `https` scheme links require that you own and control the domain; do not use `https` for domains you do not own.
-* Misinterpreting the `OpenDeepLink` return value — The Boolean result only indicates the call succeeded, not whether the target app successfully opened or handled the link.
-* Mismatched path configuration — Ensure your `path` and `pathStartWith` values match the actual Mendix page URLs or `deep-link` microflow entry points your app exposes.
+* Missing verification files – Forgetting to create and host `assetlinks.json` (Android) or `apple-app-site-association` (iOS) for `https` scheme links is the most common integration failure.
+* Using https without domain ownership – `https` scheme links require that you own and control the domain; do not use `https` for domains you do not own.
+* Misinterpreting the `OpenDeepLink` return value – The Boolean result only indicates the call succeeded, not whether the target app successfully opened or handled the link.
+* Mismatched path configuration – Ensure your `path` and `pathStartWith` values match the actual Mendix page URLs or `deep-link` microflow entry points your app exposes.
 
 ## Read More
 

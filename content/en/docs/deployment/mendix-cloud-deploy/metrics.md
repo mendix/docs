@@ -310,7 +310,7 @@ Rollbacks appearing during normal operation indicate a problem and should be inv
 The **Connections to the database** graph shows the number of connections to the PostgreSQL server.
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-connections-no.png" >}}
@@ -324,7 +324,7 @@ The standard configuration sets a maximum of 50 connections per instance. You ca
 The **Database memory** graph shows the distribution of operating system memory, in gibibytes, that is available for this server.
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-memory.png" >}}
@@ -348,7 +348,7 @@ The **CPU Utilization of the database** graph shows the amount of CPU usage over
 This graph is normalized so that 100% is the full capacity of the database node. This is the figure reported by the database node itself. So, however many CPUs the database node has, the graph will peak at 100%.
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-cpu-usage.png" >}}
@@ -358,7 +358,7 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 The **Database throughput** graph shows the amount of data that is being read from and written to disk.
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-throughput.png" >}}
@@ -373,7 +373,7 @@ The **Database disk usage** graph displays used storage (the absolute amount of 
 The value for used storage also includes space that is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2 gibibytes.
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-disk-usage.png" >}}
@@ -383,7 +383,7 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 The **Database IOPS** graph, also called the database input/output operations per second graph, shows the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-iops.png" >}}
@@ -400,7 +400,7 @@ There are two sets of values:
 The **Database IO latency** graph shows the average waiting times, in seconds, for disk operations to complete.
 
 {{% alert color="info" %}}
-You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-io-latency.png" >}}
@@ -421,7 +421,7 @@ Burst balance metrics are not available for databases with the gp3 storage insta
 {{% /alert %}}
 
 {{% alert color="info" %}}
-You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as a percentage; 100% means that the volume has accumulated the maximum number of credits.
@@ -460,21 +460,21 @@ For details on DB storage size for various plans, see [Cloud Resource Packs](/de
 
 ### Average Database Bloat Ratio{#Trends-dbavgbloatratio}
 
-The **Average Database Bloat Ratio** graph shows the percentage of database rows across all user tables that are dead but not yet reclaimed by autovacuum. Dead rows accumulate when PostgreSQL updates or deletes data because the previous version of each affected row is kept until autovacuum removes it.
+The **Average Database Bloat Ratio** graph shows the percentage of database rows across all user tables that are dead but not yet reclaimed by autovacuum. Dead rows accumulate when PostgreSQL updates or deletes data, because the previous version of each affected row is retained until autovacuum removes it.
 
 {{% alert color="info" %}}
-You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-avg-bloat-ratio.png" alt="Average Database Bloat Ratio graph" >}}
 
-The value is calculated as the sum of dead rows divided by the sum of live plus dead rows across all user tables, expressed as a percentage. A small amount of bloat is normal on any active database; consistently high values across the database indicate that autovacuum is not keeping up with the mutation load.
+The value is calculated by dividing the sum of dead rows by the sum of live and dead rows across all user tables, expressed as a percentage. A small amount of bloat is normal in an active database, but consistently high values indicate that autovacuum is not keeping up with the mutation load.
 
-Interpret this graph together with the [Database Transactions and Mutations](#Trends-dbpgstatdatabaseVERSIONmain) and [Database Disk Usage](#Trends-dbdfabs) graphs; heavy update or delete traffic combined with rising bloat is a strong signal that reclaim is falling behind.
+Interpret this graph together with the [Database Transactions and Mutations](#Trends-dbpgstatdatabaseVERSIONmain) and [Database Disk Usage](#Trends-dbdfabs) graphs. Heavy update or delete traffic combined with rising bloat is a strong indicator that reclaim is falling behind.
 
 ### Maximum Table Bloat Ratio{#Trends-dbmaxtablebloatratio}
 
-The **Maximum Table Bloat Ratio** graph shows the bloat percentage of the single most bloated table in the database at each point in time. It is split into two series so that Mendix system tables and application tables can be diagnosed independently:
+The **Maximum Table Bloat Ratio** graph shows the bloat percentage of the most bloated table in the database over time. The graph is split into two series, allowing Mendix system tables and application tables to be diagnosed independently:
 
 | Series         | Explanation                                                                                                                              |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -482,28 +482,28 @@ The **Maximum Table Bloat Ratio** graph shows the bloat percentage of the single
 | **non_system** | The most bloated application table. These are the tables that back your domain model entities.                                           |
 
 {{% alert color="info" %}}
-You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-max-table-bloat-ratio.png" alt="Maximum Table Bloat Ratio graph" >}}
 
-Only tables larger than 16 MiB are considered, so trivially small tables whose bloat ratio would otherwise appear high are excluded. Each data point is labeled with the name of the specific table that produced the maximum for that time window; hovering over a point reveals the table name.
+Only tables larger than 16 MiB are included. This excludes trivially small tables, whose bloat ratios can appear disproportionately high. Each data point is labeled with the name of the table that had the maximum bloat ratio during that time window. Hover over a data point to see the table name.
 
-A sustained high value on the **non_system** series usually points to a specific application table with a heavy update or delete workload. A sustained high value on the **system** series is unusual and typically means Mendix Runtime background tasks (for example, session or scheduled-event tables) are churning faster than autovacuum can reclaim.
+A consistently high value in the **non_system** series typically indicates an application table with a heavy update or delete workload. A consistently high value in the **system** series is unusual and usually indicates that Mendix Runtime background tasks (such as session or scheduled events) are generating changes faster than autovacuum can reclaim them.
 
 ### Largest Table Size{#Trends-dblargesttablesize}
 
 The **Largest Table Size** graph shows the size, in bytes, of the single largest table in the database at each point in time.
 
 {{% alert color="info" %}}
-You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.
 {{% /alert %}}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-largest-table-size.png" alt="Largest Table Size graph" >}}
 
-The size includes both the table's data and its indexes and TOAST storage. Each data point is labeled with the name of the table that was largest at that moment; hovering over a point reveals the table name.
+The size includes the table's data, indexes, and TOAST storage. Each data point is labeled with the name of the table that was largest during that time window. Hover over a data point to see the table name.
 
-If the largest table changes over the period being viewed, the graph is still a single continuous line, but the tooltip on individual points reveals which table it was at that moment. A steadily growing largest-table value combined with a rising [Database Disk Usage](#Trends-dbdfabs) is a common signal that a specific table needs archiving, partitioning, or a data retention review.
+If the largest table changes over the period being viewed, the graph remains a single continuous line, but the tooltip for each data point identifies which table was the largest at that moment. A steadily growing largest-table value, combined with rising [Database Disk Usage](#Trends-dbdfabs) is a common indicator that a table may benefit from archiving, partitioning, or a review of its data retention policy.
 
 ## Read More
 

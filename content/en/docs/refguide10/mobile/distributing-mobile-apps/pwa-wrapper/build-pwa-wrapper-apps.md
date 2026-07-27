@@ -34,11 +34,11 @@ To generate an Android APK, do the following:
     * supported devices
     * screen orientation
 
-    {{< figure src="/attachments/refguide/mobile/pwa-wrapper/app-information.png" alt="Android app information step in the PWA Wrapper builder" max-width="500px" >}}
+    {{< figure src="/attachments/refguide10/mobile/pwa-wrapper/app-information.png" alt="Android app information step in the PWA Wrapper builder" max-width="500px" >}}
 
 3. Review the available permissions and enable only the permissions related to the capabilities your app uses. For capability-to-permission guidance, see [Capability to Permission Mapping](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/#capability-to-permission-mapping).
 
-    {{< figure src="/attachments/refguide/mobile/pwa-wrapper/permissions.png" alt="Permissions step in the PWA Wrapper builder" max-width="500px" >}}
+    {{< figure src="/attachments/refguide10/mobile/pwa-wrapper/permissions.png" alt="Permissions step in the PWA Wrapper builder" max-width="500px" >}}
 
 4. Go to the signing step and do one of the following:
 
@@ -46,7 +46,7 @@ To generate an Android APK, do the following:
     * create a new signing configuration if this is the first Android build for the app; for platform-specific details, see [Sign Android Apps on Windows and macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-android-apps-on-windows-and-macos)
 5. Continue to the packaging step and click **Generate Package**.
 
-    {{< figure src="/attachments/refguide/mobile/pwa-wrapper/package-android-app.png" alt="Packaging step for building an Android APK with PWA Wrapper" max-width="500px" >}}
+    {{< figure src="/attachments/refguide10/mobile/pwa-wrapper/package-android-app.png" alt="Packaging step for building an Android APK with PWA Wrapper" max-width="500px" >}}
 
 6. Wait for the build to complete.
 7. Open the output directory from the builder.

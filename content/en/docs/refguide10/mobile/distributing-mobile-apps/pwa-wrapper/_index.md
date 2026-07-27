@@ -28,6 +28,9 @@ This PWA Wrapper documentation section includes the following topics:
 * Signing reference: [Sign PWA Wrapper Apps](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/) explains the signing step in the build flow
 * Capabilities guide: [PWA Wrapper Capabilities](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
 * Limitations: [PWA Wrapper Limitations](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-limitations/)
+* Deep linking guide: [PWA Wrapper Deep Linking](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-deep-linking/) explains how to handle inbound and outbound deep links
+* Security and network access reference: [PWA Wrapper Security and Network Access](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-security/) describes what the extension downloads, what local paths it scans, and which binaries it bundles
+* Troubleshooting: [Troubleshoot PWA Wrapper](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-troubleshooting/) lists known issues and solutions
 
 ## Typical Use Cases
 
@@ -49,7 +52,7 @@ The standard workflow is as follows:
 
 ## Limitations
 
-Keep the following beta limitations in mind:
+Keep the following limitations in mind:
 
 * Some capabilities depend on physical device hardware and cannot be validated reliably on simulators or emulators
 * Platform support varies for individual capabilities, so not every capability behaves the same way on Android and iOS

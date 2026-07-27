@@ -1,7 +1,7 @@
 ---
 title: "PWA Wrapper: Push Notification Setup"
 linktitle: "PWA Wrapper Push Setup"
-url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-pwa-wrapper/
+url: /refguide10/mobile/using-mobile-capabilities/push-notifications/notif-pwa-wrapper/
 weight: 75
 description: "How to configure push notification prerequisites when your progressive web app is packaged with PWA Wrapper."
 ---
@@ -16,7 +16,7 @@ In a wrapped PWA, push notifications are handled natively through the device's o
 
 Before starting this guide, make sure you have completed the following:
 
-* [Install PWA Wrapper](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/)
+* [Install PWA Wrapper](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/install-pwa-wrapper/)
 * Have a Firebase account (https://firebase.google.com)
 
 ## Setting Up Firebase and PWA Wrapper
@@ -25,7 +25,7 @@ Follow these steps to configure Firebase and integrate it with PWA Wrapper:
 
 ### Step 1: Create and Configure Firebase Project
 
-1. Follow the steps in [Setting Up the Google Firebase Cloud Messaging Server](/refguide/mobile/using-mobile-capabilities/push-notifications/setting-up-google-firebase-cloud-messaging-server/) to create a Firebase project and set up a service account.
+1. Follow the steps in [Setting Up the Google Firebase Cloud Messaging Server](/refguide10/mobile/using-mobile-capabilities/push-notifications/setting-up-google-firebase-cloud-messaging-server/) to create a Firebase project and set up a service account.
 2. In Firebase, add your Android and iOS apps to the project by following the same guide.
 3. Download and securely store the configuration files:
    * For Android: `google-services.json`
@@ -41,7 +41,7 @@ When building your wrapped app with PWA Wrapper, enable push notification infras
 1. Upload the appropriate Firebase configuration file:
    * For Android: select and upload `google-services.json`
    * For iOS: select and upload `GoogleService-Info.plist`
-1. Complete the remaining builder steps as described in [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
+1. Complete the remaining builder steps as described in [Build PWA Wrapper Apps](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 This configures the native layer to receive push notifications from Firebase Cloud Messaging (FCM).
 {{% alert color="warning" %}}
@@ -53,7 +53,7 @@ Add the Push Notifications Connector module to your app:
 
 1. In Mendix Studio Pro, download the [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) from the Marketplace.
 1. Add it to your app following the standard module import process.
-1. Complete the steps in [Adding Module Dependencies](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-add-module-depends/) and [Implementing the Push Notifications Module](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-module/).
+1. Complete the steps in [Adding Module Dependencies](/refguide10/mobile/using-mobile-capabilities/push-notifications/notif-add-module-depends/) and [Implementing the Push Notifications Module](/refguide10/mobile/using-mobile-capabilities/push-notifications/notif-implement-module/).
 
 ## Implementing Push Notification Registration
 
@@ -117,7 +117,7 @@ Add three **Call JavaScript Action** activities to retrieve device details:
 
 The complete nanoflow flow is shown below:
 
-{{< figure src="/attachments/refguide/mobile/push-notifications/notif-pwa-wrapper/pwa-wrapper-push-nanoflow.png" alt="Push notification registration nanoflow for PWA Wrapper" max-width="80%" >}}
+{{< figure src="/attachments/refguide10/mobile/push-notifications/notif-pwa-wrapper/pwa-wrapper-push-nanoflow.png" alt="Push notification registration nanoflow for PWA Wrapper" max-width="80%" >}}
 
 {{% alert color="info" %}}
 The nanoflow requests the `notifications` permission, retrieves the device token and unique ID, and registers the device in the Push Notifications Connector database. This allows the runtime to send push notifications to this device.
@@ -205,15 +205,15 @@ This ensures that every time the page loads — which happens when the app opens
 
 After you have built and deployed your wrapped app with device registrations in place, use the standard Push Notifications Connector workflow to send notifications:
 
-1. Follow [Configuring Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-config-push/) to configure Firebase credentials in your app's administration page.
-2. Use [Sending Your First Test Push Notification](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/) to test sending a notification to a registered device.
+1. Follow [Configuring Push Notifications](/refguide10/mobile/using-mobile-capabilities/push-notifications/notif-config-push/) to configure Firebase credentials in your app's administration page.
+2. Use [Sending Your First Test Push Notification](/refguide10/mobile/using-mobile-capabilities/push-notifications/notif-send-test/) to test sending a notification to a registered device.
 
 When testing, verify behavior on physical Android and iOS devices to ensure notifications are received correctly.
 
 ## Read More
 
-* [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/)
-* [PWA Wrapper](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/)
-* [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
-* [PWA Wrapper Limitations](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-limitations/)
-* [PWA Wrapper Deep Linking](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-deep-linking/)
+* [Push Notifications](/refguide10/mobile/using-mobile-capabilities/push-notifications/)
+* [PWA Wrapper](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/)
+* [PWA Wrapper Capabilities](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
+* [PWA Wrapper Limitations](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-limitations/)
+* [PWA Wrapper Deep Linking](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-deep-linking/)

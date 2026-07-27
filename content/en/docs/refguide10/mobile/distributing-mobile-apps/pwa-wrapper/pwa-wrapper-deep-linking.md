@@ -1,10 +1,10 @@
 ---
 title: "PWA Wrapper Deep Linking"
-url: /refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-deep-linking/
+url: /refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-deep-linking/
 weight: 40
 description: "How to implement deep linking in your PWA Wrapper app to enable inbound and outbound URL handling."
 aliases:
-  - /refguide/mobile/pwa-wrapper/pwa-wrapper-deep-linking/
+  - /refguide10/mobile/pwa-wrapper/pwa-wrapper-deep-linking/
 ---
 
 ## Introduction
@@ -169,6 +169,6 @@ When employing deep linking, watch out for the following pitfalls:
 
 ## Read More
 
-* [PWA Wrapper](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/)
-* [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
-* [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)
+* [PWA Wrapper](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/)
+* [PWA Wrapper Capabilities](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
+* [Build PWA Wrapper Apps](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)

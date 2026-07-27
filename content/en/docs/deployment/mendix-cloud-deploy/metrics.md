@@ -493,7 +493,7 @@ A consistently high value in the **non_system** series typically indicates an ap
 
 ### Largest Table Size{#Trends-dblargesttablesize}
 
-The **Largest Table Size** graph shows the size, in bytes, of the single largest table in the database at each point in time.
+The **Largest Table Size** graph shows the size of the single largest table in the database at each point in time.
 
 {{% alert color="info" %}}
 This graph is unavailable with the [Basic License](/developerportal/deploy/basic-package/) because it requires a dedicated database. Basic License uses a private schema on a shared database server.

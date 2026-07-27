@@ -263,6 +263,10 @@ For native and hybrid apps built with Mendix, the following operating system ver
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
 
+{{% alert color="warning" %}}
+If a new iOS or Android version is released less than 3 months before your Mendix version reaches end of native mobile support, that OS version is not covered for your native mobile app. To support the new OS version, you must upgrade to a newer Mendix version. See [Native Mobile Support Guidelines](/releasenotes/mobile/native-support/) for details.
+{{% /alert %}}
+
 You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
 Mendix recommends the following minimum hardware requirements for all mobile devices running native and hybrid Mendix apps:

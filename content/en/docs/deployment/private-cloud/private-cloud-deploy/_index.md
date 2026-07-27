@@ -40,7 +40,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first [create your app](/developerportal/#create-app), it will be set to deploy to Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image2.png" class="no-border" >}}
 
@@ -62,7 +62,7 @@ Deployment package creation for Mendix versions 7 and below is no longer support
 The deployment package created with Java 17/21 support requires the Mendix Operator to be in version 2.15.0 or above.
 {{% /alert %}}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page and click **Create Deployment Package**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image9.png" class="no-border" >}}
@@ -93,7 +93,7 @@ Alternatively, you can upload an existing MDA by clicking **Upload**.
 
 ### Creating an Environment{#create-environment}
 
-When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Apps](https://sprintr.home.mendix.com/) will show you the current status.
+When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Projects](https://projects.home.mendix.com/) will show you the current status.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image5.png" class="no-border" >}}
 
@@ -210,9 +210,15 @@ You can deploy the deployment package of your app by doing the following:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image16.png" class="no-border" >}}
 
-8. Click Apply Changes to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
+8. Review the deployment details in the **Review and apply changes to the cluster** dialog. The deployment summary displays the target environment, package name, package version, and status. You can click **View Summary** to see detailed information about the changes included in this release, or click **Back** to make modifications.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/ApplyChangesPage.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/ApplyChangesPage.png" alt="Review and apply changes dialog showing deployment summary with View Summary button" class="no-border" >}}
+
+9. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
+
+10. Optional: Click **View Summary** to see the enhanced deployment package summary, which provides clearer visibility into the changes included in the release.
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/DeploymentPackageSummary.png" alt="Enhanced deployment package summary with detailed change information" class="no-border" >}}
 
 You can find a description of what this deployment means within the Kubernetes cluster in [How the Operator Deploys Your App](#how-operator-deploys), below.
 
@@ -220,7 +226,7 @@ You will be taken to the Environment Details page for the selected environment. 
 
 ## Environments Page
 
-After opening your app in [Apps](https://sprintr.home.mendix.com/), you can find the **Environments** page, which contains three sections:
+After opening your app in [Projects](https://projects.home.mendix.com/), you can find the **Environments** page, which contains three sections:
 
 * Deployment Package Repository
 * Environments
@@ -292,6 +298,10 @@ This deploys the package to an existing environment as described in [Deploying t
 This section shows all the environments created for this app.
 
 For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment.
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/EnvironmentOverview.png" alt="Environments Overview showing environment details with build status and package information" class="no-border" >}}
+
+The environment card displays key information including environment ID, namespace, environment purpose, resource status indicators (Network, Storage, Database, Service Account), build status with replica information, and package details (name, version, URL, and Mendix version).
 
 You can perform the following actions:
 

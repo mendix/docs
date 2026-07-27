@@ -96,7 +96,7 @@ To add an **Event sub-process** to a workflow, follow these steps:
 You can change the type of an existing sub-process start event using the context menu without having to delete and re-add it. To do this:
 
 1. Right-click the sub-process start event to open its context menu.
-2. Click **Change event**.
+2. Click **Change type**.
 3. Select one of the available options:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/context-menu-change-event.png" alt="Changing sub-process start event type through context menu" width="450" >}}

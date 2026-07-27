@@ -42,6 +42,28 @@ For each revision the following information is shown, more information about eac
 
 By selecting a revision in this grid, the tabs below the grid will be filled with information about this revision.
 
+#### Actions 
+
+You can trigger the following actions by right-clicking a revision: 
+
+{{< figure src="C:\Users\SanayaVaze\docsfinal\docs\static\attachments\refguide\modeling\menus\version-control-menu\history-dialog\history-pane-actions.png" alt="History pane actions" class="no-border" >}}
+
+* Copy / Copy Full Hash:
+
+    * This allows you to copy the value in any cell across all columns in the history pane. For the **Revision** column specifically, you can choose **Copy** to copy the first seven characters of the revision hash, or **Copy Full Hash** to copy the entire hash value.
+
+* Compare to Current State: 
+
+    * This enables the comparison of the selected revision with your current working state. For more information, see [Comparing Revisions](#comparing-revisions).
+
+* Revert:
+
+    * This allows you to undo changes from a specific revision by rolling back to a previous state. For more information, see [Reverting Changes](/refguide/reverting-changes/).
+
+* Create Branch:
+
+    * This allows you to create a new branch line from the selected revision, enabling parallel development. For more information, see [Creating a New Branch](/refguide/managing-branches/#new-feature).
+
 ### Comparing Revisions
 
 Revisions can be compared in the following ways:

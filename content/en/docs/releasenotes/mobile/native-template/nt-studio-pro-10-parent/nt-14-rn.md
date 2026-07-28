@@ -11,7 +11,7 @@ description: "Native Template 14"
 
 ### Improvements
 
-* We updated mendix-native to address an issue on iOS, where a iOS-system dialogue would pop up during app startup, requesting a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
+* We updated `mendix-native` to address an issue on iOS where a iOS-system dialog would pop up during app startup, requesting a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
 
 ## 14.1.19
 

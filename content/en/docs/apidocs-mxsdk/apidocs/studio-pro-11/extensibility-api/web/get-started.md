@@ -24,7 +24,7 @@ Extensions can be built on any operating system, as the underlying framework is 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Extension development is only possible by enabling the [Extension Development](/refguide/preferences-dialog/#extension-development) setting in your app's Preferences, or by starting Studio Pro with the `--enable-extension-development` feature flag.
+Extension development is possible by enabling the [Extension Development](/refguide/preferences-dialog/#extension-development) setting in your app's Preferences, or by starting Studio Pro with the `--enable-extension-development` feature flag.
 {{% /alert %}}
 
 ## Creating Your First Extension
@@ -33,7 +33,11 @@ This section shows you how to build and test an extension.
 
 ### Create a Test App
 
-Create a new app using the **Blank Web App** template.
+Create a new app using the **Blank Web App** template. 
+
+{{% alert color="info" %}}
+This template supports version 10.24.0 or later and version 11.12.0(LTS) or later.
+{{% /alert %}}
 
 You can also open the app directory containing the app `.mpr` file by clicking **App** > **Show App Directory in Explorer** (or **Show App Directory in Finder**) in Studio Pro.
 
@@ -52,13 +56,13 @@ The generator asks the following questions:
 * Select the programming language (TypeScript is used in the tutorials)
 * Specify the extension name
 * Choose if you will use React for the extension’s UI
+* Select the Studio Pro version you are targeting. Mendix recommends choosing version 11.
   
-The next two questions are optional but highly recommended, as they enable direct debugging and deployment from Visual Studio Code:
+The next two questions are optional but highly recommended, as they enable direct debugging and deployment from Visual Studio Code(Windows only):
 
 * Specify the path to the Studio Pro executable (this allows Visual Studio Code to automatically attach to Studio Pro for debugging)
 * Specify the location of the app `.mpr` package (this allows automatic deployment of your extension build to your app)
-
- The last question allows you to select the Studio Pro version you are targeting. Mendix recommends choosing version 11.
+* Choose whether to enable build-time execution (headless mode for mxbuild). This allows the extension's code to run during mxbuild (Mendix's headless/CI build tool) — so the extension can execute at build time without Studio Pro's UI being open.
 
 {{% alert color="info" %}}
 On a Windows machine, the Studio Pro executable is typically located at `C:\Program Files\Mendix\<version>\modeler\studiopro.exe`. To find the exact path, follow these steps:

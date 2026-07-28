@@ -52,7 +52,7 @@ In development and project management contexts, use "project" instead of "app" w
 
 ## app owner
 
-This is not a formal Mendix term, so do not assume users know what it means. Define it in general terms and make clear through context that each team must define and interpret "app owner" for their own app. For an example, see the *Copyright* section in the [Insights Hub module documentation](/partners/siemens/mindsphere-module-details/#configuring-the-os-bar).
+This is not a formalized/Mendix term, so we cannot assume the user knows what this is. This should be defined in general terms and made clearer via context (for example, via the "Copyright" example in the [Insights Hub module documentation](/appstore/industry/mindsphere/mindsphere-module-details/#configuring-the-os-bar)) that it is the user's responsibility to define and interpret what an app owner is for their app.
 
 ## article, document, page
 

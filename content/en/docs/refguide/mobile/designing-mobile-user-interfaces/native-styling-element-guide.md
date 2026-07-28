@@ -376,7 +376,6 @@ The default class to style all text areas is named `TextArea`.
 
 A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
-
 ```javascript
 export const DropDown = {
   container: {

@@ -5,6 +5,22 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.20
+
+**Release date: July 27, 2026**
+
+### Improvements
+
+* We updated `mendix-native` to address an issue on iOS where a iOS-system dialog would pop up during app startup, requesting a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
+
+## 14.1.19
+
+**Release date: July 21, 2026**
+
+### Improvements
+
+* We properly integrated Firebase BoM logic, fixing a build failure where `com.google.firebase:firebase-analytics` could not be resolved when **Push Notifications** or **Crashlytics** were enabled.
+
 ## 14.1.18
 
 **Release date: June 10, 2026**

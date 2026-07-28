@@ -102,7 +102,7 @@ After you confirm the change:
 
 * The boundary event is re-created with the specified interrupting behavior. The new boundary event will be scheduled after the workflow is redeployed and becomes in progress.
 * The workflow will become incompatible if the changed boundary event has already been executed. The workflow becomes incompatible for the following reasons:
-    * If the changed boundary event was non-interrupting, you will get the [Non-interrupting Boundary Event Path Removed](/refguide/workflow-versioning/#non-interrupting-boundary-event-path-removed) conflict.
+    * If the changed boundary event was non-interrupting, you will get the [Non-interrupting Boundary Event Path Removed](/refguide/workflow-versioning/#concurrent-path-removed) conflict.
     * If the changed boundary event was interrupting, you will get the [Current Activity Removed](/refguide/workflow-versioning/#current-activity-removed) conflict.
 
 Boundary events are re-created upon interrupting behavior change because in-place conversion can result in invalid states. An interrupting boundary event must abort its parent activity when triggered, meaning an activity cannot have more than one active interrupting boundary event.

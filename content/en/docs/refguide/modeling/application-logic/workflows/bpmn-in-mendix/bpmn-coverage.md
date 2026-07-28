@@ -86,8 +86,8 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 | Variant | Support Level | How |
 |---|---|---|
 | Start | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Same as None Start – process the message data in a [microflow](/refguide/microflows/), create or populate an object of the entity type that the workflow expects, and start the workflow using the [Call Workflow](/refguide/workflow-call/) activity by passing that [context object](/refguide/workflow-call/#context-object). Alternatively, use the [Call Workflow](/refguide/on-click-event/#call-workflow) page action on a page. |
-| Event Subprocess (Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) |
-| Event Subprocess (Non-Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) |
+| Event Subprocess (Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) |
+| Event Subprocess (Non-Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) |
 | Intermediate Catch | {{< icon name="controls-stop-filled" color="blue" >}} Planned | As Notification Event, use [Wait for Notification](/refguide/wait-for-notification/) activity as an alternative. |
 | Intermediate Boundary (Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | As Interrupting Notification Event. |
 | Intermediate Boundary (Non-Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | As Non-Interrupting Notification Event. |
@@ -99,8 +99,8 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 | Variant | Support Level | How |
 |---|---|---|
 | Start | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [scheduled event](/refguide/scheduled-events/) to run a [microflow](/refguide/microflows/) that starts the workflow using the [Call Workflow](/refguide/workflow-call/) activity. |
-| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | As Interrupting Timer Event Subprocess Start. |
-| Event Subprocess (Non-Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | As Non-Interrupting Timer Event Subprocess Start. |
+| Event Subprocess (Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Interrupting Timer Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) |
+| Event Subprocess (Non-Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Non-Interrupting Timer Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) |
 | Intermediate Catch | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Timer](/refguide/timer/) |
 | Intermediate Boundary (Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Interrupting Timer Event](/refguide/timer/) |
 | Intermediate Boundary (Non-Interrupting) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Non-Interrupting Timer Event](/refguide/timer/) |
@@ -109,17 +109,18 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 
 | Variant | Support Level | How |
 |---|---|---|
-| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) to catch the event, and use a microflow to handle the error logic and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when an error occurs. |
+| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) to catch the event, and use a microflow to handle the error logic and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when an error occurs. |
 | Intermediate Boundary (Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | Use an *Interrupting Notification Event* (Planned) to catch the event, and use a microflow to handle the error logic and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when an error occurs. |
 | End | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the error before the process completes. |
+
 
 ### Signal Events {#signal-events}
 
 | Variant | Support Level | How |
 |---|---|---|
 | Start | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [microflow](/refguide/microflows/) with multiple [Call Workflow](/refguide/workflow-call/) activities to start multiple workflows and deliver the signal to all instances. |
-| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) to catch the event, and use a microflow with multiple [Notify Workflow](/refguide/notify-workflow/) activities to deliver the signal to all waiting instances. |
-| Event Subprocess (Non-Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) to catch the event, and use a microflow with multiple [Notify Workflow](/refguide/notify-workflow/) activities to deliver the signal to all waiting instances. |
+| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) to catch the event, and use a microflow with multiple [Notify Workflow](/refguide/notify-workflow/) activities to deliver the signal to all waiting instances. |
+| Event Subprocess (Non-Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) to catch the event, and use a microflow with multiple [Notify Workflow](/refguide/notify-workflow/) activities to deliver the signal to all waiting instances. |
 | Intermediate Catch | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Wait for Notification](/refguide/wait-for-notification/) activity to catch the event, and use a microflow with multiple [Notify Workflow](/refguide/notify-workflow/) activities to deliver the signal to all waiting instances. |
 | Intermediate Boundary (Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | Use an *Interrupting Notification Event* (Planned) to catch the event, and use a microflow with multiple [Notify Workflow](/refguide/notify-workflow/) activities to deliver the signal to all waiting instances. |
 | Intermediate Boundary (Non-Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | Use a *Non-Interrupting Notification Event* (Planned) to catch the event, and use a microflow with multiple [Notify Workflow](/refguide/notify-workflow/) activities to deliver the signal to all waiting instances. |
@@ -131,31 +132,34 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 | Variant | Support Level | How |
 |---|---|---|
 | Start | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [microflow](/refguide/microflows/) that checks the condition and starts the workflow using the [Call Workflow](/refguide/workflow-call/) activity only when the condition is met. |
-| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) to catch the event, and use a microflow to evaluate or create the condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the condition is met. |
-| Event Subprocess (Non-Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) to catch the event, and use a microflow to evaluate or create the condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the condition is met. |
+| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) to catch the event, and use a microflow to evaluate or create the condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the condition is met. |
+| Event Subprocess (Non-Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) to catch the event, and use a microflow to evaluate or create the condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the condition is met. |
 | Intermediate Catch | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use [Call Microflow](/refguide/call-microflow/) to evaluate the condition and return a result, then use a [Decision](/refguide/decision-in-workflows/) to route the workflow based on that result. |
 | Intermediate Boundary (Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | Use an *Interrupting Notification Event* (Planned) to catch the event, and use a microflow to evaluate or create the condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the condition is met. |
 | Intermediate Boundary (Non-Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | Use a *Non-Interrupting Notification Event* (Planned) to catch the event, and use a microflow to evaluate or create the condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the condition is met. |
+
 
 ### Escalation Events {#escalation-events}
 
 | Variant | Support Level | How |
 |---|---|---|
-| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) to catch the event, and use a microflow to evaluate the escalation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the escalation needs to happen. |
-| Event Subprocess (Non-Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) to catch the event, and use a microflow to evaluate the escalation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the escalation needs to happen. |
+| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) to catch the event, and use a microflow to evaluate the escalation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the escalation needs to happen. |
+| Event Subprocess (Non-Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Non-Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) to catch the event, and use a microflow to evaluate the escalation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the escalation needs to happen. |
 | Intermediate Boundary (Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | Use an *Interrupting Notification Event* (Planned) to catch the event, and use a microflow to evaluate the escalation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the escalation needs to happen. |
 | Intermediate Boundary (Non-Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | Use a *Non-Interrupting Notification Event* (Planned) to catch the event, and use a microflow to evaluate the escalation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the escalation needs to happen. |
 | Intermediate Throw | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the escalation and continue the flow. |
 | End | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the escalation before the process completes. |
 
+
 ### Compensation Events {#compensation-events}
 
 | Variant | Support Level | How |
 |---|---|---|
-| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#triggers-and-notifications) to catch the event, and use a microflow to evaluate the compensation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the compensation needs to happen. |
+| Event Subprocess (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event Subprocess Start](/refguide/workflow-event-sub-processes/#start-event-types) to catch the event, and use a microflow to evaluate the compensation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the compensation needs to happen. |
 | Intermediate Boundary (Interrupting) | {{< icon name="controls-stop-filled" color="blue" >}} Planned | Use an *Interrupting Notification Event* (Planned) to catch the event, and use a microflow to evaluate the compensation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the compensation needs to happen. |
 | Intermediate Throw | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the compensation and redirect the flow to the compensating activity. |
 | End | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the compensation before the process completes. |
+
 
 ### Cancel Events {#cancel-events}
 

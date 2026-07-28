@@ -174,8 +174,8 @@ Each BPMN element is marked with a support level indicator:
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Timer</strong></td>
       <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#timer-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>

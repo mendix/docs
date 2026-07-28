@@ -68,6 +68,8 @@ Git version 2.48.1 is automatically installed during Studio Pro installation. Ho
 
 * [Gradle 8.5](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
 
+* [Mendix Java Migration Tool 1.0.1](https://cdn.mendix.com/mendix-java-migration-tool/jmt-1.0.1.jar)
+
 Depending on the error message you get from the installer, you can choose to install a single prerequisite, or you can install them all.
 
 Then, try installing Studio Pro again.
@@ -105,6 +107,8 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
       * The *MicrosoftEdgeWebview2Setup.exe* does not need to be renamed
    7. Gradle
       * Rename the Gradle zip file to *gradle-8.5-bin.zip*
+   8. Mendix Java Migration Tool (JMT)
+      * Place *jmt-1.0.1.jar* into the **Dependencies** folder without renaming it
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
 If an error occurs during JDK installation, try the following:

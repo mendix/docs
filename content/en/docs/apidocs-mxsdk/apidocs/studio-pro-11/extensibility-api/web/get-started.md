@@ -60,8 +60,8 @@ The generator asks the following questions:
   
 The next two questions are optional but highly recommended, as they enable direct debugging and deployment from Visual Studio Code (Windows only):
 
-* Specify the path to the Studio Pro executable (this allows Visual Studio Code to automatically attach to Studio Pro for debugging)
-* Specify the location of the app `.mpr` package (this allows automatic deployment of your extension build to your app)
+* Specify the path to the Studio Pro executable. This allows Visual Studio Code to automatically attach to Studio Pro for debugging.
+* Specify the location of the app `.mpr` package. This allows automatic deployment of your extension build to your app.
 * Choose whether to enable build-time execution (headless mode for MxBuild). This allows your extension to run during MxBuild, Mendix's headless CI build tool, without Studio Pro's UI.
 
 {{% alert color="info" %}}

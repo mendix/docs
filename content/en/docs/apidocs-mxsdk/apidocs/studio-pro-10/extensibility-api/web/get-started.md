@@ -31,11 +31,11 @@ This section will show you how to build and test an extension.
 
 Create a new app using the **Blank Web App** template.
 
-You can also open the app directory containing the app `.mpr` file by clicking **App** > **Show App Directory in Explorer** (or **Show App Directory in Finder**) in Studio Pro.
-
 {{% alert color="info" %}}
-This template supports version 10.24.0 or later and version 11.12.0(LTS) or later.
+This template supports version 10.24.0 and above and version 11.12.0 and above.
 {{% /alert %}}
+
+You can also open the app directory containing the app `.mpr` file by clicking **App** > **Show App Directory in Explorer** (or **Show App Directory in Finder**) in Studio Pro.
 
 ### Creating the Extension
 
@@ -52,12 +52,12 @@ The generator asks the following questions:
 * Select the programming language (TypeScript is used in the tutorials)
 * Specify the extension name
 * Choose if you will use React for the extension’s UI
-* Select the Studio Pro version you are targeting. In this case version 10.
+* Select the Studio Pro version you are targeting. In this scenario, choose version 10.
   
 The next two questions are optional but highly recommended, as they enable direct debugging and deployment from Visual Studio Code(Windows only):
 
-* Specify the path to the Studio Pro executable (this allows Visual Studio Code to automatically attach to Studio Pro for debugging)
-* Specify the location of the app `.mpr` package (this allows automatic deployment of your extension build to your app)
+* Specify the path to the Studio Pro executable. This allows Visual Studio Code to automatically attach to Studio Pro for debugging.
+* Specify the location of the app `.mpr` package. This allows automatic deployment of your extension build to your app.
 
 {{% alert color="info" %}}
 On a Windows machine, the Studio Pro executable is typically located at `C:\Program Files\Mendix\<version>\modeler\studiopro.exe`. To find the exact path, follow these steps:
@@ -77,7 +77,7 @@ Before you begin, your extension must get an instance of the Studio Pro API. To 
 
 In the source code, you should see the following:
 
-1. First the extension adds a menu:
+1. Te extension adds a menu:
 
     ```typescript
     await studioPro.ui.extensionsMenu.add({
@@ -92,7 +92,7 @@ In the source code, you should see the following:
     });
     ```
 
-2. And then it opens a tab:
+2. The menu opens a tab:
 
     ```typescript
     // Open a tab when the menu item is clicked
@@ -177,7 +177,7 @@ If you answered the last two questions of the extension generator and have built
 2. Select **Run and Debug** from the side panel.
 3. Click the play button on the top of the panel (or press <kbd>F5</kbd>).
 
-This runs Studio Pro in extension development mode and opens the configured app. You see a new **Extensions** item in the top menu.
+This runs Studio Pro in Extension Development mode and opens the configured app. You see a new **Extensions** item in the top menu.
 
 ### Testing the Extension
 

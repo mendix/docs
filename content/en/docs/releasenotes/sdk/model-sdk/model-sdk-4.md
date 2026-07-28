@@ -9,7 +9,7 @@ weight: 97
 **Release date: July 21st, 2026**
 
 * We added support for Mendix [11.13.0](/releasenotes/studio-pro/11.13/).
-* We added support for Mendix Metamodel [11.13.0](metamodel-11.13).
+* We added support for Mendix Metamodel [11.13.0](/releasenotes/sdk/metamodel-11.13/).
 
 ## 4.113.0 {#4113}
 

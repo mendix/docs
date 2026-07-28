@@ -8,6 +8,12 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.12.2
+
+* We fixed a bug where the Extensions Overview page would not open if the user was not signed in.
+* We fixed a bug where reloading a Dev extension would cause a crash if extension tabs were still open.
+* We fixed an issue where progress dialogs did not behave like their C# counterpart. Canceling a step now waits for it to finish and return its result. To exit the step and return its result immediately on cancel, pass `resolveImmediatelyOnCancel` to `IDialogApi.showProgressDialog`.
+
 ## Version 11.12.1
 
 * We removed timeouts for Custom Blob Document consistency checks instead of showing a generic error in the **Errors** pane. We also added analytics to identify extensions that exceed the previous timeout.

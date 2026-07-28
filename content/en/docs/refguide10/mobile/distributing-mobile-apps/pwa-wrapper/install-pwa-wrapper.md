@@ -21,7 +21,7 @@ Before installing [PWA Wrapper](https://marketplace.mendix.com/link/component/25
 
 * You are using Mendix Studio Pro 10.24 or later
 
-Platform-specific build and testing requirements such as Xcode or Xcode Command Line Tools, optional Android emulators or iOS simulators, and Apple signing assets are described in [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
+Platform-specific build and testing requirements such as Xcode or Xcode Command Line Tools, optional Android emulators or iOS simulators, and Apple signing assets are described in [Build PWA Wrapper Apps](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/).
 
 ## Install PWA Wrapper
 
@@ -42,7 +42,7 @@ After installing the module, Mendix Studio Pro prompts you to enable the extensi
 
 After installation, open the builder from the **Extensions** menu in Mendix Studio Pro by selecting **Open App Builder**.
 
-{{< figure src="/attachments/refguide/mobile/pwa-wrapper/launch-app-builder-extension.png" alt="Open App Builder from the Extensions menu in Mendix Studio Pro" width="350" class="no-border" >}}
+{{< figure src="/attachments/refguide10/mobile/pwa-wrapper/launch-app-builder-extension.png" alt="Open App Builder from the Extensions menu in Mendix Studio Pro" width="350" class="no-border" >}}
 
 ## Use the Bundled JavaScript Actions
 
@@ -52,5 +52,5 @@ Only request the permissions your app actually uses. This keeps the generated wr
 
 ## Read More
 
-* [Build PWA Wrapper Apps](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)
-* [PWA Wrapper Capabilities](/refguide/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)
+* [Build PWA Wrapper Apps](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)
+* [PWA Wrapper Capabilities](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/)

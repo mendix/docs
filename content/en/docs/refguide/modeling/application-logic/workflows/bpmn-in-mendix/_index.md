@@ -164,9 +164,9 @@ Each BPMN element is marked with a support level indicator:
       <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#message-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
@@ -189,7 +189,7 @@ Each BPMN element is marked with a support level indicator:
       <td><a href="/refguide/bpmn-coverage/#error-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#error-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#error-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
       <td><a href="/refguide/bpmn-coverage/#error-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
@@ -201,8 +201,8 @@ Each BPMN element is marked with a support level indicator:
       <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#signal-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
@@ -213,8 +213,8 @@ Each BPMN element is marked with a support level indicator:
       <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -225,8 +225,8 @@ Each BPMN element is marked with a support level indicator:
       <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#escalation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
     </tr>
@@ -237,7 +237,7 @@ Each BPMN element is marked with a support level indicator:
       <td><a href="/refguide/bpmn-coverage/#compensation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#compensation-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#compensation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td><a href="/refguide/bpmn-coverage/#compensation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td><a href="/refguide/bpmn-coverage/#compensation-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
@@ -249,7 +249,7 @@ Each BPMN element is marked with a support level indicator:
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="/refguide/bpmn-coverage/#cancel-events">{{< icon name="controls-stop-filled" color="blue" >}} Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#cancel-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>
       <td></td>
       <td></td>
       <td><a href="/refguide/bpmn-coverage/#cancel-events">{{< icon name="controls-stop-filled" color="green" >}} Supported</a></td>

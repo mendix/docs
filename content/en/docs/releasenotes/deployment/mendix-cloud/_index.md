@@ -14,13 +14,15 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
 
-## July 2026
+## August 2026
 
-### July 30, 2026
+### August 3, 2026
 
 #### New Features
 
 * We introduced the [Certificate API](/apidocs-mxsdk/apidocs/certificate-api/), which allows company admins to manage [landscape-wide certificates](/developerportal/deploy/certificates/centralized-certificates/) programmatically using a Mendix Personal Access Token (PAT). This API supports listing, creating, updating, replacing, and deleting central certificates.
+
+## July 2026
 
 ### July 20, 2026
 

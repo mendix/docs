@@ -8,7 +8,7 @@ weight: 20
 
 ## Introduction
 
-This document describes the best practice aspects you should consider when deploying Mendix Workstation in production.
+This document describes the best practices that you should consider when deploying Mendix Workstation in production.
 
 ## Performance Optimization
 

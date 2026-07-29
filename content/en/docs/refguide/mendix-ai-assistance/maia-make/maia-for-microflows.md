@@ -7,7 +7,9 @@ description: "Describes the features in Maia for Microflows."
 ## Introduction
 
 {{% alert color="info" %}}
-This feature is released as part of [Make Make](/refguide/maia-make/) capabilities in Studio Pro 11.8. 
+This feature was released as part of [Make Make](/refguide/maia-make/) capabilities in Studio Pro 11.8.
+
+To use Maia for Microflows, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
 Maia for Microflows is an AI-powered capability that is available when using [Maia Make](/refguide/maia-make/) in Studio Pro. Maia Make is a unified conversational interface within Studio Pro that consolidates all AI-assisted development capabilities into a single chat experience. 

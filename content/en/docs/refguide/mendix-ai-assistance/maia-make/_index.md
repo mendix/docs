@@ -10,33 +10,69 @@ description_list: true
 ## Introduction 
 
 {{% alert color="info" %}}
-Maia Make capabilities are grouped into a conversational interface, which is available in Studio Pro 11.8 and above.
+Maia Make capabilities are available in Studio Pro 11.8 and above.
 
-To use this interface and Maia Make capabilities, an internet connection and signing in to Studio Pro are required.
+To use Maia Make capabilities, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
 Maia Make is a set of AI-assisted development capabilities in Studio Pro that are available through a unified conversational interface. Describe your requirements in natural language, and Maia generates development artifacts such as data structures, pages, and microflows. 
 
 You can also ask Maia to provide explanations of your existing documents, such as microflows, workflows, and pages. Moreover, this interface allows you to integrate with external tools, such as Playwright and Figma, via MCP Servers, and it supports story-based development by generating app artifacts based on existing user stories.
 
-The key Maia Make capabilities are as follows:
+## Maia Make Capabilities Overview
 
-* Conversational assistance for general Mendix development queries
-* Explanations of documents to clarify existing implementation details
-* Generation of documents from natural language descriptions, such as domain model, pages, and microflows
-* Integration with external tools, such as Playwright and Figma, via compatible MCP Servers
-* Story-based development to help realize existing user stories
-* Support for PDF and image inputs to help Maia better understand your requirements
-* Adding relevant documents, such as microflows and pages, to the interface to give Maia a more desired context
-* Editing existing documents, including renaming elements inside of documents such as entities, attributes, and microflow parameters
-* Removing elements from documents, enabling more advanced refactoring (in Studio Pro 11.9 and above)
-* Undoing changes generated on a per-document basis (in Studio Pro 11.9 and above)
+### Supported Document Types
 
-{{% alert color="info" %}}
-Support for workflows, view entities, enumerations, constants, modules, Java actions, and JavaScript actions was introduced in Studio Pro 11.9. In this version, Java actions are read-only; they can be used in microflows and explained. JavaScript actions can only be explained.
+Maia Make can generate new documents, modify existing documents, and explain app documents and structures through a unified conversational interface. The following table lists all document types that Maia Make can work with and the Studio Pro version in which support for each document type was introduced:
 
-Starting with Studio Pro 11.10, Maia can generate JavaScript actions, add parameters to existing ones, and create or update the JavaScript file associated with a JavaScript action.
-{{% /alert %}}
+| Document Type | Available in Maia Make from | Remarks |
+| --- | --- | --- |
+| [Domain model](/refguide/maia-for-domain-model/) | Studio Pro 11.8 | |
+| [Pages](/refguide/maia-for-pages/) | Studio Pro 11.8 | |
+| [Microflows](/refguide/maia-for-microflows/) | Studio Pro 11.8 | |
+| [Workflows](/refguide/maia-for-workflows/) | Studio Pro 11.9 | |
+| [OQL](/refguide/maia-for-oql/) | Studio Pro 11.9 | |
+| View entities | Studio Pro 11.9 | |
+| Enumerations | Studio Pro 11.9 | |
+| Constants | Studio Pro 11.9 | |
+| Modules | Studio Pro 11.9 | |
+| Java actions | Studio Pro 11.9 | Read-only; Java actions cannot be generated. |
+| JavaScript actions | Studio Pro 11.9 | Explain-only in Studio Pro 11.9. Generation, adding parameters, and updating the associated JavaScript file available from Studio Pro 11.10. |
+| Navigation | Studio Pro 11.11 | |
+| Menu | Studio Pro 11.11 | |
+| Data Transformers | Studio Pro 11.12 | |
+| JSON Structures | Studio Pro 11.13 | |
+
+### Maia Make Standalone Capabilities
+
+The following table lists Maia Make Standalone Capabilities and the Studio Pro version in which each capability was introduced:
+
+| Capability | Description | Available in Maia Make from | Remarks |
+| --- | --- | --- | --- |
+| [Maia Chat](/refguide/maia-chat/) | Answers questions about all aspects of Mendix development. | Studio Pro 11.8 | |
+| [Maia Explain](/refguide/maia-explain/) | Explains the purpose and logic of existing documents. | Studio Pro 11.8 | |
+| [Maia MCP Client](/refguide/maia-mcp/) | Connects Maia to external MCP servers, giving it access to third-party tools. | Studio Pro 11.8 | |
+| [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) | Exposes Studio Pro as an MCP server for use by external AI tools. | Studio Pro 11.10 | |
+| [Maia Web Fetch](/refguide/maia-web-fetch/) | Fetches and reads content from public websites and APIs. | Studio Pro 11.10 | |
+| [Maia Agent Skills](/refguide/maia-agent-skills/) | Extends Maia with reusable knowledge. | Studio Pro 11.11 | |
+| [Maia Agent Instructions](/refguide/maia-instructions/) | Extends Maia with instructions to be followed with every prompt | Studio Pro 11.12 | |
+
+### Maia Make General Capabilities
+
+The following table lists the general capabilities of Maia Make and the Studio Pro version in which support for each capability was introduced:
+
+| Capability | Description | Available in Maia Make from | Remarks |
+| --- | --- | --- | --- |
+| Story-based development | Generates app artifacts based on existing user stories to support story-driven development workflows. | Studio Pro 11.8 | |
+| PDF/image support | Allows you to provide PDFs and images as input to help Maia better understand your requirements. | Studio Pro 11.8 | |
+| Adding documents as context | Lets you add relevant documents, to provide Maia with additional context. | Studio Pro 11.8 | |
+| Editing existing documents | Enables Maia to modify existing documents, including renaming elements. | Studio Pro 11.8 | |
+| Removing elements | Allows Maia to remove elements from documents to support more advanced refactoring tasks. | Studio Pro 11.9 | |
+| Undo support | Allows you to undo Maia-generated changes on a per-document basis. | Studio Pro 11.9 | |
+| Folder structure support | Organizes new documents into existing folders and follows your established folder hierarchy when generating content. | Studio Pro 11.10 | Not supported for pages. |
+| Themes and styling | Allows Maia to modify theme variables, create custom styling, and manage design properties. | Studio Pro 11.12 | |
+| Markdown attachment support | Allows you to provide Markdown documents as input to help Maia better understand your requirements. | Studio Pro 11.12 | |
+| Explain and solve consistency errors | Allows you to use Maia to explain or solve problems by right-clicking the item in the **Errors** pane. | Studio Pro 11.12.1 | |
 
 ## Using Maia Make Capabilities
 
@@ -60,35 +96,96 @@ The Maia ({{% icon name="sparkles" %}} ) icon on the right side of the top bar d
 
 ### Maia Make Capabilities Interface Overview
 
-The conversational interface includes the following options:
+The conversational interface includes the following features.
 
-* **New chat** - It allows you to clear the messages and start a new conversation which does not reference your current chat.
-* **Configure MCP Connections** ({{% icon name="plug" %}} icon) - It allows you to connect external [MCP](https://modelcontextprotocol.io/introduction) servers to Maia, giving it access to third-party tools during chat. For more information on how to configure MCP connections, see [Maia MCP Client](/refguide/maia-mcp/).
-* **{{% icon name="paperclip" %}} Add** (Image, Story, PDF) - With this option, you can attach images, PDFs, or user stories to help Maia understand your requirements better.
-* **Add file to Maia Chat** (@ icon) - It allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer** and it appears in the context menu.
+#### New Chat
 
-#### Support for Folder Structure
+Clicking **New Chat** allows you to clear the messages and start a new conversation that does not reference your current chat.
 
-In Studio Pro 11.10 and above, Maia understands and leverages the existing folder structure within your Mendix applications for all documents except for pages. This enables Maia to:
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/new-chat.jpg" width="250px" >}}
 
-* Organize documents into folders: When creating new documents, Maia can place them directly into relevant folders, respecting your project's organization.
-* Follow existing folder structures: Maia works within your established folder hierarchy, making it easier to maintain consistency.
-* Adhere to Mendix best practices: Maia can help organize documents according to the standard Mendix best practices for folder structure. For detailed guidance on optimal organization of folders, refer to the [Folder Structure](/refguide/naming-convention-best-practices/#folder-structure) section in *Naming Convention Best Practices*.
+#### Configure MCP Connections 
 
-For more information on how each Maia Make capability work, refer to the following documents:
+This option ({{% icon name="plug" %}}) allows you to connect external [MCP](https://modelcontextprotocol.io/introduction) servers to Maia, giving it access to third-party tools during chat. For more information on how to configure MCP connections, see [Maia MCP Client](/refguide/maia-mcp/).
 
-* [Maia Chat](/refguide/maia-chat/)
-* [Maia Explain](/refguide/maia-explain/)
-* [Maia for Domain Model](/refguide/maia-for-domain-model/)
-* [Maia for Pages](/refguide/maia-for-pages/)
-* [Maia for Microflows](/refguide/maia-for-microflows/)
-* [Maia for Workflows](/refguide/maia-for-workflows/) (in Studio Pro 11.9 and above)
-* [Maia for OQL](/refguide/maia-for-oql/) (in Studio Pro 11.9 and above)
-* [Maia MCP Client](/refguide/maia-mcp/)
-* [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)
-* [Maia Web Fetch](/refguide/maia-web-fetch/)
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/configure.jpg" width="250px" >}}
 
-In Studio Pro 11.8 and above, most of the features described in the documents above are available only through the chat interface. There are no separate entry points to these features in their respective editors. [Maia Explain](/refguide/maia-explain/) is an exception. You can still access this feature by right-clicking the documents (for example, microflows or pages) in the **App Explorer** and the **Maia Explain** option is in the context menu.
+#### Add
+
+**{{% icon name="paperclip" %}} Add** allows you to attach images, PDFs, or user stories to help Maia understand your requirements better.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add.jpg" width="250px" >}}
+
+#### Add file to Maia Chat 
+
+This option (@ icon) allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer** and it appears in the context menu.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add-files.jpg" width="250px" >}}
+
+#### Changed List
+
+A list of items added or changed by Maia appears above the chat box. Click an entry to open the relevant document. To undo all changes, click **Undo all**. To undo a single change, click the undo button on the right side of that item.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/changed-list.png" width="250px" >}}
+
+#### Clarifying Questions
+
+{{% alert color="info" %}}
+This feature is available for Studio Pro 11.12 and above.
+{{% /alert %}}
+
+When Maia needs more information, it will ask clarifying questions through a dedicated UI to improve the quality of its response.
+
+## Save a Maia Session {#save-maia-session}
+
+A Maia session contains your conversation history and context, which can help analyze Maia's responses and behavior for troubleshooting or support purposes. To save a Maia session, go to **Help** > **Support Tools** > **Capture Maia Agent Session**.
+
+In Studio Pro 11.9 - 11.11, this option is found at **Help** > **Support Tools** > **Dump Maia Agent Session**.
+
+## Configuring a Custom AI Provider {#custom-provider}
+
+By default, Maia uses the Mendix platform's AI service. You can configure Maia to use your own LLM provider instead (also known as bring your own LLM or BYO LLM).
+
+{{% alert color="info" %}}
+Configuring a custom AI provider is available in Studio Pro 11.12 and above as a beta feature.
+{{% /alert %}}
+
+To enable custom LLM provider configuration, follow these steps:
+
+1. Open the Studio Pro settings.
+2. In the **Preferences** dialog box that opens, go to the **New Features** tab.
+3. Select the **Enable configuring a custom AI provider for Maia** checkbox, then click **OK**.
+
+After enabling this feature, a **Settings** ({{% icon name="cog" %}}) icon appears in the upper-right corner of the Maia pane.
+
+### Provider Configuration {#provider-configuration}
+
+Custom AI provider settings are per-project and local to your workstation. Each app can have its own configuration, and settings are not committed to version control.
+
+#### Mendix Platform {#mendix-platform}
+
+The Mendix platform AI service is the default, recommended option and requires no configuration. Some Mendix platform optimizations may not be available if you use a custom LLM provider instead.
+
+#### Amazon Bedrock {#amazon-bedrock}
+
+To configure Amazon Bedrock as your LLM provider, follow these steps:
+
+1. Click **Settings** ({{% icon name="cog" %}}) in the Maia pane.
+2. Select **Amazon Bedrock** from the **LLM Provider** list.
+3. Create an API key in AWS, then enter the **Base URL** and your **API Key**. Studio Pro stores the API key securely across sessions.
+4. Enter the **Model ID**. You can find available model IDs in your AWS Bedrock console. Mendix recommends Claude Sonnet 4.6 for optimal Maia performance.
+5. Click **Save Config**.
+
+#### OpenAI Compatible {#openai-compatible}
+
+To configure an OpenAI-compatible provider, follow these steps:
+
+1. Click **Settings** ({{% icon name="cog" %}}) in the Maia pane.
+2. Select **OpenAI Compatible** from the **LLM Provider** list.
+3. Enter the **Base URL** for your API endpoint.
+4. Enter the **Model ID**.
+5. Optional: Enter your **API Key**. Studio Pro stores this key securely across sessions.
+6. Click **Save Config**.
 
 ## Read More
 

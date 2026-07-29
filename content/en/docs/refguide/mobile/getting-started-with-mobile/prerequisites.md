@@ -60,13 +60,8 @@ The Make It Native app allows developers to preview, test, and debug native mobi
 Depending on your app's Mendix version, you must use a different version of the Make It Native app:
 
 * Mendix 11:
-    * **11.7.0 - 11.x.x** — Use the latest version of Make It Native ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
-    * **11.6.x** - MTS version of Make It Native ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native/id6450037464))
-
-* Mendix 10:
-    * **10.24.x** - Make It Native LTS is part of Github releases and Testflight (previous) builds ([Android](https://github.com/mendix/make-it-native/releases), [iOS](https://testflight.apple.com/join/bQfLf27w)).  
-        * **Previous Builds** on Testflight can be found here:
-            {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/min-testflight.png" alt="Previous Builds on Testflight MIN" class="no-border" >}}
+    * **11.11.0 - 11.x.x** — Use the latest version of Make It Native ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native/id6450037464))
+    * **11.6.x** - MTS version of Make It Native ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
 
     * **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [Building Your Own Make It Native App](https://github.com/mendix/make-it-native)
 
@@ -74,25 +69,18 @@ For information on which mobile operating systems are supported by the Mendix na
 
 ### Direct Download Links {#direct-links}
 
-Download the latest version (current MTS) of Make It Native using these QR codes:
+Download the latest version (current LTS 11.12) of Make It Native using these QR codes:
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
 | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
-|   [Latest Version](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [Latest Version](https://apps.apple.com/us/app/make-it-native/id6450037464)         |
-
-Download the LTS version of Make it Native using these QR codes:
-
-|                                  Android                                  |                                iOS                                |
-| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
-|   [LTS Version](https://github.com/mendix/make-it-native/releases)    |        [LTS Version (previous builds)](https://testflight.apple.com/join/bQfLf27w)         |
+|   [Latest Version](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [Latest Version](https://apps.apple.com/us/app/make-it-native/id6450037464)         |        |
 
 ### Using the Versions of Make It Native
 
 The latest version of Make It Native app receives monthly updates, and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to update your application regularly.
 
-To access the LTS version of Make It Native, you must join our official beta testing programs on the Apple App Store and use Github Releases for the Android APK. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
+To access the MTS version of Make It Native, you must join our official beta testing programs on the Apple App Store and use Github Releases for the Android APK. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
 
 Note that it is not possible to install both **LTS** and **MTS** versions on the same device.
 
@@ -174,6 +162,11 @@ The latest version of Make It Native 9 is only compatible with versions of Mendi
 ### Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+
+If the Make It Native app cannot connect when you use Parallels, check the following:
+
+* Enter your Mac's IP address in the Make It Native app's **Host** field, not the IP address of the Windows virtual machine that Studio Pro shows. For instructions on finding your Mac's IP address, see the [Viewing Your App on Your Testing Device](/refguide/using-mendix-studio-pro-on-a-mac/#viewing-your-app-on-your-testing-device) section of *Configuring Parallels*.
+* Make sure port forwarding is enabled for ports 8080, 8083, and 8100 in your Parallels network preferences. For setup steps, see the [Configuring Your Windows Virtual Machine for Mendix Studio Pro](/refguide/using-mendix-studio-pro-on-a-mac/#configuring) section of *Configuring Parallels*.
 
 ### Avoid Network or Cloud Folders
 

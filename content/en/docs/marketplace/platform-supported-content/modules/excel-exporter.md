@@ -57,10 +57,10 @@ On the template details page, you can define the template with the following ite
     {{% alert color="info" %}}If you use an uploaded Excel file as a template, the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** (including **none**) specified in the applicable style. {{% /alert %}}
 
 * **Sanitize formulas to text**: When enabled, the module automatically sanitizes any string values that begin with potentially dangerous characters:
-  - `=` (equals)
-  - `+` (plus)
-  - `-` (minus/hyphen)
-  - `@` (at)
+    * `=` (equals)
+    * `+` (plus)
+    * `-` (minus/hyphen)
+    * `@` (at)
  
     {{% alert color="info" %}} When sanitization is enabled, the exporter prepends a apostrophe (`'`) to any string value starting with these
   characters. This forces Excel and CSV applications to treat the value as literal text rather than a formula.

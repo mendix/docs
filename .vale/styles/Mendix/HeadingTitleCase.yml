@@ -1,0 +1,15 @@
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Headings and Titles)
+extends: capitalization
+message: "Use title case capitalization for '%s'."
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#capitalization
+level: error
+scope: heading
+match: $title
+style: Chicago
+indicators:
+  - ':'
+exceptions:
+  # Words with non-standard capitalization that shouldn't be modified
+  - macOS
+  - iOS
+  - IdP

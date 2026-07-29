@@ -203,13 +203,13 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [IBM DB2](/refguide8/db2/) 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide9/mysql/): 10.6, 10.11, 11.4, 11.8
+* [IBM DB2](/refguide9/db2/) 11.5 for Linux, Unix, and Windows
+* [MariaDB](/refguide9/mysql/): 10.11, 11.4, 11.8
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide9/mysql/): 8.4
 * [Oracle Database](/refguide9/oracle/): 19, 21c, 23ai (including 26ai)
-* PostgreSQL: 13, 14, 15, 16, 17, 18
+* PostgreSQL: 14, 15, 16, 17, 18
 * [SAP HANA](/refguide9/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}
@@ -252,8 +252,6 @@ For server-based installations, the following storage types mounted by the OS ar
 Internet Explorer is no longer supported in Studio Pro 9. As the market is moving away from Internet Explorer and Mendix continues to align with the best practices of the modern web ecosystem, we have dropped support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved app loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.<br />
 <br />
 As of Studio Pro 9, app end-users still using IE will be shown an **Unsupported Browser** message stating that upgrading to a modern browser is required. You can [customize this message](/howto9/front-end/customize-styling-new/#customize-unsupported-browsers) to meet your needs.<br />
-<br />
-If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) will continue supporting IE11. Mendix recommends using Studio Pro 8 until your app end-users have upgraded their browsers.
 {{% /alert %}}
 
 ## Mobile {#mobile}
@@ -264,6 +262,10 @@ For native and hybrid apps built with Mendix, the following operating system ver
 * Latest three versions of Android
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
+
+{{% alert color="warning" %}}
+If a new iOS or Android version is released less than 3 months before your Mendix version reaches end of native mobile support, that OS version is not covered for your native mobile app. To support the new OS version, you must upgrade to a newer Mendix version. See [Native Mobile Support Guidelines](/releasenotes/mobile/native-support/) for details.
+{{% /alert %}}
 
 You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 

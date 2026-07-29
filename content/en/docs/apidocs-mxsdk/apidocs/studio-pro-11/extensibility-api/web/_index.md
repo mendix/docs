@@ -16,7 +16,7 @@ weight: 20
 Extensions can be written in TypeScript or other web languages, described here, or using a C# API, which is documented in [Extensibility API for C# Developers](/apidocs-mxsdk/apidocs/csharp-extensibility-api-11/).
 
 {{% alert color="info" %}}
-Extension development is only possible with the `--enable-extension-development` feature flag.
+Extension development is possible by enabling the [Extension Development](/refguide/preferences-dialog/#extension-development) setting in your app's [Preferences](/refguide/preferences-dialog/), or by starting Studio Pro with the `--enable-extension-development` feature flag.
 {{% /alert %}}
 
 For more detailed information on the web API, see the [Mendix Studio Pro Web Extensibility API reference documentation](http://apidocs.rnd.mendix.com/11/extensions-api/index.html).
@@ -51,6 +51,7 @@ The following how-tos help you get started:
 * [How to Exchange Information Between Active Views](/apidocs-mxsdk/apidocs/web-extensibility-api-11/message-passing-api/)
 * [How to Show Version Control Information](/apidocs-mxsdk/apidocs/web-extensibility-api-11/version-control-api/)
 * [How to Introduce a New Document Type](/apidocs-mxsdk/apidocs/web-extensibility-api-11/custom-blob-document-api/)
+* [How to Create Consistency Checks for Custom Document Types](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/)
 * [How to Listen for Connection Changes](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-controller-api/)
 * [How to Access Runtime Constants](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-configuration-api/)
 * [How to Use Extension Permissions in Overview Pane](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/)

@@ -17,7 +17,7 @@ Once designed and activated from the **Pipelines** page, you can enable automate
 Mendix Pipelines is only available for licensed Mendix apps that are deployed to Mendix Cloud, Mendix on Kubernetes or Mendix on Azure.
 {{% /alert %}}
 
-To access the **Pipelines** page, open your app in [Apps](https://sprintr.home.mendix.com/). Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
+To access the **Pipelines** page, open your app in [Projects](https://projects.home.mendix.com/). Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
 
 The **Pipelines** page has four tabs: **Runs**, **Designs**, **Variables**, and **Settings**. You can see all four tabs as soon as your app has its first Mendix Pipeline saved.
 
@@ -350,10 +350,6 @@ Mendix Pipeline failure notifications only send if the user who triggered the Me
 ## Additional Notes
 
 Mendix Pipelines time out if they run for more than three hours. In other words, if the cumulative execution time of all operations in your Mendix Pipeline exceeds this limit, the Mendix Pipeline will fail.
-
-Existing Mendix Pipeline users can view previously created webhooks that trigger Mendix Pipelines from [Teamserver push (Git)](/developerportal/deploy/webhooks/#teamserver-push-git) by clicking **Webhooks** in the [navigation pane](/developerportal/#navigation-pane).
-
-These webhooks can be safely deleted without affecting the functionality of your Teamserver push (Git) triggers and are not visible to first-time Mendix Pipeline users.
 
 ### Known Issues and Limitations
 

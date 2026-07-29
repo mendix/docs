@@ -73,7 +73,7 @@ To allow the module to send and receive document generation requests on your Men
     1. Go to the **Environments** page for the app as follows:
 
        * Go to the [Nodes](https://cloud.home.mendix.com/) page, then, in the **Public Cloud - Nodes** list, find the desired app, then click **Environments**.
-       * Alternatively, go to [Apps](https://sprintr.home.mendix.com), then in the **My Apps** list, find the desired app, then click **Environments**.
+       * Alternatively, go to [Projects](https://projects.home.mendix.com), then in the **My Projects** list, find the desired app, then click **Environments**.
 
         The app's **Environments** page opens. The **Overview** tab shows a list of available environments for your app.
     
@@ -174,3 +174,5 @@ Rule | Name | Pattern | Rewrite URL
 2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 {{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. If you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
+
+{{% alert color="info" %}}If you use IIS as your reverse proxy, make sure that the [default document](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/defaultdocument/) is configured to serve `index.html`. Without this setting, the base URL does not resolve correctly, and document generation fails.{{% /alert %}}

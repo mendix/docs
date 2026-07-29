@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-To open the **Environment Details** page, go to [Apps](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to [Projects](https://projects.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{% alert color="info" %}}You must have permissions for **Transport Rights** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
 
@@ -180,6 +180,10 @@ On this tab, you can edit the model options for constants and scheduled events.
 
 In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
 
+{{% alert color="warning" %}}
+The combined length of all constant keys and values is limited to 128 KB (approximately 32,000 characters). For more information, refer to [Behavior of Your App in Mendix Cloud](/developerportal/deploy/behavior-of-app/#constants-size-limit).
+{{% /alert %}}
+
 To fill in a new value, select the constant and click **Edit** to bring up the **Edit Constant** dialog box.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details-beta/edit-constant.png" >}}
@@ -255,7 +259,7 @@ Mendix Cloud supports the following HTTP headers in the Mendix Portal:
 | `X-Content-Type-Options`      | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
 | `X-Frame-Options`             | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>`, or `<object>`. The default is not to allow apps to be rendered inside frames. This was the value set previously to prevent embedding in an iframe.<br/>For details on running your app inside an iframe, see [Running Your App in an Iframe](#iframe), below. |
 | `X-Permitted-Cross-Domain-Policies` | Specifies whether the page can load resources from a different domain. |
-| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. |
+| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.<br/>{{% alert color="warning" %}}This header is [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) and not recommended for new implementations.{{% /alert %}} |
 
 There are three types of values for these headers:
 
@@ -300,14 +304,9 @@ To avoid security issues when you want to embed the app in an iframe, use [custo
 
 ##### Applying a Different SameSite Setting {#samesite}
 
-From Studio Pro 8.12, you can control the value of `SameSite` in your cookies. The default for all cookies depends on the version of Mendix you are using:
-
-* For Studio Pro 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
-* For Studio Pro 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
+You can control the value of `SameSite` in your cookies. For Studio Pro 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
 
 You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
-
-For Mendix 8.11 and below, there was no `SameSite` value set on cookies, and the behavior depended on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in the **Custom Environment Variables** section; this sets `SameSite=None; Secure;` for all your cookies.
 
 {{% alert color="warning" %}}
 The `SAMESITE_COOKIE_PRE_MX812` setting is implemented the next time your app is deployed after you apply the change.

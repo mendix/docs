@@ -29,7 +29,7 @@ To access the graphs on the **Metrics** page, you must have **Access to Monitori
 
 If you meet the above conditions, you can find the graphs by following these steps:
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com).
+1. Open your app in [Projects](https://projects.home.mendix.com).
 
 1. In the navigation pane, click **Metrics**.
 

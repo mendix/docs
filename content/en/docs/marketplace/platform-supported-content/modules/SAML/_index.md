@@ -49,7 +49,7 @@ This section is aimed at readers with more knowledge of the SAML protocol. You m
     * Web browser SSO profile using one of the following bindings
         * HTTP redirect
         * HTTP POST bindings
-        * Artifact binding for SAML responses (Mendix 8 and above)
+        * Artifact binding for SAML responses (Mendix 9 and above)
     * Single Logout profile
 
 2. For encryption of SAML messages, the following options are supported:

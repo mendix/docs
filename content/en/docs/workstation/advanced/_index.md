@@ -10,4 +10,4 @@ weight: 18
 
 ## Introduction
 
-Refer to the following articles for information about security configuration and pother best practices.
+Refer to the following articles for information about security configuration and other best practices.

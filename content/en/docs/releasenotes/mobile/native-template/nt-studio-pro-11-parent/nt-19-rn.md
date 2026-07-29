@@ -5,6 +5,13 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.1.2
+
+**Release date: Jul 29, 2026**
+
+- We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
+-   Replaced @notifee/react-native with react-native-notify-kit library.
+
 ## 19.1.1
 
 **Release date: Jul 3, 2026**

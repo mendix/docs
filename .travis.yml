@@ -7,9 +7,7 @@ os: linux             # optional, this is default
 dist: jammy          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
 
 git:
-  depth: 20000 # We're cloning this many commits as it is roughly covering the last 4 years of commits, thus letting us show the last changed date on the documentation pages.
-  quiet: true # prevent commit numbers appearing in the log and being flagged as potential security leaks.
-  submodules: false # turn off submodules
+  clone: false # Disable Travis CI's built-in clone; git 2.41+ no longer writes FETCH_HEAD after `git clone --branch`, which breaks the Travis checkout script. We clone manually in before_install instead.
 
 env:
   global:
@@ -45,6 +43,11 @@ cache:
 
 before_install:
 ###############
+  # Manually clone the repo to work around a Travis CI + git 2.41+ incompatibility.
+  # git 2.41+ no longer writes FETCH_HEAD after `git clone --branch`, which breaks
+  # Travis CI's built-in checkout script (`git checkout -qf FETCH_HEAD`).
+  # We clone with depth=20000 to cover ~4 years of commits for last-changed-date on docs pages.
+  - git clone --depth=20000 --branch=$TRAVIS_BRANCH --quiet https://github.com/mendix/docs.git .
   # Hugo, Docsy and dependencies are installed via npm
   - travis_retry npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
   #

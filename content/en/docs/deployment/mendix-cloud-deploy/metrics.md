@@ -472,7 +472,7 @@ The value is calculated by dividing the sum of dead rows by the sum of live and 
 
 Interpret this graph together with the [Database Transactions and Mutations](#Trends-dbpgstatdatabaseVERSIONmain) and [Database Disk Usage](#Trends-dbdfabs) graphs. Heavy update or delete traffic combined with rising bloat is a strong indicator that reclaim is falling behind.
 
-If the average bloat ratio stays high for extended periods, contact [Mendix Support](https://support.mendix.com/) to request a database debloat operation. See the [Largest Table Size](#Trends-dblargesttablesize) graph for a disk space precondition to check before requesting this operation.
+If the average bloat ratio remains high for an extended period, contact [Mendix Support](https://support.mendix.com/) to request a database debloat operation. Before submitting the request, check the [Largest Table Size](#Trends-dblargesttablesize) graph to verify that the disk space precondition is met.
 
 ### Maximum Table Bloat Ratio{#Trends-dbmaxtablebloatratio}
 
@@ -493,7 +493,7 @@ Only tables larger than 16 MiB are included. This excludes trivially small table
 
 A consistently high value in the **non_system** series typically indicates an application table with a heavy update or delete workload. A consistently high value in the **system** series is unusual and usually indicates that Mendix Runtime background tasks (such as session or scheduled events) are generating changes faster than autovacuum can reclaim them.
 
-As with the [Average Database Bloat Ratio](#Trends-dbavgbloatratio), if a series stays high for extended periods, contact [Mendix Support](https://support.mendix.com/) to request a database debloat operation.
+As with the [Average Database Bloat Ratio](#Trends-dbavgbloatratio), if a series remains high for an extended period, contact [Mendix Support](https://support.mendix.com/) to request a database debloat operation.
 
 ### Largest Table Size{#Trends-dblargesttablesize}
 
@@ -509,7 +509,7 @@ The size includes the table's data, indexes, and TOAST storage. Each data point 
 
 If the largest table changes over the period being viewed, the graph remains a single continuous line, but the tooltip for each data point identifies which table was the largest at that moment. A steadily growing largest-table value, combined with rising [Database Disk Usage](#Trends-dbdfabs) is a common indicator that a table may benefit from archiving, partitioning, or a review of its data retention policy.
 
-This graph is also relevant when requesting a database debloat operation (see [Average Database Bloat Ratio](#Trends-dbavgbloatratio)). The cleanup process temporarily requires additional free database disk space roughly equal to the size of the largest table. Compare this graph against [Database Disk Usage](#Trends-dbdfabs) to confirm sufficient headroom before opening a support ticket; if free space is insufficient, a storage resize is required first.
+This graph is also relevant when requesting a database debloat operation (see [Average Database Bloat Ratio](#Trends-dbavgbloatratio) above). The cleanup process temporarily requires additional free database disk space  approximately equal to the size of the largest table. Compare this graph with [Database Disk Usage](#Trends-dbdfabs) to verify that sufficient free space is available before opening a support ticket. If there is not enough free space, the database storage must be resized first.
 
 ## Read More
 

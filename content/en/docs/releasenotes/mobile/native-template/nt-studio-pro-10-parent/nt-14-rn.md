@@ -2,7 +2,7 @@
 title: "Native Template 14"
 url: /releasenotes/mobile/nt-14-rn/
 weight: 6
-description: "Native Template 14"
+description: "Native Template 14 release notes"
 ---
 
 ## 14.1.20

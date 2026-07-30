@@ -11,9 +11,9 @@ description: "Native Template 18"
 
 ### Improvements
 
-- We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
-- We added a new dependency for `@shopify/flash-list` to support the migration from FlatList to FlashList.
+* We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
+* We added a new dependency for `@shopify/flash-list` to support the migration from FlatList to FlashList.
 
 ### Fixes
 
-- We fixed iOS builds which chrased when building with Xcode 26.
+* We fixed iOS builds which chrased when building with Xcode 26.

@@ -44,11 +44,17 @@ By selecting a revision in this grid, the tabs below the grid will be filled wit
 
 ### Comparing Revisions
 
-To compare any revision to your current working state, right-click a revision and select **Compare to current state**. This opens the [Comparison pane](/refguide/comparison-pane/), which shows all differences between the selected revision and your current state, including uncommitted changes.
+Revisions can be compared in the following ways:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/comparison-pane/history-right-click-menu.png" alt="Right-click menu showing Compare to current state option" class="no-border" >}}
+* To compare a revision to your current working state, right-click a revision and select **Compare to current state**. This opens the [Comparison pane](/refguide/comparison-pane/), which shows all differences between the selected revision and your current state, including uncommitted changes.
 
-For more information, see [Comparing Revisions](/refguide/comparing-revisions/).
+* To compare any two commits, do the following: 
+    * Select the first commit, hold <kbd>Ctrl</kbd> (Windows/Linux) or <kbd>Cmd</kbd> (Mac) and then select the second commit. 
+    * When two commits are selected, open the **Compare** dropdown and select **Compare revisions (2/2 selected)**, or right-click a selected row, point to **Compare...**, and select **Compare revisions (2/2 selected)**. This opens the [Comparison pane](/refguide/comparison-pane/). These options are unavailable until exactly two commits are selected.
+
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/comparison-pane/history-right-click-menu.png" alt="Right-click menu showing Compare options" class="no-border" >}}
+
+For more information, see [Comparison Pane](/refguide/comparison-pane/).
 
 #### Revision{#revision}
 
@@ -92,7 +98,7 @@ The search bar within the tab can be used to filter the list of documents.
 
 ### Disk Changes
 
-This tab shows a list of the files that were changed on disk. You can see whether files were added, deleted or modified.
+This tab shows a list of the files that were changed on disk. You can see whether files were added, deleted or modified. To compare a modified file with its committed version, use **Compare with original** in the [Changes pane](/refguide/changes-pane/), which opens the [File Differences Viewer](/refguide/file-diff-viewer/).
 
 The search bar within the tab can be used to filter the list of files.
 

@@ -2,7 +2,7 @@
 title: "Mendix Support"
 url: /support/
 description: "Provides information on how to obtain support for your Mendix apps."
-weight: 47
+weight: 54
 no_list: false 
 description_list: true
 cascade:
@@ -39,7 +39,7 @@ Extended Support may be offered in cases where the support of a major Mendix ver
 
 There are 6-month and 12-month packages available for Extended Support.
 
-For example, support for Mendix 8 will end upon the release of Mendix 11 GA. However, if you have purchased Extended Support, version 8 will be supported for either six months or one year from the release date of Mendix 11 GA.
+For example, support for Mendix 9 will end upon the release of Mendix 12 GA. However, if you have purchased Extended Support, version 9 will be supported for either six months or one year from the release date of Mendix 12 GA.
 
 Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
 

@@ -61,7 +61,7 @@ The **Execute query** and **Execute parameterized query** actions are used for q
 For both queries and statements, the parameterized version takes a string template parameter, while the regular version takes a fully formed SQL command string with no placeholders.
 
 {{% alert color="info" %}}
-The parameterized actions are available only with Database connector versions 3.0.0 and above. To use them, you must use Studio Pro [8.6.0](/releasenotes/studio-pro/8.6/#860) and above.
+The parameterized actions are available only with Database connector versions 3.0.0 and above. 
 {{% /alert %}}
 
 ##### Execute Query Action {#execute-query}

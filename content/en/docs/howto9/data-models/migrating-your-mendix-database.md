@@ -175,5 +175,5 @@ To do this, perform the following steps:
     cf set-env {application-name}  MXRUNTIME_SourceDatabasePassword {password}
     ```
 
-8. Start the application either from [Apps](https://sprintr.home.mendix.com/) or the command line. 
+8. Start the application either from [Projects](https://projects.home.mendix.com/) or the command line. 
 9. Once the application is started, verify the data in the application.

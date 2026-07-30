@@ -74,7 +74,7 @@ You will only be able to follow the steps below if you have the correct access r
 
 To configure client certificates in Mendix Cloud, follow these steps:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
+1. Go to [Projects](https://projects.home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** ({{% icon name="notes-paper-edit" %}}) next to one of the environments.
 3. Click **Network** and scroll down to **Outgoing Connections Certificates**.
 4. Click **Add Client Certificate**. Upload the certificate files.

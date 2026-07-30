@@ -14,7 +14,7 @@ aliases:
 
 The **Apps** page in Control Center provides a central place to monitor, manage, and interact with all the apps belonging to your company. 
 
-Use the search bar at the top of the page to find an app using either its name or app ID. You can find the app ID under **Project ID** in your app’s [Settings](/developerportal/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
+Use the search bar at the top of the page to find an app using either its name or app ID. You can find the app ID under **Project ID** in your app’s [Settings](/developerportal/general-settings/) in [Projects](https://projects.home.mendix.com/).
 
 {{< figure src="/attachments/control-center/apps/apps-overview/top-search-bar.png" >}}
 
@@ -66,7 +66,7 @@ Clicking an app name in a tab or the search results opens its details page, whic
 * **App Info** – Shows the **Description** and **App ID**, also found in your app's [Settings](/developerportal/general-settings/).
 * **Members** – Lists the team members in the app development team.
     * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
-    * For other member management options, click **Manage Members**, which will open the [Team](/developerportal/general/team/#managing) page of the app. As a Mendix Admin, you can also add yourself to a team via this page.
+    * For other member management options, click **Manage Members**, which will open the [Team](/developerportal/general/team/#managing) page of the app.
 * **Environments** – Lists all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Mendix Portal.
 
 If the app is not a licensed app, you can see the action menu ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the page. If the app is active, then you have the options to deactivate the app and delete the app; and if the app is deactivated, then you have the options to activate the app and delete the app.
@@ -142,7 +142,7 @@ The consequences of deactivating and deleting a free app are as follows:
 | App code repository stays persistent                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 | App team members can access the app code repository         | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 | App stays persistent                                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-| App team members can access the app in [Apps](https://sprintr.home.mendix.com/) | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App team members can access the app in [Projects](https://projects.home.mendix.com/) | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 | Cloud environment stays persistent                          | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 
 {{% alert color="info" %}}

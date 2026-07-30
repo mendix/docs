@@ -23,7 +23,13 @@ Native mobile apps built using a Mendix LTS version are supported for 15 months 
 
 ### Mid-Term Support Version (MTS)
 
-Native mobile apps built with a Mendix MTS version are supported for 15 months from the official release date, unless an LTS version of the same Mendix major version is released earlier. In that case, support ends 3 months after the release of the LTS version. This support period is up to 6 months shorter than standard Mendix support durations.
+Native mobile apps built with a Mendix MTS version are supported for 15 months from the official release date, unless an LTS version of the same Mendix major version is released earlier. In that case, support ends 3 months after the release of that LTS version. This support period is up to 6 months shorter than standard Mendix support durations.
+
+{{% alert color="info" %}}
+Mendix 11.6 MTS is an exception to the standard MTS support policy.
+
+Mendix 11.6 support will be extended until 3 months after the 11.18 LTS release, instead of 3 months after the next LTS release (11.12 LTS in this case). 
+{{% /alert %}}
 
 ### Monthly Release Version
 
@@ -39,6 +45,6 @@ Following this recommendation provides the following benefits:
 * **Reduced update effort**, as smaller, more frequent updates involve fewer changes
 * **Access to the latest features and improvements** available in Mendix Studio Pro
 
-As an alternative, you can choose to skip every other MTS version and update your native mobile app once per year. With this approach, you must still update to the LTS version as soon as it is released.
+As an alternative, you can choose to skip every other MTS version and update your native mobile app once per year. With this approach, you must still update to an LTS version as soon as it is released.
 
 Consider this update path as an example of what you could do: Mendix 10 LTS {{% icon name="chevron-right" %}} Second Mendix 11 MTS {{% icon name="chevron-right" %}} Mendix 11 LTS

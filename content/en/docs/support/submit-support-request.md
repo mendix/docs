@@ -163,7 +163,7 @@ Follow these steps to retrieve logs for an app deployed to Windows:
 
 Follow these steps to retrieve logs for an app deployed to SAP:
 
-1. On the Mendix Portal, go to your SAP-deployed app in [Apps](https://sprintr.home.mendix.com), and click **Environments**.
+1. On the Mendix Portal, go to your SAP-deployed app in [Projects](https://projects.home.mendix.com), and click **Environments**.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) next to the environment you want to view details for.
 3. Click **View Recent Log**.
 

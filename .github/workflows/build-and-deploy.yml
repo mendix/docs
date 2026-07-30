@@ -1,0 +1,149 @@
+name: Build and Deploy
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - production
+      - development
+  # Runs build + htmltest on PRs targeting development or production — deploy is skipped
+  pull_request:
+    branches:
+      - production
+      - development
+  # Allow manual runs from the Actions tab for testing without pushing to production/development
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment to build (development or production)'
+        required: true
+        default: 'development'
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    outputs:
+      target: ${{ steps.env.outputs.target }}
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+        with:
+          # 20000 commits required for Hugo to populate last-modified dates on pages
+          fetch-depth: 20000
+          submodules: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Set target environment
+        id: env
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "target=${{ github.base_ref }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "target=${{ github.event.inputs.environment }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "target=${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Report Hugo config
+        run: ./node_modules/.bin/hugo config --environment ${{ steps.env.outputs.target }}
+
+      - name: Build with Hugo
+        run: |
+          mkdir -p public
+          set -o pipefail
+          ./node_modules/.bin/hugo --environment ${{ steps.env.outputs.target }} 2>&1 | tee hugo.log
+
+      - name: Run htmltest
+        # htmltest errors are treated as warnings — build continues regardless (matches Travis behaviour)
+        run: |
+          chmod +x ./htmltest/htmltest
+          set +o pipefail
+          ./htmltest/htmltest 2>&1 | \
+            sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" | tee -a hugo.log || true
+
+      - name: Print build log
+        if: always()
+        run: cat hugo.log
+
+      - name: Upload public site artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: public-site
+          path: public
+          if-no-files-found: error
+
+  deploy:
+    runs-on: ubuntu-22.04
+    needs: build
+    # Only deployment-capable runs attach to a GitHub Environment.
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    environment: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.environment || github.ref_name }}
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}-deploy
+      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Download public site artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: public-site
+          path: public
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install Algolia client
+        if: github.event_name == 'push' && needs.build.outputs.target == 'production'
+        run: pip install 'algoliasearch>=2.0,<3.0'
+
+      - name: Deploy to S3
+        # Only runs on direct push to development or production — never on PRs or workflow_dispatch
+        if: github.event_name == 'push'
+        run: bash _scripts/deploy.sh
+        env:
+          TARGET_BRANCH: ${{ needs.build.outputs.target }}
+          DRY_RUN: 'false'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+
+      - name: Dry run S3 sync
+        # Simulates the S3 sync without uploading — always runs on workflow_dispatch
+        if: github.event_name == 'workflow_dispatch'
+        run: bash _scripts/deploy.sh
+        env:
+          TARGET_BRANCH: ${{ needs.build.outputs.target }}
+          DRY_RUN: 'true'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+
+      - name: Push to Algolia
+        # Only runs on direct push to production — never on PRs or workflow_dispatch
+        if: github.event_name == 'push' && needs.build.outputs.target == 'production'
+        run: python _scripts/pushmxdocsalgolia.py
+        env:
+          TARGET_BRANCH: ${{ needs.build.outputs.target }}
+          ALGOLIA_APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+          ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}

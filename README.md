@@ -1,12 +1,11 @@
-# Mendix Documentation [![hugo_badge](https://img.shields.io/badge/hugo-0.126.1-green.svg)](https://gohugo.io/) [![node_badge](https://img.shields.io/badge/node-20.9.0-green.svg)](https://nodejs.org/en/) [![docsy_badge](https://img.shields.io/badge/docsy-0.10.0-green.svg)](https://www.docsy.dev/)
+# Mendix Documentation [![hugo_badge](https://img.shields.io/badge/hugo-0.156.0-green.svg)](https://gohugo.io/) [![node_badge](https://img.shields.io/badge/node-24.15.0-green.svg)](https://nodejs.org/en/) [![docsy_badge](https://img.shields.io/badge/docsy-0.15.0-green.svg)](https://www.docsy.dev/)
 
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
 Build status:
 
-* production [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=production)](https://app.travis-ci.com/github/mendix/docs)
-* development [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=development)](https://app.travis-ci.com/github/mendix/docs)
-
+* production [![Build and Deploy](https://github.com/mendix/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=production)](https://github.com/mendix/docs/actions/workflows/build-and-deploy.yml)
+* development [![Build and Deploy](https://github.com/mendix/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=development)](https://github.com/mendix/docs/actions/workflows/build-and-deploy.yml)
 ## Contribute
 
 Want to contribute? Take a look at [How to Contribute to Mendix Docs](https://docs.mendix.com/community-tools/contribute-to-mendix-docs/). It will guide you through the process of submitting updates to the docs directly from GitHub or from a local branch.
@@ -50,3 +49,7 @@ See the [Hugo Server](https://gohugo.io/commands/hugo_server/) documentation for
 If you are using a Mac, you might get an error `too many open files` or `fatal error: pipe failed`. By default, your Mac is probably set to restrict the number of open files. You will need to override this, see [Docsy known issues](https://www.docsy.dev/docs/getting-started/#known-issues) for more information.
 
 If your system has a low memory limit, add the `--renderToDisk` parameter to the Hugo command (for example, `hugo server --environment development --renderToDisk`). With this option, Hugo only loads pages on demand; without the `--renderToDisk` option, Hugo loads all documentation into memory for faster access.
+
+## Mendix Documentation MCP Server
+
+Mendix Labs have created an MCP server which you can use with your AI harness to give your models access to the Mendix documentation. You can find it at [mendixlabs/mendix-doc.mcp](https://github.com/mendixlabs/mendix-doc-mcp) in GitHub.

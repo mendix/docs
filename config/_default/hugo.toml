@@ -20,21 +20,23 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
-languageCode = "en-us"
+locale = "en-us"
 
 disableKinds = ["taxonomy", "term"]
 
 # Image processing configuration. (Do we use this - probably not?)
 [imaging]
     resampleFilter = "CatmullRom"
-    quality = 75
     anchor = "smart"
+    
+    [imaging.jpeg]
+        quality = 75
 
 # Language configuration
 
 [languages]
     [languages.en]
-        languageName ="English"
+        label ="English"
         # Weight used for sorting.
         weight = 1
 
@@ -59,7 +61,7 @@ disableKinds = ["taxonomy", "term"]
         startLevel = 2
 
 [module]
-replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
+replacements = "github.com/FortAwesome/Font-Awesome -> @fortawesome/fontawesome-free, github.com/twbs/bootstrap -> bootstrap"
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]

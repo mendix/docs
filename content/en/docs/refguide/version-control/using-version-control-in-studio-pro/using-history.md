@@ -15,7 +15,7 @@ The history of the app is a list of all revisions that have been committed. To v
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-button.png" max-width=60% alt="History Button" >}}
 
-For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits. The **History** dialog box shows the revision number, date, time, author, and message of each revision.
+For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits. The **History** pane shows the revision number, date, time, author, and message of each revision.
 
 {{% alert color="info" %}}
 

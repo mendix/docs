@@ -6,6 +6,7 @@ description: "Demo file for SVG icon shortcodes."
 draft: true
 ---
 <!-- markdownlint-disable-file -->
+<!-- vale off -->
 
 ## Introduction
 
@@ -20,6 +21,8 @@ To see more information about the pipeline, click **Details** ({{% icon name="no
 ## Syntax
 
 This shortcode has two attributes:
+
+This edit is temporary and will be removed after the demo.
 
 * `name` (required) — This must exactly match the name of the file in the *docs/static/mx-icons* library.
 * `color` (optional) – By default, the icon has the same color as the surrounding text. You can override this by specifying an optional `color` attribute, like this: {{% icon name="alert-circle" color="red" %}}. You can set the color to green, red, blue, gray, yellow, or purple.
@@ -41,6 +44,7 @@ Here are some icons that might be particularly useful for the docs. In the list 
 * checkmark-circle: **Save** ({{% icon name="checkmark-circle" %}})
 * checkmark-circle-filled: **Success** ({{% icon name="checkmark-circle-filled" color="green" %}})
 * chevron-down: **Move Down** ({{% icon name="chevron-down" %}})
+* copy: **Copy** ({{% icon name="copy" %}})
 * chevron-left: **Move Left** ({{% icon name="chevron-left" %}})
 * chevron-right: **Move Right** ({{% icon name="chevron-right" %}})
 * chevron-up: **Move Up** ({{% icon name="chevron-up" %}})

@@ -3,13 +3,8 @@ title: "Certificate Management"
 linktitle: "Certificate Management"
 url: /control-center/certificate-management/
 description: "Describes the Certificate Management page in Mendix Control Center."
-weight: 40
-beta: true
+weight: 50
 ---
-
-{{% alert color="warning" %}}
-This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 

@@ -2,7 +2,7 @@
 title: "Designcenter X Cloud Services Connector"
 url: /appstore/industry/siemens/designcenter/
 weight: 40
-description: ""
+description: "Describes how to install and configure the Designcenter X Cloud Services Connector in a Mendix application."
 ---
 ## Introduction
 

@@ -16,6 +16,16 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## July 2026
 
+### July 30, 2026
+
+#### New Features
+
+* We have added three new database graphs to the [Metrics](/developerportal/operate/metrics/) page:
+
+    * [Average Database Bloat Ratio](/developerportal/operate/metrics/#Trends-dbavgbloatratio) – tracks dead rows across user tables to spot when autovacuum lags.
+    * [Maximum Table Bloat Ratio](/developerportal/operate/metrics/#Trends-dbmaxtablebloatratio) – highlights the bloat percentage of the single most bloated table (system vs. application).
+    * [Largest Table Size](/developerportal/operate/metrics/#Trends-dblargesttablesize) – shows the size of the biggest table to help identify archiving or partitioning needs.
+
 ### July 20, 2026
 
 #### Improvements

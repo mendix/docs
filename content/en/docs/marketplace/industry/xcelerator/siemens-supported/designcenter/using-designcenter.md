@@ -1,19 +1,19 @@
 ---
 title: "Using Designcenter X Cloud Services Connector"
-url: /appstore/industry/siemens/designcenter/
+url: /appstore/industry/siemens/designcenter/using-designcenter/
 weight: 60
-description: ""
+description: "How to build Mendix apps using the Designcenter X Cloud Services Connector, including available microflows, inputs and outputs, and best practices."
 ---
 
 ## Introduction
 
-This document guides you in building Mendix applications on top of the [Designcenter X Cloud Services Connector](placeholder). It walks through the available microflows, their inputs and outputs, a worked end to-end example, and best practices for production use.
+This page guides you through building Mendix apps on top of the [Designcenter X Cloud Services Connector](placeholder). It covers the available microflows, their inputs and outputs, a worked end-to-end example, and best practices for production use.
 
 ## Prerequisites
 
-Configure the OIDC SSO and required constants in your application. For more information, refer to Designcenter X Cloud Services Connector and the Setup_OIDC_SSO.md guide.
+Configure the OIDC SSO and required constants in your app. For more information, see [Configuring the Connector for Single Sign-On](/appstore/industry/siemens/designcenter/sso/).
 
-To help you develop your application, familiarize yourself with the [Mendix Studio Pro Guide](/refguide/), especially the following topics:
+To help you develop your app, familiarize yourself with the [Mendix Studio Pro Guide](/refguide/), especially the following topics:
 
 * [Studio Pro Overview](/refguide/studio-pro-overview/)
 * [Data in the Domain Model](/refguide/domain-model/)
@@ -24,9 +24,9 @@ To help you develop your application, familiarize yourself with the [Mendix Stud
 ## Concepts
 
 * Session – a handle that ensures the same Teamcenter server is used across service calls. The `EstablishSession` microflow either creates a new session or returns an existing one, so the same handle can be reused safely across operations.
-* Environment (Tenant) – the Teamcenter X environment that the session targets. A single user/ECA may have access to multiple environments.
-* Job – an asynchronous unit of work (e.g., a visual report run or a clearance analysis). Job returns a Job ID immediately and completes in the background.
-* Domain mapping – results returned by jobs are JSON. The Connector ships helpers that convert these JSON payloads into Mendix domain objects (VisualReportData) for easy querying and persistence
+* Environment (Tenant) – the Teamcenter X environment that the session targets. A single user or ECA may have access to multiple environments.
+* Job – an asynchronous unit of work (for example, a visual report run or a clearance analysis). A job returns a Job ID immediately and completes in the background.
+* Domain mapping – job results are returned as JSON. The connector ships helpers that convert these JSON payloads into Mendix domain objects (`VisualReportData`) for easy querying and persistence.
 
 ## Using Microflows
 
@@ -34,7 +34,7 @@ The following sections provide more information about using all operations avail
 
 ### Session Lifecycle
 
-#### ` POST_EstablishSession`
+#### `POST_EstablishSession`
 
 Call `POST_EstablishSession` to create a new session or return an existing one, ensuring the same Teamcenter server is used across service calls.
 
@@ -80,7 +80,7 @@ Call `GET_VisualReportNames_Request` to list available visual report definitions
 
 #### `POST_GenerateVisualReport_Request`
 
-Call P`OST_GenerateVisualReport_Request` to run one or more visual reports against a part or assembly.
+Call `POST_GenerateVisualReport_Request` to run one or more visual reports against a part or assembly.
 
 * **Input**: Session, PartID, ReportIDs, ProcessingType
 * **Output**: JobID
@@ -120,24 +120,23 @@ Call `GET_VisualReportDataListFromJobId` to convert a visual report job's payloa
 * **Input**: Session, JobID
 * **Output**: List of VisualReportData
 
-## Connector Integration Workflow 
+## Connector Integration Workflow
 
-The example workflow below shows the sequence of interations between the Mendix app, the connector, Teamcenter, and Designcenter X Cloud Services during the process.
+The diagram below shows the sequence of interactions between the Mendix app, the connector, Teamcenter, and Designcenter X Cloud Services.
 
-### Polling vs. user-driven retrieval
+### Polling vs. User-Driven Retrieval
 
-The Connector does not push notifications when a job finishes. You have two practical options:
+The connector does not push notifications when a job finishes. You have two options:
 
-* User-driven – show the user a **Refresh results** button that re-runs `GET_JobsByTypes` +
-`GET_VisualReportDataListFromJobId`. Simple and adequate for most analytical workflows.
+* User-driven – show the user a **Refresh results** button that re-runs `GET_JobsByTypes` and `GET_VisualReportDataListFromJobId`. This is simple and adequate for most analytical workflows.
 
-* Scheduled poll – use a scheduled event microflow to poll outstanding job IDs (stored in your domain) every N seconds/minutes, fetch results, and update status. Best for "fire-and-forget" workflows where the result feeds another process.
+* Scheduled poll – use a scheduled event microflow to poll outstanding job IDs (stored in your domain) every N seconds or minutes, fetch results, and update status. This approach works best for fire-and-forget workflows where the result feeds another process.
 
 ## Working with Job Results
 
 `GET_DataForJobId` returns raw JSON, which is useful when you want to store the full payload (for example, for audit) or post-process it yourself.
 
-For visual reports, prefer `GET_VisualReportDataListFromJobId`. It maps the payload onto the `VisualReportData` domain entity that ships with the Connector. Typical attributes you will work with include:
+For visual reports, prefer `GET_VisualReportDataListFromJobId`. It maps the payload onto the `VisualReportData` domain entity that ships with the connector. Typical attributes include:
 
 * Part identifier and revision
 * Report definition reference
@@ -150,7 +149,7 @@ Persist `VisualReportData` into your own domain entities if you intend to run an
 
 ## Troubleshooting
 
-This section shows you the most common failure modes and their possible solutions.
+This section describes the most common failure modes and their solutions.
 
 ### Session Expired
 
@@ -158,7 +157,7 @@ If any operation fails after `POST_InitializeTeamcenterSession`, the session may
 
 ### Environment Not Authorized
 
-If `POST_InitializeTeamcenterSession` fails with an authorization error, ask the user to select a different environment and verify the Enterprise Cloud Account (ECA) entitlement in the Siemens Admin Console.
+If `POST_InitializeTeamcenterSession` fails with an authorization error, have the user select a different environment and verify the Enterprise Cloud Account (ECA) entitlement in the Siemens Admin Console.
 
 ### Invalid Part ID
 

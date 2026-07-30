@@ -26,7 +26,7 @@ Before starting this how-to, you need to have the following prerequisites:
 
 * Basic knowledge of DNS (Domain Name System)
 * A licensed node for which you have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
-* A certificate must have been uploaded either at the [application level](/developerportal/deploy/application-level-certificates/) by the Technical Contact or [centrally](/developerportal/deploy/certificates/centralized-certificates/) by the Mendix Admin.
+* A certificate must have been uploaded either at the [application level](/developerportal/deploy/application-level-certifates/) by the Technical Contact or [centrally](/developerportal/deploy/certificates/centralized-certificates/) by the Mendix Admin.
 
 {{% alert color="info" %}}
 Custom domains can be added only to licensed apps. You cannot add custom domains to Free Apps.

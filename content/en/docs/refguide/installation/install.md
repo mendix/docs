@@ -50,7 +50,9 @@ The prerequisites are the following:
 
     | Studio Pro 11.0.0 - 11.6.2 | Studio Pro 11.6.3 and above |
     | --- | --- |
-    | [.NET Desktop Runtime 8.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) <br/> Mendix recommends using version 8.0.10 or above | [.NET Desktop Runtime 10.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) <br/> Mendix recommends using version 10.0.3 or above |
+    | [.NET Desktop Runtime 8.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) <br/> Mendix recommends using version 8.0.10 or above | [.NET Desktop Runtime 10.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) <br/>Mendix recommends using the latest version to ensure you are up to date with security patches. |
+
+    {{% alert color="info" %}}If .NET Desktop Runtime is not installed on your machine, Mendix will install a version which was current at the time this version of Studio Pro was released.{{% /alert %}}
 
 * [Eclipse Temurin JDK 21 (x64 or ARM64)](https://adoptium.net/temurin/releases/?version=21)
 
@@ -65,6 +67,8 @@ Git version 2.48.1 is automatically installed during Studio Pro installation. Ho
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 
 * [Gradle 8.5](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
+
+* [Mendix Java Migration Tool 1.0.1](https://cdn.mendix.com/mendix-java-migration-tool/jmt-1.0.1.jar)
 
 Depending on the error message you get from the installer, you can choose to install a single prerequisite, or you can install them all.
 
@@ -82,12 +86,12 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
 4. Download the prerequisites listed in the **[Troubleshooting](#troubleshooting)** section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
    1. Microsoft .NET Desktop Runtime
-      * For Studio Pro versions 11.0.0 through 11.6.2, rename the Microsoft .NET Desktop Runtime 8.0.x
+      * For Studio Pro versions 11.0.0 through 11.6.2, rename the Microsoft .NET Desktop Runtime 8.0.x to remove the patch version. For example, if you have downloaded .NET Desktop Runtime 8.0.10:
         * On x64, rename *windowsdesktop-runtime-8.0.10-win-x64.exe* to *windowsdesktop-runtime-8.0-x64.exe*
         * On ARM64, rename *windowsdesktop-runtime-8.0.10-win-arm64.exe* to *windowsdesktop-runtime-8.0-arm64.exe*
-      * For Studio Pro versions 11.6.3 and above, rename the Microsoft .NET Desktop Runtime 10.0.x
-         * On x64, rename *windowsdesktop-runtime-10.0.3-win-x64.exe* to *windowsdesktop-runtime-10.0-x64.exe*
-         * On ARM64, rename *windowsdesktop-runtime-10.0.3-win-arm64.exe* to *windowsdesktop-runtime-10.0-arm64.exe*
+      * For Studio Pro versions 11.6.3 and above, rename the Microsoft .NET Desktop Runtime 10.0.x to remove the patch version. For example, if you have downloaded .NET Desktop Runtime 10.0.7:
+         * On x64, rename *windowsdesktop-runtime-10.0.7-win-x64.exe* to *windowsdesktop-runtime-10.0-x64.exe*
+         * On ARM64, rename *windowsdesktop-runtime-10.0.7-win-arm64.exe* to *windowsdesktop-runtime-10.0-arm64.exe*
    2. Eclipse Temurin JDK
       * Rename the Java Development Kit 21 *msi*
         * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_x64.msi*
@@ -103,6 +107,8 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
       * The *MicrosoftEdgeWebview2Setup.exe* does not need to be renamed
    7. Gradle
       * Rename the Gradle zip file to *gradle-8.5-bin.zip*
+   8. Mendix Java Migration Tool (JMT)
+      * Place *jmt-1.0.1.jar* into the **Dependencies** folder without renaming it
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
 If an error occurs during JDK installation, try the following:

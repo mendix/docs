@@ -2,8 +2,8 @@
 title: "Mendix Cloud GenAI"
 url: /agents/mx-cloud-genai/
 linktitle: "Mendix Cloud GenAI"
-weight: 30
-description: "Provides guidance on how to navigate through the Mendix Cloud GenAI Resource Packs."
+weight: 20
+description: "Explains how to access and use Mendix Cloud GenAI Resource Packs."
 no_list: false
 aliases:
     - /appstore/modules/genai/mx-cloud-genai/
@@ -27,6 +27,6 @@ There are three types of resources:
 
 1. Learn about GenAI Resource Packs and how to acquire them in the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) document.
 2. Once you have access to GenAI resources, sign in to the [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) to generate access keys for your resources. This portal provides an overview of all resources you have access to and enables you to request new GenAI resources. For more information, see [Navigate Through the Mendix Cloud GenAI Portal](/agents/mx-cloud-genai/Navigate-MxGenAI/).
-3. Use a starter app containing the [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) (for example, the [BlankGenAI starter app](https://marketplace.mendix.com/link/component/227934)) or implement the connector in your Mendix app. For more information on configuration and usage, see [Mendix Cloud GenAI Connector](/agents/mx-cloud-genai/mxgenai-connector/). Once you have imported an access key in the configuration overview, you are connected to Mendix Cloud GenAI and can access available resources within your application. 
+3. Use a starter app containing the [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) (for example, the [BlankGenAI starter app](https://marketplace.mendix.com/link/component/227934)) or implement the connector in your Mendix app. For more information on configuration and usage, see [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/). Once you have imported an access key in the configuration overview, you are connected to Mendix Cloud GenAI and can access available resources within your application. 
 
 ## Relevant Sources

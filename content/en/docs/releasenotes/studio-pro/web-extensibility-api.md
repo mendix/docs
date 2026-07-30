@@ -8,6 +8,25 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.12.2
+
+* We fixed a bug where the Extensions Overview page would not open if the user was not signed in.
+* We fixed a bug where reloading a Dev extension would cause a crash if extension tabs were still open.
+* We fixed an issue where progress dialogs did not behave like their C# counterpart. Canceling a step now waits for it to finish and return its result. To exit the step and return its result immediately on cancel, pass `resolveImmediatelyOnCancel` to `IDialogApi.showProgressDialog`.
+
+## Version 11.12.1
+
+* We removed timeouts for Custom Blob Document consistency checks instead of showing a generic error in the **Errors** pane. We also added analytics to identify extensions that exceed the previous timeout.
+* We fixed a bug where the icon next to a tab title did not appear.
+* We fixed a bug where the Module Settings form incorrectly showed modules other than Add-on when packaging an extension into a module.
+
+## Version 11.12.0
+
+* We removed the elements helper methods (`add*()`, `get*()`, `getContainer()`, and `delete()`) from the Model API types.
+* We added a `permissionsChanged` event to the [Permissions API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/) that notifies you when the user changes the permissions of your extension.
+* We added the `documentsChanged` event, which notifies you when a document that your extension depends on is modified in Studio Pro.
+* The Studio Pro version is now available through the [Preferences API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/preference-api/).
+
 ## Version 11.11.0
 
 * We added a **New** button to the [Element Selector API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/), which allows users to add new documents and entities from the element selector.

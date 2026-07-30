@@ -22,7 +22,7 @@ Model Resource Packs now use a Cloud Token for the GenAI Units conversion that a
 
 * Knowledge Base Resource Packs provide an OpenSearch-based vector database to support Retrieval-Augmented Generation (RAG), Semantic Search, and other Generative AI use cases.
 
-Developers can use the Mendix Cloud GenAI Portal to manage their Mendix Cloud GenAI resources and seamlessly integrate model and knowledge base capabilities into their Mendix apps using the [Mendix Cloud GenAI Connector](/agents/mx-cloud-genai/mxgenai-connector/). Optimized for high performance and low latency, Mendix Cloud GenAI Resource Packs provide the easiest and fastest way to deliver end-to-end Generative AI solutions with Mendix.
+Developers can use the Mendix Cloud GenAI Portal to manage their Mendix Cloud GenAI resources and seamlessly integrate model and knowledge base capabilities into their Mendix apps using the [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/). Optimized for high performance and low latency, Mendix Cloud GenAI Resource Packs provide the easiest and fastest way to deliver end-to-end Generative AI solutions with Mendix.
 
 ### General Availability
 
@@ -51,12 +51,13 @@ The Mendix Cloud GenAI Resource Packs provide access to the following models:
 | Anthropic Claude Opus 4.6 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Opus 4.7 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Opus 4.8 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
+| Anthropic Claude Opus 5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Cohere Embed v4 | Embeddings | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Cohere Embed v3 <br> English and multilingual | Embeddings | Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> ca-central-1 |
 
 The models are available through the Mendix Cloud, leveraging AWS's highly secure Amazon Bedrock multi-tenant architecture. This architecture employs advanced logical isolation techniques to effectively segregate customer data, requests, and responses, ensuring a level of data protection that aligns with global security compliance requirements. Customer prompts, requests, and responses are neither stored nor used for model training. Your data remains your data.
 
-Customers looking to leverage other models in addition to the above can also take advantage of Mendix's [(Azure) OpenAI Connector](/agents/reference-guide/external-connectors/openai/), Amazon [Bedrock Connector](/agents/reference-guide/external-connectors/bedrock/), and [Mistral Connector](/agents/reference-guide/external-connectors/mistral/) to integrate numerous other models into their apps.
+Customers looking to leverage other models in addition to the above can also take advantage of Mendix's [(Azure) OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/), Amazon [Bedrock Connector](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/), and [Mistral Connector](/agents/agents-kit-2/reference-guide/external-connectors/mistral/) to integrate numerous other models into their apps.
 
 {{% alert color="info" %}}
 If you have questions about upcoming regions or want to explore making models available in your specific region, reach out to [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com).
@@ -76,6 +77,7 @@ For example, if you allocate 50 Cloud Tokens per month, your resource receives 5
 | Claude Opus 4.6 | 179.07 | 895.35 |
 | Claude Opus 4.7 | 179.07 | 895.35 |
 | Claude Opus 4.8 | 179.07 | 895.35 |
+| Claude Opus 5 | 179.07 | 895.35 |
 | Cohere Embed V3 English | 30.23 | — |
 | Cohere Embed V3 Multilingual | 30.23 | — |
 | Cohere Embed V4 | 30.23 | — |
@@ -90,11 +92,9 @@ Unused GenAI Units at the end of a bundle month do not carry over. Your balance 
 
 Company Admins can obtain access to GenAI resources through a self-service capability, enabling them to provision, deprovision, and manage resources independently from the Control Center. This enables faster provisioning and reduces manual dependency.
 
-For Company Admins who do not meet the self-service prerequisites, GenAI resources can still be provisioned or deprovisioned by contacting a sales representative or Customer Success Manager (CSM) to order the existing stock keeping unit (SKU) associated with your Mendix subscription.
-
 ### Provisioning GenAI Resources Using the Self-Service Capability
 
-When using the self-service capability, Company Admins can manage the provisioning and deprovisioning of GenAI resources directly through the [Control Center](https://controlcenter.mendix.com/index.html). They can provision the new resource, review it, and open it in a new tab of the [Mendix Cloud GenAI portal](https://genai.home.mendix.com/p/homepage). For more information, see [GenAI Resources](/control-center/genai-resources-self-service/).
+Using the self-service capability, Company Admins can manage the provisioning and deprovisioning of GenAI resources directly through the [Control Center](https://controlcenter.mendix.com/index.html). They can provision the new resource, review it, and open it in a new tab of the [Mendix Cloud GenAI portal](https://genai.home.mendix.com/p/homepage). For more information, see [GenAI Resources](/control-center/genai-resources-self-service/).
 
 To provision GenAI resources successfully using self-service, ensure that you meet the requirements below:
 
@@ -102,10 +102,6 @@ To provision GenAI resources successfully using self-service, ensure that you me
 2. You have sufficient free Mendix Cloud Tokens. These tokens are required to allocate GenAI Unit capacity. For more information, see [Cloud Tokens](/control-center/cloud-tokens/).
 
 For further details, see the [Prerequisites](/control-center/genai-resources-self-service/#prerequisites) section of *GenAI Resources*.
-
-### Provisioning GenAI Resources Without Using the Self-Service Capability
-
-If the self-service capability is not available in your environment, you can still provision your GenAI resources by ordering the existing SKU associated with your Mendix subscription. To do so, contact your sales representative or CSM.
 
 ## Knowledge Bases
 
@@ -136,7 +132,7 @@ Mendix AI services are powered by third-party technologies, including AWS Bedroc
   
 2. Understand AI Usage Policies
    * Anthropic – [Guidelines for responsible AI use](https://anthropic.com/legal)
-   * Cohere – [Responsible use requirements](https://docs.cohere.com/v2/docs/usage-policy)
+   * Cohere – [Responsible use requirements](https://docs.cohere.com/agents-kit-2/docs/usage-policy)
 
 {{% alert color="info" %}}
 Save these links for future reference. Always review the terms before starting development, and check for updates when notified.
@@ -162,7 +158,7 @@ For more information, see [Navigate Through the Mendix Cloud GenAI Portal](/agen
 
 ### Mendix Cloud GenAI Connector
 
-The [Mendix Cloud GenAI connector](/agents/mx-cloud-genai/mxgenai-connector/) lets you use Mendix Cloud GenAI Resource Packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
+The [Mendix Cloud GenAI connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) lets you use Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
 
 * GenAI for Mendix bundle v2.4.1 (Mendix 9) (contains Mendix Cloud GenAI connector) or
 * Mendix Cloud GenAI connector v3.1.1 (no `DeployedKnowledgeBase` support) or
@@ -181,10 +177,3 @@ Data stored in GenAI Knowledge Base Resources resides in a logically isolated da
 Requests (prompts) sent to and responses (answers, embeddings) received from the models are not stored and not used for training. Only metadata—such as token input/output counts—is collected for logging, monitoring, metering, billing, product improvement, and maintenance purposes.
 
 Data sent to the Knowledge Base (vectors, chunks) is stored in a logically isolated, fully secure vector database, following industry-standard practices. This data is exclusively accessible to you and not used by Mendix. Similar to model requests, only metadata about Knowledge Base usage is collected for logging, monitoring, metering, billing, product improvement, and maintenance purposes.
-
-### Read More
-
-* [Enrich Your Mendix App with Agentic Capabilities](/agents/)
-* [Build a Chatbot Using the AI Bot Starter App](/agents/how-to/starter-template/)
-* [Creating Your First Agent](/agents/how-to/creating-agents/)
-* [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/agents/how-to/howto-groundllm/)

@@ -19,7 +19,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 [Mendix Studio Pro](/refguide/modeling/) 11 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
 We support running on Windows locally, or locally virtualized.
 
-Mendix Studio Pro 11 can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. For information on known limitation, see the [Known Limitations for Mac](#mac-limitations) section below. 
+Mendix Studio Pro 11 can run in beta mode on Apple Silicon (ARM64) Macs running macOS Sonoma 14.0 and above. Starting with Studio Pro 11.12, the native macOS version of Studio Pro supports only Apple Silicon. Intel-based (x64) Macs are no longer supported. This shift allows Mendix to focus on a single native architecture for macOS, improving performance, efficiency, and overall compatibility. For information on known limitations, see the [Known Limitations for Mac](#mac-limitations) section below.
 
 {{% alert color="info" %}}
 While Studio Pro on Mac is in [public beta](/releasenotes/release-status/), Mendix can only verify support for the latest macOS version available. Support for earlier versions is not guaranteed and it is best to update macOS to the newest version when using Studio Pro. 
@@ -91,7 +91,7 @@ Mendix Studio Pro will run on any machine which can run the [minimum requirement
 * **RAM** – recommended 16GB or more depending on the size of your app and how many instances of Studio Pro you want to have open at the same time
 * **Display Resolution** – 1080p (1920x1080)
 
-Mendix Studio Pro on Mac (Beta) runs on any machine compatible with [macOS Sonoma](https://support.apple.com/en-us/105113).
+Mendix Studio Pro on Mac (Beta) runs on any Apple Silicon Mac compatible with [macOS Sonoma](https://support.apple.com/en-us/105113).
 
 These requirements also need to be taken into account when using a virtual machine.
 
@@ -240,12 +240,12 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.6, 10.11, 11.4, 11.8
+* [MariaDB](/refguide/mysql/): 10.11, 11.4, 11.8
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver17): v12 compatibility mode 160 or higher
 * [MySQL](/refguide/mysql/): 8.4
 * [Oracle Database](/refguide/oracle/): 19, 21c, 23ai (including 26ai)
-* PostgreSQL: 13, 14, 15, 16, 17, 18
+* PostgreSQL: 14, 15, 16, 17, 18
 * [SAP HANA](/refguide/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}
@@ -300,6 +300,10 @@ For native and progressive web apps built with Mendix, the following operating s
 * Latest three versions of Android
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
+
+{{% alert color="warning" %}}
+If a new iOS or Android version is released less than 3 months before your Mendix version reaches end of native mobile support, that OS version is not covered for your native mobile app. To support the new OS version, you must upgrade to a newer Mendix version. See [Native Mobile Support Guidelines](/releasenotes/mobile/native-support/) for details.
+{{% /alert %}}
 
 You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support, you must demonstrate that your problem also occurs on a supported operating system version. The oldest operating system version where Mendix native mobile apps can run is determined by [React Native](https://github.com/facebook/react-native?tab=readme-ov-file#-requirements).
 

@@ -1,8 +1,10 @@
 ---
 title: "Configuring the Connection to Teamcenter X"
-url: /appstore/modules/siemens-plm/teamcenterx/
-weight: 5
+url: /appstore/industry/teamcenter-connector/teamcenterx/
+weight: 20
 description: "Describes the steps to connect to Teamcenter X."
+aliases:
+    - /appstore/modules/siemens-plm/teamcenterx/
 ---
 
 {{% alert color="info" %}} This page describes the steps needed to configure the connection between your Mendix app and your TeamcenterX instance using Teamcenter Connector 2506.0.0 and below. For information applying to Teamcenter Connector 2512.0.0 and above, refer to [Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above](/appstore/industry/teamcenter-connector/configuring-connection-2512/). {{% /alert %}}

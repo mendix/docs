@@ -11,14 +11,12 @@ beta: true
 {{% alert color="info" %}}
 Mendix inside Teamcenter is available in Mendix version 11.12.0 and above and is currently in public Beta.
 
-The Teamcenter connector version 2606.0.0 is required but is not yet published so this documentation is currently for information purposes only.
-
 See the [prerequisites](#prerequisites) for other version requirements.
 {{% /alert %}}
 
 Mendix inside Teamcenter lets you embed a Mendix web app as a native component inside Siemens Teamcenter Active Workspace. The Mendix app runs directly in the Active Workspace page as a micro-frontend using the [Embedded Client](/refguide/mendix-client/embedding-the-client/) feature.
 
-This integration requires the [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/) to connect the Mendix app to Teamcenter data and to handle authentication.
+This integration requires the [Teamcenter Connector](/appstore/industry/teamcenter-connector/) to connect the Mendix app to Teamcenter data and to handle authentication.
 
 ## Prerequisites {#prerequisites}
 
@@ -233,6 +231,6 @@ For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/
 ## Read More
 
 * [Embedding the Client](/refguide/mendix-client/embedding-the-client/)
-* [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/)
+* [Teamcenter Connector](/appstore/industry/teamcenter-connector/)
 * [Setting Up the Navigation Structure](/refguide/setting-up-the-navigation-structure/)
 * [Configure CORS](/refguide/configure-cors/)

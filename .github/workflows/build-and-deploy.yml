@@ -8,7 +8,7 @@ on:
     branches:
       - production
       - development
-  # Runs build + htmltest on PRs targeting development or production — deploy is skipped
+  # Runs build + htmltest on PRs targeting development or production. Deploy is skipped
   pull_request:
     branches:
       - production
@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Target environment to build (development or production)'
+        description: 'Target environment for dry run (development or production)'
         required: true
         default: 'development'
 
@@ -28,7 +28,8 @@ jobs:
       target: ${{ steps.env.outputs.target }}
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+      # Cancel superseded PR runs and development push runs; keep production push runs intact.
+      cancel-in-progress: ${{ github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name == 'development') }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
@@ -94,7 +95,8 @@ jobs:
     environment: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.environment || github.ref_name }}
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-deploy
-      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+      # Never cancel an in-flight deployment; serialize deploys per ref.
+      cancel-in-progress: false
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6

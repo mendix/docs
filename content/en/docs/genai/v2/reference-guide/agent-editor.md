@@ -225,6 +225,10 @@ When these conditions are met, you can use the test functionality to validate pr
 
 If a call fails during testing, a generic error message is shown in the Agent Editor UI. Detailed error information is available in the running app console in Studio Pro (the **Console** pane), similar to errors you would inspect while testing the app itself.
 
+{{% alert color="info" %}}
+While it is possible to configure streaming as well as user permissions for tools and knowledge bases, these settings are currently not reflected in the playground in Studio Pro, but will be considered at runtime when calling an agent defined in Studio Pro.
+{{% /alert %}}
+
 ### Including the Agent in the App Logic {#call-agent}
 
 Include an agent in the app logic by calling it from a microflow. Agent Editor provides **Call Agent** toolbox actions in the **Agent Editor** category:

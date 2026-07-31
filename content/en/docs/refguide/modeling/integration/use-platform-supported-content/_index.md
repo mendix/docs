@@ -28,10 +28,6 @@ Documents available for this topic:
 
    Details how to use the External Database Connector to query external databases and integrate the data into your Mendix application.
 
-* [Execute an SQL Statement on an External Database](/refguide/execute-an-sql-statement-on-an-external-database/)
-
-   Describes how to execute an SQL statement on relational external databases using the Database Connector.
-
 ## Read More
 
 * [Mendix Business Events](/appstore/services/business-events/)

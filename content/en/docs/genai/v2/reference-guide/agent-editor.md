@@ -265,6 +265,7 @@ Use version control to view and restore previous agent versions. This lets you i
 * MCP tool support is limited to whole-server integration. Selecting individual tools from a consumed MCP service to be added to an agent is not yet supported. That also means that the tool choice option `Tool` can only refer to a microflow tool currently.
 * If a document referenced by an Agent document is excluded, Studio Pro shows a consistency error. These consistency errors may not be resolved automatically when you include the excluded document again. Resolve this by synchronizing the app directory (<kbd>F4</kbd>) or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again).
 * The extension creates a `/agenteditor` log folder in the app directory. This folder is not excluded from version control automatically when you include the module from Marketplace. Add this folder to `.gitignore` manually, as described in the [First-time setup](#setup) section.
+* While it is possible to configure streaming as well as user permissions for tools and knowledge bases, these settings are currently not reflected in the playground in Studio Pro, but will be considered at runtime when calling an agent defined in Studio Pro.
 
 ## Troubleshooting {#troubleshooting}
 

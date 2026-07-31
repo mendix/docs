@@ -33,7 +33,7 @@ The connector is licensed under the Apache 2.0 License.
 
 ## Prerequisites
 
-* Studio Pro 10.24 or above
+* Studio Pro 10.24 and above
 * A valid Siemens Enterprise Cloud Account (ECA) with an entitlement to a Designcenter X product tier and value-based licensing tokens
 * Access to the [Siemens Admin Console](https://cloud.sws.siemens.com/admin/) to provision server users and credentials
 * Built-in Data Management (Teamcenter X Essentials) or a higher Teamcenter X tier (Standard, Advanced, or Premium)

@@ -13,7 +13,7 @@ This page explains how to configure OAuth single sign-on (SSO) so your Mendix ap
 
 To create a server user and obtain client credentials, follow these steps:
 
-1. Sign in to the Siemens Admin Console and navigate to **Designcenter X** under **Products**.
+1. Sign in to the [Siemens Admin Console](https://cloud.sws.siemens.com/admin/) and navigate to **Designcenter X** under **Products**.
 2. Open **Server Users** and click **Create server user**.
 3. Fill in the **Name**, **Tier**, and **Role** fields. Enter *Application Owner* as the **Role** and click **Create**.
 4. Click **Download Credentials** and save the file securely. The file contains the **Client ID** and **Client Secret**.
@@ -26,6 +26,8 @@ To create a server user and obtain client credentials, follow these steps:
 2. Set the **Security level** to **Production**.
 3. In the **User roles** tab, edit the **Administrator** role and assign the OIDC, UserCommons, and Designcenter X Cloud Services Connector **Administrator** module roles.
 4. Edit the **User** role and assign the OIDC and Designcenter X Cloud Services Connector **User** module roles.
+
+{{< figure src="/attachments/partners/siemens/designcenter/app-security-roles.png" alt="app security configuration" >}}
 
 ### Configuring Navigation
 
@@ -52,6 +54,8 @@ Keep the encryption key private and store it securely in your environment settin
     * Client Secret – the authentication key generated from the Siemens Admin Console. For more information, see the [Creating a Server User](#creating-a-server-user) section above.
     * ECA ID – your Enterprise Cloud Account identifier.
     * Region – the region where your Designcenter X product was provisioned in the Siemens Admin Console.
+
+    {{< figure src="/attachments/partners/siemens/designcenter/configure-sso.png" alt="SSO configuration" >}}
 
 3. Save the configuration. The primary and secondary fields are now populated. Sign out of the app.
 
@@ -107,3 +111,8 @@ To resolve this, go to the **Designcenter Admin** page, click **Delete Client Cr
 #### Server User Is Already Configured
 
 This error occurs when the same server user is already configured by another user in the same app. To resolve this, go to the **Designcenter Admin** page, click **Delete Client Credentials** to remove the existing credentials, then reconfigure the server user.
+
+## Read More
+
+* [Designcenter X Cloud Services Connector](/appstore/industry/siemens/designcenter/)
+* [Using Designcenter X Cloud Services Connector](/appstore/industry/siemens/designcenter/using-designcenter/)

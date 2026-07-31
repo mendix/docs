@@ -124,6 +124,8 @@ Call `GET_VisualReportDataListFromJobId` to convert a visual report job's payloa
 
 The diagram below shows the sequence of interactions between the Mendix app, the connector, Teamcenter, and Designcenter X Cloud Services.
 
+{{< figure src="/attachments/partners/siemens/designcenter/workflow.png" alt="connector workflow" >}}
+
 ### Polling vs. User-Driven Retrieval
 
 The connector does not push notifications when a job finishes. You have two options:
@@ -182,3 +184,8 @@ A small reusable sub-microflow that centralizes "re-establish session and retry 
 * Page large result sets: Visual reports on large assemblies can return thousands of rows. Page or stream results into your domain model rather than loading the full list into memory at once.
 
 * Isolate connector calls in a service layer: Wrap each connector microflow in a thin custom microflow (for example, `SUB_RunVisualReport`) so that future connector upgrades only affect one layer of your app.
+
+## Read More
+
+* [Designcenter X Cloud Services Connector](/appstore/industry/siemens/designcenter/)
+* [Configuring the Connector for Single Sign-On](/appstore/industry/siemens/designcenter/sso/)

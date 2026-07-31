@@ -49,7 +49,7 @@ Mendix [connectors](/agents/agents-kit-2/#connectors) offer direct support for t
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| [Anthropic Claude Sonnet Models](/agents/mx-cloud-genai/resource-packs/#supported-models) | Chat completions | text, image, document | text | Function calling |
+| [Anthropic Claude Models](/agents/mx-cloud-genai/resource-packs/#supported-models) | Chat completions | text, image, document | text | Function calling |
 | [Cohere Embed Models](/agents/mx-cloud-genai/resource-packs/#supported-models) | Embeddings | text | embeddings | |
 
 ### Microsoft Foundry (OpenAI) / OpenAI

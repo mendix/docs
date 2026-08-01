@@ -93,6 +93,7 @@ To build a Docker image from the Portable Package, perform the following steps:
     # Set the start script to the Mendix Runtime execute command
     CMD ["./bin/start", "etc/Default"]
     ```
+
 {{% alert color="info" %}}
 The Docker image example shows how to use OpenJDK binaries built by Eclipse Temurin. However, you may select any Java image that suits your needs, including [Hardened Images](https://docs.redhat.com/en/documentation/red_hat_hardened_images/1-latest), which provide a minimal, secure foundation for containerized workloads.
 {{% /alert %}}
@@ -101,8 +102,8 @@ The Docker image example shows how to use OpenJDK binaries built by Eclipse Temu
 
 3. Build the Docker image by using the following command: `docker build -t <your-image-name>:<tag> -f build/docker/Dockerfile`, where:
 
-   * `<your-image-name>` and `<tag>` - Indicate your required image name and version tag (for example, `my-mendix-app:1.0.0`).
-   * `-f build/docker/Dockerfile` - Specifies the path to your Dockerfile.
+* `<your-image-name>` and `<tag>` - Indicate your required image name and version tag (for example, `my-mendix-app:1.0.0`).
+* `-f build/docker/Dockerfile` - Specifies the path to your Dockerfile.
 
 ### Optional: Pushing the Docker Image
 

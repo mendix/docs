@@ -78,5 +78,3 @@ The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIE
 For information about using Snowflake's role-based access control in a Mendix application, see [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
 
 ## Documents in This Category
-
-

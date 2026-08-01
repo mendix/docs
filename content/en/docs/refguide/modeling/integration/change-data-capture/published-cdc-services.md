@@ -37,7 +37,6 @@ Use the toolbar to manage tracked entities:
 * {{% icon name="subtract-circle" %}} **Remove** – stop tracking a selected entity
 * {{% icon name="refresh" %}} **Accept changes** – lock in the current [Revision](#revisions) numbers after reviewing modifications 
 
-
 {{< figure src="/attachments/refguide/modeling/integration/change-data-capture/published-cdc-service.png" alt="Published CDC Service document showing the Entities to track table with columns for Exposed name, Modification, Revision, and Topic" >}}
 
 ### Entities
@@ -59,7 +58,6 @@ The **Revision** column is the schema revision of the entity's event payload. Se
 ### Topic
 
 The **Topic** column is the Kafka topic name for this entity, in the format `cdc.<app-name>.<ExposedName>.<revision>.{space}`, where `{space}` is replaced at runtime by the Event Broker space name. See the [Bring Your Own Kafka (BYOK)](/refguide/change-data-capture/#byok-configuration) section of *Change Data Capture* for more information.
-
 
 ## Attribute and Association Selection {#attributes}
 

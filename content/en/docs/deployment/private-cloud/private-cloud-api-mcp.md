@@ -91,7 +91,7 @@ To add the Mendix on Kubernetes MCP server in VS Code, perform the following ste
 }
 ```
 
-2. Replace the placeholder values with your credentials as described in the [Claude Code](#claude-code) section above.
+1. Replace the placeholder values with your credentials as described in the [Claude Code](#claude-code) section above.
 
 ## Available Capabilities {#capabilities}
 
@@ -119,7 +119,6 @@ Once connected, your AI assistant has access to the following capabilities.
 | Get apps manifest                | `mx:deployment:write` and `mx:app:metadata:read` |                        
 | Get app manifest                | `mx:deployment:write` and `mx:app:metadata:read` |                              
 | Get job                          | `mx:deployment:read`  and `mx:deployment:write`  |
-
 
 ### Deployments and Packages
 

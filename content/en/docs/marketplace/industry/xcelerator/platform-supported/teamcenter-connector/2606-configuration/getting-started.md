@@ -105,7 +105,7 @@ The following steps walk you through creating and building a Teamcenter service 
         * **Read** — Should this property be retrieved from Teamcenter?
         * **Write** — Should this property be sent to Teamcenter when creating or updating? Write checkboxes are only available in integrations where you can write data to Teamcenter. 
 
-        3. From the **Property Mapping** window, select the properties you need for your integration.
+        1. From the **Property Mapping** window, select the properties you need for your integration.
 
         {{< figure src="/attachments/appstore/industry-components/teamcenter/teamcenter2606/property-mapping.png" alt="Property Mapping window" max-width=80% >}}
 

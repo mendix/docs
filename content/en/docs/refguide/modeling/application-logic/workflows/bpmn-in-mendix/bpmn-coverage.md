@@ -113,7 +113,6 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 | Intermediate Boundary (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event](/refguide/notification/) to catch the event, and use a microflow to handle the error logic and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when an error occurs.                                                    |
 | End | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the error before the process completes.                                                                              |
 
-
 ### Signal Events {#signal-events}
 
 | Variant | Support Level | How                                                                                                                                                                                                                                                                                   |
@@ -138,7 +137,6 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 | Intermediate Boundary (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event](/refguide/notification/) to catch the event, and use a microflow to evaluate or create the condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the condition is met. |
 | Intermediate Boundary (Non-Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Non-Interrupting Notification Event](/refguide/notification/) to catch the event, and use a microflow to evaluate or create the condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the condition is met. |
 
-
 ### Escalation Events {#escalation-events}
 
 | Variant | Support Level | How                                                                                                                                                                                                                                                                                                                              |
@@ -150,7 +148,6 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 | Intermediate Throw | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the escalation and continue the flow.                                                                                                             |
 | End | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the escalation before the process completes.                                                                                                      |
 
-
 ### Compensation Events {#compensation-events}
 
 | Variant | Support Level | How                                                                                                                                                                                                                                                                                                                               |
@@ -159,7 +156,6 @@ Mendix supports a broad range of BPMN event types. Some are available directly a
 | Intermediate Boundary (Interrupting) | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use an [Interrupting Notification Event](/refguide/notification/) to catch the event, and use a microflow to evaluate the compensation condition and send a notification using a [Notify Workflow](/refguide/notify-workflow/) activity when the compensation needs to happen.                                                                    |
 | Intermediate Throw | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the compensation and redirect the flow to the compensating activity.                                                                               |
 | End | {{< icon name="controls-stop-filled" color="green" >}} Platform Native | Use a [Call Microflow](/refguide/call-microflow/) activity as the throw event. Within the microflow, include a [Notify Workflow](/refguide/notify-workflow/) activity to throw the compensation before the process completes.                                                                                                     |
-
 
 ### Cancel Events {#cancel-events}
 

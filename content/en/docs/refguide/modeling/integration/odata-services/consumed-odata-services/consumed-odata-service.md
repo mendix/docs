@@ -19,12 +19,12 @@ The **Consumed OData Service** document contains the following information:
 
 {{< figure src="/attachments/refguide/modeling/integration/odata-services/consumed-odata-service/consumed-odata-service-screen.png" alt="Connection Tab" width="650" class="no-border" >}}
 
-- Service name and icon for the source application of the originating app
-- Version number of the consumed service
-- **View in Catalog** link to the **Service Details** where you can see the full details that are registered
-- **Update/Switch** – You can update the consumed service contract to another version that has been detected in the [Catalog](/catalog/) for the same app and service. The button will show the following, depending on what has been returned for the consumed contract:
-  - **Update** – This button is displayed so you can update the contract that is currently consumed and shown in the **Consumed OData Service** document. You will be presented with the contract that is currently at the service endpoint. It is good practice that only minor, non-breaking changes are deployed to the same endpoint.
-  - **Switch** – This button is shown if other registered instances of the same service with the same name, from the same app are available in the Catalog, but are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
+* Service name and icon for the source application of the originating app
+* Version number of the consumed service
+* **View in Catalog** link to the **Service Details** where you can see the full details that are registered
+* **Update/Switch** – You can update the consumed service contract to another version that has been detected in the [Catalog](/catalog/) for the same app and service. The button will show the following, depending on what has been returned for the consumed contract:
+    * **Update** – This button is displayed so you can update the contract that is currently consumed and shown in the **Consumed OData Service** document. You will be presented with the contract that is currently at the service endpoint. It is good practice that only minor, non-breaking changes are deployed to the same endpoint.
+    * **Switch** – This button is shown if other registered instances of the same service with the same name, from the same app are available in the Catalog, but are deployed to different endpoints (for example, to another environment or because of changes that would break existing apps consuming the previous version)
 
   {{% alert color="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Catalog search and **App** pane, when a different contract is detected at the service endpoint, it will be indicated with an update arrow for the service. For more information on updating and switching services, see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
@@ -34,22 +34,22 @@ The **Consumed OData Service** document contains the following information:
 
 You can use either constants or a microflow to set the service URL and proxy settings.
 
-- Use constants when the service URL and proxy settings are always the same.
-- Use a connection microflow when you need more control. For more information, see the [Connection and Headers Microflow](#connection-and-headers-microflow) section below.
+* Use constants when the service URL and proxy settings are always the same.
+* Use a connection microflow when you need more control. For more information, see the [Connection and Headers Microflow](#connection-and-headers-microflow) section below.
 
 #### Service URL {#service-url}
 
 The **Service URL** displays a constant that specifies the URL of the service endpoint. 
 
-- In the **Service URL** field, click **Select** to choose another [constant](/refguide/constants/).
-- Choose a constant or click **New** to create a new one. Then, click **Show** to open the **Constant** dialog box and view the service URL or endpoint.
+* In the **Service URL** field, click **Select** to choose another [constant](/refguide/constants/).
+* Choose a constant or click **New** to create a new one. Then, click **Show** to open the **Constant** dialog box and view the service URL or endpoint.
 
 #### Connection microflow
 
 The **Connection microflow** displays the microflow that the app uses to retrieve the service URL, proxy settings and headers. See the [Connection and Headers Microflow](#connection-and-headers-microflow) section below for details about how to create such a microflow.
 
-- Click **Select** to choose another microflow.
-- Click **Show** to open the microflow.
+* Click **Select** to choose another microflow.
+* Click **Show** to open the microflow.
 
 ### Configuration for Studio Pro 11.12 and below
 
@@ -65,9 +65,9 @@ For more information, see the [Connection and Headers Microflow](#connection-and
 
 **Proxy configuration** allows you to configure a proxy for the request. There are three options for configuration:
 
-- **Follow app settings** – Use settings which are defined at the app level (default)
-- **Override app settings** – Override the app-level settings for this action by specifying constants for the host, port, user name, and password for the proxy
-- **No proxy** – Do not use a proxy for this service, even if there is a proxy configured at the app level
+* **Follow app settings** – Use settings which are defined at the app level (default)
+* **Override app settings** – Override the app-level settings for this action by specifying constants for the host, port, user name, and password for the proxy
+* **No proxy** – Do not use a proxy for this service, even if there is a proxy configured at the app level
 
 {{< figure src="/attachments/refguide/modeling/integration/odata-services/consumed-odata-service/proxy.png" alt="Connection Tab" width="650" class="no-border" >}}
 
@@ -81,8 +81,8 @@ In most cases, this setting can be ignored and the default **Follow app settings
 
 Select **Basic authentication** to use basic authentication. If selected, specify the following details:
 
-- **User name** – an expression for the user name used for authentication
-- **Password** – an expression for the password used for authentication
+* **User name** – an expression for the user name used for authentication
+* **Password** – an expression for the password used for authentication
 
 You can also use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
@@ -100,13 +100,13 @@ If the service uses a combination of a connection microflow, a headers microflow
 
 Choose a microflow that returns one of the following options:
 
-- A **System.ConsumedODataConfiguration** object with associated **System.HttpHeader** objects (for **Configuration microflow**)
-- A list of **System.HttpHeader** objects (for **Headers microflow**)
+* A **System.ConsumedODataConfiguration** object with associated **System.HttpHeader** objects (for **Configuration microflow**)
+* A list of **System.HttpHeader** objects (for **Headers microflow**)
 
 This microflow can take a parameter of type **System.HttpResponse**. It is called every time a request is made. Initially, the HTTP response parameter is empty. If the service responds with `401 Unauthorized`, the microflow is called with that HTTP response and another request is made with the new HTTP headers.
 
 {{% alert color="info" %}}
-Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For more information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in _Security and Shared Datasets_.
+Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For more information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in *Security and Shared Datasets*.
 {{% /alert %}}
 
 ### Advanced
@@ -135,13 +135,13 @@ Note for developers of Java actions: the message returned by the error handling 
 The Mendix SSO module is deprecated as of May 1, 2026. For new implementations, it is recommended to configure custom authentication using [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/) modules.
 {{% /alert %}}
 
-Publishers can set up [custom authentication](/refguide/published-odata-services/#authentication-microflow) using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of _Published OData Services_.
+Publishers can set up [custom authentication](/refguide/published-odata-services/#authentication-microflow) using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*.
 
 Consumers of an OData service that is set up with Mendix SSO authentication can use the **CreateAccessTokenAuthorizationHeaderList**.
 
-To learn more about how to publish an OData service with authentication (Mendix SSO, or other methods), see the [Authentication Methods](/refguide/published-odata-services/#authentication-methods) section of _Published OData Services_.
+To learn more about how to publish an OData service with authentication (Mendix SSO, or other methods), see the [Authentication Methods](/refguide/published-odata-services/#authentication-methods) section of *Published OData Services*.
 
-To learn more about using external entities with security enabled (in production environments), see the [Authentication](/refguide/external-entities/#authentication) section of _External Entities_.
+To learn more about using external entities with security enabled (in production environments), see the [Authentication](/refguide/external-entities/#authentication) section of *External Entities*.
 
 ### Metadata
 
@@ -153,9 +153,9 @@ To open the **Metadata Editor**, click **Update**. In the editor, you can specif
 
 The following settings are available:
 
-- **Import from** – select **URL** or **File** for the location of the metadata
-  - **URL** – specify the URL for the metadata
-  - **File** – click **Browse** to select a metadata file
+* **Import from** – select **URL** or **File** for the location of the metadata
+    * **URL** – specify the URL for the metadata
+    * **File** – click **Browse** to select a metadata file
 
     You can use the URL of a file that contains the metadata, such as `https://services.odata.org/V4/Northwind/Northwind.svc/$metadata`. You can also click [Share Data Source](/catalog/manage/search/#service-details) in the details of a data source in the [Catalog](https://catalog.mendix.com/) and paste that value.
 
@@ -173,14 +173,14 @@ Click the **Properties** tab for the consumed OData service which displays the p
 
 {{< figure src="/attachments/refguide/modeling/integration/odata-services/consumed-odata-service/properties-tab.png" width="300"  class="no-border" >}}
 
-- **Entities** – the URL of the metadata defining the entities and associated datasets
-- **Documentation** – an additional description about this service for the current app
-- **Service name** – the name of the published OData service that is consumed
-- **Service version** – the version of the service that is consumed
-- **Service ID** – the unique identifier of the service in the Catalog
-- **Application ID** – the unique identifier of the application that the service was published from in the Catalog
-- **Metadata** – the contents of the metadata file defining the service
-- **OData version** – the OData version (can be v3 or v4)
+* **Entities** – the URL of the metadata defining the entities and associated datasets
+* **Documentation** – an additional description about this service for the current app
+* **Service name** – the name of the published OData service that is consumed
+* **Service version** – the version of the service that is consumed
+* **Service ID** – the unique identifier of the service in the Catalog
+* **Application ID** – the unique identifier of the application that the service was published from in the Catalog
+* **Metadata** – the contents of the metadata file defining the service
+* **OData version** – the OData version (can be v3 or v4)
 
 #### Using QuerySegment
 
@@ -238,7 +238,7 @@ When a change in the contract at a consumed endpoint is detected (possibly due t
 
 The **Update** option is available when Studio Pro detects that the contract at the Catalog endpoint is different than the one currently consumed in the app. If **Update** is selected, the new contract will be loaded in the app.
 
-See the [Limitations](/refguide/consumed-odata-services/#consumed-odata-service-limitations) section of _Consumed OData Services_ to read about known update limitations.
+See the [Limitations](/refguide/consumed-odata-services/#consumed-odata-service-limitations) section of *Consumed OData Services* to read about known update limitations.
 
 ##### Integration Pane
 
@@ -246,9 +246,9 @@ In the [Integration pane](/refguide/integration-pane/), search results, and in t
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/integration-pane/update-available.png" alt="Integration pane update" class="no-border" width="300" >}}
 
-- The service version that is currently consumed is shown (in this example **1.2.0**).
-- Blue **Update** - click to open the **Update Service** box and update the contract. Studio Pro will retrieve the new contract at the Catalog endpoint, which will be loaded in the app.
-- When the Integration pane is showing search results, the displayed elements represent the assets available in the new version of the service that is found in the Catalog. When it is not showing search results, it shows the elements available for the currently consumed version of the service.
+* The service version that is currently consumed is shown (in this example **1.2.0**).
+* Blue **Update** - click to open the **Update Service** box and update the contract. Studio Pro will retrieve the new contract at the Catalog endpoint, which will be loaded in the app.
+* When the Integration pane is showing search results, the displayed elements represent the assets available in the new version of the service that is found in the Catalog. When it is not showing search results, it shows the elements available for the currently consumed version of the service.
 
 ##### Update Service Dialog Box
 
@@ -288,5 +288,5 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
 ## Read More
 
-- [Integration Pane](/refguide/integration-pane/)
-- [Consumed OData Services](/refguide/consumed-odata-services/)
+* [Integration Pane](/refguide/integration-pane/)
+* [Consumed OData Services](/refguide/consumed-odata-services/)

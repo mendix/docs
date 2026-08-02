@@ -6,7 +6,7 @@ description: "Describes the configuration and usage of the OQL module, which is 
 
 ## Introduction
 
-The [OQL Module](https://marketplace.mendix.com/link/component/66876) adds microflow actions which execute [OQL](https://docs.mendix.com/refguide/oql/) queries and return the results as a list of Mendix objects, a count of results in the database, or a CSV file. This means that you do not need to write your own Java actions to execute OQL queries.
+The [OQL Module](https://marketplace.mendix.com/link/component/66876) adds microflow actions which execute [OQL](/refguide/oql/) queries and return the results as a list of Mendix objects, a count of results in the database, or a CSV file. This means that you do not need to write your own Java actions to execute OQL queries.
 
 ### Typical Use Cases
 
@@ -36,6 +36,10 @@ The OQL module has the following features:
     * Customized to remove new line sequences from string values
 
 ## Available OQL Actions
+
+{{% alert color="warning" %}}
+[Dataset parameters](/refguide/data-sets/#parameters) are ignored when executing any of the actions listed below. [Named parameters](#named-parameters) should be used instead.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 

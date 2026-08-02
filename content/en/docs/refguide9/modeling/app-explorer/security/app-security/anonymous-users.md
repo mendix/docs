@@ -21,6 +21,10 @@ The properties of anonymous users are described in the table below:
 | Allow anonymous users | When **Yes** is selected, anonymous users are allowed. End-users do not have to sign in to access the application. <br />When **No** is selected, anonymous users are not allowed. End-users have to sign in to access the application. |
 | Anonymous user role   | The user role that end-users of your application have when they are not signed in. This tells the application which role should be automatically applied to anonymous users who access the app. The **Allow anonymous users** property should be set to **Yes** to select an anonymous user role. |
 
+{{% alert color="warning" %}}
+Enabling anonymous users allows anyone to use your app without signing in. To prevent unintended data exposure, ensure that the anonymous user role has limited access across your app by configuring appropriate entity and microflow access rules.
+{{% /alert %}}
+
 ## Read More
 
 * [App Security](/refguide9/app-security/)

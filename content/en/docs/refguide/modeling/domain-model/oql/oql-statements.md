@@ -14,15 +14,7 @@ This can be much faster than retrieving the objects in a microflow and then upda
 This feature is currently only accessible through the Java API by writing a Java action.
 
 {{% alert color="info" %}}
-From Mendix version 11.1, you can delete objects in bulk using OQL `DELETE` statements.
-
-From Mendix version 11.3, you can also update object attributes in bulk using OQL `UPDATE` statements.
-
-From Mendix version 11.4, you can update object associations as well as attributes in bulk using OQL `UPDATE` statements.
-
-From Mendix version 11.6, you can insert new objects with attributes in bulk using OQL `INSERT` statements.
-
-In  Mendix versions below 11.8, this feature was considered experimental. From Mendix version 11.8, it is generally available.
+These statements are not available from Mendix 11.0.0. See the summary in the [Version Reference](/refguide/oql/#statement-versions) section of the *OQL* document, or refer to the individual statements, below, to see which Mendix version you need.
 {{% /alert %}}
 
 ## Java API for OQL updates
@@ -164,14 +156,23 @@ SET
 
 ## `INSERT` Statement {#oql-insert}
 
+You can use the `INSERT` statement to insert new entity objects into your data. You can do this in two ways:
+
+* using an OQL query – extracting data and use it to insert one or more new objects
+* using values – specifying explicit values and use these to insert one or more new objects
+
 {{% alert color="info" %}}
-Available from Mendix version 11.6.0
+Available from Mendix version 11.6.0.
+You can use an OQL query from Mendix version 11.6.0.
+You can use values from Mendix version 11.13.0.
 {{% /alert %}}
 
-The syntax of `INSERT` statements is:
+### `INSERT` with OQL Query
+
+Insert with OQL query allows you to extract data using an OQL query and insert those values as one or more entity objects.
 
 ```sql
-INSERT INTO <entity> ( <attribute | <association> [ , …n ] ) <oql-query>
+INSERT INTO <entity> ( <attribute> | <association> [ , …n ] ) <oql-query>
 ```
 
 * `entity` is the entity for which new objects will be created.
@@ -188,6 +189,34 @@ Example:
 ```sql
 INSERT INTO Module.Order ( OrderNumber, CustomerNumber, Module.Order_Customer )
 SELECT NewOrderNumber, Loader.TemporaryData_Customer/Loader.Customer/Number, Loader.TemporaryData_Customer FROM Loader.TemporaryData
+```
+
+### `INSERT` with Values
+
+Insert with values allows you to insert a list of literals, OQL parameters, and OQL expressions as one or more entity objects.
+
+```sql
+INSERT INTO <entity> ( <attribute> [ , …n ] ) VALUES (<expression 1> [, …<expression n>]) [ …, (<expression 1> [, …<expression n>])]
+```
+
+* `entity` is the entity for which new objects will be created.
+
+* `attribute` is an attribute of the entity that will be inserted.
+
+{{% alert color="info" %}}You cannot insert associations when inserting with values.{{% /alert %}}
+
+* `expression x` is any valid expression consisting solely of literals or OQL expressions. Every row must contain the same number of values of compatible types as the list of attributes you are inserting for each entity object.
+
+{{% alert color="info" %}}This expression cannot use OQL clauses to select data from any entities.{{% /alert %}}
+
+Example:
+
+```sql
+INSERT INTO Module.Person ( Name, BirthDate )
+VALUES
+    ( 'Person A', DATEPARSE('01 Jan 1970', 'dd MMM yyyy') ),
+    ( 'Person B', DATEPARSE('20 Mar 1990', 'dd MMM yyyy') ),
+    ( 'Person C', DATEPARSE('14 Jul 1988', 'dd MMM yyyy') )
 ```
 
 ### OQL `INSERT` Limitations

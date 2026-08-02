@@ -43,7 +43,7 @@ This feature is only visible to the Technical Contact.
 
 To change an environment's plan, follow these steps:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/)
+1. Go to [Projects](https://projects.home.mendix.com/)
 2. Click **Environments** on your app. 
 3. On the **Environments** page, click the **Overview** tab to view your environments.
 4. Find your target environment.
@@ -94,7 +94,7 @@ The **Change Requests** tab allows Technical Contacts to view all submitted plan
 
 To access it:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/).
+1. Go to [Projects](https://projects.home.mendix.com/).
 2. Click **Environments** on your app.
 3. Open the **Change Requests** tab.
 
@@ -129,6 +129,10 @@ If the Technical Contact cancels a request, the plan change process is canceled 
 {{% /alert %}}
 
 ## Scheduling a Plan Change {#scheduling-a-plan-change}
+
+{{% alert color="warning" %}}
+Before scheduling a plan change request, check the [Mendix Status Page](https://status.mendix.com) for planned platform maintenance or Cloud Portal releases. Scheduling a plan change during maintenance windows may cause the request to fail.
+{{% /alert %}}
 
 If your request status is **Pending Schedule**:
 

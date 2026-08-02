@@ -2,14 +2,63 @@
 title: "Native Template 14"
 url: /releasenotes/mobile/nt-14-rn/
 weight: 6
-description: "Native Template 14"
+description: "Native Template 14 release notes"
 ---
+
+## 14.1.20
+
+**Release date: July 27, 2026**
+
+### Improvements
+
+* We updated `mendix-native` to address an issue on iOS where a iOS-system dialog would pop up during app startup, requesting a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
+
+## 14.1.19
+
+**Release date: July 21, 2026**
+
+### Improvements
+
+* We properly integrated Firebase BoM logic, fixing a build failure where `com.google.firebase:firebase-analytics` could not be resolved when **Push Notifications** or **Crashlytics** were enabled.
+
+## 14.1.18
+
+**Release date: June 10, 2026**
+
+### Improvements
+
+* We removed the fallback `scijava` Maven repositories.
+
+## 14.1.17
+
+**Release date: May 04, 2026**
+
+### Improvements
+
+* We updated vulnerable `okhttp`, `jackson`, and `security-crypto` dependencies.
+
+## 14.1.16
+
+**Release date: Apr 29, 2026**
+
+### Fixes
+
+* We fixed an issue where version logs events were not recorded in Firebase for Android.
+* We fixed an issue which occurred when building apps in Xcode 26.4 and above.
+
+## 14.1.15 {#1425}
+
+**Release date: Apr 22, 2026**
+
+### Improvements
+
+* We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
 
 ## 14.1.14 {#1424}
 
 **Release date: Feb 25, 2026**
 
-- We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
+* We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
 
 ## 14.1.13 {#1423}
 

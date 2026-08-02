@@ -29,11 +29,11 @@ For local deployment, you need to set the **ChannelName** and **ServerUrl** cons
 
 ### Changing Logging Interval (Optional)
 
-Optionally, you can set **SummaryLogIntervalSeconds** to a different value. The default value 120, which means if events are consumed or produced, an overview of what was consumed or produced will be logged at `INFO` level every 120 seconds. When configured with 0 or a negative number, this additional logging will not take place at all.
+Optionally, you can set **SummaryLogIntervalSeconds** to a different value. The default value is 120, which means if events are consumed or produced, an overview of what was consumed or produced is logged at `INFO` level every 120 seconds. When configured with 0 or a negative number, this additional logging does not occur.
 
 ## Using Business Events {#two-way-be}
 
-Studio Pro 9.24 and above supports newer behavior of business events, sometimes called two-way business events. In these versions, business events are published by an app and one or more apps consume, or subscribe to, the events. A publisher can also consume a business event of some other publishing app, and a subscriber can publish a business event to another app.
+Studio Pro 9.24 and above supports newer business event behavior, sometimes called two-way business events. In these versions, business events are published by an app and one or more apps consume, or subscribe to, the events. A publisher can also consume a business event from another publishing app, and a subscriber can publish a business event to another app.
 
 ### Creating a New Business Event Service {#two-way-be-create}
 
@@ -57,8 +57,8 @@ To define what information is included in your events and what the service will 
 1. Define what information is included in this event.
 
     * In the **General** field, provide the **Event name** and **Description** to let others know what the service is about.
-    * In the **Attributes** field, click **Add** to define attributes. 
-        * Changes you make here later could lead to breaking changes if the entity the attribute belongs to is consumed. Related entities will be updated automatically.
+    * In the **Attributes** field, click **Add** to define attributes.
+        * Changes you make here later could lead to breaking changes if the entity the attribute belongs to is consumed. Related entities are updated automatically.
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/business-events/business-events-config/wizard-step-1.png" class="no-border" width="400" >}}
 
@@ -90,9 +90,9 @@ In Studio Pro 9.24 and below, all types were supported implicitly because a busi
 
 #### Enumeration Attribute Type {#enum-att-type}
 
-In Studio Pro [9.24](/releasenotes/studio-pro/9.24/), consumers see enumerations as a plain string. The names of the enumeration items are the values that are transmitted by the event broker to the subscribers. Enumerations cannot be modeled for new services in Studio Pro [9.24](/releasenotes/studio-pro/9.24/), but for converted earlier apps, the functionality is maintained.
+In Studio Pro [9.24](/releasenotes/studio-pro/9.24/), consumers see enumerations as a plain string. The names of the enumeration items are the values transmitted by the event broker to the subscribers. Enumerations cannot be modeled for new services in Studio Pro [9.24](/releasenotes/studio-pro/9.24/), but for apps converted from earlier versions, the functionality is maintained.
 
-In Studio Pro [10.0](/releasenotes/studio-pro/10.0/) and above, enumerations are fully supported. The enumeration attribute type can be modeled. The enumeration items are stored in the exported AsyncAPI document, and when imported, a new enumeration document will be created with the name *<attributeName>Enum*. The **Caption** and **Image** fields are not transmitted to the importer of the AsyncAPI document. Captions and images can be provided manually and will not cause conflicts when an AsyncAPI document is re-imported.
+In Studio Pro [10.0](/releasenotes/studio-pro/10.0/) and above, enumerations are fully supported. The enumeration attribute type can be modeled. The enumeration items are stored in the exported AsyncAPI document, and when imported, a new enumeration document is created with the name *<attributeName>Enum*. The **Caption** and **Image** fields are not transmitted to the importer of the AsyncAPI document. Captions and images can be provided manually and do not cause conflicts when an AsyncAPI document is re-imported.
 
 ### Using an Existing Business Event Service {#two-way-be-existing}
 
@@ -115,9 +115,9 @@ To publish a business event service, you need to use it in a microflow.
 
 ## Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
 
-When you click **Add** to add the events from the document into your service, Studio Pro will automatically create a persistable consumed entity within your domain model and an [Event Handler](/refguide/event-handlers/) microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service.
+When you click **Add** to add the events from the document into your service, Studio Pro automatically creates a persistable consumed entity in your domain model and an [Event Handler](/refguide/event-handlers/) microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service.
 
-Currently, Mendix does not support multiple subscribers to the same business event within the same app.
+Mendix does not currently support multiple subscribers to the same business event within the same app.
 
 ## Read More
 

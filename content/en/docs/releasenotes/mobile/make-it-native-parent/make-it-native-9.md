@@ -5,6 +5,10 @@ weight: 9
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 ---
 
+{{% alert color="warning" %}}
+Make It Native 9 is no longer available in Mendix Marketplace and is not supported. For still building Make It Native 9, please refer to [the GitHub Make it Native App repository](https://github.com/mendix/make-it-native).
+{{% /alert %}}
+
 {{% alert color="info" %}}
 Make It Native 9 should only be used with the LTS version of Mendix 9.
 {{% /alert %}}

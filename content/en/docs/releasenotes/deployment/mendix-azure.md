@@ -10,6 +10,26 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+## Release date: July 2, 2026
+
+* We have improved managed app creation in the Mendix on Azure portal by adding guidance that the selected deployment region cannot be changed after app creation.
+* We have clarified that owner permissions on the target Azure subscription are required for successful deployment.
+* We have added a production or non-production indicator for Mendix on Azure clusters.
+* We have fixed a preflight check issue where backend logs showed success but the frontend showed an error with no remediation steps.
+* We have fixed an issue where clusters on the **Cluster Overview** page were not sorted correctly after a refresh.
+* We have upgraded managed Grafana to version 12.0.
+
+## Release date: May 7, 2026
+
+* We have fixed an issue where an unavailable VM could be selected.
+* We have added a cost calculator link to the Cluster Deployment and Edit flows.
+* PostgreSQL replicas can no longer be scaled when Read Replica is enabled.
+* We have extended the quota check to warn users when the available quota for the selected VM type, including family and regional, is less than 8.
+* Initialized clusters are now visible to cluster members regardless of Azure RBAC.
+* Only Cluster Managers with the Azure Owner or Contributor roles can now edit cluster settings.
+* We have added a warning to inform users about the implications of enabling network-isolated cluster and internal load balancers.
+* We have added Grafana dashboards for PostgreSQL to monitor key metrics and view database logs.
+
 ## Release date: February 26, 2026
 
 * We have improved the handling of PostgreSQL HA unavailability issues in certain Azure regions to prevent failed Spacelift Stack runs when infrastructure redundancy is enabled.

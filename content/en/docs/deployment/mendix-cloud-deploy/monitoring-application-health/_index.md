@@ -26,7 +26,7 @@ This document explains how to access the application status page, what the infor
 
 Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), open the app that you want to monitor.
+1. From [Projects](https://projects.home.mendix.com), open the app that you want to monitor.
 
 1. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
@@ -153,7 +153,7 @@ Database Freeable Memory | |
 Description | Track the amount of freeable memory for the database belonging to the application.
 Example message | Database has 35% freeable memory.
 Warning Threshold | Not used.
-Critical Threshold | Database has 5% freeable memory for XS21, XS20, S, and Strato [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Database has 10% freeable memory for all other cloud resource packs.
+Critical Threshold | Database has 5% freeable memory for XS21 Standard, XS20, S, and Strato [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Database has 10% freeable memory for all other cloud resource packs.
 First actions to take | Inspect the metrics graph **Database memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or upgrading the cloud resource pack (for example, by ordering more memory).
 
 ### Database IOPS Burst Balance {#dbase-iops}

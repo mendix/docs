@@ -20,7 +20,7 @@ Before upgrading your app to Mendix 10, ensure the app is successfully [migrated
 
 ### Upgrading from Older Versions of Studio Pro
 
-If your app is on a Studio Pro version below 9, you must upgrade in order of version. This means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide8/moving-from-7-to-8/)), 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)), then 9 to 10. 
+If your app is on a Studio Pro version below 9, you must upgrade in order of version. This means you must go from 7 to 8,  8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)), then 9 to 10. 
 
 If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the [Control Center dashboard](/control-center/dashboard/). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
 
@@ -140,7 +140,7 @@ In Studio Pro 10, published OData, REST, and Web services use sessions that do n
 
 ### Java Version
 
-Studio Pro 10.21 and above requires your application to use Java 21. The Java version of an application can be configured in the runtime settings. Java 21 is available in 9.24.23 and above. Please consider the [Java Version Migration](https://docs.mendix.com/refguide10/java-version-migration/) guide for a list of changes between Java versions. For on-premises deployments, ensure that JDK 21 is installed in the environments where Mendix 10 applications are deployed.
+Studio Pro 10.21 and above requires your application to use Java 21. The Java version of an application can be configured in the runtime settings. Java 21 is available in 9.24.23 and above. Please consider the [Java Version Migration](/refguide10/java-version-migration/) guide for a list of changes between Java versions. For on-premises deployments, ensure that JDK 21 is installed in the environments where Mendix 10 applications are deployed.
 
 ## Read More
 

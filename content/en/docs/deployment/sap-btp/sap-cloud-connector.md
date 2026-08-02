@@ -1,7 +1,7 @@
 ---
 title: "SAP Cloud Connector"
 url: /developerportal/deploy/sap-cloud-platform/sap-cloud-connector/
-weight: 28
+weight: 60
 description: "Presents reference information on the SAP Cloud Connector."
 aliases:
     - /partners/sap/sap-cloud-connector/

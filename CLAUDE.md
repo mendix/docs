@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable-file -->
 
-**Your role**: Edit and review Markdown documentation files under `content/en/docs/` following Microsoft Writing Style Guide and the project-specific conventions below.
+**Your role**: Edit and review Markdown documentation files under `content/en/docs/` following the style guidance and project-specific conventions below.
 
 ## Instruction Precedence
 
@@ -12,8 +12,9 @@ When instructions conflict, follow this order of precedence:
 2. Task-specific prompt files in `.github/prompts/*.prompt.md` (for Copilot) or skills in `.claude/skills/*/SKILL.md` (for Claude) when explicitly referenced or invoked.
 3. Overlay instruction files (for example, `.github/release-notes-instructions.md`) when path-scoped.
 4. This file (`CLAUDE.md`).
-5. Existing conventions in nearby pages within the same folder.
-6. Microsoft Writing Style Guide.
+5. Mendix Style Guide files in `content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/` for detailed grammar, terminology, and formatting rules.
+6. Existing conventions in nearby pages within the same folder.
+7. Microsoft Writing Style Guide.
 
 ### Critical Constraints
 
@@ -73,18 +74,29 @@ Before creating a new file, use Glob to explore the directory structure and unde
 
 ## Style Standards
 
-* **Guiding manual** – Microsoft Writing Style Guide (https://learn.microsoft.com/style-guide/). Apply grammar, inclusive language, terminology, and formatting rules from that document.
+* **Guiding manual** – Mendix-specific style guides (see subsection below) extend and customize the Microsoft Writing Style Guide (https://learn.microsoft.com/style-guide/). Consult the Mendix style guides first for grammar, inclusive language, terminology, and formatting rules; use MSG as fallback for topics not covered by Mendix guides.
 * **Tone** – Clear, concise, active voice; use imperative mood for procedures; second person (you/your) when addressing readers. Keep a conversational, straightforward tone. Present tense. Use American English and write for a global audience. Prefer short, everyday words; avoid or explain jargon. Keep it simple—short sentences and fragments are easier to scan and read, and prune excess words. Avoid marketing language.
-* **Terminology** – Capitalize product names (Mendix, Studio Pro, Developer Portal); use "microflow", "nanoflow", etc. consistently. Never use e.g. or i.e.
+* **Person** – Avoid first-person plural (we, us, our, let's) in all documentation except release notes.
+* **Terminology** – Capitalize product names (Mendix Portal, Studio Pro, Team Server); use "microflow", "nanoflow", etc. consistently. Never use e.g. or i.e.
 * **Text formatting** – Reserve bold for UI labels, button names, menu items, or other interface text, or for introductions in list items. Don't use italics except to refer to titles and sections. Use wording or alert shortcodes for emphasis; don't use text formatting for emphasis. Use code font only to wrap literal code, filenames, paths, or command-line input. Use `<kbd>` for keyboard shortcuts.
 * **Headings** – H1 is generated from the front‑matter title. Subsequent headings increment by one level at a time. Don't use bold or italics as a replacement for headings. Use title case. Never start headings with numerals.
 * **Lists and tables** – Bullet lists use asterisks; ordered lists use numbers followed by a period. If there are more than three data points per item, use a table instead. Use the same syntax and structure for all list items in a given list. Use complete sentences to introduce lists and tables, not partial sentences completed with the list items.
 * **Indentation** – Four spaces for sub-lists and nested content. Alerts in lists are an exception:  don't indent alert lines but do omit preceding blank line.
-* **Links** – Use absolute paths starting with a leading slash (`/deployment/`). Use descriptive link text such as the page title, not "click here". To link to a heading, add an anchor ID (`{#anchor-id}`) next to the heading and use that ID in the URL (for example, `[Section title](/path/to/page#anchor-id)` to link to a heading in another page or `[Section title](#anchor-id)` to link to a heading in the same page).
+* **Links** – Link using the target page's `url` front matter field, not its file system path (e.g., `/deployment/` from front matter, not `content/en/docs/deployment/_index.md`). Use descriptive link text such as the page title, not "click here". To link to a heading, add an anchor ID (`{#anchor-id}`) next to the heading and use that ID in the URL (for example, `[Prerequisites](/deployment/mendix-cloud/#prerequisites)` to link to a heading in another page or `[Prerequisites](#prerequisites)` to link to a heading in the same page).
 * **Images** – Always include `alt` text (or `alt=""` if decorative). Use W3C guidelines. Reference images with the `figure` shortcode.
-* **Code** – Use fenced code blocks with language specifier.
+* **Code** – Use fenced code blocks with language specifier. Do not modify text that appears in code formatting (inline backticks or code blocks), even to fix apparent inconsistencies or apply naming conventions. 
 
-Project‑specific preferences are documented in the templates and in `community-tools` example pages; consult them for tricky formatting cases.
+### Mendix-Specific Style Guides
+
+For detailed guidance beyond the basics above, consult these Mendix style guide files in `content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/`:
+
+* **`grammar-formatting.md`** – Grammar and formatting rules including acronyms, active/passive voice, alerts, bold/italics, capitalization, contractions, dashes, dates, emphasis, headings, lists, numbers, person, verb tense, keyboard shortcuts, URL handling, and cross-reference conventions. This is the most detailed style reference.
+* **`terminology.md`** – General terminology guidance for common terms, with capitalization and hyphenation rules.
+* **`product-naming-guide.md`** – Reference for Mendix product names and other Mendix terms.
+
+When encountering style questions not covered in this file, read the relevant style guide file above before falling back to the Microsoft Writing Style Guide.
+
+Project‑specific preferences are also documented in the templates; consult them for tricky formatting cases.
 
 ## Tool Usage Guidelines
 
@@ -94,6 +106,8 @@ Call tools in parallel for independent operations (reading multiple files, multi
 
 ### Tool Selection
 
+* **Helper Scripts**
+    * For URL resolution, use `bash .claude/scripts/resolve-doc-url.sh` instead of spawning agents. This resolves documentation URLs (e.g., `/community-tools/contribute-to-mendix-docs/`) to their source Markdown files and ensures Grep uses efficient flags consistently.
 * **Read** – Use to view specific files you know the path to
 * **Edit** – Use to modify existing files with targeted changes
 * **Glob** – Use to find files by pattern (e.g., `*.md`, `**/*config*`)
@@ -101,6 +115,9 @@ Call tools in parallel for independent operations (reading multiple files, multi
 * **Write** – Use only for creating new files (prefer Edit for existing files)
 
 ### Cross-Reference Verification
+
+When following or verifying documentation links:
+* Use `bash .claude/scripts/resolve-doc-url.sh "/url/path/"` to quickly find the source file for a URL
 
 When modifying URLs or anchor IDs:
 1. Use Grep to search for the old URL/anchor across all documentation files

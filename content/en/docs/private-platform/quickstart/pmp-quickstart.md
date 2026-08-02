@@ -150,6 +150,7 @@ Currently, only AWS S3 or S3-compatible providers are supported.
 | --- | --- |
 | PCLM admin password | **pclm-admin-password** |
 | Private Mendix Platform admin password | **mx-admin-password** |
+| PCLM admin username | **pclm-admin-username** |
 
 ## Optional: Configuring Azure Key Vault
 
@@ -186,6 +187,7 @@ To use the secret provider option for your database plan or storage plan, config
 | --- | --- |
 | PCLM admin password | **pclm-admin-password** |
 | Private Mendix Platform admin password | **mx-admin-password** |
+| PCLM admin username | **pclm-admin-username** |
 
 ## Installing Private Cloud License Manager {#install-pclm}
 
@@ -220,7 +222,7 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 
 ### Uninstalling PCLM
 
-If you want to uninstall Svix, run the following commands:
+If you want to uninstall PCLM, run the following commands:
 
 ```text 
 kubectl delete deployments/mendix-pclm -n=<Private Mendix Platform namespace>
@@ -276,7 +278,9 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
 3. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
 4. Select **Svix**, and then specify the following parameters:
 
-    * **Image** - The Svix image path. The default path is `svix/svix-server:v1.25.0`. If you are using a self-signed TLS certificate, set this path to `{customer-private-image-registry-url}/svix/svix-server:v1.25.tls`.
+    * **Image Prefix** - The registry and namespace (if it exists) where the *svix-server* image is located
+    * **Image Name** - The image name, for example, *svix-server*
+    * **Image Tag** - The image tag of the Svix-server image
     * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager or the Azure Key Vault. Selecting this option enables the following additional fields:
 
         * For AWS Secret Manager:
@@ -393,7 +397,42 @@ To install the Private Cloud components, perform the following steps:
 
         {{% alert color="info" %}} To allow other clusters to connect to Private Mendix Platform, you must expose the Interactor Bridge Service. Currently, the installer only supports using the generic Ingress template to expose the service. If you want to expose the Interactor Bridge with other method (for example, Openshift Route), contact the Private Mendix Platform team.{{% /alert %}}
 
-10. Click **Review and Apply > Apply Configuration**.
+10. Optional: To support AWS IRSA and Azure workload identity for database connection, configure the following options:
+
+    * **Use AMI only** - Set to **enabled**.
+    * **Provider** - Enter **AWS** or **Azure**.
+    * **Client ID** - When using Azure, enter the Azure Managed Identity Client ID.
+    * **AWS-Role-ARN** - When using AWS, enter an AWS role ARN which can access the specified Secret Manager. 
+
+11. Optional: To use the AWS Secret Manager or the Azure Key Vault as secret provider, configure the following options:
+
+    * **Use Secret Provider** - Set to **enabled**.
+    * **Secret Provider** - Enter **AWS** or **Azure**.
+    * For Azure, configure the following settings:
+
+        * **Client ID** - Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources. 
+        * **Tenant ID** - Enter the Directory ID of the key vault.
+        * **Key Vault Name** - Enter the key vault name.
+
+    * For AWS, configure the following settings:
+
+        * **AWS-Role-ARN** - When using AWS, enter an AWS role ARN which can access the specified Secret Manager. 
+        * **AWS SecretManager Name** - When using AWS, enter the AWS Secret Manager name where the sensitive data is stored.
+
+12. If you enabled the **Use Secret Provider** option, create the following secrets in your key vault or secret manager:
+
+    * `authenticator-db-name` - The Authenticator database name, for example, `authenticator`
+    * `authenticator-db-host` - The Authenticator database host, for example, `postgres.example.com`
+    * `authenticator-db-port` - The Authenticator database port, for example, `5432`
+    * `authenticator-db-user` - The Authenticator database username, for example, `auth_user`
+    * `authenticator-db-pass` - The Authenticator database password, for example, `StrongPassword123`
+    * `collector-db-name` - The Collector database name, for example, `collector`
+    * `collector-db-host` - The Collector database host, for example, `postgres.example.com
+    * `collector-db-port` - The Collector database port, for example, `5432`
+    * `collector-db-user` - The Collector database username, for example, `collector_user`
+    * `collector-db-pass` - The Collector database password, for example, `StrongPassword456`
+
+13. Click **Review and Apply > Apply Configuration**.
 
 ### Uninstalling the Private Cloud Components
 
@@ -417,8 +456,9 @@ The Build agent is required if you want to be able to build packages without hav
 7. Configure the following settings:
 
     * **Namespace** - The namespace where the Build agent will be installed
-    * **Image Repo** - The image repository where the Build agent is located, in the following format: `${image_prefix}/${image_name}`
-    * **Image Tag** - The Build agent image tag, for example, *ce687901*
+    * **Image Prefix** - The registry and namespace (if it exists) where the *kube-agent* image is located
+    * **Image Name** - The image name, for example, *mxplatform-kube-agent*
+    * **Image Tag** - The image tag of the *mxplatform-kube-agent*
 
 8. Click **Install Build Agent**.
 
@@ -444,6 +484,10 @@ Install the Private Mendix Platform by doing the following steps:
     * **AppName** - The default app name is `mxplatform`. You can change it as required.
     * **DatabasePlan** - If you want to use AWS Secret Manager, select **USE-Secret-Provider**; the installer then uses the database configuration set in AWS Secret Manager. Otherwise, enter the name of the database plan that you created in [Installing and Configuring the Mendix Operator](#install-operator).
     * **Storageplan** - If you want to use AWS Secret Manager, select **USE-Secret-Provider**; the installer then uses the storage configuration set in AWS Secret Manager. Otherwise, enter the name of the storage plan that you created in [Installing and Configuring the Mendix Operator](#install-operator).
+    * **StoragePlanwithIRSA** - If your storage plan uses AWS IRSA or Azure Workload Identity, set this to **enabled**.
+
+        Enabling this option disables the **secretprovider** option. This is because for IRSA and Azure Workload Identity storage plans, the Service account is created by the Operator instead of Helm.
+
     * **AppUrl** - The endpoint where you can connect to your running app. It must be a URL which is supported by your platform. If you leave it blank, Mendix Operator will create it.
     * **EnableTLS** - Allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Router. The default value is use the default settings.
     * **TLS option** - Allows you to use an existing `kubernetes.io/tls` secret containing the TLS certificate, or to provide the `tls.crt` and `tls.key` values directly.
@@ -516,6 +560,26 @@ To enable [Maia for Private Mendix Platform](/private-mendix-platform/maia/), pe
     * **Image Tag** - The image tag of the AppGen image
     * **Enable Ingress** - Enable or disable Nginx ingress
     * **MXASSIST_COPILOT_MXID3_URL** - The OIDC URL of Private Mendix Platform, in the following format: `<your Private Mendix Platform URL>/oidc/`
+
+### Installing the LLM Gateway
+
+Because Private Mendix Platform instances are hosted within the enterprise firewall, selecting an LLM provider other than the default [Mendix Platform](/refguide/maia-make/#mendix-platform) requires you to also configure the LLM Gateway URL.
+
+1. Download the *maia-llm-gateway.zip* file from your Private Mendix Platform download portal.
+2. Unzip the *maia-llm-gateway.zip* file.
+3. Copy the *maia-llm-gateway* directory to the *images* sub-directory of the installer by running the following command: `cp -r maia-llm-gateway/images/* <your installer>/pmp-binary-linux/images`
+4. Upload the Maia directory to your private registry by using the `installer init migrate` command.
+5. Run the following command:  `./installer component -n=<Private Mendix Platform namespace>`. Maia must be installed at the same namespace as Private Mendix Platform.
+6. In the **Components at PMP ns** section, select **Maia LLM Gateway**.
+7. Configure the following settings:
+
+    * **Image Prefix** - The registry and namespace (if it exists) where the *maia-llm-gateway* image is located
+    * **Image Name** - The image name, for example, *maia-llm-gateway* 
+    * **Image Tag** - The image tag of the LLM Gateway image
+    * **Enable Ingress** - Enable or disable Nginx ingress
+    * **MXASSIST_COPILOT_MXID3_URL** - The OIDC URL of Private Mendix Platform, in the following format: `<your Private Mendix Platform URL>/oidc/`
+
+{{< figure src="/attachments/private-platform/pmp-install11.png" class="no-border" >}}
 
 ### Uninstalling Maia
 

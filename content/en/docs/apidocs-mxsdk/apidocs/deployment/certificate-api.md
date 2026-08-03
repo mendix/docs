@@ -22,7 +22,7 @@ To use the Certificate API, you must:
 * Be a company admin
 * Have a Mendix Personal Access Token (PAT) with the `mx:deployment:write` scope
 
-For information on creating a PAT, see [Personal Access Tokens](/mendix-profile/user-settings/#pat).
+For information on creating a PAT, refer to [Personal Access Tokens](/portal/user-settings/#pat).
 
 ## Capabilities
 

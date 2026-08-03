@@ -9,6 +9,10 @@ aliases:
 
 ## Introduction
 
+{{% alert color="info" %}}
+If you are using Studio Pro 11.13 or later, you do not need to download this module from the Marketplace, as the External Database Connector comes included with Studio Pro. For more information, see [Connect to an External Database](/refguide/external-database-connection/).
+{{% /alert %}}
+
 Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 ## Use Cases
@@ -139,6 +143,10 @@ WHERE empno IN
 
 Here, the parameter `EmpIdList` is of type String with the  value `[1,7946,3,4,7942,7943,7945]`.
 
+{{% alert color="info" %}}
+Parameter names cannot start with a number.
+{{% /alert %}}
+
 ### Using Query Response {#use-query-response}
 
 After querying the database, you can view the response in the **Response** screen. 
@@ -261,16 +269,28 @@ To connect to PostgreSQL when the application is running in Mendix Cloud, follow
 
 ### Configure Database Schema Information 
 
-The Browse Database Schema tab might not display a comprehensive overview of all available schemas for certain databases. You can customize this behavior using the Configure option. To do so, follow these steps:
+The Browse Database Schema tab might not display a comprehensive overview of all available schemas for certain databases. You can customize this behavior using the Configure option. 
+
+If you are using Studio Pro 11.13 or later, follow the steps below:
+
+1. Use the Mendix public API class QueryBasedSchemaInfoProvider to extend your Java class. For example, create `MxDb2SchemaInfoProvider.java` inside `\MendixApp\javasource\myfirstmodule\myloader`.
+2. Override the following methods based on your requirements:
+    * `getTableMetaDataQuery`
+    * `getViewMetaDataQuery`
+    * `getProcedureMetaDataQuery`
+    * `getFunctionMetaDataQuery`
+
+If you are using Studio Pro 11.12 or earlier, follow the steps below:
 
 1. Open the **App** menu and select **Deploy for Eclipse**.
-2. Extend the class MxQueryBasedSchemaInfoProvider.
+2. Extend the class `MxQueryBasedSchemaInfoProvider`.
 3. Override the following methods based on your requirements:
-    * getTableMetaDataQuery
-    * getViewMetaDataQuery
-    * getProcedureMetaDataQuery
-    * getFunctionMetaDataQuery
-4. Use the provided example, MxDb2SchemaInfoProvider for IBM Db2, for a better understanding of how to customize the schema information.
+    * `getTableMetaDataQuery`
+    * `getViewMetaDataQuery`
+    * `getProcedureMetaDataQuery`
+    * `getFunctionMetaDataQuery`
+4. Use the provided example, `MxDb2SchemaInfoProvider` for IBM Db2, for a better understanding of how to customize the schema information.
+
 
 ### Running Queries and Handling Query Responses
 

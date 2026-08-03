@@ -12,6 +12,17 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### July 23, 2026
+
+#### Portal Improvements
+
+* We refreshed the portal and environment views to match the Public Cloud design.
+* We introduced direct links to environment details for streamlined operations desk navigation.
+* We removed outdated navigation options.
+* We enhanced deployment package summaries to give clearer visibility into upcoming release changes.
+* We resolved a security vulnerability in cluster invitation emails.
+* We fixed several dark mode, tooltip, and layout display issues.
+
 ### June 11, 2026
 
 #### License Manager CLI v0.10.11 {#0.10.11}

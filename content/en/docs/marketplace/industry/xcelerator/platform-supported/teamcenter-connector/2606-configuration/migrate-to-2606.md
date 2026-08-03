@@ -93,17 +93,19 @@ Follow these steps in this exact order to ensure a proper migration:
 
 10. Remove the Toolkit module from your project.
 
-    1. Before removing the Toolkit module, it is a good moment to commit your work. Right click on the Toolkit module and select "find usages of this module"
-    1. Since we have merged the Toolkit module with the TcConnector module, all references to the toolkit should point to the TcConnector
-   - Tip: If there are still a lot of resources pointing to the toolkit, you can rename the toolkit to TcConnector2, remove the TcConnector2, rename the TcConnector to TcConnector2 and back to TcConnector. This trick connects the old resouces in the Toolkit to the new ones in the TcConnector.
-    1. Search (ctrl+f) on "Toolkit", to see if there are any BO mappings left that reference the Toolkit, replace these with TcConnector. 
+    1. Before removing the Toolkit module, commit your work by right-clicking on the Toolkit module and selecting **Find usages of this module**.
+    1. Since the Toolkit module is merged with the TcConnector module, all references to the Toolkit should point to the TcConnector.
+
+       If there are still many resources pointing to the Toolkit, you can rename the Toolkit to TcConnector2, remove the TcConnector2, rename the TcConnector to TcConnector2 and back to TcConnector. This trick connects the old resouces in the Toolkit to the new ones in the TcConnector.
+       
+    1. Use **Ctrl+F** to search for *"Toolkit"*, to see if there are any BO mappings left that reference the Toolkit. If there are, replace them with TcConnector. 
 
 11. Test thoroughly.
 
-    1. Run each generated microflow against your Teamcenter instance
-    1. Verify that search, create, update, and retrieval operations work as expected
-    1. Test error handling by triggering error conditions (e.g., invalid search criteria)
-    1. If you have automated tests, run them to ensure integration behavior is correct
+    1. Run each generated microflow against your Teamcenter instance.
+    1. Verify that search, create, update, and retrieval operations work as expected.
+    1. Test error handling by triggering error conditions (for example, invalid search criteria).
+    1. If you have automated tests, run them to ensure integration behavior is correct.
 
 ## Breaking Changes {#breaking-changes}
 

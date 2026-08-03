@@ -37,7 +37,7 @@ Ensure that you perform the following steps when designing your Mendix applicati
 4. To create a new Teamcenter configuration, click **New**.
     {{< figure src="/attachments/partners/siemens/teamcenter/image015.png" alt="" class="no-border" >}}
 5. In the **Add Teamcenter Configuration** dialog box, specify the required fields and click **Save**.
-6. If you have enabled SSO, ensure that you [specify the SSO information](/appstore/modules/siemens-plm/configuring-connection/#teamcenter-sso).
+6. If you have enabled SSO, ensure that you [specify the SSO information](/appstore/industry/teamcenter-connector/configuring-connection/#teamcenter-sso).
 
 ### Setting a Teamcenter Configuration as Active
 

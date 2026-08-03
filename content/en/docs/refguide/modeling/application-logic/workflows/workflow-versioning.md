@@ -73,9 +73,7 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 | Multi-User Task Outcome Changed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Activities Introduced in Executed Path              | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Executed Activities Moved to Re-executable Position | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Parallel Split Path Removed                         | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Non-Interrupting Boundary Event Path Removed        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Current Event Sub-Process Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Concurrent Path Removed                             | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 
 #### Context Entity Replaced
 
@@ -234,38 +232,21 @@ You can do one of the following:
 * The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### Parallel Split Path Removed
+#### Concurrent Path Removed
 
-When an app developer removes a path from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that path cannot continue execution. 
+When an app developer removes a concurrent path and deploys this change, the currently running workflow instances that are executing activities within that path cannot continue execution. This conflict is reported when any of the following concurrent paths is removed:
+
+* An ongoing path of a **Parallel Split**
+* An ongoing **Non-interrupting boundary event** path
+* An ongoing **Event sub-process**
 
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed path will be aborted).
+* The Administrator can apply [jumping](/refguide/jump-to/) to the **End** event of the removed path, which will also abort the currently running activity within the removed path.
 * The app developer can revert the change (which adds the path back) and deploy it.
-
-#### Non-Interrupting Boundary Event Path Removed
-
-When an app developer removes an ongoing non-interrupting boundary event and then deploys this change, the currently running workflow instances that are executing activities within that path cannot be continued.
-
-You can do one of the following:
-
-* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed boundary event path will be aborted).
-* The app developer can revert the change (which adds the boundary event path back) and deploy it.
-
-#### Current Event Sub-Process Removed
-
-When an app developer removes an ongoing event sub-process and then deploys this change, the currently running workflow instances that are executing activities within that sub-process cannot be continued.
-
-You can do one of the following:
-
-* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed sub-process will be aborted).
-* The app developer can revert the change (which adds the event sub-process back) and deploy it.
 
 ### Workaround for Non-resolvable and Partially Resolvable Conflicts {#workaround-for-non-resolvable-and-partially-resolvable-conflicts}
 

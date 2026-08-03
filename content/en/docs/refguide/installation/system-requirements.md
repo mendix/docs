@@ -240,12 +240,12 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.6, 10.11, 11.4, 11.8
+* [MariaDB](/refguide/mysql/): 10.11, 11.4, 11.8
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver17): v12 compatibility mode 160 or higher
 * [MySQL](/refguide/mysql/): 8.4
 * [Oracle Database](/refguide/oracle/): 19, 21c, 23ai (including 26ai)
-* PostgreSQL: 13, 14, 15, 16, 17, 18
+* PostgreSQL: 14, 15, 16, 17, 18
 * [SAP HANA](/refguide/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}

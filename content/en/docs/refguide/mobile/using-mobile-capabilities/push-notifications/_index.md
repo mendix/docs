@@ -17,6 +17,7 @@ These guides teach you how to configure push notifications (also known as remote
 * [Configuring Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-config-push/) – Learn to configure push notifications in the runtime.
 * [Implementing Push Notifications in Your Native App](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-native/) – Implement push notifications for a native app.
 * [Implementing Push Notifications in Your Progressive Web App](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-pwa/) – Implement push notifications for a progressive web app.
+* [PWA Wrapper Push Notification Setup](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-pwa-wrapper/) – Configure notification-related settings when packaging your progressive web app with PWA Wrapper.
 * [Sending Your First Test Push Notification](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/) – Send a test notification to confirm your app is working properly.
 
 After you complete the tasks above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this documentation:

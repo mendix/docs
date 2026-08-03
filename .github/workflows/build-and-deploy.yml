@@ -34,8 +34,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v6
         with:
-          # 20000 commits required for Hugo to populate last-modified dates on pages
-          fetch-depth: 20000
+          # Keep PR builds fast; Hugo only needs deep history for push builds that publish the site.
+          fetch-depth: ${{ github.event_name == 'pull_request' && 1 || 20000 }}
           submodules: false
 
       - name: Set up Node.js

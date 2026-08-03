@@ -6,6 +6,7 @@ on:
 
 jobs:
   auto-assign:
+    if: contains(fromJson('["ConnorLand","Karuna-Mendix","MariaShaposhnikova","MarkvanMents","NicoletaComan","OlufunkeMoronfolu","Yiyun333","dbreseman","katarzyna-koltun-mx","quinntracy"]'), github.event.pull_request.user.login)
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -19,20 +20,6 @@ jobs:
             const prNumber = context.payload.pull_request.number;
             const assignees = context.payload.pull_request.assignees;
 
-            // Technical Writers team members
-            const techWriters = [
-              'ConnorLand',
-              'Karuna-Mendix',
-              'MariaShaposhnikova',
-              'MarkvanMents',
-              'NicoletaComan',
-              'OlufunkeMoronfolu',
-              'Yiyun333',
-              'dbreseman',
-              'katarzyna-koltun-mx',
-              'quinntracy'
-            ];
-
             console.log(`Processing PR #${prNumber} by ${creator}`);
             console.log(`Current assignees: ${assignees.length > 0 ? assignees.map(a => a.login).join(', ') : 'none'}`);
 
@@ -41,16 +28,11 @@ jobs:
               return;
             }
 
-            if (techWriters.includes(creator)) {
-              console.log(`${creator} is on technical writers team, assigning PR...`);
-              await github.rest.issues.addAssignees({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: prNumber,
-                assignees: [creator]
-              });
-              console.log(`Successfully assigned PR #${prNumber} to ${creator}`);
-            } else {
-              console.log(`${creator} is not on technical writers team, skipping assignment`);
-            }
-              
+            console.log(`${creator} is on technical writers team, assigning PR...`);
+            await github.rest.issues.addAssignees({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              assignees: [creator]
+            });
+            console.log(`Successfully assigned PR #${prNumber} to ${creator}`);

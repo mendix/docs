@@ -34,10 +34,10 @@ Follow these steps in this exact order to ensure a proper migration:
     1. Open your app in Studio Pro 11.12.1 or above.
     1. Make sure all changes are committed, if using version control, or backed up.
 
-2. Remove resource files
+2. Remove the resource files.
 
-    1. In your resources folder, remove the `OperationMapping`, `TeamcenterCommon`, `TeamcenterConnector` folders > these have moved to the `TcConnector` folder
-    1. Keep the `TeamcenterExtension` folder for now, this can be removed once all the journeys are migrated to the new service document 
+    1. In your *Resources* folder, remove the *OperationMapping*, *TeamcenterCommon*, *TeamcenterConnector* folders. The contents of these folders are now in the *TcConnector* folder
+    1. Keep the *TeamcenterExtension* folder for now. You can remove it after all the journeys are migrated to the new service document.
 
 3. Import the new connector.
 

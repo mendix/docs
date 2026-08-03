@@ -4,9 +4,8 @@ This repository contains the Mendix documentation, which is served on [https://d
 
 Build status:
 
-* production [![Build Status](https://app.travis-ci.com/mendix/docs.svg?branch=production)](https://app.travis-ci.com/github/mendix/docs)
-* development [![Build Status](https://app.travis-ci.com/mendix/docs.svg?branch=development)](https://app.travis-ci.com/github/mendix/docs)
-
+* production [![Build and Deploy](https://github.com/mendix/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=production)](https://github.com/mendix/docs/actions/workflows/build-and-deploy.yml)
+* development [![Build and Deploy](https://github.com/mendix/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=development)](https://github.com/mendix/docs/actions/workflows/build-and-deploy.yml)
 ## Contribute
 
 Want to contribute? Take a look at [How to Contribute to Mendix Docs](https://docs.mendix.com/community-tools/contribute-to-mendix-docs/). It will guide you through the process of submitting updates to the docs directly from GitHub or from a local branch.

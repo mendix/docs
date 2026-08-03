@@ -122,7 +122,10 @@ NAME    VERSION
 diff    3.11.0    ← This is REQUIRED
 ```
 
-### Install helm-diff plugin
+### Installing the Helm-diff Plugin
+
+This plugin is required for the `helmfile apply` and `helmfile diff` commands. If you only use `helmfile sync` (not recommended for production environments), you can skip this plugin.
+
 ```bash
 helm plugin install https://github.com/databus23/helm-diff
 
@@ -130,15 +133,16 @@ helm plugin install https://github.com/databus23/helm-diff
 helm plugin list | grep diff
 ```
 
----
+## Installation Requirements for the Mendix Operator
 
-# Mendix Operator Installation Requirements
 Before deploying the Mendix Private Platform components, you must install the Mendix Operator with proper configuration.
 
-## 1. License Manager (PCLM) Credentials
-The operator must be configured with PCLM credentials that match the credentials you'll use when installing `mx-privatecloud-license-manager` via helmfile.
+### Private Cloud License Manager Credentials
 
-**In operator installation values:**
+You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile.
+
+#### Operator Installation Values
+
 ```yaml
 licenseManager:
   enable: true
@@ -148,7 +152,8 @@ licenseManager:
   password: "operatorpass"       # Must match pclm bootstrap operator_password
 ```
 
-**In helmfile values for mx-privatecloud-license-manager:**
+#### Helmfile Values for Mx-privatecloud-license-manager
+
 ```yaml
 mx-privatecloud-license-manager:
   enable: true
@@ -157,28 +162,40 @@ mx-privatecloud-license-manager:
     operator_user: "operatoruser"      # Must match operator licenseManager.username
     operator_password: "operatorpass"  # Must match operator licenseManager.password
 ```
-> **CRITICAL:** The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the operator installation.
 
-## 2. ServiceAccount Token Automount (Required for Maia Integration)
-If you plan to use Maia AppGen/LLM gateway integration, the operator must be configured to automount ServiceAccount tokens:
+{{% alert color="info" %}}
+The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the Operator installation. A mismatch will prevent the Operator from obtaining licenses.
+{{% /alert %}}
+
+### ServiceAccount Token Automount for Maia Integration
+
+If you plan to use Maia AppGen and LLM gateway integration, you must configure the Operator to automount ServiceAccount tokens for Mendix app pods. Maia AppGen requires automounting in order to communicate with Mendix applications through the Kubernetes API. Without this setting, the application pods will not have the necessary ServiceAccount token to authenticate API calls.
+
 ```yaml
 operator_config:
+  # REQUIRED for Maia integration: Allow Mendix app Pods to access Kubernetes API
   runtimeAutomountServiceAccountToken: true
 ```
-**Why:** Maia AppGen needs to communicate with Mendix applications via the Kubernetes API.
 
-## 3. StoragePlan and Database Plan Configuration
-Storage and database plans must be configured in the operator installation values.
+### StoragePlan and Database Plan Configuration
 
-**Example: Azure Database and Storage with Workload Identity**
+You must configure the storage and database plans in the Operator installation values, not in the Helmfile values for `mxplatform`.
+
+#### Example: Azure Database and Storage with Workload Identity
+
 ```yaml
+# Credential Service Accounts (for Workload Identity)
 credentialServiceAccounts:
   enabled: true
   serviceAccounts:
     - authType: "azure-wi"
       k8sServiceAccountName: "db-admin-sa"
       azwiClientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    - authType: "azure-wi"
+      k8sServiceAccountName: "storage-admin-sa"
+      azwiClientID: "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"
 
+# Database Storage Plans
 database:
   postgres:
     enabled: true
@@ -188,9 +205,13 @@ database:
         useAzureWIAuth: true
         k8sServiceAccountName: "db-admin-sa"
         host: "myserver.postgres.database.azure.com"
+        port: 5432
+        database: "postgres"
         user: "mendix-storage-admin"
         password: ""  # Empty when using Workload Identity
+        strictTLS: true
 
+# Object Store Storage Plans
 storage:
   azure_blob:
     enabled: true
@@ -199,14 +220,40 @@ storage:
         k8sServiceAccountName: "storage-admin-sa"
         useAzureWIAuth: true
         azureStorageAccount: "mystorageaccount"
+        azureResourceGroup: "my-resource-group"
+        azureAccountSubscriptionID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        azureContainerName: ""  # Auto-created per environment
+        preventDataDeletion: false
+
+# Operator Configuration
+operator_config:
+  runtimeAutomountServiceAccountToken: true  # Required for Maia integration
 ```
 
----
+### Complete Operator Installation Example
 
-# Quick Start
-```bash
+For an example of the complete Operator installation values,see *samples/operator-sp.yaml*.
+
+To install the Operator, use the following commands:
+
+```text
+helm install --create-namespace \
+  -n <namespace> \
+  -f samples/operator-sp.yaml \
+  operator \
+  mx-privatecloud-operator-installer
+```
+
+For detailed Operator installation instructions, see [Installing and Configuring Mendix on Kubernetes with Helm Charts](/developerportal/deploy/helm-charts/#installing-and-configuring-the-mendix-on-kubernetes-with-helm-charts).
+
+## Quick Start
+
+Use the following templates to help you prepare your own Helmfile-based installation.
+
+```text
 # 1. Create your values file
 cp examples/my-values.yaml my-values.yaml
+# Edit my-values.yaml with your configuration
 
 # 2. Deploy all enabled components
 helmfile --file helmfile.d/helmfile.yaml \
@@ -214,30 +261,84 @@ helmfile --file helmfile.d/helmfile.yaml \
   apply
 ```
 
-## Minimal Values File Template
+### Minimal Values File Template
+
 ```yaml
+# ─────────────────────────────────────────────────────────────────────────────
+# REQUIRED: Shared namespace
+# ─────────────────────────────────────────────────────────────────────────────
 namespace: mendix-platform
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Global Configuration
+# ─────────────────────────────────────────────────────────────────────────────
 global:
   imageRegistry:
     url: "customer-prod.azurecr.io"
-    pullSecrets: []
+    pullSecrets: []  # Empty when using managed identity
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Components (enable/disable as needed)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ═════════════════════════════════════════════════════════════════════════════
+# mx-privatecloud-license-manager (PCLM) - REQUIRED for mxplatform
+# ═════════════════════════════════════════════════════════════════════════════
 mx-privatecloud-license-manager:
   enable: true
+  image:
+    registry: "private-cloud.registry.mendix.com"
+    name: "privatecloud-license-manager"
+    tag: "0.11.0"
+  
+  # Database configuration
   db:
     type: "postgres"
     postgres:
       host: "postgres.example.com"
+      port: 5432
       name: "pclm"
       user: "pclm_user"
       password: "pclm-password"
+    strict_tls: false  # Set true if database requires TLS
+  
+  # Bootstrap users - MUST match operator installation
   bootstrap_users:
     admin_user: "administrator"
     admin_password: "admin-password"
     create_operator_user: true
-    operator_user: "operatoruser"
-    operator_password: "operatorpass"
+    operator_user: "operatoruser"      # Must match operator licenseManager.username
+    operator_password: "operatorpass"  # Must match operator licenseManager.password
+  
+  ingress:
+    enabled: false
+
+mx-privatecloud:
+  enable: true
+  nats:
+    server_addr: "nats://nats.nats.svc:4222"
+  authenticator:
+    database:
+      host: "postgres.example.com"
+      name: "authenticator"
+      user: "auth_user"
+      password: "password"
+  collector:
+    database:
+      host: "postgres.example.com"
+      name: "collector"
+      user: "collector_user"
+      password: "password"
+
+maia-appgen:
+  enable: true
+  env:
+    - name: MXASSIST_COPILOT_MXID3_URL
+      value: "https://pmp.example.com/oidc/"
+
+svix-server:
+  enable: true
+  postgres: "postgresql://user:pass@host:5432/svix"
 
 mxplatform:
   enable: true
@@ -252,97 +353,82 @@ mxplatform:
       servicePlan: "your-db-plan"
     storage:
       servicePlan: "your-storage-plan"
+    runtime:
+      mxAdminPassword: "admin-password"
+
+mxplatform-kube-agent:
+  enable: false
+
+mx-private-document-generation:
+  enable: false
 ```
 
----
+## Installation Commands
 
-# Installation Commands
+### Recommended: Full Apply
 
-## Recommended: Full Apply
+For most operations (such as upgrades or enabling and disabling components), use a full apply:
+
 ```bash
 helmfile --file helmfile.d/helmfile.yaml \
   --state-values-file my-values.yaml \
   apply
 ```
 
-## Selective Component Install
-```bash
+Using full apply ensures that auto-detection works correctly for component integration, prevents configuration drift between dependencies, and handles dependency updates automatically.
+
+### Advanced: Selective Component Install
+
+If you want to only install a specific selection of components, use selectors as in the following example:
+
+```text
+# Install only mx-privatecloud
+helmfile --file helmfile.d/helmfile.yaml \
+  --state-values-file my-values.yaml \
+  --selector name=mx-privatecloud \
+  apply
+```
+
+{{% alert color="info" %}}
+When using selectors, you must first apply changes to the dependency, and then synchronize `mxplatform` to recognize the changes:
+
+```text
 # Step 1: Update dependency
 helmfile ... -l name=mx-privatecloud apply
-
 # Step 2: MANDATORY - sync mxplatform
 helmfile ... -l name=mxplatform apply
 ```
+{{% /alert %}}
 
-## Other Commands
-*   **Preview:** `helmfile ... diff`
-*   **Status:** `helmfile ... status`
-*   **Destroy:** `helmfile ... destroy`
+### Other Commands
 
-> **CRITICAL:** Disabling `mxplatform` (setting `enable: false`) is a destructive operation. Review reclaim policies to prevent data loss.
+```text
+# Preview changes (dry run)
+helmfile --file helmfile.d/helmfile.yaml \
+  --state-values-file my-values.yaml \
+  diff
 
----
+# Check status
+helmfile --file helmfile.d/helmfile.yaml \
+  --state-values-file my-values.yaml \
+  status
 
-# Component Configurations
-
-## mx-privatecloud-license-manager (PCLM)
-Required for `mxplatform` deployment.
-
-### Database Configuration
-| Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| **db.type** | string | Yes | "postgres" or "sqlserver" |
-| **db.strict_tls** | boolean | No | Enable strict TLS for database |
-
-### Bootstrap Users
-| Field | Required | Description |
-| :--- | :--- | :--- |
-| **admin_user** | Yes | PCLM Admin username |
-| **operator_user** | Yes | Must match Mendix Operator config |
-
----
-
-# Secret Management
-
-## Using Secret Provider Class
-Allows storing credentials in Azure Key Vault, AWS Secrets Manager, or HashiCorp Vault.
-
-**Pattern:**
-```yaml
-mx-privatecloud:
-  azureWorkloadIdentity:
-    enable: true
-    clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-  secretProviderclass:
-    enable: true
-    provider: "azure"
-    azureparameters:
-      keyvaultName: "my-keyvault"
+# Destroy all releases
+helmfile --file helmfile.d/helmfile.yaml \
+  --state-values-file my-values.yaml \
+  destroy
 ```
 
----
+### Disabling Mxplatform
 
-# Workload Identity Decision Matrix
+Setting `mxplatform.enable: false` and running `helmfile sync` uninstalls the `mxplatform` release and deletes the MendixApp Custom Resource.
 
-| Feature | Workload Identity (IAM) | Secret Provider Class (CSI) |
-| :--- | :--- | :--- |
-| **Purpose** | Passwordless runtime connection | Inject secrets during install |
-| **Secures** | DB/Storage passwords only | All secrets/passwords |
-| **Rotation** | Automatic (Cloud tokens) | Static secrets in Vault |
-| **Compatibility** | Mutually exclusive with CSI | Mutually exclusive with IAM |
+{{% alert color="warning" %}}
+The Mendix Operator will react based on the reclaim policies in your StoragePlan and DBPlan. If configured with destructive policies, this will result in irreversible data loss.
+{{% /alert %}}
 
----
+Before disabling `mxplatform`, perform the following actions::
 
-# Troubleshooting
-
-*   **Empty Credentials:** Re-run full `helmfile apply`.
-*   **Image Pull Errors:** Verify registry URL or attach ACR/ECR permissions to nodes.
-*   **DB Failures:** Check reachability and CA certificates if `strict_tls` is enabled.
-*   **CSI Issues:** Verify the Secrets Store Driver pods are running in `kube-system`.
-
-# Security Best Practices
-1.  Use **Secret Provider Class** to avoid plain-text credentials.
-2.  Add `my-values.yaml` to `.gitignore`.
-3.  Generate unique RSA keys for each environment.
-4.  Use **Managed Identities** for container registries.
-```
+1. Review the reclaim policies of StoragePlan and DBPlan.
+2. Ensure that you have backups.
+3. Understand that disabling `mxplatform` is a destructive operation.

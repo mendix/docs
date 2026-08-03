@@ -29,7 +29,11 @@ Private Mendix Platform can run with FIPS-compliant encryption across the entire
 
 #### Installation Mode
 
-You can perform the installation in interactive or non-interactive mode. In [interactive mode](/private-mendix-platform/interactive-installation/), you manually install Private Mendix Platform components. In [non-interactive](/private-mendix-platform/noninteractive-installation/) mode, you use commands to automatically install Private Mendix Platform components.
+You can perform the installation in one of the following modes:
+
+* [Interactive mode](/private-mendix-platform/interactive-installation/), where you manually install Private Mendix Platform components
+* [Non-interactive mode](/private-mendix-platform/noninteractive-installation/), where you use commands to automatically install Private Mendix Platform components
+* [With Helmfile](/private-mendix-platform/helmfile-installation/).
 
 #### Installation Order
 

@@ -233,9 +233,9 @@ The `Request` is an input object for the chat completions operations defined in 
 | `TopP` | An alternative to temperature for controlling the randomness of the model response. `TopP` defines a probability threshold so that only words with probabilities greater than or equal to the threshold will be included in the response. Mendix recommends steering either the temperature or `TopP`, but not both. |
 | `ToolChoice` | Controls which (if any) tool is called by the model. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values. |
 | `_AgentVersionId` | The `AgentVersionId`, set if the execution of the request was called from an Agent. |
-| `SaveToolCallHistory` | Indicates if the tool calls are stored for later continuation (must be implemented).  |
-| `UseStreamingAPI` | Indicates if the LLM call should be called with streaming. |
-| `StreamingResponseWriterId` | Indicates if streaming data should be pushed to the UI. Must not be set manually! This is only set in backend if a ConversationalUI chat interface is being used with an agent that has streaming enabled. |
+| `SaveToolCallHistory` | Indicates if the tool calls are stored for later continuation (must be implemented). |
+| `UseStreamingAPI` | Indicates whether the LLM call uses streaming. |
+| `StreamingResponseWriterId` | Indicates whether streaming data is pushed to the UI. Do not set this manually. It is set in the backend only when a Conversational UI chat interface is used with an agent that has streaming enabled. |
 
 #### `Message` {#message}
 

@@ -222,12 +222,14 @@ If no [user-visibility](/agents/agents-kit-2/reference-guide/commons/#enum-usera
 
 ### Streaming {#streaming}
 
-Conversational UI chats can also be streamed to the UI, which expands the assistant response as the LLM generates new content. To use streaming, use [AgentCommons](/agents/agents-kit-2/reference-guide/agent-commons/) to configure a chat agent. In the [model settings](/agents/agents-kit-2/reference-guide/agent-commons/#model-settings), enable the applicable streaming options, and use that agent when calling the `New Chat for Agent` action and in your action microflow. Not all models and connectors support streaming. Currently, streaming is supported only for Mendix Cloud GenAI.
+Conversational UI chats can also stream responses to the UI, expanding the assistant response as the LLM generates new content. To use streaming, use [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) to configure a chat agent. In the [model settings](/agents/agents-kit-2/reference-guide/agent-commons/#model-settings), enable the applicable streaming options, and use that agent when calling the `New Chat for Agent` action and in your action microflow. Not all models and connectors support streaming. Currently, streaming is supported only for Mendix Cloud GenAI.
 
-Note that the following limitations apply for streaming because the microflows are called in isolated transactions:
-* Tool microflows can only read objects from the database and changes to objects are only stored within the microflow if not committed. Additionally, user interaction is limited, for example, opening a page or showing a message to the user.
-* This similarly applies for action microflows.
-A workaround to these limitations would be to make changes to persistent objects, for example the ChatContext which is available in both the action microflow and on the page.
+The following limitations apply to streaming because microflows run in isolated transactions:
+
+* Tool microflows can only read objects from the database. Changes to objects are stored only within the microflow if not committed. Additionally, user interaction is limited—for example, opening a page or showing a message to the user.
+* The same limitations apply to action microflows.
+
+A workaround is to make changes to persistent objects—for example, `ChatContext`, which is available in both the action microflow and on the page.
 
 ### Human in the Loop {#human-in-the-loop}
 

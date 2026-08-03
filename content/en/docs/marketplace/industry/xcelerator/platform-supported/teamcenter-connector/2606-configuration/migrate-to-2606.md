@@ -164,21 +164,19 @@ These Java actions still exist in the deprecated folder, but should no longer be
 
 The following entities have been deprecated. To indicate this, the entities have been renamed with an underscore prefix:
 
-|Entity |
-|---|
-|CreateBomWindowInput|
-|CreateBomWindowInput_CreateBomWindowResponse|
-|CreateBomWindowResponse|
-|ExpandPSOneLevelResponse|
-|GetItemFromIdInput|
-|GetItemFromIdResponse|
-|GetWorkflowTemplatesInput|
-|ItemRevisionOutput|
-|RevisionIDs|
-|SessionUser|
-|TcServerInfo|
-|WhereUsedInput|
-|WhereUsedResponseInfo|
+* `CreateBomWindowInput`
+* `CreateBomWindowInput_CreateBomWindowResponse`
+* `CreateBomWindowResponse`
+* `ExpandPSOneLevelResponse`
+* `GetItemFromIdInput`
+* `GetItemFromIdResponse`
+* `GetWorkflowTemplatesInput`
+* `ItemRevisionOutput`
+* `RevisionIDs`
+* `SessionUser`
+* `TcServerInfo`
+* `WhereUsedInput`
+* `WhereUsedResponseInfo`
 
 ## Automatically Migrated Items
 

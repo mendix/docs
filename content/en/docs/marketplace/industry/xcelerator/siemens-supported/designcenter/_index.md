@@ -33,7 +33,7 @@ The connector is licensed under the Apache 2.0 License.
 
 ## Prerequisites
 
-* Studio Pro 10.24 and above
+* Studio Pro 10.24.2 and above
 * A valid Siemens Enterprise Cloud Account (ECA) with an entitlement to a Designcenter X product tier and value-based licensing tokens
 * Access to the [Siemens Admin Console](https://cloud.sws.siemens.com/admin/) to provision server users and credentials
 * Built-in Data Management (Teamcenter X Essentials) or a higher Teamcenter X tier (Standard, Advanced, or Premium)
@@ -54,17 +54,7 @@ To install the Designcenter X Cloud Services Connector in your Mendix app, follo
 
 1. Install the modules listed in the [Dependencies](#dependencies) section.
 2. Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the [Designcenter X Cloud Services Connector](placeholder) into your app.
-3. Configure the connector as described in the [Configuring the Connector](#configuration) section.
-
-## Configuring the Connector {#configuration}
-
-To configure the Designcenter X Cloud Services Connector in your app, follow these steps:
-
-1. Create a server user in the Siemens Admin Console and obtain client credentials.
-2. Configure your Mendix app (modules, security, navigation, and constants).
-3. Configure OIDC SSO in your Mendix app.
-
-For more information, see [Configuring the Connector for Single Sign-On](/appstore/industry/siemens/designcenter/sso/).
+3. Configure the connector as described in the [Configuring the Connector for Single Sign-On](/appstore/industry/siemens/designcenter/sso/) document.
 
 ## Read More
 

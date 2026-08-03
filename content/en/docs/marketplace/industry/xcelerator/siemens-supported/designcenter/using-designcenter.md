@@ -13,14 +13,6 @@ This page guides you through building Mendix apps on top of the [Designcenter X 
 
 Configure the OIDC SSO and required constants in your app. For more information, see [Configuring the Connector for Single Sign-On](/appstore/industry/siemens/designcenter/sso/).
 
-To help you develop your app, familiarize yourself with the [Mendix Studio Pro Guide](/refguide/), especially the following topics:
-
-* [Studio Pro Overview](/refguide/studio-pro-overview/)
-* [Data in the Domain Model](/refguide/domain-model/)
-* [Pages](/refguide/pages/)
-* [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/)
-* [Development Best Practices](/refguide/dev-best-practices/)
-
 ## Concepts
 
 * Session – a handle that ensures the same Teamcenter server is used across service calls. The `EstablishSession` microflow either creates a new session or returns an existing one, so the same handle can be reused safely across operations.

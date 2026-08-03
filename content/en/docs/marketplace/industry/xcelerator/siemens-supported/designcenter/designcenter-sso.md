@@ -61,7 +61,7 @@ Keep the encryption key private and store it securely in your environment settin
 
 ## Validating the Configuration
 
-1. Run the app locally or open `http://localhost:8080/oauth/v2/login` in a browser. The sign-in page appears.
+1. Run the app locally or open `http://localhost:8080/oauth/v2/login` in a browser. The sign-in page appears. Alternatively, if you want to login directly when opening the `login.html` page, follow the [Configuring Login Redirection](/appstore/modules/oidc/#configuring-login-redirection) section of the *OIDC SSO*.
 2. Sign in via SSO to verify that the app loads successfully and connector operations can establish a Teamcenter session.
 
 ## Rotating the Credentials

@@ -8,6 +8,10 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.14.0
+
+* A module ID can now be passed to the element selector for the `selectedElementId` property, and the corresponding module will be preselected and expanded. This will allow the user to directly create a new document of the desired type in that module.
+
 ## Version 11.12.0
 
 * We removed the elements helper methods (`add*()`, `get*()`, `getContainer()`, and `delete()`) from the Model API types.

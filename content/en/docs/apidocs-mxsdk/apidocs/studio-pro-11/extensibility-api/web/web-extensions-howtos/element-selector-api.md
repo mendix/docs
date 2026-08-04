@@ -281,6 +281,12 @@ The optional query parameter allows you to filter selector results:
 | `name` | `string` | Filter by name | Documents, Entities |
 | `sdkName` | `string` | Filter by SDK name (for example, `Pages$Page`) | Documents only |
 
+
+## Preselecting Elements
+
+It is also possible to pass an element ID as the `selectedElementId` property of the `Selector`. This ID can be either a Document, an Entity, or a Module. If a Document or Entity, then the corresponding node on the selector form will show as selected.
+If the elementID belongs to a Module, then the corresponding node will appear selected and already expanded. It will also enable the `New` button right away, allowing the user to immediately create a new document in that selected module.
+
 ## Extensibility Feedback
 
 If you would like to provide additional feedback, you can complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).

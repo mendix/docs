@@ -102,12 +102,12 @@ The following steps walk you through creating and building a Teamcenter service 
         1. Double-click the entity or select an entity and click **Select Elements** at the top. 
         2. Use the checkboxes to indicate:
   
-        * **Read** — Should this property be retrieved from Teamcenter?
-        * **Write** — Should this property be sent to Teamcenter when creating or updating? Write checkboxes are only available in integrations where you can write data to Teamcenter. 
+            * **Read** – Should this property be retrieved from Teamcenter?
+            * **Write** – Should this property be sent to Teamcenter when creating or updating? Write checkboxes are only available in integrations where you can write data to Teamcenter. 
 
         3. From the **Property Mapping** window, select the properties you need for your integration.
 
-        {{< figure src="/attachments/appstore/industry-components/teamcenter/teamcenter2606/property-mapping.png" alt="Property Mapping window" max-width=80% >}}
+            {{< figure src="/attachments/appstore/industry-components/teamcenter/teamcenter2606/property-mapping.png" alt="Property Mapping window" max-width=80% >}}
 
     4. Teamcenter integration-specific panels   
         Depending on the integration type you choose, an additional configuration dialog window may be displayed. For example:

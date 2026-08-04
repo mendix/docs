@@ -52,6 +52,7 @@ The **Security method** section determines how the connection authenticates to t
 
 {{% alert color="warning" %}}
 Basic authentication (username and password) is deprecated or disabled by default on several major email providers, including Google Workspace and Microsoft 365, unless the tenant administrator has explicitly re-enabled it. To send emails through these providers, you can:
+
 * Re-enable SMTP basic authentication for the account (where your administrator's policy allows it), or
 * Use a provider that supports basic SMTP authentication.
 {{% /alert %}}
@@ -167,10 +168,11 @@ Body:    "Hi {1}, your order ships on {2}."
 
 {{% alert color="info" %}}
 Consider the following about templates:
+
 * The subject, the plain-text body, and the HTML body each have their own template. For a given field, use either the plain value or its template consistently.
-*  Keep placeholder numbering contiguous (`{1}`, `{2}`, …), and make sure every placeholder has a corresponding parameter expression.
+* Keep placeholder numbering contiguous (`{1}`, `{2}`, …), and make sure every placeholder has a corresponding parameter expression.
 * Only reference variables that exist in the microflow's scope at the activity's position. If the data is not yet available, retrieve it earlier in the flow.
-*  The HTML and plain-text bodies are independent. Populate only the one (or ones) you need.
+* The HTML and plain-text bodies are independent. Populate only the one (or ones) you need.
 {{% /alert %}}
 
 #### Subject
@@ -252,16 +254,16 @@ Review the following before you deploy to a production app.
 
 ### Authentication and Credentials
 
-- This version of the activity supports [basic authentication](#security-method) (username and password) only. Confirm your email provider permits SMTP basic authentication (**Google Workspace** and **Microsoft 365** disable it by default) or use a provider that does.
-- Do not hard-code credentials in the microflow model. Supply them through per-environment constants so secrets (the password in particular) are not stored in the app model or version control.
+* This version of the activity supports [basic authentication](#security-method) (username and password) only. Confirm your email provider permits SMTP basic authentication (**Google Workspace** and **Microsoft 365** disable it by default) or use a provider that does.
+* Do not hard-code credentials in the microflow model. Supply them through per-environment constants so secrets (the password in particular) are not stored in the app model or version control.
 
 ### Email Deliverability (SPF, DKIM, and DMARC)
 
 The sending domain must be configured correctly at the DNS level for your emails to be accepted and not marked as spam.
 
-- **SPF** – authorizes which servers may send emails for your domain
-- **DKIM** – cryptographically signs your messages so recipients can verify they were not altered
-- **DMARC** – tells receiving servers how to handle messages that fail SPF or DKIM checks
+* **SPF** – authorizes which servers may send emails for your domain
+* **DKIM** – cryptographically signs your messages so recipients can verify they were not altered
+* **DMARC** – tells receiving servers how to handle messages that fail SPF or DKIM checks
 
 If these records are missing or misconfigured, receiving servers may reject your messages or route them to spam, even when the activity reports that the email was sent successfully. Set these up with your email provider and domain administrator before going live.
 
@@ -271,7 +273,7 @@ When deploying to Mendix Cloud, refer to [Sending Email](/developerportal/deploy
 
 ## Read More
 
-- [Sending Email](/developerportal/deploy/sending-email/) – external email providers and SMTP configuration for Mendix Cloud
-- [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
-- [Constants](/refguide/constants/)
-- [Microflow Expressions](/refguide/expressions/)
+* [Sending Email](/developerportal/deploy/sending-email/) – external email providers and SMTP configuration for Mendix Cloud
+* [Error Handling in Microflows](/refguide/error-handling-in-microflows/)
+* [Constants](/refguide/constants/)
+* [Microflow Expressions](/refguide/expressions/)

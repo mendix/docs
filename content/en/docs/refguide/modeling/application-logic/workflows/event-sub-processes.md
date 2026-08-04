@@ -88,6 +88,7 @@ To add an **Event sub-process** to a workflow, follow these steps:
    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/select-event-dialog.png" alt="Select Event Dialog" width="500" >}}
 
 4. The sub-process flow is contained within a dashed rectangle. The border around the sub-process start event indicates its interrupting behavior: a dashed border indicates a non-interrupting sub-process, and a solid border indicates an interrupting sub-process.
+
 * The flow can contain the same types of activities as the main process flow (for example, **User Task**, **Call Microflow**, **Decision**).
 * It must start with a **Start** event (triggered by a notification or a timer) and end with at least one **End** event.
 

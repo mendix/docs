@@ -71,9 +71,19 @@ To install the component, follow the instructions in the [Importing Content from
 
 {{% alert color="info" %}}If you update the Advanced Audit Trail - Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
 
+## Understanding Protected Module Behavior
+
+Advanced Audit Trail is delivered as a protected Marketplace module. As a result, some implementation details described in this documentation may not be visible in Studio Pro. This is expected behavior and does not indicate that the module is incorrectly installed or configured.
+
+The AAT module contains internal microflows, scheduled events, configuration logic, and integration logic that are intentionally hidden from customers. For example, you may see references in this documentation to startup microflows, scheduled events that synchronize snapshots to external storage, or maintenance processes that clean up cached data. Depending on the module version, these implementation details may not be accessible or visible within your application model.
+
+Do not manually inspect, modify, or configure the internal implementation of the AAT service. Components such as the AAT backend services, Kafka infrastructure, OpenSearch infrastructure, internal synchronization processes, and protected implementation logic are managed by Mendix.
+
+If you cannot find a scheduled event, internal microflow, or other implementation detail referenced in this documentation, this is likely because that component is part of the protected module implementation. In such cases, no additional action is required unless explicitly stated elsewhere in this documentation. 
+
 ## Configuration
 
-1. Configure the **Startup** microflow in the Advanced Audit Trail module (`AdvancedAuditTrail.ConfigureAuditTrail`) to run as (part of) the [After Startup](/refguide/runtime-tab/#after-startup) microflow.
+1. Configure the **Startup** microflow in the Advanced Audit Trail module (`AdvancedAuditTrail.ConfigureAuditTrail`) to run as (part of) the [After Startup](/refguide/runtime-tab/#after-startup) microflow. For more information, see the [Configuring After Startup Microflow](#after-startup-microflow) section below.
 2. Set up your application roles to include the right module roles. For more information, see the [Configuring Module Roles](#module-roles) section below.
 3. Configure the right constant values for the right snapshots. For more information, see the [Configuring Constants](#constants) section below.
 4. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
@@ -90,6 +100,19 @@ To install the component, follow the instructions in the [Importing Content from
 6. Make sure that the scheduled events are enabled in the cloud portal. For more information, see the [Configuring Scheduled Events](#scheduled-events) section below.
 
     {{% alert color="info" %}}Due to protected modules, Mendix do not show scheduled events in Studio Pro.{{% /alert %}}
+
+### Configuring After Startup Microflow {#after-startup-microflow}
+
+Initiate the Advanced Audit Trail when the app starts. To do this, add the Advanced Audit Trail startup configuration microflow to your app’s After Startup flow. 
+
+Use one of the following microflows: 
+
+* `AdvancedAuditTrail.ConfigureAuditTrail`: This is the core configuration microflow and referenced in this document. Add it to the startup flow if your app already has a custom After Startup microflow.
+* `ASU_AuditTrail`: This is a wrapper startup microflow that delegates to the same configuration logic. If you do not have a custom After Startup microflow and prefer to use the provided startup microflow directly, you can use `ASU_AuditTrail`. 
+
+{{% alert color="info" %}}Both microflows start the same Advanced Audit Trail configuration. Do not add both microflows to the same startup sequence.{{% /alert %}}
+
+The Advanced Audit Trail is a platform-protected module,so you may not be able to inspect the internal implementation of these microflows. This is expected behavior. The protected implementation does not affect the required configuration. The app only needs to run the Advanced Audit Trail startup configuration once during app startup. 
 
 ### Configuring Module Roles {#module-roles}
 
@@ -192,13 +215,13 @@ The table below provides a detailed comparison between the Advanced Audit Trail 
 | Implementation in app model | Event Handler | Inheritance |
 | Data storage efficiency | High (1 serialized JSON per change) | Low (1 log object per changed attribute) |
 | List commit handling | Optimized | Not optimized |
-| Saving action stack upon change (e.g. showing related changes and triggering microflow)| Yes | No |
+| Saving action stack upon change (e.g. showing related changes and triggering microflow) | Yes | No |
 | Standard overview screen searchable per entity | Yes | No |
-| Ability to show custom attribute value when viewing associations in an audit trail snapshot| Yes | No |
+| Ability to show custom attribute value when viewing associations in an audit trail snapshot | Yes | No |
 | Developer can delete audit trail data unnoticed | No | Yes |
-| Guaranteed completeness of audit trail in case of disaster| Yes | No |
-| Additional custom data can be added to an audit trail snapshot (e.g. "on behalf of" in case of REST service)| Yes | No |
-| Built-in features for username and hash (e.g. password) scrambling| Yes | No |
+| Guaranteed completeness of audit trail in case of disaster | Yes | No |
+| Additional custom data can be added to an audit trail snapshot (for example, "on behalf of" in case of REST service) | Yes | No |
+| Built-in features for username and hash (e.g. password) scrambling | Yes | No |
 
 ## Search Criteria and Advanced Filtering
 

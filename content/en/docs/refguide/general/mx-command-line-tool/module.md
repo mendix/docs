@@ -91,25 +91,19 @@ For `MPK_PATH`, enter a *.mpk* file with the module you want to import.
 
 For `MPR_PATH`, enter a *.mpr* file of the project you want to import a module into.
 
-#### --import-mode
-
-The `--import-mode` option controls what happens when a module with the same name already exists in the app:
+For `--import-mode`, enter one of the following values to control what happens when a module with the same name already exists in the app:
 
 * `add` – Add the module. Fails if a module with the same name already exists. This is the default.
 * `replace` – Replace the existing module. Fails with exit code 310 if no module with that name is found in the app.
 * `update` – Replace the module if it already exists, or add it if it does not.
 
-#### --conflict
-
-The `--conflict` option controls what happens when a same-name module already exists, and applies to the `add` and `update` modes:
+For `--conflict`, enter one of the following values to control what happens when a same-name module already exists. This applies to the `add` and `update` modes:
 
 * `fail` – Return an error. This is the default.
 * `take_mine` – Keep the existing module and skip the import silently.
 * `take_theirs` – Replace the existing module.
 
-#### --metadata
-
-The `--metadata` option controls how marketplace identity fields are handled when a module is replaced. This option only takes effect when a replacement actually occurs.
+For `--metadata`, enter one of the following values to control how marketplace identity fields are handled when a module is replaced. This option only takes effect when a replacement actually occurs:
 
 * `take_new` – Use the identity fields from the incoming module. This is the default.
 * `take_existing` – Copy the identity fields from the module being replaced.

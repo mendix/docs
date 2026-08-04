@@ -73,10 +73,10 @@ To add a provisioning profile, do the following:
 In the **Build** module, open the iOS build profile and go to **Build Configuration**. Under the **Signing** section, choose one of the following signing methods:
 
 * **Automatic Signing** — Appcircle automatically handles provisioning profile management during the build. This process requires the following prerequisites be met:
-  * Xcode 13 or above
-  * A **Developer** or **Distribution** certificate
-  * An **App Store Connect API key** (configured in the **API Integrations** settings)
-  * The bundle identifier must already be registered in your Apple Developer account
+    * Xcode 13 or above
+    * A **Developer** or **Distribution** certificate
+    * An **App Store Connect API key** (configured in the **API Integrations** settings)
+    * The bundle identifier must already be registered in your Apple Developer account
 * **Manual Signing** — You manually select the certificate and provisioning profile for each build configuration. This gives you full control over which profiles are used. Select your bundle identifier from the dropdown, then choose the provisioning profile you added in the **Signing Identities** module. The certificate will be automatically matched based on the profile.
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/assign-code-signing.png" alt="Repository connection options in Appcircle" class="no-border" >}}

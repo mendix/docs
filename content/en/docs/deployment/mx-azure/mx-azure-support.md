@@ -221,21 +221,6 @@ Mendix on Azure aligns with SOC 2 Azure Policy automated controls. For more info
 | Azure Container Registry | [Container registries should be encrypted with a customer-managed key](https://www.azadvertizer.net/azpolicyadvertizer/5b9159ae-1701-4a6f-9a7a-aa9c8ddd0580.html) | The standard Microsoft key is used to enable deployment without key creation in Azure. |
 | Storage Account | [Storage accounts should use customer-managed key for encryption](https://www.azadvertizer.net/azpolicyadvertizer/6fac406b-40ca-413b-bf8e-0bf964659c25.html) | The standard Microsoft key is used to enable deployment without key creation in Azure. |
 
-## Severity Baselines for Support Tickets
-
-To ensure consistent and prioritised support, we classify issues based on the following severity levels:
-
-| SeverityLevel | Response Time | Resolution Time | Examples |
-| --- | --- | --- | --- |
-| Critical | Less than 2 office hours | Best effort | Production environment is inaccessible or severely impaired, preventing critical changes. Core application functionality is completely unavailable. |
-| High | Less than 8 office hours | Best effort | Inability to provision new clusters. Inability to modify existing clusters via the Mx on Azure portal. |
-| Medium | Next business day | Best effort | Non-production environments (Test or Acceptance) experience significant disruption to operational functionality. Operational functionality in production is moderately impacted but not critical. |
-| Low | Reasonable effort | Best effort | Minor issues with minimal impact on operational functionality. Cosmetic issues, minor performance degradation, or general inquiries. |
-
-{{% alert color="warning" %}}  
-The above SLA differs from the standard Mendix Platform Support SLA, as issues related to Mendix on Azure are resolved on a best-effort basis.
-{{% /alert %}}
-
 ## Off-boarding from the Service
 
 Customers can completely off-board from the service by deleting the Managed Application from their Azure subscription (for example by using the Azure Portal). This will immediately perform the following actions:

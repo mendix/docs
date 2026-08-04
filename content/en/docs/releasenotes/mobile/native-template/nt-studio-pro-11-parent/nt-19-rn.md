@@ -9,7 +9,7 @@ description: "Native Template 19"
 
 **Release date: Jul 3, 2026**
 
-- We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
+* We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
 
 ## 19.0.5
 

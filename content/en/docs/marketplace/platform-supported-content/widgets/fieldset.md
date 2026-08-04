@@ -17,4 +17,3 @@ The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Field
 ## Limitations
 
 * This widget should only be used to group widgets belonging to a form
-

@@ -11,14 +11,12 @@ beta: true
 {{% alert color="info" %}}
 Mendix inside Teamcenter is available in Mendix version 11.12.0 and above and is currently in public Beta.
 
-The Teamcenter connector version 2606.0.0 is required but is not yet published so this documentation is currently for information purposes only.
-
 See the [prerequisites](#prerequisites) for other version requirements.
 {{% /alert %}}
 
 Mendix inside Teamcenter lets you embed a Mendix web app as a native component inside Siemens Teamcenter Active Workspace. The Mendix app runs directly in the Active Workspace page as a micro-frontend using the [Embedded Client](/refguide/mendix-client/embedding-the-client/) feature.
 
-This integration requires the [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/) to connect the Mendix app to Teamcenter data and to handle authentication.
+This integration requires the [Teamcenter Connector](/appstore/industry/teamcenter-connector/) to connect the Mendix app to Teamcenter data and to handle authentication.
 
 ## Prerequisites {#prerequisites}
 
@@ -39,7 +37,7 @@ The following requirements must also be met:
 * The browser allows cross-site cookies for the Mendix domain. This can be configured per-domain via organization policy (for example, using Intune).
 * There is bidirectional network connectivity between the user's browser and both the Mendix runtime and the Teamcenter server.
 
-For Teamcenter Connector prerequisites, see [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/#prerequisites).
+For Teamcenter Connector prerequisites, see [Teamcenter Connector](/appstore/industry/teamcenter-connector/#prerequisites).
 
 ## Setting Up the Mendix App
 
@@ -179,19 +177,19 @@ Follow these steps to configure authentication.
 
 1. **Register the Mendix App with Teamcenter Security Services**:
 
-    Register the Mendix app in the Teamcenter Deployment Center so TcSS can authenticate it. For instructions, see [Registering Your App for Teamcenter SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#register-your-app-for-teamcenter-sso).
+    Register the Mendix app in the Teamcenter Deployment Center so TcSS can authenticate it. For instructions, see [Registering Your App for Teamcenter SSO](/appstore/industry/teamcenter-connector/configuring-connection-2512/#register-your-app-for-teamcenter-sso).
     
     {{% alert color="info" %}}This step requires administrator access to Teamcenter.{{% /alert %}}
 
 2. **Configure the Teamcenter Connector Connection**:
 
-    In your Mendix app, configure a Teamcenter Connector connection using **Teamcenter SSO** as the authentication method. For instructions, see [Configuring the Connection to Teamcenter](/appstore/modules/siemens-plm/configuring-connection-2512/).
+    In your Mendix app, configure a Teamcenter Connector connection using **Teamcenter SSO** as the authentication method. For instructions, see [Configuring the Connection to Teamcenter](/appstore/industry/teamcenter-connector/configuring-connection-2512/).
 
     {{% alert color="info" %}}This step requires administrator access to your Mendix application.{{% /alert %}}
 
 3. **Configure User Provisioning**:
 
-    Set up user provisioning based on the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. DO not allow anonymous users in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
+    Set up user provisioning based on the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. DO not allow anonymous users in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/industry/teamcenter-connector/configuring-connection-2512/#user-provisioning-for-sso).
 
 4. **Add the following required customizations**:
     
@@ -209,7 +207,7 @@ Follow these steps to configure authentication.
     3. Add an empty page called `AuthSuccess` to the application which contains an `Component load` event that calls this nanoflow.
     4. Change the `DL_HandleSSOLoginMicroflow` to show the `AuthSuccess` page instead of the home page as the last action in the microflow.
 
-        For instructions, see the [Adding an SSO Login Button to Your Login Page](/appstore/modules/siemens-plm/configuring-connection-2512/#add-sso-login-button) section of *Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above*.
+        For instructions, see the [Adding an SSO Login Button to Your Login Page](/appstore/industry/teamcenter-connector/configuring-connection-2512/#add-sso-login-button) section of *Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above*.
 
 ## Passing Context from Teamcenter {#passing-context}
 
@@ -233,6 +231,6 @@ For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/
 ## Read More
 
 * [Embedding the Client](/refguide/mendix-client/embedding-the-client/)
-* [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/)
+* [Teamcenter Connector](/appstore/industry/teamcenter-connector/)
 * [Setting Up the Navigation Structure](/refguide/setting-up-the-navigation-structure/)
 * [Configure CORS](/refguide/configure-cors/)

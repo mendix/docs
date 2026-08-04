@@ -30,7 +30,6 @@ Agents skills are not supported for Add-on and Solution modules.
 
 For guidance on writing effective skills, see [Best Practices for Skill Creators](https://agentskills.io/skill-creation/best-practices) and [Optimizing Skill Descriptions](https://agentskills.io/skill-creation/optimizing-descriptions) in the [Agent Skills documentation](https://agentskills.io/).
 
-
 ## Creating an Agent Skill {#creating-a-skill}
 
 To create a new agent skill in Studio Pro, follow these steps:
@@ -121,7 +120,6 @@ Since Studio Pro 11.12, Maia lets you list all registered agent skills. Click th
 successfully, including any error message, references found, and the module the skill belongs to.
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-agent-skills/skills-pane.png" width="400px">}}
-
 
 Updates to skills, whether you add a new skill or change an existing one, appear only after you start a new session.
 To apply the updated skills immediately, click the **Sync** button in the **Skills**  pane.

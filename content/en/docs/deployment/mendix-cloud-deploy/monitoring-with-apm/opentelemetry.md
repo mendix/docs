@@ -32,7 +32,7 @@ Before connecting your app to an OpenTelemetry backend, ensure you have:
 
 To connect your Mendix Cloud environment to an OpenTelemetry backend:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/).
+1. Go to [Projects](https://projects.home.mendix.com/).
 2. Click **Environments** on the app of choice.
 3. Click **Details** ({{% icon name="notes-paper-edit" %}}) for the environment you want to configure.
 4. Go to the **Runtime** tab.
@@ -150,7 +150,7 @@ These variables control the resource attributes attached to all telemetry. They 
 | `MX_OTEL_SERVICE_NAME` | App subdomain | Service name (`service.name` attribute). Defaults to the subdomain of the app's first route (for example, `my-app` from `my-app.mendixcloud.com`). Set this variable to override it. |
 | `MX_OTEL_SERVICE_VERSION` | Model version | Service version (`service.version` attribute). Defaults to the Mendix model version. Falls back to the `version` application tag if set, otherwise `unversioned`. |
 | `MX_OTEL_DEPLOYMENT_ENV` | `env` tag or `none` | Deployment environment (`deployment.environment.name` attribute). Defaults to the `env` application tag if set, otherwise `none`. |
-| `MX_OTEL_RESOURCE_ATTRIBUTES` | _(from app tags)_ | Additional resource attributes as comma-separated `key=value` pairs. Automatically populated from the application tags set in the Developer Portal. Can be set directly to override the tag-derived value. |
+| `MX_OTEL_RESOURCE_ATTRIBUTES` | *(from app tags)* | Additional resource attributes as comma-separated `key=value` pairs. Automatically populated from the application tags set in the Developer Portal. Can be set directly to override the tag-derived value. |
 
 ### OpenTelemetry Issues
 

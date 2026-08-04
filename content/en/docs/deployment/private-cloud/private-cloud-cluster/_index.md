@@ -1331,7 +1331,7 @@ You can change the access rights for, or completely remove, existing members.
 
 #### Operate {#operate}
 
-The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in [Apps](https://sprintr.home.mendix.com/).
+The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in [Projects](https://projects.home.mendix.com/).
 The following pages can be configured:
 
 * Metrics

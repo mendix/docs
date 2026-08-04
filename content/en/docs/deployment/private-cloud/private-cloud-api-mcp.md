@@ -75,23 +75,23 @@ To add the Mendix on Kubernetes MCP server in VS Code, perform the following ste
 
 1. Add the following configuration to your `.vscode/settings.json` file or your VS Code user settings:
 
-```json
-{
-   "mcp":{
-      "servers":{
-         "mendix-cloud-mcp-private":{
-            "type":"http",
-            "url":"https://mcp.home.mendix.com/private",
-            "headers":{
-               "Authorization":"MxToken {GENERATED_PAT}"
+   ```json
+   {
+      "mcp":{
+         "servers":{
+            "mendix-cloud-mcp-private":{
+               "type":"http",
+               "url":"https://mcp.home.mendix.com/private",
+               "headers":{
+                  "Authorization":"MxToken {GENERATED_PAT}"
+               }
             }
          }
       }
    }
-}
-```
+   ```
 
-1. Replace the placeholder values with your credentials as described in the [Claude Code](#claude-code) section above.
+2. Replace the placeholder values with your credentials as described in the [Claude Code](#claude-code) section above.
 
 ## Available Capabilities {#capabilities}
 

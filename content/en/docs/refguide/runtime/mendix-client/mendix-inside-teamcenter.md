@@ -24,10 +24,8 @@ The following versions are required:
 
 | | Mendix | Teamcenter | Teamcenter Connector |
 | --- | --- | --- | --- |
-| **Beta** | 11.12 or above | 2512 | 2606.0.0 or above¹ |
+| **Beta** | 11.12 or above | 2512 | 2606.0.0 or above |
 | **GA (planned)** | 11.18 | 2612 | TBD |
-
-¹ This version is not yet published.
 
 The following requirements must also be met:
 

@@ -94,9 +94,9 @@ paths:
         description: |-
            The release metadata for the new release. Provide the following fields in the request body.
 
-           The `versionNumber` field must include the version number of the release. It must be unique across all releases (no existing release with the same version in any state), and must follow the semantic versioning format: `major.minor.patch` (for example, `2.0.0`).
+           The `versionNumber` field must include the version number of the release. It must be unique across all releases (no existing release with the same version in any state), and must follow the semantic versioning format: `major.minor.patch` (for example, `2.0.0`). Starting with Studio Pro 11.12.0, this field no longer needs to be filled in. The module version must instead be added in the module settings. If you fill it in, it is overwritten by the version added in the module settings. For details, refer to the [Module Version](/refguide/module-settings/#module-version) section of the **Module Settings** page in the Studio Pro guide.
 
-           The `mendixVersion` field must include the Mendix Studio Pro version the release is built on. It must follow the semantic versioning format: `major.minor.patch` (for example, `11.0.0`).
+           The `mendixVersion` field must include the Mendix Studio Pro version the release is built on. It must follow the semantic versioning format: `major.minor.patch` (for example, `11.0.0`). Starting with Studio Pro 11.12.0, this field no longer needs to be filled in. The module version must instead be added in the module settings. If you fill it in, it is overwritten by the version added in the module settings. For details, refer to the [Module Version](/refguide/module-settings/#module-version) section of the **Module Settings** page in the Studio Pro guide.
 
            The `releaseNotes` field must include human-readable information about the release. This field is required and must be a non-empty string describing the changes introduced in the release.
 

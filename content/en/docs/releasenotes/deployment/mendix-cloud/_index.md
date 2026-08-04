@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## August 2026
 
+### August 4, 2026
+
+#### New Features
+
+* We have added a new [Jetty Thread Pool Usage](/developerportal/operate/monitoring-application-health/#jetty-thread-pool-usage) alert to the [Alerts](/developerportal/operate/monitoring-application-health/) page. This alert notifies you when the application's Jetty thread pool is approaching capacity, which can cause new requests to be delayed or rejected.
+
 ### August 3, 2026
 
 #### New Features

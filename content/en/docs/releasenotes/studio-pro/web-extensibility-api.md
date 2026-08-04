@@ -8,6 +8,11 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.13.0
+
+* When a progress dialog is cancelled, the result of the whole process is no longer returned as a snapshot of what the progress was at the time of the cancellation, but instead it will return when the cancelled step finishes. A new parameter `resolveImmediatelyOnCancel` will still allow the previous behavior if the developer wishes to.
+* We fixed an issue where an extension had open tabs when it got reloaded, an Oops crash will occur.
+
 ## Version 11.12.0
 
 * We removed the elements helper methods (`add*()`, `get*()`, `getContainer()`, and `delete()`) from the Model API types.

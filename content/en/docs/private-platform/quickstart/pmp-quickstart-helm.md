@@ -8,7 +8,13 @@ weight: 30
 
 ## Introduction
 
-You can now use Helm and Helmfile in order to automate the declarative installation of Private Mendix Platform and its components through GitOps and CI/CD pipelines.
+To automate the declarative installation of Private Mendix Platform, you can now use Helm and Helmfile in order to automate the declarative installation of Private Mendix Platform. In this way, you can automatically install Private Mendix Platform components. If you would like to perform a manual installation instead, see [Install Private Mendix Platform in Interactive Mode](/private-mendix-platform/interactive-installation/).
+
+Helmfile installation supports the following tasks:
+
+* Automated namespace installation, upgrade, and Operator configuration 
+* Installation and upgrade of components such as Svix, PCLM, and others
+* Installation and upgrade of Private Mendix Platform  
 
 ## Components
 

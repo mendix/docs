@@ -37,6 +37,7 @@ jobs:
           # 20000 commits required for Hugo to populate last-modified dates on pages
           fetch-depth: 20000
           submodules: false
+          filter: blob:none
 
       - name: Set up Node.js
         uses: actions/setup-node@v6

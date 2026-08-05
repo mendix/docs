@@ -47,6 +47,7 @@ The following components must be installed in the same namespace as Private Mend
 * PCLM
 * Svix
 * Maia
+* LLM Gateway
 * Private Cloud components
 
 Other components, such as the Build agent and PDF DocGen module, can be installed in any namespace.

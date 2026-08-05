@@ -12,6 +12,10 @@ on:
         required: true
         default: 60
         type: number
+      branch_name:
+        description: "Optional branch name to limit the report to a single branch"
+        required: false
+        type: string
 
 jobs:
   identify-branches:
@@ -40,12 +44,17 @@ jobs:
         id: branch-data
         env:
           MIN_AGE_DAYS: ${{ github.event.inputs.min_age_days || '60' }}
+          TARGET_BRANCH: ${{ github.event.inputs.branch_name || '' }}
         run: |
           set -e
           ALL_BRANCHES=$(git branch -r | grep -v "origin/HEAD" | sed 's/origin\///')
           MIN_AGE_DAYS=${MIN_AGE_DAYS:-60}
+          TARGET_BRANCH=${TARGET_BRANCH:-}
 
           echo "MIN_AGE_DAYS=${MIN_AGE_DAYS}"
+          if [ -n "$TARGET_BRANCH" ]; then
+            echo "TARGET_BRANCH=${TARGET_BRANCH}"
+          fi
 
           PROTECTED_COUNT=0
           MERGED_COUNT=0
@@ -61,6 +70,10 @@ jobs:
           echo "CURRENT_DATE=$CURRENT_DATE" >> $GITHUB_ENV
 
           for BRANCH in $ALL_BRANCHES; do
+            if [ -n "$TARGET_BRANCH" ] && [ "$BRANCH" != "$TARGET_BRANCH" ]; then
+              continue
+            fi
+
             branch_lower=$(echo "$BRANCH" | tr '[:upper:]' '[:lower:]')
             if [[ $branch_lower == *backup* || $branch_lower =~ ^(development|main|master|production)(-[0-9]+)?$ ]]; then
               PROTECTED_BRANCHES+=("$BRANCH")

@@ -412,23 +412,25 @@ This section shows all the activities which have taken place in this environment
 
 #### Technical Contact
 
-This section allows you to designate the Technical Contact for the application. The Technical Contact serves as the point of contact for any app-related inquiries and should have the capability to manage all environments within the app.
+The Technical Contact is the operational owner of the app and serves as the point of contact for any app-related inquiries.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/technicalContact.png" class="no-border" >}}
 
-For applications created before December 12, the Technical Contact field is empty by default. It can be set by a user with cloud access permissions for the application.
+Every application has a Technical Contact. When an application is created, its creator is automatically assigned as the Technical Contact.
 
 {{% alert color="warning" %}}  
-Once a Technical Contact is assigned, they automatically receive administrative permissions for all namespaces associated with environments in the application. This means that the Technical Contact can perform all actions on all environments in the application. The Administrative permissions will be intact even when the Technical Contact is changed. Hence, the cluster manager must either manually assign a new role to the developer if they do not want all the permissions assigned to the developer, or remove the role assigned to the developer if they want all the permissions to be revoked for the developer.
+Once a Technical Contact is assigned, they automatically receive namespace Administrator permissions on all namespaces where the application's environments are deployed. This means the Technical Contact can perform all actions on all of the application's environments. Whenever a new environment is added, the Technical Contact receives Administrator permissions on the namespace associated with that environment.
 {{% /alert %}}
 
-For applications created on or after December 12, the Technical Contact is automatically set to the application's creator. In such cases, whenever a new environment is added, the Technical Contact receives administrative permissions for the namespaces associated with that environment.
+Changing the Technical Contact does not automatically revoke the previous Technical Contact's Administrator permissions. If the previous Technical Contact should no longer have administrative access, you must revoke their permissions separately through namespace user and permission management.
 
-The Technical Contact can be changed later, but only by the current Technical Contact.
+Only the current Technical Contact can change the assignment, by transferring the role to another member of the application team. If the current Technical Contact is unavailable or unreachable, contact [Mendix Support](https://support.mendix.com/) to update the assignment.
+
+For more information about the Technical Contact role and its permissions, see [Technical Contact Role and Permissions](/developerportal/deploy/private-cloud/private-cloud-technical-contact/).
 
 #### Environment Purpose {#environment-purpose}
 
-This section allows you to edit the Environment Purpose for the environments within the application. Setting the purpose of your environment does not affect its operational state. However, it helps ensure the environment is used as intended, providing clarity for both you and us. We strongly recommend setting this field, as future features may be tailored to specific environment purposes. For applications where the Technical Contact is not set, this section is not visible.
+This section allows you to edit the Environment Purpose for the environments within the application. Setting the purpose of your environment does not affect its operational state. However, it helps ensure the environment is used as intended, providing clarity for both you and us. We strongly recommend setting this field, as future features may be tailored to specific environment purposes.
 
 When creating a new environment, the Technical Contact can set the environment purpose. The field is not visible when some one else other than the Technical Contact is creating the environment. It is also possible to change the purpose in **Application Settings** after environment creation. However, the purpose can only be edited by the Technical Contact.
 

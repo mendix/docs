@@ -160,15 +160,9 @@ General Availability means that a feature is available for all users. This type 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Teamcenter Connector v2512 | General Availability: Mx 11.6 |
-| Teamcenter Extension Unified Sample App | General Availability: Mx 11.6 |
 | Workstation Client | Limited Availability: Mx 11.6 |
-| Capital Connector V1.1 | General Availability: Mx 11.6 |
-| Enrich MAIA with more Teamcenter relevant knowledge | General Availability: Mx 11.9 |
-| Capital Connector v2512 | General Availability: Mx 11.9 |
+| Enrich MAIA with more Teamcenter relevant knowledge | General Availability: Mx 11.18 |
+| Easily Call and Wait for Teamcenter Workflows via Mendix Workflows as part of the Teamcenter Connector | General Availability: Q3-Q4 2026 |
 | Private Workstation Management | Limited Availability: Mx 11.9 |
-| Mendix as PL Web Component | Public Beta: Mx 11.12 <br/>General Availability: 2027 |
-| Teamcenter Connector and Teamcenter Extension (Unified Module) v2606 | General Availability: Mx 11.12 |
-| Polarion Connector | General Availability: Q2-Q3 2026 |
 | Workstation Client | General Availability: Q3 2026 |
 | Siemens Design System (SDS) | General Availability: Q2 2026 |

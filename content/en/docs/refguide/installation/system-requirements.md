@@ -16,8 +16,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### Software Specifications {#software}
 
-[Mendix Studio Pro](/refguide/modeling/) 11 is supported on actively serviced versions of Windows 11; 
-We support running on Windows locally, or locally virtualized.
+[Mendix Studio Pro](/refguide/modeling/) 11 is supported on actively serviced versions of Windows 11. We support running on Windows locally, or locally virtualized.
 
 Mendix Studio Pro 11 can run in beta mode on Apple Silicon (ARM64) Macs running macOS Sonoma 14.0 and above. Starting with Studio Pro 11.12, the native macOS version of Studio Pro supports only Apple Silicon. Intel-based (x64) Macs are no longer supported. This shift allows Mendix to focus on a single native architecture for macOS, improving performance, efficiency, and overall compatibility. For information on known limitations, see the [Known Limitations for Mac](#mac-limitations) section below.
 

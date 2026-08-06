@@ -101,7 +101,7 @@ The following steps walk you through creating and building a Teamcenter service 
 
         1. Double-click the entity or select an entity and click **Select Elements** at the top. 
         2. Use the checkboxes to indicate:
-  
+
             * **Read** – Should this property be retrieved from Teamcenter?
             * **Write** – Should this property be sent to Teamcenter when creating or updating? Write checkboxes are only available in integrations where you can write data to Teamcenter. 
 

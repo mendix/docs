@@ -90,6 +90,10 @@ Starting from version 2.2.0, the module uses `objectGUID` as the primary identif
 If an LDAP group is deleted or renamed, any existing role mappings based on the original group name become invalid, which may result in users temporarily losing their assigned roles. To restore role assignments, update the mappings in the **LDAP group mapping** configuration and perform a resynchronization to reapply the appropriate roles. For more information, see the [Configuration](#configuration) section below.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+When upgrading from LDAP v2.2.0 to v2.2.1, duplicate LDAP Group records may exist if they were created in LDAP v2.2.0. After upgrading to version 2.2.1, run the `Ldap.MF_DeleteDuplicateGroups` migration microflow to detect and remove duplicate LDAP Group records. Once the cleanup is complete, run the [LDAP synchronization](/appstore/modules/ldap/#regular-synchronization) again. Add a unique constraint on the `ObjectGUID` attribute of the LDAP Group entity. The next LDAP release will include this unique constraint by default.
+{{% /alert %}}
+
 ## Configuration{#configuration}
 
 ### Regular Synchronization

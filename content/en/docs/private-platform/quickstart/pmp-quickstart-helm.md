@@ -703,7 +703,7 @@ This URL is used by the following:
 
 ### Mx-privatecloud
 
-The following configuration apply to Mendix Private Cloud core services (Authenticator, Collector, Interactor, Interactor-bridge).
+The following configurations apply to Mendix Private Cloud core services (Authenticator, Collector, Interactor, Interactor-bridge).
 
 #### Quick Deployment Scenarios
 
@@ -713,146 +713,90 @@ Refer to the following list for a quick summary of the supported deployment scen
 
     Set the database credentials for authenticator and collector, and then configure NATS.
 
-Database with SSL/TLS
+* Database with SSL/TLS
 
-Set dbssl: true and provide dbca certificate
+    Set `dbssl` to `true` and provide a `dbca` certificate.
 
-External agents
+* External agents
 
-Enable interactor_bridge.ingress with hostname
+    Enable `interactor_bridge.ingress` with a host name.
 
-AWS RDS IAM Authentication (Passwordless)
+* AWS RDS IAM Authentication (Passwordless)
 
-Enable awsIRSA with roleArn, leave database passwords empty
+    Enable `awsIRSA` with `roleArn` and leave the database passwords empty.
 
-Azure Managed Identity Database Auth (Passwordless)
+* Azure Managed Identity Database Auth (Passwordless)
 
-Enable azureWorkloadIdentity, leave database passwords empty
+    Enable `azureWorkloadIdentity` and leave the database passwords empty.
 
-Azure Key Vault
+* Azure Key Vault
 
-Enable azureWorkloadIdentity + secretProviderclass with provider: "azure"
+    Enable `azureWorkloadIdentity + secretProviderclass` with `provider` set to `azure`.
 
-AWS Secrets Manager
+* AWS Secrets Manager
 
-Enable awsIRSA + secretProviderclass with provider: "aws"
+    Enable `awsIRSA + secretProviderclass` with `provider` set to `aws`.
 
-HashiCorp Vault
+* HashiCorp Vault
 
-Enable secretProviderclass with provider: "vault"
+    Enable `secretProviderclass` with `provider` set to `vault`.
 
-Basic Configuration
+#### Basic Configuration
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
+| `enable` | Boolean | Yes | Enable `mx-privatecloud` deployment |
+| `nats.server_addr` | string | Yes | The NATS server address, for example, `nats://nats.nats.svc:4222` |
 
-enable
+This chart deploys 4 components (Authenticator, Collector, Interactor, and Interactor-Bridge).
 
-boolean
+#### NATS Setup
 
-Yes
+This chart does not install NATS. You must deploy it separately by running the following commands:
 
-Enable mx-privatecloud deployment
-
-nats.server_addr
-
-string
-
-Yes
-
-NATS server address. Example: "nats://nats.nats.svc:4222"
-
-Architecture: Deploys 4 components (Authenticator, Collector, Interactor, Interactor-Bridge)
-
-NATS Setup
-This chart does not install NATS. Deploy separately:
-
+```text
 helm repo add nats https://nats-io.github.io/k8s/helm/charts/
 helm install nats nats/nats --namespace nats --create-namespace
-Database Configuration
-Authenticator Database:
+```
+
+### Database Configuration
+
+The following configurations apply to databases.
+
+#### Authenticator Database and Collector Database
+
+The Authenticator and Collector database have the same structure.
 
 | Field | Required | Description |
 | --- | --- | --- |
+| `authenticator.database.host` | Conditional | Database host name; not required when `secretProviderclass.enable` is set to `true` |
+| `authenticator.database.port` | No (default: `5432`) | Database port |
+| `authenticator.database.name` | Conditional | Database name; not required when `secretProviderclass.enable` is set to `true` |
+| `authenticator.database.user` | Conditional | Database user name; not required when `secretProviderclass.enable` is set to `true` |
+| `authenticator.database.password` | Conditional | Database password; not required when using AWS IRSA (`awsIRSA.enable: true`) or Azure Workload Identity (`azureWorkloadIdentity.enable: true`) for IAM-based database authentication |
+| `authenticator.database.dbssl` | No | Enables SSL/TLS |
+| `authenticator.database.dbca` | Conditional | CA certificate; required if `dbssl` is set to `true` |
 
-authenticator.database.host
+#### RSA Keys and Internal Credentials
 
-Yes*
-
-Database hostname
-
-authenticator.database.port
-
-No (default: "5432")
-
-Database port
-
-authenticator.database.name
-
-Yes*
-
-Database name
-
-authenticator.database.user
-
-Yes*
-
-Database username
-
-authenticator.database.password
-
-Yes††
-
-Database password
-
-authenticator.database.dbssl
-
-No
-
-Enable SSL/TLS
-
-authenticator.database.dbca
-
-Conditional
-
-CA certificate (required if dbssl: true)
-
-Collector Database: Same structure as Authenticator
-
-*Not required when secretProviderclass.enable: true
-
-††Password is not required when using AWS IRSA (awsIRSA.enable: true) or Azure Workload Identity (azureWorkloadIdentity.enable: true) for IAM-based database authentication
-
-RSA Keys & Internal Credentials
-
-| Field | Required | Description |
+| Field | Default | Recommendation |
 | --- | --- | --- |
+| `rsa.privateKey` | Has a default value | It is recommended to override this value in production |
+| `rsa.publicKey` | Has a default value | It is recommended to override this value in production |
+| `credentials.*_pass` | Auto-generated | It is recommended to set this value explicitly |
 
-rsa.privateKey
+##### Generate RSA Keys
 
-Has default
-
-⚠️ Override in production
-
-rsa.publicKey
-
-Has default
-
-⚠️ Override in production
-
-credentials.*_pass
-
-Auto-generated
-
-Recommended to set explicitly
-
-Generate RSA keys:
-
+```text
 openssl genrsa -out private.pem 2048
 openssl rsa -in private.pem -pubout -out public.pem
-Example Configurations
-Minimal Setup:
+```
 
+#### Example Configurations
+
+##### Minimal Setup
+
+```text
 mx-privatecloud:
   enable: true
   nats:
@@ -869,8 +813,11 @@ mx-privatecloud:
       name: "collector"
       user: "collector_user"
       password: "StrongPassword456"
-With AWS IAM Database Authentication (Passwordless):
+```
 
+##### With AWS IAM Database Authentication (Passwordless)
+
+```text
 mx-privatecloud:
   enable: true
   nats:
@@ -892,8 +839,11 @@ mx-privatecloud:
       name: "collector"
       user: "iam_collector_user"
       password: ""  # Empty - IAM authe
-With Azure Managed Identity Database Authentication (Passwordless):
+```
 
+##### With Azure Managed Identity Database Authentication (Passwordless)
+
+```text
 mx-privatecloud:
   enable: true
   nats:
@@ -915,8 +865,11 @@ mx-privatecloud:
       name: "collector"
       user: "managed_identity_user"
       password: ""  # Empty - Managed Identity authentication used
-With Database SSL:
+```
 
+##### With Database SSL
+
+```text
 mx-privatecloud:
   enable: true
   nats:
@@ -943,8 +896,11 @@ mx-privatecloud:
         -----BEGIN CERTIFICATE-----
         ...
         -----END CERTIFICATE-----
-With Azure Key Vault:
+```
 
+##### With Azure Key Vault
+
+```text
 mx-privatecloud:
   enable: true
   nats:
@@ -965,78 +921,28 @@ mx-privatecloud:
     database: {host: "", name: "", user: "", password: ""}
   collector:
     database: {host: "", name: "", user: "", password: ""}
-Required Azure Key Vault Secrets:
+```
 
-When using Azure Key Vault (provider: "azure"), you must create the following secrets in your Key Vault:
+##### Required Azure Key Vault Secrets
 
-Secret Name
+When using Azure Key Vault (with `provider` set to `azure`), you must create the following secrets in your Key Vault:
 
-Description
+| Secret Name | Description | Example Value |
+| --- | --- | --- |
+| `authenticator-db-name` | Authenticator database name | `authenticator` |
+| `authenticator-db-host` | Authenticator database host | `postgres.example.com` |
+| `authenticator-db-port` | Authenticator database port | `5432` |
+| `authenticator-db-user` | Authenticator database username | `auth_user` |
+| `authenticator-db-pass` | Authenticator database password | `StrongPassword123` |
+| `collector-db-name` | Collector database name | `collector` |
+| `collector-db-host` | Collector database host | `postgres.example.com` |
+| `collector-db-port` | Collector database port | `5432` |
+| `collector-db-user` | Collector database username | `collector_user` |
+| `collector-db-pass` | Collector database password | `StrongPassword456` |
 
-Example Value
+##### With Ingress for External Agents
 
-authenticator-db-name
-
-Authenticator database name
-
-authenticator
-
-authenticator-db-host
-
-Authenticator database host
-
-postgres.example.com
-
-authenticator-db-port
-
-Authenticator database port
-
-5432
-
-authenticator-db-user
-
-Authenticator database username
-
-auth_user
-
-authenticator-db-pass
-
-Authenticator database password
-
-StrongPassword123
-
-collector-db-name
-
-Collector database name
-
-collector
-
-collector-db-host
-
-Collector database host
-
-postgres.example.com
-
-collector-db-port
-
-Collector database port
-
-5432
-
-collector-db-user
-
-Collector database username
-
-collector_user
-
-collector-db-pass
-
-Collector database password
-
-StrongPassword456
-
-With Ingress for External Agents:
-
+```text
 mx-privatecloud:
   enable: true
   nats:
@@ -1049,69 +955,52 @@ mx-privatecloud:
       hostName: "bridge.mendix.example.com"
       certSecret: "bridge-tls-cert"
 # Agent connection URL: wss://bridge.mendix.example.com/agent
-maia-appgen
-Maia AI AppGen service for AI-powered application generation.
+```
 
-Basic Configuration
+### Maia-appgen
+
+This component provides the Maia AI AppGen service for AI-powered application generation.
+
+#### Basic Configuration
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
+| `enable` | Boolean | Yes | Enables Maia AppGen deployment |
+| `env` | array | Yes | Must include the `MXASSIST_COPILOT_MXID3_URL` |
 
-enable
+#### Environment Variables
 
-boolean
+##### Required
 
-Yes
-
-Enable Maia AppGen deployment
-
-env
-
-array
-
-Yes
-
-Must include MXASSIST_COPILOT_MXID3_URL
-
-Environment Variables
-Required:
-
+```text
 env:
   - name: MXASSIST_COPILOT_MXID3_URL
     value: "https://pmp.example.com/oidc/"  # REQUIRED - OIDC endpoint
-ServiceAccount
+```
+
+##### ServiceAccount
 
 | Field | Type | Must Stay |
 | --- | --- | --- |
+| `serviceAccount.create` | `true` | Yes - required for RBAC |
+| `serviceAccount.name` | `maia-appgen` | Used for IRSA/Workload Identity |
+| `serviceAccount.automount` | `true` | Yes - needs K8s API access |
 
-serviceAccount.create
+#### Example Configurations
 
-true
+##### Basic
 
-Yes - Required for RBAC
-
-serviceAccount.name
-
-"maia-appgen"
-
-Use for IRSA/Workload Identity
-
-serviceAccount.automount
-
-true
-
-Yes - Needs K8s API access
-
-Example Configurations
-Basic:
-
+```text
 maia-appgen:
   enable: true
   env:
     - name: MXASSIST_COPILOT_MXID3_URL
       value: "https://pmp.example.com/oidc/"
-With Azure Workload Identity:
+```
 
+##### With Azure Workload Identity
+
+```text
 maia-appgen:
   enable: true
   env:
@@ -1120,8 +1009,11 @@ maia-appgen:
   azureWorkloadIdentity:
     enable: true
     clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-With Ingress:
+```
 
+##### With Ingress
+
+```text
 maia-appgen:
   enable: true
   env:
@@ -1132,85 +1024,68 @@ maia-appgen:
     className: "nginx"
     hostName: "maia.example.com"
     certSecret: "maia-tls-secret"
-maia-llm-gateway
-Maia LLM Gateway service for routing LLM requests to various AI model providers.
+```
 
-Basic Configuration
+### Maia-llm-gateway
+
+The Maia LLM Gateway service is used for routing LLM requests to various AI model providers.
+
+#### Basic Configuration
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
+| `enable` | Boolean | Yes | Enables Maia LLM Gateway deployment |
+| `env` | array | Yes | Must include `MXASSIST_COPILOT_MXID3_URL`; optional for `MXASSIST_COPILOT_MXID3_SSL_CA_CERT` |
 
-enable
+#### Environment Variables
 
-boolean
-
-Yes
-
-Enable Maia LLM Gateway deployment
-
-env
-
-array
-
-Yes
-
-Must include MXASSIST_COPILOT_MXID3_URL
-
-Optional for MXASSIST_COPILOT_MXID3_SSL_CA_CERT
-
-Environment Variables
 The chart uses a two-tier environment variable system:
 
-defaultEnv: Chart-managed defaults (set in values.yaml, don't modify)
+* `defaultEnv` - Chart-managed defaults set in `values.yaml`. Do not modify them.
+* `env` - User-defined variables (your overrides and required settings).
 
-env: User-defined variables (your overrides and required settings)
+##### Required
 
-Required:
-
+```text
 env:
   - name: MXASSIST_COPILOT_MXID3_URL
     value: "https://pmp.example.com/oidc/"  # REQUIRED - OIDC endpoint
-Optional:
+```    
 
+##### Optional
+
+```text
 env:
   - name: MXASSIST_COPILOT_MXID3_SSL_CA_CERT
     value: |
       -----BEGIN CERTIFICATE-----
       ...
       -----END CERTIFICATE-----  # Optional - Custom CA certificate for MxID3
-ServiceAccount
+```
+
+#### ServiceAccount
 
 | Field | Type | Must Stay |
 | --- | --- | --- |
+| `serviceAccount.create` | `true` | Yes - required for RBAC |
+| `serviceAccount.name` | `maia-llm-gateway` | Used for IRSA/Workload Identity |
+| `serviceAccount.automount` | `true` | Yes - needs K8s API access |
 
-serviceAccount.create
+#### Example Configurations
 
-true
+##### Basic
 
-Yes - Required for RBAC
-
-serviceAccount.name
-
-"maia-llm-gateway"
-
-Use for IRSA/Workload Identity
-
-serviceAccount.automount
-
-true
-
-Yes - Needs K8s API access
-
-Example Configurations
-Basic:
-
+```text
 maia-llm-gateway:
   enable: true
   env:
     - name: MXASSIST_COPILOT_MXID3_URL
       value: "https://pmp.example.com/oidc/"
-With Custom CA Certificate:
+```
 
+##### With Custom CA Certificate
+
+```text
 maia-llm-gateway:
   enable: true
   env:
@@ -1221,8 +1096,11 @@ maia-llm-gateway:
         -----BEGIN CERTIFICATE-----
         MIIDjjCCAnagAwIBAgIQAzrx5qcRqaC7KGSxHQn65TANBgkqhkiG...
         -----END CERTIFICATE-----
-With Ingress:
+```
 
+##### With Ingress
+
+```text
 maia-llm-gateway:
   enable: true
   env:
@@ -1233,129 +1111,96 @@ maia-llm-gateway:
     className: "nginx"
     hostName: "llm-gateway.example.com"
     certSecret: "llm-gateway-tls-secret"
-Integration with mxplatform
-When maia-llm-gateway is enabled, mxplatform automatically configures these microflow constants:
+```
 
-Constant
+#### Integration with Mxplatform
 
-Value
+When `maia-llm-gateway` is enabled, `mxplatform` automatically configures the following microflow constants. You do not need to configure anything yourself - the integration happens automatically when you enable the component.
 
-Description
+| Constant | Value | Description |
+| --- | --- | --- |
+| `Maia.Enable` | `true | Set when `maia-llm-gateway` or `maia-appgen` is enabled |
+| `Maia.Config_Secret_Name_LLM_GW` | Secret name | Auto-discovered through label lookup |
+| `Maia.Config_Secret_Namespace_LLM_GW` | Namespace | Same as thw `mxplatform` namespace |
+| `Maia.LLM_GW_URL` | `https://<hostname>` | Set when Ingress is enabled with host name |
 
-Maia.Enable
+### Svix-server
 
-True
+The Svix webhooks server is used for event delivery and webhook management.
 
-Set when maia-llm-gateway OR maia-appgen is enabled
+#### Quick Deployment Scenarios
 
-Maia.Config_Secret_Name_LLM_GW
+Refer to the following list for a quick summary of the supported deployment scenarios and the required configuration.
 
-Secret name
+* Basic production
 
-Auto-discovered via label lookup
+    Set `postgres`, and optionally also `redis` and `useRedis` to `true`.
 
-Maia.Config_Secret_Namespace_LLM_GW
+* Azure Key Vault
 
-Namespace
+    Enable `azureWorkloadIdentity` and `secretProviderclass` with `provider` set to `azure`.
 
-Same as mxplatform namespace
+* AWS Secrets Manager
 
-Maia.LLM_GW_URL
+    Enable `awsIRSA` and `secretProviderclass` with `provider` set to `aws`.
 
-https://<hostname>
+* HashiCorp Vault
 
-Set when ingress is enabled with hostname
+    Enable `secretProviderclass` with `provider` set to `vault`.
 
-You don't need to configure anything — integration happens automatically when you enable the component.
-
-svix-server
-Svix webhooks server for event delivery and webhook management.
-
-Quick Deployment Scenarios 
-Your situation
-
-Configuration needed
-
-Basic production
-
-Set postgres, optionally redis + useRedis: true
-
-Azure Key Vault
-
-Enable azureWorkloadIdentity + secretProviderclass with provider: "azure"
-
-AWS Secrets Manager
-
-Enable awsIRSA + secretProviderclass with provider: "aws"
-
-HashiCorp Vault
-
-Enable secretProviderclass with provider: "vault"
-
-Basic Configuration
+#### Basic Configuration
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
+| `enable` | Boolean | Yes | Enables svix-server deployment |
+| `postgres` | string | Conditional | The PostgreSQL DSN. Required when `secretProviderclass.enable` is set to `false` |
+| `secretKey` | string | Recommended | The JWT secret key; auto-generated if empty |
 
-enable
+#### Database and Cache
 
-boolean
-
-Yes
-
-Enable svix-server deployment
-
-postgres
-
-string
-
-Conditional
-
-PostgreSQL DSN. Required when secretProviderclass.enable: false
-
-secretKey
-
-string
-
-Recommended
-
-JWT secret key. Auto-generated if empty
-
-Database & Cache
-
+```text
 svix-server:
   enable: true
   postgres: "postgresql://user:pass@host:5432/svix"
   redis: "redis://host:6379/0"  # Optional
   useRedis: false  # Set true to enable Redis
   secretKey: ""  # Leave empty for auto-generation
-Secret Key Management
-The JWT secret is managed via ConfigMap (svix-configmap):
+```
 
-User provides secretKey → Uses provided value
+#### Secret Key Management
 
-secretKey empty AND ConfigMap exists → Preserves existing key (upgrade-safe)
+The JWT secret is managed through `svix-configmap` in the following way:
 
-secretKey empty AND ConfigMap doesn't exist → Auto-generates 64-char key
+* If the user provides a `secretKey`, the provided value is used.
+* If the `secretKey` is empty and the ConfigMap exists, the existing key is preserved (`upgrade-safe`).
+* If the `secretKey` is empty and the ConfigMap does not exist, a 64-character key is auto-generated.
 
-Shared with mxplatform: JWT secret is automatically injected into mxplatform's SvixClient.JwtSecret constant.
+The JWT secret is automatically injected into the `SvixClient.JwtSecret` constant of the `mxplatform`.
 
-Example Configurations
-Basic:
+#### Example Configurations
 
+##### Basic
+
+```text
 svix-server:
   enable: true
   postgres: "postgresql://svix:pass@host:5432/svix"
   secretKey: ""  # Auto-generated
-With Redis:
+```
 
+##### With Redis
+
+```text
 svix-server:
   enable: true
   postgres: "postgresql://svix:pass@host:5432/svix"
   redis: "redis://redis-master:6379/0"
   useRedis: true
-With Azure Key Vault:
+```
 
+##### With Azure Key Vault
+
+```text
 svix-server:
   enable: true
   # Azure Workload Identity (REQUIRED for Azure Key Vault)
@@ -1370,158 +1215,61 @@ svix-server:
       keyvaultName: "my-svix-keyvault"
       # clientID and tenantID inherited from azureWorkloadIdentity
   # postgres ignored when using Secret Provider
-When using Azure Key Vault (provider: "azure"), you must create the following secrets in your Key Vault:
+```
 
-Secret Name
+When using Azure Key Vault (with `provider` set to `azure`), you must create the following secrets in your Key Vault:
 
-Description
+| Secret Name | Description | Example Value |
+| --- | --- | --- |
+| `svix-db-dsn` | The PostgreSQL connection string | `postgresql://user:pass@host:5432/svix` |
+| `svix-redis-dsn` | The Redis connection string (optional, used when `useRedis` is set to `true`) | `redis://host:6379/0` |
 
-Example Value
+### Mxplatform
 
-svix-db-dsn
+The `mxplatform` component is used for Mendix application platform deployment.
 
-PostgreSQL connection string
-
-postgresql://user:pass@host:5432/svix
-
-svix-redis-dsn
-
-Redis connection string (optional, when useRedis: true)
-
-redis://host:6379/0
-
-mxplatform
-The Mendix application platform deployment.
-
-Basic Configuration
+#### Basic Configuration
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
+| `enable` | Boolean | Yes | Enables `mxplatform` deployment |
+| `name` | string | No (default: `mxplatform`) | The name of the MendixApp CR and ServiceAccount, if created |
+| `UseStoragePlanwithIRSA` | Boolean | No (default: `false`) | Set to `true` when using StoragePlans with Workload Identity |
 
-enable
-
-boolean
-
-Yes
-
-Enable mxplatform deployment
-
-name
-
-string
-
-No (default: "mxplatform")
-
-Name for MendixApp CR and ServiceAccount if created
-
-UseStoragePlanwithIRSA
-
-boolean
-
-No (default: false)
-
-Set true when using StoragePlans with workload identity 
-
-PCLM Integration (Required)
+#### PCLM Integration (Required)
 
 | Field | Required | Description |
 | --- | --- | --- |
+| `pclm.serviceUrl` | Yes | PCLM service endpoint |
+| `pclm.username` | Conditional | The PCLM username; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
+| `pclm.password ` | Conditional | The PCLM password; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
 
-pclm.serviceUrl
-
-Yes
-
-PCLM service endpoint
-
-pclm.username
-
-Yes*
-
-PCLM username
-
-pclm.password
-
-Yes*
-
-PCLM password
-
-*Not required when secretProviderclass.enable: true (credentials injected from secret manager)
-
-Spec Configuration
+#### Spec Configuration
 
 | Field | Required | Description |
 | --- | --- | --- |
+| `spec.appURL` | Yes | A public domain for the app |
+| `spec.sourceURL` | Yes | The OCI image path in the following format: `oci-image://<registry>/<image>:<tag>` |
+| `spec.database.servicePlan` | Conditional | The database service plan name; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
+| `spec.storage.servicePlan` | Conditional | The storage service plan name; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
+| `spec.runtime.mxAdminPassword` | Conditional | The admin password not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
 
-spec.appURL
+#### Automatic Integration Detection
 
-Yes
+`Mxplatform` automatically integrates with enabled components. You only need to enable or disable components. Do not configure integration flags manually.
 
-Public domain for the app
+| Auto-detected Flag | When Used | Purpose |
+| --- | --- | --- |
+| `privatecloudEnabled` | Set when `mx-privatecloud.enable` is set to `true` | Connects to Private Cloud services |
+| `maiaEnabled` | Set when `maia-appgen.enable` is set to `true` | Enables the Maia AI assistant |
+| `svixEnabled` | Set when `svix-server.enable` is set to `true` | Enables webhook delivery |
+| `kubeAgentEnabled` | Set when `mxplatform-kube-agent.enable` is set to `true` | Enables build agent |
 
-spec.sourceURL
+#### Example Configurations
 
-Yes
+##### Basic
 
-OCI image path. Format: "oci-image://<registry>/<image>:<tag>"
-
-spec.database.servicePlan
-
-Yes*
-
-Database service plan name
-
-spec.storage.servicePlan
-
-Yes*
-
-Storage service plan name
-
-spec.runtime.mxAdminPassword
-
-Yes*
-
-Admin password
-
-*Not required when secretProviderclass.enable: true (credentials injected from secret manager)
-
-Automatic Integration Detection
-mxplatform automatically integrates with enabled components — you don't configure integration flags manually:
-
-Auto-detected Flag
-
-Set when...
-
-Purpose
-
-privatecloudEnabled
-
-mx-privatecloud.enable: true
-
-Connects to Private Cloud services
-
-maiaEnabled
-
-maia-appgen.enable: true
-
-Enables Maia AI assistant
-
-svixEnabled
-
-svix-server.enable: true
-
-Enables webhook delivery
-
-kubeAgentEnabled
-
-mxplatform-kube-agent.enable: true
-
-Enables build agent
-
-You only need to: Enable/disable components. Integration is automatic.
-
-Example Configurations
-Basic:
-
+```text
 mxplatform:
   enable: true
   pclm:
@@ -1546,8 +1294,11 @@ mxplatform:
       applicationRootUrl: "https://app.example.com"
       mxAdminPassword: "AdminPassword"
       dtapMode: "P"
-With Secret Provider:
+```
 
+##### With Secret Provider
+
+```text
 mxplatform:
   enable: true
   # PCLM credentials from Secret Provider
@@ -1572,208 +1323,72 @@ mxplatform:
       servicePlan: ""
     runtime:
       mxAdminPassword: ""  # Empty - injected from Secret Provider
-When using Azure Key Vault (provider: "azure"), you must create the following secrets in your Key Vault:
+```
 
-Always Required:
+When using Azure Key Vault (with `provider` set to `azure`), you must create the following secrets in your Key Vault:
 
-Secret Name
-
-Description
-
-Example Value
-
-mx-admin-password
-
-Mendix application admin password
-
-AdminPassword123
-
-pclm-admin-username
-
-PCLM administrator username
-
-administrator
-
-pclm-admin-password
-
-PCLM administrator password
-
-PCLMPassword123
-
-Database Secrets (required when spec.database.servicePlan is empty):
-
-Secret Name
-
-Description
-
-Example Value
-
-database-type
-
-Database type
-
-PostgreSQL
-
-database-host
-
-Database host
-
-postgres.example.com
-
-database-name
-
-Database name
-
-mxplatform
-
-database-username
-
-Database username
-
-mxplatform_user
-
-database-password
-
-Database password
-
-DBPassword123
-
-database-jdbc-url
-
-JDBC connection URL
-
-jdbc:postgresql://postgres.example.com:5432/mxplatform
-
-Azure Blob Storage Secrets (required when spec.storage.servicePlan is empty):
-
-Secret Name
-
-Description
-
-Example Value
-
-storage-service-name
-
-Storage service name
-
-azure
-
-storage-azure-container
-
-Azure Blob container name
-
-mxplatform-files
-
-storage-azure-blob-endpoint
-
-Azure Blob endpoint
-
-https://mystorageaccount.blob.core.windows.net
-
-storage-azure-use-default-azure-credential
-
-Use Azure Workload Identity
-
-true
-
-storage-perform-delete
-
-Allow delete operations
-
-true
-
-storage-use-ca-certificates
-
-Use CA certificates
-
-false
-
-storage-azure-use-https
-
-Use HTTPS for Blob access
-
-true
+| Secret Name | Description | Example Value | When Required |
+| --- | --- | --- | --- |
+| `mx-admin-password` | The Mendix application admin password | `AdminPassword123` | Always |
+| `pclm-admin-username` | The PCLM administrator username | `administrator` | Always |
+| `pclm-admin-password` | The PCLM administrator password | `PCLMPassword123` | Always |
+| `database-type` | Database type | `PostgreSQL` | Database secrets; required when `spec.database.servicePlan` is empty |
+| `database-host` | Database host | `postgres.example.com` | Database secrets; required when `spec.database.servicePlan` is empty |
+| `database-name` | Database name | `mxplatform` | Database secrets; required when `spec.database.servicePlan` is empty |
+| `database-username` | Database username | `mxplatform_user` | Database secrets; required when `spec.database.servicePlan` is empty |
+| `database-password` | Database password | `DBPassword123` | Database secrets; required when `spec.database.servicePlan` is empty |
+| `database-jdbc-url` | JDBC connection URL | `jdbc:postgresql://postgres.example.com:5432/mxplatform` | Database secrets; required when `spec.database.servicePlan` is empty |
+| `storage-service-name` | Storage service name | `azure` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
+| `storage-azure-container` | Azure Blob container name | 
+`mxplatform-files` | Storage service name | `azure` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
+| `storage-azure-blob-endpoint` | Azure Blob endpoint | `https://mystorageaccount.blob.core.windows.net` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
+| `storage-azure-use-default-azure-credential` | Use Azure Workload Identity | `true` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
+| `storage-perform-delete` | Allow delete operations | `true` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
+| `storage-use-ca-certificates` | Use CA certificates | `false` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
+| `storage-azure-use-https` | Use HTTPS for Blob access | `true` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
 
 Azure Blob Storage Secrets (with static credentials - when useManagedIdentityForBlob: false):
 
-Secret Name
+| `storage-azure-account-name` | Azure Storage account name | `mystorageaccount` | Azure Blob Storage secrets with static credentials; required when `useManagedIdentityForBlob` is set to `false` |
+| `storage-azure-account-key` | Azure Storage account key | `base64encodedkey==` | Azure Blob Storage secrets with static credentials; required when `useManagedIdentityForBlob` is set to `false` |
 
-Description
+### Mxplatform-kube-agent
 
-Example Value
+Mxplatform-kube-agent is the Build agent for `mxplatform` app deployments.
 
-storage-azure-account-name
+#### Basic Configuration
 
-Azure Storage account name
-
-mystorageaccount
-
-storage-azure-account-key
-
-Azure Storage account key
-
-base64encodedkey==
-
-mxplatform-kube-agent
-Build agent for mxplatform app deployments.
-
-Basic Configuration
-
-| Field | Required | Description |
+| Field | Type | Required |
 | --- | --- | --- |
+| `enable` | Boolean | Yes |
+| `namespace` | string | Yes |
+| `config.buildUser` | string | No (default: `pmpbuilder`) |
+| `config.buildPassword` | string | No (auto-generated) |
 
-enable
+##### Example
 
-boolean
-
-Yes
-
-namespace
-
-string
-
-Yes
-
-config.buildUser
-
-string
-
-No (default: "pmpbuilder")
-
-config.buildPassword
-
-string
-
-No (auto-generated)
-
-Example
-
+```text
 mxplatform-kube-agent:
   enable: true
   namespace: "build-agents"
- 
-mx-private-document-generation
-PDF document generation service.
+```
 
-Basic Configuration
+### Mx-private-document-generation
 
-| Field | Required | Description |
+Mx-private-document-generation is the PDF document generation service.
+
+The wervice URL for Mendix apps is `http://document-generation.<namespace>:8085`.
+
+#### Basic Configuration
+
+| Field | Type | Required |
 | --- | --- | --- |
+| `enable` | Boolean | Yes |
+| `namespace` | string | Yes |
 
-enable
+##### Example
 
-boolean
-
-Yes
-
-namespace
-
-string
-
-Yes
-
-Example
-
+```text
 mx-private-document-generation:
   enable: true
   namespace: "document-generation"
@@ -1781,100 +1396,114 @@ mx-private-document-generation:
     registry: "private-cloud.registry.mendix.com"
     name: "mendix/document-generation-service"
     tag: "1.0.0"
-Service URL for Mendix apps: http://document-generation.<namespace>:8085
+```
 
-Container Registry Configuration
-Azure Container Registry (ACR) with AKS
-Recommended: Use AKS-ACR integration with Managed Identity (no secrets needed).
+## Container Registry Configuration
 
+### Azure Container Registry (ACR) with AKS
+
+We recommend that you use AKS-ACR integration with Managed Identity. No secrets are required.
+
+```text
 # Attach ACR to AKS
 az aks update \
   --name <aks-cluster> \
   --resource-group <rg> \
   --attach-acr <acr-name>
-Configuration:
+```
 
+#### Configuration
+
+```text
 global:
   imageRegistry:
     url: "<acr-name>.azurecr.io"
     pullSecrets: []  # Empty - using managed identity
-Benefits:
+```
 
-✅ No secrets to manage
+#### Benefits
 
-✅ Automatic authentication
+The benefits of using Azure Container Registry with AKS include the following:
 
-✅ Works across all namespaces
+* No secrets to manage
+* Automatic authentication
+*  Works across all namespaces
+* Production-ready
 
-✅ Production-ready
+### AWS Elastic Container Registry (ECR)
 
-AWS Elastic Container Registry (ECR)
-Recommended: Attach ECR permissions to Node IAM Role.
+We recommend that you attach ECR permissions to Node IAM Role.
 
+```text
 # Attach ECR policy to node role
 aws iam attach-role-policy \
   --role-name <eks-node-role> \
   --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
-Configuration:
+```
 
+#### Configuration
+
+```text
 global:
   imageRegistry:
     url: "<account-id>.dkr.ecr.<region>.amazonaws.com"
     pullSecrets: []  # Empty - node IAM role handles auth
-Using Image Pull Secrets (Alternative)
-If managed identity is not available:
+```
 
+### Using Image Pull Secrets
+
+If managed identity is not available, you can use image pull secrets as an alternative.
+
+```text
 # Create secret in each namespace
 kubectl create secret docker-registry acr-secret \
   --namespace <namespace> \
   --docker-server=<registry>.azurecr.io \
   --docker-username=<username> \
   --docker-password=<password>
-Configuration:
+```
 
+#### Configuration
+
+```text
 global:
   imageRegistry:
     url: "<registry>.azurecr.io"
     pullSecrets:
       - name: acr-secret  # Must exist in EACH namespace
+```
 
-Secret Management
-Using Secret Provider Class
+## Secret Management Using the Secret Provider Class
 
-Quick Summary for Customers
+The Secret Provider class allows you to store all sensitive credentials (passwords, connection strings, API keys) in a centralized vault (Azure Key Vault, AWS Secrets Manager, or HashiCorp Vault) instead of hardcoding them in configuration files.
 
-Secret Provider Class allows you to store all sensitive credentials (passwords, connection strings, API keys) in a centralized vault (Azure Key Vault, AWS Secrets Manager, or HashiCorp Vault) instead of hardcoding them in configuration files.
+### Requirements
 
-Key Requirements:
+To use the Secret Provider class, you must fulfill the following requirements:
 
-✅ Install CSI Secrets Store Driver + provider plugin
+1. Install the CSI Secrets Store Driver with a provider plugin.
+2. Configure identity authentication (Azure Workload Identity or AWS IRSA).
 
-✅ Configure identity authentication (Azure Workload Identity or AWS IRSA)
+    This step is mandatory because the CSI driver uses your ServiceAccount's cloud identity to authenticate to the vault and retrieve secrets.
 
-✅ Grant vault access permissions to the identity
+3. Grant vault access permissions to the identity.
+4. Store secrets in the vault with the correct key names.
+5. Enable `secretProviderclass` in hHelmfile configuration.
+6. Inject credentials from external secret management systems (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
 
-✅ Store secrets in the vault with correct key names
-
-✅ Enable secretProviderclass in helmfile configuration
-
-The identity authentication (Step 2) is MANDATORY - the CSI driver uses your ServiceAccount's cloud identity to authenticate to the vault and retrieve secrets.
-
-Inject credentials from external secret management systems (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
-
-🔐 IMPORTANT: Authentication Required
-
+{{% alert color="info" %}}
 Secret Provider Class requires workload identity authentication to access the secret vault:
 
-Azure Key Vault → Requires Azure Workload Identity (azureWorkloadIdentity.enable: true)
-
-AWS Secrets Manager → Requires AWS IRSA (awsIRSA.enable: true)
-
-HashiCorp Vault → Requires Kubernetes Auth configured in Vault
+* Azure Key Vault requires Azure Workload Identity (`azureWorkloadIdentity.enable` set to `true`).
+* AWS Secrets Manager requires AWS IRSA (`awsIRSA.enable` set to `true`)
+* HashiCorp Vault requires Kubernetes Auth configured in Vault.
 
 The CSI driver uses the ServiceAccount's identity to authenticate to the vault and retrieve secrets.
+{{% /alert %}}
 
-Prerequisites
+### Example
 
+```text
 # Install CSI Secrets Store Driver
 helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
 helm install csi-secrets-store secrets-store-csi-driver/secrets-store-csi-driver --namespace kube-system
@@ -1885,25 +1514,26 @@ kubectl apply -f https://raw.githubusercontent.com/Azure/secrets-store-csi-drive
 kubectl apply -f https://raw.githubusercontent.com/aws/secrets-store-csi-driver-provider-aws/main/deployment/aws-provider-installer.yaml
 # For Vault:
 helm install vault-csi-provider hashicorp/vault-csi-provider --namespace kube-system
-Supported Components
-Component
+```
 
-Secrets Managed
+### Supported Components
 
-mx-privatecloud
+| Component | Secrets Managed |
+| --- | --- |
+| `mx-privatecloud` | Authenticator and Collector database credentials |
+| `svix-server` | PostgreSQL and Redis connection strings |
+| `mxplatform` | PCLM credentials, admin passwords, database credentials, storage credentials |
 
-Authenticator & Collector database credentials
+#### Configuration Pattern
 
-svix-server
+When configuring secret management, keep in mind the following key points:
 
-PostgreSQL and Redis connection strings
+* The Secret Provider class will not work without proper identity authentication configured.
+* For Azure, you must enable `azureWorkloadIdentity` and configure Managed Identity with Key Vault access.
+* For AWS, you must enable `awsIRSA` and configure IAM role with Secrets Manager access.
+* For Vault, you must configure the Kubernetes Auth method in Vault and grant the policy access.
 
-mxplatform
-
-PCLM credentials, admin passwords, database credentials, storage credentials
-
-Configuration Pattern
-
+```text
 {component}:
   # Step 1: Configure identity authentication (REQUIRED)
   # For Azure Key Vault - MUST configure Workload Identity
@@ -1933,19 +1563,13 @@ Configuration Pattern
       role: "my-role"
       secretName: "my-secret"
       version: "v2"  # Optional: v1 or v2
-Key Points:
+```
 
-✅ Azure: Must enable azureWorkloadIdentity + configure Managed Identity with Key Vault access
+#### Global vs Component Configuration
 
-✅ AWS: Must enable awsIRSA + configure IAM role with Secrets Manager access
-
-✅ Vault: Must configure Kubernetes auth method in Vault + grant policy access
-
-❌ Secret Provider Class will not work without proper identity authentication configured
-
-Global vs Component Configuration
 Component settings take precedence over global settings:
 
+```text
 global:
   # Global Azure Workload Identity configuration
   # REQUIRED for Azure Key Vault authentication
@@ -1980,108 +1604,94 @@ mxplatform:
   secretProviderclass:
     # Inherits global settings
     # Authenticates with clientID: 33333333-3333-3333-3333-333333333333
-Auto-Generated Credentials
-For internal component communication:
+```
 
-Component
+#### Auto-Generated Credentials
 
-Credential
+Auto-generated credentials are used for internal component communication.
 
-Generated
+| Component | Credential | Generated |
+| --- | --- | --- |
+| `mx-privatecloud` | Internal API passwords | Random 16-char |
+| `mxplatform-kube-agent` | Build password | Random 20-char |
+| `svix-server` | JWT secret | Random 64-char |
 
-mx-privatecloud
+This method is upgrade-safe. Existing credentials are preserved through lookup.
 
-Internal API passwords
+## Workload Identity 
 
-Random 16-char
+Workload Identity enables components to connect to cloud resources without passwords. Instead of storing passwords and access keys in configuration files, components use cloud-native identity (AWS IAM or Azure Managed Identity) to authenticate.
 
-mxplatform-kube-agent
+### Supported Components
 
-Build password
+* `mx-privatecloud-license-manager` - Passwordless database connections for the PCLM service
+* `mx-privatecloud` - Passwordless database connections for Authenticator and Collector services
+* `mxplatform` - Passwordless database and storage connections for Mendix application runtime
 
-Random 20-char
+### Supported Cloud Providers
 
-svix-server
+* AWS IRSA (IAM Roles for Service Accounts) - AWS RDS databases and S3 storage
+* Azure Workload Identity - Azure Database for PostgreSQL and Azure Blob Storage
 
-JWT secret
+### Use Case 1: Database Authentication for PCLM and Mx-privatecloud
 
-Random 64-char
+IAM-based database authentication allows components to connect to cloud databases without passwords. Instead of storing database passwords in configuration files, components use cloud-native identity (AWS IAM or Azure Managed Identity) to authenticate.
 
-Upgrade-safe: Existing credentials preserved via lookup.
+This method is applicable to the following:
 
-Workload Identity 
-💡 What is Workload Identity?
+* `mx-privatecloud-license-manager` (PCLM) - Passwordless connection to PCLM database
+* `mx-privatecloud` - Passwordless connections for authenticator and collector databases
 
-Workload Identity enables  components to connect to cloud resources WITHOUT passwords. Instead of storing passwords and access keys in configuration files, components use cloud-native identity (AWS IAM or Azure Managed Identity) to authenticate.
+The following databases are supported:
 
-Supported Components:
+* AWS RDS for PostgreSQL, MySQL, or SQL Server (with AWS IAM database authentication)
+* Azure Database for PostgreSQL or SQL Server (with Microsoft Entra ID or Managed Identity authentication)
 
-mx-privatecloud-license-manager: Passwordless database connections for PCLM service
+#### Configuring IAM-based Database Authentication
 
-mx-privatecloud: Passwordless database connections for authenticator and collector services
+To configure IAM-based database authentication, perform the following steps:
 
-mxplatform: Passwordless database and storage connections for Mendix application runtime
+1. To enable cloud identity, `set awsIRSA.enable` (for AWS) or `azureWorkloadIdentity.enable` (for Azure) to `true`.
+2. Configure the following database settings: 
 
-Supported Cloud Providers:
+    * **Host**
+    * **Port**
+    * **Name**
+    * **User** 
+    
+3. Leave the **Password** empty.
 
-AWS IRSA (IAM Roles for Service Accounts): AWS RDS databases and S3 storage
+#### How it Works
 
-Azure Workload Identity: Azure Database for PostgreSQL and Azure Blob Storage
+Chart validation allows empty passwords. When workload identity is enabled, the chart skips password validation.
 
-Use Case 1: Database Authentication for PCLM and mx-privatecloud
-💡 What is IAM-Based Database Authentication?
+At runtime, components use temporary IAM/Managed Identity tokens to authenticate to the database.
 
-IAM-based database authentication allows components to connect to cloud databases WITHOUT passwords. Instead of storing database passwords in configuration files, components use cloud-native identity (AWS IAM or Azure Managed Identity) to authenticate.
+#### Requirements
 
-Applicable to:
+For AWS RDS IAM authentication, ensure that you fulfill the following prerequisites:
 
-mx-privatecloud-license-manager (PCLM): Passwordless connection to PCLM database
+* RDS instance must have IAM database authentication enabled.
+* Database user must be created with the `rds_iam` role.
+* The IAM role (specified in `awsIRSA.roleArn`) must have the `rds-db:connect` permission for the database resource.
+* EKS cluster must have the OIDC provider configured.
+* The federated credential must map `ServiceAccount` to an IAM role.
 
-mx-privatecloud: Passwordless connections for authenticator and collector databases
+For Azure Database for PostgreSQL with Managed Identity, ensure that you fulfill the following prerequisites:
 
-Supported databases:
+* Azure Database for PostgreSQL must have Microsoft Entra authentication enabled.
+* The database user must be created as a Microsoft Entra user.
+* Managed Identity (specified in `azureWorkloadIdentity.clientID`) must have permission to connect.
+* The AKS cluster must have OIDC issuer and Workload Identity enabled.
+* The federated credential must map the `ServiceAccount` to Managed Identity.
 
-AWS RDS for PostgreSQL/MySQL/SQL Server (using AWS IAM database authentication)
+#### Configuration Examples
 
-Azure Database for PostgreSQL/SQL Server (using Microsoft Entra ID / Managed Identity authentication)
+##### Example 1
 
-How It Works
-Enable cloud identity: Set awsIRSA.enable: true (for AWS) or azureWorkloadIdentity.enable: true (for Azure)
+The following shows an example of configuring `mx-privatecloud-license-manager` with Azure Managed Identity.
 
-Configure database settings: Provide host, port, name, and user — leave password empty
-
-Chart validation allows empty passwords: When workload identity is enabled, the chart skips password validation
-
-At runtime: Components use temporary IAM/Managed Identity tokens to authenticate to the database
-
-Requirements
-For AWS RDS IAM Authentication:
-
-✅ RDS instance must have IAM database authentication enabled
-
-✅ Database user must be created with rds_iam role
-
-✅ IAM role (specified in awsIRSA.roleArn) must have rds-db:connect permission for the database resource
-
-✅ EKS cluster must have OIDC provider configured
-
-✅ Federated credential must map ServiceAccount to IAM role
-
-For Azure Database for PostgreSQL with Managed Identity:
-
-✅ Azure Database for PostgreSQL must have Microsoft Entra authentication enabled
-
-✅ Database user must be created as a Microsoft Entra user
-
-✅ Managed Identity (specified in azureWorkloadIdentity.clientID) must have permission to connect
-
-✅ AKS cluster must have OIDC issuer and Workload Identity enabled
-
-✅ Federated credential must map ServiceAccount to Managed Identity
-
-Configuration Examples
-Example 1: mx-privatecloud-license-manager with Azure Managed Identity
-
+```text
 # 1. Create Managed Identity for PCLM
 az identity create --name pclm-db-identity --resource-group my-rg
 # 2. Enable Microsoft Entra authentication on Azure Database
@@ -2104,8 +1714,11 @@ az identity federated-credential create \
   --issuer $OIDC_ISSUER \
   --subject "system:serviceaccount:production:mendix-pclm" \
   --audience api://AzureADTokenExchange
+```
+
 Helmfile configuration:
 
+```text
 mx-privatecloud-license-manager:
   enable: true
   image:
@@ -2137,8 +1750,13 @@ mx-privatecloud-license-manager:
     create_operator_user: true
     operator_user: "operatoruser"
     operator_password: "operatorpass"
-Example 2: mx-privatecloud with Azure Managed Identity
+```
 
+##### Example 2
+
+The following shows an example of configuring `mx-privatecloud` with Azure Managed Identity.
+
+```text
 # 1. Create Managed Identity for mx-privatecloud
 az identity create --name mx-privatecloud-db-identity --resource-group my-rg
 # 2. Create database users (same steps as above, but for authenticator and collector databases)
@@ -2156,8 +1774,11 @@ az identity federated-credential create \
   --issuer $OIDC_ISSUER \
   --subject "system:serviceaccount:production:mx-privatecloud" \
   --audience api://AzureADTokenExchange
+```
+
 Helmfile configuration:
 
+```text
 mx-privatecloud:
   enable: true
   nats:
@@ -2182,103 +1803,77 @@ mx-privatecloud:
       name: "collector"
       user: "mx-privatecloud-db-identity@myserver"
       password: ""  # Empty - Managed Identity authentication
-Workload Identity vs Secret Provider Class
-These are different approaches for database credentials management:
+```
 
-Feature
+#### Workload Identity vs Secret Provider Class
 
-Workload Identity (IAM Authentication)
+Workload Identity and Secret Provider Class are different approaches for database credentials management.
 
-Secret Provider Class
+| Feature | Workload Identity (IAM Authentication) | Secret Provider Class |
+| Purpose | Passwordless database connection at runtime | Inject all secrets from vault during installation |
+| What it secures | Database passwords only | Database credentials and all other secrets |
+| Configuration | `awsIRSA.enable: true` or azureWorkloadIdentity.enable: true` and empty passwords | `secretProviderclass.enable: true` |
+| Works with | AWS RDS IAM authentication or Azure Database Managed Identity authentication | AWS Secrets Manager, Azure Key Vault, HashiCorp Vault |
+| Credential type | Temporary cloud tokens (auto-rotated) | Static secrets from vault |
+| Can it be combined? | No - mutually exclusive with Secret Provider Class | No - mutually exclusive with Workload Identity |
 
-Purpose
+##### Key Differences
 
-Passwordless database connection at runtime
+* Workload Identity - Components use cloud identity to connect to databases (no passwords stored anywhere).
+* Secret Provider Class - Helm retrieves database passwords from a vault and injects them during installation. Passwords exist in vault as static secrets.
 
-Inject all secrets from vault during installation
+###  Use Case 2: Mxplatform Database and Storage Authentication
 
-What it secures
+For `mxplatform`, Workload Identity provides passwordless authentication for both database and storage at application runtime.
 
-Database passwords only
+For complete scenarios and Storage Plan configuration examples, see [Storage Plans](/developerportal/deploy/private-cloud-storage-plans/).
 
-Database credentials + all other secrets
+{{% alert color="info" %}}
+This type of authentication applies to runtime data access. It does not apply to installation secrets (that is, admin passwords and PCLM credentials). For those secrets, use the Secret Provider Class.
+{{% /alert %}}
 
-Configuration
+#### Configuring Workload Identity Authentication
 
-awsIRSA.enable: true or azureWorkloadIdentity.enable: true + empty passwords
+To configure Workload Identity authentication, perform the following steps:
 
-secretProviderclass.enable: true
+1. During Operator configuration, create Storage Plans with workload identity configuration:
 
-Works with
+    * For AWS, specify the IAM role ARN that has permissions to access RDS/S3.
+    * For Azure, specify the Managed Identity client ID that has permissions to access the Azure Database and Blob Storage.
 
-AWS RDS IAM auth or Azure Database Managed Identity auth
+2. Set `UseStoragePlanwithIRSA` to `true` in the Helmfile configuration for `mxplatform`.
+3. Reference these plans in `spec.database.servicePlan` and `spec.storage.servicePlan`.
 
-AWS Secrets Manager, Azure Key Vault, HashiCorp Vault
+#### How It Works
 
-Credential type
+Workload Identity uses Storage Plans with managed identity authentication (managed by Mendix Operator, not Helm) to configure passwordless authentication for database and storage connections.
 
-Temporary cloud tokens (auto-rotated)
+Mendix Operator automatically performs the following tasks:
 
-Static secrets from vault
+* Creates a Managed Identity for an mxplatform application.
+* Creates a Kubernetes Service Account.
+* Adds appropriate cloud provider annotations to the ServiceAccount:
 
-Can be combined?
+    * For AWS, add `eks.amazonaws.com/role-arn: "arn:aws:iam::123456789012:role/mxplatform-role"`
+    * For Azure, add `azure.workload.identity/client-id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"`
 
-❌ No - mutually exclusive with Secret Provider Class
+* Configures mxplatform pods to use this ServiceAccount.
 
-❌ No - mutually exclusive with Workload Identity
+{{% alert color="info" %}}
+When `UseStoragePlanwithIRSA` is set to `true`, the Mendix Operator creates the ServiceAccount, not the Helm chart. This causes the following limitations:
 
-Key Difference:
+* Chart-level `azureWorkloadIdentity` configuration does NOT work for mxplatform
+* The chart cannot add `azure.workload.identity/client-id` annotation. The Service account will be created by the Operator.
+{{% /alert %}}
 
-Workload Identity: Components use cloud identity to connect to databases (no passwords stored anywhere)
+#### Example
 
-Secret Provider Class: Helm retrieves database passwords from a vault and injects them during installation (passwords exist in vault as static secrets)
+To configure an Azure Storage Plan with Managed Identity, perform the following steps:
 
-Use Case 2: mxplatform Database and Storage Authentication
-For mxplatform, Workload Identity provides passwordless authentication for both database AND storage at application runtime.
+1. Create the StoragePlans with Managed Identity.
 
-📖 Detailed Guide: See private-cloud-storage-plans for complete scenarios and StoragePlan configuration examples.
-
-ℹ️ Note: This is for mxplatform's runtime data access — it does NOT apply to installation secrets (admin passwords, PCLM credentials). For those, use Secret Provider Class.
-
-How It Works
-Workload Identity uses StoragePlans with managed identity authentication (managed by Mendix Operator, not Helm) to configure passwordless authentication for database and storage connections:
-
-You create StoragePlans (During Operator configuration) with workload identity configuration:
-
-For AWS: Specify IAM role ARN that has permissions to access RDS/S3
-
-For Azure: Specify Managed Identity client ID that has permissions to access Azure Database/Blob Storage 
-
-You set UseStoragePlanwithIRSA: true in mxplatform helmfile configuration
-
-You reference these plans in spec.database.servicePlan and spec.storage.servicePlan
-
-Mendix Operator automatically:
-
-Create a Managed Identity for an mxplatform application
-
-Create a Kubernetes Service Account
-
-Adds appropriate cloud provider annotations to the ServiceAccount:
-
-AWS: eks.amazonaws.com/role-arn: "arn:aws:iam::123456789012:role/mxplatform-role"
-
-Azure: azure.workload.identity/client-id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-
-Configures mxplatform pods to use this ServiceAccount
-
-🚨 CRITICAL: Workload Identity Limitation
-
-When UseStoragePlanwithIRSA: true, the Mendix Operator creates the ServiceAccount, NOT the Helm chart. This means:
-
-❌ Chart-level azureWorkloadIdentity configuration does NOT work for mxplatform
-
-❌ The chart cannot add azure.workload.identity/client-id annotation (Service account will be created by Operator)
-
-Azure Example - StoragePlan with Managed Identity
-Step 1: Create StoragePlans with Managed Identity
-
-atabase:
+```text
+database:
   postgres:
     enabled: true
     plans:
@@ -2305,8 +1900,11 @@ storage:
         azureAccountSubscriptionID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
         azureContainerName: ""  # Auto-created per environment
         preventDataDeletion: false
-Step 2: Configure mxplatform in helmfile values
+```
 
+2. Configure mxplatform in the Helmfile values.
+
+```text
 mxplatform:
   enable: true
   # REQUIRED: Let Operator create ServiceAccount
@@ -2326,99 +1924,59 @@ mxplatform:
     runtime:
       applicationRootUrl: "https://app.example.com"
       mxAdminPassword: "admin-password"
-Result: Mendix Operator creates ServiceAccount with azure.workload.identity/client-id annotation, enabling passwordless Azure Database and Blob Storage access.
+```
 
-mxplatform: Workload Identity vs Secret Provider Class
-These are two different approaches for managing credentials for mxplatform:
+Mendix Operator creates the ServiceAccount with `azure.workload.identity/client-id annotation`, enabling passwordless Azure Database and Blob Storage access.
 
-Feature
+#### Workload Identity vs Secret Provider Class for Mxplatform
 
-Workload Identity (StoragePlan)
+Workload Identity and Secret Provider Class are different approaches for database credentials management.
 
-Secret Provider Class (CSI)
+| Feature | Workload Identity (StoragePlan) | Secret Provider Class (CSI) |
+| --- | --- | --- |
+| Purpose | Runtime connection to cloud database and storage | Inject all secrets from vault |
+| What it authenticates | mxplatform app connecting to database and storage | Database, Storage, Admin password, and PCLM credentials |
+| Credentials | Temporary cloud tokens (auto-rotated by AWS or Azure) | Static secrets from vault |
+| Configuration | In StoragePlan CRDs and `UseStoragePlanwithIRSA: true` | `secretProviderclass.enable: true` |
+| ServiceAccount | Created by Mendix Operator (based on StoragePlan) | Created by Helm chart |
+| Can it be combined? | No - mutually exclusive with Secret Provider Class | No - mutually exclusive with Workload Identity |
 
-Purpose
+##### Key Differences
 
-Runtime connection to cloud database and storage
+* Workload Identity - Your running Mendix application uses cloud identity to connect to its database and file storage (no database passwords in configuration).
+* Secret Provider Class - Helm chart retrieves secrets from vault to configure or install the components (admin passwords, PCLM credentials, database connection strings).
 
-Inject all secrets from vault
+##### Decision Matrix
 
-What it authenticates
-
-mxplatform app connecting to database + storage
-
-Database + Storage + Admin password + PCLM credentials
-
-Credentials
-
-Temporary cloud tokens (auto-rotated by AWS/Azure)
-
-Static secrets from vault
-
-Configuration
-
-In StoragePlan CRDs + UseStoragePlanwithIRSA: true
-
-secretProviderclass.enable: true
-
-ServiceAccount
-
-Created by Mendix Operator (based on StoragePlan)
-
-Created by Helm chart
-
-Mutual exclusivity
-
-❌ Cannot use with Secret Provider Class
-
-❌ Cannot use with workload identity storage plan
-
-key Difference:
-
-Workload Identity: Your running Mendix application uses cloud identity to connect to its database and file storage (no database passwords in config)
-
-Secret Provider Class: Helm chart retrieves secrets from vault to configure/install the components (admin passwords, PCLM credentials, database connection strings)
-
-Decision Matrix
 Use Workload Identity (StoragePlan) when:
 
-✅ You want passwordless database and storage access for your running Mendix application
-
-✅ You're on AWS EKS or Azure AKS with native cloud database/storage services
-
-✅ You want automatic credential rotation (cloud provider handles token refresh)
-
-✅ You only need to secure runtime database/storage connections (admin password and PCLM can be in values file or traditional secrets)
-
-✅ Example scenario: "My Mendix app should connect to Azure Database for PostgreSQL and Azure Blob Storage using Managed Identity, without storing any database passwords"
+* You want passwordless database and storage access for your running Mendix application.
+* You are on AWS EKS or Azure AKS with native cloud database or storage services.
+* You want automatic credential rotation (with the cloud provider handling the token refresh).
+* You only need to secure runtime database or storage connections; admin password and PCLM can be set in a values file or traditional secrets.
+* Example scenario: *My Mendix app should connect to Azure Database for PostgreSQL and Azure Blob Storage using Managed Identity, without storing any database passwords*.
 
 Use Secret Provider Class when:
 
-✅ You want all installation secrets (admin password, PCLM credentials, database connection strings, storage credentials) from a centralized vault
+* You want all installation secrets (admin password, PCLM credentials, database connection strings, storage credentials) from a centralized vault.
+* You need multi-cloud secret management (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
+* You want centralized secret management across all Private Mendix Platform components (mx-privatecloud, svix-server, mxplatform).
+* You are using HashiCorp Vault or managing secrets across multiple cloud providers.
+* Example scenario: *I want to store all Private Mendix Platform installation secrets (PCLM password, admin password, database credentials) in Azure Key Vault and inject them during Helm installation.
 
-✅ You need multi-cloud secret management (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault)
+The two solutions cannot be used together. They are mutually exclusive for `mxplatform`.
 
-✅ You want centralized secret management across all PMP components (mx-privatecloud, svix-server, mxplatform)
+If `UseStoragePlanwithIRSA` is set to `true`, the Operator creates the ServiceAccount with database and storage identity. The chart then cannot use Secret Provider Class for that ServiceAccount.
 
-✅ You're using HashiCorp Vault or managing secrets across multiple cloud providers
+If `secretProviderclass.enable` is set to `true`, the chart creates the ServiceAccount with vault access. The chart cannot then use StoragePlan with Workload Identity for database or storage.
 
-✅ Example scenario: "I want to store all PMP installation secrets (PCLM password, admin password, database credentials) in Azure Key Vault and inject them during Helm installation"
+Both approaches must control the ServiceAccount annotations, but in different ways (through the Operator or Helm for Private Mendix Platform).
 
-Can they be used together?
+##### Approach 1: Workload Identity (StoragePlan)
 
-❌ No - These are mutually exclusive for mxplatform
+This approach secures how your Mendix application connects to its database and storage at runtime with passwordless runtime database and storage access.
 
-If UseStoragePlanwithIRSA: true → Operator creates ServiceAccount with database/storage identity → Chart cannot use Secret Provider Class for that ServiceAccount
-
-If secretProviderclass.enable: true → Chart creates ServiceAccount with vault access → Cannot use StoragePlan with workload identity for database/storage
-
-Why mutually exclusive?: Both approaches need to control the ServiceAccount annotations, but in different ways (Operator or pmp helm )
-
-Complete Comparison Example
-Approach 1: Workload Identity (StoragePlan) - Passwordless Runtime Database/Storage Access
-
-This approach secures how your Mendix application connects to its database and storage at runtime.
-
+```text
 mxplatform:
   # Enable StoragePlan with Workload Identity
   UseStoragePlanwithIRSA: true
@@ -2437,18 +1995,20 @@ mxplatform:
       mxAdminPassword: "admin-password"   # Still in values file
   secretProviderclass:
     enable: false  # Cannot be used - ServiceAccount managed by Operator
-What this secures:
+```
 
-✅ Runtime database connection: App uses Managed Identity to connect to PostgreSQL (no database password in config)
+This secures the following:
 
-✅ Runtime storage connection: App uses Managed Identity to access Blob Storage (no storage access key in config)
+* Runtime database connection - The app uses Managed Identity to connect to PostgreSQL (no database password in configuration).
+* Runtime storage connection - The app uses Managed Identity to access Blob Storage (no storage access key in configuration).
 
-❌ Installation secrets (PCLM password, admin password) are still in values file
+Installation secrets (PCLM password, admin password) are still in the values file.
 
-Approach 2: Secret Provider Class - Centralized Installation Secret Management
+##### Approach 2: Secret Provider Class
 
-This approach secures installation and configuration secrets by retrieving them from Azure Key Vault during Helm installation.
+This approach secures centralized installation and configuration secrets by retrieving them from Azure Key Vault during Helm installation.
 
+```text
 mxplatform:
   # No StoragePlan workload identity
   UseStoragePlanwithIRSA: false
@@ -2475,91 +2035,86 @@ mxplatform:
     provider: "azure"
     azureparameters:
       keyvaultName: "my-keyvault"  # Vault containing all installation secrets
-What this secures:
+```
 
-✅ PCLM credentials: Retrieved from Key Vault during installation
+This secures the following:
 
-✅ Admin password: Retrieved from Key Vault during installation
+* PCLM credentials - Retrieved from Key Vault during installation.
+* Admin password - Retrieved from Key Vault during installation.
+* Database credentials - Retrieved from Key Vault (but stored as static passwords in Vault).
+* Storage credentials - Retrieved from Key Vault (but stored as static access keys in vault).
 
-✅ Database credentials: Retrieved from Key Vault (but stored as static passwords in vault)
+Runtime connections still use static passwords and keys, not cloud-native passwordless authentication.
 
-✅ Storage credentials: Retrieved from Key Vault (but stored as static access keys in vault)
+## Troubleshooting Critical Issues
 
-ℹ️ Runtime connections still use static passwords/keys (not cloud-native passwordless auth)
+### The Mxplatform Credentials Are Empty
 
-Troubleshooting
-Critical Issues Only
-mxplatform has empty credentials
-Cause: mxplatform installed before dependencies completed.
+#### Cause 
 
-Solution: Re-run full apply:
+Mxplatform was installed before the dependencies application was completed.
 
+#### Solution
+
+Re-run with full apply:
+
+```text
 helmfile --file helmfile.d/helmfile.yaml \
   --state-values-file my-values.yaml \
   apply
-helmfile diff shows empty lookup values
-Expected behavior: lookup functions return empty during diff because they query the live cluster. Actual apply resolves values correctly.
+```
 
-Image pull errors
-Solutions:
+### The Helmfile Diff Shows Empty Lookup Values
 
-Verify registry configuration
+This behavior is expected. Lookup functions return an empty result during diff because they query the live cluster. Actual apply resolves values correctly.
 
-For AKS: Use az aks update --attach-acr
+### Image Pull Errors
 
-For EKS: Attach ECR policy to node IAM role
+If you encounter image pull errors, perform the following actions:
 
-For cross-namespace: Create imagePullSecrets in each namespace
+* Verify the registry configuration.
 
-Database connection failures
-Checklist:
+    * For AKS, use `az aks update --attach-acr`.
+    * For EKS, attach the ECR policy to a node IAM role.
+    * For cross-namespace, create `imagePullSecrets` in each namespace.
 
-Verify host is reachable from cluster
+### Database Connection Failures
 
-Check credentials
+If you encounter database connection failures, perform the following actions:
 
-If dbssl: true, verify CA certificate
+* Verify that the host is reachable from the cluster.
+* Check the credentials.
 
-If using Secret Provider, verify CSI driver installed
+    * If `dbssl` is set to `true`, verify the CA certificate.
+    * If using Secret Provider, verify that the CSI driver is installed.
 
-Secret Provider Class issues
-Checklist:
+### Secret Provider Class issues
 
-Verify CSI driver installed: kubectl get pods -n kube-system | grep secrets-store
+If you encounter Secret Provider Class issues, perform the following actions:
 
-Check provider plugin installed
+* Verify that the CSI driver is installed by using the following command: `kubectl get pods -n kube-system | grep secrets-store`.
+* Verify that the provider plugin is installed.
+* Verify the authentication (IRSA, Workload Identity, or Kubernetes Auth).
+* Check the SecretProviderClass by using the following command: `kubectl describe secretproviderclass -n <namespace>`.
+* View the pod events by using the following command: `kubectl describe pod <pod> -n <namespace>`.
 
-Verify authentication (IRSA/Workload Identity/Kubernetes Auth)
+## Security Best Practices
 
-Check SecretProviderClass: kubectl describe secretproviderclass -n <namespace>
+Keep in mind the following security best practices:
 
-View pod events: kubectl describe pod <pod> -n <namespace>
+* Use Secret Provider Class to avoid storing credentials in values files.
+* Do not commit values files to Git. They contain sensitive data.
 
-Security Best Practices
-Use Secret Provider Class to avoid storing credentials in values files
-
-Do not commit values files to Git — they contain sensitive data
-
+```text
 echo "my-values.yaml" >> .gitignore
-Generate unique RSA keys for each environment
+```
 
+* Generate unique RSA keys for each environment.
+
+```text
 openssl genrsa -out private.pem 2048
 openssl rsa -in private.pem -pubout -out public.pem
-Rotate credentials regularly via secret provider or values file, then run helmfile apply
+```
 
-Use managed identity for container registries (AKS-ACR, EKS-ECR)
-
-Samples 
-1:  PCLM/Mx-PrivateCloud/Mxplatform Storageplan/DB Plan with Managed Identity
-
-azure-workload-IdentitySP.yaml
-23 Jul 2026, 12:17 PM
-2: Azure Key Vault  for Installation  for Svix/Mx-Privatecloud/Mxplatform 
-
-azure-workload-secret.yaml
- 
-3: Plain Text with Auto generated internal Credentails
-
-azure-static.yaml
-
-4: Plain Text with explicit Internal Credentails 
+* Rotate credentials regularly through a Secret Provider or values file, then run `helmfile apply`.
+* Use managed identity for container registries (AKS-ACR and EKS-ECR),

@@ -46,9 +46,16 @@ The following table summarizes the available configuration fields.
 
 ### Variable Selector
 
-To reduce errors caused by manual typing and speed up configuration, Mendix Pipelines provides a **Variable Selector** for supported configuration fields.
+To reduce errors caused by manual typing and speed up configuration, Mendix Pipelines provides a **Variable Selector** for supported configuration fields. Typing `$` in a supported field opens the **Variable Selector**, which displays available variables. The list is dynamically populated with:
 
-Typing `$` in a supported field opens the **Variable Selector**, which displays available variables. The list is dynamically populated with user-defined variables and outputs from previous pipeline steps.
+* user-defined variables
+* outputs from previous pipeline steps
+* Mendix-provided variables:
+    * `$Mendix.ProjectId`
+    * `$Mendix.TriggerType`
+    * `$Mendix.Branch` (Git Push only)
+    * `$Mendix.Revision` (Git Push only)
+
 
 {{< figure src="/attachments/deployment/general/mx-pipelines/mx-pipelines-variable-selector.png" alt="Image of the Variable Selector dropdown displaying a list of available pipeline variables in a configuration field." >}}
 

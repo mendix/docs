@@ -69,7 +69,7 @@ To install the component, follow the instructions in the [Importing Content from
 
 Advanced Audit Trail is delivered as a protected Marketplace module, so some implementation details described in this documentation may not be visible in Studio Pro. This is expected and does not indicate an incorrect installation or configuration.
 
-The module contains internal microflows, scheduled events, configuration logic, and integration logic that are intentionally hidden. For example, references in this documentation to startup microflows, snapshot synchronization events, or cache maintenance processes may not be accessible in your app model depending on the module version.
+The module contains internal microflows, scheduled events, configuration logic, and integration logic that are intentionally hidden. For example, references in this documentation to startup microflows, snapshot synchronization events, or cache maintenance processes may not be accessible in your app model.
 
 Do not manually inspect, modify, or configure the AAT module's internal implementation. Mendix manages the AAT backend services, Kafka infrastructure, OpenSearch infrastructure, and all internal synchronization and protected implementation logic.
 

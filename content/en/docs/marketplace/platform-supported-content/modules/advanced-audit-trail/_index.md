@@ -16,7 +16,7 @@ Advanced Audit Trail uses a managed software stack built on Kafka and OpenSearch
 {{< figure src="/attachments/appstore/platform-supported-content/modules/advanced-audit-trail/aat_integration_diagram.png" class="no-border" alt="Integration diagram showing the Advanced Audit Trail data flow between the Mendix app, Kafka, and OpenSearch" >}}
 
 {{% alert color="info" %}}
-The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/appstore/modules/audit-trail/) module by requiring less implementation effort, while delivering improved search experience and better performance. For a more comprehensive overview of the differences between the regular and the Advanced Audit trail module, see the [Advanced Audit Trail vs. Audit Trail](#comparison) section below.
+The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/appstore/modules/audit-trail/) module by requiring less implementation effort, while delivering improved search experience and better performance. For a more comprehensive overview of the differences between the regular and the Advanced Audit Trail module, see the [Advanced Audit Trail vs. Audit Trail](#comparison) section below.
 {{% /alert %}}
 
 ### Typical Use Cases
@@ -67,13 +67,13 @@ To install the component, follow the instructions in the [Importing Content from
 
 ## Understanding Protected Module Behavior
 
-Advanced Audit Trail is delivered as a protected Marketplace module. As a result, some implementation details described in this documentation may not be visible in Studio Pro. This is expected behavior and does not indicate that the module is incorrectly installed or configured.
+Advanced Audit Trail is delivered as a protected Marketplace module, so some implementation details described in this documentation may not be visible in Studio Pro. This is expected and does not indicate an incorrect installation or configuration.
 
-The AAT module contains internal microflows, scheduled events, configuration logic, and integration logic that are intentionally hidden from customers. For example, you may see references in this documentation to startup microflows, scheduled events that synchronize snapshots to external storage, or maintenance processes that clean up cached data. Depending on the module version, these implementation details may not be accessible or visible within your application model.
+The module contains internal microflows, scheduled events, configuration logic, and integration logic that are intentionally hidden. For example, references in this documentation to startup microflows, snapshot synchronization events, or cache maintenance processes may not be accessible in your app model depending on the module version.
 
-Do not manually inspect, modify, or configure the internal implementation of the AAT service. Components such as the AAT backend services, Kafka infrastructure, OpenSearch infrastructure, internal synchronization processes, and protected implementation logic are managed by Mendix.
+Do not manually inspect, modify, or configure the AAT module's internal implementation. Mendix manages the AAT backend services, Kafka infrastructure, OpenSearch infrastructure, and all internal synchronization and protected implementation logic.
 
-If you cannot find a scheduled event, internal microflow, or other implementation detail referenced in this documentation, this is likely because that component is part of the protected module implementation. In such cases, no additional action is required unless explicitly stated elsewhere in this documentation. 
+If you cannot find a scheduled event, internal microflow, or other implementation detail referenced here, it is part of the protected module and no additional action is required unless explicitly stated elsewhere in this documentation.
 
 ## Configuration
 
@@ -82,37 +82,37 @@ If you cannot find a scheduled event, internal microflow, or other implementatio
 3. Configure the right constant values for the right snapshots. For more information, see the [Configuring Constants](#constants) section below.
 4. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/advanced-audit-trail/example.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/advanced-audit-trail/example.png" class="no-border" alt="Example configuration of the Before Commit event handler" >}}
 
-    In case you need to follow a compliance that requires you never to delete an object, implement this outside the context of the audit trail module. 
+    If compliance requirements prohibit deleting objects, implement that constraint outside the audit trail module.
 
-    You can create **CommitList** microflows that commit a list of objects without events, but use **Create Snapshot (List)** from the **Toolbox** (the **JA_Object_CreateSnapshot_List** action). This ensures that the snapshots are committed in a list as well, therefore minimizing the performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add **Create Snapshot** (the **JA_Object_CreateSnapshot** action) or **Create Snapshot (List)** (the **JA_Object_CreateSnapshot_List** action) before the commit.
+    To commit a list of objects without events, create **CommitList** microflows and use **Create Snapshot (List)** from the **Toolbox** (the **JA_Object_CreateSnapshot_List** action). This commits snapshots in a list, minimizing the module's performance impact. When an object is committed without events, the change is not audited unless you explicitly add **Create Snapshot** (the **JA_Object_CreateSnapshot** action) or **Create Snapshot (List)** (the **JA_Object_CreateSnapshot_List** action) before the commit.
 
     {{% alert color="info" %}}When your Mendix application includes entities with inheritance, Mendix recommends only applying the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. For more information, see the [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
 
 5. Add the open search page microflow **AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch** to the navigation.
 6. Make sure that the scheduled events are enabled in the cloud portal. For more information, see the [Configuring Scheduled Events](#scheduled-events) section below.
 
-    {{% alert color="info" %}}Due to protected modules, Mendix do not show scheduled events in Studio Pro.{{% /alert %}}
+    {{% alert color="info" %}}Due to protected modules, Mendix does not show scheduled events in Studio Pro.{{% /alert %}}
 
 ### Configuring After Startup Microflow {#after-startup-microflow}
 
-Initiate the Advanced Audit Trail when the app starts. To do this, add the Advanced Audit Trail startup configuration microflow to your app’s After Startup flow. 
+To initiate Advanced Audit Trail when the app starts, add the startup configuration microflow to your app’s After Startup flow.
 
-Use one of the following microflows: 
+Use one of the following microflows:
 
-* `AdvancedAuditTrail.ConfigureAuditTrail`: This is the core configuration microflow and referenced in this document. Add it to the startup flow if your app already has a custom After Startup microflow.
-* `ASU_AuditTrail`: This is a wrapper startup microflow that delegates to the same configuration logic. If you do not have a custom After Startup microflow and prefer to use the provided startup microflow directly, you can use `ASU_AuditTrail`. 
+* `AdvancedAuditTrail.ConfigureAuditTrail` – The core configuration microflow referenced in this document. Add it to the startup flow if your app already has a custom After Startup microflow.
+* `ASU_AuditTrail` – A wrapper microflow that delegates to the same configuration logic. Use this if you do not have a custom After Startup microflow and prefer to use the provided startup microflow directly.
 
-{{% alert color="info" %}}Both microflows start the same Advanced Audit Trail configuration. Do not add both microflows to the same startup sequence.{{% /alert %}}
+{{% alert color="info" %}}Both microflows run the same Advanced Audit Trail configuration. Do not add both to the same startup sequence.{{% /alert %}}
 
-The Advanced Audit Trail is a platform-protected module,so you may not be able to inspect the internal implementation of these microflows. This is expected behavior. The protected implementation does not affect the required configuration. The app only needs to run the Advanced Audit Trail startup configuration once during app startup. 
+Advanced Audit Trail is a platform-protected module, so you may not be able to inspect the internal implementation of these microflows. This is expected behavior and does not affect the required configuration. The app needs to run the startup configuration only once during startup.
 
 ### Configuring Module Roles {#module-roles}
 
-* **Admin**: The admin can query the entire database for the current application, access the debug pages, and manage OAuth authentication.
-* **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, allowing them to change the environment in search queries and set the visibility constraints. It provides secure application access without sharing direct credentials and backend settings manage the scope of accessible data and features.
-* **DisplayOnly**: The display-only user can view queries prepared in microflows but they cannot change any of them. This restriction ensures that users see only the information they are allowed to see. The role is tested against cross site scripting (XSS).
+* **Admin** – Can query the entire database for the current app, access the debug pages, and manage OAuth authentication.
+* **_AddOn_CanChangeEnvironmentInQuery** – An additional role for **Admin** users that allows them to change the environment in search queries and set visibility constraints. Backend settings manage the scope of accessible data and features, providing secure app access without sharing direct credentials.
+* **DisplayOnly** – Can view queries prepared in microflows but cannot change them. This ensures users see only the information they are permitted to see. The role is tested against cross-site scripting (XSS).
 
 {{% alert color="info" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **Query Snapshots for object** setup.{{% /alert %}}
 
@@ -134,44 +134,42 @@ The values shown in the protected AAT module are default constant values. Config
 The following constants are typically configured through **App Settings**: 
 
 * Retention settings for the local cached data
-    * **SnapshotRetentionDays**: This represents the number of days that records are kept in the local snapshot cache.
-    * **OnlyDeleteProcessedItems**: This indicates whether items should only be deleted if they have been sent to the external data storage.
-        * If **OnlyDeleteProcessedItems** is set to **True**, **SnapshotRetentionDays** only applies to processed snapshots.
+    * **SnapshotRetentionDays** – The number of days records are kept in the local snapshot cache.
+    * **OnlyDeleteProcessedItems** – Whether items are deleted only after they have been sent to external data storage.
+        * If set to **True**, **SnapshotRetentionDays** applies only to processed snapshots.
 
 * Snapshots
-    * **IncludeHashedStrings**: This indicates whether to include attributes of type hashed string (for example, password fields) in the snapshots.
+    * **IncludeHashedStrings** – Whether to include hashed string attributes (for example, password fields) in snapshots.
 
-        * **True**: Hashed strings (storing bcrypt or other hashed value) will be included.
-        * **False**: Hashed strings will be excluded and, therefore, not audited.
+        * **True** – Hashed strings (storing bcrypt or other hashed values) are included.
+        * **False** – Hashed strings are excluded and not audited.
 
-        {{% alert color="info" %}}Manually-encrypted (for example, using the [Encryption](/appstore/modules/encryption/) module) strings are not the type of hashed string and will not be affected by this setting.{{% /alert %}}
+        {{% alert color="info" %}}Manually encrypted strings (for example, using the [Encryption](/appstore/modules/encryption/) module) are not hashed strings and are not affected by this setting.{{% /alert %}}
 
 * Integration
-    * **EnvironmentName**: This is the name of the environment, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
+    * **EnvironmentName** – The name of the environment. Must be unique in your audit data storage, for example, *myApp-prod*. Do not use whitespace or a tilde (~) in the environment name.
 
-        {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
+        {{% alert color="info" %}}If two apps use the same name, the audit trail cannot distinguish between them, which irreversibly breaks the audit trail for both apps.{{% /alert %}}
 
-    * **EnvironmentURL** (optional): This URL is used to identify the environment. If left empty, the application runtime URL is used instead.
+    * **EnvironmentURL** (optional) – The URL used to identify the environment. If left empty, the app runtime URL is used.
 
-    * **Kafka_Endpoint**/**Kafka_Username** and **Kafka_Password**: These are the credentials for the Kafka environment for sending the data into the long-term storage.
+    * **Kafka_Endpoint**/**Kafka_Username** and **Kafka_Password** – Credentials for the Kafka environment used to send data to long-term storage.
 
-    * **Opensearch_Endpoint**/**Opensearch_Username** and **Opensearch_Password**: These are the credentials for the Opensearch environment for receiving the data from the long-term storage.
+    * **Opensearch_Endpoint**/**Opensearch_Username** and **Opensearch_Password** – Credentials for the OpenSearch environment used to retrieve data from long-term storage.
 
 ### Configuring Scheduled Events {#scheduled-events}
 
-AAT uses scheduled events to process cached audit snapshots and maintain local cache data. These scheduled events are part of the protected AAT implementation. 
+AAT uses scheduled events to process cached audit snapshots and maintain local cache data. Because the module is platform-protected, these events may not be visible in Studio Pro. This is expected. Do not manually inspect or modify them.
 
-Because the module is platform-protected, these scheduled events may not be visible in Studio Pro. This is expected behavior. Do not manually inspect or modify the internal scheduled events in Studio Pro. 
+Make sure scheduled events are enabled for the app environment in the Cloud Portal. AAT then processes cached snapshots and cleans up the local cache according to the configured retention settings.
 
-Make sure scheduled events are enabled for the application environment in the Cloud Portal. AAT then uses the configured internal scheduled events, including the event that sends cached snapshots to the external data storage and the event that cleans up the local snapshot cache according to the configured retention settings. 
+The following scheduled events are available:
 
-The following scheduled events are available:  
+* **SE_SendAuditSnapshots** – Sends cached data to external data storage. Runs every minute.
+* **SE_CleanupSnapshotCache** – Cleans up cached data based on the retention settings **OnlyDeleteProcessedItems** and **SnapshotRetentionDays**. Runs daily at 3:00 AM UTC.
+* **SE_PeriodicVacuum** – Runs a periodic VACUUM on a PostgreSQL database. Not needed for Microsoft SQL. Other database types are not supported. Runs every two hours.
 
-* **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.
-* **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings—**OnlyDeleteProcessedItems** and **SnapshotRetentionDays**. This occurs daily at 3:00 AM UTC.
-* **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
-
-    {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the Cloud Portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes many objects in order to stay quick and not grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more information, see PostgreSQL documentation on [VACUUM](https://www.postgresql.org/docs/9.6/sql-vacuum.html) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
+    {{% alert color="info" %}}Enable **SE_PeriodicVacuum** in the Cloud Portal for PostgreSQL databases. PostgreSQL requires a regular VACUUM when an app creates and deletes many objects, to maintain performance and prevent disk growth. The default Mendix Cloud settings do not always run VACUUM when needed. This scheduled event is for PostgreSQL only. For more information, see the PostgreSQL documentation on [VACUUM](https://www.postgresql.org/docs/9.6/sql-vacuum.html) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
 
 ### Configuring Advanced Features (Optional)
 
@@ -182,7 +180,7 @@ The following scheduled events are available:
 
 ### Adding Additional Information to a Snapshot (Optional)
 
-It is possible to submit additional information for a snapshot (for example, in order to provide a rationale on why the said action has taken place on the object in question). Developers can configure this feature for certain actions (creation, deletion, updating). To use this feature, the developer must use **Set additional info for snapshots** from the **Toolbox** (the **JA_SetAdditionalInfo** action) to set additional information for snapshots.
+You can submit additional information for a snapshot—for example, to provide a rationale for why a change occurred. This feature is configurable per action type (creation, deletion, or update). To use it, call **Set additional info for snapshots** from the **Toolbox** (the **JA_SetAdditionalInfo** action) before the commit.
 
 ### Implementing Custom User Logging (Optional)
 
@@ -190,17 +188,17 @@ Use **Override User for Snapshots in this Context** from the **Toolbox** (the **
 
 ### Implementing User Name Scrambling (Optional)
 
-Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsernameMapping** action) to store a username differently in the long-term data storage. This can be used for anonymizing data (for example, due to GDPR).
+Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsernameMapping** action) to store usernames in a different form in long-term data storage—for example, to anonymize data for GDPR compliance.
 
 ### Implementing Display Formatters (Optional)
 
-Use the formatter microflows to change how externally-stored values will be displayed inside your Mendix application.
+Use the formatter microflows to control how externally stored values are displayed in your app.
 
 | Microflow | Formatter | Description |
 | --------- | -------- | --- |
-| **GetAttributes_ConvertDate** | Date formatter | Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year). |
-| **GetAttributes_ConvertDecimal** | Decimal formatter | Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period—".") to separate an integer from its partial fractional part. |
-| **GetAttributes_ConvertMxIdentifier** | Mendix object identifier formatter | Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference. |
+| **GetAttributes_ConvertDate** | Date formatter | Date formatting is determined inside JA_ConfigureFormatters in the after startup flow. By default, the date follows the US format (month/day/year). |
+| **GetAttributes_ConvertDecimal** | Decimal formatter | Decimal formatting is determined inside JA_ConfigureFormatters in the after startup flow. By default, the decimal formatting follows the US format (period—".") to separate an integer from its partial fractional part. |
+| **GetAttributes_ConvertMxIdentifier** | Mendix object identifier formatter | Mendix object formatting is determined inside JA_ConfigureFormatters in the after startup flow. By default, a reference displays as `[ModuleName].[EntityName] (ObjectGUID)`. You can configure it to display an attribute (or combination of attributes) of the referenced object instead. |
 
 ### Getting Microflow Stack Trace (Optional)
 
@@ -212,15 +210,15 @@ Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without cha
 
 ## Authentication
 
-Advanced Audit Trail supports two authentication modes for the AAT backend service: basic authentication and OAuth-based authentication. Basic authentication uses a simple username/password credential set provided by Mendix. OAuth-based authentication, on the other hand, can be enabled on the AAT settings page by setting a flag. 
+Advanced Audit Trail supports two authentication modes for the AAT backend service: basic authentication and OAuth-based authentication.
 
 ### Basic Authentication
 
-When using basic authentication, a simple username/password credential set is used to directly authenticate to the AAT backend service. Mendix provides this credential set, which must be entered on the AAT settings page.
+With basic authentication, the app authenticates directly to the AAT backend using a username and password provided by Mendix. Enter these credentials on the AAT settings page.
 
 ### OAuth Authentication
 
-When using OAuth authentication, the app connects to an external identity provider (typically controlled by your organization) to retrieve an access token for authenticating to the AAT backend. To configure OAuth authentication, provide the identity provider's configuration information on the AAT settings page, including the client ID, client secret, client scope, and token endpoint URL.
+With OAuth authentication, the app connects to an external identity provider (typically controlled by your organization) to retrieve an access token for the AAT backend. To configure it, enter the identity provider details on the AAT settings page: client ID, client secret, client scope, and token endpoint URL.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/advanced-audit-trail/OAuth.png" class="no-border" >}}
 
@@ -234,30 +232,32 @@ The table below provides a detailed comparison between the Advanced Audit Trail 
 | Implementation in app model | Event Handler | Inheritance |
 | Data storage efficiency | High (1 serialized JSON per change) | Low (1 log object per changed attribute) |
 | List commit handling | Optimized | Not optimized |
-| Saving action stack upon change (e.g. showing related changes and triggering microflow) | Yes | No |
+| Saving action stack upon change (for example, showing related changes and triggering microflow) | Yes | No |
 | Standard overview screen searchable per entity | Yes | No |
 | Ability to show custom attribute value when viewing associations in an audit trail snapshot | Yes | No |
 | Developer can delete audit trail data unnoticed | No | Yes |
 | Guaranteed completeness of audit trail in case of disaster | Yes | No |
 | Additional custom data can be added to an audit trail snapshot (for example, "on behalf of" in case of REST service) | Yes | No |
-| Built-in features for username and hash (e.g. password) scrambling | Yes | No |
+| Built-in features for username and hash (for example, password) scrambling | Yes | No |
 
 ## Search Criteria and Advanced Filtering
 
-The updated search functionality supports both exact matches and flexible filtering based on field type:
+The search functionality supports both exact matches and flexible filtering based on field type:
 
-* Exact Match Fields
+* Exact match fields:
 
-    * **Execution-ID**, **Transaction-ID**, Search for object **By code**, and **By GUID** – Use exact values for these fields to ensure precise results.
+    * **Execution-ID**, **Transaction-ID**, **By code**, and **By GUID** – Use exact values for precise results.
     * **Environment to search in** and **Limit** – Specify the target environment and set the maximum number of results.
-    * **Time window** – Define a **Start** and **End** time with an option to **Sort by timestamp** (*Ascending* or *Descending*).
-    * **Object is created** and **Object is deleted** – Include or exclude records based on their created or deleted state using Boolean fields.
+    * **Time window** – Define a **Start** and **End** time with an option to sort by timestamp (*Ascending* or *Descending*).
+    * **Object is created** and **Object is deleted** – Filter records by created or deleted state using Boolean fields.
 
-* Flexible Match Fields
+* Flexible match fields:
 
-    * Search for object **By entity**, **Username**, and **Role** – Search using partial matches for entity types, usernames, and user roles.
+    * **By entity**, **Username**, and **Role** – Search using partial matches for entity types, usernames, and user roles.
     * **Additional information** and **Stack trace** – Include supplementary data to refine your search.
 
 ## Read More
 
-[Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)
+* [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)
+* [Audit Trail](/appstore/modules/audit-trail/)
+* [Scheduled Events](/refguide/scheduled-events/)

@@ -9,7 +9,7 @@ description: "Native Template 14 release notes"
 
 **Release date: Aug 7, 2026**
 
-- We fixed a build failure where `com.google.firebase:firebase-analytics` could not be resolved when Push Notifications or Crashlytics were enabled by properly including the Firebase BoM logic.
+- We upgraded Android SDK version to 36.
 
 ## 14.1.20
 

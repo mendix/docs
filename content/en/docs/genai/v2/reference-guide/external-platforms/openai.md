@@ -304,7 +304,7 @@ Some examples demonstrate knowledge base interaction and require a connection to
 
 ## Troubleshooting {#troubleshooting}
 
-### Unauthorized response when listing Azure AI Foundry models
+### Unauthorized Response When Listing Azure AI Foundry Models
 
 When using agent editor, listing Azure AI Foundry models in Studio Pro 11.12.2 & 11.13.0 does not work. If you want to use those models, Mendix recommends to stay on 11.12.1 and the corresponding Agent Editor version 2.1.0.
 

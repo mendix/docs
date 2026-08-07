@@ -137,7 +137,7 @@ In case of errors, the exit code consists of three digits `XYZ`:
     * 2 – output-related error
     * 3 – errors related to the execution of the operation
 
-* Y is the number of the parameter the error is related to. If the error is not related to the parameters, this is zero.
+* Y is the number of the parameter the error is related to. This component is only valid if X = 1. If the error is not related to the parameters, this component is used by error details code mentioned in Z section below.
 
 * Z indicates the error details:
 

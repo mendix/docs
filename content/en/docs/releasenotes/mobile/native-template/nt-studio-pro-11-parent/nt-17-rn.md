@@ -9,6 +9,7 @@ description: "Native Template 17"
 
 **Release date: Aug 7, 2026**
 
+- We upgraded Android SDK version to 36.
 - We fixed an issue that could cause apps to restart repeatedly after an OTA update on iOS.
 - Replaced @notifee/react-native with react-native-notify-kit library.
 

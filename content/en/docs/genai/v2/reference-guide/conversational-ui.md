@@ -222,7 +222,7 @@ If no [user-visibility](/agents/agents-kit-2/reference-guide/commons/#enum-usera
 
 ### Streaming {#streaming}
 
-Conversational UI chats can also stream responses to the UI, expanding the assistant response as the LLM generates new content. To use streaming, use [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) to configure a chat agent. In the [model settings](/agents/agents-kit-2/reference-guide/agent-commons/#model-settings), enable the applicable streaming options, and use that agent when calling the `New Chat for Agent` action and in your action microflow. Not all models and connectors support streaming. Check their documentation for streaming support if you are not sure.
+Conversational UI chats can also stream responses to the UI, expanding the assistant response as the LLM generates new content. To use streaming, use [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) to configure a chat agent. In the [model settings](/agents/agents-kit-2/reference-guide/agent-commons/#model-settings), enable the applicable streaming options, and use that agent when calling the `New Chat for Agent` action and in your action microflow. Not all models and connectors support streaming. Check the corresponding documentation to verify whether streaming is supported.
 
 The following limitations apply to streaming because microflows run in isolated transactions:
 

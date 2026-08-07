@@ -133,6 +133,10 @@ Model configuration is document-based and can be managed directly in Studio Pro:
 
 #### For Azure AI Foundry {#define-model-azure}
 
+{{% alert color="warning" %}}
+Please note, that listing Azure AI Foundry models in Studio Pro 11.12.2 & 11.13.0 does not work. If you want to use those models, Mendix recommends to stay on 11.12.1 and the corresponding Agent Editor version 2.1.0.
+{{% /alert %}}
+
 * Configure the **Project endpoint** and **API key**, each with a String constant. Obtain the **Project endpoint** and **API key** from the [Azure AI Foundry Portal](https://ai.azure.com/home). For more information, refer to [OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/#azure-resource-name).
 * Click **List Deployments** to validate the connectivity. A table shows all the available model deployments in the Azure AI resource. Note that only deployments that support chat completions are currently usable by Agents in a Mendix app.
 
@@ -239,6 +243,10 @@ When these conditions are met, you can use the test functionality to validate pr
 
 If a call fails during testing, a generic error message is shown in the Agent Editor UI. Detailed error information is available in the running app console in Studio Pro (the **Console** pane), similar to errors you would inspect while testing the app itself.
 
+{{% alert color="info" %}}
+Streaming and user permissions for tools and knowledge bases can be configured, but these settings are not reflected in the playground in Studio Pro. They are applied at runtime when calling an agent defined in Studio Pro.
+{{% /alert %}}
+
 ### Including the Agent in the App Logic {#call-agent}
 
 Include an agent in the app logic by calling it from a microflow. Agent Editor provides **Call Agent** toolbox actions in the **Agent Editor** category:
@@ -275,12 +283,18 @@ Use version control to view and restore previous agent versions. This lets you i
 ## Known Limitations {#limitations}
 
 * Currently, Agent Editor supports Mendix Cloud GenAI and Azure AI Foundry for text generation models and Mendix Cloud GenAI for knowledge bases. Support for other providers, such as OpenAI and Amazon Bedrock, is planned for a future release.
+* Model documents with Azure AI Foundry as provider do not work in Studio Pro 11.12.2 & 11.13.0. Mendix recommends to stay on 11.12.1 and the corresponding Agent Editor version 2.1.0.
 * Support for Mac users is limited. Some functionalities might not work, such as doing a test call for Model documents. Mendix recommends using Studio Pro on Windows to use all features of Agent Editor.
 * MCP tool support is limited to whole-server integration. Selecting individual tools from a consumed MCP service to be added to an agent is not yet supported. That also means that the tool choice option `Tool` can only refer to a microflow tool currently.
 * If a document referenced by an Agent document is excluded, Studio Pro shows a consistency error. These consistency errors may not be resolved automatically when you include the excluded document again. Resolve this by synchronizing the app directory (<kbd>F4</kbd>) or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again).
-* The extension creates a `/agenteditor` log folder in the app directory. This folder is not excluded from version control automatically when you include the module from Marketplace. Add this folder to `.gitignore` manually, as described in the [First-Time Setup](#setup) section.
+* The extension creates a `/agenteditor` log folder in the app directory. This folder is not excluded from version control automatically when you include the module from Marketplace. Add this folder to `.gitignore` manually, as described in the [First-time setup](#setup) section.
+* Streaming and user permissions for tools and knowledge bases can be configured, but these settings are not reflected in the playground in Studio Pro. They are applied at runtime when calling an agent defined in Studio Pro.
 
 ## Troubleshooting {#troubleshooting}
+
+### Unauthorized response when listing Azure AI Foundry models
+
+Listing Azure AI Foundry models in Studio Pro 11.12.2 & 11.13.0 does not work. If you want to use those models, Mendix recommends to stay on 11.12.1 and the corresponding Agent Editor version 2.1.0.
 
 ### Testing the Agent From Studio Pro Results in an Error
 

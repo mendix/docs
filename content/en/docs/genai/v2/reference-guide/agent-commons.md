@@ -111,9 +111,13 @@ Users can create two types of agents:
 
 * **Chat Agent**: Intended for scenarios where the end-user interacts through a chat interface, or where the agent is called conversationally by another agent.
 
-* **Task Agent**: Designed for isolated agentic patterns such as background processes, subagents in an Agent-as-Tool setup, or any use case that doesn't require a conversational interface with historical context.
+* **Task Agent**: Designed for isolated agentic patterns such as background processes, subagents in an Agent-as-Tool setup, or any use case that does not require a conversational interface with historical context.
 
  {{< figure src="/attachments/genai/agentcommons/agent_builder_task.png" alt="" >}}
+
+#### Control Model Behavior {#model-settings}
+
+Click the icon next to the selected model to control model behavior by configuring the temperature, top P, and maximum number of tokens. If the selected model and connector support it (currently only Mendix Cloud GenAI), you can also enable backend streaming to use the model's streaming API, and frontend streaming to send generated chunks to the user interface as they become available. For details, see [Streaming](/agents/agents-kit-2/reference-guide/conversational-ui/#streaming) in the *Conversational UI* documentation. UI streaming is supported only for chat agents using a chat interface from the Conversational UI module. For task agents, only backend streaming is available because the UI is part of the custom implementation.
 
 #### Defining Context Entity {#define-context-entity}
 

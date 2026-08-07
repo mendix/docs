@@ -304,6 +304,10 @@ Some examples demonstrate knowledge base interaction and require a connection to
 
 ## Troubleshooting {#troubleshooting}
 
+### Unauthorized Response When Listing Azure AI Foundry Models
+
+When using agent editor, listing Azure AI Foundry models in Studio Pro 11.12.2 and 11.13.0 does not work. If you want to use those models, Mendix recommends to stay on 11.12.1 and the corresponding Agent Editor version 2.1.0.
+
 ### Outdated JDK Version Causing Errors while Calling a REST API {#outdated-jdk-version}
 
 The Java Development Kit (JDK) is a framework needed by Studio Pro to deploy and run applications. For more information, see [Studio Pro System Requirements](/refguide/system-requirements/). Usually, the correct JDK version is installed during the installation of Studio Pro, but in some cases, it may be outdated. An outdated version can cause exceptions when calling REST-based services with large data volumes, such as embeddings operations or chat completions with vision.

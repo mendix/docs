@@ -17,11 +17,11 @@ A JSON structure document stores a JSON snippet and converts it into a schema st
 Contains text of the JSON snippet. It is usually pasted from API documentation, or you can enter it manually for simple JSON.
 
 {{% alert color="info" %}}
-When you paste or modify the JSON snippet, it is automatically checked for validity. If the snippet is not valid, an exclamation mark appears above the snippet:
+When you paste or modify the JSON snippet, it is automatically checked for validity. If the snippet is valid, **Valid JSON** is shown below the snippet. If it is not valid, **Invalid JSON** is shown instead:
 
 {{< figure src="/attachments/refguide/modeling/integration/json-structures/19398781.png" class="no-border" >}}
 
-You cannot click **OK** without making the JSON valid.
+The structure is only parsed while the JSON is valid.
 {{% /alert %}}
 
 ### Format
@@ -37,17 +37,12 @@ Special unicode characters are encoded according to JSON standards. For example,
 Shows a tree structure with a schema that is parsed from the JSON snippet. The following columns are available:
 
 * **Name** – this shows the name of a JSON element. If the JSON element does not have a name, it shows the element type within parentheses: (Object), (Array), (Wrapper), or (Value).
-* **Value** – this shows the original value of the element in the JSON snippet. It is used to make it easier to find back the original element in the snippet. It is not used in the rest of the model.
-* **Primitive Type** – this shows the type of element after parsing.
-* **Occurrence** – this shows the occurrence of the element. Typically, JSON arrays have multiple occurrence (0..*) and JSON objects have a single occurrence (1).
 * **Custom name** – this column is editable. Often, the name JSON objects or arrays can not be inferred from the snippet. For reference, you can modify the name of the JSON element. This name is important when you use mapping documents based on the JSON schema. You will see this name in mapping elements. It is used when you want to use **Map Automatically** to generate domain model entities and associations.
+* **Type** – this shows the type of element after parsing.
+* **Value** – this shows the original value of the element in the JSON snippet. It is used to make it easier to find back the original element in the snippet. It is not used in the rest of the model.
 
 {{% alert color="info" %}}
-When you modify the JSON snippet, you need to refresh the structure by clicking **Refresh**. If you have not done so, an error will appear:
-
-{{< figure src="/attachments/refguide/modeling/integration/json-structures/19399140.png" class="no-border" >}}
-
-You cannot click **OK** without updating the structure.
+When you modify the JSON snippet, the structure is refreshed automatically.
 {{% /alert %}}
 
 ### Documentation
@@ -62,13 +57,17 @@ A simple JSON object is contained in curly braces (between `{` and `}`). It cont
 
 {{< figure src="/attachments/refguide/modeling/integration/json-structures/sample-structure.png" class="no-border" width="600" >}}
 
-Each JSON property is composed of a key ("name") and a value ("John"). If the value is between double quotes ("  "), it is considered a string, otherwise the type is derived from the value. The following JSON values are supported:
+Each JSON property is composed of a key ("name") and a value ("John"). The type of a property is derived from its value and is shown in the **Type** column of the structure. The following JSON values are supported:
 
-* `"string"` – converted into an attribute of type String
-* `123` – converted into an attribute of type Integer
-* `true` or `false` – converted into an attribute of type Boolean
-* `"1985-04-12T23:20:50.52Z"` – converted into an attribute of type **Date and time**
-* `12.50` – converted into an attribute of type Decimal
+* `"string"` – String
+* `123` – Integer
+* `9223372036854775807` – Long, if the number is too large for an Integer
+* `12.50` – Decimal, also for numbers in scientific notation such as `1.2e3`
+* `true` or `false` – Boolean
+* `"1985-04-12T23:20:50.52Z"` – DateTime
+* `null` – Unknown, because no type can be derived from the value
+
+Values between double quotes are considered strings, except for values that contain a complete ISO 8601 date and time, which are parsed as DateTime. A value that contains only a date (`"1985-04-12"`) or only a time (`"23:20:50"`) is considered a String.
 
 ### JSON Arrays
 

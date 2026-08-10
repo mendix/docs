@@ -9,13 +9,20 @@ description: "Native Template 17"
 
 **Release date: Aug 7, 2026**
 
+### Improvememnts
+
 - We upgraded Android SDK version to 36.
+- We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
+
+### Fixes
+
 - We fixed an issue that could cause apps to restart repeatedly after an OTA update on iOS.
-- Replaced @notifee/react-native with react-native-notify-kit library.
 
 ## 17.4.0 {#1740}
 
 **Release date: June 23, 2026**
+
+### Fixes
 
 * We fixed an issue that caused iOS apps to restart repeatedly after an OTA update.
 
@@ -23,11 +30,15 @@ description: "Native Template 17"
 
 **Release date: June 3, 2026**
 
+### Fixes
+
 * We fixed an issue that caused Android apps to restart repeatedly after an OTA update.
 
 ## 17.2.1 {#1721}
 
 **Release date: May 12, 2026**
+
+### Fixes
 
 * We fixed the CocoaPods installation issue that was caused by `xcodeproj object version` 70.
 

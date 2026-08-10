@@ -36,8 +36,7 @@ The connector supports federated authentication by relying on the identity relat
 
 ## Dependencies
 
-* [Encryption module](https://marketplace.mendix.com/link/component/1011)
-* [Community Commons module](https://marketplace.mendix.com/link/component/170)
+[Community Commons module](https://marketplace.mendix.com/link/component/170)
 
 ## Prerequisites
 
@@ -62,19 +61,13 @@ The following constants are mandatory:
 
     Example: `https://{devtenant}.{region}.sws.siemens.com/oauth/token`
 
-{{% alert color="info" %}}
-**devtenant** refers to the developer environment tenant, not the customer environment tenant (ECAiD).
-{{% /alert %}}
+    {{% alert color="info" %}}**devtenant** refers to the developer environment tenant, not the customer environment tenant (ECAiD).{{% /alert %}}
 
 * **FDSGatewayLoginConnector.JWTJKU** – URI pointing to the JSON Web Key Set (JWKS) published by FDS IAM, used to verify token signatures. Defined as a JOSE header parameter in [RFC 7515](https://www.rfc-editor.org/rfc/rfc7515).
 
     Example: `https://{devtenant}.{region}.sws.siemens.com/token_keys`
 
-{{% alert color="info" %}}
-**devtenant** refers to the developer environment tenant, not the customer environment tenant (ECAiD).
-{{% /alert %}}
-
-The following constants are optional:
+    {{% alert color="info" %}}**devtenant** refers to the developer environment tenant, not the customer environment tenant (ECAiD).{{% /alert %}}
 
 * **FDSGatewayLoginConnector.EnableLocalAuth** (*default: False*) – Enables or disables local login.
 
@@ -84,18 +77,18 @@ The following constants are optional:
 
 For more information, see [Constants](/refguide/constants/).
 
-## SSO {#sso}
+## Enabling Single Sign-On {#sso}
 
 To enable SSO, replace the default `login.html` with `sso-login.html`.
 
-In `login.html`, remove the following lines:
+In `index.html`, remove the following lines:
 
 ```javascript
-if (!document.cookie || !document.cookie.match(/(^|;)originURI=/gi))
+if (\!document.cookie || \!document.cookie.match(/(^|;)originURI=/gi))
 document.cookie = "originURI=/login.html";
 ```
 
-Directly after the X-CSRF token script, add the following:
+and replace with the following:
 
 ```javascript
 <script>
@@ -105,10 +98,10 @@ Directly after the X-CSRF token script, add the following:
 ```
 
 {{% alert color="info" %}}
-Create the `sso-login.html` file in `/theme/web/public`. See the [sso-login.html](#sso-login-html) section below.
+Create the `sso-login.html` file in `/theme/web/public`. See the [Using SSO login template](#sso-login-html) section below.
 {{% /alert %}}
 
-## sso-login.html {#sso-login-html}
+## Using SSO login template {#sso-login-html}
 
 Create a `sso-login.html` file in `/theme/web/public` with the following content:
 
@@ -117,11 +110,36 @@ Create a `sso-login.html` file in `/theme/web/public` with the following content
 <html>
 
 <head>
-	<title>Insights Hub</title>
+	<title>FDS Gateway Login Connector</title>
 	<script>
-		window.location.assign("/sso" + window.location.search)
+		window.location.assign("/xctokenlogin" + window.location.search)
 	</script>
 </head>
+
+</html>
+```
+
+To use the return path, use the following content instead:
+
+```html
+<!doctype html>
+<html>
+
+<head>
+    <title>FDS Gateway Login Connector</title>
+    <script>
+        const href = window.location.href;
+        const i = href.indexOf('login-fds.html');
+        const returnPath = '/' + href.substring(i + 'login-fds.html'.length);
+        window.location.assign(
+            href.substring(0, i).replace(/\/$/, '') +
+            '/xctokenlogin?returnPath=' +
+            encodeURIComponent(btoa(returnPath))
+        );
+    </script>
+</head>
+
+<body></body>
 
 </html>
 ```

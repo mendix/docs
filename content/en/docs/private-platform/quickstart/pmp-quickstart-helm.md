@@ -8,13 +8,23 @@ weight: 30
 
 ## Introduction
 
-To automate the declarative installation of Private Mendix Platform, you can now use Helm and Helmfile in order to automate the declarative installation of Private Mendix Platform. In this way, you can automatically install Private Mendix Platform components. If you would like to perform a manual installation instead, see [Install Private Mendix Platform in Interactive Mode](/private-mendix-platform/interactive-installation/).
+To automate the declarative installation of Private Mendix Platform, you can now use Helm and Helmfile in order to automate the declarative installation of Private Mendix Platform. In this way, you can automatically install Private Mendix Platform components. If you would like to perform a manual installation instead, see [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/).
+
+### Supported Tasks
 
 Helmfile installation supports the following tasks:
 
-* Automated namespace installation, upgrade, and Operator configuration 
 * Installation and upgrade of components such as Svix, PCLM, and others
-* Installation and upgrade of Private Mendix Platform  
+* Installation and upgrade of Private Mendix Platform
+
+### Out-of-Scope Tasks
+
+The following tasks are not performed by the Helmfile installation:
+
+* Mendix Operator installation
+* Mendix Operator upgrade
+
+To install or upgrade the Operator, see [Installing Components through the Helm Chart UI](/developerportal/deploy/helm-charts/).
 
 ## Components
 
@@ -783,7 +793,10 @@ The Authenticator and Collector database have the same structure.
 | --- | --- | --- |
 | `rsa.privateKey` | Has a default value | It is recommended to override this value in production |
 | `rsa.publicKey` | Has a default value | It is recommended to override this value in production |
-| `credentials.*_pass` | Auto-generated | It is recommended to set this value explicitly |
+| `credentials.authenticator_admin_pass` | Auto-generated | It is recommended to set this value explicitly |
+| `credentials.authenticator_standard_pass` | Auto-generated | It is recommended to set this value explicitly |
+| `credentials.collector_api_pass` | Auto-generated | It is recommended to set this value explicitly |
+| `credentials.interactor_api_pass` | Auto-generated | It is recommended to set this value explicitly |
 
 ##### Generate RSA Keys
 

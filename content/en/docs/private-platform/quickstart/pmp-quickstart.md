@@ -1,5 +1,5 @@
 ---
-title: "Install Private Mendix Platform in Interactive Mode"
+title: "Install Private Mendix Platform in GUI Mode"
 linktitle: "Interactive Installation"
 url: /private-mendix-platform/interactive-installation/
 description: "Documents the installation process for Private Mendix Platform in interactive (manual) mode."

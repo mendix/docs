@@ -29,7 +29,3 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
 6. Click **Run Upgrade**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade2.png" class="no-border" >}}
-
-{{% alert color="info" %}}
-To upgrade components other than Svix, select the relevant option in the upgrade wizard. For the Svix component, you can use the Svix panel to upgrade directly.
-{{% /alert %}}

@@ -9,7 +9,9 @@ description: "Native Template 14 release notes"
 
 **Release date: Aug 7, 2026**
 
-- We upgraded Android SDK version to 36.
+### Improvements
+
+- We upgraded the Android SDK version to 36.
 
 ## 14.1.20
 

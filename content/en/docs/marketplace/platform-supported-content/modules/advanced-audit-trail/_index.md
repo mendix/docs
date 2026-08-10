@@ -77,7 +77,7 @@ If you cannot find a scheduled event, internal microflow, or other implementatio
 
 ## Configuration
 
-1. Configure the **Startup** microflow in the Advanced Audit Trail module (`AdvancedAuditTrail.ConfigureAuditTrail`) to run as (part of) the [After Startup](/refguide/runtime-tab/#after-startup) microflow. For more information, see the [Configuring After Startup Microflow](#after-startup-microflow) section below.
+1. Configure the **Startup** microflow in the Advanced Audit Trail module (`ASU_AuditTrail`) to run as (part of) the [After Startup](/refguide/runtime-tab/#after-startup) microflow. For more information, see the [Configuring After Startup Microflow](#after-startup-microflow) section below.
 2. Set up your application roles to include the right module roles. For more information, see the [Configuring Module Roles](#module-roles) section below.
 3. Configure the right constant values for the right snapshots. For more information, see the [Configuring Constants](#constants) section below.
 4. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
@@ -97,14 +97,7 @@ If you cannot find a scheduled event, internal microflow, or other implementatio
 
 ### Configuring After Startup Microflow {#after-startup-microflow}
 
-To initiate Advanced Audit Trail when the app starts, add the startup configuration microflow to your app’s After Startup flow.
-
-Use one of the following microflows:
-
-* `AdvancedAuditTrail.ConfigureAuditTrail` – The core configuration microflow referenced in this document. Add it to the startup flow if your app already has a custom After Startup microflow.
-* `ASU_AuditTrail` – A wrapper microflow that delegates to the same configuration logic. Use this if you do not have a custom After Startup microflow and prefer to use the provided startup microflow directly.
-
-{{% alert color="info" %}}Both microflows run the same Advanced Audit Trail configuration. Do not add both to the same startup sequence.{{% /alert %}}
+To initiate Advanced Audit Trail when the app starts, add the `ASU_AuditTrail` microflow to your app's After Startup flow. This microflow handles the full startup configuration, including calling the internal `AdvancedAuditTrail.ConfigureAuditTrail` microflow. Do not add `AdvancedAuditTrail.ConfigureAuditTrail` directly to your startup sequence.
 
 Advanced Audit Trail is a platform-protected module, so you may not be able to inspect the internal implementation of these microflows. This is expected behavior and does not affect the required configuration. The app needs to run the startup configuration only once during startup.
 
@@ -176,7 +169,7 @@ The following scheduled events are available:
 * Link **NAV_AdvancedSettings** for accessing debug settings. Typically not needed, the features here are subject to change.
 * Link **NAV_CachedSnapshot_Overview** to access the local cache of snapshot data.
 * Check the default values of the **NPE Settings** object in the domain model, since they will be used to configure the app.
-* Enable **SE_CleanupAuditSnapshots** if you want to use the retention settings and delete objects.
+* Enable the **SE_CleanupAuditSnapshots** scheduled event in your deployed environmentif you want to use the retention settings and delete objects.
 
 ### Adding Additional Information to a Snapshot (Optional)
 

@@ -161,7 +161,7 @@ The following constants are typically configured through **App Settings**:
 
 AAT uses scheduled events to process cached audit snapshots and maintain local cache data. Because the module is platform-protected, these events may not be visible in Studio Pro. This is expected. Do not manually inspect or modify them.
 
-Make sure scheduled events are enabled for the app environment in the Cloud Portal. AAT then processes cached snapshots and cleans up the local cache according to the configured retention settings.
+Make sure scheduled events are enabled for the app environment in the Cloud Portal. AAT then processes cached snapshots and cleans up the local cache according to the configured retention settings. For more information, see the [Scheduled Events](developerportal/deploy/environments-details/#scheduled-events) section of *Environment Details*.
 
 The following scheduled events are available:
 
@@ -184,7 +184,7 @@ You can submit additional information for a snapshot—for example, to provide a
 
 ### Implementing Custom User Logging (Optional)
 
-Use **Override User for Snapshots in this Context** from the **Toolbox** (the **JA_SetUserForSnapshotsaction** action) to override the logged user for a request. For example, the request is a published REST service that runs in a system context, while the user is known.
+Use **Override User for Snapshots in this Context** from the **Toolbox** (the **JA_SetUserForSnapshots** action) to override the logged user for a request. For example, the request is a published REST service that runs in a system context, while the user is known.
 
 ### Implementing User Name Scrambling (Optional)
 
@@ -203,10 +203,6 @@ Use the formatter microflows to control how externally stored values are display
 ### Getting Microflow Stack Trace (Optional)
 
 Use **Get microflow stack trace** from the **Toolbox** (the **JA_GetMicroflowTrace** action) to create custom logging/entities and identify in what microflow the action was triggered.
-
-### Changing the Module Layout (Optional)
-
-Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without changing the pages.
 
 ## Authentication
 

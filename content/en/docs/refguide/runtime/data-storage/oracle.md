@@ -60,3 +60,12 @@ If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQ
 ## DDL commands
 
 DDL (data definition language) commands in Oracle are not transactional and will not be rolled back in case of an error. This means that if your Oracle database needs to be synchronized with your model when you start your application and an error occurs during this synchronization, the changes that have made been made up until the point when the error occurs are *not* rolled back. This can leave the database in an inconsistent state which cannot be recovered automatically. Mendix recommends creating a backup of your database before deploying any new version of your app, so that you can restore the backup if the database synchronization fails.
+
+## Automatic indexing
+
+Oracle has a feature where it can create indexes automatically, based on query patterns. The Mendix runtime is not aware of these indexes.
+These indexes can potentially conflict with schema changes. For example, when a column is used in a function based index, its type cannot be changed.
+
+When such a conflict occurs, database synchronization may fail, which will cause application startup to fail.
+If this happens, drop the affected automatic index before starting up the application after such a domain model change.
+Note that, as explained above, it may be necessary to restore the database after such a failed synchronization.

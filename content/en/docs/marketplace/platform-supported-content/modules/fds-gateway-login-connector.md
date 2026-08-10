@@ -129,8 +129,8 @@ To use the return path, use the following content instead:
     <title>FDS Gateway Login Connector</title>
     <script>
         const href = window.location.href;
-        const i = href.indexOf('login-fds.html');
-        const returnPath = '/' + href.substring(i + 'login-fds.html'.length);
+        const i = href.indexOf('sso-login.html');
+        const returnPath = '/' + href.substring(i + 'sso-login.html'.length);
         window.location.assign(
             href.substring(0, i).replace(/\/$/, '') +
             '/xctokenlogin?returnPath=' +

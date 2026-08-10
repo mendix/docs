@@ -11,12 +11,12 @@ description: "Native Template 17"
 
 ### Improvememnts
 
-- We upgraded Android SDK version to 36.
-- We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
+* We upgraded Android SDK version to 36.
+* We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
 
 ### Fixes
 
-- We fixed an issue that could cause apps to restart repeatedly after an OTA update on iOS.
+* We fixed an issue that could cause apps to restart repeatedly after an OTA update on iOS.
 
 ## 17.4.0 {#1740}
 

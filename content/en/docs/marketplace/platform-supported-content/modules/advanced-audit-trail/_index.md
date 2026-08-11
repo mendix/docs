@@ -120,6 +120,8 @@ Values defined in the application configuration override the default values prov
 3. Click **Edit** ({{% icon name="pencil" %}}) and open the **Constants** tab. 
 4. Add or update the AAT constants and provide the appropriate value for each constant.
 
+{{< figure src="/attachments/appstore/platform-supported-content/modules/advanced-audit-trail/constants.png" alt="" >}}
+
 {{% alert color="info" %}}
 The values shown in the protected AAT module are default constant values. Configure your own values through **App Settings** rather than attempting to modify values inside the module itself. 
 {{% /alert %}}

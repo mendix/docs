@@ -156,7 +156,7 @@ The following constants are typically configured through **App Settings**:
 
 AAT uses scheduled events to process cached audit snapshots and maintain local cache data. Because the module is platform-protected, these events may not be visible in Studio Pro. This is expected. Do not manually inspect or modify them.
 
-Make sure scheduled events are enabled for the app environment in the Cloud Portal. AAT then processes cached snapshots and cleans up the local cache according to the configured retention settings. For more information, see the [Scheduled Events](developerportal/deploy/environments-details/#scheduled-events) section of *Environment Details*.
+Make sure scheduled events are enabled for the app environment in the Cloud Portal. AAT then processes cached snapshots and cleans up the local cache according to the configured retention settings. For more information, see the [Scheduled Events](/developerportal/deploy/environments-details/#scheduled-events) section of *Environment Details*.
 
 The following scheduled events are available:
 

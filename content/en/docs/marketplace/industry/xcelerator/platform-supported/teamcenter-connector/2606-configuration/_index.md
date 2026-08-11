@@ -63,7 +63,7 @@ Before working with Teamcenter Connector 2606, make sure your environment meets 
 | Requirement | Supported versions |
 | --- | --- |
 | Mendix Studio Pro | 11.12.1 and above |
-| Teamcenter (self-hosted) | 2606, 2512, 2506 |
+| Teamcenter (self-hosted) | 2606, 2512, 2506, 2412 |
 | Teamcenter X | 2606, 2512, 2506 |
 
 ### Required Marketplace Modules

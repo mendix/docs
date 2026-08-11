@@ -107,11 +107,11 @@ Mendix will use this access for the following purposes:
 * Initial initialisation of the cluster (as initiated by the customer from Mendix on Azure portal)
 * Pushing regular service updates (automatically, see description in the next paragraph)
 * Pushing ad-hoc emergency updates or configuration changes to avoid service disruptions (by exception and at discretion of Mendix) 
-* Troubleshooting incidents on behalf of the customer (after raising of a support ticket by the customer)
+* Troubleshooting incidents on behalf of the customer (after raising of a support ticket by the customer). This covers both automated extraction of recent logs from your environment and, where those logs are not sufficient to diagnose the issue, direct access to your environment by Mendix support engineers.
 
 ## Support Tickets
 
-Since Mendix on Azure resources contain sensitive data, Mendix Support does not have direct access. To enable effective troubleshooting, you can create support tickets through the Mendix on Azure portal, which automatically include recent logs.
+Mendix on Azure resources contain sensitive data, so access to them by Mendix Support is strictly controlled and only takes place in the context of a support request. To enable effective troubleshooting, you can create support tickets through the Mendix on Azure portal, which automatically include recent logs from your environment.
 
 ### Raising Support Tickets
 
@@ -125,7 +125,7 @@ To raise a support ticket, perform the following steps:
 3. On the **Support Tickets** page, click **Open a Ticket** and complete the form. The page also shows your existing tickets.
 
 {{% alert color="info" %}}  
-By submitting a support ticket, you consent to sharing the pertinent logs with the Mendix Support team to assist in issue resolution.  
+By submitting a support ticket, you consent to both of the following, for the sole purpose of resolving the issue you reported: sharing the pertinent logs from your environment with the Mendix Support team, and direct access to your Mendix on Azure environment by Mendix support engineers. For more information about the mechanism and scope of that access, see [Access to your Environment by Mendix](#access-to-your-environment-by-mendix).  
 {{% /alert %}}
 
 After submitting, a Zendesk ticket is automatically created. Access it by clicking **Go to ticket** to add comments or check status.

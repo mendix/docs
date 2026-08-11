@@ -9,6 +9,11 @@ description: "Release notes for Native Template 20."
 
 **Release date: Aug 3, 2026**
 
-- We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
+### Improvements
+
 - We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
+
+### Fixes
+
+- We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
 - We addressed an issue on iOS where a iOS-system dialog would open during app startup and request a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.

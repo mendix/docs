@@ -16,6 +16,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## August 2026
 
+### August 9, 2026
+
+#### Fixes
+
+* Resolved an issue where an incorrect Domain Name System (DNS) configuration warning was displayed for custom domains. Even when DNS was configured correctly, users continued to see a warning prompting them to configure their DNS settings. The warning is now displayed only when an actual DNS configuration issue is detected.
+(Tickets #275240, #275338, #275596, #275739, #276031, #276967, #277038, #277864, #278237, #281021, #281197, #282170, #282430, #282980, #283574)
+
 ### August 4, 2026
 
 #### New Features

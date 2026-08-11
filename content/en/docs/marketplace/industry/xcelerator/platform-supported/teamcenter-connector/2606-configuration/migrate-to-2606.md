@@ -27,10 +27,10 @@ As mentioned, this migration involves some breaking changes, but they are outwei
 There are three migration scenarios:
 1.	Upgrade of the Teamcenter Connector from 2512 to 2606: read the [pre-migration checklist](#pre-migration-checklist) and follow the steps in section [4](#teamcenter-connector-migration-process).
 2.	Upgrade of the Teamcenter Connector from 2512 to 2606 and keep the original integrations (Teamcenter Extension): read the [pre-migration checklist](#pre-migration-checklist) and follow the steps in sections [4](#teamcenter-connector-migration-process) and [5](#teamcenter-toolkit-migration-process).
-3.	Upgrade of the Teamcenter Connector from 2512 to 2606 and migrate the original integrations to the new Teamcenter Service document: read the [pre-migration checklist](#pre-migration-checklist) and follow the steps in sections [4](#teamcenter-connector-migration-process) and [6](#migrate-teamcenter-service-document).
+3.	Upgrade of the Teamcenter Connector from 2512 to 2606 and migrate the original integrations to the new Teamcenter Service document: read the [pre-migration checklist](#pre-migration-checklist) and follow the steps in sections [4](#teamcenter-connector-migration-process) and [6](#migrate-to-teamcenter-service-document).
 
 
-## Pre-Migration Checklist (#pre-migration-checklist)
+## Pre-Migration Checklist
 
 Follow these steps carefully to avoid issues:
 
@@ -39,7 +39,7 @@ Follow these steps carefully to avoid issues:
 3. Migrate from Teamcenter 2512. If the project still contains an older version of the Teamcenter Connector, such as 2506 or older, first follow the steps for [Upgrading Teamcenter Connector 2506.x to 2512.x](/appstore/industry/teamcenter-connector/upgrade-teamcenter-connector-2506-to-2512/).
 4. Make a backup. Before starting, either create a full backup of your app or commit all current changes to version control. This gives you a safety net in case you need to roll back.
 
-## Teamcenter Connector Migration Process (#teamcenter-connector-migration-process)
+## Teamcenter Connector Migration Process
 
 Follow these steps in this exact order to ensure a proper migration:
 
@@ -59,7 +59,7 @@ Follow these steps in this exact order to ensure a proper migration:
 
 4. Resolve breaking changes.
 
-    1. For a list of deprecated microflows and Java actions, see [Deprecated Microflows and Their Replacements](#deprecated-microflows) and [Deprecated Java Actions and Their Replacements](#deprecated-java).
+    1. For a list of deprecated microflows and Java actions, see [Deprecated Microflows and Their Replacements](#deprecated-microflows-and-their-replacements) and [Deprecated Java Actions and Their Replacements](#deprecated-java-actions-and-their-replacements).
     1. Deprecated microflows and Java actions can be found in the *internal>deprecated* folder in the **TcConnector** module. These microflows are not used by the connector anymore, but you can include them and move them to your own module if required.
     1. References to `FileType` should be changed to `NamedReference`.
     1. The **Login** microflow does not return a Boolean value anymore. **Login** now throws an exception instead.
@@ -76,7 +76,7 @@ Follow these steps in this exact order to ensure a proper migration:
     1. In your App Settings, go to the **Runtime** tab.
     1. Select **Yes** next to **Use React client**.
   
-## Teamcenter Toolkit Migration Process (#teamcenter-toolkit-migration-process)
+## Teamcenter Toolkit Migration Process
 
 This step descibes how to keep the original integrations using both the `TeamcenterToolkit` module and the Teamcenter Connector 2606 module. Since we have merged the `TeamcenterToolkit` module and the `TcConnector` module, there are some minor errors we have to solve in the model. This mainly involves the `BOMLine` entity.
 
@@ -85,7 +85,7 @@ This step descibes how to keep the original integrations using both the `Teamcen
 2. Map the old `TeamcenterToolkit.BOMLine` BO mappings to `TcConnector.BOMLine`, use **Ctrl+F** to search for `TeamcenterToolkit.BOMLine`, to see if there are any BO mappings left that reference the `TeamcenterToolkit`, replace these with `TcConnector.BOMLine'.
 3. Validate if everything still works correctly. 
 
-## Migrate to Teamcenter Service Document (#migrate-teamcenter-service-document)
+## Migrate to Teamcenter Service Document
 
 1. Create a Teamcenter Service Document.
 
@@ -126,7 +126,7 @@ This step descibes how to keep the original integrations using both the `Teamcen
     1. Test error handling by triggering error conditions (for example, invalid search criteria).
     1. If you have automated tests, run them to ensure integration behavior is correct.
 
-## Breaking Changes {#breaking-changes}
+## Breaking Changes
 
 This is a comprehensive table of breaking changes and actions to take for each one:
 
@@ -142,7 +142,7 @@ This is a comprehensive table of breaking changes and actions to take for each o
 | `Logout` Java action | Now returns Boolean. | Update callers if return value was previously ignored. |
 | Error messages | Connector no longer shows in-app messages. It throws exceptions instead. | Ensure calling microflows have error handlers. |
 
-## Deprecated Microflows and Their Replacements {#deprecated-microflows}
+## Deprecated Microflows and Their Replacements
 
 These microflows still exist in the deprecated folder, but should no longer be used. Replace them with the recommended alternatives:
 
@@ -163,7 +163,7 @@ These microflows still exist in the deprecated folder, but should no longer be u
 | `ShowPartialErrors` | No replacement |
 | `UpdateSession` | No replacement |
 
-## Deprecated Java Actions and Their Replacements {#deprecated-java}
+## Deprecated Java Actions and Their Replacements
 
 These Java actions still exist in the deprecated folder, but should no longer be used. Replace them with the recommended alternatives:
 
@@ -179,7 +179,7 @@ These Java actions still exist in the deprecated folder, but should no longer be
 | `GetItemFromId` | `GetItemAndRelatedObjects` |
 | `RetrieveCookie` | No replacement |
 
-## Deprecated Entities {#deprecated-entities}
+## Deprecated Entities
 
 The following entities have been deprecated. To indicate this, the entities have been renamed with an underscore prefix:
 

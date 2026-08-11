@@ -12,7 +12,9 @@ aliases:
 
 This approach uses [Agent Editor](https://marketplace.mendix.com/link/component/257918) in Studio Pro to create and manage agents as part of your app model. You define agents as documents in your app, alongside related resources such as models, knowledge bases, and consumed MCP services. This is the recommended approach for most use cases because it leverages existing platform capabilities.
 
-Currently, Agent Editor supports only [Mendix Cloud GenAI](/agents/mx-cloud-genai/) as a provider for models and knowledge bases. The steps below use the Mendix Cloud GenAI provider type, text generation resource keys, and knowledge base resource keys from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
+Currently, Agent Editor supports two providers for text generation models: Mendix Cloud GenAI and Azure AI Foundry. For knowledge bases, it currently supports only Mendix Cloud GenAI.
+
+The steps below use Mendix Cloud GenAI. You need the text generation resource keys, and knowledge base resource keys from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
 
 ## Prerequisites
 

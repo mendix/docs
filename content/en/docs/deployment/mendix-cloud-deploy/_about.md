@@ -27,8 +27,6 @@ The primary hosting locations are as follows:
 * Mendix Cloud Canada: Central
 * Mendix Cloud Europe: Ireland
 * Mendix Cloud Europe: Frankfurt
-* Mendix Cloud Middle East: Bahrain
-* Mendix Cloud Middle East: UAE
 * Mendix Cloud UK: London
 * Mendix Cloud US East: North Virginia
 * Mendix Cloud US West: Oregon

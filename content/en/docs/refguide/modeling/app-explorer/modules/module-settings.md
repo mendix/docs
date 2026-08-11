@@ -7,7 +7,7 @@ weight: 10
 
 ## Introduction
 
-Module settings allow you to set Java managed dependencies, choose the type of the module, and set a version for certain module types.
+Module settings allow you to configure various properties of a module, including Java managed dependencies, module type, version, and the location where the module appears in the App Explorer.
 
 To open module settings, double-click **Settings** in the required module.
 
@@ -104,6 +104,8 @@ Key improvements are delivered through new module properties and a new `manifest
 
 The **Package** section on the **General** tab displays package identification information for the module. Studio Pro uses this information to track modules across versions, which is the foundation for more reliable module updates.
 
+For more information on how to use package management when updating modules, see [Updating Marketplace Modules](/refguide/updating-marketplace-modules/).
+
 ### Module ID {#module-id}
 
 The module ID is a unique identifier for the module that remains the same across all versions. It determines whether two module packages represent the same module and is therefore the basis for module update compatibility. If two modules share the same module ID, Studio Pro can update one with the other. If the IDs differ, Studio Pro treats them as distinct modules.
@@ -151,9 +153,23 @@ When you export a module package (a *.mpk* file), Studio Pro adds a `manifest.js
 The legacy `package.xml` metadata file is not mentioned in `manifest.json` but is still included in the package for backward compatibility.
 {{% /alert %}} 
 
+### Location {#location}
+
+{{% alert color="info" %}}
+This setting is available for Studio Pro 11.13 and above.
+{{% /alert %}}
+
+The **Location** setting determines where the module appears in the App Explorer. You can choose one of the following options:
+
+* **Module list** (default) – The module appears in the regular module list at the bottom of the App Explorer
+* **Marketplace modules** – The module appears under the **Marketplace modules** node in the **App** node within the App Explorer
+
+Modules imported from the Marketplace are automatically set to **Marketplace modules**. You can change this setting at any time to organize your modules based on your preferences.
+
 ## Read More
 
 * [Modules](/refguide/modules/)
+* [Updating Marketplace Modules](/refguide/updating-marketplace-modules/)
 * [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
 * [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/)
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)

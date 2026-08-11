@@ -2,8 +2,32 @@
 title: "Native Template 14"
 url: /releasenotes/mobile/nt-14-rn/
 weight: 6
-description: "Native Template 14"
+description: "Native Template 14 release notes"
 ---
+
+## 14.1.21
+
+**Release date: Aug 7, 2026**
+
+### Improvements
+
+- We upgraded the Android SDK version to 36.
+
+## 14.1.20
+
+**Release date: July 27, 2026**
+
+### Improvements
+
+* We updated `mendix-native` to address an issue on iOS where a iOS-system dialog would pop up during app startup, requesting a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
+
+## 14.1.19
+
+**Release date: July 21, 2026**
+
+### Improvements
+
+* We properly integrated Firebase BoM logic, fixing a build failure where `com.google.firebase:firebase-analytics` could not be resolved when **Push Notifications** or **Crashlytics** were enabled.
 
 ## 14.1.18
 

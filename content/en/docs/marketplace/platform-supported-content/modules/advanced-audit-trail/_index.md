@@ -171,7 +171,6 @@ The following scheduled events are available:
 * Link **NAV_AdvancedSettings** for accessing debug settings. Typically not needed, the features here are subject to change.
 * Link **NAV_CachedSnapshot_Overview** to access the local cache of snapshot data.
 * Check the default values of the **NPE Settings** object in the domain model, since they will be used to configure the app.
-* Enable the **SE_CleanupAuditSnapshots** scheduled event in your deployed environmentif you want to use the retention settings and delete objects.
 
 ### Adding Additional Information to a Snapshot (Optional)
 

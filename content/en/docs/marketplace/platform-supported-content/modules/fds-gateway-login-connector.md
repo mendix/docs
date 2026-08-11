@@ -47,7 +47,7 @@ For onboarding support or questions about FDS services, contact the [FDSOne Help
 ## Installation
 
 1. Import the [FDS Gateway Login Connector](placeholder) module into your app from the Mendix Marketplace.
-2. In the **Runtime** tab of **App Settings**, set `FDSGatewayLoginConnector.ASU_InitializeFDSGatewayLoginConnectorAuth` as the **After startup** microflow.
+2. In the **Runtime** tab of **App Settings**, set `FDSGatewayLoginConnector.ASU_InitializeAuth` as the **After startup** microflow.
 3. Configure the login page. For more information, see the [SSO](#sso) section below.
 4. Configure the required constants. For more information, see the [Configuring the Constants](#constants) section below.
 
@@ -79,47 +79,7 @@ For more information, see [Constants](/refguide/constants/).
 
 ## Enabling Single Sign-On {#sso}
 
-To enable SSO, replace the default `login.html` with `sso-login.html`.
-
-In `index.html`, remove the following lines:
-
-```javascript
-if (\!document.cookie || \!document.cookie.match(/(^|;)originURI=/gi))
-document.cookie = "originURI=/login.html";
-```
-
-and replace with the following:
-
-```javascript
-<script>
-    // Always set originURI to sso-login.html to hand off authentication to the FDS Gateway.
-    document.cookie = 'originURI=/sso-login.html';
-</script>
-```
-
-{{% alert color="info" %}}
-Create the `sso-login.html` file in `/theme/web/public`. See the [Using SSO login template](#sso-login-html) section below.
-{{% /alert %}}
-
-## Using SSO login template {#sso-login-html}
-
-Create a `sso-login.html` file in `/theme/web/public` with the following content:
-
-```html
-<!doctype html>
-<html>
-
-<head>
-	<title>FDS Gateway Login Connector</title>
-	<script>
-		window.location.assign("/xctokenlogin" + window.location.search)
-	</script>
-</head>
-
-</html>
-```
-
-To use the return path, use the following content instead:
+To enable SSO, create a `sso-login.html` file in `/theme/web/public` with the following content:
 
 ```html
 <!doctype html>
@@ -142,6 +102,18 @@ To use the return path, use the following content instead:
 <body></body>
 
 </html>
+```
+
+Update the `originURI` cookie value in `index.html` and use `/sso-login.html` instead of `/login.html` as shown in the code below:
+
+```html
+<script>
+        if (!document.cookie || !document.cookie.match(/(^|;) *originURI=/gi)) {
+            const url = new URL(window.location.href);
+            const subPath = url.pathname.substring(0, url.pathname.lastIndexOf("/"));
+            document.cookie = `originURI=${subPath}/sso-login.html${window.location.protocol === "https:" ? ";SameSite=None;Secure" : ""}`;
+        }
+    </script>
 ```
 
 ## Custom User Provisioning

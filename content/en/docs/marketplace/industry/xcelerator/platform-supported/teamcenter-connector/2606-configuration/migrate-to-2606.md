@@ -14,7 +14,7 @@ One of the main changes is that the Teamcenter Connector 2606 combines the Teamc
 The changes fall into three categories:
 *	Changes to the `TcConnector` module (improved security and error handling, deprecations)
 *	Merging of the `TeamcenterToolkit` domain model, microflows and Java actions (previously part of the Teamcenter Extension) into the `TcConnector`
-*	Introduction of the Teamcenter Service document, a new Mendix Studio Pro document to create, manage and organize your Teamcenter integrations.
+*	Introduction of the Teamcenter service document, a new Mendix Studio Pro document to create, manage and organize your Teamcenter integrations.
 
 As mentioned, this migration involves some breaking changes, but they are outweighed by the benefits:
 *	Unified module
@@ -27,7 +27,7 @@ As mentioned, this migration involves some breaking changes, but they are outwei
 There are three migration scenarios:
 1.	Upgrade of the Teamcenter Connector from 2512 to 2606: read the [pre-migration checklist](#pre-migration-checklist) and follow the steps in section [4](#teamcenter-connector-migration-process).
 2.	Upgrade of the Teamcenter Connector from 2512 to 2606 and keep the original integrations (Teamcenter Extension): read the [pre-migration checklist](#pre-migration-checklist) and follow the steps in sections [4](#teamcenter-connector-migration-process) and [5](#teamcenter-toolkit-migration-process).
-3.	Upgrade of the Teamcenter Connector from 2512 to 2606 and migrate the original integrations to the new Teamcenter Service document: read the [pre-migration checklist](#pre-migration-checklist) and follow the steps in sections [4](#teamcenter-connector-migration-process) and [6](#migrate-to-teamcenter-service-document).
+3.	Upgrade of the Teamcenter Connector from 2512 to 2606 and migrate the original integrations to the new Teamcenter service document: read the [pre-migration checklist](#pre-migration-checklist) and follow the steps in sections [4](#teamcenter-connector-migration-process) and [6](#migrate-to-teamcenter-service-document).
 
 
 ## Pre-Migration Checklist
@@ -36,7 +36,7 @@ Follow these steps carefully to avoid issues:
 
 1. Upgrade to Studio Pro 11.12.1 or above. If you are using Studio Pro 10, you must upgrade before importing Teamcenter 2606.
 2. Have only one developer perform the migration. If multiple developers migrate simultaneously, there will be duplicate artifacts. Coordinate with your team and designate one person to handle the migration, then have others pull the updated code from version control.
-3. Migrate from Teamcenter 2512. If the project still contains an older version of the Teamcenter Connector, such as 2506 or older, first follow the steps for [Upgrading Teamcenter Connector 2506.x to 2512.x](/appstore/industry/teamcenter-connector/upgrade-teamcenter-connector-2506-to-2512/).
+3. Migrate from Teamcenter Connector 2512. If the project still contains an older version of the Teamcenter Connector, such as 2506 or older, first follow the steps for [Upgrading Teamcenter Connector 2506.x to 2512.x](/appstore/industry/teamcenter-connector/upgrade-teamcenter-connector-2506-to-2512/).
 4. Make a backup. Before starting, either create a full backup of your app or commit all current changes to version control. This gives you a safety net in case you need to roll back.
 
 ## Teamcenter Connector Migration Process
@@ -55,20 +55,20 @@ Follow these steps in this exact order to ensure a proper migration:
 3. Import the new Teamcenter Connector 2606.
 
     1. Download the Teamcenter Connector 2606 from Mendix Marketplace. This now also contains the new version of the extension.
-    {{% alert color="info" %}} The Teamcenter Extension is no longer included in Extensions. It is available as a new Service Document, similar to a microflow. You can find it by right-clicking the module, selecting **Add other**, then selecting **Teamcenter service**. {{% /alert %}}
+    {{% alert color="info" %}} The Teamcenter Extension is no longer found under the Extensions menu at the top. Instead, it is available as a new Service Document; similar to a microflow. You can find it by right-clicking a module in your project, selecting **Add other**, then selecting **Teamcenter service**. {{% /alert %}}
 
 4. Resolve breaking changes.
 
     1. For a list of deprecated microflows and Java actions, see [Deprecated Microflows and Their Replacements](#deprecated-microflows-and-their-replacements) and [Deprecated Java Actions and Their Replacements](#deprecated-java-actions-and-their-replacements).
-    1. Deprecated microflows and Java actions can be found in the *internal>deprecated* folder in the **TcConnector** module. These microflows are not used by the connector anymore, but you can include them and move them to your own module if required.
+    1. Deprecated microflows and Java actions can be found in the *internal &rarr; deprecated* folder in the **TcConnector** module. These microflows are not used by the connector anymore, but you can include them and move them to your own module if required.
     1. References to `FileType` should be changed to `NamedReference`.
-    1. The **Login** microflow does not return a Boolean value anymore. **Login** now throws an exception instead.
+    1. The **Login** microflow does not return a Boolean value anymore. **Login** now throws an exception instead, whenever it was unsuccessful.
     1. We have deprecated microflows that use the `TcSession` entity. Do not use the `TcSession` entity in your code. If you want to know if someone is logged in, use `RULE_TeamcenterConfiguration_IsLoggedIn` instead.
     1. For more information, refer to the [Breaking Changes](#breaking-changes) section.
 
 5. Update security.
 
-    1. Click **Update Security** in Studio Pro. 
+    1. Click **Update Security** in the TcConnector domain model in Studio Pro. 
     1. Make sure that all attributes on persistent entities have read rights. The **Administrator** role now only has access to Teamcenter Configuration, so assign the **User** role to module roles that need entity access.
 
 6. Enable the React client.
@@ -85,28 +85,28 @@ This step descibes how to keep the original integrations using both the `Teamcen
 2. Map the old `TeamcenterToolkit.BOMLine` BO mappings to `TcConnector.BOMLine`, use **Ctrl+F** to search for `TeamcenterToolkit.BOMLine`, to see if there are any BO mappings left that reference the `TeamcenterToolkit`, replace these with `TcConnector.BOMLine'.
 3. Validate if everything still works correctly. 
 
-## Migrate to Teamcenter Service Document
+## Migrate to Teamcenter service document
 
-1. Create a Teamcenter Service Document.
+1. Create a Teamcenter service document.
 
-    1. In the module where your Teamcenter integrations live, right-click and select **Add others**, then click **Teamcenter Service**.
+    1. In the module where your Teamcenter integrations are stored, right-click and select **Add others**, then select **Teamcenter service**.
     1. Give it a name.
 
 2. Reconfigure your connection.
 
-    1. Open the Teamcenter Service Document and go to the **Settings** tab.
+    1. Open the Teamcenter service document and go to the **Settings** tab.
     1. Enter your Teamcenter URL and authentication settings.
     1. Click **Sign In** and log in to Teamcenter.
 
 3. Recreate your integrations.
 
-    Your existing domain model entities and microflows are still in your app. However, you need to regenerate them using the new Extension to take advantage of improvements and ensure compatibility with the new connector. To do that, follow these steps:
+    Your existing domain model entities and microflows are still in your app. However, you need to regenerate them using the new Teamcenter service document to take advantage of the improvements and ensure compatibility with the new connector. To do that, follow these steps:
                 
-    1. In the Service Document, click **+Add integration** and start a journey that matches each of your existing integrations.
-    1. Configure the integration the same way as before. The journey types and options are the same.
-    1. Click **Generate** to save and generate the integration. 
-    1. Replace the old microflows with the newly generated microflows.
-    1. You can use the **Duplicate** feature on the **History** tab to create variations of an integration without reconfiguring from scratch.
+    1. In the Teamcenter service, click **+Add integration** and select a journey that matches each of your existing integrations.
+    2. Configure the integration the same way as before. The journey types and options are the same.
+    3. Click **Generate** to save and generate the integration. 
+    4. Replace the old microflows with the newly generated microflows.
+    5. You can use the **Duplicate** feature on the **Integrations** tab to create variations of an integration without reconfiguring them from scratch.
 
 
 4. Remove the TeamcenterToolkit module from your project.
@@ -114,17 +114,17 @@ This step descibes how to keep the original integrations using both the `Teamcen
     1. Before removing the `TeamcenterToolkit` module, commit your work.
     1. Make sure that the `TeamcenterToolkit` is not used anymore by right-clicking on the `TeamcenterToolkit` module and selecting **Find usages of this module**.
     1. Remove the `TeamcenterToolkit` module.
-    ...* If there are still many resources pointing to the `TeamcenterToolkit`, you can rename the `TeamcenterToolkit` to `TcConnector2`, remove the `TcConnector2`, rename the `TcConnector` to `TcConnector2` and back to `TcConnector`. This trick connects the old resouces in the `TeamcenterToolkit` to the new ones in the `TcConnector`. 
-    1. Since the `TeamcenterToolkit` module is merged with the `TcConnector` module, all references to the `TeamcenterToolkit` should point to the `TcConnector`. Use **Ctrl+F** to search for *"TeamcenterToolkit."*, to see if there are any BO mappings left that reference the `TeamcenterToolkit`. If there are, replace them with `TcConnector`.
-    1. Once all the journeys are migrated you can remove the *TeamcenterExtension* folder.
-    1. Remove the `TeamcenterExtension` module under add-ons, this contains the old Teamcenter Extension and is not needed anymore for using the Teamcenter Service Document.
+    {{% alert color="info" %}} If there are still many resources pointing to the `TeamcenterToolkit`, you can rename the `TeamcenterToolkit` to `TcConnector2`, remove the `TcConnector2`, rename the `TcConnector` to `TcConnector2` and back to `TcConnector`. This trick connects the old resouces in the `TeamcenterToolkit` to the new ones in the `TcConnector`. {{% /alert %}}
+    2. Since the `TeamcenterToolkit` module is merged with the `TcConnector` module, all references to the `TeamcenterToolkit` should point to the `TcConnector`. Use **Ctrl+F** to search for *"TeamcenterToolkit."*, to see if there are any BO mappings left that reference the `TeamcenterToolkit`. If there are, replace them with `TcConnector`.
+    3. Once all the journeys are migrated you can remove the *TeamcenterExtension* folder from your project's resources folder on disk.
+    4. Remove the `TeamcenterExtension` module under Add-ons. This is the older Teamcenter Extension which is no longer needed now that you are using the Teamcenter service document.
 
 5. Test thoroughly.
 
     1. Run each generated microflow against your Teamcenter instance.
-    1. Verify that search, create, update, and retrieval operations work as expected.
-    1. Test error handling by triggering error conditions (for example, invalid search criteria).
-    1. If you have automated tests, run them to ensure integration behavior is correct.
+    2. Verify that search, create, update, and retrieval operations work as expected.
+    3. Test error handling by triggering error conditions (for example, invalid search criteria).
+    4. If you have automated tests, run them to ensure integration behavior is correct.
 
 ## Breaking Changes
 

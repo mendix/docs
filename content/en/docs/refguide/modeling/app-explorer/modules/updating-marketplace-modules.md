@@ -35,6 +35,8 @@ To merge your customizations with the updated module, Studio Pro matches documen
 
 * Modules with package IDs – Studio Pro uses embedded GUID mapping to match documents by GUID. This is more reliable because documents can be matched even if they have been renamed.
 
+* Modules without package IDs – Studio Pro attempts to map documents by name. This works well as long as document names have not changed between versions.
+
 {{% alert color="info" %}}
 Studio Pro 11.12 introduced package IDs and document GUID mappings to make updates more reliable.
 {{% /alert %}}

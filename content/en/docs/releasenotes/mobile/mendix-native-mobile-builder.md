@@ -31,7 +31,7 @@ To fix this issue, do the following:
 
 ## Release 1.0.147 {#10147}
 
-**Release date: August 07, 2026**
+**Release date: August 12, 2026**
 
 ## Changes
 

@@ -133,12 +133,17 @@ When you export a module package (a *.mpk* file), Studio Pro adds a `manifest.js
 * The module ID and module name
 * The module version
 * The checksum of the package
+* A version GUID — a deterministic identifier derived from the checksum that uniquely identifies this specific build of the package
+* The module type (`source`, `add-on`, or `solution`)
+* The content types included in the package (for example, `extension` or `ai-skill`), if applicable
 * The Mendix metamodel version used to create the package
 * The list of files included in the package
 
 {{% alert type="info" %}}
 The legacy `package.xml` metadata file is not mentioned in `manifest.json` but is still included in the package for backward compatibility.
-{{% /alert %}} 
+{{% /alert %}}
+
+If you try to import a module package that was created with a newer version of Studio Pro than the one you are using, Studio Pro shows an error and cancels the import. You need to upgrade to a compatible version of Studio Pro before importing the package.
 
 ## Read More
 

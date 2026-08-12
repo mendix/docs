@@ -2,7 +2,7 @@
 title: "CA-05 Plan of Action and Milestones"
 linktitle: "CA-05"
 url: /private-mendix-platform/nist-controls/ca-05/
-description: "Documents the Private Mendix Platform's compliance with the CA-07 control of the NIST 800-53 framework."
+description: "Documents the Private Mendix Platform's compliance with the CA-05 control of the NIST 800-53 framework."
 weight: 20
 ---
 

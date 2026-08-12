@@ -19,24 +19,24 @@ The Mendix central OCI registry uses Personal Access Token (PAT) for authenticat
 4. In the **OCI registry** section, select `mx:registry:access`.
 5. Dependsing on what OCI tools you use, use a command like the following to log in to the registry. 
 
-    Most OCI tools store the credentials in a local `~/.docker/config.json` file. After logging in, you can use all tools without any further logins.
+Most OCI tools store the credentials in a local `~/.docker/config.json` file. After logging in, you can use all tools without any further logins.
 
-    ```text
-    # docker for images
-    $ docker login -u pat -p ${YOUR_PAT} registry.mendix.com
-    
-    # helm for helm charts
-    $ helm [command] --username pat --password ${YOUR_PAT} oci://registry.mendix.com/${HELM_CHART_PATH}:${HELM_CHART_VERSION}
-    
-    # oras for any files
-    $ oras login -u pat -p ${YOUR_PAT} registry.mendix.com
-    
-    # crane
-    $ crane auth login -u pat -p ${YOUR_PAT} registry.mendix.com
-    
-    # cosign for signatature
-    $ cosign login -u pat -p ${YOUR_PAT} registry.mendix.com
-    ```
+```text
+# docker for images
+$ docker login -u pat -p ${YOUR_PAT} registry.mendix.com
+
+# helm for helm charts
+$ helm [command] --username pat --password ${YOUR_PAT} oci://registry.mendix.com/${HELM_CHART_PATH}:${HELM_CHART_VERSION}
+
+# oras for any files
+$ oras login -u pat -p ${YOUR_PAT} registry.mendix.com
+
+# crane
+$ crane auth login -u pat -p ${YOUR_PAT} registry.mendix.com
+
+# cosign for signatature
+$ cosign login -u pat -p ${YOUR_PAT} registry.mendix.com
+```
 
 ## Artifacts Signing and Verification
 

@@ -8,6 +8,14 @@ description: "These release notes showcase each release of the iOS and Android M
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to get the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
+## Android 11.12.1 / iOS 11.12.1
+
+**Release date: August {TODO}, 2026**
+
+### Improvements 
+
+* Replaced @notifee/react-native with react-native-notify-kit library.
+
 ## Android 11.12.0 / iOS 11.12.0
 
 **Release date: July 6, 2026**
@@ -59,6 +67,14 @@ Depending on the Mendix version your app is developed in and the device you want
 ### Improvements 
 
 * This new version is compatible with Mendix 11.7.0
+
+## Android 11.6.7 / iOS 11.6.7
+
+**Release date: August {TODO}, 2026**
+
+### Fixes
+
+* * Replaced @notifee/react-native with react-native-notify-kit library.
 
 ## Android 11.6.6
 

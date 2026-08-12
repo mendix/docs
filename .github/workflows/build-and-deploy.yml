@@ -68,7 +68,7 @@ jobs:
           mkdir -p public
           set -o pipefail
           ./node_modules/.bin/hugo --environment ${{ steps.env.outputs.target }} 2>&1 | \
-            sed -E 's/^=+$/\n&/; s/.*│  EN.*/```\n&/; s/.*Cleaned.*/&\n```/' | tee hugo.log
+            sed 's/.*│  EN.*/```\n&/; s/.*Cleaned.*/&\n```/' | tee hugo.log
 
       - name: Run htmltest
         # htmltest errors are treated as warnings — build continues regardless (matches Travis behaviour)
@@ -76,7 +76,7 @@ jobs:
           chmod +x ./htmltest/htmltest
           set +o pipefail
           ./htmltest/htmltest 2>&1 | \
-            sed 's/\o033\[[0-9;]*[A-Za-z]//g' | tee -a hugo.log
+            sed 's/\o033\[[0-9;]*[A-Za-z]//g; s/^=\+$/\n&/' | tee -a hugo.log
           if [ "${PIPESTATUS[0]}" -ne 0 ]; then
             # add blank output line first as ::warning:: does not always trigger a warning annotation
             echo " "

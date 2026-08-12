@@ -44,7 +44,7 @@ For example, support for Mendix 9 will end upon the release of Mendix 12 GA. How
 Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
 
 {{% alert color="info" %}}
-Extended Support does not apply to applications that contain a Native Mobile profile. Native mobile applications follow separate support timelines and policies. For more information, see [Support Guidelines for Native Mobile](/releasenotes/mobile/native-support/).
+Extended Support does not apply to applications that contain a native mobile profile. Native mobile applications follow separate support timelines and policies. For more information, see [Support Guidelines for Native Mobile](/releasenotes/mobile/native-support/).
 {{% /alert %}}
 
 ## Finding Your Answers

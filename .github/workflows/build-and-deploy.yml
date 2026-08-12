@@ -68,7 +68,7 @@ jobs:
           mkdir -p public
           set -o pipefail
           ./node_modules/.bin/hugo --environment ${{ steps.env.outputs.target }} 2>&1 | \
-            sed 's/^=\+$/\n&/' | tee hugo.log
+            sed 's/^=\+$/\n\n&/' | tee hugo.log
 
       - name: Run htmltest
         # htmltest errors are treated as warnings — build continues regardless (matches Travis behaviour)

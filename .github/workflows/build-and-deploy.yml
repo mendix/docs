@@ -77,6 +77,7 @@ jobs:
           ./htmltest/htmltest 2>&1 | \
             sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" | tee -a hugo.log
           if [ "${PIPESTATUS[0]}" -ne 0 ]; then
+            echo " "# add blank output as ::warning:: does not always trigger a warning
             echo "::warning::htmltest found broken cross-references. See the Run htmltest step for details."
           fi
 

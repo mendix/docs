@@ -86,6 +86,7 @@ jobs:
         run: cat hugo.log
 
       - name: Upload public site artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v7
         with:
           name: public-site

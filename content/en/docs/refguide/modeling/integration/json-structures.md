@@ -14,12 +14,10 @@ A JSON structure document stores a JSON snippet and converts it into a schema st
 
 ### JSON Snippet
 
-Contains text of the JSON snippet. It is usually pasted from API documentation, or you can enter it manually for simple JSON. Make sure the JSON snippet includes all required elements, and that each attribute has a value assigned.
+Contains text of the JSON snippet. It is usually pasted from API documentation, or you can enter it manually for simple JSON. Make sure the JSON snippet includes all required elements, with a value assigned to each attribute.
 
 {{% alert color="info" %}}
-When you paste or modify the JSON snippet, it is automatically checked for validity. If the snippet is valid, **Valid JSON** is shown below the snippet. If it is not valid, **Invalid JSON** is shown instead:
-
-{{< figure src="/attachments/refguide/modeling/integration/json-structures/19398781.png" class="no-border" >}}
+When you paste or modify the JSON snippet, it is automatically checked for validity. If the snippet is valid, **Valid JSON** is shown below the snippet. If it is not valid, {{% icon name="remove-circle" %}} **Invalid JSON** is shown instead.
 
 The structure is only parsed when the JSON is valid.
 {{% /alert %}}
@@ -36,10 +34,10 @@ Special unicode characters are encoded according to JSON standards. For example,
 
 Shows a tree structure with a schema that is parsed from the JSON snippet. The following columns are available:
 
-* **Name** – this shows the name of a JSON element. If the JSON element does not have a name, it shows the element type within parentheses: (Object), (Array), (Wrapper), or (Value).
-* **Custom name** – this column is editable. Often, the name of JSON objects or arrays cannot be inferred from the snippet. For reference, you can modify the name of the JSON element. This name is important when you use mapping documents based on the JSON schema. You will see this name in mapping elements. It is used when you want to use **Map Automatically** to generate domain model entities and associations.
-* **Type** – this shows the type of element after parsing.
-* **Value** – this shows the original value of the element in the JSON snippet. It is used to make it easier to find back the original element in the snippet. It is not used in the rest of the model.
+* **Name** – This shows the name of a JSON element. If the JSON element does not have a name, it shows the element type within parentheses: (Object), (Array), (Wrapper), or (Value).
+* **Custom name** – This column is editable. Often, the name of JSON objects or arrays cannot be inferred from the snippet. For reference, you can modify the name of the JSON element. This name is important when you use mapping documents based on the JSON schema. You see this name in mapping elements. It is used when you want to use **Map Automatically** to generate domain model entities and associations.
+* **Type** – This shows the type of element after parsing.
+* **Value** – This shows the original value of the element in the JSON snippet. It is used to make it easier to find the original element in the snippet. It is not used in the rest of the model.
 
 {{% alert color="info" %}}
 When you modify the JSON snippet, the structure is refreshed automatically.
@@ -47,13 +45,13 @@ When you modify the JSON snippet, the structure is refreshed automatically.
 
 ### Documentation
 
-Documentation that describes the snippet.
+This seciton is for documentation that describes the snippet.
 
 ## Parsing of the JSON Snippet
 
 ### Simple JSON Objects
 
-A simple JSON object is contained in curly braces (between `{` and `}`). It contains a comma-separated list of JSON properties. See the following example.
+A simple JSON object is contained in curly braces (between `{` and `}`). It contains a comma-separated list of JSON properties, as shown in the following example:
 
 {{< figure src="/attachments/refguide/modeling/integration/json-structures/sample-structure.png" class="no-border" width="600" >}}
 
@@ -62,7 +60,7 @@ Each JSON property is composed of a key ("name") and a value ("John"). The type 
 * `"string"` – String
 * `123` – Integer
 * `9223372036854775807` – Long, if the number is too large for an Integer
-* `12.50` – Decimal, also for numbers in scientific notation such as `1.2e3`
+* `12.50` – Decimal, also for numbers in scientific notation (for example, `1.2e3`)
 * `true` or `false` – Boolean
 * `"1985-04-12T23:20:50.52Z"` – DateTime
 * `null` – Unknown, because no type can be derived from the value

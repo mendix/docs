@@ -75,7 +75,7 @@ jobs:
           chmod +x ./htmltest/htmltest
           set +o pipefail
           ./htmltest/htmltest 2>&1 | \
-            sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" | tee -a hugo.log
+            sed 's/\o033\[[0-9;]*[A-Za-z]//g' | tee -a hugo.log
           if [ "${PIPESTATUS[0]}" -ne 0 ]; then
             # add blank output line first as ::warning:: does not always trigger a warning annotation
             echo " "

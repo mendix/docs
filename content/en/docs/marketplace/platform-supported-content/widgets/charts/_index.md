@@ -2,6 +2,9 @@
 title: "Charts"
 url: /appstore/widgets/charts/
 description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix Marketplace."
+aliases:
+    - /appstore/widgets/charts-plotly-images-rest/
+    - /howto/front-end/charts-plotly-images-rest/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,7 +21,6 @@ For more examples of what Charts widgets can do, see the following documents:
 * [Use the Charts Theme](/appstore/widgets/charts-theme/)
 * [Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/)
 * [Use a Chart with a REST Data Source](/appstore/widgets/charts-basic-rest/)
-* [Use the Plotly Images REST Service Endpoint](/appstore/widgets/charts-plotly-images-rest/)
 
 {{% alert color="info" %}}
 This document assumes that you are using Charts widget v3.0.0 or above. To read documentation for older versions, see the [Legacy Chart Widget Documentation](#legacy-widget-docs) section below.

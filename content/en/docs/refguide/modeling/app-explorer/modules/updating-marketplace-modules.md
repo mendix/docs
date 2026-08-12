@@ -15,6 +15,10 @@ Previously, when you wanted to update a Marketplace module to a newer version, y
 
 Studio Pro 11.12 changes this by enabling module updates that retain your customizations. When you update a module, Studio Pro performs a three-way merge that combines your customizations with the publisher's updates. You can keep your changes and benefit from bug fixes and new features in the updated module.
 
+{{% alert color="info" %}} 
+Studio Pro 11.12 introduces improved package management with package IDs and document GUID mappings that make updates more reliable. However, updates with customization retention also work for older modules without package IDs through name-based mapping. For more information on package management, see Module Settings.
+{{% /alert %}}
+
 ## How Module Updates Work
 
 ### Three-Way Merge Process

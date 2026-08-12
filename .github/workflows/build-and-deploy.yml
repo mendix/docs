@@ -83,7 +83,7 @@ jobs:
             echo "::warning::htmltest found broken cross-references. See the Run htmltest step for details."
           fi
 
-      - name: Print build log
+      - name: Print build log to GitHub Summary
         if: always()
         run: cat hugo.log >> $GITHUB_STEP_SUMMARY
 

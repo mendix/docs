@@ -14,7 +14,9 @@ cascade:
 
 ## Introduction
 
-The *Mendix Studio Pro 11 Guide* covers important topics concerning [Studio Pro](/refguide/modeling/), the [Mendix Runtime](/refguide/runtime/), and other components of the Mendix Platform.
+{{% todo %}}Revert this invalid cross-reference{{% /todo %}}
+
+The *Mendix Studio Pro 11 Guide* covers important topics concerning [Studio Pro](/refguide/modeling/thisisinvalid/), the [Mendix Runtime](/refguide/runtime/), and other components of the Mendix Platform.
 
 Studio Pro runs on both Windows and macOS. Before installing Studio Pro 11, please read [System Requirements](/refguide/system-requirements/). For information on how to install Studio Pro, see [Installing Mendix Studio Pro](/refguide/install/).
 

@@ -227,7 +227,6 @@ Any non-root container can be attached to a Mendix app pod and can have access t
 For example, this command can be used to attach a curl container to a pod (replace `$POD_NAME` with the name of the target pod):
 
 ```shell
-POD_NAME=<name-of-mendix-app-pod>
 kubectl debug $POD_NAME --target mendix --image registry.access.redhat.com/hi/curl:latest-builder --profile restricted -it -- /bin/bash
 ```
 

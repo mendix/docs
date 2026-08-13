@@ -34,7 +34,7 @@ The **Devices** section shows a list of all devices currently associated with th
     * Bluetooth - Bluetooth devices are scanned continuously. They are considered available if seen, and unavailable if not seen for 30 seconds.
     * Printer - The Client polls the system printer list. The scan only checks that the device exists, not its status, configuration, or connectivity.
     * Serial device - The Client polls the system port list. The scan only checks that the device exists, not its connectivity.
-    * TCP/IPT client - The Client only checks that the host is defined and the port is valid. It cannot verify remote connectivity without actually connecting.
+    * TCP/IP client - The Client only checks that the host is defined and the port is valid. It cannot verify remote connectivity without actually connecting.
 
 * Connection status - When the device shows as **Connected**, it means that the device connection has been successfully established and not yet closed. The device is available and is not throwing any errors.
 * Error status - Shows any error captured for this device. Error status is reset on config change or reconnect.

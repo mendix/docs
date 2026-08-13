@@ -71,11 +71,13 @@ az postgres flexible-server parameter show \
 
 ## Changing Parameters with SQL {#sql}
 
-Some parameters can also be set from a PostgreSQL session, without touching the server configuration at all. This takes effect immediately and affects nothing outside the session or role you change.
+Some parameters can also be set from a PostgreSQL session, without modifying the server configuration. This takes effect immediately and affects nothing outside the session or role you change.
 
 {{% alert color="info" %}}
 Network access to the primary PostgreSQL server is restricted by [Network Security Group](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview) rules, as described in [Direct App Database Access](/developerportal/deploy/mendix-on-azure/configuration/direct-database-access/). If you cannot open a session against the server, use the [Microsoft Azure Portal](#portal) or the [Azure CLI](#cli) instead.
 {{% /alert %}}
+
+### Setting a Parameter for the Current Session
 
 To set a parameter for the current session only, use the following statements:
 
@@ -85,6 +87,8 @@ SET hash_mem_multiplier = 3.0;
 SET max_parallel_workers_per_gather = 4;
 ```
 
+### Setting a Parameter for a Database Role
+
 To set a parameter for a database role, so that it applies to every new session opened by that role, use the following statements:
 
 ```sql
@@ -92,6 +96,8 @@ ALTER ROLE mendix SET work_mem = '128MB';
 ALTER ROLE mendix SET hash_mem_multiplier = 3.0;
 ALTER ROLE mendix SET max_parallel_workers_per_gather = 4;
 ```
+
+### Verifying Values
 
 To verify the values that are in effect, use the following statements:
 
@@ -118,7 +124,7 @@ The following parameters are validated for use on Mendix on Azure. The context o
 | `random_page_cost` | `USERSET` | SQL, Azure Portal, or Azure CLI | No |
 
 {{% alert color="warning" %}}
-`max_worker_processes` is a postmaster-context parameter. It cannot be set from a SQL session, and a new value only takes effect after a full restart of the PostgreSQL server, which drops the database connections of every app environment in the cluster. Raise it only when you have first confirmed that `max_parallel_workers` cannot be raised far enough without it, and only during a maintenance window.
+The `max_worker_processes` parameter is a postmaster-context parameter. It cannot be set from a SQL session, and a new value only takes effect after a full restart of the PostgreSQL server, which drops the database connections of every app environment in the cluster. Raise it only when you have first confirmed that `max_parallel_workers` cannot be raised far enough without it, and only during a maintenance window.
 {{% /alert %}}
 
 ### Recommended Values by Workload
@@ -135,7 +141,7 @@ The following values are starting points, not targets. Measure the effect on you
 | `random_page_cost` | 1.1 | 1.1 | Cost estimate for random reads, lowered because the server uses SSD storage |
 
 {{% alert color="warning" %}}
-`work_mem` is allocated per sort or hash operation, not per connection, so a single query can consume several multiples of it and each parallel worker adds its own allocation. Keep `work_mem` multiplied by the expected number of concurrent connections and parallel workers per query well below half of the server memory. Setting `work_mem` too high is the most common cause of out-of-memory conditions on the shared server, which affects all app environments in the cluster.
+The `work_mem` parameter is allocated per sort or hash operation, not per connection, so a single query can consume several multiples of it and each parallel worker adds its own allocation. Keep `work_mem` multiplied by the expected number of concurrent connections and parallel workers per query well below half of the server memory. Setting `work_mem` too high is the most common cause of out-of-memory conditions on the shared server, which affects all app environments in the cluster.
 {{% /alert %}}
 
 ## Parameters You Must Not Change {#dangerous}
@@ -159,19 +165,19 @@ To change the compute tier or the storage performance tier of the server instead
 
 To measure whether a parameter change helps, perform the following steps:
 
-1. Establish a baseline. In your SQL client, enable timing:
+1. Establish a baseline. In your SQL client, enable timing by running the following command:
 
     ```sql
     \timing on
     ```
 
-2. Capture the query plan before the change:
+2. Capture the query plan before the change by running the following command:
 
     ```sql
     EXPLAIN (ANALYZE, BUFFERS) SELECT ...;
     ```
 
-3. Apply the tuning in the current session only:
+3. Apply the tuning in the current session only by running the following command:
 
     ```sql
     SET work_mem = '128MB';
@@ -183,16 +189,51 @@ To measure whether a parameter change helps, perform the following steps:
 
 ## Troubleshooting
 
-The following table lists common outcomes and how to address them.
+The following section lists common outcomes and how to address them.
 
-| Symptom | What to Check |
-| --- | --- |
-| The query is not faster after raising `max_parallel_workers_per_gather` | Run `SHOW max_parallel_workers;`. If it is `0` or too low, the server has no worker slots to hand out, and `max_parallel_workers` needs raising first. Confirm with `EXPLAIN` that the plan contains `Parallel` nodes at all, because not every query can be parallelized. |
-| The query still spills to disk | Raise `work_mem` further in a session and re-run `EXPLAIN (ANALYZE, BUFFERS)`. Sort and hash nodes report whether they used memory or disk. |
-| Apps report out-of-memory errors or dropped connections after a change | Lower `work_mem` immediately and reset any other memory-related change. The shared server is used by every app environment in the cluster. |
-| A new value does not take effect | Check whether the parameter is waiting for a restart, as described in [Changing Parameters with the Azure CLI](#cli). |
-| You need to undo a session or role change | Run `RESET work_mem;` for the current session, or `ALTER ROLE mendix RESET work_mem;` for a role. |
-| You need to undo a server change | Set the parameter back to its default value in **Settings > Server parameters** in the Microsoft Azure Portal. |
+### Raising `Max_parallel_workers_per_gather` Does Not Increase Speed
+
+The query is not faster after raising the value of the`max_parallel_workers_per_gather` parameter.
+
+#### Solution
+
+Run `SHOW max_parallel_workers;`. If it is `0` or too low, the server has no worker slots to hand out, and `max_parallel_workers` needs raising first. Confirm with `EXPLAIN` that the plan contains `Parallel` nodes at all, because not every query can be parallelized.
+
+### Query Spills
+
+The query still spills to disk.
+
+#### Solution
+
+Raise `work_mem` further in a session and re-run `EXPLAIN (ANALYZE, BUFFERS)`. Sort and hash nodes report whether they used memory or disk.
+
+### Out-of-Memory Errors
+
+Apps report out-of-memory errors or dropped connections after a change
+
+#### Solution
+
+Lower `work_mem` immediately and reset any other memory-related change. The shared server is used by every app environment in the cluster.
+
+### Value Does Not Take Effect
+
+A new value does not take effect.
+
+#### Solution
+
+Check whether the parameter is waiting for a restart, as described in [Changing Parameters with the Azure CLI](#cli).
+
+### Undo Change
+
+You need to undo a session, role, or server change.
+
+#### Solution
+
+Perform one of the following actions, depending on the type of change that you want to undo:
+
+* To undo a change to the current session, run `RESET work_mem;`.
+* To undo a role change, run `ALTER ROLE mendix RESET work_mem;`.
+* To undo a server change, set the parameter back to its default value in **Settings > Server parameters** in the Microsoft Azure Portal.
 
 ## Best Practices
 

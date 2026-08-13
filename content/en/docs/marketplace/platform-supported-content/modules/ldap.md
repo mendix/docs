@@ -91,7 +91,7 @@ If an LDAP group is deleted or renamed, any existing role mappings based on the 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When upgrading from LDAP v2.2.0 to v2.2.1, duplicate LDAP Group records may exist if they were created in LDAP v2.2.0. After upgrading to version 2.2.1, remove the unique constraint on the `ObjectGUID` attribute of the LDAP Group entity. Run the `Ldap.MF_DeleteDuplicateGroups` migration microflow to detect and remove duplicate LDAP Group records. Once the cleanup is complete, add a unique constraint on the `ObjectGUID` attribute of the LDAP Group entity and **Refresh** groups. Run the [LDAP synchronization](/appstore/modules/ldap/#regular-synchronization) again.
+Version 2.2.0 of the LDAP module may have created duplicate LDAP Group records. After upgrading to 2.2.1, you can remove these duplicate groups. To do so, remove the unique constraint on the `ObjectGUID` attribute of the LDAP Group entity. Run the `Ldap.MF_DeleteDuplicateGroups` migration microflow to detect and remove duplicate LDAP Group records. After the cleanup is complete, add a unique constraint on the `ObjectGUID` attribute of the LDAP Group entity and **Refresh** groups. Run the [LDAP synchronization](/appstore/modules/ldap/#regular-synchronization) again.
 {{% /alert %}}
 
 ## Configuration{#configuration}

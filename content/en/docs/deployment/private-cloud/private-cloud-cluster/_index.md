@@ -215,7 +215,7 @@ If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (an
 {{% alert color="info" %}}
 Red Hat Hardened Images don't provide images for Java 8, 11, or 17; only Java 21 is supported at the moment.
 
-To use Hardened Images, upgrade to any supported LTS version of Mendix.
+To use Hardened Images, upgrade to Mendix 11, or any supported LTS version of Mendix.
 {{% /alert %}}
 
 {{% alert color="info" %}}

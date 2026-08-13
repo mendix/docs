@@ -9,6 +9,10 @@ weight: 10
 
 Maia Resources is your access point to increase the capacity of Maia Units for using Maia Make in Studio Pro. It allows admins to provision, upgrade, downgrade, and deprovision Maia Units and manage the resources for Maia Make for their company. For more information on Maia Make’s capabilities, refer to [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/).
 
+{{% alert type="info" %}}
+Maia Units are only required for Maia Make. Other Maia features (for example, Maia Plan) do not require Maia Units.
+{{% /alert %}}
+
 ## Prerequisites
 
 1. Sufficient token entitlements – The user should have an adequate number of available Mendix Cloud Tokens to allocate for Maia Unit provisioning.

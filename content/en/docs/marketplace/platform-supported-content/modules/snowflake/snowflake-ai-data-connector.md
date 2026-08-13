@@ -10,7 +10,7 @@ weight: 20
 
 The [Snowflake AI Data Connector](https://marketplace.mendix.com/link/component/225717) allows you to use data from Snowflake in your Mendix application and enrich your app with the AI capabilities that Snowflake provides.
 
-### Typical Use Cases
+### Typical Use Cases {#use-cases}
 
 The Snowflake AI Data Connector supports the following:
 
@@ -37,8 +37,8 @@ The Snowflake AI Data Connector supports the following:
         * [EMBED_TEXT_1024](https://docs.snowflake.com/en/sql-reference/functions/embed_text_1024-snowflake-cortex) – Given a piece of text, returns a vector embedding of 1024 dimensions that represents that text.
           
     * Use [Snowflake Cortex Analyst](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst) – This Snowflake Cortex feature is used to get information/insights out of structured data sets using natural language instead of sql. Cortex Analyst works with semantic models or semantic model views that define how your data should be interpreted.
-    * Synchronous execution of calls
-    * Query your Cortex Search services
+    * Execute synchroneous calls.
+    * Query your Cortex Search services.
 
 For more use cases and examples for [Snowflake Cortex LLM functions](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions), written by the Head of Snowflake Tech Consulting, see [Karthik S Raman's Medium profile](https://medium.com/@karthiksraman).
 
@@ -73,6 +73,8 @@ To use the capabilities of Snowflake in a Mendix app with the Snowflake AI Data 
 * OAuth authentication
 * RSA key-pair authentication (KEYPAIR_JWT)
 * Programmatic Access Token (PAT)
+
+With the Snowflake AI Data Connector, authentication can be done either on system or on end-user level, and the connector supports role-based access control (RBAC) per end-user as well.
 
 #### Configuring OAUTH Authentication {#setup-OAUTH-snowflake}
 

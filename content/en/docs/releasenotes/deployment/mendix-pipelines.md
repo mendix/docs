@@ -12,6 +12,12 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 ## 2026
 
+### Aug 06, 2026
+
+#### New Features
+
+* The variable selector now provides suggestions for Mendix-provided variables within the pipeline designer. Users can reference these variables directly in their pipelines instead of hardcoding their values. For more information, refer to the [Variable Selector](/developerportal/deploy/configuring-post-get-request-steps/#variable-selector) section of *Configuring POST and GET Request Steps*.
+  
 ### May 28, 2026
 
 #### New Features

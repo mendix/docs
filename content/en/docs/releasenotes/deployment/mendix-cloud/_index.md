@@ -14,7 +14,38 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
 
+## August 2026
+
+### August 9, 2026
+
+#### Fixes
+
+* Resolved an issue where an incorrect Domain Name System (DNS) configuration warning was displayed for custom domains. Even when DNS was configured correctly, users continued to see a warning prompting them to configure their DNS settings. The warning is now displayed only when an actual DNS configuration issue is detected.
+(Tickets #275240, #275338, #275596, #275739, #276031, #276967, #277038, #277864, #278237, #281021, #281197, #282170, #282430, #282980, #283574)
+
+### August 4, 2026
+
+#### New Features
+
+* We have added a new [Jetty Thread Pool Usage](/developerportal/operate/monitoring-application-health/#jetty-thread-pool-usage) alert to the [Alerts](/developerportal/operate/monitoring-application-health/) page. This alert notifies you when the application's Jetty thread pool is approaching capacity, which can cause new requests to be delayed or rejected.
+
+### August 3, 2026
+
+#### New Features
+
+* We introduced the [Certificate API](/apidocs-mxsdk/apidocs/certificate-api/), which allows company admins to manage [landscape-wide certificates](/developerportal/deploy/certificates/centralized-certificates/) programmatically using a Mendix Personal Access Token (PAT). This API supports listing, creating, updating, replacing, and deleting central certificates.
+
 ## July 2026
+
+### July 30, 2026
+
+#### New Features
+
+* We have added three new database graphs to the [Metrics](/developerportal/operate/metrics/) page:
+
+    * [Average Database Bloat Ratio](/developerportal/operate/metrics/#Trends-dbavgbloatratio) – tracks dead rows across user tables to spot when autovacuum lags.
+    * [Maximum Table Bloat Ratio](/developerportal/operate/metrics/#Trends-dbmaxtablebloatratio) – highlights the bloat percentage of the single most bloated table (system vs. application).
+    * [Largest Table Size](/developerportal/operate/metrics/#Trends-dblargesttablesize) – shows the size of the biggest table to help identify archiving or partitioning needs.
 
 ### July 20, 2026
 

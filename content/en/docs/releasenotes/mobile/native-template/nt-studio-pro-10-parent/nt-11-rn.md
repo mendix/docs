@@ -13,21 +13,50 @@ description: "Native Template 11 release notes."
 
 * We fixed an issue in a deprecated Kotlin extension function used in the **react-native-screens** package.
 
-## 11.0.7 {#1005}
+## 11.1.2 {#1009}
 
-**Release date: August 4, 2025**
+**Release date: June 30, 2025**
 
 ### Fixes
 
-* We fixed a problem that caused SVGs to crash when using **borderRadius**. This was resolved by upgrading the **react-native-svg** version to 15.11.2.
+* We applied an important fix to `@mendix/native` which caused infrequent crashes in the published app.
 
-## 11.0.6 {#1005}
+#### Important Notes
 
-**Release date: June 5, 2025**
+* For projects upgrading to 10.18, follow the steps in [Upgrade Instructions](#upgrade-instructions) to migrate your app.
+* Even if your project is already using Hermes, the update is still required.
+
+## 11.1.1 {#1008}
+
+**Release date: June 10, 2025**
 
 ### Fixes
 
 * We resolved an issue where iOS applications built with Mendix 10.18 or higher would fail when the React client was enabled in **Runtime** settings.
+
+## 11.1.0 {#1007}
+
+**Release date: May 23, 2025**
+
+### Fixes
+
+* We fixed an issue where a white screen was showing instead of splash screen for nanoflow-based home screens.
+
+## 11.0.7 {#1006}
+
+**Release date: May 02, 2025**
+
+### Fixes
+
+* We fixed an issue where a user may face an error during the build process because the latest version 18 for playServices is not compatible with the current Gradle version.
+
+## 11.0.6 {#1005}
+
+**Release date: April 23, 2025**
+
+### Fixes
+
+* We fixed an issue where an image that was not in PNG format caused errors because the react-native version was missing a patch.
 
 ## 11.0.5 {#1004}
 

@@ -16,7 +16,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### Software Specifications
 
-Mendix [Studio Pro](/refguide9/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
+Mendix [Studio Pro](/refguide9/modeling/) version 9 is supported on actively serviced versions of Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
@@ -54,10 +54,10 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 ### Hardware Specifications
 
-Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2) with the following additional requirement:
+Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 11](https://www.microsoft.com/en-gb/windows/windows-11-specifications#table1) with the following additional requirement:
 
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB.
-* **RAM** – 4GB
+* **RAM** – 8GB or more depending on the size of your app and how many instances of Studio Pro you want to have open at the same time
 * **Display Resolution** – 1080p (1920x1080)
 
 ### Firewall Settings {#firewall-settings}
@@ -204,12 +204,12 @@ Mendix tries to support the most recent and patched database server versions fro
 Current support:
 
 * [IBM DB2](/refguide9/db2/) 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide9/mysql/): 10.6, 10.11, 11.4, 11.8
+* [MariaDB](/refguide9/mysql/): 10.11, 11.4, 11.8
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide9/mysql/): 8.4
 * [Oracle Database](/refguide9/oracle/): 19, 21c, 23ai (including 26ai)
-* PostgreSQL: 13, 14, 15, 16, 17, 18
+* PostgreSQL: 14, 15, 16, 17, 18
 * [SAP HANA](/refguide9/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}

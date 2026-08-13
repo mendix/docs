@@ -16,6 +16,11 @@ Maia Resources is your access point to increase the capacity of Maia Units for u
 3. Single account ownership – The user must have a single account. Owning multiple accounts is not supported for Maia Unit provisioning.
 4. Enterprise platform subscription – The user must have a single active enterprise platform subscription.
 
+## Monthly Consumption
+
+The **Monthly Consumption** displays your company’s Maia Unit usage for the current monthly cycle, including the **percentage**, **units consumed**, **remaining units**, and **reset date**.
+
+
 ## Overview of Maia Units
 
 The overview page provides a centralized view of all Maia Units currently provisioned for your company.
@@ -75,3 +80,11 @@ To deprovision, select a plan of type **Provisioned** from your resources overvi
 {{% alert color="info" %}}
 Your subscription plan operates on a monthly bundle cycle. When you deprovision a resource, the deprovisioning takes effect at the end of the current subscription month. Until that date, you can still use the resource and status in the overview reads **Plan Deprovision Scheduled**.
 {{% /alert %}}
+
+## Usage {#usage}
+
+Usage section allows you to view and manage each user’s Maia Unit usage in your company.
+For each user, you can see their monthly usage and monthly limit. This makes it easy to monitor how much of their allowance each user has consumed and how much they are allowed to use during the monthly cycle.
+To manage an individual user’s limit, click Manage next to the user. Enter the custom limit and save the changes. If no individual limit is set, the user will use the default company-level limit. Once a user reaches their individual limit, further Maia usage will be throttled for that user.
+
+{{< figure src="/attachments/control-center/maia/user-limit-manage.png" alt="" >}}

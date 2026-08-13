@@ -17,7 +17,11 @@ To see the command parameters for each command, use the `--help` parameter. For 
 
 ## mx show-module-version Command {#show-module-version}
 
-The `mx show-module-version` command outputs the version of a module. This command works for all modules in the app, except the System module.
+The `mx show-module-version` command outputs the version of a module. 
+
+{{% alert type="info" %}}
+As of Studio Pro 11.14 and 11.12.3, this command works for all modules in the app, except the System module.
+{{% /alert %}}
 
 ### Usage
 
@@ -48,7 +52,11 @@ The command will output the version of the module to the command line output.
 
 ## mx set-module-version Command {#set-module-version}
 
-The `mx set-module-version` command changes the version of a module. This command works for all modules in the app, except the System module.
+The `mx set-module-version` command changes the version of a module. 
+
+{{% alert type="info" %}}
+As of Studio Pro 11.14 and 11.12.3, this command works for all modules in the app, except the System module.
+{{% /alert %}}
 
 ### Usage
 

@@ -99,13 +99,12 @@ Store all sensitive values in a Kubernetes Secret by performing the following st
     type: Opaque
     stringData:
       RUNTIME_PARAMS_DATABASEJDBCURL: "postgresql://mendix:mendix@postgres:5432/mendix" # Defines the JDBC URL to use for the database connection (which overrides the other database connection settings).
-      RUNTIME_PARAMS_DATABASE_TYPE: "PostgreSQL"
-      RUNTIME_PARAMS_DATABASE_HOST: "postgresEndpointURL" #This will be overridden if you supply DatabaseJdbcUrl.
-      RUNTIME_PARAMS_DATABASE_PORT: "5432"
-      RUNTIME_PARAMS_DATABASE_NAME: "<your-database-name>"
-      RUNTIME_PARAMS_DATABASE_USERNAME: "<your-database-username>"
-      RUNTIME_PARAMS_DATABASE_PASSWORD: "<your-database-password>"
-      RUNTIME_PARAMS_ADMIN_PASSWORD: "<your-admin-password>"
+      RUNTIME_PARAMS_DATABASETYPE: "PostgreSQL"
+      RUNTIME_PARAMS_DATABASEHOST: "postgresEndpointURL" #This will be overridden if you supply DatabaseJdbcUrl.
+      RUNTIME_PARAMS_DATABASENAME: "<your-database-name>"
+      RUNTIME_PARAMS_DATABASEUSERNAME: "<your-database-username>"
+      RUNTIME_PARAMS_DATABASEPASSWORD: "<your-database-password>"
+      RUNTIME_ADMINUSER_PASSWORD: "<your-admin-password>"
       RUNTIME_PARAMS_LICENSE_LICENSE_ID: "<your-license-id>"
       RUNTIME_PARAMS_LICENSE_LICENSE_KEY: "<your-license-key>"
     ```
@@ -346,25 +345,25 @@ To use S3-compatible storage, set the following environment variables:
 
 ```text
 env:
-  - name: RUNTIME_PARAMS_MENDIX_CORE_STORAGESERVICE
+  - name: RUNTIME_COM_PARAMS_MENDIX_CORE_STORAGESERVICE
     value: "com.mendix.storage.s3"
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_S3_ENDPOINT
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_S3_ENDPOINT
     value: "<your-s3-endpoint>"
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_S3_BUCKETNAME
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_S3_BUCKETNAME
     value: "<your-s3-bucket>"
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_S3_REGION
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_S3_REGION
     value: "<your-s3-region>" 
     ...
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_S3_ACCESS_KEYID
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_S3_ACCESS_KEYID
     valueFrom:
       secretKeyRef:
         name: mendix-secret
-        key: RUNTIME_PARAMS_MENDIX_STORAGE_S3_ACCESS_KEYID
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_S3_SECRETACCESSKEY
+        key: RUNTIME_PARAMS_COM_MENDIX_STORAGE_S3_ACCESS_KEYID
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_S3_SECRETACCESSKEY
     valueFrom:
       secretKeyRef:
         name: mendix-secret
-        key: RUNTIME_PARAMS_MENDIX_STORAGE_S3_SECRETACCESSKEY
+        key: RUNTIME_PARAMS_COM_MENDIX_STORAGE_S3_SECRETACCESSKEY
 ```
 
 #### Azure Blob Storage
@@ -373,25 +372,25 @@ To use Azure BlobStorage, set the following environment variables:
 
 ```text
 env:
-  - name: RUNTIME_PARAMS_MENDIX_CORE_STORAGESERVICE
+  - name: RUNTIME_PARAMS_COM_MENDIX_CORE_STORAGESERVICE
     value: "com.mendix.storage.azure"
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_AZURE_BLOBENDPOINT
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_AZURE_BLOBENDPOINT
     value: "<your-s3-endpoint>"
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_AZURE_CONTAINER
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_AZURE_CONTAINER
     value: "<your-s3-bucket>"
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_S3_REGION
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_S3_REGION
     value: "<your-s3-region>" 
     ...
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_AZURE_ACCOUNT
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_AZURE_ACCOUNT
     valueFrom:
       secretKeyRef:
         name: mendix-secret
-        key: RUNTIME_PARAMS_MENDIX_STORAGE_AZURE_ACCOUNT
-  - name: RUNTIME_PARAMS_MENDIX_STORAGE_AZURE_ACCOUNTKEY
+        key: RUNTIME_PARAMS_COM_MENDIX_STORAGE_AZURE_ACCOUNT
+  - name: RUNTIME_PARAMS_COM_MENDIX_STORAGE_AZURE_ACCOUNTKEY
     valueFrom:
       secretKeyRef:
         name: mendix-secret
-        key: RUNTIME_PARAMS_MENDIX_STORAGE_AZURE_ACCOUNTKEY
+        key: RUNTIME_PARAMS_COM_MENDIX_STORAGE_AZURE_ACCOUNTKEY
 ```
 
 ## Troubleshooting

@@ -17,6 +17,10 @@ Tuning the database for your own apps is a customer responsibility under the [sh
 Azure role-based access control cannot grant write access to individual server parameters. As a result, you have write access to all PostgreSQL server parameters of the shared server, including parameters that can crash the server, cause data loss, or weaken its security posture. Mendix does not validate the values you set. Change only the parameters listed in [Parameters You Can Tune](#tunable), and never change the parameters listed in [Parameters You Must Not Change](#dangerous).
 {{% /alert %}}
 
+{{% alert color="info" %}}
+If you are unsure whether a parameter not listed on this page can be safely changed, raise a support ticket through the Mendix on Azure Portal as described in [Support for Mendix on Azure](/developerportal/deploy/mendix-on-azure/support/#raising-support-tickets). Mendix processes these tickets on a best-effort basis.
+{{% /alert %}}
+
 ## Prerequisites
 
 Before you begin, make sure to fulfill the following prerequisites:

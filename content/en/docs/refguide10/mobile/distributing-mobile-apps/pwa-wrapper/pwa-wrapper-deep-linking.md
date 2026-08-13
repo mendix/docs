@@ -45,8 +45,8 @@ Each deep link entry requires the following:
 * **scheme** (required) – For example `myapp`, `pwa`, or `https`/`http` for universal/app links
 * **host** (required) – Domain or authority to match, for example `example.com`
 * **path** fields (optional, pick one at most):
-  * **path** – Exact path to match (for example `/profile`)
-  * **pathStartWith** – Path prefix to match (for example `/jump` catches `/jump/profile`)
+    * **path** – Exact path to match (for example `/profile`)
+    * **pathStartWith** – Path prefix to match (for example `/jump` catches `/jump/profile`)
 * **linkFeature** – Free-text label (metadata only, affects HarmonyOS builds)
 * **platform** – `Android`, `iOS`, `HarmonyOS`, `all`, or unset (unset or `all` applies to every platform)
 

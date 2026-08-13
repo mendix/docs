@@ -107,11 +107,11 @@ Mendix will use this access for the following purposes:
 * Initial initialisation of the cluster (as initiated by the customer from Mendix on Azure portal)
 * Pushing regular service updates (automatically, see description in the next paragraph)
 * Pushing ad-hoc emergency updates or configuration changes to avoid service disruptions (by exception and at discretion of Mendix) 
-* Troubleshooting incidents on behalf of the customer (after raising of a support ticket by the customer)
+* Troubleshooting incidents on behalf of the customer (after raising of a support ticket by the customer). This covers both automated extraction of recent logs from your environment and, where those logs are not sufficient to diagnose the issue, direct access to your environment by Mendix support engineers.
 
 ## Support Tickets
 
-Since Mendix on Azure resources contain sensitive data, Mendix Support does not have direct access. To enable effective troubleshooting, you can create support tickets through the Mendix on Azure portal, which automatically include recent logs.
+Mendix on Azure resources contain sensitive data, so access to them by Mendix Support is strictly controlled and only takes place in the context of a support request. To enable effective troubleshooting, you can create support tickets through the Mendix on Azure portal, which automatically include recent logs from your environment.
 
 ### Raising Support Tickets
 
@@ -125,7 +125,7 @@ To raise a support ticket, perform the following steps:
 3. On the **Support Tickets** page, click **Open a Ticket** and complete the form. The page also shows your existing tickets.
 
 {{% alert color="info" %}}  
-By submitting a support ticket, you consent to sharing the pertinent logs with the Mendix Support team to assist in issue resolution.  
+By submitting a support ticket, you consent to both of the following, for the sole purpose of resolving the issue you reported: sharing the pertinent logs from your environment with the Mendix Support team, and direct access to your Mendix on Azure environment by Mendix support engineers. For more information about the mechanism and scope of that access, see [Access to your Environment by Mendix](#access-to-your-environment-by-mendix).  
 {{% /alert %}}
 
 After submitting, a Zendesk ticket is automatically created. Access it by clicking **Go to ticket** to add comments or check status.
@@ -220,21 +220,6 @@ Mendix on Azure aligns with SOC 2 Azure Policy automated controls. For more info
 | Azure Kubernetes Service | [All Internet traffic should be routed via your deployed Azure Firewall](https://www.azadvertizer.net/azpolicyadvertizer/fc5e4038-4584-4632-8c85-c0448d374b2c.html) | This is not part of the product scope but can be added by the customer postdeployment. |
 | Azure Container Registry | [Container registries should be encrypted with a customer-managed key](https://www.azadvertizer.net/azpolicyadvertizer/5b9159ae-1701-4a6f-9a7a-aa9c8ddd0580.html) | The standard Microsoft key is used to enable deployment without key creation in Azure. |
 | Storage Account | [Storage accounts should use customer-managed key for encryption](https://www.azadvertizer.net/azpolicyadvertizer/6fac406b-40ca-413b-bf8e-0bf964659c25.html) | The standard Microsoft key is used to enable deployment without key creation in Azure. |
-
-## Severity Baselines for Support Tickets
-
-To ensure consistent and prioritised support, we classify issues based on the following severity levels:
-
-| SeverityLevel | Response Time | Resolution Time | Examples |
-| --- | --- | --- | --- |
-| Critical | Less than 2 office hours | Best effort | Production environment is inaccessible or severely impaired, preventing critical changes. Core application functionality is completely unavailable. |
-| High | Less than 8 office hours | Best effort | Inability to provision new clusters. Inability to modify existing clusters via the Mx on Azure portal. |
-| Medium | Next business day | Best effort | Non-production environments (Test or Acceptance) experience significant disruption to operational functionality. Operational functionality in production is moderately impacted but not critical. |
-| Low | Reasonable effort | Best effort | Minor issues with minimal impact on operational functionality. Cosmetic issues, minor performance degradation, or general inquiries. |
-
-{{% alert color="warning" %}}  
-The above SLA differs from the standard Mendix Platform Support SLA, as issues related to Mendix on Azure are resolved on a best-effort basis.
-{{% /alert %}}
 
 ## Off-boarding from the Service
 

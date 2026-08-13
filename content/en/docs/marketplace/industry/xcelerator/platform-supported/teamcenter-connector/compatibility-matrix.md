@@ -11,6 +11,7 @@ This table showcases the compatibility between the Teamcenter Connector and vari
 
 |Teamcenter Connector | Studio Pro version | Supported Teamcenter Self-hosted version | Supported Teamcenter X versions | Known Teamcenter incompatibility
 | :--- | :--- | :--- | :--- | :--- |
+| 2606.0.0 | 11.12.1 or above* | 2606, 2512, 2506, 2412 | 2606, 2512, 2506 | N/A |
 | 2512.1.1 | 10.24.8 or above* | 2512, 2506, 2412, 2406 | 2512, 2506 | N/A |
 | 2506.0.1 | 10.20.0 or above* | 2506 | 2506 | N/A |
 | 2412.3.0 | 10.4.0 or above** | 2412 | N/A | N/A |

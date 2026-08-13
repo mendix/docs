@@ -291,7 +291,6 @@ If you are using Studio Pro 11.12 or earlier, follow the steps below:
     * `getFunctionMetaDataQuery`
 4. Use the provided example, `MxDb2SchemaInfoProvider` for IBM Db2, for a better understanding of how to customize the schema information.
 
-
 ### Running Queries and Handling Query Responses
 
 Execute queries as you would with supported databases, and retrieve responses in the associated entity. Refer to the documentation of your specific JDBC library for detailed syntax and execution options.

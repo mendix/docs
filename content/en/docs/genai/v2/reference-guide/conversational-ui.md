@@ -220,6 +220,17 @@ This changes how action microflows are used, because they are called each time a
 
 If no [user-visibility](/agents/agents-kit-2/reference-guide/commons/#enum-useraccessapproval) is configured for tools and you want to avoid storing tool messages, you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-2/reference-guide/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-2/reference-guide/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
 
+### Streaming {#streaming}
+
+Conversational UI chats can also stream responses to the UI, expanding the assistant response as the LLM generates new content. To use streaming, use [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) to configure a chat agent. In the [model settings](/agents/agents-kit-2/reference-guide/agent-commons/#model-settings), enable the applicable streaming options, and use that agent when calling the `New Chat for Agent` action and in your action microflow. Not all models and connectors support streaming. Check the corresponding documentation to verify whether streaming is supported.
+
+The following limitations apply to streaming because microflows run in isolated transactions:
+
+* Tool microflows can only read objects from the database. Changes to objects are stored only within the microflow if not committed. Additionally, user interaction is limited—for example, opening a page or showing a message to the user.
+* The same limitations apply to action microflows.
+
+A workaround is to make changes to persistent objects—for example, `ChatContext`, which is available in both the action microflow and on the page.
+
 ### Human in the Loop {#human-in-the-loop}
 
 When using the [Function Calling](/agents/function-calling/) pattern by adding tools to the request, you can control when those tools get executed and if they are visible to the user by setting [user access approval](/agents/agents-kit-2/reference-guide/commons/#enum-useraccessapproval) per tool. [Human in the loop](/agents/glossary/#human-in-the-loop) describes a pattern where the AI can perform powerful tasks, but still requires humans to take certain decisions and oversee the agent's behavior. When using the ConversationalUI module, its basic action microflow pattern to execute requests with history and UI snippets to display the chat, human in the loop works out of the box. Note that action microflows are called until there is a final assistant's response as described in [Using Tool or Knowledge Base Calling](#action-microflow-tool-calling) section above, even if all tools are executed without user interaction.

@@ -37,11 +37,7 @@ The **Devices** section shows a list of all devices currently associated with th
     * TCP/IPT client - The Client only checks that the host is defined and the port is valid. It cannot verify remote connectivity without actually connecting.
 
 * Connection status - When the device shows as **Connected**, it means that the device connection has been successfully established and not yet closed. The device is available and is not throwing any errors.
-* Errors - Any errors captured for this device. Devices that have thrown an error can be available, but cannot be connected, because the current connection is closed on error. The following error types may be logged:
-
-    * `Open_By_Other` - The connection was closed to allow connection by another Client.
-    * `Connection_Error` - The connection was closed unexpectedly.
-    * `Device_Error` - There was a device error.
+* Error status - Shows any error captured for this device. Error status is reset on config change or reconnect.
 
 You can also expand each device to see more information about its connection parameters (for example, the host or port of a TCP/IP server).
 

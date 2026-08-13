@@ -19,7 +19,7 @@ For more examples of what Charts widgets can do, see the following documents:
 * [Use Custom Chart](/appstore/widgets/charts-custom-usage/)
 * [Fine-Tune a Chart with Chart Playground](/appstore/widgets/chart-advanced-tuning/)
 * [Use the Charts Theme](/appstore/widgets/charts-theme/)
-* [Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/)
+* [Create a Multiple Series Chart](/appstore/widgets/charts-dynamic-series/)
 * [Use a Chart with a REST Data Source](/appstore/widgets/charts-basic-rest/)
 
 {{% alert color="info" %}}
@@ -389,16 +389,15 @@ These are the available charts:
 
 A **Line chart** (scatter chart) should have one or more series, each displaying commonly grouped data points.
 
-A series' data can be retrieved from the database, by a microflow, or from a REST endpoint:
+A series' data can be retrieved from the database or by a microflow:
 
-1. Place the widget in a page within the context of an entity.
-2. Select the either **Static** or **Dynamic** for the **Series**.
-3. Select a **Data entity** for the chart values.
-4. Select the **Data source**:
-    * If the **Data source** selected is **Database**, optionally change the **XPath constraint**
-    * If the **Data source** selected is **Microflow,** select a **Microflow** that returns the series values
-    * If the **Data source** selected is **REST endpoint**, enter the **REST URL**
-5. If you set a **Dynamic** series, this will retrieve all the chart series in one configuration. Add configurations for them on the **Dynamic series** tab.
+1. Place the widget in a page.
+2. On the **General** tab, in the **Data source** section, add a **Series** item.
+3. Select either **Single series** or **Multiple series** for **Data set**.
+4. Select the **Data source** for the chart values:
+    * If the **Data source** selected is **Database**, select the entity and optionally change the **XPath constraint**
+    * If the **Data source** selected is **Microflow**, select a **Microflow** that returns the series values
+5. If you set **Multiple series**, one data source provides the data points for every series. Select the attribute to split them on in **Group by**: data points that share a value form one series.
 
 {{% alert color="info" %}}
 The line chart's X-axis provides support for dates, and thus the line chart can be configured as a [time series chart](#time-series).
@@ -418,17 +417,15 @@ The **Bar chart** has data properties identical to those of the [Column chart](#
 
 #### Pie Chart {#pie-chart}
 
-Unlike the chart types above, the **Pie chart** requires no series. 
+Unlike the chart types above, the **Pie chart** takes a single data source instead of a list of series.
 
-These are the properties for configuring Pie chart data:
+These are the properties for configuring Pie chart data, in the **Data source** section of the **General** tab:
 
-* **Data source** tab
-    * **Entity** (required) – the entity from which the data values will be retrieved
-* **Data points** tab
-    * **Name attribute** (required) – the attribute that contains the data point captions
-    * **Value attribute** (required) – the attribute that contains the data point values
-    * **Color attribute** (required) – the attribute that contains the data point colors
-    * **Sort attribute** – the attribute to use for sorting the X-axis data
+* **Series** (required) – the data source from which the slices are retrieved
+* **Series name** (required) – the text template that renders the slice captions
+* **Value attribute** (required) – the attribute that contains the slice values
+* **Sort attribute** – the attribute to use for sorting the slices, combined with **Sort order**
+* **Slice color** – an expression that returns the color of the slice
 
 #### Time Series Chart {#time-series}
 
@@ -450,7 +447,7 @@ The **Bubble chart** has data properties identical to those of the [Line chart](
 
 The charts in this widget are based on the [mendixlabs/charts](https://github.com/mendixlabs/charts/issues) library. As such, the widget provides support for advanced users to extend or overwrite the basic settings by adding the chart properties as JSON.
 
-To enable this feature, go to the **Mode** option in the **Advanced** properties tab. For the [Line chart](#line-chart) and [Column chart](#column-chart), each series has its own **Advanced** tab for specialized configurations.
+To enable this feature, select **Enable advanced options** on the **General** tab. You can then enter JSON in **Custom layout** and **Custom configurations** on the **Advanced** tab. Each series also has a **Custom series options** property in its own **Advanced** section for specialized configurations.
 
 The available advanced options and their usage are described below.
 

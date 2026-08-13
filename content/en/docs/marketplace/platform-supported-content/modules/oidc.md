@@ -392,13 +392,14 @@ See the section [Optional Features](#optional) information on additional optiona
 #### API Security Configuration for Client Credential Grant {#client-credential-grant}
 
 1. Start your app, log in as an administrator, for example, *demo_administrator*, and access the Client Credential setup page.
-2. If you have the **Automatic Configuration URL** (also known as the well-known endpoint), enter it and click **Import Configuration** to automatically fill the other endpoints.
+2. If you are using version x.x.x of the module, configure the **Resource path** and **Expected audience** value. Otherwise, the API security flow fails because audience validation is enabled by default.
+3. If you have the **Automatic Configuration URL** (also known as the well-known endpoint), enter it and click **Import Configuration** to automatically fill the other endpoints.
 
     {{% alert color="info" %}}If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`.{{% /alert %}}
 
     If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
-3. Optionally, you can select the **Custom AccessToken Parsing** microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
-4. Click **Save**. Once you have completed these steps, the Client Credential Configuration is ready for testing.
+4. Optionally, you can select the **Custom AccessToken Parsing** microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
+5. Click **Save**. Once you have completed these steps, the Client Credential Configuration is ready for testing.
 
 #### Microsoft Entra ID Client Configuration for APIs {#azure}
 
@@ -544,9 +545,9 @@ The following constants are mandatory when creating an OIDC SSO Client Credentia
 Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 * **IsClientGrantOnly** (*default: false*) – allow to create Client Credential Configuration in the application
 
-{{% alert color="warning" %}}
-When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
-{{% /alert %}}
+    {{% alert color="warning" %}}When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
+    {{% /alert %}}
+* **OIDC.APIAuthentication** – If you want the api security client you can use the `APIAuthentication` microflow from the **OIDC.APIAuthentication** folder of the module.
 
 ## Configuring Multi-Domain {#multi-domain}
 

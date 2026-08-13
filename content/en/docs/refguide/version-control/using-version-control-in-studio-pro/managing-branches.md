@@ -79,9 +79,10 @@ The first method is to merge the entire branch line into the main line, essentia
 The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. To use the second method, follow these steps:
 
 1. Check out both the main line and the branch line locally.
-2. Overwrite all the files in the main line app directory with those of the branch line (except for the *.git* directory). 
-3. Commit your changes using Studio Pro. 
-4. Reopen the main line app in Studio Pro only after overwriting the files.
+2. Close Studio Pro. Reopen the main line app in Studio Pro only **after** completing steps 3 and 4.
+3. Delete all the files in the main line app directory (except for the *.git* directory).
+4. Copy-paste all the files from the branch line directory in the main line app directory (except for the *.git* directory).
+5. Commit your changes to the main line app directory using Studio Pro.
 
 ### Merging Using Git in the Command Line
 

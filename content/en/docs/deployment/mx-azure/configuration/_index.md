@@ -93,6 +93,7 @@ The following configurations can be modified directly through the [Microsoft Azu
 | Deploy Private Link Service to expose Mendix apps in other Azure virtual networks | For more information, see [Using Private Link Service to expose Mendix apps in other Azure virtual networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#pls). |
 | Deploy Private Endpoints to establish connectivity between Mendix apps and other services | For more information, see [Accessing private services via Private Endpoints](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#pe-internal). |
 | Override DNS configuration on the vNet hosting Mendix on Azure | For more information, see [DNS name resolution towards resources in other networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#name-resolution-dns-override). |
+| Tune server parameters on the shared PostgreSQL Flexible Server | For more information, see [Tuning PostgreSQL Server Parameters](/developerportal/deploy/mendix-on-azure/configuration/postgresql-parameter-tuning/). |
 
 ### The Mendix on Azure Managed Resource Group {#mrg}
 

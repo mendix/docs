@@ -96,6 +96,8 @@ The following customizations are related to establishing connectivity to and fro
 * Configure Private Link Service to expose Mendix apps in other Azure virtual networks.
 * Configure Private Endpoints to establish connectivity between Mendix apps and other services.
 
+You can also tune the server parameters of the shared Azure Database for PostgreSQL Flexible Server directly in the Microsoft Azure Portal or with the Azure CLI. Only a small set of parameters is safe to change, and some parameters can cause server crashes or permanent data loss. Before changing any parameter, see [Tuning PostgreSQL Server Parameters](/developerportal/deploy/mendix-on-azure/configuration/postgresql-parameter-tuning/).
+
 Mendix limits customization to what is described above to ensure a consistent, predictable, and scalable customer experience.
 
 ## Access to your Environment by Mendix
@@ -179,6 +181,7 @@ Mendix does not provide technical support in the following example scenarios:
 * Requests to make configuration changes to underlying Azure services beyond what is offered as self-service in the Mendix on Azure and Mendix on Kubernetes Portal. Since such changes are not possible with this service, customer may consider to adopt Mendix on Kubernetes (formerly Mendix for Private Cloud) instead.
 * Requests for any other type of customization on the resources deployed in the customer's Azure subscription. Since such customization is not possible with this service, customer may consider to adopt Mendix for Kubernetes (formerly Mendix for Private Cloud) instead. 
 * Requests to fix security vulnerabilities in one of the managed components beyond what is automatically pushed during the weekly and quarterly update cycles.
+* Requests to diagnose or restore service after a customer changed PostgreSQL server parameters on the shared database server. Choosing and validating these values is a customer responsibility. For more information, see [Tuning PostgreSQL Server Parameters](/developerportal/deploy/mendix-on-azure/configuration/postgresql-parameter-tuning/).
 
 {{% alert color="warning" %}}  
 The state of the resources in the customer subscription nor overall service availability are proactively monitored by Mendix. As a consequence, any degradation in service will only reactively be addressed by Mendix after customer has notified Mendix of such degradation by filing a support ticket.

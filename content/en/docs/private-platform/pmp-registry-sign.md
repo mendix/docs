@@ -11,13 +11,20 @@ To satisfy various regulatory requirements, all container images, Helm charts an
 
 ## Getting Access to the Mendix Central OCI Registry
 
-The Mendix central OCI registry uses Personal Access Token (PAT) for authentication, and only approved Private Mendix Platform customers can access it. To create your PAT, perform the following steps:
+The Mendix central OCI registry uses Personal Access Token (PAT) for authentication, and only approved Private Mendix Platform customers can access it. 
+
+### Creating a PAT
+
+To create your PAT, perform the following steps:
 
 1. Sign in to [Mendix](https://home.mendix.com/)
 2. Click **User Settings > Developer Settings > Personal Access Token**
-3. Click **New Token**
+3. Click **New Token**.
 4. In the **OCI registry** section, select `mx:registry:access`.
-5. Dependsing on what OCI tools you use, use a command like the following to log in to the registry. 
+
+### Logging in to the Registry
+
+Depending on what OCI tools you use, use a command like the following to log in to the registry. 
 
 Most OCI tools store the credentials in a local `~/.docker/config.json` file. After logging in, you can use all tools without any further logins.
 

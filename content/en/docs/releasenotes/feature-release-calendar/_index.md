@@ -31,14 +31,11 @@ General Availability means that a feature is available for all users. This type 
 | Mendix Cloud GenAI Resource Packs Guardrails | General Availability: H2 2026 |
 | Agent Editor in Studio Pro<sup>1</sup> | General Availability: Mx 11.9 |
 | Agent Observability | General Availability: Mx 11.5 + Mx 10.24 |
-| Model Agents as part of your Workflow | General Availability: Mx 11.9 |
-| Dynamic Case Management | Private Beta: Mx 11.3 <br/>Limited Availability: Mx 11.12 |
-| Global Inbox Workflow Tasks | General Availability: Mx 11.9 |
-| Global Inbox Other Tasks | General Availability: Mx 11.14 |
-| Workflow Non-interrupting Event Subprocesses (Message trigger) | Public Beta: Mx 11.8 <br/>General Availability: Mx 11.9 |
-| Workflow Interrupting Event Subprocesses (Message trigger) | General Availability: Mx 11.10 |
-| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.14 |
-| Workflow Message Events | General Availability: Mx 11.11 |
+| Dynamic Case Management | Private Beta: Mx 11.3 <br/>Limited Availability: Q3 2026 |
+| Global Inbox Other Tasks | General Availability: Q4 2026 |
+| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.13 |
+| Workflow Event Subprocesses Recurrence (Timer trigger) | General Availability: Mx 11.15 |
+| Workflow Easily Call and Wait for external Workflows | General Availability: Q4 2026 |
 
 {{% alert color="info" %}}
 ¹Limitations: Initially only Mendix Cloud GenAI Resources as provider, and only design-time modification of prompts and other agent settings. Incrementally, we will remove these limitations.
@@ -64,7 +61,7 @@ General Availability means that a feature is available for all users. This type 
 | Maia Make | General Availability: Mx 11.8 |
 | Maia Make: Domain Models | General Availability: Mx 11.8 |
 | Maia Make: Microflows | General Availability: Mx 11.8 |
-| Maia Make: Nanoflows | General Availability: Mx 11.15 |
+| Maia Make: Nanoflows | General Availability: Q4 2026 |
 | Maia Make: Overview Pages | General Availability: Mx 11.8 |
 | Maia Make: Enumerations | General Availability: Mx 11.8 |
 | Maia Make: Pages | General Availability: Mx 11.9 |
@@ -75,6 +72,7 @@ General Availability means that a feature is available for all users. This type 
 | Maia Make: Modules | General Availability: Mx 11.9 |
 | Maia Make: editing/work with existing Microflows and Workflows | General Availability: Mx 11.9 |
 | Maia Make: Integrations | General Availability: Mx 11.24 |
+| Maia Make: Rules | General Availability: Q4 2026 |
 
 ## Enterprise-Grade Platform
 

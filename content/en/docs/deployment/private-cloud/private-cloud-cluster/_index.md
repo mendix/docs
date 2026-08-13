@@ -213,7 +213,7 @@ If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (an
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Red Hat Hardened Images don't provide images for Java 8, 11, or 17; only Java 21 is supported at the moment.
+Red Hat Hardened Images do not provide images for Java 8, 11, or 17. Only Java 21 is supported at the moment.
 
 To use Hardened Images, upgrade to Mendix 11, or any supported LTS version of Mendix.
 {{% /alert %}}
@@ -241,9 +241,9 @@ For information on using advanced network configuration settings, see [Network I
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-### Mendix App Deployment settings {#advanced-deployment-settings}
+### Mendix App Deployment Settings {#advanced-deployment-settings}
 
-The OperatorConfiguration contains the following user-editable options for configuring Mendix app Deployments (Pods):
+Users can edit the following `OperatorConfiguration` options for configuring Mendix app deployments (pods):
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -263,8 +263,8 @@ spec:
 
 You can change the following options:
 
-* **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
-* **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
+* **runtimeAutomountServiceAccountToken** – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
+* **runtimeDeploymentPodAnnotations** – specify default annotations for Mendix app Pods
 
 ### Mendix App Resource Customization {#advanced-resource-customization}
 

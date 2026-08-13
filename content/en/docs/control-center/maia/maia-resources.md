@@ -18,7 +18,7 @@ Maia Resources is your access point to increase the capacity of Maia Units for u
 
 ## Monthly Consumption
 
-The **Monthly Consumption** displays your company’s Maia Unit usage for the current monthly cycle, including the **percentage**, **units consumed**, **remaining units**, and **reset date**.
+The **Monthly Consumption** section displays your company’s Maia Unit usage for the current monthly cycle, including the **percentage**, **units consumed**, **remaining units**, and **reset date**.
 
 
 ## Overview of Maia Units
@@ -83,8 +83,12 @@ Your subscription plan operates on a monthly bundle cycle. When you deprovision 
 
 ## Usage {#usage}
 
-Usage section allows you to view and manage each user’s Maia Unit usage in your company.
-For each user, you can see their monthly usage and monthly limit. This makes it easy to monitor how much of their allowance each user has consumed and how much they are allowed to use during the monthly cycle.
-To manage an individual user’s limit, click Manage next to the user. Enter the custom limit and save the changes. If no individual limit is set, the user will use the default company-level limit. Once a user reaches their individual limit, further Maia usage will be throttled for that user.
+The **Usage** section provides an overview of each user’s usage for the current month. It also enables you to manage budgets by setting usage limits "caps" for individual users.
+
+To manage an individual user’s usage limit:
+* Click "Manage" next to the user.
+* Enter the custom limit and save the changes.
+
+If no individual limit is configured, the user is subject to the default company-wide user limit. Once a user reaches their individual limit, further Maia usage is disabled for that user for the remainder of the current monthly cycle.
 
 {{< figure src="/attachments/control-center/maia/user-limit-manage.png" alt="" >}}

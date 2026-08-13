@@ -29,6 +29,14 @@ To fix this issue, do the following:
 4. Remove **config.json**.
 5. Reopen the Mendix Native Mobile Builder.
 
+## Release 1.0.147 {#10147}
+
+**Release date: August 12, 2026**
+
+## Changes
+
+* We replaced `@notifee/react-native` with `react-native-notify-kit` as the local notifications library for Studio Pro 11 and above.
+
 ## Release 1.0.146 {#10146}
 
 **Release date: June 29, 2026**

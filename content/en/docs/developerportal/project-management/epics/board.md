@@ -93,32 +93,34 @@ In the upper-right corner, you can click **Copy Link** ({{% icon name="hyperlink
 
 The story details dialog box shows the following items:
 
-* **Description** – This is the description of the story:
-    * You can edit the description of the story by clicking **Edit Description** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
-    * You can link a story in the editor by typing *#* and the story title, then selecting the story from the list.
-    * You can type a person in the editor by typing *@*, and the person's name, then selecting the person from the list. Once you save the story, the system sends a notification to the tagged person.
+* **Title** – Add a short and descriptive title for the story. This field is mandatory.
 
-* **Created by** – This shows the person who created the story.
+* **Description** – The story's description, which you can add or edit. The editor supports different text formats, including code blocks.    
+    You can link a story in the editor by typing *#* and the story title, then selecting the story from the list.
 
-* **Assign to** – You can assign the story to anybody who can access the app in [Projects](https://projects.home.mendix.com/).
+* **Tagged People** – You can tag team members by selecting them from this drop-down list. Once you save the story, the system sends a notification to the tagged people.
+
+* **Assign To** – You can assign the story to anybody who can access the app in [Projects](https://projects.home.mendix.com/).
 
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** and **Planning** pages.
 
-* **Tasks** – All the tasks are listed.
-    * You can add a task by clicking **+ Add Task**.
-    * You can move a task upwards or downwards by dragging it around.
+* **Tasks** – All the tasks are listed.    
+    You can add a task by clicking **+ Add Task**.
+    You can move a task upwards or downwards by dragging it around.
     
 * **Story Type** – You can set the story type to **Bug** or **Feature**.
 
 * **Linked Epic** – You can select an epic from the drop-down list.
 
-* **Tags** – You can add or remove tags.
-    * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
-    * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking **Settings** ({{% icon name="cog" %}}) at the end.
+* **Tags** – You can add or remove tags.    
+    You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.    
+    You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking **Settings** ({{% icon name="cog" %}}) at the end.
     
 * **Story Points** – You can set the story points to an integer.
 
-* **Attached Files** – You can add attached files by clicking **+**.
+* **Add Files** – Attach files by dragging and dropping, or by clicking the **+** button.
+
+* **Attached Files** – All attached files are displayed in this section. You can download or remove each of them.
 
 * **Feedback** – This displays any feedback items that are linked to the story.     
     To unlink a feedback item from a story, click its corresponding {{% icon name="unlink" %}} **unlink** button.
@@ -146,9 +148,11 @@ The story details dialog box shows the following items:
     
     {{< figure src="/attachments/developerportal/project-management/epics/board/audit-trail.png" class="no-border" >}}
     
-* **Revision** – This shows the revision history of a story. This feature is only available for apps that use Git for version control.
+* **Revisions** – This shows the revision history of a story. This feature is only available for apps that use Git for version control.
 
-* **Comment** – You can type your comment in the text box, then click **Post Your Comments** to save and post the comment.    
+* **Created by** – This shows the person who created the story.
+
+* **Comment** – Type your comment in the text box, and select people you want to tag from the **Tag People** drop-down list. Once done, click **Post Your Comment** to save and post the comment.    
     You can sort the comments by clicking the **Newest** or **Oldest** button.
 
 {{% alert color="info" %}}You can also edit the story in this story details dialog box. If you make any changes, click **Save Story** at the bottom to save it.{{% /alert %}}

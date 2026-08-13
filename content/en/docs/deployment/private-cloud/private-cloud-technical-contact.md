@@ -63,12 +63,12 @@ If you are the current Technical Contact, you can transfer the role by performin
 
 1. Navigate to your application's project page on the Mendix Platform Portal.
 2. Navigate to the **Environments** page for your application.
-2. Go to the **Application Settings** tab.
-3. Click the **Edit** button next to the Technical Contact field.
-4. A modal dialog opens with a warning message about Administrator permissions.
-5. Search for and select a new user from the application members list.
-6. Confirm your selection.
-7. A success message confirms the Technical Contact has been updated.
+3. Go to the **Application Settings** tab.
+4. Click the **Edit** button next to the Technical Contact field.
+5. A modal dialog opens with a warning message about Administrator permissions.
+6. Search for and select a new user from the application members list.
+7. Confirm your selection.
+8. A success message confirms the Technical Contact has been updated.
 
 {{% alert color="warning" %}}
 If the current Technical Contact is unavailable or unreachable, contact Mendix Support to have the role reassigned. On Mendix on Kubernetes and Mendix on Azure there is no cluster-manager, namespace-administrator, or Deploy API route to change the Technical Contact. Mendix Support is the only path in this situation.

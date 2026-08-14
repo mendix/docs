@@ -55,7 +55,7 @@ Files stored in the Mendix CDN (`cdn.mendix.com`) are also signed, but with a di
 
 Private Mendix Platform images, Helm charts, and some other CLI tools are published to central registry in a Gitlab CI pipeline. According to the OCI spec, every artifacts is identified by its sha256 hash (image digest). The image's sha256 digest is based on the image contents and is validated by OCI registries. Uploading an image that does not match its sha256 digest is not possible  - the container registry will reject the upload.
 
-Firstly, a CI job builds a container image and records the resulting image's sha256 digest.
+First, a CI job builds a container image and records the resulting image's sha256 digest.
 
 After that, a follow-up signing job uses the following command to sign the image's sha256 digest with a Mendix private signing key:
 

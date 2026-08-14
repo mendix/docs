@@ -230,10 +230,10 @@ The App Implementer is responsible for defining which services are published and
 
 Blob storage isolation is enforced through cloud IAM. The Infra. Operator is responsible for configuring per-environment IAM roles or managed identities with prefix- or container-scoped access policies.
 
-| Storage Backend | Isolation Mechanism | Reference |
-| --- | --- | --- |
-| S3 (IRSA) | Per-environment IAM role, tag-scoped bucket prefix | [AWS IRSA Walkthrough](/developerportal/deploy/walkthrough-aws-irsa) |
-| Azure Blob | Separate container, managed identity auth | [Azure Managed Identity Walkthrough](/developerportal/deploy/walkthrough-azure-azwi) |
+| Storage Backend | Isolation Mechanism |
+| --- | --- |
+| S3 (IRSA) | Per-environment IAM role, tag-scoped bucket prefix |
+| Azure Blob | Separate container, managed identity auth |
 
 For more information, see the following topics:
 * [Published REST Services](/refguide/published-rest-services/)

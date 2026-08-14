@@ -95,4 +95,4 @@ To access the configuration page, in Private Mendix Platform, go to **Admin > Se
 
 The Private Mendix Platform session timeout configuration applies only to Private Mendix Platform sessions and does not control sessions inside customer-hosted Mendix applications. If customers require equivalent AC-11-compliant behavior in their own applications, they must implement the full session-expiration and re-authentication flow independently within the app, as discussed above.
 
-For more details on how to properly configure and implement inactive session locks for individual Mendix applications, see [Session Management](refguide/session-management/).
+For more details on how to properly configure and implement inactive session locks for individual Mendix applications, see [Session Management](/refguide/session-management/).

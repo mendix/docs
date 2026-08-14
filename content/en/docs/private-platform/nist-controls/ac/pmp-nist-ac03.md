@@ -40,10 +40,10 @@ The following controls are related to this control:
 * [AU-09](/private-mendix-platform/nist-controls/au-09/)
 * [CM-05](/private-mendix-platform/nist-controls/cm-05/)
 * [CM-06](/private-mendix-platform/nist-controls/cm-06/)
-* [CM-11](/private-mendix-platform/nist-controls/cm-11/)
+* CM-11
 * MA-03
 * MA-04
-* [MA-05](/private-mendix-platform/nist-controls/ma-05/)
+* MA-05
 * PE-03
 
 ## Responsibility

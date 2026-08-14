@@ -27,7 +27,7 @@ The following controls are related to this control:
 
 * [AU-04](/private-mendix-platform/nist-controls/au-04/)
 * [AU-05](/private-mendix-platform/nist-controls/au-05/)
-* [AU-11](/private-mendix-platform/nist-controls/au-11/)
+* AU-1
 
 ## Responsibility
 

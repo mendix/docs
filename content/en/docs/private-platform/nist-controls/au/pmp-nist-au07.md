@@ -28,7 +28,7 @@ Audit reduction is a process that manipulates collected audit information and or
 
 The following controls are related to this control:
 
-* [AU-06](/private-mendix-platform/nist-controls/au-06/)
+* AU-06
 
 ## Responsibility
 

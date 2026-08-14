@@ -37,7 +37,7 @@ Finally, organizations may restrict the use of portable storage devices based on
 The following controls are related to this control:
 
 * [AC-19](/private-mendix-platform/nist-controls/ac-19/)
-* [PL-04](/private-mendix-platform/nist-controls/pl-04/)
+* PL-04
 
 ## Responsibility
 

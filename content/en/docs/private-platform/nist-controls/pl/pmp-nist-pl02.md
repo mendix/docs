@@ -57,7 +57,7 @@ The following controls are related to this control:
 * [CP-02](/private-mendix-platform/nist-controls/cp-02/)
 * IR-08
 * MA-04
-* [MA-05](/private-mendix-platform/nist-controls/ma-05/)
+* MA-05
 * [MP-02](/private-mendix-platform/nist-controls/mp-02/)
 * [MP-04](/private-mendix-platform/nist-controls/mp-04/)
 * [MP-05](/private-mendix-platform/nist-controls/mp-05/)

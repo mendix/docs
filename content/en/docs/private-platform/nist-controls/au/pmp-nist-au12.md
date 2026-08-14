@@ -32,7 +32,7 @@ The following controls are related to this control:
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
 * [AU-02](/private-mendix-platform/nist-controls/au-02/)
 * [AU-03](/private-mendix-platform/nist-controls/au-03/)
-* [AU-06](/private-mendix-platform/nist-controls/au-06/)
+* AU-06
 * [AU-07](/private-mendix-platform/nist-controls/au-07/)
 
 ## Responsibility

@@ -57,13 +57,13 @@ The following controls are related to this control:
 * [AC-20](/private-mendix-platform/nist-controls/ac-20/)
 * [CA-09](/private-mendix-platform/nist-controls/ca-09/)
 * CM-02
-* [IA-03](/private-mendix-platform/nist-controls/ia-03/)
+* IA-03
 * [MP-02](/private-mendix-platform/nist-controls/mp-02/)
 * [MP-04](/private-mendix-platform/nist-controls/mp-04/)
 * [MP-05](/private-mendix-platform/nist-controls/mp-05/)
-* [PL-04](/private-mendix-platform/nist-controls/pl-04/)
+* PL-04
 * SC-07
-* [SC-43](/private-mendix-platform/nist-controls/sc-43/)
+* SC-43
 * SI-03
 * [SI-04](/private-mendix-platform/nist-controls/si-04/)
 

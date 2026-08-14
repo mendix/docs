@@ -88,11 +88,11 @@ The following controls are related to this control:
 * [IA-08](/private-mendix-platform/nist-controls/ia-08/)
 * [CM-05](/private-mendix-platform/nist-controls/cm-05/)
 * [CM-06](/private-mendix-platform/nist-controls/cm-06/)
-* [CM-11](/private-mendix-platform/nist-controls/cm-11/)
+* CM-11
 * MA-03
 * MA-04
-* [MA-05](/private-mendix-platform/nist-controls/ma-05/)
-* [PL-04](/private-mendix-platform/nist-controls/pl-04/)
+* MA-05
+* PL-04
 * [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 ## Responsibility

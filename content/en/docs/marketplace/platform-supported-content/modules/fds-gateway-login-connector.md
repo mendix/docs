@@ -9,34 +9,44 @@ description: "Describes how to install and configure the FDS Gateway Login Conne
 
 The [FDS Gateway Login Connector](placeholder) enables Single Sign-On (SSO) for Siemens products by integrating Mendix applications with Siemens Foundational Services (FDS).
 
-Instead of authenticating users directly, the connector delegates authentication to the FDS Gateway, the shared identity platform for Siemens Xcelerator products. Depending on the customer's FDS configuration, users can sign in using either their Siemens ID or their organization's workforce identity provider, such as Microsoft Entra ID. This provides a consistent, secure authentication experience and allows organizations to continue using their existing identity and access management (IAM) infrastructure.
+Instead of authenticating users directly, the connector delegates authentication to the FDS Gateway, a shared access layer for Siemens Xcelerator applications and services that integrates with FDS IAM. Depending on the customer's FDS configuration, users can sign in using either their Siemens ID or their organization's workforce identity provider, such as Microsoft Entra ID. This provides a consistent, secure authentication experience and allows organizations to continue using their existing identity and access management (IAM) infrastructure.
 
-The connector supports federated authentication by relying on the identity relationships configured in FDS, enabling Mendix applications to integrate seamlessly with the Siemens Xcelerator ecosystem.
+The connector abstracts the underlying OpenID Connect (OIDC) integration with Siemens Foundational Services, reducing the need for application-specific identity provider configuration.
 
-### Typical Usage Scenarios
+This connector is intended for Siemens Xcelerator products and other applications that are required to authenticate users through Siemens Foundational Services (FDS).
 
-* Build an Xcelerator product with Mendix. End-users sign in through Siemens FDS IAM, with the FDS Gateway handling authentication and providing tokens to your application.
-* Build single-tenant products for contracted customers, or multi-tenant products for prospective customers to evaluate before purchase.
+The following diagram gives an overview of architecture of the connector:
 
-### Features and Limitations
+{{< figure src="/attachments/appstore/platform-supported-content/modules/fds/fds-connector.png" alt="Architecture diagram showing a client connecting to Your App via FDS Gateway, which authenticates with FDS IAM and forwards requests with a JWT." >}}
 
-#### Features
+{{% alert color="info" %}}
+Siemens Access Management (SAM) and SAMv2 are legacy names for what is now called FDS IAM and FDS Gateway in current Siemens Foundational Services terminology.
+{{% /alert %}}
+
+## Typical Usage Scenarios
+
+* Build a Siemens Xcelerator product with Mendix that must authenticate users through Siemens Foundational Services (FDS). End-users sign in through Siemens FDS IAM, with the FDS Gateway handling authentication and providing tokens to your application.
+* Build single-tenant deployments for contracted customers, or multi-tenant evaluation environments for prospective customers, while using Siemens Foundational Services for user authentication.
+
+## Features and Limitations
+
+### Features
 
 * **Login session initiation** – After the FDS Gateway authenticates the end-user through FDS IAM, the connector initiates a local session in the Mendix application. The application does not display its own login page, providing a seamless SSO experience.
 
-* **Just-in-time user provisioning** – When a user signs in for the first time, the connector automatically creates a corresponding user account in the Mendix application based on the JWT claims received. You can use the default provisioning logic or implement custom provisioning. On subsequent sign-ins, the connector can also update user information using the same provisioning logic.
+* **Just-in-time user provisioning** – The connector does not require pre-provisioning of users into your app. When a user signs in for the first time, the connector automatically creates a corresponding user account in the Mendix application based on the JWT claims received. You can use the default provisioning logic or implement custom provisioning. On subsequent sign-ins, the connector can also update user information using the same provisioning logic.
 
 * **Role-based access control** – User roles are assigned dynamically based on claims in the JWT tokens received from FDS, enabling centralized authorization management.
 
-* **Tenancy support** – The connector makes a tenant identifier available when a user signs in. Your application can use this identifier to ensure users can only access data for their own tenant. The connector provides the tenant information; you are responsible for implementing the tenancy structure.
+* **Tenancy support** – The connector exposes tenant information supplied by FDS. Your application is responsible for implementing tenant isolation, data partitioning, and authorization logic.
 
-#### Limitations
+### Limitations
 
-* **No synchronized session management** – Authentication is delegated to the FDS Gateway, but session management is handled independently by the Mendix application. Changes to a user's login state in FDS Gateway are not propagated to active Mendix sessions, and FDS-initiated logout is not supported.
+* **Independent session management** – Authentication is delegated to the FDS Gateway, but session management is handled independently by the Mendix application. Changes to a user's login state in FDS Gateway are not propagated to active Mendix sessions, and FDS-initiated logout is not supported.
 
 ## Dependencies
 
-[Community Commons module](https://marketplace.mendix.com/link/component/170)
+* [Community Commons module](https://marketplace.mendix.com/link/component/170)
 
 ## Prerequisites
 
@@ -48,7 +58,7 @@ For onboarding support or questions about FDS services, contact the [FDSOne Help
 
 1. Import the [FDS Gateway Login Connector](placeholder) module into your app from the Mendix Marketplace.
 2. In the **Runtime** tab of **App Settings**, set `FDSGatewayLoginConnector.ASU_InitializeAuth` as the **After startup** microflow.
-3. Configure the login page. For more information, see the [SSO](#sso) section below.
+3. Configure the login page. For more information, see the [Configuring the SSO Redirect](#sso) section below.
 4. Configure the required constants. For more information, see the [Configuring the Constants](#constants) section below.
 
 ## Configuration
@@ -77,7 +87,7 @@ The following constants are mandatory:
 
 For more information, see [Constants](/refguide/constants/).
 
-## Enabling Single Sign-On {#sso}
+### Configuring the SSO Redirect {#sso}
 
 To enable SSO, create a `sso-login.html` file in `/theme/web/public` with the following content:
 
@@ -116,7 +126,7 @@ Update the `originURI` cookie value in `index.html` and use `/sso-login.html` in
     </script>
 ```
 
-## Custom User Provisioning
+### Custom User Provisioning
 
 The connector provides `FDSGatewayLoginConnector.CUSTOM_UserProvisioning` as the default user provisioning microflow. By default, it processes the JWT payload, creates or updates users in `System.User`, and assigns user roles.
 

@@ -106,9 +106,9 @@ The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a 
 
 ### Adding the Component to Active Workspace{#adding-component}
 
-1. Obtain the `mx-in-tc` kit (containing the `MendixEmbedded` component) from [GitHub](https://github.com/mendixlabs/mendix-inside-teamcenter).
-2. Install the kit into your Active Workspace stage repository under `src/repo`.
-3. Configure the component with the URL of your Mendix runtime.
+1. Obtain the `mx-in-tc` kit (containing the `MendixEmbedded` component) from the [mendix-inside-teamcenter](https://github.com/mendixlabs/mendix-inside-teamcenter) repo in GitHub.
+2. Install the kit in your Active Workspace stage repository under `src/repo`.
+3. Configure the `MendixEmbedded` component with the URL of your Mendix runtime.
 4. Optionally, configure context passing. For more information, see [Passing Context from Teamcenter](#passing-context).
 5. Rebuild Active Workspace using `awbuild.cmd`.
 
@@ -142,19 +142,19 @@ Add the **Mendix** JSON object (or the name you gave it) to the relevant layout 
 
 Detailed Active Workspace customization and build steps are outside the scope of this documentation. Refer to the Siemens [Active Workspace Customization](https://docs.sw.siemens.com/en-US/doc/282219420/PL20250520748650994.Configuration/yiv1688486682769) documentation for instructions (link requires authentication).
 
-### Registering the Component on an XRT
+### Registering the Component on an XML Rendering Template (XRT)
 
 To display the Mendix app on an XRT, add the following to the document using the XRT editor:
 
 ```xml
- <htmlPanel
+  <htmlPanel
     declarativeKey="MendixEmbedded"
-    context="https://your-mendix-runtime.example.com"
-></htmlPanel>
+    context="https://your-mendix-runtime.example.com">
+  </htmlPanel>
 ```
 
 * The `htmlPanel` component loads custom components in Active Workspace.
-* Set `declarativeKey` to the name of the component obtained in the [Adding the Component to Active Workspace](#adding-component) section: `MendixEmbedded`.
+* Set `declarativeKey` to `MendixEmbedded`, the name of the component obtained in the [Adding the Component to Active Workspace](#adding-component) section.
 
 ## Configuring the Content Security Policy (CSP) in Teamcenter
 
@@ -223,7 +223,7 @@ Follow these steps to configure authentication.
 
 ## Passing Context from Teamcenter {#passing-context}
 
-The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. Configure these parameters in the `context` and `declarativeKeyContext` fields of the XRT `htmlPanel` and PL Home card.
+The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. Configure these parameters in the `context` and `declarativeKeyContext` fields of the XRT `htmlPanel` and Product Lifecycle (PL) Home card.
 
 Pass context values as explicit URL query parameters. Use `target={context.path}` to map a value from the Teamcenter context, or `target=value` to pass a hardcoded primitive value. For example, the following URL passes the selected item's UID and a hardcoded mode:
 
@@ -231,16 +231,22 @@ Pass context values as explicit URL query parameters. Use `target={context.path}
 https://your-mendix-runtime.example.com/?itemUID={selected.uid}&mode=edit
 ```
 
-Use dot notation to access nested context values. Objects and arrays are not supported as Mendix parameters, and an unavailable context path causes the parameter to receive `undefined`. In an XRT, write query parameter separators as `&amp;`; in a PL Home card, use `&` directly.
+Use dot notation to access nested context values. In an XRT, write query parameter separators as `&amp;`. In a PL Home card, use `&` directly.
 
-For more information about configuring context, see the `mx-in-tc` README on [GitHub](https://github.com/mendixlabs/mendix-inside-teamcenter/blob/main/mx-in-tc/README.md).
+An unavailable context path causes the parameter to receive `undefined`.
+
+{{% alert color="info" %}}
+Objects and arrays are not supported as Mendix parameters.
+{{% /alert %}}
+
+For more information about configuring context, see the []`mx-in-tc` README](https://github.com/mendixlabs/mendix-inside-teamcenter/blob/main/mx-in-tc/README.md) on GitHub.
 
 For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 
 ### Best Practices for Context Parameters
 
 * **Use persistable object IDs only.** Pass `Item` UIDs or `ItemRevision` UIDs. These are stable and unique across sessions.
-* **Avoid non-persistable IDs.** BOM line IDs are runtime calculation results that lose synchronization when Teamcenter configuration rules change. Do not use them as parameters.
+* **Avoid non-persistable IDs.** Bill of Materials (BOM) line IDs are runtime calculation results that lose synchronization when Teamcenter configuration rules change. Do not use them as parameters.
 * **Prefer `Item` IDs over `ItemRevision` IDs** where possible. `Item` IDs are context-independent and do not depend on the revision rule in effect.
 * **Discover available parameters** by referring to the Active Workspace documentation for a list of available context parameters.
 

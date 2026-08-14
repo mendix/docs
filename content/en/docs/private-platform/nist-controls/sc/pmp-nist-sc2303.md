@@ -26,7 +26,7 @@ This control enhancement curtails the ability of adversaries from reusing previo
 
 The following controls are related to this control:
 
-* SC-13
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 ## Responsibility
 

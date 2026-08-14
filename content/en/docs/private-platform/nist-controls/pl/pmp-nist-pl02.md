@@ -45,29 +45,29 @@ Security plans need not be single documents; the plans can be a collection of va
 
 The following controls are related to this control:
 
-* AC-2
-* AC-6
-* AC-14
-* AC-17
-* AC-20
-* CA-2
-* CA-3
-* CA-7
-* CM-9
-* CP-2
-* IR-8
-* MA-4
-* MA-5
-* MP-2
-* MP-4
-* MP-5
-* PL-7
-* PM-1
-* PM-7
-* PM-8
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* [AC-14](/private-mendix-platform/nist-controls/ac-14/)
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AC-20](/private-mendix-platform/nist-controls/ac-20/)
+* CA-02
+* CA-03
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* CM-09
+* [CP-02](/private-mendix-platform/nist-controls/cp-02/)
+* IR-08
+* MA-04
+* MA-05
+* [MP-02](/private-mendix-platform/nist-controls/mp-02/)
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* [MP-05](/private-mendix-platform/nist-controls/mp-05/)
+* PL-07
+* PM-01
+* PM-07
+* PM-08
 * PM-09
 * PM-11
-* SA-5
+* [SA-05](/private-mendix-platform/nist-controls/sa-05/)
 * SA-17
 
 For more information, refer to the NIST Special Publication 800-18.*

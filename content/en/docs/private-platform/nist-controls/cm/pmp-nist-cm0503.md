@@ -136,7 +136,7 @@ The App Implementer must perform the following tasks:
 
     In the build pipeline, generate a detached signature for the MDA (Cosign blob signing or GPG) and sign the resulting application container image with Cosign using a customer-approved key, publishing both the signature and a CycloneDX SBOM alongside the image in the private registry referenced by the Private Mendix Platform SourceUrl.
 
-2. Verify marketplace modules and dependencies at build time.
+2. Verify Marketplace modules and dependencies at build time.
 
     Validate every Marketplace module (imported through the private Marketplace hosted inside Private Mendix Platform), Java or JS library, and third-party dependency against its published checksum or signature during the build, and fail the build on any mismatch or missing signature; record verification evidence as a build attestation.
 
@@ -181,6 +181,16 @@ The App Operator must perform the following tasks:
     Retain records of every application deployment - artifact digest, signature verification result, signing key identity, SBOM reference, deployer identity, and the specific application artifact version promoted through Private Mendix Platform - to support compliance auditing and incident investigation.
 
 ## Proof and Remarks
+
+### Studio Pro
+
+The Studio Pro Windows and Mac installers are signed using Microsoft Trusted Signing and the *Mendix Technology B.V.* validated organizational identity. For more information, see [Installing Mendix Studio Pro - Certificates](/refguide/install/#signing-certificates).
+
+### Private Mendix Platform
+
+Private Mendix Platform provides a signed installer where all sub-components are also signed. For more information on how these signatures are generated and how to validate them, see [Accessing Artifacts and Verifying the Signature](/private-mendix-platform/access-artifacts/).
+
+### Download and Image Management
 
 On the Download Portal, Mendix provides installers for different operating systems, along with checksums:
 

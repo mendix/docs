@@ -82,7 +82,7 @@ The following controls are related to this control:
 * [AC-19](/private-mendix-platform/nist-controls/ac-19/)
 * [AC-20](/private-mendix-platform/nist-controls/ac-20/)
 * [AU-09](/private-mendix-platform/nist-controls/au-09/)
-* [IA-02](/private-mendix-platform/nist-controls/ia-02/)
+* IA-02
 * [IA-04](/private-mendix-platform/nist-controls/ia-04/)
 * [IA-05](/private-mendix-platform/nist-controls/ia-05/)
 * [IA-08](/private-mendix-platform/nist-controls/ia-08/)

@@ -31,7 +31,7 @@ The following controls are related to this control:
 
 * [AC-18](/private-mendix-platform/nist-controls/ac-18/)
 * [CM-07](/private-mendix-platform/nist-controls/cm-07/)
-* [IA-02](/private-mendix-platform/nist-controls/ia-02/)
+* IA-02
 
 ## Responsibility
 

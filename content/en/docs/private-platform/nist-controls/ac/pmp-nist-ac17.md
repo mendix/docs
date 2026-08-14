@@ -40,8 +40,8 @@ The following controls are related to this control:
 * [AC-20](/private-mendix-platform/nist-controls/ac-20/)
 * [CA-03](/private-mendix-platform/nist-controls/ca-03/)
 * [CA-07](/private-mendix-platform/nist-controls/ca-07/)
-* [CM-08](/private-mendix-platform/nist-controls/ca-08/)
-* [IA-02](/private-mendix-platform/nist-controls/ia-02/)
+* * CM-08
+* IA-02
 * [IA-03](/private-mendix-platform/nist-controls/ia-03/)
 * [IA-08](/private-mendix-platform/nist-controls/ia-08/)
 * [MA-04](/private-mendix-platform/nist-controls/ma-04/)

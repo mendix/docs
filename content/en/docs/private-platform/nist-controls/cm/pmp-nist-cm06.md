@@ -55,7 +55,7 @@ Common secure configurations include the United States Government Configuration 
 The following controls are related to this control:
 
 * [AC-19](/private-mendix-platform/nist-controls/ac-19/)
-* [CM-02](/private-mendix-platform/nist-controls/cm-02/)
+* CM-02
 * CM-03
 * [CM-07](/private-mendix-platform/nist-controls/cm-07/)
 * [SI-04](/private-mendix-platform/nist-controls/si-04/)

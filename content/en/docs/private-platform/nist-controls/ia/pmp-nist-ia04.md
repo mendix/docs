@@ -35,7 +35,7 @@ This control also addresses individual identifiers not necessarily associated wi
 The following controls are related to this control:
 
 * [AC-02](/private-mendix-platform/nist-controls/ac-02/)
-* [IA-02](/private-mendix-platform/nist-controls/ia-02/)
+* IA-02
 * [IA-03](/private-mendix-platform/nist-controls/ia-03/)
 * [IA-05](/private-mendix-platform/nist-controls/ia-05/)
 * [IA-08](/private-mendix-platform/nist-controls/ia-08/)

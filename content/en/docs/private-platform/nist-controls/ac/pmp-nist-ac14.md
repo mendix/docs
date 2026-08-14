@@ -34,7 +34,7 @@ This control does not apply to situations where identification and authenticatio
 The following controls are related to this control:
 
 * [CP-02](/private-mendix-platform/nist-controls/cp-02/)
-* [IA-02](/private-mendix-platform/nist-controls/ia-02/)
+* IA-02
 
 ## Responsibility
 

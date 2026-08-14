@@ -56,7 +56,7 @@ The following controls are related to this control:
 * [AC-18](/private-mendix-platform/nist-controls/ac-18/)
 * [AC-20](/private-mendix-platform/nist-controls/ac-20/)
 * [CA-09](/private-mendix-platform/nist-controls/ca-09/)
-* [CM-02](/private-mendix-platform/nist-controls/cm-02/)
+* CM-02
 * [IA-03](/private-mendix-platform/nist-controls/ia-03/)
 * [MP-02](/private-mendix-platform/nist-controls/mp-02/)
 * [MP-04](/private-mendix-platform/nist-controls/mp-04/)

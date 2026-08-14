@@ -34,7 +34,7 @@ Organizations consider disabling unused or unnecessary physical and logical port
 The following controls are related to this control:
 
 * [AC-06](/private-mendix-platform/nist-controls/ac-06/)
-* [CM-02](/private-mendix-platform/nist-controls/cm-02/)
+* CM-02
 * [RA-05](/private-mendix-platform/nist-controls/ra-05/)
 * [SA-05](/private-mendix-platform/nist-controls/sa-05/)
 * [SC-07](/private-mendix-platform/nist-controls/sc-07/)

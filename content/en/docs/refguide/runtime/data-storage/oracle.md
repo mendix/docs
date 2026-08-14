@@ -63,7 +63,7 @@ DDL (data definition language) commands in Oracle are not transactional and will
 
 ## Automatic Indexing
 
-Oracle can create indexes automatically, based on query patterns. The Mendix runtime is not aware of these indexes. These indexes can potentially conflict with schema changes. For example, you cannot change the type of a column when it is used in a function based index. When such a conflict occurs, database synchronization may fail, and the application will fail to start.
+You can enable a feature so that Oracle creates indexes automatically, based on query patterns. However, the Mendix runtime is not aware of these indexes and they can potentially conflict with schema changes. For example, you cannot change the type of a column when it is used in a function based index. When such a conflict occurs, database synchronization may fail, and the application will fail to start.
 
 To resolve this, drop the related automatic index before starting the application after such a domain model change.
 

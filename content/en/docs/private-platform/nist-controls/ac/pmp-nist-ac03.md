@@ -30,7 +30,7 @@ The following controls are related to this control:
 * [AC-04](/private-mendix-platform/nist-controls/ac-04/)
 * [AC-05](/private-mendix-platform/nist-controls/ac-05/)
 * [AC-06](/private-mendix-platform/nist-controls/ac-06/)
-* [AC-16](/private-mendix-platform/nist-controls/ac-16/)
+* AC-16
 * [AC-17](/private-mendix-platform/nist-controls/ac-17/)
 * [AC-18](/private-mendix-platform/nist-controls/ac-18/)
 * [AC-19](/private-mendix-platform/nist-controls/ac-19/)

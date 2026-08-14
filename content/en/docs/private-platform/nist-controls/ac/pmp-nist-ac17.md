@@ -45,7 +45,7 @@ The following controls are related to this control:
 * IA-03
 * [IA-08](/private-mendix-platform/nist-controls/ia-08/)
 * MA-04
-* [PE-17](/private-mendix-platform/nist-controls/pe-17/)
+* PE-17
 * PL-04
 * [SC-10](/private-mendix-platform/nist-controls/sc-10/)
 * [SI-04](/private-mendix-platform/nist-controls/si-04/)

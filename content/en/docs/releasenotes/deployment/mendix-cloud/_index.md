@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## August 2026
 
+### August 12, 2026
+
+#### Fixes
+
+* We fixed an issue that, in rare cases, caused application access logs to stop appearing on the [Logs](/developerportal/operate/logs/) page. You will have to restart or redeploy your app to apply this fix.
+
 ### August 9, 2026
 
 #### Fixes

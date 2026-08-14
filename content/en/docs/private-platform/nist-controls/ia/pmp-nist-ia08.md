@@ -35,9 +35,9 @@ The following controls are related to this control:
 * IA-02
 * [IA-04](/private-mendix-platform/nist-controls/ia-04/)
 * [IA-05](/private-mendix-platform/nist-controls/ia-05/)
-* [MA-04](/private-mendix-platform/nist-controls/ma-04/)
+* MA-04
 * [RA-03](/private-mendix-platform/nist-controls/ra-03/)
-* [SA-12](/private-mendix-platform/nist-controls/Sa-12/)
+* SA-12
 * [SC-08](/private-mendix-platform/nist-controls/sc-08/)
 
 For more information, refer to the following:

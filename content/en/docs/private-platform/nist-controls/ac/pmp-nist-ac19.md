@@ -62,7 +62,7 @@ The following controls are related to this control:
 * [MP-04](/private-mendix-platform/nist-controls/mp-04/)
 * [MP-05](/private-mendix-platform/nist-controls/mp-05/)
 * [PL-04](/private-mendix-platform/nist-controls/pl-04/)
-* [SC-07](/private-mendix-platform/nist-controls/sc-07/)
+* SC-07
 * [SC-43](/private-mendix-platform/nist-controls/sc-43/)
 * SI-03
 * [SI-04](/private-mendix-platform/nist-controls/si-04/)

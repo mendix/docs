@@ -47,7 +47,7 @@ The following controls are related to this control:
 * PM-09
 * [RA-05](/private-mendix-platform/nist-controls/ra-05/)
 * SA-11
-* [SA-12](/private-mendix-platform/nist-controls/Sa-12/)
+* SA-12
 * [SI-02](/private-mendix-platform/nist-controls/si-02/)
 * [SI-04](/private-mendix-platform/nist-controls/si-04/)
 

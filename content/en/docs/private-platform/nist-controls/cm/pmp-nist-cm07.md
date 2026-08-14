@@ -37,7 +37,7 @@ The following controls are related to this control:
 * CM-02
 * [RA-05](/private-mendix-platform/nist-controls/ra-05/)
 * [SA-05](/private-mendix-platform/nist-controls/sa-05/)
-* [SC-07](/private-mendix-platform/nist-controls/sc-07/)
+* SC-07
 
 For more information, refer to the DoD Instruction 8551.01.
 

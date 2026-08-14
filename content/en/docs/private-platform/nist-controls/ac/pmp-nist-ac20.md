@@ -38,7 +38,7 @@ The following controls are related to this control:
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
 * [AC-17](/private-mendix-platform/nist-controls/ac-17/)
 * [AC-19](/private-mendix-platform/nist-controls/ac-19/)
-* [CA-03](/private-mendix-platform/nist-controls/ca-03/)
+* CA-03
 * [PL-04](/private-mendix-platform/nist-controls/pl-04/)
 * [SA-09](/private-mendix-platform/nist-controls/sa-09/)
 

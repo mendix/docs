@@ -48,8 +48,8 @@ The following controls are related to this control:
 * [CM-07](/private-mendix-platform/nist-controls/cm-07/)
 * [SA-08](/private-mendix-platform/nist-controls/sa-08/)
 * [SC-02](/private-mendix-platform/nist-controls/sc-02/)
-* [SC-05](/private-mendix-platform/nist-controls/sc-05/)
-* [SC-07](/private-mendix-platform/nist-controls/sc-07/)
+* SC-05
+* SC-07
 * [SC-18](/private-mendix-platform/nist-controls/sc-18/)
 
 ## Responsibility

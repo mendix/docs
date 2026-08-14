@@ -26,7 +26,7 @@ Limiting the number of access control points for remote accesses reduces the att
 
 The following controls are related to this control:
 
-* [SC-07](/private-mendix-platform/nist-controls/sc-07/)
+* SC-07
 
 ## Responsibility
 

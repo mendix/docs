@@ -30,7 +30,7 @@ This control applies regardless of whether the login occurs via a local or netwo
 The following controls are related to this control: 
 
 * [AC-02](/private-mendix-platform/nist-controls/ac-02/)
-* [AC-09](/private-mendix-platform/nist-controls/ac-09/)
+* AC-09
 * [AC-14](/private-mendix-platform/nist-controls/ac-14/)
 * [IA-05](/private-mendix-platform/nist-controls/ia-05/)
 

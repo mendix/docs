@@ -32,12 +32,12 @@ The following controls are related to this control:
 
 * [AC-04](/private-mendix-platform/nist-controls/ac-04/)
 * [AC-17](/private-mendix-platform/nist-controls/ac-17/)
-* [CA-03](/private-mendix-platform/nist-controls/ca-03/)
+* CA-03
 * [CM-07](/private-mendix-platform/nist-controls/cm-07/)
 * CP-08
 * IR-04
 * [RA-03](/private-mendix-platform/nist-controls/ra-03/)
-* [SC-05](/private-mendix-platform/nist-controls/sc-05/)
+* SC-05
 * [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 For more information, refer to the NIST Special Publications 800-41, and 800-77.

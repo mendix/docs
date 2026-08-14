@@ -40,7 +40,7 @@ The following controls are related to this control:
 * [CA-07](/private-mendix-platform/nist-controls/ca-07/)
 * CM-02
 * [IA-03](/private-mendix-platform/nist-controls/ia-03/)
-* [SC-07](/private-mendix-platform/nist-controls/sc-07/)
+* SC-07
 * [SI-04](/private-mendix-platform/nist-controls/si-04/)
 
 ## Responsibility

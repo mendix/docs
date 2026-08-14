@@ -45,10 +45,10 @@ The following controls are related to this control:
 
 * CM-03
 * [CM-04](/private-mendix-platform/nist-controls/cm-04/)
-* [MA-04](/private-mendix-platform/nist-controls/ma-04/)
+* MA-04
 * MP-06
 * PE-16
-* [SA-12](/private-mendix-platform/nist-controls/Sa-12/)
+* SA-12
 * [SI-02](/private-mendix-platform/nist-controls/si-02/).
 
 ## Responsibility

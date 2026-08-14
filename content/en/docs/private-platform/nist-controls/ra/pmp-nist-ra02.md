@@ -33,7 +33,7 @@ The following controls are related to this control:
 * * CM-08
 * [MP-04](/private-mendix-platform/nist-controls/mp-04/)
 * [RA-03](/private-mendix-platform/nist-controls/ra-03/)
-* [SC-07](/private-mendix-platform/nist-controls/sc-07/)
+* SC-07
 
 For more information, refer to the FIPS Publication 199; and NIST Special Publications 800-30, 800-39, and 800-60.
 

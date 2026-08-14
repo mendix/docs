@@ -39,7 +39,7 @@ The following controls are related to this control:
 * [CP-09](/private-mendix-platform/nist-controls/cp-09/)
 * [IA-03](/private-mendix-platform/nist-controls/ia-03/)
 * [IA-07](/private-mendix-platform/nist-controls/ia-07/)
-* [MA-04](/private-mendix-platform/nist-controls/ma-04/)
+* MA-04
 * [MP-02](/private-mendix-platform/nist-controls/mp-02/)
 * [MP-04](/private-mendix-platform/nist-controls/mp-04/)
 * [MP-05](/private-mendix-platform/nist-controls/mp-05/)

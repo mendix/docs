@@ -188,7 +188,7 @@ The Studio Pro Windows and Mac installers are signed using Microsoft Trusted Sig
 
 ### Private Mendix Platform
 
-Private Mendix Platform provides a signed installer where all sub-components are also signed. For more information on how these signatures are generated and how to validate them, see [Accessing Artifacts and Verifying the Signature](/private-mendix-platform/access-artifacts/).
+In a pending release, Private Mendix Platform will add a signed installer where all sub-components are also signed.
 
 ### Download and Image Management
 

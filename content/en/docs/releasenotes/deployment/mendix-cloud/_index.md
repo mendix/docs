@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Fixes
 
-* We fixed an issue that, in rare cases, caused application access logs to stop appearing on the [Logs](/developerportal/operate/logs/) page. You will have to restart or redeploy your app to apply this fix.
+* We fixed an issue that, in rare cases, caused application access logs to stop appearing on the [Logs](/developerportal/operate/logs/) page. You must restart or redeploy your app for the fix to take effect.
 
 ### August 9, 2026
 

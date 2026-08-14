@@ -41,14 +41,14 @@ Organizations consider in the definition of auditable events, the auditing neces
 
 The following controls are related to this control:
 
-* AC-06
-* AC-17
-* AU-03
-* AU-12
-* MA-04
-* MP-02
-* MP-04
-* SI-04
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AU-03](/private-mendix-platform/nist-controls/au-03/)
+* [AU-12](/private-mendix-platform/nist-controls/au-12/)
+* [MA-04](/private-mendix-platform/nist-controls/ma-04/)
+* [MP-02](/private-mendix-platform/nist-controls/mp-02/)
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* [SI-04](/private-mendix-platform/nist-controls/si-04/)
 
 For more information, refer to the NIST Special Publication 800-92 and [http://idmanagement.gov](http://idmanagement.gov).
 

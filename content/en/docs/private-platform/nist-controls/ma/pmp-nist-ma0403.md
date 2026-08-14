@@ -29,10 +29,10 @@ Comparable security capability on information systems, diagnostic tools, and equ
 
 The following controls are related to this control:
 
-* MA-3
-* SA-12
-* SI-3
-* SI-7.
+* [MA-03](/private-mendix-platform/nist-controls/ma-03/)
+* [SA-12](/private-mendix-platform/nist-controls/Sa-12/)
+* SI-03
+* SI-07
 
 ## Responsibility
 

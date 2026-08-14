@@ -26,7 +26,7 @@ Misuse of privileged functions, either intentionally or unintentionally by autho
 
 The following controls are related to this control: 
 
-* AU-02
+* [AU-02](/private-mendix-platform/nist-controls/au-02/)
 
 ## Responsibility
 

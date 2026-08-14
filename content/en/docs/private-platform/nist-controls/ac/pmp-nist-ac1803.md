@@ -24,7 +24,7 @@ The organization disables, when not intended for use, wireless networking capabi
 
 The following controls are related to this control:
 
-* AC-19
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
 
 ## Responsibility
 

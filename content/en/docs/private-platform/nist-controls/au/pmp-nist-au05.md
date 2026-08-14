@@ -29,8 +29,8 @@ Audit processing failures include, for example, software and hardware errors, fa
 
 The following controls are related to this control:
 
-* AU-4
-* SI-12
+* [AU-04](/private-mendix-platform/nist-controls/au-04/)
+* [SI-12](/private-mendix-platform/nist-controls/si-12/)
 
 ## Responsibility
 

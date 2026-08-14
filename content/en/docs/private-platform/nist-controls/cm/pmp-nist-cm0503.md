@@ -26,8 +26,8 @@ Software and firmware components prevented from installation unless signed with 
 
 The following controls are related to this control:
 
-* CM-07
-* SC-13
+* [CM-07](/private-mendix-platform/nist-controls/cm-07/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 * SI-07
 
 ## Responsibility

@@ -40,17 +40,17 @@ Organizations also consider the trustworthiness of filtering or inspection mecha
 
 The following controls are related to this control: 
 
-* AC-03
-* AC-17
-* AC-19
-* AC-21
-* CM-06
-* CM-07
-* SA-08
-* SC-02
-* SC-05
-* SC-07
-* SC-18
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)1
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
+* [CM-07](/private-mendix-platform/nist-controls/cm-07/)
+* [SA-08](/private-mendix-platform/nist-controls/sa-08/)
+* [SC-02](/private-mendix-platform/nist-controls/sc-02/)
+* [SC-05](/private-mendix-platform/nist-controls/sc-05/)
+* [SC-07](/private-mendix-platform/nist-controls/sc-07/)
+* [SC-18](/private-mendix-platform/nist-controls/sc-18/)
 
 ## Responsibility
 

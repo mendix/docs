@@ -35,8 +35,8 @@ Organizations may choose to implement centralized information system component i
 Information deemed necessary for effective accountability of information system components includes, for example, hardware inventory specifications, software license information, software version numbers, component owners, and for networked components or devices, machine names and network addresses. Inventory specifications include, for example, manufacturer, device type, model, serial number, and physical location.
 
 The following controls are related to this control:
-* CM-02
-* CM-06
+* [CM-02](/private-mendix-platform/nist-controls/cm-02/)
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
 * PM-05
 
 For more information, refer to NIST Special Publication 800-128.

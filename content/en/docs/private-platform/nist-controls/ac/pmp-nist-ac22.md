@@ -32,10 +32,10 @@ In accordance with federal laws, Executive Orders, directives, policies, regulat
 The following controls are related to this control:
 
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-4
+* [AC-04](/private-mendix-platform/nist-controls/ac-04/)
 * AT-2
 * AT-3
-* AU-13
+* [AU-13](/private-mendix-platform/nist-controls/au-13/)
 
 ## Responsibility
 

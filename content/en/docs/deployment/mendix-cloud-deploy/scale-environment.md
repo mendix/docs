@@ -15,14 +15,7 @@ This document explains how to scale an environment in Mendix Cloud. This can tak
 * Horizontal scaling – You can configure apps built using supported versions of Mendix to be run in multiple runtime containers (instances) simultaneously. Incoming traffic for your app is distributed over the running instances.
 
 {{% alert color="info" %}}
-When your app runs on multiple instances, [scheduled events](/refguide/scheduled-events/) are not distributed evenly over those instances:
-
-* Legacy scheduled events are only executed on the [cluster leader](/refguide/clustered-mendix-runtime/#cluster-leader-follower).
-* Task queue based scheduled events are executed on an arbitrary instance.
-
-The cluster leader also performs other cluster management activities, such as removing persisted sessions and cleaning up unreferenced files. Because of this, the cluster leader can show noticeably higher CPU usage than the other instances. This is expected behavior and does not indicate a problem with the distribution of incoming traffic.
-
-For versions below Mendix 9.12.0, all scheduled events are always run on the first instance if there are multiple instances.
+If there are multiple instances, legacy [scheduled events](/refguide/scheduled-events/) are only executed on the [cluster leader](/refguide/clustered-mendix-runtime/#cluster-leader-follower), and task queue based scheduled events are executed on an arbitrary instance. For versions below Mendix 9.12.0, all scheduled events are always run on the first instance.
 {{% /alert %}}
 
 ## Prerequisites
@@ -53,6 +46,7 @@ To scale your licensed app in Mendix Cloud, follow these steps:
 * The number of available instances depends on the total memory provided by your cloud resource pack and the memory per instance that you have set. It is not possible to set scaling values that exceed the memory provided by your [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
 * It is not possible for a single instance to use more than 32 GiB of RAM. Some very large cloud resource packs, such as XXXL21 or XXXXL21, provide more than this 32 GiB maximum; to use the full RAM in this case, you need more than one instance. For example, to use 64 GiB of RAM, you must spread the RAM between two or more instances.
 * Consider the functionality that runs inside task queues; think about whether the scope of these task queues should be configured to run in all instances or once per cluster. It is possible to set the [scope of the threads](/refguide/task-queue/#create-queue) per task queue.
+* In addition to handling requests, the [cluster leader](/refguide/clustered-mendix-runtime/#cluster-leader-follower) performs cluster management activities such as removing persisted sessions and cleaning up unreferenced files. It can therefore use more CPU than the other instances, even when incoming traffic is distributed evenly.
 
 ## Examples
 

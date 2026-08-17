@@ -43,11 +43,11 @@ The user role has the following properties:
 
 General properties of user roles are described in the table below:
 
-| Property       | Description                                                  |
-| -------------- | ------------------------------------------------------------ |
-| Name           | The name property defines the name of the user role. This name is shown to end-users who can create or edit user accounts in the application. |
-| Documentation  | In this property you can document additional information about the user role. This information is shown to end-users who can create or edit user accounts in the application. |
-| Module roles   | A list of module roles of which the access rights are accumulated in the user role. An end-user that is assigned a user role gets all access rights of the module roles of that user role. |
+| Property | Description |
+| --- | --- |
+| Name | The name property defines the name of the user role. This name is shown to end-users who can create or edit user accounts in the application. |
+| Documentation | In this property you can document additional information about the user role. This information is shown to end-users who can create or edit user accounts in the application. |
+| Module roles | A list of module roles of which the access rights are accumulated in the user role. An end-user that is assigned a user role gets all access rights of the module roles of that user role. |
 | Check security | This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. For more information on the security check, see [App Security](/refguide/app-security/). |
 
 ### User Management Properties {#user-management}
@@ -57,7 +57,7 @@ A user role can be allowed to manage users with a number of other user roles (in
 | Value | Description |
 | --- | --- |
 | All | End-users with this user role can manage all users and grant all user roles. Usually this option should only be configured for an administrator. |
-| Selected | End-users with this user role can manage users that have at most the selected user roles, and can grant only the selected user roles. Select **(No user roles)** to only manage users without a user role (for example, newly created users). If nothing is selected, end-users with this user role cannot manage users at all.  |
+| Selected | End-users with this user role can manage users that have at most the selected user roles, and can grant only the selected user roles. Select **(No user roles)** to only manage users without a user role (for example, newly created users). If nothing is selected, end-users with this user role cannot manage users at all. |
 
 Internally, user management properties are translated into entity access rules for **System.User**. This means that they are not applied in microflows that do not check entity access.
 

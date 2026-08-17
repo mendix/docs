@@ -203,6 +203,7 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
+| 10.24.0 and above | 4.x.x | - | New constant (`EnableAudienceValidation`) has been introduced for the api security. Configure the required values as they are mandatory for the api security flow. |
 | 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |
 | 10.24.0 and above | 4.5.0 | - | New Admin UI and new constants have been introduced. |
 | | | | `Anonymous` module role has been removed. |
@@ -392,7 +393,7 @@ See the section [Optional Features](#optional) information on additional optiona
 #### API Security Configuration for Client Credential Grant {#client-credential-grant}
 
 1. Start your app, log in as an administrator, for example, *demo_administrator*, and access the Client Credential setup page.
-2. If you are using version x.x.x of the module, configure the **Resource path** and **Expected audience** value. Otherwise, the API security flow fails because audience validation is enabled by default.
+2. If you are using version x.x.x of the module, configure the **Resource path** and **Expected audience** value. Otherwise, the API security flow fails as audience validation is enabled by default.
 3. If you have the **Automatic Configuration URL** (also known as the well-known endpoint), enter it and click **Import Configuration** to automatically fill the other endpoints.
 
     {{% alert color="info" %}}If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`.{{% /alert %}}
@@ -547,7 +548,7 @@ Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 
     {{% alert color="warning" %}}When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
     {{% /alert %}}
-* **EnableAudienceValidation** (boolean) – If you are setting this as a true then make sure to set Resource path and Expected audience.
+* **EnableAudienceValidation** (Boolean) – If you are setting this as a true then make sure to set Resource path and Expected audience.
 
 ## Configuring Multi-Domain {#multi-domain}
 

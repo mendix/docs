@@ -31,7 +31,7 @@ To access user roles, do the following:
 1. In the App Explorer, go to **App** > **Security**.
 1. In the **App Security** dialog, select the **User roles**.
 
-    {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" alt="App Security dialog with User roles tab selected, showing Administrator and User roles and their module roles" >}}
 
 1. Double-click a user role to open its properties. 
 
@@ -40,7 +40,7 @@ The user role properties are split into two sections:
 * [General](#general)
 * [User management](#user-management)
 
-{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-role-properties.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-role-properties.png" class="no-border" alt="User Role 'Administrator' properties dialog showing General and User management sections" >}}
 
 ### General Properties {#general}
 
@@ -61,7 +61,7 @@ End-users who have this user role can create, view, edit, and delete end-users w
 
 Take for example an app with two defined user roles: `User`, `Administrator`, and `SubAdministrator`. Assume that you are configuring the `SubAdministrator` user role. The `SubAdministrator` user role has only the `User` user role as a manageable role.
 
-{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/manageable-roles.png" >}}
+{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/manageable-roles.png" alt="User management section with only the User role selected as a manageable role" >}}
 
 The following table shows which end-users an end-user with the `SubAdministrator` user role can manage:
 

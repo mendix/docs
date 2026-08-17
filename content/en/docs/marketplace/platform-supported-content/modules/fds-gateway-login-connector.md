@@ -143,3 +143,7 @@ To use custom user provisioning, do the following:
 4. Ensure the custom microflow:
     * has a parameter of type String named *RequestJson*
     * returns a `System.User` object
+
+### Accessing Web Application
+
+For accessing the web application set the **ApplicationRootUrl** in the **Runtime** tab of Mendix Cloud Portal while deploying your app. Set the **ApplicationRootUrl** in the following format: `http://<tenant>.<region>`.sws.siemens.com/`<appname>-<provider>`.

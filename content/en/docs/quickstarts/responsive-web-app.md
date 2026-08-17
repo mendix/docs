@@ -256,7 +256,7 @@ To deploy your app to the Mendix Cloud (Paid), there are multiple options for ho
 
 ## Build Faster with Maia
 
-Throughout this guide, you built your **Employee** app by hand—dragging entities onto the canvas, wiring up buttons, and writing microflow logic step by step. That is a great way to learn how Studio Pro works under the hood. But once you are comfortable with the basics, you do not have to do everything manually. **Maia**, Mendix's built-in AI assistant, can take over much of this repetitive modeling work for you.
+Throughout this guide, you built your **Employee** app by hand—dragging entities onto the canvas, wiring up buttons, and writing microflow logic step by step. That is a great way to learn how Studio Pro works under the hood. But once you are comfortable with the basics, you do not have to do everything manually. Maia, Mendix's built-in AI assistant, can take over much of this repetitive modeling work for you.
 
 Unlike a typical chatbot that only answers questions, Maia is agentic: it can read your app's current domain model, pages, and logic, understand the context you are working in, and then directly create or modify app elements on your behalf. Ask it to add an entity, generate a page, or build out a microflow, and it will produce real, editable Studio Pro artifacts—not just a suggestion or a code snippet for you to copy in.
 
@@ -271,9 +271,9 @@ Let's put Maia to work on the app you just built. Right now, your **Employee** e
 
     > "Add a Department entity with a Name attribute. Create a one-to-many association from Department to Employee, so each employee belongs to one department. Then generate an overview page listing all departments with their employees, and add that page to the app's navigation."
 
-1. Maia will process the request and propose a set of changes — typically a new entity in your domain model, the association to Employee, a new page with a data grid, and a navigation entry linking to it. **Review** the proposed changes in the preview panel.
-1. Click **Accept** to apply the changes to your app. You'll see the new **Department** entity appear in your App Explorer, already connected to Employee, along with a new item in your app's navigation menu.
-1. **Open** the generated page and run your app locally (**F5**) to see the new Department overview — now reachable directly from the navigation menu — alongside your existing Employee Overview page.
+1. Maia will process the request and propose a set of changes—typically a new entity in your domain model, the association to Employee, a new page with a data grid, and a navigation entry linking to it. **Review** the proposed changes in the preview panel.
+1. Click **Accept** to apply the changes to your app. You will see the new **Department** entity appear in your App Explorer, already connected to Employee, along with a new item in your app's navigation menu.
+1. **Open** the generated page and run your app locally (<kbd>F5</kbd> ) to see the new **Department** overview—now reachable directly from the navigation menu—alongside your existing **Employee Overview** page. 
 
 {{% alert type="info" %}}
 You can keep iterating conversationally from here—for example, asking Maia to "add validation so a department name can't be empty" or "add a dropdown on the Employee page to select a department." Each request builds on the app state Maia already understands, so you do not need to re-explain your app every time.

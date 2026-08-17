@@ -10,32 +10,35 @@ aliases:
 
 ## Introduction
 
-A user role aggregates a number of access rights on data, forms, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.
+A user role aggregates a number of access rights to app documents such as data, pages, and microflows. Each end-user of the application is assigned one or more user roles by an end-user with user management rights, and gets all the access rights that these user roles represent.
 
-Every user role has one or more [module roles](/refguide/module-security/#module-role), which means that users with that user role have all the access rights that are defined for those module roles. A typical user role has the **System.User** module role and at least one other module role.
+Every user role has one or more [module roles](/refguide/module-security/#module-role). End-users with that user role are granted all the access rights defined for those module roles. A typical user role has the **System.User** module role and at least one other module role.
 
-The purpose of the distinction between user roles and module roles is to make a module self-contained (independent from the app in which it is defined or used), so that it can be reused in different apps and/or published to the Marketplace.
+The separation of user roles and module roles means that modules can be self-contained (independent of the app in which it is defined or used), This allows it to be reused in different apps and/or published to the Marketplace.
 
-End-users of your application only see the user roles and not the module roles.
-
-To access user roles, open **App Security** > **User roles** tab:
-
-{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" >}}
+End-users of your application only see the user roles and not the underlying module roles.
 
 {{% alert color="warning" %}}
-The effects of changes to user roles are not immediate. This means that your app might show outdated pages or incorrect data. For more information, please refer documentation about [persistent sessions](/refguide/clustered-mendix-runtime/#sessions-are-always-persistent).
+The effects of changes to user roles are not immediately reflected in a running app. This means that your app can show outdated pages or incorrect data. For more information, refer to the documentation on [persistent sessions](/refguide/clustered-mendix-runtime/#sessions-are-always-persistent).
 
 Mendix recommends that you do NOT use this feature to create a dynamic UI as these changes will not take effect immediately. 
 {{% /alert %}}
 
-## User Role Properties
+## Managing User Roles
 
-Double-click the user role to open its properties. 
+To access user roles, do the following:
 
-The user role has the following properties:
+1. In the App Explorer, go to **App** > **Security**.
+1. In the **App Security** dialog, select the **User roles**.
 
-* [General properties](#general)
-* [User management properties](#user-management)
+    {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" >}}
+
+1. Double-click a user role to open its properties. 
+
+The user role properties are split into two sections:
+
+* [General](#general)
+* [User management](#user-management)
 
 {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-role-properties.png" class="no-border" >}}
 
@@ -45,21 +48,43 @@ General properties of user roles are described in the table below:
 
 | Property | Description |
 | --- | --- |
-| Name | The name property defines the name of the user role. This name is shown to end-users who can create or edit user accounts in the application. |
-| Documentation | In this property you can document additional information about the user role. This information is shown to end-users who can create or edit user accounts in the application. |
-| Module roles | A list of module roles of which the access rights are accumulated in the user role. An end-user that is assigned a user role gets all access rights of the module roles of that user role. |
-| Check security | This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. For more information on the security check, see [App Security](/refguide/app-security/). |
+| Name | The name of the user role. This name is shown to end-users who can create or edit user accounts in the application. Blank apps usually start with the `User` and `Administrator` user roles. |
+| Documentation | Additional information about the user role. This information is shown to end-users who can create or edit user accounts in the application. |
+| Module roles | A list of module roles whose access rights are added to this user role. An end-user that is assigned this user role gets all access rights of the module roles of that user role. |
+| Check security | Specifies whether the consistency of security settings is checked for this user role.<br/>You can choose to not check security for a user role. For example, user roles that are used only for web service end-users do not need to be checked because they never sign in to the client. For more information on the security check, see the [Check Security](/refguide/app-security/#check-security) section of *App Security*. |
 
 ### User Management Properties {#user-management}
 
-A user role can be allowed to manage users with a number of other user roles (including itself), called manageable roles. This means that end-users who have this user role, can create, view, edit and delete users with at most the manageable user roles.
+A user role can be allowed to manage end-users depending on their user roles. These roles are called manageable roles (or grantable roles).
 
-| Value | Description |
-| --- | --- |
-| All | End-users with this user role can manage all users and grant all user roles. Usually this option should only be configured for an administrator. |
-| Selected | End-users with this user role can manage users that have at most the selected user roles, and can grant only the selected user roles. Select **(No user roles)** to only manage users without a user role (for example, newly created users). If nothing is selected, end-users with this user role cannot manage users at all. |
+End-users who have this user role can create, view, edit, and delete end-users with the selected roles, provided they do not also have a user role which is not selected. They can grant or remove the selected user roles, but not user roles which are not selected.
 
-Internally, user management properties are translated into entity access rules for **System.User**. This means that they are not applied in microflows that do not check entity access.
+Take for example an app with two defined user roles: `User`, `Administrator`, and `SubAdministrator`. Assume that you are configuring the `SubAdministrator` user role. The `SubAdministrator` user role has only the `User` user role as a manageable role.
+
+{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/manageable-roles.png" >}}
+
+The following table shows which end-users an end-user with the `SubAdministrator` user role can manage:
+
+| End-User Name | Has User Roles | SubAdministrator can manage |
+| --- | --- | --- |
+| User1 | `User` | Yes¹ |
+| User2 | `SubAdministrator` | No |
+| User3 | `User` and `SubAdministrator` | No² |
+
+¹ The SubAdministrator can only grant or remove the `User` user role.
+² Although `User` is a manageable role, User3 also has the `SubAdministrator` user role which is not a manageable role for a SubAdministrator.
+
+The **(No user roles)** manageable role allow this user role to manage end-users without a user role (for example, newly created end-users).
+
+The **Select / deselect all** checkbox lets you select all the roles as manageable roles, or deselect them all.
+
+{{% alert color="warning" %}}
+If the **Select / deselect all** box is checked (that is, all roles are manageable by this user role) then adding a new user role to the app will mean that it is automatically selected as a manageable role. If any of the roles are not selected, then added user roles will not be automatically selected as manageable roles.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Internally, user management properties are translated into implicit entity access rules for **System.User**. This means that they are not applied in microflows that do not check entity access.
+{{% /alert %}}
 
 ## Read More
 

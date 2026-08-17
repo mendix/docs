@@ -547,7 +547,7 @@ Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 
     {{% alert color="warning" %}}When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
     {{% /alert %}}
-* **OIDC.APIAuthentication** – If you want the api security client you can use the `APIAuthentication` microflow from the **OIDC.APIAuthentication** folder of the module.
+* **EnableAudienceValidation** (boolean) – If you are setting this as a true then make sure to set Resource path and Expected audience.
 
 ## Configuring Multi-Domain {#multi-domain}
 
@@ -790,7 +790,7 @@ You can create your own APIs within your Mendix app and secure the end point ove
 
 1. Create a REST API endpoint which needs to be secured.
 2. Use **Custom** as the [authentication method](/refguide/published-rest-service/#authentication) to secure the endpoint with an access token.
-3. Select the `OIDC.APIAuthentication` microflow which has `HTTPRequest` as the input and returns `System.User` as the output.
+3. Select the `OIDC.APIAuthentication` microflow from the **OIDC.APIAuthentication** folder of the module which has `HTTPRequest` as the input and returns `System.User` as the output.
 
 ### Using `APIAuthentication` for Client Credentials Grant
 
@@ -799,7 +799,9 @@ The client credentials grant type is used when applications request an access to
 1. Request an Access Token using `/token` endpoint.
 2. Access the Secured API Endpoint
 3. `APIAuthentication` will validate the token and extract the claims.
-4. The OIDC SSO module checks if the `sub` claim (which contains the `client-id`) is present in the access token. If it is not, the module will verify the `client_id`, `appid`, or `cid` parameters. If none of these are found, it will throw an exception message.
+4. The OIDC SSO module checks 
+    * if the `sub` claim (which contains the `client-id`) is present in the access token. If it is not, the module will verify the `client_id`, `appid`, or `cid` parameters. If none of these are found, it will throw an exception message.
+    * if the `audiencevalidationenabled` is true then verify the resource path and expected audince based on the configured values.
 5. Create a new user using the client ID from the token if one does not already exist.
 
 {{% alert color="info" %}}

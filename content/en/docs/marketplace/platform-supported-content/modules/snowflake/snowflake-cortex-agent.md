@@ -79,7 +79,7 @@ The message content is stored in the **CortexContent** object, which is associat
 
 5. Use the CortexAgent microflow from `\_USE\_ME > AI > CortexAgent` in the **SnowflakeAIDataConnector** module as the main action to invoke the Snowflake Cortex Agent. Provide the following inputs:
 
-    * **CortexAgentRequest/ThreadId** – Optional. The ID of an existing thread. Pass 0 if starting a new conversation.
+    * **CortexAgentRequest/ThreadId** – Optional. The ID of an existing thread. Pass the thread ID only when continuing an existing conversation.
     * **ConnectionDetails** – The connection details object containing your Snowflake connection configuration and authentication settings.
     * **CortexAgentRequest** – The request object configured in the previous step.
 

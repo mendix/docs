@@ -106,7 +106,7 @@ The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a 
 
 ### Adding the Component to Active Workspace{#adding-component}
 
-1. Obtain the `mx-in-tc` kit (containing the `MendixEmbedded` component) from the [mendix-inside-teamcenter](https://github.com/mendixlabs/mendix-inside-teamcenter) repo in GitHub.
+1. Obtain the `mx-in-tc` kit (containing the `MendixEmbedded` component) from the [mendix-inside-teamcenter](https://github.com/mendixlabs/mendix-inside-teamcenter) repo on GitHub.
 2. Install the kit in your Active Workspace stage repository under `src/repo`.
 3. Configure the `MendixEmbedded` component with the URL of your Mendix runtime.
 4. Optionally, configure context passing. For more information, see [Passing Context from Teamcenter](#passing-context).

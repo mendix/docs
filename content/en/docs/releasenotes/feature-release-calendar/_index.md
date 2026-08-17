@@ -158,9 +158,6 @@ General Availability means that a feature is available for all users. This type 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Workstation Client | Limited Availability: Mx 11.6 |
 | Enrich MAIA with more Teamcenter relevant knowledge | General Availability: Mx 11.18 |
 | Easily Call and Wait for Teamcenter Workflows via Mendix Workflows as part of the Teamcenter Connector | General Availability: Q3-Q4 2026 |
-| Private Workstation Management | Limited Availability: Mx 11.9 |
-| Workstation Client | General Availability: Q3 2026 |
 | Siemens Design System (SDS) | General Availability: Q2 2026 |

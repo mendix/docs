@@ -10,7 +10,7 @@ There are some minor differences in how Mendix behaves when using an Oracle data
 
 ## Setting Up a User for Mendix
 
-When setting up an integration with an Oracle back end, Mendix recommends creating a user/schema with the appropriate privileges. Mendix uses a single user to update the schema-structure (for example, tables and indices) and to execute DML statements. The former is done when Mendix is starting up and synchronizing the model with the storage structure, and the latter is done in normal runtime operations. 
+When setting up an integration with an Oracle back end, Mendix recommends creating a user/schema with the appropriate privileges. Mendix uses a single user to update the schema-structure (for example, tables and indices) and to execute DML (Data Manipulation Language) statements. The former is done when Mendix is starting up and synchronizing the model with the storage structure, and the latter is done in normal runtime operations. 
 
 When setting-up perform the following steps:
 
@@ -57,6 +57,16 @@ You cannot set a [uniqueness constraint](/refguide/validation-rules/#uniqueness)
 
 If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQL: column of datatype LOB cannot be unique or a primary key` will be logged.
 
-## DDL commands
+## DDL Commands
 
 DDL (data definition language) commands in Oracle are not transactional and will not be rolled back in case of an error. This means that if your Oracle database needs to be synchronized with your model when you start your application and an error occurs during this synchronization, the changes that have made been made up until the point when the error occurs are *not* rolled back. This can leave the database in an inconsistent state which cannot be recovered automatically. Mendix recommends creating a backup of your database before deploying any new version of your app, so that you can restore the backup if the database synchronization fails.
+
+## Automatic Indexing
+
+You can enable a feature so that Oracle creates indexes automatically, based on query patterns. However, the Mendix runtime is not aware of these indexes and they can potentially conflict with schema changes. For example, you cannot change the type of a column when it is used in a function based index. When such a conflict occurs, database synchronization may fail, and the application will fail to start.
+
+To resolve this, drop the related automatic index before starting the application after such a domain model change.
+
+{{% alert color="info" %}}
+As explained above, it may be necessary to restore the database after such a failed synchronization.
+{{% /alert %}}

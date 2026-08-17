@@ -260,7 +260,7 @@ Throughout this guide, you built your **Employee** app by hand—dragging entiti
 
 Unlike a typical chatbot that only answers questions, Maia is agentic: it can read your app's current domain model, pages, and logic, understand the context you are working in, and then directly create or modify app elements on your behalf. Ask it to add an entity, generate a page, or build out a microflow, and it will produce real, editable Studio Pro artifacts—not just a suggestion or a code snippet for you to copy in.
 
-Maia is not one single feature but a collection of capabilities woven into Studio Pro. The one you will use most often is [Maia Make](/refguide/mendix-ai-assistance/), a conversational interface where you describe what you want in plain language and Maia generates the domain model changes, pages, or microflows to match. Alongside Maia Make, you will also find focused generators (for domain models, pages, workflows, and OQL queries), recommenders that suggest the next best widget or microflow activity as you build, and guidance tools like [Maia Chat](/refguide/maia-chat/) and [Maia Explain](/refguide/mendix-ai-assistance/) for when you want an explanation rather than a change to your app. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
+Maia is not one single feature but a collection of capabilities woven into Studio Pro. [Maia Make](/refguide/mendix-ai-assistance/), is a conversational interface where you describe what you want in plain language and Maia generates the domain model changes, pages, or microflows to match. Within Maia Make are focused generators (for domain models, pages, workflows, and OQL queries), recommenders that suggest the next best widget or microflow activity as you build, and guidance tools like [Maia Chat](/refguide/maia-chat/) and [Maia Explain](/refguide/mendix-ai-assistance/) for when you want an explanation rather than a change to your app. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
 
 ### Try It Yourself: Extending the Employee App
 
@@ -279,7 +279,7 @@ Put Maia to work on the app you just built. Right now, your **Employee** entity 
 You can keep iterating conversationally from here—for example, asking Maia to "add validation so a department name can't be empty" or "add a dropdown on the Employee page to select a department." Each request builds on the app state Maia already understands, so you do not need to re-explain your app every time.
 {{% /alert %}}
 
-As you get more comfortable, try using [Maia Explain](/refguide/maia-explain/) on the microflow you built earlier (`Act_Employee_NewEdit`) to see how Maia summarizes logic you already created—a useful way to sanity-check your own work or onboard a teammate to the app quickly.
+As you get more comfortable, you can ask Maia to explain the microflow you built earlier (`Act_Employee_NewEdit`) to see how Maia summarizes logic you already created—a useful way to sanity-check your own work or onboard a teammate to the app quickly.
 
 ## Finished!
 

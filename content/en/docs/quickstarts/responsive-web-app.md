@@ -264,7 +264,7 @@ Maia is not one single feature but a collection of capabilities woven into Studi
 
 ### Try It Yourself: Extending the Employee App
 
-Let's put Maia to work on the app you just built. Right now, your **Employee** entity captures a job role as free text. Next, let us use Maia to turn that into a proper **Department** entity, linked to **Employee** along with an overview page:
+Put Maia to work on the app you just built. Right now, your **Employee** entity captures a job role as free text. Next, let us use Maia to turn that into a proper **Department** entity, linked to **Employee** along with an overview page:
 
 1. In Studio Pro, open **Maia Make** from the top bar.
 1. In the chat box, describe what you want:

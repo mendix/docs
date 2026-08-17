@@ -100,8 +100,6 @@ The microflow returns a **$HttpResponse** of the type **CortexAgentResponse**.
 
 If you are building a conversational UI where the agent needs to maintain context across multiple messages (for example, a chat interface), you can use the thread management microflows available in the *Utils* folder of the **SnowflakeAIDataConnector** module.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-ai-data-connector/utils-folder.png" >}}
-
 ### Creating a Thread
 
 Use the **CreateCortexAgentThread** microflow to create a new conversation thread before sending the first message. This microflow performs the following actions:

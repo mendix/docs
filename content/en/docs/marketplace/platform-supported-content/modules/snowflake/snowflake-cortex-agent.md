@@ -67,7 +67,7 @@ To configure your Mendix app to communicate with a Snowflake Cortex Agent, perfo
     * **ToolUseType** – Specifies how the agent should use tools during the conversation.
     * The user's message is stored in the **CortexAgentMessage** object, which is associated with the **CortexAgentRequest**. Set the following attributes:
 
-        * **Role** – Set to `user` to indicate the message is from the end user.
+        * **Role** – Set to `user` to indicate the message is from the end-user.
         * **Status** – The status of the message.
 The message content is stored in the **CortexContent** object, which is associated with **CortexAgentMessage**. Set the following:
         * **ContentType** – Set to `text` for a plain text user query.
@@ -79,7 +79,7 @@ The message content is stored in the **CortexContent** object, which is associat
 
 5. Use the CortexAgent microflow from `\_USE\_ME > AI > CortexAgent` in the **SnowflakeAIDataConnector** module as the main action to invoke the Snowflake Cortex Agent. Provide the following inputs:
 
-    * **ThreadId** – Optional. The ID of an existing thread. Pass empty if starting a new conversation.
+    * **CortexAgentRequest/ThreadId** – Optional. The ID of an existing thread. Pass 0 if starting a new conversation.
     * **ConnectionDetails** – The connection details object containing your Snowflake connection configuration and authentication settings.
     * **CortexAgentRequest** – The request object configured in the previous step.
 
@@ -167,4 +167,4 @@ The following is an example of how the Cortex Agent integration works end-to-end
 2. In Mendix, a **CortexAgentRequest** is created with **AgentName** set to `SNOWFLAKETESTAGENT`, the appropriate **Database** and **Schema** values, and a CortexContent text of *"How many tickets are in Open status?"*.
 3. The **CortexAgent** microflow is called, which authenticates and serializes the request, and sends it to the Snowflake Agent REST API.
 4. The agent reasons over the question, invokes the custom tool, and returns a response.
-5. The **Text** field from **CortexAgentContent** in the response is displayed in the Mendix conversational UI as a markdown-formatted answer, for example, *"There are 42 tickets currently in Open status."*
+5. The **Text** field from **CortexAgentContent** in the response is displayed in the Mendix conversational UI as a Markdown-formatted answer, for example, *"There are 42 tickets currently in Open status."*

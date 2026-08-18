@@ -16,8 +16,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### Software Specifications {#software}
 
-[Mendix Studio Pro](/refguide/modeling/) 11 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
-We support running on Windows locally, or locally virtualized.
+[Mendix Studio Pro](/refguide/modeling/) 11 is supported on actively serviced versions of Windows 11. We support running on Windows locally, or locally virtualized.
 
 Mendix Studio Pro 11 can run in beta mode on Apple Silicon (ARM64) Macs running macOS Sonoma 14.0 and above. Starting with Studio Pro 11.12, the native macOS version of Studio Pro supports only Apple Silicon. Intel-based (x64) Macs are no longer supported. This shift allows Mendix to focus on a single native architecture for macOS, improving performance, efficiency, and overall compatibility. For information on known limitations, see the [Known Limitations for Mac](#mac-limitations) section below.
 
@@ -85,7 +84,7 @@ The fix for this is to install *Security Intelligence Update for Microsoft Defen
 
 ### Hardware Specifications {#hardware}
 
-Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2), with the following additional requirements:
+Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 11](https://www.microsoft.com/en-gb/windows/windows-11-specifications#table1), with the following additional requirements:
 
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB
 * **RAM** – recommended 16GB or more depending on the size of your app and how many instances of Studio Pro you want to have open at the same time

@@ -34,8 +34,8 @@ However, some organizations may require markings for public information indicati
 The following controls are related to this control:
 
 * AC-16
-* PL-2
-* RA-3
+* [PL-02](/private-mendix-platform/nist-controls/pl-02/)
+* [RA-03](/private-mendix-platform/nist-controls/ra-03/)
 
 For more information, refer to the FIPS Publication 199.
 

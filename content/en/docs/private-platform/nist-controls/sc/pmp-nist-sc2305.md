@@ -26,7 +26,7 @@ Reliance on certificate authorities (CAs) for the establishment of secure sessio
 
 The following controls are related to this control:
 
-* SC-13
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 ## Responsibility
 

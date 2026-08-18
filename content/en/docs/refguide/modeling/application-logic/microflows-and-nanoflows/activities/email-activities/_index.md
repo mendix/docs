@@ -14,4 +14,4 @@ The activities described in this section are the **Email Activities** section of
 
 The following are the Email activities you can use in your microflow:
 
-- [Send Email](/refguide/send-email-action/)
+* [Send Email](/refguide/send-email-action/)

@@ -26,8 +26,8 @@ Selection of cryptographic mechanisms is based on the need to protect the confid
 
 The following controls are related to this control:
 
-* AC-19
-* SC-12
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* [SC-12](/private-mendix-platform/nist-controls/sc-12/)
 
 ## Responsibility
 

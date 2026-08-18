@@ -24,12 +24,12 @@ The organization employs the principle of least privilege, allowing only authori
 
 Organizations employ least privilege for specific duties and information systems. The principle of least privilege is also applied to information system processes, ensuring that the processes operate at privilege levels no higher than necessary to accomplish required organizational missions/business functions. Organizations consider the creation of additional processes, roles, and information system accounts as necessary, to achieve least privilege. Organizations also apply least privilege to the development, implementation, and operation of organizational information systems.
 
-* AC-02
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-05
-* CM-06
-* CM-07
-* PL-02
+* [AC-05](/private-mendix-platform/nist-controls/ac-05/)
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
+* [CM-07](/private-mendix-platform/nist-controls/cm-07/)
+* [PL-02](/private-mendix-platform/nist-controls/pl-02/)
 
 ## Responsibility
 

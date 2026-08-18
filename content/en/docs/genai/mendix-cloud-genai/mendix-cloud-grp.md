@@ -47,6 +47,7 @@ The Mendix Cloud GenAI Resource Packs provide access to the following models:
 | Anthropic Claude Haiku 4.5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Sonnet 4.5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Sonnet 4.6 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
+| Anthropic Claude Sonnet 5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Sonnet 3 | Text | Mendix Cloud Canada (Montreal) | NO | ca-central-1 |
 | Anthropic Claude Opus 4.6 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Opus 4.7 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
@@ -74,6 +75,7 @@ For example, if you allocate 50 Cloud Tokens per month, your resource receives 5
 | Claude Haiku 4.5 | 35.81 | 179.07 |
 | Claude Sonnet 4.5 | 107.44 | 537.21 |
 | Claude Sonnet 4.6 | 107.44 | 537.21 |
+| Claude Sonnet 5 | 107.44 | 537.21 |
 | Claude Opus 4.6 | 179.07 | 895.35 |
 | Claude Opus 4.7 | 179.07 | 895.35 |
 | Claude Opus 4.8 | 179.07 | 895.35 |

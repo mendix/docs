@@ -29,9 +29,9 @@ The organization can either make a determination of the relative security of the
 
 The following controls are related to this control:
 
-* AC-18
-* CM-7
-* IA-2
+* [AC-18](/private-mendix-platform/nist-controls/ac-18/)
+* [CM-07](/private-mendix-platform/nist-controls/cm-07/)
+* IA-02
 
 ## Responsibility
 

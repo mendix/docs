@@ -26,12 +26,12 @@ The audit information includes all information needed to successfully audit info
 The following controls are related to this control:
 
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-6
-* MP-2
-* MP-4
-* PE-2
-* PE-3
-* PE-6
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* [MP-02](/private-mendix-platform/nist-controls/mp-02/)
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* PE-02
+* PE-03
+* PE-06
 
 ## Responsibility
 

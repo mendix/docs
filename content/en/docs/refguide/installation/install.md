@@ -102,7 +102,7 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
    4. Mendix Native Mobile Builder one-click installer
       * Rename the *latest.exe* executable to *mendix_native_mobile_builder.exe*
    5. Git for Windows (x64)
-      * Rename the *Git-2.43.0-64-bit.exe* executable to *git_for_windows_installer.exe*
+      * Rename the *Git-2.48.1-64-bit.exe* executable to *git_for_windows_installer.exe*
    6. Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64)
       * The *MicrosoftEdgeWebview2Setup.exe* does not need to be renamed
    7. Gradle

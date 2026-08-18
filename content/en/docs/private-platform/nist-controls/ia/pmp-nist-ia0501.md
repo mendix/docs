@@ -33,7 +33,7 @@ This control enhancement applies to single-factor authentication of individuals 
 
 The following controls are related to this control:
 
-* IA-6
+* IA-06
 
 ## Responsibility
 

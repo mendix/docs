@@ -19,9 +19,9 @@ The separation of user roles and module roles means that modules can be self-con
 End-users of your application only see the user roles and not the underlying module roles.
 
 {{% alert color="warning" %}}
-The effects of changes to user roles are not immediately reflected in a running app. This means that your app can show outdated pages or incorrect data. For more information, refer to the documentation on [persistent sessions](/refguide/clustered-mendix-runtime/#sessions-are-always-persistent).
+The effects of changes to user roles are not immediately applied to end-users who are signed in to the app. End-users need to sign out and sign in again to pick up their new roles. This means that your app can show the wrong pages or data. For more information, refer to the documentation on [persistent sessions](/refguide/clustered-mendix-runtime/#sessions-are-always-persistent).
 
-Mendix recommends that you do NOT use this feature to create a dynamic UI as these changes will not take effect immediately. 
+Mendix recommends that you do NOT use user role changes to create a dynamic UI as these changes do not take effect immediately. 
 {{% /alert %}}
 
 ## Managing User Roles
@@ -49,15 +49,15 @@ General properties of user roles are described in the table below:
 | Property | Description |
 | --- | --- |
 | Name | The name of the user role. This name is shown to end-users who can create or edit user accounts in the application. Blank apps usually start with the `User` and `Administrator` user roles. |
-| Documentation | Additional information about the user role. This information is shown to end-users who can create or edit user accounts in the application. |
+| Documentation | Additional information about the user role. This information helps you to assign the correct module roles to each user role. |
 | Module roles | A list of module roles whose access rights are added to this user role. An end-user that is assigned this user role gets all access rights of the module roles of that user role. |
-| Check security | Specifies whether the consistency of security settings is checked for this user role.<br/>You can choose to not check security for a user role. For example, user roles that are used only for web service end-users do not need to be checked because they never sign in to the client. For more information on the security check, see the [Check Security](/refguide/app-security/#check-security) section of *App Security*. |
+| Check security | Specifies whether Studio Pro checks during development that security settings for this user role are consistent.<br/>You can choose to not check security for a user role. For example, user roles that are used only for web service end-users do not need to be checked because they never sign in to the client. For more information on the security check, see the [Check Security](/refguide/app-security/#check-security) section of *App Security*. |
 
 ### User Management Properties {#user-management}
 
 A user role can be allowed to manage end-users depending on their user roles. These roles are called manageable roles (or grantable roles).
 
-End-users who have this user role can create, view, edit, and delete end-users with the selected roles, provided they do not also have a user role which is not selected. They can grant or remove the selected user roles, but not user roles which are not selected.
+End-users who have this user role can create, view, edit, and delete end-users with the selected roles, provided they do not also have a user role which is not selected.
 
 Take for example an app with three defined user roles: `User`, `Administrator`, and `SubAdministrator`. Assume that you are configuring the `SubAdministrator` user role. The `SubAdministrator` user role has only the `User` user role as a manageable role.
 
@@ -85,6 +85,17 @@ If the **Select / deselect all** box is checked (that is, all roles are manageab
 {{% alert color="info" %}}
 Internally, user management properties are translated into implicit entity access rules for **System.User**. This means that they are not applied in microflows that do not check entity access.
 {{% /alert %}}
+
+### What Can User Roles Manage?
+
+Users who can manage an end-user can make the following changes:
+
+* UserRoles – Grant or remove the selected user roles, but only those user roles which are selected under **User management**
+* Name
+* User_TimeZone
+* Blocked
+* Active
+* User_Language
 
 ## Read More
 

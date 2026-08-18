@@ -42,6 +42,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | Menu | Studio Pro 11.11 | |
 | Data Transformers | Studio Pro 11.12 | |
 | JSON Structures | Studio Pro 11.13 | |
+| Change Data Capture | Studio Pro 11.14 | |
 
 ### Maia Make Standalone Capabilities
 

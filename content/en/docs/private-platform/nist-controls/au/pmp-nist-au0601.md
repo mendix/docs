@@ -26,8 +26,8 @@ Organizational processes benefiting from integrated audit review, analysis, and 
 
 The following controls are related to this control:
 
-* AU-12
-* PM-7
+* [AU-12](/private-mendix-platform/nist-controls/au-12/)
+* PM-07
 
 ## Responsibility
 

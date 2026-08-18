@@ -26,7 +26,7 @@ This control enhancement provides additional physical security for those areas w
 
 The following controls are related to this control:
 
-* PS-2
+* [PS-02](/private-mendix-platform/nist-controls/ps-02/)
 
 ## Responsibility
 

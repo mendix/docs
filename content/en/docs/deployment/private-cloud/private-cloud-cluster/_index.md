@@ -206,13 +206,31 @@ At the moment, the `baseOSImageTagTemplate` can be set to one of the following v
 
 * `ubi8-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 8 Micro images; this option can be used for some cases where backward compatibility is needed.
 * `ubi9-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 9 Micro images; this is the default option.
+* `hi-1-jre{{.JavaVersion}}-entrypoint` - to use [Red Hat Hardened Images](https://www.redhat.com/en/products/hardened-images)
 
 {{% alert color="info" %}}
-
-Future Studio Pro releases will have an option to use alternative (newer) LTS versions of Java, such as Java 17 or Java 21.
-
 If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA. Because of that, Java 17 or Java 21-based applications should use the Operator in version 2.15.0 or above.
+{{% /alert %}}
 
+{{% alert color="info" %}}
+Red Hat Hardened Images do not provide images for Java 8, 11, or 17. Only Java 21 is supported at the moment.
+
+To use Hardened Images, upgrade to Mendix 11, or any supported LTS version of Mendix.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+At this time, to improve security and remove unnecessary components, Hardened Images for Mendix apps are shipped without Bash or other standard UNIX tools.
+
+The recommended way to run diagnostics is using [ephemeral debug containers](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#ephemeral-container).
+
+Any non-root container can be attached to a Mendix app pod and can have access to the Mendix app's filesystem and processes.
+For example, this command can be used to attach a curl container to a pod (replace `$POD_NAME` with the name of the target pod):
+
+```shell
+kubectl debug $POD_NAME --target mendix --image registry.access.redhat.com/hi/curl:latest-builder --profile restricted -it -- /bin/bash
+```
+
+This debug container will share the process space with the Mendix app, and the Mendix app container's filesystem will be mounted into `/proc/1/root`.
 {{% /alert %}}
 
 ### Endpoint (network) Configuration {#advanced-network-settings}
@@ -223,9 +241,9 @@ For information on using advanced network configuration settings, see [Network I
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-### Mendix App Deployment settings {#advanced-deployment-settings}
+### Mendix App Deployment Settings {#advanced-deployment-settings}
 
-The OperatorConfiguration contains the following user-editable options for configuring Mendix app Deployments (Pods):
+Users can edit the following `OperatorConfiguration` options for configuring Mendix app deployments (pods):
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -245,8 +263,8 @@ spec:
 
 You can change the following options:
 
-* **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
-* **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
+* **runtimeAutomountServiceAccountToken** – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
+* **runtimeDeploymentPodAnnotations** – specify default annotations for Mendix app Pods
 
 ### Mendix App Resource Customization {#advanced-resource-customization}
 

@@ -29,7 +29,7 @@ Atypical usage includes, for example, accessing information systems at certain t
 
 The following controls are related to this control:
 
-* CA-7.
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/).
 
 ## Responsibility
 

@@ -11,7 +11,7 @@ description: "Native Template 14 release notes"
 
 ### Improvements
 
-- We upgraded the Android SDK version to 36.
+* We upgraded the Android SDK version to 36.
 
 ## 14.1.20
 

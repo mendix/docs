@@ -12,6 +12,8 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 
 * A module ID can now be passed to the element selector for the `selectedElementId` property, and the corresponding module will be preselected and expanded. This will allow the user to directly create a new document of the desired type in that module.
 
+* We improved the UI of the Extensions Overview to look more modern and consistent with the rest of Studio Pro.
+
 ## Version 11.12.0
 
 * We removed the elements helper methods (`add*()`, `get*()`, `getContainer()`, and `delete()`) from the Model API types.

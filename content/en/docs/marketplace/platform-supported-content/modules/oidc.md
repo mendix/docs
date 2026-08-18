@@ -411,6 +411,23 @@ For Entra ID access to APIs through an access token, in addition to the configur
 
 Now, you can acquire tokens which can be validated using JWKS URI.
 
+#### Configuring Optional Claims for User Attributes {#entra-optional-claims}
+
+By default, Microsoft Entra ID does not include user attribute claims such as `given_name` (first name) and `family_name` (last name) in the ID token, even when the `profile` scope is requested. These claims are required if you want to map a user's display name during provisioning. To make these claims available, add them as optional claims in the Entra App Registration:
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+2. Go to **Entra ID** > **App registrations** and select your application.
+3. In the left menu, select **Token configuration** and click **Add optional claim**.
+4. Select **ID** as the **Token type**.
+5. Select the claims you need, for example, `given_name` and `family_name`.
+6. Click **Add**.
+
+After completing these steps, the claims will be included in the ID token and will be available for attribute mapping in the Mendix OIDC SSO configuration.
+
+{{% alert color="info" %}}
+If `given_name` or `family_name` are present in your ID token after adding them as optional claims but do not appear in the ****Add Claim** dropdown in the Mendix OIDC configuration, see [Creating IdP Attribute Manually](/appstore/modules/oidc/#creating-idp-attribute-manually) for steps to add these claims manually.
+{{% /alert %}}
+
 #### Amazon Cognito Client Configuration
 
 For more information about configuring your app for OIDC with Amazon Cognito, see [Amazon Cognito: Configuring the Required Settings in Your Mendix App](/appstore/modules/aws/amazon-cognito/#cognito).
@@ -682,6 +699,12 @@ IdP attributes will be automatically created from the list of `claims_supported`
 
 Select the required attribute to use it in your mapping.
 
+{{% alert color="info" %}}
+If you are using Microsoft Entra ID and the expected claims (such as `given_name` or `family_name`) do not appear in the **Add Claim** dropdown, this is because Entra does not advertise these claims in its discovery endpoint. You have two options:
+
+* Add the claims as optional claims in the Entra App Registration's **Token configuration** tab. See Microsoft [Configuring Optional Claims for User Attributes](#entra-optional-claims) for steps.
+* Configure a Custom User Parsing Microflow in your ClientConfiguration. Use the `OIDC.CreateClaimsWithJSON` action to extract and map claims directly from the `OpenIDTokenJSON` parameter to your user entity attributes. For more information, see [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime). {{% /alert %}}
+
 ##### User Provisioning Using Your Custom User Entity{#custom_user_entity}
 
 If you want to use your custom user entity, which is a specialization of the `System.User` entity to store user information, select it in the **Custom user Entity (extension of System.User)** field by replacing the `Administration.Account` entity.
@@ -715,10 +738,10 @@ The section below shows the methods to configure user provisioning when using OI
 By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies to the following mapping:
 
 | ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
-| ----------------------------- | ----------------------------- |
-| sub                           | Name                          |
-| name                          | Fullname                      |
-| email                         | Email                         |
+| ----------------------------- | -----------------------------                | 
+| sub                           | Name                                         |
+| name                          | Fullname                                     |
+| email                         | Email                                        |
 
 {{% alert color="warning" %}}
 Do not change the `UserProvisioning_StandardOIDC` microflow. This may cause problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.

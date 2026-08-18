@@ -43,7 +43,7 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
     * **Marketplace** - Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
     * **Marketplace Approvals** - Optional. If enabled, contents that users publish to the private Marketplace require administrator approval before publishing.
     * **Marketplace Import** - Optional. Enables content import with an external source.
-    * **IDP** - Optional. Enable users to login using SSO by configuring your IdP integration.
+    * **IdP** - Optional. Enable users to login using SSO by configuring your IdP integration.
     * **Webhook** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
 
 7. Click **Run Upgrade**.

@@ -10,6 +10,24 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+## Release date: August 20, 2026
+
+* We have added support for two Microsoft Azure Marketplace plans: Standard Plan and Just-in-time (JIT) access. The Mendix on Azure portal now identifies and manages JIT and standard environments separately.
+* We have implemented JIT request creation, polling, and status management in the Mendix on Azure portal for environment creation and configuration changes.
+* We have added the ability to schedule and trigger infrastructure upgrades for both JIT and regular environments, enabling quarterly upgrades with proper approvals.
+* We have updated Spacelift configuration to support JIT environments.
+* We have added scheduling capabilities for JIT requests, allowing quarterly upgrades to be executed with proper approvals.
+* We have fixed an issue where cluster initialization failed due to missing environment variables in Spacelift.
+* We have added automatic Jira ticket creation for failed infrastructure upgrade stacks to track and resolve failures.
+* We have added an explicit consent checkbox for log sharing and direct environment access when creating Mendix on Azure support tickets in the portal.
+* We have fixed the PostgreSQL version in Mendix on Azure to version 17, aligning with Mendix Cloud.
+* We have resolved an issue where the Coastguard backup pod was evicted mid-backup for exceeding the 5Gi ephemeral-storage limit, which left orphaned snapshots stuck in pending state.
+* We have fixed an issue where logs were not attached to manually created support tickets.
+* We have resolved an issue where users were unable to download environment backups.
+* We have added Terraform lifecycle protection for maintenance configurations, preventing AKS maintenance windows from being overwritten by Spacelift drift. You can now safely configure maintenance windows via Azure Portal or CLI without them being reset by Terraform runs.
+* We have added AKS maintenance configuration actions to the allowed customer actions. You can now set maintenance windows directly in the Azure portal.
+* We have provided default (disabled) Grafana alert rules aligned with public Mendix Cloud defaults.
+
 ## Release date: July 2, 2026
 
 * We have improved managed app creation in the Mendix on Azure portal by adding guidance that the selected deployment region cannot be changed after app creation.

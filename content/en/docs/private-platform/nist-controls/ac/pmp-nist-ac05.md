@@ -35,10 +35,10 @@ Separation of duties addresses the potential for abuse of authorized privileges 
 The following controls are related to this control:
 
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-6
-* PE-3
-* PE-4
-* PS-2
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* PE-03
+* PE-04
+* [PS-02](/private-mendix-platform/nist-controls/ps-02/)
 
 ## Responsibility
 

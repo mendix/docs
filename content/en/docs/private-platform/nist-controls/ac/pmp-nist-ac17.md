@@ -33,22 +33,22 @@ Remote access controls apply to information systems other than public web server
 
 The following controls are related to this control:
 
-* AC-2
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-18
-* AC-19
-* AC-20
-* CA-3
-* CA-7
-* CM-8
-* IA-2
-* IA-3
-* IA-8
-* MA-4
+* [AC-18](/private-mendix-platform/nist-controls/ac-18/)
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* [AC-20](/private-mendix-platform/nist-controls/ac-20/)
+* CA-03
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* * CM-08
+* IA-02
+* IA-03
+* [IA-08](/private-mendix-platform/nist-controls/ia-08/)
+* MA-04
 * PE-17
-* PL-4
-* SC-10
-* SI-4
+* PL-04
+* [SC-10](/private-mendix-platform/nist-controls/sc-10/)
+* [SI-04](/private-mendix-platform/nist-controls/si-04/)
 
 ## Responsibility
 

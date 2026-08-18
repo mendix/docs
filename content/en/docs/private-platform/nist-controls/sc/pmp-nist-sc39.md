@@ -27,13 +27,13 @@ Information systems can maintain separate execution domains for each executing p
 The following controls are related to this control:
 
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-4
-* AC-6
-* SA-4
-* SA-5
-* SA-8
-* SC-82
-* SC-3
+* [AC-04](/private-mendix-platform/nist-controls/ac-04/)
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* [SA-04](/private-mendix-platform/nist-controls/sa-04/)
+* [SA-05](/private-mendix-platform/nist-controls/sa-05/)
+* [SA-08](/private-mendix-platform/nist-controls/sa-08/)
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)2
+* SC-03
 
 ## Responsibility
 

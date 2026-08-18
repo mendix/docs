@@ -26,8 +26,8 @@ Cryptographic key management and establishment can be performed using manual pro
 
 The following controls are related to this control:
 
-* SC-13
-* SC-17
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
+* [SC-17](/private-mendix-platform/nist-controls/sc-17/)
 
 For more information, refer to the NIST Special Publications 800-56, and 800-57.
 

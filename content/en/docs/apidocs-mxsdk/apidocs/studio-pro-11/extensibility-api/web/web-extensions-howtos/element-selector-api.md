@@ -284,8 +284,7 @@ The optional query parameter allows you to filter selector results:
 
 ## Preselecting Elements
 
-It is also possible to pass an element ID as the `selectedElementId` property of the `Selector`. This ID can be either a Document, an Entity, or a Module. If a Document or Entity, then the corresponding node on the selector form will show as selected.
-If the elementID belongs to a Module, then the corresponding node will appear selected and already expanded. It will also enable the `New` button right away, allowing the user to immediately create a new document in that selected module.
+You can also pass an element ID as the `selectedElementId` property of the `Selector`. This ID can be either a Document, an Entity, or a Module. If a document or entity, the corresponding node on the selector form appears selected. If the ID belongs to a module, the corresponding node appears selected and  expanded, and the `New` button is enabled so the user can immediately create a new document in that module.
 
 ## Extensibility Feedback
 

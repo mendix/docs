@@ -1,7 +1,7 @@
 ---
 title: "Agents Kit 2"
 url: /agents/agents-kit-2/
-description: "Agents Kit 2: Lists the Agents Kit 2 components (starter apps, showcase apps, core modules, connectors, and MCP modules) and provides links to how-to guides and reference documentation for building agentic and generative AI apps in Studio Pro 11.12 and above."
+description: "Agents Kit 2 is the current version of Mendix Agents Kit for building agentic and generative AI apps in Studio Pro 11.12 and above. Explore starter apps, showcase apps, core modules, connectors, MCP modules, how-to guides, and reference documentation."
 weight: 50
 v11_12: true
 ---

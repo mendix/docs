@@ -157,6 +157,10 @@ Before deploying the Mendix Private Platform components, you must install the Me
 
 You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile.
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 #### Operator Installation Values
 
 ```yaml
@@ -196,6 +200,10 @@ operator_config:
 ### StoragePlan and Database Plan Configuration
 
 You must configure the storage and database plans in the Operator installation values, not in the Helmfile values for `mxplatform`.
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 #### Example: Azure Database and Storage with Workload Identity
 
@@ -265,6 +273,10 @@ For detailed Operator installation instructions, see [Installing and Configuring
 ## Quick Start
 
 Use the following templates to help you prepare your own Helmfile-based installation.
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 ```text
 # 1. Create your values file
@@ -381,6 +393,10 @@ mx-private-document-generation:
 
 ## Installation Commands
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 ### Recommended: Full Apply
 
 For most operations (such as upgrades or enabling and disabling components), use a full apply:
@@ -452,6 +468,10 @@ Before disabling `mxplatform`, perform the following actions::
 ## Global Configuration
 
 The following configuration applies to all components.
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 ### Image Registry
 
@@ -584,6 +604,10 @@ Component-level workload identity configuration overrides global settings.
 
 ##### Example Configurations
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 The following is an example of basic setup with static credentials:
 
 ```text
@@ -687,6 +711,10 @@ mx-privatecloud-license-manager:
 #### Integration with Mendix Operator
 
 The Mendix Operator must be configured to use PCLM for license management.
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 ```text
 # In Mendix Operator installation values
@@ -806,6 +834,10 @@ openssl rsa -in private.pem -pubout -out public.pem
 ```
 
 #### Example Configurations
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 ##### Minimal Setup
 
@@ -1001,6 +1033,10 @@ env:
 
 #### Example Configurations
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 ##### Basic
 
 ```text
@@ -1085,6 +1121,10 @@ env:
 | `serviceAccount.automount` | `true` | Yes - needs K8s API access |
 
 #### Example Configurations
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 ##### Basic
 
@@ -1192,6 +1232,10 @@ The JWT secret is automatically injected into the `SvixClient.JwtSecret` constan
 
 #### Example Configurations
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 ##### Basic
 
 ```text
@@ -1279,6 +1323,10 @@ The `mxplatform` component is used for Mendix application platform deployment.
 | `kubeAgentEnabled` | Set when `mxplatform-kube-agent.enable` is set to `true` | Enables build agent |
 
 #### Example Configurations
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 ##### Basic
 
@@ -1380,6 +1428,10 @@ Mxplatform-kube-agent is the Build agent for `mxplatform` app deployments.
 
 ##### Example
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 ```text
 mxplatform-kube-agent:
   enable: true
@@ -1401,6 +1453,10 @@ The wervice URL for Mendix apps is `http://document-generation.<namespace>:8085`
 
 ##### Example
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 ```text
 mx-private-document-generation:
   enable: true
@@ -1412,6 +1468,10 @@ mx-private-document-generation:
 ```
 
 ## Container Registry Configuration
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 ### Azure Container Registry (ACR) with AKS
 
@@ -1516,6 +1576,10 @@ The CSI driver uses the ServiceAccount's identity to authenticate to the vault a
 
 ### Example
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 ```text
 # Install CSI Secrets Store Driver
 helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
@@ -1536,6 +1600,10 @@ helm install vault-csi-provider hashicorp/vault-csi-provider --namespace kube-sy
 | `mx-privatecloud` | Authenticator and Collector database credentials |
 | `svix-server` | PostgreSQL and Redis connection strings |
 | `mxplatform` | PCLM credentials, admin passwords, database credentials, storage credentials |
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 #### Configuration Pattern
 
@@ -1699,6 +1767,10 @@ For Azure Database for PostgreSQL with Managed Identity, ensure that you fulfill
 * The federated credential must map the `ServiceAccount` to Managed Identity.
 
 #### Configuration Examples
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 ##### Example 1
 
@@ -1881,6 +1953,10 @@ When `UseStoragePlanwithIRSA` is set to `true`, the Mendix Operator creates the 
 
 #### Example
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 To configure an Azure Storage Plan with Managed Identity, perform the following steps:
 
 1. Create the StoragePlans with Managed Identity.
@@ -1987,6 +2063,10 @@ Both approaches must control the ServiceAccount annotations, but in different wa
 
 ##### Approach 1: Workload Identity (StoragePlan)
 
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
 This approach secures how your Mendix application connects to its database and storage at runtime with passwordless runtime database and storage access.
 
 ```text
@@ -2018,6 +2098,10 @@ This secures the following:
 Installation secrets (PCLM password, admin password) are still in the values file.
 
 ##### Approach 2: Secret Provider Class
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
 
 This approach secures centralized installation and configuration secrets by retrieving them from Azure Key Vault during Helm installation.
 

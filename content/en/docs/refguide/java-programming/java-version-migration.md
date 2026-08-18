@@ -53,4 +53,4 @@ In Java versions below 21, a period is included at the end of an abbreviated mon
 
 ## TimeZone IDs
 
-Locale data updates in Java version 25 cause some timezones to have new IDs. For example "GMT-05:00" is now named "America/Panama".
+Locale data updates in Java version 25 assign new IDs to some time zones. For example, `GMT-05:00` is now named `America/Panama`.

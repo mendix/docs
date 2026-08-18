@@ -10,7 +10,11 @@ weight: 70
 If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps:
 
 1. Ensure that your Mendix Operator version is 2.12 or above.
-2. If you are upgrading from version 1.2.x to 2.x, make a backup of the Private Mendix Platform database by using the following command. The backup is required if you need to [roll back the upgrade]{#rollback}.
+2. If you are upgrading from version 1.24 LTS to 2.8 LTS, make a backup of the Private Mendix Platform database by using the following command. The backup is required if you need to [roll back the upgrade]{#rollback}.
+
+    {{% alert color="info" %}}
+    Private Mendix Platform does not support direct upgrades from versions older than 1.24 LTS. To upgrade from a version older than 1.24 LTS, upgrade first to version 1.24, and then upgrade to version 2.8 LTS by following the instructions below.
+    {{% /alert %}}
 
     ```tex
     pg_dump -h <DB host> -U <DB mster username> -d <database name like mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx> -Fc  -f <local path like /tmp/pmp_db_backup.dump>
@@ -52,24 +56,24 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
 
 ### Rolling Back An Upgrade {#rollback}
 
-To restore the Private Mendix Platform database to version 1.2.x and downgrade Private Mendix Platform from version 2.x to 1.2x, perform the following steps:
+To restore the Private Mendix Platform database to version 1.24 LTS and downgrade Private Mendix Platform from version 2.8 LTS to 1.24 LTS, perform the following steps:
 
 1. Take note of the current number of Private Mendix Platform replicas, and then scale the number down to 0.
 2. Ensure that the Private Mendix Platform pods have been terminated.
-3. For security, back up your Private Mendix Platform 2.x database (`mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx`).
-4. Delete the Private Mendix Platform 2.x database and create a new database with the same name by using the following commands:
+3. For security, back up your Private Mendix Platform 2.8 database (`mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx`).
+4. Delete the Private Mendix Platform 2.8 database and create a new database with the same name by using the following commands:
 
     1. `DROP DATABASE mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx"`
     2. `CREATE DATABASE mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx"`
 
-5. Restore the Private Mendix Platform 1.2x database by using the following command:
+5. Restore the Private Mendix Platform 1.24 database by using the following command:
 
     ```text
     pg_restore -U <DB master user> -h <DB host> -d <database name like mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx> -v /tmp/pmp_db_backup.dump
     ```
 
 6. Connect to the `mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx` database, and verify that all required Private Mendix Platform tables are present and have been successfully restored.
-7. Use the Private Mendix Platform 1.2x installer to change the Private Mendix Platform image from 2.x to 1.2x
+7. Use the Private Mendix Platform 1.24 installer to change the Private Mendix Platform image from 2.8 to 1.24.
 8. Scale the number of Private Mendix Platform replicas to the previous value, ensure that at least one Private Mendix Platform pod is running.
 9. Check the Private Mendix Platform pod status and logs. 
 10. If any permissions are missing after rebuilding the database, manually reconfigure the Database Owner and the required Database, Schema, Table, and Sequence permissions.

@@ -144,6 +144,8 @@ To use custom user provisioning, do the following:
     * has a parameter of type String named *RequestJson*
     * returns a `System.User` object
 
-### Accessing Web Application
+### Mendix Cloud Portal Runtime Setting
 
-For accessing the web application set the **ApplicationRootUrl** in the **Runtime** tab of Mendix Cloud Portal while deploying your app. Set the **ApplicationRootUrl** in the following format: `http://<tenant>.<region>`.sws.siemens.com/`<appname>-<provider>`.
+Set the **ApplicationRootUrl** in the **Runtime** tab of Mendix Cloud Portal when deploying your app. Use the following format:
+`http://<tenant>.<region>`.sws.siemens.com/`<appname>-<provider>`.
+Once configured, you can access the web application using the same URL.

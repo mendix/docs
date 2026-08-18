@@ -29,7 +29,7 @@ This control enhancement recognizes that there are circumstances where individua
 
 The following controls are related to this control:
 
-* CA2
+* CA-02
 
 ## Responsibility
 

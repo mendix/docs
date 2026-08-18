@@ -47,7 +47,7 @@ Maintenance windows and planned maintenance are defined in Coordinated Universal
 
 Follow the instructions below to configure a maintenance window.
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment that you want to configure.
 

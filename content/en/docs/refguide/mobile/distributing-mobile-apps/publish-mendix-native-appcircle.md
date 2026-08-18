@@ -102,7 +102,6 @@ For Android, you have two options:
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/android-profile-create.png" alt="Testing Distribution module in Appcircle" class="no-border" >}}
 
-
 {{% alert color="warning" %}}
 The Bundle ID (iOS) and Package Name (Android) cannot be changed after the profile is created. Make sure these are correct before saving.
 {{% /alert %}}

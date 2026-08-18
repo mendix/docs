@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-Located in the [navigation pane](/developerportal/#navigation-pane) of **Apps**, **Overview** lets you see your app activity and the most important information about your project at a glance.
+Located in the **Projects** [navigation pane](/developerportal/#navigation-pane), **Overview** lets you see your app activity and the most important information about your project at a glance.
 
 At the top of the page, you can find key information about your app, such as its logo, name, and description. If no description is provided, there is a placeholder text. With the **App Settings** permission, you can change the logo, name, and description of the app on the [Settings](/developerportal/general-settings/) page.
 

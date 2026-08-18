@@ -41,6 +41,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | Navigation | Studio Pro 11.11 | |
 | Menu | Studio Pro 11.11 | |
 | Data Transformers | Studio Pro 11.12 | |
+| JSON Structures | Studio Pro 11.13 | |
 
 ### Maia Make Standalone Capabilities
 
@@ -55,7 +56,6 @@ The following table lists Maia Make Standalone Capabilities and the Studio Pro v
 | [Maia Web Fetch](/refguide/maia-web-fetch/) | Fetches and reads content from public websites and APIs. | Studio Pro 11.10 | |
 | [Maia Agent Skills](/refguide/maia-agent-skills/) | Extends Maia with reusable knowledge. | Studio Pro 11.11 | |
 | [Maia Agent Instructions](/refguide/maia-instructions/) | Extends Maia with instructions to be followed with every prompt | Studio Pro 11.12 | |
-
 
 ### Maia Make General Capabilities
 
@@ -72,6 +72,7 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Folder structure support | Organizes new documents into existing folders and follows your established folder hierarchy when generating content. | Studio Pro 11.10 | Not supported for pages. |
 | Themes and styling | Allows Maia to modify theme variables, create custom styling, and manage design properties. | Studio Pro 11.12 | |
 | Markdown attachment support | Allows you to provide Markdown documents as input to help Maia better understand your requirements. | Studio Pro 11.12 | |
+| Explain and solve consistency errors | Allows you to use Maia to explain or solve problems by right-clicking the item in the **Errors** pane. | Studio Pro 11.12.1 | |
 
 ## Using Maia Make Capabilities
 

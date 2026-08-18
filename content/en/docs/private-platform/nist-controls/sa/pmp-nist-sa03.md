@@ -37,9 +37,9 @@ The effective integration of security requirements into enterprise architecture 
 
 The following controls are related to this control:
 
-* AT-3
-* PM-7
-* SA-8
+* AT-03
+* PM-07
+* [SA-08](/private-mendix-platform/nist-controls/sa-08/)
 
 For more information, refer to the NIST Special Publications 800-37 and 800-64.
 

@@ -30,7 +30,7 @@ Security-relevant events include the identification of a new threat to which org
 
 The following controls are related to this control:
 
-* AC-4. 
+* [AC-04](/private-mendix-platform/nist-controls/ac-04/). 
 
 ## Responsibility
 

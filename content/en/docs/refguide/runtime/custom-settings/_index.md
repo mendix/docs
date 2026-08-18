@@ -20,7 +20,7 @@ In a multi-node setup, use the same values for all settings (except `com.mendix.
 
 Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on Mendix Cloud or SAP Business Technology Platform, you can access these settings by opening your app in [Apps](https://sprintr.home.mendix.com/) and choosing **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
+If you are running your app on Mendix Cloud or SAP Business Technology Platform, you can access these settings by opening your app in [Projects](https://projects.home.mendix.com/) and choosing **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
 * the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about Mendix Cloud
 * the [Runtime tab](/developerportal/deploy/sap-cloud-platform/environments/#runtime-tab) section of *Environment Details on SAP BTP* for information about the SAP BTP

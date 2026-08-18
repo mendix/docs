@@ -10,6 +10,92 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.1.0
+
+### Release date: August 13, 2026
+
+### Workstation Management
+
+#### New Features
+
+* Enhanced system information - Workstation Management can now receive and display additional system information from clients, including the specific client type.
+
+### Workstation Client
+
+#### New Features
+
+* Improved client reporting - The client now sends detailed installation information (**Client Type**) to the Management system, providing better visibility into your deployment.
+* Consistent device states - We have refactored how devices are managed to ensure they consistently report their status as available, connected, or in an error state.
+
+#### Improvements
+
+* Enhanced Bluetooth reliability - Bluetooth devices now actively scan (poll) for status updates, and peripherals not seen within 30 seconds are automatically marked as unavailable. Connect can now be aborted through disconnecting. Disconnects are no longer marked as an error. Scanning state and seen devices are now visible in diagnostics.
+* Card reader - Card connection failure no longer results in an error and make the device unusable.
+* Improved printer status - Printers now actively poll to keep their availability status up-to-date.
+* Serial device polling - Serial devices now poll for status whenever a device is not connected, ensuring you always have the latest availability information. Disconnects are no longer marked as error.
+* TCP client validation - TCP client connections now include a 10-second timeout, can be aborted through disconnecting, and include validation to ensure the host and port are correctly configured.
+* Configuration warnings - The system now provides warnings if it detects potentially incorrect serial or TCP delimiter configurations, helping you avoid setup issues.
+
+### Workstation Connector
+
+#### Bug Fixes
+
+* Connection stability - Fixed an issue that occasionally prevented the connector from successfully reconnecting to devices after a period of Workstation Client downtime.
+
+## 4.0.0
+
+### Release date: July 16, 2026
+
+{{% alert color="info" %}}
+We are thrilled to announce the General Availability (GA) release of our Workstation Management solution. This release brings significant new capabilities, especially around printer management, usage reporting, and introduces the option for private hosting.
+{{% /alert %}}
+
+### Workstation Management
+
+#### New Features
+
+* Default printer usage - You can now create a printer device without specifying a name. The Workstation Client will then automatically connect to the default printer as defined by the operating system, simplifying printer setup.
+* PDF Printing Support (Windows) - We have added support for PDF printing on Windows Workstation Clients, expanding your printing capabilities.
+* Enhanced usage report filters - The usage report now includes a workspace environment type filter (Test, Acceptance, or Production). This allows for more granular analysis of Workstation usage across different stages of your deployment.
+* More accurate usage metrics - We have refined the usage report by switching unique client counting from Station ID to Client ID and added an environment-type filter. This provides more precise and insightful usage data.
+* Downloadable company usage report - You can now download the company usage report, making it easier to analyze and share your Workstation usage data offline.
+* Device class and station group management - We have introduced full Create, Read, Update, and Delete (CRUD) capabilities for device classes and station groups. Newly created station groups and device classes are automatically selected during station creation, editing, or acceptance, streamlining your workflow.
+
+#### Improvements
+
+* Dependency security and updates - We have fixed some vulnerabilities in dependencies, and updated the modules to enhance security and performance.
+
+#### Bug Fixes
+
+* We have fixed a bug that occurred with trailing whitespace in the URLs of imported applications within JSON files, ensuring smoother app imports.
+
+### Private Workstation Management
+
+#### New Features
+
+* Self-hosting option - With this GA release, we are introducing Private Workstation Management, providing you with the option to self-host the management solution. This offers greater control and flexibility over your deployment.
+
+{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Customer Success Manager. {{% /alert %}}
+
+### Workstation Client
+
+#### New Features
+
+* Anonymized Client ID reporting - The Workstation Client now generates and sends an anonymized Client ID, derived from the machine's hardware/OS identifier, to the Management server. This enables more accurate and privacy-conscious usage metrics.
+* Single WebSocket connection for multiple devices - The Workstation Client can now connect to multiple devices over a single WebSocket connection, improving efficiency and reducing overhead.
+* New `SendDeviceRequest` API Support - The client now supports the new `SendDeviceRequest` API, allowing for more direct and streamlined communication with devices.
+
+#### Bug Fixes
+
+* We have fixed some issues with non-UTF-8 delimiter or suffix encoding in serial, TCP-IP client, and TCP-IP server devices, ensuring reliable data transmission.
+
+### Workstation Connector
+
+#### New Features
+
+* Single WebSocket communication - The Workstation Connector now supports communication over a single WebSocket connection, enhancing performance and simplifying network configurations in the future.
+* New `SendDeviceRequest` JSA - A new SendDeviceRequest JSA (JavaScript API) has been introduced. This API returns the device response or error directly, and the request is not passed to the onMessage channel. This feature is applicable only on devices that support requests and requires Workstation Client 4.0 or later for full usage.
+
 ## 3.8.0
 
 ### Release date: June 18, 2026
@@ -133,7 +219,7 @@ If more than one station is found for a given computer name during bulk registra
     * Manage events in a nanoflow with the new `SubscribeToObjectChanges` and `WaitForObjectChanges` nanoflow actions.
     * Benefit from easier configuration of common use cases with the new `ConnectDevice`, `SendDeviceMessage` and `WaitForDeviceMessage` nanoflow actions.
 
-For more information, see [Nanoflows](/mendix-workstation/connector/#javascript-actions) and [Widgets](/mendix-workstation/connector/#widgets).
+For more information, see [Nanoflows](/mendix-workstation/build-app/#javascript-actions) and [Widgets](/mendix-workstation/build-app/#widgets).
 
 #### Improvements
 

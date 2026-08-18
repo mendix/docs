@@ -14,7 +14,7 @@ A user role aggregates a number of access rights to app documents such as data, 
 
 Every user role has one or more [module roles](/refguide/module-security/#module-role). End-users with that user role are granted all the access rights defined for those module roles. A typical user role has the **System.User** module role and at least one other module role.
 
-The separation of user roles and module roles means that modules can be self-contained (independent of the app in which it is defined or used), This allows it to be reused in different apps and/or published to the Marketplace.
+The separation of user roles and module roles means that modules can be self-contained (independent of the app in which it is defined or used). This allows it to be reused in different apps or published to the Marketplace.
 
 End-users of your application only see the user roles and not the underlying module roles.
 
@@ -29,7 +29,7 @@ Mendix recommends that you do NOT use this feature to create a dynamic UI as the
 To access user roles, do the following:
 
 1. In the App Explorer, go to **App** > **Security**.
-1. In the **App Security** dialog, select the **User roles**.
+1. In the **App Security** dialog, select the **User roles** tab.
 
     {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" alt="App Security dialog with User roles tab selected, showing Administrator and User roles and their module roles" >}}
 
@@ -37,8 +37,8 @@ To access user roles, do the following:
 
 The user role properties are split into two sections:
 
-* [General](#general)
-* [User management](#user-management)
+* [General Properties](#general)
+* [User Management Properties](#user-management)
 
 {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-role-properties.png" class="no-border" alt="User Role 'Administrator' properties dialog showing General and User management sections" >}}
 
@@ -59,7 +59,7 @@ A user role can be allowed to manage end-users depending on their user roles. Th
 
 End-users who have this user role can create, view, edit, and delete end-users with the selected roles, provided they do not also have a user role which is not selected. They can grant or remove the selected user roles, but not user roles which are not selected.
 
-Take for example an app with two defined user roles: `User`, `Administrator`, and `SubAdministrator`. Assume that you are configuring the `SubAdministrator` user role. The `SubAdministrator` user role has only the `User` user role as a manageable role.
+Take for example an app with three defined user roles: `User`, `Administrator`, and `SubAdministrator`. Assume that you are configuring the `SubAdministrator` user role. The `SubAdministrator` user role has only the `User` user role as a manageable role.
 
 {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/manageable-roles.png" alt="User management section with only the User role selected as a manageable role" >}}
 
@@ -74,7 +74,7 @@ The following table shows which end-users an end-user with the `SubAdministrator
 ¹ The SubAdministrator can only grant or remove the `User` user role.
 ² Although `User` is a manageable role, User3 also has the `SubAdministrator` user role which is not a manageable role for a SubAdministrator.
 
-The **(No user roles)** manageable role allow this user role to manage end-users without a user role (for example, newly created end-users).
+The **(No user roles)** manageable role allows this user role to manage end-users without a user role (for example, newly created end-users).
 
 The **Select / deselect all** checkbox lets you select all the roles as manageable roles, or deselect them all.
 

@@ -632,7 +632,7 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
     pg_dump -h <DB host> -U <DB mster username> -d <database name like mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx> -Fc  -f <local path like /tmp/pmp_db_backup.dump>
     ```
     
-    A `pg_dump` tool with a version equal to or higher than database POSTGRES version is required.
+    A `pg_dump` tool with a version equal to or higher than the Postgres database version is required.
     
     If you are working within a pod that contains `pg_dump`, make sure to use the kubectl cp command to copy the backup to your local computer. This helps prevent the loss of the backup if the pod is deleted:
 

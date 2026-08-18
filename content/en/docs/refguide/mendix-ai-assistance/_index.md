@@ -104,9 +104,9 @@ The table below presents all the third-party services each Maia capability uses 
 | Maia | Third-Party Service | Data Sent to Third-Party Service |
 | --- | --- | --- |
 | Start with Maia | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
-| Maia Chat | [Llama 3.1 8B](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md) hosted in Mendix AWS environment | User prompts and the generated answers |
+| Maia Chat | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | User prompts and the generated answers |
 | Maia Learn | No third-party services used | N/A |
-| Maia Explain | [Llama 3.1 8B](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md) hosted in Mendix AWS environment | Project context to fulfill user prompt request |
+| Maia Explain | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
 | Best Practice Recommender | No third-party services used | N/A |
 | Logic Recommender | No third-party services used | N/A |
 | UI Recommender | No third-party services used | N/A |
@@ -117,9 +117,9 @@ The table below presents all the third-party services each Maia capability uses 
 | Maia for Workflows | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
 | Translation Generator | [Amazon Translate](https://aws.amazon.com/translate/) | All translatable texts in the application, for example, labels, button names, and menu items |
 | Validation Assist | No third-party services used | NA |
-| Maia Rewrite | [Llama 3.1 8B](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md) hosted in Mendix AWS environment | The draft question description from users |
-| Maia Summarize | [Llama 3.1 8B](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md) hosted in Mendix AWS environment | [Community](https://community.mendix.com/p/community) threads |
-| Maia Create User Story | [Llama 3.1 8B](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md) hosted in Mendix AWS environment | User prompts |
+| Maia Rewrite | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | The draft question description from users |
+| Maia Summarize | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | [Community](https://community.mendix.com/p/community) threads |
+| Maia Create User Story | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | User prompts |
 
 ## Best Practice for Maia Performance {#maia-performance-best-practice}
 

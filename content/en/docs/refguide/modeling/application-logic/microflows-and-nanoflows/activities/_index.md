@@ -122,6 +122,16 @@ These activities can only be used in microflows.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/increment-counter.png" alt="increment-counter" link="/refguide/metrics-increment-counter/" max-width=55% class="no-border" >}} | [Increment counter](/refguide/metrics-increment-counter/) | Allows you to increment a counter by 1. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/gauge.png" alt="gauge" link="/refguide/metrics-gauge/" max-width=55% class="no-border" >}} | [Gauge](/refguide/metrics-gauge/) | Allows you to specify the value of a gauge. |
 
+## Email Activities
+
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
+
+| Graphic | Name | Description |
+| --- | --- | --- |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/send-email.png" alt="send email" link="/refguide/send-email-action/" max-width=60% class="no-border" >}} | [Send Email](/refguide/send-email-action/) (microflows only) | Allows you to send an email directly from a microflow. |
+
 ## ML Kit Activities
 
 [ML Kit activities](/refguide/ml-kit-activities/) are used with a machine learning model.

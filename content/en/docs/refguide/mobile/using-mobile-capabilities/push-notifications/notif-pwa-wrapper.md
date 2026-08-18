@@ -47,6 +47,7 @@ This configures the native layer to receive push notifications from Firebase Clo
 {{% alert color="warning" %}}
 Push notifications only work on physical devices. Emulators and simulators do not have the necessary Firebase Cloud Messaging infrastructure to receive push notifications. Always test push notifications on real Android and iOS devices.
 {{% /alert %}}
+
 ## Installing Push Notifications Connector
 
 Add the Push Notifications Connector module to your app:
@@ -95,6 +96,7 @@ Add three **Call JavaScript Action** activities to retrieve device details:
 1. Add a **Create Object** activity to create a new `PushNotifications.DeviceRegistration` object.
 2. Assign the following attributes:
    * **DeviceType**: Use a decision based on the operating system:
+
      ```
      if $OperatingSystem = getKey(PushNotifications.DeviceSystemType.Android) then
          PushNotifications.DeviceType.Android
@@ -105,6 +107,7 @@ Add three **Call JavaScript Action** activities to retrieve device details:
      else
          empty
      ```
+
    * **RegistrationID**: `$PushToken`
    * **DeviceId**: `$DeviceInfo/UniqueId`
 
@@ -140,7 +143,7 @@ Download and install the [Events](https://marketplace.mendix.com/link/component/
 Create a new JavaScript action named `ListenToAppLifecycle` in your app with the following configuration:
 
 * Add one parameter of type **Nanoflow**:
-  * `onResume`
+    * `onResume`
 
 Use the following as the action's implementation:
 

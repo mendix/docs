@@ -233,7 +233,15 @@ This option sets the default page editor mode that your page opens in: **Structu
 
 ### Language {#language}
 
-This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
+This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, German (Beta), and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
+
+| Language               | Introduced | General Availability |
+| ---------------------- | ---------- | -------------------- |
+| Chinese                | 10.17      | 10.24                |           |
+| Japanese               | 10.17      | 10.24                |
+| Korean                 | 10.17      | 10.24                |
+| Portuguese (Brazilian) | 10.23      | TBD                  |
+| German                 | 11.13      | TBD       
 
 ### Editor Tabs Closing Policy {#closing-policy}
 

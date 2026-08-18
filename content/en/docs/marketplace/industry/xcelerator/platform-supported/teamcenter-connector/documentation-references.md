@@ -11,7 +11,7 @@ aliases:
 
 Teamcenter Connector services are provided through JAVA actions.
 
-You can refer to the [Teamcenter Connector Reference](/appstore/modules/siemens-plm/teamcenter-reference/) page.
+You can refer to the [Teamcenter Connector Reference](/appstore/industry/teamcenter-connector/teamcenter-reference/) page.
 
 ## Generating the SOA API Documentation Used in Active Workspace
 

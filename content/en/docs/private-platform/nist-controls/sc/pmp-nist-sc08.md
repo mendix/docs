@@ -28,8 +28,8 @@ Organizations relying on commercial providers offering transmission services as 
 
 The following controls are related to this control:
 
-* AC-17
-* PE-4
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* PE-04
 
 For more information, refer to the NIST Special Publications 800-52, 800-77, 800-81, 800-113, and 800-177.
 

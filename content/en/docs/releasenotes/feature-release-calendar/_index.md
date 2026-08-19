@@ -158,8 +158,7 @@ General Availability means that a feature is available for all users. This type 
 | Runtime Leaderless Mode | General Availability: Private Mendix Platform 2.8 (July 2026) |
 | Enhanced Key Vault support for Apps | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
 | Cluster Manager API | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
-| Multiple Build and Deploy Pipelines |
-| General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Multiple Build and Deploy Pipelines | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
 | Enhanced Logging, Events, and Metrics | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
 | CI/CD for Windows Server | Beta: Private Mendix Platform 2.9 (November 2026) |
 | Maia Operate on Private Mendix Platform | Beta: Private Mendix Platform 2.9 (November 2026) |

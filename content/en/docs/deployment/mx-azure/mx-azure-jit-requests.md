@@ -47,8 +47,16 @@ When deploying Mendix on Azure from the Azure Marketplace, you can select the JI
 
 {{< figure src="/attachments/deployment/mx-azure/jit-plan-selection.png" alt="Azure Marketplace plan selection showing JIT and Standard options" class="no-border" >}}
 
+After selecting the JIT plan, configure the JIT access settings in the **JIT Configuration** step:
+
+{{< figure src="/attachments/deployment/mx-azure/jit-enable-access.png" alt="Enable JIT access configuration" class="no-border" >}}
+
+Set the **Activation maximum duration** to 8 hours and choose **Automatic** approval mode for scheduled upgrades:
+
+{{< figure src="/attachments/deployment/mx-azure/jit-8hour-configuration.png" alt="JIT 8-hour activation duration configuration" class="no-border" >}}
+
 {{% alert color="info" %}}
-When configuring your JIT plan, set the **Activation maximum duration** to 8 hours. This ensures JIT API calls complete successfully during the approval window.
+Setting the **Activation maximum duration** to 8 hours ensures JIT API calls complete successfully during the approval window. Shorter durations may cause API call failures.
 {{% /alert %}}
 
 {{% alert color="info" %}}

@@ -151,7 +151,7 @@ The following table describes the possible statuses of a JIT request:
 |--------|-------------|----------------------|
 | **Pending** | Awaiting customer approval | Review and approve or deny |
 | **Approved** | Approved and ready for execution | None – portal proceeds automatically |
-| **Denied** | Customer denied the request | Operation cancelled |
+| **Denied** | Customer denied the request | Operation canceled |
 | **Expired** | Approval window closed | Request new operation |
 | **Executing** | Infrastructure operation in progress | Monitor progress |
 | **Complete** | Operation finished successfully | None |
@@ -200,31 +200,31 @@ For scheduled upgrades within your approved maintenance windows, you can configu
 
 ## Frequently Asked Questions
 
-### How long does a JIT approval last?
+### How Long Does a JIT Approval Last?
 
 JIT approvals are time-limited. For on-demand operations (environment creation or modification), approvals are valid for 2 hours. For scheduled upgrades, approvals are valid until the scheduled execution window.
 
-### Can I approve multiple environments at once?
+### Can I Approve Multiple Environments at Once?
 
 Yes, you can approve JIT requests for multiple environments from the Azure Portal JIT Requests page.
 
-### What happens if I do not approve in time?
+### What Happens if I Do Not Approve in Time?
 
-The JIT request expires and the operation is cancelled. For environment creation, you must restart the provisioning process. For scheduled upgrades, your environment is skipped and remains on the current infrastructure version.
+The JIT request expires and the operation is canceled. For environment creation, you must restart the provisioning process. For scheduled upgrades, your environment is skipped and remains on the current infrastructure version.
 
-### Can I switch from Standard Plan to JIT-Enabled Plan?
+### Can I Switch from Standard Plan to JIT-Enabled Plan?
 
 Plan changes are managed through the Microsoft Marketplace. Contact your Mendix account team for guidance on plan migration.
 
-### Do I need approval for every operation?
+### Do I Need Approval for Every Operation?
 
 JIT approval is required only for operations that involve Azure role assignments or infrastructure changes. Day-to-day application operations (deployments, scaling, monitoring) do not require JIT approval.
 
-### Who can approve JIT requests?
+### Who Can Approve JIT Requests?
 
 Users with Owner or Contributor roles on the Azure subscription where Mendix on Azure is deployed can approve JIT requests.
 
-### What if my approval request is stuck in Pending?
+### What if My Approval Request Is Stuck in Pending?
 
 If a request shows Pending for an extended period:
 
@@ -233,7 +233,7 @@ If a request shows Pending for an extended period:
 3. Check the portal for status updates.
 4. Contact Mendix support if the issue persists.
 
-### Can I view historical JIT requests?
+### Can I View Historical JIT Requests?
 
 Yes, historical JIT requests are available in the Azure Portal's JIT Requests page.
 

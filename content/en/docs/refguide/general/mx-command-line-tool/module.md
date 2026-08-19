@@ -117,7 +117,7 @@ For `--metadata`, enter one of the following values to control how Marketplace i
 * `take_existing` – Copy the identity fields from the module being replaced.
 * `erase` – Clear all identity fields.
 
-Regardless of the chosen strategy, `FromAppStore` is always inherited from the existing module, and `AppStoreVersion`/`AppStoreVersionGuid` fall back to the existing values when the incoming module does not provide them.
+Regardless of the chosen strategy, `FromAppStore` is always inherited from the existing module, and `AppStoreVersion` falls back to the existing values when the incoming module does not provide them.
 
 ### Examples
 

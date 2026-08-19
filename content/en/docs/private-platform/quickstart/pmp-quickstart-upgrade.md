@@ -63,8 +63,8 @@ To restore the Private Mendix Platform database to version 1.24 LTS and downgrad
 3. For security, back up your Private Mendix Platform 2.8 database (`mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx`).
 4. Delete the Private Mendix Platform 2.8 database and create a new database with the same name by using the following commands:
 
-    1. `DROP DATABASE mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx"`
-    2. `CREATE DATABASE mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx"`
+    1. `DROP DATABASE mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx;`
+    2. `CREATE DATABASE mendix_mxplatform_database_xxxxxxx_xxxx_xxxx_xxxx_xxxxxxxxxx;`
 
 5. Restore the Private Mendix Platform 1.24 database by using the following command:
 

@@ -99,7 +99,7 @@ To configure SMTP, run the following Azure CLI command, replacing the values wit
 az grafana update \
   --resource-group <your-resource-group> \
   --name <your-grafana-instance> \
-  --smtp enabled \
+  --smtp true \
   --host "smtp.example.com:587" \
   --user "<smtp-username>" \
   --password "<smtp-password>" \

@@ -272,11 +272,10 @@ Yes, historical JIT requests are available in the Azure Portal's JIT Requests pa
 * You are contacted for any required actions
 * Contact Mendix support if you need immediate assistance
 
-### Cannot add manual approval option
+### Cannot add manual approver
 
-**Symptoms:** Need to manually approve JIT requests for environments with auto-approval enabled.
+**Symptoms:** Unable to add a manual approver for JIT requests.
 
 **Resolution:**
 
-* Contact Microsoft support to adjust your auto-approval configuration
-* Auto-approval settings are managed in your Azure subscription
+* Contact Microsoft support for assistance with adding manual approvers to your subscription

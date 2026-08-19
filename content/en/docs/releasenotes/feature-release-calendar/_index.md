@@ -144,15 +144,24 @@ General Availability means that a feature is available for all users. This type 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Private Mendix Platform: Compliance with NIST-800, FIPS, FEDRAMP and DoD IL 4/5/6 | General Availability: June 2025 |
+| Compliance with NIST-800, FIPS, FEDRAMP and DoD IL 4/5/6 | General Availability: Private Mendix Platform 1.23 (June 2025) |
 | Secret Manager support for AWS, Azure, and Hashicorp | General Availability: Private Mendix Platform 1.24.3 LTS (November 2025) |
-| Dynamic Role Management | General Availability: Private Mendix Platform 2.0 (December 2025) |
-| Private Mendix Platform for Mx 11 | General Availability: Private Mendix Platform 2.4 (January 2026) |
-| Deployment Health Dashboard | General Availability: Private Mendix Platform 2.4 (January 2026) |
+| Dynamic Role, Group and User Management | General Availability: Private Mendix Platform 2.0 (December 2025) |
 | Software Composition Insights | General Availability: Private Mendix Platform 2.4 (January 2026) |
-| Maia with BYO-LLM on Private Mendix Platform | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
+| Studio Pro 11.6 MTS | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
+| Maia Make with BYO-LLM | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
 | Unified Deployment Experience with Agent-Interactor support | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
-| Download Portal Improvements and APIs | General Availability: March 2026 |
+| Granularized Permissions for Dynamic Role Management | General Availability: Private Mendix Platform 2.7 (June 2026) |
+| Enhanced API Coverage for Platform Actions | General Availability: Private Mendix Platform 2.7 (June 2026) |
+| Studio Pro 11.12 LTS | General Availability: Private Mendix Platform 2.8 (July 2026) |
+| Helm and Helmfile Support for Declarative Installations | General Availability: Private Mendix Platform 2.8 (July 2026) |
+| Runtime Leaderless Mode | General Availability: Private Mendix Platform 2.8 (July 2026) |
+| Enhanced Key Vault support for Apps | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Cluster Manager API | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Multiple Build and Deploy Pipelines | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Enhanced Logging, Events, and Metrics | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| CI/CD for Windows Server | Beta: Private Mendix Platform 2.9 (November 2026) |
+| Maia Operate on Private Mendix Platform | Beta: Private Mendix Platform 2.9 (November 2026) |
 
 ## Siemens Xcelerator (Integrations)
 

@@ -48,7 +48,11 @@ When deploying Mendix on Azure from the Azure Marketplace, you can select the JI
 {{< figure src="/attachments/deployment/mx-azure/jit-plan-selection.png" alt="Azure Marketplace plan selection showing JIT and Standard options" class="no-border" >}}
 
 {{% alert color="info" %}}
-Your plan type is displayed in the portal environment details, back office environment listing, and environment configuration page.
+When configuring your JIT plan, set the **Activation maximum duration** to 8 hours. This ensures JIT API calls complete successfully during the approval window.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Your plan type is displayed in the portal environment details and environment configuration page.
 {{% /alert %}}
 
 After deployment, you can view your plan type in the Infrastructure Details panel:
@@ -89,22 +93,15 @@ To request JIT approval for environment creation or modifications, do the follow
     
     For JIT-enabled environments, the portal automatically creates a JIT approval request.
 
-2. Check your email for a notification requesting approval.
-    
-    The email contains the following:
-    
-    * Environment details
-    * Operation description
-    * Approval link
-    * Expiration time
+2. Navigate to the Azure Portal and open your Managed Application.
 
-3. Click the approval link in the email.
+3. Go to the **JIT Requests** page to view pending approval requests.
 
 4. Review the operation details.
 
 5. Choose **Approve** or **Deny**.
 
-Once approved, the portal detects the approval status and infrastructure provisioning continues automatically via Spacelift. You can monitor the operation status in the portal.
+Once approved, the portal detects the approval status and infrastructure provisioning continues automatically. You can monitor the operation status in the portal.
 
 ### For Scheduled Infrastructure Upgrades
 
@@ -130,9 +127,9 @@ A JIT request progresses through the following stages:
 
 1. **Request Created** – The request is initiated when you create or modify an environment, or when a scheduled upgrade is planned.
 
-2. **Pending** – The request awaits customer approval. An email notification is sent at this stage.
+2. **Pending** – The request awaits customer approval.
 
-3. **Approved or Denied** – You approve or deny the request via the approval link.
+3. **Approved or Denied** – You approve or deny the request via the Azure Portal JIT Requests page.
 
 4. **Executing** – If approved, the infrastructure operation begins.
 
@@ -164,17 +161,6 @@ Navigate to your environment details page to view the following:
 * **Approval or Denial Time** – When action was taken
 * **Expiration Time** – Deadline for approval
 
-### Status Messages
-
-The following table describes common status messages:
-
-| Message | Meaning |
-|---------|---------|
-| "Approval required" | JIT request is pending your approval |
-| "Approved - provisioning" | Request approved, infrastructure operation starting |
-| "Denied" | Request was denied, operation cancelled |
-| "Expired" | Approval deadline passed, operation cancelled |
-| "Skipped - already approved" | Duplicate request detected, using existing approval |
 
 ## Scheduled Infrastructure Upgrades
 
@@ -198,10 +184,9 @@ The scheduled infrastructure upgrade process follows these stages:
 
 ### Auto-Approval Option
 
-For scheduled upgrades within your approved maintenance windows, you can configure auto-approval:
+For scheduled upgrades within your approved maintenance windows, you can configure auto-approval when purchasing the JIT offering:
 
-* Contact your Mendix account team to set up auto-approval rules
-* Specify approved time windows (for example, "Sundays 2-6 AM UTC")
+* Specify approved time windows with a minimum of 8 hours (for example, "Sundays 2-10 AM UTC")
 * JIT requests during approved windows are automatically approved
 * You still receive notifications for audit purposes
 
@@ -213,7 +198,7 @@ JIT approvals are time-limited. For on-demand operations (environment creation o
 
 ### Can I approve multiple environments at once?
 
-Yes, for scheduled infrastructure upgrades, you can approve JIT requests for multiple environments from a single notification email.
+Yes, you can approve JIT requests for multiple environments from the Azure Portal JIT Requests page.
 
 ### What happens if I do not approve in time?
 
@@ -235,14 +220,14 @@ Users with Owner or Contributor roles on the Azure subscription where Mendix on 
 
 If a request shows Pending for an extended period:
 
-1. Check your email for the approval notification.
+1. Navigate to the Azure Portal JIT Requests page.
 2. Verify the request has not expired.
 3. Check the portal for status updates.
 4. Contact Mendix support if the issue persists.
 
 ### Can I view historical JIT requests?
 
-Yes, historical JIT requests are available in the portal's environment activity log and in the back office for administrators.
+Yes, historical JIT requests are available in the Azure Portal's JIT Requests page.
 
 ## Troubleshooting
 
@@ -252,8 +237,8 @@ Yes, historical JIT requests are available in the portal's environment activity 
 
 **Resolution:**
 
-* Verify auto-approval configuration in back office
-* Check that current time is within approved window
+* Verify auto-approval configuration was set when purchasing the offering
+* Check that current time is within the approved 8-hour window
 * Wait 5-10 minutes for status polling to detect approval
 * Contact support if issue persists beyond scheduled time
 
@@ -283,17 +268,15 @@ Yes, historical JIT requests are available in the portal's environment activity 
 
 **Resolution:**
 
-* Check Spacelift logs (link provided in failure notification)
-* A Jira ticket is automatically created for failed upgrades
 * The Mendix engineering team is notified automatically
 * You are contacted for any required actions
+* Contact Mendix support if you need immediate assistance
 
-### Cannot add manual approval option in back office
+### Cannot add manual approval option
 
 **Symptoms:** Need to manually approve JIT requests for environments with auto-approval enabled.
 
 **Resolution:**
 
-* Contact Mendix support to temporarily disable auto-approval
-* Or adjust auto-approval time windows to exclude current time
-* Manual approval is then required for new requests
+* Contact Microsoft support to adjust your auto-approval configuration
+* Auto-approval settings are managed in your Azure subscription

@@ -17,14 +17,11 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 * JIT environments can now handle approval requests for environment creation and configuration changes.
 * Infrastructure upgrades can now be scheduled and triggered for both JIT and regular environments.
 * Support tickets now include a consent checkbox for log sharing and direct environment access.
-* Failed infrastructure upgrade stacks now automatically create Jira tickets for tracking.
 * PostgreSQL is now fixed at version 17 to align with Mendix Cloud.
 * The High Availability setting is now read-only for existing clusters to prevent PersistentVolume issues.
 * AKS maintenance configuration actions are now available to customers.
 * Default Grafana alert rules are now provided (disabled by default), matching Mendix Cloud standards.
-* Fixed cluster initialization failures caused by missing Spacelift environment variables.
 * Fixed an issue where the Coastguard backup pod was evicted during backups due to storage limits.
-* Fixed missing log attachments on manually created support tickets.
 * Fixed an issue preventing environment backup downloads.
 * Added Terraform lifecycle protection for AKS maintenance configurations to prevent drift.
 

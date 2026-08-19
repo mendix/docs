@@ -15,8 +15,8 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 
 ## Version 11.12.3
 
-* Added support for preselecting modules in the Document Selector API.
-* Improved the Permissions API.
+* We added support for preselecting modules in the [Document Selector API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/).
+* We improved the [Permissions API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/).
 
 ## Version 11.12.2
 

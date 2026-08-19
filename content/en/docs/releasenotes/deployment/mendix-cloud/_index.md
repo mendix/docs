@@ -14,6 +14,33 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
 
+## August 2026
+
+### August 12, 2026
+
+#### Fixes
+
+* We fixed an issue that, in rare cases, caused application access logs to stop appearing on the [Logs](/developerportal/operate/logs/) page. You must restart or redeploy your app for the fix to take effect.
+
+### August 9, 2026
+
+#### Fixes
+
+* Resolved an issue where an incorrect Domain Name System (DNS) configuration warning was displayed for custom domains. Even when DNS was configured correctly, users continued to see a warning prompting them to configure their DNS settings. The warning is now displayed only when an actual DNS configuration issue is detected.
+(Tickets #275240, #275338, #275596, #275739, #276031, #276967, #277038, #277864, #278237, #281021, #281197, #282170, #282430, #282980, #283574)
+
+### August 4, 2026
+
+#### New Features
+
+* We have added a new [Jetty Thread Pool Usage](/developerportal/operate/monitoring-application-health/#jetty-thread-pool-usage) alert to the [Alerts](/developerportal/operate/monitoring-application-health/) page. This alert notifies you when the application's Jetty thread pool is approaching capacity, which can cause new requests to be delayed or rejected.
+
+### August 3, 2026
+
+#### New Features
+
+* We introduced the [Certificate API](/apidocs-mxsdk/apidocs/certificate-api/), which allows company admins to manage [landscape-wide certificates](/developerportal/deploy/certificates/centralized-certificates/) programmatically using a Mendix Personal Access Token (PAT). This API supports listing, creating, updating, replacing, and deleting central certificates.
+
 ## July 2026
 
 ### July 30, 2026

@@ -206,6 +206,7 @@ Setting up SSO can be a complex procedure. Please check the following if you are
     If your setup works locally, but not on your hosted environment, follow the necessary steps again.    
     If that does not solve the issue, refer to [here](#troubleshooting-sso-on-hosted-environments) for specific deployment issues.
 * Open the app in an incognito browser window to make sure you are not logged in to a different instance.
+* If you have recently upgraded the Teamcenter Connector, make sure that the constants are still up to date in your Mendix Cloud environment. This is important, as constants do not update automatically. For example, the default value for `SSO_ContextURLPath` has changed from `TCSSO` to `rest/tcsso/v1/callback` going from version 2506 to 2512.
 * Follow the steps in [Testing the Connection](#test-the-connection).
 
 **Scenario 1**

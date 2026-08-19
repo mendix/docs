@@ -24,7 +24,7 @@ The organization employs automated mechanisms to assist in the reporting of secu
 
 The following controls are related to this control:
 
-* IR-7
+* IR-07
 
 ## Responsibility
 

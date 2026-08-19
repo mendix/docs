@@ -37,6 +37,8 @@ To deploy your app, you have two options:
 
 When you deploy through the Mendix Portal, this can be done by any Mendix user who has been given the appropriate rights to the cluster which has been registered.
 
+When an application is created, its creator automatically becomes the application's *Technical Contact*, a role that grants Administrator permissions on all namespaces where the application is deployed. For more information on this role and how to manage it, see [Technical Contact Role and Permissions](/developerportal/deploy/private-cloud/private-cloud-technical-contact/).
+
 ## Connected and Standalone Clusters{#connected-standalone}
 
 To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** in your cluster.

@@ -10,6 +10,38 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.1.0
+
+### Release date: August 13, 2026
+
+### Workstation Management
+
+#### New Features
+
+* Enhanced system information - Workstation Management can now receive and display additional system information from clients, including the specific client type.
+
+### Workstation Client
+
+#### New Features
+
+* Improved client reporting - The client now sends detailed installation information (**Client Type**) to the Management system, providing better visibility into your deployment.
+* Consistent device states - We have refactored how devices are managed to ensure they consistently report their status as available, connected, or in an error state.
+
+#### Improvements
+
+* Enhanced Bluetooth reliability - Bluetooth devices now actively scan (poll) for status updates, and peripherals not seen within 30 seconds are automatically marked as unavailable. Connect can now be aborted through disconnecting. Disconnects are no longer marked as an error. Scanning state and seen devices are now visible in diagnostics.
+* Card reader - Card connection failure no longer results in an error and make the device unusable.
+* Improved printer status - Printers now actively poll to keep their availability status up-to-date.
+* Serial device polling - Serial devices now poll for status whenever a device is not connected, ensuring you always have the latest availability information. Disconnects are no longer marked as error.
+* TCP client validation - TCP client connections now include a 10-second timeout, can be aborted through disconnecting, and include validation to ensure the host and port are correctly configured.
+* Configuration warnings - The system now provides warnings if it detects potentially incorrect serial or TCP delimiter configurations, helping you avoid setup issues.
+
+### Workstation Connector
+
+#### Bug Fixes
+
+* Connection stability - Fixed an issue that occasionally prevented the connector from successfully reconnecting to devices after a period of Workstation Client downtime.
+
 ## 4.0.0
 
 ### Release date: July 16, 2026

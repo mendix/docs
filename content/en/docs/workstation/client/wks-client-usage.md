@@ -27,7 +27,19 @@ The top section of the Workstation Client shows the following information:
 
 ## Devices
 
-The **Devices** section shows a list of all devices currently associated with the station through this Workstation Client. For each device, the section shows the availability, connection status, and any errors captured for this device. You can also expand each device to see more information about its connection parameters (for example, the host or port of a TCP/IP server).
+The **Devices** section shows a list of all devices currently associated with the station through this Workstation Client. For each device, the section shows the following information:
+
+* Availability - When a device shows as **Available**, it is likely connectable. The specifics depend on the device type:
+
+    * Bluetooth - Bluetooth devices are scanned continuously. They are considered available if seen, and unavailable if not seen for 30 seconds.
+    * Printer - The Client polls the system printer list. The scan only checks that the device exists, not its status, configuration, or connectivity.
+    * Serial device - The Client polls the system port list. The scan only checks that the device exists, not its connectivity.
+    * TCP/IP client - The Client only checks that the host is defined and the port is valid. It cannot verify remote connectivity without actually connecting.
+
+* Connection status - When the device shows as **Connected**, it means that the device connection has been successfully established and not yet closed. The device is available and is not throwing any errors.
+* Error status - Shows any error captured for this device. Error status is reset on config change or reconnect.
+
+You can also expand each device to see more information about its connection parameters (for example, the host or port of a TCP/IP server).
 
 ## Additional Actions
 

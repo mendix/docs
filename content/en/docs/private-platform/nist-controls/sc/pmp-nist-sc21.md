@@ -26,7 +26,7 @@ Each client of name resolution services either performs this validation on its o
 
 The following controls are related to this control:
 
-* SC-20
+* [SC-20](/private-mendix-platform/nist-controls/sc-20/)
 * SC-22
 
 For more information, refer to the NIST Special Publication 800-81.

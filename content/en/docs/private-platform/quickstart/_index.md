@@ -52,7 +52,7 @@ The following components must be installed in the same namespace as Private Mend
 
 Other components, such as the Build agent and PDF DocGen module, can be installed in any namespace.
 
-If you add any components after installing Private Mendix Platform, you must re-run the Platform installer. For more information, see [Adding Additional Components After Installing the Private Mendix Platform](#adding-components).
+If you add any components after installing Private Mendix Platform, you must re-run the Platform installer. For more information, see [Adding Additional Components After Installing the Private Mendix Platform](/private-mendix-platform/interactive-installation/#adding-components).
 
 ### Prerequisites {#prerequisites}
 

@@ -7,8 +7,10 @@ numberless_headings: true
 ---
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
+
 ## Version 11.14.0
-* Support direct assignment to model element array properties (e.g. `element.property = [value1, value2]`)
+
+* We added support for direct assignment to model element array properties (for example, `element.property = [value1, value2]`).
 
 ## Version 11.13.0
 

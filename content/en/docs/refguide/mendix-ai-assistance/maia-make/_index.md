@@ -193,7 +193,7 @@ To configure an OpenAI-compatible provider, follow these steps:
 
 {{< figure src="/attachments/private-platform/pmp-llm-gateway.png" class="no-border" >}}
 
-The LLM Gateway URL is configured during the installation or upgrade of Private Mendix Platform. For more information, see [Installing Maia for Private Mendix Platform](/private-mendix-platform/quickstart/#maia).
+The LLM Gateway URL is configured during the installation or upgrade of Private Mendix Platform. For more information, see [Installing Maia for Private Mendix Platform](/private-mendix-platform/interactive-installation/#maia).
 
 ## Read More
 

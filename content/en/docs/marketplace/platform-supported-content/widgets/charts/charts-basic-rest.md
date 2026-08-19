@@ -11,7 +11,7 @@ aliases:
 
 With the Charts widget, you can plot data that comes from a REST service.
 
-The widget does not call a REST service itself. Its data source accepts a database query, a microflow, a nanoflow, or an association, so you retrieve the REST data in a microflow and point the chart at that microflow.
+The widget does not call a REST service itself. Its data source accepts a database query (a microflow, a nanoflow, or an association) so you retrieve the REST data in a microflow and point the chart at that microflow.
 
 This how-to teaches you how to do the following:
 

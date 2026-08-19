@@ -9,109 +9,97 @@ weight: 15
 
 Mendix on Azure offers two security models to meet different organizational requirements:
 
-* **Standard Plan** – Traditional model with always-available Owner-level permissions
-* **JIT-Enabled Plan** – Enhanced security model with Just-In-Time elevation of privileges
+* Standard plan - Traditional model with always-available Owner-level permissions
+* JIT-enabled plan - Enhanced security model with Just-In-Time elevation of privileges
 
 This document explains how the JIT-enabled plan works and how to manage JIT approval requests.
 
 ## What is JIT?
 
-**Just-In-Time (JIT)** is a security feature that provides elevated Azure permissions only when needed and only for a limited time. Instead of having standing Owner-level credentials that are always available, JIT environments require explicit approval before infrastructure operations can be performed.
+*Just-In-Time (JIT)* is a security feature that provides elevated Azure permissions only when needed and only for a limited time. Instead of having Owner-level credentials that are always available, JIT environments require explicit approval before infrastructure operations can be performed.
 
 ### Benefits of JIT
 
 JIT access provides the following benefits:
 
-* **Reduced blast radius** – Minimize the impact of potential security incidents by limiting standing privileges
-* **Improved auditability** – Track and approve all privileged operations
-* **Compliance** – Meet enterprise security requirements for minimal standing privileges
-* **Control** – Maintain explicit control over when elevated permissions are granted
+* Minimize the impact of potential security incidents by limiting standing privileges.
+* Achieve improved auditability** by tracking and approving all privileged operations.
+* Increase compliance by meeting enterprise security requirements for minimal standing privileges.
+* Maintain explicit control over when elevated permissions are granted.
 
-## Plan Types
+## Differences Between Standard and JIT-Enabled Plans
+
+The following sections describe the differences between standard and JIT-enabled plans with regards to owner-level credentials, approvals, user experience, and audience.
 
 ### Standard Plan
 
-* Owner-level credentials are **always available**
-* No approval required for infrastructure changes
-* Traditional user experience with immediate provisioning
-* Suitable for environments where speed is prioritized over strict privilege controls
+* Owner-level credentials are always available.
+* No approval is required for infrastructure changes.
+* Offers a traditional user experience with immediate provisioning.
+* Is suitable for environments where speed is prioritized over strict privilege controls.
 
 ### JIT-Enabled Plan
 
-* Owner-level credentials are granted **only when approved**
-* Explicit customer approval required for infrastructure operations
-* Enhanced security with time-limited token access
-* Suitable for organizations with strict compliance and security requirements
+* Owner-level credentials are granted only when approved.
+* Explicit customer approval is required for infrastructure operations.
+* Offers enhanced security with time-limited token access.
+* Is suitable for organizations with strict compliance and security requirements.
 
-When deploying Mendix on Azure from the Azure Marketplace, you can select the JIT-enabled plan from the **Plan** dropdown:
+## Configuring JIT-Enabled Plans
 
-{{< figure src="/attachments/deployment/mx-azure/jit-plan-selection.png" alt="Azure Marketplace plan selection showing JIT and Standard options" class="no-border" >}}
+When deploying Mendix on Azure from the Azure Marketplace, perform the following steps to configure a JIT-enabled plan:
 
-After selecting the JIT plan, configure the JIT access settings in the **JIT Configuration** step:
+1. Select the JIT-enabled plan from the **Plan** dropdown:
 
-{{< figure src="/attachments/deployment/mx-azure/jit-enable-access.png" alt="Enable JIT access configuration" class="no-border" >}}
+    {{< figure src="/attachments/deployment/mx-azure/jit-plan-selection.png" alt="Azure Marketplace plan selection showing JIT and Standard options" class="no-border" >}}
 
-Set the **Activation maximum duration** to 8 hours and choose **Automatic** approval mode for scheduled upgrades:
+2. After selecting the JIT plan, configure the JIT access settings in the **JIT Configuration** step:
 
-{{< figure src="/attachments/deployment/mx-azure/jit-8hour-configuration.png" alt="JIT 8-hour activation duration configuration" class="no-border" >}}
+    {{< figure src="/attachments/deployment/mx-azure/jit-enable-access.png" alt="Enable JIT access configuration" class="no-border" >}}
 
-{{% alert color="info" %}}
-Setting the **Activation maximum duration** to 8 hours ensures JIT API calls complete successfully during the approval window. Shorter durations may cause API call failures.
-{{% /alert %}}
+3. Set the **Activation maximum duration** to 8 hours and choose **Automatic** approval mode for scheduled upgrades:
 
-{{% alert color="info" %}}
-Your plan type is displayed in the portal environment details and environment configuration page.
-{{% /alert %}}
+    {{< figure src="/attachments/deployment/mx-azure/jit-8hour-configuration.png" alt="JIT 8-hour activation duration configuration" class="no-border" >}}
 
-After deployment, you can view your plan type in the Infrastructure Details panel:
+    {{% alert color="info" %}}
+    Setting the **Activation maximum duration** to 8 hours ensures JIT API calls complete successfully during the approval window. Shorter durations may cause API call failures.
+    {{% /alert %}}
 
-{{< figure src="/attachments/deployment/mx-azure/jit-infrastructure-details.png" alt="Infrastructure Details panel showing JIT plan type" class="no-border" >}}
+    Your plan type is displayed in the portal environment details and environment configuration page.
 
-## When JIT Approval is Required
+4. After deployment, you can view your plan type in the **Infrastructure Details** panel:
+
+    {{< figure src="/attachments/deployment/mx-azure/jit-infrastructure-details.png" alt="Infrastructure Details panel showing JIT plan type" class="no-border" >}}
+
+## Requesting JIT Approval
 
 JIT approval is required for the following operations on JIT-enabled environments:
 
-### Environment Creation
-
-When creating a new JIT-enabled environment, approval is needed before the infrastructure can be provisioned.
-
-### Environment Configuration Changes
-
-Modifications to environment settings that require Azure role assignments.
-
-### Scheduled Infrastructure Upgrades
-
-Quarterly or ad-hoc infrastructure upgrades require approval before execution.
-
-### Role Assignment Operations
-
-Any Terraform operations that modify Azure IAM roles and permissions.
+* Environment creation - When creating a new JIT-enabled environment, approval is needed before the infrastructure can be provisioned. For more information about the request process, see [Requesting JIT Approval for Environment Creation or Modifications](#create-modify-env).
+* Environment configuration changes - Modifications to environment settings that require Azure role assignments. For more information about the request process, see [Requesting JIT Approval for Environment Creation or Modifications](#create-modify-env).
+* Scheduled infrastructure upgrades - Quarterly or ad-hoc infrastructure upgrades require approval before execution. For more information about the request process, see [Requesting JIT Approval for Scheduled Infrastructure Upgrades](#scheduled-update).
+* Role assignment operations - Any Terraform operations that modify Azure IAM roles and permissions.
 
 {{% alert color="info" %}}
 Standard Plan environments bypass all JIT workflows and operate with traditional permissions.
 {{% /alert %}}
 
-## Requesting JIT Approval
+### Requesting JIT Approval for Environment Creation or Modifications {#create-modify-env}
 
-### For Environment Creation or Modifications
-
-To request JIT approval for environment creation or modifications, do the following:
+To request JIT approval for environment creation or modifications, perform the following steps:
 
 1. Create or edit your environment through the Mendix on Azure portal.
     
     For JIT-enabled environments, the portal automatically creates a JIT approval request.
 
 2. Navigate to the Azure Portal and open your Managed Application.
-
 3. Go to the **JIT Requests** page to view pending approval requests.
-
 4. Review the operation details.
-
-5. Choose **Approve** or **Deny**.
+5. Select either **Approve** or **Deny**.
 
 Once approved, the portal detects the approval status and infrastructure provisioning continues automatically. You can monitor the operation status in the portal.
 
-### For Scheduled Infrastructure Upgrades
+### Requesting JIT Approval for Scheduled Infrastructure Upgrades {#scheduled-update}
 
 To request JIT approval for scheduled infrastructure upgrades, do the following:
 
@@ -133,72 +121,48 @@ Approved environments are upgraded during the scheduled window. Denied or expire
 
 A JIT request progresses through the following stages:
 
-1. **Request Created** – The request is initiated when you create or modify an environment, or when a scheduled upgrade is planned.
+1. The request is initiated when you create or modify an environment, or when a scheduled upgrade is planned.
+2. The request awaits approval. During this stage, the request has the status **Pending**. To proceed, review the request and approve or deny it.
+3. The request is approved or denied, or its approval window expires without a decision from the user. You approve or deny the request via the Azure Portal JIT Requests page. The approval status can result in one of the following request statuses:
 
-2. **Pending** – The request awaits customer approval.
+    * **Approved** - The request is approved and ready for executio. The portal proceeds with the execution automatically.
+    * **Denied** - The customer has denied the request. The operation is canceled.
+    * **Expired** - The approval window for the request has closed. If you want to continue, request a new operation for the request.
 
-3. **Approved or Denied** – You approve or deny the request via the Azure Portal JIT Requests page.
+4. Executing - If approved, the infrastructure operation begins. The request has the status **Executing**. Monitor its progress to ensure that it completes successfully.
+5. Complete or failed - The operation finishes successfully (resulting in the **Complete** status) or encounters an error (resulting in the **Failed** status). If the request has the **Failed** status, you must review the error and contact Mendix Support if needed. If the request is successfully completed, no further action is required.
 
-4. **Executing** – If approved, the infrastructure operation begins.
+### Viewing the Requests
 
-5. **Complete or Failed** – The operation finishes successfully or encounters an error.
+Navigate to your **Environment Details** page to view the following:
 
-### Request Statuses
-
-The following table describes the possible statuses of a JIT request:
-
-| Status | Description | User Action Required |
-|--------|-------------|----------------------|
-| **Pending** | Awaiting customer approval | Review and approve or deny |
-| **Approved** | Approved and ready for execution | None – portal proceeds automatically |
-| **Denied** | Customer denied the request | Operation canceled |
-| **Expired** | Approval window closed | Request new operation |
-| **Executing** | Infrastructure operation in progress | Monitor progress |
-| **Complete** | Operation finished successfully | None |
-| **Failed** | Operation encountered an error | Review error, contact support if needed |
-
-## Understanding JIT Request Status
-
-### In the Portal
-
-Navigate to your environment details page to view the following:
-
-* **Current JIT Request Status** – Shows pending, approved, or executing
-* **Request ID** – Unique identifier for the JIT request
-* **Created Time** – When the request was initiated
-* **Approval or Denial Time** – When action was taken
-* **Expiration Time** – Deadline for approval
-
+* **Current JIT Request Status** - Shows pending, approved, or executing
+* **Request ID** - Unique identifier for the JIT request
+* **Created Time** - When the request was initiated
+* **Approval or Denial Time** - When action was taken
+* **Expiration Time** - Deadline for approval
 
 ## Scheduled Infrastructure Upgrades
 
-### Overview
-
 The Mendix on Azure team performs scheduled infrastructure upgrades on a quarterly basis. For JIT-enabled environments, approval is required before these upgrades can proceed.
-
-### Process
 
 The scheduled infrastructure upgrade process follows these stages:
 
-1. **Schedule Creation (T-14 days)** – The Mendix team schedules the upgrade release and sets the target date and time in the back office.
+1. Schedule creation (T-14 days) - The Mendix team schedules the upgrade release and sets the target date and time in the back office.
+2. JIT request generation (T-7 days) - The portal identifies all JIT environments, creates individual JIT approval requests, and sends email notifications to environment owners.
+3. Approval window (T-7 to T-0) - Customers review and approve or deny requests. The portal continuously polls approval status, and approval tracking is available in the portal.
+4. Execution (scheduled time) - The portal triggers Spacelift for all approved JIT environments. Standard plan environments proceed automatically. Execution status is displayed per environment.
+5. Post-execution (T+1 day) - A status report is sent to all customers. Failed executions create Jira tickets for tracking. Denied or expired environments are listed in the report.
 
-2. **JIT Request Generation (T-7 days)** – The portal identifies all JIT environments, creates individual JIT approval requests, and sends email notifications to environment owners.
+### Auto-Approving JIT Requests
 
-3. **Approval Window (T-7 to T-0)** – Customers review and approve or deny requests. The portal continuously polls approval status, and approval tracking is available in the portal.
+For scheduled upgrades within your approved maintenance windows, you can configure auto-approval when purchasing the JIT offering.
 
-4. **Execution (Scheduled Time)** – The portal triggers Spacelift for all approved JIT environments. Standard plan environments proceed automatically. Execution status is displayed per environment.
-
-5. **Post-Execution (T+1 day)** – A status report is sent to all customers. Failed executions create Jira tickets for tracking. Denied or expired environments are listed in the report.
-
-### Auto-Approval Option
-
-For scheduled upgrades within your approved maintenance windows, you can configure auto-approval when purchasing the JIT offering:
-
-* Specify approved time windows with a minimum of 8 hours (for example, "Sundays 2-10 AM UTC")
-* JIT requests during approved windows are automatically approved
-* You still receive notifications for audit purposes
+To enable auto-approvals, specify approved time windows with a minimum of 8 hours (for example, *Sundays 2-10 AM UTC*). JIT requests created during the specified time windows are automatically approved. You will receive approval notifications for audit purposes.
 
 ## Frequently Asked Questions
+
+This document answers common questions about JIT requests.
 
 ### How Long Does a JIT Approval Last?
 
@@ -226,7 +190,7 @@ Users with Owner or Contributor roles on the Azure subscription where Mendix on 
 
 ### What if My Approval Request Is Stuck in Pending?
 
-If a request shows Pending for an extended period:
+If a request shows the **Pending** status for an extended period, perform the following steps:
 
 1. Navigate to the Azure Portal JIT Requests page.
 2. Verify the request has not expired.
@@ -239,51 +203,49 @@ Yes, historical JIT requests are available in the Azure Portal's JIT Requests pa
 
 ## Troubleshooting
 
-### Auto-approved JIT request still showing as Pending
+If you encounter any issues with JIT requests, use the following troubleshooting tips to help you solve them.
 
-**Symptoms:** JIT request scheduled within auto-approval window still shows Pending status.
+### Auto-Approved JIT Request Still Showing as Pending
 
-**Resolution:**
+JIT request scheduled within auto-approval window still shows Pending status.
 
-* Verify auto-approval configuration was set when purchasing the offering
-* Check that current time is within the approved 8-hour window
-* Wait 5-10 minutes for status polling to detect approval
-* Contact support if issue persists beyond scheduled time
+### Solution
 
-### Manual approval shows "Skipped - already approved"
+To solve this issue, perform the following steps:
 
-**Symptoms:** Attempting to approve a JIT request shows message "Skipped JIT Request - It is already in approved state."
+1. Verify that the auto-approval configuration was set when purchasing the offering.
+2. Check that current time is within the approved 8-hour window.
+3. Wait 5-10 minutes for status polling to detect approval.
+4. Contact support if issue persists beyond scheduled time.
 
-**Resolution:**
+### Manual Approval shows a Skipped - Already Approved Message
 
-* This is informational – the request has already been approved
-* No further action needed
-* Infrastructure operation proceeds with existing approval
+Attempting to approve a JIT request shows the following message: *Skipped JIT Request - It is already in approved state.*
 
-### Old pending requests not expiring
+#### Solution
 
-**Symptoms:** JIT requests from previous days still showing as Pending instead of Expired or Failed.
+The message is informational - the request has already been approved. No further action is needed. The infrastructure operation proceeds with the current approval.
 
-**Resolution:**
+### Old Pending Requests Do Not Expire
 
-* The system automatically expires requests after 24 hours
-* Contact support if requests remain pending beyond expiration period
-* New requests can be created for the same operation
+JIT requests from previous days still show as Pending instead of Expired or Failed.
 
-### Failed infrastructure upgrade
+#### Solution
 
-**Symptoms:** JIT request was approved but infrastructure upgrade failed.
+The system automatically expires requests after 24 hours. Contact support if requests remain pending beyond this expiration period. If needed, create a new request for the same operation.
 
-**Resolution:**
+### Failed Infrastructure Upgrade
 
-* The Mendix engineering team is notified automatically
-* You are contacted for any required actions
-* Contact Mendix support if you need immediate assistance
+JIT request was approved but infrastructure upgrade failed.
 
-### Cannot add manual approver
+#### Solution
 
-**Symptoms:** Unable to add a manual approver for JIT requests.
+The Mendix engineering team is notified automatically. You will be contacted for any required actions. Contact Mendix support if you need immediate assistance.
 
-**Resolution:**
+### Cannot Add Manual Approver
 
-* Contact Microsoft support for assistance with adding manual approvers to your subscription
+Unable to add a manual approver for JIT requests.
+
+#### Solution
+
+Contact Microsoft support for assistance with adding manual approvers to your subscription.

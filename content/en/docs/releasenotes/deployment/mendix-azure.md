@@ -12,22 +12,21 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 
 ## Release date: August 20, 2026
 
-* We have added support for two Microsoft Azure Marketplace plans: Standard Plan and Just-in-time (JIT) access.
-* We have added load balancer IP display on the cluster detail slider.
-* We have implemented JIT request creation, polling, and status management for environment creation and configuration changes.
-* We have added the ability to schedule and trigger infrastructure upgrades for JIT and regular environments.
-* We have updated Spacelift configuration to support JIT environments.
-* We have fixed an issue where cluster initialization failed due to missing environment variables in Spacelift.
-* We have added automatic Jira ticket creation for failed infrastructure upgrade stacks.
-* We have added an explicit consent checkbox for log sharing and direct environment access on support tickets.
-* We have fixed the PostgreSQL version to version 17, aligning with Mendix Cloud.
-* We have resolved an issue where the Coastguard backup pod was evicted mid-backup for exceeding the 5Gi ephemeral-storage limit.
-* We have fixed an issue where logs were not attached to manually created support tickets.
-* We have resolved an issue where users were unable to download environment backups.
-* We have added Terraform lifecycle protection for AKS maintenance configurations to prevent Spacelift drift.
-* We have added AKS maintenance configuration actions to allowed customer actions.
-* We have made the High Availability setting read-only for existing Kubernetes clusters to prevent PersistentVolume issues.
-* We have provided default (disabled) Grafana alert rules aligned with Mendix Cloud defaults.
+* Mendix on Azure now supports two Azure Marketplace plans: Standard Plan and Just-in-Time (JIT) access for enhanced security.
+* The cluster detail slider now displays your load balancer IP address.
+* JIT environments can now handle approval requests for environment creation and configuration changes.
+* Infrastructure upgrades can now be scheduled and triggered for both JIT and regular environments.
+* Support tickets now include a consent checkbox for log sharing and direct environment access.
+* Failed infrastructure upgrade stacks now automatically create Jira tickets for tracking.
+* PostgreSQL is now fixed at version 17 to align with Mendix Cloud.
+* The High Availability setting is now read-only for existing clusters to prevent PersistentVolume issues.
+* AKS maintenance configuration actions are now available to customers.
+* Default Grafana alert rules are now provided (disabled by default), matching Mendix Cloud standards.
+* Fixed cluster initialization failures caused by missing Spacelift environment variables.
+* Fixed an issue where the Coastguard backup pod was evicted during backups due to storage limits.
+* Fixed missing log attachments on manually created support tickets.
+* Fixed an issue preventing environment backup downloads.
+* Added Terraform lifecycle protection for AKS maintenance configurations to prevent drift.
 
 ## Release date: July 2, 2026
 

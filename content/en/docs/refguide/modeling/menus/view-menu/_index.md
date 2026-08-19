@@ -95,7 +95,7 @@ The **Extensions** pane allows you to manage the extensions installed in your ap
 
 This pane displays the results of the latest find action. You can search for text, usages of an element (for example, an attribute), and unused items.
 
-In Studio Pro 11.14 and above, the **Find Results** pane stores multiple searches. Each new search is added as a tag, and previous searches are kept so you can revisit them later.
+In Studio Pro 11.14 and above, the **Find Results** pane stores multiple searches. Each new search is added as a tab, and previous searches are kept so you can revisit them later.
 
 For Studio Pro 11.13 and below, there are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 

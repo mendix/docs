@@ -90,6 +90,16 @@ To find where a certain element is used, do the following:
 4. Select **Find usages**:
     {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-usages.png" alt="Find Usages"   width="350"  class="no-border" width="300" >}}
 
+### Find Results Pane in Studio Pro 11.14 and Above
+
+Studio Pro shows all usages of the entity in the **Find Results** pane.
+
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/new-found-usages.png" alt="New Find Results Pane" class="no-border" >}}
+
+The **Find Results** pane can store multiple searches. When you right-click an item and click **Find Usages**, it will open a new tab in the **Find Results** pane. This allows you to keep previous search results and revisit them at a later time.
+
+### Find Results Pane in Studio Pro 11.13 and Below
+
 Studio Pro shows all usages of the entity in the **Find Results** pane.
 
 {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/found-usages.png" alt="Find Results Pane" class="no-border" >}}
@@ -97,6 +107,8 @@ Studio Pro shows all usages of the entity in the **Find Results** pane.
 Double-click an item in the **Find Results** pane to open the corresponding document.
 
 Click **Lock results** in the **Find Results** pane to keep the current results. The next time you click **Find Usages**, the results display in a second **Find Results** pane. This allows you to keep several search results.
+
+
 
 ## Read More
 

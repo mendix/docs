@@ -86,7 +86,7 @@ For more information, see [Supported Providers](/developerportal/deploy/private-
 
 {{< figure src="/attachments/private-platform/nist-sc/nist-sc-08-1.png" class="no-border" >}}
 
-The customer can enable TLS during PMP installation so that all traffic in transit is encrypted using TLS. For more information, see [Private Mendix Platform Quick Start Guide](/private-mendix-platform/quickstart/#installing-the-private-mendix-platform).
+The customer can enable TLS during PMP installation so that all traffic in transit is encrypted using TLS. For more information, see [Private Mendix Platform Quick Start Guide](/private-mendix-platform/quickstart/).
 
 {{< figure src="/attachments/private-platform/nist-sc/nist-sc-08-2.png" class="no-border" >}}
 

@@ -78,7 +78,7 @@ To configure Maia to use your own Large Language Model, perform the following st
 3. In the left navigation menu, open the **Manage** section.
 4. Fill out the following information:
 
-    * **Maia Appgen URL** - Enter the URL where Maia is installed. For more information, see [Private Mendix Platform Quick Start Guide: Installing Maia](/private-mendix-platform/quickstart/#maia).
+    * **Maia Appgen URL** - Enter the URL where Maia is installed. For more information, see [Private Mendix Platform Quick Start Guide: Installing Maia](/private-mendix-platform/interactive-installation/#maia).
     * **LLM Provider** - Select your LLM provider.
     * **Small Text Model** - Enter one of the following model IDs, depending on your chosen LLM:
 

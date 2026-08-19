@@ -69,7 +69,7 @@ In the latter two cases, the **Select Event** dialog appears where you choose th
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/select-event.png" alt="Select Event dialog" max-width=80%  >}}
 
-To configure the properties of a boundary event, double-click the event to open its properties dialog box. For more information on how to configure boundary event properties, see the [Boundary Properties](/refguide/timer/#boundary-properties) section in *Timer* or the [Boundary Properties](/refguide/notification/#boundary-properties) in *Notification*.
+To configure the properties of a boundary event, double-click the event to open its properties dialog box. For more information on how to configure boundary event properties, see the [Interrupting Behavior](/refguide/timer/#boundary-properties) section in *Timer* or the [Interrupting Behavior](/refguide/notification/#boundary-properties) section in *Notification*.
 
 #### Adding a Boundary Event to an Ongoing Activity
 

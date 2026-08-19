@@ -18,9 +18,9 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 * The High Availability setting is now read-only for existing clusters to prevent PersistentVolume issues.
 * AKS maintenance configuration actions are now available to customers.
 * Default Grafana alert rules are now provided (disabled by default), matching Mendix Cloud standards.
-* Fixed an issue where the Coastguard backup pod was evicted during backups due to storage limits.
-* Fixed an issue preventing environment backup downloads.
-* Added Terraform lifecycle protection for AKS maintenance configurations to prevent drift.
+* We have fixed an issue where the Coastguard backup pod was evicted during backups due to storage limits.
+* We have fixed an issue preventing environment backup downloads.
+* We have added Terraform lifecycle protection for AKS maintenance configurations to prevent drift.
 
 ### Release date: July 3, 2025
 

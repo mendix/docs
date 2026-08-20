@@ -30,10 +30,10 @@ Mendix Cloud Tokens are a type of Token that can be used within the Mendix Platf
 ## Cloud Resource Packs {#crps}
 
 {{% alert color="info" %}}
-For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section of *Mendix Cloud*.
+For the technical details of each Cloud Resource Pack (CRP), refer to the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section of *Mendix Cloud*.
 {{% /alert %}}
 
-The number of Mendix Cloud Tokens required for each type of Cloud Resource Pack is specified in the [Cloud Resource Packs](#crps) section of this document. All your current CRPs will be converted to their equivalent Mendix Cloud Tokens and aggregated with any other Mendix Cloud Tokens. You can then use these to provision Cloud resources of any type and size, as specified in your contracts. 
+All your current CRPs are converted to their equivalent Mendix Cloud Tokens and aggregated with any other Mendix Cloud Tokens. You can then use these to provision Cloud resources of any type and size, as specified in your contracts. 
 
 You can see available and used Mendix Cloud Tokens on the **Entitlements** page. If you cannot, contact your Customer Success Manager (CSM).
 
@@ -46,29 +46,29 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M21 | 40 |
 | L21 | 80 |
 | XL21 | 160 |
-| 2XL21 | 320 |
-| 3XL21 | 640 |
-| 4XL21 | 1280 |
-| 4XL-5XLDB | 2240 |
+| XXL21 | 320 |
+| XXXL21 | 640 |
+| XXXXL21 | 1280 |
+| XXXXL-5XLDB | 2240 |
 
-|Premium Resource Packs | Mendix Cloud Tokens |
+| Premium Resource Packs | Mendix Cloud Tokens |
 | --- | --- |
 | S21 | 30 |
 | M21 | 60 |
 | L21 | 120 |
 | XL21 | 240 |
-| 2XL21 | 480 |
-| 3XL21 | 960 |
-| 4XL21 | 1920 |
-| 4XL-5XLDB | 3360 |
+| XXL21 | 480 |
+| XXXL21 | 960 |
+| XXXXL21 | 1920 |
+| XXXXL-5XLDB | 3360 |
 
-|Premium Plus Resource Packs | Mendix Cloud Tokens |
+| Premium Plus Resource Packs | Mendix Cloud Tokens |
 | --- | --: |
 | XL21 | 400 |
-| 2XL21 | 800 |
-| 3XL21 | 1600 |
-| 4XL21 | 3200 |
-| 4XL-5XLDB | 5600 |
+| XXL21 | 800 |
+| XXXL21 | 1600 |
+| XXXXL21 | 3200 |
+| XXXXL-5XLDB | 5600 |
 
 | Legacy Resource Packs | Mendix Cloud Tokens |
 | --- | --: |
@@ -77,7 +77,7 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M20 | 40 |
 | L20 | 80 |
 | XL20 | 160 |
-| 2XL20 | 320 |
+| XXL20 | 320 |
 | Strato | 12 |
 | Meso | 47 |
 | Iono | 67 |
@@ -86,12 +86,23 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M | 16 |
 | L | 37 |
 | XL | 73 |
-| 2XL | 167 |
-| 3XL | 640 |
+| XXL | 167 |
+| XXXL | 640 |
 
 {{% alert color="info" %}} 
-You can no longer purchase Legacy Cloud Resources Packs. You can now only purchase and provision Standard, Premium, and Premium Plus CRPs. Any legacy Cloud Resource Packs that you have already purchased will be converted into Mendix Cloud Tokens if they are deprovisioned. This will use the rate specified in the [Cloud Resource Packs](/control-center/cloud-tokens/#crps) section of *Cloud Tokens*, and the Mendix Cloud Tokens will be added to your Token pool.
+
+* You can no longer purchase legacy CRPs. You can now only purchase and provision Standard, Premium, and Premium Plus CRPs. Any legacy CRPs that you have already purchased will be converted into Mendix Cloud Tokens if they are deprovisioned. This will use the rate specified in the previous tables, and the Mendix Cloud Tokens will be added to your Token pool.
+* Self-service cloud consumption capabilities are exclusively available for Standard, Premium, and Premium Plus CRPs. If you are using a legacy CRP in combination with fallback, you may experience consumption inaccuracies in the self-service tool. For access to the latest capabilities, Mendix recommends contacting your customer success manager to transition to a Standard, Premium, or Premium Plus CRP.
+
 {{% /alert %}}
+
+## GenAI Resource Packs {#grps}
+
+GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For text generation and embeddings resources, one Mendix Cloud Token equals 100 GenAI Units. You choose any Cloud Token amount when provisioning a resource. There are no fixed plan sizes. For technical details, GenAI Unit exchange rates, and model pricing, see [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
+
+| GenAI Knowledge Base Resource Packs | Mendix Cloud Tokens |
+| --- | -- |
+| Standard | 48 |
 
 ## Key Takeaways
 
@@ -99,3 +110,5 @@ You can no longer purchase Legacy Cloud Resources Packs. You can now only purcha
 * The number of Mendix Cloud Tokens required depends on the CRP you want.
 * You buy Tokens in advance, and can use them to obtain CRPs.
 * If you no longer need those resources, you can reuse the Token to obtain other CRPs, or keep it to be used later.
+* Mendix Cloud Tokens expire on the end date of their associated contract. To ensure continued access, please renew your contract before it expires.
+* Mendix Cloud Token balances might be incorrect if you still use a legacy CRP with fallback.

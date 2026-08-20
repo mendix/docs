@@ -25,7 +25,7 @@ Most activities can be used in both microflows and nanoflows. However, some can 
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/commit-object.png" alt="commit object" link="/refguide/committing-objects/" max-width=80% class="no-border" >}} | [Commit object(s)](/refguide/committing-objects/) | Allows you to commit changes to one or more objects. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/create-object.png" alt="create object" link="/refguide/create-object/" max-width=80% class="no-border" >}} | [Create object](/refguide/create-object/) | Creates an object. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/delete-object.png" alt="delete object" link="/refguide/deleting-objects/" max-width=80% class="no-border" >}} | [Delete object(s)](/refguide/deleting-objects/) | Deletes an object. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/retrieve.png" alt="retrieve" link="/refguide/retrieve/" max-width=80% class="no-border" >}} | [Retrieve](/refguide/retrieve/) | Gets one (or more) associated objects of another object. Furthermore, this activity can also get one or more objects directly from a database. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/retrieve.png" alt="retrieve" link="/refguide/retrieve-objects/" max-width=80% class="no-border" >}} | [Retrieve object(s)](/refguide/retrieve-objects/) | Gets one (or more) associated objects of another object. Furthermore, this activity can also get one or more objects directly from a database. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/rollback.png" alt="rollback object" link="/refguide/rollback-object/" max-width=80% class="no-border" >}} | [Rollback object](/refguide/rollback-object/) | Rolls uncommitted changes back that were made to an object in the part of the microflow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed. |
 
 ## List Activities
@@ -39,15 +39,15 @@ Most activities can be used in both microflows and nanoflows. However, some can 
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/create-list.png" alt="create list" link="/refguide/create-list/" max-width=65% class="no-border" >}} | [Create list](/refguide/create-list/) | Creates a (empty) list variable. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-operation.png" alt="list operation" link="/refguide/list-operation/" max-width=65% class="no-border" >}} | [List operation](/refguide/list-operation/) | Combines or compares two lists with objects of the same entity. |
 
-## Action Call Activities
+## Call Activities
 
-[Action call activities](/refguide/action-call-activities/) can be used to call another microflow or to call a Java action.
+[Call activities](/refguide/call-activities/) can be used to call another microflow, or to call a Java or JavaScript action.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-java-action.png" alt="Java action call" link="/refguide/java-action-call/" max-width=65% class="no-border" >}} | [Call Java action](/refguide/java-action-call/) (microflows only) | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-javascript-action.png" alt="javascript action call" link="/refguide/javascript-action-call/" max-width=65% class="no-border" >}} | [Call JavaScript action](/refguide/javascript-action-call/) (nanoflows only) | Calls a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-microflow.png" alt="microflow call" link="/refguide/microflow-call/" max-width=65% class="no-border" >}} | [Microflow call](/refguide/microflow-call/) | Calls a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-java-action.png" alt="Call Java action" link="/refguide/call-java-action/" max-width=65% class="no-border" >}} | [Call Java action](/refguide/call-java-action/) (microflows only) | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-javascript-action.png" alt="call javascript action" link="/refguide/call-javascript-action/" max-width=65% class="no-border" >}} | [Call JavaScript action](/refguide/call-javascript-action/) (nanoflows only) | Calls a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-microflow.png" alt="call microflow" link="/refguide/microflow-call/" max-width=65% class="no-border" >}} | [Call microflow](/refguide/microflow-call/) | Calls a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 
 ## Variable Activities
 
@@ -121,6 +121,16 @@ These activities can only be used in microflows.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/counter.png" alt="counter" link="/refguide/metrics-counter/" max-width=55% class="no-border" >}} | [Counter](/refguide/metrics-counter/) | Allows you to increment a counter by the specified value. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/increment-counter.png" alt="increment-counter" link="/refguide/metrics-increment-counter/" max-width=55% class="no-border" >}} | [Increment counter](/refguide/metrics-increment-counter/) | Allows you to increment a counter by 1. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/gauge.png" alt="gauge" link="/refguide/metrics-gauge/" max-width=55% class="no-border" >}} | [Gauge](/refguide/metrics-gauge/) | Allows you to specify the value of a gauge. |
+
+## Email Activities
+
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
+
+| Graphic | Name | Description |
+| --- | --- | --- |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/send-email.png" alt="send email" link="/refguide/send-email-action/" max-width=60% class="no-border" >}} | [Send Email](/refguide/send-email-action/) (microflows only) | Allows you to send an email directly from a microflow. |
 
 ## ML Kit Activities
 

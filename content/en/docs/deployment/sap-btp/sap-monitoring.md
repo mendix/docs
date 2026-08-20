@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Environments in Mendix Apps on SAP BTP"
 url: /developerportal/deploy/sap-cloud-platform/sap-monitoring/
-weight: 19
+weight: 30
 description: "Presents reference information on logging and monitoring for Mendix apps running on SAP BTO."
 ---
 
@@ -21,9 +21,11 @@ For information about configuring and using Kibana, see the [Kibana User Guide](
 
 The **Logs** page in your Mendix app shows all the environments for this app. Click the **Logs** button to open the log in Kibana.
 
-{{< figure src="/attachments/deployment/sap-btp/log-sap.png" alt="Logs Page SAP" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-monitoring/logs.png" alt="Logs Page SAP" >}}
 
 You may be asked to provide your SAP credentials before you can see the log in Kibana.
+
+To view the logs of an environment using the SAP Cloud Logging service, click **Show Credentials**, copy the credentials, then click **Logs** and paste them to open the environment's logs in a new window. 
 
 ## Troubleshooting
 

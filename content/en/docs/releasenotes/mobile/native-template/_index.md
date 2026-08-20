@@ -9,6 +9,11 @@ description: "Native Template release notes."
 For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and the [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/) guide. Below you can see the current versions in active development and which Mendix Studio Pro versions they correspond with.
 
 Compatible with Studio Pro 11:
+
+* Native Template versions of [19](/releasenotes/mobile/nt-19-rn/) are compatible with apps built using Studio Pro 11.10 and above.
+* Native Template versions of [18](/releasenotes/mobile/nt-18-rn/) are compatible with apps built using Studio Pro [11.8.x](/releasenotes/studio-pro/11.8/). 
+* Native Template versions of [17](/releasenotes/mobile/nt-17-rn/) are compatible with apps built using Studio Pro [11.6](/releasenotes/studio-pro/11.6/) and above.
+* Native Template versions of [16](/releasenotes/mobile/nt-16-rn/) are compatible with apps built using Studio Pro [11.5](/releasenotes/studio-pro/11.5/) and above.
 * Native Template versions of [15](/releasenotes/mobile/nt-15-rn/) are compatible with apps built using Studio Pro [11.0](/releasenotes/studio-pro/11.0/) and above.
 
 Compatible with Studio Pro 10:
@@ -23,11 +28,5 @@ Compatible with Studio Pro 10:
 
 Compatible with Studio Pro 9:
 
-* Native Template versions of [7](/releasenotes/mobile/nt-7-rn/) are compatible with apps built using Studio Pro [9.24](/releasenotes/studio-pro/9.24/)-[10.5](/releasenotes/studio-pro/10.5/). 
-* Native Template versions of [6](/releasenotes/mobile/nt-6-rn/) are compatible with apps built using Studio Pro [9.0](/releasenotes/studio-pro/9.0/)-[9.23](/releasenotes/studio-pro/9.23/). 
-
-Compatible with Studio Pro 8:
-
-* Native Template versions of [5.2](/releasenotes/mobile/nt-5.2-rn/) are compatible with apps built using Studio Pro [8.18.9](/releasenotes/studio-pro/8.18/#8189) and higher.
-* Native Template versions of [5.1](/releasenotes/mobile/nt-5.1-rn/) are compatible with apps built using Studio Pro [8.15](/releasenotes/studio-pro/8.15/)-[8.18.8](/releasenotes/studio-pro/8.18/#8188).
-* Native Template versions of [5.0](/releasenotes/mobile/nt-5.0-rn/) are compatible with apps built using Studio Pro [8.12.1](/releasenotes/studio-pro/8.12/#8121)–[8.14.1](/releasenotes/studio-pro/8.14/).
+* Native Template versions of [7](/releasenotes/mobile/nt-7-rn/) are compatible with apps built using Studio Pro [9.24](/releasenotes/studio-pro/9.24/)-[10.5](/releasenotes/studio-pro/10.5/).
+* Native Template versions of [6](/releasenotes/mobile/nt-6-rn/) are compatible with apps built using Studio Pro [9.0](/releasenotes/studio-pro/9.0/)-[9.23](/releasenotes/studio-pro/9.23/).

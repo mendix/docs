@@ -49,8 +49,8 @@ Delete the APM Tools item that calls "APMAgent/USE_ME/IVK_OpenConsole" from navi
 
 ## Optional: Revert After Startup and Before Shutdown
 
-Remove the microflow call action to APMAgent\USE_ME\AfterStartup from an after startup microflow. This feature is runtime configurable and by default none of the tools are started.
-Remove the microflow call action to APMAgent\USE_ME\BeforeShutdown from a before shutdown microflow.
+Remove the **Call microflow** activity to APMAgent\USE_ME\AfterStartup from an after startup microflow. This feature is runtime configurable and by default none of the tools are started.
+Remove the **Call microflow** activity to APMAgent\USE_ME\BeforeShutdown from a before shutdown microflow.
 You can find the AfterStartup and BeforeShutdown microflows in the project settings.
 
 {{< figure src="/attachments/appstore/partner-solutions/apd/ig/ig-one/ig-one-uninstall-steps/Revert_After_Startup.png" class="no-border" >}}

@@ -21,7 +21,6 @@ In the upper-right corner of the page, you can find the following items:
         * Configure tags.
         * Switch between the Scrum and Kanban board types.
         * Configure toast notifications.
-        * Choose whether to use Maia in Epics.
   
 * Search box — You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID. You can use the search box in combination with the filter.
 
@@ -29,12 +28,10 @@ In the upper-right corner of the page, you can find the following items:
 
 Follow these steps to create a story with Maia:
 
-1. Enable Maia in Epics. To do that:
-    
-    1. Click the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button and select **Settings**.
-    2. On the **Mendix AI Assistance** tab, toggle the option on.
-{{% alert color="info" %}}Only Scrum Masters can modify this setting.{{% /alert %}}
-2. Click **Create Story**, then click {{% icon name="sparkles" %}}**Create with Maia**. The **Maia Create Story** window is displayed.
+1. Enable Maia in the app [Settings](/developerportal/general-settings/#maia-settings) page.
+2. Click **Create Story**, then click {{% icon name="sparkles" %}}**Create with Maia**.     
+   If Maia is enabled, the **Create Story with Maia** window is displayed.    
+   If Maia is not enabled, you are given the option to activate it on the spot, from the **Enable Maia** window.
 3. Enter your input, then click **Generate Story**.
 4. Check the suggestion provided by Maia. You can click **Apply to Story** if you agree with the suggestion, or you can choose to regenerate it.
 
@@ -62,7 +59,7 @@ You can move a swimlane by dragging it to the new location.
 
 ### Story Cards {#story-card}
 
-Each card in a swimlane represents a story:
+Each card in a swimlane represents a story.
 
 {{< figure src="/attachments/developerportal/project-management/epics/board/story-card.png" class="no-border" >}}
 
@@ -78,7 +75,7 @@ A story card shows the following details:
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-You can [archive](/developerportal/project-management/epics/archive/) or delete a story as follows: click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](/developerportal/project-management/epics/archive/) or delete a story by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the upper-right corner of the card, then selecting the corresponding option.
 
 {{< figure src="/attachments/developerportal/project-management/epics/board/archive-delete-story.png" class="no-border" >}}
 
@@ -96,32 +93,37 @@ In the upper-right corner, you can click **Copy Link** ({{% icon name="hyperlink
 
 The story details dialog box shows the following items:
 
-* **Description** – This is the description of the story:
-    * You can edit the description of the story by clicking **Edit Description** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks.
-    * You can link a story in the editor by typing *#* and the story title, then selecting the story from the list.
-    * You can type a person in the editor by typing *@*, and the person's name, then selecting the person from the list. Once you save the story, the system sends a notification to the tagged person.
+* **Title** – Add a short and descriptive title for the story. This field is mandatory.
 
-* **Created by** – This shows the person who created the story.
+* **Description** – The story's description, which you can add or edit. The editor supports different text formats, including code blocks.    
+    You can link a story in the editor by typing *#* and the story title, then selecting the story from the list.
 
-* **Assign to** – You can assign the story to anybody who can access the app in [Apps](https://sprintr.home.mendix.com/).
+* **Tagged People** – You can tag team members by selecting them from this drop-down list. Once you save the story, the system sends a notification to the tagged people.
+
+* **Assign To** – You can assign the story to anybody who can access the app in [Projects](https://projects.home.mendix.com/).
 
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** and **Planning** pages.
 
-* **Tasks** – All the tasks are listed.
-    * You can add a task by clicking **+ Add Task**.
-    * You can move a task upwards or downwards by dragging it around.
+* **Tasks** – All the tasks are listed.    
+    You can add a task by clicking **+ Add Task**.
+    You can move a task upwards or downwards by dragging it around.
     
 * **Story Type** – You can set the story type to **Bug** or **Feature**.
 
 * **Linked Epic** – You can select an epic from the drop-down list.
 
-* **Tags** – You can add or remove tags.
-    * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
-    * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking **Settings** ({{% icon name="cog" %}}) at the end.
+* **Tags** – You can add or remove tags.    
+    You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.    
+    You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking **Settings** ({{% icon name="cog" %}}) at the end.
     
 * **Story Points** – You can set the story points to an integer.
 
-* **Attached Files** – You can add attached files by clicking **+**.
+* **Add Files** – Attach files by dragging and dropping, or by clicking the **+** button.
+
+* **Attached Files** – All attached files are displayed in this section. You can download or remove each of them.
+
+* **Feedback** – This displays any feedback items that are linked to the story.     
+    To unlink a feedback item from a story, click its corresponding {{% icon name="unlink" %}} **unlink** button.
 
 * **Audit Trail** – This gives information on all the updates related to the story, including who did the update and when:
    
@@ -146,9 +148,11 @@ The story details dialog box shows the following items:
     
     {{< figure src="/attachments/developerportal/project-management/epics/board/audit-trail.png" class="no-border" >}}
     
-* **Revision** – This shows the revision history of a story. This feature is only available for apps that use Git for version control.
+* **Revisions** – This shows the revision history of a story. This feature is only available for apps that use Git for version control.
 
-* **Comment** – You can type your comment in the text box, then click **Post Your Comments** to save and post the comment.    
+* **Created by** – This shows the person who created the story.
+
+* **Comment** – Type your comment in the text box, and select people you want to tag from the **Tag People** drop-down list. Once done, click **Post Your Comment** to save and post the comment.    
     You can sort the comments by clicking the **Newest** or **Oldest** button.
 
 {{% alert color="info" %}}You can also edit the story in this story details dialog box. If you make any changes, click **Save Story** at the bottom to save it.{{% /alert %}}

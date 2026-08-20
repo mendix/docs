@@ -125,6 +125,12 @@ These dependency CRs include `StorageInstance`, `Build`, and `Endpoint` CRs. Eac
 
 Once all dependencies are processed (report their status as Ready), the Operator will process the `Runtime` CR.
 
+{{% alert color="info" %}}
+Starting from version 2.23.0 of the Mendix Operator, the Operator no longer waits for the `Endpoint` CR. Instead, it updates the `Runtime` CR before the `Endpoint` is created.
+
+In addition, if a `Build` CR has failed or is processing changes, the Operator will process some changes in the `Runtime` CR, as long as the previous build is available.
+{{% /alert %}}
+
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/crd-controller-hierarchy.png" class="no-border" >}}
 
 Any time a CR's status is changed, the Operator will propagate it to the `MendixApp` CR. The Agent will receive events any time the `MendixApp` CR changes its status.

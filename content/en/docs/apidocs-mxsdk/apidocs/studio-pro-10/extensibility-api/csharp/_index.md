@@ -4,8 +4,6 @@ linktitle: "C# Extensibility API"
 url: /apidocs-mxsdk/apidocs/csharp-extensibility-api-10/
 description: "The C# extensibility API allows your custom Studio Pro extensions developed in C# to interact with some internal services of Studio Pro."
 weight: 10
-no_list: false
-description_list: true
 aliases:
     - /apidocs-mxsdk/apidocs/extensibility-api/
 ---
@@ -20,21 +18,25 @@ For information on new releases of the Extensibility API, see [Extensibility: C#
 
 ## Introduction
 
-Extensions can be written in C#, described here, or using a web API which is documented separately in [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/web-extensibility-api-10/).
+Extensions can be written in C#, described here, or using a web API (for more information about the Web API, see [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/web-extensibility-api-10/)).
 
-If you need to add your own custom UI to Studio Pro, you can achieve this using web technology. Your web-based UI will be rendered in Studio Pro using a hosted web view, the API provides communication functionality between your web UI and the C# extension logic.
+To add a custom UI to Studio Pro, you can use web technology. Your web-based UI will be rendered in Studio Pro through a hosted web view, and the API provides communication between your UI and the C# extension logic.
 
 ## Prerequisites
 
-* You need at least a basic understanding of the Mendix platform.
-* You need some understanding of the Mendix Model.
-* You need to have some C# development experience. Extensions are developed using [C#](https://docs.microsoft.com/en-us/dotnet/), and compiled into a `.dll` assembly file.
+To use the C# API, you must have:
+
+* A basic understanding of the Mendix platform
+* Some understanding of the Mendix Model
+* Some C# development experience
+
+Extensions are developed using [C#](https://docs.microsoft.com/en-us/dotnet/) and compiled into a `.dll` assembly file.
 
 ## Getting Started
 
-For detailed explanation on how to get started with extensions, check out [Get Started with the Extensibility API](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/get-started/).
+For detailed information on how to get started with extensions, see [Get Started with the Extensibility API](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/get-started/).
 
-You can also check out our examples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
+You can also review some examples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
 
 ## How-tos
 
@@ -48,18 +50,14 @@ Here is a list of how-tos for you to begin with:
 
 ## Advanced APIs
 
-APIs for the Mendix platform's advanced users:
+Below are APIs for advanced users:
 
 * [Use the Untyped Model Access API Using C#](/apidocs-mxsdk/apidocs/untyped-model-access-api-10/)
 
-## Learn More
+## Reference Guides
 
-You can dive into the following topics in depth:
+Review the following reference guides to explore additional Extensibility API topics:
 
-* [What are extension points](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/extension-points/)
-* [What are the Extensibility API services](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/services/)
-* [How to Interact with the Model API Using C#](/apidocs-mxsdk/apidocs/interact-with-model-api-10/)
-* [How to host web content via a web view wrapper](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/web-views/)
-* [How to Build a Todo Example Extension Using C#](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/build-todo-example-extension/)
-
-## Documentation in This Category
+* [Extension Points](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/extension-points/)
+* [Extensibility Services](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/services/)
+* [Extensibility Web Views](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/web-views/)

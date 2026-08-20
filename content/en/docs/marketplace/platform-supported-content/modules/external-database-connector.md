@@ -9,6 +9,10 @@ aliases:
 
 ## Introduction
 
+{{% alert color="info" %}}
+If you are using Studio Pro 11.13 or later, you do not need to download this module from the Marketplace, as the External Database Connector comes included with Studio Pro. For more information, see [Connect to an External Database](/refguide/external-database-connection/).
+{{% /alert %}}
+
 Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 ## Use Cases
@@ -87,9 +91,9 @@ For example: `*Database*_DBsource.`
 Values for these constants are stored in the active configuration of the user. The password is stored as a private value.
 
 {{% alert color="info" %}}
-Constants are an environment variable whose values can differ per environment, When you deploy an app on Mendix Cloud, values for constants are not added. For more information, see [Constants](https://docs.mendix.com/refguide/configuration/#constants).
+Constants are an environment variable whose values can differ per environment, When you deploy an app on Mendix Cloud, values for constants are not added. For more information, see [Constants](/refguide/configurations-tab/#constants).
 
-For free apps, make sure to add the default values to the constant in Studio Pro. For more information, see the [Deploying a Free App](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app) section below. {{% /alert %}}
+For free apps, make sure to add the default values to the constant in Studio Pro. For more information, see the [Deploying a Free App](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app) section of *Deploying an App to Mendix Cloud*. {{% /alert %}}
 
 {{% alert color="info" %}}
 From Studio Pro 11.1, you can provide dynamic values to connection properties using connection parameters in the Query External Database activity. {{% /alert %}}
@@ -98,7 +102,7 @@ From Studio Pro 11.1, you can provide dynamic values to connection properties us
 
 When the connection is successful and saved, you can search the **Browse database** tab for Tables, Views, Procedures, and Functions.
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/3.png" width="700" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/3.png" width="700" >}}
 
 ## Querying a Database {#query-database}
 
@@ -139,6 +143,10 @@ WHERE empno IN
 
 Here, the parameter `EmpIdList` is of type String with the  value `[1,7946,3,4,7942,7943,7945]`.
 
+{{% alert color="info" %}}
+Parameter names cannot start with a number.
+{{% /alert %}}
+
 ### Using Query Response {#use-query-response}
 
 After querying the database, you can view the response in the **Response** screen. 
@@ -153,7 +161,7 @@ In the **Response Structure** tab, there is a preview of the queried data in an 
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/response-structure.png" class="no-border" >}}
 
-Click **Save Query & Create Entity** to create the entity and add it to your domain model:
+Click **Create Entity** to create the entity and add it to your domain model:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/entity-created-from-database.png" class="no-border" >}}
 
@@ -202,7 +210,7 @@ The certificates below are required for server configuration and the SSL mode se
 
 You can configure custom settings that are only used when you run your app locally. To do this, follow these steps: 
 
-1. Add the authority certificate (CA) to the **Certificates** tab in the App Settings. See the [Certificates Tab](/refguide/app-settings/#certificates-tab) section of *App Settings* for information about adding certificates. 
+1. Add the authority certificate (CA) to the **Certificates** tab in the App Settings. See the [Certificates Tab](/refguide/certificates-tab/) section of *App Settings* for information about adding certificates. 
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/certificates-tab.png" class="no-border" >}}
 
@@ -215,20 +223,20 @@ To test SSL-based connections from the Database Connection wizard, use the Certi
 1. Import the CA certificate file
     {{% /alert %}}
 
-2. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/developerportal/deploy/use-a-client-certificate/) section of *Use a Client Certificate* for further instructions of how to add the certificate details.
+1. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/developerportal/deploy/use-a-client-certificate/) section of *Use a Client Certificate* for further instructions of how to add the certificate details.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/edit-configuration.png" class="no-border" >}}
 
-3. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
+1. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
     * Set SSL encryption to **Yes**
     * Set SSL mode as per your requirement
     * Add the Client certificate identifier; this must match the value provided in the custom settings dialog
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/example-SSL-connection.png" class="no-border" >}}
 
-4. Click **Test Connection**.
+1. Click **Test Connection**.
 
-5. Run your application to test the connection for local runtime.
+1. Run your application to test the connection for local runtime.
 
 ### Running in the Cloud
 
@@ -261,16 +269,27 @@ To connect to PostgreSQL when the application is running in Mendix Cloud, follow
 
 ### Configure Database Schema Information 
 
-The Browse Database Schema tab might not display a comprehensive overview of all available schemas for certain databases. You can customize this behavior using the Configure option. To do so, follow these steps:
+The Browse Database Schema tab might not display a comprehensive overview of all available schemas for certain databases. You can customize this behavior using the Configure option. 
+
+If you are using Studio Pro 11.13 or later, follow the steps below:
+
+1. Use the Mendix public API class QueryBasedSchemaInfoProvider to extend your Java class. For example, create `MxDb2SchemaInfoProvider.java` inside `\MendixApp\javasource\myfirstmodule\myloader`.
+2. Override the following methods based on your requirements:
+    * `getTableMetaDataQuery`
+    * `getViewMetaDataQuery`
+    * `getProcedureMetaDataQuery`
+    * `getFunctionMetaDataQuery`
+
+If you are using Studio Pro 11.12 or earlier, follow the steps below:
 
 1. Open the **App** menu and select **Deploy for Eclipse**.
-2. Extend the class MxQueryBasedSchemaInfoProvider.
+2. Extend the class `MxQueryBasedSchemaInfoProvider`.
 3. Override the following methods based on your requirements:
-    * getTableMetaDataQuery
-    * getViewMetaDataQuery
-    * getProcedureMetaDataQuery
-    * getFunctionMetaDataQuery
-4. Use the provided example, MxDb2SchemaInfoProvider for IBM Db2, for a better understanding of how to customize the schema information.
+    * `getTableMetaDataQuery`
+    * `getViewMetaDataQuery`
+    * `getProcedureMetaDataQuery`
+    * `getFunctionMetaDataQuery`
+4. Use the provided example, `MxDb2SchemaInfoProvider` for IBM Db2, for a better understanding of how to customize the schema information.
 
 ### Running Queries and Handling Query Responses
 

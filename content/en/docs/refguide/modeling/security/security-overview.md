@@ -1,6 +1,7 @@
 ---
 title: "Security Overview"
 url: /refguide/security-overview/
+description: "Describes the Security Overview in Studio Pro, which summarizes entity, page, microflow, and nanoflow access for each user role."
 weight: 20
 ---
 
@@ -8,15 +9,19 @@ weight: 20
 
 The **Security Overview** page provides you with an overview of your app's security. 
 
-{{< figure src="/attachments/refguide/modeling/security/security-overview/entity-security-overview.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/security/security-overview/entity-security-overview.png" alt="The Security Overview page showing the Entity access tab" class="no-border" >}}
 
 This overview can be used to review the security of your app. You can also export information from the page to an Excel file, for more details, see the [Export To Excel](#export-excel) section below.
+
+{{% alert color="info" %}}
+The **Security Overview** is only available when the [security level](/refguide/app-security/#security-level) of your app is set to **Production**.
+{{% /alert %}}
 
 ## Viewing the Security Overview
 
 The **Security Overview** summarizes the app's security for a selected user role. To view the information, perform the following steps:
 
-1. Access the **Security Overview** page by opening the **App** menu, and then clicking **Show Security Overview (Beta)**.
+1. Access the **Security Overview** page by opening the **App** menu, and then clicking **Show Security Overview**.
 2. In the **Show access for user role** list, select the user role for which you want to view the security summary.  (The anonymous and administrator user roles are marked with  `(Anonymous)` and `(Administrator)` respectively).
 3. Optionally, select a module in the sidebar of the overview.
     Selecting a module filters the content in the **Entity access**, **Page access**, **Microflow access**, and **Nanoflow access** tabs. The list of modules does not show the System module or any protected modules.
@@ -73,11 +78,11 @@ To export the **Security Overview**, click the **Export to Excel** button. This 
     2. Module: The module containing the entity.
     3. Entity: The name of the entity.
     4. Can create:  Specifies wether create access has been granted
-    4. Can delete:  Specifies wether delete access has been granted
-    5. XPath: The XPath constraint.
-    6. XPath Caption:  The XPath constraint caption, when set.
-    7. Access: The access level (None, Read or ReadWrite).
-    8. Anonymous role: Specifies whether this access is connected to an anonymous user role.
+    5. Can delete:  Specifies wether delete access has been granted
+    6. XPath: The XPath constraint.
+    7. XPath Caption:  The XPath constraint caption, when set.
+    8. Access: The access level (None, Read or ReadWrite).
+    9. Anonymous role: Specifies whether this access is connected to an anonymous user role.
 3. Document Access -- This sheet includes the accessible pages, microflows and nanoflows, including the following:
     1. Document type -- The type of the accessible document (page, microflow, nanoflow).
     2. User Role.

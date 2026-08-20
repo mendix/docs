@@ -7,7 +7,7 @@ description: "Describes the configuration and usage of the List View Swipe widge
 ---
 
 {{% alert color="warning" %}}
-This widget is deprecated.
+This widget is deprecated. For an alternative, see the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module.
 {{% /alert %}}
 
 ## Introduction
@@ -61,7 +61,7 @@ Use the following details for styling:
     * `.widget-listview-swipe-disabled`
     * `.widget-listview-swipe-disabled-left`
     * `.widget-listview-swipe-disabled-right`
-* These interactive classes are attached during an action: 
+* These interactive classes are attached during an action:
     * `.will-accept-swipe`
     * `.swiping-right`
     * `.swiping-left`
@@ -80,4 +80,4 @@ To design the background of the view, follow these steps:
 
 In some scenarios, swiping should be (conditionally) disabled. To disable a single swipe item, add the `.widget-listview-swipe-disabled`, `.widget-listview-swipe-disabled-left`, or `.widget-listview-swipe-disabled-right` CSS class to the list view item. To disable all the swipe actions, add the class to the list view .
 
-You can use other custom widgets (for example, [EnumClass](https://marketplace.mendix.com/link/component/2641/)) to change the classes dynamically at runtime. 
+You can use other custom widgets (for example, [EnumClass](https://marketplace.mendix.com/link/component/2641/)) to change the classes dynamically at runtime.

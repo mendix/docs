@@ -18,10 +18,10 @@ For example, if an end-user enters a string into a search field that expects a n
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/app/system-texts/example-invalid-number.png" width="300px" class="no-border" >}}
 
-You can change the system texts in the following way:
+You can change the system texts by following the steps below:
 
-1. Go to the system texts editor: **App Explore** > **App 'AppName'** > **System texts** > **Text**.
-2. Click on the texts in the **Text** column to edit the texts.
+1. Open the systems text editor by opening **App Explorer** > **App 'AppName'** > **System texts** > **Text**.
+2. Click the texts in the **Text** column to edit.
 
 ## Languages
 

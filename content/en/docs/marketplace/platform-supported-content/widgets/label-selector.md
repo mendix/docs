@@ -1,9 +1,14 @@
 ---
 title: "Label Selector"
+deprecated: true
 url: /appstore/widgets/label-selector/
 description: "Describes the configuration and usage of the Label Selector widget, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert color="warning" %}}
+This widget is deprecated. For an alternative, see the [Combo Box](/appstore/widgets/combobox/) widget.
+{{% /alert %}}
 
 ## Introduction
 
@@ -34,7 +39,7 @@ To implement this widget, follow these steps:
 1. Download the Label Selector widget into your app via the Marketplace in Studio Pro.
 2. Create a [persistable](/refguide/persistability/) entity named **Label**.
 3. Add two [attributes](/refguide/attributes/) to the entity named **Caption** and **Color**.
-4. Add a [many-to-many association with dual ownership](/refguide/associations/#many-to-many-both) between this new entity and the entity that you want to label. 
+4. Add a [many-to-many association with dual ownership](/refguide/associations/#many-to-many-both) between this new entity and the entity that you want to label.
 5. Add any necessary [access rules](/refguide/access-rules/) to the new entity.
 6. On a page with a data view of the entity that you want to label, add the widget to this data view.
 7. On the widget properties **Data Source** tab, set **Label object** to the **Label** entity, **Caption attribute** to the **Caption** attribute, and **Color Attribute** to the **Color** attribute.

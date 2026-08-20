@@ -22,6 +22,11 @@ Specify where the parameter comes from. Possible values are the following:
 * **Path** – The operation path can contain parameters as well. If you add a path parameter, make sure you also add it to the operation. For more information, see [Published REST Path Parameters](/refguide10/published-rest-path-parameters/).
 * **Body** – The microflow can have 0 or 1 body parameters. A body parameter is taken from the body of the request. If the body is a file document or an image, the contents will be filled with the body of the request. If the body parameter is another type of object or a list, an [import mapping](/refguide10/import-mappings/) is needed to convert the body content of the request into an object or a list. `GET`, `HEAD`, and `OPTIONS` operations should not have body parameters.
 * **Header** – The value of a header parameter is taken from the (first) request header with that name.
+
+{{% alert color="info" %}}
+Certain reserved keywords in **OpenAPI 3.0** cannot be used as header parameter names. For example, using `Authorization` as a custom header key can cause conflicts since it is already reserved by the specification. Using those reserved keywords only impacts OpenAPI v3 in the Swagger UI and not the actual API endpoints. For more details and alternative names, see [OpenAPI 3.0: Reserved header parameter names](https://swagger.io/docs/specification/v3_0/describing-parameters/#header-parameters).
+{{% /alert %}}
+
 * **Form** – The value of a form parameter is taken from the body part with that name (these are available for `multipart/form-data` requests).
 
 ### Name

@@ -20,7 +20,7 @@ The following operators can be used in XPath query constraints, both in Mendix S
 
 ## Mathematical operators
 
-In Studio Pro, mathematical operators can be used in XPath constraints that are defined in the model such as the [Retrieve](/refguide/retrieve/) microflow activity or access rule [constraints](/refguide/access-rules/#xpath-constraints).
+In Studio Pro, mathematical operators can be used in XPath constraints that are defined in the model such as the [Retrieve object(s)](/refguide/retrieve-objects/) microflow activity or access rule [constraints](/refguide/access-rules/#xpath-constraints).
 
 Mathematical operators are not allowed in queries that come from the client. For example, they cannot be used in [widgets](/appstore/widgets/).
 

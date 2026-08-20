@@ -2,20 +2,22 @@
 title: "Mini Surveys"
 url: /developerportal/app-insights/mini-surveys/
 weight: 6
-description: "The app development team can utilize Mendix's user-friendly [Mini Surveys](/appstore/modules/mendix-mini-surveys/) module to integrate surveys into their applications. This empowers the Product Owner (PO), the Scrum Master, or the development team to craft surveys with personalized customizations, including survey goals, duration, and questionnaire types. After configuring the survey, end-users can conveniently submit their responses. Subsequently, the Product Owner, the Scrum Master, or the team can analyze the survey results, extracting valuable insights."
+description: "Provides information on the [Mini Surveys](/appstore/modules/mendix-mini-surveys/) module, used to integrate surveys into apps."
 ---
 
 ## Introduction
 
 Mini Surveys is a part of Mendix App Insights, a set of tools designed to help you gather and consolidate feedback from your customers.
 
+The app development team can utilize Mendix's user-friendly [Mini Surveys](/appstore/modules/mendix-mini-surveys/) module to integrate surveys into their applications. This empowers the Product Owner (PO), the Scrum Master, or the development team to craft surveys with personalized customizations, including survey goals, duration, and questionnaire types. After configuring the survey, end-users can conveniently submit their responses. Subsequently, the Product Owner, the Scrum Master, or the team can analyze the survey results, extracting valuable insights.
+
 The Mini Surveys feature consists of two parts:
 
 * A pop-up survey in your app for users to fill in
-* A back-end dashboard in the [navigation pane](/developerportal/#navigation-pane) of **Apps** for you to create surveys and aggregate your survey results.
-You begin by creating a mini survey from the **Mini Survey** page in the navigation pane of **Apps**, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey has started, you can view responses that have been collected in Mini Surveys in the Mendix Portal and export the responses to an XLSX file.
+* A back-end dashboard in the [navigation pane](/developerportal/#navigation-pane) of **Projects** for you to create surveys and aggregate your survey results.
+You begin by creating a mini survey from the **Mini Survey** page in the navigation pane of **Projects**, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey has started, you can view responses that have been collected in Mini Surveys in the Mendix Portal and export the responses to an XLSX file.
 
-This document first describes all the pages in Mini Surveys in **Apps**, and then it describes the procedure for running a mini survey.
+This document first describes all the pages in Mini Surveys in **Projects**, and then it describes the procedure for running a mini survey.
 
 ## Mendix Mini Survey Configuration 
 
@@ -25,7 +27,7 @@ When you click **Mini Surveys** in the [navigation pane](/developerportal/#navig
 
 In the upper-left corner of the page, you can see the name of the app currently opened. Click the app name to open a drop-down list of other apps you can navigate to that have been previously opened for Mini Surveys.
 
-The tabs of the **Survey Overview** page are described below.
+The tabs of the **Survey Overview** page are described in the following sections.
 
 {{< figure src="/attachments/developerportal/app-insights/mini-surveys/mini-surveys-overview.png">}}
 
@@ -75,9 +77,7 @@ Clicking the mini survey in a row on the list shows its [survey details](#survey
 
 ### Survey Details {#survey-details}
 
-When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page of the mini survey opens.
-
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-details.png" >}}
+When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page opens.
 
 In the upper-right corner, you can find the following buttons:
 
@@ -102,8 +102,6 @@ On this tab, you can view all the responses that have been collected for the min
 
 When you click {{% icon name="cog" %}} **Settings** in the upper-right corner of the **Survey Overivew** page, the **Settings** page opens. Here you can change all your settings and preferences for the mini survey. There are two tabs available: **Survey Locations** and **API Key**.
 
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/settings-page.png" >}}
-
 #### Survey Locations {#survey-locations}
 
 On the **Survey Locations** tab, you can create and manage your survey locations. 
@@ -112,8 +110,6 @@ You can see all the available survey locations in the list.
 
 To add a new survey location, click **Add Location** above the right corner of the list. This opens a pop-up dialog box where you can enter the name of the new location.
 
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/add-survey-location.png" max-width=60% >}}
-
 To use a newly-created location, make sure that the configuration of the mini survey widget uses exactly the same name as the location name shown in the list here. For more information, see the [Configuration](/appstore/modules/mendix-mini-surveys/#configuration) section in *Mendix Mini Surveys*.
 
 To delete a survey location, click {{% icon name="trash-can" %}} **Delete** at the end of the row of the location in the list. This removes the location from the list. To use this location again, simply create the location again with the same name.
@@ -121,8 +117,6 @@ To delete a survey location, click {{% icon name="trash-can" %}} **Delete** at t
 {{% alert color="info" %}}If a location is used in an active survey or a scheduled survey, you are unable to delete this location.{{% /alert %}}
 
 #### API Key
-
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/api-key.png" >}}
 
 On the **API Key** tab, you can view or generate API keys. The list shows all the active API keys. 
 
@@ -134,7 +128,7 @@ To generate a new API key, click **Generate API Key** above the right corner of 
 
 The first time you complete the onboarding, Mendix creates a demo survey for you to test Mini Surveys. If you want to create a new mini survey, follow these steps:
 
-1. Open the app in [Apps](https://sprintr.home.mendix.com/) and click **Mini Surveys** in the sidebar. What you see depends on whether there are existing mini surveys for the app:
+1. Open the app in [Projects](https://projects.home.mendix.com/) and click **Mini Surveys** in the sidebar. What you see depends on whether there are existing mini surveys for the app:
 
    * If there are existing mini surveys for the app, [Survey Overview](#survey-overview) opens, which lists all the existing mini surveys and shows the **Create New Survey** button
    * If there are no existing mini surveys for this app, you only see the **Create New Survey** button
@@ -164,7 +158,7 @@ Now you can [implement the mini survey](#implement-survey).
 
 To edit a mini survey, perform the following steps:
 
-1. Open the app in [Apps](https://sprintr.home.mendix.com/).
+1. Open the app in [Projects](https://projects.home.mendix.com/).
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
 3. On the **Active** tab, click the mini survey that you want to edit. The [survey details](#survey-details) page opens.
 4. Go to the **Details** tab.
@@ -209,11 +203,11 @@ To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) mod
 
 ### Viewing or Exporting Responses {#view-export-responses}
 
-When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/global-navigation/#notifications) on how many responses have been collected.
+When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/portal/global-navigation/#notifications) on how many responses have been collected.
 
 To check the responses that have been collected, follow these steps:
 
-1. Open the app in [Apps](https://sprintr.home.mendix.com/).
+1. Open the app in [Projects](https://projects.home.mendix.com/).
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
 3. On the **Active** tab, click the mini survey to open the [survey details](#survey-details) page.
 4. Go to the **Responses** tab to see all the responses that have been collected.
@@ -235,7 +229,7 @@ Survey opt-out rule is a variable cached to your internet browser. You can reset
 
 ### Unfinished Surveys
 
-If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in **Apps**. A survey answer must be more than one hour old before it is submitted by the scheduled event.
+If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in **Projects**. A survey answer must be more than one hour old before it is submitted by the scheduled event.
 
 ## Troubleshooting & FAQ
 

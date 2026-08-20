@@ -1,5 +1,5 @@
 ---
-title: "Register Services"
+title: "Registering Services"
 url: /catalog/register/
 weight: 10
 aliases:

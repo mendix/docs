@@ -16,7 +16,7 @@ Team members who have a role with **Cloud Access** can view the permissions. For
 
 ## Viewing Your Nodes{#nodes}
 
-To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation menu](/global-navigation/) and click **Deployment**.
+To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation menu](/portal/global-navigation/) and click **Deployment**.
 
 You will see a list of all your licensed nodes:
 
@@ -91,7 +91,7 @@ Other permissions are needed in addition to **API Rights**. For example, to acce
 
 #### Access to Monitoring
 
-Team members with **Access to Monitoring** permissions can view the application metrics, logs, and alerts in [Apps](https://sprintr.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
+Team members with **Access to Monitoring** permissions can view the application metrics, logs, and alerts in [Projects](https://projects.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
 
 For more information, see [Metrics](/developerportal/operate/metrics/), [Logs](/developerportal/operate/logs/), and [Alerts](/developerportal/operate/monitoring-application-health/).
 

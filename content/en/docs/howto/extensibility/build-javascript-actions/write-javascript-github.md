@@ -244,7 +244,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
     }
     ```
 
-16. You have just implemented an advanced JavaScript action! Start using the action in your nanoflows by adding a **JavaScript action call**, and then selecting the newly created **SearchGitHubUsers** action:
+16. You have just implemented an advanced JavaScript action! Start using the action in your nanoflows by adding a **Call JavaScript action**, and then selecting the newly created **SearchGitHubUsers** action:
 
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/select-searchgithub-users.png" alt="select search GitHub users" class="no-border" >}}
 

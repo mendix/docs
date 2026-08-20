@@ -9,8 +9,12 @@ description: "Describes the configuration and usage of the Mx Model Reflection m
 
 The [Mx Model Reflection](https://marketplace.mendix.com/link/component/69/) module allows you to access information about the domain model and about microflows of your app from your app. For example, you can loop through all the attribute names of an entity type in a microflow.
 
+{{% alert color="warning" %}}
+If your application depends on assets located in the `_USE_ME/_DEPRECATED` directory (e.g., select pages), do not upgrade Mx Model Reflection to version 9.1.0 or later. From version 9.1.0, this directory has been removed. Before upgrading you will need to update your application to remove any use on these assets. If the usage originates from a marketplace module, contact the author and request that they remove the deprecated dependencies.
+{{% /alert %}}
+
 {{% alert color="info" %}}
-To use MxModel Reflection with the React client, remove the folder **_USE_ME/_DEPRECATED**. The assets in this folder are there only for backwards compatiblity, and are not necessary to make full use of MxModel Reflection.
+To use the React client with versions of Mx Model Reflection before version 9.1.0, remove the folder `_USE_ME/_DEPRECATED`, bearing in mind the warning above. The assets in this folder are there only for backwards compatibility, and are not necessary to make full use of MxModel Reflection.
 {{% /alert %}}
 
 ### Dependencies

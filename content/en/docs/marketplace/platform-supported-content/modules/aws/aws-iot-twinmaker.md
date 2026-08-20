@@ -84,18 +84,18 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
 18. Double-click the **ListWorkspaces** activity.
 19. Click **Edit parameter value**, edit the **ListWorkspacesRequest** parameter, and let it auto-fill.
 20. In the **Object name** field, enter *ListWorkspacesResponse*, and then click **OK**.
-21. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-22. Position the **Retrieve** activity between the **ListWorkspaces** activity and the microflow end event.
+21. In the **Toolbox** pane, search for the **Retrieve object(s)** activity and drag it onto the microflow area.
+22. Position the **Retrieve object(s)** activity between the **ListWorkspaces** activity and the microflow end event.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-iot-twinmaker/microflow.png" alt="The microflow with the Retrieve activity added" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-iot-twinmaker/microflow.png" alt="The microflow with the Retrieve object(s) activity added" class="no-border" >}}
 
-23. Double-click the **Retrieve** activity.
+23. Double-click the **Retrieve object(s)** activity.
 24. In the **Association** section, click **Select**, and then select **ListWorkspacesResponse_WorkspaceSummary** as the association.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-iot-twinmaker/selectassociation.png" alt="Selecting the association" class="no-border" >}}
 
 25. In the **List name** field, enter *WorkspaceSummaryList*, and then click **OK**.
-26. In the **Toolbox** pane, search for the **Create List** activity, drag it onto the microflow area, and then position it after the **Retrieve** activity.
+26. In the **Toolbox** pane, search for the **Create List** activity, drag it onto the microflow area, and then position it after the **Retrieve object(s)** activity.
 27. Double-click the **Create List** activity.
 28. In the **Action** section, click **Select**, and then select **{module name}.MyWorkspace** as the action.
 29. In the **List name** field, enter *MyWorkspaceList*, and then click **OK**.

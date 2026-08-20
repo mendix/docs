@@ -8,7 +8,7 @@ weight: 20
 
 ## Introduction
 
-The main API the Mendix Platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
+The main API the Mendix Platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets-10/)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
 
 The Mendix Platform also exposes a few JavaScript modules, specifically extra Mendix APIs as well as existing libraries, like React, that client components must share with the platform to function properly. For more information on exposed libraries, see the [Exposed Libraries](#exposed-libraries) section below.
 
@@ -38,7 +38,7 @@ On native pages, the meaning of a `style` prop is very different. First of all, 
 
 ### TabIndex
 
-If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
+If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
 
 ## Property Values
 
@@ -60,7 +60,7 @@ The flag `canExecute` indicates if an action can be run under current conditions
 
 You can also employ this flag when using a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be run until a parameter object is available, for example when a parent data view has finished loading. Attempting to `execute` an action that cannot be run will have no effect, and generates a debug-level warning message.
 
-The exception to this behavior is when the `ActionValue` is returned by [`ListActionValue.get()`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listactionvalue). In this case, the flag will be true when not all arguments have been loaded. Calling `execute()` for an action with loading arguments will run the action as soon as all arguments become available. While waiting, `isExecuting` will be set to `true` and subsequent calls to `execute()` are ignored. If any arguments become unavailable after loading, the action will not run and a debug-level warning message will be logged.
+The exception to this behavior is when the `ActionValue` is returned by [`ListActionValue.get()`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values-10/#listactionvalue). In this case, the flag will be true when not all arguments have been loaded. Calling `execute()` for an action with loading arguments will run the action as soon as all arguments become available. While waiting, `isExecuting` will be set to `true` and subsequent calls to `execute()` are ignored. If any arguments become unavailable after loading, the action will not run and a debug-level warning message will be logged.
 
 #### isExecuting {#isexecuting}
 
@@ -72,7 +72,7 @@ Note that `isExecuting` indicates only whether the current action is running. It
 
 The method `execute` triggers the action. It returns nothing and does not guarantee that the action will be started synchronously. But when the action does start, the component will receive a new prop with the `isExecuting` flag set.
 
-When the action property [defines action variables](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action-xml-elements), the `execute()` method expects an object map containing a property for each variable. The variables may be passed as undefined, but need to be set explicitly.
+When the action property [defines action variables](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#action-xml-elements), the `execute()` method expects an object map containing a property for each variable. The variables may be passed as undefined, but need to be set explicitly.
 
 Given an action property that defines two `Decimal` variables `lat` and `long`, and a `String` variable named `label`, its `execute()` method accepts the following input:
 
@@ -87,6 +87,10 @@ onClick.execute({
     label: undefined
 });
 ```
+
+{{% alert color="info" %}}
+Action variables were introduced in Mendix [10.21](/releasenotes/studio-pro/10.21/#pluggable-widget-api-action-variables). Earlier versions of Mendix take 0 arguments for `execute()` and do not offer a direct way to pass variables to actions. Instead, use [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#attribute) to set relevant values before calling `execute()`.
+{{% /alert %}}
 
 ### DynamicValue {#dynamic-value}
 
@@ -105,7 +109,7 @@ export const enum ValueStatus {
 }
 ```
 
-A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#expression) `X` will depend on a configured `returnType`.
+A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#expression) `X` will depend on a configured `returnType`.
 
 Though the type definition above looks complex, it is fairly simply to use because a component can always read `DynamicValue.value`. This field either contains an actual value, such as an interpolated `string` in the case of a Text template, or the last known correct value if the value is being recomputed, such as when a parent Data view reloads its Data source. In other cases the value is set as `undefined`.
 
@@ -119,7 +123,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### EditableValue {#editable-value}
 
-`EditableValue` is used to represent values, either an attribute or a variable, that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute). It is defined as follows:
+`EditableValue` is used to represent values, either an attribute or a variable, that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#attribute). It is defined as follows:
 
 ```ts
 export interface EditableValue<T extends AttributeValue> {
@@ -159,9 +163,152 @@ There is a way to use more the convenient `displayValue`  and `setTextValue` whi
 
 The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited value is of the Boolean or enumeration [types](/refguide/attributes/#type).
 
+#### Formatter Details {#formatter-details}
+
+The `formatter` field on `EditableValue` is defined as follows:
+
+```ts
+type ParseResult<T> = { valid: true; value: T } | { valid: false };
+
+interface SimpleFormatter<T> {
+    format(value: T | undefined): string;
+    parse(value: string): ParseResult<T>;
+}
+```
+
+##### Built-in Formatter Types {#built-in-formatter-types}
+
+The Mendix platform provides two typed, configurable built-in formatters that extend `SimpleFormatter<T>`: `NumberFormatter` and `DateTimeFormatter`. The actual type of `EditableValue.formatter` is `ValueFormatter<T>` — a union that covers both built-in and plain formatters:
+
+```ts
+type ValueFormatter<T> =
+    | (TypedFormatter<T> & (NumberFormatter | DateTimeFormatter))
+    | (SimpleFormatter<T> & { readonly type?: never });
+```
+
+Use the `type` property as a type guard to narrow to a specific built-in formatter before accessing its extra API:
+
+```ts
+if (myAttribute.formatter.type === "datetime") {
+    // DateTimeFormatter — has withConfig, getFormatPlaceholder
+} else if (myAttribute.formatter.type === "number") {
+    // NumberFormatter — has withConfig
+} else {
+    // Plain SimpleFormatter — string, enum, or boolean
+}
+```
+
+##### DateTimeFormatter
+
+**Date/DateTime** attributes receive a `DateTimeFormatter`, which extends `SimpleFormatter<Date>`:
+
+```ts
+interface DateTimeFormatter extends SimpleFormatter<Date> {
+    readonly type: "datetime";
+    readonly config: DateTimeFormatterConfig;
+    withConfig(config: DateTimeFormatterConfig): DateTimeFormatter;
+    getFormatPlaceholder(): string | undefined;
+}
+```
+
+The `withConfig` method returns a **new formatter** with a different date pattern while preserving the user's locale. It accepts a `DateTimeFormatterConfig` with the following options:
+
+* `{ type: "date" }`: platform default date format
+* `{ type: "time" }`: platform default time format
+* `{ type: "datetime" }`:  platform default datetime format
+* `{ type: "custom", pattern: "..." }`: custom Unicode date pattern (for example `"EEEE"`, `"dd MMMM"`, `"MMMM YYYY"`)
+
+The following example formats a date attribute using a custom month-year pattern:
+
+```ts
+if (myDateAttribute.formatter.type === "datetime") {
+    const customFormatter = myDateAttribute.formatter.withConfig({
+        type: "custom",
+        pattern: "MMMM YYYY"
+    });
+    const formatted = customFormatter.format(myDateAttribute.value); // e.g. "March 2026"
+}
+```
+
+`getFormatPlaceholder` returns a locale-appropriate placeholder string for the active date pattern, useful for input field `placeholder` attributes:
+
+```ts
+const placeholder = myDateAttribute.formatter.type === "datetime"
+    ? myDateAttribute.formatter.getFormatPlaceholder()
+    : undefined;
+```
+
+##### NumberFormatter
+
+**Decimal**, **Integer**, and **Long** attributes receive a `NumberFormatter`, which extends `SimpleFormatter<Big>`:
+
+```ts
+interface NumberFormatter extends SimpleFormatter<Big> {
+    readonly type: "number";
+    readonly config: NumberFormatterConfig;
+    withConfig(config: NumberFormatterConfig): NumberFormatter;
+}
+```
+
+`NumberFormatterConfig` has the following options:
+
+```ts
+interface NumberFormatterConfig {
+    readonly groupDigits: boolean;       // e.g. 1,000,000
+    readonly decimalPrecision?: number;
+}
+```
+
+The following example disables the thousands separator and fixes the output to four decimal places:
+
+```ts
+if (myNumberAttribute.formatter.type === "number") {
+    const customFormatter = myNumberAttribute.formatter.withConfig({
+        groupDigits: false,
+        decimalPrecision: 4
+    });
+    const formatted = customFormatter.format(myNumberAttribute.value); // e.g. "1234.5600"
+}
+```
+
+##### Plain SimpleFormatter
+
+For **string**, **enumeration**, and **Boolean** attributes the platform provides a plain `SimpleFormatter<T>` without a `type` property. These formatters convert raw values to human-readable captions (for example, enum captions configured in Studio Pro) and parse text input back to the typed value. They do **not** have `withConfig` or `getFormatPlaceholder`:
+
+```ts
+// myEnumAttribute is an EditableValue<string>
+const caption = myEnumAttribute.formatter.format(myEnumAttribute.value); // e.g. "In Progress"
+```
+
+##### Custom Formatters via setFormatter
+
+You can supply a fully custom formatter for any attribute type using `setFormatter`. The object must implement `format` and `parse`:
+
+```ts
+myDecimalAttribute.setFormatter({
+    format(value: Big | undefined): string {
+        return value !== undefined ? `$${Number(value).toFixed(2)}` : "";
+    },
+    parse(text: string): { valid: true; value: Big } | { valid: false } {
+        const num = Number(text.replace(/[$,]/g, ""));
+        return isNaN(num) ? { valid: false } : { valid: true, value: new Big(num) };
+    }
+});
+```
+
+Call `setFormatter(undefined)` to reset the formatter to the platform default.
+
+##### Quick Reference
+
+| Formatter type | `type` value | `withConfig` | `getFormatPlaceholder` | Applies to |
+|---|---|---|---|---|
+| `DateTimeFormatter` | `"datetime"` | ✅ `DateTimeFormatterConfig` | ✅ | `Date` |
+| `NumberFormatter` | `"number"` | ✅ `NumberFormatterConfig` | ❌ | `Big` (Decimal, Integer, Long) |
+| `SimpleFormatter` | `undefined` | ❌ | ❌ | `string`, `boolean`, Enum |
+
 ### ModifiableValue {#modifiable-value}
 
-`ModifiableValue` is used to represent values that can be changed by a pluggable widget client component. It is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association), and is defined as follows:
+`ModifiableValue` is used to represent values that can be changed by a pluggable widget client component. It is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#association), and is defined as follows:
 
 ```ts
 export interface ModifiableValue<T> {
@@ -198,7 +345,7 @@ if (association.type === "Reference") {
 
 The flag `readOnly` indicates whether a value can actually be edited. It will be true, for example, when a widget is placed inside a data view that is not [editable](/refguide/data-view/#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules/). The `readOnly` flag is always true when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
 
-The value can be read from the `value` field and modified using the `setValue` function.  The `value` contains an `ObjectItem` or an `ObjectItem[]` based on the configured association. The `ObjectItem` can be passed to the `get` function of any [linked property value](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#linked-values) which is linked to the selectable object's datasource. 
+The value can be read from the `value` field and modified using the `setValue` function.  The `value` contains an `ObjectItem` or an `ObjectItem[]` based on the configured association. The `ObjectItem` can be passed to the `get` function of any [linked property value](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values-10/#linked-values) which is linked to the selectable object's datasource. 
 
 When setting a value, the `ObjectItem` must be items from the selectable object's data source. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
@@ -206,7 +353,7 @@ It is possible for a component to extend the defined set of validation rules. A 
 
 ### IconValue {#icon-value}
 
-`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix Platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#icon) property. `IconValue` is defined as follows:
+`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix Platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#icon) property. `IconValue` is defined as follows:
 
 ```ts
 interface GlyphIcon {
@@ -238,7 +385,7 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
 
 ### ImageValue{#imagevalue}
 
-`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#image) property. `ImageValue` is defined as follows:
+`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#image) property. `ImageValue` is defined as follows:
 
 ```ts
 export interface WebImage {
@@ -254,7 +401,7 @@ export type ImageValue = WebImage | NativeImage;
 
 ### FileValue {#filevalue}
 
-`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#file) property. `FileValue` is defined as follows:
+`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#file) property. `FileValue` is defined as follows:
 
 ```ts
 export interface FileValue {
@@ -265,11 +412,11 @@ export interface FileValue {
 
 ### List values{#list-values}
 
-`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/) for more information about usage of `ListValue` and associated property values.
+`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values-10/) for more information about usage of `ListValue` and associated property values.
 
 ### SelectionValue {#selection-value}
 
-`SelectionValue` is used to represent selections. It is passed only to [selection properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#selection), and is defined as follows:
+`SelectionValue` is used to represent selections. It is passed only to [selection properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#selection), and is defined as follows:
 
 ```ts
 declare interface SelectionValue<T> {
@@ -319,11 +466,11 @@ The Mendix Platform uses [big.js](https://www.npmjs.com/package/big-js) to repre
 
 ## Native Dependencies
 
-Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app/) app. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
+Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app/) app. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies-10/).
 
 ## Read More
 
-* [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/)
-* [Pluggable Widget Property Types Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)
+* [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-10/)
+* [Pluggable Widget Property Types Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
-* [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/)
+* [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies-10/)

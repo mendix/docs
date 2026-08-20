@@ -9,7 +9,7 @@ aliases:
 ---
 
 {{% alert color="warning" %}}
-This widget is deprecated. You can use the [Maps](/appstore/widgets/maps/) widget instead.
+This widget is deprecated. For an alternative, see the [Maps](/appstore/widgets/maps/) widget.
 {{% /alert %}}
 
 ## Introduction
@@ -135,8 +135,8 @@ Choosing an existing style sheet from a large library that fits your application
 Using community tools, this is how you can upload your own custom style array to the website:
 
 1. Go-to Snazzymaps and click **Create.**
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/style-google-maps/snazzymaps.png" class="no-border" >}} 
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/style-google-maps/snazzymaps.png" class="no-border" >}}
 2. Now you will see the same sort of handy quick style method that Mendix provides at the [Atlas 3](https://atlas.mendix.com/) site.
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/style-google-maps/custom-snazzymaps.png" class="no-border" >}} 
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/style-google-maps/custom-snazzymaps.png" class="no-border" >}}
 
     Happy app building!

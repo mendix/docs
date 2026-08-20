@@ -1,11 +1,13 @@
 ---
 title: "Implementing Mendix in Your Organization"
 linktitle: "Implementing Mendix in Your Organization"
-url: /lead-mendix-implementation-in-your-organization/
+url: /developerportal/digital-execution/lead-mendix-implementation-in-your-organization/
 weight: 45
 description: "Unlock the full potential of the Mendix platform and accelerate the app development journey in your organization."
 no_list: false 
 description_list: true
+aliases:
+    - /lead-mendix-implementation-in-your-organization/
 ---
 
 ## Introduction

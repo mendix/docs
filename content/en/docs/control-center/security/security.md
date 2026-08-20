@@ -17,10 +17,6 @@ The **Settings** page in the **Security** category in Control Center allows you 
 
 ## Security Settings Tab
 
-### Password Policy
-
-With the **Password Policy** setting, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
-
 ### Email Signing {#disable-enable-digital-signing-emails}
 
 The Mendix Platform digitally signs the content of emails from senders [no-reply@notifications.mendix.com](mailto:no-reply@notifications.mendix.com) and [no-reply@platform-mail.mendix.com](mailto:no-reply@platform-mail.mendix.com). By digitally signing the content of an email, Mendix provides assurance to the recipient of the email that the content of an email has not been altered in transit. For reasons of security, this feature is enabled by default. However, if digitally signing the content of an email interferes with the delivery of that email to the recipient, a Mendix Admin can disable this feature for emails sent to receivers in the company domains. For more information, see the [Why Would You Want to Disable the Digital Signing of Email Content?](#why-disable-email-signing) section below.
@@ -73,7 +69,7 @@ You can turn application data replication back on by clicking **Activate**.
 
 On the **Single Sign-On** tab, you can set up an identity federation between the Mendix Platform and your corporate identity provider. This feature is called [Bring Your Own Identity Provider (BYOIDP)](/control-center/security/set-up-sso-byoidp/).
 
-### IdP-managed Mendix Admins
+### IdP-managed Mendix Admins {#idp-managed-mendix-admins}
 
 Once you have set up Single Sign-On (SSO) for the Mendix platform, you can extend this Identity Provider (IdP) integration to control who is granted the Mendix Admin role. From an access management perspective, central management of privileged roles, such as the Mendix Admin, is a recognized best practice. This approach mitigates the risk of privilege creep, where existing Mendix Admins can freely give admin rights to others without proper control.
 
@@ -84,7 +80,7 @@ If you want to automate the process of assigning project-level roles to project 
 You can use your IT processes and IT systems to request and approve the Mendix Admin role for certain employees, and include the entitled employees in a user group in your IdP. The Mendix platform assigns or removes the Mendix Admin role from a user at login time, based on a group membership. When using IdP-managed admins, Mendix Admins can no longer be manually assigned through the Control Center.
 
 {{% alert color="info" %}}
-The IdP-managed Mendix Admin feature is currently in [Limited Availability](/releasenotes/release-status/#limited-availability) due to the lack of self-service configuration in the Control Center. As a result, it requires Mendix-assisted onboarding. To arrange onboarding, contact `jaap.francke@mendix.com`.
+The IdP-managed Mendix Admin feature is currently in [Limited Availability](/releasenotes/release-status/#limited-availability) due to the lack of self-service configuration in the Control Center. As a result, it requires Mendix-assisted onboarding. To arrange onboarding, contact `jacob.francke@siemens.com`.
 {{% /alert %}}
 
 Note that enabling this feature on the Mendix platform may affect your existing set of Mendix Admins. The changes will take place at login:
@@ -92,22 +88,24 @@ Note that enabling this feature on the Mendix platform may affect your existing 
 * If a user logs in and is not a member of the Mendix-admin group in your IdP, Mendix will revoke their Mendix Admin role.
 * If a user logs in and is a member of the Mendix-admin group in your IdP, Mendix will either assign the Mendix Admin role or retain the existing assignment.
 
-As a result, the overview of [Mendix Admins](/control-center/company-settings/#mendix-admins) will gradually synchronize with the Mendix-admin group in your IdP.
+As a result, the overview of [Mendix Admins](/control-center/mendix-admins-page/) will gradually synchronize with the Mendix-admin group in your IdP.
 
 #### Onboarding Prerequisites
 
-Before you request to be onboarded to the IdP-managed Mendix Admins feature, please ensure the following prerequisites are met:
+Before you request to be onboarded to the IdP-managed Mendix Admins feature, ensure the following prerequisites are met:
 
-1. You have a Premium platform license to use this feature.
+1. You have a premium platform license to use this feature.
 2. You have set up an active SSO or BYO-IdP configuration, as described in [Set Up an SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/).
-3. You have a user group in your IdP that includes your current Mendix Admins. Typically, your IT department should manage this group, possibly with a request/approval process.
+3. You have a user group in your IdP that includes your current Mendix Admins. Typically, your IT department should manage this group, possibly with a request or approval process.
 4. The ID token sent by your IdP to the Mendix platform during SSO must include a claim that indicates whether a user is a member of the Mendix Admin group. For configuration, Mendix needs to know the name of the claim and the expected value. When using Entra ID, a typical setup should have the following claim in the ID token:
 
     ```text
     “roles” : “Mendix-admin”
     ```
 
-The Mendix platform has the flexibility of using any claim name and value.
+    The Mendix platform has the flexibility of using any claim name and value.
+
+5. Note that when using the BYOIDP feature to manage your Mendix Admins (see the [IdP-managed Mendix Admins](#idp-managed-mendix-admins) section above), the Mendix platform does not include anything specific in the SSO request (such as a specific scope value or claims request parameter). It expects that your IdP includes the required claim based on the configurations in your IdP for Mendix as a client.
 
 ## Security History Tab
 

@@ -5,12 +5,12 @@ description: "Describes the configuration and usage of the OIDC Provider service
 aliases:
     - /appstore/modules/oidc-provider/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-# Linked from https://marketplace.mendix.com/link/component/214681
+# Linked from [placeholder]
 ---
 
 ## Introduction
 
-The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module lets developers build Mendix applications that issue security tokens to other applications. In IAM (Identity and Access Management) terminology, this module acts as an OpenID Provider and an OAuth Authorization Server. Therefore, this document will refer to such an application as an access-provider application.
+The [OIDC Provider](https://marketplace.mendix.com/link/component/244687) module lets developers build Mendix applications that issue security tokens to other applications. In IAM (Identity and Access Management) terminology, this module acts as an OpenID Provider and an OAuth Authorization Server. Therefore, this document will refer to such an application as an access-provider application.
 
 An access-provider application can offer a Single Sign-On (SSO) experience for end-users of connected applications. Additionally, it can issue Access Tokens for API consumption when APIs are secured with OAuth bearer tokens.
 
@@ -18,13 +18,7 @@ The service supports responsive browser-based applications, and has been tested 
 
 For successful implementation of the OIDC Provider module, Mendix recommends that you attain [Advanced](https://academy.mendix.com/link/certifications/6/advanced) or [Expert](https://academy.mendix.com/link/certifications/24/expert) Mendix certification. Customers with limited low-code experience may consider partnering with a Mendix Implementation Partner.
 
-Certain OIDC Provider module versions are compatible with certain versions of Studio Pro (shown below).
-
-| Mendix Version | OIDC Provider Version |
-| --- | --- |
-| 10.21.01 and above | 4.2.0 and above |
-| 10.12.10 and above | 4.0.0 and above |
-| 9.24.18 and above | 3.2.0 and above |
+{{% alert color="info" %}}If you are using Mendix version 10.24.0 or above, ensure you are using version 5.0.0 or above of the OIDC Provider module.{{% /alert %}}
 
 ### Typical Usage Scenarios
 
@@ -47,7 +41,7 @@ You can build a Mendix application that acts as a SSO Broker by using the OIDC S
 
 For more information on the concepts behind authorization, see [Authorization](#authorization) below.
 
-Your deployment pipeline (deployment agent) will be responsible for registering additional Mendix apps with the SSO broker. This process can be automated using client registration API provided by the OIDC Provider module.
+Your deployment pipeline (deployment agent) will be responsible for registering additional Mendix apps with the SSO broker. This process can be automated using client registration API provided by the OIDC Provider module. The module supports the Authorization grant type for this use case.
 
 #### SSO Within Multi-app Mendix Solution
 
@@ -57,7 +51,7 @@ Mendix Solution Vendors (MSVs) may build a multi-app solution that acts as a sin
 
 As an MSV, you probably want to hide the internal multi-application structure from your end-users. They prefer logging in once to your overall solution, rather than separately to individual apps. The OIDC Provider module allows you to build a **Central Portal App** where your end-users login once and subsequently get a SSO experience when navigating to the various applications in the solution. This approach does not need an external third-party IdP to create such a SSO experience, as your Central Portal App acts as a lightweight solution for customer identity and access management (CIAM).
 
-Instead of using local credentials in the Central Portal App, you may want to integrate your solution with an IdP. As an MSV, you probably also want to hide the internal multi-application structure from this IdP and have a single integration point. The Central Portal App can then act as an SSO broker, similar to the usage scenario described in the [SSO Brokering for rapid innovation](#brokering) section above.
+Instead of using local credentials in the Central Portal App, you may want to integrate your solution with an IdP. As an MSV, you probably also want to hide the internal multi-application structure from this IdP and have a single integration point. The Central Portal App can then act as an SSO broker, similar to the usage scenario described in the [SSO Brokering for rapid innovation](#brokering) section above. The module supports the Authorization code grant for this use case.
 
 #### Non-user Specific API Consumption 
 
@@ -79,7 +73,7 @@ In this setup, developers need both a Mendix platform account and an account for
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/oidc-provider/platform_extensions.png" class="no-border" >}}
 
-If you are building your Extension Application as a Mendix app, you can use the [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module to allow platform users to log in to your Extension Application, get OAuth Access Tokens, and use these tokens to access web APIs provided by your Mendix Extension Services. The [OIDC SSO](/appstore/modules/oidc/) module then helps your web API validate the received token. Since the OIDC protocol requires a static URI for your IDE extension, you can set this URI using the Static URI API (available from Mendix 10.16 onward).
+If you are building your Extension Application as a Mendix app, you can use the [OIDC Provider](https://marketplace.mendix.com/link/component/244687) module to allow platform users to log in to your Extension Application, get OAuth Access Tokens, and use these tokens to access web APIs provided by your Mendix Extension Services. The module supports the Authorization code grant. The [OIDC SSO](/appstore/modules/oidc/) module then helps your web API validate the received token. Since the OIDC protocol requires a static URI for your IDE extension, you can set this URI using the Static URI API (available from Mendix 10.16 onward).
 
 ### Features and Limitations
 
@@ -106,8 +100,8 @@ The OIDC Provider has the following features and limitations:
 
 The following modules need to be imported into your app:
 
-* [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
-* [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation
+* [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation.
+* [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation. (This module is not required if you are using OIDC Provider v5.0.0 and above.)
 
 ### Protocol Adherence
 
@@ -135,13 +129,17 @@ This section provides clarity on the extent to which the OIDC Provider module su
 
 To install the OIDC Provider service in your IAM broker app, you need to import the following into your app:
 
-* [OIDC Provider](https://marketplace.mendix.com/link/component/214681)
+* [OIDC Provider](https://marketplace.mendix.com/link/component/244687)
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69)
 * [Administration](https://marketplace.mendix.com/link/component/23513)
 
 {{% alert color="info" %}}
 To develop your IAM broker app more quickly, consider using the [Access Provider Template](https://marketplace.mendix.com/link/component/229790). This template facilitates the setup and integration of OIDC Provider and OIDC SSO modules, including all necessary dependencies. For more information, refer to the documentation tab of the Access Provider Template Marketplace module.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+When migrating from LA to GA version of the module (version 5.0.0 and above), there is a breaking change in the custom claim selection dropdown. You need to create a microflow with the appropriate prefix and reconfigure the custom claim microflow in the dropdown. For more information, see the [Configuration of the OIDC Provider to Propagate the End-User’s Identity with Custom Claims](#propagate-custom-claims) section below.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -178,7 +176,7 @@ Every end-user that is known in **Admin** module also needs to be known in the O
     1. **Edit** the **Administrator** module role.
     1. Give **Read** **Access rights** to the **AccountDetail_Account** association.
 1. Open the **Runtime** tab of the app's **Settings**.
-1. Add the **OpenIDConnectProvider.ASU_Start_All** microflow as an [After Startup](/refguide/app-settings/#after-startup) microflow.
+1. Add the **OpenIDConnectProvider.ASU_Start_All** microflow as an [After Startup](/refguide/runtime-tab/#after-startup) microflow.
 1. Finally, ensure that your app has the following Administration navigation items:
 
     | Caption | Action | User Roles |
@@ -195,20 +193,14 @@ Every end-user that is known in **Admin** module also needs to be known in the O
 
 Perform the rest of configuration through the app:
 
-1. Deploy and run the app.
-1. Login as an administrator.
-1. Use the **Accounts** navigation item.
-1. Click **New** and create the user account (or accounts) you need in your IAM Broker — for example, a new active account with the **User role** set to **User**.
-1. Use the **OpenID Connect** navigation item.
-1. Open the **Server Keys** tab.
-1. Click **New Key**.
-1. Open the **Scopes** tab.
-1. For the authorization code grant, create **New** scopes, enter `openid` as the **Name**, and set the **Scope type** to **Standard**. You need to use your own value in the **Name** field for the client credential grant type.
+1. Deploy your application and log in with the application Admin account. 
+2. Click **New** in the **Accounts** navigation item to create the user account (or accounts) you need in your IAM Broker. For example, a new active account with the **User role** set to **User**.
+3. Click **New Key** on **Server Keys** tab of the **OpenID Connect** navigation item.
+4. For the authorization code grant, create **New** scopes, enter `openid` as the **Name**, and set the **Scope type** to **Standard**. You need to use your own value in the **Name** field for the client credential grant type.
 
     This page sets up a single list of all the scopes that are known to the OIDC Provider service. For each client, you can then choose the scopes used by that specific client. See [Configuring Centralized Authorization](#configuring-authorization) for more information on which scopes you should set.
 
-1. Open the **Clients** tab.
-1. Click **New Client Registration**.
+5. Open the **Clients** tab and click **New Client Registration**.
 
     You can register a new client (an app using the OIDC SSO module for sign in which identifies this app as its IdP) in one of the two ways shown below in [Automatic Client Registration](#automatic-client-registration).
 
@@ -370,34 +362,39 @@ The scopes you configure are not added automatically to the "scopes_supported" a
 
 ##### Configuration of the OIDC Provider to Propagate the End-User’s Identity with Custom Claims{#propagate-custom-claims}
 
-Typically you want to propagate the end-user’s identity from the OIDC Provider to your Mendix app. Although the basic user attributes like ‘email address’ and ‘user name’ may be sufficient, your app may need more information about the end-user. User attributes like ‘department’ or ‘job-title’ may be used for business logic, including decentralized authorization.
+Typically you want to propagate the end-user’s identity from the OIDC Provider to your Mendix app. Although the basic user attributes such as email address and user name may be sufficient, your app may need additional user information. User attributes such as department or job-title may be used for business logic, including decentralized authorization.
 
 To pass this additional information, you need to create custom claims. You can do this as follows:
 
-1. Create a microflow which returns a value to the claim.
+1. Create a microflow with prefix `OIDCP_CustClaim` that returns a value to be used in the claim.
+    * Input: `Administration.Account`
+    * Output: Any custom Claim object
 
     From version 1.1.0, you can also pass an object from the Domain Model as the custom claim in an ID-token. To do this, your microflow should return the object.
 
-    The ID-token will be a nested JSON structure with the name of the object as the key and a list of attribute names of your object as the keys and the attribute values as the values.
+    The ID-token will be a nested JSON structure with the name of the object as the key, a list of attribute names of your object as the keys, and the attribute values as the values.
 
     ```json
-    "MyObjectName": {
-        "MyObjectAttribute1Name" : "MyObjectAttribute1Value",
-        "MyObjectAttribute2Name" : "MyObjectAttribute2Value"
-    }
+        "MyObjectName": {
+            "MyObjectAttribute1Name" : "MyObjectAttribute1Value",
+            "MyObjectAttribute2Name" : "MyObjectAttribute2Value"
+        }
     ```
 
     "MyObjectName" will be used as the claim name. See note about how to name custom claims in the [Propagate Custom Claims](#propagate-custom-claims) section, above.
 
-1. Run (publish) your app.
-1. Sign in to your app as an Administrator.
-1. Open the **Mx Objects** overview page and synchronize the required modules to see the new microflow.
-1. Follow the navigation item OpenID Connect to open the page `OpenIDConnectDashboard`.
-1. Switch to the Custom claims tab of your registered client.
-1. Create a new claim.
-    * Provide a name for claim
+    {{% alert color="info" %}}If you are already using custom claims with a version below 5.0.0 of the module, you must rename existing microflows to begin with `OIDCP_CustClaim` and reconfigure the custom claim settings to point to the renamed microflows.
+    {{% /alert %}}
+
+2. Run (publish) your app.
+3. Sign in to your app as an Administrator.
+4. Open the **Mx Objects** overview page and synchronize the required modules to see the new microflow.
+5. Follow the navigation item OpenID Connect to open the page `OpenIDConnectDashboard`.
+6. Switch to the Custom claims tab of your registered client.
+7. Create a new claim.
+    * Provide a name for a claim
     * Select the microflow which returns the value to the claim
-1. Save the claim.
+8. Save the claim.
 
     When an authentication request is made to the OIDC Provider, the created custom claim will be added to the ID-token.
 
@@ -432,7 +429,7 @@ This section applies only when your client is using the authorization code grant
 
 #### Provider App Acting as an Identity Provider (IdP)
 
-Consider a scenario, where you build an app using the [OIDC Provider](https://marketplace.mendix.com/link/component/214681) service. You can call this app an OIDC Provider app or Provider app. Other apps using the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module redirect end-users to your Provider app for authentication. You can choose how your Provider app handles the authentication process.
+Consider a scenario, where you build an app using the [OIDC Provider](https://marketplace.mendix.com/link/component/244687) service. You can call this app an OIDC Provider app or Provider app. Other apps using the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module redirect end-users to your Provider app for authentication. You can choose how your Provider app handles the authentication process.
 The **LoginLocation** is a constant in the OIDC Provider service that controls where end-users are authenticated. The default value is a local sign in using a username and password as shown below:
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/oidc-provider/Basic_Username_Password.png" class="no-border" >}}
@@ -447,7 +444,7 @@ However, if you want the Provider app to act as an IAM broker, you need to redir
 
 | Setting type | Current value | New value |
 | --- | --- | --- |
-| com.mendix.core.SamSiteCookies | LAX | LAX |
+| com.mendix.core.SameSiteCookies | LAX | LAX |
 
 ## Configuring an OIDC Client
 
@@ -456,7 +453,7 @@ You need to configure the OIDC SSO module in your app which is using the IAM bro
 1. Create an app containing the OIDC SSO module as described in [OIDC SSO](/appstore/modules/oidc/).
 
     {{% alert color="info" %}}If you are testing locally, you will need to run your OIDC client in a separate copy of Studio Pro and on a different port from the IAM broker.
-    In the [Server](/refguide/configuration/#server) tab of the active configuration of your client app, change the **Runtime port** and **Admin port** to be different from those of your IAM broker app. For example, if your IAM broker is running using `8080` and `8090`, you could use `8081` and `8091` respectively.
+    In the [Server](/refguide/configurations-tab/#server) tab of the active configuration of your client app, change the **Runtime port** and **Admin port** to be different from those of your IAM broker app. For example, if your IAM broker is running using `8080` and `8090`, you could use `8081` and `8091` respectively.
     {{% /alert %}}
 
     1. When you get to [IdP Configuration](/appstore/modules/oidc/#idpconfiguration), you already have the values from the previous section.
@@ -571,10 +568,18 @@ In versions of the OIDC Provider above 2.0.0, the sub value was changed from an 
 
 ## Troubleshooting
 
-### Infinite Loop of Redirects
+### Infinite Loop of Redirects When the Provider App Acts as an IdP
 
-The OIDC Provider service sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider service is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user's browser.
-To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting changed in [Mendix 8.11](/releasenotes/studio-pro/8.11/).
+The OIDC Provider service sets a cookie to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider service is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user's browser.
+To ensure the cookie is properly set, the runtime setting `com.mendix.core.SameSiteCookies` must have the value *None*. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information on how to set the correct value for the SameSite runtime setting. 
+
+### Infinite Loop of Redirects When the Provider App Acts as an IAM Broker
+
+When the OIDC Provider app is acting as an IAM broker, set the below values in the **Custom Runtime Settings** once you have deployed your application on Mendix Cloud and linked it to a licensed node.
+
+| Setting type | Current value | New value |
+| --- | --- | --- |
+| com.mendix.core.SameSiteCookies | LAX | LAX |
 
 ### On-premise Deployment and IIS
 

@@ -35,12 +35,12 @@ In the upper-right corner, there is a **Copy Link** icon ({{% icon name="hyperli
 
 The epic details dialog box shows the following items:
 
-* **Objective** – This is the description of the epic:
+* **Objective** – This is the description of the epic.
     * You can edit the objective of the epic by clicking **Edit Objective** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks
     * You can link a story in the editor by typing *#* and the story title, and then selecting the right story from the list.
     * You can type a person in the editor by typing *@* and the person's name, and then selecting the right person from the list. Once you save the epic, the system will send a notification to the tagged person.
 
-* **Assign to** – You can assign the epic to anybody who can access the app in [Apps](https://sprintr.home.mendix.com/).
+* **Assign to** – You can assign the epic to anybody who can access the app in [Projects](https://projects.home.mendix.com/).
 * **Tags** – You can add or remove tags.
     * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**
     * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking **Manage Tags** ({{% icon name="cog" %}}) at the end.

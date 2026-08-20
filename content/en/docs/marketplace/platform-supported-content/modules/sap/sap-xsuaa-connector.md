@@ -55,7 +55,7 @@ After you install the connector, you can find it in the **App** > **Marketplace 
 
 You need to provide your own [xs-security.json](https://help.sap.com/viewer/4505d0bdaf4948449b7f7379d24d0f0d/2.0.04/en-US/6d3ed64092f748cbac691abc5fe52985.html) file to add custom configuration to your XSUAA connector.
 
-1. Ensure that the **xsuaa** service is in the status **Services To Be Bound**. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
+1. Ensure that the **xsuaa** service is in the status **Services To Be Bound**. For more information, see the [Services Tab](/developerportal/deploy/sap-cloud-platform/environments/#binding-services) section of *Environment Details on SAP BTP*.
 
 2. Click the three dots **…** next to the **xsuaa** service and select **Add Binding Configuration**.
 
@@ -127,6 +127,8 @@ By default, the Mendix login page will not allow the user to enter their SSO cre
 {{% alert color="info" %}}
 To configure a page/microflow URL, follow the steps mentioned in the subsections below. If you are using the Deep Link module, make sure the **LoginLocation** constant is set to `/xsauaalogin/login?ret=`.
 {{% /alert %}}
+
+After XSUAA login, the `SetAccessTokenCookie` constant is used to determine whether to set the access token in a cookie. By default, this constant is set to `True`. If you do not want to set the access token in a cookie, change the value of this constant to `False`.
 
 #### Adding the SSO Login Button to the Login Page {#adding}
 

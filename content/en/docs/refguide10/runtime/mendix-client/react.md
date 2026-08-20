@@ -7,6 +7,10 @@ weight: 10
 
 ## Introduction
 
+{{% alert color="warning" %}}
+The Dojo client is deprecated and will be removed in Mendix 12. It continues receiving security and stability updates throughout the lifetime of Mendix 10.24 LTS. 
+{{% /alert %}}
+
 In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. You can enable this React client in [App Settings](/refguide10/app-settings/#react-client).
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This change allows for improved performance, enables incremental loading, and future-proofs your application. For more information on these three aspects, see the sections below:
@@ -119,6 +123,13 @@ To automatically convert a reference selector widget or a drop-down to a combo b
 Because the reference set selector widget is technically a grid, while combo box is a drop-down, only the applicable configuration options will be transferred to the resulting combo box during conversion.
 {{% /alert %}}
 
+#### HTML / JavaScript Snippet
+
+The [HTML/JavaScript snippet](/appstore/widgets/html-javascript-snippet/) widget is not supported in the React Client. To leverage React, this widget can be replaced using [HTML Element](/appstore/widgets/htmlelement/) widget or [JavaScript actions](/refguide10/javascript-actions/):
+
+* **Content Type** HTML — The HTML Element can be downloaded [here](https://marketplace.mendix.com/link/component/204843).
+* **Content Type** JavaScript — Write the code inside the supported JavaScript actions. If the user needs to execute the code in a certain way, calling the JavaScript action via nanoflow that triggers by [Events](/appstore/widgets/events/) widget is recommended.
+
 #### Data Grid{#data-grid}
 
 The data grid widget is not supported in the React client. To leverage React, replace it with the [Data Grid 2](/appstore/modules/data-grid-2/) widget. The data grid 2 widget is part of the [Data Widgets Module](https://marketplace.mendix.com/link/component/116540) in the Mendix Marketplace.
@@ -136,6 +147,20 @@ To replace a template grid widget, follow these steps:
 1. Configure the columns and any other properties to match the original widget.
 1. Add any actions that items from your original widget as icon buttons to the content area.
 1. Add any actions that do not affect rows as buttons to the gallery widget's header.
+
+#### Feedback Widget
+
+The deprecated feedback widget is not supported in the React client. It should be replaced with the [Mendix Feedback Module](https://marketplace.mendix.com/link/component/205506). This module requires some additional configuration to work with the React client:
+
+1. Install the latest version of the Feedback Module.
+1. Replace the widget or snippet on your main layout(s) with the snippet `FeedbackModule.FeedbackWidget`.
+1. Edit the properties of the widget inside the `FeedbackWidget` snippet (use the Page Explorer or Structure Mode to see it).
+1. Set the **Modal pop-up type** to **Custom**.
+1. Set the **On click action** to **Show a page** and choose the page `FeedbackModule.ShareFeedback`.
+
+#### Sign In Widgets
+
+The React client does not support the default Sign In widgets (Username, Password, Sign In Button). Use a modeled login page instead, leveraging an NPE to store credentials and a Nanoflow for authentication. Refer to the Atlas login page template for implementation guidance.
 
 #### Custom Widgets{#custom-widgets}
 

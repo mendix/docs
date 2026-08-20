@@ -19,7 +19,7 @@ View entities are read-only. To change the resulting data of a view entity retri
 
 ## Prerequisites
 
-Your app must use OQL version 2 to use view entities. You can change this setting by clicking **App 'APP_NAME'** > **Settings** > **Runtime** and setting [OQL version 2](/refguide/app-settings/#oql-version-2) to **Yes**. Alternatively, you can drag a new view entity from the toolbar or **Toolbox** to the domain model, which opens a dialog box where you can confirm upgrading to OQL version 2 if it has not been upgraded yet.
+Your app must use OQL version 2 to use view entities. You can change this setting by clicking **App 'APP_NAME'** > **Settings** > **Runtime** and setting [OQL version 2](/refguide/runtime-tab/#oql-version-2) to **Yes**. Alternatively, you can drag a new view entity from the toolbar or **Toolbox** to the domain model, which opens a dialog box where you can confirm upgrading to OQL version 2 if it has not been upgraded yet.
 
 ## Properties Dialog
 
@@ -99,7 +99,7 @@ An OQL query can begin with either a `SELECT` clause or a `FROM` clause, as both
 
 #### `ORDER BY` Is Only Needed with `LIMIT` or `OFFSET`
 
-Similar to other types of Mendix entity, view entities represent data without enforcing any specific order. Therefore, using the `ORDER BY` clause in the view entity query to sort query results is neither possible nor necessary. Data retrieved from a view entity can be sorted on retrieval (like regular entities) using options like the [Sorting](/refguide/retrieve/#sorting) feature in a Retrieve microflow activity.
+Similar to other types of Mendix entity, view entities represent data without enforcing any specific order. Therefore, using the `ORDER BY` clause in the view entity query to sort query results is neither possible nor necessary. Data retrieved from a view entity can be sorted on retrieval (like regular entities) using options like the [Sorting](/refguide/retrieve-objects/#sorting) feature in a Retrieve microflow activity.
 
 The `ORDER BY` clause is only required in a view entity when using `LIMIT` or `OFFSET` to create data subsets. For example, you might need to use `ORDER BY` when retrieving:
 

@@ -54,48 +54,16 @@ For building:
 In some situations, it can be beneficial to designate a single machine for building native mobile apps or outsourcing the process to a partner.
 
 {{% alert color="warning" %}}
-Building native mobile apps is not supported on the [Private Mendix Platform](/private-mendix-platform/).
+Building native mobile apps is not supported for [Private Mendix Platform](/private-mendix-platform/) version 10.21 and older.
+
+In version 10.22 and newer, the Platform supports native mobile builds, including air-gapped environments with custom repository mirror support.
 {{% /alert %}}
 
 ## Getting the Make It Native App {#get-min-app}
 
-The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. This app is available for both Android and iOS devices.
-
-Depending on the Mendix version used to build your app, you have to use a different version of Make It Native. The following list explains which version to use:
-
-* **Latest Mendix Version** - Latest version of Make It Native 10 ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
-    * Please note that the latest version of Make It Native 10 is offered in online stores' beta version programs. Simply follow the instructions on those sites to download and install the latest version of MIN 10.
-* **10.18.x** – Make It Native 10 MTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/app/make-it-native-10/id6450037464))
-* **10.6.x to 10.17.x** – These versions are no longer supported by Make It Native. Please use MIN 9 LTS (below) or 10 MTS (above) instead, or make your own [custom MIN app](/refguide10/mobile/distributing-mobile-apps/use-min-older-sp/) from open source.
-* **9.24.0 to 10.5.x** – Make It Native 9 LTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9), [iOS](https://apps.apple.com/app/make-it-native-9/id1542182000))
-* **8.18.x** – Make It Native 8 LTS ([iOS](https://apps.apple.com/app/make-it-native-8/id1334081181))
-* **Other** – [Creating a Custom Developer App](/refguide10/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [Building Your Own Make It Native App](https://github.com/mendix/make-it-native)
-
-For information on which mobile operating systems are supported by the Mendix native mobile apps, see the [Mobile Operating Systems](/refguide10/system-requirements/#mobile) section of *System Requirements*.
-
-### Direct Download Links {#direct-links}
-
-Download the latest version of Make It Native 10 using these QR codes:
-
-|                                  Android                                  |                                iOS                                |
-| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide10/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide10/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
-|   [Latest Version](https://play.google.com/apps/testing/com.mendix.developerapp.mx10)    |        [Latest Version](https://testflight.apple.com/join/bQfLf27w)         |
-
-Download the MTS version of Make it Native 10 using these QR codes:
-
-|                                  Android                                  |                                iOS                                |
-| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide10/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide10/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
-|   [MTS Version](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [MTS Version](https://apps.apple.com/us/app/make-it-native-10/id6450037464)         |
-
-### Using the Latest Version of Make It Native
-
-The latest version of Make It Native app receives monthly updates, and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to update your application regularly.
-
-To access the latest version of Make It Native, you must join our official beta testing programs on the Google Play store and the Apple App Store. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
-
-Note that it is not possible to install both **Latest** and **MTS** versions on the same device.
+{{% alert color="warning" %}}
+The Make It Native app is no longer supported for Mendix 10. Please create a [custom Make It Native app](/refguide/mobile/distributing-mobile-apps/use-min-older-sp/) using or a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) instead.
+{{% /alert %}}
 
 ### Recommendations
 
@@ -175,6 +143,11 @@ The latest version of Make It Native 9 is only compatible with versions of Mendi
 ### Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide10/using-mendix-studio-pro-on-a-mac/).
+
+If the Make It Native app cannot connect when you use Parallels, check the following:
+
+* Enter your Mac's IP address in the Make It Native app's **Host** field, not the IP address of the Windows virtual machine that Studio Pro shows. For instructions on finding your Mac's IP address, see the [Viewing Your App on Your Testing Device](/refguide10/using-mendix-studio-pro-on-a-mac/#viewing-your-app-on-your-testing-device) section of *Configuring Parallels*.
+* Make sure port forwarding is enabled for ports 8080, 8083, and 8100 in your Parallels network preferences. For setup steps, see the [Configuring Your Windows Virtual Machine for Mendix Studio Pro](/refguide10/using-mendix-studio-pro-on-a-mac/#configuring) section of *Configuring Parallels*.
 
 ### Avoid Network or Cloud Folders
 

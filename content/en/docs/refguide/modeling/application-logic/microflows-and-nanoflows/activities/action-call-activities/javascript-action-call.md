@@ -1,8 +1,10 @@
 ---
-title: "JavaScript Action Call"
-url: /refguide/javascript-action-call/
+title: "Call JavaScript Action"
+url: /refguide/call-javascript-action/
 weight: 20
-description: "This reference explains the properties of the JavaScript action call activity."
+description: "This reference explains the properties of the Call JavaScript action activity."
+aliases:
+   - /refguide/javascript-action-call/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +14,7 @@ This activity can only be used in nanoflows.
 
 ## Introduction
 
-The JavaScript action call activity can be used to call a [JavaScript action](/refguide/javascript-actions/). Arguments can be passed to the action, and the result can be stored.
+The Call JavaScript action activity can be used to call a [JavaScript action](/refguide/javascript-actions/). Arguments can be passed to the action, and the result can be stored.
 
 ## Properties
 
@@ -20,7 +22,7 @@ There are two sets of properties for this activity, those in the dialog box on t
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-action-call.png" alt="JavaScript Action Properties" width="700px" class="no-border" >}}
 
-The **JavaScript action call** properties pane consists of the following sections:
+The **Call JavaScript action** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -72,4 +74,4 @@ The name of the variable, list, or object returned by the activity. If it is an 
 * [JavaScript Actions](/refguide/javascript-actions/)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)
 * [Nanoflows](/refguide/nanoflows/)
-* [Java Action Call](/refguide/java-action-call/)
+* [Call Java Action](/refguide/call-java-action/)

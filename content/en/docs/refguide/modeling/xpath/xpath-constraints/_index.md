@@ -22,7 +22,7 @@ All the Studio Pro examples below assume that an entity `Sales.Customer` is sele
 Visual Builder for XPath constraints has a number of limitations which are listed in [Builder Limitations](#limitations).
 {{% /alert %}}
 
-You can use the Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/database-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
+You can use the Builder in all places where you can retrieve data from the database, for example a [Retrieve object(s)](/refguide/retrieve-objects/) activity in a microflow or the [Data Source](/refguide/database-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
 
 You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
 
@@ -81,7 +81,7 @@ If you try to use an unsupported feature you will be warned and can choose to ed
 
 In all versions of Mendix you can write XPath constraints using the syntax explained below. As you enter your XPath you will be given assistance to help you choose the correct entities, attributes, variables, and associations. You will also see if there are any syntax errors.
 
-For all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/database-source/) of a widget, you select **(From) Database** and you will always have the option to add an **XPath constraint** by clicking **Edit…** to open a dialog box where you can enter your constraint.
+For all places where you can retrieve data from the database, for example a [Retrieve object(s)](/refguide/retrieve-objects/) activity in a microflow or the [Data Source](/refguide/database-source/) of a widget, you select **(From) Database** and you will always have the option to add an **XPath constraint** by clicking **Edit…** to open a dialog box where you can enter your constraint.
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-5.png" class="no-border" >}}
 
@@ -182,10 +182,10 @@ This query retrieves all users that have the role Administrator:
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    [id = '[%UserRole_Administrator%]']
+    [System.UserRoles/System.UserRole[id = '[%UserRole_Administrator%]']]
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
-     //Sales.User[id = '[%UserRole_Administrator%]']
+     //Sales.User[System.UserRoles/System.UserRole[id = '[%UserRole_Administrator%]']]
     {{% /tab %}}
 {{< /tabpane >}}
 

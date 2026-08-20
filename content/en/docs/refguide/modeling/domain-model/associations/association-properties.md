@@ -82,7 +82,7 @@ One-way navigable associations are associations that allow navigation to associa
 
 You can retrieve data from all other domain model associations in both directions.
 
-One-way navigable associations are represented by a dashed arrow in Domain model editor. An icon shows the direction of its navigability.
+One-way navigable associations are represented by an icon next to the association name showing the direction of its navigability. In Mendix versions below 11.6.0, they are also shown with a dashed arrow.
 
 ### On Delete Behavior {#delete-behavior}
 

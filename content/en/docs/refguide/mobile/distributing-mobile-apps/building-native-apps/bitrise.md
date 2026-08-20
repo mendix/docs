@@ -181,4 +181,8 @@ Now, every time some runs **Build Native App** to update the application bundle,
 
 ## Additional Considerations
 
+{{% alert color="info" %}}
+When using pipelines, avoid manual commits to the repository that holds your native template. These can interfere with the build pipeline and cause errors in builds. Instead, use the configuration options provided by Build Native App and add dependencies by [declaring them in JavaScript Actions](/howto/extensibility/create-native-javascript-action/#declaring-native-dependencies) or pluggable widgets.
+{{% /alert %}}
+
 Our MVP Marcel Groeneweg has written a [Medium post](https://marcel-groeneweg.medium.com/mendix-native-builds-with-bitrise-6ce56f0bb8fc) about optimizing Mendix native mobile builds with Bitrise. Mendix cannot take responsibility for third-party recommendations.

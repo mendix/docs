@@ -1,7 +1,7 @@
 ---
 title: "Using Marketplace Content"
 url: /appstore/use-content/
-weight: 3
+weight: 4
 description: "Covers the basics of how to access the Marketplace from Studio Pro and provides examples of how to add a widget and module to your app."
 no_list: false
 aliases:
@@ -46,10 +46,10 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 4. You can explore Marketplace content in the following ways:
     * Use **Search in the Marketplace** to find the component that you want to download.    
       You can paste the content ID here if you copied it via the [Use in Studio Pro button](/appstore/component-details/) in the web Marketplace.
-    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/overview/).
+    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/#components-type).
     * Filter for **All Content**, **My Company Content**, or **Platform-Supported Content**.
 
-5. Select a component from the pane to see its details:
+5. Select a component from the pane to see its details.
 
     {{< figure src="/attachments/appstore/use-content/component-details.png" alt="Details of Blank App example component" class="no-border" >}}
 
@@ -78,7 +78,7 @@ If you download a module, the **Import Module** dialog box opens, where you shou
 
    * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – If you select this option, new entities and attributes are created in your app.
 
-   * **Replace existing module** (default option when the module already exists in your app) – If you select this option, you need to specify which **Module to replace**
+   * **Replace existing module** (default option when the module already exists in your app) – If you select this option, you need to specify which **Module to replace**.
 
      {{% alert color="warning" %}}If you have made any changes to the existing module, selecting the **Replace existing module** option replaces all the changes that you made. For example, your renamed entities, attributes, and associations, as well as their respective tables and columns represented in the database will all be replaced. If you have changed data types, your user data can be influenced as well. User data will not be changed, though, if you have not changed entities, attributes, or associations. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
 
@@ -99,7 +99,7 @@ If you download an [extension](/appstore/modules/#introduction), a warning dialo
 Click **OK** in the confirmation pop-up window. Your extension is now installed and ready to use.    
 Depending on the extension that you have installed, the functionality appears in a certain location of your app. Read the extension-specific documentation to get more information on how to use it.
 
-If you do not want to trust the extension and would prefer to remove the extension altogether, you can remove the add-on module that was added.
+If you do not want to trust the extension and would prefer to remove it altogether, you can remove the add-on module.
 
 {{< figure src="/attachments/appstore/use-content/trust-extension.png" alt="trust extension" >}}
 
@@ -124,7 +124,7 @@ To download content in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and abo
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
 3. Click the Marketplace icon in the top menu bar to open it in Studio Pro. The Marketplace opens within Studio Pro. The **Categories** menu item on the left side gives an overview of which types of content are available.
-4. Use the **Search** bar to find the component that you want to download. Note that results for Marketplace content searches within Studio Pro may differ from those in the online [Marketplace](/appstore/overview/) due to a synchronization issue.
+4. Use the **Search** bar to find the component that you want to download. Note that results for Marketplace content searches within Studio Pro may differ from those in the online [Marketplace](/appstore/) due to a synchronization issue.
 5. Click the component or the **Read more** button on the right side to show the details of the component.
 6. Click **Download** to download the component.     
    The correct version of the component that is compatible with your Studio Pro version is integrated directly into your application. By default, the highest correct version of the component is downloaded. If you want to download an older component version, go to the **Releases** tab and click **Download** for the desired version.    
@@ -145,12 +145,8 @@ To import content downloaded from the online Mendix Marketplace into Studio Pro,
 2. Search in the online Marketplace for the component you want to download, and open the [component details page](/appstore/component-details/).
 3. Access **Usage**, then **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
 4. Go to the **Releases** tab and **Download** the desired version. Mendix recommends using the latest version of the component if possible.
-5. In the **App Explorer**, right-click the app, then click **Import module package**, and select the component you downloaded:
-
-    {{< figure src="/attachments/appstore/use-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" class="no-border" >}}
-
-    The **Import Module** dialog box opens. 
-
+5. In the **App Explorer**, right-click the app, then click **Import module package**, and select the component you downloaded.    
+   The **Import Module** dialog box opens. 
 6. In the **Import Module** dialog box, select one of these options:
 
     * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – If you select this option, new entities and attributes are created in your app.
@@ -236,7 +232,7 @@ After you place the widget on your page, some new errors can appear in the [Erro
 
 To configure the widget, follow these steps:
 
-1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page:
+1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page.
 
     {{< figure src="/attachments/appstore/use-content/widget-errors.png" alt="Errors pane" class="no-border" >}}
 

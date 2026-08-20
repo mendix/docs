@@ -18,7 +18,7 @@ We currently support deploying to the following Kubernetes cluster types:
 
 * [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS)
 {{% alert color="info" %}}
-If you want to deploy your app to Amazon EKS, consider using the Mendix for Amazon EKS Reference Deployment. For more information, see [Mendix for Amazon EKS—Terraform module](https://aws.amazon.com/solutions/partners/terraform-modules/mendix-eks/).
+If you want to deploy your app to Amazon EKS, consider using the Mendix for Amazon EKS Reference Deployment. For more information, see [Mendix for Amazon EKS—Terraform module](https://registry.terraform.io/modules/aws-ia/mendix-private-cloud/aws/latest).
 {{% /alert %}}
 * [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 * [Red Hat OpenShift Container Platform](https://www.openshift.com/)
@@ -27,6 +27,11 @@ If you want to deploy your app to Amazon EKS, consider using the Mendix for Amaz
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 * [Google Cloud Platform](https://cloud.google.com/)
 * [Google Kubernetes Engine- Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview). For more information, see [Mendix on Kubernetes Cluster: GKE Autopilot Workarounds](/developerportal/deploy/private-cloud-cluster/#gke-autopilot-workarounds)
+* [STACKIT Kubernetes Engine](https://stackit.com/en/products/runtime/stackit-kubernetes-engine)
+
+For STACKIT Kubernetes Engine, customers provision the SKE cluster, PostgreSQL Flex database(s), and Object Storage bucket(s) themselves before deploying Mendix.
+
+Any Kubernetes version offered by SKE that falls within the [Supported Versions](#supported-versions) range is supported.
 
 {{% alert color="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
@@ -36,8 +41,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix on Kubernetes Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.33
-* OpenShift 4.6 through 4.18
+* Kubernetes versions 1.19 through 1.36
+* OpenShift 4.6 through 4.21
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -160,6 +165,10 @@ Mendix Operator supports registry authentication with [workload identity](https:
 
 When used together with an [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's Kubernetes service account.
 
+### STACKIT Container Registry
+
+[STACKIT Container Registry](https://docs.stackit.cloud/products/developer-platform/container-registry/) is a cloud-native registry that enables you to store, manage and deploy container images securely and efficiently within the STACKIT Cloud. With this tool, you can easily manage the entire lifecycle of your container images (if static credential authentication is used).
+
 ## Databases{#databases}
 
 The following databases are supported, and provide the features listed.
@@ -208,6 +217,7 @@ The following managed PostgreSQL databases are supported:
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
 * [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
 * [Amazon RDS Aurora for PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.AuroraPostgreSQL.html)
+* [STACKIT PostgreSQL Flex](https://stackit.com/en/products/database/stackit-postgresql-flex)
 
 Amazon PostgreSQL instances require additional firewall configuration to allow connections from the Kubernetes cluster.
 
@@ -240,7 +250,10 @@ If Strict TLS is enabled, Mendix on Kubernetes will connect to the PostgreSQL se
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+When using STACKIT PostgreSQL Flex, the Mendix on-demand PostgreSQL provisioner cannot be used directly. STACKIT PostgreSQL Flex does not expose the CREATEROLE privilege, which is necessary for Mendix to automatically create database users via SQL commands. Hence, a database user needs to be created per environment before deployment.
 {{% /alert %}}
 
 ### Microsoft SQL Server
@@ -280,7 +293,6 @@ If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TL
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 ### Dedicated JDBC database{#jdbc}
@@ -346,6 +358,10 @@ Mendix Operator will need the endpoint, access key, and secret key to access the
 
 [Ceph](https://ceph.io/en/) is supported with the S3-compatible interface [Ceph Object Gateway](https://docs.ceph.com/en/mimic/radosgw/). The Mendix Operator will need the endpoint, access key, and secret key to access the storage. Please check the Ceph documentation for information on how to get the credentials.
 
+### STACKIT Object Storage (S3 compatible)
+
+STACKIT's S3-compatible object storage does not implement APIs such as `CreateUser`, `CreatePolicy`, or `CreateBucket`. Because of that, you must first create a bucket which will be shared with your environments. You can also create separate buckets for each environment.
+
 ## Networking
 
 {{% alert color="info" %}}
@@ -354,12 +370,7 @@ Mendix on Kubernetes will use the existing ingress controller.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-We strongly recommend using the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), even if other Ingress controllers or OpenShift Routes are available. You may need to check which of the [several versions of the NGINX Ingress Controller](https://www.nginx.com/blog/guide-to-choosing-ingress-controller-part-4-nginx-ingress-controller-options/#NGINX-vs.-Kubernetes-Community-Ingress-Controller) is installed in your cluster. Mendix recommends the "community version".
-
-NGINX Ingress can be used to deny access to sensitive URLs, add HTTP headers, enable compression, and cache static content.
-NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/), removing the need to manually manage TLS certificates. In addition, NGINX Ingress can use a [Linkerd](https://linkerd.io/) Service Mesh to encrypt network traffic between the Ingress Controller and the Pod running a Mendix app.
-
-These features will likely be required once your application is ready for production.
+The [Kubernetes Ingress NGINX Controller](https://kubernetes.github.io/ingress-nginx/) will be supported [until March 2026](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/). We recommend switching to another Ingress controller. The [NGINX Ingress Controller](https://github.com/nginx/kubernetes-ingress) from the NGINX project (F5 Networks) has a similar feature set. In most cases, switching from the deprecated Kubernetes controller to controller from F5 Networks only requires renaming Ingress annotations.
 {{% /alert %}}
 
 ### OpenShift Route
@@ -386,11 +397,14 @@ It is also possible to provide a custom TLS configuration for individual environ
 
 Mendix on Kubernetes is compatible with the following ingress controllers:
 
-* [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
+* [NGINX Ingress Controller](https://github.com/nginx/kubernetes-ingress) from the NGINX project
 * [Traefik](https://traefik.io/traefik/)
+* [Istio Kubernetes Ingress](https://istio.io/latest/docs/tasks/traffic-management/ingress/kubernetes-ingress/)
+* [HAProxy Kubernetes Ingress Controller](https://github.com/haproxytech/kubernetes-ingress)
 * [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
 * [Ingress for External Application Load Balancer](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb)
 * [Azure Application Gateway Ingress Controller](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview)
+* [Deprecated Kubernetes Ingress NGINX Controller](https://kubernetes.github.io/ingress-nginx/) from the Kubernetes project - ⚠️ supported only until March 2026
 
 For ingress, it is possible to do the following:
 
@@ -420,10 +434,39 @@ There are multiple ways of managing TLS certificates:
 
 Starting from Mendix Operator v1.11.0, Mendix app environments can use a [Linkerd](https://linkerd.io/) Service Mesh. Linkerd can be used to monitor and re-encrypt HTTP (or HTTPs) traffic between the Ingress Controller and the Pod running a Mendix app.
 
+### Gateway API
+
+Starting from Mendix Operator v2.27.0, the [Gateway API](https://gateway-api.sigs.k8s.io/) is supported.
+
+For each environment, the Mendix Operator creates and manages an [HTTPRoute](https://gateway-api.sigs.k8s.io/reference/api-types/httproute/) resource.
+
+Mendix Operator only uses API features that are defined in the official Gateway API [v1.4 standard](https://gateway-api.sigs.k8s.io/reference/api-spec/1.4/spec/), and does not rely on any other features.
+
+Any implementation compliant with the Gateway API v1.4 spec should be compatible with HTTPRoute objects created and managed by the Mendix Operator.
+
+For more information, refer to the documentation of your Gateway API implementation, or check the status on the [Gateway API Implementations list](https://gateway-api.sigs.k8s.io/docs/implementations/list/).
+
+#### Using the Gateway API
+
+When using the Gateway API, it is possible to do the following:
+
+* Enable TLS (use the `https://` schema in app URLs).
+* Add service annotations.
+* Specify the HTTPRoute [parentRefs](https://gateway-api.sigs.k8s.io/reference/api-spec/1.4/spec/#httproutespec), to specify which Gateway to use.
+* Provide a domain name (for example, `mendix.example.com`).
+* Configure request and response [HTTPHeaderFilters](https://gateway-api.sigs.k8s.io/reference/api-spec/1.4/spec/#httpheaderfilter).
+
+For each environment, the URL is automatically generated based on the domain name. For example, if the domain name is set to `mendix.example.com`, the apps will have URLs such as `myapp1-dev.mendix.example.com`, `myapp1-prod.mendix.example.com`, and so on.
+
+The DNS server should be configured to route all subdomains (the `*` subdomain, for example, `*.mendix.example.com`) to the ingress/load balancer.
+
+{{% alert color="warning" %}}
+HTTPRoute resources do not provide any APIs to manage or set TLS configuration. In the Gateway API resource model, TLS certificates are managed by the *cluster operator* persona, usually through the Gateway resource. This is allows Cluster Operators to manage security policies and settings from a central location.
+{{% /alert %}}
+
 ### Service Only
 
-Mendix on Kubernetes can create Services without an Ingress.
-In this way, the Ingress objects can be managed separately from Mendix on Kubernetes.
+Mendix on Kubernetes can create Services without an Ingress. In this way, the Ingress objects can be managed separately from Mendix on Kubernetes.
 
 Mendix on Kubernetes can create Services that are compatible with:
 

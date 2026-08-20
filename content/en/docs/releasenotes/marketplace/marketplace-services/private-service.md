@@ -7,6 +7,33 @@ weight: 20
 numberless_headings: true
 ---
 
+## 1.0.4 (`latest`)
+
+**Release date: May 18, 2026**
+
+This release includes routine security updates, which do not pose any apparent risk to Mendix customers.
+
+## 1.0.3
+
+**Release date: March 06, 2026**
+
+This release includes routine security updates, which do not pose any apparent risk to Mendix customers.
+
+## 1.0.2
+
+**Release date: September 04, 2025**
+
+We fixed an issue where document generation fails with a `wait for content` exception if any network request fails while opening the document page.
+
+## 1.0.1
+
+**Release date: August 08, 2025**
+
+With this version of the private PDF Document Generation service, we have improved the following:
+
+* Request validation
+* Error handling
+
 ## 1.0.0
 
 **Release date: June 27, 2025**

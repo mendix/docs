@@ -78,6 +78,8 @@ The selected microflow must adhere to the following principles:
 * Input needs to be the same as described in the `Schema` attribute (only primitives and/or an object of type `MCPServer.Tool` are supported). If no Schema is passed in the `Add tool` action, it will be automatically created based on the microflow's input parameters, by setting all of them as required.
 * The return value must be either of type `String` or `TextContent`. You can create a `TextContent` object within the microflow to return the relevant information to the model based on the outcome of the microflow.
 
+If the tool microflow returns a `TextContent` object, you can set `IsError = True` to signal a handled error to the client — use `Content` to describe what went wrong, e.g. in a structured way, or to let the LLM know it can retry. Note: this requires the microflow to return TextContent directly; a microflow with a plain String return type has no way to set `IsError`, and will always return IsError = False. If the microflow throws an uncaught exception instead, IsError is set to True automatically, the full exception is logged server-side, and the client receives a generic error message (no internal details).
+
 For example, see the `Example Implementations` folder inside the module.
 
 {{% alert color="warning" %}}

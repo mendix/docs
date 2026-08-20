@@ -147,5 +147,5 @@ To use custom user provisioning, do the following:
 ### Mendix Cloud Portal Runtime Setting
 
 Set the **ApplicationRootUrl** in the **Runtime** tab of Mendix Cloud Portal when deploying your app. Use the following format:
-`http://<tenant>.<region>`.sws.siemens.com/`<appname>-<provider>`.
+`http://<tenant>.<region>`.sws.siemens.com/`<appname>-<provider>/`.
 Once configured, you can access the web application using the same URL.

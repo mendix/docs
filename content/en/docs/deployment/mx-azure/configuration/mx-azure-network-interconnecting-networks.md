@@ -75,12 +75,29 @@ Virtual network peering enables IP traffic flow but DNS resolution must also be 
 
 Users in linked networks can now access Mendix apps using the usual URLs.
 
-#### DNS Name Resolution towards Resources in Other Networks {#name-resolution-dns-override}
+#### DNS Name Resolution toward Resources in Other Networks {#name-resolution-dns-override}
 
-To allow Mendix apps to resolve internal services in your network, configure DNS resolution selecting one of the following options:
+To allow Mendix apps to resolve internal services in your network, configure DNS resolution using one of the following options.
 
-* Create or use an existing Private DNS Zone for the internal service's FQDN and link it to the Mendix virtual network by using a [virtual network link](https://learn.microsoft.com/en-us/azure/dns/private-dns-virtual-network-links).
-* Configure the Mendix virtual network to use your own DNS server that resolves internal service names, as described in [Microsoft's DNS configuration instructions](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances). The Mendix virtual network is located in the [Managed Resource Group](/developerportal/deploy/mendix-on-azure/configuration/#mrg).
+##### Option 1: Link a Private DNS Zone{#dns-zone-outside-mrg}
+
+The Mendix on Azure virtual network is located in the [Managed Resource Group](/developerportal/deploy/mendix-on-azure/configuration/#mrg), which is protected by [Azure deny assignments](https://learn.microsoft.com/en-us/azure/role-based-access-control/deny-assignments). This prevents you from creating or modifying most resources, including Private DNS zones and their record sets, directly inside that resource group.
+
+To manage your own DNS records for internal services without running into these restrictions, you can link a self-managed private DNS zone to the Mendix virtual network by performing the following steps:
+
+1. Create a new [Azure Private DNS zone](https://learn.microsoft.com/en-us/azure/dns/private-dns-privatednszone) for the FQDNs which you need Mendix apps to resolve (for example, *internal.yourcompany.com*), in a resource group you fully control, outside the Managed Resource Group.
+2. Add [DNS records](https://learn.microsoft.com/en-us/azure/dns/dns-operations-recordsets-portal) in this zone pointing to the IP addresses of your internal services.
+3. Create a [virtual network link](https://learn.microsoft.com/en-us/azure/dns/private-dns-virtual-network-links) from this Private DNS zone to the Mendix on Azure virtual network in the [Managed Resource Group](/developerportal/deploy/mendix-on-azure/configuration/#mrg).
+
+Because the zone lives in a resource group you own, you can add, change, or remove records yourself at any time, without needing to modify anything inside the Managed Resource Group.
+
+{{% alert color="info" %}}
+This is standard Azure Private DNS configuration, not something specific to Mendix on Azure. Refer to the Microsoft documentation linked above for full details on managing Private DNS zones and virtual network links.
+{{% /alert %}}
+
+##### Option 2: Override DNS Resolution on the Mendix Virtual Network
+
+Configure the Mendix virtual network to use your own DNS server that resolves internal service names, as described in [Microsoft's DNS configuration instructions](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances). The Mendix virtual network is located in the [Managed Resource Group](/developerportal/deploy/mendix-on-azure/configuration/#mrg).
 
 ### Solution 2: PrivateLink with Private Endpoints
 

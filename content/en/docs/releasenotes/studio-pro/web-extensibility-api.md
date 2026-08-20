@@ -13,6 +13,11 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 * We updated the progress dialog cancellation behavior: the process now waits for the cancelled step to finish before resolving, rather than immediately returning a snapshot of the progress at the time of cancellation. A new `resolveImmediatelyOnCancel` parameter restores the previous behavior.
 * We fixed an issue where reloading an extension with open tabs caused an Oops crash.
 
+## Version 11.12.3
+
+* We added support for preselecting modules in the [Document Selector API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/).
+* We improved the [Permissions API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/).
+
 ## Version 11.12.2
 
 * We fixed a bug where the Extensions Overview page would not open if the user was not signed in.

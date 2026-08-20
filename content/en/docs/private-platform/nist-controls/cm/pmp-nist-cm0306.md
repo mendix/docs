@@ -26,7 +26,7 @@ Regardless of the cryptographic means employed (for example, public key, private
 
 The following controls are related to this control:
 
-* SC-13
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 ## Responsibility
 

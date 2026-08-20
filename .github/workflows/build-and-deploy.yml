@@ -67,7 +67,8 @@ jobs:
         run: |
           mkdir -p public
           set -o pipefail
-          ./node_modules/.bin/hugo --environment ${{ steps.env.outputs.target }} 2>&1 | tee hugo.log
+          ./node_modules/.bin/hugo --environment ${{ steps.env.outputs.target }} 2>&1 | \
+            sed 's/.*│  EN.*/```\n&/; s/.*Cleaned.*/&\n```/' | tee hugo.log
 
       - name: Run htmltest
         # htmltest errors are treated as warnings — build continues regardless (matches Travis behaviour)
@@ -75,13 +76,19 @@ jobs:
           chmod +x ./htmltest/htmltest
           set +o pipefail
           ./htmltest/htmltest 2>&1 | \
-            sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" | tee -a hugo.log || true
+            sed 's/\o033\[[0-9;]*[A-Za-z]//g; s/^=\+$/\n&/' | tee -a hugo.log
+          if [ "${PIPESTATUS[0]}" -ne 0 ]; then
+            # add blank output line first as ::warning:: does not always trigger a warning annotation
+            echo " "
+            echo "::warning::htmltest found broken cross-references. See the Run htmltest step for details."
+          fi
 
-      - name: Print build log
+      - name: Print build log to GitHub Summary
         if: always()
-        run: cat hugo.log
+        run: cat hugo.log >> $GITHUB_STEP_SUMMARY
 
       - name: Upload public site artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v7
         with:
           name: public-site

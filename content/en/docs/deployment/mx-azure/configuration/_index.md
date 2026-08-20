@@ -36,8 +36,8 @@ Every Mendix on Azure cluster uses the AKS default internal address ranges `10.0
 
 Because of this:
 
-* Do not set an *AKS Node CIDR IP Range* that overlaps `10.0.0.0/16` or `10.244.0.0/16`. Azure rejects cluster creation when the service CIDR overlaps a subnet that the cluster can route to.
-* Do not route networks that overlap `10.0.0.0/16` or `10.244.0.0/16` to the cluster through VNet peering, a VPN, or ExpressRoute. Traffic to addresses in those ranges is resolved inside the cluster and does not reach the remote network.
+* Do not set an *AKS Node CIDR IP Range* that overlaps with `10.0.0.0/16` or `10.244.0.0/16`. Azure rejects cluster creation when the service CIDR overlaps a subnet to which the cluster can route.
+* Do not route networks that overlap with `10.0.0.0/16` or `10.244.0.0/16` to the cluster through VNet peering, a VPN, or ExpressRoute. Traffic to addresses in those ranges is resolved inside the cluster and does not reach the remote network.
 
 If your IP plan uses `10.0.0.0/8`, choose a node CIDR range outside these two ranges and confirm that the on-premises and peered ranges you want to reach from Mendix on Azure do not overlap them either. If overlap cannot be avoided, use Private Endpoints to reach the services in the overlapping network, as Private Endpoints do not require peering or routing between the overlapping ranges.
 {{% /alert %}}

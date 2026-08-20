@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-This guide explains how to create an agent in your Mendix app that combines [knowledge base retrieval (RAG)](/agents/rag/) and [function calling](/agents/function-calling/) capabilities from Mendix Agents Kit. If you prefer to follow a learning path, this [learning path](https://academy.mendix.com/link/paths/175/Create-Your-First-Agent) for the intermediate level might be of interest to you. It contains even more detailed explanations and code prepared for download.
+This guide explains how to create an agent in your Mendix app that combines [knowledge base retrieval (RAG)](/agents/rag/) and [function calling](/agents/function-calling/) capabilities from Mendix Agents Kit. For a hands-on experience and a detailed explanation, see the [Create Your First Agent](https://academy.mendix.com/link/paths/175/Create-Your-First-Agent) learning path.
 
 ## Agent Use Case
 

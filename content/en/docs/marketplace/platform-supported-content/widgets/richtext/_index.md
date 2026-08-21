@@ -139,9 +139,9 @@ To configure this widget, follow these steps:
     * **Word count** – displays the number of words in the status bar.
     * **Character count (text only)** – displays the number of characters displayed in the editor.
     * **Character count (includeing HTML)** – displays the number of characters saved into the attribute value. This includes the HTML tag inserted for the formatting of rich text.
-* **Style data format** - available on Rich text version 5 and above. This allows user to use classnames for the styling of rich text's content.
-    * **Inline** - use inline styles on styling the html content. This is the current and default options. Inline styling is more reliable in styling the content. But using inline styles meant that the data cannot be parsed in [strict-CSP environment](/howto/security/csp/).
-    * **Inline** - use class name to style the html content. Use this setting if rich text is deployed in strict CSP environment.
+* **Style data format** - available from Rich text version 5 and above. This allows user to use classnames for the styling of rich text's content.
+    * **Inline** - uses inline styles on styling the HTML content. This is the current and default option. Inline styling is more reliable in styling the content. But using inline styles meant that the data cannot be parsed in [strict-CSP environment](/howto/security/csp/).
+    * **Inline** - uses class name to style the HTML content. Use this setting if rich text is deployed in a strict CSP environment.
 
 
 ### Common Tab
@@ -292,7 +292,7 @@ export async function selectImage(fileGuid) {
 
 This code will trigger a new event called **imageSelected** and bubble up the event back to Rich Text widget to continue the flow. The user then can use the **image id** instead of **base64 string** as the image source.
 
-## Keyboard shortcuts
+## Keyboard Shortcuts
 
 <table>
     <tr>
@@ -342,6 +342,6 @@ Rich Text version 4 still has limitations that we will continue improving in the
     * Table header
     * Table caption
 
-Rich Text version 5 has offered "class" styling to allow Rich Text to works in strict CSP environment. This is currently has limitations that we will continue to improve in the future. Current notable limitations are as follows:
-* Resizing image, video, and tables will not work properly
-* Switching format from inline to class will cause partial data loss on styling.
+Rich Text version 5 offers "class" styling to allow Rich Text to works in a strict CSP environment. This  has limitations that we will continue to improve in the future. Current notable limitations are as follows:
+* Resizing image, video, and tables does not work properly
+* Switching format from inline to class causes partial data loss on styling

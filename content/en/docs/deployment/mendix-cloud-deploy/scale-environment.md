@@ -15,7 +15,7 @@ This document explains how to scale an environment in Mendix Cloud. This can tak
 * Horizontal scaling – You can configure apps built using supported versions of Mendix to be run in multiple runtime containers (instances) simultaneously. Incoming traffic for your app is distributed over the running instances.
 
 {{% alert color="info" %}}
-If there are multiple instances, legacy [scheduled events](/refguide/scheduled-events/) are only executed on the [cluster leader](/refguide/clustered-mendix-runtime/#cluster-leader-follower), and task queue based scheduled events are executed on an arbitrary instance. For versions below Mendix 9.12.0, all scheduled events are always run on the first instance.
+If there are multiple instances, legacy [scheduled events](/refguide/scheduled-events/) run only on the [cluster leader](/refguide/clustered-mendix-runtime/#cluster-leader-follower), while task queue based scheduled events run on an arbitrary instance. For versions below Mendix 9.12.0, all scheduled events run on the first instance.
 {{% /alert %}}
 
 ## Prerequisites

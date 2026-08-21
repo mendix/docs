@@ -31,7 +31,7 @@ This module allows Mendix developers with little or no experience in building wo
 * As workflows are only available from Mendix 9, Workflow Commons requires Mendix 9.0.5 and above.
 * Workflow Commons versions from 4.0.0 require Mendix 11 and above, as these versions are based on [View Entities](/refguide/view-entities/). For information on how to upgrade an existing app that uses Workflow Commons from Mendix 10 to Mendix 11, see the [Upgrading from Mendix 10 to Mendix 11](#upgrade-from-10-to-11) section below.
 
-{{% alert color="info" %}}When you use Workflow Commons 2.6.0 or below, you also need to install the List View Controls module from the Marketplace. Without it, your app shows CE0462 errors ("Could not find widget '{TYPE}' in the 'widgets' directory") for the widgets that Workflow Commons relies on. List View Controls is marked as deprecated in the Marketplace, but it is still supported by Mendix and safe to use.{{% /alert %}}
+{{% alert color="warning" %}}If you use Workflow Commons 2.6.0 or below, you must also install [List View Controls](https://marketplace.mendix.com/link/component/105694) from Mendix Marketplace. Without it, your app displays CE0462 errors ("Could not find widget '{TYPE}' in the 'widgets' directory") for the widgets that Workflow Commons relies on. List View Controls is marked as deprecated in Marketplace, but it is still supported by Mendix and safe to use.{{% /alert %}}
 
 ### Dependencies
 

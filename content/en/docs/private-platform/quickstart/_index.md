@@ -27,12 +27,16 @@ Before you start the installation process, review the following considerations:
 
 Private Mendix Platform can run with FIPS-compliant encryption across the entire Platform, including Mendix Runtime, Private Mendix Platofrm itself, Mendix Operator, and Studio Pro.
 
-#### Installation Mode
+#### Installation Method
 
-You can perform the installation in one of the following modes:
+You can perform the installation by using one of the following methods:
 
 * [With GUI](/private-mendix-platform/interactive-installation/), where you manually install Private Mendix Platform components
 * [With Helmfile](/private-mendix-platform/helmfile-installation/), where you use Helmfile to automatically install Private Mendix Platform components.
+
+#### DTAP Mode
+
+During the instllation, you can select the environment purpose (Development, Test, Acceptance, or Production). For Private Mendix Platform, environment with the Development and Test purpose operate in Development DTAP mode, while Acceptance and Production environments operate in Production DTAP mode. 
 
 #### Installation Order
 

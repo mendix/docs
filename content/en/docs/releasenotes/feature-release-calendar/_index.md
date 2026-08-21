@@ -109,7 +109,8 @@ General Availability means that a feature is available for all users. This type 
 | Improved Marketplace Component management:<ul><li>Release of Security Fixes</li></ul> | General Availability: Mx 11.9 |
 | Marketplace Component management:<ul><li>Uploading via API</li><li>Content API extended</li></ul> | General Availability: Mx 11.12 |
 | Improved Marketplace notifications | General Availability: Mx 11.15 |
-| Primitive parameters | General Availability: Mx 11.6 (Pages) & <br/>Mx 11.9 (Snippets) |
+| Primitive parameters for pages | General Availability: Mx 11.6 |
+| Primitive parameters for snippets | General Availability: Mx 11.18 |
 
 ### Governance
 

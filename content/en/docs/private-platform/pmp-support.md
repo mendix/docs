@@ -8,47 +8,37 @@ weight: 70
 
 ## Introduction
 
-Purpose: This template ensures that when a Customer opens a support ticket, it contains the critical information Mendix R&D needs to begin root cause analysis immediately, reducing delays and back-and-forth communication.
+When you opens a support ticket for Private Mendix Platform, ensure that it contains the critical information Mendix needs to begin root cause analysis immediately, reducing delays and back-and-forth communication.
 
-1. Incident Summary
-Issue Title: [A short, descriptive title, e.g., "PCLM reports license invalid", "Build fails with PVC timeout"]
+## Incident Summary
 
-Severity/Impact: [Critical / Major / Minor]
+In the incident summary, provide the following information:
 
-Affected Environment: [Production / Acceptance / Test]
+* **Issue Title** - A short, descriptive title, for example, *PCLM reports invalid license*, *Build fails with PVC timeout*.
+* **Severity/Impact** - Specify Critical, Major, or Minor
+* **Affected Environment** - Specify Production, Acceptance, or Test
+* **Frequency** - Specify Always, Intermittent, or First Time
+* **Timestamp of Last Occurrence (UTC)** - The time when the issue last occurred, in `YYYY-MM-DD HH:MM UTC` format. This is crucial for log correlation.
+* The name of the customer and partner (if applicable).
 
-Frequency: [Always / Intermittent / First Time]
+## Environment Details
 
-Timestamp of Last Occurrence (UTC): [YYYY-MM-DD HH:MM UTC] — This is crucial for log correlation.
+Provide the exact versions for the environment where the issue occurs. Please complete the fields relevant to your issue.
 
-The customer name and partner name
+* **Private Mendix Platform Installer Version** - For example, v2.21.0
+* **Private Mendix Platform Operator Version** - For example, v2.22.0
+* **PCLM Version** - For example, 0.10.3
+* **Studio Pro Version** - For example, 9.24.11
+* **Kubernetes Distribution and Version** - For example, EKS 1.27, AKS 1.28, OpenShift 4.12
+* **Container Registry** - For example, Docker Hub, Azure ACR
+* **Database Type and Version** - For example, PostgreSQL 16
+* **Storage Provider and Storage Class** - For example, Amazon S3, Azure Blob Storage
+* **Networking** - For example, Nginx Ingress, ALB, DNS details
+* **Secret Management** - For example, Kubernetes Secrets, AWS Secrets Manager, Azure Key Vault
+* **CI/CD Engine** - For example, Private Mendix Platform Default (Tekton), Jenkins, Azure DevOps
 
-2. Environment Details
-Provide exact versions for the environment where the issue occurs. Please complete the fields relevant to your issue.
+## Issue Description and Initial Troubleshooting (Required)
 
-PMP Installer Version: [e.g., v2.21.0]
-
-PMP Operator Version: [e.g., v2.22.0]
-
-PCLM Version: [e.g., 0.10.3]
-
-Studio Pro Version: [e.g., 9.24.11]
-
-Kubernetes Distribution & Version: [e.g., EKS 1.27, AKS 1.28, OpenShift 4.12]
-
-Container Registry: [e.g., Docker Hub, Azure ACR]
-
-Database Type & Version: [e.g., PostgreSQL 16]
-
-Storage Provider & StorageClass: [e.g., Amazon S3, Azure Blob Storage]
-
-Networking: [e.g., Nginx Ingress, ALB, DNS details]
-
-Secret Management: [e.g., Kubernetes Secrets, AWS Secrets Manager, Azure Key Vault]
-
-CI/CD Engine: [e.g., PMP Default (Tekton), Jenkins, Azure DevOps]
-
-3. Issue Description & Initial Troubleshooting (Required)
 Problem Description: [Describe the technical failure. What happened versus what was expected?]
 
 Steps to Reproduce: [Provide a clear, step-by-step guide if possible.]
@@ -68,12 +58,12 @@ bash
 
 
 
-./mxpc-cli log-extract -n <namespace> -f pmp_logs.tar.gz
-Attach the resulting pmp_logs.tar.gz file to the ticket. (Note: Before sending, ensure logs do not contain sensitive information your organization prohibits sharing.)
+./mxpc-cli log-extract -n <namespace> -f Private Mendix Platform_logs.tar.gz
+Attach the resulting Private Mendix Platform_logs.tar.gz file to the ticket. (Note: Before sending, ensure logs do not contain sensitive information your organization prohibits sharing.)
 
-B. PMP Portal "Help Me" Package:
+B. Private Mendix Platform Portal "Help Me" Package:
 
-If the issue is related to a specific Mendix application, navigate to PMP Portal > Logs & Events > Help Me and download the generated zip package. Please attach this file as well.
+If the issue is related to a specific Mendix application, navigate to Private Mendix Platform Portal > Logs & Events > Help Me and download the generated zip package. Please attach this file as well.
 
 5. Supplemental Data (Complete the sections relevant to your issue)
 This data provides deep context for specific issue types and is often required by R&D.
@@ -119,19 +109,19 @@ Git clone/checkout logs.
 
 Storage logs (if the build fails on a storage step).
 
-Provide us with the PMP pod yaml file by running the following command:
+Provide us with the Private Mendix Platform pod yaml file by running the following command:
 
 $ kubectl get pod mxplatform-master-xxxx-xxx -o yaml
 
 C. For Networking & Integration Issues (SSO, Ingress, etc):
 
-Please provide the configuration settings (YAML) and logs for related components (e.g., Ingress Controller).
+Please provide the configuration settings (YAML) and logs for related components (for example, Ingress Controller).
 
 D. For Security Vulnerabilities:
 
-Scanner Tool Used: [e.g., Trivy, Qualys, Snyk]
+Scanner Tool Used: [for example, Trivy, Qualys, Snyk]
 
-Affected PMP Image & Version: [e.g., private-cloud-operator:2.22.0]
+Affected Private Mendix Platform Image & Version: [for example, private-cloud-operator:2.22.0]
 
 Action: Attach the full, unaltered scan report (PDF, CSV, or JSON) that includes the specific CVE-IDs.
 
@@ -139,17 +129,4 @@ E. For Performance Issues:
 
 Resource Utilization Metrics: Provide CPU, memory, database, and network usage graphs or logs from your monitoring tools.
 
-Application Performance Metrics: Include any relevant performance metrics from your application monitoring tools (e.g., response times, error rates).
-
-6. Internal R&D Resources
-This section is for internal reference and should not be shared with partners or customers.
-
-Product Manager: Meng (Ruodan) Li (ruodan.li@mendix.com)
-
-R&D Team: Panda Team
-
-SDM (Service Delivery Manager): Ralf Ren (Ralf.Ren@mendix.com)
-
-Support Slack Channel: #private-platform-support
-
-Main Confluence Page: Private Mendix Platform Home
+Application Performance Metrics: Include any relevant performance metrics from your application monitoring tools (for example, response times, error rates).

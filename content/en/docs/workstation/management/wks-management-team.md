@@ -32,10 +32,6 @@ To change a user's role or remove them from the workspace, click the three-dot i
 
 ## Workspace Roles {#user-roles}
 
-{{% alert color="info" %}}
-Workspace roles are distinct from user roles. *User roles* are assigned on the user account level and apply to all workspaces to which the user has access. *Workspace roles* are assigned on the workspace level and can differ per workspace. For example, a user can be the owner of one workspace and the workspace admin of another.
-{{% /alert %}}
-
 You can assign the following roles to your users:
 
 * Owner - The owner has full rights to manage the workspace. They can perform the following tasks:

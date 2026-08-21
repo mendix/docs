@@ -704,7 +704,7 @@ If you are using Microsoft Entra ID and the expected claims (such as `given_name
 
 After adding the optional claims to the Entra App Registration, use one of the following options to get the claims in the **Add Claim** dropdown:
 
-* Search for the claims: In the **Add Claim** dialog, click **Search** and then click **New**. Provide **Claim Name** and **Friendly Name** (optional claims configured in the Entra App Registration). Click **Previous**, find the newly added claims and add them. 
+* Search for the claims: In the **Add Claim Map** dialog, click **Search** and then click **New**. Provide **Claim Name** and **Friendly Name** (optional claims configured in the Entra App Registration). Click **Previous**, find the newly added, optional claims and add them. 
 * Add claims to the default setup: Add the claims to the `SUB_DefaultUserProvisioning` microflow, then map them:
     1. In the `SUB_DefaultUserProvisioning` microflow, add a `CreateClaim` activity for `family_name`, `given_name`, or any custom attribute configured in the Entra App Registration to populate in the token. To reuse an existing activity, copy a `CreateClaim` activity from the same microflow and update the claim name value.
     2. Click **Add Claim** and select `family_name` or `given_name` from the **IdP Attribute** dropdown.

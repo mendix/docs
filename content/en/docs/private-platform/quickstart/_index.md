@@ -34,10 +34,6 @@ You can perform the installation by using one of the following methods:
 * [With GUI](/private-mendix-platform/interactive-installation/), where you manually install Private Mendix Platform components
 * [With Helmfile](/private-mendix-platform/helmfile-installation/), where you use Helmfile to automatically install Private Mendix Platform components.
 
-#### DTAP Mode
-
-During the instllation, you can select the environment purpose (Development, Test, Acceptance, or Production). For Private Mendix Platform, environment with the Development and Test purpose operate in Development DTAP mode, while Acceptance and Production environments operate in Production DTAP mode. 
-
 #### Installation Order
 
 Start the process by installing the Mendix Operator before you install the components. Components are dependent on the Operator. Because of that, if you try to install a component without installing the Operator, the installation process fails and displays an error message.

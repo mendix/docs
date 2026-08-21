@@ -39,50 +39,51 @@ Provide the exact versions for the environment where the issue occurs. Please co
 
 ## Issue Description and Initial Troubleshooting (Required)
 
-Problem Description: [Describe the technical failure. What happened versus what was expected?]
+Provide the following information:
 
-Steps to Reproduce: [Provide a clear, step-by-step guide if possible.]
+* **Problem Description** - Describe the technical failure. What happened versus what was expected?
+* **Steps to Reproduce** - Provide a clear, step-by-step guide if possible.
+* **Error Messages** - Paste the full, exact error output from the UI, CLI, or API response.
+* **Troubleshooting Already Performed** - List any commands you ran or checks you performed and their results.
 
-Error Messages: [Paste the full, exact error output from the UI, CLI, or API response.]
+## Diagnostic Logs (Required)
 
-Troubleshooting Already Performed: [List any commands you ran or checks you performed and their results.]
+### Automated Log Archive
 
-4. Diagnostic Logs (Required)
-A. Automated Log Archive:
+To collect automated logs, perform the following steps:
 
-Follow the guide: Collecting Diagnostic Data for a Support Ticket
+1. Follow the process described in [Collecting Diagnostic Data for a Support Ticket](/developerportal/deploy/private-cloud-deploy/#collecting-diagnostic-data-for-a-support-ticket).
+2. Run the following command:
 
-Run the command:
+    ```bash
+    ./mxpc-cli log-extract -n <namespace> -f Private Mendix Platform_logs.tar.gz
+    ```
 
-bash
+3. Attach the resulting Private Mendix Platform_logs.tar.gz file to the ticket.
 
+{{% alert color="warning" %}}
+Before sending, ensure that the logs do not contain sensitive information your organization prohibits sharing.
+{{% /alert %}}
 
+### Help Me Package
 
-./mxpc-cli log-extract -n <namespace> -f Private Mendix Platform_logs.tar.gz
-Attach the resulting Private Mendix Platform_logs.tar.gz file to the ticket. (Note: Before sending, ensure logs do not contain sensitive information your organization prohibits sharing.)
+If the issue is related to a specific Mendix application, navigate to **Private Mendix Platform Portal > Logs & Events > Help Me**, and download the generated .zip package. Attach this file to your request, in addition to the automated log archive.
 
-B. Private Mendix Platform Portal "Help Me" Package:
+## Supplemental Data
 
-If the issue is related to a specific Mendix application, navigate to Private Mendix Platform Portal > Logs & Events > Help Me and download the generated zip package. Please attach this file as well.
+This data provides deep context for specific issue types and is often required by R&D. Complete the sections relevant to your issue, as needed.
 
-5. Supplemental Data (Complete the sections relevant to your issue)
-This data provides deep context for specific issue types and is often required by R&D.
+### Licensing or PCLM Issues
 
-A. For Licensing / PCLM Issues:
+For licensing or PCLM issues, provide the following information:
 
-Prerequisite Check: Please ensure you are using the latest versions of the Operator and PCLM.
+* **Prerequisite Check** - Ensure that you are using the latest versions of the Operator and PCLM.
+* **PCLM Logs** - Already included in the log-extract archive.
+* **License Bundle Details** - When and from whom (Mendix Support, CSM, Account Manager) was the current PCLM license bundle received. Attach the specific bundle file being used so that Mendix can validate its integrity.
+* **PCLM License Status and Mendix App Dump** - Run the following commands and provide the output:
 
-PCLM Logs: Already included in the log-extract archive.
-
-License Bundle Details: When and from whom (Mendix Support, CSM, Account Manager) was the current PCLM license bundle received? Please attach the specific bundle file being used so we can validate its integrity.
-
-PCLM License Status & Mendix App Dump: Run the following commands and provide the output:
-
-bash
-
-
-
-# List Runtime License
+```bash
+List Runtime License
 mx-pclm-cli license runtime list -s <pclm-http-url> -u <admin-user> -p <admin-password> -t <custom-ca-cert-path>
 # List Operator License
 mx-pclm-cli license operator list -s <pclm-http-url> -u <admin-user> -p <admin-password> -t <custom-ca-cert-path>
@@ -90,43 +91,46 @@ mx-pclm-cli license operator list -s <pclm-http-url> -u <admin-user> -p <admin-p
 mx-pclm-cli license list-usage -s <pclm-http-url> -u <admin-user> -p <admin-password> -t <custom-ca-cert-path>
 # Dump Mendix App Resource
 kubectl get mendixapps.privatecloud.mendix.com <mendix-app-name> -n <namespace-name> -o yaml
-{warning} Security Warning: Please check the YAML output for sensitive data like passwords or keys. Replace them with ****** before attaching.
+```
 
-Refer to:
-Listing the runtime license
-Listing the operator license 
-Verifying That the Licenses Are Applied
+{{% alert color="warning" %}}
+Check the YAML output for sensitive data like passwords or keys. Replace them with ****** before attaching.
+{{% /alert %}}
 
- 
+For more information, refer to the following topics:
 
-B. For CI/CD Failures:
+* [Listing the Runtime License](/developerportal/deploy/private-cloud/private-cloud-license-manager/#listing-the-runtime-license)
+* [Listing the Operator License](/developerportal/deploy/private-cloud/private-cloud-license-manager/#listing-the-operator-license)
+* [Verifying That the Licenses Are Applied](/developerportal/deploy/private-cloud/private-cloud-license-manager/#verify)
 
-Please provide the logs and errors from the related components:
+### CI/CD Failures
 
-Full Build Logs: From Tekton, Jenkins, Azure DevOps, or your CI tool.
+For CI/CD failures, provide the logs and errors from the related components:
 
-Git clone/checkout logs.
+* Full build logs from Tekton, Jenkins, Azure DevOps, or your CI tool
+* Git clone or checkout logs
+* Storage logs (if the build fails on a storage step)
+* Private Mendix Platform pod .yaml file; to generate it, run the following command:
 
-Storage logs (if the build fails on a storage step).
-
-Provide us with the Private Mendix Platform pod yaml file by running the following command:
-
+```text
 $ kubectl get pod mxplatform-master-xxxx-xxx -o yaml
+```
 
-C. For Networking & Integration Issues (SSO, Ingress, etc):
+### Networking and Integration Issues
 
-Please provide the configuration settings (YAML) and logs for related components (for example, Ingress Controller).
+For networking and integration issues (for example, SSO or Ingress), provide the configuration settings (in .yaml format) and logs for the affected components (for example, Ingress Controller).
 
-D. For Security Vulnerabilities:
+### Security Vulnerabilities
 
-Scanner Tool Used: [for example, Trivy, Qualys, Snyk]
+For security vulnerabilities, provide the following information:
 
-Affected Private Mendix Platform Image & Version: [for example, private-cloud-operator:2.22.0]
+* **Scanner Tool Used** - For example, Trivy, Qualys, Snyk
+* **Affected Private Mendix Platform Image and Version** - For example, `private-cloud-operator:2.22.0`
+* **Action** - Attach the full, unaltered scan report (PDF, CSV, or JSON) that includes the specific CVE-IDs.
 
-Action: Attach the full, unaltered scan report (PDF, CSV, or JSON) that includes the specific CVE-IDs.
+### Performance Issues
 
-E. For Performance Issues:
+For performance issues, provide the following information:
 
-Resource Utilization Metrics: Provide CPU, memory, database, and network usage graphs or logs from your monitoring tools.
-
-Application Performance Metrics: Include any relevant performance metrics from your application monitoring tools (for example, response times, error rates).
+* **Resource Utilization Metrics** - Provide CPU, memory, database, and network usage graphs or logs from your monitoring tools.
+* **Application Performance Metrics** - Include any relevant performance metrics from your application monitoring tools (for example, response times, error rates).

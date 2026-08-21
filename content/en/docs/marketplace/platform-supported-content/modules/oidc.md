@@ -425,7 +425,7 @@ By default, Microsoft Entra ID does not include user attribute claims such as `g
 After completing these steps, the claims will be included in the ID token and will be available for attribute mapping in the Mendix OIDC SSO configuration.
 
 {{% alert color="info" %}}
-If `given_name` or `family_name` are present in your ID token after adding them as optional claims but do not appear in the ****Add Claim** dropdown in the Mendix OIDC configuration, see [Creating IdP Attribute Manually](/appstore/modules/oidc/#creating-idp-attribute-manually) for steps to add these claims manually.
+If `given_name` or `family_name` are present in your ID token after adding them as optional claims but do not appear in the **Add Claim** dropdown in the Mendix OIDC configuration, see [Creating IdP Attribute Manually](/appstore/modules/oidc/#creating-idp-attribute-manually) for steps to add these claims manually.
 {{% /alert %}}
 
 #### Amazon Cognito Client Configuration

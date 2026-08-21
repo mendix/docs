@@ -413,7 +413,7 @@ Now, you can acquire tokens which can be validated using JWKS URI.
 
 #### Configuring Optional Claims for User Attributes {#entra-optional-claims}
 
-By default, Microsoft Entra ID does not include user attribute claims such as `given_name` (first name) and `family_name` (last name) in the ID token, even when the `profile` scope is requested. These claims are required if you want to map a user's display name during provisioning. To make these claims available, add them as optional claims in the Entra App Registration:
+By default, Microsoft Entra ID does not include user attribute claims such as `given_name` and `family_name` in the ID token, even when the `profile` scope is requested. To make these claims available, add them as optional claims in the Entra App Registration:
 
 1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
 2. Go to **Entra ID** > **App registrations** and select your application.
@@ -695,7 +695,8 @@ IdP attributes will be automatically created from the list of `claims_supported`
 1. In the **Creating Users** tab, click **Add Claim** to add a new mapping.
 2. In the **Add Claim Map** dialog, click **Search**.
 3. Under the **Claims for claim entity attribute**, click **New** to create a new claim.
-4. In the **IdP Attribute**, select the newly created claim from the dropdown, and click **Save**.
+4. Provide **Claim Name** and **Friendly Name**, and click **Previous**.
+5. In the **IdP Attribute**, select the newly created claim from the dropdown, and click **Save**.
 
 Select the required attribute to use it in your mapping.
 
@@ -704,7 +705,7 @@ If you are using Microsoft Entra ID and the expected claims (such as `given_name
 
 After adding the optional claims to the Entra App Registration, use one of the following options to get the claims in the **Add Claim** dropdown:
 
-* Search for the claims: In the **Add Claim Map** dialog, click **Search** and then click **New**. Provide **Claim Name** and **Friendly Name** (optional claims configured in the Entra App Registration). Click **Previous**, find the newly added, optional claims and add them. 
+* Search for the claims: Follow the steps above and provide **Claim Name** and **Friendly Name** (optional claims configured in the Entra App Registration). Click **Previous**, find the newly added, optional claims and add them. 
 * Add claims to the default setup: Add the claims to the `SUB_DefaultUserProvisioning` microflow, then map them:
     1. In the `SUB_DefaultUserProvisioning` microflow, add a `CreateClaim` activity for `family_name`, `given_name`, or any custom attribute configured in the Entra App Registration to populate in the token. To reuse an existing activity, copy a `CreateClaim` activity from the same microflow and update the claim name value.
     2. Click **Add Claim** and select `family_name` or `given_name` from the **IdP Attribute** dropdown.

@@ -700,10 +700,16 @@ IdP attributes will be automatically created from the list of `claims_supported`
 Select the required attribute to use it in your mapping.
 
 {{% alert color="info" %}}
-If you are using Microsoft Entra ID and the expected claims (such as `given_name` or `family_name`) do not appear in the **Add Claim** dropdown, this is because Entra does not advertise these claims in its discovery endpoint. You have two options:
+If you are using Microsoft Entra ID and the expected claims (such as `given_name` or `family_name`) do not appear in the **Add Claim** dropdown, this is because Entra does not advertise these claims in its discovery endpoint. To make them available, add them as optional claims in the Entra App Registration's **Token configuration** tab. For more information, see the [Configuring Optional Claims for User Attributes](#entra-optional-claims) section.
 
-* Add the claims as optional claims in the Entra App Registration's **Token configuration** tab. See Microsoft [Configuring Optional Claims for User Attributes](#entra-optional-claims) for steps.
-* Configure a Custom User Parsing Microflow in your ClientConfiguration. Use the `OIDC.CreateClaimsWithJSON` action to extract and map claims directly from the `OpenIDTokenJSON` parameter to your user entity attributes. For more information, see [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime). {{% /alert %}}
+After adding the optional claims to the Entra App Registration, use one of the following options to get the claims in the **Add Claim** dropdown:
+
+* Search for the claims: In the **Add Claim** dialog, click **Search** and then click **New**. Provide **Claim Name** and **Friendly Name** (optional claims configured in the Entra App Registration). Click **Previous**, find the newly added claims and add them. 
+* Add claims to the default setup: Add the claims to the `SUB_DefaultUserProvisioning` microflow, then map them:
+    1. In the `SUB_DefaultUserProvisioning` microflow, add a `CreateClaim` activity for `family_name`, `given_name`, or any custom attribute configured in the Entra App Registration to populate in the token. To reuse an existing activity, copy a `CreateClaim` activity from the same microflow and update the claim name value.
+    2. Click **Add Claim** and select `family_name` or `given_name` from the **IdP Attribute** dropdown.
+    3. Map to the **Custom Entity Attribute** and click **Save**.
+{{% /alert %}}
 
 ##### User Provisioning Using Your Custom User Entity{#custom_user_entity}
 

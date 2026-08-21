@@ -21,8 +21,9 @@ The following pattern letters can be used to parse and format Date and time valu
 | `LL`     | Month in year, digit with leading zero           | 01                        |
 | `LLL`    | Month in year, abbreviated (standalone)          | Nov                       |
 | `LLLL`   | Month in year (standalone)                       | November                  |
-| `yy`     | Year, two digits                                 | 01                        |
-| `yyyy`   | Year, four digits                                | 2001                      |
+| `yy`     | Calendar year, two digits                        | 01                        |
+| `yyyy`   | Calendar year, four digits                       | 2022                      |
+| `YYYY`   | ISO week-numbering year, four digits: <br/>`YYYY` shows the year based on the ISO week the date falls in, where week 1 is the first week containing at least four days of the new year. For example, 2024-12-31 is in ISO week 1 of 2025, so `YYYY` returns 2025, while `yyyy` returns 2024. | 2022 |
 | `G`      | Era designator                                   | AD                        |
 | `E`      | Day name in week, abbreviated                    | Tue                       |
 | `EEEE`   | Day name in week                                 | Tuesday                   |
@@ -186,10 +187,10 @@ the output is:
 'Sun, 8 Jun 2008 10:12:01 +0200'
 ```
 
-To get a format like `'2008-06-08T10:12:01'`, you need to concatenate two formatDateTime[UTC] functions:
+To get a format like `'2008-06-08T10:12:01'`, you can escape the T with `''`:
 
 ```java
-formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,'HH:mm:ss')
+formatDateTime($object/Date1,'yyyy-MM-dd''T''HH:mm:ss')
 ```
 
 ## `formatTime[UTC]` {#formatTime}

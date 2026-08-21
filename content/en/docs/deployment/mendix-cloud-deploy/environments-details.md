@@ -7,16 +7,16 @@ aliases:
     - /developerportal/deploy/environments-details-redesign/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-safelist below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
-#The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed. 
 ---
 
 ## Introduction
 
-To open the **Environment Details** page, go to [Apps](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to [Projects](https://projects.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{% alert color="info" %}}You must have permissions for **Transport Rights** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
 
-The **Environment Details** page shows information about the selected environment and includes eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**. You can also use this page to manage and debug several aspects of the environment.
+The **Environment Details** page shows information about the selected environment and includes nine tabs: **General**, **Model Options**, **Network**, **Connectivity**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**. You can also use this page to manage and debug several aspects of the environment.
 
 ## Actions {#actions}
 
@@ -102,7 +102,11 @@ In the **Application Status** section of the **General** tab, you can find the f
 * **Region** – the data center region where the app is hosted (for the full list of Mendix Cloud regions, see [Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing))
 * **Data Backup Secondary Location** – the region where the backup is stored (for more information, see [Data Location](/developerportal/operate/backups/#data-location) in the *Backups* documentation)
 
-#### Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
+#### Naming of Environments - Flexible Applications in Mendix Cloud {#naming}
+
+{{% alert color="info" %}}
+Renaming an environment's subdomain suffix or display name is only applicable to flexible applications.
+{{% /alert %}}
 
 If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environment’s **Subdomain Suffix** or **Display Name** by clicking **Change** next to either of the options.
 
@@ -175,6 +179,10 @@ On this tab, you can edit the model options for constants and scheduled events.
 ### Constants {#constants}
 
 In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
+
+{{% alert color="warning" %}}
+The combined length of all constant keys and values is limited to 128 KB (approximately 32,000 characters). For more information, refer to [Behavior of Your App in Mendix Cloud](/developerportal/deploy/behavior-of-app/#constants-size-limit).
+{{% /alert %}}
 
 To fill in a new value, select the constant and click **Edit** to bring up the **Edit Constant** dialog box.
 
@@ -251,7 +259,7 @@ Mendix Cloud supports the following HTTP headers in the Mendix Portal:
 | `X-Content-Type-Options`      | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
 | `X-Frame-Options`             | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>`, or `<object>`. The default is not to allow apps to be rendered inside frames. This was the value set previously to prevent embedding in an iframe.<br/>For details on running your app inside an iframe, see [Running Your App in an Iframe](#iframe), below. |
 | `X-Permitted-Cross-Domain-Policies` | Specifies whether the page can load resources from a different domain. |
-| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. |
+| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.<br/>{{% alert color="warning" %}}This header is [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) and not recommended for new implementations.{{% /alert %}} |
 
 There are three types of values for these headers:
 
@@ -296,14 +304,9 @@ To avoid security issues when you want to embed the app in an iframe, use [custo
 
 ##### Applying a Different SameSite Setting {#samesite}
 
-From Studio Pro 8.12, you can control the value of `SameSite` in your cookies. The default for all cookies depends on the version of Mendix you are using:
-
-* For Studio Pro 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
-* For Studio Pro 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
+You can control the value of `SameSite` in your cookies. For Studio Pro 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
 
 You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
-
-For Mendix 8.11 and below, there was no `SameSite` value set on cookies, and the behavior depended on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in the **Custom Environment Variables** section; this sets `SameSite=None; Secure;` for all your cookies.
 
 {{% alert color="warning" %}}
 The `SAMESITE_COOKIE_PRE_MX812` setting is implemented the next time your app is deployed after you apply the change.
@@ -325,7 +328,7 @@ document.cookie = "originURI=/login.html" + (window.location.protocol === "https
 A Content Security Policy (CSP) informs the client (browser) where your page loads resources from. Setting this can make your app more secure by declaring trusted sources for your resources. For more information, see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/).
 
 {{% alert color="info" %}}
-For complete CSP support, including nonce-based CSP, use the [Headers](/refguide/configuration/#headers) custom runtime setting instead of the HTTP Headers UI. For detailed implementation instructions, see [Content Security Policy](/howto/security/csp/).
+For complete CSP support, including nonce-based CSP, use the [Headers](/refguide/configurations-tab/#headers) custom runtime setting instead of the HTTP Headers UI. For detailed implementation instructions, see [Content Security Policy](/howto/security/csp/).
 {{% /alert %}}
 
 The process for setting a full content security policy depends on what your app does. However, a starting point that declares the content security policy that works with a basic Mendix app is given below:
@@ -335,6 +338,32 @@ default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-s
 ```
 
 If you have issues that appear to be related to a content security policy, you can use the console of your browser to investigate them.
+
+### Outgoing Connections Certificates
+
+Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These are used when your application initiates SSL/TLS connections.
+
+## The Connectivity Tab {#connectivity-tab}
+
+On the **Connectivity** tab, you can manage the elements described below.
+
+### Connections {#connections}
+
+You can connect from your applications on Mendix Cloud to resources on your own infrastructure using [Mendix Cloud Private Connectivity](/control-center/private-connectivity/).
+
+The **Connections** tab contains the following information:
+
+* **Resource** – The name of the connected service
+* **Network** – The name of the network associated with the connection
+* **Status** – The connection's current state, such as **Pending Approval**, **Approved** or **Rejected**
+
+You can perform the following actions for connections:
+
+* **Add** a new connection
+* **Cancel** a connection request
+* **Delete** a connection
+
+For more information, refer to [Connecting to External Resources](/developerportal/deploy/connecting-to-external-resource/).
 
 ### Outgoing Connections Safelisting (Mendix Cloud Dedicated) {#connection-safelist}
 
@@ -373,6 +402,19 @@ IP addresses must be within the following ranges:
 | 172.32.0.0  | 192.167.255.255 |
 | 192.169.0.0 | 255.255.255.255 |
 
+### IP Access Restrictions {#ip-access-restrictions}
+
+You can define IP profiles to deny access to your application from specific IP addresses or ranges.
+
+The **IP Access Restrictions** overview contains the following information:
+
+* **Current Restriction Profile**
+* **New Restriction Profile**
+
+You can also **Delete**, **Add**, or **Edit** an IP based access restriction.
+
+For more information, refer to the [IP Restriction Profile](/developerportal/deploy/access-restrictions/#ip-restriction-profiles) section of *Restricting Access for Incoming Requests*.
+
 ### Path-Based Access Restrictions {#path-based-restrictions}
 
 You can restrict access to your application using Client Certificates or IP ranges.
@@ -394,11 +436,7 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 * Custom Profile for Client Certificates and/or IP ranges
 * N/A (inherit)
 
-For more information, see [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
-
-### Outgoing Connections Certificates
-
-Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These are used when your application initiates SSL/TLS connections.
+For more information, refer to the [Access Restriction Profiles](/developerportal/deploy/access-restrictions/#access-restriction-profiles) section of *Restricting Access for Incoming Requests*.
 
 ## The Log Levels Tab {#log-levels}
 
@@ -491,12 +529,12 @@ Click **Add** and select **Supported** to choose from the following variables:
 * **JVM_GARBAGE_COLLECTOR** – This overrides the automatic configuration of the Java garbage collector. Accepted values are `Serial` or `G1`.
 * **METRICS_AGENT_CONFIG** – This passes a configuration JSON to control the metrics passed to Datadog.
 * **SAMESITE_COOKIE_PRE_MX812** – This sets `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section.
-* **USAGE_METRICS_EMAIL_FIELDS** (deprecated) – If your app uses specializations of the `System.User` entity to store users, use this variable to point to them. This enables Mendix to identify [internal and external users](/developerportal/deploy/populate-user-type/) of your app.
+* **USAGE_METRICS_EMAIL_FIELDS** (deprecated) – If your app uses specializations of the `System.User` entity to store users, use this variable to point to them. This enables Mendix to identify [internal and external users](/developerportal/deploy/implementing-user-metering/#user-classification) of your app.
 
     * The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app that contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user.
     * If you have multiple specializations of `System.User`, you can specify the values in comma-separated format (that is, `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`). In the following example, there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
 
-    To ensure accurate user metering, it is important to distinguish external users from internal users. The recommended approach is to implement logic in your app to classify users (see [Populate User Types](/developerportal/deploy/populate-user-type/) and the [User Classification](/appstore/modules/user-classification/) module). A previous method relied on using email domains via the `USAGE_METRICS_EMAIL_FIELDS` constant, as described above. However, this method has now been deprecated. 
+    To ensure accurate user metering, it is important to distinguish external users from internal users. The recommended approach is to implement logic in your app to classify users (see [Implementing User Metering](/developerportal/deploy/implementing-user-metering/) and the [User Classification](/appstore/modules/user-classification/) module). A previous method relied on using email domains via the `USAGE_METRICS_EMAIL_FIELDS` constant, as described above. However, this method has now been deprecated. 
 
 Unsupported environment variables can only be used to control Mendix beta features. To configure an unsupported variable, click **Add** and select **Unsupported**. If you are using a beta feature, you will be informed what **Name** and **Value** to enter.
 

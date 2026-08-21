@@ -26,10 +26,6 @@ The rows in the table are CDs. The type of the two rows is *CD* and this is the 
 
 ## Types of Entities {#entity-types}
 
-{{% alert color="info" %}}
-View entities is currently in beta. 
-{{% /alert %}}
-
 The entity type defines how the data is handled and there are four types:
 
 1. Persistable entity
@@ -38,7 +34,7 @@ The entity type defines how the data is handled and there are four types:
     * Non-persistable entities are stored in the runtime memory and never get committed to the database. These type of entities are colored *orange* in the domain model.
 3. External entity
     * External entities represent the link to datasets that are made available through shared data sources registered in Mendix Catalog. These type of entities are colored *purple* in the domain model. 
-4. View entity (beta)
+4. View entity 
     * View entities represent the result sets of stored OQL queries on one or more entities, similar to database views, and are read-only. These entities are colored *green* in the domain model.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.png" width=="300" >}}

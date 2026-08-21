@@ -10,7 +10,7 @@ description: "Describes the purpose and functionality of 2FA in the Mendix Porta
 
 Mendix Cloud provides two-factor authentication (2FA) to help secure your account. 2FA requires you to identify yourself using your password as well as a second authentication mechanism.
 
-This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}) in [Apps](https://sprintr.home.mendix.com). For example, switching to the production environment requires 2FA.
+This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}) in [Projects](https://projects.home.mendix.com). For example, switching to the production environment requires 2FA.
 
 {{< figure src="/attachments/deployment/general/two-factor-authentication/production.png" max-width=30% alt="" class="no-border" >}}
 
@@ -87,7 +87,7 @@ Once you have 2FA configured to use an authenticator app, you can use it to comp
 
 To change your 2FA method, phone number, or authenticator app, you need to deactivate your 2FA and then set it up again with your new details.
 
-To deactivate your 2FA, go to **User Settings** > [Developer Settings](/mendix-profile/user-settings/#dev-settings). Then, in the **Two-Factor Authentication (2FA)** section, click **Deactivate**.
+To deactivate your 2FA, go to **User Settings** > [Developer Settings](/portal/user-settings/#dev-settings). Then, in the **Two-Factor Authentication (2FA)** section, click **Deactivate**.
 
 {{< figure src="/attachments/deployment/general/two-factor-authentication/deactivate.png" alt="" >}}
 

@@ -11,7 +11,7 @@ This pattern makes it possible to incrementally sync objects from the server to 
 
 This pattern was developed by our MVP Marcel Groeneweg. You can watch him explain it in [this video](https://www.mendix.com/videos/lightning-fast-native-sync-for-large-data-sets/):
 
-{{% vidyard dUhLAZukL7AU3JY43eUQ4Q %}}
+{{< vidyard id="dUhLAZukL7AU3JY43eUQ4Q" >}}
 
 ## Challenge
 
@@ -63,4 +63,4 @@ To improve your apps further, consult the following recommendations:
 
 ## Read More
 
-* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development](/refguide/dev-best-practices/)
+* To increase the clarity, organization, and documentation of your apps, see [Development Best Practices](/refguide/dev-best-practices/)

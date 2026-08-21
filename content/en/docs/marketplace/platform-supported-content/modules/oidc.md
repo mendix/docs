@@ -30,10 +30,9 @@ The module version 4.1.1 is a special release intended only for Mendix version 1
 The OIDC SSO module works with both web/responsive applications and progressive web apps (PWA).
 {{% /alert %}}
 
-Alternatives to using OIDC SSO for managing single sign-on are:
+Alternatively, you can use [SAML](https://marketplace.mendix.com/link/component/1174) for managing single sign-on if your IdP supports the SAML protocol but not the OIDC protocol.
 
-* [SAML](https://marketplace.mendix.com/link/component/1174) – if your IdP supports the SAML protocol but not the OIDC protocol
-* [Mendix SSO](https://marketplace.mendix.com/link/component/111349) – if your app is targeted at end-users that have signed up to the Mendix platform
+You can also use the [Mendix SSO](https://marketplace.mendix.com/link/component/111349) if your app is targeted at end-users that have signed up to the Mendix platform. However, this module is deprecated as of May 1, 2026. You may alternatively use [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/).
 
 ### Typical Usage Scenarios
 
@@ -42,7 +41,7 @@ Alternatives to using OIDC SSO for managing single sign-on are:
 * **API consumption:** If your app makes calls to APIs of other services on behalf of your end-user, you can use the access token obtained via the OIDC SSO module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Catalog.
 * **Authorizing access to a Mendix back-end app:**  If you want to secure APIs in Mendix back-end apps using an access token, your API can use an access token passed by the calling app in the authorization header. If the access token is a JWT, your app can use the user and/or the user’s authorizations to assign user roles based on the claims in the access token JWT.
 * **Xcelerator apps:** Your Siemens Xcelerator app is designed to be integrated with Siemens' SAM IdP.  The Siemens SAM IdP supports the OIDC protocol and allows your app to delegate both authentication (login) and authorization (roles).
-* **Works with Responsive web app and PWA:** OIDC SSO module supports both responsive web apps and progressive web apps (PWA), ensuring seamless functionality in both offline and online modes for PWAs. If you are building a native mobile app, you need to use [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module for your app. For more information, see [Building a Responsive Web App](/quickstarts/responsive-web-app/), [Progressive Web App](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/), and [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
+* **Works with Responsive web app and PWA:** OIDC SSO module supports both responsive web apps and progressive web apps (PWA), ensuring seamless functionality in both offline and online modes for PWAs. If you are building a native mobile app, you need to use [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module for your app. For more information, see [Building a Responsive Web App](/quickstarts/part1/), [Progressive Web App](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/), and [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
 * **API security:** If your app exposes APIs, such as an OData API, it is best security practice to use OAuth Access Tokens (also known as bearer tokens or JWT tokens) instead of Basic Authentication or API keys. You can use the OIDC SSO module to validate these Access Tokens and check if they have right authorization (i.e., the right OAuth scopes) for accessing your API endpoint. For example, you may want to allow a specific user or client to perform a GET (read) request but not a POST or PATCH (write) request. The OIDC module supports processing Access Tokens obtained via both SSO and the OAuth client credential grant.
 * **App-initiated logout at the IdP:** As a counterpart to logging in via SSO, it is possible to include a logout button in your app that also logs the end user out from the IdP.
 
@@ -55,9 +54,9 @@ The OIDC SSO module supports the following features:
 1. IdP Integration Capabilities:
 
     * Supports SSO and API-security.
-    * Can be used with OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services. Moreover, the module also works with the [OIDC Provider](https://marketplace.mendix.com/link/component/244687) module.
+    * Can be used with OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services. Moreover, the module also works with the [OIDC Provider](https://marketplace.mendix.com/link/component/244687) module.
     * Comes with helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
-    * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. PKCE will be used automatically if the IdP supports it.
+    * PKCE is enabled by default for all the IdPs. You can disable it if required. 
     * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
     * Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
     * Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IdP) (version 2.3.0 and above).
@@ -71,9 +70,8 @@ The OIDC SSO module supports the following features:
 2. Configuration Experience Features:
 
     * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as described in the section [Custom User Provisioning Using a Microflow.](#custom-provisioning-mf)
-        * For example, PKCE will be used automatically if it is detected.
     * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
-    * Comes with default user provisioning microflow that works with Entra ID; there you may need to build a custom user provisioning flow.
+    * Comes with default user provisioning microflow that works with Entra ID; however, you may need to build a custom user provisioning flow.
     * User provisioning microflows can be used from any other modules in your app. They do not need to be exclusively a part of the OIDC module.
 
 3. Developer Experience Features:
@@ -87,7 +85,7 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Helps you build an OAuth client that initiates the Authorization Code grant flow to sign the end-user in via the browser.
 * Uses the `nonce` parameter to defend against replay attacks.
 * Validates ID-token signatures.
-* Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates *S256* as value for `code_challenge_methods_supported`, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app. Customers using EntraID may need to update their well-known endpoint, as EntraID does not automatically publish the `code_challenge_methods_supported` parameter. As a result, PKCE will not be enabled automatically.
+* Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature for better protection against hackers who try to get access to your app. PKCE is enabled by default.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
     * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
@@ -96,22 +94,23 @@ For readers with more knowledge of the OAuth and OIDC protocol:
     For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published `jwks` endpoint.
 
 * Stores an access token for each end-user that can be used to make API calls on their behalf.
+* The OIDC SSO module supports ‘bearer’ Access Token type and does not support the Message Authentication Code (MAC) when making calls to resource servers or APIs as defined in [RFC6749 section 7.1](https://datatracker.ietf.org/doc/html/rfc6749#section-7.1).
 * Can be configured to use either `client_secret_post`, `client_secret_basic`, or `private_key_jwt` as the client authentication method.
-* It supports nine signing algorithms: ECC SHA-256 (ES256), ECC SHA-384 (ES384), ECC SHA-512 (ES512), RSASSA-PSS SHA-256 (PS256), RSASSA-PSS SHA-384 (PS384), RSASSA-PSS SHA-512 (PS512), RSA SHA-256 (RS256), RSA SHA-384 (RS384), RSA SHA-512 (RS512), and automatically regenerates a new key pair upon expiry.
-* Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above).
+* It supports nine signing algorithms: ECC SHA-256 (ES256), ECC SHA-384 (ES384), ECC SHA-512 (ES512), RSASSA-PSS SHA-256 (PS256), RSASSA-PSS SHA-384 (PS384), RSASSA-PSS SHA-512 (PS512), RSA SHA-256 (RS256), RSA SHA-384 (RS384), and RSA SHA-512 (RS512), and automatically regenerates a new key pair upon expiry.
+* Supports ACR in authorization requests. The ACR in the OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above).
 * Supports `response_mode=query` and `response_mode=form_post`.
 * Helps you implement an OAuth Resource Server that receives an Access Token which is obtained by a client via either Authorization Code grant or Client Credential grant.
-* When the OIDC SSO module secures an API with the Client Credential grant, the `sub` as claim (which contains either user-id or client-id) should always be available in the access token as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure).  If it is not included, the module will look for `client_id`. To be compliant with Microsoft's Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. Any of these client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
+* When the OIDC SSO module secures an API with the Client Credential grant, the `sub` claim (which contains either user-id or client-id) should always be available in the access token as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure). If it is not included, the module will look for `client_id`. To be compliant with Microsoft Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. Any of these client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
 * Supports [OpenID Connect RP-Initiated Logout 1.0](https://openid.net/specs/openid-connect-rpinitiated-1_0.html). When sending a logout request to the IdP's `end_session_endpoint`, the parameters `id_token_hint` and `post_logout_redirect_uri` are supported for the logout request.
 
 #### Limitations
 
 The OIDC SSO module does not yet support the following:
 
-* Requesting claims via the 'claims' query parameter, as per OIDC specs
-* Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens
-* Mobile apps
-* Controlling the configuration using constants requires an app restart
+* Requesting claims via the 'claims' query parameter, as per OIDC specs.
+* Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens.
+* Mobile apps.
+* Controlling the configuration using constants requires an app restart.
 
 The OIDC SSO module also has the following limitations:
 
@@ -119,7 +118,6 @@ The OIDC SSO module also has the following limitations:
 * If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
 * If OIDC SSO is used for API security, it does not validate the value of the `aud` claim, as suggested by [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#section-4). Customers should prevent cross-JWT confusion by using unique scope values.
 * The Admin screens have separate tabs for configuring clients that use the Client Credential grant for API security and for situations where your app is used for both SSO and API security. If the first version of your app uses only OIDC SSO for API security and you want to introduce SSO in a later version, the IdP configuration needs to be re-entered on the other tab.
-* Customers using EntraID may need to update their well-known endpoint, as EntraID does not automatically publish the `code_challenge_methods_supported` parameter. As a result, PKCE will not be enabled automatically.
 
 ## Dependencies
 
@@ -127,10 +125,9 @@ The OIDC module requires your app to be using Mendix 9.0 or above.
 
 It requires the following Marketplace modules to be included in your app:
 
-* [Encryption](https://marketplace.mendix.com/link/component/1011) – see [Encryption](/appstore/modules/encryption/) documentation.
+* [Encryption](https://marketplace.mendix.com/link/component/1011) (for version 4.3.0 and below) – see [Encryption](/appstore/modules/encryption/) documentation.
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation.
-* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) – see [Nanoflow Commons](/appstore/modules/nanoflow-commons/) documentation.
-* [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation (deprecated from version 4.0.0 of the module).
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) (for version 4.3.0 and below) – see [Nanoflow Commons](/appstore/modules/nanoflow-commons/) documentation. 
 * [User Commons](https://marketplace.mendix.com/link/component/223053) (for version 3.0.0 and above)
 
     {{% alert color="warning" %}}
@@ -138,6 +135,7 @@ If you are using Mendix version 10.21.1, use User Commons module version 2.1.0 o
     {{% /alert %}}
 
 * [Events](https://marketplace.mendix.com/link/component/224259) – see [Events](/appstore/widgets/events/) documentation (applicable to version 4.0.0 and above for Mx10 and version 3.3.0 and above for Mx9).
+* [Mx Model reflection](https://marketplace.mendix.com/link/component/69) (for version 4.2.1 and below) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation.
 
 Versions below 2.3.0 also require [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) – see [Native Mobile Resources](/appstore/modules/native-mobile-resources/) documentation.
 
@@ -161,19 +159,19 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
 1. In the **App Explorer**, add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/add-model-reflection.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/add-model-reflection.png" alt="New Menu Item dialog with Model Reflection page configuration" class="no-border" >}}
 
 2. Run the app and click the newly-added navigation link to use Mx Model Reflection.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/model-reflection-button.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/model-reflection-button.png" alt="" class="no-border" >}}
 
 3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities. Starting from version 3.0.0 of the OIDC SSO module, additionally select and refresh the **Administration** and **System** modules in the **MxModelReflection.MxObjects_Overview** page to configure User Provisioning.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/select_modules.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/select-modules.png" alt="MxObjects_Overview page with MxModelReflection and OIDC modules selected" class="no-border" >}}
 
 ### Migrating from Community Edition to Platform Edition{#migration}
 
-If you already have the [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529) (community edition) in your module, you can migrate to this, platform supported, version by following the instruction below.
+If you already have the [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529) (community edition) in your module, you can migrate to this platform-supported version by following the instructions below.
 
 #### Upgrading from Mendix 8 to Mendix 9
 
@@ -203,14 +201,21 @@ If your app is already developed using Mendix 9 or above, but uses the community
 
 This section provides an overview of updates for the OIDC SSO module across different versions. It includes new dependencies, snippet replacements, and microflow renaming to ensure a smooth transition while migrating to higher module versions.
 
-| Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information|
+| Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
+| 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |
+| 10.24.0 and above | 4.5.0 | - | New Admin UI and new constants have been introduced. |
+| | | | `Anonymous` module role has been removed. |
+| | | | Supporting multi-domain using constant. See [Configuring Multi-Domain](#multi-domain) for more information. |
+| 10.24.0 and above | 4.4.0 | Move the `Encryption.Encryptionkey` value to the `OIDC.Encryptionkey` constant. | Dependencies on the Encryption and Nanoflow Commons modules have been removed. <br> **Issued Tokens** tab has been removed from the OIDC Client Configuration page. |
+| 10.24.0 and above | 4.3.0 | - | Supporting multi-domain and sub-path. |
+| 10.24.0 and above | 4.2.1 | In version 4.2.1, automatic migration of the UserCommons has been removed. | Since migration steps were removed in 4.2.1, you must upgrade to OIDC SSO version 4.2.0 first to prevent data loss. This applies to the UserCommons, if you are migrating from any version below 3.0.0, always upgrade to 4.2.0 first, then move to the latest v4.2.1. |
 | 10.21.01 and above | 4.2.0 | In version 4.2.0, the module no longer automatically executes the UserCommons migration in the startup microflow. The migration step has been moved to a dedicated microflow, which you can trigger via a widget. | The `ASU_STARTUP` microflow has been moved under the **USE_ME** folder. |
 | 10.12.10 and above | 4.0.0 | Set `OIDC.ASU_OIDC_Startup` microflow as part of the after-startup microflow | From UserCommons 2.0.0, new users without IdP-specified time zone or language will use default App settings; existing users retain their previously set values. |
 | | | For module version 4.0.0 and above, use User Commons module version 2.0.0 and above, and vice versa. | Deprecated Mx Model Reflection module; maintained for compatibility but will be removed in future versions. |
 | | | | Default user roles in UserProvisioning will be assigned along with roles from the access token. |
 | | | | The `OIDC.ACT_Account_RetrieveAccount` microflow, located in the **USE_ME** folder, has been removed as it is no longer required. |
-| 9.24.18 and above | 3.2.0 | Select and refresh the Administration and System modules manually in the `MxModelReflection.MxObjects_Overview` page| Added a new heading for selected scopes: *Your app will request the following scopes at IdP*. |
+| 9.24.18 and above | 3.2.0 | Select and refresh the Administration and System modules manually in the `MxModelReflection.MxObjects_Overview` page | Added a new heading for selected scopes: *Your app will request the following scopes at IdP*. |
 | 9.24.2 and above | 3.1.0 | Set `OIDC.ASU_OIDC_Startup` microflow as part of the after-startup microflow | `OIDC.Startup` microflow renamed to `OIDC.ASU_OIDC_Startup` |
 | 9.24.2 and above | 3.0.1 | Use `Snip_Login_Button` snippet instead of `Snip_Login_Automatic` | `Snip_Login_Automatic` snippet removed from the module |
 | 9.24.2 and above | 3.0.0 (migrating to 3.0.0 and above) | Include [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency. | New UserCommons module |
@@ -231,55 +236,48 @@ Ensure that you have allocated the following user roles to the OIDC module and U
 | User Role | OIDC Module Role |
 | --- | --- |
 | Administrator | OIDC.Administrator, UserCommons.Administrator |
-| Anonymous | OIDC.Anonymous (for multiple IdPs only) |
 | User | OIDC.User |
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/user-roles.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/user-roles.png" alt="User roles tab showing Administrator and User roles with their assigned module roles" >}}
 
-### User Roles for Single IdP
+### End User Login When Using Single or Multiple IdPs
 
-If a single Identity Provider (IdP) is configured in the OIDC SSO module, end-users can be authenticated via the URL `https://<your-app-url>/oauth/v2/login` This means you do not need to configure the *Anonymous* user role for a single IdP.
+If a single Identity Provider (IdP) is configured in the OIDC SSO module, end users can be authenticated via the URL `https://<your-app-url>/oauth/v2/login`. When accessing the URL, users are automatically redirected to the configured IdP for authentication.
 
-### Allowing Anonymous Users for Multiple IdPs (Optional)
+If multiple IdPs are configured in the OIDC module, the following two mechanisms are supported for selecting the IdP:
 
-The OIDC module supports multiple OIDC/OAuth-compatible IdPs. Optionally, if you allow your end-users to choose from multiple IdPs, or to have the option to log back into the app after they have logged out, you will need to give them access to the app before they have signed in to the app. Therefore, you need to give anonymous users access to your app.
-
-In the **Anonymous** tab of the app security settings, do the following:
-
-1. Set **Allow anonymous users** to **Yes**
-2. Select *Anonymous* as the **Anonymous user role**
-
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/anonymous-user.png" class="no-border" >}}
-
-{{% alert color="info" %}}
-For multiple IdPs, you may have to add the *Anonymous* user role if it does not exist already.
-{{% /alert %}}
+1. Depending on deeplink, your application logic may redirect to a IdP-specific endpoint.
+2. In this mechanism, your end users make the selection. Your app logic can use the same URL (`<your-app-url>/oauth/v2/login`) to initiate authentication. End users will first be redirected to an IdP selection page, where they can choose the IdP they want to use for authentication.
 
 {{% alert color="warning" %}}
-Enabling anonymous users introduces a broader attack surface. If you choose this option, follow Mendix guidelines for [setting up anonymous user security](/howto/security/set-up-anonymous-user-security/) to mitigate potential risks.
+From version 4.5.0, the `Anonymous` module role has been removed from the module and is no longer available. If you are using the module below V4.5.0 and `Anonymous` module role is enabled, configure **Role-based home page** and **Sign-in page** of the **Authentication** section to *none*.
 {{% /alert %}}
 
 ### Configuring Navigation{#configure-nav}
 
 The OIDC SSO module works without a specified sign-in page. Therefore, in the navigation section of your app, set **Sign-in page** (in the **Authentication** section) to *none*.
 
-If you are configuring navigation for web/responsive apps and want to allow your end-users to choose from a number of different IdPs (multiple IdPs), or to have the option to sign in back into the app after they have signed out, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_Web_Button**. When configuring navigation for PWA apps, set the **Role-based home page** for the **Anonymous** role to `OIDC.Login_PWA_Online_Button` for online apps and `Login_PWA_Offline_Button` for offline apps. See [Role-Based Home Pages](/refguide/navigation/#role-based) in *Navigation* for more information.
-
 In addition, administrators will need to have access to configure OIDC and also manage end-users. You can do this by including the pages `Administration.Account_Overview` and `OIDC.OIDC_Client_Overview` into the app navigation, or a separate administration page.
 
 If you are testing phone web and phone web offline locally, use the URLs `http://localhost:8080/?profile=Phone` and 
 `http://localhost:8080/?profile=PhoneOffline`, respectively. For more information, see the [Example of profile selection](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/#example-of-profile-selection) section of *Progressive Web App*.
 
+Admins can view their own token using a snippet in their custom page. They can find this snippet under **OIDC > USE_ME > Snippet_Token_View**. The snippet displays the admin's decrypted and decoded Access token and ID token.
+
 ### Setting Encryption Key
 
-Follow the instructions to [set an encryption key in the Encryption module](/appstore/modules/encryption/#configuration). The constant to set is called `Encryption.EncryptionKey` and should be a random value 32 characters long. This key will be used to encrypt and decrypt values.
+Follow the instructions to [set an encryption key in the Encryption module](/appstore/modules/encryption/#configuration). For OIDC SSO V4.3.0 and below, set a constant called `Encryption.EncryptionKey` and assign it a random value 32-character value. Starting from version 4.4.0, set the encryption key in the `OIDC.Encryptionkey` constant using a random 32-character value. This key will be used to encrypt and decrypt values.
 
-## IdP Configuration {#idpconfiguration}
+{{% alert color="info" %}}
+While upgrading from V4.3.0 to V4.4.0 or above, ensure that any value currently stored in the `Encryption.Encryptionkey` is moved to the `OIDC.Encryptionkey` constant, otherwise, existing IdP client authentication will fail.  
+{{% /alert %}}
+
+## Configuring IdP{#idpconfiguration}
 
 To connect your App with your IdP, you need to configure both your IdP (as described in the [Configure your App at your IdP](#configure_app_idp) section below) and your Mendix application. For the Mendix application setup, you can choose between two methods:
 
-* [Deploytime configuration of your IdP at your App](#deploytime-idp-configuration)
 * [Runtime configuration of your IdP at your App](#runtime-idp-app)
+* [Deploytime configuration of your IdP at your App](#deploytime-idp-configuration)
 
 ### Configure Your App at Your IdP {#configure_app_idp}
 
@@ -287,9 +285,7 @@ To connect your App with your IdP, you need to configure both your IdP (as descr
 
 1. In your IdP, provision a new OpenID client application. You will receive a ClientID and Client Secret.
 2. You will also need the OIDC configuration endpoint (for example: [https://accounts.google.com/.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration))
-3. Register the following callback URLs:
-    * `https://<your-app-url>/oauth/v2/callback`
-    * `makeitnative://<your-app-url>/oauth/callback`
+3. Register the following callback URL: `https://<your-app-url>/oauth/v2/callback`
 
 #### Microsoft Entra ID Provider Configuration for APIs{#azure-portal}
 
@@ -313,7 +309,7 @@ For information about configuring Amazon Cognito for the OIDC SSO module, see [A
 
 ### Runtime Configuration of Your IdP at Your App {#runtime-idp-app}
 
-This section describes how you can configure your IdP in your Mendix app using the Admin UIs provided by the OIDC SSO module. These screens offer two tabs:
+This section describes how you can configure your IdP in your Mendix app using the Admin UIs provided by the OIDC SSO module. The **IdP Integration (OIDC)** screen offers two tabs:
 
 * **IdPs for SSO and API security**: Use this more extensive configuration screen if you are implementing SSO and optionally API security.
 * **IdPs for API security only**: Use this simpler configuration screen if you are configuring an IdP that is only used for API security (i.e., Client Credential grant). For more information, see the [API Security Configuration for Client Credential Grant](#client-credential-grant) section below.
@@ -325,41 +321,47 @@ You can configure your OIDC client using the app pages – see [General OIDC Cli
 In this case, the OIDC client is the app you are making.
 
 1. Start your app, log in as an administrator, for example *demo_administrator*, and access the **IdPs for SSO and API security** setup page.
-2. Add a new client configuration and give it an **Alias** so you can identify it if you have more than one client configuration.
-3. Add the **Client ID**.
+2. Add a **New** client configuration and give it an **Alias** so you can identify it if you have more than one client configuration. You can also **Edit**, **View**, **Delete**, **Toggle Active**, or **Make Default** the existing alias. 
+3. On the **Endpoints** tab, add the well-known endpoint at **Automatic configuration URL**, and click **Import IdP-metadata** to auto fill the rest endpoints. Click **Next**.
 
-   **Client assertion** is automatically set to *Client ID and Secret*.
+    {{% alert color="info" %}} If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`. {{% /alert %}}
 
-4. Choose the **Client authentication method** — make sure that you select a method that is supported by your IdP. You can normally check this via the `token_endpoint_auth_methods_supported` setting on the IdP’s well-known endpoint. Also, ensure that the correct client authentication method is configured at the IdP when you register the client.
+    If you do not have an automatic configuration URL, you can fill in the other endpoints manually and click **Next**.
+
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/endpoints.png" alt="Endpoints tab with automatic configuration URL and endpoint fields" >}}
+
+4. On the **General Configuration** tab, add **Client ID**. Client assertion is automatically set to **Client ID** and **Client secret**.
+
+5. **Enable PKCE** for the best security practice. It is enabled by default. To disable it, select **No**.
+
+6. Choose the **Client authentication method** – make sure that you select a method that is supported by your IdP. You can normally check this via the `token_endpoint_auth_methods_supported` setting on the IdP’s well-known endpoint. Also, ensure that the correct client authentication method is configured at the IdP when you register the client.
 
     The options are:
     * `client_secret_basic`: Your app will use the HTTP Basic Authentication scheme to authenticate itself at your IdP. This is the default. The `client_secret_basic` makes use of the `client-id` and `client-secret`.
     * `client_secret_post`: Your app will authenticate itself by including its `client_id` and `client_secret` in the payload of token requests. (Older versions of the OIDC SSO module used this method.)
-    * `private_key_jwt`: This method, introduced in version 4.1.0, uses asymmetric key cryptography (algorithm) for authentication. This is the best option for security. When you select the `private key` option, you can configure the following fields:
-        * **Key Pair Expiration Days**: (default `90`)
-        * **JWT ALG(Signing Algorithm)**: (default `RS256`)
+    * `private_key_jwt`: This method introduced in version 4.1.0 and uses asymmetric key cryptography (algorithm) for authentication (also known as key pair based authentication). This is the best option for security. It has the following options to share your application's public key with your IdP. Choose the right option depending on your IdP's capabilities:
+        * JWKS URI: This option assumes that your IdP can fetch the public key from the JWKS endpoint of your application. Most IdPs aupport this capability, and it is the preferred approach as it eliminates the need to manually exchange keys during the setup. When you select the *JWKS URI* from the **Exchange of public key**, configure the following fields:
+            * **Key pair expiration days**: (default 90)
+            * **JWT signing algorithm**: (default RS256)
 
-        {{% alert color="info" %}}`private_key_jwt` is not yet supported with Entra ID due to the specific way of Microsoft's implementation, which requires enhancements to the OIDC SSO module.{{% /alert %}}
- 
-    Once you **Save** the configuration, a key pair is automatically generated. Before you set up the private key authentication in your Mendix App, complete the JWKS configuration at your IdP. Check the documentation of your IdP for details. If you are using Okta, you can refer to the [Configuring JWKS at Your IdP (Okta)](#jwks-okta) section. 
+        Once you **Save** the configuration, a key pair is automatically generated. Before you set up the private key authentication in your Mendix app, complete the JWKS configuration at your IdP. Check the documentation of your IdP for details. If you are using Okta, you can refer to the [Configuring JWKS at Your IdP (Okta)](#jwks-okta) section. 
+
+        * X. 509 Certificate: This will use a certificate to transfer the public key of your application to the IdP. Choose this method if you are using Entra ID as your IdP. Once the configuration is ready, download the certificate in the `pre`, `cer`, or `cer` format. You can also download it by editing the configuration and clicking **Download**. It is supported from version 4.3.0 of the OIDC module.
+
+            {{% alert color="info" %}}X. 509 Certificate supports only the RS256 Signing Algorithm. {{% /alert %}}
+
+            {{% alert color="info" %}}If you regenerate the key pair for your existing configuration, make sure to download the updated certificate from the configuration edit page and upload it to the Azure portal to ensure successful authentication. {{% /alert %}}
 
     {{% alert color="info" %}}After a key renewal, some SSO requests may fail if your IdP does not immediately refresh its key cache. {{% /alert %}}
 
-5. Add the **Client Secret**.
-6. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
+7. Add the **Client secret** if you choose `client_secret_basic` or `client_secret_post` as **Client authentication method**.
 
-    {{% alert color="info" %}} If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`. {{% /alert %}}
+8. Select the **Scopes** expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
 
-    * If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
-7. Click **Save**
-
-    {{% alert color="info" %}} Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information. {{% /alert %}}
-
-8. Select your client configuration and click **Edit**.
-9. Select the scopes expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
     * If you need refresh tokens for your end-users, you also need the `offline_access` scope.
     * Add other scopes as needed.
-10. Select your user parsing. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses thin tokens. You can set up user provisioning by setting the following standard flows:
+
+9. On the **Creating User** tab, select your **User creation microflow**. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses opaque tokens. You can set up user provisioning by setting the following standard flows:
 
     | Default Microflow | Use |
     | --- | --- |
@@ -373,30 +375,36 @@ In this case, the OIDC client is the app you are making.
 
     {{% alert color="info" %}}Starting from UserCommons version 2.0.0, If the IdP does not specify the timezone and language for newly created users, these settings will be set according to default **App Settings** of your app. If no default is available, they remain unset. Existing users retain their previously set values.{{% /alert %}}
 
-11. Optionally, you can select the `CustomAccessTokenParsing` microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
+10. Click **Next** to open **Assigning Role** tab.
+
+11. In the **Token Parsing**, you can choose the token you want to use for assigning user roles. The default is *ACCESS_TOKEN*.
+
+12. Optionally, you can select the **Custom AccessToken processing microflow** if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
 
     {{% alert color="info" %}}Starting from version 4.0.0 of the OIDC SSO, the default user roles in the UserProvisioning will be assigned alongside the roles parsed from the access token.{{% /alert %}}
 
 Once you have completed these steps, the SSO-configuration is ready for testing. For more information, see the [Testing and troubleshooting](#testing) section.
 
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/idp-config.png" alt="IdP Integration page showing configured Azure, AzureCertificate, and Auth0 providers" >}}
+
 See the section [Optional Features](#optional) information on additional optional features you may want to implement.
 
 #### API Security Configuration for Client Credential Grant {#client-credential-grant}
 
-1. Start your app, log in as an administrator, for example *demo_administrator*, and access the Client Credential setup page.
-2. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
+1. Start your app, log in as an administrator, for example, *demo_administrator*, and access the Client Credential setup page.
+2. If you have the **Automatic Configuration URL** (also known as the well-known endpoint), enter it and click **Import Configuration** to automatically fill the other endpoints.
 
     {{% alert color="info" %}}If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`.{{% /alert %}}
 
-    * If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
-3. Optionally, you can select the `CustomAccessTokenParsing` microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
-4. Click Save. Once you have completed these steps, the Client Credential Configuration is ready for testing.
+    If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
+3. Optionally, you can select the **Custom AccessToken Parsing** microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
+4. Click **Save**. Once you have completed these steps, the Client Credential Configuration is ready for testing.
 
 #### Microsoft Entra ID Client Configuration for APIs {#azure}
 
-For Entra ID access to APIs through an access token, in addition to the configuration described above, we can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
+For Entra ID access to APIs through an access token, in addition to the configuration described above, you can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
 
-1. Start your app, log in as an administrator, for example *demo_administrator*, and access the **IdPs for API security only** Setup page.
+1. Start your app, log in as an administrator, for example *demo_administrator*, and access the **IdPs for API security only** setup page.
 1. Add the custom scope which you [configured in Azure](#azure-portal) in **Available scopes**.
 1. Save the configuration.
 1. Edit the Entra ID configuration and add the custom scope to **Selected scopes**.
@@ -407,25 +415,25 @@ Now, you can acquire tokens which can be validated using JWKS URI.
 
 For more information about configuring your app for OIDC with Amazon Cognito, see [Amazon Cognito: Configuring the Required Settings in Your Mendix App](/appstore/modules/aws/amazon-cognito/#cognito).
 
-### Deploy-time Configuration of Your IdP at Your App{#deploytime-idp-configuration}
+### Deploy-Time Configuration of Your IdP at Your App{#deploytime-idp-configuration}
 
-#### Automated Deploy-time SSO Configuration{#deploy-time}
+#### Automated Deploy-Time SSO Configuration{#deploy-time}
 
-In version 2.3.0 and above, you can configure the OIDC SSO module using app [constants](/refguide/constants/) rather than using the app administration pages. As the developer of an app using OIDC SSO, you can set default values. These values can be overridden using the app constants.
+In version 2.3.0 and above, you can configure the OIDC SSO module using app [constants](/refguide/constants/) rather than [using the app administration pages](#general-oidc). As the developer of an app using OIDC SSO, you can set default values. These values can be overridden using the app constants.
 
-To enable the use of app constants to configure the OIDC SSO module, configure your app to run the Startup microflow in the OIDC module (OIDC.ASU_OIDC_Startup) as (part of) the [after startup](/refguide/app-settings/#after-startup) microflow.
+To enable the use of app constants to configure the OIDC SSO module, configure your app to run the Startup microflow in the OIDC module (`OIDC.ASU_OIDC_Startup`) as (part of) the [after startup](/refguide/runtime-tab/#after-startup) microflow.
 
 Use the following security best-practices when setting up your constants:
 
 * Set the [Export level](/refguide/configure-add-on-and-solution-modules/#export-level) for these constants to `Hidden` for security reasons.
-* Mask your client_secret so the value is not visible in the Mendix Portal – [constants](/developerportal/deploy/environments-details/#constants) in the *Environment Details* documentation for more information.
+* Mask your client_secret so the value is not visible in the Mendix Portal. For more information, see [constants](/developerportal/deploy/environments-details/#constants) of *Environment Details*.
 
-The configuration you set through constants will mirror the configuration described in [General OIDC Clients](#general-oidc), above.
+The configuration you set through constants mirror the configuration described in [General OIDC Clients](#general-oidc), above.
 
 {{% alert color="info" %}}
-SSO configurations created using constants will be shown as read only on the **IdPs for SSO and API security** and **IdPs for API security only** Setup page in the app.
+SSO configurations created using constants will be shown as read only on the **IdPs for SSO and API security** and **IdPs for API security only** setup page in the app.
 
-The following error messages will be displayed when you try to edit/delete.
+The following error messages will be displayed when you try to edit or delete.
 
 * error at edit: You cannot modify as it is created from deployment.
 * error at delete: You cannot delete as it is created from deployment.
@@ -439,7 +447,7 @@ In this configuration, you have several options to customize the Identity Provid
 
 In this non-default configuration method, users have the flexibility to introduce your own constants by creating custom IdP configurations.
 
-##### Deploy-time IdPs for SSO and API Security Configuration
+##### Deploy-Time IdP Configuration for SSO and API Security {#deploy-time-idps-for-sso-and-api-security-configuration}
 
 {{% alert color="info" %}}
 **IdPs for SSO and API security** configuration supports both Authorization code and Client Credential grant type.
@@ -480,6 +488,10 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
 
     Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 
+* **CustomATPTokenType**: an optional deploy-time constant — when **CustomATP** is enabled, optionally, **CustomATPTokenType** can be set to `ID-TOKEN`. Default is `ACCESS-TOKEN`.
+
+    Example: `ID-TOKEN`
+    
 * **CustomCallbackURL** – the custom callback URL
 
 * **SelectedClaim** – selected claim values — multiple values can be separated by a space
@@ -500,7 +512,25 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
 
     Example: `acr1 acr2`
 
-##### Deploy-time IdPs for API Security Only Configuration
+* **JWKConnectTimeout** (*default: 1000*) –  sets the maximum amount of time (in milliseconds) an application waits to connect to a remote JWKS endpoint before timing out
+
+    Example: `1000`
+
+* **JWKReadTimeout** (*default: 2000*) – maximum time (in milliseconds) the HTTP client waits for a response from the token server before aborting the connection
+
+    Example: `1000`
+
+* **UseAuthenticationToken** (*default: false*) – set to `true` defines whether to generate an authentication token
+
+    Example: `true`
+    
+* **EnablePKCE** (*default: True*) – enables Proof Key for Code Exchange (PKCE)
+
+* **OIDC.NonceCookieSameSite** (*default: Lax*) – specifies the `SameSite` attribute for the OIDC nonce cookie, controlling when the browser includes the cookie during authentication requests.
+
+    Example: `None`
+
+##### Deploy-Time IdP Configuration for API Security Only
 
 {{% alert color="info" %}}
 **IdPs for API security only** configuration supports Client Credential grant type only.
@@ -518,13 +548,27 @@ Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
 {{% /alert %}}
 
-## User Provisioning (End-user Onboarding)
+## Configuring Multi-Domain {#multi-domain}
+
+The OIDC SSO module supports multi-domain, enabling flexible deployment in multi-app or shared domain environments. When you enable multi-domain support, the module resolves the application URL from request headers rather than relying solely on the ApplicationRootUrl, allowing users to access the application through their custom domains.
+
+To enable multi-domain support, set the `EnableMultiDomainSupport` constant to *True* in the [Acceptance Environment Details](/developerportal/deploy/environments-details/#constants) for Mendix Cloud. By default, this constant is set to *False*.
+
+After enabling multi-domain support, configure the `AllowedHosts` constant to specify which custom domains are permitted. If you enable multi-domain support but leave `AllowedHosts` empty, the module redirects all users to the ApplicationRootUrl.
+
+The `AllowedHosts` constant accepts a comma-separated or space-separated list of hostnames in the following formats:
+
+* Exact match – `example.com` allows only that specific domain
+* Subdomain wildcard – `.example.com` allows any subdomain of `example.com`
+* Full wildcard – `*` allows any domain
+
+## User Provisioning (End-User Onboarding)
 
 Initially, your app will not have any end-users. You can onboard end-users into your app using one of the following mechanisms: 
 
-1. Manual user creation: an admin user can manually create users in your app. The [Administration](/appstore/modules/administration/) module helps you implement this mechanism.
-2. SCIM Protocol: use the SCIM protocol to let your IdP create and/or deactivate end-users. The SCIM module helps you implement the mechanism. For more information, see [SCIM](/appstore/modules/scim/).
-3. Just-in-Time (JIT) User Provisioning: in the JIT user provisioning, users will be created when they successfully log in via SSO. Both SAML and OIDC SSO support this mechanism. If you do not want JIT user provisioning, it is possible to disable it as described in the section [Runtime Configuration of End-user Onboarding](#custom-provisioning-rt) below.
+1. Manual user creation: An admin user can manually create users in your app. The [Administration](/appstore/modules/administration/) module helps you implement this mechanism.
+2. SCIM Protocol: Use the SCIM protocol to let your IdP create and/or deactivate end-users. The SCIM module helps you implement the mechanism. For more information, see [SCIM](/appstore/modules/scim/).
+3. Just-in-Time (JIT) User Provisioning: In the JIT user provisioning, users will be created when they successfully log in via SSO. Both SAML and OIDC SSO support this mechanism. If you do not want JIT user provisioning, it is possible to disable it as described in the section [Runtime Configuration of End-user Onboarding](#custom-provisioning-rt) below.
 4. Proprietary user provisioning: The Mendix Low-Code platform offers the flexibility to develop a customized user provisioning mechanism.
 
 The OIDC SSO module supports two methods for configuration of JIT user provisioning:
@@ -538,20 +582,21 @@ From version 3.0.0 of the OIDC SSO module, you can configure user provisioning a
 
 By default, end-users are provisioned using the `Administration.Account` entity. To use a custom user entity, you can configure it through JIT onboarding via runtime settings or by defining constants in deploy-time configuration, as described below:
 
-#### Deploy-time Configuration of End-user Onboarding{#custom-provisioning-dep}
+#### Deploy-Time Configuration of End-User Onboarding{#custom-provisioning-dep}
 
 You can set up custom user provisioning by setting constants when you deploy your app. You do not need a local MxAdmin user to do the necessary configurations. This is an automatable configuration in the CI/CD pipeline. However, the configuration has the following limitations compared to setting up provisioning using a microflow or changing the settings at runtime:
 
-* You need to restart your app to apply changes to the constants
-* You cannot set custom mapping of IdP claims to attributes of your custom user entity
+* You need to restart your app to apply changes to the constants.
+* You cannot set custom mapping of IdP claims to attributes of your custom user entity.
 
-You can set up custom user provisioning by setting the following constants. You can set default values when you build your app but can override these in the app's environment.
+You can set up custom user provisioning by setting the following constants. You can set default values when you build your app, but you can override these in the app's environment.
 
 | Constant | Use | Notes | Example |
 | --- | --- | --- | --- |
 | `CustomUserEntity` | a custom user entity | in the form `modulename.entityname` – a specialization of `System.User` | `Administration.Account` |
 | `PrincipalEntityAttribute` | the attribute holding the unique identifier of an authenticated user | | `Name` |
 | `PrincipalIdPAttribute` | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
+| `NamedUserIdentifier` | a user identifier added to the IdP configuration and used by the metering sidecar | | `email` |
 | `AllowcreateUsers` | allows to create users in the application | *optional* | `True` |
 | `Userrole` | the role that will be assigned to newly created users | *optional* - Default Userrole is assigned only at user creation <br> - User updates do not change the default role <br> - No bulk update for existing users when the default userrole changes | `User` |
 | `UserType` | assigns user type to the created user | *optional* | `Internal` |
@@ -562,39 +607,46 @@ You can set up custom user provisioning by setting the following constants. You 
 You may have a requirement that users log in to your application only via SSO. However, when you deploy your app on the Mendix Cloud, the platform may still create an MxAdmin user with a local password. From version 2.1.0 of the UserCommons module, if the flag for the `DisableMxAdmin` constant is set to `True`, the MxAdmin user will be deactivated via the startup microflow `ASU_UserCommons_StartUp`.
 {{% /alert %}}
 
-#### Runtime Configuration of End-user Onboarding{#custom-provisioning-rt}
+#### Runtime Configuration of End-User Onboarding{#custom-provisioning-rt}
 
-By default, users are provisioned by [Default User Provisioning Configuration](#default). Optionally, you can customize user provisioning by [Modifying Default Attribute Mapping](#modify-default), [User Provisioning Using Your Custom User Entity](#custom_user_entity), or [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime).
+By default, users are provisioned by the [Default User Provisioning Configuration](#default). Optionally, you can customize user provisioning by [Modifying Default Attribute Mapping](#modify-default), [User Provisioning Using Your Custom User Entity](#custom_user_entity), or [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime).
 
 You can set up just-in-time user provisioning as follows:
 
 1. Sign in to the running app with an administrator account.
 2. Navigate to the `OIDC.OIDC_Client_Overview` page, which is set up in the app navigation.
-3. In the **IdPs for SSO and API security** tab, click **New** and access the **UserProvisioning** tab.
+3. In the **IdPs for SSO and API security** tab, click **New**,  or **Edit** the existing alias, and access the **Creating User** tab.
 
-Fields below are available in the **UserProvisioning** tab for the User Provisioning configuration.
+The following fields are available for the user provisioning configuration.
 
-* **Custom user Entity (extension of System.User)** – the Mendix entity where you will store and look up the user account. If you are using the [Administration module](https://marketplace.mendix.com/link/component/23513), this would be `Administration.Account`.
+* **Allow the module to create users?** – this enables the module to create users based on configurations of JIT user provisioning and attribute mapping. When disabled, it will still update existing users. However, for new users, it will display an exception message in the log.
+    * By default, the value is set to *Yes*.
+
+* **User Provisioning Extension** – Optionally, you can select the microflow in the **User Provisioning Extension** field to use custom logic for user provisioning. For more information, see the [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime) section below.
+
+* **User Type** – this allows you to configure end-users of your application as internal or external. It is created upon the creation of the user and updated each time the user logs in. It is a setting configured per IdP. If two IdPs are connected, one IdP may have the user type set to *Internal* while the other may have the user type set to *External*.
+    * By default, the value is set to *Internal*.
+
+* **Custom user entity (extension of System.User)** – the Mendix entity where you will store and look up the user account. If you are using the [Administration module](https://marketplace.mendix.com/link/component/23513), this would be `Administration.Account`.
+
+* **User metering named identifier** – To facilitate upcoming enhancements to the platform, you need to perform some configuration so that Mendix can correctly identify end-users. Correct identification is crucial for ensuring consistent and accurate end-user metering and deduplication of end-users across multiple applications in your landscape. For this reason, the UserCommons module features the **User Metering Named Identifier** entity in version 2.2.0 and above. If you have a multi-app internal user license or an external user license, you must persist the same value for the same end user across different apps, regardless of which modules you use. In most cases, the end user's email address is a good choice. Currently, Mendix uses the `system.user.name` to identify users, it will use the **User Metering Named Identifier** instead, unless it is not populated. For accurate user metering, you do not need to change what value is persisted in the `system.user.name`. You can continue to persist whatever value you are using there today. The `system.user.name` is often used for technical user identifiers, for example, the `oid` value when using the OIDC SSO module. For more information, see [Guidance on User Identifier](#guidance-user-identifier). Both `system.user.name` and `userCommons.NamedUserIdentifier.value` has a uniqueness constraint for the named user identifier. This means an app cannot have two users who share the same identifier value. Also, both fields are case sensitive. For more information on case sensitivity, refer to [Best Practices for Choosing and Implementing a Cross-App User Identifier](/developerportal/deploy/implementing-user-metering/#guidelines-for-unique-user-identification-deduplication).
+
+* **Attribute Mapping** – Under **Attribute Mapping**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute** where you want to store the information.
+
+    Note the following:
+
+    * You cannot use the IdP claim, which is the primary attribute identifying the user, and you cannot use the attribute you set in **The attribute where the user principal is stored**.
+    * You can map only one IdP claim to a Custom user Entity attribute.
+    * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
+    * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
+
 * **The attribute where the user principal is stored** – a unique identifier associated with an authenticated user.
-* **Allow the module to create users** – this enables the module to create users based on configurations of JIT user provisioning and attribute mapping. When disabled, it will still update existing users. However, for new users, it will display an exception message in the log.
-    * By default, the value is set to ***Yes***.
-* **User role** (optional) – the role which will be assigned to newly created users. This is optional and will be applied to all IdPs. You can select any user role as a default or keep the field empty. User Provisioning does not allow you to assign user roles dynamically. It can only set a default role. If you need additional user roles, use the Access Token Parsing microflow to assign multiple roles. For more information, see the [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) section below.
-    * By default, the value is set to ***User***.
-* **User Type** – this allows you to configure end-users of your application as internal or external. It is created upon the creation of the user and updated each time the user logs in.
-    * By default, the value is set to ***Internal***.
+* **Default user role** (optional) – the role that will be assigned to newly created users. This is optional and will be applied to all IdPs. You can select any user role as a default or keep the field empty. User provisioning does not allow you to assign user roles dynamically. It can only set a default role. If you need additional user roles, use the Custom AccessToken processing microflow to assign multiple roles. For more information, see the [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) section below.
+    * By default, the value is set to *User*.
 
-Under **Attribute Mapping**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute** where you want to store the information.
+Click **Next** to save the configuration. 
 
-Note the following:
-
-* You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
-* You can map only one IdP claim to a Custom user Entity attribute.
-* The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
-* IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
-
-Optionally, you can select the microflow in the **Custom UserProvisioning** field to use custom logic for user provisioning. For more information, see the [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime) section below.
-
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/default_provisioning.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/user-provisioning.png" alt="Creating User tab with user creation microflow, attribute mapping, and default user role settings" >}}
 
 {{% alert color="info" %}}
 If you are using module version 3.2.0 and below, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](/appstore/modules/oidc/#mxmodelreflection) and select the microflow in the **Custom UserProvisioning** field.
@@ -602,9 +654,9 @@ If you are using module version 3.2.0 and below, you will need to refresh the mo
 
 ##### Default User Provisioning Configuration{#default}
 
-If the standard configuration meets your needs and your application does not have special user management requirements, you can use the default User Provisioning.
+If the standard configuration meets your needs and your application does not have special user management requirements, you can use the default user provisioning.
 
-In default configuration, the custom user entity is set as `Administration.Account`, the principal attribute is set as `Name`, and the default attribute mapping is provided.
+In the default configuration, the custom user entity is set as `Administration.Account`, the principal attribute is set as `Name`, and the default attribute mapping is provided.
 
 |  IdP Attribute       | Configured Entity Attribute |
 | -------------------- | --------------------------- |
@@ -617,14 +669,14 @@ In default configuration, the custom user entity is set as `Administration.Accou
 You may need a different or custom attribute mapping, for example, if you are configuring OIDC SSO and SCIM together and need a common identifier. For more information, see the [User Identifiers in the OIDC and SCIM Protocols](#user-identifiers-in-the-oidc-and-scim-protocols) section below.
 
 In this case, you can modify the default attribute mapping.
-To do so, change the default **IdP Attribute** or the **Configured Entity Attribute**, by editing the mapping in the **Attribute Mapping** section within the **UserProvisioning** tab. 
+To do so, change the default **IdP Attribute** or the **Configured Entity Attribute** by editing the mapping.
 
 ##### Creating IdP Attribute Manually
 
 IdP attributes will be automatically created from the list of `claims_supported` at the well-known endpoint. The module also allows manual creation of IdP attributes through the following steps:
 
-1. In the **Attribute Mapping** of the **UserProvisioning** tab, click **New** to add a new mapping.
-2. In the **Edit Claim Map** dialog, click **Search**.
+1. In the **Creating Users** tab, click **Add Claim** to add a new mapping.
+2. In the **Add Claim Map** dialog, click **Search**.
 3. Under the **Claims for claim entity attribute**, click **New** to create a new claim.
 4. In the **IdP Attribute**, select the newly created claim from the dropdown, and click **Save**.
 
@@ -632,12 +684,12 @@ Select the required attribute to use it in your mapping.
 
 ##### User Provisioning Using Your Custom User Entity{#custom_user_entity}
 
-If you want to use your custom user entity which is a specialization of the `System.User` entity to store user information, select it in the **Custom user Entity (extension of System.User)** field by replacing the `Administration.Account` entity.
+If you want to use your custom user entity, which is a specialization of the `System.User` entity to store user information, select it in the **Custom user Entity (extension of System.User)** field by replacing the `Administration.Account` entity.
 
 To configure custom JIT user provisioning, set up the fields listed in the [Runtime Configuration of End-user Onboarding](#custom-provisioning-rt) section above and save the configuration.
 
 {{% alert color="info" %}}
-If you connect multiple IdPs to your Mendix app, you can use separate custom user entities for each IdP, each with its own attribute mapping.
+If you connect multiple IdPs to your Mendix app, you can use separate custom user entities for each IdP, each with its own attribute mapping. In addition, each IdP configuration can have its own default user role and its own JIT user provisioning configuration, rather than being applied across all IdPs.
 {{% /alert %}}
 
 ##### User Provisioning Using a Microflow at Runtime{#microflow-at-runtime}
@@ -647,11 +699,11 @@ If you want to use a custom user entity that is not a specialization of the `Sys
 * Configure a subclass of `System.User` as the Just In Time Provisioning entity.
 * Build a custom microflow (e.g., `UC_CustomProvisioning`) to create or handle your user provisioning logic based on your specific requirements.
 
-Select it in the **Custom UserProvisioning** field. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
+Select it in the **Creating Users** tab. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
 
 * **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this parameter to retrieve user provisioning configuration information.
 * **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
-* The microflow must return a **System.User** object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. However, starting from version 2.0.0 of the UserCommons module, this is no longer mandatory.
+* The microflow must return a `System.User` object to ensure proper user provisioning and updates. It will be executed after user creation or the update of the user. However, starting from version 2.0.0 of the UserCommons module, this is no longer mandatory.
 * If you have added a new microflow, you need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/).
 
 ### Configuring User Provisioning for Version 2.4.0 and Below
@@ -678,7 +730,7 @@ Do not change the `UserProvisioning_StandardOIDC` microflow. This may cause prob
 Since this feature is deprecated from version 3.0.0 of the module, you can do the custom user provisioning at runtime or deploy-time. For more information, see the [Runtime configuration of end-user on-boarding](#custom-provisioning-rt) and [Deploy-time configuration of end-user on-boarding](#custom-provisioning-dep) sections above.
 {{% /alert %}}
 
-Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `System.User` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
+Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new `System.User` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
 
 Make a single call from `CUSTOM_UserProvisioning` to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of the OIDC SSO module over time without overwriting your custom provisioning.
 
@@ -719,17 +771,17 @@ Role of user identifiers in OIDC and SCIM protocols:
 The default behavior for the OIDC SSO module is to persist the value of the `sub` claim in the system.user.name attribute. This is not forward-compatible with the introduction of SCIM. Therefore, for B2E applications connected with Entra ID for SSO, Mendix recommends the following:
 
 * For any new application, use the `oid` claim as a user identifier by modifying the user provisioning flow. This will allow you to introduce SCIM.
-* For existing applications that do not persist user-specific application data (other than system.user or administration.account), modify the user provisioning flow to use the `oid` claim instead of the `sub` claim. Delete all system.user and administration.account records to remove old user data. This will re-provision the users, allowing you to introduce SCIM.
-* For existing applications that do not need to use SCIM, you can continue to use the default `sub` claim value or any other claim such as `preferred_username`.
+* For existing applications that do not persist user-specific application data (other than system.user or administration.account), modify the user provisioning flow to use the `oid` claim instead of the `sub` claim. Delete all `system.user`, and `administration.account` records to remove old user data. This will re-provision the users, allowing you to introduce SCIM.
+* For existing applications that do not need to use SCIM, you can continue to use the default `sub` claim value or any other claim, such as `preferred_username`.
 * For existing applications where you want to introduce SCIM, you need to define a migration strategy for the identifiers.
 
 #### Configuring `oid` Claim in the OIDC SSO
 
-By default, the `WellKnownendpoint` (Automatic configuration URL) does not include the `oid` claim in its metadata. You will need to manually configure the `oid` claim in the **UserProvisioning** tab of the OIDC SSO configuration using the steps below:
+By default, the well-known endpoint (**Automatic configuration URL**) does not include the `oid` claim in its metadata. You need to manually configure the `oid` claim in the **Creating Users** tab of the OIDC SSO configuration using the steps below:
 
-1. Go to **Attribute Mapping** and click **New**.
+1. Go to **Attribute Mapping** and click **Add Claim**.
 2. Select **Search**  and click **New**.
-3. Create `oid` claim and map it to the Entity Attribute.
+3. Create an `oid` claim and map it to the Entity Attribute.
 
 ## API Authentication {#api-authentication}
 
@@ -771,7 +823,7 @@ Access tokens have a short lifespan for security reasons, so you need to ensure 
 
 The OIDC SSO module contains microflows that do this for you. These microflows all make use of the `OIDC.Token` object that contains both the Access Token (from OAuth protocol) and the ID-token (from the OIDC specs).
 
-You can find the following microflows in the **USE_ME** > **3. Make Authorized API Calls** folder of the OIDC module.
+You can find the following microflows in the **USE_ME** > **Make Authorized API Calls** folder of the OIDC module.
 
 #### DELETE
 
@@ -854,10 +906,9 @@ To parse access tokens, you need to do the following:
 1. Create a secure REST API endpoint following the instructions in [API Authentication](#api-authentication), above.
 1. Run your app and sign in as an administrator, for example `Demo_administrator`.
 1. Configure the client information in the OIDC Client configuration screen.
-1. Check **Enable Access Token Parsing** to parse access tokens when performing [Runtime Configuration of Your IdP at Your App](#runtime-idp-app).
-1. Select the appropriate microflow to parse the access token as described in the relevant section below. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
+1. Select the appropriate microflow to parse the access token in the **Custom AccessToken processing microflow** when performing [Runtime Configuration of Your IdP at Your App](#runtime-idp-app). If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
 
-{{% alert color="info" %}}Starting from version 4.0.0, the default user roles in UserProvisioning will be assigned alongside the roles parsed from the access token.{{% /alert %}}
+{{% alert color="info" %}}Starting from version 4.0.0, the default user roles in user provisioning will be assigned alongside the roles parsed from the access token.{{% /alert %}}
 
 #### Parsing SAM Access Tokens
 
@@ -867,21 +918,25 @@ This section is only relevant if you are a Mendix partner and you want to integr
 
 To parse of SAM access tokens you need to do the following when performing [Runtime Configuration of Your IdP at Your App](#runtime-idp-app):
 
-1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
+1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **Custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/enable-sam.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/sam.png" alt="Access Token Parsing configuration with SAM token processing microflow selected" >}}
 
 2. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
 3. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 4. Save the configuration.
 
-#### Parsing Microsoft Entra ID Access Tokens
+#### Parsing Tokens from Microsoft Entra ID
 
 The OIDC SSO module provides a default access token parsing microflow for Entra ID. To use it, select the appropriate access token parsing microflow:
 
 * For Entra ID, the default access token parsing microflow is `OIDC.Default_Azure_TokenProcessing_CustomATP`.
 
 To confirm that the authorization is working, get an access token from your Entra ID IdP and pass it to the API Endpoint using the authorization header.
+
+{{% alert color="info" %}}
+From version 4.3.0 of the OIDC SSO module, optionally, you can select `ID-TOKEN` as a **Custom ATP Token Type** for all custom access token parsing. Default is `ACCESS-TOKEN`.
+{{% /alert %}}
 
 #### Parsing OIDC Provider Access Tokens
 
@@ -891,9 +946,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/oidc-provider-parsing.png" >}}
-
-2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
+2. Add the scopes `openid` and the ModelGUID or Name to the **Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 
     If any one of the selected scopes of OIDC SSO matches with OIDC Provider Scopes then the user role is created. If you specify extra scopes those scopes are ignored.
 
@@ -913,7 +966,7 @@ If you are using Microsoft Entra ID, ensure you have followed the instructions f
 
 You can find a sample microflow for parsing access tokens, `OIDC.ACT_Token_CustomATPRetrieveRoles` in the OIDC module.
 
-Your custom microflow should use the access token to create a list of user roles. Your token will contain one of the following:
+Your custom microflow should use the access token or ID-token to create a list of user roles. Your token will contain one of the following:
 
 * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
 * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
@@ -937,20 +990,24 @@ For all versions of the OIDC SSO module, once you have created the microflow (fo
 If your microflow is not correctly implemented you will be told that **Authentication failed!** and will see errors in the log under the OIDC log node.
 {{% /alert %}}
 
-### Using Deep Links
+### Configuring Login Redirection
 
-If end-users who use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If successful, the end-user will be automatically redirected back to the deeplink.
+This section describes how to configure the application's `login.html` page to initiate authentication using the OIDC SSO module. By default, the Mendix `login.html` page does not automatically start the OIDC authentication flow. To enable users to sign in with an OIDC identity provider, you can configure the login page to either automatically redirect users to the identity provider or allow users to choose between local authentication and OIDC SSO.
 
-For more information on using Deep Link module (with Mendix 8 and 9), see the [Using Deep Link Module](#using-deep-link) section below.
+#### Automatic Redirection
+
+To enable authentication using the OIDC SSO module, replace the default `login.html` with the content of <a href="/attachments/appstore/platform-supported-content/modules/oidc/login-automatic.txt" target="_blank">login-automatic.txt</a> file and save it as `login.html`. Use this option when all users should be directly redirected to the OIDC Identity Provider.
+
+#### Manual Redirection
+
+For manual redirection, replace the default `login.html` with the content of <a href="/attachments/appstore/platform-supported-content/modules/oidc/login-manual.txt" target="_blank">login-manual.txt</a> file and save it as `login.html`. Use this option when users should choose between login in using local credentials and login via OIDC SSO.
 
 #### Using Page and Microflow URLs with OIDC SSO{#page-microflow-url}
 
 Page URLs and Microflow URLs are supported with OIDC SSO for Mendix version 10.6 and above. To do this, follow the steps below:
 
-1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs, and ensure to remove the Deep Link module from your app to start the app successfully.
-2. Configure **OIDC.Login_Web_Button** as the **Sign-in page** in the **Authentication** section of the app **Navigation**.
-3. The user is redirected to the OIDC login page for authentication.
-4. After successful log in, the user is directed to the desired page using page URLs and microflow URLs within the application.
+1. Redirect users to the OIDC authentication flow using either automatic or manual redirection, allowing them to authenticate through the OIDC login page.
+2. After successful login, the user is directed to the desired page using page URLs and microflow URLs within the application.
 
 If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above.
 
@@ -960,31 +1017,6 @@ For more information, see the [Migrating to Page and Microflow URLs](/appstore/m
 Starting from Studio Pro 10.9.0, you can use the primitive parameters as **Query string** parameters in microflows. Check the checkbox in the parameter table to configure a microflow parameter to use as a **Query string** parameter.
 For more information, see the [URL](/refguide/microflow/#url) section of the *Microflow Properties*.
 
-##### Steps for OIDC SSO Version v4.1.0 and above
-
-In OIDC SSO version 4.1.0 and above, you do not have to enable anonymous users.
-
-You can disable this setting by navigating to **Security > Anonymous users** and setting **Allow anonymous users** to **No**.
-
-1. To use the Page URL functionality, replace the content of `login.html` with the content of `login-with-mendixsso-automatically.html` (located in the `resources\mendixsso\templates` folder) and save it as `login.html`.
-
-2. To implement the SSO redirection, you will need to replace the code in the `<script>` tag of your login page (for example, `login.html`) with code which does one of the following, depending on whether you want automatic or manual redirection:
-
-    * For automatic redirection, you can use `window.onload` to automatically redirect users to the SSO login page. You could, for example, use the following code:
-    
-        ```javascript
-        const returnURL = encodeURIComponent(window.location.search+window.location.hash);
-        self.location = '/oauth/v2/login?cont='+returnURL;
-        ```
-
-    * For manual redirection, you can add an onclick event to a button that manually triggers the SSO login. For example:
-    
-        ```javascript
-        window.location.href='/oauth/v2/login?cont=' + encodeURIComponent(window.location.search + window.location.hash);
-        ```
-
-Once the above changes are applied, end users can directly navigate to the desired page. If not logged in, they will be redirected to the IdP login page for authentication. After successful log in, they will be directed to the desired page using page and microflow URLs.
-
 #### Using Deep Link Module{#using-deep-link}
 
 {{% alert color="warning" %}}
@@ -992,7 +1024,7 @@ The Deep Link module has been deprecated from Studio Pro 10.6 and replaced by [p
 For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section above.
 {{% /alert %}}
 
-To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 8 and 9), you can choose between the following methods of selecting an IdP:
+To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 9), you can choose between the following methods of selecting an IdP:
 
 * You need to set the `LoginLocation` constant of the Deep Link module to the `/oauth/v2/login?cont=`.
 * You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.
@@ -1019,17 +1051,17 @@ To configure the ACR value (or values) in the OIDC SSO module, follow these step
 
 1. Navigate to the screen where the OIDC configuration is managed.
 2. Select your client configuration and click **Edit**.
-3. Add the ACR values that are supported by your IdP to the OIDC Client Configuration.
+3. **Enable ACR** and click **Add Value** to add the ACR values that are supported by your IdP to the OIDC Client Configuration.
 
     For example, supported ACR Values for Okta IdP are: `urn:okta:loa:1fa:any` and `urn:okta:loa:2fa:any`.
 
-4. Save the configuration changes.
+4. Click **Next** to save the configuration changes.
 
 #### Selecting the ACR Value During Sign In
 
 When you have configured multiple ACR values for your IdP, the OIDC module shows the ACR values as additional ways to sign in on the default login page.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/login-acr-options.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/login-acr-options.png" alt="Login page showing three Okta sign-in options with different ACR values" class="no-border" >}}
 
 #### Customizing the Login Page
 
@@ -1068,7 +1100,7 @@ authentication in your Mendix App.
 
 The following diagram gives an overview of all endpoints that the OIDC SSO module exposes and consumes:
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/oidc-endpoints.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/oidc-endpoints.png" alt="Architecture diagram showing OIDC SSO module endpoints and communication flow between Mendix app and IdP" class="no-border" >}}
 
 End-users can access your app through the following endpoints when using the OIDC SSO module:
 
@@ -1128,6 +1160,8 @@ Content - {"error":"invalid_client","error_description":"client authentication f
 
 [Section 5.2 of RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749#section-5.2) indicates and clarifies all the possible error codes that may be returned.
 
+If you want to review tokens during troubleshooting, you can include the `Snippet_Token_View` snippet in a custom admin page; this allows you to see the json content.
+
 ### Custom Microflow Implementation Should Be Required to Process Access_Token Roles
 
 If you get the error message “Custom microflow implementation should be required to process Access_token roles” in the Mendix Studio Pro console logs, this indicates you have not completely implemented your custom microflow for parsing access tokens (`CustomATP_…`). See the section on [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing).
@@ -1138,7 +1172,7 @@ If you have deployed your app on premises but did not configure a return URL for
 
 To resolve this, open the Mendix Service Console and ensure that the **Port number** for the **Public application root URL**, **Runtime server port**, and **Admin server port** match.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/service-console-ports.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/service-console-ports.png" alt="Service Console Configuration dialog highlighting matching port numbers for runtime and admin server" class="no-border" >}}
 
 ### `CommunityCommons.RandomStrongPassword` Microflow Does Not Match the Expected Parameters
 
@@ -1148,13 +1182,13 @@ This error indicates that new parameters must be synced with the microflow.
 
 To resolve this issue, either open the microflow used for the OIDC SSO module or refresh it before deploying your Mendix app again.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/Community Commons error.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/Community Commons error.png" alt="Studio Pro console showing parameter mismatch errors for CommunityCommons.RandomStrongPassword" class="no-border" >}}
 
 ### Endless Redirect Loop and Runtime Error (Mendix 10.9 to 10.12.2)
 
 When using the OIDC SSO module with Mendix version 10.9 to 10.12.2, you may encounter an endless redirect loop to the login page or you can see a "Runtime operation failed" error message in the UI. This issue is related to the session cookie handling in these versions. To resolve these redirect loop and runtime error, Mendix recommends upgrading to Mendix version 10.12.3 or above.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/runtime-failed.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/runtime-failed.png" alt="Error dialog displaying runtime operation failed for security reasons message" class="no-border" >}}
 
 If a user logs in on one tab and then attempts to log in on another tab, a `401` error may initially appear. However, after the browser reloads, the error will be resolved as the session is validated and synchronized.
 

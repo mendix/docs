@@ -2,8 +2,128 @@
 title: "Native Template 14"
 url: /releasenotes/mobile/nt-14-rn/
 weight: 6
-description: "Native Template 14"
+description: "Native Template 14 release notes"
 ---
+
+## 14.1.21
+
+**Release date: Aug 7, 2026**
+
+### Improvements
+
+* We upgraded the Android SDK version to 36.
+
+## 14.1.20
+
+**Release date: July 27, 2026**
+
+### Improvements
+
+* We updated `mendix-native` to address an issue on iOS where a iOS-system dialog would pop up during app startup, requesting a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
+
+## 14.1.19
+
+**Release date: July 21, 2026**
+
+### Improvements
+
+* We properly integrated Firebase BoM logic, fixing a build failure where `com.google.firebase:firebase-analytics` could not be resolved when **Push Notifications** or **Crashlytics** were enabled.
+
+## 14.1.18
+
+**Release date: June 10, 2026**
+
+### Improvements
+
+* We removed the fallback `scijava` Maven repositories.
+
+## 14.1.17
+
+**Release date: May 04, 2026**
+
+### Improvements
+
+* We updated vulnerable `okhttp`, `jackson`, and `security-crypto` dependencies.
+
+## 14.1.16
+
+**Release date: Apr 29, 2026**
+
+### Fixes
+
+* We fixed an issue where version logs events were not recorded in Firebase for Android.
+* We fixed an issue which occurred when building apps in Xcode 26.4 and above.
+
+## 14.1.15 {#1425}
+
+**Release date: Apr 22, 2026**
+
+### Improvements
+
+* We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
+
+## 14.1.14 {#1424}
+
+**Release date: Feb 25, 2026**
+
+* We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
+
+## 14.1.13 {#1423}
+
+**Release date: February 24, 2026**
+
+### Improvements
+
+* We changed iOS Keychain item accessibility to **After First Unlock** for encrypted storage and persisted session cookies.
+  
+### Fixes
+
+* We fixed an iOS crash in encrypted storage by correcting native error handling. Now Keychain failures no longer trigger an unrecognized selector abort.
+* We added a mandatory, one-time Keychain migration to update existing stored items. For compatibility, this Native Template version still works with older Studio Pro 10.24.x, but migration support requires a version of Studio Pro 10.24.16 or newer, as well as a new iOS app build and rollout. Without migration, the original Keychain accessibility issue can still occur, although improved error handling reduces crash severity.
+
+## 14.1.12 {#1422}
+
+**Release date: January 22, 2026**
+
+### Improvements
+
+* We added the `LocationWhenInUse` permission to the iOS configuration to support `react-native-permissions`.
+
+## 14.1.11 {#1421}
+
+**Release date: January 12, 2026**
+
+### Improvements
+
+* We updated `@mendix/native to v9.2.2`, enabling session cookie persistence and restoration on iOS.
+
+## 14.1.10 {#1420}
+
+**Release date: December 18, 2025**
+
+### Improvements
+
+* We changed `NSAppTransportSecurity` in **production** versions of projects to false. For **dev** testing, we added **Info-dev.plist**.
+
+## 14.1.9 {#1419}
+
+**Release date: December 3, 2025**
+
+### Improvements
+
+* We improved the styling when edge-to-edge mode is enabled.
+
+## 14.1.8 {#1418}
+
+**Release date: November 21, 2025**
+
+### Improvements
+
+* We updated the `react-native-firebase` to v20.1.0 with BOM v33.1.1, adding support for 16KB page size alignment.
+
+### Fixes
+
+* We have migrated to `react-native-vision-camera` to fix barcode scanner issues on Android.
 
 ## 14.1.7 {#1417}
 
@@ -11,7 +131,7 @@ description: "Native Template 14"
 
 ### Improvements
 
-- We have installed react-native-edge-to-edge to ensure proper layout behavior and visual consistency on Android 15 and newer devices.
+* We have installed react-native-edge-to-edge to ensure proper layout behavior and visual consistency on Android 15 and newer devices.
 
 ## 14.1.6 {#1416}
 

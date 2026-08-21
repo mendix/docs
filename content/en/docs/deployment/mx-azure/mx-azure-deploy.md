@@ -16,8 +16,41 @@ To deploy Mendix on Azure, make sure you have the following available:
 * A Mendix platform account
 * An Azure account with the following permissions:
     * Permission to grant admin consent on the Mendix on Azure portal app registration (e.g. Global Administrator in Entra ID)
-    * Owner role assigned on the target subscription (temporary elevated Privileged Identity Management - PIM - access does not suffice)
+    * Owner role assigned on the target subscription
 * In case you want to integrate the Mendix on Azure environment into your existing corporate network, be sure to consider the [network configuration options](/developerportal/deploy/mendix-on-azure/configuration/#networking-settings) that cannot be changed after initial environment deployment
+
+## Estimating Infrastructure Costs {#estimating-costs}
+
+Deploying Mendix on Azure provisions infrastructure resources on your Azure subscription, including Azure Kubernetes Service (AKS), PostgreSQL Flexible Server, networking components, storage, and monitoring services. These resources incur charges from Microsoft based on Azure's consumption-based pricing model.
+
+To help you estimate and plan for these infrastructure costs, Mendix provides the two complementary tools described in the following sections: Interactive Cost Calculator and Azure Pricing Calculator Estimate.
+
+### Interactive Cost Calculator
+
+The [Mendix on Azure Infrastructure Cost Calculator](https://mxonazure-infra-calculator.mendix.technology) is a custom-built tool that provides:
+
+* Real-time pricing from the Azure Retail Prices API
+* T-shirt sizing helpers based on Mendix Cloud specifications (XS21 through XXXXL21-5XLDB)
+* Automatic recommendations for compute (AKS) and database (PostgreSQL) configurations
+* Multi-region and multi-currency support for accurate cost projections
+* Monthly and annual cost estimates, including all infrastructure components
+
+This calculator is ideal for quickly exploring different sizing options and understanding how your application requirements translate to Azure infrastructure costs.
+
+### Azure Pricing Calculator Estimate
+
+The [Azure Pricing Calculator Estimate](https://azure.com/e/35816032bbc246358b5c75c03b608c63) is a preconfigured estimate in Microsoft's official Azure Pricing Calculator that:
+
+* Provides a baseline infrastructure configuration matching the Mendix on Azure deployment architecture
+* Can be customized and shared with stakeholders for review and approval
+* Serves as a cost verification tool for procurement and budgeting
+* Includes detailed breakdowns by resource type and region
+
+{{% alert color="info" %}}
+Mendix recommends using both tools during your planning phase: start with the interactive calculator to explore sizing options based on your application requirements, then verify your estimates against the official Azure Pricing Calculator for stakeholder communication and procurement approval.
+{{% /alert %}}
+
+For more information about the specific Azure resources deployed by Mendix on Azure, refer to [Architecture](/developerportal/deploy/mendix-on-azure/architecture/).
 
 ## Deploying the Mendix on Azure offering from Azure Marketplace
 
@@ -44,8 +77,11 @@ To deploy the solution, perform the following steps:
 
     {{< figure src="/attachments/deployment/mx-azure/available-clusters.png" class="no-border" >}}
 
-
 7. Identify the entry belonging to the Managed Application you deployed in previous steps. In the **Actions** column, click the dropdown menu icon, and then select **Initialize**. 
+
+    {{% alert color="info" %}}
+    For information about how cluster visibility and editing permissions work based on user roles and Azure RBAC, see [Cluster Visibility and Permissions](/developerportal/deploy/mendix-on-azure/cluster-visibility/).
+    {{% /alert %}}
 
     The preflight check launches to verify the conditions are in place to successfully initialize a Mendix on Azure cluster. 
 

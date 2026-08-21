@@ -13,13 +13,17 @@ When running the Mendix Operator in Standard mode, you must install it separatel
 It is essential to ensure that each namespace is exclusively managed by a single Operator. The deployment of two Operators, particularly with distinct versions, to manage the same namespace, may lead to conflicts, resulting in the cancellation and rollback of each operator's modifications.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+For Mendix version 11.5.0 and above, you will need to install Mendix Operator version 2.24 or above.
+{{% /alert %}}
+
 ## Downloading the Configuration Tool {#download-configuration-tool}
 
 Before you can use the Mendix Operator in your namespace you need to install it and configure the services your app will use. Mendix provides you with a **Configuration Tool** which guides you through the process.
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by opening the [Global Navigation Menu](/global-navigation/), and then clicking **Deployment** > **Mendix on Kubernetes**.
+1. Go to the Cluster Manager page by opening the [Global Navigation Menu](/portal/global-navigation/), and then clicking **Deployment** > **Mendix on Kubernetes**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -302,10 +306,6 @@ These custom CAs will be trusted by:
 
 {{% alert color="info" %}}
 To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for MinIO. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 {{% alert color="info" %}}

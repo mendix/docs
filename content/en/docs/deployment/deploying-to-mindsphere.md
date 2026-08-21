@@ -15,7 +15,7 @@ Insights Hub is the cloud-based, open IoT operating system from Siemens that let
 This documentation is meant for Mendix developers who want to deploy, register and run a Mendix app on Insights Hub.
 
 {{% alert color="warning" %}}
-There are some limitations to what you can do in your Mendix app if it is deployed to Insights Hub. See the [Limitations](/partners/siemens/mindsphere-development-considerations/#limitations) section of *Insights Hub Development Considerations* for more information.
+There are some limitations to what you can do in your Mendix app if it is deployed to Insights Hub. See the [Limitations](/appstore/industry/mindsphere/mindsphere-development-considerations/#limitations) section of *Insights Hub Development Considerations* for more information.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -25,7 +25,7 @@ You can easily copy code examples shown within grey blocks into the clipboard. H
 
 {{% /alert %}}
 
-To help you with your first Insights Hub apps, there is also an example app which contains modules which call the Insights Hub APIs. See [How to Use the Siemens Insights Hub Monitor Example App](/partners/siemens/mindsphere-example-app/) for more information.
+To help you with your first Insights Hub apps, there is also an example app which contains modules which call the Insights Hub APIs. See [How to Use the Siemens Insights Hub Monitor Example App](/appstore/industry/mindsphere/mindsphere-example-app/) for more information.
 
 ## Prerequisites{#prerequisites}
 
@@ -76,15 +76,15 @@ If you have an existing app which was not based on the Insights Hub app template
 
 * **Siemens Insights Hub SSO** from the Mendix Marketplace here: [Siemens Insights Hub SSO](https://marketplace.mendix.com/link/component/108805/)
 
-    This module enables users who are logged in to Insights Hub to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details/#mssso) section of *Insights Hub Module Details*.
+    This module enables users who are logged in to Insights Hub to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/appstore/industry/mindsphere/mindsphere-module-details/#mssso) section of *Insights Hub Module Details*.
 
 * **Siemens Insights Hub OS Bar Connector** from the Mendix Marketplace here: [Siemens Insights Hub OS Bar Connector](https://marketplace.mendix.com/link/component/108804/)
 
-    This integrates the mandatory Insights Hub OS Bar with your app. For more information, see the [Siemens Insights Hub OS Bar](/partners/siemens/mindsphere-module-details/#msosbar) section of *Insights Hub Module Details*.
+    This integrates the mandatory Insights Hub OS Bar with your app. For more information, see the [Siemens Insights Hub OS Bar](/appstore/industry/mindsphere/mindsphere-module-details/#msosbar) section of *Insights Hub Module Details*.
 
 * **Siemens Insights Hub Web Content** from the Mendix Marketplace here: [Siemens Insights Hub Web Content](https://marketplace.mendix.com/link/component/108803/)
 
-    This applies Insights Hub styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [Siemens Insights Hub Web Content](/partners/siemens/mindsphere-module-details/#msthemepack) section of *Insights Hub Module Details*.
+    This applies Insights Hub styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [Siemens Insights Hub Web Content](/appstore/industry/mindsphere/mindsphere-module-details/#msthemepack) section of *Insights Hub Module Details*.
 
 ## Configuring the Modules{#configure-modules}
 
@@ -100,7 +100,7 @@ The following items in the SiemensInsightsHubSingleSignOn module need to be conf
 
 Enter the name of your app as registered in the Insights Hub Mendix Portal as the value of *CockpitApplicationName*.
 
-These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/partners/siemens/mindsphere-development-considerations/#appname) section of *Insights Hub Development Considerations*.
+These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/appstore/industry/mindsphere/mindsphere-development-considerations/#appname) section of *Insights Hub Development Considerations*.
 
 #### GatewayURL
 
@@ -399,7 +399,7 @@ To set up the appropriate scopes in Insights Hub, do the following:
 If you are using the app template, you should create two scopes, *user* and *admin*.
 {{% /alert %}}
 
-For an explanation of the relationship between Mendix roles and Insights Hub roles, see section [Roles and Scopes](/partners/siemens/mindsphere-module-details/#rolesscopes) in *Insights Hub Module Details*.
+For an explanation of the relationship between Mendix roles and Insights Hub roles, see section [Roles and Scopes](/appstore/industry/mindsphere/mindsphere-module-details/#rolesscopes) in *Insights Hub Module Details*.
 
 {{< figure src="/attachments/deployment/deploying-to-mindsphere/image8.png" class="no-border" >}}
 
@@ -430,7 +430,7 @@ Your app is now set up and users can run it from within the Insights Hub Develop
 
 ## Development Considerations
 
-See [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/) for additional help on such things as:
+See [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/) for additional help on such things as:
 
 * local testing
 * multi-tenancy

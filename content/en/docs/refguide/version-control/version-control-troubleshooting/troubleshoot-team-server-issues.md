@@ -218,7 +218,7 @@ If you are encountering issues when using Git CLI, this is typically an issue yo
 
 ##### Prerequisites
 
-You need to setup a [Personal Access Token (PAT)](/mendix-profile/user-settings/#pat) to work with Git on the command line. The following permissions should be configured while creating the PAT:
+You need to setup a [Personal Access Token (PAT)](/portal/user-settings/#pat) to work with Git on the command line. The following permissions should be configured while creating the PAT:
 
 ```
 Model Repository
@@ -325,4 +325,4 @@ Gather all files from the log and provide them to Mendix Support. Please mention
 
 ## Read More
 
-* [Version Control FAQ](/refguide/version-control-faq/)
+* [Version Control FAQ](/refguide/version-control/)

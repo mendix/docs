@@ -10,7 +10,270 @@ These release notes cover changes to deployment to [Mendix on Kubernetes](/devel
 
 For information on the current status of deployment to Mendix on Kubernetes and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2026
+
+### August 14, 2026
+
+#### Mendix Operator v2.28.0 {#2.28.0}
+
+* We have updated Operator images from ubi9 to [Red Hat Hardened Images](https://www.redhat.com/en/products/hardened-images), achieving near-zero vulnerabilities. Mendix apps built with this version of the Operator will keep using ubi9 as the base image by default - it is possible to switch Mendix apps to Hardened Images in the Operator Configuration.
+* We have updated the Helm chart UI to include advanced Operator Configuration options.
+* We have updated some default options in the Helm chart to increase security.
+* The Helm chart now uses proxy and custom TLS configuration when registering Storage Plans in the Portal.
+* We have fixed an issue with enabling the Kubernetes Gateway API in existing clusters after an upgrade.
+* We have fixed an issue with configuring the Kubernetes Gateway API in non-interactive mode.
+* We have fixed an issue with enabling TLS in the the Kubernetes Gateway API. (Ticket 281256)
+* We have fixed an issue with applying nodeSelector configuration. (Ticket 283820)
+* We have fixed an issue where passwordless IAM or Managed Identity authentication would not update tokens while an app is starting, and caused database connection errors in apps that took 15+ minutes to start. (Ticket 282784)
+* We have fixed issue with uploading air-gapped images from the mxpc-cli Configuration Tool. (Ticket 283942)
+* We have improved error handling where an Azure and Blob Storage provisioners would fail with a 409 error when creating a Managed Identity. (Ticket 283808)
+* We have updated the PodDisruptionBudget to allow eviction of unhealthy pods by default. This will prevent crash-looping pods from blocking node maintenance.
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+* We have updated components to use Go 1.26 and the latest dependency versions in order to improve security score ratings for container images.
+
+### July 23, 2026
+
+#### Portal Improvements
+
+* We refreshed the portal and environment views to match the Public Cloud design.
+* We introduced direct links to environment details for streamlined operations desk navigation.
+* We removed outdated navigation options.
+* We enhanced deployment package summaries to give clearer visibility into upcoming release changes.
+* We resolved a security vulnerability in cluster invitation emails.
+* We fixed several dark mode, tooltip, and layout display issues.
+
+### June 11, 2026
+
+#### License Manager CLI v0.10.11 {#0.10.11}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+
+#### Mendix Operator v2.27.1 {#2.27.1}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+
+### June 4, 2026
+
+#### Portal Improvements
+
+* We have added a check to prevent enabling **Compatibility Metrics Mode** in **Runtime Metrics Configuration** for Operator version 2.27.0 and above.
+
+### June 2, 2026
+
+#### Mendix Operator v2.27.0 {#2.27.0}
+
+* We have added support for the Kubernetes Gateway API.
+* We have added an option to load client certificates from Kubernetes secrets created on the cluster side.
+* We have added an option to specify default `nodeSelectors` for pods created and managed by the Operator.
+* We have added an option to specify default labels for pods created and managed by the Operator.
+* We have addressed an issue where enabling OpenTelemetry auto-instrumentation would show a **processing** spinner on the Runtime status.
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+* We have updated the list of supported platforms to include Kubernetes 1.36.
+
+#### Deprecations
+
+* We have removed support for the **compatibility** Prometheus metrics mode. Any environments still using **compatibility** metrics should be switched into **native** metrics mode.
+
+### May 21, 2026
+
+#### License Manager CLI v0.10.10 {#0.10.10}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+#### STACKIT support
+
+* We now officially support deploying Mendix apps to [STACKIT Kubernetes Engine (SKE)](https://stackit.com/en/products/runtime/stackit-kubernetes-engine), with support for [STACKIT PostgreSQL Flex](https://stackit.com/en/products/database/stackit-postgresql-flex), [STACKIT Object Storage](https://docs.stackit.cloud/products/storage/object-storage/) (S3-compatible), and the [STACKIT Container Registry](https://docs.stackit.cloud/products/developer-platform/container-registry/).
+* Customers provision the SKE cluster, PostgreSQL Flex databases, and Object Storage buckets themselves before deploying Mendix. For configuration details, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) and [Storage Plans](/developerportal/deploy/private-cloud-storage-plans/).
+
+##### Known STACKIT Limitations
+
+* STACKIT PostgreSQL Flex does not expose the `CREATEROLE` privilege, so the on-demand PostgreSQL provisioner cannot create users automatically. Use the [Dedicated JDBC plan](/developerportal/deploy/private-cloud-storage-plans/#database-jdbc) and create a dedicated database user per environment using the STACKIT CLI or API.
+* STACKIT Object Storage does not implement `CreateUser`, `CreatePolicy`, or `CreateBucket`, so buckets must be created up front. You can either share one bucket across environments, or pre-create a bucket per environment.
+
+### May 7, 2026
+
+#### Portal Improvements
+
+* We have fixed an issue where an error pop-up would appear when opening Grafana for Logs and Metrics. (Ticket 277132)
+
+### May 1, 2026
+
+#### Helm Chart UI
+
+* We have released a new mx-ops-cli tool for configuring namespaces and performing base installations by using Helm charts. For more information, see [Installing Components through the Helm Chart UI](/developerportal/deploy/helm-charts/).
+
+### April 9, 2026
+
+#### Mendix Operator v2.26.1 {#2.26.1}
+
+* We have improved the AWS S3 region detection for bucket endpoints using the [Legacy global endpoint](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html#VirtualHostingBackwardsCompatibility) format.
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+* We have updated the list of supported platforms to include Kubernetes 1.35 and OpenShift 4.21.
+
+#### License Manager CLI v0.10.9 {#0.10.9}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+### April 2, 2026
+
+#### Portal Improvements
+
+* We have introduced configurable heap memory to align with Public Cloud optimization logic as a default for Operator 2.26.0 and newer.
+* We have aligned resource plans with Public Cloud standards and continue to support legacy plans.
+* Added a warning clarifying that cross-cluster restores are not supported (this limitation already existed) and environments are only visible within the same cluster.
+* We have fixed an issue where replicas with unknown status showed as licensed.
+* We have fixed an issue where scheduled events were missing after pipeline deployment and API updates. (Ticket 270822)
+* We enhanced namespace and cluster invite emails to clearly identify the Mendix on Kubernetes portal as the sender, and updated the email notification messages accordingly.
+
+### February 25, 2026
+
+#### Mendix Operator v2.26.0 {#2.26.0}
+
+* We have adjusted default Java memory allocation to use more of a container's available memory. This aligns memory usage rules with Mendix Public Cloud and reduces unused memory, especially in containers with more than 1GB memory.
+    For more information, see [JVM memory tuning](/developerportal/deploy/private-cloud-jvm-memory-tuning/).
+* We have updated the Agent to load cluster credentials from a mounted Kubernetes secret instead of using environment variables.
+* We have addressed a *license decode error* error message that appeared in the Operator logs when using a fallback license. (Ticket 271720)
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+#### License Manager CLI v0.10.8 {#0.10.8}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+### February 19, 2026
+
+#### Portal Improvements
+
+* Integrated business events in Portunus now synchronize technical contacts with Apps and the Private Cloud Portal.
+* We have added support for customers to easily rotate cluster credentials (that is, replace the Agent secret with a new one).
+* We have added an option to enable leaderless mode. This option is supported for Studio Pro 10.24 and newer.
+* We have fixed an issue where creating and deleting custom core resource plans was not logged in Portunus and audit logs.
+* We have improved the user experience for core resources configuration.
+* We have added the option to automatically delete activity log records older than one year.
+
+### Deploy API
+
+* We have added the capability to retrieve all environments within a namespace.
+
+### February 5, 2026
+
+#### Portal Improvements
+
+* We have enabled the license fallback mechanism for Operator versions 2.24.0 and newer. This prevents environments from switching to trial mode when the license server is unreachable.
+* We have reenabled single-replica support for Mendix deployments on Azure, allowing the creation or scaling to one replica, consistent with non-Azure environments.
+
+### January 29, 2026
+
+#### Portal Improvements
+
+* We have fixed an issue where an incorrect time was displayed while creating a deployment package in the Mendix on Kubernetes portal.
+
+### January 26, 2026
+
+#### License Manager CLI v0.10.7 {#0.10.7}
+
+* To enhance security, we now automatically disable API credential automounting for PCLM deployments, significantly limiting unnecessary access to the Kubernetes API.
+
+### January 23, 2026
+
+#### Hotfix Release
+
+* We have resolved an issue that was preventing applications from deploying through Studio Pro and the **Autodeploy** feature of the Mendix on Kubernetes portal.
+
+### January 22, 2026
+
+#### Portal Improvements
+
+* We have fixed an issue where the option to set Studio Pro as the default was missing when creating a new project app. (Tickets 268532, 269338)
+* We have fixed an issue that prevented selecting environments in a processing state on the **Backups** page for Mendix on Azure environments.
+* We have fixed an issue where the full list of managed namespaces was not being retrieved when using the Global Operator through APIs (Ticket 267150)
+* We have improved the tooltip message for the namespace selection dropdown during environment creation. This change is intended to reduce confusion and explain the purpose of this selection.
+* Editing reduced downtime options on the **Cluster Overview** page is now recorded in the activity logs.
+
+#### Mendix Operator v2.25.1 {#2.25.1}
+
+* We have implemented an enhancement to improve how our system parses S3 endpoint URLs by addressing configurations where the S3 endpoint is provided as a host name without a preceding schema (for example, `my-s3-endpoint.com` instead of `https://my-s3-endpoint.com`).
+
+### January 19, 2026
+
+#### Mendix Operator v2.25.0 {#2.25.0}
+
+* We have extended the Reduced Downtime deployment feature to support apps running 1 replica.
+    This feature is enabled by default, and works by running two replicas of the app during updates. For more information, see [Reduced Downtime Deployment](/developerportal/deploy/private-cloud-reduced-downtime/).
+* We have added autodetection for AWS S3 bucket regions, which is required by the AWS SDK update in updated LTS Studio Pro versions.
+    Version 2 of the AWS S3 library removed built-in autodetection of an S3 bucket's region. This is now handled by the Mendix Operator. In some situations, it might be necessary to manually specify the S3 bucket region by setting the [com.mendix.storage.s3.Region](/refguide/custom-settings/#commendixstorages3Region) Custom Runtime Setting.
+* We have updated Azure authentication code to improve compatibility with Azure Government and Azure in China.
+* We have extended the [S3 IRSA Mode](/developerportal/deploy/private-cloud-storage-plans/#s3-irsa-mode) provisioner options, allowing to specify a path prefix and permissions boundary for IAM roles. Documentation on using this feature is available upon request.
+
+### January 8, 2026
+
+#### Portal Improvements
+
+* We have resolved some issues causing inconsistent commit times on the Team Server.
+* We have fixed the environment start issue for the Start steps in the Private Cloud pipeline.
+* We have fixed an issue with the invitation emails for clusters and namespaces.
+
+#### Known Issues
+
+* We are currently working to resolve issues affecting the conversion of existing namespaces and the addition of multiple managed namespaces under the Global Operator installations.
+
 ## 2025
+
+### December 15, 2025
+
+#### Mendix Operator v2.24.2 {#2.24.2}
+
+* We have fixed an issue when it would be impossible to set the `maxUnavailable` attribute for Pod Disruption Budgets.
+* We have fixed an issue where using regular Kubernetes secrets in place of Kubernetes CSI Secrets Store would only work if a CSI Secrets Store driver is installed in the cluster.
+
+    With this release, installing the CSI Secrets Store driver is not necessary to use a Kubernets secret (Ticket 265568).
+
+* For Mendix on Azure, we have added an option to remove custom TLS trust certificates.
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+#### License Manager CLI v0.10.6 {#0.10.6}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+### November 27, 2025
+
+#### Portal Improvements
+
+* We have enhanced the **Apps** section of the **Namespace Overview** page to display the technical contact's name and email address next to each application. This makes it easier to find the technical contact for inquiries or support.
+* We have added deep links for the application URL to the **Environment Overview** page, allowing for quicker, direct navigation to the application page. 
+* We have added **Enhanced Deployment Strategy UI** to the deployment options, featuring new **Min Available** and **Max Unavailable** fields for more precise control over your application's availability.
+* You can now directly configure HTTP headers by using a new key/value UI in the **Network** tab to manage headers like Content-Security-Policy within Mendix Runtime and reduce ingress reliance. This feature supports Mendix 10.24.1 and newer.
+
+#### Known Issues
+
+* Currently, if you adjust your Pod Disruption Budget settings, those modifications will not take effect until our next Operator release (2.24.2).
+
+### November 7, 2025
+
+#### Portal Hotfix
+
+* We have fixed an issue where, in Operator versions older than 2.24.0, runtime licenses were being converted to trial licenses. This hotfix resolves the problem and introduces a new field, **Enable Fallback License**, in the **Environment Details** section. When enabled, this option allows Connected environments using subscription secrets to use a fallback license if communication with the licensing server fails, preventing the system from switching to Trial mode. This option should only be enabled if your Operator version is 2.24.0 and above.
+
+### November 6, 2025
+
+#### Mendix Operator v2.24.1 {#2.24.1}
+
+* We have updated components to use Go 1.25 and the latest dependency versions in order to improve security score ratings for container images.
+
+#### License Manage CLI v0.10.5
+
+* We have updated this CLI to use Go 1.25 and the latest dependency versions in order to improve security score ratings for container images.
+
+#### Portal Improvements
+
+* Reduced Downtime Feature is Now Production Ready. This enhancement ensures your Mendix applications can achieve uninterrupted availability during updates. It will be automatically activated when:
+
+    * Your Mendix Operator version is 2.24 or higher.
+    * Your application is configured with 2 or more replicas.
+    
+    Under these conditions, you can expect no downtime during the update process, as long as the application is using the same MDA and base OS image.
+
+* Exporting **Scheduled events**, **Application details**, **PCLM Statistics** is now possible in CSV format, replacing the XLSX format.
+* We have incorporated the use of fallback license for Connected environments using Subscription Secrets. If an environment fails to communicate with the licensing server, it will use the fallback license instead of switching into Trial mode. This option is enabled by default.
 
 ### October 21, 2025
 
@@ -22,6 +285,10 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * We have added a fallback license for Connected environments using Subscription Secrets. If an environment fails to communicate with the licensing server, it will use the fallback license instead of switching into Trial mode. This feature will become available for use with a future release of the Mendix on Kubernetes portal.
 * We have updated documentation to indicate that Kubernetes 1.34 is supported by the Mendix Operator.
 * We have made a few adjustments to support changes in upcoming Studio Pro version numbers.
+
+#### Known Issues
+
+* Currently, if you adjust your Pod Disruption Budget settings, those modifications will not take effect until our next Operator release (2.24.2).
 
 ### September 25, 2025
 
@@ -47,6 +314,10 @@ For information on the current status of deployment to Mendix on Kubernetes and 
   Because Microsoft Azure previously changed the error text, older Mendix Operator versions might not correct this error.
 
 ### September 4, 2025
+
+#### License Manage CLI v0.10.4
+
+* We have updated this CLI to use Go 1.24 and the latest dependency versions in order to improve security score ratings for container images.
 
 #### Portal Improvements
 
@@ -179,7 +450,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 #### Documentation Improvements
 
-* We have published detailed documentation about network ingress settings. For more information, see [Network Ingress Settings in Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
+* We have published detailed documentation about network ingress settings. For more information, see [Network Ingress Settings in Mendix on Kubernetes](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
 
 ### April 03, 2025
 

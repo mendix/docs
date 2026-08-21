@@ -136,7 +136,7 @@ It is possible to automatically retry a task when it fails. The following option
 1. Retry with a fixed delay – specify the maximum number of attempts and the wait time between each attempt.
 2. Retry with an exponentially increasing delay – specify the maximum number of attempts and the wait time before the first retry. The wait time will double after each failed retry up to a maximum. You can specify this maximum; if you do not specify, a maximum the default is 1 day.
 
-Each attempt will produce its own `System.ProcessedQueueTask` entry. These entries will all have the same sequence number because they refer to the same task.
+Each attempt will be scheduled as its own task and produce its own `System.ProcessedQueueTask` entry. These entries will all have the same sequence number because they refer to the same task.
 
 The retry mechanism can be activated through the API, for instance:
 
@@ -235,7 +235,7 @@ When turning on the automatic cleanup after having used tasks for a long time, t
 
 ### Logging
 
-A [Log Node](/refguide/logging/#mendix-nodes) named `Queue` exists specifically for all actions related to Task Queues.
+A [Log Node](/refguide/logging/#mendix-nodes) named `TaskQueue` exists specifically for all actions related to Task Queues.
 
 ## Other
 

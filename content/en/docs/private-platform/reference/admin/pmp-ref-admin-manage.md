@@ -61,9 +61,13 @@ Each app is owned by a specific user, who can change settings such as the applic
 
 In addition to specifying the owner, you can also assign ownership of the app to a specific group. If an app is owned by a group, the owner must be a user who belongs to that group.
 
+{{% alert color="info" %}}
+Ownership of Private Mendix Platform apps created through Studio Pro is automatically given to the `Mendix` root user group. If required, you can transfer the ownership to another group after creation.
+{{% /alert %}}
+
 ##### Sharing the App with Selected User Groups {#share}
 
-You can share your app with any user groups by selecting the **More Actions** > **Share with Groups** option from the **App Management** page.
+You can share your app with any user groups by selecting the **More Actions** > **Share with Groups** option from the **App Management** page. Sharing makes the app visible to groups that otherwise may not be able to see or access your app. Members of the group with which you have shared the app do not have automatic access. Instead, they can request access from the app's owner.
 
 ##### Archiving the App {#archive}
 
@@ -92,7 +96,7 @@ The list of apps on the page is not refreshed automatically. To refresh it, clic
 
 ### Marketplace
 
-In the **Marketplace** section, administrators can manage various settings related to the content available on the Private Platform Marketplace. The Private Platform Marketplace is a local version of the [Mendix Marketplace](/appstore/overview/), enclosed entirely within the Private Platform. Developers in your organization can also create their own modules, connectors, and sample apps, and share them on the Private Platform Marketplace to make them available to other users.
+In the **Marketplace** section, administrators can manage various settings related to the content available on the Private Platform Marketplace. The Private Platform Marketplace is a local version of [Mendix Marketplace](/appstore/), enclosed entirely within the Private Platform. Developers in your organization can also create their own modules, connectors, and sample apps, and share them on the Private Platform Marketplace to make them available to other users.
 
 As the administrator, you can perform the following actions:
 
@@ -233,6 +237,8 @@ In the **Actions** tab, you can also log out all users currently logged in to yo
 
 In the **Group Management** tab, you can create and edit user groups. These groups typically reflect your organization's structure. You can also use the **Automation Settings** option to automatically assign users to groups based on their profile attributes.
 
+For more information about group management in Private Mendix Platform version 2.0 and newer, see [Dynamic Role Management in Private Mendix Platform](/private-mendix-platform/dynamic-role-management/).
+
 ### Platform
 
 In the **Deployment** section, administrators can view and manage statistics, activity logs, webhooks, and licenses.
@@ -292,3 +298,7 @@ When valid, licenses can have the following statuses:
 * Active (shown in green)
 * About to expire (shown in yellow)
 * Expired (shown in red)
+
+#### Maia
+
+On this page, you can connect Mendix AI Assistance (Maia) to your own Large Language Model (LLM). It enables Maia to use your custom LLM for processing and generating responses. For more information, see [Maia in Private Mendix Platform](/private-mendix-platform/maia/).

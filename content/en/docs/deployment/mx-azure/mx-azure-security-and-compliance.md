@@ -23,7 +23,6 @@ The automatic SOC2 assessment currently has identified the following compliance 
 | AKS - cluster VNET: [All Internet traffic should be routed via your deployed Azure Firewall](https://www.azadvertizer.net/azpolicyadvertizer/fc5e4038-4584-4632-8c85-c0448d374b2c.html) | This is not automated, but customers can deploy their own Firewall if required. |
 | Storage Account: [Storage accounts should use customer-managed key for encryption](https://www.azadvertizer.net/azpolicyadvertizer/6fac406b-40ca-413b-bf8e-0bf964659c25.html) | The cluster is deployed and managed by Mendix, so this is not needed. |
 
-
 ### Access to Customer Environments by Mendix
 
 Mendix accesses customer environments securely by leveraging native Azure capabilities and adhering to Microsoft's best practices:

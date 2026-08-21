@@ -1,0 +1,24 @@
+# Mendix custom rule: Use upper/lower instead of top/bottom
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md (lower-left/lower-right)
+extends: substitution
+message: "Use '%s' instead of '%s'"
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/terminology/#upperlowercase
+level: warning
+ignorecase: true
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
+swap:
+  'top left': 'upper left'
+  'top-left': 'upper-left'
+  'top right': 'upper right'
+  'top-right': 'upper-right'
+  'bottom left': 'lower left'
+  'bottom-left': 'lower-left'
+  'bottom right': 'lower right'
+  'bottom-right': 'lower-right'

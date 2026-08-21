@@ -6,7 +6,122 @@ description: "These release notes showcase each release of the iOS and Android M
 #ki: "Augmented Reality (AR) Feature" - MOO-1312
 ---
 
-Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
+Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to get the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
+
+## Android 11.12.0 / iOS 11.12.0
+
+**Release date: July 6, 2026**
+
+### Improvements 
+
+* We improved the build time on iOS for Make it Native by using prebuilt `react-native` binaries.
+* On Android, `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO` were explicitly removed following [Google Play's Photo and Video Permissions policy](https://support.google.com/googleplay/android-developer/answer/14115180).
+
+## Android 11.11.0 / iOS 11.11.0
+
+**Release date: June 3, 2026**
+
+### Improvements 
+
+* We upgraded the core stack to React Native 0.84.1 and aligned related React dependencies.
+  
+## Android 11.10.0 / iOS 11.10.0
+
+**Release date: May 20, 2026**
+
+### Fixes 
+
+* We upgraded the core stack to React Native 0.83.4 and aligned related React dependencies.
+* We fixed a CocoaPods installation issue that was caused by xcodeproj object version 70.
+* We fixed an issue where version log events were not recorded in Firebase for Android.
+* We fixed an issue which occurred when building apps in Xcode 26.4 and above.
+
+## Android 11.9.0 / iOS 11.9.0
+
+**Release date: April 10, 2026**
+
+### Fixes 
+
+* We fixed an issue where debug builds crashed with a `SIGABRT` error on Xcode 26 when passing data through F14 hash maps under the new architecture.
+
+## Android 11.8.0 / iOS 11.8.0
+
+**Release date: March 12, 2026**
+
+### Improvements 
+
+* We added support for Native Templates using the `flash-list` dependency.
+
+## Android 11.7.0 / iOS 11.7.0
+
+**Release date: February 10, 2026**
+
+### Improvements 
+
+* This new version is compatible with Mendix 11.7.0
+
+## Android 11.6.6
+
+**Release date: July 6, 2026**
+
+### Fixes
+
+* We addressed a Google Play Policy change related to [restricted permissions](https://support.google.com/googleplay/android-developer/answer/16935362?visit_id=639189272133535581-612682188&rd=1).
+
+## Android 11.6.4 / iOS 11.6.4
+
+**Release date: February 2, 2026**
+
+### Fixes
+
+* We fixed the OPSQLite pod to skip bundled XCFramework slices.
+* We fixed an issue with checking and requesting `read-media` permissions on Android devices using SDK 33+.
+* We addressed npm audit issues.
+* We fixed session cookie persistence on iOS.
+* We migrated to Node version 24.
+* We fixed GCC preprocessor definitions.
+* We fixed a file-not-found exception in Native FS.
+* We updated `@react-native-community/cli` and related packages to version 18.0.1.
+* We upgraded `react-native` to version 0.78.2.
+* We updated `react-native-gesture-handler` to version 2.25.0.
+* We updated `react-native-safe-area-context` to version 5.4.1.
+* We updated `react-native-screens` to version 4.9.1.
+
+### Improvements
+
+* We enhanced the edge-to-edge viewing experience on Android.
+* We upgraded to Swift version 5 for iOS builds.
+* We updated OPSQLite to a new minor version, which includes 16 KB page alignment for vector search lib 7 and an updated Gradle configuration. We also updated the build YAML and patch file for this OPSQLite version.
+* We removed the old Mendix native configuration.
+
+## Android 11.5.0 / iOS 11.5.0
+
+**Release date: November 25, 2025**
+
+### Fixes
+
+* We updated the native binary version to 31 to match Studio Pro 11.5.
+* We removed unused configurations from the Xcode project settings.
+* We fixed an issue where TextInput-based fields like the text box and text area would not receive focus on Android devices via touch.
+
+### Improvements
+
+* We updated the pod install script in `package.json` to use bundle.
+* We added support for the new React Native architecture.
+* We changed the Mendix native dependency source from source code to a tarball.
+
+## Android 11.4.1 / iOS 11.4.1
+
+**Release date: November 11, 2025**
+
+* We updated the version of @mendix/native to 10.3.1 to update op-sqlite version to 15.0.7.
+
+## Android 11.4.0 / iOS 11.4.0
+
+**Release date: November 5, 2025**
+
+* We updated the version of @mendix/native to 10.3.0 to fix the `components.json` errors.
+* We updated Firebase packages to newer versions.
 
 ## Android 11.3.1 / iOS 11.3.1
 
@@ -24,13 +139,64 @@ Depending on the Mendix version your app is developed in and the device you want
 
 **Release date: July 31, 2025**
 
-* Renamed the app to "Make It Native" and aligned its versioning with Studio Pro, so each Studio Pro version (for example, 11.1.x) now uses the matching Make It Native version (for example, 11.1.x).
+* We renamed the app to "Make It Native" and aligned its versioning with Studio Pro, so each Studio Pro version (for example, 11.1.x) now uses the matching Make It Native version (for example, 11.1.x).
+
+## Android 10.24.9 / iOS 10.24.9
+
+**Release date: March 11, 2026**
+
+* We rotated the Google Maps API keys.
+
+## Android 10.24.8 / iOS 10.24.8
+
+**Release date: February 23, 2026**
+
+* We fixed an issue with the `@react-native-community/geolocation` package.
+
+## Android 10.24.7 / iOS 10.24.7
+
+**Release date: January 30, 2026**
+
+* We fixed an issue with checking and requesting `read-media` permissions on Android devices using SDK 33+.
+
+## Android 10.24.6 / iOS 10.24.6
+
+**Release date: January 13, 2026**
+
+### Fixes
+
+* We fixed the iOS session cookie persistence issue.
+* We fixed GCC preprocessor definitions.
+* We updated `react-native-vision-camera` to v4.7.3, which includes an upstream fix for an Android crash occurring during camera module initialization.
+* We removed augmented reality support.
+
+### Improvements
+
+* We improved the UI for users who use three-button navigation when edge-to-edge mode is enabled.
+
+## Android 10.24.4 / iOS 10.24.4
+
+**Release date: November 25, 2025**
+
+* We migrated to `react-native-vision-camera` to fix barcode scanner issues on Android.
+
+## Android 10.24.3
+
+**Release date: November 14, 2025**
+
+* We fixed an issue where text inputs would not receive focus on Android when running apps through Make it Native 10 on physical devices.
+
+## Android 10.24.1
+
+**Release date: October 29, 2025**
+
+* We added support for 16KB page size alignment.
 
 ## Android 10.24.0 / iOS 10.24.0
 
 **Release date: July 31, 2025**
 
-* Renamed the app to "Make It Native" and aligned its versioning with Studio Pro, so each Studio Pro version (for example, 10.24.x) now uses the matching Make It Native version (for example, 10.24.x).
+* We renamed the app to "Make It Native" and aligned its versioning with Studio Pro, so each Studio Pro version (for example, 10.24.x) now uses the matching Make It Native version (for example, 10.24.x).
 
 ## Android 5.0.2 / iOS 5.0.2
 
@@ -38,7 +204,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ### Improvements
 
-* This new version is compatible with Mendix 10.24.
+* We made this new version is compatible with Mendix 10.24.
 
 ## Android 5.0.1 / iOS 5.0.1
 

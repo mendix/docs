@@ -28,7 +28,7 @@ To use the C# API, you must have:
 
 * A basic understanding of the Mendix platform
 * Some understanding of the Mendix Model
-* Come C# development experience
+* Some C# development experience
 
  Extensions are developed using [C#](https://docs.microsoft.com/en-us/dotnet/) and compiled into a `.dll` assembly file.
 

@@ -24,6 +24,10 @@ In addition, you need a runtime license for your app, in the same way as you wou
 
 See [Licensing Mendix on Kubernetes](/developerportal/deploy/private-cloud/#licensing) for more information on this subject.
 
+### Environment Number Limitations
+
+Configuring a standard or global Operator to manage more than 350 app environments may lead to performance issues, and is not supported. Mendix recommends deploying additional Operator-Agent combinations when the number of environments that need to be managed exceeds 350.
+
 ## Production Environments
 
 It is recommended that production environments should always be in their own namespace. This has the following benefits:

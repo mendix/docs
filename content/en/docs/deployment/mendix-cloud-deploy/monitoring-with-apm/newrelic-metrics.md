@@ -38,20 +38,21 @@ To make use of New Relic, you need a New Relic API key. To find an existing key 
 
 To send your runtime information to New Relic, you must provide the New Relic API key to your environment.
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** on the environment you wish to monitor with New Relic.
 1. Switch to the **Runtime** tab.
 1. Add the following **Custom Environment Variables**:
 
-    | Variable | Description | Default |
-    | --- | --- | --- |
-    | `NEW_RELIC_LICENSE_KEY` | License key or API key from New Relic. Obtained in the [New Relic API Key](#newrelic-api-key) section. | |
-    | `NEW_RELIC_LOGS_URI` | URI for the New Relic's Logs API. For more information, consult [New Relic Regions](#uri-regions). Example: `https://log-api.eu.newrelic.com/log/v1`. | |
-    | `NEW_RELIC_METRICS_URI` | URI for the New Relic's Metrics API. For more information, consult [New Relic Regions](#uri-regions). Example: `https://metric-api.eu.newrelic.com/metric/v1`. | |
-    | `NEW_RELIC_APP_NAME` (optional) | Mendix Application name shown on New Relic's APM & Services. Default: Domain host name. | |
-    | `LOGS_REDACTION` (optional) | Email addresses are automatically redacted before log entries are sent to New Relic. To disable this redaction, set `LOGS_REDACTION` to `false`. Default: `true`. ||
-    | `FLUENTBIT_LOGS_BUFFER_SIZE` | Sets the maximum amount of data (in KB) that the TCP input plugin reads from the socket per read operation. Increasing this value can help to get rid of data flow delay, and errors related to queue buffer overflow.  | `128` |
-    | `FLUENTBIT_LOGS_MEM_BUF_LIMIT` | Defines the maximum total memory an input plugin can use for buffering log records before they are processed or flushed to storage/output. Limits memory which can be consumed by the Fluentbit agent | `50MB` |
+    | Variable | Description                                                                                                                                                                                                            | Default |
+    | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- |
+    | `NEW_RELIC_LICENSE_KEY` | License key or API key from New Relic. Obtained in the [New Relic API Key](#newrelic-api-key) section.                                                                                                                 | |
+    | `NEW_RELIC_LOGS_URI` | URI for the New Relic's Logs API. For more information, consult [New Relic Regions](#uri-regions). Example: `https://log-api.eu.newrelic.com/log/v1`.                                                                  | |
+    | `NEW_RELIC_METRICS_URI` | URI for the New Relic's Metrics API. For more information, consult [New Relic Regions](#uri-regions). Example: `https://metric-api.eu.newrelic.com/metric/v1`.                                                         | |
+    | `NEW_RELIC_APP_NAME` (optional) | Mendix Application name shown on New Relic's APM & Services.                                                                                                                                 | Domain host name |
+    | `LOGS_REDACTION` (optional) | Email addresses are automatically redacted before log entries are sent to New Relic. To disable this redaction, set `LOGS_REDACTION` to `false`.                                                     |`true`|
+    | `FLUENTBIT_LOGS_BUFFER_SIZE` | Sets the maximum amount of data (in KB) that the TCP input plugin reads from the socket per read operation. Increasing this value can help to get rid of data flow delay, and errors related to queue buffer overflow. | `128` |
+    | `FLUENTBIT_LOGS_MEM_BUF_LIMIT` | Defines the maximum total memory an input plugin can use for buffering log records before they are processed or flushed to storage/output. Limits memory which can be consumed by the Fluentbit agent                  | `50MB` |
+    | `APM_ENABLE_ACCESS_LOGS`       | Sends access logs to New Relic when it's set to `true`.Disabled by default.                                                                                                                                            | `false` |
 
 1. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 
@@ -63,14 +64,16 @@ To help you with analyzing your app metrics as described in the [App Metrics](/d
 
 ### Metadata
 
-In addition to the runtime application logs, the following JSON-formatted metadata is automatically sent to New Relic:
+In addition to the runtime application or access logs, the following JSON-formatted metadata is automatically sent to New Relic:
 
 * `environment_id` – unique identifier of the environment
-* `instance_index` – number of the application instance
-* `hostname` – name of the application host
+* `instance_index` – number of the application instance (available only in Cloud Foundry deployments)
+* `pod_name` – name of the application pod (available only in Kubernetes deployments)
+* `hostname` – name of the application host 
 * `application_name` – default application name, retrieved from the domain name
 * `model_version` – model version of the Mendix runtime
 * `runtime_version` – version of the Mendix runtime
+* `log_type` – type of the log, which can be `mx.applicationlogs` or `mx.accesslogs`
 
 You can filter the data by these fields.
 
@@ -85,7 +88,7 @@ Mendix recommends using the following tags:
 
 To set these tags, do the following:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** on an environment you are monitoring with New Relic.
 1. On the **Tags** tab, add a tag. This is the string that is sent to New Relic as a tag.
 1. Restart the app.

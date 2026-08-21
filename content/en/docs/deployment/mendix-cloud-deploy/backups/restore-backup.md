@@ -28,7 +28,7 @@ You cannot transfer data from one app to another by restoring a backup from one 
 
 If the database in your plan is not large enough to contain all the restored data, the restore operation will fail. This leaves the database only partially restored. If this occurs, you will need to upgrade your plan to increase the database size or restore a smaller database to ensure that the database is complete.
 
-Your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus an overhead of 2.25 GB used during the restoration process. The decompressed database size can be determined by [restoring the backup locally](/developerportal/operate/restore-backup-locally/) and using the pgAdmin statistics page.
+Your database must be large enough to hold the decompressed size of the database as stored in the [db folder](#db-folder) of your backup file, plus approximately 30% additional space for overhead during the restoration process. You can determine the decompressed database size by [restoring the backup locally](/developerportal/operate/restore-backup-locally/) and checking the pgAdmin statistics page.
 
 Contact [Mendix Support](https://support.mendix.com/) if you need further assistance.
 
@@ -38,7 +38,7 @@ Mendix Cloud automatically performs backups every night, and you can also manual
 
 If you want to restore a backup to a different cloud node, or have your backup stored locally, then see [Restoring a Backup for a Different Licensed Cloud Node](#restore-local-backup), below.
 
-1. From [Apps](https://sprintr.home.mendix.com), open your licensed app.
+1. From [Projects](https://projects.home.mendix.com), open your licensed app.
 1. Use the navigation panel to go to your app's **Backups** page.
 1. In the upper-right corner of the screen, select the environment to which the backup should be restored (for example, **Acceptance**).
 
@@ -70,7 +70,7 @@ You can only restore data to an existing database. This means that there must ha
 However, the app previously deployed to the node does not need to have had the same Domain Model as the data you are restoring.
 {{% /alert %}}
 
-1. From [Apps](https://sprintr.home.mendix.com), open your app.
+1. From [Projects](https://projects.home.mendix.com), open your app.
 1. Use the navigation panel to go to your app's **Backups** page.
 1. Select the environment to which the backup should be restored (for example, **Acceptance**).
 1. Click **Upload Archive**. The upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application.
@@ -81,7 +81,7 @@ However, the app previously deployed to the node does not need to have had the s
 
 {{% alert color="info" %}}For a Free App, you can only restore available backups that are made from the app and held in the cloud. It is not possible to upload a backup that was created or stored elsewhere. It also is not possible to manually create a backup.{{% /alert %}}
 
-1. From [Apps](https://sprintr.home.mendix.com), open your Free App.
+1. From [Projects](https://projects.home.mendix.com), open your Free App.
 1. Use the navigation panel to go to your app's **Backups** page.
 1. Select the environment to which the backup should be restored (for example, **Acceptance**).
 1. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
@@ -93,15 +93,15 @@ If the app is still running, you have to stop it by clicking **Stop Application*
 
 ## Restoring After a Backup Fails{#restore-after-fail}
 
-If a backup restore fails, the failure is logged in your app's **Backup Activity** log, which you can view on the **Backups** page when you open your app in [Apps](https://sprintr.home.mendix.com/). If this happens, only data that was restored until the point of failure will be present in your database, leaving the database only partially restored.
+If a backup restore fails, the failure is logged in your app's **Backup Activity** log, which you can view on the **Backups** page when you open your [app](https://projects.home.mendix.com/). If this happens, only the data restored up to the point of failure will be present in your database, leaving it partially restored.
 
-Your database must be large enough to hold the decompressed size of the database as stored in your backup file's [db folder](#db-folder), plus additional free space for overhead during the restoration process. For example, if you run your app in an S21 Cloud Resource Pack, then your database size is 10 GB. To restore a backup, the size of your decompressed database in the **db** folder must not exceed 7.75 GB to allow for 2.25 GB of overhead. 
+To ensure a successful restore, Mendix recommends that your database is large enough to hold the decompressed size of the database as stored in your backup file's [db folder](#db-folder), plus additional free space substantially exceeding this decompressed size to allow for overhead during the restoration process.
 
-While a minimum of 2.25 GB is often sufficient for smaller backups, the actual required free space varies significantly based on the backup's size. To ensure a successful restore, Mendix recommends that your database has free space substantially exceeding the decompressed backup size to accommodate the restoration process. For more information on the resource pack sizes Mendix offers, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). 
+For example, when restoring any app running in any of the available Mendix [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack), the decompressed database in the **db** folder should not exceed 70% of the database size, reserving approximately 30% for overhead during restore.
 
-In the event that a backup restore fails in this way, you will need to retry the backup restore. Before you retry, ensure your database meets the size requirements detailed above.
+If a backup restore fails, you will need to retry the restore. Before retrying, make sure your database meets the size requirements detailed above.
 
-Contact [Mendix Support](https://support.mendix.com/) if you need further assistance with this issue.
+Contact [Mendix Support](https://support.mendix.com/) if you need further assistance.
 
 ## Format of a Backup File{#format-of-backup-file}
 
@@ -162,7 +162,7 @@ This folder contains the *db.backup* file, which is a PostgreSQL dump file creat
 {{% alert color="warning" %}}
 If the dump does not use the custom format, then the restore will fail.
 
-The dump must be created with `pg_dump` version 1.15 or below, which is currently bundled with PostgreSQL 13, 14, and 15. If it is created with a later version, then the upload will fail.
+The dump must be created with `pg_dump` version 1.16 or below, which is currently bundled with PostgreSQL 17 and below. If it is created with a version above 1.16, the upload will fail.
 
 You can find the exact version of PostgreSQL each environment of your application is using on the [General](/developerportal/deploy/environments-details/#general-tab) tab of each environment's  **Environment Details** page.
 {{% /alert %}}

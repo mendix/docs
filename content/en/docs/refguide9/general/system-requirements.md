@@ -16,15 +16,15 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### Software Specifications
 
-Mendix [Studio Pro](/refguide9/modeling/) version 9 is supported on 64-bit versions of Windows 10 release 1809 and above. This also includes Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
+Mendix [Studio Pro](/refguide9/modeling/) version 9 is supported on actively serviced versions of Windows 11. MTS versions starting from Mendix Studio Pro 9.6.5 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer if necessary:
 
 * Microsoft .NET desktop runtime (x64) and all applicable Windows security patches
 
-    | Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 and above |
-    | --- | --- |
-    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+    | Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 - 9.24.41 | Studio Pro 9.24.42 and above |
+    | --- | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime | .NET 10 Desktop Runtime |
     
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
@@ -40,9 +40,9 @@ The following frameworks are required. They will be installed automatically by t
 
 If you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET in addition to the x64 version listed above:
 
-| Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 and above |
-| --- | --- |
-| .NET 6 Desktop Runtime (arm64) | .NET 8 Desktop Runtime (arm64) |
+| Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34  - 9.24.41 | Studio Pro 9.24.42 and above |
+| --- | --- | --- |
+| .NET 6 Desktop Runtime (arm64) | .NET 8 Desktop Runtime (arm64) | .NET 10 Desktop Runtime (arm64) |
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
@@ -54,10 +54,10 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 ### Hardware Specifications
 
-Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2) with the following additional requirement:
+Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 11](https://www.microsoft.com/en-gb/windows/windows-11-specifications#table1) with the following additional requirement:
 
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB.
-* **RAM** – 4GB
+* **RAM** – 8GB or more depending on the size of your app and how many instances of Studio Pro you want to have open at the same time
 * **Display Resolution** – 1080p (1920x1080)
 
 ### Firewall Settings {#firewall-settings}
@@ -203,13 +203,13 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [IBM DB2](/refguide8/db2/) 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide9/mysql/): 10.6, 10.11, 11.4, 11.8
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
+* [IBM DB2](/refguide9/db2/) 11.5 for Linux, Unix, and Windows
+* [MariaDB](/refguide9/mysql/): 10.11, 11.4, 11.8
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide9/mysql/): 8.4
-* [Oracle Database](/refguide9/oracle/): 19, 21c
-* PostgreSQL: 13, 14, 15, 16, 17
+* [Oracle Database](/refguide9/oracle/): 19, 21c, 23ai (including 26ai)
+* PostgreSQL: 14, 15, 16, 17, 18
 * [SAP HANA](/refguide9/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}
@@ -232,8 +232,6 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 * SAP AWS S3 Object Storage
 * SAP Azure Blob Storage
 
-For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-minikube/).
-
 ### Storage Types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
@@ -254,8 +252,6 @@ For server-based installations, the following storage types mounted by the OS ar
 Internet Explorer is no longer supported in Studio Pro 9. As the market is moving away from Internet Explorer and Mendix continues to align with the best practices of the modern web ecosystem, we have dropped support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved app loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.<br />
 <br />
 As of Studio Pro 9, app end-users still using IE will be shown an **Unsupported Browser** message stating that upgrading to a modern browser is required. You can [customize this message](/howto9/front-end/customize-styling-new/#customize-unsupported-browsers) to meet your needs.<br />
-<br />
-If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) will continue supporting IE11. Mendix recommends using Studio Pro 8 until your app end-users have upgraded their browsers.
 {{% /alert %}}
 
 ## Mobile {#mobile}
@@ -266,6 +262,10 @@ For native and hybrid apps built with Mendix, the following operating system ver
 * Latest three versions of Android
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
+
+{{% alert color="warning" %}}
+If a new iOS or Android version is released less than 3 months before your Mendix version reaches end of native mobile support, that OS version is not covered for your native mobile app. To support the new OS version, you must upgrade to a newer Mendix version. See [Native Mobile Support Guidelines](/releasenotes/mobile/native-support/) for details.
+{{% /alert %}}
 
 You can build native and hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 

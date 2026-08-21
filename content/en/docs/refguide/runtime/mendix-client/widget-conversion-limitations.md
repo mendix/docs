@@ -2,7 +2,7 @@
 title: "Widget Conversion Limitations"
 url: /refguide/mendix-client/widget-conversion-limitations/
 description: "Describes the limitations of the automatic widget conversions."
-weight: 20
+weight: 30
 ---
 
 ## Introduction

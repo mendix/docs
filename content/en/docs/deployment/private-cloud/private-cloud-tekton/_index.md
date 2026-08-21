@@ -5,13 +5,13 @@ url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in Mendix on Kubernetes"
 weight: 40
 ---
-{{% alert color="info" %}}
+{{% alert color="warning" %}}
 Tekton pipelines for Mendix on Kubernetes Standalone are no longer available to new customers. Customers seeking Tekton pipeline support are advised to consider Private Mendix Platform, which includes Tekton pipeline support.
 {{% /alert %}}
 
 ## Introduction
 
-Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Standalone Mendix on Kubernetes apps. This document explains how to install:
+This document explains how to install:
 
 * Tekton
 * Pipelines containing the appropriate tasks and steps to manage apps and environments
@@ -37,7 +37,6 @@ To follow these instructions you will need:
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
 * The [Mendix Operator v2.8.0+ installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
-* The Mendix Tekton pipelines – these can be requested through your CSM
 * Access to the internet to copy images to your air-gapped registry, or to install images directly onto your cluster
 
 If you have any issues when following these instructions, see the [Troubleshooting](#troubleshooting) section to see if there is a solution.
@@ -150,7 +149,7 @@ At the moment we support Red Hat OpenShift Pipelines v1.9.2.
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
 1. Install [helm](https://helm.sh).
-2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request to your CSM, who can arrange for access to them.
+2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
 

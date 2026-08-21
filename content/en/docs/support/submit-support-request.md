@@ -1,7 +1,7 @@
 ---
 title: "Submitting a Support Request"
 url: /support/submit-support-request/
-weight: 20
+weight: 30
 description: "Describes the details necessary for Mendix Support to process your request."
 aliases:
     - /developerportal/support/submit-support-request/
@@ -132,6 +132,15 @@ You can add large attachments such as app files to the request. Please note that
 Attachments added to Mendix Support requests will be automatically deleted after 365 days.
 {{% /alert %}}
 
+Attachments are uploaded via SendSafely, a secure file transfer service. SendSafely may be blocked by your network, which prevents the widget from displaying. In that case, the page shows a `Could not render widget 'SupportPortal.SendSafely.sendSafelyDropzone1'` error. 
+
+To resolve that error, please make sure that the following URLs are allowlisted in your network's security settings:
+
+* `https://mendix.sendsafely.eu`
+* `https://mendix.sendsafely.com`
+* `https://static-mendix.sendsafely.eu`
+* `https://sendsafely-dual-region-eu.s3-accelerate.amazonaws.com`
+
 ### Logs
 
 It is important to provide app logs when submitting a support request. This allows the support team to better assess and work towards fixing the issue. The following sections include information on retrieving logs per deployment model.
@@ -154,7 +163,7 @@ Follow these steps to retrieve logs for an app deployed to Windows:
 
 Follow these steps to retrieve logs for an app deployed to SAP:
 
-1. On the Mendix Portal, go to your SAP-deployed app in [Apps](https://sprintr.home.mendix.com), and click **Environments**.
+1. On the Mendix Portal, go to your SAP-deployed app in [Projects](https://projects.home.mendix.com), and click **Environments**.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) next to the environment you want to view details for.
 3. Click **View Recent Log**.
 

@@ -12,136 +12,131 @@ on:
         required: true
         default: 27
         type: number
+
 jobs:
   identify-branches:
     if: github.repository_owner == 'mendix'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
-          
+
+      - name: Setup jq
+        run: sudo apt-get install -y jq
+
+      - name: Create timestamp file
+        run: |
+          echo "Last scan for stale merged branches: $(TZ='Europe/Amsterdam' date +'%Y-%m-%d %H:%M:%S %Z (UTC%:z)')" > branch-cleanup-timestamp.txt
+
       - name: Fetch all branches
         run: |
-          echo "Fetching all branches from remote..."
           git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune
-          echo "Fetched branches:"
-          git branch -r
 
       - name: Process branches
         id: branch-data
+        env:
+          MIN_AGE_DAYS: ${{ github.event.inputs.min_age_days || '27' }}
         run: |
           set -e
-          echo "Finding all branches for processing..."
           ALL_BRANCHES=$(git branch -r | grep -v "origin/HEAD" | sed 's/origin\///')
-          
-          echo "All branches found:"
-          printf "%s\n" "${ALL_BRANCHES[@]}"
+          MIN_AGE_DAYS=${MIN_AGE_DAYS:-27}
 
-          MIN_AGE_DAYS=${{ github.event.inputs.min_age_days || 27 }}
-          
-          # Arrays to hold branches
+          echo "MIN_AGE_DAYS=${MIN_AGE_DAYS}"
+
+          PROTECTED_COUNT=0
+          MERGED_COUNT=0
+          UNMERGED_COUNT=0
+
           PROTECTED_BRANCHES=()
           MERGED_BRANCHES_TO_PROCESS=()
           BRANCHES_TO_DELETE=()
           BRANCHES_TOO_RECENT=()
+          UNMERGED_BRANCHES=()
 
           CURRENT_DATE=$(date +%Y%m%d)
           echo "CURRENT_DATE=$CURRENT_DATE" >> $GITHUB_ENV
 
-          # Check branches
           for BRANCH in $ALL_BRANCHES; do
             branch_lower=$(echo "$BRANCH" | tr '[:upper:]' '[:lower:]')
-            # Identify protected branches
-            if [[ $branch_lower =~ (backup|development|main|master|production) ]]; then
-              if git branch -r --merged origin/development | grep -q "origin/$BRANCH"; then
-                PROTECTED_BRANCHES+=("$BRANCH (protected name, merged)")
-              else
-                PROTECTED_BRANCHES+=("$BRANCH (protected name, not merged)")
-              fi
+            if [[ $branch_lower == *backup* || $branch_lower =~ ^(development|main|master|production)(-[0-9]+)?$ ]]; then
+              PROTECTED_BRANCHES+=("$BRANCH")
+              PROTECTED_COUNT=$((PROTECTED_COUNT+1))
+            elif git branch -r --merged origin/development | grep -q "origin/$BRANCH"; then
+              MERGED_BRANCHES_TO_PROCESS+=("$BRANCH")
+              MERGED_COUNT=$((MERGED_COUNT+1))
             else
-              # Process non-protected merged branches
-              if git branch -r --merged origin/development | grep -q "origin/$BRANCH"; then
-                MERGED_BRANCHES_TO_PROCESS+=("$BRANCH")
-              else
-                UNMERGED_BRANCHES+=("$BRANCH (not merged)")
-              fi
+              UNMERGED_BRANCHES+=("$BRANCH")
+              UNMERGED_COUNT=$((UNMERGED_COUNT+1))
             fi
           done
 
-          # Process potential deletion
-          for BRANCH in "${MERGED_BRANCHES_TO_PROCESS[@]}"; do
-            MERGE_HASH=$(git log --grep="Merge branch.*$BRANCH" origin/development -n 1 --pretty=format:"%H" ||
-                        git log --grep="Merge pull request.*$BRANCH" origin/development -n 1 --pretty=format:"%H")
-            [ -z "$MERGE_HASH" ] && MERGE_HASH=$(git log -n 1 origin/$BRANCH --pretty=format:"%H")
+          echo "branch totals: protected=${PROTECTED_COUNT} merged=${MERGED_COUNT} unmerged=${UNMERGED_COUNT}"
 
-            MERGE_DATE=$(git show -s --format=%ct $MERGE_HASH)
-            DAYS_AGO=$(( ($(date +%s) - MERGE_DATE) / 86400 ))
+          for BRANCH in "${MERGED_BRANCHES_TO_PROCESS[@]}"; do
+            MERGE_HASH=$(git log --grep="Merge branch.*$BRANCH" origin/development -n 1 --pretty=format:"%H" || true)
+            if [ -z "$MERGE_HASH" ]; then
+              MERGE_HASH=$(git log -n 1 origin/$BRANCH --pretty=format:"%H" || true)
+            fi
+
+            if [ -z "$MERGE_HASH" ]; then
+              echo "WARN: no merge commit found for $BRANCH — skipping"
+              UNMERGED_BRANCHES+=("$BRANCH (no-merge-hash)")
+              UNMERGED_COUNT=$((UNMERGED_COUNT+1))
+              continue
+            fi
+
+            MERGE_DATE_EPOCH=$(git show -s --format=%ct $MERGE_HASH 2>/dev/null || true)
+            if [ -z "$MERGE_DATE_EPOCH" ]; then
+              echo "WARN: could not read commit date for $BRANCH (hash=$MERGE_HASH) — skipping"
+              UNMERGED_BRANCHES+=("$BRANCH (no-merge-date)")
+              UNMERGED_COUNT=$((UNMERGED_COUNT+1))
+              continue
+            fi
+
+            DAYS_AGO=$(( ($(date +%s) - MERGE_DATE_EPOCH) / 86400 ))
 
             if [[ $DAYS_AGO -ge $MIN_AGE_DAYS ]]; then
-              BRANCHES_TO_DELETE+=("$BRANCH ($DAYS_AGO days)")
+              BRANCHES_TO_DELETE+=("$BRANCH (${DAYS_AGO}d since merge)")
             else
-              BRANCHES_TOO_RECENT+=("$BRANCH ($DAYS_AGO days)")
+              BRANCHES_TOO_RECENT+=("$BRANCH (${DAYS_AGO}d since merge)")
             fi
+            echo "checked $BRANCH: hash=$MERGE_HASH date=$MERGE_DATE_EPOCH days=${DAYS_AGO}"
           done
 
-          # Display non-deleted branches for logging
-          ALL_NON_DELETED_BRANCHES=("${PROTECTED_BRANCHES[@]}" "${BRANCHES_TOO_RECENT[@]}" "${UNMERGED_BRANCHES[@]}")
-          IFS=$'\n' ALL_NON_DELETED_BRANCHES=($(sort <<<"${ALL_NON_DELETED_BRANCHES[*]}"))
-          unset IFS
-
-          if [ ${#BRANCHES_TO_DELETE[@]} -eq 0 ]; then
-            echo "No branches found for deletion."
-            echo "NO_BRANCHES=true" >> $GITHUB_ENV
-            exit 0
-          else
-            echo "NO_BRANCHES=false" >> $GITHUB_ENV
-          fi
-
-          # Create report
-          echo "# Branch Cleanup Report - $(date +%Y-%m-%d)" > branch-report.branchreport
-          echo "## Branches for deletion (merged >=${MIN_AGE_DAYS} days ago):" >> branch-report.branchreport
-          echo '```' >> branch-report.branchreport
-          printf "%s\n" "${BRANCHES_TO_DELETE[@]}" >> branch-report.branchreport
-          echo '```' >> branch-report.branchreport
-          echo "## Branches not eligible for deletion:" >> branch-report.branchreport
-          echo '```' >> branch-report.branchreport
-          printf "%s\n" "${ALL_NON_DELETED_BRANCHES[@]}" >> branch-report.branchreport
-          echo '```' >> branch-report.branchreport
-
-          echo "BRANCHES_TO_DELETE<<EOF" >> $GITHUB_ENV
-          printf "%s\n" "${BRANCHES_TO_DELETE[@]}" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-          echo "ALL_NON_DELETED_BRANCHES<<EOF" >> $GITHUB_ENV
-          printf "%s\n" "${ALL_NON_DELETED_BRANCHES[@]}" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo "HAS_BRANCHES=$([ ${#BRANCHES_TO_DELETE[@]} -gt 0 ] && echo true || echo false)" >> $GITHUB_ENV
+          echo "BRANCHES_TO_DELETE=$(printf -- '- %s\n' "${BRANCHES_TO_DELETE[@]}" | jq -Rs .)" >> $GITHUB_ENV
+          echo "PROTECTED_BRANCHES=$(printf -- '- %s\n' "${PROTECTED_BRANCHES[@]}" | jq -Rs .)" >> $GITHUB_ENV
+          echo "BRANCHES_TOO_RECENT=$(printf -- '- %s\n' "${BRANCHES_TOO_RECENT[@]}" | jq -Rs .)" >> $GITHUB_ENV
+          echo "UNMERGED_BRANCHES=$(printf -- '- %s\n' "${UNMERGED_BRANCHES[@]}" | jq -Rs .)" >> $GITHUB_ENV
 
       - name: Create Deletion PR
-        if: env.NO_BRANCHES != 'true'
-        uses: peter-evans/create-pull-request@v6
+        if: env.HAS_BRANCHES == 'true'
+        uses: peter-evans/create-pull-request@v8 # NOTE: If you upgrade the version of this action, you must also update the GitHub Actions allowlist in mendix/docs > Settings > Actions > General to permit the new version tag, otherwise the workflow will fail.
         with:
-          commit-message: "Branch cleanup proposal"
-          title: "[AUTO] Branch Deletion Candidates - ${{ env.CURRENT_DATE }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "[Auto] Branch Deletion Candidates - ${{ env.CURRENT_DATE }}"
           body: |
-            ## Branches for deletion (merged to development)
-            ```
-            ${{ env.BRANCHES_TO_DELETE }}
-            ```
-            
-            ## Branches not eligible for deletion
-            ```
-            ${{ env.ALL_NON_DELETED_BRANCHES }}
-            ```
-            ## ⚠️ Warning
-            Merging this PR will:
-            1. Delete the branches listed in the "Branches for deletion" section.
-            2. Remove the temporary branch-report.branchreport file.
-          branch: branch-cleanup-${{ env.CURRENT_DATE }}
+            ### Branches for Deletion
+            ${{ fromJSON(env.BRANCHES_TO_DELETE) }}
+
+            ### Protected Branches
+            ${{ fromJSON(env.PROTECTED_BRANCHES) }}
+
+            ### Recent Merges (too recent to delete)
+            ${{ fromJSON(env.BRANCHES_TOO_RECENT) }}
+
+            ### Unmerged Branches
+            ${{ fromJSON(env.UNMERGED_BRANCHES) }}
+          base: development
+          labels: Internal WIP
           assignees: MarkvanMents,OlufunkeMoronfolu
           reviewers: MarkvanMents,OlufunkeMoronfolu
-          labels: Internal WIP
+          commit-message: "Add branch cleanup candidates for ${{ env.CURRENT_DATE }}"
           add-paths: |
-            branch-report.branchreport
+            branch-cleanup-timestamp.txt
+          author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"

@@ -15,7 +15,7 @@ Before configuring AWS Secrets Manager integration, prepare the following:
 
 * An AWS account with appropriate permissions to create and manage secrets
 * IAM permissions to create roles and policies for AWS Secrets Manager access
-* Access to the PPrivate Mendix Platform project admin panel with administrative privileges
+* Access to the Private Mendix Platform project admin panel with administrative privileges
 * Basic knowledge of AWS services, IAM roles, and Kubernetes (if using EKS deployment)
 * An existing EKS cluster (if your PMP deployment runs on Kubernetes)
 
@@ -118,9 +118,7 @@ When creating a property to use as a key for external secret storage, use the fo
 
     * Build Cluster Settings
 
-        * **kubernetesConfigureToken**
         * **BuildCluster.KubernetesConfigureToken** - Token for the Kubernetes cluster configuration
-        * **JenkinsConfigureAPIToken**
         * **CIAdmin.JenkinsConfigureAPIToken** - Token for the Jenkins configuration
         * **CIAdmin.JenkinsTriggerAuthToken** - Token for the Jenkins trigger configuration
         * **CIAdmin.AzureOrgAdminPAT** - Personal access token for the Azure DevOps configuration
@@ -128,12 +126,13 @@ When creating a property to use as a key for external secret storage, use the fo
         * **CIAdmin.AzureAwsS3SK** - Name of the Azure DevOps organization
 
     * Cluster Manager
-
-        * **ClusterManager.KubernetesApiToken** - Token for the Kubernetes admin user
-        * **ClusterSettings.KubernetesAdminPassword** - Password for the Kubernetes admin user
-        * **ClusterSettings.GrafanaAPIKey** - Password for the Grafana admin user
-        * **ClusterSettings.MDAAWSS3AccessKey** - Password for the Prometheus admin user
-        * **ClusterSettings.OCIRegistryPassword** - Password for the Prometheus admin user
+        
+        * **ClusterManager.OCIRegistryAWSSK** - OCI Registry: AWS secret access key for the OCI registry
+        * **serverClusterManager.OCIBasicAuthPassword** - OCI Registry: Password for the OCI registry
+        * **serverClusterManager.MDAAWSSK** - MDA Storage: AWS secret access key for the MDA file
+        * **serverClusterManager.MDAFileBasicAuthPassword** - MDA Storage: Password for the MDA file
+        * **serverClusterManager.KubernetesApiToken** - Kubernetes API: Token for accessing the Kubernetes API
+        * **serverClusterManager.GrafanaAPIKey** - Grafana: API key for accessing the Grafana server
 
     * Marketplace
 
@@ -142,6 +141,13 @@ When creating a property to use as a key for external secret storage, use the fo
     * Email
 
         * **Email.SMTPPassword** - Password for the SMTP server
+
+    * Maia
+
+        * **Maia.AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
+        * **Maia.AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
 
 The following is a JSON template. Copy this template into your secret, and set the values that you want to use. Leave those you do not want to use empty.
 
@@ -185,19 +191,24 @@ The following is a JSON template. Copy this template into your secret, and set t
     "AzureAwsS3SK": ""
   },
   "ClusterManager": {
-    "KubernetesApiToken": ""
-  },
-  "ClusterSettings": {
-    "KubernetesAdminPassword": "",
-    "GrafanaAPIKey": "",
-    "MDAAWSS3AccessKey": "",
-    "OCIRegistryPassword": ""
+    "KubernetesApiToken": "",
+    "GrafanaAPIKey":"",
+    "MDAFileBasicAuthPassword": "",
+    "MDAAWSSK": "",
+    "OCIBasicAuthPassword": "",
+    "OCIRegistryAWSSK": ""
   },
   "Marketplace": {
     "ImportCDNPassword": ""
   },
   "Email": {
     "SMTPPassword": ""
+  },
+  "Maia": {
+    "AmazonBedrockApiKey": "",
+    "AzureAiApiKey": "",
+    "AnthropicApiKey": "",
+    "OpenAiApiKey": ""
   }
 }
 ```
@@ -257,7 +268,7 @@ To configure the EKS service account, perform the following steps:
     metadata:
         name: pmp-deployment
         annotations:
-            eks.amazonaws.com/role-arn: arn:aws:iam::<your-account-id>:role/pmp-secret-access
+            eks.amazonaws.com/role-arn: arn:aws:iam::<your-account-id>:role/PMP-SecretsManager-Role
     spec:
         template:
             spec:

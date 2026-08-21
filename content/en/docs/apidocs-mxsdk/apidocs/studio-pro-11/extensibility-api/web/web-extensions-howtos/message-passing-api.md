@@ -6,16 +6,21 @@ url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/message-passing-api/
 
 ## Introduction
 
-This how-to describes how to pass information between different active views (such as tabs, dialogs, and panes) within the same extension.
+This document describes how to pass information between different active views (such as tabs, dialogs, and panes) within the same extension.
 
 ## Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+{{% alert="info" %}}
+If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
+{{% /alert%}}
+
+Before starting this how-to, complete the following prerequisites:
 
 * This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one. 
-* Make sure you are familiar with:
+* Familiarize yourself with:
     * Creating [menus](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/)
     * Creating different kinds of views, such as [tabs](/apidocs-mxsdk/apidocs/web-extensibility-api-11/tab-api/) and [panes](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dockable-pane-api/)
+    * Creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/)
 
 ## Communication Patterns
 
@@ -36,17 +41,33 @@ export const component: IComponent = {
     async loaded(componentContext) {
         const studioPro = getStudioProApi(componentContext);
         let counter = 0;
+
         // Add a menu item to the Extensions menu
         await studioPro.ui.extensionsMenu.add({
             menuId: "message-passing.MainMenu",
             caption: "Message passing",
             subMenus: [
-                { menuId: "message-passing.ShowTab", caption: "Show tab" },
-            ],
+                {
+                    menuId: "message-passing.ShowTab",
+                    caption: "Show tab",
+                    action: async () => {
+                        await studioPro.ui.tabs.open(
+                            {
+                                title: "MyExtension Tab"
+                            },
+                            {
+                                componentName: "extension/message-passing",
+                                uiEntrypoint: "tab"
+                            }
+                        );
+                    }
+                }
+            ]
         });
 
-        await studioPro.ui.messagePassing.addMessageHandler<{type:string}>(async messageInfo => {
+        await studioPro.ui.messagePassing.addMessageHandler<{ type: string }>(async messageInfo => {
             const messageData = messageInfo.message;
+
             if (messageData.type === "incrementCounter") {
                 counter++;
                 await studioPro.ui.messagePassing.sendResponse(messageInfo.messageId, {
@@ -55,26 +76,8 @@ export const component: IComponent = {
                 });
             }
         });
-
-        // Open a tab when the menu item is clicked
-        studioPro.ui.extensionsMenu.addEventListener(
-            "menuItemActivated",
-            async (args) => {
-                if (args.menuId === "message-passing.ShowTab") {
-                    await studioPro.ui.tabs.open(
-                        {
-                            title: "MyExtension Tab"
-                        },
-                        {
-                            componentName: "extension/message-passing",
-                            uiEntrypoint: "tab",
-                        }
-                    );
-                }
-            }
-        );
     }
-}
+};
 ```
 
 Insert the following code into `src/ui/index.tsx`:
@@ -124,13 +127,11 @@ In this example, the extension increases the `counter` value in the main context
 
 The highlighted lines demonstrate how to respond to a message. In the main context (`src/main/index.ts`), a listener is registered, which handles incoming messages from other contexts. Each message has an ID, which can be used to identify and respond to that specific message.
 
-When the main context sends a response, it is received by the `onResponse` callback registered in 
-the highlighted lines of `src/ui/index.tsx`. Note that this callback will be invoked only once,
-as each message can have a single response.
+When the main context sends a response, it is received by the `onResponse` callback registered in the highlighted lines of `src/ui/index.tsx`. Note that this callback is invoked only once, as each message can have a single response.
 
 ### Broadcast
 
-In the broadcast pattern, one context sends a messages to all other contexts that are listening for it. To implement this pattern, do the following:
+In the broadcast pattern, one context sends a message to all other contexts that are listening for it. To implement this pattern, complete the following steps:
 
 1. Copy the following code into `src/main/index.ts`:
 
@@ -140,46 +141,49 @@ In the broadcast pattern, one context sends a messages to all other contexts tha
     export const component: IComponent = {
         async loaded(componentContext) {
             const studioPro = getStudioProApi(componentContext);
-            let counter = 0;
+
+            const paneHandle = await studioPro.ui.panes.register(
+                {
+                    title: "Message Passing Pane",
+                    initialPosition: "right"
+                },
+                {
+                    componentName: "extension/message-passing",
+                    uiEntrypoint: "pane"
+                }
+            );
+
             // Add a menu item to the Extensions menu
             await studioPro.ui.extensionsMenu.add({
                 menuId: "message-passing.MainMenu",
                 caption: "Message Passing",
                 subMenus: [
-                    { menuId: "message-passing.ShowTab", caption: "Show tab" },
-                    { menuId: "message-passing.ShowPane", caption: "Show pane" },
-                ],
-            });
-
-            const paneHandle = await studioPro.ui.panes.register({
-                title: 'Message Passing Pane',
-                initialPosition: 'right',
-            }, {
-                componentName: "extension/message-passing",
-                uiEntrypoint: "pane"
-            })
-
-            // Open a tab when the menu item is clicked
-            studioPro.ui.extensionsMenu.addEventListener(
-                "menuItemActivated",
-                async (args) => {
-                    if (args.menuId === "message-passing.ShowTab") {
-                        await studioPro.ui.tabs.open(
-                            {
-                                title: "MyExtension Tab"
-                            },
-                            {
-                                componentName: "extension/message-passing",
-                                uiEntrypoint: "tab",
-                            }
-                        );
-                    } else if (args.menuId === "message-passing.ShowPane") {
-                        await studioPro.ui.panes.open(paneHandle);
+                    {
+                        menuId: "message-passing.ShowTab",
+                        caption: "Show tab",
+                        action: async () => {
+                            await studioPro.ui.tabs.open(
+                                {
+                                    title: "MyExtension Tab"
+                                },
+                                {
+                                    componentName: "extension/message-passing",
+                                    uiEntrypoint: "tab"
+                                }
+                            );
+                        }
+                    },
+                    {
+                        menuId: "message-passing.ShowPane",
+                        caption: "Show pane",
+                        action: async () => {
+                            await studioPro.ui.panes.open(paneHandle);
+                        }
                     }
-                }
-            );
+                ]
+            });
         }
-    }
+    };
     ```
 
 2. Rename `src/ui/index.tsx` to `src/ui/tab.tsx` and paste the following code into it:
@@ -199,7 +203,7 @@ In the broadcast pattern, one context sends a messages to all other contexts tha
         const [name, setName] = useState<string>("");
         useEffect(() => {
             studioPro.ui.messagePassing.sendMessage({ type: "nameChanged", name });
-        }, [name]);
+        }, [name, studioPro.ui.messagePassing]);
 
         return (
             <div>
@@ -216,7 +220,7 @@ In the broadcast pattern, one context sends a messages to all other contexts tha
                 </StrictMode>
             );
         }
-    }
+    };
     ```
 
 3. Create a new file `src/ui/pane.tsx` and paste the following code into it:
@@ -241,7 +245,7 @@ In the broadcast pattern, one context sends a messages to all other contexts tha
                     setName(messageData.name);
                 }
             });
-        }, [componentContext]);
+        }, [componentContext, studioPro.ui.messagePassing]);
 
         return (
             <div>
@@ -298,12 +302,10 @@ In the broadcast pattern, one context sends a messages to all other contexts tha
     }
     ```
 
-This setup ensures that both the tab and the pane are registered in `src/main/index.ts`.
-The tab sends a message whenever the `name` value is updated. The pane listens for these messages emitted from the tab, and updates its
-view accordingly each time a new message is received.
+This setup ensures that both the tab and the pane are registered in `src/main/index.ts`. The tab sends a message whenever the `name` value is updated. The pane listens for these messages emitted from the tab and updates its view accordingly each time a new message is received.
 
 ## Extensibility Feedback
 
-If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
+If you would like to provide additional feedback, you can complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
 Any feedback is appreciated.

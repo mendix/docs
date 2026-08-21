@@ -7,21 +7,25 @@ weight: 24
 
 ## Introduction
 
-The Untyped Model Access API caters to the advanced users who are familiar with the internals of the Mendix platform. With the Untyped Model API, you can access the rich data of model elements.
+The Untyped Model Access API is designed for advanced users familiar with the internals of the Mendix platform. It allows access to the rich data of model elements.
 
-When you need to use model elements, units, and property names in the Untyped Model API, you can reference the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Moreover, you can find the type names used by the Untyped Model Access API under the [structureTypeName](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/Structure.html#structureTypeName) property of any model element.
+* For model elements, units, and property names, see the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html).
+* Type names used by the Untyped Model Access API are available under the [structureTypeName](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/Structure.html#structureTypeName) property of any model element.
 
 {{% alert color="info" %}}
-All methods provided by the Untyped Model API are recursive to reduce the amount of API calls necessary to get to the content you are looking for.
+All methods in the Untyped Model API are recursive to reduce the amount of API calls necessary to retrieve content.
 {{% /alert %}}
 
 ## Prerequisites
 
-To see the Untyped Model API in action, as described in the examples in this document, you must create a microflow having the default name `MyFirstLogic` with an action, and add an entity to the domain model.
+Before using the examples in this how-to:
+
+* Create a microflow named `MyFirstLogic` with an action
+* Add an entity to the domain model
 
 ## Getting Started
 
-To start using the Untyped Model API, import it:
+Begin by importing the Untyped Model Access API service:
 
 ```csharp
 class Sample(IUntypedModelAccessService untypedModelAccessService)
@@ -29,9 +33,9 @@ class Sample(IUntypedModelAccessService untypedModelAccessService)
 }
 ```
 
-## Gaining Access to the Model Root
+## Access the Model Root
 
-To gain access to the model `Root`, request it from the newly added API service:
+Use the Untyped Model Access AP to gain access to the model `Root`:
 
 ```csharp
 class Sample2(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
@@ -43,7 +47,7 @@ class Sample2(IUntypedModelAccessService untypedModelAccessService, IModel curre
 
 ## Requesting Top-level Model Elements
 
-To start going through the model elements, such as `Apps` and `Modules`, choose a starting point first:
+To access the model elements, such as `Apps` and `Modules`, choose a starting point:
 
 ```csharp
 class Sample3(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
@@ -62,9 +66,9 @@ class Sample3(IUntypedModelAccessService untypedModelAccessService, IModel curre
 
 ## Accessing Child Elements
 
-It is possible to access the child elements of a model element, such as the actions of a microflow or entities of a domain model.
+You can access the child elements of a model element, such as microflow actions or entities of a domain model.
 
-Using either `GetElements` or `GetElementsOfType`, can help you, for example, analyze these elements' properties to implement custom validation rules. See an example below:
+Use `GetElements` or `GetElementsOfType` to analyze the element properties and implement custom validation rules. 
 
 ```csharp
 class Sample4(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
@@ -88,7 +92,7 @@ class Sample4(IUntypedModelAccessService untypedModelAccessService, IModel curre
 
 ## Getting Model Unit's Properties
 
-In case you would like to extract data out of a model element or unit, you need to access its properties. See an example below:
+To extract data out of a model element or unit, access its properties:
 
 ```csharp
 class Sample5(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)

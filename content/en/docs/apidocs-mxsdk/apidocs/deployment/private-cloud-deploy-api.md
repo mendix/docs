@@ -40,7 +40,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 
@@ -190,4 +190,4 @@ In order to create or manage environments in a namespace through an API, the tec
 Please note that the fields marked as non-editable in the OpenAPI .yaml file are used for read-only purposes. Any modifications made to the values of these fields will be ignored.
 {{% /alert %}}
 
-{{< swaggerui src="/openapi-spec/private-cloud-deploy-api.yaml"  >}}
+{{< swaggerui src="/openapi-spec/privatecloud-deploy-v4.yaml"  >}}

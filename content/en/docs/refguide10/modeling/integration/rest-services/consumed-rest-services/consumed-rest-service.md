@@ -113,7 +113,7 @@ To create a new blank request, click **New** in the **Add Request(s)** dialog bo
 
 ### Authentication Methods {#authentication}
 
-You can configure basic authentication to use for all requests in your document. Authentication is not required, but can be added if needed. To add basic authentication, do the following:
+You can configure basic authentication for all requests in your document. Authentication is optional. If you need another authentication type, add the required headers manually. For more information, see [Adding Headers](#add-headers). To add basic authentication, do the following:
 
 1. Click **Authentication**.
 2. In the **Authentication method** field, click the drop-down and select **Basic authentication**. 

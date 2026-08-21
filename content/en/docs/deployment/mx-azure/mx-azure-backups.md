@@ -11,6 +11,8 @@ Mendix on Azure integrates backup and restore functionality that allows you to c
 
 Backup snapshots include both the database and the file documents associated with the Mendix app environment.
 
+The backup snapshot file format used by Mendix on Azure is identical to the backup snapshot file format used in the public Mendix Cloud. This allows for easy migration of app data between these deployment options.
+
 ## Enabling Backups
 
 To start using backups, select **Try new Backup and Restore** on the **Backups** page in the Mendix for Kubernetes portal.
@@ -21,20 +23,22 @@ You must have **Manage Apps Backups** permission for the namespace to use this f
 
 ## Creating a Backup {#creating-backup}
 
-1. On the [Apps](https://sprintr.home.mendix.com) page, select your app.
+1. On the [Projects](https://projects.home.mendix.com) page, select your app.
 2. Click **Backups** in the navigation pane.
 3. Choose the environment to back up from the environment dropdown.
 
-{{% alert color="info" %}} 
+    {{% alert color="info" %}}
+<!-- Need to do it this way to satisfy linter and get correct format-->
 Backups cannot be created while the environment is in any of these states:
+
 * Creation in progress
 * Creation failed
 * Deployment package is being deployed
-* Environment is in transition state (runtime processing) 
-{{% /alert %}}
 
-4. Click **Create Backup**.
-5. Monitor progress in the **Status** column.
+    {{% /alert %}}
+
+1. Click **Create Backup**.
+1. Monitor progress in the **Status** column.
 
 {{% alert color="info" %}} 
 Tables are locked during backup creation, so if you attempt to start the environment while a backup is in progress, you may encounter a timeout error. Wait for backup completion before restarting. 
@@ -62,6 +66,10 @@ To delete a backup snapshot, perform the following steps:
 2. Click **Delete**.
 
 ## Restoring a Backup Snapshot {#restore-backup}
+
+{{% alert color="warning" %}} 
+Restoring a backup is only supported within the same cluster. For the workaround to restore backups across clusters, see [Known Limitations](#known-limitations).
+{{% /alert %}}
 
 {{% alert color="info" %}} 
 Restore requires **Manage Apps Backups** and **Stop Apps** permissions on the namespace. 
@@ -133,8 +141,14 @@ Automatic backups only run when the app is deployed.
 
 If the first nightly backup occurs after the first Sunday, no monthly backup will be retained that month. Download a nightly or weekly backup to extend retention.
 
-## Known Limitations
+## Known Limitations {#known-limitations}
 
 * Partial data restoration may occur if a restore process fails.
 * No API support exists currently for backup and restore.
-* Although the portal UI suggests cross-namespace restores, only restores within the same namespace are supported.
+* Although the portal UI suggests that cross-cluster backup restorations are, only restorations within the same cluster are actually supported.
+
+As a workaround, you can restore a backup across clusters by performing the following steps:
+
+1. Download the backup snapshot from your source environment to your local machine.
+2. Upload the downloaded backup snapshot from your local machine to the target environment.
+3. Begin the restore process within the target environment using the newly uploaded backup snapshot.

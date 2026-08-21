@@ -26,7 +26,7 @@ The Build API requires authentication via API keys that are bound to your Mendix
 
 ### Obtaining an API Key
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+To obtain a Mendix API key, follow the instructions in the [API Keys](/portal/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
 ### Using Authentication Headers
 
@@ -281,7 +281,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### Payload
 
-The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
+The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control/#which-team-server).
 
 An object with the following key-value pairs:
 
@@ -296,9 +296,9 @@ An object with the following key-value pairs:
 
 {{% alert color="warning" %}}
 
-- For apps using SVN for version control, this call will build the specified revision even if that revision is not on the specified branch.
+* For apps using SVN for version control, this call will build the specified revision even if that revision is not on the specified branch.
 
-- For apps using Git for version control, using a short commit hash can cause timeouts with large repositories. Mendix recommends using the full commit hash
+* For apps using Git for version control, using a short commit hash can cause timeouts with large repositories. Mendix recommends using the full commit hash
 {{% /alert %}}
 
 ##### Example

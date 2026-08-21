@@ -9,7 +9,7 @@ description: "Describes the configuration and usage of the Data Grid 2 widget, w
 
 [Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. The Data Grid 2 widget offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control.
 
-This document focusing on explaining module features. For precise details on data grid 2 widget properties, see [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/).
+This document focusing on explaining module features. For precise details on Data Grid 2 widget properties, see [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/).
 
 The data source determines which objects will be shown in a Data Grid 2 widget. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
 
@@ -144,13 +144,17 @@ Here is an example of column properties:
 
 ### Custom Content
 
-**Custom Content** allows users to drop widgets into the data grid and use the column attribute value to show custom content. After selecting this option you will be given dropzones in which to drop your widgets.
+**Custom Content** allows users to drop widgets into the data grid and use the column attribute value to show custom content. After selecting this option you will be given drop-zones in which to drop your widgets.
+
+{{% alert color="info" %}}
+Placing widgets within custom content which use the row object will automatically set the [network optimization mode](/refguide/datasource-runtime/#network-optimization-modes) to **Optimize for Network Round Trips**.
+{{% /alert %}}
 
 Here is an example of custom content using new Badge widget in **Structure mode**:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-custom-content.png" alt="Example of custom content using new Badge widget in Structure mode" class="no-border" >}}
 
-For more information on configuring various widget properties, see [Common Widget Properties](/refguide/common-widget-properties/).
+For more information on configuring various widget properties, see [Properties Common in the Page Editor](/refguide/common-widget-properties/).
 
 ### Column Width
 
@@ -223,7 +227,7 @@ This section defines options for the rows of the grid.
 
 ### Empty List Message
 
-The **Empty List Message** option defines what users can see when the data grid does not have a value to be presented or when a filter is applied without results. When this option is defined as custom you can place widgets right above the rows in a dropzone. Here is an example:
+The **Empty List Message** option defines what users can see when the data grid does not have a value to be presented or when a filter is applied without results. When this option is defined as custom you can place widgets right above the rows in a drop-zone. Here is an example:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/empty-list-message.png" alt="Example of empty list message placeholder in Structure mode" class="no-border" >}}
 
@@ -246,6 +250,10 @@ The new data grid can trigger some events while iterating with it.
 ### On Click Action
 
 Triggers an action (such as a nanoflow, microflow, or Show page action) when the end-user clicks in one of the rows. It also adds a pointer cursor to signal that it is clickable. This function also complies with accessibility features and can be reached using only the keyboard.
+
+### On Selection Change Action
+
+Triggers an action (such as a nanoflow, microflow, or client action) when the end-user changes selection in the data grid. This includes selecting or deselecting individual rows, using the **Select all** toggle, or clearing the selection. The action provides a way to respond to selection state changes and implement custom logic based on the current selection.
 
 ## Filters {#filters}
 
@@ -497,9 +505,9 @@ There cannot be more than one filter of the same type in the data grid header. F
 
 ## Export to Excel
 
-The Data Grid 2 widget ships with built-in functionality to export data from the data source you configured in the settings. The export is done via the *Export_To_Excel* JavaScript action that is distributed as part of the [Data Widgets](/appstore/modules/data-widgets/) module.
+The Data Grid 2 widget ships with built-in functionality to export data from the data source you configured in the settings. The export is done via the **Export_To_Excel** JavaScript action that is distributed as part of the [Data Widgets](/appstore/modules/data-widgets/) module.
 
-To export data from the data grid, create a new nanoflow that calls *Export_To_Excel*. The *Export_To_Excel* action has a set of inputs:
+To export data from the data grid, create a new nanoflow that calls **Export_To_Excel**. The **Export_To_Excel** action has a set of inputs:
 
 * **Datagrid name**: the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
 * **File name**: the file name to use for the exported document (does not require an appended file extension)
@@ -568,6 +576,12 @@ When selection is enabled, you can choose a method for selecting rows. The **Che
 
 If this setting is enabled, then the data grid widget shows a checkbox at the header. This checkbox controls the selection for all visible items. Clicking on this checkbox will select all visible items. If all items are already selected, clicking the checkbox clears the selection.
 
+### Keep Selection
+
+If this setting is enabled, then selected items persist across page navigation, data refreshes, filtering, and sorting operations. 
+
+By default, **Keep selection** is disabled and the selection is cleared when the data source changes. When enabled, selected items remain selected until manually cleared by the user.
+
 ### Selection and Row Click Action
 
 {{% alert color="info" %}}
@@ -586,6 +600,36 @@ The setting for action triggers is related to the selection method and can somet
 | Row              | Double-click on the row | <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac)                        | Yes       |
 
 To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way, the user may select a row by double-clicking it.
+
+### Selection and Header Actions
+
+When the button is placed in a grid header, the assigned action can receive the currently selected rows as a parameter.
+
+#### How Selection is Passed to Actions
+
+When a button placed in header triggers a **microflow** or **nanoflow**, the selected rows are passed as input:
+
+* If **Single Selection** is enabled:
+    * The action receives a **single object**.
+* If **Multiple Selection** is enabled:
+    * The action receives a **list of objects**.
+
+This allows developers to build logic that operates on one or several items.
+
+#### Example Use Cases
+
+* **Mark as Done**: A button triggers a microflow that updates the status of selected tasks.
+* **Delete Selected**: A button deletes all selected records.
+* **Export Selected**: A button triggers a microflow or nanoflow that exports the selected list to a file.
+
+#### Configuration
+
+To configure selection, do the following:
+
+1. Enable **Selection** in the data grid 2 widget.
+1. Insert an **Action Button** into the **Header**.
+1. Configure the button to trigger a microflow or nanoflow.
+1. Set the input parameter of the flow to match the selection type (single object or list).
 
 ## Keyboard Support {#keyboard-support}
 
@@ -609,9 +653,9 @@ To achieve this behavior, set the **On click trigger** to **Double click**. When
 
 Legend:
 
-| Symbol | Meaning                                               |
-| ------ | ---- |
-| 1      | Available only when selection is enabled.             |
+| Symbol | Meaning                                                 |
+| ------ | ------------------------------------------------------- |
+| 1      | Available only when selection is enabled.               |
 | 2      | Available only when selection mode should be **Multi**. |
 
 ## Resetting Filters
@@ -625,7 +669,8 @@ The name of the filter or data grid can be found at **Properties** > **Common** 
 ### Filter Widget Errors {#filter-widget-errors}
 
 **Error**:
-> "The filter widget must be placed inside the column or header of the Data grid 2.0 or inside header of the Gallery widget."
+
+> "The filter widget must be placed inside the column or header of the Data Grid 2.0 or inside header of the Gallery widget."
 
 * Widget placement is incorrect.
 
@@ -633,6 +678,7 @@ The name of the filter or data grid can be found at **Properties** > **Common** 
 Place widget inside Gallery header, Data Grid 2 header, or Data Grid 2 column.
 
 **Error**:
+
 > "Unable to get filter store. Check parent widget configuration."
 
 * This error indicates that there is issue with widget settings. Most of the time this error happens when widget is placed in the header of Data Grid 2 or Gallery, but the **Filter attributes** setting is still set to **Auto**.
@@ -641,6 +687,7 @@ Place widget inside Gallery header, Data Grid 2 header, or Data Grid 2 column.
 Switch widget attributes setting to **Custom** and configure the attribute for filtering.
 
 **Error**:
+
 > "The [filter] is not compatible with [datatype] data type."
 
 * This error indicates that attribute configured in the Data Grid 2 for column is not compatible with current filter type.
@@ -649,6 +696,6 @@ Switch widget attributes setting to **Custom** and configure the attribute for f
 
 > "The attribute is not filterable. Please choose a different attribute."
 
-* This error indicates that it is not possible to use current attribute for filtering due to technical limitations. 
+* This error indicates that it is not possible to use current attribute for filtering due to technical limitations.
 
 **Solution**: Read and understand why some attributes are filterable and other are not. Change the model or choose another attribute.

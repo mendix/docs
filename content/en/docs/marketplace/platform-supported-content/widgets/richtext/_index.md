@@ -65,11 +65,11 @@ To configure this widget, follow these steps:
         * **Bottom** – if selected, toolbar will be placed on the bottom of the editor.
         * **Hide** – if selected, toolbar will be hidden or not shown.
 
-* **Editable** – determines when user can edit content in the editor and when it is read-only.
-    * **Read-only style** - determines the style of the rich text when set to read-only. 
-        * **Rich Text** – shows disabled rich text with similar look and feel as being enable.
-        * **Bordered** – shows content only with surrounding border.
-        * **Read panel** – shows only html rendering of rich text content. 
+* **Editable** – determines when the user can edit content in the editor and when it is read-only.
+    * **Read-only style** - determines the style of the rich text widget when set to read-only. 
+        * **Rich Text** – shows disabled rich text with a similar look and feel as when it is enabled.
+        * **Bordered** – shows content only with a surrounding border.
+        * **Read panel** – shows only an HTML rendering of rich text content. 
 
     For more information, see the [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.
 
@@ -94,7 +94,7 @@ To configure this widget, follow these steps:
             * **View** - items: fullscreen.
             * **Removal** - items: clear.
             * **Table** - items: table.
-            * **Help** - items: help dialog contains keyboard shortcuts. (available in rich text version 5 and above)
+            * **Help** - items: help dialog contains keyboard shortcuts (available in rich text version 5 and above).
         * **Advanced** – if selected, you can configure buttons for different toolbar groups:
 
             {{% alert color="info" %}}All the toolbar groups that you configure will be available in the toolbar. With vertical bars or separator options ("|"), you can separate different toolbar groups.{{% /alert %}}
@@ -139,10 +139,9 @@ To configure this widget, follow these steps:
     * **Word count** – displays the number of words in the status bar.
     * **Character count (text only)** – displays the number of characters displayed in the editor.
     * **Character count (includeing HTML)** – displays the number of characters saved into the attribute value. This includes the HTML tag inserted for the formatting of rich text.
-* **Style data format** - available from Rich text version 5 and above. This allows user to use classnames for the styling of rich text's content.
+* **Style data format** - available from rich text version 5 and above. This allows user to use classnames for the styling of rich text's content.
     * **Inline** - uses inline styles on styling the HTML content. This is the current and default option. Inline styling is more reliable in styling the content. But using inline styles meant that the data cannot be parsed in [strict-CSP environment](/howto/security/csp/).
     * **Inline** - uses class name to style the HTML content. Use this setting if rich text is deployed in a strict CSP environment.
-
 
 ### Common Tab
 

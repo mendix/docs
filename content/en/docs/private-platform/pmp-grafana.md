@@ -34,7 +34,7 @@ To configure Grafana integration for your environment, make sure that you fulfil
 For information about installing Grafana with Prometheus and Loki, refer to
 [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
 
-### Example Helm-based Installation
+### Example Helm-Based Installation
 
 {{% alert color="info" %}}
 The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
@@ -190,349 +190,177 @@ Before running the script:
 #                                             Enable this if you have ephemeral jobs that push metrics.
 ```
 
-## Generating a Grafana API Key
+## Generating a Grafana API Key {#grafana-api-key}
 
 Private Mendix Platform requires an Admin-level API key to authenticate with Grafana. To configure the key, perform the following steps:
 
-Step 1.1: Create a Service Account (Recommended)
-image-20260612-094428.png
+1. Recommended: Create a Service Account. 
+
+    {{< figure src="/attachments/private-platform/pmp-grafana2.png" class="no-border" >}}
  
+    1. Log into Grafana as an Admin
+    2. Go to **Administration > Service Accounts**.
+    3. Click **Add service account**, and add an account like the following:
 
-Log into Grafana as an Admin
+        * **Name** - *PMP-integration*
+        * **Role** - Admin
+    
+    4. Click **Create**.
 
-Navigate to Administration → Service Accounts
+2. Generate an API token.
 
-Click "Add service account"
-
-Name: PMP-integration
-
-Role: Admin
-
-Click Create.
-
-Step 1.2: Generate API Token
-image-20260612-094358.png
+    {{< figure src="/attachments/private-platform/pmp-grafana3.png" class="no-border" >}}
  
+    1. Click the **PMP-integration** service account.
+    2. Click **Add service account token**, and add a token like the following:
 
-Click on the PMP-integration service account
+        * **Token name** - *PMP-key*
+        * **Expiration** - Leave blank (no expiration), or set as needed
 
-Click "Add service account token"
+    3. Click **Generate token**.
 
-Token name: PMP-key
+{{% alert color="warning" %}}
+Save the key immediately. It will only be shown once.
+{{% /alert %}}
 
-Expiration: Leave blank (no expiration) or set as needed
+The key has a format like the following:
 
-Click "Generate token"
-
-🔑 Save this key immediately! It will only be shown once.
-
-Example API Key format:
-
-text
-
-
-
+```text
 glsa_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-Part 2: Identify Required Information for PMP
-Before configuring PMP, collect these details from your Grafana installation:
+```
 
-Required Setting
+## Identifying Required Information for Private Mendix Platform
 
-Description
+Before configuring Private Mendix Platform, collect these details from your Grafana installation:
 
-How to Find
+| Required Setting | Description | How to Find |
+| --- | --- | --- |
+| Grafana Host | URL where Grafana is accessible | Your ingress URL or service endpoint |
+| Prometheus Name | Data source name for Prometheus | In Grafana, go to **Connections > Data Sources > Prometheus** |
+| Loki Name | Data source name for Loki | In Grafana, go to **Connections > Data Sources > Loki** |
+| Grafana API Key | Admin API token | Generated in [Generating a Grafana API Key](#grafana-api-key) |
 
-Grafana Host
+### Default Names When Using Loki Stack
 
-URL where Grafana is accessible
+If you installed using the Grafana Loki Stack Helm chart, the default data source names are as follows:
 
-Your ingress URL or service endpoint
+| Data Source | Default Name |
+| --- | --- |
+| Prometheus | `prometheus` |
+| Loki | `loki` |
 
-Prometheus Name
+## Configuring Private Mendix Platform
 
-Data source name for Prometheus
+To configure Private Mendix Platform for Grafana, perform the following steps:
 
-In Grafana: Connections → Data Sources → Prometheus
+1. Access the Private Mendix Platform admin settings.
 
-Loki Name
+    1. Log into Private Mendix Platform as an administrator.
+    2. Go to `https://<pmp_base_url>>/link/manage/cluster-manager`.
 
-Data source name for Loki
+2. Provide the Grafana configuration.
 
-In Grafana: Connections → Data Sources → Loki
+    1. Click **Register new cluster**.
+    2. Fill in the following information:
 
-Grafana API Key
+        * **Grafana Host** - Full URL to Grafana, for example, `https://grafana.yourcompany.com`
+        * **Grafana API Key** - The admin API key generated in [Generating a Grafana API Key](#grafana-api-key), for example, `glsa_abc123...`
+        * **Prometheus Name** - Data source name in Grafana, for example, `prometheus`
+        * **Loki Name** - Data source name in Grafana, for example, `loki`
 
-Admin API token
+    {{< figure src="/attachments/private-platform/pmp-grafana4.png" class="no-border" >}}
 
-Generated in Step 1.2
+3. Click **Save**.
 
-Default Names (if using Loki Stack)
-If you installed using the Grafana Loki Stack Helm chart, the default data source names are:
+## Verification
 
-Data Source
+After configuring Private Mendix Platform, verify that it can retrieve data by navigating to any Private Mendix Platform dashboard that displays metrics or logs.
 
-Default Name
+{{< figure src="/attachments/private-platform/pmp-grafana5.png" class="no-border" >}}
 
-Prometheus
+## Grafana APIs Details
 
-prometheus
-
-Loki
-
-loki
-
-Part 3: Configure PMP
-Step 3.1: Access PMP Admin Settings
-Log into PMP as Administrator
-
-Go to https://<pmp_base_url>>/link/manage/cluster-manager
-
-Step 3.2: Enter Grafana Configuration
-Click button : Register new cluster 
-
-Fill in the information as shown in the figure 
-
-image-20260612-095017.png
-PMP Field
-
-Value
-
-Example
-
-Grafana Host
-
-Full URL to Grafana
-
-https://grafana.yourcompany.com
-
-Grafana API Key
-
-Admin API Key from Step 1.2
-
-glsa_abc123...
-
-Prometheus Name
-
-Data source name in Grafana
-
-prometheus
-
-Loki Name
-
-Data source name in Grafana
-
-loki
-
-Click "Save" to complete the integration.
-
-Part 4: Verification
-After configuration, verify PMP can retrieve data:
-
-Navigate to any PMP dashboard that displays metrics or logs
-
-image-20260612-095350.png
-Part 5: Grafana APIs Details used
 Private Mendix Platform uses the following Grafana endpoints:
 
-GET /api/health - This endpoint is used to check the health and status of the Grafana instance itself. It allows Private Mendix Platform to get the Grafana version and verify that Grafana is running before saving the logging and monitoring configuration.
+* `GET /api/health` - This endpoint is used to check the health and status of the Grafana instance itself. It allows Private Mendix Platform to get the Grafana version and verify that Grafana is running before saving the logging and monitoring configuration.
+* `GET /api/datasources` - This endpoint is used to fetch the unique identifiers (IDs) of datasources, like Loki (logs) and Prometheus (metrics). These IDs are required for subsequent queries.
+* `GET /api/datasources/proxy/uid/:uid/*`  - This endpoint acts as a proxy for calls to the data source identified by the specified UID. Private Mendix Platform uses this to call Loki and Prometheus APIs to query logs and labels.
+* `GET /loki/api/v1/query_range` - This is the primary endpoint for fetching log data. Private Mendix Platform uses this Loki API to query application logs over a specific time range. The results of this query are used for real-time monitoring, and displayed within the Private Mendix Platform interface.
+* `GET /api/v1/labels` (Prometheus API through Grafana) - This endpoint queries the available labels from Prometheus. Private Mendix Platform uses this to check if a specific label (for example, `namespace`) exists in Prometheus.
+* `GET /api/v1/label/pod/values` (Prometheus API through Grafana) - This endpoint retrieves the list of all unique pod names for a target environment. This is used to populate the filter dropdown in the Private Mendix Platform interface.
+* `POST /api/ds/query?ds_type=prometheus` - This is a universal Grafana API endpoint for executing queries on a specific data source. Private Mendix Platform uses it to send PromQL queries to the Prometheus data source to fetch metric data for the Metrics dashboard.
 
-GET /api/datasources - This endpoint is used to fetch the unique identifiers (IDs) of datasources, like Loki (logs) and Prometheus (metrics). These IDs are required for subsequent queries.
+## Metrics and Labels
 
-GET /api/datasources/proxy/uid/:uid/*  - This endpoint acts as a proxy for calls to the data source identified by the specified UID. Private Mendix Platform uses this to call Loki and Prometheus APIs to query logs and labels.
+The following sections list the metrics and labels used by each graph.
 
-GET /loki/api/v1/query_range - This is the primary endpoint for fetching log data. Private Mendix Platform uses this Loki API to query application logs over a specific time range. The results of this query are used for real-time monitoring, and displayed within the Private Mendix Platform interface.
+### Number of Handled External Requests
 
-GET /api/v1/labels (Prometheus API via Grafana) - This endpoint queries the available labels from Prometheus. Private Mendix Platform uses this to check if a specific label (eg: namespace) exists in Prometheus.
+{{< figure src="/attachments/private-platform/pmp-grafana6.png" class="no-border" >}}
 
-GET /api/v1/label/pod/values (Prometheus API via Grafana) - This endpoint retrieves the list of all unique pod names for a target environment. This is used to populate the filter dropdown in the Private Mendix Platform interface.
+| Metric Name | Required Labels |
+| --- | --- |
+| `mx_runtime_stats_handler_requests_total` | `namespace`; `pod`; `name(name!="" or name="")` |
 
-POST /api/ds/query?ds_type=prometheus - This is a universal Grafana API endpoint for executing queries on a specific data source. Private Mendix Platform uses it to send PromQL queries to the Prometheus data source to fetch metric data for the Metrics dashboard.
+### User Accounts and Login Sessions
 
-Part 6:  Metrics and Labels Used for Each Graph
-1. Number of handled external requests
-image-20260625-063921.png
-Metric Name
+{{< figure src="/attachments/private-platform/pmp-grafana7.png" class="no-border" >}}
 
-Required Labels
+| Metric Name | Required Labels |
+| --- | --- |
+| `mx_runtime_stats_sessions_named_users`; `mx_runtime_stats_sessions_named_user_sessions`; `mx_runtime_stats_sessions_anonymous_sessions` | `namespace`; `pod` |
 
-mx_runtime_stats_handler_requests_total
+### JVM Process Memory Usage
 
-namespace
+{{< figure src="/attachments/private-platform/pmp-grafana8.png" class="no-border" >}}
 
-pod
+| Metric Name | Required Labels |
+| --- | --- |
+| `jvm_memory_used_bytes` | `namespace`; `pod` | 
+| `jvm_memory_committed_bytes` | `namespace`; `pod`; `area=”heap”/”nonheap”` | 
+| `kube_pod_container_resource_limits` | `namespace`; `pod`; `container="mendix"`; `resource="memory"`; `unit="byte"` |
+| `container_memory_usage_bytes` | `namespace`; `pod`; `container="mendix"` |
 
-name(name!="" or name="")
+### JVM heap contents
 
-2. User Accounts and Login Sessions
-image-20260625-064002.png
-Metric Name
+{{< figure src="/attachments/private-platform/pmp-grafana9.png" class="no-border" >}}
 
-Required Labels
+| Metric Name | Required Labels |
+| --- | --- |
+| `jvm_memory_used_bytes`; `jvm_memory_committed_bytes`; `jvm_memory_max_bytes` | `namespace`; `pod`; `area=”heap”` |
 
-mx_runtime_stats_sessions_named_users
+### Threadpool for Handling External Requests
 
-namespace
+{{< figure src="/attachments/private-platform/pmp-grafana10.png" class="no-border" >}}
 
- pod
+| Metric Name | Required Labels |
+| --- | --- |
+| `jetty_threads_config_max`; `jetty_threads_config_min`; `jetty_threads_current`; `jetty_threads_idle`; `jetty_threads_busy`; `jetty_threads_jobs` | `namespace`; `pod` |
 
-mx_runtime_stats_sessions_named_user_sessions
+### Total Number of Threads
 
-mx_runtime_stats_sessions_anonymous_sessions
+{{< figure src="/attachments/private-platform/pmp-grafana11.png" class="no-border" >}}
 
-3. JVM process memory usage
-image-20260625-064035.png
-Metric Name
+| Metric Name | Required Labels |
+| --- | --- |
+| `container_threads` | `namespace`; `pod`; `container="mendix"` |
+| `jvm_threads_live_threads`; `jvm_threads_daemon_threads` | `namespace`; `pod` |
 
-Required Labels
+### Container CPU Usage
 
-jvm_memory_used_bytes
+{{< figure src="/attachments/private-platform/pmp-grafana12.png" class="no-border" >}}
 
-namespace 
+| Metric Name | Required Labels |
+| --- | --- |
+| `container_cpu_usage_seconds_total` | `namespace`; `pod`; `container="mendix"` |
+| `kube_pod_container_resource_requests`; `kube_pod_container_resource_limits` | `namespace`; `pod`; `container="mendix"`; `resource="cpu"`; `unit="core"` |
 
-pod
+### Network
 
-jvm_memory_committed_bytes
+{{< figure src="/attachments/private-platform/pmp-grafana13.png" class="no-border" >}}
 
-namespace
+| Metric Name | Required Labels |
+| --- | --- |
+| `container_network_transmit_bytes_total`; `container_network_receive_bytes_total`; `jetty_connections_bytes_in_bytes_sum`; `jetty_connections_bytes_out_bytes_sum` | `namespace`; `pod` |
 
-pod
-
-area=”heap”/”nonheap”
-
-kube_pod_container_resource_limits
-
-namespace
-
-pod
-
-container="mendix"
-
-resource="memory"
-
-unit="byte"
-
-container_memory_usage_bytes
-
-namespace
-
-pod
-
-container="mendix"
-
-4. JVM heap contents
-image-20260625-064117.png
-Metric Name
-
-Required Labels
-
-jvm_memory_used_bytes
-
-namespace
-
- pod
-
- area=”heap”
-
-jvm_memory_committed_bytes
-
-jvm_memory_max_bytes
-
-5. Threadpool for handling external requests
-image-20260625-064205.png
-Metric Name
-
-Required Labels
-
-jetty_threads_config_max
-
-namespace
-
-pod
-
- 
-
-jetty_threads_config_min
-
-jetty_threads_current
-
-jetty_threads_idle
-
-jetty_threads_busy
-
-jetty_threads_jobs
-
-6. Total number of threads
-image-20260625-064241.png
-Metric Name
-
-Required Labels
-
-container_threads
-
-namespace
-
-pod
-
-container="mendix"
-
-jvm_threads_live_threads
-
-namespace
-
-pod
-
-jvm_threads_daemon_threads
-
-7. Container CPU usage
-image-20260625-064312.png
-Metric Name
-
-Required Labels
-
-container_cpu_usage_seconds_total
-
-namespace
-
-pod
-
-container="mendix"
-
-kube_pod_container_resource_requests
-
-namespace
-
-pod 
-
-container="mendix"
-
-resource="cpu"
-
-unit="core"
-
-kube_pod_container_resource_limits
-
-8. Network
-image-20260625-064447.png
-Metric Name
-
-Required Labels
-
-Metric Name
-
-Required Labels
-
-container_network_transmit_bytes_total
-
-namespace
-
- pod
-
-container_network_receive_bytes_total
-
-jetty_connections_bytes_in_bytes_sum
-
-jetty_connections_bytes_out_bytes_sum
-
-For more details on Grafana and Prometheus API integration, please refer to: 
-Grafana and Prometheus Integration
- 
+For more information about Grafana and Prometheus API integration, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).

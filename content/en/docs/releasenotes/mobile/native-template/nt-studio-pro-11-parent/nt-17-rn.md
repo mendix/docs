@@ -5,6 +5,14 @@ weight: 8
 description: "Native Template 17"
 ---
 
+## 17.4.2
+
+**Release date: Aug 24, 2026**
+
+- We hardened the Android main screen against overlay and tapjacking attacks, and removed the unused `SYSTEM_ALERT_WINDOW` permission.
+- We fixed an issue that could cause apps to restart repeatedly after an OTA update on iOS.
+- Replaced @notifee/react-native with react-native-notify-kit library.
+
 ## 17.4.1
 
 **Release date: Aug 7, 2026**

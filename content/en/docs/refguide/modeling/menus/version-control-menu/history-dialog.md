@@ -31,20 +31,21 @@ There are different filter options available to help find specific revisions:
 * The document filter allows selecting a document, such as a specific microflow, to filter all revisions on.
 * The branch line filter limits the history to commits from a selected branch. See [Branch Line Filter](#branch-line-filter) below.
 
-#### Branch Line Filter{#branch-line-filter}
+#### Branch Line Filter {#branch-line-filter}
 
-The **Branch Line** ComboBox is always visible in the History pane toolbar. It filters the commit history to show only commits from a selected branch line.
+The **Branch Line** drop-down list is in the **History** dialog toolbar. It filters the commit history to show only commits from a selected branch line.
 
-By default, the ComboBox displays the current branch name and no filter is active, so the history shows all commits on the current branch. The current branch is highlighted at the top of the dropdown list; all other branches are listed alphabetically.
+By default, no filter is active and the history shows all commits on the current branch. The current branch is highlighted at the top of the drop-down list; all other branches are listed alphabetically.
 
-To filter by branch:
+To filter by branch, do the following:
 
-1. Click or type in the **Select branch line** ComboBox in the toolbar.
-2. Select a branch from the dropdown list, or type to narrow the list.
-3. The history grid filters immediately and a **Clear branch filter** button appears to the right of the ComboBox.
-4. To clear the filter, click **Clear branch filter** — the ComboBox resets to the current branch and the **Clear branch filter** button is hidden.
+1. Click the **Branch line** drop-down list in the toolbar.
+2. Select a branch from the drop-down list, or type its name to narrow the list.
+The history grid filters commits from the selected branch.
 
-To reload the branch list without losing your current filter selection, click the **Refresh branch list** button to the right of the ComboBox.
+ When the filter is active, the **Clear branch filter** button appears to the right of the drop-down list. To clear the filter, click **Clear branch filter** and the filter resets to the current branch.
+
+To reload the branch list without losing your current filter selection, click the **Refresh branch list** icon to the right of the drop-down list.
 
 ### Content
 

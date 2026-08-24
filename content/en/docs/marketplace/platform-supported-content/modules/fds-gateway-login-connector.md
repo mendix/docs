@@ -7,7 +7,7 @@ description: "Describes how to install and configure the FDS Gateway Login Conne
 
 ## Introduction
 
-The [FDS Gateway Login Connector](placeholder) enables Single Sign-On (SSO) for Siemens products by integrating Mendix applications with Siemens Foundational Services (FDS).
+The [FDS Gateway Login Connector](https://marketplace.mendix.com/link/component/303885) enables Single Sign-On (SSO) for Siemens products by integrating Mendix applications with Siemens Foundational Services (FDS).
 
 Instead of authenticating users directly, the connector delegates authentication to the FDS Gateway, a shared access layer for Siemens Xcelerator applications and services that integrates with FDS IAM. Depending on the customer's FDS configuration, users can sign in using either their Siemens ID or their organization's workforce identity provider, such as Microsoft Entra ID. This provides a consistent, secure authentication experience and allows organizations to continue using their existing identity and access management (IAM) infrastructure.
 
@@ -56,7 +56,7 @@ For onboarding support or questions about FDS services, contact the [FDSOne Help
 
 ## Installation
 
-1. Import the [FDS Gateway Login Connector](placeholder) module into your app from the Mendix Marketplace.
+1. Import the [FDS Gateway Login Connector](https://marketplace.mendix.com/link/component/303885) module into your app from the Mendix Marketplace.
 2. In the **Runtime** tab of **App Settings**, set `FDSGatewayLoginConnector.ASU_InitializeAuth` as the **After startup** microflow.
 3. Configure the login page. For more information, see the [Configuring the SSO Redirect](#sso) section below.
 4. Configure the required constants. For more information, see the [Configuring the Constants](#constants) section below.
@@ -147,5 +147,5 @@ To use custom user provisioning, do the following:
 ### Mendix Cloud Portal Runtime Setting
 
 Set the **ApplicationRootUrl** in the **Runtime** tab of Mendix Cloud Portal when deploying your app. Use the following format:
-`http://<tenant>.<region>`.sws.siemens.com/`<appname>-<provider>/`.
+`http://<tenant>.<region>.sws.siemens.com/<appname>-<provider>/`.
 Once configured, you can access the web application using the same URL.

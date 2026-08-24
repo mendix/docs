@@ -501,7 +501,7 @@ The following constants are optional:
 when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not need to set **ClientSecret** constant.
 {{% /alert %}}
 
-* **JWT_ALG** (*default: RS256*) – JWT signing algorithm
+* **JWTSignAlgorithm** (*default: RS256*) – JWT signing algorithm
 
     Example: `ES256`, `ES384`, `ES512`, `PS256`, `PS384`, `PS512`, `RS256`,`RS384`, and `RS512`
 

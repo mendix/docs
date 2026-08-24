@@ -117,6 +117,8 @@ Controlling the configuration using constants requires an app restart, and it is
 
 Custom user provisioning flows created for a SAML V3.x are still supported in V4.x but cannot be configured during design/deploy-time.
 
+The SAML module does not support mobile apps. If you want your mobile Mendix app to sign in via Single Sign-On (SSO), use [Mobile SSO](/appstore/modules/mobile-sso/).
+
 ### Prerequisites {#dependencies}
 
 * For apps running outside of Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured.

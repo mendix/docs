@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  version: 1.0.0
+  version: 1.0.1
   title: Marketplace Service
   description: 'Use Marketplace Service API to manage marketplace contents (Packages and Versions) creation and modification, access and share by user and groups.'
 servers:
@@ -19,7 +19,7 @@ paths:
 
         - name = Package name.
 
-        - category and subcategory = category and subcategory name, if both parameters are used in the same request, subcategory must be associated to an existing category otherwise the request will fail.
+        - category and appCategory = category and appCategory name, if both parameters are used in the same request, appCategory must be associated to an existing category otherwise the request will fail.
 
         - modelerMajorVersion = 7, 8, 9 or 10 for Studio Pro major version.
 
@@ -40,11 +40,11 @@ paths:
           in: query
           schema:
             type: string
-        - name: category
+        - name: appContentTypeName
           in: query
           schema:
             type: string
-        - name: subcategory
+        - name: appCategoryName
           in: query
           schema:
             type: string
@@ -82,8 +82,6 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/packages'
-        '201':
-          description: Created
         '400':
           $ref: '#/components/responses/error-400'
         '401':
@@ -92,10 +90,8 @@ paths:
           $ref: '#/components/responses/packages'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
+
+
     post:
       tags:
         - packages
@@ -119,8 +115,8 @@ paths:
                 value:
                   name: Video Player
                   description: 'Play you video, those things on youtube'
-                  categoryName: Widgets
-                  subcategoryName: Display Widgets
+                  appContentTypeName: Widgets
+                  # appCategoryName: Display Widgets
                   studioProVersion: 9.24.3
                   versionMajor: 1
                   versionMinor: 0
@@ -139,22 +135,22 @@ paths:
                       fileName: VideoPlayer_ss1.jpg
                     - base64EncodedContent: base64EncodedContent string of screenshot jpeg/jpg/png file
                       fileName: VideoPlayer_ss2.jpg
+                  appCategories:
+                    - name: "SAP Connector"
+
       responses:
         '201':
           $ref: '#/components/responses/package'
         '400':
-          $ref: '#/components/responses/error-400'
+          $ref: '#/components/responses/error-400-package'
         '401':
           $ref: '#/components/responses/error-401'
         '403':
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-      x-codegen-request-body-name: PackageInput
+
+
   '/packages/{packageId}/versions':
     get:
       tags:
@@ -171,14 +167,15 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/versions'
+        '400':
+          $ref: '#/components/responses/error-400'
         '401':
           $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
+
     post:
       tags:
         - packages
@@ -208,7 +205,7 @@ paths:
                 value:
                   description: 'Play you video, those things on youtube'
                   category: Widgets
-                  subcategory: Display Widgets
+                  appCategory: Display Widgets
                   studioProVersion: 9.24.3
                   versionMajor: 1
                   versionMinor: 0
@@ -235,11 +232,8 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-      x-codegen-request-body-name: VersionInput
+
+
   '/packages/{packageId}':
     get:
       tags:
@@ -262,10 +256,7 @@ paths:
           $ref: '#/components/responses/error-401'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
+
     put:
       tags:
         - packages
@@ -296,8 +287,8 @@ paths:
                 value:
                   name: Video Player
                   description: 'Play you video, those things on youtube'
-                  categoryName: Widgets
-                  subcategoryName: Display Widgets
+                  appContentTypeName: Widgets
+                  # appCategoryName: Display Widgets
                   studioProVersion: 9.24.3
                   versionMajor: 1
                   versionMinor: 0
@@ -327,11 +318,7 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-      x-codegen-request-body-name: PackageInput
+
     delete:
       tags:
         - packages
@@ -355,10 +342,8 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
+
+
   '/packages/{packageId}/groups':
     get:
       tags:
@@ -381,10 +366,8 @@ paths:
           $ref: '#/components/responses/error-401'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
+
+
   '/packages/{packageId}/requests':
     post:
       tags:
@@ -439,11 +422,8 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-      x-codegen-request-body-name: ObjectInput
+
+
   '/packages/{packageId}/owner':
     put:
       tags:
@@ -480,11 +460,8 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-      x-codegen-request-body-name: UserInput
+
+
   '/packages/{packageId}/request':
     put:
       tags:
@@ -524,14 +501,12 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
+
+
   '/versions/{versionId}/download':
     get:
       tags:
-        - version
+        - versions
       summary: Download a published content
       description: Download a published content with version uuid
       operationId: DownloadVersion
@@ -559,14 +534,12 @@ paths:
           $ref: '#/components/responses/error-401'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
+
+
   '/versions/{versionId}':
     get:
       tags:
-        - version
+        - versions
       summary: Get a single version of an existing package
       description: Get a single version of an existing package
       operationId: GetVersion
@@ -585,13 +558,11 @@ paths:
           $ref: '#/components/responses/error-401'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
+
+
     put:
       tags:
-        - version
+        - versions
       summary: Update a single version of an existing package
       description: Update a single version of an existing package
       operationId: UpdateVersion
@@ -638,14 +609,11 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-      x-codegen-request-body-name: VersionInput
+
+
     delete:
       tags:
-        - version
+        - versions
       summary: Delete a version of package
       description: Delete a version of package
       operationId: DeleteVersion
@@ -666,14 +634,12 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
+
+
   '/versions/{versionId}/request':
     put:
       tags:
-        - version
+        - versions
       summary: Request to publish/retire/activate a version of package
       description: |-
         ### Use this PUT method to publish/retire/activate a version of an existing content item that was created using the POST /version operation
@@ -705,92 +671,41 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-  /categories:
+
+
+  /appcontenttypes:
     get:
       tags:
-        - category
-      summary: Query all categories
-      description: Query all categories
+        - appcontenttypes
+      summary: Query all AppContentTypes
+      description: Query all AppContentTypes
       operationId: GetAllcategories
+
       responses:
         '200':
-          $ref: '#/components/responses/categories'
-        '400':
-          $ref: '#/components/responses/error-400'
+          $ref: '#/components/responses/appcontenttypes'
         '401':
           $ref: '#/components/responses/error-401'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-  '/subcategories/{subcategoryId}':
+
+
+  '/appcategories/{appCategoryId}':
     get:
       tags:
-        - subcategory
-      summary: Get a single subcategory by id
-      description: Get a single subcategory by id
-      operationId: GetSubcategory
+        - appcategories
+      summary: Get a single appCategory by id
+      description: Get a single appCategory by id
+      operationId: GetAppCategory
       parameters:
-        - name: subcategoryId
+        - name: appCategoryId
           in: path
           required: true
           schema:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/subcategory'
-        '201':
-          description: Created
-        '400':
-          description: Bad Request
-        '401':
-          description: Authentication information is missing or invalid
-          headers:
-            WWW-Authenticate:
-              schema:
-                type: string
-        '403':
-          description: Forbidden
-        '404':
-          description: Not Found
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-    put:
-      tags:
-        - subcategory
-      summary: Update subcategory by id
-      description: Update subcategory by id
-      operationId: UpdateSubcategory
-      parameters:
-        - name: subcategoryId
-          in: path
-          required: true
-          schema:
-            type: integer
-      requestBody:
-        description: Input subcategory
-        required: false
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/SubcategoryInput'
-            examples:
-              Input subcategory:
-                value:
-                  parentCategoryId: 7
-                  subcategoryName: MyModules
-                  customized: true
-      responses:
-        '200':
-          $ref: '#/components/responses/subcategory'
+          $ref: '#/components/responses/appCategory'
         '400':
           $ref: '#/components/responses/error-400'
         '401':
@@ -799,26 +714,59 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-      x-codegen-request-body-name: SubcategoryInput
+
+    put:
+      tags:
+        - appcategories
+      summary: Update appCategory by id
+      description: Update appCategory by id
+      operationId: UpdateAppCategory
+      parameters:
+        - name: appCategoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Input appCategory
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AppCategoryInput'
+            examples:
+              Input appCategory:
+                value:
+                  parentCategoryId: 7
+                  appCategoryName: MyModules
+                  customized: true
+      responses:
+        '200':
+          $ref: '#/components/responses/appCategory'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
     delete:
       tags:
-        - subcategory
-      summary: Delete subcategory by id
-      description: Delete subcategory by id
-      operationId: DeleteSubcategory
+        - appcategories
+      summary: Delete appCategory by id
+      description: Delete appCategory by id
+      operationId: DeleteAppCategory
       parameters:
-        - name: subcategoryId
+        - name: appCategoryId
           in: path
           required: true
           schema:
             type: integer
       responses:
         '204':
-          description: Delete subcategory successfully
+          description: Delete appCategory successfully
         '400':
           $ref: '#/components/responses/error-400'
         '401':
@@ -827,33 +775,31 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-  /subcategories:
+
+        
+  /appcategories:
     post:
       tags:
-        - subcategory
-      summary: Create a new subcategory
-      description: Create a new subcategory
-      operationId: CreateSubcategory
+        - appcategories
+      summary: Create a new appCategory
+      description: Create a new appCategory
+      operationId: CreateAppCategory
       requestBody:
-        description: Input new subcategory
+        description: Input new appCategory
         required: false
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SubcategoryInput'
+              $ref: '#/components/schemas/AppCategoryInput'
             examples:
-              Input new subcategory:
+              Input new appCategory:
                 value:
                   parentCategoryId: 7
-                  subcategoryName: MyNewSubcategoryName
+                  appCategoryName: MyNewAppCategoryName
                   customized: true
       responses:
         '201':
-          $ref: '#/components/responses/subcategory'
+          $ref: '#/components/responses/appCategory'
         '400':
           $ref: '#/components/responses/error-400'
         '401':
@@ -862,22 +808,66 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
-      security:
-        - mxtoken: []
-      servers:
-        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
-      x-codegen-request-body-name: SubcategoryInput
-tags:
-  - name: packages
-    description: ''
-  - name: version
-    description: ''
-  - name: category
-    description: ''
-  - name: subcategory
-    description: ''
-  - name: appstatus
-    description: ''
+
+    get:
+      tags:
+        - appcategories
+      summary: Get all App Categories
+      description: Get all App Categories
+      operationId: GetAppCategories
+
+      responses:
+        '200':
+          $ref: '#/components/responses/appcategories'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /taxonomy/studioproversions:
+    get:
+      tags:
+        - taxonomy
+      responses:
+        '200':
+          $ref: '#/components/responses/studioproversions'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /taxonomy/licenses:
+    get:
+      tags:
+        - taxonomy
+      responses:
+        '200':
+          $ref: '#/components/responses/licenses'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /taxonomy/industries:
+    get:
+      tags:
+        - taxonomy
+      responses:
+        '200':
+          $ref: '#/components/responses/industries'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+          
 components:
   parameters:
     packageId:
@@ -900,26 +890,38 @@ components:
         format: uuid
         pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
         example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
-    subcategoryId:
-      name: subcategoryId
+    appCategoryId:
+      name: appCategoryId
       in: path
-      description: Subcategory Id
+      description: AppCategory Id
       required: true
       schema:
         type: number
         minimum: 1
         maximum: 65535
         example: 12
-  securitySchemes:
-    basicAuth:
-      type: http
-      scheme: basic
-    mxtoken:
-      type: apiKey
-      name: Authorization
-      in: header
+
   responses:
+
     error-400:
+      description: Invalid input parameters
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid input id or name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: id
+                    reason: Invalid input id
+                  - name: name
+                    reason: Invalid input name
+
+    error-400-package:
       description: Invalid input parameter or request body
       content:
         application/json:
@@ -934,16 +936,16 @@ components:
                 invalid-params:
                   - name: name
                     reason: Invalid package name
-            400 - Invalid category and subcategory for package:
+            400 - Invalid App Content Type and Category for package:
               value:
                 status: 400
                 title: Bad Request
                 detail: Invalid parameters
                 invalid-params:
-                  - name: category
-                    reason: Invalid category for package
-                  - name: subcategory
-                    reason: Invalid subcategory for package
+                  - name: appContentTypeName
+                    reason: Invalid App Content Type Name for package
+                  - name: appCategories
+                    reason: Invalid App Category Name for package
             400 - Invalid license for package:
               value:
                 status: 400
@@ -1029,10 +1031,10 @@ components:
                 type: integer
               name:
                 type: string
-              categoryName:
+              appContentTypeName:
                 type: string
-              subcategoryName:
-                type: string
+              # appCategoryName:
+              #   type: string
               ownerUserName:
                 type: string
               ownerGroupName:
@@ -1043,6 +1045,17 @@ components:
                 type: string
               downloads:
                 type: integer
+
+              appCategories:
+                type: array
+                description: Package App Category.
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Package App Category name.
+
               version:
                 type: object
                 properties:
@@ -1084,12 +1097,13 @@ components:
                     type: string
                   organisationName:
                     type: string
+
             x-examples:
               Example 1:
                 id: 448
                 name: Video Player
-                categoryName: Widgets
-                subcategoryName: Display Widgets
+                appContentTypeName: Widgets
+                # appCategoryName: Display Widgets
                 ownerUserName: John
                 ownerGroupName: BA
                 status: Published
@@ -1115,13 +1129,16 @@ components:
                   license: Apache V2
                   supportLevel: Community
                   organisationName: Mendix
+                appCategories:
+                  - name: "SAP Connector"
+
           examples:
             Published package:
               value:
                 id: 448
                 name: Video Player
-                categoryName: Widgets
-                subcategoryName: Display Widgets
+                appContentTypeName: Widgets
+                # appCategoryName: Display Widgets
                 ownerUserName: John
                 ownerGroupName: BA
                 status: Published
@@ -1147,12 +1164,15 @@ components:
                   license: Apache V2
                   supportLevel: Community
                   organisationName: Mendix
+                appCategories:
+                  - name: "SAP Connector"
+
             Draft package:
               value:
                 id: 448
                 name: Video Player
-                categoryName: Widgets
-                subcategoryName: Display Widgets
+                appContentTypeName: Widgets
+                # appCategoryName: Display Widgets
                 ownerUserName: John
                 ownerGroupName: BA
                 status: Draft
@@ -1178,12 +1198,15 @@ components:
                   license: Apache V2
                   supportLevel: Community
                   organisationName: Mendix
+                appCategories:
+                  - name: "SAP Connector"
+
             Pending package:
               value:
                 id: 448
                 name: Video Player
-                categoryName: Widgets
-                subcategoryName: Display Widgets
+                appContentTypeName: Widgets
+                # appCategoryName: Display Widgets
                 ownerUserName: John
                 ownerGroupName: BA
                 status: WaitingForApproval
@@ -1209,12 +1232,15 @@ components:
                   license: Apache V2
                   supportLevel: Community
                   organisationName: Mendix
+                appCategories:
+                  - name: "SAP Connector"
+
             Declined package:
               value:
                 id: 448
                 name: Video Player
-                categoryName: Widgets
-                subcategoryName: Display Widgets
+                appContentTypeName: Widgets
+                # appCategoryName: Display Widgets
                 ownerUserName: John
                 ownerGroupName: BA
                 status: Declined
@@ -1240,12 +1266,15 @@ components:
                   license: Apache V2
                   supportLevel: Community
                   organisationName: Mendix
+                appCategories:
+                  - name: "SAP Connector"
+
             Retired package:
               value:
                 id: 448
                 name: Video Player
-                categoryName: Widgets
-                subcategoryName: Display Widgets
+                appContentTypeName: Widgets
+                # appCategoryName: Display Widgets
                 ownerUserName: John
                 ownerGroupName: BA
                 status: Retired
@@ -1271,6 +1300,9 @@ components:
                   license: Apache V2
                   supportLevel: Community
                   organisationName: Mendix
+                appCategories:
+                  - name: "SAP Connector"
+
     packages:
       description: Package list response
       content:
@@ -1284,10 +1316,10 @@ components:
                   type: integer
                 name:
                   type: string
-                categoryName:
+                appContentTypeName:
                   type: string
-                subcategoryName:
-                  type: string
+                # appCategoryName:
+                #   type: string
                 ownerUserName:
                   type: string
                 ownerGroupName:
@@ -1298,6 +1330,17 @@ components:
                   type: string
                 downloads:
                   type: integer
+
+                appCategories:
+                  type: array
+                  description: Package App Category.
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        description: Package App Category name.
+
                 version:
                   type: object
                   properties:
@@ -1339,12 +1382,13 @@ components:
                       type: string
                     organisationName:
                       type: string
+
             x-examples:
               Example 1:
                 - id: 438
                   name: Blank Web App
-                  categoryName: Create New App
-                  subcategoryName: Starter Apps
+                  appContentTypeName: Create New App
+                  # appCategoryName: Starter Apps
                   ownerUserName: John
                   ownerGroupName: BA
                   status: Published
@@ -1370,10 +1414,13 @@ components:
                     license: Apache V2
                     supportLevel: Community
                     organisationName: Mendix
+                  appCategories:
+                    - name: "SAP Connector"
+
                 - id: 448
                   name: Video Player
-                  categoryName: Widgets
-                  subcategoryName: Display Widgets
+                  appContentTypeName: Widgets
+                  # appCategoryName: Display Widgets
                   ownerUserName: John
                   ownerGroupName: BA
                   status: Published
@@ -1399,13 +1446,16 @@ components:
                     license: Apache V2
                     supportLevel: Community
                     organisationName: Mendix
+                  appCategories:
+                    - name: "SAP Connector"
+
           examples:
             Package list:
               value:
                 - id: 438
                   name: Blank Web App
-                  categoryName: Create New App
-                  subcategoryName: Starter Apps
+                  appContentTypeName: Create New App
+                  # appCategoryName: Starter Apps
                   ownerUserName: John
                   ownerGroupName: BA
                   status: Published
@@ -1431,10 +1481,13 @@ components:
                     license: Apache V2
                     supportLevel: Community
                     organisationName: Mendix
+                  appCategories:
+                    - name: "SAP Connector"
+
                 - id: 448
                   name: Video Player
-                  categoryName: Widgets
-                  subcategoryName: Display Widgets
+                  appContentTypeName: Widgets
+                  # appCategoryName: Display Widgets
                   ownerUserName: John
                   ownerGroupName: BA
                   status: Published
@@ -1460,6 +1513,8 @@ components:
                     license: Apache V2
                     supportLevel: Community
                     organisationName: Mendix
+                  appCategories:
+                    - name: "SAP Connector"
     version:
       description: Package version
       content:
@@ -1723,8 +1778,107 @@ components:
                   name: E2ETest
                 - id: 27d01bee-6053-4006-b409-be1f30761d2f
                   name: Group B
-    categories:
-      description: Category list
+
+    industries:
+      description: Industry list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                Name:
+                  type: string
+          examples:
+            Industry list:
+              value:
+                - Name: Public Sector
+                - Name: Agnostic
+                - Name: Insurance
+                - Name: Retail
+                - Name: Manufacturing Industries
+                - Name: Financial Services
+    licenses:
+      description: License list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                Name:
+                  type: string
+                Url:
+                  type: string
+          examples:
+            Studio Pro version list:
+              value:
+                - Name: MIT
+                  Url: https://opensource.org/licenses/MIT
+                - Name: Apache V2
+                  Url: https://www.apache.org/licenses/LICENSE-2.0
+                - Name: BSD-2-Clause
+                  Url: https://opensource.org/licenses/BSD-2-Clause
+                - Name: Mendix EULA
+                  Url: https://www.mendix.com/terms-of-use
+
+    studioproversions:
+      description: Studio Pro version list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                Version:
+                  type: string
+                StudioProVersionSort:
+                  type: integer
+                Editable:
+                  type: boolean
+                VisibleInAddingContent:
+                  type: boolean                  
+          examples:
+            Studio Pro version list:
+              value:
+                - Version: "9.24.14"
+                  StudioProVersionSort: 1
+                  Editable: false
+                  VisibleInAddingContent: true
+                - Version: "9.24.16"
+                  StudioProVersionSort: 2
+                  Editable: false
+                  VisibleInAddingContent: true
+                - Version: "9.24.20"
+                  StudioProVersionSort: 3
+                  Editable: false
+                  VisibleInAddingContent: true
+                - Version: "9.24.24"
+                  StudioProVersionSort: 4
+                  Editable: false
+                  VisibleInAddingContent: true
+                - Version: "10.6.11"
+                  StudioProVersionSort: 5
+                  Editable: false
+                  VisibleInAddingContent: true
+                - Version: "10.18.0"
+                  StudioProVersionSort: 6
+                  Editable: false
+                  VisibleInAddingContent: true
+                - Version: "10.24.11"
+                  StudioProVersionSort: 7
+                  Editable: false
+                  VisibleInAddingContent: true
+                - Version: "11.12.1"
+                  StudioProVersionSort: 8
+                  Editable: false
+                  VisibleInAddingContent: true
+
+    appcontenttypes:
+      description: App Content Type list
       content:
         application/json:
           schema:
@@ -1736,7 +1890,123 @@ components:
                   type: integer
                 name:
                   type: string
-                subcategories:
+          examples:
+            App Content Type list:
+              value:
+                - id: 1
+                  name: Widgets
+                - id: 2
+                  name: Module
+                - id: 3
+                  name: Solution
+                - id: 4
+                  name: "Starter Template"
+                - id: 5
+                  name: "Industry Template"
+                - id: 6
+                  name: Service
+                - id: 7
+                  name: Sample
+
+    appcategories:
+      description: App Category list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                customized:
+                  type: boolean
+          examples:
+            App Category list:
+              value:
+                - id: 1
+                  name: "Artificial Intelligence"
+                  customized: false
+                - id: 2
+                  name: Communication
+                  customized: false
+                - id: 3
+                  name: Data
+                  customized: false
+                - id: 4
+                  name: "Internet-Of-Things"
+                  customized: false
+                - id: 5
+                  name: Visualization
+                  customized: false
+                - id: 6
+                  name: AWS
+                  customized: false
+                - id: 7
+                  name: Connectors
+                  customized: false
+                - id: 8
+                  name: "SAP Connector"
+                  customized: false
+                - id: 9
+                  name: "SAP Template"
+                  customized: false
+                - id: 10
+                  name: Mobile
+                  customized: false
+                - id: 11
+                  name: "Starter Apps"
+                  customized: false
+                - id: 12
+                  name: "Introduction Tour"
+                  customized: false
+                - id: 13
+                  name: "University Program"
+                  customized: false
+                - id: 14
+                  name: Authentication
+                  customized: false
+                - id: 15
+                  name: "Import/Export"
+                  customized: false
+                - id: 16
+                  name: Scheduling
+                  customized: false
+                - id: 17
+                  name: Tracing
+                  customized: false
+                - id: 18
+                  name: "User Interface"
+                  customized: false
+                - id: 19
+                  name: Utility
+                  customized: false
+                - id: 22
+                  name: test
+                  customized: true
+                - id: 24
+                  name: wffef
+                  customized: true
+                - id: 52
+                  name: categoryForAPIpremissioncheckonly
+                  customized: true
+
+    categories:
+      description: App Category list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                appcategories:
                   type: array
                   items:
                     type: object
@@ -1751,7 +2021,7 @@ components:
               Example 1:
                 - id: 1
                   name: Widgets
-                  subcategories:
+                  appcategories:
                     - id: 18
                       name: Input Widgets
                       customized: false
@@ -1775,7 +2045,7 @@ components:
                       customized: false
                 - id: 2
                   name: Connectors
-                  subcategories:
+                  appcategories:
                     - id: 19
                       name: Connectors
                       customized: false
@@ -1793,13 +2063,13 @@ components:
                       customized: false
                 - id: 3
                   name: Layouts
-                  subcategories:
+                  appcategories:
                     - id: 35
                       name: Layouts
                       customized: false
                 - id: 4
                   name: Solutions
-                  subcategories:
+                  appcategories:
                     - id: 5
                       name: Industry Solutions
                       customized: false
@@ -1808,7 +2078,7 @@ components:
                       customized: false
                 - id: 5
                   name: UI Resources
-                  subcategories:
+                  appcategories:
                     - id: 33
                       name: UI Resources
                       customized: false
@@ -1817,7 +2087,7 @@ components:
                       customized: false
                 - id: 6
                   name: App Services
-                  subcategories:
+                  appcategories:
                     - id: 24
                       name: Cognitive AI Services
                       customized: false
@@ -1838,7 +2108,7 @@ components:
                       customized: false
                 - id: 7
                   name: Modules
-                  subcategories:
+                  appcategories:
                     - id: 2
                       name: Authentication
                       customized: false
@@ -1859,13 +2129,13 @@ components:
                       customized: false
                 - id: 8
                   name: Themes
-                  subcategories:
+                  appcategories:
                     - id: 32
                       name: Themes
                       customized: false
                 - id: 9
                   name: Samples
-                  subcategories:
+                  appcategories:
                     - id: 7
                       name: Examples
                       customized: false
@@ -1874,7 +2144,7 @@ components:
                       customized: false
                 - id: 10
                   name: Create New App
-                  subcategories:
+                  appcategories:
                     - id: 8
                       name: Introduction Tour
                       customized: false
@@ -1901,22 +2171,22 @@ components:
                       customized: false
                 - id: 11
                   name: Solution Templates
-                  subcategories:
+                  appcategories:
                     - id: 34
                       name: Solution Templates
                       customized: false
                 - id: 12
                   name: Platform Services
-                  subcategories:
+                  appcategories:
                     - id: 37
                       name: Platform Services
                       customized: false
           examples:
-            Category list:
+            App Category list:
               value:
                 - id: 1
                   name: Widgets
-                  subcategories:
+                  appcategories:
                     - id: 18
                       name: Input Widgets
                       customized: false
@@ -1940,7 +2210,7 @@ components:
                       customized: false
                 - id: 2
                   name: Connectors
-                  subcategories:
+                  appcategories:
                     - id: 19
                       name: Connectors
                       customized: false
@@ -1958,13 +2228,13 @@ components:
                       customized: false
                 - id: 3
                   name: Layouts
-                  subcategories:
+                  appcategories:
                     - id: 35
                       name: Layouts
                       customized: false
                 - id: 4
                   name: Solutions
-                  subcategories:
+                  appcategories:
                     - id: 5
                       name: Industry Solutions
                       customized: false
@@ -1973,7 +2243,7 @@ components:
                       customized: false
                 - id: 5
                   name: UI Resources
-                  subcategories:
+                  appcategories:
                     - id: 33
                       name: UI Resources
                       customized: false
@@ -1982,7 +2252,7 @@ components:
                       customized: false
                 - id: 6
                   name: App Services
-                  subcategories:
+                  appcategories:
                     - id: 24
                       name: Cognitive AI Services
                       customized: false
@@ -2003,7 +2273,7 @@ components:
                       customized: false
                 - id: 7
                   name: Modules
-                  subcategories:
+                  appcategories:
                     - id: 2
                       name: Authentication
                       customized: false
@@ -2024,13 +2294,13 @@ components:
                       customized: false
                 - id: 8
                   name: Themes
-                  subcategories:
+                  appcategories:
                     - id: 32
                       name: Themes
                       customized: false
                 - id: 9
                   name: Samples
-                  subcategories:
+                  appcategories:
                     - id: 7
                       name: Examples
                       customized: false
@@ -2039,7 +2309,7 @@ components:
                       customized: false
                 - id: 10
                   name: Create New App
-                  subcategories:
+                  appcategories:
                     - id: 8
                       name: Introduction Tour
                       customized: false
@@ -2066,18 +2336,18 @@ components:
                       customized: false
                 - id: 11
                   name: Solution Templates
-                  subcategories:
+                  appcategories:
                     - id: 34
                       name: Solution Templates
                       customized: false
                 - id: 12
                   name: Platform Services
-                  subcategories:
+                  appcategories:
                     - id: 37
                       name: Platform Services
                       customized: false
-    subcategory:
-      description: Subcategory
+    appCategory:
+      description: App Category
       content:
         application/json:
           schema:
@@ -2095,11 +2365,12 @@ components:
                 name: Authentication
                 customized: false
           examples:
-            Subcategory:
+            AppCategory:
               value:
                 id: 2
                 name: Authentication
                 customized: false
+
   schemas:
     PackageInput:
       type: object
@@ -2117,12 +2388,12 @@ components:
           minLength: 5
           maxLength: 8
           example: 9.24.3
-        categoryName:
+        appContentTypeName:
           type: string
-          description: Package category name.
-        subcategoryName:
-          type: string
-          description: Package subcategory name.
+          description: Package content type name.
+        # appCategoryName:
+        #   type: string
+        #   description: Package appCategory name.
         ownerGroupName:
           type: string
           description: Package owner group name.
@@ -2162,6 +2433,7 @@ components:
         documentation:
           type: string
           description: Package documentation text.
+
         screenshotInputs:
           type: array
           description: Package screenshot file.
@@ -2174,6 +2446,7 @@ components:
               fileName:
                 type: string
                 description: Package screenshot file name.
+
         sourceFileInput:
           type: object
           description: Package source mpk file.
@@ -2187,23 +2460,34 @@ components:
           required:
             - base64EncodedContent
             - fileName
+
+        appCategories:
+          type: array
+          description: Package App Category.
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Package App Category name.
       required:
         - name
         - description
         - studioProVersion
-        - categoryName
-        - subcategoryName
+        - appContentTypeName
+        # - appCategoryName
         - license
         - logoFile
         - releaseNotes
         - sourceFileInput
+
       x-examples:
         Example 1:
           name: Package name
           description: Package description
           studioProVersion: 9.24.3
-          categoryName: category name
-          subcategoryName: subcategory name
+          appContentTypeName: content type name
+          # appCategoryName: appCategory name
           visibility: All
           ownerGroupName: Package owner group name
           license: license for package
@@ -2219,6 +2503,9 @@ components:
           sourceFileInput:
             base64EncodedContent: <base64EncodedContent string of package mpk file>
             fileName: Package mpk file name
+          appCategories:
+            - name: "SAP Connector"
+
     VersionInput:
       type: object
       title: VersionInput
@@ -2295,8 +2582,7 @@ components:
               fileName:
                 type: string
                 description: Package version screenshot file name.
-            xml:
-              name: screenshotInput
+
       required:
         - studioProVersion
         - logoFile
@@ -2305,6 +2591,7 @@ components:
         - versionPatch
         - releaseNotes
         - sourceFileInput
+
       x-examples:
         Package version creation request:
           description: Package description
@@ -2321,8 +2608,7 @@ components:
           sourceFileInput:
             base64EncodedContent: <base64EncodedContent string of package mpk file>
             fileName: Package mpk file name
-      xml:
-        name: VersionInput
+
     OwnerInput:
       type: object
       title: OwnerInput
@@ -2342,35 +2628,33 @@ components:
         Package owner change request:
           userName: Package owner user name
           groupName: Package owner group name
-      xml:
-        name: OwnerInput
-    SubcategoryInput:
+
+    AppCategoryInput:
       type: object
-      title: SubcategoryInput
-      description: Subcategory creation request
+      title: AppCategoryInput
+      description: AppCategory creation request
       properties:
         parentCategoryId:
           type: integer
-          description: The parent category id of subcategory.
+          description: The parent category id of appCategory.
           format: int32
           minimum: 1
           maximum: 255
           default: 12
           example: 12
-        subcategoryName:
+        appCategoryName:
           type: string
-          description: Subcategory name.
+          description: AppCategory name.
           minLength: 1
           maxLength: 200
       required:
         - parentCategoryId
-        - subcategoryName
+        - appCategoryName
       x-examples:
-        Subcategory creation request:
+        AppCategory creation request:
           parentCategoryId: 7
-          subcategoryName: Subcategory name
-      xml:
-        name: SubcategoryInput
+          appCategoryName: AppCategory name
+
     error:
       type: object
       description: Error response
@@ -2408,5 +2692,27 @@ components:
           invalid-params:
             - name: name
               reason: Package name can not be empty
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
 security:
+  - basicAuth: []
   - mxtoken: []
+
+tags:
+  - name: packages
+    description: ''
+  - name: versions
+    description: ''
+  - name: appcontenttypes
+    description: ''
+  - name: appcategories
+    description: ''
+  - name: taxonomy
+    description: ''

@@ -29,6 +29,13 @@ Previous versions of the Operator did not manage `PodDisruptionBudgets`. Instead
 If you have manually created a `PodDisruptionBudget` for an app, delete it and instead specify the `PodDisruptionBudget` parameters [in the MendixApp CR](#pod-disruption-budget-in-standalone).
 {{% /alert %}}
 
+
+{{% alert color="info" %}}
+Mendix Operator 2.28.0 specifies `unhealthyPodEvictionPolicy: AlwaysAllow` in the `PodDisruptionBudget`, allowing Kubernetes to evict crashlooping or unavailable pods without applying rules from the `PodDisruptionBudget`.
+
+This prevents situations where a crashlooping pod could block node maintenance.
+{{% /alert %}}
+
 ## Prerequisites
 
 ## Prerequisites for Operator version 2.25.0 and Higher{#prerequisites-2.25.0}

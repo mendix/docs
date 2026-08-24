@@ -28,26 +28,26 @@ This control does not impose any requirements on organizations to use cryptograp
 
 The following controls are related to this control:
 
-* AC-2
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-7
-* AC-17
-* AC-18
-* AU-9
+* [AC-07](/private-mendix-platform/nist-controls/ac-07/)
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AC-18](/private-mendix-platform/nist-controls/ac-18/)
+* [AU-09](/private-mendix-platform/nist-controls/au-09/)
 * AU-10
 * CM-11
-* CP-9
-* IA-3
-* IA-7
-* MA-4
-* MP-2
-* MP-4
-* MP-5
-* SA-4
-* SC-8
-* SC-12
-* SC-28
-* SI-7
+* [CP-09](/private-mendix-platform/nist-controls/cp-09/)
+* IA-03
+* [IA-07](/private-mendix-platform/nist-controls/ia-07/)
+* MA-04
+* [MP-02](/private-mendix-platform/nist-controls/mp-02/)
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* [MP-05](/private-mendix-platform/nist-controls/mp-05/)
+* [SA-04](/private-mendix-platform/nist-controls/sa-04/)
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)
+* [SC-12](/private-mendix-platform/nist-controls/sc-12/)
+* [SC-02](/private-mendix-platform/nist-controls/sc-02/)8
+* SI-07
 
 For more information, refer to the NIST Special Publications 800-52, 800-56, 800-57, and 800-77.
 

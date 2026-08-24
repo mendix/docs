@@ -12,6 +12,25 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### August 14, 2026
+
+#### Mendix Operator v2.28.0 {#2.28.0}
+
+* We have updated Operator images from ubi9 to [Red Hat Hardened Images](https://www.redhat.com/en/products/hardened-images), achieving near-zero vulnerabilities. Mendix apps built with this version of the Operator will keep using ubi9 as the base image by default - it is possible to switch Mendix apps to Hardened Images in the Operator Configuration.
+* We have updated the Helm chart UI to include advanced Operator Configuration options.
+* We have updated some default options in the Helm chart to increase security.
+* The Helm chart now uses proxy and custom TLS configuration when registering Storage Plans in the Portal.
+* We have fixed an issue with enabling the Kubernetes Gateway API in existing clusters after an upgrade.
+* We have fixed an issue with configuring the Kubernetes Gateway API in non-interactive mode.
+* We have fixed an issue with enabling TLS in the the Kubernetes Gateway API. (Ticket 281256)
+* We have fixed an issue with applying nodeSelector configuration. (Ticket 283820)
+* We have fixed an issue where passwordless IAM or Managed Identity authentication would not update tokens while an app is starting, and caused database connection errors in apps that took 15+ minutes to start. (Ticket 282784)
+* We have fixed issue with uploading air-gapped images from the mxpc-cli Configuration Tool. (Ticket 283942)
+* We have improved error handling where an Azure and Blob Storage provisioners would fail with a 409 error when creating a Managed Identity. (Ticket 283808)
+* We have updated the PodDisruptionBudget to allow eviction of unhealthy pods by default. This will prevent crash-looping pods from blocking node maintenance.
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+* We have updated components to use Go 1.26 and the latest dependency versions in order to improve security score ratings for container images.
+
 ### July 23, 2026
 
 #### Portal Improvements

@@ -1,84 +1,18 @@
 ---
-title: "Private Mendix Platform Quick Start Guide"
-url: /private-mendix-platform/quickstart/
-description: "Documents the installation and upgrade process for the Private Mendix Platform."
+title: "Install Private Mendix Platform in GUI Mode"
+linktitle: "Interactive Installation"
+url: /private-mendix-platform/interactive-installation/
+description: "Documents the installation process for Private Mendix Platform in interactive (manual) mode."
 weight: 20
-aliases:
-    - /private-mendix-platform-quickstart/
 ---
 
 ## Introduction
 
-This document provides a comprehensive guide for installing Private Mendix Platform, along with its optional components, in your own Kubernetes environment.
+In interactive mode, you manually install Private Mendix Platform components. If you would like to perform an automatic installation instead, see [Install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/).
 
-Private Mendix Platform supports using secret storage. If required, you can store some configuration in a secret vault (for example, AWS, Azure, or Hashicorp) without setting up a storage plan, database plan, PCLM admin and Mendix admin info in the Private Mendix Platform installer.
- 
-{{% alert color="info" %}}
-Using a secret storage incorrectly may reduce the security of your app. Consult your secrets store provider to ensure that it is set up securely for your production environment.  
-{{% /alert %}}
+## Preparing the Installation Files
 
-### Overview
-
-Before you start the installation process, review the following considerations:
-
-#### FIPS Compliance
-
-Private Mendix Platform can run with FIPS-compliant encryption across the entire Platform, including Mendix Runtime, Private Mendix Platofrm itself, Mendix Operator, and Studio Pro.
-
-#### Installation Order
-
-Start the process by installing the Mendix Operator before you install the components. Some components are dependent on the Operator. Because of that, if you try to install a component without installing the Operator, the installation process fails and displays an error message.
-
-#### Installing Components
-
-Only the Private Cloud License Manager (PCLM) component is required. All other components are optional.
-
-The following components must be installed in the same namespace as Private Mendix Platform:
-
-* PCLM
-* Svix
-* Maia
-* Private Cloud components
-
-Other components, such as the Build agent and PDF DocGen module, can be installed in any namespace.
-
-If you add any components after installing Private Mendix Platform, you must re-run the Platform installer. For more information, see [Adding Additional Components After Installing the Private Mendix Platform](#adding-components).
-
-### Prerequisites {#prerequisites}
-
-Private Mendix Platform depends on Mendix on Kubernetes for the installation and deployment of Mendix apps.
-
-Before starting the installation process, make sure that you have all the necessary prerequisites:
-
-* A Kubernetes instance where the target namespace has already been created. For more information, see [Supported Providers: Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#supported-versions).
-* A PostgreSQL 12 database.
-* File storage. For more information, see [Supported Providers: File Storage](/developerportal/deploy/private-cloud-supported-environments/#file-storage).
-* A registry. For more information, see [Supported Providers: Container Registries](/developerportal/deploy/private-cloud-supported-environments/#container-registries).
-* A domain.
-* For the PCLM component:
-
-    * Mendix Operator in version 2.21.0 or above
-    * A dedicated Postgres or SQLServer database server with public accessibility set to **Yes**.
-
-* Optionally, if your Private Mendix Platform app requires its own certificate: a TLS certificate with HTTPS support.
-* An environment to run installer tools with the following requirements:
-
-    * A kubeconfig file with administrator privileges for your Kubernetes or OpenShift platform
-    * A command line terminal that supports the console API and mouse interactions. In Windows, this can be PowerShell or the Windows Command Prompt.
-    * For OpenShift clusters, OpenShift CLI. For more information, see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html).
-    * Kubectl installed if you are deploying to another Kubernetes platform. For more information, see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/).
-
-* Optionally, if you plan to install the Svix component:
-
-    * An existing PostgreSQL database instance.
-    * An optional Redis server version 6.2.0 or higher, for the task queue and cache. Using Redis is recommended for high availability, where you expect a high volume of webhook calls, or if you have multiple Svix servers. As a best practice, enable persistence in Redis so that tasks are persisted across Redis server restarts and upgrades.
-
-* If you plan to use the AWS Secret Manager, install an AWS provider at your cluster, as described in [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/).
-* If you plan to use Azure Key Vault, see [Configuring a Secret Store with Azure Key Vault](/developerportal/deploy/secret-store-credentials/#azure-key-vault).
-
-## Installing and Configuring the Mendix Operator {#install-operator}
-
-To install and configure the Mendix Operator, perform the following steps:
+Before you start the installation, download the required files by performing the following steps:
 
 1. Download the release binary from your [Private Mendix Platform download portal](https://privateplatform.mendix.com/). If you do not have access to the download portal, contact your Mendix partner for information.
 
@@ -93,87 +27,93 @@ To install and configure the Mendix Operator, perform the following steps:
     
     {{< figure src="/attachments/private-platform/pmp-binary.png" class="no-border" >}}
 
-3. Optional: If your clusters can connect to a public registry with a passable network, skip to step 4 below, otherwise initialize the installation by performing the following steps:
+## Optional: Initializing the Installation for Air-Gapped Environments
 
-    1. Upload the images to your private repository in an air-gapped environment.
+If your clusters can connect to a public registry with a passable network, skip to the next section, otherwise initialize the installation by performing the following steps:
 
-        ```text
-        ~/mpp-binary-linux$ ./installer init  migrate --help
-        Migrate Mendix Private Platform related image to your own registry
+1. Upload the images to your private repository in an air-gapped environment.
 
-        Usage:
-        installer init migrate [flags]
-        Flags:
-            -h, --help                 help for migrate
-            -r, --registryurl string   registry url (required)
-            -e, --repo string          Repository name
-            -u, --username string      Username (required) for your private registry
-        ```
+    ```text
+    ~/mpp-binary-linux$ ./installer init  migrate --help
+    Migrate Mendix Private Platform related image to your own registry
 
-        The destination image is named `${registryurl }/${repo}/mendix-private-platform: ${tag}`.
+    Usage:
+    installer init migrate [flags]
+    Flags:
+        -h, --help                 help for migrate
+        -r, --registryurl string   registry url (required)
+        -e, --repo string          Repository name
+        -u, --username string      Username (required) for your private registry
+    ```
+
+    The destination image is named `${registryurl }/${repo}/mendix-private-platform: ${tag}`.
     
-    2. The `registryurl` and `repo` are read from the input parameters. The `tag` is automatically read by the installer. If the repository does not exist, you must create it before running the `init migrate` command.
+2. The `registryurl` and `repo` are read from the input parameters. The `tag` is automatically read by the installer. If the repository does not exist, you must create it before running the `init migrate` command.
 
-        ```text
-        ~/mpp-binary-linux$ ./installer init migrate   -r [registry] -u  user -e [repositoryName]
-        Please enter user password: ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+    ```text
+    ~/mpp-binary-linux$ ./installer init migrate   -r [registry] -u  user -e [repositoryName]
+    Please enter user password: ***
 
-        Confirm password: ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
-        the config checksum is empty
-        The image destination[REDACTED] svix-server:v0.75.0
-        The image destiation [REDACTED] mendix-private-platform:1.4.0.80d447b1
-        the config checksum is empty
-        The image destiation [REDACTED] mxpc-test:1.0
-        the config checksum is empty
-        The image destiation [REDACTED] privatecloud-license-manager:0.3.0
-        svix-server_v0.75.0 => [REDACTED] svix-server:v0.75.0 - ok
-        mendix-private-platform_1.4.0.80d447b1 => [REDACTED] mendix-private-platform:1.4.0.80d447b1 - ok
-        mxpc-test_1.0 => [REDACTED] mxpc-test:1.0 - ok
-        privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
-        ```
+    Confirm password: ***
+    the config checksum is empty
+    The image destination[REDACTED] svix-server:v0.75.0
+    The image destiation [REDACTED] mendix-private-platform:1.4.0.80d447b1
+    the config checksum is empty
+    The image destiation [REDACTED] mxpc-test:1.0
+    the config checksum is empty
+    The image destiation [REDACTED] privatecloud-license-manager:0.3.0
+    svix-server_v0.75.0 => [REDACTED] svix-server:v0.75.0 - ok
+    mendix-private-platform_1.4.0.80d447b1 => [REDACTED] mendix-private-platform:1.4.0.80d447b1 - ok
+    mxpc-test_1.0 => [REDACTED] mxpc-test:1.0 - ok
+    privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
+    ```
 
-    3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
+3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
 
-4. Perform the base installation by doing the following steps:
+##  Installing the Mendix Operator {#install-operator}
 
-    1. Run one of the following commands, where `-n` indicates the namespace: 
+Install the Mendix Operator by doing the following steps:
+
+1. Run one of the following commands, where `-n` indicates the namespace: 
     
-        * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
-        * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
+    * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
+    * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
 
-            In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
+    In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
     
-    2. Click **Base Installation**, and then select the cluster type.
+2. Click **Base Installation**, and then select the cluster type.
 
-        {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}
 
-    3. Click **Run Installer** to install the Mendix Operator in your cluster.
+3. Click **Run Installer** to install the Mendix Operator in your cluster.
 
-5. Configure the namespace by doing the following steps:
+## Configuring the Namespace
 
-    1. Click **Configure Namespace**.
-    2. Optional: If you want to run the Operator in Global mode, click **Global Operator**.
+Configure the namespace by doing the following steps:
 
-        You must use a different namespace here than the Global namespace that you selected in step 4 above. Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
+1. Click **Configure Namespace**.
+2. Optional: If you want to run the Operator in Global mode, click **Global Operator**.
 
-    3. Optional: If you are not using the AWS Secret Manager, click **Database Plan** and fill out the required information.
+You must use a different namespace here than the Global namespace that you selected in step 4 above. Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
+
+3. Optional: If you are not using the AWS Secret Manager, click **Database Plan** and fill out the required information.
         
-        {{< figure src="/attachments/private-platform/pmp-install2.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install2.png" class="no-border" >}}
 
-    4. Optional: If you are not using the AWS Secret Manager, click **Storage Plan** and fill out the required information.
-    5. Click **Ingress** and fill out the required information.
+4. Optional: If you are not using the AWS Secret Manager, click **Storage Plan** and fill out the required information.
+5. Click **Ingress** and fill out the required information.
         
-        {{< figure src="/attachments/private-platform/pmp-install3.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install3.png" class="no-border" >}}
     
-    6. Click **Registry** and fill out the required information.
-    7. Click **Review and Apply** > **Evaluate Configuration**.
-    8. Make any required changes or click **Apply Configuration**.
+6. Click **Registry** and fill out the required information.
+7. Click **Review and Apply** > **Evaluate Configuration**.
+8. Make any required changes or click **Apply Configuration**.
         
-        {{< figure src="/attachments/private-platform/pmp-install4.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install4.png" class="no-border" >}}
     
-    9. Click **Exit Installer** > **OK**.
+9. Click **Exit Installer** > **OK**.
     
-        {{< figure src="/attachments/private-platform/pmp-install5.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install5.png" class="no-border" >}}
 
 ## Optional: Configuring the AWS Secret Manager
 
@@ -210,6 +150,7 @@ Currently, only AWS S3 or S3-compatible providers are supported.
 | --- | --- |
 | PCLM admin password | **pclm-admin-password** |
 | Private Mendix Platform admin password | **mx-admin-password** |
+| PCLM admin username | **pclm-admin-username** |
 
 ## Optional: Configuring Azure Key Vault
 
@@ -246,6 +187,7 @@ To use the secret provider option for your database plan or storage plan, config
 | --- | --- |
 | PCLM admin password | **pclm-admin-password** |
 | Private Mendix Platform admin password | **mx-admin-password** |
+| PCLM admin username | **pclm-admin-username** |
 
 ## Installing Private Cloud License Manager {#install-pclm}
 
@@ -280,7 +222,7 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 
 ### Uninstalling PCLM
 
-If you want to uninstall Svix, run the following commands:
+If you want to uninstall PCLM, run the following commands:
 
 ```text 
 kubectl delete deployments/mendix-pclm -n=<Private Mendix Platform namespace>
@@ -336,7 +278,9 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
 3. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
 4. Select **Svix**, and then specify the following parameters:
 
-    * **Image** - The Svix image path. The default path is `svix/svix-server:v1.25.0`. If you are using a self-signed TLS certificate, set this path to `{customer-private-image-registry-url}/svix/svix-server:v1.25.tls`.
+    * **Image Prefix** - The registry and namespace (if it exists) where the *svix-server* image is located
+    * **Image Name** - The image name, for example, *svix-server*
+    * **Image Tag** - The image tag of the Svix-server image
     * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager or the Azure Key Vault. Selecting this option enables the following additional fields:
 
         * For AWS Secret Manager:
@@ -453,7 +397,42 @@ To install the Private Cloud components, perform the following steps:
 
         {{% alert color="info" %}} To allow other clusters to connect to Private Mendix Platform, you must expose the Interactor Bridge Service. Currently, the installer only supports using the generic Ingress template to expose the service. If you want to expose the Interactor Bridge with other method (for example, Openshift Route), contact the Private Mendix Platform team.{{% /alert %}}
 
-10. Click **Review and Apply > Apply Configuration**.
+10. Optional: To support AWS IRSA and Azure workload identity for database connection, configure the following options:
+
+    * **Use AMI only** - Set to **enabled**.
+    * **Provider** - Enter **AWS** or **Azure**.
+    * **Client ID** - When using Azure, enter the Azure Managed Identity Client ID.
+    * **AWS-Role-ARN** - When using AWS, enter an AWS role ARN which can access the specified Secret Manager. 
+
+11. Optional: To use the AWS Secret Manager or the Azure Key Vault as secret provider, configure the following options:
+
+    * **Use Secret Provider** - Set to **enabled**.
+    * **Secret Provider** - Enter **AWS** or **Azure**.
+    * For Azure, configure the following settings:
+
+        * **Client ID** - Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources. 
+        * **Tenant ID** - Enter the Directory ID of the key vault.
+        * **Key Vault Name** - Enter the key vault name.
+
+    * For AWS, configure the following settings:
+
+        * **AWS-Role-ARN** - When using AWS, enter an AWS role ARN which can access the specified Secret Manager. 
+        * **AWS SecretManager Name** - When using AWS, enter the AWS Secret Manager name where the sensitive data is stored.
+
+12. If you enabled the **Use Secret Provider** option, create the following secrets in your key vault or secret manager:
+
+    * `authenticator-db-name` - The Authenticator database name, for example, `authenticator`
+    * `authenticator-db-host` - The Authenticator database host, for example, `postgres.example.com`
+    * `authenticator-db-port` - The Authenticator database port, for example, `5432`
+    * `authenticator-db-user` - The Authenticator database username, for example, `auth_user`
+    * `authenticator-db-pass` - The Authenticator database password, for example, `StrongPassword123`
+    * `collector-db-name` - The Collector database name, for example, `collector`
+    * `collector-db-host` - The Collector database host, for example, `postgres.example.com
+    * `collector-db-port` - The Collector database port, for example, `5432`
+    * `collector-db-user` - The Collector database username, for example, `collector_user`
+    * `collector-db-pass` - The Collector database password, for example, `StrongPassword456`
+
+13. Click **Review and Apply > Apply Configuration**.
 
 ### Uninstalling the Private Cloud Components
 
@@ -477,8 +456,9 @@ The Build agent is required if you want to be able to build packages without hav
 7. Configure the following settings:
 
     * **Namespace** - The namespace where the Build agent will be installed
-    * **Image Repo** - The image repository where the Build agent is located, in the following format: `${image_prefix}/${image_name}`
-    * **Image Tag** - The Build agent image tag, for example, *ce687901*
+    * **Image Prefix** - The registry and namespace (if it exists) where the *kube-agent* image is located
+    * **Image Name** - The image name, for example, *mxplatform-kube-agent*
+    * **Image Tag** - The image tag of the *mxplatform-kube-agent*
 
 8. Click **Install Build Agent**.
 
@@ -504,6 +484,10 @@ Install the Private Mendix Platform by doing the following steps:
     * **AppName** - The default app name is `mxplatform`. You can change it as required.
     * **DatabasePlan** - If you want to use AWS Secret Manager, select **USE-Secret-Provider**; the installer then uses the database configuration set in AWS Secret Manager. Otherwise, enter the name of the database plan that you created in [Installing and Configuring the Mendix Operator](#install-operator).
     * **Storageplan** - If you want to use AWS Secret Manager, select **USE-Secret-Provider**; the installer then uses the storage configuration set in AWS Secret Manager. Otherwise, enter the name of the storage plan that you created in [Installing and Configuring the Mendix Operator](#install-operator).
+    * **StoragePlanwithIRSA** - If your storage plan uses AWS IRSA or Azure Workload Identity, set this to **enabled**.
+
+        Enabling this option disables the **secretprovider** option. This is because for IRSA and Azure Workload Identity storage plans, the Service account is created by the Operator instead of Helm.
+
     * **AppUrl** - The endpoint where you can connect to your running app. It must be a URL which is supported by your platform. If you leave it blank, Mendix Operator will create it.
     * **EnableTLS** - Allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Router. The default value is use the default settings.
     * **TLS option** - Allows you to use an existing `kubernetes.io/tls` secret containing the TLS certificate, or to provide the `tls.crt` and `tls.key` values directly.
@@ -577,6 +561,26 @@ To enable [Maia for Private Mendix Platform](/private-mendix-platform/maia/), pe
     * **Enable Ingress** - Enable or disable Nginx ingress
     * **MXASSIST_COPILOT_MXID3_URL** - The OIDC URL of Private Mendix Platform, in the following format: `<your Private Mendix Platform URL>/oidc/`
 
+### Installing the LLM Gateway
+
+Because Private Mendix Platform instances are hosted within the enterprise firewall, selecting an LLM provider other than the default [Mendix Platform](/refguide/maia-make/#mendix-platform) requires you to also configure the LLM Gateway URL.
+
+1. Download the *maia-llm-gateway.zip* file from your Private Mendix Platform download portal.
+2. Unzip the *maia-llm-gateway.zip* file.
+3. Copy the *maia-llm-gateway* directory to the *images* sub-directory of the installer by running the following command: `cp -r maia-llm-gateway/images/* <your installer>/pmp-binary-linux/images`
+4. Upload the Maia directory to your private registry by using the `installer init migrate` command.
+5. Run the following command:  `./installer component -n=<Private Mendix Platform namespace>`. Maia must be installed at the same namespace as Private Mendix Platform.
+6. In the **Components at PMP ns** section, select **Maia LLM Gateway**.
+7. Configure the following settings:
+
+    * **Image Prefix** - The registry and namespace (if it exists) where the *maia-llm-gateway* image is located
+    * **Image Name** - The image name, for example, *maia-llm-gateway* 
+    * **Image Tag** - The image tag of the LLM Gateway image
+    * **Enable Ingress** - Enable or disable Nginx ingress
+    * **MXASSIST_COPILOT_MXID3_URL** - The OIDC URL of Private Mendix Platform, in the following format: `<your Private Mendix Platform URL>/oidc/`
+
+{{< figure src="/attachments/private-platform/pmp-install11.png" class="no-border" >}}
+
 ### Uninstalling Maia
 
 If you want to uninstall Maia, run the following command: `helm unistall maia-appgen  -n=<Private Mendix Platform namespace>`.
@@ -620,84 +624,3 @@ To ensure that components such as svix, PCLM, the Build agent, or Private Cloud 
 2. Run the command `./installer platform -n=<namespace name>`, where `-n` is the same namespace as the one where you installed Svix and PCLM.
 
 Re-running the installation command ensures that the installer fetches the relevant information from the components that you added.
-
-## Upgrading the Private Mendix Platform {#upgrade}
-
-If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps:
-
-1. Ensure that your Mendix Operator version is 2.12 or above.
-2. Ensure that the number of replicas is no higher than 1. If you have manually changed the default value, make sure you revert it to 1 before attempting the upgrade.
-3. Run the command `./installer platform -n=<namespace name>`, where `-n` indicates the namespace where your Private Mendix Platform is installed.
-4. Click **Upgrade Namespace**.
-
-    {{< figure src="/attachments/private-platform/pmp-upgrade1.png" class="no-border" >}}
-
-5. Verify the following settings:
-    
-    * **Persist Config** - When enabled, this setting locks the Private Mendix Platform configuration, so that it can no longer be modified from the user interface.
-    * **Project Management** - Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
-    * **Marketplace** - Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
-    * **Marketplace Approvals** - Optional. If enabled, contents that users publish to the private Marketplace require administrator approval before publishing.
-    * **Marketplace Import** - Optional. Enables content import with an external source.
-    * **IDP** - Optional. Enable users to login using SSO by configuring your IdP integration.
-    * **Webhook** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
-
-6. Click **Run Upgrade**.
-
-    {{< figure src="/attachments/private-platform/pmp-upgrade2.png" class="no-border" >}}
-
-{{% alert color="info" %}}
-To upgrade the PCLM or Maia components, select the relevant option in the upgrade wizard. For the Svix component, you can use the Svix panel to upgrade directly.
-{{% /alert %}}
-
-## Running the Private Platform Configuration Wizard {#wizard}
-
-After you install Private Mendix Platform, run a one-time configuration wizard to configure the necessary settings.
-
-To start the wizard, log in to your Private Mendix Platform app with the user ID *Admin*. The wizard starts automatically and walks you through the required configuration steps. For more information about the available options, refer to the sections below.
-
-{{% alert color="info" %}}
-The settings that are enabled for your Private Mendix Platform depend on the service package that you have purchased. Because of that, some of the settings listed below may be disabled for your platform.
-{{% /alert %}}
-
-### Configuring IdP Settings
-
-In this step, you can specify whether you want to enable logging in via SSO for your users. Private Mendix Platform supports OIDC and SAML identity providers.
-
-{{< figure src="/attachments/private-platform/pmp-wizard1.png" class="no-border" >}}
-
-### Configuring Management Settings
-
-In this step, you can specify whether you want to create and manage your app projects in Private Mendix Platform. If you enable the project management, you must also specify the Git host that will be used for the project. This option must be enabled if you want your Private Mendix Platform to support CI/CD capabilities.
-
-{{< figure src="/attachments/private-platform/pmp-wizard2.png" class="no-border" >}}
-
-### Configuring CI/CD Settings
-
-In this step, you can enable CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster.
-
-{{< figure src="/attachments/private-platform/pmp-wizard3.png" class="no-border" >}}
-
-### Configuring Marketplace Settings
-
-In this step, you can enable your app to upload and download connectors from the Marketplace.
-
-{{% alert color="info" %}}
-The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
-{{% /alert %}}
-
-{{< figure src="/attachments/private-platform/pmp-wizard4.png" class="no-border" >}}
-
-### Configuring Custom Branding Settings
-
-In this step, you can customize the branding for your app. You may change the name that is displayed in the top bar, upload a new logo, or change the default login page image.
-
-{{< figure src="/attachments/private-platform/pmp-wizard5.png" class="no-border" >}}
-
-### Reviewing and Confirming the Settings
-
-After the wizard finishes running, you are logged in to your Private Mendix Platform. The settings that you previously selected are displayed on screen. You can review and update them now, or at a later point by using the **Settings** menu in the upper left corner of the screen.
-
-## Next Steps
-
-After completing the installation and first-time configuration wizard, configure the remaining necessary settings. For more information, see [Configuring Private Mendix Platform](/private-mendix-platform-configuration/).

@@ -30,7 +30,7 @@ For more information about the available roles, see [User Roles](#user-roles).
 
 To change a user's role or remove them from the workspace, click the three-dot icon in the right column of the user list. This action requires the Owner or Workspace Admin role.
 
-## User Roles {#user-roles}
+## Workspace Roles {#user-roles}
 
 You can assign the following roles to your users:
 

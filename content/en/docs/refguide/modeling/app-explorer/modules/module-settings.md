@@ -74,7 +74,7 @@ This is the version number of the module which is shown in various places in the
 When redistributing a module, you should always change the version number when changes are made. For modules that will be published to the Marketplace, the version must be set before exporting the package.
 
 {{% alert color="info" %}}
-The Marketplace automatically uses the version from the exported package. You cannot change this manually. If the version is already in use, the Marketplace rejects the package.
+Marketplace automatically uses the version from the exported package for packages exported from Studio Pro 11.12 and above. You cannot change this manually. If the version is already in use, the Marketplace rejects the package.
 {{% /alert %}}  
 
 #### Version format
@@ -87,6 +87,10 @@ Refer to the following guidance when changing the version number:
 * Increase the patch version when making backward compatible bug fixes, such as fixing a styling issue on a page or changing a calculation in a microflow without changing the parameters and output type.
 
 Next to the numerical major, minor and patch version, alphanumerical characters are allowed. This is considered to be an advanced feature, for more information, please see [Semantic Versioning](https://semver.org/). An example of an advanced version number is *1.3.7-beta.2*.
+
+{{% alert color="warning" %}}
+Mendix Marketplace does not support module packages with alphanumerical characters in the version number. To publish on Marketplace, the version number should consist of three numerical parts. Support for alphanumerical characters will be added in a future release.
+{{% /alert %}}
 
 ## Package {#package}
 

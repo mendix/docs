@@ -56,7 +56,6 @@ To reduce errors caused by manual typing and speed up configuration, Mendix Pipe
     * `$Mendix.Branch` (Git Push only)
     * `$Mendix.Revision` (Git Push only)
 
-
 {{< figure src="/attachments/deployment/general/mx-pipelines/mx-pipelines-variable-selector.png" alt="Image of the Variable Selector dropdown displaying a list of available pipeline variables in a configuration field." >}}
 
 Selecting a variable inserts it into the field.

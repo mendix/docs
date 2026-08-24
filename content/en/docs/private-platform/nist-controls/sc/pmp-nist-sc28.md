@@ -27,16 +27,16 @@ This control addresses the confidentiality and integrity of information at rest 
 The following controls are related to this control:
 
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-6
-* CA-7
-* CM-3
-* CM-5
-* CM-6
-* PE-3
-* SC-8
-* SC-13
-* SI-3
-* SI-7
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* CM-03
+* [CM-05](/private-mendix-platform/nist-controls/cm-05/)
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
+* PE-03
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
+* SI-03
+* SI-07
 
 For more information, refer to the NIST Special Publications 800-56, 800-57, and 800-111.
 

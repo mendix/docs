@@ -52,20 +52,20 @@ Organizations are cautioned that the need to provide adequate security for mobil
 The following controls are related to this control:
 
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-7
-* AC-18
-* AC-20
-* CA-9
-* CM-2
-* IA-3
-* MP-2
-* MP-4
-* MP-5
-* PL-4
-* SC-7
+* [AC-07](/private-mendix-platform/nist-controls/ac-07/)
+* [AC-18](/private-mendix-platform/nist-controls/ac-18/)
+* [AC-20](/private-mendix-platform/nist-controls/ac-20/)
+* [CA-09](/private-mendix-platform/nist-controls/ca-09/)
+* CM-02
+* IA-03
+* [MP-02](/private-mendix-platform/nist-controls/mp-02/)
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* [MP-05](/private-mendix-platform/nist-controls/mp-05/)
+* PL-04
+* SC-07
 * SC-43
-* SI-3
-* SI-4
+* SI-03
+* [SI-04](/private-mendix-platform/nist-controls/si-04/)
 
 For more information, refer to the OMB Memorandum 06-16 and NIST Special Publications 800-114, 800-124, and 800-164.
 

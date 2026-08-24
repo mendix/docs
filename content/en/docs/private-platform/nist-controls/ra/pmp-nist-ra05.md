@@ -45,14 +45,14 @@ Organizations consider using tools that express vulnerabilities in the Common Vu
 
 The following controls are related to this control:
 
-* CA-2 
-* CA-7
-* CM-4
-* CM-6
-* RA-2
-* RA-3
+* CA-02 
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* [CM-04](/private-mendix-platform/nist-controls/cm-04/)
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
+* [RA-02](/private-mendix-platform/nist-controls/ra-02/)
+* [RA-03](/private-mendix-platform/nist-controls/ra-03/)
 * SA-11
-* SI-2
+* [SI-02](/private-mendix-platform/nist-controls/si-02/)
 
 For more information,  NIST Special Publications 800-40, 800-70, 800-115; [CWE](http://cwe.mitre.org), [National Vulnerability Database](http://nvd.nist.gov).
 

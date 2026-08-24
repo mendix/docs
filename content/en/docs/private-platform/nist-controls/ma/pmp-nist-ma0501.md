@@ -33,8 +33,8 @@ This control enhancement denies individuals who lack appropriate security cleara
 
 The following controls are related to this control:
 
-* MP-6
-* PL-2.
+* MP-06
+* [PL-02](/private-mendix-platform/nist-controls/pl-02/).
 
 ## Responsibility
 

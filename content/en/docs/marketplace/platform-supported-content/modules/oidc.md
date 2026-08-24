@@ -411,7 +411,7 @@ For Entra ID access to APIs through an access token, in addition to the configur
 
 Now, you can acquire tokens which can be validated using JWKS URI.
 
-#### Configuring Optional Claims for User Attributes {#entra-optional-claims}
+#### Configuring Optional Claims for User Attributes in Microsoft Entra ID{#entra-optional-claims}
 
 By default, Microsoft Entra ID does not include user attribute claims such as `given_name` and `family_name` in the ID token, even when the `profile` scope is requested. To make these claims available, add them as optional claims in the Entra App Registration:
 

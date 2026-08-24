@@ -19,3 +19,11 @@ title = "Mendix Documentation"
 		mediaType = "application/json" # file output type
 		notAlternative = true # excludes from looping over .AlternativeOutputFormats page variable
 
+# Hugo 0.161.0 Introduces an error from browserslist-stats.json which is triggered on a production build.
+# development build is fine, so probably related to algolia build
+# see discussion here: https://discourse.gohugo.io/t/security-error-with-the-new-0-161-0-security-for-postcss/57186
+# Add new "allowread" setting
+[security]
+  [security.node]
+    [security.node.permissions]
+      allowRead = ['.', '/**/browserslist-stats.json']

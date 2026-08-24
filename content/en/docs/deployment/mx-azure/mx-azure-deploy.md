@@ -16,7 +16,7 @@ To deploy Mendix on Azure, make sure you have the following available:
 * A Mendix platform account
 * An Azure account with the following permissions:
     * Permission to grant admin consent on the Mendix on Azure portal app registration (e.g. Global Administrator in Entra ID)
-    * Owner role assigned on the target subscription (temporary elevated Privileged Identity Management - PIM - access does not suffice)
+    * Owner role assigned on the target subscription
 * In case you want to integrate the Mendix on Azure environment into your existing corporate network, be sure to consider the [network configuration options](/developerportal/deploy/mendix-on-azure/configuration/#networking-settings) that cannot be changed after initial environment deployment
 
 ## Estimating Infrastructure Costs {#estimating-costs}

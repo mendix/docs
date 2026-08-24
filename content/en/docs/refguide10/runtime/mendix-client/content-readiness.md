@@ -18,16 +18,16 @@ The following table shows which of the more popular platform-supported Marketpla
 | Marketplace Component | React Client Ready | Alternative |
 | --- | --- | --- |
 | [Administration Module](https://marketplace.mendix.com/link/component/23513) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
-| [AnyChart](https://marketplace.mendix.com/link/component/106517) | {{< icon name="remove-circle-filled" color="red" >}} |  CustomChart from [Charts](https://marketplace.mendix.com/link/component/105695) |
+| [AnyChart](https://marketplace.mendix.com/link/component/106517) | {{< icon name="remove-circle-filled" color="red" >}} | AnyChart is deprecated and will not be made React compatible. Use CustomChart from [Charts](https://marketplace.mendix.com/link/component/105695) instead. |
 | [Atlas Core](https://marketplace.mendix.com/link/component/117187) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Atlas Native Content](https://marketplace.mendix.com/link/component/117175) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
-| [Audittrail](https://marketplace.mendix.com/link/component/138) | {{< icon name="remove-circle-filled" color="red" >}} | |
+| [Audittrail](https://marketplace.mendix.com/link/component/138) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Community Commons](https://marketplace.mendix.com/link/component/170) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Data Widgets](https://marketplace.mendix.com/link/component/116540) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Database Connector](https://marketplace.mendix.com/link/component/2888) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
-| [DatabaseReplication](https://marketplace.mendix.com/link/component/160) | {{< icon name="remove-circle-filled" color="red" >}} | |
+| [DatabaseReplication](https://marketplace.mendix.com/link/component/160) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Deep Link Module](https://marketplace.mendix.com/link/component/43) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Email Connector](https://marketplace.mendix.com/link/component/120739) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Encryption](https://marketplace.mendix.com/link/component/1011) | {{< icon name="checkmark-circle-filled" color="green" >}} | |

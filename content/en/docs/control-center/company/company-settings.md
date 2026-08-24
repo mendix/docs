@@ -30,9 +30,6 @@ To export all the email domains, use the **Export to Excel** button.
 
 In certain scenarios, you may want to ask Mendix to merge two companies into one on the Mendix Platform, such as when your company purchases another company which also uses the Mendix Platform. This can be done, but the action is irreversible. After the companies are merged, all users and their applications from both companies are consolidated under the same company.
 
-Once user accounts are transferred to the new company, users retain access to private Marketplace content, as this content is also transferred. They can still download previously published private components after the transfer.    
-However, content is removed from the original organization’s content groups. Users need to recreate these content groups within the new organization to manage the content as before.
-
 ## Security Contact {#security-contact}
 
 Under **Security Contact**, you can provide a specific security contact who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.

@@ -50,7 +50,7 @@ The component list contains the following information:
 * **Version** — The version of the component that is being used.
 * **Findings** — The number of findings of each type, color-coded according to severity level.
 * **License** — For components derived from the Mendix Marketplace, this is the end-user license for the component.
-* **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is available only via your [Company Content](/appstore/home-page/#company-content) page.
+* **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is only available for your organisation. On the Marketplace homepage, you can use the **Visibility** filter to display specific components.
 * **Apps using component** – The number of apps where the component is used.
 * **Latest version** — For components derived from the Mendix Marketplace, this is the latest version of the component.
 * **Publisher** — For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
@@ -86,8 +86,31 @@ The finding list contains the following information:
 
     * Deprecated components: The current date - The date when the component was deprecated    
     * Outdated components: The current date - The publish date of the first higher runtime compatible version
+    * Vulnerable components: The number of days since the date when the CVSS score was computed 
 
 * Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+
+#### Finding and Component Details
+
+If a finding is marked as **Vulnerable**, its corresponding component has a **View Details** button. Clicking it opens a window which includes these sections:
+
+* **Finding Details** – This includes the following details:
+
+    * **Severity** – The severity of the finding, as computed on the [Scoring Criteria](/control-center/scoring-criteria-tab/) tab.
+    * **CVE-ID** – The unique ID which identifies the finding on the **Security Advisories** page.
+    * **CVSS Score 3.1** and **CVSS Score 4.0** – The CVSS score, as computed based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework.
+    * **Age** – The number of days since the date when the CVSS score was computed.
+    * **Created on** – The date when the component was created.
+    * **Description** – The reason why the component was marked as vulnerable.
+
+* **Components Details** – This includes the following details:
+
+    * **Current Version** – The version of the component affected by this finding.
+    * **Type** – The type of the component affected by this finding.
+    * **Publisher** – The entity that published the component affected by this finding.
+    * **Apps using component** – The number of apps where the vulnerable component is used. Click **View Component Usage** to see a list of affected apps.
+
+* **Mendix Guidance** – AI-generated guidance which describes the vulnerability, outlines the reasons why it is important to fix it, and recommends solutions.
 
 ### Component Usage {#component-component-usage}
 

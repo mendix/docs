@@ -20,21 +20,23 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
-languageCode = "en-us"
+locale = "en-us"
 
 disableKinds = ["taxonomy", "term"]
 
 # Image processing configuration. (Do we use this - probably not?)
 [imaging]
     resampleFilter = "CatmullRom"
-    quality = 75
     anchor = "smart"
+    
+    [imaging.jpeg]
+        quality = 75
 
 # Language configuration
 
 [languages]
     [languages.en]
-        languageName ="English"
+        label ="English"
         # Weight used for sorting.
         weight = 1
 

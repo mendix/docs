@@ -171,7 +171,11 @@ A JSON object with the following attributes:
 
 * `comment` (String): Optional comment for this snapshot.
 
-**Example Request**
+{{% alert color="info" %}}
+The `comment` attribute is optional, but the API requires an empty JSON object (`{}`) to return a successful response.
+{{% /alert %}}
+
+**Example Request 1**
 
 ```bash
 POST /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots
@@ -180,10 +184,19 @@ Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+{"comment": "My snapshot"}
+```
 
-{
-     "comment" :  "My snapshot"
-}
+**Example Request 2**
+
+```bash
+POST /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+{}
 ```
 
 #### Output

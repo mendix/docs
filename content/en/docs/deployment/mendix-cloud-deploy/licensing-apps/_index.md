@@ -115,7 +115,7 @@ Apart from the app, the rest of the environment (or environments) in the target 
 
 To connect your app to a licensed node, do the following:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
+1. From [Projects](https://projects.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
 
 1. Click **Select Licensed Node**.
 

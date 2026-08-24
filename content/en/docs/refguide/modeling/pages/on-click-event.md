@@ -138,9 +138,7 @@ This duplicates the [Microflow](#microflow) specified above.
 
 ##### Microflow Arguments
 
-**Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
-
-If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or selection, and defaults to selection. This can be configured via the drop-down menu in the microflow settings page. A grid with single selection always passes all rows to the microflow.
+**Microflow arguments** specify the values that are passed as parameters when the microflow is called. Each argument can be defined using an expression or by choosing a variable that is available on the page. Variables are exposed by the widget itself, surrounding data widgets, a widget with selection, page variables, and page parameters. When the [**Microflow**](#microflow) is set, arguments are automatically filled for parameters with matching candidate variables. Specifically, if the name of the variable matches that of the parameter, or only one variable of the parameter's type is available, then arguments for those parameters will be filled with those candidate values automatically.
 
 ##### Microflow Call Type
 
@@ -225,7 +223,7 @@ Set the **Nanoflow** property to specify a [nanoflow](/refguide/nanoflow/) that 
 
 You can either select an existing nanoflow or create a new nanoflow by clicking the **New** button from the **Select Nanoflow** dialog box.
 
-When creating a new nanoflow, a dialog box is shown where you can set the name and select parameters for the new nanoflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new nanoflow.
+**Nanoflow arguments** specify the values that are passed as parameters when the nanoflow is called. Each argument can be defined using an expression or by choosing a variable that is available on the page. Variables are exposed by the widget itself, surrounding data widgets, a widget with selection, page variables, and page parameters. When the **Nanoflow** is set, arguments are automatically filled for parameters with matching candidate variables. Specifically, if the name of the variable matches that of the parameter, or only one variable of the parameter's type is available, then arguments for those parameters will be filled with those candidate values automatically.
 
 If there is nothing to pass to the new nanoflow, then a dialog box is shown where you can only specify the name of the nanoflow.
 

@@ -29,6 +29,22 @@ To fix this issue, do the following:
 4. Remove **config.json**.
 5. Reopen the Mendix Native Mobile Builder.
 
+## Release 1.0.147 {#10147}
+
+**Release date: August 12, 2026**
+
+## Changes
+
+* We replaced `@notifee/react-native` with `react-native-notify-kit` as the local notifications library for Studio Pro 11 and above.
+
+## Release 1.0.146 {#10146}
+
+**Release date: June 29, 2026**
+
+## Changes
+
+* We removed the app preview feature, which included QR code generation for APK downloads over LAN. This feature was designed for the AppCenter workflow (which shut down in 2025) and is no longer functional. The removal eliminates the Windows location permission dialog that was triggered on every launch when enumerating network interfaces.
+
 ## Release 1.0.145 {#10145}
 
 **Release date: January 28, 2026**
@@ -714,7 +730,7 @@ This release focuses mainly on quality of life bug fixes and features.
 
 **Release date: October 27, 2020**
 
-This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro 8.15](/releasenotes/studio-pro/8.15/) and higher.
+This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in Mendix Studio Pro 8.15 and above.
 
 #### Features
 

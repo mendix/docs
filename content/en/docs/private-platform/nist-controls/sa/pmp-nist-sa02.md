@@ -30,7 +30,7 @@ Resource allocation for information security includes funding for the initial in
 
 The following controls are related to this control:
 
-* PM-3
+* PM-03
 * PM-11
 
 For more information, refer to the NIST Special Publication 800-65.

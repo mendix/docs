@@ -14,7 +14,7 @@ aliases:
 
 ## Introduction
 
-The **Settings** page in the [navigation pane](/developerportal/#navigation-pane) of **Apps** presents an overview of your app.
+The **Settings** page in the **Projects** [navigation pane](/developerportal/#navigation-pane) presents an overview of your app.
 
 The **Settings** page always contains the following tabs:
 
@@ -133,7 +133,7 @@ Only users with the **App Settings** permission can manage these settings.
 
 On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/project-management/epics/) is the selected tool.
 
-If you manage your projects in Jira, you can connect your apps in **Apps** to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
+If you manage your projects in Jira, you can connect your apps in **Projects** to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
 ## Maia Settings {#maia-settings}
 

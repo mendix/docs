@@ -24,8 +24,8 @@ The organization employs only information technology products on the FIPS 201-ap
 
 The following controls are related to this control:
 
-* IA-2
-* IA-8
+* IA-02
+* [IA-08](/private-mendix-platform/nist-controls/ia-08/)
 
 ## Responsibility
 

@@ -16,6 +16,7 @@ Mendix AI Assistance (Maia) in Private Mendix Platform has the following capabil
 Starting point for app creation:
 
 * **Start with Maia** - a starting point in Studio Pro that helps you to start the app development process. Based on a required text description and an optional image or PDF, it generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
+* **Maia Make** - a unified conversational interface in Studio Pro that groups all AI-assisted development capabilities into a single chat experience. With this interface, everything happens in one place. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask it to explain documents for you, including your app logic and pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 Recommenders:
 
@@ -78,7 +79,7 @@ To configure Maia to use your own Large Language Model, perform the following st
 3. In the left navigation menu, open the **Manage** section.
 4. Fill out the following information:
 
-    * **Maia Appgen URL** - Enter the URL where Maia is installed. For more information, see [Private Mendix Platform Quick Start Guide: Installing Maia](/private-mendix-platform/quickstart/#maia).
+    * **Maia Appgen URL** - Enter the URL where Maia is installed. For more information, see [Private Mendix Platform Quick Start Guide: Installing Maia](/private-mendix-platform/interactive-installation/#maia).
     * **LLM Provider** - Select your LLM provider.
     * **Small Text Model** - Enter one of the following model IDs, depending on your chosen LLM:
 

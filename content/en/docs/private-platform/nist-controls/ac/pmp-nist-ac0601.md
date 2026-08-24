@@ -26,9 +26,9 @@ Security functions include, for example, establishing system accounts, configuri
 
 The following controls are related to this control: 
 
-* AC-17
-* AC-18
-* AC-19
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AC-18](/private-mendix-platform/nist-controls/ac-18/)
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
 
 ## Responsibility
 

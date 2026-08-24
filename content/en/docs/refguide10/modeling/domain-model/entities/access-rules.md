@@ -25,7 +25,19 @@ Access rules are not inherited from an entity's [generalization](/refguide10/ent
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-The **System.User** entity has inbuilt access rules where access is given to its attributes if the end-user can manage the role of that User object. Specializations of **System.User** (such as **Administration.Account**) cannot change this access with their own access rules.
+The **System.User** entity is a special case when considering access rules. It has the following features:
+
+* **System.User** has built-in platform-enforced access rules.
+
+    These rules grant access to its attributes when the requesting user's role is configured to manage the role assigned to that User object.
+    
+* **System.User** built-in access rules apply to specializations of **System.User**.
+
+    Unlike regular access rules, which are defined per entity and are not inherited from generalizations, these built-in rules operate at the platform level and cannot be overridden or restricted by access rules defined on a specialization.
+
+    This means that if you create a specialization of **System.User** (for example, **Administration.Account**), any user with a role which manages the role assigned to that User object can always read the **System.User** attributes of objects of your specialization. This is the case, even if you add XPath constraints on the specialization entity to prevent this.
+
+For example, suppose you want to limit managers to only see users in their own department. Using only XPath constraints on the specialization cannot enforce this restriction because the [User management](/refguide10/user-roles/#user-management) setting in **App Security** can grant access to **System.User** attributes for any role configured to manage that User object's role. To enforce the department restriction, configure each user role in **App Security** to manage only the roles it strictly needs—avoid granting broad "manage all roles" permissions unless your use case requires it.
 {{% /alert %}}
 
 ## Defining Access Rules {#new-editor}

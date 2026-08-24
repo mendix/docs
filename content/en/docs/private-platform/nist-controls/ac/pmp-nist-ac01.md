@@ -38,7 +38,7 @@ The organizational risk management strategy is a key factor in establishing poli
 
 The following controls are related to this control:
 
-* PM-9.
+* PM-09
 
 For more information, refer to the NIST Special Publications 800-12 and 800-100.
 

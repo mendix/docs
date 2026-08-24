@@ -2,7 +2,7 @@
 title: "Client APIs"
 linktitle: "Client APIs for Pluggable Widgets"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/
-description: A guide for understanding the client APIs available to pluggable widgets in Mx10.
+description: A guide for understanding the client APIs available to pluggable widgets.
 weight: 20
 aliases:
     - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets
@@ -345,10 +345,6 @@ export interface EditableImageValue<T extends ImageValue> extends EditableFileVa
 
 `EditableImageValue` provides upload capabilities to [`ImageValue`](#imagevalue), similarly to how [`EditableFileValue`](#editable-file-value) for [`FileValue`](#filevalue). Also it adds `setThumbnailSize`  method which enables a component to request the Mendix Platform to return an image with specific dimensions. The Mendix Platform will take care of resizing the image while keeping the aspect ratio intact. When a thumbnail size is set, the `value` field of `EditableImageValue` will contain a resized image. When a thumbnail size is not set, the `value` field will contain an original image.
 
-{{% alert color="warning" %}}
-`EditableImageValue` does not support `NativeImage`.
-{{% /alert %}}
-
 ### ModifiableValue {#modifiable-value}
 
 `ModifiableValue` is used to represent values that can be changed by a pluggable widget client component. It is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association), and is defined as follows:
@@ -488,6 +484,39 @@ if (selection.type === "Single") {
 ```
 
 ## Exposed Modules
+
+### Session {#session}
+
+The Mendix Platform exposes a `mendix/session` module for inspecting the current user session. It is available in both web and native.
+
+For instance, `getUserId` returns the current user's GUID as a `string`.
+
+```ts
+function getUserId(): GUID;
+```
+
+---
+
+### Parser {#parser}
+
+The Mendix Platform exposes a `mendix/parser` module that provides locale-aware formatting and parsing of attribute values. These functions use the same locale and formatting settings of the built-in Mendix widgets. It is available in both web and native.
+
+```ts
+import { formatValue, parseValue } from "mendix/parser";
+```
+
+Both functions accept an optional configuration object:
+
+```ts
+interface FormatValueConfig {
+    selector?: "date" | "time" | "datetime";
+    datePattern?: string;
+    places?: number;
+    groups?: boolean;
+}
+```
+
+For the reference of the API, you can refer to the [API documentation](https://apidocs.rnd.mendix.com/11/client-mx-api/module-mx-api_parser.html).
 
 ### Icon {#icon}
 

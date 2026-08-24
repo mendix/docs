@@ -26,25 +26,25 @@ Access control policies (for example, identity-based policies, role-based polici
 
 The following controls are related to this control:
 
-* AC-2
-* AC-4
-* AC-5
-* AC-6
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)
+* [AC-04](/private-mendix-platform/nist-controls/ac-04/)
+* [AC-05](/private-mendix-platform/nist-controls/ac-05/)
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
 * AC-16
-* AC-17
-* AC-18
-* AC-19
-* AC-20
-* AC-21
-* AC-22
-* AU-9
-* CM-5
-* CM-6
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AC-18](/private-mendix-platform/nist-controls/ac-18/)
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* [AC-20](/private-mendix-platform/nist-controls/ac-20/)
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)1
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)2
+* [AU-09](/private-mendix-platform/nist-controls/au-09/)
+* [CM-05](/private-mendix-platform/nist-controls/cm-05/)
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
 * CM-11
-* MA-3
-* MA-4
-* MA-5
-* PE-3.
+* MA-03
+* MA-04
+* MA-05
+* PE-03
 
 ## Responsibility
 

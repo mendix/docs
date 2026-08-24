@@ -26,8 +26,8 @@ Automated mechanisms for tracking security incidents, and collecting and analyzi
 
 The following controls are related to this control:
 
-* AU-7
-* IR-4
+* [AU-07](/private-mendix-platform/nist-controls/au-07/)
+* IR-04
 
 ## Responsibility
 

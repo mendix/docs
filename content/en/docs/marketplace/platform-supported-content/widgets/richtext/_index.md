@@ -13,7 +13,6 @@ This documentation applies to Rich Text widget versions 4.0 and above.
 For documentation on Rich Text widget versions 3 with TinyMCE, see [Rich Text v3](/appstore/widgets/rich-text-v3/).
 For documentation on Rich Text widget versions 2 with CKEditor4, see [Rich Text v2](/appstore/widgets/rich-text-v2/).
 
-Due to TinyMCE changing its public license, we transitioned to the Quill V2 library in Rich Text 4.
 {{% /alert %}}
 
 The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget provides the user with an WYSIWYG editor, where the user can enter and edit rich-text content. The widget automatically converts the rich-text content into a string in HTML format, which can be stored in an attribute of an entity.
@@ -66,10 +65,13 @@ To configure this widget, follow these steps:
         * **Bottom** – if selected, toolbar will be placed on the bottom of the editor.
         * **Hide** – if selected, toolbar will be hidden or not shown.
 
-* **Editable** – determines when user can edit content in the editor and when it is read-only.
-    * **Read-only style** - determines the style of the rich text when set to read-only.
+* **Editable** – determines when the user can edit content in the editor and when it is read-only.
+    * **Read-only style** - determines the style of the rich text widget when set to read-only. 
+        * **Rich Text** – shows disabled rich text with a similar look and feel as when it is enabled.
+        * **Bordered** – shows content only with a surrounding border.
+        * **Read panel** – shows only an HTML rendering of rich text content. 
+
     For more information, see the [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.
-    * **Form orientation** - configures the form orientation used in the widget's modal dialog window, such as in **insert image**, **insert video**, **insert link**, and **view code modal**.
 
 * **Visible** – determines if the widget is visible on the page.
     For more information, see the [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in *Properties Common in the Page Editor*.
@@ -92,6 +94,7 @@ To configure this widget, follow these steps:
             * **View** - items: fullscreen.
             * **Removal** - items: clear.
             * **Table** - items: table.
+            * **Help** - items: help dialog contains keyboard shortcuts (available in rich text version 5 and above).
         * **Advanced** – if selected, you can configure buttons for different toolbar groups:
 
             {{% alert color="info" %}}All the toolbar groups that you configure will be available in the toolbar. With vertical bars or separator options ("|"), you can separate different toolbar groups.{{% /alert %}}
@@ -136,6 +139,9 @@ To configure this widget, follow these steps:
     * **Word count** – displays the number of words in the status bar.
     * **Character count (text only)** – displays the number of characters displayed in the editor.
     * **Character count (includeing HTML)** – displays the number of characters saved into the attribute value. This includes the HTML tag inserted for the formatting of rich text.
+* **Style data format** - available from rich text version 5 and above. This allows user to use classnames for the styling of rich text's content.
+    * **Inline** - uses inline styles on styling the HTML content. This is the current and default option. Inline styling is more reliable in styling the content. But using inline styles meant that the data cannot be parsed in [strict-CSP environment](/howto/security/csp/).
+    * **Inline** - uses class name to style the HTML content. Use this setting if rich text is deployed in a strict CSP environment.
 
 ### Common Tab
 
@@ -285,6 +291,47 @@ export async function selectImage(fileGuid) {
 
 This code will trigger a new event called **imageSelected** and bubble up the event back to Rich Text widget to continue the flow. The user then can use the **image id** instead of **base64 string** as the image source.
 
+## Keyboard Shortcuts
+
+<table>
+    <tr>
+        <th>Formatting</th>
+        <th>Paragraph</th>
+        <th>History</th>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr><th>Action</th><th>Shortcut</th></tr>
+                <tr><td>Bold</td><td>Ctrl+B</td></tr>
+                <tr><td>Italic</td><td>Ctrl+I</td></tr>
+                <tr><td>Underline</td><td>Ctrl+U</td></tr>
+                <tr><td>Strikethrough</td><td>Ctrl+Shift+S</td></tr>
+                <tr><td>Inline code</td><td>Ctrl+E</td></tr>
+                <tr><td>Superscript</td><td>Ctrl+.</td></tr>
+                <tr><td>Subscript</td><td>Ctrl+,</td></tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr><th>Action</th><th>Shortcut</th></tr>
+                <tr><td>Blockquote</td><td>Ctrl+Shift+B</td></tr>
+                <tr><td>Bullet list</td><td>Ctrl+Shift+8</td></tr>
+                <tr><td>Ordered list</td><td>Ctrl+Shift+7</td></tr>
+                <tr><td>Increase indent</td><td>Ctrl+]</td></tr>
+                <tr><td>Decrease indent</td><td>Ctrl+[</td></tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr><th>Action</th><th>Shortcut</th></tr>
+                <tr><td>Undo</td><td>Ctrl+Z</td></tr>
+                <tr><td>Redo</td><td>Ctrl+Y</td></tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
 ## Limitations
 
 Rich Text version 4 still has limitations that we will continue improving in the future. Current notable limitations are as follows:
@@ -293,3 +340,7 @@ Rich Text version 4 still has limitations that we will continue improving in the
     * Nested tables
     * Table header
     * Table caption
+
+Rich Text version 5 offers "class" styling to allow Rich Text to works in a strict CSP environment. This  has limitations that we will continue to improve in the future. Current notable limitations are as follows:
+* Resizing image, video, and tables does not work properly
+* Switching format from inline to class causes partial data loss on styling

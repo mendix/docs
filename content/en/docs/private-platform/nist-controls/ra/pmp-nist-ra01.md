@@ -36,7 +36,7 @@ This control addresses the establishment of policy and procedures for the effect
 
 The following controls are related to this control:
 
-* PM-9
+* PM-09
 
 For more information, refer to the NIST Special Publications 800-12, 800-30, and 800-100.
 

@@ -10,15 +10,17 @@ Workflows are processes that can potentially run for a long time. While a workfl
 
 ## Workflow Versioning
 
-Workflow instances have functional value for the business. Therefore, when a new workflow version is deployed, the system should decide how to handle running instances. 
-Some Workflow Engines decide to keep the workflow instance running in the version in which it has been initiated. However, such approach can cause problems, for example, it is then impossible to fix issues in the workflow for existing instances. 
+Workflow instances have functional value for the business. Therefore, when a new workflow version is deployed, the system should decide how to handle running instances. Some Workflow Engines decide to keep the workflow instance running in the version in which it has been initiated. However, such an approach can cause problems. For example, it is then impossible to fix issues in the workflow for existing instances.
+
 The Mendix Workflow Engine uses a different approach. Mendix Studio Pro validates the app when it is being deployed using the model in that particular moment. Older versions of a workflow may refer to artifacts that are no longer available, such as roles, pages, workflows, or microflows that were deleted in the latest version (or require a different input or have a different output). As such, the model of the latest app version may no longer be compatible with older workflow versions. Mendix Studio Pro validates whether a workflow instance is compatible with the latest workflow version. 
 
 ## Workflow Versioning Conflict Detection
 
 The approach used in the Mendix Workflow Engine is to validate whether a workflow instance is compatible with the latest workflow version. This is called the Workflow Versioning Conflict Detection.  
 
-When the Workflow Versioning Conflict Detection system detects that a workflow instance is compatible with the latest version, it migrates that workflow instance to the latest workflow version automatically and continues executing the workflow instance. However, when the Workflow Versioning Conflict Detection system detects one or more conflicts, it puts the workflow instance into the Incompatible state and adds a description of the detected conflicts in the **Reason** attribute of the **System.Workflow** instance. Depending on the type of conflicts, such workflow instance can be fixed by restarting, marking it as resolved, or by allowing the workflow instance to jump to other activities in the flow. Besides, an incompatible workflow instance can be aborted when it is no longer necessary.
+When the Workflow Versioning Conflict Detection system detects that a workflow instance is compatible with the latest version, it migrates that workflow instance to the latest workflow version automatically and continues executing the workflow instance. However, when the Workflow Versioning Conflict Detection system detects one or more conflicts, it puts the workflow instance into the Incompatible state and adds a description of the detected conflicts in the **Reason** attribute of the **System.Workflow** instance.
+
+Depending on the type of conflicts, such workflow instance can be fixed by restarting, marking it as resolved, or by allowing the workflow instance to jump to other activities in the flow. Besides, an incompatible workflow instance can be aborted when it is no longer necessary.
 
 After deploying a new app version, the Workflow Engine detects which workflows are changed and schedules all in-progress, paused and incompatible workflow instances to be inspected by the Workflow Versioning Conflict Detection.
 
@@ -71,9 +73,7 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 | Multi-User Task Outcome Changed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Activities Introduced in Executed Path              | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Executed Activities Moved to Re-executable Position | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Parallel Split Path Removed                         | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Non-Interrupting Boundary Event Path Removed        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Current Event Sub-Process Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Concurrent Path Removed                             | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 
 #### Context Entity Replaced
 
@@ -157,6 +157,8 @@ If a currently running workflow instance is executing an activity that is moved 
 
 Conversely, moving an activity from a parent path into a nested scope, such as a boundary event path or a sub-process, can also prevent the workflow from progressing. In these scenarios, the Workflow Engine cannot guarantee the integrity of the execution flow. This can result in the workflow instance remaining stuck in the **In Progress** state indefinitely, preventing it from ever reaching a completed state.
 
+This conflict can also occur when you change the type of an ongoing non-interrupting boundary event. For more information, see [Changing Boundary Event Type](/refguide/workflow-boundary-events/#changing-boundary-event-type).
+
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
@@ -210,6 +212,8 @@ You can do one of the following:
 
 When an app developer adds one or more activities in a workflow (or moves one or more activities to an earlier position in the flow), workflow instances that have already passed that point in the flow will not execute these activities. This may not necessarily be a problem, but it is possible that activities that have not been executed yet depend on new activities.
 
+This conflict can also occur when you change the type of an ongoing boundary event. For more information, see [Changing Boundary Event Type](/refguide/workflow-boundary-events/#changing-boundary-event-type).
+
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
@@ -228,35 +232,22 @@ You can do one of the following:
 * The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### Parallel Split Path Removed
+#### Concurrent Path Removed
 
-When an app developer removes a path from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that path cannot continue execution. 
+When an app developer removes a concurrent path and deploys this change, the currently running workflow instances that are executing activities within that path cannot continue execution. This conflict is reported when any of the following concurrent paths is removed:
+
+* An ongoing path of a **Parallel Split**
+* An ongoing **Non-interrupting boundary event** path
+* An ongoing **Event sub-process**
 
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed path will be aborted).
+* The Administrator can apply [jumping](/refguide/jump-to/) to the **End** event of the removed path, which will also abort the currently running activity within the removed path.
 * The app developer can revert the change (which adds the path back) and deploy it.
 
-#### Non-Interrupting Boundary Event Path Removed
+### Workaround for Non-resolvable and Partially Resolvable Conflicts {#workaround-for-non-resolvable-and-partially-resolvable-conflicts}
 
-When an app developer removes an ongoing non-interrupting boundary event and then deploys this change, the currently running workflow instances that are executing activities within that path cannot be continued.
-
-You can do one of the following:
-
-* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed boundary event path will be aborted).
-* The app developer can revert the change (which adds the boundary event path back) and deploy it.
-
-#### Current Event Sub-Process Removed
-
-When an app developer removes an ongoing event sub-process and then deploys this change, the currently running workflow instances that are executing activities within that sub-process cannot be continued.
-
-You can do one of the following:
-
-* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed sub-process will be aborted).
-* The app developer can revert the change (which adds the event sub-process back) and deploy it.
+If the goal is to update an existing workflow document so that running workflow instances are unaffected while new workflow instances execute the new workflow document version, the best workaround is to duplicate the workflow document. To do this, right-click the workflow document and select **Duplicate**. Then make the desired edits in the duplicate. Finally, point the **Call workflow** activity to the new (duplicated) workflow document so that new instances use the updated version.

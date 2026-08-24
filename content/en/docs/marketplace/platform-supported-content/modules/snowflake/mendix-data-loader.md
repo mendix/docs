@@ -51,9 +51,7 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
     1. Enter a **Name** for your data source within the Data Loader.
     2. Enter an **API endpoint** – that is, the base endpoint for the OData resource in your Mendix application, for example, `https://yourmendixapp.mendixcloud.com/odata/snowflakedata/v1/`.
 
-{{% alert color="warning" %}}This must be the root URL, that is, it must end in `/v1/` or `/v2/` Adding anything to the root URL (such as a resource path) will prevent the Mendix Data Loader from working.
-
-If you want to use specific resources, you should instead expose a new endpoint that only contains the resources that you require. This is because it is only possible to use every resource that is exposed in the OData endpoint, and impossible to exclude certain resources.{{% /alert %}}
+        {{% alert color="warning" %}}This must be the root URL, that is, it must end in `/v1/` or `/v2/` Adding anything to the root URL (such as a resource path) will prevent the Mendix Data Loader from working.</br>If you want to use specific resources, you should instead expose a new endpoint that only contains the resources that you require. This is because it is only possible to use every resource that is exposed in the OData endpoint, and impossible to exclude certain resources.{{% /alert %}}
 
     3. Use the **Use Delta Ingestion** check box to specify if you want to ingest all exposed data with every ingestion, or if you want to ingest only data that was newly created or changed since the last ingestion for this data source.
     4. Click **Save**.
@@ -76,6 +74,7 @@ If you want to use specific resources, you should instead expose a new endpoint 
 9. Click **Back** to return to the **Details** page.
 10. Click the **Ingestion Configuration** tab to set up your ingestion destination table.
 11. Click **Create** to start setting up the Ingestion Configuration.
+
     * **Target Database** – Name of the database for data ingestion
     * **Target Schema** – Target schema where all data will be ingested
 12. Click **Save**.

@@ -23,7 +23,7 @@ You must have **Manage Apps Backups** permission for the namespace to use this f
 
 ## Creating a Backup {#creating-backup}
 
-1. On the [Apps](https://sprintr.home.mendix.com) page, select your app.
+1. On the [Projects](https://projects.home.mendix.com) page, select your app.
 2. Click **Backups** in the navigation pane.
 3. Choose the environment to back up from the environment dropdown.
 

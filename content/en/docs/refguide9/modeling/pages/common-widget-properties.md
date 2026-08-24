@@ -75,10 +75,6 @@ The dynamic classes property allows you to specify one or more cascading stylesh
 
 {{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/dynamic-classes.png" class="no-border" >}}
 
-{{% alert color="info" %}}
-The dynamic classes property was introduced in Mendix Studio Pro 8.14.
-{{% /alert %}}
-
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
 
 ### Documentation{#documentation}

@@ -40,6 +40,10 @@ Buttons perform an action when clicked. They can be rendered as a button or as a
 
 Different items can perform different actions. For more information on items and actions that can be assigned to them, see the [Item Section](/refguide/button-properties/#items) in *Button Properties*.  
 
+{{% alert color="warning" %}}
+The **Drop-Down Button** is not compatible with the [Mendix React Client](/refguide/mendix-client/react/). Please use [Pop-up menu](/appstore/widgets/popup-menu/) instead.
+{{% /alert %}}
+
 ## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}

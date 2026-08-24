@@ -542,7 +542,7 @@ Compatibility mode is only available for Operator versions older than 2.27.0. If
 In this case, you must use native mode instead. See [Enable Native Metrics in Connected Mode](#enable-native-metrics-connected-mode) for instructions.
 {{% /alert %}}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page.
 3. Click **Details** next to the environment where compatibility mode should be used.
 
@@ -592,7 +592,7 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
 #### Disable Metrics in Connected Mode
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page.
 3. Click **Details** next to the environment where compatibility mode should be used.
 
@@ -652,7 +652,7 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 
 #### Enable Native Metrics in Connected Mode{#enable-native-metrics-connected-mode}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page.
 3. Click **Details** next to the environment where native mode should be used.
 

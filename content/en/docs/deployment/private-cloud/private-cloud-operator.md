@@ -36,7 +36,7 @@ Create a deployment package (.mda) file from your app. It is this which is picke
 You can obtain the deployment package in a number of ways:
 
 * within Studio Pro, by choosing the menu option **Project > Create Deployment Package…** – see [Create Deployment Package](/refguide/create-deployment-package-dialog/) for more information
-* from the **Environments** page of your app in [Apps](https://sprintr.home.mendix.com/)
+* from the **Environments** page of your app in [Projects](https://projects.home.mendix.com/)
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-operator/environments-create-mda.png" class="no-border" >}}
 * through a CI/CD process, such as Jenkins.
 
@@ -240,8 +240,8 @@ You must make the following changes:
 * **environmentVariables** - Set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable.
 * **clientCertificates** - Specify client certificates to be used for TLS calls to Web Services and REST services.
    
-   * When **key** and **password** are specified, will use the client TLS certificate specified directly in the **MendixApp** CR.
-   * When **certificateSecret** is specified without a **key** and **password**, will load a client TLS certificate from the specified Kubernetes Secret. This feature requires Mendix Operator 2.27 or newer.
+    * When **key** and **password** are specified, will use the client TLS certificate specified directly in the **MendixApp** CR.
+    * When **certificateSecret** is specified without a **key** and **password**, will load a client TLS certificate from the specified Kubernetes Secret. This feature requires Mendix Operator 2.27 or newer.
 
 * **runtimeMetricsConfiguration** - Specify how metrics should be collected. Any non-empty values override the [default values](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) from `OperatorConfiguration`. Refer to [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/) for details on how to monitor your environment.
 * **runtimeLeaderSelection** - Specify how the leader replica should be selected. The following options are available:
@@ -342,7 +342,6 @@ If you read the secret and see `data` instead of `stringData`, the values of the
 
 This ensures that a binary PKCS12 file can be safely stored and edited as a plaintext string.
 {{% /alert %}}
-
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1

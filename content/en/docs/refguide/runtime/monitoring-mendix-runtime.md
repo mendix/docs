@@ -674,7 +674,7 @@ This will write logs to standard output in simple text format.
 }
 ```
 
-This will send logs to the registered OpenTelemetry collector. See [Tracing](/refguide/tracing-in-runtime/) for a guide on how to enable OpenTelemetry.
+This will send logs to the registered OpenTelemetry collector. See [OpenTelemetry](/refguide/opentelemetry-in-runtime/) for a guide on how to enable OpenTelemetry.
 
 ## Set Log Levels{#log-levels}
 

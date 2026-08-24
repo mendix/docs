@@ -143,7 +143,7 @@ This feature is not available if your company has enabled single sign-on. If thi
 
 On the [Notification Settings](https://user-settings.mendix.com/link/notifications) page, you can configure how you want to be notified of Mendix Platform activity.
 
-When you click **Configure Watched Apps** at the bottom of the page, you can choose to **Stop Watching** an app. To watch an app again, return to [My Apps](/developerportal/#my-apps).
+When you click **Configure Watched Apps** at the bottom of the page, you can choose to **Stop Watching** an app. To watch an app again, return to [My Projects](/developerportal/#my-projects).
 
 You can also configure your **Buzz Notifications**:
 
@@ -164,7 +164,7 @@ For more information, see [Two-Factor Authentication](/developerportal/deploy/tw
 
 ### API Keys {#profile-api-keys}
 
-In the [API Keys](https://sprintr.home.mendix.com/link/personalapikeys) section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
+In the [API Keys](https://projects.home.mendix.com/link/personalapikeys) section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allows the apps using it to act on behalf of the user who created the key. This means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
 To get a Mendix API key, click **Configure API Keys** > **Create New API Key** and follow the instructions.
 

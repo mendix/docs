@@ -26,7 +26,7 @@ For all certificates, organizations manage information system trust stores to en
 
 The following controls are related to this control:
 
-* SC-12
+* [SC-12](/private-mendix-platform/nist-controls/sc-12/)
 
 For more information, refer to the NIST Special Publications 00-32, and 800-57.
 

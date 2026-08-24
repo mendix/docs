@@ -73,7 +73,7 @@ To allow the module to send and receive document generation requests on your Men
     1. Go to the **Environments** page for the app as follows:
 
        * Go to the [Nodes](https://cloud.home.mendix.com/) page, then, in the **Public Cloud - Nodes** list, find the desired app, then click **Environments**.
-       * Alternatively, go to [Apps](https://sprintr.home.mendix.com), then in the **My Apps** list, find the desired app, then click **Environments**.
+       * Alternatively, go to [Projects](https://projects.home.mendix.com), then in the **My Projects** list, find the desired app, then click **Environments**.
 
         The app's **Environments** page opens. The **Overview** tab shows a list of available environments for your app.
     

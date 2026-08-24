@@ -1,7 +1,7 @@
 ---
 title: "Deployment"
 url: /developerportal/deploy/
-description: "Describes the Deployment section of the Apps navigation pane."
+description: "Describes the Deployment section of the Projects navigation pane."
 weight: 10
 no_list: false 
 description_list: true
@@ -9,7 +9,7 @@ description_list: true
 
 ## Introduction
 
-The **Deployment** category in the **Apps** [navigation pane](/developerportal/#navigation-pane) provides access to built-in deployment and monitoring tools for your app. The pages in this category are listed below.
+The **Deployment** category in the **Projects** [navigation pane](/developerportal/#navigation-pane) provides access to built-in deployment and monitoring tools for your app. The pages in this category are listed below.
 
 {{% alert color="info" %}}
 The interface and functionality of these pages vary depending on where your app is deployed. For details about the various deployment options, see the [Deploying Apps](/deployment/) section.
@@ -23,7 +23,7 @@ For details on the **Environments** pages for Mendix Cloud, Mendix on Kubernetes
 
 * Mendix Cloud deployments – [Environments](/developerportal/deploy/environments/)
 * Mendix on Kubernetes deployments – [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/#environment-details)
-* SAP deployments – [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/#EnvironmentDetails)
+* SAP deployments – [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/environments/)
 
 Other platforms are not currently supported on the **Environments** page; instead, you must go to the relevant platform portal to monitor and configure your environments.
 

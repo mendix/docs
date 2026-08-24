@@ -52,7 +52,9 @@ The prerequisites are the following:
 
     | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 - 10.24.15 | Studio Pro 10.24.16 and above |
     | --- | --- | --- |
-    | [.NET Desktop Runtime 6.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) <br/> Mendix recommends using version 6.0.35 or above | [.NET Desktop Runtime 8.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) <br/> Mendix recommends using version 8.0.10 or above | [.NET Desktop Runtime 10.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) <br/> Mendix recommends using version 10.0.3 or above |
+    | [.NET Desktop Runtime 6.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) <br/> Mendix recommends using version 6.0.35 or above. | [.NET Desktop Runtime 8.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) <br/> Mendix recommends using version 8.0.10 or above. | [.NET Desktop Runtime 10.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) <br/> Mendix recommends using the latest version to ensure you are up to date with security patches. |
+
+    {{% alert color="info" %}}If .NET Desktop Runtime is not installed on your machine, Mendix will install a version which was current at the time this version of Studio Pro was released.{{% /alert %}}
 
 * Eclipse Temurin JDK (x64) (see [JDK Installation](/refguide10/jdk-installation/) if you want to install another version of the JDK). Mendix version 10.8.0 and 10.0.9 supports JDK 11 and 17. Mendix version 10.10.0 supports JDK 11, 17, and 21, but installer still installs JDK 11.
 
@@ -100,15 +102,15 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
 4. Download the prerequisites listed in the **[Troubleshooting](/refguide9/install/#troubleshooting)** section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
    1. Microsoft .NET Desktop Runtime
-      * For Studio Pro versions 10.0.0 - 10.10.0, rename the Microsoft .NET Desktop Runtime 6.0.x
+      * For Studio Pro versions 10.0.0 - 10.10.0, rename the Microsoft .NET Desktop Runtime 6.0.x to remove the patch version. For example, if you have downloaded .NET Desktop Runtime 6.0.35:
         * On x64, rename *windowsdesktop-runtime-6.0.35-win-x64.exe* to *windowsdesktop-runtime-6.0-x64.exe*
         * On ARM64, rename *windowsdesktop-runtime-6.0.35-win-arm64.exe* to *windowsdesktop-runtime-6.0-arm64.exe*
-      * For Studio Pro versions 10.11.0 - 10.24.15, rename the Microsoft .NET Desktop Runtime 8.0.x
+      * For Studio Pro versions 10.11.0 - 10.24.15, rename the Microsoft .NET Desktop Runtime 8.0.x to remove the patch version. For example, if you have downloaded .NET Desktop Runtime 8.0.10:
         * On x64, rename *windowsdesktop-runtime-8.0.10-win-x64.exe* to *windowsdesktop-runtime-8.0-x64.exe*
         * On ARM64, rename *windowsdesktop-runtime-8.0.10-win-arm64.exe* to *windowsdesktop-runtime-8.0-arm64.exe*
-      * For Studio Pro versions 10.24.16 and above, rename the Microsoft .NET Desktop Runtime 10.0.x
-        * On x64, rename *windowsdesktop-runtime-10.0.3-win-x64.exe* to *windowsdesktop-runtime-10.0-x64.exe*
-        * On ARM64, rename *windowsdesktop-runtime-10.0.3-win-arm64.exe* to *windowsdesktop-runtime-10.0-arm64.exe*
+      * For Studio Pro versions 10.24.16 and above, rename the Microsoft .NET Desktop Runtime 10.0.x to remove the patch version. For example, if you have downloaded .NET Desktop Runtime 10.0.7:
+        * On x64, rename *windowsdesktop-runtime-10.0.7-win-x64.exe* to *windowsdesktop-runtime-10.0-x64.exe*
+        * On ARM64, rename *windowsdesktop-runtime-10.0.7-win-arm64.exe* to *windowsdesktop-runtime-10.0-arm64.exe*
    2. Eclipse Temurin JDK (x64)
       * For Studio Pro versions 10.0.0 - 10.10.0, rename the Java Development Kit 11 (x64) *msi* 
         * For example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.20.1_1.msi* to *adoptiumjdk_11_x64.msi*

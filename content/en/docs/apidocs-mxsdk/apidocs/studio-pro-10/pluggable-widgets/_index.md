@@ -12,7 +12,6 @@ weight: 90
 Mendix comes with a wide variety of [Widgets](/refguide/pages/#widgets-categories), but sometimes your app requires a widget outside of this set. To support a more advanced UI pattern or create app-specific interactions, you will need to make your own pluggable widget. This documentation will help you achieve that in Studio Pro 10. See these links for other versions' documentation:
 
 * [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/)
-* [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)
 
 Your new pluggable widget can be used while modeling pages alongside standard Mendix components. It can also be shared between multiple apps and distributed through the [Marketplace](/appstore/).
 
@@ -68,7 +67,8 @@ A widget package file is just a ZIP archive containing the following things:
     * *{widgetName}.tile.png* sets the tile image inside the Studio Pro toolbox in tile view (the ideal image size is 256x192 pixels, but other sizes will be resized to fit)
     * *{widgetName}.tile.dark.png* sets the dark-mode equivalent to *{widgetName}.tile.png*
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
-    * Note that all CSS files you add (except the one located in the **lib** sub-directory) will automatically be loaded in an app via the widget
+    * All CSS files you add (except the ones located in the **lib** sub-directory) will automatically be loaded in an app via the widget.
+    * When the React client is enabled for an app, any `assets` directories in a widget package are automatically copied to the widget's directory under `dist` during bundling. This ensures that all asset files from a pluggable widget are included in the final build and available at runtime.
 * Optionally, a *locales* folder.
 
 Naming your widget package file after the `widgetName` is best practice. Also, a widget package can include multiple widgets by putting several of the above items in the same widget package. However, creating such packages is *not recommended*. 

@@ -30,11 +30,11 @@ Decisions regarding the employment of mobile code within organizational informat
 
 The following controls are related to this control:
 
-* AU-2
-* AU-12
-* CM-2
-* CM-6
-* SI-3
+* [AU-02](/private-mendix-platform/nist-controls/au-02/)
+* [AU-12](/private-mendix-platform/nist-controls/au-12/)
+* CM-02
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
+* SI-03
 
 For more information, refer to the NIST Special Publication 800-28; and DoD Instruction 8552.01.
 

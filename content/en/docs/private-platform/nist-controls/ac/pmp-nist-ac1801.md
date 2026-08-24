@@ -24,8 +24,8 @@ The information system protects wireless access to the system using authenticati
 
 The following controls are related to this control:
 
-* SC-8
-* SC-13
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 ## Responsibility
 

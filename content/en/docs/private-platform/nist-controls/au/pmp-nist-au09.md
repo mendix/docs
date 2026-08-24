@@ -17,8 +17,6 @@ This document describes how Private Mendix Platform fulfills the AU-09 control.
 
 ## Control
 
-### AU-08
-
 The information system protects audit information and audit tools from unauthorized access, modification, and deletion.
 
 ### Supplemental Guidance
@@ -27,13 +25,13 @@ The audit information includes all information needed to successfully audit info
 
 The following controls are related to this control:
 
-* AC-3
-* AC-6
-* MP-2
-* MP-4
-* PE-2
-* PE-3
-* PE-6
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* [MP-02](/private-mendix-platform/nist-controls/mp-02/)
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* PE-02
+* PE-03
+* PE-06
 
 ## Responsibility
 

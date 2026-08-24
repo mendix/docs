@@ -29,7 +29,6 @@ To use artifact binding, select the ARTIFACT_BINDING option for **Response proto
 Using artifact binding for SAML responses at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.3.0/v3.3.1 and above for Mendix 9 and 10
-* v2.3.0 and above for Mendix 8
 
 `POST_BINDING` is the default value when using an [Easy Default Flow](/appstore/modules/saml/installation-configuration/#easy-flow).
 
@@ -58,7 +57,6 @@ When using an [Easy Default Flow](/appstore/modules/saml/installation-configurat
 Requesting user attributes at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.3.0/v3.3.1 and above for Mendix 9 and 10
-* v2.3.0 and above for Mendix 8
 
 ## Encryption Settings{#encryption-settings}
 
@@ -138,7 +136,7 @@ Checking this box will force the SAML IdP to (re)authenticate end-users, even if
 
 ### Enable Mobile Authentication Token
 
-If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app and you enable this, you can sign in to your Mendix hybrid mobile app after the app is closed, using an authentication token cookie. Only check this if you are using SAML on a hybrid mobile app. Note that this functionality also requires changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
+If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app and you enable this, you can sign in to your Mendix hybrid mobile app after the app is closed, using an authentication token cookie. Only check this if you are using SAML on a hybrid mobile app.
 
 ### ⚠ Enable Delegated Authentication {#delegated-auth}
 
@@ -164,7 +162,6 @@ In-session authentication is a process that takes place within a session that wa
 In-session authentication at the SAML IdP is only available in the following versions of the module (depending on which Mendix version you are using)
 
 * v3.3.0/v3.3.1 and above for Mendix 9 and 10
-* v2.3.0 and above for Mendix 8
 
 Usage of the in-session authentication changes the user roles that apply to the current session. If your app is configured with multiple IDP configurations, the in-session authentication will use the same SAML IDP as the initial (non-anonymous) session. If there is no current session, the end-user can select their IDP. In-session authentication uses the setting `ForceAuthn=true`, which means that the IdP will always authenticate an end-user even if the IdP already has a session for that end-user.
 

@@ -26,7 +26,7 @@ Information systems operating at different security categories or classification
 
 The following controls are related to this control:
 
-* PE-4
+* PE-04
 * PE-19
 
 ## Responsibility

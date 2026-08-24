@@ -2,23 +2,19 @@
 title: "Comparing Revisions"
 url: /refguide/comparing-revisions/
 weight: 65
-description: "How to compare a historical revision to your current state to understand what changed."
+description: "How to compare a historical revision to your current state or compare any two commits to understand what changed."
 ---
 
 ## Introduction
 
-You can compare any historical revision of your version-controlled app to your current working state using the [Comparison pane](/refguide/comparison-pane/). This helps you understand what has changed since a specific commit, see the impact of your recent edits, or review what is affected if you revert to a past revision.
+You can compare revisions in your version-controlled app using the [Comparison pane](/refguide/comparison-pane/). You can compare a historical revision to your current working state, or compare any two selected commits. This helps you understand what has changed since a specific commit, see the impact of your recent edits, or review differences between two commits.
 
 The comparison shows differences between:
 
-* **Older revision** – the historical revision you selected from the **History** pane
-* **Newer revision** – your current working state, including all uncommitted changes
+* **Older revision** – the historical revision you selected or the first selected commit when comparing commits
+* **Newer revision** – your current working state (for **Compare to current state**) or the second selected commit (for **Compare revisions (2/2 selected)**)
 
-The comparison always includes your current uncommitted changes, so you can use this feature to see how your recent edits differ from any point in your app's history.
-
-{{% alert color="warning" %}}
-You can only compare a selected historical revision to your current working state. It is not possible to compare two arbitrary past revisions to each other.
-{{% /alert %}}
+When you compare to your current state, the comparison includes your uncommitted changes.
 
 For more information on the **Comparison** pane and its detailed overview, refer to [Comparison Pane](/refguide/comparison-pane/).
 

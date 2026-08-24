@@ -18,7 +18,7 @@ Team Server is where all the committed versions of Mendix apps are stored. Mendi
 
 When you commit your app model changes to the Team Server in Studio Pro, you can select stories that you have been working on. Team Server automatically creates links between stories and model changes, allowing you to navigate from commits to the associated requirements. 
 
-After opening your app in [Apps](https://sprintr.home.mendix.com/), on the **Team Server** page, you can see a URL to access you app, revision history, and revision details.
+After opening your app in [Projects](https://projects.home.mendix.com/), on the **Team Server** page, you can see a URL to access you app, revision history, and revision details.
 
 Team Server is hosted on AWS in Frankfurt, Germany.
 

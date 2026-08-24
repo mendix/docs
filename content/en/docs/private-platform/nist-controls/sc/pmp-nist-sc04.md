@@ -32,9 +32,9 @@ This control does not address:
 
 The following controls are related to this control:
 
-* AC-3
-* AC-4
-* MP-6
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
+* [AC-04](/private-mendix-platform/nist-controls/ac-04/)
+* MP-06
 
 ## Responsibility
 

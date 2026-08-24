@@ -15,13 +15,9 @@ Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) fo
 
 This page provides best practices for configuring and using Private Connectivity networks, agents, and resources. Following these guidelines helps ensure secure, efficient, and maintainable connections between your Mendix apps and internal infrastructure.
 
-{{% alert color="info" %}}
-Mendix uses Tailscale subnet routers to access routes in your network. In a Mendix context, these are called agents. 
-{{% /alert %}}
-
 ## Authentication Key Security 
 
-Creating an agent involves creating an authentication key. An agent registered with that authentication key can join the agent's network. If you have a production network, only use the generated authentication key for agents placed in your production network. Apply the same principle for development networks.
+Installing an agent involves creating an authentication key. An agent registered with that authentication key can join the agent's network. If you have a production network, only use the generated authentication key for agents placed in your production network. Apply the same principle for development networks.
 
 ## When to Create Networks 
 
@@ -94,12 +90,12 @@ For example, Azure Container Apps do not have privileged container access, so yo
 
 ## Advertised Routes
 
-Mendix uses Tailscale subnet routers to advertise routes to your network. This gives you full control over where the agent forwards traffic within your network.
+You need to advertise which IP addresses can be accessed by Mendix Cloud. This gives you full control over where the agent forwards traffic within your network.
 
 ### Routes to Advertise
 
 The routes you advertise depend on what your Mendix Cloud app needs to access and what you want to share:
 
 * Single resource – If your app only needs to reach one specific resource, advertise it as a `/32` route (for example, `192.168.1.10/32`).
-* App subnet – If you host all apps in one specific subnet, use the subnet router (for example, `192.168.1.0/24`).
-* Entire network – If you want to share the entire network to avoid repeatedly opening new routes, use the entire VPC or VNet subnet router (for example, `192.168.0.0/16`).
+* App subnet – If you host all apps in one specific subnet, advertise the entire subnet (for example, `192.168.1.0/24`).
+* Entire network – If you want to share the entire network to avoid repeatedly opening new routes, use the entire VPC or VNet subnet (for example, `192.168.0.0/16`).

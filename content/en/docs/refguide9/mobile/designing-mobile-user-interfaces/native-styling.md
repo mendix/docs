@@ -95,7 +95,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/native-styling/how-to-use-native-styling/brand-primary-rosybrown.png" alt="rosybrown button" width="400" class="no-border" >}}
 
-    You have successfully altered a default button to look rosy brown These screenshots employ the Make It Native app's [Dark Mode](/releasenotes/mobile/make-it-native-app/#new-features-5).
+    You have successfully altered a default button to look rosy brown These screenshots employ the Make It Native app's Dark Mode.
 
 ### Classes
 

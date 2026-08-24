@@ -118,6 +118,10 @@ In the **Deploy** section, you can configure the environment to which your app w
 5. Click **Next**.
 6. After the environment is created, you can use the **Details** menu to perform additional actions such as deleting the environment, or starting and stopping the app.
 
+### DTAP Mode
+
+You can select the environment purpose (Development, Test, Acceptance, or Production). For Private Mendix Platform, environment with the Development and Test purpose operate in Development DTAP mode, while Acceptance and Production environments operate in Production DTAP mode. 
+
 ## Managing Marketplace Content
 
 If your organization has enabled the Marketplace for your Private Mendix Platform, you can build your own connectors and modules, and then share them on the Marketplace, so that other teams from your organization can use the connector in their own apps.

@@ -102,12 +102,14 @@ This option becomes available if **Use custom repositories** is set to **Yes**.
 
 You can specify which repositories to use for Gradle. The content of this field should be specified using Groovy syntax and is what is inside the `repositories { }` section in a Gradle build file. By default, this field contains `mavenCentral()` and `gradlePluginPortal()`. 
 
-## Maia Tab
+## AI Tab
 
-### Generative AI
+### Maia
+
+#### Generative AI
 
 * **Enable Maia** - When enabled, you can access all Maia capabilities in Studio Pro. It is enabled by default.
-* **Enable web tools** (in Studio Pro 11.11 and above) - When enabled, you can use the [Maia Web Fetch](/refguide/maia-web-fetch/) feature to fetch and read content from public websites and APIs. It is enabled by default. Restart Studio Pro for the change to take effect.
+* **Enable web tools** (in Studio Pro 11.11 and above) - When enabled, you can use the [Maia Web Fetch](/refguide/maia-web-fetch/) feature to fetch and read content from public websites and APIs. It is enabled by default. Restart Studio Pro for the change to take effect. For Studio Pro 11.12 and above, the changes take effect immediately and do not require restart. 
 
 In Studio Pro 11.7 and below, the **Generative AI** section contains the following settings:
 
@@ -119,17 +121,13 @@ In Studio Pro 11.7 and below, the **Generative AI** section contains the followi
 * **Enable Maia for Workflows** – when enabled, you can use it to generate workflows by adding and configuring activities. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/). It is disabled by default.
 * **Enable translation generator** – when enabled, you can use it to translate your model into different languages through the **Batch translate** option under the **Language** menu or to translate [system texts](/refguide/system-texts/). For more information, see [Translation Generator](/refguide/translation-generator/). It is disabled by default.
 
-### In-Editor Recommender
-
-The **In-Editor Recommender** section contains the following settings:
+#### In-Editor Recommender
 
 * **Enable for microflow, nanoflow, and rule editors** – this allows you to enable and disable [Logic Recommender](/refguide/logic-recommender/) in the microflow, nanoflow, and rule editors. It is enabled by default. 
 * **Enable for workflow editor** – this allows you to enable and disable [Workflow Recommender](/refguide/workflow-recommender/) in the workflow editor. It is enabled by default.
 * **Enable for page editor** - this allows you to enable and disable the [UI Recommender](/refguide/ui-recommender/). It is enabled by default.
 
-### Best Practice Recommender
-
-The **Best Practice Recommender** section contains the following settings:
+#### Best Practice Recommender
 
 * **Show recommendation in editors** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) highlights elements that contain anti-patterns in visual editors. It is enabled by default.
 
@@ -235,7 +233,15 @@ This option sets the default page editor mode that your page opens in: **Structu
 
 ### Language {#language}
 
-This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
+This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, German (Beta), and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
+
+| Language               | Introduced | General Availability |
+| ---------------------- | ---------- | -------------------- |
+| Chinese                | 10.17      | 10.24                |           |
+| Japanese               | 10.17      | 10.24                |
+| Korean                 | 10.17      | 10.24                |
+| Portuguese (Brazilian) | 10.23      | TBD                  |
+| German                 | 11.13      | TBD       
 
 ### Editor Tabs Closing Policy {#closing-policy}
 
@@ -295,6 +301,10 @@ Select this option to use the modernized version of the App Explorer. You must r
 
 Select this option to use the modernized (web) Runtime console. You must restart Studio Pro to use this feature.
 
+### Debug Windows
+
+Select this option to use the modernized Debugger pane, which includes the new Breakpoints, Debugger, and Variables panes. You must restart Studio Pro to use this feature.
+
 ### Errors Pane
 
 Select this option to use the modernized version of the Errors Pane. You must restart Studio Pro to use this feature.
@@ -302,6 +312,10 @@ Select this option to use the modernized version of the Errors Pane. You must re
 ### Expression Editor
 
 This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+
+### Find Results
+
+Select this option to use the modernized Find Results pane. You must restart Studio Pro to use this feature.
 
 ### GraphQL {#graphql}
 
@@ -311,21 +325,23 @@ You can publish data as a GraphQL service. When you enable this feature, you can
 
 Select this option to use the modernized version of the JavaScript action editor. You must close all open JavaScript actions to use this feature.
 
+### Maia
+
+Select this option to use a custom AI provider for Maia.
+
 ### Mapping Editor
 
 This setting allows you to set the beta version as the default editor.
+
+### Project Loading
+
+Select this option to enable optimizations during project loading.
 
 ### System Texts Editor
 
 This option allows you to use the web version of the system texts editor. It is enabled by default.
 
 If Translation Generator is also enabled, you can use it in this editor. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
-
-### Workflow
-
-In Studio Pro 11.8, select **Enable workflow event sub-processes (beta)** to allow adding [event sub-processes](/refguide/workflow-event-sub-processes/) to your workflow in the workflow editor.
-
-In Studio Pro 11.9 and above, this option is removed. Workflow event sub-processes are in general availability and enabled by default.
 
 ## Read More
 

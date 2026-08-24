@@ -28,7 +28,7 @@ There are two ways to give team members access to submit tickets: by assigning t
 
 To add users to an app's team and give them access to submit tickets for a specific app, follow these steps:
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the [Team](/developerportal/general/team/) page. 
 3. Click **Invite Member** to invite the users who should be able to submit/view Support tickets concerning this app.
 4. Assign one of the following roles to users you want to give access to creating tickets for the app:
@@ -44,7 +44,7 @@ To add users to an app's team and give them access to submit tickets for a speci
 
 To give existing app members access to submit tickets, follow these steps:
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Security** page.
 3. Change the **ROLE** for the user who needs access to one of the following:
     * **Business Engineer**

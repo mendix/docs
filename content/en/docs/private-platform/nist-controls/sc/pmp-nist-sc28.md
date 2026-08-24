@@ -26,17 +26,17 @@ This control addresses the confidentiality and integrity of information at rest 
 
 The following controls are related to this control:
 
-* AC-3
-* AC-6
-* CA-7
-* CM-3
-* CM-5
-* CM-6
-* PE-3
-* SC-8
-* SC-13
-* SI-3
-* SI-7
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* CM-03
+* [CM-05](/private-mendix-platform/nist-controls/cm-05/)
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
+* PE-03
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
+* SI-03
+* SI-07
 
 For more information, refer to the NIST Special Publications 800-56, 800-57, and 800-111.
 
@@ -171,6 +171,6 @@ For more information, see [Read-only RootFS](/developerportal/deploy/private-clo
 
 The Mendix Runtime provides the [EnableFileDocumentCaching](/refguide/custom-settings/#EnableFileDocumentCaching) setting to prevent sensitive file documents from being cached to local disk. By default, caching is set to `false`. Customers are advised to only enable caching if they are sure that the file documents will not contain any sensitive information. This direct data-at-rest protection control at the runtime layer prevents sensitive `System.FileDocument` data from being written to the local container filesystem where it would exist at rest without encryption.
 
-### SC-28(1) - FIPS Mode: AES-256 and FIPS 140-2 Validated Cryptography
+### SC-28 (01) - FIPS Mode: AES-256 and FIPS 140-2 Validated Cryptography
 
-The sibling control SC-28 (1) documents the cryptographic protection mechanisms available in Private Mendix Platform, including support for FIPS 140-2 validated modules when deployed in FIPS mode. Private Mendix Platform supports FIPS-compliant deployments on supported Kubernetes distributions, ensuring that AES-256 is used for data at rest.
+The sibling control SC-28 (01) documents the cryptographic protection mechanisms available in Private Mendix Platform, including support for FIPS 140-2 validated modules when deployed in FIPS mode. Private Mendix Platform supports FIPS-compliant deployments on supported Kubernetes distributions, ensuring that AES-256 is used for data at rest.

@@ -147,10 +147,10 @@ When creating the JSON structure for your secret, you must use a flat key-value 
     
     * Maia
 
-        * **AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
-        * **AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
-        * **AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
-        * **OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
+        * **Maia.AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
 
 ### Configuring Azure AD Workload Identity
 

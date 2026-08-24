@@ -24,8 +24,8 @@ The information system prevents program execution in accordance with one or more
 
 The following controls are related to this control:
 
-* CM-8
-* PM-5
+* * CM-08
+* PM-05
 
 ## Responsibility
 

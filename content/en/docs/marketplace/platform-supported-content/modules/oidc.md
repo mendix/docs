@@ -423,6 +423,23 @@ For Entra ID access to APIs through an access token, in addition to the configur
 
 Now, you can acquire tokens which can be validated using JWKS URI.
 
+#### Configuring Optional Claims for User Attributes in Microsoft Entra ID{#entra-optional-claims}
+
+By default, Microsoft Entra ID does not include user attribute claims such as `given_name` and `family_name` in the ID token, even when the `profile` scope is requested. To make these claims available, add them as optional claims in the Entra App Registration:
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+2. Go to **Entra ID** > **App registrations** and select your application.
+3. In the left menu, select **Token configuration** and click **Add optional claim**.
+4. Select **ID** as the **Token type**.
+5. Select the claims you need, for example, `given_name` and `family_name`.
+6. Click **Add**.
+
+After completing these steps, the claims will be included in the ID token and will be available for attribute mapping in the Mendix OIDC SSO configuration.
+
+{{% alert color="info" %}}
+If `given_name` or `family_name` are present in your ID token after adding them as optional claims but do not appear in the **Add Claim** dropdown in the Mendix OIDC configuration, see [Creating IdP Attribute Manually](/appstore/modules/oidc/#creating-idp-attribute-manually) for steps to add these claims manually.
+{{% /alert %}}
+
 #### Amazon Cognito Client Configuration
 
 For more information about configuring your app for OIDC with Amazon Cognito, see [Amazon Cognito: Configuring the Required Settings in Your Mendix App](/appstore/modules/aws/amazon-cognito/#cognito).
@@ -484,7 +501,7 @@ The following constants are optional:
 when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not need to set **ClientSecret** constant.
 {{% /alert %}}
 
-* **JWT_ALG** (*default: RS256*) – JWT signing algorithm
+* **JWTSignAlgorithm** (*default: RS256*) – JWT signing algorithm
 
     Example: `ES256`, `ES384`, `ES512`, `PS256`, `PS384`, `PS512`, `RS256`,`RS384`, and `RS512`
 
@@ -690,9 +707,22 @@ IdP attributes will be automatically created from the list of `claims_supported`
 1. In the **Creating Users** tab, click **Add Claim** to add a new mapping.
 2. In the **Add Claim Map** dialog, click **Search**.
 3. Under the **Claims for claim entity attribute**, click **New** to create a new claim.
-4. In the **IdP Attribute**, select the newly created claim from the dropdown, and click **Save**.
+4. Provide **Claim Name** and **Friendly Name**, and click **Previous**.
+5. In the **IdP Attribute**, select the newly created claim from the dropdown, and click **Save**.
 
 Select the required attribute to use it in your mapping.
+
+{{% alert color="info" %}}
+If you are using Microsoft Entra ID and the expected claims (such as `given_name` or `family_name`) do not appear in the **Add Claim** dropdown, this is because Entra does not advertise these claims in its discovery endpoint. To make them available, add them as optional claims in the Entra App Registration's **Token configuration** tab. For more information, see the [Configuring Optional Claims for User Attributes](#entra-optional-claims) section.
+
+After adding the optional claims to the Entra App Registration, use one of the following options to get the claims in the **Add Claim** dropdown:
+
+* Search for the claims: Follow the steps above and provide **Claim Name** and **Friendly Name** (optional claims configured in the Entra App Registration). Click **Previous**, find the newly added, optional claims and add them. 
+* Add claims to the default setup: Add the claims to the `SUB_DefaultUserProvisioning` microflow, then map them:
+    1. In the `SUB_DefaultUserProvisioning` microflow, add a `CreateClaim` activity for `family_name`, `given_name`, or any custom attribute configured in the Entra App Registration to populate in the token. To reuse an existing activity, copy a `CreateClaim` activity from the same microflow and update the claim name value.
+    2. Click **Add Claim** and select `family_name` or `given_name` from the **IdP Attribute** dropdown.
+    3. Map to the **Custom Entity Attribute** and click **Save**.
+{{% /alert %}}
 
 ##### User Provisioning Using Your Custom User Entity{#custom_user_entity}
 
@@ -727,10 +757,10 @@ The section below shows the methods to configure user provisioning when using OI
 By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies to the following mapping:
 
 | ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
-| ----------------------------- | ----------------------------- |
-| sub                           | Name                          |
-| name                          | Fullname                      |
-| email                         | Email                         |
+| ----------------------------- | -----------------------------                | 
+| sub                           | Name                                         |
+| name                          | Fullname                                     |
+| email                         | Email                                        |
 
 {{% alert color="warning" %}}
 Do not change the `UserProvisioning_StandardOIDC` microflow. This may cause problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.

@@ -137,7 +137,6 @@ Please be aware of the following limitation affecting synchronization:
 * An entity configured with the **Never** synchronization mode is not allowed to be associated with either of the following:
     * An entity that is not used in offline.
     * An entity that is configured with a synchronization mode other than **Never**.
-* File and Image documents are not supported for entities configured with the **Never** synchronization mode.
 * An entity configured with **Never** synchronization mode is not allowed to have generalization from either of the following:
     * An entity that is not used in offline.
     * An entity that is configured with a synchronization mode other than **Never**.

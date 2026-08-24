@@ -10,6 +10,18 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+## Release date: August 20, 2026
+
+* The cluster detail slider now displays your load balancer IP address.
+* Support tickets now include a consent checkbox for log sharing and direct environment access.
+* PostgreSQL is now fixed at version 17 to align with Mendix Cloud.
+* The High Availability setting is now read-only for existing clusters to prevent PersistentVolume issues.
+* AKS maintenance configuration actions are now available to customers.
+* Default Grafana alert rules are now provided (disabled by default), matching Mendix Cloud standards.
+* We have fixed an issue where the Coastguard backup pod was evicted during backups due to storage limits.
+* We have fixed an issue preventing environment backup downloads.
+* We have added Terraform lifecycle protection for AKS maintenance configurations to prevent drift.
+
 ## Release date: July 2, 2026
 
 * We have improved managed app creation in the Mendix on Azure portal by adding guidance that the selected deployment region cannot be changed after app creation.

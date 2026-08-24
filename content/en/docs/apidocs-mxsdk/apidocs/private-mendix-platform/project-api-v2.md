@@ -32,4 +32,4 @@ For information about Project API version 1, see [Project API - Version 1](/apid
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/openapi-project-v2.yaml"  >}}
+{{< swaggerui src="/openapi-spec/openapi-project-v2.0.1.yaml"  >}}

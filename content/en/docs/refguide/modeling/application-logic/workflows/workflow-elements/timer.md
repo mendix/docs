@@ -28,7 +28,7 @@ It can be used in the following ways:
 **Timer** properties consist of the following sections:
 
 * [General](#general)
-* [Interrupting behavior](#boundary-properties)
+* [Interrupting Behavior](#boundary-properties)
 * [Timer](#timer)
 * [Recurrence](#recurrence)
 * [Common](#common)
@@ -37,7 +37,7 @@ It can be used in the following ways:
 
 The **Caption** describes what happens in this element. It is displayed under the workflow element to make the **Timer** easier to read and understand without the need to add annotations.
 
-### Interrupting Behavior {#boundary-properties}
+### Interrupting Behavior Section {#boundary-properties}
 
 {{% alert color="info" %}}
 This section is only applicable when **Timer** is used as a timer boundary event or as the start event of a timer event sub-process.

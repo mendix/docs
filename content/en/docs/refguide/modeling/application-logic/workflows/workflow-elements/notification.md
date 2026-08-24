@@ -37,7 +37,7 @@ However, the entire parallel split remains suspended at the merge until the noti
 **Notification** properties consist of the following sections:
 
 * [General](#general)
-* [Interrupting behavior](#boundary-properties)
+* [Interrupting Behavior](#boundary-properties)
 * [Common](#common)
 
 ### General Section {#general}

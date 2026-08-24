@@ -66,7 +66,7 @@ Event sub-processes can be configured as either interrupting or non-interrupting
 
 Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger it via the **Notify workflow** activity are ignored. No new instances are created for that specific sub-process while one is **In Progress**. A new instance can be initiated only after the active sub-process has completed its execution path.
 
-A [recurring](/refguide/timer/#recurrence) timer start event is the exception: when it fires while an instance of its event sub-process is still **In Progress**, that instance is aborted and a new one is started. For more information, see [Recurrence While the Previous Occurrence Is Still Running](/refguide/timer/#recurrence-in-progress) in *Timer*.
+A [recurring](/refguide/timer/#recurrence) timer start event is the exception: when it fires while an instance of its event sub-process is still **In Progress**, that instance is aborted and a new one is started. For more information, see [Recurrence While the Previous Instance Is Still Running](/refguide/timer/#recurrence-in-progress) in *Timer*.
 
 If your workflow has multiple, distinct event sub-processes defined (for example, one for "Address Change" and one for "Document Upload"), each one can have its own active instance simultaneously. One being active does not prevent a different one from being triggered.
 

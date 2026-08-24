@@ -95,6 +95,7 @@ The following customizations are related to establishing connectivity to and fro
 * Override DNS configuration on the subnet hosting AKS nodes.
 * Configure Private Link Service to expose Mendix apps in other Azure virtual networks.
 * Configure Private Endpoints to establish connectivity between Mendix apps and other services.
+* Link a self-managed Private DNS zone to the vNet hosting AKS nodes to resolve internal service names. See [DNS Name Resolution toward Resources in Other Networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#name-resolution-dns-override).
 * Tune the server parameters of the shared Azure Database for PostgreSQL Flexible Server. Only a small set of parameters is safe to change, and some parameters can cause server crashes or permanent data loss. Before changing any parameters, see [Tuning PostgreSQL Server Parameters](/developerportal/deploy/mendix-on-azure/configuration/postgresql-parameter-tuning/).
 
 Mendix limits customization to what is described above to ensure a consistent, predictable, and scalable customer experience.

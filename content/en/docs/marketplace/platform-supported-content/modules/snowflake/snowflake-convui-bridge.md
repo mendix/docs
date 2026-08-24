@@ -32,7 +32,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 ## Authentication
 
 * Authentication with an RSA key pair according to PKCS #8 standard
-* Authentication with OAUTH through an OIDC provider or PAT. You must add your OAuth token or PAT and optionally its expiration date to the BearerToken created in the **ChatCompletions_CallLLM** microflow. 
+* Authentication with OAUTH through an OIDC provider or PAT. You must add your OAuth token or PAT and optionally its expiration date to the BearerToken created in the **ChatCompletions_CallLLM** and **ChatCompletions_CallCortexAgent** microflows. 
 
 ## Configuration
 
@@ -40,12 +40,13 @@ After you install the Snowflake Conversational UI Bridge Module, you can find it
 
 ### Functionality
 
-Easily implement chat interfaces for Cortex Analyst using Conversational UI with the help of the following features.
+Easily implement chat interfaces for Cortex Analyst and Cortex Agent using Conversational UI with the help of the following features.
 
 #### Pages
 
-* The **SnowflakeConfig_TestingPage** page is a quick testing page for the different chat interfaces provided by conversational UI, as well as an example of how you can set up a chat interface for Cortex Analyst using ConversationalUI. To use it, add the page to your project navigation and start exploring.
+* The **SnowflakeConfig_TestingPage** page is a quick testing page for the different chat interfaces provided by conversational UI, as well as an example of how you can set up a chat interface for Cortex Analyst and Cortex Agent using ConversationalUI. To use it, add the page to your project navigation and start exploring.
 * The **CortexAnalystDeployedModel_Overview** overview page is used to configure your Contex Analyst implementations by creating `CortexAnalystDeployedModels`. The page requires a `SnowflakeAIDataConnector.ConnectionDetails` object.
+* The **CortexAgentDeployedModel_Overview** overview page is used to configure your Cortex Agent implementations by creating `CortexAgentDeployedModels`. The page requires a `SnowflakeAIDataConnector.ConnectionDetails` object.
 * The **Snippet_ModelConfig** snippet for the Cortex Analyst Model configuration page. The page requires a `SnowflakeAIDataConnector.ConnectionDetails` object.
 * The **FullScreenChat_HistoryAndProviderSelection** page is an example of a full screen chat with a History bar and provider selection.
 
@@ -53,7 +54,20 @@ Easily implement chat interfaces for Cortex Analyst using Conversational UI with
 
 * The **ChatCompletions_CallLLM** action microflow for **CortexAnalystDeployedModel**, used in **CortexAnalystDeployedModel_Create**, handles calls to Cortex Analyst and maps GenAICommons requests and responses to Cortex Analyst requests and responses.
 * The **ChatContext_ChatWithHistory** action microflow for **ConversationalUI.ProviderConfig**, used in **SnowflakeConversationalUIBridge.ProviderConfig_GetCreate**, handles pre- and post-processing for the creation of Conversational UI messages, references, and other objects.
+* The **ChatCompletions_CallCortexAgent** action microflow for **CortexAgentDeployedModel** handles calls to the Snowflake Cortex Agent REST API and maps GenAICommons requests and responses to Cortex Agent requests and responses. It manages thread creation and continuity through the `Conversation` entity.
+* **The CortexAgent_ChatContext_ChatWithHistory_ActionMicroflow** action microflow for `ConversationalUI.ProviderConfig`, used in `CortexAgent_ProviderConfig_GetCreate`, handles pre- and post-processing for the creation of Conversational UI messages, references, and other objects for Cortex Agent interactions.
 
 ## Example Implementation
 
  The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains an example implementation of the Cortex Analyst Conversational UI.For more information, see [Snowflake Cortex Analyst](/agents/agents-kit-2/reference-guide/snowflake-cortex/#functionalities-available-in-the-snowflake-showcase-app).
+
+### Cortex Agent Implementation
+
+The **SnowflakeConfig_TestingPage** page contains a reference implementation of the Cortex Agent Conversational UI that can be used as a starting point. 
+
+To set up your own implementation, perform the following steps:
+
+1. Create a new `CortexAgentDeployedModel` on the **CortexAgentDeployedModel_Overview** page by providing the required Agent configuration details.
+2. Wire the created `CortexAgentDeployedModel` to the Conversational UI by using `CortexAgent_ProviderConfig_GetCreate` to create or retrieve the associated `ProviderConfig`.
+
+The ProviderConfig is then used by the Conversational UI to drive the chat interface, routing messages through `ChatCompletions_CallCortexAgent` and maintaining conversation continuity through the `Conversation` entity.

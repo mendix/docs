@@ -39,6 +39,10 @@ From version 1.4 of the basic charts you can create charts with a variable numbe
 
 ## Any Chart {#any-chart}
 
+{{% alert color="warning" %}}
+The Any Chart widget is deprecated. Its successor, Custom Chart, is not available for Studio Pro 9: it requires [Charts](/appstore/widgets/charts/) widget version 6.0 or above, which is supported in Studio Pro 10 and above.
+{{% /alert %}}
+
 With *Any Chart* you can build all the chart types that are possible with Plotly.js up to the version supported by the widget (see the widget description in the Marketplace for more details). If you want to build a chart which is not available in the Basic charts, *Any Chart* is your friend.
 
 {{< figure src="/attachments/refguide9/modeling/pages/chart-widgets/contour.png" alt="Sample Contour Chart made with Any Chart"   width="400"  class="no-border" >}}

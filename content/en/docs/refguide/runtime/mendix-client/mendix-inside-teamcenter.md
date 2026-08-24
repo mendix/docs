@@ -225,7 +225,7 @@ Follow these steps to configure authentication.
 
 Teamcenter users can be assigned multiple roles, and the active role affects which objects and data the user can access. Active Workspace lets users switch roles within their session without logging in again.
 
-The active Teamcenter role is shared between Active Workspace and the embedded Mendix app, so a role switch in Active Workspace also applies to the Mendix app without requiring the user to reauthenticate. Switching roles reloads the Active Workspace UI, which also reloads the embedded Mendix app.
+The active Teamcenter role is shared between Active Workspace and the embedded Mendix app. This means that a role switch in Active Workspace also applies to the Mendix app without requiring the user to reauthenticate. Switching roles reloads the Active Workspace interface, which also reloads the embedded Mendix app.
 
 ## Passing Context from Teamcenter {#passing-context}
 

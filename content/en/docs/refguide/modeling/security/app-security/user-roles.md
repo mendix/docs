@@ -19,7 +19,7 @@ The separation of user roles and module roles means that modules can be self-con
 End-users of your application only see the user roles and not the underlying module roles.
 
 {{% alert color="warning" %}}
-The effects of changes to user roles are not immediately applied to end-users who are signed in to the app. End-users need to sign out and sign in again to pick up their new roles. This means that your app can show the wrong pages or data. For more information, refer to the documentation on [persistent sessions](/refguide/clustered-mendix-runtime/#sessions-are-always-persistent).
+The effects of changes to user roles are not immediately applied to end-users who are signed in to the app. This means that your app can show the wrong pages or data. Although the user roles are reapplied when their session is revalidated, Mendix advises that end-users sign out and sign in again to pick up their new user roles. This ensures that they have the correct user roles. For more information, refer to the documentation on [persistent sessions](/refguide/clustered-mendix-runtime/#sessions-are-always-persistent).
 
 Mendix recommends that you do NOT use user role changes to create a dynamic UI as these changes do not take effect immediately. 
 {{% /alert %}}
@@ -48,7 +48,7 @@ General properties of user roles are described in the table below:
 
 | Property | Description |
 | --- | --- |
-| Name | The name of the user role. This name is shown to end-users who can create or edit user accounts in the application. Blank apps usually start with the `User` and `Administrator` user roles. |
+| Name | The name of the user role. This name is shown to end-users who can create or edit user accounts in the application. Blank apps usually start with the **User** and **Administrator** user roles. |
 | Documentation | Additional information about the user role. This information helps you to assign the correct module roles to each user role. |
 | Module roles | A list of module roles whose access rights are added to this user role. An end-user that is assigned this user role gets all access rights of the module roles of that user role. |
 | Check security | Specifies whether Studio Pro checks during development that security settings for this user role are consistent.<br/>You can choose to not check security for a user role. For example, user roles that are used only for web service end-users do not need to be checked because they never sign in to the client. For more information on the security check, see the [Check Security](/refguide/app-security/#check-security) section of *App Security*. |
@@ -63,7 +63,7 @@ Take for example an app with three defined user roles: `User`, `Administrator`, 
 
 {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/manageable-roles.png" alt="User management section with only the User role selected as a manageable role" >}}
 
-The following table shows which end-users an end-user with the `SubAdministrator` user role can manage:
+The following table shows which end-users the `SubAdministrator` user role can manage:
 
 | End-User Name | Has User Roles | SubAdministrator can manage |
 | --- | --- | --- |

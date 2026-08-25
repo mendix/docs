@@ -108,9 +108,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 1. Click **Base Installation**.
 
-2. Select the required **Cluster Mode** – *connected* or *standalone*.
-
-    For more information, see [Connected and Standalone Clusters](/developerportal/deploy/private-cloud/#connected-standalone) in the *Mendix on Kubernetes* documentation.
+2. Select the required **Cluster Mode** – *connected*.
 
 3. Select the required **Cluster Type** – *openshift* or *generic*.
 

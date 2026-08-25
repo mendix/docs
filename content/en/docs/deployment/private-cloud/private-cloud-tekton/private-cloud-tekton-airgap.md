@@ -7,7 +7,7 @@ weight: 10
 ---
 
 {{% alert color="info" %}}
-Tekton pipelines for Mendix on Kubernetes Standalone are no longer available to new customers. Customers seeking Tekton pipeline support are advised to consider Private Mendix Platform, which includes Tekton pipeline support.
+Tekton pipelines for Mendix on Kubernetes are no longer available to new customers. Customers seeking Tekton pipeline support are advised to consider Private Mendix Platform, which includes Tekton pipeline support.
 {{% /alert %}}
 
 ## Introduction

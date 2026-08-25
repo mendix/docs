@@ -26,7 +26,7 @@ In addition Operator version 2.25.0 will automatically assign a `PodDisruptionBu
 {{% alert color="info" %}}
 Previous versions of the Operator did not manage `PodDisruptionBudgets`. Instead, any manually created `PodDisruptionBudget` would apply to a Mendix app.
 
-If you have manually created a `PodDisruptionBudget` for an app, delete it and instead specify the `PodDisruptionBudget` parameters [in the MendixApp CR](#pod-disruption-budget-in-standalone).
+If you have manually created a `PodDisruptionBudget` for an app, delete it and instead specify the `PodDisruptionBudget` parameters [in the MendixApp CR](#pod-disruption-budget).
 {{% /alert %}}
 
 
@@ -68,7 +68,7 @@ If any of the following conditions is true, the Operator always uses a **Recreat
 
 Otherwise, the Operator performs a **Rolling** update automatically.
 
-As a **Rolling** strategy can run multiple versions of the app at the same time, requests from the browser must be routed to a matching app version (that is, an app that has the same microflow or nanoflow parameters). The Operator uses Kubernetes service labels to perform an atomic switch, and instantly switch all clients to the updated version. This is done automatically once the number of updated replicas reaches a certain threshold. By default the threshold is 50% of all replicas. The value is specified in the [switchoverThreshold](#deployment-strategy-in-standalone) parameter.
+As a **Rolling** strategy can run multiple versions of the app at the same time, requests from the browser must be routed to a matching app version (that is, an app that has the same microflow or nanoflow parameters). The Operator uses Kubernetes service labels to perform an atomic switch, and instantly switch all clients to the updated version. This is done automatically once the number of updated replicas reaches a certain threshold. By default the threshold is 50% of all replicas. The value is specified in the [switchoverThreshold](#deployment-strategy) parameter.
 
 ### Use Cases
 
@@ -84,7 +84,7 @@ The following changes will cause a full restart and downtime:
 * Any changes that cause a modified MDA file
 * Rebuilding the same MDA version with a different base image version (e.g. switching to another Java version or installing the latest CVE patches)
 
-## Configuring the Deployment Strategy parameters in Standalone Environments {#deployment-strategy-in-standalone}
+## Configuring the Deployment Strategy Parameters {#deployment-strategy}
 
 To reduce deployment downtime, add the `deploymentStrategy` section to your `MendixApp` CR, as in the following example:
 
@@ -121,7 +121,7 @@ You can specify the following options:
         * For apps with 1 replica, the default value is **0**, to ensure that at least one replica is running, and prevent downtime.
         * For apps with 2 or more replicas, the default value is **1**, so that at most one replicas would be stopped during the update process.
 
-## Configuring Pod Disruption Budget parameters in Standalone Environments {#pod-disruption-budget-in-standalone}
+## Configuring Pod Disruption Budget Parameters {#pod-disruption-budget}
 
 Kubernetes can stop an app's pods if needed to stop a node (to scale down and consolidate apps to run on fewer nodes), or perform a node update (for example, install CVE patches on the host OS).
 Starting from Mendix Operator version 2.24.0, you can specify parameters for a [PodDisruptionBudget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) of an app to ensure that Kubernetes only stops a limited number of an app's pods, and if necessary waits for replacement pods to become available.
@@ -179,7 +179,7 @@ Alternatively, you can set custom **Reduced Downtime Options** in the Cloud Port
 
 {{< figure src="/attachments/deployment/private-cloud/allow-single-replica-downtime.png" alt="Allowing downtime in single-replica apps" class="no-border" >}}
 
-For Standalone environments, specify the following in the MendixApp CR YAML:
+Alternatively, you can specify the following in the MendixApp CR YAML:
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1

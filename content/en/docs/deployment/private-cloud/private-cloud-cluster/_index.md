@@ -90,15 +90,13 @@ To add a namespace, do the following:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details.PNG" class="no-border" >}}
 
-3. Enter the following details:
-    * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – choose **Connected** to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/)
+3. Enter the **Namespace** name – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
 
 4. Click **Done** to create the namespace.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/add-namespace.png" class="no-border" >}}
 
-{{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
+{{% alert color="warning" %}} Please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
 ## Installing and Configuring the Mendix Operator {#install-operator}
 

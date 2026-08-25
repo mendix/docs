@@ -51,9 +51,10 @@ The cleanest approach is to post-process the HTML files after Hugo builds them, 
 ### What Gets Changed
 
 ✅ **Internal directory links**: `href=".../"` → `href=".../index.html"`
+✅ **Internal directory links with anchors**: `href=".../#section"` → `href=".../index.html#section"`
 
 ❌ **External links**: `href="https://example.com/..."` (unchanged)
-❌ **Anchor links**: `href="#section"` (unchanged)
+❌ **Anchor-only links**: `href="#section"` (unchanged)
 ❌ **File links**: `href=".../page.html"` (unchanged)
 ❌ **Protocol links**: `href="mailto:..."`, `href="javascript:..."` (unchanged)
 

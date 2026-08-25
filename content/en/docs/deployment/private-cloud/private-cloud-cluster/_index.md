@@ -90,43 +90,13 @@ To add a namespace, do the following:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details.PNG" class="no-border" >}}
 
-3. Enter the following details:
-    * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+3. Enter the **Namespace** name. This is the namespace in your platform. It must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
 
 4. Click **Done** to create the namespace.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/add-namespace.png" class="no-border" >}}
 
-{{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
-
-### Adding a Namespace for Standalone Cluster {#add-standalone-namespace}
-
-If you would like to add a namespace to be added in the Standalone cluster, do the following:
-
-1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/empty-cluster.png" class="no-border" >}}
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/ClusterDetails.png" class="no-border" >}}
-
-2. Click **Add Namespace**.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details-standalone.png" class="no-border" >}}
-
-3. Enter the following details:
-
-    * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
-    * **Installation type** – Choose **Standalone**.
-
-4. Click **Next**.
-5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/standalone_downloadcli.png" class="no-border" >}}  
-
-    For existing namespaces, if you would like to download the executables for mxpc-cli, you can go [here](https://privatecloud.mendixcloud.com/rest/internal/v1/mxpc-cli?operatorVersion=latest)
-
-    In above page, once you do a JSON format, you will get the links for mxpc-cli for different available versions.
+{{% alert color="warning" %}} Please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
 ## Installing and Configuring the Mendix Operator {#install-operator}
 
@@ -835,8 +805,6 @@ spec:
       azure.workload.identity/use: "true"
 ```
 
-Alternatively, for Standalone clusters, pod labels can be specified in the `MendixApp` CR for a specific app.
-
 {{% alert color="warning" %}}
 The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
 {{% /alert %}}
@@ -861,8 +829,6 @@ spec:
       kubernetes.azure.com/set-kube-service-host-fqdn: "true"
 ```
 
-Alternatively, for Standalone clusters, pod annotations for an app can be specified in the `MendixApp` CR.
-
 {{% alert color="warning" %}}
 The Mendix Operator uses some annotations for internal use. To avoid conflicts with these internal pod annotations, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
 {{% /alert %}}
@@ -886,8 +852,6 @@ spec:
       # Example: use Amazon EKS Auto Mode
       eks.amazonaws.com/compute-type: auto
 ```
-
-Alternatively, for Standalone clusters, pod `nodeSelector` configuration can be specified in the `MendixApp` CR for a specific app.
 
 ### Delaying App Shutdown {#termination-delay}
 
@@ -919,7 +883,7 @@ Mendix app container images are locked down by default - they run as a non-root 
 
 Starting from Mendix Operator version 2.21.0, all system containers and pods use `readOnlyRootFilesystem` by default. It is possible to specify if an environment's app container should also have a read-only filesystem. For Mendix apps, the `readOnlyRootFilesystem` option is off by default, as some Java actions in marketplace modules might expect some paths to be writable.
 
-If you enable the `runtimeReadOnlyRootFilesystem` option in the MendixApp CRD (for standalone clusters) or in the Mendix on Kubernetes Portal, the Mendix app container also uses a read-only root filesystem. As Mendix apps needs certain paths to be writable, an [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) is used for writable paths. Each path is mounted as a separate `subPath` to keep data separated. The `emptyDir` size is set to the `ephemeral-storage` [resource limit](#advanced-resource-customization).
+If you enable the `runtimeReadOnlyRootFilesystem` option in the Mendix on Kubernetes Portal, the Mendix app container also uses a read-only root filesystem. As Mendix apps needs certain paths to be writable, an [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) is used for writable paths. Each path is mounted as a separate `subPath` to keep data separated. The `emptyDir` size is set to the `ephemeral-storage` [resource limit](#advanced-resource-customization).
 
 In addition to internal Mendix Runtime paths, `/tmp` is mounted for any temporary files that might be created through Java actions. For Java actions to work correctly, ensure that they only create files in `/tmp`, for example, by using the `File.createTempFile` or `File.createTempDirectory` Java methods.
 

@@ -108,7 +108,6 @@ Key improvements are delivered through new module properties and a new `manifest
 
 The **Package** section on the **General** tab displays package identification information for the module. Studio Pro uses this information to track modules across versions, which is the foundation for more reliable module updates.
 
-For more information on how to use package management when updating modules, see [Updating Marketplace Modules](/refguide/updating-marketplace-modules/).
 
 ### Module ID {#module-id}
 
@@ -173,7 +172,6 @@ Modules imported from the Marketplace are automatically set to **Marketplace mod
 ## Read More
 
 * [Modules](/refguide/modules/)
-* [Updating Marketplace Modules](/refguide/updating-marketplace-modules/)
 * [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
 * [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/)
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)

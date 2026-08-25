@@ -74,7 +74,7 @@ The following table shows which end-users the `SubAdministrator` user role can m
 ¹ The SubAdministrator can only grant or remove the `User` user role.
 ² Although `User` is a manageable role, User3 also has the `SubAdministrator` user role which is not a manageable role for a SubAdministrator.
 
-The **(No user roles)** option is a manageable role that allows this user role to manage end-users who have no user role (for example, newly created end-users).
+The **(No user roles)** option is a manageable role that allows this user role to manage end-users who have no user role at all (for example, newly created end-users).
 
 The **Select / deselect all** checkbox lets you select all the roles as manageable roles, or deselect them all.
 

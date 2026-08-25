@@ -72,9 +72,7 @@ The task bar contains the following buttons:
 
 The task bar contains a search box that filters the document list. The search box is only available at Level 1 and is hidden at Level 2 and Level 3. When no comparison is active, the search box is disabled.
 
-The search matches text against all four columns (status, document name, module name, and details). The match is case-insensitive and applies to any position within the field values. The list updates immediately with each keystroke.
-
-When text is entered, a **Clear** button appears in the search box. Click **Clear** to remove the search text and show all documents again. When no documents match the search text, a message indicates that no results were found.
+The search matches text against all four columns (Status, Document name, Module name, and Details). The match is case-insensitive and applies to any position within the field values. 
 
 The following table describes when the search text is retained or reset:
 

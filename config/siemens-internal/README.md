@@ -25,41 +25,35 @@ Example of the old bug:
 
 ### 2. Pretty URLs Not Supported
 
-The Siemens internal server does not serve Hugo's default "pretty URLs" (like `/page/` resolving to `/page/index.html`). To work around this, use `uglyURLs = true`, which changes how Hugo generates URLs in the HTML:
+The Siemens internal server does not serve Hugo's default "pretty URLs" (like `/page/` resolving to `/page/index.html`). `uglyURLs = true` helps, but Hugo still generates many directory-style links (ending with `/`) in navigation menus, breadcrumbs, and table-of-contents entries.
 
-* **Without uglyURLs**: Links like `<a href="/refguide/">` rely on the server resolving the directory to `index.html`
-* **With uglyURLs**: Links explicitly include `/index.html` where needed, ensuring compatibility with servers that don't automatically serve directory indexes
-
-Note: The file structure remains the same (directories with `index.html` files inside). The setting only affects how URLs are written in the generated HTML.
+A post-processing script rewrites all remaining directory-style `href` links to include `/index.html` explicitly.
 
 ## The Solution
 
-Configure Hugo with the appropriate settings for deep URL deployment:
+Configure Hugo with the appropriate settings for deep URL deployment, then run the post-processing script:
 
 1. **Set the full baseURL** including the deep path
 2. **Enable `canonifyURLs = true`** to convert all root-relative URLs to use the baseURL
-3. **Enable `uglyURLs = true`** to ensure proper URL resolution on servers without automatic directory index serving
+3. **Enable `uglyURLs = true`** to reduce (but not eliminate) directory-style links
 4. **Use relative font paths** in CSS (`../fonts/` instead of `/fonts/`) to work across all environments
-
-This approach:
-
-* ✅ Requires no changes to templates or Markdown content
-* ✅ No post-processing or file duplication needed (as of Hugo v0.156.0+)
-* ✅ Works for all images, fonts, and page links automatically
-* ✅ Simple to maintain
+5. **Run `add-index-html-links.sh`** to rewrite remaining `href=".../"` links to `href=".../index.html"`
 
 ## How to Build
 
-Run this command from the repository root:
+Run these commands from the repository root:
 
 ```bash
 # Build the site with the siemens-internal environment
 hugo --environment siemens-internal --cleanDestinationDir
+
+# Rewrite directory-style links to include index.html
+# Pass the baseURL so that canonifyURLs-expanded internal links are also rewritten
+bash _scripts/add-index-html-links.sh public \
+  https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/
 ```
 
 The built site will be in the `public/` directory, ready for deployment to the Siemens internal portal.
-
-**Note**: The `scripts/fix-siemens-paths.sh` script is kept for backward compatibility but is no longer needed with Hugo v0.156.0+.
 
 ## Configuration Files
 
@@ -70,11 +64,17 @@ Sets the baseURL and enables:
 * `canonifyURLs = true` to handle the deep deployment path
 * `uglyURLs = true` to ensure proper URL resolution on the Siemens server
 
-### Scripts/fix-siemens-paths.sh
+### _scripts/add-index-html-links.sh
 
-**Legacy script** - kept for backward compatibility but no longer needed with Hugo v0.156.0+.
+Rewrites all `href=".../"` directory-style links in the built HTML to `href=".../index.html"` so the Siemens server can serve them without automatic directory index support. Run this after every Hugo build.
 
-This script was previously used to work around a Hugo bug where `canonifyURLs` generated doubled paths for CSS and JS files. The bug has been fixed, and the script now simply confirms that no post-processing is needed.
+Skips external links, anchor links, links that already end in `.html`, and print URLs.
+
+### _scripts/fix-siemens-paths.sh
+
+**Legacy script** — kept for backward compatibility but no longer needed with Hugo v0.156.0+.
+
+Previously used to work around a Hugo bug where `canonifyURLs` generated doubled paths for CSS and JS files. The bug has been fixed, and the script now only prints a confirmation message.
 
 ## Technical Details
 
@@ -108,6 +108,5 @@ If the Siemens deployment URL changes, update the `baseURL` in `config/siemens-i
 1. **Using relativeURLs**: Breaks the landing page images and requires template changes
 2. **Path-only baseURL**: Requires web server configuration and does not work with direct file access
 3. **Template modifications**: Requires maintaining custom versions of Docsy theme files
-4. **HTML post-processing**: Requires parsing and modifying thousands of HTML files (slower and more complex)
 
-The current solution is the simplest and most maintainable approach.
+The current solution (Hugo configuration plus a focused post-processing script) is the simplest and most maintainable approach.

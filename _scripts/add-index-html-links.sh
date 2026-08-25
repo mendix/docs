@@ -12,7 +12,6 @@
 #   - External links (contain :// but do not start with base-url)
 #   - Anchor-only links starting with #
 #   - Links already ending in .html or .htm
-#   - Print URLs containing /_print/
 #
 # Usage: bash _scripts/add-index-html-links.sh [public-dir] [base-url]
 # Default public-dir: public
@@ -52,12 +51,11 @@ def rewrite_href(m):
         if not (base_url and url.startswith(base_url)):
             return m.group(0)
 
-    # Skip anchors, already-explicit file links, and print paths
+    # Skip anchors and already-explicit file links
     if (
         url.startswith("#")
         or url.endswith(".html")
         or url.endswith(".htm")
-        or "/_print/" in url
     ):
         return m.group(0)
 
@@ -67,8 +65,6 @@ def rewrite_href(m):
 
 count = 0
 for path in Path(public_dir).rglob("*.html"):
-    if "/_print/" in str(path):
-        continue
     original = path.read_text(encoding="utf-8", errors="replace")
     updated = HREF_RE.sub(rewrite_href, original)
     if updated != original:

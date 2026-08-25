@@ -47,8 +47,10 @@ Run these commands from the repository root:
 # Build the site with the siemens-internal environment
 hugo --environment siemens-internal --cleanDestinationDir
 
-# Rewrite directory-style links to include index.html
-# Pass the baseURL so that canonifyURLs-expanded internal links are also rewritten
+# Rewrite directory-style links to include index.html.
+# The second argument (the site's baseURL) is required: the siemens-internal build uses
+# canonifyURLs=true, which expands all internal links to full absolute URLs. Without the
+# baseURL argument, the script cannot tell internal links from external ones and skips them.
 bash _scripts/add-index-html-links.sh public \
   https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/
 ```

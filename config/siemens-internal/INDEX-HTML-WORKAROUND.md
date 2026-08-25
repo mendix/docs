@@ -56,7 +56,6 @@ The cleanest approach is to post-process the HTML files after Hugo builds them, 
 ❌ **Anchor links**: `href="#section"` (unchanged)
 ❌ **File links**: `href=".../page.html"` (unchanged)
 ❌ **Protocol links**: `href="mailto:..."`, `href="javascript:..."` (unchanged)
-❌ **Print URLs**: `href=".../_print/..."` (unchanged - print output works differently)
 
 ### Implementation Approach
 

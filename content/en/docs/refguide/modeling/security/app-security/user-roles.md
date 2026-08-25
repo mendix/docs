@@ -12,16 +12,16 @@ aliases:
 
 A user role aggregates a number of access rights to app documents such as data, pages, and microflows. Each end-user of the application is assigned one or more user roles by an end-user with user management rights, and gets all the access rights that these user roles represent.
 
-Every user role has one or more [module roles](/refguide/module-security/#module-role). End-users with that user role are granted all the access rights defined for those module roles. A typical user role has the **System.User** module role and at least one other module role.
+Every user role is made up of one or more [module roles](/refguide/module-security/#module-role). End-users assigned that user role receive all the access rights defined for those module roles. A typical user role includes the **System.User** module role and at least one other module role.
 
-The separation of user roles and module roles means that modules can be self-contained (independent of the app in which it is defined or used). This allows it to be reused in different apps or published to the Marketplace.
+Separating user roles and module roles keeps each module self-contained and independent of the app it is used in, so modules can be reused across different apps or published to the Marketplace.
 
 End-users of your application only see the user roles and not the underlying module roles.
 
 {{% alert color="warning" %}}
 The effects of changes to user roles are not immediately applied to end-users who are signed in to the app. End-users need to sign out and sign in again to pick up their new roles. This means that your app can show the wrong pages or data. For more information, refer to the documentation on [persistent sessions](/refguide/clustered-mendix-runtime/#sessions-are-always-persistent).
 
-Mendix recommends that you do NOT use user role changes to create a dynamic UI as these changes do not take effect immediately. 
+Mendix recommends that you do not use user role changes to create a dynamic UI as these changes do not take effect immediately. 
 {{% /alert %}}
 
 ## Managing User Roles
@@ -55,9 +55,9 @@ General properties of user roles are described in the table below:
 
 ### User Management Properties {#user-management}
 
-A user role can be allowed to manage end-users depending on their user roles. These roles are called manageable roles (or grantable roles).
+A user role can be configured to manage end-users with specific user roles. These specific user roles are called manageable roles (or grantable roles).
 
-End-users who have this user role can create, view, edit, and delete end-users with the selected roles, provided they do not also have a user role which is not selected.
+End-users who have this user role can create, view, edit, and delete end-users with the selected manageable roles, provided they do not also have a user role which is not selected.
 
 Take for example an app with three defined user roles: `User`, `Administrator`, and `SubAdministrator`. Assume that you are configuring the `SubAdministrator` user role. The `SubAdministrator` user role has only the `User` user role as a manageable role.
 
@@ -74,7 +74,7 @@ The following table shows which end-users an end-user with the `SubAdministrator
 ¹ The SubAdministrator can only grant or remove the `User` user role.
 ² Although `User` is a manageable role, User3 also has the `SubAdministrator` user role which is not a manageable role for a SubAdministrator.
 
-The **(No user roles)** manageable role allows this user role to manage end-users without a user role (for example, newly created end-users).
+The **(No user roles)** option is a manageable role that allows this user role to manage end-users who have no user role (for example, newly created end-users).
 
 The **Select / deselect all** checkbox lets you select all the roles as manageable roles, or deselect them all.
 

@@ -22,13 +22,13 @@ Please see [Download the Configuration Tool](/developerportal/deploy/standard-op
 The following parameters may be used in the commands:
   
 * `--namespace` – a cluster namespace.
-* `--clusterType` – a cluster type *openshift* or *generic*.
-* `--clusterMode` – a cluster mode *connected*.
+* `--clusterType` – a cluster type: *openshift* or *generic*.
+* `--clusterMode` – a cluster mode: *connected*.
 * `-i` – the *namespace id* that is shown in the **Installation** tab of a namespace in the Mendix on Kubernetes Portal.
 * `-s` – the *namespace secret* that is shown in the **Installation** tab of a namespace in the Mendix on Kubernetes Portal.
 * `--file` – a file which contains the configuration for the namespace.
 
-You need to provide namespace id and namespace secret as arguments. These parameters are used by the Mendix Gateway Agent to connect to the Mendix on Kubernetes Portal. You can see these values in the installation command, as the -i and -s parameters, respectively.
+You need to provide `namespace-id` and `namespace-secret` as arguments. These parameters are used by the Mendix Gateway Agent to connect to the Mendix on Kubernetes Portal. You can see these values in the installation command, as the -i and -s parameters, respectively.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/private-cloud-cli-non-interactive/installation-command.png" class="no-border" >}}
 

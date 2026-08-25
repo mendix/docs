@@ -12,7 +12,7 @@ Once you have the Mendix Operator installed in a namespace of your Red Hat OpenS
 
 This document explains how to provide the CRs through the console or command line. This enables you to automate your deployment processes and perform advanced configuration.
 
-Alternatively, you can use the Mendix Portal to deploy the app, as described in [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/).
+Alternatively, you can use Mendix Portal to deploy the app, as described in [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/).
 
 ## Prerequisites for Deploying a Mendix App
 

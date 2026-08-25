@@ -530,7 +530,7 @@ By default, there will be no admin password set for your environment. This means
 
 This deletes the environment — you will be asked to confirm this action.
 
-If the Mendix Gateway Agent is not connected, you can still delete the environment information in the Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
+If the Mendix Gateway Agent is not connected, you can still delete the environment information in Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
 
 If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Mendix Portal.
 
@@ -948,7 +948,7 @@ If your application keeps restarting unexpectedly, check your application log fo
 
 ## How the Operator Deploys Your App {#how-operator-deploys}
 
-The Mendix Operator is another app within your Mendix on Kubernetes namespace. It is triggered when you provide a CR file. This can either be through the Mendix Portal or through the command line. The process looks like this:
+The Mendix Operator is another app within your Mendix on Kubernetes namespace. It is triggered when you provide a CR file. This can be done through Mendix Portal or through the command line. The process looks like this:
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/mx4pc-operator-deploy.png" class="no-border" >}}
 

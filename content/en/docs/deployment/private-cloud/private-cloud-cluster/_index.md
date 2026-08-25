@@ -90,7 +90,7 @@ To add a namespace, do the following:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details.PNG" class="no-border" >}}
 
-3. Enter the **Namespace** name – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
+3. Enter the **Namespace** name. This is the namespace in your platform. It must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
 
 4. Click **Done** to create the namespace.
 

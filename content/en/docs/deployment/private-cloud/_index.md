@@ -12,7 +12,7 @@ Mendix on Kubernetes allows you to deploy and manage your Mendix apps in a Kuber
 
 Your organization may have a requirement to use a private cloud, perhaps as part of a multi-cloud strategy. This could be because of legal requirements or a desire to have complete control over your data. Mendix on Kubernetes allows you to do this while keeping the familiar components of Docker and Kubernetes.
 
-You can use Mendix on Kubernetes with the *connected* option to keep the simplicity of one-click deployments from the Mendix Portal.
+You can use Mendix on Kubernetes with the *connected* option to keep the simplicity of one-click deployments from Mendix Portal.
 
 For a list of platforms supported by Mendix on Kubernetes, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
 
@@ -166,7 +166,7 @@ You can also request for both the Operator and Runtime license within the same r
 
 If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
 
-You can enter the subscription secret [in the Mendix Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix).
+You can enter the subscription secret [in Mendix Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix).
 
 #### Offline Mendix on Kubernetes Apps{#activate-offline}
 

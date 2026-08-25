@@ -15,7 +15,6 @@ This documentation guides you through accessing the portal, managing your downlo
 Before using the Download Portal, ensure you have:
 
 * A valid Mendix account with work email address
-* Access permissions granted by your organization's admin //by Mendix, contact support. Self service access is in the backlog https://mendix.atlassian.net/browse/PANDA-7479
 * Network access to the Download Portal URL
 * Appropriate permissions for the features you need:
     * **Installer** access for downloading platform releases
@@ -24,23 +23,14 @@ Before using the Download Portal, ensure you have:
 
 ---
 
-## Logging In to the Download Portal //I don't think we need this section the generic platform level password documentation should cover this
+## Logging In to the Download Portal
 
-### Logging In with Mendix Credentials //Deprecated, only Mendix SSO login is possible
-
-To access the Download Portal using your Mendix credentials: //
-
-1. Navigate to the Download Portal URL.
-2. On the login page, enter your **Work Email Address** in the first field.
-3. Enter your **Password** in the second field.
-4. Click **Log in**.
-
-You are redirected to either the company selection page (if you have access to multiple companies) or directly to the **Releases** page.
 
 ### Logging In with Single Sign-On (SSO)
 
 The portal supports SSO authentication through the following providers: //we have not tested these login options
 
+* **Mendix**
 * **SAP BTP**
 * **Siemens Xcelerator**
 
@@ -59,33 +49,6 @@ If you have forgotten your password:
 1. On the login page, click the **Forgot password?** link below the password field.
 2. Follow the password reset instructions sent to your registered email address.
 
----
-
-## Requesting Access //TODO https://mendix.atlassian.net/browse/PANDA-7479
-
-If you do not have access to the Download Portal, you can submit an access request.
-
-### Submitting an Access Request //TODO https://mendix.atlassian.net/browse/PANDA-7479
-
-When you attempt to access the portal without permissions, you are presented with an access request form.
-
-To request access:
-
-1. Review the prefilled information:
-    * **Full Name**
-    * **Email Address**
-    * **Company Name** (or tenant name)
-2. Under **Access Type**, select one or more access types you need:
-    * **Installer** – Download Private Mendix Platform releases
-    * **Marketplace Bundles** – Manage and download component bundles
-    * **Image Management** – View and export container images
-3. Click **Send** to submit your request.
-
-You receive a confirmation notification, and all admins are notified via email about your request.
-
-Admins can review and approve your request in **Access Management > Access Requests**.
-
----
 
 ## Selecting Your Company
 
@@ -223,21 +186,6 @@ To view release details:
 2. Select:
     * **View Release Note** – Opens the release documentation
     * **View Add-ons** – Displays additional components included with the release
-
-### Pagination
-
-If your organization has access to more than 20 releases, pagination controls appear at the bottom of the table.
-
-The pagination indicator shows your current position (e.g., "1 to 20 of 100").
-
-To navigate between pages:
-
-* Click the **left arrow** to go to the previous page
-* Click the **right arrow** to go to the next page
-* Click the **double left arrow** to jump to the first page
-* Click the **double right arrow** to jump to the last page
-
----
 
 ## Managing Container Images
 
@@ -410,37 +358,8 @@ To view the components included in a bundle:
 1. On the Bundle Management page, locate the bundle.
 2. Click **View Bundle Content (#)** where # is the number of components.
 
-A modal displays all components in the bundle with their selected versions.
 
-### Copying an Existing Bundle //FEATURE DOES NOT EXIST
-
-You can create a new bundle based on an existing one.
-
-To copy a bundle:
-
-1. On the Bundle Management page, locate the bundle you want to copy.
-2. Click the copy or duplicate option.
-3. The Create New Bundle page opens with:
-    * A default name (e.g., "Copy of IoT924")
-    * All components from the original bundle pre-selected
-4. Modify the bundle name if desired.
-5. Add or remove components as needed.
-6. Adjust component versions if necessary.
-7. Click **Save Bundle**.
-
-The new bundle is created independently of the original.
-
-### Showing Marketplace Components //REMOVE THIS SECTION
-
-By default, the component list may show only a subset of available components.
-
-To view all marketplace components:
-
-1. On the Create or Edit Bundle page, check the **Show All Marketplace Components** option.
-
-The component list expands to include all available marketplace items.
-
-### Supported Mendix Versions //THE API WORKS A BIT DIFFERENTLY, THIS HAS TO BE DOUBLE CONFIRMED
+### Supported Mendix Versions
 
 When creating or editing a bundle, you can filter components by the Mendix versions they support.
 

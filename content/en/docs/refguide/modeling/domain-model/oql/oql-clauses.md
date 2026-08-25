@@ -36,7 +36,7 @@ Clauses must be presented in the following order, but can be left out if they ar
 7. [`LIMIT`](#limit-offset)
 8. [`OFFSET`](#limit-offset)
 
-The `UNION` clause defies the usual order presented above. It will be presented in a [Union Clause](#oql-union) section at the end.
+The `UNION` clause defies the usual order presented above. It will be presented in a [Union Clause](#oql-union) section at the end. When a branch of a `UNION` is wrapped in parentheses, the clauses inside that branch still follow the same order.
 
 The domain model used in the various examples is shown below:
 
@@ -853,7 +853,7 @@ This clause can include items that do not appear in the `SELECT` clause, except 
 {{% alert color="info" %}}
 The `ORDER BY` clause cannot be used in view entities without a `LIMIT` or an `OFFSET` clause. See [Sorting of View Entity Results](/refguide/use-view-entities/#sorting) in *How To Use View Entities* for more details.
 
-If OQL v2 is enabled, an `ORDER BY` clause cannot be used in subqueries without a `LIMIT` or an `OFFSET` clause because the order of the subquery results may not be retained in the outer query. See the [`ORDER BY` in Subquery](/refguide/oql-v2/#order-by-in-subquery) section of *OQL Version 2 Features* for more details.
+If OQL v2 is enabled, an `ORDER BY` clause cannot be used in subqueries without a `LIMIT` or an `OFFSET` clause because the order of the subquery results may not be retained in the outer query. The same restriction applies to a parenthesized branch of a `UNION`. See the [`ORDER BY` in Subquery and `UNION` Branches](/refguide/oql-v2/#order-by-in-subquery) section of *OQL Version 2 Features* for more details.
 {{% /alert %}}
 
 ### Syntax
@@ -1076,14 +1076,20 @@ All select queries must define the same number of columns in the same order and 
 The syntax is as follows:
 
 ```sql
-  select_query
+  select_query | ( select_query )
     { 
-       UNION [ALL] select_query
+       UNION [ALL] { select_query | ( select_query ) }
     } [ ,...n ]
     [ order_by_clause ]
     [ LIMIT number ]
     [ OFFSET number ]
 ```
+
+A `select_query` in a `UNION` can be wrapped in parentheses. A parenthesized `select_query` can itself be a nested `UNION` of `select_query` statements, following this same syntax. When wrapped in parentheses, a branch can have its own `order_by_clause`, `LIMIT`, and `OFFSET`, which are then scoped to that individual branch instead of, or in addition to, the `UNION` as a whole. See [Parenthesized `UNION` Branches](#oql-union-parentheses), below, for an example.
+
+{{% alert color="info" %}}
+Parentheses in union branches if a feature that was introduced in Mendix version 11.15.0. It is supported only in Java actions.
+{{% /alert %}}
 
 ### Result data type {#oql-union-type}
 
@@ -1195,6 +1201,37 @@ SELECT LastName AS Name FROM Sales.Customer
 | Jane   |
 | Doe    |
 | Moose  |
+
+#### Parenthesized `UNION` Branches {#oql-union-parentheses}
+
+{{% alert color="info" %}}
+This feature was introduced in Mendix version 11.15.0. It is supported only in Java actions.
+{{% /alert %}}
+
+Instead of sorting and limiting the result of the `UNION` as a whole, you can wrap an individual branch in parentheses to sort and limit that branch on its own. This also allows a branch to combine its own `ORDER BY`, `LIMIT` and `OFFSET` clauses.
+
+```sql
+(
+    SELECT Brand, City, Stock
+    FROM Sales.Location
+    ORDER BY Stock DESC
+    LIMIT 1
+)
+UNION
+(
+    SELECT Brand, City, Stock
+    FROM Sales.Location
+    ORDER BY Stock ASC
+    LIMIT 1
+    OFFSET 1
+)
+ORDER BY Stock ASC
+```
+
+| Brand  | City      | Stock |
+| ------ | ----------| ----- |
+| Veidt  | Utrecht   | 2     |
+| Veidt  | Rotterdam | 23    |
 
 #### Union of different types
 

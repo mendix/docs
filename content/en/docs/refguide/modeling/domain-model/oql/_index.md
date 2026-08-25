@@ -37,6 +37,7 @@ OQL is under constant development so some expressions and features are not avail
 | Feature | Mendix Version |
 | --- | --- |
 | Comments | 11.7.0 |
+| Parentheses around individual `UNION` branches | 11.15.0 |
 
 ### [OQL Expressions](/refguide/oql-expression-syntax/)
 

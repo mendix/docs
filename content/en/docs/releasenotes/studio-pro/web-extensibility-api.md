@@ -8,6 +8,10 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.14.0
+
+* We added support for direct assignment to model element array properties (for example, `element.property = [value1, value2]`).
+
 ## Version 11.13.0
 
 * We updated the progress dialog cancellation behavior: the process now waits for the cancelled step to finish before resolving, rather than immediately returning a snapshot of the progress at the time of cancellation. A new `resolveImmediatelyOnCancel` parameter restores the previous behavior.

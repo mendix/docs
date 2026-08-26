@@ -9,6 +9,8 @@ description: "Native Template 19"
 
 **Release date: Aug 24, 2026**
 
+### Improvements
+
 - We hardened the Android main screen against overlay and tapjacking attacks, and removed the unused `SYSTEM_ALERT_WINDOW` permission.
 
 ## 19.1.3

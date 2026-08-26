@@ -17,7 +17,11 @@ To see the command parameters for each command, use the `--help` parameter. For 
 
 ## mx show-module-version Command {#show-module-version}
 
-The `mx show-module-version` command outputs the version of a module.
+The `mx show-module-version` command outputs the version of a module. 
+
+{{% alert color="info" %}}
+As of Studio Pro 11.14 and 11.12.3, this command works for all modules in the app, except the System module.
+{{% /alert %}}
 
 ### Usage
 
@@ -42,13 +46,17 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | `0` | No errors. |
-| `1` | The module does not have a version. |
+| `1` | The specified project file does not exist, the module does not exist, or the module is the System module. |
 
 The command will output the version of the module to the command line output.
 
 ## mx set-module-version Command {#set-module-version}
 
-The `mx set-module-version` command changes the version of an add-on module.
+The `mx set-module-version` command changes the version of a module. 
+
+{{% alert color="info" %}}
+As of Studio Pro 11.14 and 11.12.3, this command works for all modules in the app, except the System module.
+{{% /alert %}}
 
 ### Usage
 
@@ -75,7 +83,7 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | `0` | No errors. |
-| `1` | The module does not have a version. |
+| `1` | The specified project file does not exist, the module does not exist, or the module is the System module. |
 
 ## mx module-import Command {#module-import}
 
@@ -85,17 +93,45 @@ The `mx module-import` command imports a source module (*.mpk*) into an app.
 
 Use the following command pattern for `mx module-import`:
 
-`mx module-import MPK_PATH MPR_PATH` 
+`mx module-import MPK_PATH MPR_PATH [--import-mode <add|replace|update>] [--conflict <fail|take_mine|take_theirs>] [--metadata <take_new|take_existing|erase>]`
 
 For `MPK_PATH`, enter a *.mpk* file with the module you want to import.
 
 For `MPR_PATH`, enter a *.mpr* file of the project you want to import a module into.
 
+For `--import-mode`, enter one of the following values to control what happens when a module with the same name already exists in the app:
+
+* `add` – Add the module. Fails if a module with the same name already exists. This is the default.
+* `replace` – Replace the existing module. Fails with exit code `310` if no module with that name is found in the app.
+* `update` – Replace the module if it already exists, or add it if it does not.
+
+For `--conflict`, enter one of the following values to control what happens when a same-name module already exists. This applies to the `add` and `update` modes:
+
+* `fail` – Return an error. This is the default.
+* `take_mine` – Keep the existing module and skip the import silently.
+* `take_theirs` – Replace the existing module.
+
+For `--metadata`, enter one of the following values to control how Marketplace identity fields are handled when a module is replaced. This option only takes effect when a replacement actually occurs:
+
+* `take_new` – Use the identity fields from the incoming module. This is the default.
+* `take_existing` – Copy the identity fields from the module being replaced.
+* `erase` – Clear all identity fields.
+
+Regardless of the chosen strategy, `FromAppStore` is always inherited from the existing module, and `AppStoreVersion` falls back to the existing values when the incoming module does not provide them.
+
 ### Examples
 
-Here is an example:
+Add a module to an app:
 
 `mx module-import MyNewModule.mpk MyApp.mpr`
+
+Replace an existing module, keeping its marketplace identity:
+
+`mx module-import MyNewModule.mpk MyApp.mpr --import-mode replace --metadata take_existing`
+
+Update a module if it exists or add it if not, overwriting on collision:
+
+`mx module-import MyNewModule.mpk MyApp.mpr --import-mode update --conflict take_theirs`
 
 ### Return Codes
 
@@ -109,7 +145,7 @@ In case of errors, the exit code consists of three digits `XYZ`:
     * 2 – output-related error
     * 3 – errors related to the execution of the operation
 
-* Y is the number of the parameter the error is related to. If the error is not related to the parameters, this is zero.
+* Y is the number of the parameter the error is related to. This component is only valid if X = 1. If the error is not related to the parameters, Y contains the error details code described in Z below.
 
 * Z indicates the error details:
 
@@ -121,6 +157,9 @@ In case of errors, the exit code consists of three digits `XYZ`:
     * 6 – Project can't be loaded
     * 7 – Module can't be loaded
     * 8 – Import of a module failed. Resulting project can't be saved.
+    * 9 – File does not exist
+    * 10 – `--import-mode replace` was specified but no module with that name exists in the project
+    * 11 – The *.mpk* file has an unrecognized extension
 
 For example:
 

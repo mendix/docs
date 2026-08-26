@@ -29,7 +29,7 @@ jobs:
       # Installs linting tool via npm
       # Look at using the related GitHub action here: https://github.com/DavidAnson/markdownlint-cli2-action
       - name: Install markdown linter
-        run: npm install markdownlint-cli2 --global
+        run: npm install markdownlint-cli2@0.22.1 --global
       # Runs linter on content, rules specified in yaml config file
       # Adds the terminal messages to tmp.log file
       - name: Run markdownlint-cli2

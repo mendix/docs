@@ -34,7 +34,7 @@ Start exploring how to integrate agentic and generative AI into your Mendix apps
 
 * **New to generative AI?**
     * Familiarize yourself with [core concepts](/agents/get-started/), including prompt engineering, retrieval augmented generation (RAG), and function calling (ReAct).
-    * Follow the Academy learning path [Introduction to AI and GenAI](https://academy.mendix.com/link/paths/168/Introduction-to-AI-and-GenAI).
+    * Follow the Academy learning paths [Introduction to AI and GenAI](https://academy.mendix.com/link/paths/168/Introduction-to-AI-and-GenAI) and [Create your First Agent](https://academy.mendix.com/link/paths/175/Create-Your-First-Agent).
 
 * **Already familiar with generative AI?**
     * Browse the [Agents Kit guides](/agents/agents-kit-2/) for available components, step-by-step how-tos, and reference documentation.
@@ -49,7 +49,7 @@ Mendix [connectors](/agents/agents-kit-2/#connectors) offer direct support for t
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| [Anthropic Claude Sonnet Models](/agents/mx-cloud-genai/resource-packs/#supported-models) | Chat completions | text, image, document | text | Function calling |
+| [Anthropic Claude Models](/agents/mx-cloud-genai/resource-packs/#supported-models) | Chat completions | text, image, document | text | Function calling |
 | [Cohere Embed Models](/agents/mx-cloud-genai/resource-packs/#supported-models) | Embeddings | text | embeddings | |
 
 ### Microsoft Foundry (OpenAI) / OpenAI
@@ -68,7 +68,7 @@ For a list of all OpenAI models, see [Models](https://developers.openai.com/api/
 | --- | --- | --- | --- | --- |
 | Mistral's generalist models such as Mistral Small 4, Mistral Medium 3.5, Mistral Large 3, and Ministral 3 (3B, 8B, 14B) | Chat completions | text, image | text | Function calling |
 | Codestral, Devstral | Chat completions | text | text | Function calling |
-| (Open) Mistral Nemo 12B | Chat completions | text | text |  |
+| (Open) Mistral Nemo 12B | Chat completions | text | text | |
 | Mistral Embed, Codestral Embed | Embeddings | text | embeddings | |
 
 For a list of all Mistral models, see [Models Overview](https://docs.mistral.ai/models/overview) in the Mistral documentation.
@@ -84,9 +84,9 @@ For a list of all Mistral models, see [Models Overview](https://docs.mistral.ai/
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Native support for models that support the Converse API, with providers including Anthropic Claude, DeepSeek, Meta, and OpenAI (OSS models). | Chat completions | text, document, image  | text | Function calling |
-| Native support for [models by Cohere](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-cohere.html), and configurable support for all other models that support the Invoke API. | Embeddings  | text | embeddings | |
-| Native support for Titan Image Generator G1 v2 (availability varies by region), and configurable support for all other models that support the Invoke API. | Image generation  | text | image | |
+| Native support for models that support the Converse API, with providers including Anthropic Claude, DeepSeek, Meta, and OpenAI (OSS models). | Chat completions | text, document, image | text | Function calling |
+| Native support for [models by Cohere](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-cohere.html), and configurable support for all other models that support the Invoke API. | Embeddings | text | embeddings | |
+| Native support for Titan Image Generator G1 v2 (availability varies by region), and configurable support for all other models that support the Invoke API. | Image generation | text | image | |
 
 {{% alert color="info" %}}
 For embeddings and image generation, models that support the Invoke API but lack native support can be supported after minor configuration changes.

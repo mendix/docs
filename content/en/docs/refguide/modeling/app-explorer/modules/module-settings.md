@@ -7,7 +7,7 @@ weight: 10
 
 ## Introduction
 
-Module settings allow you to set Java managed dependencies, choose the type of the module, and set a version for certain module types.
+Module settings allow you to configure various properties of a module, including Java managed dependencies, module type, version, and the location where the module appears in the App Explorer.
 
 To open module settings, double-click **Settings** in the required module.
 
@@ -74,7 +74,7 @@ This is the version number of the module which is shown in various places in the
 When redistributing a module, you should always change the version number when changes are made. For modules that will be published to the Marketplace, the version must be set before exporting the package.
 
 {{% alert color="info" %}}
-The Marketplace automatically uses the version from the exported package. You cannot change this manually. If the version is already in use, the Marketplace rejects the package.
+Marketplace automatically uses the version from the exported package for packages exported from Studio Pro 11.12 and above. You cannot change this manually. If the version is already in use, the Marketplace rejects the package.
 {{% /alert %}}  
 
 #### Version format
@@ -87,6 +87,10 @@ Refer to the following guidance when changing the version number:
 * Increase the patch version when making backward compatible bug fixes, such as fixing a styling issue on a page or changing a calculation in a microflow without changing the parameters and output type.
 
 Next to the numerical major, minor and patch version, alphanumerical characters are allowed. This is considered to be an advanced feature, for more information, please see [Semantic Versioning](https://semver.org/). An example of an advanced version number is *1.3.7-beta.2*.
+
+{{% alert color="warning" %}}
+Mendix Marketplace does not support module packages with alphanumerical characters in the version number. To publish on Marketplace, the version number should consist of three numerical parts. Support for alphanumerical characters will be added in a future release.
+{{% /alert %}}
 
 ## Package {#package}
 
@@ -103,6 +107,7 @@ Key improvements are delivered through new module properties and a new `manifest
 * **Metadata tracking** – The manifest includes information about the package name, version (following semantic versioning), type, and the Mendix metamodel version used to create it.
 
 The **Package** section on the **General** tab displays package identification information for the module. Studio Pro uses this information to track modules across versions, which is the foundation for more reliable module updates.
+
 
 ### Module ID {#module-id}
 
@@ -144,12 +149,30 @@ When you export a module package (a *.mpk* file), Studio Pro adds a `manifest.js
 * The module ID and module name
 * The module version
 * The checksum of the package
+* A version GUID – a unique identifier for this build of the package, generated from its checksum
+* The module type (`source`, `add-on`, or `solution`)
+* The content types included in the package (for example, `extension` or `ai-skill`), if applicable
 * The Mendix metamodel version used to create the package
 * The list of files included in the package
 
 {{% alert type="info" %}}
 The legacy `package.xml` metadata file is not mentioned in `manifest.json` but is still included in the package for backward compatibility.
-{{% /alert %}} 
+{{% /alert %}}
+
+If you try to import a module package that was created with a newer version of Studio Pro than the one you are using, Studio Pro shows an error and cancels the import. Upgrade to a compatible version of Studio Pro before importing the package.
+
+### Location {#location}
+
+{{% alert color="info" %}}
+This setting is available for Studio Pro 11.13 and above.
+{{% /alert %}}
+
+The **Location** setting determines where the module appears in the App Explorer. You can choose one of the following options:
+
+* **Module list** (default) – The module appears in the regular module list at the bottom of the App Explorer
+* **Marketplace modules** – The module appears under the **Marketplace modules** node in the **App** node within the App Explorer
+
+Modules imported from the Marketplace are automatically set to **Marketplace modules**. You can change this setting at any time to organize your modules based on your preferences.
 
 ## Read More
 

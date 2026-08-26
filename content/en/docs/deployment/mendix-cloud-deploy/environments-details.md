@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-To open the **Environment Details** page, go to [Apps](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to [Projects](https://projects.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{% alert color="info" %}}You must have permissions for **Transport Rights** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
 
@@ -179,6 +179,10 @@ On this tab, you can edit the model options for constants and scheduled events.
 ### Constants {#constants}
 
 In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
+
+{{% alert color="warning" %}}
+The combined length of all constant keys and values is limited to 128 KB (approximately 32,000 characters). For more information, refer to [Behavior of Your App in Mendix Cloud](/developerportal/deploy/behavior-of-app/#constants-size-limit).
+{{% /alert %}}
 
 To fill in a new value, select the constant and click **Edit** to bring up the **Edit Constant** dialog box.
 

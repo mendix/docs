@@ -39,17 +39,17 @@ Automation supports more frequent updates to security authorization packages, ha
 The following controls are related to this control:
 
 * CA-02
-* CA-05
+* [CA-05](/private-mendix-platform/nist-controls/ca-05/)
 * CA-06
 * CM-03
-* CM-04
+* [CM-04](/private-mendix-platform/nist-controls/cm-04/)
 * PM-06
 * PM-09
-* RA-05
+* [RA-05](/private-mendix-platform/nist-controls/ra-05/)
 * SA-11
 * SA-12
-* SI-02
-* SI-04
+* [SI-02](/private-mendix-platform/nist-controls/si-02/)
+* [SI-04](/private-mendix-platform/nist-controls/si-04/)
 
 For more information, refer to the following:
 

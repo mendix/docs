@@ -12,6 +12,29 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 
 * A module ID can now be passed to the element selector for the `selectedElementId` property, and the corresponding module will be preselected and expanded. This will allow the user to directly create a new document of the desired type in that module.
 * We improved the Extensions Overview UI to be more modern and consistent with the rest of Studio Pro.
+* We added support for direct assignment to model element array properties (for example, `element.property = [value1, value2]`).
+
+## Version 11.13.0
+
+* We updated the progress dialog cancellation behavior: the process now waits for the cancelled step to finish before resolving, rather than immediately returning a snapshot of the progress at the time of cancellation. A new `resolveImmediatelyOnCancel` parameter restores the previous behavior.
+* We fixed an issue where reloading an extension with open tabs caused an Oops crash.
+
+## Version 11.12.3
+
+* We added support for preselecting modules in the [Document Selector API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/).
+* We improved the [Permissions API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/).
+
+## Version 11.12.2
+
+* We fixed a bug where the Extensions Overview page would not open if the user was not signed in.
+* We fixed a bug where reloading a Dev extension would cause a crash if extension tabs were still open.
+* We fixed an issue where progress dialogs did not behave like their C# counterpart. Canceling a step now waits for it to finish and return its result. To exit the step and return its result immediately on cancel, pass `resolveImmediatelyOnCancel` to `IDialogApi.showProgressDialog`.
+
+## Version 11.12.1
+
+* We removed timeouts for Custom Blob Document consistency checks instead of showing a generic error in the **Errors** pane. We also added analytics to identify extensions that exceed the previous timeout.
+* We fixed a bug where the icon next to a tab title did not appear.
+* We fixed a bug where the Module Settings form incorrectly showed modules other than Add-on when packaging an extension into a module.
 
 ## Version 11.12.0
 

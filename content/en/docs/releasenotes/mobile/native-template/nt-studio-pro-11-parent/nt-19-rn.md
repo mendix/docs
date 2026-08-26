@@ -5,15 +5,29 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.1.3
+
+**Release date: Aug 7, 2026**
+
+### Fixes
+
+* We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
+* We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
+* We addressed an issue on iOS where a iOS-system dialog would open during app startup and request a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
+
 ## 19.1.1
 
 **Release date: Jul 3, 2026**
 
-- We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
+### Fixes
+
+* We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
 
 ## 19.0.5
 
 **Release date: May 12, 2026**
+
+### Fixes
 
 * We fixed the CocoaPods installation issue that was caused by `xcodeproj object version` 70.
 

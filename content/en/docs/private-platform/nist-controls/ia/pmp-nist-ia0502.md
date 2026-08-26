@@ -31,7 +31,7 @@ Status information for certification paths includes, for example, certificate re
 
 The following controls are related to this control:
 
-* IA-6
+* IA-06
 
 ## Responsibility
 

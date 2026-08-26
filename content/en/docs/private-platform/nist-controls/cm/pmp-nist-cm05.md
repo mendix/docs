@@ -27,6 +27,7 @@ Any changes to the hardware, software, or firmware components of information sys
 Organizations maintain records of access to ensure that configuration change control is implemented and to support after-the-fact actions should organizations discover any unauthorized changes. Access restrictions for change also include software libraries. 
 
 Examples of access restrictions include the following:
+
 * Physical and logical access controls (for example, AC-03 and PE-03)
 * Workflow automation
 * Media libraries
@@ -35,8 +36,8 @@ Examples of access restrictions include the following:
 
 The following controls are related to this control:
 
-* AC-03
-* AC-06
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
 * PE-03
 
 ## Responsibility
@@ -61,6 +62,6 @@ To meet these requirements, the customer must carry out the following actions:
 
     The customer must ensure that both physical and logical access controls are in place for change management, including workflow automation, role-based access to deployment pipelines, and media library restrictions. The Infra Implementer, App Implementer, Infra Operator, and App Operator must respect the customer's change control restrictions throughout the system lifecycle per NIST SP 800-128.
 
-Maintain change access records and audit trails.
+3. Maintain change access records and audit trails.
 
     The customer must maintain records of all access granted for change purposes and periodically review these records to detect unauthorized changes. This includes implementing audit logging for all configuration change activities, conducting regular reviews of change access permissions, and enforcing separation of duties as required by PE-03 physical protection requirements.

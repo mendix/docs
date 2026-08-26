@@ -33,20 +33,20 @@ Organizations use the acquisition/procurement processes to require supply chain 
 
 The following controls are related to this control:
 
-* AT-3
-* CM-8
-* IR-4
+* AT-03
+* * CM-08
+* IR-04
 * PE-16
-* PL-8
-* SA-3
-* SA-4
-* SA-8
-* SA-10
+* [PL-08](/private-mendix-platform/nist-controls/pl-08/)
+* [SA-03](/private-mendix-platform/nist-controls/sa-03/)
+* [SA-04](/private-mendix-platform/nist-controls/sa-04/)
+* [SA-08](/private-mendix-platform/nist-controls/sa-08/)
+* [SA-10](/private-mendix-platform/nist-controls/sa-10/)
 * SA-14
 * SA-15
 * SA-18
 * SA-19
-* SC-29
+* [SC-02](/private-mendix-platform/nist-controls/sc-02/)9
 * SC-30
 * SC-38
 

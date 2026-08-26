@@ -12,9 +12,9 @@ To deploy apps to your private cloud cluster (for example to Red Hat OpenShift o
 
 Once the cluster has been registered, and a namespace created, team members with *Deploy App* rights can create environments and deploy an app.
 
-This document explains how to use the Mendix Portal to deploy your **connected** app.
+This document explains how to use the Mendix Portal to deploy your app.
 
-To deploy to a namespace in a **standalone** cluster, you provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-operator/).
+Alternatively, you can provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-operator/).
 
 Within your namespace you can run one, or several, Mendix apps. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
@@ -40,7 +40,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first [create your app](/developerportal/#create-app), it will be set to deploy to Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image2.png" class="no-border" >}}
 
@@ -62,7 +62,7 @@ Deployment package creation for Mendix versions 7 and below is no longer support
 The deployment package created with Java 17/21 support requires the Mendix Operator to be in version 2.15.0 or above.
 {{% /alert %}}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page and click **Create Deployment Package**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image9.png" class="no-border" >}}
@@ -93,7 +93,7 @@ Alternatively, you can upload an existing MDA by clicking **Upload**.
 
 ### Creating an Environment{#create-environment}
 
-When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Apps](https://sprintr.home.mendix.com/) will show you the current status.
+When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Projects](https://projects.home.mendix.com/) will show you the current status.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image5.png" class="no-border" >}}
 
@@ -210,9 +210,15 @@ You can deploy the deployment package of your app by doing the following:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image16.png" class="no-border" >}}
 
-8. Click Apply Changes to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
+8. Review the deployment details in the **Review and apply changes to the cluster** dialog. The deployment summary displays the target environment, package name, package version, and status. You can click **View Summary** to see detailed information about the changes included in this release, or click **Back** to make modifications.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/ApplyChangesPage.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/ApplyChangesPage.png" alt="Review and apply changes dialog showing deployment summary with View Summary button" class="no-border" >}}
+
+9. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
+
+10. Optional: Click **View Summary** to see the enhanced deployment package summary, which provides clearer visibility into the changes included in the release.
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/DeploymentPackageSummary.png" alt="Enhanced deployment package summary with detailed change information" class="no-border" >}}
 
 You can find a description of what this deployment means within the Kubernetes cluster in [How the Operator Deploys Your App](#how-operator-deploys), below.
 
@@ -220,7 +226,7 @@ You will be taken to the Environment Details page for the selected environment. 
 
 ## Environments Page
 
-After opening your app in [Apps](https://sprintr.home.mendix.com/), you can find the **Environments** page, which contains three sections:
+After opening your app in [Projects](https://projects.home.mendix.com/), you can find the **Environments** page, which contains three sections:
 
 * Deployment Package Repository
 * Environments
@@ -292,6 +298,10 @@ This deploys the package to an existing environment as described in [Deploying t
 This section shows all the environments created for this app.
 
 For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment.
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/EnvironmentOverview.png" alt="Environments Overview showing environment details with build status and package information" class="no-border" >}}
+
+The environment card displays key information including environment ID, namespace, environment purpose, resource status indicators (Network, Storage, Database, Service Account), build status with replica information, and package details (name, version, URL, and Mendix version).
 
 You can perform the following actions:
 
@@ -402,23 +412,25 @@ This section shows all the activities which have taken place in this environment
 
 #### Technical Contact
 
-This section allows you to designate the Technical Contact for the application. The Technical Contact serves as the point of contact for any app-related inquiries and should have the capability to manage all environments within the app.
+The Technical Contact is the operational owner of the app and serves as the point of contact for any app-related inquiries.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/technicalContact.png" class="no-border" >}}
 
-For applications created before December 12, the Technical Contact field is empty by default. It can be set by a user with cloud access permissions for the application.
+Every application has a Technical Contact. When an application is created, its creator is automatically assigned as the Technical Contact.
 
 {{% alert color="warning" %}}  
-Once a Technical Contact is assigned, they automatically receive administrative permissions for all namespaces associated with environments in the application. This means that the Technical Contact can perform all actions on all environments in the application. The Administrative permissions will be intact even when the Technical Contact is changed. Hence, the cluster manager must either manually assign a new role to the developer if they do not want all the permissions assigned to the developer, or remove the role assigned to the developer if they want all the permissions to be revoked for the developer.
+Once a Technical Contact is assigned, they automatically receive namespace Administrator permissions on all namespaces where the application's environments are deployed. This means the Technical Contact can perform all actions on all of the application's environments. Whenever a new environment is added, the Technical Contact receives Administrator permissions on the namespace associated with that environment.
 {{% /alert %}}
 
-For applications created on or after December 12, the Technical Contact is automatically set to the application's creator. In such cases, whenever a new environment is added, the Technical Contact receives administrative permissions for the namespaces associated with that environment.
+Changing the Technical Contact does not automatically revoke the previous Technical Contact's Administrator permissions. If the previous Technical Contact should no longer have administrative access, you must revoke their permissions separately through namespace user and permission management.
 
-The Technical Contact can be changed later, but only by the current Technical Contact.
+Only the current Technical Contact can change the assignment, by transferring the role to another member of the application team. If the current Technical Contact is unavailable or unreachable, contact [Mendix Support](https://support.mendix.com/) to update the assignment.
+
+For more information about the Technical Contact role and its permissions, see [Technical Contact Role and Permissions](/developerportal/deploy/private-cloud/private-cloud-technical-contact/).
 
 #### Environment Purpose {#environment-purpose}
 
-This section allows you to edit the Environment Purpose for the environments within the application. Setting the purpose of your environment does not affect its operational state. However, it helps ensure the environment is used as intended, providing clarity for both you and us. We strongly recommend setting this field, as future features may be tailored to specific environment purposes. For applications where the Technical Contact is not set, this section is not visible.
+This section allows you to edit the Environment Purpose for the environments within the application. Setting the purpose of your environment does not affect its operational state. However, it helps ensure the environment is used as intended, providing clarity for both you and us. We strongly recommend setting this field, as future features may be tailored to specific environment purposes.
 
 When creating a new environment, the Technical Contact can set the environment purpose. The field is not visible when some one else other than the Technical Contact is creating the environment. It is also possible to change the purpose in **Application Settings** after environment creation. However, the purpose can only be edited by the Technical Contact.
 
@@ -518,7 +530,7 @@ By default, there will be no admin password set for your environment. This means
 
 This deletes the environment — you will be asked to confirm this action.
 
-If the cluster is standalone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
+If the Mendix Gateway Agent is not connected, you can still delete the environment information in Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
 
 If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Mendix Portal.
 
@@ -565,7 +577,7 @@ Starting from Operator 2.20.0 onwards, it is now also possible to set the deploy
 
 If you need to enter or change the subscription secret, then you can do that here.
 
-Subscription secrets are obtained from [Mendix support](https://support.mendix.com/). You can use subscription secrets in [standalone mode](/developerportal/deploy/private-cloud-technical-appendix-02/).
+Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
 
 For Operator version 2.24.0 and newer, we have introduced a new field, **Enable Fallback License**, in the **Environment Details** section. When enabled, this option allows Connected environments using subscription secrets to use a fallback license if communication with the licensing server fails, preventing the system from switching to Trial mode. 
 
@@ -739,7 +751,7 @@ Under some circumstances changes in the status of the environment and its apps w
 
 ### Deleting the Cluster
 
-If the cluster is running in standalone mode, you need to delete all `MendixApp` CRs.
+Before deleting the cluster, you need to delete all `MendixApp` CRs.
 
 To confirm that environments and their associated storage have been successfully deleted, run:
 
@@ -936,7 +948,7 @@ If your application keeps restarting unexpectedly, check your application log fo
 
 ## How the Operator Deploys Your App {#how-operator-deploys}
 
-The Mendix Operator is another app within your Mendix on Kubernetes namespace. It is triggered when you provide a CR file. This can either be through the Mendix Portal, for a connected cluster, or through the command line, for a standalone cluster. The process looks like this:
+The Mendix Operator is another app within your Mendix on Kubernetes namespace. It is triggered when you provide a CR file. This can be done through Mendix Portal or through the command line. The process looks like this:
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/mx4pc-operator-deploy.png" class="no-border" >}}
 

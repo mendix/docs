@@ -16,8 +16,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### Software Specifications {#software}
 
-[Mendix Studio Pro](/refguide/modeling/) 11 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
-We support running on Windows locally, or locally virtualized.
+[Mendix Studio Pro](/refguide/modeling/) 11 is supported on actively serviced versions of Windows 11. We support running on Windows locally, or locally virtualized.
 
 Mendix Studio Pro 11 can run in beta mode on Apple Silicon (ARM64) Macs running macOS Sonoma 14.0 and above. Starting with Studio Pro 11.12, the native macOS version of Studio Pro supports only Apple Silicon. Intel-based (x64) Macs are no longer supported. This shift allows Mendix to focus on a single native architecture for macOS, improving performance, efficiency, and overall compatibility. For information on known limitations, see the [Known Limitations for Mac](#mac-limitations) section below.
 
@@ -45,7 +44,7 @@ The following frameworks are required. They will be installed automatically by t
 
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) - if not yet installed on your machine, Mendix will install Eclipse Temurin (x64 or ARM64) - see [Java](#java) for the exact version required.
-* Gradle version 8.5 or above - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
+* Gradle version 9.1 or above - if Gradle is not yet installed on your machine, Mendix will install Gradle version 9.5.1
 * Git for Windows (x64) version 2.48.1 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -85,7 +84,7 @@ The fix for this is to install *Security Intelligence Update for Microsoft Defen
 
 ### Hardware Specifications {#hardware}
 
-Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2), with the following additional requirements:
+Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 11](https://www.microsoft.com/en-gb/windows/windows-11-specifications#table1), with the following additional requirements:
 
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB
 * **RAM** – recommended 16GB or more depending on the size of your app and how many instances of Studio Pro you want to have open at the same time
@@ -227,7 +226,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment 21 (JRE). To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment 25 (JRE). To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert type="info" %}}
 A Java Runtime Environment (JRE) is the environment needed to run Mendix on a server. This is not to be confused with a Java Development Kit (JDK), which is supported by Studio Pro and used to create and develop apps. To learn more about JDKs, see 
@@ -240,12 +239,12 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.6, 10.11, 11.4, 11.8
+* [MariaDB](/refguide/mysql/): 10.11, 11.4, 11.8, 12.3
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver17): v12 compatibility mode 160 or higher
-* [MySQL](/refguide/mysql/): 8.4
+* [MySQL](/refguide/mysql/): 8.4, 9.7
 * [Oracle Database](/refguide/oracle/): 19, 21c, 23ai (including 26ai)
-* PostgreSQL: 13, 14, 15, 16, 17, 18
+* PostgreSQL: 14, 15, 16, 17, 18
 * [SAP HANA](/refguide/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}
@@ -301,6 +300,10 @@ For native and progressive web apps built with Mendix, the following operating s
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
 
+{{% alert color="warning" %}}
+If a new iOS or Android version is released less than 3 months before your Mendix version reaches end of native mobile support, that OS version is not covered for your native mobile app. To support the new OS version, you must upgrade to a newer Mendix version. See [Native Mobile Support Guidelines](/releasenotes/mobile/native-support/) for details.
+{{% /alert %}}
+
 You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support, you must demonstrate that your problem also occurs on a supported operating system version. The oldest operating system version where Mendix native mobile apps can run is determined by [React Native](https://github.com/facebook/react-native?tab=readme-ov-file#-requirements).
 
 Mendix recommends the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
@@ -322,7 +325,7 @@ MxBuild is a Windows, Linux, and macOS command-line tool that can be used to bui
     | --- | --- |
     | .NET 8 | .NET 10 |
 
-* JDK 21
+* JDK 25
 
 ## mx Command-Line Tool {#mxtool}
 

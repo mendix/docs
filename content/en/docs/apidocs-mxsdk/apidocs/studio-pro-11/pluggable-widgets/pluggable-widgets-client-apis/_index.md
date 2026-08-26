@@ -485,7 +485,7 @@ if (selection.type === "Single") {
 
 ## Exposed Modules
 
- ### Session {#session}
+### Session {#session}
 
 The Mendix Platform exposes a `mendix/session` module for inspecting the current user session. It is available in both web and native.
 

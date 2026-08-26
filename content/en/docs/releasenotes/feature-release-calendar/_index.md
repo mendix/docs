@@ -31,14 +31,11 @@ General Availability means that a feature is available for all users. This type 
 | Mendix Cloud GenAI Resource Packs Guardrails | General Availability: H2 2026 |
 | Agent Editor in Studio Pro<sup>1</sup> | General Availability: Mx 11.9 |
 | Agent Observability | General Availability: Mx 11.5 + Mx 10.24 |
-| Model Agents as part of your Workflow | General Availability: Mx 11.9 |
-| Dynamic Case Management | Private Beta: Mx 11.3 <br/>Limited Availability: Mx 11.12 |
-| Global Inbox Workflow Tasks | General Availability: Mx 11.9 |
-| Global Inbox Other Tasks | General Availability: Mx 11.14 |
-| Workflow Non-interrupting Event Subprocesses (Message trigger) | Public Beta: Mx 11.8 <br/>General Availability: Mx 11.9 |
-| Workflow Interrupting Event Subprocesses (Message trigger) | General Availability: Mx 11.10 |
-| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.14 |
-| Workflow Message Events | General Availability: Mx 11.11 |
+| Dynamic Case Management | Private Beta: Mx 11.3 <br/>Limited Availability: Q3 2026 |
+| Global Inbox Other Tasks | General Availability: Q4 2026 |
+| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.13 |
+| Workflow Event Subprocesses Recurrence (Timer trigger) | General Availability: Mx 11.15 |
+| Workflow Easily Call and Wait for external Workflows | General Availability: Q4 2026 |
 
 {{% alert color="info" %}}
 ¹Limitations: Initially only Mendix Cloud GenAI Resources as provider, and only design-time modification of prompts and other agent settings. Incrementally, we will remove these limitations.
@@ -64,7 +61,7 @@ General Availability means that a feature is available for all users. This type 
 | Maia Make | General Availability: Mx 11.8 |
 | Maia Make: Domain Models | General Availability: Mx 11.8 |
 | Maia Make: Microflows | General Availability: Mx 11.8 |
-| Maia Make: Nanoflows | General Availability: Mx 11.15 |
+| Maia Make: Nanoflows | General Availability: Q4 2026 |
 | Maia Make: Overview Pages | General Availability: Mx 11.8 |
 | Maia Make: Enumerations | General Availability: Mx 11.8 |
 | Maia Make: Pages | General Availability: Mx 11.9 |
@@ -75,6 +72,7 @@ General Availability means that a feature is available for all users. This type 
 | Maia Make: Modules | General Availability: Mx 11.9 |
 | Maia Make: editing/work with existing Microflows and Workflows | General Availability: Mx 11.9 |
 | Maia Make: Integrations | General Availability: Mx 11.24 |
+| Maia Make: Rules | General Availability: Q4 2026 |
 
 ## Enterprise-Grade Platform
 
@@ -111,7 +109,8 @@ General Availability means that a feature is available for all users. This type 
 | Improved Marketplace Component management:<ul><li>Release of Security Fixes</li></ul> | General Availability: Mx 11.9 |
 | Marketplace Component management:<ul><li>Uploading via API</li><li>Content API extended</li></ul> | General Availability: Mx 11.12 |
 | Improved Marketplace notifications | General Availability: Mx 11.15 |
-| Primitive parameters | General Availability: Mx 11.6 (Pages) & <br/>Mx 11.9 (Snippets) |
+| Primitive parameters for pages | General Availability: Mx 11.6 |
+| Primitive parameters for snippets | General Availability: Mx 11.18 |
 
 ### Governance
 
@@ -146,29 +145,29 @@ General Availability means that a feature is available for all users. This type 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Private Mendix Platform: Compliance with NIST-800, FIPS, FEDRAMP and DoD IL 4/5/6 | General Availability: June 2025 |
+| Compliance with NIST-800, FIPS, FEDRAMP and DoD IL 4/5/6 | General Availability: Private Mendix Platform 1.23 (June 2025) |
 | Secret Manager support for AWS, Azure, and Hashicorp | General Availability: Private Mendix Platform 1.24.3 LTS (November 2025) |
-| Dynamic Role Management | General Availability: Private Mendix Platform 2.0 (December 2025) |
-| Private Mendix Platform for Mx 11 | General Availability: Private Mendix Platform 2.4 (January 2026) |
-| Deployment Health Dashboard | General Availability: Private Mendix Platform 2.4 (January 2026) |
+| Dynamic Role, Group and User Management | General Availability: Private Mendix Platform 2.0 (December 2025) |
 | Software Composition Insights | General Availability: Private Mendix Platform 2.4 (January 2026) |
-| Maia with BYO-LLM on Private Mendix Platform | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
+| Studio Pro 11.6 MTS | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
+| Maia Make with BYO-LLM | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
 | Unified Deployment Experience with Agent-Interactor support | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
-| Download Portal Improvements and APIs | General Availability: March 2026 |
+| Granularized Permissions for Dynamic Role Management | General Availability: Private Mendix Platform 2.7 (June 2026) |
+| Enhanced API Coverage for Platform Actions | General Availability: Private Mendix Platform 2.7 (June 2026) |
+| Studio Pro 11.12 LTS | General Availability: Private Mendix Platform 2.8 (July 2026) |
+| Helm and Helmfile Support for Declarative Installations | General Availability: Private Mendix Platform 2.8 (July 2026) |
+| Runtime Leaderless Mode | General Availability: Private Mendix Platform 2.8 (July 2026) |
+| Enhanced Key Vault support for Apps | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Cluster Manager API | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Multiple Build and Deploy Pipelines | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Enhanced Logging, Events, and Metrics | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| CI/CD for Windows Server | Beta: Private Mendix Platform 2.9 (November 2026) |
+| Maia Operate on Private Mendix Platform | Beta: Private Mendix Platform 2.9 (November 2026) |
 
 ## Siemens Xcelerator (Integrations)
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Teamcenter Connector v2512 | General Availability: Mx 11.6 |
-| Teamcenter Extension Unified Sample App | General Availability: Mx 11.6 |
-| Workstation Client | Limited Availability: Mx 11.6 |
-| Capital Connector V1.1 | General Availability: Mx 11.6 |
-| Enrich MAIA with more Teamcenter relevant knowledge | General Availability: Mx 11.9 |
-| Capital Connector v2512 | General Availability: Mx 11.9 |
-| Private Workstation Management | Limited Availability: Mx 11.9 |
-| Mendix as PL Web Component | Public Beta: Mx 11.12 <br/>General Availability: 2027 |
-| Teamcenter Connector and Teamcenter Extension (Unified Module) v2606 | General Availability: Mx 11.12 |
-| Polarion Connector | General Availability: Q2-Q3 2026 |
-| Workstation Client | General Availability: Q3 2026 |
+| Enrich MAIA with more Teamcenter relevant knowledge | General Availability: Mx 11.18 |
+| Easily Call and Wait for Teamcenter Workflows via Mendix Workflows as part of the Teamcenter Connector | General Availability: Q3-Q4 2026 |
 | Siemens Design System (SDS) | General Availability: Q2 2026 |

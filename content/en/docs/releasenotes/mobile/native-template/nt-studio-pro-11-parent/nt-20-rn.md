@@ -5,6 +5,14 @@ weight: 5
 description: "Release notes for Native Template 20."
 ---
 
+## 20.0.1
+
+**Release date: Aug 24, 2026**
+
+### Improvements
+
+- We hardened the Android main screen against overlay and tapjacking attacks, and removed the unused `SYSTEM_ALERT_WINDOW` permission.
+
 ## 20.0.0
 
 **Release date: Aug 3, 2026**

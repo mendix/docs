@@ -32,7 +32,10 @@ Consistent Identifier Value: The same value for a given multi-app user must be s
 
 User identification strategies can vary across application portfolios, particularly when applications were developed independently or use different provisioning methods. Consider the following guidelines to establish a robust and consistent identification strategy:
 
-1. Prioritize `UserCommons.namedUserIdentifier.value`: Always aim to use and populate `UserCommons.namedUserIdentifier.value` for user identification. This provides a dedicated field for metering purposes and offers flexibility regardless of the `system.user.name` value.
+1. Prioritize `UserCommons.namedUserIdentifier.value`: Use and populate `UserCommons.namedUserIdentifier.value` for user identification. This provides a dedicated field for metering purposes and offers flexibility regardless of the `system.user.name` value.
+
+    {{% alert color="info" %}}Currently, User Metering reads values from `system.user.name` only. Mendix is working on including `UserCommons.namedUserIdentifier.value`, which will take priority over `system.user.name` when populated. This will give you more control over identifying users across apps when different authentication methods are in use, which can result in different `system.user.name` values for the same user in different apps.
+    {{% /alert %}}
 
 2. Use a stable, globally unique identifier: Select an identifier that is stable and consistently unique across your entire user base and application portfolio.
 

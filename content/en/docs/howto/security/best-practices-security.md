@@ -3,7 +3,7 @@ title: "Implement Best Practices for App Security"
 linktitle: "Best Practices for App Security"
 url: /howto/security/best-practices-security/
 weight: 20
-description: "Describes the common aspects you should consider when delivering an application within Mendix Cloud."
+description: "Describes common security best practices for Mendix applications, covering access control, authentication, data protection, and infrastructure configuration."
 aliases:
     - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications.html
     - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications
@@ -12,9 +12,9 @@ aliases:
 
 ## Introduction
 
-Security is one of the most important aspects of an application, because misconfiguration or failing security can have large stakeholder consequences. The Mendix Runtime protects your application and data according to your model, and Mendix Cloud handles security at the infrastructure level. 
+Security is one of the most important aspects of an application, because misconfiguration or failing security can have significant consequences for end-users, data, and your business. The Mendix Runtime protects your application and data according to your model, and Mendix Cloud handles security at the infrastructure level. 
 
-This document describes the common aspects you should consider when delivering an application within Mendix Cloud.
+This document describes the common aspects to consider when deploying an application.
 
 ## Implementing Access Rules{#access-rules}
 
@@ -22,43 +22,43 @@ The Mendix architecture includes the Mendix Client, which can compose its own qu
 
 {{< figure src="/attachments/howto/security/best-practices-security/mendix-runtime-architecture.png" alt="Mendix Runtime Architecture"   width="500"  class="no-border" >}}
 
-When designing an application, you can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto/security/create-a-secure-app/)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, users with the "Customer" role can only view orders that are associated to the customer of which this user is part.
+When designing an application, you can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto/security/create-a-secure-app/)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, end-users with the "Customer" role can only view orders that are associated with the customer of which this user is part.
 
 While the data that should be viewable and editable in which role is application-specific, the following best practices are key:
 
 * Attributes determined by the system (like the status of an order) should never be writable
 * If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is actually a **System.User** object created on the fly)
-* Do not set a default rule for read-and-write access – this forces you to think about each attribute that is added to an entity
+* Do not set a default rule for read-and-write access—this forces you to think about each attribute that is added to an entity
 * Security constraints should be formed as entity access rules
 * Constraints on widgets in pages should not be used as a measure of security, but can filter out irrelevant data for the context of the page
-* Keep your attributes editable within data views, because if an access rule prohibits write access, your client will display it as non-editable – this way you are aware of the (correct) working of an access rule
+* Keep your attributes editable within data views, because if an access rule prohibits write access, your client will display it as non-editable—this way you are aware of the (correct) working of an access rule
 
 You can review and manage your entity access settings in the Security Overview in Mendix Studio Pro. This overview shows you your application's security configuration and allows you to verify which roles have access to specific entities and attributes (for more information, see [Security Overview](/refguide/security-overview/)).
 
 ## Separating Security and Business Information
 
-If you have business information which is also related to end-users of your app, do not combine the business information with the end-user by using specializations of `System.User`. Keep business information and app security information separate. If you want to link business data to a user, use associations to link them.
+If you have business information that is also related to end-users of your app, do not combine the business information with the end-user by using specializations of `System.User`. Keep business information and app security information separate. If you want to link business data to a user, use associations to link them.
 
-For example, you may have an app where you want your customers to be end-users of the app. If you make an entity `MyModule.Customer` which is a specialization of `System.User` then all customers would automatically become users of the app. This has security implications such as:
+For example, you may have an app where you want your customers to be end-users of the app. If you make an entity `MyModule.Customer` which is a specialization of `System.User` then all customers would be end-users of the app. This has security implications such as:
 
 * Every customer becomes an end-user without any confirmation required
 * If a customer stops being a customer, you cannot remove them from using the app without deleting other business information (which may, legally, need to be kept)
 * You may want to add a customer who you do not want to become an end-user of the app
 
-In addition, apps are priced by the number of end-users and having unnecessary end-users might cost you more money
+In addition, apps are priced by the number of end-users and having unnecessary end-users might cost you more money.
 
 To link the customer information to an end-user, create a 1-1 association, `Customer_Account`, between `MyModule.Customer` and `Administration.Account`.
 
 ## Configuring User Roles and Access
 
-Which users and roles are defined within an application is different per app and app. However, there are some key guidelines to keep in mind when validating the user security:
+Which users and roles are defined within an application changes, depending on the function of the app. However, there are some key guidelines to keep in mind when validating the user security:
 
 * Anonymous access should be disabled if it has no function within the application
-    * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
+    * Some applications have anonymous access enabled, solely to serve a custom login form—this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
 * The role of the app's administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
 
-## Enable Strict Mode
+## Enabling Strict Mode
 
 Enable [strict mode](/refguide/strict-mode/) in your application. Strict mode helps ensure that entities are accessible only in the ways defined within your model, through microflows, nanoflows, widgets, or pages, by restricting certain client APIs.
 
@@ -66,7 +66,7 @@ Configuring access rules is essential for the security of your app. However, acc
 
 ## Applying Authentication on Services{#service-authentication}
 
-When you expose APIs, you provide a way for users and external systems to access (create, read, update, and/or delete) data within your Mendix application.
+When you expose APIs, you provide a way for end-users and external systems to access (create, read, update, and/or delete) data within your Mendix application.
 As APIs are just a different interface to access your data, it is extremely important to restrict data access through authentication and authorization best practices.
 
 ### Turning On API Security
@@ -74,13 +74,13 @@ As APIs are just a different interface to access your data, it is extremely impo
 Firstly, you need to answer the question **Requires authentication** with *Yes* or *No*.
 
 The platform guides you towards choosing *Yes* for the API endpoints you create. 
-Intuitively this seems correct, as when the *Yes* option is toggled on. Mendix Studio Pro will reveal a variety of authentication options.
-These options will restrict which users or external systems have access to your API endpoint.
+This seems to be the most secure option. When enabled, Mendix Studio Pro reveals authentication options
+that restrict which end-users or external systems have access to your API endpoint.
 From a security perspective this is exactly what is wanted.
 
 However, choosing between *Yes* and *No* is not this straightforward.
 Choosing *Yes* will force your API requests to be executed in the context of a user account and require an active session to be established. 
-Skipping the step where you retrieve the user account and establish a session can have a significant performance improvement for your API.
+You can significantly improve the performance of your API if you can skip the step where you retrieve the user account and establish a session.
 This is why choosing *No* can still be a viable option for your API, and it might even be the recommended option in many situations.
 
 The best practices when selecting *No* as **Requires authentication** option are as follows.
@@ -89,7 +89,7 @@ The best practices when selecting *No* as **Requires authentication** option are
 * Configure the required headers for authentication as part of a published REST operation and add them explicitly to the API handling microflow as input parameters. This could, for example, be an "X-API-Key" header or "Authorization" header. By adding the header as an input parameter it will be included in the generated Swagger documentation hosted at `/rest-doc`. Here it can be manually set as a parameter and used as part of the "try it out" feature for that API operation.
 * Perform your own validations on this header information at the very start of the API handling microflow.
 * Abort execution of the rest of the API handling microflow when validations fail.
-* Manipulate the status code and response directly in the HTTP response object that was provided as a parameter. It is recommended that you return a `401 Unauthorized` in cases where authentication fails and a `403 Forbidden` in cases where the authentication was successful, but the provided credentials to not grant access to the requested resource or allow the rest of that API operation's logic to be executed.
+* Manipulate the status code and response directly in the HTTP response object that was provided as a parameter. It is recommended that you return a `401 Unauthorized` in cases where authentication fails and a `403 Forbidden` in cases where the authentication was successful, but the provided credentials do not grant access to the requested resource or allow the rest of that API operation's logic to be executed.
 
 By performing your authentication checks in this way, you will have the flexibility of the [Custom authentication option](#custom) described below, but it comes with the lowest performance hit. This is at the expense of losing the user context, which in most scenarios is acceptable for APIs.
 
@@ -97,7 +97,7 @@ By performing your authentication checks in this way, you will have the flexibil
 Choosing *No* without these restrictions will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, which can seriously affect your app's response and even cause server failure.
 {{% /alert %}}
 
-Choosing *Yes* comes with the benefits of having the time zone and language settings available for that API user account. It can also provide better traceability of changes made through API requests. Additionally, it gives the possibility of applying restrictions to requested entities based on the System.User object used for the API account.
+Choosing *Yes* comes with the benefits of having the time zone and language settings available for that API user account. It can also provide better traceability of changes made through API requests. Additionally, it gives the possibility of applying restrictions to requested entities based on the `System.User` object used for the API account.
 
 ### Selecting Authentication Option
 
@@ -107,7 +107,7 @@ All these authentication options will later be combined with the API's [Allowed 
 Allowed roles can be any of the roles you have defined in [User Roles](/refguide/user-roles/), including the role assigned to Anonymous users.
 
 {{% alert color="warning" %}}
-Assigning an Anonymous user role as one of the API's allowed roles is similar as choosing *No* at **Requires authentication**.
+Assigning an Anonymous user role as one of the API's allowed roles is similar to choosing *No* at **Requires authentication**.
 This means that the same advice around certificate usage and IP restrictions applies, and you should perform the authentication inside the API handling microflow itself.
 {{% /alert %}}
 
@@ -115,9 +115,9 @@ You can choose one or more of the authentication options described below. If you
 
 #### Authentication Option 1, Username and Password{#basic}
 
-If you choose this option, the API will expect a `Basic auth` HTTP request header to be set on each incoming request. The `basic auth` header format is: `"Authorization": "Basic userid:password"`, where userid:password have been base64 encoded.
+If you choose this option, the API will expect a `Basic auth` HTTP request header to be set on each incoming request. The `Basic auth` header format is: `"Authorization": "Basic userid:password"`, where userid:password have been base64 encoded.
 
-This "Authorization" header will be combined with the allowed roles, and checked against the app users, recorded in the `System.User` entity.
+This "Authorization" header will be combined with the allowed roles, and checked against the app end-users, recorded in the `System.User` entity.
 Credentials provided in the basic auth header will be checked as follows:
 
 * for REST and OData – endpoints will only look for accounts that have the attribute `WebServiceUser` set to "FALSE"
@@ -153,13 +153,13 @@ To understand the full authentication flow, take a closer look at [Published RES
 
 ### Limiting API Access through IP Restrictions and Certificates
 
-Additional API security measures can be implemented through the use of [IP restrictions and/or certificates](/developerportal/deploy/access-restrictions/), creating a secure bubble of trusted requesting users and systems.
+Additional API security measures can be implemented through the use of [IP restrictions and/or certificates](/developerportal/deploy/access-restrictions/), creating a secure bubble of trusted requesting end-users and systems.
 
 ## Using a Third-Party Identity Provider
 
-When developing an application, authentication is one of the basic considerations. Even though Mendix comes with a basic authentication mechanism, your application’s security is improved when authentication is delegated to an enterprise grade identity provider like ADFS.
+When developing an application, authentication is one of the basic considerations. Even though Mendix comes with a basic authentication mechanism, your application’s security is improved when authentication is delegated to an enterprise-grade identity provider like ADFS.
 
-Mendix offers the [SAML](/appstore/modules/saml/) module that enables your application to be connected with these services.
+Mendix offers the [SAML](/appstore/modules/saml/) and [OIDC SSO](/appstore/modules/oidc/) modules that enable your application to be connected with these services.
 
 Your application can gain the following benefits from using an identity provider:
 
@@ -175,17 +175,17 @@ By default, Mendix forces a strong password policy. The same password policy tha
 
 It is very tempting to simplify the password constraints for development purposes (for example, making it possible to use a single character to login). However, Mendix recommends avoiding this approach so that deployments will continue to force a strong password policy.
 
-The password policy can be set by via the guidelines described in [Password Policy](/refguide/password-policy/).
+The password policy can be set via the guidelines described in [Password Policy](/refguide/password-policy/).
 
 ## Renaming the Administrator User
 
-Each application requires power users who should be able to administer technical functions (like configuring SSO). By default, the user who has these capabilities is called **MxAdmin** and has the **Administrator** role.
+Each application requires power users who are end-users which can administer technical functions (like configuring SSO). By default, the user who has these capabilities is called **MxAdmin** and has the **Administrator** role.
 
 This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for about 5 minutes after three unsuccessful login attempts, renaming the default MxAdmin user is recommended.
 
-The user name of the administrator can be changed in 's **App Security** settings on the **Administrator** tab.
+The user name of the administrator can be changed in Studio Pro using the app's **App Security** settings on the **Administrator** tab.
 
-When deployed to Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
+When deployed to Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in Studio Pro and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
 {{% alert color="info" %}}
 At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
@@ -215,7 +215,7 @@ Keep the following in mind:
 
 HTTP headers can add an additional layer of security and help you detect certain attacks. For information on how to add HTTP headers, see the [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) section in *Environment Details*.  
 
-An example of an attack is when an application is embedded in an iframe. Applications that can be embedded within an iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
+An example of an attack is when an application is embedded in an iframe. Applications that can be embedded within an iframe can be misused by attackers. By using an overlay, it could trick end-users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
 By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
@@ -225,7 +225,7 @@ The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an 
 
 If you use a traditional deployment of your Mendix app, using Windows or Linux, you need to set up these headers on the web server in front of your Mendix application server, for example in Microsoft Internet Information Services (IIS).
 
-## Using SSL on Consumed Web Services Whenever Possible
+## Using SSL on Consumed Web Services
 
 Most apps consume (web) services that could be located within an organization itself or at an external third party. When such a service is consumed by an application, your request crosses multiple networks and devices before it reaches its endpoint (the service). A potential attacker in between would be able to read and manipulate the conversation between the application and the service.
 
@@ -237,22 +237,22 @@ By using an SSL connection and adding the public key of the endpoint within your
 
 There are several scenarios possible for protecting your outgoing connections using encryption. These depend on the infrastructure possibilities and protocols used. For more information, see [How to Secure Outgoing Connections from Your App](/developerportal/deploy/securing-outgoing-connections-from-your-application/).
 
-You can add individual certificates in your app's settings in . Test, acceptance, and production environments require their certificates to be uploaded to Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates/)).
+You can add individual certificates in your app's settings in Studio Pro. Test, acceptance, and production environments require their certificates to be uploaded to Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates/)).
 
 ## Avoiding Injection
 
 Injection occurs when (user) input can be misused to influence the behavior of a system. Common cases are parameters for queries (to influence the results of database queries) or HTML with JavaScript contents (to influence browser behavior).
 
-When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. For the other way around, retrieved data shown in the user interface is escaped to the HTML format.
+When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. Conversely, retrieved data shown in the user interface is escaped to HTML format.
 
-When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
+When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly displayed).
 
 These are the common cases and best practices:
 
-* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string, or an email client – these are the ways to avoid this abuse:
+* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string, or an email client—these are the ways to avoid this abuse:
     * Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
     * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
-* Database connections (for example, using the [Database Connector](/appstore/modules/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
+* Database connections (for example, using the [Database Connector](/appstore/modules/database-connector/)), where user input is being used within constraints—these are the ways to avoid this abuse:
     * Use prepared statements, which will cause the database-specific connector to take care of escaping the value
     * Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
 
@@ -267,7 +267,7 @@ To scan uploaded files for malicious content, do one of the following:
 
 ## Using the Encryption Module When Storing Sensitive Information
 
-Your application might require sensitive information that should be extra encrypted. These are some examples:
+Your application might contain sensitive information that requires additional encryption. These are some examples:
 
 * Connection information for consumed services (like credentials, service locations, or keys)
 * Personal information (like bank account numbers or social security numbers)
@@ -289,7 +289,7 @@ Credentials should not be stored in your database as this means that they are al
 
 ## Maintaining a High Level of App Hygiene
 
-As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your app hygiene at a high level will reduce the chances of a vulnerable application.
+As an application grows in functionality, the chance of containing exploitable logic also increases. Also, over time, vulnerabilities within logic can be discovered. Keeping your app hygiene at a high level will reduce the chances of a vulnerable application.
 
 To keep your app hygiene at a good level, perform the following steps:
 
@@ -298,4 +298,3 @@ To keep your app hygiene at a good level, perform the following steps:
 * Avoid using components with known vulnerabilities (like Java or JavaScript libraries)
 
 A good source of known vulnerabilities is the [Common Vulnerabilities and Exposures website](https://cve.mitre.org/).
-

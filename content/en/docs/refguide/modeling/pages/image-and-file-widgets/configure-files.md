@@ -85,7 +85,7 @@ Follow the steps below:
     
     2. Click the **Icon** property. 
     
-    3. In the **Select icon** dialog box, search for the *file* glyph icon, and click **Select**.
+    3. In the **Select icon** dialog box, click the **Glyphicon** tab, and search for a *file* image Glyphicon and click **Select**.
       
     4. Click the **Button style** property and change it from **Default** to **Success**. 
       
@@ -103,7 +103,7 @@ Follow the steps below:
     
 7. As you only need your end-users to attach files on this page, delete **Name**, **Size**, and **Employee** widgets from the data view. 
 
-8. As you would like users to only upload files on this pop-up page, open the **File Manager** properties and set **Type** to **Upload**.
+8. As you would like users to only upload files on this pop-up page, open the **Image Manager** properties and set **Type** to **Upload**. 
 
 You have created a pop-up page that will allow IT administrators to attach files to the employee profile form:
 

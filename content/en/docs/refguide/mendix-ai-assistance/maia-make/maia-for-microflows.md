@@ -18,7 +18,11 @@ With the microflow generation capability, you can leverage Maia to generate micr
 
 ## Using Maia for Microflows
 
-Open the Maia Make conversational interface in Studio Pro to access its microflow generation capability. Use natural language to describe your goal, Maia will generate the microflows for you, including XPath constraints and expressions. See the section below for text input best practices.
+Open the Maia Make conversational interface in Studio Pro to access its microflow generation capability. Use natural language to describe your goal, Maia will generate the microflows for you, including XPath constraints and expressions. 
+
+{{% alert color="warning" %}}
+Due to the nature of AI generation, the exact microflow logic produced can vary between separate runs, even with identical input. Review the generated output carefully. The visual layout and positioning of elements may not always be optimally organized; you may need to adjust the arrangement of activities for better readability and structure.
+{{% /alert %}}
 
 ## Limitations
 
@@ -29,14 +33,6 @@ Maia for Microflows can create objects and flows and change simple ("primitive")
 In Studio Pro 11.9 and above, Maia can delete flows and microflow objects. However, it cannot change activity types or replace complex configuration settings.
 
 In Studio Pro 11.8, Maia cannot delete objects or flows. For existing objects, Maia can change variable names, move objects, or reconnect flows, but it cannot delete objects or flows, or change the activity types.
-
-### Variability in Results
-
-Due to the nature of AI generation, the exact microflow logic produced can vary between separate runs, even with identical input. It is recommended to review the generated output carefully.
-
-### Layout and Positioning
-
-While Maia aims to create functional logic, the visual layout and positioning of elements within the generated microflow may not always be optimally organized. You may need to adjust the arrangement of activities for better readability and structure.
 
 ## Read More
 

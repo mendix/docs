@@ -140,9 +140,9 @@ Click **Previous** if the test indicates that you have not entered the correct c
 
 ### Mapping Between IdP and Mendix{#attribute-mapping}
 
-The data from your IdP may have different attribute names from the Mendix identity.
+Attribute mapping is a critical step in configuring SSO for the Mendix Platform. Incorrect mappings can lead to failed authentications, misconfigured user profiles, and access issues.
 
-Configure which data from your IdP is mapped to the attributes of the Mendix identity. Configure at least a **Foreign ID**, **Username**, and **First Name** or **Last Name**.
+The data from your IdP may have different attribute names from the Mendix identity. Configure which data from your IdP is mapped to the attributes of the Mendix identity. Configure at least a **Foreign ID**, **Username**, and **First Name** or **Last Name**.
 
 {{% alert color="info" %}}
 The **Username** must be in the correct form for an email address.
@@ -152,6 +152,8 @@ The **Username** must be in the correct form for an email address.
 
 **Preview** will show you how user names will be displayed.
 
+You can find the [recommended attribute mapping for Entra ID](#attribute-mapping-entra) in the section below.
+
 ## Testing
 
 When you have completed your IdP setup, you can perform a test sign-in before activating the configuration.
@@ -159,7 +161,7 @@ When you have completed your IdP setup, you can perform a test sign-in before ac
 You can test in one of two ways:
 
 * Use the **Test Link** for your configuration. It will redirect you to the login page of your IdP. Enter the credentials of a user known to your IdP. If the test succeeds, the Mendix Portal landing page opens.
-* Copy the ***Test Email Domain** of your configuration from the overview page. Go to https://login.mendix.com/ and, in the **Username** field, paste the test email domain. The password field disappears. Click **Sign in with SSO**. This will redirect you to the login page of your IdP. Enter credentials known to your IdP. If the test succeeds, the Mendix Platform home page opens.
+* Copy the **Test Email Domain** of your configuration from the overview page. Go to https://login.mendix.com/ and, in the **Username** field, paste the test email domain. The password field disappears. Click **Sign in with SSO**. This will redirect you to the login page of your IdP. Enter credentials known to your IdP. If the test succeeds, the Mendix Platform home page opens.
 
 For advice on where to look for issues if your test fails, see the [Troubleshooting](#troubleshooting) section.
 
@@ -221,7 +223,7 @@ You are now ready to resume your IdP setup in the Mendix Portal.
 
 For more information on setting up a federation with a Microsoft Entra ID IdP, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) in the Microsoft documentation.
 
-### Recommended Attribute Mapping for Entra ID
+### Recommended Attribute Mapping for Entra ID {#attribute-mapping-entra}
 
 For Entra ID, you can create a mapping between Entra ID and Mendix as described in [Mapping Between IdP and Mendix](#attribute-mapping), above. The most common mapping used for Entra ID is as follows:
 

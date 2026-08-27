@@ -112,6 +112,8 @@ The **Path to user...** button adds an XPath constraint so the access rule is on
 
 For example:
 
+{{% todo %}}Bad example - update{{% /todo %}}
+
 1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated with the **Customer** entity via the **Order_Customer** association.
 2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
 

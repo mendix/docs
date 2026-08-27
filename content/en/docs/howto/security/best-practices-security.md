@@ -35,6 +35,8 @@ While the data that should be viewable and editable in which role is application
 
 You can review and manage your entity access settings in the Security Overview in Mendix Studio Pro. This overview shows you your application's security configuration and allows you to verify which roles have access to specific entities and attributes (for more information, see [Security Overview](/refguide/security-overview/)).
 
+{{% todo %}}Add advice not to mix business information (e.g. Customer) with security information (e.g. User){{% /todo %}}
+
 ## Avoiding Injection
 
 Injection occurs when (user) input can be misused to influence the behavior of a system. Common cases are parameters for queries (to influence the results of database queries) or HTML with JavaScript contents (to influence browser behavior).

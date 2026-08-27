@@ -41,7 +41,8 @@ The header for a component includes the following details:
 
 The **Publisher** section includes the following information, depending on the type of component:
 
-* The name of the company that created the component
+* The name of the company that created the component. This indicates who published the component, not who supports it or who approved it for use. For information on support coverage, refer to [Marketplace Content Support](/appstore/marketplace-content-support/).
+
 * The date when the component was first published <!-- This is a bit confusing, since the UI is "Updated on", which hints towards an update, not an upload -->
 * The latest version of the component
 * The review average, in stars, and the number of reviews

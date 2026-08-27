@@ -37,42 +37,20 @@ You can review and manage your entity access settings in the Security Overview i
 
 {{% todo %}}Add advice not to mix business information (e.g. Customer) with security information (e.g. User){{% /todo %}}
 
-## Avoiding Injection
+## Configuring User Roles and Access
 
-Injection occurs when (user) input can be misused to influence the behavior of a system. Common cases are parameters for queries (to influence the results of database queries) or HTML with JavaScript contents (to influence browser behavior).
+Which users and roles are defined within an application is different per app and app. However, there are some key guidelines to keep in mind when validating the user security:
 
-When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. For the other way around, retrieved data shown in the user interface is escaped to the HTML format.
+* Anonymous access should be disabled if it has no function within the application
+    * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
+* Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
+* The role of the app's administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
 
-When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
+## Enable Strict Mode
 
-These are the common cases and best practices:
+Enable [strict mode](/refguide/strict-mode/) in your application. Strict mode helps ensure that entities are accessible only in the ways defined within your model, through microflows, nanoflows, widgets, or pages, by restricting certain client APIs.
 
-* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string, or an email client – these are the ways to avoid this abuse:
-    * Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
-    * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
-* Database connections (for example, using the [Database Connector](/appstore/modules/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
-    * Use prepared statements, which will cause the database-specific connector to take care of escaping the value
-    * Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
-
-## Applying Access Restrictions to Unnecessary Request Handlers{#request-handlers}
-
-A Mendix app offers various endpoints that can be used to obtain information about offered services. The paths used by these endpoints end in `-doc`. By default, access to these endpoints is disabled when deploying to a cloud node.
-
-Access restrictions can be configured within the Mendix Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
-
-{{< figure src="/attachments/howto/security/best-practices-security/default-access-restrictions.png" alt="Mendix Cloud Access Restrictions Overview" class="no-border" >}}
-
-Examples are the `ws-doc` or `rest-doc` endpoints that enumerate all the published web and REST services of the application. An attacker could use this information to discover possible areas to exploit.
-
-You can take the following preventative measures:
-
-* Disable unused endpoints within the Mendix Portal completely by applying a **deny all access** preset on them
-* Apply IP filtering or client certificate authentication to restrict access
-
-Keep the following in mind:
-
-* If there are other app-specific request handlers that should have an access restriction applied, then click **New** to add them as additional paths
-* The URLs of test and acceptance environments can easily be guessed; in order to take effective measures, the restrictions should be applied to these environments also
+Configuring access rules is essential for the security of your app. However, accurately setting up these rules can be challenging. By enabling strict mode, you add a safety net in case access rules are misconfigured when your application is deployed, helping to reduce the risk of unintended data access.
 
 ## Applying Authentication on Services{#service-authentication}
 
@@ -165,28 +143,6 @@ To understand the full authentication flow, take a closer look at [Published RES
 
 Additional API security measures can be implemented through the use of [IP restrictions and/or certificates](/developerportal/deploy/access-restrictions/), creating a secure bubble of trusted requesting users and systems.
 
-## Using the Encryption Module When Storing Sensitive Information
-
-Your application might require sensitive information that should be extra encrypted. These are some examples:
-
-* Connection information for consumed services (like credentials, service locations, or keys)
-* Personal information (like bank account numbers or social security numbers)
-
-This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, Mendix recommends storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption/) module available from the Mendix Marketplace provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
-
-## Using Credentials in Your App
-
-You may need to store sensitive information, such as credentials, in your app. To limit access to this sensitive information, Mendix recommends the following:
-
-* Credentials are recorded in [constants](/refguide/constants/) which can be set when your app is deployed—in the [Mendix Portal](/developerportal/deploy/environments-details/#constants), for example, if you are deploying to Mendix Cloud.
-* The constants should be blank by default (not populated with the credentials) in the app.
-
-    * Values for the constants can be provided during testing by creating a [configuration](/refguide/configurations-tab/#constants).
-
-* Only authorized people should be given access to set the constants when the app is deployed. This is done through the [app roles](/developerportal/general/app-roles/) and (for Mendix Cloud) the [node permissions](/developerportal/deploy/node-permissions/).
-
-Credentials should not be stored in your database as this means that they are also included in backups. Even if they are encrypted, your app will know the encryption key so that they can be decrypted.
-
 ## Using a Third-Party Identity Provider
 
 When developing an application, authentication is one of the basic considerations. Even though Mendix comes with a basic authentication mechanism, your application’s security is improved when authentication is delegated to an enterprise grade identity provider like ADFS.
@@ -223,19 +179,25 @@ When deployed to Mendix Cloud, the information about the administrator user name
 At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
 {{% /alert %}}
 
-## Using SSL on Consumed Web Services Whenever Possible
+## Applying Access Restrictions to Unnecessary Request Handlers{#request-handlers}
 
-Most apps consume (web) services that could be located within an organization itself or at an external third party. When such a service is consumed by an application, your request crosses multiple networks and devices before it reaches its endpoint (the service). A potential attacker in between would be able to read and manipulate the conversation between the application and the service.
+A Mendix app offers various endpoints that can be used to obtain information about offered services. The paths used by these endpoints end in `-doc`. By default, access to these endpoints is disabled when deploying to a cloud node.
 
-By using an SSL connection and adding the public key of the endpoint within your application, you will ensure the following:
+Access restrictions can be configured within the Mendix Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
 
-* The conversation between you and the service has not been tampered with
-* The conversation is not readable if it was ever intercepted
-* The identity of your endpoint is confirmed
+{{< figure src="/attachments/howto/security/best-practices-security/default-access-restrictions.png" alt="Mendix Cloud Access Restrictions Overview" class="no-border" >}}
 
-There are several scenarios possible for protecting your outgoing connections using encryption. These depend on the infrastructure possibilities and protocols used. For more information, see [How to Secure Outgoing Connections from Your App](/developerportal/deploy/securing-outgoing-connections-from-your-application/).
+Examples are the `ws-doc` or `rest-doc` endpoints that enumerate all the published web and REST services of the application. An attacker could use this information to discover possible areas to exploit.
 
-You can add individual certificates in your app's settings in . Test, acceptance, and production environments require their certificates to be uploaded to Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates/)).
+You can take the following preventative measures:
+
+* Disable unused endpoints within the Mendix Portal completely by applying a **deny all access** preset on them
+* Apply IP filtering or client certificate authentication to restrict access
+
+Keep the following in mind:
+
+* If there are other app-specific request handlers that should have an access restriction applied, then click **New** to add them as additional paths
+* The URLs of test and acceptance environments can easily be guessed; in order to take effective measures, the restrictions should be applied to these environments also
 
 ## Adding HTTP Headers {#adding-http-header}
 
@@ -251,6 +213,68 @@ The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an 
 
 If you use a traditional deployment of your Mendix app, using Windows or Linux, you need to set up these headers on the web server in front of your Mendix application server, for example in Microsoft Internet Information Services (IIS).
 
+## Using SSL on Consumed Web Services Whenever Possible
+
+Most apps consume (web) services that could be located within an organization itself or at an external third party. When such a service is consumed by an application, your request crosses multiple networks and devices before it reaches its endpoint (the service). A potential attacker in between would be able to read and manipulate the conversation between the application and the service.
+
+By using an SSL connection and adding the public key of the endpoint within your application, you will ensure the following:
+
+* The conversation between you and the service has not been tampered with
+* The conversation is not readable if it was ever intercepted
+* The identity of your endpoint is confirmed
+
+There are several scenarios possible for protecting your outgoing connections using encryption. These depend on the infrastructure possibilities and protocols used. For more information, see [How to Secure Outgoing Connections from Your App](/developerportal/deploy/securing-outgoing-connections-from-your-application/).
+
+You can add individual certificates in your app's settings in . Test, acceptance, and production environments require their certificates to be uploaded to Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates/)).
+
+## Avoiding Injection
+
+Injection occurs when (user) input can be misused to influence the behavior of a system. Common cases are parameters for queries (to influence the results of database queries) or HTML with JavaScript contents (to influence browser behavior).
+
+When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. For the other way around, retrieved data shown in the user interface is escaped to the HTML format.
+
+When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
+
+These are the common cases and best practices:
+
+* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string, or an email client – these are the ways to avoid this abuse:
+    * Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
+    * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
+* Database connections (for example, using the [Database Connector](/appstore/modules/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
+    * Use prepared statements, which will cause the database-specific connector to take care of escaping the value
+    * Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
+
+## Scanning Uploaded Files for Malicious Content {#scanning-for-malicious-content}
+
+Security in Mendix does not include scanning files that end-users upload or download from your application for viruses and malware. 
+
+To scan uploaded files for malicious content, do one of the following:
+
+* Create a custom module and configure the functionality yourself, for example, by using a [before commit event](/refguide/setting-up-data-validation/#validation-before-commit-event).
+* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content](/appstore/use-content/).
+
+## Using the Encryption Module When Storing Sensitive Information
+
+Your application might require sensitive information that should be extra encrypted. These are some examples:
+
+* Connection information for consumed services (like credentials, service locations, or keys)
+* Personal information (like bank account numbers or social security numbers)
+
+This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, Mendix recommends storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption/) module available from the Mendix Marketplace provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
+
+## Using Credentials in Your App
+
+You may need to store sensitive information, such as credentials, in your app. To limit access to this sensitive information, Mendix recommends the following:
+
+* Credentials are recorded in [constants](/refguide/constants/) which can be set when your app is deployed—in the [Mendix Portal](/developerportal/deploy/environments-details/#constants), for example, if you are deploying to Mendix Cloud.
+* The constants should be blank by default (not populated with the credentials) in the app.
+
+    * Values for the constants can be provided during testing by creating a [configuration](/refguide/configurations-tab/#constants).
+
+* Only authorized people should be given access to set the constants when the app is deployed. This is done through the [app roles](/developerportal/general/app-roles/) and (for Mendix Cloud) the [node permissions](/developerportal/deploy/node-permissions/).
+
+Credentials should not be stored in your database as this means that they are also included in backups. Even if they are encrypted, your app will know the encryption key so that they can be decrypted.
+
 ## Maintaining a High Level of App Hygiene
 
 As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your app hygiene at a high level will reduce the chances of a vulnerable application.
@@ -263,26 +287,3 @@ To keep your app hygiene at a good level, perform the following steps:
 
 A good source of known vulnerabilities is the [Common Vulnerabilities and Exposures website](https://cve.mitre.org/).
 
-## Configuring User Roles and Access
-
-Which users and roles are defined within an application is different per app and app. However, there are some key guidelines to keep in mind when validating the user security:
-
-* Anonymous access should be disabled if it has no function within the application
-    * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
-* Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
-* The role of the app's administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
-
-## Scanning Uploaded Files for Malicious Content {#scanning-for-malicious-content}
-
-Security in Mendix does not include scanning files that end-users upload or download from your application for viruses and malware. 
-
-To scan uploaded files for malicious content, do one of the following:
-
-* Create a custom module and configure the functionality yourself, for example, by using a [before commit event](/refguide/setting-up-data-validation/#validation-before-commit-event).
-* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content](/appstore/use-content/).
-
-## Enable Strict Mode
-
-Enable [strict mode](/refguide/strict-mode/) in your application. Strict mode helps ensure that entities are accessible only in the ways defined within your model, through microflows, nanoflows, widgets, or pages, by restricting certain client APIs.
-
-Configuring access rules is essential for the security of your app. However, accurately setting up these rules can be challenging. By enabling strict mode, you add a safety net in case access rules are misconfigured when your application is deployed, helping to reduce the risk of unintended data access. 

@@ -99,6 +99,10 @@ The Maia ({{% icon name="sparkles" %}} ) icon on the right side of the top bar d
 
 The conversational interface includes the following features.
 
+{{% alert color="info" %}}
+Maia Make will lose the conversation history if you exit Studio Pro.
+{{% /alert %}}
+
 #### New Chat
 
 Clicking **New Chat** allows you to clear the messages and start a new conversation that does not reference your current chat.

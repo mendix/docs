@@ -45,26 +45,6 @@ Maia for Domain Model does not support deleting items in the domain model. You c
 {{% alert color="info" %}}
 In this dedicated chat, only requests related to domain model will be properly handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
- 
-#### Best Practices for Text Input
-
-To achieve optimal results, provide context about your application by describing its main use cases, customer needs, or other relevant details. The more Maia knows about your application, the more tailored and accurate the generated domain model will be.
-
-Below are some examples of prompts you can use as a starting point:
-
-* The app will help users ...
-* This module handles ...
-* Customers need to be able to ...
-* I want to send notifications when ...
-* The app will analyze and report on ...
-* This feature allows users to ...
-
-Below are examples of prompts you can use to ask Maia for explanations or suggestions to improve a domain model:
-
-* Can you explain the function and purpose of this domain model?
-* I want to add an attribute `ATTRIBUTE_NAME` to the entity `ENTITY_NAME`.
-* I want to make the domain model more efficient. Can you suggest optimizations?
-* Could you identify any potential issues with this domain model and recommend solutions?
 
 #### Attachment Requirements {#attachment-requirements}
 

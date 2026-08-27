@@ -200,6 +200,36 @@ To configure an OpenAI-compatible provider, follow these steps:
 
 The LLM Gateway URL is configured during the installation or upgrade of Private Mendix Platform. For more information, see [Installing Maia for Private Mendix Platform](/private-mendix-platform/interactive-installation/#maia).
 
+## Best Practices
+
+### Text Input
+
+To achieve optimal results, provide context about your application or the document you are working on by describing its main use cases, customer needs, or other relevant details. The more Maia knows about what you are building, the more tailored and accurate the generated results will be.
+
+Below are some examples of prompts you can use as a starting point:
+
+* The app will help users...
+* This module handles...
+* Customers need to be able to...
+* The page will be used to...
+* This feature allows users to...
+
+Below are examples of prompts you can use to ask Maia to make further edits or request explanations and suggestions for improving a document:
+
+* Can you explain the function and purpose of this document?
+* I want to add an attribute `ATTRIBUTE_NAME` to the entity `ENTITY_NAME`.
+* Can you add a button called `BUTTON_NAME` to the page?
+* I want an area on the page where users can...
+* Remove the ... widget.
+* How can I make this page more user-friendly or visually appealing?
+* Could you identify any potential issues with this document and recommend solutions?
+
+### Image Input
+
+The image size is limited to 512 KB. Make sure to select a clear image to help Maia better understand your request. For example, you can provide a screenshot, a photo, a design mock-up, or a close-up picture of a drawing. Avoid heavily compressed or low quality images, as these may result in the loss of important details.
+
+Keep in mind that Maia analyzes only the structure of the image. The theming of your app, such as the color scheme, will not be changed. This can cause some differences between the provided image and the generated page.
+
 ## Read More
 
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)

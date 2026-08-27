@@ -12,6 +12,28 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### September 3, 2026
+
+#### Portal Improvements
+
+* Deployment and build notifications are now aligned with the Mendix Platform. Users receive notifications when deployments or package builds complete or fail.
+* Constants Compare is now available, providing Public Cloud parity. Users can compare constant values across environments and packages directly in the Portal.
+* Deployment and build pages now auto-refresh when state changes.
+* A Technical Contact FAQ popup has been added, and the Change Technical Contact warning message has been improved.
+* Scheduled event descriptions now update correctly when a new .mda is uploaded. (Ticket 282641)
+* Navigation to environment overview from the environments link now works as expected.
+* The Default Studio Target no longer blocks environment deletion. Users are prompted to set another environment as the default before deletion.
+* Pod Disruption Budget settings no longer reset to default due to a missing field in the Private Cloud Portal REST API. (Ticket 284436)
+* Storage plans can now be removed when not in use. (Ticket 285125)
+* The Private Cloud Portal now displays all apps correctly in the UI. (Ticket 285443)
+* Resolved a security vulnerability related to unauthorized access.
+* Corrected the database status icon display.
+* Fixed a layout issue where the deployment packages version column appeared squeezed on 1080p displays.
+
+#### Deploy API
+
+* Added force-delete capability for app environments.
+
 ### August 14, 2026
 
 #### Mendix Operator v2.28.0 {#2.28.0}

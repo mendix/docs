@@ -20,14 +20,6 @@ With the microflow generation capability, you can leverage Maia to generate micr
 
 Open the Maia Make conversational interface in Studio Pro to access its microflow generation capability. Use natural language to describe your goal, Maia will generate the microflows for you, including XPath constraints and expressions. See the section below for text input best practices.
 
-### Best Practices for Text Input
-
-To achieve the best results when using Maia to generate microflows, consider the following guidelines for your text input:
-
-* Be specific: Clearly describe the desired outcome and the steps involved. For example, instead of using *Create a user*, use *Create a new user object, set its name attribute to 'John Doe', and commit it*.
-* Use keywords: Incorporate terms relevant to microflow activities, such as *create object*, *retrieve*, *change object*, *show message*, *loop*, or *decision*. This can help with correct microflow generation.
-* Provide context: If your microflow interacts with existing entities or attributes, mention them in your text input.
-
 ## Limitations
 
 ### Destructive Operations

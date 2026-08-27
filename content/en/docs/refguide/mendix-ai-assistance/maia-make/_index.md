@@ -206,6 +206,8 @@ The LLM Gateway URL is configured during the installation or upgrade of Private 
 
 To achieve optimal results, provide context about your application or the document you are working on by describing its main use cases, customer needs, or other relevant details. The more Maia knows about what you are building, the more tailored and accurate the generated results will be.
 
+#### Providing Context
+
 Below are some examples of prompts you can use as a starting point:
 
 * The app will help users...
@@ -213,6 +215,8 @@ Below are some examples of prompts you can use as a starting point:
 * Customers need to be able to...
 * The page will be used to...
 * This feature allows users to...
+
+#### Editing and Improving
 
 Below are examples of prompts you can use to ask Maia to make further edits or request explanations and suggestions for improving a document:
 
@@ -223,6 +227,14 @@ Below are examples of prompts you can use to ask Maia to make further edits or r
 * Remove the ... widget.
 * How can I make this page more user-friendly or visually appealing?
 * Could you identify any potential issues with this document and recommend solutions?
+
+#### Microflows
+
+When generating microflows, consider the following additional guidelines:
+
+* **Be specific:** Clearly describe the desired outcome and the steps involved. For example, instead of using *Create a user*, use *Create a new user object, set its name attribute to 'John Doe', and commit it*.
+* **Use keywords:** Incorporate terms relevant to microflow activities, such as *create object*, *retrieve*, *change object*, *show message*, *loop*, or *decision*. This can help with correct microflow generation.
+* **Provide context:** If your microflow interacts with existing entities or attributes, mention them in your text input.
 
 ### Image Input
 

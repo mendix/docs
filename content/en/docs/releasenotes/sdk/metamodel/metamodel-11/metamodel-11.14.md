@@ -1,6 +1,7 @@
 ---
 title: "11.14"
-parent: "metamodel-11"
+url: /releasenotes/sdk/metamodel-11.14/
+weight: 53 # Reduce weight by 1 to add this document to the top of the navigation
 ---
 
 ## 11.14.0

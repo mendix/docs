@@ -35,7 +35,19 @@ While the data that should be viewable and editable in which role is application
 
 You can review and manage your entity access settings in the Security Overview in Mendix Studio Pro. This overview shows you your application's security configuration and allows you to verify which roles have access to specific entities and attributes (for more information, see [Security Overview](/refguide/security-overview/)).
 
-{{% todo %}}Add advice not to mix business information (e.g. Customer) with security information (e.g. User){{% /todo %}}
+## Separating Security and Business Information
+
+If you have business information which is also related to end-users of your app, do not combine the business information with the end-user by using specializations of `System.User`. Keep business information and app security information separate. If you want to link business data to a user, use associations to link them.
+
+For example, you may have an app where you want your customers to be end-users of the app. If you make an entity `MyModule.Customer` which is a specialization of `System.User` then all customers would automatically become users of the app. This has security implications such as:
+
+* Every customer becomes an end-user without any confirmation required
+* If a customer stops being a customer, you cannot remove them from using the app without deleting other business information (which may, legally, need to be kept)
+* You may want to add a customer who you do not want to become an end-user of the app
+
+In addition, apps are priced by the number of end-users and having unnecessary end-users might cost you more money
+
+To link the customer information to an end-user, create a 1-1 association, `Customer_Account`, between `MyModule.Customer` and `Administration.Account`.
 
 ## Configuring User Roles and Access
 

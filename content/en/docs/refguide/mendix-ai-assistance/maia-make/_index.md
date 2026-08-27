@@ -214,6 +214,7 @@ Below are some examples of prompts you can use as a starting point:
 * This module handles...
 * Customers need to be able to...
 * The page will be used to...
+* Generate a workflow for a process that...
 * This feature allows users to...
 
 #### Editing and Improving
@@ -227,6 +228,11 @@ Below are examples of prompts you can use to ask Maia to make further edits or r
 * Remove the ... widget.
 * How can I make this page more user-friendly or visually appealing?
 * Could you identify any potential issues with this document and recommend solutions?
+* Can you give me suggestions to improve this workflow?
+
+#### Workflows
+
+You can provide a BPMN image representing employee onboarding alongside your text input. Maia can analyze the image, rework it using Mendix Workflows terminology, and generate the corresponding activities. Use text input alongside the image to specify any differences. For example, "Generate a workflow based on this BPMN image, but make sure it waits before sending an email to the new employee."
 
 #### Microflows
 

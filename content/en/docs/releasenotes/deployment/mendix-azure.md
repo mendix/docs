@@ -10,9 +10,9 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
-## Release date: ??, 2026
+## Release date: August 27, 2026
 
-* Mendix on Azure now supports two Azure Marketplace plans: Standard Plan and Just-in-Time (JIT) access. JIT access provides enhanced security through time-limited access to resources with approval workflows for environment creation and configuration changes. Infrastructure upgrades can be scheduled and triggered for both JIT and regular environments.
+* Mendix on Azure now supports two Azure Marketplace plans: Standard Plan and Just-In-Time (JIT) Access. JIT Access provides enhanced security through time-limited access to resources with approval workflows for environment creation and configuration changes. Infrastructure upgrades can be scheduled and triggered for both JIT and regular environments.
 * The cluster detail slider now displays your load balancer IP address.
 * Support tickets now include a consent checkbox for log sharing and direct environment access.
 * PostgreSQL is now fixed at version 17 to align with Mendix Cloud.

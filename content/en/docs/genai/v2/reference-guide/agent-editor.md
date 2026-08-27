@@ -287,7 +287,6 @@ To create a published MCP service, right-click the module or folder where you wa
 In the published MCP service document, configure the following fields:
 
 * **Name**: Enter the name of the MCP service.
-* **Description**: Describe the MCP service so MCP clients can identify its purpose.
 * **Version** (optional): Enter a version for the MCP service.
 * **Endpoint**: Enter the path to append to the app URL. External MCP clients use the resulting endpoint to connect to the service.
 * **Protocol version**: Select the MCP protocol version that connecting clients must support.

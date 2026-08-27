@@ -71,6 +71,8 @@ Depending on the LLM and Knowledge bases used in your setup, you need to install
 * [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) for Mendix Cloud GenAI resources (text generation and knowledge bases)
 * [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) for Azure AI Foundry resources (text generation model deployments supporting chat completions)
 
+If you configure [published MCP services](#published-mcp-service), install the [MCP Server](https://marketplace.mendix.com/link/component/240380) module.
+
 In addition, ensure the following widgets are available in your app:
 
 * [Events Widget](https://marketplace.mendix.com/link/component/224259)
@@ -276,11 +278,29 @@ To change any agentic logic, update the Agent documents (and related documents) 
 
 Use version control to view and restore previous agent versions. This lets you inspect earlier committed states of the Agent document and related documents, compare changes over time, and restore configurations as needed.
 
+## Configuring Published MCP Service {#published-mcp-service}
+
+You can publish MCP services from Agent Editor to expose tools from your app to external agents and other MCP clients. This configuration uses the [MCP Server module](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/). For detailed information about securing an MCP server, see the MCP Server module documentation.
+
+To create a published MCP service, right-click the module or folder where you want to create the document in the **App Explorer**, then select **Add other** > **Published MCP Service**.
+
+In the published MCP service document, configure the following fields:
+
+* **Name**: Enter the name of the MCP service.
+* **Description**: Describe the MCP service so MCP clients can identify its purpose.
+* **Version** (optional): Enter a version for the MCP service.
+* **Endpoint**: Enter the path to append to the app URL. External MCP clients use the resulting endpoint to connect to the service.
+* **Protocol version**: Select the MCP protocol version that connecting clients must support.
+* **Requires authentication**: Select whether MCP clients must be authenticated. When authentication is required, select a microflow that authorizes incoming requests. The microflow input can only be `System.HttpRequest` and `MCPServer`, and its output must be `System.User`.
+
+To add tools, click **New** in the **Tools** section and select a microflow. Enter a **Name** and **Description** for the tool so external agents can determine when to use it. Optionally, provide a schema that matches the microflow input parameters. If you leave **Schema** empty, the schema gets extracted from the selected microflow.
+
 ## Known Limitations {#limitations}
 
 * Currently, Agent Editor supports Mendix Cloud GenAI and Azure AI Foundry for text generation models and Mendix Cloud GenAI for knowledge bases. Support for other providers, such as OpenAI and Amazon Bedrock, is planned for a future release.
 * Support for Mac users is limited. Some functionalities might not work, such as doing a test call for Model documents. Mendix recommends using Studio Pro on Windows to use all features of Agent Editor.
 * MCP tool support is limited to whole-server integration. Selecting individual tools from a consumed MCP service to be added to an agent is not yet supported. That also means that the tool choice option `Tool` can only refer to a microflow tool currently.
+* Published MCP services support tools only. Adding prompts is not currently supported.
 * If a document referenced by an Agent document is excluded, Studio Pro shows a consistency error. These consistency errors may not be resolved automatically when you include the excluded document again. Resolve this by synchronizing the app directory (<kbd>F4</kbd>) or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again).
 * The extension creates a `/agenteditor` log folder in the app directory. This folder is not excluded from version control automatically when you include the module from Marketplace. Add this folder to `.gitignore` manually, as described in the [First-time setup](#setup) section.
 * Streaming and user permissions for tools and knowledge bases can be configured, but these settings are not reflected in the playground in Studio Pro. They are applied at runtime when calling an agent defined in Studio Pro.

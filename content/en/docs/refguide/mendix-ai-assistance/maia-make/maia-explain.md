@@ -6,25 +6,25 @@ weight: 10
 description: "Describes the features in Maia Explain."
 ---
 
-## Introduction 
+## Introduction
 
 {{% alert color="info" %}}
-To use Maia Explain, an internet connection and signing in to Studio Pro are required.
+To use Maia Explain, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
 ## Using Maia Explain
 
 ### In Studio Pro 11.8 and Above
 
-In Studio Pro 11.8 and above, Maia Explain is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia Explain. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+In Studio Pro 11.8 and above, Maia Explain is part of the unified Maia Make capabilities, which are enabled by default. Maia Explain does not have a dedicated interface. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 There are two ways to use Maia Explain:
 
-* Use the chat interface directly to get explanations of your document (for instance, a microflow or a page).
+* Use the chat interface directly to get explanations of your document (for example, a microflow or a page).
 * In the App Explorer, right-click a document to open its context menu, and click **Maia Explain**.
 
 {{% alert color="info" %}}
-Nanoflows are currently not supported by Maia Make.
+Maia Make does not currently support nanoflows.
 {{% /alert %}}
 
 ### In Studio Pro 11.7 and Below
@@ -36,23 +36,23 @@ There are two ways to use Maia Explain:
 * In the toolbar of the microflow or nanoflow editor, click **Explain**.
 * In the App Explorer, right-click a microflow or a nanoflow to open its context menu, and click **Explain**.
 
-A message is sent to Maia and a chat interface with an initial answer appears on the right side of Studio Pro under the **Maia** tab:
+Studio Pro sends a message to Maia, and a chat interface with an initial answer appears on the right side under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-explain/maia-explain-interface.png" width="300px">}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-explain/maia-explain-interface.png" alt="" width="300px">}}
 
-The initial answer consists of two parts: 
+The initial answer consists of two parts:
 
-* **Explanation** - provides a high-level overview of the logic, including its overall purpose
-* **Technical Highlights** - highlights the technical and functional details of the logic, including any input parameters and return value, if available 
+* **Explanation** – provides a high-level overview of the logic, including its overall purpose
+* **Technical Highlights** – highlights the technical and functional details of the logic, including any input parameters and return value, if available
 
-Maia Explain supports follow-up questions. You can modify the tone of the answer, request further clarification, or ask for suggestions to improve the logic. Below are examples of what you could type as follow-up questions or requests:
+Maia Explain supports follow-up questions. You can modify the tone of the answer, request further clarification, or ask for suggestions to improve the logic. Below are examples of what you can type as follow-up questions or requests:
 
 * *Explain again, but in 10 words.*
 * *Explain again, but in much greater detail. Be very thorough.*
 * *What are your suggestions to improve this microflow?*
 
 {{% alert color="info" %}}
-In this dedicated chat, only requests related to Maia Explain will be properly handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
+In this dedicated chat, only requests related to Maia Explain are properly handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
 ## Read More

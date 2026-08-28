@@ -173,7 +173,7 @@ You can provide additional help information to widget users by using a help page
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" class="no-border" >}}
 
-A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
+A URL of a help page can be provided through the `helpUrl` property after the `studioProCategory` tag:
 
 ```xml
     <helpUrl>https://marketplace.mendix.com/link/component/105695/</helpUrl>

@@ -184,7 +184,7 @@ JOIN (SELECT Name AS N FROM Module.City) C
 ON P/Residence = C/Name
 ```
 
-### `ORDER BY` in Subquery and `UNION` Branches {#order-by-in-subquery}
+### `ORDER BY` in Subqueries {#order-by-in-subqueries}
 
 You must now have a `LIMIT` and/or `OFFSET` in subquery containing `ORDER BY`. Using `ORDER BY` in subquery makes sense only when it is combined with `LIMIT` and/or `OFFSET`. Without the limitations, database engines do not guarantee that the row order in the subquery will be preserved in the outer query.
 
@@ -213,7 +213,7 @@ FROM (
 )
 ```
 
-The same restriction applies to a `select_query`, or a nested `UNION`, wrapped in parentheses as a branch of a [`UNION`](/refguide/oql-clauses/#oql-union). Consequently, you can only use `ORDER BY` in a parenthesized `UNION` branch if it is combined with `LIMIT` and/or `OFFSET`:
+The same restriction applies to a subquery which is a `select_query`, or a nested `UNION` as part of a [`UNION`](/refguide/oql-clauses/#oql-union). Consequently, you can only use `ORDER BY` in a parenthesized `UNION` branch if it is combined with `LIMIT` and/or `OFFSET`:
 
 ```sql
 (

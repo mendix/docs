@@ -294,7 +294,7 @@ In the published MCP service document, configure the following inputs::
 
 To add tools, click **New** in the **Tools** section and configure the following inputs:
 * **Microflow**: Input parameters can only be primitives and/or `MCPServer.Tool`. Return type must be a String or `MCPServer.TextContent`.
-* **Name**: The name of the tool needs to be unique within the same server. Tool name may only contain ASCII letters, numbers, underscores, hyphens, and dots.
+* **Name**: The name of the tool needs to be unique within the same published MCP service. Tool name may only contain ASCII letters, numbers, underscores, hyphens, and dots.
 * **Description**: A description of the tool so external agents can determine when to use it.
 * **Title**: Optionally, provide a human-readable **Title** of the tool for display purpose.
 * **Schema**: Optionally provide a schema that matches the microflow input parameters. If you leave the schema empty, it gets extracted the microflow's input parameters and all parameters will be set as required.

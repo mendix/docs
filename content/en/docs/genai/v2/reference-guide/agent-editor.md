@@ -71,7 +71,7 @@ Depending on the LLM and Knowledge bases used in your setup, you need to install
 * [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) for Mendix Cloud GenAI resources (text generation and knowledge bases)
 * [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) for Azure AI Foundry resources (text generation model deployments supporting chat completions)
 
-If you configure [published MCP services](#published-mcp-service), install the [MCP Server](https://marketplace.mendix.com/link/component/240380) module.
+If you configure [Published MCP services](#published-mcp-service), install the [MCP Server](https://marketplace.mendix.com/link/component/240380) module.
 
 In addition, ensure the following widgets are available in your app:
 
@@ -278,21 +278,26 @@ To change any agentic logic, update the Agent documents (and related documents) 
 
 Use version control to view and restore previous agent versions. This lets you inspect earlier committed states of the Agent document and related documents, compare changes over time, and restore configurations as needed.
 
-## Configuring Published MCP Service {#published-mcp-service}
+## Configuring Published MCP Services {#published-mcp-service}
 
-You can publish MCP services from Agent Editor to expose tools from your app to external agents and other MCP clients. This configuration uses the [MCP Server module](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/). For detailed information about securing an MCP server, see the MCP Server module documentation.
+You can publish an MCP server from Agent Editor to expose tools from your app to external agents and other MCP clients. This configuration uses the [MCP Server module](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/). For detailed information about securing an MCP server, see the MCP Server module documentation.
 
-To create a published MCP service, right-click the module or folder where you want to create the document in the **App Explorer**, then select **Add other** > **Published MCP Service**.
+To create a published MCP service, right-click the module or folder where you want to create the document in the **App Explorer**, then select **Add other** > **Published MCP service**.
 
-In the published MCP service document, configure the following fields:
+In the published MCP service document, configure the following inputs::
 
 * **Name**: Enter the name of the MCP service.
-* **Version** (optional): Enter a version for the MCP service.
-* **Endpoint**: Enter the path to append to the app URL. External MCP clients use the resulting endpoint to connect to the service.
-* **Protocol version**: Select the MCP protocol version that connecting clients must support.
-* **Requires authentication**: Select whether MCP clients must be authenticated. When authentication is required, select a microflow that authorizes incoming requests. The microflow input can only be `System.HttpRequest` and `MCPServer`, and its output must be `System.User`.
+* **Version**: Enter a version for the MCP service in semantic versoning format. This defaults to `1.0.0`.
+* **Endpoint**: Enter the path to append to the app URL. External MCP clients use the resulting endpoint to connect to the service. Endpoint path may only contain lowercase letters, numbers, hyphens, underscores, and forward slashes.
+* **Protocol version**: Select the MCP protocol version that connecting clients must support. This defaults to `v2025_03_26`.
+* **Requires authentication**: Select whether MCP clients must be authenticated. It is recommended to setup authentication if the Mendix application is reachable outside of your local environment. If set to "No", the MCP service will be accessible by anyone without authentication. When authentication is required, select a microflow that authenticates incoming requests. The microflow input can only be `System.HttpRequest` and/or `MCPServer.MCcperver`, and it's output must be `System.User`. Return empty if authentication failed.
 
-To add tools, click **New** in the **Tools** section and select a microflow. Enter a **Name** and **Description** for the tool so external agents can determine when to use it. Optionally, provide a schema that matches the microflow input parameters. If you leave **Schema** empty, the schema gets extracted from the selected microflow.
+To add tools, click **New** in the **Tools** section and configure the following inputs:
+* **Microflow**: Input parameters can only be primitives and/or `MCPServer.Tool`. Return type must be a String or `MCPServer.TextContent`.
+* **Name**: The name of the tool needs to be unique within the same server. Tool name may only contain ASCII letters, numbers, underscores, hyphens, and dots.
+* **Description**: A description of the tool so external agents can determine when to use it.
+* **Title**: Optionally, provide a human-readable **Title** of the tool for display purpose.
+* **Schema**: Optionally provide a schema that matches the microflow input parameters. If you leave the schema empty, it gets extracted the microflow's input parameters and all parameters will be set as required.
 
 ## Known Limitations {#limitations}
 

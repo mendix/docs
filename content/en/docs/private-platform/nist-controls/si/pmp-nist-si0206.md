@@ -61,7 +61,7 @@ The customer is responsible for:
 
 ## Proof and Remarks
 
-For information about upgrading Private Mendix Platform, see [Upgrading the Private Mendix Platform](/private-mendix-platform/quickstart/#upgrade).
+For information about upgrading Private Mendix Platform, see [Upgrading the Private Mendix Platform](/private-mendix-platform/upgrade/).
 
 Helm is the package manager for Kubernetes which handles the deployment and management of applications within the environment. Whenever the Private Mendix Platform instance is upgraded, the old version is automatically removed by Helm, and there is no coexistence of new and old versions.
 

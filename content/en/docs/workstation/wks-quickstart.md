@@ -36,9 +36,11 @@ A *station* represents a workstation on the shop floor. It can connect to one or
 
     {{< figure src="/attachments/workstation/wks-install1.png" class="no-border" >}}
 
-3. Enter a name for your new workspace, and then click **Create Workspace**.
+3. Enter a name for your new workspace, select **Test** as the environment type, and then click **Create Workspace**.
 
     {{< figure src="/attachments/workstation/wks-install2.png" class="no-border" >}}
+
+    Environments created with the Test environment type have [developer mode](/mendix-workstation/management-stations/#developer-mode) enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode.
 
 4. After the workspace is created, in the **Stations** page, click **Create a New Station**.
 
@@ -93,12 +95,12 @@ The following instructions assume that you are registering a single computer for
 
     {{< figure src="/attachments/workstation/wks-install7.png" class="no-border" >}}
 
-4. Open the Workstation Client and paste the copied registration token into the **Enter your registration token** field.
-5. Click **Register computer**.
+6. Open the Workstation Client and paste the copied registration token into the **Enter your registration token** field.
+7. Click **Register computer**.
 
     {{< figure src="/attachments/workstation/wks-install8.png" class="no-border" >}}
 
-6. In Workstation Management, in the **Computer Registration** dialog, click **Done**.
+8. In Workstation Management, in the **Computer Registration** dialog, click **Done**.
 
     {{< figure src="/attachments/workstation/wks-install9.png" class="no-border" >}}
 
@@ -145,7 +147,7 @@ The device, which will be used to connect to the TCP/IP server running in Workst
 
 After configuring the server and client pair, test their connectivity by performing the following steps:
 
-1. In the left navigation menu of the current workspace, click **Settings**, and ensure that the **Enable Local Device Testing** toggle is set to **On**.
+1. In the left navigation menu of the current workspace, click **Settings**, and ensure that the **Enable Local Device Testing** setting is enabled.
 2. In the left navigation menu, click **Test Your Station**.
 
     The page refreshes and displays a list of all your devices. This includes detected smart card readers available on your computer if you did not [disable detecting card readers](#create-workspace).
@@ -163,19 +165,4 @@ Different device types have different requirements for the message syntax. For m
 
 ## Best Practices for Working with Mendix Workstation
 
-As you begin your work with Mendix Workstation, keep in mind the following best practices to help you.
-
-### Security Recommendations
-
-For more information, see [Security Best Practices for Mendix Workstation](/mendix-workstation/security/).
-
-### Performance Optimization
-
-* Ensure stations meet the recommended hardware specifications.
-* Minimize background processes to improve performance.
-* When building app logic reusing the Connectors nanoflows, minimize the amount of microflow calls and [other actions](/refguide/nanoflows/#logic-where-no-connection-is-needed) that require a server connection. One key benefit of Mendix Workstation is client-sided data processing. Every call to the Mendix runtime adds an performance overhead.  
-
-### Maintenance Guidelines
-
-* Periodically review and update workstation and device configurations.
-* Monitor workstation health and resolve any connectivity issues promptly.
+As you begin your work with Mendix Workstation, keep in mind the [best practices](/mendix-workstation/advanced/) to help you.

@@ -32,6 +32,7 @@ To achieve these native performance gains, we can no longer support certain Java
 ## Known Issues
 
 Please be aware of a known issue where the top **10-15 pixels** of the screen content directly below the header may be unresponsive to touch events:
+
 * Cause: This occurs because the native header has a higher view hierarchy (z-index) than the JavaScript-based UI elements rendered below it.
 * Workaround: Most apps already include top padding on their pages, which avoids this issue. We recommend ensuring your page content has adequate padding below the header.
 * Planned solution: We are developing a native button widget that will resolve this edge case. These will be released in a future update.

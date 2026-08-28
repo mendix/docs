@@ -108,9 +108,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 1. Click **Base Installation**.
 
-2. Select the required **Cluster Mode** – *connected* or *standalone*.
-
-    For more information, see [Connected and Standalone Clusters](/developerportal/deploy/private-cloud/#connected-standalone) in the *Mendix on Kubernetes* documentation.
+2. Select the required **Cluster Mode** – *connected*.
 
 3. Select the required **Cluster Type** – *openshift* or *generic*.
 
@@ -306,10 +304,6 @@ These custom CAs will be trusted by:
 
 {{% alert color="info" %}}
 To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for MinIO. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 {{% alert color="info" %}}

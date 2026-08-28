@@ -80,7 +80,7 @@ When a boundary event is added to an ongoing activity, any workflow instances cu
 You can change the type of an existing boundary event using the context menu without having to delete and re-add it. To do this:
 
 1. Right-click the boundary event to open its context menu.
-2. Click **Change event**.
+2. Click **Change type**.
 3. Select one of the available options:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/context-menu-change-event.png" alt="Changing boundary event type through context menu" width="450" >}}
@@ -102,7 +102,7 @@ After you confirm the change:
 
 * The boundary event is re-created with the specified interrupting behavior. The new boundary event will be scheduled after the workflow is redeployed and becomes in progress.
 * The workflow will become incompatible if the changed boundary event has already been executed. The workflow becomes incompatible for the following reasons:
-    * If the changed boundary event was non-interrupting, you will get the [Non-interrupting Boundary Event Path Removed](/refguide/workflow-versioning/#non-interrupting-boundary-event-path-removed) conflict.
+    * If the changed boundary event was non-interrupting, you will get the [Concurrent Path Removed](/refguide/workflow-versioning/#concurrent-path-removed) conflict.
     * If the changed boundary event was interrupting, you will get the [Current Activity Removed](/refguide/workflow-versioning/#current-activity-removed) conflict.
 
 Boundary events are re-created upon interrupting behavior change because in-place conversion can result in invalid states. An interrupting boundary event must abort its parent activity when triggered, meaning an activity cannot have more than one active interrupting boundary event.

@@ -61,7 +61,7 @@ This section outlines the different ways Free Apps can be deleted from the Mendi
 
 As a [Technical Contact](/developerportal/general/app-roles/#technical-contact) you can manually delete a Free App after publishing it from Studio Pro by following these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 2. Click **More Options** ({{< icon name="three-dots-menu-horizontal" >}}) on the **Sandbox** environment.
 3. Click **Delete**.
 
@@ -96,7 +96,7 @@ Once a project is marked for deletion, the system applies a grace period of 14 c
 You can prevent this clean up by performing one of the following actions:
 
 * Make changes and commit them to the Team Server
-* [Pin your app](/developerportal/#app-tiles)
+* [Pin your app](/developerportal/#project-tiles)
 * [Invite someone](/developerportal/general/team/#inviting) to collaborate with you on your app
 
 Pinning a project that has been marked for deletion unmarks it immediately. Changes to the other criteria do not affect the mark-for-deletion immediately, but are verified before the actual deletion.

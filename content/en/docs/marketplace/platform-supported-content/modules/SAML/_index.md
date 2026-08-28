@@ -49,7 +49,7 @@ This section is aimed at readers with more knowledge of the SAML protocol. You m
     * Web browser SSO profile using one of the following bindings
         * HTTP redirect
         * HTTP POST bindings
-        * Artifact binding for SAML responses (Mendix 8 and above)
+        * Artifact binding for SAML responses (Mendix 9 and above)
     * Single Logout profile
 
 2. For encryption of SAML messages, the following options are supported:
@@ -116,6 +116,8 @@ The URL for downloading the SP metadata of your app is independent of the value 
 Controlling the configuration using constants requires an app restart, and it is only possible when your app is connected to a single IdP.
 
 Custom user provisioning flows created for a SAML V3.x are still supported in V4.x but cannot be configured during design/deploy-time.
+
+The SAML module does not support mobile apps. If you want your mobile Mendix app to sign in via Single Sign-On (SSO), use [Mobile SSO](/appstore/modules/mobile-sso/).
 
 ### Prerequisites {#dependencies}
 

@@ -26,8 +26,8 @@ Authentication mechanisms may be required within a cryptographic module to authe
 
 The following controls are related to this control:
 
-* SC-12
-* SC-13
+* [SC-12](/private-mendix-platform/nist-controls/sc-12/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 For more information, refer to the FIPS Publication 140, and [Cryptographic Module Validation Program](http://csrc.nist.gov/groups/STM/cmvp/index.html).
 
@@ -35,7 +35,7 @@ For more information, refer to the FIPS Publication 140, and [Cryptographic Modu
 
 ### Mendix Responsibility
 
-The Mendix Runtime and Private Mendix Platform need to allow integrate with the customer’s identity Provider (IdP) to help meet cryptographic module compliance requirements, such as FIPS 140.
+The Mendix Runtime and Private Mendix Platform need to allow integrate with the customer's identity Provider (IdP) to help meet cryptographic module compliance requirements, such as FIPS 140.
 
 ### Customer Responsibility
 

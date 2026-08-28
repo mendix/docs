@@ -357,9 +357,9 @@ If you would like to enable Prometheus scraping only for a specific environment,
 
 <!-- Be careful - this documentation reuses some screenshots from other pages like private-cloud-cluster.md -->
 
-#### Enable Scraping in Standalone Mode
+#### Enable Scraping Using Custom Resources
 
-{{% alert color="warning" %}}Do not use this approach in Connected mode - any annotations you set this way will be overridden by annotations set in the Mendix on Kubernetes section of the Mendix Portal.{{% /alert %}}
+{{% alert color="warning" %}}Annotations set via the `MendixApp` CR will be overridden by annotations set in the Mendix on Kubernetes section of the Mendix Portal if you are using Connected mode.{{% /alert %}}
 
 Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and add the following pod annotations:
 
@@ -542,7 +542,7 @@ Compatibility mode is only available for Operator versions older than 2.27.0. If
 In this case, you must use native mode instead. See [Enable Native Metrics in Connected Mode](#enable-native-metrics-connected-mode) for instructions.
 {{% /alert %}}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page.
 3. Click **Details** next to the environment where compatibility mode should be used.
 
@@ -564,9 +564,9 @@ In this case, you must use native mode instead. See [Enable Native Metrics in Co
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-monitor/environment-metrics-mode-compatibility.png" class="no-border" >}}
 
-#### Enable Compatibility Metrics in Standalone Mode
+#### Enable Compatibility Metrics Using Custom Resources
 
-{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Mendix on Kubernetes section of the Mendix Portal.{{% /alert %}}
+{{% alert color="warning" %}}Configuration set via the `MendixApp` CR will be overridden by the configuration set in the Mendix on Kubernetes section of the Mendix Portal if you are using Connected mode.{{% /alert %}}
 
 Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and set the `mode` attribute in `runtimeMetricsConfiguration` to `compatibility`:
 
@@ -592,7 +592,7 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
 #### Disable Metrics in Connected Mode
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page.
 3. Click **Details** next to the environment where compatibility mode should be used.
 
@@ -614,9 +614,9 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-monitor/environment-metrics-mode-default.png" class="no-border" >}}
 
-#### Disable Metrics in Standalone Mode
+#### Disable Metrics Using Custom Resources
 
-{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Mendix on Kubernetes section of the Mendix Portal.{{% /alert %}}
+{{% alert color="warning" %}}Configuration set via the `MendixApp` CR will be overridden by the configuration set in the Mendix on Kubernetes section of the Mendix Portal if you are using Connected mode.{{% /alert %}}
 
 Open the environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and delete the `runtimeMetricsConfiguration` block:
 
@@ -652,7 +652,7 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 
 #### Enable Native Metrics in Connected Mode{#enable-native-metrics-connected-mode}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 2. Go to the **Environments** page.
 3. Click **Details** next to the environment where native mode should be used.
 
@@ -714,9 +714,9 @@ After an environment is [switched into native metrics mode](#enable-native-metri
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-monitor/private-cloud-metrics-apply.png" class="no-border" >}}
 
-#### Enable Native Metrics in Standalone Mode
+#### Enable Native Metrics Using Custom Resources
 
-{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Mendix on Kubernetes section of the Mendix Portal.{{% /alert %}}
+{{% alert color="warning" %}}Configuration set via the `MendixApp` CR will be overridden by the configuration set in the Mendix on Kubernetes section of the Mendix Portal if you are using Connected mode.{{% /alert %}}
 
 Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and set the `mode` attribute to `native`:
 

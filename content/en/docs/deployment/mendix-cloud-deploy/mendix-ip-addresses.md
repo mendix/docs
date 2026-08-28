@@ -50,8 +50,6 @@ Mendix uses the following static IP addresses. If you need more information, fil
 | Mendix Cloud EU: AWS Frankfurt | Frankfurt (eu-central-1) |  `35.156.112.28` <br /> `35.157.102.14` <br /> `52.58.42.15`| `{app-name}.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.mendixcloud.com` |
 | Mendix Cloud EU: AWS Frankfurt | Frankfurt-2 (eu-central-1) | `3.76.96.252` <br /> `3.125.228.151` <br /> `54.93.126.19` | `{app-name}.apps.eu-1c.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.eu-1c.mendixcloud.com` |
 | Mendix Cloud EU: AWS Ireland | Ireland (eu-west-1) | `52.18.10.62` <br /> `52.208.39.99` <br /> `99.80.177.69` | `{app-name}.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.mendixcloud.com` |
-| Mendix Cloud Middle East | Bahrain (me-south-1) | `15.184.118.253`<br /> `16.24.5.102`<br /> `157.241.15.222` | `{app-name}.apps.me-1a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.me-1a.mendixcloud.com` |
-| Mendix Cloud Middle East | UAE (me-central-1) | `3.29.53.85` <br /> `3.29.155.3` <br /> `3.29.189.106` | `{app-name}.apps.me-2a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.me-2a.mendixcloud.com` |
 | Mendix Cloud SA | São Paulo (sa-east-1) | `15.229.194.124` <br /> `54.232.11.167` <br /> `177.71.150.202` | `{app-name}.apps.sa-1a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.sa-1a.mendixcloud.com` |
 | Mendix Cloud UK | London (eu-west-2) | `18.130.169.15` <br /> `35.177.185.47` <br /> `52.56.174.215` | `{app-name}.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.mendixcloud.com` |
 | Mendix Cloud US | North Virginia (us-east-1) | `34.197.224.250` <br /> `52.55.243.62` <br /> `52.205.207.103` | `{app-name}.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.mendixcloud.com` |
@@ -76,7 +74,7 @@ For Mendix apps deployed to the Kubernetes infrastructure:
 * `10.11.128.0/18`
 * `10.11.192.0/18`
 
-To find whether your app uses Kubernetes or Cloud Foundry, go to [Apps](https://sprintr.home.mendix.com/link/myapps) and check the **Infrastructure** label for your environment.
+To find whether your app uses Kubernetes or Cloud Foundry, go to [Projects](https://projects.home.mendix.com/link/myapps) and check the **Infrastructure** label for your environment.
 
 ### Mendix Portal {#global-platform-ips}
 
@@ -94,8 +92,8 @@ While these IP addresses are static, there may still change under exceptional ci
 
 #### Incoming IP {#global-platform-ips-inbound}
 
-* 52.223.19.148
-* 76.223.74.135
+* 166.117.50.136
+* 99.83.157.128
 
 ## Frequently Asked Questions
 

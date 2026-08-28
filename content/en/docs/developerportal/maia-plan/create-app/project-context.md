@@ -9,7 +9,7 @@ weight: 10
 
 Providing context is the foundation for Maia to build your project plan. Give Maia clear goals, user details, and requirements to generate an accurate app plan.
 
-1. In **Apps**, click **Create App** in the upper right corner.
+1. In **Projects**, click **Create App** in the upper right corner.
 
 2. Select **Plan & Build**. The **Plan & Build with Maia** window is displayed.
 

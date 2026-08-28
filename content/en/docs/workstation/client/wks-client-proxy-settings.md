@@ -3,7 +3,7 @@ title: "Network Configuration for the Workstation Client"
 linktitle: "Network Configuration"
 url: /mendix-workstation/network-configuration/
 description: "Describes how to configure custom proxy settings for the Workstation Client."
-weight: 30
+weight: 35
 ---
 
 ## Introduction

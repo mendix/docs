@@ -180,12 +180,6 @@ If the host app uses CSP, make sure its policy allows JavaScript to load from th
 
 Cross-site cookies must be enabled in the browser when the Mendix application is hosted on a different domain from the host application.
 
-## Known Issues
-
-### Optional Parameters
-
-Omitting a parameter that is marked as optional from the `parameters` object will result in the fallback page being shown instead of the default value being passed.
-
 ## Read More
 
 * [Mendix Client](/refguide/mendix-client/)

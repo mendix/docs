@@ -4,12 +4,7 @@ linktitle: "Centralized Certificates"
 url: /developerportal/deploy/certificates/centralized-certificates/
 description: "Learn how Mendix Admins centrally manage SSL/TLS certificates for custom domains in Mendix Control Center, including uploading, renewing, replacing, and monitoring certificate status."
 weight: 40
-beta: true
 ---
-
-{{% alert color="warning" %}}
-This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 

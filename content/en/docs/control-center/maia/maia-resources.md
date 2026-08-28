@@ -27,13 +27,36 @@ The overview page provides a centralized view of all Maia Units currently provis
 
 {{< figure src="/attachments/control-center/maia/maia-resources-overview.png" alt="" >}}
 
+## Monthly Consumption
+
+The **Monthly Consumption** section displays your company’s Maia Unit usage for the current monthly cycle. It includes:
+
+* The percentage of units used 
+* The number of units consumed 
+* The number of remaining units
+* The date your monthly consumption resets
+
+## Usage {#usage}
+
+The **Usage** section provides an overview of each user’s usage for the current month. It also enables you to manage budgets by setting usage caps for individual users.
+
+To manage an individual user’s usage limit:
+
+1. On the user line, click **Manage**.
+2. Enter the custom limit.
+3. Click **Save Changes**.
+
+{{< figure src="/attachments/control-center/maia/user-limit-manage.png" alt="" width="450" >}}
+
+If no individual limit is set, the user is subject to the default company-wide user limit. Once a user reaches their individual limit, further Maia use is disabled for that user for the remainder of the current monthly cycle.
+
 ## Increasing Your Maia Units Capacity {#increase-maia-units}
 
-1. **Make sure you have Cloud Tokens available**
+1. **Make sure you have Cloud Tokens available**<br>
 Cloud Tokens are purchased through your Mendix subscription. If your organization already has Cloud Tokens allocated to other services, you can reassign them. Check your available balance in the Control Center. If you need to purchase more, contact your Mendix account manager.
-2. **Convert Cloud Tokens to Maia Units**
-In the Control Center, go to Maia Resources and select Provision Resource. Choose how many Cloud Tokens to allocate. Each Cloud Token gives you 100 Maia Units per month.
-3. **Use Maia in Studio Pro**
+2. **Convert Cloud Tokens to Maia Units**<br>
+In the Control Center, go to **Maia Resources** and select **Provision Resource**. Choose how many Cloud Tokens to allocate. Each Cloud Token gives you 100 Maia Units per month.
+3. **Use Maia in Studio Pro**<br>
 Your new capacity is active immediately. Studio Pro unblocks and Maia Make becomes available again.
 
 ### Key Considerations

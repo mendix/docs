@@ -21,8 +21,12 @@ Instead of typing the same context into every chat, you define agent skills once
 
 Use agent skills to equip Maia with the domain knowledge and conventions it needs, whether those are company-wide standards or team-specific workflows. For example, a skill capturing your company's Mendix naming conventions means Maia applies them consistently whenever it generates entities, attributes, or microflows without you having to mention them each time.
 
-Starting from Studio Pro 11.12, Maia supports not only project-level skills, but also skills for all application (non-protected) modules. These skills are exportable together with the module in which they are kept
+Starting from Studio Pro 11.12, Maia supports not only project-level skills, but also skills for all application modules. These skills are exportable together with the module in which they are kept
 and can help you split your skills better.
+
+{{% alert color="info" %}}
+Agents skills are not supported for Add-on and Solution modules.
+{{% /alert %}}
 
 For guidance on writing effective skills, see [Best Practices for Skill Creators](https://agentskills.io/skill-creation/best-practices) and [Optimizing Skill Descriptions](https://agentskills.io/skill-creation/optimizing-descriptions) in the [Agent Skills documentation](https://agentskills.io/).
 
@@ -116,7 +120,6 @@ Since Studio Pro 11.12, Maia lets you list all registered agent skills. Click th
 successfully, including any error message, references found, and the module the skill belongs to.
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-agent-skills/skills-pane.png" width="400px">}}
-
 
 Updates to skills, whether you add a new skill or change an existing one, appear only after you start a new session.
 To apply the updated skills immediately, click the **Sync** button in the **Skills**  pane.

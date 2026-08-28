@@ -1086,10 +1086,10 @@ The syntax is as follows:
     [ OFFSET number ]
 ```
 
-By default, any `order_by_clause`, `LIMIT`, or `OFFSET` in a `UNION` clause will apply to the whole query. If you wrap the `select_query` subquery of a `UNION` in parentheses, you can nest a `UNION` of `select_query` statements, and give each `select_query` its own `order_by_clause`, `LIMIT`, and `OFFSET`, which are then scoped to that subquery. The `UNION` as a whole can have its own `order_by_clause`, `LIMIT`, and `OFFSET`. See [Parenthesized `UNION` Branches](#oql-union-parentheses), below, for an example.
+By default, any `order_by_clause`, `LIMIT`, or `OFFSET` in a `UNION` clause will apply to the whole query. If you wrap the `select_query` subquery of a `UNION` in parentheses, you can nest a `UNION` of `select_query` statements, and give each `select_query` its own `order_by_clause`, `LIMIT`, and `OFFSET`, which are then scoped to that subquery. The `UNION` as a whole can have its own `order_by_clause`, `LIMIT`, and `OFFSET`. See [Parenthesized `UNION` Subqueries](#oql-union-parentheses), below, for an example.
 
 {{% alert color="info" %}}
-Adding parentheses in union branches was introduced in Mendix version 11.15.0. It is supported only in Java actions.
+Adding parentheses in `UNION` clauses was introduced in Mendix version 11.15.0. It is supported only in Java actions.
 {{% /alert %}}
 
 ### Result Data Type {#oql-union-type}

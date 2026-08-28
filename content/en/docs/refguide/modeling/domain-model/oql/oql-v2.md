@@ -213,7 +213,7 @@ FROM (
 )
 ```
 
-The same restriction applies to a subquery which is a `select_query`, or a nested `UNION` as part of a [`UNION`](/refguide/oql-clauses/#oql-union). Consequently, you can only use `ORDER BY` in a parenthesized `UNION` branch if it is combined with `LIMIT` and/or `OFFSET`:
+The same restriction applies to a subquery which is a `select_query`, or a nested `UNION` as part of a [`UNION`](/refguide/oql-clauses/#oql-union). Consequently, you can only use `ORDER BY` in a parenthesized `UNION` clause if it is combined with `LIMIT` and/or `OFFSET`:
 
 ```sql
 (

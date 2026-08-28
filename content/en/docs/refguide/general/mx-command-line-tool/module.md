@@ -89,6 +89,10 @@ This table shows the return codes and their description:
 
 The `mx module-import` command imports a source module (*.mpk*) into an app.
 
+{{% alert color="warning" %}}
+In Studio Pro 11.14, the `mx.exe module-import replace` and `mx.exe module-import update` commands will not rescue storage GUIDs after a module update, which will result in data loss.
+{{% /alert %}}
+
 ### Usage
 
 Use the following command pattern for `mx module-import`:

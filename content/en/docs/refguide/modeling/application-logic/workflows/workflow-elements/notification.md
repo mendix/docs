@@ -47,7 +47,7 @@ The **Caption** describes what happens in this element. It is displayed under th
 ### Interrupting Behavior Section {#boundary-properties}
 
 {{% alert color="info" %}}
-This section is only applicable when **Notification** is used as a notification boundary event or as the start event of a notification event sub-process.
+This section is only applicable when **Notification** is used as a notification boundary event or as the start event of an event sub-process.
 {{% /alert %}}
 
 The **Interrupting** property sets the notification boundary event or notification event sub-process to be either interrupting or non-interrupting.
@@ -55,7 +55,7 @@ The **Interrupting** property sets the notification boundary event or notificati
 By default, it is set to **No**, which means that the notification boundary event or event sub-process is non-interrupting. When it is set to **Yes**, the notification boundary event or event sub-process is interrupting. For more information, see [Boundary Events](/refguide/workflow-boundary-events/) and [Event Sub-Processes](/refguide/workflow-event-sub-processes/).
 
 {{% alert color="info" %}}
-Changing the interrupting behavior of an existing notification boundary event or notification event sub-process re-creates it, and it can make ongoing workflow instances incompatible. For more information, see *Implications of Changing the Interrupting Behavior* in [Boundary Events](/refguide/workflow-boundary-events/#event-type-change) or [Event Sub-Processes](/refguide/workflow-event-sub-processes/#event-type-change).
+Changing the interrupting behavior of an existing event re-creates it, and it can make ongoing workflow instances incompatible. For more information, refer to the *Implications of Changing the Interrupting Behavior* in [Boundary Events](/refguide/workflow-boundary-events/#event-type-change) or [Event Sub-Processes](/refguide/workflow-event-sub-processes/#event-type-change).
 {{% /alert %}}
 
 ### Common Section {#common}

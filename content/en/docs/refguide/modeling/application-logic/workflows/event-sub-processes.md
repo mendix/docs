@@ -51,7 +51,7 @@ The workflow will NOT complete until all active execution paths, both the main f
 Event sub-processes can be triggered by one of the following start event types:
 
 * **Notification start event** – The sub-process is triggered by a [Notify workflow](/refguide/notify-workflow/) microflow activity.
-* **Timer start event** – The sub-process is triggered automatically when the configured duration elapses or the configured date and time is reached. The timer configuration follows the same rules as the standalone [Timer](/refguide/timer/) activity. For more information, refer to the [Timer](/refguide/timer/#timer) section in *Timer*. A non-interrupting timer start event can also be configured to fire repeatedly; see the [Recurrence](/refguide/timer/#recurrence) section in *Timer*.
+* **Timer start event** – The sub-process is triggered automatically when the configured duration elapses or the configured date and time is reached. For more information, refer to the [Timer](/refguide/timer/#timer) section in *Timer*. A non-interrupting timer start event can also be configured to fire repeatedly; refer to the [Recurrence](/refguide/timer/#recurrence) section in *Timer*.
 
 When the trigger is received, the sub-process becomes **In Progress**.
 

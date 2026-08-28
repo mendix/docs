@@ -1,6 +1,7 @@
 ---
 title: "OQL Clauses"
 url: /refguide/oql-clauses/
+description: "A reference guide to OQL clauses"
 weight: 10
 aliases:
     - /refguide/oql-from-clause/

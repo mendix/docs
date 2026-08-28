@@ -1,6 +1,7 @@
 ---
 title: "OQL Version 2 Features"
 linktitle: "Switching to OQL Version 2"
+description: "A guide to the differences between Mendix OQL versions 1 and 2, plus a guide to switching to version 2"
 url: /refguide/oql-v2/
 weight: 100
 ---

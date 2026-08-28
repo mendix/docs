@@ -1,6 +1,7 @@
 ---
 title: "OQL"
 url: /refguide/oql/
+description: "An introduction to the Mendix Object Query Language with links to further information."
 weight: 90
 ---
 

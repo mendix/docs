@@ -70,6 +70,7 @@ A widget package file is just a ZIP archive containing the following things:
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
     * All CSS files you add (except the ones located in the **lib** sub-directory) will automatically be loaded in an app via the widget.
     * When the React client is enabled for an app, any `assets` directories in a widget package are automatically copied to the widget's directory under `dist` during bundling. This ensures that all asset files from a pluggable widget are included in the final build and available at runtime.
+* Optionally, documentation for Maia: markdown files placed in a *.maia* folder let widget authors write additional guidance aimed specifically at AI agents, such as when to use the widget, which properties must be set together, and common pitfalls.
 
 Naming your widget package file after the `widgetName` is best practice. Also, a widget package can include multiple widgets by putting several of the above items in the same widget package. However, creating such packages is *not recommended*. 
 
@@ -87,6 +88,14 @@ The *package.xml* file has the following structure:
 ```
 
 Both `packageName` and `packageVersion` should be aligned with the app's information in the Marketplace if you wish to publish the package. It is best practice to use the widget ID as a `packageName`.
+
+### Widget Documentation for Maia {#widget-documentation-for-maia}
+
+Before using a custom or marketplace widget on a page, Maia looks for and reads any documentation the widget package ships alongside its widget definition XML file. This gives Maia context beyond the widget's technical schema, such as how the widget is meant to be used, which property values make sense together, and any caveats the widget's author wants to call out.
+
+Maia looks for markdown files placed in a *.maia* folder inside the widget package. This is a convention that lets widget authors write guidance aimed specifically at AI agents, for example when to use the widget, which properties must be set together, and common pitfalls.
+
+Use this documentation to complement, not repeat, the [`<prompt>` elements](#using-prompt-for-maia) in the widget definition XML file. Prompts concisely describe the widget and its individual properties, while the *.maia* folder can include longer explanations and usage examples.
 
 ## Widget Definition XML File {#widget-definition}
 
@@ -254,7 +263,7 @@ This section is represented by the `properties` tag in the widget XML file. It d
 
 Maia can help developers and users work more effectively with pluggable widgets when it understands their purpose and configuration options. To enable this, you can enhance your widget definition XML file with prompt elements that describe your widget's functionality in natural language.
 
-Maia uses these prompts to understand what your widget does and how its properties should be configured, allowing it to provide better assistance when users are building their applications.
+Maia uses these prompts to understand what your widget does and how its properties should be configured, allowing it to provide better assistance when users are building their applications. Maia also reads any documentation shipped in the widget package itself, see [Widget Documentation for Maia](#widget-documentation-for-maia).
 
 #### Adding Prompts to Widgets
 

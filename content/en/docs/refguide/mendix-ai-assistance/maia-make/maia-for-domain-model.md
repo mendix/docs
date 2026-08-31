@@ -11,44 +11,44 @@ aliases:
 ## Introduction
 
 {{% alert color="info" %}}
-To use Maia for Domain Model, an internet connection and signing in to Studio Pro are required.
+To use Maia for Domain Model, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Maia for Domain Model helps you generate new [domain model](/refguide/domain-model/), and explain and provide suggestions for existing domain models. It has some limitations. For more information, see the [Limitations](#limitation) section below.
+Maia for Domain Model helps you generate new [domain models](/refguide/domain-model/) and explain and improve existing domain models. It has some limitations. For more information, see the [Limitations](#limitation) section below.
 
 ## Using Maia for Domain Model
 
 ### In Studio Pro 11.8 and Above
 
-In Studio Pro 11.8 and above, Maia for Domain Model is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia for Domain Model. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+In Studio Pro 11.8 and above, Maia for Domain Model is incorporated into the unified Maia Make capabilities, which are enabled by default. Maia for Domain Model does not have a dedicated interface. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 ### In Studio Pro 11.7 and Below
 
-In Studio Pro 11.7 and below, Maia for Domain Model is enabled by default. You can find it in the the toolbar of a domain model:
+In Studio Pro 11.7 and below, Maia for Domain Model is enabled by default. You can find it in the toolbar of a domain model:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-domain-model/maia-for-domain-model.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-domain-model/maia-for-domain-model.png" alt="" max-width=80% >}}
 
 If you want to disable this feature, go to **Edit** > **Preferences** > the **Maia** tab and clear the **Enable Maia for Domain Model** checkbox.
 
-After clicking **Maia for Domain Model**, a dedicated chat interface will appear at the right side of Studio Pro under the **Maia** tab:
+After clicking **Maia for Domain Model**, a dedicated chat interface appears on the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-domain-model/chat-interface.png" max-width=42% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-domain-model/chat-interface.png" alt="" max-width=42% >}}
 
-Describe your application or its main goals in the chat. Maia will use this information to generate a relevant domain model for you. In Studio Pro 11.1 and above, you can also attach maximally one image and one PDF to help Maia better understand your request. For more information, see the [Attachment Requirements](#attachment-requirements) section below. 
+Describe your application or its main goals in the chat. Maia uses this information to generate a relevant domain model for you. In Studio Pro 11.1 and above, you can also attach up to one image and one PDF to help Maia better understand your request. For more information, see the [Attachment Requirements](#attachment-requirements) section below.
 
-After a domain model is generated and if the dedicated chat is still active, you can continue asking Maia to add more entities and associations to the generated domain model. It also supports adding more attributes to an existing entity in the generated domain model.You can also ask Maia to explain or improve the generated domain model through further requests.
+After Maia generates a domain model, if the dedicated chat is still active, you can continue asking Maia to add entities and associations to the domain model. Maia also supports adding more attributes to an existing entity in the domain model. You can also ask Maia to explain or improve the generated domain model.
 
 {{% alert color="info" %}}
 Maia for Domain Model does not support deleting items in the domain model. You can always delete them manually. 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In this dedicated chat, only requests related to domain model will be properly handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
+In this dedicated chat, only requests related to the domain model are handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
 #### Attachment Requirements {#attachment-requirements}
 
-In Studio Pro 11.1 and above, Maia for Domain Model supports adding a maximal of one image and one PDF as attachments. The attachments must meet the following requirements:
+In Studio Pro 11.1 and above, Maia for Domain Model supports adding up to one image and one PDF as attachments. The attachments must meet the following requirements:
 
 * The image format must be PNG or JPG.
 * The image file size must not exceed 512 KB.

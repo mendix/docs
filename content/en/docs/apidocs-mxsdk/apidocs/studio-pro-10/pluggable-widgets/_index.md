@@ -92,7 +92,7 @@ Both `packageName` and `packageVersion` should be aligned with the app's informa
 
 The widget definition XML file is an essential part of a widget because it describes that widget's basic information and capabilities, such as if that widget can function offline. This file also contains a defined list of properties configurable in the widget. If you use the Mendix Pluggable Widget Generator, the contents of this file will be scaffolded for you.
 
-A schema for the widget definition file is made available through the [mendix package[(https://www.npmjs.com/package/mendix) which is installed by the `pluggable-widgets-tools` package. Editor plugins and IDE's can use the schema to provide in-line feedback while authoring the definition file.
+A schema for the widget definition file is made available through the [Mendix package](https://www.npmjs.com/package/mendix) which is installed by the `pluggable-widgets-tools` package. Editor plugins and IDE's can use the schema to provide in-line feedback while authoring the definition file.
 
 A simple widget XML file might look like this:
 

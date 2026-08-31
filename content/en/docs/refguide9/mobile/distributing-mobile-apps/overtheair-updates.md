@@ -98,7 +98,7 @@ Because only the constant changes, the old and the new version of the app behave
 
 ## Upgrading the Mendix Version {#upgrading-mendix-version}
 
-Keep Mendix version upgrades separate from new feature work. Combining them makes it harder to tell whether a problem comes from the version upgrade or from a new feature.
+Keep Mendix version upgrades separate from new feature work. Combining them makes it harder to tell whether a problem comes from the version upgrade or from a new feature. It can also break the app for existing users if the new feature changes the model in a way that is not compatible with the old client.
 
 When you upgrade the Mendix version, keep changes to your model as small as possible. Do not change data, and do not change the parameters or return type of microflows that your native app depends on. For more information on keeping your model compatible, see [Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/).
 

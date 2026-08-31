@@ -100,7 +100,7 @@ From here, you can manage the default access settings:
 Mendix Event Broker Bridges was released for GA in 11.4.0.
 {{% /alert %}}
 
-Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and external technologies, such as AWS SQS, HTTP, Azure Blob Storage, AWS S3 and Apache Iceberg. These bridges enable the exchange of events between your Mendix Cloud environment and external systems, ensuring efficient communication across diverse technological landscapes.
+Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and external technologies, such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, and Apache Iceberg. These bridges enable the exchange of events between your Mendix Cloud environment and external systems, ensuring efficient communication across diverse technological landscapes.
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_bridges.png" class="no-border"  >}}
 
@@ -147,7 +147,7 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
     * **HTTP** – one-way bridge that uses HTTP requests to send events from external systems to the Mendix Event Broker
     * **Azure Blob Storage** – one-way bridge that receives events via Azure object storage
     * **AWS S3** – one-way bridge that receives events via AWS object storage
-    * **Iceberg** – one-way bridge that delivers Change Data Capture (CDC) events from the Event Broker to Apache Iceberg tables stored in AWS S3 or Azure Blob Storage.
+    * **Iceberg** – one-way bridge that delivers [Change Data Capture (CDC)](/refguide/change-data-capture/) events to Apache Iceberg tables stored in AWS S3 or Azure Blob Storage
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/ebb_general_bridge_create.png" >}}
 

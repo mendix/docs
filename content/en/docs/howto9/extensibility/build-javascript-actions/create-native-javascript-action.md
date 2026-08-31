@@ -145,6 +145,8 @@ The dependency is split into two parts: the native device part, and the client J
 1. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
 1. Install the dependency with the command `npm install react-native-nfc-manager@1.2.2`.
 
+update possible above?
+
 {{% alert type="info" %}}
 This will create a **node_module** folder inside your **actions** folder. There is a known issue that when you try to commit the *node_modules* folder using Apache Subversion, there could be problems if your commit contains a large number of files. To solve this, try removing unnecessary files before committing.
 {{% /alert %}}

@@ -92,7 +92,6 @@ Use the following steps to release a feature that needs a full app store release
 
 1. Build a new version of your app that includes the feature. Use a nanoflow decision or conditional visibility, controlled by a constant, to keep the feature disabled.
 1. Deploy this version with an OTA update.
-1. Wait until all users have received the OTA update.
 1. Build a new version of the app that changes the constant to enable the feature. Publish this version through a new app store release. Do not use OTA for this step, because the feature that requires a full release cannot be enabled through OTA alone. Wait for Apple to approve the release.
 
 Because only the constant changes, the old and the new version of the app behave the same way while the release is waiting for approval. Both versions continue to work until the app store release is approved.

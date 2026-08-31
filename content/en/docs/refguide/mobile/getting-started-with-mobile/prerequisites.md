@@ -63,6 +63,8 @@ Depending on your app's Mendix version, you must use a different version of the 
     * **11.11.0 - 11.x.x** — Use the latest version of Make It Native ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native/id6450037464))
     * **11.6.x** - MTS version of Make It Native ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
 
+**Note** that for builds in iOS Testflight, the displayed version might look 'wrong' e.g. 111.6.7 instead of 11.6.7. This is to circumvent a limitation from Apple's versioning policy _"...version of uploaded builds must be higher than the version currently released on production..."_.
+
     * **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [Building Your Own Make It Native App](https://github.com/mendix/make-it-native)
 
 For information on which mobile operating systems are supported by the Mendix native mobile apps, see the [Mobile Operating Systems](/refguide/system-requirements/#mobile) section of *System Requirements*.

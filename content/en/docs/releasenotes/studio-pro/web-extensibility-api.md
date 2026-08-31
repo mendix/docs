@@ -17,6 +17,12 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 * We added readable names and descriptions for each permission that an extension requires in the Extensions Overview.
 * We fixed a bug where `CustomBlobDocument` type names were not displayed as their registered type in the `Commit` pane in version controlled apps.
 
+## Version 11.14.0
+
+* A module ID can now be passed to the element selector for the `selectedElementId` property, and the corresponding module will be preselected and expanded. This will allow the user to directly create a new document of the desired type in that module.
+* We improved the Extensions Overview UI to be more modern and consistent with the rest of Studio Pro.
+* We added support for direct assignment to model element array properties (for example, `element.property = [value1, value2]`).
+
 ## Version 11.13.0
 
 * We updated the progress dialog cancellation behavior: the process now waits for the cancelled step to finish before resolving, rather than immediately returning a snapshot of the progress at the time of cancellation. A new `resolveImmediatelyOnCancel` parameter restores the previous behavior.

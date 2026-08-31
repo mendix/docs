@@ -108,7 +108,6 @@ Key improvements are delivered through new module properties and a new `manifest
 
 The **Package** section on the **General** tab displays package identification information for the module. Studio Pro uses this information to track modules across versions, which is the foundation for more reliable module updates.
 
-For more information on how to use package management when updating modules, see [Updating Marketplace Modules](/refguide/updating-marketplace-modules/).
 
 ### Module ID {#module-id}
 
@@ -150,12 +149,17 @@ When you export a module package (a *.mpk* file), Studio Pro adds a `manifest.js
 * The module ID and module name
 * The module version
 * The checksum of the package
+* A version GUID – a unique identifier for this build of the package, generated from its checksum
+* The module type (`source`, `add-on`, or `solution`)
+* The content types included in the package (for example, `extension` or `ai-skill`), if applicable
 * The Mendix metamodel version used to create the package
 * The list of files included in the package
 
 {{% alert type="info" %}}
 The legacy `package.xml` metadata file is not mentioned in `manifest.json` but is still included in the package for backward compatibility.
-{{% /alert %}} 
+{{% /alert %}}
+
+If you try to import a module package that was created with a newer version of Studio Pro than the one you are using, Studio Pro shows an error and cancels the import. Upgrade to a compatible version of Studio Pro before importing the package.
 
 ### Location {#location}
 
@@ -173,7 +177,6 @@ Modules imported from the Marketplace are automatically set to **Marketplace mod
 ## Read More
 
 * [Modules](/refguide/modules/)
-* [Updating Marketplace Modules](/refguide/updating-marketplace-modules/)
 * [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
 * [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/)
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)

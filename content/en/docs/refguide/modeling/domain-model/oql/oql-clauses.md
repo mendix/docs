@@ -1086,7 +1086,7 @@ The syntax is as follows:
     [ OFFSET number ]
 ```
 
-By default, any `order_by_clause`, `LIMIT`, or `OFFSET` in a `UNION` clause will apply to the whole query. Wrapping a select_query in parentheses enables two things. Firstly, it scopes any order_by_clause, LIMIT, or OFFSET inside the parentheses to only that subquery's results. Secondly, it allows a UNION to be nested inside another UNION, for example, `SELECT query_a UNION (SELECT query_b UNION ALL SELECT query_c)`. The outer UNION can still have its own order_by_clause, LIMIT, and OFFSET applying to the final combined result. See [Parenthesized `UNION` Subqueries](#oql-union-parentheses), below, for an example.
+By default, any `order_by_clause`, `LIMIT`, or `OFFSET` in a `UNION` clause will apply to the whole query. Wrapping a select_query in parentheses enables two things. First, it scopes any order_by_clause, LIMIT, or OFFSET inside the parentheses to only that subquery's results. Second, it allows a UNION to be nested inside another UNION, for example, `SELECT query_a UNION (SELECT query_b UNION ALL SELECT query_c)`. The outer UNION can still have its own order_by_clause, LIMIT, and OFFSET applying to the final combined result. See [Parenthesized `UNION` Subqueries](#oql-union-parentheses), below, for an example.
 
 {{% alert color="info" %}}
 Adding parentheses in `UNION` clauses was introduced in Mendix version 11.15.0. It is supported only in Java actions.

@@ -11,20 +11,20 @@ aliases:
 ## Introduction
 
 {{% alert color="info" %}}
-To use Maia for Pages, an internet connection and signing in to Studio Pro are required.
+To use Maia for Pages, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Maia for Pages helps you generate a [page](/refguide/page/) by adding and configuring widgets based on text input and optional image input. It can also be used to edit or remove existing widgets. Moreover, you can ask it to provide further improvements and explanations. For information on the current limitations of Maia for Pages, see the [Limitations](#limitation) section below.
+Maia for Pages helps you generate a [page](/refguide/page/) by adding and configuring widgets based on text input and optional image input. You can also use it to edit or remove existing widgets or ask it to provide further improvements and explanations. For information on the current limitations of Maia for Pages, see the [Limitations](#limitation) section below.
 
 ## Using Maia for Pages
 
 ### In Studio Pro 11.8 and Above
 
-In Studio Pro 11.8 and above, Maia for Pages is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia for Pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+In Studio Pro 11.8 and above, Maia for Pages is incorporated into the unified Maia Make capabilities, which are enabled by default. Maia for Pages does not have a dedicated interface. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 In Studio Pro 11.8, only overview pages can be generated.
 
-In Studio Pro 11.9 and above, custom pages can be generated from scratch and  modifying existing pages is also supported. Moreover, local variables, additional data sources, client actions, XPath constraints, and expressions are supported.
+In Studio Pro 11.9 and above, you can generate custom pages from scratch and modify existing pages. Local variables, additional data sources, client actions, XPath constraints, and expressions are also supported.
 
 ### In Studio Pro 11.7 and Below
 
@@ -38,9 +38,9 @@ Once enabled, you can find it in the the toolbar of a page:
 Maia for Pages is available in both the **Structure mode** and **Design mode**.
 {{% /alert %}}
 
-After clicking **Maia for Pages**, a dedicated chat interface appears at the right side of Studio Pro under the **Maia** tab:
+After clicking **Maia for Pages**, a dedicated chat interface appears on the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-pages/chat-interface.png" max-width=42% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-pages/chat-interface.png" alt="" max-width=42% >}}
 
 Describe your page or its main goals in the chat. Maia uses this information to add relevant widgets to the page and configure them for you. When generating a page, Maia knows about the domain model of the module you are currently working on. For example, it might include a [Data View](/refguide/data-view/) with some [Text Box](/refguide/text-box/) widgets for an attribute of an entity.
 
@@ -49,14 +49,14 @@ You can also supplement text input with an image. Maia uses the image to interpr
 On pages that have already been created, either by Maia for Pages or manually, you can ask Maia to further improve the page and provide explanations. For example, you can add extra widgets, edit widgets by changing their properties, or remove widgets.
 
 {{% alert color="info" %}}
-In this dedicated chat, only requests related to Pages will be properly handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
+In this dedicated chat, only requests related to Pages are handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
-### Limitation {#limitation}
+### Limitations {#limitation}
 
-Maia for Pages does not support all widgets. 
+Maia for Pages does not support all widgets.
 
-Currently the following widgets are supported:
+The following widgets are supported:
 
 * [Container](/refguide/container/)
 * [Layout Grid](/refguide/layout-grid/)

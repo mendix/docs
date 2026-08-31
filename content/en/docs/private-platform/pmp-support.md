@@ -8,7 +8,7 @@ weight: 70
 
 ## Introduction
 
-When you opens a support ticket for Private Mendix Platform, ensure that it contains the critical information Mendix needs to begin root cause analysis immediately, reducing delays and back-and-forth communication.
+When you open a support ticket for Private Mendix Platform, ensure that it contains the critical information Mendix needs to begin root cause analysis immediately, reducing delays and back-and-forth communication.
 
 ## Incident Summary
 

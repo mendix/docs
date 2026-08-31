@@ -37,7 +37,7 @@ Clauses must be presented in the following order, but can be left out if they ar
 7. [`LIMIT`](#limit-offset)
 8. [`OFFSET`](#limit-offset)
 
-The `UNION` clause joins multiple SELECT subclauses but each SELECT clause must maintain the order presented above. See [`UNION` Clause](#oql-union), below.
+The `UNION` clause combines multiple SELECT subclauses but each SELECT clause must maintain the order presented above. See [`UNION` Clause](#oql-union), below.
 
 The domain model used in the various examples is shown below:
 

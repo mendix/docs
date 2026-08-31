@@ -454,7 +454,7 @@ Use the Role ARN and External ID when configuring your AWS S3 bridge in the Even
         * **AWS S3**
             * **Bucket** – the bucket where the data is stored
             * **AWS Region for Bucket** – the AWS region where the bucket is located
-            * **AWS Role (to Assume)** – the AWS role to assume for the required permissions
+            * **AWS Role (to Assume)** – the AWS role to assume for the required permissions 
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_configure.png" alt="" width="400" >}}
 
@@ -464,9 +464,9 @@ Select the CDC events that you want to deliver from the Event Broker to Iceberg:
 
 1. Click **Add CDC Events** to open a dialog box displaying the available CDC events managed by the Event Broker. Only events that can be subscribed to are shown because the bridge delivers events in one direction, from the Event Broker to Iceberg.
 
-2. Select one or more CDC events to integrate. The Iceberg connection configuration is automatically generated based on the selected events.
+   {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_connect_events.png" alt="" width="400" >}}
 
-    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_connect_events.png" alt="" width="400" >}}
+2. Select one or more CDC events to integrate. The Iceberg connection configuration is automatically generated based on the selected events.
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_choose_cdc_events.png" alt="" width="400" >}}
 
@@ -528,13 +528,13 @@ To edit a bridge:
 
       * **Add CDC Events** (Iceberg):
 
-          1. Click **Add CDC Events** to open a dialog that displays available CDC events.
-          2. Select the CDC events you want to add and click **Select**. Added events will display an **Added** badge and can be removed before applying changes.
+          1. Click **Add CDC Events** to open a dialog box that displays available CDC events.
+          2. Select the CDC events you want to add and click **Select**. Added events display an **Added** badge and can be removed before applying changes.
 
       * **Remove CDC Events** (Iceberg):
 
-          1. Navigate to the CDC event you want to remove and click **Remove**. Removed events will display a **Removed** badge, and their name and metadata will appear grayed out.
-          2. Re-add a removed CDC event by clicking **Add** before applying changes.
+          1. Navigate to the CDC event you want to remove and click **Remove**. Removed events display a **Removed** badge, and their name and metadata appear grayed out.
+          2. To re-add a removed CDC event, click **Add** before applying changes.
       
       * **Update Service Configuration** (Azure Blob Storage and AWS S3 only):
       

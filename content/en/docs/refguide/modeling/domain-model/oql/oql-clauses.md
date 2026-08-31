@@ -37,7 +37,7 @@ Clauses must be presented in the following order, but can be left out if they ar
 7. [`LIMIT`](#limit-offset)
 8. [`OFFSET`](#limit-offset)
 
-The `UNION` clause combines multiple SELECT subclauses but each SELECT clause must maintain the order presented above. See [`UNION` Clause](#oql-union), below.
+The `UNION` clause combines multiple SELECT queries and each of these SELECT queries must maintain the order presented above. See [`UNION` Clause](#oql-union), below.
 
 The domain model used in the various examples is shown below:
 
@@ -1086,7 +1086,7 @@ The syntax is as follows:
     [ OFFSET number ]
 ```
 
-By default, any `order_by_clause`, `LIMIT`, or `OFFSET` in a `UNION` clause will apply to the whole query. If you wrap the `select_query` subquery of a `UNION` in parentheses, you can nest a `UNION` of `select_query` statements, and give each `select_query` its own `order_by_clause`, `LIMIT`, and `OFFSET`, which are then scoped to that subquery. The `UNION` as a whole can have its own `order_by_clause`, `LIMIT`, and `OFFSET`. See [Parenthesized `UNION` Subqueries](#oql-union-parentheses), below, for an example.
+By default, any `order_by_clause`, `LIMIT`, or `OFFSET` in a `UNION` clause will apply to the whole query. Wrapping a select_query in parentheses enables two things: it scopes any order_by_clause, LIMIT, or OFFSET inside the parentheses to only that subquery's results, and it allows a UNION to be nested inside another UNION — for example, SELECT query_a UNION (SELECT query_b UNION SELECT query_c). The outer UNION can still have its own order_by_clause, LIMIT, and OFFSET applying to the final combined result. See [Parenthesized `UNION` Subqueries](#oql-union-parentheses), below, for an example.
 
 {{% alert color="info" %}}
 Adding parentheses in `UNION` clauses was introduced in Mendix version 11.15.0. It is supported only in Java actions.
@@ -1211,7 +1211,7 @@ This feature was introduced in Mendix version 11.15.0. It is supported only in J
 
 You can wrap an individual subquery in parentheses to sort and limit only the results from that subquery rather than the sorting and limiting applying to the result of the `UNION`. This is done by giving each subquery its own `ORDER BY`, `LIMIT` and `OFFSET` clauses.
 
-For example, the following query uses `UNION` to return the brand and location with the highest and lowest stock levels, sorted in ascending order of the amount of stock. 
+For example, the following query uses `UNION` to return the brand and location with the highest and second-lowest stock levels, sorted in ascending order of the amount of stock.
 
 ```sql
 (
@@ -1231,10 +1231,10 @@ UNION
 ORDER BY Stock ASC
 ```
 
-| Brand  | City      | Stock |
-| ------ | ----------| ----- |
-| Veidt  | Utrecht   | 2     |
-| Veidt  | Rotterdam | 23    |
+| Brand  | City       | Stock |
+| ------ | ---------- | ----- |
+| Veidt  | Utrecht    | 2     |
+| Veidt  | Rotterdam  | 23    |
 
 #### Union of Different Types
 

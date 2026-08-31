@@ -74,15 +74,6 @@ The task bar contains a search box that filters the document list. The search bo
 
 The search matches text against all four columns (Status, Document name, Module name, and Details). The match is case-insensitive and applies to any position within the field values. 
 
-The following table describes when the search text is retained or reset:
-
-| Scenario | Behavior | Details |
-|----------|----------|---------|
-| Navigating between levels | Retained | The search text persists when navigating to Level 2 or 3 and returning to Level 1 |
-| Hiding and reopening the **Comparison** tab | Retained | The search text persists when the tab is hidden and later reopened in the same session |
-| Starting a new comparison | Reset | The search text is cleared when a new comparison is started |
-| Closing and reopening the app | Reset | The search text is cleared when Studio Pro is closed and reopened |
-
 #### Context Menu
 
 Right-click any cell in the grid to access the **Copy** option, which copies the cell value to your clipboard.

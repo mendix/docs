@@ -97,7 +97,9 @@ This is standard Azure Private DNS configuration, not something specific to Mend
 
 ##### Option 2: Override DNS Resolution on the Mendix Virtual Network
 
-Configure the Mendix virtual network to use your own DNS server that resolves internal service names, as described in [Microsoft's DNS configuration instructions](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances). The Mendix virtual network is located in the [Managed Resource Group](/developerportal/deploy/mendix-on-azure/configuration/#mrg).
+Configuring the Mendix virtual network to use your own DNS server, as described in [Microsoft's DNS configuration instructions](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances), requires modifying the virtual network itself. Because the Mendix virtual network is located in the [Managed Resource Group](/developerportal/deploy/mendix-on-azure/configuration/#mrg), which is protected by [Azure deny assignments](https://learn.microsoft.com/en-us/azure/role-based-access-control/deny-assignments), you cannot make this change yourself.
+
+To apply this change, [raise a support ticket](/developerportal/deploy/mendix-on-azure/support/) with Mendix Support, specifying your desired DNS server IP addresses and the names of the Mendix on Azure environments the change should be applied to.
 
 ### Solution 2: PrivateLink with Private Endpoints
 

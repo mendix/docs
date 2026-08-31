@@ -9,14 +9,14 @@ description: "Describes the features in Maia for Workflows."
 ## Introduction
 
 {{% alert color="info" %}}
-To use Maia for Workflows, an internet connection and signing in to Studio Pro are required.
+To use Maia for Workflows, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Maia for Workflows helps you generate a [workflow](/refguide/workflows/). It can also provide explanations or further improvements based on the generated elements. The current version has some known limitations. For more details, see the [Limitations](#limitation) section below.
+Maia for Workflows helps you generate a [workflow](/refguide/workflows/). It can also provide explanations or suggest improvements to the generated elements. It has some limitations. For more details, see the [Limitations](#limitation) section below.
 
 ## Using Maia for Workflows
 
-Describe a business process you want to model. Maia uses this information to add relevant workflow activities, and tries to configure them where possible. For more information on how to communicate with Maia to achieve better results when configuring a workflow, see the [Best Practices for Text Input](#text-input-best-practice) section below.
+Describe a business process you want to model. Maia uses this information to add relevant workflow activities and configures them where possible. For more information on how to communicate with Maia to achieve better results when configuring a workflow, see the [Best Practices for Text Input](#text-input-best-practice) section below.
 
 ### Version Availability
 
@@ -30,13 +30,13 @@ Maia for Workflows is not available.
 
 #### Studio Pro 11.7 and Below
 
-To enable Maia for Workflows, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Workflows**. Once enabled, you can find it in the toolbar of a workflow:
+To enable Maia for Workflows, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Workflows**. After you enable it, you can find it in the toolbar of a workflow:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/maia-for-workflows.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/maia-for-workflows.png" alt="" max-width=80% >}}
 
-After clicking **Maia for Workflow**, a chat interface appears at the right side of Studio Pro under the **Maia** tab:
+After clicking **Maia for Workflows**, a chat interface appears on the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/chat-interface.png" max-width=42% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/chat-interface.png" alt="" max-width=42% >}}
 
 ## Limitations {#limitation}
 

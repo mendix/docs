@@ -52,7 +52,7 @@ On pages that have already been created, either by Maia for Pages or manually, y
 In this dedicated chat, only requests related to Pages are handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
-### Limitations {#limitation}
+## Limitations {#limitation}
 
 Maia for Pages does not support all widgets.
 

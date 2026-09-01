@@ -55,7 +55,7 @@ In Studio Pro 11.1 and above, Maia for Domain Model supports adding up to one im
 * The image resolution must be no greater than 3840 × 2400 pixels.
 * The PDF file size must not exceed 1024 KB.
 
-#### Limitations {#limitation}
+## Limitations {#limitation}
 
 Maia for Domain Model has the following limitations:
 

@@ -230,11 +230,13 @@ Below are examples of prompts you can use to ask Maia to make further edits or r
 * Could you identify any potential issues with this document and recommend solutions?
 * Can you give me suggestions to improve this workflow?
 
-#### Workflows
+### Image Input
 
-You can provide a BPMN image representing employee onboarding alongside your text input. Maia can analyze the image, rework it using Mendix Workflows terminology, and generate the corresponding activities. Use text input alongside the image to specify any differences. For example, "Generate a workflow based on this BPMN image, but make sure it waits before sending an email to the new employee."
+The image size is limited to 512 KB. Make sure to select a clear image to help Maia better understand your request. For example, you can provide a screenshot, a photo, a design mock-up, or a close-up picture of a drawing. Avoid heavily compressed or low-quality images, as these may result in the loss of important details.
 
-#### Microflows
+Keep in mind that Maia analyzes only the structure of the image. Maia does not change the theming of your app, such as the color scheme. This can cause some differences between the provided image and the generated page.
+
+### Microflows
 
 When generating microflows, consider the following additional guidelines:
 
@@ -242,11 +244,9 @@ When generating microflows, consider the following additional guidelines:
 * **Use keywords:** Incorporate terms relevant to microflow activities, such as *create object*, *retrieve*, *change object*, *show message*, *loop*, or *decision*. This can help with correct microflow generation.
 * **Provide context:** If your microflow interacts with existing entities or attributes, mention them in your text input.
 
-### Image Input
+### Workflows
 
-The image size is limited to 512 KB. Make sure to select a clear image to help Maia better understand your request. For example, you can provide a screenshot, a photo, a design mock-up, or a close-up picture of a drawing. Avoid heavily compressed or low-quality images, as these may result in the loss of important details.
-
-Keep in mind that Maia analyzes only the structure of the image. Maia does not change the theming of your app, such as the color scheme. This can cause some differences between the provided image and the generated page.
+You can provide a BPMN image representing employee onboarding alongside your text input. Maia can analyze the image, rework it using Mendix Workflows terminology, and generate the corresponding activities. Use text input alongside the image to specify any differences. For example, "Generate a workflow based on this BPMN image, but make sure it waits before sending an email to the new employee."
 
 ## Read More
 

@@ -54,7 +54,7 @@ The chat interface appears on the right side of Studio Pro under the **Maia** pa
 
 You can start using Maia Chat by clicking one of the demo questions. Alternatively, you can ask your own question, and press <kbd>Enter</kbd> or click **Ask** to send the question. For information on the supported shortcut keys in Maia Chat, see the [Maia Chat Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*.
 
-For tips on getting better responses, see the [Best Practices](/portal/maia/#best-practices) section in *Maia in Mendix Portal*.
+For tips on getting better responses, see the [Best Practices](/portal/maia/#best-practices) section in *Maia in Mendix Portal* or the [Text Input](/refguide/maia-make/#text-input) section of *Maia Make Capabilites*.
 
 #### Giving Feedback {#feedback}
 
@@ -66,10 +66,8 @@ There are several ways to give feedback on the generated answer:
 * To provide more detailed feedback, click the add feedback icon ({{% icon name="notes-paper-edit" %}}). A detailed **Feedback** section appears below the answer:
 
     {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-chat/feedback-section.png" alt="" width="250px" >}}
-
-    * You can rate the **correctness**, **completeness**, and **readability** of the answer.
-    * You can add comments in the **Additional feedback** field.
-    * Click **Submit feedback** to send your feedback. Maia Chat then returns you to the main chat interface, where you can continue asking questions.
+    
+Click **Submit feedback** to send your feedback. Maia Chat then returns you to the main chat interface, where you can continue asking questions.
 
 ## Read More
 

@@ -200,9 +200,9 @@ To configure an OpenAI-compatible provider, follow these steps:
 
 The LLM Gateway URL is configured during the installation or upgrade of Private Mendix Platform. For more information, see [Installing Maia for Private Mendix Platform](/private-mendix-platform/interactive-installation/#maia).
 
-## Best Practices
+## Best Practices {#best-practices}
 
-### Text Input
+### Text Input 
 
 To achieve optimal results, provide context about your app or the document you are working on by describing its main use cases, customer needs, or other relevant details. The more Maia knows about what you are building, the more tailored and accurate the generated results will be.
 
@@ -236,7 +236,7 @@ The image size is limited to 512 KB. Make sure to select a clear image to help M
 
 Keep in mind that Maia analyzes only the structure of the image. Maia does not change the theming of your app, such as the color scheme. This can cause some differences between the provided image and the generated page.
 
-### Microflows
+### Microflows {#microflows-best-practices}
 
 When generating microflows, consider the following additional guidelines:
 
@@ -244,7 +244,7 @@ When generating microflows, consider the following additional guidelines:
 * **Use keywords:** Incorporate terms relevant to microflow activities, such as *create object*, *retrieve*, *change object*, *show message*, *loop*, or *decision*. This can help with correct microflow generation.
 * **Provide context:** If your microflow interacts with existing entities or attributes, mention them in your text input.
 
-### Workflows
+### Workflows {#workflows-best-practices}
 
 You can provide a BPMN image representing employee onboarding alongside your text input. Maia can analyze the image, rework it using Mendix Workflows terminology, and generate the corresponding activities. Use text input alongside the image to specify any differences. For example, "Generate a workflow based on this BPMN image, but make sure it waits before sending an email to the new employee."
 

@@ -16,7 +16,7 @@ Maia for Workflows helps you generate a [workflow](/refguide/workflows/). It can
 
 ## Using Maia for Workflows
 
-Describe a business process you want to model. Maia uses this information to add relevant workflow activities and configures them where possible. For more information on how to communicate with Maia to achieve better results when configuring a workflow, see the [Best Practices for Text Input](#text-input-best-practice) section below.
+Describe a business process you want to model. Maia uses this information to add relevant workflow activities and configures them where possible. For more information on how to communicate with Maia to achieve better results when configuring a workflow, see the [Best Practices](/refguide/maia-make/#workflows-best-practices) section of *Maia Make Capabilities*.
 
 ### Version Availability
 

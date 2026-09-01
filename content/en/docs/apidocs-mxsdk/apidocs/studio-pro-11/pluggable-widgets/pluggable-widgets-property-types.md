@@ -65,9 +65,9 @@ This defines a property's type. A `type` must be one of the following:
 
 ### XML Elements
 
-`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio Pro.
+`<caption>` (required) – This defines the property name visible for the user (not the end-user) while configuring the widget in Studio Pro.
 
-`<description>` (required) — This is a description which explains a property's purpose.
+`<description>` (required) – This is a description which explains a property's purpose.
 
 ## Static Types
 
@@ -210,7 +210,7 @@ The enumeration property type allows a user to select one out of multiple option
 
 #### XML Elements
 
-`<enumerationValues>` (required) — One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. A `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
+`<enumerationValues>` (required) – One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. A `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
 
 ```xml
 <enumerationValue key="myEnumOption">My enum option caption</enumerationValue>
@@ -366,7 +366,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements
 
-`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define the return type of the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
+`<returnType>` (required) – An expression property must contain a `<returnType>` element in order to define the return type of the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
 
 The return type of the expression must be defined using either the `type` or the `assignableTo` attribute. It is not allowed to specify both.
 
@@ -454,7 +454,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements
 
-`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/languages-tab/) in Studio Pro.
+`<translations>` – Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/languages-tab/) in Studio Pro.
 
 #### Studio Pro UI
 
@@ -498,13 +498,13 @@ Action properties can be preconfigured using the `defaultValue` and `defaultType
 
 #### XML Elements {#action-xml-elements}
 
-`<actionVariables>` — Defines variables a widget provides when calling [execute() on an ActionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#execute). The variables are made available in Studio Pro when configuring [Call a Microflow](/refguide/on-click-event/#call-microflow) and [Call a Nanoflow](/refguide/on-click-event/#call-nanoflow) actions. Action variables are automatically mapped to parameters of the same name (`key`) and type.
+`<actionVariables>` – Defines variables a widget provides when calling [execute() on an ActionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#execute). The variables are made available in Studio Pro when configuring [Call a Microflow](/refguide/on-click-event/#call-microflow) and [Call a Nanoflow](/refguide/on-click-event/#call-nanoflow) actions. Action variables are automatically mapped to parameters of the same name (`key`) and type.
 
-`<actionVariable>` (required one or more) — Represents a primitive value provided by the widget as an argument when calling `ActionValue.execute()`. The variable is defined by the following attributes:
+`<actionVariable>` (required one or more) – Represents a primitive value provided by the widget as an argument when calling `ActionValue.execute()`. The variable is defined by the following attributes:
 
-* `key` (required) — The identifier of the variable used in Studio Pro and the Pluggable Widgets API.
-* `type` (required) — The type of the value that the variable represents. Supported types and their corresponding Typescript type are listed in the table below.
-* `caption` (required) — A short description of the variable that is displayed in Studio Pro.
+* `key` (required) – The identifier of the variable used in Studio Pro and the Pluggable Widgets API.
+* `type` (required) – The type of the value that the variable represents. Supported types and their corresponding Typescript type are listed in the table below.
+* `caption` (required) – A short description of the variable that is displayed in Studio Pro.
 
 | Action Variable Type | Client Type  |
 | -------------------- | --------- |
@@ -566,9 +566,9 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements
 
-`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio Pro.
+`<attributeTypes>` (required) – This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio Pro.
 
-`<attributeType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
+`<attributeType>` (required one or more) – This element defines the allowed attribute type in the `name` attribute.
 
 | Supported Attribute Types | Corresponding Types Client Components Receive |
 |---------------------------|-----------------------------------------------|
@@ -629,9 +629,9 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements
 
-`<associationTypes>` (required) — This element encapsulates `<associationType>` elements which declare supported association types available while configuring the association property in Studio Pro.
+`<associationTypes>` (required) – This element encapsulates `<associationType>` elements which declare supported association types available while configuring the association property in Studio Pro.
 
-`<associationType>` (required one or more) — this element defines the allowed association type in the `name` attribute.
+`<associationType>` (required one or more) – This element defines the allowed association type in the `name` attribute.
 
 | Supported Attribute Types | Corresponding Types Client Components Receive |
 |---------------------------|-----------------------------------------------|
@@ -677,7 +677,7 @@ The object property type allows to create an arbitrary list of properties.
 
 #### XML Elements
 
-`<properties>` (required) — This encapsulates the list or properties to be configured. For more information on property groups, see the [Property Groups](/apidocs-mxsdk/apidocs/pluggable-widgets/#property-groups) section of *Pluggable Widgets API*. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
+`<properties>` (required) – This encapsulates the list or properties to be configured. For more information on property groups, see the [Property Groups](/apidocs-mxsdk/apidocs/pluggable-widgets/#property-groups) section of *Pluggable Widgets API*. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
 
 #### Studio Pro UI
 
@@ -849,9 +849,9 @@ The `dataSource` attribute must refer to a [list data source](#list-datasource).
 
 #### XML Elements
 
-`<selectionTypes>` (required) — This element encapsulates `<selectionType>` elements which declare supported selection types available while configuring the selection property in Studio Pro.
+`<selectionTypes>` (required) – This element encapsulates `<selectionType>` elements which declare supported selection types available while configuring the selection property in Studio Pro.
 
-`<selectionType>` (required one or more) — This element defines the selection type in the `name` attribute.
+`<selectionType>` (required one or more) – This element defines the selection type in the `name` attribute.
 
 | Supported Selection Types | Corresponding Types Client Components Receive |
 |---------------------------|-----------------------------------------------|

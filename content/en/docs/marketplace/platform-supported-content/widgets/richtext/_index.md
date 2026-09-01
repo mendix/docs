@@ -342,5 +342,6 @@ Rich Text version 4 still has limitations that we will continue improving in the
     * Table caption
 
 Rich Text version 5 offers "class" styling to allow Rich Text to works in a strict CSP environment. This  has limitations that we will continue to improve in the future. Current notable limitations are as follows:
+
 * Resizing image, video, and tables does not work properly
 * Switching format from inline to class causes partial data loss on styling

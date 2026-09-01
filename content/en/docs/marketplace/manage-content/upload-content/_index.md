@@ -25,13 +25,13 @@ Before diving in, make sure you have read [Marketplace Home Page](/appstore/home
 To get started, click **Add Content** in the left panel of the Marketplace home screen. You are presented with the **Before You Get Started** dialog, which outlines the resources you will need for uploading your component.
 
 Once you make sure you have everything, click **Next**, then go through the steps in the following sections to add content.    
-Some fields are mandatory, while others are optional — this is indicated in the user interface.
+Some fields are mandatory, while others are optional—this is indicated in the user interface.
 
 On each page of the upload flow, click one of these buttons:
 
-* **Save and Exit** — Save the details you have entered so far for the draft. You can access the draft via the [My Drafts](/appstore/home-page/#my-drafts) link in the top bar.    
+* **Save and Exit** – Save the details you have entered so far for the draft. You can access the draft via the [My Drafts](/appstore/home-page/#my-drafts) link in the top bar.    
   This button is not displayed if you are editing a component.
-* **Next** — Go to the next page of the upload flow.
+* **Next** – Go to the next page of the upload flow.
 
 ### Uploading a Component {#general}
 
@@ -185,8 +185,8 @@ From the preview window, you can either return to the editing flow, or publish t
 
 If you choose to publish the component, you will see one of these two buttons:
 
-* **Publish Component** — This is displayed when publishing a new component or component version.
-* **Publish Changes** — This is displayed when publishing changes to an existing component.
+* **Publish Component** – This is displayed when publishing a new component or component version.
+* **Publish Changes** – This is displayed when publishing changes to an existing component.
 
 ### Publishing {#publish} 
 

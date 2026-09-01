@@ -224,11 +224,10 @@ Congratulations for completing this NFC tutorial! To go beyond the lessons you h
 
 ### Hardening the Code {#hardening-nfc-action-code}
 
-Now you have a working NFC scanner. However, you can improve it for both Android and iOS.
+Now you have a working NFC scanner. However, you can improve it for both Android and iOS:
 
-**On Android** — NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
-
-**On iOS** — Scanning can be canceled when the **Ready to Scan** dialog box is up. 
+* **On Android** – NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
+* **On iOS** – Scanning can be canceled when the **Ready to Scan** dialog box is up. 
 
 To implement these capabilities, replace all the **USER CODE** in the **ReadNFCTag** JavaScript action with the following code, then repeat the steps in the [Building a Native Custom Developer App](#custom-developer-app) section above to build and install the updated app on your device:
 

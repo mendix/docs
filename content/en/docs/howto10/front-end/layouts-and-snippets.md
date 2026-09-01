@@ -22,8 +22,8 @@ This section describes what a layout consists of and what its value is.
 
 When you look at a page, you can see that a page consists of two important components:
 
-* Layout — the structure of the page (just like PowerPoint has one or more layout presets)
-* Content — what is displayed within the structure of the page
+* Layout – The structure of the page (just like PowerPoint has one or more layout presets).
+* Content – What is displayed within the structure of the page.
 
 While modeling the pages, you select a layout when a page is created.
 

@@ -35,7 +35,7 @@ While the data that is viewable and editable to each role is application-specifi
 
 You can review and manage your entity access settings in the Security Overview in Mendix Studio Pro. This overview shows you your application's security configuration and allows you to verify which roles have access to specific entities and attributes (for more information, see [Security Overview](/refguide/security-overview/)).
 
-## Separating Security and Business Information
+## Separating Business Data from User Accounts
 
 If you have business information that is also related to end-users of your app, do not combine the business information with the end-user by using specializations of `System.User`. Keep business information and app security information separate. If you want to link business data to a user, use associations to link them.
 

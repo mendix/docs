@@ -257,9 +257,9 @@ The following items are available:
 
 * **Communication** – This section is made up of the following tabs:
 
-    * **Team Comments** — Displays all the comments left by your team for this feedback. You can leave comments here and add attachments to each comment.     
+    * **Team Comments** – Displays all the comments left by your team for this feedback. You can leave comments here and add attachments to each comment.     
       Comments submitted to this tab are only visible to your team members.
-    * **Contact Submitter** — Allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email.   
+    * **Contact Submitter** – Allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email.   
       For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
 
 ### Creating Stories with Maia {#create-with-maia}

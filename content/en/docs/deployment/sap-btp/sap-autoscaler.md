@@ -25,7 +25,7 @@ Selecting the **autoscaler** service expands the entry to allow you to enter mor
 You need to specify the following:
 
 * **Plan** – the plan you wish to use for the autoscaler, either *Lite* or *Standard*
-* **File** – the file which contains the JSON to configure the autoscaler — more information, including the contents of the configuration file can be found in [Application Autoscaler Service](https://help.sap.com/docs/application-autoscaler/application-autoscaler/defining-scaling-policy) on the SAP Help Portal
+* **File** – the file which contains the JSON to configure the autoscaler—more information, including the contents of the configuration file can be found in [Application Autoscaler Service](https://help.sap.com/docs/application-autoscaler/application-autoscaler/defining-scaling-policy) on the SAP Help Portal
 
 Having provided this information, you can click **Connect Services** to connect the autoscaler to your app.
 

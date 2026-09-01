@@ -71,6 +71,8 @@ Depending on the LLM and Knowledge bases used in your setup, you need to install
 * [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) for Mendix Cloud GenAI resources (text generation and knowledge bases)
 * [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) for Azure AI Foundry resources (text generation model deployments supporting chat completions)
 
+If you configure [Published MCP services](#published-mcp-service), install the [MCP Server](https://marketplace.mendix.com/link/component/240380) module.
+
 In addition, ensure the following widgets are available in your app:
 
 * [Events Widget](https://marketplace.mendix.com/link/component/224259)
@@ -276,11 +278,34 @@ To change any agentic logic, update the Agent documents (and related documents) 
 
 Use version control to view and restore previous agent versions. This lets you inspect earlier committed states of the Agent document and related documents, compare changes over time, and restore configurations as needed.
 
+## Configuring Published MCP Services {#published-mcp-service}
+
+You can publish an MCP server from Agent Editor to expose tools from your app to external agents and other MCP clients. This configuration uses the [MCP Server module](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/). For detailed information about securing an MCP server, see the MCP Server module documentation.
+
+To create a published MCP service, right-click the module or folder where you want to create the document in the **App Explorer**, then select **Add other** > **Published MCP service**.
+
+In the published MCP service document, configure the following fields:
+
+* **Name**: Enter the name of the MCP service.
+* **Version**: Enter a version for the MCP service in semantic versioning format. This defaults to `1.0.0`.
+* **Endpoint**: Enter the path to append to the app URL. External MCP clients use this endpoint to connect to the service. The endpoint path may only contain lowercase letters, numbers, hyphens, underscores, and forward slashes.
+* **Protocol version**: Select the MCP protocol version that connecting clients must support. This defaults to `v2025_03_26`.
+* **Requires authentication**: Select whether MCP clients must be authenticated. Mendix recommends setting up authentication if the Mendix application is reachable outside of your local environment. If set to **No**, the MCP service is accessible to anyone without authentication. When authentication is required, select a microflow that authenticates incoming requests. The microflow input can only be `System.HttpRequest` and/or `MCPServer.MCcperver`, and its output must be `System.User`. Return empty if authentication fails.
+
+To add tools, click **New** in the **Tools** section and configure the following fields:
+
+* **Microflow**: Input parameters can only be primitives and/or `MCPServer.Tool`. The return type must be a String or `MCPServer.TextContent`.
+* **Name**: The tool name must be unique within the same published MCP service. The tool name may only contain ASCII letters, numbers, underscores, hyphens, and dots.
+* **Description**: A description of the tool so external agents can determine when to use it.
+* **Title**: Optionally, provide a human-readable title for the tool for display purposes.
+* **Schema**: Optionally, provide a schema that matches the microflow input parameters. If you leave the schema empty, it is extracted from the microflow's input parameters and all parameters are set as required.
+
 ## Known Limitations {#limitations}
 
 * Currently, Agent Editor supports Mendix Cloud GenAI and Azure AI Foundry for text generation models and Mendix Cloud GenAI for knowledge bases. Support for other providers, such as OpenAI and Amazon Bedrock, is planned for a future release.
 * Support for Mac users is limited. Some functionalities might not work, such as doing a test call for Model documents. Mendix recommends using Studio Pro on Windows to use all features of Agent Editor.
 * MCP tool support is limited to whole-server integration. Selecting individual tools from a consumed MCP service to be added to an agent is not yet supported. That also means that the tool choice option `Tool` can only refer to a microflow tool currently.
+* Published MCP services support tools only. Adding prompts is not currently supported.
 * If a document referenced by an Agent document is excluded, Studio Pro shows a consistency error. These consistency errors may not be resolved automatically when you include the excluded document again. Resolve this by synchronizing the app directory (<kbd>F4</kbd>) or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again).
 * The extension creates a `/agenteditor` log folder in the app directory. This folder is not excluded from version control automatically when you include the module from Marketplace. Add this folder to `.gitignore` manually, as described in the [First-time setup](#setup) section.
 * Streaming and user permissions for tools and knowledge bases can be configured, but these settings are not reflected in the playground in Studio Pro. They are applied at runtime when calling an agent defined in Studio Pro.

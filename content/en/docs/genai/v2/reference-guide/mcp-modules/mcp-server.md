@@ -19,6 +19,10 @@ The [MCP Server](https://marketplace.mendix.com/link/component/240380) module pr
 
 To use function calling within the same Mendix application and integrating to an LLM, consider [function calling](/agents/function-calling/).
 
+{{% alert color="info" %}}
+Agent Editor provides a simplified Studio Pro configuration experience for publishing MCP services. This configuration uses the MCP Server module to expose tools to external MCP clients. For more information, see [Configuring Published MCP Service](/agents/agents-kit-2/reference-guide/agent-editor/#published-mcp-service).
+{{% /alert %}}
+
 ### Limitations {#limitations}
 
 The current version has the following limitations:

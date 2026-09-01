@@ -37,6 +37,10 @@ Maia Chat uses the following data sources:
 
 ## Using Maia Chat
 
+You can start using Maia Chat by clicking one of the demo questions. Alternatively, you can ask your own question, and press <kbd>Enter</kbd> or click **Ask** to send the question. For information on the supported shortcut keys in Maia Chat, see the [Maia Chat Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*.
+
+For tips on getting better responses, see the [Best Practices](/portal/maia/#best-practices) section in *Maia in Mendix Portal* or the [Text Input](/refguide/maia-make/#text-input) section of *Maia Make Capabilites*.
+
 ### In Studio Pro 11.8 and Above
 
 In Studio Pro 11.8 and above, Maia Chat is incorporated into the unified Maia Make capabilities, which are enabled by default. Maia Chat does not have a dedicated interface. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
@@ -51,10 +55,6 @@ In Studio Pro 11.7 and below, there are two ways to access Maia Chat in Studio P
 The chat interface appears on the right side of Studio Pro under the **Maia** pane:
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-chat/maia-chat-interface.png" alt="" width="250px">}}
-
-You can start using Maia Chat by clicking one of the demo questions. Alternatively, you can ask your own question, and press <kbd>Enter</kbd> or click **Ask** to send the question. For information on the supported shortcut keys in Maia Chat, see the [Maia Chat Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*.
-
-For tips on getting better responses, see the [Best Practices](/portal/maia/#best-practices) section in *Maia in Mendix Portal* or the [Text Input](/refguide/maia-make/#text-input) section of *Maia Make Capabilites*.
 
 #### Giving Feedback {#feedback}
 

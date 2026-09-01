@@ -18,6 +18,10 @@ Maia for Domain Model helps you generate new [domain models](/refguide/domain-mo
 
 ## Using Maia for Domain Model
 
+Describe your application or its main goals in the chat. Maia uses this information to generate a relevant domain model for you. In Studio Pro 11.1 and above, you can also attach up to one image and one PDF to help Maia better understand your request. For more information, see the [Attachment Requirements](#attachment-requirements) section below.
+
+After Maia generates a domain model, if the dedicated chat is still active, you can continue asking Maia to add entities and associations to the domain model. Maia also supports adding more attributes to an existing entity in the domain model. You can also ask Maia to explain or improve the generated domain model.
+
 ### In Studio Pro 11.8 and Above
 
 In Studio Pro 11.8 and above, Maia for Domain Model is incorporated into the unified Maia Make capabilities, which are enabled by default. Maia for Domain Model does not have a dedicated interface. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
@@ -33,10 +37,6 @@ If you want to disable this feature, go to **Edit** > **Preferences** > the **Ma
 After clicking **Maia for Domain Model**, a dedicated chat interface appears on the right side of Studio Pro under the **Maia** tab:
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-domain-model/chat-interface.png" alt="" max-width=42% >}}
-
-Describe your application or its main goals in the chat. Maia uses this information to generate a relevant domain model for you. In Studio Pro 11.1 and above, you can also attach up to one image and one PDF to help Maia better understand your request. For more information, see the [Attachment Requirements](#attachment-requirements) section below.
-
-After Maia generates a domain model, if the dedicated chat is still active, you can continue asking Maia to add entities and associations to the domain model. Maia also supports adding more attributes to an existing entity in the domain model. You can also ask Maia to explain or improve the generated domain model.
 
 {{% alert color="info" %}}
 Maia for Domain Model does not support deleting items in the domain model. You can always delete them manually. 

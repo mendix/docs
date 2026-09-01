@@ -14,6 +14,17 @@ To use Maia Explain, you need an internet connection and must be signed in to St
 
 ## Using Maia Explain
 
+The initial answer consists of two parts:
+
+* **Explanation** – provides a high-level overview of the logic, including its overall purpose
+* **Technical Highlights** – highlights the technical and functional details of the logic, including any input parameters and return value, if available
+
+Maia Explain supports follow-up questions. You can modify the tone of the answer, request further clarification, or ask for suggestions to improve the logic. Below are examples of what you can type as follow-up questions or requests:
+
+* *Explain again, but in 10 words.*
+* *Explain again, but in much greater detail. Be very thorough.*
+* *What are your suggestions to improve this microflow?*
+
 ### In Studio Pro 11.8 and Above
 
 In Studio Pro 11.8 and above, Maia Explain is part of the unified Maia Make capabilities, which are enabled by default. Maia Explain does not have a dedicated interface. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
@@ -39,17 +50,6 @@ There are two ways to use Maia Explain:
 Studio Pro sends a message to Maia, and a chat interface with an initial answer appears on the right side under the **Maia** tab:
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-explain/maia-explain-interface.png" alt="" width="300px">}}
-
-The initial answer consists of two parts:
-
-* **Explanation** – provides a high-level overview of the logic, including its overall purpose
-* **Technical Highlights** – highlights the technical and functional details of the logic, including any input parameters and return value, if available
-
-Maia Explain supports follow-up questions. You can modify the tone of the answer, request further clarification, or ask for suggestions to improve the logic. Below are examples of what you can type as follow-up questions or requests:
-
-* *Explain again, but in 10 words.*
-* *Explain again, but in much greater detail. Be very thorough.*
-* *What are your suggestions to improve this microflow?*
 
 {{% alert color="info" %}}
 In this dedicated chat, only requests related to Maia Explain are properly handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.

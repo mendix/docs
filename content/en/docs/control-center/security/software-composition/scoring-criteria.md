@@ -36,8 +36,8 @@ For example, if you set a **Low** severity to 30 days, and if a new version of t
 
 There are two ways to adjust the scoring criteria:
 
-* Change the condition — You can increase the number of days so the teams have more time to update their apps.
-* Turn off the finding — You can turn off some or all findings if you do not want teams to focus on them.
+* Change the condition – You can increase the number of days so the teams have more time to update their apps.
+* Turn off the finding – You can turn off some or all findings if you do not want teams to focus on them.
 
 ### Deprecated
 

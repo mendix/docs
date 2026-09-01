@@ -169,7 +169,7 @@ The **Policy Status** tab at the deployment package level displays a list of the
     * **Failure Condition(s)** – The conditions under which the policy is considered violated.
     * **Checkpoints & Action(s)** – The trigger which causes the policy to be checked, and the action that is taken if the policy is violated.
 
-* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+* **Column customization** ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 You can search a policy by its name, and export all information on this tab to an Excel file.
 
@@ -260,7 +260,7 @@ The finding list contains the following information:
     * Deprecated components: The current date - The date when the component was deprecated    
     * Outdated components: The current date - The publish date of the first higher runtime compatible version
 
-* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+* **Column customization** ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 ##### Finding and Component Details
 

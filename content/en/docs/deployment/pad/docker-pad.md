@@ -220,7 +220,7 @@ The following log levels are supported (in order of verbosity):
 
 | Log Level | Description |
 | --------- | ----------- |
-| `TRACE` | Most verbose — logs all internal operations |
+| `TRACE` | Most verbose—logs all internal operations |
 | `DEBUG` | Detailed diagnostic information |
 | `INFO` | General operational messages (default) |
 | `WARNING` | Potentially harmful situations |
@@ -234,8 +234,8 @@ The Mendix Runtime exposes health check endpoints that can be used to monitor th
 | EndPoint | Description |
 | -------- | ----------- |
 | `/health` | Returns the overall health status of the app |
-| `/health/live` | Returns the liveness status — indicates if the app is running |
-| `/health/ready` | Returns the readiness status — indicates if the app is ready to serve traffic |
+| `/health/live` | Returns the liveness status—indicates if the app is running |
+| `/health/ready` | Returns the readiness status—indicates if the app is ready to serve traffic |
 
 These endpoints are especially useful when integrating with orchestration platforms such as Kubernetes, which rely on liveness and readiness probes to manage container lifecycle.
 

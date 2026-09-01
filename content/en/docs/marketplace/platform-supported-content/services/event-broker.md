@@ -100,7 +100,7 @@ From here, you can manage the default access settings:
 Mendix Event Broker Bridges was released for GA in 11.4.0.
 {{% /alert %}}
 
-Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and external technologies, such as AWS SQS, HTTP, Azure Blob Storage, and AWS S3. These bridges enable the exchange of events between your Mendix Cloud environment and external systems, ensuring efficient communication across diverse technological landscapes.
+Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and external technologies, such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, and Apache Iceberg. These bridges enable the exchange of events between your Mendix Cloud environment and external systems, ensuring efficient communication across diverse technological landscapes.
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_bridges.png" class="no-border"  >}}
 
@@ -147,6 +147,7 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
     * **HTTP** – one-way bridge that uses HTTP requests to send events from external systems to the Mendix Event Broker
     * **Azure Blob Storage** – one-way bridge that receives events via Azure object storage
     * **AWS S3** – one-way bridge that receives events via AWS object storage
+    * **Iceberg** – one-way bridge that delivers [Change Data Capture (CDC)](/refguide/change-data-capture/) events to Apache Iceberg tables stored in AWS S3 or Azure Blob Storage
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/ebb_general_bridge_create.png" >}}
 
@@ -156,6 +157,8 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
     * For instructions on configuring HTTP, see [Configuring a Bridge with HTTP](#bridge-with-http).
     * For instructions on configuring Azure Blob Storage, see [Configuring a Bridge with Azure Blob Storage](#bridge-with-azure-blob-storage).
     * For instructions on configuring AWS S3, see [Configuring a Bridge with AWS S3](#bridge-with-aws-s3).
+    * For instructions on configuring Iceberg, see [Configuring a Bridge with Iceberg](#bridge-with-iceberg).
+
 
 4. After configuring the service and connecting events (as described in the bridge-specific sections above), click **Start** on the confirmation screen to deploy the bridge.
 
@@ -435,21 +438,73 @@ The policy above grants the minimum required permissions for the Event Broker to
 
 Use the Role ARN and External ID when configuring your AWS S3 bridge in the Event Broker Manager.
 
+### Configuring a Bridge with Iceberg {#bridge-with-iceberg}
+
+#### Configure Service
+
+1. Configure the service by filling out the following:
+
+    * **Event Broker Space** – the space where the bridge operates
+    * **Name** – a name for the bridge
+    * **Choose a data lake** – the data lake that Iceberg uses to store your data
+        * **Azure Blob Storage**
+            * **Storage Account** – the storage account to access
+            * **Storage SAS Token** – the SAS token used to access the storage account
+            * **Container** – the container where the data is stored
+        * **AWS S3**
+            * **Bucket** – the bucket where the data is stored
+            * **AWS Region for Bucket** – the AWS region where the bucket is located
+            * **AWS Role (to Assume)** – the AWS role to assume for the required permissions 
+
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_configure.png" alt="" width="400" >}}
+
+#### Connect Events
+
+Select the CDC events that you want to deliver from the Event Broker to Iceberg:
+
+1. Click **Add CDC Events** to open a dialog box displaying the available CDC events managed by the Event Broker. Only events that can be subscribed to are shown because the bridge delivers events in one direction, from the Event Broker to Iceberg.
+
+   {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_connect_events.png" alt="" width="400" >}}
+
+2. Select one or more CDC events to integrate. The Iceberg connection configuration is automatically generated based on the selected events.
+
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_choose_cdc_events.png" alt="" width="400" >}}
+
+3. Click **Next** to review and confirm the bridge configuration.
+
+#### Overview of Iceberg Bridge
+
+After the bridge is created, you can view its configuration and status on the **Overview** page.
+
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_overview.png" alt="" class="no-border" width="400" >}}
+
+Check the **Bridge Status** on the **Overview** page to verify that it is ready and operating as expected. The following list describes the possible bridge statuses.
+
+#### Bridge Statuses
+
+* **Halted** – The bridge has stopped because an internal component failed. Data is not being delivered.
+* **Provisioning** – The bridge is being created or initialized and is not yet ready to deliver data.
+* **Delivering** – The bridge is healthy, fully configured, and actively delivering data to the destination.
+* **Misconfigured** – The bridge is running, but its data flow is not healthy or cannot be fully verified. Check the bridge configuration and data flow.
+* **Reconfiguring** – The bridge is applying configuration changes. Data delivery may be temporarily interrupted until the new configuration is synchronized.
+* **Awaiting Data** – The bridge is running and ready, but no source data is currently flowing. Data delivery will begin when data becomes available.
+
 ### Managing Bridges
 
 After creating a bridge, you can modify and manage its configuration through the Event Broker Manager.
 
 #### Editing Bridges
 
-You can edit HTTP, Azure Blob Storage, and AWS S3 bridges to modify their configuration as your integration requirements evolve, without needing to recreate the bridge.
+You can edit HTTP, Azure Blob Storage, AWS S3, and Iceberg bridges to modify their configuration as your integration requirements evolve, without needing to recreate the bridge.
 
-{{% alert color="info" %}}You can only edit a bridge when its status is **Running**.{{% /alert %}}
+{{% alert color="info" %}}You can edit HTTP, Azure Blob Storage, and AWS S3 bridges only when their status is **Running**. You can edit an Iceberg bridge only when its status is **Delivering**.{{% /alert %}}
 
 You can edit:
 
 * **HTTP Bridge** – add or remove business events
 * **Azure Blob Storage Bridge** – add or remove business events, update Storage Account, Storage SAS Token, Container Path, or Prefix Path
 * **AWS S3 Bridge** – add or remove business events, update Bucket, AWS Region for Bucket, or Prefix Path
+* **Iceberg Bridge** – add or remove CDC events
 
 To edit a bridge:
 
@@ -459,17 +514,27 @@ To edit a bridge:
 
     In editing mode, you can perform the following actions:
 
-      * **Add Business Events**:
+      * **Add Business Events** (HTTP, Azure Blob Storage, and AWS S3):
 
           1. Click **Add Business Events** to open a dialog that displays available events.
           2. Select the events you want to add and click **Select**. Added events will display an **Added** badge and can be removed before applying changes.
 
-      * **Remove Business Events**:
+           {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_http_edit_mode.png" class="no-border" >}}
+
+      * **Remove Business Events** (HTTP, Azure Blob Storage, and AWS S3):
 
           1. Navigate to the event you want to remove and click **Remove**. Removed events will display a **Removed** badge, and their name and metadata will appear grayed out.
           2. Re-add a removed event by clicking **Add** before applying changes.
 
-           {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_http_edit_mode.png" class="no-border" >}}
+      * **Add CDC Events** (Iceberg):
+
+          1. Click **Add CDC Events** to open a dialog box that displays available CDC events.
+          2. Select the CDC events you want to add and click **Select**. Added events display an **Added** badge and can be removed before applying changes.
+
+      * **Remove CDC Events** (Iceberg):
+
+          1. Navigate to the CDC event you want to remove and click **Remove**. Removed events display a **Removed** badge, and their name and metadata appear grayed out.
+          2. To re-add a removed CDC event, click **Add** before applying changes.
       
       * **Update Service Configuration** (Azure Blob Storage and AWS S3 only):
       
@@ -485,8 +550,12 @@ To edit a bridge:
         **AWS S3** 
         {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_aws_s3_edit_mode.png" class="no-border" >}}
 
+        **Iceberg**
+        {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_iceberg_edit_mode.png" class="no-border" >}}
+
+
 4. Once you have made your changes, you can:
-   * Click **Apply** to save and apply the changes. A confirmation message will indicate if the changes were successful. Changes to the event configuration take effect when applied. After applying changes, the bridge status will change to **Reconfiguring** and will return to **Running** once the reconfiguration is complete.
+    * Click **Apply** to save and apply the changes. A confirmation message will indicate if the changes were successful. Changes to the event configuration take effect when applied. After applying changes, the bridge status will change to **Reconfiguring** and will return to **Running** for HTTP, Azure Blob Storage, and AWS S3 bridges, or **Delivering** for Iceberg bridges, once the reconfiguration is complete.
    * Click **Cancel** to exit editing mode without saving any changes.
 
 {{% alert color="info" %}}

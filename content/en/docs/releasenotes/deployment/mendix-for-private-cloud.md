@@ -33,6 +33,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 #### Deploy API
 
 * We have added a force-delete capability for app environments.
+* We have added support for configuring Pod Disruption Budget parameters (`podDisruptionMinAvailable` and `podDisruptionMaxUnavailable`) in the environment deployment strategy through the Deploy API.
 
 ### August 14, 2026
 

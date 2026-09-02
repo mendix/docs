@@ -71,6 +71,8 @@ The user role assigned to the Administrator. For more information, see [User Rol
 
 Default: *Administrator*
 
+{{% todo %}}Not true that System.Administrator does user management - that is in Manageable Roles{{% /todo %}}
+
 {{% alert color="info" %}}
 The administrator is always created and has the System.Administrator role by default. The System.Administrator role allows users of your application to be managed. 
 

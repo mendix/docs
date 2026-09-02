@@ -1,7 +1,7 @@
 ---
 title: "Configure a Bridge with HTTP"
 url: /appstore/services/http-bridge/
-linktitle: "Configure a Bridge with HTTP"
+linktitle: "HTTP Bridge"
 ---
 
 ## Introduction

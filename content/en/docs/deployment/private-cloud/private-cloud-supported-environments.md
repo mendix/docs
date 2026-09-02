@@ -33,6 +33,12 @@ For STACKIT Kubernetes Engine, customers provision the SKE cluster, PostgreSQL F
 
 Any Kubernetes version offered by SKE that falls within the [Supported Versions](#supported-versions) range is supported.
 
+### Azure Government Cloud{#azure-government}
+
+[Microsoft Azure Government](https://azure.microsoft.com/en-us/explore/global-infrastructure/government/) (also known as Azure US Government Cloud) is a fully supported deployment environment for Mendix on Kubernetes, using Azure Kubernetes Service (AKS) provisioned in Azure Government regions.
+
+The Mendix Operator automatically detects when it is running in Azure Government and uses the corresponding Government service endpoints (for Azure Resource Manager, Azure Blob Storage, and Azure Database for PostgreSQL) - no additional configuration is required.
+
 {{% alert color="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
 {{% /alert %}}

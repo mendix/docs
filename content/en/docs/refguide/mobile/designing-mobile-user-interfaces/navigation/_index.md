@@ -69,7 +69,7 @@ There are only a few steps needed to be done to create a **Sidebar** in your nat
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/includesidebar.png" alt="Include a sidebar" >}}
 
-Then, decide which screen in your project will have a **Sidebar** and apply the appropriate layout — **NativePhone_SideMenu** in our case:
+Then, decide which screen in your project will have a **Sidebar** and apply the appropriate layout—**NativePhone_SideMenu** in our case:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/selectsidebarlayout.png" alt="Select a sidebar layout" >}}
 

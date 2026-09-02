@@ -71,15 +71,15 @@ Most major providers—including GitHub and Figma—do not support automatic cli
 
 1. Go to [GitHub Developer Settings](https://github.com/settings/developers) and click **New OAuth App**.
 2. Fill in the following information:
-    * **Application name** — for example, `Mendix Studio Pro`
-    * **Homepage URL** — for example, `https://mendix.com`
-    * **Authorization callback URL** — `http://localhost:44380/mcp/oauth/callback` (GitHub allows only one; see [Callback URL](#callback-url))
+    * **Application name** – for example, `Mendix Studio Pro`
+    * **Homepage URL** – for example, `https://mendix.com`
+    * **Authorization callback URL** – `http://localhost:44380/mcp/oauth/callback` (GitHub allows only one; see [Callback URL](#callback-url))
 3. Click **Register application**, then copy the **Client ID**.
-4. Click **Generate a new client secret** and copy it — GitHub shows it only once.
+4. Click **Generate a new client secret** and copy it – GitHub shows it only once.
 5. In Studio Pro, add a server with the following details:
-    * **URL** — `https://api.githubcopilot.com/mcp/`
-    * **Authentication** — **OAuth 2.1**
-    * **Client ID** and **Client Secret** — from the steps above
+    * **URL** – `https://api.githubcopilot.com/mcp/`
+    * **Authentication** – **OAuth 2.1**
+    * **Client ID** and **Client Secret** – from the steps above
 6. Click **Add**, authorize in the browser, and the connection completes.
 
 {{% alert color="info" %}}

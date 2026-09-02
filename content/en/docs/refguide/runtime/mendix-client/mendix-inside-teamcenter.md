@@ -11,14 +11,12 @@ beta: true
 {{% alert color="info" %}}
 Mendix inside Teamcenter is available in Mendix version 11.12.0 and above and is currently in public Beta.
 
-The Teamcenter connector version 2606.0.0 is required but is not yet published so this documentation is currently for information purposes only.
-
 See the [prerequisites](#prerequisites) for other version requirements.
 {{% /alert %}}
 
 Mendix inside Teamcenter lets you embed a Mendix web app as a native component inside Siemens Teamcenter Active Workspace. The Mendix app runs directly in the Active Workspace page as a micro-frontend using the [Embedded Client](/refguide/mendix-client/embedding-the-client/) feature.
 
-This integration requires the [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/) to connect the Mendix app to Teamcenter data and to handle authentication.
+This integration requires the [Teamcenter Connector](/appstore/industry/teamcenter-connector/) to connect the Mendix app to Teamcenter data and to handle authentication.
 
 ## Prerequisites {#prerequisites}
 
@@ -26,10 +24,8 @@ The following versions are required:
 
 | | Mendix | Teamcenter | Teamcenter Connector |
 | --- | --- | --- | --- |
-| **Beta** | 11.12 or above | 2512 | 2606.0.0 or above¹ |
+| **Beta** | 11.12 or above | 2512 | 2606.0.0 or above |
 | **GA (planned)** | 11.18 | 2612 | TBD |
-
-¹ This version is not yet published.
 
 The following requirements must also be met:
 
@@ -39,7 +35,7 @@ The following requirements must also be met:
 * The browser allows cross-site cookies for the Mendix domain. This can be configured per-domain via organization policy (for example, using Intune).
 * There is bidirectional network connectivity between the user's browser and both the Mendix runtime and the Teamcenter server.
 
-For Teamcenter Connector prerequisites, see [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/#prerequisites).
+For Teamcenter Connector prerequisites, see [Teamcenter Connector](/appstore/industry/teamcenter-connector/#prerequisites).
 
 ## Setting Up the Mendix App
 
@@ -110,10 +106,10 @@ The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a 
 
 ### Adding the Component to Active Workspace{#adding-component}
 
-1. Obtain the `MendixEmbedded` component from [GitHub](https://github.com/mendixlabs/mendix-inside-teamcenter).
-2. Install the component into your Active Workspace stage repository under `src/repo`.
-3. Configure the component with the URL of your Mendix runtime.
-4. Optionally, set up context passing. For more information, see [Passing Context from Teamcenter](#passing-context).
+1. Obtain the `mx-in-tc` kit (containing the `MendixEmbedded` component) from the [mendix-inside-teamcenter](https://github.com/mendixlabs/mendix-inside-teamcenter) repo on GitHub.
+2. Install the kit in your Active Workspace stage repository under `src/repo`.
+3. Configure the `MendixEmbedded` component with the URL of your Mendix runtime.
+4. Optionally, configure context passing. For more information, see [Passing Context from Teamcenter](#passing-context).
 5. Rebuild Active Workspace using `awbuild.cmd`.
 
 To verify the component was picked up correctly, check that its view model entry exists in the `src/repo/out/pathMap.json` registry file in the build output.
@@ -145,6 +141,20 @@ To display the Mendix app on an Active Workspace page, add its card definition t
 Add the **Mendix** JSON object (or the name you gave it) to the relevant layout handler grid and rebuild Active Workspace. If the Mendix card does not appear after rebuilding, clear the browser cache to ensure the new chunk is loaded.
 
 Detailed Active Workspace customization and build steps are outside the scope of this documentation. Refer to the Siemens [Active Workspace Customization](https://docs.sw.siemens.com/en-US/doc/282219420/PL20250520748650994.Configuration/yiv1688486682769) documentation for instructions (link requires authentication).
+
+### Registering the Component on an XML Rendering Template (XRT)
+
+To display the Mendix app on an XRT, add the following to the document using the XRT editor:
+
+```xml
+  <htmlPanel
+    declarativeKey="MendixEmbedded"
+    context="https://your-mendix-runtime.example.com">
+  </htmlPanel>
+```
+
+* The `htmlPanel` component loads custom components in Active Workspace.
+* Set `declarativeKey` to `MendixEmbedded`, the name of the component obtained in the [Adding the Component to Active Workspace](#adding-component) section.
 
 ## Configuring the Content Security Policy (CSP) in Teamcenter
 
@@ -179,19 +189,19 @@ Follow these steps to configure authentication.
 
 1. **Register the Mendix App with Teamcenter Security Services**:
 
-    Register the Mendix app in the Teamcenter Deployment Center so TcSS can authenticate it. For instructions, see [Registering Your App for Teamcenter SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#register-your-app-for-teamcenter-sso).
+    Register the Mendix app in the Teamcenter Deployment Center so TcSS can authenticate it. For instructions, see [Registering Your App for Teamcenter SSO](/appstore/industry/teamcenter-connector/configuring-connection-2512/#register-your-app-for-teamcenter-sso).
     
     {{% alert color="info" %}}This step requires administrator access to Teamcenter.{{% /alert %}}
 
 2. **Configure the Teamcenter Connector Connection**:
 
-    In your Mendix app, configure a Teamcenter Connector connection using **Teamcenter SSO** as the authentication method. For instructions, see [Configuring the Connection to Teamcenter](/appstore/modules/siemens-plm/configuring-connection-2512/).
+    In your Mendix app, configure a Teamcenter Connector connection using **Teamcenter SSO** as the authentication method. For instructions, see [Configuring the Connection to Teamcenter](/appstore/industry/teamcenter-connector/configuring-connection-2512/).
 
     {{% alert color="info" %}}This step requires administrator access to your Mendix application.{{% /alert %}}
 
 3. **Configure User Provisioning**:
 
-    Set up user provisioning based on the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. DO not allow anonymous users in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/modules/siemens-plm/configuring-connection-2512/#user-provisioning-for-sso).
+    Set up user provisioning based on the `EXAMPLE_UserProvisioningAnonymous` microflow so that Mendix accounts are matched to Teamcenter users on login. DO not allow anonymous users in the Mendix application. For instructions, see [User Provisioning for SSO](/appstore/industry/teamcenter-connector/configuring-connection-2512/#user-provisioning-for-sso).
 
 4. **Add the following required customizations**:
     
@@ -209,31 +219,44 @@ Follow these steps to configure authentication.
     3. Add an empty page called `AuthSuccess` to the application which contains an `Component load` event that calls this nanoflow.
     4. Change the `DL_HandleSSOLoginMicroflow` to show the `AuthSuccess` page instead of the home page as the last action in the microflow.
 
-        For instructions, see the [Adding an SSO Login Button to Your Login Page](/appstore/modules/siemens-plm/configuring-connection-2512/#add-sso-login-button) section of *Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above*.
+        For instructions, see the [Adding an SSO Login Button to Your Login Page](/appstore/industry/teamcenter-connector/configuring-connection-2512/#add-sso-login-button) section of *Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above*.
 
 ## Passing Context from Teamcenter {#passing-context}
 
-The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. These are configured in the Active Workspace component and forwarded to the Mendix `render()` call as the `parameters` object.
+The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. Configure these parameters in the `context` and `declarativeKeyContext` fields of the XRT `htmlPanel` and Product Lifecycle (PL) Home card.
 
-Please see `mx-in-tc-context` on [GitHub](https://github.com/mendixlabs/mendix-inside-teamcenter) for an example of how to pass the identifier of the selected object to the embedded Mendix application.
+Pass context values as explicit URL query parameters. Use `target={context.path}` to map a value from the Teamcenter context, or `target=value` to pass a hardcoded primitive value. For example, the following URL passes the selected item's UID and a hardcoded mode:
+
+```text
+https://your-mendix-runtime.example.com/?itemUID={selected.uid}&mode=edit
+```
+
+Use dot notation to access nested context values. In an XRT, write query parameter separators as `&amp;`. In a PL Home card, use `&` directly.
+
+An unavailable context path causes the parameter to receive `undefined`.
+
+{{% alert color="info" %}}
+Objects and arrays are not supported as Mendix parameters.
+{{% /alert %}}
+
+For more information about configuring context, see the [`mx-in-tc` README](https://github.com/mendixlabs/mendix-inside-teamcenter/blob/main/mx-in-tc/README.md) on GitHub.
 
 For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 
 ### Best Practices for Context Parameters
 
 * **Use persistable object IDs only.** Pass `Item` UIDs or `ItemRevision` UIDs. These are stable and unique across sessions.
-* **Avoid non-persistable IDs.** BOM line IDs are runtime calculation results that lose synchronization when Teamcenter configuration rules change. Do not use them as parameters.
+* **Avoid non-persistable IDs.** Bill of Materials (BOM) line IDs are runtime calculation results that lose synchronization when Teamcenter configuration rules change. Do not use them as parameters.
 * **Prefer `Item` IDs over `ItemRevision` IDs** where possible. `Item` IDs are context-independent and do not depend on the revision rule in effect.
 * **Discover available parameters** by referring to the Active Workspace documentation for a list of available context parameters.
 
 ## Known Limitations (Beta)
 
 * **Authentication pop-up:** During Beta, the Teamcenter Connector SSO flow opens a pop-up window. This can be automated to require zero additional clicks after the user is already authenticated with TcSS.
-* **Optional parameters fallback:** If an optional startup parameter is omitted, the embedded client shows the fallback page rather than using the parameter's default value. This is a known issue with the embedded client. See [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 
 ## Read More
 
 * [Embedding the Client](/refguide/mendix-client/embedding-the-client/)
-* [Teamcenter Connector](/appstore/modules/siemens-plm/teamcenter-connector/)
+* [Teamcenter Connector](/appstore/industry/teamcenter-connector/)
 * [Setting Up the Navigation Structure](/refguide/setting-up-the-navigation-structure/)
 * [Configure CORS](/refguide/configure-cors/)

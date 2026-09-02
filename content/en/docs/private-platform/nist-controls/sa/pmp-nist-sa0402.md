@@ -84,7 +84,7 @@ Portunus for Private Mendix Platform is a newly-developed component. It can be i
 
 * Identity provider integration - The Platform supports integration with external identity providers (for example, OIDC, SAML), with configuration and integration guidance available.
 
-    For more information, see [Private Mendix Platform Quick Start Guide](/private-mendix-platform/quickstart/#configuring-idp-settings).
+    For more information, see [Private Mendix Platform Quick Start Guide](/private-mendix-platform/quickstart/).
 
 * Standardized secret management and injection - The Platform architecture implements a secure framework for managing sensitive credentials (for example, database passwords, API keys) outside the application model. It leverages external secret management services - including Azure Key Vault and AWS Secrets Manager - to facilitate the secure injection of credentials into the Private Mendix Platform and its managed applications. This ensures that secrets are managed as externalized configurations, protected by infrastructure-level encryption and access policies, rather than being hardcoded or stored within the deployment manifests.
 

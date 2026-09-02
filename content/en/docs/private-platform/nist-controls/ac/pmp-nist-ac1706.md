@@ -28,10 +28,10 @@ The organization:
 
 The following controls are related to this control:
 
-* AC-6
-* AT-2
-* AT-3
-* PS-6
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* AT-02
+* AT-03
+* PS-06
 
 ## Responsibility
 

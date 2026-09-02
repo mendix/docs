@@ -33,14 +33,14 @@ This control enhancement is applied in addition to the monitoring for unauthoriz
 
 The following controls are related to this control:
 
-* AC-17
-* AC-18
-* AC-19
-* CA-7
-* SI-3
-* SI-4
-* SI-7
-* RA-5
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AC-18](/private-mendix-platform/nist-controls/ac-18/)
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* SI-03
+* [SI-04](/private-mendix-platform/nist-controls/si-04/)
+* SI-07
+* [RA-05](/private-mendix-platform/nist-controls/ra-05/)
 
 ## Responsibility
 

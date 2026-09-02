@@ -2,7 +2,7 @@
 title: "Software Composition"
 linktitle: "Software Composition"
 url: /developerportal/deploy/software-composition/
-description: "Describes the Software Composition page in Apps."
+description: "Describes the Software Composition page in Projects."
 weight: 80
 ---
 
@@ -12,7 +12,7 @@ A Mendix app can consist of the Mendix Model (which includes pages, domain model
 
 Over time, these dependencies can become deprecated, outdated, or vulnerable. Enterprises also have policies on which of these reusable components can or cannot be used based on support, license, etc. It is important to have an easily accessible, clear view of component dependencies through the development lifecycle in order to address any security finding raised by your admins or security teams.  
 
-To enable this, the **Software Composition** page in **Apps** provides visibility into the component dependencies of each deployment package. The components displayed here will be based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
+To enable this, the **Software Composition** page in **Projects** provides visibility into the component dependencies of each deployment package. The components displayed here will be based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
 
 The **Software Composition** page is visible to all members of the Mendix app.
 
@@ -49,7 +49,7 @@ Components are identified in the following manner:
 
 First, when a new deployment package is created via the Mendix Portal with the compatible Mendix Runtime version, a software bill of materials (SBOM) is generated along with it. The log details can be viewed by clicking **View build output** in the deployment package details in the Mendix Portal. For details on SBOM generation, see [SBOM Generation](/refguide/sbom-generation/).
 
-The component dependencies for each non-expired deployment package are available in the **Software Composition** page in **Apps**. 
+The component dependencies for each non-expired deployment package are available in the **Software Composition** page in **Projects**. 
 
 After the creation of a deployment package, the **Software Composition** page usually becomes visible within a few minutes. However, in rare cases, it can take up to a day. Mendix is working to improve the performance on this front.
 

@@ -37,7 +37,6 @@ The **Estimated Duration** indicates the period during which backups are expecte
 
 | Region      | Replication Region | Start Time (UTC) | Local Time | Estimated Duration |
 | ----------- | ------------------ | ---------------- | ---------- | ------------------ |
-| Bahrain     | Mumbai             | 03:00            | 06:00      | 1 hour             |
 | Canada      | Canada West        | 07:00            | 02:00      | 1 hour             |
 | Cape Town   | Frankfurt          | 02:00            | 04:00      | 1 hour             |
 | Dublin¹     | Frankfurt          | 23:00            | 00:00      | 3 hours            |
@@ -53,7 +52,6 @@ The **Estimated Duration** indicates the period during which backups are expecte
 | Singapore   | Sydney             | 17:00            | 01:00      | 1 hour             |
 | Sydney      | Melbourne          | 07:00            | 17:00      | 1 hour             |
 | Tokyo       | Osaka              | 16:00            | 01:00      | 1 hour             |
-| UAE         | Mumbai             | 00:00            | 04:00      | 1 hour             |
 
 Nightly backups start once an app has been successfully deployed to and started in the environment.
 
@@ -149,14 +147,12 @@ Application data, including files and backups, is always replicated by default t
 
 Where possible, application data is replicated to a secondary region in the same political region. This is not possible in regions where there is only one region available in the political region, which has the following consequences:
 
-* Application data in the Bahrain region, including backups, is replicated to the Mumbai region
 * Application data in the Cape Town region, including backups, is replicated to the Frankfurt region
 * Application data in the Jakarta region, including backups, is replicated to the Singapore region
 * Application data in the São Paulo region, including backups, is replicated to the N. Virginia region
 * Application data in the London region, including backups, is replicated to the Frankfurt region
 * Application data in the Seoul region, including backups, is replicated to the Singapore region
 * Application data in the Singapore region, including backups, is replicated to the Sydney region
-* Application data in the UAE region, including backups, is replicated to the Mumbai region
 
 We will change the replication region for these regions if a new region is opened in the political region.
 

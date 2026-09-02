@@ -250,7 +250,6 @@ If Strict TLS is enabled, Mendix on Kubernetes will connect to the PostgreSQL se
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -294,7 +293,6 @@ If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TL
 
 The Mendix Operator allows you to specify custom Certificate Authorities to trust. This allows you to enable Strict TLS even for databases with self-signed certificates.
 
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 ### Dedicated JDBC database{#jdbc}
@@ -389,7 +387,7 @@ The following configuration options are available in OpenShift:
 * Provide the name of an existing TLS certificate secret to use instead of the default router certificate
 * Provide a custom domain name (for example, mendix.example.com) to use instead of the default OpenShift route domain
 
-It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
+It is also possible to provide a custom TLS configuration for individual environments via the `MendixApp` CR, overriding the default configuration:
 
 * Turn TLS on and off
 * Specify the name of an existing TLS certificate secret to use
@@ -422,7 +420,7 @@ For example, if the domain name is set to mendix.example.com, then apps will hav
 
 The DNS server should be configured to route all subdomains (the `*` subdomain, for example, `*.mendix.example.com`) to the ingress/load balancer.
 
-It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
+It is also possible to provide a custom TLS configuration for individual environments via the `MendixApp` CR, overriding the default configuration:
 
 * Turn TLS on and off
 * Specify the name of an existing TLS certificate secret to use

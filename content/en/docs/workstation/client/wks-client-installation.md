@@ -101,7 +101,7 @@ To install the Workstation Client on a Linux machine, perform the following step
     Bluetooth support requires starting the application with the `CAP_NET_RAW` privilege (for raw network packet access): 
     
     ```text
-    sudo capsh --user=$(whoami) --iab="^cap_net_raw" -- -c "'/opt/Mendix Workstation/Mendix Workstation'"
+    sudo capsh --user=$(whoami) --iab="^cap_net_raw" -- -c "'/opt/Mendix Workstation/mendix-workstation'"
     ```
 
 6. After the installation finishes, start the Workstation Client.

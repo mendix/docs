@@ -60,9 +60,9 @@ PWA Wrapper needs a Java runtime to execute the build tools listed above. It sea
 | Step | Method |
 | --- | --- |
 | 1 | Read the `JAVA_HOME` environment variable, if set |
-| 2 | Run `/usr/libexec/java_home` — the operating-system JDK registry |
+| 2 | Run `/usr/libexec/java_home`—the operating-system JDK registry |
 | 3 | Resolve `java` on the shell `PATH` (equivalent to `which java`) |
-| 4 | Scan `/Library/Java/JavaVirtualMachines/` — the standard directory where installers such as Adoptium/Temurin, Oracle, and Azul place JDKs |
+| 4 | Scan `/Library/Java/JavaVirtualMachines/`—the standard directory where installers such as Adoptium/Temurin, Oracle, and Azul place JDKs |
 
 ### Windows Method
 
@@ -74,9 +74,9 @@ If no usable JDK is found, the build fails with an error that instructs the user
 
 PWA Wrapper needs to locate the Mendix Studio Pro installation to access the runtime and SDK files it uses during the build:
 
-* macOS — The extension scans `/Applications/` and `~/Applications/` for app bundles whose names match "Mendix Studio Pro" or "Studio Pro". Among all matches that contain a valid `runtime/` subdirectory, it selects the one with the highest version number.
+* macOS – The extension scans `/Applications/` and `~/Applications/` for app bundles whose names match "Mendix Studio Pro" or "Studio Pro". Among all matches that contain a valid `runtime/` subdirectory, it selects the one with the highest version number.
 
-* Windows — Auto-detection is not performed. The Studio Pro path must be provided explicitly via a CLI argument, a `.env` file, or a `.launch` file.
+* Windows – Auto-detection is not performed. The Studio Pro path must be provided explicitly via a CLI argument, a `.env` file, or a `.launch` file.
 
 ## Summary for Reviewers
 

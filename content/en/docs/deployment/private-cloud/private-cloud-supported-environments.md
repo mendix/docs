@@ -34,8 +34,6 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 **STACKIT Kubernetes Engine**
 
-Customers provision the SKE cluster, PostgreSQL Flex database(s), and Object Storage bucket(s) themselves before deploying Mendix.
-
 Any Kubernetes version offered by SKE that falls within the [Supported Versions](#supported-versions) range is supported.
 
 **Azure Government Cloud**

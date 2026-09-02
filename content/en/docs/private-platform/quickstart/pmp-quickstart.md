@@ -94,24 +94,24 @@ Configure the namespace by doing the following steps:
 1. Click **Configure Namespace**.
 2. Optional: If you want to run the Operator in Global mode, click **Global Operator**.
 
-You must use a different namespace here than the Global namespace that you selected in step 4 above. Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
+    You must use a different namespace here than the Global namespace that you selected in step 4 above. Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
 
-1. Optional: If you are not using the AWS Secret Manager, click **Database Plan** and fill out the required information.
+3. Optional: If you are not using the AWS Secret Manager, click **Database Plan** and fill out the required information.
         
     {{< figure src="/attachments/private-platform/pmp-install2.png" class="no-border" >}}
 
-2. Optional: If you are not using the AWS Secret Manager, click **Storage Plan** and fill out the required information.
-3. Click **Ingress** and fill out the required information.
+4. Optional: If you are not using the AWS Secret Manager, click **Storage Plan** and fill out the required information.
+5. Click **Ingress** and fill out the required information.
         
     {{< figure src="/attachments/private-platform/pmp-install3.png" class="no-border" >}}
     
-4. Click **Registry** and fill out the required information.
-5. Click **Review and Apply** > **Evaluate Configuration**.
-6. Make any required changes or click **Apply Configuration**.
+6. Click **Registry** and fill out the required information.
+7. Click **Review and Apply** > **Evaluate Configuration**.
+8. Make any required changes or click **Apply Configuration**.
         
     {{< figure src="/attachments/private-platform/pmp-install4.png" class="no-border" >}}
     
-7. Click **Exit Installer** > **OK**.
+9. Click **Exit Installer** > **OK**.
     
     {{< figure src="/attachments/private-platform/pmp-install5.png" class="no-border" >}}
 

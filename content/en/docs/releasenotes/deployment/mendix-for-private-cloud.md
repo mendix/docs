@@ -18,7 +18,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 * Deployment and build notifications are now aligned with the Mendix Platform. Users receive notifications when deployments or package builds complete or fail.
 * The **Constants Compare** functionality is now available, providing Public Cloud parity. Users can compare constant values across environments and packages directly in the Portal.
-* Environment Overview and deployment package pages now auto-refresh when their state changes.
+* The **Environment Overview** and **Deployment Package** pages now auto-refresh when their state changes.
 * We have added a **Technical Contact FAQ** popup, and improved the **Change Technical Contact** warning message.
 * The scheduled event descriptions now update correctly when a new .mda file is uploaded. (Ticket 282641)
 * We have fixed an issue where navigating from the environment link on the Sprintr home page to the Environment Overview page was broken.

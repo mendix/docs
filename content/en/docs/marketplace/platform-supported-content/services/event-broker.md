@@ -159,7 +159,6 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
     * For instructions on configuring AWS S3, see [Configuring a Bridge with AWS S3](#bridge-with-aws-s3).
     * For instructions on configuring Iceberg, see [Configuring a Bridge with Iceberg](#bridge-with-iceberg).
 
-
 4. After configuring the service and connecting events (as described in the bridge-specific sections above), click **Start** on the confirmation screen to deploy the bridge.
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/ebb_general_bridge_start.png" >}}
@@ -552,7 +551,6 @@ To edit a bridge:
 
         **Iceberg**
         {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_iceberg_edit_mode.png" class="no-border" >}}
-
 
 4. Once you have made your changes, you can:
     * Click **Apply** to save and apply the changes. A confirmation message will indicate if the changes were successful. Changes to the event configuration take effect when applied. After applying changes, the bridge status will change to **Reconfiguring** and will return to **Running** for HTTP, Azure Blob Storage, and AWS S3 bridges, or **Delivering** for Iceberg bridges, once the reconfiguration is complete.

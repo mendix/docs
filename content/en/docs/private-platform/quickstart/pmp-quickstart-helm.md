@@ -430,6 +430,7 @@ helmfile ... -l name=mx-privatecloud apply
 # Step 2: MANDATORY - sync mxplatform
 helmfile ... -l name=mxplatform apply
 ```
+
 {{% /alert %}}
 
 ### Other Commands
@@ -1299,7 +1300,7 @@ The `mxplatform` component is used for Mendix application platform deployment.
 | --- | --- | --- |
 | `pclm.serviceUrl` | Yes | PCLM service endpoint |
 | `pclm.username` | Conditional | The PCLM username; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
-| `pclm.password ` | Conditional | The PCLM password; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
+| `pclm.password` | Conditional | The PCLM password; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
 
 #### Spec Configuration
 
@@ -1500,7 +1501,7 @@ The benefits of using Azure Container Registry with AKS include the following:
 
 * No secrets to manage
 * Automatic authentication
-*  Works across all namespaces
+* Works across all namespaces
 * Production-ready
 
 ### AWS Elastic Container Registry (ECR)
@@ -1907,7 +1908,7 @@ Workload Identity and Secret Provider Class are different approaches for databas
 * Workload Identity - Components use cloud identity to connect to databases (no passwords stored anywhere).
 * Secret Provider Class - Helm retrieves database passwords from a vault and injects them during installation. Passwords exist in vault as static secrets.
 
-###  Use Case 2: Mxplatform Database and Storage Authentication
+### Use Case 2: Mxplatform Database and Storage Authentication
 
 For `mxplatform`, Workload Identity provides passwordless authentication for both database and storage at application runtime.
 
@@ -1991,7 +1992,7 @@ storage:
         preventDataDeletion: false
 ```
 
-2. Configure mxplatform in the Helmfile values.
+1. Configure mxplatform in the Helmfile values.
 
 ```text
 mxplatform:

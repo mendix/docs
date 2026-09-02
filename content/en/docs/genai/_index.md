@@ -34,7 +34,7 @@ Start exploring how to integrate agentic and generative AI into your Mendix apps
 
 * **New to generative AI?**
     * Familiarize yourself with [core concepts](/agents/get-started/), including prompt engineering, retrieval augmented generation (RAG), and function calling (ReAct).
-    * Follow the Academy learning path [Introduction to AI and GenAI](https://academy.mendix.com/link/paths/168/Introduction-to-AI-and-GenAI).
+    * Follow the Academy learning paths [Introduction to AI and GenAI](https://academy.mendix.com/link/paths/168/Introduction-to-AI-and-GenAI) and [Create your First Agent](https://academy.mendix.com/link/paths/175/Create-Your-First-Agent).
 
 * **Already familiar with generative AI?**
     * Browse the [Agents Kit guides](/agents/agents-kit-2/) for available components, step-by-step how-tos, and reference documentation.

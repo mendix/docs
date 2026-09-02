@@ -26,7 +26,7 @@ Software libraries include privileged programs.
 
 The following controls are related to this control:
 
-* AC-02
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)
 
 ## Responsibility
 

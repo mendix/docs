@@ -42,6 +42,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | Menu | Studio Pro 11.11 | |
 | Data Transformers | Studio Pro 11.12 | |
 | JSON Structures | Studio Pro 11.13 | |
+| Change Data Capture | Studio Pro 11.14 | |
 
 ### Maia Make Standalone Capabilities
 
@@ -186,6 +187,14 @@ To configure an OpenAI-compatible provider, follow these steps:
 4. Enter the **Model ID**.
 5. Optional: Enter your **API Key**. Studio Pro stores this key securely across sessions.
 6. Click **Save Config**.
+
+### LLM Gateway Configuration for Private Mendix Platform
+
+[Private Mendix Platform](/private-mendix-platform/) provides an environment where you can develop and deploy your applications within your own enterprise security boundary to ensure the highest levels of data security and compliance. Because Private Mendix Platform instances are hosted within the enterprise firewall, selecting an LLM provider other than the default [Mendix Platform](#mendix-platform) requires you to also configure the LLM Gateway URL.
+
+{{< figure src="/attachments/private-platform/pmp-llm-gateway.png" class="no-border" >}}
+
+The LLM Gateway URL is configured during the installation or upgrade of Private Mendix Platform. For more information, see [Installing Maia for Private Mendix Platform](/private-mendix-platform/interactive-installation/#maia).
 
 ## Read More
 

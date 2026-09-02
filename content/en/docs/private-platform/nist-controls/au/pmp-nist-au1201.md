@@ -25,8 +25,8 @@ Audit trails are time-correlated if the time stamps in the individual audit reco
 
 The following controls are related to this control:
 
-* AU-08
-* AU-12
+* [AU-08](/private-mendix-platform/nist-controls/au-08/)
+* [AU-12](/private-mendix-platform/nist-controls/au-12/)
 
 ## Responsibility
 

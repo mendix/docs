@@ -16,6 +16,18 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## August 2026
 
+### August 31, 2026
+
+#### New Features
+
+* AI Log Summary is now available on the **Environments** page. It provides an overview of your application's log activity from the previous 24 hours, including error patterns, lifecycle events, and security signals. For more information, refer to [AI Log Summary](/developerportal/maia-operate/ai-log-summary/).
+
+### August 12, 2026
+
+#### Fixes
+
+* We fixed an issue that, in rare cases, caused application access logs to stop appearing on the [Logs](/developerportal/operate/logs/) page. You must restart or redeploy your app for the fix to take effect.
+
 ### August 9, 2026
 
 #### Fixes

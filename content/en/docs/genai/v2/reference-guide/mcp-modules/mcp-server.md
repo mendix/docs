@@ -19,6 +19,10 @@ The [MCP Server](https://marketplace.mendix.com/link/component/240380) module pr
 
 To use function calling within the same Mendix application and integrating to an LLM, consider [function calling](/agents/function-calling/).
 
+{{% alert color="info" %}}
+Agent Editor provides a simplified Studio Pro configuration experience for publishing MCP services. This configuration uses the MCP Server module to expose tools to external MCP clients. For more information, see [Configuring Published MCP Service](/agents/agents-kit-2/reference-guide/agent-editor/#published-mcp-service).
+{{% /alert %}}
+
 ### Limitations {#limitations}
 
 The current version has the following limitations:
@@ -52,7 +56,9 @@ For example, see the `Example Implementations` folder inside the module, which c
 
 The MCP Server can be publicly accessed unless you specify [path-based restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) on the endpoint when running on Mendix Cloud or on your own infrastructure.
 
-If no authentication is enabled for the MCP Server, it can be accessed by any service without being authorized specifically. Be aware that this is not recommended for applications running on the public cloud. Currently, selecting a microflow is required. For test purposes, however, you can just delete the content of the attribute after setting up the MCP Server if you do not want to enable authentication. There is a corresponding example in the [GenAI Showcase app](https://marketplace.mendix.com/link/component/220475), where the `ACT_MCPServerConfiguration_InitializeMCPServer` microflow shows how this can be done. 
+If no authentication is enabled for the MCP Server, it can be accessed by any service without being authorized specifically. Be aware that this is not recommended for applications running on the public cloud.
+
+For versions below 5.2.0 of the MCP server, selecting a microflow is required. For test purposes, however, you can just delete the content of the attribute after setting up the MCP Server if you do not want to enable authentication. There is a corresponding example in the [GenAI Showcase app](https://marketplace.mendix.com/link/component/220475), where the `ACT_MCPServerConfiguration_InitializeMCPServer` microflow shows how this can be done.
 
 For most cases, you want to ensure that MCP clients must be authorized before using any resources from the MCP Server or even discover what resources are available. To enable authentication, you can specify a microflow in the `Create MCP Server` action. The microflow is executed each time a request is processed by the MCP Server.
 
@@ -77,6 +83,8 @@ The selected microflow must adhere to the following principles:
 
 * Input needs to be the same as described in the `Schema` attribute (only primitives and/or an object of type `MCPServer.Tool` are supported). If no Schema is passed in the `Add tool` action, it will be automatically created based on the microflow's input parameters, by setting all of them as required.
 * The return value must be either of type `String` or `TextContent`. You can create a `TextContent` object within the microflow to return the relevant information to the model based on the outcome of the microflow.
+
+When the tool microflow returns a `TextContent` object, you can set `IsError = True` to signal a handled error to the client. Use the `Content` attribute to describe what went wrong, for example, in a structured format — or to indicate that the LLM can retry. This requires the microflow to return `TextContent` directly; a microflow with a plain `String` return type cannot set `IsError` and always returns `IsError = False`. If the microflow throws an uncaught exception, `IsError` is set to `True` automatically, the full exception is logged server-side, and the client receives a generic error message with no internal details.
 
 For example, see the `Example Implementations` folder inside the module.
 

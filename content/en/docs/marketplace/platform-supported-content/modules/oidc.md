@@ -203,6 +203,7 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
+| 10.24.0 and above | 4.7.0 | - | A new constant (`EnableAudienceValidation`) has been introduced for API security. Because it is enabled by default, you need to configure the **Resource path** and **Expected audience** value. You can disable audience validation, but Mendix does not recommend this. |
 | 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |
 | 10.24.0 and above | 4.5.0 | - | New Admin UI and new constants have been introduced. |
 | | | | `Anonymous` module role has been removed. |
@@ -392,13 +393,24 @@ See the section [Optional Features](#optional) information on additional optiona
 #### API Security Configuration for Client Credential Grant {#client-credential-grant}
 
 1. Start your app, log in as an administrator, for example, *demo_administrator*, and access the Client Credential setup page.
-2. If you have the **Automatic Configuration URL** (also known as the well-known endpoint), enter it and click **Import Configuration** to automatically fill the other endpoints.
+2. If you are using version 4.7.0 of the module, configure the **Resource path** and **Expected audience** value. Otherwise, the API security flow fails because audience validation is enabled by default.
+
+    {{% alert color="info" %}}
+The correct audience value for your API depends on the IdP you are using. For Entra ID, the **Expected audience** value also depends on how you registered your API in Entra ID. When using version 2 tokens, your application's client ID is the expected audience value. 
+
+For example, in the **Manifest** of your Entra ID app:
+
+* If `requestedAccessTokenVersion` is `2`, the audience value is the client ID of the application.
+* If `requestedAccessTokenVersion` is `null`, the audience value is `api://<client-id>` of the application.
+    {{% /alert %}}
+
+1. If you have the **Automatic Configuration URL** (also known as the well-known endpoint), enter it and click **Import Configuration** to automatically fill the other endpoints.
 
     {{% alert color="info" %}}If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`.{{% /alert %}}
 
     If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
-3. Optionally, you can select the **Custom AccessToken Parsing** microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
-4. Click **Save**. Once you have completed these steps, the Client Credential Configuration is ready for testing.
+1. Optionally, you can select the **Custom AccessToken Parsing** microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
+1. Click **Save**. Once you have completed these steps, the Client Credential Configuration is ready for testing.
 
 #### Microsoft Entra ID Client Configuration for APIs {#azure}
 
@@ -410,6 +422,23 @@ For Entra ID access to APIs through an access token, in addition to the configur
 1. Edit the Entra ID configuration and add the custom scope to **Selected scopes**.
 
 Now, you can acquire tokens which can be validated using JWKS URI.
+
+#### Configuring Optional Claims for User Attributes in Microsoft Entra ID{#entra-optional-claims}
+
+By default, Microsoft Entra ID does not include user attribute claims such as `given_name` and `family_name` in the ID token, even when the `profile` scope is requested. To make these claims available, add them as optional claims in the Entra App Registration:
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+2. Go to **Entra ID** > **App registrations** and select your application.
+3. In the left menu, select **Token configuration** and click **Add optional claim**.
+4. Select **ID** as the **Token type**.
+5. Select the claims you need, for example, `given_name` and `family_name`.
+6. Click **Add**.
+
+After completing these steps, the claims will be included in the ID token and will be available for attribute mapping in the Mendix OIDC SSO configuration.
+
+{{% alert color="info" %}}
+If `given_name` or `family_name` are present in your ID token after adding them as optional claims but do not appear in the **Add Claim** dropdown in the Mendix OIDC configuration, see [Creating IdP Attribute Manually](/appstore/modules/oidc/#creating-idp-attribute-manually) for steps to add these claims manually.
+{{% /alert %}}
 
 #### Amazon Cognito Client Configuration
 
@@ -472,7 +501,7 @@ The following constants are optional:
 when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not need to set **ClientSecret** constant.
 {{% /alert %}}
 
-* **JWT_ALG** (*default: RS256*) – JWT signing algorithm
+* **JWTSignAlgorithm** (*default: RS256*) – JWT signing algorithm
 
     Example: `ES256`, `ES384`, `ES512`, `PS256`, `PS384`, `PS512`, `RS256`,`RS384`, and `RS512`
 
@@ -544,9 +573,9 @@ The following constants are mandatory when creating an OIDC SSO Client Credentia
 Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 * **IsClientGrantOnly** (*default: false*) – allow to create Client Credential Configuration in the application
 
-{{% alert color="warning" %}}
-When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
-{{% /alert %}}
+    {{% alert color="warning" %}}When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
+    {{% /alert %}}
+* **EnableAudienceValidation** (Boolean) – If you are setting this as a true then make sure to set **Resource path** and **Expected audience** in the **Client Credential grant for API security** tab. When you create a [Published REST service](/refguide/published-rest-operation/) in your mendix app, you can find the resource path at the **Operations for resource 'data'** section. For more information, see the [API Security Configuration for Client Credential Grant](#client-credential-grant) section above.
 
 ## Configuring Multi-Domain {#multi-domain}
 
@@ -678,9 +707,22 @@ IdP attributes will be automatically created from the list of `claims_supported`
 1. In the **Creating Users** tab, click **Add Claim** to add a new mapping.
 2. In the **Add Claim Map** dialog, click **Search**.
 3. Under the **Claims for claim entity attribute**, click **New** to create a new claim.
-4. In the **IdP Attribute**, select the newly created claim from the dropdown, and click **Save**.
+4. Provide **Claim Name** and **Friendly Name**, and click **Previous**.
+5. In the **IdP Attribute**, select the newly created claim from the dropdown, and click **Save**.
 
 Select the required attribute to use it in your mapping.
+
+{{% alert color="info" %}}
+If you are using Microsoft Entra ID and the expected claims (such as `given_name` or `family_name`) do not appear in the **Add Claim** dropdown, this is because Entra does not advertise these claims in its discovery endpoint. To make them available, add them as optional claims in the Entra App Registration's **Token configuration** tab. For more information, see the [Configuring Optional Claims for User Attributes](#entra-optional-claims) section.
+
+After adding the optional claims to the Entra App Registration, use one of the following options to get the claims in the **Add Claim** dropdown:
+
+* Search for the claims: Follow the steps above and provide **Claim Name** and **Friendly Name** (optional claims configured in the Entra App Registration). Click **Previous**, find the newly added, optional claims and add them. 
+* Add claims to the default setup: Add the claims to the `SUB_DefaultUserProvisioning` microflow, then map them:
+    1. In the `SUB_DefaultUserProvisioning` microflow, add a `CreateClaim` activity for `family_name`, `given_name`, or any custom attribute configured in the Entra App Registration to populate in the token. To reuse an existing activity, copy a `CreateClaim` activity from the same microflow and update the claim name value.
+    2. Click **Add Claim** and select `family_name` or `given_name` from the **IdP Attribute** dropdown.
+    3. Map to the **Custom Entity Attribute** and click **Save**.
+{{% /alert %}}
 
 ##### User Provisioning Using Your Custom User Entity{#custom_user_entity}
 
@@ -715,10 +757,10 @@ The section below shows the methods to configure user provisioning when using OI
 By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies to the following mapping:
 
 | ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
-| ----------------------------- | ----------------------------- |
-| sub                           | Name                          |
-| name                          | Fullname                      |
-| email                         | Email                         |
+| ----------------------------- | -----------------------------                | 
+| sub                           | Name                                         |
+| name                          | Fullname                                     |
+| email                         | Email                                        |
 
 {{% alert color="warning" %}}
 Do not change the `UserProvisioning_StandardOIDC` microflow. This may cause problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
@@ -789,7 +831,7 @@ You can create your own APIs within your Mendix app and secure the end point ove
 
 1. Create a REST API endpoint which needs to be secured.
 2. Use **Custom** as the [authentication method](/refguide/published-rest-service/#authentication) to secure the endpoint with an access token.
-3. Select the `OIDC.APIAuthentication` microflow which has `HTTPRequest` as the input and returns `System.User` as the output.
+3. Select the `OIDC.APIAuthentication` microflow from the **OIDC.APIAuthentication** folder of the module which has `HTTPRequest` as the input and returns `System.User` as the output.
 
 ### Using `APIAuthentication` for Client Credentials Grant
 
@@ -798,7 +840,9 @@ The client credentials grant type is used when applications request an access to
 1. Request an Access Token using `/token` endpoint.
 2. Access the Secured API Endpoint
 3. `APIAuthentication` will validate the token and extract the claims.
-4. The OIDC SSO module checks if the `sub` claim (which contains the `client-id`) is present in the access token. If it is not, the module will verify the `client_id`, `appid`, or `cid` parameters. If none of these are found, it will throw an exception message.
+4. The OIDC SSO module checks 
+    * if the `sub` claim (which contains the `client-id`) is present in the access token. If it is not, the module will verify the `client_id`, `appid`, or `cid` parameters. If none of these are found, it will throw an exception message.
+    * if the `audiencevalidationenabled` is true then verify the resource path and expected audince based on the configured values.
 5. Create a new user using the client ID from the token if one does not already exist.
 
 {{% alert color="info" %}}

@@ -17,7 +17,7 @@ To remove an admin, hover over their name in the list, then click **Remove**.
 {{< figure src="/attachments/control-center/company/mendix-admins/mendix-admins.png" >}}
 
 {{% alert color="info" %}}
-It is not possible to remove yourself as a Mendix Admin.
+It is not possible to add or remove yourself as a Mendix Admin.
 {{% /alert %}}
 
 If the **Add Mendix Admin** button is not displayed, your company is using a user group in your IdP to assign Mendix Admins. For more information, refer to [IdP-managed Mendix Admins](/control-center/security-settings/#idp-managed-mendix-admins).

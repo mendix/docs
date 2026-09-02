@@ -24,11 +24,11 @@ The information system enforces access restrictions and supports auditing of the
 
 The following controls are related to this control:
 
-* AU-02
+* [AU-02](/private-mendix-platform/nist-controls/au-02/)
 * AU-06
-* AU-12
+* [AU-12](/private-mendix-platform/nist-controls/au-12/)
 * CM-03
-* CM-06
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
 
 ## Responsibility
 

@@ -92,6 +92,8 @@ Both `packageName` and `packageVersion` should be aligned with the app's informa
 
 The widget definition XML file is an essential part of a widget because it describes that widget's basic information and capabilities, such as if that widget can function offline. This file also contains a defined list of properties configurable in the widget. If you use the Mendix Pluggable Widget Generator, the contents of this file will be scaffolded for you.
 
+A schema for the widget definition file is made available through the [Mendix package](https://www.npmjs.com/package/mendix) which is installed by the `pluggable-widgets-tools` package. Editor plugins and IDE's can use the schema to provide in-line feedback while authoring the definition file.
+
 A simple widget XML file might look like this:
 
 ```xml
@@ -173,7 +175,7 @@ You can provide additional help information to widget users by using a help page
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" class="no-border" >}}
 
-A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
+A URL of a help page can be provided through the `helpUrl` property after the `studioProCategory` tag:
 
 ```xml
     <helpUrl>https://marketplace.mendix.com/link/component/105695/</helpUrl>

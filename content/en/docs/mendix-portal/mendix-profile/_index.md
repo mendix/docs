@@ -48,7 +48,7 @@ The first profile card below the header presents your **Stats**, which are your 
 {{< figure src="/attachments/community-tools/mendix-profile/stats.png"   width="350"  class="no-border" >}}
 
 {{% alert color="warning" %}}
-Don't be disappointed if you have a low number of points — everyone in the Mendix community started that way, even our Expert developers. There are plenty of opportunities to gain more points and climb the [Leaderboard](#leaderboard).
+Don't be disappointed if you have a low number of points—everyone in the Mendix community started that way, even our Expert developers. There are plenty of opportunities to gain more points and climb the [Leaderboard](#leaderboard).
 {{% /alert %}}
 
 ## Badges {#badges}

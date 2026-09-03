@@ -96,15 +96,15 @@ From here, you can manage the default access settings:
 
 ## Mendix Event Broker Bridges
 
-Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and external technologies. For information on creating and managing bridges, see [Event Broker Bridges](/appstore/services/event-broker-bridges/).
-
-Mendix Event Broker Bridges facilitate integration between the Event BRoker and the following technologies:
+Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and the following external technologies:
 
 * [AWS SQS](/appstore/services/event-broker-bridges/aws-sqs-bridge/) 
 * [HTTP](/appstore/services/event-broker-bridges/http-bridge/) 
 * [Azure Blob Storage]((/appstore/services/event-broker-bridges/blob-bridge/) )
 * [AWS S3](/appstore/services/aws-s3-bridge/) 
 * [Iceberg](/appstore/services/event-broker-bridges/iceberg-bridge/) 
+
+For information on creating and managing bridges, see [Event Broker Bridges](/appstore/services/event-broker-bridges/).
 
 ## Externally Defined Events {#externally-defined-events}
 

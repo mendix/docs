@@ -409,7 +409,7 @@ This section shows all the activities which have taken place in this environment
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image20.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-Actions performed through the Mendix on Kubernetes Deploy API are not always recorded here. See [Current Limitations](#activity-log-api) for details.
+Actions performed through the Mendix on Kubernetes Deploy API are not always recorded here. For more information, see [Known Limitations: Logging API-Initiated Actions](#activity-log-api).
 {{% /alert %}}
 
 ### Application Settings

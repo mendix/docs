@@ -105,7 +105,7 @@ The **Area of Focus** section lists the following topics to plan for and conside
 * **People** – Goals associated with your team. For example, you may decide that you need to train five Mendix developers within the next three months.
 * **Platform** – Goals to integrate Mendix into your software development lifecycle.
 * **Portfolio** – The offerings where low-code can bring high value to your organization.
-* **Process** – Goals associated with your business processes. For example, you may decide to implement scrum.
+* **Process** – Goals associated with your business processes. For example, you may decide to implement Scrum.
 * **Promotion** – Goals to help you celebrate your successes and motivate your team to build with Mendix.
 
 These focus areas are based on the [5 Ps of digital transformation](https://www.mendix.com/glossary/digital-execution/#what-are-the-5-ps-of-digital-transformation). You can define your own measurable key results for each of those areas.

@@ -141,7 +141,7 @@ To configure this widget, follow these steps:
     * **Character count (includeing HTML)** – displays the number of characters saved into the attribute value. This includes the HTML tag inserted for the formatting of rich text.
 * **Style data format** - available from rich text version 5 and above. This allows user to use classnames for the styling of rich text's content.
     * **Inline** - uses inline styles on styling the HTML content. This is the current and default option. Inline styling is more reliable in styling the content. But using inline styles meant that the data cannot be parsed in [strict-CSP environment](/howto/security/csp/).
-    * **Inline** - uses class name to style the HTML content. Use this setting if rich text is deployed in a strict CSP environment.
+    * **Class** - uses class name to style the HTML content. Use this setting if rich text is deployed in a strict CSP environment.
 
 ### Common Tab
 

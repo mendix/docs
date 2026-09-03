@@ -15,7 +15,7 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
 {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/event_broker_bridges_create.png" class="no-border" >}}
 
 1. Click **Create a Bridge** to create a new bridge.
-2. Select **Iceberge**.
+2. Select **Iceberg**.
 3. Create and configure your bridge by following the steps in [Configure Service](#configure-http-bridge) below.
 4. After configuring the service and connecting events (as described below), click **Start** on the confirmation screen to deploy the bridge.
 
@@ -39,7 +39,7 @@ Configure the service by filling out the following:
         * **AWS Region for Bucket** – the AWS region where the bucket is located
         * **AWS Role (to Assume)** – the AWS role to assume for the required permissions 
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_configure.png" alt="" width="400" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_configure.png" alt="" width="400" >}}
 
 ## Connect Events
 

@@ -51,7 +51,7 @@ Once the bridge has been successfully deployed, its configuration and status can
 
 ## Managing Bridges
 
-After creating a bridge, you can modify and manage its configuration through the Event Broker Manager.
+After creating a bridge, you can modify and manage its configuration through the [Event Broker Manager](https://broker.mendix.com/p/connected-apps).
 
 ### Editing Bridges
 

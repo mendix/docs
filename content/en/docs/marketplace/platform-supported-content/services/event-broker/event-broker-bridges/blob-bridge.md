@@ -23,7 +23,7 @@ Once the bridge has been successfully deployed, its configuration and status can
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/azure-blob-storage/ebb_azure_blob_overview.png" class="no-border" >}}
 
-# Configure Service
+## Configure Service
 
 1. Configure the service by filling out the following:
 
@@ -37,7 +37,7 @@ Once the bridge has been successfully deployed, its configuration and status can
 
 2. Click **Next** to connect events to your bridge.
 
-### Connect Events
+## Connect Events
 
 Select the business events to integrate with Azure Blob Storage:
 

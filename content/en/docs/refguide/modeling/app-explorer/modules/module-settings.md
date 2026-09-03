@@ -69,7 +69,11 @@ When the module is set as the solution module, it gets the letter **S** as an ic
 Version is available for all module types for Studio Pro 11.12 and above. In earlier versions of Studio Pro, version is available only for add-on and solution module types. 
 {{% /alert %}}  
 
-This is the version number of the module which is shown in various places in the Studio Pro user interface, as well as in the Marketplace. 
+This is the version number of the module which is shown in various places in the Studio Pro user interface, as well as in the Marketplace.
+
+{{% alert color="info" %}}
+From Studio Pro 11.14, the module version is displayed next to the module name in the **App Explorer** tree. Regular modules show the version in brackets (for example, `[1.0.0]`). Marketplace modules that have an AppStore version set show it with an `mp` prefix (for example, `[mp 3.2.1]`).
+{{% /alert %}}
 
 When redistributing a module, you should always change the version number when changes are made. For modules that will be published to the Marketplace, the version must be set before exporting the package.
 

@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * The **Constants Compare** functionality is now available, providing Public Cloud parity. Users can compare constant values across environments and packages directly in the Portal.
 * We have added a **Technical Contact FAQ** popup, and improved the **Change Technical Contact** warning message.
 * The scheduled event descriptions now update correctly when a new .mda file is uploaded. (Ticket 282641)
-* We have fixed an issue where navigating from the environment link on the Sprintr home page to the Environment Overview page was broken.
+* We have fixed an issue where navigating from the environment link on the **Projects** home page to the **Environment Overview** page was broken.
 * Deletion is no longer blocked for environments that are marked as the **Default Studio Target**. Users are prompted to set another environment as the default before deletion.
 * **Pod Disruption Budget** settings no longer reset to default due to a missing field in the Private Cloud Portal REST API. (Ticket 284436)
 * You can now remove storage plans when they are not in use. (Ticket 285125)

@@ -805,7 +805,7 @@ Delete all environments before you delete an app. If you delete an app which has
 
 Mendix on Kubernetes has a limit of 1024 MB on the size of a deployment package.
 
-### API-Initiated Actions Not Always Recorded in the Activity Log {#activity-log-api}
+### Logging API-Initiated Actions {#activity-log-api}
 
 Actions performed using the [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/), such as deploying a package or creating an environment, are not always recorded in the environment's [Activity Log](#activity-log). Only actions performed through the Mendix Portal are guaranteed to appear.
 

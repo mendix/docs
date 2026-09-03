@@ -14,6 +14,14 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
 
+## September 2026
+
+### September 6, 2026
+
+#### Platform Upgrade
+
+* The Mendix Portal has been upgraded to the Mendix 11 runtime version.
+  
 ## August 2026
 
 ### August 31, 2026

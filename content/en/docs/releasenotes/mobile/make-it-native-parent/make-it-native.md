@@ -14,7 +14,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ### Improvements 
 
-* Replaced @notifee/react-native with react-native-notify-kit library.
+* We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
 
 ## Android 11.12.0 / iOS 11.12.0
 
@@ -74,7 +74,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ### Fixes
 
-* Replaced @notifee/react-native with react-native-notify-kit library.
+* We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
 
 ## Android 11.6.6
 

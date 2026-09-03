@@ -9,7 +9,9 @@ description: "Native Template 19"
 
 **Release date: Sep 1, 2026**
 
-- We addressed a random scenario where gradle would resolve to using the Hermes v1 compiler instead of the old hermes override in gradle.properties. This would throw issues with "...bytecode mismatch...".
+### Fixes
+
+- We addressed a random scenario where Gradle would resolve to using the Hermes v1 compiler instead of the old Hermes override in `gradle.properties`. This threw issues with `"...bytecode mismatch..."`.
 
 ## 19.1.4
 

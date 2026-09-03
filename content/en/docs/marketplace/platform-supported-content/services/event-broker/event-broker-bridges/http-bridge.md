@@ -1,6 +1,6 @@
 ---
 title: "Configure a Bridge with HTTP"
-url: /appstore/services/http-bridge/
+url: /appstore/services/event-broker-bridges/http-bridge/
 linktitle: "HTTP Bridge"
 ---
 

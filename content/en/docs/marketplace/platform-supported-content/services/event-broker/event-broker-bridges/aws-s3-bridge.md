@@ -1,6 +1,6 @@
 ---
 title: "Configure a Bridge with AWS S3"
-url: /appstore/services/aws-s3-bridge/
+url: /appstore/services/event-broker-bridges/aws-s3-bridge/
 linktitle: "AWS S3 Bridge"
 ---
 

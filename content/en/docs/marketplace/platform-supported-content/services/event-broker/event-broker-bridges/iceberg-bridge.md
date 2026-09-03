@@ -1,6 +1,6 @@
 ---
 title: "Configure a Bridge with Apache Iceberg"
-url: /appstore/services/iceberg-bridge/
+url: /appstore/services/event-broker-bridges/iceberg-bridge/
 linktitle: "Apache Iceberg Bridge"
 ---
 

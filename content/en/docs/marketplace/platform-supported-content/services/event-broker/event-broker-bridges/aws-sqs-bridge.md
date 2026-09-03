@@ -1,6 +1,6 @@
 ---
 title: "Configure a Bridge with AWS SQS"
-url: /appstore/services/aws-sqs-bridge/
+url: /appstore/services/event-broker-bridges/aws-sqs-bridge/
 linktitle: "AWS SQS Bridge"
 ---
 

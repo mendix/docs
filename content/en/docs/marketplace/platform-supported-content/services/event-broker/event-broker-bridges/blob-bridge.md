@@ -1,6 +1,6 @@
 ---
 title: "Configure a Bridge with Azure Blob Storage"
-url: /appstore/services/blob-bridge/
+url: /appstore/services/event-broker-bridges/blob-bridge/
 linktitle: "Azure Blob Storage Bridge"
 ---
 

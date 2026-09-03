@@ -10,7 +10,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ## Android 11.12.1 / iOS 11.12.1
 
-**Release date: August {TODO}, 2026**
+**Release date: August 12, 2026**
 
 ### Improvements 
 
@@ -70,11 +70,11 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ## Android 11.6.7 / iOS 11.6.7
 
-**Release date: August {TODO}, 2026**
+**Release date: August 12, 2026**
 
 ### Fixes
 
-* * Replaced @notifee/react-native with react-native-notify-kit library.
+* Replaced @notifee/react-native with react-native-notify-kit library.
 
 ## Android 11.6.6
 

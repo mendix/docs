@@ -31,7 +31,7 @@ The Standard Operator conversion to Global Operator managed namespace is not yet
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Actions performed through this API are not always recorded in the environment's [Activity Log](/developerportal/deploy/private-cloud-deploy/#activity-log-api).
+Actions performed through this API are not always recorded in the environment's [Activity Log](/developerportal/deploy/private-cloud-deploy/#activity-log-api). For more information, see [Known Limitations: Logging API-Initiated Actions](#activity-log-api).
 {{% /alert %}}
 
 ## Using the API

@@ -10,14 +10,14 @@ description: "Describes the features in Maia MCP Client."
 ## Introduction
 
 {{% alert color="info" %}}
-This feature was released as part of [Maia Make](/refguide/maia-make/) capabilities in Studio Pro 11.8. 
+This feature is part of [Maia Make](/refguide/maia-make/) and was introduced in Studio Pro 11.8.
 
-To use Maia MCP Client, an internet connection and signing in to Studio Pro are required.
+To use Maia MCP Client, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
 Maia MCP Client, available from Studio Pro 11.8, helps you connect Maia to external [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) servers. Once connected, Maia can call tools provided by these servers during chat — for example, querying an external API, looking up design assets, or interacting with third-party services. You can find available MCP servers on the [MCP servers directory](https://modelcontextprotocol.io/examples). 
 
-For information on the current limitations, see the [Limitations](#limitations) section below.
+For details on the current limitations, see the [Limitations](#limitations) section below.
 
 ## Using MCP Client {#using-mcp-client}
 
@@ -28,11 +28,11 @@ There are two ways to open the MCP Client panel:
 
 ### Preset Servers {#preset-servers}
 
-Preset MCP servers allow you connect to common services without entering URLs or credentials.
+Preset MCP servers allow you to connect to common services without entering URLs or credentials.
 
 #### Mendix Marketplace {#mendix-marketplace-preset}
 
-Studio Pro adds the **Mendix Marketplace** connection automatically when you open the MCP Client panel. It authenticates with your Mendix ID, so no extra credentials are needed. Marketplace tools are disabled by default; enable the ones you need from the expanded card.
+Studio Pro adds the **Mendix Marketplace** connection automatically when you open the MCP Client panel. It authenticates using your Mendix ID, so no extra credentials are needed. Marketplace tools are disabled by default; enable the ones you need from the expanded card.
 
 Mendix manages this connection. You cannot remove it, but you can enable or disable it using the checkbox on the **Mendix Marketplace** card.
 
@@ -40,8 +40,8 @@ Mendix manages this connection. You cannot remove it, but you can enable or disa
 
 Click **Add MCP Server** to open the catalog alongside the manual entry form. Each preset appears as a tile. Click a tile to select it. Studio Pro sets the URL, connection type, and authentication type automatically. Only the server name remains editable.
 
-* For OAuth presets: click **Authenticate** to authorize in your browser, then click **OK** to save
-* For bearer token presets: enter your token, then click **OK**
+* For OAuth presets: click **Authenticate** to authorize in your browser, then click **OK** to save.
+* For bearer token presets: enter your token, then click **OK**.
 
 Tools from new preset connections are disabled by default. Enable the tools you need from the expanded connection card.
 
@@ -60,7 +60,7 @@ Choose how Studio Pro authenticates with the MCP server:
 
 * **No Auth** — select this for servers that do not require credentials.
 * **Bearer Token** — paste an API token or personal access token. The token is stored securely and is not exposed after entry.
-* **Mendix Identity** — authenticates using the Mendix account you are already signed in to Studio Pro with. No extra credentials are needed. Use this option when connecting to MCP services provided by Mendix.
+* **Mendix Identity** — authenticates using the Mendix account you use to sign in to Studio Pro. No extra credentials are needed. Use this option when connecting to MCP services provided by Mendix.
 * **OAuth 2.1** — a browser window opens so you can authorize Studio Pro with the server's provider. Two optional fields appear:
     * **Client ID** — required if the server does not support automatic client registration.
     * **Client Secret** — required by some providers (for example, GitHub).
@@ -80,7 +80,7 @@ Most major providers — including GitHub and Figma — do not support automatic
     * **URL** — `https://api.githubcopilot.com/mcp/`
     * **Authentication** — **OAuth 2.1**
     * **Client ID** and **Client Secret** — from the steps above
-6. Click **Add**, authorize in the browser, and the connection completes.
+6. Click **Add** and authorize in the browser to complete the connection.
 
 {{% alert color="info" %}}
 For Figma MCP, the simplest option is to generate a personal access token in Figma and use **Bearer Token** authentication. If you need OAuth, register an app at [Figma Developers](https://www.figma.com/developers), add the callback URL, and request the `mcp:connect` scope.
@@ -134,7 +134,7 @@ If a connection drops, Studio Pro reconnects automatically. During reconnection,
 
 After connecting, the server's tools appear in the expanded card. Each tool shows a name and description from the server.
 
-Tools from a new server are **disabled by default**. Select a tool's checkbox to enable it. Use the **select all** checkbox to enable or disable all tools at once. Only enabled tools are available to Maia.
+Tools from a new server are disabled by default. Select a tool's checkbox to enable it. Use the **select all** checkbox to enable or disable all tools at once. Only enabled tools are available to Maia.
 
 ### How Maia Uses MCP Tools {#using-tools}
 
@@ -150,7 +150,7 @@ You see the answer from Maia, not the raw tool output.
 
 | Problem | Solution |
 | --- | --- |
-| "This server requires manual OAuth client registration" | Register an OAuth app with the provider and enter the Client ID. See the [GitHub example](#github-example) given above. |
+| "This server requires manual OAuth client registration" | Register an OAuth app with the provider and enter the Client ID. See the [GitHub example](#github-example) section above. |
 | "Token exchange failed" or "incorrect_client_credentials" | Verify your Client ID and Client Secret. Check that the callback URL matches. |
 | Authentication stuck in "Authenticating..." | Check that no firewall blocks localhost. Remove the server and add it again to restart the flow. |
 | Connection fails immediately | Verify the URL. Try switching between **HTTP (Streamable)** and **SSE (Legacy)**. |

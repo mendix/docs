@@ -10,22 +10,21 @@ description: "Describes how to create and manage agent skills that equip Maia wi
 ## Introduction
 
 {{% alert color="info" %}}
-This feature was released as part of [Maia Make](/refguide/maia-make/) capabilities in Studio Pro 11.11.
+This feature is part of [Maia Make](/refguide/maia-make/) and was introduced in Studio Pro 11.11.
 
-To use Maia Agent Skills, an internet connection and signing in to Studio Pro are required.
+To use Maia Agent Skills, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
 Maia Agent Skills are modular, reusable instructions that extend Maia's capabilities with domain-specific knowledge, giving it the context, workflows, and guidance it needs to work the way your team works.
 
 Instead of typing the same context into every chat, you define agent skills once, and Maia applies them automatically whenever relevant. This eliminates the need to repeat the same guidance across conversations. 
 
-Use agent skills to equip Maia with the domain knowledge and conventions it needs, whether those are company-wide standards or team-specific workflows. For example, a skill capturing your company's Mendix naming conventions means Maia applies them consistently whenever it generates entities, attributes, or microflows without you having to mention them each time.
+Use agent skills to equip Maia with the domain knowledge and conventions it needs, whether those are company-wide standards or team-specific workflows. For example, a skill that captures your company's Mendix naming conventions lets Maia apply them consistently whenever it generates entities, attributes, or microflows, without you having to mention them each time.
 
-Starting from Studio Pro 11.12, Maia supports not only project-level skills, but also skills for all application modules. These skills are exportable together with the module in which they are kept
-and can help you split your skills better.
+From Studio Pro 11.12, Maia supports not only project-level skills, but also skills for all application modules. These skills are exportable together with the module in which they are kept and can help you split your skills better.
 
 {{% alert color="info" %}}
-Agents skills are not supported for Add-on and Solution modules.
+Agent skills are not supported for Add-on and Solution modules.
 {{% /alert %}}
 
 For guidance on writing effective skills, see [Best Practices for Skill Creators](https://agentskills.io/skill-creation/best-practices) and [Optimizing Skill Descriptions](https://agentskills.io/skill-creation/optimizing-descriptions) in the [Agent Skills documentation](https://agentskills.io/).
@@ -34,12 +33,12 @@ For guidance on writing effective skills, see [Best Practices for Skill Creators
 
 To create a new agent skill in Studio Pro, follow these steps:
 
-1. In the **App Explorer**, find either the **Maia** node under **App** for project-level skills, or **Maia** node under a module if you wish to add skills for a module.
+1. In the **App Explorer**, find either the **Maia** node under **App** for project-level skills, or the **Maia** node under a module if you want to add skills for a module.
 1. Expand this node to **Maia** > **skills**.
 1. Right-click **skills** and click **Add** > **Skill**.
 1. Enter a name for the skill.
 
-Studio Pro creates the `SKILL.md` file. You can continue adding the skill content.
+Studio Pro creates the `SKILL.md` file. You can now add the skill content.
 
 ### SKILL.md Format {#skill-md-format}
 
@@ -67,9 +66,9 @@ The `name` field must match the skill's parent directory name exactly. A mismatc
 ### Directory Structure {#directory-structure}
 
 Skills are stored in the `skillssource/` directory at the root of your application directory. You can also manage skills directly in the file system, for example, to copy in skills from another project. After making changes in the file system, go to **App** > **Synchronize App Directory** (keyboard shortcut: <kbd>F4</kbd>) to make the changes visible in Studio Pro. 
-You can also sync the changes by pressing the **Sync** button in the **Maia skills** overview pane.
+You can also sync the changes by clicking the **Sync** button in the **Maia skills** overview pane.
 
-Project-level skills are stored directly under `skillssource` directory:
+Project-level skills are stored directly under the `skillssource` directory:
 
 ```
 skillssource/
@@ -80,7 +79,7 @@ skillssource/
       NOTES.md
 ```
 
-Skills for particular modules are stored under `_modules` subdirectory:
+Skills for particular modules are stored under the `_modules` subdirectory:
 
 ```
 skillssource/
@@ -109,20 +108,20 @@ For more information on how skills and reference files load, and when they apply
 
 At the start of each chat session, Maia becomes aware of all agent skills in your project. As you work, Maia picks up the relevant skill content automatically. You do not need to reference or invoke skills explicitly.
 
-Make sure to provide informative description of a skill as this is the leading information Maia uses to decide whether to read your skill.
+Make sure to provide an informative description of a skill, as it is the primary information Maia uses to decide whether to read it.
 
 If you add or edit a skill while a session is active, those changes take effect the next time you start a chat.
 
 ## Skill Overview {#skill-overview}
 
-Since Studio Pro 11.12, Maia lets you list all registered agent skills. Click the **Skills** button next to
+From Studio Pro 11.12, Maia lets you list all registered agent skills. Click the **Skills** button next to
 **Add** in the Maia input area to open the **Skills** pane. The pane shows whether each skill has loaded
 successfully, including any error message, references found, and the module the skill belongs to.
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-agent-skills/skills-pane.png" width="400px">}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-agent-skills/skills-pane.png" alt="" width="400px">}}
 
 Updates to skills, whether you add a new skill or change an existing one, appear only after you start a new session.
-To apply the updated skills immediately, click the **Sync** button in the **Skills**  pane.
+To apply the updated skills immediately, click the **Sync** button in the **Skills** pane.
 
 ## Limitations {#limitations}
 

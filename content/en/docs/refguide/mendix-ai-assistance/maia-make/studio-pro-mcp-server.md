@@ -10,17 +10,17 @@ description: "Describes the features in Studio Pro MCP Server."
 ## Introduction
 
 {{% alert color="info" %}}
-This feature was released in Studio Pro 11.10. 
+This feature is available from Studio Pro 11.10.
 
-To use Studio Pro MCP Server, an internet connection and signing in to Studio Pro are required.
+To use Studio Pro MCP Server, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Studio Pro MCP Server enables bring your own agent (BYO Agent) capabilities, allowing you to leverage Maia's capabilities directly from external clients, including AI coding assistants, agents, and other MCP-based LLM tools.
+Studio Pro MCP Server enables bring your own agent (BYO Agent) capabilities, allowing you to use Maia's capabilities directly from external clients, including AI coding assistants, agents, and other MCP-based LLM tools.
 
-It has the following key highlights:
+It has the following highlights:
 
 * Full Maia feature parity — The MCP Server exposes the same capabilities that Maia offers within Studio Pro.
-* Live updates — Any changes made through Maia via the MCP Server are reflected in real time within Studio Pro.
+* Live updates — Changes made through Maia via the MCP Server appear in real time in Studio Pro.
 
 {{% alert color="info" %}}
 When you connect external agents or AI tools to Studio Pro's MCP Server, those tools consume tokens from your own LLM provider account each time they interact with Maia. Because these requests occur outside of the Mendix environment, usage and billing details are managed through your LLM provider's dashboard rather than within Mendix.
@@ -28,7 +28,7 @@ When you connect external agents or AI tools to Studio Pro's MCP Server, those t
 
 ## Enabling the MCP Server
 
-To enable the MCP Server, navigate to **Preferences** > **AI** > **MCP Server**, and check **Enable MCP Server**. You can also configure the port in this menu.
+To enable the MCP Server, go to **Preferences** > **AI** > **MCP Server** and select **Enable MCP Server**. You can also configure the port in this menu.
 
 ### Connecting External Clients
 
@@ -43,7 +43,7 @@ Replace `<name>` with your preferred server name and `<port>` with the port conf
 The following limitations apply only to Studio Pro 11.10:
 
 * The MCP Server cannot generate pages.
-* Web fetch is blocking — When a web fetch tool call is performed by the MCP Client, the operation awaits user approval in Studio Pro. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).
+* Web fetch is blocking — When the MCP Client performs a web fetch tool call, the operation awaits user approval in Studio Pro. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).
 
 ## Read More
 

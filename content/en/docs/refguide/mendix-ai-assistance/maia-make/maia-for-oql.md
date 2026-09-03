@@ -8,16 +8,20 @@ description: "Describes the features in Maia for OQL Generation."
 ## Introduction
 
 {{% alert color="info" %}}
-To use Maia for OQL, an internet connection and signing in to Studio Pro are required.
+To use Maia for OQL, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Maia for OQL is a powerful feature that enables you to generate and manage OQL (Object Query Language) queries through an intuitive interface. It is designed to simplify query creation and reduce manual effort. Currently it has some limitations. For more details, see the [Limitations](#limitations) section below.
+Maia for OQL enables you to generate and manage OQL (Object Query Language) queries. It simplifies query creation and reduces manual effort. It has some limitations. For more details, see the [Limitations](#limitations) section below.
 
 ## Using Maia for OQL
 
+Describe the data you need. For example, if you type *Show all active orders with customer names*, Maia generates the most relevant OQL query based on the data available in the same module.
+
+Maia interprets your intent and provides a query that fits your requirements, helping you avoid manual query creation and common syntax errors.
+
 ### In Studio Pro 11.9 and Above
 
-In Studio Pro 11.9 and above, Maia for OQL is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia for OQL. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+In Studio Pro 11.9 and above, Maia for OQL is incorporated into the unified Maia Make capabilities, which are enabled by default. Maia for OQL does not have a dedicated interface. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 {{% alert type="info" %}}
 Studio Pro 11.13 and above, and 11.12.2 and above, include a setting to enable or disable OQL generation with Maia. OQL generation always uses the Mendix Platform regardless of the configured AI provider. To use OQL generation, you must enable both **Enable Maia** and **Enable OQL Tool**.
@@ -25,19 +29,15 @@ Studio Pro 11.13 and above, and 11.12.2 and above, include a setting to enable o
 
 ### In Studio Pro 11.8 and Below
 
-In Studio Pro 11.8 and below, to enable Maia for OQL, navigate to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for OQL Generation**.
+In Studio Pro 11.8 and below, to enable Maia for OQL, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for OQL Generation**.
 
-Once enabled, you can access it from the toolbar in the **OQL Editor**:
+After you enable it, you can access it from the toolbar in the **OQL Editor**:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-oql-generator/maia-for-oql-button.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-oql-generator/maia-for-oql-button.png" alt="" max-width=80% >}}
 
 Clicking **Maia for OQL** opens a dedicated chat interface on the right side of Studio Pro, under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-oql-generator/maia-pane-for-oql-generator.png" max-width=42% >}}
-
-To use Maia for OQL, simply describe the data you need. For example, if you type *Show all active orders with customer names*, Maia will generate the most relevant OQL query based on the data available in the same module.
-
-Maia interprets your intent and provides a query that fits your requirements, helping you avoid manual query creation and common syntax errors.
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-oql-generator/maia-pane-for-oql-generator.png" alt="" max-width=42% >}}
 
 ## Limitations {#limitations}
 

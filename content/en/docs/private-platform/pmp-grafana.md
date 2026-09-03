@@ -1,6 +1,7 @@
 ---
 title: "Grafana Integration for Private Mendix Platform"
 url: /private-mendix-platform/grafana/
+banner: "Grafana, Loki, and Prometheus are the recommended monitoring stack for Kubernetes-based services like Private Mendix Platform. The customer is responsible for configuring the stack. The document below is provided for reference purposes only and no rights or expectations can be derived from it. Private Mendix Platform Certified Customers and Partners are ultimately responsible for the monitoring implementation, and should exercise all due diligence and care in using the examples provided in the document."
 description: "Provides information on Grafana integration options for Private Mendix Platform."
 weight: 52
 ---

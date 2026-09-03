@@ -47,3 +47,46 @@ Select the business events to integrate with Azure Blob Storage:
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/azure-blob-storage/ebb_azure_blob_connect_events.png" >}}
 
 3. Click **Next** to proceed to the confirmation screen.
+
+## Editing Bridges
+
+You can edit an Azure Blob Storage bridge bridge to modify the configuration as your integration requirements evolve, without needing to recreate it. For an Azure Blob Storage bridge, you can:
+
+* Add or remove Business Events
+* Update Storage Account, Storage SAS Token, Container Path, or Prefix Path
+
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_azure_blob_edit_mode.png" class="no-border" >}}
+
+{{% alert color="info" %}}You can edit Azure Blob Storage bridges only when the status is **Running**. {{% /alert %}}
+
+To edit a bridge:
+
+1. On the [Event Broker Manager](https://broker.mendix.com/) page, navigate to the **Event Broker Bridges** tab.
+2. Click the bridge you want to modify.
+3. Click **Edit** to enter editing mode. In editing mode, you can perform the following actions:
+
+      * **Add Business Events**:
+
+          1. Click **Add Business Events** to open a dialog that displays available events.
+          2. Select the events you want to add and click **Select**. Added events will display an **Added** badge and can be removed before applying changes.
+
+      * **Remove Business Events**:
+
+          1. Navigate to the event you want to remove and click **Remove**. Removed events will display a **Removed** badge, and their name and metadata will appear grayed out.
+          2. Re-add a removed event by clicking **Add** before applying changes.
+      
+      * **Update Service Configuration**:
+      
+          * Update the Storage Account, Storage SAS Token, Container Path, or Prefix Path as needed
+
+4. Once you have made your changes, you can:
+    * Click **Apply** to save and apply the changes. A confirmation message will indicate if the changes were successful. Changes to the event configuration take effect when applied. After applying changes, the bridge status will change to **Reconfiguring** and will return to **Running** once the reconfiguration is complete.
+   * Click **Cancel** to exit editing mode without saving any changes.
+
+{{% alert color="info" %}}
+The **Apply** button is only enabled when changes have been made to the bridge configuration.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+If an error occurs during the editing process, the bridge will automatically roll back to its previous running state to ensure continuity of service.
+{{% /alert %}}

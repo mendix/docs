@@ -408,6 +408,10 @@ This section shows all the activities which have taken place in this environment
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image20.png" class="no-border" >}}
 
+{{% alert color="info" %}}
+Actions performed through the Mendix on Kubernetes Deploy API are not always recorded here. For more information, see [Known Limitations: Logging API-Initiated Actions](#activity-log-api).
+{{% /alert %}}
+
 ### Application Settings
 
 #### Technical Contact
@@ -800,6 +804,10 @@ Delete all environments before you delete an app. If you delete an app which has
 ### Deployment Package Size
 
 Mendix on Kubernetes has a limit of 1024 MB on the size of a deployment package.
+
+### Logging API-Initiated Actions {#activity-log-api}
+
+Actions performed using the [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/), such as deploying a package or creating an environment, are not always recorded in the environment's [Activity Log](#activity-log). Only actions performed through the Mendix Portal are guaranteed to appear.
 
 ## Troubleshooting
 

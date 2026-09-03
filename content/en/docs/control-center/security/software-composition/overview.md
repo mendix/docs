@@ -144,7 +144,7 @@ The component usage list contains the following information:
 * **Version** – The version of the component that is being used.
 * **Type** – The type of component, which can be one of the following:
   
-    * **Module** – Standard marketplace module imported from the Marketplace, such as [Community Commons](https://marketplace.mendix.com/link/component/170).
+    * **Module** – Standard module imported from the Marketplace, such as [Community Commons](https://marketplace.mendix.com/link/component/170).
     * **Widget** – User interface elements downloaded from the Marketplace, such as [Charts](https://marketplace.mendix.com/link/component/105695).
     * **Framework** – The Mendix Runtime version, for example 10.12.0
     * **Jar** – Java libraries imported into your app using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the **userlib** folder depending on the Studio Pro version used, such as `org.apache.commons.io`.

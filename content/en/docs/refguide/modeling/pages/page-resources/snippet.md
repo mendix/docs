@@ -101,7 +101,7 @@ After selecting **Extract snippet**, a dialog box shows an overview of the snipp
 
 The table showing the snippet parameters has the following columns:
 
-* **Name** – the suggested name for the snippet parameter.
+* **Name** – The suggested name for the snippet parameter.
 * **Type** – The type of the snippet parameter.
 * **Substitute for** – the elements in the original document for which the snippet parameter is substituted in the extracted snippet.
 

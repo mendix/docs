@@ -98,7 +98,7 @@ A report detailing Cryptographic Control and Key Management is available in [Con
 
 The Mendix Runtime custom settings expose a dedicated encryption-at-rest configuration for S3-backed file document storage:
 
-* `com.mendix.storage.s3.EncryptionKeys` — List of keys which can be used to encrypt and decrypt data at rest in S3. The right key to decrypt the data with is automatically selected.
+* `com.mendix.storage.s3.EncryptionKeys` – List of keys which can be used to encrypt and decrypt data at rest in S3. The right key to decrypt the data with is automatically selected.
 * Supports key rotation with multiple base64-encoded keys.
 * Mendix 11.6.0 and newer enforces AES as the only supported algorithm.
 

@@ -128,7 +128,7 @@ The nanoflow requests the `notifications` permission, retrieves the device token
 
 ### Calling the Registration Nanoflow
 
-The registration nanoflow should run automatically each time the app opens — both on first launch and when the user returns to the app from the background. This ensures the FCM token stays current. The next section explains how to implement this using app lifecycle events.
+The registration nanoflow should run automatically each time the app opens—both on first launch and when the user returns to the app from the background. This ensures the FCM token stays current. The next section explains how to implement this using app lifecycle events.
 
 ## Running Push Notification Registration on App Lifecycle Events
 
@@ -202,7 +202,7 @@ Create a new nanoflow (for example, `ACT_InitAppLifecycle`) and add the followin
 1. Set the action to **Call a nanoflow**.
 1. Select the `ACT_InitAppLifecycle` nanoflow.
 
-This ensures that every time the page loads — which happens when the app opens — the lifecycle listener is registered and the push notification registration nanoflow runs immediately. If the FCM token has changed since the last session, the updated token is saved automatically.
+This ensures that every time the page loads—which happens when the app opens—the lifecycle listener is registered and the push notification registration nanoflow runs immediately. If the FCM token has changed since the last session, the updated token is saved automatically.
 
 ## Sending Push Notifications
 

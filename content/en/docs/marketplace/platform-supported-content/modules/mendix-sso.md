@@ -155,7 +155,7 @@ You can deactivate Mendix SSO in two simple steps. This will remove the end-user
 
 To deactivate Mendix SSO, follow these two steps:
 
-1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme/web** or **theme** folder of your app to *login.html* — this removes the single sign-on button from your sign in screen:
+1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme/web** or **theme** folder of your app to *login.html*—this removes the single sign-on button from your sign in screen:
     1. Open your app directory in File Explorer by selecting the menu item **App** > **Show App Directory in Explorer**.
 
     2. Go to the **theme/web** folder (for Mendix versions below 9.0.0, this is the **theme** folder).
@@ -395,7 +395,7 @@ The TokensOverview page allows administrators to see all tokens that have been i
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-sso/token-administration.png" alt="List of all Mendix SSO tokens issued to the app" class="no-border" >}}
 
-The page can be used for troubleshooting — you can see the creation and expiry dates of the tokens, and by clicking **View**, you can view the values held in the tokens.
+The page can be used for troubleshooting. You can see the creation and expiry dates of the tokens, and by clicking **View**, you can view the values held in the tokens.
 
 The **ID Token** is held in *JWT* format, so you can paste it into a [JWT decoder](https://jwt.io) to confirm what information it holds.
 
@@ -409,7 +409,7 @@ The **MyTokensOverview** page allows end-users to see their own access tokens.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-sso/my-tokens.png" alt="List of all my Mendix SSO tokens" class="no-border" >}}
 
-The page can be used for troubleshooting — the end-user can see the creation and expiry dates of the tokens, and by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
+The page can be used for troubleshooting. The end-user can see the creation and expiry dates of the tokens, and by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
 
 #### Displaying Tokens Using Snippets
 

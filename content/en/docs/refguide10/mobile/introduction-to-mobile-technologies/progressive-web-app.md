@@ -154,7 +154,7 @@ Browsers offer access to device features through APIs that can be leveraged in P
 
 This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
 
-**Legend** — The symbols below correspond to the following definitions:
+**Legend** – The symbols below correspond to the following definitions:
 
 * Fully compatible: {{< icon name="checkmark-circle-filled" color="green" >}}
 

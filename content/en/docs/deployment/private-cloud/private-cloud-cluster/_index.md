@@ -979,7 +979,7 @@ When you add a cluster manager, the user will have most of the access which the 
 
 The only limitations are that:
 
-* An added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the application if they want to manage existing environments in the namespaces.
+* An added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster—they need to be added as a member of the application if they want to manage existing environments in the namespaces.
 * Cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster.
 {{% /alert %}}
 

@@ -35,11 +35,11 @@ It has three regions: top, left, and center. The top region contains the brand l
 
 The navigation menu of Atlas Default is a toggled menu. Options for this toggled menu are to **shrink content (initially open)** or to **shrink content (initially closed)**:
 
-* **Shrink content (initially open)** — the navigation menu will initially start open at its maximum width, displaying both the menu item's description and icon. When toggled it will move to its minimum width and display just the menu item's icon. The page's content (center region) also starts shrunk to make space for the open menu:
+* **Shrink content (initially open)** – The navigation menu will initially start open at its maximum width, displaying both the menu item's description and icon. When toggled it will move to its minimum width and display just the menu item's icon. The page's content (center region) also starts shrunk to make space for the open menu:
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.1_shrinkingcontentopenoption.gif"   width="350"  class="no-border" >}}
 
-* **Shrink content (initially closed)** — the navigation menu will initially start closed at its minimum width displaying just the menu item's icon. When toggled it will move to its maximum width and display both the menu item's icon and description. The page's content (center region) does not start shrunk, but will shrink when sidebar is toggled:
+* **Shrink content (initially closed)** – The navigation menu will initially start closed at its minimum width displaying just the menu item's icon. When toggled it will move to its maximum width and display both the menu item's icon and description. The page's content (center region) does not start shrunk, but will shrink when sidebar is toggled:
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.1_shrinkingcontentclosedoption.gif"   width="350"  class="no-border" >}}
 
@@ -56,11 +56,11 @@ It has three regions: top, left, and center. The top region contains both the br
 
 The options for the sidebar (unlike the Atlas Default) are only applicable at phone screen size. You then have two options for how the sidebar is toggled: **slide over content** and **push content aside**: 
 
-* **Slide over content** — the sidebar will move to overlay on top of the content, hiding a portion (depends on the width of the sidebar) of the content:
+* **Slide over content** – The sidebar will move to overlay on top of the content, hiding a portion (depends on the width of the sidebar) of the content:
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.2_slidingovercontent.gif"   width="350"  class="no-border" >}}
 
-* **Push content aside** — the sidebar will push the content off-screen: 
+* **Push content aside** – The sidebar will push the content off-screen: 
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.2_pushingcontentaside.gif"   width="350"  class="no-border" >}}
 

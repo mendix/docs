@@ -89,20 +89,20 @@ The following options are available above the list of deployment packages:
 
 The list contains the following information:
 
-* **Deployment Package** — The name of the deployment package.
-* **Environment** — The name of the environment where the package is deployed.
-* **Runtime** — The Mendix Runtime version.
-* **Findings** — The number of findings of each type, color-coded according to severity level.    
+* **Deployment Package** – The name of the deployment package.
+* **Environment** – The name of the environment where the package is deployed.
+* **Runtime** – The Mendix Runtime version.
+* **Findings** – The number of findings of each type, color-coded according to severity level.    
   {{% alert color="warning" %}}Findings are calculated for all software packages that are built. However, if a package is not deployed, we will stop updating its findings after 30 days. These findings will be grayed out and displayed as 0.{{% /alert %}}
 * **Policy Status** – The number of policies that the app violates. For details on each policy, click this line item, then go to the [Policy Status tab](#policy-status) of the app.
-* **Version** — The version of the deployment package on this app environment.
-* **Technical Contact** — The Technical Contact of the app.
-* **Target Cloud** —  The type of cloud where the deployment package is deployed. Currently, the following types of cloud are supported:
+* **Version** – The version of the deployment package on this app environment.
+* **Technical Contact** – The Technical Contact of the app.
+* **Target Cloud** –  The type of cloud where the deployment package is deployed. Currently, the following types of cloud are supported:
     * Mendix Free Cloud
     * Mendix Cloud (including Mendix Cloud Dedicated)
     * Mendix on Kubernetes (connected)
-* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
-* **View details** — Clicking this opens the [Deployed Package Details](#deployed-package-details) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected deployment package. Ensure you are on a compatible runtime version and create a new deployment package in order to get component visibility here.
+* Column customization ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+* **View details** – Clicking this opens the [Deployed Package Details](#deployed-package-details) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected deployment package. Ensure you are on a compatible runtime version and create a new deployment package in order to get component visibility here.
 
 ### Deployment Package Details {#deployed-package-details}
 
@@ -169,7 +169,7 @@ The **Policy Status** tab at the deployment package level displays a list of the
     * **Failure Condition(s)** – The conditions under which the policy is considered violated.
     * **Checkpoints & Action(s)** – The trigger which causes the policy to be checked, and the action that is taken if the policy is violated.
 
-* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+* **Column customization** ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 You can search a policy by its name, and export all information on this tab to an Excel file.
 
@@ -185,9 +185,9 @@ The **Components** tab gives an overview of all the unique components deployed i
 
 The **Insights** cards display the following details:
 
-* **Marketplace** — The number of private and public Marketplace components used throughout your apps.
-* **Support type** — The number of Marketplace components divided into content support categories.
-* **Summary** — The number of findings in each severity category, along with a rolling average of how the number of findings has evolved over the past 30 days, expressed as a percentage.
+* **Marketplace** – The number of private and public Marketplace components used throughout your apps.
+* **Support type** – The number of Marketplace components divided into content support categories.
+* **Summary** – The number of findings in each severity category, along with a rolling average of how the number of findings has evolved over the past 30 days, expressed as a percentage.
 
 ### Component List
 
@@ -199,25 +199,25 @@ The following options are available above the list of components:
 
 The component list contains the following information:
 
-* **Component** — The name of the component.
-* **Type** — The type of component, which can be one of the following:
+* **Component** – The name of the component.
+* **Type** – The type of component, which can be one of the following:
   
-    * **Module** — Standard marketplace module imported from the Marketplace, such as [Community Commons](https://marketplace.mendix.com/link/component/170), or a module created by the developer.
-    * **Widget** — User interface elements downloaded from the Marketplace, such as [Charts](https://marketplace.mendix.com/link/component/105695), or a widget created by the developer.
-    * **Framework** — The Mendix Runtime version, for example 10.12.0
-    * **Jar** — Java libraries imported into your app using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the **userlib** folder depending on the Studio Pro version used, such as `org.apache.commons.io`.
-    * **npms** — `npm` libraries that are used in your [JavaScript actions](/refguide/javascript-actions/).
-    * **Unknown** — When the type of the component is none of the above and hence undetermined.
+    * **Module** – Standard module imported from the Marketplace, such as [Community Commons](https://marketplace.mendix.com/link/component/170), or a module created by the developer.
+    * **Widget** – User interface elements downloaded from the Marketplace, such as [Charts](https://marketplace.mendix.com/link/component/105695), or a widget created by the developer.
+    * **Framework** – The Mendix Runtime version, for example 10.12.0
+    * **Jar** – Java libraries imported into your app using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the **userlib** folder depending on the Studio Pro version used, such as `org.apache.commons.io`.
+    * **npms** – `npm` libraries that are used in your [JavaScript actions](/refguide/javascript-actions/).
+    * **Unknown** – When the type of the component is none of the above and hence undetermined.
     
-* **Support type** — The support type of the Marketplace component. This can be **Mendix**, **Partner**, or **Community**.    
+* **Support type** – The support type of the Marketplace component. This can be **Mendix**, **Partner**, or **Community**.    
   For more information, refer to [Content Support Categories](/appstore/marketplace-content-support/#category).
-* **Version** — The version of the component that is being used.
-* **Findings** — The number of findings of each type, color-coded according to severity level.
-* **License** — For components derived from the Mendix Marketplace, this is the end-user license for the component.
+* **Version** – The version of the component that is being used.
+* **Findings** – The number of findings of each type, color-coded according to severity level.
+* **License** – For components derived from the Mendix Marketplace, this is the end-user license for the component.
 * **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is only available for your organisation. On the Marketplace homepage, you can use the **Visibility** filter to display specific components.
-* **Latest version** — For components derived from the Mendix Marketplace, this is the latest version of the component.
-* **Publisher** — For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
-* **View details** — Clicking this opens the [Component App Details](#component-usage) page.
+* **Latest version** – For components derived from the Mendix Marketplace, this is the latest version of the component.
+* **Publisher** – For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
+* **View details** – Clicking this opens the [Component App Details](#component-usage) page.
 * Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 To export the information corresponding to selected items in the list to an Excel file, select the checkboxes of the items in the list, then click **Selection Export** that appears at the bottom of the page.
@@ -250,17 +250,17 @@ The following options are available above the list:
 
 The finding list contains the following information:
 
-* **Severity** — The severity of the finding related to that component.
-* **Finding Type** — The type of finding, which can be **Outdated** or **Deprecated**.
-* **Deployment Package** — The deployment package in which the component is identified as a risk.
-* **Environment** — The name of the environment where the app is running.
-* **Target Cloud** — The type of cloud where the deployment package is deployed.
-* **Age** — The number of days that the finding has been applicable, computed as follows:
+* **Severity** – The severity of the finding related to that component.
+* **Finding Type** – The type of finding, which can be **Outdated** or **Deprecated**.
+* **Deployment Package** – The deployment package in which the component is identified as a risk.
+* **Environment** – The name of the environment where the app is running.
+* **Target Cloud** – The type of cloud where the deployment package is deployed.
+* **Age** – The number of days that the finding has been applicable, computed as follows:
 
     * Deprecated components: The current date - The date when the component was deprecated    
     * Outdated components: The current date - The publish date of the first higher runtime compatible version
 
-* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+* **Column customization** ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 ##### Finding and Component Details
 
@@ -294,12 +294,12 @@ The following options are available above the list:
 
 The component usage list contains the following information:
 
-* **Deployment Package** — The name of the deployment package where the component is used.
-* **Environment** — The name of the environment where the app using the component is deployed.
-* **Runtime** — The runtime version to which the component is compatible.
-* **Version** — The version of the impacted deployment package.
-* **Target Cloud** — The type of cloud where the deployment package is deployed.
-* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+* **Deployment Package** – The name of the deployment package where the component is used.
+* **Environment** – The name of the environment where the app using the component is deployed.
+* **Runtime** – The runtime version to which the component is compatible.
+* **Version** – The version of the impacted deployment package.
+* **Target Cloud** – The type of cloud where the deployment package is deployed.
+* **Column customization** ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 ## Policy Status
 
@@ -309,5 +309,5 @@ The **Policy Status** tab lists the policies that apply to all the deployment pa
 * **Package Name** – The name of the package which violated the policy.
 * **Environment Name** – If applicable, the name of the environment where the violating app package is deployed.
 * **Runtime** – The runtime version of the deployment package.
-* **Target Cloud** — The type of cloud where the deployment package is deployed.
+* **Target Cloud** – The type of cloud where the deployment package is deployed.
 * **Last Checked On** – The date when the policy was last checked.

@@ -152,7 +152,7 @@ For this widget to visualize a model correctly, set the following properties:
 * On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
 * On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
 * On the **General** tab, there are some optional customization options for changing the widget's behavior:
-    * **Viewer ID** – sets the id for the widget — this can be used later to get the viewer instance 
+    * **Viewer ID** – sets the id for the widget—this can be used later to get the viewer instance 
     * **Show coordinate system** – determines if a coordinate system will appear at the lower-left corner of the viewer 
     * **Show navigation cube** – determines if a navigation cube will appear at the upper-right corner of the viewer
     * **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value

@@ -177,7 +177,7 @@ Instead of putting values directly into your SQL, you can use `?` placeholders a
 
 In Mendix, you do this by creating a `Statement` entity with a SQL query that includes `?`. Then, you add `Binding` entities to provide the values for those placeholders.
 
-Each `Binding` is linked to the `Statement`. The order of the bindings matters — the first binding fills the first `?`, the second fills the second `?`, and so on.
+Each `Binding` is linked to the `Statement`. The order of the bindings matters—the first binding fills the first `?`, the second fills the second `?`, and so on.
 
 Make sure the number of bindings matches the number of `?` placeholders in your SQL. Otherwise, the execution will fail due to mismatched parameters.
 

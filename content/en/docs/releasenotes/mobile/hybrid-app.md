@@ -115,7 +115,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 **Release date: August 15, 2019**
 
 * We fixed an issue where Android devices with older WebView versions might get stack in a loading loop.
-* We fixed an unhandled exception with Secure Storage when using a PIN view. Users on devices with no OS-level security features enabled — like pin, password, biometrics — will now be prompted to enable any of them before proceeding to set their app's PIN.
+* We fixed an unhandled exception with Secure Storage when using a PIN view. Users on devices with no OS-level security features enabled—like pin, password, biometrics—will now be prompted to enable any of them before proceeding to set their app's PIN.
 
 ### Hybrid App Base 4.1.3 / Hybrid App Template 4.1.3
 

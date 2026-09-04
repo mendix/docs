@@ -19,7 +19,7 @@ This how-to teaches you how to do the following:
 
 ## Prerequisites
 
-* A PKCS12 certificate file that contains a private key — these files typically have the *.pfx* or *.p12* file extension
+* A PKCS12 certificate file that contains a private key—these files typically have the *.pfx* or *.p12* file extension
 * The password to open that file
 
 ## Running Locally

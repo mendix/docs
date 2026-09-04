@@ -29,13 +29,13 @@ The following controls are related to this control:
 
 ### Customer Responsibility
 
-This control is implemented at the Identity Provider (IdP) level and is the responsibility of the customer's IdP administrator. For Private Mendix Platform integrated with the IdP through Single Sign-On (SSO), no additional implementation is required on the Private Mendix Platform side, as all account lifecycle events — including creation, modification, enabling, disabling, and removal — are managed and audited centrally by the IdP. 
+This control is implemented at the Identity Provider (IdP) level and is the responsibility of the customer's IdP administrator. For Private Mendix Platform integrated with the IdP through Single Sign-On (SSO), no additional implementation is required on the Private Mendix Platform side, as all account lifecycle events—including creation, modification, enabling, disabling, and removal—are managed and audited centrally by the IdP. 
 
 ## Guidance
 
 ### Customer Responsibility
 
-As an example IdP, Microsoft Entra ID natively captures all account lifecycle events — including creation, modification, enabling, disabling, and removal — through its built-in Audit Logs.  If using Entra ID the control could be fulfilled as follows:
+As an example IdP, Microsoft Entra ID natively captures all account lifecycle events—including creation, modification, enabling, disabling, and removal—through its built-in Audit Logs.  If using Entra ID the control could be fulfilled as follows:
 
 * To meet the automated notification requirement, organizations can export audit logs to Azure Monitor or Microsoft Sentinel and configure alert rules with Action Groups to notify designated personnel or roles in real time. 
 * For long-term log retention, audit logs should be forwarded to a Log Analytics Workspace or Azure Storage Account via Diagnostic Settings. 

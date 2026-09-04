@@ -15,7 +15,7 @@ This page describes known issues you may encounter when building or testing PWA 
 
 ### App Cannot Connect to localhost on a Physical Device{#android-localhost}
 
-* Symptom — When you set the runtime URL to a localhost address (for example, `http://localhost:8080`) and install the app on a physical Android device, the app fails to load and shows the following error:
+* Symptom – When you set the runtime URL to a localhost address (for example, `http://localhost:8080`) and install the app on a physical Android device, the app fails to load and shows the following error:
 
     ```
     Page Load Error
@@ -24,12 +24,12 @@ This page describes known issues you may encounter when building or testing PWA 
 
     {{< figure src="/attachments/refguide10/mobile/pwa-wrapper/localhost-cache-miss-error.png" alt="Page Load Error showing net::ERR_CACHE_MISS on Android" max-width="400px" >}}
 
-* Cause — Two things are required for a physical Android device to reach a localhost server on your machine:
+* **Cause** – Two things are required for a physical Android device to reach a localhost server on your machine:
 
     * The app must have the `INTERNET` permission. Without it, the Android OS blocks all outbound network traffic.
     * The device must have a port forwarding rule from its own localhost to your machine's localhost. Android devices do not forward ports automatically.
 
-* Solution — To solve this issue, do the following:
+* **Solution** – To solve this issue, do the following:
 
 1. In the PWA Wrapper builder, go to the **Permissions** step and enable the **INTERNET** permission (for general guidance on permissions, see [Build PWA Wrapper Apps](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/build-pwa-wrapper-apps/)).
 1. Connect the Android device to your machine via USB and make sure [USB debugging](https://developer.android.com/studio/debug/dev-options) is enabled on the device.

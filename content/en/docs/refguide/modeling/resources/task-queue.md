@@ -46,8 +46,8 @@ Running in the background is done in so called **Task Queues**. They can be crea
 3. Click **Task queue** and give it a name.
 4. Enter the value for **Threads** for the Task Queue.
 5. Select the **Scope** for the threads:
-    * **Per node** — the maximum thread count will be limited per node. When this option is selected, adding new nodes to the cluster will also increase the total thread count in overall cluster.
-    * **Cluster-wide** — the maximum thread count will be limited cluster-wide. When this option is selected, total thread count in the cluster will be fixed and adding/removing new nodes will not have any impact on the thread count.
+    * **Per node** – the maximum thread count will be limited per node. When this option is selected, adding new nodes to the cluster will also increase the total thread count in overall cluster.
+    * **Cluster-wide** – the maximum thread count will be limited cluster-wide. When this option is selected, total thread count in the cluster will be fixed and adding/removing new nodes will not have any impact on the thread count.
 
 Task queues have a number of threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
 
@@ -73,8 +73,8 @@ In Studio Pro, a [Call Microflow](/refguide/microflow-call/) activity can start 
 2. Check the box **Execute this Microflow in a Task Queue**.
 3. Set **Select Task Queue** to the Task Queue in which the microflow should be initiated.
 4. (Optional) Select an automatic retry strategy:
-    * **Fixed retry** — the retries will be performed after the given delay, up to the given number of attempts.
-    * **Exponential retry** — the length of the delay between the retries is doubled for each retry, up to the given maximum interval.
+    * **Fixed retry** – the retries will be performed after the given delay, up to the given number of attempts.
+    * **Exponential retry** – the length of the delay between the retries is doubled for each retry, up to the given maximum interval.
 
 #### Through the API
 
@@ -195,13 +195,13 @@ There is one exception to the above rules:
 
 The **Status** attribute of `System.QueuedTask` and `System.ProcessedQueueTask` reflects the state that a background task is in. The values are:
 
-* `Idle` — The task was created and is waiting to be run.
-* `Running` — The task is being run.
-* `Completed` — The task ran successfully. A `System.ProcessedQueueTask` is added to reflect this.
-* `Failed` — The task is no longer running because an exception occurred. A `System.ProcessedQueueTask` containing the exception is added to reflect the failure. The task will not be retried.
-* `Retrying` — Same as `Failed` but the task will be retried.
-* `Aborted` — The task is no longer running because the cluster node that was running it went down. A `System.ProcessedQueueTask` is added to reflect this. The task will be retried on another cluster node.
-* `Incompatible` — The task never ran because the model changed in such a way that it cannot be run anymore. This could be because the microflow was removed/renamed, the arguments were changed, or the Task Queue was removed.
+* `Idle` – The task was created and is waiting to be run.
+* `Running` – The task is being run.
+* `Completed` – The task ran successfully. A `System.ProcessedQueueTask` is added to reflect this.
+* `Failed` – The task is no longer running because an exception occurred. A `System.ProcessedQueueTask` containing the exception is added to reflect the failure. The task will not be retried.
+* `Retrying` – Same as `Failed` but the task will be retried.
+* `Aborted` – The task is no longer running because the cluster node that was running it went down. A `System.ProcessedQueueTask` is added to reflect this. The task will be retried on another cluster node.
+* `Incompatible` – The task never ran because the model changed in such a way that it cannot be run anymore. This could be because the microflow was removed/renamed, the arguments were changed, or the Task Queue was removed.
 
 ### Model Changes
 

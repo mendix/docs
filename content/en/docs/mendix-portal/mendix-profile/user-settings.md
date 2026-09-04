@@ -68,7 +68,7 @@ Follow these steps to merge your profiles:
 2. In the dialog box that is displayed, enter the email address of one of the accounts linked to the profile you want to transfer information from, then click **Next**.
 3. Choose an email address to receive a verification code. Make sure this is an email address you have access to. This step is needed to verify that you are the owner of the Mendix profile you are trying to merge.
 4. Enter the verification code you received via the selected email address.
-5. After clicking **Verify**, you will see an overview of the profile information that will be deleted and kept. This includes earned points, achievements, certifications, and Academy progress that will be merged to your target profile. Note that credits cannot be merged — they remain on the accounts where they were earned.
+5. After clicking **Verify**, you will see an overview of the profile information that will be deleted and kept. This includes earned points, achievements, certifications, and Academy progress that will be merged to your target profile. Note that credits cannot be merged—they remain on the accounts where they were earned.
 6. To proceed with the merge, click **Merge**. You will be notified once the merge is completed.
 
 {{% alert color="info" %}} 

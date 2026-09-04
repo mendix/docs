@@ -93,7 +93,7 @@ For Windows, you can use the following keyboard shortcuts to select stories on t
 
 ## Scrum Planning vs Kanban Planning {#different-plannings}
 
-The **Planning** page offers different features to accommodate two different workflows: Scrum or Kanban. Depending on your choice of board type — Scrum or Kanban —, the **Board** page looks a bit different.
+The **Planning** page offers different features to accommodate two different workflows: Scrum or Kanban. Depending on your choice of board type—Scrum or Kanban—the **Board** page looks a bit different.
 
 {{% alert color="info" %}}You can select your board type on the [Planning](/developerportal/project-management/epics/planning/#board-type) page.{{% /alert %}}
 

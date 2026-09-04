@@ -493,7 +493,7 @@ For more information on creating user provisioning with constants, see the [Depl
 
 The following constants are optional:
 
-* **ClientAuthenticationMethod** (*default: client_secret_basic*) – the client authentication method — the caption of OIDC.ENU_ClientAuthenticationMethod
+* **ClientAuthenticationMethod** (*default: client_secret_basic*) – The client authentication method—the caption of OIDC.ENU_ClientAuthenticationMethod
 
     Examples: `client_secret_post`, `client_secret_basic`, or `private_key_jwt`
 
@@ -517,17 +517,17 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
 
     Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 
-* **CustomATPTokenType**: an optional deploy-time constant — when **CustomATP** is enabled, optionally, **CustomATPTokenType** can be set to `ID-TOKEN`. Default is `ACCESS-TOKEN`.
+* **CustomATPTokenType**: an optional deploy-time constant—when **CustomATP** is enabled, optionally, **CustomATPTokenType** can be set to `ID-TOKEN`. Default is `ACCESS-TOKEN`.
 
     Example: `ID-TOKEN`
     
 * **CustomCallbackURL** – the custom callback URL
 
-* **SelectedClaim** – selected claim values — multiple values can be separated by a space
+* **SelectedClaim** – selected claim values—multiple values can be separated by a space
 
     Example: `auth_time created_at`
 
-* **SelectedScope** – selected scopes — multiple values can be separated by a space
+* **SelectedScope** – selected scopes—multiple values can be separated by a space
 
     Example: `openid profile email`
 
@@ -537,7 +537,7 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
 
 * **SessionEndPoint** – the end session endpoint
 
-* **ACRValues** – selected ACRvalues — the selected Acr with multiple values separated by a space  
+* **ACRValues** – selected ACRvalues—the selected Acr with multiple values separated by a space  
 
     Example: `acr1 acr2`
 
@@ -569,7 +569,7 @@ The following constants are mandatory when creating an OIDC SSO Client Credentia
 
 * **ClientAlias** – the client alias
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
-* **CustomATP** – a custom access token processing microflow — the value of `CompleteName` in the `mxmodelreflection$microflows` table
+* **CustomATP** – a custom access token processing microflow—the value of `CompleteName` in the `mxmodelreflection$microflows` table
 Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 * **IsClientGrantOnly** (*default: false*) – allow to create Client Credential Configuration in the application
 
@@ -927,7 +927,7 @@ If you want to use the information in an access token which is a JWT, you need t
 
 * The OIDC module provides you with default microflows for parsing access tokens from the following IdPs:
 
-    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
+    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted—for example:
 
         ```json
         "sws.samauth.role.name": [
@@ -935,7 +935,7 @@ If you want to use the information in an access token which is a JWT, you need t
         ]
         ```
 
-    * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
+    * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token—for example:
 
         ```json
         "roles": [

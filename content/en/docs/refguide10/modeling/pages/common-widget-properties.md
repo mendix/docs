@@ -335,8 +335,8 @@ The possible values of a predefined validation are the following:
 * **Required** – can be used for values of *all* data types
 * **E-mail** – applies to *String* values
 * **Positive number** – applies to *Decimal*, *Integer*, and *Long* values
-* **Date in the future** – applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`
-* **Date in the past** – applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`
+* **Date in the future** – applies to *Date and time* values—compares the date *and time* to `[%CurrentDateTime%]`
+* **Date in the past** – applies to *Date and time* values—compares the date *and time* to `[%CurrentDateTime%]`
 
 #### Custom Validation{#custom-validation}
 

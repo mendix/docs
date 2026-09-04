@@ -71,18 +71,16 @@ The user role assigned to the Administrator. For more information, see [User Rol
 
 Default: *Administrator*
 
-{{% todo %}}Not true that System.Administrator does user management - that is in Manageable Roles{{% /todo %}}
-
 {{% alert color="info" %}}
-The administrator is always created and has the System.Administrator role by default. The System.Administrator role allows users of your application to be managed. 
+The Administrator user role is always created and has the System.Administrator module role by default. The Administrator user role can also manage users of your application as it has all [manageable roles](/refguide/user-roles/#user-management). 
 
-For Free Apps, the user that created the application automatically has this role by default as well so you can use it to manage your users in that environment.
+For Free Apps, the user that created the application automatically also defaults to having the Administrator role so they can use it to manage the users in that environment.
 
-This role may be helpful in case you have exceeded your user license restriction in which case you can use any user that has this System.Administrator role to sign in to manage your users.
+This role may be helpful if you exceed your user license restriction, as you can sign in as any end-user that has this Administrator user role to manage your end-users.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When your app is not deployed locally, for example to Mendix Cloud, changes to the user role of the administrator account will not be applied until the administrator password is changed. See the [actions](/developerportal/deploy/environments-details/#actions) section of *Environment Detail* for instructions on changing the admin password.
+When your app is not deployed locally, for example, if it is deployed to Mendix Cloud, changes to the user role of the Administrator account will not be applied until the Administrator password is changed. See the [actions](/developerportal/deploy/environments-details/#actions) section of *Environment Detail* for instructions on changing the admin password.
 {{% /alert %}}
 
 ## Read More

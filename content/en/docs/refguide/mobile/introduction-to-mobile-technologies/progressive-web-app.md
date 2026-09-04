@@ -137,7 +137,7 @@ Browsers offer access to device features through APIs that can be leveraged in P
 The availability and behavior of these Web APIs may differ depending on the browser and operating system in use. For detailed compatibility information, refer to the [MDN Web API documentation](https://developer.mozilla.org/en-US/docs/Web/API).
 
 {{% alert color="info" %}}
-Certain device features, such as camera access on iOS or support for push notifications, require that your Progressive Web App is served over HTTPS. For local development and testing, you can use tools like [ngrok](https://ngrok.com/) to expose your local server via a secure HTTPS tunnel.{{% /alert %}}
+Certain device features, such as camera access on iOS or support for push notifications, require that your Progressive Web App is served over HTTPS. For local development and testing, you can use tools like [ngrok](https://ngrok.com/) to expose your local server via a secure HTTPS tunnel.
 {{% /alert %}}
 
 ## Troubleshooting

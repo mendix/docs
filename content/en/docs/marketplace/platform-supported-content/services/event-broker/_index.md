@@ -2,7 +2,7 @@
 title: "Mendix Event Broker"
 url: /appstore/services/event-broker/
 linktitle: "Event Broker"
-description: "Mendix Event Broker"
+description: "Describes the Mendix Event Broker service, including licensing, configuration, access control, and externally defined events."
 aliases:
 ---
 
@@ -33,21 +33,21 @@ The Event Broker must be enabled on both the app and specific environment levels
 
 Technical Contacts with a license for the Mendix Event Broker can manage its features on the [Event Broker Manager](https://broker.mendix.com/) page.
 
-### Users for Event Broker Manager 
+### Users for Event Broker Manager
 
 Users within the company's email domain that have a Mendix login can participate in the administration of the Mendix Event Broker as either a View or Admin user. 
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_internal_user.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_internal_user.png" alt="" >}}
 
 They can also be blocked from participation. 
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_internal_user_2.png" width="300" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_internal_user_2.png" alt="" width="300" >}}
 
 Users that are not part of the customer organization (not within the email domain of the customer) can be invited with the same levels of access. Such users still require a standard Mendix login.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_external_user.png" width="300" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_external_user.png" alt="" width="300" >}}
 
-### Spaces and Environments{#spaces}
+### Spaces and Environments {#spaces}
 
 Spaces define which applications can exchange events with each other. When Business Events is enabled for an environment, it is placed in an Event Broker space based on the environment name. This enables apps deployed under the same space to publish and consume events. For example, apps in acceptance environment can only exchange events with other apps' acceptance environments. You can check the space of an app's environment on the [Event Broker Manager](https://broker.mendix.com/) page.
 
@@ -70,23 +70,23 @@ The Mendix Event Broker allows access control to be applied down to the event le
 The overview page contains a list of applications by environment within the organization's event landscape. The table contains columns that provide cases with exceptions:
 
 * **Implemented but no access** – an application has implemented an event that it is not allowed to access, guaranteeing a failure to subscribe to and/or publish the event
-* **Has access but not implemented** – an application has been provided with more access than is required and you could make it more secure.
+* **Has access but not implemented** – an application has been provided with more access than is required and you can make it more secure.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_access_control_overview.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_access_control_overview.png" alt="" >}}
 
 Selecting the specific application provides an overview of the application's implemented events with their associated access.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_access_control_overview_2.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_access_control_overview_2.png" alt="" >}}
 
 From this view, access to the individual events can be configured. Changes take effect immediately when **Apply Changes** is clicked.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_access_control_overview_3.png" width="300" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_access_control_overview_3.png" alt="" width="300" >}}
 
 #### Default Behavior
 
 From the main overview page, an administrator can assign the default application behavior when they deploy to an environment for the first time by changing the configuration in the **Manage Default Access** dialog box.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_access_control_defaults.png" width="300" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_access_control_defaults.png" alt="" width="300" >}}
 
 From here, you can manage the default access settings:
 
@@ -100,7 +100,7 @@ From here, you can manage the default access settings:
 
 Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and external technologies. For information on creating and managing bridges, see [Event Broker Bridges](/appstore/services/event-broker-bridges/).
 
-Mendix Event BRoker Bridges supports integration with the following technologies:
+Mendix Event Broker Bridges support integration with the following technologies:
 
 * [AWS SQS](/appstore/services/event-broker-bridges/aws-sqs-bridge/) 
 * [HTTP](/appstore/services/event-broker-bridges/http-bridge/) 
@@ -112,7 +112,7 @@ Mendix Event BRoker Bridges supports integration with the following technologies
 
 Externally defined events refer to events that are defined outside the Mendix application, specifically outside Studio Pro.
 
-The Mendix Event Broker allows users to upload an AsyncAPI document for these external events. Once uploaded, users can download a new AsyncAPI document compatible with [Mendix Business Events](/appstore/services/business-events/), which can then be imported into Studio Pro to share the events across Mendix applications or use them in a new [Bridge](#manage-mx-broker-bridge).
+The Mendix Event Broker lets you upload an AsyncAPI document for these external events. Once uploaded, you can download a new AsyncAPI document compatible with [Mendix Business Events](/appstore/services/business-events/), which can then be imported into Studio Pro to share the events across Mendix applications or use them in a new [Bridge](#manage-mx-broker-bridge).
 
 ### Upload Events
 
@@ -120,29 +120,29 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
 
 To begin, click **Get Started** or **Upload AsyncAPI Document**.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_get_started.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_get_started.png" alt="" >}}
 
 #### Upload an AsyncAPI File
 
 Upload an AsyncAPI contract based on the [AsyncAPI format](#asyncapi-format). If there are any errors with the content or file format, an error box will display a list of the issues found.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_create_1.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_create_1.png" alt="" >}}
 
 #### Verify File Information
 
 The details of the uploaded file are extracted in the **Verify** section. This allows you to confirm that all information is accurate and meets the required expectations.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_create_2.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_create_2.png" alt="" >}}
 
 #### Choose Spaces
 
 Select the spaces where the events will be used. When at least one space is selected, the **Create Service** button will be enabled. Click **Create Service** to create the service.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_create_3.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_create_3.png" alt="" >}}
 
 #### Successful Page
 
-You will get a confirmation that the externally defined events have been successfully uploaded and are now ready to be used in Bridges or applications.
+A confirmation appears when the externally defined events are uploaded and ready to use in Bridges or applications.
 
 Click **Close** to continue.
 
@@ -152,35 +152,35 @@ For more information on how to use an event, see [Usages](#event-usages).
 
 After a service is uploaded, it can be viewed on the Overview page. This page presents a list of uploaded events, along with their corresponding services and the spaces selected for the AsyncAPI.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_overview.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_overview.png" alt="" >}}
 
 ### Events and Services Details
 
-From the Overview page, users can access the Event and Service details by clicking on the event or service name in the table. Each page includes a drop-down selection for a space, which allows you to manage services and events specific to that space.
+From the Overview page, you can access the Event and Service details by clicking the event or service name in the table. Each page includes a drop-down selection for a space, which allows you to manage services and events specific to that space.
 
 #### Event Details
 
 This page provides information about the uploaded event, including the event name, PUB/SUB details, attributes, and [usages](#event-usages).
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_event_page.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_event_page.png" alt="" >}}
 
 #### Service Details {#service-details}
 
 The services details page includes information about the uploaded services, including the service name, description, and associated events. You can also delete a service within the selected space (subject to [deletion conditions](#delete-service)) and download the AsyncAPI contract to import into an existing Mendix application (for more information, see [Application Usages](#usages-app)).
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_service_page.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_service_page.png" alt="" >}}
 
 ### Event Usages {#event-usages}
 
 Once an AsyncAPI contract is successfully uploaded, it can be used through Bridges or applications.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_event_usages.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_event_usages.png" alt="" >}}
 
 #### Bridges
 
 To use an uploaded event in a Bridge, you must configure a [Bridge with AWS SQS](/appstore/services/event-broker-bridges/#bridge-with-aws-sqs). During the step **Choose business events to connect**, the newly uploaded events in the selected space from the previous step will be visible.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_add_bridge.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_add_bridge.png" alt="" >}}
 
 #### Applications {#usages-app}
 
@@ -188,11 +188,11 @@ To use an uploaded event in an application, download the AsyncAPI contract for S
 
 Use the **Use an existing business event service** option to import the file as a new business event.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_import_file.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_import_file.png" alt="" >}}
 
 Click **OK**. This creates the new business event that is ready to be used with the same features as any other imported event.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_imported_file.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_imported_file.png" alt="" >}}
 
 ### Delete Service {#delete-service}
 
@@ -206,7 +206,7 @@ Deleting a service only removes it from the selected space. The service will rem
 
 ### AsyncAPI Format {#asyncapi-format}
 
-Externally defined events are provided to the Event Broker via an AsyncAPI document, which must include the service information and event definitions. Any other content within the AsyncAPI document, if provided, will be ignored.
+Externally defined events are provided to the Event Broker via an AsyncAPI document, which must include the service information and event definitions. Any other content within the AsyncAPI document, if provided, is ignored.
 
 The mandatory information required in the file includes:
 
@@ -216,13 +216,13 @@ The mandatory information required in the file includes:
 
 {{% alert color="info" %}}
 
-Message names must be unique. Duplicate events cannot be uploaded if it is deployed anywhere in the Mendix space or uploaded before.
+Message names must be unique. Duplicate events cannot be uploaded if they are deployed anywhere in the Mendix space or have been uploaded before.
 
 {{% /alert %}}
 
 The supported version of AsyncAPI is 2.0.0, in accordance with [AsyncAPI documentation](https://v2.asyncapi.com/docs/reference/specification/v2.2.0).
 
-The file requirements are listed below:
+The file requirements are:
 
 * Size: maximum file size is 1MB.
 * Supported files: *.yml*, *.yaml*, *.json*

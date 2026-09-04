@@ -112,7 +112,7 @@ Mendix Event Broker Bridges support integration with the following technologies:
 
 Externally defined events refer to events that are defined outside the Mendix application, specifically outside Studio Pro.
 
-The Mendix Event Broker lets you upload an AsyncAPI document for these external events. Once uploaded, you can download a new AsyncAPI document compatible with [Mendix Business Events](/appstore/services/business-events/), which can then be imported into Studio Pro to share the events across Mendix applications or use them in a new [Bridge](#manage-mx-broker-bridge).
+The Mendix Event Broker lets you upload an AsyncAPI document for these external events. Once uploaded, you can download a new AsyncAPI document compatible with [Mendix Business Events](/appstore/services/business-events/), which can then be imported into Studio Pro to share the events across Mendix applications or use them in a new [bridge](/appstore/services/event-broker-bridges/).
 
 ### Upload Events
 
@@ -178,7 +178,7 @@ Once an AsyncAPI contract is successfully uploaded, it can be used through Bridg
 
 #### Bridges
 
-To use an uploaded event in a Bridge, you must configure a [Bridge with AWS SQS](/appstore/services/event-broker-bridges/#bridge-with-aws-sqs). During the step **Choose business events to connect**, the newly uploaded events in the selected space from the previous step will be visible.
+To use an uploaded event in a bridge, you must [configure a bridge with AWS SQS](/appstore/services/event-broker-bridges/aws-sqs-bridge/). During the step **Choose business events to connect**, the newly uploaded events in the selected space from the previous step will be visible.
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_add_bridge.png" alt="" >}}
 
@@ -192,7 +192,7 @@ Use the **Use an existing business event service** option to import the file as 
 
 Click **OK**. This creates the new business event that is ready to be used with the same features as any other imported event.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_imported_file.png" alt="" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_ede_imported_file.png" >}}
 
 ### Delete Service {#delete-service}
 

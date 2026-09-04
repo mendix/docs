@@ -2,6 +2,7 @@
 title: "Configure a Bridge with AWS S3"
 url: /appstore/services/event-broker-bridges/aws-s3-bridge/
 linktitle: "AWS S3 Bridge"
+description: "How to configure and manage an AWS S3 bridge using the Mendix Event Broker."
 ---
 
 ## Introduction
@@ -12,16 +13,16 @@ An AWS S3 Bridge is a one-way bridge that receives events via AWS object storage
 
 Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Event Broker Bridges** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/event_broker_bridges_create.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/event_broker_bridges_create.png" alt="" class="no-border" >}}
 
 1. Click **Create a Bridge** to create a new bridge.
 2. Select **AWS S3**.
-3. Create and configure your bridge by following the steps in [Configure Service](#configure-http-bridge) below.
+3. Create and configure your bridge by following the steps in [Configure Service](#configure-service) below.
 4. After configuring the service and connecting events (as described below), click **Start** on the confirmation screen to deploy the bridge.
 
-Once the bridge has been successfully deployed, its configuration and status can be viewed on the **Overview** page.
+After the bridge deploys successfully, you can view its configuration and status on the **Overview** page.
 
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/aws-s3/ebb_aws_s3_overview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/aws-s3/ebb_aws_s3_overview.png" alt="" class="no-border" >}}
 
 ## Configure Service
 
@@ -34,31 +35,31 @@ Once the bridge has been successfully deployed, its configuration and status can
     * **AWS Role (to Assume)** – the Amazon Resource Name (ARN) of the IAM role that the Event Broker Bridge will assume to access your S3 bucket; this role must be configured with appropriate permissions and a trust policy allowing the Event Broker to assume it
     * **AWS Role's External Id** – a unique identifier that provides additional security when the Event Broker assumes your AWS role; this shared secret ensures that only authorized Mendix Event Broker instances can assume the role
 
-        {{% alert color="info" %}}For detailed instructions on how to create the IAM role and obtain these values, see the [Configure AWS Authentication](#configure-aws-s3-authentication) section below.{{% /alert %}}
+        {{% alert color="info" %}}For instructions on creating the IAM role and obtaining these values, see the [Configure AWS Authentication](#configure-aws-s3-authentication) section below.{{% /alert %}}
 
-    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/aws-s3/ebb_aws_s3_configure.png"  >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/aws-s3/ebb_aws_s3_configure.png" alt="" >}}
 
 2. Click **Next** to connect events to your bridge.
 
 ## Connect Events
 
-Select the business events to integrate with AWS S3:
+To connect business events to AWS S3, follow these steps:
 
-1. Click **Add Business Events** to open a dialog displaying all events managed by the Event Broker, including Mendix app-defined events and uploaded AsyncAPI events. Only events capable of publishing are shown, as this bridge operates in one direction.
-2. Select the event(s) to integrate and specify the prefix path for event storage.
+1. Click **Add Business Events** to open a dialog box that displays all events managed by the Event Broker, including Mendix app-defined events and uploaded AsyncAPI events. Only events that can publish appear, as this bridge operates in one direction.
+2. Select the events to integrate and specify the prefix path for event storage.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/aws-s3/ebb_aws_s3_connect_events.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/aws-s3/ebb_aws_s3_connect_events.png" alt="" >}}
 
 3. Click **Next** to proceed to the confirmation screen.
 
 ## Editing Bridges
 
-You can edit an AWS S3 bridge to modify the configuration as your integration requirements evolve, without needing to recreate it. For an AWS S3 bridge, you can:
+You can edit an AWS S3 bridge to modify the configuration as your integration requirements evolve, without recreating it. For an AWS S3 bridge, you can:
 
 * Add or remove Business Events
 * Update Bucket, AWS Region for Bucket, or Prefix Path
 
- {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_aws_s3_edit_mode.png" class="no-border" >}}
+ {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_aws_s3_edit_mode.png" alt="" class="no-border" >}}
 
 {{% alert color="info" %}}You can edit AWS S3 bridges only when the status is **Running**. {{% /alert %}}
 
@@ -71,19 +72,19 @@ To edit a bridge:
       * **Add Business Events**:
 
           1. Click **Add Business Events** to open a dialog that displays available events.
-          2. Select the events you want to add and click **Select**. Added events will display an **Added** badge and can be removed before applying changes.
+          2. Select the events you want to add and click **Select**. Added events display an **Added** badge and can be removed before applying changes.
 
       * **Remove Business Events**:
 
-          1. Navigate to the event you want to remove and click **Remove**. Removed events will display a **Removed** badge, and their name and metadata will appear grayed out.
+          1. Navigate to the event you want to remove and click **Remove**. Removed events display a **Removed** badge, and their name and metadata appear grayed out.
           2. Re-add a removed event by clicking **Add** before applying changes.
       
       * **Update Service Configuration**:
       
           * Update the Bucket, AWS Region for Bucket, or Prefix Path as needed
 
-4. Once you have made your changes, you can:
-    * Click **Apply** to save and apply the changes. A confirmation message will indicate if the changes were successful. Changes to the event configuration take effect when applied. After applying changes, the bridge status will change to **Reconfiguring** and will return to **Running** once the reconfiguration is complete.
+4. After you make your changes, you can:
+    * Click **Apply** to save and apply the changes. A confirmation message indicates whether the changes were successful. Changes to the event configuration take effect when applied. After applying changes, the bridge status changes to **Reconfiguring** and returns to **Running** when reconfiguration is complete.
    * Click **Cancel** to exit editing mode without saving any changes.
 
 {{% alert color="info" %}}
@@ -91,12 +92,12 @@ The **Apply** button is only enabled when changes have been made to the bridge c
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If an error occurs during the editing process, the bridge will automatically roll back to its previous running state to ensure continuity of service.
+If an error occurs during editing, the bridge automatically rolls back to its previous running state to ensure continuity of service.
 {{% /alert %}}
 
 ## Configure AWS Authentication {#configure-aws-s3-authentication}
 
-The Mendix Event Broker runs in AWS and uses cross-account authentication to securely access your S3 bucket. This authentication mechanism leverages AWS IAM roles with trust policies and external IDs to ensure secure, controlled access.
+The Mendix Event Broker runs in AWS and uses cross-account authentication to securely access your S3 bucket. This authentication mechanism uses AWS IAM roles with trust policies and external IDs to ensure secure, controlled access.
 
 ### Prerequisites
 
@@ -113,14 +114,14 @@ The trust policy defines which AWS accounts can assume the role.
 3. Select **AWS account** as the trusted entity type.
 4. Choose **Another AWS account**.
 5. Enter the Mendix Event Broker AWS account ID: `044806572671`
-6. Select **Require external ID** and enter a unique external ID of your choice. This external ID will be required when configuring the bridge in the Event Broker Manager.
+6. Select **Require external ID** and enter a unique external ID of your choice. You need this external ID when configuring the bridge in Event Broker Manager.
 7. Click **Next**.
 
 {{% alert color="info" %}}
 The external ID acts as a shared secret between Mendix and your AWS account. This prevents the confused deputy problem and ensures that only authorized Event Broker instances can assume your role.
 {{% /alert %}}
 
-    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/aws-s3/ebb_aws_s3_create_a_cross_account_role_in_aws.png" class="no-border" width="400" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/aws-s3/ebb_aws_s3_create_a_cross_account_role_in_aws.png" alt="" class="no-border" width="400" >}}
 
 ### Attach Permissions Policy to the Role
 
@@ -166,7 +167,7 @@ The policy above grants the minimum required permissions for the Event Broker to
 
 1. Provide a name for your role (for example, `EventBrokerS3AccessRole`).
 2. Review the role configuration and click **Create role**.
-3. Once created, open the role and copy the **Role ARN** (it will look like this: `arn:aws:iam::YOUR_ACCOUNT_ID:role/EventBrokerS3AccessRole`).
+3. After creating the role, open it and copy the **Role ARN** (for example, `arn:aws:iam::YOUR_ACCOUNT_ID:role/EventBrokerS3AccessRole`).
 
 ### Configure the Bridge
 

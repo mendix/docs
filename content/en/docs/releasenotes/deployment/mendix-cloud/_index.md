@@ -13,16 +13,6 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately, as other deployment targets are also dependent on the buildpack.
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
-
-## September 2026
-
-### September 6, 2026
-
-#### Platform Upgrade
-
-* We updated the styling of the Deployment portal. This includes repositioning some action buttons outside the dropdown menus for improved accessibility:
-    1. Start/Restart option on the Environment Overview page
-    2. Clear App option on the Environment Details page
   
 ## August 2026
 

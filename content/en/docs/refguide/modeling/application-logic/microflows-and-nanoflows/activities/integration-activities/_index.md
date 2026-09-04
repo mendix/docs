@@ -23,6 +23,7 @@ The following are the integration activities you can use in your microflow:
 * [Export Mapping](/refguide/export-mapping-action/) – exports data from objects into XML or JSON documents, or a string variable
 * [Query External Database](/refguide/query-external-database/) – uses preconfigured database queries and displays retrieved data 
 * [Send REST Request (beta)](/refguide/send-rest-request/) – sends a REST request 
+* [Import Data from File](/refguide/import-data-from-file/) - uses data importer document and import data from Excel or CSV files into objects
 
 ## Read More
 

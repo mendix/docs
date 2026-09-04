@@ -23,6 +23,10 @@ The Private Mendix Platform Group API version 1 allows you to manage user groups
 * Update group member roles.
 * Add or remove members from a group.
 
+## Supported Private Mendix Platform Version
+
+This API is available in Private Mendix Platform [VERSION] and newer.
+
 {{% alert color="info" %}}
 For information about Group API version 2, see [Group API - Version 2](/apidocs-mxsdk/apidocs/private-platform-group-api-v2/).
 {{% /alert %}}

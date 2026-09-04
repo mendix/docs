@@ -20,6 +20,10 @@ The Private Mendix Platform Pipeline API version 2 allows you to manage pipeline
 * Create and run a pipeline for build or deployment.
 * Approve or reject a manual step of a waiting pipeline.
 
+## Supported Private Mendix Platform Version
+
+This API is available in Private Mendix Platform 2.7 and newer.
+
 {{% alert color="info" %}}
 For information about Pipeline API version 1, see [Pipeline API - Version 1](/apidocs-mxsdk/apidocs/private-platform-pipeline-api/).
 {{% /alert %}}

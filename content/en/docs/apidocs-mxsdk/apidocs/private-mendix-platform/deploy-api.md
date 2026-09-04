@@ -24,6 +24,10 @@ The Private Mendix Platform Deploy API allows you to manage environments in Priv
 * Deploy a package or apply changes for a specified environment.
 * Get a dashboard with all environments created for the application.
 
+## Supported Private Mendix Platform Version
+
+This API is available in Private Mendix Platform [VERSION] and newer.
+
 ## API Reference
 
 {{< swaggerui src="/openapi-spec/openapi-deploy-v1.yaml"  >}}

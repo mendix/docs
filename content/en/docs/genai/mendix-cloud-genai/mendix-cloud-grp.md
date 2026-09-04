@@ -42,19 +42,21 @@ To use multiple models from a single resource, upgrade [Mendix Cloud GenAI Conne
 
 The Mendix Cloud GenAI Resource Packs provide access to the following models:
 
-| Model | Model Type | Regions | Available Only via Cross-Region Inference (CRI) | AWS Inference Regions |
-| ----- | ---------- | --------- | ----------------------------------------------- | --------------------------- |
-| Anthropic Claude Haiku 4.5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude Sonnet 4.5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude Sonnet 4.6 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude Sonnet 5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude Sonnet 3 | Text | Mendix Cloud Canada (Montreal) | NO | ca-central-1 |
-| Anthropic Claude Opus 4.6 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude Opus 4.7 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude Opus 4.8 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude Opus 5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Cohere Embed v4 | Embeddings | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Cohere Embed v3 <br> English and multilingual | Embeddings | Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> ca-central-1 |
+| Model | Model ID | Model Type | Regions | Available Only via Cross-Region Inference (CRI) | AWS Inference Regions | End of Life |
+| ----- | -------- | ---------- | --------- | ----------------------------------------------- | --------------------------- | ----------- |
+| Anthropic Claude Haiku 4.5 | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Sonnet 4.5 | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Sonnet 4.6 | `eu.anthropic.claude-sonnet-4-6` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Sonnet 5 | `eu.anthropic.claude-sonnet-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Sonnet 3 | `anthropic.claude-3-sonnet-20240229-v1:0` | Text | Mendix Cloud Canada (Montreal) | NO | ca-central-1 | — |
+| Anthropic Claude Opus 4.6 | `eu.anthropic.claude-opus-4-6-v1` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Opus 4.7 | `eu.anthropic.claude-opus-4-7` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Opus 4.8 | `eu.anthropic.claude-opus-4-8` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Opus 5 | `eu.anthropic.claude-opus-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Cohere Embed v4 | `eu.cohere.embed-v4:0` | Embeddings | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Cohere Embed v3 <br> English and multilingual | `cohere.embed-english-v3`<br> `cohere.embed-multilingual-v3` | Embeddings | Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> ca-central-1 | — |
+
+The **Model ID** column lists the identifier that the [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) uses to address a specific model. End-of-life dates apply per region: a dash in the **End of Life** column means that no end-of-life date is announced for that model in the listed regions. After a model reaches its end of life, requests to it fail, so switch to another supported model before that date.
 
 The models are available through the Mendix Cloud, leveraging AWS's highly secure Amazon Bedrock multi-tenant architecture. This architecture employs advanced logical isolation techniques to effectively segregate customer data, requests, and responses, ensuring a level of data protection that aligns with global security compliance requirements. Customer prompts, requests, and responses are neither stored nor used for model training. Your data remains your data.
 

@@ -8,6 +8,15 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.15.0
+* We fixed an issue when creating or searching for `CustomBlobDocuments` would give unexpected results when called before the project was initialized. We added `projectOpened` and `projectClosing` events through the `studioPro.app.projectManager` api. We also added the method `getProjectMetadata`, allowing developers to know when the project is available in order to be able to create or query `CustomBlobDocuments`.
+* We also added `projectClosing` event in the `studioPro.app.projectManager` api to allow the developer to perform any cleanup functions that were dependent on the current project. Both events contain the current open project as their payload.
+* We fixed the issue that `CustomBlobDocumentApi` would return null when calling `getDocumentsOfType` when the project was not yet initialized. It now throws an error instead of returning null. Using `studioPro.app.projectManager.getProjectMetadata` will allow a developer to know when it is safe to call it.
+* We added `javaActionQualifiedName` to the `CustomBlobDocumentRegistrationOptions`, which allows the Studio Pro user to link a blob document type to an existing `Java Action`, allowing the user to drag a `CustomBlobDocument` straight into a `Microflow` from the `App Explorer`, creating a new `JavaActionActivity` for the `CustomBlobDocument` type.
+* We now make sure that two different extensions cannot use the same prefixes for their consistency error codes.
+* We added readable names and descriptions for each permission that an extension requires in the Extensions Overview.
+* We fixed a bug where `CustomBlobDocument` type names were not displayed as their registered type in the `Commit` pane in version controlled apps.
+
 ## Version 11.14.0
 
 * A module ID can now be passed to the element selector for the `selectedElementId` property, and the corresponding module will be preselected and expanded. This will allow the user to directly create a new document of the desired type in that module.

@@ -103,7 +103,7 @@ The table showing the snippet parameters has the following columns:
 
 * **Name** – The suggested name for the snippet parameter.
 * **Type** – The type of the snippet parameter.
-* **Substitute for** – the elements in the original document for which the snippet parameter is substituted in the extracted snippet.
+* **Substitute for** – The elements in the original document for which the snippet parameter is substituted in the extracted snippet.
 
 The names of the snippet parameters can be changed only if they are unique and not already used in the extracted content. The order of the parameters can also be changed.
 

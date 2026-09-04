@@ -2,6 +2,8 @@
 title: "Mendix Native Mobile Builder Release Notes"
 linktitle: "Mendix Native Mobile Builder"
 url: /releasenotes/mobile/mendix-native-mobile-builder/
+aliases:
+    - /releasenotes/mobile/mendix-mobile-native-builder
 weight: 11
 description: "Mendix Native Mobile Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -26,6 +28,78 @@ To fix this issue, do the following:
 3. Remove the content of the file.
 4. Remove **config.json**.
 5. Reopen the Mendix Native Mobile Builder.
+
+## Release 1.0.147 {#10147}
+
+**Release date: August 12, 2026**
+
+## Changes
+
+* We replaced `@notifee/react-native` with `react-native-notify-kit` as the local notifications library for Studio Pro 11 and above.
+
+## Release 1.0.146 {#10146}
+
+**Release date: June 29, 2026**
+
+## Changes
+
+* We removed the app preview feature, which included QR code generation for APK downloads over LAN. This feature was designed for the AppCenter workflow (which shut down in 2025) and is no longer functional. The removal eliminates the Windows location permission dialog that was triggered on every launch when enumerating network interfaces.
+
+## Release 1.0.145 {#10145}
+
+**Release date: January 28, 2026**
+
+### iOS Location Permission Change
+
+* We changed the criterion for location permissions on iOS. It used to be required by default, but can now be opted in or out of from the **Native Permissions** screen.
+
+### Features
+
+* We added support for `MEDIA` permissions on Android targeting OS 13+. The permissions are now shown in the Native Builder. Subsequently, this also fixes cases of these permissions not working correctly on these devices.
+
+## Release 1.0.144 {#10143}
+
+**Release date: December 23, 2025**
+
+## Improvements
+
+* Notifee is now installed for push notifications when using Studio Pro 11 and above. This does not affect previous versions.
+
+## Fixes
+
+* We fixed an issue where, after building in iOS, `RUNTIME_URL` would not get the slash separator properly escaped if it included extra path parts.
+
+## Release 1.0.143 {#10143}
+
+**Release date: November 21, 2025**
+
+## Fixes
+
+* We fixed an issue where native builds failed with the error "`@notifee/react-native` is not a known dependency."
+
+## Release 1.0.142 {#10142}
+
+**Release date: November 19, 2025**
+
+### Fixes
+
+* We fixed an issue where the Native Build UI referenced an outdated notification dependency.
+
+## Release 1.0.141 {#10141}
+
+**Release date: November 11, 2025**
+
+### Fixes
+
+* We updated `react-native-firebase` dependencies.
+
+## Release 1.0.138 {#10138}
+
+**Release date: August 5, 2025**
+
+### Fixes
+
+* We fixed an issue that caused slow initial build times when first using the Native Builder UI.
 
 ## Release 1.0.137 {#10137}
 
@@ -656,7 +730,7 @@ This release focuses mainly on quality of life bug fixes and features.
 
 **Release date: October 27, 2020**
 
-This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro 8.15](/releasenotes/studio-pro/8.15/) and higher.
+This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in Mendix Studio Pro 8.15 and above.
 
 #### Features
 

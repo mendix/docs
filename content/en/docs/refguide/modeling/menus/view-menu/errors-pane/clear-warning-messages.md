@@ -163,7 +163,7 @@ Variable ‘Variable’ is never used.
 {{% /alert %}}
 
 * There are multiple potential causes here
-* The solution involves removing the variable from the microflow, which could mean deleting the retrieve activity or electing to not use the return value of a microflow call
+* The solution involves removing the variable from the microflow, which could mean deleting the retrieve object(s) activity or electing to not use the return value of a microflow call
 
 ## Read More
 

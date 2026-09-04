@@ -2,83 +2,172 @@
 title: "Mendix 11 Feature Release Calendar"
 linktitle: "Mx11 Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
+description: "Describes the calendar of expected release dates for new features in Mendix 11."
 weight: 45
-#layout: wide
+##layout: wide
 ---
 
 ## Introduction
 
 With the release of Mendix 11, you can look forward to more new and exciting features in upcoming versions of Mendix 11. This document contains the calendar of expected release dates for these features.
+
 The new features were divided into major themes, which are described in the sections below.
+
+This document is for informational purposes only, and may not be incorporated into a contract. Future developments, products, platforms, directions, and functionality may be changed by Mendix at any time and for any reason, without notice.
 
 {{% alert color="info" %}}
 General Availability means that a feature is available for all users. This type of release is different from a beta or experimental release. For more information, see [Release Status](/releasenotes/release-status/).
 {{% /alert %}}
 
-## Enterprise Low-Code
+## Agentic Apps and Orchestration
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Module updates while retaining customizations                | General Availability: Q4 2025                             |
-| Easy comparison of revisions                                   | Public beta: 2026                                            |
-| Pull requests                                                | Public beta: 2026                                            |
-| Mendix on Azure                                              | Limited Availability: March 2025 <br/>General Availability: Summer 2025 |
-| Security Recommendations                                     | General Availability: 2026                                   |
-| OpenTelemetry Tracing                                        | General Availability: 2026                                   |
-| Progressive Web Apps Store Publishing                        | Public beta: 2026                                            |
-| Maia Explain for Logic                                       | General Availability: March 2025                             |
-| Start with Maia                                              | General Availability: Mx 11.0                                |
-| Menditect UI testing                                         | Public beta: Q2 2025<br/>General Availability H2 2025        |
-| Modernized Mendix unit testing                               | General Availability: April 2025                             |
-| Speed up role-based access                                   | General Availability: February 2025                          |
-| Software Composition                                         | General Availability: March 2025                             |
-| Software Composition Marketplace Outdated & Deprecated Findings | General Availability: September 2025                         |
-| Software Composition Marketplace Vulnerabilities             | General Availability: December 2025                          |
-| Policies                                                     | Public beta: December 2025 <br/>General Availability: TBD    |
-| Cloud Tokens Dashboard                                      | General Availability: June 2025                              |
-| End Users Dashboard | Limited Availability: October 2025 |
-| Self-Service Provisioning & Deprovisioning of environments | General Availability: June 2025 |
-| Self-Service Resizing of environments | Limited Availability: July 2025 |
-| Bulk DML                                                     | General Availability: Q4 2025                             |
-| Increased decimal precision                                  | General Availability: Q4 2025                             |
-| Maia: text to OQL                                            | Public beta: Q2 2025<br/>General Availability: Q4 2025    |
-| Maia: generate test data                                     | Private beta: 2026                                           |
-| Consumed OpenAPI and API discovery                           | Public beta: Q2 2025<br/>General Availability: Q4 2025 |
-| Improved OpenAPI generation for REST publish                 | General Availability: June 2025                         |
-| Visual query editor for view entities                        | Proof of Concept: June 2025 <br/>General Availability: Q4 2025          |
-| Event broker HTTP Bridge                                     | Public beta: June 2025 <br/>General Availability: Q4 2025   |
-| Compass Maturity Assessment                                  | General Availability: July 28, 2025                      |
-| IdP-managed Admins                                           | Limited Availability: July 11, 2025                      |
-| Usage of keypairs for OIDC-based SSO to Mendix apps (OIDC SSO) | General Availability: May 15, 2025                      |
-| Easy (automated) rotation of keypairs for SSO security (OIDC SSO) | General Availability: May 15, 2025                   |
-| OIDC Provider goes from Limited Availability to General Availability | General Availability: ETA July 15, 2025           |
+| Mendix Agents Kit 1 | General Availability: Mx 11.0 + Mx 10.24 |
+| Mendix Agents Kit 2 | General Availability: Mx 11.12 |
+| MCP Server | General Availability: Mx 11.0 + Mx 10.24 |
+| MCP Client | General Availability: Mx 11.2 + Mx 10.24 |
+| Mendix Cloud GenAI Resource Packs | General Availability: Mx 11.2 + Mx 10.24 |
+| Mendix Cloud GenAI Resource Packs Guardrails | General Availability: H2 2026 |
+| Agent Editor in Studio Pro<sup>1</sup> | General Availability: Mx 11.9 |
+| Agent Observability | General Availability: Mx 11.5 + Mx 10.24 |
+| Dynamic Case Management | Private Beta: Mx 11.3 <br/>Limited Availability: Q3 2026 |
+| Global Inbox Other Tasks | General Availability: Q4 2026 |
+| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.13 |
+| Workflow Event Subprocesses Recurrence (Timer trigger) | General Availability: Mx 11.15 |
+| Workflow Easily Call and Wait for external Workflows | General Availability: Q4 2026 |
 
-## Agentic AI
+{{% alert color="info" %}}
+¹Limitations: Initially only Mendix Cloud GenAI Resources as provider, and only design-time modification of prompts and other agent settings. Incrementally, we will remove these limitations.
+{{% /alert %}}
+
+## Agentic Development 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix Agents Kit                 | General Availability: June 2025 |
-| Mendix Cloud GenAI Resource Packs | General Availability: July 2025 |
+| Maia Plan <ul><li>Starter app support</li><li>Marketplace recommendations</li></ul> | Public Beta: Mx 11.8 <br/>General Availability: Mx 11.9 |
+| Maia Plan <ul><li>Versioning, iterations and multi-user collaboration</li><li>Jira integration</li></ul> | General Availability: Mx 11.12 |
+| Maia: Text to OQL | Public Beta: Q2 2025 <br/>General Availability: Q4 2025 |
+| Maia: Generate test data | Private Beta: 2026 |
+| Maia: Convert Feedback to story | General Availability: Mx 11.9 |
+| Maia for Pipeline Logs | General Availability: Mx 11.9 |
+| Maia Learn | General Availability: Mx 11.12 |
+| Maia Make (see separate table for capabilities) | General Availability: Mx 11.8 |
 
-## Process Automation
-
-| Capability or Feature | Expected Release |
-| --- | --- |
-| Global Inbox                      | General Availability: H2 2025 |
-| Workflow Groups                   | Public beta: 11.1                         |
-| Ad-hoc tasks/event-subprocesses | Public beta: Q4 2025                      |
-
-## Industrial Market
+### Maia Make
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix Workstation Client | Private beta: Release 2.0: March 14th, 2025 <br/>Release 2.1: June 13th, 2025 <br/>Release 2.2: August 1st, 2025<br/>Limited Availability:  Release 3.0 September 2025<br/>General Availability: TBD |
+| Maia Make | General Availability: Mx 11.8 |
+| Maia Make: Domain Models | General Availability: Mx 11.8 |
+| Maia Make: Microflows | General Availability: Mx 11.8 |
+| Maia Make: Nanoflows | General Availability: Q4 2026 |
+| Maia Make: Overview Pages | General Availability: Mx 11.8 |
+| Maia Make: Enumerations | General Availability: Mx 11.8 |
+| Maia Make: Pages | General Availability: Mx 11.9 |
+| Maia Make: Styling | General Availability: Mx 11.10 |
+| Maia Make: Workflows | General Availability: Mx 11.9 |
+| Maia Make: MCP Client | General Availability: Mx 11.8 |
+| Maia Make: MCP Server | General Availability: Mx 11.12 |
+| Maia Make: Modules | General Availability: Mx 11.9 |
+| Maia Make: editing/work with existing Microflows and Workflows | General Availability: Mx 11.9 |
+| Maia Make: Integrations | General Availability: Mx 11.24 |
+| Maia Make: Rules | General Availability: Q4 2026 |
 
-## Deployment
+## Enterprise-Grade Platform
+
+### Experience 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Private Connectivity for Mendix Cloud | Limited Availability: Q4 2025 <br/>General Availability: H1 2026 |
-| Landscape configuration management for Mendix Cloud | Limited Availability: Q4 2025 <br/>General Availability: H1 2026 |
-| Zero downtime deployment on Mendix Cloud | Limited Availability: Q4 2025 <br/>General Availability: H1 2026 |
-| REST GET and POST steps for Mendix Pipelines | Limited Availability: Q4 2025 <br/>General Availability: H1 2026 |
+| Studio Pro Enhancements | Included in monthly releases.<br/>Refer to release blogs. |
+| Multilingual Studio Pro and Platform: Chinese, Japanese, Korean | General Availability: Mx 11.0 |
+| Multilingual Studio Pro and Platform: Portuguese | Public Beta: Mx 11.0 |
+| Module updates while retaining customizations | General Availability: Q3 2026 |
+| Module-to-module dependency specification | General Availability: Q1 2027 |
+| Module overview for quick updating | General Availability: H1 2027 |
+| Easy comparison of revisions (textual diffing) | General Availability: Mx 11.9 |
+| Easy comparison of revisions (visual diffing) | Public Beta: H2 2026 |
+| Searchable commit history | Public Beta: Mx 11.4 <br/>General Availability: Mx 11.6 |
+| Merge Requests (aka Pull requests) | Public Beta: Mx 12.x |
+| OpenTelemetry Tracing | General Availability: Mx 11.12 |
+| Atlas 4 UI Framework | General Availability: Mx 11.0 |
+| Progressive Web Apps Store Publishing | Public Beta: Mx 11.12 |
+| Access data in offline apps while syncing | General Availability: Mx 11.6 |
+| Embed a Mendix application into another Mendix application as a web component | Public Beta: 2027 |
+| Theme Customizer | General Availability: Mx 11.12 |
+| Menditect MCP server | Release: Q3 2026 |
+| Menditect air-gapped deployment | Release: Q4 2026 |
+| Bulk DML | General Availability: Mx 11.7 |
+| Increased decimal precision | General Availability: Mx 11.6 |
+| Consumed OpenAPI and API discovery | Public Beta: Q2 2025<br/>General Availability: H2 2026 |
+| Visual query editor for view entities | General Availability: Mx 11.6 |
+| Event broker HTTP Bridge | General Availability: Mx 11.4 |
+| JSON Transformations | Private Beta: Mx 11.8<br/>Public Beta: H2 2026 |
+| Stream data events to the event broker,<br/>then to data lake for analytics | Public Beta: Mx 11.6 |
+| OpenType and optional parameters support<br/>for OData actions | General Availability: Mx 11.6 |
+| Improved Marketplace Component management:<ul><li>Release of Security Fixes</li></ul> | General Availability: Mx 11.9 |
+| Marketplace Component management:<ul><li>Uploading via API</li><li>Content API extended</li></ul> | General Availability: Mx 11.12 |
+| Improved Marketplace notifications | General Availability: Mx 11.15 |
+| Primitive parameters for pages | General Availability: Mx 11.6 |
+| Primitive parameters for snippets | General Availability: Mx 11.18 |
+
+### Governance
+
+| Capability or Feature | Expected Release |
+| --- | --- |
+| Cloud Tokens Dashboard | General Availability: Mx 11.0 |
+| Self-Service provisioning and deprovisioning<br/>of environments | Public Beta: Mx 11.0 |
+| Self-Service resizing of environments | Limited Availability: Mx 11.0 |
+| End-users dashboard | General Availability: Mx 11.12 |
+| Software Composition Findings | General Availability: Mx 11.0 |
+| Software Composition: Mendix Vulnerability Visibility | General Availability: Mx 11.12 |
+| Software Composition: Finding Fix Guidance | General Availability: Mx 11.12 |
+| Pipelines for Mendix on Azure<br/>and Mendix on Kubernetes | General Availability: Mx 11.2 |
+| Pipelines: POST & GET Requests | General Availability: Mx 11.12 |
+| Central Certificate Management | General Availability: Mx 11.8 |
+| Policies | Public Beta: Mx 11.12 |
+| Central Audit Logs | General Availability: Mx 11.10 |
+| Extended People/Learning Insights Dashboard (course completion and new learning paths) | Public Beta: Q3 2026 |
+| Partner profiles extended with validated skills and projects | General Availability: Q3 2026 |
+| Teams: Multi-resource access | Public Beta: Q4 2026 |
+
+### Flexible Deployment
+
+| Capability or Feature | Expected Release |
+| --- | --- |
+| Private Connectivity for Mendix Cloud | Public Beta: Mx 11.6<br/>General Availability: Mx 11.15 |
+| Operations Home | General Availability: Mx 11.12 |
+| Mendix on Azure | General Availability: Mx 11.4 |
+| Workstation Client | General Availability: Mx 11.3 + Mx 10.24 |
+
+### Private Mendix Platform
+
+| Capability or Feature | Expected Release |
+| --- | --- |
+| Compliance with NIST-800, FIPS, FEDRAMP and DoD IL 4/5/6 | General Availability: Private Mendix Platform 1.23 (June 2025) |
+| Secret Manager support for AWS, Azure, and Hashicorp | General Availability: Private Mendix Platform 1.24.3 LTS (November 2025) |
+| Dynamic Role, Group and User Management | General Availability: Private Mendix Platform 2.0 (December 2025) |
+| Software Composition Insights | General Availability: Private Mendix Platform 2.4 (January 2026) |
+| Studio Pro 11.6 MTS | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
+| Maia Make with BYO-LLM | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
+| Unified Deployment Experience with Agent-Interactor support | General Availability: Private Mendix Platform 2.6 MTS (February 2026) |
+| Granularized Permissions for Dynamic Role Management | General Availability: Private Mendix Platform 2.7 (June 2026) |
+| Enhanced API Coverage for Platform Actions | General Availability: Private Mendix Platform 2.7 (June 2026) |
+| Studio Pro 11.12 LTS | General Availability: Private Mendix Platform 2.8 (July 2026) |
+| Helm and Helmfile Support for Declarative Installations | General Availability: Private Mendix Platform 2.8 (July 2026) |
+| Runtime Leaderless Mode | General Availability: Private Mendix Platform 2.8 (July 2026) |
+| Enhanced Key Vault support for Apps | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Cluster Manager API | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Multiple Build and Deploy Pipelines | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| Enhanced Logging, Events, and Metrics | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
+| CI/CD for Windows Server | Beta: Private Mendix Platform 2.9 (November 2026) |
+| Maia Operate on Private Mendix Platform | Beta: Private Mendix Platform 2.9 (November 2026) |
+
+## Siemens Xcelerator (Integrations)
+
+| Capability or Feature | Expected Release |
+| --- | --- |
+| Enrich MAIA with more Teamcenter relevant knowledge | General Availability: Mx 11.18 |
+| Easily Call and Wait for Teamcenter Workflows via Mendix Workflows as part of the Teamcenter Connector | General Availability: Q3-Q4 2026 |
+| Siemens Design System (SDS) | General Availability: Q2 2026 |

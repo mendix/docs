@@ -1,9 +1,11 @@
 ---
 title: "Setting Up Governance and Control in Mendix"
 linktitle: "Setting Up Governance and Control in Mendix"
-url: /governance-control/
+url: /developerportal/digital-execution/governance-control/
 weight: 85
 description: "Find out how to incorporate governance in your process."
+aliases:
+    - /governance-control/
 ---
 
 ## Introduction
@@ -29,7 +31,7 @@ There are several advanced capabilities in the Control Center to help you manage
 * [Health dashboard](/control-center/application-health-dashboard/) provides an insight into the running status of your app landscape.
 * [Entitlements](/control-center/entitlements/) shows the resources you’ve bought and used.
 * You can add, resize or remove environments in the [Deployed apps](/control-center/deployed-apps/) view.
-* Additional curation settings are available for [Marketplace](/control-center/private-marketplace/), [Portfolios](/control-center/portfolios/), and [Data Catalog](/control-center/catalog-admin/), which apply to all your developers.
+* Additional curation settings are available for [Marketplace](/control-center/company-approved/), [Portfolios](/control-center/portfolios/), and [Data Catalog](/control-center/catalog-admin/), which apply to all your developers.
 
 If you would like to learn more about our governance features, you can check out the [Control Center Guide](/control-center/) and the [Control Center Learning Path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center). 
 

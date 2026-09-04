@@ -45,7 +45,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     main().catch(console.error);
     ```
 
-Don't forget to [set up your personal access token](/apidocs-mxsdk/mxsdk/set-up-your-pat/) before executing the script.
+Do not forget to [set up your personal access token](/apidocs-mxsdk/mxsdk/set-up-your-pat/) before executing the script.
 
 {{% alert color="warning" %}}
 Working copy creation is a resource-intensive process. Consider reusing previously-created ones by invoking `app.getOnlineWorkingCopy(workingCopyId)`. All working copies are automatically deleted after 24 hours.
@@ -53,7 +53,7 @@ Working copy creation is a resource-intensive process. Consider reusing previous
 
 ### Code Explanation
 
-Here are some explanations about the script:
+Here are some explanations about the script.
 
 ```ts
 const client = new MendixPlatformClient();
@@ -92,24 +92,20 @@ Once you are done with the model changes, you can flush the changes to make sure
 
 ## Compiling and Running the Script
 
-1. Compile the script with the TypeScript compiler into JavaScript using the following command:
+1. Add the following section to `package.json`:
 
-    ```bash
-    $ tsc
+    ```json
+    "scripts": {
+        "start": "tsc && node script.js"
+    }
     ```
 
-    A file named `script.js` should appear (or, if you named the original TypeScript file for example, `app.ts`, then it would be named `app.js`.
+    This command first compiles your TypeScript code into JavaScript using the TypeScript compiler. After the compilation, a file named `script.js` is generated. The script will then be executed using Node.js.
 
-    The TypeScript compiler will execute in a single run to compile all files configured in *tsconfig.json*. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the *tsconfig.json* file for changes and immediately run the compiler when you save the file:
-
-    ```bash
-    $ tsc --watch
-    ```
-
-2. Run the script with `node` to see the results:
+2. Run the script to see the results:
 
     ```text
-    $ node script.js
+    $ npm run start
     Creating new app 'NewApp-1637595970665'...
     Successfully created app with id '64760e41-9507-42d3-99da-3950454dd40a'
     Creating temporary working copy for branch 'main'...
@@ -118,7 +114,7 @@ Once you are done with the model changes, you can flush the changes to make sure
     Successfully committed the working copy with id 'c70b078e-a323-42a7-b95d-7407a0e611d3' to branch 'main'
     ```
 
-Note that the steps for app creation and committing to the Team Server can take some time, so please be patient.
+The steps for app creation and committing to the Team Server can take some time. Please be patient.
 
 ## Next Step
 

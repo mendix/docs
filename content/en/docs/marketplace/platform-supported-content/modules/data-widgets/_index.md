@@ -16,6 +16,7 @@ This module contains the following widgets:
 * [Drop-Down Sort](/appstore/modules/gallery/#dropdown)
 * [Filters](/appstore/modules/data-grid-2/#filters)
 * [Gallery](/appstore/modules/gallery/)
+* [Selection helper](/appstore/modules/selection-helper/)
 * [Tree node](/appstore/modules/tree-node/)
 
 ## Migration

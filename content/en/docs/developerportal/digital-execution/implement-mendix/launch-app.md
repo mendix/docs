@@ -1,9 +1,11 @@
 ---
 title: "Launching Your First App"
 linktitle: "Launching Your First App"
-url: /launch-first-app/
+url: /developerportal/digital-execution/launch-first-app/
 weight: 105
 description: "Find out how to test, deploy, and promote your first app."
+aliases:
+    - /launch-first-app/
 ---
 
 ## Introduction
@@ -56,7 +58,7 @@ Things you can customize for your apps in Mendix Cloud include:
 * [HTTP headers](/howto/security/best-practices-security/#adding-http-header)
 * [Path-based access restrictions](/developerportal/deploy/access-restrictions/)
 * [Environment variables](/developerportal/deploy/environments-details/#custom-environment-variables)
-* [Services](/developerportal/deploy/environments-details/#services), such as [the Event Broker service](/appstore/services/business-events/#mendix-event-broker)
+* [Services](/developerportal/deploy/environments-details/#services), such as [the Event Broker service](/appstore/services/event-broker/)
 
 #### Deploying the App
 

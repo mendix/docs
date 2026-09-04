@@ -28,7 +28,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
 * Install Atlas 3 from the Mendix Marketplace. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
-* Your app has the following optional modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/111349) modules for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/).
+* Your app has the optional [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/).
+
+Your app also has the [Mendix SSO](https://marketplace.mendix.com/link/component/111349) module as an optional. However, it is deprecated as of May 1, 2026. You may alternatively use [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/).
 
 ## Exposing the Microflow as the Workflow Action
 
@@ -44,11 +46,11 @@ To create the calling microflow and add it as the custom action to the workflow 
 
 1. Create a new microflow that calls **ACT_SAP_INVENTORY_LAPTOP_CHECK**. Name the new microflow **WFS_MY_SYSTEM_TASK**.
 2. Make sure that the input parameters of the **WFS_MY_SYSTEM_TASK** microflow are mapped to the workflow definition. For the **Employee_Onboarding** workflow, add the EmployeeOnboarding parameter because the **EmployeeOnboarding** entity is set as the **Workflow entity**. 
-3. In **Toolbox**, select **Microflow call** and drag it to the flow:
+3. In **Toolbox**, select **Call microflow** and drag it to the flow:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-action-to-workflow-toolbox/microflow-call.png" alt="Microflow call action" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-action-to-workflow-toolbox/microflow-call.png" alt="Call microflow activity" class="no-border" >}}
 
-4. Double-click the **Microflow call** activity to open its properties and set **Microflow** to **ACT_SAP_INVENTORY_LAPTOP_CHECK**.
+4. Double-click the **Call microflow** activity to open its properties and set **Microflow** to **ACT_SAP_INVENTORY_LAPTOP_CHECK**.
 5. Click the **End event** and navigate to the **Properties** pane.
 6. Set the **Return value** for it to **Boolean**.
 7. Right-click the working area of the microflow and select **Properties**.

@@ -36,6 +36,9 @@ The ability to import an OpenAPI/Swagger contract was introduced as a beta featu
 ### Limitations
 
 * To use the request response to create a data structure automatically in your domain model, the response data should be in JSON format. It is possible to process other formats, such as XML or raw text, but you will need to extract the data you are looking for in a microflow.
+* It is currently not possible to configure parameters in the Query Parameters tab.
+* Streaming responses from APIs are currently not supported.
+* A response can be mapped in a microflow only for responses with status code `200`. If a Send REST request action is executed in a microflow and the status code is in 2xx range, but different than `200`, use the latestHttpResponse to get the status code and response content.
 
 ### Prerequisites 
 
@@ -110,7 +113,7 @@ To create a new blank request, click **New** in the **Add Request(s)** dialog bo
 
 ### Authentication Methods {#authentication}
 
-You can configure basic authentication to use for all requests in your document. Authentication is not required, but can be added if needed. To add basic authentication, do the following:
+You can configure basic authentication for all requests in your document. Authentication is optional. If you need another authentication type, add the required headers manually. For more information, see [Adding Headers](#add-headers). To add basic authentication, do the following:
 
 1. Click **Authentication**.
 2. In the **Authentication method** field, click the drop-down and select **Basic authentication**. 

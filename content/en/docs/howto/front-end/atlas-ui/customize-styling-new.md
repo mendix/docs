@@ -276,27 +276,27 @@ To facilitate app- and module-level styling, the following file and folder struc
 The bullets below describe the file structure for the theme folder and for modules:
 
 * **theme**
-    * **web** — This folder contains app specific styling resources for (progressive) web apps.
-        * *custom-variables.scss* — This file contains the theme setting which can be configured to easily change colors, font, spacing etc.
-        * *main.scss* — This file is the starting point for adding custom styling.
-        * *exclusion-variables.scss* — This file contains variables that can be toggled to optionally exclude Atlas core styling.
-        * *settings.json* — This file contains the (external) CSS files that should be loaded. This includes the CSS result of the SASS compilation.
-    * **native** — This folder contains app specific styling resources for native mobile apps.
-        * *custom-variables.js* — This file contains the theme setting which can be configured to easily change colors, font, spacing etc.
-        * *main.js* — This file is the starting point for adding custom styling.
-        * *exclusionVariables.js* — This file contains variables that can be toggled to optionally exclude Atlas core styling.
-* **themesource** — This folder contains module specific styling and resources. Every module has a folder that can contain styling resources.
-    * **Atlas_core** (required) — This folder from the Atlas core module which is the core for all Mendix apps. This module should always be part of an app as other modules depend on this and it contains all the styling for the Mendix widget. The content of this folder should not be changed as that will cause issues with migrating/updating to newer versions. For information about disabling default styling from this module see [Disabling Default Styling](#disable-default) below.
-        * **web** — This folder (and subfolders) contain the web resources for the standard Mendix supported widgets.
-        * **native** — This folder (and subfolders) contain the native mobile resources for the standard Mendix supported widgets.
-    * **{MODULE_NAME}** — Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.
-        * **web** — This folder contains re-usable web resources
-            * *main.scss* — This file is the starting point for the module web based styling.
-            * *design-properties.json* — This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
-        * **native** — This folder contains re-usable native mobile resources.
-            * *main.js* — This file is the starting point for the module native mobile based styling.
-            * *design-properties.json* — This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
-        * **public** — This folder can contain other re-usable resources like a custom *login.html* page or images and fonts used from your web styling.
+    * **web** – This folder contains app specific styling resources for (progressive) web apps.
+        * *custom-variables.scss* – This file contains the theme setting which can be configured to easily change colors, font, spacing etc.
+        * *main.scss* – This file is the starting point for adding custom styling.
+        * *exclusion-variables.scss* – This file contains variables that can be toggled to optionally exclude Atlas core styling.
+        * *settings.json* – This file contains the (external) CSS files that should be loaded. This includes the CSS result of the SASS compilation.
+    * **native** – This folder contains app specific styling resources for native mobile apps.
+        * *custom-variables.js* – This file contains the theme setting which can be configured to easily change colors, font, spacing etc.
+        * *main.js* – This file is the starting point for adding custom styling.
+        * *exclusionVariables.js* – This file contains variables that can be toggled to optionally exclude Atlas core styling.
+* **themesource** – This folder contains module specific styling and resources. Every module has a folder that can contain styling resources.
+    * **Atlas_core** (required) – This folder from the Atlas core module which is the core for all Mendix apps. This module should always be part of an app as other modules depend on this and it contains all the styling for the Mendix widget. The content of this folder should not be changed as that will cause issues with migrating/updating to newer versions. For information about disabling default styling from this module see [Disabling Default Styling](#disable-default) below.
+        * **web** – This folder (and subfolders) contain the web resources for the standard Mendix supported widgets.
+        * **native** – This folder (and subfolders) contain the native mobile resources for the standard Mendix supported widgets.
+    * **{MODULE_NAME}** – Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.
+        * **web** – This folder contains re-usable web resources
+            * *main.scss* – This file is the starting point for the module web based styling.
+            * *design-properties.json* – This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
+        * **native** – This folder contains re-usable native mobile resources.
+            * *main.js* – This file is the starting point for the module native mobile based styling.
+            * *design-properties.json* – This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
+        * **public** – This folder can contain other re-usable resources like a custom *login.html* page or images and fonts used from your web styling.
 
 ## Styling output {#styling-output}
 
@@ -572,7 +572,7 @@ Cache busting is where a browser is told by the web server to re-download page r
 Mendix is able to add the `?638184496048312490` query parameter because of the use of a dynamic parameter called `{{cachebust}}` in */deployment/web/index-example.html*, which looks like this:
 
 ```html
-<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}></script>
+<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>
 ```
 
 {{% alert color="info" %}}

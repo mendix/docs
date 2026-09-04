@@ -1,7 +1,7 @@
 ---
-title: "Document Templates"
+title: "Document Templates (Deprecated)"
 url: /refguide/document-templates/
-weight: 90
+weight: 100
 aliases:
     - /refguide/Document+Templates.html
     - /refguide/Document+Templates
@@ -51,8 +51,8 @@ To generate HTML documents, create the HTML manually and use the token replaceme
 
 ### Microsoft Word
 
-Generating Microsoft Word documents is no longer supported by Mendix. However, there are several alternative solutions available — both free and paid — maintained by Mendix partners and the community that support Word document generation. These can be found in the [Mendix Marketplace](https://marketplace.mendix.com/link/search/word).
+Generating Microsoft Word documents is no longer supported by Mendix. However, there are several alternative solutions available—both free and paid—maintained by Mendix partners and the community that support Word document generation. These can be found in the [Mendix Marketplace](https://marketplace.mendix.com/link/search/word).
 
 ### Other Formats
 
-Other formats, including Rich Text Format (.rtf) and OpenDocument Text (.odt), are no longer supported by Mendix and do not have official alternatives. We understand this may impact certain use cases, and we recommend exploring whether supported formats like PDF or HTML can meet your current needs.
+Other formats, including Rich Text Format (*.rtf*) and OpenDocument Text (*.odt*), are no longer supported by Mendix and do not have official alternatives. We understand this may impact certain use cases and recommend exploring whether supported formats like PDF or HTML can meet your current needs.

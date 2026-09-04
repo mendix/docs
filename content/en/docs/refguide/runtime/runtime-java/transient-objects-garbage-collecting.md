@@ -91,7 +91,7 @@ In order to find the root cause of this state size, you need to press <kbd>Ctrl<
 
 ## Server-Side Memory Management
 
-For every request to the Mendix Runtime — be it from the client or via web service calls — objects are cleaned up at the end of the request. This means that if you create a lot of temporary objects in a microflow, they will occupy Runtime memory until the end of the request.
+For every request to the Mendix Runtime—be it from the client or via web service calls—objects are cleaned up at the end of the request. This means that if you create a lot of temporary objects in a microflow, they will occupy Runtime memory until the end of the request.
 
 ## Read More
 

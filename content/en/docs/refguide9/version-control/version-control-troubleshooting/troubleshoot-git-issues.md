@@ -103,8 +103,6 @@ The properties described below might contain personal information. We advise you
 
 There are properties of the Git repository that provide you with the information useful for troubleshooting different issues. Execute the following in the command line in the app’s folder:
 
-`git status -b` — provides information on the current state of the repository
-
-`git remote -v` — lists the remotes specified for the repository
-
-`git config --list --show-origin --show-scope` — provides information on user's Git config
+* `git status -b` – Provides information on the current state of the repository.
+* `git remote -v` – Lists the remotes specified for the repository.
+* `git config --list --show-origin --show-scope` – Provides information on user's Git config.

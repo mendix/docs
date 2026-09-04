@@ -46,6 +46,14 @@ Jumping to other activities has a limitation in parallel splits and in boundary 
 
 For more information about jumping rules in a boundary event path, see the [Jump Rules](/refguide/workflow-boundary-events/#jump-rules) section in *Boundary Events*.
 
+## Jumping from Current Activity to Itself
+
+It is possible to jump from an active [Multi-user task](/refguide/multi-user-task/) back to itself. When this occurs, the following behavior applies:
+
+* All individually selected outcomes are reset.
+* Targeted and assigned users are cleared, and user targeting will be executed again.
+* Any existing timer boundary events that were already scheduled will continue running and are not canceled. After the jump is executed, these same boundary events are scheduled again. This may result in duplicate timer events being scheduled. These duplicate events will remain pending until the original events expire, at which point the newly scheduled ones are automatically aborted.
+
 ## Read More
 
 * [Generate Jump-To Options](/refguide/generate-jump-to-options/)

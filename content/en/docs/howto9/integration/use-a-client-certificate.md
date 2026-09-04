@@ -19,7 +19,7 @@ This how-to teaches you how to do the following:
 
 ## Prerequisites
 
-* A PKCS12 certificate file that contains a private key — these files typically have the *.pfx* or *.p12* file extension
+* A PKCS12 certificate file that contains a private key—these files typically have the *.pfx* or *.p12* file extension
 * The password to open that file
 
 ## Running Locally
@@ -66,14 +66,14 @@ You will only be able to follow the steps below if you have the correct access r
 
 To configure client certificates in Mendix Cloud, follow these steps:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
+1. Go to [Projects](https://projects.home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** next to one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:
     1. After the files have been uploaded, they appear in the list. Double-click an item in the list.
     2. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:
-        * For web services, enter the name of the web service (for example,*ModuleName.WebServiceName*)
+        * For web services, enter the name of the web service (for example, *ModuleName.WebServiceName*)
         * For REST services, enter the host name of the endpoint (for example, *example.com*)
     3. Close the **Details** screen.
 

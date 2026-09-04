@@ -1,8 +1,8 @@
 ---
-title: "Resolve Shared Ownership of Apps"
+title: "Resolving Shared Ownership of Apps"
 url: /control-center/resolve-shared-ownership-of-apps
 description: "Describe how to address the issue that you own an app together with another company."
-weight: 90
+weight: 80
 no_list: true
 ---
 
@@ -31,7 +31,7 @@ To resolve this issue, do one of the following:
 
 ### You Own the Node, but Not the App
 
-If an app does not appear in **Apps**, but appears in [Deployed Apps](/control-center/deployed-apps/), or [Cloud](/control-center/cloud/#paid-environments) if you cannot access **Deployed Apps**, this means that you own the node but not the app.
+If an app does not appear in **Apps**, but it appears in [Deployed Apps](/control-center/deployed-apps/), or [Cloud](/control-center/cloud/#paid-environments) if you cannot access **Deployed Apps**, this means that you own the node but not the app.
 
 To resolve this issue, do one of the following:
 

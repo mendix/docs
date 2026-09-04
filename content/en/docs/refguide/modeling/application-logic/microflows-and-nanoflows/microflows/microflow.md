@@ -52,6 +52,10 @@ In the **Edit Microflow URL** dialog box, the configured URL is shown together w
 URLs are not supported for microflows that have non-persistable entities or lists as parameters.
 {{%/alert %}}
 
+{{% alert color="info" %}}
+Page and microflow URL patterns must be unambiguous. If two patterns match the same URL, the Mendix Runtime cannot determine which page or microflow to open. For best practices on structuring URLs and resolving conflicts, see the [Page and Microflow URLs](/refguide/general-best-practices/#page-and-microflow-urls) section in *General Development Best Practices*.
+{{% /alert %}}
+
 ### Common Section {#common}
 
 #### Name
@@ -89,7 +93,7 @@ Default: *disabled*
 
 #### Apply Entity Access
 
-**Apply entity access** indicates whether entity access based on the current user is applied when performing operations on objects. Enabling this setting limits the objects that are retrieved by the [retrieve activity](/refguide/retrieve/) to only those that the current user is allowed to see. Similarly, when reading and writing attributes and associations, the entity access of the current user is applied. Conversely, if entity access is not applied, all operations are allowed and all objects are retrieved.
+**Apply entity access** indicates whether entity access based on the current user is applied when performing operations on objects. Enabling this setting limits the objects that are retrieved by the [retrieve object(s) activity](/refguide/retrieve-objects/) to only those that the current user is allowed to see. Similarly, when reading and writing attributes and associations, the entity access of the current user is applied. Conversely, if entity access is not applied, all operations are allowed and all objects are retrieved.
 
 | Option | Description |
 | --- | --- |

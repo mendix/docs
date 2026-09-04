@@ -43,11 +43,9 @@ Create a view entity that combines only the relevant attributes of the entities 
       JOIN p/Shop.Product_Category/Shop.Category as c
     ```
 
-{{% alert color="info" %}}
+    {{% alert color="info" %}} This query uses OQL to take the four attributes of each product and combines them with the associated supplier and category. If there is no supplier or category, the product will not be included. For more information, see [OQL Expressions](/refguide/oql-expressions/).
 
-This query uses OQL to take the four attributes of each product and combines them with the associated supplier and category. If there is no supplier or category, the product will not be included. For more information, see [OQL Expressions](/refguide/oql-expressions/).
-
-{{% /alert %}}
+    {{% /alert %}}
 
 4. Click **OK**. The view entity is added to your domain model.
 
@@ -120,12 +118,11 @@ You can calculate the total value of an order by joining the `OrderLine` and `Or
       JOIN o/Shop.OrderLine_Order/Shop.OrderLine as ol
     GROUP BY o.OrderId, o.OrderDate, o.RequiredDate, o.ShippedDate
     ```
- 
-This results in a view entity that shows the total value of every order.  
+    
+    This results in a view entity that shows the total value of every order.  
 
-{{% alert color="info" %}} 
-Notice the quotation marks in `Shop.”Order”`. This is because `Order` is a reserved keyword in OQL. To avoid ambiguity, quotation marks are put around the word. 
-{{% /alert %}}
+    {{% alert color="info" %}} Notice the quotation marks in `Shop.”Order”`. This is because `Order` is a reserved keyword in OQL. To avoid ambiguity, quotation marks are put around the word. 
+    {{% /alert %}}
 
 3. Generate an overview page by right-clicking the view entity > **Generate overview pages**.
 4. Add the new overview page to the navigation.
@@ -137,7 +134,7 @@ On the Product overview page above, there is no button to add or modify a produc
 
 1. Create a microflow and name it *ACT_UpdateProduct*. 
 2. Add a parameter and in the entity field and select **ProductOverviewVE**.
-3. Add a [retrieve](/refguide/retrieve/) activity. In this activity, retrieve a *Product* object from the database. Configure the activity with the following details: 
+3. Add a [retrieve object(s)](/refguide/retrieve-objects/) activity. In this activity, retrieve a *Product* object from the database. Configure the activity with the following details: 
 
     * Use the following XPath constraint:
 
@@ -222,7 +219,7 @@ The final data view should look like this:
 Once the Product page is complete, update the related microflow. To do this, follow the steps below: 
 
 1. Open the **ACT_UpdateProduct** microflow.
-2. Add a Retrieve activity after the existing Retrieve product activity. 
+2. Add a Retrieve object(s) activity after the existing Retrieve product activity. 
 3. Retrieve a Category object from the database. Configure the activity using the following details:
    
     * Use the following XPath constraint: 
@@ -233,7 +230,7 @@ Once the Product page is complete, update the related microflow. To do this, fol
 
     * In the Range field, select **First** 
 
-4. Add another Retrieve activity to retrieve the Supplier object. Configure the activity using the following details: 
+4. Add another Retrieve object(s) activity to retrieve the Supplier object. Configure the activity using the following details: 
 
     * Use the following XPath constraint: 
 

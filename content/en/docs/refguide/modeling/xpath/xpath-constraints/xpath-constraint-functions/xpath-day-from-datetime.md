@@ -1,5 +1,6 @@
 ---
 title: "XPath day-from-dateTime"
+linktitle: "day-from-dateTime"
 url: /refguide/xpath-day-from-datetime/
 weight: 8
 ---

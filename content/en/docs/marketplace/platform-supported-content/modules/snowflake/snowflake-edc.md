@@ -14,6 +14,8 @@ This how-to describes the steps required to enable your app to use the External 
 
 ## Configuring the Connection Between Your Mendix App and Snowflake
 
+The External Database connector only supports system-level authentication. It can authenticate in Snowflake by using the username and password of a single Snowflake user. It also offers key-pair authentication with a private key. The connector does not support role-based access control (RBAC) per end-user.
+
 To configure connect your Mendix application to Snowflake with the External Database connector, follow these steps:
 
 1. [Install the External Database connector](/appstore/modules/external-database-connector/#installation). If you are using Studio Pro 10.12, please make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
@@ -22,7 +24,7 @@ To configure connect your Mendix application to Snowflake with the External Data
 4. Provide connection details that can be used to access Snowflake. You can either provide a connection string, or enter connection details. If you enter connection details, a constant with a connection string will be created based on your connection details.
 5. If you decide to use the connection details, copy the **Account URL** from the Snowflake console and use it as the **Host parameter** for the **Connection details**.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-ai-data-connector/snowsight-account-url.png" >}}
 
 6. Provide a user name and a password or a private key (also a passphrase if the private key is encrypted).
 7. Click **Test Connection** to verify the connection details, and then click **Save**.
@@ -314,7 +316,7 @@ To execute and test the query in Studio Pro, follow these steps:
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-replication-grid.png" >}}
 
-## Using Cortex AI functions
+## Using Cortex AI functions {#cortex-ai-query}
 
 Snowflake comes with built in AI functionality that you can leverage in your Mendix applications. This section provides an example of a query that calls the *sentiment* function to analyze the sentiment of a piece of text.
 

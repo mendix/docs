@@ -88,7 +88,7 @@ With this feature, if the app is going to create a dangling reference, a runtime
 
 ### Setting Foreign Key Constraints On and Off 
 
-It is possible to set Foreign Key Constraints for existing projects on or off regardless of which version the project was originally created in by toggling the option in the app's [runtime settings](/refguide/app-settings/#database-fkc).
+It is possible to set Foreign Key Constraints for existing projects on or off regardless of which version the project was originally created in by toggling the option in the app's [runtime settings](/refguide/runtime-tab/#database-fkc).
 
 {{% alert color="info" %}}
 Deploying an existing application after enabling or disabling FKC will cause a synchronization step to be executed.

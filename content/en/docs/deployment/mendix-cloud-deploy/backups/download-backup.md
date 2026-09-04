@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To download a backup of a Free App, follow these steps:
 
-1. Go to [Apps](https://sprintr.home.mendix.com) and open your app.
+1. Go to [Projects](https://projects.home.mendix.com) and open your app.
 1. In the [navigation pane](/developerportal/#navigation-pane), click **Backups**.
 1. On the backup you want to download, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}). Select **Download** from the drop-down list.
 1. Select the backup type: **Full snapshot**, **Database only**, or **Files only**. Then click **Start**.
@@ -31,7 +31,7 @@ To download a backup of a Free App, follow these steps:
 
 To download a backup of a licensed app, follow these steps:
 
-1. Go to [Apps](https://sprintr.home.mendix.com) and open your app.
+1. Go to [Projects](https://projects.home.mendix.com) and open your app.
 1. In the navigation pane, click **Backups**.
 1. Select the environment from which you want to download the backup.
 
@@ -54,6 +54,8 @@ To download a backup of a licensed app, follow these steps:
 
     * Click **Show URL** to see the URL of the backup
     * Click **Download** to immediately start downloading the archive using your browser.
+
+    {{% alert color="info" %}} The backup archive and the **Download URL** (accessible by clicking **Show URL**) are only available for download for 24 hours from the time of creation. {{% /alert %}}
 
 ## Known Limitations
 

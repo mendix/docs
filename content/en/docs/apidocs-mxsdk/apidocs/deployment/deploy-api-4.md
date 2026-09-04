@@ -32,7 +32,7 @@ Authentication for the Deploy API v4 uses a personal access token (PAT).
 
 ### Generating a PAT
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
 
 Select at least the following as **Deployment Mendix Cloud** scopes:
 

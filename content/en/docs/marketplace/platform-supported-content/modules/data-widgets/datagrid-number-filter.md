@@ -26,10 +26,10 @@ Specifies the target data source that the filter should operate on when using Cu
 
 Allows specification of multiple numeric attributes that users can filter on. Each attribute in the list becomes a potential target for filtering operations, enabling sophisticated multi-attribute numerical search capabilities. Supported attribute types include:
 
-- **AutoNumber**: system-generated sequential numbers
-- **Decimal**: decimal numbers with fractional parts
-- **Integer**: whole numbers within integer range
-- **Long**: large whole numbers within long range
+* **AutoNumber**: system-generated sequential numbers
+* **Decimal**: decimal numbers with fractional parts
+* **Integer**: whole numbers within integer range
+* **Long**: large whole numbers within long range
 
 #### Default Value
 
@@ -39,14 +39,14 @@ Sets the initial numeric value that appears in the filter input when the page lo
 
 Determines the initial filter operation type when the widget loads. Available options include the following:
 
-- **Greater than**: matches records where the numeric value is greater than the specified number
-- **Greater than or equal**: matches records where the numeric value is greater than or equal to the specified number
-- **Equal**: matches records where the numeric value exactly equals the specified number
-- **Not equal**: matches records where the numeric value does not equal the specified number
-- **Smaller than**: matches records where the numeric value is smaller than the specified number
-- **Smaller than or equal**: matches records where the numeric value is smaller than or equal to the specified number
-- **Empty**: matches records where the numeric attribute has no value
-- **Not empty**: matches records where the numeric attribute has any value
+* **Greater than**: matches records where the numeric value is greater than the specified number
+* **Greater than or equal**: matches records where the numeric value is greater than or equal to the specified number
+* **Equal**: matches records where the numeric value exactly equals the specified number
+* **Not equal**: matches records where the numeric value does not equal the specified number
+* **Smaller than**: matches records where the numeric value is smaller than the specified number
+* **Smaller than or equal**: matches records where the numeric value is smaller than or equal to the specified number
+* **Empty**: matches records where the numeric attribute has no value
+* **Not empty**: matches records where the numeric attribute has any value
 
 #### Placeholder
 
@@ -83,4 +83,3 @@ Provides an accessible label for the filter type selection button. This label is
 #### Input Caption
 
 Defines the accessible label for the numeric input field. Screen readers announce this label when users focus on the input field. Supports localization with built-in translations for English, German, and Dutch. Can be customized to provide context-specific information about the expected numeric format or range.
-

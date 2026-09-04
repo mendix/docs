@@ -80,7 +80,7 @@ To create the mapping, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/rest-services/publish-rest-service/ConvertOrderID.png" alt="Create Variable dialog box used to parse OrderID as an integer variable" class="no-border" >}}
 
-10. Add a **Retrieve** activity to the microflow to retrieve the **Order** based on the **OrderID**. Set this activity to retrieve the first matching order from the database.
+10. Add a **Retrieve object(s)** activity to the microflow to retrieve the **Order** based on the **OrderID**. Set this activity to retrieve the first matching order from the database.
 
     {{< figure src="/attachments/refguide/modeling/integration/rest-services/publish-rest-service/RetrieveOrder.png" alt="Range and XPath constraint settings in the Retrieve dialog box" >}}
 

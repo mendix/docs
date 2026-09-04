@@ -21,10 +21,10 @@ The entities can also relate to each other through generalizations. Finally, you
 | Studio Pro Guide | Model SDK API Docs |
 | --- | --- |
 | [Domain Model](/refguide/domain-model/) | TypeScript module [domainmodels](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/domainmodels.html)  |
-| [Entities](/refguide/entities/) | [DomainModel](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.domainmodel.html) |
-| [Attributes](/refguide/attributes/) | [Entity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html) |
-| [Associations](/refguide/associations/) | [Association](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html) |
-| | [Attribute](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.attribute.html) |
+| [Entities](/refguide/entities/) | [DomainModel](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.DomainModel.html) |
+| [Attributes](/refguide/attributes/) | [Entity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Entity.html) |
+| [Associations](/refguide/associations/) | [Association](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Association.html) |
+| | [Attribute](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Attribute.html) |
 
 ## Attributes
 
@@ -40,9 +40,9 @@ Entities can have multiple attributes. Each attribute has a specific type.
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Attributes](/refguide/attributes/) | Property [`attributes`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#attributes) of entity  |
-| | [Attribute](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.attribute.html) |
-| | [AttributeType](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.attributetype.html) |
+| [Attributes](/refguide/attributes/) | Property [`attributes`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Entity.html#attributes) of entity  |
+| | [Attribute](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Attribute.html) |
+| | [AttributeType](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.AttributeType.html) |
 
 ## Generalization Relationships
 
@@ -56,10 +56,10 @@ An `Entity` instance has a `generalization` property with which to define this r
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Entities](/refguide/entities/) | Property [`generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization) of Entity |
-| | [GeneralizationBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalizationbase.html) |
-| | [Generalization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html) |
-| | [NoGeneralization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) |
+| [Entities](/refguide/entities/) | Property [`generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Entity.html#generalization) of Entity |
+| | [GeneralizationBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.GeneralizationBase.html) |
+| | [Generalization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Generalization.html) |
+| | [NoGeneralization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.NoGeneralization.html) |
 
 ## Access Rules
 
@@ -72,9 +72,9 @@ To secure access to the data in a Mendix app, you can define access rules for en
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
 | [Access rules](/refguide/access-rules/) | Property [`accessRules`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#accessrules) of Entity |
-| | [AccessRule](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.accessrule.html) |
-| | Property [`xpathConstraint`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.accessrule.html#xpathconstraint) of AccessRule |
-| | [ModuleRole](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/security.modulerole.html) |
+| | [AccessRule](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.AccessRule.html) |
+| | Property [`xpathConstraint`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.AccessRule.html#xPathConstraint) of AccessRule |
+| | [ModuleRole](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/security.ModuleRole.html) |
 
 ## Validation Rules
 
@@ -86,9 +86,9 @@ For each attribute of an entity, it is possible to define a validation rule. The
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Validation Rules](/refguide/validation-rules/) | Property [`validationRules`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#validationrules) of Entity |
-| | [ValidationRule](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.validationrule.html) |
-| | [RuleInfo](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.ruleinfo.html) |
+| [Validation Rules](/refguide/validation-rules/) | Property [`validationRules`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Entity.html#validationRules) of Entity |
+| | [ValidationRule](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.ValidationRule.html) |
+| | [RuleInfo](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.RuleInfo.html) |
 
 ## Indexes
 
@@ -100,6 +100,6 @@ An entity can have multiple indexes. Each index consists of a set of indexed att
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Indexes](/refguide/indexes/) | Property [`indexes`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#indexes) of Entity |
-| | [Index](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.index.html) |
-| | [IndexedAttribute](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.indexedattribute.html) |
+| [Indexes](/refguide/indexes/) | Property [`indexes`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Entity.html#indexes) of Entity |
+| | [Index](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.Index.html) |
+| | [IndexedAttribute](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.IndexedAttribute.html) |

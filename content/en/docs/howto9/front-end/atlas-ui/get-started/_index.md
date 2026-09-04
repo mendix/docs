@@ -10,17 +10,13 @@ This section explains Atlas and how developers can get started with the Atlas UI
 
 The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored re-usable design across apps.
 
-Atlas 2 corresponds with Mendix 8. If you need information on Atlas 2, see the Mendix 8 how-to documentation for [Atlas 2](/howto8/front-end/atlas-ui/).
-
 ## Design Principles
 
-Atlas UI has a philosophy based on the core principles described below. These principles guide all our design decisions at Mendix, and we encourage every Mendix user to adopt them when building their own apps.
+Atlas UI has a philosophy based on the core principles described below. These principles guide all our design decisions at Mendix, and we encourage every Mendix user to adopt them when building their own apps:
 
-**Simplicity**  — Freedom from complexity: we strive for simplicity to help you focus on what is important.
-
-**Harmony** — Create familiarity and consistency throughout your apps' landscape, regardless of the device you use.
-
-**Flexibility** — Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
+* **Simplicity** – Freedom from complexity: we strive for simplicity to help you focus on what is important.
+* **Harmony** – Create familiarity and consistency throughout your apps' landscape, regardless of the device you use.
+* **Flexibility** – Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
 
 ## Design Elements
 
@@ -28,15 +24,11 @@ Our UI library is fully integrated into Mendix Studio Pro. After choosing a navi
 
 {{< figure src="/attachments/howto9/front-end/atlas-ui/get-started/designelements.png" alt="Atlas UI design elements" class="no-border" >}}
 
-1. **Navigation Layouts** — When building a Mendix app, the first thing you do is choose a navigation layout. These layouts are the frame within which your dynamic pages are housed, and they provide consistent structure throughout your app.
-
-2. **Page Templates** — Page templates are predesigned collections of building blocks that can be used as-is, or you can enhance them with custom building blocks and widgets.
-
-3. **Building Blocks** — Building blocks are single-purpose user interface elements and are comprised of multiple widgets. Multiple building blocks are usually used together on one page.
-
-4. **Widgets** — Widgets are small user interface elements (alerts, buttons, charts, etc.) used to enhance existing building blocks.
-
-5. **Design Properties** — You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
+1. **Navigation Layouts** – When building a Mendix app, the first thing you do is choose a navigation layout. These layouts are the frame within which your dynamic pages are housed, and they provide consistent structure throughout your app.
+2. **Page Templates** – Page templates are predesigned collections of building blocks that can be used as-is, or you can enhance them with custom building blocks and widgets.
+3. **Building Blocks** – Building blocks are single-purpose user interface elements and are comprised of multiple widgets. Multiple building blocks are usually used together on one page.
+4. **Widgets** – Widgets are small user interface elements (alerts, buttons, charts, etc.) used to enhance existing building blocks.
+5. **Design Properties** – You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
 
 ## Default Look and Feel
 

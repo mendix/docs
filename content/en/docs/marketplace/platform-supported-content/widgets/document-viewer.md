@@ -27,6 +27,7 @@ Supported file types:
 To configure this widget, follow these steps:
 
 1. Place the document viewer in a data view, list view, or a template grid with a data source that has a **System.File** attribute that stores the supported files.
+   1. Make sure the attribute **DeleteAfterDownload** is set to false.
 1. Double-click the document viewer widget to open the **Edit Document Viewer** dialog box.
 1. Configure the widget using the properties described in the sections below.
 
@@ -39,11 +40,19 @@ To configure this widget, follow these steps:
 
 These are the dimension configurations for document viewer:
 
-* **Width** — Determines the width size for the document viewer. The developer can choose to use either pixels (px), percentage (%), or **Fit to content**.
-* **Height** — Determine the height size for the document viewer. The developer can choose to use either pixels (px), percentage (%), or **Viewport** (vp). Choosing setting to **Auto** will allow the developer to set minimum and maximum heights instead.
-* **Minimum Height** — Determines the minimum size for the custom charts container.
-* **Maximum Height** — Determines the maximum size for the custom charts container.
-* **Vertical Overflow** — If maximum height is set, vertical overflow will determine the widget's behavior to show overflowing content if that content exceeded the maximum height allowed.
+* **Width** – Determines the width size for the document viewer. The developer can choose to use either pixels (px), percentage (%), or **Fit to content**.
+* **Height** – Determine the height size for the document viewer. The developer can choose to use either pixels (px), percentage (%), or **Viewport** (vp). Choosing setting to **Auto** will allow the developer to set minimum and maximum heights instead.
+* **Minimum Height** – Determines the minimum size for the custom charts container.
+* **Maximum Height** – Determines the maximum size for the custom charts container.
+* **Vertical Overflow** – If maximum height is set, vertical overflow will determine the widget's behavior to show overflowing content if that content exceeded the maximum height allowed.
+
+## Advanced {#advanced}
+
+The **Advanced** tab allows you to configure settings for features beyond the normal configurations:
+
+* **PDF.js worker URL** – Configures the path for PDF.js worker script. This worker script is needed to render PDF type document using a [PDF.js](https://github.com/mozilla/pdf.js?tab=readme-ov-file#including-via-a-cdn) library. 
+    * If left empty, the document viewer widget will retrieve PDF.js from CDN `http://unpkg.com/pdfjs-dist@4.8.69/build/pdf.worker.min.mjs`.
+    * Alternatively, users can grab `pdf.worker.mjs` from `{LOCAL DEV PROJECT FOLDER HERE}/deployment/web/widgets/com/mendix/shared/pdfjs/pdf.worker.mjs`, put it into their own `App Module -> Styling/web/js/pdf.worker.mjs` file, and then set `./js/pdf.worker.mjs` as the worker URL configuration. This is the recommended practice to support [CSP](/howto/security/csp/).
 
 ### Common Tab
 

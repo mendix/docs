@@ -26,7 +26,17 @@ The common structure of a property definition is as follows:
 
 This defines the prop `key` in the client component props which are supplied to the widget client component. Each property must have a unique `key` which can contain letters of all cases, digits, or underscores. However, a `key` attribute cannot *start* with a digit.
 
-#### Type (required)
+#### AllowUpload (Optional) {#allow-upload}
+
+{{% alert color="info" %}}
+AllowUpload was introduced in Mendix [11.8](/releasenotes/studio-pro/11.8/). Support for native widgets was introduced in Mendix [11.11](/releasenotes/studio-pro/11.11/).
+{{% /alert %}}
+
+This optional attribute applies only to [file](#file) and [image](#image) properties and determines whether users can upload and edit files. When set to the default value of `false`, properties use read-only behavior. Setting it to `true` unlocks upload and edit capabilities by passing `EditableFileValue<FileValue>` and `EditableImageValue<ImageValue>` types, as props to a client component.
+
+Be aware of behavioral differences between the read-only mode (`false`) and the editable mode (`true`).
+
+#### Type (Required)
 
 This defines a property's type. A `type` must be one of the following: 
 
@@ -49,13 +59,15 @@ This defines a property's type. A `type` must be one of the following:
     * [object](#object)
     * [file](#file)
     * [datasource](#datasource)
+        * [List data source](#list-datasource)
+        * [Object data source](#object-datasource)
     * [selection](#selection)
 
 ### XML Elements
 
-`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio Pro.
+`<caption>` (required) – This defines the property name visible for the user (not the end-user) while configuring the widget in Studio Pro.
 
-`<description>` (required) — This is a description which explains a property's purpose.
+`<description>` (required) – This is a description which explains a property's purpose.
 
 ## Static Types
 
@@ -198,7 +210,7 @@ The enumeration property type allows a user to select one out of multiple option
 
 #### XML Elements
 
-`<enumerationValues>` (required) — One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. A `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
+`<enumerationValues>` (required) – One `<enumerationValues>` element must be declared with multiple `<enumerationValue>` elements inside in order to define possible enumeration values. A `key` attribute is required for every enumeration value as well as a caption. Enter enumeration values like this:
 
 ```xml
 <enumerationValue key="myEnumOption">My enum option caption</enumerationValue>
@@ -257,26 +269,25 @@ Then the Studio Pro UI for the component appears like this:
 
 ### Image {#image}
 
-Image allows a user to configure a static image from an [image collection](/refguide/image-collection/). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an `DynamicValue<ImageValue>` prop to a client component (for more information, see the [ImageValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#imagevalue) section of *Client APIs Available to Pluggable Widgets*). See the [Images Reference Guide](/refguide/images/) for more information about supported image formats.
+Image allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an [`EditableImageValue<ImageValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-image-value) prop to a client component. For more information about supported image formats, see the [Images Reference Guide](/refguide/images/).
 
-{{% alert color="warning" %}}
-GIF images are not supported in native mobile apps on Android devices.
-{{% /alert %}}
+The user can use the optional attribute [`allowUpload`](#allow-upload) with default value `false` to use the [`Dynamic<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop. Beware of behavioral differences based on the `allowUpload` attribute.
 
 #### XML Attributes
 
-| Attribute  | Required | Attribute Type | Description                                                           |
-|------------|----------|----------------|-----------------------------------------------------------------------|
-| `type`     | Yes      | String         | Must be `image`                                                       |
-| `key`      | Yes      | String         | See [key](#key)                                                       |
-| `required` | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
+| Attribute      | Required | Attribute Type | Description                                                           |
+|---------------|----------|----------------|-----------------------------------------------------------------------|
+| `type`         | Yes      | String         | Must be `image`                                                       |
+| `key`          | Yes      | String         | See [key](#key)                                                       |
+| `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
+| `allowUpload` | No       | Boolean        | See [allowUpload](#allow-upload)                                      |
 
 #### Studio Pro UI
 
 When the component is defined as follows:
 
 ```xml
-<property key="bgImage" type="image" required="false">
+<property key="bgImage" type="image" required="false" allowUpload="true" >
 	<caption>Background Image</caption>
 	<description>Image shown blurred in a background</description>
 </property>
@@ -355,7 +366,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements
 
-`<returnType>` (required) — An expression property must contain a `<returnType>` element in order to define the return type of the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
+`<returnType>` (required) – An expression property must contain a `<returnType>` element in order to define the return type of the expression. The Mendix Platform will ensure the that configured expression returns the correct data type.
 
 The return type of the expression must be defined using either the `type` or the `assignableTo` attribute. It is not allowed to specify both.
 
@@ -443,7 +454,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements
 
-`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/app-settings/#languages-tab) in Studio Pro.
+`<translations>` – Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/languages-tab/) in Studio Pro.
 
 #### Studio Pro UI
 
@@ -467,15 +478,13 @@ Then the Studio Pro UI for the property appears like this:
 
 ### Action {#action}
 
-{{% alert color="info" %}}
-The `defaultType` and `defaultValue` attributes for Action were introduced in Mendix [10.15](/releasenotes/studio-pro/10.15/).
-{{% /alert %}}
-
 The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.
 
-If a `dataSource` attribute is not specified, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
+If a `dataSource` attribute is not specified, the client will receive an [`ActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#actionvalue) representing the action or `undefined` if the **Do nothing** action was selected.
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listactionvalue). For more information, see the [Datasource](#datasource) section below.
+
+Action properties can be preconfigured using the `defaultValue` and `defaultType` attributes. This is particularly useful when the widget is intended to be used with a specific microflow, nanoflow, or page. When the property [exposes action variables](#action-xml-elements), they are automatically mapped to parameters of matching name and type.
 
 #### XML Attributes {#xml-attributes}
 
@@ -489,13 +498,13 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements {#action-xml-elements}
 
-`<actionVariables>` — Defines variables a widget provides when calling [execute() on an ActionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#execute). The variables are made available in Studio Pro when configuring [Call a Microflow](/refguide/on-click-event/#call-microflow) and [Call a Nanoflow](/refguide/on-click-event/#call-nanoflow) actions.
+`<actionVariables>` – Defines variables a widget provides when calling [execute() on an ActionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#execute). The variables are made available in Studio Pro when configuring [Call a Microflow](/refguide/on-click-event/#call-microflow) and [Call a Nanoflow](/refguide/on-click-event/#call-nanoflow) actions. Action variables are automatically mapped to parameters of the same name (`key`) and type.
 
-`<actionVariable>` (required one or more) — Represents a primitive value provided by the widget as an argument when calling `ActionValue.execute()`. The variable is defined by the following attributes:
+`<actionVariable>` (required one or more) – Represents a primitive value provided by the widget as an argument when calling `ActionValue.execute()`. The variable is defined by the following attributes:
 
-* `key` (required) — The identifier of the variable used in Studio Pro and the Pluggable Widgets API.
-* `type` (required) — The type of the value that the variable represents. Supported types and their corresponding Typescript type are listed in the table below.
-* `caption` (required) — A short description of the variable that is displayed in Studio Pro.
+* `key` (required) – The identifier of the variable used in Studio Pro and the Pluggable Widgets API.
+* `type` (required) – The type of the value that the variable represents. Supported types and their corresponding Typescript type are listed in the table below.
+* `caption` (required) – A short description of the variable that is displayed in Studio Pro.
 
 | Action Variable Type | Client Type  |
 | -------------------- | --------- |
@@ -557,9 +566,9 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements
 
-`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio Pro.
+`<attributeTypes>` (required) – This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio Pro.
 
-`<attributeType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
+`<attributeType>` (required one or more) – This element defines the allowed attribute type in the `name` attribute.
 
 | Supported Attribute Types | Corresponding Types Client Components Receive |
 |---------------------------|-----------------------------------------------|
@@ -620,9 +629,9 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Elements
 
-`<associationTypes>` (required) — This element encapsulates `<associationType>` elements which declare supported association types available while configuring the association property in Studio Pro.
+`<associationTypes>` (required) – This element encapsulates `<associationType>` elements which declare supported association types available while configuring the association property in Studio Pro.
 
-`<associationType>` (required one or more) — this element defines the allowed association type in the `name` attribute.
+`<associationType>` (required one or more) – This element defines the allowed association type in the `name` attribute.
 
 | Supported Attribute Types | Corresponding Types Client Components Receive |
 |---------------------------|-----------------------------------------------|
@@ -668,7 +677,7 @@ The object property type allows to create an arbitrary list of properties.
 
 #### XML Elements
 
-`<properties>` (required) — This encapsulates the list or properties to be configured. For more information on property groups, see the [Property Groups](/apidocs-mxsdk/apidocs/pluggable-widgets/#property-groups) section of *Pluggable Widgets API*. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
+`<properties>` (required) – This encapsulates the list or properties to be configured. For more information on property groups, see the [Property Groups](/apidocs-mxsdk/apidocs/pluggable-widgets/#property-groups) section of *Pluggable Widgets API*. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
 
 #### Studio Pro UI
 
@@ -699,14 +708,17 @@ Then the Studio Pro UI for the property appears like this:
 
 ### File {#file}
 
-The file property type allows a user to configure a file from an object that is a specialization of **System.File**. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop to a client component.
+The file property type allows a user to configure and edit a file from and to an object that is a specialization of **System.File**. It is passed as a [`EditableFileValue<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-file-value) prop to a client component.
+
+The user can use the optional attribute [`allowUpload`](#allow-upload) with default value `false` to use the [`Dynamic<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop. Beware of behavioral differences based on the `allowUpload` attribute.
 
 #### XML Attributes
 
-| Attribute | Required | Attribute Type | Description     |
-|-----------|----------|----------------|-----------------|
-| `type`    | Yes      | String         | Must be `file`  |
-| `key`     | Yes      | String         | See [key](#key) |
+| Attribute     | Required | Attribute Type | Description                      |
+|---------------|----------|----------------|----------------------------------|
+| `type`        | Yes      | String         | Must be `file`                   |
+| `key`         | Yes      | String         | See [key](#key)                  |
+| `allowUpload` | No       | Boolean        | See [allowUpload](#allow-upload) |
 
 #### Studio Pro UI
 
@@ -714,7 +726,7 @@ When the property is defined as follows:
 
 ```xml
 
-<property key="file" type="file" required="false">
+<property key="file" type="file" required="false" allowUpload="true">
 	<caption>File</caption>
 	<description>Sample text file</description>
 </property>
@@ -726,13 +738,9 @@ Then the Studio Pro UI for the property appears like this:
 
 ### Datasource {#datasource}
 
-The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`association`](#association), [`expression`](#expression), [`text template`](#texttemplate), and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources/#list-widgets) for available data source types.
+The datasource property allows widgets to work with data from the Mendix Platform. It comes in two variants controlled by the `isList` attribute: a **list data source** (`isList="true"`) for working with collections of objects, and an **object data source** (`isList="false"`) for working with a single object.
 
 If no data source has been configured by the user, any properties that are linked to the datasource property are automatically omitted from the props passed to the client component (even if they are marked as required).
-
-{{% alert color="warning" %}}
-Only list datasources are supported, therefore specifying `isList="true"` is required.
-{{% /alert %}}
 
 #### XML Attributes
 
@@ -740,27 +748,27 @@ Only list datasources are supported, therefore specifying `isList="true"` is req
 |----------------|----------|----------------|------------------------------------------------------------------------------------------------------------|
 | `type`         | Yes      | String         | Must be `datasource`                                                                                       |
 | `key`          | Yes      | String         | See [key](#key)                                                                                            |
-| `isList`       | Yes      | Boolean        | Must be `true`                                                                                             |
+| `isList`       | Yes      | Boolean        | `true` for a list data source, `false` for an object data source                                           |
 | `required`     | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default                            |
-| `defaultType`  | No       | String         | Default type for the property, supported values are `Database`, `Microflow`, `Nanoflow`, and `Association` |
+| `defaultType`  | No       | String         | Default type for the property, see [Default Data Sources](#data-source-defaults)                           |
 | `defaultValue` | No       | String         | Default value for the property, see [Default Data Sources](#data-source-defaults)                          |
 
 ##### Data Source Defaults {#data-source-defaults}
-
-{{% alert color="info" %}}
-The `defaultType` and `defaultValue` attributes for datasources were introduced in Mendix [10.16](/releasenotes/studio-pro/10.16/).
-{{% /alert %}}
 
 You can use the `defaultType` and `defaultValue` attributes to configure default data sources for your widget. Unless overridden in Studio Pro, the widget will attempt to configure the data source according to its defaults. Both attributes need to be set for the defaults to be applied.
 
 The format of `defaultValue` depends on the chosen `defaultType`:
 
-| Data source type         | Format      | Example                                                               |
-|--------------------------|-------------|-----------------------------------------------------------------------|
-| `Database` `Association` | Entity Path | `ModuleName.EntityName` or `ModuleName.A/ModuleName.A_B/ModuleName.B` |
-| `Microflow` `Nanoflow`   | Document ID | `ModuleName.DocumentName`                                             |
+| Data source type         | Format      | Example                                                               | Supported For                      |
+|--------------------------|-------------|-----------------------------------------------------------------------|------------------------------------|
+| `Database` `Association` | Entity Path | `ModuleName.EntityName` or `ModuleName.A/ModuleName.A_B/ModuleName.B` | List data source                   |
+| `Microflow` `Nanoflow`   | Document ID | `ModuleName.DocumentName`                                             | List and object data source |
 
-#### Studio Pro UI
+#### List Data Source {#list-datasource}
+
+A list data source (`isList="true"`) allows a widget to work with a collection of objects. The client component receives a prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue). For more information on available data source type, see [Data Sources](/refguide/data-sources/#list-widgets).
+
+##### Studio Pro UI
 
 When the property is defined as follows:
 
@@ -773,13 +781,55 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/datasource.png" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/datasource-list.png" class="no-border" >}}
 
-### Selection {#selection}
+#### Object Data Source {#object-datasource}
 
 {{% alert color="info" %}}
-The property type was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
+The object data source was introduced in Mendix [11.11](/releasenotes/studio-pro/11.11/).
 {{% /alert %}}
+
+An object data source (`isList="false"`) allows a widget to work with a single object. The client component receives a prop of type [`DynamicValue<ObjectItem>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value).
+
+A widget may have, at maximum, **one** object data source property.
+
+The available source types differ from list data sources:
+
+| Platform | Available Source Types                                    |
+|----------|-----------------------------------------------------------|
+| Web      | Context, Microflow, Nanoflow, Listen to widget            |
+| Native   | Context, Microflow, Nanoflow                              |
+
+##### Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<property key="data" type="datasource" isList="false" required="false">
+	<caption>Data source</caption>
+	<description />
+</property>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/datasource-single-object.png" class="no-border" >}}
+
+#### Linking Properties to Data Sources {#datasource-linking}
+
+The [`action`](#action), [`attribute`](#attribute), [`association`](#association), [`expression`](#expression), [`text template`](#texttemplate), [`widgets`](#widgets), and [`selection`](#selection) properties can be linked to a data source using the `dataSource` attribute on those properties. The client type received by the component depends on the data source type:
+
+| Property type  | List data source client type | Object data source client type |
+|:---------------|:-----------------------------|:--------------------------------------|
+| `action`       | [`ListActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listactionvalue) | [`ActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#actionvalue) |
+| `attribute`    | [`ListAttributeValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listattributevalue) | [`EditableValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value) |
+| `association`  | [`ListReferenceValue` or `ListReferenceSetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listassociationvalue) | `ReferenceValue` or `ReferenceSetValue` |
+| `expression`   | [`ListExpressionValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listexpressionvalue) | [`DynamicValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) |
+| `textTemplate` | [`ListExpressionValue<string>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listexpressionvalue) | [`DynamicValue<string>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) |
+| `widgets`      | [`ListWidgetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listwidgetvalue) | `ReactNode` |
+| `selection`    | `SelectionSingleValue` or `SelectionMultiValue` | *Not supported* |
+
+### Selection {#selection}
 
 The selection property allows a widget to read and set a selection that can be used in actions, expressions, or a `Listen to` data source of a data view.
 
@@ -793,11 +843,15 @@ The selection property allows a widget to read and set a selection that can be u
 | `defaultValue` | No       | String (Expression) | Default value for the property                                                                                                  |
 | `onChange`     | No       | Property Path       | The path to an [`action`](#action) property that will be run by the Mendix Platform when the selection is changed by the widget |
 
+{{% alert color="warning" %}}
+The `dataSource` attribute must refer to a [list data source](#list-datasource). Linking a selection property to an object data source is not supported.
+{{% /alert %}}
+
 #### XML Elements
 
-`<selectionTypes>` (required) — This element encapsulates `<selectionType>` elements which declare supported selection types available while configuring the selection property in Studio Pro.
+`<selectionTypes>` (required) – This element encapsulates `<selectionType>` elements which declare supported selection types available while configuring the selection property in Studio Pro.
 
-`<selectionType>` (required one or more) — This element defines the selection type in the `name` attribute.
+`<selectionType>` (required one or more) – This element defines the selection type in the `name` attribute.
 
 | Supported Selection Types | Corresponding Types Client Components Receive |
 |---------------------------|-----------------------------------------------|
@@ -846,10 +900,6 @@ Label property allows a pluggable widget to have labeling functionality similar 
 ```
 
 #### setLabel {#setLabel}
-
-{{% alert color="info" %}}
-The `setLabel` attribute was introduced in Mendix [10.5](/releasenotes/studio-pro/10.5/).
-{{% /alert %}}
 
 You can use `setLabel` to specify which properties can be used to set the `Label` property value. 
 

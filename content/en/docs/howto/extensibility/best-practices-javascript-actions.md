@@ -313,7 +313,7 @@ async function GetUserNameSampleRest(userID) {
 
 Explaining the Fetch API code:
 
-* The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`, and `fetch` is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) — the response is a promise that is converted into data with the `.json()` function (the name is accessed and returned)
+* The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`, and `fetch` is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)—the response is a promise that is converted into data with the `.json()` function (the name is accessed and returned)
 
 * As this is an async function, error handling at all three steps: fetch, parse JSON, and accessing the data can be done inside a single `try...catch` block (for a more detailed explanation, see the [MDN documentation for error handling with async/await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await#adding_error_handling)).
 
@@ -381,7 +381,7 @@ Consider these additional technical suggestions for best API practices:
 
 ### Exposing JavaScript Actions
 
-JavaScript Actions can be used in a nanoflow with a JavaScript action call activity. It is also possible to expose the actions in the activity list. This will make it easier for developers to find the actions. It is recommended to expose only the actions that will be reused often. 
+JavaScript Actions can be used in a nanoflow with a Call JavaScript action activity. It is also possible to expose the actions in the activity list. This will make it easier for developers to find the actions. It is recommended to expose only the actions that will be reused often. 
 
 Use **Category** to group actions, **Icon** and **Image** to give the exposed nanoflow action easy recognition inside the nanoflow:
 

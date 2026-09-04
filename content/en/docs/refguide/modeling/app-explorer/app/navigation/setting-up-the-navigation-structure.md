@@ -8,65 +8,65 @@ aliases:
 ---
 ## Introduction
 
-Once you created some pages, it is important that your users can access them. For this, you need to create a navigation menu. The navigation editor of Studio Pro allows you define the navigation menu for different type of apps and devices for example, for responsive, tablet browser, or native mobile apps. It also allows you to define which page is shown as a default home page depending on the user role.
+Once your app has some pages, create a navigation menu to give your end-users access to them. The navigation editor allows you define the navigation menu for different type of apps and devices (for example, for responsive, tablet browser, native mobile, or embedded apps). It also lets you define which page is shown as a default home page depending on the user role.
 
 ## Setting a Default Home Page {#home}
 
-This section will explain how to set the default home page. 
-
 {{% alert color="info" %}}
-Note that the **Default home page** setting is overridden by a **Role-based home page** if you configure it. For more information, see the [Setting a Role-Based Home Page](#role-based-home-page).
+The **Default home page** setting is overridden by a **Role-based home page** if you configure it. For more information, see the [Setting a Role-Based Home Page](#role-based-home-page) section below.
 {{% /alert %}}
 
 Do the following:
 
 1. Open **App** > **Navigation**.
-2. Some navigation profiles are open in a tab by default, for example, the **Responsive** one. To open other navigation profiles, do the following:
+2. Some navigation profiles are open in a tab by default, for example, **Responsive web**. To open other navigation profiles, do the following:
 
-    1. Click **Add navigation profile**, select the profile type depending on the type of the interface you are working on:
+    1. Click **Add navigation profile** and select the profile type depending on the type of the interface you are working on:
 
-        {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/add-navigation-profile.jpg" class="no-border" >}}
+        {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/add-navigation-profile.png" class="no-border" >}}
 
     2. Click **OK**.
 
-3. In **Home pages** > **Default home page**, click **Select**.
+3. In the**Home pages** field, under **Default home page**, click **Select**.
 4. Select the page you want to use as the default home page. 
 5. Click **Select**.
 
 {{% alert color="info" %}}
-For online profiles you can set a microflow as a default home page. Make sure a *Show Page* activity is called from the startup microflow for each possible execution flow, or else the user will see nothing during execution paths where the activity is missing.
+For online profiles, you can set a microflow as a default home page. Make sure a [Show Page](/refguide/show-page/) activity is called from the startup microflow for each possible execution flow. Otherwise, the end-user will see nothing during execution paths where the activity is missing.
 
-For the native mobile profile you can set a nanoflow as a home page, either as a default or as a role-based. For more information, see the [Setting a Nanoflow as a Home Page](#nanoflow-home-page) section below.
+For the native mobile profile, you can set a nanoflow as a home page, either as a default or as a role-based. For more information, see the [Setting a Nanoflow as a Home Page](#nanoflow-home-page) section below.
+
+For the Embedded profile, introduced in Mendix version 11.12.0, the selected home page is the first page shown when the host application calls `render(…)`. When that page requires parameters, the host application passes them through the `parameters` object in `render(…)`. For more information, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 {{% /alert %}}
 
-Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
+Now every time an end-user signs in to the application, the selected page/microflow is shown/triggered.
 
 ## Setting a Role-Based Home Page {#role-based-home-page}
 
-In many cases you would like users with different roles to see different home pages. You can use role-based home pages for this. You do not need to configure home pages for every role, because the default home page works as a fall-back mechanism. 
+Often, you want end-users with different roles to see different home pages. You can use role-based home pages for this. You do not need to configure home pages for every role, because the default home page works as a fallback mechanism. 
 
-Follow the steps below:
+Follow the steps below to create a role-based home page:
 
 1. Open the **Navigation** editor.
-2. Open the profile type depending on the interface type you are working on. 
-3. In **Home pages** > **Role-based home pages**, click **Edit**.
+2. Open the profile type, depending on the interface type you are working on. 
+3. In the**Home pages** field, under **Role-based home pages**, click **Edit**.
 4. In the **Role-based home pages** dialog box, click **New**.
-5. Select a user role to create a new setting, for example, select the **Administrator** role:
+5. Select a user role to create a new setting. For example, select the **Administrator** role:
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-user-role.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-user-role.png" width="400" >}}
 
 6. Click **Select**.
 7. After you have selected the user role, click the **Select target** button.
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-target.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-target.png" width="400" >}}
 
 8. Select the home page for selected user role, for example, the **Account_Overview** page:
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-page.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/setting-up-the-navigation-structure/select-page.png" width="400" >}}
 
-9. Click **Select**.
+9. Click **Select** > **OK**.
 
-Now every time a user with the **Administrator** user signs in to the application, the **Account_Overview** page is shown. Users with other roles will be redirected to the default home page.
+Now every time an end-user with the **Administrator** user role signs in to the application, the **Account_Overview** page is shown. End-users with other roles will be redirected to the default home page.
 
 ## Setting a Fallback Page {#fallback}
 
@@ -74,21 +74,31 @@ The fallback page is a page or microflow that can be used to customize the appli
 
 If a microflow is used as a fallback, it can have only one String parameter named 'Path', which will contain the URL that could not be found.
 
-The fallback page will only be used for URLs that start with a [URL Prefix](/refguide/app-settings/#url-prefix).
+The fallback page will only be used for URLs that start with a [URL Prefix](/refguide/runtime-tab/#url-prefix).
+
+## Setting an Fallback Page for an Embedded Profile
+
+{{% alert color="info" %}}
+Embedded profiles were introduced in Mendix version 11.12.0. 
+{{% /alert %}}
+
+The Embedded profile can use a fallback page when the configured home page cannot be opened during startup or navigation. This can happen when the values passed in `render(…)` do not match the expected page parameter types or when the signed-in end-user does not have access to the configured home page. For more information, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
+
+To configure a fallback page, open the Embedded profile in the **Navigation** editor and select the page you want to use.
 
 ## Setting a Nanoflow as a Home Page {#nanoflow-home-page}
 
-Instead of using a page, you can set a nanoflow as your app's home page as long as you are using a native profile. The nanoflow you selected will be executed during startup and will show your app's starting page. This is a normal nanoflow call, which means that you can implement custom logic that determines which page to show, creates objects, calls subnanoflows, uses JavaScript actions, and more.
+Instead of using a page, you can set a nanoflow as your app's home page as long as you are using a native profile. The nanoflow you selected will be executed during startup and will show your app's starting page. This is a normal nanoflow call, which means that you can implement custom logic that determines which page to show, creates objects, calls sub-nanoflows, uses JavaScript actions, and more.
 
 To make the best nanoflow home pages, keep the following information in mind:
 
-* The home page nanoflow is executed after the initial synchronization
-* While the nanoflow executes the app splash screen stays visible until the nanoflow reaches the first *Show Page* activity
-* If a nanoflow contains multiple *Show Page* activities they will be executed in order and each page will be shown respectively (the last page shown will stay open after the nanoflow finishes)
-* Make sure a *Show Page* activity is called from the startup nanoflow for each possible execution path, otherwise the app will keep showing the splash screen if the nanoflow finishes without executing a *Show Page* activity
-* Home page nanoflows should have no parameters
-* An error in the home page nanoflow can lead to an unusable app state — to avoid this, use error handling for activities that can fail, such as microflow calls
-* To improve user experience for long-running nanoflows, show a page as early as possible and then continue executing the rest while showing the progress on that page
+* The home page nanoflow is executed after the initial synchronization.
+* While the nanoflow executes, the app splash screen stays visible until the nanoflow reaches the first Show Page activity.
+* If a nanoflow contains multiple Show Page activities, they will be executed in order and each page will be shown respectively (the last page shown will stay open after the nanoflow finishes).
+* Make sure a Show Page activity is called from the startup nanoflow for each possible execution path, otherwise the app will keep showing the splash screen if the nanoflow finishes without executing a Show Page activity.
+* Home page nanoflows should have no parameters.
+* An error in the home page nanoflow can lead to an unusable app state. To avoid this, use error handling for activities that can fail, such as microflow calls.
+* To improve user experience for long-running nanoflows, show a page as early as possible, then continue executing the rest while showing the progress on that page.
 
 ## Creating Menu Items {#menu-items}
 
@@ -110,7 +120,7 @@ You can restructure the menu by dragging and dropping menu items.
 
 ## Adding Navigation Menu to Pages
 
-Now that you have created a menu structure, it is time to start using it on pages. Do the following:
+Now that you have created a menu structure, you can use it on pages. Do the following:
 
 1. Open a page.
 2. Click **Add widget** and select **Menu bar**:
@@ -130,9 +140,10 @@ Now that you have created a menu structure, it is time to start using it on page
 
 The menu widget is now showing the navigation items created in the navigation editor.
 
-To avoid adding the menu widget on every page in your app, you can use a layout. With layouts you can define a structure for pages in your app. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto/front-end/layouts-and-snippets/).
+To avoid adding the menu widget on every page in your app, you can use a layout. With layouts, you can define a structure for pages in your app. You can define where the menu should be rendered and reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto/front-end/layouts-and-snippets/).
 
 ## Read More
 
 * [Atlas UI](/howto/front-end/atlas-ui/)
 * [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+* [Embedding the Client](/refguide/mendix-client/embedding-the-client/)

@@ -70,7 +70,7 @@ The original customer view included address information, but most database optim
 
 ## Sorting of View Entity Results {#sorting}
 
-Similar to other types of Mendix entity, view entities represent data without enforcing any specific order. As a result, it is not possible to use the `ORDER BY` clause in the view entity OQL to sort query results. However, data retrieved from a view entity can be sorted on retrieval (like regular entities) using options like the [Sorting](/refguide/retrieve/#sorting) feature in a Retrieve microflow activity.
+Similar to other types of Mendix entity, view entities represent data without enforcing any specific order. As a result, it is not possible to use the `ORDER BY` clause in the view entity OQL to sort query results. However, data retrieved from a view entity can be sorted on retrieval (like regular entities) using options like the [Sorting](/refguide/retrieve-objects/#sorting) feature in a Retrieve microflow activity.
 
 ### `ORDER BY` in Combination with `LIMIT` and `OFFSET`
 
@@ -173,7 +173,11 @@ The database follows the below process:
 
 Even though the query is using a view that also includes address information, the database ignores this information, as it is not relevant when counting customers by age.
 
-If you set the `DataStorage_QueryPlan` log node to Trace, you see the query plan for your queries in the Mendix Runtime log.
+If you set the `DataStorage_QueryPlan` log node to Debug, you see the query plan for all your queries in the Mendix Runtime log.
+
+{{% alert color="warning" %}}
+The `DataStorage_QueryPlan` log node has a very large performance impact and should never be enabled in production.
+{{% /alert %}}
 
 ## Read More
 

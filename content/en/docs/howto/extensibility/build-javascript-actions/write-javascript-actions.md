@@ -8,7 +8,7 @@ description: "This how-to teaches you how to create a JavaScript action."
 
 ## Introduction
 
-Nanoflows are more powerful with pluggable nanoflow actions — called JavaScript actions. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide/java-actions/), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix Marketplace](https://marketplace.mendix.com/).
+Nanoflows are more powerful with pluggable nanoflow actions—called JavaScript actions. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide/java-actions/), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix Marketplace](https://marketplace.mendix.com/).
 
 This how-to teaches you how to do the following:
 
@@ -119,7 +119,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
     }
     ```
 
-9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
+9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **Call JavaScript action** and selecting the newly created **SpeechToText** action: 
 
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/selectjsactioncalldetail.png" alt="select text to speech action" class="no-border" >}}
 

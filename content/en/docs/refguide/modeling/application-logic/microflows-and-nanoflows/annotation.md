@@ -26,6 +26,6 @@ For details, see [Common Properties](/refguide/microflow-element-common-properti
 
 An annotation flow is a connection that can be used to link an annotation to a flow object (or objects).
 
-For example, this is an annotation flow linking an annotation and a **Microflow call** activity:
+For example, this is an annotation flow linking an annotation and a **Call microflow** activity:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/annotation/anotation-flow.png" class="no-border" >}}

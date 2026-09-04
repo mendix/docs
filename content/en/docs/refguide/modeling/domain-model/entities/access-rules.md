@@ -25,12 +25,24 @@ Access rules are not inherited from an entity's [generalization](/refguide/entit
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-The **System.User** entity has inbuilt access rules where access is given to its attributes if the end-user can manage the role of that User object. Specializations of **System.User** (such as **Administration.Account**) cannot change this access with their own access rules.
+The **System.User** entity is a special case when considering access rules. It has the following features:
+
+* **System.User** has built-in platform-enforced access rules.
+
+    These rules grant access to its attributes when the requesting user's role is configured to manage the role assigned to that User object.
+    
+* **System.User** built-in access rules apply to specializations of **System.User**.
+
+    Unlike regular access rules, which are defined per entity and are not inherited from generalizations, these built-in rules operate at the platform level and cannot be overridden or restricted by access rules defined on a specialization.
+
+    This means that if you create a specialization of **System.User** (for example, **Administration.Account**), any user with a role which manages the role assigned to that User object can always read the **System.User** attributes of objects of your specialization. This is the case, even if you add XPath constraints on the specialization entity to prevent this.
+
+For example, suppose you want to limit managers to only see users in their own department. Using only XPath constraints on the specialization cannot enforce this restriction because the [User management](/refguide/user-roles/#user-management) setting in **App Security** can grant access to **System.User** attributes for any role configured to manage that User object's role. To enforce the department restriction, configure each user role in **App Security** to manage only the roles it strictly needs—avoid granting broad "manage all roles" permissions unless your use case requires it.
 {{% /alert %}}
 
 ## Defining Access Rules {#new-editor}
 
-You can view access rules in the **Access rules** tab of the entity properties dialog. Open this by double clicking on an entity in the domain model.
+You can view access rules in the **Access rules** tab of the entity properties dialog. Open this by double clicking an entity in the domain model.
 
 {{% alert color="info" %}}
 The **Access rules** section is only visible if the [App Security](/refguide/app-security/) is set to **Production**.
@@ -38,7 +50,7 @@ The **Access rules** section is only visible if the [App Security](/refguide/app
 
 ### Editor Layout
 
-The access rules editor displays each access rule belonging to the entity as a column. The header shows the module role(s) the access rules apply to. When the module role name is long or there are multiple roles, you can see only part of the label. Hover over the header to show the full module role(s).
+The access rules editor displays each access rule belonging to the entity as a column. The header shows the module roles the access rules apply to. When the module role name is long or there are multiple roles, you can see only part of the label. Hover over the header to show the full module roles.
 
 You can add access rules by clicking **New**.
 
@@ -60,9 +72,9 @@ When an access rule has entity rights, this is shown using the **Create** ({{% i
 
 In the access rule, access to specific members (attributes or associations belonging to the entity) can be controlled. The access can be **None**, **Read**, or **Read and Write**. When there is no access, no icon is displayed in the row of the member in the access rule column. If there is **Read** access, a **Read** icon ({{% icon name="view" %}}) is displayed. For **Read and Write** access, both the **Read** ({{% icon name="view" %}}) and **Write** ({{% icon name="pencil" %}}) icons are displayed.
 
-### Creating or editing an access rule
+### Creating or Editing an Access Rule
 
-Access rules can be created from the **New Access Rule** dialog. This dialog can be opened by clicking **New**. To edit an existing access rule, select an access rule and click **Edit** or double-click on the access rule.
+Access rules can be created from the **New Access Rule** dialog. This dialog can be opened by clicking **New**. To edit an existing access rule, select an access rule and click **Edit** or double-click the access rule.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-editor.png" alt="This image indicates the position of the Delete icons" width="550px" class="no-border" >}}
 
@@ -70,13 +82,13 @@ Access rules can be created from the **New Access Rule** dialog. This dialog can
 
 You can add documentation to describe the access rule.
 
-#### Module roles
+#### Module Roles
 
-Select the module role(s) this access rule applies to. If there are no module roles selected there will be a consistency error.
+Select the module roles this access rule applies to. If there are no module roles selected there will be a consistency error.
 
 #### XPath Constraints
 
-To edit the XPath constraint, click **Edit...** next to the XPath constraint field. This will open the XPath editor dialogue to edit the XPath constraint of the access rule.
+To edit the XPath constraint, click **Edit...** next to the XPath constraint field. This will open the XPath editor dialog to edit the XPath constraint of the access rule.
 
 {{% alert color="warning" %}}
 XPath constraints can only be applied to persistable entities, as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.

@@ -29,7 +29,7 @@ To configure your SES account in the Email Connector in Studio Pro, follow these
 
     {{% alert color="warning" %}}Ensure that you follow the prerequisites listed in the [Email Connector documentation](/appstore/modules/email-connector/). Missing a step might lead to errors.{{% /alert %}}
 
-3. Set up the Email Connector. For more information, see [Set Up in Studio Pro](/appstore/modules/email-connector/#setup) and [Email Account Configuration](/appstore/modules/email-connector/#accountconfig).  
+3. Set up the Email Connector. For more information, see [Setting Up the Email Connector in Studio Pro](/appstore/modules/email-connector/#setup).  
 4. On the **EmailConnector_Overview** page, click **Add email account**. 
 5. Enter the following details: 
     * **Email** - SMTP username for Amazon SES 

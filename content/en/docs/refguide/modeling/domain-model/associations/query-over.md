@@ -98,7 +98,7 @@ If the $ChosenFolder object is `SubFolder2`, you will retrieve all the **File** 
 
 ## Associations to Specializations
 
-In the special case of self-reference when a one-to-many association is with a specialization of itself, you cannot retrieve [by association](/refguide/retrieve/#source).
+In the special case of self-reference when a one-to-many association is with a specialization of itself, you cannot retrieve [by association](/refguide/retrieve-objects/#source).
 
 Here is an example inheritance:
 

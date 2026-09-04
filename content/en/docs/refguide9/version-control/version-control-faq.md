@@ -7,15 +7,13 @@ description: "Presents and explains several frequently asked questions about ver
 
 ## Introduction
 
-[Mendix Team Server](/developerportal/general/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio Pro integrates into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
+[Mendix Team Server](/developerportal/repository/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio Pro integrates into the Team Server allowing you to create and update apps, commit changes, and merge model versions in one click.
 
 ## What Version Control System Is Team Server Built On? {#which-team-server}
 
 Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix 9.12.0, the Team Server also supports storing apps using Git technology, referred to as Team Server Git. 
 
 Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. 
-
-Mendix 8 only has support for Team Server SVN, and as long as this major version is available, support for Team Server SVN will be maintained.
 
 ## How Much Storage Space Is Provided with Team Server?
 

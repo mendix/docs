@@ -17,7 +17,7 @@ Mendix highly recommends that you upgrade to the latest available version to ens
 
 When deploying your Mendix app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix on Kubernetes](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
 
-Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix on Kubernetes, and may even be in standalone mode and not connected to the internet (air-gapped).
+Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix on Kubernetes that are not connected to the internet (air-gapped).
 
 Rather than having to apply and update licenses for each environment individually, the Mendix **Mendix on Kubernetes License Manager** (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
 
@@ -27,7 +27,7 @@ The PCLM runs as a Kubernetes service on your cluster. This means that it can be
 
 To install and use the PCLM, you need the following prerequisites:
 
-* A Mendix on Kubernetes **Standalone** cluster 
+* A Mendix on Kubernetes cluster
 * Mendix Operator in version 2.11.0 or above
 * Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix on Kubernetes cluster, or in another cluster which is accessible over HTTP
 * A Postgres or SQLServer database server and within it:
@@ -164,7 +164,6 @@ To apply the manifest to configure the ingress in the Kubernetes namespace, use 
 You can confirm that you can connect to the PCLM server using the following URLs:
 
 * `http<s>://pclm.<domain>/health` should return `HTTP 200 OK`
-* `https<s>://pclm.<domain>/metrics` should return `HTTP 200 OK` together with the collected server metrics
 
 ### Using the Kubernetes Service
 
@@ -328,10 +327,17 @@ mx-pclm-cli license runtime list \
    -s <pclm-http-url> \
    -u <admin-user> \
    -p <admin-password> \
-   -t <custom-ca-cert-path>
+   -t <custom-ca-cert-path> \
+   --page <page-number> \
+   --limit <max-licenses-per-page>
 ```
 
 * `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
+* `<page-number>` specifies the page number to load, in case the number of licenses exceeds `<max-licenses-per-page>`. These parameters are optional and allow the licenses to be listed in batches.
+
+{{% alert color="info" %}}
+To get a full list of licenses with one command, use `--page 0 --limit 10000` to load 10000 licenses in one go. This can be useful when using a text editor to check if licenses are loaded correctly, or when collecting data for a support case.
+{{% /alert %}}
 
 You will receive the result in the following format:
 
@@ -354,10 +360,17 @@ mx-pclm-cli license operator list \
    -s <pclm-http-url> \
    -u <admin-user> \
    -p <admin-password> \
-   -t <custom-ca-cert-path>
+   -t <custom-ca-cert-path> \
+   --page <page-number> \
+   --limit <max-licenses-per-page>
 ```
 
 * `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
+* `<page-number>` specifies the page number to load, in case the number of licenses exceeds `<max-licenses-per-page>`. These parameters are optional and allow the licenses to be listed in batches.
+
+{{% alert color="info" %}}
+To get a full list of licenses with one command, use `--page 0 --limit 10000` to load 10000 licenses in one go. This can be useful when using a text editor to check if licenses are loaded correctly, or when collecting data for a support case.
+{{% /alert %}}
 
 You will receive the result in the following format:
 
@@ -470,7 +483,9 @@ You can see which licenses are currently used by which environments and operator
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password> \
-    -t <custom-ca-cert-path>
+    -t <custom-ca-cert-path> \
+   --page <page-number> \
+   --limit <max-licenses-per-page>
 ```
 
 Where:
@@ -479,6 +494,11 @@ Where:
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
 * `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 * `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.
+* `<page-number>` specifies the page number to load, in case the number of licenses exceeds `<max-licenses-per-page>`. These parameters are optional and allow to list license usage in batches.
+
+{{% alert color="info" %}}
+To get a full list of licenses with one command, use `--page 0 --limit 10000` to load 10000 licenses in one go. This can be useful when using a text editor to check if licenses are loaded correctly, or when collecting data for a support case.
+{{% /alert %}}
 
 Which would reply with something similar to this:
 

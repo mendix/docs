@@ -43,12 +43,12 @@ This feature is only visible to the Technical Contact.
 
 To change an environment's plan, follow these steps:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/)
+1. Go to [Projects](https://projects.home.mendix.com/)
 2. Click **Environments** on your app. 
 3. On the **Environments** page, click the **Overview** tab to view your environments.
 4. Find your target environment.
 5. Use the **Expand** ({{< icon name="chevron-down" >}}) toggle to view detailed information about each environment, such as the environment resources and deployed package.
-6. In the environment resource section, click **Change Plan**. 
+6. In the environment resources section, click **Change Plan**. 
 7. On the left side of the form that appears, review your current plan details. These include:
     * **Name** – Plan name.
     * **Environment** – Plan environment (such as, staging or acceptance).
@@ -58,40 +58,71 @@ To change an environment's plan, follow these steps:
     * To compare plans, click **Show Comparison**. This opens a comparison page where the Technical Contact can evaluate the current plan against other available options. The last selected comparison will populate the form. Alternatively, select a new plan directly from the **Plan** dropdown without comparing.
     * Enter a reason for plan change.
 
-9. All submitted plan change requests appear in the [Control Center](/control-center/approval-requests/) for the [Mendix Admin](/control-center/company-settings/#mendix-admins) review. To view the list of approvers, click **Mendix Admin** at the bottom of the **New Plan** form. When ready, click **Submit Request** to submit your plan change request. 
+9. All submitted plan change requests appear in the [Control Center](/control-center/approval-requests/) for the [Mendix Admin](/control-center/mendix-admins-page/) review. To view the list of approvers, click **Mendix Admin** at the bottom of the **New Plan** form. When ready, click **Submit Request** to submit your plan change request. 
 
     {{% alert color="info" %}}Approval from a Mendix Admin only authorizes the plan change but does not immediately apply it. As a result, the environment will remain on its current plan until the new plan is [approved](/control-center/approval-requests/#approving-a-request), [scheduled](#scheduling-a-plan-change) and [successfully applied](#after-schedule).
     {{% /alert %}}
 
-11. [Track and manage](#manage-plan-requests) your plan change requests from the [Request Overview](/developerportal/deploy/environments/#request-overview) tab on your app's environment's page. 
+10. [Track and manage](#manage-plan-requests) your plan change requests from the [Change Requests](/developerportal/deploy/environments/#change-requests) tab on your app's environment's page. 
 
 {{% alert color="info" %}}
 Changing plan consumes [Mendix Cloud Tokens](/control-center/cloud-tokens/#cloud-tokens). Only one plan change request can exist per environment at a time. As a result, new requests cannot be submitted for the same environment until the current one is completed.
 {{% /alert %}}
 
+### Plan Change Request Status {#plan-change-status}
+
+This diagram illustrates the lifecycle of a plan change request, from its submission to its final resolution (rejected, completed, or failed).
+<!-- Diagram created with draw.io. Source file: /attachments/deployment/mendix-cloud-deploy/change-plan/change-plan-status.draw.io. Instructions: https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+Icons+and+Videos#Draw.io  -->
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/change-plan/change-plan-status.png" >}}
+
+A Technical Contact initiates the process by submitting a plan change request.
+
+1. **Pending Approval** – After submission, the request enters a **Pending Approval** status. The request is then sent to a Mendix Admin for review.
+    * If the Mendix Admin rejects the request, its status changes to **Rejected**.
+    * If the Mendix Admin approves the request, the status changes to **Pending Schedule**.
+2. **Pending Schedule** – The plan change application is awaiting scheduling by the Technical Contact.
+3. **Scheduled** – Plan change is scheduled for the next maintenance window.
+4. **In Progress** – The plan change is actively being applied to the environment.
+5. **Ineligible** – The plan change did not execute because it failed the necessary validations.
+6. **Completed** – Plan change was successfully applied to the environment
+7. **Failed** – The plan change did not complete successfully.
+
 ## Managing Plan Requests {#manage-plan-requests}
 
-The **Request Overview** tab allows Technical Contacts to view all submitted plan change requests (both past and current) and track pending request status.
+The **Change Requests** tab allows Technical Contacts to view all submitted plan change requests (both past and current) and track pending request status.
 
 To access it:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/).
+1. Go to [Projects](https://projects.home.mendix.com/).
 2. Click **Environments** on your app.
-3. Open the **Request Overview** tab.
+3. Open the **Change Requests** tab.
 
-For detailed information on the **Request Overview** tab, refer to the [Request Overview](/developerportal/deploy/environments/#request-overview) section in *Environments and Deployment*.
+Plan change requests have **Plan Upgrade** as the **Request Type**. For more information on the **Change Requests** tab, refer to the [Change Requests](/developerportal/deploy/environments/#change-requests) section in *Environments and Deployment*.
 
-This diagram shows the progress of the request status from plan change submission to fulfilled (approved, rejected, completed, or failed):
+### Plan Change Requests Details {#change-requests-action}
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/plan-change-status.png" >}}
+Click **Details** on any plan change request to view the **name** of the requester, reviewer details and other request information, including:
 
-### Available Actions by Status {#available-actions-by-status}
+* Status of the request
+* Current plan
+* Requested plan
+* Reason for resizing
+* Date of request creation
+* Date the request was scheduled
+* Request ID
+* Request type
+* App name
+* Environment
 
-Depending on the request's status, Technical Contacts can perform the following actions:
+#### Available Actions by Status {#available-actions-by-status}
+
+In the **Request Details** page, depending on the request's [status](#plan-change-status), Technical Contacts can perform the following actions:
 
 * **Pending approval** – Click **Cancel Request** to cancel the entire request.
 * **Pending schedule** – Click **Cancel Request** to cancel the entire request, or click **Schedule Change** to set execution timing for when the approved plan will be applied. For more details on how to schedule a plan change, see [Scheduling a Plan Change](#scheduling-a-plan-change).
 * **Scheduled** – Click **Cancel Request** to cancel the entire request, or click **Execute Now** to apply the new plan immediately.
+* **Ineligible** – Click **Re-Schedule Change** to schedule the plan change again after addressing the validation issues.
 
 {{% alert color="warning" %}}
 If the Technical Contact cancels a request, the plan change process is canceled entirely. To proceed with a plan change, the Technical Contact must start over and submit a new request.
@@ -99,9 +130,13 @@ If the Technical Contact cancels a request, the plan change process is canceled 
 
 ## Scheduling a Plan Change {#scheduling-a-plan-change}
 
+{{% alert color="warning" %}}
+Before scheduling a plan change request, check the [Mendix Status Page](https://status.mendix.com) for planned platform maintenance or Cloud Portal releases. Scheduling a plan change during maintenance windows may cause the request to fail.
+{{% /alert %}}
+
 If your request status is **Pending Schedule**:
 
-1. Open **Request Details** by clicking **Details** in the **Request Overview** tab.
+1. Open **Request Details** by clicking **Details** in the **Change Requests** tab.
 2. Click **Schedule Change**.
 3. Choose from the following options:
    * **Execute Now** to apply the change immediately
@@ -123,8 +158,9 @@ Applications will be unavailable for up to 45 minutes while the plan change is b
 After scheduling, once the plan change process starts:
 
 1. The status changes to **In Progress**.
-2. Next, the status progresses to either **Completed** (if successful) or **Failed** (if an error occurs).
-
+2. If the request fails required validations, the status changes to **Ineligible**.
+3. If the request passes all required validations, the status progresses to **Completed** (if successful) or **Failed** (if an execution error occurs).
+ 
 {{% alert color="info" %}}
 After a plan change is applied, you cannot change to a new plan for the same environment for the next 6 hours.
 {{% /alert %}}

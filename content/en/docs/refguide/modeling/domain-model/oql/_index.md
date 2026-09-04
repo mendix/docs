@@ -28,7 +28,60 @@ OQL queries do not take security into account out-of-the-box. This means that yo
 You can try your OQL example online in the [OQL Playground](https://service.mendixcloud.com/p/OQL) demo app.
 {{% /alert %}} 
 
-## Reserved Words {#reserved-oql-words}
+## Version Reference
+
+OQL is under constant development so some expressions and features are not available in all versions. The tables below list features which were not available in Mendix 11.0.0, and note which version introduced them.
+
+### General Features
+
+| Feature | Mendix Version |
+| --- | --- |
+| Comments | 11.7.0 |
+
+### [OQL Expressions](/refguide/oql-expression-syntax/)
+
+| Feature | Mendix Version |
+| --- | --- |
+| DATEADD | 11.9.0 |
+| DATEFORMAT | 11.12.0 |
+| DATEPARSE | 11.10.0 |
+| DATETRUNC | 11.9.0 |
+| LOCATE | 11.9.0 |
+| LPAD | 11.12.0 |
+| LTRIM | 11.11.0 |
+| RPAD | 11.12.0 |
+| RTRIM | 11.11.0 |
+| STRING_AGG in View Entities and Datasets | 11.2.0 |
+| SUBSTRING | 11.9.0 |
+| TRIM | 11.11.0 |
+
+### [OQL Statements](/refguide/oql-statements/){#statement-versions}
+
+The following are bulk update features.
+
+| Feature | Mendix Version |
+| --- | --- |
+| OQL `DELETE` *beta* | 11.1.0 |
+| OQL `UPDATE` attributes *beta* | 11.3.0 |
+| OQL `UPDATE` associations *beta* | 11.4.0 |
+| OQL `INSERT` attributes *beta* | 11.6.0 |
+| OQL `INSERT` associations *beta* | 11.7.0 |
+| OQL bulk update *GA* | 11.8.0 |
+
+## Syntax Basics
+
+An OQL statement consists of [keywords](#reserved-oql-words), identifiers, [value literals](/refguide/oql-expression-syntax/#oql-literals) and [operators](/refguide/oql-expression-syntax/#oql-operators).
+
+Identifiers are used for module, entity, attribute, association, and alias names and parts of names in paths. Identifiers are only allowed to contain latin characters (`a-Z`), underscores (`_`) and numbers (`0-9`). Numbers can not be used as for the first character of an identifier. Identifiers can be wrapped in double quotes `" "` to allow special characters `.`, `/`, and `@`.
+
+Multiple identifiers can be composed into a path, separated by special characters `.` and `/`. The `.` special character can be used to indicate the module and entity in the form `Module.Entity`. The `/` special character can be used to indicate the attribute of an entity in the form `Module.Entity/Attribute` and it can be used for separating associations in long paths. Examples of paths can be seen in the [Select from Multiple Tables using JOIN](/refguide/oql-clauses/#join) section of *OQL Clauses*.
+
+In Mendix version 11.7.0 and above, comments can be used in OQL queries to improve readability. Comments are ignored during query execution. There are two ways to add comments:
+
+* Single-line comments start with `--`.
+* Multi-line comments are enclosed by `/*` and `*/` and support nesting. 
+
+### Reserved Words {#reserved-oql-words}
 
 Words with a specific purpose in OQL are reserved. If you use reserved words for entity, variable, or attribute names in an OQL query, they must be wrapped in double quotes `" "`. For example, in the OQL query `SELECT AVG(TotalPrice) FROM Sales."Order" WHERE IsPaid = 1`, `Order` needs to be wrapped in quotes because it is a reserved word, as it can be used to `ORDER BY`.
 
@@ -68,7 +121,7 @@ Here is a list of all OQL reserved words:
 
 `REPLACE`, `RIGHT`
 
-`SECOND`, `SELECT`, `SET`, `SOURCE`, `STRING`, `SUM`
+`SECOND`, `SELECT`, `SET`, `SOURCE`, `STRING`, `STRING_AGG`, `SUM`
 
 `TARGET`, `THEN`, `TRUE`
 
@@ -85,5 +138,5 @@ In OQL, `FLOAT` is a reserved word for legacy reasons. Mendix no longer supports
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In OQL, `DELETE`, `INSERT`, `REPLACE`, `UPDATE`, `UPSERT`, `INTO`, `SET`, `VALUES`, `IGNORE`, `MATCHED`, `DUPLICATE`, `KEY`, `CONFLICT`, `MERGE`, `USING`, `SOURCE`, `TARGET`, and `WITH` are reserved but not yet used.
+In OQL, `REPLACE`, `UPSERT`, `SET`, `VALUES`, `IGNORE`, `MATCHED`, `DUPLICATE`, `KEY`, `CONFLICT`, `MERGE`, `USING`, `SOURCE`, `TARGET`, and `WITH` are reserved but not yet used.
 {{% /alert %}}

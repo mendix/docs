@@ -30,6 +30,10 @@ The Mendix on Kubernetes Deploy API is for connected clusters only.
 The Standard Operator conversion to Global Operator managed namespace is not yet available in Deploy API.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Actions performed through this API are not always recorded in the environment's activity log. For more information, see [Known Limitations: Logging API-Initiated Actions](/developerportal/deploy/private-cloud-deploy/#activity-log-api).
+{{% /alert %}}
+
 ## Using the API
 
 To help you work with the Mendix on Kubernetes Build API, the following sections of this document describe how to authenticate for the API, how to manage asynchronous API calls, and what to keep in mind when assigning unique IDs for the resources.
@@ -40,7 +44,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 
@@ -190,4 +194,4 @@ In order to create or manage environments in a namespace through an API, the tec
 Please note that the fields marked as non-editable in the OpenAPI .yaml file are used for read-only purposes. Any modifications made to the values of these fields will be ignored.
 {{% /alert %}}
 
-{{< swaggerui src="/openapi-spec/private-cloud-deploy-api.yaml"  >}}
+{{< swaggerui src="/openapi-spec/privatecloud-deploy-v4.yaml"  >}}

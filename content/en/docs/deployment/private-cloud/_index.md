@@ -12,9 +12,9 @@ Mendix on Kubernetes allows you to deploy and manage your Mendix apps in a Kuber
 
 Your organization may have a requirement to use a private cloud, perhaps as part of a multi-cloud strategy. This could be because of legal requirements or a desire to have complete control over your data. Mendix on Kubernetes allows you to do this while keeping the familiar components of Docker and Kubernetes.
 
-You can use Mendix on Kubernetes with the *connected* option to keep the simplicity of one-click deployments from the Mendix Portal, or utilize the *standalone* Mendix Operator to deploy Mendix apps through your own DevOps process, which is particularly useful for private clouds with an *air-gap* isolating them from the internet. See [Connected and Standalone Clusters](#connected-standalone), below, for more information.
+You can use Mendix on Kubernetes with the *connected* option to keep the simplicity of one-click deployments from Mendix Portal.
 
-Please see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for a list of platforms supported by Mendix on Kubernetes.
+For a list of platforms supported by Mendix on Kubernetes, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
 
 There are two steps required to achieve this, listed below.
 
@@ -37,41 +37,35 @@ To deploy your app, you have two options:
 
 When you deploy through the Mendix Portal, this can be done by any Mendix user who has been given the appropriate rights to the cluster which has been registered.
 
-## Connected and Standalone Clusters{#connected-standalone}
+When an application is created, its creator automatically becomes the application's *Technical Contact*, a role that grants Administrator permissions on all namespaces where the application is deployed. For more information on this role and how to manage it, see [Technical Contact Role and Permissions](/developerportal/deploy/private-cloud/private-cloud-technical-contact/).
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** in your cluster.
-If you have chosen a *connected* cluster, the **Mendix Gateway Agent** will also be deployed.
+## Connected Clusters{#connected-clusters}
+
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your cluster.
+
 Once the Mendix Operator is deployed to your cluster, you can use it to configure the resources which will be used by your apps.
-
-You then have two options, depending on whether you have chosen to create a *connected* cluster or a *standalone* cluster.
 
 ### Connected Architecture
 
-If you have chosen to register a connected cluster, the Mendix Gateway Agent will create a link to the **Environments** pages of your Mendix app through the **Interactor**. This is a secure bi-directional communication channel which is initiated from the Mendix Gateway Agent running on the cluster.
+The Mendix Gateway Agent creates a link to the **Environments** pages of your Mendix app through the **Interactor**. This is a secure bi-directional communication channel which is initiated from the Mendix Gateway Agent running on the cluster.
 
 Using this channel, any Mendix user who has been given the correct authority can pass instructions to the Mendix Operator and receive status information about the cluster. This includes instructions needed to deploy an app, or to configure the environment.
 
 {{< figure src="/attachments/deployment/private-cloud/mx4pc-architecture.png" class="no-border" >}}
 
-### Standalone Architecture
-
-If you have chosen to register a standalone cluster, then all communication with the Mendix Operator will be through instructions which are made directly through the Kubernetes API. These can be made manually, but are generally performed by your CI/CD pipeline. In this case, you will also have to have local source control of the Mendix app deployment packages to ensure that the deployment process can discover them.
-
-{{< figure src="/attachments/deployment/private-cloud/mx4pc-standalone-architecture.png" class="no-border" >}}
-
 ## Product Capability Comparison
 
-The table below shows the differences between the capabilities for apps deployed to Mendix Cloud, Mendix on Kubernetes Connected, and Mendix on Kubernetes Standalone.
+The table below shows the differences between the capabilities for apps deployed to Mendix Cloud and Mendix on Kubernetes Connected.
 
-| Capability | Mendix Cloud | Mendix on Kubernetes Connected | Mendix on Kubernetes Standalone |
-| --- | --- | --- | --- |
-| Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
-| Environment configuration<br/>*For example, constants and scheduled event* | Mendix Portal | Mendix Portal | Custom Resources via Mendix Operator |
-| Mendix app/deployment package deployment | Mendix Portal and Studio Pro | Mendix Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
-| Backup and restore | Mendix Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |
-| Monitoring | Mendix Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
-| App logs | Mendix Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
-| Remote debugging | Mendix Portal + Studio Pro | Mendix Portal + Studio Pro | Not supported |
+| Capability | Mendix Cloud | Mendix on Kubernetes Connected |
+| --- | --- | --- |
+| Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer |
+| Environment configuration<br/>*For example, constants and scheduled event* | Mendix Portal | Mendix Portal |
+| Mendix app/deployment package deployment | Mendix Portal and Studio Pro | Mendix Portal and Studio Pro |
+| Backup and restore | Mendix Portal | Services supplied by the database server and file storage used¹ |
+| Monitoring | Mendix Portal | App metrics sent to a Prometheus-compatible monitoring tool |
+| App logs | Mendix Portal | Prints app logs to `stdout` |
+| Remote debugging | Mendix Portal + Studio Pro | Mendix Portal + Studio Pro |
 
 {{% alert color="info" %}}
 ¹ No backup or restore functionality is installed automatically with Mendix on Kubernetes. You will need to choose and deploy your own solution, dependent on your choice of database, file storage, and cloud platform.
@@ -90,10 +84,6 @@ All of those containers, including the sidecar containers, have specific resourc
 The Mendix container is specified per app in the portal. You can update the resource allocation in the [Mendix App CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
 The m2ee-sidecar container's resources are specified in the [OperatorConfiguration CR](/developerportal/deploy/private-cloud-cluster/#resource-definition-ocm).
 
-{{% alert color="info" %}}
-If the app is running in Standalone mode and its MendixApp CR does not have any resources assigned in the MendixApp CR specification resources, the Mendix Operator will use the value of *OperatorConfiguration* CR's *spec.runtimeResources* instead.
-{{% /alert %}}
-
 If the customer decided to use a [Vertical Pod autoscaler](/developerportal/deploy/private-cloud-cluster/#vertical-pod-autoscaling), the autoscaler can override any pod or container resources.
 
 When a user sets CPU and memory limits, the JVM (JRE 8u191+) will automatically detect the container requests and limits, and automatically set Java memory limits based on the container details.
@@ -104,7 +94,11 @@ This percentage can be adjusted by providing a custom value in Custom JVM Option
 
 ### Operator License
 
-Mendix on Kubernetes is a premium offering from Mendix, and you will need an additional license to use it for your applications. This **Operator license** allows you to manage Mendix apps in your cluster through the Mendix Operator and, optionally, the Mendix Gateway Agent.
+{{% alert color="info" %}}
+Mendix Operator versions older than 2.23.0 require a separate Operator license key. Starting from Operator version 2.23.0, this separate license key is no longer needed. This was a technical change only. A valid Mendix on Kubernetes subscription and support contract is still required to use the Mendix Operator, regardless of Operator version.
+{{% /alert %}}
+
+Mendix on Kubernetes is a premium offering from Mendix, and requires a valid subscription to use it for your applications. If you are running Mendix Operator versions older than 2.23.0, you also need a separate Operator license. This license allows you to manage Mendix apps in your cluster through the Mendix Operator and, optionally, the Mendix Gateway Agent.
 
 You need one license for each namespace you want to manage.
 
@@ -120,7 +114,6 @@ You can request an Operator license by doing the following:
 
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator
-    * The Mendix on Kubernetes architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
     * The namespace (or namespaces) for which you want to request an Operator license
 
 5. Save the request.
@@ -131,7 +124,7 @@ You can run the Mendix Operator in trial mode for evaluation purposes. When the 
 
 ### Runtime License
 
-A runtime license per environment is required. In addition to that, the Operator license is independent of a Mendix Runtime license. The Mendix Runtime license removes [trial restrictions](/developerportal/deploy/licensing-apps-outside-mxcloud/) from a Mendix App itself. You need both types of licenses to manage and run an application through Mendix on Kubernetes.
+A runtime license per environment is required. In addition to that, the Mendix Runtime license is independent of the Operator license. The Mendix Runtime license removes [trial restrictions](/developerportal/deploy/licensing-apps-outside-mxcloud/) from a Mendix app. You need both types of licenses to manage and run an application through Mendix on Kubernetes.
 
 You can request a Runtime license by doing the following:
 
@@ -145,8 +138,7 @@ You can request a Runtime license by doing the following:
 
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Runtime
-    * The Mendix on Kubernetes architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
-    * If "Connected" please provide the namespace (or namespaces) for which you are requesting the runtime license (or licenses)
+    * The namespace (or namespaces) for which you are requesting the runtime license (or licenses)
 
 5. Save the request.
 
@@ -166,7 +158,6 @@ You can also request for both the Operator and Runtime license within the same r
 
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator and Runtime
-    * The Mendix on Kubernetes architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
     * The namespace (or namespaces) for which you want to request an Operator license
 
 ### Activating Your License (or Licenses)
@@ -175,11 +166,11 @@ You can also request for both the Operator and Runtime license within the same r
 
 If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
 
-If your app is **Connected** to the Mendix Portal, you can enter the subscription secret [in the Mendix Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
+You can enter the subscription secret [in Mendix Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix).
 
-#### Standalone & Offline Mendix on Kubernetes Apps{#activate-offline}
+#### Offline Mendix on Kubernetes Apps{#activate-offline}
 
-If your app is **Standalone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
+If your app is unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
 
 #### Private Cloud Licensing Manager
 

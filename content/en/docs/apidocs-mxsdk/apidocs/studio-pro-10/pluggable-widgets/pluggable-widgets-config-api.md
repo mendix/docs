@@ -21,7 +21,7 @@ Errors that are related to the configuration module are shown in the Widget Deve
 
 To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function:
 
-* The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
+* The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis-10/#values)
 * The default property configuration
 
 ```typescript
@@ -565,7 +565,7 @@ type DropZoneProps = BaseProps & {
 
 The drop zone preview type can be used to add drop zones to the widget preview. It requires a widget property of type `widgets` to be able to store the information about the containing widgets. If the property has a data source, a header will be shown inside the dropzone containing information about the data source. This header is optional and can be hidden by setting `showDataSourceHeader` to `false`.
 
-To configure a drop zone, the widgets property object (which can be obtained directly from the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)) needs to be passed as `property`, as the following example shows:
+To configure a drop zone, the widgets property object (which can be obtained directly from the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis-10/#values)) needs to be passed as `property`, as the following example shows:
 
 ```typescript
 exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean, _version: number[]) => ({
@@ -599,7 +599,7 @@ type SelectableProps = BaseProps & {
 
 The selectable preview type can be used to make an instance of an object list selectable. If an object instance is made selectable, it will behave similar to a widget. Its properties will be shown in the `Properties` section and can also be edited in a pop-up by double-clicking the section that is visualized by the `child` properties. Note that this only works in combination with a property of type `object`.
 
-To configure a selectable, the object from the [Value API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values) needs to be passed as `object`, and the preview properties to visualize the object as `child`. 
+To configure a selectable, the object from the [Value API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis-10/#values) needs to be passed as `object`, and the preview properties to visualize the object as `child`. 
 
 The following example shows how to render a container with a list of selectable objects. In this case, each object is shown as a text with its caption:
 

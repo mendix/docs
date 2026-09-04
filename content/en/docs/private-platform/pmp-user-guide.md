@@ -42,7 +42,7 @@ In the **Change Password** tab, you can set a new password for your account. The
 
 Personal Access Tokens (PATs) are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not “present” at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
 
-For more information about Personal Access Tokens, as well as creating and using them, see [Personal Access Token](/mendix-profile/user-settings/#pat).
+For more information about Personal Access Tokens, as well as creating and using them, see [Personal Access Token](/portal/user-settings/#pat).
 
 ### Service Credentials {#service-credentials}
 
@@ -117,6 +117,12 @@ In the **Deploy** section, you can configure the environment to which your app w
 
 5. Click **Next**.
 6. After the environment is created, you can use the **Details** menu to perform additional actions such as deleting the environment, or starting and stopping the app.
+
+### Deployment Purpose and DTAP Mode
+
+When creating a new environment to deploy, you can select the environment purpose, which can be Development, Test, Acceptance, or Production. For the deployed Mendix App, this purpose corresponds to the runtime's `dtapMode`, which affects security and licensing. For example, whether demo users are available after deployment, whether production security is enabled, or whether the environment requests a license from the license manager service. Once the environment has been created, the environment purpose cannot be changed. 
+
+On Private Mendix Platform, environments with the Development and Test purpose set the `dtapMode` to `D` (for Development), while Acceptance and Production environments operate in `dtapMode` `P` (for Production). This association cannot be changed. Please select the appropriate environment purpose when you're creating a new environment.
 
 ## Managing Marketplace Content
 

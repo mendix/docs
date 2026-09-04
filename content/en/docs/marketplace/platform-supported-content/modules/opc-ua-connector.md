@@ -144,6 +144,8 @@ If the `MessageSecurityMode` attribute of the `ServerConfiguration` object is se
 * The `ClientCertificate` must be an X509 formatted PEM file.
 * The `ClientCertificatePrivateKey` must be an encrypted PKCS8 or PKCS1 formatted PEM file.
 
+The `CONST_ApplicationURI` constant is used to check against the client certificate. Make sure that their values match.
+
 ### Trusting the Server Certificate {#server-certificate}
 
 A connection between an OPC-UA server and OPC-UA client (the Mendix application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the client should trust the certificate of the server.

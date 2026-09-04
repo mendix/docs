@@ -21,7 +21,7 @@ As a user with system administrator access rights, you can access the Private Me
 
 The **Settings** section of the administrator navigation menu contains setting relevant to your day-to-day tasks as a system admin. You can use it to manage your branding, license, Marketplace settings, and version control settings.
 
-Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard](/private-mendix-platform/quickstart/#wizard). System administrators can also update them at any time after the initial configuration.
+Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard](/private-mendix-platform/configuration-wizard/). System administrators can also update them at any time after the initial configuration.
 
 ### Preferences
 
@@ -104,9 +104,13 @@ To enable content import from a Content Delivery Network, follow these steps:
 6. Click **Save** to enable content import from this bundle.
 7. Click **Go to Marketplace Import** to view the available downloads in the **Import Content** > **Import from CDN** tab.
 
-#### Version Support
+#### Version Settings {#version-settings}
 
-In this section, you can view or disable the versions of Mendix Studio Pro that your users are allowed to download.
+In this section, you can perform the following tasks:
+
+* View or disable the versions of Mendix Studio Pro that your users are allowed to download. 
+* Disable the option to download Studio Pro and patch content from the home page, **My Apps** page, and **Get Studio Pro** page.
+* Enter instructions for your users on how to request a Studio Pro download.
 
 ### Integrations
 
@@ -184,7 +188,7 @@ Settings in this section allow you to configure your CI/CD capabilities and Buil
 
 ##### Build Method
 
-Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Tekton, Jenkins, [AzureDevops](/private-mendix-platform/configure-azure/) and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a [custom template](/private-mendix-platform/reference-guide/admin/company/#manual-deployment) for your CI/CD capabilities.
+Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Jenkins, [AzureDevops](/private-mendix-platform/configure-azure/) and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a [custom template](/private-mendix-platform/reference-guide/admin/company/#manual-deployment) for your CI/CD capabilities.
 
 ##### Build Steps {#build-steps}
 

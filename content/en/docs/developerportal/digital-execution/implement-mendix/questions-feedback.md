@@ -1,9 +1,11 @@
 ---
 title: "Questions and Feedback"
 linktitle: "Questions and Feedback"
-url: /questions-feedback/
+url: /developerportal/digital-execution/questions-feedback/
 weight: 115
 description: "Find resources related to digital execution practice and organizational considerations."
+aliases:
+    - /questions-feedback/
 ---
 
 ## Introduction

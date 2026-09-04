@@ -1,18 +1,14 @@
 ---
-title: "Recommendations from Best Practice Recommender"
+title: "Performance Recommendations"
 url: /refguide/performance-best-practices/
-description: "Describes Mendix best practices from Best Practice Recommender."
+description: "Describes the performance best practices from Best Practice Recommender."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchors <mxp001-mxpnnn> below are all mapped, so they should not be removed or changed.
 ---
 
 ## Introduction
 
-This document outlines all the best practices provided by [Best Practice Recommender](/refguide/best-practice-recommender/) in Studio Pro.
-
-## Performance Best Practices {#performance-best-practices}
-
-This section outlines performance issues and Mendix best practices for optimizing an app performance. 
+This document outlines the performance best practices provided by [Best Practice Recommender](/refguide/best-practice-recommender/) in Studio Pro. It describes performance issues and Mendix best practices for optimizing an app performance. 
 
 ### Calculated Attributes Best Practices [MXP001][MXP002] {#mxp001}
 
@@ -255,3 +251,9 @@ To fix the issue, do the following:
 {{% alert color="info" %}}
 This optimization may not be very beneficial for data types like Boolean and enumerations due to a limited number of possible values of these types. It is not recommended to add indexes for such types.
 {{% /alert %}}
+
+## Read More
+
+* [Best Practice Recommender](/refguide/best-practice-recommender/)
+* [Security Recommendations](/refguide/security-best-practices/)
+* [Mendix Best Practices for Development](/refguide/dev-best-practices/)

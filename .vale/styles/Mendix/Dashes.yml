@@ -1,5 +1,5 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Dashes)
-# Known issue: False positive around links
+# Known issue: False positive around links, code snippets. Also check Bold and Italics to see if they are also problematic.
 extends: substitution
 message: "Remove spaces around the em dash (—). Or, to set off a list item intro or number range, use an en dash (–) instead."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#em-dash

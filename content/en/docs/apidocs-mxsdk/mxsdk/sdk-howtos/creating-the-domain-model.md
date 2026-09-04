@@ -7,6 +7,8 @@ description: "Explains how to create a domain model with inheritance and what th
 
 ## Introduction
 
+{{% todo %}}Bad Practice - set up the domain model a bit differently?{{% /todo %}}
+
 You now have your first script up and running, which creates a new app with a single entity. This how-to guides you through the process of creating a more extensive domain model. At the end of this how-to you will have a domain model with two entities: `Customer` and `Invoice`. These entities should be associated with a one-to-many association. The `Customer` entity should become a specialization of the `Administration.Account` entity (and indirectly `System.User`), so that customers can log into the app.
 
 In this document, you will learn how to do the following:

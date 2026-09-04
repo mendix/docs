@@ -57,6 +57,8 @@ In the pop-up window that appears, enter a **name** for your app. Leave all othe
 
 Just as in part one, we will need to create the entity to store employee data. In the **domain model** for the Native Mobile Module, add a **new entity**.
 
+{{% todo %}}Bad practice, mixing business and security. Also, should say "specialization" of the Account entity (thanks Claude){{% /todo %}}
+
 1. Name the entity Employee.
 1. The entity should be a generalization of the Account entity.
 1. Add three attributes to the entity:

@@ -26,6 +26,10 @@ The Private Mendix Platform Project API version 2 allows you to manage projects 
 * Get the groups or users with which the project is shared.
 * Add or remove members and groups from a project.
 
+## Supported Private Mendix Platform Version
+
+This API is available in Private Mendix Platform 2.7 and newer.
+
 {{% alert color="info" %}}
 For information about Project API version 1, see [Project API - Version 1](/apidocs-mxsdk/apidocs/private-platform-project-api/).
 {{% /alert %}}

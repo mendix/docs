@@ -21,6 +21,10 @@ The Private Mendix Platform User API allows you to manage users in Private Mendi
 * Create, update, or delete a user.
 * Change the password of a user with a specific ID.
 
+## Supported Private Mendix Platform Version
+
+This API is available in Private Mendix Platform [VERSION] and newer.
+
 ## API Reference
 
 {{< swaggerui src="/openapi-spec/openapi-user-v1.yaml"  >}}

@@ -27,6 +27,10 @@ The Private Mendix Platform Group API version 2 allows you to manage user groups
 * Update the deployment purpose of cluster namespace.
 * Remove cluster namespaces from the group.
 
+## Supported Private Mendix Platform Version
+
+This API is available in Private Mendix Platform 2.7 and newer.
+
 {{% alert color="info" %}}
 For information about Group API version 1, see [Group API - Version 1](/apidocs-mxsdk/apidocs/private-platform-group-api/).
 {{% /alert %}}

@@ -32,6 +32,10 @@ The Private Mendix Platform Marketplace API allows you to manage the Marketplace
 * Get a single subcategory by ID.
 * Create, update, or delete a subcategory.
 
+## Supported Private Mendix Platform Version
+
+This API is available in Private Mendix Platform [VERSION] and newer.
+
 ## API Reference
 
 {{< swaggerui src="/openapi-spec/openapi-marketplace-v1.yaml"  >}}

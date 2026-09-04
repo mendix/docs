@@ -24,6 +24,10 @@ The Private Mendix Platform Build API allows you to manage app packages in Priva
 * Download a specified package in SBOM format.
 * Lock or unlock a specified package.
 
+## Supported Private Mendix Platform Version
+
+This API is available in Private Mendix Platform [VERSION] and newer.
+
 ## API Reference
 
 {{< swaggerui src="/openapi-spec/openapi-build-v1.yaml"  >}}

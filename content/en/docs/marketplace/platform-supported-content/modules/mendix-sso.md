@@ -395,7 +395,7 @@ The TokensOverview page allows administrators to see all tokens that have been i
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-sso/token-administration.png" alt="List of all Mendix SSO tokens issued to the app" class="no-border" >}}
 
-The page can be used for troubleshooting—you can see the creation and expiry dates of the tokens, and by clicking **View**, you can view the values held in the tokens.
+The page can be used for troubleshooting. You can see the creation and expiry dates of the tokens, and by clicking **View**, you can view the values held in the tokens.
 
 The **ID Token** is held in *JWT* format, so you can paste it into a [JWT decoder](https://jwt.io) to confirm what information it holds.
 
@@ -409,7 +409,7 @@ The **MyTokensOverview** page allows end-users to see their own access tokens.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-sso/my-tokens.png" alt="List of all my Mendix SSO tokens" class="no-border" >}}
 
-The page can be used for troubleshooting—the end-user can see the creation and expiry dates of the tokens, and by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
+The page can be used for troubleshooting. The end-user can see the creation and expiry dates of the tokens, and by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
 
 #### Displaying Tokens Using Snippets
 

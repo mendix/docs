@@ -20,7 +20,9 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Platform Upgrade
 
-* The Mendix Portal has been upgraded to the Mendix 11 runtime version.
+* We updated the styling of the Deployment portal. This includes repositioning some action buttons outside the dropdown menus for improved accessibility:
+    1. Start/Restart option on the Environment Overview page
+    2. Clear App option on the Environment Details page
   
 ## August 2026
 

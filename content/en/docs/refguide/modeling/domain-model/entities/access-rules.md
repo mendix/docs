@@ -94,7 +94,11 @@ To edit the XPath constraint, click **Edit...** next to the XPath constraint fie
 XPath constraints can only be applied to persistable entities, as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
 {{% /alert %}}
 
-There are two constraints that can be appended easily with a single button click:
+{{% alert color="info" %}}
+The **Owner** and **Path to user...** buttons described below are not available in the XPath **Builder**. You have to switch to entering an **XPath expression**.
+{{% /alert %}}
+
+There are two constraints that can be appended with a single button click:
 
 ##### Owner
 
@@ -112,18 +116,16 @@ The **Path to user...** button adds an XPath constraint so the access rule is on
 
 For example:
 
-{{% todo %}}Bad example - update{{% /todo %}}
-
-1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated with the **Customer** entity via the **Order_Customer** association.
+1. Assume that the `Customer` entity is associated with the `Administration.Account` entity (which is a specialization of the `User` entity) via the `Customer_Account` association. The `Order` entity is associated with the `Customer` entity via the `Order_Customer` association.
 2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
 
-The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule. The created rule will look like this:
+The required XPath constraint can be constructed using the **Path to user...** button on the `Order` entity by navigating to the `Administration.Account` entity via the `Order_Customer` and `Customer_Account` associations in the entity navigation tree. The created rule will look like this:
 
 ```xpath
-[Module.Order_Customer = '[%CurrentUser%]']
+[Module.Order_Customer/Module.Customer/Module.Customer_Account='[%CurrentUser%]']
 ```
 
-Because of this XPath constraint, access defined in the access rule is only applied to orders for which the customer is the current end-user.
+Applying this XPath constraint means the current end-user can only see orders for the customer associated with the current end-user.
 
 #### Entity Rights
 

@@ -52,6 +52,10 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
 * We have updated components to use Go 1.26 and the latest dependency versions in order to improve security score ratings for container images.
 
+#### License Manager CLI v0.11.1 {#0.11.1}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+
 ### July 23, 2026
 
 #### Portal Improvements
@@ -62,6 +66,12 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * We enhanced deployment package summaries to give clearer visibility into upcoming release changes.
 * We resolved a security vulnerability in cluster invitation emails.
 * We fixed several dark mode, tooltip, and layout display issues.
+
+### June 19, 2026
+
+#### License Manager CLI v0.11.0 {#0.11.0}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
 
 ### June 11, 2026
 

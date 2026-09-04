@@ -5,13 +5,21 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.1.5
+
+**Release date: Sep 1, 2026**
+
+### Fixes
+
+- We addressed a random scenario where Gradle would resolve to using the Hermes v1 compiler instead of the old Hermes override in `gradle.properties`. This threw issues with `"...bytecode mismatch..."`.
+
 ## 19.1.4
 
 **Release date: Aug 24, 2026**
 
 ### Improvements
 
-- We hardened the Android main screen against overlay and tapjacking attacks, and removed the unused `SYSTEM_ALERT_WINDOW` permission.
+* We hardened the Android main screen against overlay and tapjacking attacks, and removed the unused `SYSTEM_ALERT_WINDOW` permission.
 
 ## 19.1.3
 

@@ -12,6 +12,27 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### September 3, 2026
+
+#### Portal Improvements
+
+* Deployment and build notifications are now aligned with the Mendix Platform. Users receive notifications when deployments or package builds complete or fail.
+* The **Constants Compare** functionality is now available, providing Public Cloud parity. Users can compare constant values across environments and packages directly in the Portal.
+* We have added a **Technical Contact FAQ** popup, and improved the **Change Technical Contact** warning message.
+* The scheduled event descriptions now update correctly when a new .mda file is uploaded. (Ticket 282641)
+* We have fixed an issue where navigating from the environment link on the **Projects** home page to the **Environment Overview** page was broken.
+* Deletion is no longer blocked for environments that are marked as the **Default Studio Target**. Users are prompted to set another environment as the default before deletion.
+* **Pod Disruption Budget** settings no longer reset to default due to a missing field in the Private Cloud Portal REST API. (Ticket 284436)
+* You can now remove storage plans when they are not in use. (Ticket 285125)
+* We have fixed an issue where the apps displayed in the UI differed from the list retrieved via the Export Grid to CSV option. (Ticket 285443)
+* We have corrected the database status icon display.
+* We have fixed a layout issue where the **Deployment packages version** column appeared distorted on 1080p displays.
+
+#### Deploy API
+
+* It is now possible to force-delete an orphaned app environment (when Agent is disconnected) or an environment marked as the Default Studio Target via Deploy API.
+* We have added support for configuring Pod Disruption Budget parameters (`podDisruptionMinAvailable` and `podDisruptionMaxUnavailable`) in the environment deployment strategy through the Deploy API.
+
 ### August 14, 2026
 
 #### Mendix Operator v2.28.0 {#2.28.0}
@@ -31,6 +52,10 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
 * We have updated components to use Go 1.26 and the latest dependency versions in order to improve security score ratings for container images.
 
+#### License Manager CLI v0.11.1 {#0.11.1}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+
 ### July 23, 2026
 
 #### Portal Improvements
@@ -41,6 +66,12 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * We enhanced deployment package summaries to give clearer visibility into upcoming release changes.
 * We resolved a security vulnerability in cluster invitation emails.
 * We fixed several dark mode, tooltip, and layout display issues.
+
+### June 19, 2026
+
+#### License Manager CLI v0.11.0 {#0.11.0}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
 
 ### June 11, 2026
 

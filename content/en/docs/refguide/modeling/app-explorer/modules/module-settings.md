@@ -108,7 +108,6 @@ Key improvements are delivered through new module properties and a new `manifest
 
 The **Package** section on the **General** tab displays package identification information for the module. Studio Pro uses this information to track modules across versions, which is the foundation for more reliable module updates.
 
-
 ### Module ID {#module-id}
 
 The module ID is a unique identifier for the module that remains the same across all versions. It determines whether two module packages represent the same module and is therefore the basis for module update compatibility. If two modules share the same module ID, Studio Pro can update one with the other. If the IDs differ, Studio Pro treats them as distinct modules.

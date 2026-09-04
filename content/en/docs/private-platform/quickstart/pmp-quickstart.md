@@ -70,7 +70,7 @@ If your clusters can connect to a public registry with a passable network, skip 
 
 3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
 
-##  Installing the Mendix Operator {#install-operator}
+## Installing the Mendix Operator {#install-operator}
 
 Install the Mendix Operator by doing the following steps:
 
@@ -94,7 +94,7 @@ Configure the namespace by doing the following steps:
 1. Click **Configure Namespace**.
 2. Optional: If you want to run the Operator in Global mode, click **Global Operator**.
 
-You must use a different namespace here than the Global namespace that you selected in step 4 above. Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
+    You must use a different namespace here than the Global namespace that you selected in step 4 above. Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
 
 3. Optional: If you are not using the AWS Secret Manager, click **Database Plan** and fill out the required information.
         

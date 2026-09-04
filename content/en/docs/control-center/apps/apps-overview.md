@@ -64,9 +64,10 @@ When you select apps using the checkboxes in the table, a context menu appears a
 Clicking an app name in a tab or the search results opens its details page, which includes the following tabs:
 
 * **App Info** – Shows the **Description** and **App ID**, also found in your app's [Settings](/developerportal/general-settings/).
-* **Members** – Lists the team members in the app development team.
-    * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
-    * For other member management options, click **Manage Members**, which will open the [Team](/developerportal/general/team/#managing) page of the app.
+* **Members** – Lists the team members in the project development team.    
+    You can directly deactivate a team member from the project by clicking their name and selecting **Deactivate Member**.    
+    For other member management options, click **Manage Members**, which will open the [Team](/developerportal/general/team/#managing) page of the project.    
+    {{% alert color="info" %}}Mendix Admins cannot add or remove themselves from a project.{{% /alert %}}
 * **Environments** – Lists all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Mendix Portal.
 
 If the app is not a licensed app, you can see the action menu ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the page. If the app is active, then you have the options to deactivate the app and delete the app; and if the app is deactivated, then you have the options to activate the app and delete the app.

@@ -29,7 +29,6 @@ Previous versions of the Operator did not manage `PodDisruptionBudgets`. Instead
 If you have manually created a `PodDisruptionBudget` for an app, delete it and instead specify the `PodDisruptionBudget` parameters [in the MendixApp CR](#pod-disruption-budget).
 {{% /alert %}}
 
-
 {{% alert color="info" %}}
 Mendix Operator 2.28.0 specifies `unhealthyPodEvictionPolicy: AlwaysAllow` in the `PodDisruptionBudget`, allowing Kubernetes to evict crashlooping or unavailable pods without applying rules from the `PodDisruptionBudget`.
 
@@ -125,6 +124,10 @@ You can specify the following options:
 
 Kubernetes can stop an app's pods if needed to stop a node (to scale down and consolidate apps to run on fewer nodes), or perform a node update (for example, install CVE patches on the host OS).
 Starting from Mendix Operator version 2.24.0, you can specify parameters for a [PodDisruptionBudget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) of an app to ensure that Kubernetes only stops a limited number of an app's pods, and if necessary waits for replacement pods to become available.
+
+{{% alert color="info" %}}
+You can configure Pod Disruption Budget parameters through the [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/) by setting `podDisruptionMinAvailable` and `podDisruptionMaxUnavailable` in the environment's `deploymentStrategy` section.
+{{% /alert %}}
 
 To manually configure parameters for a PodDisruptionBudget, add the `podDisruptionBudget` section to your `MendixApp` CR, as in the following example:
 

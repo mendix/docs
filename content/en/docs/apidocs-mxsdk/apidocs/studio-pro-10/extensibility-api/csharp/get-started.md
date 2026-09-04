@@ -9,6 +9,10 @@ weight: 2
 
 This document describes how to set up a basic development environment for building extensions.
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-10/) instead.
+{{% /alert %}}
+
 ## Development Setup
 
 {{% alert color="info" %}}

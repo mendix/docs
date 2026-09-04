@@ -7,6 +7,10 @@ weight: 24
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-10/) instead.
+{{% /alert %}}
+
 The Untyped Model Access API is designed for advanced users familiar with the internals of the Mendix platform. It allows access to the rich data of model elements.
 
 * For model elements, units, and property names, see the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). 

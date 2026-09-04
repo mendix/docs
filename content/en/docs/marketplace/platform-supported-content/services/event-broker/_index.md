@@ -98,7 +98,7 @@ From here, you can manage the default access settings:
 
 ## Mendix Event Broker Bridges
 
-Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and external technologies. For information on creating and managing bridges, see [Event Broker Bridges](/appstore/services/event-broker-bridges/).
+Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and external technologies. For information on creating and managing bridges, see [Mendix Event Broker Bridges](/appstore/services/event-broker-bridges/).
 
 Mendix Event Broker Bridges support integration with the following technologies:
 

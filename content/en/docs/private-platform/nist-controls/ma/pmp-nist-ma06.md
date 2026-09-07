@@ -26,7 +26,7 @@ Organizations specify the information system components that result in increased
 
 The following controls are related to this control:
 
-* * CM-08
+* CM-08
 * [CP-02](/private-mendix-platform/nist-controls/cp-02/)
 * CP-07
 * SA-14

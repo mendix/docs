@@ -150,14 +150,14 @@ For example, if you'd like to change the database hostname, or if you exited wit
 
 The options do the following:
 
-* **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
-* **Storage Plan** – will create a new storage plan for your cluster — you must have at least one storage plan in your namespace, but you can have more than one
-* **Ingress** – will configure the ingress for your namespace — if there is already an ingress, this will replace it with new settings
-* **Registry** – will configure a registry for your namespace — if there is already a registry, this will replace it with new settings
-* **Proxy** – will configure a proxy for your namespace — if there is already a proxy, this will replace it with new settings
-* **Custom TLS** – will configure custom CA trust for your namespace — if there is already a custom CA trust configuration, this will replace it with new settings
+* **Database Plan** – will create a new database plan for your cluster—you must have at least one database plan in your namespace, but you can have more than one
+* **Storage Plan** – will create a new storage plan for your cluster—you must have at least one storage plan in your namespace, but you can have more than one
+* **Ingress** – will configure the ingress for your namespace—if there is already an ingress, this will replace it with new settings
+* **Registry** – will configure a registry for your namespace—if there is already a registry, this will replace it with new settings
+* **Proxy** – will configure a proxy for your namespace—if there is already a proxy, this will replace it with new settings
+* **Custom TLS** – will configure custom CA trust for your namespace—if there is already a custom CA trust configuration, this will replace it with new settings
 
-1. Select the options you need to configure – the first time you configure your namespace you must check *all the first four options*.  **Proxy** is optional.
+1. Select the options you need to configure—the first time you configure your namespace you must check *all the first four options*. **Proxy** is optional.
 
 2. Click **Configure Namespace**.
 

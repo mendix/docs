@@ -12,6 +12,27 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### September 3, 2026
+
+#### Portal Improvements
+
+* Deployment and build notifications are now aligned with the Mendix Platform. Users receive notifications when deployments or package builds complete or fail.
+* The **Constants Compare** functionality is now available, providing Public Cloud parity. Users can compare constant values across environments and packages directly in the Portal.
+* We have added a **Technical Contact FAQ** popup, and improved the **Change Technical Contact** warning message.
+* The scheduled event descriptions now update correctly when a new .mda file is uploaded. (Ticket 282641)
+* We have fixed an issue where navigating from the environment link on the **Projects** home page to the **Environment Overview** page was broken.
+* Deletion is no longer blocked for environments that are marked as the **Default Studio Target**. Users are prompted to set another environment as the default before deletion.
+* **Pod Disruption Budget** settings no longer reset to default due to a missing field in the Private Cloud Portal REST API. (Ticket 284436)
+* You can now remove storage plans when they are not in use. (Ticket 285125)
+* We have fixed an issue where the apps displayed in the UI differed from the list retrieved via the Export Grid to CSV option. (Ticket 285443)
+* We have corrected the database status icon display.
+* We have fixed a layout issue where the **Deployment packages version** column appeared distorted on 1080p displays.
+
+#### Deploy API
+
+* It is now possible to force-delete an orphaned app environment (when Agent is disconnected) or an environment marked as the Default Studio Target via Deploy API.
+* We have added support for configuring Pod Disruption Budget parameters (`podDisruptionMinAvailable` and `podDisruptionMaxUnavailable`) in the environment deployment strategy through the Deploy API.
+
 ### August 14, 2026
 
 #### Mendix Operator v2.28.0 {#2.28.0}
@@ -31,6 +52,10 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
 * We have updated components to use Go 1.26 and the latest dependency versions in order to improve security score ratings for container images.
 
+#### License Manager CLI v0.11.1 {#0.11.1}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+
 ### July 23, 2026
 
 #### Portal Improvements
@@ -41,6 +66,12 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * We enhanced deployment package summaries to give clearer visibility into upcoming release changes.
 * We resolved a security vulnerability in cluster invitation emails.
 * We fixed several dark mode, tooltip, and layout display issues.
+
+### June 19, 2026
+
+#### License Manager CLI v0.11.0 {#0.11.0}
+
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
 
 ### June 11, 2026
 
@@ -1334,10 +1365,10 @@ Your build may fail if you try to deploy the same deployment package more than o
 #### Mendix Operator v2.6.0{#2.6.0}
 
 * We improved the default health check configuration by allowing the use of Kubernetes startup probes. This feature improves the reliability of environments that need more time to initialize, for example when executing database migration startup microflows.
-* We now allow you to customize the Kubernetes `terminationGracePeriodSeconds` attribute for apps, allowing an app to have more time to perform a clean shutdown — for example to close database connections and complete microflows and scheduled events that are already running.
+* We now allow you to customize the Kubernetes `terminationGracePeriodSeconds` attribute for apps, allowing an app to have more time to perform a clean shutdown—for example to close database connections and complete microflows and scheduled events that are already running.
 * We fixed a build error which happened when an MDA included a data snapshot.
 * We resolved an issue where the sidecar container didn’t process the shutdown signal, even when the app container was stopped (this meant that stopping an app took 30 seconds)
-* We have disabled the `enableServiceLinks` Kubernetes feature — this prevents app pods from receiving a list of all services running in a namespace through environment variables.
+* We have disabled the `enableServiceLinks` Kubernetes feature—this prevents app pods from receiving a list of all services running in a namespace through environment variables.
 * When connecting to the Development Portal, the Mendix Gateway Agent will now trust CAs specified through [Custom TLS](/developerportal/deploy/standard-operator/#custom-tls)
 * We fixed an issue where the Operator was restarting the build pod when using AWS identity webhooks.
 
@@ -1716,7 +1747,7 @@ After upgrading the Mendix Operator, Mendix recommends downloading the latest ve
 
 ### December 10, 2020
 
-#### Mendix on Kubernetes — Mendix Operator v1.7.0 and Mendix Gateway Agent v1.6.0
+#### Mendix on Kubernetes—Mendix Operator v1.7.0 and Mendix Gateway Agent v1.6.0
 
 * We have added a configuration option to add custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
 * We have added a Strict TLS mode to PostgreSQL, SQL Server, and Minio, which will only allow connections to the database and file storage if there is a valid and trusted TLS certificate. Together with the custom Certificate Authorities option, this will ensure that Mendix apps are connecting to the database and file storage over a secured connection. Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
@@ -1734,7 +1765,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 ### October 30, 2020
 
-#### Mendix on Kubernetes — Mendix Operator v1.6.1
+#### Mendix on Kubernetes—Mendix Operator v1.6.1
 
 * We have fixed a bug where building and pushing an image into some registries (such as coding.net) would fail with an authentication error.
 * If creating a database or file storage for a new environment fails, the Mendix Operator will now attempt to clean up (roll back) temporary resources. In this case, a manual cleanup is not required. In addition, log messages for such failed attempts will provide details on what what was created and rolled back.
@@ -1779,7 +1810,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We added an option to configure TLS options per environment, overriding the default namespace settings.
 * OpenShift Routes now support all features which were previously only available in Ingress endpoints.
 * We now only monitor the selected endpoint type (OpenShift Routes or Ingress), removing an error message which appeared when starting the operator in a non-OpenShift cluster.
-* We have added several features which make it possible to use [cert-manager](https://cert-manager.io/) with Ingress — this allows you to have TLS certificates generated on-demand.
+* We have added several features which make it possible to use [cert-manager](https://cert-manager.io/) with Ingress—this allows you to have TLS certificates generated on-demand.
 * We added an option to specify an environment's TLS certificate, or load it from a Kubernetes secret.
 * When TLS is enabled, Mendix on Kubernetes Portal will now display the App URL with an https:// prefix.
 * We have fixed an issue with connecting to PostgreSQL with TLS and will use encryption by default. (Ticket 106308)

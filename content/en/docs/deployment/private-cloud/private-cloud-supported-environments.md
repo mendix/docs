@@ -17,10 +17,7 @@ This document covers which providers and services are officially supported by th
 We currently support deploying to the following Kubernetes cluster types:
 
 * [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS)
-{{% alert color="info" %}}
-If you want to deploy your app to Amazon EKS, consider using the Mendix for Amazon EKS Reference Deployment. For more information, see [Mendix for Amazon EKS—Terraform module](https://registry.terraform.io/modules/aws-ia/mendix-private-cloud/aws/latest).
-{{% /alert %}}
-* [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
+* [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/) (both Azure Commercial and Azure US Government)
 * [Red Hat OpenShift Container Platform](https://www.openshift.com/)
 * [MicroK8s](https://microk8s.io/)
 * [k3s](https://k3s.io/)
@@ -29,13 +26,21 @@ If you want to deploy your app to Amazon EKS, consider using the Mendix for Amaz
 * [Google Kubernetes Engine- Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview). For more information, see [Mendix on Kubernetes Cluster: GKE Autopilot Workarounds](/developerportal/deploy/private-cloud-cluster/#gke-autopilot-workarounds)
 * [STACKIT Kubernetes Engine](https://stackit.com/en/products/runtime/stackit-kubernetes-engine)
 
-For STACKIT Kubernetes Engine, customers provision the SKE cluster, PostgreSQL Flex database(s), and Object Storage bucket(s) themselves before deploying Mendix.
-
-Any Kubernetes version offered by SKE that falls within the [Supported Versions](#supported-versions) range is supported.
+#### Provider Notes
 
 {{% alert color="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
 {{% /alert %}}
+
+**STACKIT Kubernetes Engine**
+
+Any Kubernetes version offered by SKE that falls within the [Supported Versions](#supported-versions) range is supported.
+
+**Azure Government Cloud**
+
+[Microsoft Azure Government](https://azure.microsoft.com/en-us/explore/global-infrastructure/government/) (also known as Azure US Government Cloud) is a fully supported deployment environment for Mendix on Kubernetes, using Azure Kubernetes Service (AKS) provisioned in Azure Government regions.
+
+The Mendix Operator automatically detects when it is running in Azure Government and uses the corresponding Government service endpoints (for Azure Resource Manager, Azure Blob Storage, and Azure Database for PostgreSQL) - no additional configuration is required.
 
 #### Supported Versions{#supported-versions}
 

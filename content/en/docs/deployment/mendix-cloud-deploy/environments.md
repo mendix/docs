@@ -49,12 +49,12 @@ You can see the following details for each environment shown in the **Overview**
 You can perform the following actions on your environments:
 
 * **Deploy** ({{< icon name="deploy" >}}) – Launch the [Deploy wizard](#deploy-wizard), where you can configure and start a new deployment for the selected environment.
-* **View Details** ({{< icon name="notes-paper-edit" >}}) – Access the [Environment Details](/developerportal/deploy/environments-details/) page.
+* **Re-Start** ({{< icon name="environment-start" >}}) – Stop the running app and restart. Restarting your app is required for applying new constant values or scheduled events to the environment.
+* **Start** ({{< icon name="environment-start" >}}) – Start a stopped app.
+* **Details** ({{< icon name="notes-paper-edit" >}}) – Access the [Environment Details](/developerportal/deploy/environments-details/) page.
 * **View App** {{< icon name="external" >}} – Launch the app in a new browser tab.
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
-    * **Restart** – Stop the running app and restart. Restarting your app is required for applying new constant values or scheduled events to the environment.
-    * **Start** – Start a stopped app.
-    * **Live Log** – Display a live log for your app. This option performs the same action as the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
+    * **Live Logs** – Display a live log for your app. This option performs the same action as the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
     * **Debugger Info** – Display the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
     * **Running Now** – Monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
     * **Logged In Users** – Display all users who are logged in to your app.

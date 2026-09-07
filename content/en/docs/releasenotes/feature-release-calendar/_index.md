@@ -87,7 +87,7 @@ General Availability means that a feature is available for all users. This type 
 | Module-to-module dependency specification | General Availability: Q1 2027 |
 | Module overview for quick updating | General Availability: H1 2027 |
 | Easy comparison of revisions (textual diffing) | General Availability: Mx 11.9 |
-| Easy comparison of revisions (visual diffing) | Public Beta: Q3 2026 |
+| Easy comparison of revisions (visual diffing) | Public Beta: H2 2026 |
 | Searchable commit history | Public Beta: Mx 11.4 <br/>General Availability: Mx 11.6 |
 | Merge Requests (aka Pull requests) | Public Beta: Mx 12.x |
 | OpenTelemetry Tracing | General Availability: Mx 11.12 |

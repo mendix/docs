@@ -9,6 +9,10 @@ weight: 10
 
 Maia Resources is your access point to increase the capacity of Maia Units for using Maia Make in Studio Pro. It allows admins to provision, upgrade, downgrade, and deprovision Maia Units and manage the resources for Maia Make for their company. For more information on Maia Make’s capabilities, refer to [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/).
 
+{{% alert type="info" %}}
+Maia Units are only required for Maia Make. Other Maia features (for example, Maia Plan) do not require Maia Units.
+{{% /alert %}}
+
 ## Prerequisites
 
 1. Sufficient token entitlements – The user should have an adequate number of available Mendix Cloud Tokens to allocate for Maia Unit provisioning.
@@ -27,7 +31,7 @@ The overview page provides a centralized view of all Maia Units currently provis
 
 {{< figure src="/attachments/control-center/maia/maia-resources-overview.png" alt="" >}}
 
-## Monthly Consumption
+## Monthly Consumption {#consumption}
 
 The **Monthly Consumption** section displays your company’s Maia Unit usage for the current monthly cycle. It includes:
 
@@ -48,7 +52,9 @@ To manage an individual user’s usage limit:
 
 {{< figure src="/attachments/control-center/maia/user-limit-manage.png" alt="" width="450" >}}
 
-If no individual limit is set, the user is subject to the default company-wide user limit. Once a user reaches their individual limit, further Maia use is disabled for that user for the remainder of the current monthly cycle.
+If no individual limit is set, the user is subject to the default company-wide user limit. To set a company-wide limit, go to the [Resources](/control-center/maia-settings/#resources) tab in Maia Settings.
+
+Once a user reaches their individual limit, further Maia use is disabled for that user for the remainder of the current monthly cycle.
 
 ## Increasing Your Maia Units Capacity {#increase-maia-units}
 

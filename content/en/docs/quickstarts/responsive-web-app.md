@@ -254,6 +254,33 @@ To deploy your app to a cloud environment, you can hit **publish** to deploy you
 To deploy your app to the Mendix Cloud (Paid), there are multiple options for hosting. Please refer to this guide on [our hosting options](/developerportal/deploy/mendix-cloud-deploy/) for more information on which plan is best for your project.
 {{% /alert %}}
 
+## Build Faster with Maia
+
+Throughout this guide, you built your **Employee** app by hand—dragging entities onto the canvas, wiring up buttons, and writing microflow logic step by step. That is a great way to learn how Studio Pro works under the hood. But once you are comfortable with the basics, you do not have to do everything manually. Maia, Mendix's built-in AI assistant, can take over much of this repetitive modeling work for you.
+
+Unlike a typical chatbot that only answers questions, Maia is agentic: it can read your app's current domain model, pages, and logic, understand the context you are working in, and then directly create or modify app elements on your behalf. Ask it to add an entity, generate a page, or build out a microflow, and it will produce real, editable Studio Pro artifacts—not just a suggestion or a code snippet for you to copy in.
+
+Maia is not one single feature but a collection of capabilities woven into Studio Pro. [Maia Make](/refguide/mendix-ai-assistance/), is a conversational interface where you describe what you want in plain language and Maia generates the domain model changes, pages, or microflows to match. Within Maia Make are focused generators (for domain models, pages, workflows, and OQL queries), recommenders that suggest the next best widget or microflow activity as you build, and guidance tools like [Maia Chat](/refguide/maia-chat/) and [Maia Explain](/refguide/mendix-ai-assistance/) for when you want an explanation rather than a change to your app. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
+
+### Try It Yourself: Extending the Employee App
+
+Put Maia to work on the app you just built. Right now, your **Employee** entity captures a job role as free text. Next, let us use Maia to turn that into a proper **Department** entity, linked to **Employee** along with an overview page:
+
+1. In Studio Pro, open **Maia Make** from the top bar.
+1. In the chat box, describe what you want:
+
+    > "Add a Department entity with a Name attribute. Create a one-to-many association from Department to Employee, so each employee belongs to one department. Then generate an overview page listing all departments with their employees, and add that page to the app's navigation."
+
+1. Maia will process the request and propose a set of changes—typically a new entity in your domain model, the association to Employee, a new page with a data grid, and a navigation entry linking to it. **Review** the proposed changes in the preview panel.
+1. Click **Accept** to apply the changes to your app. You will see the new **Department** entity appear in your App Explorer, already connected to Employee, along with a new item in your app's navigation menu.
+1. **Open** the generated page and run your app locally (<kbd>F5</kbd> ) to see the new **Department** overview—now reachable directly from the navigation menu—alongside your existing **Employee Overview** page. 
+
+{{% alert type="info" %}}
+You can keep iterating conversationally from here—for example, asking Maia to "add validation so a department name can't be empty" or "add a dropdown on the Employee page to select a department." Each request builds on the app state Maia already understands, so you do not need to re-explain your app every time.
+{{% /alert %}}
+
+As you get more comfortable, you can ask Maia to explain the microflow you built earlier (`Act_Employee_NewEdit`) to see how Maia summarizes logic you already created—a useful way to sanity-check your own work or onboard a teammate to the app quickly.
+
 ## Finished!
 
 Congratulations on completing and deploying your very first Mendix App! Next, head over to the [Academy](https://academy.mendix.com/link/home) and get started with our **Crash Course** learning plan, or continue learning here in our docs pages by continuing onto part two. For videos on the latest news and updates, head to our [YouTube page](https://www.youtube.com/c/MendixCommunity). Or see what our awesome community is up to on our [Medium publication](https://medium.com/mendix). 

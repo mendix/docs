@@ -13,8 +13,14 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately, as other deployment targets are also dependent on the buildpack.
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
-
+  
 ## August 2026
+
+### August 31, 2026
+
+#### New Features
+
+* AI Log Summary is now available on the **Environments** page. It provides an overview of your application's log activity from the previous 24 hours, including error patterns, lifecycle events, and security signals. For more information, refer to [AI Log Summary](/developerportal/maia-operate/ai-log-summary/).
 
 ### August 12, 2026
 

@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve activity in a microflow. To do this, you must model the logic for getting the correct data in the microflow itself.
+Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client—you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve activity in a microflow. To do this, you must model the logic for getting the correct data in the microflow itself.
 
 This how-to teaches you how to do the following:
 
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## Creating a Microflow Data Source
 
-In this section, you will create a JSON structure and import mapping for a REST service. To do this, complete the first four sections of [Consume a REST Service](/howto10/integration/consume-a-rest-service/) — (until **Adding an Input Entity to the Domain Model** is done). 
+In this section, you will create a JSON structure and import mapping for a REST service. To do this, complete the first four sections of [Consume a REST Service](/howto10/integration/consume-a-rest-service/)—(until **Adding an Input Entity to the Domain Model** is done). 
 
 Complete these steps with one crucial change: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
 

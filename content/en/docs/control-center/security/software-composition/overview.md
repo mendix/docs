@@ -39,18 +39,18 @@ The following options are available above the list of application environments:
 
 The app list is sorted based on the number of findings and their severity, from highest to lowest. It contains the following information:
 
-* **App Name** — The name of the app.
-* **Environment** — The name of the environment.
-* **Runtime** — The Mendix Runtime version.
-* **Findings** — The number of findings of each type, color-coded according to severity level.
+* **App Name** – The name of the app.
+* **Environment** – The name of the environment.
+* **Runtime** – The Mendix Runtime version.
+* **Findings** – The number of findings of each type, color-coded according to severity level.
 * **Policy Status** – The number of policies that the app violates. For details on each policy, click this line item, then go to the **Policy Status** tab of the app. 
-* **Technical Contact** — The Technical Contact of the app.
-* **Target Cloud** — The type of cloud where the deployment package is deployed. Currently, the following types of cloud are supported:
+* **Technical Contact** – The Technical Contact of the app.
+* **Target Cloud** – The type of cloud where the deployment package is deployed. Currently, the following types of cloud are supported:
     * Mendix Free Cloud
     * Mendix Cloud (including Mendix Cloud Dedicated)
     * Mendix on Kubernetes (connected)
-* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
-* **View details** — Clicking this opens the [Application Environment Summary](#app-env-summary) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected application environment. Ensure you are on a compatible runtime version and have created a new deployment package in order to have components visible here.
+* Column customization ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+* **View details** – Clicking this opens the [Application Environment Summary](#app-env-summary) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected application environment. Ensure you are on a compatible runtime version and have created a new deployment package in order to have components visible here.
 
 To export the information corresponding to selected items in the list to an Excel file, select the checkboxes of the items in the list, then click **Selection Export** that appears at the bottom of the page.
 
@@ -89,22 +89,22 @@ The following options are available above the list:
 
 The finding list contains the following information:
 
-* **Severity** — The severity level of the finding related to that component.
-* **Finding Type** — The type of finding, which can be **Outdated**, **Deprecated**, or **Vulnerable**.
-* **Component** — The name of the component used in the app. Clicking this takes you to the corresponding Mendix Marketplace page.
-* **Version** — The version of the component that is used in the app.
-* **Type** — The type of component.
-* **Support type** — This shows the support type of the Marketplace component. It can be **Mendix**, **Partner**, or **Community**. For more information, refer to [Content Support Categories](/appstore/marketplace-content-support/#category).
-* **Age** — The number of days that the finding has been applicable, computed as follows:
+* **Severity** – The severity level of the finding related to that component.
+* **Finding Type** – The type of finding, which can be **Outdated**, **Deprecated**, or **Vulnerable**.
+* **Component** – The name of the component used in the app. Clicking this takes you to the corresponding Mendix Marketplace page.
+* **Version** – The version of the component that is used in the app.
+* **Type** – The type of component.
+* **Support type** – This shows the support type of the Marketplace component. It can be **Mendix**, **Partner**, or **Community**. For more information, refer to [Content Support Categories](/appstore/marketplace-content-support/#category).
+* **Age** – The number of days that the finding has been applicable, computed as follows:
 
     * Deprecated components: the current date - the date when the component was deprecated    
     * Outdated components: the current date - the publish date of the first higher runtime compatible version
 
-* **Outdated since version** — The version that caused the currently used version to become outdated. This only applies to outdated components.
-* **Outdated since version publish date** — The release date of the version that caused the currently used version to become outdated. This only applies to outdated components.
-* **Deprecated since version** — The version when the component became deprecated.
-* **Deprecated since version publish date** — The release date of the version when the component became deprecated.
-* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+* **Outdated since version** – The version that caused the currently used version to become outdated. This only applies to outdated components.
+* **Outdated since version publish date** – The release date of the version that caused the currently used version to become outdated. This only applies to outdated components.
+* **Deprecated since version** – The version when the component became deprecated.
+* **Deprecated since version publish date** – The release date of the version when the component became deprecated.
+* Column customization ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 #### Finding and Component Details
 
@@ -140,23 +140,23 @@ The following options are available above the list:
 
 The component usage list contains the following information:
 
-* **Component** — The name of the component.
+* **Component** – The name of the component.
 * **Version** – The version of the component that is being used.
-* **Type** — The type of component, which can be one of the following:
+* **Type** – The type of component, which can be one of the following:
   
-    * **Module** — Standard marketplace module imported from the Marketplace, such as [Community Commons](https://marketplace.mendix.com/link/component/170).
-    * **Widget** — User interface elements downloaded from the Marketplace, such as [Charts](https://marketplace.mendix.com/link/component/105695).
-    * **Framework** — The Mendix Runtime version, for example 10.12.0
-    * **Jar** — Java libraries imported into your app using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the **userlib** folder depending on the Studio Pro version used, such as `org.apache.commons.io`.
-    * **npms** — `npm` libraries that are used in your [JavaScript actions](/refguide/javascript-actions/).
-    * **Unknown** — When the type of the component is none of the above and hence undetermined.
+    * **Module** – Standard module imported from the Marketplace, such as [Community Commons](https://marketplace.mendix.com/link/component/170).
+    * **Widget** – User interface elements downloaded from the Marketplace, such as [Charts](https://marketplace.mendix.com/link/component/105695).
+    * **Framework** – The Mendix Runtime version, for example 10.12.0
+    * **Jar** – Java libraries imported into your app using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the **userlib** folder depending on the Studio Pro version used, such as `org.apache.commons.io`.
+    * **npms** – `npm` libraries that are used in your [JavaScript actions](/refguide/javascript-actions/).
+    * **Unknown** – When the type of the component is none of the above and hence undetermined.
     
 * **Support type** – The support type of the Marketplace component. This can be **Mendix**, **Partner**, or **Community**.    
   For more information, refer to [Content Support Categories](/appstore/marketplace-content-support/#category).
 * **License** – For components derived from the Mendix Marketplace, this is the end-user license for the component.
 * **Latest version** – For components derived from the Mendix Marketplace, this is the latest version of the component.
 * **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is only available for your organisation. On the Marketplace homepage, you can use the **Visibility** filter to display specific components.
-* **Latest Runtime Compatible Version** — The most recent runtime version to which the component is compatible.
+* **Latest Runtime Compatible Version** – The most recent runtime version to which the component is compatible.
 * **Publisher** – For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
 * Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
@@ -182,7 +182,7 @@ The **Policy Status** tab displays a list of the policies that the app violates,
     * **Failure Condition(s)** – The conditions under which the policy is considered violated.
     * **Checkpoints & Action(s)** – The trigger which causes the policy to be checked, and the action that is taken if the policy is violated.
 
-* Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+* Column customization ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 You can search a policy by its name, and export all information on this tab to an Excel file.
 

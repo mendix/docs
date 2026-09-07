@@ -30,7 +30,7 @@ Clearly defined authorization boundaries are a prerequisite for effective securi
 
 The following controls are related to this control:
 
-* * CM-08
+* CM-08
 * [MP-04](/private-mendix-platform/nist-controls/mp-04/)
 * [RA-03](/private-mendix-platform/nist-controls/ra-03/)
 * SC-07

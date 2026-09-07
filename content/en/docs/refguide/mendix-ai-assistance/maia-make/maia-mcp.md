@@ -15,7 +15,7 @@ This feature is part of [Maia Make](/refguide/maia-make/) and was introduced in 
 To use Maia MCP Client, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Maia MCP Client, available from Studio Pro 11.8, helps you connect Maia to external [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) servers. Once connected, Maia can call tools provided by these servers during chat — for example, querying an external API, looking up design assets, or interacting with third-party services. You can find available MCP servers on the [MCP servers directory](https://modelcontextprotocol.io/examples). 
+Maia MCP Client, available from Studio Pro 11.8, helps you connect Maia to external [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) servers. Once connected, Maia can call tools provided by these servers during chat—for example, querying an external API, looking up design assets, or interacting with third-party services. You can find available MCP servers on the [MCP servers directory](https://modelcontextprotocol.io/examples). 
 
 For details on the current limitations, see the [Limitations](#limitations) section below.
 
@@ -49,38 +49,38 @@ Tools from new preset connections are disabled by default. Enable the tools you 
 
 To add a server, click **+ Add MCP Server**, fill in the following fields, and click **OK**:
 
-* **Server Name** — A display name. Must be unique among your configured servers.
-* **URL** — The server endpoint. Must use `https://` or `http://`.
-* **Connection type** — **HTTP (Streamable)** for most servers, or **SSE (Legacy)** for older servers that use Server-Sent Events instead of Streamable HTTP.
-* **Authentication** — See the [Authentication](#authentication) section below.
+* **Server Name** – A display name. Must be unique among your configured servers.
+* **URL** – The server endpoint. Must use `https://` or `http://`.
+* **Connection type** – **HTTP (Streamable)** for most servers, or **SSE (Legacy)** for older servers that use Server-Sent Events instead of Streamable HTTP.
+* **Authentication** – See the [Authentication](#authentication) section below.
 
 #### Authentication {#authentication}
 
 Choose how Studio Pro authenticates with the MCP server:
 
-* **No Auth** — select this for servers that do not require credentials.
-* **Bearer Token** — paste an API token or personal access token. The token is stored securely and is not exposed after entry.
-* **Mendix Identity** — authenticates using the Mendix account you use to sign in to Studio Pro. No extra credentials are needed. Use this option when connecting to MCP services provided by Mendix.
-* **OAuth 2.1** — a browser window opens so you can authorize Studio Pro with the server's provider. Two optional fields appear:
-    * **Client ID** — required if the server does not support automatic client registration.
-    * **Client Secret** — required by some providers (for example, GitHub).
+* **No Auth** – select this for servers that do not require credentials.
+* **Bearer Token** – paste an API token or personal access token. The token is stored securely and is not exposed after entry.
+* **Mendix Identity** – authenticates using the Mendix account you are already signed in to Studio Pro with. No extra credentials are needed. Use this option when connecting to MCP services provided by Mendix.
+* **OAuth 2.1** – a browser window opens so you can authorize Studio Pro with the server's provider. Two optional fields appear:
+    * **Client ID** – required if the server does not support automatic client registration.
+    * **Client Secret** – required by some providers (for example, GitHub).
 
-Most major providers — including GitHub and Figma — do not support automatic client registration. For these, you must first create an OAuth application in the provider's developer portal and then enter the **Client ID** (and **Client Secret** if required).
+Most major providers—including GitHub and Figma—do not support automatic client registration. For these, you must first create an OAuth application in the provider's developer portal and then enter the **Client ID** (and **Client Secret** if required).
 
 ##### Example: Connecting to GitHub Copilot MCP {#github-example}
 
 1. Go to [GitHub Developer Settings](https://github.com/settings/developers) and click **New OAuth App**.
 2. Fill in the following information:
-    * **Application name** — for example, `Mendix Studio Pro`
-    * **Homepage URL** — for example, `https://mendix.com`
-    * **Authorization callback URL** — `http://localhost:44380/mcp/oauth/callback` (GitHub allows only one; see [Callback URL](#callback-url))
+    * **Application name** – for example, `Mendix Studio Pro`
+    * **Homepage URL** – for example, `https://mendix.com`
+    * **Authorization callback URL** – `http://localhost:44380/mcp/oauth/callback` (GitHub allows only one; see [Callback URL](#callback-url))
 3. Click **Register application**, then copy the **Client ID**.
-4. Click **Generate a new client secret** and copy it — GitHub shows it only once.
+4. Click **Generate a new client secret** and copy it – GitHub shows it only once.
 5. In Studio Pro, add a server with the following details:
-    * **URL** — `https://api.githubcopilot.com/mcp/`
-    * **Authentication** — **OAuth 2.1**
-    * **Client ID** and **Client Secret** — from the steps above
-6. Click **Add** and authorize in the browser to complete the connection.
+    * **URL** – `https://api.githubcopilot.com/mcp/`
+    * **Authentication** – **OAuth 2.1**
+    * **Client ID** and **Client Secret** – from the steps above
+6. Click **Add**, authorize in the browser, and the connection completes.
 
 {{% alert color="info" %}}
 For Figma MCP, the simplest option is to generate a personal access token in Figma and use **Bearer Token** authentication. If you need OAuth, register an app at [Figma Developers](https://www.figma.com/developers), add the callback URL, and request the `mcp:connect` scope.

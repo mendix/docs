@@ -179,8 +179,8 @@ To use ACR with the Mendix Operator, you will need to:
 
 Use the following configuration options:
 
-* **Registry Name** - Path in the Azure Container Registry — for example `mendix-apps/mynamespace`.
-* **Registry URL** - domain name (login name) of the ACR registry, for example `example.azurecr.io`
+* **Registry Name** - Path in the Azure Container Registry—for example `mendix-apps/mynamespace`.
+* **Registry URL** - Domain name (login name) of the ACR registry, for example `example.azurecr.io`
 * **Kubernetes Service Account** - the Kubernetes service account that was linked with the Azure workload identity step 2; the Kubernetes Service Account will be created automatically when you apply the changes.
 * **AZWI Client ID** - the workload identity `USER_ASSIGNED_CLIENT_ID` created on step 2, for example `00000000-0000-0000-0000-000000000000`.
 
@@ -211,8 +211,8 @@ On the Kubernetes side, the Mendix Operator will use a Kubernetes Service Accoun
 
 Use the following configuration options:
 
-* **Registry Name** - Google Artifact Registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
-* **Registry URL** - container or artifact registry host — for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
+* **Registry Name** - Google Artifact Registry full path name—for example `my-google-account-id/my-registry/dev-repo`.
+* **Registry URL** - container or artifact registry host—for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
 * **GCP Service Account** - the GCP account name created on step 1, for example `service-account-name@project-id.iam.gserviceaccount.com`.
 * **Kubernetes Service Account** - the Kubernetes service account that was linked with the GCP service account on step 3; the Kubernetes Service Account will be created automatically when you apply the changes.
 

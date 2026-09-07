@@ -30,6 +30,10 @@ The Mendix on Kubernetes Deploy API is for connected clusters only.
 The Standard Operator conversion to Global Operator managed namespace is not yet available in Deploy API.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Actions performed through this API are not always recorded in the environment's activity log. For more information, see [Known Limitations: Logging API-Initiated Actions](/developerportal/deploy/private-cloud-deploy/#activity-log-api).
+{{% /alert %}}
+
 ## Using the API
 
 To help you work with the Mendix on Kubernetes Build API, the following sections of this document describe how to authenticate for the API, how to manage asynchronous API calls, and what to keep in mind when assigning unique IDs for the resources.

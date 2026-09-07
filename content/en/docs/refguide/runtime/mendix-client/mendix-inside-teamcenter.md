@@ -239,7 +239,7 @@ An unavailable context path causes the parameter to receive `undefined`.
 Objects and arrays are not supported as Mendix parameters.
 {{% /alert %}}
 
-For more information about configuring context, see the []`mx-in-tc` README](https://github.com/mendixlabs/mendix-inside-teamcenter/blob/main/mx-in-tc/README.md) on GitHub.
+For more information about configuring context, see the [`mx-in-tc` README](https://github.com/mendixlabs/mendix-inside-teamcenter/blob/main/mx-in-tc/README.md) on GitHub.
 
 For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 

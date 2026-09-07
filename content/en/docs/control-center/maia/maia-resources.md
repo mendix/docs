@@ -31,7 +31,7 @@ The overview page provides a centralized view of all Maia Units currently provis
 
 {{< figure src="/attachments/control-center/maia/maia-resources-overview.png" alt="" >}}
 
-## Monthly Consumption
+## Monthly Consumption {#consumption}
 
 The **Monthly Consumption** section displays your company’s Maia Unit usage for the current monthly cycle. It includes:
 

@@ -15,4 +15,6 @@ Release notes are available for the following major versions of Private Mendix P
 * [2](/releasenotes/private-platform-2/)
 * [1](/releasenotes/private-platform-1/)
 
+Additional release notes are available for the [Private Mendix Platform Download Portal](/releasenotes/private-platform-download-portal/).
+
 For details on title long-term support, medium-term support, and monthly release versions, see [LTS, MTS, and Monthly Release Versions](/releasenotes/studio-pro/lts-mts/).

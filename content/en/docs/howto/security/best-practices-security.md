@@ -27,8 +27,8 @@ When designing an application, you can specify access rules on an entity (for mo
 While the data that is viewable and editable to each role is application-specific, the following best practices are key:
 
 * Do not make attributes determined by the system (like the status of an order) writable
-* If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is a **System.User** object created on the fly)
-* Do not set a default rule for read-and-write access—this forces you to think about each attribute that is added to an entity
+* If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is a **System.User** object created on the fly)—you can do this using [Path to User](/refguide/access-rules/#path-to-user) in your entity *Access Rules*
+* Set **Default rights for new members** to **None** so you have to think about who has access to each attribute that is added to an entity
 * Implement security constraints as entity access rules
 * Do not use constraints on widgets in pages as a security measure, but filter out irrelevant data for the context of the page
 * Keep your attributes editable within data views, because if an access rule prohibits write access, your client will display it as non-editable—this way you are aware of the (correct) working of an access rule
@@ -50,14 +50,14 @@ In addition, apps are priced by the number of end-users and having unnecessary e
 
 To link the customer information to an end-user, create a 1-1 association, `Customer_Account`, between `MyModule.Customer` and `Administration.Account`.
 
-## Configuring User Roles and Access
+## Configuring User Roles and Access {#access-control}
 
 Which users and roles are defined within an application changes, depending on the function of the app. However, there are some key guidelines to keep in mind when validating the user security:
 
-* Disable anonymous access if it has no function within the application
+* Disable [anonymous access](/refguide/anonymous-users/) if it has no function within the application
     * Some applications have anonymous access enabled, solely to serve a custom login form—this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
 * Make roles managing other user roles as strict as possible (configured via **User management** within the user role options)
-* Only allow the role of the app's administrator user (default **MxAdmin**) to create the actual administrative accounts (or configure Single Sign On (SSO))
+* Only allow the user role of the app's administrator user (default **MxAdmin**) to create the actual administrative accounts (or configure Single Sign On (SSO))—the Administrator user role does not need access to the business data in the app—give this to a different user role if you need a role which can access all the business data. 
 
 ## Enabling Strict Mode
 
@@ -189,7 +189,7 @@ The user name of the administrator can be changed in Studio Pro using the app's 
 When deployed to Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in Studio Pro and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
 {{% alert color="info" %}}
-At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
+As a new user is created, the previous administrator account (for example, `MxAdmin`) is not removed. You must remove the old administrator account manually.
 {{% /alert %}}
 
 ## Applying Access Restrictions to Unnecessary Request Handlers{#request-handlers}

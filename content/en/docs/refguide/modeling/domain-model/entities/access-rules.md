@@ -110,14 +110,14 @@ The **Owner** button adds an XPath constraint so the access rule is only applied
 
 This constraint is only valid when the [Store 'owner'](/refguide/entities/#store-owner) checkbox in the **System members** section of the entity properties is checked.
 
-##### Path to User
+##### Path to User {#path-to-user}
 
 The **Path to user...** button adds an XPath constraint so the access rule is only applied when a `User` object which is associated (directly or indirectly) with the current object is the current end-user. When you click **Path to user...**, you can select a path to an associated entity that is either a `System.User` or a specialization of `System.User`. This is then converted into an XPath constraint for the access rule.
 
-For example:
+Take, for example a customer visiting a webshop:
 
-1. Assume that the `Customer` entity is associated with the `Administration.Account` entity (which is a specialization of the `User` entity) via the `Customer_Account` association. The `Order` entity is associated with the `Customer` entity via the `Order_Customer` association.
-2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
+1. Assume that the `Customer` entity contains information about an individual and is associated with the `Administration.Account` entity (which is a specialization of the `User` entity) via the `Customer_Account` association. The `Order` entity is associated with the `Customer` entity via the `Order_Customer` association.
+2. The customer can sign in to the webshop app using the linked Administration.Account, but is only allowed to view their own orders. They cannot view the orders of other customers.
 
 The required XPath constraint can be constructed using the **Path to user...** button on the `Order` entity by navigating to the `Administration.Account` entity via the `Order_Customer` and `Customer_Account` associations in the entity navigation tree. The created rule will look like this:
 
@@ -125,7 +125,7 @@ The required XPath constraint can be constructed using the **Path to user...** b
 [Module.Order_Customer/Module.Customer/Module.Customer_Account='[%CurrentUser%]']
 ```
 
-Applying this XPath constraint means the current end-user can only see orders for the customer associated with the current end-user.
+This XPath constraint means the current end-user can only see orders for the customer associated with the current end-user.
 
 #### Entity Rights
 

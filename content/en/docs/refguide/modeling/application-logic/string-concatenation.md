@@ -12,7 +12,7 @@ aliases:
 
 Sometimes, you might need to concatenate some text together in your app. Common cases are when you want to assemble the full name of a person based on the first and last name.
 
-Whenever you want to paste multiple strings attributes together, you want to make sure that the text looks good in all cases. For example, you do not want "firstname + middlename + lastname" to be printed as "John null Doe" because the middle name is empty.
+Whenever you want to paste multiple strings attributes together, you want to make sure that the text looks good in all cases. For example, you do not want "firstname + ' ' + middlename + ' ' + lastname" to be printed as "John  Doe" with two spaces in-between the first and last name because the middle name is empty.
 
 To understand what to look out for when concatenating strings, it is important to be aware of the three states a string can be in:
 

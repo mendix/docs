@@ -99,4 +99,4 @@ The following describe how the CDC service behaves at runtime:
 
 * [Change Data Capture](/refguide/change-data-capture/)
 * [Mendix Event Broker](/appstore/services/event-broker/)
-* [Event Broker Bridges](/appstore/services/event-broker/#manage-mx-broker-bridge)
+* [Event Broker Bridges](/appstore/services/event-broker-bridges/)

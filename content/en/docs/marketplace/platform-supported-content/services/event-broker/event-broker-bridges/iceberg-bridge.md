@@ -8,21 +8,6 @@ linktitle: "Apache Iceberg Bridge"
 
 An Apache Iceberg Bridge is a one-way bridge that delivers [Change Data Capture (CDC)](/refguide/change-data-capture/) events to Apache Iceberg tables stored in AWS S3 or Azure Blob Storage.
 
-## Creating a Bridge
-
-Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Event Broker Bridges** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
-
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/event_broker_bridges_create.png" class="no-border" >}}
-
-1. Click **Create a Bridge** to create a new bridge.
-2. Select **Iceberg**.
-3. Create and configure your bridge by following the steps in [Configure Service](#configure-http-bridge) below.
-4. After configuring the service and connecting events (as described below), click **Start** on the confirmation screen to deploy the bridge.
-
-Once the bridge has been successfully deployed, its configuration and status can be viewed on the **Overview** page.
-
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_overview.png" alt="" class="no-border" width="400" >}}
-
 ## Configure Service
 
 Configure the service by filling out the following:

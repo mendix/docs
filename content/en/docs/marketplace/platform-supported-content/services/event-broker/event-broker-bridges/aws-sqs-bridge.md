@@ -9,21 +9,6 @@ description: "How to configure and manage an AWS SQS bridge using the Mendix Eve
 
 An AWS SQS Bridge is a bidirectional bridge using the [Amazon Simple Queue Service](https://aws.amazon.com/sqs/) to send and receive events. The creation process for AWS SQS bridges includes two additional steps on the Mendix side and policies you must configure on the AWS side.
 
-## Creating a Bridge
-
-Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Event Broker Bridges** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
-
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/event_broker_bridges_create.png" alt="" class="no-border" >}}
-
-1. Click **Create a Bridge** to create a new bridge.
-2. Select **AWS SQS**.
-3. Create and configure your bridge by following the steps in [Configure Service](#configure-service) below.
-4. After configuring the service and connecting events (as described below), click **Start** on the confirmation screen to deploy the bridge.
-
-After the bridge deploys successfully, you can view its configuration and status on the **Overview** page.
-
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/aws-sqs/ebb_aws_sqs_overview.png" alt="" class="no-border" width="400" >}}
-
 ## Configure Service
 
 1. Configure the service by filling out the following:

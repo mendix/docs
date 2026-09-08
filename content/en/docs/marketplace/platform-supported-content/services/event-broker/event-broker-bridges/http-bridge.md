@@ -30,21 +30,6 @@ To run the HTTP bridge from your client, include a Bearer token in the request h
 1. Open the HTTP bridge details using the **Options** ({{% icon name="three-dots-menu-horizontal" %}}) menu on the **Overview** page.
 2. Add the **Bearer token**.
 
-## Creating a Bridge
-
-Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Event Broker Bridges** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
-
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/event_broker_bridges_create.png" alt="" class="no-border" >}}
-
-1. Click **Create a Bridge** to create a new bridge.
-2. Select **HTTP**.
-3. Create and configure your bridge by following the steps in [Configure Service](#configure-http-bridge) below.
-4. After configuring the service and connecting events (as described below), click **Start** on the confirmation screen to deploy the bridge.
-
-After the bridge deploys successfully, you can view its configuration and status on the **Overview** page.
-
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/http/ebb_http_overview.png" alt="" class="no-border" width="400" >}}
-
 ## Configure Service {#configure-http-bridge}
 
 1. Configure the service by filling out the following:

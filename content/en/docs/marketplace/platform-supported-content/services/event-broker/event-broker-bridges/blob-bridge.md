@@ -9,21 +9,6 @@ description: "How to configure and manage an Azure Blob Storage bridge using the
 
 An Azure Blob Bridge is a one-way bridge that receives events via Azure object storage.
 
-## Creating a Bridge
-
-Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Event Broker Bridges** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
-
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/event_broker_bridges_create.png" alt="" class="no-border" >}}
-
-1. Click **Create a Bridge** to create a new bridge.
-2. Select **Azure Blob Storage**.
-3. Create and configure your bridge by following the steps in [Configure Service](#configure-service) below.
-4. After configuring the service and connecting events (as described below), click **Start** on the confirmation screen to deploy the bridge.
-
-After the bridge deploys successfully, you can view its configuration and status on the **Overview** page.
-
-{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/azure-blob-storage/ebb_azure_blob_overview.png" alt="" class="no-border" >}}
-
 ## Configure Service
 
 1. Configure the service by filling out the following:

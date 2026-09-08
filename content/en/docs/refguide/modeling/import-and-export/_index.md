@@ -35,6 +35,7 @@ Current undesired locations:
 * deployment/
 * nativemobile/builds/
 * vendorlib/temp/
+* mprcontents/
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -234,10 +235,20 @@ The app package is created and exported.
 
 To export a module, right-click a module in the **App Explorer**, and select **Export module package**.
 
-If your module contains files with paths that are not allowed in module packages (for example, files targeting `deployment/`, `.git/`, or path-traversal patterns like `../../`), Studio Pro will show a warning listing the affected paths before you choose where to save the package. Importing such a package is not possible in Studio Pro. You should review and correct the file paths before distributing the module; contact Mendix Support if you need assistance.
+If your module contains files with paths that are not allowed in module packages, Studio Pro will show a warning listing the affected paths before you choose where to save the package. Importing such a package is not possible in Studio Pro. You should review and correct the file paths before distributing the module; contact Mendix Support if you need assistance.
+
+Disallowed paths are the same undesired locations listed above for importing, as well as path-traversal patterns (for example, `../../`):
+
+* directories starting with '.'
+* releases/
+* packages/
+* deployment/
+* nativemobile/builds/
+* vendorlib/temp/
+* mprcontents/
 
 {{% alert color="warning" %}}
-From Studio Pro 11.15, exporting a module that contains files with disallowed paths will also not be possible. Make sure all file paths in your module package are valid before this version.
+In an upcoming version of Studio Pro, exporting a module that contains files with disallowed paths will also not be possible. Make sure all file paths in your module package are valid to avoid issues later.
 {{% /alert %}}
 
 If your module refers to other modules in the app (that is, it is not self-contained), you will see a warning pop-up window.

@@ -8,7 +8,7 @@ cascade:
     - numberless_headings: true
 ---
 
-These release notes cover changes made to the [Private Mendix Platform Download Portal](/private-mendix-platform-download-portal/):
+These release notes cover changes made to the Private Mendix Platform Download Portal:
 
 ## 2026
 

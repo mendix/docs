@@ -12,34 +12,38 @@ This document outlines the security best practices provided by [Best Practice Re
 
 ## Anonymous User Best Practices {#anonymous-users}
 
-This section outlines security issues and Mendix best practices for [anonymous users](/refguide/anonymous-users/). Anonymous users can access an app without signing in, which means that every access right held by the anonymous user role is available to anyone who can reach the URL of the app.
+Anonymous users can access an app without signing in, which means that every access right held by the anonymous user role is available to anyone who can reach the URL of the app. You should only add anonymous users to your app where you have data which you want anyone to be able to access. One example is allowing users to browse the stock of a webshop.
+
+Because of the risks of allowing anonymous users, Mendix has a number of best practices around them.
+
+This section outlines security issues and Mendix best practices for [anonymous users](/refguide/anonymous-users/). 
 
 Best Practice Recommender checks the best practices in this section when both of the following conditions are met:
 
-* The [security level](/refguide/app-security/#security-level) of the app is not **Off**.
-* **Allow anonymous users** is set to **Yes** in **App Security** > the **Anonymous users** tab.
+* The [security level](/refguide/app-security/#security-level) of the app is **Prototype/demo** or **Production**.
+* **Allow anonymous users** is set to **Yes** in the **Anonymous users** tab of **App Security**.
 
 ### Disable Anonymous Users [MXS003] {#mxs003}
 
 Anonymous users are enabled in [App Security](/refguide/app-security/).
 
-Enabling anonymous users removes the ability to attribute actions to an identifiable user, and expands the attack surface to anyone who can reach the URL of the app, without signing in. This may result in unauthorized access to the app and its data.
+Enabling anonymous users gives a level of access to anyone who can reach the URL of the app, without signing in. If this access is not controlled, this may result in unauthorized access to the app and its data. Additionally, because anonymous users are given new identifiers for each session with the app, you cannot attribute actions to an identifiable user
 
 #### Steps to Fix
 
-To fix the issue, set **Allow anonymous users** to **No** in **App Security** > the **Anonymous users** tab.
+If you do not need anonymous users, set **Allow anonymous users** to **No** in the **Anonymous users** tab of **App Security**.
 
-This recommendation can be fixed automatically. In the recommendation, click **Fix** to disable anonymous users.
+This action can be performed automatically. In the recommendation, click **Fix** to disable anonymous users. See [Auto-Fixing the Anti-Pattern](/refguide/best-practice-recommender/#auto-fixing) for more information.
 
 {{% alert color="info" %}}
-If anonymous access is a deliberate part of the design of your app, you can suppress this recommendation from the **Best Practice Recommender** pane and use the other best practices in this section to limit what anonymous users can reach.
+If anonymous access is part of the design of your app, you can select **Suppress this recommendation** from the **Best Practice Recommender** pane and use the other best practices in this section to limit what anonymous users can reach.
 {{% /alert %}}
 
 ### Avoid Granting Anonymous Users Access to Sensitive Entities [MXS004] {#mxs004}
 
 The anonymous user role has read or write access to an entity outside the System module that inherits from a System module entity.
 
-System entities carry identity data, such as user names, email addresses, and role assignments, or arbitrary file content. Unlike ordinary business data, they cannot be safely scoped to an anonymous session with an [XPath constraint](/refguide/xpath-constraints/), because anonymous users have no stable current user to constrain on. Even a constrained access rule risks exposing or substituting the wrong record across sessions, so access should be denied outright rather than constrained.
+System entities can carry identity data such as user names, email addresses, role assignments, or arbitrary file content. This is normally constrained using an [XPath constraint](/refguide/xpath-constraints/) to the current user. However, the same anonymous user will have a different anonymous account for different sessions. This means that even a constrained access rule risks exposing or substituting the wrong record across sessions, so access should be denied outright rather than constrained.
 
 #### Steps to Fix
 
@@ -49,7 +53,9 @@ To fix the issue, remove the [access rule](/refguide/access-rules/) that grants 
 
 The user role configured for anonymous access is the same as the user role configured for the [administrator](/refguide/app-security/#administrator).
 
-Anonymous access and administrator access resolving to the same user role is very likely a configuration error that grants anyone who can reach the URL of the app the full access of an administrator, without signing in. This may result in unauthorized access to the app and its data.
+Anonymous access and administrator access resolving to the same user role grants the full access of an administrator to anyone who can reach the URL of the app, without them needing to sign in. This may result in unauthorized access to the app and its data.
+
+This is unwanted and almost certainly a configuration error.
 
 #### Steps to Fix
 
@@ -58,14 +64,14 @@ To fix the issue, assign anonymous access to a dedicated [user role](/refguide/u
 This recommendation can be fixed automatically. In the recommendation, click **Fix** to create a dedicated **Anonymous** user role and assign anonymous access to it.
 
 {{% alert color="info" %}}
-The automatic fix is not applied when a user role named **Anonymous** already exists. In that case, assign anonymous access to a user role that is not the administrator user role yourself.
+The automatic fix is not applied when a user role named **Anonymous** already exists. In that case, you must assign anonymous access to a user role that is not the administrator user role yourself. Mendix recommends that you use the **Anonymous** user role for this to make the purpose of the user role clear.
 {{% /alert %}}
 
 ### Avoid Granting Anonymous Users Write Access to Persistable Entities [MXS006] {#mxs006}
 
 The anonymous user role has create, update, or delete access to an attribute or association of a [persistable entity](/refguide/persistability/).
 
-Anonymous sessions have no durable, verifiable identity behind them. Any write capability lets an unauthenticated actor create, corrupt, or delete persisted data with no accountability trail.
+Anonymous sessions have no durable, verifiable identity behind them. Granting them any write capability lets anyone modify persistable data with no accountability trail.
 
 #### Steps to Fix
 
@@ -89,7 +95,7 @@ This recommendation can be fixed automatically. In the recommendation, click **F
 
 A [module role](/refguide/module-security/) that does not come from the System module is mapped to the anonymous user role and to one or more other user roles.
 
-Reusing access rights for anonymous users that are also used for signed-in users is a high risk and often leads to misconfigured security. Every access rule, page, and microflow that is opened up for the shared module role is silently opened up for unauthenticated visitors as well. As a result, access that is granted to signed-in users later on leaks to anonymous users without anyone revisiting the anonymous access rules.
+Reusing access rights for anonymous users that are also used for signed-in users is a high risk and often leads to misconfigured security. Every access rule, page, and microflow that is opened up for the shared module role is opened up for unauthenticated visitors. As a result, if you change the access for the module role to give more access to signed-in users at a later stage, this will also grant it to anonymous users without anyone revisiting the anonymous access rules.
 
 #### Steps to Fix
 
@@ -104,7 +110,7 @@ This recommendation can be fixed automatically. In the recommendation, click **F
 
 The anonymous user role is mapped to a module role of the [Administration](/appstore/modules/administration/) module from the Marketplace, such as **Administration.User** or **Administration.Administrator**.
 
-The module roles of the Administration module grant access to sensitive entities, such as **Account**, which holds the credentials and role assignments of the users of the app. The **Administration.Administrator** module role additionally grants the full administrative capability of managing accounts and their user roles. Granting any of this to the anonymous user role exposes it to anyone who can reach the URL of the app, without signing in.
+The module roles of the Administration module grant access to sensitive entities, such as **Account**, which holds the credentials and role assignments of the users of the app. The **Administration.Administrator** module role additionally grants the full administrative capability of managing accounts and their user roles. Granting any of this to the anonymous user role exposes these entities to anyone who can reach the URL of the app, without signing in.
 
 #### Steps to Fix
 

@@ -8,7 +8,7 @@ description: "Describes the performance best practices from Best Practice Recomm
 
 ## Introduction
 
-This document outlines the performance best practices provided by [Best Practice Recommender](/refguide/best-practice-recommender/) in Studio Pro. It describes performance issues and Mendix best practices for optimizing an app performance. 
+This document outlines the performance best practices provided by [Best Practice Recommender](/refguide/best-practice-recommender/) in Studio Pro. It describes potential performance issues and Mendix best practices for optimizing an app performance. 
 
 ### Calculated Attributes Best Practices [MXP001][MXP002] {#mxp001}
 

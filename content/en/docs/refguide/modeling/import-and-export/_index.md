@@ -234,6 +234,12 @@ The app package is created and exported.
 
 To export a module, right-click a module in the **App Explorer**, and select **Export module package**.
 
+If your module contains files with paths that are not allowed in module packages (for example, files targeting `deployment/`, `.git/`, or path-traversal patterns like `../../`), Studio Pro will show a warning listing the affected paths before you choose where to save the package. Importing such a package is not possible in Studio Pro. You should review and correct the file paths before distributing the module; contact Mendix Support if you need assistance.
+
+{{% alert color="warning" %}}
+From Studio Pro 11.15, exporting a module that contains files with disallowed paths will also not be possible. Make sure all file paths in your module package are valid before this version.
+{{% /alert %}}
+
 If your module refers to other modules in the app (that is, it is not self-contained), you will see a warning pop-up window.
 
 Select **Find usages of other user modules** to view the references, or click **Continue exporting** and you will see the **Select Dependencies** dialog box:

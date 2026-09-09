@@ -1,0 +1,11 @@
+# Mendix custom rule: Avoid generic link text
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Links)
+# Reference: CLAUDE.md (Line 85: "Use descriptive link text such as the page title, not 'click here'")
+extends: existence
+message: "Use descriptive link text instead of '%s'."
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#hyperlinks
+level: error
+ignorecase: true
+scope: raw
+raw:
+  - '\[(?:click here|here|this|this link|this page|link)\]\('

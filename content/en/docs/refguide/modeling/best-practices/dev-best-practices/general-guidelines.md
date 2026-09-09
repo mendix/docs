@@ -30,6 +30,41 @@ Applications exceeding these guidelines may still function, depending on your sy
 App size impacts IDE performance. Choose a development strategy that aligns with your system's capabilities and Mendix's recommended guidelines.
 {{% /alert %}}
 
+## Page and Microflow URLs {#page-and-microflow-urls}
+
+When designing page and microflow URLs, prefer clear path segments over compact patterns:
+
+* Use `/` to divide the URL into meaningful segments
+* Put a parameter in its own segment, for example, `product/{Product/Name}` instead of `product-{Product/Name}`
+* Do not start the URL with a parameter. Use a static segment first, for example, `user/{User/Id}` instead of `{User/Id}`
+* Use static segments to make the structure explicit, for example, `category/{Category/Code}/product/{Product/Name}`
+* Use `-` to separate words within a static segment, for example, `orders/request-return-label`
+* Use a strong unique prefix to ensure uniqueness of the URL
+
+Following these best practices makes URLs easier to read and maintain, and helps prevent conflict with other URLs.
+
+URL conflicts are checked per path segment. Two URLs are considered conflicting when they have the same number of segments and Studio Pro cannot tell, from the URL structure alone, which page or microflow should handle the request. A conflict can be full or partial.
+
+A full conflict means that the patterns overlap for all matching values. In other words, every URL that matches one pattern also matches the other. For example, `product/{Product/Name}` and `product/{Product/Code}` always conflict because both patterns accept any value in the second segment. Therefore, Studio Pro cannot use the URL itself to tell them apart. This means that there is no URL that does not conflict. For example, `https://example.com/p/product/chair` matches both patterns.
+
+A partial conflict means that the patterns overlap only for specific values. Most URLs remain unique, but some can match both patterns. For example, `product-{Name}` and `product-overview` only conflict for the URL `product-overview`, because `Name` can be `overview`. In that case, Studio Pro cannot tell whether `overview` is meant to be a fixed URL or a parameter value. For example, `https://example.com/p/product-overview` matches both patterns, whereas `https://example.com/p/product-chair` only matches `product-{Name}`.
+
+When a request matches conflicting URL patterns, the Mendix Runtime selects one of them to open. Which pattern is selected is undefined. This can lead to unexpected behavior or a not-found page. For example, `https://example.com/p/product-overview` matches both `product-{Name}` and `product-overview`. If the selected pattern does not resolve to valid values, the request can fail even though the other pattern would have worked.
+
+Common full conflict cases include the following:
+
+* Two parameters in the same position, such as `product/{Product/Name}` and `product/{Product/Code}`. Resolve this by adding distinct static segments, for example, `product/name/{Product/Name}` and `product/code/{Product/Code}`.
+
+Common partial conflict cases include the following:
+
+* A static segment that can also be matched by a parameter, such as `product/{Product/Name}` and `product/sale`. Resolve this by making the parameter route more explicit, for example, `product/name/{Product/Name}` and `product/sale`.
+* A numeric static segment that overlaps with an `Id` parameter, such as `order/{Order/Id}` and `order/123`. Resolve this by using a different static pattern, for example, `order/{Order/Id}` and `order-123`.
+* Mixed segments where neither the static prefix nor the static suffix makes the segment unique, such as `product-{Product/Name}-details` and `product-sale-details`. Resolve this by putting the parameter in its own segment, for example, `product/{Product/Name}/details` and `product-sale-details`.
+
+If either the prefix or the suffix is unique, the segments do not conflict.
+
+Using separate segments reduces ambiguity. For example, `product/{Product/Name}` and `product-sale` do not conflict because they have a different number of segments.
+
 ## Model SDK
 
 The Mendix Model SDK enforces a strict limit of 20,000 units per working copy.

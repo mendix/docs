@@ -65,7 +65,7 @@ numberless_headings: true
 ### Improvements
 
 * Apps built with Studio Pro [10.6](/releasenotes/studio-pro/10.6/) can now be tested using ATS.
-* We upgraded to Studio Pro [8.18.27](/releasenotes/studio-pro/8.18/#81827) for security fixes.
+* We upgraded to Studio Pro 8.18.27 for security fixes.
 * We addressed support for the MacOs versions (11, 12, 13) and resolutions (2K, 4K) for Selenium 4.
 * We added support for the [Accordion](/appstore/widgets/accordion/) widget.
 
@@ -132,7 +132,7 @@ numberless_headings: true
 
 ### Improvements
 
-* We upgraded to Mendix [8.18.24](/releasenotes/studio-pro/8.18/#81824) for security fixes.
+* We upgraded to Mendix 8.18.24 for security fixes.
 
 ### Fixes
 
@@ -276,7 +276,7 @@ numberless_headings: true
 
 ### Improvements
 
-* The ATS source code and model has been upgraded to Mendix [8.18.7](/releasenotes/studio-pro/8.18/#8187).
+* The ATS source code and model has been upgraded to Mendix 8.18.7.
 * The ATS Job running web service no longer needs a user name and password combination to authenticate the requests. The API token is enough to authenticate the request.
 
 ## 2.24.0
@@ -502,7 +502,7 @@ To make this process even faster and skip one click, we added the option to run 
 
 ### Mendix 8.9 Compatibility
 
-Apps built with [Mendix 8.9](/releasenotes/studio-pro/8.9/) can now be tested and recorded using ATS.
+Apps built with Mendix 8.9 can now be tested and recorded using ATS.
 
 ### Improvements
 
@@ -519,7 +519,7 @@ Apps built with [Mendix 8.9](/releasenotes/studio-pro/8.9/) can now be tested an
 
 ### Mendix 8.2.2 Compatibility
 
-Apps built with [Mendix 8.2.2](/releasenotes/studio-pro/8.2/#822) can now be tested using ATS.
+Apps built with Mendix 8.2.2 can now be tested using ATS.
 
 ### Fixes
 
@@ -568,7 +568,7 @@ When deleting an action that is being used somewhere else, a warning is now show
 
 ### Mendix 8 Compatibility
 
-Apps built with [Studio Pro 8](/releasenotes/studio-pro/8/) can now be tested using ATS.
+Apps built with Studio Pro 8 can now be tested using ATS.
 
 ### Fixes
 
@@ -913,7 +913,7 @@ Mendix applications based on Mendix 7.16 can now be tested and recorded with ATS
 
 ### Control of Administration Rights
 
-It is now possible to give members of an ATS app, administration rights directly from the "App Settings" page in ATS. In other words it is no longer required for an app administrator in ATS to have an administrative role in the project in Mendix Sprintr. Please keep in mind that users still need to be a member of a project in Sprintr for them to be eligible to be app administrators for the corresponding app in ATS.
+It is now possible to give members of an ATS app, administration rights directly from the "App Settings" page in ATS. In other words it is no longer required for an app administrator in ATS to have an administrative role in the project in Mendix Projects. Please keep in mind that users still need to be a member of a project in **Projects** for them to be eligible to be app administrators for the corresponding app in ATS.
 
 In order to make sure that administration rights which have been granted to users are not overwritten, we no longer automatically revoke administration rights when the project role for a user in Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the "App Settings" page. Finally, note that a user who has an administrative project role in Developer Portal will always have administrative rights in ATS.
 
@@ -1041,7 +1041,7 @@ The same holds for the function parameters.
 * When testing on Internet Explorer the calculation of the application context for example, dialog was not working. This had the effect that sometimes an element was found that was not within the current context which probably then causes a test case to fail. This is now fixed.
 * We fixed an issue in the recorder where the recorder would send too much information to ATS causing it to slow down significantly.
 * Due to a bug it was possible to create a test case with a non-unique name from a story. This is now fixed.
-* We fixed a bug where an update of a story type in Sprintr would not be updated correctly in ATS.
+* We fixed a bug where an update of a story type in **Projects** would not be updated correctly in ATS.
 * We fixed a bug where it was not possible to run a test suite if it contained a test case with an empty test step.
 * When hovering over a parameter only a part of the description would be shown in some cases. This is now fixed.
 * Due to a bug it was not possible to copy a test case and paste it in another folder. We fixed this.

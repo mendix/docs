@@ -1,5 +1,5 @@
 ---
-title: "Private Mendix Platform User API"
+title: "Private Mendix Platform User API - Version 1"
 url: /apidocs-mxsdk/apidocs/private-platform-user-api/
 type: swagger
 description: "This API allows you to manage users in Private Mendix Platform."
@@ -16,11 +16,11 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 The Private Mendix Platform User API allows you to manage users in Private Mendix Platform. You can use the API to do the following:
 
-* Get a user by ID
-* Get a list of all users for the current organization
-* Create, update, or delete a user
-* Change the password of a user with a specific ID
+* Get a user by ID.
+* Get a list of all users for the current organization.
+* Create, update, or delete a user.
+* Change the password of a user with a specific ID.
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/openapi-user.yaml"  >}}
+{{< swaggerui src="/openapi-spec/openapi-user-v1.yaml"  >}}

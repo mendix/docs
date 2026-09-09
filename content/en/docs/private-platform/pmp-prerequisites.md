@@ -38,7 +38,8 @@ For performance reasons, Mendix recommends at least the following minimum hardwa
 | Tool | Version |
 | --- | --- |
 | Grafana | 12.2.1 |
-| Prometheus | 2.41.0 |
+| Prometheus | 3.7.3 |
+| Loki | 2.6.1 |
 
 {{% alert color="info" %}}
 Currently, Private Mendix Platform only supports Grafana configurations with a single Loki and a single Prometheus data source. Configurations using a central Grafana instance with multiple Loki or Prometheus datasources are not supported.

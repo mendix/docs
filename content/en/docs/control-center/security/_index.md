@@ -2,7 +2,7 @@
 title: "Security"
 url: /control-center/security/
 description: "Describes the Security category in the Mendix Control Center."
-weight: 30
+weight: 50
 no_list: false
 ---
 

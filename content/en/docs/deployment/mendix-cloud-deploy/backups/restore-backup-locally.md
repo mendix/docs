@@ -22,7 +22,7 @@ This how-to explains how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * [Download a backup](/developerportal/operate/download-backup/) that you want to restore locally.
-* Install PostgreSQL version 12 or above (as you need pgAdmin version 4.12 or above) on your local machine by downloading and running the [PostgreSQL Installer](https://www.postgresql.org/download/windows/). When installing, use the program defaults and choose a password.
+* Install PostgreSQL version 17 or above (you need pgAdmin version [8.14](https://www.postgresql.org/ftp/pgadmin/pgadmin4/v8.14/) or above) on your local machine by downloading and running the [PostgreSQL Installer](https://www.postgresql.org/download/windows/). When installing, use the program defaults and choose a password.
 
     {{% alert color="info" %}}You will need this password later to allow your Mendix app to access the restored data.{{% /alert %}}
 

@@ -17,21 +17,25 @@ Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage
 
 These are the tasks you can achieve with Maia in Mendix Portal:
 
-* **Maia Chat** — A built-in chat interface. For more information, refer to [Maia Chat](#maia-chat).
-* **Maia Rewrite** — An AI-assisted writing aid integrated within the Mendix Community posting interface, which helps you ask properly formatted questions that are more likely to be answered. For more information on how to use it, refer to the [Asking Your Question](/community-tools/mendix-community/#asking-question) section in *Mendix Community*.
-* **Maia Summarize** — An AI-assisted summarizing aid which condenses lengthy discussions for a question posted on Mendix Community into key points, making it easier for you to find solutions to your questions without having to plough through every single answer in the thread. For more information on how to use it, refer to the [Question Details](/community-tools/mendix-community/#question-details) section in *Mendix Community*.
-* **Create Story with Maia** — An AI-assisted tool that helps you easily create stories. This option is available in the following places:
+* **Maia Chat** – A built-in chat interface. For more information, refer to [Maia Chat](#maia-chat).
+* **Maia Rewrite** – An AI-assisted writing aid integrated within the Mendix Community posting interface, which helps you ask properly formatted questions that are more likely to be answered. For more information on how to use it, refer to the [Asking Your Question](/community-tools/mendix-community/#asking-question) section in *Mendix Community*.
+* **Maia Summarize** – An AI-assisted summarizing aid which condenses lengthy discussions for a question posted on Mendix Community into key points, making it easier for you to find solutions to your questions without having to plough through every single answer in the thread. For more information on how to use it, refer to the [Question Details](/community-tools/mendix-community/#question-details) section in *Mendix Community*.
+* **Create Story with Maia** – An AI-assisted tool that helps you easily create stories. This option is available in the following places:
 
     * On the [Board](/developerportal/project-management/epics/board/) page
     * On the [Planning](/developerportal/project-management/epics/planning/) page
     * On the [Feedback](/developerportal/app-insights/feedback/#create-with-maia) page
 
-* **Refine Story with Maia** — An AI-assisted tool that allows you to refine a previously created story with the help of Maia. This option is available for stories in the following places:
+* **Refine Story with Maia** – An AI-assisted tool that allows you to refine a previously created story with the help of Maia. This option is available for stories in the following places:
 
     * On the [Board](/developerportal/project-management/epics/board/) page
     * On the [Planning](/developerportal/project-management/epics/planning/) page
 
 * **Maia for Feedback** – An AI-assisted tools that help you organize unsorted feedback into groups and themes. This is available on the [Feedback](/developerportal/app-insights/feedback/#organizing-feedback-with-maia) page.
+
+## Maia Plan
+
+Maia Plan helps you plan and generate an app from within Mendix Portal. All you need to do is provide project context, review and refine the generated project scope, and approve the solution proposal to start your app development. For detailed steps, refer to [Maia Plan](/developerportal/maia-plan/).
 
 ## Maia Chat {#maia-chat}
 

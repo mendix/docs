@@ -14,14 +14,15 @@ set -euo pipefail
 # ---------------------------------------------------------------------------
 INPUT="$(cat)"
 
-TOOL_NAME="$(printf '%s' "$INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('tool_name',''))" 2>/dev/null || true)"
+TOOL_NAME="$(printf '%s' "$INPUT" | jq -r '.tool_name // ""' 2>/dev/null || true)"
 
-# Only validate Bash commands — allow everything else through
-if [[ "$TOOL_NAME" != "Bash" ]]; then
+# Only validate Bash commands — allow everything else through.
+# If TOOL_NAME is empty (parse failure), fall through to check the command anyway (fail closed).
+if [[ -n "$TOOL_NAME" && "$TOOL_NAME" != "Bash" ]]; then
   exit 0
 fi
 
-COMMAND="$(printf '%s' "$INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('tool_input',{}).get('command',''))" 2>/dev/null || true)"
+COMMAND="$(printf '%s' "$INPUT" | jq -r '.tool_input.command // ""' 2>/dev/null || true)"
 
 if [[ -z "$COMMAND" ]]; then
   exit 0
@@ -136,20 +137,19 @@ BLOCKED_PATTERNS=(
 # ---------------------------------------------------------------------------
 check_command() {
   local cmd="$1"
-  # Trim leading/trailing whitespace
-  cmd="$(echo "$cmd" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
+  # Trim leading/trailing whitespace using parameter expansion
+  cmd="${cmd#"${cmd%%[![:space:]]*}"}"
+  cmd="${cmd%"${cmd##*[![:space:]]}"}"
 
   if [[ -z "$cmd" ]]; then
     return 0
   fi
 
-  # Convert to lowercase for case-insensitive matching
-  local cmd_lower
-  cmd_lower="$(echo "$cmd" | tr '[:upper:]' '[:lower:]')"
+  # Convert to lowercase using parameter expansion
+  local cmd_lower="${cmd,,}"
 
   for pattern in "${BLOCKED_PATTERNS[@]}"; do
-    local pattern_lower
-    pattern_lower="$(echo "$pattern" | tr '[:upper:]' '[:lower:]')"
+    local pattern_lower="${pattern,,}"
 
     # shellcheck disable=SC2254
     if [[ "$cmd_lower" == $pattern_lower ]]; then
@@ -164,8 +164,12 @@ check_command() {
 # ---------------------------------------------------------------------------
 # 4. Split on pipes and command chains, then check each sub-command
 # ---------------------------------------------------------------------------
-# Replace common chain operators with a delimiter
-NORMALIZED="$(echo "$COMMAND" | sed 's/&&/\n/g; s/||/\n/g; s/;/\n/g; s/|/\n/g')"
+# Replace common chain operators with newlines using parameter expansion
+# Order matters: replace && and || before | to avoid double-splitting ||
+NORMALIZED="${COMMAND//&&/$'\n'}"
+NORMALIZED="${NORMALIZED//||/$'\n'}"
+NORMALIZED="${NORMALIZED//;/$'\n'}"
+NORMALIZED="${NORMALIZED//|/$'\n'}"
 
 while IFS= read -r subcmd; do
   check_command "$subcmd"

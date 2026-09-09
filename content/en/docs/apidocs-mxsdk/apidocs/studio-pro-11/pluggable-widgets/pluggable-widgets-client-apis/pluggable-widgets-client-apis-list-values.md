@@ -1,7 +1,7 @@
 ---
 title: "List Values"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/
-description: A guide to understanding the list of objects for the datasource property in Mx10.
+description: A guide to understanding the list of objects for the datasource property.
 ---
 
 ## Introduction
@@ -196,6 +196,12 @@ It is possible to set filtering conditions for items of a datasource. `setFilter
 `setFilter` accepts only a specially created object of type `FilterCondition` that describes desired filtering behavior. It is possible to create a filter conditions object using functions provided in `mendix` module under `mendix/filters/builders` path. Those functions we call filter builders. Also `undefined` could be passed to `setFilter` to clear filtering conditions.
 
 Some examples of builder functions are `equals`, `greaterThan`, `lessThanOrEqual` for filtering on `DateTime` or `Decimal` attributes. Functions like `startsWith`, `contains` are useful for filtering on `String` attributes. Filtering based on associations is also possible. For example, you can use `equals` with references and `contains` with reference sets.
+
+To use the filter builders in a pluggable widget, import the individual builder functions you need directly from the "mendix/filters/builders" module path:
+
+```ts
+import { attribute, literal, equals, startsWith, and, or } from "mendix/filters/builders";
+```
 
 The following code samples show how to use filter builders and apply filtering to a data source property with three linked attributes and two linked associations:
 

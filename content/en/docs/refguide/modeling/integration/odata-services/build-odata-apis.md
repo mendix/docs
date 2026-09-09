@@ -505,7 +505,6 @@ You can generate and reuse generated validation microflows. The following exampl
     }
      ```
 
-
 ### Deleting Data
 
 Deleting is provided using the `DELETE` operation. See the following `DELETE` request:

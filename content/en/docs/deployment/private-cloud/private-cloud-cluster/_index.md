@@ -26,6 +26,7 @@ To create a cluster in your OpenShift context, you need the following:
 * A supported Kubernetes platform; for more information, see [Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#supported-versions)
 * An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
+* **STACKIT CLI** [installed](https://github.com/stackitcloud/stackit-cli/blob/main/INSTALLATION.md) if you are creating clusters on STACKIT
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
 
@@ -89,43 +90,13 @@ To add a namespace, do the following:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details.PNG" class="no-border" >}}
 
-3. Enter the following details:
-    * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+3. Enter the **Namespace** name. This is the namespace in your platform. It must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
 
 4. Click **Done** to create the namespace.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/add-namespace.png" class="no-border" >}}
 
-{{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
-
-### Adding a Namespace for Standalone Cluster {#add-standalone-namespace}
-
-If you would like to add a namespace to be added in the Standalone cluster, do the following:
-
-1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/empty-cluster.png" class="no-border" >}}
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/ClusterDetails.png" class="no-border" >}}
-
-2. Click **Add Namespace**.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details-standalone.png" class="no-border" >}}
-
-3. Enter the following details:
-
-    * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
-    * **Installation type** – Choose **Standalone**.
-
-4. Click **Next**.
-5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/standalone_downloadcli.png" class="no-border" >}}  
-
-    For existing namespaces, if you would like to download the executables for mxpc-cli, you can go [here](https://privatecloud.mendixcloud.com/rest/internal/v1/mxpc-cli?operatorVersion=latest)
-
-    In above page, once you do a JSON format, you will get the links for mxpc-cli for different available versions.
+{{% alert color="warning" %}} Please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
 ## Installing and Configuring the Mendix Operator {#install-operator}
 
@@ -205,142 +176,44 @@ At the moment, the `baseOSImageTagTemplate` can be set to one of the following v
 
 * `ubi8-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 8 Micro images; this option can be used for some cases where backward compatibility is needed.
 * `ubi9-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 9 Micro images; this is the default option.
+* `hi-1-jre{{.JavaVersion}}-entrypoint` - to use [Red Hat Hardened Images](https://www.redhat.com/en/products/hardened-images)
 
 {{% alert color="info" %}}
-
-Future Studio Pro releases will have an option to use alternative (newer) LTS versions of Java, such as Java 17 or Java 21.
-
 If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA. Because of that, Java 17 or Java 21-based applications should use the Operator in version 2.15.0 or above.
+{{% /alert %}}
 
+{{% alert color="info" %}}
+Red Hat Hardened Images do not provide images for Java 8, 11, or 17. Only Java 21 is supported at the moment.
+
+To use Hardened Images, upgrade to Mendix 11, or any supported LTS version of Mendix.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+At this time, to improve security and remove unnecessary components, Hardened Images for Mendix apps are shipped without Bash or other standard UNIX tools.
+
+The recommended way to run diagnostics is using [ephemeral debug containers](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#ephemeral-container).
+
+Any non-root container can be attached to a Mendix app pod and can have access to the Mendix app's filesystem and processes.
+For example, this command can be used to attach a curl container to a pod (replace `$POD_NAME` with the name of the target pod):
+
+```shell
+kubectl debug $POD_NAME --target mendix --image registry.access.redhat.com/hi/curl:latest-builder --profile restricted -it -- /bin/bash
+```
+
+This debug container will share the process space with the Mendix app, and the Mendix app container's filesystem will be mounted into `/proc/1/root`.
 {{% /alert %}}
 
 ### Endpoint (network) Configuration {#advanced-network-settings}
 
-The OperatorConfiguration contains the following user-editable options for network configuration:
-
-When using **Ingress** for network endpoints:
-
-```yaml
-apiVersion: privatecloud.mendix.com/v1alpha1
-kind: OperatorConfiguration
-# ...
-# omitted lines for brevity
-# ...
-spec:
-  # Endpoint (Network) configuration
-  endpoint:
-    # Endpoint type: ingress, openshiftRoute or service
-    type: ingress
-    # Optional, can be omitted: Service annotations
-    serviceAnnotations:
-      # example: custom AWS CLB configuration
-      service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
-      service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:account:certificate/id
-      service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
-    # Ingress configuration: used only when type is set to ingress
-    ingress:
-      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
-      annotations:
-        # default annotation: allow uploads of files up 500 MB in the NGINX Ingress Controller
-        nginx.ingress.kubernetes.io/proxy-body-size: 500m
-        # example: use the specified cert-manager ClusterIssuer to generate TLS certificates with Let's Encrypt
-        cert-manager.io/cluster-issuer: staging-issuer
-        # example: deny access to /rest-doc
-        nginx.ingress.kubernetes.io/configuration-snippet: |
-          location /rest-doc {
-            deny all;
-            return 403;
-          }
-      # App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
-      domain: mendix.example.com
-      # Enable or disable TLS
-      enableTLS: true
-      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
-      # This example is a template which lets cert-manager to generate a unique certificate for each app
-      tlsSecretName: '{{.Name}}-tls'
-      # Optional: specify the Ingress class name
-      ingressClassName: alb
-      # Optional, can be omitted : specify the Ingress path
-      path: "/"
-      # Optional, can be omitted : specify the Ingress pathType
-      pathType: ImplementationSpecific
-# ...
-# omitted lines for brevity
-# ...
-```
-
-When using **OpenShift Routes** for network endpoints:
-
-```yaml
-apiVersion: privatecloud.mendix.com/v1alpha1
-kind: OperatorConfiguration
-spec:
-  # Endpoint (Network) configuration
-  endpoint:
-    # Endpoint type: ingress, openshiftRoute, or service
-    type: openshiftRoute
-    # OpenShift Route configuration: used only when type is set to openshiftRoute
-    openshiftRoute:
-      # Optional, can be omitted: annotations which should be applied to all Ingress Resources
-      annotations:
-        # example: use HSTS headers
-        haproxy.router.openshift.io/hsts_header: max-age=31536000;includeSubDomains;preload
-      # Optional: App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
-      domain: mendix.example.com
-      # Enable or disable TLS
-      enableTLS: true
-      # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
-      # This example is the name of an existing secret, which should be a wildcard matching subdomains of the domain name
-      tlsSecretName: 'mendixapps-tls'
-```
-
-When using **Services** for network endpoints (without an Ingress or OpenShift route):
-
-```yaml
-apiVersion: privatecloud.mendix.com/v1alpha1
-kind: OperatorConfiguration
-spec:
-  # Endpoint (Network) configuration
-  endpoint:
-    # Endpoint type: ingress, openshiftRoute, or service
-    type: service
-    # Optional, can be omitted: the Service type
-    serviceType: LoadBalancer
-    # Optional, can be omitted: Service annotations
-    serviceAnnotations:
-      # example: annotations required for AWS NLB
-      service.beta.kubernetes.io/aws-load-balancer-type: external
-      service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
-      service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
-    # Optional, can be omitted: Service ports
-    servicePorts:
-      - 80
-      - 443
-```
-
-You can change the following options:
-
-* **type**: – select the Endpoint type, possible options are `ingress`, `openshiftRoute` and `service`; this parameter is also configured through the **Configuration Tool**
-* **ingress**: - specify the Ingress configuration, required when **type** is set to `ingress`
-* **openshiftRoute**: - specify the OpenShift Route configuration, required when **type** is set to `openshiftRoute`
-* **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app, and {{.Domain}} will be replaced with the application's domain name
-* **serviceAnnotations**: - optional, can be used to specify the Service annotations, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app, and {{.Domain}} will be replaced with the application's domain name
-* **ingressClassName**: - optional, can be used to specify the Ingress Class name
-* **path**: - optional, can be used to specify the Ingress path; default value is `/`
-* **pathType**: - optional, can be used to specify the Ingress pathType; if not set, no pathType will be specified in Ingress objects
-* **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Configuration Tool**
-* **enableTLS**: - allows you to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
-* **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
-* **serviceType**: - can be used to specify the Service type, possible options are `ClusterIP` and `LoadBalancer`; if not specified, Services will be created with the `ClusterIP` type
-* **servicePorts**: - can be used to specify a list of custom ports for the Service; if not specified, Services will use be created with port `8080`
+For information on using advanced network configuration settings, see [Network Ingress Settings section](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
 
 {{% alert color="info" %}}
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-### Mendix App Deployment settings {#advanced-deployment-settings}
+### Mendix App Deployment Settings {#advanced-deployment-settings}
 
-The OperatorConfiguration contains the following user-editable options for configuring Mendix app Deployments (Pods):
+Users can edit the following `OperatorConfiguration` options for configuring Mendix app deployments (pods):
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -360,8 +233,8 @@ spec:
 
 You can change the following options:
 
-* **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
-* **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
+* **runtimeAutomountServiceAccountToken** – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
+* **runtimeDeploymentPodAnnotations** – specify default annotations for Mendix app Pods
 
 ### Mendix App Resource Customization {#advanced-resource-customization}
 
@@ -549,7 +422,7 @@ Starting from Mendix Operator 2.23.0, environments running in `leaderless` mode 
 When another **runtimeLeaderSelection** mode is used (default, unspecified `assigned` mode, or `none`), the healthcheck microflow is used, as described above.
 {{% /alert %}}
 
-#### Customize Liveness Probe to Resolve Crash Loopback Scenarios
+#### Customize Liveness Probe to Resolve Crash Loopback Scenarios{#customize-liveness}
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
 
@@ -932,11 +805,53 @@ spec:
       azure.workload.identity/use: "true"
 ```
 
-Alternatively, for Standalone clusters, pod labels can be specified in the `MendixApp` CR for a specific app.
-
 {{% alert color="warning" %}}
 The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
 {{% /alert %}}
+
+### Pod Annotations (General) {#pod-annotations}
+
+Mendix Operator version 2.27.0 or above allows you to specify default pod annotations for task pods (build and storage provisioners) and runtime (app) pods.
+
+To specify the default pod annotations for a namespace, specify them in `customPodAnnotations.general` in `OperatorConfiguration`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: custom pod annotations
+  customPodAnnotations:
+    # Optional: general pod annotations (applied to all app-related pods)
+    general:
+      # Example: use FQDN instead of IP addresses when communicating with the Kubernetes API server
+      kubernetes.azure.com/set-kube-service-host-fqdn: "true"
+```
+
+{{% alert color="warning" %}}
+The Mendix Operator uses some annotations for internal use. To avoid conflicts with these internal pod annotations, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
+{{% /alert %}}
+
+### Node Selector (General) {#node-selector}
+
+Mendix Operator version 2.27.0 or above allows you to specify the default `nodeSelector` for task pods (build and storage provisioners) and runtime (app) pods.
+
+To configure the default pod `nodeSelector` for a namespace, specify them in `customPodNodeSelector.general` in `OperatorConfiguration`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: custom pod nodeSelector
+  customPodNodeSelector:
+    # Optional: general pod nodeSelector (applied to all app-related pods)
+    general:
+      # Example: use Amazon EKS Auto Mode
+      eks.amazonaws.com/compute-type: auto
+```
 
 ### Delaying App Shutdown {#termination-delay}
 
@@ -968,7 +883,7 @@ Mendix app container images are locked down by default - they run as a non-root 
 
 Starting from Mendix Operator version 2.21.0, all system containers and pods use `readOnlyRootFilesystem` by default. It is possible to specify if an environment's app container should also have a read-only filesystem. For Mendix apps, the `readOnlyRootFilesystem` option is off by default, as some Java actions in marketplace modules might expect some paths to be writable.
 
-If you enable the `runtimeReadOnlyRootFilesystem` option in the MendixApp CRD (for standalone clusters) or in the Mendix on Kubernetes Portal, the Mendix app container also uses a read-only root filesystem. As Mendix apps needs certain paths to be writable, an [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) is used for writable paths. Each path is mounted as a separate `subPath` to keep data separated. The `emptyDir` size is set to the `ephemeral-storage` [resource limit](#advanced-resource-customization).
+If you enable the `runtimeReadOnlyRootFilesystem` option in the Mendix on Kubernetes Portal, the Mendix app container also uses a read-only root filesystem. As Mendix apps needs certain paths to be writable, an [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) is used for writable paths. Each path is mounted as a separate `subPath` to keep data separated. The `emptyDir` size is set to the `ephemeral-storage` [resource limit](#advanced-resource-customization).
 
 In addition to internal Mendix Runtime paths, `/tmp` is mounted for any temporary files that might be created through Java actions. For Java actions to work correctly, ensure that they only create files in `/tmp`, for example, by using the `File.createTempFile` or `File.createTempDirectory` Java methods.
 
@@ -1064,7 +979,7 @@ When you add a cluster manager, the user will have most of the access which the 
 
 The only limitations are that:
 
-* An added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster — they need to be added as a member of the application if they want to manage existing environments in the namespaces.
+* An added cluster manager will not be able to operate on or manage the environments created in the namespaces which are already in the cluster—they need to be added as a member of the application if they want to manage existing environments in the namespaces.
 * Cluster managers who are added to the cluster cannot remove the cluster manager who created the cluster.
 {{% /alert %}}
 
@@ -1398,7 +1313,7 @@ You can change the access rights for, or completely remove, existing members.
 
 #### Operate {#operate}
 
-The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in [Apps](https://sprintr.home.mendix.com/).
+The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in [Projects](https://projects.home.mendix.com/).
 The following pages can be configured:
 
 * Metrics

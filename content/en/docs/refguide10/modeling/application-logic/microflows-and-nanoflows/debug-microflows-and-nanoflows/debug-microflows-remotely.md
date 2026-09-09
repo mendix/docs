@@ -46,7 +46,7 @@ The debugger supports only debugging of single-instance environments. Multi-inst
 
 When your application is in Mendix Cloud, follow these steps:
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 
 2. Click **Environments** in the navigation pane.
 
@@ -72,7 +72,7 @@ If your application is on Mendix on Kubernetes connected, you can get the creden
 You can only remotely debug apps deployed to Mendix on Kubernetes if you are using Mendix Operator version 1.6.0 or above.
 {{% /alert %}}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 
 2. Click **Environments** in the navigation pane.
 

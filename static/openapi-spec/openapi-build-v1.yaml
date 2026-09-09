@@ -1,0 +1,545 @@
+openapi: 3.0.1
+info:
+  title: Build Service v1
+  description: "Provide services for build, retrive, lock, unlock and download app packages and sbom files. \r\n"
+  version: 1.0.0
+servers:
+  - url: https://pmp-demo.privateplatform.mendix.com/buildservice/v1
+paths:
+  /apps/{appId}/packages:
+    post:
+      tags:
+        - apps
+      summary: Start build pipeline to create app package
+      description: Start build pipeline to create package for specified app
+      operationId: createPackage
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BuildRequest'
+            examples:
+              App package build request:
+                value:
+                  branchName: main
+                  revisionId: 6f995268
+                  majorVersion: 1
+                  minorVersion: 0
+                  patchVersion: 2
+      responses:
+        '202':
+          $ref: '#/components/responses/BuildResponse'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    get:
+      tags:
+        - apps
+      summary: Retreive all packages of app
+      description: Retreive all packages of specified app
+      operationId: listAppPackages
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/packages'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /apps/{appId}/packages/{packageId}:
+    get:
+      tags:
+        - apps
+      summary: Retreive a package of app
+      description: Retreive a package of app with specified appId and packageId
+      operationId: getAppPackage
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+        - name: packageId
+          in: path
+          description: Package Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/package'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    delete:
+      tags:
+        - apps
+      summary: 'Delete a package of app '
+      description: Delete a package of app with specified appId and packageId
+      operationId: deleteAppPackage
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+        - name: packageId
+          in: path
+          description: Package Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Successful operation
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /apps/{appId}/packages/{packageId}/mdafile:
+    get:
+      tags:
+        - apps
+      summary: Download a package MDA file of app
+      description: Download a package MDA file of app with specified appId and packageId
+      operationId: downloadAppPackageMDA
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+        - name: packageId
+          in: path
+          description: Package Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /apps/{appId}/packages/{packageId}/sbomfile:
+    get:
+      tags:
+        - apps
+      summary: Download a package SBOM file of app
+      description: Download a package SBOM file of app with specified appId and packageId
+      operationId: downloadAppPackageSBOM
+      parameters:
+        - name: appId
+          in: path
+          description: App Id
+          required: true
+          schema:
+            type: string
+        - name: packageId
+          in: path
+          description: Package Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: JSON
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /apps/{appId}/packages/{packageId}/request:
+    post:
+      tags:
+        - apps
+      summary: Lock or Unlock a package of app
+      description: Lock or Unlock a package of app with specified appId and packageId
+      operationId: lockUnlockAppPackage
+      parameters:
+        - name: appId
+          in: path
+          required: true
+          description: App Id
+          schema:
+            type: string
+        - name: packageId
+          in: path
+          description: Package Id
+          required: true
+          schema:
+            type: string
+        - name: action
+          in: query
+          description: Lock or unlock app package
+          schema:
+            enum:
+              - Lock
+              - Unlock
+            type: string
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+          
+components:
+  parameters:
+    appId:
+      name: appId
+      in: path
+      description: App Id
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+    packageId:
+      name: packageId
+      in: path
+      description: Package Id
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: ec59b4e6-2f27-4068-853a-b811f181d46c
+
+  schemas:
+    BuildRequest:
+      title: BuildRequest
+      type: object
+      description: Build app package request
+      properties:
+        branchName:
+          type: string
+          description: App branch name to build.
+          example: main
+        revisionId:
+          type: string
+          description: App revision ID to build.
+          example: 6f995268
+        majorVersion:
+          type: integer
+          format: int32
+          description: App major version to build. If not provided, no version tag will be set for the created package.
+          example: 1
+        minorVersion:
+          type: integer
+          format: int32
+          description: App minor version to build. If not provided, no version will be set for the created package.
+          example: 0
+        patchVersion:
+          type: integer
+          format: int32
+          description: App patch version to build. If not provided, no version tag will be set for the created package.
+          example: 2
+      required:
+        - branchName
+        - revisionId
+
+    BuildJob:
+      type: object
+      description: App build job information
+      properties:
+        packageId:
+          type: string
+          description: App package id
+          example: 36279c9b-9b5a-4599-b548-7fe09d792f76
+        pipelineId:
+          type: integer
+          description: Build pipeline id
+          example: 179862510118532184
+        message:
+          type: string
+          description: Build job message
+          example: "Request accepted, build app package started"
+
+    AppPackage:
+      type: object
+      description: App build package
+      properties:
+        packageId:
+          type: string
+          description: App package id
+        packageName:
+          type: string
+          description: App package name
+          example: mh-local-ui102413-1.0.1.6f995268.mda
+        branch:
+          type: string
+          description: App branch
+          example: main
+        revision:
+          type: string
+          description: App revision
+          example: 6f995268
+        modelVersion:
+          type: string
+          description: Model version
+          example: 1.0.1.6f995268
+        runtimeVersion:
+          type: string
+          description: Runtime version
+          example: 10.24.13.86719
+        status:
+          type: string
+          description: App package status
+          example: Success
+        locked:
+          type: boolean
+          description: Whether the package is locked
+          example: false
+        createdBy:
+          type: string
+          description: The user who created the package
+          example: muhong00
+        dateCreated:
+          type: string
+          format: date-time
+          description: The date and time when the package was created
+          example: 2026-05-28T03:19:39.244Z
+
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+          example: 400
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+          example: Bad Request
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+          example: Invalid parameters
+        invalid-params:
+          type: array
+          description: '(Optional) JSON list List of name, reason keys for invalid attribute values.'
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Parameter name.
+                example: packageId
+              reason:
+                type: string
+                description: Reason for error.
+                example: Invalid package id
+      required:
+        - status
+        - title
+        - detail
+
+  responses:
+    error-401:
+      description: Authentication information is missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+    error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid app id:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: appId
+                    reason: Invalid app id
+            400 - Invalid package id:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: packageId
+                    reason: Invalid package id
+    error-403:
+      description: User has no permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+    error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - App not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: App not found
+            404 - App package not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: App package not found
+
+    package:
+      description: App build package
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AppPackage'
+          examples:
+            App Package:
+              value:
+                packageId: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                packageName: mh-local-ui102413-1.0.1.6f995268.mda
+                branch: main
+                revision: 6f995268
+                modelVersion: 1.0.1.6f995268
+                runtimeVersion: 10.24.13.86719
+                status: Success
+                locked: false
+                createdBy: muhong00
+                dateCreated: 2026-05-28T03:19:39.244Z
+                
+    packages:
+      description: App build packages
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/AppPackage'
+          examples:
+            App Packages:
+              value:
+                - packageId: a957ec90-0fb3-4c9a-ace9-89d0fd4f6c2f
+                  packageName: mh-local-ui102413-5e6a49a5.mda
+                  branch: main
+                  revision: 5e6a49a5
+                  modelVersion: 5e6a49a5
+                  runtimeVersion: 10.24.13.86719
+                  status: Success
+                  locked: true
+                  createdBy: muhong00
+                  dateCreated: 2026-01-07T04:35:57.378Z
+                - packageId: 74d38f4c-947b-46c0-8e5f-b680ffe97395
+                  packageName: mh-local-ui102413-1.0.1.6f995268.mda
+                  branch: main
+                  revision: 6f995268
+                  modelVersion: 1.0.1.6f995268
+                  runtimeVersion: 10.24.13.86719
+                  status: Success
+                  locked: false
+                  createdBy: muhong00
+                  dateCreated: 2026-05-28T03:19:39.244Z
+
+    BuildResponse:
+      description: App build job
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/BuildJob'
+          examples:
+            Build Response:
+              value:
+                packageId: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                pipelineId: 179862510118532184
+                message: Request accepted, build app package started
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+security:
+  - basicAuth: []
+  - mxtoken: []
+tags:
+  - name: apps
+    description: 'For build, retrive, lock, unlock and download app packages and sbom files'

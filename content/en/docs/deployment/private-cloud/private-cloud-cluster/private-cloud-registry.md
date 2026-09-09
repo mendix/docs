@@ -25,6 +25,7 @@ Some examples of such container registries are:
 * Docker Hub
 * Azure ACR [admin account](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication?tabs=azure-cli#admin-account)
 * Self-hosted registries such as [Sonartype Nexus](https://www.sonatype.com/products/nexus-repository)
+* STACKIT container registry
 
 However, static credentials are often considered insecure, and cloud providers offer alternative authentication methods based on short-lived tokens. For example, pushing an image to ECR requires getting a short-lived token from the AWS API. For more details about specific container registries, see the [Configuring the Registry](#configure-registry) section.
 
@@ -178,8 +179,8 @@ To use ACR with the Mendix Operator, you will need to:
 
 Use the following configuration options:
 
-* **Registry Name** - Path in the Azure Container Registry — for example `mendix-apps/mynamespace`.
-* **Registry URL** - domain name (login name) of the ACR registry, for example `example.azurecr.io`
+* **Registry Name** - Path in the Azure Container Registry—for example `mendix-apps/mynamespace`.
+* **Registry URL** - Domain name (login name) of the ACR registry, for example `example.azurecr.io`
 * **Kubernetes Service Account** - the Kubernetes service account that was linked with the Azure workload identity step 2; the Kubernetes Service Account will be created automatically when you apply the changes.
 * **AZWI Client ID** - the workload identity `USER_ASSIGNED_CLIENT_ID` created on step 2, for example `00000000-0000-0000-0000-000000000000`.
 
@@ -210,8 +211,8 @@ On the Kubernetes side, the Mendix Operator will use a Kubernetes Service Accoun
 
 Use the following configuration options:
 
-* **Registry Name** - Google Artifact Registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
-* **Registry URL** - container or artifact registry host — for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
+* **Registry Name** - Google Artifact Registry full path name—for example `my-google-account-id/my-registry/dev-repo`.
+* **Registry URL** - container or artifact registry host—for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
 * **GCP Service Account** - the GCP account name created on step 1, for example `service-account-name@project-id.iam.gserviceaccount.com`.
 * **Kubernetes Service Account** - the Kubernetes service account that was linked with the GCP service account on step 3; the Kubernetes Service Account will be created automatically when you apply the changes.
 
@@ -278,6 +279,27 @@ To access quay.io, you will need to create a robot account, and give this accoun
 
 Check your image registry documentation to see if repositories can be created automatically (on push) or need to be pre-created.
 Some registries impose limitations on repository names, for example the repository path cannot have more than three parts.
+
+**STACKIT container registry**
+
+| Field               | Value                                                                                          |
+| ------------------- | -----------------------------------------------------------------------------------------------|
+| Push URL            | registry.onstackit.cloud                                                                       |
+| Pull URL            | registry.onstackit.cloud                                                                       |
+| Registry name       | `<stackitregistry>/<repository>`, where `<stackitregistry>` is the registry you created in STACKIT |
+| With authentication | enabled                                                                                        |
+| User                | Username for the registry robot account                                                        |
+| Password            | Token (password) for the robot account                                                         |
+
+Before pushing images to container registry, you must first create the registry.
+
+Example:
+
+   ```shell
+   kubectl patch serviceaccount default -n <namespace> -p '{"imagePullSecrets": [{"name": "<secret-name>"}]}'
+   ```
+
+In order to fetch the container images from container registry, patch the `default` service account with the registry credentials. Both mxpc-cli and mx-ops-cli automatically generate a secret named `mendix-generic-registry-secret`. This secret holds the necessary registry credentials, enabling pods to pull images.
 
 ### Existing Docker Registry Secret
 

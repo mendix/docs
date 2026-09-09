@@ -10,7 +10,7 @@ description: "How to use an APM (application performance monitoring) tool to mon
 
 There are several application performance monitoring (APM) tools for cloud applications available through a software as a service (SaaS) based data analytics platform. These APM tools provide comprehensive monitoring of servers, databases, tools, and services.
 
-Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, Splunk Cloud Platform, and New Relic to provide additional monitoring for your Mendix Apps running on Mendix Cloud.
+Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, Splunk Cloud Platform, New Relic, and OpenTelemetry to provide additional monitoring for your Mendix Apps running on Mendix Cloud.
 
 The table below summarizes the monitoring capabilities each tool supports:
 
@@ -19,8 +19,9 @@ The table below summarizes the monitoring capabilities each tool supports:
 | [AppDynamics](https://www.appdynamics.com/) | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
 | [Dynatrace](https://www.dynatrace.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
 | [Datadog](https://www.datadoghq.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | 7.15 ¹ |
-| [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
 | [New Relic](https://www.newrelic.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
+| [OpenTelemetry](https://opentelemetry.io/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | 10.24.12, 11.5 |
+| [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
 
 <small>¹ Logs and metrics are available from Mendix 7.15 and above. Tracing requires Mendix 10.24.12 or 11.5 and above.</small>
 
@@ -31,8 +32,9 @@ For details on how to add a specific APM tool to your app, see one of the follow
 * [AppDynamics for Mendix Cloud](/developerportal/operate/appdynamics-metrics/)
 * [Datadog for Mendix Cloud](/developerportal/operate/datadog-metrics/)
 * [Dynatrace for Mendix Cloud](/developerportal/operate/dynatrace-metrics/)
-* [Splunk for Mendix Cloud](/developerportal/operate/splunk-metrics/)
 * [New Relic for Mendix Cloud](/developerportal/operate/newrelic-metrics/)
+* [OpenTelemetry for Mendix Cloud](/developerportal/operate/opentelemetry/)
+* [Splunk for Mendix Cloud](/developerportal/operate/splunk-metrics/)
 
 {{% alert color="info" %}}
 These third-party integrations require an agent to run alongside your runtime container, gathering and sending metrics. This agent consumes resources from your [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
@@ -65,7 +67,7 @@ The metrics from your app's environment are supplied in the following namespaces
 * jetty – metrics from the ingress controller of the app
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs
 * postgresql – database metrics specific to PostgreSQL databases
-* system – metrics from the base system running on the platform or PaaS — in Datadog, these are disabled by default but can be enabled using the [`DD_ENABLE_CHECKS`](/developerportal/operate/datadog-metrics/#system-metrics) environment variable.
+* system – metrics from the base system running on the platform or PaaS—in Datadog, these are disabled by default but can be enabled using the [`DD_ENABLE_CHECKS`](/developerportal/operate/datadog-metrics/#system-metrics) environment variable.
 
 Many of these metrics are described in more detail in [Metrics – Mendix Runtime](/refguide/metrics/).
 
@@ -310,4 +312,4 @@ If desired, you can adjust the log levels. If you configure your app's log level
 
 ## Read More
 
-* [Metrics](/developerportal/operate/metrics/) – Describes the graphs that you can use to monitor the performance and health of your Mendix Cloud app on the **Metrics** page in **Apps**
+* [Metrics](/developerportal/operate/metrics/) – Describes the graphs that you can use to monitor the performance and health of your Mendix Cloud app on the **Metrics** page in **Projects**.

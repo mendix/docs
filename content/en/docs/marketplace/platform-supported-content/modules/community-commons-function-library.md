@@ -161,7 +161,7 @@ As of version 7.2.0 of this module, it is highly recommended that you manually r
 
 ### Java 8
 
-As of version 7.2.0 of this module, some Java 8-native APIs are utilized that replace functionality that was previously imported from external libraries. This means that for upgrading, Java 8 is a minimum requirement! You can change your JDK directory in Studio Pro via **Edit** > **Preferences**. As of [Studio Pro 8](/releasenotes/studio-pro/8.0/), AdoptOpenJDK 11 is supported.
+As of version 7.2.0 of this module, some Java 8-native APIs are utilized that replace functionality that was previously imported from external libraries. This means that for upgrading, Java 8 is a minimum requirement. You can change your JDK directory in Studio Pro via **Edit** > **Preferences**. Use AdoptOpenJDK 11.
 
 ### Breaking Change to XSSSanitize
 

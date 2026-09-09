@@ -147,10 +147,10 @@ When creating the JSON structure for your secret, you must use a flat key-value 
     
     * Maia
 
-        * **AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
-        * **AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
-        * **AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
-        * **OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
+        * **Maia.AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
 
 ### Configuring Azure AD Workload Identity
 
@@ -204,7 +204,7 @@ For more information about advanced configuration settings, see [Advanced Operat
 
 To modify the configuration, perform the following steps:
 
-1. Update the configuration to [use the service token](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#advanced-deployment-settings). 
+1. Update the configuration to [use the service token](/developerportal/deploy/private-cloud-cluster/#advanced-deployment-settings). 
 
     Set `runtimeAutomountServiceAccountToken: true` to allow Mendix app pods to get a Kubernetes Service Account token.
 
@@ -216,7 +216,7 @@ To modify the configuration, perform the following steps:
     runtimeAutomountServiceAccountToken: true
     ```
 
-2. Add a custom pod label which informs the Operator to use workload identities. For more information, see [General Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#general-pod-labels).
+2. Add a custom pod label which informs the Operator to use workload identities. For more information, see [General Pod Labels](/developerportal/deploy/private-cloud-cluster/#general-pod-labels).
 
     ```text
     apiVersion: privatecloud.mendix.com/v1alpha1

@@ -13,7 +13,7 @@ This how-to describes the steps required to enable your app to use the External 
 
 ## Prerequisites
 
-For some general information on how to use bring your own JDBC driver with the external database connector, read [External Database Connector: Configure for Any Database](https://docs.mendix.com/appstore/modules/external-database-connector/#byod).
+For some general information on how to use bring your own JDBC driver with the external database connector, read [External Database Connector: Configure for Any Database](/appstore/modules/external-database-connector/#byod).
 
 ## Configuring the Connection Between Your Mendix App and Databricks
 

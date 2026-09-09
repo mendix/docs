@@ -13,6 +13,6 @@ description_list: true
 
 This document describes how to use [version control](/refguide/version-control/) in Mendix Studio Pro. 
 
-For more information on related concepts and the theory behind how version control works in Mendix, see [Version Control](/refguide/version-control/).
+For more information on related concepts and the theory behind how version control works in Mendix, refer to [Version Control](/refguide/version-control/).
 
 ## Read More

@@ -5,8 +5,8 @@ All examples are for **30th December 2014, at 00:27:16.789**
 | `G`     | AD | The era |
 | `y`, `yyy`, `yyyy`, *etc.* | 2014 | Year |
 | `yy`     | 14 | Year |
-| `Y`, `YYY`, `YYYY`, *etc.* | 2015 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
-| `YY`     | 15 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
+| `Y`, `YYY`, `YYYY`, *etc.* | 2015 | ISO week-numbering year, four digits: <br/>`YYYY` shows the year based on the ISO week the date falls in, where week 1 is the first week containing at least four days of the new year. For example, 2014-12-31 is in ISO week 1 of 2015, so `YYYY` returns 2015, while `yyyy` returns 2014. |
+| `YY` | 15 | ISO week-numbering year, two digits: <br/>`YY` shows the year based on the ISO week the date falls in, where week 1 is the first week containing at least four days of the new year. For example, 2014-12-31 is in ISO week 1 of 15, so `YY` returns 15, while `yy` returns 14. |
 | `M`, `MM`<sup><small>*</small></sup>  | 12 | Month number |
 | `MMM`    | Dec | Month abbreviation |
 | `MMMM`   | December | Month name |

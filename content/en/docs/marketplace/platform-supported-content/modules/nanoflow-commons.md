@@ -48,6 +48,21 @@ The [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/) mo
 |                     | Get platform                               |
 |                     | Wait                                       |
 
+### Limitations of Get/Set Storage Item Actions {#limitations}
+
+The **Get storage item** and **Set storage item** actions use the device's native encrypted async storage mechanism (key-value storage). This storage is completely separate from the Mendix offline database and does not have any relationship with Mendix's entity model, entity access rules, or association capabilities.
+
+Below is a list of the key limitations:
+
+* No association support – When you store entities using **Set storage item object** or **Set storage item object list**, only the entity data itself is serialized and stored. Entity associations are not preserved. The storage mechanism has no concept of Mendix associations, referenced entities, or relational data structures.
+* No entity access rules – Security and entity access rules defined in your domain model do not apply to data stored in device storage. The storage actions bypass the Mendix data layer entirely.
+* Page state dependency – Mendix internally maintains a "page state" that tracks associated entities when objects are loaded into memory. This page state is session-scoped and is cleared when the user signs out or switches accounts on a native device. Any associations that depend on this page state are lost when the session ends.
+* Manual association reconstruction required – If your application needs to work with associated entities after retrieving objects from local storage, you must explicitly retrieve and reconstruct those associations in your nanoflow logic. For example, if Entity A references Entity B, you must separately retrieve Entity B after loading Entity A from storage.
+
+{{% alert color="warning" %}}
+The local storage actions are intended for simple key-value storage use cases such as caching user preferences, temporary state, or serialized data that does not rely on associations. For complex relational data or entities that require association traversal, use Mendix's offline database capabilities instead of the storage item actions.
+{{% /alert %}}
+
 ## Read More
 
 * [How to Build JavaScript Actions: Part 1 (Basic)](/howto/extensibility/write-javascript-actions/)

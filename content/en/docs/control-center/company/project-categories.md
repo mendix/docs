@@ -32,6 +32,8 @@ Follow these steps to add a category:
     You can add multiple values as a comma-separated list.    
     Each entry consists of a unique name and code. The unique code is automatically generated for you. You can edit it afterwards, as long as you provide a new unique code.
 
+You can add a maximum of 10 categories.
+
 ### Editing Categories
 
 Follow these steps to edit a category:

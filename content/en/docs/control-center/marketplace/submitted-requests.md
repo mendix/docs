@@ -16,7 +16,7 @@ The **Submitted Requests** page gives you the governance capabilities to approve
 * Company guidelines assurance: It enables you to meet regulatory requirements and internal policies by thoroughly reviewing components.
 * Efficient management: It offers a centralized approval process to save time and resources, preventing additional communication outside of the platform. 
 
-{{% alert color="info" %}}As a Mendix Admin or component owner, you can always unpublish content from the Marketplace of your organization. This can help your organization keep its private Marketplace neat, with only relevant company content. To do so, go to [Company Content](/appstore/home-page/#company-content) in the Marketplace home page, click the {{% icon name="three-dots-menu-horizontal" %}} icon on the component card, then select **Unpublish all versions**. {{% /alert %}}
+{{% alert color="info" %}}As a Mendix Admin or component owner, you can always unpublish content from the Marketplace of your organization. This can help your organization keep its private Marketplace neat, with only relevant company content. To do so, go to [Published](/appstore/home-page/#published) in the **Manage Components** section of the Marketplace home page, click **Manage Versions** in the contextual menu of the component, then select **Unpublish**. {{% /alert %}}
 
 The **Submitted Requests** page contains the following tabs: 
 

@@ -6,20 +6,20 @@ weight: 60
 
 ## Introduction
 
-**Advanced Translations Export** allows you to export translations to Microsoft Excel (*.xlsx*) or PO (*.po*) format files.
+Use **Advanced Translations Export** to export translations to Microsoft Excel (*.xlsx*) or PO (*.po*) format files.
 
 ## Using Advanced Translations Export
 
-To export languages, from the top-bar menu, select **Language > Advanced Translations Export** and choose one of the following options:
+To export languages, from the top bar menu, select **Language > Advanced Translations Export** and choose one of the following options:
 
-* **As Excel (.xlsx) file** – export translations to a Microsoft Excel (*.xlsx*) format file
-* **As PO (.po) files** – export translations to PO (*.po*) format files
+* **As Excel (.xlsx) file** – exports translations to a Microsoft Excel (*.xlsx*) format file
+* **As PO (.po) files** – exports translations to PO (*.po*) format files
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/advanced-translations-export.png" alt="Advanced Translations Export" >}}
 
 When you select an option, a directory selector appears. Select the directory containing the files you want to export.
 
-A pop-up will appear confirming the start of the export.
+A pop-up appears confirming the start of the export.
 
 ### Export as Excel
 
@@ -43,7 +43,7 @@ The formats of the Excel file for **Advanced Translations Export** and [Advanced
 
 ### Export as PO
 
-Click **As PO (`*.po*`) files** and select a directory for the export. Studio Pro will create a subdirectory named in the format `Export_{app-name}_Po_{time-stamp}`. The translations will be saved as PO (`*.po*`) format files. The files will be named in the format `{app-name}-{language}.po` (e.g. *App-en_US.po*).
+Click **As PO (`*.po*`) files** and select a directory for the export. Studio Pro creates a subdirectory named in the format `Export_{app-name}_Po_{time-stamp}`. The translations are saved as PO (`*.po*`) format files. The files are named in the format `{app-name}-{language}.po` (for example, *App-en_US.po*).
 
 {{% alert color="warning" %}}
 The formats of the PO files for **Advanced Translations Export** and [Advanced Translations Import](/refguide/advanced-translations-import/) are similar.

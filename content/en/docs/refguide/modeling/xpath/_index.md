@@ -77,7 +77,7 @@ For details, see [XPath aggregate functions](/refguide/xpath-aggregate-functions
 
 **Master Mendix XPath**
 
-{{< vidyard "a3nrrw95bKkSFfJc9SW7tg" >}}
+{{< vidyard id="a3nrrw95bKkSFfJc9SW7tg" >}}
 
 ## Read More
 

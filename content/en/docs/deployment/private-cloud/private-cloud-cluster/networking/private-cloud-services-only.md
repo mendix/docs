@@ -3,7 +3,7 @@ title: "Service without Ingress in Mendix on Kubernetes"
 linktitle: "Service Only"
 url: /developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/services-only/
 description: "Describes how to configure Mendix on Kubernetes to create services without an Ingress."
-weight: 30
+weight: 40
 ---
 
 ## Introduction

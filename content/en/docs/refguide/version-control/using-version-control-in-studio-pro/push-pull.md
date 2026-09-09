@@ -40,19 +40,9 @@ In the **Changes** pane, you can find more detailed information. There is an ent
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png" max-width=80% >}}
 
-If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see entry for each changed file. You can right-click the entry and click **Open containing folder** to open the folder with the file on disk. For files with the **Modified** status, you can use **Compare with original** that opens an external tool to show the differences.
+If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see entry for each changed file. You can right-click the entry and click **Open containing folder** to open the folder with the file on disk. For files with the **Modified** status, you can use **Compare with original** to open the built-in [File Differences Viewer](/refguide/file-diff-viewer/) and see the differences.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane-file-changes.png" >}}
-
-{{% alert color="info" %}}
-An external file comparison tool can be set in **Preferences** > **Version control** > **General** > **File comparison** > **Executable**. 
-
-A tool you can consider using is TortoiseGitMerge, shipped as part of [TortoiseGit](https://tortoisegit.org/download/). It is installed by default on this path: *C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe*.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Comparing files on disk with the original is currently not supported on macOS.
-{{% /alert %}}
 
 {{% alert color="info" %}}
 When you successfully commit your app, this becomes the new original and all the change information is removed from the **App Explorer** and the **Changes** pane.
@@ -72,7 +62,7 @@ Git only creates a local commit. To submit your local commit (or commits) to the
 
 For example, you are developing a feature together with another developer on the same branch. You both have the same starting point (3). When your colleague commits a change, you can choose to retrieve these changes and integrate them. To enable this, developers first need to commit existing changes locally (6), so that the changes can be automatically merged when they are retrieved by other developers. After this, you commit the merged result, and optionally push the merged result (7) to be used by your colleague. Because changes are already explicitly committed, you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/incoming-changes.png" alt="Incoming changes in Git" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/incoming-changes.png" alt="Incoming changes in Git"  >}}
 
 In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing include the following:
 
@@ -94,19 +84,9 @@ Studio Pro also attaches some information automatically:
 * The list of changed documents, folders, and modules along with the type of the change (for example, **modify** or **add**)
 * The version of Studio Pro that was used to commit
 
-If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see a **Changes on disk** tab that shows you what disk changes you are about to commit. **Open containing folder** opens the folder with the file on disk. For files with the **Modified** status, you can use **Compare with original** that opens an external tool to show the differences.
+If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see a **Changes on disk** tab that shows you what disk changes you are about to commit. **Open containing folder** opens the folder with the file on disk. For files with the **Modified** status, you can use **Compare with original** to open the built-in [File Differences Viewer](/refguide/file-diff-viewer/) and see the differences.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git-changes-on-disk.png" >}}
-
-{{% alert color="info" %}}
-An external file comparison tool can be set in **Preferences** > **Version control** > **General** > **File comparison** > **Executable**. 
-
-A tool you can consider using is TortoiseGitMerge, shipped as part of [TortoiseGit](https://tortoisegit.org/download/). It is installed by default on this path: *C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe*.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Comparing files on disk with the original is currently not supported on macOS.
-{{% /alert %}}
 
 Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you pulled, you will have to pull first (this process is called **Commit and Combine** in the [Commit](/refguide/commit-dialog/#combine) dialog box). This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result and fixing any conflicts, you can commit again. 
 
@@ -132,7 +112,7 @@ If the changes are discovered during the push, an information dialog with instru
 
 Git prevents you from pushing your changes if it sees your changes and the remote changes as potentially conflicting. In this diagram, you see that Git does not know how to combine commits #3 and #4.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 3, while the remote server has commits 1, 2, and 4 on the same branch." class="no-border" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 3, while the remote server has commits 1, 2, and 4 on the same branch."  >}} 
 
 There are two ways for Studio Pro to combine the commits: **Rebase** (default) and **Merge**. For more information, see [Combining Changes and Conflict Resolution](/refguide/resolving-conflicts/#combine-changes).
 

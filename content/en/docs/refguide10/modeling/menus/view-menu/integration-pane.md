@@ -5,7 +5,7 @@ weight: 30
 description: "Describes the Integration Pane in Mendix Studio Pro."
 aliases:
     - /refguide10/data-hub-pane/
-# SB: The images on this page are created using the Lato-LandscapeDemoApp (https://sprintr.home.mendix.com/link/project/1b515494-d818-4358-8c91-6c3d54e9cae5)
+# SB: The images on this page are created using the Lato-LandscapeDemoApp (https://projects.home.mendix.com/link/project/1b515494-d818-4358-8c91-6c3d54e9cae5)
 ---
 
 ## Introduction

@@ -23,7 +23,7 @@ To enable you to find your errors quickly, each error will show you:
 * The **Document** where this element is
 * The **Module** where the document is
 
-Double-clicking on the error will take you directly to the element causing the error.
+Double-clicking the error will take you directly to the element causing the error.
 
 Errors need to be solved before your app can be deployed. A consistency error can occur in the following editors or functionalities of Studio Pro:
 
@@ -34,6 +34,10 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 * [Data in the Domain Model](/refguide10/domain-model/)
 * [Integration](/refguide10/integration/)
 * [Security](/refguide10/security/)
+
+{{% alert type="info" %}}
+Consistency errors only flag issues within the Mendix model. Errors in code actions (for example, Java, JavaScript, or styling) are not included.
+{{% /alert %}} 
 
 ## Read More
 

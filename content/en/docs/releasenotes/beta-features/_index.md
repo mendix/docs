@@ -81,6 +81,6 @@ In the docs, pages about beta features are marked with a beta badge (<text class
 
 Mendix releases features or products labeled Limited Availability to introduce the feature or product to the market in a controlled way. In this optional phase, specific groups or regions may get access to the feature or product for production use, while others may follow later. This can be due to regulatory or operational reasons. When there is a desire to take a Limited Availability feature or product into production, please contact your CSM to see which arrangements are possible.
 
-## General Availability
+## General Availability{#ga}
 
 Features or products labeled General Availability are available for all customers to use in production.

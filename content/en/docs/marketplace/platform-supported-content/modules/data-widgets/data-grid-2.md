@@ -109,8 +109,8 @@ The **Paging Buttons** option will render the default buttons as the previous da
 
 You can configure pagination based on the following properties:
 
-* **Position** — The **Position of paging button** options allow you to position paging buttons above or below the data grid.
-* **Visibility** — The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page.
+* **Position** – The **Position of paging button** options allow you to position paging buttons above or below the data grid.
+* **Visibility** – The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page.
 
 ### Virtual Scrolling
 
@@ -162,9 +162,9 @@ You can define how each cell will be rendered in the data grid. We offer three c
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-width.png" alt="Settings for column width for each column item" class="no-border" >}}
 
-* **Auto-fill** — With this option it will auto define the width of your column, if all columns are using auto-fill, it will divide evenly the same width, if another column is configured with auto-fit or manual, it will fill the available space.
-* **Auto-fit** — Content With this option it will calculate the width of your column based on the content of each row.
-* **Manual** — With this option you will manually define the size of your column based of flexbox grow values, for more information, please [check here](https://www.w3.org/TR/css-flexbox-1/).
+* **Auto-fill** – With this option it will auto define the width of your column, if all columns are using auto-fill, it will divide evenly the same width, if another column is configured with auto-fit or manual, it will fill the available space.
+* **Auto-fit** – Content With this option it will calculate the width of your column based on the content of each row.
+* **Manual** – With this option you will manually define the size of your column based of flexbox grow values, for more information, please [check here](https://www.w3.org/TR/css-flexbox-1/).
 
 ### Alignment
 
@@ -212,10 +212,10 @@ Association filtering configuration has been moved from column properties to the
 
 The dropdown filter widget supports association filtering when configured in custom mode:
 
-* **Entity (Association)** — defines the association that will be used for filtering
-* **Selectable objects** — defines data source for filter options, returning list of all possible entities that could be associated
-* **Use lazy load** — controls when filter options are loaded. When set to **No** (recommended), data is fetched immediately providing better personalization support. When set to **Yes**, data is fetched only when the filter is opened, improving initial load times but limiting personalization capabilities
-* **Option caption** — expression used as caption for each option in the dropdown
+* **Entity (Association)** – Defines the association that will be used for filtering.
+* **Selectable objects** – Defines data source for filter options, returning list of all possible entities that could be associated.
+* **Use lazy load** – Controls when filter options are loaded. When set to **No** (recommended), data is fetched immediately providing better personalization support. When set to **Yes**, data is fetched only when the filter is opened, improving initial load times but limiting personalization capabilities.
+* **Option caption** – Sets the expression used as caption for each option in the dropdown.
 
 ### Visible {#visible-filter}
 
@@ -250,6 +250,10 @@ The new data grid can trigger some events while iterating with it.
 ### On Click Action
 
 Triggers an action (such as a nanoflow, microflow, or Show page action) when the end-user clicks in one of the rows. It also adds a pointer cursor to signal that it is clickable. This function also complies with accessibility features and can be reached using only the keyboard.
+
+### On Selection Change Action
+
+Triggers an action (such as a nanoflow, microflow, or client action) when the end-user changes selection in the data grid. This includes selecting or deselecting individual rows, using the **Select all** toggle, or clearing the selection. The action provides a way to respond to selection state changes and implement custom logic based on the current selection.
 
 ## Filters {#filters}
 
@@ -359,8 +363,8 @@ When a drop-down filter is used in conjunction with an [Association Filter](#ass
 
 When adding a new option, the following properties are required:
 
-* **Caption** — The text being rendered for each option in the drop-down.
-* **Value** — The corresponding value that will be compared, if a value is being compared with an enumeration, it should match exactly the enumeration value. This property allows the usage of expression (you can use conditionals to apply dynamic values).
+* **Caption** – The text being rendered for each option in the drop-down.
+* **Value** – The corresponding value that will be compared, if a value is being compared with an enumeration, it should match exactly the enumeration value. This property allows the usage of expression (you can use conditionals to apply dynamic values).
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dropdown-filter-item.png" alt="Example of settings for new option" class="no-border" >}}
 
@@ -596,6 +600,36 @@ The setting for action triggers is related to the selection method and can somet
 | Row              | Double-click on the row | <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac)                        | Yes       |
 
 To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way, the user may select a row by double-clicking it.
+
+### Selection and Header Actions
+
+When the button is placed in a grid header, the assigned action can receive the currently selected rows as a parameter.
+
+#### How Selection is Passed to Actions
+
+When a button placed in header triggers a **microflow** or **nanoflow**, the selected rows are passed as input:
+
+* If **Single Selection** is enabled:
+    * The action receives a **single object**.
+* If **Multiple Selection** is enabled:
+    * The action receives a **list of objects**.
+
+This allows developers to build logic that operates on one or several items.
+
+#### Example Use Cases
+
+* **Mark as Done**: A button triggers a microflow that updates the status of selected tasks.
+* **Delete Selected**: A button deletes all selected records.
+* **Export Selected**: A button triggers a microflow or nanoflow that exports the selected list to a file.
+
+#### Configuration
+
+To configure selection, do the following:
+
+1. Enable **Selection** in the data grid 2 widget.
+1. Insert an **Action Button** into the **Header**.
+1. Configure the button to trigger a microflow or nanoflow.
+1. Set the input parameter of the flow to match the selection type (single object or list).
 
 ## Keyboard Support {#keyboard-support}
 

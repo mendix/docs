@@ -63,7 +63,7 @@ For examples how to read JVM memory usage graphs, see [Java Memory Usage](/refgu
 
 ### Adjusting Memory in Mendix on Kubernetes
 
-In a [Standalone environment](/developerportal/deploy/private-cloud-operator/#edit-cr), the JVM heap size can be adjusted in the `jvmMemorySettings` section of the `MendixApp` CR.
+The JVM heap size can be adjusted in the `jvmMemorySettings` section of the [`MendixApp` CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
 
 For example:
 

@@ -118,6 +118,12 @@ In the **Deploy** section, you can configure the environment to which your app w
 5. Click **Next**.
 6. After the environment is created, you can use the **Details** menu to perform additional actions such as deleting the environment, or starting and stopping the app.
 
+### Deployment Purpose and DTAP Mode
+
+When creating a new environment to deploy, you can select the environment purpose, which can be Development, Test, Acceptance, or Production. For the deployed Mendix App, this purpose corresponds to the runtime's `dtapMode`, which affects security and licensing. For example, whether demo users are available after deployment, whether production security is enabled, or whether the environment requests a license from the license manager service. Once the environment has been created, the environment purpose cannot be changed. 
+
+On Private Mendix Platform, environments with the Development and Test purpose set the `dtapMode` to `D` (for Development), while Acceptance and Production environments operate in `dtapMode` `P` (for Production). This association cannot be changed. Please select the appropriate environment purpose when you're creating a new environment.
+
 ## Managing Marketplace Content
 
 If your organization has enabled the Marketplace for your Private Mendix Platform, you can build your own connectors and modules, and then share them on the Marketplace, so that other teams from your organization can use the connector in their own apps.

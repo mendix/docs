@@ -311,7 +311,7 @@ Click this button to bring the **Changes** pane into the view, as this is the pl
 
 The **Show file conflicts** button is shown when there are conflicts in files which are not directly linked to your application.
 
-When clicked, it opens up a pop-up window with a list of all the files that are affected by the update process, with conflicted ones at the top of the list.
+When clicked, it opens up a pop-up window with a list of all the files that are affected by the update process, with conflicted ones at the top of the list. You can view the differences for individual files using the built-in [File Differences Viewer](/refguide/file-diff-viewer/).
 
 ### Rebase-Specific Controls
 

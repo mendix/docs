@@ -2,7 +2,7 @@
 title: "Siemens Advanced License Technology"
 url: /developerportal/deploy/salt/
 weight: 90
-description: "This guide explains how to use Siemens Advaned License Technology (SALT) with Mendix"
+description: "This guide explains how to use Siemens Advanced License Technology (SALT) with Mendix"
 aliases:
     - /deployment/salt/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -24,18 +24,25 @@ This section explains the limitations for using SALT-based licenses.
 
 SALT Licenses can only be used with the following Mendix versions:
 
-* **Mendix 10**: 10.24.4 and above
-* **Mendix 11**: 11.2.0 and above
+* **Mendix 10** – 10.24.4 and above
+* **Mendix 11** – 11.2.0 and above
 
-Each SALT license is bound to a specific major version of Mendix and cannot be used in newer major versions.
+Each SALT license is tied to a specific major Mendix version, for example MXP11 for Mendix 11. The license permits use of that version and all earlier major versions. To use a newer major version, you must have an active maintenance contract and can request a renewed license when the new major version is released.
 
 ### Deployment Restrictions
 
 Mendix applications using a SALT License cannot be deployed to the Mendix Public Cloud.
 
+### User Limits
+
+SALT licenses distinguish between internal and external users:
+
+* **Internal users** – SALT licenses specify a maximum number of named internal users. This limit is enforced independently by each application and is defined at the time of purchase. Limiting concurrent users is not supported.
+* **External users** – Unlimited external users can optionally be purchased. When purchased, external users are no longer counted against the internal user limit. To take advantage of this, users must be explicitly flagged as external in your application using the [User Classification](/appstore/modules/user-classification/) module or by setting the `UserType` attribute directly. If external users are not flagged, they are counted as internal users.
+
 ## Obtaining the SALT-based License
 
-Upon purchase, your SALT-based license file is sent to you by email.
+Upon purchase, your SALT-based license file is sent to you by email. A single license file is valid for all of your Mendix applications. Multiple license files cannot be issued.
 
 ## Installing the Siemens License Server
 
@@ -50,6 +57,10 @@ For detailed instructions on how to install the Siemens License Server and confi
 * [Siemens License Server](https://support.sw.siemens.com/en-US/product/1586485382)
 * [Getting Started with Siemens Advanced Licensing Technology (SALT) and the Siemens License Server (SLS)](https://support.sw.siemens.com/en-US/product/1586485382/knowledge-base/MG612613)
 
+{{% alert color="info" %}}
+If you are deploying on-premises, you must generate a hardware ID (CID) using Siemens tools and provide it during the license provisioning process. Refer to the Siemens documentation above for instructions on generating a CID.
+{{% /alert %}}
+
 ## Configuring your Mendix Application
 
 Each Mendix application that uses a SALT license must be configured with the following [runtime setting](/refguide/custom-settings/):
@@ -58,8 +69,8 @@ Each Mendix application that uses a SALT license must be configured with the fol
 License.SaltLicenseLocation = port@host
 ```
 
-* `port`: The port number specified during the license server installation.
-* `host`: The hostname or IP address of the machine running the license server.
+* `port` – The port number specified during the license server installation.
+* `host` – The hostname or IP address of the machine running the license server.
 
 After you configure the runtime setting and start the Mendix application, the application connects to the Siemens License Server to validate the SALT license.
 
@@ -67,8 +78,14 @@ After you configure the runtime setting and start the Mendix application, the ap
 
 ### When Does a Mendix Application Connect to the License Server?
 
-Mendix applications connect to the license server during startup to retrieve the license. After this initial connection, the applications do not maintain ongoing connections to the license serve
+Mendix applications connect to the license server during startup to retrieve the license. After this initial connection, the applications do not maintain ongoing connections to the license server.
 
 ### What Happens If the License Server Is Unavailable?
 
-If the license server becomes unavailable while a Mendix application is running, the application's current operation will not be affected. However, if the license server is unavailable during startup, the Mendix application will launch in trial mode. To resolve this, restart the Mendix application once the license server is available.
+If the license server becomes unavailable while a Mendix application is running, the application's current operation will not be affected. However, if the license server is unavailable during startup, the Mendix application will launch in trial mode. In trial mode, usage is limited to a specific number of users and the application stops running after a few hours.
+
+To resolve this, restart the Mendix application once the license server is available.
+
+### Does the License Server Require Internet Access?
+
+SALT-based licenses can operate fully offline. No outbound connectivity to Siemens systems is required.

@@ -132,6 +132,11 @@ The default option is **Single click**, which triggers the action on a single cl
 
 This property sets the action to be performed when the row is clicked.
 
+{{% alert color="info" %}}
+The setting for actions and action triggers is related to the selection method and can sometimes be ambiguous. 
+
+See [this table](/appstore/modules/data-grid-2/#selection-and-row-click-action) to see which combinations of selection method and action triggers are supported.{{% /alert %}}
+
 #### On Selection Change
 
 This property sets the action to be performed when the row is selected or unselected.
@@ -166,7 +171,7 @@ This flag controls column hiding for the entire data grid. If set to **No**, the
 
 This property controls whether filter states are saved as part of user personalization settings or not. When enabled, the system preserves filter input values, selected filter types, applied filter combinations, filter visibility states, and custom filter configurations in the user's personalization profile.
 
-Filter states can be stored in browser localStorage or database attributes depending on personalization configuration. When enabled, users' filter preferences persist across sessions and page refreshes. When disabled, filters reset to default values on every page load — useful for shared screens, dashboards, or public interfaces.
+Filter states can be stored in browser localStorage or database attributes depending on personalization configuration. When enabled, users' filter preferences persist across sessions and page refreshes. When disabled, filters reset to default values on every page load—useful for shared screens, dashboards, or public interfaces.
 
 #### Attribute
 

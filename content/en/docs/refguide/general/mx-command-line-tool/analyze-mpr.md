@@ -2,45 +2,45 @@
 title: "MPR Analyze Command"
 url: /refguide/mx-command-line-tool/analyze-mpr/
 weight: 60
-description: "Describes MPR analyze command, which shows the contents of the MPR file and their contribution to file size."
+description: "Describes the MPR analyze command, which shows the contents of the MPR file and their contribution to file size."
 ---
 
 ## Introduction
 
-The `mx analyze-mpr` command enables you to show information about the MPR file in the form of plaintext.
+The `mx analyze-mpr` command shows information about the MPR file in plaintext format.
 
 {{% alert color="warning" %}}
-We do not recommend building custom tooling on top of this outpur, as the output and the format may change over time.
+Mendix does not recommend building custom tooling on top of this output, as the output and format may change over time.
 {{% /alert %}}
 
 ## Usage
 
 Use the following command pattern: `mx analyze-mpr TARGET-FILE [OPTIONS]`
 
-The `TARGET-FILE` points to the location of the project file (this file has the extension *.mpr*).
+The `TARGET-FILE` points to the location of the project file with the *.mpr* extension.
 
 The `OPTIONS` are described in the table below:
 
 | Option | Result |
 | --- | --- |
-| `--big-string-threshold` | (Default: 1000) The number of bytes from which to consider a String value 'big' (for `Content categories` section) |
-| `--big-blob-threshold` | (Default: 1000) The number of bytes from which to consider a BLOB value 'big' (for `Content categories` section) |
-| `--help` | Displays the help screen. |
+| `--big-string-threshold` | The number of bytes from which to consider a String value `big` (for the `Content categories` section). Default: *1000* |
+| `--big-blob-threshold` | The number of bytes from which to consider a BLOB value `big` (for the `Content categories` section). Default: *1000* |
+| `--help` | Displays the help screen |
 
 ### Analysis
 
-To identify which types of documents (pages, microflows, etc.) have the largest contribution to the MPR file size, you can focus on the **Size by unit type** section, where the number of occurrences and file size contribution are displayed in percentage.
+To identify which types of documents (pages, microflows, etc.) contribute most to the MPR file size, focus on the **Size by unit type** section. This section displays the number of occurrences and file size contribution as a percentage.
 
-You can use the MPR Tool to get more details. You can find it at *C:\Program Files\Mendix\<version>\modeler\MprTool.exe* (where <version> should be replaced with your installed Mendix version). After opening the *.mpr* file for your app, use **Search** > **Find unit by ID** to find the name and module for a particular unit.
+To get more details, use the MPR Tool located at *C:\Program Files\Mendix\<version>\modeler\MprTool.exe* (replace <version> with your installed Mendix version). After opening the *.mpr* file for your app, use **Search** > **Find unit by ID** to find the name and module for a unit.
 
 ### Examples
 
-Valid examples are given below:
+The following examples show valid usage:
 
 * `mx analyze-mpr temp.mpr`
-* `mx analyze-mpr temp.mpr > analysis.txt`, to output to a text file
+* `mx analyze-mpr temp.mpr > analysis.txt` to output to a text file
 
-An example of the output is presented below:
+The following example shows the command output:
 <details>
 
 <summary>Expand for code sample</summary>

@@ -21,7 +21,7 @@ You can integrate between Snowflake and Mendix applications by using OAUTH provi
 To enable SSO-based RBAC for your Mendix app, you must install and configure the following prerequisites:
 
 * [OIDC SSO module](/appstore/modules/oidc/).
-* [Snowflake AI Data Connector](https://docs.mendix.com/appstore/connectors/snowflake/snowflake-ai-data-connector/)
+* [Snowflake AI Data Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/)
 
 ## Configuring Azure Entra ID
 

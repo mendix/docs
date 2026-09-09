@@ -75,8 +75,6 @@ If you already had projects in the old partner profile, they can be automaticall
 
 {{% alert color="info" %}}Ensure you have customer approval for publishing project references.{{% /alert %}}
 
-For technical support or questions, contact partnerfinder@mendix.com.
-
 ## Read More
 
 * [Mendix Profile](/portal/mendix-profile/)

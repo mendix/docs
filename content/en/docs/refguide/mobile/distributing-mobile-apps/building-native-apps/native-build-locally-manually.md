@@ -59,7 +59,7 @@ The keys of the dictionary represent the Mendix Studio Pro version. The `min` an
 
 {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/mendix-version.png" alt="iOS output"   width="200"  class="no-border" >}}
 
-So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
+So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version. <!-- What to update it to? -->
 
 There is no best way of getting a copy of the Native Template. In the following sections we provide two ways to get the version you need.
 

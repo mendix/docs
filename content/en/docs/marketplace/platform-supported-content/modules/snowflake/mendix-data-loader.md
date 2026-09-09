@@ -28,6 +28,14 @@ The Mendix Data Loader is covered under the Mendix EULA. While the loader itself
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
+### Mendix Data Loader Enterprise Edition
+
+For our enterprise customers who require advanced integration and administration capabilities, we offer the Mendix Data Loader Enterprise Edition. This specialized edition is designed for large-scale operations and focuses on synchronizing data from your Mendix applications. It features a headless API, implemented as Snowflake stored procedures, allowing for programmatic invocation. This enables bulk administration of Mendix applications for synchronization or seamless integration with self-service portals. Furthermore, the Enterprise Edition is ideal for customers who require complete control over Snowflake security objects, such as network rules, external access integration, and secrets, ensuring alignment with their stringent security policies.
+
+Because of its advanced nature and because it requires knowledge of Snowflake administration to set up and use its headless API, the Enterprise Edition is not publicly available on the Snowflake Marketplace. Instead, you can request it directly from Mendix. Upon request, we will engage with your team to understand your specific business case and validate if the Enterprise Edition aligns with your operational needs. If suitable, we will facilitate the deployment of the Enterprise Edition directly to your designated Snowflake accounts, and provide comprehensive additional documentation to support your implementation. This approach ensures that the Enterprise Edition is adopted by organizations that can fully benefit from its API-driven capabilities, while maintaining full control over their Snowflake environment.
+
+To request the Mendix Data Loader Enterprise Edition for Snowflake, contact us at [mendix-tech-alliance-dev-team.disw@siemens.com](mailto:mendix-tech-alliance-dev-team.disw@siemens.com).
+
 ## Installation
 
 Follow instructions in [Install an app from a listing](https://other-docs.snowflake.com/en/native-apps/consumer-installing) to add the component to your Snowflake environment.
@@ -43,9 +51,7 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
     1. Enter a **Name** for your data source within the Data Loader.
     2. Enter an **API endpoint** – that is, the base endpoint for the OData resource in your Mendix application, for example, `https://yourmendixapp.mendixcloud.com/odata/snowflakedata/v1/`.
 
-{{% alert color="warning" %}}This must be the root URL, that is, it must end in `/v1/` or `/v2/` Adding anything to the root URL (such as a resource path) will prevent the Mendix Data Loader from working.
-
-If you want to use specific resources, you should instead expose a new endpoint that only contains the resources that you require. This is because it is only possible to use every resource that is exposed in the OData endpoint, and impossible to exclude certain resources.{{% /alert %}}
+        {{% alert color="warning" %}}This must be the root URL, that is, it must end in `/v1/` or `/v2/` Adding anything to the root URL (such as a resource path) will prevent the Mendix Data Loader from working.</br>If you want to use specific resources, you should instead expose a new endpoint that only contains the resources that you require. This is because it is only possible to use every resource that is exposed in the OData endpoint, and impossible to exclude certain resources.{{% /alert %}}
 
     3. Use the **Use Delta Ingestion** check box to specify if you want to ingest all exposed data with every ingestion, or if you want to ingest only data that was newly created or changed since the last ingestion for this data source.
     4. Click **Save**.
@@ -68,6 +74,7 @@ If you want to use specific resources, you should instead expose a new endpoint 
 9. Click **Back** to return to the **Details** page.
 10. Click the **Ingestion Configuration** tab to set up your ingestion destination table.
 11. Click **Create** to start setting up the Ingestion Configuration.
+
     * **Target Database** – Name of the database for data ingestion
     * **Target Schema** – Target schema where all data will be ingested
 12. Click **Save**.

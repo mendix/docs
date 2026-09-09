@@ -6,13 +6,13 @@ url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/version-control-api/
 
 ## Introduction
 
-This how-to describes how to display version control information in Studio Pro. The extension adds a menu item that, when clicked, shows details about the current version control system, branch, and last commit.
+This document describes how to display version control information in Studio Pro. The extension adds a menu item that shows details about the current version control system, branch, and last commit when clicked.
 
 ## Prerequisites
 
-{{% alert="info" %}}
+{{% alert color="info" %}}
 If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
-{{% /alert%}}
+{{% /alert %}}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -21,19 +21,19 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## Showing Version Control Information
 
-The extension creates a menu item named **Current version control system**. When the menu is activated, it fetches version control details (system type, branch, last commit) and displays them in a message box.
+The extension creates a menu item named **Current version control system**. When you activate the menu, it fetches version control details (system type, branch, last commit) and displays them in a message box.
 
 ### Set Up the Extension Structure 
 
-In the example below, you create one menu item that will show version control details in a message box.
+In the example below, you create one menu item that shows version control details in a message box.
 
-It performs the following actions:
+The extension performs the following actions:
 
 1. Creates a menu item named **Current version control system**
-2. When clicked, it retrieves the version control information which includes:
-   * The type of version control system (for example, Git)
-   * Current branch name
-   * Last commit details (SHA, author, message, and date)
+2. When clicked, retrieves version control information, including the following:
+    * The type of version control system (for example, Git)
+    * Current branch name
+    * Last commit details (SHA, author, message, and date)
 3. Displays this information in a message box
 
 Replace your `src/main/index.ts` file with the following:
@@ -80,6 +80,6 @@ export const component: IComponent = {
 
 ## Extensibility Feedback
 
-If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
+If you would like to provide additional feedback, you can complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
 Any feedback is appreciated.

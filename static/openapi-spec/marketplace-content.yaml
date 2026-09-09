@@ -20,6 +20,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/name'
         - $ref: '#/components/parameters/isPrivate'
+        - $ref: '#/components/parameters/isCompanyApproved'
         - $ref: '#/components/parameters/publishedSince'
         - $ref: '#/components/parameters/limitContent'
         - $ref: '#/components/parameters/offsetContent'
@@ -89,6 +90,24 @@ paths:
           $ref: '#/components/responses/error401'
         '500':
           $ref: '#/components/responses/error500'
+  /versions/{versionId}/download:
+    get:
+      tags:
+        - content
+      summary: Downloads the source file of a specific version.
+      description: "Downloads the original source file associated with the specified version"
+      operationId: getVersionDownload
+      parameters:
+        - $ref: '#/components/parameters/versionId'
+      responses:
+        '200':
+          description: Downloads package version successfully
+        '400':
+          $ref: '#/components/responses/error400'
+        '404':
+          $ref: '#/components/responses/error404'
+        '500':
+          $ref: '#/components/responses/error500'
  
 components:
   parameters:
@@ -130,6 +149,13 @@ components:
       name: isPrivate
       in: query
       description: "Allows you to filter on public or private content. Supported values are `true` or `false`. If the value is `true`, it returns only the last published versions of the private content belonging to your company. If the value is `false`, it returns only the last published versions of the public content belonging to your company. If no value is passed, then it returns the last published versions of both public and private content belonging to your company."
+      required: false
+      schema:
+        type: string
+    isCompanyApproved:
+      name: isCompanyApproved
+      in: query
+      description: "Allows you to filter on company-approved content. This filter is only applicable if the company has enabled the company-approved badge functionality. For more information, refer to https://docs.mendix.com/control-center/company-approved/. Supported values are `true` or `false`. If the value is `true`, it returns only the last published versions of the company-approved content. If the value is `false`, it returns only the last published versions of the non-company-approved content. If no value is passed, it returns the last published versions of both company-approved and non-company-approved content."
       required: false
       schema:
         type: string
@@ -320,6 +346,9 @@ components:
         isPrivate:
           type: boolean
           description: "This indicates whether the content is public or private."
+        isCompanyApproved:
+              type: boolean
+              description: "This indicates whether the content is company-approved. This attribute is only returned if the company has enabled the company-approved badge functionality. For more information, refer to https://docs.mendix.com/control-center/company-approved/."
         latestVersion:
           $ref: '#/components/schemas/version'
     content:
@@ -362,15 +391,136 @@ components:
             type: string
             format: yyyy-MM-ddTHH-mm-ssZ
             example: '2023-09-01T09:04:00Z'
-    contentVersion:
-        allOf:
-        - $ref: '#/components/schemas/version'
-        properties:
-          releaseNotes:
+          downloadURL:
             type: string
-            example: "These are the release notes for this version."
-            description: "These are the release notes for the published versions."
+            format: uri
+            example: "https://example.com/content/versions/{versionId}/download"
+            description: "This is the URL used to download the specific version of the component."
+    versionReference:
+      type: object
+      description: "A reference to a version with basic identifying information."
+      required:
+        - versionId
+        - versionNumber
+        - minSupportedMendixVersion
+      properties:
+        versionId:
+          type: string
+          format: uuid
+          description: "This is the UUID of the version."
+        versionNumber:
+          type: string
+          pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})(?:-[a-zA-Z]+)?\\b$"
+          example: '10.1.1'
+          description: "This is the version number. The format of the version number is major.minor.patch; for example, `1.0.0`."
+        minSupportedMendixVersion:
+          type: string
+          pattern: "^\\b((?:\\d{1,3}|1000)(?:\\.\\d{1,3}|\\.1000){0,2})\\b$"
+          example: '10.1.1'
+          description: "This is the Studio Pro version selected during the onboarding. This means any Studio Pro version equal to or greater than this version is compatible with the latest version of the content."
 
+    securityIssue:
+      type: object
+      required:
+        - code
+      properties:
+        code:
+          type: string
+          example: "CVE-2023-12345"
+          description: "This is the CVE or CWE identifier for the security issue."
+
+    regularVersion:
+      allOf:
+        - $ref: '#/components/schemas/version'
+        - type: object
+          required:
+            - releaseNotes
+            - versionType
+          properties:
+            releaseNotes:
+              type: string
+              example: "These are the release notes for this version."
+              description: "These are the release notes for the published versions."
+            versionType:
+              type: string
+              enum:
+                - Regular
+              example: "Regular"
+              description: "This is the version type. It indicates that this is a regular version with no known vulnerabilities."
+
+    vulnerableVersion:
+      allOf:
+        - $ref: '#/components/schemas/version'
+        - type: object
+          required:
+            - releaseNotes
+            - versionType
+            - vulnerabilities
+            - securityFixVersions
+          properties:
+            releaseNotes:
+              type: string
+              example: "These are the release notes for this version."
+              description: "These are the release notes for the published versions."
+            versionType:
+              type: string
+              enum:
+                - Vulnerable
+              example: "Vulnerable"
+              description: "This is the version type. It indicates that this version has known vulnerabilities."
+            vulnerabilities:
+              type: array
+              description: "This lists the CVE or CWE identifiers for the vulnerabilities present in this version."
+              items:
+                $ref: '#/components/schemas/securityIssue'
+            securityFixVersions:
+              type: array
+              description: "This lists the security fix versions that address the vulnerabilities in this version."
+              items:
+                $ref: '#/components/schemas/versionReference'
+
+    securityFixVersion:
+      allOf:
+        - $ref: '#/components/schemas/version'
+        - type: object
+          required:
+            - releaseNotes
+            - versionType
+            - fixedSecurityIssues
+            - affectedVersions
+          properties:
+            releaseNotes:
+              type: string
+              example: "These are the release notes for this version."
+              description: "These are the release notes for the published versions."
+            versionType:
+              type: string
+              enum:
+                - SecurityFix
+              example: "SecurityFix"
+              description: "This is the version type. It indicates that this version fixes one or multiple security issues."
+            fixedSecurityIssues:
+              type: array
+              description: "This lists the CVE or CWE identifiers for the security issues that were fixed in this version."
+              items:
+                $ref: '#/components/schemas/securityIssue'
+            affectedVersions:
+              type: array
+              description: "This lists the vulnerable versions that are fixed by this security fix version."
+              items:
+                $ref: '#/components/schemas/versionReference'
+
+    contentVersion:
+      oneOf:
+        - $ref: '#/components/schemas/regularVersion'
+        - $ref: '#/components/schemas/vulnerableVersion'
+        - $ref: '#/components/schemas/securityFixVersion'
+      discriminator:
+        propertyName: versionType
+        mapping:
+          Regular: '#/components/schemas/regularVersion'
+          Vulnerable: '#/components/schemas/vulnerableVersion'
+          SecurityFix: '#/components/schemas/securityFixVersion'
   securitySchemes:
     Personal Access Token:
       name: Authorization

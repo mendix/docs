@@ -1,0 +1,46 @@
+extends: substitution
+message: "Use American English spelling '%s' instead of '%s'."
+link: https://learn.microsoft.com/en-us/style-guide/word-choice/use-us-spelling-avoid-non-english-words
+ignorecase: true
+level: error
+nonword: false
+# Exclude code, comments, and raw content (front matter, shortcodes, anchor IDs)
+scope: text
+action:
+  name: replace
+swap:
+  # -ise/-ize patterns
+  '\b(organ|real|recogn|standard|normal|legal|special|general|minim|maxim|optim|neutral|central|character|categor|formal|final|visual|modern|popular|personal|national|local|global|digital|custom|util|mobil|stabil|prior|anal|summar|critic|emphas|synchron)ise([ds])?\b': '$1ize$2'
+
+  # -our/-or patterns
+  '\b(col|behavi|fav|neighb|lab|hon|hum|sav|harb)our([s]?)\b': '$1or$2'
+
+  # -re/-er patterns
+  '\bcentre([ds])?\b': 'center$1'
+  '\btheatre([ds])?\b': 'theater$1'
+
+  # -ence/-ense patterns
+  '\bdefence([s]?)\b': 'defense$1'
+  '\blicence([s]?)\b': 'license$1'
+  '\boffence([s]?)\b': 'offense$1'
+  '\bpretence([s]?)\b': 'pretense$1'
+
+  # -logue/-log patterns
+  '\bcatalogue([ds])?\b': 'catalog$1'
+  '\bdialogue([ds])?\b': 'dialog$1'
+
+  # Double-L patterns
+  '\bcancell(ed|ing)\b': 'cancel$1'
+  '\btravell(ed|ing|er)\b': 'travel$1'
+  '\bmodell(ed|ing)\b': 'model$1'
+
+  # Common individual words
+  '\bgrey\b': 'gray'
+  '\bwhilst\b': 'while'
+  '\bamongst\b': 'among'
+  '\btowards\b': 'toward'
+  '\bafterwards\b': 'afterward'
+  '\bbackwards\b': 'backward'
+  '\bupwards\b': 'upward'
+  '\bdownwards\b': 'downward'
+  '\bprogramme([ds])?\b': 'program$1'

@@ -966,6 +966,117 @@ The editability property allows a pluggable widget to have an editable configura
 <systemProperty key="Editability"/>
 ```
 
+### Text {#text}
+
+The system text property allows a pluggable widget to define and use translatable texts. The translations are made available through a `texts` property added to the widget's container props with a [SystemTextsValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#systemtexts).
+
+The widget may define [its own texts](#widget-texts), or declare the use of [external texts](#external-texts).
+
+#### XML Elements
+
+##### Text {#widget-texts}
+
+A `<text>` element represents a single translatable string. Each text is identified by its `key` attribute.
+
+| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
+|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `key`          | Yes      | String              | Identifier of the text.                                                                                                         |
+
+###### Caption
+
+The `<caption>` element defines the caption used in Studio Pro.
+
+###### Translations
+
+The `<translations>` element takes a list of `<translation>` elements, which define the default translations for the text.
+
+| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
+|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `lang`         | Yes      | String              | Code of the language for the translation. Must be one of `en_US`, or `nl_NL`.                                                   |
+
+###### Parameters
+
+The `<parameters>` element takes a list of `<parameter>` elements. Each parameter defines a variable that can be used in the text.
+
+System text parameters are positional. Numbered placeholders indicate where the parameter is substituted in a translation. For example, `{2}` would get substituted by the value of the second parameter. Parameter values are [passed by the widget](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#parameters).
+
+| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
+|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `caption`      | Yes      | String              | Caption of the parameter. Displayed in Studio Pro and used to generate types for the `translate()` method.                      |
+
+##### External Texts {#external-texts}
+
+The `<externalTexts>` element declares a set of texts that the widget uses which belong to a different namespace.
+
+By adding `<text>` elements as children, the set of texts is restricted to those texts. If no `<text>` elements are added, the full namespace is imported for the widget. The benefit of restricting the set of texts is more precise type and consistency checking.
+
+```xml
+<systemProperty key="Text">
+  <externalTexts namespace="example.widgeta.widgetA" />
+  <externalTexts namespace="example.widgetb.widgetB">
+      <text key="greeting" />
+      <text key="goodbye" />
+  </externalTexts>
+</systemProperty>
+```
+
+The example above would import all texts from the `example.widgeta.widgetA` namespace, but only the texts `greeting` and `goodbye` from the `example.widgetb.widgetB` namespace.
+
+| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
+|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `namespace`    | Yes      | String              | Identifier of the namespace. May be any system text namespace, including other widget IDs.                                      |
+
+###### Text
+
+A `<text>` element represents a single translatable string that belongs to the namespace defined by `<externalTexts>`.
+
+| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
+|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `key`          | Yes      | String              | Identifier of the text.                                                                                                         |
+
+#### Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<systemProperty key="Text">
+    <text key="greeting">
+        <caption>Greeting</caption>
+        <translations>
+            <translation lang="en_US">Welcome, {1}!</translation>
+            <translation lang="nl_NL">Welkom, {1}!</translation>
+        </translations>
+        <parameters>
+            <parameter caption="Username" />
+        </parameters>
+    </text>
+    <text key="notification_count">
+        <caption>Notification Count</caption>
+        <translations>
+            <translation lang="en_US">You have {1} unread notifications.</translation>
+            <translation lang="nl_NL">Je hebt {1} ongelezen berichten.</translation>
+        </translations>
+        <parameters>
+            <parameter caption="Count" />
+        </parameters>
+    </text>
+    <externalTexts namespace="mxui.common">
+        <text key="true" />
+        <text key="false" />
+    </externalTexts>
+</systemProperty>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/widget-system-texts-properties-dialog.png" alt="The Studio Pro properties dialog box showing the widget's system texts" class="no-border" >}}
+
+Note that external texts are not listed.
+
+Clicking **Go to system texts** opens the system texts editor, where the texts appear categorized under the widget's name:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/widget-system-texts-editor.png" alt="The system texts editor showing the widget's texts categorized under the widget's name" class="no-border" >}}
+
 ## Converting Properties {#converting-properties}
 
 When a pluggable widget's property type changes, the Mendix Platform will automatically migrate the value of the property to the new type. The following table lists the property type changes that are supported:

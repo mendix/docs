@@ -483,6 +483,100 @@ if (selection.type === "Single") {
 }
 ```
 
+### SystemTextsValue {#systemtexts}
+
+The `SystemTextsValue` exposes the `translate()` function which allows widgets to use [system texts](/refguide/system-texts/). When a widget declares that it uses system texts, the value is available under the `texts` prop.
+
+```ts
+interface SystemTextsValue {
+    readonly translate(key: string, parameters?: string[]): string;
+    readonly translate(namespace: string, key: string, parameters?: string[]): string;
+}
+```
+
+Widgets declare the use of system texts by adding the [Text system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#text) and defining their own texts or referencing external texts. Widgets written in TypeScript provide type checking for `translate()` to ensure correct use of the texts.
+
+```xml
+<systemProperty key="Text">
+    <text key="greeting">
+        <caption>Greeting</caption>
+        <translations>
+            <translation lang="en_US">Hello, World!</translation>
+            <translation lang="nl_NL">Hallo, Wereld!</translation>
+        </translations>
+    </text>
+</systemProperty>
+```
+
+```tsx
+export function MyWidget({ texts }: MyWidgetContainerProps) {
+    return <h1>{texts.translate("greeting")}</h1>;
+}
+```
+
+{{% alert color="info" %}}
+Currently, you can only provide default translations in English (`en_US`) and Dutch (`nl_NL`).
+{{% /alert %}}
+
+#### Parameters
+
+System texts may be parameterized to allow for dynamic translations.
+
+Parameters are _positional_ and are passed as an _array of strings_ to `translate()`.
+
+```xml
+<systemProperty key="Text">
+    <text key="import_summary">
+        <caption>Import Summary</caption>
+        <translations>
+            <translation lang="en_US">Successfully imported {2} records. {1} records had errors.</translation>
+            <translation lang="nl_NL">{2} Rijen zijn succesvol geïmporteerd. {1} Rijen hadden foutmeldingen.</translation>
+        </translations>
+    </text>
+    <parameters>
+        <parameter caption="Count Errors" />
+        <parameter caption="Count Successful" />
+    </parameters>
+</systemProperty>
+```
+
+```ts
+translate("import_summary", [ errorCount.toString(), pendingCount.toString() ])
+```
+
+Widgets written in TypeScript report missing parameters for texts defined by the widget.
+
+#### Sharing System Texts {#external-texts}
+
+By declaring external texts, a widget can use texts from other namespaces. Each system text belongs to a namespace, and texts defined by a widget have the widget's ID as their namespace.
+
+To use a text from widget A, widget B must declare it as an external text with the ID of widget A as the namespace.
+
+```xml {hl_lines=6}
+<!-- widget id: example.widgetb.widgetB -->
+<systemProperty key="Text">
+    <text key="greeting">
+        <caption>Greeting</caption>
+    </text>
+    <externalTexts namespace="example.widgeta.widgetA">
+        <text key="import_summary" />
+    </externalTexts>
+    <externalTexts namespace="mxui.common">
+        <text key="true" />
+    </externalTexts>
+</systemProperty>
+```
+
+The `translate()` method takes a namespace and a key as parameters to use a specific text. When the namespace is not specified, the method assumes that the key belongs to the namespace of the current widget. You can refer to any system text available in the app.
+
+```tsx
+translate("greeting") // example.widgetb.widgetB.greeting
+translate("example.widgeta.widgetA", "import_summary", [ "4", "2" ]) // example.widgeta.widgetA.import_summary
+translate("mxui.common", "true") // mxui.common.true
+```
+
+Parameters may be passed to external texts. Note that there is no type checking for the parameters of external texts.
+
 ## Exposed Modules
 
 ### Session {#session}

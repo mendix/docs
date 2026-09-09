@@ -1,0 +1,1 @@
+{{ .RawContent | strings.ReplaceRE `\]\((/[^:)#" ]+/)(#[^)"]*)?\)` `](${1}index.html.md${2})` }}

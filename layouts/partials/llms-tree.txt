@@ -1,0 +1,8 @@
+{{- $page := .page -}}
+{{- $depth := .depth -}}
+{{- if and (not $page.Draft) (not $page.Params.private) -}}
+{{- $indent := strings.Repeat $depth "  " -}}
+{{- $desc := "" -}}{{- with $page.Description -}}{{- $desc = printf ": %s" . -}}{{- end -}}
+{{- printf "\n%s- [%s](%sindex.html.md)%s" $indent $page.Title $page.Permalink $desc -}}
+{{- if $page.IsSection -}}{{- range $page.Pages -}}{{- partial "llms-tree.txt" (dict "page" . "depth" (add $depth 1)) -}}{{- end -}}{{- end -}}
+{{- end -}}

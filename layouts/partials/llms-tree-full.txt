@@ -1,0 +1,7 @@
+{{- $page := .page -}}
+{{- if and (not $page.Draft) (not $page.Params.private) -}}
+{{- printf "\n---\n\n# %s\n\nURL: %s\nMarkdown: %sindex.html.md" $page.Title $page.Permalink $page.Permalink -}}
+{{- with $page.Description -}}{{- printf "\nDescription: %s" . -}}{{- end -}}
+{{- printf "\n\n%s" ($page.RawContent | strings.ReplaceRE `\]\((/[^:)#" ]+/)(#[^)"]*)?\)` `](${1}index.html.md${2})`) -}}
+{{- if $page.IsSection -}}{{- range $page.Pages -}}{{- partial "llms-tree-full.txt" (dict "page" .) -}}{{- end -}}{{- end -}}
+{{- end -}}

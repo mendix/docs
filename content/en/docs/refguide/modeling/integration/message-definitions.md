@@ -53,13 +53,13 @@ The structure tree shows the attributes and some of the associations of the enti
 | Example Value | A typical value for an attribute. | y | For a published REST service, this value shows up in the [interactive documentation](/refguide/published-rest-services/#interactive-documentation).<br />A date/time value is specified in the format `year-month-day` or `year-month-day hour:minute:second`. |
 | Public Documentation | Additional information to be displayed in the [interactive documentation](/refguide/published-rest-services/#interactive-documentation). | y | |
 
-#### Generate Mapping(s)…
+#### Generate Mapping(s)
 
-The **Generate mapping(s)…** button allows you to generate import and/or export mapping documents from the message definition. The mappings are added to your module.
+The **Generate mapping(s)** button allows you to generate import and/or export mapping documents from the message definition. The mappings are added to your module.
 
 To generate mappings, do the following:
 
-1. Click **Generate mapping(s)…**.
+1. Click **Generate mapping(s)**.
 2. Ensure that the required mapping (or mappings) is selected.
 3. Click **OK**.
 

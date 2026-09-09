@@ -124,6 +124,8 @@ The anonymous user role has read access to a [persistable entity](/refguide/pers
 
 Without an XPath constraint, the access rule returns every object of the entity to every anonymous session. Data that was only ever meant to be visible to the visitor who submitted it, such as problem reports or form submissions, then becomes readable by all unauthenticated visitors. This is the most common way in which anonymous access leaks the data of unrelated users.
 
+Adding an XPath constraint for an anonymous user may not give you the results you expect because the same anonymous user can have a different [`[%CurrentUser%]`](/refguide/xpath-keywords-and-system-variables/#system-variables) assigned if they start a new session. Mendix recommends changing your app design (for example by making users sign in or sending confirmation of information on a form via email or some other persistable method outside the app) if you find yourself giving access for an anonymous user to a persistable entity with information which needs to be limited depending on who the user is.
+
 #### Steps to Fix
 
 To fix the issue, add an XPath constraint to the access rule, so that it only returns the objects that the current anonymous session is allowed to see, for example by constraining on the owner of the object. If the objects cannot be narrowed down to the current session, remove the read access instead.

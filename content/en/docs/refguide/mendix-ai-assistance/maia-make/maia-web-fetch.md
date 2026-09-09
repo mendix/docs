@@ -10,9 +10,9 @@ description: "Describes Maia's web fetch capability for retrieving content from 
 ## Introduction
 
 {{% alert color="info" %}}
-This feature was released as part of [Maia Make](/refguide/maia-make/) capabilities in Studio Pro 11.10. 
+This feature is part of [Maia Make](/refguide/maia-make/) and was introduced in Studio Pro 11.10.
 
-To use Maia Web Fetch, an internet connection and signing in to Studio Pro are required.
+To use Maia Web Fetch, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
 Maia can fetch and read content from public websites and APIs. It can retrieve documentation, access API endpoints, read configuration files, and gather information from the web to assist with your development tasks.
@@ -23,7 +23,7 @@ When Maia wants to fetch content from the web, it asks for your permission first
 
 ## Enabling or Disabling Web Tools
 
-In Studio Pro 11.11 and above, you can enable or disable this feature by navigating to **Preferences** > **Maia**, and selecting or deselecting **Enable web tools**. Restart Studio Pro for the change to take effect. 
+In Studio Pro 11.11 and above, you can enable or disable this feature by going to **Preferences** > **Maia** and selecting or clearing **Enable web tools**. Restart Studio Pro for the change to take effect.
 
 For Studio Pro 11.12 and above, the changes take effect immediately and do not require restart. 
 

@@ -1,4 +1,10 @@
-# Private Mendix Platform Download Portal
+---
+title: "Private Mendix Platform Download Portal"
+linktitle: "Download Portal"
+url: /private-mendix-platform/download-portal/
+description: "Provides information about the Download Portal used by Private Mendix Platform."
+weight: 15
+---
 
 ## Introduction
 

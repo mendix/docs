@@ -8,6 +8,18 @@ weight: 70
 
 The behavior of Mendix using an SAP HANA database has some minor differences when compared with using a PostgreSQL database. These differences are documented below.
 
+## SAP HANA JDBC driver
+
+Starting with Mendix version 11.15.0 and 11.12.5, we no longer distribute the SAP HANA JDBC driver with Studio Pro, because of licensing issues.
+
+If you deploy your app to [SAP BTP using the Mendix Portal](/developerportal/deploy/sap-cloud-platform/), the driver will be added to your app during deployment. No special treatment is necessary.
+
+If you want to test your app locally against a SAP HANA database or deploy it using your own infrastructure, you will need to add the JDBC driver to your app like any other 3rd party jar file using one of these two methods:
+* Download the SAP HANA JDBC driver manually from [Maven Central](https://central.sonatype.com/artifact/com.sap.cloud.db.jdbc/ngdbc) and add it to the `userlib` folder in your app.
+* Use [Managed Dependencies](/refguide/managed-dependencies/) to add a dependency with Group ID `com.sap.cloud.db.jdbc` and Artifact ID `ngdbc`. This adds the driver to the `vendorlib` folder in your app.
+
+We recommend using the latest driver version that has major version 2.
+
 ## Behavior of Unlimited and Very Long Strings
 
 ### Comparison Functions

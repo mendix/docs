@@ -104,13 +104,13 @@ To install the solution, perform the following steps:
 
     To enable operator configuration options, select the **Enable operator configuration** checkbox. The following sections become available:
 
-    * **Runtime Configuration** – Configure runtime-specific settings for Mendix applications
-    * **Probe Settings** – Customize liveness and readiness probe configurations
-    * **Resource Settings** – Define CPU and memory resource limits and requests
-    * **Runtime Deployment Pod Annotations** – Add custom annotations to runtime deployment pods
-    * **Custom Pod Annotations** – Specify additional annotations for application pods
-    * **Custom Pod Node Selector** – Set node selector labels to control pod placement on specific nodes
-    * **Custom OCI Registry** – Configure a custom OCI registry to pull Mendix on Kubernetes images from
+    * **Runtime Configuration** - Configure runtime-specific settings for Mendix applications.
+    * **Probe Settings** - Customize liveness and readiness probe configurations.
+    * **Resource Settings** - Define CPU and memory resource limits and requests.
+    * **Runtime Deployment Pod Annotations** - Add custom annotations to runtime deployment pods.
+    * **Custom Pod Annotations** - Specify additional annotations for application pods.
+    * **Custom Pod Node Selector** - Set node selector labels to control pod placement on specific nodes.
+    * **Custom OCI Registry** - Configure a custom OCI registry from which to pull Mendix on Kubernetes images.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard10.png" alt="Operator Configuration tab showing expandable configuration sections" >}}
 

@@ -192,8 +192,6 @@ To add a keyboard emulator device, perform the following steps:
 
 7. Click **Add Device**.
 
-    The wizard shows a third step for message parsing, but keyboard wedge devices do not use it. The step is skipped and the device is added immediately.
-
 Configure the message length limits to match the data that your device sends. Together with the inter character timeout, they reduce the chance that unrelated keyboard activity is forwarded to your app as a device message.
 
 ### Message Syntax {#keyboard-wedge-syntax}

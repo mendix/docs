@@ -7,7 +7,7 @@ weight: 30
 
 ## Introduction
 
-The [Workstation Commons](<!-- TODO: add Marketplace link, for example https://marketplace.mendix.com/link/component/000000/ -->) module contains reusable building blocks for apps that communicate with devices through [Mendix Workstation](/mendix-workstation/).
+The [Workstation Commons](https://marketplace.mendix.com/link/component/305490) module contains reusable building blocks for apps that communicate with devices through [Mendix Workstation](/mendix-workstation/).
 
 Workstation Commons speeds up development. It offers prebuilt nanoflows for the common device operations, a ready-to-use device logger, and UI snippets for the screens that most Workstation apps share.
 

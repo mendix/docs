@@ -17,9 +17,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## Custom Document Model
 
-Studio Pro allows you to extend its metamodel by adding custom document types. These documents can store arbitrary data that can be serialized as strings. When you register an editor (a user-defined UI component) for a specific document type, documents of that type appear in the UI alongside built-in document types such as constants, Java actions, and pages. They appear in the **New Document** and **Find Advanced** dialogs, context menus for adding documents, the App Explorer, and other UI elements that display Studio Pro documents. You can register custom editors to appear as tabs or as modal dialogs.
-
-**It is also possible to add consistency checks and java action activities for Custom Blob Documents. Please see the respective tutorials at [Consistency Checks](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/) and [Java Action Activities](/apidocs-mxsdk/apidocs/web-extensibility-api-11/java-action-activities-blob-documents/).**
+Studio Pro allows you to extend its metamodel by adding custom document types. These documents can store arbitrary data that can be serialized as strings. When you register an editor (a user-defined UI component) for a specific document type, documents of that type appear in the UI alongside built-in document types such as constants, Java actions, and pages. They appear in the **New Document** and **Find Advanced** dialogs, context menus for adding documents, the App Explorer, and other UI elements that display Studio Pro documents. You can register custom editors to appear as tabs or as modal dialogs. You can also add [Consistency Checks](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/) and [Java Action Activities](/apidocs-mxsdk/apidocs/web-extensibility-api-11/java-action-activities-blob-documents/) for custom blob documents.
 
 ## Registering a New Document Type
 
@@ -272,7 +270,7 @@ The code then provides a way to save changes.
 
 ### Creating a Document from Code {#creating-a-document-from-code}
 
-It is also possible to create a new document directly using the api, by using the `createDocument` method. It requires a container ID (a module or a folder), type, content, and the name of the actual document. It is important to remember that documents can only be created if the project is currently initialized. When an extension first load when the containing project gets opened, its database will not be built yet. After the extension updates and gets reloaded, it will be. So it is advisable to check if the project is currently available before creating (or updating) documents.
+The `createDocument` method creates a new document and requires a container ID (a module or a folder), a type, content, and a document name. Documents can only be created when the project is initialized: when an extension first loads as its containing project opens, the project database is not yet built. It becomes available after the extension updates and reloads. Check that the project is available before creating or updating documents.
 
 ```typescript
 const project: ProjectMetadata | null = await studioPro.app.projectManager.getProjectMetadata();

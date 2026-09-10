@@ -162,13 +162,13 @@ This device type requires the following message and response:
 
 You can configure Workstation to connect with devices that emulate a keyboard by sending data as key strokes, such as barcode scanners, RFID readers, or measurement devices. Because these devices present themselves to the operating system as a standard keyboard, keyboard events are captured wherever the current focus is, for example in the web app or in an input field. The operator does not have to place the cursor in a specific input field first.
 
-The Workstation Client distinguishes device input from human typing by how quickly the key strokes arrive and by the characters surrounding the message.
+The Workstation Client recognizes messages from a keyboard wedge device by combining several criteria. It measures the rate at which the characters arrive, which for a device is faster than a person can type, and it uses the configured prefix, suffix, and message length requirements to tell the device apart from other sources of key strokes such as macro pads or automation scripts.
 
-{{% alert color="warning" %}}
-Keyboard wedge support is a best-effort mechanism. It cannot guarantee separation from fast manual typing, macro pads, or automation scripts, because the operating system does not distinguish a keyboard emulating device from a person typing.
+Because a keyboard wedge device is indistinguishable from a keyboard at the operating system level, this recognition is a best-effort mechanism. The Workstation Client cannot tell two sources apart if they produce messages with the same character throughput, length, and prefix and suffix. Give each keyboard wedge device a distinctive combination of these settings when you configure more than one device, or when macro pads or automation scripts are in use on the same computer.
+
+### Limitations
 
 Keyboard wedge devices are supported on Windows and macOS only. Support for Linux ARM, including Raspberry Pi will follow soon.
-{{% /alert %}}
 
 ### Configuring Keyboard Wedges
 
@@ -192,7 +192,7 @@ To add a keyboard emulator device, perform the following steps:
 
 7. Click **Add Device**.
 
-Configure the message length limits to match the data that your device sends. Together with the inter character timeout, they reduce the chance that unrelated keyboard activity is forwarded to your app as a device message.
+Configure the prefix, suffix, and message length limits to match the data that your device sends. The more specific these settings are, the more reliably the Workstation Client attributes an incoming message to the correct device.
 
 ### Message Syntax {#keyboard-wedge-syntax}
 

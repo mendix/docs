@@ -59,7 +59,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Modules
 
-* Workstation Commons - The new [Workstation Commons](/mendix-workstation/commons/) module contains a collection of nanoflows and snippets commonly used when building an app connected to peripherals devices, including the following:
+* Workstation Commons - The new Workstation Commons module contains a collection of nanoflows and snippets commonly used when building an app connected to peripherals devices, including the following:
 
     * A high-level nanoflow to simplify the interface with smartcard readers, Bluetooth, printers and file devices
     * Nanoflows to manage connecting and disconnecting to and from devices

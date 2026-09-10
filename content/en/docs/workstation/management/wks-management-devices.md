@@ -101,6 +101,35 @@ To add a serial port device, perform the following steps:
 13. In the **Encoding** field, select the message encoding.
 14. Click **Add Device**.
 
+## TCP/IP Client
+
+TCP/IP clients allow you to connect to remote devices over the network.
+
+### Configuring TCP/IP Clients
+
+To add a TCP/IP client, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, and then select **TCP/IP Client**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
+
+    * **Host** - The host to which the TCP/IP Client connects. For test scenarios, you can use `localhost` to connect to a TCP/IP server on the same machine. For production scenarios, it is usually a local IP address. 
+    * **Port** - The port to which the TCP/IP Client connects. The value must be in the range of `0-65535`.
+
+7. Click **Next**.
+8. In the **Split Incoming Message By** section, select one of the following options:
+
+    * **Delimiter** - Messages received from the device are split by the specified character or characters marking the end of the message, for example, `\r\n`.
+    * **Time and Size** - Messages received from the device are split by time interval in milliseconds and maximum message size in bytes.
+    * **Do Not Split** - Messages received from the device are not automatically split.
+
+9. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
+10. In the **Encoding** field, select the message encoding.
+11. Click **Add Device**.
+
 ## Bluetooth
 
 Add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact device name as displayed in your operating system's Device Manager.
@@ -130,6 +159,76 @@ This device type requires the following message and response:
 ### Response
 
 * `CharacteristicUUID#Response`
+
+## Keyboard Wedge {#keyboard-wedge}
+
+You can configure Workstation to connect with devices that emulate a keyboard by sending data as key strokes, such as barcode scanners, RFID readers, or measurement devices. Keyboard events are captured wherever the current focus is, for example in the web app or in an input field.
+
+### Configuring Keyboard Wedges
+
+To add a keyboard emulator device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, and then select **Keyboard Wedge**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
+
+    * **Inter Character Timeout (ms)** - The maximum allowed amount of time between keystrokes.
+    * **Keyboard Layout** - The keyboard layout of the device. To use the active keyboard layout as defined by your operating system, select **System**.
+    * **Suffix** - A series of characters denoting the end of a message.
+    * **Minimum Message Length** - The shortest message that can be sent to the Connector from this device, excluding the prefix and suffix.
+    * **Maximum Message Length** - The longest message that can be sent to the Connector from this device, excluding the prefix and suffix.
+    * **Prefix** - A series of characters denoting the start of a message.
+
+7. Click **Add Device**.
+
+## Printer
+
+You can integrate your Workstations with printer devices.
+
+### Configuring Printers
+
+To add a printer device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, and then select **Printer**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Enter the exact device name as it is displayed in your operating system's device manager.
+
+    Alternatively, leave the field blank and the Workstation Client will automatically connect to the default printer as defined by the operating system.
+
+7. Click **Add Device**.
+
+### Message Syntax
+
+This device type requires the following message and response:
+
+#### Message
+
+* `P#PrintJobDocName#Format#DataPayloadInBase64` - Submit a print job.
+* `S` - Get printer status and queued jobs.
+* `C#JobId` - Cancel print job.
+
+#### Response
+
+* `P#DocName#JobId` - Print job accepted by OS print interface.
+* `S#State#StateReason1,...#NumJobs#JobId1:JobName1:JobState1,...` - Printer state and job list summary.
+* `E#ErrorMessage` - Error.
+
+#### Example
+
+The sample print command `P#TESTHELLO#RAW#aGVsbG8=` contains the following elements:
+
+1. `P (command prefix)` - Tells the Workstation Client that the incoming instruction is a Print command.
+2. Separator
+3. `TESTHELLOFILE` (file name) - Name assigned to the print job. The client uses this to create the temporary file (for example, `TESTHELLOFILE.prn`) before sending it to the printer spooler.
+4. Separator
+5. `RAW` (format type) - Tells the Workstation Client that the following data is a Raw Printer Command (such as ZPL for Zebra printers, EPL, or PCL) rather than a standard document like a PDF or a Word file. Printing in RAW bypasses the standard printer drivers' formatting. It sends the exact code the printer needs to generate labels, barcodes, or specific layouts.
+6. `aGVsbG8=` (payload) - A data string encoded to Base64. Base64 decoded, it translates to the text `hello`. If you are testing this and the printer is not reacting, verify that the string you are encoding in Base64 matches the specific language your printer speaks. For example, a Zebra printer cannot process a plain text `hello` unless it is wrapped in ZPL commands like `^XA^FO50,50^A0N,50,50^FDhello^FS^XZ`.
 
 ## File Device
 
@@ -215,35 +314,6 @@ Follow these steps to verify that your file device configuration is working corr
 7. Go to *C:\MyTestFolder* and verify that it contains the text file.
 8. Open the test file and verify that it contains the text *Hello from Mendix*.
 
-## TCP/IP Client
-
-TCP/IP clients allow you to connect to remote devices over the network.
-
-### Configuring TCP/IP Clients
-
-To add a TCP/IP client, perform the following steps:
-
-1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **TCP/IP Client**.
-3. In the **Device Name** field, enter an identifying name for the device.
-4. Optional: Select or create a class to help you manage your devices.
-5. Click **Next**.
-6. Configure the following connection parameters:
-
-    * **Host** - The host to which the TCP/IP Client connects. For test scenarios, you can use `localhost` to connect to a TCP/IP server on the same machine. For production scenarios, it is usually a local IP address. 
-    * **Port** - The port to which the TCP/IP Client connects. The value must be in the range of `0-65535`.
-
-7. Click **Next**.
-8. In the **Split Incoming Message By** section, select one of the following options:
-
-    * **Delimiter** - Messages received from the device are split by the specified character or characters marking the end of the message, for example, `\r\n`.
-    * **Time and Size** - Messages received from the device are split by time interval in milliseconds and maximum message size in bytes.
-    * **Do Not Split** - Messages received from the device are not automatically split.
-
-9. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
-10. In the **Encoding** field, select the message encoding.
-11. Click **Add Device**.
-
 ## TCP/IP Server
 
 TCP/IP clients allow you to host connections over the network.
@@ -271,49 +341,3 @@ To add a TCP/IP server, perform the following steps:
 9. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
 10. In the **Encoding** field, select the message encoding.
 11. Click **Add Device**.
-
-## Printers
-
-You can integrate your Workstations with printer devices.
-
-### Configuring Printers
-
-To add a printer device, perform the following steps:
-
-1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **Printer**.
-3. In the **Device Name** field, enter an identifying name for the device.
-4. Optional: Select or create a class to help you manage your devices.
-5. Click **Next**.
-6. Enter the exact device name as it is displayed in your operating system's device manager.
-
-    Alternatively, leave the field blank and the Workstation Client will automatically connect to the default printer as defined by the operating system.
-
-7. Click **Add Device**.
-
-### Message Syntax
-
-This device type requires the following message and response:
-
-#### Message
-
-* `P#PrintJobDocName#Format#DataPayloadInBase64` - Submit a print job.
-* `S` - Get printer status and queued jobs.
-* `C#JobId` - Cancel print job.
-
-#### Response
-
-* `P#DocName#JobId` - Print job accepted by OS print interface.
-* `S#State#StateReason1,...#NumJobs#JobId1:JobName1:JobState1,...` - Printer state and job list summary.
-* `E#ErrorMessage` - Error.
-
-#### Example
-
-The sample print command `P#TESTHELLO#RAW#aGVsbG8=` contains the following elements:
-
-1. `P (command prefix)` - Tells the Workstation Client that the incoming instruction is a Print command.
-2. Separator
-3. `TESTHELLOFILE` (file name) - Name assigned to the print job. The client uses this to create the temporary file (for example, `TESTHELLOFILE.prn`) before sending it to the printer spooler.
-4. Separator
-5. `RAW` (format type) - Tells the Workstation Client that the following data is a Raw Printer Command (such as ZPL for Zebra printers, EPL, or PCL) rather than a standard document like a PDF or a Word file. Printing in RAW bypasses the standard printer drivers' formatting. It sends the exact code the printer needs to generate labels, barcodes, or specific layouts.
-6. `aGVsbG8=` (payload) - A data string encoded to Base64. Base64 decoded, it translates to the text `hello`. If you are testing this and the printer is not reacting, verify that the string you are encoding in Base64 matches the specific language your printer speaks. For example, a Zebra printer cannot process a plain text `hello` unless it is wrapped in ZPL commands like `^XA^FO50,50^A0N,50,50^FDhello^FS^XZ`.

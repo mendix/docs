@@ -44,7 +44,7 @@ To install the solution, perform the following steps:
 3. Toggle the option **Use new Helm chart installation** to **On**.
 4. Select your operating system, and then click **Download Executable**.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard.png" alt="Helm chart installation option with download executable button" >}}
    
 5. Click the **Copy** icon in the **Run the command in your terminal section**, and then run it on the machine where you want to install Mendix on Kubernetes.
 
@@ -60,46 +60,66 @@ To install the solution, perform the following steps:
 
 7. In the **General Settings** tab, select the environment for the installation. The other settings are pre-populated for the namespace that you created.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard1.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard1.png" alt="General Settings tab with environment and namespace configuration" >}}
 
 8. Optional: In the **Service Accounts** tab, specify a custom Kubernetes service account for the Mendix environment to use instead of the default account.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard2.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard2.png" alt="Service Accounts tab for custom Kubernetes service account configuration" >}}
 
 9. In the **Database Plans** tab, select your desired database type, and then specify one or more database plans. For more information about the available options, see [Supported Database Types](/developerportal/deploy/private-cloud-storage-plans/#supported-database-types).
 
     If you want to use a custom Kubernetes service account for any of your plans, select it in the **K8s Service Account** field.
 
-        {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard3.png" >}}
+        {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard3.png" alt="Database Plans tab with database type and plan configuration" >}}
 
 10. In the **Storage Plans** tab, select your desired database type, and then specify one or more blob storage plans. For more information about the available options, see [Blob File Storage Plans](/developerportal/deploy/private-cloud-storage-plans/#blob-storage).
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard4.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard4.png" alt="Storage Plans tab for blob storage configuration" >}}
 
 11. In the **Ingress** tab, specify your network ingress settings. For more information about the available options, see [Network Ingress Settings in Mendix on Kubernetes](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
 
     With the new release of mx-ops-cli (2.27.0), it is now possible to add Ingress Annotation in the Helm Chart UI.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard5.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard5.png" alt="Ingress tab with network ingress settings and annotation support" >}}
 
     {{% alert color="info" %}}Keep in mind that changing the ingress type resets the value of all fields in this tab.{{% /alert %}}
 
 12. In the **Registry** tab, specify your network ingress settings. For more information about the available options, see [Registry Configuration](/developerportal/deploy/private-cloud-registry/).
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard6.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard6.png" alt="Registry tab for container registry configuration" >}}
 
     {{% alert color="info" %}}Keep in mind that changing the registry type resets the value of all fields in this tab.{{% /alert %}}
 
 13. Optional: In the **Proxy** tab, specify a proxy server.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard7.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard7.png" alt="Proxy tab for proxy server configuration" >}}
 
 14. Optional: If your servers use a self-signed certificate, in the **Custom TLS** tab, configure custom TLS so that the self-signed certificate is accepted.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard8.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard8.png" alt="Custom TLS configuration tab" >}}
 
-15. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
-16. Run the following commands:
+15. Optional: In the **Operator Configuration** tab, configure advanced operator settings.
+
+    {{% alert color="warning" %}}This tab includes customizations that may affect the stability or functionality of your environments. Ensure that you fully understand the implications before proceeding.{{% /alert %}}
+
+    To enable operator configuration options, select the **Enable operator configuration** checkbox. The following sections become available:
+
+    * **Runtime Configuration** - Configure runtime-specific settings for Mendix applications.
+    * **Probe Settings** - Customize liveness and readiness probe configurations.
+    * **Resource Settings** - Define CPU and memory resource limits and requests.
+    * **Runtime Deployment Pod Annotations** - Add custom annotations to runtime deployment pods.
+    * **Custom Pod Annotations** - Specify additional annotations for application pods.
+    * **Custom Pod Node Selector** - Set node selector labels to control pod placement on specific nodes.
+    * **Custom OCI Registry** - Configure a custom OCI registry from which to pull Mendix on Kubernetes images.
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard10.png" alt="Operator Configuration tab showing expandable configuration sections" >}}
+
+    If you want to use a custom OCI registry instead of the default Mendix registry, select the **Use custom OCI registry?** checkbox and specify your custom registry URL.
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard9.png" alt="Custom OCI Registry configuration" >}}
+
+16. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
+17. Run the following commands:
 
     1. To install the required [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources)
     

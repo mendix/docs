@@ -12,6 +12,14 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### September 10, 2026
+
+#### Mendix Operator 2.28.1 {#2.28.1}
+
+* We have added an option to specify a custom OCI registry in the Helm chart UI (for air-gapped setups).
+* We have added an option to configure PCLM client settings in the Helm chart UI.
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+
 ### September 3, 2026
 
 #### Portal Improvements

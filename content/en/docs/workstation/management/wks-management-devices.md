@@ -56,17 +56,16 @@ Serial Port devices allow you to connect to a device with a serial port.
 To add a serial port device, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device** and, and then click **Serial Port**.
-3. Click **Next**.
-4. Enter a meaningful name for the device.
-5. Optional: Select or create a class to help you manage your devices.
-6. Click **Next**.
-7. In the **Detect Serial Device By** section, select one of the following values, depending on whether the serial port device uses static or dynamic port assignment:
+2. Click **Add Device**, select **Serial Port**, and then click **Next**.
+3. Enter a meaningful name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. In the **Detect Serial Device By** section, select one of the following values, depending on whether the serial port device uses static or dynamic port assignment:
 
     * For static port assignment, select **Port**.
     * For dynamic port assignment, select **Identifiers**.
 
-8. For static port assignment, configure the following connection parameters:
+7. For static port assignment, configure the following connection parameters:
 
     * **Port** - Required; the identifier of the serial port
     * **Baudrate** - Required; the Bits per Second rate
@@ -75,7 +74,7 @@ To add a serial port device, perform the following steps:
     * **Flowcontrol** - Optional; the handshake mechanism between the server and receiver, used to prevent data overflow
     * **Stop Bits** - Required; the bits when data transmission ends.
 
-9. For dynamic port assignment, configure the following connection parameters:
+8. For dynamic port assignment, configure the following connection parameters:
 
     * At least one of the following required identifiers:
 
@@ -90,16 +89,16 @@ To add a serial port device, perform the following steps:
     * **Flowcontrol** - Optional; the handshake mechanism between the server and receiver, used to prevent data overflow
     * **Stop Bits** - Required; the bits when data transmission ends.
 
-10. Click **Next**.
-11. In the **Split Incoming Message By** section, select one of the following options:
+9. Click **Next**.
+10. In the **Split Incoming Message By** section, select one of the following options:
 
     * **Delimiter** - Messages received from the device are split by the specified character or characters marking the end of the message, for example, `\r\n`.
     * **Time and Size** - Messages received from the device are split by time interval in milliseconds and maximum message size in bytes.
     * **Do Not Split** - Messages received from the device are not automatically split.
 
-12. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
-13. In the **Encoding** field, select the message encoding.
-14. Click **Add Device**.
+11. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
+12. In the **Encoding** field, select the message encoding.
+13. Click **Add Device**.
 
 ## TCP/IP Client
 
@@ -110,7 +109,7 @@ TCP/IP clients allow you to connect to remote devices over the network.
 To add a TCP/IP client, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **TCP/IP Client**.
+2. Click **Add Device**, select **TCP/IP Client**, and then click **Next**.
 3. In the **Device Name** field, enter an identifying name for the device.
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Next**.
@@ -139,11 +138,10 @@ Add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact d
 To add a Bluetooth device, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device** and, and then click **Bluetooth**.
-3. Click **Next**.
-4. Enter the exact device name as it is displayed in your operating system's Device Manager.
-5. Optional: Select or create a class to help you manage your devices.
-6. Click **Add Device**.
+2. Click **Add Device**, select **Bluetooth**, and then click **Next**.
+3. Enter the exact device name as it is displayed in your operating system's Device Manager.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Add Device**.
 
 ### Message Syntax
 
@@ -162,27 +160,45 @@ This device type requires the following message and response:
 
 ## Keyboard Wedge {#keyboard-wedge}
 
-You can configure Workstation to connect with devices that emulate a keyboard by sending data as key strokes, such as barcode scanners, RFID readers, or measurement devices. Keyboard events are captured wherever the current focus is, for example in the web app or in an input field.
+You can configure Workstation to connect with devices that emulate a keyboard by sending data as key strokes, such as barcode scanners, RFID readers, or measurement devices. Because these devices present themselves to the operating system as a standard keyboard, keyboard events are captured wherever the current focus is, for example in the web app or in an input field. The operator does not have to place the cursor in a specific input field first.
+
+The Workstation Client distinguishes device input from human typing by how quickly the key strokes arrive and by the characters surrounding the message.
+
+{{% alert color="warning" %}}
+Keyboard wedge support is a best-effort mechanism. It cannot guarantee separation from fast manual typing, macro pads, or automation scripts, because the operating system does not distinguish a keyboard emulating device from a person typing.
+
+Keyboard wedge devices are supported on Windows and macOS. They are not supported on Linux, including Raspberry Pi.
+{{% /alert %}}
 
 ### Configuring Keyboard Wedges
 
 To add a keyboard emulator device, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **Keyboard Wedge**.
+2. Click **Add Device**, select **Keyboard Wedge**, and then click **Next**.
 3. In the **Device Name** field, enter an identifying name for the device.
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Next**.
 6. Configure the following connection parameters:
 
-    * **Inter Character Timeout (ms)** - The maximum allowed amount of time between keystrokes.
-    * **Keyboard Layout** - The keyboard layout of the device. To use the active keyboard layout as defined by your operating system, select **System**.
-    * **Suffix** - A series of characters denoting the end of a message.
-    * **Minimum Message Length** - The shortest message that can be sent to the Connector from this device, excluding the prefix and suffix.
-    * **Maximum Message Length** - The longest message that can be sent to the Connector from this device, excluding the prefix and suffix.
-    * **Prefix** - A series of characters denoting the start of a message.
+    | Parameter | Description |
+    | --- | --- |
+    | **Inter Character Timeout (ms)** | Required; the maximum allowed amount of time in milliseconds between key strokes for them to be considered as coming from a device. The value must be a positive integer. The default value is `50`. |
+    | **Keyboard Layout** | Required; the keyboard layout of the device. To use the active keyboard layout as defined by your operating system, select **System**. Select **en-US** as a fallback when the system keyboard layout is not compatible with the device. For example, many barcode scanners send characters from the Latin alphabet, which the system layout cannot resolve if the operating system uses a non-Latin layout such as Chinese. The default value is **System**. |
+    | **Suffix** | Required; a series of characters denoting the end of a message. The suffix is removed from the payload before it is forwarded to the Workstation Connector. The default value is `\r`, which corresponds to the carriage return that most keyboard emulating devices send after a scan. |
+    | **Minimum Message Length** | Optional; the shortest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. |
+    | **Maximum Message Length** | Optional; the longest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. If you set both values, the maximum must be greater than or equal to the minimum. |
+    | **Prefix** | Optional; a series of characters denoting the start of a message. The prefix is removed from the payload before it is forwarded to the Workstation Connector. |
 
 7. Click **Add Device**.
+
+    The wizard shows a third step for message parsing, but keyboard wedge devices do not use it. The step is skipped and the device is added immediately.
+
+Configure the message length limits to match the data that your device sends. Together with the inter character timeout, they reduce the chance that unrelated keyboard activity is forwarded to your app as a device message.
+
+### Message Syntax {#keyboard-wedge-syntax}
+
+Keyboard wedge devices are input-only, so Mendix applications do not send messages to them. When the Workstation Client recognizes a complete message, it forwards the payload to the Workstation Connector with the prefix and suffix removed.
 
 ## Printer
 
@@ -193,7 +209,7 @@ You can integrate your Workstations with printer devices.
 To add a printer device, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **Printer**.
+2. Click **Add Device**, select **Printer**, and then click **Next**.
 3. In the **Device Name** field, enter an identifying name for the device.
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Next**.
@@ -239,7 +255,7 @@ The file device allows Mendix applications to interact with the local file syste
 To add a file device, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **File Device**.
+2. Click **Add Device**, select **File Device**, and then click **Next**.
 3. In the **Device Name** field, enter an identifying name for the device.
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Next**.
@@ -323,7 +339,7 @@ TCP/IP clients allow you to host connections over the network.
 To add a TCP/IP server, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **TCP/IP Server**.
+2. Click **Add Device**, select **TCP/IP Server**, and then click **Next**.
 3. In the **Device Name** field, enter an identifying name for the device.
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Next**.

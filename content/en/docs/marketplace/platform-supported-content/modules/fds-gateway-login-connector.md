@@ -89,41 +89,38 @@ For more information, see [Constants](/refguide/constants/).
 
 ### Configuring the SSO Redirect {#sso}
 
-To enable SSO, create a `sso-login.html` file in `/theme/web/public` with the following content:
+To enable SSO, create a `sso-login.html` file in `/theme/web` with the following content:
 
 ```html
 <!doctype html>
 <html>
-
 <head>
-    <title>FDS Gateway Login Connector</title>
-    <script>
-        const href = window.location.href;
-        const i = href.indexOf('sso-login.html');
-        const returnPath = '/' + href.substring(i + 'sso-login.html'.length);
-        window.location.assign(
-            href.substring(0, i).replace(/\/$/, '') +
-            '/xctokenlogin?returnPath=' +
-            encodeURIComponent(btoa(returnPath))
-        );
-    </script>
+    <title>FDS Gateway Login Connector</title>
+    <script>
+        const href = window.location.href;
+        const i = href.indexOf('sso-login.html');
+        const returnPath = '/' + href.substring(i + 'sso-login.html'.length);
+        window.location.assign(
+            href.substring(0, i).replace(/\/$/, '') +
+            '/xctokenlogin?returnPath=' +
+            encodeURIComponent(btoa(returnPath))
+        );
+    </script>
 </head>
-
 <body></body>
-
 </html>
 ```
 
-Update the `originURI` cookie value in `index.html` and use `/sso-login.html` instead of `/login.html` as shown in the code below:
+Update the `<script>` tag in `index.html`:
+
+This removes the existing `if` condition and sets `originURI` to `sso-login.html`, preventing the Gateway from taking over `login.html` and performing the SSO flow.
 
 ```html
 <script>
-        if (!document.cookie || !document.cookie.match(/(^|;) *originURI=/gi)) {
-            const url = new URL(window.location.href);
-            const subPath = url.pathname.substring(0, url.pathname.lastIndexOf("/"));
-            document.cookie = `originURI=${subPath}/sso-login.html${window.location.protocol === "https:" ? ";SameSite=None;Secure" : ""}`;
-        }
-    </script>
+        const url = new URL(window.location.href);
+        const subPath = url.pathname.substring(0, url.pathname.lastIndexOf("/"));
+        document.cookie = `originURI=${subPath}/sso-login.html${window.location.protocol === "https:" ? ";SameSite=None;Secure" : ""}`;
+</script>
 ```
 
 ### Custom User Provisioning

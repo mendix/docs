@@ -102,9 +102,7 @@ export const component: IComponent = {
 }
 ```
 
-Every `errorCode` returned by your check function must be listed in `reservedErrorCodes`. You cannot use the Mendix reserved prefixes `cw`, `ce`, or `ci`during registration or the check will fail and a generic error message will appear in the **Errors** pane.
-
-It is also not possible for your extension to use error codes that a different extension has already reserved. The api will also fail in that case.
+Every `errorCode` returned by your check function must be listed in `reservedErrorCodes`. You cannot use the Mendix reserved prefixes `cw`, `ce`, or `ci` during registration, or the check will fail and a generic error message will appear in the **Errors** pane. In addition, error codes reserved by another extension cannot be reused, or the API will fail.
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/consistencyChecks/generic_error.png" alt="" >}}
 

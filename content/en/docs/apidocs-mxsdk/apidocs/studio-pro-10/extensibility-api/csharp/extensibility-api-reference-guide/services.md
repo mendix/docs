@@ -7,6 +7,10 @@ weight: 10
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-10/) instead.
+{{% /alert %}}
+
 A Studio Pro service is an interface that exposes some core Studio Pro functionality to extensions. These interfaces are named `I*Service` and can be found in `Mendix.StudioPro.ExtensionsAPI.Services` or `Mendix.StudioPro.ExtensionsAPI.UI.Services` namespaces. It can be injected using the Microsoft Extensions Framework, also referred to as MEF. For more information about MEF and how to use it, refer to the official [Microsoft documentation](https://learn.microsoft.com/en-us/dotnet/framework/mef/).
 
 {{% alert color="info" %}}You should not implement these interfaces in your production code, although it is possible to make sense to do so for unit testing purposes.{{% /alert %}}

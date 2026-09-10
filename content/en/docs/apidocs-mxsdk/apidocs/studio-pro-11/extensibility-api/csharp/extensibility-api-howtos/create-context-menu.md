@@ -7,6 +7,10 @@ weight: 6
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-11/) instead.
+{{% /alert %}}
+
 You can add a context menu to an `IEntity` in Studio Pro or to a `IDocument`, such as microflows and pages. These context menus will appear under a menu named after the extension that contains them (for example, `MyExtension`) and can modify the items they relate to. This is achieved by specifying the type when creating the extension.
 
 You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).

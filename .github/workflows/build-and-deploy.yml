@@ -24,6 +24,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    if: github.event.repository.fork == false
     outputs:
       target: ${{ steps.env.outputs.target }}
     concurrency:

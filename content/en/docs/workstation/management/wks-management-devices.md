@@ -167,7 +167,7 @@ The Workstation Client distinguishes device input from human typing by how quick
 {{% alert color="warning" %}}
 Keyboard wedge support is a best-effort mechanism. It cannot guarantee separation from fast manual typing, macro pads, or automation scripts, because the operating system does not distinguish a keyboard emulating device from a person typing.
 
-Keyboard wedge devices are supported on Windows and macOS. They are not supported on Linux, including Raspberry Pi.
+Keyboard wedge devices are supported on Windows and macOS only. Support for Linux ARM, including Raspberry Pi will follow soon.
 {{% /alert %}}
 
 ### Configuring Keyboard Wedges

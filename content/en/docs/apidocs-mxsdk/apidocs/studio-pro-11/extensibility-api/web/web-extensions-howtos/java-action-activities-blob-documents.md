@@ -1,13 +1,13 @@
 ---
 title: "Java Action Activities for Custom Blob Documents"
 linktitle: "Java Action Activities"
-url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/java-action-activities-blob-documents/
-description: "Describes how to allow a Custom Blob Document to have its own Java Action Activity in a Microflow"
+url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/java-action-activities/
+description: "Describes how to allow a Custom Blob Document to have its own Java Action activity in a microflow"
 ---
 
 ## Introduction
 
-Java Actions can have Custom Blob documents as a parameter. It is possible to link that java action directly to a document type when the type is registered. This allows the user of Studio Pro to simply drag a blob document from the App Explorer directly into a Microflow, and a new Java Action Activity will be automatically generated with that exact Blob document as the parameter value for the Java Action.
+Java Actions can have Custom Blob Documents as a parameter. You can link the Java Action directly to a document type when the type is registered. This allows the user to drag a Custom Blob Document from the **App Explorer** directly into a microflow, and a new Java Action Activity is automatically generated with that exact Blob Document as the parameter value for the Java Action.
 
 ## Prerequisites
 
@@ -15,7 +15,8 @@ Java Actions can have Custom Blob documents as a parameter. It is possible to li
 * Familiarize yourself with creating custom documents as described in [Custom Blob Documents](/apidocs-mxsdk/apidocs/web-extensibility-api-11/custom-blob-document-api/). Also useful to know about [consistency checks for blob documents](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/).
 
 ## Registering a Custom Blob Document with a Java Action
-If the Java Action which contains a Blob Document type as its parameter already exists in your solution, you can simply use its qualified name during the registration call of your Blob Document type. The registration method will trigger when the Studio Pro app opens and extensions get loaded, and the two will be linked.
+
+If the Java Action that contains a Blob Document type as its parameter already exists in your extension, you can use its qualified name during the registration call of your Blob Document type. The registration method triggers when the app opens and extensions are loaded, linking the two.
 
 ```typescript
  async loaded(componentContext) {
@@ -36,7 +37,7 @@ If the Java Action which contains a Blob Document type as its parameter already 
 }
 ```
 
-If you want to create the Java Action that has your new Blob Document Type as a parameter at the same time as registering the document, you can do so like shown below, but be aware that the Java Action will be created every time your extension gets loaded. This code below is a simple example to show how to create a Java Action and assign its parameter types to a Blob Document type.
+If you want to create the Java Action that has your new Blob Document Type as a parameter at the same time as registering the document, you can do so as shown below. However, be aware that the Java Action will be created every time your extension gets loaded. This code below is a simple example to show how to create a Java Action and assign its parameter types to a Blob Document type.
 
 ```typescript
 
@@ -98,12 +99,8 @@ async function createJavaActionWithBlobDocumentParameter(studioPro: StudioProApi
 
 ```
 
-### Limitations and Suggestions
+### Sample Type That Keeps Track of the Java Action Name
 
-A Custom Blob Document and Java Action relationship is one to one. There can only be one Java Action per document type. If an extension tries to link a Java Action that is already linked to another type, the api will throw an error.
-It is also advisable to write some [consistency checks](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/) that detect when the Java Action is renamed or deleted, or its parameter types get changed by the user. So it is good practice to add the `javaActionQualifiedName` property to the contents of the Custom Blob Document as well, so that it is included in the document data when the consistency checks run. See below for a few sample consistency checks.
-
-### Sample type that keeps track of the java action name
 ```typescript
 export type JavaActionDocument = {
     javaActionQualifiedName: string | undefined;
@@ -112,7 +109,7 @@ export type JavaActionDocument = {
 };
 ```
 
-### Consistency checks for lost action and parameter types
+### Consistency Checks for Lost Action and Parameter Types
 ```typescript
 const withJavaActionDocumentType = "myextension.JavaActionDocument";
 
@@ -202,8 +199,9 @@ async function getConsistencyCheck(studioPro: StudioProApi) {
 }
 ```
 
-### Tracking JavaAction renamed or re-added with same name after deletion
- Using events from `studioPro.app.projectChanges` it is possible to know when the Java Action gets renamed or re-added with the same name:
+### Tracking Java Action Renamed or Re-Added with Same Name After Deletion
+
+Using events from `studioPro.app.projectChanges`, you can track when a Java Action is renamed or re-added with the same name:
 
  ```typescript
  studioPro.app.projectChanges.addEventListener("elementsRenamed", async ({ elements }) => {
@@ -263,6 +261,14 @@ studioPro.app.projectChanges.addEventListener("documentAdded", async ({ document
     }
 });
  ```
+
 {{% alert color="info" %}}
- Studio Pro does not track the deletion or renaming of Java Actions that are linked to Custom Blob Documents. So these consistency checks suggested here can help an extension developer handle those cases. It is important to remember that these code samples are simple examples meant to be used as a basis for your own production code.
+Studio Pro does not track the deletion or renaming of Java Actions that are linked to Custom Blob Documents. These consistency checks can help you handle those cases. These code samples are simple examples to use as a basis for your own production code.
 {{% /alert %}}
+
+
+## Limitations
+
+A Custom Blob Document and Java Action relationship is one-to-one. There can only be one Java Action per document type. If an extension tries to link a Java Action that is already linked to another type, the API will throw an error.
+
+It is recommended to write some [consistency checks](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/) to detect when the Java Action is renamed or deleted, or when its parameter types change. Add the `javaActionQualifiedName` property to the Custom Blob Document contents so it is included in the document data when the consistency checks run. 

@@ -132,37 +132,6 @@ Now make a JavaScript action to read the NFC tag information:
 
 1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action.
 
-### Installing a Dependency in Your App {#install-dependency-project}
-
-The dependency is split into two parts: the native device part, and the client JavaScript part. In this section we will add the dependency JavaScript for the client bundle. For the bundling we need to add the dependency builder, so that we can add the `react-native-nfc-manager` JavaScript code.
-
-1. In your CLI, open the module folder which contains your JavaScript action:
-
-    ```powershell
-    cd C:\MendixApps\NativeNFC\javascriptsource\nativenfc\actions
-    ```
-
-1. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
-1. Install the dependency with the command `npm install react-native-nfc-manager@1.2.2`.
-
-{{% alert type="info" %}}
-This will create a **node_module** folder inside your **actions** folder. There is a known issue that when you try to commit the *node_modules* folder using Apache Subversion, there could be problems if your commit contains a large number of files. To solve this, try removing unnecessary files before committing.
-{{% /alert %}}
-
-#### Declaring Native Dependencies
-
-To make Mendix install and link native dependencies automatically while creating production-like builds of a native app, create JSON files next to your JavaScript actions: *HasNFCSupport.json* and *ReadNFCTag.json*. Define the same native dependencies in each of them:
-
-```json
-{
-    "nativeDependencies": {
-        "react-native-nfc-manager": "1.2.2"
-    }
-}
-```
-
-For more information see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
-
 ### Using NFC JavaScript Actions {#use-nfc-action}
 
 Make a nanoflow to use your new actions:
@@ -224,11 +193,10 @@ Congratulations for completing this NFC tutorial! To go beyond the lessons you h
 
 ### Hardening the Code {#hardening-nfc-action-code}
 
-Now you have a working NFC scanner. However, you can improve it for both Android and iOS.
+Now you have a working NFC scanner. However, you can improve it for both Android and iOS:
 
-**On Android** — NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
-
-**On iOS** — Scanning can be canceled when the **Ready to Scan** dialog box is up. 
+* **On Android** – NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
+* **On iOS** – Scanning can be canceled when the **Ready to Scan** dialog box is up. 
 
 To implement these capabilities, replace all the **USER CODE** in the **ReadNFCTag** JavaScript action with the following code, then repeat the steps in the [Building a Native Custom Developer App](#custom-developer-app) section above to build and install the updated app on your device:
 

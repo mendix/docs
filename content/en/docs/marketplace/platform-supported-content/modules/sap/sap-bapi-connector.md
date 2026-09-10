@@ -159,8 +159,8 @@ The following JCo Properties map directly to these constants in the module:
 
 If you need to set additional JCoProperties for which a constant is not available, you can create a list of objects of the `Property` entity (see the domain model section, below) and use the [GetJCoDestination](#get-jco-destination) action. You need to set the following attributes in the `Property` object:
 
-* Name – the JCoProperty key — for example to set maximum pool size, Name would be `jco.pool.maxpoolsize`
-* Value – the value to be assigned to this property
+* **Name** – The JCoProperty key—for example to set maximum pool size, Name would be `jco.pool.maxpoolsize`.
+* **Value** – The value to be assigned to this property.
 
 #### Connecting Using an SNC Connection
 

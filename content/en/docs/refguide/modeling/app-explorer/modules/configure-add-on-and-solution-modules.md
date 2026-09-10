@@ -44,7 +44,7 @@ You can see that documents/elements that are marked as usable have an eye icon (
 
 Not all documents/elements can be marked as **Usable** in add-on and solution modules. Some can only be **Hidden**. 
 
-Below is the list of documents and elements that can be mark as **Usable**:
+Below is the list of documents and elements that can be marked as **Usable**:
 
 * Domain model:
     * Entity and attributes (including external entities)

@@ -25,7 +25,7 @@ However, improper use of OSS, especially without proper attribution or in violat
 
 To ensure your Marketplace contribution is OSS-compliant, you must include the following:
 
-* A `README.md` file — This should include the following overview and usage information:
+* A `README.md` file – This should include the following overview and usage information:
 
     * What the project does
     * Installation and usage instructions
@@ -33,13 +33,13 @@ To ensure your Marketplace contribution is OSS-compliant, you must include the f
     * Contribution or support details, if applicable
     * Licensing summary
 
-* A `LICENSE` file — This should include a legal declaration that clearly states the open-source license for the project:
+* A `LICENSE` file – This should include a legal declaration that clearly states the open-source license for the project:
     
     * Choose a standard license, such as MIT, Apache 2.0, or BSD-3-Clause.
     * Include the full, unmodified license text.
     * Ensure compatibility with any third-party code included.
 
-* Third-party notices — If your module includes other OSS libraries:
+* Third-party notices – If your module includes other OSS libraries:
 
     * Include a `NOTICE` or `third-party-licenses.txt` file.
     * List each OSS component, its license, and any required attributions.
@@ -69,9 +69,9 @@ If your component includes or links to any of the aforementioned licenses, you m
 
 These practices are not mandatory, but highly recommended: 
 
-* Semantic Versioning (SemVer) — Communicate changes and updates.
-* Security Notes — Mention known vulnerabilities or risks.
-* Metadata — Include the contributor, the repository URL, and the license type in your component descriptor.
+* Semantic Versioning (SemVer) – Communicate changes and updates.
+* Security Notes – Mention known vulnerabilities or risks.
+* Metadata – Include the contributor, the repository URL, and the license type in your component descriptor.
 
 ## Submission Checklist
 

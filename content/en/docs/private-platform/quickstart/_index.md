@@ -87,5 +87,3 @@ Before starting the installation process, make sure that you have all the necess
 * If you plan to use Azure Key Vault, see [Configuring a Secret Store with Azure Key Vault](/developerportal/deploy/secret-store-credentials/#azure-key-vault).
 
 ## Read More
-
-

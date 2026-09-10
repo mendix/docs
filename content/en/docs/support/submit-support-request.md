@@ -188,10 +188,10 @@ If you are reporting a security finding or other security-related issue, for exa
 1. Review the [Frequently Asked Questions - Security](/support/security-findings-faq/) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
 1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
 1. Include the following information:
-    * A description of the issue found — please submit only one finding per support ticket.
-    * Where the issue was found — for example, which URL, which Mendix version, the App/project ID?
-    * How the issue was found — for example, was it from scanning an app and, if so, which tool was used?
-    * A copy of an app containing the reported issue — see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/) for instructions on creating an app package.
+    * A description of the issue found – please submit only one finding per support ticket.
+    * Where the issue was found – for example, which URL, which Mendix version, the App/project ID?
+    * How the issue was found – for example, was it from scanning an app and, if so, which tool was used?
+    * A copy of an app containing the reported issue – see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/) for instructions on creating an app package.
     * An actual exploitation scenario, if possible, including steps showing how to reproduce and exploit a vulnerability.
 
 {{% alert color="info" %}}

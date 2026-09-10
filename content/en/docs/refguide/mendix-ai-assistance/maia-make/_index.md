@@ -19,6 +19,8 @@ Maia Make is a set of AI-assisted development capabilities in Studio Pro that ar
 
 You can also ask Maia to provide explanations of your existing documents, such as microflows, workflows, and pages. Moreover, this interface allows you to integrate with external tools, such as Playwright and Figma, via MCP Servers, and it supports story-based development by generating app artifacts based on existing user stories.
 
+For guidance on how to best prompt Maia, refer to [Prompt Engineering](/agents/prompt-engineering/).
+
 ## Maia Make Capabilities Overview
 
 ### Supported Document Types
@@ -42,6 +44,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | Menu | Studio Pro 11.11 | |
 | Data Transformers | Studio Pro 11.12 | |
 | JSON Structures | Studio Pro 11.13 | |
+| Change Data Capture | Studio Pro 11.14 | |
 
 ### Maia Make Standalone Capabilities
 

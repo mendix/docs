@@ -58,7 +58,7 @@ When you select **Inline snippet**, Studio Pro will analyze the snippet call to 
 This is basically the inverse operation of [Extract Snippet](/refguide9/snippet/#extract-snippet). 
 
 {{% alert color="info" %}}
-After clicking **Inline snippet**, note that the snippet is not automatically deleted — even if the inlined snippet call was the last remaining usage of the snippet.
+After clicking **Inline snippet**, note that the snippet is not automatically deleted—even if the inlined snippet call was the last remaining usage of the snippet.
 {{% /alert %}}
 
 Not every snippet call can be inlined, because certain configurations cannot be represented correctly outside a snippet. Attempting to inline such a snippet call could result in a consistency error or produce inlined content which does not have the same behavior as the original snippet call. In this case, a warning dialog box is shown to ask whether you want to proceed:

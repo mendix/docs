@@ -13,7 +13,7 @@ For more information on Mendix support guidelines, see [LTS, MTS, and Monthly Re
 
 ## Native Mobile Support Duration
 
-Native mobile apps have shorter support durations than non-native because the operating systems they run on introduce major updates each year — often with breaking changes. Regular updates are necessary to ensure compatibility with the latest versions of these operating systems.
+Native mobile apps have shorter support durations than non-native because the operating systems they run on introduce major updates each year—often with breaking changes. Regular updates are necessary to ensure compatibility with the latest versions of these operating systems.
 
 The reduced support durations for native mobile apps do not apply to progressive web apps. Progressive web apps follow the [standard Mendix support durations](/releasenotes/studio-pro/lts-mts/).
 

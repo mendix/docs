@@ -79,7 +79,7 @@ All of these systems (Private Mendix Platform, Mendix Runtime, Mendix Operator, 
 
 #### Governance and Architectural Validation
 
-* Private Cloud Architecture - The system leverages the Private Cloud deployment model. As validated by [Mendix on Kubernetes](/developerportal/deploy/private-cloud/#standalone-architecture), all core service components, including the Mendix Operator and application Runtime, are deployed locally within the customer-managed Kubernetes environment.
+* Private Cloud Architecture - The system leverages the Private Cloud deployment model. As validated by [Mendix on Kubernetes](/developerportal/deploy/private-cloud/#connected-clusters), all core service components, including the Mendix Operator and application Runtime, are deployed locally within the customer-managed Kubernetes environment.
 * Prerequisites and compliance - The organization adheres to the [Private Mendix Platform Prerequisites](/private-mendix-platform/prerequisites/), which mandate that the customer provides the underlying infrastructure (Database, Storage, Cluster), thereby ensuring complete control over the data residency.
 * Secure installation guidance - The deployment follows the [Private Mendix Platform Quickstart Guide](/private-mendix-platform/quickstart/), ensuring that the installation process is confined to the pre-authorized cloud environment.
 * Regional compliance - It is the customer's responsibility to identify and select the authorized cloud regions (for example, AWS GovCloud) that meet their specific data sovereignty requirements. The customer must ensure that the installation environment is restricted to these approved regions during the initial provisioning phase.

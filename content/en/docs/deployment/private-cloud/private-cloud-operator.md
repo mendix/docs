@@ -10,9 +10,9 @@ weight: 30
 
 Once you have the Mendix Operator installed in a namespace of your Red Hat OpenShift, or other Kubernetes cluster (see [Creating a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-cluster/)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the namespace, together with all the resources the app needs.
 
-This document explains how to provide the CRs through the console or command line for a standalone cluster. This enables you to automate your deployment processes and perform deployments from behind a firewall which would prevent access to the Mendix Portal.
+This document explains how to provide the CRs through the console or command line. This enables you to automate your deployment processes and perform advanced configuration.
 
-Alternatively, you can create a connected cluster and use the Mendix Portal to deploy the app, as described in [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/).
+Alternatively, you can use Mendix Portal to deploy the app, as described in [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/).
 
 ## Prerequisites for Deploying a Mendix App
 
@@ -215,7 +215,7 @@ You must make the following changes:
 
     {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). {{% /alert %}}
 
-    If you have an offline Runtime license, for example for a standalone cluster, you can configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
+    If you have an offline Runtime license, you can configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
 
     ```yaml
     apiVersion: privatecloud.mendix.com/v1alpha1
@@ -252,8 +252,8 @@ You must make the following changes:
     * **general** - Specify additional labels for all pods of the app.
 * **customPodNodeSelector** - Specify the pod `nodeSelector` configuration.
     * **general** - Specify `nodeSelector` configuration for all pods of the app.
-* **deploymentStrategy** - Specify parameters for the deployment strategy. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#deployment-strategy-in-standalone) documentation.
-* **podDisruptionBudget** - Specify parameters for the pod disruption budget. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#pod-disruption-budget-in-standalone) documentation.
+* **deploymentStrategy** - Specify parameters for the deployment strategy. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#deployment-strategy) documentation.
+* **podDisruptionBudget** - Specify parameters for the pod disruption budget. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#pod-disruption-budget) documentation.
 * **runtimeReadOnlyRootFilesystem** - Specify if the Runtime container should mount the root filesystem in [read-only mode](/developerportal/deploy/private-cloud-cluster/#readonlyrootfs).
 
 #### Setting App Constants{#set-app-constants}

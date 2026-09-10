@@ -35,7 +35,7 @@ The following controls are related to this control:
 * [AC-19](/private-mendix-platform/nist-controls/ac-19/)
 * CA-03
 * [CA-07](/private-mendix-platform/nist-controls/ca-07/)
-* * CM-08
+* CM-08
 * IA-02
 * IA-03
 * [IA-08](/private-mendix-platform/nist-controls/ia-08/)

@@ -1,4 +1,4 @@
-# Mendix Documentation [![hugo_badge](https://img.shields.io/badge/hugo-0.156.0-green.svg)](https://gohugo.io/) [![node_badge](https://img.shields.io/badge/node-24.15.0-green.svg)](https://nodejs.org/en/) [![docsy_badge](https://img.shields.io/badge/docsy-0.15.0-green.svg)](https://www.docsy.dev/)
+# Mendix Documentation [![hugo_badge](https://img.shields.io/badge/hugo-0.164.0-green.svg)](https://gohugo.io/) [![node_badge](https://img.shields.io/badge/node-24.15.0-green.svg)](https://nodejs.org/en/) [![docsy_badge](https://img.shields.io/badge/docsy-0.15.0-green.svg)](https://www.docsy.dev/)
 
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 

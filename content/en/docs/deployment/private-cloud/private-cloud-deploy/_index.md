@@ -12,9 +12,9 @@ To deploy apps to your private cloud cluster (for example to Red Hat OpenShift o
 
 Once the cluster has been registered, and a namespace created, team members with *Deploy App* rights can create environments and deploy an app.
 
-This document explains how to use the Mendix Portal to deploy your **connected** app.
+This document explains how to use the Mendix Portal to deploy your app.
 
-To deploy to a namespace in a **standalone** cluster, you provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-operator/).
+Alternatively, you can provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-operator/).
 
 Within your namespace you can run one, or several, Mendix apps. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
@@ -398,7 +398,7 @@ This button contains a list of actions which you can perform quickly on the envi
 * **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
-* **Stop Application** — stops the application by reducing the number of replicas to zero; when you restart the application, the number of replicas set in the application will be started
+* **Stop Application** – stops the application by reducing the number of replicas to zero; when you restart the application, the number of replicas set in the application will be started
 * **Delete Environment** – allows you to delete the environment (see [Current Limitations](#limitations) for additional details about what is deleted); if you select this action, you must confirm your choice before the environment is deleted
 * **Set as Studio Pro Deployment target** – allows you to select the default target environment for Studio Pro deployment
 
@@ -407,6 +407,10 @@ This button contains a list of actions which you can perform quickly on the envi
 This section shows all the activities which have taken place in this environment, for example, creating environments, changing the Technical Contact, or deploying apps. You can sort the activities in either descending or ascending date and time order.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image20.png" class="no-border" >}}
+
+{{% alert color="info" %}}
+Actions performed through the Mendix on Kubernetes Deploy API are not always recorded here. For more information, see [Known Limitations: Logging API-Initiated Actions](#activity-log-api).
+{{% /alert %}}
 
 ### Application Settings
 
@@ -426,6 +430,16 @@ Changing the Technical Contact does not automatically revoke the previous Techni
 
 Only the current Technical Contact can change the assignment, by transferring the role to another member of the application team. If the current Technical Contact is unavailable or unreachable, contact [Mendix Support](https://support.mendix.com/) to update the assignment.
 
+##### Technical Contact FAQ
+
+Click the help icon or the **What is a Technical Contact (FAQ)?** link to access frequently asked questions about the Technical Contact role.
+
+{{< figure src="/attachments/releasenotes/deployment/mendix-cloud/technical-contact-help-link.png" alt="Technical Contact section with FAQ help link" class="no-border" >}}
+
+The FAQ popup provides answers to common questions such as permissions, assignment guidelines, and how to change the Technical Contact.
+
+{{< figure src="/attachments/releasenotes/deployment/mendix-cloud/technical-contact-faq.png" alt="Technical Contact FAQ popup with expandable questions" class="no-border" >}}
+
 For more information about the Technical Contact role and its permissions, see [Technical Contact Role and Permissions](/developerportal/deploy/private-cloud/private-cloud-technical-contact/).
 
 #### Environment Purpose {#environment-purpose}
@@ -433,6 +447,32 @@ For more information about the Technical Contact role and its permissions, see [
 This section allows you to edit the Environment Purpose for the environments within the application. Setting the purpose of your environment does not affect its operational state. However, it helps ensure the environment is used as intended, providing clarity for both you and us. We strongly recommend setting this field, as future features may be tailored to specific environment purposes.
 
 When creating a new environment, the Technical Contact can set the environment purpose. The field is not visible when some one else other than the Technical Contact is creating the environment. It is also possible to change the purpose in **Application Settings** after environment creation. However, the purpose can only be edited by the Technical Contact.
+
+## Portal Features {#portal-features}
+
+The Mendix on Kubernetes Portal provides several features to help you manage your deployments effectively.
+
+### Notifications {#notifications}
+
+The Portal includes a unified notifications system that keeps you informed about important deployment and build events. You receive notifications when:
+
+* Deployment packages are successfully built
+* Deployment packages fail to build
+* Deployments complete successfully
+* Deployments fail
+
+To view your notifications, click the bell icon in the top navigation bar. The notifications panel shows:
+
+* Recent notifications with timestamps
+* Unread notification count
+* Quick access to mark all notifications as read
+* Notification history for the last 30 days
+
+{{< figure src="/attachments/releasenotes/deployment/mendix-cloud/notifications.png" alt="Notifications panel showing deployment and build status updates" class="no-border" >}}
+
+{{% alert color="info" %}}
+The notifications feature is aligned with the Mendix Platform notification system, providing a consistent experience across all Mendix Portal features.
+{{% /alert %}}
 
 ## Managing Your Environments from the Environment Details Page {#environment-details}
 
@@ -528,17 +568,17 @@ By default, there will be no admin password set for your environment. This means
 
 ##### Delete Environment
 
-This deletes the environment — you will be asked to confirm this action.
+This deletes the environment—you will be asked to confirm this action.
 
-If the cluster is standalone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
+If the Mendix Gateway Agent is not connected, you can still delete the environment information in Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
 
 If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Mendix Portal.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/delete-environment.png" class="no-border" >}}
 
-For a *connected* cluster, the top level MendixApp CRD will be deleted from the namespace – this will cause the following environment resources set up by the Operator to be garbage collected:
+For a *connected* cluster, the top level MendixApp CRD will be deleted from the namespace—this will cause the following environment resources set up by the Operator to be garbage collected:
 
-* The database will be dropped and the database user will be deleted from the database server — databases and users from other environments will remain untouched.
+* The database will be dropped and the database user will be deleted from the database server—databases and users from other environments will remain untouched.
 
     {{% alert color="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched.{{% /alert %}}
 
@@ -577,7 +617,7 @@ Starting from Operator 2.20.0 onwards, it is now also possible to set the deploy
 
 If you need to enter or change the subscription secret, then you can do that here.
 
-Subscription secrets are obtained from [Mendix support](https://support.mendix.com/). You can use subscription secrets in [standalone mode](/developerportal/deploy/private-cloud-technical-appendix-02/).
+Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
 
 For Operator version 2.24.0 and newer, we have introduced a new field, **Enable Fallback License**, in the **Environment Details** section. When enabled, this option allows Connected environments using subscription secrets to use a fallback license if communication with the licensing server fails, preventing the system from switching to Trial mode. 
 
@@ -609,9 +649,33 @@ The **Model Options** tab allows you to change the configuration of scheduled ev
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image24.png" class="no-border" >}}
 
-To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**. You can also export the scheduled events to an Excel file by selecting **Export Constants to Excel**.
+#### Constants
 
-To change any constants, select the constant you want to edit and then click **Edit**. You also have the option to export the app constants to an Excel file by selecting **Export Scheduled Events to Excel**.
+View and manage all application constants. To change any constants, select the constant you want to edit and then click **Edit**. You also have the option to export the app constants to an Excel file by selecting **Export Constants to Excel**.
+
+Use **Compare and Edit** to compare constant values across multiple environments side-by-side.
+
+{{< figure src="/attachments/releasenotes/deployment/mendix-cloud/constants-tab.png" alt="Constants tab with search, filter, and compare options" class="no-border" >}}
+
+Click **Compare and Edit** to view and modify constant values across environments:
+
+{{< figure src="/attachments/releasenotes/deployment/mendix-cloud/constants-compare.png" alt="Compare constants across multiple environments" class="no-border" >}}
+
+Features include search by name, filter by data type, and import/export to CSV.
+
+#### Scheduled Events
+
+Manage scheduled events and compare their status across environments. To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**. You can also export the scheduled events to an Excel file by selecting **Export Scheduled Events to Excel**.
+
+{{< figure src="/attachments/releasenotes/deployment/mendix-cloud/scheduled-events-tab.png" alt="Scheduled Events tab with compare and export options" class="no-border" >}}
+
+Click **Compare and Edit** to view which events are enabled or disabled in each environment:
+
+{{< figure src="/attachments/releasenotes/deployment/mendix-cloud/scheduled-events-compare.png" alt="Compare scheduled events status across environments" class="no-border" >}}
+
+{{% alert color="warning" %}}
+Changes to constants and scheduled events take effect only after applying changes and restarting the application.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 If the MxApp constants are configured in both the CSI Secrets Storage and another location (such as the Mendix Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
@@ -741,6 +805,10 @@ Delete all environments before you delete an app. If you delete an app which has
 
 Mendix on Kubernetes has a limit of 1024 MB on the size of a deployment package.
 
+### Logging API-Initiated Actions {#activity-log-api}
+
+Actions performed using the [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/), such as deploying a package or creating an environment, are not always recorded in the environment's [Activity Log](#activity-log). Only actions performed through the Mendix Portal are guaranteed to appear.
+
 ## Troubleshooting
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
@@ -751,7 +819,7 @@ Under some circumstances changes in the status of the environment and its apps w
 
 ### Deleting the Cluster
 
-If the cluster is running in standalone mode, you need to delete all `MendixApp` CRs.
+Before deleting the cluster, you need to delete all `MendixApp` CRs.
 
 To confirm that environments and their associated storage have been successfully deleted, run:
 
@@ -948,7 +1016,7 @@ If your application keeps restarting unexpectedly, check your application log fo
 
 ## How the Operator Deploys Your App {#how-operator-deploys}
 
-The Mendix Operator is another app within your Mendix on Kubernetes namespace. It is triggered when you provide a CR file. This can either be through the Mendix Portal, for a connected cluster, or through the command line, for a standalone cluster. The process looks like this:
+The Mendix Operator is another app within your Mendix on Kubernetes namespace. It is triggered when you provide a CR file. This can be done through Mendix Portal or through the command line. The process looks like this:
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/mx4pc-operator-deploy.png" class="no-border" >}}
 

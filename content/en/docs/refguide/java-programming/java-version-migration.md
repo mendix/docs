@@ -48,3 +48,9 @@ The following changes in behavior have been noticed when migrating from Java ver
 In Java versions below 20, a regular space is included before the AM/PM, but starting from version 20, it is replaced by a Unicode non-breaking space (NBSP or NNBSP, \u202f). In a microflow expression, this non-breaking space can be included in a string using `urlDecode('%E2%80%AF')`—for example `'8:24' + urlDecode('%E2%80%AF') + 'AM'`.
 
 In Java versions below 21, a period is included at the end of an abbreviated month name (`MMM`) for the Dutch locale. Starting from version 21, this period is no longer present.
+
+# From Java 21 to 25
+
+## TimeZone IDs
+
+Locale data updates in Java version 25 assign new IDs to some time zones. For example, `GMT-05:00` is now named `America/Panama`.

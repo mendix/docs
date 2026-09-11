@@ -26,7 +26,7 @@ The Private Mendix Platform Build API allows you to manage app packages in Priva
 
 ## Supported Private Mendix Platform Version
 
-This API is available in Private Mendix Platform [VERSION] and newer.
+This API is available in Private Mendix Platform 2.7 and newer.
 
 ## API Reference
 

@@ -25,7 +25,7 @@ The Private Mendix Platform Group API version 1 allows you to manage user groups
 
 ## Supported Private Mendix Platform Version
 
-This API is available in Private Mendix Platform 2.0 and newer.
+This API is available in Private Mendix Platform 1.5 and newer.
 
 {{% alert color="info" %}}
 For information about Group API version 2, see [Group API - Version 2](/apidocs-mxsdk/apidocs/private-platform-group-api-v2/).

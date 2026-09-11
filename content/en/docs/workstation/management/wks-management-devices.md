@@ -26,6 +26,28 @@ Before connecting devices with Mendix Workstation, perform the following steps:
     * For Serial Port connection - Open the device and test device basic commands.
     * For TCP/IP connection - Ping the device to make sure that it is reachable on the network and not blocked by a firewall, and then test the basic device commands.
 
+## Device Classes {#device-classes}
+
+A device class is a label that you assign to devices in order to group the ones that fulfil the same role. For example, you can give every barcode scanner in the workspace the *Scanner* class, even when the stations name their scanners differently.
+
+Device classes are defined per workspace and are available to every station in that workspace. You assign a class in the **Device Class** field while adding or editing a device. All device types support classes, and the field is always optional.
+
+Because the class identifies a device by role rather than by name, a Mendix application can address the same kind of device on every station without knowing the individual device names. In the Workstation Connector, the `deviceClass` parameter of the `GetCreateDevice` JavaScript action refers to this value. For more information, see [Developing Workstation-Enabled Applications](/mendix-workstation/build-app/).
+
+### Managing Device Classes
+
+To review the device classes of a workspace, click **Device Classes** in the workspace menu. The overview lists each class together with the number of **Devices** that use it.
+
+From this page you can perform the following actions:
+
+* **Create Device Class** - Click **Create Device Class**, enter a name in the **Device Class Name** field, and then click **Create Device Class**.
+* **Rename Device Class** - Click the three-dot menu of the class, and then click **Rename Device Class**.
+* **Delete Device Class** - Click the three-dot menu of the class, and then click **Delete Device Class**.
+
+{{% alert color="warning" %}}
+Renaming or deleting a class that is used to lookup a device in an Workstation app breaks the logic of every app that relies on it, so check the **Devices** count and active **Apps** before you change a class.
+{{% /alert %}}
+
 ## Card Readers
 
 Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 

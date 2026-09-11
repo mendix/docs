@@ -198,6 +198,14 @@ For integrations, you have the following types of microflow:
 
 You can also use the [Find Advanced](/refguide/find-and-find-advanced/#find-advanced) option in Studio Pro to search for microflows by service type.
 
+### Dynamic Case Management Microflows
+
+For process task microflows in [dynamic case management](/appstore/partner-solutions/dcm/) no distinction is made between different types of microflow. All dynamic case management microflows begin **DCM_**.
+
+| Event Type                                  | Prefix |
+| ------------------------------------------- | ------ |
+| Dynamic case management                     | DCM_   |
+
 ## Workflows
 
 Guidelines below can help you choose a short yet meaningful name for your workflow:

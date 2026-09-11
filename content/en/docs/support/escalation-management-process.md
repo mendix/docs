@@ -31,7 +31,7 @@ These are the steps involved in the escalation process:
 
      * Via the escalation email address
      * Via the support ticket
-     * Via your Customer Success Manager
+     * Via your Technical Account Manager, Specialized Account Executive, or Partner Contact
 
 5. The Mendix support team validates and acknowledges the escalation.
 6. The Mendix regional support manager reaches out to you to discuss the details of the ticket.
@@ -69,7 +69,7 @@ If the gap between the customer's expectation and the Mendix Platform possibilit
 
 ### Via Email
 
-Send an email to escalation@mendix.com and CC your Customer Success Manager. Ensure you add the following details to your email for an effective event-based escalation process:
+Send an email to escalation@mendix.com and CC your Technical Account Manager, Specialized Account Executive, or Partner Contact. Ensure you add the following details to your email for an effective event-based escalation process:
 
 * Ticket number
 * Reason for escalating the case
@@ -81,13 +81,13 @@ One of our managers will respond to your message and begin the escalation proces
 
 Add a new comment to your support ticket which summarizes the problem description, and provides the business impact for the escalation. Make sure to add ‘escalation@mendix.com’ to the CC field. One of our managers will review the comment, mark the ticket as escalated, and begin the escalation process.
 
-### Via Your Customer Success Manager
+### Via Your Technical Account Manager, Specialized Account Executive, or Partner Contact
 
-You can work with your Customer Success Manager (CSM) to initiate an escalation. When reaching out to them, please be ready to discuss the details of the ticket so far, as well as the impact to your business. Your CSM will relay this information to a support manager who will begin the escalation process.
+You can work with your Technical Account Manager, Specialized Account Executive, or Partner Contact to initiate an escalation. When reaching out to them, please be ready to discuss the details of the ticket so far, as well as the impact to your business. Your Technical Account Manager, Specialized Account Executive, or Partner Contact will relay this information to a support manager who will begin the escalation process.
 
 ## What Happens During the Escalation
 
-A member of our leadership team reaches out to you to discuss the details of the escalation, agree on a communication or meeting cadence, and, if necessary, discuss a technical plan of action. Your account team, which can be made up of your Customer Success Manager, Partner Manager and/or Account Executive, is included in this meeting. The assigned Support Leader works as an advocate within Mendix, and ensures that all relevant Mendix team members are actively involved, and that the ticket gets the right level of attention. 
+A member of our leadership team reaches out to you to discuss the details of the escalation, agree on a communication or meeting cadence, and, if necessary, discuss a technical plan of action. Your account team, which can be made up of your Technical Account Manager, Specialized Account Executive, and/or Partner Contact, is included in this meeting. The assigned Support Leader works as an advocate within Mendix, and ensures that all relevant Mendix team members are actively involved, and that the ticket gets the right level of attention. 
 
 ## Criteria Used to Close an Escalation
 

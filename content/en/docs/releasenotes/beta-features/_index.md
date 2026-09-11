@@ -47,7 +47,7 @@ Mendix releases Experimental features or products when those features or product
 
 If you would like to test a beta feature or product, consider the following:
 
-* Features or products labeled Public beta or Experimental are available for all customers. Your feedback on these features is welcome through your Customer Success Manager (CSM) and in the community forum.
+* Features or products labeled Public beta or Experimental are available for all customers. Your feedback on these features is welcome through your Technical Account Manager, Specialized Account Executive, or Partner Contact and in the community forum.
 * For features or products labeled Private beta, our product team usually reaches out to you with an invitation to test the feature or products. They will be your point of contact for any feedback and will ensure the involvement of Mendix Expert Services if required to provide you with the required knowledge to successfully make use of the private beta feature or product.
 
 ### Limitations of Beta and Experimental Releases
@@ -79,7 +79,7 @@ In the docs, pages about beta features are marked with a beta badge (<text class
 
 ## Limited Availability
 
-Mendix releases features or products labeled Limited Availability to introduce the feature or product to the market in a controlled way. In this optional phase, specific groups or regions may get access to the feature or product for production use, while others may follow later. This can be due to regulatory or operational reasons. When there is a desire to take a Limited Availability feature or product into production, please contact your CSM to see which arrangements are possible.
+Mendix releases features or products labeled Limited Availability to introduce the feature or product to the market in a controlled way. In this optional phase, specific groups or regions may get access to the feature or product for production use, while others may follow later. This can be due to regulatory or operational reasons. When there is a desire to take a Limited Availability feature or product into production, please contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to see which arrangements are possible.
 
 ## General Availability{#ga}
 

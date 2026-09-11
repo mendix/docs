@@ -86,7 +86,7 @@ Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketp
 
 Mendix on Azure is a deployment option that makes use of some of the features of Mendix on Kubernetes in an opinionated way. For more information, see [Mendix on Azure](/developerportal/deploy/mendix-on-azure/).
 
-{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Customer Success Manager. {{% /alert %}}
+{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact. {{% /alert %}}
 
 ## On-Premises
 

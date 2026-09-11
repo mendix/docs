@@ -41,7 +41,7 @@ There are 6-month and 12-month packages available for Extended Support.
 
 For example, support for Mendix 9 will end upon the release of Mendix 12 GA. However, if you have purchased Extended Support, version 9 will be supported for either six months or one year from the release date of Mendix 12 GA.
 
-Please contact your Customer Success Manager or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
+Please contact your Technical Account Manager, Specialized Account Executive, or Partner Contact or [Mendix Support](https://support.mendix.com/hc/en-us) if you want to know more.
 
 {{% alert color="info" %}}
 Extended Support does not apply to applications that contain a native mobile profile. Native mobile applications follow separate support timelines and policies. For more information, see [Support Guidelines for Native Mobile](/releasenotes/mobile/native-support/).
@@ -105,7 +105,7 @@ If there is an issue with the Mendix Platform that affects multiple customers, o
 
 ### Reporting Issues
 
-If, after your analysis, you suspect there is an issue with the Mendix Platform (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide guidance on how to resolve the issues yourself or direct you to Expert Services for further assistance. If we suspect a platform issue, we will involve second- and third-line support for confirmation and, if it is a platform issue, we will fix it. If the issue is commercial (for example, because your app requires a larger app container or additional file storage), we may refer you directly to your Customer Success Manager.
+If, after your analysis, you suspect there is an issue with the Mendix Platform (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide guidance on how to resolve the issues yourself or direct you to Expert Services for further assistance. If we suspect a platform issue, we will involve second- and third-line support for confirmation and, if it is a platform issue, we will fix it. If the issue is commercial (for example, because your app requires a larger app container or additional file storage), we may refer you directly to your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 
 ### Large-Scale Testing
 
@@ -129,7 +129,7 @@ If you are planning this sort of testing, you must raise a ticket with Mendix Su
 
 Please provide this information as early as possible, at least two weeks in advance of the test date. Mendix may refuse permission to conduct certain types of tests if they violate local laws or pose an excessive risk to the Mendix infrastructure or other customers.
 
-If you want to perform penetration tests, your Customer Success Manager (CSM) can provide you with an indemnification agreement. This should be signed by all parties, confirming the information above, and agreeing that your tests are legal and do not impact other customers. If you don't know who your CSM is, Mendix Support can provide you with their contact details. 
+If you want to perform penetration tests, your Technical Account Manager, Specialized Account Executive, or Partner Contact can provide you with an indemnification agreement. This should be signed by all parties, confirming the information above, and agreeing that your tests are legal and do not impact other customers. If you don't know who your Technical Account Manager, Specialized Account Executive, or Partner Contact is, Mendix Support can provide you with their contact details. 
 
 If Mendix is not aware of your tests, you may find that they are interrupted if they cause unexpected alerts to be generated for our Cloud Operations or Security teams. You may also be breaking your agreement with Mendix.
 

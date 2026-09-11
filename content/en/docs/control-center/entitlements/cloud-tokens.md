@@ -35,7 +35,7 @@ For the technical details of each Cloud Resource Pack (CRP), refer to the [Cloud
 
 All your current CRPs are converted to their equivalent Mendix Cloud Tokens and aggregated with any other Mendix Cloud Tokens. You can then use these to provision Cloud resources of any type and size, as specified in your contracts. 
 
-You can see available and used Mendix Cloud Tokens on the **Entitlements** page. If you cannot, contact your Customer Success Manager (CSM).
+You can see available and used Mendix Cloud Tokens on the **Entitlements** page. If you cannot, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 
 These tables show how many Mendix Cloud Tokens each CRP requires:
 
@@ -92,7 +92,7 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 {{% alert color="info" %}} 
 
 * You can no longer purchase legacy CRPs. You can now only purchase and provision Standard, Premium, and Premium Plus CRPs. Any legacy CRPs that you have already purchased will be converted into Mendix Cloud Tokens if they are deprovisioned. This will use the rate specified in the previous tables, and the Mendix Cloud Tokens will be added to your Token pool.
-* Self-service cloud consumption capabilities are exclusively available for Standard, Premium, and Premium Plus CRPs. If you are using a legacy CRP in combination with fallback, you may experience consumption inaccuracies in the self-service tool. For access to the latest capabilities, Mendix recommends contacting your customer success manager to transition to a Standard, Premium, or Premium Plus CRP.
+* Self-service cloud consumption capabilities are exclusively available for Standard, Premium, and Premium Plus CRPs. If you are using a legacy CRP in combination with fallback, you may experience consumption inaccuracies in the self-service tool. For access to the latest capabilities, Mendix recommends contacting your Technical Account Manager, Specialized Account Executive, or Partner Contact to transition to a Standard, Premium, or Premium Plus CRP.
 
 {{% /alert %}}
 

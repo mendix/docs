@@ -50,4 +50,4 @@ Keep in mind that when you deploy to your own AWS account, you are responsible f
 
 ## If There Is No Deployment in Your Desired AWS Region, When Will Mendix Launch There?
 
-Mendix adds regions based on customer demand. If you would like a different region, contact your Mendix Customer Success Manager to see what Mendix can offer. All request will need to take into account the costs of launching a complete Mendix Cloud cluster, with backup services, monitoring, etc. 
+Mendix adds regions based on customer demand. If you would like a different region, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to see what Mendix can offer. All request will need to take into account the costs of launching a complete Mendix Cloud cluster, with backup services, monitoring, etc. 

@@ -34,7 +34,7 @@ The Private Mendix Platform Marketplace API allows you to manage the Marketplace
 
 ## Supported Private Mendix Platform Version
 
-This API is available in Private Mendix Platform [VERSION] and newer.
+This API is available in Private Mendix Platform 1.5 and newer.
 
 ## API Reference
 

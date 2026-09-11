@@ -27,7 +27,7 @@ The Private Mendix Platform Project API version 1 allows you to manage projects 
 
 ## Supported Private Mendix Platform Version
 
-This API is available in Private Mendix Platform [VERSION] and newer.
+This API is available in Private Mendix Platform 1.5 and newer.
 
 {{% alert color="info" %}}
 For information about Project API version 2, see [Project API - Version 2](/apidocs-mxsdk/apidocs/private-platform-project-api-v2/).

@@ -93,7 +93,7 @@ Some widgets, for example snippets and building blocks, have a **Documentation**
 
 Widgets that include translatable texts display an overview of their [system texts](/refguide/system-texts/). To manage the translations, click **Go to system texts** to open the system text editor.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/widget-system-texts-properties-dialog.png" alt="The Texts section of the widget properties dialog box showing an overview of the widget's system texts" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/widget-system-texts-properties-dialog.png" alt="The Studio Pro properties dialog box showing the widget's system texts" class="no-border" >}}
 
 ## Data Source Section{#data-source}
 

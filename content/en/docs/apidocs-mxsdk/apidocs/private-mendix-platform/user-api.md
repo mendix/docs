@@ -23,7 +23,7 @@ The Private Mendix Platform User API allows you to manage users in Private Mendi
 
 ## Supported Private Mendix Platform Version
 
-This API is available in Private Mendix Platform [VERSION] and newer.
+This API is available in Private Mendix Platform 1.5 and newer.
 
 ## API Reference
 

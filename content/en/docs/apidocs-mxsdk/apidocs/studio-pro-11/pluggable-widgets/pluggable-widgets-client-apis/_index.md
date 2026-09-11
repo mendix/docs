@@ -532,16 +532,16 @@ Parameters are _positional_ and are passed as an _array of strings_ to `translat
             <translation lang="en_US">Successfully imported {2} records. {1} records had errors.</translation>
             <translation lang="nl_NL">{2} Rijen zijn succesvol geïmporteerd. {1} Rijen hadden foutmeldingen.</translation>
         </translations>
+        <parameters>
+            <parameter caption="Count Errors" />
+            <parameter caption="Count Successful" />
+        </parameters>
     </text>
-    <parameters>
-        <parameter caption="Count Errors" />
-        <parameter caption="Count Successful" />
-    </parameters>
 </systemProperty>
 ```
 
 ```ts
-translate("import_summary", [ errorCount.toString(), pendingCount.toString() ])
+translate("import_summary", [ errorCount.toString(), successCount.toString() ])
 ```
 
 Widgets written in TypeScript report missing parameters for texts defined by the widget.

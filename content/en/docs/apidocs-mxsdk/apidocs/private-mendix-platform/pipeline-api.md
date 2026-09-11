@@ -22,7 +22,7 @@ The Private Mendix Platform Pipeline API version 1 allows you to manage pipeline
 
 ## Supported Private Mendix Platform Version
 
-This API is available in Private Mendix Platform [VERSION] and newer.
+This API is available in Private Mendix Platform 1.5 and newer.
 
 {{% alert color="info" %}}
 For information about Pipeline API version 2, see [Pipeline API - Version 2](/apidocs-mxsdk/apidocs/private-platform-pipeline-api-v2/).

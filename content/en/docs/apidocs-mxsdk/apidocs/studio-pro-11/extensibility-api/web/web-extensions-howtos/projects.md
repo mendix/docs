@@ -16,7 +16,7 @@ If you are using Studio Pro 11.0–11.5 and your extension includes menus, your 
 
 This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one.
 
-### IElementChangesApi
+## Element Changes API
 
 This API provides events that relate to elements (documents or entities).
 
@@ -30,7 +30,7 @@ This API provides events that relate to elements (documents or entities).
 | `documentAdded`       | A single document that was added.            | A single `DocumentInfo`      |
 | `elementsRenamed`     | Contains a list of renamed elements.         | Array of `ElementRenameInfo` |
 
-## `DocumentInfo` Properties
+### `DocumentInfo` Properties
 
 | Property       | Type   | Description                                                                          |
 |----------------|--------|--------------------------------------------------------------------------------------|
@@ -39,7 +39,7 @@ This API provides events that relate to elements (documents or entities).
 | `documentName` | string | The name of the document.                                                             |
 | `moduleName`   | string | Optional name of the containing module.                                              |
 
-## `ElementRenameInfo` Properties
+### `ElementRenameInfo` Properties
 
 | Property       | Type        | Description                                          |
 |----------------|-------------|------------------------------------------------------|
@@ -47,7 +47,7 @@ This API provides events that relate to elements (documents or entities).
 | `newName`      | ElementName | The new name of the document.                         |
 | `documentType` | string      | The type of the document (for example, `Microflows$Microflow`).  |
 
-## `ElementName` Properties
+### `ElementName` Properties
 
 | Property         | Type   | Description                                 |
 |------------------|--------|---------------------------------------------|
@@ -56,7 +56,7 @@ This API provides events that relate to elements (documents or entities).
 
 These events are useful when working with [Consistency Checks](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/) for Custom Blob Documents.
 
-## How to Listen to an Event
+### How to Listen to an Event
 
 ```typescript
 studioPro.app.projectChanges.addEventListener("documentsChanged", async ({ documents }) => {
@@ -70,7 +70,7 @@ studioPro.app.projectChanges.addEventListener("elementsRenamed", async ({ elemen
 }
 ```
 
-### IPublicProjectManagerApi
+## Project Manager API
 
 This API provides events and methods that relate to the current Studio Pro project.
 
@@ -83,7 +83,7 @@ This API provides events and methods that relate to the current Studio Pro proje
 | `projectOpened`       | Triggers when the project is initialized.                   | `ProjectMetadata` |
 | `projectClosing`      | Triggers when the project is closing, unloading extensions. | `ProjectMetadata` |
 
-## `ProjectMetadata` Properties
+### `ProjectMetadata` Properties
 
 | Property       | Type   | Description                      |
 |----------------|--------|----------------------------------|
@@ -94,7 +94,7 @@ This API provides events and methods that relate to the current Studio Pro proje
 
 These events are useful when working with [Consistency Checks](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/) for Custom Blob Documents.
 
-## How to Listen to an Event
+### How to Listen to an Event
 
 ```typescript
 studioPro.app.projectManager.addEventListener("projectOpened", async ({ project }) => {
@@ -105,6 +105,6 @@ studioPro.app.projectManager.addEventListener("projectClosing", async ({ project
 }
 ```
 
-## Getting the Current Project
+### Getting the Current Project
 
 This API provides a `getProjectMetadata` method that you can use whenever an extension needs to perform an action requiring an initialized project, such as [creating a blob document](/apidocs-mxsdk/apidocs/web-extensibility-api-11/custom-blob-document-api/{#creating-a-document-from-code}). It returns a `ProjectMetadata` object that can also be `null`.

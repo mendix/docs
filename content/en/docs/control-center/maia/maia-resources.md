@@ -59,7 +59,7 @@ Once a user reaches their individual limit, further Maia use is disabled for tha
 ## Increasing Your Maia Units Capacity {#increase-maia-units}
 
 1. **Make sure you have Cloud Tokens available**<br>
-Cloud Tokens are purchased through your Mendix subscription. If your organization already has Cloud Tokens allocated to other services, you can reassign them. Check your available balance in the Control Center. If you need to purchase more, contact your Mendix account manager.
+Cloud Tokens are purchased through your Mendix subscription. If your organization already has Cloud Tokens allocated to other services, you can reassign them. Check your available balance in the Control Center. If you need to purchase more, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 2. **Convert Cloud Tokens to Maia Units**<br>
 In the Control Center, go to **Maia Resources** and select **Provision Resource**. Choose how many Cloud Tokens to allocate. Each Cloud Token gives you 100 Maia Units per month.
 3. **Use Maia in Studio Pro**<br>

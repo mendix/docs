@@ -72,7 +72,7 @@ The tool is currently in public beta. The cleanup tool can be downloaded [here](
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page after you open your app in [Projects](https://projects.home.mendix.com/), because of the size restrictions, you can reach out to your CSM to get your app safelisted.
+This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page after you open your app in [Projects](https://projects.home.mendix.com/), because of the size restrictions, you can reach out to your Technical Account Manager, Specialized Account Executive, or Partner Contact to get your app safelisted.
 {{% /alert %}}
 
 ### Cleanup Process

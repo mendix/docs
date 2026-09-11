@@ -10,5 +10,5 @@ description: "Moving an existing Mendix app deployed as a Free App to a Basic Pa
 {{% alert color="warning" %}}
 New licenses for Mendix Basic Package are not currently available.
 
-If you currently have a Mendix Basic Package, it can still be renewed by contacting your CSM or [Mendix Support](https://support.mendix.com/)
+If you currently have a Mendix Basic Package, it can still be renewed by contacting your Technical Account Manager, Specialized Account Executive, or Partner Contact or [Mendix Support](https://support.mendix.com/)
 {{% /alert %}}

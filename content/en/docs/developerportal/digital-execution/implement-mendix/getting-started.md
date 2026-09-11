@@ -111,7 +111,7 @@ Now that you have your goals and challenges identified, consider milestones for 
     * Gather relevant stakeholders to show progress 
     * Share the success at a company meeting or in newsletters
 
-The final step of your getting started plan involves capturing your 5 P's milestones and building a timeline. Work independently or work with your customer success manager to think through what this might look like for you.
+The final step of your getting started plan involves capturing your 5 P's milestones and building a timeline. Work independently or work with your Technical Account Manager, Specialized Account Executive, or Partner Contact to think through what this might look like for you.
 
 These image contain examples of timelines that Mendix uses frequently.
 

@@ -17,7 +17,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## Custom Document Model
 
-Studio Pro allows you to extend its metamodel by adding custom document types. These documents can store arbitrary data that can be serialized as strings. When you register an editor (a user-defined UI component) for a specific document type, documents of that type appear in the UI alongside built-in document types such as constants, Java actions, and pages. They appear in the **New Document** and **Find Advanced** dialogs, context menus for adding documents, the App Explorer, and other UI elements that display Studio Pro documents. You can register custom editors to appear as tabs or as modal dialogs.
+Studio Pro allows you to extend its metamodel by adding custom document types. These documents can store arbitrary data that can be serialized as strings. When you register an editor (a user-defined UI component) for a specific document type, documents of that type appear in the UI alongside built-in document types such as constants, Java actions, and pages. They appear in the **New Document** and **Find Advanced** dialogs, context menus for adding documents, the App Explorer, and other UI elements that display Studio Pro documents. You can register custom editors to appear as tabs or as modal dialogs. You can also add [Consistency Checks](/apidocs-mxsdk/apidocs/web-extensibility-api-11/consistency-checks/) and [Java Action Activities](/apidocs-mxsdk/apidocs/web-extensibility-api-11/java-action-activities-blob-documents/) for custom blob documents.
 
 ## Registering a New Document Type
 
@@ -28,7 +28,7 @@ To register a new document type, do the following:
 
     ```typescript {hl_lines=["8-24"]}
     import { IComponent, getStudioProApi } from "@mendix/extensions-api";
-    import { personDarkThemeIcon, personDocumentType, personLightThemeIcon } from "../model/constants";
+    import { personDarkThemeIcon, personDocumentType, personLightThemeIcon, personReadableDocumentType } from "../model/constants";
     import { PersonInfo } from "../model/PersonInfo";
 
     export const component: IComponent = {
@@ -36,7 +36,7 @@ To register a new document type, do the following:
             const studioPro = getStudioProApi(componentContext);
             await studioPro.app.model.customBlobDocuments.registerDocumentType<PersonInfo>({
                 type: personDocumentType,
-                readableTypeName: 'Person',
+                readableTypeName: personReadableDocumentType,
                 defaultContent: {
                     firstName: '',
                     lastName: '',
@@ -60,6 +60,7 @@ To register a new document type, do the following:
 
     ```typescript
     export const personDocumentType = 'myextension.Person';
+    export const personReadableDocumentType = 'Person';
     export const personLightThemeIcon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGKADAAQAAAABAAAAGAAAAADiNXWtAAABKElEQVRIDd2Vyw3CMBBEAxIUAWVQBxIcKIBiuNAAFVAIV2iAA2cKoAGYF9nIctaxscIBRhrZ2Z3d9T9N8++YaoIb8ShexYcjfWz40FRhraib+MwQDdpijKXci7nEsZ8YYrOoSe6LEdsLpurFtW1yudiskjXPFSaHufGciFxwqZ9cLcJNWXnjAK2Zi7NdOsKcjlwdcIlygaV+crUIl8jbwnauj5F4CY2ujw0fmiTCAndDtXC2g+HzNq8JJVau9m2Jl+CkKAYxEbfi2ZE+Nnxo4jjeqQ5Sx3QnZThTH4gNX5yc7/cx9WLavovGKJfizJG+NXKSJy+afO2raI3oE1vyqaAA+OpjRwHWtqYIMdZekdMEUy15/NBkl8WsICMbz4ng2A3+y1TOH8ALNqHxhf/P+xwAAAAASUVORK5CYII=';
     export const personDarkThemeIcon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAWdJREFUSIm1ljFuwkAQRd/giFTkABS5gMsolBRcIFBwCOTGNUfgDtDRJ9yDioaCKlJ8B0dYmyLjZGLtrh0Jj7SyNPP3f894dtbinHP0aIM+yQHuYkERuQdegDnwBIw1VABH4BV4c86VQRIXMGABXADXsi7AIsjjIR4AG0NwAnIgBUa6UvWdDG4DDLoI1OQlkAFJJMtEMWUtEhXQstTksxCxR2hmRP6UCwMamppnXcnN/sx8k6FPYGlqHixLRCAx32RZ++05mOtz65y7Btsu3I1XYNvgwmZwJty1XbNINYOzL4MxgIg8/Pftjb1bLmgZFSJSiAgiMvHEJhorYhxWoAY+Gt9RnyvP3lUDY/f+ipr67fmuX258U6ACPoEd8Kxrp74KmBp8rhz7H58JetsUWCtRcwZVwLqtTTsdNM3kAHzoOtg3V0z8oCmov1FhwP0NO93U77g2Qje5cETJvHaLKzMqcAvr/a/iC+JcVEP5CMhEAAAAAElFTkSuQmCC';
     ```
@@ -266,6 +267,40 @@ In `src/ui/editor.tsx`, the first highlighted block of code listens for changes 
 In the next highlighted block, document contents are fetched whenever a new document opens or an existing document updates. 
 
 The code then provides a way to save changes.
+
+### Creating a Document from Code {#creating-a-document-from-code}
+
+The `createDocument` method creates a new document and requires a container ID (a module or a folder), a type, content, and a document name. Documents can only be created when the project is initialized: when an extension first loads as its containing project opens, the project database is not yet built. It becomes available after the extension updates and reloads. Check that the project is available before creating or updating documents.
+
+```typescript
+const project: ProjectMetadata | null = await studioPro.app.projectManager.getProjectMetadata();
+
+if (project !== null){
+    await studioPro.app.model.customBlobDocuments.createDocument<PersonInfo>({
+        containerId: myModuleContainer.$ID,
+        type: personReadableDocumentType,
+        content: {
+            firstName: 'John',
+            lastName: 'Doe',
+            age: 30,
+            email: 'john.doe@info.com'
+        },
+        documentName: "person_document"
+    });
+}
+```
+
+### Updating a Document from Code
+
+It is also possible to update an existing document from the api, using the `updateDocumentContent` method. It is also necessary for the project to be initialized, or the document will not be found.
+
+```typescript
+const project: ProjectMetadata | null = await studioPro.app.projectManager.getProjectMetadata();
+
+if (project !== null){
+    await studioPro.app.model.customBlobDocuments.updateDocumentContent<SimpleOpenProjectDocument>(documentId, newContent);
+}
+```
 
 ### Update Build and Manifest Files
 

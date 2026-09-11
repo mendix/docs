@@ -111,9 +111,9 @@ To enable SSO, create a `sso-login.html` file in `/theme/web` with the following
 </html>
 ```
 
-Update the `<script>` tag in `index.html`:
+Update the `<script>` tag in `index.html` by removing the `if` condition and changing the `originURI` cookie value from `/login.html` to `/sso-login.html`, as shown below.
 
-This removes the existing `if` condition and sets `originURI` to `sso-login.html`, preventing the Gateway from taking over `login.html` and performing the SSO flow.
+This ensures that the SSO flow is handled through the dedicated `sso-login.html` page instead of `login.html`.
 
 ```html
 <script>

@@ -20,7 +20,7 @@ The overview page displays the current status of each station, helping you quick
 * **Computer registered** - A Workstation Client on a physical computer is successfully registered and actively linked to this station.
 * **Client's config is out of sync** - The configuration defined in Workstation Management for this station has changed, but the Workstation Client on the registered computer has not yet received or applied these updates. This can happen if auto-refresh is disabled or if there's a temporary connectivity issue.
 * **Unknown computer** - The Workstation Client on the registered computer is reporting an unrecognized identifier, or there's an issue with its registration.
-Error while registering: An error occurred during the attempt to register a Workstation Client to this station. Further investigation (for example, checking client logs) may be required.
+* **Error while registering** - An error occurred during the attempt to register a Workstation Client to this station. Further investigation (for example, checking client logs) may be required.
 
 ## Creating a New Station {#create-station}
 
@@ -31,11 +31,11 @@ To create a new station, choose one of the following options, depending on your 
 To create a station from scratch, perform the following steps:
 
 1. Click **Create Station**.
-2. Provide a unique **Station Name**. 
+2. Provide a unique name in the **Provide a Station Name** field.
 
     The name is a mandatory identifier for your station.
 
-3. Optional: Add a station group to organize your stations (for example, by location, department, or function).
+3. Optional: In the **Add to Station Group** field, select a group to organize your stations (for example, by location, department, or function). For more information, see [Station Groups](#station-groups).
 4. Optional: Specify an **Auto-Accepted Computer Name**. 
 
     If provided, during a bulk registration process, any Workstation Client reporting this computer name are automatically mapped and registered to this specific station, streamlining large-scale deployments.
@@ -51,6 +51,27 @@ This option allows you to import a station's configuration from a previously exp
 ## Create Copy from Station
 
 This option allows you to directly copy an existing station's configuration without needing to import it from the clipboard or from file.
+
+## Station Groups {#station-groups}
+
+A station group is a label that you assign to stations in order to organize them, for example by location in the factory ("line A") or function ("assembly"). Station groups are defined per workspace, and a station belongs to at most one group.
+
+Station groups additionally control which stations may run an app: in the **Enable in station groups** field of an app, select the groups that should have access to it. For more information, see [Managing Apps](/mendix-workstation/management-apps/).
+
+You can assign a group to a station in the following ways:
+
+* While creating the station, in the **Add to Station Group** field. If the group does not exist yet, click **Create Station Group** on the same page.
+* Afterwards, by clicking **Edit Station** and selecting a group in the **Station Group** field.
+
+### Managing Station Groups
+
+To review the station groups of a workspace, click **Station Groups** in the workspace menu. The overview lists each group together with the number of **Stations** that belong to it.
+
+From this page you can perform the following actions:
+
+* **Create Station Group** - Click **Create Station Group**, enter a name in the **Station Group Name** field, and then click **Create Station Group**.
+* **Rename Station Group** - Click the three-dot menu of the group, and then click **Rename Station Group**.
+* **Delete Station Group** - Click the three-dot menu of the group, and then click **Delete Station Group**. The group is removed from every station that used it, but those stations are not deleted.
 
 ## Exporting and Importing Stations
 

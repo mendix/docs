@@ -8,7 +8,7 @@ weight: 20
 
 ## Introduction
 
-Private Mendix Platform handles app events and **Help Me** functionality slightly differently for Standalone and Connected modes. For more information about the differences, refer to the following sections.
+Private Mendix Platform handles app events and **Help Me** functionality slightly differently for Standalone and Interactor-Agent modes. For more information about the differences, refer to the following sections.
 
 ## App Events
 
@@ -116,9 +116,9 @@ kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.data.token}'|bas
 kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.metadata.annotations.openshift\.io/token-secret\.value}'
 ```
 
-### Connected Mode
+### Interactor-Agent Mode
 
-In Connected mode, both container logs and events are retrieved from the Grafana API.
+In Interactor-Agent mode, both container logs and events are retrieved from the Grafana API.
 
 For event retrieval from Grafana, Private Mendix Platform uses the *Kubernetes Event Exporter for Grafana* method.
 
@@ -138,4 +138,4 @@ Clicking the **Help Me** button generates a debug file that includes the followi
 * Current event information, sourced from the following:
 
     * In Standalone mode - Current Kubernetes events retrieved directly through the Kubernetes API
-    * In Connected mode - Container logs and event information retrieved from the Grafana API, leveraging the same integration used for general event retrieval.
+    * In Interactor-Agent mode - Container logs and event information retrieved from the Grafana API, leveraging the same integration used for general event retrieval.

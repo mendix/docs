@@ -20,7 +20,7 @@ Event retrieval is always centralized for security reasons. In addition to that,
 
 In Standalone mode, Private Mendix Platform retrieves Kubernetes events directly using the Kubernetes API. Only real-time events are supported. Historical events (for example, older than one hour) cannot be retrieved in Standalone mode.
 
-Customers must configure a Kubernetes token with the appropriate permissions to allow Private Mendix Platform to retrieve these events, as in the following example.
+When creating a new cluster in the Cluster Manager, customers must configure their Kubernetes token with the appropriate permissions to allow Private Mendix Platform to retrieve these events, as in the following example.
 
 {{% alert color="info" %}}
 The code sample is intended to show the range of available options. It is presented as example only, and may require significant adaptation to work in your own environment.

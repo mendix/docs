@@ -342,7 +342,6 @@ await studioPro.ui.extensionsMenu.add({
 });
 ```
 
-
 ### Update Build and Manifest Files
 
 The highlighted text in `build-extension.mjs` and `manifest.json` shows the changes necessary to ensure the `editor` entry point builds and loads properly.

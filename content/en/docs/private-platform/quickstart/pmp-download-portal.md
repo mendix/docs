@@ -8,7 +8,7 @@ weight: 15
 
 ## Introduction
 
-The Private Mendix Platform Download Portal is a centralized hub for accessing and managing Private Mendix Platform installer files, marketplace bundles, and container images. The portal provides secure, role-based access to Platform releases, enabling users to download the necessary components for their Private Mendix Platform installation and use.
+The Private Mendix Platform Download Portal is a centralized hub for accessing and managing Private Mendix Platform installer files, Marketplace bundles, and container images. The portal provides secure, role-based access to Platform releases, enabling users to download the necessary components for their Private Mendix Platform installation and use.
 
 Refer to the following sections for information about accessing the portal, managing your downloads, and using the available features.
 

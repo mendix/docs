@@ -115,10 +115,7 @@ Each release includes additional information accessible through the three-dot me
 To view release details:
 
 1. Click the three-dot menu (**•••**) for the desired release.
-2. Select one of the following options:
-
-    * **View Release Note** - Opens the release documentation.
-    * **View Add-ons** - Displays additional components included with the release.
+2. Click **View Release Note** to open the release documentation.
 
 ## Image Management
 

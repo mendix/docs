@@ -17,7 +17,7 @@ Refer to the following sections for information about accessing the portal, mana
 Before using the Download Portal, ensure that you have the following prerequisites:
 
 * A valid Mendix account with a work email address
-* Access permissions granted by your organization's admin
+* Access permissions; to gain them, contact your Mendix Partner or Mendix Support
 * Network access to the Download Portal URL
 * Appropriate permissions for the features you need:
 

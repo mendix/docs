@@ -270,24 +270,30 @@ The code then provides a way to save changes.
 
 ### Creating a Document from Code {#creating-a-document-from-code}
 
-The `createDocument` method creates a new document and requires a container ID (a module or a folder), a type, content, and a document name. Documents can only be created when the project is initialized: when an extension first loads as its containing project opens, the project database is not yet built. It becomes available after the extension updates and reloads. Check that the project is available before creating or updating documents.
+The `createDocument` method creates a new document and requires a container ID (a module or a folder), a type, content, and a document name. Documents can only be created when the project is initialized: when an extension first loads as its containing project opens, the project database is not yet built. It becomes available after the extension updates and reloads. Check that the project is available before creating or updating documents. Add the following code in the `async loaded` of `src/main/index.ts` and import `ProjectMetadata` from `"@mendix/extensions-api"` to try it out.
 
-```typescript
-const project: ProjectMetadata | null = await studioPro.app.projectManager.getProjectMetadata();
-
-if (project !== null){
-    await studioPro.app.model.customBlobDocuments.createDocument<PersonInfo>({
-        containerId: myModuleContainer.$ID,
-        type: personReadableDocumentType,
-        content: {
-            firstName: 'John',
-            lastName: 'Doe',
-            age: 30,
-            email: 'john.doe@info.com'
-        },
-        documentName: "person_document"
-    });
-}
+```typescript {hl_lines=["5-17"]}
+await studioPro.ui.extensionsMenu.add({
+    caption: "My Extension",
+    menuId: "main",
+    action: async() => {
+        const project: ProjectMetadata | null = await studioPro.app.projectManager.getProjectMetadata();
+        const myModuleContainer = await studioPro.app.model.modules.getModule("MyFirstModule");
+        if (project !== null && myModuleContainer !== null){
+            await studioPro.app.model.customBlobDocuments.createDocument<PersonInfo>({
+                containerId: myModuleContainer.$ID,
+                type: personDocumentType,
+                content: {
+                    firstName: 'John',
+                    lastName: 'Doe',
+                    age: 30,
+                    email: 'john.doe@info.com'
+                },
+                documentName: "person_document"
+            });
+        }
+    }
+});
 ```
 
 ### Updating a Document from Code
@@ -301,6 +307,41 @@ if (project !== null){
     await studioPro.app.model.customBlobDocuments.updateDocumentContent<SimpleOpenProjectDocument>(documentId, newContent);
 }
 ```
+To test the feature, add the following code inside the `async loaded` method in `src/main/index.ts`.
+```typescript {hl_lines=["25-29"]}
+await studioPro.ui.extensionsMenu.add({
+    caption: "My Update",
+    menuId: "updatemenu",
+    action: async () => {
+        const documents =
+            await studioPro.app.model.customBlobDocuments.getDocumentsOfType(
+                personDocumentType
+            );
+
+        const personDocument = documents.find(
+            document => document.name === "person_document"
+        );
+
+        if (!personDocument) {
+            return;
+        }
+
+        const newContent: PersonInfo = {
+            firstName: "Jane",
+            lastName: "Doe",
+            age: 31,
+            email: "jane.doe@info.com"
+        };
+
+        await studioPro.app.model.customBlobDocuments
+            .updateDocumentContent<PersonInfo>(
+                personDocument.id,
+                newContent
+            );
+    }
+});
+```
+
 
 ### Update Build and Manifest Files
 

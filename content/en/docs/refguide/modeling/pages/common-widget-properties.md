@@ -89,6 +89,12 @@ Dynamic classes do not require a data container.
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
 
+### Texts {#texts}
+
+Widgets that include translatable texts display an overview of their [system texts](/refguide/system-texts/). To manage the translations, click **Go to system texts** to open the system text editor.
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/widget-system-texts-properties-dialog.png" alt="The Studio Pro properties dialog box showing the widget's system texts" class="no-border" >}}
+
 ## Data Source Section{#data-source}
 
 {{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/data-source-section.png" alt="Data Source Section" class="no-border" >}}

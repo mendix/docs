@@ -972,6 +972,10 @@ The system text property allows a pluggable widget to define and use translatabl
 
 The widget may define [its own texts](#widget-texts), or declare the use of [external texts](#external-texts).
 
+{{% alert color="info" %}}
+The text system property was introduced in Mendix [11.15](/releasenotes/studio-pro/11.15/).
+{{% /alert %}}
+
 #### XML Elements
 
 ##### Text {#widget-texts}

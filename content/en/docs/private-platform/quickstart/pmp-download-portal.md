@@ -188,9 +188,9 @@ An image manifest file is generated containing your selected images and their re
 
 ## Bundle Management
 
-The **Bundle Management** page allows you to create, view, and manage collections of marketplace components for your Private Mendix Platform.
+The **Bundle Management** page allows you to create, view, and manage collections of Marketplace components for your Private Mendix Platform.
 
-A bundle is a curated collection of marketplace components with specific versions. Bundles allow you to perform the following actions:
+A bundle is a curated collection of Marketplace components with specific versions. Bundles allow you to perform the following actions:
 
 * Group related components together
 * Standardize component versions across deployments

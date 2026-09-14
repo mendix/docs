@@ -16,6 +16,8 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 * We now make sure that two different extensions cannot use the same prefixes for their consistency error codes.
 * We added readable names and descriptions for each permission that an extension requires in the Extensions Overview.
 * We fixed a bug where `CustomBlobDocument` type names were not displayed as their registered type in the `Commit` pane in version controlled apps.
+* We added the Feature Flag API under `studioPro.featureFlags.isCommandLineFlagProvided("flag-name")`, where extension developers can check if a specified feature flag exists in the command line arguments, when running studio pro from the terminal.
+* We added a Register Tool API under `studioPro.ai.tools.registerTool(toolDefinition)` where users can now register their own tools and develop agentic logic with Maia.
 
 ## Version 11.14.0
 

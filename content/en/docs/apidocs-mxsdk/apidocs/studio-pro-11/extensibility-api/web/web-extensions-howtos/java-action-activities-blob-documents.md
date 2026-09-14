@@ -44,7 +44,7 @@ If you want to create the Java Action that has your new Blob Document Type as a 
  async loaded(componentContext) {
     const studioPro = getStudioProApi(componentContext);
 
-    const moduleName = "MyModule";
+    const moduleName = "MyFirstModule";
     const javaActionName = "MyJavaAction";
     
     await createJavaActionWithBlobDocumentParameter(studioPro, moduleName, javaActionName, personDocumentType, "Person");
@@ -99,7 +99,7 @@ async function createJavaActionWithBlobDocumentParameter(studioPro: StudioProApi
 
 ```
 
-### Sample Type That Keeps Track of the Java Action Name
+## Sample Type That Keeps Track of the Java Action Name
 
 ```typescript
 export type JavaActionDocument = {
@@ -110,6 +110,7 @@ export type JavaActionDocument = {
 ```
 
 ### Consistency Checks for Lost Action and Parameter Types
+
 ```typescript
 const withJavaActionDocumentType = "myextension.JavaActionDocument";
 

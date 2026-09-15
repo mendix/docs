@@ -1,5 +1,5 @@
 ---
-title: "Digital Execution Release Notes"
+title: "Digital Execution Practice Tools"
 linktitle: "Digital Execution Practice Tools"
 url: /developerportal/digital-execution/
 description: "Describes the Digital Execution tools, that is, Compass and Portfolio Management."

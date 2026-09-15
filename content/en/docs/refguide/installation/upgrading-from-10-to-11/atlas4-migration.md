@@ -55,15 +55,15 @@ Always create a full backup of your Mendix project before beginning this migrati
 
 To understand the major change between v3 and v4, it is important to grasp the difference between SASS and CSS variables:
 
-* **SASS (Syntactically Awesome Style Sheets)** — SASS is a **pre-processor**. This means your SASS code, including its variables, is processed and compiled into standard CSS **before** your application is deployed and run in a web browser. SASS variables are essentially placeholders that get replaced with their final values during this compilation step. The browser never "sees" a SASS variable.
-* **CSS Custom Properties (CSS Variables)** — CSS variables are a native feature of web browsers. They are **interpreted at runtime**, meaning the browser understands and can directly work with them as your application is running.
+* **SASS (Syntactically Awesome Style Sheets)** – SASS is a **pre-processor**. This means your SASS code, including its variables, is processed and compiled into standard CSS **before** your application is deployed and run in a web browser. SASS variables are essentially placeholders that get replaced with their final values during this compilation step. The browser never "sees" a SASS variable.
+* **CSS Custom Properties (CSS Variables)** – CSS variables are a native feature of web browsers. They are **interpreted at runtime**, meaning the browser understands and can directly work with them as your application is running.
 
 This distinction is crucial because it unlocks powerful capabilities:
 
-* **Dynamic Theming & White-labeling:** — Since CSS variables are interpreted at runtime, their values can be changed dynamically using JavaScript. This allows you to easily implement features like dark mode, user-selected themes, or even completely changed branding (white-labeling) without recompiling your application's SASS.
-* **Integration with Mendix Design Properties** — Mendix Studio Pro's [design properties](/howto/front-end/extend-design-properties/) can directly set CSS variables or use them as values, providing a more intuitive and flexible way to customize components and layouts directly within the IDE.
-* **Easier Debugging** — You can inspect and modify CSS variables directly in your browser's developer tools, which makes debugging styling issues more straightforward.
-* **Modern Web Standards** — CSS variables align with the latest web technologies ensures better long-term compatibility, performance, and maintainability.
+* **Dynamic Theming & White-labeling:** – Since CSS variables are interpreted at runtime, their values can be changed dynamically using JavaScript. This allows you to easily implement features like dark mode, user-selected themes, or even completely changed branding (white-labeling) without recompiling your application's SASS.
+* **Integration with Mendix Design Properties** – Mendix Studio Pro's [design properties](/howto/front-end/extend-design-properties/) can directly set CSS variables or use them as values, providing a more intuitive and flexible way to customize components and layouts directly within the IDE.
+* **Easier Debugging** – You can inspect and modify CSS variables directly in your browser's developer tools, which makes debugging styling issues more straightforward.
+* **Modern Web Standards** – CSS variables align with the latest web technologies ensures better long-term compatibility, performance, and maintainability.
 
 {{% alert color="info" %}}
 CSS variables are supported in all modern browsers (Chrome, Firefox, Safari, Edge). Internet Explorer 11 does not support CSS variables. If you need to support IE11, you must maintain a separate fallback stylesheet or consider an alternate approach.
@@ -240,9 +240,9 @@ The Atlas core theme (`themesource/atlas_core/web/themes/_theme-default.scss`) u
 
 Atlas 4 has backward compatibility which helps modules using SASS variables still function. However, there are some limitations due to how the two technologies work (pre-processor versus runtime interpretation):
 
-* **`_theme-default.scss` (Atlas variables with default values)** — This file, located at `themesource/atlas_core/web/themes/_theme-default.scss`, defines the **official Atlas 4 CSS variables**. These are the variables your custom theme should aim to use. You will notice that many of these variables share names with their SASS predecessors (for example, `--brand-primary`, `--font-size-default`), but are now true CSS variables.
+* **`_theme-default.scss` (Atlas variables with default values)** – This file, located at `themesource/atlas_core/web/themes/_theme-default.scss`, defines the **official Atlas 4 CSS variables**. These are the variables your custom theme should aim to use. You will notice that many of these variables share names with their SASS predecessors (for example, `--brand-primary`, `--font-size-default`), but are now true CSS variables.
 
-* **`_css-variables-mappings.scss` (Compatibility file)** — This file, located at `themesource/atlas_core/web/_css-variables-mappings.scss`, defines a mixin `legacy-variables()`. When this mixin is included (which Atlas does internally), it creates **CSS variables with the same names as many of the old Atlas SASS variables**, and assigns them the **compiled value of those SASS variables** using SASS interpolation (`#{$variable}`).
+* **`_css-variables-mappings.scss` (Compatibility file)** – This file, located at `themesource/atlas_core/web/_css-variables-mappings.scss`, defines a mixin `legacy-variables()`. When this mixin is included (which Atlas does internally), it creates **CSS variables with the same names as many of the old Atlas SASS variables**, and assigns them the **compiled value of those SASS variables** using SASS interpolation (`#{$variable}`).
 
     **Example from `_css-variables-mappings.scss`:**
 
@@ -316,7 +316,7 @@ This section, where you convert `theme/web/custom-variables.scss`, is critical f
       + }
       ```
 
-1. Handle Imports (if any) — If your `custom-variables.scss` previously imported other SASS files that defined variables (for example `@import 'my-design-system/_colors.scss';`), those imported files also need to be updated to declare CSS variables within a `:root` block.
+1. Handle Imports (if any) – If your `custom-variables.scss` previously imported other SASS files that defined variables (for example `@import 'my-design-system/_colors.scss';`), those imported files also need to be updated to declare CSS variables within a `:root` block.
 
 ### 2.3 Updating SASS Variable Usage in Your SCSS Files
 
@@ -465,7 +465,7 @@ This section addresses common problems you might encounter during the Atlas 4 mi
 
 ### Issue: Styles Not Applying After Migration
 
-**Symptoms** — Your application looks unstyled, or uses default colors instead of your custom theme's.
+**Symptoms** – Your application looks unstyled, or uses default colors instead of your custom theme's.
 
 **Possible Causes & Solutions:**
 
@@ -483,7 +483,7 @@ This section addresses common problems you might encounter during the Atlas 4 mi
 
 ### Issue: CSS Variables Not Recognized
 
-**Symptoms** — Browser developer tools show `var(--variable-name)` as an invalid property value.
+**Symptoms** – Browser developer tools show `var(--variable-name)` as an invalid property value.
 
 **Possible Causes & Solutions:**
 
@@ -498,7 +498,7 @@ This section addresses common problems you might encounter during the Atlas 4 mi
 
 ### Issue: Colors Look Different After Migration
 
-**Symptoms** — Colors do not match your previous Atlas 3 theme.
+**Symptoms** – Colors do not match your previous Atlas 3 theme.
 
 **Possible Causes & Solutions:**
 
@@ -513,7 +513,7 @@ This section addresses common problems you might encounter during the Atlas 4 mi
 
 ### Issue: Module Styling Inconsistent
 
-**Symptoms** — Some pages or widgets look correct, others use default styling.
+**Symptoms** – Some pages or widgets look correct, others use default styling.
 
 **Possible Causes & Solutions:**
 

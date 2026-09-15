@@ -42,10 +42,7 @@ A *station* represents a workstation on the shop floor. It can connect to one or
 
     Environments created with the Test environment type have [developer mode](/mendix-workstation/management-stations/#developer-mode) enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode.
 
-4. After the workspace is created, in the **Stations** page, click **Create a New Station**.
-
-    {{< figure src="/attachments/workstation/wks-install3.png" class="no-border" >}}
-
+4. After the workspace is created, in the **Stations** page, click **Create Station**.
 5. Enter a name for the station, and then click **Create Station**.
 
     {{< figure src="/attachments/workstation/wks-install4.png" class="no-border" >}}

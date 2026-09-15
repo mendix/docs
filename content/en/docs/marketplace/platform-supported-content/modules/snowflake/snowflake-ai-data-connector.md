@@ -84,6 +84,8 @@ When using an OAuth token to authenticate REST calls, use the **BearerToken_GetC
 
 In the **POST_v1_ExecuteStatement** and **CortexAnalyst** operations, the token is retrieved from the **ConnectionDetails** and used for authentication. Be aware that **GET_v1_RetrievePartition** should be edited when using OAuth for authentication. Further instructions on what to change are included in the microflow annotations.
 
+When specifying the **Host name** for OAuth, make sure to provide a URL that starts with `https`.
+
 #### Configuring Programmatic Access Token (PAT) Authentication {#setup-pat-snowflake}
 
 You can use Programmatic Access Tokens (PATs) to authenticate Snowflake REST API calls without configuring OAuth or key-pair authentication.
@@ -97,6 +99,8 @@ The token is retrieved from **ConnectionDetails** during execution of operations
 Because this limit is defined by Snowflake and may change over time, you should always verify the current maximum supported token lifetime in the official Snowflake documentation. For more information, see the Snowflake documentation on [Authenticating to the SQL API](https://docs.snowflake.com/en/developer-guide/sql-api/authenticating). {{% /alert %}}
 
 When configuring the **ExpirationDate** of a **BearerToken**, make sure it aligns with the token lifetime supported by Snowflake to avoid authentication failures caused by expired tokens.
+
+When specifying the **Host name** for PAT, make sure to provide a URL that starts with `https`.
 
 #### Configuring Key-Pair Authentication in Snowflake {#setup-key-pair-snowflake}
 
@@ -122,7 +126,7 @@ To configure the authentication, perform the following steps:
 3. Run the application and go to the page where you added the snippet.
 4. Click **New**. 
 5. On the **Connection details** page, fill out all fields with the details of your Snowflake account.
-6. In the Snowflake console, click **Copy account URL**. This URL will be used as the **Account URL** parameter for **Connection details**.
+6. In the Snowflake console, click **Copy account URL**. This URL will be used as the **Account URL** parameter for **Connection details**. Make sure that the URL which you enter starts with `https`.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-ai-data-connector/snowsight-account-url.png" >}}
 
@@ -173,7 +177,7 @@ Instead of putting values directly into your SQL, you can use `?` placeholders a
 
 In Mendix, you do this by creating a `Statement` entity with a SQL query that includes `?`. Then, you add `Binding` entities to provide the values for those placeholders.
 
-Each `Binding` is linked to the `Statement`. The order of the bindings matters — the first binding fills the first `?`, the second fills the second `?`, and so on.
+Each `Binding` is linked to the `Statement`. The order of the bindings matters—the first binding fills the first `?`, the second fills the second `?`, and so on.
 
 Make sure the number of bindings matches the number of `?` placeholders in your SQL. Otherwise, the execution will fail due to mismatched parameters.
 

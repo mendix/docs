@@ -145,20 +145,20 @@ Follow these steps:
 
 We recommend that you start by adding at least three app ideas to your portfolio, and picking one based on this checklist: 
 
-* Go live quickly — One of the main goals of your first app is to validate your ability to rapidly bring new ideas to market. Therefore, Mendix recommends selecting an app that is limited in scope and can work independently in production. 
-* Keep visibility in mind — Your first app should be highly visible within the organization. It must have executive support, and also deliver tangible business value.
-* Involve business stakeholders — Requirements are often unclear and need to be refined through collaboration with, and feedback from, business stakeholders. 
-* Limit dependencies — Avoid external factors over which you have little or no control. They can quickly diminish the productivity advantage offered by the Mendix platform. 
-* Start with high-level requirements — It is a good idea to start with a high-level goal rather than having detailed requirements. Then, have at least two follow-up iterations so that you can capture and refine requirements.
-* Do not get discouraged by failure — Good first apps are often ones that your organization previously failed to deliver. They teach you how to learn from mistakes and how to collaborate better.
-* Create a smart app — To ensure that it delivers the best possible experience, the app should be intelligent, contextual and proactive. Develop an app that uses AI to personalize a user’s experience. 
-* Apply the complexity matrix — Using the complexity matrix is a great way to assess the right projects for your Start stage portfolio.    
+* Go live quickly – One of the main goals of your first app is to validate your ability to rapidly bring new ideas to market. Therefore, Mendix recommends selecting an app that is limited in scope and can work independently in production. 
+* Keep visibility in mind – Your first app should be highly visible within the organization. It must have executive support, and also deliver tangible business value.
+* Involve business stakeholders – Requirements are often unclear and need to be refined through collaboration with, and feedback from, business stakeholders. 
+* Limit dependencies – Avoid external factors over which you have little or no control. They can quickly diminish the productivity advantage offered by the Mendix platform. 
+* Start with high-level requirements – It is a good idea to start with a high-level goal rather than having detailed requirements. Then, have at least two follow-up iterations so that you can capture and refine requirements.
+* Do not get discouraged by failure – Good first apps are often ones that your organization previously failed to deliver. They teach you how to learn from mistakes and how to collaborate better.
+* Create a smart app – To ensure that it delivers the best possible experience, the app should be intelligent, contextual and proactive. Develop an app that uses AI to personalize a user’s experience. 
+* Apply the complexity matrix – Using the complexity matrix is a great way to assess the right projects for your Start stage portfolio.    
     Exposure is the amount of usage or availability of an app.     
     Complexity stands for how technically complex an app is, such as how many integrations it requires.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/level-of-complexity.png"  >}}
 
-* Think of the projects that Mendix is a good fit for — Mendix fits a wide variety of software apps, but some really stand out as a perfect fit:    
+* Think of the projects that Mendix is a good fit for—Mendix fits a wide variety of software apps, but some really stand out as a perfect fit:    
 
     * Any software requirement where there is no readily available solution 
     * Software projects where the requirements are not very clear yet, and the business requires flexibility during the development process 
@@ -199,7 +199,7 @@ We recommend that you start by adding at least three app ideas to your portfolio
 
 By thoroughly defining the app’s purpose and value, you provide a clear roadmap for development. You thus align the project with organizational goals, and set the stage for successful implementation and adoption. These are some things to keep in mind:
 
-* Business value proposition — Clearly articulate the app's value proposition in terms of the problem it is trying to solve, and the benefits it is trying to bring to the business.
+* Business value proposition – Clearly articulate the app's value proposition in terms of the problem it is trying to solve, and the benefits it is trying to bring to the business.
 * User experience and satisfaction:    
 
     * Identify the target audience or users who will benefit from the app. Understanding end-users helps in tailoring the app to their needs.
@@ -213,7 +213,7 @@ By thoroughly defining the app’s purpose and value, you provide a clear roadma
 
     * If applicable, emphasize how the app introduces innovative solutions or features that set your organization apart from competitors.
     * Consider how the app positions the organization for future growth and adaptation to changing market conditions.
-* Adaptability and scalability — Highlight the app's adaptability to changing business needs, and its scalability to accommodate future growth.
+* Adaptability and scalability – Highlight the app's adaptability to changing business needs, and its scalability to accommodate future growth.
 * Measurable objectives:
 
     * Establish measurable objectives to gauge the success of the app. Define key performance indicators (KPIs) that will help evaluate its impact on business processes, efficiency, or other relevant metrics.
@@ -277,11 +277,11 @@ This table outlines the Mendix on Kubernetes responsibility matrix:
 
 With Mendix, you have multiple options to choose from for the development of your apps:
 
-* In-house development — Train and/or hire Mendix developers to develop and support all your Mendix apps.    
+* In-house development – Train and/or hire Mendix developers to develop and support all your Mendix apps.    
 When training in-house, we recommend choosing individuals who either have a traditional development background or have some understanding of object-oriented programming (OOP)). Beyond the technical side, Mendix recommends looking for individuals who can provide consulting to your business team.
-* Mendix partner — Work with one of our certified Mendix partners to support your app development. Our directory of partners is listed [here](https://developerprofiles.mendix.com/link/partneroverview), but your Mendix team is a great resource to identify a good fit for you.    
+* Mendix partner – Work with one of our certified Mendix partners to support your app development. Our directory of partners is listed [here](https://developerprofiles.mendix.com/link/partneroverview), but your Mendix team is a great resource to identify a good fit for you.    
 This can be a great option to get your project kick-started, or if you have no future goals of building out your internal development team.
-* Mendix Expert Services — Choosing Mendix Expert Services is the right option if you plan on building out your internal team and need enablement and support alongside app development.  Expert Services can help prove the value of the Mendix internally while simultaneously coaching your team on how to continue with the apps.
-* Hybrid — You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
+* Mendix Expert Services – Choosing Mendix Expert Services is the right option if you plan on building out your internal team and need enablement and support alongside app development.  Expert Services can help prove the value of the Mendix internally while simultaneously coaching your team on how to continue with the apps.
+* Hybrid – You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
 
 Regardless of which option you choose, we always recommend that at least one person internally has been trained on Mendix and is technically capable of directing the project.  Outsourcing every technical role creates a siloed development team that does not truly understand your business needs.

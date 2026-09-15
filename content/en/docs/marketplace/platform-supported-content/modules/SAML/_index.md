@@ -26,16 +26,16 @@ Mendix also offers an [OIDC SSO](/appstore/modules/oidc/) module if you want to 
 The following use cases are supported by both the SAML and OIDC SSO modules:
 
 * Your app is designed for your company’s employees, and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP).
-* Authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS) — the SAML protocol allows for the encryption of all information transferred between the two servers, so, VPN connections, LDAP, or Kerberos authentication are no longer needed.
+* Authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS)—the SAML protocol allows for the encryption of all information transferred between the two servers, so, VPN connections, LDAP, or Kerberos authentication are no longer needed.
 
 The following use cases are supported by SAML:
 
 * Implementing SSO in your Mendix App through a Shibboleth Identity Provider.
 * Identifying the end-users of your Mendix app through SAML-enabled national identity schemes such as eHerkenning, a Dutch eID scheme for B2B or B2G scenarios, or DigiD, which gives Dutch citizens access to (semi) governmental services.
 
-    {{% alert color="info" %}}Some of these identity schemes use optional features of SAML, which are not yet supported in the SAML SSO module — see [Limitations](#limitations) for more information.{{% /alert %}}
+    {{% alert color="info" %}}Some of these identity schemes use optional features of SAML, which are not yet supported in the SAML SSO module. See [Limitations](#limitations) for more information.{{% /alert %}}
 
-* Authenticating within a Mendix session — for example, requiring end-users to re-authenticate shortly before they are allowed to do critical transactions in your app, or having a second user authenticate within the context of the first user’s session in your Mendix app.
+* Authenticating within a Mendix session, for example, requiring end-users to re-authenticate shortly before they are allowed to do critical transactions in your app, or having a second user authenticate within the context of the first user’s session in your Mendix app.
 * Single Logout is supported.
 
 ### Features

@@ -10,6 +10,64 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.2.0
+
+### Release date: September 10, 2026
+
+### Workstation Management
+
+#### New Features
+
+* Keyboard wedge devices - We have added a new *keyboard wedge* connection type to connect with devices sending data as keyboard strokes. This connection enables basic integration with input devices like barcode scanners, RFID readers, or measurement devices. For more information, see [Configuring Devices: Keyboard Wedge](/mendix-workstation/management-devices/#keyboard-wedge).
+
+#### Improvements
+
+* Station creation - We have added the option to create a new station by copying an existing station. For more information, see [Managing Stations: Creating a New Station](/mendix-workstation/management-stations/#create-station).
+* Station details - The station details now display if there is a live connection to a Workstation Client on a registered computer.  
+* Adding devices - We have improved the UX of the **Add Device** wizard when selecting a connection type.
+* Registering computers - When clipboard permissions are disabled in the browser, the registration key is instead fully displayed in a text area.
+* Private management - We have made the following improvement to Private Workstation Management:
+
+    * We have made it easier to see if a specific SSO configuration was created at runtime or deploy time. A warning appears when editing a deploy-time configuration at runtime.
+    * To provide more flexibility when switching SSO protocols, we have made it possible to edit SSO users and their principal attributes.
+    * We have fixed some UI issues in the navigation and the SAML metadata popup window.
+    * We have added the missing default attribute mapping for Display Name in the SAML configuration.
+    * We have upgraded Private Workstation Management to Mendix 11.12.4.
+
+#### Bug Fixes
+
+* We have fixed an issue where the **Workspace Settings** page would freeze after closing the **Log Level**, **Retention Policy**, and **Client Update Check Interval** dialogs.
+* We have fixed *uncontrolled input* warnings that would appear in the console.
+
+### Workstation Client
+
+#### New Features
+
+* Keyboard wedge connector - The Workstation Client can now receive On Event messages from input devices sending data as keystrokes wherever the current focus is, for example, in the web app or in an input field.
+
+#### Improvements
+
+* Registering computers - We have improved computer registration to prevent accidental double submissions. We have also added a **Registering...** indicator while the request is in progress.
+
+### Workstation Connector
+
+#### Improvements
+
+* UX improvements - We have added new toolbox icons for all exposed Javascript actions that dark-mode compatible and aligned with the icons in Studio Pro.
+
+### Marketplace
+
+#### New Modules
+
+* Workstation Commons - The new Workstation Commons module contains a collection of nanoflows and snippets commonly used when building an app connected to peripherals devices, including the following:
+
+    * A high-level nanoflow to simplify the interface with smartcard readers, Bluetooth, printers and file devices
+    * Nanoflows to manage connecting and disconnecting to and from devices
+    * A logger to display the raw device messages in your app
+    * Snippets to display information about the station, device, and device state.
+
+* Private Workstation Management is now available as a [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/) package.
+
 ## 4.1.0
 
 ### Release date: August 13, 2026

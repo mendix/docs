@@ -73,12 +73,12 @@ You can view and manage tasks by performing the following steps:
 1. In the **Program** section, click **Tasks**.
 2. To add a new task, click **Add Task**, and then provide the following information:
 
-    * **Name** — Required. An identifying name for the task.
-    * **Status** — By default, new tasks are created with the status **To do**, but you can also mark them as already done.
-    * **Description** — As a best practice, provide a detailed description, so that the person working on the task has sufficient information to complete it.
-    * **Deadline** — The deadline of the task.
-    * **Assigned to** — The team member who must complete the task.
-    * **Milestone** — The milestone with which the task is associated.
+    * **Name** – Required. An identifying name for the task.
+    * **Status** – By default, new tasks are created with the status **To do**, but you can also mark them as already done.
+    * **Description** – As a best practice, provide a detailed description, so that the person working on the task has sufficient information to complete it.
+    * **Deadline** – The deadline of the task.
+    * **Assigned to** – The team member who must complete the task.
+    * **Milestone** – The milestone with which the task is associated.
 
 3. Click **Save**.
 
@@ -102,11 +102,11 @@ As a best practice, it can be helpful to organize a workshop with your team, so 
 
 The **Area of Focus** section lists the following topics to plan for and consider as part of your goal-setting.
 
-* **People** — Goals associated with your team. For example, you may decide that you need to train five Mendix developers within the next three months.
-* **Platform** — Goals to integrate Mendix into your software development lifecycle.
-* **Portfolio** — The offerings where low-code can bring high value to your organization.
-* **Process** — Goals associated with your business processes. For example, you may decide to implement scrum.
-* **Promotion** — Goals to help you celebrate your successes and motivate your team to build with Mendix.
+* **People** – Goals associated with your team. For example, you may decide that you need to train five Mendix developers within the next three months.
+* **Platform** – Goals to integrate Mendix into your software development lifecycle.
+* **Portfolio** – The offerings where low-code can bring high value to your organization.
+* **Process** – Goals associated with your business processes. For example, you may decide to implement Scrum.
+* **Promotion** – Goals to help you celebrate your successes and motivate your team to build with Mendix.
 
 These focus areas are based on the [5 Ps of digital transformation](https://www.mendix.com/glossary/digital-execution/#what-are-the-5-ps-of-digital-transformation). You can define your own measurable key results for each of those areas.
 

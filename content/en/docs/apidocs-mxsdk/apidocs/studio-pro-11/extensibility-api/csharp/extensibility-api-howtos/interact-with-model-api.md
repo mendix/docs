@@ -7,6 +7,10 @@ weight: 11
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-11/) instead.
+{{% /alert %}}
+
 Once you have created basic extensions, you may want to interact with the Studio Pro model to make changes to your app. The Model API enables this functionality and is exposed via the `Mendix.StudioPro.ExtensionsAPI.Model` namespace.
 
 ## Gaining Access to the Mendix Model SDK

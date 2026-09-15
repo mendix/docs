@@ -12,7 +12,7 @@ The behavior of Mendix using an SAP HANA database has some minor differences whe
 
 Retrieving an entity that is sorted on an attribute of one of its associated entities is not supported in SAP HANA.
 
-For example, you have two associated entities — **Person** and **Address** — and they have the **name** and **street** attributes, respectively. You cannot retrieve `Person` objects sorted on `Person_Address/Address/street`. 
+For example, you have two associated entities—**Person** and **Address**—and they have the **name** and **street** attributes, respectively. You cannot retrieve `Person` objects sorted on `Person_Address/Address/street`. 
 
 {{% alert color="info" %}}
 This limitation has been removed in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/) and above, and also from [9.6.3](/releasenotes/studio-pro/9.6/#963).

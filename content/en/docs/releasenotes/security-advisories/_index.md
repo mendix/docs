@@ -20,6 +20,7 @@ Siemens publishes their common vulnerabilities and exposures (CVE) on the second
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| <a id="80465">CVE-2026-80465 | 8.7 | [Account Hijacking Vulnerability in Mendix SAML module](https://cert-portal.siemens.com/productcert/html/ssa-887643.html) | See the SSA description for remediation details. |
 | <a id="7891">CVE-2026-7891 | 9.1 | [Insecure Inherited Permission in Mendix](https://cert-portal.siemens.com/productcert/html/ssa-814963.html) | See the SSA description for remediation details. |
 | <a id="48192">CVE-2026-48192 | 5.4 | [Arbitrary Code Execution Vulnerability in Mendix Studio Pro Before V11.12](https://cert-portal.siemens.com/productcert/html/ssa-779310.html) | See the SSA description for remediation details. |
 | <a id="40834">CVE-2025-40834 | 5.7 | [Cross-Site Scripting Vulnerability in Mendix Rich Text Widget](https://cert-portal.siemens.com/productcert/html/ssa-190588.html) | See the SSA description for remediation details. |

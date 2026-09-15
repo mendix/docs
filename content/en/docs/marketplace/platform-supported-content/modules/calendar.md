@@ -55,7 +55,7 @@ The calendar module provides default **CalendarEvent** entity in the domain mode
 * **Time format** – Set the format in which the time is displayed.
 * **Day start hour** – The hour when the day starts. Choose a value between 0 and 23.
 * **Day end hour** – The hour when the day ends. Choose a value between 0 and 24.
-* **Show all events** — If set to **yes**, the calendar displays all events in a day without "more" links.
+* **Show all events** – If set to **yes**, the calendar displays all events in a day without "more" links.
 
 ### Custom View Tab
 

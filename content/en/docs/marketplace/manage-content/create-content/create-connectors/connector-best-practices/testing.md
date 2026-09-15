@@ -22,10 +22,10 @@ Java unit tests are a good way to automate the testing of your Java code. This i
 
 The following tools are part of the testing process of custom Java code in your Mendix app:
 
-* [JUnit](https://junit.org/junit5/) — This allows you to run Java unit tests easily.
-* [Mockito](https://site.mockito.org/) — This allows you to mock Java classes. You can fake a class during a test so that it thinks that it deals with a real class, while it is actually just behaving like one.
-* [JaCoCo](https://www.jacoco.org/jacoco/trunk/index.html) (Java Code Coverage) — This helps you check how well your code is covered by tests.
-* [Gradle](https://gradle.org/) — This pulls everything together to manage Java dependencies, and provides a way to work with JUnit and Mockito.  
+* [JUnit](https://junit.org/junit5/) – This allows you to run Java unit tests easily.
+* [Mockito](https://site.mockito.org/) – This allows you to mock Java classes. You can fake a class during a test so that it thinks that it deals with a real class, while it is actually just behaving like one.
+* [JaCoCo](https://www.jacoco.org/jacoco/trunk/index.html) (Java Code Coverage) – This helps you check how well your code is covered by tests.
+* [Gradle](https://gradle.org/) – This pulls everything together to manage Java dependencies, and provides a way to work with JUnit and Mockito.  
    Gradle can handle managing Java dependencies and running [JUnit](https://junit.org) tests. Read about setting up Gradle in the [Extending App Setup for Building Connectors with Java](/appstore/creating-content/best-practices/development/#extend-app-java) section of *Development*. If you have a pipeline, Mendix recommends running your tests as part of it. 
 
 ### Using the Java Unit Test Reference

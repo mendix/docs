@@ -270,7 +270,9 @@ The code then provides a way to save changes.
 
 ### Creating a Document from Code {#creating-a-document-from-code}
 
-The `createDocument` method creates a new document and requires a container ID (a module or a folder), a type, content, and a document name. Documents can only be created when the project is initialized: when an extension first loads as its containing project opens, the project database is not yet built. It becomes available after the extension updates and reloads. Check that the project is available before creating or updating documents. Add the following code in the `async loaded` of `src/main/index.ts` and import `ProjectMetadata` from `"@mendix/extensions-api"` to try it out.
+The `createDocument` method creates a new document and requires a container ID (a module or a folder), a type, content, and a document name. Documents can only be created when the project is initialized: when an extension first loads as its containing project opens, the project database is not yet built. It becomes available after the extension updates and reloads. Check that the project is available before creating or updating documents. 
+
+Add the following code in the `async loaded` of `src/main/index.ts` and import `ProjectMetadata` from `"@mendix/extensions-api"` to try it out:
 
 ```typescript {hl_lines=["5-17"]}
 await studioPro.ui.extensionsMenu.add({

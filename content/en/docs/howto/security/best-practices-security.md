@@ -29,7 +29,7 @@ While the data that is viewable and editable to each role is application-specifi
 * Do not make attributes determined by the system (like the status of an order) writable
 * If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is a **System.User** object created on the fly)—you can do this using [Path to User](/refguide/access-rules/#path-to-user) in your entity *Access Rules*
 * Set **Default rights for new members** to **None** so you have to think about who has access to each attribute that is added to an entity
-* Implement security constraints as entity access rules
+* Implement XPath constraints as entity access rules to limit the data access.
 * Do not use constraints on widgets in pages as a security measure, but filter out irrelevant data for the context of the page
 * Keep your attributes editable within data views, because if an access rule prohibits write access, your client will display it as non-editable—this way you are aware of the (correct) working of an access rule
 

@@ -200,11 +200,11 @@ You can also use the [Find Advanced](/refguide/find-and-find-advanced/#find-adva
 
 ### Dynamic Case Management Microflows
 
-For process task microflows in [dynamic case management](/appstore/partner-solutions/dcm/) no distinction is made between different types of microflow. All dynamic case management microflows begin **DCM_**.
+For process task microflows in [Dynamic Case Management](/appstore/partner-solutions/dcm/), no distinction is made between different types of microflows. All Dynamic Case Management microflows begin with **DCM_**.
 
 | Event Type                                  | Prefix |
 | ------------------------------------------- | ------ |
-| Dynamic case management                     | DCM_   |
+| Dynamic Case Management                     | DCM_   |
 
 ## Workflows
 

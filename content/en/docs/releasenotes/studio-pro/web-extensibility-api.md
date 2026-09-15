@@ -13,7 +13,7 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 ### New Features
 
 * We added a feature flag API under `studioPro.featureFlags.isCommandLineFlagProvided("flag-name")` so developers can check if a specified feature flag exists in the command-line arguments when running Studio Pro from the terminal.
-* We added a Register Tool API under `studioPro.ai.tools.registerTool(toolDefinition)` where users can extend capabilities of Maia by letting it run their custom logic.
+* We added a Register Tool API under `studioPro.ai.tools.registerTool(toolDefinition)` that lets users extend Maia's capabilities by running custom logic.
 * We added `javaActionQualifiedName` to the `CustomBlobDocumentRegistrationOptions`, which allows the Studio Pro user to link a blob document type to an existing Java Action, allowing the user to drag a `CustomBlobDocument` straight into a microflow from the **App Explorer**, creating a new `JavaActionActivity` for the `CustomBlobDocument` type.
 * We added a `projectClosing` event in the `studioPro.app.projectManager` API to allow the developer to perform any cleanup functions that were dependent on the current project. Both events contain the current open project as their payload.
 

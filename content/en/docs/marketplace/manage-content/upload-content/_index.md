@@ -249,7 +249,7 @@ These fields cannot be edited while updating a component:
 
 Mendix scans every new public component or component version through [QSM](/appstore/partner-solutions/qsm/). If no vulnerabilities are found, the component or version is automatically uploaded. If vulnerabilities are found, the component or version is declined, and its developer must fix the vulnerabilities and resubmit it for review.
 
-On top of that, Mendix performs a weekly scan of all latest versions of all Marketplace components. If no vulnerabilities are found, a badge is displayed on the **Releases** tab of the component's Marketplace page. If vulnerabilities are found, the component owner is notified via email, with the option to publish a security fix. If vulnerabilities are not fixed within 30 days, the component is deprecated.
+On top of that, Mendix performs a weekly scan of all latest versions of all Marketplace components. If no vulnerabilities are found, a **Scanned** label is displayed on the **Releases** tab of the component's Marketplace page. If vulnerabilities are found, the component owner is notified via email, with the option to publish a security fix. If vulnerabilities are not fixed within 30 days, the component is deprecated.
 
 ## Releasing Security Fixes {#security-fixes}
 

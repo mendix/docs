@@ -1,1 +1,1 @@
-Last scan for stale merged branches: 2026-05-02 00:53:35 CEST (UTC+02:00)
+Last scan for stale merged branches: 2026-09-02 01:52:46 CEST (UTC+02:00)

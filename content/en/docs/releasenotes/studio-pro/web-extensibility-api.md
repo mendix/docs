@@ -24,7 +24,7 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 
 ### Fixes
 
-* We fixed an issue where creating or searching for `CustomBlobDocuments` gives unexpected results when called before the project was initialized. We added `projectOpened` and `projectClosing` events through the `studioPro.app.projectManager` API. We also added the method `getProjectMetadata`, allowing developers to know when the project is available in order to be able to create or query `CustomBlobDocuments`.
+* We fixed an issue where creating or searching for `CustomBlobDocuments` gave unexpected results when called before the project was initialized. To address this, we added `projectOpened` and `projectClosing` events to the `studioPro.app.projectManager` API and the `getProjectMetadata` method, so developers can determine when the project is available before calling the `CustomBlobDocument` API.
 * We fixed the issue that `CustomBlobDocumentApi` returned null when calling `getDocumentsOfType` when the project was not yet initialized. It now throws an error instead of returning null. Using `studioPro.app.projectManager.getProjectMetadata` will allow a developer to know when it is safe to call it.
 * We fixed a bug where `CustomBlobDocument` type names were not displayed as their registered type in the `Commit` pane in version controlled apps.
 

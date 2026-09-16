@@ -17,20 +17,92 @@ Helmfile installation supports the following tasks:
 * Installation and upgrade of components such as Svix, PCLM, and others
 * Installation and upgrade of Private Mendix Platform
 
-### Out-of-Scope Tasks
+## Installing the Mendix Operator
 
-The following tasks are not performed by the Helmfile installation:
+The Helmfile installation does not support installing or upgrading the Mendix Operator. To install the Operator, perform the following steps:
 
-* Mendix Operator installation
-* Mendix Operator upgrade
+### Preparing the Installation Files
 
-To install or upgrade the Operator, see [Installing Components through the Helm Chart UI](/developerportal/deploy/helm-charts/).
+Before you start the installation, download the required files by performing the following steps:
 
-## Components
+1. Download the release binary from your [Private Mendix Platform download portal](https://privateplatform.mendix.com/). If you do not have access to the download portal, contact your Mendix partner for information.
+
+2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
+
+    * **Tools** - *mx-pclm-cli*, which can be used to manage PCLM
+    * **helm**, and **helmfile** tools, which are used to deploy and manage Private Mendix Platform charts and Svix charts
+    * **images** - Private Mendix Platform image, PCLM image, Svix image, test application image
+    * **Installer** - installer tools
+    * **mxpc-cli** - installation tools which can be used to manage or configure the Mendix Operator
+    * **charts**  - charts, including Private Mendix Platform charts and Svix charts
+    
+    {{< figure src="/attachments/private-platform/pmp-binary.png" class="no-border" >}}
+
+### Optional: Initializing the Installation for Air-Gapped Environments
+
+If your clusters can connect to a public registry with a passable network, skip to the next section, otherwise initialize the installation by performing the following steps:
+
+1. Upload the images to your private repository in an air-gapped environment.
+
+    ```text
+    ~/mpp-binary-linux$ ./installer init  migrate --help
+    Migrate Mendix Private Platform related image to your own registry
+
+    Usage:
+    installer init migrate [flags]
+    Flags:
+        -h, --help                 help for migrate
+        -r, --registryurl string   registry url (required)
+        -e, --repo string          Repository name
+        -u, --username string      Username (required) for your private registry
+    ```
+
+    The destination image is named `${registryurl }/${repo}/mendix-private-platform: ${tag}`.
+    
+2. The `registryurl` and `repo` are read from the input parameters. The `tag` is automatically read by the installer. If the repository does not exist, you must create it before running the `init migrate` command.
+
+    ```text
+    ~/mpp-binary-linux$ ./installer init migrate   -r [registry] -u  user -e [repositoryName]
+    Please enter user password: ***
+
+    Confirm password: ***
+    the config checksum is empty
+    The image destination[REDACTED] svix-server:v0.75.0
+    The image destiation [REDACTED] mendix-private-platform:1.4.0.80d447b1
+    the config checksum is empty
+    The image destiation [REDACTED] mxpc-test:1.0
+    the config checksum is empty
+    The image destiation [REDACTED] privatecloud-license-manager:0.3.0
+    svix-server_v0.75.0 => [REDACTED] svix-server:v0.75.0 - ok
+    mendix-private-platform_1.4.0.80d447b1 => [REDACTED] mendix-private-platform:1.4.0.80d447b1 - ok
+    mxpc-test_1.0 => [REDACTED] mxpc-test:1.0 - ok
+    privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
+    ```
+
+3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
+
+## Installing the Mendix Operator {#install-operator}
+
+Install the Mendix Operator by doing the following steps:
+
+1. Run one of the following commands, where `-n` indicates the namespace: 
+    
+    * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
+    * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
+
+    In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
+    
+2. Click **Base Installation**, and then select the cluster type.
+
+    {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}
+
+3. Click **Run Installer** to install the Mendix Operator in your cluster.
+
+## Helmfile Components
 
 Helmfile manages multiple Helm releases with dependency ordering, ensuring components are installed in the correct sequence.
 
-The following components must be installed in a shared namespace (that is, the same namespace as Private Mendix Platform):
+After installing the Mendix Operator, you must install the following components in a shared namespace (that is, the same namespace as Private Mendix Platform):
 
 * `mx-privatecloud`
 * `maia-appgen`
@@ -57,7 +129,7 @@ ServiceAccount creation depends on the value of the **UseStoragePlanwithIRSA** f
 
 ### Dependency and Install Order  
  
-The following components are installed in parallel during the first phase of the installation:
+The following components are installed in parallel during the first phase of the Helmfile installation:
 
 * `mx-privatecloud-license-manager`
 * `mx-privatecloud`

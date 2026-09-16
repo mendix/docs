@@ -6,15 +6,17 @@ weight: 30
 
 ## Introduction
 
-A sequence flow is a flow that is shown an arrow that links elements (events, activities, decisions, etc.) with each other. Hereby it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Decisions always lead to one direction, so it is not possible that multiple flows take place simultaneously.
+A sequence flow determines the order in which Studio Pro executes the elements of a microflow, nanoflow, or rule. It is represented by an arrow that runs from one element to the next, such as from an event to an activity or from an activity to a decision.
 
-When you have two activities that you want to link together a sequence flow is used.
+Execution follows the arrows along a single path, one element at a time. At a decision, the path continues in exactly one direction, so no two elements ever run at the same time.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/sequence-flow/sequence-flow.png" class="no-border" >}}
 
 ## Condition Value
 
-The **Condition value** describes which direction should be followed based on the outcome of a [decision](/refguide/decision/) or an [object type decision](/refguide/object-type-decision/).
+A flow that leaves a [decision](/refguide/decision/) or an [object type decision](/refguide/object-type-decision/) must have a **Condition value**. Studio Pro follows the flow whose condition value matches the outcome of the decision.
+
+Each possible condition value must have its own outgoing flow. This includes the `(empty)` value when the decision returns an enumeration value, or when the decision is an object type decision.
 
 ## Flow Shape {#flow-shape}
 

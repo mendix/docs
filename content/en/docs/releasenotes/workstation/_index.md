@@ -10,6 +10,26 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.2.1
+
+### Release date: September 16, 2026
+
+### Workstation Client
+
+#### New Features
+
+* Keyboard wedge devices - We have added keyboard wedge support for Linux.
+
+#### Bug Fixes
+
+* We have fixed an issue with the mapping of the keyboard layouts that resulted in incorrect interpretation of keyboard inputs.
+
+### Workstation Commons
+
+#### Bug Fixes
+
+* We have included a missing dependency on the sticky scroll widget.
+
 ## 4.2.0
 
 ### Release date: September 10, 2026

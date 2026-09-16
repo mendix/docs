@@ -9,7 +9,6 @@ description: "Native Template 19"
 
 **Release date: Sep 16, 2026**
 
-- We addressed a random scenario where gradle would resolve to using the Hermes v1 compiler instead of the old hermes override in gradle.properties. This would throw issues with "...bytecode mismatch...".
 - We migrated iOS to the UIKit scene delegate lifecycle.
 
 ## 19.1.5

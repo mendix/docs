@@ -19,7 +19,7 @@ Helmfile installation supports the following tasks:
 
 ## Installing the Mendix Operator
 
-The Helmfile installation does not support installing or upgrading the Mendix Operator. To install the Operator, perform the following steps:
+The Helmfile installation does not support installing or upgrading the Mendix Operator with the `mx-ops-cli tool`. To install the Operator, perform the following steps instead:
 
 ### Preparing the Installation Files
 

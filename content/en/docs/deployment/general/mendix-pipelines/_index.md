@@ -256,7 +256,7 @@ There are two types of variables:
 
 1. Mendix-defined variables
 
-    * These are provided by Mendix. Every Mendix Pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment. Click **Outputs** inside a Mendix Pipeline **Designs** tab to view a step’s output variables. Step outputs are always written in the format `$StepName.OutputName` for easy reference across other steps.
+    * These are provided by Mendix. Every Mendix Pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `{{Build.DeploymentPackage}}`. Similarly, Deploy uses `{{Publish.DeploymentPackage}}` to deploy to the selected environment. Click **Outputs** inside a Mendix Pipeline **Designs** tab to view a step’s output variables. Step outputs are always written in the format `{{StepName.OutputName}}` for easy reference across other steps.
     * The scope of these variables is specific to a particular Mendix Pipeline design within a Mendix app.
 
 2. User-defined variables

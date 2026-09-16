@@ -24,7 +24,7 @@ The following diagram shows how Private Mendix Platform (PMP) uses Grafana:
 
 To configure Grafana integration for your environment, make sure that you fulfill the following prerequisites:
 
-* Grafana 12.2.1 must be nstalled and accessible. For more information, see [Installing Grafana](#install-grafana).
+* Grafana 12.2.1 must be installed and accessible. For more information, see [Installing Grafana](#install-grafana).
 * Prometheus 3.7.3 must be configured as a metrics data source in Grafana.
 * Loki 2.6.1 must be configured as a logs data source in Grafana.
 * You must have admin access to Private Mendix Platform settings.
@@ -33,7 +33,9 @@ To configure Grafana integration for your environment, make sure that you fulfil
 ## Installing Grafana {#install-grafana}
 
 For information about installing Grafana with Prometheus and Loki, refer to
-[Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
+[Install Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) in Grafana documentation.
+
+The following section shows an example of a Helm-based installation.
 
 ### Example Helm-Based Installation
 

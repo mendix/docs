@@ -159,7 +159,7 @@ The cluster should have at least 2 CPU cores, 2 GB memory and 3 GB ephemeral-sto
 
 In OpenShift, the cluster administrator must have a `system:admin` role.
 
-##### CPU requirements
+##### CPU Requirements
 
 Mendix Operator runs on CPUs with the [x86-64](https://en.wikipedia.org/wiki/X86-64) architecture.
 

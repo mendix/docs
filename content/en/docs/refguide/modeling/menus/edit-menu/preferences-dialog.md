@@ -333,6 +333,14 @@ Select this option to use a custom AI provider for Maia.
 
 This setting allows you to set the beta version as the default editor.
 
+### Orthogonal Flow Shape {#orthogonal-flow-shape}
+
+Select this option to render sequence flows as orthogonal (right-angled) lines in the microflow, nanoflow, and rule editors. When enabled, you can convert flows between curved and orthogonal shapes through the context menu. For more information, see the [Flow Shape](/refguide/sequence-flow/#flow-shape) section in *Sequence Flow*.
+
+{{% alert color="warning" %}}
+This is a beta feature, available in Studio Pro 11.15 and above.
+{{% /alert %}}
+
 ### Project Loading
 
 Select this option to enable optimizations during project loading.

@@ -380,7 +380,7 @@ The Mendix Operator allows you to specify custom Certificate Authorities to trus
 
 {{% /alert %}}
 
-##### Dedicated JDBC database{#jdbc}
+##### Dedicated JDBC Database{#jdbc}
 
 This allows you to use an existing database (schema) [database configuration parameters](/refguide/custom-settings/) directly as supported by the Mendix Runtime.
 
@@ -415,7 +415,7 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Application management | Mendix on Kubernetes Operator | 2.12+ |
 | Runtime | Mendix | 9.24+ |
 
-## File storage{#file-storage}
+## File Storage{#file-storage}
 
 ### Ephemeral File Storage
 
@@ -497,7 +497,7 @@ The following configuration options are available in OpenShift:
 * Turn TLS on and off
 * Add route annotations
 * Provide the name of an existing TLS certificate secret to use instead of the default router certificate
-* Provide a custom domain name (for example, mendix.example.com) to use instead of the default OpenShift route domain
+* Provide a custom domain name (for example, `mendix.example.com`) to use instead of the default OpenShift route domain
 
 It is also possible to provide a custom TLS configuration for individual environments via the `MendixApp` CR, overriding the default configuration:
 
@@ -525,10 +525,10 @@ For ingress, it is possible to do the following:
 * Add service annotations
 * Specify the ingress class, path and path type
 * Provide the name of an existing TLS secret to use
-* Provide a domain name (for example, mendix.example.com)
+* Provide a domain name (for example, `mendix.example.com`)
 
 For each environment, the URL will be automatically generated based on the domain name.
-For example, if the domain name is set to mendix.example.com, then apps will have URLs such as myapp1-dev.mendix.example.com, myapp1-prod.mendix.example.com and so on.
+For example, if the domain name is set to `mendix.example.com`, then apps will have URLs such as `myapp1-dev.mendix.example.com`, `myapp1-prod.mendix.example.com` and so on.
 
 The DNS server should be configured to route all subdomains (the `*` subdomain, for example, `*.mendix.example.com`) to the ingress/load balancer.
 

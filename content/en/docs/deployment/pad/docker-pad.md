@@ -73,6 +73,10 @@ To build a Docker image from the Portable Package, perform the following steps:
     # Start from an JAVA base image, as the Portable Package contains all necessary dependencies
     FROM eclipse-temurin:21-jdk
 
+    # Create a dedicated non-root user and group
+    RUN groupadd -r mendix && \
+    useradd -r -g mendix -d /mendix -s /sbin/nologin mendix
+
     # Set the working directory to /app
     WORKDIR /mendix
 
@@ -82,12 +86,17 @@ To build a Docker image from the Portable Package, perform the following steps:
     COPY ./etc ./etc
     COPY ./lib ./lib
 
+    # Ensure the non-root user owns all runtime files
+    RUN chown -R mendix:mendix /mendix
+
     # Set environment variables (optional)
     ENV MX_LOG_LEVEL=info
     ENV M2EE_ADMIN_PASS=${M2EE_ADMIN_PASS}
 
-    # Expose port 8080 for the Mendix Runtime and port 8090 for the Mendix Runtime admin interface
-    EXPOSE 8090
+    # Switch to non-root user
+    USER mendix
+
+    # Expose port 8080 for the Mendix Runtime
     EXPOSE 8080
 
     # Set the start script to the Mendix Runtime execute command
@@ -148,6 +157,7 @@ services:
   mendix-app:
     image: eclipse-temurin:21-jdk
     container_name: mendix-app
+    user: "1001:1001"
     working_dir: /mendix
     volumes:
       - ../app:/mendix/app
@@ -158,7 +168,6 @@ services:
       - MX_LOG_LEVEL=info
       - M2EE_ADMIN_PASS=${M2EE_ADMIN_PASS}
     ports:
-      - "8090:8090"
       - "8080:8080"
     command: ["./bin/start", "etc/Default"]
 ```

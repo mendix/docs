@@ -208,7 +208,9 @@ Alternatively, you can configure the Mendix Runtime by using a configuration fil
 }
 ```
 
-**Security Recommendation:** Do not store secrets in plaintext within Docker Compose YAML files, Kubernetes Secret manifests, application configuration files, or source code repositories. If these files are accidentally committed to a repository, shared externally, or uploaded to another platform, credentials may be exposed. Use a dedicated secret management mechanism and inject secrets during deployment whenever possible.
+### Security Recommendations 
+
+Do not store secrets in plain text within Docker Compose YAML files, Kubernetes Secret manifests, application configuration files, or source code repositories. If these files are accidentally committed to a repository, shared externally, or uploaded to another platform, credentials may be exposed. Use a dedicated secret management mechanism and inject secrets during deployment whenever possible.
 
 ### Using the Configuration File
 

@@ -114,6 +114,7 @@ export type JavaActionDocument = {
 ```
 
 ### Write the Consistency Check
+
 Add the following to your extension's entry point, for example `src/main/index.ts`. It defines the error codes and the `getConsistencyCheck` function that validates a `JavaActionDocument`:
 
 ```typescript

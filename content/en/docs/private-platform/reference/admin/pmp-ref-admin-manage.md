@@ -245,7 +245,7 @@ In the **Deployment** section, administrators can view and manage statistics, ac
 
 As the administrator, you can perform the following actions:
 
-* In the **Webhooks** tab, you can view and manage your [Webhooks](/developerportal/deploy/webhooks/).
+* In the **Webhooks** tab, you can view and manage your [Webhooks](#webhooks).
 * In the **Licensing** tab, you can check the status of your licenses, or upload a new Private Mendix Platform license bundle.
 
 #### Platform Statistics
@@ -275,13 +275,94 @@ This tab contains a list of actions that were archived after the period specifie
 
 You can select how long the actions are kept in the logs, in days. The minimum number of days is 1, and the maximum is 365. You can also specify the logging level, from no logging to complete logging.
 
-#### Webhooks
+#### Webhooks {#webhooks}
 
 In the **Webhooks** tab, you can view and manage your webhooks.
 
-Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix on Kubernetes to an external app or workflow. In Private Mendix Platform, you can use them to trigger a step in an automated [Build](/private-mendix-platform/reference-guide/admin/system/#build-steps) or [Deployment](/private-mendix-platform/reference-guide/admin/system/#deploy-steps) pipeline.
+Webhooks allow you to send information about your licensed Mendix app deployed to Private Mendix Platform to an external app or workflow. You can use them to trigger a step in an automated [Build](/private-mendix-platform/reference-guide/admin/system/#build-steps) or [Deployment](/private-mendix-platform/reference-guide/admin/system/#deploy-steps) pipeline.
 
-For more information about configuring webhooks, refer to [webhooks documentation](/developerportal/deploy/webhooks/).
+Mendix provides webhooks to send project information about the following events:
+
+* App events:
+
+    * App archived
+    * App created
+    * App deleted
+    * App info edited
+    * App logo edited
+    * App member added
+    * App member removed
+    * App owner edited
+    * App shared
+    * App unarchived
+
+* CI/CD events:
+
+    * Package built
+    * Package deleted
+    * Package deployed
+    * Environment created
+
+* Marketplace events:
+
+    * Item approved
+    * Item created
+    * Item declined
+    * Item edited
+    * Item imported
+    * Item owner edited
+    * Item shared
+    * Item version added
+    * Item version edited
+
+* User events:
+
+    * Group admin updated
+    * Group created
+    * Group info edited
+    * Group member added
+    * Group member removed
+    * User blocked
+    * User created
+    * User info edited
+    * User unblocked
+
+The webhooks contain a retry mechanism if an error response is received from the endpoint. This helps ensure that the trigger reaches the endpoint.
+
+##### Creating a New Webhook {#setting-up}
+
+To set up a webhook, do the following:
+
+1. In the **Platform Webhooks** tab of the **Webhooks** page, click **New Webhook**.
+2. Enter the following information:
+
+    * **Webhook Name** – This is a name which you can use to identify the webhook.
+    * **URL** – This is the endpoint that will receive the payload when one of the event types selected in **Available Events** occurs.
+    * **Validation Secret** – This is a secret that is shared with the endpoint to verify that it has been triggered by this webhook. If you leave this blank, a secret is generated automatically. You can see the generated value any time you return to edit the webhook.
+    * **Available Events** – This is the event (or events) that triggers the webhook to send information to the endpoint. You can activate or deactivate specific event types in the **Event Management** tab of the **Webhooks** page.
+    * **Custom Headers** – This is a key-value pair that is sent as an HTTP header to the endpoint. You can configure a predefined custom header in the **Preset Headers** tab of the **Webhooks** page.
+
+You can edit or delete an existing webhook by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the **Action** column for the webhook you want to change, and then selecting **Edit Webhook** or **Delete Webhook**.
+
+##### Webhook Headers
+
+Every `POST` payload contains the following delivery information as part of the header:
+
+* **connection** – `close`, indicating that there is no further information for the HTTP request
+* **content-length** – the size of the HTTP request in bytes (for example, `475`)
+* **webhook-signature** – the signature of the webhook in the format `<version>,<signature>` (for example, `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=`); for more information, see [Verifying Your Webhook](#verify-webhook) below
+* **webhook-id** – a unique identifier for this webhook trigger (for example, `msg_2M605iBQRge9hTgpYg7fKXQubaw`)
+* **user-agent** – the user agent used to process this trigger
+* **webhook-timestamp** – the time the webhook was triggered (for example, `1677072542`)
+* **content-type** – `application/json`
+* **accept** – `*/*`
+* **host** – the host part of the endpoint URL (for example, `gitlab.com`)
+
+You can also add your own custom headers. For more information, see [Configuring a Webhook](#setting-up).
+
+{{% alert color="info" %}}
+The order of these headers is not guaranteed.
+{{% /alert %}}
 
 #### Licensing
 

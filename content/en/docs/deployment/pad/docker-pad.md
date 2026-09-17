@@ -163,11 +163,13 @@ services:
     command: ["./bin/start", "etc/Default"]
 ```
 
+**Security Recommendation:** Do not store secrets in plaintext within Docker Compose YAML files, Kubernetes Secret manifests, application configuration files, or source code repositories. If these files are accidentally committed to a repository, shared externally, or uploaded to another platform, credentials may be exposed. Use a dedicated secret management mechanism and inject secrets during deployment whenever possible.
+
 ### Running with Docker Compose
 
 To use this Docker Compose configuration, perform the following steps:
 
-1. Set your admin port password in the **M2EE_ADMIN_PASS** variable within your environment, or directly in the *docker-compose.yaml* file.
+1. Set your admin port password in the **M2EE_ADMIN_PASS** variable within your environment.
 2. Navigate to the directory containing your *docker-compose.yaml* file
 3. Run a command like the following: `docker compose -f docker_compose/Default.yaml up`
 
@@ -203,6 +205,8 @@ Alternatively, you can configure the Mendix Runtime by using a configuration fil
   "RuntimeAdminPort": 8090
 }
 ```
+
+**Security Recommendation:** Do not store secrets in plaintext within Docker Compose YAML files, Kubernetes Secret manifests, application configuration files, or source code repositories. If these files are accidentally committed to a repository, shared externally, or uploaded to another platform, credentials may be exposed. Use a dedicated secret management mechanism and inject secrets during deployment whenever possible.
 
 ### Using the Configuration File
 

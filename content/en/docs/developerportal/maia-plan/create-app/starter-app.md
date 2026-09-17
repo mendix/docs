@@ -17,8 +17,16 @@ Follow these steps to have Maia create a project plan based on a starter app:
 
 2. Select **Agentic Planning**. The **Plan & Build with Maia** window is displayed.
 
-3. Click **Select Starter App**. The **Select Starter App** window is displayed, listing available starter apps. You can search by name or filter by app type (Company-Approved, Public, Private).    
-    If a starter app is not compatible with the minimum Studio Pro version required to use this feature, which is 11.11.0, a label is displayed. You can hover over the app's card and click **Request Upgrade**. This takes you to the component's Marketplace page, where you can upgrade as necessary.
+3. In the **Project Starting Point** section, select the radio button corresponding to the way in which you want to start your project. You can choose between the following:
+
+    * Use the latest LTS version.
+    * Use the latest version.
+    * Use a starter app with a predefined Studio Pro version.
+
+    Selecting an option opens the list of starter apps corresponding to that version.
+<!-- Click **Select Starter App**. The **Select Starter App** window is displayed, listing available starter apps. You can search by name or filter by app type (Company-Approved, Public, Private). 
+   
+   If a starter app is not compatible with the minimum Studio Pro version required to use this feature, which is 11.11.0, a label is displayed. You can hover over the app's card and click **Request Upgrade**. This takes you to the component's Marketplace page, where you can upgrade as necessary. does this still apply? -->  
 
 4. Hover over the card of the app that you want to use and click **Select**. You are taken back to the **Plan & Build with Maia** window, where the selected starter app is displayed. If needed, you can remove the app from here and start over.
 

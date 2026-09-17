@@ -99,7 +99,11 @@ async function createJavaActionWithBlobDocumentParameter(studioPro: StudioProApi
 
 ```
 
-## Sample Type That Keeps Track of the Java Action Name
+## Consistency Checks for Lost Action and Parameter Types
+
+### Define a Sample Type That Keeps Track of the Java Action Name
+
+Add this type next to your other document content types, for example in `src/model/PersonInfo.ts`. It represents the contents of the document that tracks the Java Action linked to it:
 
 ```typescript
 export type JavaActionDocument = {
@@ -109,7 +113,8 @@ export type JavaActionDocument = {
 };
 ```
 
-## Consistency Checks for Lost Action and Parameter Types
+### Write the Consistency Check
+Add the following to your extension's entry point, for example `src/main/index.ts`. It defines the error codes and the `getConsistencyCheck` function that validates a `JavaActionDocument`:
 
 ```typescript
 const withJavaActionDocumentType = "myextension.JavaActionDocument";
@@ -198,6 +203,26 @@ async function getConsistencyCheck(studioPro: StudioProApi) {
         };
     };
 }
+```
+
+### Register the Document Type with Its Consistency Check
+
+Add the following code inside the `loaded` function in `src/main/index.ts`, after registering the `Person` document type. Do this by building a `ConsistencyCheckRegistration` and passing it to `registerDocumentType`, the same way you registered the `Person` document type earlier:
+
+```typescript
+const consistencyCheckRegistration: ConsistencyCheckRegistration<JavaActionDocument> = {
+    check: await getConsistencyCheck(studioPro),
+    reservedErrorCodes
+};
+
+await studioPro.app.model.customBlobDocuments.registerDocumentType<JavaActionDocument>({
+    type: withJavaActionDocumentType,
+    readableTypeName: "Java Action Document",
+    defaultContent: {
+        javaActionQualifiedName: undefined
+    },
+    consistencyCheckRegistration
+});
 ```
 
 ## Tracking Java Action Renamed or Re-Added with Same Name After Deletion

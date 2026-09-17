@@ -113,6 +113,28 @@ Store all sensitive values in a Kubernetes Secret by performing the following st
 
     Replace the name and path of the file as required.
 
+##### Security Recommendation
+
+By default, Kubernetes Secrets are stored in the cluster's datastore (etcd). Although Secret values are Base64-encoded, they are not encrypted by default and anyone with sufficient access to etcd or the Kubernetes API can read them.
+For production deployments, configure Encryption at Rest for Kubernetes Secrets. This ensures sensitive information such as database credentials, license keys, and administrator passwords is encrypted before it's stored in etcd.
+Common approaches include:
+
+        AWS EKS: Use AWS KMS for envelope encryption of Kubernetes Secrets.
+        Azure AKS: Enable Secret encryption using Azure Key Vault and a customer-managed key (CMK) or the AKS Secret encryption feature.
+        Google GKE: Configure Application-layer Secrets Encryption using Cloud KMS.
+        Self-managed Kubernetes clusters: Configure an EncryptionConfiguration file for the API server and use a supported provider such as AES-CBC, Secretbox, or an external KMS provider.
+
+In addition, consider storing highly sensitive credentials in an external secrets management solution such as:
+
+        AWS Secrets Manager
+        Azure Key Vault
+        Google Secret Manager
+        HashiCorp Vault
+
+These solutions can be integrated with Kubernetes using the External Secrets Operator or the Secrets Store CSI Driver, reducing the need to store long-lived credentials directly in Kubernetes Secrets.
+For environments that require strict security or compliance controls, Mendix recommends enabling Secret encryption at rest and following your organization's key management policies.
+
+
 #### Using a ConfigMap
 
 The previous section showed how to load secrets as environment variables. For other properties that need to be changed and are not defined in a secret, you can pass constants and variables using a ConfigMap by mounting them as files (similar to mounting files in Docker) and by passing them directly as environment variables.

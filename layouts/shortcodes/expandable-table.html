@@ -1,0 +1,27 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<div class="expandable-table-wrap">
+    <div class="expandable-table-toolbar">
+        <button type="button" class="btn btn-sm expandable-table-btn" aria-label="Expand table">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/></svg>
+            Expand Table
+        </button>
+    </div>
+    <div class="expandable-table-inner">
+        {{ .Inner | markdownify | safeHTML }}
+    </div>
+</div>
+
+<div class="expandable-table-modal" role="dialog" aria-modal="true" aria-label="Expanded table view" hidden>
+    <div class="expandable-table-overlay"></div>
+    <div class="expandable-table-dialog">
+        <div class="expandable-table-header">
+            <button type="button" class="btn btn-sm btn-outline-secondary expandable-table-close" aria-label="Collapse table">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/></svg>
+                Collapse Table
+            </button>
+        </div>
+        <div class="expandable-table-body">
+            {{/* Table content is cloned here by expandable-table.js */}}
+        </div>
+    </div>
+</div>

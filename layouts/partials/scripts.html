@@ -74,8 +74,9 @@ window.markmap = {
   {{ $jsSearch = resources.Get "js/offline-search.js" -}}
 {{ end -}}
 
-<!--DB: Anchor, LodashDebouncd, Throttle, and ProgressTracking are custom-->
-{{ $jsArray := slice $jsBs $jsBase $jsAnchor $jsLodashDebouncd $jsLodashThrottle $jsProgressTracking $jsSearch $jsPlantuml $jsMarkmap $jsDrawio -}}
+{{ $jsExpandableTable := resources.Get "js/expandable-table.js" }}
+<!--DB: Anchor, LodashDebouncd, Throttle, ProgressTracking, and ExpandableTable are custom-->
+{{ $jsArray := slice $jsBs $jsBase $jsAnchor $jsLodashDebouncd $jsLodashThrottle $jsProgressTracking $jsExpandableTable $jsSearch $jsPlantuml $jsMarkmap $jsDrawio -}}
 
 {{ if .Page.Store.Get "hasmermaid" -}}
 {{- partial "scripts/mermaid.html" . -}}

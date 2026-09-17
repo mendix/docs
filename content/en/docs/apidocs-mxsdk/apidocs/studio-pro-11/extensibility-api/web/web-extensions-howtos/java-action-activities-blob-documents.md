@@ -109,7 +109,7 @@ export type JavaActionDocument = {
 };
 ```
 
-### Consistency Checks for Lost Action and Parameter Types
+## Consistency Checks for Lost Action and Parameter Types
 
 ```typescript
 const withJavaActionDocumentType = "myextension.JavaActionDocument";
@@ -200,7 +200,7 @@ async function getConsistencyCheck(studioPro: StudioProApi) {
 }
 ```
 
-### Tracking Java Action Renamed or Re-Added with Same Name After Deletion
+## Tracking Java Action Renamed or Re-Added with Same Name After Deletion
 
 Using events from `studioPro.app.projectChanges`, you can track when a Java Action is renamed or re-added with the same name:
 

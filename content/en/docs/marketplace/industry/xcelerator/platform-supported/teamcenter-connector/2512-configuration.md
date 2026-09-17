@@ -130,17 +130,33 @@ When using SSO, you need to make sure that Mendix accounts match Teamcenter user
 
 ### User Provisioning for SSO {#user-provisioning-for-sso}
 
-When using SSO, it is essential that Mendix accounts are uniquely assigned to Teamcenter users. This section describes the process of assigning a Mendix user to a Teamcenter login. You can either create your own microflow, or use one of the examples provided in the Teamcenter Connector. 
+When using SSO, it is essential that Mendix accounts are uniquely assigned to Teamcenter users. This section describes the process of assigning a Mendix user to a Teamcenter login. There are two common login scenarios, and the Teamcenter Connector provides an example microflow for each. You can either use one of these examples, or create your own microflow.
+
+#### Choosing a Scenario
+
+- Your users already have a Mendix account, and should sign in to Mendix first before connecting to Teamcenter. Mendix and Teamcenter user management are maintained separately. This scenario is implemented by the `EXAMPLE_UserProvisioningNamed` example.
+- Your users should be able to start from the Teamcenter SSO button on the login page, without an existing Mendix account. A Mendix Account is created automatically from the Teamcenter login on first use. This scenario is implemented by the `EXAMPLE_UserProvisioningAnonymous` example.
+
+Only one user provisioning microflow should be active at a time, matching the login flow you expose to your users.
+
 The examples are:
 
-* `EXAMPLE_UserProvisioningAnonymous` – This example microflow can be used with the Teamcenter SSO button on the `login.html` page. For instructions, refer to [Adding an SSO Login Button to Your Login Page](#add-sso-login-button).    
-    This microflow assigns a Mendix Account with a username that matches the Teamcenter Login username with the **User** role.     
-    This cannot be triggered by a logged-in user.
+- `EXAMPLE_UserProvisioningAnonymous` – This example microflow can be used with the Teamcenter SSO button on the `login.html` page. For instructions, refer to [Adding an SSO Login Button to Your Login Page](#add-sso-login-button).  
+   This microflow assigns a Mendix Account with a username that matches the Teamcenter Login username with the **User** role.  
+   This cannot be triggered by a logged-in user.
 
-* `EXAMPLE_UserProvisioningNamed` – This example microflow is meant to be used by a logged-in user, and keeps the same Mendix user logged in. It does not validate whether the  Mendix login matches the Teamcenter Login.    
-    This is not allowed from the login page of the app.
+- `EXAMPLE_UserProvisioningNamed` – This example microflow is meant to be used by a logged-in user, and keeps the same Mendix user logged in. It does not validate whether the Mendix login matches the Teamcenter Login.  
+   This is not allowed from the login page of the app.
 
-To enable either of those or implement your own, go to the `CUSTOM_UserProvisioning` microflow and add your preferred user provisioning microflow.
+#### Customizing User Provisioning
+
+If neither example fully matches your application's user-management rules, we recommend the following approach rather than writing a microflow from scratch:
+
+1. Copy the example microflow that is closest to your desired behavior (`EXAMPLE_UserProvisioningAnonymous` or `EXAMPLE_UserProvisioningNamed`) into your own module. Do not modify the example in the Teamcenter Connector module directly, since it is overwritten when the Connector is upgraded.
+2. Adjust the copy to your application's needs, for example changing username mapping, role assignment, or adding validation.
+3. Use your customized microflow, instead of the original example, in the next step.
+
+To enable either of the examples or your own customized microflow, go to the `CUSTOM_UserProvisioning` microflow and add your preferred user provisioning microflow. The microflow should return the Mendix `User` account that Teamcenter should use.
 
 ### Adding an SSO Login Button to Your Login Page {#add-sso-login-button}
 

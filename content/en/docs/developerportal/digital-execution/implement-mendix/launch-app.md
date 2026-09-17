@@ -31,7 +31,7 @@ Note that Mendix also offers [other deployment options](/releasenotes/developer-
 You can deploy your app for free to Mendix Cloud. However, [free apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to runtime, features, and resources. You can publish free apps to test the Mendix platform or a specific feature, or to quickly prototype an app to test an idea. However, once you decide to develop your app further, you need to obtain a licensed node.
 
 If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#obtaining-licensed-node).
-If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
+If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 
 #### Linking Your App to Your Licensed Node
 

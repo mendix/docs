@@ -44,32 +44,6 @@ Before you start the installation, download the required files by performing the
 
 You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile.
 
-{{% alert color="warning" %}}
-The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
-{{% /alert %}}
-
-#### Operator Installation Values
-
-```yaml
-licenseManager:
-  enable: true
-  credentialsSecretName: "mendix-pclm-credentials"
-  serverURL: "http://mx-privatecloud-license-manager"
-  username: "operatoruser"      # Must match pclm bootstrap operator_user
-  password: "operatorpass"       # Must match pclm bootstrap operator_password
-```
-
-#### Helmfile Values for Mx-privatecloud-license-manager
-
-```yaml
-mx-privatecloud-license-manager:
-  enable: true
-  bootstrap_users:
-    create_operator_user: true
-    operator_user: "operatoruser"      # Must match operator licenseManager.username
-    operator_password: "operatorpass"  # Must match operator licenseManager.password
-```
-
 {{% alert color="info" %}}
 The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the Operator installation. A mismatch will prevent the Operator from obtaining licenses.
 {{% /alert %}}

@@ -17,20 +17,114 @@ Helmfile installation supports the following tasks:
 * Installation and upgrade of components such as Svix, PCLM, and others
 * Installation and upgrade of Private Mendix Platform
 
-### Out-of-Scope Tasks
+## Installing the Mendix Operator
 
-The following tasks are not performed by the Helmfile installation:
+Before deploying the Mendix Private Platform components, you must install the Mendix Operator with proper configuration.
 
-* Mendix Operator installation
-* Mendix Operator upgrade
+The Helmfile installation does not support installing or upgrading the Mendix Operator with the `mx-ops-cli tool`. To install the Operator, perform the following steps.
 
-To install or upgrade the Operator, see [Installing Components through the Helm Chart UI](/developerportal/deploy/helm-charts/).
+### Preparing the Installation Files
 
-## Components
+Before you start the installation, download the required files by performing the following steps:
+
+1. Download the release binary from your [Private Mendix Platform download portal](https://privateplatform.mendix.com/). If you do not have access to the download portal, contact your Mendix partner for information.
+
+2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
+
+    * **Tools** - *mx-pclm-cli*, which can be used to manage PCLM
+    * **helm**, and **helmfile** tools, which are used to deploy and manage Private Mendix Platform charts and Svix charts
+    * **images** - Private Mendix Platform image, PCLM image, Svix image, test application image
+    * **Installer** - installer tools
+    * **mxpc-cli** - installation tools which can be used to manage or configure the Mendix Operator
+    * **charts**  - charts, including Private Mendix Platform charts and Svix charts
+    
+    {{< figure src="/attachments/private-platform/pmp-binary.png" class="no-border" >}}
+
+### Private Cloud License Manager Credentials
+
+You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile.
+
+{{% alert color="info" %}}
+The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the Operator installation. A mismatch will prevent the Operator from obtaining licenses.
+{{% /alert %}}
+
+### ServiceAccount Token Automount for Maia Integration
+
+If you plan to use Maia AppGen and LLM gateway integration, you must configure the Operator to automount ServiceAccount tokens for Mendix app pods. Maia AppGen requires automounting in order to communicate with Mendix applications through the Kubernetes API. Without this setting, the application pods will not have the necessary ServiceAccount token to authenticate API calls.
+
+```yaml
+operator_config:
+  # REQUIRED for Maia integration: Allow Mendix app Pods to access Kubernetes API
+  runtimeAutomountServiceAccountToken: true
+```
+
+### Optional: Initializing the Installation for Air-Gapped Environments
+
+If your clusters can connect to a public registry with a passable network, skip to the next section, otherwise initialize the installation by performing the following steps:
+
+1. Upload the images to your private repository in an air-gapped environment.
+
+    ```text
+    ~/mpp-binary-linux$ ./installer init  migrate --help
+    Migrate Mendix Private Platform related image to your own registry
+
+    Usage:
+    installer init migrate [flags]
+    Flags:
+        -h, --help                 help for migrate
+        -r, --registryurl string   registry url (required)
+        -e, --repo string          Repository name
+        -u, --username string      Username (required) for your private registry
+    ```
+
+    The destination image is named `${registryurl }/${repo}/mendix-private-platform: ${tag}`.
+    
+2. The `registryurl` and `repo` are read from the input parameters. The `tag` is automatically read by the installer. If the repository does not exist, you must create it before running the `init migrate` command.
+
+    ```text
+    ~/mpp-binary-linux$ ./installer init migrate   -r [registry] -u  user -e [repositoryName]
+    Please enter user password: ***
+
+    Confirm password: ***
+    the config checksum is empty
+    The image destination[REDACTED] svix-server:v0.75.0
+    The image destiation [REDACTED] mendix-private-platform:1.4.0.80d447b1
+    the config checksum is empty
+    The image destiation [REDACTED] mxpc-test:1.0
+    the config checksum is empty
+    The image destiation [REDACTED] privatecloud-license-manager:0.3.0
+    svix-server_v0.75.0 => [REDACTED] svix-server:v0.75.0 - ok
+    mendix-private-platform_1.4.0.80d447b1 => [REDACTED] mendix-private-platform:1.4.0.80d447b1 - ok
+    mxpc-test_1.0 => [REDACTED] mxpc-test:1.0 - ok
+    privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
+    ```
+
+3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
+
+## Installing the Mendix Operator {#install-operator}
+
+Install the Mendix Operator by doing the following steps:
+
+1. Run one of the following commands, where `-n` indicates the namespace: 
+    
+    * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
+    * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
+
+    In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
+    
+2. Click **Base Installation**, and then select the cluster type.
+
+    {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}
+
+3. Click **Run Installer** to install the Mendix Operator in your cluster.
+
+You must configure the storage and database plans in the Operator installation values, not in the Helmfile values for `mxplatform`.
+
+## Helmfile Components
 
 Helmfile manages multiple Helm releases with dependency ordering, ensuring components are installed in the correct sequence.
 
-The following components must be installed in a shared namespace (that is, the same namespace as Private Mendix Platform):
+After installing the Mendix Operator, you must install the following components in a shared namespace (that is, the same namespace as Private Mendix Platform):
 
 * `mx-privatecloud`
 * `maia-appgen`
@@ -44,22 +138,21 @@ The following components can use different (independent) namespaces:
 
 | Component | Description | Namespace | Required | ServiceAccount |
 | --- | --- | --- | --- | --- |
-| `mx-privatecloud-license-manager` | Private Cloud License Manager (PCLM) | Shared | Required | `mendix-pclm` (created by chart) |
+| `mx-privatecloud-license-manager` | Private Cloud License Manager (PCLM) | Shared | Required | `mendix-pclm` (created by Operator) |
 | `mx-privatecloud` | Private Cloud services (authenticator, collector, interactor, bridge) | Shared | Optional | `mx-privatecloud` (created by chart) |
 | `maia-appgen` | Maia AI AppGen service | Shared | Optional | `maia-appgen` (created by chart) |
 | `maia-llm-gateway` | Maia LLM Gateway service for routing LLM requests | Shared | Optional | `maia-llm-gateway` (created by chart) |
 | `svix-server` | Webhook delivery service | Shared | Optional | `svix` (created by chart) |
-| `mxplatform` | Mendix Platform application (MendixApp CR) | Shared | Optional | `mxplatform` (created by chart or operator) |
+| `mxplatform` | Mendix Platform application (MendixApp CR) | Shared | Optional | `mxplatform` (created by chart or Operator) |
 | `mxplatform-kube-agent` | Build agent for mxplatform | Independent | Optional | `mxplatform-kube-agent` (created by chart) |
-| `mx-private-document-generation` | PDF document generation service | Independent | Optional | `mx-private-document-generation (created by chart)` |
+| `mx-private-document-generation` | PDF document generation service | Independent | Optional | `mx-private-document-generation` (created by chart) |
 
 ServiceAccount creation depends on the value of the **UseStoragePlanwithIRSA** field. If set to **false**, Chart creates the ServiceAccount with workload identity annotations. If set to **true**, Mendix Operator creates ServiceAccount based on StoragePlan configuration.
 
 ### Dependency and Install Order  
  
-The following components are installed in parallel during the first phase of the installation:
+The following components are installed in parallel during the first phase of the Helmfile installation:
 
-* `mx-privatecloud-license-manager`
 * `mx-privatecloud`
 * `maia-appgen`
 * `svix-server`
@@ -149,126 +242,7 @@ helm plugin install https://github.com/databus23/helm-diff
 helm plugin list | grep diff
 ```
 
-## Installation Requirements for the Mendix Operator
 
-Before deploying the Mendix Private Platform components, you must install the Mendix Operator with proper configuration.
-
-### Private Cloud License Manager Credentials
-
-You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile.
-
-{{% alert color="warning" %}}
-The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
-{{% /alert %}}
-
-#### Operator Installation Values
-
-```yaml
-licenseManager:
-  enable: true
-  credentialsSecretName: "mendix-pclm-credentials"
-  serverURL: "http://mx-privatecloud-license-manager"
-  username: "operatoruser"      # Must match pclm bootstrap operator_user
-  password: "operatorpass"       # Must match pclm bootstrap operator_password
-```
-
-#### Helmfile Values for Mx-privatecloud-license-manager
-
-```yaml
-mx-privatecloud-license-manager:
-  enable: true
-  bootstrap_users:
-    create_operator_user: true
-    operator_user: "operatoruser"      # Must match operator licenseManager.username
-    operator_password: "operatorpass"  # Must match operator licenseManager.password
-```
-
-{{% alert color="info" %}}
-The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the Operator installation. A mismatch will prevent the Operator from obtaining licenses.
-{{% /alert %}}
-
-### ServiceAccount Token Automount for Maia Integration
-
-If you plan to use Maia AppGen and LLM gateway integration, you must configure the Operator to automount ServiceAccount tokens for Mendix app pods. Maia AppGen requires automounting in order to communicate with Mendix applications through the Kubernetes API. Without this setting, the application pods will not have the necessary ServiceAccount token to authenticate API calls.
-
-```yaml
-operator_config:
-  # REQUIRED for Maia integration: Allow Mendix app Pods to access Kubernetes API
-  runtimeAutomountServiceAccountToken: true
-```
-
-### StoragePlan and Database Plan Configuration
-
-You must configure the storage and database plans in the Operator installation values, not in the Helmfile values for `mxplatform`.
-
-{{% alert color="warning" %}}
-The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
-{{% /alert %}}
-
-#### Example: Azure Database and Storage with Workload Identity
-
-```yaml
-# Credential Service Accounts (for Workload Identity)
-credentialServiceAccounts:
-  enabled: true
-  serviceAccounts:
-    - authType: "azure-wi"
-      k8sServiceAccountName: "db-admin-sa"
-      azwiClientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    - authType: "azure-wi"
-      k8sServiceAccountName: "storage-admin-sa"
-      azwiClientID: "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"
-
-# Database Storage Plans
-database:
-  postgres:
-    enabled: true
-    plans:
-      - planName: "azure-db"
-        planType: "on-demand"
-        useAzureWIAuth: true
-        k8sServiceAccountName: "db-admin-sa"
-        host: "myserver.postgres.database.azure.com"
-        port: 5432
-        database: "postgres"
-        user: "mendix-storage-admin"
-        password: ""  # Empty when using Workload Identity
-        strictTLS: true
-
-# Object Store Storage Plans
-storage:
-  azure_blob:
-    enabled: true
-    plans:
-      - planName: "azure-sp"
-        k8sServiceAccountName: "storage-admin-sa"
-        useAzureWIAuth: true
-        azureStorageAccount: "mystorageaccount"
-        azureResourceGroup: "my-resource-group"
-        azureAccountSubscriptionID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-        azureContainerName: ""  # Auto-created per environment
-        preventDataDeletion: false
-
-# Operator Configuration
-operator_config:
-  runtimeAutomountServiceAccountToken: true  # Required for Maia integration
-```
-
-### Complete Operator Installation Example
-
-For an example of the complete Operator installation values,see *samples/operator-sp.yaml*.
-
-To install the Operator, use the following commands:
-
-```text
-helm install --create-namespace \
-  -n <namespace> \
-  -f samples/operator-sp.yaml \
-  operator \
-  mx-privatecloud-operator-installer
-```
-
-For detailed Operator installation instructions, see [Installing and Configuring Mendix on Kubernetes with Helm Charts](/developerportal/deploy/helm-charts/#installing-and-configuring-the-mendix-on-kubernetes-with-helm-charts).
 
 ## Quick Start
 
@@ -290,6 +264,8 @@ helmfile --file helmfile.d/helmfile.yaml \
 ```
 
 ### Minimal Values File Template
+
+Replace the component versions in the following template with the correct versions for your Private Mendix Platform release. For more information, refer to [Private Mendix Platform Release Notes](/releasenotes/private-platform/).
 
 ```yaml
 # ─────────────────────────────────────────────────────────────────────────────
@@ -317,7 +293,7 @@ mx-privatecloud-license-manager:
   image:
     registry: "private-cloud.registry.mendix.com"
     name: "privatecloud-license-manager"
-    tag: "0.11.0"
+    tag: "{insert component version as indicated in release notes}"
   
   # Database configuration
   db:
@@ -707,24 +683,6 @@ mx-privatecloud-license-manager:
     operator_password: "operatorpass"
   ingress:
     enabled: false
-```
-
-#### Integration with Mendix Operator
-
-The Mendix Operator must be configured to use PCLM for license management.
-
-{{% alert color="warning" %}}
-The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
-{{% /alert %}}
-
-```text
-# In Mendix Operator installation values
-licenseManager:
-  enable: true
-  credentialsSecretName: "mendix-pclm-credentials"
-  serverURL: "http://mx-privatecloud-license-manager"  # Service name in same namespace
-  username: "operatoruser"      # Must match bootstrap_users.operator_user
-  password: "operatorpass"       # Must match bootstrap_users.operator_password
 ```
 
 #### Service URL

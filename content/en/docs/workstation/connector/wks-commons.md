@@ -2,7 +2,7 @@
 title: "Workstation Commons"
 url: /mendix-workstation/commons/
 description: "Describes the configuration and usage of the Workstation Commons module, which is available in the Mendix Marketplace."
-weight: 30
+weight: 35
 ---
 
 ## Introduction
@@ -37,9 +37,9 @@ The `Managed` subfolder contains variants of this function. They check the conne
 
 Each Device Utils function covers a single operation on a device type and builds the matching Workstation device message from plain parameters, so you can work with service UUIDs, paths, and print jobs directly.
 
-For the message syntax behind these functions and the replies each device type sends, see [Managing Devices](/mendix-workstation/management-devices/) in the Mendix Workstation documentation.
+For the message syntax behind these functions and the replies each device type sends, see [Device Message Syntax](/mendix-workstation/device-syntax/) in the Mendix Workstation documentation.
 
-#### Bluetooth
+#### Bluetooth {#bluetooth}
 
 These functions target a characteristic on a BLE device.
 
@@ -87,5 +87,5 @@ The following are reusable web snippets for the screens which most Workstation a
 ## Read More
 
 * [Mendix Workstation](/mendix-workstation/)
-* [Managing Devices in Workstation Management](/mendix-workstation/management-devices/)
+* [Device Message Syntax](/mendix-workstation/device-syntax/)
 * [Workstation Connector](https://marketplace.mendix.com/link/component/254335/)

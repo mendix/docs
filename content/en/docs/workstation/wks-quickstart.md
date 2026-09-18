@@ -43,9 +43,11 @@ A *station* represents a workstation on the shop floor. It can connect to one or
     Environments created with the Test environment type have [developer mode](/mendix-workstation/management-stations/#developer-mode) enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode.
 
 4. After the workspace is created, in the **Stations** page, click **Create Station**.
-5. Enter a name for the station, and then click **Create Station**.
+5. In the **Create Station** page, keep **Create station from scratch** selected as the **Creation Method**, enter a name in the **Provide a Station Name** field, and then click **Create Station**.
 
     {{< figure src="/attachments/workstation/wks-install4.png" class="no-border" >}}
+
+    Workstation Management opens the new station.
 
 6. Optional: If you do not want Workstation Management to detect smart card readers, perform the following steps:
 
@@ -93,7 +95,7 @@ The following instructions assume that you are registering a single computer for
     {{< figure src="/attachments/workstation/wks-install7.png" class="no-border" >}}
 
 6. Open the Workstation Client and paste the copied registration token into the **Enter your registration token** field.
-7. Click **Register computer**.
+7. Click **Register Computer**.
 
     {{< figure src="/attachments/workstation/wks-install8.png" class="no-border" >}}
 
@@ -101,7 +103,7 @@ The following instructions assume that you are registering a single computer for
 
     {{< figure src="/attachments/workstation/wks-install9.png" class="no-border" >}}
 
-The **Stations** page now shows your station's status as **Computer Registered**.
+The **Station** page now shows the status **Computer Registered**, and lists the registered computer in the **Computer** row.
 
     {{< figure src="/attachments/workstation/wks-install10.png" class="no-border" >}}
 
@@ -113,11 +115,12 @@ After registering your computer, test your connectivity by creating a pair of vi
 
 1. Go to [Mendix Workstation Management](https://workstation.home.mendix.com/).
 2. In the **Station** page, click **Add Device**.
-3. Select **TCP/IP Server** as the **Device Type**, and then click **Next**.
-4. In the **Device Name** field, enter **Test Server**
-5. In the **Device Class** field, select or create a class (for example, *Virtual*), and then click **Next**.
-6. In the **Port** field, leave the default value of **1705**, and click **Next**.
-7. In the **Messages** dialog, leave all values as default, and click **Add Device**.
+3. In the **Select Connection Type** dialog, select **TCP/IP Server**, and then click **Next**.
+4. In the **Device Name** field, enter **Test Server**.
+5. Optional: In the **Device Class** field, select or create a class (for example, *Virtual*). 
+6. Click **Next**.
+7. In the **Port** field, leave the default value of **1705**, and click **Next**.
+8. In the **Messages** step, leave all values as default, and click **Add Device**.
 
     {{< figure src="/attachments/workstation/wks-install12.png" class="no-border" >}}
 
@@ -129,14 +132,15 @@ The emulated device, a local TCP/IP server listening on port 1705, is added to t
 
 1. Go to [Mendix Workstation Management](https://workstation.home.mendix.com/).
 2. In the **Station** page, click **Add Device**.
-3. Select **TCP/IP Client** as the **Device Type**, and then click **Next**.
-4. In the **Device Name** field, enter **Test Client**, and then click **Next**.
-5. In the **Device Class** field, select or create a class (for example, *Virtual*), and then click **Next**.
-6. In the **Host** and **Port** fields, leave the default value of **localhost** and **1705**, and click **Next**.
+3. In the **Select Connection Type** dialog, select **TCP/IP Client**, and then click **Next**.
+4. In the **Device Name** field, enter **Test Client**.
+5. Optional: In the **Device Class** field, select or create a class (for example, *Virtual*).
+6. Click **Next**.
+7. In the **Host** and **Port** fields, leave the default value of **localhost** and **1705**, and click **Next**.
 
     {{< figure src="/attachments/workstation/wks-install14.png" class="no-border" >}}
 
-7. In the **Messages** dialog, leave all values as default, and click **Add Device**.
+8. In the **Messages** step, leave all values as default, and click **Add Device**.
 
 The device, which will be used to connect to the TCP/IP server running in Workstation Client, is added to the **Devices** list in the **Station** page.
 

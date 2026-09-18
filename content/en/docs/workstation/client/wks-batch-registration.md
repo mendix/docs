@@ -64,6 +64,8 @@ To bulk-register Workstation Clients, perform the following steps:
 
     On Linux machines, you can use the following script: `mendix-workstation --registration-token {bulk registration token}`.
 
+    For more information about the options that the Workstation Client accepts on the command line, see [Command-Line Options](/mendix-workstation/use-client/#command-line-options).
+
     After the command runs or the token is entered manually, the Workstation Clients display the status **Waiting for station assignment**. This indicates that the clients are registered, but not yet associated with a specific station. 
     
     To view these newly registered clients, refresh the Stations page in Workstation Management. You will find them listed under a separate section as **unassigned computers**.

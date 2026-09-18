@@ -48,12 +48,12 @@ For more information, including which types of association this applies to, see 
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
-### Default Flow Shape {#default-flow-shape}
+### Default Sequence Flow Type {#default-flow-type}
 
-This setting determines the shape of new sequence flows in the microflow, nanoflow, and rule editors: **Curved** or **Orthogonal** (right-angled). Because it is an app setting, it applies to new flows for everyone working on this app, regardless of whether the [Orthogonal Flow Shape](/refguide/preferences-dialog/#orthogonal-flow-shape) preference is enabled. For more information, see the [Flow Shape](/refguide/sequence-flow/#flow-shape) section in *Sequence Flow*.
+This setting determines the type of new sequence flows in the microflow, nanoflow, and rule editors: **Curved** or **Orthogonal** (right-angled). Because it is an app setting, it applies to new flows for everyone working on this app, regardless of whether the [Orthogonal Flows](/refguide/preferences-dialog/#microflow-editor) preference is enabled. For more information, see the [Flow Type](/refguide/sequence-flow/#flow-type) section in *Sequence Flow*.
 
 {{% alert color="warning" %}}
-This is a beta feature, available in Studio Pro 11.15 and above. To use it, you must first enable the orthogonal flow shape in the **Preferences** dialog box. For more information, see [Enabling the Orthogonal Flow Shape](/refguide/sequence-flow/#enable-orthogonal) in *Sequence Flow*.
+This is a beta feature, available in Studio Pro 11.15 and above. To use it, you must first enable orthogonal flows in the **Preferences** dialog box. For more information, see [Enabling Orthogonal Flows](/refguide/sequence-flow/#enable-orthogonal) in *Sequence Flow*.
 {{% /alert %}}
 
 ### Activity Default Colors

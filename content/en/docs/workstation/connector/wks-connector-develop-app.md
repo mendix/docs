@@ -29,9 +29,9 @@ The Workstation domain model contains the following entities:
 
 ## Using the Nanoflows and Actions {#javascript-actions}
 
-The following section provides more information about using the Workstation nanoflows and Java actions in your Mendix application.
+The following section provides more information about using the Workstation nanoflows and JavaScript actions in your Mendix application.
 
-#### SendDeviceRequest
+### SendDeviceRequest
 
 Call `SendDeviceRequest` to send a message to a device and return the response or error. Requires Workstation Client 4.0 or later, and a device that supports requests. For more information about the supported message syntax, see [Configuring Devices](/mendix-workstation/management-devices/). This action has the following parameters:
 
@@ -124,7 +124,7 @@ Call `Unsubscribe` to end a subscription.
 
 ### Private Nanoflows
 
-`CreateStation`, `CommitStation`, `CreateDevice`, and `CommitDevice` are private nanoflows, required be compatible with [strict mode](/refguide/strict-mode/).
+`CreateStation`, `CommitStation`, `CreateDevice`, and `CommitDevice` are private nanoflows, required to be compatible with [strict mode](/refguide/strict-mode/).
 
 ## Widgets {#widgets}
 

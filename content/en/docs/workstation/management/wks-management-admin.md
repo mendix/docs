@@ -20,7 +20,7 @@ The overview page displays the current status of each station, helping you quick
 * **Computer registered** - A Workstation Client on a physical computer is successfully registered and actively linked to this station.
 * **Client's config is out of sync** - The configuration defined in Workstation Management for this station has changed, but the Workstation Client on the registered computer has not yet received or applied these updates. This can happen if auto-refresh is disabled or if there's a temporary connectivity issue.
 * **Unknown computer** - The Workstation Client on the registered computer is reporting an unrecognized identifier, or there's an issue with its registration.
-Error while registering: An error occurred during the attempt to register a Workstation Client to this station. Further investigation (for example, checking client logs) may be required.
+* **Error while registering** - An error occurred during the attempt to register a Workstation Client to this station. Further investigation (for example, checking client logs) may be required.
 
 ## Creating a New Station {#create-station}
 
@@ -31,7 +31,7 @@ To create a new station, choose one of the following options, depending on your 
 To create a station from scratch, perform the following steps:
 
 1. Click **Create Station**.
-2. Provide a unique **Station Name**. 
+2. Provide a unique name in the **Provide a Station Name** field.
 
     The name is a mandatory identifier for your station.
 

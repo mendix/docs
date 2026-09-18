@@ -685,24 +685,6 @@ mx-privatecloud-license-manager:
     enabled: false
 ```
 
-#### Integration with Mendix Operator
-
-The Mendix Operator must be configured to use PCLM for license management.
-
-{{% alert color="warning" %}}
-The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
-{{% /alert %}}
-
-```text
-# In Mendix Operator installation values
-licenseManager:
-  enable: true
-  credentialsSecretName: "mendix-pclm-credentials"
-  serverURL: "http://mx-privatecloud-license-manager"  # Service name in same namespace
-  username: "operatoruser"      # Must match bootstrap_users.operator_user
-  password: "operatorpass"       # Must match bootstrap_users.operator_password
-```
-
 #### Service URL
 
 The PCLM service is accessible within the cluster at the following:

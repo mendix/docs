@@ -10,8 +10,8 @@ Use **Batch Replace** to replace existing text in the currently selected languag
 
 This feature is useful when you need to do the following:
 
-* Standardize inconsistent text that appears in multiple places (for example, text that sometimes uses capital letters and sometimes does not) — reusing text improves the user experience
-* Consolidate identical text so you only need to enter the translation once — this saves time and improves consistency
+* Standardize inconsistent text that appears in multiple places (for example, text that sometimes uses capital letters and sometimes does not)—reusing text improves the user experience
+* Consolidate identical text so you only need to enter the translation once—this saves time and improves consistency
 * Update all occurrences of common labels or text with better wording in a single operation
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace.png" class="no-border" width="600" >}}

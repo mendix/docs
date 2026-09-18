@@ -82,7 +82,7 @@ This is the information available in the **Entitlements & Consumption** section 
 * **Usage Month** – Allows you to select the month for which you want to see consumption information. By default, the field is set to the most recent month for which a report is available.
 * Subscription cards – These cards display the entitlements and consumption as calculated on the last day of the selected month. 
 
-In case of over-usage, which means that entitlements have been exceeded, apps continue to work, with no consequences to end-users. Over-usage needs to be discussed with the Mendix CSM or representative.
+In case of over-usage, which means that entitlements have been exceeded, apps continue to work, with no consequences to end-users. Over-usage needs to be discussed with your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 
 <!-- 
 

@@ -6,7 +6,7 @@ weight: 25
 description: "Describes the Compass tool."
 ---
 
-{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Mendix Customer Success Manager (CSM). {{% /alert %}}
+{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact. {{% /alert %}}
 
 ## Introduction
 
@@ -18,10 +18,10 @@ With the Compass tool, you can define your own vision of low-code and the apps t
 
 ## Getting Started with Compass
 
-To enable Compass for your organization, contact your Mendix Customer Success Manager (CSM). 
+To enable Compass for your organization, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact. 
 
 {{% alert color="info" %}}
-Compass is a tool intended for organizations that want to launch their first Mendix application. Many of the milestones and tasks are geared towards beginners, so teams which have already created one or more Mendix apps are less likely to find them useful.
+Compass is a tool intended for organizations that want to launch their first Mendix application. Many of the milestones and tasks are geared toward beginners, so teams which have already created one or more Mendix apps are less likely to find them useful.
 {{% /alert %}}
 
 After Compass has been enabled for your organization, a user with the Program Owner role can define the launch date of your first app on the Compass home page, and invite team members to participate.
@@ -73,12 +73,12 @@ You can view and manage tasks by performing the following steps:
 1. In the **Program** section, click **Tasks**.
 2. To add a new task, click **Add Task**, and then provide the following information:
 
-    * **Name** — Required. An identifying name for the task.
-    * **Status** — By default, new tasks are created with the status **To do**, but you can also mark them as already done.
-    * **Description** — As a best practice, provide a detailed description, so that the person working on the task has sufficient information to complete it.
-    * **Deadline** — The deadline of the task.
-    * **Assigned to** — The team member who must complete the task.
-    * **Milestone** — The milestone with which the task is associated.
+    * **Name** – Required. An identifying name for the task.
+    * **Status** – By default, new tasks are created with the status **To do**, but you can also mark them as already done.
+    * **Description** – As a best practice, provide a detailed description, so that the person working on the task has sufficient information to complete it.
+    * **Deadline** – The deadline of the task.
+    * **Assigned to** – The team member who must complete the task.
+    * **Milestone** – The milestone with which the task is associated.
 
 3. Click **Save**.
 
@@ -102,11 +102,11 @@ As a best practice, it can be helpful to organize a workshop with your team, so 
 
 The **Area of Focus** section lists the following topics to plan for and consider as part of your goal-setting.
 
-* **People** — Goals associated with your team. For example, you may decide that you need to train five Mendix developers within the next three months.
-* **Platform** — Goals to integrate Mendix into your software development lifecycle.
-* **Portfolio** — The offerings where low-code can bring high value to your organization.
-* **Process** — Goals associated with your business processes. For example, you may decide to implement scrum.
-* **Promotion** — Goals to help you celebrate your successes and motivate your team to build with Mendix.
+* **People** – Goals associated with your team. For example, you may decide that you need to train five Mendix developers within the next three months.
+* **Platform** – Goals to integrate Mendix into your software development lifecycle.
+* **Portfolio** – The offerings where low-code can bring high value to your organization.
+* **Process** – Goals associated with your business processes. For example, you may decide to implement Scrum.
+* **Promotion** – Goals to help you celebrate your successes and motivate your team to build with Mendix.
 
 These focus areas are based on the [5 Ps of digital transformation](https://www.mendix.com/glossary/digital-execution/#what-are-the-5-ps-of-digital-transformation). You can define your own measurable key results for each of those areas.
 

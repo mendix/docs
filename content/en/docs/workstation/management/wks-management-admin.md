@@ -22,7 +22,7 @@ The overview page displays the current status of each station, helping you quick
 * **Unknown computer** - The Workstation Client on the registered computer is reporting an unrecognized identifier, or there's an issue with its registration.
 Error while registering: An error occurred during the attempt to register a Workstation Client to this station. Further investigation (for example, checking client logs) may be required.
 
-## Creating a New Station
+## Creating a New Station {#create-station}
 
 To create a new station, choose one of the following options, depending on your deployment scenario.
 
@@ -47,6 +47,10 @@ If you have previously copied the configuration of an existing station (for exam
 ### Create Station from File
 
 This option allows you to import a station's configuration from a previously exported file. This is particularly useful for migrating or replicating single station configurations.
+
+## Create Copy from Station
+
+This option allows you to directly copy an existing station's configuration without needing to import it from the clipboard or from file.
 
 ## Exporting and Importing Stations
 

@@ -73,6 +73,10 @@ To build a Docker image from the Portable Package, perform the following steps:
     # Start from an JAVA base image, as the Portable Package contains all necessary dependencies
     FROM eclipse-temurin:21-jdk
 
+    # Create a dedicated non-root user and group
+    RUN groupadd -r mendix && \
+    useradd -r -g mendix -d /mendix -s /sbin/nologin mendix
+
     # Set the working directory to /app
     WORKDIR /mendix
 
@@ -82,12 +86,17 @@ To build a Docker image from the Portable Package, perform the following steps:
     COPY ./etc ./etc
     COPY ./lib ./lib
 
+    # Ensure the non-root user owns all runtime files
+    RUN chown -R mendix:mendix /mendix
+
     # Set environment variables (optional)
     ENV MX_LOG_LEVEL=info
     ENV M2EE_ADMIN_PASS=${M2EE_ADMIN_PASS}
 
-    # Expose port 8080 for the Mendix Runtime and port 8090 for the Mendix Runtime admin interface
-    EXPOSE 8090
+    # Switch to non-root user
+    USER mendix
+
+    # Expose port 8080 for the Mendix Runtime
     EXPOSE 8080
 
     # Set the start script to the Mendix Runtime execute command
@@ -148,6 +157,7 @@ services:
   mendix-app:
     image: eclipse-temurin:21-jdk
     container_name: mendix-app
+    user: "1001:1001"
     working_dir: /mendix
     volumes:
       - ../app:/mendix/app
@@ -158,16 +168,19 @@ services:
       - MX_LOG_LEVEL=info
       - M2EE_ADMIN_PASS=${M2EE_ADMIN_PASS}
     ports:
-      - "8090:8090"
       - "8080:8080"
     command: ["./bin/start", "etc/Default"]
 ```
+
+### Security Recommendations
+
+Do not store secrets in plain text within Docker Compose YAML files, Kubernetes Secret manifests, application configuration files, or source code repositories. If these files are accidentally committed to a repository, shared externally, or uploaded to another platform, credentials may be exposed. Use a dedicated secret management mechanism and inject secrets during deployment whenever possible.
 
 ### Running with Docker Compose
 
 To use this Docker Compose configuration, perform the following steps:
 
-1. Set your admin port password in the **M2EE_ADMIN_PASS** variable within your environment, or directly in the *docker-compose.yaml* file.
+1. Set your admin port password in the **M2EE_ADMIN_PASS** variable within your environment.
 2. Navigate to the directory containing your *docker-compose.yaml* file
 3. Run a command like the following: `docker compose -f docker_compose/Default.yaml up`
 
@@ -204,6 +217,10 @@ Alternatively, you can configure the Mendix Runtime by using a configuration fil
 }
 ```
 
+### Security Recommendations 
+
+Do not store secrets in plain text within Docker Compose YAML files, Kubernetes Secret manifests, application configuration files, or source code repositories. If these files are accidentally committed to a repository, shared externally, or uploaded to another platform, credentials may be exposed. Use a dedicated secret management mechanism and inject secrets during deployment whenever possible.
+
 ### Using the Configuration File
 
 To use the configuration file, you can upload the configuration file to the configuration path:
@@ -220,7 +237,7 @@ The following log levels are supported (in order of verbosity):
 
 | Log Level | Description |
 | --------- | ----------- |
-| `TRACE` | Most verbose — logs all internal operations |
+| `TRACE` | Most verbose—logs all internal operations |
 | `DEBUG` | Detailed diagnostic information |
 | `INFO` | General operational messages (default) |
 | `WARNING` | Potentially harmful situations |
@@ -234,8 +251,8 @@ The Mendix Runtime exposes health check endpoints that can be used to monitor th
 | EndPoint | Description |
 | -------- | ----------- |
 | `/health` | Returns the overall health status of the app |
-| `/health/live` | Returns the liveness status — indicates if the app is running |
-| `/health/ready` | Returns the readiness status — indicates if the app is ready to serve traffic |
+| `/health/live` | Returns the liveness status—indicates if the app is running |
+| `/health/ready` | Returns the readiness status—indicates if the app is ready to serve traffic |
 
 These endpoints are especially useful when integrating with orchestration platforms such as Kubernetes, which rely on liveness and readiness probes to manage container lifecycle.
 

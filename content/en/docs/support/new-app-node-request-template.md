@@ -37,7 +37,7 @@ To request your node from Mendix Support, complete the following steps:
 3. **Follow-up** – Mendix Support will contact you via a ticket in the [Mendix Support Portal](https://support.mendix.com/) if additional information is needed or to provide keys for apps deployed on-premises or using a virtual Mendix on Kubernetes.
 
 {{% alert color="info" %}}
-By default, all developers in your organization can create node requests. To restrict this ability to Mendix Admins only, contact your Customer Success Manager or submit a support ticket.
+By default, all developers in your organization can create node requests. To restrict this ability to Mendix Admins only, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact or submit a support ticket.
 {{% /alert %}}
 
 ## Resizing an Existing Environment{#resize}

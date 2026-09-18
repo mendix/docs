@@ -7,6 +7,10 @@ weight: 20
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-10/) instead.
+{{% /alert %}}
+
 This document describes how to build a simple to-do list extension for Studio Pro.
 
 The extension allows you to add new to-do items to a list, which integrate with Studio Pro's main menu. You will also create a user interface for the extension using a dockable pane and web content.

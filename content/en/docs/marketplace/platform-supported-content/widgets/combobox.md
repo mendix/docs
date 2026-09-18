@@ -183,5 +183,4 @@ For more information, see [Common Section](/refguide/common-widget-properties/#c
 ### Editable Behavior Without a Store Value
 
 When using a combo box inside a data view, the widget relies on a store value attribute to determine its editable state. If no store value attribute is configured, the **Editability** setting of the data view (set to **Never** or **Conditionally**) will not be applied to the combo box. This occurs because, without a target attribute, the combo box has no reference for whether it should be editable.
-
-**Workaround** — To ensure correct behavior, copy and paste the **Editability** setting from the data view directly into each combo box individually.
+* **Workaround** – To ensure correct behavior, copy and paste the **Editability** setting from the data view directly into each combo box individually.

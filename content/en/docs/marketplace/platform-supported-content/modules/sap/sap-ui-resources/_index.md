@@ -31,9 +31,9 @@ More information on using SAP Fiori design in your Mendix app is available in th
 
 * [Widgets](#widgets) – Mendix core widgets having SAP Fiori styling
 * [Building Blocks](#building-blocks) – groups of widgets which can be used to quickly create SAP Fiori styled pages
-* [Layouts](#layouts) – different styles of page which can be used in your app — for example, Master/detail or Pop-Up
+* [Layouts](#layouts) – different styles of page which can be used in your app, for example, Master/detail or Pop-Up
 * [Page Templates](#page-templates) – readily-available page templates which are already styled ready for you to use in your Mendix app
-* [Theme Selector](#theme-selector) – switch between different theme — for example *light* and *dark*
+* [Theme Selector](#theme-selector) – switch between different theme, for example, *light* and *dark*
 
 ## Widgets{#widgets}
 

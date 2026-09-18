@@ -265,6 +265,8 @@ helmfile --file helmfile.d/helmfile.yaml \
 
 ### Minimal Values File Template
 
+Replace the component versions in the following template with the correct versions for your Private Mendix Platform release. For more information, refer to [Private Mendix Platform Release Notes](/releasenotes/private-platform/).
+
 ```yaml
 # ─────────────────────────────────────────────────────────────────────────────
 # REQUIRED: Shared namespace
@@ -291,7 +293,7 @@ mx-privatecloud-license-manager:
   image:
     registry: "private-cloud.registry.mendix.com"
     name: "privatecloud-license-manager"
-    tag: "0.11.0"
+    tag: "{insert component version as indicated in release notes}"
   
   # Database configuration
   db:

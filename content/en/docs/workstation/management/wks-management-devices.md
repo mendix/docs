@@ -8,7 +8,7 @@ weight: 60
 
 ## Introduction
 
-This section details how to configure various device types in Workstation Management, along with the specific message syntax required for Mendix applications to communicate with the device through the Workstation Client.
+This section details how to configure various device types in Workstation Management. For the message syntax that Mendix applications use to communicate with a device through the Workstation Connector, see [Device Message Syntax](/mendix-workstation/device-syntax/).
 
 ## Device Connectivity
 
@@ -54,20 +54,7 @@ Card reader devices cannot be configured as separate devices in the **Devices** 
 
 Auto detecting card readers is disabled by default. You can enable this setting on a **Station** page by selecting **Detect Card Readers**. 
 
-### Message Syntax {#card-readers}
-
-This device type requires the following message and response:
-
-#### Message
-
-Send instruction in hexadecimal as a string, for example, *FFCA000000* to read the smart card ID. The messages exchanged with the smart card are APDU messages. For more information, refer to the documentation of the APDU command for your smart card reader.
-
-#### Response
-
-* `0#` - Card connected
-* `1#` - Card disconnected
-* `2# Response` - Response from device as raw hexadecimal.
-* `3# Error` - Error message from device.
+For the message syntax used to communicate with this device, see [Card Readers](/mendix-workstation/device-syntax/#card-readers).
 
 ## Serial Port
 
@@ -165,20 +152,7 @@ To add a Bluetooth device, perform the following steps:
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Add Device**.
 
-### Message Syntax
-
-This device type requires the following message and response:
-
-#### Message
-
-* `0#ServiceUUID#CharacteristicUUID` - Subscribe to characteristic `CharacteristicUUID` from service `ServiceUUID`.
-* `1#ServiceUUID#CharacteristicUUID` - Unsubscribe from characteristic `CharacteristicUUID` from service `ServiceUUID`.
-* `2#ServiceUUID#CharacteristicUUID` - Read characteristic `CharacteristicUUID` from service `ServiceUUID`.
-* `3#ServiceUUID#CharacteristicUUID` - Write to characteristic `CharacteristicUUID` from service `ServiceUUID`.
-
-### Response
-
-* `CharacteristicUUID#Response`
+For the message syntax used to communicate with this device, see [Bluetooth](/mendix-workstation/device-syntax/#bluetooth).
 
 ## Keyboard Wedge {#keyboard-wedge}
 
@@ -212,9 +186,7 @@ To add a keyboard emulator device, perform the following steps:
 
 Configure the prefix, suffix, and message length limits to match the data that your device sends. The more specific these settings are, the more reliably the Workstation Client attributes an incoming message to the correct device.
 
-### Message Syntax {#keyboard-wedge-syntax}
-
-Keyboard wedge devices are input-only, so Mendix applications do not send messages to them. When the Workstation Client recognizes a complete message, it forwards the payload to the Workstation Connector with the prefix and suffix removed.
+For the message syntax used to communicate with this device, see [Keyboard Wedge](/mendix-workstation/device-syntax/#keyboard-wedge).
 
 ## Printer
 
@@ -235,32 +207,7 @@ To add a printer device, perform the following steps:
 
 7. Click **Add Device**.
 
-### Message Syntax
-
-This device type requires the following message and response:
-
-#### Message
-
-* `P#PrintJobDocName#Format#DataPayloadInBase64` - Submit a print job.
-* `S` - Get printer status and queued jobs.
-* `C#JobId` - Cancel print job.
-
-#### Response
-
-* `P#DocName#JobId` - Print job accepted by OS print interface.
-* `S#State#StateReason1,...#NumJobs#JobId1:JobName1:JobState1,...` - Printer state and job list summary.
-* `E#ErrorMessage` - Error.
-
-#### Example
-
-The sample print command `P#TESTHELLO#RAW#aGVsbG8=` contains the following elements:
-
-1. `P (command prefix)` - Tells the Workstation Client that the incoming instruction is a Print command.
-2. Separator
-3. `TESTHELLOFILE` (file name) - Name assigned to the print job. The client uses this to create the temporary file (for example, `TESTHELLOFILE.prn`) before sending it to the printer spooler.
-4. Separator
-5. `RAW` (format type) - Tells the Workstation Client that the following data is a Raw Printer Command (such as ZPL for Zebra printers, EPL, or PCL) rather than a standard document like a PDF or a Word file. Printing in RAW bypasses the standard printer drivers' formatting. It sends the exact code the printer needs to generate labels, barcodes, or specific layouts.
-6. `aGVsbG8=` (payload) - A data string encoded to Base64. Base64 decoded, it translates to the text `hello`. If you are testing this and the printer is not reacting, verify that the string you are encoding in Base64 matches the specific language your printer speaks. For example, a Zebra printer cannot process a plain text `hello` unless it is wrapped in ZPL commands like `^XA^FO50,50^A0N,50,50^FDhello^FS^XZ`.
+For the message syntax used to communicate with this device, see [Printer](/mendix-workstation/device-syntax/#printer).
 
 ## File Device
 
@@ -301,28 +248,7 @@ Windows and Unix-style paths can be used independently of the operating system t
 * Unix-style with backslash: `$EnvVar\test`
 * Unix-style with forward slash: `$EnvVar/test`
 
-### Message Syntax {#file-device}
-
-Before sending messages to the file device, review the following points:
-
-* Path handling - You can provide the paths either as absolute (for example, `/var/log/app.log` or `C:\Data\report.txt`), or as relative paths. Relative paths are always interpreted relative to the allowed folder configured in Workstation Management.
-* Delimiter - The `#` character is used as a delimiter within messages. Paths and data may not contain the `#` character. 
-* Case sensitivity - File and directory paths may be case-sensitive depending on the underlying operating system. For example, Linux paths are typically case-sensitive, while Windows paths are not.
-
-#### Message
-
-* `0#Path` - Initiate watching for changes in the specified `Path`. If `Path` is a directory, the device will watch for changes within that directory (creation, deletion, renaming, or modification of files/subdirectories). If `Path` is a file, the device will watch for changes to that specific file (modification, deletion, or renaming).
-* `1#Path` - Stop watching for changes in the specified `Path`.
-* `2#File path` - Read the content of the file at the specified `File Path`.
-* `3#File path#Data#flag` - Write `Data` to the file at the specified `File Path`. The `flag` can be `w` for overwrite, `a` for append If left blank, the value defaults to `w`.
-
-#### Response
-
-* `R#Path` - File or directory at the specified `Path` was renamed, created, or deleted.
-* `C#Path` - File or directory at the specified `Path` was changed. This is triggered both when a file is modified and when the contents of a directory changes. 
-* `D#Data` - `Data` from file read.
-* `E#Error` - `Error` message from operating system.
-* `S#{0,1,2,3}#directory` - The command `{0,1,2,3}` on `directory` was successful.
+For the message syntax used to communicate with this device, see [File Device](/mendix-workstation/device-syntax/#file-device).
 
 ### Example Test: Verifying File Device Configuration
 

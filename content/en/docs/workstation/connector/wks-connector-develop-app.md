@@ -41,14 +41,14 @@ Several actions take a nanoflow as a parameter and call it when something happen
 
 ### SendDeviceRequest
 
-Call `SendDeviceRequest` to send a message to a device and return the response or error. Requires Workstation Client 4.0 or later, and a device that supports requests. For more information about the supported message syntax, see [Configuring Devices](/mendix-workstation/management-devices/). This action has the following parameters:
+Call `SendDeviceRequest` to send a message to a device and return the response or error. Requires Workstation Client 4.0 or later, and a device that supports requests. For more information about the supported message syntax, see [Device Message Syntax](/mendix-workstation/device-syntax/). This action has the following parameters:
 
 * `device` (Object) - A `StationConnector.Device` object or a specialization of it to send the message to.
 * `message` (String) - The message to send to the device.
 
 ### SendDeviceMessage
 
-Call `SendDeviceMessage` to send a message to a device. For more information about the supported message syntax, see [Configuring Devices](/mendix-workstation/management-devices/). This action has the following parameters:
+Call `SendDeviceMessage` to send a message to a device. For more information about the supported message syntax, see [Device Message Syntax](/mendix-workstation/device-syntax/). This action has the following parameters:
 
 * `device` (Object) - A `StationConnector.Device` object or a specialization of it to send the message to.
 * `message` (String) - The message to send to the device.

@@ -18,7 +18,7 @@ Dynamic case management (DCM) is the process of using technology to facilitate c
 * Model and automate complex workflows.
 * Streamline operations and improve goal achievement.
 
-For more information, refer to [DCM for Mendix](https://www.casefabric.com/#mendix) in the CaseFabric documentation.
+For more information, refer to [DCM for Mendix](https://guide.casefabric.com/docs/mendix/overview.html) in the CaseFabric documentation.
 
 ## Mendix DCM Module
 

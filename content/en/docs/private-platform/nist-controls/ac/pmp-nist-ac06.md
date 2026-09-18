@@ -43,7 +43,7 @@ Private Mendix Platform supports least privilege by requiring explicit configura
 
 Private Mendix Platform provides a build agent to orchestrate build pods. Build agent implements a secure, ​​least-privilege access model​​ for creating Pods within the Kubernetes cluster. The core concept is to ​​decouple the external user's permissions from the internal service's capabilities​​ by leveraging Kubernetes RBAC (Role-Based Access Control).
 
-##### Connected Mode Deployment
+##### Interactor-Agent Deployment
 
 This supports least privilege by centralizing deployment functions in the operator and agent model and limiting the number of users who need direct cluster administration rights. Initial cluster registration and operator installation may still require elevated infrastructure permissions, but ongoing application deployment and environment management can be delegated through Private Mendix Platform without granting broad cluster privileges to all app-level users.
 
@@ -60,8 +60,8 @@ Private Mendix Platform associates access with apps, groups, namespaces, and rol
 ### Customer Responsibility
 
 * The customer cluster admin uses the Private Mendix Platform installer to grant these permissions to the build agent component.
-* The customer must correctly install components related to connected mode deployment, such as Interactor, Collector, and Authenticator.
-* The customer's administrator must properly grant specific people access to the cluster and namespace management for connected mode deployment.
+* The customer must correctly install components related to Interactor-Agent mode deployment, such as Interactor, Collector, and Authenticator.
+* The customer's administrator must properly grant specific people access to the cluster and namespace management for Interactor-Agent mode deployment.
 * The customer must grant proper permissions to give the Private Mendix Platform `mxpc-cli` access to the destination Kubernetes cluster. After that, a piece of script must be executed with `mxpc-cli`.
 * Customers must configure Private Mendix Platform roles, group and app ownership, and approval workflows, so that CI/CD and deployment actions are performed only by explicitly authorized users and services
 * App implementers and App operators must connect to the customer's IdP of choice, use Private Mendix Platform roles, group ownership, environment separation, application-level security, and controlled approval-based deployment processes, so that users and teams receive only the minimum access required for development, operations, and production deployment.
@@ -155,11 +155,11 @@ subjects:
 
 ### Customer Responsibility
 
-#### Connected Mode Deployment
+#### Interactor-Agent Deployment
 
-* Customers can use the installer to install components related to connected mode deployment.
-* The customer organization must employ the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) which are necessary to accomplish connected mode namespace configuration.
-* Customers can place one valid kubeconfig file which will grant `mxpc-cli` access to the destination cluster, and then execute the command line script shown in the **Installation** tab of the cluster namespace **Details** page in connected mode.
+* Customers can use the installer to install components related to Interactor-Agent mode deployment.
+* The customer organization must employ the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) which are necessary to accomplish Interactor-Agent mode namespace configuration.
+* Customers can place one valid kubeconfig file which will grant `mxpc-cli` access to the destination cluster, and then execute the command line script shown in the **Installation** tab of the cluster namespace **Details** page in Interactor-Agent mode.
 
 ## Proof and Remarks
 
@@ -171,7 +171,7 @@ Kubernetes privilege credentials are removed from the build configuration.
 
 {{< figure src="/attachments/private-platform/nist-ac/nist-ac-06-2.png" class="no-border" >}}
 
-### Connected Mode Components Installation
+### Interactor-Agent Mode Components Installation
 
 {{< figure src="/attachments/private-platform/nist-ac/nist-ac-06-3.png" class="no-border" >}}
 

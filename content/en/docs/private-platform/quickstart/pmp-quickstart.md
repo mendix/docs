@@ -311,17 +311,17 @@ The installer does not catch your pod's running status. In case of issues, verif
 
 If you want to uninstall Svix, you must do it manually, by running the following command: `helm helm uninstall  svix-server  -n=<Private Mendix Platform namespace>`.
 
-## Optional: Installing Private Cloud Components for Connected Mode
+## Optional: Installing Private Cloud Components for Interactor-Agent Mode
 
-Private Mendix Platform now supports installation in [Connected mode](/developerportal/deploy/private-cloud/#connected-clusters). To enable this functionality, you must install the relevant Private Cloud components.
+Private Mendix Platform now supports installation in Interactor-Agent (called [Connected mode](/developerportal/deploy/private-cloud/#connected-clusters) in Mendix on Kubernetes). To enable this functionality, you must install the relevant Private Cloud components.
 
 {{% alert color="info" %}}
-As of Private Mendix Platform 2.6, some functionalities are not yet available in Connected mode, and will be added in future releases. For more information, see [Known Issues](/releasenotes/private-platform/2-6/#known-issues).
+As of Private Mendix Platform 2.6, some functionalities are not yet available in Interactor-Agent mode, and will be added in future releases. For more information, see [Known Issues](/releasenotes/private-platform/2-6/#known-issues).
 {{% /alert %}}
 
 ### Database Prerequisites
 
-To enable connected mode, you must create the database Authenticator and Collector, and install NATS at your cluster.
+To enable Interactor-Agent mode, you must create the database Authenticator and Collector, and install NATS at your cluster.
 
 * For the Authenticator, run the following commands:
 

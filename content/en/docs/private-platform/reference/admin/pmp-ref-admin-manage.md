@@ -53,7 +53,7 @@ Company admins can edit app details such as the app branding or ownership, team 
     * **App Logo** - A browser logo for your app. This value can only be adjusted by the app owner.
 * **Team Membership** - Invite users to join your app, or remove them from the app. Before you can invite a user, you must first configure their account on the [User Management](#users) page. 
     
-    When adding a member, the dialogue displays any roles inherited from groups. If the user is not a member of any groups, the dialogue shows **NONE**.
+    When adding a member, the dialogue displays any roles inherited from groups. If the user is not a member of any groups, the dialog shows **NONE**.
 
 * **Git Server** - View the revisions per branch for this app.
 * **Ownership and Sharing** - Select the user and optionally the group that owns this app. If an app is owned by a specific group, the owner must be a user who belongs to that group.

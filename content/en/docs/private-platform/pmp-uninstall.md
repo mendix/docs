@@ -21,5 +21,5 @@ If required, you can uninstall the Private Mendix Platform by performing the fol
     kubectl delete secret/mendix-pclm   mendix-operator-pclm  pclm-admin -n=<ns>
     ```
 
-6. Uninstall the Mendix Operator, as described in [Private Cloud Cluster: Namespace Management](/developerportal/deploy/private-cloud-cluster/#namespace-management).
+6. Uninstall the Mendix Operator.
 7. If you want to also delete the Private Mendix Platform namespace, run the following command: `kubectl delete namespace <Private Mendix Platform namespace>`.

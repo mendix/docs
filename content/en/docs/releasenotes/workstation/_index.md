@@ -10,6 +10,26 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.2.1
+
+### Release date: September 16, 2026
+
+### Workstation Client
+
+#### New Features
+
+* Keyboard wedge devices - We have added keyboard wedge support for Linux.
+
+#### Bug Fixes
+
+* We have fixed an issue with the mapping of the keyboard layouts that resulted in incorrect interpretation of keyboard inputs.
+
+### Workstation Commons
+
+#### Bug Fixes
+
+* We have included a missing dependency on the sticky scroll widget.
+
 ## 4.2.0
 
 ### Release date: September 10, 2026
@@ -133,7 +153,7 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 * Self-hosting option - With this GA release, we are introducing Private Workstation Management, providing you with the option to self-host the management solution. This offers greater control and flexibility over your deployment.
 
-{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Customer Success Manager. {{% /alert %}}
+{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact. {{% /alert %}}
 
 ### Workstation Client
 
@@ -499,7 +519,7 @@ This is a Limited Availability release of Mendix Workstation.
 
 Mendix Workstation is available for all Mendix users for development use. 
 
-Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use the Mendix Workstation for development, but workspaces are individual and cannot be shared.
+Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to see what arrangements are possible. Without a license you can use the Mendix Workstation for development, but workspaces are individual and cannot be shared.
 {{% /alert %}}
 
 ### Improvements
@@ -527,7 +547,7 @@ When editing a device, device settings are edited in a side panel. It makes devi
 ### Release date: September 12, 2025
 
 {{% alert color="info" %}}
-The fourth pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
+The fourth pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 {{% /alert %}}
 
 ### New Features
@@ -592,7 +612,7 @@ The Sample App is available in the Mendix Marketplace.
 ### Release date: August 20, 2025
 
 {{% alert color="info" %}}
-The third pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
+The third pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 {{% /alert %}}
 
 ### New Features

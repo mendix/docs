@@ -67,7 +67,7 @@ Before sending, ensure that the logs do not contain sensitive information your o
 
 ### Help Me Package
 
-If the issue is related to a specific Mendix application, navigate to **Private Mendix Platform Portal > Logs & Events > Help Me**, and download the generated .zip package. Attach this file to your request, in addition to the automated log archive.
+If the issue is related to a specific Mendix application, navigate to **Private Mendix Platform Portal > Logs & Events > Help Me**, and download the generated .zip package. Attach this file to your request, in addition to the automated log archive. For more information about the **Help Me** function, see [Private Mendix Platform Events and the Help Me Function](/private-mendix-platform/support-help-me/).
 
 ## Supplemental Data
 
@@ -79,7 +79,7 @@ For licensing or PCLM issues, provide the following information:
 
 * **Prerequisite Check** - Ensure that you are using the latest versions of the Operator and PCLM.
 * **PCLM Logs** - Already included in the log-extract archive.
-* **License Bundle Details** - When and from whom (Mendix Support, CSM, Account Manager) was the current PCLM license bundle received. Attach the specific bundle file being used so that Mendix can validate its integrity.
+* **License Bundle Details** - When and from whom (Mendix Support, Technical Account Manager, Specialized Account Executive, or Partner Contact) was the current PCLM license bundle received. Attach the specific bundle file being used so that Mendix can validate its integrity.
 * **PCLM License Status and Mendix App Dump** - Run the following commands and provide the output:
 
 ```bash

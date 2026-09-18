@@ -35,7 +35,7 @@ Using orthogonal flows is a beta feature, available in Studio Pro 11.15 and abov
 
 To enable orthogonal flows, do the following:
 
-1. In Studio Pro, open the [Preferences](/refguide/preferences-dialog/) dialog box.
+1. In Studio Pro, open **Edit** > [Preferences](/refguide/preferences-dialog/).
 2. Go to the **New features** tab.
 3. Under **Microflow, Nanoflow, and Rule editor**, enable orthogonal flows.
 
@@ -46,7 +46,7 @@ When orthogonal flows are enabled, you can convert flows through the context men
 * To convert a single flow, right-click it and choose to convert it from curved to orthogonal, or from orthogonal to curved.
 * To convert every flow in the current document at once, right-click on any flow and use the corresponding option in the context menu.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/sequence-flow/orthogonal-flows-context-menu.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/sequence-flow/orthogonal-flows-context-menu.png" class="no-border" alt="Context menu options for converting sequence flow types" >}}
 
 ### Setting the Default Flow Type {#default-type}
 

@@ -7,7 +7,7 @@ weight: 10
 
 ## Maia Settings
 
-The **Maia Settings** page allows company administrators to manage Maia access and usage limits for their organization. These settings apply across both the Mendix Portal and Studio Pro, providing centralized control over Maia availability and company-wide usage.
+The **Maia Settings** page allows company administrators to manage Maia access and usage limits for their organization. These settings apply across Studio Pro, providing centralized control over Maia availability and company-wide usage.
 
 ## General {#general}
 
@@ -24,7 +24,6 @@ This setting gives company administrators a single control point for enabling or
 When Maia access is enabled:
 
 * Maia Make is available in Studio Pro
-* Maia features are available in the Mendix Portal
 * Company and user usage limits are enforced according to the configured settings
 
 #### When Disabled

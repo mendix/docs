@@ -57,8 +57,8 @@ You can start the Workstation Client from a terminal or a rollout script to regi
 
 How you invoke the Client depends on the operating system:
 
-* On Windows, call the executable by the path where the Workstation Client is installed, for example `& {path where the Workstation Client is installed} --version`.
-* On Linux, call `mendix-workstation --version`.
+* On Windows, call the executable by the path where the Workstation Client is installed, for example `& {path where the Workstation Client is installed} --help`.
+* On Linux, call `mendix-workstation --help`.
 
 The following options are available:
 
@@ -68,7 +68,7 @@ The following options are available:
 | `--version` | | Print the version of the Workstation Client and exit. |
 | `--registration-token` | `REGISTRATION_TOKEN` | Register the computer with the given registration token. Accepts both single and bulk registration tokens. For more information, see [Registering Workstation Clients](/mendix-workstation/register/). |
 | `--diagnostics` | | Run diagnostics and print the result to the standard output as JSON. Pass `all` to run every diagnostic, or a comma-separated list of the diagnostics to run. |
-| `--log-level` | `LOG_LEVEL` | The level of detail that the Client logs. Use one of `error`, `warn`, `info`, `debug`, or `trace`. Use `silent` to disable logging. The default value is `debug`. |
+| `--log-level` | `LOG_LEVEL` | The level of detail that the Client logs. Use one of `error`, `warn`, `info`, or `debug`. Use `silent` to disable logging. The default value is `debug`. |
 | `--user-data-dir` | `USER_DATA_DIR` | The directory in which the Client stores its configuration, logs, session data, and crash dumps. |
 | `--background` | | Start the Client without showing its window. The Client uses this option when it starts automatically after system startup. For more information, see [Autostart Configuration for the Workstation Client](/mendix-workstation/autostart-configuration/). |
 

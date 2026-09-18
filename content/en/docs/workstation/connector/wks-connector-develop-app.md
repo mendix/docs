@@ -1,7 +1,7 @@
 ---
-title: "Developing Workstation-Enabled Applications"
-url: /mendix-workstation/build-app/
-description: "Describes the key concepts and best practices to consider when building an app to work with Mendix Workstation."
+title: "Develop an App with the Workstation Connector"
+url: /mendix-workstation/develop-app/
+description: "Describes the Workstation Connector domain model, nanoflows, and JavaScript actions that you use to build device interactions into your app."
 weight: 25
 ---
 
@@ -29,21 +29,29 @@ The Workstation domain model contains the following entities:
 
 ## Using the Nanoflows and Actions {#javascript-actions}
 
-The following section provides more information about using the Workstation nanoflows and JavaScript actions in your Mendix application.
+The following section provides more information about using the Workstation nanoflows and JavaScript actions in your Mendix application. Call only the documents in the **_USE_ME** folder of the **StationConnector** module. The documents outside that folder are implementation details.
+
+### Callback Nanoflows {#callback-nanoflows}
+
+Several actions take a nanoflow as a parameter and call it when something happens, for example the `onMessage` parameter of `GetCreateDevice`, or the `callback` parameter of `SubscribeToDeviceMessages`. The JavaScript actions pass the complete set of parameters documented for that callback, and your nanoflow decides which of them it uses:
+
+* To use a parameter, add it to your nanoflow with exactly the name and type listed for the callback. For example, to read an incoming message, add a `Message` parameter of type String.
+* Objects are passed under their entity name, without the module name. For example, a `MyModule.MyContext` object is passed as `MyContext`.
+* A device is always passed as `Device` of type `StationConnector.Device`. If the device is a specialization, it is additionally passed under the specialization name and type. For example, a `MyModule.BarcodeScanner` device is passed as `Device` of type `StationConnector.Device` and as `BarcodeScanner` of type `MyModule.BarcodeScanner`. Declare a `BarcodeScanner` parameter of type `MyModule.BarcodeScanner` when you need the attributes of the specialization.
 
 ### SendDeviceRequest
 
 Call `SendDeviceRequest` to send a message to a device and return the response or error. Requires Workstation Client 4.0 or later, and a device that supports requests. For more information about the supported message syntax, see [Configuring Devices](/mendix-workstation/management-devices/). This action has the following parameters:
 
-* `device` 
-* `message`
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to send the message to.
+* `message` (String) - The message to send to the device.
 
 ### SendDeviceMessage
 
 Call `SendDeviceMessage` to send a message to a device. For more information about the supported message syntax, see [Configuring Devices](/mendix-workstation/management-devices/). This action has the following parameters:
 
-* `device` 
-* `message`
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to send the message to.
+* `message` (String) - The message to send to the device.
 
 Responses are passed through message callbacks. For more information, see `GetCreateDevice` (`onMessage`), `WaitForDeviceMessage`, and `SubscribeToDeviceMessages`.
 
@@ -51,45 +59,55 @@ Responses are passed through message callbacks. For more information, see `GetCr
 
 Call `WaitForDeviceMessage` to wait for a message from the connected device for the duration of the specified timeout period. This action has the following parameters:
 
-* `device` 
-* `timeout`
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to wait for a message from.
+* `timeout` (Integer/Long) - Time in milliseconds before a timeout error is thrown. Leave empty for no timeout.
 
 ### WaitForObjectChange
 
 Call `WaitForObjectChange` to wait for changes in the attributes of the specified object for the duration of the specified timeout period. This action has the following parameters:
 
-* `objectToObserve`
-* `attributes`
-* `timeout`
+* `objectToObserve` (Object) - The Mendix object to observe.
+* `attributes` (String) - Optional, a comma-separated list of the attributes to observe.
+* `timeout` (Integer/Long) - Time in milliseconds before a timeout error is thrown. Leave empty for no timeout.
 
 ### GetCreateDevice
 
-Call this nanoflow to create and configure a device, and define the actions that should happen on connection, disconnection, or messages from the device. This action has the following parameters:
+Call `GetCreateDevice` to create and configure a device, and define the actions that should happen on connection, disconnection, or messages from the device. This action has the following parameters:
 
-* `name`
-* `class` 
-* `initialize`
-* `createDevice` 
-* `entity`
-* `onConnect`
-* `onMessage` 
-* `onDisconnect`
+* `deviceName` (String) - The name to match a Workstation device on.
+* `deviceClass` (String) - The class to match a Workstation device on. Provide a name and/or a class. If no device is matched within three seconds, the action returns empty.
+* `initialize` (Nanoflow, optional) - The `Initialize` nanoflow, which sets up communication with the Workstation Client if that has not happened yet.
+* `createDevice` (Nanoflow, optional) - A nanoflow that creates and returns a `StationConnector.Device` object or a specialization of it. If you do not provide a nanoflow, a `StationConnector.Device` with default values is created.
+* `deviceEntity` (Entity) - The entity returned by the `createDevice` nanoflow, or `StationConnector.Device`.
+* `onConnect` (Nanoflow, optional) - Called when the device connects, with the following parameters:
+    * `Device` (Object)
+* `onMessage` (Nanoflow, optional) - Called when the device sends a message, with the following parameters:
+    * `Message` (String)
+    * `Device` (Object)
+* `onDisconnect` (Nanoflow, optional) - Called when the device disconnects, with the following parameters:
+    * `Device` (Object)
+
+The device object is created once and returned for every call that uses the same name and class.
 
 ### ConnectDevice
 
-Call this action to connect to a specific device.
+Call this action to connect to a specific device. This action has the following parameter:
+
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to connect to.
 
 ### DisconnectDevice
 
-Call this action to disconnect from a specific device.
+Call this action to disconnect from a specific device. This action has the following parameter:
+
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to disconnect from.
 
 ### Initialize
 
-This action sets up communication with the Workstation Client. It should be automatically called through the `initialize` parameter of `GetStation` or `GetCreateDevice`.
+This nanoflow sets up communication with the Workstation Client. It should be automatically called through the `initialize` parameter of `GetStation` or `GetCreateDevice`.
 
 ### GetStation
 
-Call `GetStation` to retrieve the current Workstation Client configuration and devices. This action creates and returns a station object with a linked device object per peripheral.
+Call the `GetStation` nanoflow to retrieve the current Workstation Client configuration and devices. This nanoflow creates and returns a station object with a linked device object per peripheral.
 
 To interact with a specific device, it is better to use `GetCreateDevice` instead. `GetCreateDevice` has a more convenient API, allows specialization, and does not create station and device objects which may not be needed.
 
@@ -97,30 +115,92 @@ To interact with a specific device, it is better to use `GetCreateDevice` instea
 
 Call `SubscribeToObjectChanges` to trigger a nanoflow when the specified object changes.  This action has the following parameters:
 
-* `objectToObserve`
-* `attributes`
-* `callback`
-* `applicationContext`
+* `objectToObserve` (Object) - The Mendix object to observe.
+* `attributes` (String) - Optional, a comma-separated list of the attributes to observe.
+* `callback` (Nanoflow, optional) - Called when the object changes, with the following parameters:
+    * The object to observe, for example `MyEntity` of type `MyModule.MyEntity`.
+    * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
+* `applicationContext` (Object) - Optional, an extra object to pass to the callback.
 
 ### SubscribeToDeviceMessages
 
 Call `SubscribeToDeviceMessages` to trigger a nanoflow when a message is received from a device. This action has the following parameters: 
 
-* `device`
-* `callback`
-* `applicationContext`
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to subscribe to.
+* `callback` (Nanoflow, optional) - Called when the device sends a message, with the following parameters:
+    * `Message` (String)
+    * `Device` (Object)
+    * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
+* `applicationContext` (Object) - Optional, an extra object to pass to the callback.
 
 ### SubscribeToDeviceErrors
 
 Call `SubscribeToDeviceErrors` to trigger a nanoflow on device connection error. This action has the following parameters: 
 
-* `device`
-* `callback`
-* `applicationContext`
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to subscribe to.
+* `callback` (Nanoflow, optional) - Called when the device connection fails, with the following parameters:
+    * `ErrorMessage` (String)
+    * `ErrorCode` (Integer/Long)
+    * `Device` (Object)
+    * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
+* `applicationContext` (Object) - Optional, an extra object to pass to the callback.
 
 ### Unsubscribe
 
-Call `Unsubscribe` to end a subscription.
+Call `Unsubscribe` to end a subscription. This action has the following parameter:
+
+* `subscriptionId` (String) - The subscription ID returned by one of the subscribe actions.
+
+### Deprecated Actions
+
+The following actions are still available so that existing applications keep working, but Mendix does not recommend them for new applications. In Studio Pro, you find them in the **Deprecated** folder of the **StationConnector** module.
+
+#### SendMessage
+
+Use `SendDeviceMessage` and `WaitForDeviceMessage` instead. Those actions keep sending and waiting separate, so you only wait when you need to. When `waitForResponse` is true, `SendMessage` returns the next message that the device sends, which is not necessarily a reply to the message you sent. This action has the following parameters:
+
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to send the message to.
+* `message` (String) - The message to send to the device.
+* `waitForResponse` (Boolean) - Blocks the nanoflow until a response is received from the device.
+* `responseTimeout` (Integer/Long) - Time in milliseconds before a timeout error is thrown. Leave empty for no timeout.
+
+#### SubscribeToMessages
+
+Use `SubscribeToDeviceMessages`, `Unsubscribe`, and `ConnectDevice` instead. Those actions keep subscribing, connecting, and unsubscribing separate, so you decide when each one happens. `SubscribeToMessages` always connects the device as well, and ties unsubscribing to the `subscribeOnce` parameter. This action has the following parameters:
+
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to subscribe to.
+* `callback` (Nanoflow, optional) - Called when the device sends a message, with the following parameters:
+    * `Message` (String)
+    * `Device` (Object) - Unlike `SubscribeToDeviceMessages`, a specialization is not also passed under its own entity name.
+    * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
+* `subscribeOnce` (Boolean) - If true, the callback is called once and then unsubscribed automatically.
+* `applicationContext` (Object) - Optional, an extra object to pass to the callback.
+
+#### SubscribeToErrors
+
+Use `SubscribeToDeviceErrors`, `Unsubscribe`, and `ConnectDevice` instead. Those actions keep subscribing, connecting, and unsubscribing separate, so you decide when each one happens. `SubscribeToErrors` always connects the device as well, and ties unsubscribing to the `subscribeOnce` parameter. This action has the following parameters:
+
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it to subscribe to.
+* `callback` (Nanoflow, optional) - Called when the device connection fails, with the following parameters:
+    * `ErrorMessage` (String)
+    * `ErrorCode` (Integer/Long)
+    * `Device` (Object) - Unlike `SubscribeToDeviceErrors`, a specialization is not also passed under its own entity name.
+    * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
+* `subscribeOnce` (Boolean) - If true, the callback is called once and then unsubscribed automatically.
+* `applicationContext` (Object) - Optional, an extra object to pass to the callback.
+
+#### UnsubscribeByDevice
+
+Use `Unsubscribe` instead, and keep track of the subscription IDs that the subscribe actions return. Unsubscribing by device makes it easy to end more subscriptions than intended. This action has the following parameter:
+
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it. All subscriptions that match this device are ended.
+
+#### UnsubscribeByContext
+
+Use `Unsubscribe` instead, and keep track of the subscription IDs that the subscribe actions return. Unsubscribing by device or application context makes it easy to end more subscriptions than intended. This action has the following parameters:
+
+* `device` (Object) - A `StationConnector.Device` object or a specialization of it that was used in the subscriptions.
+* `applicationContext` (Object) - The application context used in the subscriptions. Provide a device and/or an application context. All matching subscriptions are ended.
 
 ### Private Nanoflows
 

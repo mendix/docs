@@ -188,10 +188,6 @@ The Workstation Client recognizes messages from a keyboard wedge device by combi
 
 Because a keyboard wedge device is indistinguishable from a keyboard at the operating system level, this recognition is a best-effort mechanism. The Workstation Client cannot tell two sources apart if they produce messages with the same character throughput, length, and prefix and suffix. Give each keyboard wedge device a distinctive combination of these settings when you configure more than one device, or when macro pads or automation scripts are in use on the same computer.
 
-### Limitations
-
-Keyboard wedge devices are supported on Windows and macOS only. Support for Linux ARM, including Raspberry Pi will follow soon.
-
 ### Configuring Keyboard Wedges
 
 To add a keyboard emulator device, perform the following steps:
@@ -207,7 +203,7 @@ To add a keyboard emulator device, perform the following steps:
     | --- | --- |
     | **Inter Character Timeout (ms)** | Required; the maximum allowed amount of time in milliseconds between key strokes for them to be considered as coming from a device. The value must be a positive integer. The default value is `50`. |
     | **Keyboard Layout** | Required; the keyboard layout of the device. To use the active keyboard layout as defined by your operating system, select **System**. Select **en-US** as a fallback when the system keyboard layout is not compatible with the device. For example, many barcode scanners send characters from the Latin alphabet, which the system layout cannot resolve if the operating system uses a non-Latin layout such as Chinese. The default value is **System**. |
-    | **Suffix** | Required; a series of characters denoting the end of a message. The suffix is removed from the payload before it is forwarded to the Workstation Connector. The default value is `\r`, which corresponds to the carriage return that most keyboard emulating devices send after a scan. |
+    | **Suffix** | Required; a series of characters denoting the end of a message. The suffix is removed from the payload before it is forwarded to the Workstation Connector. The default value is `\r`, which corresponds to the carriage return that most keyboard emulating devices append to the key stroke. How this carriage return arrives depends on the platform: on Windows the operating system adds a line feed `\n` to the default carriage return, so the key strokes are followed by `\r\n`, while on macOS and Linux only a line feed `\n` is received. Set the suffix to match what your platform delivers, for example `\r` on Windows and `\n` on macOS and Linux. |
     | **Minimum Message Length** | Optional; the shortest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. |
     | **Maximum Message Length** | Optional; the longest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. If you set both values, the maximum must be greater than or equal to the minimum. |
     | **Prefix** | Optional; a series of characters denoting the start of a message. The prefix is removed from the payload before it is forwarded to the Workstation Connector. |

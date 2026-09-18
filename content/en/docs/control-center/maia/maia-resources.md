@@ -40,22 +40,6 @@ The **Monthly Consumption** section displays your company’s Maia Unit usage fo
 * The number of remaining units
 * The date your monthly consumption resets
 
-## Usage {#usage}
-
-The **Usage** section provides an overview of each user’s usage for the current month. It also enables you to manage budgets by setting usage caps for individual users.
-
-To manage an individual user’s usage limit:
-
-1. On the user line, click **Manage**.
-2. Enter the custom limit.
-3. Click **Save Changes**.
-
-{{< figure src="/attachments/control-center/maia/user-limit-manage.png" alt="" width="450" >}}
-
-If no individual limit is set, the user is subject to the default company-wide user limit. To set a company-wide limit, go to the [Resources](/control-center/maia-settings/#resources) tab in Maia Settings.
-
-Once a user reaches their individual limit, further Maia use is disabled for that user for the remainder of the current monthly cycle.
-
 ## Increasing Your Maia Units Capacity {#increase-maia-units}
 
 1. **Make sure you have Cloud Tokens available**<br>

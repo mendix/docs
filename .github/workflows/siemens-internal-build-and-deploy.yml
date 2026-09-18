@@ -61,7 +61,7 @@ jobs:
         run: |
           chmod +x ./htmltest/htmltest
           set +o pipefail
-          ./htmltest/htmltest -conf .htmltest-siemens.yml 2>&1 | \
+          ./htmltest/htmltest --conf .htmltest-siemens.yml 2>&1 | \
             sed 's/\o033\[[0-9;]*[A-Za-z]//g; s/^=\+$/\n&/' | tee -a hugo.log
           if [ "${PIPESTATUS[0]}" -ne 0 ]; then
             # add blank output line first as ::warning:: does not always trigger a warning annotation
@@ -83,8 +83,6 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     needs: build
-    # Only deployment-capable runs attach to a GitHub Environment.
-    environment: ${{ github.ref_name }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
@@ -109,6 +107,7 @@ jobs:
       - name: Upload to Siemens Support Center S3
         # Use bash script to upload site to Siemens Support Center S3
         # Use SSC secrets for Siemens Support Center - there are separate credentials for docs.mendix.com
+        # Secrets are restored at the Repository level.
         run: bash _scripts/deploy-to-siemens.sh
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.SSC_AWS_ACCESS_KEY_ID }}

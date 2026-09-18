@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ev
+set -ex
 
 BUCKET=scp-prod-source
 SIEMENS_EMAIL=mark.van.ments@siemens.com

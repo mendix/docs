@@ -15,3 +15,6 @@ enableRobotsTXT = false
 
 # Enable ugly URLs to help links work on the Siemens site 
 uglyURLs = true
+
+# Publish siemens-internal to "Built/Mendix-Docs/public" so we can add meta data and upload Mendix-Docs to match expected structure of Siemens Support Center
+publishDir = "Built/Mendix-Docs/public"

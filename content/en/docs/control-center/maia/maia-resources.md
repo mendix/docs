@@ -88,3 +88,7 @@ To deprovision, select a plan of type **Provisioned** from your resources overvi
 {{% alert color="info" %}}
 Your subscription plan operates on a monthly bundle cycle. When you deprovision a resource, the deprovisioning takes effect at the end of the current subscription month. Until that date, you can still use the resource and status in the overview reads **Plan Deprovision Scheduled**.
 {{% /alert %}}
+
+## Audit Logs
+
+Audit logging provides a reliable record of company administrator changes and other relevant user interactions performed within the Maia Resources application.

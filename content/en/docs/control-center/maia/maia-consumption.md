@@ -9,6 +9,17 @@ weight: 10
 
 The **Maia Consumption** page allows company administrators to view and manage users’ consumption and usage limits.
 
+## Overview of Maia Units
+
+The overview page provides a centralized view of all Maia Units currently provisioned for your company.
+
+* Type – The type or resources; either Free or Provisioned
+* Cloud Tokens – The number of Cloud Tokens used
+* Capacity (Maia Units) – The number of Maia Units per month your organization can use
+* State – Whether the resources is active, or ready to be downgraded or deprovisioned
+
+{{< figure src="/attachments/control-center/maia/maia-consumption-overview.png" alt="" >}}
+
 ## Usage {#usage}
 
 The **Usage** section provides an overview of each user’s usage for the current month. It also enables you to manage budgets by setting usage caps for individual users.

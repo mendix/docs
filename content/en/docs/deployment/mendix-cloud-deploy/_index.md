@@ -221,7 +221,13 @@ With a Premium plan, your app can be [horizontally scaled](/developerportal/depl
 
 Fallback ensures that the data in your database is automatically copied to a database in a second AZ. This ensures that all your data is still available to your app if there is an issue with the primary availability zone and app instances have to be started in the second AZ. 
 
-The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds per query compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
+#### Database Latency
+
+For Standard plan apps, the app and database are deployed in the same AZ. Latency is typically in the range of 0.4–0.9ms. Some variation within this range is normal and reflects the physical servers running the app and database within the data center.
+
+For Premium and Premium Plus plan apps, the high availability configuration spreads app instances across multiple AZs, so an app instance may or may not be in the same AZ as the database. When they are in the same AZ, latency is similar to the Standard plan. When they are in different AZs, latency is typically in the range of 1–3ms.
+
+These figures are typical observed values, not guarantees. AWS does not publish latency SLAs for EC2 network traffic, and physical server placement within a data center can vary. If an application receives sub-millisecond latency, that is a fortunate outcome, not a platform guarantee. Applications with a hard dependency on sub-millisecond database latency should be architected with connection pooling, query batching, or local caching to handle normal variance.
 
 #### Application Data Replication
 

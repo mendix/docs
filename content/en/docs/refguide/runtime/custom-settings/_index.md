@@ -311,7 +311,7 @@ The settings below configure observability (metrics, tracing, logs) through [Ope
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| <a id="OpenTelemetryMinimalMode" href="#OpenTelemetryMinimalMode">OpenTelemetry.MinimalMode</a> | Enable OpenTelemetry minimal tracing mode. Only generate ingoing or outgoing spans. | false |
+| <a id="OpenTelemetryMinimalMode" href="#OpenTelemetryMinimalMode">OpenTelemetry.MinimalMode</a> | Enable OpenTelemetry minimal tracing mode. Only generate incoming or outgoing spans. | false |
 
 ## Proxy Settings {#proxy-settings}
 

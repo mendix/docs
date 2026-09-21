@@ -57,6 +57,8 @@ Upgraded offline-first applications use the new authentication token system by d
 
 If you do not want your offline-first app to create an authentication token, you can disable the use of authentication tokens by writing your own flow using the `login` method of the `mx-api` module in the [Mendix 11 Client API](/apidocs-mxsdk/apidocs/client-api/#client-api) but setting the `useAuthToken` parameter to `false`.
 
+*(Introduced in Mendix 11.15)* If an offline-first app still has a long-lived session, for example carried over from before Mendix 10.9.0, the Mendix Runtime converts it to a regular session using an authentication token the next time the session data is refreshed. If your app relies on a custom `LongLivedSessionTimeout` value, configure the [`com.mendix.webui.AuthTokenTimeout`](/refguide/custom-settings/#commendixwebuiAuthTokenTimeout) setting instead, as `LongLivedSessionTimeout` no longer applies once a session is converted.
+
 ### Online Applications
 
 By default, authentication tokens will not be used in online Mendix apps. However, you can use them to remember the end-user. For more information see [Working with Authentication Tokens](#work-with), above.

@@ -33,7 +33,7 @@ To manage an individual user’s usage limit:
 3. Click **Save Changes**.
 
 {{% alert type="info" %}}
-The **Manage** button for users in the **Usage** section is disabled when the company uses only free resources. To enable this button and manage a user's Maia Unit limit, the company must have at least one provisioned resource.
+The **Manage** button for users is disabled when the company uses only free resources. To enable this button and manage a user's Maia Unit limit, the company must have one provisioned resource.
 {{% /alert %}}
 
 {{< figure src="/attachments/control-center/maia/user-limit-manage.png" alt="" width="450" >}}

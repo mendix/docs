@@ -2,14 +2,14 @@
 title: "Maia Resources"
 url: /control-center/maia-resources/
 description: "Describes how to provision and deprovision Maia Resources using self-service."
-weight: 10
+weight: 20
 ---
 
 ## Introduction
 
-Maia Resources is your access point to increase the capacity of Maia Units for using Maia Make in Studio Pro. It allows admins to provision, upgrade, downgrade, and deprovision Maia Units and manage the resources for Maia Make for their company. For more information on Maia Make’s capabilities, refer to [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/).
+The Maia **Resources** page allows you to increase the capacity of Maia Units for using Maia Make in Studio Pro. From here, you can provision, upgrade, downgrade, and deprovision Maia Units and manage the resources for Maia Make for your company. For more information on Maia Make’s capabilities, see [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/).
 
-{{% alert type="info" %}}
+{{% alert color="info" %}}
 Maia Units are only required for Maia Make. Other Maia features (for example, Maia Plan) do not require Maia Units.
 {{% /alert %}}
 
@@ -24,10 +24,10 @@ Maia Units are only required for Maia Make. Other Maia features (for example, Ma
 
 The overview page provides a centralized view of all Maia Units currently provisioned for your company.
 
-* Type – The type or resources; either Free or Provisioned
-* Cloud Tokens – The number of Cloud Tokens used
-* Capacity (Maia Units) – The number of Maia Units per month your organization can use
-* State – Whether the resources is active, or ready to be downgraded or deprovisioned
+* Type – The type of resource, which can be either **Free** or **Provisioned**.
+* Cloud Tokens – The number of Cloud Tokens used.
+* Capacity (Maia Units) – The number of Maia Units per month your organization can use.
+* State – Whether the resource is active, or ready to be downgraded or deprovisioned.
 
 {{< figure src="/attachments/control-center/maia/maia-resources-overview.png" alt="" >}}
 
@@ -35,19 +35,19 @@ The overview page provides a centralized view of all Maia Units currently provis
 
 The **Monthly Consumption** section displays your company’s Maia Unit usage for the current monthly cycle. It includes:
 
-* The percentage of units used 
-* The number of units consumed 
+* The percentage of units used
+* The number of units consumed
 * The number of remaining units
 * The date your monthly consumption resets
 
 ## Increasing Your Maia Units Capacity {#increase-maia-units}
 
-1. **Make sure you have Cloud Tokens available**<br>
-Cloud Tokens are purchased through your Mendix subscription. If your organization already has Cloud Tokens allocated to other services, you can reassign them. Check your available balance in the Control Center. If you need to purchase more, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
-2. **Convert Cloud Tokens to Maia Units**<br>
-In the Control Center, go to **Maia Resources** and select **Provision Resource**. Choose how many Cloud Tokens to allocate. Each Cloud Token gives you 100 Maia Units per month.
-3. **Use Maia in Studio Pro**<br>
-Your new capacity is active immediately. Studio Pro unblocks and Maia Make becomes available again.
+1. Make sure you have Cloud Tokens available.    
+    Cloud Tokens are purchased through your Mendix subscription. If your organization already has Cloud Tokens allocated to other services, you can reassign them. Check your available balance in the Control Center. If you need to purchase more, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
+2. Convert Cloud Tokens to Maia Units.    
+    In the Control Center, go to the **Resources** page and select **Provision Resource**. Choose how many Cloud Tokens to allocate. Each Cloud Token gives you 100 Maia Units per month.
+3. Use Maia in Studio Pro.    
+    Your new capacity is active immediately. Studio Pro unblocks and Maia Make becomes available again.
 
 ### Key Considerations
 
@@ -59,23 +59,23 @@ Your new capacity is active immediately. Studio Pro unblocks and Maia Make becom
 
 You can provision any Maia resources directly within the Control Center using the self-service capability. To do this, select **Provision Resource**. 
 
-This allows you to select how many Cloud Token to use to provision Maia Units. Every Cloud Token provisions 100 Maia Units per month.
+This allows you to select how many Cloud Tokens to use to provision Maia Units. Every Cloud Token provisions 100 Maia Units per month.
 
 {{< figure src="/attachments/control-center/maia/provision-resources.png" alt="" >}}
 
-Click **Provision** to select an amount of cloud tokens. An pop-up shows the Maia Units capacity that will be added. Clicking **Provision** again completes the process. You are taken back to the **Maia Resource** page where the newly provisioned Maia Units appear in the list.
+Click **Provision** to select an amount of Cloud Tokens. A dialog box displays the Maia Units capacity that will be added. Clicking **Provision** again completes the process. You are taken back to the **Maia Resources** page where the newly provisioned Maia Units appear in the list.
 
 {{< figure src="/attachments/control-center/maia/resource-summary.png" alt="" width="300" >}}
 
 ## Upgrading Maia Units {#upgrading-maia-units}
 
-To upgrade your provisioned Maia Units, select a plan of type **Provisioned** from your resources overview and click **Edit Resource**. This opens the page of your current resource, showing the amount of allotted Cloud Tokens. Increase the amount of Cloud Tokens to upgrade your provisioned Maia Units, then click **Save Changes**. Upgrades will take effect immediately.
+To upgrade your provisioned Maia Units, select a plan of type **Provisioned** from your resources overview and click **Edit Resource**. This opens the page of your current resource, showing the amount of allotted Cloud Tokens. Increase the amount of Cloud Tokens to upgrade your provisioned Maia Units, then click **Save Changes**. Upgrades take effect immediately.
 
 {{< figure src="/attachments/control-center/maia/edit-resource.png" alt="" >}}
 
 ## Downgrading Maia Units {#downgrading-maia-units}
 
-To downgrade your amount of provisioned Maia Units, select a plan of type **Provisioned** from your resources overview and press **Edit Resource**. This opens the page for your current resource, showing the amount of allotted Cloud Tokens. Decrease the amount of Cloud Tokens to downgrade your provisioned Maia Units, then click **Save Changes** to confirm.
+To downgrade your amount of provisioned Maia Units, select a plan of type **Provisioned** from your resources overview and click **Edit Resource**. This opens the page for your current resource, showing the amount of allotted Cloud Tokens. Decrease the amount of Cloud Tokens to downgrade your provisioned Maia Units, then click **Save Changes** to confirm.
 
 {{% alert color="info" %}}
 Your subscription plan operates on a monthly bundle cycle. When you downgrade, the new plan takes effect at the start of the new month. Until that date, you can still use the resource, and the status in the overview reads **Plan Downgrade Scheduled**.
@@ -86,7 +86,7 @@ Your subscription plan operates on a monthly bundle cycle. When you downgrade, t
 To deprovision, select a plan of type **Provisioned** from your resources overview and click **Deprovision**. A confirmation pop-up window appears. Click **Deprovision** to confirm.
 
 {{% alert color="info" %}}
-Your subscription plan operates on a monthly bundle cycle. When you deprovision a resource, the deprovisioning takes effect at the end of the current subscription month. Until that date, you can still use the resource and status in the overview reads **Plan Deprovision Scheduled**.
+Your subscription plan operates on a monthly bundle cycle. When you deprovision a resource, the deprovisioning takes effect at the end of the current subscription month. Until that date, you can still use the resource and the status in the overview reads **Plan Deprovision Scheduled**.
 {{% /alert %}}
 
 ## Audit Logs

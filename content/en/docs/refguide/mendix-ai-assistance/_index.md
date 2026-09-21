@@ -58,8 +58,8 @@ Guidance:
 * **Maia Chat** – a built-in chat interface powered by Generative AI in Studio Pro. It answers questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/). 
 * **Maia Learn** – helps you to quickly learn Mendix core concepts and get started with Studio Pro. For more information, see [Maia Learn](/refguide/maia-learn/).
 * **Maia Explain** – helps you easily understand a microflow or a nanoflow. It explains the general purpose of the logic and highlights specific technical details to help you understand the logic further. For more information, see [Maia Explain](/refguide/maia-explain/).
-* **Maia Agent Skills** – lets you define modular, reusable instructions that extend Maia with domain-specific knowledge. Maia applies them automatically whenever relevant, eliminating the need to repeat the same context across conversations. For more information, see [Maia Agent Skills](/refguide/maia-agent-skills/).
-* **Maia Agent Instructions** – allows you to define project- or module-level instructions (AGENTS.md) that steer agent behavior. You can use them to set common context for your prompts, such as company conventions or environment restrictions. For more information, see [Maia Agent Instructions](/refguide/maia-instructions/).
+* **Agent Skills** – lets you define modular, reusable instructions that extend Maia with domain-specific knowledge. Maia applies them automatically whenever relevant, eliminating the need to repeat the same context across conversations. For more information, see [Maia Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/).
+* **Agent Instructions** – allows you to define project- or module-level instructions (AGENTS.md) that steer agent behavior. You can use them to set common context for your prompts, such as company conventions or environment restrictions. For more information, see [Maia Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/).
 
 Recommenders:
 

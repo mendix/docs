@@ -1,5 +1,5 @@
 ---
-title: "Maia Agent Skills"
+title: "Maia Agent Skills (SKILLS.md)"
 linktitle: "Agent Skills"
 url: /refguide/maia-agent-skills/
 weight: 95
@@ -12,10 +12,10 @@ description: "Describes how to create and manage agent skills that equip Maia wi
 {{% alert color="info" %}}
 This feature was released as part of [Maia Make](/refguide/maia-make/) capabilities in Studio Pro 11.11.
 
-To use Maia Agent Skills, an internet connection and signing in to Studio Pro are required.
+To use Agent Skills, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
-Maia Agent Skills are modular, reusable instructions that extend Maia's capabilities with domain-specific knowledge, giving it the context, workflows, and guidance it needs to work the way your team works.
+Agent Skills are modular, reusable instructions that extend Maia's capabilities with domain-specific knowledge, giving it the context, workflows, and guidance it needs to work the way your team works.
 
 Instead of typing the same context into every chat, you define agent skills once, and Maia applies them automatically whenever relevant. This eliminates the need to repeat the same guidance across conversations. 
 
@@ -32,7 +32,7 @@ Agents skills are not supported for Add-on and Solution modules.
 
 For guidance on writing effective skills, see [Best Practices for Skill Creators](https://agentskills.io/skill-creation/best-practices) and [Optimizing Skill Descriptions](https://agentskills.io/skill-creation/optimizing-descriptions) in the [Agent Skills documentation](https://agentskills.io/).
 
-## Creating and Editing Skills with Maia {#maia-managed-skills}
+## Writing Agent Skills with Maia {#maia-managed-skills}
 
 Since Studio Pro 11.15, you do not need to manually create or edit `SKILL.md` files to manage your agent skills. Instead, you can ask Maia, directly in the chat, to create a new skill or edit an existing one, for both project-level skills and module-level skills.
 

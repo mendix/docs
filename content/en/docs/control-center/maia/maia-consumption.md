@@ -24,11 +24,17 @@ The overview page provides a centralized view of all Maia Units currently provis
 
 The **Usage** section provides an overview of each user’s usage for the current month. It also enables you to manage budgets by setting usage caps for individual users.
 
+{{< figure src="/attachments/control-center/maia/maia-consumption-users.png" alt="" >}}
+
 To manage an individual user’s usage limit:
 
 1. On the user line, click **Manage**.
 2. Enter the custom limit.
 3. Click **Save Changes**.
+
+{{% alert type="info" %}}
+The **Manage** button for users in the **Usage** section is disabled when the company uses only free resources. To enable this button and manage a user's Maia Unit limit, the company must have at least one provisioned resource.
+{{% /alert %}}
 
 {{< figure src="/attachments/control-center/maia/user-limit-manage.png" alt="" width="450" >}}
 

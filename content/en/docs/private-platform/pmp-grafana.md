@@ -281,6 +281,22 @@ After configuring Private Mendix Platform, verify that it can retrieve data by n
 
 {{< figure src="/attachments/private-platform/pmp-grafana5.png" class="no-border" >}}
 
+You can filter the results by the following properties:
+
+* **Container** - The container instance.
+* **Retrieve last** - The number of results to retrieve.
+* **Timespan** - The date and time range to display.
+* **Filter by Log Level** - The highest log level to display. The following log levels are available:
+
+    * **Trace** - Provides highly detailed information. Trace level messages are written only to logs.
+    * **Debug** - Provides detailed information, typically of interest only when diagnosing problems.
+    * **Info** - Confirms that things are working as expected.
+    * **Warning** - Indicates that something unexpected happened or warns about an upcoming problem (for example, *disk space low*). The application is still working as expected.
+    * **Error** - Indicates a serious problem that prevented the application from performing some function.
+    * **Critical** - Indicates that a serious error has occurred; the application may be unable to continue running.
+
+* **Keyword** - A keyword to use for filtering.
+
 ## Grafana APIs Details
 
 Private Mendix Platform uses the following Grafana endpoints:

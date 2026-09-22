@@ -19,21 +19,23 @@ Follow these steps to have Maia create a project plan based on a starter app:
 
 3. In the **Project Starting Point** section, select the radio button corresponding to the way in which you want to start your project. You can choose between the following:
 
-    * Use the latest LTS version.
-    * Use the latest version.
-    * Use a starter app with a predefined Studio Pro version.
+    * **Use the latest LTS version**
+    * **Use the latest version**
+    * **Use a starter app with a predefined Studio Pro version**
 
     Selecting an option opens the list of starter apps corresponding to that version.
-<!-- Click **Select Starter App**. The **Select Starter App** window is displayed, listing available starter apps. You can search by name or filter by app type (Company-Approved, Public, Private). 
+
+4. Click **Select Starter App**. The **Select Starter App** window is displayed, listing the available starter apps that correspond to the option you selected at the previous step.    
+    You can search by name or filter by app type (Company-Approved, Public, Private). 
    
-   If a starter app is not compatible with the minimum Studio Pro version required to use this feature, which is 11.11.0, a label is displayed. You can hover over the app's card and click **Request Upgrade**. This takes you to the component's Marketplace page, where you can upgrade as necessary. does this still apply? -->  
+   If a starter app is not compatible with the minimum Studio Pro version required to use this feature, which is 11.11.0, a label is displayed. You can hover over the app's card and click **Request Upgrade**. This takes you to the component's Marketplace page, where you can upgrade as necessary. 
 
-4. Hover over the card of the app that you want to use and click **Select**. You are taken back to the **Plan & Build with Maia** window, where the selected starter app is displayed. If needed, you can remove the app from here and start over.
+5. Hover over the card of the app that you want to use and click **Select**. You are taken back to the **Plan & Build with Maia** window, where the selected starter app is displayed. If needed, you can remove the app from here and start over.
 
-5. Click **Generate Plan**. This starts the project creation flow. The starter app that's used for the project is displayed in the top bar of the window, just under the project's name.
+6. Click **Generate Plan**. This starts the project creation flow. The starter app that's used for the project is displayed in the top bar of the window, just under the project's name.
 
-6. Define the project scope as described in [Defining the Scope](/developerportal/maia-plan/define-scope/). With starter apps, Maia brings in all existing information to the **Define Scope** window.
+7. Define the project scope as described in [Defining the Scope](/developerportal/maia-plan/define-scope/). With starter apps, Maia brings in all existing information to the **Define Scope** window.
 
-7. Turn the project scope into a concrete plan, as described in [Generating the Plan](/developerportal/maia-plan/generate-plan/). The side panel displays the resources which are being used from the starter app.
+8. Turn the project scope into a concrete plan, as described in [Generating the Plan](/developerportal/maia-plan/generate-plan/). The side panel displays the resources which are being used from the starter app.
 
-8. Select your project management tool and send your project plan to Maia Make, as described in [Starting the Development](/developerportal/maia-plan/start-development/).
+9. Select your project management tool and send your project plan to Maia Make, as described in [Starting the Development](/developerportal/maia-plan/start-development/).

@@ -9,6 +9,8 @@ description: "Native Template 19"
 
 **Release date: Sep 16, 2026**
 
+### Improvements
+
 - We migrated iOS to the UIKit scene delegate lifecycle.
 
 ## 19.1.5

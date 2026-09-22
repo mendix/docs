@@ -220,8 +220,8 @@ Draft pipelines allow you to configure a targeted override for testing or app-sp
 
 When a build or deployment is triggered, Private Mendix Platform selects the pipeline as follows:
 
-* Build — If the app has a draft pipeline associated with it, that draft is used. Otherwise the main build pipeline is used.
-* Deploy — If the app has a draft pipeline that includes the target DTAP environment, that draft is used. Otherwise the main pipeline for that environment is used.
+* Build - If the app has a draft pipeline associated with it, that draft is used. Otherwise the main build pipeline is used.
+* Deploy - If the app has a draft pipeline that includes the target DTAP environment, that draft is used. Otherwise the main pipeline for that environment is used.
 
 Deploy draft pipelines are scoped per environment. For example, a draft for *MyApp* covering Test and Acceptance is used for those two environments only. A deployment of *MyApp* to Production still uses the main Production pipeline.
 

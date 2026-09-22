@@ -1,8 +1,8 @@
-openapi: 3.0.1
+openapi: 3.0.4
 info:
   title: Build Service v1
   description: "Provide services for build, retrive, lock, unlock and download app packages and sbom files. \r\n"
-  version: 1.0.0
+  version: 1.1.0
 servers:
   - url: https://pmp-demo.privateplatform.mendix.com/buildservice/v1
 paths:
@@ -56,6 +56,16 @@ paths:
           in: path
           description: App Id
           required: true
+          schema:
+            type: string
+        - name: branch
+          in: query
+          description: Branch name for filter packages. If not provided, all branches of packages will be returned.
+          schema:
+            type: string
+        - name: revision
+          in: query
+          description: Revision id for filter packages. If not provided, all revisions of packages will be returned.
           schema:
             type: string
       responses:
@@ -357,11 +367,19 @@ components:
           type: string
           description: The user who created the package
           example: muhong00
-        dateCreated:
+        createdTime:
           type: string
           format: date-time
           description: The date and time when the package was created
           example: 2026-05-28T03:19:39.244Z
+        pipelineTool:
+          type: string
+          description: The pipeline tool used to create app package
+          example: "216906236208.dkr.ecr.eu-central-1.amazonaws.com/pmp-pipeline-tools:0.9.12"
+        runtimeBaseImage:
+          type: string
+          description: The base image used to create app package
+          example: "private-cloud.registry.mendix.com/app-building-blocks:runtime-10.24.13.86719"
 
     error:
       type: object
@@ -482,7 +500,9 @@ components:
                 status: Success
                 locked: false
                 createdBy: muhong00
-                dateCreated: 2026-05-28T03:19:39.244Z
+                createdTime: 2026-05-28T03:19:39.244Z
+                pipelineTool: "216906236208.dkr.ecr.eu-central-1.amazonaws.com/pmp-pipeline-tools:0.9.12"
+                runtimeBaseImage: "private-cloud.registry.mendix.com/app-building-blocks:runtime-10.24.13.86719"
                 
     packages:
       description: App build packages
@@ -504,7 +524,9 @@ components:
                   status: Success
                   locked: true
                   createdBy: muhong00
-                  dateCreated: 2026-01-07T04:35:57.378Z
+                  createdTime: 2026-01-07T04:35:57.378Z
+                  pipelineTool: "216906236208.dkr.ecr.eu-central-1.amazonaws.com/pmp-pipeline-tools:0.9.12"
+                  runtimeBaseImage: "private-cloud.registry.mendix.com/app-building-blocks:runtime-10.24.13.86719"
                 - packageId: 74d38f4c-947b-46c0-8e5f-b680ffe97395
                   packageName: mh-local-ui102413-1.0.1.6f995268.mda
                   branch: main
@@ -514,7 +536,9 @@ components:
                   status: Success
                   locked: false
                   createdBy: muhong00
-                  dateCreated: 2026-05-28T03:19:39.244Z
+                  createdTime: 2026-05-28T03:19:39.244Z
+                  pipelineTool: "216906236208.dkr.ecr.eu-central-1.amazonaws.com/pmp-pipeline-tools:0.9.12"
+                  runtimeBaseImage: "private-cloud.registry.mendix.com/app-building-blocks:runtime-10.24.13.86719"
 
     BuildResponse:
       description: App build job

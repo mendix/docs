@@ -186,21 +186,25 @@ To create applications and collaborate, configure the connection to your version
 
 Settings in this section allow you to configure your CI/CD capabilities and Build pipeline.
 
-##### Build Method
+##### Build Utility
 
 Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Jenkins, [AzureDevops](/private-mendix-platform/configure-azure/) and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a [custom template](/private-mendix-platform/reference-guide/admin/company/#manual-deployment) for your CI/CD capabilities.
 
 ##### Build Steps {#build-steps}
 
- By default, the Build pipeline consists of the following steps:
+In the **Build Steps** tab, you can configure the steps that constitute the pipeline.
+
+By default, the Build pipeline consists of the following steps:
 
 **Trigger Pipeline** > **Prepare Build** > **Start Build** > **Save Build Artifact** > **Complete Build**
 
 For Kubernetes CI, you can configure the pipeline to include additional steps after the pipeline is triggered, and before the build is completed. These additional steps can include webhook and REST calls, or manual approval for the build.
 
+The **Pipeline Type** section allows you to designate a pipeline as a main pipeline for all your apps, as well as create draft pipelines which you can use to test or run specific applications. If you designate a pipeline as **Draft**, you can specify the applications which should use the pipeline, as well as the DTAP purpose (that is, whether it is used for Acceptance, Deployment, or Testing).
+
 #### Deployment {#deployment}
 
-Settings in this section allow you to configure your Deployment pipeline.
+Settings in this section allow you to configure your Deployment pipelines.
 
 ##### Deployment Method
 
@@ -208,17 +212,25 @@ Private Mendix Platform uses Mendix on Kubernetes deployment options. For more i
 
 ##### Deployment Steps {#deploy-steps}
 
- By default, the Deploy pipeline consists of the following steps:
+In the **Deployment Steps** tab, you can configure the steps that constitute the pipeline.
 
-**Trigger Pipeline** > **Get Deployment Artifact** > **Deploy App** > **Complete Pipeline**
+By default, the Deploy pipeline consists of the following steps:
+
+**Trigger Pipeline** > **Get Deployment Artifact** > **Deploy App** > **Complete Deployment**
 
 You can configure the pipeline to include additional steps after each default step. These additional steps can include webhook and REST calls, or manual approval for the build.
 
 You can also configure the pipeline to take into consideration the type of changes. Selecting the **Changes/updates to an app environment** check box allows you to bypass the deployment steps and instead simply restart the app in case of changes to the app environment (such as the app constants or the number of replicas).
 
+The **Pipeline Type** section allows you to designate a pipeline as a main pipeline for all your apps, as well as create draft pipelines which you can use to test or run specific applications. If you designate a pipeline as **Draft**, you can specify the applications which should use the pipeline, as well as the DTAP purpose (that is, whether it is used for Acceptance, Deployment, or Testing).
+
 ##### Security
 
 To help fulfill compliance requirements related to account control, Private Mendix Platform now supports disabling the default MxAdmin account for apps at deployment. This setting effectively removes the ability to access the app using the default system admin account, and is only recommended when combined with default use of an SSO module to avoid lockout.
+
+##### Settings
+
+In the **Settings** tab, you can customize the resource presets by specifying each preset's request and limit values for CPU and memory.
 
 ### Advanced
 

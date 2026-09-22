@@ -27,7 +27,7 @@ The Element Selector API provides two main methods:
 * `selectDocument()` – opens a dialog to select a document from your application
 * `selectEntity()` – opens a dialog to select an entity from your domain model
 
-The element selector is available only when a project is open.
+The element selector will throw when trying to select an element before the project is fully open and initialized.
 
 ## Selecting Documents
 

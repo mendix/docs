@@ -333,7 +333,7 @@ Select this option to use a custom AI provider for Maia.
 
 This setting allows you to set the beta version as the default editor.
 
-### Microflow Editor {#microflow-editor}
+### Microflow, Nanoflow, and Rule Editor {#microflow-nanoflow-rule-editor}
 
 Select this option to allow rendering sequence flows as orthogonal (right-angled) lines in the microflow, nanoflow, and rule editors. When enabled, you can convert flow types between curved and orthogonal through the context menu. For more information, see the [Flow Type](/refguide/sequence-flow/#flow-type) section in *Sequence Flow*.
 

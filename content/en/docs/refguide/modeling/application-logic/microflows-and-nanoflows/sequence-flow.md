@@ -37,7 +37,7 @@ To enable orthogonal flows, do the following:
 
 1. In Studio Pro, open **Edit** > [Preferences](/refguide/preferences-dialog/).
 2. Go to the **New features** tab.
-3. Under **Microflow, Nanoflow, and Rule editor**, enable orthogonal flows.
+3. Under [Microflow, Nanoflow, and Rule editor](/refguide/preferences-dialog/#microflow-nanoflow-rule-editor), enable orthogonal flows.
 
 ### Converting Flows {#convert}
 

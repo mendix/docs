@@ -200,7 +200,50 @@ By default, the Build pipeline consists of the following steps:
 
 For Kubernetes CI, you can configure the pipeline to include additional steps after the pipeline is triggered, and before the build is completed. These additional steps can include webhook and REST calls, or manual approval for the build.
 
-The **Pipeline Type** section allows you to designate a pipeline as a main pipeline for all your apps, as well as create draft pipelines which you can use to test or run specific applications. If you designate a pipeline as **Draft**, you can specify the applications which should use the pipeline, as well as the DTAP purpose (that is, whether it is used for Acceptance, Deployment, or Testing).
+The **Pipeline Type** section allows you to designate a pipeline as a main pipeline for all your apps, as well as create draft pipelines which you can use to test or run specific applications. If you designate a pipeline as **Draft**, you can specify the applications which should use the pipeline. For more information about configuring the pipelines, see [Configuring the Pipeline Type](#configuring-pipeline-type).
+
+##### Configuring the Pipeline Type {#configuring-pipeline-type}
+
+Build and Deploy pipelines can be marked as Main or Draft. This lets you test pipeline changes on a single app without disrupting builds and deployments for everything else.
+
+Administrators configuring build templates can see the application names for template selection purposes. Visibility of applications in this dropdown does not grant access to App Management functionality or application administration capabilities.
+
+Managing pipelines and assigning apps requires both the Build and App Management permissions on your role. With both permissions, the **Apps** dropdown lists every app you have access to, and only those apps. Without App Management, the **Apps** dropdown is unavailable and you cannot assign an app to a draft pipeline.
+
+Without Build, you cannot create or edit build pipelines. With neither, pipeline management is not available.
+
+Permission changes take effect immediately. If App Management is removed from your role, you can no longer edit the pipeline or see its app in the dropdown.
+
+Main pipelines are the default pipelines for all apps. They apply to all apps in the **Apps** column. You can have only one main Build pipeline. For Deploy pipelines, you can have one main pipeline for each DTAP environment.
+
+Draft pipelines allow you to configure a targeted override for testing or app-specific needs. They apply to one specific app, or no app. You can have any number of draft pipelines, as long as their scopes do not overlap. 
+
+When a build or deployment is triggered, Private Mendix Platform selects the pipeline as follows:
+
+* Build — If the app has a draft pipeline associated with it, that draft is used. Otherwise the main build pipeline is used.
+* Deploy — If the app has a draft pipeline that includes the target DTAP environment, that draft is used. Otherwise the main pipeline for that environment is used.
+
+Deploy draft pipelines are scoped per environment. For example, a draft for *MyApp* covering Test and Acceptance is used for those two environments only. A deployment of *MyApp* to Production still uses the main Production pipeline.
+
+If no main pipeline is configured, builds and deployments fail with an error.
+
+To create and configure pipelines, perform the following steps:
+
+1. To designate a main pipeline, toggle the setting to **On**. The **Apps** dropdown is removed and the pipeline shows all apps.
+2. To designate a pipeline as draft, toggle the setting to **Off**, and then perform the following steps:
+
+    * Select an app project in the **Apps** dropdown.
+    * For deploy pipelines, select one or more DTAP environments.
+
+    Options already used by another draft pipeline are not available in the dropdown.
+
+Removing a draft pipeline's app association returns that app to the main pipeline for future builds and deployments.
+
+An app can have only one draft Build pipeline. When adding a second draft Build pipeline, you must confirm that you want to move the app from the previous pipeline to current pipeline.
+
+Only one main Build and one main Deploy pipeline must exist at any time. When you toggle a draft pipeline to main, the new pipeline becomes the main pipeline for all apps, and the previous pipeline becomes a draft with no app association. If you toggle a main pipeline to draft, you must select the new main pipeline from the available drafts. If no draft pipeline exist, the system shows a warning state and builds and deployments cannot run until you designate a main pipeline. It is also impossible to delete the main pipeline without selecting another main pipeline first.
+
+You can duplicate your pipelines. All configured steps of a duplicated pipeline are copied into a new pipeline that always starts as a draft, with an empty name, no app association, and the placeholder name **New Pipeline**. You must specify a name before you can save your changes.
 
 #### Deployment {#deployment}
 
@@ -222,7 +265,7 @@ You can configure the pipeline to include additional steps after each default st
 
 You can also configure the pipeline to take into consideration the type of changes. Selecting the **Changes/updates to an app environment** check box allows you to bypass the deployment steps and instead simply restart the app in case of changes to the app environment (such as the app constants or the number of replicas).
 
-The **Pipeline Type** section allows you to designate a pipeline as a main pipeline for all your apps, as well as create draft pipelines which you can use to test or run specific applications. If you designate a pipeline as **Draft**, you can specify the applications which should use the pipeline, as well as the DTAP purpose (that is, whether it is used for Acceptance, Deployment, or Testing).
+The **Pipeline Type** section allows you to designate a pipeline as a main pipeline for all your apps, as well as create draft pipelines which you can use to test or run specific applications. If you designate a pipeline as **Draft**, you can specify the applications which should use the pipeline, as well as the DTAP purpose (that is, whether it is used for Acceptance, Deployment, or Testing). For more information about configuring the pipelines, see [Configuring the Pipeline Type](#configuring-pipeline-type).
 
 ##### Security
 

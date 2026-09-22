@@ -54,6 +54,17 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
 
     {{< figure src="/attachments/private-platform/pmp-upgrade2.png" class="no-border" >}}
 
+### Upgrading to Private Mendix Platform 2.8.1 and Newer
+
+Private Mendix Platform versions older than 2.8.1 used a single, unnamed pipeline for all apps. Version 2.8.1 adds the option to designate multiple draft pipelines, in addition to the main pipeline. For more information, see [Configuring the Pipeline Type](/private-mendix-platform/reference-guide/admin/system/#configuring-pipeline-type).
+
+When upgrading to Private Mendix Platform 2.8.1 or newer, the following changes are made automatically:
+
+* Pipelines must now have names, so the existing pipeline is given the placeholder name **(No name)**.
+* The existing pipeline becomes the main pipeline for all apps. Apps continue to build and deploy through it with no interruption.
+
+You can rename the pipeline at any time (for example to **Production-Build**). You can also create draft pipelines for individual apps while MAIN continues to serve everything else. Builds or deployments already in progress during the upgrade either complete or fail gracefully and can be re-triggered.
+
 ### Rolling Back An Upgrade {#rollback}
 
 To restore the Private Mendix Platform database to version 1.24 LTS and downgrade Private Mendix Platform from version 2.8 LTS to 1.24 LTS, perform the following steps:

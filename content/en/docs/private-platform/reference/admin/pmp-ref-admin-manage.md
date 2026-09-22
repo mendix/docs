@@ -416,7 +416,7 @@ To set up a webhook, do the following:
     * **Available Events** – This is the event (or events) that triggers the webhook to send information to the endpoint. You can activate or deactivate specific event types in the **Event Management** tab of the **Webhooks** page.
     * **Custom Headers** – This is a key-value pair that is sent as an HTTP header to the endpoint. You can configure a predefined custom header in the **Preset Headers** tab of the **Webhooks** page.
 
-You can edit or delete an existing webhook by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the **Action** column for the webhook you want to change, and then selecting **Edit Webhook** or **Delete Webhook**.
+You can edit or delete an existing webhook by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the **Action** column for the webhook you want to change, and then selecting **Edit** or **Delete**.
 
 ##### Webhook Headers
 

@@ -27,7 +27,7 @@ When designing an application, you can specify access rules on an entity (for mo
 While the data that is viewable and editable to each role is application-specific, the following best practices are key:
 
 * Do not make attributes determined by the system (like the status of an order) writable
-* If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is a **System.User** object created on the fly)—you can do this using [Path to User](/refguide/access-rules/#path-to-user) in your entity *Access Rules*
+* Mendix recommends that you do not allow anonymous users to create or write to persistable objects. In general, anonymous users should always use non-persistable entities. Although you can constrain persistable objects to an anonymous owner (an anonymous user is a **System.User** object created on the fly) using [Path to User](/refguide/access-rules/#path-to-user) in your entity *Access Rules*, this is not advised.
 * Set **Default rights for new members** to **None** so you have to think about who has access to each attribute that is added to an entity
 * Implement XPath constraints as entity access rules to limit the data access.
 * Do not use constraints on widgets in pages as a security measure, but filter out irrelevant data for the context of the page

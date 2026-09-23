@@ -72,7 +72,7 @@ The user role assigned to the Administrator. For more information, see [User Rol
 Default: *Administrator*
 
 {{% alert color="info" %}}
-The Administrator user role is always created and has the System.Administrator module role by default. The Administrator user role can also manage users of your application as it has all [manageable roles](/refguide/user-roles/#user-management). 
+The Administrator user role is always present in a starter app and has the System.Administrator module role by default. An administrator user (MxAdmin) is also created in the app. The Administrator user role can also manage users of your application as it has all [manageable roles](/refguide/user-roles/#user-management).  The Administrator role can be changed or deleted like any other user role once your app has been created.
 
 For Free Apps, the user that created the application automatically also defaults to having the Administrator role so they can use it to manage the users in that environment.
 

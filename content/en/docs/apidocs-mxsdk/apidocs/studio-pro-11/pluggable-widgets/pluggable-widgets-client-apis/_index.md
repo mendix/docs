@@ -515,7 +515,7 @@ export function MyWidget({ texts }: MyWidgetContainerProps) {
 ```
 
 {{% alert color="info" %}}
-SystemTextsValue was introduced in Mendix [11.15](/releasenotes/studio-pro/11.15/).
+`SystemTextsValue` was introduced in Mendix [11.15](/releasenotes/studio-pro/11.15/).
 {{% /alert %}}
 
 {{% alert color="info" %}}

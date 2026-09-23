@@ -113,6 +113,35 @@ Email addresses are automatically redacted from log entries before they are sent
 
 Also, certain secret patterns, such as database connection strings and storage endpoint URLs logged by the Mendix Runtime are always redacted regardless of this setting and cannot be turned off.
 
+### Access Logs{#access-logs}
+
+You can include HTTP access logs in the telemetry sent to your backend. Access logs are disabled by default. To enable them, set `MX_OTEL_ACCESS_LOGS_ENABLED` to `true`.
+
+| Variable | Default | Description |
+|---|---|---|
+| `MX_OTEL_ACCESS_LOGS_ENABLED` | `false` | When `true`, HTTP access logs are exported to your backend along with the other telemetry. Set to `false` to exclude them. |
+
+Access logs are exported through the logs signal, so a logs exporter must be active. For more information, see the [Per-Signal Configuration](#per-signal) section.
+
+### Metadata for Logs
+
+The following metadata is automatically attached to logs as attributes.
+The following metadata is sent on both application and access logs:
+
+* `pod_name` – name of the application pod
+* `environment_id` – unique identifier of the environment
+* `log_type` – type of the log, which can be `mx.applicationlogs` or `mx.accesslogs`
+* `k8s.container.name` – name of the container the log originates from
+
+The following metadata is sent on access logs only:
+
+* `hostname` – name of the application host
+* `application_name` – default application name, retrieved from the domain name
+* `runtime_version` – version of the Mendix Runtime
+* `model_version` – model version of the Mendix Runtime
+
+You can filter the data by these fields.
+
 ### Prometheus Remote Write (Metrics Only){#prometheus-remote-write}
 
 If your metrics backend uses Prometheus Remote Write (for example, Grafana Mimir, Thanos, or VictoriaMetrics), you can send metrics via PRW while still sending traces and logs via OTLP.

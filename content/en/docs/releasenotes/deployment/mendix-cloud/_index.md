@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### New Features
 
-* The [OpenTelemetry integration](/developerportal/operate/opentelemetry/) now supports HTTP access logs at the OpenTelemetry Collector.
+* [OpenTelemetry integration](/developerportal/operate/opentelemetry/) now supports HTTP access logs through the OpenTelemetry Collector.
 
 ## August 2026
 

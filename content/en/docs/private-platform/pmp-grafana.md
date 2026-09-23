@@ -381,5 +381,3 @@ The following sections list the metrics and labels used by each graph.
 | Metric Name | Required Labels |
 | --- | --- |
 | `container_network_transmit_bytes_total`; `container_network_receive_bytes_total`; `jetty_connections_bytes_in_bytes_sum`; `jetty_connections_bytes_out_bytes_sum` | `namespace`; `pod` |
-
-For more information about Grafana and Prometheus API integration, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).

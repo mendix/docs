@@ -73,7 +73,7 @@ Custom date formats, as well as date handling in general, are tricky technologie
         * `75` {{< icon name="arrow-narrow-right" >}} `2075`
         * `76` {{< icon name="arrow-narrow-right" >}} `1976`
         * `97` {{< icon name="arrow-narrow-right" >}} `1997`
-* Even though a date picker with a custom date format is editable, the calendar drop-down button will only be shown if the custom format represents a full date (that is, the year [`y`-`yyyy`], month [`M`-`MMMM`], and day of month [`d`-`dd`] tokens are all present in the custom format).
+* Even though a date picker with a custom date format is editable, the calendar drop-down button will only be shown if the custom format represents a full date (that is, the year [`y`–`yyyy`], month [`M`–`MMMM`], and day of month [`d`–`dd`] tokens are all present in the custom format).
 
 {{% snippet file="/static/_includes/refguide/custom-date-format-tokens.md" %}}
 

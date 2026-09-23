@@ -14,6 +14,14 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
   
+## September 2026
+
+### September 24, 2026
+
+#### New Features
+
+* The [OpenTelemetry integration](/developerportal/operate/opentelemetry/) now supports HTTP access logs at the OpenTelemetry Collector.
+
 ## August 2026
 
 ### August 31, 2026

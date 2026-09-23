@@ -12,6 +12,26 @@ These release notes cover changes made to the Private Mendix Platform Download P
 
 ## 2026
 
+### September 25, 2026
+
+#### Improvements
+
+##### Artifact Management Enhancements
+
+* To streamline downloading artifacts, you can now download charts, images and Helm file installer files from the **Artifact Management** page instead of the **Add-on** option on the **Releases** page. The **Add-on** option is now removed.
+* To make finding artifacts easier, we have added a new column to **Artifact Management** for filtering by artifact type.
+* We have removed the *Images* folder from the installer package available on the **Releases** page. All images are now available in **Artifact Management** instead.
+
+##### New APIs for Direct Release Downloads
+
+We have introduced new APIs to allow directly downloading the Private Mendix Platform release versions release manifests. For more information, see [Download Package API](/private-mendix-platform/download-portal/#download-api).
+
+#### Export Selection
+
+On the **Artifact Management** page, clicking **Select All** only selects all artifacts on the current page. As a workaround, select the artifacts page by page.
+
+We are aware of this limitation and are working on a fix.
+
 ### August 27, 2026
 
 #### Fixes

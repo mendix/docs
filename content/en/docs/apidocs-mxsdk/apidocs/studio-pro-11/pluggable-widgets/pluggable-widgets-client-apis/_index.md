@@ -485,7 +485,7 @@ if (selection.type === "Single") {
 
 ### SystemTextsValue {#systemtexts}
 
-The `SystemTextsValue` exposes the `translate()` function which allows widgets to use [system texts](/refguide/system-texts/). When a widget declares that it uses system texts, the value is available under the `texts` prop.
+`SystemTextsValue` exposes the `translate()` function, which allows widgets to use [system texts](/refguide/system-texts/). When a widget declares that it uses system texts, the value is available under the `texts` prop.
 
 ```ts
 interface SystemTextsValue {
@@ -526,7 +526,7 @@ Currently, you can only provide default translations in English (`en_US`) and Du
 
 System texts may be parameterized to allow for dynamic translations.
 
-Parameters are _positional_ and are passed as an _array of strings_ to `translate()`.
+Parameters are positional, and are passed as an array of strings to `translate()`.
 
 ```xml
 <systemProperty key="Text">
@@ -554,7 +554,7 @@ Widgets written in TypeScript report missing parameters for texts defined by the
 
 By declaring external texts, a widget can use texts from other namespaces. Each system text belongs to a namespace, and texts defined by a widget have the widget's ID as their namespace.
 
-To use a text from widget A, widget B must declare it as an external text with the ID of widget A as the namespace.
+The example below uses **widget A** and **widget B** to illustrate. To use a text from widget A, widget B must declare it as an external text with the ID of widget A as the namespace:
 
 ```xml {hl_lines=6}
 <!-- widget id: example.widgetb.widgetB -->
@@ -579,7 +579,7 @@ translate("example.widgeta.widgetA", "import_summary", [ "4", "2" ]) // example.
 translate("mxui.common", "true") // mxui.common.true
 ```
 
-Parameters may be passed to external texts. Note that there is no type checking for the parameters of external texts.
+Parameters may be passed to external texts. Please note there is no type checking for the parameters of external texts.
 
 ## Exposed Modules
 

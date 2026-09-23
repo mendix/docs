@@ -33,7 +33,7 @@ You can perform the installation by using one of the following methods:
 
 * [With GUI](/private-mendix-platform/interactive-installation/), where you manually install Private Mendix Platform components
 * [With Helmfile](/private-mendix-platform/helmfile-installation/), where you use Helmfile to automatically install Private Mendix Platform components.
-* [Air-Gapped](/private-mendix-platform/airgapped-installation/), where you install Private Mendix Platform for an air-gapped environment.
+* [Air-Gapped (for Private Mendix Platform 2.8.0)](/private-mendix-platform/airgapped-installation/), where you install Private Mendix Platform 2.8.0 for an air-gapped environment.
 
 #### Installation Order
 

@@ -1,5 +1,5 @@
 ---
-title: "Install Private Mendix Platform for Air-Gapped Environments"
+title: "Install Private Mendix Platform 2.8.0 for Air-Gapped Environments"
 linktitle: "Air-Gapped Installation"
 url: /private-mendix-platform/air-gapped-installation/
 description: "Documents the installation process for Private Mendix Platform for air-gapped environments."
@@ -120,9 +120,37 @@ To install Private Mendix in an air-gapped environment, you must provision a lis
     * [Aip for Linux (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.1.0-linux-amd64.tar.gz)
     * [Aip for Linux (arm64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.1.0-linux-arm64.tar.gz)
 
-Export image list.
+2. Export the image list.
 
-Access PMP download portal → Image Management → Choose Private Mendix Platform Version → Filter Category and choose the images → Export Selection will export the list to a file. File name is like export-images-v2.7.0.json
+    1. In the [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/), go to **Image Management** and select a Private Mendix Platform version.
+    2. Filter by **Category** and select the images
+    3. Click **Export Selection** to export the list to a file named *export-images-vx.x.x.json*, where `x.x.x` corresponds to a Private Mendix Platform version.
+
+2. In the Mendix Portal, create a Personal Access Token (PAT) for private images that require a PAT for authentication. 
+
+    1. Sign in to Mendix and go to **User Settings > Developer Settings > Personal Access Token**
+    2. Click **New Token**.
+    3. Under **OCI registry**, select the **mx:registry:access** as scope.
+ 
+3. Fetch the images.
+
+    1. Log in to the OCI registry for Oras by using the following command: `oras login -u pat -p <token>  registry.mendix.com`.
+    2. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, ` oras pull registry.mendix.com/private-platform/installer-helmfile:0.2.1`.
+    3. Unzip the downloaded file by using the following command: `tar -xvf helmfile-config.tar.gz`.
+    4. Test it by using the following command: `helmfile --file helmfile.d/helmfile.yaml --state-values-file <valuefile> apply`.
+
+4. Pull the charts.
+
+    1. Log in to the OCI registry for Helm by using the following command: `helm registry login -u pat -p ${YOUR_PAT} registry.mendix.com`.
+    2. Use the `helm pull` command to download the Helmfile from the OCI registry, for example:
+
+    ```text
+    helm pull oci://registry.mendix.com/private-cloud/charts/mx-privatecloud-operator-installer --version 0.2.36
+    helm install operator mx-privatecloud-operator-installer-0.2.36.tgz -f ./Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml --namespace pmp-oci-test
+    ```
+
+    where `/Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml` is the yaml file for Operator configuration. You can find this yaml file among the example files in the installer package.
+
 
 Create PAT
 

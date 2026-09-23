@@ -11,7 +11,7 @@ weight: 30
 To automate the declarative installation of Private Mendix Platform, you can now use Helm and Helmfile in order to automate the declarative installation of Private Mendix Platform. In this way, you can automatically install Private Mendix Platform components. For other installation types, see the following topics:
 
 * [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/)
-* [Install Private Mendix Platform for Air-Gapped Environments](/private-mendix-platform/air-gapped-installation/)
+* [Install Private Mendix Platform 2.8.0 for Air-Gapped Environments](/private-mendix-platform/air-gapped-installation/)
 
 ### Supported Tasks
 

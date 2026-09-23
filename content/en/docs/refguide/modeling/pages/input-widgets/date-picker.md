@@ -63,36 +63,19 @@ The possible values for date format are shown below:
 
 If you choose **Custom** as the date format (see above), this property determines how the value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
-{{% alert color="info" %}}
-When the custom date format uses `yyyy`, the date picker also accepts a two-digit year (`yy`).
-{{% /alert %}}
+Custom date formats, as well as date handling in general, are tricky technologies with real business ramifications. Be aware of the following behaviors when using this widget:
 
-{{% alert color="info" %}}
-The date picker uses a reference date for parsing partial date inputs (e.g. `mm/dd` or `yy/mm/dd`) into complete date inputs `yyyy/mm/dd`. The reference date is the date from the value already in the field. If the field is empty, the current date is the reference date.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-Starting with Mendix 12, the date picker will always use the current date as the reference date, even if the field already contains a value.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-For two-digit year input, the date picker chooses the century that places the entered year closest to the reference year. If two years are equally close, it chooses the earlier year.
-
-For example, with `2026` as the reference year:
-
-* `24` {{< icon name="arrow-narrow-right" >}} `2024`
-* `75` {{< icon name="arrow-narrow-right" >}} `2075`
-* `76` {{< icon name="arrow-narrow-right" >}} `1976`
-* `97` {{< icon name="arrow-narrow-right" >}} `1997`
-
-If the field previously contained a date in `1970`, entering `24` results in `1924`.
-{{% /alert %}}
+* When the custom date format uses `yyyy`, the date picker also accepts a two-digit year (`yy`).
+*  The date picker uses a reference date for parsing partial date inputs (for example `mm/dd` or `yy/mm/dd`) into complete date inputs `yyyy/mm/dd`. The reference date is the date from the value already in the field. If the field is empty, the current date is the reference date.
+* For two-digit year input, the date picker chooses the century that places the entered year closest to the reference year. If two years are equally close, it chooses the earlier year.
+    * For example, with `2026` as the reference year (if the field previously contained a date in `1970`, entering `24` results in `1924`):
+        * `24` {{< icon name="arrow-narrow-right" >}} `2024`
+        * `75` {{< icon name="arrow-narrow-right" >}} `2075`
+        * `76` {{< icon name="arrow-narrow-right" >}} `1976`
+        * `97` {{< icon name="arrow-narrow-right" >}} `1997`
+* Even though a date picker with a custom date format is editable, the calendar drop-down button will only be shown if the custom format represents a full date (that is, the year [`y`-`yyyy`], month [`M`-`MMMM`], and day of month [`d`-`dd`] tokens are all present in the custom format).
 
 {{% snippet file="/static/_includes/refguide/custom-date-format-tokens.md" %}}
-
-{{% alert color="info" %}}
-Even though a date picker with a custom date format is editable, the calendar drop-down button will only be shown if the custom format represents a full date (that is, the year [`y`-`yyyy`], month [`M`-`MMMM`], and day of month [`d`-`dd`] tokens are all present in the custom format).
-{{% /alert %}}
 
 #### Placeholder Text
 

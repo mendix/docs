@@ -7,15 +7,14 @@ description: "Describes how to use the Tools API in Studio Pro to extend capabil
 
 ## Introduction
 
-This how-to describes how to register a custom tool that Maia can invoke. Once registered, the tool's name, description, and input schema are made available to the LLM agent, which can call the tool's `run` function whenever it decides the tool is relevant to the user's request.
+This how-to describes how to register a custom tool that Maia can invoke. Once registered, the tool's name, description, and input schema are made available to the LLM agent. The LLM agent can call the tool's `run` function whenever it decides the tool is relevant to the user's request.
 
 ## Prerequisites
 
-Before starting this how-to, make sure you have completed the following
-prerequisites:
+Before starting this how-to, make sure you have completed the following prerequisites:
 
-* This how-to uses the results of [Get Started with the Web Extensibility API](https://docs.mendix.com/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one.
-* Familiarize yourself with extension permissions. For more details, refer to [Extension Permissions in Overview Pane](https://docs.mendix.com/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/).
+* This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one.
+* Familiarize yourself with extension permissions. For more details, see [Extension Permissions in Overview Pane](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/).
 
 ## Declare the Permission
 
@@ -34,7 +33,7 @@ Registering a tool requires the `register-ai-tools` permission. Add it to your e
 }
 ```
 
-Set the permission to `true` to make it appear in the Extensions Overview pane. When a user installs your extension, they can grant this permission through the Extensions Overview pane (**View** > **Extensions**) in Studio Pro. `registerTool()` will not run otherwise and MAIA will not be able to know of its existense.
+Set the permission to `true` to make it appear in the **Extensions Overview** pane. When a user installs your extension, they can grant this permission through the **Extensions Overview** pane (**View** > **Extensions**) in Studio Pro. `registerTool()` will not run otherwise, and Maia will not be able to know of its existence.
 
 ## Set Up the Extension Structure
 
@@ -150,11 +149,11 @@ If a tool with the same name is already registered, `registerTool()` throws an e
 
 An `ExternalAIToolDefinition` has the following properties:
 
-* `name` – the tool name as given to the LLM. It must be descriptive and contain no special characters, since different LLMs restrict tool names differently.
-* `description` – a short paragraph explaining what the tool does and how it should be used. Clearly describe any non-intuitive behavior or rules the agent must follow.
-* `inputSchema` – a JSON Schema describing the tool's input, as shown above.
-* `run(input)` – the async function that is called with the validated input object and returns a string result to the LLM.
-* `inProgressMessage` *(optional)* – text shown in the UI while the tool is running, or while the user is asked for permission to run it. It can be a static string or a function that receives the tool input and returns a promise. If omitted, a default message is shown.
+* `name` – The tool name as given to the LLM. It must be descriptive and contain no special characters, since different LLMs restrict tool names differently.
+* `description` – A short paragraph explaining what the tool does and how it should be used. Clearly describe any non-intuitive behavior or rules the agent must follow.
+* `inputSchema` – A JSON Schema describing the tool's input, as shown above.
+* `run(input)` – The async function that is called with the validated input object and returns a string result to the LLM.
+* `inProgressMessage` *(optional)* – Text shown in the UI while the tool is running, or while the user is asked for permission to run it. It can be a static string or a function that receives the tool input and returns a promise. If omitted, a default message is shown.
 
 ## Behavior and Limitations
 
@@ -162,14 +161,13 @@ Keep the following behavior in mind when registering tools:
 
 * **User confirmation is always required.** Every invocation of an externally-registered tool asks the user for confirmation before running.
 * **Tool names must be globally unique.** `registerTool()` throws `Tool '<name>' is already registered.` if a tool with the same name is already registered by any extension, not only your own.
-* **Tools are deregistered automatically.** There is no derefister method. Registered tools are removed automatically when the extension that registered them is unloaded.
+* **Tools are deregistered automatically.** There is no deregister method. Registered tools are removed automatically when the extension that registered them is unloaded.
 * **Permission changes apply immediately.** If the user revokes `register-ai-tools` after a tool has been registered, the tool becomes unavailable to the agent without needing to re-register.
 
-If you follow the above code, you should give permissions for the tool to run from the View->Extensions Overview pane. then register the tool from the extension menu. Ask MAIA to run the tool with 2 numbers and give it access to the tools.
+If you follow the code above, grant permissions for the tool to run from the **View** > **Extensions Overview** pane, then register the tool from the **Extension** menu. Ask Maia to run the tool with two numbers and give it access to the tools.
 
 ## Extensibility Feedback
 
-If you would like to provide additional feedback, you can complete a short
-[survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
+If you would like to provide additional feedback, you can complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
 Any feedback is appreciated.

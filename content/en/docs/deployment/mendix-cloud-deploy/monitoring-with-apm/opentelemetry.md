@@ -123,7 +123,7 @@ You can include HTTP access logs in the telemetry sent to your backend. To do th
 
 Access logs are exported through the logs signal, so a logs exporter must be active. For more information, refer to the [Per-Signal Configuration](#per-signal) section.
 
-#### Metadata for Logs
+### Metadata for Logs
 
 The following metadata is automatically attached to logs as attributes and sent in both application and access logs:
 

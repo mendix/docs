@@ -93,7 +93,7 @@ To enable content import from a Content Delivery Network, follow these steps:
 
 1. Download the Marketplace Bundle with contents available in a zip file. If you do not have access to the bundle, contact your Mendix point of contact.
 2. Unzip the files to an internal location which Private Mendix Platform can access via HTTP or HTTPS. Do not change the directory structure.
-3. If using a self-signed certificate for your internal locations, configure Mendix Operator to trust your private Certificate Authorities. For more information, see [Creating a Mendix on Kubernetes Cluster](/developerportal/deploy/standard-operator/#custom-tls).
+3. If using a self-signed certificate for your internal locations, configure Mendix Operator to trust your private Certificate Authorities. For more information, see [Obtaining and Configuring the CA Certificate](/private-mendix-platform/configure-k8s/#ca-certificate).
 4. In the **Content Import** tab, in the **Marketplace import bundle URL** field, enter the root URL of the *package.json* file included in the Marketplace download. 
 
     For example, if the *package.json* can be accessed at the URL `https://<your domain>/release/marketplace/Marketplace-1.0/package.json`, enter the following URL: `https://<your domain>/release/marketplace/Marketplace-1.0/`.
@@ -251,7 +251,10 @@ Settings in this section allow you to configure your Deployment pipelines.
 
 ##### Deployment Method
 
-Private Mendix Platform uses Mendix on Kubernetes deployment options. For more information, refer to [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/).
+Private Mendix Platform supports the following deployment methods:
+
+* Kubernetes Interactor-Agent Mode
+* Kubernetes Standalone Mode
 
 ##### Deployment Steps {#deploy-steps}
 

@@ -982,9 +982,9 @@ The text system property was introduced in Mendix [11.15](/releasenotes/studio-p
 
 A `<text>` element represents a single translatable string. Each text is identified by its `key` attribute.
 
-| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
-|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| `key`          | Yes      | String              | Identifier of the text.                                                                                                         |
+| Attribute      | Required | Attribute Type  | Description                   |
+|----------------|----------|---------------------|------------------------------|
+| `key`          | Yes      | String              | Identifier of the text.         |
 
 ###### Caption
 
@@ -994,9 +994,9 @@ The `<caption>` element defines the caption used in Studio Pro.
 
 The `<translations>` element takes a list of `<translation>` elements, which define the default translations for the text.
 
-| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
-|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| `lang`         | Yes      | String              | Code of the language for the translation. Must be one of `en_US`, or `nl_NL`.                                                   |
+| Attribute      | Required | Attribute Type      | Description     |
+|----------------|----------|---------------------|----------------|
+| `lang`         | Yes   | String  | Code of the language for the translation. Must be `en_US` or `nl_NL`.     |
 
 ###### Parameters
 
@@ -1004,9 +1004,9 @@ The `<parameters>` element takes a list of `<parameter>` elements. Each paramete
 
 System text parameters are positional. Numbered placeholders indicate where the parameter is substituted in a translation. For example, `{2}` would get substituted by the value of the second parameter. Parameter values are [passed by the widget](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#parameters).
 
-| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
-|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| `caption`      | Yes      | String              | Caption of the parameter. Displayed in Studio Pro and used to generate types for the `translate()` method.                      |
+| Attribute      | Required | Attribute Type      | Description |
+|----------------|----------|---------------------|------------------------|
+| `caption` | Yes | String  | Caption of the parameter. Displayed in Studio Pro and used to generate types for the `translate()` method.  |
 
 ##### External Texts {#external-texts}
 
@@ -1026,17 +1026,17 @@ By adding `<text>` elements as children, the set of texts is restricted to those
 
 The example above would import all texts from the `example.widgeta.widgetA` namespace, but only the texts `greeting` and `goodbye` from the `example.widgetb.widgetB` namespace.
 
-| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
-|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| `namespace`    | Yes      | String              | Identifier of the namespace. May be any system text namespace, including other widget IDs.                                      |
+| Attribute      | Required | Attribute Type      | Description  |
+|----------------|----------|---------------------|------------|
+| `namespace`  | Yes | String | Identifier of the namespace. May be any system text namespace, including other widget IDs. |
 
 ###### Text
 
 A `<text>` element represents a single translatable string that belongs to the namespace defined by `<externalTexts>`.
 
-| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
-|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| `key`          | Yes      | String              | Identifier of the text.                                                                                                         |
+| Attribute      | Required | Attribute Type      | Description |
+|----------------|----------|--------|-----------|
+| `key`          | Yes      | String              | Identifier of the text. |
 
 #### Studio Pro UI
 

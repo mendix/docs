@@ -965,6 +965,28 @@ export const com_mendix_widget_native_barcodescanner_BarcodeScanner = {
 
 The default class to style all barcode scanner widgets is named `com_mendix_widget_native_barcodescanner_BarcodeScanner`.
 
+### Color Picker
+
+The color picker widget lets a user pick a color from a color spectrum. This is how a color picker widget could look in an app:
+
+```javascript
+export const com_mendix_widget_native_colorpicker_ColorPicker = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  preview: {
+    // This has all ViewStyle properties. Styles the color preview swatch (defaults to borderRadius: 5, minHeight: 50).
+  },
+};
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | Styles the wrapper view around the whole widget. |
+| `preview` | This has all ViewStyle properties. | Styles the color preview swatch (defaults to `borderRadius: 5`, `minHeight: 50`). |
+
+The default class to style all color picker widgets is named `com_mendix_widget_native_colorpicker_ColorPicker`.
+
 ### Feedback
 
 The feedback widget allows users to give direct feedback. This is how a feedback widget could look in an app:

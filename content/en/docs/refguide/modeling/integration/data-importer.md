@@ -10,7 +10,7 @@ description: "Describes how to use Data Importer in Studio Pro to import data fr
 
 Data Importer lets you define how data from Excel and CSV files is interpreted in your Mendix app. You create a Data Importer document based on an input file.
 
-{{% alert color="warning" %}}You need Studio Pro 11.15 and above to use Data Importer. For versions below 11.15, see the [Data Importer](/appstore/modules/data-importer/) module in the Marketplace.{{% /alert %}}
+{{% alert color="warning" %}}Data Importer is available in Studio Pro 11.5 and above. For versions below 11.15, see the [Data Importer](/appstore/modules/data-importer/) module in the Marketplace.{{% /alert %}}
 
 The document can be used in two ways:
 
@@ -75,14 +75,23 @@ Click **OK** to save your changes, or click **Cancel** to discard them.
 
 ## Creating an Entity
 
-After reviewing the entity structure in **Entity Preview**, click **Create Entity**. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data.
+After reviewing the entity structure in **Entity Preview**, click **Create Entity**. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data. For more details, see the [Using in the Import Data from File Activity](#using-in-the-activity) section below.
 
-## Using in the Import Data from File Activity
+## Using a Data Importer Document
 
-After creating the entity, you can use the Data Importer document in the [Import Data from File](/refguide/import-data-from-file/) activity to import data into a list of non-persistable entities (NPEs).
+You can use a Data Importer document in two ways:
+
+* For a simple use cases, directly in the **Import Data from File** activity to import data into non-persistable entities (NPEs).
+* As the schema source for an import mapping, when you need more control over how data is mapped to Mendix objects.
+
+### Using in the Import Data from File Activity {#using-in-the-activity}
+
+After creating the entity, you can use the Data Importer document in the [Import Data from File](/refguide/import-data-from-file/) activity to import data into a list of NPEs.
 
 You can extend this further. For example, you can convert the list of NPEs into persistable entities by providing a message definition, or use a loop to create and commit entities to your database individually.
 
-## Using in an Import Mapping
+### Using in an Import Mapping
 
-After the document is created and its **Structure elements** are populated, you can use the Data Importer document in an import mapping by selecting **Excel/CSV Structure** as the **Schema source**. For more information, see [Import Mappings](/refguide/import-mappings/).
+After the document is created and its **Structure elements** are populated, you can use the Data Importer document in an import mapping by selecting **Excel/CSV Structure** as the **Schema source**. The structure elements defined in the Data Importer document become the schema that you map to your Mendix entities and attributes.
+
+This approach gives you more control than the `Import Data from File` activity. You can map imported data to existing persistable entities, find existing objects by key instead of always creating new ones, set associations between mapped objects, and apply conversion microflows to transform attribute values during import. For more information, see [Import Mappings](/refguide/import-mappings/).

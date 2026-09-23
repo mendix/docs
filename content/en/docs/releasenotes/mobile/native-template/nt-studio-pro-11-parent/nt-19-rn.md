@@ -9,7 +9,9 @@ description: "Native Template 19"
 
 **Release date: Sep 23, 2026**
 
-- We removed some unused Android Permissions coming in from Manifest mergers.
+### Fixes
+
+- We removed unused Android permissions coming in from manifest mergers.
 
 ## 19.1.6
 

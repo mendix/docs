@@ -8,7 +8,10 @@ weight: 30
 
 ## Introduction
 
-To automate the declarative installation of Private Mendix Platform, you can now use Helm and Helmfile in order to automate the declarative installation of Private Mendix Platform. In this way, you can automatically install Private Mendix Platform components. If you would like to perform a manual installation instead, see [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/).
+To automate the declarative installation of Private Mendix Platform, you can now use Helm and Helmfile in order to automate the declarative installation of Private Mendix Platform. In this way, you can automatically install Private Mendix Platform components. For other installation types, see the following topics:
+
+* [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/)
+* [Install Private Mendix Platform for Air-Gapped Environments](/private-mendix-platform/air-gapped-installation/)
 
 ### Supported Tasks
 
@@ -27,27 +30,18 @@ The Helmfile installation does not support installing or upgrading the Mendix Op
 
 Before you start the installation, download the required files by performing the following steps:
 
-1. Download the release binary from your [Private Mendix Platform download portal](https://privateplatform.mendix.com/). If you do not have access to the download portal, contact your Mendix partner for information.
+1. In the [Private Mendix Platform download portal](https://privateplatform.mendix.com/), click **Releases**.
 
-2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
+    If you do not have access to the download portal, contact your Mendix partner for information.
 
-    * **Tools** - *mx-pclm-cli*, which can be used to manage PCLM
-    * **helm**, and **helmfile** tools, which are used to deploy and manage Private Mendix Platform charts and Svix charts
-    * **images** - Private Mendix Platform image, PCLM image, Svix image, test application image
-    * **Installer** - installer tools
-    * **mxpc-cli** - installation tools which can be used to manage or configure the Mendix Operator
-    * **charts**  - charts, including Private Mendix Platform charts and Svix charts
+2. Click the three-dot menu (**•••**) for the desired release, and then click **View addons**.
+3. Find the *Addons/pmp-charts-x.x.x.zip* file, where `x.x.x` is the version number, and click **Download**.
+4. Unzip the downloaded file to a local folder on your Windows or Linux server. The release binary contains the following files:
+
+    * **helmfile.d** - Helmfile templates and configuration
+    * **charts**  - Helm charts for all components
+    * **samples** - Example configuration files
     
-    {{< figure src="/attachments/private-platform/pmp-binary.png" class="no-border" >}}
-
-### Private Cloud License Manager Credentials
-
-You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile.
-
-{{% alert color="info" %}}
-The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the Operator installation. A mismatch will prevent the Operator from obtaining licenses.
-{{% /alert %}}
-
 ### ServiceAccount Token Automount for Maia Integration
 
 If you plan to use Maia AppGen and LLM gateway integration, you must configure the Operator to automount ServiceAccount tokens for Mendix app pods. Maia AppGen requires automounting in order to communicate with Mendix applications through the Kubernetes API. Without this setting, the application pods will not have the necessary ServiceAccount token to authenticate API calls.
@@ -57,49 +51,6 @@ operator_config:
   # REQUIRED for Maia integration: Allow Mendix app Pods to access Kubernetes API
   runtimeAutomountServiceAccountToken: true
 ```
-
-### Optional: Initializing the Installation for Air-Gapped Environments
-
-If your clusters can connect to a public registry with a passable network, skip to the next section, otherwise initialize the installation by performing the following steps:
-
-1. Upload the images to your private repository in an air-gapped environment.
-
-    ```text
-    ~/mpp-binary-linux$ ./installer init  migrate --help
-    Migrate Mendix Private Platform related image to your own registry
-
-    Usage:
-    installer init migrate [flags]
-    Flags:
-        -h, --help                 help for migrate
-        -r, --registryurl string   registry url (required)
-        -e, --repo string          Repository name
-        -u, --username string      Username (required) for your private registry
-    ```
-
-    The destination image is named `${registryurl }/${repo}/mendix-private-platform: ${tag}`.
-    
-2. The `registryurl` and `repo` are read from the input parameters. The `tag` is automatically read by the installer. If the repository does not exist, you must create it before running the `init migrate` command.
-
-    ```text
-    ~/mpp-binary-linux$ ./installer init migrate   -r [registry] -u  user -e [repositoryName]
-    Please enter user password: ***
-
-    Confirm password: ***
-    the config checksum is empty
-    The image destination[REDACTED] svix-server:v0.75.0
-    The image destiation [REDACTED] mendix-private-platform:1.4.0.80d447b1
-    the config checksum is empty
-    The image destiation [REDACTED] mxpc-test:1.0
-    the config checksum is empty
-    The image destiation [REDACTED] privatecloud-license-manager:0.3.0
-    svix-server_v0.75.0 => [REDACTED] svix-server:v0.75.0 - ok
-    mendix-private-platform_1.4.0.80d447b1 => [REDACTED] mendix-private-platform:1.4.0.80d447b1 - ok
-    mxpc-test_1.0 => [REDACTED] mxpc-test:1.0 - ok
-    privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
-    ```
-
-3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
 
 ## Installing the Mendix Operator {#install-operator}
 
@@ -119,6 +70,14 @@ Install the Mendix Operator by doing the following steps:
 3. Click **Run Installer** to install the Mendix Operator in your cluster.
 
 You must configure the storage and database plans in the Operator installation values, not in the Helmfile values for `mxplatform`.
+
+### Private Cloud License Manager Credentials
+
+You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile.
+
+{{% alert color="info" %}}
+The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the Operator installation. A mismatch will prevent the Operator from obtaining licenses.
+{{% /alert %}}
 
 ## Helmfile Components
 

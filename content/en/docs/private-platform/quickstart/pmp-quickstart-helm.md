@@ -256,7 +256,6 @@ The code samples are intended to show the range of available options. No rights 
 # 1. Create your values file
 cp examples/my-values.yaml my-values.yaml
 # Edit my-values.yaml with your configuration
-
 # 2. Deploy all enabled components
 helmfile --file helmfile.d/helmfile.yaml \
   --state-values-file my-values.yaml \

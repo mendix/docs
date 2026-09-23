@@ -135,7 +135,7 @@ All images and charts are now available in an OCI registry. In order to pull the
 
     1. Sign in to Mendix and go to **User Settings > Developer Settings > Personal Access Token**
     2. Click **New Token**.
-    3. Under **OCI registry**, select the **mx:registry:access** scope as.
+    3. Under **OCI registry**, select the **mx:registry:access** as scope.
  
 3. Fetch the images.
 

@@ -12,8 +12,8 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 
 ## Release date: September 24, 2026
 
-* Customers can now view a dedicated Activity Logs page directly within the Cluster Overview to monitor an audit trail of key environment events, including cluster lifecycle changes, advanced configuration updates, role assignments, and JIT support access.
-* Preflight deployment failures during Platform Account Checks now automatically generate linked support tickets with relevant diagnostic details, speeding up troubleshooting and support resolution.
+* Customers can now view a dedicated **Activity Logs** page directly within the **Cluster Overview** to monitor an audit trail of key environment events, including cluster lifecycle changes, advanced configuration updates, role assignments, and JIT support access.
+* Preflight deployment failures during Platform account checks now automatically generate linked support tickets with relevant diagnostic details, speeding up troubleshooting and support resolution.
 
 ## Release date: August 27, 2026
 

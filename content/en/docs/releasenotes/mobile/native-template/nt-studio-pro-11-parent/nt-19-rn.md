@@ -5,6 +5,12 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.1.7
+
+**Release date: Sep 23, 2026**
+
+- We removed some unused Android Permissions coming in from Manifest mergers.
+
 ## 19.1.6
 
 **Release date: Sep 16, 2026**

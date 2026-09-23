@@ -2,25 +2,27 @@
 title: "Data Importer"
 url: /refguide/data-importer/
 weight: 40
-description: "Describes how to use Data Importer in Studio Pro to import data from Excel and CSV files"
+description: "Describes how to use Data Importer in Studio Pro to import data from Excel and CSV files."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction
 
-Data Importer lets you define how data from Excel and CSV files is interpreted in your Mendix app. You create a Data Importer document based on a representative input file.
+Data Importer lets you define how data from Excel and CSV files is interpreted in your Mendix app. You create a Data Importer document based on an input file.
+
+{{% alert color="warning" %}}You need Studio Pro 11.15 and above to use Data Importer. For the versions below 11.15, refer [Data Importer](/appstore/modules/data-importer/) module from Marketplace.{{% /alert %}}
 
 The document can be used in two ways:
 
-* With **Import Data from File** activity, to import the file into a generated non-persistable entity.
-* As a source for an Import Mapping, which gives you more control over how imported data is mapped to Mendix objects.
+* With the **Import Data from File** activity, to import the file into a generated non-persistable entity.
+* As a source for an import mapping, which gives you more control over how imported data is mapped to Mendix objects.
 
 ## Creating a Data Importer Document
 
 To create a Data Importer document, follow the steps below:
 
 1. Right-click the module where you want to add the Data Importer document, then click **Add other** > **Data Importer**.
-2. Enter a name for the document, then click **OK**
+2. Enter a name for the document, then click **OK**.
 
 The new Data Importer document opens.
 
@@ -28,58 +30,46 @@ The new Data Importer document opens.
 
 ## Previewing Data
 
-Once you have created the Data Importer document, click **Upload File** in **Select file from local** to import an Excel file (.xls or .xslx) or CSV file (.csv).
+Once you have created the Data Importer document, click **Upload File** in **Select file from local** to upload an Excel file (.xls or .xlsx) or CSV file (.csv). 
 
-### Previewing Excel
+CSV import supports multiple combinations of delimiter, quote, and escape characters. It also supports files without a header row.
 
-Upload an Excel file (.xls or .xslx) as source file. An Excel workbook can have single or multiple sheets; you can choose which sheet to import data from and specify the details below to configfure the file settings:
+An Excel workbook can have one or multiple sheets. Choose which sheet to import data from and configure the Excel file settings below:
 
 * **Sheet Name** – name of the worksheet to import. If the workbook has multiple worksheets, their names appear in the drop-down list.
-* **Header Row No.** – row number of the file header; the default is *1*
-* **Read Data From** – a row where data reading starts; the default is *2*
+* **Header Row No.** – row number of the file header; the default is 1.
+* **Read Data From** – a row where data reading starts; the default is 2.
 
-Click **Preview Data** to view the data from the selected file.
-
-Data Importer creates the data structure based on the first ten rows of the source file and displays it in the **Structure elements** section. If the file settings do not provide valid data, an error is displayed. Click the edit icon ({{% icon name="pencil" %}}) at bottom-right corner of the structure elements table to modify **Custom Name** or **Primitive Type**.
-
-{{% alert color="warning" %}}
-Column names that do not adhere to Mendix naming conventions are autocorrected. For Number cell-types, the target Mendix type is mapped to **Decimal** to support both integers and decimals.
-{{% /alert %}}
-
-### Previewing CSV
-
-Select or drop the CSV file as a source file. CSV import supports multiple combinations of separator or delimiter, quote, and escape characters. It also supports files without a header row.
-
-Configure the following settings:
+For a CSV file, configure the following settings:
 
 * **Delimiter (Separator)** – Supported delimiters are comma, semicolon, pipe, and tab. The default is comma.
-* **Quote Characters** – Supported quote characters are single and double quotes. The default is double quotes.
-* **Add Header Row** – Specify whether you want to add a header row or whether the CSV file already includes one. By default, the file already includes a header row.
+* **Quote Characters** – Supported quote characters are single quotes and double quotes. The default is double quotes.
+* **Add Header Row** – Specify whether to add a header row or whether the CSV file already includes one. By default, the file already includes a header row.
 * **Escape Character** – Supported escape characters are backslash, single quotes, and double quotes. The default is double quotes.
 
 Click **Preview Data** to view the data from the selected file.
 
-Data Importer creates the data structure based on the first ten rows of the source file and displays it in the **Structure elements** section. If the file settings do not provide valid data, an error is displayed. Click the edit icon ({{% icon name="pencil" %}}) at bottom-right corner of the structure elements table to modify **Custom Name** or **Primitive Type**.
+Data Importer creates the data structure based on the first ten rows of the source file and displays it in the **Structure elements** section. If the file settings do not provide valid data, an error is displayed. To modify **Custom Name** or **Primitive Type**, click the edit icon ({{% icon name="pencil" %}}) in the bottom-right corner of the structure elements table.
 
 {{% alert color="warning" %}}
-Column names that do not follow Mendix naming conventions are autocorrected.
+Column names that do not adhere to Mendix naming conventions are autocorrected. For Number cell types, the target Mendix type is mapped to **Decimal** to support both integers and decimals.
 {{% /alert %}}
-
-## Using in Import Mapping
-
-After the document and its **Structure elements** are created, you can use the document in an import mapping by selecting **Schema source** as **Excel/CSV Structure**. For more information, see [Import Mappings](/refguide/import-mappings/).
 
 ## Editing an Entity
 
-Optionally, you can edit and create an entity to import the data for simple use cases. You can edit the entity in the **Entity Preview** section.
+For simple use cases or when you are not using an import mapping, you can optionally adjust entity structure in the **Entity Preview** section before creating it.
 
-Click the edit icon ({{% icon name="pencil" %}}) at bottom-right corner of **Entity Preview**. In the dialog box, you can change the **Name** of the entity. You can also rename attributes. **Original Name** shows the name of the column in the input file, and **Attribute Name** is the new name you want to assign to that column. You can change the data type of an attribute by selecting a value from the drop-down list. Click **OK** to save your changes, or click **Cancel** to discard them.
+Click the edit icon ({{% icon name="pencil" %}}) in the bottom-right corner of **Entity Preview**. In the dialog box:
 
-In the **Entity Preview**, select which columns to import by selecting or unselecting the checkbox next to each attribute.
+* Change the entity **Name**.
+* Rename attributes: **Original Name** shows the column name from the input file, and **Attribute Name** is the new name you want to assign to that column.
+* Change the data type of an attribute by selecting a value from the drop-down list.
 
-{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/edit-csv-entity.png" class="no-border" width="600" >}}
+In the **Entity Preview**, select which columns to import by selecting or clearing the checkbox next to each attribute.
 
-Once you are satisfied with the changes, click **OK** to save or **Cancel** to discard your changes.
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/edit-csv-entity.png" alt="Entity Preview dialog with attribute names and data types" class="no-border" width="600" >}}
+
+Click **OK** to save your changes, or click **Cancel** to discard them.
 
 {{% alert color="warning" %}}
 **Enum** is not supported as a target data type. Runtime exceptions can occur if the input data cannot be converted to the target data type, for example because of invalid data, data truncation, or casting issues.
@@ -87,10 +77,14 @@ Once you are satisfied with the changes, click **OK** to save or **Cancel** to d
 
 ## Creating an Entity
 
-When you are done editing the entity, click **Create Entity**. This creates the entity in your domain model and displays a confirmation message. The data importer document is then ready to be used in [Import Data from File](/refguide/import-data-from-file/) to import data.
+When you are satisfied with the entity structure in **Entity Preview**, click **Create Entity**. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data.
 
-## Using in `Import Data from File` Activity
+## Using in the Import Data from File Activity
 
-Once you have created an entity, you can now use the Data Importer document in [Import Data from File](/refguide/import-data-from-file/) activity and import the data in the list of NPEs.
+After creating the entity, you can use the Data Importer document in the [Import Data from File](/refguide/import-data-from-file/) activity to import data into a list of non-persistable entities (NPEs).
 
-You can extend this as per your requirements. For example, convert the list of NPEs into persistable entities by providing a message definition, or use each loop construct and individually create and commit entities into your database.
+You can extend this further. For example, you can convert the list of NPEs into persistable entities by providing a message definition, or use a loop to create and commit entities to your database individually.
+
+## Using in an Import Mapping
+
+After the document is created and its **Structure elements** are populated, you can use the Data Importer document in an import mapping by selecting **Excel/CSV Structure** as the **Schema source**. For more information, see [Import Mappings](/refguide/import-mappings/).

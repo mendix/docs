@@ -10,7 +10,7 @@ description: "Describes how to use Data Importer in Studio Pro to import data fr
 
 Data Importer lets you define how data from Excel and CSV files is interpreted in your Mendix app. You create a Data Importer document based on an input file.
 
-{{% alert color="warning" %}}You need Studio Pro 11.15 and above to use Data Importer. For the versions below 11.15, refer [Data Importer](/appstore/modules/data-importer/) module from Marketplace.{{% /alert %}}
+{{% alert color="warning" %}}You need Studio Pro 11.15 and above to use Data Importer. For versions below 11.15, see the [Data Importer](/appstore/modules/data-importer/) module in the Marketplace.{{% /alert %}}
 
 The document can be used in two ways:
 
@@ -30,15 +30,15 @@ The new Data Importer document opens.
 
 ## Previewing Data
 
-Once you have created the Data Importer document, click **Upload File** in **Select file from local** to upload an Excel file (.xls or .xlsx) or CSV file (.csv). 
+After creating the Data Importer document, click **Upload File** in **Select file from local** to upload an Excel file (*.xls* or *.xlsx*) or CSV file (*.csv*).
 
 CSV import supports multiple combinations of delimiter, quote, and escape characters. It also supports files without a header row.
 
 An Excel workbook can have one or multiple sheets. Choose which sheet to import data from and configure the Excel file settings below:
 
-* **Sheet Name** – name of the worksheet to import. If the workbook has multiple worksheets, their names appear in the drop-down list.
+* **Sheet Name** – the name of the worksheet to import. If the workbook has multiple worksheets, their names appear in the drop-down list.
 * **Header Row No.** – row number of the file header; the default is 1.
-* **Read Data From** – a row where data reading starts; the default is 2.
+* **Read Data From** – the row where data reading starts; the default is 2.
 
 For a CSV file, configure the following settings:
 
@@ -57,7 +57,7 @@ Column names that do not adhere to Mendix naming conventions are autocorrected. 
 
 ## Editing an Entity
 
-For simple use cases or when you are not using an import mapping, you can optionally adjust entity structure in the **Entity Preview** section before creating it.
+If you are not using an import mapping, you can optionally adjust the entity structure in the **Entity Preview** section before creating the entity.
 
 Click the edit icon ({{% icon name="pencil" %}}) in the bottom-right corner of **Entity Preview**. In the dialog box:
 
@@ -67,8 +67,6 @@ Click the edit icon ({{% icon name="pencil" %}}) in the bottom-right corner of *
 
 In the **Entity Preview**, select which columns to import by selecting or clearing the checkbox next to each attribute.
 
-{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/edit-csv-entity.png" alt="Entity Preview dialog with attribute names and data types" class="no-border" width="600" >}}
-
 Click **OK** to save your changes, or click **Cancel** to discard them.
 
 {{% alert color="warning" %}}
@@ -77,7 +75,7 @@ Click **OK** to save your changes, or click **Cancel** to discard them.
 
 ## Creating an Entity
 
-When you are satisfied with the entity structure in **Entity Preview**, click **Create Entity**. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data.
+After reviewing the entity structure in **Entity Preview**, click **Create Entity**. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data.
 
 ## Using in the Import Data from File Activity
 

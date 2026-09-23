@@ -132,58 +132,36 @@ To install Private Mendix in an air-gapped environment, you must provision a lis
     2. Click **New Token**.
     3. Under **OCI registry**, select the **mx:registry:access** as scope.
  
-3. Fetch the images.
-
-    1. Log in to the OCI registry for Oras by using the following command: `oras login -u pat -p <token>  registry.mendix.com`.
-    2. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, ` oras pull registry.mendix.com/private-platform/installer-helmfile:0.2.1`.
-    3. Unzip the downloaded file by using the following command: `tar -xvf helmfile-config.tar.gz`.
-    4. Test it by using the following command: `helmfile --file helmfile.d/helmfile.yaml --state-values-file <valuefile> apply`.
-
-4. Pull the charts.
-
-    1. Log in to the OCI registry for Helm by using the following command: `helm registry login -u pat -p ${YOUR_PAT} registry.mendix.com`.
-    2. Use the `helm pull` command to download the Helmfile from the OCI registry, for example:
+3. Fetch the images by using the following aip commands:
 
     ```text
-    helm pull oci://registry.mendix.com/private-cloud/charts/mx-privatecloud-operator-installer --version 0.2.36
-    helm install operator mx-privatecloud-operator-installer-0.2.36.tgz -f ./Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml --namespace pmp-oci-test
+    mkdir pmp-images
+    cd pmp-images
+    
+    # Initialize aip with the exported image list
+    aip init ~/Downloads/export-images-v2.7.0.json
+    
+    # Log in to the Mendix registry
+    aip login -u pat -p <your-pat> registry.mendix.com
+    
+    # Download all images from source registry to local folder.
+    aip pull
+    
+    # Configure the destination registry
+    aip set-base-destination <myprivate.registry.com>
+    
+    # Log in to the new registry
+    aip login -u <user> -p <password> <myprivate.registry.com>
+    
+    # Upload all the images to new registry.
+    aip push
     ```
 
-    where `/Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml` is the yaml file for Operator configuration. You can find this yaml file among the example files in the installer package.
+4. If your registry requires you to create a repository before pushing, use the following command:
 
+    ```text
+    # get list of required repositories - these will need to be created before you can push to them
+    jq -r '.["images", "charts", "custom-artifacts"][] .destination' state.json
+    ```
 
-Create PAT
-
-Some images are private, and need create PAT(Personal Access Token) from Mendix portal for authentication.
-
-Sign in to Mendix home -> User Settings → Developer Settings → Personal Access Token, click New Token button and choose mx:registry:access scope under OCI registry to create your PAT.
-
-Run aip commands to synchronise images to your air-gapped registry
-
-mkdir pmp-images
-cd pmp-images
-
-# Initialize aip with exported image list.
-aip init ~/Downloads/export-images-v2.7.0.json
-
-# Login Mendix registry
-aip login -u pat -p <your-pat> registry.mendix.com
-
-# Download all images from source registry to local folder.
-aip pull
-
-# Configure destination registry.
-aip set-base-destination <myprivate.registry.com>
-
-# Login new registry.
-aip login -u <user> -p <password> <myprivate.registry.com>
-
-# Upload all the images to new registry.
-aip push
-
-
-
-In case some registry need create repository before push, you can get all the repositories via below command:
-
-# get list of required repositories - these will need to be created before you can push to them
-jq -r '.["images", "charts", "custom-artifacts"][] .destination' state.json
+5. After the migration is completed, [install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/).

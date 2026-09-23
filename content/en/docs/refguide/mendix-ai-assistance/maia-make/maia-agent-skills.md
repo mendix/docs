@@ -41,7 +41,7 @@ For example, you can ask Maia the following:
 * Create a skill that documents our naming conventions for entities and attributes.
 * Add a section about error handling to the <your-skill> skill.
 * Update the description of the <your-skill> skill in the <YourModule> module.
-* Turn the retry and logging pattern we have just implemented in this microflow into a reusable skill.
+* Turn the retry and logging pattern I have just implemented in this microflow into a reusable skill.
 
 The last example highlights a common use case: while working with Maia on a task, you can ask it to capture the conventions or decisions from that session into a skill, so the same guidance can be reused in future sessions.
 

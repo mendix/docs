@@ -16,7 +16,24 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 The Private Mendix Platform Cluster Manager API allows you to automate the registration of new clusters, namespaces and resource plans in Private Mendix Platform. You can use the API to do the following:
 
-* [TBD BASED ON YAML FILE]
+* Register a new cluster in Standalone mode.
+* Register a new cluster in Interactor-Agent mode.
+* Register a new cluster without logging and monitoring.
+* Retrieve all existing clusters.
+* Retrieve a specific cluster by ID.
+* Update cluster configuration.
+* Unregister a cluster.
+* Add a namespace to a cluster.
+* Retrieve all namespaces of a cluster.
+* Retrieve a specific namespace by ID.
+* Update namespace configuration.
+* Delete a specific namespace by ID.
+* Retrieve the install command for a namespace.
+* Add a new database, storage, or resource plan to a namespace.
+* Retrieve all plans for a namespace.
+* Retrieve a specific plan by ID.
+* Update plan configuration.
+* Delete a specific plan by ID.
 
 ## Supported Private Mendix Platform Version
 
@@ -24,4 +41,4 @@ This API is available in Private Mendix Platform 2.8.1 and newer.
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/[YAML FILE NAME].yaml"  >}}
+{{< swaggerui src="/openapi-spec/openapi-cluster-v1.yaml"  >}}

@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Deploy Service v1
   description: "The deploy service API is for creating and managing app environment resources for app package deployment. \r\n"
-  version: 1.0.0
+  version: 1.1.0
 servers:
   - url: https://pmp-demo.privateplatform.mendix.com/deployservice/v1
 paths:
@@ -34,6 +34,7 @@ paths:
                   storagePlanName: bk-plan
                   databasePlanName: db-plan
                   deploymentPurpose: Development
+                  isExternalSecretStoreEnabled: No
                   deploymentPackageName: e2e-app-deploy-portunus-146465ba.mda
                   coreResourceSize: Small
               Create environment with Core Resource Plan (Connected mode only):
@@ -181,17 +182,20 @@ paths:
                   displayName: Project-A-Env
                   replicas: 1
                   appUrl: https://project-a-env.portunus.mxplatform.net/
-                  leaderlessMode: true
+                  leaderlessMode: No
 
               Request to change admin password:
                 value:
-                  adminPassword: Project-A-Env
+                  adminPassword: "[New password for admin user]"
+                  isAdminPasswordSecretStore: Yes
 
               Request to change Environment Constants:
                 value:
                   Constants:
                     - name: const1
                       newValue: xyz
+                      isSecretStore: No
+                      visibility: MaskedHidden
 
               Request to enable Scheduled Events:
                 value:
@@ -218,8 +222,10 @@ paths:
                   CustomRuntimeSettings:
                     - name: crs1
                       newValue: "789"
+                      isSecretStore: No
                     - name: crs2
                       newValue: xyz
+                      isSecretStore: Yes
 
               Request to change JVM and Jetty options:
                 value:
@@ -233,8 +239,9 @@ paths:
               Request to change Debugger and Log Levels:
                 value:
                   Debugger:
-                    enabled: true
+                    enabled: Yes
                     password: "[Password for connect debugger]"
+                    isSecretStore: Yes                    
                   LogLevels: 
                     - node: LogEnv
                       level: INFO
@@ -420,7 +427,7 @@ paths:
         '404':
           $ref: '#/components/responses/error-404'
 
-  /apps/{appId}/dashboard:
+  /apps/{appId}/dashboards:
     get:
       tags:
         - apps
@@ -439,6 +446,30 @@ paths:
           $ref: '#/components/responses/Dashboards'
         '400':
           $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /apps/dashboards:
+    get:
+      tags:
+        - apps
+      summary: Get environment dashboard for all apps
+      description: Get dashboard for all apps include all environments created in both Standalone and Connected mode
+      operationId: getAllAppDashboard
+      # parameters:
+      #   - name: appId
+      #     in: path
+      #     description: App Id
+      #     required: true
+      #     schema:
+      #       type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/Dashboards'
         '401':
           $ref: '#/components/responses/error-401'
         '403':
@@ -588,7 +619,7 @@ components:
                 replicas: 1
                 isAppStopped: false
                 isManualDeploy: false
-                leaderlessMode: false
+                leaderlessMode: No
                 buildStatus: Ready
                 runtimeStatus: Ready
                 networkStatus: Ready
@@ -619,6 +650,8 @@ components:
                   - name: const1
                     currentValue: "1234"
                     newValue: "12345"
+                    isSecretStore: No
+                    visibility: Visible
                 ScheduledEvents: 
                   - name: event1
                     currentEnabled: false
@@ -635,6 +668,7 @@ components:
                   - name: set1
                     currentValue: "789"
                     newValue: "7890"
+                    isSecretStore: No
  
                 CustomJVMOptions: 
                   name: JAVA_TOOL_OPTIONS
@@ -645,8 +679,10 @@ components:
                   currentValue: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
                   newValue: "{\n\t\"k2\": \"v2\",\n\t\"k4\": \"v4\"\n}"
                 Debugger: 
-                  enabled: true
+                  enabled: Yes
                   url: "https://l48bv05l.portunus.mxplatform.net/debugger/"
+                  isSecretStore: Yes
+                  password: "<SET_IN_SECRET_STORE>"
                 LogLevels: 
                   - node: LogApp
                     level: INFO
@@ -703,7 +739,7 @@ components:
                   replicas: 1
                   isAppStopped: false
                   isManualDeploy: false
-                  leaderlessMode: false
+                  leaderlessMode: No
                   buildStatus: Ready
                   runtimeStatus: Ready
                   networkStatus: Ready
@@ -734,6 +770,8 @@ components:
                     - name: const1
                       currentValue: "1234"
                       newValue: "12345"
+                      isSecretStore: No
+                      visibility: Visible
                   ScheduledEvents: 
                     - name: event1
                       currentEnabled: false
@@ -750,6 +788,7 @@ components:
                     - name: set1
                       currentValue: "789"
                       newValue: "7890"
+                      isSecretStore: No
   
                   CustomJVMOptions: 
                     name: JAVA_TOOL_OPTIONS
@@ -760,8 +799,10 @@ components:
                     currentValue: "{\n\t\"k1\": \"v1\",\n\t\"k3\": \"v3\"\n}"
                     newValue: "{\n\t\"k2\": \"v2\",\n\t\"k4\": \"v4\"\n}"
                   Debugger: 
-                    enabled: true
+                    enabled: Yes
                     url: "https://l48bv05l.portunus.mxplatform.net/debugger/"
+                    isSecretStore: Yes
+                    password: "<SET_IN_SECRET_STORE>"
                   LogLevels: 
                     - node: LogApp
                       level: INFO
@@ -818,7 +859,7 @@ components:
                   replicas: 1
                   isAppStopped: false
                   isManualDeploy: false
-                  leaderlessMode: false
+                  leaderlessMode: "No"
                   buildStatus: Ready
                   runtimeStatus: Ready
                   networkStatus: Ready
@@ -880,7 +921,15 @@ components:
             - Production
           type: string
           description: Purpose for the deployment
-          example: Development          
+          example: Development
+
+        isExternalSecretStoreEnabled:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+          description: "Indicate if External Secret Store is enabled for environment configuration, applicable only for Standalone mode cluster."
+
         coreResourcePlan:
           type: string
           description: Core Resource Plan for environment creation, it's only for connected mode.
@@ -924,14 +973,38 @@ components:
           type: string
           description: URL of the app deployed in the environment
           example: "https://project-a-env.portunus.mxplatform.net/"
+
+        # isExternalSecretStoreEnabled:
+        #   enum:
+        #     - 'Yes'
+        #     - 'No'
+        #   type: string
+        #   description: "Indicate if External Secret Store is enabled for environment configuration, applicable only for Standalone mode cluster."
+
+        clientIdForSecretStore:
+          type: string
+          description: Client ID for access external secret store
+          example: "[ClientIdForAzureKeyVault]"
+
         adminPassword:
           type: string
           description: Admin password of the app deployed in the environment
           example: "[MxAdminPassword]"
+          
+        isAdminPasswordSecretStore:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+          description: "Indicate if Admin Password is stored as external secret, applicable only for Standalone mode cluster."
+
         leaderlessMode:
-          type: boolean
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string        
           description: Indicate if the environment is in leaderless mode
-          example: false
+          example: "No"
 
         Constants:
           description: Constants of the app deployed in the environment
@@ -944,6 +1017,19 @@ components:
                 type: string
               newValue:
                 type: string
+              isSecretStore:
+                enum:
+                  - 'Yes'
+                  - 'No'
+                type: string
+                description: "Indicate if Constant is stored as external secret, applicable only for Standalone mode cluster."
+              visibility:
+                enum:
+                  - 'Visible'
+                  - 'Masked'
+                  - 'MaskedHidden'
+                type: string
+                description: "Indicate if Constant is visible or hidden, applicable only for Standalone mode cluster."
 
         ScheduledEvents:
           description: Scheduled events of the app deployed in the environment
@@ -980,6 +1066,12 @@ components:
                 type: string
               newValue:
                 type: string
+              isSecretStore:
+                enum:
+                  - 'Yes'
+                  - 'No'
+                type: string
+                description: "Indicate if Custom Runtime Settings is stored as external secret, applicable only for Standalone mode cluster."
 
         CustomHttpHeaders:
           description: HTTP headers of the environment network
@@ -1017,9 +1109,20 @@ components:
           type: object
           properties:
             enabled:
-              type: boolean
+              type: string
+              enum:
+                - 'Yes'
+                - 'No'
+              description: Indicate if Debugger is enabled for the environment
             password:
               type: string
+              description: Password for accessing the debugger
+            isSecretStore:
+              enum:
+                - 'Yes'
+                - 'No'
+              type: string
+              description: "Indicate if Debugger password is stored as external secret, applicable only for Standalone mode cluster."
 
         LogLevels:
           description: Log levels of the environment
@@ -1241,6 +1344,22 @@ components:
             type: string
             description: URL of the application
             example: https://myapp.example.com
+
+          clientIdForSecretStore:
+            type: string
+            description: Client ID for access external secret store
+            example: "[ClientIdForAzureKeyVault]"
+
+          isExternalSecretStoreEnabled:
+            type: string
+            description: Indicates if external secret store is enabled
+            example: "Yes"
+
+          isAdminPasswordSecretStore:
+            type: string
+            description: Indicates if admin password is stored as external secret 
+            example: "Yes"
+
           status:
               enum:
                 - Init
@@ -1271,9 +1390,9 @@ components:
             description: Indicates if the deployment was manual
             example: true
           leaderlessMode:
-            type: boolean
+            type: string
             description: Indicates if the environment was leaderless mode
-            example: true
+            example: "Yes"
           buildStatus:
             type: string
             description: Status of the build process
@@ -1385,6 +1504,10 @@ components:
                   type: string
                 newValue:
                   type: string
+                isSecretStore:
+                  type: string
+                visibility:
+                  type: string
 
           ScheduledEvents:
             description: Scheduled events of the app deployed in the environment
@@ -1427,6 +1550,8 @@ components:
                 newValue:
                   type: string
                   description: The value of the runtime setting
+                isSecretStore:
+                  type: string
 
           CustomJVMOptions:
             type: object
@@ -1456,10 +1581,24 @@ components:
             type: object
             properties:
               enabled:
-                type: boolean                    
+                type: string
+                enum:
+                  - 'Yes'
+                  - 'No' 
+                description: Indicates if the debugger is enabled
+              password:
+                type: string
+                description: The password for accessing the debugger
               url:
                   type: string
                   description: The URL for accessing the debugger
+              isSecretStore:
+                type: string
+                enum:
+                  - 'Yes'
+                  - 'No' 
+                description: Indicates if the password is stored in external secret store
+                example: "No"
 
           LogLevels:
             description: Log levels of the environment

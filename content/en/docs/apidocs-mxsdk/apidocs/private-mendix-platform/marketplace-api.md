@@ -24,7 +24,7 @@ The Private Mendix Platform Marketplace API allows you to manage the Marketplace
 * Update a content item.
 * Delete a Marketplace content that is not published.
 * Download a specific published content item.
-* Get a specific version of a Marketplace content item.
+* Get, update, or delete a specific version of a Marketplace content item.
 * Change the owning user and group of a content item.
 * Get, add, delete, or input the groups of a content item.
 * Update, publish, retire, activate, or delete a specific version of a Marketplace content item.

@@ -16,6 +16,10 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 ### Workstation Management
 
+#### Improvements
+
+* Developer mode - Turning off developer mode now requires Workstation licenses. In a workspace without an entitlement, developer mode stays enabled. For more information, see [Managing Stations: Developer Mode](/mendix-workstation/management-stations/#developer-mode).
+
 #### Bug Fixes
 
 * We have fixed an issue where refreshing the **Test Your Station** page bypassed the check that the station belongs to the current workspace.

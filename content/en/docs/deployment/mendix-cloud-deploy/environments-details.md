@@ -298,10 +298,6 @@ The headers you set in **HTTP Headers** and the headers Mendix Cloud inserts aut
 
 To see which headers an environment returns, request a page from it over HTTPS and inspect the response headers.
 
-{{% alert color="warning" %}}
-Do not remove your own header to resolve a duplicate header finding. Because the set of automatically inserted headers changes over time, your own header is the only source you control. If you remove it and Mendix Cloud stops inserting that header, your app stops sending the header altogether.
-{{% /alert %}}
-
 #### Running Your App in an Iframe {#iframe}
 
 Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through `SameSite` cookies. For more information, see [SameSite Cookies Explained](https://web.dev/samesite-cookies-explained/).

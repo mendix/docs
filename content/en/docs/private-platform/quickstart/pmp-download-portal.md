@@ -216,7 +216,7 @@ The images, charts, and custom artifacts table contains the following columns:
 * **Artifact Type** - Shows the artifact type (image, chart, or custom artifact).
 * **Category** - Shows the component type:
 
-    * **Image** - Core Mendix platform components
+    * **Mendix Backbone** - Core Mendix platform components
     * **External Dependency** - Third-party dependencies
     * **Internal Component** - Mendix-developed components
 

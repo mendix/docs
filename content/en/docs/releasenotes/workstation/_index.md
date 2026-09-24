@@ -297,7 +297,7 @@ If more than one station is found for a given computer name during bulk registra
     * Manage events in a nanoflow with the new `SubscribeToObjectChanges` and `WaitForObjectChanges` nanoflow actions.
     * Benefit from easier configuration of common use cases with the new `ConnectDevice`, `SendDeviceMessage` and `WaitForDeviceMessage` nanoflow actions.
 
-For more information, see [Nanoflows](/mendix-workstation/build-app/#javascript-actions) and [Widgets](/mendix-workstation/build-app/#widgets).
+For more information, see [Nanoflows](/mendix-workstation/develop-app/#javascript-actions) and [Widgets](/mendix-workstation/develop-app/#widgets).
 
 #### Improvements
 

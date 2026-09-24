@@ -10,6 +10,16 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.3.0
+
+### Release date: October 8, 2026
+
+### Workstation Management
+
+#### Bug Fixes
+
+* We have fixed an issue where refreshing the **Test Your Station** page bypassed the check that the station belongs to the current workspace.
+
 ## 4.2.1
 
 ### Release date: September 16, 2026

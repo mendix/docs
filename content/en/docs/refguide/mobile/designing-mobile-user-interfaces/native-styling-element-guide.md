@@ -1145,7 +1145,7 @@ export const com_mendix_widget_native_progressbar_ProgressBar = {
   fill: {
     backgroundColor: null, // This is the background color of the filled progress bar portion.
   },
-  marker: {
+  validationMessage: {
     // This has all TextStyle properties.
   },
 };
@@ -1640,7 +1640,7 @@ A main object has four objects:
 export const com_mendix_widget_native_popupmenu_PopupMenu = {
   basic: {
   // BasicItemStyle. Styles basic items.
-    containerStyle: {
+    container: {
       // This has all ViewStyle properties. Styles the wrapper container around a basic item. 
     },
     itemStyle: {
@@ -1687,7 +1687,7 @@ export const com_mendix_widget_native_popupmenu_PopupMenu = {
 
 | Element    | Style Properties |  Description     |
 | ----| ---- | ------ |
-| `containerStyle` | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
+| `container` | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
 | `itemStyle` | ItemStyle      | Styles the basic items.      |
 | `dividerColor` | `string`      | Styles the divider color.    |
 
@@ -1706,7 +1706,7 @@ export const com_mendix_widget_native_popupmenu_PopupMenu = {
 
 | Element                   | Style Properties |  Description                                      |
 | ---------------------------| ---- | ------------------------------------------------ |
-| `containerStyle` | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
+| `container` | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
 | `itemStyle` | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
 | `dividerColor` | `string`      | Styles the divider color.                         |
 
@@ -1995,7 +1995,7 @@ export const com_mendix_widget_native_barchart_BarChart = {
     // This has all ViewStyle properties. 
   },
   grid: {
-    backgroundcolor: null, // Applies a color to the grid background (string).
+    backgroundColor: null, // Applies a color to the grid background (string).
     dashArray: null, //  Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
     lineColor: null, // Applies a color to the grid lines (string).
     width: null, // Applies a width to the grid lines (number).
@@ -2046,12 +2046,12 @@ export const com_mendix_widget_native_barchart_BarChart = {
   },
   bars: {
     barColorPalette: null, // Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series).
-    barsoffset: null, // Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
+    barsOffset: null, // Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
     customBarStyles: {
       any_custom_bar_style_name: {
         bar: {
           ending: null, // Specifies a radius to apply to each bar.
-          barcolor: null, // Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar.
+          barColor: null, // Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar.
           width: null, // Applies a width to the bar (number).
         },
         label: {

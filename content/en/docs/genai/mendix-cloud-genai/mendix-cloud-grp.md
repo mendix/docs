@@ -44,17 +44,18 @@ The Mendix Cloud GenAI Resource Packs provide access to the following models:
 
 | Model | Model ID | Model Type | Regions | Available Only via Cross-Region Inference (CRI) | AWS Inference Regions | End of Life |
 | ----- | -------- | ---------- | --------- | ----------------------------------------------- | --------------------------- | ----------- |
-| Anthropic Claude Haiku 4.5 | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
-| Anthropic Claude Sonnet 4.5 | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
-| Anthropic Claude Sonnet 4.6 | `eu.anthropic.claude-sonnet-4-6` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
-| Anthropic Claude Sonnet 5 | `eu.anthropic.claude-sonnet-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
-| Anthropic Claude Sonnet 3 | `anthropic.claude-3-sonnet-20240229-v1:0` | Text | Mendix Cloud Canada (Montreal) | NO | ca-central-1 | — |
-| Anthropic Claude Opus 4.6 | `eu.anthropic.claude-opus-4-6-v1` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
-| Anthropic Claude Opus 4.7 | `eu.anthropic.claude-opus-4-7` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
-| Anthropic Claude Opus 4.8 | `eu.anthropic.claude-opus-4-8` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
-| Anthropic Claude Opus 5 | `eu.anthropic.claude-opus-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
-| Cohere Embed v4 | `eu.cohere.embed-v4:0` | Embeddings | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
-| Cohere Embed v3 <br> English and multilingual | `cohere.embed-english-v3`<br> `cohere.embed-multilingual-v3` | Embeddings | Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> ca-central-1 | — |
+| Anthropic Claude Haiku 4.5 | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Sonnet 4.5 | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Sonnet 4.6 | `eu.anthropic.claude-sonnet-4-6` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Sonnet 5 | `eu.anthropic.claude-sonnet-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Sonnet 3 | `anthropic.claude-3-sonnet-20240229-v1:0` | Text | Mendix Cloud Canada (Montreal) | NO | Canada (Central) | — |
+| Anthropic Claude Opus 4.6 | `eu.anthropic.claude-opus-4-6-v1` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Opus 4.7 | `eu.anthropic.claude-opus-4-7` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Opus 4.8 | `eu.anthropic.claude-opus-4-8` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Opus 5 | `eu.anthropic.claude-opus-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Opus 5.5 | `eu.anthropic.claude-opus-5-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Cohere Embed v4 | `eu.cohere.embed-v4:0` | Embeddings | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Cohere Embed v3 <br> English and multilingual | `cohere.embed-english-v3`<br> `cohere.embed-multilingual-v3` | Embeddings | Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> Canada (Central) | — |
 
 The Model ID column lists the identifier that the [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) uses to address a specific model. End-of-life dates are region-specific. A dash (—) in the End of Life column indicates that no end-of-life date has been announced for the model in the listed regions. After a model reaches its end-of-life date, requests to that model fail. Switch to another supported model before the end-of-life date.
 
@@ -82,6 +83,7 @@ For example, if you allocate 50 Cloud Tokens per month, your resource receives 5
 | Claude Opus 4.7 | 179.07 | 895.35 |
 | Claude Opus 4.8 | 179.07 | 895.35 |
 | Claude Opus 5 | 179.07 | 895.35 |
+| Claude Opus 5.5 | 143.26 | 716.28 |
 | Cohere Embed V3 English | 30.23 | — |
 | Cohere Embed V3 Multilingual | 30.23 | — |
 | Cohere Embed V4 | 30.23 | — |

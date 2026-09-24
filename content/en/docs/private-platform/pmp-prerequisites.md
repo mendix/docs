@@ -13,7 +13,13 @@ This document presents the system requirements for the various parts of the Priv
 
 ## Training and Certification Requirements
 
+Private Mendix Platform provides a platform experience in on-premises or (virtual) Mendix on Kubernetes environments. It is dependent on Mendix on Kubernetes and Kubernetes, and integrates with tooling in the customer's landscape. Please refer to Private Mendix Platform documentation for prerequisites to install the platform and set up configurations, as well as Mendix on Kubernetes documentation for supported environments.
+
+This offering is delivered, managed and supported by Certified Partners (or Certified Customers). You must have the *PMP-Partner certified* certification.
+
 {{< figure src="/attachments/private-platform/pmp-prerequisites1.png" class="no-border" >}}
+
+For more information about the responsibilities of Mendix and certified partners, refer to the table shown in [Support for Different Deployment Strategies](https://docs.mendix.com/support/deployment-strategy-support/#introduction).
 
 ## Hardware Requirements
 

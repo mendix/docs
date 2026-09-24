@@ -7,10 +7,10 @@ weight: 70
 
 ## Introduction
 
-If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps, depending on whether you are running the upgrade manually or through a Helm chart.
+If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps, depending on whether you are running the upgrade through the installer GUI, or through a Helm chart.
 
 {{% alert color="info" %}}
-Select the upgrade method based on the original installation method. That is to say, if you installed Private Mendix Platform in [manual mode](/private-mendix-platform/interactive-installation/), upgrade it in the same way. It is not possible to upgrade manual installs by using Helm charts. A clean install would be necessary instead.
+Select the upgrade method based on the original installation method. That is to say, if you installed Private Mendix Platform in [GUI mode](/private-mendix-platform/interactive-installation/), upgrade it in the same way. It is not possible to upgrade manual installs by using Helm charts. A clean install would be necessary instead.
 {{% /alert %}}
 
 ### Upgrading Private Mendix Platform in Manual Mode

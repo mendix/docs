@@ -20,14 +20,14 @@ This device type requires the following message and response:
 
 ### Message
 
-Send instruction in hexadecimal as a string, for example, *FFCA000000* to read the smart card ID. The messages exchanged with the card reader are APDU messages. For more information, refer to the documentation of the APDU command for your smart card reader.
+Send an instruction in hexadecimal as a string, for example, *FFCA000000* to read the smart card ID. The messages exchanged with the card reader are APDU messages. For more information, refer to the documentation of the APDU command for your smart card reader.
 
 ### Response
 
 * `0#` - Card connected
 * `1#` - Card disconnected
-* `2# Response` - Response from device as raw hexadecimal.
-* `3# Error` - Error message from device.
+* `2# Response` - Response from device as raw hexadecimal
+* `3# Error` - Error message from device
 
 ## Bluetooth {#bluetooth}
 
@@ -82,7 +82,7 @@ This device type requires the following message and response:
 
 The sample print command `P#TESTHELLO#RAW#aGVsbG8=` contains the following elements:
 
-1. `P (command prefix)` - Tells the Workstation Client that the incoming instruction is a Print command.
+1. `P` (command prefix) - Tells the Workstation Client that the incoming instruction is a Print command.
 2. Separator
 3. `TESTHELLOFILE` (file name) - Name assigned to the print job. The client uses this to create the temporary file (for example, `TESTHELLOFILE.prn`) before sending it to the printer spooler.
 4. Separator
@@ -93,8 +93,8 @@ The sample print command `P#TESTHELLO#RAW#aGVsbG8=` contains the following eleme
 
 Before sending messages to the file device, review the following points:
 
-* Path handling - You can provide the paths either as absolute (for example, `/var/log/app.log` or `C:\Data\report.txt`), or as relative paths. Relative paths are always interpreted relative to the allowed folder configured in Workstation Management.
-* Delimiter - The `#` character is used as a delimiter within messages. Paths and data may not contain the `#` character. 
+* Path handling - You can provide the paths either as absolute paths (for example, `/var/log/app.log` or `C:\Data\report.txt`), or as relative paths. Relative paths are always interpreted relative to the allowed folder configured in Workstation Management.
+* Delimiter - The `#` character is used as a delimiter within messages. Paths and data may not contain the `#` character.
 * Case sensitivity - File and directory paths may be case-sensitive depending on the underlying operating system. For example, Linux paths are typically case-sensitive, while Windows paths are not.
 
 ### Message
@@ -102,12 +102,12 @@ Before sending messages to the file device, review the following points:
 * `0#Path` - Initiate watching for changes in the specified `Path`. If `Path` is a directory, the device will watch for changes within that directory (creation, deletion, renaming, or modification of files/subdirectories). If `Path` is a file, the device will watch for changes to that specific file (modification, deletion, or renaming).
 * `1#Path` - Stop watching for changes in the specified `Path`.
 * `2#File path` - Read the content of the file at the specified `File Path`.
-* `3#File path#Data#flag` - Write `Data` to the file at the specified `File Path`. The `flag` can be `w` for overwrite, `a` for append If left blank, the value defaults to `w`.
+* `3#File path#Data#flag` - Write `Data` to the file at the specified `File Path`. The `flag` can be `w` for overwrite, `a` for append; if left blank, the value defaults to `w`.
 
 ### Response
 
 * `R#Path` - File or directory at the specified `Path` was renamed, created, or deleted.
-* `C#Path` - File or directory at the specified `Path` was changed. This is triggered both when a file is modified and when the contents of a directory changes. 
+* `C#Path` - File or directory at the specified `Path` was changed. This is triggered both when a file is modified and when the contents of a directory change. 
 * `D#Data` - `Data` from file read.
 * `E#Error` - `Error` message from operating system.
 * `S#{0,1,2,3}#directory` - The command `{0,1,2,3}` on `directory` was successful.

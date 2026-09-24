@@ -82,7 +82,7 @@ The following are reusable web snippets for the screens which most Workstation a
 * `Snippet_StationInfo` - Displays the current workstation, and reports when the Workstation Client is unavailable. It has no parameter. Use it as a header or status panel.
 * `Snippet_DeviceCard` - Displays a single device as a card, with its state and connect/disconnect controls, and opens the device logger when the device name is clicked.
 * `Snippet_DeviceState` - Shows the connection state of a device together with its connect and disconnect buttons.
-* `Snippet_DeviceConsole` - Provides an the interactive [device logger](#device-logger) console.
+* `Snippet_DeviceConsole` - Provides the interactive [device logger](#device-logger) console.
 
 ## Read More
 

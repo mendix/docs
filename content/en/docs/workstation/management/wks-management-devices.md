@@ -22,7 +22,7 @@ Before connecting devices with Mendix Workstation, perform the following steps:
     * For TCP/IP connection - IP address and port.
 
 4. Obtain the manual and technical documentation for your devices, including chapters describing the communication protocol and how to configure it.
-5. Test the connection and protocol on your operating system using the tool recommended in the device technical documentation or using common tool such as PuTTY.
+5. Test the connection and protocol on your operating system using the tool recommended in the device technical documentation or using a common tool such as PuTTY.
     * For Serial Port connection - Open the device and test device basic commands.
     * For TCP/IP connection - Ping the device to make sure that it is reachable on the network and not blocked by a firewall, and then test the basic device commands.
 
@@ -32,7 +32,7 @@ A device class is a label that you assign to devices in order to group the ones 
 
 Device classes are defined per workspace and are available to every station in that workspace. You assign a class in the **Device Class** field while adding or editing a device. All device types support classes, and the field is always optional.
 
-Because the class identifies a device by role rather than by name, a Mendix application can address the same kind of device on every station without knowing the individual device names. In the Workstation Connector, the `deviceClass` parameter of the `GetCreateDevice` JavaScript action refers to this value. For more information, see [Developing Workstation-Enabled Applications](/mendix-workstation/build-app/).
+Because the class identifies a device by role rather than by name, a Mendix application can address the same kind of device on every station without knowing the individual device names. In the Workstation Connector, the `deviceClass` parameter of the `GetCreateDevice` JavaScript action refers to this value. For more information, see [Developing an App with the Workstation Connector](/mendix-workstation/develop-app/).
 
 ### Managing Device Classes
 
@@ -45,14 +45,14 @@ From this page you can perform the following actions:
 * **Delete Device Class** - Click the three-dot menu of the class, and then click **Delete Device Class**.
 
 {{% alert color="warning" %}}
-Renaming or deleting a class that is used to lookup a device in an Workstation app breaks the logic of every app that relies on it, so check the **Devices** count and active **Apps** before you change a class.
+Renaming or deleting a class that is used to lookup a device in a Workstation app breaks the logic of every app that relies on it, so check the **Devices** count and active **Apps** before you change a class.
 {{% /alert %}}
 
 ## Card Readers
 
 Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 
 
-Auto detecting card readers is disabled by default. You can enable this setting on a **Station** page by selecting **Detect Card Readers**. 
+Auto-detecting card readers is disabled by default. You can enable this setting on a **Station** page by selecting **Detect Card Readers**. 
 
 For the message syntax used to communicate with this device, see [Card Readers](/mendix-workstation/device-syntax/#card-readers).
 
@@ -287,7 +287,7 @@ To add a TCP/IP server, perform the following steps:
 5. Click **Next**.
 6. Configure the following connection parameters:
 
-    * **Port** - The port on which the TCP/IP Server is initalized. The value must be in the range of `0-65535`.
+    * **Port** - The port on which the TCP/IP Server is initialized. The value must be in the range of `0-65535`.
 
 7. Click **Next**.
 8. In the **Split Incoming Message By** section, select one of the following options:

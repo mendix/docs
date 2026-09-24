@@ -57,7 +57,7 @@ A *station* represents a workstation on the shop floor. It can connect to one or
 
 ## Installing the Workstation Client
 
-The Workstation Client is a connector between between a Mendix app and various devices. You must install it on a computer, and then register it in Workstation Management.
+The Workstation Client is a connector between a Mendix app and various devices. You must install it on a computer, and then register it in Workstation Management.
 
 {{% alert color="info" %}}
 The following instructions assume that your operating system is Windows, and that you have Windows administrator rights that allow you to perform a global installation. If you do not have administrator rights, or if you want to install the Client on a Linux machine, see [Installing the Workstation Client](/mendix-workstation/install-client/) for instructions.

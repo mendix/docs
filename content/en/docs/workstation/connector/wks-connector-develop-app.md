@@ -1,8 +1,10 @@
 ---
-title: "Develop an App with the Workstation Connector"
+title: "Developing an App with the Workstation Connector"
 url: /mendix-workstation/develop-app/
 description: "Describes the Workstation Connector domain model, nanoflows, and JavaScript actions that you use to build device interactions into your app."
 weight: 25
+aliases: 
+    - /mendix-workstation/build-app/
 ---
 
 ## Introduction
@@ -24,8 +26,8 @@ To help you develop your application, familiarize yourself with the [Mendix Stud
 The Workstation domain model contains the following entities:
 
 * **Station** - A non-persistent entity representing the Workstation Client configuration.
-* **Device** - A non-persistent entity representing a connectable peripheral device. Includes the name, class and state (Available, Connected, or Error). Specialize this to maintain your device specific state.
-* **AppKeyPair** - A persistent entity to store the app's key pair. The public key needs to be entered in the corresponding app in the Workstation Management. 
+* **Device** - A non-persistent entity representing a connectable peripheral device. Includes the name, class and state (Available, Connected, or Error). Specialize this to maintain your device-specific state.
+* **AppKeyPair** - A persistent entity to store the app's key pair. The public key needs to be entered in the corresponding app in Workstation Management.
 
 ## Using the Nanoflows and Actions {#javascript-actions}
 
@@ -80,11 +82,14 @@ Call `GetCreateDevice` to create and configure a device, and define the actions 
 * `createDevice` (Nanoflow, optional) - A nanoflow that creates and returns a `StationConnector.Device` object or a specialization of it. If you do not provide a nanoflow, a `StationConnector.Device` with default values is created.
 * `deviceEntity` (Entity) - The entity returned by the `createDevice` nanoflow, or `StationConnector.Device`.
 * `onConnect` (Nanoflow, optional) - Called when the device connects, with the following parameters:
+
     * `Device` (Object)
 * `onMessage` (Nanoflow, optional) - Called when the device sends a message, with the following parameters:
+
     * `Message` (String)
     * `Device` (Object)
 * `onDisconnect` (Nanoflow, optional) - Called when the device disconnects, with the following parameters:
+
     * `Device` (Object)
 
 The device object is created once and returned for every call that uses the same name and class.
@@ -118,6 +123,7 @@ Call `SubscribeToObjectChanges` to trigger a nanoflow when the specified object 
 * `objectToObserve` (Object) - The Mendix object to observe.
 * `attributes` (String) - Optional, a comma-separated list of the attributes to observe.
 * `callback` (Nanoflow, optional) - Called when the object changes, with the following parameters:
+
     * The object to observe, for example `MyEntity` of type `MyModule.MyEntity`.
     * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
 * `applicationContext` (Object) - Optional, an extra object to pass to the callback.
@@ -139,6 +145,7 @@ Call `SubscribeToDeviceErrors` to trigger a nanoflow on device connection error.
 
 * `device` (Object) - A `StationConnector.Device` object or a specialization of it to subscribe to.
 * `callback` (Nanoflow, optional) - Called when the device connection fails, with the following parameters:
+
     * `ErrorMessage` (String)
     * `ErrorCode` (Integer/Long)
     * `Device` (Object)
@@ -170,6 +177,7 @@ Use `SubscribeToDeviceMessages`, `Unsubscribe`, and `ConnectDevice` instead. Tho
 
 * `device` (Object) - A `StationConnector.Device` object or a specialization of it to subscribe to.
 * `callback` (Nanoflow, optional) - Called when the device sends a message, with the following parameters:
+
     * `Message` (String)
     * `Device` (Object) - Unlike `SubscribeToDeviceMessages`, a specialization is not also passed under its own entity name.
     * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
@@ -182,6 +190,7 @@ Use `SubscribeToDeviceErrors`, `Unsubscribe`, and `ConnectDevice` instead. Those
 
 * `device` (Object) - A `StationConnector.Device` object or a specialization of it to subscribe to.
 * `callback` (Nanoflow, optional) - Called when the device connection fails, with the following parameters:
+
     * `ErrorMessage` (String)
     * `ErrorCode` (Integer/Long)
     * `Device` (Object) - Unlike `SubscribeToDeviceErrors`, a specialization is not also passed under its own entity name.

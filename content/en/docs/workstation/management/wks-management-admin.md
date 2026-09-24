@@ -38,7 +38,7 @@ To create a station from scratch, perform the following steps:
 3. Optional: In the **Add to Station Group** field, select a group to organize your stations (for example, by location, department, or function). For more information, see [Station Groups](#station-groups).
 4. Optional: Specify an **Auto-Accepted Computer Name**. 
 
-    If provided, during a bulk registration process, any Workstation Client reporting this computer name are automatically mapped and registered to this specific station, streamlining large-scale deployments.
+    If provided, during a bulk registration process, any Workstation Client reporting this computer name is automatically mapped and registered to this specific station, streamlining large-scale deployments.
 
 ### Creating a Station from Clipboard
 
@@ -126,7 +126,7 @@ Auto detecting card readers is enabled by default. You can toggle the **Detect C
 
 Developer mode can be configured on the **Station** page by selecting **Enable Developer Mode**.
 
-Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Mendix Workstation Management](/mendix-workstation/management-config/).
+Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Workspaces](/mendix-workstation/management-workspaces/).
 
 When developer mode is enabled, users of the Workstation Client can perform the following actions:
 

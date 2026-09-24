@@ -128,6 +128,8 @@ Developer mode can be configured on the **Station** page by selecting **Enable D
 
 Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Workspaces](/mendix-workstation/management-workspaces/).
 
+Disabling developer mode requires Workstation licenses. In a workspace without an entitlement, developer mode is enabled by default, and saving a station with **Enable Developer Mode** cleared is refused with the message "You currently are not entitled to disable developer mode. Please contact your administrator to obtain the necessary Workstation licenses." Stations that already have developer mode disabled keep that setting, and a workspace that loses its entitlement does not have developer mode re-enabled on its existing stations.
+
 When developer mode is enabled, users of the Workstation Client can perform the following actions:
 
 * Quit the program from the Start menu.
@@ -135,5 +137,5 @@ When developer mode is enabled, users of the Workstation Client can perform the 
 * Debug level live logs displayed in the Logs pane of the Workstation Client, even if the workspace's log level is set to a different level.
 
 {{% alert color="info" %}}
-For production environments, it is strongly recommended to disable Developer Mode. This prevents Workstation operators from accidentally quitting or deregistering the Workstation Client, and restricts access to debugging tools that are not needed in a live operational setting.
+For production environments, it is strongly recommended to disable Developer Mode, which requires an entitled workspace. This prevents Workstation operators from accidentally quitting or deregistering the Workstation Client, and restricts access to debugging tools that are not needed in a live operational setting.
 {{% /alert %}}

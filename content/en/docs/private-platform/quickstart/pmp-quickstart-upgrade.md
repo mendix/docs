@@ -79,9 +79,9 @@ When upgrading to Private Mendix Platform 2.8.1 or newer, the following changes 
 
 You can rename the pipeline at any time (for example to **Production-Build**). You can also create draft pipelines for individual apps while MAIN continues to serve everything else. Builds or deployments already in progress during the upgrade either complete or fail gracefully and can be re-triggered.
 
-### Role Permissions Change When Upgrading to Version 2.8.1 and Newer
+### Role Permissions Change When Upgrading to Version 2.8.0 and Newer
 
-Private Mendix Platform version 2.8.1 adds the option to configure dynamic role management on a more granular level than before. Because of that, you may encounter an issue where previously created environments are not visible after an upgrade from a version older than 2.8.0.
+Private Mendix Platform version 2.8.0 adds the option to configure dynamic role management on a more granular level than before. Because of that, you may encounter an issue where previously created environments are not visible after an upgrade from a version older than 2.8.0.
 
 This issue is caused by missing deployment-related permissions for custom CI/CD roles after the upgrade. To fix it, reassig the required deployment permissions.
 

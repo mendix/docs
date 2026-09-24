@@ -437,6 +437,39 @@ global:
       - name: acr-secret
 ```
 
+### ChartRepo
+
+This is the custom Helm chart repository URL for all components. It allows you to host all charts in your own OCI registry instead of pulling from the default Mendix registry.
+
+* **Type** - `string`
+* Default value - `""` (uses default Mendix registries)
+
+When `chartRepo` is not specified, each component pulls from its default Mendix registry location with the following full paths:
+
+* `installer-config` - `oci://registry.mendix.com/private-platform/charts/installer-config`
+* `mxplatform` - `oci://registry.mendix.com/private-platform/charts/mxplatform`
+* `mxplatform-kube-agent` - `oci://registry.mendix.com/private-platform/charts/mxplatform-kube-agent`
+* `svix-server` - `oci://registry.mendix.com/private-platform/charts/svix-server`
+* `mx-privatecloud` - `oci://registry.mendix.com/private-cloud/charts/mx-privatecloud`
+* `mx-privatecloud-license-manager` - `oci://registry.mendix.com/private-cloud/charts/mx-privatecloud-license-manager`
+* `maia-appgen` - `oci://registry.mendix.com/maia/charts/maia-appgen`
+* `maia-llm-gateway` - `oci://registry.mendix.com/maia/charts/maia-llm-gateway`
+* `mx-private-document-generation` - `oci://registry.mendix.com/docgen/charts/mx-private-document-generation`
+
+#### Custom Repository Structure
+
+When a custom Helm chart repository is configured using `chartRepo`, all charts are pulled using a flat structure. The chart name is appended to your repository URL, as in the following example:
+
+```text
+# Example: Use Azure Container Registry
+chartRepo: "oci://crpmp001.azurecr.io/helm/pmp"
+# Charts will be pulled from:
+# - oci://crpmp001.azurecr.io/helm/pmp/mxplatform
+# - oci://crpmp001.azurecr.io/helm/pmp/mx-privatecloud
+# - oci://crpmp001.azurecr.io/helm/pmp/maia-appgen
+# etc.
+```
+
 ## Component Configurations
 
 The following configurations are component-specific.
@@ -514,6 +547,13 @@ Admin user credentials (`admin_user` and `admin_password`) must exactly match th
 | `ingress.ingressClassName` | string | Conditional | The Ingress class name (for example, `nginx`) |
 | `ingress.annotations` | object | No | Additional ingress annotations |
 | `ingress.labels` | object | No | Additional ingress labels |
+
+##### TLS Configuration for Ingress
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `ingress.enableTLS` | Boolean | No | `false` | Set to `true` to enable TLS termination at ingress. |
+| `ingress.tlsSecretName` | string | Conditional | "" | Kubernetes Secret name containing TLS certificate. Required if `ingress.enableTLS: true`. |
 
 ##### Workload Identity Configuration
 

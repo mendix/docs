@@ -11,6 +11,16 @@ aliases:
 
 This document presents the system requirements for the various parts of the Private Mendix Platform.
 
+## Training and Certification Requirements
+
+Private Mendix Platform provides a platform experience in on-premises or (virtual) Mendix on Kubernetes environments. It is dependent on Mendix on Kubernetes and Kubernetes, and integrates with tooling in the customer's landscape. Please refer to Private Mendix Platform documentation for prerequisites to install the platform and set up configurations, as well as Mendix on Kubernetes documentation for supported environments.
+
+This offering is delivered, managed and supported by Certified Partners (or Certified Customers). You must have the *PMP-Partner certified* certification.
+
+{{< figure src="/attachments/private-platform/pmp-prerequisites1.png" class="no-border" >}}
+
+For more information about the responsibilities of Mendix and certified partners, refer to the table shown in [Support for Different Deployment Strategies](https://docs.mendix.com/support/deployment-strategy-support/#introduction).
+
 ## Hardware Requirements
 
 For performance reasons, Mendix recommends at least the following minimum hardware requirements.
@@ -31,20 +41,6 @@ For performance reasons, Mendix recommends at least the following minimum hardwa
 | Memory | 2 GB |
 | Database HA | CPU: 1 core; Memory: 2x2 GB |
 
-### Additional Recommendations
-
-[Additional services](/private-mendix-platform/grafana/) (Prometheus, Grafana, Loki) for observability are recommended. The following versions are currently validated for Private Mendix Platform:
-
-| Tool | Version |
-| --- | --- |
-| Grafana | 12.2.1 |
-| Prometheus | 3.7.3 |
-| Loki | 2.6.1 |
-
-{{% alert color="info" %}}
-Currently, Private Mendix Platform only supports Grafana configurations with a single Loki and a single Prometheus data source. Configurations using a central Grafana instance with multiple Loki or Prometheus datasources are not supported.
-{{% /alert %}}
-
 ## General Requirements
 
 * The machine where Private Mendix Platform is installed must have connectivity to the Container Registry and the Kubernetes cluster
@@ -64,6 +60,10 @@ G* it, Jenkins and other services must be accessible on the same virtual network
 
 ## Software Resource Requirements
 
+{{% alert color="info" %}}
+The use of the mx-ops-cli tool is currently not officially supported.
+{{% /alert %}}
+
 Your Mendix app will be deployed with and run by the Private Mendix Platform Operator on top of Kubernetes. The following resources are required to facilitate this:
 
 ### Platform Portal
@@ -79,6 +79,20 @@ Your Mendix app will be deployed with and run by the Private Mendix Platform Ope
 | Runtime | Mendix | See the [Release Notes](/releasenotes/private-platform/) for your Private Mendix Platform version | Will be installed by Private Mendix Platform installer |
 | License | Private Cloud License Manager (PCLM) | Latest | Will be installed by Private Mendix Platform installer<br />Requires PostgreSQL 12 or MS SQL Server 19 or 22, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/#prerequisites) for more information |
 | TLS | TLS certificate | | Optional, needs to be provided by you |
+
+#### Additional Recommendations
+
+[Additional services](/private-mendix-platform/grafana/) (Prometheus, Grafana, Loki) for observability are recommended. The following versions are currently validated for Private Mendix Platform:
+
+| Tool | Version |
+| --- | --- |
+| Grafana | 12.2.1 |
+| Prometheus | 3.7.3 |
+| Loki | 2.6.1 |
+
+{{% alert color="info" %}}
+Currently, Private Mendix Platform only supports Grafana configurations with a single Loki and a single Prometheus data source. Configurations using a central Grafana instance with multiple Loki or Prometheus datasources are not supported.
+{{% /alert %}}
 
 #### Supported Cluster Types{#supported-clusters}
 

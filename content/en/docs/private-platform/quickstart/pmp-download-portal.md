@@ -181,7 +181,7 @@ To view release details:
 1. Click the three-dot menu (**•••**) for the desired release.
 2. Click **View Release Note** to open the release documentation.
 
-### Viewing Add-ons
+### Viewing Add-Ons
 
 In versions of Private Mendix Platform older than 2.8.1, the three-dot menu also shows the images and charts required for Private Mendix Platform installation.
 

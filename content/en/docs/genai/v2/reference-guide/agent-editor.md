@@ -47,6 +47,7 @@ Agent Editor provides the following features:
 * Microflow integration through the **Call Agent** toolbox action under the **Agent Editor** category.
 * Agent definitions as app-model documents under version control, making changes traceable and allowing rollback to previously committed states when needed.
 * Deployment together with the app model, with environment-specific flexibility through constant overrides.
+* Agentic development with Maia. Through conversation, you can set up all the building blocks your agent depends on (Models, Knowledge Bases, Consumed MCP Services, and microflow tools), create Published MCP Services to expose your app logic, and refine your agent's prompts and tool configuration.
 
 ### Dependencies {#dependencies}
 
@@ -113,6 +114,8 @@ To use Agent Editor functionalities in your app, you must perform the following 
 5. Include the agent in the app logic.
 6. Deploy the agent to cloud environments.
 7. Improve the agent in the next iterations.
+
+You can perform all of the above manually in Studio Pro, or with the assistance of Maia. Simply describe what you want to build and Maia will guide you through the configuration steps.
 
 For a step-by-step tutorial, see [Create an Agent with Agent Editor](/agents/agents-kit-2/how-to/create-agent-with-agent-editor/).
 

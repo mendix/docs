@@ -7,10 +7,10 @@ weight: 70
 
 ## Introduction
 
-If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps, depending on whether you are running the upgrade manually or through a Helm chart.
+If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps, depending on whether you are running the upgrade through the installer GUI, or through a Helm chart.
 
 {{% alert color="info" %}}
-Select the upgrade method based on the original installation method. That is to say, if you installed Private Mendix Platform in [manual mode](/private-mendix-platform/interactive-installation/), upgrade it in the same way. It is not possible to upgrade manual installs by using Helm charts. A clean install would be necessary instead.
+Select the upgrade method based on the original installation method. That is to say, if you installed Private Mendix Platform in [GUI mode](/private-mendix-platform/interactive-installation/), upgrade it in the same way. It is not possible to upgrade manual installs by using Helm charts. A clean install would be necessary instead.
 {{% /alert %}}
 
 ### Upgrading Private Mendix Platform in Manual Mode
@@ -79,9 +79,9 @@ When upgrading to Private Mendix Platform 2.8.1 or newer, the following changes 
 
 You can rename the pipeline at any time (for example to **Production-Build**). You can also create draft pipelines for individual apps while MAIN continues to serve everything else. Builds or deployments already in progress during the upgrade either complete or fail gracefully and can be re-triggered.
 
-### Role Permissions Change When Upgrading to Version 2.8.0 and Newer
+### Role Permissions Change When Upgrading to Version 2.8.1 and Newer
 
-Private Mendix Platform version 2.8.0 adds the option to configure dynamic role management on a more granular level than before. Because of that, you may encounter an issue where previously created environments are not visible after an upgrade from a version older than 2.8.0.
+Private Mendix Platform version 2.8.1 adds the option to configure dynamic role management on a more granular level than before. Because of that, you may encounter an issue where previously created environments are not visible after an upgrade from a version older than 2.8.0.
 
 This issue is caused by missing deployment-related permissions for custom CI/CD roles after the upgrade. To fix it, reassig the required deployment permissions.
 

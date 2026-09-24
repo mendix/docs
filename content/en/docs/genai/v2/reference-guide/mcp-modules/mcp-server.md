@@ -29,6 +29,7 @@ The current version has the following limitations:
 
 * Tools can only return String values, either directly as a String type or using the `TextContent` entity.
 * Prompts can only return a single message.
+* The path of the MCP Server cannot contain `/`, so no sub-paths are possible currently.
 
 {{% alert color="info" %}}
 Note that the MCP Server module is still in its early version, and the latest version may include breaking changes. Since both the open-source protocol and the Java SDK are still evolving and regularly updated, these changes may also affect this module.

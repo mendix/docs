@@ -19,6 +19,7 @@ The [MCP Server](https://marketplace.mendix.com/link/component/240380) module pr
 
 * Expose reusable prompts, including the ability to use prompt parameters
 * List and execute microflow implemented in the application as tools
+* The path of the MCP Server cannot contain `/`, so no sub-paths are possible currently.
 
 To use function calling within the same Mendix application and integrating to an LLM, consider [function calling](/agents/function-calling/).
 

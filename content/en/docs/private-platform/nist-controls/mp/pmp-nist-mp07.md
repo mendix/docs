@@ -26,7 +26,7 @@ Information system media includes both digital and non-digital media. Digital me
 
 Non-digital media includes, for example, paper and microfilm. This control also applies to mobile devices with information storage capability (for example, smart phones, tablets, E-readers). 
 
-In contrast to [MP-2](/private-mendix-platform/nist-controls/mp-02/), which restricts user access to media, this control restricts the use of certain types of media on information systems, for example, restricting or prohibiting the use of flash drives or external hard disk drives.
+In contrast to [MP-02](/private-mendix-platform/nist-controls/mp-02/), which restricts user access to media, this control restricts the use of certain types of media on information systems, for example, restricting or prohibiting the use of flash drives or external hard disk drives.
 
 Organizations can employ technical and nontechnical safeguards (for example, policies, procedures, rules of behavior) to restrict the use of information system media. Organizations may restrict the use of portable storage devices, for example, by using physical cages on workstations to prohibit access to certain external ports, or disabling/removing the ability to insert, read or write to such devices. 
 
@@ -36,8 +36,8 @@ Finally, organizations may restrict the use of portable storage devices based on
 
 The following controls are related to this control:
 
-* AC-19
-* PL-4
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* PL-04
 
 ## Responsibility
 

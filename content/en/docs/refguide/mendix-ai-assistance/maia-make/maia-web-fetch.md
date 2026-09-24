@@ -40,19 +40,19 @@ Maia can retrieve the following types of content:
 
 Maia cannot access the following:
 
-* **Internal or private addresses** — Maia does not fetch from localhost, private IP ranges (like 192.168.x.x or 10.0.0.x), or your local machine's internal services.
-* **Binary content** — Images, videos, PDFs, and archives cannot be fetched. If a URL serves binary content, Maia is not able to read it.
-* **Very large responses** — Responses larger than 1 MB are rejected.
-* **Non-HTTPS URLs** — Only secure HTTPS connections are supported.
+* **Internal or private addresses** – Maia does not fetch from localhost, private IP ranges (like 192.168.x.x or 10.0.0.x), or your local machine's internal services.
+* **Binary content** – Images, videos, PDFs, and archives cannot be fetched. If a URL serves binary content, Maia is not able to read it.
+* **Very large responses** – Responses larger than 1 MB are rejected.
+* **Non-HTTPS URLs** – Only secure HTTPS connections are supported.
 
 ## Troubleshooting {#troubleshooting}
 
 If Maia says it cannot fetch a URL, check the following:
 
-* **Is it a public URL?** — The URL must be accessible without authentication and must point to a public server, not an internal service.
-* **Does the server block automated access?** — Some servers reject requests from automated clients. Maia may not be able to bypass these restrictions.
-* **Is it binary content?** — If the URL returns images, PDFs, or other non-text formats, Maia cannot process it.
-* **Is the response too large?** — Very large pages or files may exceed the size limit.
+* **Is it a public URL?** – The URL must be accessible without authentication and must point to a public server, not an internal service.
+* **Does the server block automated access?** – Some servers reject requests from automated clients. Maia may not be able to bypass these restrictions.
+* **Is it binary content?** – If the URL returns images, PDFs, or other non-text formats, Maia cannot process it.
+* **Is the response too large?** – Very large pages or files may exceed the size limit.
 
 ## Read More
 

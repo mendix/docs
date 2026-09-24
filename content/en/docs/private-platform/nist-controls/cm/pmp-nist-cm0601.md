@@ -24,8 +24,8 @@ The organization employs automated mechanisms to centrally manage, apply, and ve
 
 The following controls are related to this control:
 
-* CA-7
-* CM-4
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* [CM-04](/private-mendix-platform/nist-controls/cm-04/)
 
 ## Responsibility
 

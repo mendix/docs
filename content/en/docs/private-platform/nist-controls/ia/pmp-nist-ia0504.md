@@ -26,9 +26,9 @@ This control enhancement focuses on the creation of strong passwords and the cha
 
 The following controls are related to this control:
 
-* CA-2
-* CA-7
-* RA-5
+* CA-02
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* [RA-05](/private-mendix-platform/nist-controls/ra-05/)
 
 ## Responsibility
 

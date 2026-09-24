@@ -176,6 +176,16 @@ Warning Threshold | If the health check microflow returns a non-empty string val
 Critical Threshold | If the health check microflow itself experiences an error, a CRITICAL alert is generated. This will also happen when no database connection can be established.
 First actions to take | Because the health check microflow is specific to your application, Mendix cannot generically advise actions to take.
 
+### Jetty Thread Pool Usage {#jetty-thread-pool-usage}
+
+Jetty Thread Pool Usage | |
+:---|:---|
+Description | Track how much of the application's Jetty thread pool is in use. When the pool is close to full, the application can no longer accept new requests and end users may experience timeouts or degraded performance.
+Example message | Jetty thread pool at 92.0% (thread pool exhaustion), it may cause the application to stop processing requests.
+Warning Threshold | Not used.
+Critical Threshold | Active threads reach 90% or more of the maximum thread pool size.
+First actions to take | Inspect the metrics graph **Threadpool for handling external requests** for anomalies and correlate those with application behavior.
+
 ### Virtual Machine Error {#virtual-machine-error}
 
 Virtual Machine Error | |

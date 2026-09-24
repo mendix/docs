@@ -26,10 +26,10 @@ The audit records content that may be necessary to satisfy the requirement of th
 
 The following controls are related to this control:
 
-* AU-2
-* AU-8
-* AU-12
-* SI-11
+* [AU-02](/private-mendix-platform/nist-controls/au-02/)
+* [AU-08](/private-mendix-platform/nist-controls/au-08/)
+* [AU-12](/private-mendix-platform/nist-controls/au-12/)
+* [SI-11](/private-mendix-platform/nist-controls/si-11/)
 
 ## Responsibility
 

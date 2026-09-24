@@ -18,7 +18,7 @@ Model Resource Packs now use a Cloud Token for the GenAI Units conversion that a
 
 * Model Resource Packs offer access to large language model capacity. You choose a monthly Cloud Token amount, which is converted to [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) at a rate of 100 GenAI Units per Cloud Token. GenAI Units are consumed against a model-specific exchange rate, so you can use any supported Anthropic Claude model, for example, Haiku, Sonnet, or Opus from a single resource.
 
-* Embeddings Resource Packs provide access to Cohere Embed models for generating embedding vectors. New model versions are automatically available on your existing resource as Mendix adds them — no resource changes or key updates are required. For a full list of available models, see [Supported Models](#supported-models).
+* Embeddings Resource Packs provide access to Cohere Embed models for generating embedding vectors. New model versions are automatically available on your existing resource as Mendix adds them. No resource changes or key updates are required. For a full list of available models, see [Supported Models](#supported-models).
 
 * Knowledge Base Resource Packs provide an OpenSearch-based vector database to support Retrieval-Augmented Generation (RAG), Semantic Search, and other Generative AI use cases.
 
@@ -26,7 +26,7 @@ Developers can use the Mendix Cloud GenAI Portal to manage their Mendix Cloud Ge
 
 ### General Availability
 
-Mendix Cloud GenAI Resource Packs is a premium Mendix product that requires an additional purchase. To start using GenAI Resource Packs or inquire about pricing, contact your Customer Success Manager (CSM). For more information, you can also contact [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com).
+Mendix Cloud GenAI Resource Packs is a premium Mendix product that requires an additional purchase. To start using GenAI Resource Packs or inquire about pricing, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact. For more information, you can also contact [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com).
 
 You can purchase GenAI Resource Packs using Mendix Cloud Tokens. For details around costs, see [Cloud Tokens](/control-center/cloud-tokens/).
 
@@ -47,6 +47,7 @@ The Mendix Cloud GenAI Resource Packs provide access to the following models:
 | Anthropic Claude Haiku 4.5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Sonnet 4.5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Sonnet 4.6 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
+| Anthropic Claude Sonnet 5 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Sonnet 3 | Text | Mendix Cloud Canada (Montreal) | NO | ca-central-1 |
 | Anthropic Claude Opus 4.6 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude Opus 4.7 | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
@@ -74,6 +75,7 @@ For example, if you allocate 50 Cloud Tokens per month, your resource receives 5
 | Claude Haiku 4.5 | 35.81 | 179.07 |
 | Claude Sonnet 4.5 | 107.44 | 537.21 |
 | Claude Sonnet 4.6 | 107.44 | 537.21 |
+| Claude Sonnet 5 | 107.44 | 537.21 |
 | Claude Opus 4.6 | 179.07 | 895.35 |
 | Claude Opus 4.7 | 179.07 | 895.35 |
 | Claude Opus 4.8 | 179.07 | 895.35 |

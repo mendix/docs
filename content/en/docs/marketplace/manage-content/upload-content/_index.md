@@ -25,13 +25,13 @@ Before diving in, make sure you have read [Marketplace Home Page](/appstore/home
 To get started, click **Add Content** in the left panel of the Marketplace home screen. You are presented with the **Before You Get Started** dialog, which outlines the resources you will need for uploading your component.
 
 Once you make sure you have everything, click **Next**, then go through the steps in the following sections to add content.    
-Some fields are mandatory, while others are optional — this is indicated in the user interface.
+Some fields are mandatory, while others are optional—this is indicated in the user interface.
 
 On each page of the upload flow, click one of these buttons:
 
-* **Save and Exit** — Save the details you have entered so far for the draft. You can access the draft via the [My Drafts](/appstore/home-page/#my-drafts) link in the top bar.    
+* **Save and Exit** – Save the details you have entered so far for the draft. You can access the draft via the [My Drafts](/appstore/home-page/#my-drafts) link in the top bar.    
   This button is not displayed if you are editing a component.
-* **Next** — Go to the next page of the upload flow.
+* **Next** – Go to the next page of the upload flow.
 
 ### Uploading a Component {#general}
 
@@ -70,18 +70,19 @@ Some fields only apply to specific component types, so follow the on-screen prom
     * **Security Fix Release** – Select this option if your upload includes security fixes, then continue with the steps in the [Releasing Security Fixes](#security-fixes) section.     
         Note that this option is only displayed when uploading a new component version.
 
-6. Select the **Studio Pro Version** on which you built the content.    
+6. Select the **Studio Pro Version** on which you built the content.  
 
 7. If you are uploading a widget, select the **Compatible with Mendix React Client** checkbox to indicate compatibility.    
    This checkbox is mandatory starting with Studio Pro 11.
    
-8. Add a version for your component.  
+8. Add a version for your component in the **Release Version** section.     
+    {{% alert color="warning" %}}Starting with Studio Pro 11.12.0, you need to add the module version in the Studio Pro module settings before exporting the package. The version is stored in the `manifest.json` file which is included in the exported package. Marketplace picks up the version from the `manifest.json` file, so the **Studio Pro Version** and **Release Version** fields cannot be edited while uploading the module. For details, refer to the [Module Version](/refguide/module-settings/#module-version) section of the **Module Settings** page in the Studio Pro guide. {{% /alert %}}  
 
 9. Enter **Release Notes** for the component in the box provided, describing what is new in that release. This field supports rich text.
 
 10. If you are uploading a solution or an industry template, the **Business Connect** section is displayed. Enter one or more email addresses in the **Contact Email(s)** field, then click **Add Email**. These email addresses will be used by prospects to reach out to you.     
    This field is only available for public components.    
-   {{% alert color="warning" %}}Please note that potential customers can contact you directly. If you start talking to the customer, it is your responsibility to provide access to the product for them. Mendix is not involved in such customer interactions. {{% /alert %}}
+   {{% alert color="warning" %}}Potential customers can contact you directly. If you start talking to the customer, it is your responsibility to provide access to the product for them. Mendix is not involved in such customer interactions. {{% /alert %}}
 
 ### Adding General Information
 
@@ -184,8 +185,8 @@ From the preview window, you can either return to the editing flow, or publish t
 
 If you choose to publish the component, you will see one of these two buttons:
 
-* **Publish Component** — This is displayed when publishing a new component or component version.
-* **Publish Changes** — This is displayed when publishing changes to an existing component.
+* **Publish Component** – This is displayed when publishing a new component or component version.
+* **Publish Changes** – This is displayed when publishing changes to an existing component.
 
 ### Publishing {#publish} 
 
@@ -196,8 +197,6 @@ If the component is private, the draft is either checked by the company admin, o
 Note that it may take a short while before the component becomes visible.
 
 For details on the approval process, refer to [Governance Process](/appstore/submit-content/governance-process/).
-
-Every new public component or component version is scanned through [QSM](/appstore/partner-solutions/qsm/), and, if no vulnerabilities are found, it is automatically uploaded. In case of vulnerabilities, Mendix manually checks the component or component version.
 
 ## Updating Existing Marketplace Content {#updating}
 
@@ -245,6 +244,12 @@ These fields cannot be edited while updating a component:
 * **Studio Pro Version**
 * **Release Version**
 * **License Type**
+
+## Scanning Components
+
+Mendix scans every new public component or component version through [QSM](/appstore/partner-solutions/qsm/). If no vulnerabilities are found, the component or version is automatically uploaded. If vulnerabilities are found, the component or version is declined, and its developer must fix the vulnerabilities and resubmit it for review.
+
+On top of that, Mendix performs a weekly scan of all latest versions of all Marketplace components. If no vulnerabilities are found, a **Scanned** label is displayed on the **Releases** tab of the component's Marketplace page. If vulnerabilities are found, the component owner is notified via email, with the option to publish a security fix. If vulnerabilities are not fixed within 30 days, the component is deprecated.
 
 ## Releasing Security Fixes {#security-fixes}
 

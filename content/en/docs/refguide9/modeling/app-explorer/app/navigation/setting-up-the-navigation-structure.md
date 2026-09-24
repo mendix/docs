@@ -79,7 +79,7 @@ To make the best nanoflow home pages, keep the following information in mind:
 * If a nanoflow contains multiple *Show Page* activities they will be executed in order and each page will be shown respectively (the last page shown will stay open after the nanoflow finishes)
 * Make sure a *Show Page* activity is called from the startup nanoflow for each possible execution path, otherwise the app will keep showing the splash screen if the nanoflow finishes without executing a *Show Page* activity
 * Home page nanoflows should have no parameters
-* An error in the home page nanoflow can lead to an unusable app state — to avoid this, use error handling for activities that can fail, such as microflow calls
+* An error in the home page nanoflow can lead to an unusable app state—to avoid this, use error handling for activities that can fail, such as microflow calls
 * To improve user experience for long-running nanoflows, show a page as early as possible and then continue executing the rest while showing the progress on that page
 
 ## Creating Menu Items {#menu-items}

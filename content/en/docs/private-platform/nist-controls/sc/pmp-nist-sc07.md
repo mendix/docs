@@ -30,15 +30,15 @@ Managed interfaces include, for example, gateways, routers, firewalls, guards, n
 
 The following controls are related to this control:
 
-* AC-4
-* AC-17
-* CA-3
-* CM-7
-* CP-8
-* IR-4
-* RA-3
-* SC-5
-* SC-13
+* [AC-04](/private-mendix-platform/nist-controls/ac-04/)
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* CA-03
+* [CM-07](/private-mendix-platform/nist-controls/cm-07/)
+* CP-08
+* IR-04
+* [RA-03](/private-mendix-platform/nist-controls/ra-03/)
+* SC-05
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 For more information, refer to the NIST Special Publications 800-41, and 800-77.
 

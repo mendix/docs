@@ -28,17 +28,17 @@ In accordance with the E-Authentication E-Government initiative, authentication 
 
 The following controls are related to this control:
 
-* AC-2
-* AC-14
-* AC-17
-* AC-18
-* IA-2
-* IA-4
-* IA-5
-* MA-4
-* RA-3
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)
+* [AC-14](/private-mendix-platform/nist-controls/ac-14/)
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AC-18](/private-mendix-platform/nist-controls/ac-18/)
+* IA-02
+* [IA-04](/private-mendix-platform/nist-controls/ia-04/)
+* [IA-05](/private-mendix-platform/nist-controls/ia-05/)
+* MA-04
+* [RA-03](/private-mendix-platform/nist-controls/ra-03/)
 * SA-12
-* SC-8
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)
 
 For more information, refer to the following:
 

@@ -51,7 +51,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 {{% alert color="info" %}}Only Mendix Admins from the company have the authority to retrieve user UUIDs.{{% /alert %}}
 
-The following steps lead to retrieval of user's UUIDs of the email addresses provided in {emailAddresses}.
+The following steps lead to retrieval of user's UUIDs of the email addresses provided in `{emailAddresses}`.
 
 1. Set up your authentication PAT. You must be a Mendix Admin.
 1. Create a request body containing the email addresses under `emailAddresses`. For example, to get user UUIDs of `jane.doe@domain.tld` and `john.doe@domain.tld`, provide a body like this:

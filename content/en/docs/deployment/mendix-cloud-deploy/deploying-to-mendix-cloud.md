@@ -101,10 +101,6 @@ The app is now deployed. You can configure the administrative account.
 
 Deploying a Free App is a single-stage process that is completed from Studio Pro. This process is described in detail below.
 
-{{% alert color="info" %}}
-Free App deployment can be disabled at the [organization level](/control-center/security-settings/#free-app-deployment). If you cannot deploy a Free App, contact your Mendix Admin.
-{{% /alert %}}
-
 ### Prerequisites
 
 Before starting the process of deploying a Free App, make sure to complete these prerequisites:

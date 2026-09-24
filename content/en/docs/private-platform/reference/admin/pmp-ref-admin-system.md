@@ -21,7 +21,7 @@ As a user with system administrator access rights, you can access the Private Me
 
 The **Settings** section of the administrator navigation menu contains setting relevant to your day-to-day tasks as a system admin. You can use it to manage your branding, license, Marketplace settings, and version control settings.
 
-Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard](/private-mendix-platform/quickstart/#wizard). System administrators can also update them at any time after the initial configuration.
+Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard](/private-mendix-platform/configuration-wizard/). System administrators can also update them at any time after the initial configuration.
 
 ### Preferences
 

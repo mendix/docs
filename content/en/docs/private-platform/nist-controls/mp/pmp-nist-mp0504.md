@@ -26,7 +26,7 @@ This control enhancement applies to both portable storage devices (for example, 
 
 The following controls are related to this control:
 
-* MP-02
+* [MP-02](/private-mendix-platform/nist-controls/mp-02/)
 
 For more information, refer to the FIPS Publication 199 and NIST Special Publication 800-60.
 

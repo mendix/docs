@@ -27,8 +27,8 @@ Separate test environment in this context means an environment that is physicall
 The following controls are related to this control:
 
 * SA-11 
-* SC-3
-* SC-7
+* SC-03
+* SC-07
 
 ## Responsibility
 

@@ -2,18 +2,22 @@
 title: "Use a Chart with a REST Data Source"
 url: /appstore/widgets/charts-basic-rest/
 weight: 60
+description: "Describes how to plot data from a REST service in a chart by retrieving the data in a microflow and using that microflow as the chart's data source."
 aliases:
     - /howto/front-end/charts-basic-rest/
 ---
 
 ## Introduction
 
-With the Charts widgets, you can use data from a REST Service to plot graphs.
+With the Charts widget, you can plot data that comes from a REST service.
+
+The widget does not call a REST service itself. Its data source accepts a database query (a microflow, a nanoflow, or an association) so you retrieve the REST data in a microflow and point the chart at that microflow.
 
 This how-to teaches you how to do the following:
 
 * Publish a REST API
-* Use a REST endpoint as a data source for the Charts widget
+* Retrieve the data from a REST service in a microflow
+* Use that microflow as the data source for the Charts widget
 
 ## Prerequisites
 
@@ -24,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## Setting up Data to be Exposed by a REST Endpoint
 
-Mendix allows you to publish REST Web services natively from Studio Pro. Using these capabilities you can publish a REST service and use it in our Charts widget to plot graphs.
+Mendix allows you to publish REST web services natively from Studio Pro. This how-to publishes a service first, so that there is an endpoint to consume in the next sections.
 
 To create an Area Chart with data from a REST service, follow these steps:
 
@@ -68,40 +72,38 @@ To configure the REST service, follow these steps:
 1. Add **Export mapping**.
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-export-mapping.png" alt="Charts Rest Export Mapping" class="no-border" >}}
 
-## Using REST as a Data Source
+## Retrieving the REST Data in a Microflow
 
-To use the REST Data source endpoint in your chart, follow these steps:
+To make the published data available to the chart, consume the service and return its results from a microflow:
+
+1. Add a [consumed REST service](/refguide/consumed-rest-service/) for the endpoint you published.
+1. Add an [import mapping](/refguide/import-mappings/) that maps the JSON response to the **Value** entity.
+1. Create a microflow named *DS_ValuesFromREST*.
+1. In the microflow, add a [Call REST service](/refguide/call-rest-action/) activity that calls the endpoint and applies the import mapping.
+1. Set the list of **Value** objects produced by the mapping as the return value of the microflow.
+
+{{% alert color="info" %}}
+The mapping can return non-persistable objects. The chart only reads the attributes you select for the axes, so the objects do not have to be committed to the database.
+{{% /alert %}}
+
+## Using the Microflow as a Chart Data Source
+
+To plot the retrieved data, follow these steps:
 
 1. Create a page in your app containing an **Area chart** widget.
-
-1. Double-click the **Area chart** widget.
-
-1. In the tab **Chart properties**, add a new chart **Series** property.
-
-1. Add **Series name** and **Entity**.
-
-1. Select **Data source** REST endpoint.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-series.png" alt="Chart Rest Series" class="no-border" >}}
-
-1. Add the **REST URL**.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-url.png" alt="Chart Rest URL" class="no-border" >}}
-
-1. In the tab **Data points**, select the **X-axis data attribute** and the **Y-axis data attribute**.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-data-points.png" alt="select Data Points" class="no-border" >}}  
-
-1. Add Parameters to the REST Request. The **contextId**, **series name** are provided by default.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-parameters.png" alt="select Data Points" class="no-border" >}} 
-
+1. Double-click the **Area chart** widget to open its properties.
+1. On the **General** tab, in the **Data source** section, add a new **Series** item.
+1. In the **General** section of the series, leave **Data set** set to **Single series**.
+1. Set **Data source** to **Microflow** and select *DS_ValuesFromREST*.
+1. Set **Series name** to the text that should appear in the legend.
+1. Select the **X axis attribute** and the **Y axis attribute**.
 1. Run your app and view the chart.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-area-chart.png" alt="Show Chart" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-area-chart.png" alt="Area chart plotting data retrieved from a REST service" class="no-border" >}}
 
 ## Read More
 
-* [Use Chart Data Source REST](/howto/front-end/charts-basic-create/)
+* [Create a Basic Chart](/appstore/widgets/charts-basic-create/)
+* [Create a Multiple Series Chart](/appstore/widgets/charts-dynamic-series/)
 * [Use Any Chart](/appstore/widgets/charts-any-usage/)
-* [Use Theme Charts](/howto/front-end/charts-theme/)
+* [Use Charts Themes](/appstore/widgets/charts-theme/)

@@ -26,8 +26,8 @@ Organizations test incident response capabilities to determine the overall effec
 
 The following controls are related to this control:
 
-* CP-4
-* IR-8
+* CP-04
+* IR-08
 
 For more information, refer to the NIST Special Publications 800-84, and 800-115.
 

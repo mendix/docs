@@ -47,6 +47,7 @@ This configures the native layer to receive push notifications from Firebase Clo
 {{% alert color="warning" %}}
 Push notifications only work on physical devices. Emulators and simulators do not have the necessary Firebase Cloud Messaging infrastructure to receive push notifications. Always test push notifications on real Android and iOS devices.
 {{% /alert %}}
+
 ## Installing Push Notifications Connector
 
 Add the Push Notifications Connector module to your app:
@@ -95,6 +96,7 @@ Add three **Call JavaScript Action** activities to retrieve device details:
 1. Add a **Create Object** activity to create a new `PushNotifications.DeviceRegistration` object.
 2. Assign the following attributes:
    * **DeviceType**: Use a decision based on the operating system:
+
      ```
      if $OperatingSystem = getKey(PushNotifications.DeviceSystemType.Android) then
          PushNotifications.DeviceType.Android
@@ -105,6 +107,7 @@ Add three **Call JavaScript Action** activities to retrieve device details:
      else
          empty
      ```
+
    * **RegistrationID**: `$PushToken`
    * **DeviceId**: `$DeviceInfo/UniqueId`
 
@@ -125,7 +128,7 @@ The nanoflow requests the `notifications` permission, retrieves the device token
 
 ### Calling the Registration Nanoflow
 
-The registration nanoflow should run automatically each time the app opens — both on first launch and when the user returns to the app from the background. This ensures the FCM token stays current. The next section explains how to implement this using app lifecycle events.
+The registration nanoflow should run automatically each time the app opens—both on first launch and when the user returns to the app from the background. This ensures the FCM token stays current. The next section explains how to implement this using app lifecycle events.
 
 ## Running Push Notification Registration on App Lifecycle Events
 
@@ -140,7 +143,7 @@ Download and install the [Events](https://marketplace.mendix.com/link/component/
 Create a new JavaScript action named `ListenToAppLifecycle` in your app with the following configuration:
 
 * Add one parameter of type **Nanoflow**:
-  * `onResume`
+    * `onResume`
 
 Use the following as the action's implementation:
 
@@ -199,7 +202,7 @@ Create a new nanoflow (for example, `ACT_InitAppLifecycle`) and add the followin
 1. Set the action to **Call a nanoflow**.
 1. Select the `ACT_InitAppLifecycle` nanoflow.
 
-This ensures that every time the page loads — which happens when the app opens — the lifecycle listener is registered and the push notification registration nanoflow runs immediately. If the FCM token has changed since the last session, the updated token is saved automatically.
+This ensures that every time the page loads—which happens when the app opens—the lifecycle listener is registered and the push notification registration nanoflow runs immediately. If the FCM token has changed since the last session, the updated token is saved automatically.
 
 ## Sending Push Notifications
 

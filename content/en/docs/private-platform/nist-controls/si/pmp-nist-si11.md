@@ -29,9 +29,9 @@ Organizations carefully consider the structure and content of error messages. Th
 
 The following controls are related to this control:
 
-* AU-2
-* AU-3
-* SC-31.
+* [AU-02](/private-mendix-platform/nist-controls/au-02/)
+* [AU-03](/private-mendix-platform/nist-controls/au-03/)
+* SC-31
 
 ## Responsibility
 

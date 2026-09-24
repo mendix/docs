@@ -29,10 +29,10 @@ Comparable security capability on information systems, diagnostic tools, and equ
 
 The following controls are related to this control:
 
-* MA-3
+* MA-03
 * SA-12
-* SI-3
-* SI-7.
+* SI-03
+* SI-07
 
 ## Responsibility
 

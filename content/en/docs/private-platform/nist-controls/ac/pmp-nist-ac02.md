@@ -56,44 +56,44 @@ Information system account types include the following:
 * Temporary
 * Service. 
  
- Some of the account management requirements listed above can be implemented by organizational information systems. The identification of authorized users of the information system and the specification of access privileges reflects the requirements in other security controls in the security plan. 
+Some of the account management requirements listed above can be implemented by organizational information systems. The identification of authorized users of the information system and the specification of access privileges reflects the requirements in other security controls in the security plan. 
  
- Users requiring administrative privileges on information system accounts receive additional scrutiny by appropriate organizational personnel (for example, system owner, mission/business owner, or chief information security officer) responsible for approving such accounts and privileged access. 
+Users requiring administrative privileges on information system accounts receive additional scrutiny by appropriate organizational personnel (for example, system owner, mission/business owner, or chief information security officer) responsible for approving such accounts and privileged access. 
  
- Organizations may choose to define access privileges or other attributes by account, by type of account, or a combination of both. Other attributes required for authorizing access include, for example, restrictions on time-of-day, day-of-week, and point-of-origin. In defining other account attributes, organizations consider system-related requirements (for example, scheduled maintenance, system upgrades) and mission/business requirements, (for example, time zone differences, customer requirements, remote access to support travel requirements). Failure to consider these factors could affect information system availability. 
+Organizations may choose to define access privileges or other attributes by account, by type of account, or a combination of both. Other attributes required for authorizing access include, for example, restrictions on time-of-day, day-of-week, and point-of-origin. In defining other account attributes, organizations consider system-related requirements (for example, scheduled maintenance, system upgrades) and mission/business requirements, (for example, time zone differences, customer requirements, remote access to support travel requirements). Failure to consider these factors could affect information system availability. 
  
- Temporary and emergency accounts are accounts intended for short-term use. Organizations establish temporary accounts as a part of normal account activation procedures when there is a need for short-term accounts without the demand for immediacy in account activation. Organizations establish emergency accounts in response to crisis situations and with the need for rapid account activation. Therefore, emergency account activation may bypass normal account authorization processes. Emergency and temporary accounts are not to be confused with infrequently used accounts (for example, local logon accounts used for special tasks defined by organizations or when network resources are unavailable). Such accounts remain available and are not subject to automatic disabling or removal dates. 
+Temporary and emergency accounts are accounts intended for short-term use. Organizations establish temporary accounts as a part of normal account activation procedures when there is a need for short-term accounts without the demand for immediacy in account activation. Organizations establish emergency accounts in response to crisis situations and with the need for rapid account activation. Therefore, emergency account activation may bypass normal account authorization processes. Emergency and temporary accounts are not to be confused with infrequently used accounts (for example, local logon accounts used for special tasks defined by organizations or when network resources are unavailable). Such accounts remain available and are not subject to automatic disabling or removal dates. 
  
- Conditions for disabling or deactivating accounts include, for example: 
+Conditions for disabling or deactivating accounts include, for example: 
  
 * When shared, group, emergency, or temporary accounts are no longer required
 * When individuals are transferred or terminated. 
  
- Some types of information system accounts may require specialized training. 
+Some types of information system accounts may require specialized training. 
  
- The following controls are related to this control:
+The following controls are related to this control:
 
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-04
-* AC-05
-* AC-06
-* AC-10
-* AC-17
-* AC-19
-* AC-20
-* AU-09
+* [AC-04](/private-mendix-platform/nist-controls/ac-04/)
+* [AC-05](/private-mendix-platform/nist-controls/ac-05/)
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* [AC-10](/private-mendix-platform/nist-controls/ac-10/)
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* [AC-20](/private-mendix-platform/nist-controls/ac-20/)
+* [AU-09](/private-mendix-platform/nist-controls/au-09/)
 * IA-02
-* IA-04
-* IA-05
-* IA-08
-* CM-05
-* CM-06
-* CM-011
+* [IA-04](/private-mendix-platform/nist-controls/ia-04/)
+* [IA-05](/private-mendix-platform/nist-controls/ia-05/)
+* [IA-08](/private-mendix-platform/nist-controls/ia-08/)
+* [CM-05](/private-mendix-platform/nist-controls/cm-05/)
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
+* CM-11
 * MA-03
 * MA-04
 * MA-05
 * PL-04
-* SC-13
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 ## Responsibility
 

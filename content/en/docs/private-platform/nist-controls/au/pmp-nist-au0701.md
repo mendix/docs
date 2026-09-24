@@ -26,8 +26,8 @@ Events of interest can be identified by the content of specific audit record fie
 
 The following controls are related to this control:
 
-* AU-2
-* AU-12
+* [AU-02](/private-mendix-platform/nist-controls/au-02/)
+* [AU-12](/private-mendix-platform/nist-controls/au-12/)
 
 ## Responsibility
 

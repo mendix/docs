@@ -29,7 +29,7 @@ The need for certain assigned user privileges may change over time reflecting ch
 
 The following controls are related to this control: 
 
-* CA-7
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
 
 ## Responsibility
 

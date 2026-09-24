@@ -46,18 +46,18 @@ In addition to information system availability, contingency plans also address o
 
 The following controls are related to this control:
 
-* AC-14
-* CP-6
-* CP-7
-* CP-8
-* CP-9
+* [AC-14](/private-mendix-platform/nist-controls/ac-14/)
+* CP-06
+* CP-07
+* CP-08
+* [CP-09](/private-mendix-platform/nist-controls/cp-09/)
 * CP-10
-* IR-4
-* IR-8
-* MP-2
-* MP-4
-* MP-5
-* PM-8
+* IR-04
+* IR-08
+* [MP-02](/private-mendix-platform/nist-controls/mp-02/)
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* [MP-05](/private-mendix-platform/nist-controls/mp-05/)
+* PM-08
 * PM-11
 
 ## Responsibility

@@ -144,10 +144,10 @@ When creating a property to use as a key for external secret storage, use the fo
 
     * Maia
 
-        * **AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
-        * **AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
-        * **AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
-        * **OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
+        * **Maia.AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia.OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
 
 The following is a JSON template. Copy this template into your secret, and set the values that you want to use. Leave those you do not want to use empty.
 

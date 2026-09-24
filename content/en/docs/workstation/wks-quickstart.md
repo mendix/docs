@@ -42,10 +42,7 @@ A *station* represents a workstation on the shop floor. It can connect to one or
 
     Environments created with the Test environment type have [developer mode](/mendix-workstation/management-stations/#developer-mode) enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode.
 
-4. After the workspace is created, in the **Stations** page, click **Create a New Station**.
-
-    {{< figure src="/attachments/workstation/wks-install3.png" class="no-border" >}}
-
+4. After the workspace is created, in the **Stations** page, click **Create Station**.
 5. Enter a name for the station, and then click **Create Station**.
 
     {{< figure src="/attachments/workstation/wks-install4.png" class="no-border" >}}
@@ -165,19 +162,4 @@ Different device types have different requirements for the message syntax. For m
 
 ## Best Practices for Working with Mendix Workstation
 
-As you begin your work with Mendix Workstation, keep in mind the following best practices to help you.
-
-### Security Recommendations
-
-For more information, see [Security Best Practices for Mendix Workstation](/mendix-workstation/security/).
-
-### Performance Optimization
-
-* Ensure stations meet the recommended hardware specifications.
-* Minimize background processes to improve performance.
-* When building app logic reusing the Connectors nanoflows, minimize the amount of microflow calls and [other actions](/refguide/nanoflows/#logic-where-no-connection-is-needed) that require a server connection. One key benefit of Mendix Workstation is client-sided data processing. Every call to the Mendix runtime adds an performance overhead.  
-
-### Maintenance Guidelines
-
-* Periodically review and update workstation and device configurations.
-* Monitor workstation health and resolve any connectivity issues promptly.
+As you begin your work with Mendix Workstation, keep in mind the [best practices](/mendix-workstation/advanced/) to help you.

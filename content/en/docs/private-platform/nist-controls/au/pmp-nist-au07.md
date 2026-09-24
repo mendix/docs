@@ -28,7 +28,7 @@ Audit reduction is a process that manipulates collected audit information and or
 
 The following controls are related to this control:
 
-* AU-6
+* AU-06
 
 ## Responsibility
 

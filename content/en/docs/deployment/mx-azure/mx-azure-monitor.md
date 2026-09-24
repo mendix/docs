@@ -62,11 +62,13 @@ To view the logs, perform the following steps:
     * For Mendix application logs, click **Mendix App Dashboard (Native)**.
     * For Azure-managed NGINX ingress logs, select the **app-routing-system** namespace.
 
-## Setting up Grafana Alerts
+## Setting up Grafana Alerts {#setting-up-grafana-alerts}
 
 Grafana alerts help monitor your application and notify you when specific conditions occur, such as errors in logs or high CPU usage.
 
 To set up alerts in Grafana Unified Alerting, you must create a contact point to which notifications are sent, and an alert rule which Grafana evaluates.
+
+Your cluster also includes a set of example alert rules that are provisioned automatically. For a description of those rules, and for the SMTP configuration that email notifications require, see [Pre-Provisioned Grafana Alerts](/developerportal/deploy/mendix-on-azure/alerts/).
 
 ### Creating a Contact Point
 

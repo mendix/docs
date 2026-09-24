@@ -165,7 +165,7 @@ Check out a branch. To configure this step, use the drop-down menu to select the
 
 ##### Build
 
-Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
+Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step. The deployment package name is generated automatically from the branch, the new version, and the short revision (for example, main-1.2.3.a1b2c3d4), so it no longer needs to be entered manually.
 
 ##### GET Request
 

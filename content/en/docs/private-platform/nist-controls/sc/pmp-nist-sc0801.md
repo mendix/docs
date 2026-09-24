@@ -29,7 +29,7 @@ Encrypting information for transmission protects information from unauthorized d
 
 The following controls are related to this control:
 
-* SC-13
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 For more information, refer to the NIST Special Publications NIST Special Publications 800-52, 800-77, 800-81, and 800-113.
 

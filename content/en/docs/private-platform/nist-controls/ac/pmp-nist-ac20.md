@@ -36,11 +36,11 @@ This control does not apply to the use of external information systems to access
 The following controls are related to this control:
 
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-17
-* AC-19
-* CA-3
-* PL-4
-* SA-9
+* [AC-17](/private-mendix-platform/nist-controls/ac-17/)
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* CA-03
+* PL-04
+* SA-09
 
 For more information, refer to the FIPS Publication 199.
 

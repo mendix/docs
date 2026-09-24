@@ -34,11 +34,11 @@ This control also addresses individual identifiers not necessarily associated wi
 
 The following controls are related to this control:
 
-* AC-2
-* IA-2
-* IA-3
-* IA-5
-* IA-8
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)
+* IA-02
+* IA-03
+* [IA-05](/private-mendix-platform/nist-controls/ia-05/)
+* [IA-08](/private-mendix-platform/nist-controls/ia-08/)
 * SC-37
 
 For more information, refer to the FIPS Publication 201 and NIST Special Publications 800-73, 800-76, and 800-78.

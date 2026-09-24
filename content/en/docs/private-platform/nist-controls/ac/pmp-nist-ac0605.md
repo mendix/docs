@@ -26,7 +26,7 @@ Privileged accounts, including super user accounts, are typically described as s
 
 The following controls are related to this control: 
 
-* CM-6
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
 
 ## Responsibility
 

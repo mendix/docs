@@ -37,14 +37,6 @@ By default, the SAML module will be installed as the **SAML20** module in your a
     * **DefaultLoginPage** – You can specify a different login page when the login process fails. When the end-user cannot be authenticated in the external IdP, a button will appear, and by clicking this button, they will be redirected to the specified login page. If this is left blank, an unauthenticated user will be redirected to `/login.html`.
     * **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you keep it, the end user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your `login.html` page). Every user signed in via SAML is redirected to this location when logged out.
     * **SSOLandingPage** – Set this if you redirect the `index.html` to log into your app automatically. See [Using SSOLandingPage](#ssolandingpage) for further information about this.
-    * **HybridAppLoginTimeOutInMinutes** –
-        * If you use the default login handler in your [hybrid mobile](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) app, you must change the `com.mendix.webui.HybridAppLoginTimeOut` custom runtime setting to change the validity of the authentication token used by the hybrid mobile app.
-        * If you use the SAML module in your hybrid app, you must change the `SAML20.HybridAppLoginTimeOutInMinutes` constant to change the validity of the authentication token used by the hybrid mobile app.
-        * If you use both the default login handler and the SAML module in your hybrid app, you must change both so that they match. This is because, when you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value and thus requires the constant value to be set.
-
-            Only use this setting if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your IdP Configuration as well as changes to the hybrid app package. Hybrid mobile apps are [deprecated](/refguide9/mobile/introduction-to-mobile-technologies/hybrid-mobile/) however, so we encourage building native or progressive web apps instead. 
-
-        {{% alert color="warning" %}}Hybrid mobile apps are not available in Mendix 10.{{% /alert %}}
 
 5. Sign in to the application and configure the SAML module as described in the [Configuration SAML Module](#config) section.
 

@@ -120,6 +120,36 @@ FROM
 	Sales.Person
 ```
 
+## Constants {#oql-constants}
+
+{{% alert color="info" %}}
+This feature was introduced in Mendix version 11.13.0. It is supported only in Java actions.
+{{% /alert %}}
+
+[Constants](/refguide/constants/) can be referenced in OQL queries and statements as `$<module>.<constant_name>`. For example, if a constant `Sales.MinOrder` is defined in the module, that constant can be used in a query:
+
+```sql
+SELECT *
+FROM Sales.Order
+WHERE Price >= $Sales.MinOrder
+```
+
+## Enumerations {#oql-enumerations}
+
+{{% alert color="info" %}}
+This feature was introduced in Mendix version 11.13.0. It is supported only in Java actions.
+{{% /alert %}}
+
+[Enumerations](/refguide/enumerations/) can be referenced in OQL queries and statements as `<module>.<enumeration_name>#<value>`. That syntax is equivalent to using a String literal value of the enumeration, but it allows more strict control over which values are allowed.
+
+For example, if an enumeration `RealEstate.PropertyTypes` has value `Apartment`, that value can be used in a query:
+
+```sql
+SELECT *
+FROM RealEstate.Properties
+WHERE PropertyType = RealEstate.PropertyTypes#Apartment
+```
+
 ## Operators {#oql-operators}
 
 Operators perform common operations and, unlike functions, do not put their parameters in parentheses. They take `expression` as input, which can be other operator results, functions, columns and literals.

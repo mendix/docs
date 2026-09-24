@@ -1,9 +1,14 @@
 ---
 title: "Any Chart Cheat Sheet"
+deprecated: true
 url: /refguide9/charts-any-cheat-sheet/
 description: "Shows, with examples, how the most common types of chart can be configured using the Any Chart Widget"
 weight: 50
 ---
+
+{{% alert color="warning" %}}
+The Any Chart widget is deprecated. Its successor, Custom Chart, is not available for Studio Pro 9: it requires [Charts](/appstore/widgets/charts/) widget version 6.0 or above, which is supported in Studio Pro 10 and above.
+{{% /alert %}}
 
 ## Introduction
 

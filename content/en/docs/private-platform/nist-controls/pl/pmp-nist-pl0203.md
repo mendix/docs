@@ -26,8 +26,8 @@ Security-related activities include, for example, security assessments, audits, 
 
 The following controls are related to this control:
 
-* CP-4
-* IR-4
+* CP-04
+* IR-04
 
 For more information, refer to the NIST Special Publication 800-18.*
 

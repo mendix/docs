@@ -41,14 +41,14 @@ Organizations establish documentation requirements for activities associated wit
 
 The following controls are related to this control:
 
-* AC-19
-* CP-9
-* MP-3
-* MP-4
-* RA-3
-* SC-8
-* SC-13
-* SC-28
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* [CP-09](/private-mendix-platform/nist-controls/cp-09/)
+* [MP-03](/private-mendix-platform/nist-controls/mp-03/)
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* [RA-03](/private-mendix-platform/nist-controls/ra-03/)
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
+* [SC-02](/private-mendix-platform/nist-controls/sc-02/)8
 
 For more information, refer to the FIPS Publication 199 and NIST Special Publication 800-60.
 

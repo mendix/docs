@@ -26,11 +26,11 @@ Checking the valid syntax and semantics of information system inputs (for exampl
 
 The following controls are related to this control:
 
-* AC-2
+* [AC-02](/private-mendix-platform/nist-controls/ac-02/)
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* AC-4
-* AC-5
-* AC-6.
+* [AC-04](/private-mendix-platform/nist-controls/ac-04/)
+* [AC-05](/private-mendix-platform/nist-controls/ac-05/)
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/).
 
 ## Responsibility
 

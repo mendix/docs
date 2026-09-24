@@ -31,17 +31,17 @@ Instead of authorizing each individual internal connection, organizations can au
 
 The following controls are related to this control:
 
-* AC-03
-* AC-04
-* AC-18
-* AC-19
-* AU-02
-* AU-12
-* CA-07
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
+* [AC-04](/private-mendix-platform/nist-controls/ac-04/)
+* [AC-18](/private-mendix-platform/nist-controls/ac-18/)
+* [AC-19](/private-mendix-platform/nist-controls/ac-19/)
+* [AU-02](/private-mendix-platform/nist-controls/au-02/)
+* [AU-12](/private-mendix-platform/nist-controls/au-12/)
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
 * CM-02
 * IA-03
 * SC-07
-* SI-04
+* [SI-04](/private-mendix-platform/nist-controls/si-04/)
 
 ## Responsibility
 

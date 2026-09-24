@@ -26,9 +26,9 @@ Container-based encryption provides a more fine-grained approach to the encrypti
 
 The following controls are related to this control:
 
-* MP-5
-* SC-13
-* SC-28
+* [MP-05](/private-mendix-platform/nist-controls/mp-05/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
+* [SC-02](/private-mendix-platform/nist-controls/sc-02/)8
 
 For more information, refer to the OMB Memorandum 06-16 and NIST Special Publications 800-114, 800-124, and 800-164.
 

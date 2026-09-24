@@ -26,16 +26,16 @@ Mendix also offers an [OIDC SSO](/appstore/modules/oidc/) module if you want to 
 The following use cases are supported by both the SAML and OIDC SSO modules:
 
 * Your app is designed for your company’s employees, and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP).
-* Authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS) — the SAML protocol allows for the encryption of all information transferred between the two servers, so, VPN connections, LDAP, or Kerberos authentication are no longer needed.
+* Authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS)—the SAML protocol allows for the encryption of all information transferred between the two servers, so, VPN connections, LDAP, or Kerberos authentication are no longer needed.
 
 The following use cases are supported by SAML:
 
 * Implementing SSO in your Mendix App through a Shibboleth Identity Provider.
 * Identifying the end-users of your Mendix app through SAML-enabled national identity schemes such as eHerkenning, a Dutch eID scheme for B2B or B2G scenarios, or DigiD, which gives Dutch citizens access to (semi) governmental services.
 
-    {{% alert color="info" %}}Some of these identity schemes use optional features of SAML, which are not yet supported in the SAML SSO module — see [Limitations](#limitations) for more information.{{% /alert %}}
+    {{% alert color="info" %}}Some of these identity schemes use optional features of SAML, which are not yet supported in the SAML SSO module. See [Limitations](#limitations) for more information.{{% /alert %}}
 
-* Authenticating within a Mendix session — for example, requiring end-users to re-authenticate shortly before they are allowed to do critical transactions in your app, or having a second user authenticate within the context of the first user’s session in your Mendix app.
+* Authenticating within a Mendix session, for example, requiring end-users to re-authenticate shortly before they are allowed to do critical transactions in your app, or having a second user authenticate within the context of the first user’s session in your Mendix app.
 * Single Logout is supported.
 
 ### Features
@@ -105,7 +105,7 @@ Some SAML services, such as eHerkenning and DigID in the Netherlands, use option
 * RequestedAuthnContext in the SAML requests
 * HTTP-SOAP Logout Request
 
-If you need any of these features, contact your Mendix CSM to discuss the inclusion of these features on the Mendix roadmap or the customization of the SAML SSO module.
+If you need any of these features, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to discuss the inclusion of these features on the Mendix roadmap or the customization of the SAML SSO module.
 
 Versions of the SAML module below 3.5.0 are limited to a single key pair. If you are using one of those older versions and you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a certificate authority (CA). For more details, see the [Use a Certificate Issued by a Certificate Authority](/appstore/modules/saml/advanced-configuration/#use-ca) section of *Advanced Configuration for SAML*.
 
@@ -116,6 +116,8 @@ The URL for downloading the SP metadata of your app is independent of the value 
 Controlling the configuration using constants requires an app restart, and it is only possible when your app is connected to a single IdP.
 
 Custom user provisioning flows created for a SAML V3.x are still supported in V4.x but cannot be configured during design/deploy-time.
+
+The SAML module does not support mobile apps. If you want your mobile Mendix app to sign in via Single Sign-On (SSO), use [Mobile SSO](/appstore/modules/mobile-sso/).
 
 ### Prerequisites {#dependencies}
 

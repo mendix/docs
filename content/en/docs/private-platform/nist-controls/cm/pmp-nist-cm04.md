@@ -29,13 +29,13 @@ Security impact analysis may include, for example, reviewing security plans to u
 The following controls are related to this control:
 
 * CA-02
-* CA-07
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
 * CM-03
 * CM-09
-* SA-04
-* SA-05
-* SA-10
-* SI-02
+* [SA-04](/private-mendix-platform/nist-controls/sa-04/)
+* [SA-05](/private-mendix-platform/nist-controls/sa-05/)
+* [SA-10](/private-mendix-platform/nist-controls/sa-10/)
+* [SI-02](/private-mendix-platform/nist-controls/si-02/)
 
 For more information, refer to NIST Special Publication 800-128.
 

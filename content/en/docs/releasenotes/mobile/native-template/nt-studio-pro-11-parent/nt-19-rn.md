@@ -5,15 +5,61 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.1.7
+
+**Release date: Sep 23, 2026**
+
+### Fixes
+
+- We removed unused Android permissions coming in from manifest mergers.
+
+## 19.1.6
+
+**Release date: Sep 16, 2026**
+
+### Improvements
+
+- We migrated iOS to the UIKit scene delegate lifecycle.
+
+## 19.1.5
+
+**Release date: Sep 1, 2026**
+
+### Fixes
+
+- We addressed a random scenario where Gradle would resolve to using the Hermes v1 compiler instead of the old Hermes override in `gradle.properties`. This threw issues with `"...bytecode mismatch..."`.
+
+## 19.1.4
+
+**Release date: Aug 24, 2026**
+
+### Improvements
+
+* We hardened the Android main screen against overlay and tapjacking attacks, and removed the unused `SYSTEM_ALERT_WINDOW` permission.
+
+## 19.1.3
+
+**Release date: Aug 7, 2026**
+
+### Fixes
+
+* We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
+* We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
+* We addressed an issue on iOS where a iOS-system dialog would open during app startup and request a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
+
 ## 19.1.1
 
 **Release date: Jul 3, 2026**
+
+### Fixes
 
 * We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
 
 ## 19.0.5
 
 **Release date: May 12, 2026**
+
+### Fixes
 
 * We fixed the CocoaPods installation issue that was caused by `xcodeproj object version` 70.
 

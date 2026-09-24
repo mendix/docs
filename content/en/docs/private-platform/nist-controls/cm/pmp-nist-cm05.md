@@ -36,8 +36,8 @@ Examples of access restrictions include the following:
 
 The following controls are related to this control:
 
-* AC-03
-* AC-06
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/)
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
 * PE-03
 
 ## Responsibility

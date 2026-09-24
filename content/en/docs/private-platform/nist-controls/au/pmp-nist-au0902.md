@@ -25,9 +25,9 @@ This control enhancement helps to ensure that a compromise of the information sy
 
 The following controls are related to this control:
 
-* AU-04
-* AU-05
-* AU-11
+* [AU-04](/private-mendix-platform/nist-controls/au-04/)
+* [AU-05](/private-mendix-platform/nist-controls/au-05/)
+* AU-1
 
 ## Responsibility
 

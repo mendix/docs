@@ -17,7 +17,7 @@ Mendix highly recommends that you upgrade to the latest available version to ens
 
 When deploying your Mendix app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix on Kubernetes](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
 
-Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix on Kubernetes, and may even be in standalone mode and not connected to the internet (air-gapped).
+Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix on Kubernetes that are not connected to the internet (air-gapped).
 
 Rather than having to apply and update licenses for each environment individually, the Mendix **Mendix on Kubernetes License Manager** (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
 
@@ -27,7 +27,7 @@ The PCLM runs as a Kubernetes service on your cluster. This means that it can be
 
 To install and use the PCLM, you need the following prerequisites:
 
-* A Mendix on Kubernetes **Standalone** cluster 
+* A Mendix on Kubernetes cluster
 * Mendix Operator in version 2.11.0 or above
 * Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix on Kubernetes cluster, or in another cluster which is accessible over HTTP
 * A Postgres or SQLServer database server and within it:

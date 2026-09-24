@@ -61,7 +61,7 @@ Starting from Mendix Operator v1.11.0, Linkerd Service Mesh can be used to manag
 
 ### Providing a TLS Certificate Secret Per Environment
 
-In Standalone Mendix Operator installations, it is possible to provide a custom TLS configuration for individual environments, overriding the default settings. 
+It is possible to provide a custom TLS configuration for individual environments via the `MendixApp` CR, overriding the default settings. 
 
 In this way, you can configure the following settings:
 

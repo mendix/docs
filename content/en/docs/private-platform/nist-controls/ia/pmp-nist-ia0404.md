@@ -27,7 +27,7 @@ Characteristics identifying the status of individuals include, for example, cont
 
 The following controls are related to this control:
 
-* AT-2
+* AT-02
 
 ## Responsibility
 

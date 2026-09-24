@@ -101,9 +101,9 @@ And/or you get a **Number of database connections** graph that regularly peaks, 
 It will be tempting to increase the `ConnectionPoolingMaxActive` value to a (much) higher number. But if any of the following are true, this is not the right action to take:
 
 * Long running queries show up in the application log – in that case, it makes more sense to try and fix those first, as otherwise you will eventually run in to the same problem, but it will take a bit longer to occur after a (re)start of the application
-* A database is running low on memory or is even out of memory regularly — in that case, it makes more sense to upgrade the database node size first
+* A database is running low on memory or is even out of memory regularly—in that case, it makes more sense to upgrade the database node size first
     * In this case, there will probably also be long running queries in your application log
-* Only a few user sessions are active at any given time — your application might need refactoring unless you can explain why each user is constantly using several parallel database connections
+* Only a few user sessions are active at any given time—your application might need refactoring unless you can explain why each user is constantly using several parallel database connections
 
 However, if all of the following are true, you should increase the `ConnectionPoolingMaxActive` value to a (much) higher number:
 

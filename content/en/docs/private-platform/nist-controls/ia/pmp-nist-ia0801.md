@@ -26,9 +26,9 @@ This control enhancement applies to logical access control systems (LACS) and ph
 
 The following controls are related to this control:
 
-* AU-02
+* [AU-02](/private-mendix-platform/nist-controls/au-02/)
 * PE-03
-* SA-04
+* [SA-04](/private-mendix-platform/nist-controls/sa-04/)
 
 ## Responsibility
 

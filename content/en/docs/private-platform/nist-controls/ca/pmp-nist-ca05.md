@@ -2,7 +2,7 @@
 title: "CA-05 Plan of Action and Milestones"
 linktitle: "CA-05"
 url: /private-mendix-platform/nist-controls/ca-05/
-description: "Documents the Private Mendix Platform's compliance with the CA-07 control of the NIST 800-53 framework."
+description: "Documents the Private Mendix Platform's compliance with the CA-05 control of the NIST 800-53 framework."
 weight: 20
 ---
 
@@ -30,8 +30,8 @@ Plans of action and milestones are key documents in security authorization packa
 The following controls are related to this control:
 
 * CA-02
-* CA-07
-* CM-04
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* [CM-04](/private-mendix-platform/nist-controls/cm-04/)
 * PM-04
 
 For more information, refer to the OMB Memorandum 02-01 and NIST Special Publication 800-37.

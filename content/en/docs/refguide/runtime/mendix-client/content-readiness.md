@@ -36,7 +36,7 @@ The following table shows which of the more popular platform-supported Marketpla
 | [Excel Importer](https://marketplace.mendix.com/link/component/72) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Forgot Password Module](https://marketplace.mendix.com/link/component/1296) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
-| [Image Crop](https://marketplace.mendix.com/link/component/254) | {{< icon name="remove-circle-filled" color="red" >}} | |
+| [Image Cropper](https://marketplace.mendix.com/link/component/302076) | {{< icon name="remove-circle-filled" color="green" >}} | |
 | [LDAP](https://marketplace.mendix.com/link/component/210270) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Mendix Application Performance Diagnostics](https://marketplace.mendix.com/link/component/6127) | {{< icon name="remove-circle-filled" color="red" >}} | |
 | [MendixSSO](https://marketplace.mendix.com/link/component/111349) | {{< icon name="checkmark-circle-filled" color="green" >}} | |

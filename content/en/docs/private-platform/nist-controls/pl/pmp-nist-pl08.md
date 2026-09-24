@@ -41,11 +41,11 @@ In contrast, SA-17 is primarily directed at external information technology prod
 
 The following controls are related to this control:
 
-* CM-2
-* CM-6
-* PL-2
-* PM-7
-* SA-5
+* CM-02
+* [CM-06](/private-mendix-platform/nist-controls/cm-06/)
+* [PL-02](/private-mendix-platform/nist-controls/pl-02/)
+* PM-07
+* [SA-05](/private-mendix-platform/nist-controls/sa-05/)
 * SA-17, Appendix J
 
 ## Responsibility

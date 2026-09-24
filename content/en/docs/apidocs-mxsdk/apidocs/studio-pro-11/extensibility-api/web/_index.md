@@ -3,7 +3,7 @@ title: "Extensibility API for Web Developers"
 linktitle: "Web Extensibility API"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/
 description: "The web extensibility API allows your custom Studio Pro extensions developed using JavaScript to interact with some internal services of Studio Pro."
-weight: 20
+weight: 5
 ---
 
 {{% alert color="warning" %}} This feature is in beta. For more information, see [Release Status](/releasenotes/release-status/). {{% /alert %}}
@@ -16,7 +16,7 @@ weight: 20
 Extensions can be written in TypeScript or other web languages, described here, or using a C# API, which is documented in [Extensibility API for C# Developers](/apidocs-mxsdk/apidocs/csharp-extensibility-api-11/).
 
 {{% alert color="info" %}}
-Extension development is only possible with the `--enable-extension-development` feature flag.
+Extension development is possible by enabling the [Extension Development](/refguide/preferences-dialog/#extension-development) setting in your app's [Preferences](/refguide/preferences-dialog/), or by starting Studio Pro with the `--enable-extension-development` feature flag.
 {{% /alert %}}
 
 For more detailed information on the web API, see the [Mendix Studio Pro Web Extensibility API reference documentation](http://apidocs.rnd.mendix.com/11/extensions-api/index.html).

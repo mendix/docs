@@ -29,11 +29,11 @@ Restricting non-digital media access includes, for example, denying access to pa
 The following controls are related to this control:
 
 * [AC-03](/private-mendix-platform/nist-controls/ac-03/)
-* IA-2
-* MP-4
-* PE-2
-* PE-3
-* PL-2
+* IA-02
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* PE-02
+* PE-03
+* [PL-02](/private-mendix-platform/nist-controls/pl-02/)
 
 ## Responsibility
 

@@ -33,11 +33,11 @@ Controlled areas are areas for which organizations provide sufficient physical a
 
 The following controls are related to this control:
 
-* CP-6
-* CP-9
-* MP-2
-* MP-7
-* PE-3
+* CP-06
+* [CP-09](/private-mendix-platform/nist-controls/cp-09/)
+* [MP-02](/private-mendix-platform/nist-controls/mp-02/)
+* [MP-07](/private-mendix-platform/nist-controls/mp-07/)
+* PE-03
 
 For more information, refer to the FIPS Publication 199 and NIST Special Publications 800-56, 800-57, and 800-111.
 

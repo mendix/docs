@@ -279,7 +279,7 @@ The changes to the headers are implemented when the app is redeployed.
 
 For more information about HTTP headers, see [MDN's HTTP headers overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
-#### HTTP Response Headers Inserted Automatically
+#### HTTP Response Headers Inserted Automatically {#automatic-headers}
 
 Mendix and the deployment environment automatically add some non-configurable response headers. These are listed below.
 
@@ -289,6 +289,18 @@ Mendix and the deployment environment automatically add some non-configurable re
 | `permissions-policy: interest-cohort=()` | Exclude from Federated Learning of Cohorts (FLoC) calculation |
 | `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` (365 days, in seconds)|
 | `X-Request-ID` | Kubernetes to track requests through the Mendix Cloud platform |
+
+Do not rely on this list staying the same. Mendix changes the set of automatically inserted headers over time.
+
+#### Duplicate Response Headers {#duplicate-headers}
+
+The headers you set in **HTTP Headers** and the headers Mendix Cloud inserts automatically are separate sources. If you set a header that Mendix Cloud also inserts, the response contains that header twice, once from each source. A security scan reports this as a duplicate header finding.
+
+To see which headers an environment returns, request a page from it over HTTPS and inspect the response headers.
+
+{{% alert color="warning" %}}
+Do not remove your own header to resolve a duplicate header finding. Because the set of automatically inserted headers changes over time, your own header is the only source you control. If you remove it and Mendix Cloud stops inserting that header, your app stops sending the header altogether.
+{{% /alert %}}
 
 #### Running Your App in an Iframe {#iframe}
 

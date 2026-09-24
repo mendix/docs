@@ -92,6 +92,10 @@ Only use this functionality if you know what you are doing. Wrong values can sto
 
 Each header consists of a name and a value. By default, when configuring a custom header it can be selected from the drop-down menu. A custom header can be specified by selecting **Custom...** in the dropdown menu. In most cases, the header will be returned for all responses from the Mendix Runtime.
 
+{{% alert color="info" %}}
+When you deploy to Mendix Cloud, the platform inserts some response headers of its own. If you set a header here that the platform also inserts, the response contains that header twice. For more information, see the [Duplicate Response Headers](/developerportal/deploy/environments-details/#duplicate-headers) section in *Environment Details*.
+{{% /alert %}}
+
 #### Special Headers
 
 The following headers are considered special and are handled differently from other custom headers.

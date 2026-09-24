@@ -10,11 +10,11 @@ description: "Describes how to use Data Importer in Studio Pro to import data fr
 
 Data Importer lets you define how data from Excel and CSV files is interpreted in your Mendix app. You create a Data Importer document based on an input file.
 
-{{% alert color="warning" %}}Data Importer is available in Studio Pro 11.5 and above. For versions below 11.15, see the [Data Importer](/appstore/modules/data-importer/) module in the Marketplace.{{% /alert %}}
+{{% alert color="warning" %}}Data Importer is available in Studio Pro 11.15 and above. For versions below 11.15, see the [Data Importer](/appstore/modules/data-importer/) module in the Marketplace.{{% /alert %}}
 
 The document can be used in two ways:
 
-* With the **Import Data from File** activity, to import the file into a generated non-persistable entity.
+* With the **Import data from file** activity, to import the file into a generated non-persistable entity.
 * As a source for an import mapping, which gives you more control over how imported data is mapped to Mendix objects.
 
 ## Creating a Data Importer Document
@@ -55,9 +55,11 @@ Data Importer creates the data structure based on the first ten rows of the sour
 Column names that do not adhere to Mendix naming conventions are autocorrected. For Number cell types, the target Mendix type is mapped to **Decimal** to support both integers and decimals.
 {{% /alert %}}
 
+You can now use the data importer document in the import mapping. For more information, see the [Using in an Import Mapping](#using-import-mapping) section below.
+
 ## Editing an Entity
 
-If you are not using an import mapping, you can optionally adjust the entity structure in the **Entity Preview** section before creating the entity.
+Optionally, if you are not using an import mapping, you can create a mapping flow first by adjusting the entity structure in the **Entity Preview** section before creating the entity.
 
 Click the edit icon ({{% icon name="pencil" %}}) in the bottom-right corner of **Entity Preview**. In the dialog box:
 
@@ -81,7 +83,7 @@ After reviewing the entity structure in **Entity Preview**, click **Create Entit
 
 You can use a Data Importer document in two ways:
 
-* For a simple use cases, directly in the **Import Data from File** activity to import data into non-persistable entities (NPEs).
+* For a simple use cases, directly in the **Import data from file** activity to import data into non-persistable entities (NPEs).
 * As the schema source for an import mapping, when you need more control over how data is mapped to Mendix objects.
 
 ### Using in the Import Data from File Activity {#using-in-the-activity}
@@ -90,8 +92,8 @@ After creating the entity, you can use the Data Importer document in the [Import
 
 You can extend this further. For example, you can convert the list of NPEs into persistable entities by providing a message definition, or use a loop to create and commit entities to your database individually.
 
-### Using in an Import Mapping
+### Using in an Import Mapping {#using-import-mapping}
 
 After the document is created and its **Structure elements** are populated, you can use the Data Importer document in an import mapping by selecting **Excel/CSV Structure** as the **Schema source**. The structure elements defined in the Data Importer document become the schema that you map to your Mendix entities and attributes.
 
-This approach gives you more control than the `Import Data from File` activity. You can map imported data to existing persistable entities, find existing objects by key instead of always creating new ones, set associations between mapped objects, and apply conversion microflows to transform attribute values during import. For more information, see [Import Mappings](/refguide/import-mappings/).
+This approach gives you more control than the `Import data from file` activity. You can map imported data to existing persistable entities, find existing objects by key instead of always creating new ones, set associations between mapped objects, and apply conversion microflows to transform attribute values during import. For more information, see [Import Mappings](/refguide/import-mappings/).

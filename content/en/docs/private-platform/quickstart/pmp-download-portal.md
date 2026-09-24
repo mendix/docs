@@ -181,6 +181,17 @@ To view release details:
 1. Click the three-dot menu (**•••**) for the desired release.
 2. Click **View Release Note** to open the release documentation.
 
+### Viewing Add-ons
+
+In versions of Private Mendix Platform older than 2.8.1, the three-dot menu also shows the images and charts required for Private Mendix Platform installation.
+
+To view these add-ons:
+
+1. Click the three-dot menu (•••) for the desired release.
+2. Click **View Add-ons**.
+
+Starting from Private Mendix Platform 2.8.1, the **View Add-ons** option has been removed. All images and charts are instead available on the **Artifact Management** page.
+
 ## Artifact Management
 
 The **Artifact Management** page allows you to view, filter, and export container images, charts and custom artifact such as Helm file installer required for Private Mendix Platform installation and use.

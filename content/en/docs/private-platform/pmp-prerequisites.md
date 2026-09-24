@@ -64,6 +64,10 @@ G* it, Jenkins and other services must be accessible on the same virtual network
 
 ## Software Resource Requirements
 
+{{% alert color="info" %}}
+The use of the mx-ops-cli tool is currently not officially supported.
+{{% /alert %}}
+
 Your Mendix app will be deployed with and run by the Private Mendix Platform Operator on top of Kubernetes. The following resources are required to facilitate this:
 
 ### Platform Portal

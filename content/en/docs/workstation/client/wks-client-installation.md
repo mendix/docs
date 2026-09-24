@@ -9,7 +9,7 @@ aliases:
 
 ## Introduction
 
-After [creating one or more workspaces](/mendix-workstation/management-config/) for your organization, you can proceed by installing the Workstation Client on the computers which you want to register as stations in Workstation Management.
+After [creating one or more workspaces](/mendix-workstation/management-workspaces/) for your organization, you can proceed by installing the Workstation Client on the computers which you want to register as stations in Workstation Management.
 
 ## Prerequisites {#prerequisites}
 
@@ -36,7 +36,7 @@ You can download the Client from the Mendix Marketplace at the following links:
 
 Alternatively, you can download the [global Microsoft Windows](https://marketplace.mendix.com/link/component/247448) version of the Client directly from Workstation Management by performing the following steps:
 
-1. Open the [station that you created](/mendix-workstation/management-config/) and click **Register Computer**.
+1. Open the [station that you created](/mendix-workstation/management-workspaces/) and click **Register Computer**.
 
     {{< figure src="/attachments/workstation/wks-install5.png" class="no-border" >}}
 

@@ -430,6 +430,7 @@ helmfile ... -l name=mx-privatecloud apply
 # Step 2: MANDATORY - sync mxplatform
 helmfile ... -l name=mxplatform apply
 ```
+
 {{% /alert %}}
 
 ### Other Commands
@@ -1299,7 +1300,7 @@ The `mxplatform` component is used for Mendix application platform deployment.
 | --- | --- | --- |
 | `pclm.serviceUrl` | Yes | PCLM service endpoint |
 | `pclm.username` | Conditional | The PCLM username; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
-| `pclm.password ` | Conditional | The PCLM password; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
+| `pclm.password` | Conditional | The PCLM password; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
 
 #### Spec Configuration
 
@@ -1500,7 +1501,7 @@ The benefits of using Azure Container Registry with AKS include the following:
 
 * No secrets to manage
 * Automatic authentication
-*  Works across all namespaces
+* Works across all namespaces
 * Production-ready
 
 ### AWS Elastic Container Registry (ECR)
@@ -1907,7 +1908,7 @@ Workload Identity and Secret Provider Class are different approaches for databas
 * Workload Identity - Components use cloud identity to connect to databases (no passwords stored anywhere).
 * Secret Provider Class - Helm retrieves database passwords from a vault and injects them during installation. Passwords exist in vault as static secrets.
 
-###  Use Case 2: Mxplatform Database and Storage Authentication
+### Use Case 2: Mxplatform Database and Storage Authentication
 
 For `mxplatform`, Workload Identity provides passwordless authentication for both database and storage at application runtime.
 
@@ -1961,59 +1962,59 @@ To configure an Azure Storage Plan with Managed Identity, perform the following 
 
 1. Create the StoragePlans with Managed Identity.
 
-```text
-database:
-  postgres:
-    enabled: true
-    plans:
-      - planName: "azure-postgres-plan"
-        planType: "on-demand"
-        useAzureWIAuth: true
-        k8sServiceAccountName: "db-admin-sa"
-        host: "myserver.postgres.database.azure.com"
-        port: 5432
-        database: "postgres"
-        user: "mendix-storage-admin"
-        password: ""  # Empty when using Workload Identity
-        strictTLS: true
-# Object Store Storage Plans
-storage:
-  azure_blob:
-    enabled: true
-    plans:
-      - planName: "azure-blob-plan"
-        k8sServiceAccountName: "storage-admin-sa"
-        useAzureWIAuth: true
-        azureStorageAccount: "mystorageaccount"
-        azureResourceGroup: "my-resource-group"
-        azureAccountSubscriptionID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-        azureContainerName: ""  # Auto-created per environment
-        preventDataDeletion: false
-```
+    ```text
+    database:
+      postgres:
+        enabled: true
+        plans:
+          - planName: "azure-postgres-plan"
+            planType: "on-demand"
+            useAzureWIAuth: true
+            k8sServiceAccountName: "db-admin-sa"
+            host: "myserver.postgres.database.azure.com"
+            port: 5432
+            database: "postgres"
+            user: "mendix-storage-admin"
+            password: ""  # Empty when using Workload Identity
+            strictTLS: true
+    # Object Store Storage Plans
+    storage:
+      azure_blob:
+        enabled: true
+        plans:
+          - planName: "azure-blob-plan"
+            k8sServiceAccountName: "storage-admin-sa"
+            useAzureWIAuth: true
+            azureStorageAccount: "mystorageaccount"
+            azureResourceGroup: "my-resource-group"
+            azureAccountSubscriptionID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            azureContainerName: ""  # Auto-created per environment
+            preventDataDeletion: false
+    ```
 
 2. Configure mxplatform in the Helmfile values.
 
-```text
-mxplatform:
-  enable: true
-  # REQUIRED: Let Operator create ServiceAccount
-  UseStoragePlanwithIRSA: true
-  pclm:
-    serviceUrl: "http://mx-privatecloud-license-manager"
-    username: "administrator"
-    password: "pclm-password"
-  spec:
-    appURL: "app.example.com"
-    sourceURL: "oci-image://myregistry.azurecr.io/app:1.0"
-    # Reference the Managed Identity-enabled plans
-    database:
-      servicePlan: "azure-postgres-plan"
-    storage:
-      servicePlan: "azure-blob-plan"
-    runtime:
-      applicationRootUrl: "https://app.example.com"
-      mxAdminPassword: "admin-password"
-```
+    ```text
+    mxplatform:
+      enable: true
+      # REQUIRED: Let Operator create ServiceAccount
+      UseStoragePlanwithIRSA: true
+      pclm:
+        serviceUrl: "http://mx-privatecloud-license-manager"
+        username: "administrator"
+        password: "pclm-password"
+      spec:
+        appURL: "app.example.com"
+        sourceURL: "oci-image://myregistry.azurecr.io/app:1.0"
+        # Reference the Managed Identity-enabled plans
+        database:
+          servicePlan: "azure-postgres-plan"
+        storage:
+          servicePlan: "azure-blob-plan"
+        runtime:
+          applicationRootUrl: "https://app.example.com"
+          mxAdminPassword: "admin-password"
+    ```
 
 Mendix Operator creates the ServiceAccount with `azure.workload.identity/client-id annotation`, enabling passwordless Azure Database and Blob Storage access.
 

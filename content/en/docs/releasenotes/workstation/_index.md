@@ -10,6 +10,84 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.2.1
+
+### Release date: September 16, 2026
+
+### Workstation Client
+
+#### New Features
+
+* Keyboard wedge devices - We have added keyboard wedge support for Linux.
+
+#### Bug Fixes
+
+* We have fixed an issue with the mapping of the keyboard layouts that resulted in incorrect interpretation of keyboard inputs.
+
+### Workstation Commons
+
+#### Bug Fixes
+
+* We have included a missing dependency on the sticky scroll widget.
+
+## 4.2.0
+
+### Release date: September 10, 2026
+
+### Workstation Management
+
+#### New Features
+
+* Keyboard wedge devices - We have added a new *keyboard wedge* connection type to connect with devices sending data as keyboard strokes. This connection enables basic integration with input devices like barcode scanners, RFID readers, or measurement devices. For more information, see [Configuring Devices: Keyboard Wedge](/mendix-workstation/management-devices/#keyboard-wedge).
+
+#### Improvements
+
+* Station creation - We have added the option to create a new station by copying an existing station. For more information, see [Managing Stations: Creating a New Station](/mendix-workstation/management-stations/#create-station).
+* Station details - The station details now display if there is a live connection to a Workstation Client on a registered computer.  
+* Adding devices - We have improved the UX of the **Add Device** wizard when selecting a connection type.
+* Registering computers - When clipboard permissions are disabled in the browser, the registration key is instead fully displayed in a text area.
+* Private management - We have made the following improvement to Private Workstation Management:
+
+    * We have made it easier to see if a specific SSO configuration was created at runtime or deploy time. A warning appears when editing a deploy-time configuration at runtime.
+    * To provide more flexibility when switching SSO protocols, we have made it possible to edit SSO users and their principal attributes.
+    * We have fixed some UI issues in the navigation and the SAML metadata popup window.
+    * We have added the missing default attribute mapping for Display Name in the SAML configuration.
+    * We have upgraded Private Workstation Management to Mendix 11.12.4.
+
+#### Bug Fixes
+
+* We have fixed an issue where the **Workspace Settings** page would freeze after closing the **Log Level**, **Retention Policy**, and **Client Update Check Interval** dialogs.
+* We have fixed *uncontrolled input* warnings that would appear in the console.
+
+### Workstation Client
+
+#### New Features
+
+* Keyboard wedge connector - The Workstation Client can now receive On Event messages from input devices sending data as keystrokes wherever the current focus is, for example, in the web app or in an input field.
+
+#### Improvements
+
+* Registering computers - We have improved computer registration to prevent accidental double submissions. We have also added a **Registering...** indicator while the request is in progress.
+
+### Workstation Connector
+
+#### Improvements
+
+* UX improvements - We have added new toolbox icons for all exposed Javascript actions that dark-mode compatible and aligned with the icons in Studio Pro.
+
+### Marketplace
+
+#### New Modules
+
+* Workstation Commons - The new Workstation Commons module contains a collection of nanoflows and snippets commonly used when building an app connected to peripherals devices, including the following:
+
+    * A high-level nanoflow to simplify the interface with smartcard readers, Bluetooth, printers and file devices
+    * Nanoflows to manage connecting and disconnecting to and from devices
+    * A logger to display the raw device messages in your app
+    * Snippets to display information about the station, device, and device state.
+
+* Private Workstation Management is now available as a [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/) package.
+
 ## 4.1.0
 
 ### Release date: August 13, 2026
@@ -75,7 +153,7 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 * Self-hosting option - With this GA release, we are introducing Private Workstation Management, providing you with the option to self-host the management solution. This offers greater control and flexibility over your deployment.
 
-{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Customer Success Manager. {{% /alert %}}
+{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact. {{% /alert %}}
 
 ### Workstation Client
 
@@ -219,7 +297,7 @@ If more than one station is found for a given computer name during bulk registra
     * Manage events in a nanoflow with the new `SubscribeToObjectChanges` and `WaitForObjectChanges` nanoflow actions.
     * Benefit from easier configuration of common use cases with the new `ConnectDevice`, `SendDeviceMessage` and `WaitForDeviceMessage` nanoflow actions.
 
-For more information, see [Nanoflows](/mendix-workstation/build-app/#javascript-actions) and [Widgets](/mendix-workstation/build-app/#widgets).
+For more information, see [Nanoflows](/mendix-workstation/develop-app/#javascript-actions) and [Widgets](/mendix-workstation/develop-app/#widgets).
 
 #### Improvements
 
@@ -441,7 +519,7 @@ This is a Limited Availability release of Mendix Workstation.
 
 Mendix Workstation is available for all Mendix users for development use. 
 
-Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use the Mendix Workstation for development, but workspaces are individual and cannot be shared.
+Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to see what arrangements are possible. Without a license you can use the Mendix Workstation for development, but workspaces are individual and cannot be shared.
 {{% /alert %}}
 
 ### Improvements
@@ -469,7 +547,7 @@ When editing a device, device settings are edited in a side panel. It makes devi
 ### Release date: September 12, 2025
 
 {{% alert color="info" %}}
-The fourth pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
+The fourth pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 {{% /alert %}}
 
 ### New Features
@@ -534,7 +612,7 @@ The Sample App is available in the Mendix Marketplace.
 ### Release date: August 20, 2025
 
 {{% alert color="info" %}}
-The third pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
+The third pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 {{% /alert %}}
 
 ### New Features

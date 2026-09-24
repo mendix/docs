@@ -607,7 +607,7 @@ The design property above was renamed from **my Dropdown Propery** to **My Dropd
 This feature was introduced in Mendix 9.
 {{% /alert %}}
 
-It is also possible to rename an option of a **Dropdown** property to a separate **Toggle** property. In this case, the old name of the **Toggle** property consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the  **Dropdown** property to still exist — it may have been removed entirely.
+It is also possible to rename an option of a **Dropdown** property to a separate **Toggle** property. In this case, the old name of the **Toggle** property consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the  **Dropdown** property to still exist—it may have been removed entirely.
 
 Here is an example of a **Toggle** property that was renamed from a **Dropdown** option:
 
@@ -659,7 +659,7 @@ The design property above is a replacement for the removed properties **Bold tex
 
 ### Renaming a Dropdown Option to a Spacing Option
 
-You can rename options of a **Dropdown** property to an option of a **Spacing** property. In this case, the old name of the renamed options consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the original property to still exist — it may have been removed entirely.
+You can rename options of a **Dropdown** property to an option of a **Spacing** property. In this case, the old name of the renamed options consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the original property to still exist—it may have been removed entirely.
 
 Here is an example of a **Spacing** property that includes options that have been renamed from a **Dropdown** option:
 

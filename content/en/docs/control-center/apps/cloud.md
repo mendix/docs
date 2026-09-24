@@ -9,7 +9,7 @@ no_list: true
 ## Introduction
 
 {{% alert color="warning" %}}
-This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
+This feature is not yet publicly available. Please talk to your Technical Account Manager, Specialized Account Executive, or Partner Contact to enable this page.
 {{% /alert %}}
 
 The **Cloud** page in Control Center shows you an overview of the paid and free environments of your company.

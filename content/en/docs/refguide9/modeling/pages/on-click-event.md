@@ -140,7 +140,7 @@ If the microflow is triggered within a grid and has an object list parameter, th
 
     * The client executes the microflow but does not wait for the result
     * The client checks the server every ten seconds to see whether the microflow is done executing
-    * Only set the call type to asynchronous if you experience problems — sometimes, if a request takes too long to handle, the request will be sent again by an (impatient) proxy server
+    * Only set the call type to asynchronous if you experience problems—sometimes, if a request takes too long to handle, the request will be sent again by an (impatient) proxy server
 
 ##### Show Progress Bar
 

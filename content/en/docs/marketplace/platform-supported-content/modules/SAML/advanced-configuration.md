@@ -35,7 +35,7 @@ To use a CA certificate, upload it as your key store file as described in [Manag
 Remember to do the following:
 
 * Set the certificate password in the `KeystorePassword` constant of your app to be able to read the contents of the uploaded key store.
-* Use an alias for the certificate — this must be the name parameter that is provided when creating the certificate you are uploading. If the values do not match, the SAML module will fall back to using a self-signed certificate instead.
+* Use an alias for the certificate—this must be the name parameter that is provided when creating the certificate you are uploading. If the values do not match, the SAML module will fall back to using a self-signed certificate instead.
 * The value of the configured SP EntityID must match the alias that is included in the uploaded key store.
 
 ### Customizing the Login Page

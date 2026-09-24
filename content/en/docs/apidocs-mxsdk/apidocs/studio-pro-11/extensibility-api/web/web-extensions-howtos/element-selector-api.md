@@ -281,7 +281,6 @@ The optional query parameter allows you to filter selector results:
 | `name` | `string` | Filter by name | Documents, Entities |
 | `sdkName` | `string` | Filter by SDK name (for example, `Pages$Page`) | Documents only |
 
-
 ## Preselecting Elements
 
 You can also pass an element ID as the `selectedElementId` property of the `Selector`. This ID can be either a Document, an Entity, or a Module. If a document or entity, the corresponding node on the selector form appears selected. If the ID belongs to a module, the corresponding node appears selected and  expanded, and the `New` button is enabled so the user can immediately create a new document in that module.

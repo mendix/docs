@@ -69,7 +69,7 @@ The following is a recommended implementation pattern and flow:
 
     1. When absolute timeout is reached, block further interaction with protected pages.
     2. Redirect users to the login flow or a dedicated re-authentication page, and require valid authentication before access is restored.
-   3. Log session-expiration lock events (and optional warning acknowledgements) in application audit logs when required by policy.
+    3. Log session-expiration lock events (and optional warning acknowledgements) in application audit logs when required by policy.
 
 {{< figure src="/attachments/private-platform/nist-ac/nist-ac-11-2.png" class="no-border" >}}
 

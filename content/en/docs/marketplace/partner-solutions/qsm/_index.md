@@ -50,7 +50,7 @@ To obtain or renew your purchased license, go to [this form](https://addon.mendi
 
 * Mendix QSM is available for projects based on Mendix 6.0 and above.
 * Mendix QSM supports self-service onboarding of new QSM apps for existing customers via Mendix Support.
-* Mendix QSM is part of our Mendix pricelist. For more information or activation, please contact your Mendix Customer Success Manager or Sales.
+* Mendix QSM is part of our Mendix pricelist. For more information or activation, please contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 * Detailed documentation is available via the complementary Sigrid Academy.
 * Mendix QSM dashboard reports are generated every night based on the latest version in your Project Team Server.
     * By default, the Mendix QSM reports are based on the main line in your app's Team Server.

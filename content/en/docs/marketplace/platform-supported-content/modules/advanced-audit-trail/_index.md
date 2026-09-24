@@ -57,7 +57,7 @@ Install [Atlas Core](https://marketplace.mendix.com/link/component/117187) and [
 
 ### Starting a Subscription {#obtain-license-key}
 
-Advanced Audit Trail is a premium product with a subscription fee. You can download the modules for free from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/120943), but a paid subscription is required to use the service. To subscribe, contact your Customer Success Manager (CSM) or complete the contact form on the [Marketplace page](https://marketplace.mendix.com/link/component/120943).
+Advanced Audit Trail is a premium product with a subscription fee. You can download the modules for free from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/120943), but a paid subscription is required to use the service. To subscribe, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact or complete the contact form on the [Marketplace page](https://marketplace.mendix.com/link/component/120943).
 
 ### Installing the Components in Your App
 

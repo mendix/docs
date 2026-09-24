@@ -67,7 +67,7 @@ The metrics from your app's environment are supplied in the following namespaces
 * jetty – metrics from the ingress controller of the app
 * jvm – metrics from the Java virtual machine in which the Mendix runtime runs
 * postgresql – database metrics specific to PostgreSQL databases
-* system – metrics from the base system running on the platform or PaaS — in Datadog, these are disabled by default but can be enabled using the [`DD_ENABLE_CHECKS`](/developerportal/operate/datadog-metrics/#system-metrics) environment variable.
+* system – metrics from the base system running on the platform or PaaS—in Datadog, these are disabled by default but can be enabled using the [`DD_ENABLE_CHECKS`](/developerportal/operate/datadog-metrics/#system-metrics) environment variable.
 
 Many of these metrics are described in more detail in [Metrics – Mendix Runtime](/refguide/metrics/).
 

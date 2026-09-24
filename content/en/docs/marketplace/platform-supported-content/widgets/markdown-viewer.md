@@ -54,9 +54,9 @@ Optionally, you can configure the widget further:
 
 The widget renders its content inside a container with the `widget-markdown` CSS class. The following default styles are applied:
 
-* **Tables** — rendered with borders, padding, and left-aligned text. Header cells have a light gray background
-* **Images** — render at a maximum of 35% of the container width by default
-* **Horizontal rules** — span the full width of the container
+* **Tables** – Renders with borders, padding, and left-aligned text. Header cells have a light gray background.
+* **Images** – Renders at a maximum of 35% of the container width by default.
+* **Horizontal rules** – Spans the full width of the container.
 
 You can override these styles by targeting the `.widget-markdown` class in your custom SCSS or theme.
 

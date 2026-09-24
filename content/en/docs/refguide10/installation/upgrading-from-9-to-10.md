@@ -22,7 +22,7 @@ Before upgrading your app to Mendix 10, ensure the app is successfully [migrated
 
 If your app is on a Studio Pro version below 9, you must upgrade in order of version. This means you must go from 7 to 8,  8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)), then 9 to 10. 
 
-If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the [Control Center dashboard](/control-center/dashboard/). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
+If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the [Control Center dashboard](/control-center/dashboard/). Alternatively, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to find out how to check the Mendix version of your app.
 
 ## Backing Up Your App
 

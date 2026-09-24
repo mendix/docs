@@ -189,9 +189,9 @@ The expression provided is evaluated in the browser and, currently, does not sup
 
 This property can be configured in the following ways:
 
-* **Default** — The position of the label is determined by the read-only style configuration. In the control case, the label is positioned after the control; in the text case, it is positioned before the control.
-* **Before control** — The label is placed before the check box.
-* **After control** — The label is placed after the check box.
+* **Default** – The position of the label is determined by the read-only style configuration. In the control case, the label is positioned after the control; in the text case, it is positioned before the control.
+* **Before control** – The label is placed before the check box.
+* **After control** – The label is placed after the check box.
 
 ## Editability Section{#editability}
 
@@ -344,8 +344,8 @@ The possible values of a predefined validation are the following:
 * **Required** – Can be used for values of *all* data types.
 * **E-mail** – Applies to *String* values.
 * **Positive number** – Applies to *Decimal*, *Integer*, and *Long* values.
-* **Date in the future** – Applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`.
-* **Date in the past** – Applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`.
+* **Date in the future** – Applies to *Date and time* values—compares the date *and time* to `[%CurrentDateTime%]`.
+* **Date in the past** – Applies to *Date and time* values—compares the date *and time* to `[%CurrentDateTime%]`.
 
 #### Custom Validation{#custom-validation}
 

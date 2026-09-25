@@ -7,7 +7,7 @@ description: "How to build Mendix apps using the Designcenter X Cloud Services C
 
 ## Introduction
 
-This page guides you through building Mendix apps on top of the [Designcenter X Cloud Services Connector](placeholder). It covers the available microflows, their inputs and outputs, a worked end-to-end example, and best practices for production use.
+This page guides you through building Mendix apps on top of the [Designcenter X Cloud Services Connector](https://marketplace.mendix.com/link/component/306304). It covers the available microflows, their inputs and outputs, a worked end-to-end example, and best practices for production use.
 
 ## Prerequisites
 

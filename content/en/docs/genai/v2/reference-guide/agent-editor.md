@@ -47,6 +47,7 @@ Agent Editor provides the following features:
 * Microflow integration through the **Call Agent** toolbox action under the **Agent Editor** category.
 * Agent definitions as app-model documents under version control, making changes traceable and allowing rollback to previously committed states when needed.
 * Deployment together with the app model, with environment-specific flexibility through constant overrides.
+* Agentic development with Maia. Through conversation, you can set up all the building blocks your agent depends on (Models, Knowledge Bases, Consumed MCP Services, and microflow tools), create Published MCP Services to expose your app logic, and refine your agent's prompts and tool configuration.
 
 ### Dependencies {#dependencies}
 
@@ -101,6 +102,10 @@ After installing the modules, complete the following setup before defining the m
     Ensure it is 32 characters long. For more information, see the [EncryptionKey Constant](/appstore/modules/encryption/#encryptionkey-constant) section of *Encryption*.
 3. Configure startup import logic.
     Select `ASU_AgentEditor` as your [after-startup microflow](/refguide/runtime-tab/#after-startup) in **App** > **Settings** > **Runtime**. Alternatively, add it to your existing after-startup microflow.
+4. Enable extension features by going to **View** > **Extensions**. Enable the following:
+
+    * `runtime-configuration-private` permission for the extension to access private constant values that were set in Studio Pro app settings. The extension uses constant values to connect with LLM model providers or MCP servers.
+    * `register-ai-tools` permission for Maia to be able to create, edit, and iterate on Mendix agents entirely through conversation in Studio Pro. This setting is only available in Agent Editor version 2.4.0 and above.
 
 ## Configuration {#configuration}
 
@@ -113,6 +118,8 @@ To use Agent Editor functionalities in your app, you must perform the following 
 5. Include the agent in the app logic.
 6. Deploy the agent to cloud environments.
 7. Improve the agent in the next iterations.
+
+You can perform all the above manually in Studio Pro, or, if you have Agent Editor version 2.4.0 or above, with the assistance of Maia. Simply describe what you want to build and Maia will guide you through the configuration steps.
 
 For a step-by-step tutorial, see [Create an Agent with Agent Editor](/agents/agents-kit-2/how-to/create-agent-with-agent-editor/).
 
@@ -355,3 +362,9 @@ If you import Agent Editor for the first time and the options to create Agent, M
 If you previously used Agent Editor and now see an error such as `The parameter 'Agent' is of unknown type 'agenteditor.agent'.`, restart Studio Pro.
 
 In both cases, confirm that the Agent Editor extension is loaded and enabled under **View** > **Extensions**.
+
+### Maia Is Unable to Create or Edit Agents or Other Agent Editor Documents
+
+You need Agent Editor version 2.4.0 to allow Maia to create or edit agent editor documents.
+
+You must also give permission for Maia to be able to access the tools provided by this extensions. You can enable this in Studio Pro **View** > **Extensions** and set the checkmark next to the `register-ai-tools` permission.

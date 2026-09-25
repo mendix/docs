@@ -37,7 +37,7 @@ The following components are available in Agents Kit 2.
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
 | [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 4.3.0 |
-| [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 2.3.0 |
+| [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 2.4.0 |
 | [Conversational UI](/agents/agents-kit-2/reference-guide/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 7.3.0 |
 | [GenAI Commons](/agents/agents-kit-2/reference-guide/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 7.2.0 |
 
@@ -58,8 +58,8 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
-| [MCP Client](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 4.2.0 |
-| [MCP Server](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 5.2.0 |
+| [MCP Client](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 4.3.0 |
+| [MCP Server](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 5.3.0 |
 
 ## Documents in This Section
 

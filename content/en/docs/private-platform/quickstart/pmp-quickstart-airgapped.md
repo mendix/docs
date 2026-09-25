@@ -30,8 +30,13 @@ Either set uses a different tool to migrate. For more information, refer to the 
 
 For images downloaded from the Private Mendix Platform Download Portal or with the installer file, perform the following steps.
 
-1. Download the release binary from your [Private Mendix Platform Download Portal](/private-mendix-platform/download-portal/). If you do not have access to the download portal, contact your Mendix partner for information.
-2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
+1. Log in to your [Private Mendix Platform Download Portal](/private-mendix-platform/download-portal/). If you do not have access to the Download Portal, contact your Mendix partner for information.
+2. Download the release binary from  by performing the following steps, depending on your Private Mendix Platform version:
+
+    * For version 2.8.1 and newer, go to **Artifacts Management**, select the version from the **Private Mendix Platform Version** dropdown, and select **Chart** as the **Artifact Type**. Select the charts and click **Export Selection**.
+    * For version 2.8.0 and older, go to **Releases**, click the three-dot menu (**•••**) for the desired release, and then click **View addons**. Find the *Addons/pmp-charts-x.x.x.zip* file, where `x.x.x` is the version number, and click **Download**.
+
+3. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
 
 * In the *Tools* folder:
 

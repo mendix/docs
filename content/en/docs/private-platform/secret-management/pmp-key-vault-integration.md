@@ -15,123 +15,66 @@ The integration uses the [Kubernetes Secrets Store CSI Driver](https://secrets-s
 
 Secret values are never stored in the Private Mendix Platform database or converted to a Kubernetes Secret object. They exist in Azure Key Vault, and are mounted into the running app pod as in-memory (`tmpfs`) files by the CSI driver.
 
-📦 2. Scope
-Mendix Private Platform deployed in standalone mode on AKS.
+## Prerequisites
 
-Environments using Azure Key Vault as the external secret store, via the CSI Secrets Store Driver.
+Your Private Mendix Platform must be deployed in standalone mode on AKS.
 
-Four supported secret types, mapped 1:1 to entries in the environment's SecretProviderClass:
+Your environments must be configured to use Azure Key Vault as the external secret store through the CSI Secrets Store Driver.
 
- Secret type 
+You must map the following supported secret types 1-to-1 to entries in the environment's `SecretProviderClass`:
 
- Set via PMP UI as 
-
- Purpose 
-
- App Constant 
-
- Constant name + value 
-
- Mendix app constant, same as Studio Pro constants 
-
- Runtime Custom Setting 
-
+* App constant  - This secret type is configured as a constant name and value in the Private Mendix Platform UI. It represents a Mendix app constant, for example, `MyFirstModule.WelcomePageTitle`.
+* Runtime custom setting - This secret type is configured as a setting name and value in the Private Mendix Platform UI. It represents a [Mendix Runtime custom setting](/refguide/custom-settings/) for `m2ee` configuration.
  Setting name + value 
+* MxAdmin Password - This secret type is a fixed value, configured once per environment. It represents the password of the environment's administrator account. 
+* Debugger Password - This secret type is a fixed value, configured once per environment. It represents the password of the environment's remote debugger. 
 
- Mendix Runtime custom setting (m2ee configuration) 
+{{% alert color="info" %}}
+Database and blob storage connection secrets are not supported through this automatic flow. You must provision them manually. For more information, refer to the general Secret Store documentation.
 
- MxAdmin Password 
+The integration does not support deployments in Interactor-Agent mode, or non-AKS and on-premises Kubernetes clusters.{{% /alert %}}
 
- (fixed, one per environment) 
+## Onboarding Approaches
 
- The environment's administrator account password 
+The approach to implementing the Key Vault integration is slightly different for environments that do not use an Azure Workload Identity (`azure-wi`) storage or database plan.
 
- Debugger Password 
+### Approach A - With Azure Workload Identity Storage
 
- (fixed, one per environment) 
+For environments which use an `azure-wi` storage or database plan, the managed identity (UAMI) is automatically created by the Mendix Operator during environment provisioning. The Kubernetes ServiceAccount is created by the Operator and annotated with the UAMI Client ID. Because of that, the customer must only configure Key Vault and RBAC.
 
- The environment's remote debugger password 
+### Approach B - Without Azure Workload Identity Storage
 
-Out of scope for this feature
+For environments which do not use `azure-wi` plans, the managed identity (UAMI) must be manually created by the customer before enabling Key Vault. Since the 
+Kubernetes ServiceAccount does not exist, Private Mendix Platform detects that it is missing and asks for the Client ID, and then created the ServiceAccount. This approach requires the customer to configure the UAMI, in addition to Key Vault and RBAC.
 
-Database and blob storage connection secrets are not supported through this automatic flow — provision those manually, per the general Secret Store documentation.
+### Process
 
-Connected-mode deployments.
+Private Mendix Platform automatically determines the correct path. When you enable the secret store for an environment, Private Mendix Platform checks whether a Kubernetes ServiceAccount already exists for that environment.
 
-Non-AKS or on-premises Kubernetes clusters.
+If the ServiceAccount exists, Private Mendix Platform reads the UAMI Client ID directly from the ServiceAccount's existing annotation. No customer input is required.
 
-🛣️ 3. The Two Onboarding Paths
-Whether an environment needs manual UAMI setup or not depends entirely on whether it uses an Azure Workload Identity (azure-wi) storage/database plan.
+If the ServiceAccount does not exist, Private Mendix PlatformP shows a message like the following:
 
- 
+*Private Mendix Platform has detected that an auto-provisioned managed identity does not exist for this environment. In order to use the automatic secret store, request your infrastructure team to provision an Azure Managed Identity for this environment and provide the Client ID.*
 
- Approach A — environment uses an azure-wi storage or database plan 
+The customer's infrastructure team must create the UAMI in Azure and supply its Client ID in this prompt. Private Mendix Platform stores it and creates the Kubernetes ServiceAccount  with the correct [name and annotations](#naming-conventions). The customer does not need to create or annotate the service account manually.
 
- Approach B — environment does not use an azure-wi plan 
+## Permissions Reference for Managed Identities and Azure RBAC
 
- Managed identity (UAMI) creation 
+All of the following identities must be correctly configured, each with a different Azure role, a different scope, and a different party responsible for granting it. Incorrectly configuring any of the identities will cause errors with the integration.
 
- Automatic — created by the Mendix Operator during environment provisioning 
+### Private Mendix Platform Managed Identity
 
- Manual — the customer must create a UAMI before enabling Key Vault 
+The `PMP-KeyVault-Identity` is the Workload Identity assigned to the Private Mendix Platform pod (not to any customer environment). Private Mendix Platform uses it through `DefaultAzureCredentialBuilder` for every write, update, delete, and recover operation against a customer's Key Vault.
 
- Kubernetes ServiceAccount 
-
- Already exists, created by the Operator, already annotated with the UAMI Client ID 
-
- Does not exist yet — PMP detects this and asks for the Client ID, then creates it 
-
- Customer effort per environment 
-
- Low — Key Vault + RBAC only 
-
- Higher — UAMI + Key Vault + RBAC; PMP creates the ServiceAccount for you 
-
-PMP determines which path applies automatically: when you enable the secret store for an environment, PMP checks whether a Kubernetes ServiceAccount already exists for that environment.
-
-If it exists (Approach A: the Mendix Operator already created one as part of an azure-wi storage/database plan), PMP reads the UAMI Client ID directly from the ServiceAccount's existing annotation. No customer input is required.
-
-If it does not exist (Approach B — no azure-wi plan in use), PMP shows an informational prompt:
-
-"Private Mendix Platform has detected that an auto-provisioned managed identity does not exist for this environment. In order to use the automatic secret store, request your infrastructure team to provision an Azure Managed Identity for this environment and provide the Client ID."
-
-The customer's infrastructure team creates the UAMI in Azure and supplies its Client ID in this prompt. PMP stores it and — the first time it needs to — creates the Kubernetes ServiceAccount itself, with the correct name and annotations (see section 8). The customer does not need to run kubectl create serviceaccount or kubectl annotate manually for this path; PMP has the necessary Kubernetes RBAC to do it.
-
-🔑 4. Managed Identities & Azure RBAC — Full Permission Reference
-Read this section carefully
-
-There are three separate identities involved in this feature, each with a different Azure role, a different scope, and a different party responsible for granting it. Getting any one of these wrong is the most common cause of setup failures. This section is the single source of truth for "who needs what, and when."
-
-4.1 Identity #1 — PMP's Own Managed Identity (PMP-KeyVault-Identity)
-This is the Workload Identity assigned to the PMP pod itself (not to any customer environment). PMP uses it — via DefaultAzureCredentialBuilder — for every write, update, delete, and recover operation against a customer's Key Vault.
-
- Property 
-
- Value 
-
- Azure role required 
-
- Key Vault Secrets Officer 
-
- Scope 
-
- Each individual environment's Key Vault (named mendix-<environment internal name>) — granted per-environment, not once globally 
-
- Why this role and not less 
-
- "Secrets Officer" (rather than just "Secrets User") is required because PMP must be able to write, delete, and recover soft-deleted secrets — not just read them 
-
- Granted by 
-
- Customer (Infrastructure Team) 
-
- When 
-
- Once per environment, before the customer toggles "Enable Secret Store" — Approach A step A3, Approach B step B5 
-
- Applies to 
-
- Both Approach A and Approach B — identical requirement in both cases 
+| Property |  Value |
+| --- | --- |
+| **Azure role required** | Key Vault Secrets Officer |
+| **Scope** | Each individual environment's Key Vault (named `mendix-<environment internal name>`). The role is granted separately for each environment. |
+| **Explanation** | *Secrets Officer* (rather than just *Secrets User*) is required because Private Mendix Platform must be able to write, delete, and recover soft-deleted secrets, not just read them. | 
+| **Granted by** | Customer (Infrastructure Team) |
+| **When** |  Once per environment, before the customer toggles *Enable Secret Store* |
+| **Applies to** | Approach A and B | 
 
 4.2 Identity #2 — The Environment-Level UAMI (per-environment managed identity)
 This is the managed identity tied to the specific environment — created automatically by the Operator in Approach A, or manually by the customer in Approach B. It is used exclusively at runtime by the CSI driver running inside the app pod — PMP's own code never uses this identity.
@@ -382,7 +325,7 @@ No manual Kubernetes object creation or Client ID entry is needed for this path.
 
 You do not need to run any kubectl create serviceaccount or kubectl annotate commands yourself for Approach B — PMP performs this step once it has the Client ID.
 
-🏷️ 8. Naming Conventions & Kubernetes Object Reference
+🏷️ 8. Naming Conventions and Kubernetes Object Reference {#naming-conventions}
  Object 
 
  Name 

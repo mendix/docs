@@ -60,20 +60,53 @@ operator_config:
 
 Install the Mendix Operator by doing the following steps:
 
-1. Run one of the following commands, where `-n` indicates the namespace: 
-    
-    * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
-    * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
+1. Log in to the [Download Portal](https://privateplatform.mendix.com/).
+2. Export the image and charts list.
 
-    In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
-    
-2. Click **Base Installation**, and then select the cluster type.
+    1. In the [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/), go to **Artifact Management** and select a Private Mendix Platform version.
+    2. Filter by **Category** and select the images
+    3. Click **Export Selection** to export the list to a file named *export-images-vx.x.x.json*, where `x.x.x` corresponds to a Private Mendix Platform version.
 
-    {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}
+3. In the Mendix Portal, create a Personal Access Token (PAT) for private images that require a PAT for authentication. 
 
-3. Click **Run Installer** to install the Mendix Operator in your cluster.
+    1. Sign in to Mendix and go to **User Settings > Developer Settings > Personal Access Token**
+    2. Click **New Token**.
+    3. Under **OCI registry**, select the **mx:registry:access** as scope.
+ 
+4. Fetch the images.
 
-You must configure the storage and database plans in the Operator installation values, not in the Helmfile values for `mxplatform`.
+    1. Log in to the OCI registry for Oras by using the following command: `oras login -u pat -p <token>  registry.mendix.com`.
+    2. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, ` oras pull registry.mendix.com/private-platform/installer-helmfile:0.2.1`.
+    3. Unzip the downloaded file by using the following command: `tar -xvf helmfile-config.tar.gz`.
+    4. Test it by using the following command: `helmfile --file helmfile.d/helmfile.yaml --state-values-file <valuefile> apply`.
+
+5. Pull the charts.
+
+    1. Log in to the OCI registry for Helm by using the following command: `helm registry login -u pat -p ${YOUR_PAT} registry.mendix.com`.
+    2. Use the `helm pull` command to download the Helmfile from the OCI registry, for example:
+
+    ```text
+    helm pull oci://registry.mendix.com/private-cloud/charts/mx-privatecloud-operator-installer --version 0.2.36
+    helm install operator mx-privatecloud-operator-installer-0.2.36.tgz -f ./Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml --namespace pmp-oci-test
+    ```
+
+    where `/Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml` is the yaml file for Operator configuration. You can find this yaml file among the example files in the installer package.
+
+#### Download Package API {#download-api}
+
+The following Download Portal APIs enable automating package downloads.
+
+##### Get Private Mendix Platform Release Version List
+
+```text
+GET https://privateplatform.mendix.com/rest/pmpreleaseservice/v1/versions
+```
+
+##### Get the Manifest of a Specific Private Mendix Platform Version
+
+```text
+GET https://privateplatform.mendix.com/rest/pmpreleaseservice/v1/versions/{version}/manifest
+```
 
 ### Private Cloud License Manager Credentials
 

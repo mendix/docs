@@ -72,7 +72,7 @@ Your Mendix app will be deployed with and run by the Private Mendix Platform Ope
 | --- | --- | --- | --- |
 | OS | Linux distribution | Any capable of supporting Kubernetes | |
 | Container orchestration | Kubernetes | See [Supported Cluster Types](#supported-clusters) | |
-| Container registry | Any supported registry | See [Container Registries](#supported-registries) | |
+| Container registry | Any supported registry | See [Container Registries](#container-registries) | |
 | Database | PostgreSQL | See [Databases](#databases) | |
 | Object storage | S3-type Bucket | S3 API compatible | |
 | Application management | Mendix on Kubernetes Operator | See the [Release Notes](/releasenotes/private-platform/) for your Private Mendix Platform version | Will be installed by Private Mendix Platform installer |

@@ -94,6 +94,7 @@ This is the managed identity tied to a specific environment. It is created autom
 This identity not a Key Vault access identity. It allows the Mendix Operator to automatically create the UAMI and connect it to an `azure-wi` storage or database plan. It is required for Approach A to work.
 
 | Property | Value |
+| --- | --- |
 | **Azure roles required** | The *Managed Identity Contributor* role is required to create the per-environment UAMI and attach its federated credential. The issuer is the cluster OIDC URL, and the subject is the environment's ServiceAccount. <br> 2. A *role-assignment-capable* role - for example, User Access Administrator or Role Based Access Control Administrator. This role must be scoped to the storage account or database resource used by the `azure-wi` plan, so the Operator can grant the newly created UAMI the required data-plane role, for example, Storage Blob Data Contributor for Blob Storage, or the equivalent Microsoft Entra role for Azure SQL or Postgres Flexible Server. |
 | **Scope** |  The resource group containing the per-environment UAMIs, and the storage or database resources used by azure-wi plans |
 | **Granted by** | Customer (Infrastructure Team) |

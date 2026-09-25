@@ -88,8 +88,6 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
         privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
         ```
 
-    3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
-
 4. Migrate the files required to install the Private Cloud components by performing the following steps:
 
     1. Download the *mx-private-cloud.zip* file from your Private Mendix Platform download portal.
@@ -112,7 +110,7 @@ For SVIX, the Mendix Operator and its subcomponents (for example, sidecars, stor
 
 #### Accessing Mendix Container Images {#aip}
 
-To install Private Mendix in an air-gapped environment, you must provision a list of images in your registry. 
+To install Private Mendix Platform in an air-gapped environment, you must provision a list of images in your registry. 
 
 1. Download an aip tool for your operating system.
 

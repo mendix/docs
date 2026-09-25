@@ -111,7 +111,8 @@ On the **Support & Licensing** tab, select your license type, and add contact de
 
 3. Add the **Contact Email** of your support department.
 
-4. In the **Development Team** field, add the email addresses of the developers who have contributed to and own the component.
+4. In the **Development Team** field, add the email addresses of the developers who have contributed to and own the component.     
+    {{% alert color="info" %}}A company admin can change a component's developer by editing the latest version of that component.{{% /alert %}}
 
 #### Open-Source Software Licenses {#license}
 

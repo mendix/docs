@@ -101,10 +101,24 @@ Select the upgrade method based on the original installation method. That is to 
     kubectl apply -f registry-secret.yaml
     ```
 
-6. Upgrade the Operator CRDS by running the following command: `kubectl apply -f mx-privatecloud-operator-crd/crds/`.
-7. Upgrade the Operator release by performing the following command: `helm upgrade operator mx-privatecloud-operator-installer-0.2.43.tgz -f <operatorValues file> --namespace <ns-name>`.
-8. After the Operator is upgraded, fetch the image from `registry.mendix.com` by running the following command: `oras pull registry.mendix.com/private-platform/installer-helmfile:2.8.1`.
-9. Unzip the Helm chart and upgrade the Private Mendix Platform release by running the following command: `helmfile  --file ./oras-artifact/helmfile-config/helmfile.d/helmfile.yaml  --state-values-file ../../../<pmp values yaml file> apply`.
+6. Add the created secret as follows to Operator *value* file:
+
+```text
+imagePullSecrets:
+    - name: private-registry-secret
+
+7. Upgrade the Operator CRDS by running the following command: `kubectl apply -f mx-privatecloud-operator-crd/crds/`.
+8. Upgrade the Operator release by performing the following command: `helm upgrade operator mx-privatecloud-operator-installer-0.2.43.tgz -f <operatorValues file> --namespace <ns-name>`.
+9. After the Operator is upgraded, fetch the image from `registry.mendix.com` by running the following command: `oras pull registry.mendix.com/private-platform/installer-helmfile:2.8.1`.
+10. Unzip the Helm chart and upgrade the Private Mendix Platform release by running the following command: `helmfile  --file ./oras-artifact/helmfile-config/helmfile.d/helmfile.yaml  --state-values-file ../../../<pmp values yaml file> apply`.
+11 Add `imagePullSecret` to the Private Mendix Platform *values* file:
+
+```text
+global:
+    imageRegistry:
+        pullSecrets:
+            - private-registry-secret
+```
 
 ## Post-Upgrade Steps
 

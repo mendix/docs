@@ -48,7 +48,7 @@ The following reference document presents a list of required and optional compon
 | `mx-privatecloud-operator-installer` | Mendix Operator installer | Independent | Required | created by chart |
 | `mx-privatecloud-operator-crd` | Mendix Operator CRDs | Cluster-scoped | Required | N/A |
 | `mx-privatecloud-license-manager` | Private Cloud License Manager (PCLM) | Shared | Required | `mendix-pclm` (created by chart) |
-| `installer-config` | Shared installer configuration | Shared | Required | n/a |
+| `installer-config` | Shared installer configuration | Shared | Required | N/A |
 | `mxplatform` | Mendix Platform application (MendixApp CR) | Shared | Required | `mxplatform` (created by chart or operator) |
 | `mx-privatecloud` | Private Cloud services (authenticator, collector, interactor, bridge) - used in Interactor-Agent mode | Shared | Optional | `mx-privatecloud` (created by chart) |
 | `mxplatform-kube-agent` | Build agent for mxplatform | Independent | Optional | `mxplatform-kube-agent` (created by chart) |

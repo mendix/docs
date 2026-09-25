@@ -72,7 +72,7 @@ Synchronization actions can now safely run in the background, allowing users to 
 Background synchronization is only supported for Synchronize changed objects and Synchronize selected objects. Do not use background synchronization with Full synchronization. Full synchronization rewrites the entire local database, and any changes made to offline data between the start and completion of the sync will be lost.
 {{% /alert %}}
 
-**Behaviour During Background Synchronization**
+**Behavior During Background Synchronization**
 
 * Concurrent synchronizations is not supported.
 * Reading offline objects or files while a synchronization is running is safe.

@@ -109,12 +109,6 @@ Boundary events are re-created upon interrupting behavior change because in-plac
 
 Converting an already-triggered non-interrupting boundary event to interrupting in place violates this rule: the parent activity remains in progress, resulting in an interrupting boundary event whose parent is never aborted. Conversely, converting an already-triggered interrupting boundary event to non-interrupting in place leaves it active on an already-aborted parent activity, contradicting the rule that a non-interrupting boundary event must not abort its parent.
 
-#### Implications of Changing the Boundary Event Type
-
-When you change the type of an ongoing **non-interrupting** boundary event (for example, from Timer to Notification), this causes a partially resolvable [Current Activity Moved out of Path](/refguide/workflow-versioning/#current-activity-moved-out-of-path) conflict. Affected workflow instances cannot be continued. This does not apply to interrupting boundary events.
-
-For more information on how to handle such conflicts, see [Workaround for Non-resolvable and Partially Resolvable Conflicts](/refguide/workflow-versioning/#workaround-for-non-resolvable-and-partially-resolvable-conflicts).
-
 ### Rearranging Boundary Events
 
 You can rearrange boundary events in the following ways:

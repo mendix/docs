@@ -33,7 +33,8 @@ You can perform the installation by using one of the following methods:
 
 * [With GUI](/private-mendix-platform/interactive-installation/), where you manually install Private Mendix Platform components
 * [With Helmfile](/private-mendix-platform/helmfile-installation/), where you use Helmfile to automatically install Private Mendix Platform components. Helm charts are available from  Private Mendix Platform 2.8.0. Namespaces created with  Private Mendix Platform 2.7.0 and older do not currently support Helm charts.
-* [Air-Gapped](/private-mendix-platform/airgapped-installation/), where you install Private Mendix Platform for an air-gapped environment.
+
+Both types of installation can be performed in an [air-gapped environment](/private-mendix-platform/airgapped-installation/).
 
 #### Installation Order
 

@@ -3,17 +3,17 @@ title: "Install Private Mendix Platform 2.8.0 for Air-Gapped Environments"
 linktitle: "Air-Gapped Installation"
 url: /private-mendix-platform/air-gapped-installation/
 description: "Documents the installation process for Private Mendix Platform for air-gapped environments."
-weight: 31
+weight: 32
 ---
 
 ## Introduction
 
-This document describes how you can perform a Private Mendix Platform in an air-gapped environment. For other installation types, see the following topics:
+This document describes how you can migrate artifcates (images and charts), in order to perform an air-gapped installation using one of the following methods:
 
 * [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/)
 * [Install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/)
 
-## Image Migration for Private Mendix Platform 2.8.0
+## Image Migration for Private Mendix Platform 
 
 The 2.8.0 release of Private Mendix Platform requires some manual steps to migrate images from various sources to the customer's air-gapped container registry:
 
@@ -102,11 +102,11 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
     3. Copy the *maia-appgen-pmp* directory to the *images* sub-directory of the installer by running the following command: `cp -r maia-appgen-pmp/images/* <your installer>/pmp-binary-linux/images`
     4. Upload the Maia directory to your private registry by using the `installer init migrate` command.
 
-6. After the migration is completed, [install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/).
+6. After the migration is completed, [install Private Mendix Platform in interactive GUI mode](/private-mendix-platform/interactive-installation/).
 
 ### Images from the Public Mendix Registry
 
-For SVIX, the Mendix Operator and its subcomponents (for example, sidecars, storage provisioners, image builder), as well as Mendix runtime base images and app building blocks for supported Mendix versions, you must use an AIP tool to download and migrate to a local registry.
+For SVIX, the Mendix Operator and its subcomponents (for example, sidecars, storage provisioners, image builder), as well as Mendix runtime base images and app building blocks for supported Mendix versions, you have the option to use an AIP tool to download and migrate to a local registry. You can use the `oras cp` command instead, if your registry allows it.
 
 #### Accessing Mendix Container Images {#aip}
 
@@ -168,3 +168,19 @@ To install Private Mendix Platform in an air-gapped environment, you must provis
     ```
 
 5. After the migration is completed, [install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/).
+
+### Download Package API {#download-api}
+
+The following Download Portal APIs enable automating package downloads through manifest files.
+
+#### Get Private Mendix Platform Release Version List
+
+```text
+GET https://privateplatform.mendix.com/rest/pmpreleaseservice/v1/versions
+```
+
+#### Get the Manifest of a Specific Private Mendix Platform Version
+
+```text
+GET https://privateplatform.mendix.com/rest/pmpreleaseservice/v1/versions/{version}/manifest
+```

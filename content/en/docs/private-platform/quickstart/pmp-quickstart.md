@@ -8,10 +8,9 @@ weight: 20
 
 ## Introduction
 
-In interactive mode, you manually install Private Mendix Platform components. For other installation types, see the following topics:
+In interactive mode, you manually install Private Mendix Platform components. For other installation types, see the following topic:
 
 * [Install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/)
-* [Install Private Mendix Platform 2.8.0 for Air-Gapped Environments](/private-mendix-platform/air-gapped-installation/)
 
 ## Preparing the Installation Files
 

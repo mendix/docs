@@ -13,7 +13,7 @@ This document presents the system requirements for the various parts of the Priv
 
 ## Training and Certification Requirements
 
-PPrivate Mendix Platform provides an end-to-end Mendix developer experience to customers who need to enjoy it on their private infrastructure. It is dependent on Kubernetes, and integrates with tooling in the customer's landscape.
+Private Mendix Platform provides an end-to-end Mendix developer experience to customers who need to enjoy it on their private infrastructure. It is dependent on Kubernetes, and integrates with tooling in the customer's landscape.
 
 This offering is delivered, managed and supported by Certified Partners (or Certified Customers). You must have the *PMP-Partner certified* certification.
 

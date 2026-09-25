@@ -8,7 +8,7 @@ weight: 32
 
 ## Introduction
 
-This document describes how you can migrate artifcates (images and charts), in order to perform an air-gapped installation using one of the following methods:
+This document describes how you can migrate artifacts (images and charts), in order to perform an air-gapped installation using one of the following methods:
 
 * [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/)
 * [Install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/)

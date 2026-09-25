@@ -8,7 +8,7 @@ weight: 30
 
 ## Introduction
 
-To automate the declarative installation of Private Mendix Platform, you can now use Helm and Helmfile in order to automate the declarative installation of Private Mendix Platform. In this way, you can automatically install Private Mendix Platform components. For other installation types, see the following topic:
+You can now use Helm and Helmfile in order to automate the declarative installation of Private Mendix Platform. In this way, you can automatically install Private Mendix Platform components. For other installation types, see the following topic:
 
 * [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/)
 
@@ -123,7 +123,7 @@ operator_config:
 
 ### Private Cloud License Manager Credentials
 
-You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile. After installing Operator and PCLM, you must also update the license manager credentials in the Operator Helm chart *value* file, and then apply it again.
+You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile. If the credentials do not ’match, update the license manager credentials in the Operator Helm chart *value* file, and then apply it again.
 
 {{% alert color="info" %}}
 The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the Operator installation. A mismatch will prevent the Operator from obtaining licenses.
@@ -146,14 +146,7 @@ Install the Mendix Operator by doing the following steps:
     2. Click **New Token**.
     3. Under **OCI registry**, select the **mx:registry:access** as scope.
  
-4. Fetch the images.
-
-    1. Log in to the OCI registry for Oras by using the following command: `oras login -u pat -p <token>  registry.mendix.com`.
-    2. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, ` oras pull registry.mendix.com/private-platform/installer-helmfile:0.2.1`.
-    3. Unzip the downloaded file by using the following command: `tar -xvf helmfile-config.tar.gz`.
-    4. Test it by using the following command: `helmfile --file helmfile.d/helmfile.yaml --state-values-file <valuefile> apply`.
-
-5. Pull the charts.
+4. Pull the charts.
 
     1. Log in to the OCI registry for Helm by using the following command: `helm registry login -u pat -p ${YOUR_PAT} registry.mendix.com`.
     2. Use the `helm pull` command to download the Helmfile from the OCI registry, for example:

@@ -35,18 +35,18 @@ The following reference document presents a list of required and optional compon
 
 ### Registry Paths
 
-* `registry.mendix.com/private-cloud/` (license-manager, operator, image-builder, m2ee-sidecar, storage-provisioner, app-building-blocks, kubernetes-agent, interactor, interactor-bridge, authenticator, collector)
-* `registry.mendix.com/private-platform/` (mxpc-test, pmp-pipeline-tools, mxplatform-kube-agent, mendix-private-platform)
-* `registry.mendix.com/maia/` (maia-appgen, maia-llm-gateway)
-* `registry.mendix.com/docgen/` (document-generation-service), Docker Hub
-* `svix/` (svix-server).
+* `registry.mendix.com/private-cloud/ (license-manager, operator, image-builder, m2ee-sidecar, storage-provisioner, app-building-blocks, kubernetes-agent, interactor, interactor-bridge, authenticator, collector)`
+* `registry.mendix.com/private-platform/ (mxpc-test, pmp-pipeline-tools, mxplatform-kube-agent, mendix-private-platform)`
+* `registry.mendix.com/maia/ (maia-appgen, maia-llm-gateway)`
+* `registry.mendix.com/docgen/ (document-generation-service)`, Docker Hub
+* `svix/ (svix-server)`
 
 ## Charts
 
 | Component | Description | Namespace | Required | ServiceAccount |
 | --- | --- | --- | --- | --- |
 | `mx-privatecloud-operator-installer` | Mendix Operator installer | Independent | Required | created by chart |
-| `mx-privatecloud-operator-crd` | Mendix Operator CRDs | Cluster-scoped | Required | n/a |
+| `mx-privatecloud-operator-crd` | Mendix Operator CRDs | Cluster-scoped | Required | N/A |
 | `mx-privatecloud-license-manager` | Private Cloud License Manager (PCLM) | Shared | Required | `mendix-pclm` (created by chart) |
 | `installer-config` | Shared installer configuration | Shared | Required | n/a |
 | `mxplatform` | Mendix Platform application (MendixApp CR) | Shared | Required | `mxplatform` (created by chart or operator) |
@@ -73,7 +73,7 @@ helm pull oci://registry.mendix.com/private-cloud/charts/<chart> --version <vers
 ## Custom Artifacts
 
 | Artifact | Description | Required |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | `installer-helmfile` | Tarball containing the helmfile and `helmfile-config` sample values | Required |
 
 ### Address

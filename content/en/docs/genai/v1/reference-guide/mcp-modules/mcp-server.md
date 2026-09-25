@@ -19,7 +19,7 @@ The [MCP Server](https://marketplace.mendix.com/link/component/240380) module pr
 
 * Expose reusable prompts, including the ability to use prompt parameters
 * List and execute microflow implemented in the application as tools
-* The path of the MCP Server cannot contain `/`, so no sub-paths are possible currently.
+* The `Path` of the MCP Server cannot contain `/`, so your server cannot have a multi-level path.
 
 To use function calling within the same Mendix application and integrating to an LLM, consider [function calling](/agents/function-calling/).
 
@@ -44,11 +44,15 @@ If you start from a standard Mendix blank app, or have an existing project, you 
 
 ### Create MCP Server {#create-server}
 
-The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. You can use the created `MCPServer` to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, that means this value needs to be known to the MCP Client (usually set in a configuration file). After the action gets triggered, the server becomes available for external clients to connect.
+The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. You can use the created `MCPServer` to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, that means this value needs to be known to the MCP Client (usually set in a configuration file).
 
-Note that the path cannot be `mcp` and cannot end on `/mcp`, because those are reserved endpoints. Additionally, sub-paths using `/` is not allowed.
+For example, if `Path` is set to `mcp-ticketsystem`, the MCP Client will reach it via the URL `https://mymendixapp.com/mcp-ticketsystem/mcp`.
 
-Based on your use case, this action can be triggered manually by an admin if wrapped around a microflow accessible in the UI, via an after start-up microflow, or by any other microflow, such as a scheduled event.
+{{% alert color="info" %}}
+`Path` cannot be `mcp` and cannot end on `/mcp`, because those are reserved endpoints. Additionally, `Path` cannot contain the `/` character.
+{{% /alert %}}
+
+After the `Create MCP Server` action gets triggered, the server becomes available for external clients to connect. Based on your use case, the action can be triggered manually by an admin if wrapped around a microflow accessible in the UI, via an after start-up microflow, or by any other microflow, such as a scheduled event.
 
 For example, see the `Example Implementations` folder inside the module, which contains logic to create a server, add an authentication microflow, and expose a tool and prompt.
 

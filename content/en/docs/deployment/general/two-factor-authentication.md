@@ -14,7 +14,7 @@ This extra layer of authentication is required when you perform sensitive activi
 
 {{< figure src="/attachments/deployment/general/two-factor-authentication/production.png" max-width=30% alt="" class="no-border" >}}
 
-To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Portal.
+To use 2FA, you need an active Mendix Portal session and either a device that can receive SMS messages or a Time-based One-Time Password (TOTP) code generator.
 
 ## Setting Up and Using 2FA
 

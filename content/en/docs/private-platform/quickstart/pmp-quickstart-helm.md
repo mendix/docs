@@ -30,6 +30,16 @@ Before running Helmfile, ensure you have the following tools installed:
 `Helm-diff` is required for `helmfile apply` and `helmfile diff` commands. If you only use `helmfile sync` (which forces synchronization without using `diff`), it is optional. 
 {{% /alert %}}
 
+## Installation Overview
+
+The installation process consists of the following high-level steps. For more information, refer to the sections below.
+
+1. Retrieve the manifest of image and charts version through the Download Portal GUI or API. 
+2. Pull the images and charts marked **Required**, as well as any optional components your deployment needs. For a list of required and optional components, see [Installation Reference](/private-mendix-platform/installation-reference/).
+3. Install the Operator charts.
+4. Install Priave Mendix Platform charts using Helm.
+5. Configure the PCLM host name, user name and password in the `<operator-generated-values.yaml` file and re-apply the Mendix Operator chart.
+
 ## Platform-Specific Installation Notes
 
 ### Linux
@@ -93,16 +103,6 @@ helm plugin install https://github.com/databus23/helm-diff
 # Verify installation
 helm plugin list | grep diff
 ```
-
-## Installation Overview
-
-The installation process consists of the following high-level steps. For more information, refer to the sections below.
-
-1. Retrieve the list of image and charts version through the Download Portal GUI or API. 
-2. Pull the images and charts marked **Required**, as well as any optional components your deployment needs. For a list of required and optional components, see [Installation Reference](/private-mendix-platform/installation-reference/).
-3. Install the Operator charts.
-4. Install Priave Mendix Platform charts using Helm.
-5. Configure the PCLM host name, user name and password in the `<operator-generated-values.yaml` file and re-apply the Mendix Operator chart.
 
 ## Starting the Installation
 

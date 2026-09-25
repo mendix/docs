@@ -1,8 +1,8 @@
 ---
 title: "Private Mendix Platform Download Portal Release Notes"
-linktitle: Private Mendix Platform Download Portal
+linktitle: "Download Portal"
 url: /releasenotes/private-platform-download-portal/
-description: "Release notes for updates to the Private Mendix Platform Download Portal"
+description: "Release notes for updates to the Private Mendix Platform Download Portal."
 weight: 40
 cascade:
     - numberless_headings: true

@@ -30,13 +30,16 @@ The Helmfile installation does not support installing or upgrading the Mendix Op
 
 Before you start the installation, download the required files by performing the following steps:
 
-1. In the [Private Mendix Platform download portal](https://privateplatform.mendix.com/), click **Releases**.
+1. Log in to the [Private Mendix Platform download portal](https://privateplatform.mendix.com/), click **Releases**.
 
     If you do not have access to the download portal, contact your Mendix partner for information.
 
-2. Click the three-dot menu (**•••**) for the desired release, and then click **View addons**.
-3. Find the *Addons/pmp-charts-x.x.x.zip* file, where `x.x.x` is the version number, and click **Download**.
-4. Unzip the downloaded file to a local folder on your Windows or Linux server. The release binary contains the following files:
+2. Find the installation by performing the following steps, depending on your Private Mendix Platform version:
+
+    * For version 2.8.1 and newer, go to **Artifacts Management**, select the version from the **Private Mendix Platform Version** dropdown, and select **Chart** as the **Artifact Type**.
+    * For version 2.8.0 and older, go to **Releases**, click the three-dot menu (**•••**) for the desired release, and then click **View addons**. Find the *Addons/pmp-charts-x.x.x.zip* file, where `x.x.x` is the version number, and click **Download**.
+  
+3. Unzip the downloaded file to a local folder on your Windows or Linux server. The release binary contains the following files:
 
     * **helmfile.d** - Helmfile templates and configuration
     * **charts**  - Helm charts for all components

@@ -13,6 +13,8 @@ To automate the declarative installation of Private Mendix Platform, you can now
 * [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/)
 * [Install Private Mendix Platform 2.8.0 for Air-Gapped Environments](/private-mendix-platform/air-gapped-installation/)
 
+Helm charts are available from  Private Mendix Platform 2.8.0. Namespaces created with Private Mendix Platform 2.7.0 and older do not currently support Helm charts.
+
 ### Supported Tasks
 
 Helmfile installation supports the following tasks:

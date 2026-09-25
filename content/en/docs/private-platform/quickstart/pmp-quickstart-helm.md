@@ -13,7 +13,142 @@ To automate the declarative installation of Private Mendix Platform, you can now
 * [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/)
 * [Install Private Mendix Platform 2.8.0 for Air-Gapped Environments](/private-mendix-platform/air-gapped-installation/)
 
-### Supported Tasks
+# PMP Helm Installation Overview
+
+[Helmfile Installation](https://docs.mendix.com/private-mendix-platform/helmfile-installation/).
+
+## Installation at a Glance
+
+| Step | What you do | Key reference |
+| --- | --- | --- |
+| 1 | Retrieve the export manifest json via UI or via Download portal APIs | [Export json](https://docs.mendix.com/private-mendix-platform/download-portal/#pulling-images-and-charts) |
+| 2 | Pull the required images, charts, and the `installer-helmfile` artifact into your own registry | [Images](#step-1--pull-images-and-charts) / [Charts](#charts) |
+| 3 | Install the Mendix Operator: CRD chart, then the installer chart | [Installation Requirements for the Mendix Operator](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#installation-requirements-for-the-mendix-operator) |
+| 4 | Install the PMP charts via helmfile using your own values | [Installation Commands](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#installation-commands) |
+| 5 | Feed the PCLM hostname/credentials back into the operator values and re-apply | [Private Cloud License Manager Credentials](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#private-cloud-license-manager-credentials) |
+
+---
+
+## Step 1 — Retrieve the list of image/charts version via GUI/API
+
+For pulling the versions, it can be done via Download portal UI as well as Download portal API. Check [Export Manifest Json](https://docs.mendix.com/private-mendix-platform/download-portal/#pulling-images-and-charts).
+
+---
+
+## Step 2 — Pull Images and Charts
+
+Pull everything marked **Required** plus whichever optional components your deployment needs.
+
+For pulling the images, charts and helmfile installer(custom artifact) check [Download portal documentation](https://docs.mendix.com/private-mendix-platform/download-portal/#pulling-images-and-charts).
+
+### Images
+
+| Image | Description | Required | Documentation |
+| --- | --- | --- | --- |
+| `privatecloud-license-manager` | Private Cloud License Manager (PCLM) | Required | [mx-privatecloud-license-manager](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-privatecloud-license-manager) |
+| `mendix-operator` | Mendix Operator | Required | [Installation Requirements for the Mendix Operator](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#installation-requirements-for-the-mendix-operator) |
+| `image-builder` | Builds app container images | Required | [Installation Requirements for the Mendix Operator](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#installation-requirements-for-the-mendix-operator) |
+| `mendix-private-platform` | Mendix Platform application runtime | Required | [mxplatform](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mxplatform) |
+| `mx-m2ee-sidecar` | M2EE sidecar for app pods | Required | [Installation Requirements for the Mendix Operator](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#installation-requirements-for-the-mendix-operator) |
+| `mxpc-test` | Private Cloud connectivity/validation tests | Required | [mxplatform](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mxplatform) |
+| `pmp-pipeline-tools` | PMP deployment pipeline tooling | Required | [mxplatform](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mxplatform) |
+| `app-building-blocks` | App runtime and JRE base layers — pull the versions matching your app deployment requirements | Per deployment | [Installation Requirements for the Mendix Operator](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#installation-requirements-for-the-mendix-operator) |
+| `storage-provisioner` | Provisions app databases and file storage — pull the variants matching your database and storage requirements | Per deployment | [StoragePlan and Database Plan Configuration](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#storageplan-and-database-plan-configuration) |
+| `kubernetes-agent` | Cluster agent — used in Interactor-Agent mode | Optional | [mx-privatecloud](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-privatecloud) |
+| `interactor` | Interactor service — used in Interactor-Agent mode | Optional | [mx-privatecloud](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-privatecloud) |
+| `interactor-bridge` | Interactor bridge — used in Interactor-Agent mode | Optional | [mx-privatecloud](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-privatecloud) |
+| `privatecloud-authenticator` | Authenticator service — used in Interactor-Agent mode | Optional | [mx-privatecloud](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-privatecloud) |
+| `privatecloud-collector` | Collector service — used in Interactor-Agent mode | Optional | [mx-privatecloud](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-privatecloud) |
+| `mxplatform-kube-agent` | Build agent for mxplatform | Optional | [mxplatform-kube-agent](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mxplatform-kube-agent) |
+| `maia-appgen` | Maia AI AppGen service — required only if Maia features are used | Optional | [maia-appgen](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#maia-appgen) |
+| `maia-llm-gateway` | Maia LLM Gateway service — required only if Maia features are used | Optional | [maia-llm-gateway](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#maia-llm-gateway) |
+| `document-generation-service` | PDF document generation service | Optional | [mx-private-document-generation](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-private-document-generation) |
+| `svix-server` | Webhook delivery service (upstream image `svix/svix-server`) | Optional | [svix-server](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#svix-server) |
+
+Registry paths: `registry.mendix.com/private-cloud/` (license-manager, operator, image-builder, m2ee-sidecar, storage-provisioner, app-building-blocks, kubernetes-agent, interactor, interactor-bridge, authenticator, collector), `registry.mendix.com/private-platform/` (mxpc-test, pmp-pipeline-tools, mxplatform-kube-agent, mendix-private-platform), `registry.mendix.com/maia/` (maia-appgen, maia-llm-gateway), `registry.mendix.com/docgen/` (document-generation-service), Docker Hub `svix/` (svix-server).
+
+
+### Charts
+
+| Component | Description | Namespace | Required | ServiceAccount | Documentation |
+| --- | --- | --- | --- | --- | --- |
+| `mx-privatecloud-operator-installer` | Mendix Operator installer | Independent | Required | created by chart | [Installation Requirements for the Mendix Operator](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#installation-requirements-for-the-mendix-operator) |
+| `mx-privatecloud-operator-crd` | Mendix Operator CRDs | Cluster-scoped | Required | n/a | [Installation Requirements for the Mendix Operator](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#installation-requirements-for-the-mendix-operator) |
+| `mx-privatecloud-license-manager` | Private Cloud License Manager (PCLM) | Shared | Required | `mendix-pclm` (created by chart) | [mx-privatecloud-license-manager](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-privatecloud-license-manager) |
+| `installer-config` | Shared installer configuration | Shared | Required | n/a | [Global Configuration](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#global-configuration) |
+| `mxplatform` | Mendix Platform application (MendixApp CR) | Shared | Required | `mxplatform` (created by chart or operator) | [mxplatform](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mxplatform) |
+| `mx-privatecloud` | Private Cloud services (authenticator, collector, interactor, bridge) — used in Interactor-Agent mode | Shared | Optional | `mx-privatecloud` (created by chart) | [mx-privatecloud](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-privatecloud) |
+| `mxplatform-kube-agent` | Build agent for mxplatform | Independent | Optional | `mxplatform-kube-agent` (created by chart) | [mxplatform-kube-agent](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mxplatform-kube-agent) |
+| `maia-appgen` | Maia AI AppGen service | Shared | Optional | `maia-appgen` (created by chart) | [maia-appgen](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#maia-appgen) |
+| `maia-llm-gateway` | Maia LLM Gateway service for routing LLM requests | Shared | Optional | `maia-llm-gateway` (created by chart) | [maia-llm-gateway](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#maia-llm-gateway) |
+| `mx-private-document-generation` | PDF document generation service | Independent | Optional | `mx-private-document-generation` (created by chart) | [mx-private-document-generation](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#mx-private-document-generation) |
+| `svix-server` | Webhook delivery service | Shared | Optional | `svix` (created by chart) | [svix-server](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#svix-server) |
+
+Pull with:
+
+```bash
+helm pull oci://registry.mendix.com/private-cloud/charts/<chart> --version <version>
+```
+
+Registry paths: `private-cloud/charts/` (operator-installer, operator-crd, license-manager, mx-privatecloud), `private-platform/charts/` (mxplatform, mxplatform-kube-agent, installer-config, svix-server), `maia/charts/` (maia-appgen, maia-llm-gateway), `docgen/charts/` (mx-private-document-generation).
+
+### Custom Artifact
+
+| Artifact | Description | Required |
+| --- | --- | --- | --- |
+| `installer-helmfile` | Tarball containing the helmfile and `helmfile-config` sample values used in Step 3 | Required |
+
+Address: `registry.mendix.com/private-platform/installer-helmfile:<version>`
+
+---
+
+
+## Step 3 — Install Operator Charts
+
+1. Apply below charts - [Documentation link]
+`mx-privatecloud-operator-crd`
+`mx-privatecloud-operator-installer`
+
+Make sure that the operator-crds are installed first and then operator-installer.
+
+2. Apply the operator CRDs:
+
+   ```bash
+   kubectl apply -f mx-privatecloud-operator-crd/crds/ -n <ns>
+   ```
+
+3. Apply the operator chart:
+
+   ```bash
+   helm upgrade --install --create-namespace -n <namespace> \
+     -f operator-generated-values.yaml <release-name> mx-privatecloud-operator-installer
+   ```
+
+> `operator-generated-values.yaml` must be updated for the customer's configuration. Start from `values.yaml` inside the `mx-privatecloud-operator-installer` chart. Keep this file — Step 4 updates it again.
+
+Make sure that the new registry is updated in privateCloudRelease -> repo in the above values.yaml file
+
+---
+
+## Step 4 — Install PMP Charts using Helm
+
+1. Pull the `installer-helmfile` artifact.
+2. Unzip the tarball.
+3. Navigate to `helmfile-config`.
+4. Refer the samples file and create the PMP values file based on your requirements.
+5. Apply the charts as described in [Installation Commands](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#installation-commands).
+
+---
+
+## Step 5 — Wire PCLM Back into the Operator
+
+1. Retrieve the PCLM hostname, username, and password, and set them in the `<operator-generated-values.yaml` file from Step 2.4. Check https://docs.mendix.com/private-mendix-platform/helmfile-installation/#private-cloud-license-manager-credentials for configuration. PCLM Server can be communicated through an HTTP REST endpoint. The endpoint will be different depending on whether you are using a Kubernetes Service or Kubernetes Ingress. More information can be found out in https://docs.mendix.com/developerportal/deploy/private-cloud/private-cloud-license-manager/#reaching-the-http-rest-api-of-the-pclm-server
+2. Re-apply the operator chart with the same `helm upgrade --install` command.
+
+See [Private Cloud License Manager Credentials](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#private-cloud-license-manager-credentials) and [Helmfile Values for mx-privatecloud-license-manager](https://docs.mendix.com/private-mendix-platform/helmfile-installation/#helmfile-values-for-mx-privatecloud-license-manager).
+
+
+## Supported Tasks
 
 Helmfile installation supports the following tasks:
 

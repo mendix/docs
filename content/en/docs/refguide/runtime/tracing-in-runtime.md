@@ -67,6 +67,15 @@ You can filter out specific traces using the `mendix.tracing.filter` system prop
 ]
 ```
 
+### Minimal Tracing Mode {#minimal-tracing-mode}
+
+{{% alert color="info" %}}
+Minimal tracing mode was introduced in Mendix 11.15.0.
+{{% /alert %}}
+
+In a multi-app landscape, you might want to track how requests flow between applications rather than examining the detailed handling within a single app. Tracing can also generate an overwhelming number of spans. _Minimal tracing mode_ helps by recording only incoming and outgoing spans.
+
+Enable minimal tracing mode by setting the `OpenTelemetry.MinimalMode` [custom runtime setting](/refguide/custom-settings) to `true`.
 ### Testing
 
 You can test the tracing using [Jaeger](https://www.jaegertracing.io/) or [Grafana](https://grafana.com).
@@ -85,7 +94,7 @@ Alternatively, you can set up the [OpenTelemetry collector](https://opentelemetr
 
 The following settings are supported by the Mendix runtime. See [Configure the SDK](https://opentelemetry.io/docs/languages/java/configuration/#environment-variables-and-system-properties) for more information about the settings that are prefixed with `otel.`.
 
-You can configure the Java Agent through system properties which can be added to the **Extra JVM parameters** field (for example, `-Dotel.exporter.otlp.traces.endpoint`), or set through environment variables. 
+You can configure the Java Agent through system properties which can be added to the **Extra JVM parameters** field (for example, `-Dotel.exporter.otlp.traces.endpoint`), or set through environment variables.
 
 | Name | Description | Default |
 | ---- | ----------- | ------- |
@@ -145,9 +154,9 @@ Replace `MyServiceName` with a meaningful identifier for your service, and `coll
 
 ## Sending Traces to Datadog
 
-You can export OpenTelemetry traces to Datadog using one of the following two ways: 
+You can export OpenTelemetry traces to Datadog using one of the following two ways:
 
-* Datadog Distribution of OpenTelemetry (DDOT) 
+* Datadog Distribution of OpenTelemetry (DDOT)
 * OpenTelemetry Collector
 
 ### Datadog Distribution of OpenTelemetry (DDOT)
@@ -158,12 +167,12 @@ For installation instructions, refer to the official [DDOT documentation](https:
 
 ### OpenTelemetry Collector
 
-You can install the OpenTelemetry Collector on various operating systems, including Windows, macOS, and Linux. 
+You can install the OpenTelemetry Collector on various operating systems, including Windows, macOS, and Linux.
 
-To use the OpenTelemetry Collector with Datadog, follow these steps:  
+To use the OpenTelemetry Collector with Datadog, follow these steps:
 
 1. Install the OpenTelemetry Collector by following the official [installation guide](https://opentelemetry.io/docs/collector/installation/).
-2. Install the `otelcol_contrib` package instead of `otelcol` to include Datadog support. 
+2. Install the `otelcol_contrib` package instead of `otelcol` to include Datadog support.
 3. Run the collector with the [appropriate configuration](https://docs.datadoghq.com/opentelemetry/setup/collector_exporter/install/#2---configure-the-datadog-exporter-and-connector) adapted for Datadog.
 
 ## Sending Traces from Mendix on Kubernetes

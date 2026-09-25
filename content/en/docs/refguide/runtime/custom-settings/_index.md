@@ -305,6 +305,14 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 | <a id="MetricsRegistries" href="#MetricsRegistries">Metrics.Registries</a> | Registries to send metrics to | |
 | <a id="MetricsApplicationTags" href="#MetricsApplicationTags">Metrics.ApplicationTags</a> | Common tags used for every meter | |
 
+## OpenTelemetry Settings{#tracing-settings}
+
+The settings below configure observability (metrics, tracing, logs) through [OpenTelemetry](https://opentelemetry.io/docs). See [OpenTelemetry](/refguide/opentelemetry-in-runtime/) for more information on OpenTelemetry setup.
+
+| Name | Description | Default Value |
+| --- | --- | --- |
+| <a id="OpenTelemetryMinimalMode" href="#OpenTelemetryMinimalMode">OpenTelemetry.MinimalMode</a> | Enable OpenTelemetry minimal tracing mode. Only generate incoming or outgoing spans. | false |
+
 ## Proxy Settings {#proxy-settings}
 
 ### Http(s) Connections

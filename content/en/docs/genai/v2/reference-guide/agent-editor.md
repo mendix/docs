@@ -105,7 +105,7 @@ After installing the modules, complete the following setup before defining the m
 4. Enable extension features by going to **View** > **Extensions**. Enable the following:
 
     * `runtime-configuration-private` permission for the extension to access private constant values that were set in Studio Pro app settings. The extension uses constant values to connect with LLM model providers or MCP servers.
-    * `register-ai-tools` permission for Maia to be able to create, edit, and iterate on Mendix agents entirely through conversation in Studio Pro. 
+    * `register-ai-tools` permission for Maia to be able to create, edit, and iterate on Mendix agents entirely through conversation in Studio Pro. This setting is only available in Agent Editor version 2.4.0 and above.
 
 ## Configuration {#configuration}
 

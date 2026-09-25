@@ -66,17 +66,23 @@ If the set of objects selected for synchronization contains objects without loca
 
 ### Background Synchronization {#background-sync}
 
-Synchronization actions can now safely run in the background, allowing users to continue working without waiting for synchronization to complete. To trigger this, call the Synchronize activity from a nanoflow without awaiting the result using a JavaScript action.
+In Mendix version 11.15.0 and above, synchronization actions can run in the background, allowing users to continue working without waiting for synchronization to complete. To trigger this, call the **Synchronize** activity from a nanoflow without awaiting the result using a JavaScript action.
 
 {{% alert color="warning" %}}
-Background synchronization is only supported for Synchronize changed objects and Synchronize selected objects. Do not use background synchronization with Full synchronization. Full synchronization rewrites the entire local database, and any changes made to offline data between the start and completion of the sync will be lost.
+Background synchronization is only supported for **Synchronize Unsynchronized objects** and **Synchronize Selected object(s)**. Do not use background synchronization with **Synchronize All objects**. [All objects](#all-objects) synchronization rewrites the entire local database, and any changes made to offline data between the start and completion of the sync will be lost.
 {{% /alert %}}
 
-**Behavior During Background Synchronization**
+#### Behavior during Background Synchronization
 
-* Concurrent synchronizations is not supported.
+* Concurrent synchronizations are not supported.
 * Reading offline objects or files while a synchronization is running is safe.
-* Creating, updating, or writing offline objects and files is safe during background synchronization but may temporarily fail if the operation conflicts with an in-progress synchronization. Use error handling in your nanoflow to handle these cases gracefully.
+* Creating, updating, or writing offline objects and files is safe during background synchronization but may temporarily fail if the operation conflicts with an in-progress synchronization. Use error handling in your nanoflow to handle these cases.
+
+#### Background Synchronization Before Mendix Version 11.15.0
+
+In versions of Mendix before 11.15.0, avoid running synchronization processes in the background. For example, do not schedule periodic refreshes at fixed intervals. This approach can reduce application performance and result in unclear or misleading error messages for users.
+
+Instead, you can trigger synchronization explicitly when data updates are required. Ensure that users are informed of the synchronization status by displaying progress indicators or relevant feedback during the process.
 
 ## Properties
 

@@ -66,7 +66,7 @@ If the set of objects selected for synchronization contains objects without loca
 
 ### Background Synchronization {#background-sync}
 
-In Mendix version 11.15.0 and above, synchronization actions can run in the background, allowing users to continue working without waiting for synchronization to complete. Previously, this required additional steps to avoid blocking the nanoflow. Now, the Synchronize activity runs without blocking by default — no extra configuration is needed.
+In Mendix version 11.15.0 and above, synchronization actions can run in the background, allowing users to continue working without waiting for synchronization to complete. Previously, this required additional steps to avoid blocking the nanoflow. Now, the Synchronize activity runs without blocking by default—no extra configuration is needed.
 
 {{% alert color="warning" %}}
 Background synchronization is only supported for **Synchronize Unsynchronized objects** and **Synchronize Selected object(s)**. Do not use background synchronization with **Synchronize All objects**. [All objects](#all-objects) synchronization rewrites the entire local database, and any changes made to offline data between the start and completion of the sync will be lost.

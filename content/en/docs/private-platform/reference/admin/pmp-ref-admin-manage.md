@@ -84,6 +84,77 @@ If the app is no longer needed and you do not want to store its data, you can de
 
 You will be warned of the consequences and asked for confirmation before the app is deleted.
 
+#### Software Composition {#software-composition}
+
+The **Software Composition** page provides visibility into the component dependencies in each app environment. The components displayed here are based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
+
+##### Overview
+
+On the **Overview** tab, you can see a list of all the deployed apps and their environments, if applicable. You can also see the number of findings for each severity level.
+
+The **Insights** cards display the number of findings across all environments, broken down by severity level. For example, if a build package contains one critical finding and is deployed to the test and production environments, two findings are added to **Insights**.    
+
+Each card also displays a rolling average of how the number of findings has evolved over the past 30 days, expressed as a percentage. 
+
+The app list contains the following information:
+
+* **App Name** – The name of the app. Clicking this opens the **Application Environment Summary** page, if it is available.
+* **Environment** – The name of the environment.
+* **Purpose** - The purpose of the environment (Development, Test, Acceptance, or Production).
+* **Runtime** – The Mendix Runtime version. Unsupported versions of the Mendix Runtime display a warning.
+* **Owner** – The owner of the app.
+* **Cluster** – The type of cluster where the environment is deployed.
+* **Findings** – The number of findings of each type.
+* Column customization ({{% icon name="view" %}}) – You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+
+##### Components
+
+The **Components** tab gives an overview of all the unique components used across your app landscape.
+
+The component list contains the following information:
+
+* **Component** – The name of the component. Clicking this opens the **Component Details** page.
+* **Type** – The type of component, which can be one of the following:
+  
+    * **Module** – Standard module imported from the Marketplace, such as [Community Commons](https://marketplace.mendix.com/link/component/170), or a module created by the developer.
+    * **Widget** – User interface elements downloaded from the Marketplace, such as [Charts](https://marketplace.mendix.com/link/component/105695), or a widget created by the developer.
+    * **Framework** – The Mendix Runtime version, for example 10.12.0
+    * **Jar** – Java libraries imported into your app using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the **userlib** folder depending on the Studio Pro version used, such as `org.apache.commons.io`.
+    * **npms** – `npm` libraries that are used in your [JavaScript actions](/refguide/javascript-actions/).
+    * **Unknown** – When the type of the component is none of the above and hence undetermined.
+
+* **Support** – The support type of the Marketplace component. This can be **Mendix**, **Partner**, or **Community**. 
+* **Version** – The version of the component that is being used.
+* **Findings** – The number of findings of each type, color-coded according to severity level.
+* **Apps using component** – The number of apps where the component is used.
+* **License** – For components derived from the Mendix Marketplace, this is the end-user license for the component.
+* Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+
+##### Findings
+
+The **Findings** tab allows you to view a list of all the findings discovered in your apps. A finding represents an issue identified in the components of an app.
+
+The findings are divided into the following types:
+
+* Vulnerable - A finding is generated when a component is published on the [Security Advisories](/releasenotes/security-advisories/) page, and is assigned a specific CVSS score. CVSS scores are based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework, and cannot be orverriden.
+* Outdated - A finding is generated when a component becomes outdated, meaning when a new runtime compatible version is published.
+* Deprecated - A finding is generated when a component has been labeled as deprecated in the Private Marketplace.
+
+These are the severity levels of a finding:
+
+* **Critical**
+* **High**
+* **Medium**
+* **Low**
+
+##### Scoring Criteria
+
+The **Scoring Criteria** tab allows you to adjust the conditions and severity for each type of finding. Scoring criteria reflect your company's risk preference.
+
+The settings on this tab determine how each such vulnerability is calculated for apps, environments, and components.
+
+The types of findings that you can adjust for are **Outdated** and **Deprecated**. For outdated components, you can adjust all severity levels.     For deprecated components, you can choose which severity level to assign.
+
 #### Import Apps
 
 On the **Import Apps** page, administrators can import existing Mendix apps that are in their version control host but not yet in Private Mendix Platform. The import currently supports the following hosts:
@@ -248,7 +319,7 @@ In the **Deployment** section, administrators can view and manage statistics, ac
 
 As the administrator, you can perform the following actions:
 
-* In the **Webhooks** tab, you can view and manage your [Webhooks](/developerportal/deploy/webhooks/).
+* In the **Webhooks** tab, you can view and manage your [Webhooks](#webhooks).
 * In the **Licensing** tab, you can check the status of your licenses, or upload a new Private Mendix Platform license bundle.
 
 #### Platform Statistics
@@ -278,13 +349,94 @@ This tab contains a list of actions that were archived after the period specifie
 
 You can select how long the actions are kept in the logs, in days. The minimum number of days is 1, and the maximum is 365. You can also specify the logging level, from no logging to complete logging.
 
-#### Webhooks
+#### Webhooks {#webhooks}
 
 In the **Webhooks** tab, you can view and manage your webhooks.
 
-Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix on Kubernetes to an external app or workflow. In Private Mendix Platform, you can use them to trigger a step in an automated [Build](/private-mendix-platform/reference-guide/admin/system/#build-steps) or [Deployment](/private-mendix-platform/reference-guide/admin/system/#deploy-steps) pipeline.
+Webhooks allow you to send information about your licensed Mendix app deployed to Private Mendix Platform to an external app or workflow. You can use them to trigger a step in an automated [Build](/private-mendix-platform/reference-guide/admin/system/#build-steps) or [Deployment](/private-mendix-platform/reference-guide/admin/system/#deploy-steps) pipeline.
 
-For more information about configuring webhooks, refer to [webhooks documentation](/developerportal/deploy/webhooks/).
+Mendix provides webhooks to send project information about the following events:
+
+* App events:
+
+    * App archived
+    * App created
+    * App deleted
+    * App info edited
+    * App logo edited
+    * App member added
+    * App member removed
+    * App owner edited
+    * App shared
+    * App unarchived
+
+* CI/CD events:
+
+    * Package built
+    * Package deleted
+    * Package deployed
+    * Environment created
+
+* Marketplace events:
+
+    * Item approved
+    * Item created
+    * Item declined
+    * Item edited
+    * Item imported
+    * Item owner edited
+    * Item shared
+    * Item version added
+    * Item version edited
+
+* User events:
+
+    * Group admin updated
+    * Group created
+    * Group info edited
+    * Group member added
+    * Group member removed
+    * User blocked
+    * User created
+    * User info edited
+    * User unblocked
+
+The webhooks contain a retry mechanism if an error response is received from the endpoint. This helps ensure that the trigger reaches the endpoint.
+
+##### Creating a New Webhook {#setting-up}
+
+To set up a webhook, do the following:
+
+1. In the **Platform Webhooks** tab of the **Webhooks** page, click **New Webhook**.
+2. Enter the following information:
+
+    * **Webhook Name** – This is a name which you can use to identify the webhook.
+    * **URL** – This is the endpoint that will receive the payload when one of the event types selected in **Available Events** occurs.
+    * **Validation Secret** – This is a secret that is shared with the endpoint to verify that it has been triggered by this webhook. If you leave this blank, a secret is generated automatically. You can see the generated value any time you return to edit the webhook.
+    * **Available Events** – This is the event (or events) that triggers the webhook to send information to the endpoint. You can activate or deactivate specific event types in the **Event Management** tab of the **Webhooks** page.
+    * **Custom Headers** – This is a key-value pair that is sent as an HTTP header to the endpoint. You can configure a predefined custom header in the **Preset Headers** tab of the **Webhooks** page.
+
+You can edit or delete an existing webhook by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the **Action** column for the webhook you want to change, and then selecting **Edit** or **Delete**.
+
+##### Webhook Headers
+
+Every `POST` payload contains the following delivery information as part of the header:
+
+* **connection** – `close`, indicating that there is no further information for the HTTP request
+* **content-length** – the size of the HTTP request in bytes (for example, `475`)
+* **webhook-signature** – the signature of the webhook in the format `<version>,<signature>` (for example, `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=`)
+* **webhook-id** – a unique identifier for this webhook trigger (for example, `msg_2M605iBQRge9hTgpYg7fKXQubaw`)
+* **user-agent** – the user agent used to process this trigger
+* **webhook-timestamp** – the time the webhook was triggered (for example, `1677072542`)
+* **content-type** – `application/json`
+* **accept** – `*/*`
+* **host** – the host part of the endpoint URL (for example, `gitlab.com`)
+
+You can also add your own custom headers. For more information, see [Configuring a Webhook](#setting-up).
+
+{{% alert color="info" %}}
+The order of these headers is not guaranteed.
+{{% /alert %}}
 
 #### Licensing
 

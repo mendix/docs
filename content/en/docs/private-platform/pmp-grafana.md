@@ -24,7 +24,7 @@ The following diagram shows how Private Mendix Platform (PMP) uses Grafana:
 
 To configure Grafana integration for your environment, make sure that you fulfill the following prerequisites:
 
-* Grafana 12.2.1 must be nstalled and accessible. For more information, see [Installing Grafana](#install-grafana).
+* Grafana 12.2.1 must be installed and accessible. For more information, see [Installing Grafana](#install-grafana).
 * Prometheus 3.7.3 must be configured as a metrics data source in Grafana.
 * Loki 2.6.1 must be configured as a logs data source in Grafana.
 * You must have admin access to Private Mendix Platform settings.
@@ -33,7 +33,9 @@ To configure Grafana integration for your environment, make sure that you fulfil
 ## Installing Grafana {#install-grafana}
 
 For information about installing Grafana with Prometheus and Loki, refer to
-[Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
+[Install Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) in Grafana documentation.
+
+The following section shows an example of a Helm-based installation.
 
 ### Example Helm-Based Installation
 
@@ -279,6 +281,22 @@ After configuring Private Mendix Platform, verify that it can retrieve data by n
 
 {{< figure src="/attachments/private-platform/pmp-grafana5.png" class="no-border" >}}
 
+You can filter the results by the following properties:
+
+* **Container** - The container instance.
+* **Retrieve last** - The number of results to retrieve.
+* **Timespan** - The date and time range to display.
+* **Filter by Log Level** - The highest log level to display. The following log levels are available:
+
+    * **Trace** - Provides highly detailed information. Trace level messages are written only to logs.
+    * **Debug** - Provides detailed information, typically of interest only when diagnosing problems.
+    * **Info** - Confirms that things are working as expected.
+    * **Warning** - Indicates that something unexpected happened or warns about an upcoming problem (for example, *disk space low*). The application is still working as expected.
+    * **Error** - Indicates a serious problem that prevented the application from performing some function.
+    * **Critical** - Indicates that a serious error has occurred; the application may be unable to continue running.
+
+* **Keyword** - A keyword to use for filtering.
+
 ## Grafana APIs Details
 
 Private Mendix Platform uses the following Grafana endpoints:
@@ -363,5 +381,3 @@ The following sections list the metrics and labels used by each graph.
 | Metric Name | Required Labels |
 | --- | --- |
 | `container_network_transmit_bytes_total`; `container_network_receive_bytes_total`; `jetty_connections_bytes_in_bytes_sum`; `jetty_connections_bytes_out_bytes_sum` | `namespace`; `pod` |
-
-For more information about Grafana and Prometheus API integration, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).

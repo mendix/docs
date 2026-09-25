@@ -93,7 +93,7 @@ To enable content import from a Content Delivery Network, follow these steps:
 
 1. Download the Marketplace Bundle with contents available in a zip file. If you do not have access to the bundle, contact your Mendix point of contact.
 2. Unzip the files to an internal location which Private Mendix Platform can access via HTTP or HTTPS. Do not change the directory structure.
-3. If using a self-signed certificate for your internal locations, configure Mendix Operator to trust your private Certificate Authorities. For more information, see [Creating a Mendix on Kubernetes Cluster](/developerportal/deploy/standard-operator/#custom-tls).
+3. If using a self-signed certificate for your internal locations, configure Mendix Operator to trust your private Certificate Authorities. For more information, see [Obtaining and Configuring the CA Certificate](/private-mendix-platform/configure-k8s/#ca-certificate).
 4. In the **Content Import** tab, in the **Marketplace import bundle URL** field, enter the root URL of the *package.json* file included in the Marketplace download. 
 
     For example, if the *package.json* can be accessed at the URL `https://<your domain>/release/marketplace/Marketplace-1.0/package.json`, enter the following URL: `https://<your domain>/release/marketplace/Marketplace-1.0/`.
@@ -186,39 +186,97 @@ To create applications and collaborate, configure the connection to your version
 
 Settings in this section allow you to configure your CI/CD capabilities and Build pipeline.
 
-##### Build Method
+##### Build Utility
 
 Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Jenkins, [AzureDevops](/private-mendix-platform/configure-azure/) and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a [custom template](/private-mendix-platform/reference-guide/admin/company/#manual-deployment) for your CI/CD capabilities.
 
 ##### Build Steps {#build-steps}
 
- By default, the Build pipeline consists of the following steps:
+In the **Build Steps** tab, you can configure the steps that constitute the pipeline.
+
+By default, the Build pipeline consists of the following steps:
 
 **Trigger Pipeline** > **Prepare Build** > **Start Build** > **Save Build Artifact** > **Complete Build**
 
 For Kubernetes CI, you can configure the pipeline to include additional steps after the pipeline is triggered, and before the build is completed. These additional steps can include webhook and REST calls, or manual approval for the build.
 
+The **Pipeline Type** section allows you to designate a pipeline as a main pipeline for all your apps, as well as create draft pipelines which you can use to test or run specific applications. If you designate a pipeline as **Draft**, you can specify the applications which should use the pipeline. For more information about configuring the pipelines, see [Configuring the Pipeline Type](#configuring-pipeline-type).
+
+##### Configuring the Pipeline Type {#configuring-pipeline-type}
+
+Build and Deploy pipelines can be marked as Main or Draft. This lets you test pipeline changes on a single app without disrupting builds and deployments for everything else.
+
+Administrators configuring build templates can see the application names for template selection purposes. Visibility of applications in this dropdown does not grant access to App Management functionality or application administration capabilities.
+
+Managing pipelines and assigning apps requires both the Build and App Management permissions on your role. With both permissions, the **Apps** dropdown lists every app you have access to, and only those apps. Without App Management, the **Apps** dropdown is unavailable and you cannot assign an app to a draft pipeline.
+
+Without Build, you cannot create or edit build pipelines. With neither, pipeline management is not available.
+
+Permission changes take effect immediately. If App Management is removed from your role, you can no longer edit the pipeline or see its app in the dropdown.
+
+Main pipelines are the default pipelines for all apps. They apply to all apps in the **Apps** column. You can have only one main Build pipeline. For Deploy pipelines, you can have one main pipeline for each DTAP environment.
+
+Draft pipelines allow you to configure a targeted override for testing or app-specific needs. They apply to one specific app, or no app. You can have any number of draft pipelines, as long as their scopes do not overlap. 
+
+When a build or deployment is triggered, Private Mendix Platform selects the pipeline as follows:
+
+* Build - If the app has a draft pipeline associated with it, that draft is used. Otherwise the main build pipeline is used.
+* Deploy - If the app has a draft pipeline that includes the target DTAP environment, that draft is used. Otherwise the main pipeline for that environment is used.
+
+Deploy draft pipelines are scoped per environment. For example, a draft for *MyApp* covering Test and Acceptance is used for those two environments only. A deployment of *MyApp* to Production still uses the main Production pipeline.
+
+If no main pipeline is configured, builds and deployments fail with an error.
+
+To create and configure pipelines, perform the following steps:
+
+1. To designate a main pipeline, toggle the setting to **On**. The **Apps** dropdown is removed and the pipeline shows all apps.
+2. To designate a pipeline as draft, toggle the setting to **Off**, and then perform the following steps:
+
+    * Select an app project in the **Apps** dropdown.
+    * For deploy pipelines, select one or more DTAP environments.
+
+    Options already used by another draft pipeline are not available in the dropdown.
+
+Removing a draft pipeline's app association returns that app to the main pipeline for future builds and deployments.
+
+An app can have only one draft Build pipeline. When adding a second draft Build pipeline, you must confirm that you want to move the app from the previous pipeline to current pipeline.
+
+Only one main Build and one main Deploy pipeline must exist at any time. When you toggle a draft pipeline to main, the new pipeline becomes the main pipeline for all apps, and the previous pipeline becomes a draft with no app association. If you toggle a main pipeline to draft, you must select the new main pipeline from the available drafts. If no draft pipeline exist, the system shows a warning state and builds and deployments cannot run until you designate a main pipeline. It is also impossible to delete the main pipeline without selecting another main pipeline first.
+
+You can duplicate your pipelines. All configured steps of a duplicated pipeline are copied into a new pipeline that always starts as a draft, with an empty name, no app association, and the placeholder name **New Pipeline**. You must specify a name before you can save your changes.
+
 #### Deployment {#deployment}
 
-Settings in this section allow you to configure your Deployment pipeline.
+Settings in this section allow you to configure your Deployment pipelines.
 
 ##### Deployment Method
 
-Private Mendix Platform uses Mendix on Kubernetes deployment options. For more information, refer to [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/).
+Private Mendix Platform supports the following deployment methods:
+
+* Kubernetes Interactor-Agent Mode
+* Kubernetes Standalone Mode
 
 ##### Deployment Steps {#deploy-steps}
 
- By default, the Deploy pipeline consists of the following steps:
+In the **Deployment Steps** tab, you can configure the steps that constitute the pipeline.
 
-**Trigger Pipeline** > **Get Deployment Artifact** > **Deploy App** > **Complete Pipeline**
+By default, the Deploy pipeline consists of the following steps:
+
+**Trigger Pipeline** > **Get Deployment Artifact** > **Deploy App** > **Complete Deployment**
 
 You can configure the pipeline to include additional steps after each default step. These additional steps can include webhook and REST calls, or manual approval for the build.
 
 You can also configure the pipeline to take into consideration the type of changes. Selecting the **Changes/updates to an app environment** check box allows you to bypass the deployment steps and instead simply restart the app in case of changes to the app environment (such as the app constants or the number of replicas).
 
+The **Pipeline Type** section allows you to designate a pipeline as a main pipeline for all your apps, as well as create draft pipelines which you can use to test or run specific applications. If you designate a pipeline as **Draft**, you can specify the applications which should use the pipeline, as well as the DTAP purpose (that is, whether it is used for Acceptance, Deployment, or Testing). For more information about configuring the pipelines, see [Configuring the Pipeline Type](#configuring-pipeline-type).
+
 ##### Security
 
 To help fulfill compliance requirements related to account control, Private Mendix Platform now supports disabling the default MxAdmin account for apps at deployment. This setting effectively removes the ability to access the app using the default system admin account, and is only recommended when combined with default use of an SSO module to avoid lockout.
+
+##### Settings
+
+In the **Settings** tab, you can customize the resource presets by specifying each preset's request and limit values for CPU and memory.
 
 ### Advanced
 
@@ -230,7 +288,7 @@ The settings in this section allow you to configure the basic aspects of your Pr
 
 * **Enable App Projects?** - Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
 * **Enable Marketplace?** - Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
-* **Enable Build and Deploy** - Recommended. Enables you to use the Private Platform's CI/CD capabilities to build and deploy apps. Enables the Build and Deploy pipeline, environments,# metrics, logging, and related settings.
+* **Enable Build and Deploy** - Recommended. Enables you to use the Private Platform's CI/CD capabilities to build and deploy apps. Enables the Build and Deploy pipeline, environments, metrics, logging, and related settings.
 * **Enable Identity & Access Integration?** - Optional. Enable users to log in using SSO by configuring your IdP integration.
 * **Allow sign up?** - Optional. Enable users to log in with a local user account, instead of or in addition to SSO.
 * **Enable Webhooks?** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.

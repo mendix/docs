@@ -1,0 +1,1548 @@
+openapi: 3.0.4
+info:
+  title: Cluster Service v1
+  description: "Provide services for managing kubernetes clusters, namespaces, plans and the configuration. \r\n"
+  version: 1.0.0
+servers:
+  - url: https://pmp-demo.privateplatform.mendix.com/clusterservice/v1
+paths:
+  /clusters:
+    post:
+      tags:
+        - clusters
+      summary: Register a new cluster
+      description: Register a new cluster
+      operationId: registerCluster
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClusterRequest'
+            examples:
+              Register cluster with Standalone mode:
+                value:
+                  clusterName: test-cluster-1
+                  description: "test cluster"
+                  clusterType: EKS
+                  deployMode: Standalone
+                  apiServerURL: "https://test-cluster-1.eks.amazonaws.com"
+                  token: "[token]"
+                  secretSource: DB
+                  enableLogging: "Yes"
+                  enableMonitoring: "Yes"
+                  registryOciURL: "oci-image://docker.io/test"
+                  grafanaConfig:
+                    host: "https://grafana.test.com"
+                    apiKey: "[api-key]"
+                    secretSource: DB
+                    datasourceType: Loki
+                    loki: Loki
+                    prometheus: Prometheus
+
+              Register cluster with Connected mode:
+                value:
+                  clusterName: test-cluster-2
+                  description: "test cluster"
+                  clusterType: EKS
+                  deployMode: Connected                  
+                  # apiServerURL: "https://test-cluster-2.eks.amazonaws.com"
+                  # secretSource: AWS
+                  # secretName: "[secret-token]"
+                  enableLogging: "Yes"
+                  enableMonitoring: "Yes"
+                  # registryOciURL: "oci-image://docker.io/test"
+                  grafanaConfig:
+                    host: "https://grafana.test.com"
+                    secretSource: AWS
+                    secretName: "[secret-api-key]"
+                    datasourceType: Loki
+                    loki: Loki
+                    prometheus: Prometheus
+
+              Register cluster without logging and monitoring:
+                value:
+                  clusterName: test-cluster-3
+                  description: "test cluster"
+                  clusterType: AKS
+                  deployMode: Connected                  
+                  # apiServerURL: "https://test-cluster-3.aks.azure.com"
+                  # secretSource: HASHICORP
+                  # secretName: "[secret-token]"
+                  enableLogging: "No"
+                  enableMonitoring: "No"
+                  # registryOciURL: "oci-image://docker.io/test"
+
+
+      responses:
+        '201':
+          $ref: '#/components/responses/Cluster'
+        '400':
+          $ref: '#/components/responses/error-400-cluster'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    get:
+      tags:
+        - clusters
+      summary: Retrieve all clusters
+      description: Retrieve all clusters
+      operationId: getClusters
+      responses:
+        '200':
+          $ref: '#/components/responses/ClusterList'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+  /clusters/{clusterId}:
+    get:
+      tags:
+        - clusters
+      summary: Retrieve cluster by id
+      description: Retrieve cluster by id
+      operationId: getClusterById
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/Cluster'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    patch:
+      tags:
+        - clusters
+      summary: Update configuration of cluster
+      description: Update configuration of the cluster
+      operationId: updateCluster
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClusterRequest'
+
+            examples:
+              Update Standalone mode cluster configurations:
+                value:
+                  clusterName: test-cluster-1
+                  enableLogging: "Yes"
+                  enableMonitoring: "Yes"
+                  registryOciURL: "oci-image://docker.io/test-1"
+                  grafanaConfig:
+                    host: "https://grafana.test.com"
+                    apiKey: "[api-key]"
+                    secretSource: DB
+                    datasourceType: Loki
+                    loki: Loki
+                    prometheus: Prometheus
+
+              Update Connected mode cluster configurations:
+                value:
+                  clusterName: test-cluster-1
+                  description: "test cluster 1"
+                  enableLogging: "Yes"
+                  enableMonitoring: "Yes"
+                  grafanaConfig:
+                    host: "https://grafana.test.com"
+                    secretSource: AZURE
+                    secretName: "[secret-api-key]"
+                    datasourceType: Loki
+                    loki: Loki
+                    prometheus: Prometheus
+
+      responses:
+        '200':
+          $ref: '#/components/responses/Cluster'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    delete:
+      tags:
+        - clusters
+      summary: 'Unregister cluster '
+      description: Unregister the cluster by id
+      operationId: unregisterCluster
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '204':
+          description: Successful unregister operation
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+
+  /clusters/{clusterId}/namespaces:
+    post:
+      tags:
+        - clusters
+      summary: Add a new namespace in cluster
+      description: Add a new namespace in the cluster
+      operationId: addNamespace
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NamespaceRequest'
+
+            examples:
+              Register a namespace in standalone mode cluster:
+                value:
+                  namespace: test-namespace-1
+                  isShared: "Yes"
+                  enableSecretStore: "Yes"
+                  secretStoreType: "AUTOMATIC"
+              Register a namespace in connected mode cluster:
+                value:
+                  namespace: test-namespace-2
+                  enableSecretStore: "Yes"
+
+      responses:
+        '201':
+          $ref: '#/components/responses/Namespace'
+        '400':
+          $ref: '#/components/responses/error-400-namespace'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    get:
+      tags:
+        - clusters
+      summary: Retrieve all namespaces of the cluster
+      description: Retrieve all namespaces of the cluster
+      operationId: getNamespaces
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: RetrieveCluster
+          in: query
+          description: Retrieve all namespaces from the cluster and database
+          required: false
+          schema:
+            enum:
+              - Yes
+              - No
+            type: string
+
+      responses:
+        '200':
+          $ref: '#/components/responses/NamespaceList'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+
+  /clusters/{clusterId}/namespaces/{namespaceId}:
+    get:
+      tags:
+        - clusters
+      summary: Retrieve namespace of the cluster
+      description: Retrieve namespace of the cluster by id
+      operationId: getNamespace
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: namespaceId
+          in: path
+          description: Namespace Id
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '200':
+          $ref: '#/components/responses/Namespace'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    patch:
+      tags:
+        - clusters
+      summary: Update configuration of namespace in cluster
+      description: Update configuration of the namespace in the cluster
+      operationId: updateNamespace
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: namespaceId
+          in: path
+          description: Namespace Id
+          required: true
+          schema:
+            type: string
+
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NamespaceRequest'
+
+            examples:
+              Update configurations of namespace in standalone mode cluster:
+                value:
+                  namespace: test-namespace-11
+                  isShared: "No"
+                  enableSecretStore: "Yes"
+                  secretStoreType: "MANUAL"
+              Update configurations of namespace in connected mode cluster:
+                value:
+                  useCustomCoreResourcePlan: "Yes"
+                  enableSecretStore: "No"
+
+      responses:
+        '200':
+          $ref: '#/components/responses/Namespace'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    delete:
+      tags:
+        - clusters
+      summary: Delete namespace in cluster
+      description: Delete the namespace in the cluster by id
+      operationId: deleteNamespace
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: namespaceId
+          in: path
+          description: Namespace Id
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '204':
+          description: Successful delete operation
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+
+  /clusters/{clusterId}/namespaces/{namespaceId}/install-command:
+    get:
+      tags:
+        - clusters
+      summary: Retrieve install command for namespace
+      description: Retrieve the install command for the namespace
+      operationId: getInstallCommand
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: namespaceId
+          in: path
+          description: Namespace Id
+          required: true
+          schema:
+            type: string
+        - name: OperatingSystem
+          in: query
+          description: Operating system for namespaceinstall command run
+          required: true
+          schema:
+            enum:
+              - Windows
+              - macOS
+              - Linux
+            type: string            
+
+      responses:
+        '200':
+          description: Get install command for namespace successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  operatingSystem:
+                    type: string
+                    description: The operating system for the install command.
+                  installCommand:
+                    type: string
+                    description: The install command for the namespace.
+              examples:
+                Install command for namespace:
+                  value:
+                    operatingSystem: Linux
+                    installCommand: "./mxpc-cli installer -n ns3 -i c4644436-e3c6-4d61-8df9-5911af9a9d74 -s ..."
+        '400':
+          $ref: '#/components/responses/error-400-plan'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+
+  /clusters/{clusterId}/namespaces/{namespaceId}/plans:
+    post:
+      tags:
+        - clusters
+      summary: Add a new plan in cluster namespace
+      description: Add a new plan in the namespace of the cluster
+      operationId: addPlan
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: namespaceId
+          in: path
+          description: Namespace Id
+          required: true
+          schema:
+            type: string
+            
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlanRequest'
+
+            examples:
+              Add database plan in standalone mode cluster namespace:
+                value:
+                  planName: db-plan-1
+                  planType: Database
+              Add storage plan in standalone mode cluster namespace:
+                value:
+                  planName: storage-plan-2
+                  planType: Storage
+              Add resource plan in connected mode cluster namespace:
+                value:
+                  planName: low-resource-plan-1
+                  planType: CustomCoreResource
+                  isActive: "Yes"
+                  cpuLimit: 0.1
+                  cpuRequest: 0.1
+                  memoryLimit: 0.512
+                  memoryRequest: 0.512
+                  ephemeralLimit: 1
+                  ephemeralRequest: 1
+
+      responses:
+        '201':
+          $ref: '#/components/responses/Plan'
+        '400':
+          $ref: '#/components/responses/error-400-plan'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    get:
+      tags:
+        - clusters
+      summary: Retrieve all plans of namespace
+      description: Retrieve all plans of the namespace
+      operationId: getPlans
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: namespaceId
+          in: path
+          description: Namespace Id
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '200':
+          $ref: '#/components/responses/PlanList'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+
+  /clusters/{clusterId}/namespaces/{namespaceId}/plans/{planId}:
+    get:
+      tags:
+        - clusters
+      summary: Retrieve plan of namespace
+      description: Retrieve the plan of the namespace with id.
+      operationId: getPlan
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: namespaceId
+          in: path
+          description: Namespace Id
+          required: true
+          schema:
+            type: string
+        - name: planId
+          in: path
+          description: Plan Id
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '200':
+          $ref: '#/components/responses/Plan'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    patch:
+      tags:
+        - clusters
+      summary: Update plan configuration of namespace in cluster
+      description: Update plan configuration of the namespace in the cluster
+      operationId: updatePlan
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: namespaceId
+          in: path
+          description: Namespace Id
+          required: true
+          schema:
+            type: string
+        - name: planId
+          in: path
+          description: Plan Id
+          required: true
+          schema:
+            type: string
+
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlanRequest'
+
+            examples:
+              Update database plan in standalone mode cluster namespace:
+                value:
+                  planName: db-plan-11
+                  planType: Database
+              Update storage plan in standalone mode cluster namespace:
+                value:
+                  planName: st-plan-22
+                  planType: Storage
+              Update resource plan in connected mode cluster namespace:
+                value:
+                  # planName: low-resource-plan-1
+                  # planType: CustomCoreResource
+                  isActive: "Yes"
+                  # cpuLimit: 0.2
+                  # cpuRequest: 0.1
+                  # memoryLimit: 1.024
+                  # memoryRequest: 0.512
+                  # ephemeralLimit: 2
+                  # ephemeralRequest: 1
+
+      responses:
+        '200':
+          $ref: '#/components/responses/Plan'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+    delete:
+      tags:
+        - clusters
+      summary: Delete plan of namespace in cluster
+      description: Delete the plan of the namespace in the cluster
+      operationId: deletePlan
+      parameters:
+        - name: clusterId
+          in: path
+          description: Cluster Id
+          required: true
+          schema:
+            type: string
+        - name: namespaceId
+          in: path
+          description: Namespace Id
+          required: true
+          schema:
+            type: string
+        - name: planId
+          in: path
+          description: Plan Id
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '204':
+          description: Successful delete operation          
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+
+components:
+  schemas:
+
+    ClusterRequest:
+      title: ClusterRequest
+      type: object
+      properties:
+        clusterName:
+          type: string
+        description:
+          type: string
+        clusterType:
+          enum:
+            - AKS
+            - EKS
+            - GKE
+            - OpenShift
+            - Kubernetes
+          type: string
+          description: "Cluster type, GKE type is applicable only for Connected clusters."
+        deployMode:
+          enum:
+            - Standalone
+            - Connected
+          type: string
+        apiServerURL:
+          type: string
+          description: "API server URL of the cluster. Required only for Standalone mode clusters."
+        token:
+          type: string
+          description: "Token for API access the cluster. Required only for Standalone mode clusters."
+        secretSource:
+          enum:
+            - AWS
+            - DB
+            - AZURE
+            - HASHICORP
+          type: string
+          description: "Secret source for API token for access the cluster. Required only for Standalone mode clusters.\r\nAWS is AWS Secrets Manager, DB is Database, AZURE is Azure Key Vault, HASHICORP is HashiCorp Vault."
+        secretName:
+          type: string
+          description: "Secret name for API token for access the cluster. Required only for Standalone mode clusters."
+        enableLogging:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+        enableMonitoring:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+        registryOciURL:
+          type: string
+          description: "OCI URL for the container registry. Optional only for Standalone mode clusters."
+        grafanaConfig:
+          title: ''
+          type: object
+          properties:
+            host:
+              type: string
+              description: "Grafana Host API URL for logging and monitoring."
+            apiKey:
+              type: string
+              description: "Grafana Host API Key for logging and monitoring."
+            datasourceType:
+              enum:
+                - Loki
+                - Azure_Monitor
+              type: string
+              description: "Grafana data source type for logging and monitoring."
+            loki:
+              type: string
+            prometheus:
+              type: string
+            secretSource:
+              enum:
+                - AWS
+                - DB
+                - AZURE
+                - HASHICORP
+              type: string
+              description: "Secret source for API key for access the Grafana data source. AWS is AWS Secrets Manager, DB is Database, AZURE is Azure Key Vault, HASHICORP is HashiCorp Vault."
+            secretName:
+              type: string
+              description: "Secret name for API key for access the Grafana data source."
+            azureMonitorName:
+              type: string
+            aksName:
+              type: string
+            aksResourceID:
+              type: string
+
+    Cluster:
+      title: Cluster
+      type: object
+      properties:
+        clusterId:
+          type: string
+        clusterName:
+          type: string
+        description:
+          type: string
+        clusterType:
+          enum:
+            - AKS
+            - EKS
+            - GKE
+            - OpenShift
+            - Kubernetes
+          type: string
+        deployMode:
+          enum:
+            - Standalone
+            - Connected
+          type: string
+        apiServerURL:
+          type: string
+          description: "API server URL of the cluster. Applicable only for Standalone mode clusters."
+        token:
+          type: string
+          description: "Token for API token for access the cluster. Applicable only for Standalone mode clusters."
+        secretSource:
+          enum:
+            - AWS
+            - DB
+            - AZURE
+            - HASHICORP
+          type: string
+          description: "Secret source for API token for access the cluster. Required only for Standalone mode clusters.\r\nAWS is AWS Secrets Manager, DB is Database, AZURE is Azure Key Vault, HASHICORP is HashiCorp Vault."
+        secretName:
+          type: string
+          description: "Secret name for API token for access the cluster. Applicable only for Standalone mode clusters."
+        enableLogging:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+        enableMonitoring:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+        registryOciURL:
+          type: string
+          description: "OCI URL for the container registry. Optional only for Standalone mode clusters."
+        grafanaConfig:
+          title: ''
+          type: object
+          properties:
+            host:
+              type: string
+            apiKey:
+              type: string
+            datasourceType:
+              enum:
+                - Loki
+                - Azure_Monitor
+              type: string
+              description: "Grafana data source type for logging and monitoring."
+            loki:
+              type: string
+            prometheus:
+              type: string
+            secretSource:
+              enum:
+                - AWS
+                - DB
+                - AZURE
+                - HASHICORP
+              type: string
+              description: "Secret source for API key for access the Grafana data source. AWS is AWS Secrets Manager, DB is Database, AZURE is Azure Key Vault, HASHICORP is HashiCorp Vault."
+            secretName:
+              type: string
+              description: "Secret name for API key for access the Grafana data source."
+            azureMonitorName:
+              type: string
+            aksName:
+              type: string
+            aksResourceID:
+              type: string
+
+    NamespaceRequest:
+      title: NamespaceRequest
+      type: object
+      properties:
+        namespace:
+          type: string
+        isShared:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+          description: "Indicate if the namespace is shared, applicable only for Standalone mode cluster."
+        enableSecretStore:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+        secretStoreType:
+          enum:
+            - 'AUTOMATIC'
+            - 'MANUAL'
+          type: string
+          description: "Secret Store Type, applicable only for Standalone mode cluster."
+        useCustomCoreResourcePlan:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+          description: "Indicate if the namespace allow to use Custom Core Resource Plan, applicable only for Connected mode cluster."
+
+    Namespace:
+      title: Namespace
+      type: object
+      properties:
+        namespaceId:
+          type: string
+        namespace:
+          type: string
+        isShared:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+          description: "Indicate if the namespace is shared, applicable only for Standalone mode cluster."
+        enableSecretStore:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+        secretStoreType:
+          enum:
+            - 'AUTOMATIC'
+            - 'MANUAL'
+          type: string
+          description: "Secret Store Type, applicable only for Standalone mode cluster."
+        useCustomCoreResourcePlan:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+          description: "Indicate if the namespace allow to use Custom Core Resource Plan, applicable only for Connected mode cluster."
+
+    PlanRequest:
+      title: PlanRequest
+      type: object
+      properties:
+        planName:
+          type: string
+        planType:
+          enum:
+            - Database
+            - Storage
+            - CustomCoreResource
+          type: string
+          description: "Plan type, CustomCoreResource is applicable only for Connected mode cluster."
+        isActive:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+          description: "Indicate if the plan is active, applicable only for Connected mode cluster."
+        cpuRequest:
+          type: number
+          description: 'Cpu cores request should not be lower than 0.1 CPU'
+        cpuLimit:
+          type: number
+          description: 'Cpu cores limit should not be lower than 0.1 CPU'
+        memoryRequest:
+          type: number
+          description: 'Memory request should not be lower than 0.512 GB'
+        memoryLimit:
+          type: number
+          description: 'Memory limit should not be lower than 0.512 GB'
+        ephemeralRequest:
+          type: number
+          description: 'Ephemeral Storage request should not be lower than 1 GB'
+        ephemeralLimit:
+          type: number
+          description: 'Ephemeral storage limit should not be lower than 1 GB'
+
+    Plan:
+      title: Plan
+      type: object
+      properties:
+        planId:
+          type: string
+        planName:
+          type: string
+        planType:
+          enum:
+            - Database
+            - Storage
+            - CustomCoreResource
+          type: string
+          description: "Plan type, CustomCoreResource is applicable only for Connected mode cluster."
+        isActive:
+          enum:
+            - 'Yes'
+            - 'No'
+          type: string
+          description: "Indicate if the plan is active, applicable only for Connected mode cluster."
+        cpuRequest:
+          type: number
+          description: 'Cpu cores request should not be lower than 0.1 CPU'
+        cpuLimit:
+          type: number
+          description: 'Cpu cores limit should not be lower than 0.1 CPU'
+        memoryRequest:
+          type: number
+          description: 'Memory request should not be lower than 0.512 GB'
+        memoryLimit:
+          type: number
+          description: 'Memory limit should not be lower than 0.512 GB'
+        ephemeralRequest:
+          type: number
+          description: 'Ephemeral Storage request should not be lower than 1 GB'
+        ephemeralLimit:
+          type: number
+          description: 'Ephemeral storage limit should not be lower than 1 GB'
+
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+          example: 400
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+          example: Bad Request
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+          example: Invalid parameters
+        invalid-params:
+          type: array
+          description: '(Optional) JSON list List of name, reason keys for invalid attribute values.'
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Parameter name.
+                example: clusterId
+              reason:
+                type: string
+                description: Reason for error.
+                example: Invalid cluster id
+      required:
+        - status
+        - title
+        - detail
+
+  responses:
+
+    error-401:
+      description: Authentication information is missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+
+    error-400-cluster:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid cluster name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: clusterName
+                    reason: Invalid cluster name
+
+    error-400-namespace:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid namespace name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: namespaceName
+                    reason: Invalid namespace name
+
+    error-400-plan:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid plan name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: planName
+                    reason: Invalid plan name
+
+    error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid cluster id:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: clusterId
+                    reason: Invalid cluster id
+            400 - Invalid namespace id:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: namespaceId
+                    reason: Invalid namespace id
+            400 - Invalid plan id:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: planId
+                    reason: Invalid plan id
+
+    error-403:
+      description: User has no permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+
+    error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - Not found cluster:
+              value:
+                status: 404
+                title: Not Found
+                detail: Not found cluster
+            404 - Not found namespace:
+              value:
+                status: 404
+                title: Not Found
+                detail: Not found namespace
+            404 - Not found plan:
+              value:
+                status: 404
+                title: Not Found
+                detail: Not found plan
+
+    Cluster:
+      description: Cluster information
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Cluster'
+          examples:
+            Standalone Mode Cluster:
+              value:
+                clusterId: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                clusterName: test-cluster-1
+                clusterType: EKS
+                deployMode: Standalone
+                apiServerURL: "https://test-cluster-1.eks.amazonaws.com"
+                enableLogging: "Yes"
+                enableMonitoring: "Yes"
+                registryOciURL: "oci-image://docker.io/test"
+                grafanaConfig:
+                  host: "https://grafana.test.com"
+                  datasourceType: Loki
+                  loki: Loki
+                  prometheus: Prometheus
+            Connected Mode Cluster:
+              value:
+                clusterId: 2765d38d-65a1-4662-852c-988004029358
+                clusterName: test-cluster-2
+                description: "test cluster"
+                clusterType: GKE
+                deployMode: Connected
+                # apiServerURL: "https://test-cluster-1.eks.amazonaws.com"
+                enableLogging: "Yes"
+                enableMonitoring: "Yes"
+                # registryOciURL: "oci-image://docker.io/test"
+                grafanaConfig:
+                  host: "https://grafana.test.com"
+                  datasourceType: Loki
+                  loki: Loki
+                  prometheus: Prometheus
+
+    # Clusters:
+    #   description: List of Clusters
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: array
+    #         items:
+    #           $ref: '#/components/schemas/Cluster'
+    #       examples:
+    #         List of Clusters:
+    #           value:
+    #             - clusterId: 36279c9b-9b5a-4599-b548-7fe09d792f76
+    #               clusterName: test-cluster-1
+    #               description: "test cluster"
+    #               clusterType: EKS
+    #               deployMode: Standalone
+    #               apiServerURL: "https://test-cluster-1.eks.amazonaws.com"
+    #               enableLogging: "Yes"
+    #               enableMonitoring: "Yes"
+    #               registryOciURL: "oci-image://docker.io/test"
+    #               grafanaConfig:
+    #                 host: "https://grafana.test.com"
+    #                 datasourceType: Loki
+    #                 loki: Loki
+    #                 prometheus: Prometheus
+
+    #             - clusterId: 2765d38d-65a1-4662-852c-988004029358
+    #               clusterName: test-cluster-2
+    #               description: "test cluster"
+    #               clusterType: EKS
+    #               deployMode: Connected
+    #               # apiServerURL: "https://test-cluster-2.eks.amazonaws.com"
+    #               enableLogging: "Yes"
+    #               enableMonitoring: "Yes"
+    #               # registryOciURL: "oci-image://docker.io/test"
+    #               grafanaConfig:
+    #                 host: "https://grafana.test.com"
+    #                 datasourceType: Azure_Monitor
+    #                 loki: Loki
+    #                 prometheus: Prometheus
+    #                 azureMonitorName: Loki
+    #                 aksName: aks-1
+    #                 aksResourceID: "[aks-resource-id]"
+
+
+    ClusterList:
+      description: List of Clusters
+      content:
+        application/json:
+          schema:
+            items:
+              type: array
+              items:
+                $ref: '#/components/schemas/Cluster'
+
+          examples:
+            List of Clusters:
+              value:
+                items:
+                  - clusterId: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                    clusterName: test-cluster-1
+                    description: "test cluster"
+                    clusterType: EKS
+                    deployMode: Standalone
+                    apiServerURL: "https://test-cluster-1.eks.amazonaws.com"
+                    enableLogging: "Yes"
+                    enableMonitoring: "Yes"
+                    registryOciURL: "oci-image://docker.io/test"
+                    grafanaConfig:
+                      host: "https://grafana.test.com"
+                      datasourceType: Loki
+                      loki: Loki
+                      prometheus: Prometheus
+
+                  - clusterId: 2765d38d-65a1-4662-852c-988004029358
+                    clusterName: test-cluster-2
+                    description: "test cluster"
+                    clusterType: EKS
+                    deployMode: Connected
+                    # apiServerURL: "https://test-cluster-2.eks.amazonaws.com"
+                    enableLogging: "Yes"
+                    enableMonitoring: "Yes"
+                    # registryOciURL: "oci-image://docker.io/test"
+                    grafanaConfig:
+                      host: "https://grafana.test.com"
+                      datasourceType: Azure_Monitor
+                      loki: Loki
+                      prometheus: Prometheus
+                      azureMonitorName: Loki
+                      aksName: aks-1
+                      aksResourceID: "[aks-resource-id]"
+
+    Namespace:
+      description: Namespace information
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Namespace'
+          examples:
+            Namespace in standalone mode cluster:
+              value:
+                namespaceId: 46c61eba-01a0-416b-9663-fe8e0f21e01d
+                namespace: test-namespace-1
+                fullName: test-cluster-Standalone-1/test-namespace-1
+                isShared: No
+                enableSecretStore: Yes
+                secretStoreType: AUTOMATIC
+
+            Namespace in connected mode cluster:
+              value:
+                namespaceId: dcaeb3ba-d230-400e-8b62-8ec5a7e1f5ad
+                namespace: test-namespace-1
+                fullName: test-cluster-Connected-1/test-namespace-1
+                enableSecretStore: Yes
+                useCustomCoreResourcePlan: Yes
+                namespaceType: Standard
+                namespaceConfigStatus: Pending_Configuration
+                clusterName: test-Cluster-Connected-1
+                environments: 1
+                members: 1
+
+    # Namespaces:
+    #   description: List of namespaces
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: array
+    #         items:
+    #           $ref: '#/components/schemas/Namespace'
+    #       examples:
+    #         List of namespaces in standalone mode cluster:
+    #           value:
+    #             - namespaceId: 46c61eba-01a0-416b-9663-fe8e0f21e01d
+    #               namespace: test-namespace-1
+    #               fullName: test-cluster-Standalone-1/test-namespace-1
+    #               isShared: No
+    #               enableSecretStore: Yes
+
+    #         List of namespaces in connected mode cluster:
+    #           value:
+    #             - namespaceId: dcaeb3ba-d230-400e-8b62-8ec5a7e1f5ad
+    #               namespace: test-namespace-1
+    #               fullName: test-cluster-Connected-1/test-namespace-1
+    #               enableSecretStore: Yes
+    #               useCustomCoreResourcePlan: Yes                  
+    #               namespaceType: Standard
+    #               namespaceConfigStatus: Pending_Configuration
+    #               clusterName: test-Cluster-Connected-1
+    #               environments: 1
+    #               members: 1
+
+    NamespaceList:
+      description: List of namespaces
+      content:
+        application/json:
+          schema:
+            items:
+              type: array
+              items:
+                $ref: '#/components/schemas/Namespace'
+
+          examples:
+            List of namespaces in standalone mode cluster:
+              value:
+                items:
+                  - namespaceId: 46c61eba-01a0-416b-9663-fe8e0f21e01d
+                    namespace: test-namespace-1
+                    fullName: test-cluster-Standalone-1/test-namespace-1
+                    isShared: No
+                    enableSecretStore: Yes
+                    secretStoreType: AUTOMATIC
+
+            List of namespaces in connected mode cluster:
+              value:
+                items:
+                  - namespaceId: dcaeb3ba-d230-400e-8b62-8ec5a7e1f5ad
+                    namespace: test-namespace-1
+                    fullName: test-cluster-Connected-1/test-namespace-1
+                    enableSecretStore: Yes
+                    useCustomCoreResourcePlan: Yes                  
+                    namespaceType: Standard
+                    namespaceConfigStatus: Pending_Configuration
+                    clusterName: test-Cluster-Connected-1
+                    environments: 1
+                    members: 1
+
+    Plan:
+      description: Plan information
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Plan'
+          examples:
+            Database Plan:
+              value:
+                planId: 3a88915c-ec26-4392-bb27-a1ab1320c1ac
+                planName: db-plan-1
+                planType: Database
+                isActive: Yes
+            Storage Plan:
+              value:
+                planId: dcaeb3ba-d230-400e-8b62-8ec5a7e1f5ad
+                planName: st-plan-1
+                planType: Storage
+                isActive: Yes
+            CustomCoreResource Plan:
+              value:
+                planId: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                planName: resource-plan-1
+                planType: CustomCoreResource
+                isActive: Yes
+                cpuLimit: 0.1
+                cpuRequest: 0.1
+                memoryLimit: 0.512
+                memoryRequest: 0.512
+                ephemeralLimit: 1
+                ephemeralRequest: 1
+
+    # Plans:
+    #   description: List of plans
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: array
+    #         items:
+    #           $ref: '#/components/schemas/Plan'
+    #       examples:
+    #         List of plans in standalone mode cluster namespace:
+    #           value:
+    #             - planId: 36279c9b-9b5a-4599-b548-7fe09d792f76
+    #               planName: db-plan-1
+    #               planType: Database
+    #             - planId: 2765d38d-65a1-4662-852c-988004029358
+    #               planName: st-plan-1
+    #               planType: Storage
+
+    #         List of plans in connected mode cluster namespace:            
+    #           value:
+    #             - planId: e3a96330-274b-452c-ab90-e487c1048bda
+    #               planName: db-plan-1
+    #               planType: Database
+    #               isActive: Yes
+    #             - planId: 3a88915c-ec26-4392-bb27-a1ab1320c1ac
+    #               planName: st-plan-1
+    #               planType: Storage
+    #               isActive: Yes              
+    #             - planId: 8b53040a-009c-42c5-85ce-11334760d9b6
+    #               planName: resource-plan-1
+    #               planType: CustomCoreResource
+    #               isActive: Yes
+    #               cpuLimit: 0.1
+    #               cpuRequest: 0.1
+    #               memoryLimit: 0.512
+    #               memoryRequest: 0.512
+    #               ephemeralLimit: 1
+    #               ephemeralRequest: 1
+
+    PlanList:
+      description: List of plans
+      content:
+        application/json:
+          schema:
+            items:
+              type: array
+              items:
+                $ref: '#/components/schemas/Plan'
+
+          examples:
+            List of plans in standalone mode cluster namespace:
+              value:
+                items:
+                  - planId: 36279c9b-9b5a-4599-b548-7fe09d792f76
+                    planName: db-plan-1
+                    planType: Database
+                  - planId: 2765d38d-65a1-4662-852c-988004029358
+                    planName: st-plan-1
+                    planType: Storage
+
+            List of plans in connected mode cluster namespace:  
+              value:
+                items:
+                  - planId: e3a96330-274b-452c-ab90-e487c1048bda
+                    planName: db-plan-1
+                    planType: Database
+                    isActive: Yes
+                  - planId: 3a88915c-ec26-4392-bb27-a1ab1320c1ac
+                    planName: st-plan-1
+                    planType: Storage
+                    isActive: Yes              
+                  - planId: 8b53040a-009c-42c5-85ce-11334760d9b6
+                    planName: resource-plan-1
+                    planType: CustomCoreResource
+                    isActive: Yes
+                    cpuLimit: 0.1
+                    cpuRequest: 0.1
+                    memoryLimit: 0.512
+                    memoryRequest: 0.512
+                    ephemeralLimit: 1
+                    ephemeralRequest: 1
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+security:
+  - basicAuth: []
+  - mxtoken: []
+tags:
+  - name: clusters
+    description: ''

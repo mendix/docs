@@ -32,7 +32,7 @@ Private Mendix Platform can run with FIPS-compliant encryption across the entire
 You can perform the installation by using one of the following methods:
 
 * [With GUI](/private-mendix-platform/interactive-installation/), where you manually install Private Mendix Platform components
-* [With Helmfile](/private-mendix-platform/helmfile-installation/), where you use Helmfile to automatically install Private Mendix Platform components.
+* [With Helmfile](/private-mendix-platform/helmfile-installation/), where you use Helmfile to automatically install Private Mendix Platform components. Helm charts are available from  Private Mendix Platform 2.8.0. Namespaces created with  Private Mendix Platform 2.7.0 and older do not currently support Helm charts.
 * [Air-Gapped (for Private Mendix Platform 2.8.0)](/private-mendix-platform/airgapped-installation/), where you install Private Mendix Platform 2.8.0 for an air-gapped environment.
 
 #### Installation Order

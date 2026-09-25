@@ -116,7 +116,7 @@ To use Agent Editor functionalities in your app, you must perform the following 
 6. Deploy the agent to cloud environments.
 7. Improve the agent in the next iterations.
 
-You can perform all of the above manually in Studio Pro, or with the assistance of Maia. Simply describe what you want to build and Maia will guide you through the configuration steps.
+You can perform all the above manually in Studio Pro, or, if you have Agent Editor version 2.4.0 or above, with the assistance of Maia. Simply describe what you want to build and Maia will guide you through the configuration steps.
 
 For a step-by-step tutorial, see [Create an Agent with Agent Editor](/agents/agents-kit-2/how-to/create-agent-with-agent-editor/).
 
@@ -360,6 +360,8 @@ If you previously used Agent Editor and now see an error such as `The parameter 
 
 In both cases, confirm that the Agent Editor extension is loaded and enabled under **View** > **Extensions**.
 
-### Maia is unable to create or edit agents or other Agent Editor documents
+### Maia Is Unable to Create or Edit Agents or Other Agent Editor Documents
 
-The minimal version that supports this feature is Agent Editor 2.4.0. Additionally, you need to give permission for Maia to be able to access the tools provided by this extensions. You can enable this in Studio Pro **View** > **Extensions** and set the checkmark next to the `register-ai-tools` permission.
+You need Agent Editor version 2.4.0 to allow Maia to create or edit agent editor documents.
+
+You must also give permission for Maia to be able to access the tools provided by this extensions. You can enable this in Studio Pro **View** > **Extensions** and set the checkmark next to the `register-ai-tools` permission.

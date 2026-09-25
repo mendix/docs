@@ -967,7 +967,7 @@ The default class to style all barcode scanner widgets is named `com_mendix_widg
 
 ### Color Picker
 
-The color picker widget lets a user pick a color from a color spectrum. This is how a color picker widget could look in an app:
+The color picker widget allows a user to pick a color from a color spectrum.
 
 ```javascript
 export const com_mendix_widget_native_colorpicker_ColorPicker = {

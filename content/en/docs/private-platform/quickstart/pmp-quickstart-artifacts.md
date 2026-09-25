@@ -92,7 +92,7 @@ This is the Private Cloud License Manager (PCLM) component. It is required for P
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `enable` | boolean | Yes | Enable PCLM deployment |
+| `enable` | Boolean | Yes | Enable PCLM deployment |
 | `image.registry` | string | No | Container registry URL (uses the global value if not specified) |
 | `image.name` | string | Yes | The image name |
 | `image.tag` | string | Yes | Image tag (version) |

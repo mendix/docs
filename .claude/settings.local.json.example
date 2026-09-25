@@ -1,0 +1,8 @@
+{
+  "_comment": "Copy this file to .claude/settings.local.json and edit the values to match your machine. That file is gitignored and overrides .claude/settings.json. Delete any key you do not need - every one of these is optional.",
+  "env": {
+    "AWS_PROFILE": "my-sandbox",
+    "AWS_REGION": "eu-central-1",
+    "CLAUDE_CODE_USE_BEDROCK": "1"
+  }
+}

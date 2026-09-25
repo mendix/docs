@@ -102,7 +102,10 @@ After installing the modules, complete the following setup before defining the m
     Ensure it is 32 characters long. For more information, see the [EncryptionKey Constant](/appstore/modules/encryption/#encryptionkey-constant) section of *Encryption*.
 3. Configure startup import logic.
     Select `ASU_AgentEditor` as your [after-startup microflow](/refguide/runtime-tab/#after-startup) in **App** > **Settings** > **Runtime**. Alternatively, add it to your existing after-startup microflow.
-4. Enable extension features by going to **View** > **Extensions**. Enable `runtime-configuration-private` permission for the extension to access private constant values that were set in Studio Pro app settings. The extension uses constant values to connect with LLM model providers or MCP servers. Secondly, enable `register-ai-tools` permission for Maia to be able to create, edit, and iterate on Mendix agents entirely through conversation in Studio Pro. 
+4. Enable extension features by going to **View** > **Extensions**. Enable the following:
+
+    * `runtime-configuration-private` permission for the extension to access private constant values that were set in Studio Pro app settings. The extension uses constant values to connect with LLM model providers or MCP servers.
+    * `register-ai-tools` permission for Maia to be able to create, edit, and iterate on Mendix agents entirely through conversation in Studio Pro. 
 
 ## Configuration {#configuration}
 

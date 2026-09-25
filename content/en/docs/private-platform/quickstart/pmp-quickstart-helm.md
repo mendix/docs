@@ -288,7 +288,7 @@ global:
 mx-privatecloud-license-manager:
   enable: true
   image:
-    registry: "private-cloud.registry.mendix.com"
+    registry: "registry.mendix.com"
     name: "privatecloud-license-manager"
     tag: "{insert component version as indicated in release notes}"
   
@@ -1458,7 +1458,7 @@ mx-private-document-generation:
   enable: true
   namespace: "document-generation"
   image:
-    registry: "private-cloud.registry.mendix.com"
+    registry: "registry.mendix.com"
     name: "mendix/document-generation-service"
     tag: "1.0.0"
 ```

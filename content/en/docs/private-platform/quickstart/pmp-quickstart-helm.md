@@ -13,6 +13,8 @@ To automate the declarative installation of Private Mendix Platform, you can now
 * [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/)
 * [Install Private Mendix Platform 2.8.0 for Air-Gapped Environments](/private-mendix-platform/air-gapped-installation/)
 
+Helm charts are available from  Private Mendix Platform 2.8.0. Namespaces created with Private Mendix Platform 2.7.0 and older do not currently support Helm charts.
+
 # PMP Helm Installation Overview
 
 [Helmfile Installation](https://docs.mendix.com/private-mendix-platform/helmfile-installation/).
@@ -159,19 +161,22 @@ Helmfile installation supports the following tasks:
 
 Before deploying the Mendix Private Platform components, you must install the Mendix Operator with proper configuration.
 
-The Helmfile installation does not support installing or upgrading the Mendix Operator with the `mx-ops-cli tool`. To install the Operator, perform the following steps.
+The Helmfile installation does not support installing or upgrading the Mendix Operator with the mx-ops-cli tool. To install the Operator, perform the following steps.
 
 ### Preparing the Installation Files
 
 Before you start the installation, download the required files by performing the following steps:
 
-1. In the [Private Mendix Platform download portal](https://privateplatform.mendix.com/), click **Releases**.
+1. Log in to the [Private Mendix Platform download portal](https://privateplatform.mendix.com/).
 
     If you do not have access to the download portal, contact your Mendix partner for information.
 
-2. Click the three-dot menu (**•••**) for the desired release, and then click **View addons**.
-3. Find the *Addons/pmp-charts-x.x.x.zip* file, where `x.x.x` is the version number, and click **Download**.
-4. Unzip the downloaded file to a local folder on your Windows or Linux server. The release binary contains the following files:
+2. Find the installation by performing the following steps, depending on your Private Mendix Platform version:
+
+    * For version 2.8.1 and newer, go to **Artifacts Management**, select the version from the **Private Mendix Platform Version** dropdown, and select **Chart** as the **Artifact Type**. Select the charts and click **Export Selection**.
+    * For version 2.8.0 and older, go to **Releases**, click the three-dot menu (**•••**) for the desired release, and then click **View addons**. Find the *Addons/pmp-charts-x.x.x.zip* file, where `x.x.x` is the version number, and click **Download**.
+  
+3. Unzip the downloaded file to a local folder on your Windows or Linux server. The release binary contains the following files:
 
     * **helmfile.d** - Helmfile templates and configuration
     * **charts**  - Helm charts for all components
@@ -183,32 +188,66 @@ If you plan to use Maia AppGen and LLM gateway integration, you must configure t
 
 ```yaml
 operator_config:
-  # REQUIRED for Maia integration: Allow Mendix app Pods to access Kubernetes API
+  # REQUIRED for Maia integration: Allow Mendix app pods to access Kubernetes API
   runtimeAutomountServiceAccountToken: true
+  # Set runtimeAutomountServiceAccountToken: true in the Operator values file and apply the helm charts again.
 ```
 
 ## Installing the Mendix Operator {#install-operator}
 
 Install the Mendix Operator by doing the following steps:
 
-1. Run one of the following commands, where `-n` indicates the namespace: 
-    
-    * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
-    * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
+1. Log in to the [Download Portal](https://privateplatform.mendix.com/).
+2. Export the image and charts list.
 
-    In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
-    
-2. Click **Base Installation**, and then select the cluster type.
+    1. In the [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/), go to **Artifact Management** and select a Private Mendix Platform version.
+    2. Filter by **Category** and select the images
+    3. Click **Export Selection** to export the list to a file named *export-images-vx.x.x.json*, where `x.x.x` corresponds to a Private Mendix Platform version.
 
-    {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}
+3. In the Mendix Portal, create a Personal Access Token (PAT) for private images that require a PAT for authentication. 
 
-3. Click **Run Installer** to install the Mendix Operator in your cluster.
+    1. Sign in to Mendix and go to **User Settings > Developer Settings > Personal Access Token**
+    2. Click **New Token**.
+    3. Under **OCI registry**, select the **mx:registry:access** as scope.
+ 
+4. Fetch the images.
 
-You must configure the storage and database plans in the Operator installation values, not in the Helmfile values for `mxplatform`.
+    1. Log in to the OCI registry for Oras by using the following command: `oras login -u pat -p <token>  registry.mendix.com`.
+    2. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, ` oras pull registry.mendix.com/private-platform/installer-helmfile:0.2.1`.
+    3. Unzip the downloaded file by using the following command: `tar -xvf helmfile-config.tar.gz`.
+    4. Test it by using the following command: `helmfile --file helmfile.d/helmfile.yaml --state-values-file <valuefile> apply`.
+
+5. Pull the charts.
+
+    1. Log in to the OCI registry for Helm by using the following command: `helm registry login -u pat -p ${YOUR_PAT} registry.mendix.com`.
+    2. Use the `helm pull` command to download the Helmfile from the OCI registry, for example:
+
+    ```text
+    helm pull oci://registry.mendix.com/private-cloud/charts/mx-privatecloud-operator-installer --version 0.2.36
+    helm install operator mx-privatecloud-operator-installer-0.2.36.tgz -f ./Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml --namespace pmp-oci-test
+    ```
+
+    where `/Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml` is the yaml file for Operator configuration. You can find this yaml file among the example files in the installer package.
+
+#### Download Package API {#download-api}
+
+The following Download Portal APIs enable automating package downloads.
+
+##### Get Private Mendix Platform Release Version List
+
+```text
+GET https://privateplatform.mendix.com/rest/pmpreleaseservice/v1/versions
+```
+
+##### Get the Manifest of a Specific Private Mendix Platform Version
+
+```text
+GET https://privateplatform.mendix.com/rest/pmpreleaseservice/v1/versions/{version}/manifest
+```
 
 ### Private Cloud License Manager Credentials
 
-You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile.
+You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile. After installing Operator and PCLM, you must also update the license manager credentials in the Operator Helm chart *value* file, and then apply it again.
 
 {{% alert color="info" %}}
 The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the Operator installation. A mismatch will prevent the Operator from obtaining licenses.
@@ -384,7 +423,7 @@ global:
 mx-privatecloud-license-manager:
   enable: true
   image:
-    registry: "private-cloud.registry.mendix.com"
+    registry: "registry.mendix.com"
     name: "privatecloud-license-manager"
     tag: "{insert component version as indicated in release notes}"
   
@@ -1554,7 +1593,7 @@ mx-private-document-generation:
   enable: true
   namespace: "document-generation"
   image:
-    registry: "private-cloud.registry.mendix.com"
+    registry: "registry.mendix.com"
     name: "mendix/document-generation-service"
     tag: "1.0.0"
 ```

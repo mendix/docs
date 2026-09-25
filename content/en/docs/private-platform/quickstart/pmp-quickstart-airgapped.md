@@ -30,8 +30,13 @@ Either set uses a different tool to migrate. For more information, refer to the 
 
 For images downloaded from the Private Mendix Platform Download Portal or with the installer file, perform the following steps.
 
-1. Download the release binary from your [Private Mendix Platform Download Portal](/private-mendix-platform/download-portal/). If you do not have access to the download portal, contact your Mendix partner for information.
-2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
+1. Log in to your [Private Mendix Platform Download Portal](/private-mendix-platform/download-portal/). If you do not have access to the Download Portal, contact your Mendix partner for information.
+2. Download the release binary from  by performing the following steps, depending on your Private Mendix Platform version:
+
+    * For version 2.8.1 and newer, go to **Artifacts Management**, select the version from the **Private Mendix Platform Version** dropdown, and select **Chart** as the **Artifact Type**. Select the charts and click **Export Selection**.
+    * For version 2.8.0 and older, go to **Releases**, click the three-dot menu (**•••**) for the desired release, and then click **View addons**. Find the *Addons/pmp-charts-x.x.x.zip* file, where `x.x.x` is the version number, and click **Download**.
+
+3. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
 
 * In the *Tools* folder:
 
@@ -83,8 +88,6 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
         privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
         ```
 
-    3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
-
 4. Migrate the files required to install the Private Cloud components by performing the following steps:
 
     1. Download the *mx-private-cloud.zip* file from your Private Mendix Platform download portal.
@@ -105,9 +108,9 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
 
 For SVIX, the Mendix Operator and its subcomponents (for example, sidecars, storage provisioners, image builder), as well as Mendix runtime base images and app building blocks for supported Mendix versions, you must use an AIP tool to download and migrate to a local registry.
 
-#### Accessing Mendix Container Images
+#### Accessing Mendix Container Images {#aip}
 
-To install Private Mendix in an air-gapped environment, you must provision a list of images in your registry. 
+To install Private Mendix Platform in an air-gapped environment, you must provision a list of images in your registry. 
 
 1. Download an aip tool for your operating system.
 
@@ -122,8 +125,8 @@ To install Private Mendix in an air-gapped environment, you must provision a lis
 
 2. Export the image list.
 
-    1. In the [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/), go to **Image Management** and select a Private Mendix Platform version.
-    2. Filter by **Category** and select the images
+    1. In the [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/), go to **Artifact Management** and select a Private Mendix Platform version.
+    2. Filter by **Category** and **ArtifactType** to select the images, charts, and Helm file.
     3. Click **Export Selection** to export the list to a file named *export-images-vx.x.x.json*, where `x.x.x` corresponds to a Private Mendix Platform version.
 
 2. In the Mendix Portal, create a Personal Access Token (PAT) for private images that require a PAT for authentication. 

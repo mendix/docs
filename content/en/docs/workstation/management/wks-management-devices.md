@@ -154,6 +154,33 @@ To add a Bluetooth device, perform the following steps:
 
 For the message syntax used to communicate with this device, see [Bluetooth](/mendix-workstation/device-syntax/#bluetooth).
 
+## Camera {#camera}
+
+A camera device describes a camera attached to the computer that runs the Workstation Client: which camera to use, the video feed properties to request from it, and which detection features to enable. Currently only USB cameras and webcams are supported.
+
+### Configuring Cameras
+
+To add a camera device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, select **Camera**, and then click **Next**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
+
+    | Parameter | Description |
+    | --- | --- |
+    | **Camera Type** | Required; the type of camera connection. Only **USB/Webcam** is currently supported. Support for RTSP, UDP, and HTTP (MJPEG) camera streams is planned. |
+    | **Camera Name** | Optional; the name of the camera to use. Leave the field empty to use the default camera. |
+    | **Width** | Optional; the requested width of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |
+    | **Height** | Optional; the requested height of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |
+    | **Frame Rate** | Optional; the requested frame rate of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |
+    | **Enable Barcode Detection** | Optional; when enabled, the video feed is processed and an event is sent when a barcode is detected in the frame. The default value is **No**. |
+    | **Enable Motion Detection** | Optional; when enabled, the video feed is processed and an event is sent when motion is detected in the frame. The default value is **No**. |
+
+7. Click **Add Device**.
+
 ## Keyboard Wedge {#keyboard-wedge}
 
 You can configure Workstation to connect with devices that emulate a keyboard by sending data as key strokes, such as barcode scanners, RFID readers, or measurement devices. Because these devices present themselves to the operating system as a standard keyboard, keyboard events are captured wherever the current focus is, for example in the web app or in an input field. The operator does not have to place the cursor in a specific input field first.

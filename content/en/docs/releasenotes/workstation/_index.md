@@ -16,6 +16,10 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 ### Workstation Management
 
+#### New Features
+
+* Camera devices - We have added a new *camera* connection type to configure a USB camera or webcam attached to the computer that runs the Workstation Client. You can set the camera to use and the requested width, height, and frame rate of its video feed, and enable barcode and motion detection. For more information, see [Configuring Devices: Camera](/mendix-workstation/management-devices/#camera).
+
 #### Improvements
 
 * Developer mode - Turning off developer mode now requires Workstation licenses. In a workspace without an entitlement, developer mode stays enabled. For more information, see [Managing Stations: Developer Mode](/mendix-workstation/management-stations/#developer-mode).

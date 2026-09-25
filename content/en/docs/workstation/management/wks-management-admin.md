@@ -117,17 +117,17 @@ From here, you can perform the following tasks:
 
 ### Client Diagnostics {#client-diagnostics}
 
-The Workstation Client scans the computer it runs on for connected peripherals and reports on its own state. You can retrieve that information from Workstation Management, which lets you check what a station actually has attached without asking the operator to read it off the computer.
+The Workstation Client scans the computer it runs on for connected peripherals and reports on its own state. You can retrieve that information from Workstation Management, which lets you check what a station has attached without asking the operator to read it off the computer.
 
-To retrieve the diagnostics of a station, click **Diagnostics** on the **Station Detail** page. The diagnostics are displayed as JSON in a side panel, next to the name of the registered computer, and cover the following:
+To retrieve the diagnostics of a station, click **Diagnostics** on the **Station Detail** page. The diagnostics appear as JSON in a side panel next to the name of the registered computer, and cover the following:
 
 * The serial ports, Bluetooth devices, card readers, printers, and cameras that the Workstation Client detects, with the metadata it has for each of them.
 * System information about the computer and the Workstation Client, such as the operating system, the client type, the client version, and how long it has been running.
 * A count of the log entries the Workstation Client has recorded per log level.
 
-The **Diagnostics** button is only shown when a computer is registered to the station and its Workstation Client is connected, in the same way as the **Refresh on Computer** button. The data is pulled from the Workstation Client at the moment you click the button and is discarded again when you close the panel, so it always reflects the current state of the computer rather than a stored snapshot. If the request does not succeed, Workstation Management reports that the diagnostics for that computer could not be retrieved.
+The **Diagnostics** button appears only when a computer is registered to the station and its Workstation Client is connected. This is the same condition as for the **Refresh on Computer** button. The diagnostics are pulled from the Workstation Client when you click the button, and discarded again when you close the panel. They therefore always reflect the current state of the computer rather than a stored snapshot. If the request fails, Workstation Management reports that it cannot retrieve the diagnostics for that computer.
 
-The diagnostics that Workstation Management retrieves are a subset of the **Diagnostics** page in the Workstation Client itself, and omit the local file system paths that the client's own page shows. For the client-side page, see [Troubleshooting the Workstation Client: Diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics).
+Workstation Management retrieves a subset of the information on the **Diagnostics** page of the Workstation Client itself. The local file system paths that the client's own page shows are left out. For the client-side page, see the [Diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics) section in *Troubleshooting the Workstation Client*.
 
 ## Advanced Station Settings
 
@@ -143,7 +143,7 @@ Developer mode can be configured on the **Station** page by selecting **Enable D
 
 Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Workspaces](/mendix-workstation/management-workspaces/).
 
-Disabling developer mode requires Workstation licenses. In a workspace without an entitlement, developer mode is enabled by default, and saving a station with **Enable Developer Mode** cleared is refused with the message "You currently are not entitled to disable developer mode. Please contact your administrator to obtain the necessary Workstation licenses." Stations that already have developer mode disabled keep that setting, and a workspace that loses its entitlement does not have developer mode re-enabled on its existing stations.
+Disabling developer mode requires Workstation licenses. In a workspace without an entitlement, developer mode is enabled by default. Saving a station with **Enable Developer Mode** cleared is then refused with the message *You currently are not entitled to disable developer mode. Please contact your administrator to obtain the necessary Workstation licenses.* Stations that already have developer mode disabled keep that setting. Losing the entitlement does not re-enable developer mode on existing stations.
 
 When developer mode is enabled, users of the Workstation Client can perform the following actions:
 
@@ -152,5 +152,5 @@ When developer mode is enabled, users of the Workstation Client can perform the 
 * Debug level live logs displayed in the Logs pane of the Workstation Client, even if the workspace's log level is set to a different level.
 
 {{% alert color="info" %}}
-For production environments, it is strongly recommended to disable Developer Mode, which requires an entitled workspace. This prevents Workstation operators from accidentally quitting or deregistering the Workstation Client, and restricts access to debugging tools that are not needed in a live operational setting.
+For production environments, it is strongly recommended to disable Developer Mode, which requires Workstation licenses. This prevents Workstation operators from accidentally quitting or deregistering the Workstation Client, and restricts access to debugging tools that are not needed in a live operational setting.
 {{% /alert %}}

@@ -156,7 +156,7 @@ For the message syntax used to communicate with this device, see [Bluetooth](/me
 
 ## Camera {#camera}
 
-A camera device describes a camera attached to the computer that runs the Workstation Client: which camera to use, the video feed properties to request from it, and which detection features to enable. Currently only USB cameras and webcams are supported.
+A camera device describes a camera attached to the computer that runs the Workstation Client. It defines which camera to use, the video feed properties to request from it, and which detection features to enable. Only USB cameras and webcams are currently supported.
 
 ### Configuring Cameras
 
@@ -171,7 +171,7 @@ To add a camera device, perform the following steps:
 
     | Parameter | Description |
     | --- | --- |
-    | **Camera Type** | Required; the type of camera connection. Only **USB/Webcam** is currently supported. Support for RTSP, UDP, and HTTP (MJPEG) camera streams is planned. |
+    | **Camera Type** | Required; the type of camera connection. Only **USB/Webcam** is currently supported. Support for camera streams over Real Time Streaming Protocol (RTSP), User Datagram Protocol (UDP), and HTTP with Motion JPEG (MJPEG) is planned. |
     | **Camera Name** | Optional; the name of the camera to use. Leave the field empty to use the default camera. |
     | **Width** | Optional; the requested width of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |
     | **Height** | Optional; the requested height of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |

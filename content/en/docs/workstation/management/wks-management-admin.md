@@ -113,6 +113,21 @@ From here, you can perform the following tasks:
 * Manually refresh configuration to the client, forcing the Workstation Client on the registered computer to immediately pull the latest settings from Workstation Management.
 * Configure advanced settings like **Detect Card Readers** and **Station Developer Mode**.
 * Manage and configure all devices associated with this station.
+* Retrieve diagnostics from the Workstation Client on the registered computer.
+
+### Client Diagnostics {#client-diagnostics}
+
+The Workstation Client scans the computer it runs on for connected peripherals and reports on its own state. You can retrieve that information from Workstation Management, which lets you check what a station actually has attached without asking the operator to read it off the computer.
+
+To retrieve the diagnostics of a station, click **Diagnostics** on the **Station Detail** page. The diagnostics are displayed as JSON in a side panel, next to the name of the registered computer, and cover the following:
+
+* The serial ports, Bluetooth devices, card readers, printers, and cameras that the Workstation Client detects, with the metadata it has for each of them.
+* System information about the computer and the Workstation Client, such as the operating system, the client type, the client version, and how long it has been running.
+* A count of the log entries the Workstation Client has recorded per log level.
+
+The **Diagnostics** button is only shown when a computer is registered to the station and its Workstation Client is connected, in the same way as the **Refresh on Computer** button. The data is pulled from the Workstation Client at the moment you click the button and is discarded again when you close the panel, so it always reflects the current state of the computer rather than a stored snapshot. If the request does not succeed, Workstation Management reports that the diagnostics for that computer could not be retrieved.
+
+The diagnostics that Workstation Management retrieves are a subset of the **Diagnostics** page in the Workstation Client itself, and omit the local file system paths that the client's own page shows. For the client-side page, see [Troubleshooting the Workstation Client: Diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics).
 
 ## Advanced Station Settings
 

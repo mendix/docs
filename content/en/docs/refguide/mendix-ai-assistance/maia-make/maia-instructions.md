@@ -10,14 +10,14 @@ description: "Describes how to create and manage Maia Instructions (AGENTS.md) t
 ## Introduction
 
 {{% alert color="info" %}}
-This feature was released as part of [Maia Make](/refguide/maia-make/) capabilities in Studio Pro 11.12.
+This feature is part of [Maia Make](/refguide/maia-make/) and was introduced in Studio Pro 11.12.
 
-To use Maia Agent Instructions, an internet connection and signing in to Studio Pro are required.
+To use Maia Agent Instructions, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
 Maia Instructions are agent instructions that are automatically added to the conversation context. They let you define shared prompt context, such as company conventions or environment restrictions, once and reuse it when needed.
 
-They can be provided at the project level or module level. Project-level instructions are included in every conversation in the project. Module-level instructions are included whenever Maia starts working in the given module.
+They can be provided at the project level or module level. Project-level instructions are included in every conversation in the project. Module-level instructions are included whenever Maia starts working in that module.
 
 Maia Instructions follow the [AGENTS.md standard](https://agents.md) for agent instructions.
 
@@ -29,29 +29,28 @@ Maia supports both [agent skills](/refguide/maia-agent-skills/) and agent instru
 | ------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | Loading       | Deterministically loaded, whenever working with the given project or module.                         | Agent decides to load skills on demand, based on their name and description.                       |
 | Applicability | Project or module-wide instructions that should always be part of context (for example, company preferences). | Instructions that are applicable only in certain situations (for example, microflow conventions). |
-| Organization  | Single file, should be kept as short as possible.                                                    | Allows you to split instructions into the core skill and additional references that Maia reads on demand as needed. |
+| Organization  | Single file, should be kept as short as possible.                                                    | Allows you to split instructions into the core skill and additional references that Maia reads on demand. |
 
 ## Creating a New Maia Instruction {#creating-instructions}
 
 To create a new Maia Instruction, follow these steps:
 
-1. In the **App Explorer**, find either the **Maia** node under **App** for project-level instructions, or the **Maia** node under a module if you wish to add a module-level instruction.
+1. In the **App Explorer**, find either the **Maia** node under **App** for project-level instructions, or the **Maia** node under a module if you want to add a module-level instruction.
 2. Right-click this node and click **Add** > **Agent instructions**.
 
-Studio Pro creates the `AGENTS.md` file. You can continue adding the instruction content.
+Studio Pro creates the `AGENTS.md` file. You can now add the instruction content.
 
-{{% alert color="info" %}}Newly added instructions or changes to existing instructions are discovered only when new session is started.{{% /alert %}}
+{{% alert color="info" %}}New instructions and changes to existing instructions take effect only when you start a new session.{{% /alert %}}
 
 ### Instructions Content {#instructions-content}
 
 Maia Instructions are arbitrary Markdown files that follow the AGENTS.md standard. You can structure them any way you like.
 
-However, it is recommended to include only instructions that are applicable to every prompt in the given project or module. For example, you can add naming conventions, limitations of your environment, or language preferences to the agent instructions. If the instructions are applicable only when working with a single module in the project, you should add instructions at the module level.
+However, Mendix recommends including only instructions that are applicable to every prompt in the given project or module. For example, you can add naming conventions, environment limitations, or language preferences. If the instructions apply only to a single module, add them at the module level.
 
 ### Directory Structure {#directory-structure}
 
-Project-level instructions are stored as `skillssource/AGENTS.md`, while module-level instructions are stored as
-`skillssource/_modules/<module_name>/AGENTS.md`. You can add only one instructions file per project or per module.
+Project-level instructions are stored as `skillssource/AGENTS.md`, while module-level instructions are stored as `skillssource/_modules/<module_name>/AGENTS.md`. You can add only one instructions file per project or per module.
 
 ## Read More
 

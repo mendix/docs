@@ -9,14 +9,14 @@ description: "Describes the features in Maia for Workflows."
 ## Introduction
 
 {{% alert color="info" %}}
-To use Maia for Workflows, an internet connection and signing in to Studio Pro are required.
+To use Maia for Workflows, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Maia for Workflows helps you generate a [workflow](/refguide/workflows/). It can also provide explanations or further improvements based on the generated elements. The current version has some known limitations. For more details, see the [Limitations](#limitation) section below.
+Maia for Workflows helps you generate a [workflow](/refguide/workflows/). It can also provide explanations or suggest improvements to the generated elements. It has some limitations. For more details, see the [Limitations](#limitation) section below.
 
 ## Using Maia for Workflows
 
-Describe a business process you want to model. Maia uses this information to add relevant workflow activities, and tries to configure them where possible. For more information on how to communicate with Maia to achieve better results when configuring a workflow, see the [Best Practices for Text Input](#text-input-best-practice) section below.
+Describe a business process you want to model. Maia uses this information to add relevant workflow activities and configures them where possible. For more information on how to communicate with Maia to achieve better results when configuring a workflow, see the [Best Practices](/refguide/maia-make/#workflows-best-practices) section of *Maia Make Capabilities*.
 
 ### Version Availability
 
@@ -30,42 +30,15 @@ Maia for Workflows is not available.
 
 #### Studio Pro 11.7 and Below
 
-To enable Maia for Workflows, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Workflows**. Once enabled, you can find it in the toolbar of a workflow:
+To enable Maia for Workflows, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Workflows**. After you enable it, you can find it in the toolbar of a workflow:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/maia-for-workflows.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/maia-for-workflows.png" alt="" max-width=80% >}}
 
-After clicking **Maia for Workflow**, a chat interface appears at the right side of Studio Pro under the **Maia** tab:
+After clicking **Maia for Workflows**, a chat interface appears on the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/chat-interface.png" max-width=42% >}}
-
-### Best Practices for Text Input {#text-input-best-practice}
-
-To achieve optimal results, provide context about your workflow by describing its main use cases, customer needs, or other relevant details. The more Maia knows about your workflow, the more tailored and accurate the generated workflow will be.
-
-Below are some examples of prompts you can use as a starting point:
-
-* Please generate a workflow for a process that...
-* Create a workflow based on the image.
-* Base the workflow on the image, but change ... to ...
-
-Maia for Workflows can analyze a BPMN image representing employee onboarding, rework it using Mendix Workflows terminology, and generate the corresponding activities for you. Alongside the image, you can also use text input to specify how the generated workflow should differ from the provided image. For example, you might write: *Generate a workflow based on this BPMN image, but make sure it waits before sending an email to the new employee.*
-
-Make sure to select a clear image to help Maia better understand your request. For example, you can provide a screenshot, a photo, BPMN schema, or a close-up picture of a drawing. Avoid heavily compressed or low quality images, as these may result in the loss of important details.
-
-Below are some examples of prompts you can use to ask Maia for further explanations or suggestions to improve the generated workflow:
-
-* Can you explain this workflow to me?
-* Can you give me suggestions to improve this workflow?
-* Can you make the timer wait for 5 days?
-* I want the process to run in parallel.
-
-{{% alert type="info" %}}
-Workflow generation may take longer than other Maia features. Performance improvements are planned for a future release.
-{{% /alert %}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/chat-interface.png" alt="" max-width=42% >}}
 
 ## Limitations {#limitation}
-
-Maia for Workflows currently has some limitations.
 
 ### Not All Properties Can Be Configured
 

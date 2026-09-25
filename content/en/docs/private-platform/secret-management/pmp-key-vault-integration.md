@@ -171,7 +171,7 @@ For environments which use an `azure-wi` storage or database plan, the configura
 1. The customer (portal user) or Mendix Operator creates the environment in the Private Mendix Platform wizard, selecting an azure-wi storage and/or database plan. The Mendix Operator automatically creates the UAMI, its federated credential, and annotates the environment's ServiceAccount with the Client ID. 
 2. The customer's Infrastructure Team creates an empty Key Vault named [mendix-<environment internal name>](#naming-conventions), with Azure RBAC selected as the permission model. 
 3. The customer's Infrastructure Team grants the Key Vault Secrets Officer role on that Key Vault to the [Private Mendix Platform managed identity](#identity-pmp).
-4. The customer's Infrastructure Team grants the Key Vault Secrets User role on that Key Vault to the environment's [UAMI]({#identity-uami}).
+4. The customer's Infrastructure Team grants the Key Vault Secrets User role on that Key Vault to the environment's [UAMI](#identity-uami).
 5. The customer (portal user) toggles **Enable Secret Store** for the environment in the Private Mendix Platform portal. Private Mendix Platform reads the UAMI Client ID from the existing ServiceAccount annotation automatically. 
 
 No manual Kubernetes object creation or Client ID entry is needed for this path.
@@ -185,7 +185,7 @@ For environments which do not use any `azure-wi` plans, the configuration requir
 3. The customer's Infrastructure Team adds a federated credential to the UAMI, where the issuer is the cluster's OIDC issuer URL, and the subject is `system:serviceaccount:<namespace>:<environment internal name>`. 
 4. Create an empty Key Vault named mendix-<environment internal name>, with Azure RBAC selected as the permission model. 
 5. The customer's Infrastructure Team grants the Key Vault Secrets Officer role on that Key Vault to the [Private Mendix Platform managed identity](#identity-pmp).
-6. The customer's Infrastructure Team grants the Key Vault Secrets User role on that Key Vault to the environment's [UAMI]({#identity-uami}).
+6. The customer's Infrastructure Team grants the Key Vault Secrets User role on that Key Vault to the environment's [UAMI](#identity-uami).
 7. The customer (portal user) toggle **Enable Secret Store** for the environment in the Private Mendix Platform portal. Private Mendix Platform detects that no ServiceAccount exists yet and prompts the user to provide a Client ID.
 8. The customer (portal user) enters the UAMI's Client ID created in step 2 above. Private Mendix Platform creates the Kubernetes ServiceAccount for the environment with both required annotations, and stores the Client ID for use when secrets are written. 
 

@@ -689,3 +689,119 @@ img.ToC-icon{
         padding-top: 1.25rem;
     }
 }
+
+// Expandable table modal
+
+.expandable-table-wrap {
+    margin-bottom: $spacer;
+
+    .expandable-table-toolbar {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0.25rem;
+    }
+
+    .expandable-table-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+        border: 1px solid $gray-border;
+        color: $link-color;
+        background: transparent;
+        border-radius: 4px;
+        white-space: nowrap;
+
+        &:hover {
+            background: $gray-100;
+            border-color: $link-color;
+        }
+
+        &:focus {
+            outline: 2px solid $link-color;
+            outline-offset: 2px;
+        }
+    }
+
+    .expandable-table-inner {
+        overflow-x: auto;
+        border: 1px solid $gray-border;
+        border-radius: 4px;
+    }
+}
+
+body.expandable-table-open {
+    overflow: hidden;
+}
+
+.expandable-table-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &[hidden] { display: none; }
+
+    .expandable-table-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .expandable-table-dialog {
+        position: relative;
+        z-index: 1;
+        width: 90%;
+        max-width: 1100px;
+        max-height: 85vh;
+        background: white;
+        border-radius: 6px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .expandable-table-header {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid $gray-border;
+        background: $gray-100;
+        display: flex;
+        justify-content: flex-end;
+
+        .expandable-table-close {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.875rem;
+
+            &:focus {
+                outline: 2px solid $link-color;
+                outline-offset: 2px;
+            }
+        }
+    }
+
+    .expandable-table-body {
+        overflow: auto;
+        padding: 1.25rem;
+
+        .expandable-table-inner {
+            border: none;
+            border-radius: 0;
+            overflow: visible;
+        }
+
+        table { width: 100%; margin-bottom: 0; }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .expandable-table-modal .expandable-table-dialog {
+        width: 95%;
+        max-height: 90vh;
+    }
+}

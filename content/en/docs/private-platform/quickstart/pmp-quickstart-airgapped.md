@@ -122,7 +122,7 @@ To install Private Mendix in an air-gapped environment, you must provision a lis
 
 2. Export the image list.
 
-    1. In the [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/), go to **Image Management** and select a Private Mendix Platform version.
+    1. In the [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/), go to **Artifact Management** and select a Private Mendix Platform version.
     2. Filter by **Category** and select the images
     3. Click **Export Selection** to export the list to a file named *export-images-vx.x.x.json*, where `x.x.x` corresponds to a Private Mendix Platform version.
 

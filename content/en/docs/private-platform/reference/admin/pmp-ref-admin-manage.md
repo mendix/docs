@@ -424,7 +424,7 @@ Every `POST` payload contains the following delivery information as part of the 
 
 * **connection** – `close`, indicating that there is no further information for the HTTP request
 * **content-length** – the size of the HTTP request in bytes (for example, `475`)
-* **webhook-signature** – the signature of the webhook in the format `<version>,<signature>` (for example, `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=`); for more information, see [Verifying Your Webhook](#verify-webhook) below
+* **webhook-signature** – the signature of the webhook in the format `<version>,<signature>` (for example, `v1,Ay2spGBdE7i6OzNkFgTDnGfqgZT0WonCFoBMt8V3YiQ=`)
 * **webhook-id** – a unique identifier for this webhook trigger (for example, `msg_2M605iBQRge9hTgpYg7fKXQubaw`)
 * **user-agent** – the user agent used to process this trigger
 * **webhook-timestamp** – the time the webhook was triggered (for example, `1677072542`)

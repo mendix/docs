@@ -858,6 +858,10 @@ The default class to style the navigation is named `navigationStyle`. There is n
 
 Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module, and are not shipped with Mendix Studio Pro. Other add-ons might also be distributed through app templates, as well as modules importing pages from other apps. 
 
+### Accordion
+
+PLACEHOLDER
+
 ### Activity Indicator {#activity-indicator}
 
 The activity indicator widget displays a circular loading indicator. This is how an activity indicator widget could look in an app:
@@ -884,9 +888,65 @@ export const com_mendix_widget_native_activityindicator_ActivityIndicator = {
 
 The default class to style all activity indicators is named `com_mendix_widget_native_activityindicator_ActivityIndicator`.
 
+### Animation
+
+The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more. The widget's style properties are as follows:
+
+```javascript
+export const com_mendix_widget_native_animation_Animation = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+};
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. |      |
+
+The default class to style all animation widgets is named `com_mendix_widget_native_animation_Animation`.
+
 ### App Events
 
 The app events widget allows you to set actions when your app’s network status is changed, and can let you set limits on action calls. This widget has no user interface so does not support any styling.
+
+### Background Gradient
+
+The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction.
+
+```javascript
+export const com_mendix_widget_native_backgroundgradient_BackgroundGradient = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  colorList: {
+    color: null, // Colors can be passed in different formats. Valid color value formats are #d0d0d0, rgb(115,155,155), or rgba(195,226,226,0.5)
+    offset: null, // A color-stop's value, followed by one or more optional stop positions (should be between 0.0 and 1.0)
+  },
+  angle: null, // Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise.
+  opacity: null, // Takes a value from `0` to `100`. The lower the value, the more transparent.
+};
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `angle` | | Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise. |
+| `colorList` | [gradient_color_object](#gradient-color-object) | Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }]` |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `opacity` | | Takes a value from `0` to `100`. The lower the value, the more transparent. |
+
+The default class to style all background gradients is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
+
+#### Background Gradient Types
+
+##### gradient_color_object {#gradient-color-object}
+
+An object `{ color: string, offset: number }` that represents the color and the offset.
+
+| Name | Type | Description |
+| --- | --- | --- |
+| color | `string` | Colors can be passed in different formats. Valid color value formats are `#d0d0d0`, `rgb(115,155,155)`, or `rgba(195,226,226,0.5)` |
+| offset | `number` | A color-stop's value, followed by one or more optional stop positions (should be between `0.0` and `1.0`) |
 
 ### Background Image
 
@@ -936,6 +996,140 @@ export const com_mendix_widget_native_badge_Badge = {
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
+### Bar Chart
+
+The [Bar Chart](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) widget renders a horizontal bar graph based on static and dynamic data sets.
+
+```javascript
+export const com_mendix_widget_native_barchart_BarChart = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  errorMessage: {
+    // This has all TextStyle properties. 
+  },
+  chart: {
+    // This has all ViewStyle properties. 
+  },
+  grid: {
+    backgroundColor: null, // Applies a color to the grid background (string).
+    dashArray: null, //  Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    lineColor: null, // Applies a color to the grid lines (string).
+    width: null, // Applies a width to the grid lines (number).
+    padding: null, // Applies padding to all sides of the grid (number). This makes axis value labels visible.
+    paddingBottom: null, // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
+    paddingLeft: null, // Applies padding to the left side of the grid (number). This makes axis value labels visible.
+    paddingRight: null, // Applies padding to the right side of the grid (number). This makes axis value labels visible.
+    paddingTop: null, // Applies padding to the top side of the grid (number). This makes axis value labels visible.
+    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
+  },
+  xAxis: {
+    color: null, // Applies a color to the grid background (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: null, // Applies a font type to the axis value labels (string).
+    fontSize: null, // Applies a size to the axis value labels (number).
+    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: null, // Applies a color to the axis line (string).
+    width: null, // Applies a width to the axis line (number).
+    label: {
+      // All TextStyle properties.
+      relativePositionGrid: null, // Positions the axis label at the **bottom** or **right** side of the grid.
+    }
+  },
+  yAxis: {
+    // All `xAxis` element styles.
+  },
+  legend: {
+    container: {
+      // All ViewStyle properties.
+    },
+    item: {
+      // All ViewStyle properties.
+    },
+    indicator: {
+      // All ViewStyle properties.
+    },
+    label: {
+      // All TextStyle properties.
+    }
+  },
+  domain: {
+    padding: {
+      x: null, // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
+      y: null, // Applies a number of pixels of padding to add the beginning and end of the y axis domain (number).
+    },
+  },
+  bars: {
+    barColorPalette: null, // Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series).
+    barsOffset: null, // Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
+    customBarStyles: {
+      any_custom_bar_style_name: {
+        bar: {
+          ending: null, // Specifies a radius to apply to each bar.
+          barColor: null, // Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar.
+          width: null, // Applies a width to the bar (number).
+        },
+        label: {
+          fontFamily: null, // Applies a font type to the bar label (string).
+          fontSize: null, // Applies a size to the bar label (number).
+          fontStyle: null, // Applies a font style to the bar label (**normal** or **italic**).
+          fontWeight: null, // Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+        }
+      }
+    }
+  }
+};
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
+| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `grid` | `lineColor` | Applies a color to the grid lines (string). |
+| `grid` | `width` | Applies a width to the grid lines (number). |
+| `grid` | `padding` | Applies padding to all sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). This makes axis value labels visible. |
+| `xAxis` | `color` | Applies a color to the axis value labels (string). |
+| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `xAxis` | `fontFamily` | Applies a font type to the axis value labels (string). |
+| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
+| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
+| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
+| `xAxis` | `width` | Applies a width to the axis line (number). |
+| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
+| `yAxis` | All `xAxis` element styles. | |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
+| `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
+| `bars` | `barColorPalette` | Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series). |
+| `bars` | `barsOffset` | Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `ending` | Specifies a radius to apply to each bar. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `barColor` | Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar. |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `width` | Applies a width to the bar (number). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontFamily` | Applies a font type to the bar label (string). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontSize` | Applies a size to the bar label (number). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontStyle` | Applies a font style to the bar label (**normal** or **italic**). |
+| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontWeight` | Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+
+The default class to style all bar chart widgets is named `com_mendix_widget_native_barchart_BarChart`.
+
 ### Barcode Scanner
 
 The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
@@ -965,6 +1159,60 @@ export const com_mendix_widget_native_barcodescanner_BarcodeScanner = {
 
 The default class to style all barcode scanner widgets is named `com_mendix_widget_native_barcodescanner_BarcodeScanner`.
 
+### Bottom Sheet
+
+The bottom sheet widget creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. There are two customizable variations:
+
+* Modal bottom sheet:
+
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/modal-bottom-sheet.gif" alt="modal bottom sheet"   width="350"  class="no-border" >}}
+
+* Expanding bottom sheet:
+
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  class="no-border" >}}
+
+```javascript
+export const com_mendix_widget_native_bottomsheet_BottomSheet = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  containerWhenExpandedFullscreen: {
+    // This has all ViewStyle properties. This has all ViewStyle properties. Only available if `Expading` and `Enable full screen` are enabled.
+  },
+  modal: {
+    // This has all ViewStyle properties. 
+  },
+  defaultStyle: {
+    // This has all TextStyle properties. Available when `Default` is selected as style for basic items.
+  },
+  primaryStyle: {
+    // This has all TextStyle properties. Available when `Primary` is selected as style for basic items.
+  },
+  dangerStyle: {
+    // This has all TextStyle properties. Available when `Danger` is selected as style for basic items.
+  },
+  customStyle: {
+    // This has all TextStyle properties. Available when `Custom` is selected as style for basic items.
+  },
+};
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | |
+| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. | Only available if `Expading` and `Enable full screen` are enabled. |
+| `modal` | This has all ViewStyle properties. | |
+| `defaultStyle` | This has all TextStyle properties. | Available when `Default` is selected as style for basic items. |
+| `primaryStyle` | This has all TextStyle properties. | Available when `Primary` is selected as style for basic items. |
+| `dangerStyle` | This has all TextStyle properties. | Available when `Danger` is selected as style for basic items. |
+| `customStyle` | This has all TextStyle properties. | Available when `Custom` is selected as style for basic items. |
+
+The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
+
+### Carousel
+
+PLACEHOLDER
+
 ### Color Picker
 
 The color picker widget allows a user to pick a color from a color spectrum.
@@ -986,6 +1234,140 @@ export const com_mendix_widget_native_colorpicker_ColorPicker = {
 | `preview` | This has all ViewStyle properties. | Styles the color preview swatch (defaults to `borderRadius: 5`, `minHeight: 50`). |
 
 The default class to style all color picker widgets is named `com_mendix_widget_native_colorpicker_ColorPicker`.
+
+### Column Chart
+
+The [column chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/column-chart-native) widget renders a vertical column graph based on static and dynamic data sets.
+
+```javascript
+export const com_mendix_widget_native_columnchart_ColumnChart = {
+  container: {
+    // All ViewStyle properties.
+  },
+  errorMessage: {
+    // All TextStyle properties.
+  },
+  chart: {
+    // All ViewStyle properties.
+  },
+  grid: {
+    backgroundColor: null, // Applies a color to the grid background (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    lineColor: null, // Applies a color to the grid lines (string).
+    width: null, // Applies a width to the grid lines (number).
+    padding: null, // Applies padding to all sides of the grid (number). This makes axis value labels visible.
+    paddingBottom: null, // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
+    paddingLeft: null, // Applies padding to the left side of the grid (number). This makes axis value labels visible.
+    paddingRight: null, // Applies padding to the right side of the grid (number). This makes axis value labels visible.
+    paddingTop: null, // Applies padding to the top side of the grid (number). This makes axis value labels visible.
+    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
+  },
+  xAxis: {
+    color: null, // Applies a color to the axis value labels (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: null, // Applies a font type to the axis value labels (string).
+    fontSize: null, // Applies a size to the axis value labels (number).
+    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: null, // Applies a color to the axis line (string).
+    width: null, // Applies a width to the axis line (number).
+    label: {
+      // All TextStyle properties.
+      relativePositionGrid: null, //P ositions the axis label at the **bottom** or **right** side of the grid.
+    }
+  },
+  yAxis: {
+    // All xAxis properties
+  },
+  legend: {
+    container: {
+      // All ViewStyle properties.
+    },
+    item: {
+      // All ViewStyle properties.
+    },
+    indicator: {
+      // All ViewStyle properties.
+    },
+    label: {
+      // All TextStyle properties.
+    },
+  },
+  domain: {
+    padding: {
+      x: null, // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
+      y: null, // Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number).
+    }
+  },
+  columns: {
+    columnColorPalette: null, // Provides colors to columns that do not have a column color configured (string with list of colors separated by ';', one color for each series).
+    columnsOffset: null, // Determines the number of pixels each column in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
+    customColumnStyles: {
+      any_custom_column_style_name: {
+        column: {
+          ending: null, // Specifies a radius to apply to each column.
+          columnColor: null, // Applies a color to the column (string). If columns are configured to have labels, the labels will be the same color as the column.
+          width: null, // Applies a width to the column (number).
+        },
+        label: {
+          fontFamily: null, // Applies a font type to the column label (string).
+          fontSize: null, // Applies a size to the column label (number).
+          fontStyle: null, // Applies a font style to the column label (**normal** or **italic**).
+          fontWeight: null, // Applies a font weight to the column label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+        }
+      }
+    }
+  }
+};
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
+| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `grid` | `lineColor` | Applies a color to the grid lines (string). |
+| `grid` | `width` | Applies a width to the grid lines (number). |
+| `grid` | `padding` | Applies padding to all sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). This makes axis value labels visible. |
+| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). This makes axis value labels visible. |
+| `xAxis` | `color` | Applies a color to the axis value labels (string). |
+| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `xAxis` | `fontFamily` | Applies a font type to the axis value labels (string). |
+| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
+| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
+| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
+| `xAxis` | `width` | Applies a width to the axis line (number). |
+| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
+| `yAxis` | All `xAxis` element styles. | |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
+| `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
+| `columns` | `columnColorPalette` | Provides colors to columns that do not have a column color configured (string with list of colors separated by ';', one color for each series). |
+| `columns` | `columnsOffset` | Determines the number of pixels each column in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**. |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `column` | `ending` | Specifies a radius to apply to each column. |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `column` | `columnColor` | Applies a color to the column (string). If columns are configured to have labels, the labels will be the same color as the column. |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `column` | `width` | Applies a width to the column (number). |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontFamily` | Applies a font type to the column label (string). |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontSize` | Applies a size to the column label (number). |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontStyle` | Applies a font style to the column label (**normal** or **italic**). |
+| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontWeight` | Applies a font weight to the column label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+
+The default class to style all column chart widgets is named `com_mendix_widget_native_columnchart_ColumnChart`.
 
 ### Feedback
 
@@ -1109,6 +1491,91 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton 
 | `secondaryButtonCaptionContainer` | This has all ViewStyle properties. |  |
 
 The default class to style all floating actions buttons is named `com_mendix_widget_native_floatingactionbutton_FloatingActionButton`.
+
+### Gallery
+
+The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
+
+```javascript
+export const com_mendix_widget_native_gallery_Gallery = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  emptyPlaceholder: {
+    // This has all ViewStyle properties. Applies a view style to the empty placeholder.
+  },
+  firstItem: {
+    // This has all ViewStyle properties. Applies a view style to the first item of the list.
+  },
+  lastItem: {
+    // This has all ViewStyle properties. Applies a view style to the last item of the list.
+  },
+  list: {
+    // This has all ViewStyle properties. Applies a view style to the list container.
+  },
+  listitem: {
+    // This has all ViewStyle properties. Applies a view style to each item container in the list.
+  },
+  loadMoreButtonContainer: {
+    // This has all ViewStyle properties. Applies a view style to the load more button container.
+  },
+  loadMoreButtonPressableContainer: {
+    // This has all ViewStyle properties. Applies a view style to the load more button container.
+    rippleColor: null, // Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only)
+    borderless: null, // Defines if ripple effect should not include border. (Boolean) (Android only)
+    radius: null, // Defines the radius of the ripple effect. (number) (Android only)
+    foreground: null, // Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only)
+  },
+};
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `emptyPlaceholder` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the empty placeholder. |
+| `firstItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the first item of the list. |
+| `lastItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the last item of the list. |
+| `list` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the list container. |
+| `listItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to each item container in the list. |
+| `loadMoreButtonContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonPressableContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonPressableContainer` | rippleColor | Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only) |
+| `loadMoreButtonPressableContainer` | borderless | Defines if ripple effect should not include border. (Boolean) (Android only) |
+| `loadMoreButtonPressableContainer` | radius | Defines the radius of the ripple effect. (number) (Android only) |
+| `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
+| `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
+
+The default class to style all Gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
+
+#### Gallery Filtering
+
+In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab.
+
+```javascript
+export const com_mendix_widget_native_gallerytextfilter_GalleryTextFilter = {
+  textInputContainer: {
+    // This has all ViewStyle properties. Applies a view style to the container of the text input. 
+  },
+  textInputContainerFocused: {
+    // This has all ViewStyle properties. Applies a view style to the container of the text input when the text box is focused.
+  },
+  textInput: {
+    // This has all ViewStyle properties. Applies a view style to the text input.
+  },
+  textInputClearIcon: {
+    // This has all ViewStyle properties. Applies style to the text clear button in the text box.
+  },
+};
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `textInputContainer` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input. |
+| `textInputContainerFocused` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input when the text box is focused. |
+| `textInput` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the text input. |
+| `textInputClearIcon` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies style to the text clear button in the text box. |
+
+The default class to style all gallery text filter widgets is named `com_mendix_widget_native_gallerytextfilter_GalleryTextFilter`.
 
 ### Maps
 
@@ -1490,24 +1957,6 @@ export const com_mendix_widget_native_webview_WebView = {
 
 The default class to style all web views is named `com_mendix_widget_native_webview_WebView`. 
 
-### Animation
-
-The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more. The widget's style properties are as follows:
-
-```javascript
-export const com_mendix_widget_native_animation_Animation = {
-  container: {
-    // This has all ViewStyle properties.
-  },
-};
-```
-
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties. |      |
-
-The default class to style all animation widgets is named `com_mendix_widget_native_animation_Animation`.
-
 ### Introduction Screen
 
 This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page to proceed or go back:
@@ -1601,56 +2050,6 @@ export const com_mendix_widget_native_listviewswipe_ListViewSwipe = {
 | `rightAction` |`threshold` | The number of pixels to accept the swipe action. |
 
 The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
-
-### Bottom Sheet
-
-The bottom sheet widget creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. There are two customizable variations:
-
-* Modal bottom sheet:
-
-    {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/modal-bottom-sheet.gif" alt="modal bottom sheet"   width="350"  class="no-border" >}}
-
-* Expanding bottom sheet:
-
-    {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/expanding-bottom-sheet.gif" alt="expanding bottom sheet"   width="350"  class="no-border" >}}
-
-```javascript
-export const com_mendix_widget_native_bottomsheet_BottomSheet = {
-  container: {
-    // This has all ViewStyle properties.
-  },
-  containerWhenExpandedFullscreen: {
-    // This has all ViewStyle properties. This has all ViewStyle properties. Only available if `Expading` and `Enable full screen` are enabled.
-  },
-  modal: {
-    // This has all ViewStyle properties. 
-  },
-  defaultStyle: {
-    // This has all TextStyle properties. Available when `Default` is selected as style for basic items.
-  },
-  primaryStyle: {
-    // This has all TextStyle properties. Available when `Primary` is selected as style for basic items.
-  },
-  dangerStyle: {
-    // This has all TextStyle properties. Available when `Danger` is selected as style for basic items.
-  },
-  customStyle: {
-    // This has all TextStyle properties. Available when `Custom` is selected as style for basic items.
-  },
-};
-```
-
-| Element | Style Properties | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties. | |
-| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. | Only available if `Expading` and `Enable full screen` are enabled. |
-| `modal` | This has all ViewStyle properties. | |
-| `defaultStyle` | This has all TextStyle properties. | Available when `Default` is selected as style for basic items. |
-| `primaryStyle` | This has all TextStyle properties. | Available when `Primary` is selected as style for basic items. |
-| `dangerStyle` | This has all TextStyle properties. | Available when `Danger` is selected as style for basic items. |
-| `customStyle` | This has all TextStyle properties. | Available when `Custom` is selected as style for basic items. |
-
-The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
 
 ### Popup Menu
 
@@ -2001,140 +2400,6 @@ export const com_mendix_widget_native_linechart_LineChart = {
 
 The default class to style all line chart widgets is named `com_mendix_widget_native_linechart_LineChart`.
 
-### Bar Chart
-
-The [Bar Chart](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) widget renders a horizontal bar graph based on static and dynamic data sets.
-
-```javascript
-export const com_mendix_widget_native_barchart_BarChart = {
-  container: {
-    // This has all ViewStyle properties. 
-  },
-  errorMessage: {
-    // This has all TextStyle properties. 
-  },
-  chart: {
-    // This has all ViewStyle properties. 
-  },
-  grid: {
-    backgroundColor: null, // Applies a color to the grid background (string).
-    dashArray: null, //  Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-    lineColor: null, // Applies a color to the grid lines (string).
-    width: null, // Applies a width to the grid lines (number).
-    padding: null, // Applies padding to all sides of the grid (number). This makes axis value labels visible.
-    paddingBottom: null, // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
-    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
-    paddingLeft: null, // Applies padding to the left side of the grid (number). This makes axis value labels visible.
-    paddingRight: null, // Applies padding to the right side of the grid (number). This makes axis value labels visible.
-    paddingTop: null, // Applies padding to the top side of the grid (number). This makes axis value labels visible.
-    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
-  },
-  xAxis: {
-    color: null, // Applies a color to the grid background (string).
-    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-    fontFamily: null, // Applies a font type to the axis value labels (string).
-    fontSize: null, // Applies a size to the axis value labels (number).
-    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
-    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
-    lineColor: null, // Applies a color to the axis line (string).
-    width: null, // Applies a width to the axis line (number).
-    label: {
-      // All TextStyle properties.
-      relativePositionGrid: null, // Positions the axis label at the **bottom** or **right** side of the grid.
-    }
-  },
-  yAxis: {
-    // All `xAxis` element styles.
-  },
-  legend: {
-    container: {
-      // All ViewStyle properties.
-    },
-    item: {
-      // All ViewStyle properties.
-    },
-    indicator: {
-      // All ViewStyle properties.
-    },
-    label: {
-      // All TextStyle properties.
-    }
-  },
-  domain: {
-    padding: {
-      x: null, // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
-      y: null, // Applies a number of pixels of padding to add the beginning and end of the y axis domain (number).
-    },
-  },
-  bars: {
-    barColorPalette: null, // Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series).
-    barsOffset: null, // Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
-    customBarStyles: {
-      any_custom_bar_style_name: {
-        bar: {
-          ending: null, // Specifies a radius to apply to each bar.
-          barColor: null, // Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar.
-          width: null, // Applies a width to the bar (number).
-        },
-        label: {
-          fontFamily: null, // Applies a font type to the bar label (string).
-          fontSize: null, // Applies a size to the bar label (number).
-          fontStyle: null, // Applies a font style to the bar label (**normal** or **italic**).
-          fontWeight: null, // Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
-        }
-      }
-    }
-  }
-};
-```
-
-| Element | Style Properties | Description |
-| --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
-| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
-| `grid` | `lineColor` | Applies a color to the grid lines (string). |
-| `grid` | `width` | Applies a width to the grid lines (number). |
-| `grid` | `padding` | Applies padding to all sides of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). This makes axis value labels visible. |
-| `xAxis` | `color` | Applies a color to the axis value labels (string). |
-| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
-| `xAxis` | `fontFamily` | Applies a font type to the axis value labels (string). |
-| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
-| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
-| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
-| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
-| `xAxis` | `width` | Applies a width to the axis line (number). |
-| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
-| `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
-| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
-| `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
-| `bars` | `barColorPalette` | Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series). |
-| `bars` | `barsOffset` | Determines the number of pixels each bar in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**. |
-| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `ending` | Specifies a radius to apply to each bar. |
-| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `barColor` | Applies a color to the bar (string). If bars are configured to have labels, the labels will be the same color as the bar. |
-| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `bar` | `width` | Applies a width to the bar (number). |
-| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontFamily` | Applies a font type to the bar label (string). |
-| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontSize` | Applies a size to the bar label (number). |
-| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontStyle` | Applies a font style to the bar label (**normal** or **italic**). |
-| `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontWeight` | Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
-
-The default class to style all bar chart widgets is named `com_mendix_widget_native_barchart_BarChart`.
-
 ### Pie/Doughnut Chart
 
 The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
@@ -2246,263 +2511,6 @@ export const com_mendix_widget_native_switch_Switch = {
 | `validationMessage` | This has all TextStyle properties.   |  |
 
 The default class to style all checkbox inputs is named `com_mendix_widget_native_switch_Switch`.
-
-### Background Gradient
-
-The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction.
-
-```javascript
-export const com_mendix_widget_native_backgroundgradient_BackgroundGradient = {
-  container: {
-    // This has all ViewStyle properties. 
-  },
-  colorList: {
-    color: null, // Colors can be passed in different formats. Valid color value formats are #d0d0d0, rgb(115,155,155), or rgba(195,226,226,0.5)
-    offset: null, // A color-stop's value, followed by one or more optional stop positions (should be between 0.0 and 1.0)
-  },
-  angle: null, // Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise.
-  opacity: null, // Takes a value from `0` to `100`. The lower the value, the more transparent.
-};
-```
-
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `angle` | | Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise. |
-| `colorList` | [gradient_color_object](#gradient-color-object) | Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }]` |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `opacity` | | Takes a value from `0` to `100`. The lower the value, the more transparent. |
-
-The default class to style all background gradients is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
-
-#### Background Gradient Types
-
-##### gradient_color_object {#gradient-color-object}
-
-An object `{ color: string, offset: number }` that represents the color and the offset.
-
-| Name | Type | Description |
-| --- | --- | --- |
-| color | `string` | Colors can be passed in different formats. Valid color value formats are `#d0d0d0`, `rgb(115,155,155)`, or `rgba(195,226,226,0.5)` |
-| offset | `number` | A color-stop's value, followed by one or more optional stop positions (should be between `0.0` and `1.0`) |
-
-### Column Chart
-
-The [column chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/column-chart-native) widget renders a vertical column graph based on static and dynamic data sets.
-
-```javascript
-export const com_mendix_widget_native_columnchart_ColumnChart = {
-  container: {
-    // All ViewStyle properties.
-  },
-  errorMessage: {
-    // All TextStyle properties.
-  },
-  chart: {
-    // All ViewStyle properties.
-  },
-  grid: {
-    backgroundColor: null, // Applies a color to the grid background (string).
-    dashArray: null, // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-    lineColor: null, // Applies a color to the grid lines (string).
-    width: null, // Applies a width to the grid lines (number).
-    padding: null, // Applies padding to all sides of the grid (number). This makes axis value labels visible.
-    paddingBottom: null, // Applies padding to the bottom side of the grid (number). This makes axis value labels visible.
-    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible.
-    paddingLeft: null, // Applies padding to the left side of the grid (number). This makes axis value labels visible.
-    paddingRight: null, // Applies padding to the right side of the grid (number). This makes axis value labels visible.
-    paddingTop: null, // Applies padding to the top side of the grid (number). This makes axis value labels visible.
-    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). This makes axis value labels visible.
-  },
-  xAxis: {
-    color: null, // Applies a color to the axis value labels (string).
-    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-    fontFamily: null, // Applies a font type to the axis value labels (string).
-    fontSize: null, // Applies a size to the axis value labels (number).
-    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
-    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
-    lineColor: null, // Applies a color to the axis line (string).
-    width: null, // Applies a width to the axis line (number).
-    label: {
-      // All TextStyle properties.
-      relativePositionGrid: null, //P ositions the axis label at the **bottom** or **right** side of the grid.
-    }
-  },
-  yAxis: {
-    // All xAxis properties
-  },
-  legend: {
-    container: {
-      // All ViewStyle properties.
-    },
-    item: {
-      // All ViewStyle properties.
-    },
-    indicator: {
-      // All ViewStyle properties.
-    },
-    label: {
-      // All TextStyle properties.
-    },
-  },
-  domain: {
-    padding: {
-      x: null, // Applies a number of pixels of padding to add the beginning and end of the X axis domain (number).
-      y: null, // Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number).
-    }
-  },
-  columns: {
-    columnColorPalette: null, // Provides colors to columns that do not have a column color configured (string with list of colors separated by ';', one color for each series).
-    columnsOffset: null, // Determines the number of pixels each column in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**.
-    customColumnStyles: {
-      any_custom_column_style_name: {
-        column: {
-          ending: null, // Specifies a radius to apply to each column.
-          columnColor: null, // Applies a color to the column (string). If columns are configured to have labels, the labels will be the same color as the column.
-          width: null, // Applies a width to the column (number).
-        },
-        label: {
-          fontFamily: null, // Applies a font type to the column label (string).
-          fontSize: null, // Applies a size to the column label (number).
-          fontStyle: null, // Applies a font style to the column label (**normal** or **italic**).
-          fontWeight: null, // Applies a font weight to the column label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
-        }
-      }
-    }
-  }
-};
-```
-
-| Element | Style Properties | Description |
-| --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
-| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
-| `grid` | `lineColor` | Applies a color to the grid lines (string). |
-| `grid` | `width` | Applies a width to the grid lines (number). |
-| `grid` | `padding` | Applies padding to all sides of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). This makes axis value labels visible. |
-| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). This makes axis value labels visible. |
-| `xAxis` | `color` | Applies a color to the axis value labels (string). |
-| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
-| `xAxis` | `fontFamily` | Applies a font type to the axis value labels (string). |
-| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
-| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
-| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
-| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
-| `xAxis` | `width` | Applies a width to the axis line (number). |
-| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
-| `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
-| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
-| `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
-| `columns` | `columnColorPalette` | Provides colors to columns that do not have a column color configured (string with list of colors separated by ';', one color for each series). |
-| `columns` | `columnsOffset` | Determines the number of pixels each column in a group should be offset from its original position on the Y axis (number). This is only applicable when presentation mode is **Grouped**. |
-| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `column` | `ending` | Specifies a radius to apply to each column. |
-| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `column` | `columnColor` | Applies a color to the column (string). If columns are configured to have labels, the labels will be the same color as the column. |
-| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `column` | `width` | Applies a width to the column (number). |
-| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontFamily` | Applies a font type to the column label (string). |
-| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontSize` | Applies a size to the column label (number). |
-| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontStyle` | Applies a font style to the column label (**normal** or **italic**). |
-| `columns` > `customColumnStyles` > `any_custom_column_style_name` > `label` | `fontWeight` | Applies a font weight to the column label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
-
-The default class to style all column chart widgets is named `com_mendix_widget_native_columnchart_ColumnChart`.
-
-### Gallery
-
-The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
-
-```javascript
-export const com_mendix_widget_native_gallery_Gallery = {
-  container: {
-    // This has all ViewStyle properties. 
-  },
-  emptyPlaceholder: {
-    // This has all ViewStyle properties. Applies a view style to the empty placeholder.
-  },
-  firstItem: {
-    // This has all ViewStyle properties. Applies a view style to the first item of the list.
-  },
-  lastItem: {
-    // This has all ViewStyle properties. Applies a view style to the last item of the list.
-  },
-  list: {
-    // This has all ViewStyle properties. Applies a view style to the list container.
-  },
-  listitem: {
-    // This has all ViewStyle properties. Applies a view style to each item container in the list.
-  },
-  loadMoreButtonContainer: {
-    // This has all ViewStyle properties. Applies a view style to the load more button container.
-  },
-  loadMoreButtonPressableContainer: {
-    // This has all ViewStyle properties. Applies a view style to the load more button container.
-    rippleColor: null, // Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only)
-    borderless: null, // Defines if ripple effect should not include border. (Boolean) (Android only)
-    radius: null, // Defines the radius of the ripple effect. (number) (Android only)
-    foreground: null, // Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only)
-  },
-};
-```
-
-| Element | Style Properties | Description |
-| --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `emptyPlaceholder` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the empty placeholder. |
-| `firstItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the first item of the list. |
-| `lastItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the last item of the list. |
-| `list` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the list container. |
-| `listItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to each item container in the list. |
-| `loadMoreButtonContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
-| `loadMoreButtonPressableContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
-| `loadMoreButtonPressableContainer` | rippleColor | Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only) |
-| `loadMoreButtonPressableContainer` | borderless | Defines if ripple effect should not include border. (Boolean) (Android only) |
-| `loadMoreButtonPressableContainer` | radius | Defines the radius of the ripple effect. (number) (Android only) |
-| `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
-| `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
-
-The default class to style all Gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
-
-#### Gallery Filtering
-
-In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab.
-
-```javascript
-export const com_mendix_widget_native_gallerytextfilter_GalleryTextFilter = {
-  textInputContainer: {
-    // This has all ViewStyle properties. Applies a view style to the container of the text input. 
-  },
-  textInputContainerFocused: {
-    // This has all ViewStyle properties. Applies a view style to the container of the text input when the text box is focused.
-  },
-  textInput: {
-    // This has all ViewStyle properties. Applies a view style to the text input.
-  },
-  textInputClearIcon: {
-    // This has all ViewStyle properties. Applies style to the text clear button in the text box.
-  },
-};
-```
-
-| Element | Style Properties | Description |
-| --- | --- | --- |
-| `textInputContainer` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input. |
-| `textInputContainerFocused` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the container of the text input when the text box is focused. |
-| `textInput` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the text input. |
-| `textInputClearIcon` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies style to the text clear button in the text box. |
-
-The default class to style all gallery text filter widgets is named `com_mendix_widget_native_gallerytextfilter_GalleryTextFilter`.
 
 ## Read More
 

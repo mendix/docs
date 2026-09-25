@@ -47,7 +47,9 @@ This page documents MCP Server module versions [compatible with Agents Kit 2](/a
 
 ### Create MCP Server {#create-server}
 
-The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. You can use the created `MCPServer` to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, that means this value needs to be known to the MCP Client (usually set in a configuration file). After the action gets triggered, the server becomes available for external clients to connect. Note that the path cannot be `mcp` and cannot end on `/mcp`, because those are reserved endpoints. 
+The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. You can use the created `MCPServer` to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, that means this value needs to be known to the MCP Client (usually set in a configuration file). After the action gets triggered, the server becomes available for external clients to connect. 
+
+Note that the path cannot be `mcp` and cannot end on `/mcp`, because those are reserved endpoints. Additionally, sub-paths using `/` is not allowed.
 
 Based on your use case, this action can be triggered manually by an admin if wrapped around a microflow accessible in the UI, via an after start-up microflow, or by any other microflow, such as a scheduled event.
 

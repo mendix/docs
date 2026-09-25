@@ -15,7 +15,7 @@ The connector focuses on two high-value capabilities:
 1. Visual reporting data – generated from Designcenter part files in Teamcenter and available through APIs to build rich, design-aware experiences for customers.
 2. High-compute design analysis – runs assembly clearance (clash) detection in the cloud so that users can offload large assembly analysis to the cloud.
 
-The [Designcenter X Cloud Services connector](placeholder) on Mendix Marketplace makes these services available in any Mendix app through ready-to-use microflows. The connector handles authentication, session management, and data exchange so developers can focus on delivering business value rather than managing infrastructure.
+The [Designcenter X Cloud Services connector](https://marketplace.mendix.com/link/component/306304) on Mendix Marketplace makes these services available in any Mendix app through ready-to-use microflows. The connector handles authentication, session management, and data exchange so developers can focus on delivering business value rather than managing infrastructure.
 
 ## Typical Use Cases
 
@@ -53,7 +53,7 @@ You must have the following Marketplace modules installed:
 To install the Designcenter X Cloud Services Connector in your Mendix app, follow these steps:
 
 1. Install the modules listed in the [Dependencies](#dependencies) section.
-2. Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the [Designcenter X Cloud Services Connector](placeholder) into your app.
+2. Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the [Designcenter X Cloud Services Connector](https://marketplace.mendix.com/link/component/306304) into your app.
 3. Configure the connector as described in the [Configuring the Connector for Single Sign-On](/appstore/industry/siemens/designcenter/sso/) document.
 
 ## Read More

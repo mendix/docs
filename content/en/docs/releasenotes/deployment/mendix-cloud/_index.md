@@ -16,7 +16,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
   
 ## September 2026
 
-### September 24, 2026
+### September 28, 2026
 
 #### New Features
 

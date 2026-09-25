@@ -1,13 +1,13 @@
 ---
-title: "Adding Project Context"
+title: "Adding Project Context and Guidelines"
 url: /developerportal/maia-plan/project-context/
-description: "Describes the project context step of creating an app with Maia Plan."
+description: "Describes how and why to add project context and guidelines when creating an app with Maia Plan."
 weight: 10
 ---
 
 ## Introduction
 
-Providing context is the foundation for Maia to build your project plan. Give Maia clear goals, user details, and requirements to generate an accurate app plan.
+Providing context and guidelines is the foundation for Maia to build your project plan while adhering to company standards. Give Maia clear goals, user details, and requirements to generate an accurate app plan.
 
 1. In **Projects**, click **Create App** in the upper right corner.
 
@@ -21,4 +21,6 @@ Providing context is the foundation for Maia to build your project plan. Give Ma
     * Add requirements.
     * Attach documents, sketches, and images.
 
-4. Click **Generate Plan**.
+4. In the **Add Company Guidelines** section, click **Upload Guidelines** to add guidelines files. These specify the development guardrails and compliance rules that Maia should adhere to while generating your project. 
+
+5. Click **Generate Plan**.

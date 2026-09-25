@@ -23,7 +23,9 @@ Before using the Download Portal, ensure that you have the following prerequisit
 
     * **Installer** access for downloading platform releases
     * **Marketplace Bundles** access for managing component bundles
-    * **Image Management** access for viewing and exporting container images
+    * **Artifact Management** access for viewing and exporting container images
+
+* ORAS tool for working with OCI artifacts
 
 ## Accessing the Download Portal
 
@@ -108,7 +110,66 @@ To download a release from the table, perform the following steps:
 
 The installer file downloads to your default download location.
 
-### Viewing Release Notes and Add-ons
+{{< figure src="/attachments/private-platform/pmp-downloadportal1.png" class="no-border" >}}
+
+#### Understanding the Contents of the Tools Folder
+
+The tools in *Tools* folder included in the installer file are used for by the [Interactive Installer](/private-mendix-platform/interactive-installation/). You do not need to use them directly for [Helmfile installation](/private-mendix-platform/helmfile-installation/).
+
+The folder contains the following tools:
+
+* **Helmfile** - A declarative spec for deploying Helm charts.
+* **Helm** - A tool that streamlines installing and managing Kubernetes applications.
+* **mx-pclm-cli** - A tool used to manage Private Mendix Cloud License Manager (PCLM).
+* **mxpc-cli** - A configuration tool used to install the Mendix Operator.
+
+{{< figure src="/attachments/private-platform/pmp-downloadportal2.png" class="no-border" >}}
+
+#### Pulling Images and Charts
+
+All images and charts are now available in an OCI registry. In order to pull them, you first need to export the images and charts by performing the following steps:
+
+1. Export the image and charts list.
+
+    1. In the [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/), go to **Artifact Management** and select a Private Mendix Platform version.
+    2. Filter by **Category** and select the images
+    3. Click **Export Selection** to export the list to a file named *export-images-vx.x.x.json*, where `x.x.x` corresponds to a Private Mendix Platform version.
+
+2. In the Mendix Portal, create a Personal Access Token (PAT) for private images that require a PAT for authentication. 
+
+    1. Sign in to Mendix and go to **User Settings > Developer Settings > Personal Access Token**
+    2. Click **New Token**.
+    3. Under **OCI registry**, select the **mx:registry:access** scope.
+    4. Click **Create** and save the token.
+ 
+3. Fetch the images and the Private Mendix Platform Helmfile.
+
+    1. Log in to the OCI registry for Oras by using the following command: `oras login -u pat -p <token>  registry.mendix.com`.
+    2. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, `oras pull registry.mendix.com/private-platform/installer-helmfile:0.2.1`.
+    3. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, `oras pull registry.mendix.com/private-platform/pmp-pipeline-tools:0.10.2`.
+
+4. Fetch the Mendix Operator charts.
+
+    1. Log in to the OCI registry for Helm by using the following command: `helm registry login -u pat -p ${YOUR_PAT} registry.mendix.com`.
+    2. Use the `helm pull` command to download the Helmfile from the OCI registry, for example, `helm pull oci://registry.mendix.com/private-cloud/charts/mx-privatecloud-operator-installer --version 0.2.36`.
+
+#### Download Package API {#download-api}
+
+The following Download Portal APIs enable automating package downloads.
+
+##### Get Private Mendix Platform Release Version List
+
+```text
+GET https://privateplatform.mendix.com/rest/pmpreleaseservice/v1/versions
+```
+
+##### Get the Manifest of a Specific Private Mendix Platform Version
+
+```text
+GET https://privateplatform.mendix.com/rest/pmpreleaseservice/v1/versions/{version}/manifest
+```
+
+### Viewing Release Notes
 
 Each release includes additional information accessible through the three-dot menu.
 
@@ -117,11 +178,22 @@ To view release details:
 1. Click the three-dot menu (**•••**) for the desired release.
 2. Click **View Release Note** to open the release documentation.
 
-## Image Management
+### Viewing Add-Ons
 
-The **Image Management** page allows you to view, filter, and export container images required for Private Mendix Platform installation and use.
+In versions of Private Mendix Platform older than 2.8.1, the three-dot menu also shows the images and charts required for Private Mendix Platform installation.
 
-To access the **Image Management** page, click **Image Management** in the left navigation menu.
+To view these add-ons:
+
+1. Click the three-dot menu (•••) for the desired release.
+2. Click **View Add-ons**.
+
+Starting from Private Mendix Platform 2.8.1, the **View Add-ons** option has been removed. All images and charts are instead available on the **Artifact Management** page.
+
+## Artifact Management
+
+The **Artifact Management** page allows you to view, filter, and export container images, charts and custom artifact such as Helm file installer required for Private Mendix Platform installation and use.
+
+To access the **Artifact Management** page, click **Artifact Management** in the left navigation menu.
 
 ### Selecting a Platform Version
 
@@ -144,11 +216,12 @@ At the top of the page, three summary cards display the following information:
 
 These counts help you understand the composition of your selected Platform version.
 
-### Viewing the Images Table
+### Viewing the Images, Charts, and Custom Artifacts Table
 
-The images table contains the following columns:
+The images, charts, and custom artifacts table contains the following columns:
 
-* **Name** - Shows the component or image name.
+* **Name** - Shows the artifact or image name.
+* **Artifact Type** - Shows the artifact type (image, chart, or custom artifact).
 * **Category** - Shows the component type:
 
     * **Mendix Backbone** - Core Mendix platform components
@@ -161,9 +234,9 @@ The images table contains the following columns:
 
 To search for a specific image, enter an image name or part of a component name into the **Search by [something]** field.
 
-You can also filter the table by clicking the **Category** button next to the **Search by [something]** field and selecting one or more image categories. The table updates to show only images matching your criteria.
+You can also filter the table by clicking the **Category** and **Artifact Type** buttons next to the **Search by [something]** field, and selecting one or more filters. The table updates to show only images matching your criteria.
 
-When you select a main category filter (for example, **Internal Component**), additional dropdown fields appear for sub-type selection, for example:
+When you select the **Category** filter, additional dropdown fields appear for sub-type selection, for example:
 
 * Selecting **Internal Component** reveals a dropdown for component types (such as operator, image builder, or storage provisioner)
 * Selecting **External Dependency** reveals a dropdown for dependency types
@@ -171,17 +244,17 @@ When you select a main category filter (for example, **Internal Component**), ad
 
 This hierarchical filtering allows for the precise selection of image categories.
 
-### Exporting Image Selections
+### Exporting the Selections
 
-You can export a manifest of selected images for use in your deployment process.
+You can export a manifest of selected artifacts for use in your deployment process.
 
-To export images, perform the following steps:
+To export artifacts, perform the following steps:
 
-1. Select the checkboxes for the images which you want to export.
+1. Select the checkboxes for the artifacts which you want to export.
 2. Click the **Export Selection** button.
 3. Select **Cancel** to deselect all, or proceed with the export.
 
-An image manifest file is generated containing your selected images and their registry URLs.
+A manifest file is generated containing your selected artifacts and their registry URLs.
 
 ## Bundle Management
 

@@ -105,7 +105,7 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
 
 For SVIX, the Mendix Operator and its subcomponents (for example, sidecars, storage provisioners, image builder), as well as Mendix runtime base images and app building blocks for supported Mendix versions, you must use an AIP tool to download and migrate to a local registry.
 
-#### Accessing Mendix Container Images
+#### Accessing Mendix Container Images {#aip}
 
 To install Private Mendix in an air-gapped environment, you must provision a list of images in your registry. 
 

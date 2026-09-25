@@ -10,10 +10,10 @@ weight: 70
 If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps, depending on whether you are running the upgrade through the installer GUI, or through a Helm chart.
 
 {{% alert color="info" %}}
-Select the upgrade method based on the original installation method. That is to say, if you installed Private Mendix Platform in [GUI mode](/private-mendix-platform/interactive-installation/), upgrade it in the same way. It is not possible to upgrade manual installs by using Helm charts. A clean install would be necessary instead.
+Select the upgrade method based on the original installation method. That is to say, if you installed Private Mendix Platform in [GUI mode](/private-mendix-platform/interactive-installation/), upgrade it in the same way. It is not possible to upgrade GUI installs by using Helm charts. A clean install would be necessary instead.
 {{% /alert %}}
 
-### Upgrading Private Mendix Platform in Manual Mode
+### Upgrading Private Mendix Platform in GUI Mode
 
 1. Ensure that your Mendix Operator is upgraded to a version compatible with the version of Private Mendix Platform to which you are upgrading.
 
@@ -63,6 +63,48 @@ Select the upgrade method based on the original installation method. That is to 
 8. Click **Run Upgrade**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade2.png" class="no-border" >}}
+
+### Upgrading Private Mendix Platform in Helmfile Mode
+
+1. Update the `values` file with new registry details as follows:
+
+    * Operator charts - `registry.mendix.com/private-cloud`
+    * PMP charts - `registry.mendix.com/private-platform`
+    * Maia charts - `registry.mendix.com/maia`
+    * svix server - `svix/svix-server`
+    * docgen - `registry.mendix.com/docgen`
+
+2. Update the tags in the `values` file for images.
+3. Remove the following lines from `mx-privatecloud-operator-versions`:
+
+    ```text
+    mx_m2ee_metrics:
+      tag: *mx_m2ee_metrics_tag
+    ```
+
+4. Download the new Operator chart from the OCI registry by performing the following steps:
+
+    1. Create PAT on In the [User Settings](https://user-settings.mendix.com/link/developersettings), create a Personal Access Token (PAT) the following scope: `mx:registry:access` (Access OCI Registry).
+    2. Run the following command: `oras login -u pat -p <pat-xxx> registry.mendix.com`.
+    3. Run the following command: `helm pull oci://registry.mendix.com/private-cloud/charts/mx-privatecloud-operator-installer --version 0.2.43`
+
+5. Create the registry secret:
+
+    ```text
+    kubectl create secret docker-registry private-registry-secret \
+        --docker-server=registry.mendix.com \
+        --docker-username=pat \
+        --docker-password="$PAT" \
+        --namespace=<ns-name> \
+        --dry-run=client -o yaml > registry-secret.yaml
+
+    kubectl apply -f registry-secret.yaml
+    ```
+
+6. Upgrade the Operator CRDS by running the following command: `kubectl apply -f mx-privatecloud-operator-crd/crds/`.
+7. Upgrade the Operator release by performing the following command: `helm upgrade operator mx-privatecloud-operator-installer-0.2.43.tgz -f <operatorValues file> --namespace <ns-name>`.
+8. After the Operator is upgraded, fetch the image from `registry.mendix.com` by running the following command: `oras pull registry.mendix.com/private-platform/installer-helmfile:2.8.1`.
+9. Unzip the Helm chart and upgrade the Private Mendix Platform release by running the following command: `helmfile  --file ./oras-artifact/helmfile-config/helmfile.d/helmfile.yaml  --state-values-file ../../../<pmp values yaml file> apply`.
 
 ## Post-Upgrade Steps
 

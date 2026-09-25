@@ -169,7 +169,7 @@ The namespace must have external secret store support enabled through Automatic 
 For environments which use an `azure-wi` storage or database plan, the configuration requires the following steps:
 
 1. The customer (portal user) or Mendix Operator creates the environment in the Private Mendix Platform wizard, selecting an azure-wi storage and/or database plan. The Mendix Operator automatically creates the UAMI, its federated credential, and annotates the environment's ServiceAccount with the Client ID. 
-2. The customer's Infrastructure Team creates an empty Key Vault named [mendix-<environment internal name>](#naming-conventions), with Azure RBAC selected as the permission model. 
+2. The customer's Infrastructure Team creates an empty Key Vault named `mendix-<environment internal name>`, with Azure RBAC selected as the permission model. For more information, see [Naming Conventions and Kubernetes Object Reference](#naming-conventions).
 3. The customer's Infrastructure Team grants the Key Vault Secrets Officer role on that Key Vault to the [Private Mendix Platform managed identity](#identity-pmp).
 4. The customer's Infrastructure Team grants the Key Vault Secrets User role on that Key Vault to the environment's [UAMI](#identity-uami).
 5. The customer (portal user) toggles **Enable Secret Store** for the environment in the Private Mendix Platform portal. Private Mendix Platform reads the UAMI Client ID from the existing ServiceAccount annotation automatically. 
@@ -183,7 +183,7 @@ For environments which do not use any `azure-wi` plans, the configuration requir
 1. The customer (portal user) creates the environment without an azure-wi storage or database plan. 
 2. The customer's Infrastructure Team creates a User-Assigned Managed Identity for this environment in Azure. The recommended naming for the UAMI is `mendix-<namespace><environment internal name><app CR UID>`. This matches the convention the Operator itself uses in Approach A, for consistency. 
 3. The customer's Infrastructure Team adds a federated credential to the UAMI, where the issuer is the cluster's OIDC issuer URL, and the subject is `system:serviceaccount:<namespace>:<environment internal name>`. 
-4. Create an empty Key Vault named mendix-<environment internal name>, with Azure RBAC selected as the permission model. 
+4. Create an empty Key Vault named `mendix-<environment internal name>`, with Azure RBAC selected as the permission model. 
 5. The customer's Infrastructure Team grants the Key Vault Secrets Officer role on that Key Vault to the [Private Mendix Platform managed identity](#identity-pmp).
 6. The customer's Infrastructure Team grants the Key Vault Secrets User role on that Key Vault to the environment's [UAMI](#identity-uami).
 7. The customer (portal user) toggle **Enable Secret Store** for the environment in the Private Mendix Platform portal. Private Mendix Platform detects that no ServiceAccount exists yet and prompts the user to provide a Client ID.
@@ -278,7 +278,7 @@ The CSI Secrets Store Driver or Azure provider is not installed in the cluster.
 
 Install the dependencies through the [Helm chart](#prerequisites).
 
-## CreateContainerError After Restart
+## CreateContainerError after Restart
 
 After a restart, the pod fails to start and shows a *CreateContainerError*.
 

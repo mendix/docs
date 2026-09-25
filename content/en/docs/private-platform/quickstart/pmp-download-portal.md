@@ -25,6 +25,8 @@ Before using the Download Portal, ensure that you have the following prerequisit
     * **Marketplace Bundles** access for managing component bundles
     * **Artifact Management** access for viewing and exporting container images
 
+* ORAS tool for working with OCI artifacts
+
 ## Accessing the Download Portal
 
 To access the Download Portal, go to [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/) and log in with your Mendix account.
@@ -114,8 +116,8 @@ The installer file downloads to your default download location.
 
 The *Tools* folder included in the installer file contains the following tools:
 
-* **Helmfile** - A declarative spec for deploying Helm charts.
-* **Helm** - A tool that streamlines installing and managing Kubernetes applications.
+* **Helmfile** - A declarative spec for deploying Helm charts. You do not need to use this tool directly - it runs automatically if needed.
+* **Helm** - A tool that streamlines installing and managing Kubernetes applications. You do not need to use this tool directly - it runs automatically if needed.
 * **mx-pclm-cli** - A tool used to manage Private Mendix Cloud License Manager (PCLM).
 * **mxpc-cli** - A configuration tool used to install the Mendix Operator.
 
@@ -135,26 +137,19 @@ All images and charts are now available in an OCI registry. In order to pull the
 
     1. Sign in to Mendix and go to **User Settings > Developer Settings > Personal Access Token**
     2. Click **New Token**.
-    3. Under **OCI registry**, select the **mx:registry:access** as scope.
+    3. Under **OCI registry**, select the **mx:registry:access** scope.
+    4. Click **Create** and save the token.
  
-3. Fetch the images.
+3. Fetch the images and the Private Mendix Platform Helmfile.
 
     1. Log in to the OCI registry for Oras by using the following command: `oras login -u pat -p <token>  registry.mendix.com`.
-    2. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, ` oras pull registry.mendix.com/private-platform/installer-helmfile:0.2.1`.
-    3. Unzip the downloaded file by using the following command: `tar -xvf helmfile-config.tar.gz`.
-    4. Test it by using the following command: `helmfile --file helmfile.d/helmfile.yaml --state-values-file <valuefile> apply`.
+    2. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, `oras pull registry.mendix.com/private-platform/installer-helmfile:0.2.1`.
+    3. Use the `oras pull` command to download the Helmfile from the OCI registry, for example, `oras pull registry.mendix.com/private-platform/pmp-pipeline-tools:0.10.2`.
 
-4. Pull the charts.
+4. Fetch the Mendix Operator charts.
 
     1. Log in to the OCI registry for Helm by using the following command: `helm registry login -u pat -p ${YOUR_PAT} registry.mendix.com`.
-    2. Use the `helm pull` command to download the Helmfile from the OCI registry, for example:
-
-    ```text
-    helm pull oci://registry.mendix.com/private-cloud/charts/mx-privatecloud-operator-installer --version 0.2.36
-    helm install operator mx-privatecloud-operator-installer-0.2.36.tgz -f ./Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml --namespace pmp-oci-test
-    ```
-
-    where `/Downloads/20260916T113717Z-pmp-test-oci-generated-values.yaml` is the yaml file for Operator configuration. You can find this yaml file among the example files in the installer package.
+    2. Use the `helm pull` command to download the Helmfile from the OCI registry, for example, `helm pull oci://registry.mendix.com/private-cloud/charts/mx-privatecloud-operator-installer --version 0.2.36`.
 
 #### Download Package API {#download-api}
 

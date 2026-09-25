@@ -116,8 +116,8 @@ The installer file downloads to your default download location.
 
 The *Tools* folder included in the installer file contains the following tools:
 
-* **Helmfile** - A declarative spec for deploying Helm charts. You do not need to use this tool directly - it runs automatically if needed.
-* **Helm** - A tool that streamlines installing and managing Kubernetes applications. You do not need to use this tool directly - it runs automatically if needed.
+* **Helmfile** - A declarative spec for deploying Helm charts. This tool is used for by the [Interactive Installer](/private-mendix-platform/interactive-installation/). You do not need to use it directly for [Helmfile installation](/private-mendix-platform/helmfile-installation/).
+* **Helm** - A tool that streamlines installing and managing Kubernetes applications. This tool is used for by the [Interactive Installer](/private-mendix-platform/interactive-installation/). You do not need to use it directly for [Helmfile installation](/private-mendix-platform/helmfile-installation/).
 * **mx-pclm-cli** - A tool used to manage Private Mendix Cloud License Manager (PCLM).
 * **mxpc-cli** - A configuration tool used to install the Mendix Operator.
 

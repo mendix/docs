@@ -24,19 +24,19 @@ Helmfile installation supports the following tasks:
 
 Before deploying the Mendix Private Platform components, you must install the Mendix Operator with proper configuration.
 
-The Helmfile installation does not support installing or upgrading the Mendix Operator with the `mx-ops-cli tool`. To install the Operator, perform the following steps.
+The Helmfile installation does not support installing or upgrading the Mendix Operator with the mx-ops-cli tool. To install the Operator, perform the following steps.
 
 ### Preparing the Installation Files
 
 Before you start the installation, download the required files by performing the following steps:
 
-1. Log in to the [Private Mendix Platform download portal](https://privateplatform.mendix.com/), click **Releases**.
+1. Log in to the [Private Mendix Platform download portal](https://privateplatform.mendix.com/).
 
     If you do not have access to the download portal, contact your Mendix partner for information.
 
 2. Find the installation by performing the following steps, depending on your Private Mendix Platform version:
 
-    * For version 2.8.1 and newer, go to **Artifacts Management**, select the version from the **Private Mendix Platform Version** dropdown, and select **Chart** as the **Artifact Type**.
+    * For version 2.8.1 and newer, go to **Artifacts Management**, select the version from the **Private Mendix Platform Version** dropdown, and select **Chart** as the **Artifact Type**. Select the charts and click **Export Selection**.
     * For version 2.8.0 and older, go to **Releases**, click the three-dot menu (**•••**) for the desired release, and then click **View addons**. Find the *Addons/pmp-charts-x.x.x.zip* file, where `x.x.x` is the version number, and click **Download**.
   
 3. Unzip the downloaded file to a local folder on your Windows or Linux server. The release binary contains the following files:
@@ -51,8 +51,9 @@ If you plan to use Maia AppGen and LLM gateway integration, you must configure t
 
 ```yaml
 operator_config:
-  # REQUIRED for Maia integration: Allow Mendix app Pods to access Kubernetes API
+  # REQUIRED for Maia integration: Allow Mendix app pods to access Kubernetes API
   runtimeAutomountServiceAccountToken: true
+  # Set runtimeAutomountServiceAccountToken: true in the Operator values file and apply the helm charts again.
 ```
 
 ## Installing the Mendix Operator {#install-operator}
@@ -76,7 +77,7 @@ You must configure the storage and database plans in the Operator installation v
 
 ### Private Cloud License Manager Credentials
 
-You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile.
+You must configure the Mendix Operator with Private Cloud License Manager (PCLM) credentials that match the credentials you will use when installing `mx-privatecloud-license-manager` with Helmfile. After installing Operator and PCLM, you must also update the license manager credentials in the Operator Helm chart *value* file, and then apply it again.
 
 {{% alert color="info" %}}
 The `operator_user` and `operator_password` in PCLM bootstrap configuration must exactly match the `licenseManager.username` and `licenseManager.password` in the Operator installation. A mismatch will prevent the Operator from obtaining licenses.

@@ -32,7 +32,9 @@ Private Mendix Platform can run with FIPS-compliant encryption across the entire
 You can perform the installation by using one of the following methods:
 
 * [With GUI](/private-mendix-platform/interactive-installation/), where you manually install Private Mendix Platform components
-* [With Helmfile](/private-mendix-platform/helmfile-installation/), where you use Helmfile to automatically install Private Mendix Platform components.
+* [With Helmfile](/private-mendix-platform/helmfile-installation/), where you use Helmfile to automatically install Private Mendix Platform components. Helm charts are available from  Private Mendix Platform 2.8.0. Namespaces created with  Private Mendix Platform 2.7.0 and older do not currently support Helm charts.
+
+Both types of installation can be performed in an [air-gapped environment](/private-mendix-platform/air-gapped-installation/).
 
 #### Installation Order
 
@@ -60,10 +62,10 @@ Private Mendix Platform depends on Mendix on Kubernetes for the installation and
 
 Before starting the installation process, make sure that you have all the necessary prerequisites:
 
-* A Kubernetes instance where the target namespace has already been created. For more information, see [Supported Providers: Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#supported-versions).
-* A database.  For more information, see [Supported Providers: Databases](https://docs.mendix.com/developerportal/deploy/private-cloud-supported-environments/#databases).
-* File storage. For more information, see [Supported Providers: File Storage](/developerportal/deploy/private-cloud-supported-environments/#file-storage).
-* A registry. For more information, see [Supported Providers: Container Registries](/developerportal/deploy/private-cloud-supported-environments/#container-registries).
+* A Kubernetes instance where the target namespace has already been created. For more information, see [Prerequisites: Supported Versions](/private-mendix-platform/prerequisites/#supported-versions).
+* A database.  For more information, see [Prerequisites: Databases](/private-mendix-platform/prerequisites/#databases).
+* File storage. For more information, see [Prerequisites: File Storage](/private-mendix-platform/prerequisites/#file-storage).
+* A registry. For more information, see [Prerequisites: Container Registries](/private-mendix-platform/prerequisites/#container-registries).
 * A domain.
 * For the PCLM component:
 

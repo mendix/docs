@@ -108,13 +108,13 @@ theme_atlas2/styles/web/sass/app/_custom-variables.scss
 
 To move your custom variable modifications to **Atlas 3**, there are two options: 
 
-**Option 1** — If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** SCSS file of the **Atlas 3 theme** directory:
+Option 1 – If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** SCSS file of the **Atlas 3 theme** directory:
 
 ```text
 theme/web/custom-variables.scss
 ```
 
-**Option 2** — If you want to extract the variables into a reusable module, move them into the **custom-variables** SCSS file of a module you have created in the **themesource** directory:
+Option 2 – If you want to extract the variables into a reusable module, move them into the **custom-variables** SCSS file of a module you have created in the **themesource** directory:
 
 ```text
 themesource/your-module/web/custom-variables.scss
@@ -130,13 +130,13 @@ theme_atlas2/styles/web/sass/app/_custom.scss
 
 To move your custom styling modifications to **Atlas 3**, there are two options: 
 
-**Option 1** — If the custom styling apply to the app level, then the modifications should be moved into the **main** SCSS file of the **Atlas 3 theme** directory: 
+Option 1 – If the custom styling apply to the app level, then the modifications should be moved into the **main** SCSS file of the **Atlas 3 theme** directory: 
 
 ```text
 theme/web/main.scss
 ```
 
-**Option 2** — If you want to extract the custom styling into a reusable module, move them into the **main** SCSS file of a module you have created in the **themesource** directory:
+Option 2 – If you want to extract the custom styling into a reusable module, move them into the **main** SCSS file of a module you have created in the **themesource** directory:
 
 ```text
 themesource/your-module/web/main.scss
@@ -152,7 +152,7 @@ theme_atlas2/styles/web/sass/app/_
 
 To move you additional stylesheets that you have added here to **Atlas 3**, there are two options: 
 
-**Option 1** — If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**:
+Option 1 – If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**:
 
 ```text
 theme/web/_
@@ -160,7 +160,7 @@ theme/web/_
 
 Remember to include `@import <file name>` in *theme/web/main.scss* to include your additional files in the compilation of the SCSS. 
 
-**Option 2** — If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**:
+Option 2 – If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**:
 
 ```text
 themesource/your-module/web/_
@@ -231,13 +231,13 @@ theme_atlas2/styles/native/app/custom-variables.js
 
 To move your custom variable modifications to **Atlas 3**, there are two options: 
 
-**Option 1** - If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** scss file of the **Atlas 3 theme** directory. 
+Option 1 - If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** scss file of the **Atlas 3 theme** directory. 
 
 ```text
 theme/native/custom-variables.js
 ```
 
-**Option 2** - If you want to extract the variables into a reusable module, move them into the **custom-variables** scss file of a module you have created in the **themesource** directory.
+Option 2 - If you want to extract the variables into a reusable module, move them into the **custom-variables** scss file of a module you have created in the **themesource** directory.
 
 ```text
 themesource/your-module/native/custom-variables.js
@@ -253,13 +253,13 @@ theme_atlas2/styles/native/app/_custom.js
 
 To move your custom styling modifications to **Atlas 3**, there are two options: 
 
-**Option 1** - If the custom styling apply to the app level, then the modifications should be moved into the **main** js file of the **Atlas 3 theme** directory. 
+Option 1 - If the custom styling apply to the app level, then the modifications should be moved into the **main** js file of the **Atlas 3 theme** directory. 
 
 ```text
 theme/native/main.js
 ```
 
-**Option 2** - If you want to extract the custom styling into a reusable module, move them into the **main** js file of a module you have created in the **themesource** directory.
+Option 2 - If you want to extract the custom styling into a reusable module, move them into the **main** js file of a module you have created in the **themesource** directory.
 
 ```text
 themesource/your-module/native/main.js
@@ -275,7 +275,7 @@ theme_atlas2/styles/native/app/_
 
 To move you additional stylesheets that you have added here to **Atlas 3**, there are two options: 
 
-**Option 1** - If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**. 
+Option 1 - If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**. 
 
 ```text
 theme/native/_
@@ -283,7 +283,7 @@ theme/native/_
 
 Remember to import the file using JavaScript's `import` syntax in *theme/native/main.js* and export the variable exposed by the imported file. 
 
-**Option 2** - If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**.
+Option 2 - If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**.
 
 ```text
 themesource/your-module/native/_
@@ -439,7 +439,7 @@ When you have completed the sections above, you may have errors in your error li
 
     {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/4-errors.png" alt="errors" class="no-border" >}}
 
-* For errors about the **Phone** or **Tablet** navigation profile no longer existing, right-click the error and select **Go to** which will navigate you to the widget that points to a missing Phone or Tablet profile — use one of these methods to solve the error:
+* For errors about the **Phone** or **Tablet** navigation profile no longer existing, right-click the error and select **Go to** which will navigate you to the widget that points to a missing Phone or Tablet profile—use one of these methods to solve the error:
     * Delete the layout
     * Delete the widget in the layout
     * Add the **Phone web** or **Tablet web** navigation profile to your Mendix application

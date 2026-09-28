@@ -97,7 +97,7 @@ The toolbar at this level contains the following buttons:
 
 * **Back** – takes you back to the top level
 * **Go to** – takes you directly to the selected element
-* **Merge** – start the merge process — instructions for resolving conflicts are in the document [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide9/new-merge-algorithm/) 
+* **Merge** – start the merge process—instructions for resolving conflicts are in the document [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide9/new-merge-algorithm/) 
 * **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
 
 The grid on the left contains the following columns

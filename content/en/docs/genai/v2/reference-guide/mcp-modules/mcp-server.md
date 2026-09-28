@@ -29,6 +29,7 @@ The current version has the following limitations:
 
 * Tools can only return String values, either directly as a String type or using the `TextContent` entity.
 * Prompts can only return a single message.
+* The `Path` of the MCP Server cannot contain `/`, so your server cannot have a multi-level path.
 
 {{% alert color="info" %}}
 Note that the MCP Server module is still in its early version, and the latest version may include breaking changes. Since both the open-source protocol and the Java SDK are still evolving and regularly updated, these changes may also affect this module.
@@ -46,9 +47,15 @@ This page documents MCP Server module versions [compatible with Agents Kit 2](/a
 
 ### Create MCP Server {#create-server}
 
-The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. You can use the created `MCPServer` to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, that means this value needs to be known to the MCP Client (usually set in a configuration file). After the action gets triggered, the server becomes available for external clients to connect. Note that the path cannot be `mcp` and cannot end on `/mcp`, because those are reserved endpoints. 
+The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. You can use the created `MCPServer` to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, that means this value needs to be known to the MCP Client (usually set in a configuration file).
 
-Based on your use case, this action can be triggered manually by an admin if wrapped around a microflow accessible in the UI, via an after start-up microflow, or by any other microflow, such as a scheduled event.
+For example, if `Path` is set to `mcp-ticketsystem`, the MCP Client will reach it via the URL `https://mymendixapp.com/mcp-ticketsystem/mcp`.
+
+{{% alert color="info" %}}
+`Path` cannot be `mcp` and cannot end on `/mcp`, because those are reserved endpoints. Additionally, `Path` cannot contain the `/` character.
+{{% /alert %}}
+
+After the `Create MCP Server` action gets triggered, the server becomes available for external clients to connect. Based on your use case, the action can be triggered manually by an admin if wrapped around a microflow accessible in the UI, via an after start-up microflow, or by any other microflow, such as a scheduled event.
 
 For example, see the `Example Implementations` folder inside the module, which contains logic to create a server, add an authentication microflow, and expose a tool and prompt.
 
@@ -84,7 +91,7 @@ The selected microflow must adhere to the following principles:
 * Input needs to be the same as described in the `Schema` attribute (only primitives and/or an object of type `MCPServer.Tool` are supported). If no Schema is passed in the `Add tool` action, it will be automatically created based on the microflow's input parameters, by setting all of them as required.
 * The return value must be either of type `String` or `TextContent`. You can create a `TextContent` object within the microflow to return the relevant information to the model based on the outcome of the microflow.
 
-When the tool microflow returns a `TextContent` object, you can set `IsError = True` to signal a handled error to the client. Use the `Content` attribute to describe what went wrong, for example, in a structured format — or to indicate that the LLM can retry. This requires the microflow to return `TextContent` directly; a microflow with a plain `String` return type cannot set `IsError` and always returns `IsError = False`. If the microflow throws an uncaught exception, `IsError` is set to `True` automatically, the full exception is logged server-side, and the client receives a generic error message with no internal details.
+When the tool microflow returns a `TextContent` object, you can set `IsError = True` to signal a handled error to the client. Use the `Content` attribute to describe what went wrong, for example, in a structured format—or to indicate that the LLM can retry. This requires the microflow to return `TextContent` directly; a microflow with a plain `String` return type cannot set `IsError` and always returns `IsError = False`. If the microflow throws an uncaught exception, `IsError` is set to `True` automatically, the full exception is logged server-side, and the client receives a generic error message with no internal details.
 
 For example, see the `Example Implementations` folder inside the module.
 

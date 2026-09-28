@@ -19,7 +19,7 @@ If your app is on a Studio Pro version below 10, you must upgrade in order of ve
 * [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)
 * [Upgrading from Mendix Studio Pro 9 to 10](/refguide10/upgrading-from-9-to-10/)
 
-If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the Control Center dashboard. Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
+If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the Control Center dashboard. Alternatively, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to find out how to check the Mendix version of your app.
 
 ### Steps Required for Upgrade
 
@@ -58,7 +58,7 @@ After the upgrade of your marketplace content, take the next steps:
 1. Fix any deprecation warnings you see in development in Studio Pro, as well as in the Mendix Runtime using your console and browser console. These deprecations could include, but are not limited to, the following:
     * [Document Templates](/refguide/document-templates/): deprecated in 10.24 
     * [Dojo-based Mendix Client](/refguide/mendix-client/): deprecated in 11.0
-    * Deprecated Java Version: depending on your Java version you may see errors — to resolve those errors, see [Java Version Migration](/refguide/java-version-migration/)
+    * Deprecated Java Version: depending on your Java version you may see errors—to resolve those errors, see [Java Version Migration](/refguide/java-version-migration/)
 1. Review the major changes in the sections below.
 1. Run your app, test all functionality, and ensure it works without error.
 1. Back up or commit your Mendix 10 app so you can return to it if necessary.

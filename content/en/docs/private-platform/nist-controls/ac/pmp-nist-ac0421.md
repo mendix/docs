@@ -36,10 +36,10 @@ The customer (application developer or builder) is responsible for implementing 
 
 The Private Mendix Platform provides the capability for application builders to implement custom microflows that precisely target and control information flows within their applications. Microflows can be designed to:
 
-* Enforce data routing rules — ensuring information is only passed between authorized entities or modules.
-* Implement conditional access logic — restricting data flows based on user roles, security contexts, or classification levels.
-* Separate information flows by domain — isolating data between different business units, tenants, or sensitivity levels within the same application.
-* Log and audit information flows — capturing flow events for monitoring and compliance purposes.
+* Enforce data routing rules – Ensuring information is only passed between authorized entities or modules.
+* Implement conditional access logic – Restricting data flows based on user roles, security contexts, or classification levels.
+* Separate information flows by domain – Isolating data between different business units, tenants, or sensitivity levels within the same application.
+* Log and audit information flows – Capturing flow events for monitoring and compliance purposes.
 
 Application builders are responsible for designing microflows that align with the physical and logical separation requirements defined by their organization's security policies.
 

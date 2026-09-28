@@ -61,7 +61,7 @@ It is the customer's responsibility to:
 
 The following evidence demonstrates compliance with SC-23 (05):
 
-* The Mendix Operator used by Private Mendix Platform [supports custom CA trust store — enforces org-defined CAs for all runtime/app TLS](/developerportal/deploy/standard-operator/#custom-tls).
+* The Mendix Operator used by Private Mendix Platform [supports custom CA trust store—enforces org-defined CAs for all runtime/app TLS](/developerportal/deploy/standard-operator/#custom-tls).
 * The Admin mode of Private Mendix Platform [explicitly instructs](/private-mendix-platform/reference-guide/admin/system/#configure-import) configuring CA trust for internal HTTPS.
 * The Runtime [CACertificates setting pins CA trust for apps' outbound TLS](https://docs.mendix.com/refguide/custom-settings/#cacertificates).
 * Ingress TLS through `cert-manager/secretName` [restricts inbound sessions to approved CA certs](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/advanced/) 

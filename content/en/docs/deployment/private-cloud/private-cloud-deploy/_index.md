@@ -398,7 +398,7 @@ This button contains a list of actions which you can perform quickly on the envi
 * **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
-* **Stop Application** — stops the application by reducing the number of replicas to zero; when you restart the application, the number of replicas set in the application will be started
+* **Stop Application** – stops the application by reducing the number of replicas to zero; when you restart the application, the number of replicas set in the application will be started
 * **Delete Environment** – allows you to delete the environment (see [Current Limitations](#limitations) for additional details about what is deleted); if you select this action, you must confirm your choice before the environment is deleted
 * **Set as Studio Pro Deployment target** – allows you to select the default target environment for Studio Pro deployment
 
@@ -568,7 +568,7 @@ By default, there will be no admin password set for your environment. This means
 
 ##### Delete Environment
 
-This deletes the environment — you will be asked to confirm this action.
+This deletes the environment—you will be asked to confirm this action.
 
 If the Mendix Gateway Agent is not connected, you can still delete the environment information in Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
 
@@ -576,9 +576,9 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/delete-environment.png" class="no-border" >}}
 
-For a *connected* cluster, the top level MendixApp CRD will be deleted from the namespace – this will cause the following environment resources set up by the Operator to be garbage collected:
+For a *connected* cluster, the top level MendixApp CRD will be deleted from the namespace—this will cause the following environment resources set up by the Operator to be garbage collected:
 
-* The database will be dropped and the database user will be deleted from the database server — databases and users from other environments will remain untouched.
+* The database will be dropped and the database user will be deleted from the database server—databases and users from other environments will remain untouched.
 
     {{% alert color="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched.{{% /alert %}}
 

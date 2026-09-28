@@ -290,7 +290,7 @@ If you cannot use automatic registration, you can register the client manually:
 
 1. Additionally, you need to add below information if you select **Allow Authorization-Code grant type**:
 
-    * **Post Logout redirect URI** – the fully qualified logout url, `<appurl>/logout` — for example, for testing a local OIDC SSO app on port `8081`, `http://localhost:8081/logout`
+    * **Post Logout redirect URI** – the fully qualified logout url, `<appurl>/logout`, for example, for testing a local OIDC SSO app on port `8081`, `http://localhost:8081/logout`
     * **Redirect URI** – Redirects support both URIs with and without a port. For example, `http://localhost/oauth/v2/callback` and `http://localhost:8081/oauth/v2/callback` for testing a local OIDC SSO app on port `8081`.
     * **Back channel logout session support**
     * **Front channel Logout URI**

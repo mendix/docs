@@ -6,11 +6,11 @@ description: "Describes how to use Data Importer in Studio Pro to import data fr
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}For Studio Pro version 11.14 and below, see the [Data Importer Extension](/appstore/modules/data-importer/).{{% /alert %}}
+
 ## Introduction
 
 Data Importer lets you define how data from Excel and CSV files is interpreted in your Mendix app. You create a Data Importer document based on an input file.
-
-{{% alert color="warning" %}}Data Importer is available in Studio Pro 11.15 and above. For versions below 11.15, see the [Data Importer](/appstore/modules/data-importer/) module in the Marketplace.{{% /alert %}}
 
 The document can be used in two ways:
 
@@ -30,9 +30,7 @@ The new Data Importer document opens.
 
 ## Previewing Data
 
-After creating the Data Importer document, click **Upload File** in **Select file from local** to upload an Excel file (*.xls* or *.xlsx*) or CSV file (*.csv*).
-
-CSV import supports multiple combinations of delimiter, quote, and escape characters. It also supports files without a header row.
+After creating the Data Importer document, click **Upload File** in **Select file from local** to upload an Excel file (*.xls* or *.xlsx*) or CSV file (*.csv*). You can upload file up to 10 MB size. 
 
 An Excel workbook can have one or multiple sheets. Choose which sheet to import data from and configure the Excel file settings below:
 
@@ -40,7 +38,7 @@ An Excel workbook can have one or multiple sheets. Choose which sheet to import 
 * **Header Row No.** – row number of the file header; the default is 1.
 * **Read Data From** – the row where data reading starts; the default is 2.
 
-For a CSV file, configure the following settings:
+CSV import supports multiple combinations of delimiter, quote, and escape characters. It also supports files without a header row. Configure the following settings:
 
 * **Delimiter (Separator)** – Supported delimiters are comma, semicolon, pipe, and tab. The default is comma.
 * **Quote Characters** – Supported quote characters are single quotes and double quotes. The default is double quotes.
@@ -78,6 +76,8 @@ Click **OK** to save your changes, or click **Cancel** to discard them.
 ## Creating an Entity
 
 After reviewing the entity structure in **Entity Preview**, click **Create Entity**. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data. For more details, see the [Using in the Import Data from File Activity](#using-in-the-activity) section below.
+
+To change the source file at any point, click **Remove File**, upload a new file, and reconfigure the document. Note that removing the file clears all structure elements and configured mappings.
 
 ## Using a Data Importer Document
 

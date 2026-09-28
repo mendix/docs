@@ -1,15 +1,19 @@
 ---
-title: "Data Importer"
+title: "Data Importer Extension"
 url: /appstore/modules/data-importer/
 description: "Overview of the Data Importer in Studio Pro"
 aliases:
     -  /appstore/modules/data-importer-extension/
 ---
 
+{{% alert color="warning" %}}
+For Studio Pro version 11.15 and above, see [Data Importer](/refguide/data-importer/).
+{{% /alert %}}
+
 ## Introduction
 
-{{% alert color="warning" %}}
-The Data Importer module is available in Studio Pro 11.14 and below versions. For Studio Pro 11.15 and above versions, see [Data Importer](/refguide/data-importer/).
+{{% alert color="info" %}}
+The Data Importer is available in [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
 {{% /alert %}}
 
 The [Data Importer](https://marketplace.mendix.com/link/component/219833) allows you to import data from an Excel or comma-separated value (CSV) file. You can choose which sheet and columns to import, preview the data, and create a non-persistable entity (NPE) in your domain model that corresponds to your input. Then, you can import data into your app using the [Import Data from File](/refguide/import-data-from-file/) activity.

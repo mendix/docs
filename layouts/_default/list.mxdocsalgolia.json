@@ -121,7 +121,8 @@ Define Global variables
                             {{- $scratch.SetInMap $uniqueHit "h6" $h6 -}}
                             {{- $uniqueHierarchy = printf "%s > %s" $uniqueHierarchy $h6 -}}
                         {{- end -}}
-                        {{- $text = trim (htmlUnescape ($processSlice | plainify)) " " -}}
+                        {{- /* strings.TrimSpace strips all Unicode whitespace including \r, \n, \t, and non-breaking spaces ( ) that trim " " misses */ -}}
+                        {{- $text = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
                         {{- $scratch.SetInMap $uniqueHit "text" $text -}}
                         {{- $scratch.SetInMap $uniqueHit "mendix_version" $pageDot.Params.mendix_version -}}
                         {{- $scratch.SetInMap $uniqueHit "time_stamp" $pageDot.Lastmod.UTC.Unix -}}

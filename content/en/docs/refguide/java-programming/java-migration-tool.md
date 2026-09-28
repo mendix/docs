@@ -13,7 +13,7 @@ The tool complements the [Update Assistant (Beta)](/refguide/update-assistant/) 
 
 ## Installation {#installation}
 
-Download the tool from Mendix CDN: https://cdn.mendix.com/mendix-java-migration-tool/jmt-1.0.1.jar
+Download the tool from Mendix CDN: https://cdn.mendix.com/mendix-java-migration-tool/jmt-1.0.2.jar
 
 ## Basic Usage {#basic-usage}
 
@@ -24,22 +24,22 @@ The following example rewrites all Java files in your app's  `javasource/` folde
 This example assumes:
 
 * The Java executable is saved to `C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot\bin\java`
-* `jmt-1.0.1.jar` is saved to the current folder
+* `jmt-1.0.2.jar` is saved to the current folder
 * Mendix 11.11.0 is installed at `C:\Program Files\Mendix\11.11.0`
 * Your app folder is `C:\Users\YourName\Mendix\MyApp`
 
 ```cmd
-"C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot\bin\java" -jar jmt-1.0.1.jar rewrite --to-version 11.11 --studio-pro "C:\Program Files\Mendix\11.11.0" --project-root "C:\Users\YourName\Mendix\MyApp"
+"C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot\bin\java" -jar jmt-1.0.2.jar rewrite --to-version 11.11 --studio-pro "C:\Program Files\Mendix\11.11.0" --project-root "C:\Users\YourName\Mendix\MyApp"
 ```
 
 Replace the paths and version number with the actual values for your installation. For all available commands and options, see [Commands](#commands) and [Options](#options).
 
 ## Commands {#commands}
 
-Run the tool with `java -jar jmt-1.0.1.jar <COMMAND> [OPTIONS]`.
+Run the tool with `java -jar jmt-1.0.2.jar <COMMAND> [OPTIONS]`.
 
 * If Java is on your `PATH`, call `java` directly. If not, provide the full path to the `java` executable.
-* Run the command from the folder where you saved `jmt-1.0.1.jar`, or specify its full path in the command.
+* Run the command from the folder where you saved `jmt-1.0.2.jar`, or specify its full path in the command.
 
 | Command | Description |
 |---------|-------------|
@@ -77,21 +77,21 @@ For the same reason, the Java code in your project must have been successfully c
 
 ```bash
 # List available recipes
-java -jar jmt-1.0.1.jar recipes
+java -jar jmt-1.0.2.jar recipes
 
 # Apply with full project context for accurate type resolution
-java -jar jmt-1.0.1.jar rewrite javasource/ -t 11.2.0 \
+java -jar jmt-1.0.2.jar rewrite javasource/ -t 11.2.0 \
   -p /path/to/mendix-project \
   -s "/path/to/Studio Pro 11.2.0"
 
 # Preview changes without writing (dry run)
-java -jar jmt-1.0.1.jar rewrite javasource/ -t 11.2.0 -n
+java -jar jmt-1.0.2.jar rewrite javasource/ -t 11.2.0 -n
 
 # Apply all applicable recipes to the javasource folder
-java -jar jmt-1.0.1.jar rewrite javasource/ -t 11.2.0
+java -jar jmt-1.0.2.jar rewrite javasource/ -t 11.2.0
 
 # Machine-readable output for CI/CD integration
-java -jar jmt-1.0.1.jar rewrite javasource/ -t 11.2.0 -o json
+java -jar jmt-1.0.2.jar rewrite javasource/ -t 11.2.0 -o json
 ```
 
 ### Output Formats {#output-formats}
@@ -137,6 +137,7 @@ Total changes: 2
 
 ## Release Notes
 
+* v1.0.2 - Added the `ReplaceEventHandlers` recipe to handle the `ActionListener.add\*Event` and `ListenersRegistry.register\*Listener` deprecated methods.
 * v1.0.1 – Fixed a bug in `retrieveXPathQuery` replacement recipe where helper methods were not properly imported. The recipe now  generates helper methods with fully qualified class names.
 * v1.0.0 – Initial release.
 

@@ -79,7 +79,7 @@ If the URL prefix breaks any of the rules mentioned above, you will get a consis
 You can select which Java version to use for you application. For information on how the Java version can influence the behavior of an application, see [Java Version Migration](/refguide/java-version-migration/).
 
 {{% alert color="info" %}}
-For Studio Pro 11, you should choose Java 21.
+For Studio Pro 11, you should choose Java 25.
 {{% /alert %}}
 
 For local development, the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk).

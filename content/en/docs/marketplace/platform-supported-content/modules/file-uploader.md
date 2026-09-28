@@ -56,8 +56,8 @@ For an advanced setup, useful when modifying the context entity is not possible,
 
 ##### Upload Mode
 
-* **Files** — Allows all file types by default, and adds a configuration option to specify a custom set of allowed file types.
-* **Images** — Limits uploads to images and shows a preview thumbnail.
+* **Files** – Allows all file types by default, and adds a configuration option to specify a custom set of allowed file types.
+* **Images** – Limits uploads to images and shows a preview thumbnail.
 
 ##### Associated Files / Associated Images
 
@@ -111,11 +111,11 @@ Allows the use of custom action buttons that will be displayed on the right side
 
 Adds custom buttons that will be used in the file uploader:
 
-* **Caption** — Caption text configuration for the custom button.
-* **Icon** — Provides icon configuration for the custom button.
-* **Action** — Provides **On click** action configuration for the custom button.
-* **Default file action** — If set to **Yes**, the action in the button will be used as the default click action for the file.
-* **Visible** — If set to **False**, the button will be hidden.
+* **Caption** – Caption text configuration for the custom button.
+* **Icon** – Provides icon configuration for the custom button.
+* **Action** – Provides **On click** action configuration for the custom button.
+* **Default file action** – If set to **Yes**, the action in the button will be used as the default click action for the file.
+* **Visible** – If set to **False**, the button will be hidden.
 
 ### Nanoflows
 

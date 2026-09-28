@@ -236,6 +236,7 @@ Blob storage isolation is enforced through cloud IAM. The Infra. Operator is res
 | Azure Blob | Separate container, managed identity auth |
 
 For more information, see the following topics:
+
 * [Published REST Services](/refguide/published-rest-services/)
 * [App Security](/refguide/security/)
 

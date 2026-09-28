@@ -17,8 +17,8 @@ Here is an example of a Selection Helper widget in a Gallery:
 
 Before using the Selection Helper widget, ensure the following:
 
-* **For Gallery** — Gallery widget is configured with Selection set to Multi.
-* **For Data Grid 2** — Data Grid 2 is configured with Selection set to Multi.
+* **For Gallery** – Gallery widget is configured with Selection set to Multi.
+* **For Data Grid 2** – Data Grid 2 is configured with Selection set to Multi.
 
 The Selection Helper must be placed inside the data widget's header content area. For specific guidance, see the subsections below.
 
@@ -40,16 +40,16 @@ The Selection Helper must be placed inside the data widget's header content area
 
 Controls how the selection control appears to users:
 
-* **Check box** (default) — Displays a standard checkbox that reflects the current selection state.
-* **Custom** — Allows you to define custom widgets for different selection states.
+* **Check box** (default) – Displays a standard checkbox that reflects the current selection state.
+* **Custom** – Allows you to define custom widgets for different selection states.
 
 #### Custom Style
 
 Available when `Style` is set to `Custom`. Defines custom widgets that display based on the current selection state:
 
-* **None Selected Widget** — Widget displayed when no items are currently selected. Usually contains **Select all** controls or empty state indicators.
-* **Some Selected Widget** — Widget displayed when some (but not all) items are selected. Often used to show **Select all** controls or partial selection indicators.
-* **All Selected Widget** — Widget displayed when all visible items in the grid are selected. Typically used to show **Clear selection** controls or indicators.
+* **None Selected Widget** – Widget displayed when no items are currently selected. Usually contains **Select all** controls or empty state indicators.
+* **Some Selected Widget** – Widget displayed when some (but not all) items are selected. Often used to show **Select all** controls or partial selection indicators.
+* **All Selected Widget** – Widget displayed when all visible items in the grid are selected. Typically used to show **Clear selection** controls or indicators.
 
 Here is an example of a **Selection Helper** widget with a custom style configured:
 

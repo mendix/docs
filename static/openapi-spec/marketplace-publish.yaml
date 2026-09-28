@@ -262,6 +262,104 @@ paths:
         '500':
           $ref: '#/components/responses/error500'
 
+  /releases/{releaseId}/publish:
+    post:
+      tags:
+        - components
+      summary: Publishes a draft release.
+      description: |-
+        Publishes a draft release and transitions it through the required review process. This allows Marketplace component publishers to manually publish a release that was created with the `publishManually` flag set to `true`.
+
+        **Authorization:** The user must have access to manage the component. The user is a developer of the component and meets user group rules.
+
+        **Prerequisites:**
+        - The release must exist in Marketplace.
+        - The release must be in `Draft` state.
+        - A source file must have been uploaded for the release.
+
+        **State Transition:**
+        After a successful publish request, the release transitions to one of the following states:
+        - `InReview`
+          - Mendix Admin approval is required for private components
+          - A security scan is required for public components
+        - `Published`
+          - Mendix Admin approval is not required for private components
+          - A security scan is not required
+
+        A release in the `InReview` state is automatically published to Marketplace and transitions to `Published` once all required review conditions have been satisfied.
+
+        **Response:** Use GET /releases/{releaseId} to check the current status of the release.
+      operationId: publishRelease
+      parameters:
+        - $ref: '#/components/parameters/releaseId'
+      responses:
+        '202':
+          description: The release was successfully submitted for publishing and is now being processed. Use the `Location` header to check the current status.
+          headers:
+            Location:
+              description: The URI to check the release status (e.g., `/v1/releases/{releaseId}`).
+              schema:
+                type: string
+                example: "/v1/releases/3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        '400':
+          description: |-
+            The request could not be processed.
+
+            Possible reasons include:
+            - The release does not have a source file uploaded yet
+            - The release metadata is incomplete or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                missing-source-file:
+                  value:
+                    error:
+                      code: 400
+                      message: Bad Request
+                      detail: "Cannot publish release without a source file. Please upload a source file first."
+                invalid-metadata:
+                  value:
+                    error:
+                      code: 400
+                      message: Bad Request
+                      detail: "Release metadata is incomplete or invalid."
+        '401':
+          $ref: '#/components/responses/error401'
+        '404':
+          $ref: '#/components/responses/error404'
+        '409':
+          description: |-
+            The request could not be completed due to a conflict with the current state of the release.
+
+            This error occurs when trying to publish a release that is not in `Draft` state (e.g., already in a `InReview`, `Declined`, or `Published` state).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                invalid-state-inreview:
+                  value:
+                    error:
+                      code: 409
+                      message: Conflict
+                      detail: "Cannot publish a release that is already in a `InReview` state."
+                invalid-state-published:
+                  value:
+                    error:
+                      code: 409
+                      message: Conflict
+                      detail: "Cannot publish a release that is already in a `Published` state."
+                invalid-state-declined:
+                  value:
+                    error:
+                      code: 409
+                      message: Conflict
+                      detail: "Cannot publish a release in a `Declined` state. Please update the source file or metadata first."
+        '500':
+          $ref: '#/components/responses/error500'     
+
 components:
   parameters:
     componentId:
@@ -284,7 +382,7 @@ components:
     fileName:
       name: file-name
       in: header
-      description: "The name of the source file being uploaded, including the file extension (for example, 'MyWidget.mpk', 'MyModule.mxmodule'). Supported extensions are: .mpk, .mxmodule, .mxsolution."
+      description: "The name of the source file being uploaded, including the file extension (for example, 'MyWidget.mpk', 'MyModule.mxmodule'). Supported extensions are .mpk, .mxmodule, .mxsolution."
       required: true
       schema:
         type: string

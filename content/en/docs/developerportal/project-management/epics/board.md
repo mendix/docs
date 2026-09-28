@@ -10,19 +10,19 @@ The **Board** page gives an overview of all the stories that your team is curren
 
 In the upper-right corner of the page, you can find the following items:
 
-* **Create Story** — Enables you to create a new story.    
+* **Create Story** – Enables you to create a new story.    
     You can also use Maia to create a story. Refer to the [Creating and Refining Stories with Maia](#create-with-maia) section.
 
-* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) — Clicking this displays the following options:
+* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this displays the following options:
 
-    * **Create Epic** — Enables you to create a new epic.
-    * **Settings** — Enables you to configure board settings, as follows:
+    * **Create Epic** – Enables you to create a new epic.
+    * **Settings** – Enables you to configure board settings, as follows:
 
         * Configure tags.
         * Switch between the Scrum and Kanban board types.
         * Configure toast notifications.
   
-* Search box — You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID. You can use the search box in combination with the filter.
+* **Search box** – You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID. You can use the search box in combination with the filter.
 
 ## Creating and Refining Stories with Maia {#create-with-maia}
 

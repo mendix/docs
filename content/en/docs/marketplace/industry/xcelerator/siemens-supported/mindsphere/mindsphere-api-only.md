@@ -18,7 +18,7 @@ Please note that this way is not a full integration with Insights Hub and has th
 
 * You cannot make your app multitenant – see [Multi-tenancy](/appstore/industry/mindsphere/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multitenancy
 * Your app cannot be deployed to the Insights Hub platform and cannot be added to the Insights Hub Developer Cockpit
-* End-users cannot use Insights Hub credentials to sign in to your app, so Insights Hub does not know anything about individual app end-users — you must design your app to handle any required security for each end-user
+* End-users cannot use Insights Hub credentials to sign in to your app, so Insights Hub does not know anything about individual app end-users—you must design your app to handle any required security for each end-user
 * You cannot use the fine grain access control on asset level via SDS.
 
 If you prefer a full Insights Hub app, please see [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/), [Insights Hub Module Details](/appstore/industry/mindsphere/mindsphere-module-details/) or follow the following learning paths:

@@ -22,7 +22,7 @@ The table below can help you find the correct MxBuild. Copy a URL from the corre
 
 {{% alert color="info" %}}
 
-A build number is included in the version, and this has to be included in the link path mentioned above — for example, `8.12.1.3458` is the 3458 build of the 8.12.1 Studio Pro release.
+A build number is included in the version, and this has to be included in the link path mentioned above—for example, `8.12.1.3458` is the 3458 build of the 8.12.1 Studio Pro release.
 
 You can find the build number in path of your Mendix installation (for example if your installation looks like this `C:\Program Files\Mendix\8.12.1.3458`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz](https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz)).
 

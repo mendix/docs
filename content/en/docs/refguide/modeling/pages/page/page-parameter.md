@@ -17,7 +17,7 @@ To use an object or primitive value in your page, define a parameter. In the ima
 
 ### Name
 
-* **Name** — The name of the parameter.
+* **Name** – The name of the parameter.
 
 ### Data Type
 

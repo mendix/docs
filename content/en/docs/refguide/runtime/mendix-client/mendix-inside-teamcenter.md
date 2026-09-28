@@ -221,6 +221,12 @@ Follow these steps to configure authentication.
 
         For instructions, see the [Adding an SSO Login Button to Your Login Page](/appstore/industry/teamcenter-connector/configuring-connection-2512/#add-sso-login-button) section of *Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above*.
 
+## Role Sharing with Teamcenter {#role-sharing}
+
+Teamcenter users can be assigned multiple roles, and the active role affects which objects and data the user can access. Active Workspace lets users switch roles within their session without logging in again.
+
+The active Teamcenter role is shared between Active Workspace and the embedded Mendix app. This means that a role switch in Active Workspace also applies to the Mendix app without requiring the user to reauthenticate. Switching roles reloads the Active Workspace interface, which also reloads the embedded Mendix app.
+
 ## Passing Context from Teamcenter {#passing-context}
 
 The `MendixEmbedded` Active Workspace component passes Teamcenter object context to the Mendix app as startup parameters. Configure these parameters in the `context` and `declarativeKeyContext` fields of the XRT `htmlPanel` and Product Lifecycle (PL) Home card.
@@ -239,7 +245,7 @@ An unavailable context path causes the parameter to receive `undefined`.
 Objects and arrays are not supported as Mendix parameters.
 {{% /alert %}}
 
-For more information about configuring context, see the []`mx-in-tc` README](https://github.com/mendixlabs/mendix-inside-teamcenter/blob/main/mx-in-tc/README.md) on GitHub.
+For more information about configuring context, see the [`mx-in-tc` README](https://github.com/mendixlabs/mendix-inside-teamcenter/blob/main/mx-in-tc/README.md) on GitHub.
 
 For the full `render()` API, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 

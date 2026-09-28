@@ -30,31 +30,31 @@ Right-click your module and click **Add other > External database connection** t
 
 Enter or select the following:
 
-* **Name** — name of your database connection
-* **Database Type** — Microsoft SQL, MySQL, Oracle, PostgreSQL, or Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
+* **Name** – name of your database connection
+* **Database Type** – Microsoft SQL, MySQL, Oracle, PostgreSQL, or Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
 
 ### Connection Details
 
 If you select **Use connection details**, enter:
 
-* **Host** — the host name (`localhost` when testing locally)
-* **Port** — the port number
-* **Database Name** — the name of the database
-* **User Name** — the username to access the database
-* **Password** — the password to access the database
+* **Host** – the host name (`localhost` when testing locally)
+* **Port** – the port number
+* **Database Name** – the name of the database
+* **User Name** – the username to access the database
+* **Password** – the password to access the database
 
 ### Connection String
 
 If you select **Use connection string**, enter the following:
 
-* **Username** — the username to access the database
-* **Password** — the password to access the database
-* **JDBC Connection String** — the connection string, in the following formats for each database type:
-    * **Microsoft SQL** — `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
-    * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
-    * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
-    * **PostgreSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
-    * **Snowflake** — `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
+* **Username** – the username to access the database
+* **Password** – the password to access the database
+* **JDBC Connection String** – the connection string, in the following formats for each database type:
+    * **Microsoft SQL** – `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
+    * **MySQL** – `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
+    * **Oracle** – `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
+    * **PostgreSQL** – `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
+    * **Snowflake** – `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
 
 ### Password Security
 
@@ -76,14 +76,14 @@ View data from the database in the [Tables & Columns](#tables-columns) screen on
 
 The Query field includes the following fields:
 
-* **Query Name** — query name, which is saved and can be used later
-* **SQL Query** — text box where you can enter your query
+* **Query Name** – query name, which is saved and can be used later
+* **SQL Query** – text box where you can enter your query
 
 In the **Parameters** field, click **Add Parameter** to enter the following information:
 
-* **Name** — name of the parameter that can be used in the **SQL Query** field (in the form of `{parameter_name}`)
-* **Data Type** — the type of data for your parameter
-* **Test Value** — enter or select the value of the parameter
+* **Name** – name of the parameter that can be used in the **SQL Query** field (in the form of `{parameter_name}`)
+* **Data Type** – the type of data for your parameter
+* **Test Value** – enter or select the value of the parameter
 
 Click **Run Query** to view a preview of the response.
 

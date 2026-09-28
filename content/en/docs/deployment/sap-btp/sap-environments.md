@@ -25,7 +25,7 @@ The environment details page contains the following tabs:
 * [General](#general-tab) – how the application is deployed on SAP BTP
 * [Model Options](#model-options-tab) – application constants and scheduled events
 * [Services](#binding-services) – Cloud Foundry service management
-* [Runtime](#runtime-tab) – custom environment variables which define **User-Provided Variables** in the SAP Cloud Foundry environment — pre-defined variables can be used to control the behavior of the Mendix Runtime
+* [Runtime](#runtime-tab) – custom environment variables which define **User-Provided Variables** in the SAP Cloud Foundry environment—pre-defined variables can be used to control the behavior of the Mendix Runtime
 
 {{< figure src="/attachments/deployment/sap-btp/sap-env-details/env-details.png" alt="" >}}
 

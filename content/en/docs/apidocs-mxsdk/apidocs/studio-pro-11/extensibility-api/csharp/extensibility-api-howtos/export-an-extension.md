@@ -7,6 +7,10 @@ weight: 99
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-11/) instead.
+{{% /alert %}}
+
 This how-to describes how to export an extension so you can publish it in the Marketplace or share it directly with other Mendix developers.
 
 ## Prerequisites

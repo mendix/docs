@@ -34,7 +34,7 @@ Privileged roles are organization-defined roles assigned to individuals that all
 
 Customers are responsible for defining and documenting their organization-specific privileged roles in alignment with job functions and the principle of least privilege, establishing formal processes for requesting, approving, and provisioning privileged access within Private Mendix Platform. They must conduct periodic access reviews to ensure role assignments remain appropriate, and supplement the platform's built-in monitoring audit logging  tools to capture a complete trail of privileged role changes. 
 
-Additionally, customers are responsible for defining and enforcing actions when privileged access is no longer appropriate — including integrating role revocation with Identity Provider (IdP) workflows to ensure timely de-provisioning upon employee offboarding or role changes, and establishing internal SLAs to govern the timeliness of such actions.
+Additionally, customers are responsible for defining and enforcing actions when privileged access is no longer appropriate—including integrating role revocation with Identity Provider (IdP) workflows to ensure timely de-provisioning upon employee offboarding or role changes, and establishing internal SLAs to govern the timeliness of such actions.
 
 ## Guidance
 

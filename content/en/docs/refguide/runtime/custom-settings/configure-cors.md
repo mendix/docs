@@ -62,7 +62,7 @@ mxruntime:
 
 If CORS is not working as expected, check the following:
 
-* **Browser console errors** — Look for CORS-related error messages in the browser developer tools console. These typically indicate which header is missing or misconfigured.
-* **Origin mismatch** — Ensure the value of `Access-Control-Allow-Origin` exactly matches the origin shown in the browser error, including the scheme (`https://`) and port number (if applicable).
-* **Missing `SameSiteCookies` setting** — Without `com.mendix.core.SameSiteCookies` set to `None`, cookies will not be sent on cross-origin requests, which can cause authentication failures.
-* **HTTPS requirement** — When `SameSiteCookies` is set to `None`, the `Secure` attribute is automatically added to cookies, meaning both the runtime and the client must be served over HTTPS.
+* **Browser console errors** – Look for CORS-related error messages in the browser developer tools console. These typically indicate which header is missing or misconfigured.
+* **Origin mismatch** – Ensure the value of `Access-Control-Allow-Origin` exactly matches the origin shown in the browser error, including the scheme (`https://`) and port number (if applicable).
+* **Missing `SameSiteCookies` setting** – Without `com.mendix.core.SameSiteCookies` set to `None`, cookies will not be sent on cross-origin requests, which can cause authentication failures.
+* **HTTPS requirement** – When `SameSiteCookies` is set to `None`, the `Secure` attribute is automatically added to cookies, meaning both the runtime and the client must be served over HTTPS.

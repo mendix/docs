@@ -36,7 +36,7 @@ A `ScheduledEventInformation` object is created every time the scheduled event d
 * **Status** – the current status of this run of the scheduled event:
     * **Running** – the event is currently running and has not yet ended
     * **Completed** – the event has completed successfully
-    * **Error** – the event completed with an error — you can find the error on the error log using the *StartTime* and *EndTime* to locate it if necessary
+    * **Error** – the event completed with an error—you can find the error on the error log using the *StartTime* and *EndTime* to locate it if necessary
     * **Stopped** – the scheduled event was stopped before completion, for example by the app being stopped or a cluster node becoming unhealthy
 
 {{% alert color="warning" %}}

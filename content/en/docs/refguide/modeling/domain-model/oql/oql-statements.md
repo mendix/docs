@@ -236,6 +236,7 @@ VALUES
 * Entity access rules are not applied to any OQL statements.
 * No event handlers will be executed.
 * Runtime and client state will not be updated with the changes.
+* [System members](/refguide/entities/#system-members) `createdDate`, `changedDate`, `owner` and `changedBy` cannot be directly set by OQL `INSERT` and `UPDATE` statements.
 
 ### Joins
 

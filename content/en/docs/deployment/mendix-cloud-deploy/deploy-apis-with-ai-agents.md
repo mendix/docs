@@ -214,4 +214,4 @@ https://mcp.home.mendix.com/ \
 
 ## Feedback
 
-To report an issue or request additional API coverage, contact your Mendix CSM.
+To report an issue or request additional API coverage, contact your Mendix Technical Account Manager, Specialized Account Executive, or Partner Contact.

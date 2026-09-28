@@ -1,4 +1,4 @@
-openapi: 3.0.4
+openapi: 3.0.3
 info:
   title: Cluster Service v1
   description: "Provide services for managing kubernetes clusters, namespaces, plans and the configuration. \r\n"

@@ -30,7 +30,7 @@ The new Data Importer document opens.
 
 ## Previewing Data
 
-After creating the Data Importer document, click **Upload File** in **Select file from local** to upload an Excel file (*.xls* or *.xlsx*) or CSV file (*.csv*). You can upload file up to 10 MB size. 
+After creating the Data Importer document, click **Upload File** in **Select file from local** to upload an Excel file (*.xls* or *.xlsx*) or CSV file (*.csv*). You can upload a file up to 10 MB size. 
 
 An Excel workbook can have one or multiple sheets. Choose which sheet to import data from and configure the Excel file settings below:
 
@@ -83,7 +83,7 @@ To change the source file at any point, click **Remove File**, upload a new file
 
 You can use a Data Importer document in two ways:
 
-* For a simple use cases, directly in the **Import data from file** activity to import data into non-persistable entities (NPEs).
+* For simple use cases, directly in the **Import data from file** activity to import data into non-persistable entities (NPEs).
 * As the schema source for an import mapping, when you need more control over how data is mapped to Mendix objects.
 
 ### Using in the Import Data from File Activity {#using-in-the-activity}

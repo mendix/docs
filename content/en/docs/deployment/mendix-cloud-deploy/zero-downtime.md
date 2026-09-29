@@ -61,8 +61,19 @@ Examples of changes that qualify for ZDT include:
 * Adjusting log-level settings
 * Changing resource limits, such as CPU or memory allocation
 * Rotating credentials or API keys
-* Other configuration updates made directly through the Cloud Portal
+* Other configuration updates made directly through the Cloud Portal.
 During these types of updates, Mendix Cloud performs the deployment in a way that keeps your environment continuously available.
+
+#### Model Change that are compatible with ZDT {#zdt-compatibility}
+
+* Microflows, except for changes to their parameter type, parameter count or parameter name
+* Folders (in the model)
+* Image data of ImageCollections
+* Image of an Entity
+* UserRole description text 
+* ModuleRole description text
+* Custom error messages configured for the delete behavior of parent/child associations
+* Model Version
 
 ### When ZDT Does Not Apply
 
@@ -71,6 +82,7 @@ Zero-downtime deployment will not apply under the following conditions:
 * Mendix Runtime versions below 10.24
 * Upgrading to a new Mendix Runtime version
 * Deploying a new MDA (application model update)
+    * Any changes that are outside the [above mentioned list](/developerportal/deploy/zero-downtime/#zdt-compatibility)
 * Changes involve database structure updates
 
 For these scenarios, the Cloud Portal will display the standard restart message before deployment.

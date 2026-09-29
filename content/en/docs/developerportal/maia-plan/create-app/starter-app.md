@@ -3,7 +3,12 @@ title: "Creating an App from a Starter App"
 url: /developerportal/maia-plan/using-starter-app/
 description: "Describes how to use a starter app to create an app in Maia Plan."
 weight: 50
+beta: true
 ---
+
+{{% alert color="info" %}}
+This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
+{{% /alert %}}
 
 ## Introduction
 

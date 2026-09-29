@@ -358,7 +358,7 @@ These settings have to be set as JVM properties, not as custom runtime settings.
 The `https.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
 {{% /alert %}}
 
-### Non-Proxy Hosts {#non-Proxy-Hosts}
+### Non-Proxy Hosts {#non-proxy-hosts}
 
 {{% alert color="info" %}}
 Using `http.nonProxyHosts` for http(s) connections was introduced in Mendix 11.10.0.

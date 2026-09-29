@@ -101,7 +101,7 @@ There are two main ways that you might use to host multiple applications.
 * Routing based on a (sub)domain
 * Routing based on a subpath
 
-Say we are hosting two apps, App1 and App2. In domain-based routing, every app gets its own domain (for example. `app1.domain.com` and `app2.domain.com`). In subpath-based routing, this would be on a subpath, for example `domain.com/app1` and `domain.com/app2`.
+Say we are hosting two apps: App1 and App2. In domain-based routing, every app gets its own domain (for example. `app1.domain.com` and `app2.domain.com`). In subpath-based routing, this would be on a subpath, for example `domain.com/app1` and `domain.com/app2`.
 
 When setting up either routing variant, most content is correctly served automatically as it is relative to the path in which it is being served. Exceptions to this include:
 
@@ -170,7 +170,7 @@ These settings are configured *per runtime instance*. If you have [scaled your a
 
 ### Migration Settings
 
-The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterwards, because they are not needed anymore.
+The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterward, because they are not needed anymore.
 
 Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than the current domain model specifies.
 
@@ -307,11 +307,11 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 
 ## OpenTelemetry Settings{#tracing-settings}
 
-The settings below configure observability (metrics, tracing, logs) through [OpenTelemetry](https://opentelemetry.io/docs). See [OpenTelemetry](/refguide/opentelemetry-in-runtime/) for more information on OpenTelemetry setup.
+The setting below configures observability (metrics, tracing, logs) through [OpenTelemetry](https://opentelemetry.io/docs). See [OpenTelemetry](/refguide/opentelemetry-in-runtime/) for information on setting up OpenTelemetry.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| <a id="OpenTelemetryMinimalMode" href="#OpenTelemetryMinimalMode">OpenTelemetry.MinimalMode</a> | Enable OpenTelemetry minimal tracing mode. Only generate incoming or outgoing spans. | false |
+| <a id="OpenTelemetryMinimalMode" href="#OpenTelemetryMinimalMode">OpenTelemetry.MinimalMode</a> | Enable OpenTelemetry minimal tracing mode. <br />When true, only generates incoming or outgoing spans. <br />*Introduced in Mendix version 11.15.0* | false |
 
 ## Proxy Settings {#proxy-settings}
 
@@ -358,7 +358,7 @@ These settings have to be set as JVM properties, not as custom runtime settings.
 The `https.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
 {{% /alert %}}
 
-### Non-proxy hosts {#non-proxy-hosts}
+### Non-Proxy Hosts {#non-Proxy-Hosts}
 
 {{% alert color="info" %}}
 Using `http.nonProxyHosts` for http(s) connections was introduced in Mendix 11.10.0.

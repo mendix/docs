@@ -73,9 +73,12 @@ You can filter out specific traces using the `mendix.tracing.filter` system prop
 Minimal tracing mode was introduced in Mendix 11.15.0.
 {{% /alert %}}
 
-In a multi-app landscape, you might want to track how requests flow between applications rather than examining the detailed handling within a single app. Tracing can also generate an overwhelming number of spans. _Minimal tracing mode_ helps by recording only incoming and outgoing spans.
+In a multi-app landscape, you might want to track how requests flow between applications rather than examining the detailed handling within a single app. Tracing can also generate an overwhelming number of spans.
 
-Enable minimal tracing mode by setting the `OpenTelemetry.MinimalMode` [custom runtime setting](/refguide/custom-settings) to `true`.
+Minimal tracing mode helps reduce the number of spans by recording only incoming and outgoing spans.
+
+To enable minimal tracing mode, set the `OpenTelemetry.MinimalMode` [custom runtime setting](/refguide/custom-settings/#OpenTelemetryMinimalMode) to `true`.
+
 ### Testing
 
 You can test the tracing using [Jaeger](https://www.jaegertracing.io/) or [Grafana](https://grafana.com).

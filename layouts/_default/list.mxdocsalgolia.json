@@ -1,6 +1,26 @@
 {{- /*
-Algolia generation based on this blog: https://web.archive.org/web/20201109041339/https://forestry.io/blog/search-with-algolia-in-hugo/
-Define Global variables
+Algolia search index generator — based on https://web.archive.org/web/20201109041339/https://forestry.io/blog/search-with-algolia-in-hugo/
+
+Outputs a JSON array of Algolia records, one per content chunk per page.
+
+Pages included: all non-draft, non-private pages of type "docs" or "swagger"
+that are descendants of the current section.
+
+How records are created:
+1. Each page's rendered HTML is split on heading tags (h2–h6), paragraph,
+   list item, table cell, alert div, and code block tags. This produces one
+   chunk per distinct piece of content.
+2. As chunks are processed, heading context (h2–h6 text and id anchors) is
+   tracked and updated. When a higher-level heading is encountered, all
+   deeper heading levels are reset.
+3. Heading chunks themselves are never written as records. Only non-heading
+   chunks produce a record, carrying the current heading context as fields.
+4. Each record includes: objectID (unique per chunk), title, h2–h6 heading
+   text, text (plain content), url (page URL with #anchor of deepest heading
+   in scope), unique_hierarchy (breadcrumb string), slug, description,
+   content_type, type, mendix_version, menu_order, time_stamp, weight.position,
+   and weight.tag_name (p / li / th / td / code / alert).
+5. Records with empty text are excluded.
 */ -}}
 {{- $firstloop := true -}}
 {{- /* Use a local scratchpad - Page scratchpad already contains other stuff */ -}}

@@ -59,6 +59,11 @@ Define Global variables
         {{- $h4 := "" }}
         {{- $h5 := "" }}
         {{- $h6 := "" }}
+        {{- $h2anchor := "" }}
+        {{- $h3anchor := "" }}
+        {{- $h4anchor := "" }}
+        {{- $h5anchor := "" }}
+        {{- $h6anchor := "" }}
         {{- $text := "" }}
         {{- range $processSlice := $contentSlices  -}}
             {{- /* sliceNumber tells us where we are in the file and gives us a way of making each hit unique */ -}}
@@ -71,24 +76,50 @@ Define Global variables
                     {{- /* Set up the heading level we are in */ -}}
                     {{- if eq $startSlice "<h2" -}}
                         {{- $h2 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
+                        {{- /* Extract the id attribute from the heading element for use as a URL anchor */ -}}
+                        {{- $anchorMatch := findRE `id="([^"]+)"` $processSlice 1 -}}
+                        {{- $h2anchor = "" -}}
+                        {{- range $anchorMatch -}}{{- $h2anchor = strings.TrimPrefix `id="` (strings.TrimSuffix `"` .) -}}{{- end -}}
                         {{- $h3 = "" -}}
                         {{- $h4 = "" -}}
                         {{- $h5 = "" -}}
                         {{- $h6 = "" -}}
+                        {{- $h3anchor = "" -}}
+                        {{- $h4anchor = "" -}}
+                        {{- $h5anchor = "" -}}
+                        {{- $h6anchor = "" -}}
                     {{- else if eq $startSlice "<h3" -}}
                         {{- $h3 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
+                        {{- $anchorMatch := findRE `id="([^"]+)"` $processSlice 1 -}}
+                        {{- $h3anchor = "" -}}
+                        {{- range $anchorMatch -}}{{- $h3anchor = strings.TrimPrefix `id="` (strings.TrimSuffix `"` .) -}}{{- end -}}
                         {{- $h4 = "" -}}
                         {{- $h5 = "" -}}
                         {{- $h6 = "" -}}
+                        {{- $h4anchor = "" -}}
+                        {{- $h5anchor = "" -}}
+                        {{- $h6anchor = "" -}}
                     {{- else if eq $startSlice "<h4" -}}
                         {{- $h4 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
+                        {{- $anchorMatch := findRE `id="([^"]+)"` $processSlice 1 -}}
+                        {{- $h4anchor = "" -}}
+                        {{- range $anchorMatch -}}{{- $h4anchor = strings.TrimPrefix `id="` (strings.TrimSuffix `"` .) -}}{{- end -}}
                         {{- $h5 = "" -}}
                         {{- $h6 = "" -}}
+                        {{- $h5anchor = "" -}}
+                        {{- $h6anchor = "" -}}
                     {{- else if eq $startSlice "<h5" -}}
                         {{- $h5 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
+                        {{- $anchorMatch := findRE `id="([^"]+)"` $processSlice 1 -}}
+                        {{- $h5anchor = "" -}}
+                        {{- range $anchorMatch -}}{{- $h5anchor = strings.TrimPrefix `id="` (strings.TrimSuffix `"` .) -}}{{- end -}}
                         {{- $h6 = "" -}}
+                        {{- $h6anchor = "" -}}
                     {{- else if eq $startSlice "<h6" -}}
                         {{- $h6 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
+                        {{- $anchorMatch := findRE `id="([^"]+)"` $processSlice 1 -}}
+                        {{- $h6anchor = "" -}}
+                        {{- range $anchorMatch -}}{{- $h6anchor = strings.TrimPrefix `id="` (strings.TrimSuffix `"` .) -}}{{- end -}}
                     {{- else -}}
                         {{- /*
                              * Get all the information for this piece of text (not a heading) and label it uniquely
@@ -148,7 +179,20 @@ Define Global variables
                         {{- end -}}
                         {{- $scratch.SetInMap $uniqueHit "weight.tag_name" $tagName -}}
                         {{- /* .RelPermalink gives the page address relative to the baseURL. It reflects any changes from the url: tag in the front matter */ -}}
-                        {{- $scratch.SetInMap $uniqueHit "url" $pageDot.RelPermalink -}}
+                        {{- /* Append the deepest available heading anchor so search results link directly to the relevant section */ -}}
+                        {{- $anchor := "" -}}
+                        {{- with $h6anchor -}}{{- $anchor = $h6anchor -}}{{- else -}}
+                            {{- with $h5anchor -}}{{- $anchor = $h5anchor -}}{{- else -}}
+                                {{- with $h4anchor -}}{{- $anchor = $h4anchor -}}{{- else -}}
+                                    {{- with $h3anchor -}}{{- $anchor = $h3anchor -}}{{- else -}}
+                                        {{- with $h2anchor -}}{{- $anchor = $h2anchor -}}{{- end -}}
+                                    {{- end -}}
+                                {{- end -}}
+                            {{- end -}}
+                        {{- end -}}
+                        {{- $pageURL := $pageDot.RelPermalink -}}
+                        {{- with $anchor -}}{{- $pageURL = printf "%s#%s" $pageDot.RelPermalink $anchor -}}{{- end -}}
+                        {{- $scratch.SetInMap $uniqueHit "url" $pageURL -}}
                         {{- $scratch.SetInMap $uniqueHit "slug" $pageDot.File.TranslationBaseName -}}
                         {{- $scratch.SetInMap $uniqueHit "unique_hierarchy" $uniqueHierarchy -}}
                     {{- end -}}

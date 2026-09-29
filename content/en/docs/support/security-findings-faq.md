@@ -30,7 +30,7 @@ You can find our best practices on how to make your app secure in [How To Implem
 
 ### Compliance Reports
 
-Compliance reports for Mendix, such as SOC, ISO, and PCI, are available to Mendix customers and prospects in the [Mendix profile in Conveyor](https://app.conveyor.com/profile/mendix). Request access using the email address you use for your Mendix account and you will be granted access. It can help speed up approval if you mention in the comments the name of your CSM and what document(s) you are looking for.
+Compliance reports for Mendix, such as SOC, ISO, and PCI, are available to Mendix customers and prospects in the [Mendix profile in Conveyor](https://app.conveyor.com/profile/mendix). Request access using the email address you use for your Mendix account and you will be granted access. It can help speed up approval if you mention in the comments the name of your Technical Account Manager, Specialized Account Executive, or Partner Contact and what document(s) you are looking for.
 
 {{% alert color="info" %}}
 Mendix does not make compliance reports available publicly, you will need to be a Mendix customer or prospect to have your access approved.

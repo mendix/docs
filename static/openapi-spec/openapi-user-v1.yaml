@@ -196,6 +196,48 @@ paths:
         - mxtoken: []
       servers:
         - url: 'https://pmp-demo.privateplatform.mendix.com/userservice/v1'
+
+  '/users/my-account/pat':
+    post:
+      tags:
+        - users
+      summary: 'Create user PAT (Personal Access Token)'
+      description: 'Create user PAT (Personal Access Token) with specified permission scopes'
+      operationId: CreateUserPAT
+      requestBody:
+        description: Input user PAT creation request
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserPATInput'
+            examples:
+              Input user PAT creation request:
+                value:
+                  tokenName: MyPAT
+                  expiryDate: 2028-12-31T23:59:59.999Z
+                  scopes:
+                    - scope: mx_app_read
+                    - scope: mx_app_write
+                    - scope: mx_group_read
+                    - scope: mx_cicd_build
+                    - scope: mx_cicd_deploy
+      responses:
+        '201':
+          $ref: '#/components/responses/userPAT'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://pmp-demo.privateplatform.mendix.com/userservice/v1'
+      x-codegen-request-body-name: PmpUserInput
+
 tags:
   - name: users
     description: ''
@@ -495,6 +537,36 @@ components:
                   roles:
                     - role: User
                   blocked: false
+
+    userPAT:
+      description: userPAT
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              tokenName:
+                type: string
+              expiryDate:
+                type: string
+              tokenValue:
+                type: string
+              joinedScope:
+                type: string
+            x-examples:
+              Example 1:
+                tokenName: MyPAT
+                expiryDate: '2028-12-31T23:59:59.999Z'
+                tokenValue: 'mxtoken xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+                joinedScope: 'mx:app:read mx:app:write mx:group:read mx:cicd:build mx:cicd:deploy'
+          examples:
+            User PAT:
+              value:
+                tokenName: MyPAT
+                expiryDate: '2028-12-31T23:59:59.999Z'
+                tokenValue: 'mxtoken xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+                joinedScope: 'mx:app:read mx:app:write mx:group:read mx:cicd:build mx:cicd:deploy'
+
   schemas:
     UserInput:
       type: object
@@ -588,6 +660,7 @@ components:
             - role: User
       xml:
         name: PmpUserInput
+
     UserPasswordInput:
       type: object
       title: UserPasswordInput
@@ -614,6 +687,60 @@ components:
           newPassword: $New-Password
       xml:
         name: UserPasswordInput
+
+    UserPATInput:
+      type: object
+      title: UserPATInput
+      description: User personal access token creation request
+      properties:
+        tokenName:
+          type: string
+          description: Name of the personal access token to be created.
+        expiryDate:
+          type: string
+          description: Expiry date for the personal access token (UTC date-time format).
+          example: "2028-12-31T23:59:59.999Z"
+        scopes:
+          type: array
+          description: Scopes for user personal access token.
+          items:
+            type: object
+            title: scopes
+            properties:
+              scope:
+                enum:
+                  - mx_app_read
+                  - mx_app_write
+                  - mx_app_team_write
+                  - mx_marketplace_read
+                  - mx_marketplace_write
+                  - mx_marketplace_share
+                  - mx_user_read
+                  - mx_user_write
+                  - mx_group_read
+                  - mx_group_write
+                  - mx_group_member_write
+                  - mx_cicd_build
+                  - mx_cicd_deploy
+                description: User scopes.
+            required:
+              - scope
+              
+      required:
+        - tokenName
+        - expiryDate
+        - scopes
+      x-examples:
+        User PAT creation request:
+          tokenName: MyPAT
+          expiryDate: "2028-12-31T23:59:59.999Z"
+          scopes:
+            - scope: mx_app_read
+            - scope: mx_app_write
+            - scope: mx_group_read
+            - scope: mx_cicd_build
+            - scope: mx_cicd_deploy
+
     error:
       type: object
       description: Error response

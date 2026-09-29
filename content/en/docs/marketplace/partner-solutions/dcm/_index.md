@@ -45,9 +45,9 @@ The Mendix DCM module is fully embedded into the Mendix application and runtime.
 
 ## Licensing and Availability
 
-* To obtain or renew a Mendix DCM license, contact your Mendix account manager.
-* Mendix DCM is available for projects based on Studio Pro 10.24 and above.
-* Mendix DCM is part of the Mendix price list. For more information or activation, contact your Mendix Customer Success Manager or your Sales representative.
+* To obtain or renew a Mendix DCM license, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
+* Mendix DCM is available for projects based on Studio Pro 11.12.0 and above.
+* Mendix DCM is part of the Mendix price list. For more information or activation, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 
 ## CaseFabric DCM Release Notes
 

@@ -111,7 +111,8 @@ On the **Support & Licensing** tab, select your license type, and add contact de
 
 3. Add the **Contact Email** of your support department.
 
-4. In the **Development Team** field, add the email addresses of the developers who have contributed to and own the component.
+4. In the **Development Team** field, add the email addresses of the developers who have contributed to and own the component.     
+    {{% alert color="info" %}}A company admin can change a component's developer by editing the latest version of that component.{{% /alert %}}
 
 #### Open-Source Software Licenses {#license}
 
@@ -198,8 +199,6 @@ Note that it may take a short while before the component becomes visible.
 
 For details on the approval process, refer to [Governance Process](/appstore/submit-content/governance-process/).
 
-Every new public component or component version is scanned through [QSM](/appstore/partner-solutions/qsm/), and, if no vulnerabilities are found, it is automatically uploaded. In case of vulnerabilities, Mendix manually checks the component or component version.
-
 ## Updating Existing Marketplace Content {#updating}
 
 After you publish a component to the Mendix Marketplace, it is your responsibility to make sure that the component is updated on a regular cadence. This is important to ensure compatibility with the latest versions of dependencies, especially Mendix Studio Pro. It is also required so Mendix can ensure the quality of components in the Marketplace.   
@@ -246,6 +245,12 @@ These fields cannot be edited while updating a component:
 * **Studio Pro Version**
 * **Release Version**
 * **License Type**
+
+## Scanning Components
+
+Mendix scans every new public component or component version through [QSM](/appstore/partner-solutions/qsm/). If no vulnerabilities are found, the component or version is automatically uploaded. If vulnerabilities are found, the component or version is declined, and its developer must fix the vulnerabilities and resubmit it for review.
+
+On top of that, Mendix performs a weekly scan of all latest versions of all Marketplace components. If no vulnerabilities are found, a **Scanned** label is displayed on the **Releases** tab of the component's Marketplace page. If vulnerabilities are found, the component owner is notified via email, with the option to publish a security fix. If vulnerabilities are not fixed within 30 days, the component is deprecated.
 
 ## Releasing Security Fixes {#security-fixes}
 

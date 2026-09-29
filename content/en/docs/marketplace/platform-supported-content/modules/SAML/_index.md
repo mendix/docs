@@ -105,7 +105,7 @@ Some SAML services, such as eHerkenning and DigID in the Netherlands, use option
 * RequestedAuthnContext in the SAML requests
 * HTTP-SOAP Logout Request
 
-If you need any of these features, contact your Mendix CSM to discuss the inclusion of these features on the Mendix roadmap or the customization of the SAML SSO module.
+If you need any of these features, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to discuss the inclusion of these features on the Mendix roadmap or the customization of the SAML SSO module.
 
 Versions of the SAML module below 3.5.0 are limited to a single key pair. If you are using one of those older versions and you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a certificate authority (CA). For more details, see the [Use a Certificate Issued by a Certificate Authority](/appstore/modules/saml/advanced-configuration/#use-ca) section of *Advanced Configuration for SAML*.
 

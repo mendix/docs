@@ -903,6 +903,7 @@ mx-privatecloud:
 Workload Identity and Secret Provider Class are different approaches for database credentials management.
 
 | Feature | Workload Identity (IAM Authentication) | Secret Provider Class |
+| --- | --- | --- |
 | Purpose | Passwordless database connection at runtime | Inject all secrets from vault during installation |
 | What it secures | Database passwords only | Database credentials and all other secrets |
 | Configuration | `awsIRSA.enable: true` or azureWorkloadIdentity.enable: true` and empty passwords | `secretProviderclass.enable: true` |

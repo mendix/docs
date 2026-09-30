@@ -107,4 +107,4 @@ studioPro.app.projectManager.addEventListener("projectClosing", async ({ project
 
 ### Getting the Current Project
 
-This API provides a `getProjectMetadata` method that you can use whenever an extension needs to perform an action requiring an initialized project, such as [creating a blob document](/apidocs-mxsdk/apidocs/web-extensibility-api-11/custom-blob-document-api/{#creating-a-document-from-code}). It returns a `ProjectMetadata` object that can also be `null`.
+This API provides a `getProjectMetadata` method that you can use whenever an extension needs to perform an action requiring an initialized project, such as [creating a blob document](/apidocs-mxsdk/apidocs/web-extensibility-api-11/custom-blob-document-api/#creating-a-document-from-code). It returns a `ProjectMetadata` object that can also be `null`.

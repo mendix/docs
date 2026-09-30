@@ -20,7 +20,7 @@ Follow these steps to have Maia create a project plan based on a starter app:
 
 1. In **Projects**, click **Create App** in the upper right corner.
 
-2. Select **Agentic Planning**. The **Plan & Build with Maia** window is displayed.
+2. Select **Plan & Create App**. The **Plan & Build with Maia** window is displayed.
 
 3. In the **Project Starting Point** section, select the radio button corresponding to the way in which you want to start your project. You can choose between the following:
 

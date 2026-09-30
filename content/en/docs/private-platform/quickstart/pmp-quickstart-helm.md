@@ -909,7 +909,6 @@ Workload Identity and Secret Provider Class are different approaches for databas
 | Configuration | `awsIRSA.enable: true` or azureWorkloadIdentity.enable: true` and empty passwords | `secretProviderclass.enable: true` |
 | Works with | AWS RDS IAM authentication or Azure Database Managed Identity authentication | AWS Secrets Manager, Azure Key Vault, HashiCorp Vault |
 | Credential type | Temporary cloud tokens (auto-rotated) | Static secrets from vault |
-| Can it be combined? | No - mutually exclusive with Secret Provider Class | No - mutually exclusive with Workload Identity |
 
 ##### Key Differences
 
@@ -956,7 +955,7 @@ Mendix Operator automatically performs the following tasks:
 {{% alert color="info" %}}
 When `UseStoragePlanwithIRSA` is set to `true`, the Mendix Operator creates the ServiceAccount, not the Helm chart. This causes the following limitations:
 
-* Chart-level `azureWorkloadIdentity` configuration does NOT work for mxplatform
+* Chart-level `azureWorkloadIdentity` configuration is not supported for mxplatform.
 * The chart cannot add `azure.workload.identity/client-id` annotation. The Service account will be created by the Operator.
 {{% /alert %}}
 
@@ -1037,7 +1036,6 @@ Workload Identity and Secret Provider Class are different approaches for databas
 | Credentials | Temporary cloud tokens (auto-rotated by AWS or Azure) | Static secrets from vault |
 | Configuration | In StoragePlan CRDs and `UseStoragePlanwithIRSA: true` | `secretProviderclass.enable: true` |
 | ServiceAccount | Created by Mendix Operator (based on StoragePlan) | Created by Helm chart |
-| Can it be combined? | No - mutually exclusive with Secret Provider Class | No - mutually exclusive with Workload Identity |
 
 ##### Key Differences
 
@@ -1060,9 +1058,7 @@ Use Secret Provider Class when:
 * You need multi-cloud secret management (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
 * You want centralized secret management across all Private Mendix Platform components (mx-privatecloud, svix-server, mxplatform).
 * You are using HashiCorp Vault or managing secrets across multiple cloud providers.
-* Example scenario: *I want to store all Private Mendix Platform installation secrets (PCLM password, admin password, database credentials) in Azure Key Vault and inject them during Helm installation.
-
-The two solutions cannot be used together. They are mutually exclusive for `mxplatform`.
+* Example scenario: *I want to store all Private Mendix Platform installation secrets (PCLM password, admin password, database credentials) in Azure Key Vault and inject them during Helm installation.*
 
 If `UseStoragePlanwithIRSA` is set to `true`, the Operator creates the ServiceAccount with database and storage identity. The chart then cannot use Secret Provider Class for that ServiceAccount.
 

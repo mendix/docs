@@ -51,9 +51,7 @@ Follow these steps to configure Dynamic Case Management Commons:
 
 You can find several useful documents in the **UseMe** folder. You can use them to quickly get started with building case-driven apps.
 
-   {{% alert color="info" %}}
-    All documents in the **Private** folder are meant for internal use within the module itself. Do not use these documents in your app, as they might change in future releases without notice.
-   {{% /alert %}}
+   {{% alert color="info" %}} All documents in the **Private** folder are meant for internal use within the module itself. Do not use these documents in your app, as they might change in future releases without notice.{{% /alert %}}
 
 ### Pages
 

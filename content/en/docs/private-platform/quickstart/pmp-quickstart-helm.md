@@ -554,13 +554,17 @@ global:
       - name: acr-secret  # Must exist in EACH namespace
 ```
 
-## Secret Management Using the Secret Provider Class
+## Secret Management Using the SecretProviderClass
 
-The Secret Provider class allows you to store all sensitive credentials (passwords, connection strings, API keys) in a centralized vault (Azure Key Vault, AWS Secrets Manager, or HashiCorp Vault) instead of hardcoding them in configuration files.
+The SecretProviderClass allows you to store all sensitive credentials (passwords, connection strings, API keys) in a centralized vault (Azure Key Vault, AWS Secrets Manager, or HashiCorp Vault) instead of hardcoding them in configuration files.
+
+{{% alert color="info" %}}
+You cannot combine SecretProviderClass with Workload Identity secret management. The two solutions are mutually exclusive.
+{{% /alert %}}
 
 ### Requirements
 
-To use the Secret Provider class, you must fulfill the following requirements:
+To use the SecretProviderClass, you must fulfill the following requirements:
 
 1. Install the CSI Secrets Store Driver with a provider plugin.
 2. Configure identity authentication (Azure Workload Identity or AWS IRSA).
@@ -710,6 +714,10 @@ This method is upgrade-safe. Existing credentials are preserved through lookup.
 ## Workload Identity 
 
 Workload Identity enables components to connect to cloud resources without passwords. Instead of storing passwords and access keys in configuration files, components use cloud-native identity (AWS IAM or Azure Managed Identity) to authenticate.
+
+{{% alert color="info" %}}
+You cannot combine Workload Identity with SecretProviderClass secret management. The two solutions are mutually exclusive.
+{{% /alert %}}
 
 ### Supported Components
 
@@ -1194,7 +1202,7 @@ If you encounter database connection failures, perform the following actions:
     * If `dbssl` is set to `true`, verify the CA certificate.
     * If using Secret Provider, verify that the CSI driver is installed.
 
-### Secret Provider Class issues
+### Secret Provider Class Issues
 
 If you encounter Secret Provider Class issues, perform the following actions:
 

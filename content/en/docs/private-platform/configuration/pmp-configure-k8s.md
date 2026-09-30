@@ -140,7 +140,11 @@ The settings in this section configure the images.
 
         1. Create a managed identity in the Azure portal
         2. Configure federated credentials for the Kubernetes service account.
-        3. In the **Managed Identity** section, add a role assignment with the **Storage Blob Data Reader** role scoped to the storage account.
+        3. In the **Managed Identity** section, add a role assignment with the following roles scoped to the storage account:
+
+            * **Storage Blob Data Contributor** - This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient.
+            * **Storage Blob Delegator** - This role permits Private Mendix Platform to delegate access to blobs by generating presigned (user delegation SAS) download URLs. It grants no data access of its own. MDA downloads may fail even when a blob data role is correctly assigned if Delegator is missing.
+
         4. Add an annotation to the service account, as in the following example:
 
             ```text
@@ -209,7 +213,11 @@ The settings in this section configure the storage for build output artifacts.
 * **Mda Storage Option** - Configure where to store the build output artifacts. The supported values are S3 Bucket and Azure Blob. This option requires the Azure Workload identity authentication. The default service account is used in the build pod for uploading the build artifacts. To configure the managed identity and service account, perform the following steps:
 
     1. Create or reuse a managed identity on Azure portal, and configure federated credentials for the Kubernetes service account.
-    2. In the **Managed Identity**, add a role assignment with the **Storage Blob Data Contributor** role scoped to the storage account.
+    2. In the **Managed Identity**, add a role assignment with the following roles scoped to the storage account:
+
+        * **Storage Blob Data Contributor** - This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient.
+        * **Storage Blob Delegator** - This role permits Private Mendix Platform to delegate access to blobs by generating presigned (user delegation SAS) download URLs. It grants no data access of its own. MDA downloads may fail even when a blob data role is correctly assigned if Delegator is missing.
+
     3. Add the correct annotation to the Service Account for build pod and PMP.
     4. Add annotations for the build pod and Private Mendix Platform to the service account, as in the following example:
 
@@ -222,7 +230,7 @@ The settings in this section configure the storage for build output artifacts.
                 azure.workload.identity/client-id: {client-id-build}
         ```
 
-    5. Add a role assignment with the Storage Blob Data Reader role scoped to the storage account to ensure that Private Mendix Platform can access the build metadata after the build is completed. If you are already using Azure Blob Storage (Azure managed identity authentication) for Private Mendix Platform, you can reuse the managed identity which was created by the Mendix Operator.
+    5. Add a role assignment with the Storage Blob Data Contributor role scoped to the storage account to ensure that Private Mendix Platform can access the build metadata after the build is completed. If you are already using Azure Blob Storage (Azure managed identity authentication) for Private Mendix Platform, you can reuse the managed identity which was created by the Mendix Operator.
 
         ```text
         kind: ServiceAccount

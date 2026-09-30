@@ -112,11 +112,18 @@ The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a 
 4. Optionally, configure context passing. For more information, see [Passing Context from Teamcenter](#passing-context).
 5. Rebuild Active Workspace using `awbuild.cmd`.
 
-To verify the component was picked up correctly, check that its view model entry exists in the `src/repo/out/pathMap.json` registry file in the build output.
+
+{{% alert color="info" %}}
+Installing a kit in the stage repository and rebuilding Active Workspace are standard Teamcenter procedures. If you have issues with these steps, refer to the Teamcenter documentation.
+{{% /alert %}}
 
 ### Registering the Component on a Page
 
-To display the Mendix app on an Active Workspace page, add its card definition to the relevant `layoutsViewModel.json` file in your Active Workspace stage repository. Set `declarativeKeyContext` to the URL of your Mendix runtime:
+To display the Mendix app on an Active Workspace page, add its card definition to the relevant `layoutsViewModel.json` file in your Active Workspace stage repository. Set `declarativeKeyContext` to the URL of your Mendix runtime.
+
+{{% alert color="info" %}}
+Adding a component to a PL Home page is a standard Teamcenter procedure. If you have issues with this step, or need more details on how and where to add an Active Workspace component to a PL Home page, refer to the Teamcenter documentation.
+{{% /alert %}}
 
 ```json
 "Mendix": {
@@ -138,13 +145,15 @@ To display the Mendix app on an Active Workspace page, add its card definition t
 
 * `view` is the name of the Mendix-inside-Teamcenter Active Workspace component obtained in the [previous section](#adding-component), that is "MendixEmbedded"
 
-Add the **Mendix** JSON object (or the name you gave it) to the relevant layout handler grid and rebuild Active Workspace. If the Mendix card does not appear after rebuilding, clear the browser cache to ensure the new chunk is loaded.
-
-Detailed Active Workspace customization and build steps are outside the scope of this documentation. Refer to the Siemens [Active Workspace Customization](https://docs.sw.siemens.com/en-US/doc/282219420/PL20250520748650994.Configuration/yiv1688486682769) documentation for instructions (link requires authentication).
+Add the **Mendix** JSON object (or the name you gave it) to the relevant layout handler grid and rebuild Active Workspace.
 
 ### Registering the Component on an XML Rendering Template (XRT)
 
 To display the Mendix app on an XRT, add the following to the document using the XRT editor:
+
+{{% alert color="info" %}}
+Editing an XRT document is a standard Teamcenter procedure. If you have issues with this step, or need more details on how to edit XRT documents, refer to the Teamcenter documentation.
+{{% /alert %}}
 
 ```xml
   <htmlPanel
@@ -173,6 +182,10 @@ Use the browser console CSP errors to identify any additional directives that st
 
 After updating the CSP, restart the Teamcenter Process Manager for the changes to take effect.
 
+{{% alert color="info" %}}
+Editing the gateway configuration and restarting the Process Manager are standard Teamcenter procedures. If you have issues with these steps, refer to the Teamcenter Security documentation.
+{{% /alert %}}
+
 {{% alert color="warning" %}}
 If Teamcenter returns `HTTP 401 Unauthorized` with a JWT signature error after restarting the Process Manager, restart the entire Teamcenter server.
 {{% /alert %}}
@@ -190,8 +203,6 @@ Follow these steps to configure authentication.
 1. **Register the Mendix App with Teamcenter Security Services**:
 
     Register the Mendix app in the Teamcenter Deployment Center so TcSS can authenticate it. For instructions, see [Registering Your App for Teamcenter SSO](/appstore/industry/teamcenter-connector/configuring-connection-2512/#register-your-app-for-teamcenter-sso).
-    
-    {{% alert color="info" %}}This step requires administrator access to Teamcenter.{{% /alert %}}
 
 2. **Configure the Teamcenter Connector Connection**:
 

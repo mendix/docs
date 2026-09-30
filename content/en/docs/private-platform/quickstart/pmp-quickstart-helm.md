@@ -569,7 +569,7 @@ To use the Secret Provider class, you must fulfill the following requirements:
 
 3. Grant vault access permissions to the identity.
 4. Store secrets in the vault with the correct key names.
-5. Enable `secretProviderclass` in hHelmfile configuration.
+5. Enable `secretProviderclass` in Helmfile configuration.
 6. Inject credentials from external secret management systems (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
 
 {{% alert color="info" %}}
@@ -902,6 +902,10 @@ mx-privatecloud:
 
 Workload Identity and Secret Provider Class are different approaches for database credentials management.
 
+{{% alert color="info" %}}
+You can combine Secret Provider Class with Workload Identity. Use Secret Provider Class for certain configurations, and Workload Identity with automated Managed Identity, or vice versa.
+{{% /alert %}}
+
 | Feature | Workload Identity (IAM Authentication) | Secret Provider Class |
 | --- | --- | --- |
 | Purpose | Passwordless database connection at runtime | Inject all secrets from vault during installation |
@@ -1043,6 +1047,10 @@ Workload Identity and Secret Provider Class are different approaches for databas
 * Secret Provider Class - Helm chart retrieves secrets from vault to configure or install the components (admin passwords, PCLM credentials, database connection strings).
 
 ##### Decision Matrix
+
+{{% alert color="info" %}}
+You can combine Secret Provider Class with Workload Identity. Use Secret Provider Class for certain configurations, and Workload Identity with automated Managed Identity, or vice versa.
+{{% /alert %}}
 
 Use Workload Identity (StoragePlan) when:
 

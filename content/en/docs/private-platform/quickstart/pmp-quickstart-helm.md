@@ -902,10 +902,6 @@ mx-privatecloud:
 
 Workload Identity and Secret Provider Class are different approaches for database credentials management.
 
-{{% alert color="info" %}}
-You can combine Secret Provider Class with Workload Identity. Use Secret Provider Class for certain configurations, and Workload Identity with automated Managed Identity, or vice versa.
-{{% /alert %}}
-
 | Feature | Workload Identity (IAM Authentication) | Secret Provider Class |
 | --- | --- | --- |
 | Purpose | Passwordless database connection at runtime | Inject all secrets from vault during installation |
@@ -913,6 +909,7 @@ You can combine Secret Provider Class with Workload Identity. Use Secret Provide
 | Configuration | `awsIRSA.enable: true` or azureWorkloadIdentity.enable: true` and empty passwords | `secretProviderclass.enable: true` |
 | Works with | AWS RDS IAM authentication or Azure Database Managed Identity authentication | AWS Secrets Manager, Azure Key Vault, HashiCorp Vault |
 | Credential type | Temporary cloud tokens (auto-rotated) | Static secrets from vault |
+| Can it be combined? | No - mutually exclusive with Secret Provider Class | No - mutually exclusive with Workload Identity |
 
 ##### Key Differences
 
@@ -1040,6 +1037,7 @@ Workload Identity and Secret Provider Class are different approaches for databas
 | Credentials | Temporary cloud tokens (auto-rotated by AWS or Azure) | Static secrets from vault |
 | Configuration | In StoragePlan CRDs and `UseStoragePlanwithIRSA: true` | `secretProviderclass.enable: true` |
 | ServiceAccount | Created by Mendix Operator (based on StoragePlan) | Created by Helm chart |
+| Can it be combined? | No - mutually exclusive with Secret Provider Class | No - mutually exclusive with Workload Identity |
 
 ##### Key Differences
 
@@ -1047,10 +1045,6 @@ Workload Identity and Secret Provider Class are different approaches for databas
 * Secret Provider Class - Helm chart retrieves secrets from vault to configure or install the components (admin passwords, PCLM credentials, database connection strings).
 
 ##### Decision Matrix
-
-{{% alert color="info" %}}
-You can combine Secret Provider Class with Workload Identity. Use Secret Provider Class for certain configurations, and Workload Identity with automated Managed Identity, or vice versa.
-{{% /alert %}}
 
 Use Workload Identity (StoragePlan) when:
 
@@ -1067,6 +1061,8 @@ Use Secret Provider Class when:
 * You want centralized secret management across all Private Mendix Platform components (mx-privatecloud, svix-server, mxplatform).
 * You are using HashiCorp Vault or managing secrets across multiple cloud providers.
 * Example scenario: *I want to store all Private Mendix Platform installation secrets (PCLM password, admin password, database credentials) in Azure Key Vault and inject them during Helm installation.*
+
+The two solutions cannot be used together. They are mutually exclusive for `mxplatform`.
 
 If `UseStoragePlanwithIRSA` is set to `true`, the Operator creates the ServiceAccount with database and storage identity. The chart then cannot use Secret Provider Class for that ServiceAccount.
 

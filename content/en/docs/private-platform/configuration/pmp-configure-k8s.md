@@ -140,7 +140,7 @@ The settings in this section configure the images.
 
         1. Create a managed identity in the Azure portal
         2. Configure federated credentials for the Kubernetes service account.
-        3. In the **Managed Identity** section, add a role assignment with the following role scoped to the storage account:
+        3. In the **Managed Identity** section, add a role assignment with the following role:
 
             * **Storage Blob Data Contributor** - This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient. As a best practice, for increased security, this role should be scoped at the container level, although scoping it to the storage account is also permitted.
 
@@ -212,7 +212,7 @@ The settings in this section configure the storage for build output artifacts.
 * **Mda Storage Option** - Configure where to store the build output artifacts. The supported values are S3 Bucket and Azure Blob. This option requires the Azure Workload identity authentication. The default service account is used in the build pod for uploading the build artifacts. To configure the managed identity and service account, perform the following steps:
 
     1. Create or reuse a managed identity on Azure portal, and configure federated credentials for the Kubernetes service account.
-    2. In the **Managed Identity**, add a role assignment with the following role scoped to the storage account:
+    2. In the **Managed Identity**, add a role assignment with the following role:
 
         * **Storage Blob Data Contributor** - This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient. As a best practice, for increased security, this role should be scoped at the container level, although scoping it to the storage account is also permitted.
 

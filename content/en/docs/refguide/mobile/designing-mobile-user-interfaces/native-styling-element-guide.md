@@ -1579,7 +1579,61 @@ The default class to style all gallery text filter widgets is named `com_mendix_
 
 ### Intro Screen {#intro-screen}
 
-todo: docs currently missing
+This intro screen widget displays paginated contents you can swipe through, and offers buttons on each page to proceed or go back:
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/intro-screen.gif" alt="intro screen"   width="350"  class="no-border" >}}
+
+```javascript
+export const com_mendix_widget_native_animation_Animation = {
+  fullscreenContainer: {
+    // This has all ViewStyle properties.
+  },
+  popupContainer: {
+    // This has all ViewStyle properties.
+  },
+  paginationContainer: {
+    // This has all ViewStyle properties.
+  },
+  paginationText: {
+    // This has all TextStyle properties.
+  },
+  dotStyle: {
+    // This has all ViewStyle properties.
+  },
+  activeDotStyle: {
+    // This has all ViewStyle properties.
+  },
+  buttonsContainer: {
+    // This has all ViewStyle properties.
+  },
+  container: {
+    // This has all ViewStyle properties. Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext.
+  },
+  caption: {
+    // This has all ViewStyle properties.
+  },
+  icon: {
+    size: null, // The size of the icon.
+    color: null, // The color of the icon.
+  },
+};
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `fullscreenContainer` | This has all ViewStyle properties. | |
+| `popupContainer` | This has all ViewStyle properties. | |
+| `paginationContainer` | This has all ViewStyle properties. | |
+| `paginationText` | This has all TextStyle properties. | |
+| `dotStyle` | This has all ViewStyle properties. | |
+| `activeDotStyle` | This has all ViewStyle properties. | |
+| `buttonsContainer` | This has all ViewStyle properties. | |
+| `container` | This has all ViewStyle properties. | Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext. |
+| `caption` | This has all ViewStyle properties. | |
+| `icon` | `size` | The size of the icon. |
+| `icon` | `color` | The color of the icon. |
+
+The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
 ### Line Chart
 
@@ -2073,37 +2127,7 @@ export const com_mendix_widget_native_rangeslider_RangeSlider = {
 
 The default class to style all range slider inputs is named `com_mendix_widget_native_rangeslider_RangeSlider`.
 
-### Safe Area View
-
-The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is supported for iOS and Android apps. Note that `container` styling will only be applied to the safe area.
-
-The widget's style properties are as follows:
-
-```javascript
-export const com_mendix_widget_native_safeareaview_SafeAreaView = {
-  container: {
-    // This has all ViewStyle properties.
-  },
-};
-```
-
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties. |        |
-
-The default class to style all safe area views is named `com_mendix_widget_native_safeareaview_SafeAreaView`.
-
-### Slider
-
-The slider widget simply allows you to change a number value using a slider. This is how a slider widget could look in an app:
-
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/slider.png" alt="slider"   width="300"  class="no-border" >}}
-
-This widget supports the same style properties as the [range slider](#range-slider) widget above.
-
-The default class to style all slider inputs is named `com_mendix_widget_native_slider_Slider`.
-
-### Ratings
+### Rating {#rating}
 
 The ratings widget allows users to rate an object from 0 to 5. This is how a ratings widget could look in an app:
 
@@ -2136,6 +2160,155 @@ export const com_mendix_widget_native_rating_Rating = {
 | `icon` | `selectedColor` | The color of the icon when selected. |
 
 The default class to style all rating inputs is named `com_mendix_widget_native_rating_Rating`.
+
+### Repeater {#repeater}
+
+todo -- add missing docs
+
+### Safe Area View
+
+The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is supported for iOS and Android apps. Note that `container` styling will only be applied to the safe area.
+
+The widget's style properties are as follows:
+
+```javascript
+export const com_mendix_widget_native_safeareaview_SafeAreaView = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+};
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. |        |
+
+The default class to style all safe area views is named `com_mendix_widget_native_safeareaview_SafeAreaView`.
+
+### Signature {#signature}
+
+The signature widget allows you to draw and save a signature. The signature widget looks like this: 
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/signature.png" alt="signature"   width="350"  class="no-border" >}}
+
+```javascript
+export const com_mendix_widget_native_signature_Signature = {
+  container: {
+    // This has all ViewStyle properties. 
+    penColor: null, // This will change the color of the stroke.
+  },
+  buttonWrapper: {
+    // This has all ViewStyle properties. 
+  },
+  buttonClearContainer: {
+    // This has all ViewStyle properties. 
+    rippleColor: null, // This will change the color of the ripple on Android.
+    activeOpacity: null, // This will change the opacity when touch is active on iOS.
+    underlayColor: null, // This will change the underlay color when touch is active on iOS.
+  },
+  buttonClearCaption: {
+    // This has all TextStyle properties. 
+  },
+  buttonSaveContainer: {
+    // This has all ViewStyle properties.
+  },
+  buttonSaveContainer: {
+    // This has all ViewStyle properties. 
+    rippleColor: null, // This will change the color of the ripple on Android.
+    activeOpacity: null, // This will change the opacity when touch is active on iOS.
+    underlayColor: null, // This will change the underlay color when touch is active on iOS.
+  }, 
+  buttonSaveCaption: {
+    // This has all TextStyle properties.
+  },
+};
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | | This has all ViewStyle properties.   |
+| `container` | `penColor` | This will change the color of the stroke. |
+| `buttonWrapper` | | This has all ViewStyle properties. |
+| `buttonClearContainer` | | This has all ViewStyle properties. |
+| `buttonClearContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonClearContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonClearContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonClearCaption` | | This has all TextStyle properties. |
+| `buttonSaveContainer` | | This has all ViewStyle properties. |
+| `buttonSaveContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonSaveContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonSaveContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonSaveCaption` | | This has all TextStyle properties. |
+
+The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
+
+### Slider
+
+The slider widget simply allows you to change a number value using a slider. This is how a slider widget could look in an app:
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/slider.png" alt="slider"   width="300"  class="no-border" >}}
+
+This widget supports the same style properties as the [range slider](#range-slider) widget above.
+
+The default class to style all slider inputs is named `com_mendix_widget_native_slider_Slider`.
+
+### Switch
+
+A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a Switch widget looks by default:
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="checkbox"   width="350"  class="no-border" >}}
+
+```javascript
+export const com_mendix_widget_native_switch_Switch = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  containerDisabled: {
+    // Same properties as `container`. Overrides `container` styles if the text box is non-editable.
+  },
+  input: {
+    // This has all TextStyle properties. 
+    trackColorOn: null, // Custom color for the switch track when turned on.
+    trackColorOff: null, // Custom color for the switch track when turned off.
+    thumbColorOn: null, // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
+    thumbColorOff: null, // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
+  },
+  inputError: {
+    // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
+  },
+  inputDisabled: {
+    // This has the same properties as `input`. Overrides `input` styles if the checkbox is non-editable.
+  },
+  label: {
+    // This has all TextStyle properties 
+    numberOfLines: 1, // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
+  },
+  labelDisabled: {
+    // Same properties as `label`. Overrides `label` styles if the checkbox is non-editable.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
+| `input` | This has all TextStyle properties.   |   |
+| `input` | `trackColorOn` | Custom color for the switch track when turned on. |
+| `input` | `trackColorOff` | Custom color for the switch track when turned off. |
+| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
+| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
+| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the checkbox is non-editable. |
+| `label` | This has all TextStyle properties   |  |
+| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the checkbox is non-editable. |
+| `validationMessage` | This has all TextStyle properties.   |  |
+
+The default class to style all checkbox inputs is named `com_mendix_widget_native_switch_Switch`.
 
 ### Toggle Buttons
 
@@ -2257,64 +2430,6 @@ export const com_mendix_widget_native_webview_WebView = {
 
 The default class to style all web views is named `com_mendix_widget_native_webview_WebView`. 
 
-### Introduction Screen
-
-This introduction screen widget displays paginated contents you can swipe through, and offers buttons on each page to proceed or go back:
-
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/intro-screen.gif" alt="intro screen"   width="350"  class="no-border" >}}
-
-```javascript
-export const com_mendix_widget_native_animation_Animation = {
-  fullscreenContainer: {
-    // This has all ViewStyle properties.
-  },
-  popupContainer: {
-    // This has all ViewStyle properties.
-  },
-  paginationContainer: {
-    // This has all ViewStyle properties.
-  },
-  paginationText: {
-    // This has all TextStyle properties.
-  },
-  dotStyle: {
-    // This has all ViewStyle properties.
-  },
-  activeDotStyle: {
-    // This has all ViewStyle properties.
-  },
-  buttonsContainer: {
-    // This has all ViewStyle properties.
-  },
-  container: {
-    // This has all ViewStyle properties. Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext.
-  },
-  caption: {
-    // This has all ViewStyle properties.
-  },
-  icon: {
-    size: null, // The size of the icon.
-    color: null, // The color of the icon.
-  },
-};
-```
-
-| Element | Style Properties | Description |
-| --- | --- | --- |
-| `fullscreenContainer` | This has all ViewStyle properties. | |
-| `popupContainer` | This has all ViewStyle properties. | |
-| `paginationContainer` | This has all ViewStyle properties. | |
-| `paginationText` | This has all TextStyle properties. | |
-| `dotStyle` | This has all ViewStyle properties. | |
-| `activeDotStyle` | This has all ViewStyle properties. | |
-| `buttonsContainer` | This has all ViewStyle properties. | |
-| `container` | This has all ViewStyle properties. | Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext. |
-| `caption` | This has all ViewStyle properties. | |
-| `icon` | `size` | The size of the icon. |
-| `icon` | `color` | The color of the icon. |
-
-The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
-
 #### CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
@@ -2404,121 +2519,6 @@ export const com_mendix_widget_native_carousel_Carousel = {
 | text | This has all TextStyle properties.| Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**. |
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
-
-### Signature {#signature}
-
-The signature widget allows you to draw and save a signature. The signature widget looks like this: 
-
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/signature.png" alt="signature"   width="350"  class="no-border" >}}
-
-```javascript
-export const com_mendix_widget_native_signature_Signature = {
-  container: {
-    // This has all ViewStyle properties. 
-    penColor: null, // This will change the color of the stroke.
-  },
-  buttonWrapper: {
-    // This has all ViewStyle properties. 
-  },
-  buttonClearContainer: {
-    // This has all ViewStyle properties. 
-    rippleColor: null, // This will change the color of the ripple on Android.
-    activeOpacity: null, // This will change the opacity when touch is active on iOS.
-    underlayColor: null, // This will change the underlay color when touch is active on iOS.
-  },
-  buttonClearCaption: {
-    // This has all TextStyle properties. 
-  },
-  buttonSaveContainer: {
-    // This has all ViewStyle properties.
-  },
-  buttonSaveContainer: {
-    // This has all ViewStyle properties. 
-    rippleColor: null, // This will change the color of the ripple on Android.
-    activeOpacity: null, // This will change the opacity when touch is active on iOS.
-    underlayColor: null, // This will change the underlay color when touch is active on iOS.
-  }, 
-  buttonSaveCaption: {
-    // This has all TextStyle properties.
-  },
-};
-```
-
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `container` | | This has all ViewStyle properties.   |
-| `container` | `penColor` | This will change the color of the stroke. |
-| `buttonWrapper` | | This has all ViewStyle properties. |
-| `buttonClearContainer` | | This has all ViewStyle properties. |
-| `buttonClearContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
-| `buttonClearContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
-| `buttonClearContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
-| `buttonClearCaption` | | This has all TextStyle properties. |
-| `buttonSaveContainer` | | This has all ViewStyle properties. |
-| `buttonSaveContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
-| `buttonSaveContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
-| `buttonSaveContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
-| `buttonSaveCaption` | | This has all TextStyle properties. |
-
-The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
-
-### Switch
-
-A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a Switch widget looks by default:
-
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/check-box.png" alt="checkbox"   width="350"  class="no-border" >}}
-
-```javascript
-export const com_mendix_widget_native_switch_Switch = {
-  container: {
-    // This has all ViewStyle properties. 
-  },
-  containerDisabled: {
-    // Same properties as `container`. Overrides `container` styles if the text box is non-editable.
-  },
-  input: {
-    // This has all TextStyle properties. 
-    trackColorOn: null, // Custom color for the switch track when turned on.
-    trackColorOff: null, // Custom color for the switch track when turned off.
-    thumbColorOn: null, // Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow.
-    thumbColorOff: null, // Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow.
-  },
-  inputError: {
-    // This has the same properties as `input`. Overrides `input` styles if there are validation errors.
-  },
-  inputDisabled: {
-    // This has the same properties as `input`. Overrides `input` styles if the checkbox is non-editable.
-  },
-  label: {
-    // This has all TextStyle properties 
-    numberOfLines: 1, // The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis.
-  },
-  labelDisabled: {
-    // Same properties as `label`. Overrides `label` styles if the checkbox is non-editable.
-  },
-  validationMessage: {
-    // This has all TextStyle properties.
-  },
-};
-```
-
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties.   |   |
-| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
-| `input` | This has all TextStyle properties.   |   |
-| `input` | `trackColorOn` | Custom color for the switch track when turned on. |
-| `input` | `trackColorOff` | Custom color for the switch track when turned off. |
-| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
-| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the checkbox is non-editable. |
-| `label` | This has all TextStyle properties   |  |
-| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the checkbox is non-editable. |
-| `validationMessage` | This has all TextStyle properties.   |  |
-
-The default class to style all checkbox inputs is named `com_mendix_widget_native_switch_Switch`.
 
 ## Read More
 

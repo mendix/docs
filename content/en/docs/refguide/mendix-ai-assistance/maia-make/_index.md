@@ -12,7 +12,7 @@ description_list: true
 {{% alert color="info" %}}
 Maia Make capabilities are available in Studio Pro 11.8 and above.
 
-To use Maia Make capabilities, you need an internet connection and must be signed in to Studio Pro.
+To use Maia Make capabilities, you need an internet connection. You must be signed in to Studio Pro unless you have configured a bring your own agent (BYO Agent).
 {{% /alert %}}
 
 Maia Make is a set of AI-assisted development capabilities in Studio Pro that are available through a unified conversational interface. Describe your requirements in natural language, and Maia generates development artifacts such as data structures, pages, and microflows.

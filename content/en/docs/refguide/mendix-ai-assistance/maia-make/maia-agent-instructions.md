@@ -1,5 +1,5 @@
 ---
-title: "Maia Agent Instructions (AGENTS.md)"
+title: "Agent Instructions (AGENTS.md)"
 linktitle: "Agent Instructions"
 url: /refguide/maia-agent-instructions/
 aliases:

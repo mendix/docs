@@ -860,7 +860,7 @@ Add-on widgets are distributed through the [Native Mobile Resources](/appstore/m
 
 ### Accordion
 
-PLACEHOLDER
+todo -- add missing documentation
 
 ### Activity Indicator {#activity-indicator}
 

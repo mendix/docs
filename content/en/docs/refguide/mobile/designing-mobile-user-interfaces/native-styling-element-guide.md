@@ -124,7 +124,7 @@ The default class to style all list views is named `ListView`.
 
 Text widgets are used in almost all app pages. Because of their ubiquity, learning to style text widgets will make a large difference for your apps.
 
-### Text
+### Text {#text}
 
 The text widget shows text which can optionally contain parameters. For more information on these widgets, see [Text Widgets](/refguide/text/). 
 
@@ -468,7 +468,7 @@ export const DropDown = {
 
 The default class to style all text areas is named `DropDown`.
 
-### Checkbox
+### Checkbox {#checkbox}
 
 A checkbox input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a checkbox widget in switch render mode looks by default:
 
@@ -551,7 +551,7 @@ export const Checkbox = {
 
 The default class to style all checkbox inputs is named `Checkbox`.
 
-### Date Picker
+### Date Picker {#date-picker}
 
 A date picker is an input widget that can be used to display and edit date or time attributes. This is how a date picker widget could look in an app:
 
@@ -707,7 +707,7 @@ The default class to style all dynamic images is named `NativeDynamicImage`.
 
 Buttons help your user perform actions. For more information about these widgets, see [Buttons](/refguide/button-widgets/).
 
-### Action Button
+### Action Button {#action-button}
 
 An action button can perform various actions such as calling a nanoflow, opening a page. 
 
@@ -858,7 +858,7 @@ The default class to style the navigation is named `navigationStyle`. There is n
 
 Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module, and are not shipped with Mendix Studio Pro. Other add-ons might also be distributed through app templates, as well as modules importing pages from other apps. 
 
-### Accordion
+### Accordion {#accordion}
 
 The accordion widget displays collapsible content sections with headers.
 
@@ -950,7 +950,7 @@ export const com_mendix_widget_native_activityindicator_ActivityIndicator = {
 
 The default class to style all activity indicators is named `com_mendix_widget_native_activityindicator_ActivityIndicator`.
 
-### Animation
+### Animation {#animation}
 
 The animation widget allows you to animate a container. You can make the content wiggle, move, change size, and more. The widget's style properties are as follows:
 
@@ -968,11 +968,11 @@ export const com_mendix_widget_native_animation_Animation = {
 
 The default class to style all animation widgets is named `com_mendix_widget_native_animation_Animation`.
 
-### App Events
+### App Events {#app-events}
 
 The app events widget allows you to set actions when your app’s network status is changed, and can let you set limits on action calls. This widget has no user interface so does not support any styling.
 
-### Background Gradient
+### Background Gradient {#background-gradient}
 
 The background gradient widget allows you to apply a background that transitions between multiple colors in a linear direction.
 
@@ -1010,7 +1010,7 @@ An object `{ color: string, offset: number }` that represents the color and the 
 | color | `string` | Colors can be passed in different formats. Valid color value formats are `#d0d0d0`, `rgb(115,155,155)`, or `rgba(195,226,226,0.5)` |
 | offset | `number` | A color-stop's value, followed by one or more optional stop positions (should be between `0.0` and `1.0`) |
 
-### Background Image
+### Background Image {#background-image}
 
 The background image widget enables layering one or more widgets on top of an image.
 
@@ -1034,7 +1034,7 @@ export const com_mendix_widget_native_backgroundimage_BackgroundImage = {
 
 The default class to style all background images is named `com_mendix_widget_native_backgroundimage_BackgroundImage`.
 
-### Badge
+### Badge {#badge}
 
 The badge widget displays text or values as a badge. This is how a badge widget could look in an app:
 
@@ -1058,7 +1058,7 @@ export const com_mendix_widget_native_badge_Badge = {
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
-### Bar Chart
+### Bar Chart {#bar-chart}
 
 The [Bar Chart](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) widget renders a horizontal bar graph based on static and dynamic data sets.
 
@@ -1192,7 +1192,7 @@ export const com_mendix_widget_native_barchart_BarChart = {
 
 The default class to style all bar chart widgets is named `com_mendix_widget_native_barchart_BarChart`.
 
-### Barcode Scanner
+### Barcode Scanner {#barcode-scanner}
 
 The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a styleable container.
 
@@ -1221,7 +1221,7 @@ export const com_mendix_widget_native_barcodescanner_BarcodeScanner = {
 
 The default class to style all barcode scanner widgets is named `com_mendix_widget_native_barcodescanner_BarcodeScanner`.
 
-### Bottom Sheet
+### Bottom Sheet {#bottom-sheet}
 
 The bottom sheet widget creates a set of options while blocking interaction with the rest of the screen or a draggable surface anchored to the bottom of the screen. There are two customizable variations:
 
@@ -1271,11 +1271,66 @@ export const com_mendix_widget_native_bottomsheet_BottomSheet = {
 
 The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
 
-### Carousel
+### Carousel {#carousel}
 
-PLACEHOLDER
+The carousel widget allows you to show swipeable items in a carousel.
 
-### Color Picker
+Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
+
+```javascript
+export const com_mendix_widget_native_carousel_Carousel = {
+  container: {
+    // This has all ViewStyle properties. Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`
+  },
+  cardLayout: {
+    // Styles the carousel when the layout is set to card.     
+    slideItem: {
+      // This has all ViewStyle properties. Styles the view surrounding each slide, including inactive slides.
+    },
+    inactiveSlideItem: {
+      opacity: null, // Allows inactive slides to become more smaller and faded.   
+      scale: null, // Allows inactive slides to become more smaller and faded.   
+    },
+    indicator: {
+      color: null, // Styles the loading indicator which will be shown while the carousel is loading.
+    },
+    pagination: {
+      container: {
+        // This has all ViewStyle properties. Styles the main view around pagination, regardless of text or dot.
+      },
+      dotStyle: {
+        // This has all ViewStyle properties. Styles all the pagination dots.   
+  color: null, 
+      },
+      inactiveDotStyle: {
+        // This has all ViewStyle properties. Additional styles for inactive dots. Will be merged with `dotStyle`.
+  opacity: null,
+  scale: null,
+  color: null,
+      },
+      dotContainerStyle: {
+        // This has all ViewStyle properties. Styles the view around individual pagination dots.  
+      },
+      text: {
+        // This has all TextStyle properties. Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**.
+      },
+    },
+  },
+
+  fullWidthLayout: {
+    // Styles the carousel when the layout is set to full width.
+    // Same properties as cardLayout.
+  },
+};
+```
+
+| Element  | Style Properties | Description    |
+| --- | --- | --- |
+| container | This has all ViewStyle properties. | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`.                             |
+| cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
+| fullWidthLayout | LayoutStyle  | Styles the carousel when the layout is set to full width. |
+
+### Color Picker {#color-picker}
 
 The color picker widget allows a user to pick a color from a color spectrum.
 
@@ -1297,7 +1352,7 @@ export const com_mendix_widget_native_colorpicker_ColorPicker = {
 
 The default class to style all color picker widgets is named `com_mendix_widget_native_colorpicker_ColorPicker`.
 
-### Column Chart
+### Column Chart {#column-chart}
 
 The [column chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/column-chart-native) widget renders a vertical column graph based on static and dynamic data sets.
 
@@ -1431,7 +1486,7 @@ export const com_mendix_widget_native_columnchart_ColumnChart = {
 
 The default class to style all column chart widgets is named `com_mendix_widget_native_columnchart_ColumnChart`.
 
-### Feedback
+### Feedback {#feedback}
 
 The feedback widget allows users to give direct feedback. This is how a feedback widget could look in an app:
 
@@ -1503,7 +1558,7 @@ export const com_mendix_widget_native_feedback_Feedback = {
 
 The default class to style all feedback widgets is named `com_mendix_widget_native_feedback_Feedback`. 
 
-### Floating Action Button
+### Floating Action Button {#floating-action-button}
 
 The floating action button widget lets you customize the appearance and functionality of floating action buttons. The widget’s style properties are as follows:
 
@@ -1554,7 +1609,7 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton 
 
 The default class to style all floating actions buttons is named `com_mendix_widget_native_floatingactionbutton_FloatingActionButton`.
 
-### Gallery
+### Gallery {#gallery}
 
 The Gallery widget (a replacement for both template grids and list views) helps you build beautiful lists and grids for tablet and mobile devices.
 
@@ -1697,7 +1752,7 @@ export const com_mendix_widget_native_animation_Animation = {
 
 The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
-### Line Chart
+### Line Chart {#line-chart}
 
 The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
 
@@ -1827,7 +1882,7 @@ export const com_mendix_widget_native_linechart_LineChart = {
 
 The default class to style all line chart widgets is named `com_mendix_widget_native_linechart_LineChart`.
 
-### List View Swipe
+### List View Swipe {#list-view-swipe}
 
 The list view swipe widget can make a list view interactive by adding swipe gestures and extra buttons in the background behind a list item:
 
@@ -1863,7 +1918,7 @@ export const com_mendix_widget_native_listviewswipe_ListViewSwipe = {
 
 The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
 
-### Maps
+### Maps {#maps}
 
 The maps widget supports various digital map providers. This is how a maps widget could look in an app:
 
@@ -1899,11 +1954,11 @@ The widget's style properties are as follows:
 
 The default class to style all map widgets is named `com_mendix_widget_native_maps_Maps`.
 
-### Notifications
+### Notifications {#notifications}
 
 The notifications widget lets you display a custom message in your app. This widget has no user interface so does not support any styling.
 
-### Pie/Doughnut Chart
+### Pie/Doughnut Chart {#pie-doughnut-chart}
 
 The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
 
@@ -1957,7 +2012,7 @@ export const com_mendix_widget_native_piedoughnutchart_PieDoughnutChart = {
 
 The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_widget_native_piedoughnutchart_PieDoughnutChart`.
 
-### Popup Menu
+### Popup Menu {#popup-menu}
 
 The popup menu widget allows you to show a context menu exactly where the user taps.
 
@@ -2029,7 +2084,7 @@ export const com_mendix_widget_native_popupmenu_PopupMenu = {
 | `dangerStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `danger` style selected.   |
 | `customStyle` |  This has all TextStyle properties.  | Styles all basic menu items which have the `custom` style selected.  |
 
-### Progress Bar
+### Progress Bar {#progress-bar}
 
 The progress bar widget shows percentage of progress. This is how a progress bar widget could look in an app:
 
@@ -2061,7 +2116,7 @@ export const com_mendix_widget_native_progressbar_ProgressBar = {
 
 The default class to style all progress bars is named `com_mendix_widget_native_progressbar_ProgressBar`.
 
-### Progress Circle
+### Progress Circle {#progress-circle}
 
 The progress circle widget displays progress in a circle using positive or negative values. This is how a progress circle widget could look in an app:
 
@@ -2105,7 +2160,7 @@ export const com_mendix_widget_native_progresscircle_ProgressCircle = {
 
 The default class to style all progress circles is named `com_mendix_widget_native_progresscircle_ProgressCircle`.
 
-### QR Code
+### QR Code {#qr-code}
 
 The QR code widget generates a QR code based on a value, which a user can then scan. This is how a QR code widget could look in an app:
 
@@ -2291,7 +2346,7 @@ export const com_mendix_widget_native_repeater_Repeater = {
 
 The default class to style all repeater widgets is named `com_mendix_widget_native_repeater_Repeater`.
 
-### Safe Area View
+### Safe Area View {#safe-area-view}
 
 The safe area view widget prevents content from being rendered in unwanted areas, such as behind rounded screen corners or notches. This widget is supported for iOS and Android apps. Note that `container` styling will only be applied to the safe area.
 
@@ -2378,7 +2433,7 @@ This widget supports the same style properties as the [range slider](#range-slid
 
 The default class to style all slider inputs is named `com_mendix_widget_native_slider_Slider`.
 
-### Switch
+### Switch {#switch}
 
 A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a Switch widget looks by default:
 
@@ -2436,7 +2491,7 @@ export const com_mendix_widget_native_switch_Switch = {
 
 The default class to style all checkbox inputs is named `com_mendix_widget_native_switch_Switch`.
 
-### Toggle Buttons
+### Toggle Buttons {#toggle-buttons}
 
 The toggle buttons widget allows you to set an enumeration attribute. This is how a toggle buttons widget could look in an app:
 
@@ -2480,7 +2535,7 @@ export const com_mendix_widget_native_togglebuttons_ToggleButtons = {
 
 The default class to style all toggle buttons is named `com_mendix_widget_native_togglebuttons_ToggleButtons`.
 
-### Video Player
+### Video Player {#video-player}
 
 The video player widget allows you to play video based on a URL, and is limited to MP4 only. This is how a video player widget could look in an app:
 
@@ -2530,7 +2585,7 @@ The widget’s style properties are as follows:
 
 The default class to style all video players is named `com_mendix_widget_native_videoplayer_VideoPlayer`.
 
-### Web View
+### Web View {#web-view}
 
 The web view widget allows you to embed static or dynamic websites in your app. The widget's style properties are as follows:
 
@@ -2565,65 +2620,6 @@ The default class to style all web views is named `com_mendix_widget_native_webv
 | `dividerColor` | `string`      | Styles the divider color.                         |
 
 The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
-
-### Carousel
-
-The carousel widget allows you to show swipeable items in a carousel.
-
-Main object has to have three objects called `container`, `cardLayout`, and `fullWidthLayout`. `cardLayout` and `fullWidthLayout` will be applied automatically depending on selected layout in widget properties.
-
-```javascript
-export const com_mendix_widget_native_carousel_Carousel = {
-  container: {
-    // This has all ViewStyle properties. Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`
-  },
-  cardLayout: {
-    // Styles the carousel when the layout is set to card.     
-    slideItem: {
-      // This has all ViewStyle properties. Styles the view surrounding each slide, including inactive slides.
-    },
-    inactiveSlideItem: {
-      opacity: null, // Allows inactive slides to become more smaller and faded.   
-      scale: null, // Allows inactive slides to become more smaller and faded.   
-    },
-    indicator: {
-      color: null, // Styles the loading indicator which will be shown while the carousel is loading.
-    },
-    pagination: {
-      container: {
-        // This has all ViewStyle properties. Styles the main view around pagination, regardless of text or dot.
-      },
-      dotStyle: {
-        // This has all ViewStyle properties. Styles all the pagination dots.   
-  color: null, 
-      },
-      inactiveDotStyle: {
-        // This has all ViewStyle properties. Additional styles for inactive dots. Will be merged with `dotStyle`.
-  opacity: null,
-  scale: null,
-  color: null,
-      },
-      dotContainerStyle: {
-        // This has all ViewStyle properties. Styles the view around individual pagination dots.  
-      },
-      text: {
-        // This has all TextStyle properties. Will be applied when there are more than five elements in carousel, in which case pagination buttons become text like **1/5**.
-      },
-    },
-  },
-
-  fullWidthLayout: {
-    // Styles the carousel when the layout is set to full width.
-    // Same properties as cardLayout.
-  },
-};
-```
-
-| Element  | Style Properties | Description    |
-| --- | --- | --- |
-| container | This has all ViewStyle properties. | Styles the view surrounding the carousel widget. For best results, make sure to give a fixed `height`.                             |
-| cardLayout | LayoutStyle | Styles the carousel when the layout is set to card  |
-| fullWidthLayout | LayoutStyle  | Styles the carousel when the layout is set to full width. |
 
 #### LayoutStyle
 

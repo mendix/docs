@@ -1577,6 +1577,176 @@ export const com_mendix_widget_native_gallerytextfilter_GalleryTextFilter = {
 
 The default class to style all gallery text filter widgets is named `com_mendix_widget_native_gallerytextfilter_GalleryTextFilter`.
 
+### Intro Screen {#intro-screen}
+
+todo: docs currently missing
+
+### Line Chart
+
+The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
+
+```javascript
+export const com_mendix_widget_native_linechart_LineChart = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  errorMessage: {
+    // This has all TextStyle properties. 
+  },
+  chart: {
+    // This has all ViewStyle properties. 
+  },
+  grid: {
+    backgroundColor: null, // Applies a color to the grid background (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty).
+    lineColor: null, // Applies a color to the grid lines (string).
+    lineWidth: null, // Applies a width to the grid lines (number).
+    padding: null, // Applies padding to all sides of the grid (number). Use it to make axis value labels visible.
+    paddingBottom: null, // Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible.
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible.
+    paddingLeft: null, // Applies padding to the left side of the grid (number). Use it to make axis value labels visible.
+    paddingRight: null, // Applies padding to the right side of the grid (number). Use it to make axis value labels visible.
+    paddingTop: null, // Applies padding to the top side of the grid (number). Use it to make axis value labels visible.
+    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible.
+  },
+  xAxis: {
+    color: null, // Applies a color to the axis value labels (string).
+    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+    fontFamily: null, // Applies fonts to the axis value labels (string).
+    fontSize: null, // Applies a size to the axis value labels (number).
+    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
+    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
+    lineColor: null, // Applies a color to the axis line (string).
+    lineWidth: null, // Applies a width to the axis line (number).
+    label: { 
+      // All TextStyle properties.
+      relativePositionGrid: null, // Positions the axis label at the bottom or right side of the grid ("bottom" or "right").
+    },
+  },
+  yAxis: {
+    // All `xAxis` element styles.
+  },
+  legend: {
+    container: {
+      // All ViewStyle properties.
+    },
+    item: {
+      // All ViewStyle properties. 
+    },
+    indicator: {
+      // All ViewStyle properties. 
+    },
+    label: {
+      // All ViewStyle properties. 
+    }
+  },
+  lines: {
+    lineColorPalette: null, // Provides colors to lines that do not have a line color configured (string with list of colors separated by ';').
+    customLineStyles: {
+      any_custom_line_style_name: {
+        line: {
+          dashArray: null, // Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
+          ending: null, // Applies a flat or rounded line end to the graph line ("flat" or "round").
+          lineColor: null, // Applies a color to the graph line (string).
+          lineWidth: null, // Applies a width to the graph line (number).
+        },
+        markers: {
+          backgroundColor: null, // Applies a background color to the markers of the graph line (string).
+          borderColor: null, // Applies a border color to the markers of the graph line (string).
+          borderWidth: null, // Applies a border width to the markers of the graph line (string).
+          display: null, // Influences whether markers are displayed. When displayed, it positions the markers of the graph line on top or underneath the line ("false" or "underneath" or "onTop").
+          size: null, // Applies a size to the markers of the graph line (number).
+          symbol: null, // Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp").
+        }
+      }
+    }
+  }
+};
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
+| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `grid` | `lineColor` | Applies a color to the grid lines (string). |
+| `grid` | `lineWidth` | Applies a width to the grid lines (number). |
+| `grid` | `padding` | Applies padding to all sides of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). Use it to make axis value labels visible. |
+| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible. |
+| `xAxis` | `color` | Applies a color to the axis value labels (string). |
+| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `xAxis` | `fontFamily` | Applies fonts to the axis value labels (string). |
+| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
+| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
+| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
+| `xAxis` | `lineWidth` | Applies a width to the axis line (number). |
+| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the bottom or right side of the grid ("bottom" or "right"). |
+| `yAxis` | All `xAxis` element styles. | |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the top or left side of the grid ("top" or "left"). |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `lines` | `lineColorPalette` | Provides colors to lines that do not have a line color configured (string with list of colors separated by ';'). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `dashArray` | Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `ending` | Applies a flat or rounded line end to the graph line ("flat" or "round"). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `lineColor` | Applies a color to the graph line (string). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `lineWidth` | Applies a width to the graph line (number). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `backgroundColor` | Applies a background color to the markers of the graph line (string). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `borderColor` | Applies a border color to the markers of the graph line (string). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `borderWidth` | Applies a border width to the markers of the graph line (string). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `display` | Influences whether markers are displayed. When displayed, it positions the markers of the graph line on top or underneath the line ("false" or "underneath" or "onTop"). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `size` | Applies a size to the markers of the graph line (number). |
+| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `symbol` | Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp"). |
+
+The default class to style all line chart widgets is named `com_mendix_widget_native_linechart_LineChart`.
+
+### List View Swipe
+
+The list view swipe widget can make a list view interactive by adding swipe gestures and extra buttons in the background behind a list item:
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/list-view-swipe-buttons.gif" alt="list view swipe"   width="350"  class="no-border" >}}
+
+```javascript
+export const com_mendix_widget_native_listviewswipe_ListViewSwipe = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  leftAction: {
+    // This has all ViewStyle properties.
+    panelSize: null, // The number of pixels and the combined size of the background buttons.
+    threshold: null, // The number of pixels to accept the swipe action.
+  },
+  rightAction: {
+    // This has all ViewStyle properties.
+    panelSize: null, // The number of pixels and the combined size of the background buttons.
+    threshold: null, // The number of pixels to accept the swipe action.
+  },
+};
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | |
+| `leftAction` | This has all ViewStyle properties. | |
+| `leftAction` |`panelSize` | The number of pixels and the combined size of the background buttons. |
+| `leftAction` |`threshold` | The number of pixels to accept the swipe action. |
+| `rightAction` | This has all ViewStyle properties. | |
+| `rightAction` |`panelSize` | The number of pixels and the combined size of the background buttons. |
+| `rightAction` |`threshold` | The number of pixels to accept the swipe action. |
+
+The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
+
 ### Maps
 
 The maps widget supports various digital map providers. This is how a maps widget could look in an app:
@@ -1616,6 +1786,132 @@ The default class to style all map widgets is named `com_mendix_widget_native_ma
 ### Notifications
 
 The notifications widget lets you display a custom message in your app. This widget has no user interface so does not support any styling.
+
+### Pie/Doughnut Chart
+
+The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
+
+```javascript
+export const com_mendix_widget_native_piedoughnutchart_PieDoughnutChart = {
+  container: {
+    // This has all ViewStyle properties. 
+  },
+  slices: {
+    customStyles: {
+      any_custom_key: {
+        slice: {
+          color: null, // Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice.
+          fontFamily: null, // Applies a font type to the slice label (string).
+          fontSize: null, //  Applies a size to the slice label (number).
+          fontStyle: null, // Applies a font style to the slice label (**normal** or **italic**).
+          fontWeight: null, // Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100).
+        },
+      },
+    },
+    colorPalette: null, // Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';').
+    innerRadius: null, //  Applies an inner radius to the chart when in doughnut presentation mode (number).
+    padding: null, // Applies padding to all sides of the chart (number).
+    paddingBottom: null, // Applies padding to the bottom side of the chart (number).
+    paddingHorizontal: null, // Applies padding to the horizontal sides of the chart (number).
+    paddingLeft: null, // Applies padding to the left side of the chart (number).
+    paddingRight: null, // Applies padding to the right side of the chart (number).
+    paddingTop: null, // Applies padding to the top side of the chart (number).
+    paddingVertical: null, // Applies padding to the vertical sides of the chart (number).
+  },
+};
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `slices` > `customStyles` > `any_custom_key` > `slice` | `color` | Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice. |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontFamily` | Applies a font type to the slice label (string). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontSize` | Applies a size to the slice label (number). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontStyle` | Applies a font style to the slice label (**normal** or **italic**). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontWeight` | Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100). |
+| `slices` | `colorPalette` | Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';'). |
+| `slices` | `innerRadius` | Applies an inner radius to the chart when in doughnut presentation mode (number). |
+| `slices` | `padding` | Applies padding to all sides of the chart (number). |
+| `slices` | `paddingBottom` | Applies padding to the bottom side of the chart (number). |
+| `slices` | `paddingHorizontal` | Applies padding to the horizontal sides of the chart (number). |
+| `slices` | `paddingLeft` | Applies padding to the left side of the chart (number). |
+| `slices` | `paddingRight` | Applies padding to the right side of the chart (number). |
+| `slices` | `paddingTop` | Applies padding to the top side of the chart (number). |
+| `slices` | `paddingVertical` | Applies padding to the vertical sides of the chart (number). |
+
+The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_widget_native_piedoughnutchart_PieDoughnutChart`.
+
+### Popup Menu
+
+The popup menu widget allows you to show a context menu exactly where the user taps.
+
+A main object has four objects:
+
+```javascript
+export const com_mendix_widget_native_popupmenu_PopupMenu = {
+  basic: {
+  // BasicItemStyle. Styles basic items.
+    container: {
+      // This has all ViewStyle properties. Styles the wrapper container around a basic item. 
+    },
+    itemStyle: {
+      ellipsizeMode: null, // 'head', 'middle', 'tail', or 'clip'. Styles how the text will be clipped if its too long.
+      rippleColor: null, // Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms.
+      defaultStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `default` style selected.
+      },
+      primaryStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `primary` style selected.
+      },
+      dangerStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `danger` style selected.
+      },
+      customStyle: {
+        // This has all TextStyle properties. Styles all basic menu items which have the `custom` style selected.
+      },
+    },
+    dividerColor: null, // Styles the divider color. 
+  },
+
+  custom: {
+    // CustomItemStyle. Styles custom items.
+    // This has the same properties as BasicItemStyle.
+  },
+
+  buttonContainer: {
+    // This has all ViewStyle properties. Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. 
+  },
+  container: {
+    // This has all ViewStyle properties. Styles the wrapper view around the whole menu.
+  },
+};
+```
+
+| Element | Style Properties | Description  |
+| ---| --- | ---|
+| `basic`     | BasicItemStyle |Styles basic items.  |
+| `custom`    | CustomItemStyle |Styles custom items.  |
+| `buttonContainer` | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
+| `container` | This has all ViewStyle properties. | Styles the wrapper view around the whole menu. |
+
+#### BasicItemStyle
+
+| Element    | Style Properties |  Description     |
+| ----| ---- | ------ |
+| `container` | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
+| `itemStyle` | ItemStyle      | Styles the basic items.      |
+| `dividerColor` | `string`      | Styles the divider color.    |
+
+#### ItemStyle
+
+| Element | Style Properties  | Description  |
+| -------------| ----- | ----- |
+| `ellipsizeMode` | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
+| `rippleColor` | `string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
+| `defaultStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `default` style selected.   |
+| `primaryStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `primary` style selected.   |
+| `dangerStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `danger` style selected.   |
+| `customStyle` |  This has all TextStyle properties.  | Styles all basic menu items which have the `custom` style selected.  |
 
 ### Progress Bar
 
@@ -1720,6 +2016,10 @@ export const com_mendix_widget_native_qrcode_QRCode = {
 | `qrcode` | `backgroundColor` | The background color behind the QR code. |
 
 The default class to style all QR codes is named `com_mendix_widget_native_qrcode_QRCode`.
+
+### Radio Buttons {#radio-buttons}
+
+todo -- add missing documentation
 
 ### Range Slider {#range-slider}
 
@@ -2015,114 +2315,6 @@ export const com_mendix_widget_native_animation_Animation = {
 
 The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
-### List View Swipe
-
-The list view swipe widget can make a list view interactive by adding swipe gestures and extra buttons in the background behind a list item:
-
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/list-view-swipe-buttons.gif" alt="list view swipe"   width="350"  class="no-border" >}}
-
-```javascript
-export const com_mendix_widget_native_listviewswipe_ListViewSwipe = {
-  container: {
-    // This has all ViewStyle properties.
-  },
-  leftAction: {
-    // This has all ViewStyle properties.
-    panelSize: null, // The number of pixels and the combined size of the background buttons.
-    threshold: null, // The number of pixels to accept the swipe action.
-  },
-  rightAction: {
-    // This has all ViewStyle properties.
-    panelSize: null, // The number of pixels and the combined size of the background buttons.
-    threshold: null, // The number of pixels to accept the swipe action.
-  },
-};
-```
-
-| Element | Style Properties | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties. | |
-| `leftAction` | This has all ViewStyle properties. | |
-| `leftAction` |`panelSize` | The number of pixels and the combined size of the background buttons. |
-| `leftAction` |`threshold` | The number of pixels to accept the swipe action. |
-| `rightAction` | This has all ViewStyle properties. | |
-| `rightAction` |`panelSize` | The number of pixels and the combined size of the background buttons. |
-| `rightAction` |`threshold` | The number of pixels to accept the swipe action. |
-
-The default class to style all animation widgets is named `com_mendix_widget_native_listviewswipe_ListViewSwipe`.
-
-### Popup Menu
-
-The popup menu widget allows you to show a context menu exactly where the user taps.
-
-A main object has four objects:
-
-```javascript
-export const com_mendix_widget_native_popupmenu_PopupMenu = {
-  basic: {
-  // BasicItemStyle. Styles basic items.
-    container: {
-      // This has all ViewStyle properties. Styles the wrapper container around a basic item. 
-    },
-    itemStyle: {
-      ellipsizeMode: null, // 'head', 'middle', 'tail', or 'clip'. Styles how the text will be clipped if its too long.
-      rippleColor: null, // Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms.
-      defaultStyle: {
-        // This has all TextStyle properties. Styles all basic menu items which have the `default` style selected.
-      },
-      primaryStyle: {
-        // This has all TextStyle properties. Styles all basic menu items which have the `primary` style selected.
-      },
-      dangerStyle: {
-        // This has all TextStyle properties. Styles all basic menu items which have the `danger` style selected.
-      },
-      customStyle: {
-        // This has all TextStyle properties. Styles all basic menu items which have the `custom` style selected.
-      },
-    },
-    dividerColor: null, // Styles the divider color. 
-  },
-
-  custom: {
-    // CustomItemStyle. Styles custom items.
-    // This has the same properties as BasicItemStyle.
-  },
-
-  buttonContainer: {
-    // This has all ViewStyle properties. Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. 
-  },
-  container: {
-    // This has all ViewStyle properties. Styles the wrapper view around the whole menu.
-  },
-};
-```
-
-| Element | Style Properties | Description  |
-| ---| --- | ---|
-| `basic`     | BasicItemStyle |Styles basic items.  |
-| `custom`    | CustomItemStyle |Styles custom items.  |
-| `buttonContainer` | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
-| `container` | This has all ViewStyle properties. | Styles the wrapper view around the whole menu. |
-
-#### BasicItemStyle
-
-| Element    | Style Properties |  Description     |
-| ----| ---- | ------ |
-| `container` | This has all ViewStyle properties. | Styles the wrapper container around a basic item. |
-| `itemStyle` | ItemStyle      | Styles the basic items.      |
-| `dividerColor` | `string`      | Styles the divider color.    |
-
-#### ItemStyle
-
-| Element | Style Properties  | Description  |
-| -------------| ----- | ----- |
-| `ellipsizeMode` | `head`, `middle`, `tail`, or `clip` | Styles how the text will be clipped if its too long. |
-| `rippleColor` | `string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
-| `defaultStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `default` style selected.   |
-| `primaryStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `primary` style selected.   |
-| `dangerStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `danger` style selected.   |
-| `customStyle` |  This has all TextStyle properties.  | Styles all basic menu items which have the `custom` style selected.  |
-
 #### CustomItemStyle
 
 | Element                   | Style Properties |  Description                                      |
@@ -2269,190 +2461,6 @@ export const com_mendix_widget_native_signature_Signature = {
 | `buttonSaveCaption` | | This has all TextStyle properties. |
 
 The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
-
-### Line Chart
-
-The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
-
-```javascript
-export const com_mendix_widget_native_linechart_LineChart = {
-  container: {
-    // This has all ViewStyle properties. 
-  },
-  errorMessage: {
-    // This has all TextStyle properties. 
-  },
-  chart: {
-    // This has all ViewStyle properties. 
-  },
-  grid: {
-    backgroundColor: null, // Applies a color to the grid background (string).
-    dashArray: null, // Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty).
-    lineColor: null, // Applies a color to the grid lines (string).
-    lineWidth: null, // Applies a width to the grid lines (number).
-    padding: null, // Applies padding to all sides of the grid (number). Use it to make axis value labels visible.
-    paddingBottom: null, // Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible.
-    paddingHorizontal: null, // Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible.
-    paddingLeft: null, // Applies padding to the left side of the grid (number). Use it to make axis value labels visible.
-    paddingRight: null, // Applies padding to the right side of the grid (number). Use it to make axis value labels visible.
-    paddingTop: null, // Applies padding to the top side of the grid (number). Use it to make axis value labels visible.
-    paddingVertical: null, // Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible.
-  },
-  xAxis: {
-    color: null, // Applies a color to the axis value labels (string).
-    dashArray: null, // Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-    fontFamily: null, // Applies fonts to the axis value labels (string).
-    fontSize: null, // Applies a size to the axis value labels (number).
-    fontStyle: null, // Applies a font style to the axis value labels ("normal" or "italic").
-    fontWeight: null, // Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900").
-    lineColor: null, // Applies a color to the axis line (string).
-    lineWidth: null, // Applies a width to the axis line (number).
-    label: { 
-      // All TextStyle properties.
-      relativePositionGrid: null, // Positions the axis label at the bottom or right side of the grid ("bottom" or "right").
-    },
-  },
-  yAxis: {
-    // All `xAxis` element styles.
-  },
-  legend: {
-    container: {
-      // All ViewStyle properties.
-    },
-    item: {
-      // All ViewStyle properties. 
-    },
-    indicator: {
-      // All ViewStyle properties. 
-    },
-    label: {
-      // All ViewStyle properties. 
-    }
-  },
-  lines: {
-    lineColorPalette: null, // Provides colors to lines that do not have a line color configured (string with list of colors separated by ';').
-    customLineStyles: {
-      any_custom_line_style_name: {
-        line: {
-          dashArray: null, // Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)).
-          ending: null, // Applies a flat or rounded line end to the graph line ("flat" or "round").
-          lineColor: null, // Applies a color to the graph line (string).
-          lineWidth: null, // Applies a width to the graph line (number).
-        },
-        markers: {
-          backgroundColor: null, // Applies a background color to the markers of the graph line (string).
-          borderColor: null, // Applies a border color to the markers of the graph line (string).
-          borderWidth: null, // Applies a border width to the markers of the graph line (string).
-          display: null, // Influences whether markers are displayed. When displayed, it positions the markers of the graph line on top or underneath the line ("false" or "underneath" or "onTop").
-          size: null, // Applies a size to the markers of the graph line (number).
-          symbol: null, // Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp").
-        }
-      }
-    }
-  }
-};
-```
-
-| Element | Style Properties | Description |
-| --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `grid` | `backgroundColor` | Applies a color to the grid background (string). |
-| `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
-| `grid` | `lineColor` | Applies a color to the grid lines (string). |
-| `grid` | `lineWidth` | Applies a width to the grid lines (number). |
-| `grid` | `padding` | Applies padding to all sides of the grid (number). Use it to make axis value labels visible. |
-| `grid` | `paddingBottom` | Applies padding to the bottom side of the grid (number). Use it to make axis value labels visible. |
-| `grid` | `paddingHorizontal` | Applies padding to the horizontal sides of the grid (number). Use it to make axis value labels visible. |
-| `grid` | `paddingLeft` | Applies padding to the left side of the grid (number). Use it to make axis value labels visible. |
-| `grid` | `paddingRight` | Applies padding to the right side of the grid (number). Use it to make axis value labels visible. |
-| `grid` | `paddingTop` | Applies padding to the top side of the grid (number). Use it to make axis value labels visible. |
-| `grid` | `paddingVertical` | Applies padding to the vertical sides of the grid (number). Use it to make axis value labels visible. |
-| `xAxis` | `color` | Applies a color to the axis value labels (string). |
-| `xAxis` | `dashArray` | Applies a pattern of dashes and gaps to the axis line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
-| `xAxis` | `fontFamily` | Applies fonts to the axis value labels (string). |
-| `xAxis` | `fontSize` | Applies a size to the axis value labels (number). |
-| `xAxis` | `fontStyle` | Applies a font style to the axis value labels ("normal" or "italic"). |
-| `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
-| `xAxis` | `lineColor` | Applies a color to the axis line (string). |
-| `xAxis` | `lineWidth` | Applies a width to the axis line (number). |
-| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the bottom or right side of the grid ("bottom" or "right"). |
-| `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the top or left side of the grid ("top" or "left"). |
-| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `lines` | `lineColorPalette` | Provides colors to lines that do not have a line color configured (string with list of colors separated by ';'). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `dashArray` | Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `ending` | Applies a flat or rounded line end to the graph line ("flat" or "round"). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `lineColor` | Applies a color to the graph line (string). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `lineWidth` | Applies a width to the graph line (number). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `backgroundColor` | Applies a background color to the markers of the graph line (string). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `borderColor` | Applies a border color to the markers of the graph line (string). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `borderWidth` | Applies a border width to the markers of the graph line (string). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `display` | Influences whether markers are displayed. When displayed, it positions the markers of the graph line on top or underneath the line ("false" or "underneath" or "onTop"). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `size` | Applies a size to the markers of the graph line (number). |
-| `lines` > `customLineStyles` > `any_custom_line_style_name` > `markers` | `symbol` | Applies a symbol to the markers of the graph line ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp"). |
-
-The default class to style all line chart widgets is named `com_mendix_widget_native_linechart_LineChart`.
-
-### Pie/Doughnut Chart
-
-The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
-
-```javascript
-export const com_mendix_widget_native_piedoughnutchart_PieDoughnutChart = {
-  container: {
-    // This has all ViewStyle properties. 
-  },
-  slices: {
-    customStyles: {
-      any_custom_key: {
-        slice: {
-          color: null, // Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice.
-          fontFamily: null, // Applies a font type to the slice label (string).
-          fontSize: null, //  Applies a size to the slice label (number).
-          fontStyle: null, // Applies a font style to the slice label (**normal** or **italic**).
-          fontWeight: null, // Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100).
-        },
-      },
-    },
-    colorPalette: null, // Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';').
-    innerRadius: null, //  Applies an inner radius to the chart when in doughnut presentation mode (number).
-    padding: null, // Applies padding to all sides of the chart (number).
-    paddingBottom: null, // Applies padding to the bottom side of the chart (number).
-    paddingHorizontal: null, // Applies padding to the horizontal sides of the chart (number).
-    paddingLeft: null, // Applies padding to the left side of the chart (number).
-    paddingRight: null, // Applies padding to the right side of the chart (number).
-    paddingTop: null, // Applies padding to the top side of the chart (number).
-    paddingVertical: null, // Applies padding to the vertical sides of the chart (number).
-  },
-};
-```
-
-| Element | Style Properties | Description |
-| --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `slices` > `customStyles` > `any_custom_key` > `slice` | `color` | Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice. |
-| `slices` > `customStyles` > `any_custom_key` > `label` | `fontFamily` | Applies a font type to the slice label (string). |
-| `slices` > `customStyles` > `any_custom_key` > `label` | `fontSize` | Applies a size to the slice label (number). |
-| `slices` > `customStyles` > `any_custom_key` > `label` | `fontStyle` | Applies a font style to the slice label (**normal** or **italic**). |
-| `slices` > `customStyles` > `any_custom_key` > `label` | `fontWeight` | Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100). |
-| `slices` | `colorPalette` | Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';'). |
-| `slices` | `innerRadius` | Applies an inner radius to the chart when in doughnut presentation mode (number). |
-| `slices` | `padding` | Applies padding to all sides of the chart (number). |
-| `slices` | `paddingBottom` | Applies padding to the bottom side of the chart (number). |
-| `slices` | `paddingHorizontal` | Applies padding to the horizontal sides of the chart (number). |
-| `slices` | `paddingLeft` | Applies padding to the left side of the chart (number). |
-| `slices` | `paddingRight` | Applies padding to the right side of the chart (number). |
-| `slices` | `paddingTop` | Applies padding to the top side of the chart (number). |
-| `slices` | `paddingVertical` | Applies padding to the vertical sides of the chart (number). |
-
-The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_widget_native_piedoughnutchart_PieDoughnutChart`.
 
 ### Switch
 

@@ -2073,7 +2073,57 @@ The default class to style all QR codes is named `com_mendix_widget_native_qrcod
 
 ### Radio Buttons {#radio-buttons}
 
-todo -- add missing documentation
+The radio buttons widget allows users to select a single option from a list of choices.
+
+```javascript
+export const com_mendix_widget_native_radiobuttons_RadioButtons = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  containerHorizontal: {
+    // This has all ViewStyle properties.
+  },
+  labelTextStyle: {
+    // This has all TextStyle properties.
+  },
+  radioButtonItemContainerStyle: {
+    // This has all ViewStyle properties.
+  },
+  radioButtonItemContainerDisabledStyle: {
+    // This has all ViewStyle properties.
+  },
+  radioButtonItemContainerHorizontalStyle: {
+    // This has all ViewStyle properties.
+  },
+  circularButtonStyle: {
+    // This has all ViewStyle properties.
+  },
+  activeButtonStyle: {
+    // This has all ViewStyle properties.
+  },
+  radioButtonItemTitleStyle: {
+    // This has all TextStyle properties.
+  },
+  validationMessage: {
+    // This has all TextStyle properties.
+  },
+};
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | Styles the wrapper container around the entire widget. |
+| `containerHorizontal` | This has all ViewStyle properties. | Styles the wrapper container when orientation is horizontal. |
+| `labelTextStyle` | This has all TextStyle properties. | Styles the label text. |
+| `radioButtonItemContainerStyle` | This has all ViewStyle properties. | Styles the container around each radio button item. |
+| `radioButtonItemContainerDisabledStyle` | This has all ViewStyle properties. | Styles the container when the radio button is disabled. |
+| `radioButtonItemContainerHorizontalStyle` | This has all ViewStyle properties. | Styles the radio button item container when orientation is horizontal. |
+| `circularButtonStyle` | This has all ViewStyle properties. | Styles the circular button outer ring. |
+| `activeButtonStyle` | This has all ViewStyle properties. | Styles the inner circle when the radio button is selected. |
+| `radioButtonItemTitleStyle` | This has all TextStyle properties. | Styles the text of each radio button option. |
+| `validationMessage` | This has all TextStyle properties. | Styles the validation error message. |
+
+The default class to style all radio buttons is named `com_mendix_widget_native_radiobuttons_RadioButtons`.
 
 ### Range Slider {#range-slider}
 
@@ -2163,7 +2213,21 @@ The default class to style all rating inputs is named `com_mendix_widget_native_
 
 ### Repeater {#repeater}
 
-todo -- add missing docs
+The repeater widget iterates over a data source and renders content for each item.
+
+```javascript
+export const com_mendix_widget_native_repeater_Repeater = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+};
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | Styles the wrapper container around the entire repeater. |
+
+The default class to style all repeater widgets is named `com_mendix_widget_native_repeater_Repeater`.
 
 ### Safe Area View
 

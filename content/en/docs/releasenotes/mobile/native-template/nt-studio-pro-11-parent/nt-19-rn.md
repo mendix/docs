@@ -5,6 +5,22 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.1.7
+
+**Release date: Sep 23, 2026**
+
+### Fixes
+
+- We removed unused Android permissions coming in from manifest mergers.
+
+## 19.1.6
+
+**Release date: Sep 16, 2026**
+
+### Improvements
+
+- We migrated iOS to the UIKit scene delegate lifecycle.
+
 ## 19.1.5
 
 **Release date: Sep 1, 2026**

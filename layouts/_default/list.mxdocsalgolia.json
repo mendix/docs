@@ -70,25 +70,25 @@ Define Global variables
                     {{- $startSlice = slicestr $processSlice 0 3 -}}
                     {{- /* Set up the heading level we are in */ -}}
                     {{- if eq $startSlice "<h2" -}}
-                        {{- $h2 = htmlUnescape ($processSlice | plainify) -}}
+                        {{- $h2 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
                         {{- $h3 = "" -}}
                         {{- $h4 = "" -}}
                         {{- $h5 = "" -}}
                         {{- $h6 = "" -}}
                     {{- else if eq $startSlice "<h3" -}}
-                        {{- $h3 = htmlUnescape ($processSlice | plainify) -}}
+                        {{- $h3 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
                         {{- $h4 = "" -}}
                         {{- $h5 = "" -}}
                         {{- $h6 = "" -}}
                     {{- else if eq $startSlice "<h4" -}}
-                        {{- $h4 = htmlUnescape ($processSlice | plainify) -}}
+                        {{- $h4 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
                         {{- $h5 = "" -}}
                         {{- $h6 = "" -}}
                     {{- else if eq $startSlice "<h5" -}}
-                        {{- $h5 = htmlUnescape ($processSlice | plainify) -}}
+                        {{- $h5 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
                         {{- $h6 = "" -}}
                     {{- else if eq $startSlice "<h6" -}}
-                        {{- $h6 = htmlUnescape ($processSlice | plainify) -}}
+                        {{- $h6 = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
                     {{- else -}}
                         {{- /*
                              * Get all the information for this piece of text (not a heading) and label it uniquely
@@ -121,7 +121,8 @@ Define Global variables
                             {{- $scratch.SetInMap $uniqueHit "h6" $h6 -}}
                             {{- $uniqueHierarchy = printf "%s > %s" $uniqueHierarchy $h6 -}}
                         {{- end -}}
-                        {{- $text = trim (htmlUnescape ($processSlice | plainify)) " " -}}
+                        {{- /* strings.TrimSpace strips all Unicode whitespace including \r, \n, \t, and non-breaking spaces ( ) that trim " " misses */ -}}
+                        {{- $text = strings.TrimSpace (htmlUnescape ($processSlice | plainify)) -}}
                         {{- $scratch.SetInMap $uniqueHit "text" $text -}}
                         {{- $scratch.SetInMap $uniqueHit "mendix_version" $pageDot.Params.mendix_version -}}
                         {{- $scratch.SetInMap $uniqueHit "time_stamp" $pageDot.Lastmod.UTC.Unix -}}

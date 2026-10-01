@@ -3,9 +3,8 @@ title: "Dynamic Case Management"
 url: /appstore/partner-solutions/dcm/
 description: "Introduces Mendix Dynamic Case Management for complex processes."
 weight: 30
-beta: true
 ---
-{{% alert color="warning" %}} This feature is in Private Beta. For more information, refer to [Release Status](/releasenotes/release-status/). {{% /alert %}}
+{{% alert color="warning" %}} This feature is in Limited Availability. For more information, refer to [Release Status](/releasenotes/release-status/). {{% /alert %}}
 
 ## Introduction
 
@@ -19,7 +18,7 @@ Dynamic case management (DCM) is the process of using technology to facilitate c
 * Model and automate complex workflows.
 * Streamline operations and improve goal achievement.
 
-For more information, refer to [DCM for Mendix](https://www.casefabric.com/#mendix) in the CaseFabric documentation.
+For more information, refer to [DCM for Mendix](https://guide.casefabric.com/docs/mendix/overview.html) in the CaseFabric documentation.
 
 ## Mendix DCM Module
 
@@ -45,9 +44,9 @@ The Mendix DCM module is fully embedded into the Mendix application and runtime.
 
 ## Licensing and Availability
 
-* To obtain or renew a Mendix DCM license, contact your Mendix account manager.
-* Mendix DCM is available for projects based on Studio Pro 10.24 and above.
-* Mendix DCM is part of the Mendix price list. For more information or activation, contact your Mendix Customer Success Manager or your Sales representative.
+* To obtain or renew a Mendix DCM license, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
+* Mendix DCM is available for projects based on Studio Pro 11.12.0 and above.
+* Mendix DCM is part of the Mendix price list. For more information or activation, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 
 ## CaseFabric DCM Release Notes
 

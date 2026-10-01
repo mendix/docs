@@ -19,6 +19,8 @@ Maia Make is a set of AI-assisted development capabilities in Studio Pro that ar
 
 You can also ask Maia to provide explanations of your existing documents, such as microflows, workflows, and pages. Moreover, this interface allows you to integrate with external tools, such as Playwright and Figma, via MCP servers. It also supports story-based development by generating app artifacts based on existing user stories.
 
+For guidance on how to best prompt Maia, refer to [Prompt Engineering](/agents/prompt-engineering/).
+
 ## Maia Make Capabilities Overview
 
 ### Supported Document Types
@@ -55,8 +57,8 @@ The following table lists Maia Make Standalone Capabilities and the Studio Pro v
 | [Maia MCP Client](/refguide/maia-mcp/) | Connects Maia to external MCP servers, giving it access to third-party tools. | Studio Pro 11.8 | |
 | [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) | Exposes Studio Pro as an MCP server for use by external AI tools. | Studio Pro 11.10 | |
 | [Maia Web Fetch](/refguide/maia-web-fetch/) | Fetches and reads content from public websites and APIs. | Studio Pro 11.10 | |
-| [Maia Agent Skills](/refguide/maia-agent-skills/) | Extends Maia with reusable knowledge. | Studio Pro 11.11 | |
-| [Maia Agent Instructions](/refguide/maia-instructions/) | Extends Maia with instructions to be followed with every prompt. | Studio Pro 11.12 | |
+| [Maia Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/) | Extends Maia with reusable knowledge. | Studio Pro 11.11 | Maia can create and edit skills directly in chat, for both project-level and module-level skills, from Studio Pro 11.15. |
+| [Maia Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) | Extends Maia with instructions to be followed with every prompt | Studio Pro 11.12 | |
 
 ### Maia Make General Capabilities
 

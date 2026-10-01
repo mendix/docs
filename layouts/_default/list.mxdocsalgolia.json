@@ -19,7 +19,8 @@ How records are created:
    text, text (plain content), url (page URL with #anchor of deepest heading
    in scope), unique_hierarchy (breadcrumb string), slug, description,
    content_type, type, mendix_version, menu_order, time_stamp, weight.position,
-   and weight.tag_name (p / li / th / td / code / alert).
+   weight.tag_name (p / li / th / td / code / alert), and page_url (bare page
+   URL without anchor, for deduplicating multiple hits from the same page).
 5. Records with empty text are excluded.
 */ -}}
 {{- $firstloop := true -}}
@@ -213,6 +214,8 @@ How records are created:
                         {{- $pageURL := $pageDot.RelPermalink -}}
                         {{- with $anchor -}}{{- $pageURL = printf "%s#%s" $pageDot.RelPermalink $anchor -}}{{- end -}}
                         {{- $scratch.SetInMap $uniqueHit "url" $pageURL -}}
+                        {{- /* page_url is the bare page URL without any anchor, for deduplicating multiple hits from the same page */ -}}
+                        {{- $scratch.SetInMap $uniqueHit "page_url" $pageDot.RelPermalink -}}
                         {{- $scratch.SetInMap $uniqueHit "slug" $pageDot.File.TranslationBaseName -}}
                         {{- $scratch.SetInMap $uniqueHit "unique_hierarchy" $uniqueHierarchy -}}
                     {{- end -}}

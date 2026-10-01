@@ -56,6 +56,10 @@ The prerequisites are the following:
 
 * [Eclipse Temurin JDK 25 (x64 or ARM64)](https://adoptium.net/temurin/releases/?version=25)
 
+    | Studio Pro 11.13 and below | Studio Pro 11.14 and above |
+    | --- | --- |
+    | [JDK 21](https://adoptium.net/temurin/releases/?version=21)| [JDK 25](https://adoptium.net/temurin/releases/?version=25)  |
+
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) (Git version [2.48.1](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe) or above is required)
@@ -66,7 +70,13 @@ Git version 2.48.1 is automatically installed during Studio Pro installation. Ho
 
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 
-* [Gradle 9.5.1](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
+* [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
+
+    | Studio Pro 11.13 and below | Studio Pro 11.14 and above |
+    | --- | --- |
+    | [Gradle 8.5](https://gradle.org/install/#manually) | [Gradle 9.5.1](https://gradle.org/install/#manually) |
+
+    {{% alert color="info" %}} Extract Gradle to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.{{% /alert %}}
 
 * [Mendix Java Migration Tool 1.0.2](https://cdn.mendix.com/mendix-java-migration-tool/jmt-1.0.2.jar)
 
@@ -93,9 +103,12 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
          * On x64, rename *windowsdesktop-runtime-10.0.7-win-x64.exe* to *windowsdesktop-runtime-10.0-x64.exe*
          * On ARM64, rename *windowsdesktop-runtime-10.0.7-win-arm64.exe* to *windowsdesktop-runtime-10.0-arm64.exe*
    2. Eclipse Temurin JDK
-      * Rename the Java Development Kit 25 *msi*
-        * On x64, rename *OpenJDK25U-jdk_x64_windows_hotspot_25.0.3_9.msi* to *adoptiumjdk_25_x64.msi*
-        * On ARM64, rename *OpenJDK25U-jdk_aarch64_windows_hotspot_25.0.3_9.msi* to *adoptiumjdk_25_arm64.msi*
+      * For Studio Pro versions 11.13 and below, rename the Java Development Kit 21 *msi*
+         * On x64, rename *OpenJDK25U-jdk_x64_windows_hotspot_25.0.3_9.msi* to *adoptiumjdk_25_x64.msi*
+         * On ARM64, rename *OpenJDK25U-jdk_aarch64_windows_hotspot_25.0.3_9.msi* to *adoptiumjdk_25_arm64.msi*
+      * For Studio Pro versions 11.14 and above, rename the Java Development Kit 25 *msi*
+         * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_x64.msi*
+         * On ARM64, rename *OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_arm64.msi*
    3. Visual C++ Redistributable for Visual Studio 2019 (x64)
       * Rename the executable 
         * For example, *VC_redist.x64.exe* to *vcredist2019_x64.exe*
@@ -106,7 +119,8 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
    6. Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64)
       * The *MicrosoftEdgeWebview2Setup.exe* does not need to be renamed
    7. Gradle
-      * Rename the Gradle zip file to *gradle-9.5.1-bin.zip*
+      * For Studio Pro versions 11.13 and below, rename the Gradle zip file to *gradle-8.5-bin.zip*
+      * For Studio Pro versions 11.14 and above, rename the Gradle zip file to *gradle-9.5.1-bin.zip*
    8. Mendix Java Migration Tool (JMT)
       * Place *jmt-1.0.2.jar* into the **Dependencies** folder without renaming it
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.

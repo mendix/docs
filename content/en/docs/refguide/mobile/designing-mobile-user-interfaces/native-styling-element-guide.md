@@ -2065,6 +2065,8 @@ export const com_mendix_widget_native_popupmenu_PopupMenu = {
 | `buttonContainer` | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
 | `container` | This has all ViewStyle properties. | Styles the wrapper view around the whole menu. |
 
+The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
+
 #### BasicItemStyle
 
 | Element    | Style Properties |  Description     |
@@ -2083,6 +2085,14 @@ export const com_mendix_widget_native_popupmenu_PopupMenu = {
 | `primaryStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `primary` style selected.   |
 | `dangerStyle` |  This has all TextStyle properties. | Styles all basic menu items which have the `danger` style selected.   |
 | `customStyle` |  This has all TextStyle properties.  | Styles all basic menu items which have the `custom` style selected.  |
+
+#### CustomItemStyle
+
+| Element                   | Style Properties |  Description                                      |
+| ---------------------------| ---- | ------------------------------------------------ |
+| `container` | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
+| `itemStyle` | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
+| `dividerColor` | `string`      | Styles the divider color.                         |
 
 ### Progress Bar {#progress-bar}
 
@@ -2610,16 +2620,6 @@ export const com_mendix_widget_native_webview_WebView = {
 | `errorText` | This has all TextStyle properties. |     |
 
 The default class to style all web views is named `com_mendix_widget_native_webview_WebView`. 
-
-#### CustomItemStyle
-
-| Element                   | Style Properties |  Description                                      |
-| ---------------------------| ---- | ------------------------------------------------ |
-| `container` | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
-| `itemStyle` | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
-| `dividerColor` | `string`      | Styles the divider color.                         |
-
-The default class to style all popup menus is named `com_mendix_widget_native_popupmenu_PopupMenu`.
 
 #### LayoutStyle
 

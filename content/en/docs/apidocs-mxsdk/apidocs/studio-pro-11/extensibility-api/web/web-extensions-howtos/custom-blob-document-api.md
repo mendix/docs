@@ -309,7 +309,9 @@ if (project !== null){
     await studioPro.app.model.customBlobDocuments.updateDocumentContent<SimpleOpenProjectDocument>(documentId, newContent);
 }
 ```
+
 To test the feature, add the following code inside the `async loaded` method in `src/main/index.ts`.
+
 ```typescript {hl_lines=["25-29"]}
 await studioPro.ui.extensionsMenu.add({
     caption: "My Update",

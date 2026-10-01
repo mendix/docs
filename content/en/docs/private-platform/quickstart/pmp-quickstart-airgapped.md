@@ -49,7 +49,7 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
     * **mxpc-cli** - Installation tools which can be used to manage or configure the Mendix Operator
     * **charts** - Charts, including Private Mendix Platform charts and Svix charts
 
-3. If your clusters can connect to a public registry with a passable network, skip to step 4 below, otherwise initialize the installation by performing the following steps:
+1. If your clusters can connect to a public registry with a passable network, skip to step 4 below, otherwise initialize the installation by performing the following steps:
 
     1. Upload the images to your private repository in an air-gapped environment:
 
@@ -88,21 +88,21 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
         privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
         ```
 
-4. Migrate the files required to install the Private Cloud components by performing the following steps:
+2. Migrate the files required to install the Private Cloud components by performing the following steps:
 
     1. Download the *mx-private-cloud.zip* file from your Private Mendix Platform download portal.
     2. Unzip the *mx-private-cloud.zip* file.
     3. Copy the *images* from the *mx-private-cloud* directory to the *images* sub-directory of the installer by running the following command: `cp -r mx-private-cloud/images/* <your installer>/pmp-binary-linux/images`
     4. Upload the directory to your private registry by using the `installer init migrate` command. All the images must be in the same registry.
     
-5. Migrate the files required to enable Maia for Private Mendix Platform by performing the following steps:
+3. Migrate the files required to enable Maia for Private Mendix Platform by performing the following steps:
 
     1. Download the *maia-appgen-pmp.zip* file from your Private Mendix Platform download portal.
     2. Unzip the *maia-appgen-pmp.zip* file.
     3. Copy the *maia-appgen-pmp* directory to the *images* sub-directory of the installer by running the following command: `cp -r maia-appgen-pmp/images/* <your installer>/pmp-binary-linux/images`
     4. Upload the Maia directory to your private registry by using the `installer init migrate` command.
 
-6. After the migration is completed, [install Private Mendix Platform in interactive GUI mode](/private-mendix-platform/interactive-installation/).
+4. After the migration is completed, [install Private Mendix Platform in interactive GUI mode](/private-mendix-platform/interactive-installation/).
 
 ### Images from the Public Mendix Registry
 
@@ -129,13 +129,13 @@ To install Private Mendix Platform in an air-gapped environment, you must provis
     2. Filter by **Category** and **ArtifactType** to select the images, charts, and Helm file.
     3. Click **Export Selection** to export the list to a file named *export-images-vx.x.x.json*, where `x.x.x` corresponds to a Private Mendix Platform version.
 
-2. In the Mendix Portal, create a Personal Access Token (PAT) for private images that require a PAT for authentication. 
+3. In the Mendix Portal, create a Personal Access Token (PAT) for private images that require a PAT for authentication. 
 
     1. Sign in to Mendix and go to **User Settings > Developer Settings > Personal Access Token**
     2. Click **New Token**.
     3. Under **OCI registry**, select the **mx:registry:access** as scope.
  
-3. Fetch the images by using the following aip commands:
+4. Fetch the images by using the following aip commands:
 
     ```text
     mkdir pmp-images
@@ -160,14 +160,14 @@ To install Private Mendix Platform in an air-gapped environment, you must provis
     aip push
     ```
 
-4. If your registry requires you to create a repository before pushing, use the following command:
+5. If your registry requires you to create a repository before pushing, use the following command:
 
     ```text
     # get list of required repositories - these will need to be created before you can push to them
     jq -r '.["images", "charts", "custom-artifacts"][] .destination' state.json
     ```
 
-5. After the migration is completed, [install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/).
+6. After the migration is completed, [install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/).
 
 ### Download Package API {#download-api}
 

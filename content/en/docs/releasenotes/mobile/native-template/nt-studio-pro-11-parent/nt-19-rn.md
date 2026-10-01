@@ -11,7 +11,7 @@ description: "Native Template 19"
 
 ### Fixes
 
-- We removed unused Android permissions coming in from manifest mergers.
+* We removed unused Android permissions coming in from manifest mergers.
 
 ## 19.1.6
 
@@ -19,7 +19,7 @@ description: "Native Template 19"
 
 ### Improvements
 
-- We migrated iOS to the UIKit scene delegate lifecycle.
+* We migrated iOS to the UIKit scene delegate lifecycle.
 
 ## 19.1.5
 
@@ -27,7 +27,7 @@ description: "Native Template 19"
 
 ### Fixes
 
-- We addressed a random scenario where Gradle would resolve to using the Hermes v1 compiler instead of the old Hermes override in `gradle.properties`. This threw issues with `"...bytecode mismatch..."`.
+* We addressed a random scenario where Gradle would resolve to using the Hermes v1 compiler instead of the old Hermes override in `gradle.properties`. This threw issues with `"...bytecode mismatch..."`.
 
 ## 19.1.4
 

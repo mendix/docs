@@ -31,7 +31,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | --- | --- | --- |
 | [Domain model](/refguide/maia-for-domain-model/) | Studio Pro 11.8 | |
 | [Pages](/refguide/maia-for-pages/) | Studio Pro 11.8 | |
-| [Microflows](/refguide/maia-for-microflows/) | Studio Pro 11.8 | |
+| [Microflows](/refguide/maia-for-microflows/) | Studio Pro 11.8 | In Studio Pro 11.9 and above, Maia can delete flows and microflow objects, but cannot change activity types or replace complex configuration settings. In Studio Pro 11.8, Maia can change variable names, move objects, and reconnect flows for existing objects, but cannot delete objects or flows or change activity types. |
 | [Workflows](/refguide/maia-for-workflows/) | Studio Pro 11.9 | |
 | [OQL](/refguide/maia-for-oql/) | Studio Pro 11.9 | |
 | View entities | Studio Pro 11.9 | |

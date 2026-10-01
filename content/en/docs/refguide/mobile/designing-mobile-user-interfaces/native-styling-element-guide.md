@@ -860,7 +860,69 @@ Add-on widgets are distributed through the [Native Mobile Resources](/appstore/m
 
 ### Accordion
 
-todo -- add missing documentation
+The accordion widget displays collapsible content sections with headers.
+
+```javascript
+export const com_mendix_widget_native_accordion_Accordion = {
+  container: {
+    // This has all ViewStyle properties.
+  },
+  group: {
+    container: {
+      // This has all ViewStyle properties.
+    },
+    header: {
+      container: {
+        // This has all ViewStyle properties.
+      },
+      heading1: {
+        // This has all TextStyle properties.
+      },
+      heading2: {
+        // This has all TextStyle properties.
+      },
+      heading3: {
+        // This has all TextStyle properties.
+      },
+      heading4: {
+        // This has all TextStyle properties.
+      },
+      heading5: {
+        // This has all TextStyle properties.
+      },
+      heading6: {
+        // This has all TextStyle properties.
+      },
+      icon: {
+        // This has all ViewStyle properties.
+        size: null, // The size of the expand/collapse icon.
+        color: null, // The color of the expand/collapse icon.
+      },
+    },
+    content: {
+      // This has all ViewStyle properties.
+    },
+  },
+};
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties. | Styles the wrapper container around the entire accordion. |
+| `group` > `container` | This has all ViewStyle properties. | Styles the container around each accordion group. |
+| `group` > `header` > `container` | This has all ViewStyle properties. | Styles the header container. |
+| `group` > `header` > `heading1` | This has all TextStyle properties. | Styles the heading when level 1 is selected. |
+| `group` > `header` > `heading2` | This has all TextStyle properties. | Styles the heading when level 2 is selected. |
+| `group` > `header` > `heading3` | This has all TextStyle properties. | Styles the heading when level 3 is selected. |
+| `group` > `header` > `heading4` | This has all TextStyle properties. | Styles the heading when level 4 is selected. |
+| `group` > `header` > `heading5` | This has all TextStyle properties. | Styles the heading when level 5 is selected. |
+| `group` > `header` > `heading6` | This has all TextStyle properties. | Styles the heading when level 6 is selected. |
+| `group` > `header` > `icon` | This has all ViewStyle properties. | Styles the expand/collapse icon. |
+| `group` > `header` > `icon` | `size` | The size of the expand/collapse icon. |
+| `group` > `header` > `icon` | `color` | The color of the expand/collapse icon. |
+| `group` > `content` | This has all ViewStyle properties. | Styles the collapsible content area. |
+
+The default class to style all accordion widgets is named `com_mendix_widget_native_accordion_Accordion`.
 
 ### Activity Indicator {#activity-indicator}
 

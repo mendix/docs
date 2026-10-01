@@ -39,7 +39,12 @@ The installation process consists of the following high-level steps. For more in
 2. Pull the images and charts marked **Required**, as well as any optional components your deployment needs. For a list of required and optional components, see [Installation Reference](/private-mendix-platform/installation-reference/).
 3. Install the `mx-privatecloud-operator-crd` charts.
 4. Install the `mx-privatecloud-operator-installer` charts.
-5. Install Private Mendix Platform charts using Helm.
+5. Install Private Mendix Platform charts using Helm by performing the following steps:
+
+    1. Pull the `installer-helmfile` image.
+    2. A *targ.gz* file should be installed in *oras-artifact*. Unzipp the file and find the sample *values.yaml* files in the folder.
+    3. Use these samples files as a reference for applying the Private Mendix Platform charts.
+
 6. Configure the PCLM host name, user name and password in the *operator-generated-values.yaml* file and re-apply the Mendix Operator chart.
 
 ## Platform-Specific Installation Notes

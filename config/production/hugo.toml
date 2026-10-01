@@ -8,7 +8,7 @@ title = "Mendix Documentation"
 # MvM - add line below to output MxDocsAlgolia at root of /public (master only)
 [outputs]
     _merge = 'shallow'
-    home = ["MxDocsAlgolia"]
+    home = ["MxDocsAlgolia", "LLMSTXT", "LLMSFULL", "PAGEMD"]
 
 # MvM - MxDocsAlgolia outputFormats parameters - to generate Algolia for Mendix
 [outputFormats]

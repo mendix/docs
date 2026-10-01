@@ -25,6 +25,7 @@ Before running Helmfile, ensure you have the following tools installed:
 | **helm-diff plugin** | 3.0.0+ | Required for helmfile diff and helmfile apply | `helm plugin install https://github.com/databus23/helm-diff` |
 | **kubectl** | 1.24.0+ | Kubernetes command-line tool | [Installation Guide](https://kubernetes.io/docs/tasks/tools/) |
 | **bash** | 4.0+ | Shell for running hooks | Linux and macOS: pre-installed; Windows: [Git Bash](https://git-scm.com/download/win) |
+| **oras** | 1.3+ | Tool for working with OCI artifacts | See [Installation](https://oras.land/docs/installation) in ORAS documentation |
 
 {{% alert color="info" %}}
 `Helm-diff` is required for `helmfile apply` and `helmfile diff` commands. If you only use `helmfile sync` (which forces synchronization without using `diff`), it is optional. 
@@ -36,9 +37,15 @@ The installation process consists of the following high-level steps. For more in
 
 1. Retrieve the manifest of image and charts version through the Download Portal GUI or API. 
 2. Pull the images and charts marked **Required**, as well as any optional components your deployment needs. For a list of required and optional components, see [Installation Reference](/private-mendix-platform/installation-reference/).
-3. Install the Operator charts.
-4. Install Priave Mendix Platform charts using Helm.
-5. Configure the PCLM host name, user name and password in the `<operator-generated-values.yaml` file and re-apply the Mendix Operator chart.
+3. Install the `mx-privatecloud-operator-crd` charts.
+4. Install the `mx-privatecloud-operator-installer` charts.
+5. Install Private Mendix Platform charts using Helm by performing the following steps:
+
+    1. Pull the `installer-helmfile` image.
+    2. A *targ.gz* file should be installed in *oras-artifact*. Unzipp the file and find the sample *values.yaml* files in the folder.
+    3. Use these samples files as a reference for applying the Private Mendix Platform charts.
+
+6. Configure the PCLM host name, user name and password in the *operator-generated-values.yaml* file and re-apply the Mendix Operator chart.
 
 ## Platform-Specific Installation Notes
 
@@ -176,33 +183,7 @@ GET https://privateplatform.mendix.com/rest/pmpreleaseservice/v1/versions/{versi
 
 ## Helmfile Components
 
-Helmfile manages multiple Helm releases with dependency ordering, ensuring components are installed in the correct sequence.
-
-| Component | Description | Namespace | Required | ServiceAccount |
-| --- | --- | --- | --- | --- |
-| `mx-privatecloud-license-manager` | Private Cloud License Manager (PCLM) | Private Mendix Platform namespace | Required | `mendix-pclm` (created by Operator) |
-| `mx-privatecloud` | Private Cloud services (authenticator, collector, interactor, bridge) | Private Mendix Platform namespace | Optional | `mx-privatecloud` (created by chart) |
-| `maia-appgen` | Maia AI AppGen service | Private Mendix Platform namespace | Optional | `maia-appgen` (created by chart) |
-| `maia-llm-gateway` | Maia LLM Gateway service for routing LLM requests | Private Mendix Platform namespace | Optional | `maia-llm-gateway` (created by chart) |
-| `svix-server` | Webhook delivery service | Private Mendix Platform namespace | Optional | `svix` (created by chart) |
-| `mxplatform` | Mendix Platform application (MendixApp CR) | Private Mendix Platform namespace | Optional | `mxplatform` (created by chart or Operator) |
-| `mxplatform-kube-agent` | Build agent for mxplatform | Independent | Optional | `mxplatform-kube-agent` (created by chart) |
-| `mx-private-document-generation` | PDF document generation service | Independent | Optional | `mx-private-document-generation` (created by chart) |
-
-ServiceAccount creation depends on the value of the **UseStoragePlanwithIRSA** field. If set to **false**, Chart creates the ServiceAccount with workload identity annotations. If set to **true**, Mendix Operator creates ServiceAccount based on StoragePlan configuration.
-
-### Dependency and Install Order  
- 
-The following components are installed in parallel during the first phase of the Helmfile installation:
-
-* `mx-privatecloud`
-* `maia-appgen`
-* `svix-server`
-* `maia-llm-gateway`
-* `mxplatform-kube-agent`
-* `mx-private-document-generation`
-
-The `mxplatform` component is installed during the second phase, with configurations depending on which components were enabled during the first phase.
+For more information about the Helmfile components, see [Installation Reference](/private-mendix-platform/installation-reference/).
 
 ## Quick Start
 
@@ -554,35 +535,34 @@ global:
       - name: acr-secret  # Must exist in EACH namespace
 ```
 
-## Secret Management Using the Secret Provider Class
+## Secret Management Using the SecretProviderClass
 
-The Secret Provider class allows you to store all sensitive credentials (passwords, connection strings, API keys) in a centralized vault (Azure Key Vault, AWS Secrets Manager, or HashiCorp Vault) instead of hardcoding them in configuration files.
+The SecretProviderClass allows you to store all sensitive credentials (passwords, connection strings, API keys) in a centralized vault (Azure Key Vault, AWS Secrets Manager, or HashiCorp Vault) instead of hardcoding them in configuration files.
+
+{{% alert color="warning" %}}
+Secret Management for mxplatform is not compatible with Azure Managed Identity-based Storage Plans.
+{{% /alert %}}
 
 ### Requirements
 
-To use the Secret Provider class, you must fulfill the following requirements:
+To use the SecretProviderClass, you must fulfill the following requirements:
 
-1. Install the CSI Secrets Store Driver with a provider plugin.
-2. Configure identity authentication (Azure Workload Identity or AWS IRSA).
+1.	Install the CSI Secrets Store Driver with a provider plugin. The CSI driver uses the ServiceAccount's identity to authenticate to the vault and retrieve secrets.
+2.	Create a keyvault per component, for example: `pmp-install-kv` or `svix-kv`
+3.	Configure identity authentication (Azure Workload Identity or AWS IRSA). This step is mandatory because the CSI driver uses your ServiceAccount's cloud identity to authenticate to the vault and retrieve secrets.
 
-    This step is mandatory because the CSI driver uses your ServiceAccount's cloud identity to authenticate to the vault and retrieve secrets.
+    * For Azure WI, configure the Federated Credential.
 
-3. Grant vault access permissions to the identity.
-4. Store secrets in the vault with the correct key names.
-5. Enable `secretProviderclass` in hHelmfile configuration.
-6. Inject credentials from external secret management systems (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
+4.	Grant vault access permissions to the identity to the keyvault created in step 2. 
+5.	Store secrets in the vault with the correct key names:
 
-{{% alert color="info" %}}
-Secret Provider Class requires workload identity authentication to access the secret vault:
+    * [For svix](/private-mendix-platform/installation-reference/#svix-key-vault)
+    * [For mxplatform](/private-mendix-platform/installation-reference/#secret-provider-key)
 
-* Azure Key Vault requires Azure Workload Identity (`azureWorkloadIdentity.enable` set to `true`).
-* AWS Secrets Manager requires AWS IRSA (`awsIRSA.enable` set to `true`)
-* HashiCorp Vault requires Kubernetes Auth configured in Vault.
+6.	Enable `secretProviderclass` in Helmfile configuration. 
+7.	Grant RBAC per namespace for the CSI driver's ServiceAccount.
 
-The CSI driver uses the ServiceAccount's identity to authenticate to the vault and retrieve secrets.
-{{% /alert %}}
-
-### Example
+### Example - Install CSI Driver {#example}
 
 {{% alert color="warning" %}}
 The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
@@ -609,21 +589,19 @@ helm install vault-csi-provider hashicorp/vault-csi-provider --namespace kube-sy
 | `svix-server` | PostgreSQL and Redis connection strings |
 | `mxplatform` | PCLM credentials, admin passwords, database credentials, storage credentials |
 
-{{% alert color="warning" %}}
-The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
-{{% /alert %}}
+Secret Management for mxplatform is not compatible with Azure Managed Identity-based Storage Plans.
 
 #### Configuration Pattern
 
 When configuring secret management, keep in mind the following key points:
 
-* The Secret Provider class will not work without proper identity authentication configured.
+* The SecretProviderClass and SA annotations are performed by the Helmfile installation. 
 * For Azure, you must enable `azureWorkloadIdentity` and configure Managed Identity with Key Vault access.
 * For AWS, you must enable `awsIRSA` and configure IAM role with Secrets Manager access.
 * For Vault, you must configure the Kubernetes Auth method in Vault and grant the policy access.
 
 ```text
-{component}:
+{component}: 
   # Step 1: Configure identity authentication (REQUIRED)
   # For Azure Key Vault - MUST configure Workload Identity
   azureWorkloadIdentity:
@@ -652,6 +630,18 @@ When configuring secret management, keep in mind the following key points:
       role: "my-role"
       secretName: "my-secret"
       version: "v2"  # Optional: v1 or v2
+      svix-server:
+  azureWorkloadIdentity:
+    enable: true
+    clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    tenantID: "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"
+  secretProviderclass:
+    enable: true
+    provider: "azure"
+    azureparameters:
+      keyvaultName: "my-svix-keyvault"
+      # clientID and tenantID inherited from azureWorkloadIdentity
+  # postgres ignored when using Secret Provider
 ```
 
 #### Global vs Component Configuration
@@ -710,6 +700,10 @@ This method is upgrade-safe. Existing credentials are preserved through lookup.
 ## Workload Identity 
 
 Workload Identity enables components to connect to cloud resources without passwords. Instead of storing passwords and access keys in configuration files, components use cloud-native identity (AWS IAM or Azure Managed Identity) to authenticate.
+
+{{% alert color="info" %}}
+You cannot combine Workload Identity with SecretProviderClass secret management. The two solutions are mutually exclusive.
+{{% /alert %}}
 
 ### Supported Components
 
@@ -903,6 +897,7 @@ mx-privatecloud:
 Workload Identity and Secret Provider Class are different approaches for database credentials management.
 
 | Feature | Workload Identity (IAM Authentication) | Secret Provider Class |
+| --- | --- | --- |
 | Purpose | Passwordless database connection at runtime | Inject all secrets from vault during installation |
 | What it secures | Database passwords only | Database credentials and all other secrets |
 | Configuration | `awsIRSA.enable: true` or azureWorkloadIdentity.enable: true` and empty passwords | `secretProviderclass.enable: true` |
@@ -955,7 +950,7 @@ Mendix Operator automatically performs the following tasks:
 {{% alert color="info" %}}
 When `UseStoragePlanwithIRSA` is set to `true`, the Mendix Operator creates the ServiceAccount, not the Helm chart. This causes the following limitations:
 
-* Chart-level `azureWorkloadIdentity` configuration does NOT work for mxplatform
+* Chart-level `azureWorkloadIdentity` configuration is not supported for mxplatform.
 * The chart cannot add `azure.workload.identity/client-id` annotation. The Service account will be created by the Operator.
 {{% /alert %}}
 
@@ -1059,7 +1054,7 @@ Use Secret Provider Class when:
 * You need multi-cloud secret management (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
 * You want centralized secret management across all Private Mendix Platform components (mx-privatecloud, svix-server, mxplatform).
 * You are using HashiCorp Vault or managing secrets across multiple cloud providers.
-* Example scenario: *I want to store all Private Mendix Platform installation secrets (PCLM password, admin password, database credentials) in Azure Key Vault and inject them during Helm installation.
+* Example scenario: *I want to store all Private Mendix Platform installation secrets (PCLM password, admin password, database credentials) in Azure Key Vault and inject them during Helm installation.*
 
 The two solutions cannot be used together. They are mutually exclusive for `mxplatform`.
 
@@ -1193,7 +1188,7 @@ If you encounter database connection failures, perform the following actions:
     * If `dbssl` is set to `true`, verify the CA certificate.
     * If using Secret Provider, verify that the CSI driver is installed.
 
-### Secret Provider Class issues
+### Secret Provider Class Issues
 
 If you encounter Secret Provider Class issues, perform the following actions:
 

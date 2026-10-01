@@ -1,5 +1,5 @@
 ---
-title: "Maia Agent Skills (SKILLS.md)"
+title: "Agent Skills (SKILLS.md)"
 linktitle: "Agent Skills"
 url: /refguide/maia-agent-skills/
 weight: 95

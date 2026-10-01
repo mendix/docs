@@ -14,7 +14,7 @@ description: "Describes how to create and manage agent instructions (AGENTS.md) 
 {{% alert color="info" %}}
 This feature is part of [Maia Make](/refguide/maia-make/) and was introduced in Studio Pro 11.12.
 
-To use Maia Agent Instructions, you need an internet connection and must be signed in to Studio Pro.
+To use Agent Instructions, you need an internet connection and must be signed in to Studio Pro. If you are using the [MCP Server](/refguide/studio-pro-mcp-server/#enabling-the-mcp-server) to bring your own agent (BYO Agent), you do not need to be signed in to Studio Pro.
 {{% /alert %}}
 
 Agent Instructions are instructions that are automatically added to the conversation context. They let you define shared prompt context, such as company conventions or environment restrictions, once and reuse it when needed.

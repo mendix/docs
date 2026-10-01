@@ -93,17 +93,9 @@ In Studio Pro 11.7 and below, the **Chat** tab is only used for [Maia Chat](/ref
 There is also the **Learn** tab under the **Maia** pane. It is a separate Maia capability that is not part of Maia Make capabilities. For more information, see [Maia Learn](/refguide/maia-learn/).
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-The Maia ({{% icon name="sparkles" %}}) icon on the right side of the top bar does not work in Studio Pro 11.8.
-{{% /alert %}}
-
 ### Maia Make Capabilities Interface Overview
 
 The conversational interface includes the following features.
-
-{{% alert color="info" %}}
-Maia Make loses the conversation history if you exit Studio Pro.
-{{% /alert %}}
 
 #### New Chat
 
@@ -224,8 +216,6 @@ Below are some examples of prompts you can use as a starting point:
 Below are examples of prompts you can use to ask Maia to make further edits or request explanations and suggestions for improving a document:
 
 * Can you explain the function and purpose of this document?
-* I want to add an attribute `ATTRIBUTE_NAME` to the entity `ENTITY_NAME`.
-* Can you add a button called `BUTTON_NAME` to the page?
 * I want an area on the page where users can...
 * Remove the ... widget.
 * How can I make this page more user-friendly or visually appealing?

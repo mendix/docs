@@ -166,8 +166,8 @@ export const PageTitle = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |                 |
-| `text`      | This has all TextStyle properties. |                 |
+| `container` | This has all ViewStyle properties. |        N/A         |
+| `text`      | This has all TextStyle properties. |         N/A        |
 | `text`      | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
 
 The default class to style all page titles is named `PageTitle`.
@@ -209,7 +209,7 @@ export const Container = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |        |
+| `container` | This has all ViewStyle properties. |   N/A     |
 | `container` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
 | `container`  | `underlayColor` | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
 | `containerDisabled` | Same properties as `container` | This overrides `container` styles if the there is an on click action set and the action cannot be executed or is disabled during action. |
@@ -260,19 +260,19 @@ The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |     |
-| `tabBar`    | This has all ViewStyle properties. |     |
+| `container` | This has all ViewStyle properties. |   N/A  |
+| `tabBar`    | This has all ViewStyle properties. |   N/A  |
 | `tabBar` | `bounces` | This is a Boolean value indicating whether the tab bar bounces when scrolling. |
 | `tabBar` | `pressColor` | This is a color for material ripple (Android only). |
 | `tabBar` | `pressOpacity` | This is opacity for a pressed tab. |
 | `tabBar` | `scrollEnabled` | This is a Boolean value enabling scrollable tabs. |
 | `tabBar` | `tabBarPosition` | This is the position of the tab bar in the tab view, and possible values are `top` and `bottom` (defaults to `top`). |
-| `indicator` | This has all ViewStyle properties. |     |
-| `tab`       | This has all ViewStyle properties. |     |
-| `label`     | This has all TextStyle properties. |     |
-| `activeLabel`     | This has all TextStyle properties. |     |
-| `badgeContainer`  | This has all ViewStyle properties. |     |
-| `badgeCaption`    | This has all TextStyle properties. |     |
+| `indicator` | This has all ViewStyle properties. |   N/A  |
+| `tab`       | This has all ViewStyle properties. |  N/A   |
+| `label`     | This has all TextStyle properties. |  N/A   |
+| `activeLabel`     | This has all TextStyle properties. |  N/A   |
+| `badgeContainer`  | This has all ViewStyle properties. |   N/A  |
+| `badgeCaption`    | This has all TextStyle properties. |  N/A   |
 
 The default class to style all tab containers is named `TabContainer`.
 
@@ -290,7 +290,7 @@ export const ScrollContainer = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |            |
+| `container` | This has all ViewStyle properties. |      N/A      |
 
 The default class to style all scroll containers is named `ScrollContainer`.
 
@@ -347,9 +347,9 @@ export const TextBox = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties.   |   |
+| `container` | This has all ViewStyle properties.   | N/A  |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
-| `input` | This has all TextStyle properties. |  |
+| `input` | This has all TextStyle properties. | N/A |
 | `input` | `autoCapitalize` | This automatically capitalizes certain characters when the user types: <ul><li>`characters`: capitalizes all characters </li><li>`words`: capitalizes the first letter of each word </li><li>`sentences`: capitalizes the first letter of each sentence (default) </li><li>`none`: capitalizes nothing </li></ul>|
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
@@ -357,10 +357,10 @@ export const TextBox = {
 | `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused. |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
-| `label` | This has all TextStyle properties |   |
+| `label` | This has all TextStyle properties |  N/A |
 | `label` | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `1`). |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the text box is non-editable. |
-| `validationMessage` | This has all TextStyle properties.   |    |
+| `validationMessage` | This has all TextStyle properties.   |  N/A  |
 
 The default class to style all text boxes is named `TextBox`.
 
@@ -443,18 +443,18 @@ export const DropDown = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |  |
+| `container` | This has all ViewStyle properties. | N/A |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the drop-down is non-editable. |
 | `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value.|
 | `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item.|
 | `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container.|
-| `label` | This has all TextStyle properties. | |
+| `label` | This has all TextStyle properties. | N/A|
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the drop-down is non-editable. |
 | `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items.|
-| `pickerIOS` | This has all ViewStyle properties. |  |
-| `pickerBackdropIOS` | This has all ViewStyle properties. |   |
-| `pickerTopIOS` | This has all ViewStyle properties. |   |
+| `pickerIOS` | This has all ViewStyle properties. | N/A |
+| `pickerBackdropIOS` | This has all ViewStyle properties. | N/A  |
+| `pickerTopIOS` | This has all ViewStyle properties. |  N/A |
 | `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu.|
 | `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu.|
 | `useUniformDesign` | `boolean` | Enables new uniformDesign. |
@@ -530,20 +530,20 @@ export const Checkbox = {
 
 | Element | Style Properties    | Description | Render mode |
 | --- | --- | --- | --- |
-| `container` | This has all ViewStyle properties.   |   | Both |
+| `container` | This has all ViewStyle properties.   | N/A  | Both |
 | `containerDisabled` | Same properties as `container`. | Overrides `container` styles if the text box is non-editable. | Both |
-| `label` | This has all TextStyle properties.   |  | Both |
+| `label` | This has all TextStyle properties.   |  N/A| Both |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. | Both |
 | `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the checkbox is non-editable. | Both |
 | `validationMessage` | This has all TextStyle properties.   |  | Both |
-| `input` | This has all ViewStyle properties.   |   | Switch |
+| `input` | This has all ViewStyle properties.   | N/A  | Switch |
 | `input` | `trackColorOn` | Custom color for the switch track when turned on. | Switch  |
 | `input` | `trackColorOff` | Custom color for the switch track when turned off. | Switch |
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
 | `inputError` | This has the same properties as `input`. | Overrides `input` styles if there are validation errors. | Switch |
 | `inputDisabled` | This has the same properties as `input`. | Overrides `input` styles if the checkbox is non-editable. | Switch |
-| `checkboxInput` | This has all ViewStyle properties. |  | Checkbox |
+| `checkboxInput` | This has all ViewStyle properties. | N/A | Checkbox |
 | `checkboxInput` | `color` | Custom color for the tick icon. | Checkbox |
 | `checkboxInput` | `size` | Custom size for the tick icon. | Checkbox |
 | `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the checkbox is non-editable. | Checkbox |
@@ -609,23 +609,23 @@ export const DatePicker = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |  |
+| `container` | This has all ViewStyle properties. | N/A |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the date picker is non-editable. |
-| `label` | This has all TextStyle properties. |  |
+| `label` | This has all TextStyle properties. |  N/A |
 | `label`  | `numberOfLines` | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `1`.) |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the date picker is non-editable. |
-| `value` | This has all TextStyle properties |  |
+| `value` | This has all TextStyle properties | N/A |
 | `value` | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the date picker is pressed (defaults to `rgba(0, 0, 0, 0.2)`). |
 | `value`  | `underlayColor` | This is the color while pressing the date picker on iOS, if not set it will be defaulted to opacity only. |
 | `valueDisabled` | This has all TextStyle properties | Overrides `value` styles if the date picker is non-editable. |
 | `valueContainerError` | This has all TextStyle properties | Overrides `value` styles if the date picker has a validation error. |
-| `placeholder` | This has all TextStyle properties |   |
+| `placeholder` | This has all TextStyle properties | N/A  |
 | `placeholderDisabled` | This has all TextStyle properties | Overrides `placeholder` styles if the date picker is non-editable. |
-| `validationMessage` | This has all TextStyle properties |  |
-| `pickerBackdropIOS` | This has all ViewStyle properties |  |
-| `pickerIOS` | This has all ViewStyle properties |  |
-| `pickerIOS` | `color` |  |
-| `pickerTopIOS` | This has all ViewStyle properties |  |
+| `validationMessage` | This has all TextStyle properties | N/A |
+| `pickerBackdropIOS` | This has all ViewStyle properties | N/A |
+| `pickerIOS` | This has all ViewStyle properties | N/A |
+| `pickerIOS` | `color` | N/A |
+| `pickerTopIOS` | This has all ViewStyle properties | N/A |
 
 The default class to style all date picker inputs is named `DatePicker`.
 
@@ -659,9 +659,9 @@ export const com_mendix_widget_native_image_Image = {
 
 | Element             | Style Properties                    | Description                                                  |
 | ------------------- | ----------------------------------- | ------------------------------------------------------------ |
-| `container`         | This has all ViewStyle properties.  |                                                              |
-| `image`             | This has all ImageStyle properties. |                                                              |
-| `backdrop`          | This has all ViewStyle properties.  | Styles for the backdrop of an enlarged image view.           |
+| `container`         | This has all ViewStyle properties.  |   N/A       |
+| `image`             | This has all ImageStyle properties. |    N/A      |
+| `backdrop`          | This has all ViewStyle properties.  | Styles for the backdrop of an enlarged image view.   |
 
 ### Static Image {#image}
 
@@ -688,11 +688,11 @@ export const Image = {
 
 | Element             | Style Properties                    | Description                                                  |
 | ------------------- | ----------------------------------- | ------------------------------------------------------------ |
-| `container`         | This has all ViewStyle properties.  |                                                              |
+| `container`         | This has all ViewStyle properties.  |      N/A        |
 | `container`         | `rippleColor`                       | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
 | `container`         | `underlayColor`                     | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
 | `containerDisabled` | Same properties as `container`      | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
-| `image`             | This has all ImageStyle properties. |                                                              |
+| `image`             | This has all ImageStyle properties. |     N/A        |
 | `imageDisabled`     | Same properties as `image`.          | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 
 The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
@@ -743,13 +743,13 @@ export const ActionButton = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |    |
+| `container` | This has all ViewStyle properties. |  N/A  |
 | `container` | `rippleColor` | This is the color of the ripple on Android (defaults to `rgba(0, 0, 0, 0.2)`). |
 | `container`  | `underlayColor` | This is the color while pressing the button on iOS, if not set it will be defaulted to opacity only. |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`. |
-| `caption` | This has all TextStyle properties. |   |
+| `caption` | This has all TextStyle properties. | N/A  |
 | `captionDisabled` | Same properties as `caption` | Overrides `caption` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`. |
-| `icon` | This has all ViewStyle properties. |   |
+| `icon` | This has all ViewStyle properties. |  N/A |
 | `icon` | `size` | This is the size of the button icon (defaults to `12`). |
 | `icon` | `color` | This is the color of the button icon. |
 | `iconDisabled` | Same properties as `icon` | Overrides `icon` styles if the button has on click action set and it cannot be executed or is set with `Disable during action`. |
@@ -794,7 +794,7 @@ export const Page = {
 | `header` | `title` | This has all TextStyle properties. |
 | `header` | `backButtonText` | This has all TextStyle properties. |
 | `header` | `backButtonIcon` | This has all ImageStyle properties. |
-| `container` | This has all ViewStyle properties. |    |
+| `container` | This has all ViewStyle properties. |  N/A  |
 
 The default classes for layouts and pages are `Layout` and `Page`.
 
@@ -964,7 +964,7 @@ export const com_mendix_widget_native_animation_Animation = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |      |
+| `container` | This has all ViewStyle properties. |   N/A   |
 
 The default class to style all animation widgets is named `com_mendix_widget_native_animation_Animation`.
 
@@ -1028,8 +1028,8 @@ export const com_mendix_widget_native_backgroundimage_BackgroundImage = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |  |
-| `image` | This has all ImageStyle properties. |  |
+| `container` | This has all ViewStyle properties. | N/A |
+| `image` | This has all ImageStyle properties. | N/A |
 | `image` | `svgColor` | Property to set the color of an SVG image (defaults to `black`). |
 
 The default class to style all background images is named `com_mendix_widget_native_backgroundimage_BackgroundImage`.
@@ -1053,8 +1053,8 @@ export const com_mendix_widget_native_badge_Badge = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |      |
-| `caption` | This has all TextStyle properties. |      |
+| `container` | This has all ViewStyle properties. |   N/A   |
+| `caption` | This has all TextStyle properties. |   N/A   |
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
@@ -1147,9 +1147,9 @@ export const com_mendix_widget_native_barchart_BarChart = {
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A|
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A|
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A|
 | `grid` | `backgroundColor` | Applies a color to the grid background (string). |
 | `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
 | `grid` | `lineColor` | Applies a color to the grid lines (string). |
@@ -1169,15 +1169,15 @@ export const com_mendix_widget_native_barchart_BarChart = {
 | `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
 | `xAxis` | `lineColor` | Applies a color to the axis line (string). |
 | `xAxis` | `width` | Applies a width to the axis line (number). |
-| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
-| `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `yAxis` | All `xAxis` element styles. | N/A |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
-| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
 | `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
 | `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
 | `bars` | `barColorPalette` | Provides colors to bars that do not have a bar color configured (string with list of colors separated by ';', one color for each series). |
@@ -1212,8 +1212,8 @@ export const com_mendix_widget_native_barcodescanner_BarcodeScanner = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |  |
-| `mask` | This only allows the properties below. |  |
+| `container` | This has all ViewStyle properties. | N/A |
+| `mask` | This only allows the properties below. | N/A |
 | `mask` | `color` | Property to set the color of the mask border indicators (defaults to `#62B1F6`). |
 | `mask` | `width` | Property to set the width of the barcode reader. |
 | `mask` | `height` | Property to set the height of the barcode reader. |
@@ -1441,9 +1441,9 @@ export const com_mendix_widget_native_columnchart_ColumnChart = {
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
 | `grid` | `backgroundColor` | Applies a color to the grid background (string). |
 | `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
 | `grid` | `lineColor` | Applies a color to the grid lines (string). |
@@ -1465,13 +1465,13 @@ export const com_mendix_widget_native_columnchart_ColumnChart = {
 | `xAxis` | `width` | Applies a width to the axis line (number). |
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
-| `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `yAxis` | All `xAxis` element styles. | N/A |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
-| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
 | `domain` > `padding` | `x` | Applies a number of pixels of padding to add the beginning and end of the X axis domain (number). |
 | `domain` > `padding` | `y` | Applies a number of pixels of padding to add the beginning and end of the Y axis domain (number). |
 | `columns` | `columnColorPalette` | Provides colors to columns that do not have a column color configured (string with list of colors separated by ';', one color for each series). |
@@ -1536,16 +1536,16 @@ export const com_mendix_widget_native_feedback_Feedback = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `floatingButton` | This has all ViewStyle properties. |    |
-| `dialog` | This has all ViewStyle properties. |  |
-| `title` | This has all TextStyle properties. |  |
-| `textAreaInput` | This has all TextStyle properties. |  |
+| `floatingButton` | This has all ViewStyle properties. | N/A  |
+| `dialog` | This has all ViewStyle properties. | N/A |
+| `title` | This has all TextStyle properties. | N/A |
+| `textAreaInput` | This has all TextStyle properties. | N/A |
 | `textAreaInput` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `textAreaInput` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `textAreaInput` | `underlineColorAndroid` | This is the underline color for Android devices. |
 | `textAreaInput` | `numberOfLines` | This is the height of the text area is based on this number of text lines. |
-| `switchLabel` | This has all TextStyle properties. |   |
-| `switchInput` | This has all TextStyle properties. |  |
+| `switchLabel` | This has all TextStyle properties. |  N/A |
+| `switchInput` | This has all TextStyle properties. | N/A  |
 | `switchInput` | `trackColorOn` | This is the custom color for the switch track when turned on. |
 | `switchInput` | `trackColorOff` | This is the custom color for the switch track when turned off. |
 | `switchInput` | `thumbColorOn` | This is the color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
@@ -1596,16 +1596,16 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton 
 
 | Element | Style Properties    | Description |
 | --- | ---| --- |
-| `container` | This has all ViewStyle properties. |  |
-| `button` | This has all ViewStyle properties.  |  |
+| `container` | This has all ViewStyle properties. | N/A |
+| `button` | This has all ViewStyle properties.  | N/A |
 | `button` | `size` | This is the radius of the button. |
 | `button` | `rippleColor` | This is the color of the ripple on Android. |
-| `buttonIcon` | This has all ImageStyle properties. |  |
-| `secondaryButton` | This has all ViewStyle properties.  |  |
+| `buttonIcon` | This has all ImageStyle properties. | N/A |
+| `secondaryButton` | This has all ViewStyle properties.  | N/A |
 | `secondaryButton` | `size` | This is the radius of the secondary buttons. |
-| `secondaryButtonIcon` | This has all ImageStyle properties. |  |
-| `secondaryButtonCaption` | This has all TextStyle properties.  |  |
-| `secondaryButtonCaptionContainer` | This has all ViewStyle properties. |  |
+| `secondaryButtonIcon` | This has all ImageStyle properties. | N/A |
+| `secondaryButtonCaption` | This has all TextStyle properties.  | N/A |
+| `secondaryButtonCaptionContainer` | This has all ViewStyle properties. | N/A |
 
 The default class to style all floating actions buttons is named `com_mendix_widget_native_floatingactionbutton_FloatingActionButton`.
 
@@ -1648,7 +1648,7 @@ export const com_mendix_widget_native_gallery_Gallery = {
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
 | `emptyPlaceholder` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the empty placeholder. |
 | `firstItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the first item of the list. |
 | `lastItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the last item of the list. |
@@ -1738,15 +1738,15 @@ export const com_mendix_widget_native_animation_Animation = {
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
-| `fullscreenContainer` | This has all ViewStyle properties. | |
-| `popupContainer` | This has all ViewStyle properties. | |
-| `paginationContainer` | This has all ViewStyle properties. | |
-| `paginationText` | This has all TextStyle properties. | |
-| `dotStyle` | This has all ViewStyle properties. | |
-| `activeDotStyle` | This has all ViewStyle properties. | |
-| `buttonsContainer` | This has all ViewStyle properties. | |
+| `fullscreenContainer` | This has all ViewStyle properties. | N/A |
+| `popupContainer` | This has all ViewStyle properties. |  N/A |
+| `paginationContainer` | This has all ViewStyle properties. | N/A |
+| `paginationText` | This has all TextStyle properties. | N/A |
+| `dotStyle` | This has all ViewStyle properties. | N/A |
+| `activeDotStyle` | This has all ViewStyle properties. | N/A |
+| `buttonsContainer` | This has all ViewStyle properties. | N/A |
 | `container` | This has all ViewStyle properties. | Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext. |
-| `caption` | This has all ViewStyle properties. | |
+| `caption` | This has all ViewStyle properties. | N/A |
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 
@@ -1837,9 +1837,9 @@ export const com_mendix_widget_native_linechart_LineChart = {
 
 | Element | Style Properties | Description |
 | --- | --- | --- |
-| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
-| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `errorMessage` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
+| `chart` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
 | `grid` | `backgroundColor` | Applies a color to the grid background (string). |
 | `grid` | `dashArray` | Applies a pattern of dashes and gaps to the grid lines (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
 | `grid` | `lineColor` | Applies a color to the grid lines (string). |
@@ -1859,15 +1859,15 @@ export const com_mendix_widget_native_linechart_LineChart = {
 | `xAxis` | `fontWeight` | Applies a font weight to the axis value labels ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
 | `xAxis` | `lineColor` | Applies a color to the axis line (string). |
 | `xAxis` | `lineWidth` | Applies a width to the axis line (number). |
-| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the bottom or right side of the grid ("bottom" or "right"). |
-| `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `yAxis` | All `xAxis` element styles. | N/A |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the top or left side of the grid ("top" or "left"). |
-| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
+| `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `legend` > `indicator` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | N/A |
+| `legend` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | N/A |
 | `lines` | `lineColorPalette` | Provides colors to lines that do not have a line color configured (string with list of colors separated by ';'). |
 | `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `dashArray` | Applies a pattern of dashes and gaps to the graph line (string containing a [dash pattern](https://www.w3.org/TR/SVG11/painting.html#StrokeDasharrayProperty)). |
 | `lines` > `customLineStyles` > `any_custom_line_style_name` > `line` | `ending` | Applies a flat or rounded line end to the graph line ("flat" or "round"). |
@@ -1946,8 +1946,8 @@ The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |  |
-| `loadingOverlay` | This has all ViewStyle properties. |  |
+| `container` | This has all ViewStyle properties. | N/A |
+| `loadingOverlay` | This has all ViewStyle properties. | N/A |
 | `loadingIndicator` | `color` | This is the color of the loading indicator. |
 | `marker` | `color` | This is the color of the location marker. |
 | `marker` | `opacity` | This is the opacity of the location marker. |
@@ -2060,8 +2060,8 @@ export const com_mendix_widget_native_popupmenu_PopupMenu = {
 
 | Element | Style Properties | Description  |
 | ---| --- | ---|
-| `basic`     | BasicItemStyle |Styles basic items.  |
-| `custom`    | CustomItemStyle |Styles custom items.  |
+| `basic`     | BasicItemStyle |Styles basic items.  | N/A |
+| `custom`    | CustomItemStyle |Styles custom items.  | N/A |
 | `buttonContainer` | This has all ViewStyle properties. | Styles the wrapper view of triggerer since there could be multiple elements, and it has to be wrapped in a view. |
 | `container` | This has all ViewStyle properties. | Styles the wrapper view around the whole menu. |
 
@@ -2088,11 +2088,11 @@ The default class to style all popup menus is named `com_mendix_widget_native_po
 
 #### CustomItemStyle
 
-| Element                   | Style Properties |  Description                                      |
-| ---------------------------| ---- | ------------------------------------------------ |
+| Element   | Style Properties |  Description   |
+| ---------| ---- | ------------ |
 | `container` | This has all ViewStyle properties. | Styles the wrapper container around a custom item. |
-| `itemStyle` | `rippleColor: string`      | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
-| `dividerColor` | `string`      | Styles the divider color.                         |
+| `itemStyle` | `rippleColor: string`   | Styles the color of touch feedback when item is tapped. Works for both iOS and Android platforms. |
+| `dividerColor` | `string`      | Styles the divider color.      |
 
 ### Progress Bar {#progress-bar}
 
@@ -2119,10 +2119,10 @@ export const com_mendix_widget_native_progressbar_ProgressBar = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |  |
-| `bar` | This has all ViewStyle properties. |  |
+| `container` | This has all ViewStyle properties. | N/A |
+| `bar` | This has all ViewStyle properties. | N/A |
 | `fill` | `backgroundColor` | This is the background color of the filled progress bar portion. |
-| `validationMessage` | This has all TextStyle properties. |  |
+| `validationMessage` | This has all TextStyle properties. |  N/A |
 
 The default class to style all progress bars is named `com_mendix_widget_native_progressbar_ProgressBar`.
 
@@ -2158,15 +2158,15 @@ export const com_mendix_widget_native_progresscircle_ProgressCircle = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |  |
+| `container` | This has all ViewStyle properties. | N/A |
 | `circle` | `size` | This is the radius of the progress circle. |
 | `circle` | `borderWidth` | This is the border width of the progress circle. |
 | `circle` | `borderColor` | This is the color of the progress circle border. |
 | `fill` | `backgroundColor` | This is the color of the circle’s filled portion. |
 | `fill` | `width` | This is the width of the progress circle. |
 | `fill` | `lineCapRounded` | This determines if the rotating line’s front tip is rounded off or not. |
-| `text` | This has all TextStyle properties. |  |
-| `validationMessage` | This has all TextStyle properties. |  |
+| `text` | This has all TextStyle properties. | N/A |
+| `validationMessage` | This has all TextStyle properties. | N/A |
 
 The default class to style all progress circles is named `com_mendix_widget_native_progresscircle_ProgressCircle`.
 
@@ -2191,7 +2191,7 @@ export const com_mendix_widget_native_qrcode_QRCode = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |   |
+| `container` | This has all ViewStyle properties. | N/A |
 | `qrcode` | `size` | The size of the QR code. |
 | `qrcode` | `color`| The color of the QR code. |
 | `qrcode` | `backgroundColor` | The background color behind the QR code. |
@@ -2292,15 +2292,15 @@ export const com_mendix_widget_native_rangeslider_RangeSlider = {
 
 | Element | Style Properties    | Description |
 | ---| --- | --- |
-| `container` | This has all ViewStyle properties. |    |
-| `track` | This has all ViewStyle properties. |    |
-| `trackDisabled` | This has all ViewStyle properties. |    |
-| `highlight` | This has all ViewStyle properties. |    |
-| `highlightDisabled` | This has all ViewStyle properties. |    |
-| `marker` | This has all ViewStyle properties. |    |
-| `markerActive` | This has all ViewStyle properties. |    |
-| `markerDisabled` | This has all ViewStyle properties. |    |
-| `validationMessage` | This has all TextStyle properties. |    |
+| `container` | This has all ViewStyle properties. |  N/A  |
+| `track` | This has all ViewStyle properties. |  N/A  |
+| `trackDisabled` | This has all ViewStyle properties. |  N/A  |
+| `highlight` | This has all ViewStyle properties. |  N/A  |
+| `highlightDisabled` | This has all ViewStyle properties. |  N/A  |
+| `marker` | This has all ViewStyle properties. |  N/A  |
+| `markerActive` | This has all ViewStyle properties. |  N/A  |
+| `markerDisabled` | This has all ViewStyle properties. |  N/A |
+| `validationMessage` | This has all TextStyle properties. |  N/A  |
 
 The default class to style all range slider inputs is named `com_mendix_widget_native_rangeslider_RangeSlider`.
 
@@ -2329,9 +2329,9 @@ export const com_mendix_widget_native_rating_Rating = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |  |
-| `containerDisabled` | This has all ViewStyle properties. |  |
-| `icon` | This has all ViewStyle properties. |  |
+| `container` | This has all ViewStyle properties. | N/A |
+| `containerDisabled` | This has all ViewStyle properties. | N/A |
+| `icon` | This has all ViewStyle properties. | N/A |
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 | `icon` | `selectedColor` | The color of the icon when selected. |
@@ -2417,19 +2417,19 @@ export const com_mendix_widget_native_signature_Signature = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | | This has all ViewStyle properties.   |
+| `container` | This has all ViewStyle properties.   | N/A |
 | `container` | `penColor` | This will change the color of the stroke. |
-| `buttonWrapper` | | This has all ViewStyle properties. |
-| `buttonClearContainer` | | This has all ViewStyle properties. |
+| `buttonWrapper` | This has all ViewStyle properties. | N/A |
+| `buttonClearContainer` | This has all ViewStyle properties. | N/A |
 | `buttonClearContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
 | `buttonClearContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
 | `buttonClearContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
-| `buttonClearCaption` | | This has all TextStyle properties. |
-| `buttonSaveContainer` | | This has all ViewStyle properties. |
+| `buttonClearCaption` | This has all TextStyle properties. | N/A |
+| `buttonSaveContainer` |  This has all ViewStyle properties. | N/A |
 | `buttonSaveContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
 | `buttonSaveContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
 | `buttonSaveContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
-| `buttonSaveCaption` | | This has all TextStyle properties. |
+| `buttonSaveCaption` | This has all TextStyle properties. | N/A |
 
 The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
 
@@ -2485,19 +2485,19 @@ export const com_mendix_widget_native_switch_Switch = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties.   |   |
+| `container` | This has all ViewStyle properties.   | N/A  |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
-| `input` | This has all TextStyle properties.   |   |
+| `input` | This has all TextStyle properties.   |  N/A |
 | `input` | `trackColorOn` | Custom color for the switch track when turned on. |
 | `input` | `trackColorOff` | Custom color for the switch track when turned off. |
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the checkbox is non-editable. |
-| `label` | This has all TextStyle properties   |  |
+| `label` | This has all TextStyle properties   | N/A |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the checkbox is non-editable. |
-| `validationMessage` | This has all TextStyle properties.   |  |
+| `validationMessage` | This has all TextStyle properties.   |  N/A |
 
 The default class to style all checkbox inputs is named `com_mendix_widget_native_switch_Switch`.
 
@@ -2535,13 +2535,13 @@ export const com_mendix_widget_native_togglebuttons_ToggleButtons = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |       |
-| `containerDisabled` | This has all ViewStyle properties. |       |
-| `button` | This has all ViewStyle properties. |       |
-| `text` | This has all TextStyle properties. |       |
-| `activeButton` | This has all ViewStyle properties. |       |
-| `activeButtonText` | This has all TextStyle properties. |       |
-| `validationMessage` | This has all TextStyle properties. |       |
+| `container` | This has all ViewStyle properties. |  N/A |
+| `containerDisabled` | This has all ViewStyle properties. |  N/A |
+| `button` | This has all ViewStyle properties. |  N/A |
+| `text` | This has all TextStyle properties. |  N/A |
+| `activeButton` | This has all ViewStyle properties. | N/A |
+| `activeButtonText` | This has all TextStyle properties. | N/A |
+| `validationMessage` | This has all TextStyle properties. | N/A |
 
 The default class to style all toggle buttons is named `com_mendix_widget_native_togglebuttons_ToggleButtons`.
 
@@ -2584,10 +2584,10 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |        |
+| `container` | This has all ViewStyle properties. |  N/A |
 | `indicator` | `color` | The loading indicator color. |
-| `video` | This has all ViewStyle properties. |      |
-| `errorMessage` | This has all TextStyle properties. |      |
+| `video` | This has all ViewStyle properties. | N/A |
+| `errorMessage` | This has all TextStyle properties. | N/A |
 | `fullScreenVideoPlayer` | This has all ViewStyle properties. | Android only |
 | `controlBtnContainerStyle` | This has all ViewStyle properties. | Android only |
 | `fullScreenVideoStyle` | This has all ViewStyle properties. | Android only |

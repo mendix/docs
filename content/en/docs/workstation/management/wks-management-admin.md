@@ -133,12 +133,13 @@ Workstation Management retrieves a subset of the information on the **Diagnostic
 
 ### Detect Card Readers
 
-Card readers are handled uniquely within Workstation Management. They are not configured as separate devices in the Devices overview of a Station page. Instead, the Workstation Client automatically detects connected card readers.
+The Workstation Client can automatically detect the card readers attached to the computer and add them to its device list. Alternatively, you can configure card readers as devices of the station. For more information, see [Configuring Devices: Card Readers](/mendix-workstation/management-devices/#card-readers).
 
 Auto detecting card readers is disabled by default. To enable this feature, perform the following steps:
-    1. In **Station** view, click the **three dots** icon.
-    2. Click **Edit Station**.
-    3. Clear the **Detect Card Readers** check box.
+
+1. In **Station** view, click the **three dots** icon.
+2. Click **Edit Station**.
+3. Select the **Detect Card Readers** check box.
 
 ### Developer Mode {#developer-mode}
 

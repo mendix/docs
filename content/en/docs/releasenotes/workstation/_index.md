@@ -20,6 +20,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 * Camera devices - We have added a new *camera* connection type to configure a USB camera or webcam attached to the computer that runs the Workstation Client. You can set the camera to use and the requested width, height, and frame rate of its video feed, and enable barcode and motion detection. For more information, see [Configuring Devices: Camera](/mendix-workstation/management-devices/#camera).
 * Client diagnostics - We have added a **Diagnostics** button to the **Station Detail** page that retrieves the diagnostics of the Workstation Client on the registered computer. You can see which peripherals it detects, what system it runs on, and how many log entries it has recorded per level, without access to that computer. For more information, see [Managing Stations: Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics).
+* Card reader devices - We have added a new *card reader* connection type to define the card readers that a station uses by their name, in addition to detecting them automatically. Configured card readers are part of the station configuration, so they are kept when you copy a station. For more information, see [Configuring Devices: Card Readers](/mendix-workstation/management-devices/#card-readers).
 
 #### Improvements
 

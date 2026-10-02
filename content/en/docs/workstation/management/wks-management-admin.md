@@ -135,22 +135,28 @@ Workstation Management retrieves a subset of the information on the **Diagnostic
 
 Card readers are handled uniquely within Workstation Management. They are not configured as separate devices in the Devices overview of a Station page. Instead, the Workstation Client automatically detects connected card readers.
 
-Auto detecting card readers is enabled by default. You can toggle the **Detect Card Readers** setting on the **Station Detail Page** to **Off** if you do not want the Workstation Client to automatically detect smart card readers for this specific station.
+Auto detecting card readers is disabled by default. To enable this feature, perform the following steps:
+    1. In **Station** view, click the **three dots** icon.
+    2. Click **Edit Station**.
+    3. Clear the **Detect Card Readers** check box.
 
 ### Developer Mode {#developer-mode}
-
-Developer mode can be configured on the **Station** page by selecting **Enable Developer Mode**.
-
-Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Workspaces](/mendix-workstation/management-workspaces/).
-
-Disabling developer mode requires Workstation licenses. In a workspace without an entitlement, developer mode is enabled by default. Saving a station with **Enable Developer Mode** cleared is then refused with the message *You currently are not entitled to disable developer mode. Please contact your administrator to obtain the necessary Workstation licenses.* Stations that already have developer mode disabled keep that setting. Losing the entitlement does not re-enable developer mode on existing stations.
 
 When developer mode is enabled, users of the Workstation Client can perform the following actions:
 
 * Quit the program from the Start menu.
 * Deregister the Workstation Client, allowing it to be registered to another station.
-* Debug level live logs displayed in the Logs pane of the Workstation Client, even if the workspace's log level is set to a different level.
+* Access debug level live logs displayed in the Logs pane of the Workstation Client, even if the workspace's log level is set to a different level.
+
+Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Workspaces](/mendix-workstation/management-workspaces/).
+
+Disabling developer mode requires Workstation licenses. In a workspace without an entitlement, developer mode is enabled by default. Losing the entitlement does not re-enable developer mode on existing stations.
 
 {{% alert color="info" %}}
 For production environments, it is strongly recommended to disable Developer Mode, which requires Workstation licenses. This prevents Workstation operators from accidentally quitting or deregistering the Workstation Client, and restricts access to debugging tools that are not needed in a live operational setting.
 {{% /alert %}}
+
+To configure developer mode, perform the following steps:
+    1. In **Station** view, click the **three dots** icon.
+    2. Click **Edit Station**.
+    3. Check or clear the **Developer Mode** check box.

@@ -21,6 +21,17 @@ The following standard request handlers are used:
 | Page/Microflow URLs | `/p` (default) | Handles opening pages and executing microflows that have a URL configured. The endpoint can be configured in the [app settings](/refguide/runtime-tab/#url-prefix). |
 | PWA Manifest | `/manifest.webmanifest` | Serves the manifest file that is required for [PWA applications](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/). |
 | Mx Dev Tools | `/mxdevtools` | Websocket endpoint that handles client logs and nanoflow debugging. Only enabled during development. |
+| Debugger | `/debugger` | Endpoint that can be used to debug Mendix Apps. |
+
+## Admin Port Request Handlers
+
+| Name | Endpoint | Description |
+| ---- | -------- | ----------- |
+| Root | `/` | Used to perform different operations on the admin port. |
+
+{{% alert color="info" %}}
+Note that the admin port also has a `root` (`/`) URL. This is not exposed to clients. This port is only accessible to system administrators.
+{{% /alert %}}
 
 ## Custom Request Handlers
 

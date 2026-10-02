@@ -29,6 +29,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 #### Bug Fixes
 
 * We have fixed an issue where refreshing the **Test Your Station** page bypassed the check that the station belongs to the current workspace.
+* We have fixed an issue where a local user whose email address contained uppercase letters could not be found when adding them to a workspace.
 
 ### Workstation Client
 

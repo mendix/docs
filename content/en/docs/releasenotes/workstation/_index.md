@@ -37,6 +37,12 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 * Client diagnostics - The Workstation Client now answers diagnostics requests from Workstation Management, so a station's diagnostics can be inspected without access to the computer. The local file system paths that the client's own **Diagnostics** page shows are left out of the response.
 
+#### Improvements
+
+* Credential storage - The Workstation Client now encrypts its API key at rest with the secret store of the operating system, which protects the key from being copied off the computer. An API key that is stored in plain text is encrypted automatically the first time the Client reads it after the upgrade, so no action is needed. This has the following implications:
+    * Potentially breaking change - The Workstation Client now requires a secret store of the operating system. The secret store exists by default on Windows and macOS, and on most Linux distributions that are commonly used in production environments. Ensure that your Linux distribution meets this requirement, as the Client does not start otherwise. For more information, see [Troubleshooting the Workstation Client: Safe Storage Is Unavailable](/mendix-workstation/troubleshooting-workstation-client/#safe-storage-unavailable).
+    * In some scenarios, such as copying the configuration folder to another computer or downgrading the Client, the Workstation Client must be registered again. For more information, see [Troubleshooting the Workstation Client: Client Must Be Registered Again](/mendix-workstation/troubleshooting-workstation-client/#client-registered-again).
+
 ## 4.2.1
 
 ### Release date: September 16, 2026

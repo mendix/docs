@@ -246,6 +246,7 @@ The settings in this section configure the storage for build output artifacts.
             general:
                 azure.workload.identity/use: "true"
         ```
+
         This step is not required if Private Mendix Platform is using a MI from Azure Managed Identity-based storage plans. In that case, the customPodLabel is already configured.         
     
     6. Restart Private Mendix Platform to ensure that the labels are applied.

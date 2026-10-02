@@ -159,6 +159,7 @@ Verify the configuration by using the following command:
 ```text
 kubectl auth can-i create secretproviderclasses --as=system:serviceaccount:kube-system:pmp-event-all -n <namespace>
 ```
+
 {{% /alert %}}
 
 ### Namespace-Level Flag

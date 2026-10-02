@@ -293,7 +293,6 @@ studioPro.app.projectChanges.addEventListener("documentAdded", async ({ document
 Studio Pro does not track the deletion or renaming of Java Actions that are linked to Custom Blob Documents. These consistency checks can help you handle those cases. These code samples are simple examples to use as a basis for your own production code.
 {{% /alert %}}
 
-
 ## Limitations
 
 A Custom Blob Document and Java Action relationship is one-to-one. There can only be one Java Action per document type. If an extension tries to link a Java Action that is already linked to another type, the API will throw an error.

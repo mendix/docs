@@ -594,7 +594,7 @@ components:
     limit:
       name: limit
       in: query
-      description: The maximum number of items to be returned per request. The default and maximum value is 100. A limit of 0 implies a use of the default limit.
+      description: The maximum number of items to be returned per request. The default and maximum value is 100. If the limit is set to 0, the default limit is used.
       schema:
         type: integer
     offset:

@@ -19,7 +19,7 @@ With ZDT, Mendix Cloud intelligently manages the deployment process, ensuring yo
 To leverage the benefits of zero-downtime deployment, your Mendix application and deployment environment must meet the following criteria:
 
 * **Mendix runtime version** – Must be running on Mendix Runtime version 10.24 or above.
-* **Change type** – The deployment must involve only [configuration-level changes](/developerportal/deploy/zero-downtime/#zdt-application).
+* **Change type** – The deployment must involve only [configuration-level changes](/developerportal/deploy/zero-downtime/#zdt-application) or [compatible model changes](/developerportal/deploy/zero-downtime/#zdt-compatibility).
 
 {{% alert color="info" %}}
 No special setup is required to enable ZDT. When your application and deployment meet these prerequisites, ZDT is automatically available for eligible changes.
@@ -30,7 +30,7 @@ No special setup is required to enable ZDT. When your application and deployment
 <!-- Diagram provided by the deployment team. Contact the team for updates or questions  -->
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/zero-downtime/zdt-process-success-flow.png" alt="Sequence diagram illustrating the Zero-Downtime Deployment process, showing the Technical Contact initiating deployment, Mendix Cloud starting a new app version in the background while the current version serves users, the new version preparing configuration and reporting ready, Mendix Cloud gracefully stopping the old version, and finally directing traffic to the new version without user interruption." >}}
 
-When an eligible configuration change is deployed with ZDT, Mendix Cloud orchestrates the following steps:
+When an eligible change is deployed with ZDT, Mendix Cloud orchestrates the following steps:
 
 1. **Initiate deployment** – The Technical Contact triggers deployment with **Deploy without Downtime** in Mendix Cloud.
 2. **Current version active** – The existing application version continues to serve all user traffic without interruption.

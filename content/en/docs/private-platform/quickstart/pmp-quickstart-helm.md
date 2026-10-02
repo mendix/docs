@@ -630,7 +630,12 @@ When configuring secret management, keep in mind the following key points:
       role: "my-role"
       secretName: "my-secret"
       version: "v2"  # Optional: v1 or v2
-      svix-server:
+```
+
+##### Svix Configuration Example
+
+```text
+svix-server:
   azureWorkloadIdentity:
     enable: true
     clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"

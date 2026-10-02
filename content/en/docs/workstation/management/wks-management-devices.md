@@ -192,7 +192,7 @@ To add a camera device, perform the following steps:
     | Parameter | Description |
     | --- | --- |
     | **Camera Type** | Required; the type of camera connection. Only **USB/Webcam** is currently supported. Support for camera streams over Real Time Streaming Protocol (RTSP), User Datagram Protocol (UDP), and HTTP with Motion JPEG (MJPEG) is planned. |
-    | **Camera Name** | Optional; the name of the camera to use. Leave the field empty to use the default camera. |
+    | **Camera Name** | Optional; the name of the camera to use. The Workstation Client uses the first camera whose name contains this value, ignoring case. Leave the field empty to use the first camera that the Client finds. |
     | **Width** | Optional; the requested width of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |
     | **Height** | Optional; the requested height of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |
     | **Frame Rate** | Optional; the requested frame rate of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |

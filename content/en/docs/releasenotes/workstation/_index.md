@@ -36,6 +36,8 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 #### New Features
 
 * Client diagnostics - The Workstation Client now answers diagnostics requests from Workstation Management, so a station's diagnostics can be inspected without access to the computer. The local file system paths that the client's own **Diagnostics** page shows are left out of the response.
+* Camera devices - We have added support for USB cameras and webcams, including barcode and motion detection. For more information, see [Device Message Syntax: Camera](/mendix-workstation/device-syntax/#camera).
+* Device testing - We have added a test view to the Workstation Client to test devices directly on the computer, like the **Test Your Station** page in Workstation Management. For more information, see [Using the Workstation Client: Testing Devices](/mendix-workstation/use-client/#testing-devices).
 
 #### Improvements
 

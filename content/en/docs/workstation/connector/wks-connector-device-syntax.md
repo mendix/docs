@@ -58,6 +58,41 @@ Once subscribed, every notification from the device arrives as a response in the
 
 Instead of building these messages by hand, you can call the `BLE_Subscribe`, `BLE_Unsubscribe`, `BLE_Read`, and `BLE_Write` nanoflows from [Workstation Commons](/mendix-workstation/commons/#bluetooth), which take `ServiceUUID` and `CharacteristicUUID` as plain parameters.
 
+## Camera {#camera}
+
+This device type requires the following messages and responses. Barcode commands are available only when **Enable Barcode Detection** is configured for the device, and motion commands only when **Enable Motion Detection** is configured. Send `H` to the camera to list all commands, and `B#H` to list the supported barcode types.
+
+### Message
+
+* `B#S` - Scan the next available frame for all barcode types.
+* `B#S#Type1,Type2,...` - Scan the next available frame for the specified barcode types.
+* `B#C#S` - Start continuous scanning for all barcode types.
+* `B#C#S#Type1,Type2,...` - Add the specified barcode types to continuous scanning.
+* `B#C#T` - Stop continuous scanning for all barcode types.
+* `B#C#T#Type1,Type2,...` - Remove the specified barcode types from continuous scanning.
+* `M#S` - Start motion detection.
+* `M#T` - Stop motion detection.
+* `H` - Show all camera commands. `B#H`, `M#H`, and `W#H` show the barcode, motion, and live preview commands.
+
+### Response
+
+* `B#S#Count#Type1:TextBase64,...` - The barcodes found in the scanned frame. Each barcode consists of its type and its content encoded in Base64.
+* `B#C#S#Count#Type1:TextBase64,...` - During continuous scanning, the barcodes that entered the frame.
+* `B#C#T#Count#Type1:TextBase64,...` - During continuous scanning, the barcodes that left the frame. A barcode is reported as left when it has not been detected for one second.
+* `M#S#Score` - Motion started. `Score` is the share of changed pixels in the frame, between `0` and `1`.
+* `M#T#Score` - Motion stopped.
+
+Motion is reported only when it starts or stops for at least about 250 milliseconds, not for every frame.
+
+### Barcode Types
+
+Use the following values for `Type1,Type2,...` in the barcode commands. Values that start with `All` select a group of barcode types.
+
+* Groups - `All`, `AllReadable`, `AllCreatable`, `AllLinear`, `AllMatrix`, `AllGS1`, `AllRetail`, `AllIndustrial`
+* Linear barcodes - `Codabar`, `Code39`, `Code39Std`, `Code39Ext`, `Code32`, `PZN`, `Code93`, `Code128`, `ITF`, `ITF14`, `DataBar`, `DataBarOmni`, `DataBarStk`, `DataBarStkOmni`, `DataBarLtd`, `DataBarExp`, `DataBarExpStk`, `EANUPC`, `EAN13`, `EAN8`, `ISBN`, `UPCA`, `UPCE`, `Telepen`, `TelepenAlpha`, `TelepenNumeric`, `DXFilmEdge`
+* Matrix barcodes - `PDF417`, `CompactPDF417`, `MicroPDF417`, `Aztec`, `AztecCode`, `AztecRune`, `QRCode`, `QRCodeModel1`, `QRCodeModel2`, `MicroQRCode`, `RMQRCode`, `DataMatrix`, `MaxiCode`
+* Other - `OtherBarcode`
+
 ## Keyboard Wedge {#keyboard-wedge}
 
 Keyboard wedge devices are input-only, so Mendix applications do not send messages to them. When the Workstation Client recognizes a complete message, it forwards the payload to the Workstation Connector with the prefix and suffix removed.

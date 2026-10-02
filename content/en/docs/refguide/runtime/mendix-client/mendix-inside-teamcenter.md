@@ -113,8 +113,9 @@ The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a 
 5. Rebuild Active Workspace using `awbuild.cmd`.
 
 
+
 {{% alert color="info" %}}
-Installing a kit in the stage repository and rebuilding Active Workspace are standard Teamcenter procedures. If you have issues with these steps, refer to the Siemens Teamcenter Active Workspace Customization documentation.
+Installing a kit in the stage repository and rebuilding Active Workspace follow the standard Teamcenter process. The [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) on Active Workspace customization provides detailed instructions and examples for completing these steps.
 {{% /alert %}}
 
 ### Registering the Component on a Page
@@ -122,7 +123,7 @@ Installing a kit in the stage repository and rebuilding Active Workspace are sta
 To display the Mendix app on an Active Workspace page, add its card definition to the relevant `layoutsViewModel.json` file in your Active Workspace stage repository. Set `declarativeKeyContext` to the URL of your Mendix runtime.
 
 {{% alert color="info" %}}
-Adding a component to a PL Home page is a standard Teamcenter procedure. If you have issues with this step, or need more details on how and where to add an Active Workspace component to a PL Home page, refer to the Siemens Teamcenter PL Home documentation.
+Adding an Active Workspace component to a PL Home page follows the standard Teamcenter process. The [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) on PL Home provides detailed instructions and examples for completing this configuration.
 {{% /alert %}}
 
 ```json
@@ -152,7 +153,7 @@ Add the **Mendix** JSON object (or the name you gave it) to the relevant layout 
 To display the Mendix app on an XRT, add the following to the document using the XRT editor:
 
 {{% alert color="info" %}}
-Editing an XRT document is a standard Teamcenter procedure. If you have issues with this step, or need more details on how to edit XRT documents, refer to the Siemens Teamcenter XRT documentation.
+Editing an XRT document follows the standard Teamcenter process. The [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) on XRT provides detailed instructions and examples for editing XRT documents.
 {{% /alert %}}
 
 ```xml
@@ -183,7 +184,7 @@ Use the browser console CSP errors to identify any additional directives that st
 After updating the CSP, restart the Teamcenter Process Manager for the changes to take effect.
 
 {{% alert color="info" %}}
-Editing the gateway configuration and restarting the Process Manager are standard Teamcenter procedures. If you have issues with these steps, refer to the Siemens Teamcenter Security Services documentation.
+Editing the gateway configuration and restarting the Process Manager follow the standard Teamcenter process. The [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) on Security Services provides detailed instructions for completing these steps.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

@@ -111,9 +111,9 @@ The widget's style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties |       |
+| `container` | All ViewStyle properties |   N/A   |
 | `container` | `numColumns` | This is the number of columns that the list should render (defaults to 1). |
-| `listItem`  | All ViewStyle properties |          |
+| `listItem`  | All ViewStyle properties |     N/A     |
 | `listItem`  | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the item has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
 | `listItem`  | `underlayColor` | This is the color while pressing the item on iOS, and will be applied only when the item has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
 | `listItemDisabled`  | Same properties as `listItem` | Overrides `listItem` styles if the item has an on click action and the action cannot be executed or is disabled during action. |
@@ -142,8 +142,8 @@ export const Text = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties. |                 |
-| `text`      | This has all TextStyle properties. |                 |
+| `container` | This has all ViewStyle properties. |      N/A    |
+| `text`      | This has all TextStyle properties. |      N/A    |
 | `text`     | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
 
 The default class to style all texts is named `Text`.
@@ -992,10 +992,10 @@ export const com_mendix_widget_native_backgroundgradient_BackgroundGradient = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `angle` | | Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise. |
+| `angle` | N/A | Line of direction. Takes a value from `0` to `360`. A value of 0 is equivalent to top; increasing values rotate the design clockwise. |
 | `colorList` | [gradient_color_object](#gradient-color-object) | Passes the colors you want to display in an array. Example: `[{ color: "#fff", offset: 0 }, { color: "#000", offset: 1 }]` |
 | `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
-| `opacity` | | Takes a value from `0` to `100`. The lower the value, the more transparent. |
+| `opacity` | N/A | Takes a value from `0` to `100`. The lower the value, the more transparent. |
 
 The default class to style all background gradients is named `com_mendix_widget_native_backgroundgradient_BackgroundGradient`.
 

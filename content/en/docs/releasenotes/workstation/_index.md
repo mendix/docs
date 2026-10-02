@@ -18,13 +18,13 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Camera devices - We added a new *camera* connection type to configure a USB camera or webcam attached to the computer that runs the Workstation Client. You can set the camera to use and the requested width, height, and frame rate of its video feed, and enable barcode and motion detection. For more information, see [Configuring Devices: Camera](/mendix-workstation/management-devices/#camera).
-* Client diagnostics - We added a **Diagnostics** button to the **Station Detail** page that retrieves the diagnostics of the Workstation Client on the registered computer. You can see which peripherals it detects, what system it runs on, and how many log entries it has recorded per level, without access to that computer. For more information, see [Managing Stations: Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics).
-* Card reader devices - We added a new *card reader* connection type to define the card readers that a station uses by their name, in addition to detecting them automatically. Configured card readers are part of the station configuration, so they are kept when you copy a station. For more information, see [Configuring Devices: Card Readers](/mendix-workstation/management-devices/#card-readers).
+* Camera devices - We added a new *camera* connection type to configure USB cameras and webcams. For more information, see [Configuring Devices: Camera](/mendix-workstation/management-devices/#camera).
+* Client diagnostics - We added the option to retrieve the diagnostics of the Workstation Client of a station, without access to its computer. For more information, see [Managing Stations: Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics).
+* Card reader devices - We added a new *card reader* connection type to configure card readers by their name, in addition to detecting them automatically. For more information, see [Configuring Devices: Card Readers](/mendix-workstation/management-devices/#card-readers).
 
 #### Improvements
 
-* Developer mode - Turning off developer mode now requires Workstation licenses. In a workspace without an entitlement, developer mode stays enabled. For more information, see [Managing Stations: Developer Mode](/mendix-workstation/management-stations/#developer-mode).
+* Developer mode - Turning off developer mode now requires Workstation licenses. For more information, see [Managing Stations: Developer Mode](/mendix-workstation/management-stations/#developer-mode).
 
 #### Bug Fixes
 
@@ -35,14 +35,14 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Client diagnostics - The Workstation Client now answers diagnostics requests from Workstation Management, so a station's diagnostics can be inspected without access to the computer. The local file system paths that the client's own **Diagnostics** page shows are left out of the response.
+* Client diagnostics - The Workstation Client now provides its diagnostics to Workstation Management. For more information, see [Managing Stations: Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics).
 * Camera devices - We added support for USB cameras and webcams, including barcode and motion detection. For more information, see [Device Message Syntax: Camera](/mendix-workstation/device-syntax/#camera).
 * Device testing - We added a test view to the Workstation Client to test devices directly on the computer, like the **Test Your Station** page in Workstation Management. For more information, see [Using the Workstation Client: Testing Devices](/mendix-workstation/use-client/#testing-devices).
 
 #### Improvements
 
-* Credential storage - The Workstation Client now encrypts its API key at rest with the secret store of the operating system, which protects the key from being copied off the computer. An API key that is stored in plain text is encrypted automatically the first time the Client reads it after the upgrade, so no action is needed. This has the following implications:
-    * Potentially breaking change - The Workstation Client now requires a secret store of the operating system. The secret store exists by default on Windows and macOS, and on most Linux distributions that are commonly used in production environments. Ensure that your Linux distribution meets this requirement, as the Client does not start otherwise. For more information, see [Troubleshooting the Workstation Client: Safe Storage Is Unavailable](/mendix-workstation/troubleshooting-workstation-client/#safe-storage-unavailable).
+* Credential storage - The Workstation Client now encrypts its API key at rest with the secret store of the operating system. Existing API keys are encrypted automatically after the upgrade. This has the following implications:
+    * Potentially breaking change - The Workstation Client now requires a secret store of the operating system and does not start without it. On Linux, ensure that a keyring is available. For more information, see [Troubleshooting the Workstation Client: Safe Storage Is Unavailable](/mendix-workstation/troubleshooting-workstation-client/#safe-storage-unavailable).
     * In some scenarios, such as copying the configuration folder to another computer or downgrading the Client, the Workstation Client must be registered again. For more information, see [Troubleshooting the Workstation Client: Client Must Be Registered Again](/mendix-workstation/troubleshooting-workstation-client/#client-registered-again).
 
 ## 4.2.1

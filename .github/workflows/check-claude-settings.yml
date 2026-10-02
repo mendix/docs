@@ -42,7 +42,7 @@ jobs:
 
             To override the Claude settings locally, use \`.claude/settings.local.json\` instead. This local file is gitignored and overrides the repo default.
 
-            See [\`.claude/settings.local.json.example\`](https://github.com/mendix/docs/blob/development/.claude/settings.local.json.example) for available options you can override (AWS profile, region, Bedrock configuration, etc.).
+            See [\`.claude/settings.local.json.example\`](https://github.com/mendix/docs/blob/development/.claude/settings.local.json.example) for available options you can override (AWS profile, region, Bedrock configuration, and model selection).
             `;
 
             await github.rest.issues.createComment({

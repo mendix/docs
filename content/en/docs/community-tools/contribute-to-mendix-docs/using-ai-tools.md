@@ -11,7 +11,7 @@ Contributors may use AI tools such as large language models and writing assistan
 
 ## Contributor Responsibility
 
-If you use AI tools, before contributing, you must:
+If you use AI tools, before contributing you must:
 
 * Review and verify the accuracy of all AI-assisted content.
 * Ensure the content does not infringe third-party copyrights.
@@ -37,7 +37,9 @@ The shared Claude Code settings for this repository are in [.claude/settings.jso
 * A status line
 * Telemetry turned off
 
-These settings do not configure or mandate any specific provider or language model. You must configure your own provider or sign-in. To add or override settings, create `.claude/settings.local.json` in the root of your repo clone. This file overrides the shared settings. It is gitignored, so Git doesn't commit it.
+#### Personalizing Claude Code
+
+These settings do not configure or mandate any specific provider or language model. You need to set up your own access to a model, either by signing in to Claude Code or by configuring a provider. To add or override settings, create `.claude/settings.local.json` in the root of your repo clone. This file overrides the shared settings. It is gitignored, so Git doesn't commit it.
 
 To get started, copy [.claude/settings.local.json.example](https://github.com/mendix/docs/blob/development/.claude/settings.local.json.example) to `.claude/settings.local.json` and edit the values. The example shows one setup that uses Amazon Bedrock. Delete any keys you don't need. See the [Environment variables](https://code.claude.com/docs/en/env-vars) page of the Claude Code documentation for information on environment variables.
 
@@ -49,7 +51,7 @@ Do not modify `.claude/settings.json` or other files in the `.claude/` directory
 
 If you are updating a lot of documentation, Claude Code may truncate its output. In this case, increase the output token limit by setting `CLAUDE_CODE_MAX_OUTPUT_TOKENS` to a higher value in your `.claude/settings.local.json` file. You can find more information about `CLAUDE_CODE_MAX_OUTPUT_TOKENS` on the [Environment variables](https://code.claude.com/docs/en/env-vars) page of the Claude Code documentation.
 
-### Custom Skills {#custom-skills}
+#### Custom Skills {#custom-skills}
 
 This repository includes custom Claude Code skills optimized for documentation work:
 
@@ -61,9 +63,9 @@ This repository includes custom Claude Code skills optimized for documentation w
 * `/docs-pr-review` – Reviews all changes in a PR rather than just a single document
 * `/docs-alt-text` – Suggests W3C-compliant alt text for images on a page
 
-These skills are available to all contributors using Claude Code with this repository.
+These skills are available to all contributors using Claude Code with this repository. If you use GitHub Copilot, use the prompt files described in the next section instead.
 
-## GitHub Copilot Configuration
+### GitHub Copilot Configuration
 
 If you use GitHub Copilot, the repository provides the following:
 

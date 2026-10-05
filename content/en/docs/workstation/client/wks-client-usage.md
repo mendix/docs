@@ -44,7 +44,7 @@ You can also expand each device to see more information about its connection par
 
 ### Testing Devices {#testing-devices}
 
-When [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled, you can test a device directly in the Workstation Client, without a Mendix app. This works like the **Test Your Station** page in Workstation Management. To test a device, click the **test** icon (flask) next to the device in the **Devices** section.
+When [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled, you can test a device directly in the Workstation Client, without a Mendix app. This works like the **Test Your Station** page in Workstation Management. To test a device, click the **Test** icon ({{% icon name="flask-conical" %}}) next to the device in the **Devices** section.
 
 The test view shows the following:
 

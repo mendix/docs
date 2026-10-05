@@ -156,7 +156,7 @@ The [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/) allows easy acce
 
 * Monitor GenAI Unit consumption and input/output token usage for Text and Embeddings Generation Resources.
 * Manage content for Knowledge Bases.
-* Manage team access to all resources.
+* Manage team access to all resources, including assigning the Technical Contact.
 * Create and manage connection keys to connect your apps with all resources.
 * Track activity logs for team access and connection key management.
 

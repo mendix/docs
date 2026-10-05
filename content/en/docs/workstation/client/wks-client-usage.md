@@ -54,8 +54,8 @@ The test view shows the following:
 
 To communicate with the device, perform the following actions:
 
-* Click **Connect** or **Disconnect** to open or close the connection to the device.
-* Enter a message in the message field, and then click **Send** or press <kbd>Enter</kbd>. If the device is not connected yet, the Client connects first. If you send an empty message, the last message is sent again.
+1. Click **Connect** or **Disconnect** to open or close the connection to the device.
+2. Enter a message in the message field, and then click **Send** or press the **Enter** key. If the device is not connected yet, the Client connects first. If you send an empty message, the last message is sent again.
 
 For the message syntax of each device type, see [Device Message Syntax](/mendix-workstation/device-syntax/).
 

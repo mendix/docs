@@ -146,7 +146,32 @@ Adding an Active Workspace component to a PL Home page follows the standard Team
 
 * `view` is the name of the Mendix-inside-Teamcenter Active Workspace component obtained in the [previous section](#adding-component), that is "MendixEmbedded"
 
-Add the **Mendix** JSON object (or the name you gave it) to the relevant layout handler grid and rebuild Active Workspace.
+To display the card, add its title to the `grid` array of the relevant layout handler. The following example adds the **Mendix** card to the second row of the `homeDesktopHandler` grid:
+
+```json
+ "homeDesktopHandler": {
+      "layoutId": "home",
+      "size": [
+        "desktop"
+      ],
+      "grid": [
+        [
+          "Tasks",
+          "Recents",
+          "ActionList"
+        ],
+        [
+          "Changes",
+          "Reports",
+          "Mendix"
+        ]
+      ],
+      "activeWhen": true,
+      "rowFit": 2
+    },
+```
+
+After you add the card to the layout, rebuild Active Workspace.
 
 ### Registering the Component on an XML Rendering Template (XRT)
 

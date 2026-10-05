@@ -180,7 +180,7 @@ To enable the connection, click **Connect Jira**, and then provide the following
 
 #### Version Control
 
-To create applications and collaborate, configure the connection to your version control repository. GitHub, GitLab, Azure DevOps, and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
+To create applications and collaborate, configure the connection to your version control repository. GitHub, GitLab, Azure DevOps Services, and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
 
 #### Build
 

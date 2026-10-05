@@ -162,7 +162,7 @@ On the **Import Apps** page, administrators can import existing Mendix apps that
 * GitLab
 * GitHub
 * Bitbucket
-* Azure DevOps
+* Azure DevOps Services (cloud, `dev.azure.com`). Azure DevOps Server (on-premises) is not supported.
 
 {{< figure src="/attachments/private-platform/pmp-admin6.png" class="no-border" >}}
 

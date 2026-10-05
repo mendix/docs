@@ -203,7 +203,7 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
-| 10.24.0 and above | 4.x.x | - | New constant (`GlobalUserProvisioningMicroflow`) has been introduced. It specifies the qualified name of the global user-provisioning microflow that runs after login. |
+| 10.24.0 and above | 5.0.0 | - | New constant (`GlobalUserProvisioningMicroflow`) has been introduced. It specifies the qualified name of the global user-provisioning microflow that runs after login. |
 | 10.24.0 and above | 4.7.0 | - | A new constant (`EnableAudienceValidation`) has been introduced for API security. Because it is enabled by default, you need to configure the **Resource path** and **Expected audience** value. You can disable audience validation, but Mendix does not recommend this. |
 | 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |
 | 10.24.0 and above | 4.5.0 | - | New Admin UI and new constants have been introduced. |

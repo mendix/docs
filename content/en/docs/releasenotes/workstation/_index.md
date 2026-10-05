@@ -434,7 +434,7 @@ For more information, see [Nanoflows](/mendix-workstation/develop-app/#javascrip
 #### New Features
 
 * Automatic suffixing for duplicate workstations – To make managing your workstations even smoother, we implemented automatic suffixing for imported workstations that have duplicate names. This helps prevent naming conflicts and keeps your environment tidy.
-* Feedback module replaced by the new Forum Space – We removed the Feedback function in the Workstation Management. Don't worry, your voice is still incredibly important to us! Please share your questions, ideas, and feedback in the new dedicated [Mendix Forum Space for Mendix Workstation](https://community.mendix.com/link/spaces/mendix-workstation-client). This change will help us centralize discussions and provide better support.
+* Feedback module replaced by the new Forum Space – We removed the Feedback function in the Workstation Management. Don't worry, your voice is still incredibly important to us! Please share your questions, ideas, and feedback in the new dedicated [Mendix Community Space for Mendix Workstation](https://community.mendix.com/link/spaces/mendix-workstation-client). This change will help us centralize discussions and provide better support.
 * Special characters in workspace names – You can now use special characters in your workspace names, giving you more flexibility and personalization.
 * Unique auto-accepted computer names – We added a uniqueness validation to the **Auto-Accepted Computer Name** field used for bulk registration. This ensures that each computer name is distinct, preventing potential conflicts during the registration process.
 

@@ -190,15 +190,13 @@ To add a camera device, perform the following steps:
 5. Click **Next**.
 6. Configure the following connection parameters:
 
-    | Parameter | Description |
-    | --- | --- |
-    | **Camera Type** | Required; the type of camera connection. Only **USB/Webcam** is currently supported. Support for camera streams over Real Time Streaming Protocol (RTSP), User Datagram Protocol (UDP), and HTTP with Motion JPEG (MJPEG) is planned. |
-    | **Camera Name** | Optional; the name of the camera to use. The Workstation Client uses the first camera whose name contains this value, ignoring case. Leave the field empty to use the first camera that the Client finds. |
-    | **Width** | Optional; the requested width of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |
-    | **Height** | Optional; the requested height of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |
-    | **Frame Rate** | Optional; the requested frame rate of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty. |
-    | **Enable Barcode Detection** | Optional; when enabled, the video feed is processed and an event is sent when a barcode is detected in the frame. The default value is **No**. |
-    | **Enable Motion Detection** | Optional; when enabled, the video feed is processed and an event is sent when motion is detected in the frame. The default value is **No**. |
+    * **Camera Type** - Required; the type of camera connection. Only **USB/Webcam** is currently supported. Support for camera streams over Real Time Streaming Protocol (RTSP), User Datagram Protocol (UDP), and HTTP with Motion JPEG (MJPEG) is planned.
+    * **Camera Name** - Optional; the name of the camera to use. The Workstation Client uses the first camera whose name contains this value, ignoring case. Leave the field empty to use the first camera that the Client finds.
+    * **Width** - Optional; the requested width of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty.
+    * **Height** - Optional; the requested height of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty.
+    * **Frame Rate** - Optional; the requested frame rate of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty.
+    * **Enable Barcode Detection** - Optional; when enabled, the video feed is processed and an event is sent when a barcode is detected in the frame. The default value is **No**.
+    * **Enable Motion Detection** - Optional; when enabled, the video feed is processed and an event is sent when motion is detected in the frame. The default value is **No**.
 
 7. Click **Add Device**.
 
@@ -221,14 +219,12 @@ To add a keyboard emulator device, perform the following steps:
 5. Click **Next**.
 6. Configure the following connection parameters:
 
-    | Parameter | Description |
-    | --- | --- |
-    | **Inter Character Timeout (ms)** | Required; the maximum allowed amount of time in milliseconds between key strokes for them to be considered as coming from a device. The value must be a positive integer. The default value is `50`. |
-    | **Keyboard Layout** | Required; the keyboard layout of the device. To use the active keyboard layout as defined by your operating system, select **System**. Select **en-US** as a fallback when the system keyboard layout is not compatible with the device. For example, many barcode scanners send characters from the Latin alphabet, which the system layout cannot resolve if the operating system uses a non-Latin layout such as Chinese. The default value is **System**. |
-    | **Suffix** | Required; a series of characters denoting the end of a message. The suffix is removed from the payload before it is forwarded to the Workstation Connector. The default value is `\r`, which corresponds to the carriage return that most keyboard emulating devices append to the key stroke. How this carriage return arrives depends on the platform: on Windows the operating system adds a line feed `\n` to the default carriage return, so the key strokes are followed by `\r\n`, while on macOS and Linux only a line feed `\n` is received. Set the suffix to match what your platform delivers, for example `\r` on Windows and `\n` on macOS and Linux. |
-    | **Minimum Message Length** | Optional; the shortest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. |
-    | **Maximum Message Length** | Optional; the longest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. If you set both values, the maximum must be greater than or equal to the minimum. |
-    | **Prefix** | Optional; a series of characters denoting the start of a message. The prefix is removed from the payload before it is forwarded to the Workstation Connector. |
+    * **Inter Character Timeout (ms)** - Required; the maximum allowed amount of time in milliseconds between key strokes for them to be considered as coming from a device. The value must be a positive integer. The default value is `50`.
+    * **Keyboard Layout** - Required; the keyboard layout of the device. To use the active keyboard layout as defined by your operating system, select **System**. Select **en-US** as a fallback when the system keyboard layout is not compatible with the device. For example, many barcode scanners send characters from the Latin alphabet, which the system layout cannot resolve if the operating system uses a non-Latin layout such as Chinese. The default value is **System**.
+    * **Suffix** - Required; a series of characters denoting the end of a message. The suffix is removed from the payload before it is forwarded to the Workstation Connector. The default value is `\r`, which corresponds to the carriage return that most keyboard emulating devices append to the key stroke. How this carriage return arrives depends on the platform: on Windows the operating system adds a line feed `\n` to the default carriage return, so the key strokes are followed by `\r\n`, while on macOS and Linux only a line feed `\n` is received. Set the suffix to match what your platform delivers, for example `\r` on Windows and `\n` on macOS and Linux.
+    * **Minimum Message Length** - Optional; the shortest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length.
+    * **Maximum Message Length** - Optional; the longest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. If you set both values, the maximum must be greater than or equal to the minimum.
+    * **Prefix** - Optional; a series of characters denoting the start of a message. The prefix is removed from the payload before it is forwarded to the Workstation Connector.
 
 7. Click **Add Device**.
 

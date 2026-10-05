@@ -203,7 +203,7 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
-| 10.24.0 and above | 4.x.x | - | Use `Token` as the parameter name in custom microflows or if you create a custom microflow based on `ACT_Token_CustomATPRetrieveRoles`. It was previously `AccessToken`. |
+| 10.24.0 and above | 4.8.0 | - | Use `Token` as the parameter name in custom microflows or if you create a custom microflow based on `ACT_Token_CustomATPRetrieveRoles`. It was previously `AccessToken`. |
 | | | | The microflow ACT_ShowCusomExceptionMessage has been renamed to SUB_ShowCustomExceptionMessage. |
 | 10.24.0 and above | 4.7.0 | - | A new constant (`EnableAudienceValidation`) has been introduced for API security. Because it is enabled by default, you need to configure the **Resource path** and **Expected audience** value. You can disable audience validation, but Mendix does not recommend this. |
 | 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |

@@ -64,11 +64,12 @@ To add a card reader device, perform the following steps:
 3. In the **Device Name** field, enter an identifying name for the device.
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Next**.
-6. In the **Card Reader Name** field, enter the name of the card reader as it is defined by the operating system. This field is required.
+6. In the **Card Reader Name** field, enter the name of the card reader as it is defined by the operating system. To find the name of the card reader, access the [Workstation Client diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics) by using one of the following methods:
 
-    {{% alert color="info" %}}
-    To find the name of the card reader, check the diagnostics of the Workstation Client, which list each attached card reader with its `name` under `cardReaders`. In Workstation Management, click **Diagnostics** on the **Station Detail** page, as described in [Managing Stations: Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics). Alternatively, open the **Diagnostics** page of the Client itself, which is available when developer mode is enabled, as described in [Troubleshooting the Workstation Client: Diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics). Both ways require a registered station: the Workstation Client must run on a computer with the card reader attached, and be registered to a station.
-    {{% /alert %}}
+    * In Workstation Management, go to the **Station Detail** page and click **Diagnostics**.
+    * In the Workstation Client, go to the **Diagnostics** page.
+
+    The diagnostics show all attached card readers and their names in the `cardReaders` section. Viewing them requires a registered station. That is, the Workstation Client must run on a computer with the card reader attached, and be registered to a station.
 
 7. Click **Add Device**.
 

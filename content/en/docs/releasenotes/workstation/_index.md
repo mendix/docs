@@ -84,7 +84,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 * Private management - We made the following improvement to Private Workstation Management:
 
     * We made it easier to see if a specific SSO configuration was created at runtime or deploy time. A warning appears when editing a deploy-time configuration at runtime.
-    * To provide more flexibility when switching SSO protocols, We made it possible to edit SSO users and their principal attributes.
+    * To provide more flexibility when switching SSO protocols, we made it possible to edit SSO users and their principal attributes.
     * We fixed some UI issues in the navigation and the SAML metadata popup window.
     * We added the missing default attribute mapping for Display Name in the SAML configuration.
     * We upgraded Private Workstation Management to Mendix 11.12.4.

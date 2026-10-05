@@ -90,10 +90,6 @@ Your Mendix app will be deployed with and run by the Private Mendix Platform Ope
 | Prometheus | 3.7.3 |
 | Loki | 2.6.1 |
 
-{{% alert color="info" %}}
-Currently, Private Mendix Platform only supports Grafana configurations with a single Loki and a single Prometheus data source. Configurations using a central Grafana instance with multiple Loki or Prometheus datasources are not supported.
-{{% /alert %}}
-
 #### Supported Cluster Types{#supported-clusters}
 
 We currently support deploying to the following Kubernetes cluster types:

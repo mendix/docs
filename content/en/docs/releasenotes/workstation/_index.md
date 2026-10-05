@@ -305,7 +305,7 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 #### Fixes
 
-* To support advanced use cases when preparing station configurations on multiple computers, We fixed an issue which prevented stations from being edited when multiple stations shared the same computer name. Computer names for stations within the same workspace are no longer required to be unique.
+* To support advanced use cases when preparing station configurations on multiple computers, we fixed an issue which prevented stations from being edited when multiple stations shared the same computer name. Computer names for stations within the same workspace are no longer required to be unique.
 
 {{% alert color="info" %}}
 If more than one station is found for a given computer name during bulk registration, the system now automatically creates an *Unassigned computer* instead of attempting an automatic assignment. This ensures that you can manually select the correct station configuration, preventing unintended assignments.

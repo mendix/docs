@@ -311,7 +311,7 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 If more than one station is found for a given computer name during bulk registration, the system now automatically creates an *Unassigned computer* instead of attempting an automatic assignment. This ensures that you can manually select the correct station configuration, preventing unintended assignments.
 {{% /alert %}}
 
-* We fixed an issue where the login dialogue was opened after a session time-out.
+* We fixed an issue where the login dialog was opened after a session time-out.
 
 ### Workstation Client
 

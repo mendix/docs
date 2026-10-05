@@ -125,9 +125,9 @@ To retrieve the diagnostics of a station, click **Diagnostics** on the **Station
 * System information about the computer and the Workstation Client, such as the operating system, the client type, the client version, and how long it has been running.
 * A count of the log entries the Workstation Client has recorded per log level.
 
-The **Diagnostics** button appears only when a computer is registered to the station and its Workstation Client is connected. This is the same condition as for the **Refresh on Computer** button. The diagnostics are pulled from the Workstation Client when you click the button, and discarded again when you close the panel. They therefore always reflect the current state of the computer rather than a stored snapshot. If the request fails, Workstation Management reports that it cannot retrieve the diagnostics for that computer.
+The **Diagnostics** button appears only when a computer is registered to the station and its Workstation Client is connected. This is the same condition as for the **Refresh on Computer** button. The diagnostics are pulled from the Workstation Client when you click the button, and discarded again when you close the panel. Because of that, they always reflect the current state of the computer rather than a stored snapshot. If the request fails, Workstation Management reports that it cannot retrieve the diagnostics for that computer.
 
-Workstation Management retrieves a subset of the information on the **Diagnostics** page of the Workstation Client itself. The local file system paths that the client's own page shows are left out. For the client-side page, see the [Diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics) section in *Troubleshooting the Workstation Client*.
+Workstation Management retrieves a subset of the information on the **Diagnostics** page of the Workstation Client itself. The local file system paths that the client's own page shows are left out. For the client-side page, see [Troubleshooting the Workstation Client: Diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics).
 
 ## Advanced Station Settings
 

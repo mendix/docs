@@ -139,7 +139,7 @@ Auto detecting card readers is disabled by default. To enable this feature, perf
 
 1. In **Station** view, click the **three dots** icon.
 2. Click **Edit Station**.
-3. Select the **Detect Card Readers** check box.
+3. Select the **Detect Card Readers** checkbox.
 
 ### Developer Mode {#developer-mode}
 

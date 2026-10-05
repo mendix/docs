@@ -63,10 +63,10 @@ For the message syntax of each device type, see [Device Message Syntax](/mendix-
 
 For camera devices, the test view also shows the following preconfigured test buttons, so you do not need to enter the commands manually:
 
-* **Start camera** / **Stop camera** - Show or hide a live preview of the camera feed.
+* **Start camera** and **Stop camera** - Show or hide a live preview of the camera feed.
 * **Scan barcode** - Scan the current frame for barcodes once. Only works when **Enable Barcode Detection** is enabled for the camera in Workstation Management.
-* **Start barcode detection** / **Stop barcode detection** - Continuously report the barcodes that enter and leave the frame. Only works when **Enable Barcode Detection** is enabled for the camera in Workstation Management.
-* **Start motion detection** / **Stop motion detection** - Report when motion starts and stops in the frame. Only works when **Enable Motion Detection** is enabled for the camera in Workstation Management.
+* **Start barcode detection** and **Stop barcode detection** - Continuously report the barcodes that enter and leave the frame. Only works when **Enable Barcode Detection** is enabled for the camera in Workstation Management.
+* **Start motion detection** and **Stop motion detection** - Report when motion starts and stops in the frame. Only works when **Enable Motion Detection** is enabled for the camera in Workstation Management.
 * **Help** - Show the available camera commands.
 
 If a detection capability is not enabled, its buttons are disabled. To enable barcode or motion detection, edit the camera device in Workstation Management. For more information, see [Configuring Devices: Camera](/mendix-workstation/management-devices/#camera).

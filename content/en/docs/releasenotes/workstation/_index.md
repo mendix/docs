@@ -390,7 +390,7 @@ For more information, see [Nanoflows](/mendix-workstation/develop-app/#javascrip
 * Enhanced bulk registration process – We improved the bulk registration experience to make managing multiple workstations even more efficient and intuitive.
 
     * New unassigned stations list – If a newly registered station cannot be automatically matched with a preconfigured station, it now appears in the new **Unassigned Stations** list. Before you can edit these unassigned stations, you must first either accept or manually assign them, giving you better control over station assignments.
-    * Code snippet copier – To simplify the registration process from the terminal, We added a convenient code snippet copier, making the process quicker and less prone to errors.
+    * Code snippet copier – To simplify the registration process from the terminal, we added a convenient code snippet copier, making the process quicker and less prone to errors.
     * Reopenable registration token – You can now reopen and copy the registration token if you need to access it again after initial generation.
     * Token expiration banner – A clear banner now displays if your registration token has expired, helping you stay informed and avoid registration issues.
 

@@ -172,6 +172,7 @@ To display the card, add its title to the `grid` array of the relevant layout ha
 ```
 
 After you add the card to the layout, rebuild Active Workspace.
+If the Mendix card does not appear after rebuilding, clear the browser cache to ensure the new chunk is loaded.
 
 ### Registering the Component on an XML Rendering Template (XRT)
 

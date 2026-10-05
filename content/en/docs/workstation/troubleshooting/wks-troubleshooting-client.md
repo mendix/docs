@@ -42,27 +42,33 @@ The Client encrypts its API key with the secret store of the operating system, a
 
 * The keyring is not installed.
 * The keyring is locked.
-* The Client is started from an SSH session - No desktop login takes place, so the keyring may not be running or may be locked.
-* The computer logs in automatically, for example a shop floor computer in kiosk mode - No password is entered at login, so the keyring stays locked and the operating system prompts for its password. On an unattended computer, nobody enters it, and the Client does not start.
-* The desktop environment provides no supported keyring - This can be the case with minimal kiosk sessions.
+* The desktop environment provides no supported keyring. This can be the case with minimal kiosk sessions.
+* The Client is started from an SSH session. No desktop login takes place, so the keyring may not be running or may be locked.
+* The computer logs in automatically, for example a shop floor computer in kiosk mode. No password is entered at login, so the keyring stays locked and the operating system prompts for its password. On an unattended computer, nobody enters it, and the Client does not start.
 
 ### Solution
 
-Install or unlock the keyring of the operating system, and then start the Client again. Depending on the cause, use one of the following approaches:
-
-* SSH session - Before you start the Client, start the keyring service in the SSH session and unlock it with the password of the user. Alternatively, log in to the desktop session of the user on the computer, which unlocks the keyring, and then start the Client.
-* Automatic login - Configure the login of the computer so that it unlocks the keyring.
-* No supported keyring - Install a keyring that is supported by your desktop environment.
-
-For the exact steps, see the documentation of your Linux distribution, desktop environment, or keyring.
+Depending on the cause, use one of the following approaches. For the exact steps, see the documentation of your Linux distribution, desktop environment, or keyring.
 
 {{% alert color="warning" %}}
 Do not work around this issue by setting a blank password for the keyring. The Client then starts and encrypts its API key, but depending on the keyring, its contents may no longer be protected. This could lead to a situation where the credentials of the Client are not protected from being copied off the computer.
 {{% /alert %}}
 
+#### Keyring Not Installed, Locked or Unsupported
+
+Install a supported keyring. On Linux, ensure that the keyring is unlocked. After installing or unlocking the keyring, start the Client again.
+
+#### Client Started from an SSH Session
+
+Before you start the Client, start the keyring service in the SSH session and unlock it with the password of the user. Alternatively, log in to the desktop session of the user on the computer, which unlocks the keyring, and then start the Client.
+
+#### Computer Logs in Automatically
+
+Configure the login of the computer so that it unlocks the keyring.
+
 ## Client Must Be Registered Again {#client-registered-again}
 
-After a change to the computer, the Client shows the registration screen although it was registered before.
+After a change to the computer, a previously registered Client shows the registration screen again.
 
 ### Cause
 

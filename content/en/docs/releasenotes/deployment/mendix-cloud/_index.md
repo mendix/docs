@@ -14,9 +14,9 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
   
-## September 2026
+## October 2026
 
-### September 28, 2026
+### October 5, 2026
 
 #### New Features
 

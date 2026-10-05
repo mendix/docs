@@ -53,7 +53,7 @@ A *station* represents a workstation on the shop floor. It can connect to one or
 
     1. In **Station** view, click the **three dots** icon.
     2. Click **Edit Station**.
-    3. Tick the **Detect Card Readers** check box.
+    3. Select the **Detect Card Readers** check box.
 
 ## Installing the Workstation Client
 

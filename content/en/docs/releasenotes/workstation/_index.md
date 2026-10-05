@@ -504,7 +504,7 @@ The Workstation Client automatically resets on the next refresh when its associa
 
 #### Fixes and Other Changes
 
-* Linux ARM64 executable name – For improved consistency, We removed the spaces from the executable name of the Workstation Client (Linux ARM64 version).
+* Linux ARM64 executable name – For improved consistency, we removed the spaces from the executable name of the Workstation Client (Linux ARM64 version).
 * Bluetooth LE device discovery – We addressed an issue where the discovery process for Bluetooth LE devices did not correctly recognize the full device name, which previously led to failed connection attempts. The Workstation Client now accurately matches Bluetooth BT advertisement names.
 
 ### Workstation Connector

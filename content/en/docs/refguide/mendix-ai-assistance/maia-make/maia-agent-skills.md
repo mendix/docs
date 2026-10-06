@@ -12,7 +12,7 @@ description: "Describes how to create and manage agent skills that equip Maia wi
 {{% alert color="info" %}}
 This feature is part of [Maia Make](/refguide/maia-make/) and was introduced in Studio Pro 11.11.
 
-To use Agent Skills, you need an internet connection and must be signed in to Studio Pro.
+To use Agent Skills, you need an internet connection and must be signed in to Studio Pro. If you are using the [MCP Server](/refguide/studio-pro-mcp-server/#enabling-the-mcp-server) to bring your own agent (BYO Agent), you do not need to be signed in to Studio Pro.
 {{% /alert %}}
 
 Agent Skills are modular, reusable instructions that extend an agent's capabilities with domain-specific knowledge, giving it the context, workflows, and guidance it needs to work the way your team works. These generic concepts are technically compatible with any agent.

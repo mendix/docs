@@ -23,6 +23,10 @@ They can be provided at the project level or module level. Project-level instruc
 
 Agent Instructions follow the [AGENTS.md standard](https://agents.md) for agent instructions.
 
+{{% alert color="info" %}}
+These agent instructions can be used with any agent. The Mendix platform includes Maia by default, so this document uses Maia as an example because it provides a streamlined setup.
+{{% /alert %}}
+
 ## Agent Instructions vs. Agent Skills {#instructions-vs-skills}
 
 Maia supports both [agent skills](/refguide/maia-agent-skills/) and agent instructions. The following table summarizes their differences:

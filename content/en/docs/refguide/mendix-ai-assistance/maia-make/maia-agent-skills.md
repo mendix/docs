@@ -15,7 +15,11 @@ This feature is part of [Maia Make](/refguide/maia-make/) and was introduced in 
 To use Agent Skills, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Agent Skills are modular, reusable instructions that extend Maia's capabilities with domain-specific knowledge, giving it the context, workflows, and guidance it needs to work the way your team works.These generic concepts are technically compatible with any agent.
+Agent Skills are modular, reusable instructions that extend Maia's capabilities with domain-specific knowledge, giving it the context, workflows, and guidance it needs to work the way your team works. These generic concepts are technically compatible with any agent.
+
+{{% alert color="info" %}}
+These agent skills can be used with any agent. The Mendix platform includes Maia by default, so this document uses Maia as an example because it provides a streamlined setup.
+{{% /alert %}}
 
 Instead of typing the same context into every chat, you define agent skills once, and Maia applies them automatically whenever relevant. This eliminates the need to repeat the same guidance across conversations. 
 

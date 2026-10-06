@@ -28,18 +28,23 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### Improvements
 
-* We updated the Developer Homepage link and illustrations.
-* You can now see which models are deprecated or end-of-life on the **Consumption** page.
+* Model are now clearly labeled in the **Model** dropdown, helping you identify deprecated and end-of-life models directly on the **Consumption** page.
 
 #### Fixes
 
-* We fixed a visibility issue with metatags that had a large number of characters.
+* We fixed an issue that made **Metadata** tags with a large number of characters difficult to view on the **Content** page.
+
+### August 13, 2026
+
+#### New Features
+
+* We introduced the **Created For** field on the resource **Settings** page. This field indicates the user for whom the resource is originally provisioned.
 
 ### July 23, 2026
 
 #### Fixes
 
-* We fixed an issue where entering the email address field for invitations was case-sensitive, improving search reliability and user experience.
+* We fixed an issue where entering the **Email address** field for invitations was case-sensitive, improving search reliability and user experience.
 
 ### July 16, 2026
 

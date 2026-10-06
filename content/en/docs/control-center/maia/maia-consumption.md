@@ -26,11 +26,11 @@ The **Overview** tab displays your company’s Maia Units usage for the current 
 
 ### Users Tab {#usage}
 
-The ****Users**** tab provides an overview of each user’s current month usage, allowing you to set individual usage caps and export usage data.
+The ****Users**** tab provides an overview of each user’s current month usage, allowing you to set individual usage caps and [export usage data](/control-center/maia-consumption/#export-data).
 
 {{< figure src="/attachments/control-center/maia/maia-consumption-users.png" alt="Users tab of the Maia Consumption page showing a table with Name, Email, Monthly usage, and Monthly limit columns, and a Manage link per user" >}}
 
-#### Manage User Limit
+#### Manage User Limit {#manage-user-limit}
 
 To manage an individual user’s usage limit, follow these steps:
 
@@ -48,6 +48,6 @@ If no individual limit is set, the user is subject to the default company-wide u
 
 Once a user reaches their individual limit, they cannot use Maia for the rest of the current monthly cycle.
 
-#### Export Data
+#### Export Data {#export-data}
 
 Export consumption data by clicking **Export**. This downloads an Excel file containing each user's monthly usage and limit. 

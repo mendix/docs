@@ -49,8 +49,35 @@ In Java versions below 20, a regular space is included before the AM/PM, but sta
 
 In Java versions below 21, a period is included at the end of an abbreviated month name (`MMM`) for the Dutch locale. Starting from version 21, this period is no longer present.
 
-# From Java 21 to 25
+## From Java 21 to 25
 
-## TimeZone IDs
+The following changes in behavior have been noticed when migrating from Java version 21 to Java version 25.
+
+### Changes in Date Formatting {#date-formatting-25}
+
+Java version 25 uses a newer version of the [Unicode CLDR](https://cldr.unicode.org/) locale data than Java version 21 (CLDR 47 instead of CLDR 42). As a result, the default date and time formats of some locales have changed. This affects dates displayed in the client (for example, in date pickers and text boxes) and [date formatting microflow expressions](/refguide/parse-and-format-date-function-calls/) when no format argument is given.
+
+#### Dutch, Belgium (nl_BE) and Dutch, Netherlands (nl_NL)
+
+A comma is now included between the date and the time.
+
+| Locale | Output under Java 21 | Output under Java 25 |
+| ------ | -------------------- | -------------------- |
+| nl_BE  | 29/02/2020 00:00     | 29/02/2020, 00:00    |
+| nl_NL  | 15-10-2005 11:22     | 15-10-2005, 11:22    |
+
+#### Thai, Thailand (th_TH)
+
+The comma between the date and the time, and the `น.` suffix after the time, are no longer present.
+
+| Output under Java 21 | Output under Java 25 |
+| -------------------- | -------------------- |
+| 29/2/2543, 13:40 น.  | 29/2/2543 13:40      |
+
+### Changes in First Day of the Week {#first-day-of-week-25}
+
+The same CLDR update changed the first day of the week for some locales. For Arabic, United Arab Emirates (ar_AE), the first day of the week changed from Saturday to Monday. This affects, for example, the calendar shown by the date picker.
+
+### TimeZone IDs
 
 Locale data updates in Java version 25 assign new IDs to some time zones. For example, `GMT-05:00` is now named `America/Panama`.

@@ -48,6 +48,7 @@ Agent Editor provides the following features:
 * Agent definitions as app-model documents under version control, making changes traceable and allowing rollback to previously committed states when needed.
 * Deployment together with the app model, with environment-specific flexibility through constant overrides.
 * Agentic development with Maia. Through conversation, you can set up all the building blocks your agent depends on (Models, Knowledge Bases, Consumed MCP Services, and microflow tools), create Published MCP Services to expose your app logic, and refine your agent's prompts and tool configuration.
+* Check whether the Agents Kit modules in your app are compatible with the current Agents Kit version using Maia. Maia can install or update missing or incompatible modules to compatible Marketplace versions.
 
 ### Dependencies {#dependencies}
 
@@ -84,6 +85,8 @@ In addition, ensure the following widgets are available in your app:
 If you are starting from a blank app or adding agent-editing functionality to an existing app, manually install the [Agent Editor](https://marketplace.mendix.com/link/component/257918) package from Mendix Marketplace. After downloading, you might see a warning asking for permission to add an extension to your app. Click **Trust module and enable extension** in the pop-up to install Agent Editor.
 
 Before proceeding, ensure your app includes the latest versions of the required [dependencies](#dependencies). Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install Agent Editor. 
+
+To check that your app's modules are compatible with the current Agents Kit version, ask Maia to check Agents Kit compatibility. For example, you can ask, “Fix my Agents Kit” or “Make my app compatible.” Maia reports the status of each module (for example, compatible, incompatible, or missing) and installs or updates required modules to compatible Marketplace versions.
 
 Installation adds two modules to your app:
 

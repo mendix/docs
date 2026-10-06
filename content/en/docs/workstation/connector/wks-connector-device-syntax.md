@@ -56,7 +56,7 @@ The sample subscribe command `0#0000180f-0000-1000-8000-00805f9b34fb#00002a19-00
 
 Once subscribed, every notification from the device arrives as a response in the form `00002a19-0000-1000-8000-00805f9b34fb#Response`, where `Response` is the raw value reported by the characteristic.
 
-Instead of building these messages by hand, you can call the `BLE_Subscribe`, `BLE_Unsubscribe`, `BLE_Read`, and `BLE_Write` nanoflows from [Workstation Commons](/mendix-workstation/commons/#bluetooth), which take `ServiceUUID` and `CharacteristicUUID` as plain parameters.
+Instead of building these messages by hand, you can call the `BLE_RequestSubscribe`, `BLE_RequestUnsubscribe`, `BLE_RequestRead`, and `BLE_RequestWrite` nanoflows, or their `BLE_Send` variants, from [Workstation Commons](/mendix-workstation/commons/#bluetooth), which take `ServiceUUID` and `CharacteristicUUID` as plain parameters.
 
 ## Camera {#camera}
 

@@ -45,6 +45,25 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
     * Potentially breaking change - The Workstation Client now requires a secret store of the operating system and does not start without it. On Linux, ensure that a keyring is available. For more information, see [Troubleshooting the Workstation Client: Safe Storage Is Unavailable](/mendix-workstation/troubleshooting-workstation-client/#safe-storage-unavailable).
     * In some scenarios, such as copying the configuration folder to another computer or downgrading the Client, the Workstation Client must be registered again. For more information, see [Troubleshooting the Workstation Client: Client Must Be Registered Again](/mendix-workstation/troubleshooting-workstation-client/#client-registered-again).
 
+### Workstation Commons
+
+#### New Features
+
+* Camera functions - We added functions for barcode scanning and motion detection with camera devices. For more information, see [Workstation Commons: Camera](/mendix-workstation/commons/#camera).
+* Printing functions - We added functions to print plain text, raw printer commands, and PDF documents. For more information, see [Workstation Commons: Printer](/mendix-workstation/commons/#printer).
+* Message parsing - We added functions that convert the messages received from Bluetooth, camera, file, and printer devices into objects. For more information, see [Workstation Commons: Parsing Messages](/mendix-workstation/commons/#parsing-messages).
+* General utilities - We added functions to encode and decode Base64 content. For more information, see [Workstation Commons: General Utils](/mendix-workstation/commons/#general-utils).
+
+#### Improvements
+
+* Request and SendMessage - Every device operation is now available as a request, which waits for the response of the device, and as a message, which is sent without waiting. For more information, see [Workstation Commons: Request and SendMessage](/mendix-workstation/commons/#request-sendmessage). This has the following implications:
+    * Breaking change - We renamed the existing Device Utils functions to their `Request` or `SendMessage` names. For example, `Printer_Print` is now `Printer_RequestPrint`, and `BLE_Read` is now `BLE_SendRead`. Update the calls in your app after upgrading the module.
+    * Breaking change - We removed the `CardReader_TransmitAPDU` function.
+
+#### Bug Fixes
+
+* We fixed an issue where long messages in the device logger were not wrapped.
+
 ## 4.2.1
 
 ### Release date: September 16, 2026

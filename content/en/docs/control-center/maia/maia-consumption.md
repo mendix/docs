@@ -50,4 +50,4 @@ Once a user reaches their individual limit, they cannot use Maia for the rest of
 
 #### Export Data
 
-Export consumption data by clicking **Export**. This downloads an Excel file containing each user's monthly usage. 
+Export consumption data by clicking **Export**. This downloads an Excel file containing each user's monthly usage and limit. 

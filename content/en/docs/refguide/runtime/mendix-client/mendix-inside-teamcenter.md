@@ -112,8 +112,6 @@ The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a 
 4. Optionally, configure context passing. For more information, see [Passing Context from Teamcenter](#passing-context).
 5. Rebuild Active Workspace using `awbuild.cmd`.
 
-
-
 {{% alert color="info" %}}
 Installing a kit in the stage repository and rebuilding Active Workspace follow the standard Teamcenter process. The [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) on Active Workspace customization provides detailed instructions and examples for completing these steps.
 {{% /alert %}}
@@ -179,7 +177,7 @@ If the Mendix card does not appear after rebuilding, clear the browser cache to 
 To display the Mendix app on an XRT, add the following to the document using the XRT editor:
 
 {{% alert color="info" %}}
-Editing an XRT document follows the standard Teamcenter process. The [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) on XRT provides detailed instructions and examples for editing XRT documents.
+Editing an XRT document follows the standard Teamcenter process. The XRT sections of the [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) provide detailed instructions and examples for editing XRT documents.
 {{% /alert %}}
 
 ```xml

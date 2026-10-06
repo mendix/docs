@@ -56,22 +56,22 @@ To create the mapping, follow these steps:
 
 1. In the **App Explorer**, right-click the **RESTExample** module and select **Add other** > **Published REST Service**.
 2. Enter *PRS_OrderService* for the **Name** of your REST service. Then press **OK** to create and start editing the new REST service.
-3. Add a new resource to your service by clicking **Add** in the **Resources** field. Enter **GetOrderByID** for the **Resource name**, then click **OK**.
+3. Add a new resource to your service by clicking **Add resource**. Enter *GetOrderByID* for the **Resource name**.
 
     {{< figure src="/attachments/refguide/modeling/integration/rest-services/publish-rest-service/AddRestResource.png" alt="Adding a GetOrderByID resource" class="no-border" >}}
 
-4. Add an operation to your resource by clicking **Add** in the **Operations for resource** field.
-5. In the **Operation** dialog box, enter `{OrderID}` in the **Operation path** field, making sure to include the braces (`{}`). This allows the REST service to be invoked with the order ID in the URL shown in the **Example location** field of the dialog box.
+4. Add an operation to your resource by clicking **Add operation**.
+5. Enter *{OrderID}* in the **Operation path** field, making sure to include the braces (`{}`). This allows the REST service to be invoked with the order ID in the URL shown in the **Example location** field of the dialog box.
 
     {{< figure src="/attachments/refguide/modeling/integration/rest-services/publish-rest-service/AddOperation.png" alt="{OrderID} in the Operation path field" class="no-border" >}}
 
-6. In the same dialog box, click **Select** next to the **Microflow** field. You do not yet have a microflow for this operation, so select the **RESTExample** module in the dialog box and click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow, then click **OK**.
+6. Click **Select** next to the **Microflow** field. You do not yet have a microflow for this operation, so select the **RESTExample** module in the dialog box and click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow, then click **OK**.
 
-7. In the **Parameters** field of the same **Operation** dialog box, click **Add** and add an **OrderID** path parameter.
+7. In the **Parameters** list, click **Add** and add an **OrderID** path parameter.
 
     {{< figure src="/attachments/refguide/modeling/integration/rest-services/publish-rest-service/OperationsDialogSettings.png" alt="Operation path, microflow, and parameter settings" class="no-border" >}}
 
-8. <a id="edit-microflow"></a>Click **OK** to close out the **Operation** dialog box, then click **Show** to start editing the newly created microflow. Add a **OrderID** parameter.
+8. <a id="edit-microflow"></a>**Show** to start editing the newly created microflow. Add a **OrderID** parameter.
 
     {{% alert color="info" %}}This parameter might be added automatically, along with an **httpRequest** parameter. If an **httpRequest** parameter is added, remove it to avoid getting errors.<br/>
     An **httpResponse** parameter may also be automatically added. If this happens and you follow the steps below in [Building an Export Mapping](#export-mapping), you must remove the parameter to avoid getting errors.{{% /alert %}}

@@ -84,7 +84,7 @@ This device type requires the following messages and responses. Barcode commands
 
 Motion is reported only when it starts or stops for at least about 250 milliseconds, not for every frame.
 
-### Barcode Types
+### Barcode Types {#barcode-types}
 
 Use the following values for `Type1,Type2,...` in the barcode commands. Values that start with `All` select a group of barcode types.
 

@@ -83,7 +83,7 @@ Use the database source type to set the value of a string, integer, long, or enu
     * **Single** – This allows only one item to be selected from the options list (radio button list).
     * **Multi** – This allows multiple items to be selected from the options list (checkbox list).
 * **Value** (under **Store value**) – The attribute of the selectable objects that holds the value to store.
-* **Target attribute** (under **Store value**) – the attribute where the selected value is stored.
+* **Target attribute** (under **Store value**) – The attribute where the selected value is stored.
 
 ##### Static Values {#static}
 
@@ -142,7 +142,7 @@ The following additional properties are available:
 
 The **Events** tab contains the following property:
 
-* **On change action** – the action that runs when the selection changes
+* **On change action** – the action that runs when the selection changes.
 
 ### Accessibility Tab {#accessibility}
 

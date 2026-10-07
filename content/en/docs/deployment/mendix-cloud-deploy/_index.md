@@ -156,7 +156,6 @@ Mendix licenses are sold as part of plans. Plans consist of the following items:
 The following plans are available:
 
 * Free
-* Basic
 * Standard
 * Premium
 * Premium Plus

@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
   
 ## October 2026
 
+### October 6, 2026
+
+#### Deprecations
+
+* The Mendix Basic plan offering is now permanently deprecated. New Mendix Basic licenses are no longer available, and existing Mendix Basic licenses can no longer be renewed.
+
 ### October 5, 2026
 
 #### New Features

@@ -76,7 +76,7 @@ The search matches text against all four columns (Status, Document name, Module 
 
 #### Context Menu
 
-Right-click any cell in the grid to access the **Copy** option, which copies the cell value to your clipboard.
+Right-click any cell in the grid to access the **Copy** option, which copies the cell value to your clipboard. For microflows and workflows, the context menu also contains the **View...** option, which opens a specific version of the document. For more information, see the [Document Types with Read-Only Versions](#read-only-versions) section below.
 
 #### Grid Columns
 
@@ -111,7 +111,7 @@ The task bar at Level 2 and 3 contains the following buttons:
 | Button | Action | When Enabled |
 |--------|--------|--------------|
 | **Back** | Returns to Level 1 | Always enabled |
-| **Go to** | Focuses on the selected element in the document | Enabled when an element is selected; remains active even for deleted elements to support cross-tab navigation |
+| **Go to** | Focuses on the selected element in the document | Enabled when an element is selected; for deleted elements, enabled only in microflows and workflows (for more information, see [Opening Documents](#opening-documents)) |
 | **Expand all** | Expands all collapsed property tree rows in Level 3 | Always enabled when viewing Level 3 |
 | **Collapse all** | Collapses all expanded property tree rows in Level 3 | Always enabled when viewing Level 3 |
 | **Stop comparison** | Closes the comparison and returns to the blank state | Always enabled during an active comparison |
@@ -145,9 +145,40 @@ Property paths are consolidated into a tree view. Grey rows represent intermedia
 
 ## Opening Documents
 
-When you click **Go to** or double-click a document entry in Level 1, the document opens as it currently exists in your app. If the document no longer exists in your current state, Level 2 and 3 is shown but nothing opens in the editor.
+When you click **Go to** or double-click a document in Level 1 or an element in Level 2, the document opens in the editor. Which version opens depends on the document type, the status of the document, and the type of comparison.
 
-For text-based properties, you can double-click a property row or use the context menu to open a detailed side-by-side comparison in the [File Differences Viewer](/refguide/file-diff-viewer/). For file-type documents in Level 1, double-click or click **Go to** to open the File Differences Viewer instead of a document editor.
+### Document Types with Read-Only Versions {#read-only-versions}
+
+For the following document types, you can open the version of the document from a specific revision:
+
+* Microflows
+* Workflows
+
+These versions open in a separate tab in read-only mode. You cannot edit the document or its properties. The tab indicates whether it shows the **Older** or **Newer** version. Read-only tabs close when you stop the comparison.
+
+The table below shows which version opens when you click **Go to** or double-click a document:
+
+| Status | Compare to Current State | Compare Revisions |
+|--------|--------------------------|-------------------|
+| **Added** | The current version opens in edit mode | The version from the newer revision opens in read-only mode |
+| **Modified** | The current version opens in edit mode | The version from the newer revision opens in read-only mode |
+| **Deleted** | The version from the selected revision opens in read-only mode | The version from the older revision opens in read-only mode |
+
+To open a specific version, right-click a document in Level 1 and point to **View...**:
+
+| Option | What Opens | Available For |
+|--------|------------|---------------|
+| **Older** | The version from the older revision, in read-only mode | Modified and deleted documents |
+| **Newer** | The version from the newer revision, in read-only mode | Added and modified documents, when comparing two revisions |
+| **Current** | The document as it is in your app now, in edit mode | Added and modified documents |
+
+### Other Document Types
+
+For all other document types, the document opens as it currently exists in your app, regardless of the type of comparison. If the document no longer exists in your app, for example because it was deleted, a message indicates that the document no longer exists and nothing opens.
+
+### Files and Text-Based Properties
+
+For text-based properties, you can double-click a property row or use the context menu to open a detailed side-by-side comparison in the [File Differences Viewer](/refguide/file-diff-viewer/). For modified file-type documents in Level 1, double-click or click **Go to** to open the File Differences Viewer instead of a document editor. You cannot open added or deleted files.
 
 ## Refresh Behavior
 
@@ -155,7 +186,7 @@ When you are comparing a revision to your current state and save changes to your
 
 ## Stopping a Comparison
 
-Click **Stop comparison** to close the comparison. This action closes the **Comparison** pane and returns it to a blank state. Any documents that were opened as part of the comparison remain open in the editor.
+Click **Stop comparison** to close the comparison. This action closes the **Comparison** pane and returns it to a blank state. Documents that were opened in their current version remain open in the editor. Read-only versions of documents are closed.
 
 In the blank state, the **Comparison** pane displays a message with a link to start a new comparison. The **Go to** and **Stop comparison** buttons are disabled until a new comparison is started.
 

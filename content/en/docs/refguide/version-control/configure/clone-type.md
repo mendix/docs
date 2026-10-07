@@ -43,6 +43,10 @@ There are several advantages to this clone type:
 
 The disadvantage of this clone type is that you may need an additional download. For example, when [combining changes](/refguide/new-merge-algorithm/) from an older branch, more data will have to be downloaded compared to the full clone. This means it can take slightly longer. The same applies when interacting with the history.
 
+{{% alert color="info" %}}
+For apps with Studio Pro versions 11.6-11.14, the **History** dialog is not available when the app is partially cloned.
+{{% /alert %}}
+
 ## Preferences
 
 You can change the [clone type](/refguide/preferences-dialog/#clone) for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting will not affect apps that you have already downloaded.

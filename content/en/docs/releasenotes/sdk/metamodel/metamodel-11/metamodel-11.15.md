@@ -35,6 +35,7 @@ weight: 52 # Reduce weight by 1 to add this document to the top of the navigatio
 ### Mappings
 
 #### MappingDocument (ModelUnit)
+
 * We deleted the `messageDefinition` property. 
 
 ### Security
@@ -74,4 +75,3 @@ weight: 52 # Reduce weight by 1 to add this document to the top of the navigatio
 #### Template (ModelUnit)
 
 * We deleted the `useAsMappingSource` property. Info: "Removing as no longer required"
-

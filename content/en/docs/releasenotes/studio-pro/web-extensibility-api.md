@@ -46,6 +46,12 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 
 * We fixed an issue where reloading an extension with open tabs caused an Oops crash.
 
+## Version 11.12.5
+
+### New Features
+
+* We added a Register Tool API under `studioPro.ai.tools.registerTool(toolDefinition)` that lets users extend Maia's capabilities by running custom logic.
+
 ## Version 11.12.3
 
 ### Improvements

@@ -547,20 +547,20 @@ Secret Management for mxplatform is not compatible with Azure Managed Identity-b
 
 To use the SecretProviderClass, you must fulfill the following requirements:
 
-1.	Install the CSI Secrets Store Driver with a provider plugin. The CSI driver uses the ServiceAccount's identity to authenticate to the vault and retrieve secrets.
-2.	Create a keyvault per component, for example: `pmp-install-kv` or `svix-kv`
-3.	Configure identity authentication (Azure Workload Identity or AWS IRSA). This step is mandatory because the CSI driver uses your ServiceAccount's cloud identity to authenticate to the vault and retrieve secrets.
+1. Install the CSI Secrets Store Driver with a provider plugin. The CSI driver uses the ServiceAccount's identity to authenticate to the vault and retrieve secrets.
+2. Create a keyvault per component, for example: `pmp-install-kv` or `svix-kv`
+3. Configure identity authentication (Azure Workload Identity or AWS IRSA). This step is mandatory because the CSI driver uses your ServiceAccount's cloud identity to authenticate to the vault and retrieve secrets.
 
     * For Azure WI, configure the Federated Credential.
 
-4.	Grant vault access permissions to the identity to the keyvault created in step 2. 
-5.	Store secrets in the vault with the correct key names:
+4. Grant vault access permissions to the identity to the keyvault created in step 2. 
+5. Store secrets in the vault with the correct key names:
 
     * [For svix](/private-mendix-platform/installation-reference/#svix-key-vault)
     * [For mxplatform](/private-mendix-platform/installation-reference/#secret-provider-key)
 
-6.	Enable `secretProviderclass` in Helmfile configuration. 
-7.	Grant RBAC per namespace for the CSI driver's ServiceAccount.
+6. Enable `secretProviderclass` in Helmfile configuration. 
+7. Grant RBAC per namespace for the CSI driver's ServiceAccount.
 
 ### Example - Install CSI Driver {#example}
 
@@ -630,7 +630,12 @@ When configuring secret management, keep in mind the following key points:
       role: "my-role"
       secretName: "my-secret"
       version: "v2"  # Optional: v1 or v2
-      svix-server:
+```
+
+##### Svix Configuration Example
+
+```text
+svix-server:
   azureWorkloadIdentity:
     enable: true
     clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"

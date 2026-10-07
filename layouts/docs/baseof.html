@@ -5,6 +5,8 @@
  </head>
  <!-- DB – Check for numberless_headings -->
  <body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}{{ if .Params.numberless_headings }} numberless_headings{{ end }}">
+  <!-- MvM - Include mx-dock at the top of all pages, except print versions -->
+  {{ partial "mx-dock.html" . }}
 {{/* NK - deactivation of original navbar
    <header>
      {{ partial "navbar.html" . }}

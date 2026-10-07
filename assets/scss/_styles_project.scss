@@ -726,8 +726,6 @@ img.ToC-icon{
 
     .expandable-table-inner {
         overflow-x: auto;
-        border: 1px solid $gray-border;
-        border-radius: 4px;
     }
 }
 
@@ -793,9 +791,11 @@ body.expandable-table-open {
             border: none;
             border-radius: 0;
             overflow: visible;
+            display: flex;
         }
 
-        table { width: 100%; margin-bottom: 0; }
+        // Auto margins center small tables in the flex container and never clip wide ones
+        .expandable-table-inner table { flex: 0 0 auto; width: auto; margin: 0 auto !important; }
     }
 }
 

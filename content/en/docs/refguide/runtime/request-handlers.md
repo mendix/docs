@@ -30,7 +30,7 @@ The following standard request handlers are used:
 | Root | `/` | Used to perform different operations on the admin port. |
 
 {{% alert color="info" %}}
-Note that the admin port also has a `root` (`/`) URL. This is not exposed to clients. This port is only accessible to system administrators.
+The admin port `root` (`/`) URL is not exposed to clients. It uses a different port from the standard request handlers and is only accessible to system administrators.
 {{% /alert %}}
 
 ## Custom Request Handlers

@@ -1,5 +1,5 @@
 ---
-title: "Mendix 10"
+title: "Design Properties API"
 url: /apidocs-mxsdk/apidocs/design-properties-10/
 description: "This API guide outlines how design properties work in Atlas UI and can help you create custom design properties."
 weight: 60

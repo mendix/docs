@@ -33,11 +33,11 @@ Organizations consider disabling unused or unnecessary physical and logical port
 
 The following controls are related to this control:
 
-* AC-6
-* CM-2
-* RA-5
-* SA-5
-* SC-7
+* [AC-06](/private-mendix-platform/nist-controls/ac-06/)
+* CM-02
+* [RA-05](/private-mendix-platform/nist-controls/ra-05/)
+* [SA-05](/private-mendix-platform/nist-controls/sa-05/)
+* SC-07
 
 For more information, refer to the DoD Instruction 8551.01.
 

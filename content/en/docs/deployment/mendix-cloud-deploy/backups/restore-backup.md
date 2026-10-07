@@ -38,7 +38,7 @@ Mendix Cloud automatically performs backups every night, and you can also manual
 
 If you want to restore a backup to a different cloud node, or have your backup stored locally, then see [Restoring a Backup for a Different Licensed Cloud Node](#restore-local-backup), below.
 
-1. From [Apps](https://sprintr.home.mendix.com), open your licensed app.
+1. From [Projects](https://projects.home.mendix.com), open your licensed app.
 1. Use the navigation panel to go to your app's **Backups** page.
 1. In the upper-right corner of the screen, select the environment to which the backup should be restored (for example, **Acceptance**).
 
@@ -70,7 +70,7 @@ You can only restore data to an existing database. This means that there must ha
 However, the app previously deployed to the node does not need to have had the same Domain Model as the data you are restoring.
 {{% /alert %}}
 
-1. From [Apps](https://sprintr.home.mendix.com), open your app.
+1. From [Projects](https://projects.home.mendix.com), open your app.
 1. Use the navigation panel to go to your app's **Backups** page.
 1. Select the environment to which the backup should be restored (for example, **Acceptance**).
 1. Click **Upload Archive**. The upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application.
@@ -81,7 +81,7 @@ However, the app previously deployed to the node does not need to have had the s
 
 {{% alert color="info" %}}For a Free App, you can only restore available backups that are made from the app and held in the cloud. It is not possible to upload a backup that was created or stored elsewhere. It also is not possible to manually create a backup.{{% /alert %}}
 
-1. From [Apps](https://sprintr.home.mendix.com), open your Free App.
+1. From [Projects](https://projects.home.mendix.com), open your Free App.
 1. Use the navigation panel to go to your app's **Backups** page.
 1. Select the environment to which the backup should be restored (for example, **Acceptance**).
 1. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
@@ -93,7 +93,7 @@ If the app is still running, you have to stop it by clicking **Stop Application*
 
 ## Restoring After a Backup Fails{#restore-after-fail}
 
-If a backup restore fails, the failure is logged in your app's **Backup Activity** log, which you can view on the **Backups** page when you open your [app](https://sprintr.home.mendix.com/). If this happens, only the data restored up to the point of failure will be present in your database, leaving it partially restored.
+If a backup restore fails, the failure is logged in your app's **Backup Activity** log, which you can view on the **Backups** page when you open your [app](https://projects.home.mendix.com/). If this happens, only the data restored up to the point of failure will be present in your database, leaving it partially restored.
 
 To ensure a successful restore, Mendix recommends that your database is large enough to hold the decompressed size of the database as stored in your backup file's [db folder](#db-folder), plus additional free space substantially exceeding this decompressed size to allow for overhead during the restoration process.
 

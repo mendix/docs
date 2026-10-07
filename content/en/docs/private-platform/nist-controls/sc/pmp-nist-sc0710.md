@@ -35,7 +35,7 @@ Safeguards implemented by organizations to prevent unauthorized exfiltration of 
 
 The following controls are related to this control:
 
-* SI-3
+* SI-03
 
 For more information, refer to the NIST Special Publications 800-41, and 800-77.
 

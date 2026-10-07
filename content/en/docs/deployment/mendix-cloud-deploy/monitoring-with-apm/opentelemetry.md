@@ -32,7 +32,7 @@ Before connecting your app to an OpenTelemetry backend, ensure you have:
 
 To connect your Mendix Cloud environment to an OpenTelemetry backend:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/).
+1. Go to [Projects](https://projects.home.mendix.com/).
 2. Click **Environments** on the app of choice.
 3. Click **Details** ({{% icon name="notes-paper-edit" %}}) for the environment you want to configure.
 4. Go to the **Runtime** tab.
@@ -113,6 +113,34 @@ Email addresses are automatically redacted from log entries before they are sent
 
 Also, certain secret patterns, such as database connection strings and storage endpoint URLs logged by the Mendix Runtime are always redacted regardless of this setting and cannot be turned off.
 
+### Access Logs{#access-logs}
+
+You can include HTTP access logs in the telemetry sent to your backend. To do that, use the `MX_OTEL_ACCESS_LOGS_ENABLED` variable.
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `MX_OTEL_ACCESS_LOGS_ENABLED` | `false` | HTTP access logs are excluded by default. Set this variable to `true` if you want HTTP access logs to be exported to your backend along with the other telemetry. |
+
+Access logs are exported through the logs signal, so a logs exporter must be active. For more information, refer to the [Per-Signal Configuration](#per-signal) section.
+
+### Metadata for Logs
+
+The following metadata is automatically attached to logs as attributes and sent in both application and access logs:
+
+* `pod_name` – The name of the application pod
+* `environment_id` – The unique identifier of the environment
+* `log_type` – The type of the log, which can be `mx.applicationlogs` or `mx.accesslogs`
+* `k8s.container.name` – The name of the container that the log originates from
+
+The following metadata is sent in access logs only:
+
+* `hostname` – The name of the application host
+* `application_name` – The default application name, retrieved from the domain name
+* `runtime_version` – The Mendix Runtime version
+* `model_version` – The Mendix Runtime model version
+
+You can filter the data by these fields.
+
 ### Prometheus Remote Write (Metrics Only){#prometheus-remote-write}
 
 If your metrics backend uses Prometheus Remote Write (for example, Grafana Mimir, Thanos, or VictoriaMetrics), you can send metrics via PRW while still sending traces and logs via OTLP.
@@ -150,7 +178,7 @@ These variables control the resource attributes attached to all telemetry. They 
 | `MX_OTEL_SERVICE_NAME` | App subdomain | Service name (`service.name` attribute). Defaults to the subdomain of the app's first route (for example, `my-app` from `my-app.mendixcloud.com`). Set this variable to override it. |
 | `MX_OTEL_SERVICE_VERSION` | Model version | Service version (`service.version` attribute). Defaults to the Mendix model version. Falls back to the `version` application tag if set, otherwise `unversioned`. |
 | `MX_OTEL_DEPLOYMENT_ENV` | `env` tag or `none` | Deployment environment (`deployment.environment.name` attribute). Defaults to the `env` application tag if set, otherwise `none`. |
-| `MX_OTEL_RESOURCE_ATTRIBUTES` | _(from app tags)_ | Additional resource attributes as comma-separated `key=value` pairs. Automatically populated from the application tags set in the Developer Portal. Can be set directly to override the tag-derived value. |
+| `MX_OTEL_RESOURCE_ATTRIBUTES` | *(from app tags)* | Additional resource attributes as comma-separated `key=value` pairs. Automatically populated from the application tags set in the Developer Portal. Can be set directly to override the tag-derived value. |
 
 ### OpenTelemetry Issues
 

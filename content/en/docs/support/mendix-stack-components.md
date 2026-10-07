@@ -33,7 +33,7 @@ Mendix Support can analyze this component if your app is running on Mendix Cloud
 
 Mendix is responsible for setting up and maintaining the component, as well as applying the default configuration. This component cannot be customized or optimized for individual customers or applications outside the supported configuration options available to our customers. If it is running on SAP BTP instead, the selected third party can analyze this component.
 
-## Buildpack, m2ee, Service Console, and Portable App Distribution {#buildpack-m2ee-and-service-console}
+## Buildpack, m2ee, Service Console, and Mendix Portable Runtime {#buildpack-m2ee-and-service-console}
 
 The Mendix buildpacks for [Cloud Foundry](https://github.com/mendix/cf-mendix-buildpack) and [Docker](https://github.com/mendix/docker-mendix-buildpack) are available in GitHub repositories. The documentation for the buildpacks and m2ee tools is contained within these GitHub repositories. Because they are released under an open-source license, the code can be inspected, and the functionality and options can be understood by customers who wish to use these buildpacks.
 

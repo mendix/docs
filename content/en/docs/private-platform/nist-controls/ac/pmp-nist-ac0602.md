@@ -26,7 +26,7 @@ This control enhancement limits exposure when operating from within privileged a
 
 The following controls are related to this control: 
 
-* PL-4
+* PL-04
 
 ## Responsibility
 

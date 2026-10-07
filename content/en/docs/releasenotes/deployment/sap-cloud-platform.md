@@ -134,7 +134,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* You can now add custom Mendix Runtime settings under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab).
+* You can now add custom Mendix Runtime settings under the [Runtime tab](/developerportal/deploy/sap-cloud-platform/environments/#runtime-tab).
     * this replaces the previous method of adding custom settings using User-Provided Variables.
 
 ### June 20, 2022
@@ -161,7 +161,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We added the ability to provide a custom *xs-security.json* file to configure an XSUAA service. This allows you to apply the configuration every time your app is deployed. You can add your configuration by unbinding and rebinding the XSUAA service in the [Services](/developerportal/deploy/sap-cloud-platform/#binding-services) tab.
+* We added the ability to provide a custom *xs-security.json* file to configure an XSUAA service. This allows you to apply the configuration every time your app is deployed. You can add your configuration by unbinding and rebinding the XSUAA service in the [Services](/developerportal/deploy/sap-cloud-platform/environments/#binding-services) tab.
 
 ### August 30, 2021
 
@@ -244,7 +244,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 * We have added support for PostgreSQL on SAP Cloud Platform, Hyperscaler Option for Mendix apps deployed to SAP Cloud Platform.
     * this comes with a configurator to help you create the correct configuration.
-    * see [Running Mendix on PostgreSQL on SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform/#sap-hyperscaler) for more information.
+    * see [Running Mendix on PostgreSQL on SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform/databases/#sap-hyperscaler) for more information.
 * As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 ### October 21, 2020
@@ -274,7 +274,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We added support for using the HANA trial database available in new SAP Cloud Platform trial accounts. See the [Running Mendix on SAP HANA](/developerportal/deploy/sap-cloud-platform/#sap-hana) section of the *SAP Cloud Platform* deployment document for more details.
+* We added support for using the HANA trial database available in new SAP Cloud Platform trial accounts. See the [Running Mendix on SAP HANA](/developerportal/deploy/sap-cloud-platform/databases/#sap-hana) section of the *SAP Cloud Platform* deployment document for more details.
 
 ## 2019
 

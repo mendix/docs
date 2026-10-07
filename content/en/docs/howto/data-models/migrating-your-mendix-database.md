@@ -127,7 +127,7 @@ If you are using [pgAdmin](https://www.pgadmin.org/docs/), follow these steps:
 
 Use the Mendix Portal to upload the migrated, exported database backup to Mendix Cloud. Follow these steps:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/) and open your app.
+1. Go to [Projects](https://projects.home.mendix.com/) and open your app.
 2. Click **Backups** in the navigation pane.
 3. Click **Upload Backup** to upload your database.
 4. In the **Upload Archive** dialog box, select the exported database file from your local file system.

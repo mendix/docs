@@ -36,8 +36,8 @@ first two steps in the Risk Management Framework. Risk assessments can play an i
 
 The following controls are related to this control:
 
-* RA-2
-* PM-9
+* [RA-02](/private-mendix-platform/nist-controls/ra-02/)
+* PM-09
 
 For more information, refer to OMB Memorandum 04-04; NIST Special Publication 800-30, and 800-39; [IDManagement](https://www.idmanagement.gov/).
 

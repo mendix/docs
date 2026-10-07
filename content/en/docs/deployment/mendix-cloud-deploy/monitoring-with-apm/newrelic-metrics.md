@@ -38,7 +38,7 @@ To make use of New Relic, you need a New Relic API key. To find an existing key 
 
 To send your runtime information to New Relic, you must provide the New Relic API key to your environment.
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** on the environment you wish to monitor with New Relic.
 1. Switch to the **Runtime** tab.
 1. Add the following **Custom Environment Variables**:
@@ -88,7 +88,7 @@ Mendix recommends using the following tags:
 
 To set these tags, do the following:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** on an environment you are monitoring with New Relic.
 1. On the **Tags** tab, add a tag. This is the string that is sent to New Relic as a tag.
 1. Restart the app.

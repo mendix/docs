@@ -60,7 +60,7 @@ To license an app, you must have a licensed cloud node available:
 If you have an existing contract that allows for more licensed nodes, use the [Request New App Node](https://newnode.mendix.com) app to request a new node from Mendix Support. For more information, see [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
 {{% alert color="info" %}}
-If your contract does not allow for more licensed nodes, contact your Customer Success Manager (CSM).
+If your contract does not allow for more licensed nodes, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 {{% /alert %}}
 
 If none of the categories above apply to your case, contact [Mendix Support](https://support.mendix.com).
@@ -115,7 +115,7 @@ Apart from the app, the rest of the environment (or environments) in the target 
 
 To connect your app to a licensed node, do the following:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
+1. From [Projects](https://projects.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
 
 1. Click **Select Licensed Node**.
 

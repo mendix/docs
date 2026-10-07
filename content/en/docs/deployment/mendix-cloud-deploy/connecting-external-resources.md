@@ -45,7 +45,7 @@ An application on Mendix Cloud can establish multiple connections to different r
 
 As a Technical Contact, follow these steps to request a new connection from your application environment to an approved external resource:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to the app's **Environments** page.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the preferred environment.
 3. Go to the **Connectivity** tab.
 4. In the **Connections** section, click **Add** to initiate a new connection request.
@@ -87,7 +87,7 @@ For detailed information about your private connectivity requests, access the **
 
 ### Viewing Connection Request Details {#view-connection-details}
 
-1. Go to [Apps](https://sprintr.home.mendix.com/).
+1. Go to [Projects](https://projects.home.mendix.com/).
 2. Click **Environments** on your app.
 3. Open the **Change Requests** tab.
 4. Look for requests with **Private Connectivity** as the **Request Type**. For more information on the **Change Requests** tab, refer to the [Change Requests](/developerportal/deploy/environments/#change-requests) section in *Environments and Deployment*.

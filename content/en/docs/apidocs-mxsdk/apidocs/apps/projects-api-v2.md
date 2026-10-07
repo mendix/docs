@@ -36,6 +36,10 @@ GET /projects HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
+## Retrieving the UUID
+
+Multiple API calls require you to add the user's UUID. Mendix Admins can retrieve the UUID through the User Identifiers API. For details on how to do that, refer to the [Using the API to Retrieve User UUIDs](/apidocs-mxsdk/apidocs/user-identifiers-api/#using-the-api-to-retrieve-user-uuids) section in *User Identifiers API*.
+
 ## API Reference{#api-reference}
 
 {{% alert color="warning" %}}

@@ -867,8 +867,8 @@ This domain model is part of the OData Connector for SAP solutions module and ca
     * **Message** – the textual description or reason phrase from the HTTP status line
     * **Payload** –  the raw HTTP response content for the operation. Internally parsed by:
 
-        * Fetch Batch Response (Single) — for individual entity responses
-        * Fetch Batch Response (List) — for list-type responses
+        * **Fetch Batch Response (Single)** – for individual entity responses
+        * **Fetch Batch Response (List)** – for list-type responses
         
     * **ChangeSet** – indicates whether the **BatchResponse** is part of a ChangeSet, a grouped set of write operations
 

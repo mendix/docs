@@ -1,9 +1,14 @@
 ---
 title: "Any Chart Widgets"
+deprecated: true
 url: /refguide9/charts-any-configuration/
 description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 weight: 30
 ---
+
+{{% alert color="warning" %}}
+The Any Chart widget is deprecated. Its successor, Custom Chart, is not available for Studio Pro 9: it requires [Charts](/appstore/widgets/charts/) widget version 6.0 or above, which is supported in Studio Pro 10 and above.
+{{% /alert %}}
 
 ## Introduction
 

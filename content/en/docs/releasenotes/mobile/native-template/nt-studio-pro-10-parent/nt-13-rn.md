@@ -5,6 +5,22 @@ weight: 30
 description: "Native Template 13 release notes."
 ---
 
+## 13.1.1 {#1302}
+
+**Release date: April 02, 2025**
+
+### Fixes
+
+* We fixed an issue affecting building iOS apps using Bitrise.
+
+## 13.1.0 {#1301}
+
+**Release date: March 27, 2025**
+
+### Fixes
+
+* We applied the patch for `@react-native-camera-roll` to fix a saving picture issue.
+
 ## 13.0.0 {#1300}
 
 **Release date: March 21, 2025**

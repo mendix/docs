@@ -54,7 +54,7 @@ Click **Authorize** to continue using Mendix SSO with the app. Authorizing the a
 
 ### Assigning End-User Roles
 
-To give end-users access to your app, use the [Access Management](/developerportal/general-settings/#managing-app-users) tab on the **Settings** page after opening your app in **Apps**.
+To give end-users access to your app, use the [Access Management](/developerportal/general-settings/#managing-app-users) tab on the **Settings** page after opening your app in **Projects**.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/mendix-sso/access-management-tab.png" alt="" >}}
 

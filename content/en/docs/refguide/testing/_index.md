@@ -80,4 +80,4 @@ Performance testing involves unit-level performance checks for critical microflo
 
 You can use the following offerings to help with this test type:
 
-* [Tracing](/refguide/tracing-in-runtime/) - Generates traces that help you analyze errors and performance, which can be sent to observability tools like [Jaeger](https://www.jaegertracing.io/) or [Datadog](https://www.datadoghq.com/).
+* [OpenTelemetry](/refguide/opentelemetry-in-runtime/) - Generates traces that help you analyze errors and performance, which can be sent to observability tools like [Jaeger](https://www.jaegertracing.io/) or [Datadog](https://www.datadoghq.com/).

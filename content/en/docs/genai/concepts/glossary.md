@@ -44,13 +44,13 @@ When an LLM generates incorrect, nonsensical, or fabricated information that is 
 
 A design pattern where an agent pauses at defined points to request human input such as approval, correction, or a decision. The human actively participates in the agent’s execution rather than passively observing.
 
-In Mendix, this is implemented through user access approval settings on [tools](#tool-calling), which control when tools get executed and whether they are visible to the user. For example, a tool that deletes records might require explicit user confirmation before execution. The ConversationalUI module supports human-in-the-loop interactions out of the box. For implementation details, see [Human in the Loop](/agents/genai-for-mx/conversational-ui/#human-in-the-loop).
+In Mendix, this is implemented through user access approval settings on [tools](#tool-calling), which control when tools get executed and whether they are visible to the user. For example, a tool that deletes records might require explicit user confirmation before execution. The ConversationalUI module supports human-in-the-loop interactions out of the box. For implementation details, see [Human in the Loop](/agents/agents-kit-2/reference-guide/conversational-ui/#human-in-the-loop).
 
 ## Knowledge Base {#knowledge-base}
 
 A storage system for discrete pieces of information that can be retrieved and used to augment prompts. Knowledge bases are essential for [RAG](#retrieval-augmented-generation) patterns. When knowledge is stored as [embeddings](#embeddings) in a [vector database](#vector-database), semantic similarity searches are possible.
 
-Mendix supports managed cloud knowledge base services such as [Mendix Cloud GenAI Knowledge Base Resource Packs](/agents/mx-cloud-genai/resource-packs/) and self-managed implementations using the [PgVector Knowledge Base module](/agents/reference-guide/external-connectors/pgvector/).
+Mendix supports managed cloud knowledge base services such as [Mendix Cloud GenAI Knowledge Base Resource Packs](/agents/mx-cloud-genai/resource-packs/) and self-managed implementations using the [PgVector Knowledge Base module](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/).
 
 ## Large Language Model (LLM) {#large-language-model}
 
@@ -88,7 +88,7 @@ Also known as tool use or function calling, a capability that allows LLMs to cal
 
 A structured record of execution across a system or workflow. In the context of an agent, a trace captures the sequence of inputs, reasoning steps, tool calls, intermediate actions, and outputs that led to a result. It also records token consumption, the duration of each step, and whether the execution was successful.
 
-In Mendix, tracing is supported by the [GenAI Commons](/agents/genai-for-mx/commons/#traceability) module to help debug and monitor agent behavior.
+In Mendix, tracing is supported by the [GenAI Commons](/agents/agents-kit-2/reference-guide/commons/#traceability) module to help debug and monitor agent behavior.
 
 ## User Prompt {#user-prompt}
 
@@ -98,4 +98,4 @@ The input text provided by an end-user or app to an LLM. User prompts contain th
 
 A specialized database designed to store and query [embeddings](#embeddings). Vector databases support similarity searches using mathematical techniques to find the most semantically similar items to a query. This capability is essential for [RAG](#retrieval-augmented-generation) patterns.
 
-In Mendix, PostgreSQL with the pgvector extension serves as a vector database. For more information, see [PgVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/).
+In Mendix, PostgreSQL with the pgvector extension serves as a vector database. For more information, see [PgVector Knowledge Base](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/).

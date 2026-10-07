@@ -203,6 +203,10 @@ To access the license agreement, go to the **Checks** section of the pull reques
 
 This only needs to be done once.
 
+## Mendix Documentation MCP Server
+
+As well as contributing to the Mendix documentation, you can run an MCP server to  use with your AI harness to give your models access to the Mendix documentation. This is created by Mendix Labs, and you can find it at [mendixlabs/mendix-doc.mcp](https://github.com/mendixlabs/mendix-doc-mcp) in GitHub. The full instructions on how to run it can be found in the [README.md](https://github.com/mendixlabs/mendix-doc-mcp/blob/main/README.md) file.
+
 ## Read More
 
 * [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/)

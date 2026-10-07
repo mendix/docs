@@ -37,6 +37,10 @@ The OQL module has the following features:
 
 ## Available OQL Actions
 
+{{% alert color="warning" %}}
+[Dataset parameters](/refguide/data-sets/#parameters) are ignored when executing any of the actions listed below. [Named parameters](#named-parameters) should be used instead.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 
 * Only `SELECT` queries are supported

@@ -97,7 +97,7 @@ When creating a trust anchor in Amazon IAM Roles Anywhere, you must provide a [c
 
 To add the certificate, perform the following steps:
 
-1. Log in to [Apps](https://sprintr.home.mendix.com/), and then select your app.
+1. Log in to [Projects](https://projects.home.mendix.com/), and then select your app.
 2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
 3. In the **Network** tab, in the **Outgoing Connections Certificates** section, add the client certificate that you used to create a trust anchor in Roles Anywhere.
 4. From the list, select the certificate that you added, and then click **Details**.
@@ -115,7 +115,7 @@ The client certificate that you added now shows as **Currently enabled**.
 
 #### Configuring the Temporary Credentials Connection Details in the Mendix Portal {#configure-credentials}
 
-1. Log in to [Apps](https://sprintr.home.mendix.com/), and then select your app.
+1. Log in to [Projects](https://projects.home.mendix.com/), and then select your app.
 2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
 3. In the **Model Options** tab, in the **Constants** section, select the constant from the table below and click **Edit**.
    

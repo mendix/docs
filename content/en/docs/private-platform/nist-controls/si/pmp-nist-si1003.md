@@ -26,7 +26,7 @@ A common vulnerability in organizational information systems is unpredictable be
 
 The following controls are related to this control:
 
-* AC-3.
+* [AC-03](/private-mendix-platform/nist-controls/ac-03/).
 
 ## Responsibility
 

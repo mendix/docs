@@ -57,7 +57,7 @@ For information about security practices for business-as-usual operations of you
 
 For information about security practices for app governance, refer to the following topics:
 
-* [Apps: Software Composition](/developerportal/deploy/software-composition/) - An explanation of the **Software Composition** page of the **Apps** menu
+* [Apps: Software Composition](/developerportal/deploy/software-composition/) - An explanation of the **Software Composition** page of the **Projects** menu
 * [Control Center: Software Composition](/control-center/software-composition/) - An explanation of the **Software Composition** page of the **Control Center**, and the options available to identify the dependencies in deployment packages in the Mendix Portal
 * [Security Settings in Control Center](/control-center/security/) - Settings to help you manage access to the Mendix Platform for users in your company
 * [Set up an SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/) -  A detailed walk through the process of configuring BYODIDP SSO in the Control Center
@@ -66,4 +66,4 @@ For information about security practices for app governance, refer to the follow
 
 ## Getting Support
 
-For additional information, frequently asked questions, and troubleshooting tis, refer to [Frequently Asked Questions – Security](/support/security-findings-faq/). If you have more questions, contact your Customer Success Manager (CSM), or join the [Mendix Community forum](https://community.mendix.com/p/community).
+For additional information, frequently asked questions, and troubleshooting tis, refer to [Frequently Asked Questions – Security](/support/security-findings-faq/). If you have more questions, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact, or join the [Mendix Community forum](https://community.mendix.com/p/community).

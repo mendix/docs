@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        {{themecss}} {{appicons}} {{manifest}} {{startupimages}}
+    </head>
+
+    <body>
+        <div class="loginpage">
+            <div class="loginpage-left">
+                <div class="loginpage-image"></div>
+            </div>
+            <div class="loginpage-right">
+                <div class="loginpage-formwrapper">
+                    <h2 id="loginHeader">Sign in</h2>
+                    <form id="loginForm" class="loginpage-form" autocomplete="off">
+                        <div>
+                            <div id="loginMessage" class="alert alert-danger"></div>
+                            <div class="form-group">
+                                <label class="control-label" id="usernameLabel" for="usernameInput">User name</label>
+                                <div class="inputwrapper">
+                                    <input
+                                        id="usernameInput"
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="User name"
+                                        autocorrect="off"
+                                        autocapitalize="none"
+                                        autocomplete="off"
+                                    />
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" id="passwordLabel" for="passwordInput">Password</label>
+                                <div class="inputwrapper">
+                                    <input
+                                        id="passwordInput"
+                                        class="form-control"
+                                        type="password"
+                                        placeholder="Password"
+                                        autocorrect="off"
+                                        autocapitalize="none"
+                                        autocomplete="off"
+                                    />
+                                    <span class="glyphicon glyphicon-eye-close" id="passwordToggle"></span>
+                                </div>
+                            </div>
+                            <button id="loginButton" type="submit" class="btn btn-success btn-lg">Sign in</button>
+                             <button id="logiSSOnButton" type="button" onclick="SSOlogin()" class="btn  btn-lg">OIDC SSO Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="loginpage-logo">
+                <img src="logo.png" role="presentation" height="45" alt="" />
+            </div>
+        </div>
+       <script>
+        
+function SSOlogin() {
+  const cont = window.location.search + window.location.hash;
+  const base = window.location.pathname.replace(/\/login\.html$/, '');
+  const loginUrl = base + '/oauth/v2/login';
+  window.location.href = cont
+    ? loginUrl + '?cont=' + encodeURIComponent(cont)
+    : loginUrl;
+}
+
+
+</script>
+
+        <script src="js/login_i18n.js?{{cachebust}}"></script>
+        <script src="js/login.js?{{cachebust}}"></script>
+        <script src="js/toggle-password.js?{{cachebust}}"></script>
+    </body>
+</html>

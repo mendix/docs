@@ -32,7 +32,7 @@ The information system:
 
     * Shuts the information system down
     * Restarts the information system
-    * Organization-defined alternative actions .
+    * Organization-defined alternative actions
 
 ### Supplemental Guidance
 
@@ -40,8 +40,8 @@ Security function verification includes the integrity of security mechanisms, th
 
 The following controls are related to this control:
 
-* CA-7
-* SI-7. 
+* [CA-07](/private-mendix-platform/nist-controls/ca-07/)
+* SI-07
 
 ## Responsibility
 

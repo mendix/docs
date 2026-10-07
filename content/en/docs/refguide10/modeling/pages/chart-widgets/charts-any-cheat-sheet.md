@@ -1,9 +1,14 @@
 ---
 title: "Any Chart Cheat Sheet"
+deprecated: true
 url: /refguide10/charts-any-cheat-sheet/
 description: "Shows, with examples, how the most common types of chart can be configured using the Any Chart Widget"
 weight: 50
 ---
+
+{{% alert color="warning" %}}
+The Any Chart widget is not compatible with the [Mendix React Client](/refguide10/mendix-client/react/). We have published a version of Any Chart that supports the React client called Custom Chart. Update your [Charts](/appstore/widgets/charts/) widget (to version 6.0 or above) to use the Custom Chart feature.
+{{% /alert %}}
 
 ## Introduction
 

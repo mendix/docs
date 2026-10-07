@@ -10,6 +10,170 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.2.1
+
+### Release date: September 16, 2026
+
+### Workstation Client
+
+#### New Features
+
+* Keyboard wedge devices - We have added keyboard wedge support for Linux.
+
+#### Bug Fixes
+
+* We have fixed an issue with the mapping of the keyboard layouts that resulted in incorrect interpretation of keyboard inputs.
+
+### Workstation Commons
+
+#### Bug Fixes
+
+* We have included a missing dependency on the sticky scroll widget.
+
+## 4.2.0
+
+### Release date: September 10, 2026
+
+### Workstation Management
+
+#### New Features
+
+* Keyboard wedge devices - We have added a new *keyboard wedge* connection type to connect with devices sending data as keyboard strokes. This connection enables basic integration with input devices like barcode scanners, RFID readers, or measurement devices. For more information, see [Configuring Devices: Keyboard Wedge](/mendix-workstation/management-devices/#keyboard-wedge).
+
+#### Improvements
+
+* Station creation - We have added the option to create a new station by copying an existing station. For more information, see [Managing Stations: Creating a New Station](/mendix-workstation/management-stations/#create-station).
+* Station details - The station details now display if there is a live connection to a Workstation Client on a registered computer.  
+* Adding devices - We have improved the UX of the **Add Device** wizard when selecting a connection type.
+* Registering computers - When clipboard permissions are disabled in the browser, the registration key is instead fully displayed in a text area.
+* Private management - We have made the following improvement to Private Workstation Management:
+
+    * We have made it easier to see if a specific SSO configuration was created at runtime or deploy time. A warning appears when editing a deploy-time configuration at runtime.
+    * To provide more flexibility when switching SSO protocols, we have made it possible to edit SSO users and their principal attributes.
+    * We have fixed some UI issues in the navigation and the SAML metadata popup window.
+    * We have added the missing default attribute mapping for Display Name in the SAML configuration.
+    * We have upgraded Private Workstation Management to Mendix 11.12.4.
+
+#### Bug Fixes
+
+* We have fixed an issue where the **Workspace Settings** page would freeze after closing the **Log Level**, **Retention Policy**, and **Client Update Check Interval** dialogs.
+* We have fixed *uncontrolled input* warnings that would appear in the console.
+
+### Workstation Client
+
+#### New Features
+
+* Keyboard wedge connector - The Workstation Client can now receive On Event messages from input devices sending data as keystrokes wherever the current focus is, for example, in the web app or in an input field.
+
+#### Improvements
+
+* Registering computers - We have improved computer registration to prevent accidental double submissions. We have also added a **Registering...** indicator while the request is in progress.
+
+### Workstation Connector
+
+#### Improvements
+
+* UX improvements - We have added new toolbox icons for all exposed Javascript actions that dark-mode compatible and aligned with the icons in Studio Pro.
+
+### Marketplace
+
+#### New Modules
+
+* Workstation Commons - The new Workstation Commons module contains a collection of nanoflows and snippets commonly used when building an app connected to peripherals devices, including the following:
+
+    * A high-level nanoflow to simplify the interface with smartcard readers, Bluetooth, printers and file devices
+    * Nanoflows to manage connecting and disconnecting to and from devices
+    * A logger to display the raw device messages in your app
+    * Snippets to display information about the station, device, and device state.
+
+* Private Workstation Management is now available as a [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/) package.
+
+## 4.1.0
+
+### Release date: August 13, 2026
+
+### Workstation Management
+
+#### New Features
+
+* Enhanced system information - Workstation Management can now receive and display additional system information from clients, including the specific client type.
+
+### Workstation Client
+
+#### New Features
+
+* Improved client reporting - The client now sends detailed installation information (**Client Type**) to the Management system, providing better visibility into your deployment.
+* Consistent device states - We have refactored how devices are managed to ensure they consistently report their status as available, connected, or in an error state.
+
+#### Improvements
+
+* Enhanced Bluetooth reliability - Bluetooth devices now actively scan (poll) for status updates, and peripherals not seen within 30 seconds are automatically marked as unavailable. Connect can now be aborted through disconnecting. Disconnects are no longer marked as an error. Scanning state and seen devices are now visible in diagnostics.
+* Card reader - Card connection failure no longer results in an error and make the device unusable.
+* Improved printer status - Printers now actively poll to keep their availability status up-to-date.
+* Serial device polling - Serial devices now poll for status whenever a device is not connected, ensuring you always have the latest availability information. Disconnects are no longer marked as error.
+* TCP client validation - TCP client connections now include a 10-second timeout, can be aborted through disconnecting, and include validation to ensure the host and port are correctly configured.
+* Configuration warnings - The system now provides warnings if it detects potentially incorrect serial or TCP delimiter configurations, helping you avoid setup issues.
+
+### Workstation Connector
+
+#### Bug Fixes
+
+* Connection stability - Fixed an issue that occasionally prevented the connector from successfully reconnecting to devices after a period of Workstation Client downtime.
+
+## 4.0.0
+
+### Release date: July 16, 2026
+
+{{% alert color="info" %}}
+We are thrilled to announce the General Availability (GA) release of our Workstation Management solution. This release brings significant new capabilities, especially around printer management, usage reporting, and introduces the option for private hosting.
+{{% /alert %}}
+
+### Workstation Management
+
+#### New Features
+
+* Default printer usage - You can now create a printer device without specifying a name. The Workstation Client will then automatically connect to the default printer as defined by the operating system, simplifying printer setup.
+* PDF Printing Support (Windows) - We have added support for PDF printing on Windows Workstation Clients, expanding your printing capabilities.
+* Enhanced usage report filters - The usage report now includes a workspace environment type filter (Test, Acceptance, or Production). This allows for more granular analysis of Workstation usage across different stages of your deployment.
+* More accurate usage metrics - We have refined the usage report by switching unique client counting from Station ID to Client ID and added an environment-type filter. This provides more precise and insightful usage data.
+* Downloadable company usage report - You can now download the company usage report, making it easier to analyze and share your Workstation usage data offline.
+* Device class and station group management - We have introduced full Create, Read, Update, and Delete (CRUD) capabilities for device classes and station groups. Newly created station groups and device classes are automatically selected during station creation, editing, or acceptance, streamlining your workflow.
+
+#### Improvements
+
+* Dependency security and updates - We have fixed some vulnerabilities in dependencies, and updated the modules to enhance security and performance.
+
+#### Bug Fixes
+
+* We have fixed a bug that occurred with trailing whitespace in the URLs of imported applications within JSON files, ensuring smoother app imports.
+
+### Private Workstation Management
+
+#### New Features
+
+* Self-hosting option - With this GA release, we are introducing Private Workstation Management, providing you with the option to self-host the management solution. This offers greater control and flexibility over your deployment.
+
+{{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact. {{% /alert %}}
+
+### Workstation Client
+
+#### New Features
+
+* Anonymized Client ID reporting - The Workstation Client now generates and sends an anonymized Client ID, derived from the machine's hardware/OS identifier, to the Management server. This enables more accurate and privacy-conscious usage metrics.
+* Single WebSocket connection for multiple devices - The Workstation Client can now connect to multiple devices over a single WebSocket connection, improving efficiency and reducing overhead.
+* New `SendDeviceRequest` API Support - The client now supports the new `SendDeviceRequest` API, allowing for more direct and streamlined communication with devices.
+
+#### Bug Fixes
+
+* We have fixed some issues with non-UTF-8 delimiter or suffix encoding in serial, TCP-IP client, and TCP-IP server devices, ensuring reliable data transmission.
+
+### Workstation Connector
+
+#### New Features
+
+* Single WebSocket communication - The Workstation Connector now supports communication over a single WebSocket connection, enhancing performance and simplifying network configurations in the future.
+* New `SendDeviceRequest` JSA - A new SendDeviceRequest JSA (JavaScript API) has been introduced. This API returns the device response or error directly, and the request is not passed to the onMessage channel. This feature is applicable only on devices that support requests and requires Workstation Client 4.0 or later for full usage.
+
 ## 3.8.0
 
 ### Release date: June 18, 2026
@@ -133,7 +297,7 @@ If more than one station is found for a given computer name during bulk registra
     * Manage events in a nanoflow with the new `SubscribeToObjectChanges` and `WaitForObjectChanges` nanoflow actions.
     * Benefit from easier configuration of common use cases with the new `ConnectDevice`, `SendDeviceMessage` and `WaitForDeviceMessage` nanoflow actions.
 
-For more information, see [Nanoflows](/mendix-workstation/build-app/#javascript-actions) and [Widgets](/mendix-workstation/build-app/#widgets).
+For more information, see [Nanoflows](/mendix-workstation/develop-app/#javascript-actions) and [Widgets](/mendix-workstation/develop-app/#widgets).
 
 #### Improvements
 
@@ -236,7 +400,7 @@ For more information, see [Nanoflows](/mendix-workstation/build-app/#javascript-
 
 * Automatic suffixing for duplicate workstations – To make managing your workstations even smoother, we have implemented automatic suffixing for imported workstations that have duplicate names. This helps prevent naming conflicts and keeps your environment tidy.
 * Feedback module replaced by the new Forum Space – We have removed the Feedback function in the Workstation Management. Don't worry, your voice is still incredibly important to us! Please share your questions, ideas, and feedback in the new dedicated [Mendix Forum Space for Mendix Workstation](https://community.mendix.com/link/spaces/mendix-workstation-client). This change will help us centralize discussions and provide better support.
-* Special characters in Workspace names – You can now use special characters in your Workspace names, giving you more flexibility and personalization.
+* Special characters in workspace names – You can now use special characters in your workspace names, giving you more flexibility and personalization.
 * Unique auto-accepted computer names – We have added a uniqueness validation to the **Auto-Accepted Computer Name** field used for bulk registration. This ensures that each computer name is distinct, preventing potential conflicts during the registration process.
 
 #### Fixes
@@ -355,14 +519,14 @@ This is a Limited Availability release of Mendix Workstation.
 
 Mendix Workstation is available for all Mendix users for development use. 
 
-Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use the Mendix Workstation for development, but workspaces are individual and cannot be shared.
+Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to see what arrangements are possible. Without a license you can use the Mendix Workstation for development, but workspaces are individual and cannot be shared.
 {{% /alert %}}
 
 ### Improvements
 
 #### Logging Is Configurable in Workspace Settings
 
-The level of logs written to log files and visible in the client is configurable in Workspace Settings. You can configure the following:
+The level of logs written to log files and visible in the client is configurable in workspace Settings. You can configure the following:
 
 * Log level: Info, Warn, Error, Debug.
 * Log retention policy: Maximum log folder size (in MB) and maximum number of stored days.
@@ -383,7 +547,7 @@ When editing a device, device settings are edited in a side panel. It makes devi
 ### Release date: September 12, 2025
 
 {{% alert color="info" %}}
-The fourth pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
+The fourth pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 {{% /alert %}}
 
 ### New Features
@@ -448,7 +612,7 @@ The Sample App is available in the Mendix Marketplace.
 ### Release date: August 20, 2025
 
 {{% alert color="info" %}}
-The third pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
+The third pre-release of Mendix Workstation is available under the conditions of the Mendix Workstation Pre-Release Program. Support is available only to members of the program. To become a program member, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 {{% /alert %}}
 
 ### New Features
@@ -611,7 +775,7 @@ The second pre-release of Mendix Workstation is available under the conditions o
 #### Breaking Changes
 
 * The new connector is incompatible with the previous releases. Your Mendix app must be refactored to adopt the new pattern.
-* Due to the introduction of the Workspace, existing station configurations are deleted. Stations must be reconfigured.
+* Due to the introduction of the workspace, existing station configurations are deleted. Stations must be reconfigured.
 * The Workstation Management is no longer compatible with the Workstation Client version 2.0. Clients must be updated to version 2.1.
 
 #### App Upgrade

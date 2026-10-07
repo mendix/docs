@@ -148,7 +148,7 @@ If a network error happens during the file upload (via [step 2 in the upload pha
 
 If a network error occurs while uploading the data (via [step 3 in the upload phase](#upload-step-three)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#upload-step-two) will be uploaded again during the next synchronization.
 
-If a network error (such as a timeout) occurs after uploading the data (at [step 3 in the upload phase](#upload-step-three)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device cannot distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro 8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro 8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
+If a network error (such as a timeout) occurs after uploading the data (at [step 3 in the upload phase](#upload-step-three)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device cannot distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. The synchronization process is optimized and the server will not commit the same changes because they have been applied before.
 
 If a network error occurs during the download phase, no data is updated on the device. Therefore the user can keep working or retry. The effects of the upload phase are not rolled back on the server.
 
@@ -164,7 +164,7 @@ During the synchronization, changed and new objects are committed. An object's s
 * The object is not valid according to domain-level validation rules
 * The object has a dangling reference (for more information, see the [Dangling References](#dangling-references) section below)
 
-{{% alert color="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
+{{% alert color="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity.  {{% /alert %}}
 
 #### Broken or Missing File Contents
 

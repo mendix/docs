@@ -30,9 +30,9 @@ Position risk designations reflect Office of Personnel Management policy and gui
 
 The following controls are related to this control:
 
-* AT-3
-* PL-2
-* PS-3
+* AT-03
+* [PL-02](/private-mendix-platform/nist-controls/pl-02/)
+* PS-03
 
 For more information, refer to *5 C.F.R. 731.106(a)*.
 

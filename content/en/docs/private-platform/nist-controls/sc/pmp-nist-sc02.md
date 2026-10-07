@@ -26,8 +26,8 @@ Information system management functionality includes, for example, functions nec
 
 The following controls are related to this control:
 
-* SA-04
-* SA-08
+* [SA-04](/private-mendix-platform/nist-controls/sa-04/)
+* [SA-08](/private-mendix-platform/nist-controls/sa-08/)
 * SC-03
 
 ## Responsibility

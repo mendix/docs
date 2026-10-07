@@ -54,9 +54,9 @@ If the top-level of an [import mapping](/refguide9/import-mappings/) has **Decid
 
 If the import mapping has **Decide this at the place where the mapping gets used** checked, then you can define the **If no object was found** action in the REST operation itself. This means you can use the same import mapping in multiple operations, but have a different behavior for each of them. The options are:
 
-* Create – create an object of the correct entity to map to — typically used for **POST** operations
+* Create – create an object of the correct entity to map to—typically used for **POST** operations
 * Ignore – don't map this element and continue parsing
-* Error – stop parsing the XML and throw an error — typically used for **PUT** and **PATCH** operations
+* Error – stop parsing the XML and throw an error—typically used for **PUT** and **PATCH** operations
 
 ### Commit
 

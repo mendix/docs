@@ -135,6 +135,10 @@ If you are using Mendix version 10.21.1, use User Commons module version 2.1.0 o
 
 This section provides an overview of updates for the SCIM and UserCommons modules across different versions. It includes several key updates to ensure a smooth transition while migrating to higher module versions.
 
+{{% alert color="warning" %}}
+The SCIM module supports UserCommons V3.0.0 and below. If you use the SCIM module, do not upgrade UserCommons to V3.0.0, as it requires changes to the dependent SCIM module that are not yet available. 
+{{% /alert %}}
+
 {{% alert color="info" %}}
 When upgrading to version 4.0.0 of the SCIM module, ensure you are also using version 2.0.0 of the UserCommons module.
 {{% /alert %}}
@@ -238,6 +242,15 @@ The table below compares the primary user-identifying attribute used by SCIM (i.
 | EntraID | OIDC SSO | SCIM.externalID and OIDC.oid contain the same value. |
 | Okta | SAML | SCIM.externalID and SAML.Use Name ID contain the same value. <br> Note: Configure Application username to Custom with user.getInternalProperty("id"). |
 | EntraID | SAML | SCIM.externalID and SAML.Use Name ID contain the same value. <br> Note: Map Unique User Identifier as user.objectid in SSO Configuration. |
+
+{{% alert color="info" %}}
+To ensure the SCIM module functions correctly, configure your Identity Provider (IdP) to:
+
+* map `externalId` to an immutable and unique identifier (for example, `oid` in Microsoft Entra ID).
+* map `userName` to a unique user attribute.
+
+Both `externalId` and `userName` are mandatory attributes and must be included in the SCIM request payload.
+{{% /alert %}}
 
 #### Advanced Attribute Mapping {#advanced-attribute-mapping}
 

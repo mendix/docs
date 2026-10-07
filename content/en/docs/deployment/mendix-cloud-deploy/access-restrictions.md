@@ -24,7 +24,7 @@ You can specify multiple access restriction profiles for your application, each 
 
 To view or manage access restriction profiles, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to your app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to your app's **Environments** page.
 2. Click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any of the [available tabs](/developerportal/deploy/environments/#available-tabs) to open the **Manage Cloud Settings** page.
 3. Switch to the **Access Restriction Profiles** tab.
 
@@ -102,7 +102,7 @@ Requests originating from an IP address within these allowed profiles will be gr
 
 To apply access restrictions to a specific application environment, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to the app's **Environments** page.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 3. Go to the **Connectivity** tab.
 4. Navigate to the [Path Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) section to apply access restrictions to a single environment.
@@ -129,7 +129,7 @@ IP restriction profiles allow you to deny access to your application from specif
 
 To view or manage IP restriction profiles, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to your app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to your app's **Environments** page.
 2. Click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any of the [available tabs](/developerportal/deploy/environments/#available-tabs) to open the **Manage Cloud Settings** page.
 3. Switch to the **IP Restriction Profiles** tab.
 
@@ -172,7 +172,7 @@ Requests originating from an IP address within these denied profiles will be blo
 
 To apply IP restrictions to a specific application environment, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to the app's **Environments** page.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 3. Go to the **Connectivity** tab.
 4. Navigate to the [IP Access Restrictions](/developerportal/deploy/environments-details/#ip-access-restrictions) section to apply access restrictions to a single environment.
@@ -191,7 +191,7 @@ Consider this example scenario in which a basic IP range restriction could be us
 
 To restrict access to the app to an IP range, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to the app's **Environments** page.
 2. Click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any of the [available tabs](/developerportal/deploy/environments/#available-tabs) to open the **Manage Cloud Settings** page.
 3. Switch to the **Access Restriction Profiles** tab.
 
@@ -221,7 +221,7 @@ Additionally, the company has decided to use TLS client certificates so they do 
 
 To add this additional access restriction profile, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to the app's **Environments** page.
 2. Click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any of the [available tabs](/developerportal/deploy/environments/#available-tabs) to open the **Manage Cloud Settings** page.
 3. Switch to the **Access Restriction Profiles** tab.
 

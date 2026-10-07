@@ -65,7 +65,7 @@ To find your existing API key or to request a new key for your app as an existin
 
 To send your runtime information to Datadog, you need to provide the Datadog API key to your environment. To do so, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** on the environment you wish to monitor with Datadog. 
 1. Switch to the **Runtime** tab.
 1. Click **Add** in the **Custom Environment Variables** section.
@@ -147,7 +147,7 @@ Mendix recommends using the following tags:
 
 To set these tags, do the following:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** on an environment you are monitoring with Datadog. 
 1. Switch to the **Tags** tab
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/datadog-metrics/set-tags.png" alt="Example metric showing tags in Datadog" class="no-border" >}}
@@ -208,7 +208,7 @@ If the app has more than one instance, you will see lines on the graph for each 
 
 ## Mendix Tracing{#mendix-tracing}
 
-[Mendix Tracing](/refguide/tracing-in-runtime/) sends Mendix Runtime traces to [Datadog APM](https://docs.datadoghq.com/tracing/), giving you distributed tracing visibility into your app's performance and microflow executions.
+Mendix uses [OpenTelemetry](/refguide/opentelemetry-in-runtime/) to send Mendix Runtime traces to [Datadog APM](https://docs.datadoghq.com/tracing/), giving you an insight into your app's microflow executions and performance.
 
 {{% alert color="info" %}}
 Mendix Tracing requires Mendix Runtime 10.24.12 or above, or 11.5 or above.
@@ -222,7 +222,7 @@ Enabling Mendix Tracing may significantly affect your Datadog APM costs. Review 
 
 To enable Mendix Tracing, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 2. Click **Details** on the environment you want to monitor.
 3. Switch to the **Runtime** tab.
 4. Click **Add** in the **Custom Environment Variables** section.
@@ -232,7 +232,7 @@ To enable Mendix Tracing, follow these steps:
 
 ### Filtering Traces{#filter-traces}
 
-To control which traces are sent to Datadog, set the `MX_TRACING_FILTER` custom environment variable. For available filter options and syntax, see [Tracing in Runtime](/refguide/tracing-in-runtime/#filtering).
+To control which traces are sent to Datadog, set the `MX_TRACING_FILTER` custom environment variable. For available filter options and syntax, see [OpenTelemetry](/refguide/opentelemetry-in-runtime/#filtering).
 
 ## Additional Information{#additional-info}
 
@@ -305,7 +305,7 @@ Previously, when Mendix Cloud ran on Cloud Foundry, hosts were incorrectly regis
 
 * [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/) – a Mendix blog about the capabilities of Datadog and using Datadog with Mendix
 * [Metrics](/developerportal/operate/metrics/)
-* [Tracing in Runtime](/refguide/tracing-in-runtime/) – Mendix documentation
+* [OpenTelemetry](/refguide/opentelemetry-in-runtime/) – Mendix documentation
 * [Java Runtime Metrics](https://docs.datadoghq.com/tracing/runtime_metrics/java/) – Datadog documentation
 * [Postgres](https://docs.datadoghq.com/integrations/postgres/) – Datadog documentation
 * [System Check](https://docs.datadoghq.com/integrations/system/) – Datadog documentation

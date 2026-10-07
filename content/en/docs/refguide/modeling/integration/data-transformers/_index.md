@@ -3,7 +3,6 @@ title: "Data Transformers"
 url: /refguide/data-transformers/
 weight: 50
 description: "Describes Data Transformer documents in Mendix Studio Pro."
-beta: true
 ---
 
 ## Introduction
@@ -11,10 +10,6 @@ beta: true
 Data Transformer documents transform data from one structure into another structure. In practice, this is a message-to-message transformation within Studio Pro. 
 
 You can use this feature to pre-process an incoming message (for example, from an API response or MQTT message) before an import mapping. You can also use it to transform a message before passing it on to a downstream system that expects the data in a specific structure.
-
-{{% alert color="info" %}}
-This feature is in beta. 
-{{% /alert %}}
 
 ### Prerequisites
 

@@ -97,7 +97,7 @@ We made the following improvements to the runtime agent:
 
 ## 2.0.10 {#2010}
 
-This is the first release for [Mendix 8](/releasenotes/studio-pro/8.0/).
+This is the first release for Mendix 8.
 
 We made the following improvements to the browser agent:
 

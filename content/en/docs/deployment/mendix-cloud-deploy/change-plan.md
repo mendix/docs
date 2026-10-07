@@ -28,7 +28,7 @@ It is only possible to change and upgrade to higher-tier plans, not downgrade. U
 Before requesting a plan change, verify the following:
 
 * The app runs on Kubernetes.
-* The app's tenant is self-service enabled. To activate this capability for your company, contact your Customer Success Manager.
+* The app's tenant is self-service enabled. To activate this capability for your company, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 * You are the [Technical Contact](/support/#technical-contacts) for the app (only Technical Contacts can submit a plan change request).
 
 {{% alert color="info" %}}
@@ -43,7 +43,7 @@ This feature is only visible to the Technical Contact.
 
 To change an environment's plan, follow these steps:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/)
+1. Go to [Projects](https://projects.home.mendix.com/)
 2. Click **Environments** on your app. 
 3. On the **Environments** page, click the **Overview** tab to view your environments.
 4. Find your target environment.
@@ -94,7 +94,7 @@ The **Change Requests** tab allows Technical Contacts to view all submitted plan
 
 To access it:
 
-1. Go to [Apps](https://sprintr.home.mendix.com/).
+1. Go to [Projects](https://projects.home.mendix.com/).
 2. Click **Environments** on your app.
 3. Open the **Change Requests** tab.
 

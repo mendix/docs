@@ -1,7 +1,9 @@
 ---
-title: "Tracing"
-url: /refguide/tracing-in-runtime/
-description: "Describes how to setup and use tracing in the Mendix Runtime."
+title: "OpenTelemetry"
+url: /refguide/opentelemetry-in-runtime/
+description: "Describes how to setup and use OpenTelemetry in the Mendix Runtime."
+aliases:
+   - /refguide/tracing-in-runtime/
 ---
 
 ## Introduction
@@ -39,7 +41,11 @@ The runtime generates spans for the following:
 
 ### Minimal Configuration {#min-configuration}
 
-You can enable tracing from the `App Settings` -> `Configuration` dialog. In the `Tracing` tab, you can enable tracing and specify an **Endpoint** and **Service Name**.
+{{% alert color="info" %}}
+The **OpenTelemetry** tab was named **Tracing** in Mendix versions below 11.12.0.
+{{% /alert %}}
+
+You can enable OpenTelemetry tracing and logging from the `App Settings` -> `Configuration` dialog. In the `OpenTelemetry` tab, you can enable tracing and logging and specify an **Endpoint** and **Service Name**.
 
 {{< figure src="/attachments/refguide/runtime/tracing-in-runtime/tracing-configuration.png" >}}
 
@@ -61,33 +67,46 @@ You can filter out specific traces using the `mendix.tracing.filter` system prop
 ]
 ```
 
+### Minimal Tracing Mode {#minimal-tracing-mode}
+
+{{% alert color="info" %}}
+Minimal tracing mode was introduced in Mendix 11.15.0.
+{{% /alert %}}
+
+In a multi-app landscape, you might want to track how requests flow between applications rather than examining the detailed handling within a single app. Tracing can also generate an overwhelming number of spans.
+
+Minimal tracing mode helps reduce the number of spans by recording only incoming and outgoing spans.
+
+To enable minimal tracing mode, set the `OpenTelemetry.MinimalMode` [custom runtime setting](/refguide/custom-settings/#OpenTelemetryMinimalMode) to `true`.
+
 ### Testing
 
 You can test the tracing using [Jaeger](https://www.jaegertracing.io/) or [Grafana](https://grafana.com).
 
-For Jaeger, you can use the all-in-one binary or Docker image. Jaeger will listen to endpoint `http://localhost:4318/v1/traces` by default.
+For Jaeger, you can use the all-in-one binary or Docker image. Jaeger will listen to endpoint `http://localhost:4318` by default.
 
-For Grafana, you can use the all-in-one Docker image `grafana/otel-lgtm`. After starting it with the following command, it will listen to the endpoint `http://localhost:4318/v1/traces`.
+For Grafana, you can use the all-in-one Docker image `grafana/otel-lgtm`. After starting it with the following command, it will listen to the endpoint `http://localhost:4318`.
 
 ```
 docker run --name otel-grafana -d -p 3000:3000 -p 4317:4317 -p 4318:4318 grafana/otel-lgtm
 ```
 
-Alternatively, you can set up the [OpenTelemetry collector](https://opentelemetry.io/docs/collector/), which will also listen to the default endpoint and can be configured to send to backends which support OpenTelemetry. Check with your APM vendor to confirm that OpenTelemetry is supported. The free online collector configuration tool [OTelBin](https://github.com/dash0hq/otelbin) can help with collector configuration.
+Alternatively, you can set up the [OpenTelemetry collector](https://opentelemetry.io/docs/collector/), which will also listen to the default endpoint and can be configured to send to backends which support OpenTelemetry. Check with your Application Performance Monitoring (APM) vendor to confirm that OpenTelemetry is supported. The free online collector configuration tool [OTelBin](https://github.com/dash0hq/otelbin) can help with collector configuration.
 
-### All settings
+### All Settings
 
 The following settings are supported by the Mendix runtime. See [Configure the SDK](https://opentelemetry.io/docs/languages/java/configuration/#environment-variables-and-system-properties) for more information about the settings that are prefixed with `otel.`.
 
-You can configure the Java Agent through system properties which can be added to the **Extra JVM parameters** field (for example, `-Dotel.exporter.otlp.traces.endpoint`), or set through environment variables. 
+You can configure the Java Agent through system properties which can be added to the **Extra JVM parameters** field (for example, `-Dotel.exporter.otlp.traces.endpoint`), or set through environment variables.
 
 | Name | Description | Default |
 | ---- | ----------- | ------- |
 | `otel.service.name` | The name of the service. | `runtimelauncher` |
 | `otel.resource.attributes` | Extra resource attributes to include in every span. Example: `attribute1=value1,attribute2=value2` | |
 | `otel.traces.exporter` | Comma-separated list of span exporters. Supported values are: `otlp`, `console`, `logging-otlp`, and `none`. | `otlp` |
+| `otel.logs.exporter` | Comma-separated list of span exporters. Supported values are: `otlp`, `console`, `logging-otlp`, and `none`. | `otlp` |
+| `otel.exporter.otlp.endpoint` | The endpoint to send all OTLP traces and logs to. It must be a URL with a scheme of either http or https, based on the use of TLS. | `http://localhost:4318` when the protocol is `http/protobuf`<br>`http://localhost:4317` when the protocol is `grpc` |
 | `otel.exporter.otlp.traces.protocol` | The transport protocol to use on OTLP trace requests. Options include `grpc` and `http/protobuf`. | `http/protobuf` (Java Agent) |
-| `otel.exporter.otlp.traces.endpoint` | The endpoint to send all OTLP traces to. It must be a URL with a scheme of either http or https, based on the use of TLS. | `http://localhost:4318/v1/traces` when the protocol is `http/protobuf`<br>`http://localhost:4317` when the protocol is `grpc` |
 | `otel.exporter.otlp.traces.certificate` | The path to the file containing trusted certificates to use when verifying a trace server's TLS credentials. The file should contain one or more X.509 certificates in PEM format. | By default the host platform's trusted root certificates are used. |
 | `otel.exporter.otlp.traces.client.key` | The path to the file containing the private client key to use when verifying a trace client's TLS credentials. The file should contain one private key in PKCS8 PEM format. | By default no client key file is used. |
 | `otel.exporter.otlp.traces.client.certificate` | The path to the file containing trusted certificates to use when verifying a trace client's TLS credentials. The file should contain one or more X.509 certificates in PEM format. | By default no certificate file is used. |
@@ -138,9 +157,9 @@ Replace `MyServiceName` with a meaningful identifier for your service, and `coll
 
 ## Sending Traces to Datadog
 
-You can export OpenTelemetry traces to Datadog using one of the following two ways: 
+You can export OpenTelemetry traces to Datadog using one of the following two ways:
 
-* Datadog Distribution of OpenTelemetry (DDOT) 
+* Datadog Distribution of OpenTelemetry (DDOT)
 * OpenTelemetry Collector
 
 ### Datadog Distribution of OpenTelemetry (DDOT)
@@ -151,12 +170,12 @@ For installation instructions, refer to the official [DDOT documentation](https:
 
 ### OpenTelemetry Collector
 
-You can install the OpenTelemetry Collector on various operating systems, including Windows, macOS, and Linux. 
+You can install the OpenTelemetry Collector on various operating systems, including Windows, macOS, and Linux.
 
-To use the OpenTelemetry Collector with Datadog, follow these steps:  
+To use the OpenTelemetry Collector with Datadog, follow these steps:
 
 1. Install the OpenTelemetry Collector by following the official [installation guide](https://opentelemetry.io/docs/collector/installation/).
-2. Install the `otelcol_contrib` package instead of `otelcol` to include Datadog support. 
+2. Install the `otelcol_contrib` package instead of `otelcol` to include Datadog support.
 3. Run the collector with the [appropriate configuration](https://docs.datadoghq.com/opentelemetry/setup/collector_exporter/install/#2---configure-the-datadog-exporter-and-connector) adapted for Datadog.
 
 ## Sending Traces from Mendix on Kubernetes
@@ -225,13 +244,20 @@ To send logs and traces from a Mendix on Kubernetes environment to an OpenTeleme
 -javaagent:/opt/mendix/runtime/agents/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/opt/mendix/runtime/agents/mendix-opentelemetry-agent-extension.jar -Dotel.service.name=${APP_NAME} -Dotel.exporter.otlp.traces.endpoint=http://${OTEL_HOST}:4318/v1/traces -Dotel.exporter.otlp.traces.protocol=http/protobuf
 ```
 
-Replace `${APP_NAME}` with a meaninful identifier for your environment (service), and `${OTEL_HOST}` with the hostname of the OpenTelemetry Collector.
+Replace `${APP_NAME}` with a meaningful identifier for your environment (service), and `${OTEL_HOST}` with the hostname of the OpenTelemetry Collector.
 
 Depending on how the OpenTelemetry Collector is configured, the values of `-Dotel.exporter.otlp.traces.endpoint` and `-Dotel.exporter.otlp.traces.protocol` might need to be modified.
 
-## Include Metrics and Logs in OpenTelemetry
+## Including Logs in OpenTelemetry
 
-You can also use OpenTelemetry to collect logs and metrics data (CPU load, memory, and others). For more information about setting up metrics with OpenTelemetry, see the [OpenTelemetry](/refguide/metrics/#opentelemetry) section of *Metrics*. For a guide on how to set up logs with OpenTelemetry, see [Request to Create New Log Subscriber in Open Telemetry Format](/refguide/monitoring-mendix-runtime/#new-log-sub-opentelemetry) in *Monitoring Mendix Runtime*.
+You can use OpenTelemetry to collect logs. For local development, enable logs in the [OpenTelemetry configuration](#min-configuration).
+Once enabled, the logs will be sent to the configured endpoint.
+
+For deployment, see [Request to Create New Log Subscriber in Open Telemetry Format](/refguide/monitoring-mendix-runtime/#new-log-sub-opentelemetry) in *Monitoring Mendix Runtime*.
+
+## Including Metrics in OpenTelemetry
+
+You can use OpenTelemetry to collect metrics data (CPU load, memory, and others). For more information about setting up metrics with OpenTelemetry, see the [OpenTelemetry](/refguide/metrics/#opentelemetry) section of *Metrics*.
 
 ## Custom Spans in Java Actions
 

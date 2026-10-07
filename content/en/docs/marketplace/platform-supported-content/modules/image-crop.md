@@ -1,9 +1,14 @@
 ---
 title: "Image Crop"
+deprecated: true
 url: /appstore/modules/image-crop/
 description: "Describes the configuration and usage of the Image Crop module, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert color="warning" %}}
+This module is deprecated. It is replaced by the [Image Cropper](/appstore/widgets/image-cropper/) widget.
+{{% /alert %}}
 
 ## Introduction
 

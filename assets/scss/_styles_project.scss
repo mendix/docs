@@ -24,15 +24,16 @@
     display: flex; // Nested flexbox container
 }
 
+.alert-text {
+    flex: 1;
+    min-width: 0;
+}
+
 .alert-svg { // Format alert icons
     height:1.3rem;
     width:1.3rem;
     flex-shrink: 0; // Prevent icon from shrinking when text wraps
     margin-right:12px;
-}
-
-.alert.has-line-breaks { // Reduce bottom padding of .alert when alert text has line breaks (class added in alerts.html)
-    padding-bottom: 0px;
 }
 
 // Anchor icon styling for anchor.js

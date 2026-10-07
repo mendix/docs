@@ -20,12 +20,12 @@ Make sure that you have either committed your latest changes to Team Server, or 
 ### Upgrading to the Latest Release of Version 8
 
 {{% alert color="warning" %}}
-It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, Mendix recommends updating to the latest version of Mendix 8: [8.18](/releasenotes/studio-pro/8.18/).
+It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, Mendix recommends updating to the latest version of Mendix 8: 8.18.
 {{% /alert %}}
 
 To upgrade to Mendix 8.18, follow these steps:
 
-1. Download the latest patch release of Studio Pro [8.18](/releasenotes/studio-pro/8.18/).
+1. Download the latest patch release of Studio Pro 8.18.
 1. Open your app in Studio Pro 8.18.
 1. Allow it to upgrade the app, if necessary.
 

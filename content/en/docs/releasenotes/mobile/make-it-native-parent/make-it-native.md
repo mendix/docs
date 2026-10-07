@@ -8,6 +8,36 @@ description: "These release notes showcase each release of the iOS and Android M
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to get the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
+## Android 11.12.2 / iOS 11.12.2
+
+**Release date: September 18, 2026**
+
+### Improvements 
+
+* We migrated iOS to the UIKit scene delegate lifecycle.
+* We migrated from the deprecated `@react-native-community/geolocation` to `react-native-nitro-geolocation`.
+
+### Fixes
+
+* We fixed scenarios where the Android splash screen was stretched. The Mendix logo is now centered and displayed with the correct proportions on all screen sizes.
+
+## Android 11.12.1 / iOS 11.12.1
+
+**Release date: August 12, 2026**
+
+### Improvements 
+
+* We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
+
+## Android 11.12.0 / iOS 11.12.0
+
+**Release date: July 6, 2026**
+
+### Improvements 
+
+* We improved the build time on iOS for Make it Native by using prebuilt `react-native` binaries.
+* On Android, `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO` were explicitly removed following [Google Play's Photo and Video Permissions policy](https://support.google.com/googleplay/android-developer/answer/14115180).
+
 ## Android 11.11.0 / iOS 11.11.0
 
 **Release date: June 3, 2026**
@@ -50,6 +80,22 @@ Depending on the Mendix version your app is developed in and the device you want
 ### Improvements 
 
 * This new version is compatible with Mendix 11.7.0
+
+## Android 11.6.7 / iOS 11.6.7
+
+**Release date: August 12, 2026**
+
+### Fixes
+
+* We replaced `@notifee/react-native` with the `react-native-notify-kit` library.
+
+## Android 11.6.6
+
+**Release date: July 6, 2026**
+
+### Fixes
+
+* We addressed a Google Play Policy change related to [restricted permissions](https://support.google.com/googleplay/android-developer/answer/16935362?visit_id=639189272133535581-612682188&rd=1).
 
 ## Android 11.6.4 / iOS 11.6.4
 

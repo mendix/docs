@@ -23,7 +23,11 @@ Before starting this how-to, complete the following prerequisites:
 
 Create a menu that displays a dialog with text in the `loaded` method in the main entry point (`src/main/index.ts`). This can be done by following the steps in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
-In the example below, you create one menu item that shows a message box with the user's preferences, such as `Light` or `Dark` mode, and current language.
+In the example below, you create one menu item that shows a message box with the user's preferences, such as `Light` or `Dark` mode, current language and the version of Studio Pro the user is using.
+
+{{% alert type="info" %}}
+Seeing the current Studio Pro version is available for Studio Pro 11.12 and above.
+{{% /alert %}} 
 
 Replace your `src/main/index.ts` file with the following:
 
@@ -46,7 +50,7 @@ export const component: IComponent = {
 
             await messageBoxApi.show(
                 "info",
-                `User Preferences are:\n Theme is: ${preferences.theme}\n Language is: ${preferences.language}`
+                `User Preferences are:\n Theme is: ${preferences.theme}\n Language is: ${preferences.language}\nVersion is: ${preferences.version}\n`
             );
         };
 
@@ -71,6 +75,7 @@ The `getPreferences()` function returns an object with two properties:
 
 * Theme – either **Light** or **Dark**, representing the current theme setting in Studio Pro
 * Language – a string representing the current language setting, such as `en_US` for English (United States)
+* Version - a string representing the current version of Studio Pro, such as `11.12.0`.
 
 ## Extensibility Feedback
 

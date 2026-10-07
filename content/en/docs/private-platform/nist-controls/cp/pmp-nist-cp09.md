@@ -31,11 +31,11 @@ System-level information includes, for example, system-state information, operat
 
 The following controls are related to this control:
 
-* CP-2
-* CP-6
-* MP-4
-* MP-5
-* SC-13
+* [CP-02](/private-mendix-platform/nist-controls/cp-02/)
+* CP-06
+* [MP-04](/private-mendix-platform/nist-controls/mp-04/)
+* [MP-05](/private-mendix-platform/nist-controls/mp-05/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 For more information, refer to NIST Special Publication 800-34. 
 

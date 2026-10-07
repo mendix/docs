@@ -10,9 +10,9 @@ weight: 30
 
 Once you have the Mendix Operator installed in a namespace of your Red Hat OpenShift, or other Kubernetes cluster (see [Creating a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-cluster/)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the namespace, together with all the resources the app needs.
 
-This document explains how to provide the CRs through the console or command line for a standalone cluster. This enables you to automate your deployment processes and perform deployments from behind a firewall which would prevent access to the Mendix Portal.
+This document explains how to provide the CRs through the console or command line. This enables you to automate your deployment processes and perform advanced configuration.
 
-Alternatively, you can create a connected cluster and use the Mendix Portal to deploy the app, as described in [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/).
+Alternatively, you can use Mendix Portal to deploy the app, as described in [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/).
 
 ## Prerequisites for Deploying a Mendix App
 
@@ -36,7 +36,7 @@ Create a deployment package (.mda) file from your app. It is this which is picke
 You can obtain the deployment package in a number of ways:
 
 * within Studio Pro, by choosing the menu option **Project > Create Deployment Package…** – see [Create Deployment Package](/refguide/create-deployment-package-dialog/) for more information
-* from the **Environments** page of your app in [Apps](https://sprintr.home.mendix.com/)
+* from the **Environments** page of your app in [Projects](https://projects.home.mendix.com/)
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-operator/environments-create-mda.png" class="no-border" >}}
 * through a CI/CD process, such as Jenkins.
 
@@ -215,7 +215,7 @@ You must make the following changes:
 
     {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). {{% /alert %}}
 
-    If you have an offline Runtime license, for example for a standalone cluster, you can configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
+    If you have an offline Runtime license, you can configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
 
     ```yaml
     apiVersion: privatecloud.mendix.com/v1alpha1
@@ -240,8 +240,8 @@ You must make the following changes:
 * **environmentVariables** - Set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable.
 * **clientCertificates** - Specify client certificates to be used for TLS calls to Web Services and REST services.
    
-   * When **key** and **password** are specified, will use the client TLS certificate specified directly in the **MendixApp** CR.
-   * When **certificateSecret** is specified without a **key** and **password**, will load a client TLS certificate from the specified Kubernetes Secret. This feature requires Mendix Operator 2.27 or newer.
+    * When **key** and **password** are specified, will use the client TLS certificate specified directly in the **MendixApp** CR.
+    * When **certificateSecret** is specified without a **key** and **password**, will load a client TLS certificate from the specified Kubernetes Secret. This feature requires Mendix Operator 2.27 or newer.
 
 * **runtimeMetricsConfiguration** - Specify how metrics should be collected. Any non-empty values override the [default values](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) from `OperatorConfiguration`. Refer to [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/) for details on how to monitor your environment.
 * **runtimeLeaderSelection** - Specify how the leader replica should be selected. The following options are available:
@@ -252,8 +252,8 @@ You must make the following changes:
     * **general** - Specify additional labels for all pods of the app.
 * **customPodNodeSelector** - Specify the pod `nodeSelector` configuration.
     * **general** - Specify `nodeSelector` configuration for all pods of the app.
-* **deploymentStrategy** - Specify parameters for the deployment strategy. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#deployment-strategy-in-standalone) documentation.
-* **podDisruptionBudget** - Specify parameters for the pod disruption budget. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#pod-disruption-budget-in-standalone) documentation.
+* **deploymentStrategy** - Specify parameters for the deployment strategy. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#deployment-strategy) documentation.
+* **podDisruptionBudget** - Specify parameters for the pod disruption budget. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#pod-disruption-budget) documentation.
 * **runtimeReadOnlyRootFilesystem** - Specify if the Runtime container should mount the root filesystem in [read-only mode](/developerportal/deploy/private-cloud-cluster/#readonlyrootfs).
 
 #### Setting App Constants{#set-app-constants}
@@ -342,7 +342,6 @@ If you read the secret and see `data` instead of `stringData`, the values of the
 
 This ensures that a binary PKCS12 file can be safely stored and edited as a plaintext string.
 {{% /alert %}}
-
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1

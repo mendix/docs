@@ -26,9 +26,9 @@ This control addresses communications protection at the session, versus packet l
 
 The following controls are related to this control:
 
-* SC-8
-* SC-10
-* C-11
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)
+* [SC-10](/private-mendix-platform/nist-controls/sc-10/)
+* SC-11
 
 For more information, refer to the NIST Special Publication 800-52, 800-77, and 800-95.
 

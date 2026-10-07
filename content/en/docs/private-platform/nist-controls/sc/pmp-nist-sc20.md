@@ -30,11 +30,11 @@ This control enables external clients including, for example, remote Internet cl
 The following controls are related to this control:
 
 * AU-10
-* SC-8
-* SC-12
-* SC-13
-* SC-21
-* SC-22
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)
+* [SC-12](/private-mendix-platform/nist-controls/sc-12/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
+* [SC-02](/private-mendix-platform/nist-controls/sc-02/)1
+* [SC-02](/private-mendix-platform/nist-controls/sc-02/)2
 
 For more information, refer to the OMB Memorandum 08-23; and NIST Special Publication 800-81.
 

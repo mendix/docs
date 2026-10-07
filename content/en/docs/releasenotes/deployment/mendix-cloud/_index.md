@@ -13,6 +13,85 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately, as other deployment targets are also dependent on the buildpack.
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
+  
+## October 2026
+
+### October 5, 2026
+
+#### New Features
+
+* [OpenTelemetry integration](/developerportal/operate/opentelemetry/) now supports HTTP access logs through the OpenTelemetry Collector.
+
+## August 2026
+
+### August 31, 2026
+
+#### New Features
+
+* AI Log Summary is now available on the **Environments** page. It provides an overview of your application's log activity from the previous 24 hours, including error patterns, lifecycle events, and security signals. For more information, refer to [AI Log Summary](/developerportal/maia-operate/ai-log-summary/).
+
+### August 12, 2026
+
+#### Fixes
+
+* We fixed an issue that, in rare cases, caused application access logs to stop appearing on the [Logs](/developerportal/operate/logs/) page. You must restart or redeploy your app for the fix to take effect.
+
+### August 9, 2026
+
+#### Fixes
+
+* Resolved an issue where an incorrect Domain Name System (DNS) configuration warning was displayed for custom domains. Even when DNS was configured correctly, users continued to see a warning prompting them to configure their DNS settings. The warning is now displayed only when an actual DNS configuration issue is detected.
+(Tickets #275240, #275338, #275596, #275739, #276031, #276967, #277038, #277864, #278237, #281021, #281197, #282170, #282430, #282980, #283574)
+
+### August 4, 2026
+
+#### New Features
+
+* We have added a new [Jetty Thread Pool Usage](/developerportal/operate/monitoring-application-health/#jetty-thread-pool-usage) alert to the [Alerts](/developerportal/operate/monitoring-application-health/) page. This alert notifies you when the application's Jetty thread pool is approaching capacity, which can cause new requests to be delayed or rejected.
+
+### August 3, 2026
+
+#### New Features
+
+* We introduced the [Certificate API](/apidocs-mxsdk/apidocs/certificate-api/), which allows company admins to manage [landscape-wide certificates](/developerportal/deploy/certificates/centralized-certificates/) programmatically using a Mendix Personal Access Token (PAT). This API supports listing, creating, updating, replacing, and deleting central certificates.
+
+## July 2026
+
+### July 30, 2026
+
+#### New Features
+
+* We have added three new database graphs to the [Metrics](/developerportal/operate/metrics/) page:
+
+    * [Average Database Bloat Ratio](/developerportal/operate/metrics/#Trends-dbavgbloatratio) – tracks dead rows across user tables to spot when autovacuum lags.
+    * [Maximum Table Bloat Ratio](/developerportal/operate/metrics/#Trends-dbmaxtablebloatratio) – highlights the bloat percentage of the single most bloated table (system vs. application).
+    * [Largest Table Size](/developerportal/operate/metrics/#Trends-dblargesttablesize) – shows the size of the biggest table to help identify archiving or partitioning needs.
+
+### July 20, 2026
+
+#### Improvements
+
+* We updated the [Incoming IP](/developerportal/deploy/mendix-ip-addresses/#global-platform-ips-inbound) used by some services running on Mendix Portal, such as the PDF Document Generation service.
+
+## June 2026
+
+### June 28, 2026
+
+#### Fixes
+
+* We fixed an issue that affected the visibility of logged-in users in the application. (Tickets #280616 , #280642, #280682, #280707, #280716, #280733, #280829, #280942, #280951, #281022, #281024, #281051, #281119, #281142, #281144, #281157, #281164, #281253, #281280,  #281465, #281537 , #281704 , #281754 , #281764)         
+
+### June 25, 2026
+
+#### New Features
+
+* Mendix Cloud APIs now support Model Context Protocol (MCP). AI coding assistants such as Claude Code and VS Code with GitHub Copilot can connect to your Mendix Cloud environments and manage deployments, environments, backups, and the app lifecycle through natural language. For more information, refer to [Using Mendix Deploy APIs with AI Agents (MCP)](/developerportal/deploy/deploy-apis-with-ai-agents/).
+
+### June 24, 2026
+
+#### New Features
+
+* You can now view and take action on policy violations, which are automatically detected and reported in Software Composition. Policies are defined in Control Center, allowing you to check for conditions like finding severity, Mendix runtime version, and Marketplace component licenses and support types. For details, refer to [Policies](/control-center/policies/), [Policy Status](/control-center/policy-status/), and [Software Composition](/developerportal/deploy/software-composition/).
 
 ### June 17, 2026
 

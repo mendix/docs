@@ -112,4 +112,4 @@ Follow the steps below to upload a deployment package by using the API.
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/private-cloud-build-api.yaml"  >}}
+{{< swaggerui src="/openapi-spec/privatecloud-build-v4.yaml"  >}}

@@ -26,9 +26,9 @@ The encryption strength of mechanism is selected based on the security categoriz
 
 The following controls are related to this control:
 
-* SC-8
-* SC-12
-* SC-13
+* [SC-08](/private-mendix-platform/nist-controls/sc-08/)
+* [SC-12](/private-mendix-platform/nist-controls/sc-12/)
+* [SC-13](/private-mendix-platform/nist-controls/sc-13/)
 
 ## Responsibility
 

@@ -51,7 +51,7 @@ To generate HTML documents, create the HTML manually and use the token replaceme
 
 ### Microsoft Word
 
-Generating Microsoft Word documents is no longer supported by Mendix. However, there are several alternative solutions available — both free and paid — maintained by Mendix partners and the community that support Word document generation. These can be found in the [Mendix Marketplace](https://marketplace.mendix.com/link/search/word).
+Generating Microsoft Word documents is no longer supported by Mendix. However, there are several alternative solutions available—both free and paid—maintained by Mendix partners and the community that support Word document generation. These can be found in the [Mendix Marketplace](https://marketplace.mendix.com/link/search/word).
 
 ### Other Formats
 

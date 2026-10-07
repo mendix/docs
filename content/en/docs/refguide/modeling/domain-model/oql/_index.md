@@ -1,6 +1,7 @@
 ---
 title: "OQL"
 url: /refguide/oql/
+description: "An introduction to the Mendix Object Query Language with links to further information."
 weight: 90
 ---
 
@@ -37,16 +38,20 @@ OQL is under constant development so some expressions and features are not avail
 | Feature | Mendix Version |
 | --- | --- |
 | Comments | 11.7.0 |
+| Parentheses around individual `UNION` subqueries | 11.15.0 |
 
 ### [OQL Expressions](/refguide/oql-expression-syntax/)
 
 | Feature | Mendix Version |
 | --- | --- |
 | DATEADD | 11.9.0 |
+| DATEFORMAT | 11.12.0 |
 | DATEPARSE | 11.10.0 |
 | DATETRUNC | 11.9.0 |
 | LOCATE | 11.9.0 |
+| LPAD | 11.12.0 |
 | LTRIM | 11.11.0 |
+| RPAD | 11.12.0 |
 | RTRIM | 11.11.0 |
 | STRING_AGG in View Entities and Datasets | 11.2.0 |
 | SUBSTRING | 11.9.0 |
@@ -65,7 +70,7 @@ The following are bulk update features.
 | OQL `INSERT` associations *beta* | 11.7.0 |
 | OQL bulk update *GA* | 11.8.0 |
 
-## Syntax basics
+## Syntax Basics
 
 An OQL statement consists of [keywords](#reserved-oql-words), identifiers, [value literals](/refguide/oql-expression-syntax/#oql-literals) and [operators](/refguide/oql-expression-syntax/#oql-operators).
 

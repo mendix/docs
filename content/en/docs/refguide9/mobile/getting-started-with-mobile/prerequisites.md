@@ -130,3 +130,8 @@ The latest version of Make It Native 9 is only compatible with versions of Mendi
 ### Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide9/using-mendix-studio-pro-on-a-mac/).
+
+If the Make It Native app cannot connect when you use Parallels, check the following:
+
+* Enter your Mac's IP address in the Make It Native app's **Host** field, not the IP address of the Windows virtual machine that Studio Pro shows. For instructions on finding your Mac's IP address, see the [Viewing Your App on Your Testing Device](/refguide9/using-mendix-studio-pro-on-a-mac/#viewing-your-app-on-your-testing-device) section of *Configuring Parallels*.
+* Make sure port forwarding is enabled for ports 8080, 8083, and 8100 in your Parallels network preferences. For setup steps, see the [Configuring Your Windows Virtual Machine for Mendix Studio Pro](/refguide9/using-mendix-studio-pro-on-a-mac/#configuring-your-windows-virtual-machine-for-mendix-studio-pro) section of *Configuring Parallels*.

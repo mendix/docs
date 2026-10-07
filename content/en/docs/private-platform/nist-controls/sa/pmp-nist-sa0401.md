@@ -26,7 +26,7 @@ Functional properties of security controls describe the functionality (that is, 
 
 The following controls are related to this control:
 
-* SA-5
+* [SA-05](/private-mendix-platform/nist-controls/sa-05/)
 
 ## Responsibility
 

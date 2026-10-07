@@ -15,9 +15,8 @@ If you would like to use a different version of the JDK than the one installed d
 
 You can download the Eclipse Temurin JDK from the [adoptium.net](https://adoptium.net/) website using one of the following links:
 
-* [JDK 11](https://adoptium.net/temurin/releases/?version=11)
-* [JDK 17](https://adoptium.net/temurin/releases/?version=17)
 * [JDK 21](https://adoptium.net/temurin/releases/?version=21)
+* [JDK 25](https://adoptium.net/temurin/releases/?version=25)
 
 After downloading execute the downloaded installation executable and follow the instructions.
 

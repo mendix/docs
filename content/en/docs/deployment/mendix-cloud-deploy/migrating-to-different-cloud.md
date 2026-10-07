@@ -49,7 +49,7 @@ To manually migrate your app to a new node, follow the steps in the sections bel
 
 First, link one of the new temporary apps to the target node.
 
-1. In [Apps](https://sprintr.home.mendix.com), open one of your temporary apps.
+1. In [Projects](https://projects.home.mendix.com), open one of your temporary apps.
 
 2. From the navigation pane, go to the **Environments** page.
 
@@ -73,13 +73,13 @@ Download the deployment package of your app hosted in the source node, and uploa
 
 To download a deployment package, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 2. On the [Deployment Packages tab](/developerportal/deploy/environments/#deployment-packages-tab), choose your preferred deployment package.
 3. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download**.
 
 To upload the deployment package, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 2. On the [Deployment Packages tab](/developerportal/deploy/environments/#deployment-packages-tab), click **Upload a Package**.
 3. Browse and select the downloaded deployment package from your device.
 4. Deploy the uploaded package and confirm that it starts successfully. See [How to Deploy an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/) for more details. 
@@ -113,7 +113,7 @@ To learn how to do this, see [How to Deploy the App to an Environment](/develope
 
 It is not possible to directly unlink an app from a licensed node. The only way to unlink the app is to connect another app to the licensed node; this unlinks the existing app automatically. To unlink your app, follow these steps:
 
-1. In [Apps](https://sprintr.home.mendix.com), open the second blank app you created (not the one you have linked to the target node).
+1. In [Projects](https://projects.home.mendix.com), open the second blank app you created (not the one you have linked to the target node).
 
 2. Go to the app's **Environments** page.
 
@@ -131,7 +131,7 @@ Follow these steps to link the app you detached from the source node above, to t
 Make sure you have downloaded the latest backup and deployment package before linking your app to the target node.
 {{% /alert %}}
 
-1. In [Apps](https://sprintr.home.mendix.com), open the app that you detached from the source node.
+1. In [Projects](https://projects.home.mendix.com), open the app that you detached from the source node.
 
 2. Go to the app's **Environments** page.
 

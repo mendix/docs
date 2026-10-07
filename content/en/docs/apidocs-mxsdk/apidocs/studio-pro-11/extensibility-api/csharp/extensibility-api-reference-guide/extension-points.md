@@ -7,6 +7,10 @@ weight: 9
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-11/) instead.
+{{% /alert %}}
+
 Extension points allow you to hook functionality into various areas of the Studio Pro IDE. `ExtensionPoint` is a base class that extension developers can inherit from. Once inherited, your functionality will be loaded by Studio Pro. These classes all have the `*Extension` suffix, inherit from the [`ExtensionBase`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI/ExtensionBase.md) base class, and include a few virtual or abstract members.
 
 `ExtensionPoint` is the only way to add custom behavior to Studio Pro. All other APIs provided solely to support the implementation or expression of these behaviors.

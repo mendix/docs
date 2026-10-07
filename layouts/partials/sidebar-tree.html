@@ -71,6 +71,8 @@
       {{ if $s.Params.mts }}<text class="badge badge-pill badge-mts">MTS</text>{{ end }}
       {{ if $s.Params.deprecated }}<text class="badge badge-pill badge-deprecated">DEPRECATED</text>{{ end }}
       {{ if $s.Params.restapi }}<text class="badge badge-pill badge-restapi">REST</text>{{ end }}
+      {{ if $s.Params.v10_24 }}<text class="badge badge-pill badge-10-24">10.24+</text>{{ end }}
+      {{ if $s.Params.v11_12 }}<text class="badge badge-pill badge-11-12">11.12+</text>{{ end }}
     </span>
   </a></label>
   {{ else -}}
@@ -85,6 +87,8 @@
       {{ if $s.Params.mts }}<text class="badge badge-pill badge-mts">MTS</text>{{ end }}
       {{ if $s.Params.deprecated }}<text class="badge badge-pill badge-deprecated">DEPRECATED</text>{{ end }}
       {{ if $s.Params.restapi }}<text class="badge badge-pill badge-restapi">REST</text>{{ end }}
+      {{ if $s.Params.v10_24 }}<text class="badge badge-pill badge-10-24">10.24+</text>{{ end }}
+      {{ if $s.Params.v11_12 }}<text class="badge badge-pill badge-11-12">11.12+</text>{{ end }}
     </span>
   </a>
   {{- end }}

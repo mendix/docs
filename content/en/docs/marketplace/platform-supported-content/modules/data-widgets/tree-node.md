@@ -18,6 +18,16 @@ Mendix recommends using multiple Tree Node widgets in a nested matter. In this w
 * Allows you to nest tree nodes to map out your entire domain model into a tree view
 * Delivers out-of-the-box performance and network optimizations through lazy loading and caching of tree nodes
 * Offers additional styling customizations through Atlas UI
+* Displays an infinite amount of tree nodes by using self-reference entity (available from data widgets version 3.11.0 and above)
+
+### Child Detection Mode
+
+Starting from data widgets version 3.11.0, Tree Node offers 2 ways of rendering child nodes:
+
+* **Manual child rendering** – This is the current available configuration. The end-user needs to put tree node widget (child) inside another treenode widget (parent) and set data source accordingly.
+* **Infinite tree node** – This is a recursive mode whereas the children have self reference to the same entity as the parent. In this mode, the widget will render child automatically. Data with empty parents will be automatically used as root.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/treenode/infinite_treenode.png" alt="self reference entity for treenode" class="no-border" >}}
 
 ### Lazy Loading
 
@@ -47,7 +57,8 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 
 * **Data source** – the data source of the widget, which can also be optionally used as the data source for the header and content of the widget
     * Required
-* **Header type** – defines the type of the header
+* **Parent association** – the association used to select a parent. If set, tree node will automatically use infinite tree node child detection modes. 
+* **Header type** – defines the type of the header:
     * Default: **Text**
     * When set to **Text**, you can configure the **Header caption** property
     * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
@@ -59,8 +70,13 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 * **Has children** – indicates if the current level of tree nodes has children tree nodes
     * Default: **Yes**
     * When set to **Yes**, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
+
+    {{% alert color="info" %}}The **Has children** configuration will be set automatically on infinite tree node child detection mode.{{% /alert %}}
 * **Start expanded** – determines whether the content of the current level of tree nodes starts expanded or collapsed
     * Configurable when **Has children** is set to **Yes**; default: **No**
+
+    {{% alert color="info" %}}On infinite tree node child detection modes, we recommend setting **Has children** to **No** for large data sets. Otherwise, the setting will force the tree node to expand directly, loading all data at once.{{% /alert %}}
+
 * **Animate** – defines whether the content is animated when a tree node expands and collapses
     * Default: **Yes**
 

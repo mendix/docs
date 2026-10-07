@@ -19,6 +19,10 @@ Apps running in Mendix Cloud are subject to certain limitations. These behaviors
 * You cannot upload files bigger than 1 GB to your app.
 * You cannot download files bigger than 1 GB from your app.
 
+## Constants Size Limit
+
+* Due to Linux limitations, the combined length of all constant keys and values cannot exceed 128 KB (approximately 32,000 characters). This limit cannot be changed.
+
 ## Considerations for Multi-Instance Nodes
 
 * To use the debugger, you need to scale down to one instance.

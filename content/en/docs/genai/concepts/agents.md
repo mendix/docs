@@ -12,7 +12,7 @@ aliases:
 
 GenAI agents are autonomous computational systems that perform actions in response to triggers such as user input or system events. These agents apply reasoning, execute tools (functions), and leverage data from knowledge bases to determine the most appropriate responses. They may be adaptive (learning-based) or task-specific, designed to automate processes and improve operational efficiency.
 
-If you are interested in creating your own agent, explore the guide on [Creating Your First Agent](/agents/how-to/creating-agents/). It walks you through how to combine prompt engineering, function calling, and knowledge base integration—all within a Mendix app.
+If you are interested in creating your own agent, explore the guide on [Creating Your First Agent](/agents/agents-kit-2/how-to/creating-agents/). It walks you through how to combine prompt engineering, function calling, and knowledge base integration—all within a Mendix app.
 
 ## Multi-Agent Systems
 
@@ -65,7 +65,7 @@ The system takes a user prompt as input, either entered directly or crafted usin
 
 Start from the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369) from the Marketplace or add the [Agent Commons module](https://marketplace.mendix.com/link/component/240371) to your existing app and get started with agents and agentic patterns in Mendix.
 
-Read more about [Agent Commons](/agents/genai-for-mx/agent-commons/) in the GenAI reference guide.
+Read more about [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) in the GenAI reference guide.
 
 ### GenAI Showcase App
 

@@ -26,12 +26,12 @@ Organizations consider the types of auditing to be performed and the audit proce
 
 The following controls are related to this control:
 
-* AU-2
-* AU-5
-* AU-6
-* AU-7
-* AU-11
-* SI-4
+* [AU-02](/private-mendix-platform/nist-controls/au-02/)
+* [AU-05](/private-mendix-platform/nist-controls/au-05/)
+* AU-06
+* [AU-07](/private-mendix-platform/nist-controls/au-07/)
+* AU-1
+* [SI-04](/private-mendix-platform/nist-controls/si-04/)
 
 ## Responsibility
 

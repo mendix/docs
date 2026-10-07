@@ -13,7 +13,6 @@ This category includes the following release notes:
 
 * [Make It Native App](/releasenotes/mobile/make-it-native/): use this Make it Native app for apps in Mendix Studio Pro 11.6 and above
 * [Mendix Native Mobile Builder](/releasenotes/mobile/mendix-native-mobile-builder/)
-* [Native Builder](/releasenotes/mobile/native-builder/)
 * [Native Template](/releasenotes/mobile/native-template/)
 * [Mendix Mobile App](/releasenotes/mobile/mendix-mobile-app/)
 * [Hybrid App Base and Template](/releasenotes/mobile/hybrid-app/)

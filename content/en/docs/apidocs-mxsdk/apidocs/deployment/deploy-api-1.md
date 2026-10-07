@@ -70,7 +70,7 @@ In the Mendix Portal:
 
 * The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Mendix Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
 
-* The [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps, but also includes apps that are deployed to other platforms (such as Mendix on Kubernetes or SAP BTP) and Free Apps that have not yet been deployed and therefore have no environments set up for them.
+* The [My Projects](/developerportal/#my-projects) screen shows both licensed apps and Free Apps, but also includes apps that are deployed to other platforms (such as Mendix on Kubernetes or SAP BTP) and Free Apps that have not yet been deployed and therefore have no environments set up for them.
 {{% /alert %}}
 
 ```bash

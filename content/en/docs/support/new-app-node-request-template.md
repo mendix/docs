@@ -27,7 +27,7 @@ To deploy your app to a new licensed node, you will need to request a node from 
 * **Mendix Cloud Dedicated** – Select this option for apps deployed to Mendix Cloud Dedicated.
 * **Mendix for Private Cloud** – Select this option for apps deployed to Kubernetes using the Mendix Operator. Refer to [Mendix on Kubernetes](/developerportal/deploy/private-cloud/) for more information.
 * **Server-based (Windows Server)** – Select this option for apps deployed to Windows. You are required to enter the **Server ID**, which you can retrieve by following the steps in the [Windows Server](/developerportal/deploy/licensing-apps-outside-mxcloud/#windows-server) section of *Licensing Apps*.
-* **Container-based (Docker, Cloud Foundry, Kubernetes)** – Select this option for apps deployed to Portable App Distribution, Docker, Cloud Foundry, or Kubernetes, without Mendix Operator.
+* **Container-based (Docker, Cloud Foundry, Kubernetes)** – Select this option for apps deployed to Mendix Portable Runtime, Docker, Cloud Foundry, or Kubernetes, without Mendix Operator.
 * **SAP** – Select this option for apps deployed to SAP.
 
 To request your node from Mendix Support, complete the following steps:
@@ -37,7 +37,7 @@ To request your node from Mendix Support, complete the following steps:
 3. **Follow-up** – Mendix Support will contact you via a ticket in the [Mendix Support Portal](https://support.mendix.com/) if additional information is needed or to provide keys for apps deployed on-premises or using a virtual Mendix on Kubernetes.
 
 {{% alert color="info" %}}
-By default, all developers in your organization can create node requests. To restrict this ability to Mendix Admins only, contact your Customer Success Manager or submit a support ticket.
+By default, all developers in your organization can create node requests. To restrict this ability to Mendix Admins only, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact or submit a support ticket.
 {{% /alert %}}
 
 ## Resizing an Existing Environment{#resize}

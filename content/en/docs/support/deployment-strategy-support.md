@@ -13,7 +13,7 @@ With our Multi-Cloud strategy, Mendix allows the apps that you build to be deplo
 
 The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or a third party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](/support/mendix-stack-components/).
 
-| Stack (refer to [Components of the Mendix Stack](/support/mendix-stack-components/) for more information) | Mendix Cloud | Cloud Dedi&shy;cated | Mendix on Kubernetes - Con&shy;nected | Mendix on Kubernetes - Stand&shy;alone | Private Mendix Platform | SAP BTP | Cloud Foundry, Docker & Kuber­netes, Portable App Distribution, Tradi&shy;tional³ |
+| Stack (refer to [Components of the Mendix Stack](/support/mendix-stack-components/) for more information) | Mendix Cloud | Cloud Dedi&shy;cated | Mendix on Kubernetes - Con&shy;nected | Mendix on Kubernetes - Stand&shy;alone | Private Mendix Platform | SAP BTP | Cloud Foundry, Docker & Kuber­netes, Mendix Portable Runtime, Tradi&shy;tional³ |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Appli&shy;cation** | | | | | | | | |
 | **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
@@ -81,14 +81,14 @@ Mendix Support does not have access to app health, logs, graphs and monitoring �
 
 {{< figure src="/attachments/support/sap-cloud-platform.png"   width="40%"  class="no-border" >}}
 
-## Cloud Foundry / Docker and Kubernetes / Portable App Distribution / Traditional Architectures
+## Mendix Portable Runtime / Cloud Foundry / Docker and Kubernetes / Traditional Architectures
 
 Mendix is compatible with all the well-known cloud providers: IBM Cloud, Microsoft Azure, Amazon Web Services (AWS), Red Hat OpenShift, and Google Cloud Platform.
 
-Depending on the Cloud architecture a Mendix application is built using the [Portable App Distribution](/developerportal/deploy/portable-app-distribution-deploy/), the [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack), the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) or to a Unix-like or Windows server.
+Depending on the Cloud architecture a Mendix application is built using the [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/), the [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack), the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) or to a Unix-like or Windows server.
 
 Check our [System Requirements](/refguide/system-requirements/) for the supported components of any Cloud Foundry / Docker and Kubernetes / traditional architecture.
 
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 
-{{< figure src="/attachments/support/on-premises.png"   width="75%"  class="no-border" >}}
+{{< figure src="/attachments/support/cloud-foundry_docker.png"   width="75%"  class="no-border" >}}

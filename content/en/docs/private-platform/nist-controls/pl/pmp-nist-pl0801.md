@@ -30,7 +30,7 @@ Organizations strategically allocate security safeguards (procedural, technical,
 
 The following controls are related to this control:
 
-* SC-29
+* [SC-02](/private-mendix-platform/nist-controls/sc-02/)9
 * SC-36
 
 ## Responsibility

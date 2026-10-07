@@ -10,7 +10,7 @@ weight: 50
 The Mendix Design Properties API allows you to create or extend design properties for your Mendix apps.
 
 {{% alert color="info" %}}
-This document pertains to Mendix 11. For other Design Properties API documents, see the other documents in this category:
+This document pertains to Mendix 11. For other Design Properties API documents, see these documents:
 
 * [Mendix 10](/apidocs-mxsdk/apidocs/design-properties-10/)
 * [Mendix 9](/apidocs-mxsdk/apidocs/design-properties-9/)

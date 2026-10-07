@@ -9,6 +9,13 @@ weight: 56
 
 The Mendix Design Properties API allows you to create or extend design properties for your Mendix apps.
 
+{{% alert color="info" %}}
+This document pertains to Mendix 10. For other Design Properties API documents, see these documents:
+
+* [Mendix 11](/apidocs-mxsdk/apidocs/design-properties-11/)
+* [Mendix 9](/apidocs-mxsdk/apidocs/design-properties-9/)
+{{% /alert %}}
+
 To use the API, you need to alter the *design-properties.json* file of a specific module in your application's **themesource** folder. This process is described in the [Design Properties Definitions](#design-properties-definitions) section below.
 
 Many apps can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. However, if you want to customize your styling more deeply, you will have to create your own custom design properties. This guide outlines how design properties work and can help you create custom design properties. The design properties provided by Atlas UI have been built in the same way as outlined here.

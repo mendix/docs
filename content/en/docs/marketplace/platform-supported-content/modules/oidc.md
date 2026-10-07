@@ -204,7 +204,8 @@ This section provides an overview of updates for the OIDC SSO module across diff
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
 | 10.24.0 and above | 5.0.0 | - | Use `Token` as the parameter name in custom microflows or if you create a custom microflow based on `ACT_Token_CustomATPRetrieveRoles`. It was previously `AccessToken`. |
-| | | | The microflow ACT_ShowCusomExceptionMessage has been renamed to SUB_ShowCustomExceptionMessage. |
+| | | | The microflow `ACT_ShowCusomExceptionMessage` has been renamed to `SUB_ShowCustomExceptionMessage`. |
+| | | | New constant (`GlobalUserProvisioningMicroflow`) has been introduced. It specifies the qualified name of the global user-provisioning microflow that runs after login. |
 | 10.24.0 and above | 4.7.0 | - | A new constant (`EnableAudienceValidation`) has been introduced for API security. Because it is enabled by default, you need to configure the **Resource path** and **Expected audience** value. You can disable audience validation, but Mendix does not recommend this. |
 | 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |
 | 10.24.0 and above | 4.5.0 | - | New Admin UI and new constants have been introduced. |
@@ -767,6 +768,8 @@ By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Con
 {{% alert color="warning" %}}
 Do not change the `UserProvisioning_StandardOIDC` microflow. This may cause problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
 {{% /alert %}}
+
+From version 5.0.0 of the module, the `GlobalUserProvisioningMicroflow` constant specifies the qualified name (`Module.Microflow`) of the global user-provisioning microflow that runs after login. The default value is `OIDC.CUSTOM_UserProvisioning`. The module calls this microflow dynamically, so you can substitute your own flow without modifying the OIDC module. The target microflow must accept an OAuthToken parameter of type `OIDC.Token` and return a `System.User` object.
 
 #### User Provisioning Using a Microflow{#custom-provisioning-mf}
 

@@ -4,12 +4,12 @@ url: /refguide10/mobile/distributing-mobile-apps/native-debug/
 weight: 40
 description: "A guide for debugging native mobile apps using the Make It Native app."
 aliases:
-    - /howto10/mobile/native-debug/
+    - /howto/mobile/native-debug/
 ---
 
 ## Introduction
 
-When changing your native mobile app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native mobile apps for expert developers. Using Google Chrome is recommended for this, as it starts automatically during debugging.
+When changing your native mobile app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native mobile apps for expert developers.
 
 ## Debugging Your Native App
 
@@ -21,36 +21,30 @@ To start a debugging session, do the following:
 4. Start your app on your mobile device in Mendix Studio Pro by clicking **View App** > **View on your device**.
 5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
 
-When the Make It Native app finishes loading your app, do the following:
+{{% alert color="warning" %}}
+**Open DevTools** appears in the developer menu of the Make It Native app, but it does not open React Native DevTools. This is a known issue and a limitation of React Native, which does not include its debugger in release builds of an app. As the Make It Native app is distributed as a release build, you cannot use React Native DevTools with it.
+
+To debug with React Native DevTools, use a custom developer app built with a debug configuration, for example the `devDebug` variant, and select **Enable dev mode** on the initial screen where you enter the host address. For more information, see [Creating a Custom Developer App](/refguide10/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
+{{% /alert %}}
+
+When a custom developer app built with a debug configuration finishes loading your app, do the following:
 
 1. Open the developer menu by using a three-finger long press.
-2. Tap **Enable Remote js Debugging**.
+2. Tap **Open DevTools**.
 
-Your mobile app should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
+React Native DevTools opens on your desktop and connects to your app. You can inspect your app and set breakpoints in its JavaScript files.
 
-If Chrome launches but does not load your app, check that your app is running in Mendix Studio Pro. If it is, click **Stop** ({{% icon name="controls-stop" %}}), then click **Run Locally** ({{% icon name="controls-play" %}}) again to restart your app. 
-
-You should see this page:
-
-{{< figure src="/attachments/howto10/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-waiting.png" alt="debug waiting" class="no-border" >}}
-
-If the status remains at **Waiting**, use the reload command (pictured above) to refresh your app. The **Waiting** status should change and indicate an **active** session:
-
-{{< figure src="/attachments/howto10/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-active.png" alt="debug active" class="no-border" >}}
-
-Your browser's debugging tools should be pointing to your app. Now, you can debug your app like you would any other web app. 
-
-Other tools can help you debug Mendix apps, such as the [Using React Developer Tools](#rn-dev) section below. Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
+The Make It Native app does work with React Developer Tools, as described in the [Using React Developer Tools](#rn-dev) section below.
 
 ### Using React Developer Tools{#rn-dev}
 
-React Developer Tools is [an app](https://github.com/facebook/react/tree/main/packages/react-devtools) which will allow you to see investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. To proceed, you must also have [Node and NPM](https://nodejs.org/en/download/) installed.
+React Developer Tools is [an app](https://github.com/facebook/react/tree/main/packages/react-devtools) which will allow you to investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. To proceed, you must also have [Node and NPM](https://nodejs.org/en/download/) installed.
 
-You can consult Facebook's [official documentation](https://reactnative.dev/docs/debugging) for extra information, but this document teaches you the basics of using React Developer Tools. 
+You can consult the [React Native documentation](https://reactnative.dev/docs/debugging) for extra information, but this document teaches you the basics of using React Developer Tools. 
 
 To install React Developer Tools, do the following:
 
-1. Open your CLI and run NPX (an executable runner for NPM) with this code: `npx react-devtools@^3`. The `@^3` ensures compatibility with Mendix's React Native version.
+1. Open your CLI and run NPX (an executable runner for NPM) with this code: `npx react-devtools`.
 
 #### Debugging with iOS Simulator and Android Emulators
 
@@ -71,8 +65,8 @@ To use the Make It Native app with React Developer Tools, do the following:
 1. Connect your mobile device to your laptop with a USB cord.
 2. Run `adb devices` to ensure your device is listed.
 3. Start your native app on your device with **Enable dev mode** selected.
-4. Run `adb reverse tcp:8097 tcp:8097` to allow the applet to interact with your device`.
-5. Run `npx react-devtools@^3`.
+4. Run `adb reverse tcp:8097 tcp:8097` to allow the applet to interact with your device.
+5. Run `npx react-devtools`.
 6. React Developer Tools will launch and connect to your device. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
     {{< figure src="/attachments/howto10/mobile/native-mobile/distribution/build-native-apps/native-debug/min-app-rn-devtools.png" alt="debug min app"   width="350"  class="no-border" >}}
@@ -83,7 +77,7 @@ With the Make It Native app, you can examine your styling and the structure of y
 
 1. Install the LTS of [Node.js](https://nodejs.org/en/).
 2. Open your command-line interface (CLI).
-3. Run `npm i -g react-devtools@3` to install the React developer tools.
+3. Run `npm i -g react-devtools` to install the React developer tools.
 4. Run `react-devtools`.
 
 After running `react-devtools` you will see the React developer tools GUI. To use the tools to debug your styling, do the following:

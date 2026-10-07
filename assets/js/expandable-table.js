@@ -12,6 +12,10 @@
   }
 
   function openModal(wrap, modal) {
+    var title = wrap.dataset.title || '';
+    modal.querySelector('.expandable-table-title').textContent = title;
+    if (title) modal.setAttribute('aria-label', title);
+
     var body = modal.querySelector('.expandable-table-body');
     body.innerHTML = '';
     body.appendChild(wrap.querySelector('.expandable-table-inner').cloneNode(true));

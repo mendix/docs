@@ -699,7 +699,7 @@ If the standard configuration meets your needs and your application does not hav
 
 In the default configuration, the custom user entity is set as `Administration.Account`, the principal attribute is set as `Name`, and the default attribute mapping is provided.
 
-{{% expandable-table %}}
+{{% expandable-table title=" Default Attribute Mapping"%}}
 
 |  IdP Attribute       | Configured Entity Attribute |
 | -------------------- | --------------------------- |

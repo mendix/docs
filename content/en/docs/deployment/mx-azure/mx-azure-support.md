@@ -238,6 +238,5 @@ Customers can completely off-board from the service by deleting the Managed Appl
 * Only apps on Mendix version 10.10 or later are supported. Deployment for earlier versions will fail.
 * Certain Mendix on Kubernetes APIs (Create, Edit, or Delete cluster and namespace operations) are unavailable in Mendix on Azure due to managed architecture. Other APIs function normally.
 * Downtime or issues with Mendix on Kubernetes may affect Mendix on Azure availability (for example, cluster creation may not be  possible).
-* [Remote microflow debugging](/refguide/debug-microflows-remotely/) is not currently available for Mendix on Azure, because the remote debugger does not support single-instance apps. This issue will be resolved in a future release.
 * Azure Confidential Compute VM sizes (for example, the DCasv5, DCxeds_v6, and ECxeds families) are not supported for the AKS node pool. Deployment fails when one of these sizes is selected, and the environment cannot be recovered. It must be deleted and redeployed with a standard VM size, for example `Standard_B4als_v2`.
 * In some browsers, clicking **Go to Ticket** on the Support Center page of the Mendix on Azure Portal might not redirect you to your Zendesk ticket. If this happens, use Google Chrome instead.

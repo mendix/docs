@@ -9,6 +9,10 @@ description: "Describes the installation, configuration and usage of the SAML mo
 
 ## Installation
 
+{{% alert color="warning" %}}
+The SAML module supports UserCommons V3.0.0 and below. If you use the SAML module, do not upgrade UserCommons to V3.0.0, as it requires changes to the dependent SAML module that are not yet available. 
+{{% /alert %}}
+
 There are different versions of the SAML module, depending on which version of Mendix you are using. To find and install the correct release, follow these steps:
 
 1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).

@@ -55,3 +55,4 @@ The following how-tos help you get started:
 * [How to Listen for Connection Changes](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-controller-api/)
 * [How to Access Runtime Constants](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-configuration-api/)
 * [How to Use Extension Permissions in Overview Pane](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/)
+* [How to Query User Authentication](/apidocs-mxsdk/apidocs/web-extensibility-api-11/user-authentication-api/)

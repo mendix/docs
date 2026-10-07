@@ -3,20 +3,19 @@ title: "Charts"
 url: /refguide/chart-widgets/
 weight: 70
 no_list: false
-description_list: true 
+description_list: true
+description: "Describes the chart widgets you can use on your app pages."
 ---
 
 ## Introduction
 
 Charts allow you to display data series visually on your app pages in a wide range of charts.
 
-[Basic Charts](#basic-charts) are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix Marketplace (for more information on various charts and their configurations, see [Charts](/appstore/widgets/charts/)). Basic charts are based on plotly.js 3.x as of Charts widget version 6.0.0. For the exact plotly.js version in the release you are using, see the [Charts](https://marketplace.mendix.com/link/component/105695/) listing in the Mendix Marketplace.
+The chart widgets are part of the [Charts](https://marketplace.mendix.com/link/component/105695/) module, which you can download from the Mendix Marketplace. The widgets are based on the [Plotly JavaScript](https://plotly.com/javascript/) library. For the configuration of the chart widgets, see [Charts](/appstore/widgets/charts/) in the *Marketplace Guide*.
 
-[Any Chart](#any-chart) gives much more control and allows more flexible use of the features of [plotly.js](https://plot.ly/). The [Any Chart](/appstore/modules/any-chart/) widget can be included in your app. See the widget description in the Marketplace to see what version of plotly.js is supported.
+## Chart Types {#basic-charts}
 
-## Basic Charts {#basic-charts}
-
-With Mendix Charts you can quickly create beautiful charts. The following charts are included:
+The Charts module contains these chart widgets:
 
 * **Area** chart – a line chart with a fill to the X-axis {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/sample-area-chart.png" alt="Sample Area Chart"   width="200"  class="no-border" >}}
 * **Bar** chart – horizontal bars, grouped or stacked {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/sample-bar-chart.png" alt="Sample Bar Chart" width="200" class="no-border" >}}
@@ -27,33 +26,27 @@ With Mendix Charts you can quickly create beautiful charts. The following charts
 * **Pie** chart – a pie or a doughnut chart {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/sample-pie-chart.png" alt="Sample Pie Chart" width="200" class="no-border" >}}
 * **Time series** – show data ordered by time {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/sample-time-series.png" alt="Sample Time Series" width="200" class="no-border" >}}
 
-The widgets contain several settings which can be changed in Studio Pro to customize the look and feel and also offer support for on click events and custom tooltips. See [Chart Configuration](/refguide/charts-configuration/) to learn how to configure Mendix charts.
+The widgets have settings in Studio Pro to customize the look and feel, and support on click actions and custom tooltips. For details on each chart type, see [Charts](/appstore/widgets/charts/).
 
-If the standard chart settings are not sufficient for your purposes, see [Chart Advanced Cheat Sheet](/refguide/charts-advanced-cheat-sheet/) for information on advanced configuration of your basic charts.
+If the standard chart settings are not sufficient for your purposes, see [Chart Advanced Cheat Sheet](/refguide/charts-advanced-cheat-sheet/) for information on the advanced configuration of your charts. To change settings live in the running app, use the [Chart Playground](/appstore/widgets/chart-playground/).
 
 Only plotly.js features available in the version bundled with your Charts widget release can be used when configuring charts.
 
-**Dynamic Series Chart**
+To create a chart with a variable number of data series, see [Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/).
 
-From version 1.4 of the basic charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/).
+## Custom Chart {#custom-chart}
+
+With the Custom chart widget, you can build all chart types that are possible with Plotly by configuring the chart with JSON. Use it when the standard chart widgets do not support the chart you need. For more information, see [Use Custom Chart](/appstore/widgets/charts-custom-usage/).
 
 ## Any Chart {#any-chart}
 
 {{% alert color="warning" %}}
-The Any Chart widget is not compatible with the [Mendix React Client](/refguide/mendix-client/react/). We have published a version of Any Chart that supports the React client called Custom Chart. Update your [Charts](/appstore/widgets/charts/) widget (to version 6.0 or above) to use the Custom Chart feature.
+Any Chart is deprecated and is not compatible with the [Mendix React Client](/refguide/mendix-client/react/). Use the Custom chart widget, available in [Charts](/appstore/widgets/charts/) version 6.0.0 and above, instead.
 {{% /alert %}}
 
-With *Any Chart* you can build all the chart types that are possible with Plotly.js up to the version supported by the widget (see the widget description in the Marketplace for more details). If you want to build a chart which is not available in the Basic charts, *Any Chart* is your friend.
+For the legacy Any Chart documentation, see [Any Chart Widgets](/refguide/charts-any-configuration/), [Any Chart Building Blocks](/refguide/charts-any-building-blocks/), and [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet/).
 
-{{< figure src="/attachments/refguide/modeling/pages/chart-widgets/contour.png" alt="Sample Contour Chart made with Any Chart"   width="400"  class="no-border" >}}
-
-The plotly charts require a configuration based on JSON, therefore *Any Chart* has JSON as input parameters. You can create this JSON dynamically in your microflow via a JSON Structure document and use this in the *Any Chart* configuration. It is also possible to define static JSON configuration which is combined with the dynamic JSON.
-
-This module also contains several [building blocks](/refguide/charts-any-building-blocks/) for inspiration and as starting point. If you want to create a new chart, Mendix suggests checking out the plotly.js website.
-
-See [Any Chart Widgets](/refguide/charts-any-configuration/) to learn how to configure *Any charts* widgets.
-
-The [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet/) lists the most common chart types and the JSON required to create them in Any Chart.
+For the legacy chart widgets below version 3.0.0, see [Chart Configuration](/refguide/charts-configuration/).
 
 ## Performing Basic Functions
 

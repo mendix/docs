@@ -9,19 +9,18 @@ aliases:
 
 ## Introduction
 
-The charts widget provides a basic implementation of different types of chart (for example: area, line, bar, column, and pie) in a Mendix application.
+The [Charts](/appstore/widgets/charts/) module provides widgets for different types of charts (for example, area, line, bar, column, and pie) in a Mendix application.
 
 This how-to teaches you how to do the following:
 
 * Create a chart with basic sample data
-
 * Configure the chart display options
 
 ## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest [Charts Widget](/appstore/widgets/charts/) from the Mendix Marketplace
+* Download the latest [Charts](https://marketplace.mendix.com/link/component/105695/) module from the Mendix Marketplace
 
 ## Implementing the Charts Widget in an Existing App
 
@@ -40,7 +39,7 @@ To use the Charts widget, a specific data structure is set up. This is defined b
 
 To create a basic data entry page from which the Charts widget will fetch data, follow these steps:
 
-1. Right Click on value entity.
+1. Right-click the **Value** entity.
 2. Select **Generate overview pages**.
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-rest-generate-overview-pages.png" alt="Generate overview pages for Value entity" class="no-border" >}}
@@ -51,21 +50,13 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 1. Create a page named *ShowChart*.
 2. Add it to the user navigation.
-3. Add a **Data view** to this page that contains the **Value** entity and has a microflow as a data source.
-4. Create a new microflow named **DS_NewValue** to fill the data view.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-create-new-value.png" alt="Data view showing the Value entity" class="no-border" >}}
-
-5. Right-click the data view and select **Go to microflow**.
-6. In the new **DS_NewValue** microflow, create a new *Value* object and set that object as the return.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-new-values-microflow.png" alt="New Value microflow" class="no-border" >}}
-
-7. On the ShowChart page, add the widget **Area chart**.
+3. On the ShowChart page, add the widget **Area chart**.
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-select-chart.png" alt="Select widget" class="no-border" >}}
 
-8. The final page should look like this.
+4. The final page should look like this.
+
+    {{% todo %}}[SCR-161: Replace image below — ShowChart page with the Area chart widget placed directly on the page, without a data view]{{% /todo %}}
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-widget-page.png" alt="Final widget Page" class="no-border" >}}
 
@@ -98,6 +89,6 @@ To view the chart, follow these steps:
 ## Read More
 
 * [Create a Multiple Series Chart](/appstore/widgets/charts-dynamic-series/)
-* [Use a Chart With a REST Data Source](/appstore/widgets/charts-basic-rest/)
+* [Use a Chart with a REST Data Source](/appstore/widgets/charts-basic-rest/)
 * [Use Any Chart](/appstore/widgets/charts-any-usage/)
-* [Use Charts Themes](/appstore/widgets/charts-theme/)
+* [Use the Charts Theme](/appstore/widgets/charts-theme/)

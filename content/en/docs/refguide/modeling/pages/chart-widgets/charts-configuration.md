@@ -2,9 +2,14 @@
 title: "Chart Configuration"
 url: /refguide/charts-configuration/
 weight: 10
+description: "Describes the configuration options of the legacy chart widgets, below version 3.0.0."
 ---
 
 ## Introduction
+
+{{% alert color="warning" %}}
+This page describes the legacy chart widgets, below version 3.0.0. For the current Charts module, see [Charts](/appstore/widgets/charts/) in the *Marketplace Guide*.
+{{% /alert %}}
 
 This guide explains the options for configuring chart widgets. Charts are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/105695/). For more documentation, see [Charts](/appstore/widgets/charts/) in the *Marketplace Guide*.
 
@@ -22,11 +27,11 @@ This guide covers the following widgets:
 
 The configuration of *Any chart* widgets is in another document, here: [Any Chart Widgets](/refguide/charts-any-configuration/).
 
-## Common configuration
+## Common Configuration
 
 The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type), below.
 
-### Chart properties
+### Chart Properties
 
 {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/line-chart-chart-properties.png" alt="Generic Chart properties dialog" class="no-border" >}}
 
@@ -57,7 +62,7 @@ Add series and configure their properties, each series represents a dataset. For
     * **Static/Dynamic**: Choose whether there is a fixed number of data series (lines, for example), or whether the number of data series is variable and will be decided by the app.
     * **Entity**: The entity from which the data values will be retrieved
     * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
-    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST endpoint see [REST Charts](/howto/front-end/charts-basic-rest/)
+    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST endpoint see [REST Charts](/appstore/widgets/charts-basic-rest/)
     * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
     * **Microflow**: A microflow that returns a list object with data values
 
@@ -96,7 +101,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Series entity**: the entity which defines a series – the list of objects of this entity type will be used to construct the series; one series for each object.
 
-        Each entity is associated with the values which will be plotted, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series/) for more information.
+        Each entity is associated with the values which will be plotted, see [How to Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/) for more information.
 
     * **Series name attribute**: the attribute in the series entity which will be displayed as the series name if a legend is displayed
     * **Color attribute**: the attribute in the series entity which defines the HTML color used when displayed this series – *there may be more than one color attribute if the chart allows different values (for example an area chart has separate line and fill colors)
@@ -173,7 +178,7 @@ See the following link for more information about plotly.js and the options: htt
     * **Advanced**: specify additional JSON configuration
     * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 
-    {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/toggle-editor.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/toggle-editor.png" alt="Toggle Editor button on a chart" class="no-border" >}}
 
 * **Layout options**: The JSON containing the Plotly layout options
     * [Samples](/refguide/charts-advanced-cheat-sheet/#layout-all)

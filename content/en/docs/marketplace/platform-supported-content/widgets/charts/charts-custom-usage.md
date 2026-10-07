@@ -1,8 +1,8 @@
 ---
 title: "Use Custom Chart"
 url: /appstore/widgets/charts-custom-usage/
-weight: 20
-description: "How to use the Custom Chart widget to create advanced charts"
+weight: 15
+description: "How to use the Custom chart widget to create advanced charts with Plotly JSON, and a reference of its properties."
 aliases:
     - /howto/front-end/charts-custom-usage/
 ---
@@ -11,7 +11,7 @@ aliases:
 
 The basic charts provide a set of easy to configure charts such as line, bar, column, pie, and so forth. These charts can be fine tuned with the advanced options.
 
-When the advanced options are not enough, starting from charts version 6.0 and higher, the **Custom Chart** widget can be used.
+When the advanced options are not enough, use the **Custom Chart** widget, available in Charts version 6.0.0 and above.
 
 With **Custom Chart** you can build all the chart types that are possible with Plotly.js as well as options for configuring charts dynamically. So, if you want to build a 3D chart or have a dynamic set of series, **Custom Chart** is your friend.
 **Custom Chart** is a successor of **Any Chart** module that is compatible with **React client** mode.
@@ -27,14 +27,20 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have the following prerequisites:
 
 * The latest version of Mendix Studio Pro
-* The latest [Chart](/appstore/widgets/charts/) widget
+* The latest [Charts](https://marketplace.mendix.com/link/component/105695/) module
 * An understanding of JSON data structures
 
-## Chart Structure
+## Chart Structure {#chart-structure}
 
 A **Custom Chart** widget can be configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** or with the **Sample data**.
 
-The configuration in the **Source attribute** will be merged into the static settings and will overwrite any common properties. The **Sample data** is for demo purposes at run time when there is no **Source** attribute selected or when rendering sample data in the Studio Pro preview.
+The configuration in the **Source attribute** is merged into the static settings and overwrites any common properties. The **Sample data** is for demo purposes: it is used in the Studio Pro preview, and at runtime when no **Source attribute** is selected.
+
+Data traces are merged by their position in the array. The first trace in the **Source attribute** is merged with the first trace in **Static**, the second with the second, and so on. When both have a value for the same property, the value from the **Source attribute** wins.
+
+{{% alert color="info" %}}
+In Charts versions below 6.3.0, the traces from the **Source attribute** were added after the **Static** traces as separate traces, instead of being merged by position.
+{{% /alert %}}
 
 ## Creating a Chart
 
@@ -89,32 +95,58 @@ To generate JSON data for the Charts widget, follow these steps:
 
 If need be, the layout can also be generated in the same way as the data. In most cases, a **Static** layout will suffice.
 
-## Fine tuning
+## Fine-Tuning
 
 Editing the JSON configuration in Studio Pro can be cumbersome. With the live preview editor, developers can directly see the output of their changes. 
 
-See [Chart advanced tuning](/appstore/widgets/chart-advanced-tuning/) for more information on fine tuning **Custom Chart** with using **Chart Playground** widget.
+For more information on fine-tuning **Custom Chart** with the Chart playground widget, see [Chart Playground](/appstore/widgets/chart-playground/).
 
 {{% alert color="info" %}}
-Since the introduction of design mode, react-ready widgets can render data as it is entered. This makes it possible for user to see Static data and configurations directly in design mode without the needs of running the apps.
+In the Studio Pro page editor, the chart renders the **Static** and **Sample** data and layout as you enter them. This lets you check your configuration without running the app.
 {{% /alert %}}
 
-## Dimension
+## Properties {#properties}
 
-These are the dimension configurations for custom charts:
+### Data Tab
 
-* **Width** – Determines the width size for the custom charts. User can choose to use either pixels (px) or percentage (%).
-* **Height** – Determine the height size for the custom charts. User can choose to use either pixels (px), percentage (%), or Viewport (vh). Choosing setting to **Auto** will allow user to set minimum and maximum height instead.
-* **Minimum Height** – Determines the minimum size for the custom charts container.
-* **Maximum Height** – Determines the maximum size for the custom charts container.
-* **Vertical Overflow** – If maximum height is set, vertical overflow will determine the widget's behavior to show overflowing content if it reached height size larger than the maximum height allowed.
+* **Static** – A JSON array of traces. For the available options, see the [JavaScript Figure Reference](https://plotly.com/javascript/reference/) in the Plotly documentation.
+* **Source attribute** – A string attribute that contains a JSON array of traces. These traces are merged with the **Static** data by position, as described in [Chart Structure](#chart-structure).
+* **Sample data** – A JSON array of traces used for the preview in Studio Pro, and at runtime when no **Source attribute** is selected. It is merged with the **Static** data.
+* **Show playground slot** – If set to **Yes**, the chart shows a **Playground slot** for a [Chart playground](/appstore/widgets/chart-playground/) widget.
 
-## Events
+### Layout Options Tab
 
-* **On Click** – Determines the actions that will be triggered if parts of the custom charts is clicked.
-* **Event data attribute** – The string value that the chart uses when click events occur. User can use this same attribute as the parameters for on-click events action to retrieve the data from the custom chart:
+* **Static** – A JSON object with the layout of the chart. For the available options, see [Layout](https://plotly.com/javascript/reference/layout/) in the Plotly documentation.
+* **Source attribute** – A string attribute that contains a JSON layout object. It is merged with the **Static** layout and overwrites it.
+* **Sample layout** – A JSON layout object used for the preview in Studio Pro, and at runtime when no **Source attribute** is selected. It is merged with the **Static** layout.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-events-attribute.png" alt="Setup on click events" class="no-border" >}}
+### Configuration Options Tab
+
+* **Configuration options** – A JSON object with the Plotly configuration options. For the available options, see [Configuration Options](https://plotly.com/javascript/configuration-options/) in the Plotly documentation.
+
+### Dimensions Tab
+
+* **Width unit** – **Percentage** of the parent width, or **Pixels**.
+* **Width** – The width of the chart. The default value is **100**.
+* **Height unit**:
+    * **Auto** – The height is set automatically. Use **Minimum height** and **Maximum height** to limit it.
+    * **Pixels** – The height is an absolute number of pixels.
+    * **Percentage** – The height is a percentage of the parent height.
+    * **Viewport** – The height is a percentage of the viewport height.
+* **Height** – The height of the chart. The default value is **100**. This property is not visible when **Height unit** is set to **Auto**.
+
+When **Height unit** is set to **Auto**, these properties are also available:
+
+* **Minimum Height unit** and **Minimum height** – The minimum height of the chart container: **None**, **Pixels**, **Percentage**, or **Viewport**.
+* **Maximum Height unit** and **Maximum height** – The maximum height of the chart container: **None**, **Pixels**, **Percentage**, or **Viewport**.
+* **Vertical Overflow** – What happens when the content is higher than the maximum height: **Auto**, **Scroll**, or **Hidden**. This property is visible only when a maximum height is set.
+
+### Events Tab
+
+* **On click** – The action that runs when the user clicks a part of the chart.
+* **Event data attribute** – A string attribute in which the chart stores the raw Plotly event data when the user clicks the chart. You can use this attribute in the **On click** action to read which part of the chart was clicked. For the format of the data, see [Event Data](https://plotly.com/javascript/plotlyjs-events/#event-data) in the Plotly documentation.
+
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-events-attribute.png" alt="On click action that uses the event data attribute" class="no-border" >}}
 
 ## Read More
 

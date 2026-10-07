@@ -112,11 +112,17 @@ The Mendix-inside-Teamcenter Active Workspace component (`MendixEmbedded`) is a 
 4. Optionally, configure context passing. For more information, see [Passing Context from Teamcenter](#passing-context).
 5. Rebuild Active Workspace using `awbuild.cmd`.
 
-To verify the component was picked up correctly, check that its view model entry exists in the `src/repo/out/pathMap.json` registry file in the build output.
+{{% alert color="info" %}}
+Installing a kit in the stage repository and rebuilding Active Workspace follow the standard Teamcenter process. The [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) on Active Workspace customization provides detailed instructions and examples for completing these steps.
+{{% /alert %}}
 
 ### Registering the Component on a Page
 
-To display the Mendix app on an Active Workspace page, add its card definition to the relevant `layoutsViewModel.json` file in your Active Workspace stage repository. Set `declarativeKeyContext` to the URL of your Mendix runtime:
+To display the Mendix app on an Active Workspace page, add its card definition to the relevant `layoutsViewModel.json` file in your Active Workspace stage repository. Set `declarativeKeyContext` to the URL of your Mendix runtime.
+
+{{% alert color="info" %}}
+Adding an Active Workspace component to a PL Home page follows the standard Teamcenter process. The [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) on PL Home provides detailed instructions and examples for completing this configuration.
+{{% /alert %}}
 
 ```json
 "Mendix": {
@@ -138,13 +144,41 @@ To display the Mendix app on an Active Workspace page, add its card definition t
 
 * `view` is the name of the Mendix-inside-Teamcenter Active Workspace component obtained in the [previous section](#adding-component), that is "MendixEmbedded"
 
-Add the **Mendix** JSON object (or the name you gave it) to the relevant layout handler grid and rebuild Active Workspace. If the Mendix card does not appear after rebuilding, clear the browser cache to ensure the new chunk is loaded.
+To display the card, add its title to the `grid` array of the relevant layout handler. The following example adds the **Mendix** card to the second row of the `homeDesktopHandler` grid:
 
-Detailed Active Workspace customization and build steps are outside the scope of this documentation. Refer to the Siemens [Active Workspace Customization](https://docs.sw.siemens.com/en-US/doc/282219420/PL20250520748650994.Configuration/yiv1688486682769) documentation for instructions (link requires authentication).
+```json
+ "homeDesktopHandler": {
+      "layoutId": "home",
+      "size": [
+        "desktop"
+      ],
+      "grid": [
+        [
+          "Tasks",
+          "Recents",
+          "ActionList"
+        ],
+        [
+          "Changes",
+          "Reports",
+          "Mendix"
+        ]
+      ],
+      "activeWhen": true,
+      "rowFit": 2
+    },
+```
+
+After you add the card to the layout, rebuild Active Workspace.
+If the Mendix card does not appear after rebuilding, clear the browser cache to ensure the new chunk is loaded.
 
 ### Registering the Component on an XML Rendering Template (XRT)
 
 To display the Mendix app on an XRT, add the following to the document using the XRT editor:
+
+{{% alert color="info" %}}
+Editing an XRT document follows the standard Teamcenter process. The XRT sections of the [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) provide detailed instructions and examples for editing XRT documents.
+{{% /alert %}}
 
 ```xml
   <htmlPanel
@@ -173,6 +207,10 @@ Use the browser console CSP errors to identify any additional directives that st
 
 After updating the CSP, restart the Teamcenter Process Manager for the changes to take effect.
 
+{{% alert color="info" %}}
+Editing the gateway configuration and restarting the Process Manager follow the standard Teamcenter process. The [Siemens Teamcenter documentation](https://support.sw.siemens.com/en-US/product/282219420/) (requires sign-in) on Security Services provides detailed instructions for completing these steps.
+{{% /alert %}}
+
 {{% alert color="warning" %}}
 If Teamcenter returns `HTTP 401 Unauthorized` with a JWT signature error after restarting the Process Manager, restart the entire Teamcenter server.
 {{% /alert %}}
@@ -190,8 +228,6 @@ Follow these steps to configure authentication.
 1. **Register the Mendix App with Teamcenter Security Services**:
 
     Register the Mendix app in the Teamcenter Deployment Center so TcSS can authenticate it. For instructions, see [Registering Your App for Teamcenter SSO](/appstore/industry/teamcenter-connector/configuring-connection-2512/#register-your-app-for-teamcenter-sso).
-    
-    {{% alert color="info" %}}This step requires administrator access to Teamcenter.{{% /alert %}}
 
 2. **Configure the Teamcenter Connector Connection**:
 

@@ -2645,4 +2645,4 @@ The default class to style all popup menus is named `com_mendix_widget_native_ca
 ## Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
-* [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties/)
+* [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties-11/)

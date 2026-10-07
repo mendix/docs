@@ -14,6 +14,6 @@ Design properties are visible as part of the widget properties:
 
 {{< figure src="/attachments/howto10/front-end/atlas-ui/extend-design-properties/studio-pro-design-properties.png" alt="Design Properties in Studio Pro"   width="350"  class="no-border" >}}
 
-For more information on learning how to add design properties, see the [Design Properties API Documentation](/apidocs-mxsdk/apidocs/design-properties/).
+For more information on learning how to add design properties, see the [Design Properties API Documentation](/apidocs-mxsdk/apidocs/design-properties-10/).
 
 Developers can also add additional design properties as part of a module. For more information, see the [File and Folder Structure](/howto10/front-end/customize-styling-new/#file-and-folder) section of *How to Customize Styling*.

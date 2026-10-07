@@ -67,7 +67,7 @@ Similar to layouts and page templates, excluding the [building blocks](/refguide
 
 ### Filtering Design Properties and Styling
 
-Filtering styling elements like [design properties](/apidocs-mxsdk/apidocs/design-properties/) or [CSS classes](/howto/front-end/customize-styling-new/) is useful when you do not want your developers to apply them. Here is a small example:
+Filtering styling elements like [design properties](/apidocs-mxsdk/apidocs/design-properties-11/) or [CSS classes](/howto/front-end/customize-styling-new/) is useful when you do not want your developers to apply them. Here is a small example:
 
 ```json
 {

@@ -1,13 +1,20 @@
 ---
-title: "Mendix 9"
+title: "Design Properties API"
 url: /apidocs-mxsdk/apidocs/design-properties-9/
 description: "This API guide outlines how design properties work in Atlas UI and can help you create custom design properties."
 weight: 70
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Design Properties API allows you to create or extend design properties for your Mendix apps.
+
+{{% alert color="info" %}}
+This document pertains to Mendix 9. For other Design Properties API documents, see these documents:
+
+* [Mendix 11](/apidocs-mxsdk/apidocs/design-properties-11/)
+* [Mendix 10](/apidocs-mxsdk/apidocs/design-properties-10/)
+{{% /alert %}}
 
 To use the API, you need to alter the *design-properties.json* file of a specific module in your application's **themesource** folder. This process is described in the [Design Properties Definitions](#design-properties-definitions) section below.
 
@@ -17,13 +24,13 @@ Design properties are a special set of settings shipped together with a Mendix t
 
 In Studio Pro, you can see which design properties are available for a widget either in the **Properties** pane or in the widget's settings dialog box under the **Appearance** tab. 
 
-## 2 Using Design Properties
+## Using Design Properties
 
 While styling Mendix apps, users must often apply the same set of CSS or native styling classes to widgets on different pages again and again. This work is time consuming and vulnerable to human error as you edit text fields in order to apply classes to a widget.
 
 Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
 
-## 3 Design Property Types
+## Design Property Types
 
 There are two types of design properties: **Toggle** and **Dropdown**. By default design properties have no effect on widgets. Styling is only applied when a **Toggle** property is turned on for a widget, or when one of the options is selected for a **Dropdown** property.
 
@@ -31,7 +38,7 @@ A **Toggle** design property is a simple property which may be turned on for a w
 
 A design property of type **Dropdown** defines a set of options with separate classes per option. When one of the options is selected, the respective classes are applied to a widget. For example, a **Dropdown** property may be an Atlas UI **Align self** property. It contains two options: **Left** and **Right**. When one of these options is selected, then either the `pull-left` or `pull-right` CSS class is applied. 
 
-## 4 Design Properties Definitions {#design-properties-definitions}
+## Design Properties Definitions {#design-properties-definitions}
 
 Design properties are defined on a module level in **JSON** format. They are located in the module specific *themesource* folders (for more information, see the [File and Folder Structure](/howto/front-end/customize-styling-new/#file-and-folder) section of *How to Customize Styling*). Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate folders. Web styling is defined in *web/design-properties.json* file. Native styling is defined in the *native/design-properties.json* file.
 
@@ -68,7 +75,7 @@ Here is a simplified example of a design properties file:
 }
 ```
 
-### 4.1 Design Property Structure
+### Design Property Structure
 
 Use this code to further simplify the above example:
 
@@ -131,7 +138,7 @@ This is how the **Dropdown** design property appears:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/dropdown.png" alt="Dropdown property in Studio Pro" max-width=80% >}}
 
-#### 4.1.1 Common Fields
+#### Common Fields
 
 The examples above show that the fields `name` and `description` define the UI, the name of a form control in Studio Pro, and the description under it. They are arbitrary string values naming and describing a design property. 
 
@@ -143,15 +150,15 @@ Name your design property and its options carefully. Those names cannot be chang
 If you want to rename a design property which is already being used in an app, see the [Renaming Design Properties](#old-names) section below.
 {{% /alert %}}
 
-#### 4.1.2 Toggle-Specific Fields
+#### Toggle-Specific Fields
 
 When a type of design property is **Toggle** it should contain a `class` field on the top level of its property definition. This field defines an arbitrary class name to be applied if the option is toggled on for a widget. In the example above, the class to be applied is `hereMyClass`.
 
-#### 4.1.3 Dropdown-Specific Fields
+#### Dropdown-Specific Fields
 
 When a type of design property is **Dropdown** it should contain an `options` field which is an array of possible options for the design property. Every option must be an object with `name` and `class` fields. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have the `stylingClassOne` and `stylingClassTwo` classes respectively.
 
-### 4.2 Extending or Overriding Design Properties of Other Modules {#extend-existing-design-properties}
+### Extending or Overriding Design Properties of Other Modules {#extend-existing-design-properties}
 
 Design properties can be extended or overridden in other modules. For example, you can add a custom drop-down option to an Atlas design property or override the applied CSS class of a toggle property. 
 
@@ -169,7 +176,7 @@ If multiple modules have a definition of a **Dropdown** property with the same n
 Note that having multiple definitions with different types (for example **Toggle** and **Dropdown**) is an invalid configuration and will result in a failure to load any design properties.
 {{% /alert %}}
 
-## 5 Widget Types{#widget-types}
+## Widget Types{#widget-types}
 
 When defining design properties in your *JSON* file, you must specify which widget your properties apply to, as some design properties may only work with certain widgets.
 
@@ -179,11 +186,11 @@ Having a property that applies a table appearance style like **Stripped**, **Bor
 
 Widget types are types defined in the [Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/pages.html) documentation. Every type which is a direct or an indirect subtype of type [`Widget`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.widget.html) can have design properties attached to it. If a property is defined on a widget, then every subtype of this widget will have that property. For example if a property is defined on a `Widget` type, which is it the highest type in the hierarchy, then every widget will have this design property available.
 
-### 5.1 Widget Types for Pluggable Widgets
+### Widget Types for Pluggable Widgets
 
 When creating design properties for [Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/), their widget type is determined by [widget id](/apidocs-mxsdk/apidocs/pluggable-widgets/#widget-id).
 
-## 6 Renaming Design Properties{#old-names}
+## Renaming Design Properties{#old-names}
 
 Sometimes you must rename design properties or their options which are already in use. As design properties are identified by names internally, renaming one may be a breaking change for apps that are already using those design properties. 
 
@@ -213,7 +220,7 @@ Example of a property and options that were renamed:
 
 The design property above was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
-### 6.1 Renaming a Dropdown Option to a Toggle Property
+### Renaming a Dropdown Option to a Toggle Property
 
 {{% alert color="info" %}}
 This feature was introduced in Mendix 9.
@@ -235,7 +242,7 @@ Here is an example of a **Toggle** property that was renamed from a **Dropdown**
 
 The design property above is a replacement for the removed option **Styling option 3** of **My Dropdown Property** and will be set to **Yes** if that option was selected. The value of **My Dropdown Property** will then be set to empty if that design property still exists.
 
-## 7 Read More
+## Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/)

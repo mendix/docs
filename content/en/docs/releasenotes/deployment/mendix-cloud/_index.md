@@ -135,6 +135,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * [Activity logs](/developerportal/operate/logs/#activity-log) are now automatically published to the [Central Audit Logging System](https://ccauditlogs.home.mendix.com/), providing improved visibility and auditability across environments. For more information, refer to [Audit Logs](/control-center/audit-logs/).
 
+### June 1, 2026
+
+#### Deprecations
+
+* The Mendix Basic plan offering is now permanently deprecated. New Mendix Basic licenses are no longer available, and existing Mendix Basic licenses can no longer be renewed.
+
 ## April 2026
 
 ### April 26, 2026

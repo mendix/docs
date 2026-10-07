@@ -152,10 +152,6 @@ Capitalize in all instances.
 
 Do not use just "Atlas."
 
-### Basic package
-
-Capitalize "Basic" but not package. Use "Basic package" rather than "Basic license".
-
 ### Build Server
 
 Capitalize in all instances (to parallel "Team Server" and "Model Server").

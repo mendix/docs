@@ -13,11 +13,11 @@ A published REST operation is part of a [published REST resource](/refguide/publ
 
 In the **Published REST Service** document, you can add items to be included in the service as **Resources**:
 
-{{< figure src="/attachments/refguide/modeling/integration/rest-services/published-rest-services/published-rest-service/published-rest-operation/publshed-rest-service.png" alt="Published REST Service" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/rest-services/published-rest-services/published-rest-service/published-rest-operation/published-rest-service.png" alt="Published REST Service" class="no-border" >}}
 
 ## Operation Definition
 
-When you **Add** or **Edit** a resource, you can define the resource in the **Operation** definition dialog box for the selected item as follows:
+After you **Add** a resource, you can **Add** or **Edit** operations as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/rest-services/published-rest-services/published-rest-service/published-rest-operation/operation-definition.png" alt="REST Operation" class="no-border" >}}
 
@@ -99,7 +99,7 @@ Check this box to mark the operation as deprecated in the service's OpenApi (Swa
 
 #### Parameters
 
-You can **Add**, **Update**, or **Delete** the parameters of the operation, which is described in [Operation Parameters for Published REST](/refguide/published-rest-operation-parameter/).
+You can **Add**, **Edite**, **Delete** or **Move** the parameters of the operation, which is described in [Operation Parameters for Published REST](/refguide/published-rest-operation-parameter/).
 
 ##### Import Mapping {#import-mapping}
 
@@ -119,7 +119,7 @@ The import mapping is also used to generate object schemas for operation respons
 
 #### Response
 
-This defines the response of the operation. You can specify the type of the microflow result and the export mapping applied to it (if any).
+This defines the response of the operation. You see the type of the microflow result and specify the export mapping applied to it (if any).
 
 ##### Type
 

@@ -314,7 +314,7 @@ export const TextBox = {
   },
   input: {
     // All TextStyle properties
-    autoCapitalize: 'sentences', // This is a Boolean value indicating whether the tab bar bounces when scrolling. This automatically capitalizes certain characters when the user types: 
+    autoCapitalize: 'sentences', // This automatically capitalizes certain characters when the user types: 
     // 'characters': capitalizes all characters 
     // 'words': capitalizes the first letter of each word 
     // 'sentences': capitalizes the first letter of each sentence (default) 
@@ -523,7 +523,7 @@ export const Checkbox = {
     // This has the same properties as `checkboxInput`. Overrides `checkboxInput` styles if the checkbox is non-editable.
   },
   checkboxInputError: {
-    // This has the same properties as `checkboxInput`. Overrides `input` styles if there are validation errors.
+    // This has the same properties as `checkboxInput`. Overrides `checkboxInput` styles if there are validation errors.
   },
 };
 ```
@@ -547,7 +547,7 @@ export const Checkbox = {
 | `checkboxInput` | `color` | Custom color for the tick icon. | Checkbox |
 | `checkboxInput` | `size` | Custom size for the tick icon. | Checkbox |
 | `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the checkbox is non-editable. | Checkbox |
-| `checkboxInputError` | This has the same properties as `checkboxInput`. | Overrides `input` styles if there are validation errors. | Checkbox |
+| `checkboxInputError` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if there are validation errors. | Checkbox |
 
 The default class to style all checkbox inputs is named `Checkbox`.
 
@@ -781,7 +781,7 @@ export const Page = {
     }
   },
   container: {
-    // This has all ImageStyle properties.
+    // This has all ViewStyle properties.
   }
 };
 ```
@@ -817,7 +817,7 @@ export const navigationStyle = {
       // This has all TextStyle properties.
     },
     icon: {
-      // This has all TextStyle properties.
+      // This has all ViewStyle properties.
     },
     selectedIcon: {
       // This has all ViewStyle properties.
@@ -845,7 +845,7 @@ export const navigationStyle = {
 | `bottomBar` | `container` | This has all ViewStyle properties. |
 | `bottomBar` | `label` | This has all TextStyle properties. |
 | `bottomBar` | `selectedLabel` | This has all TextStyle properties. |
-| `bottomBar` | `icon` | This has all TextStyle properties. |
+| `bottomBar` | `icon` | This has all ViewStyle properties. |
 | `bottomBar` | `selectedIcon` | This has all ViewStyle properties. |
 | `progressOverlay` | `background` | This has all ViewStyle properties. |
 | `progressOverlay` | `container` | This has all ViewStyle properties. |
@@ -1239,22 +1239,28 @@ export const com_mendix_widget_native_bottomsheet_BottomSheet = {
     // This has all ViewStyle properties.
   },
   containerWhenExpandedFullscreen: {
-    // This has all ViewStyle properties. This has all ViewStyle properties. Only available if `Expading` and `Enable full screen` are enabled.
+    // This has all ViewStyle properties. Only available if `Expanding` and `Enable full screen` are enabled.
   },
   modal: {
     // This has all ViewStyle properties. 
   },
-  defaultStyle: {
-    // This has all TextStyle properties. Available when `Default` is selected as style for basic items.
-  },
-  primaryStyle: {
-    // This has all TextStyle properties. Available when `Primary` is selected as style for basic items.
-  },
-  dangerStyle: {
-    // This has all TextStyle properties. Available when `Danger` is selected as style for basic items.
-  },
-  customStyle: {
-    // This has all TextStyle properties. Available when `Custom` is selected as style for basic items.
+  modalItems: {
+    container: {
+      // This has all ViewStyle properties.
+      rippleColor: null, // Styles the ripple color when an item is tapped (Android only).
+    },
+    defaultStyle: {
+      // This has all TextStyle properties. Available when `Default` is selected as style for basic items.
+    },
+    primaryStyle: {
+      // This has all TextStyle properties. Available when `Primary` is selected as style for basic items.
+    },
+    dangerStyle: {
+      // This has all TextStyle properties. Available when `Danger` is selected as style for basic items.
+    },
+    customStyle: {
+      // This has all TextStyle properties. Available when `Custom` is selected as style for basic items.
+    },
   },
 };
 ```
@@ -1262,12 +1268,14 @@ export const com_mendix_widget_native_bottomsheet_BottomSheet = {
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. | |
-| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. | Only available if `Expading` and `Enable full screen` are enabled. |
+| `containerWhenExpandedFullscreen` | This has all ViewStyle properties. | Only available if `Expanding` and `Enable full screen` are enabled. |
 | `modal` | This has all ViewStyle properties. | |
-| `defaultStyle` | This has all TextStyle properties. | Available when `Default` is selected as style for basic items. |
-| `primaryStyle` | This has all TextStyle properties. | Available when `Primary` is selected as style for basic items. |
-| `dangerStyle` | This has all TextStyle properties. | Available when `Danger` is selected as style for basic items. |
-| `customStyle` | This has all TextStyle properties. | Available when `Custom` is selected as style for basic items. |
+| `modalItems` > `container` | This has all ViewStyle properties. | Styles the wrapper container around each modal item. |
+| `modalItems` > `container` | `rippleColor` | Styles the ripple color when an item is tapped (Android only). |
+| `modalItems` > `defaultStyle` | This has all TextStyle properties. | Available when `Default` is selected as style for basic items. |
+| `modalItems` > `primaryStyle` | This has all TextStyle properties. | Available when `Primary` is selected as style for basic items. |
+| `modalItems` > `dangerStyle` | This has all TextStyle properties. | Available when `Danger` is selected as style for basic items. |
+| `modalItems` > `customStyle` | This has all TextStyle properties. | Available when `Custom` is selected as style for basic items. |
 
 The default class to style all bottom sheet widgets is named `com_mendix_widget_native_bottomsheet_BottomSheet`.
 
@@ -1600,6 +1608,7 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton 
 | `button` | This has all ViewStyle properties.  | N/A |
 | `button` | `size` | This is the radius of the button. |
 | `button` | `rippleColor` | This is the color of the ripple on Android. |
+| `buttonContainer` | This has all ViewStyle properties. | N/A |
 | `buttonIcon` | This has all ImageStyle properties. | N/A |
 | `secondaryButton` | This has all ViewStyle properties.  | N/A |
 | `secondaryButton` | `size` | This is the radius of the secondary buttons. |
@@ -1630,7 +1639,7 @@ export const com_mendix_widget_native_gallery_Gallery = {
   list: {
     // This has all ViewStyle properties. Applies a view style to the list container.
   },
-  listitem: {
+  listItem: {
     // This has all ViewStyle properties. Applies a view style to each item container in the list.
   },
   loadMoreButtonContainer: {
@@ -1643,6 +1652,9 @@ export const com_mendix_widget_native_gallery_Gallery = {
     radius: null, // Defines the radius of the ripple effect. (number) (Android only)
     foreground: null, // Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only)
   },
+  loadMoreButtonCaption: {
+    // This has all TextStyle properties. Applies a text style to the load more button caption.
+  },
 };
 ```
 
@@ -1654,13 +1666,13 @@ export const com_mendix_widget_native_gallery_Gallery = {
 | `lastItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the last item of the list. |
 | `list` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the list container. |
 | `listItem` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to each item container in the list. |
-| `loadMoreButtonContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
-| `loadMoreButtonPressableContainer` | All [ViewStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonContainer` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the load more button container. |
+| `loadMoreButtonPressableContainer` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a view style to the load more button container. |
 | `loadMoreButtonPressableContainer` | rippleColor | Defines the color of the ripple effect. ([color](https://reactnative.dev/docs/colors)) (Android only) |
 | `loadMoreButtonPressableContainer` | borderless | Defines if ripple effect should not include border. (Boolean) (Android only) |
 | `loadMoreButtonPressableContainer` | radius | Defines the radius of the ripple effect. (number) (Android only) |
 | `loadMoreButtonPressableContainer` | foreground | Set to true to add the ripple effect to the foreground of the view, instead of the background. (Boolean) (Android only) |
-| `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/view-style-props) properties. | Applies a text style to the load more button caption. |
+| `loadMoreButtonCaption` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | Applies a text style to the load more button caption. |
 
 The default class to style all Gallery widgets is named `com_mendix_widget_native_gallery_Gallery`.
 
@@ -1701,7 +1713,7 @@ This intro screen widget displays paginated contents you can swipe through, and 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/intro-screen.gif" alt="intro screen"   width="350"  class="no-border" >}}
 
 ```javascript
-export const com_mendix_widget_native_animation_Animation = {
+export const com_mendix_widget_native_introscreen_IntroScreen = {
   fullscreenContainer: {
     // This has all ViewStyle properties.
   },
@@ -1720,18 +1732,46 @@ export const com_mendix_widget_native_animation_Animation = {
   activeDotStyle: {
     // This has all ViewStyle properties.
   },
-  buttonsContainer: {
-    // This has all ViewStyle properties.
+  paginationAbove: {
+    buttonsContainer: {
+      // This has all ViewStyle properties.
+    },
+    buttonSkip: {
+      container: {
+        // This has all ViewStyle properties.
+      },
+      caption: {
+        // This has all TextStyle properties.
+      },
+      icon: {
+        size: null, // The size of the icon.
+        color: null, // The color of the icon.
+      },
+    },
+    buttonDone: {
+      // Same structure as buttonSkip.
+    },
+    buttonPrevious: {
+      // Same structure as buttonSkip.
+    },
+    buttonNext: {
+      // Same structure as buttonSkip.
+    },
   },
-  container: {
-    // This has all ViewStyle properties. Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext.
-  },
-  caption: {
-    // This has all ViewStyle properties.
-  },
-  icon: {
-    size: null, // The size of the icon.
-    color: null, // The color of the icon.
+  paginationBetween: {
+    // Same structure as paginationAbove, but without buttonsContainer.
+    buttonSkip: {
+      // Same structure as paginationAbove.buttonSkip.
+    },
+    buttonDone: {
+      // Same structure as paginationAbove.buttonSkip.
+    },
+    buttonPrevious: {
+      // Same structure as paginationAbove.buttonSkip.
+    },
+    buttonNext: {
+      // Same structure as paginationAbove.buttonSkip.
+    },
   },
 };
 ```
@@ -1739,18 +1779,25 @@ export const com_mendix_widget_native_animation_Animation = {
 | Element | Style Properties | Description |
 | --- | --- | --- |
 | `fullscreenContainer` | This has all ViewStyle properties. | N/A |
-| `popupContainer` | This has all ViewStyle properties. |  N/A |
+| `popupContainer` | This has all ViewStyle properties. | N/A |
 | `paginationContainer` | This has all ViewStyle properties. | N/A |
 | `paginationText` | This has all TextStyle properties. | N/A |
 | `dotStyle` | This has all ViewStyle properties. | N/A |
 | `activeDotStyle` | This has all ViewStyle properties. | N/A |
-| `buttonsContainer` | This has all ViewStyle properties. | N/A |
-| `container` | This has all ViewStyle properties. | Meant for buttonSkip, buttonDone, buttonPrevious, and buttonNext. |
-| `caption` | This has all ViewStyle properties. | N/A |
-| `icon` | `size` | The size of the icon. |
-| `icon` | `color` | The color of the icon. |
+| `paginationAbove` > `buttonsContainer` | This has all ViewStyle properties. | Styles the container wrapping the buttons in the above-pagination layout. |
+| `paginationAbove` > `buttonSkip` > `container` | This has all ViewStyle properties. | Styles the skip button container. |
+| `paginationAbove` > `buttonSkip` > `caption` | This has all TextStyle properties. | Styles the skip button caption. |
+| `paginationAbove` > `buttonSkip` > `icon` | `size` | The size of the icon. |
+| `paginationAbove` > `buttonSkip` > `icon` | `color` | The color of the icon. |
+| `paginationAbove` > `buttonDone` | Same structure as `buttonSkip`. | Styles the done button. |
+| `paginationAbove` > `buttonPrevious` | Same structure as `buttonSkip`. | Styles the previous button. |
+| `paginationAbove` > `buttonNext` | Same structure as `buttonSkip`. | Styles the next button. |
+| `paginationBetween` > `buttonSkip` | Same structure as `paginationAbove` > `buttonSkip`. | Styles the skip button in the between-pagination layout. |
+| `paginationBetween` > `buttonDone` | Same structure as `paginationAbove` > `buttonSkip`. | Styles the done button in the between-pagination layout. |
+| `paginationBetween` > `buttonPrevious` | Same structure as `paginationAbove` > `buttonSkip`. | Styles the previous button in the between-pagination layout. |
+| `paginationBetween` > `buttonNext` | Same structure as `paginationAbove` > `buttonSkip`. | Styles the next button in the between-pagination layout. |
 
-The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
+The default class to style all intro screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
 ### Line Chart {#line-chart}
 
@@ -1808,7 +1855,7 @@ export const com_mendix_widget_native_linechart_LineChart = {
       // All ViewStyle properties. 
     },
     label: {
-      // All ViewStyle properties. 
+      // All TextStyle properties. 
     }
   },
   lines: {
@@ -1972,6 +2019,8 @@ export const com_mendix_widget_native_piedoughnutchart_PieDoughnutChart = {
       any_custom_key: {
         slice: {
           color: null, // Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice.
+        },
+        label: {
           fontFamily: null, // Applies a font type to the slice label (string).
           fontSize: null, //  Applies a size to the slice label (number).
           fontStyle: null, // Applies a font style to the slice label (**normal** or **italic**).
@@ -2184,7 +2233,7 @@ export const com_mendix_widget_native_qrcode_QRCode = {
   qrcode: {
     size: null, // The size of the QR code.
     color: null, // The color of the QR code. 
-    borderColor: null, // The background color behind the QR code.
+    backgroundColor: null, // The background color behind the QR code.
   },
 };
 ```

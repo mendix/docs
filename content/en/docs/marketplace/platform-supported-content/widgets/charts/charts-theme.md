@@ -62,7 +62,7 @@ To find the settings you want, follow these steps:
 To add a theme file that applies to all charts in the app, follow these steps:
 
 1. In Studio Pro, go to **App** > **Show App Directory in Explorer** (or **Show App Directory in Finder** on macOS).
-1. Open the *theme/web* folder.
+1. Open the *[YOUR-APP]/theme/web* folder (or *[YOUR-APP]/theme/native* in the case of native apps).
 1. Create a new file named *com.mendix.charts.json*.
 
     {{% alert color="info" %}}The file name is case-sensitive, and the file extension is *.json*. The file must contain a JSON object, even if it is empty, for example `{ }`.{{% /alert %}}

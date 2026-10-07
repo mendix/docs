@@ -11,13 +11,15 @@ description: "Describes the configuration and usage of the Option Selector widge
 
 The [Option Selector](https://marketplace.mendix.com/link/component/245825) widget displays a list of options that users can select from, shown as a checkbox list or a radio button group. Use it when end-users need to choose values from a set of options, such as selecting or clearing items from an enumeration or an association.
 
+The widget displays a checkbox list for multiple selection and a radio button list for single selection. For a Boolean data source, you choose the render type yourself.
+
 {{% alert color="info" %}}
 This widget was previously named *Check box / radio selector*. Existing pages that use the widget keep working without changes.
 {{% /alert %}}
 
-The widget displays a checkbox list for multiple selection and a radio button list for single selection. For a Boolean data source, you choose the render type yourself.
-
 ### Features
+
+Option selector does the following:
 
 * Supports different data sources:
     * Context:
@@ -28,11 +30,7 @@ The widget displays a checkbox list for multiple selection and a radio button li
     * Static values
 * Supports custom content rendering
 * Supports checkbox and radio button controls
-* Supports read-only display as a control or as content only
-
-{{% alert color="info" %}}
-This widget does not support lazy loading or pagination. If you need to display many options, use the [Combo Box](/appstore/widgets/combobox/) widget instead.
-{{% /alert %}}
+* Supports a read-only display as a control or as content only
 
 ## Properties Pane
 
@@ -67,12 +65,12 @@ Set the **Source** property (required) to configure the data source type for the
 When you select **Context**, set the **Type** property (required) to the type of the context data:
 
 * [Association](/refguide/association-source/) – the widget selects objects through a reference or reference set association
-    * **Entity** – the association to set (required)
-    * **Selectable objects** – the data source that provides the options
-* [Enumeration](/refguide/enumerations/) – the widget sets an enumeration attribute
-    * **Attribute** – the enumeration attribute to set (required)
-* [Boolean](/refguide/boolean-expressions/) – the widget sets a Boolean attribute
-    * **Attribute** – the Boolean attribute to set (required)
+    * **Entity** (required) – This selects the association.
+    * **Selectable objects** – This is the data source that provides the options.
+* [Enumeration](/refguide/enumerations/) – This allows the widget to set an enumeration attribute.
+    * **Attribute** (required) – The enumeration attribute that is set.
+* [Boolean](/refguide/boolean-expressions/) – The widget sets a Boolean attribute.
+    * **Attribute** (required) – The Boolean attribute that is set.
 
 For associations, a reference allows a single selection and a reference set allows multiple selections.
 
@@ -80,42 +78,42 @@ For associations, a reference allows a single selection and a reference set allo
 
 Use the database source type to set the value of a string, integer, long, or enumeration attribute with options fetched from a list of objects.
 
-* **Selectable objects** – the [database data source](/refguide/database-source/) that provides the options
-* **Selection type** – determines how other [listen to widget](/refguide/listen-to-grid-source/) data sources perceive the data
-    * **Single** – allows only one item to be selected from the options list (radio button list)
-    * **Multi** – allows multiple items to be selected from the options list (checkbox list)
-* **Value** (under **Store value**) – the attribute of the selectable objects that holds the value to store
-* **Target attribute** (under **Store value**) – the attribute where the selected value is stored
+* **Selectable objects** – The [database data source](/refguide/database-source/) that provides the options.
+* **Selection type** – This determines how other [listen to widget](/refguide/listen-to-grid-source/) data sources perceive the data.
+    * **Single** – This allows only one item to be selected from the options list (radio button list).
+    * **Multi** – This allows multiple items to be selected from the options list (checkbox list).
+* **Value** (under **Store value**) – The attribute of the selectable objects that holds the value to store.
+* **Target attribute** (under **Store value**) – the attribute where the selected value is stored.
 
 ##### Static Values {#static}
 
 Use the static source type to set the value of an attribute with manually configured values.
 
-* **Attribute** – the attribute to set (required). It can be a string, enumeration, integer, long, Boolean, date and time, or decimal attribute.
-* **Values** – the list of options (required). Each option has the following properties:
-    * **Value** – an expression that returns the value to set
-    * **Custom content** – widgets to display instead of the caption
-    * **Caption** – the text to display for the option
+* **Attribute** (required) – The attribute to set. It can be a string, enumeration, integer, long, Boolean, date and time, or decimal attribute.
+* **Values** (required)– The list of options. Each option has the following properties:
+    * **Value** – An expression that returns the value to set.
+    * **Custom content** – Sets widgets to display instead of the caption.
+    * **Caption** – The text to display for the option.
 
 #### Caption
 
 For the **Association** and **Database** sources, the **Caption** section configures the text displayed for each option:
 
-* **Caption type** – determines how the caption is defined:
-    * **Attribute** – uses a string attribute of the selectable objects
-    * **Expression** – uses an expression that returns a string
-* **Caption** – the attribute or expression that provides the caption (required)
+* **Caption type** – Determines how the caption is defined:
+    * **Attribute** – Uses a string attribute of the selectable objects.
+    * **Expression** – Uses an expression that returns a string.
+* **Caption** (required) – The attribute or expression that provides the caption.
 
 #### General
 
 The **General** section configures general behavior and captions for the widget:
 
-* **No option text** – the text displayed when no options are available. The default is "No options available".
-* **Custom content** – determines whether the widget displays custom widgets instead of text for each option (not available for **Static** sources, which configure custom content per value):
-    * **Yes** – displays the widgets that you place in the **Custom content** dropzone for each option
-    * **No** – displays the caption of each option
-* **Render type** – determines the type of control that the widget displays. The options are **Checkbox** and **Radio button**.
-* **Group name** – an expression that returns the name for the group of associated inputs (optional)
+* **No option text** – The text displayed when no options are available. The default is **No options available**.
+* **Custom content** – This determines whether the widget displays custom widgets instead of text for each option (not available for **Static** sources, which configure custom content per value):
+    * **Yes** – This displays the widgets that you place in the **Custom content** dropzone for each option.
+    * **No** – This displays the caption of each option.
+* **Render type** – This determines the type of control that the widget displays. The options are **Checkbox** and **Radio button**.
+* **Group name** (optional) – This is an expression that returns the name for the group of associated inputs. 
 
 #### Label
 
@@ -131,14 +129,14 @@ The **Editability** section configures when users can change the selection. For 
 
 The following additional properties are available:
 
-* **Editable** – determines when the widget is editable:
-    * **Default** – the widget is editable unless the context is read-only
-    * **Never** – the widget is never editable
-    * **Conditionally** – the widget is editable when the **Condition** expression returns `true`
-* **Condition** – the Boolean expression that determines editability when **Editable** is set to **Conditionally**
-* **Read-only style** – determines how the widget appears in read-only mode:
-    * **Control** – displays the checkboxes or radio buttons as disabled controls
-    * **Content only** – displays only the selected items as text
+* **Editable** – This determines when the widget is editable:
+    * **Default** – The widget is editable unless the context is read-only.
+    * **Never** – The widget is never editable.
+    * **Conditionally** – The widget is editable when the **Condition** expression returns `true`.
+* **Condition** – The Boolean expression that determines editability when **Editable** is set to **Conditionally**.
+* **Read-only style** – This determines how the widget appears in read-only mode:
+    * **Control** – This displays the checkboxes or radio buttons as disabled controls,
+    * **Content only** – This displays only the selected items as text.
 
 ### Events Tab {#events}
 
@@ -150,8 +148,8 @@ The **Events** tab contains the following property:
 
 The **Accessibility** tab configures settings for the accessibility features of the widget:
 
-* **Aria required** – an expression that returns whether the widget is required, for assistive technologies
-* **Aria label** – a text template that provides an accessible label for the widget
+* **Aria required** – An expression that returns whether the widget is required for assistive technologies or not.
+* **Aria label** – A text template that provides an accessible label for the widget.
 
 ### Common Tab {#common}
 
@@ -166,3 +164,7 @@ For more information, see [Common Section](/refguide/common-widget-properties/#c
 ### Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## Limitations
+
+This widget does not support lazy loading or pagination. If you need to display many options, use the [Combo Box](/appstore/widgets/combobox/) widget instead.

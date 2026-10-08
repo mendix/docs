@@ -212,7 +212,9 @@ The properties above are common across the chart types. In this section, the pro
 
 1. **Dimensions** Tab
 
-    * **Width unit**: can be **Percentage** (default) or **Pixels**.
+    * **Width unit**: can be one of the following:
+        * **Percentage** (default): portion of parent size.
+        * **Pixels**: absolute number of pixels.
     * **Width**: sets the portion of the width per your selected unit.
     * **Height unit**: can be **Percentage** (default) or **Pixels**.
     * **Height**: sets the portion of the height per your selected unit.

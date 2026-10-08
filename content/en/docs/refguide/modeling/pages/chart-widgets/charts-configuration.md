@@ -210,10 +210,12 @@ The properties above are common across the chart types. In this section, the pro
 
 **Series New or Edit**
 
-1. **Appearance** Tab
+1. **Dimensions** Tab
 
-    * **Line mode**: *Lines* (without showing markers where the data points are) or *Lines with markers*
-    * **Line style**: join the data points with a *Straight line* or a *Curved line (spline)*
+    * **Width unit**: can be **Percentage** (default) or **Pixels**.
+    * **Width**: sets the portion of the width per your selected unit.
+    * **Height unit**: can be **Percentage** (default) or **Pixels**.
+    * **Height**: sets the portion of the height per your selected unit.
 
 2. **Static series** Tab
 

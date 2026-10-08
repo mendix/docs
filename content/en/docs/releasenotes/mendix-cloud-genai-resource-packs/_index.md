@@ -32,7 +32,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### Fixes
 
-* We fixed an issue that made **Metadata** tags with a large number of characters difficult to view on the **Content** page.
+* We fixed an issue that made **Metadata** tags with a large number of characters difficult to view on the knowledge base resource **Content** page.
 
 ### August 13, 2026
 

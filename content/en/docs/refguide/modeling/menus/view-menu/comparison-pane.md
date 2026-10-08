@@ -164,7 +164,7 @@ The table below shows which version opens when you click **Go to** or double-cli
 | **Modified** | The current version opens in edit mode | The version from the newer revision opens in read-only mode |
 | **Deleted** | The version from the selected revision opens in read-only mode | The version from the older revision opens in read-only mode |
 
-To open a specific version, right-click a document in Level 1 and point to **View**:
+To open a specific version, right-click a document in Level 1 and select **View**:
 
 | Option | What Opens | Available For |
 |--------|------------|---------------|

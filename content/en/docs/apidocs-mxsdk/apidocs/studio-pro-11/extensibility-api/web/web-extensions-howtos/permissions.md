@@ -99,9 +99,10 @@ To check if a change affects your extension, compare the old granted state again
 
 The following permissions are available for web extensions:
 
-| Permission | Description |
-|------------|-------------|
-| `runtime-configuration-private` | Allows the extension to access the values of private constants from the active runtime configuration. Without this permission, private constants are returned with `isPrivate: true` and no value. |
+| Permission | Description | Usage | Available since |
+|------------|-------------|-------------|-------------|
+| `runtime-configuration-private` | Allows the extension to access the values of private constants from the active runtime configuration. Without this permission, private constants are returned with `isPrivate: true` and no value. | [Accessing Private Constants](/runtime-configuration-api/#accessing-private-constants) | 11.9.0+ |
+| `register-ai-tools` | Allows the extension to register custom AI tools into the Maia agent | [Accessing Private Constants](/tools-api/) | 11.12.5+ and 11.15.0+ |
 
 ## Extensibility Feedback
 

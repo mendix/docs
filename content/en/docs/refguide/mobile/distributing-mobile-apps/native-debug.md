@@ -73,6 +73,10 @@ To use the Make It Native app with React Developer Tools, do the following:
 
 ## Debugging Your Styling
 
+{{% alert color="info" %}}
+This section is optional for Studio Pro version 11.6 and above. React Native includes React Native DevTools, which is also bundled with Studio Pro. If you use the Make It Native app, you still need these steps, because **Open DevTools** does not open in that app, as described earlier on this page.
+{{% /alert %}}
+
 With the Make It Native app, you can examine your styling and the structure of your pages. This makes it easier to debug, test, and inspect styling. Inspect and debug your styling by doing the following:
 
 1. Install the LTS of [Node.js](https://nodejs.org/en/).

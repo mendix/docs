@@ -45,9 +45,11 @@ The Mendix Cloud GenAI Resource Packs provide access to the following models:
 | Model | Model ID | Model Type | Regions | Available Only via Cross-Region Inference (CRI) | AWS Inference Regions | End of Life |
 | ----- | -------- | ---------- | --------- | ----------------------------------------------- | --------------------------- | ----------- |
 | Anthropic Claude Haiku 4.5 | `eu.anthropic.claude-haiku-4-5-20251001-v1:0` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Haiku 5.5 | `eu.anthropic.claude-haiku-5-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
 | Anthropic Claude Sonnet 4.5 | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
 | Anthropic Claude Sonnet 4.6 | `eu.anthropic.claude-sonnet-4-6` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
 | Anthropic Claude Sonnet 5 | `eu.anthropic.claude-sonnet-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
+| Anthropic Claude Sonnet 5.5 | `eu.anthropic.claude-sonnet-5-5` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
 | Anthropic Claude Sonnet 3 | `anthropic.claude-3-sonnet-20240229-v1:0` | Text | Mendix Cloud Canada (Montreal) | NO | Canada (Central) | — |
 | Anthropic Claude Opus 4.6 | `eu.anthropic.claude-opus-4-6-v1` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
 | Anthropic Claude Opus 4.7 | `eu.anthropic.claude-opus-4-7` | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Stockholm),<br> Europe (Paris),<br> Europe (Milan),<br> Europe (Spain),<br> Europe (Ireland),<br> Europe (Frankfurt) | — |
@@ -76,9 +78,11 @@ For example, if you allocate 50 Cloud Tokens per month, your resource receives 5
 | Model Family | GenAI Units per 1M Input Tokens | GenAI Units per 1M Output Tokens |
 | ------------ | ------------------------------- | -------------------------------- |
 | Claude Haiku 4.5 | 35.81 | 179.07 |
+| Claude Haiku 5.5 | 3.58 | 17.91 |
 | Claude Sonnet 4.5 | 107.44 | 537.21 |
 | Claude Sonnet 4.6 | 107.44 | 537.21 |
-| Claude Sonnet 5 | 107.44 | 537.21 |
+| Claude Sonnet 5 | 71.63 | 358.14 |
+| Claude Sonnet 5.5 | 71.63 | 358.14 |
 | Claude Opus 4.6 | 179.07 | 895.35 |
 | Claude Opus 4.7 | 179.07 | 895.35 |
 | Claude Opus 4.8 | 179.07 | 895.35 |

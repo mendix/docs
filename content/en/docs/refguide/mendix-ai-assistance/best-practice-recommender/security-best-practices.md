@@ -10,6 +10,12 @@ description: "Describes the security best practices from Best Practice Recommend
 
 This document outlines the security best practices provided by [Best Practice Recommender](/refguide/best-practice-recommender/) in Studio Pro.
 
+{{% alert color="info" %}}
+The security best practices were introduced in Mendix 11.15.0.
+
+The guidance here applies to all versions of Mendix. However, in previous versions, you will not see the best practice messages.  
+{{% /alert %}}
+
 ## Anonymous User Best Practices {#anonymous-users}
 
 Anonymous users can access an app without signing in, which means that every access right held by the anonymous user role is available to anyone who can reach the URL of the app. You should only add anonymous users to your app where you have data which you want anyone to be able to access. One example is allowing users to browse the stock of a webshop.

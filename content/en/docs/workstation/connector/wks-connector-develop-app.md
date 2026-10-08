@@ -41,14 +41,14 @@ Several actions take a nanoflow as a parameter and call it when something happen
 * Objects are passed under their entity name, without the module name. For example, a `MyModule.MyContext` object is passed as `MyContext`.
 * A device is always passed as `Device` of type `StationConnector.Device`. If the device is a specialization, it is additionally passed under the specialization name and type. For example, a `MyModule.BarcodeScanner` device is passed as `Device` of type `StationConnector.Device` and as `BarcodeScanner` of type `MyModule.BarcodeScanner`. Declare a `BarcodeScanner` parameter of type `MyModule.BarcodeScanner` when you need the attributes of the specialization.
 
-### SendDeviceRequest
+#### SendDeviceRequest
 
 Call `SendDeviceRequest` to send a message to a device and return the response or error. Requires Workstation Client 4.0 or later, and a device that supports requests. For more information about the supported message syntax, see [Device Message Syntax](/mendix-workstation/device-syntax/). This action has the following parameters:
 
 * `device` (Object) - A `StationConnector.Device` object or a specialization of it to send the message to.
 * `message` (String) - The message to send to the device.
 
-### SendDeviceMessage
+#### SendDeviceMessage
 
 Call `SendDeviceMessage` to send a message to a device. For more information about the supported message syntax, see [Device Message Syntax](/mendix-workstation/device-syntax/). This action has the following parameters:
 
@@ -57,14 +57,14 @@ Call `SendDeviceMessage` to send a message to a device. For more information abo
 
 Responses are passed through message callbacks. For more information, see `GetCreateDevice` (`onMessage`), `WaitForDeviceMessage`, and `SubscribeToDeviceMessages`.
 
-### WaitForDeviceMessage 
+#### WaitForDeviceMessage 
 
 Call `WaitForDeviceMessage` to wait for a message from the connected device for the duration of the specified timeout period. This action has the following parameters:
 
 * `device` (Object) - A `StationConnector.Device` object or a specialization of it to wait for a message from.
 * `timeout` (Integer/Long) - Time in milliseconds before a timeout error is thrown. Leave empty for no timeout.
 
-### WaitForObjectChange
+#### WaitForObjectChange
 
 Call `WaitForObjectChange` to wait for changes in the attributes of the specified object for the duration of the specified timeout period. This action has the following parameters:
 
@@ -72,7 +72,7 @@ Call `WaitForObjectChange` to wait for changes in the attributes of the specifie
 * `attributes` (String) - Optional, a comma-separated list of the attributes to observe.
 * `timeout` (Integer/Long) - Time in milliseconds before a timeout error is thrown. Leave empty for no timeout.
 
-### GetCreateDevice
+#### GetCreateDevice
 
 Call `GetCreateDevice` to create and configure a device, and define the actions that should happen on connection, disconnection, or messages from the device. This action has the following parameters:
 
@@ -94,7 +94,7 @@ Call `GetCreateDevice` to create and configure a device, and define the actions 
 
 The device object is created once and returned for every call that uses the same name and class.
 
-### ConnectDevice
+#### ConnectDevice
 
 Call this action to connect to a specific device. This action has the following parameter:
 
@@ -106,17 +106,17 @@ Call this action to disconnect from a specific device. This action has the follo
 
 * `device` (Object) - A `StationConnector.Device` object or a specialization of it to disconnect from.
 
-### Initialize
+#### Initialize
 
 This nanoflow sets up communication with the Workstation Client. It should be automatically called through the `initialize` parameter of `GetStation` or `GetCreateDevice`.
 
-### GetStation
+#### GetStation
 
 Call the `GetStation` nanoflow to retrieve the current Workstation Client configuration and devices. This nanoflow creates and returns a station object with a linked device object per peripheral.
 
 To interact with a specific device, it is better to use `GetCreateDevice` instead. `GetCreateDevice` has a more convenient API, allows specialization, and does not create station and device objects which may not be needed.
 
-### SubscribeToObjectChanges
+#### SubscribeToObjectChanges
 
 Call `SubscribeToObjectChanges` to trigger a nanoflow when the specified object changes.  This action has the following parameters:
 
@@ -128,7 +128,7 @@ Call `SubscribeToObjectChanges` to trigger a nanoflow when the specified object 
     * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
 * `applicationContext` (Object) - Optional, an extra object to pass to the callback.
 
-### SubscribeToDeviceMessages
+#### SubscribeToDeviceMessages
 
 Call `SubscribeToDeviceMessages` to trigger a nanoflow when a message is received from a device. This action has the following parameters: 
 
@@ -139,7 +139,7 @@ Call `SubscribeToDeviceMessages` to trigger a nanoflow when a message is receive
     * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
 * `applicationContext` (Object) - Optional, an extra object to pass to the callback.
 
-### SubscribeToDeviceErrors
+#### SubscribeToDeviceErrors
 
 Call `SubscribeToDeviceErrors` to trigger a nanoflow on device connection error. This action has the following parameters: 
 
@@ -152,7 +152,7 @@ Call `SubscribeToDeviceErrors` to trigger a nanoflow on device connection error.
     * The application context, if you provided one, for example `MyContext` of type `MyModule.MyContext`.
 * `applicationContext` (Object) - Optional, an extra object to pass to the callback.
 
-### Unsubscribe
+#### Unsubscribe
 
 Call `Unsubscribe` to end a subscription. This action has the following parameter:
 

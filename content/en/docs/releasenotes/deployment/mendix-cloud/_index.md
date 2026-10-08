@@ -14,6 +14,14 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
   
+## October 2026
+
+### October 5, 2026
+
+#### New Features
+
+* [OpenTelemetry integration](/developerportal/operate/opentelemetry/) now supports HTTP access logs through the OpenTelemetry Collector.
+
 ## August 2026
 
 ### August 31, 2026
@@ -126,6 +134,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 #### New Features
 
 * [Activity logs](/developerportal/operate/logs/#activity-log) are now automatically published to the [Central Audit Logging System](https://ccauditlogs.home.mendix.com/), providing improved visibility and auditability across environments. For more information, refer to [Audit Logs](/control-center/audit-logs/).
+
+### June 1, 2026
+
+#### Deprecations
+
+* The Mendix Basic plan offering is now permanently deprecated. New Mendix Basic licenses are no longer available, and existing Mendix Basic licenses can no longer be renewed.
 
 ## April 2026
 

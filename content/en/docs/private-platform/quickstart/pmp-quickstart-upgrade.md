@@ -20,7 +20,7 @@ Select the upgrade method based on the original installation method. That is to 
     For information about the required Mendix Operator version, refer to the [Private Mendix Platform Release Notes](/releasenotes/private-platform/) for your target release, for example, [2.8.1](/releasenotes/private-platform/2-8/#example). The required version of the Mendix Operator is listed in the *Updates: Other Platform Components* section.
 
 2. If required, use the mxpc-cli configuration tool to upgrade your Mendix Operator. For more information about accessing the tool, see [Install Private Mendix Platform in GUI Mode](/private-mendix-platform/interactive-installation/).
-2. If you are upgrading from version 1.24 LTS to 2.8 LTS, make a backup of the Private Mendix Platform database by using the following command. The backup is required if you need to [roll back the upgrade](#rollback).
+3. If you are upgrading from version 1.24 LTS to 2.8 LTS, make a backup of the Private Mendix Platform database by using the following command. The backup is required if you need to [roll back the upgrade](#rollback).
 
     {{% alert color="info" %}}
     Private Mendix Platform does not support direct upgrades from versions older than 1.24 LTS. To upgrade from a version older than 1.24 LTS, upgrade first to version 1.24, and then upgrade to version 2.8 LTS by following the instructions below.

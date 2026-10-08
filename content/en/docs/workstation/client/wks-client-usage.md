@@ -32,6 +32,7 @@ The **Devices** section shows a list of all devices currently associated with th
 * Availability - When a device shows as **Available**, it is likely connectable. The specifics depend on the device type:
 
     * Bluetooth - Bluetooth devices are scanned continuously. They are considered available if seen, and unavailable if not seen for 30 seconds.
+    * Camera - The Client checks the cameras attached to the computer. The device is available if the name of an attached camera contains the configured **Camera Name**, ignoring case. If no **Camera Name** is configured, the first camera that the Client finds is used.
     * Printer - The Client polls the system printer list. The scan only checks that the device exists, not its status, configuration, or connectivity.
     * Serial device - The Client polls the system port list. The scan only checks that the device exists, not its connectivity.
     * TCP/IP client - The Client only checks that the host is defined and the port is valid. It cannot verify remote connectivity without actually connecting.
@@ -40,6 +41,35 @@ The **Devices** section shows a list of all devices currently associated with th
 * Error status - Shows any error captured for this device. Error status is reset on config change or reconnect.
 
 You can also expand each device to see more information about its connection parameters (for example, the host or port of a TCP/IP server).
+
+### Testing Devices {#testing-devices}
+
+When [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled, you can test a device directly in the Workstation Client, without a Mendix app. This works like the **Test Your Station** page in Workstation Management. To test a device, click the **Test** icon ({{% icon name="flask-conical" %}}) next to the device in the **Devices** section.
+
+The test view shows the following:
+
+* The device type and device class.
+* The availability, connection, and error status of the device.
+* A log of the messages that are sent to the device (`<-`) and received from it (`->`), and of connection changes.
+
+To communicate with the device, perform the following actions:
+
+1. Click **Connect** or **Disconnect** to open or close the connection to the device.
+2. Enter a message in the message field, and then click **Send** or press the **Enter** key. If the device is not connected yet, the Client connects first. If you send an empty message, the last message is sent again.
+
+For the message syntax of each device type, see [Device Message Syntax](/mendix-workstation/device-syntax/).
+
+#### Testing Cameras {#testing-cameras}
+
+For camera devices, the test view also shows the following preconfigured test buttons, so you do not need to enter the commands manually:
+
+* **Start camera** and **Stop camera** - Show or hide a live preview of the camera feed.
+* **Scan barcode** - Scan the current frame for barcodes once. Only works when **Enable Barcode Detection** is enabled for the camera in Workstation Management.
+* **Start barcode detection** and **Stop barcode detection** - Continuously report the barcodes that enter and leave the frame. Only works when **Enable Barcode Detection** is enabled for the camera in Workstation Management.
+* **Start motion detection** and **Stop motion detection** - Report when motion starts and stops in the frame. Only works when **Enable Motion Detection** is enabled for the camera in Workstation Management.
+* **Help** - Show the available camera commands.
+
+If a detection capability is not enabled, its buttons are disabled. To enable barcode or motion detection, edit the camera device in Workstation Management. For more information, see [Configuring Devices: Camera](/mendix-workstation/management-devices/#camera).
 
 ## Additional Actions
 

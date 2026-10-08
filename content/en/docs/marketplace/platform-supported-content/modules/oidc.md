@@ -203,6 +203,9 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
+| 10.24.0 and above | 5.0.0 | - | Use `Token` as the parameter name in custom microflows or if you create a custom microflow based on `ACT_Token_CustomATPRetrieveRoles`. It was previously `AccessToken`. |
+| | | | The microflow `ACT_ShowCusomExceptionMessage` has been renamed to `SUB_ShowCustomExceptionMessage`. |
+| | | | New constant (`GlobalUserProvisioningMicroflow`) has been introduced. It specifies the qualified name of the global user-provisioning microflow that runs after login. |
 | 10.24.0 and above | 4.7.0 | - | A new constant (`EnableAudienceValidation`) has been introduced for API security. Because it is enabled by default, you need to configure the **Resource path** and **Expected audience** value. You can disable audience validation, but Mendix does not recommend this. |
 | 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |
 | 10.24.0 and above | 4.5.0 | - | New Admin UI and new constants have been introduced. |
@@ -766,6 +769,8 @@ By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Con
 Do not change the `UserProvisioning_StandardOIDC` microflow. This may cause problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
 {{% /alert %}}
 
+From version 5.0.0 of the module, the `GlobalUserProvisioningMicroflow` constant specifies the qualified name (`Module.Microflow`) of the global user-provisioning microflow that runs after login. The default value is `OIDC.CUSTOM_UserProvisioning`. The module calls this microflow dynamically, so you can substitute your own flow without modifying the OIDC module. The target microflow must accept an OAuthToken parameter of type `OIDC.Token` and return a `System.User` object.
+
 #### User Provisioning Using a Microflow{#custom-provisioning-mf}
 
 {{% alert color="warning" %}}
@@ -1139,6 +1144,12 @@ authentication in your Mendix App.
 4. In the **PUBLIC KEYS** section, go to the **Configuration** and choose **Use a URL to fetch keys dynamically**.
 5. In the **Url** field, enter the location where your public key is stored. The following is the new endpoint in the OIDC SSO to fetch public keys based on the configured alias For example, `https:/`*`BASE_URL`*`/oauth/v2/jwks/`*`ALIAS`*. Here, *`ALIAS`* is the client alias configured in the OIDC application. For example, Okta.
 6. **Save** the configuration.
+
+### Creating Custom Error Pages
+
+From version 5.0.0 of the OIDC module, you can create a custom error page for your app. For more information, see [Create Custom Error Pages](/howto/front-end/custom-error-page/).
+
+Do not modify the module's default error pages, as changes may be overwritten during upgrades. Add custom HTML files with the same names under `theme/web/error_page/` in your app.
 
 ## URLs
 

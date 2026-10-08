@@ -11,30 +11,28 @@ aliases:
 
 When changing your native mobile app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native mobile apps for expert developers.
 
-## Debugging Your Native App
-
-To start a debugging session, do the following:
-
-1. Run your Mendix app locally on your desktop.
-2. Start the Make It Native app.
-3. Select **Enable dev mode** in the Make It Native app.
-4. Start your app on your mobile device in Mendix Studio Pro by clicking **View App** > **View on your device**.
-5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
-
 {{% alert color="warning" %}}
 **Open DevTools** appears in the developer menu of the Make It Native app, but it does not open React Native DevTools. This is a known issue and a limitation of React Native, which does not include its debugger in release builds of an app. As the Make It Native app is distributed as a release build, you cannot use React Native DevTools with it.
 
-To debug with React Native DevTools, use a custom developer app built with a debug configuration, for example the `devDebug` variant, and select **Enable dev mode** on the initial screen where you enter the host address. For more information, see [Creating a Custom Developer App](/refguide10/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
+To debug with React Native DevTools, use a custom developer app built with a debug configuration, for example the `devDebug` variant. For more information, see [Creating a Custom Developer App](/refguide10/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). To inspect your app in the Make It Native app, use [React Developer Tools](#rn-dev).
 {{% /alert %}}
 
-When a custom developer app built with a debug configuration finishes loading your app, do the following:
+## Debugging Your Native App
+
+To start a debugging session in a custom developer app built with a debug configuration, do the following:
+
+1. Run your Mendix app locally on your desktop.
+2. Start your custom developer app.
+3. Select **Enable dev mode** on the initial screen of the app.
+4. Start your app on your mobile device in Mendix Studio Pro by clicking **View App** > **View on your device**.
+5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
+
+When the custom developer app finishes loading your app, do the following:
 
 1. Open the developer menu by using a three-finger long press.
 2. Tap **Open DevTools**.
 
 React Native DevTools opens on your desktop and connects to your app. You can inspect your app and set breakpoints in its JavaScript files.
-
-The Make It Native app does work with React Developer Tools, as described in the [Using React Developer Tools](#rn-dev) section below.
 
 ### Using React Developer Tools{#rn-dev}
 

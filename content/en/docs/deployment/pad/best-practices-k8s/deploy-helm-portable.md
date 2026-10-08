@@ -10,7 +10,8 @@ description: "Describes how to deploy Mendix Portable Runtime with Helm charts."
 
 Starting with Mendix 12, Mendix on Kubernetes Standalone is deprecated. Customers running applications in private or disconnected Kubernetes environments should migrate to Mendix Portable Runtime as the recommended deployment model. This document provides guidance for migrating a Mendix application deployed using Mendix on Kubernetes Standalone to Mendix Portable Runtime deployed with Helm charts.
 
-Migrating from Mendix on Kubernetes Standalone to Mendix Portable Runtime primarily involves translating operator-managed configuration into Helm-based configuration. You can simplify this process by using an open-source migration utility to generate the initial Portable Runtime configuration, allowing organizations to accelerate adoption while retaining existing databases, storage, and application URLs where appropriate.
+Migrating from Mendix on Kubernetes Standalone to Mendix Portable Runtime primarily involves translating 
+operator-managed configuration into Helm-based configuration. You can simplify this process by using an open-source migration utility to generate the initial Portable Runtime configuration, accelerating adoption while retaining existing databases, storage, and application URLs where appropriate.
 
 {{% alert color="info" %}}
 This migration approach is based on an open-source migration utility and Helm chart templates provided through the Mendix Labs GitHub repositories. These tools are intended as guidance and reference implementations and are not officially supported Mendix Platform features. Customers should validate the generated configuration before using it in production environments.

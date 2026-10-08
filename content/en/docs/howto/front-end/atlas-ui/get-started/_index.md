@@ -40,7 +40,7 @@ When Mendix releases a new version of these modules, these can be updated as reg
 
 ## Customizing Default Look and Feel
 
-Mendix apps come out of the box with the default Atlas look and feel, which can be customized by [changing the theme settings](/howto/front-end/customize-styling-new/) and by [adding custom styling](/howto/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
+Mendix apps come out of the box with the default Atlas look and feel, which can be customized by [changing the theme settings](/howto/front-end/customize-styling-new/) and by [adding custom styling](/howto/front-end/customize-styling-new/). For web apps, the theme settings are CSS variables, such as `--brand-primary`, which you override in the *custom-variables.scss* file of your app. Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
 
 ## Re-Using Designs Across Apps
 

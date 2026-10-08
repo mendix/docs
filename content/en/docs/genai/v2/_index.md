@@ -47,7 +47,7 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
-| [Amazon Bedrock Connector](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/) | Connect to Amazon Bedrock. | 11.3.0 |
+| [Amazon Bedrock Connector](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/) | Connect to Amazon Bedrock. | 11.2.0 |
 | [Google Gemini Connector](/agents/agents-kit-2/reference-guide/external-connectors/gemini/) | Connect to Google Gemini. | 2.0.0 |
 | [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | 7.3.0 |
 | [Mistral Connector](/agents/agents-kit-2/reference-guide/external-connectors/mistral/) | Connect to Mistral AI. | 2.0.0 |

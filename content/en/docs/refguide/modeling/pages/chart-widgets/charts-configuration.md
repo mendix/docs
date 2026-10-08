@@ -168,7 +168,7 @@ Add parameters to a REST request (see [Data source](#data-source)). The contextI
 
 The charts are based on the popular framework plotly.js which uses JSON to configure the charts. In the advanced and developer mode, you can specify additional JSON: unlocking the many features of plotly.js. You can also do this with a live preview.
 
-See the following link for more information about plotly.js and the options: https://plot.ly/javascript/.
+Understanding the plotly.js framework is essential for understanding Mendix widget configuration, because we match their framework closely. See the following link for more information about plotly.js and the options: https://plot.ly/javascript/.
 
 {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/widget-advanced.png" alt="Generic Chart Advanced Tab" class="no-border" >}}
 

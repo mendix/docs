@@ -76,7 +76,7 @@ The search matches text against all four columns (Status, Document name, Module 
 
 #### Context Menu
 
-Right-click any cell in the grid to access the **Copy** option, which copies the cell value to your clipboard. For microflows and workflows, the context menu also contains the **View...** option, which opens a specific version of the document. For more information, see the [Document Types with Read-Only Versions](#read-only-versions) section below.
+Right-click any cell in the grid to access the **Copy** option, which copies the cell value to your clipboard. For microflows and workflows, the context menu also contains the **View** option, which opens a specific version of the document. For more information, see the [Document Types with Read-Only Versions](#read-only-versions) section below.
 
 #### Grid Columns
 
@@ -145,7 +145,7 @@ Property paths are consolidated into a tree view. Grey rows represent intermedia
 
 ## Opening Documents
 
-When you click **Go to** or double-click a document in Level 1 or an element in Level 2, the document opens in the editor. Which version opens depends on the document type, the status of the document, and the type of comparison.
+When you click **Go to** or double-click a document in Level 1 or an element in Level 2, the document opens in the editor. The version that opens depends on the document type, the status of the document, and the type of comparison.
 
 ### Document Types with Read-Only Versions {#read-only-versions}
 
@@ -164,7 +164,7 @@ The table below shows which version opens when you click **Go to** or double-cli
 | **Modified** | The current version opens in edit mode | The version from the newer revision opens in read-only mode |
 | **Deleted** | The version from the selected revision opens in read-only mode | The version from the older revision opens in read-only mode |
 
-To open a specific version, right-click a document in Level 1 and point to **View...**:
+To open a specific version, right-click a document in Level 1 and point to **View**:
 
 | Option | What Opens | Available For |
 |--------|------------|---------------|
@@ -174,11 +174,11 @@ To open a specific version, right-click a document in Level 1 and point to **Vie
 
 ### Other Document Types
 
-For all other document types, the document opens as it currently exists in your app, regardless of the type of comparison. If the document no longer exists in your app, for example because it was deleted, a message indicates that the document no longer exists and nothing opens.
+For all other document types, the document opens as it currently exists in your app, regardless of the type of comparison. If the document no longer exists in your app, for example, because it was deleted, a message indicates that the document no longer exists and nothing opens.
 
 ### Files and Text-Based Properties
 
-For text-based properties, you can double-click a property row or use the context menu to open a detailed side-by-side comparison in the [File Differences Viewer](/refguide/file-diff-viewer/). For modified file-type documents in Level 1, double-click or click **Go to** to open the File Differences Viewer instead of a document editor. You cannot open added or deleted files.
+For text-based properties, double-click a property row or use the context menu to open a detailed side-by-side comparison in the [File Differences Viewer](/refguide/file-diff-viewer/). For modified file-type documents in Level 1, double-click or click **Go to** to open the File Differences Viewer instead of a document editor. You cannot open added or deleted files.
 
 ## Refresh Behavior
 

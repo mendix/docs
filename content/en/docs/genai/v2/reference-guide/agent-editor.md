@@ -372,4 +372,4 @@ You need Agent Editor version 2.4.0 and above to allow Maia to create or edit ag
 
 You must also give permission for Maia to be able to access the tools provided by this extensions. You can enable this in Studio Pro **View** > **Extensions** and set the checkmark next to the `register-ai-tools` permission.
 
-If this permission does not show up in the list of available permissions, delete the Agent Editor add-on module and download it again from the Marketplace. When prompted about the Agent Editor Commons module, choose overwriting the existing module.
+If this permission does not show up in the list of available permissions, delete the Agent Editor add-on module and download it again from Marketplace. When prompted about the Agent Editor Commons module, choose overwriting the existing module.

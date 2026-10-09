@@ -134,6 +134,7 @@ When the `dtapMode` is set to `D` (Development), the Mendix Runtime behaves diff
 * Some log lines are printed at the info level instead of the debug level.
 * Demo users are created if enabled.
 * During shutdown, task queues stop after a shorter grace period.
+* Enables additional websockets.
 
 Do not use Development mode for production environments. Use Production mode (`P`) for environments that require the full security and runtime behavior.
 

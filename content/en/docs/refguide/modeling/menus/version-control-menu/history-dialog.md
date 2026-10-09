@@ -8,9 +8,9 @@ description: "Describes the History pane in Studio Pro, which shows committed ch
 
 Use the **History** pane to see the changes that have been committed to a development line of an app. You can open this pane by selecting **Version Control** > **History** from the menu. The **History** pane displays all revisions at once in a searchable grid, making it easy to view the detailed project history.
 
-{{% alert color="info" %}}
-Studio Pro 11.6 introduced a new default view for History. Partially cloned apps automatically use the older blocking dialog. You can also choose to keep using the blocking dialog for all apps through the [Version Control Preferences](/refguide/preferences-dialog/#history-pane).
 
+{{% alert color="info" %}}
+In Studio Pro versions 11.6-11.14, partially cloned apps automatically use the older blocking **History** dialog. You can choose to use the new version of the dialog in [Version Control Preferences](/refguide/preferences-dialog/#history-pane).
 The Revision Selector still uses the blocking dialog when you select a revision to revert, merge from, create a branch line from, or create a deployment archive from.
 
 For more information on the blocking dialog, see the [Mendix 10 documentation](/refguide10/history-dialog/).

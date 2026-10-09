@@ -124,6 +124,19 @@ When creating a new environment to deploy, you can select the environment purpos
 
 On Private Mendix Platform, environments with the Development and Test purpose set the `dtapMode` to `D` (for Development), while Acceptance and Production environments operate in `dtapMode` `P` (for Production). This association cannot be changed. Please select the appropriate environment purpose when you're creating a new environment.
 
+#### Runtime Behavior in Development Mode {#runtime-behavior-development-mode}
+
+When the `dtapMode` is set to `D` (Development), the Mendix Runtime behaves differently than it does in Production mode. The following changes apply:
+
+* The admin password strength is not verified.
+* The admin password can be a single character (for example, `1`).
+* Project security can be disabled in the model.
+* Some log lines are printed at the info level instead of the debug level.
+* Demo users are created if enabled.
+* During shutdown, task queues stop after a shorter grace period.
+
+Do not use Development mode for production environments. Use Production mode (`P`) for environments that require the full security and runtime behavior.
+
 ## Managing Marketplace Content
 
 If your organization has enabled the Marketplace for your Private Mendix Platform, you can build your own connectors and modules, and then share them on the Marketplace, so that other teams from your organization can use the connector in their own apps.

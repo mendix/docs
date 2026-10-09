@@ -86,7 +86,7 @@ If you are starting from a blank app or adding agent-editing functionality to an
 
 Before proceeding, ensure your app includes the latest versions of the required [dependencies](#dependencies). Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install Agent Editor. 
 
-To check that your app's modules are compatible with the current Agents Kit version, ask Maia to check Agents Kit compatibility. For example, you can ask, “Fix my Agents Kit” or “Make my app compatible.” Maia reports the status of each module (for example, compatible, incompatible, or missing) and installs or updates required modules to compatible Marketplace versions.
+To check that your app's modules are compatible with the current Agents Kit version, ask Maia to check Agents Kit compatibility. For example, you can ask, "Fix my Agents Kit" or "Make my app compatible." Maia reports the status of each module (such as, compatible, incompatible, or missing) and installs or updates required modules to compatible Marketplace versions.
 
 Installation adds two modules to your app:
 

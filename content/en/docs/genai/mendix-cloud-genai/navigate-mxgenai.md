@@ -57,17 +57,38 @@ Click **Export** to export consumption data in CSV format. The export contains i
 
 ## Team
 
-{{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-team.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-team.png" alt="Team page showing the list of resource members with the Technical Contact label next to one member" >}}
 
-The **Team** page allows you to manage access to the Mendix Cloud GenAI resource. By default, internal members listed in this **Overview** have access to the resource in the GenAI resource portal and can create new keys or invite new users. You can add new users via the **Add Member** button and remove them using the **Remove Member** button next to their name in the overview.
+The **Team** page allows you to manage access to the Mendix Cloud GenAI resource. By default, internal members listed in this **Overview** have access to the resource in the GenAI resource portal and can create new keys or invite new users. You can add new users via the **Add Member** button. To remove a member, click the three-dot icon ({{% icon name="three-dots-menu-horizontal-filled" %}}) at the end of the member's row and select **Remove Member**.
+
+### Technical Contact {#technical-contact}
+
+Each resource has one Technical Contact. The Technical Contact is the person who receives notifications about the resource, such as:
+
+* Upcoming model deprecations and new models
+* Planned maintenance
+* Overage alerts, including token limit notifications
+* Other notifications related to the resource
+
+The Technical Contact is responsible for informing the development teams or managers on how to proceed. In the **Overview** tab, the Technical Contact is marked with a **TECHNICAL CONTACT** label next to their name.
+
+When a resource is provisioned, the user selected in the **Technical Contact** section of the provisioning form becomes the Technical Contact. After that, the Technical Contact can be changed to any other member of the resource. A user can be the Technical Contact for multiple resources.
+
+To change the Technical Contact, click the three-dot icon ({{% icon name="three-dots-menu-horizontal-filled" %}}) at the end of the member's row and select **Set as Technical Contact**. Only Mendix Admins and the current Technical Contact can change the Technical Contact. The new Technical Contact does not receive an invitation to accept or decline the role.
+
+{{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-team-technical-contact.png" alt="Team page with the three-dot menu open for a member, showing the Set as Technical Contact and Remove Member options" >}}
+
+{{% alert color="info" %}}
+You cannot remove the Technical Contact from the team. To remove them, first set another member as the Technical Contact.
+{{% /alert %}}
 
 ### Inviting External Members
 
-You can invite members from outside your organization to access your GenAI resources by entering their email address in **Add Member**. This option is available only if your company admin has enabled external user invitations. 
+You can invite members from outside your organization to access your GenAI resources by entering their email address in **Add Member**. This option is available only if your company admin has enabled external user invitations.
 
-You can track invitations in the **Pending Invites** tab. Invited users receive an email with a link to accept or decline the invitation. If they do not yet have a Mendix account, the link redirects them to create one. Once the invitation is accepted, the resource appears in their GenAI portal overview.
+You can track invitations in the **Pending Invites** tab. Invited users receive an email with a link to accept or decline the invitation. If they do not yet have a Mendix account, the link redirects them to create one. When they accept the invitation, the resource appears in their GenAI portal overview.
 
-You can withdraw pending invitations at any time. Invitations automatically expire after two weeks. External members can create and delete keys, export consumption data, manage knowledge base content and collections, and change the model. However, they cannot modify the display name or environment, or manage team membership.
+You can withdraw pending invitations at any time. Invitations automatically expire after two weeks. External members can create and delete keys, export consumption data, manage knowledge base content and collections, and change the model. However, they cannot modify the display name or environment, or manage team membership. If an external member is the [Technical Contact](#technical-contact), they can set another member as the Technical Contact.
 
 ## Keys
 
@@ -156,6 +177,7 @@ The **Settings** tab contains the details of a GenAI resource. It shows the foll
 
 * **Display Name** – The name of the resource.
 * **ID** – The resource ID.
+* **Created For** – The user for whom the resource was originally provisioned. This value does not change. To see who receives notifications about the resource, check the [Technical Contact](#technical-contact) on the **Team** page.
 * **Company** – The company name.
 * **Region(s)** – The region where the resource is hosted.
 * **Cross Region Inference (CRI)** – Indicates whether cross region inference is enabled for this resource ¹.

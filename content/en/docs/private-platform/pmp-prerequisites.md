@@ -90,10 +90,6 @@ Your Mendix app will be deployed with and run by the Private Mendix Platform Ope
 | Prometheus | 3.7.3 |
 | Loki | 2.6.1 |
 
-{{% alert color="info" %}}
-Currently, Private Mendix Platform only supports Grafana configurations with a single Loki and a single Prometheus data source. Configurations using a central Grafana instance with multiple Loki or Prometheus datasources are not supported.
-{{% /alert %}}
-
 #### Supported Cluster Types{#supported-clusters}
 
 We currently support deploying to the following Kubernetes cluster types:
@@ -399,10 +395,10 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Version control | GitLab | Latest | Required for projects and collaboration |
 | Version control | GitHub Enterprise Server | 3.6 or higher | Required for projects and collaboration |
 | Version control | Bitbucket | Latest | Required for projects and collaboration |
-| Version control | Azure DevOps | Latest | Required for projects and collaboration |
+| Version control | Azure DevOps Services | Cloud | Required for projects and collaboration |
 | CI/CD | Kubernetes | See See [Supported Cluster Types](#supported-clusters) | Default for CI/CD |
 | CI/CD | Jenkins | 2.346.1 or newer, with support for the Docker agent | Required for CI/CD |
-| CI/CD | Azure DevOps | Latest | Required for CI/CD |
+| CI/CD | Azure DevOps  | Latest | Required for CI/CD |
 | Logging & Metrics | Prometheus | See [Grafana Integration for Private Mendix Platform](/private-mendix-platform/grafana/) | Required for Logging & Metrics |
 | Logging & Metrics | Grafana | See [Grafana Integration for Private Mendix Platform](/private-mendix-platform/grafana/) | Required for Logging & Metrics |
 | Logging & Metrics | Loki | See [Grafana Integration for Private Mendix Platform](/private-mendix-platform/grafana/) | Required for Logging & Metrics |

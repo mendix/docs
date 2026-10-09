@@ -64,6 +64,10 @@ To bulk-register Workstation Clients, perform the following steps:
 
     On Linux machines, you can use the following script: `mendix-workstation --registration-token {bulk registration token}`.
 
+    {{% alert color="info" %}}
+    The Client requires an unlocked keyring to encrypt its API key. If you run the script from an SSH session, the keyring may not be running or may be locked, and the Client does not start. In that case, unlock the keyring in the SSH session before you run the script. For more information, see [Troubleshooting the Workstation Client: Safe Storage Is Unavailable](/mendix-workstation/troubleshooting-workstation-client/#safe-storage-unavailable).
+    {{% /alert %}}
+
     For more information about the options that the Workstation Client accepts on the command line, see [Command-Line Options](/mendix-workstation/use-client/#command-line-options).
 
     After the command runs or the token is entered manually, the Workstation Clients display the status **Waiting for station assignment**. This indicates that the clients are registered, but not yet associated with a specific station. 

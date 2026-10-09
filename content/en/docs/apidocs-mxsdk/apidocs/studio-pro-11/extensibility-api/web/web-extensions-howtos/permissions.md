@@ -99,9 +99,10 @@ To check if a change affects your extension, compare the old granted state again
 
 The following permissions are available for web extensions:
 
-| Permission | Description |
-|------------|-------------|
-| `runtime-configuration-private` | Allows the extension to access the values of private constants from the active runtime configuration. Without this permission, private constants are returned with `isPrivate: true` and no value. |
+| Permission | Description | Usage | Available since |
+|------------|-------------|-------------|-------------|
+| `runtime-configuration-private` | Allows the extension to access the values of private constants from the active runtime configuration. Without this permission, the API returns private constants with `isPrivate: true` and no value. | [Accessing Private Constants](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-configuration-api/#accessing-private-constants) | Studio Pro 11.9.0 and above |
+| `register-ai-tools` | Allows the extension to register custom AI tools with the Maia agent. | [Using the Tools API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/tools-api/) | Studio Pro 11.12.5 and above and Studio Pro 11.15.0 and above |
 
 ## Extensibility Feedback
 

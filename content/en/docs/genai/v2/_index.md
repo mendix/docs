@@ -36,9 +36,9 @@ The following components are available in Agents Kit 2.
 
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
-| [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 4.3.0 |
-| [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 2.4.0 |
-| [Conversational UI](/agents/agents-kit-2/reference-guide/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 7.3.0 |
+| [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 4.3.1 |
+| [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 2.5.1 |
+| [Conversational UI](/agents/agents-kit-2/reference-guide/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 7.3.1 |
 | [GenAI Commons](/agents/agents-kit-2/reference-guide/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 7.2.0 |
 
 ### Connector Modules {#connectors}
@@ -49,9 +49,9 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 | --- | --- | --- |
 | [Amazon Bedrock Connector](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/) | Connect to Amazon Bedrock. | 11.2.0 |
 | [Google Gemini Connector](/agents/agents-kit-2/reference-guide/external-connectors/gemini/) | Connect to Google Gemini. | 2.0.0 |
-| [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | 7.2.1 |
+| [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | 7.3.0 |
 | [Mistral Connector](/agents/agents-kit-2/reference-guide/external-connectors/mistral/) | Connect to Mistral AI. | 2.0.0 |
-| [OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/) | Connect to OpenAI and Microsoft Foundry. | 9.2.0 |
+| [OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/) | Connect to OpenAI and Microsoft Foundry. | 9.3.0 |
 | [PgVector Knowledge Base](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/) | Manage and interact with a PostgreSQL PgVector knowledge base. | 7.0.0 |
 
 ### MCP Modules {#mcp-modules}

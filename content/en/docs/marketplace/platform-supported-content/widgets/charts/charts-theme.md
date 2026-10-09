@@ -2,49 +2,42 @@
 title: "Use the Charts Theme"
 url: /appstore/widgets/charts-theme/
 weight: 40
-description: "Hos to set up a theme which will be applied to all the charts created with charts widgets in an app"
+description: "How to set up a theme file that applies settings to all charts created with the Charts module in an app."
 aliases:
     - /howto/front-end/charts-theme/
 ---
 
 ## Introduction
 
-The look of individual **Charts** widgets can be fine tuned with advanced settings. A theme allows developers to create global settings that apply to all charts. In this way color, language, font and many more things can be set for all the charts in an app.
+You can fine-tune the look of individual Charts widgets with their advanced settings. A theme file lets you create global settings that apply to all charts in an app. In this way, you can set colors, language, fonts, and many other things for all charts at once.
 
 This how-to teaches you how to do the following:
 
-* Change the font style for all charts
-* Add a theme configuration
+* Find the settings you want with the Chart playground
+* Add a theme configuration file
+* Change the font for all charts
 
 ## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest [Chart Widget](/appstore/widgets/charts/) from the Mendix Marketplace
-* Set up a chart: see [How to create a charts](/howto/front-end/charts-basic-create/)
+* Download the latest [Charts](https://marketplace.mendix.com/link/component/105695/) module from the Mendix Marketplace
+* Set up a chart by following [Create a Basic Chart](/appstore/widgets/charts-basic-create/)
 
 ## Creating a Chart Theme
 
 This is how the original chart looks:
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="chart" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="Line chart with two series and the Toggle Editor button, using the default font" class="no-border" >}}
 
-### Creating an Advanced Custom Configuration
+### Finding the Settings with Chart Playground
 
-To create the required custom configuration easily, follow these steps:
+To find the settings you want, follow these steps:
 
-1. Open the app with the chart (or charts).
-1. Open a page with a chart.
-1. Open the chart settings.
-1. Go to the tab **Advanced**.
-1. Set the **Mode** to **Developer**.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced.png" alt="chart widget properties" class="no-border" >}}
-
-1. Run the app.
-1. Open the page with the chart in the browser.
-1. Click the **Toggle Editor** button.
-1. In the **Layout** section add the **Custom settings**.
+1. Add a [Chart playground](/appstore/widgets/chart-playground/) to your chart, as described in [Opening the Playground](/appstore/widgets/chart-advanced-tuning/#open-playground).
+1. Run the app and open the page with the chart in the browser.
+1. Click **Toggle Editor**.
+1. In the drop-down list, select **Layout**, and add the following JSON to **Custom settings**:
 
     ```json
     {
@@ -56,36 +49,36 @@ To create the required custom configuration easily, follow these steps:
     }
     ```
 
-1. Change the font settings, till the chart shows the required font.
+1. Change the font settings until the chart shows the font you want, then copy the JSON.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="chart editor" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="Chart playground editor open next to a chart with changed font settings" class="no-border" >}}
 
-    {{% alert color="warning" %}}Please note that the editor changes will not persist. They need to be stored in the advanced settings of the widget or stored in the theme.{{% /alert %}}
+    {{% alert color="warning" %}}Changes made in the playground do not persist. Store them in the advanced settings of the widget or in the theme file.{{% /alert %}}
 
-1. In Studio Pro, set **Mode** in the chart to **Advanced**, to remove the Toggle Editor button.
-
-    {{% alert color="warning" %}}Please note that the theme settings only apply to charts in Advanced or Developer mode.{{% /alert %}}
+1. In Studio Pro, remove the Chart playground from the chart, as described in [Removing the Playground](/appstore/widgets/chart-advanced-tuning/#remove-playground).
 
 ### Adding a Theme Configuration
 
-To add a theme file which will apply to all charts in the app, follow these steps:
+To add a theme file that applies to all charts in the app, follow these steps:
 
-1. From Studio Pro, go to the menu **App** > **Show App Directory in Explorer**.
-1. Open the **theme** folder.
-1. Create a new file: *com.mendix.charts.json*
+1. In Studio Pro, go to **App** > **Show App Directory in Explorer** (or **Show App Directory in Finder** on macOS).
+1. Open the *[YOUR-APP]/theme/web* folder (or *[YOUR-APP]/theme/native* if using native apps).
+1. Create a new file named *com.mendix.charts.json*.
 
-    {{% alert color="info" %}}Please note that<br/>
-    * the file name is case sensitive<br/>
-    * the file extension is `json`<br/>
-    * the file must contain a *json* object, even if this is empty—for example `{ }`
-    {{% /alert %}}
+    {{% alert color="info" %}}The file name is case-sensitive, and the file extension is *.json*. The file must contain a JSON object, even if it is empty, for example `{ }`.{{% /alert %}}
+
+1. For each chart that should use the theme, open the chart properties, go to the **Advanced** tab, and set **Enable theme folder config loading** to **Yes**.
+
+    {{% todo %}}[SCR-154: Chart Advanced tab with Enable theme folder config loading set to Yes]{{% /todo %}}
+
+    {{% alert color="info" %}}Charts that have **Enable theme folder config loading** set to **No** ignore the theme file.{{% /alert %}}
 
 ### Changing the Font Globally
 
 To change the font in all charts in the app, follow these steps:
 
-1. Edit the *[app folder]/theme/com.mendix.charts.json* file in a plain text editor.
-1. Replace or update the content. In the **layout** section, place the style changes that were created in the first section of this how to.
+1. Open the *[app folder]/theme/web/com.mendix.charts.json* file in a plain text editor.
+1. Replace or update the content. In the `layout` section, place the font settings that you found in the playground:
 
     ```json
     {
@@ -100,12 +93,55 @@ To change the font in all charts in the app, follow these steps:
     ```
 
 1. Restart the Mendix app.
-1. Validate the expected result.
+1. Check the result.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="chart updated" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="Line chart using the Impact font from the theme file" class="no-border" >}}
+
+## Theme File Structure {#theme-file-structure}
+
+The theme file can contain three top-level properties. At least one of them must be present; otherwise, the file is ignored and a warning is logged in the browser console.
+
+* `layout` – Layout settings applied to all charts. For available options, see [Layout](https://plotly.com/javascript/reference/layout/) in the Plotly documentation.
+* `configuration` – Configuration settings applied to all charts. For available options, see [Configuration Options](https://plotly.com/javascript/configuration-options/) in the Plotly documentation.
+* `charts` – Series settings per chart type. Each key is a chart type, and its value is applied to every series of that chart type. For available options, see the [JavaScript Figure Reference](https://plotly.com/javascript/reference/) in the Plotly documentation. The possible keys are `AreaChart`, `BarChart`, `BubbleChart`, `ColumnChart`, `HeatMap`, `LineChart`, `PieChart`, and `TimeSeries`.
+
+This is an example of a theme file:
+
+```json
+{
+  "layout": {
+    "font": {
+      "family": "Open Sans",
+      "size": 14
+    }
+  },
+  "configuration": {
+    "displayModeBar": false
+  },
+  "charts": {
+    "LineChart": {
+      "line": {
+        "width": 3
+      }
+    },
+    "BarChart": {
+      "opacity": 0.8
+    }
+  }
+}
+```
+
+{{% alert color="warning" %}}
+Use this with caution, because the settings in the theme file apply to every chart in your app that has **Enable theme folder config loading** set to **Yes**. The **Custom layout**, **Custom configurations**, and **Custom series options** set in the widget itself take precedence over the theme file.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+The theme file is not used by the [Custom chart](/appstore/widgets/charts-custom-usage/) widget.
+{{% /alert %}}
 
 ## Read More
 
-* [Charts](/refguide/chart-widgets/)
+* [Charts](/appstore/widgets/charts/)
+* [Chart Playground](/appstore/widgets/chart-playground/)
 * [Layout samples](/refguide/charts-advanced-cheat-sheet/#layout-all)
 * [Configuration samples](/refguide/charts-advanced-cheat-sheet/#config-options)

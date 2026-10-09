@@ -2,9 +2,14 @@
 title: "Chart Configuration"
 url: /refguide10/charts-configuration/
 weight: 10
+description: "Describes the configuration options of the legacy chart widgets, below version 3.0.0."
 ---
 
 ## Introduction
+
+{{% alert color="warning" %}}
+This page describes the legacy chart widgets, below version 3.0.0. For the current Charts module, see [Charts](/appstore/widgets/charts/) in the *Marketplace Guide*.
+{{% /alert %}}
 
 This guide explains the options for configuring chart widgets. Charts are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/105695/). For more documentation, see [Charts](/appstore/widgets/charts/) in the *Marketplace Guide*.
 
@@ -22,11 +27,11 @@ This guide covers the following widgets:
 
 The configuration of *Any chart* widgets is in another document, here: [Any Chart Widgets](/refguide10/charts-any-configuration/).
 
-## Common configuration
+## Common Configuration
 
 The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type), below.
 
-### Chart properties
+### Chart Properties
 
 {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/charts-configuration/line-chart-chart-properties.png" alt="Generic Chart properties dialog" class="no-border" >}}
 
@@ -163,7 +168,7 @@ Add parameters to a REST request (see [Data source](#data-source)). The contextI
 
 The charts are based on the popular framework plotly.js which uses JSON to configure the charts. In the advanced and developer mode, you can specify additional JSON: unlocking the many features of plotly.js. You can also do this with a live preview.
 
-See the following link for more information about plotly.js and the options: https://plot.ly/javascript/.
+Understanding the plotly.js framework is essential for understanding Mendix widget configuration, because we match their framework closely. See the following link for more information about plotly.js and the options: https://plot.ly/javascript/.
 
 {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/charts-configuration/widget-advanced.png" alt="Generic Chart Advanced Tab" class="no-border" >}}
 
@@ -173,7 +178,7 @@ See the following link for more information about plotly.js and the options: htt
     * **Advanced**: specify additional JSON configuration
     * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 
-    {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/charts-configuration/toggle-editor.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/charts-configuration/toggle-editor.png" alt="Toggle Editor button on a chart" class="no-border" >}}
 
 * **Layout options**: The JSON containing the Plotly layout options
     * [Samples](/refguide10/charts-advanced-cheat-sheet/#layout-all)

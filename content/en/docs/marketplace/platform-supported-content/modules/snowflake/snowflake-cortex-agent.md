@@ -13,11 +13,14 @@ Snowflake Cortex Agent is a fully managed, LLM-powered feature that enables you 
 
 {{% alert color="info" %}}
 Snowflake Cortex Agents are available through the Agent REST API. For more information, refer to the the [Snowflake Cortex Agent documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents).
+
+Integrating Snowflake Cortex Agents into your Mendix app also requires the functionalities provided by [Snowflake AI Data Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
 {{% /alert %}}
 
 ## Prerequisites {#prerequisites}
 
 * Make sure that you have access to Snowflake Cortex Agents and that an agent has been created in your Snowflake environment. For more information, refer to the [Snowflake Cortex Agent documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents).
+* Install and configure the [Snowflake AI Data Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
 * Note the **Agent Name**, **Database**, and **Schema** where your agent is deployed in Snowflake. These are required when configuring the request in Mendix.
 * Optional: If your agent uses tools such as custom stored procedures, semantic views, or Cortex Search services, ensure these are configured in Snowflake before connecting from Mendix. For a brief overview, see [Snowflake Agent Tools Overview](#snowflake-agent-tools).
 * Set up one of the following supported authentication methods:

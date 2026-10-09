@@ -16,7 +16,7 @@ Documents available for this topic:
 
 * [Business Event Services](/refguide/business-event-services/)
 
-* [Use the Data Importer](/refguide/use-the-data-importer/)
+* [Data Importer](/refguide/data-importer/)
 
    Overview of how to use the Data Importer to import data from a representative file (Excel and CSV) and create a non-persistable entity in your domain model. 
 

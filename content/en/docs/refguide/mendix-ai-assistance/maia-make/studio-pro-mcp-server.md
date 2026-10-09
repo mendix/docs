@@ -26,6 +26,27 @@ It has the following highlights:
 When you connect external agents or AI tools to Studio Pro's MCP Server, those tools consume tokens from your own LLM provider account each time they interact with Maia. Because these requests occur outside of the Mendix environment, usage and billing details are managed through your LLM provider's dashboard rather than within Mendix.
 {{% /alert %}}
 
+For an overview of all the ways in which Maia works with external AI tools, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
+
+## How It Works {#how-it-works}
+
+The Studio Pro MCP Server runs on your workstation, as part of Studio Pro. It works in the following way:
+
+1. You enable the MCP Server in Studio Pro and connect your external client to it on `localhost`.
+2. Your external client sends a request to its own LLM, which decides to use one of the tools that the MCP Server exposes.
+3. The MCP Server carries out the request with Maia capabilities on the app that is open in Studio Pro.
+4. Studio Pro shows the changes in real time. You can review them in the regular editors and in the **Errors** pane.
+
+The external client works with Mendix documents, such as domain models and microflows, through the tools that the MCP Server exposes.
+
+## Use Cases {#use-cases}
+
+Use the Studio Pro MCP Server in the following situations:
+
+* **You already work with an AI agent** – You use an AI coding assistant for other work, such as code in other repositories, documentation, or tickets. With the MCP Server, you can use the same assistant for your Mendix app.
+* **You combine information from several sources** – Your agent has access to other MCP servers, such as [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/). The agent can use information from these sources and then change your app through the Studio Pro MCP Server.
+* **You need an alternative to Maia Units** – Requests from an external client use your own LLM provider account. For more information, see the [Maia Usage Limits](/refguide/mendix-ai-assistance/#maia-usage) section of *Mendix AI Assistance (Maia)*.
+
 ## Enabling the MCP Server
 
 To enable the MCP Server, go to **Preferences** > **AI** > **MCP Server** and select **Enable MCP Server**. You can also configure the port in this menu.
@@ -38,6 +59,17 @@ Once enabled, you can connect external clients to the MCP Server. For example, t
 
 Replace `<name>` with your preferred server name and `<port>` with the port configured in **Preferences**.
 
+## Working Practices {#working-practices}
+
+The following practices help you get reliable results when you use an external client:
+
+* **Give the agent context** – [Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) and [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/) are also available when you use the MCP Server. Use them to share your conventions with every agent that works on the app.
+* **Keep requests small** – Ask for one feature or one story at a time, so that you can review each change.
+* **Review in Studio Pro** – Check the changed documents and the **Errors** pane before you continue with the next request.
+* **Commit after review** – Commit the changes to version control when you have reviewed and tested them.
+
+For more practices, see the [Working Practices for AI-Assisted Development](/refguide/ai-assisted-development/#working-practices) section of *AI-Assisted and Model-Driven Development*.
+
 ## Limitations
 
 The following limitations apply only to Studio Pro 11.10:
@@ -47,6 +79,8 @@ The following limitations apply only to Studio Pro 11.10:
 
 ## Read More
 
+* [Using Maia with External AI Agents](/refguide/maia-external-agents/)
 * [Maia Make Capabilities](/refguide/maia-make/)
+* [Maia MCP Client](/refguide/maia-mcp/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
 * [Maia Chat](/refguide/maia-chat/)

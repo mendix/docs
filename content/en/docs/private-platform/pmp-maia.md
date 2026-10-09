@@ -9,6 +9,8 @@ weight: 51
 
 Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development. Maia is designed to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality. 
 
+For a description of how Maia supports each stage of the application lifecycle, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/). Not all capabilities on that page are available in Private Mendix Platform. The section below lists the capabilities that are available.
+
 ## Maia Capabilities in Private Mendix Platform
 
 Mendix AI Assistance (Maia) in Private Mendix Platform has the following capabilities: 

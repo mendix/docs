@@ -19,6 +19,8 @@ Maia Make is a set of AI-assisted development capabilities in Studio Pro that ar
 
 You can also ask Maia to provide explanations of your existing documents, such as microflows, workflows, and pages. Moreover, this interface allows you to integrate with external tools, such as Playwright and Figma, via MCP servers. It also supports story-based development by generating app artifacts based on existing user stories.
 
+Maia Make works directly on your app model. It uses your existing domain model and documents as context, and it creates and changes regular Mendix documents. You review the results in the Studio Pro editors, and you can undo them. Because of this, you can use Maia Make in most stages of the application lifecycle, from generating a first version of an app to refactoring and extending an existing one. For more information, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
+
 For guidance on how to best prompt Maia, refer to [Prompt Engineering](/agents/prompt-engineering/).
 
 ## Maia Make Capabilities Overview
@@ -135,6 +137,18 @@ This feature is available for Studio Pro 11.12 and above.
 
 When Maia needs more information, it asks clarifying questions through a dedicated UI to improve the quality of its response.
 
+## Reviewing and Controlling Maia Changes {#reviewing-changes}
+
+Maia changes regular documents in your app. You stay in control of these changes in the following ways:
+
+* **Changed list** – After each request, the [Changed List](#changed-list) shows the documents that Maia added or changed. Select an entry to open the document in its editor.
+* **Consistency checks** – Studio Pro checks the documents that Maia creates or changes for consistency errors, in the same way as the documents that you create yourself. In Studio Pro 11.12.1 and above, you can right-click an item in the **Errors** pane to ask Maia to explain or solve it.
+* **Undo** – In Studio Pro 11.9 and above, you can undo Maia changes per document or for all documents.
+* **Version control** – Maia changes are part of your local changes. You decide when to commit them. For more information, see [Version Control](/refguide/version-control/).
+* **Settings** – You can disable Maia Make capabilities in Studio Pro **Preferences**, on the **Maia** tab.
+
+For practices that help you review and control AI-generated changes, see the [Working Practices for AI-Assisted Development](/refguide/ai-assisted-development/#working-practices) section of *AI-Assisted and Model-Driven Development*.
+
 ## Save a Maia Session {#save-maia-session}
 
 A Maia session contains your conversation history and context, which can help analyze Maia's responses and behavior for troubleshooting or support purposes. To save a Maia session, go to **Help** > **Support Tools** > **Capture Maia Agent Session**.
@@ -243,3 +257,6 @@ You can provide a BPMN image representing employee onboarding alongside your tex
 ## Read More
 
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
+* [AI-Assisted and Model-Driven Development](/refguide/ai-assisted-development/)
+* [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/)
+* [Using Maia with External AI Agents](/refguide/maia-external-agents/)

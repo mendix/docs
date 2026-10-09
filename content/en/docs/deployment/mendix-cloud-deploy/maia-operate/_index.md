@@ -13,4 +13,6 @@ Operating a production application requires continuous monitoring of its health 
 
 Maia Operate simplifies these operational tasks by using data already available in Mendix Cloud to provide AI-powered insights into your running application. It helps you resolve incidents more quickly, reduce investigation time, and spend less effort on routine operational work.
 
+Maia Operate covers the operation stage of the application lifecycle. What you learn from operating your app can become input for the next iteration, which you can plan in Mendix Portal and build in Studio Pro with Maia. For an overview of how Maia supports each stage, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
+
 ## Documents in This Category

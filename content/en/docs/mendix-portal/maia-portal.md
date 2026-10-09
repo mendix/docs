@@ -11,7 +11,9 @@ aliases:
 
 Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development. Maia is designed to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality.
 
-{{< figure src="/attachments/developerportal/global-nav/maia-mendix-portal.jpg" width="500" >}}
+Maia in Mendix Portal supports the planning, collaboration, and feedback stages of the application lifecycle. For example, you can use Maia Plan to define the scope of a new app, and then continue in Studio Pro with Maia Make to build it. For an overview of how Maia supports each stage, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
+
+{{< figure src="/attachments/developerportal/global-nav/maia-mendix-portal.jpg" alt="Maia in Mendix Portal" width="500" >}}
 
 ## Maia Capabilities in Mendix Portal
 

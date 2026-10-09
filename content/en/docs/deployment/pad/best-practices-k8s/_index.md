@@ -3,6 +3,8 @@ title: "Best practices for Kubernetes"
 url: /developerportal/deploy/docker-deploy-k8s/
 weight: 60
 description: "Describes how to use Mendix Portable Runtime to deploy on Kubernetes without installing the Mendix Operator."
+no_list: false 
+description_list: true
 ---
 
 ## Introduction
@@ -444,3 +446,5 @@ If the app cannot connect to the database, check the database credentials in the
 ```text
 kubectl get secret mendix-secret -n mendix-app -o yaml
 ```
+
+## Read More

@@ -368,8 +368,8 @@ In both cases, confirm that the Agent Editor extension is loaded and enabled und
 
 ### Maia Is Unable to Create or Edit Agents or Other Agent Editor Documents
 
-You need Agent Editor version 2.4.0 to allow Maia to create or edit agent editor documents.
+You need Agent Editor version 2.4.0 and above to allow Maia to create or edit agent editor documents.
 
 You must also give permission for Maia to be able to access the tools provided by this extensions. You can enable this in Studio Pro **View** > **Extensions** and set the checkmark next to the `register-ai-tools` permission.
 
-If this permission does not show up in the list of available permissions, delete the Agent Editor add-on module and download it again from Marketplace. When prompted about the AgentEditorCommons module choose overwrite existing module.
+If this permission does not show up in the list of available permissions, delete the Agent Editor add-on module and download it again from the Marketplace. When prompted about the Agent Editor Commons module, choose overwriting the existing module.

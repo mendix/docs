@@ -54,8 +54,7 @@ Below are situations where the use of workflows might not be appropriate:
 
 * Lack of applicability – if not MOST of the criteria outlined in the section above are met, it may not be a suitable use case for workflow implementation.
 * High degree of collaboration and interaction – processes characterized by extensive collaboration and interaction among individuals, where no clear path can be defined, may not align well with workflow structures.
-* Dynamic or unpredictable work – processes that involve dynamic or unknown elements, or where individuals require a high degree of freedom to decide their next actions, may not fit within the constraints of a workflow.
-* Outcome-driven processes – processes focused more on achieving specific outcomes rather than following a predefined series of steps may not be best suited for workflow implementation. It might be beneficial to consider alternative approaches, such as utilizing multiple smaller workflows that are loosely coupled with other logic.
+* Business processes with no clear path from start to finish – a workflow needs a clear path that you can draw. If the whole process has no such path, consider a case management approach with [Mendix Dynamic Case Management](/appstore/partner-solutions/dcm/).
 
 ## Mendix Workflow Use Cases {#use-case}
 

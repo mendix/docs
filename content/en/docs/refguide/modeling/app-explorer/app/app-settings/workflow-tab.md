@@ -17,6 +17,8 @@ Configure workflow-specific settings for your app in the Workflow tab.
 
 **Workflow group(s)** defines groups of users for [user task targeting](/refguide/user-task/#workflow-group). When users are added or removed from the group, the targeted users of a user task change accordingly. For more information, see [Workflow Groups](/refguide/workflow-groups/).
 
+**Group definition** defines where workflow groups are created and managed. When set to **Studio Pro** (default), groups are defined in this tab and synchronized to the database on deployment. When set to **Runtime**, groups are created and deleted in the running app, without redeployment. For more information, see the [Group Definition](/refguide/workflow-groups/#group-definition) section in *Workflow Groups*.
+
 ### Optimization
 
 This section allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values in this field indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows. For more information, see the [Workflow Instance Threads](#workflow-instance-threads) and [Microflow Threads](#microflow-threads) sections below. 

@@ -87,5 +87,5 @@ Keep the following points in mind when you connect external AI tools:
 * [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)
 * [Maia MCP Client](/refguide/maia-mcp/)
 * [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/)
-* [AI-Assisted and Model-Driven Development](/refguide/ai-assisted-development/)
+* [Agentic and Model-Driven Development](/refguide/agentic-development/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)

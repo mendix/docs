@@ -2,14 +2,14 @@
 title: "Mendix AI Assistance (Maia)"
 url: /refguide/mendix-ai-assistance/
 weight: 17
-description: "Describes Mendix AI Assistance (Maia), the AI-assisted development capability that supports you across the application lifecycle in Mendix Portal, Studio Pro, and Mendix Cloud."
+description: "Describes Mendix AI Assistance (Maia), the agentic development capability that supports you across the application lifecycle in Mendix Portal, Studio Pro, and Mendix Cloud."
 aliases:
     - /refguide/mx-assist-studio-pro/
 ---
 
 ## Introduction 
 
-Mendix AI Assistance (Maia) is the AI-assisted development capability of the Mendix Platform. Maia supports you across the full application lifecycle: from learning and planning, through modeling and building, to quality improvement, operation, and the ongoing evolution of your app.
+Mendix AI Assistance (Maia) is the agentic development capability of the Mendix Platform. With agentic development, you give an agent a development goal, and the agent carries out the work: it determines which documents to create or change, uses tools, and asks clarifying questions when it needs more information. You direct the work and review the result. Maia supports you in this way across the full application lifecycle: from learning and planning, through modeling and building, to quality improvement, operation, and the ongoing evolution of your app.
 
 Maia is not a single feature. It is a set of capabilities that share one foundation: the Mendix app model. A Mendix app consists of model documents, such as domain models, pages, microflows, and workflows. Maia reads and changes these same documents. When Maia generates a microflow, the result is a regular microflow that you can open, inspect, and change in Studio Pro, just like a microflow that you model yourself.
 
@@ -18,9 +18,9 @@ This foundation has the following practical results for you as a developer:
 * **Maia is model-aware** – Maia works with your app as context. For example, when Maia generates a page, it knows the domain model of the module that you work in. You can also add specific documents to the conversation as extra context.
 * **You can review everything** – Generated and changed documents appear in the regular Studio Pro editors. Studio Pro checks them for consistency errors in the same way as documents that you create yourself.
 * **You stay in control** – You decide what Maia builds, you review the changes, and you can undo them. You commit the changes to version control when you are satisfied.
-* **Maia is open** – You can extend Maia with your own conventions, connect Maia to external tools, use your own AI provider, or use your own AI agent with Studio Pro.
+* **Maia is open** – You can extend Maia with your own conventions, connect Maia to external tools, use your own AI provider, or use your own agent with Studio Pro. Agent instructions and agent skills follow industry standards, so they work with any agentic tool.
 
-Maia supports professional developers. It does not replace them. Maia takes on tasks such as creating a first version of a document, applying conventions, explaining existing logic, and detecting anti-patterns. You keep ownership of the requirements, the architecture, and the quality of your app. For more information on this approach, see [AI-Assisted and Model-Driven Development](/refguide/ai-assisted-development/).
+Maia works with professional developers. It does not replace them. Maia takes on tasks such as creating a first version of a document, applying conventions, explaining existing logic, and detecting anti-patterns. You keep ownership of the requirements, the architecture, and the quality of your app. For more information on this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
 
 Maia does not use any project, customer, company, or user-entered data for model training. Maia operates on pre-trained, off-the-shelf large language models (LLMs). For more information on Mendix data storage policies and practices for Maia, see [Maia Privacy Policy](https://www.mendix.com/legal/privacy/maia/). 
 
@@ -58,11 +58,11 @@ Maia is available at each stage of the application lifecycle. The table below gi
 
 You can work with Maia in different ways. Choose the way that fits your task:
 
-* **Conversational development in Studio Pro** – Use [Maia Make](/refguide/maia-make/) in the **Maia** pane. Describe what you need, and Maia generates or changes the necessary documents. Use this way for tasks that affect one or more documents, such as a new feature, a refactoring, or an explanation of existing logic.
+* **Agentic development in Studio Pro** – Use [Maia Make](/refguide/maia-make/) in the **Maia** pane. Describe the goal, and Maia creates or changes the necessary documents. Use this way for tasks that affect one or more documents, such as a new feature, a refactoring, or an explanation of existing logic.
 * **In-editor recommendations in Studio Pro** – Use the recommenders while you model. They suggest the next activity, widget, or fix in the editor that you have open. Most recommenders work offline and do not send data to third-party services.
 * **Planning and collaboration in Mendix Portal** – Use [Maia in Mendix Portal](/portal/maia/) to plan an app, write and refine user stories, and organize feedback.
 * **Operations in Mendix Cloud** – Use [Maia Operate](/developerportal/deploy/maia-operate/) to get AI-generated insights into apps that run on Mendix Cloud.
-* **Your own AI agent or AI provider** – Use the [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) to work with Maia from an external AI agent, or [configure a custom AI provider](/refguide/maia-make/#custom-provider) for Maia. For an overview of these options, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
+* **Your own agent or AI provider** – Use the [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) to work with Maia capabilities from your own agent, or [configure a custom AI provider](/refguide/maia-make/#custom-provider) for Maia. For an overview of these options, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
 
 ## Maia Capabilities in Mendix Studio Pro {#maia-capabilities-in-mendix-studio-pro}
 
@@ -72,9 +72,9 @@ Mendix AI Assistance (Maia) in Studio Pro has the following capabilities.
 
 * **Start with Maia** – a starting point in Studio Pro that helps you to start the app development process. Based on a required text description and an optional image or PDF, it generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
 
-### Conversational Development
+### Agentic Development with Maia Make
 
-* **Maia Make** – a unified conversational interface in Studio Pro that groups all AI-assisted development capabilities into a single chat experience. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask Maia to explain documents, such as your app logic and pages. 
+* **Maia Make** – a unified conversational interface in Studio Pro that groups all agentic development capabilities into a single chat experience. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask Maia to explain documents, such as your app logic and pages. 
 
     This unified conversational interface was released in Studio Pro 11.8. For more information, see [Maia Make](/refguide/maia-make/).
 
@@ -188,11 +188,11 @@ The table below presents all the third-party services each Maia capability uses 
 
 For optimal performance, Maia works best when handling focused, well-scoped requests. When working on complex or lengthy content generation tasks, you will get faster and more reliable results by breaking them into smaller, manageable steps. This approach not only reduces the risk of network issues, but often leads to higher-quality outputs that better meet your specific needs.
 
-For more working practices, such as how to give Maia context and how to review its changes, see the [Working Practices for AI-Assisted Development](/refguide/ai-assisted-development/#working-practices) section in *AI-Assisted and Model-Driven Development*.
+For more working practices, such as how to give Maia context and how to review its changes, see the [Working Practices for Agentic Development](/refguide/agentic-development/#working-practices) section in *Agentic and Model-Driven Development*.
 
 ## Read More
 
-* [AI-Assisted and Model-Driven Development](/refguide/ai-assisted-development/)
+* [Agentic and Model-Driven Development](/refguide/agentic-development/)
 * [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/)
 * [Using Maia with External AI Agents](/refguide/maia-external-agents/)
 * [Maia Make Capabilities](/refguide/maia-make/)

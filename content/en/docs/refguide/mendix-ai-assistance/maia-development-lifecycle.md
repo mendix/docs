@@ -10,9 +10,11 @@ description: "Describes how Maia supports you at each stage of the application l
 
 Mendix AI Assistance (Maia) supports you at each stage of the application lifecycle. This document describes each stage. For each stage, it explains what you do, how Maia helps, and which capabilities to use. It also gives example prompts that you can use as a starting point.
 
+In the build stages, Maia works as an agent: you describe the goal, and Maia creates or changes the necessary documents. In other stages, Maia gives guidance, recommendations, or insights.
+
 The stages are not a strict sequence. In practice, you go through them many times, for example, when you add a feature to an existing app. Maia supports each of these iterations.
 
-For the principles behind this approach, see [AI-Assisted and Model-Driven Development](/refguide/ai-assisted-development/).
+For the principles behind this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
 
 ## Discover and Learn {#discover-and-learn}
 
@@ -49,7 +51,7 @@ You have the following options:
 * **Start with Maia** – In Studio Pro, choose the **Start with Maia** starting point. Based on a text description and an optional image or PDF, Maia generates a domain model, data management overview pages, test data, and a homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
 * **Maia Make** – In an existing app, describe a new module or feature in the **Maia** pane. Maia generates the necessary documents. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
-Review the generated app in the same way as any other change. For more information, see the [Review Every Change](/refguide/ai-assisted-development/#working-practices) practice.
+Review the generated app in the same way as any other change. For more information, see the [Review Every Change](/refguide/agentic-development/#working-practices) practice.
 
 ## Model Data {#model-data}
 
@@ -181,7 +183,7 @@ New stories from feedback bring you back to the [Plan and Design](#plan-and-desi
 ## Read More
 
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [AI-Assisted and Model-Driven Development](/refguide/ai-assisted-development/)
+* [Agentic and Model-Driven Development](/refguide/agentic-development/)
 * [Maia Make Capabilities](/refguide/maia-make/)
 * [Maia in Mendix Portal](/portal/maia/)
 * [Maia Operate](/developerportal/deploy/maia-operate/)

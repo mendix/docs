@@ -68,7 +68,7 @@ The following practices help you get reliable results when you use an external c
 * **Review in Studio Pro** – Check the changed documents and the **Errors** pane before you continue with the next request.
 * **Commit after review** – Commit the changes to version control when you have reviewed and tested them.
 
-For more practices, see the [Working Practices for AI-Assisted Development](/refguide/ai-assisted-development/#working-practices) section of *AI-Assisted and Model-Driven Development*.
+For more practices, see the [Working Practices for Agentic Development](/refguide/agentic-development/#working-practices) section of *Agentic and Model-Driven Development*.
 
 ## Limitations
 

@@ -43,14 +43,14 @@ Maia is available at each stage of the application lifecycle. In Studio Pro, Mai
 | Discover and learn | Explains Mendix concepts and answers development questions. | [Maia Learn](/refguide/maia-learn/), [Maia Chat](/refguide/maia-chat/) in Maia Make |
 | Plan and design | Turns an app idea into a project scope, epics, and user stories. | [Maia Plan](/developerportal/maia-plan/), [Create Story with Maia and Refine Story with Maia](/portal/maia/#maia-capabilities-in-mendix-portal) |
 | Generate the app | Generates a first version of an app from a description, an image, a PDF, or a plan. | [Start with Maia](/refguide/start-with-maia/), [Maia Make](/refguide/maia-make/) |
-| Model data | Generates and changes domain models, view entities, enumerations, and OQL queries. | [Maia Make](/refguide/maia-make/) ([domain model](/refguide/maia-for-domain-model/), [OQL](/refguide/maia-for-oql/)) |
+| Model data | Generates and changes domain models, view entities, enumerations, and OQL queries. | [Maia Make](/refguide/maia-make/): [domain models](/refguide/maia-for-domain-model/), [OQL](/refguide/maia-for-oql/) |
 | Create logic | Generates and changes microflows, recommends the next activity in a flow, and builds validation logic. | [Maia Make](/refguide/maia-make/), [Logic Recommender](/refguide/logic-recommender/), [Validation Assist](/refguide/validation-assist/) |
-| Create UI | Generates and changes pages, navigation, menus, and theme styling. Recommends widgets in the page editor. | [Maia Make](/refguide/maia-make/) ([pages](/refguide/maia-for-pages/)), [UI Recommender](/refguide/ui-recommender/) |
-| Create workflows | Generates workflows from a process description or a BPMN image. Recommends the next workflow activity. | [Maia Make](/refguide/maia-make/) ([workflows](/refguide/maia-for-workflows/)), [Workflow Recommender](/refguide/workflow-recommender/) |
+| Create UI | Generates and changes pages, navigation, menus, and theme styling. Recommends widgets in the page editor. | [Maia Make](/refguide/maia-make/): [pages](/refguide/maia-for-pages/), [UI Recommender](/refguide/ui-recommender/) |
+| Create workflows | Generates workflows from a process description or a BPMN image. Recommends the next workflow activity. | [Maia Make](/refguide/maia-make/): [workflows](/refguide/maia-for-workflows/), [Workflow Recommender](/refguide/workflow-recommender/) |
 | Integrate | Creates JSON structures and data transformers, reads public APIs, and uses tools from external MCP servers. | [Maia Make](/refguide/maia-make/), [Maia Web Fetch](/refguide/maia-web-fetch/), [Maia MCP Client](/refguide/maia-mcp/) |
 | Understand and get guidance | Explains existing documents and consistency errors, and applies your team conventions. | [Maia Make](/refguide/maia-make/), [Maia Explain](/refguide/maia-explain/), [Agent Instructions](/refguide/maia-agent-instructions/), [Agent Skills](/refguide/maia-agent-skills/) |
 | Improve quality | Detects anti-patterns, explains their impact, and fixes some of them automatically. Explains and solves consistency errors. | [Best Practice Recommender](/refguide/best-practice-recommender/), [Maia Make](/refguide/maia-make/#maia-make-general-capabilities) |
-| Localize | Creates and updates translations of the texts in your app. | [Maia Make](/refguide/maia-make/), [Translation Generator](/refguide/translation-generator/) |
+| Localize | Creates and updates translations of the texts in your app (Maia Make in Studio Pro 11.15 and above). | [Maia Make](/refguide/maia-make/), [Translation Generator](/refguide/translation-generator/) |
 | Work with external AI agents | Lets external AI agents use Maia capabilities, and lets Maia use your own AI provider. | [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/), [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/), [Custom AI provider](/refguide/maia-make/#custom-provider) (beta) |
 | Operate and evolve | Summarizes application logs, organizes end-user feedback, and changes existing documents for new requirements. | [AI Log Summary](/developerportal/maia-operate/ai-log-summary/) (beta), [Maia for Feedback](/portal/maia/#maia-capabilities-in-mendix-portal), [Maia Make](/refguide/maia-make/) |
 
@@ -74,22 +74,24 @@ Mendix AI Assistance (Maia) in Studio Pro has the following capabilities.
 
 ### Agentic Development with Maia Make
 
-* **Maia Make** – a unified conversational interface in Studio Pro that groups all agentic development capabilities into a single chat experience. Start a conversation, describe what you need, and Maia creates or changes the necessary parts of your model, such as the domain model, microflows, pages, workflows, and translations. In the same conversation, you can ask questions and ask Maia to explain documents, such as your app logic and pages.
+* **Maia Make** – a unified conversational interface in Studio Pro that groups all agentic development capabilities into a single chat experience. Start a conversation, describe what you need, and Maia creates or changes the necessary parts of your model, such as the domain model, microflows, pages, workflows, and, in Studio Pro 11.15 and above, translations. In the same conversation, you can ask questions and ask Maia to explain documents, such as your app logic and pages.
 
     This unified conversational interface was released in Studio Pro 11.8. For more information, see [Maia Make](/refguide/maia-make/).
 
-The following document-specific capabilities are part of Maia Make. Maia for Domain Model and Maia for Pages are part of Maia Make from Studio Pro 11.8. Maia for OQL and Maia for Workflows are part of Maia Make from Studio Pro 11.9. In earlier versions, these capabilities have dedicated interfaces. For version details, see the page of each capability:
+Maia Make replaces the earlier document-specific tools Maia for Domain Model, Maia for Pages, Maia for OQL, and Maia for Workflows. Domain models and pages are part of Maia Make from Studio Pro 11.8. OQL and workflows are part of Maia Make from Studio Pro 11.9. The following pages describe what Maia Make can do for each of these document types, and how the earlier tools work in older versions:
 
-* **Maia for Domain Model** – helps you generate new [domain models](/refguide/domain-model/), and explain and provide suggestions for existing domain models. For more information, see [Maia for Domain Model](/refguide/maia-for-domain-model/). 
-
-    For Private Mendix Platform, this feature is supported for version 11.6 and newer.
-    
-* **Maia for Pages** – helps you generate a [page](/refguide/page/). It helps you add and configure widgets based on a text input and an optional image. After a page is generated, you can continue in the same session to ask Maia for further improvements and explanations. For more information, see [Maia for Pages](/refguide/maia-for-pages/).
+* **Domain models** – Maia generates new [domain models](/refguide/domain-model/), and explains and suggests improvements for existing domain models. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/).
 
     For Private Mendix Platform, this feature is supported for version 11.6 and newer.
 
-* **Maia for OQL** – helps you generate and manage OQL (Object Query Language) queries. It is designed to simplify query creation and reduce manual effort. For more information, see [Maia for OQL](/refguide/maia-for-oql/).
-* **Maia for Workflows** – helps you generate a [workflow](/refguide/workflows/). By providing a use case via text input or an image, Maia can help you start creating your workflows. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/).
+* **Pages** – Maia generates a [page](/refguide/page/) and adds and configures widgets based on a text input and an optional image. You can continue in the same conversation to ask Maia for further improvements and explanations. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
+
+    For Private Mendix Platform, this feature is supported for version 11.6 and newer.
+
+* **OQL** – Maia generates and manages OQL (Object Query Language) queries. For more information, see [OQL in Maia Make](/refguide/maia-for-oql/).
+* **Workflows** – Maia generates a [workflow](/refguide/workflows/) from a use case in text or an image. For more information, see [Workflows in Maia Make](/refguide/maia-for-workflows/).
+
+For all document types that Maia Make supports, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
 
 ### Guidance and Learning
 

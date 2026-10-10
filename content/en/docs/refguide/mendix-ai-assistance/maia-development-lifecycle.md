@@ -20,7 +20,7 @@ For the principles behind this approach, see [Agentic and Model-Driven Developme
 
 In Studio Pro, [Maia Make](/refguide/maia-make/) is the single chat interface for agentic development. In one conversation, you can create and change any part of your app model, such as the domain model, logic, pages, workflows, and translations. In the same conversation, you can ask for guidance and explanations.
 
-You do not need to switch between separate tools for each document type. Pages such as [Maia for Pages](/refguide/maia-for-pages/) and [Maia for Workflows](/refguide/maia-for-workflows/) describe what Maia Make can do for a specific document type. For the version in which support for each document type was introduced, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
+You do not need to switch between separate tools. The earlier document-specific tools, such as Maia for Pages and Maia for Workflows, are consolidated into Maia Make. Pages such as [Pages in Maia Make](/refguide/maia-for-pages/) and [Workflows in Maia Make](/refguide/maia-for-workflows/) describe what Maia Make can do for a specific document type. For the version in which support for each document type was introduced, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*. Translations are available in Maia Make from Studio Pro 11.15.
 
 Next to the chat, the in-editor recommenders and Best Practice Recommender help you while you model by hand.
 
@@ -67,7 +67,7 @@ The domain model is the foundation of every Mendix app. The other documents, suc
 
 Maia helps in the following ways:
 
-* **Maia Make** – Generates new domain models, adds entities, attributes, and associations, and explains or improves existing domain models. In Studio Pro 11.9 and above, it can also work with [view entities](/refguide/view-entities/), enumerations, and constants, and generate OQL queries from a description of the data that you need. For more information, see [Maia for Domain Model](/refguide/maia-for-domain-model/) and [Maia for OQL](/refguide/maia-for-oql/).
+* **Maia Make** – Generates new domain models, adds entities, attributes, and associations, and explains or improves existing domain models. In Studio Pro 11.9 and above, it can also work with [view entities](/refguide/view-entities/), enumerations, and constants, and generate OQL queries from a description of the data that you need. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/) and [OQL in Maia Make](/refguide/maia-for-oql/).
 
 Example prompts:
 
@@ -96,7 +96,7 @@ Pages, navigation, and styling define how end-users experience your app.
 
 Maia helps in the following ways:
 
-* **Maia Make** – Generates pages from a text description and an optional image, such as a wireframe or screenshot. Maia knows the domain model of the module that you work in, so it can connect widgets to your entities. It can also change existing pages. In Studio Pro 11.11 and above, it can work with navigation and menus. In Studio Pro 11.12 and above, it can change theme variables and create custom styling. For more information, see [Maia for Pages](/refguide/maia-for-pages/).
+* **Maia Make** – Generates pages from a text description and an optional image, such as a wireframe or screenshot. Maia knows the domain model of the module that you work in, so it can connect widgets to your entities. It can also change existing pages. In Studio Pro 11.11 and above, it can work with navigation and menus. In Studio Pro 11.12 and above, it can change theme variables and create custom styling. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
 * **UI Recommender** – Recommends widgets while you work in the page editor. For more information, see [UI Recommender](/refguide/ui-recommender/).
 
 Example prompts:
@@ -110,7 +110,7 @@ Workflows model processes that involve people and several steps, such as approva
 
 Maia helps in the following ways:
 
-* **Maia Make** – Generates a workflow from a description of a business process or from a BPMN image, and changes existing workflows. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/).
+* **Maia Make** – Generates a workflow from a description of a business process or from a BPMN image, and changes existing workflows. For more information, see [Workflows in Maia Make](/refguide/maia-for-workflows/).
 * **Workflow Recommender** – Recommends the next best activity while you model a workflow. For more information, see [Workflow Recommender](/refguide/workflow-recommender/).
 
 Example prompt:
@@ -159,7 +159,7 @@ If your app serves users in several countries, it needs translated texts.
 
 Maia helps in the following ways:
 
-* **Maia Make** – Ask Maia in the chat to create or update the translations of texts in your app, as part of the same conversation in which you build the feature.
+* **Maia Make** – In Studio Pro 11.15 and above, ask Maia in the chat to create or update the translations of texts in your app, as part of the same conversation in which you build the feature.
 * **Translation Generator** – Translates the texts in your app that do not have a translation yet in one batch, and translates system texts. For more information, see [Translation Generator](/refguide/translation-generator/).
 
 ## Work with External AI Agents {#external-agents}

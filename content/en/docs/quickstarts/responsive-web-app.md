@@ -145,9 +145,9 @@ You have created a new persistable entity called **Employee**. This means the en
     {{< figure src="/attachments/quickstarts/part1/7.2 CreateAttributes.png" width="450px" alt="Create attributes on an entity">}}
 
 {{% alert type="info" %}}
-You can create a domain model by simply describing your application using [Maia for Domain Model](/refguide/maia-for-domain-model/) an AI-powered tool that generates domain models based on your input.
+You can also create a domain model by describing your application to Maia. Maia generates the domain model based on your input. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/).
 
-To use it, **click Maia for Domain Model** in the **Working Area**, then describe your application in the chat box on the right.
+To use it in Studio Pro 11.8 and above, open the **Maia** pane in the upper-right corner of Studio Pro, then describe your application in the chat. In Studio Pro 11.7 and below, click **Maia for Domain Model** in the **Working Area**, then describe your application in the chat box on the right.
 
 In our case, you can ask Maia: “Create a domain model that stores employee information: first name, last name, job role, and employee ID.” 
 {{% /alert %}}

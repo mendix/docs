@@ -80,6 +80,7 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Themes and styling | Allows Maia to modify theme variables, create custom styling, and manage design properties. | Studio Pro 11.12 | |
 | Markdown attachment support | Allows you to provide Markdown documents as input to help Maia better understand your requirements. | Studio Pro 11.12 | |
 | Explain and solve consistency errors | Allows you to use Maia to explain or solve problems by right-clicking the item in the **Errors** pane. | Studio Pro 11.12.1 | |
+| Translations | Allows Maia to create and update translations of the texts in your app from the chat. | Studio Pro 11.15 | Translations are not a separate document type. Maia works with the translatable texts in your app. |
 
 ## Using Maia Make Capabilities
 

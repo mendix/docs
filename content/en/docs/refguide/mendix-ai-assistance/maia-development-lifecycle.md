@@ -16,6 +16,14 @@ The stages are not a strict sequence. In practice, you go through them many time
 
 For the principles behind this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
 
+## One Conversation for the Whole App Model {#one-conversation}
+
+In Studio Pro, [Maia Make](/refguide/maia-make/) is the single chat interface for agentic development. In one conversation, you can create and change any part of your app model, such as the domain model, logic, pages, workflows, and translations. In the same conversation, you can ask for guidance and explanations.
+
+You do not need to switch between separate tools for each document type. Pages such as [Maia for Pages](/refguide/maia-for-pages/) and [Maia for Workflows](/refguide/maia-for-workflows/) describe what Maia Make can do for a specific document type. For the version in which support for each document type was introduced, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
+
+Next to the chat, the in-editor recommenders and Best Practice Recommender help you while you model by hand.
+
 ## Discover and Learn {#discover-and-learn}
 
 When you start with Mendix, or with a new part of the platform, you need to understand the concepts and how to apply them.
@@ -23,7 +31,7 @@ When you start with Mendix, or with a new part of the platform, you need to unde
 Maia helps in the following ways:
 
 * **Maia Learn** – Guides you through the Mendix core concepts, such as domain models, pages, logic, security, and integrations, directly in Studio Pro. For more information, see [Maia Learn](/refguide/maia-learn/).
-* **Maia Chat** – Answers questions about all aspects of Mendix development. Maia Chat uses sources such as Mendix Docs and the Mendix Community. It is available in Studio Pro and in Mendix Portal. For more information, see [Maia Chat](/refguide/maia-chat/).
+* **Maia Chat** – Answers questions about all aspects of Mendix development. Maia Chat uses sources such as Mendix Docs and the Mendix Community. In Studio Pro 11.8 and above, you ask these questions in the Maia Make chat, so you can move from a question to a change in the same conversation. Maia Chat is also available in Mendix Portal. For more information, see [Maia Chat](/refguide/maia-chat/).
 
 Example prompts:
 
@@ -59,9 +67,7 @@ The domain model is the foundation of every Mendix app. The other documents, suc
 
 Maia helps in the following ways:
 
-* **Maia for Domain Model** – Generates new domain models, adds entities, attributes, and associations, and explains or improves existing domain models. For more information, see [Maia for Domain Model](/refguide/maia-for-domain-model/).
-* **Other data documents** – In Studio Pro 11.9 and above, Maia Make can also work with [view entities](/refguide/view-entities/), enumerations, and constants.
-* **Maia for OQL** – Generates OQL queries from a description of the data that you need. For more information, see [Maia for OQL](/refguide/maia-for-oql/).
+* **Maia Make** – Generates new domain models, adds entities, attributes, and associations, and explains or improves existing domain models. In Studio Pro 11.9 and above, it can also work with [view entities](/refguide/view-entities/), enumerations, and constants, and generate OQL queries from a description of the data that you need. For more information, see [Maia for Domain Model](/refguide/maia-for-domain-model/) and [Maia for OQL](/refguide/maia-for-oql/).
 
 Example prompts:
 
@@ -90,8 +96,7 @@ Pages, navigation, and styling define how end-users experience your app.
 
 Maia helps in the following ways:
 
-* **Maia for Pages** – Generates pages from a text description and an optional image, such as a wireframe or screenshot. Maia knows the domain model of the module that you work in, so it can connect widgets to your entities. It can also change existing pages. For more information, see [Maia for Pages](/refguide/maia-for-pages/).
-* **Navigation, menus, and styling** – In Studio Pro 11.11 and above, Maia Make can work with navigation and menus. In Studio Pro 11.12 and above, it can change theme variables and create custom styling.
+* **Maia Make** – Generates pages from a text description and an optional image, such as a wireframe or screenshot. Maia knows the domain model of the module that you work in, so it can connect widgets to your entities. It can also change existing pages. In Studio Pro 11.11 and above, it can work with navigation and menus. In Studio Pro 11.12 and above, it can change theme variables and create custom styling. For more information, see [Maia for Pages](/refguide/maia-for-pages/).
 * **UI Recommender** – Recommends widgets while you work in the page editor. For more information, see [UI Recommender](/refguide/ui-recommender/).
 
 Example prompts:
@@ -105,7 +110,7 @@ Workflows model processes that involve people and several steps, such as approva
 
 Maia helps in the following ways:
 
-* **Maia for Workflows** – Generates a workflow from a description of a business process or from a BPMN image. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/).
+* **Maia Make** – Generates a workflow from a description of a business process or from a BPMN image, and changes existing workflows. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/).
 * **Workflow Recommender** – Recommends the next best activity while you model a workflow. For more information, see [Workflow Recommender](/refguide/workflow-recommender/).
 
 Example prompt:
@@ -118,7 +123,7 @@ Most apps exchange data with other systems.
 
 Maia helps in the following ways:
 
-* **Integration documents** – Maia Make can create [JSON structures](/refguide/json-structures/) (Studio Pro 11.13 and above) and [data transformers](/refguide/data-transformers/) (Studio Pro 11.12 and above).
+* **Maia Make** – Creates [JSON structures](/refguide/json-structures/) (Studio Pro 11.13 and above) and [data transformers](/refguide/data-transformers/) (Studio Pro 11.12 and above).
 * **Maia Web Fetch** – Reads public API documentation and endpoints, after you approve each request. Maia can use this information when it creates integration documents. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).
 * **Maia MCP Client** – Connects Maia to external MCP servers, such as design tools or source code platforms. Maia can then use the tools of these servers during the conversation. For more information, see [Maia MCP Client](/refguide/maia-mcp/).
 
@@ -128,7 +133,7 @@ You often work on documents that someone else created, or that you created a lon
 
 Maia helps in the following ways:
 
-* **Maia Explain** – Explains the purpose and the technical details of an existing document. In the **App Explorer**, right-click a document and select **Maia Explain**, or ask in the chat. For more information, see [Maia Explain](/refguide/maia-explain/).
+* **Maia Make** – Ask in the chat about any document, concept, or error. Maia Explain describes the purpose and the technical details of an existing document. You can also start it in the **App Explorer**: right-click a document and select **Maia Explain**. For more information, see [Maia Explain](/refguide/maia-explain/).
 * **Explain consistency errors** – In Studio Pro 11.12.1 and above, right-click an item in the **Errors** pane to ask Maia to explain or solve it.
 * **Agent instructions and agent skills** – Give Maia your team conventions and domain knowledge, so that its guidance and output follow your standards. For more information, see [Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) and [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/).
 
@@ -152,9 +157,10 @@ Use these capabilities on all documents, including the documents that Maia gener
 
 If your app serves users in several countries, it needs translated texts.
 
-Maia helps in the following way:
+Maia helps in the following ways:
 
-* **Translation Generator** – Translates the texts in your app that do not have a translation yet, and translates system texts. For more information, see [Translation Generator](/refguide/translation-generator/).
+* **Maia Make** – Ask Maia in the chat to create or update the translations of texts in your app, as part of the same conversation in which you build the feature.
+* **Translation Generator** – Translates the texts in your app that do not have a translation yet in one batch, and translates system texts. For more information, see [Translation Generator](/refguide/translation-generator/).
 
 ## Work with External AI Agents {#external-agents}
 

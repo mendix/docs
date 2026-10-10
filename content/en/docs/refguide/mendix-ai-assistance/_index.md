@@ -36,21 +36,21 @@ For more information on how to ensure optimal performance of Maia, see the [Best
 
 ## Maia Across the Application Lifecycle {#lifecycle}
 
-Maia is available at each stage of the application lifecycle. The table below gives an overview. For a detailed description of each stage, including example prompts, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
+Maia is available at each stage of the application lifecycle. In Studio Pro, Maia Make is the single chat interface for all build stages: in one conversation, you can create and change any part of your model, such as data, logic, UI, workflows, and translations, and ask for guidance. The table below gives an overview. For a detailed description of each stage, including example prompts, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
 
 | Lifecycle Stage | How Maia Helps | Capabilities |
 | --- | --- | --- |
-| Discover and learn | Explains Mendix concepts and answers development questions. | [Maia Learn](/refguide/maia-learn/), [Maia Chat](/refguide/maia-chat/) |
+| Discover and learn | Explains Mendix concepts and answers development questions. | [Maia Learn](/refguide/maia-learn/), [Maia Chat](/refguide/maia-chat/) in Maia Make |
 | Plan and design | Turns an app idea into a project scope, epics, and user stories. | [Maia Plan](/developerportal/maia-plan/), [Create Story with Maia and Refine Story with Maia](/portal/maia/#maia-capabilities-in-mendix-portal) |
 | Generate the app | Generates a first version of an app from a description, an image, a PDF, or a plan. | [Start with Maia](/refguide/start-with-maia/), [Maia Make](/refguide/maia-make/) |
-| Model data | Generates and changes domain models, view entities, enumerations, and OQL queries. | [Maia for Domain Model](/refguide/maia-for-domain-model/), [Maia for OQL](/refguide/maia-for-oql/) |
+| Model data | Generates and changes domain models, view entities, enumerations, and OQL queries. | [Maia Make](/refguide/maia-make/) ([domain model](/refguide/maia-for-domain-model/), [OQL](/refguide/maia-for-oql/)) |
 | Create logic | Generates and changes microflows, recommends the next activity in a flow, and builds validation logic. | [Maia Make](/refguide/maia-make/), [Logic Recommender](/refguide/logic-recommender/), [Validation Assist](/refguide/validation-assist/) |
-| Create UI | Generates and changes pages, navigation, menus, and theme styling. Recommends widgets in the page editor. | [Maia for Pages](/refguide/maia-for-pages/), [UI Recommender](/refguide/ui-recommender/) |
-| Create workflows | Generates workflows from a process description or a BPMN image. Recommends the next workflow activity. | [Maia for Workflows](/refguide/maia-for-workflows/), [Workflow Recommender](/refguide/workflow-recommender/) |
+| Create UI | Generates and changes pages, navigation, menus, and theme styling. Recommends widgets in the page editor. | [Maia Make](/refguide/maia-make/) ([pages](/refguide/maia-for-pages/)), [UI Recommender](/refguide/ui-recommender/) |
+| Create workflows | Generates workflows from a process description or a BPMN image. Recommends the next workflow activity. | [Maia Make](/refguide/maia-make/) ([workflows](/refguide/maia-for-workflows/)), [Workflow Recommender](/refguide/workflow-recommender/) |
 | Integrate | Creates JSON structures and data transformers, reads public APIs, and uses tools from external MCP servers. | [Maia Make](/refguide/maia-make/), [Maia Web Fetch](/refguide/maia-web-fetch/), [Maia MCP Client](/refguide/maia-mcp/) |
-| Understand and get guidance | Explains existing documents and consistency errors, and applies your team conventions. | [Maia Explain](/refguide/maia-explain/), [Agent Instructions](/refguide/maia-agent-instructions/), [Agent Skills](/refguide/maia-agent-skills/) |
+| Understand and get guidance | Explains existing documents and consistency errors, and applies your team conventions. | [Maia Make](/refguide/maia-make/), [Maia Explain](/refguide/maia-explain/), [Agent Instructions](/refguide/maia-agent-instructions/), [Agent Skills](/refguide/maia-agent-skills/) |
 | Improve quality | Detects anti-patterns, explains their impact, and fixes some of them automatically. Explains and solves consistency errors. | [Best Practice Recommender](/refguide/best-practice-recommender/), [Maia Make](/refguide/maia-make/#maia-make-general-capabilities) |
-| Localize | Translates the texts in your app into other languages. | [Translation Generator](/refguide/translation-generator/) |
+| Localize | Creates and updates translations of the texts in your app. | [Maia Make](/refguide/maia-make/), [Translation Generator](/refguide/translation-generator/) |
 | Work with external AI agents | Lets external AI agents use Maia capabilities, and lets Maia use your own AI provider. | [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/), [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/), [Custom AI provider](/refguide/maia-make/#custom-provider) (beta) |
 | Operate and evolve | Summarizes application logs, organizes end-user feedback, and changes existing documents for new requirements. | [AI Log Summary](/developerportal/maia-operate/ai-log-summary/) (beta), [Maia for Feedback](/portal/maia/#maia-capabilities-in-mendix-portal), [Maia Make](/refguide/maia-make/) |
 
@@ -58,7 +58,7 @@ Maia is available at each stage of the application lifecycle. The table below gi
 
 You can work with Maia in different ways. Choose the way that fits your task:
 
-* **Agentic development in Studio Pro** – Use [Maia Make](/refguide/maia-make/) in the **Maia** pane. Describe the goal, and Maia creates or changes the necessary documents. Use this way for tasks that affect one or more documents, such as a new feature, a refactoring, or an explanation of existing logic.
+* **Agentic development in Studio Pro** – Use [Maia Make](/refguide/maia-make/) in the **Maia** pane. It is the single chat interface for building with Maia. Describe the goal, and Maia creates or changes the necessary documents, whether they are data, logic, UI, workflows, or translations. You can also ask questions and get explanations in the same conversation.
 * **In-editor recommendations in Studio Pro** – Use the recommenders while you model. They suggest the next activity, widget, or fix in the editor that you have open. Most recommenders work offline and do not send data to third-party services.
 * **Planning and collaboration in Mendix Portal** – Use [Maia in Mendix Portal](/portal/maia/) to plan an app, write and refine user stories, and organize feedback.
 * **Operations in Mendix Cloud** – Use [Maia Operate](/developerportal/deploy/maia-operate/) to get AI-generated insights into apps that run on Mendix Cloud.
@@ -74,7 +74,7 @@ Mendix AI Assistance (Maia) in Studio Pro has the following capabilities.
 
 ### Agentic Development with Maia Make
 
-* **Maia Make** – a unified conversational interface in Studio Pro that groups all agentic development capabilities into a single chat experience. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask Maia to explain documents, such as your app logic and pages. 
+* **Maia Make** – a unified conversational interface in Studio Pro that groups all agentic development capabilities into a single chat experience. Start a conversation, describe what you need, and Maia creates or changes the necessary parts of your model, such as the domain model, microflows, pages, workflows, and translations. In the same conversation, you can ask questions and ask Maia to explain documents, such as your app logic and pages.
 
     This unified conversational interface was released in Studio Pro 11.8. For more information, see [Maia Make](/refguide/maia-make/).
 
@@ -92,6 +92,8 @@ The following document-specific capabilities are part of Maia Make. Maia for Dom
 * **Maia for Workflows** – helps you generate a [workflow](/refguide/workflows/). By providing a use case via text input or an image, Maia can help you start creating your workflows. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/).
 
 ### Guidance and Learning
+
+In Studio Pro 11.8 and above, Maia Chat and Maia Explain are part of the Maia Make chat interface.
 
 * **Maia Chat** – a built-in chat interface powered by generative AI in Studio Pro. It answers questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/). 
 * **Maia Learn** – helps you to quickly learn Mendix core concepts and get started with Studio Pro. For more information, see [Maia Learn](/refguide/maia-learn/).

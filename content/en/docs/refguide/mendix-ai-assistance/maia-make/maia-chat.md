@@ -33,6 +33,8 @@ To answer questions about Mendix, Maia uses the following data sources:
 
 In Studio Pro 11.8 and above, open the **Maia** pane and ask your question in the chat. There is no separate interface for questions. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
+For the shortcut keys that you can use in the chat, see the [Maia Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*. The same shortcut keys work in Maia Chat in Studio Pro 11.7 and below.
+
 For tips on getting better responses, see the [Best Practices](/portal/maia/#best-practices) section in *Maia in Mendix Portal* or the [Text Input](/refguide/maia-make/#text-input) section of *Maia Make Capabilities*.
 
 ## Maia Chat in Studio Pro 11.7 and Below {#maia-chat-legacy}
@@ -52,7 +54,7 @@ The chat interface appears on the right side of Studio Pro under the **Maia** pa
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-chat/maia-chat-interface.png" alt="" width="250px">}}
 
-You can start using Maia Chat by clicking one of the demo questions. Alternatively, you can ask your own question, and press <kbd>Enter</kbd> or click **Ask** to send the question. For information on the supported shortcut keys in Maia Chat, see the [Maia Chat Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*.
+You can start using Maia Chat by clicking one of the demo questions. Alternatively, you can ask your own question, and press <kbd>Enter</kbd> or click **Ask** to send the question.
 
 ### Giving Feedback {#feedback}
 

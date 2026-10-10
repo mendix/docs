@@ -12,7 +12,7 @@ description: "Describes the features in Studio Pro MCP Server."
 {{% alert color="info" %}}
 This feature is available from Studio Pro 11.10.
 
-To use Studio Pro MCP Server, you need an internet connection and must be signed in to Studio Pro.
+To use Studio Pro MCP Server, you need an internet connection. The MCP Server runs locally on your workstation, so you do not need to be signed in to Studio Pro to use it. To use Mendix platform MCP servers, such as [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/), you need to authenticate with your Mendix account.
 {{% /alert %}}
 
 Studio Pro MCP Server enables bring your own agent (BYO Agent) capabilities, allowing you to use Maia's capabilities directly from external clients, including AI coding assistants, agents, and other MCP-based LLM tools.
@@ -63,7 +63,7 @@ Replace `<name>` with your preferred server name and `<port>` with the port conf
 
 The following practices help you get reliable results when you use an external client:
 
-* **Give the agent context** – [Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) and [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/) are also available when you use the MCP Server. Use them to share your conventions with every agent that works on the app.
+* **Give the agent context** – [Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) and [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/) follow industry standards, so they work with Maia and with other agentic tools. Use them to share your conventions with every agent that works on the app.
 * **Keep requests small** – Ask for one feature or one story at a time, so that you can review each change.
 * **Review in Studio Pro** – Check the changed documents and the **Errors** pane before you continue with the next request.
 * **Commit after review** – Commit the changes to version control when you have reviewed and tested them.

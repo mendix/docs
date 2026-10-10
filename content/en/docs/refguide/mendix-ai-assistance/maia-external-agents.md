@@ -22,7 +22,7 @@ The table below lists the options. Each option connects Maia and external AI too
 | [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) | External AI agents use Maia capabilities in Studio Pro. | You want to work from your own AI agent or AI coding assistant and let it create and change Mendix documents. This is also known as bring your own agent (BYO Agent). | Studio Pro 11.10 |
 | [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/) | External AI agents read Maia Plan content. | You want an external AI agent to use the scope, epics, and stories of a Maia Plan project. | Mendix Portal |
 | [Custom AI provider](/refguide/maia-make/#custom-provider) | Maia uses your LLM provider. | Your organization requires a specific LLM provider, or you need uninterrupted access to Maia without Maia Units. This is also known as bring your own LLM (BYO LLM). | Studio Pro 11.12 (beta) |
-| [Agent Instructions](/refguide/maia-agent-instructions/) and [Agent Skills](/refguide/maia-agent-skills/) | Shared context for Maia and other agents. | You want all agents to follow the same conventions and domain knowledge. | Studio Pro 11.11 (skills), Studio Pro 11.12 (instructions) |
+| [Agent Instructions](/refguide/maia-agent-instructions/) and [Agent Skills](/refguide/maia-agent-skills/) | Shared context for Maia and other agents. | You want all agents to follow the same conventions and domain knowledge. Both follow industry standards, so they work with any agentic tool that supports these standards. | Studio Pro 11.11 (skills), Studio Pro 11.12 (instructions) |
 
 You can combine these options. For example, you can use a custom AI provider for Maia in Studio Pro, and connect Maia to an external MCP server at the same time.
 
@@ -35,7 +35,9 @@ This approach has the following benefits:
 * **Work from one tool** – If you already use an AI agent for other parts of your work, such as code, documentation, or tickets, you can also use it for your Mendix app.
 * **Model-aware changes** – The agent uses Maia capabilities to change your app. It works with Mendix documents, such as domain models and microflows.
 * **Review in Studio Pro** – You review the changes in the Studio Pro editors and in the **Errors** pane, in the same way as changes from Maia in Studio Pro.
-* **Shared conventions** – Agent instructions and agent skills are also available when you use the Studio Pro MCP Server.
+* **Shared conventions** – Agent instructions and agent skills follow the AGENTS.md and Agent Skills standards. They work with Maia and with other agentic tools, so your external agent can use the same conventions as Maia.
+
+The Studio Pro MCP Server runs locally on your workstation, so you do not need to be signed in to Studio Pro to use it. Mendix platform MCP servers, such as Maia Plan as MCP Server, require authentication with your Mendix account.
 
 When you use an external agent, the agent uses tokens from your own LLM provider account. Usage and billing are managed by your LLM provider, not by Mendix.
 
@@ -73,6 +75,7 @@ Repeat steps 5 to 7 for each story. Implement one story at a time, so that each 
 
 Keep the following points in mind when you connect external AI tools:
 
+* **Authentication** – The Studio Pro MCP Server runs locally and does not require you to be signed in to Studio Pro. Mendix platform MCP servers require authentication with your Mendix account.
 * **Credentials** – Store personal access tokens and API keys securely, for example, in environment variables. Do not commit them to version control.
 * **Tool access** – Enable only the MCP tools that Maia needs. Tools from new servers are disabled by default.
 * **Web access** – Maia asks for your approval before it fetches web content. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).

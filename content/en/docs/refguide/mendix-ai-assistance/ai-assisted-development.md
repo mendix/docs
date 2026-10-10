@@ -132,7 +132,7 @@ Run [Best Practice Recommender](/refguide/best-practice-recommender/) on generat
 
 ### Capture Team Knowledge
 
-When you correct Maia for the same reason more than once, write the correction down as an agent instruction or an agent skill. In Studio Pro 11.15 and above, you can ask Maia to create or edit a skill directly in the chat. Skills and instructions are stored in the `skillssource` directory of your app, so they stay with the app instead of with one developer. Module-level skills are also exported together with their module.
+When you correct Maia for the same reason more than once, write the correction down as an agent instruction or an agent skill. In Studio Pro 11.15 and above, you can ask Maia to create or edit a skill directly in the chat. Agent instructions and agent skills follow industry standards, so other agentic tools that your team uses can apply the same knowledge. Skills and instructions are stored in the `skillssource` directory of your app, so they stay with the app instead of with one developer. Module-level skills are also exported together with their module.
 
 ## Read More
 

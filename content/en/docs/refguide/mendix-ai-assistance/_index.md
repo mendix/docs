@@ -40,7 +40,7 @@ Maia is available at each stage of the application lifecycle. In Studio Pro, Mai
 
 | Lifecycle Stage | How Maia Helps | Capabilities |
 | --- | --- | --- |
-| Discover and learn | Explains Mendix concepts and answers development questions. | [Maia Learn](/refguide/maia-learn/), [Maia Chat](/refguide/maia-chat/) in Maia Make |
+| Discover and learn | Explains Mendix concepts and answers development questions. | [Maia Learn](/refguide/maia-learn/), [Maia Make](/refguide/maia-chat/) |
 | Plan and design | Turns an app idea into a project scope, epics, and user stories. | [Maia Plan](/developerportal/maia-plan/), [Create Story with Maia and Refine Story with Maia](/portal/maia/#maia-capabilities-in-mendix-portal) |
 | Generate the app | Generates a first version of an app from a description, an image, a PDF, or a plan. | [Start with Maia](/refguide/start-with-maia/), [Maia Make](/refguide/maia-make/) |
 | Model data | Generates and changes domain models, view entities, enumerations, and OQL queries. | [Maia Make](/refguide/maia-make/): [domain models](/refguide/maia-for-domain-model/), [OQL](/refguide/maia-for-oql/) |
@@ -95,9 +95,9 @@ For all document types that Maia Make supports, see the [Supported Document Type
 
 ### Guidance and Learning
 
-In Studio Pro 11.8 and above, Maia Chat and Maia Explain are part of the Maia Make chat interface.
+In Studio Pro 11.8 and above, you ask questions and request explanations in the Maia Make chat. Maia Make supersedes Maia Chat, the earlier chat interface in Studio Pro.
 
-* **Maia Chat** – a built-in chat interface powered by generative AI in Studio Pro. It answers questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/). 
+* **Questions and guidance** – ask questions about app development in Mendix in the Maia Make chat, including how to apply concepts, best practices, and development patterns. For more information, see [Questions and Guidance in Maia Make](/refguide/maia-chat/). 
 * **Maia Learn** – helps you to quickly learn Mendix core concepts and get started with Studio Pro. For more information, see [Maia Learn](/refguide/maia-learn/).
 * **Maia Explain** – helps you understand existing documents, such as microflows and pages. It explains the general purpose of the document and highlights specific technical details. For more information, see [Maia Explain](/refguide/maia-explain/).
 

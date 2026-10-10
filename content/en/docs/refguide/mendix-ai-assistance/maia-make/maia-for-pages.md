@@ -90,4 +90,4 @@ In Studio Pro 11.6 and above, Maia can understand customized pluggable widgets w
 * [Maia Make Capabilities](/refguide/maia-make/)
 * [Pages](/refguide/page/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Maia Chat](/refguide/maia-chat/)
+* [Questions and Guidance in Maia Make](/refguide/maia-chat/)

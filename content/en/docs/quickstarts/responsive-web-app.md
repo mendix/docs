@@ -92,7 +92,7 @@ When you launch **Studio Pro** for the first time, you’ll see the **Welcom** t
 
 * [Maia Learn](/refguide/maia-learn/) – learning materials to help you get started
 
-* [Maia Chat](/refguide/maia-chat/) – an AI-powered assistant for quick support and guidance
+* [Maia Make](/refguide/maia-make/) – the Maia chat, where you build with Maia and get quick support and guidance
 
 We recommend watching the introduction videos to get familiar with the basic concepts of Mendix development before you start building your app.
 {{% /alert %}}
@@ -260,7 +260,7 @@ Throughout this guide, you built your **Employee** app by hand—dragging entiti
 
 Unlike a typical chatbot that only answers questions, Maia is agentic: it can read your app's current domain model, pages, and logic, understand the context you are working in, and then directly create or modify app elements on your behalf. Ask it to add an entity, generate a page, or build out a microflow, and it will produce real, editable Studio Pro artifacts—not just a suggestion or a code snippet for you to copy in.
 
-Maia is not one single feature but a collection of capabilities woven into Studio Pro. [Maia Make](/refguide/mendix-ai-assistance/), is a conversational interface where you describe what you want in plain language and Maia generates the domain model changes, pages, or microflows to match. Within Maia Make are focused generators (for domain models, pages, workflows, and OQL queries), recommenders that suggest the next best widget or microflow activity as you build, and guidance tools like [Maia Chat](/refguide/maia-chat/) and [Maia Explain](/refguide/mendix-ai-assistance/) for when you want an explanation rather than a change to your app. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
+Maia is not one single feature but a collection of capabilities woven into Studio Pro. [Maia Make](/refguide/mendix-ai-assistance/), is a conversational interface where you describe what you want in plain language and Maia generates the domain model changes, pages, or microflows to match. In the same Maia Make chat, you can create domain models, pages, workflows, and OQL queries, and ask questions or ask [Maia Explain](/refguide/maia-explain/) for an explanation when you want to understand something rather than change your app. Next to Maia Make, recommenders suggest the next best widget or microflow activity as you build. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
 
 ### Try It Yourself: Extending the Employee App
 

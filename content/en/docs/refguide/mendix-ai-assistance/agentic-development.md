@@ -70,7 +70,7 @@ Developers, business analysts, and agents all work with the same model documents
 Agents also make model-driven development stronger. Maia helps in the following areas:
 
 * **Starting** – Maia generates a first version of an app, a module, or a document. You do not start from an empty model.
-* **Learning** – New developers learn Mendix concepts with Maia Learn and get answers in Maia Chat while they model.
+* **Learning** – New developers learn Mendix concepts with Maia Learn and ask questions in the Maia Make chat while they model.
 * **Understanding** – Maia Explain describes the purpose and details of existing logic and pages. This helps when you take over an app that someone else built.
 * **Repetitive work** – Maia creates overview pages, validation logic, translations, and similar repetitive parts. You can focus on the parts that need your expertise.
 * **Consistency** – Agent instructions and agent skills let Maia and other agents apply your team conventions, such as naming rules, every time they create a document.
@@ -97,7 +97,7 @@ Maia offers a range of capabilities, from assistance with single steps to agenti
 
 | Level | What Maia Does | Examples |
 | --- | --- | --- |
-| Guidance | Answers questions and explains concepts or existing documents. Maia does not change your app. | [Maia Chat](/refguide/maia-chat/), [Maia Learn](/refguide/maia-learn/), [Maia Explain](/refguide/maia-explain/) |
+| Guidance | Answers questions and explains concepts or existing documents. Maia does not change your app. | [Questions and guidance in Maia Make](/refguide/maia-chat/), [Maia Learn](/refguide/maia-learn/), [Maia Explain](/refguide/maia-explain/) |
 | Recommendation | Suggests the next step in the editor that you have open, or detects issues in your app model. You decide which suggestion to apply. | [Logic Recommender](/refguide/logic-recommender/), [UI Recommender](/refguide/ui-recommender/), [Workflow Recommender](/refguide/workflow-recommender/), [Best Practice Recommender](/refguide/best-practice-recommender/) |
 | Generation | Creates or changes one or more documents based on your request. | [Start with Maia](/refguide/start-with-maia/), [Maia Make](/refguide/maia-make/) |
 | Agentic development | Carries out a goal that involves several steps or documents. It can ask clarifying questions and use tools, such as external MCP servers or web content. | [Maia Make](/refguide/maia-make/) with [Maia MCP Client](/refguide/maia-mcp/) and [Maia Web Fetch](/refguide/maia-web-fetch/), external agents through the [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) |

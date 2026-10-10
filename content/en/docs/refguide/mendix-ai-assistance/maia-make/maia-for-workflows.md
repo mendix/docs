@@ -55,4 +55,4 @@ Due to the complex cross-document nature of a workflow, not all properties of th
 * [Maia Make Capabilities](/refguide/maia-make/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
 * [Workflow](/refguide/workflows/)
-* [Maia Chat](/refguide/maia-chat/)
+* [Questions and Guidance in Maia Make](/refguide/maia-chat/)

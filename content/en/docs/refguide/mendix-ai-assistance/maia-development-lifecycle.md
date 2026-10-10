@@ -31,7 +31,7 @@ When you start with Mendix, or with a new part of the platform, you need to unde
 Maia helps in the following ways:
 
 * **Maia Learn** – Guides you through the Mendix core concepts, such as domain models, pages, logic, security, and integrations, directly in Studio Pro. For more information, see [Maia Learn](/refguide/maia-learn/).
-* **Maia Chat** – Answers questions about all aspects of Mendix development. Maia Chat uses sources such as Mendix Docs and the Mendix Community. In Studio Pro 11.8 and above, you ask these questions in the Maia Make chat, so you can move from a question to a change in the same conversation. Maia Chat is also available in Mendix Portal. For more information, see [Maia Chat](/refguide/maia-chat/).
+* **Maia Make** – Answers questions about all aspects of Mendix development in the same chat in which you build, so you can move from a question to a change in your app in one conversation. Maia uses sources such as Mendix Docs and the Mendix Community. Maia Make supersedes Maia Chat, the earlier chat interface in Studio Pro. Maia Chat is still available in Mendix Portal. For more information, see [Questions and Guidance in Maia Make](/refguide/maia-chat/).
 
 Example prompts:
 

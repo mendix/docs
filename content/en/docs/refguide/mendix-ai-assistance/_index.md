@@ -108,16 +108,16 @@ In Studio Pro 11.8 and above, you ask questions and request explanations in the 
 * **Maia MCP Client** – connects Maia to external MCP servers, giving it access to third-party tools during chat. For more information, see [Maia MCP Client](/refguide/maia-mcp/).
 * **Maia Web Fetch** – lets Maia fetch and read content from public websites and APIs, after you approve the request. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).
 
-### In-Editor Recommenders
+### Recommenders
 
+* **Best Practice Recommender** – helps you inspect your app against Mendix development best practices. It detects and pinpoints development anti-patterns and, in some cases, fixes them automatically. For more information, see [Best Practice Recommender](/refguide/best-practice-recommender/).
 * **Logic Recommender** – helps you model and configure microflows, nanoflows, and rules in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity based on the activities and parameters that are already configured in your application. For more information, see [Logic Recommender](/refguide/logic-recommender/).
 * **UI Recommender** – helps you add new widgets to a page in Mendix Studio Pro without losing the context of what you are currently working on. For more information, see [UI Recommender](/refguide/ui-recommender/).
 * **Workflow Recommender** – helps you model and configure workflows in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your workflow based on context-related information. For more information, see [Workflow Recommender](/refguide/workflow-recommender/).
 * **Validation Assist** – helps you build validation microflows in a more automated way using pre-built expressions. For more information, see [Validation Assist](/refguide/validation-assist/).
 
-### Quality and Localization
+### Localization
 
-* **Best Practice Recommender** – helps you inspect your app against Mendix development best practices. It detects and pinpoints development anti-patterns and, in some cases, fixes them automatically. For more information, see [Best Practice Recommender](/refguide/best-practice-recommender/).
 * **Translation Generator** – helps you with [batch translate](/refguide/translation-generator/#batch-translate) and [translating system texts](/refguide/translation-generator/#translate-system-text) in the web-based system texts editor. For more information, see [Translation Generator](/refguide/translation-generator/).
 
 ### External AI Agents and AI Providers
@@ -164,7 +164,7 @@ As of Studio Pro 11.12, Maia Make uses Claude Sonnet 4.6.
 
 [Maia Make](/refguide/maia-make/) introduced in Studio Pro 11.8 uses Claude Sonnet 4.5. Any Maia Make capability in Studio Pro 11.8 and above uses this model to generate Mendix models. 
 
-If you [configure a custom AI provider](/refguide/maia-make/#custom-provider), Maia Make sends requests to the provider that you configure instead. OQL generation is an exception: it always uses the Mendix Platform, regardless of the configured AI provider.
+If you [configure a custom AI provider](/refguide/maia-make/#custom-provider), Maia Make sends requests to the provider that you configure instead.
 
 The table below presents all the third-party services each Maia capability uses for Studio Pro versions below 11.8, and what data are sent to the third-party services.
 

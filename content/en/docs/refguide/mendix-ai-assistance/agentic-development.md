@@ -16,8 +16,6 @@ For an overview of all Maia capabilities, see [Mendix AI Assistance (Maia)](/ref
 
 ## What Is Agentic Development {#what-is-agentic-development}
 
-In AI-assisted development, AI helps you with one step at a time. It answers a question, completes a line, or suggests the next activity. You decide and carry out each step yourself.
-
 In agentic development, you give an AI agent a goal, and the agent carries out the development work to reach it. An agent has the following characteristics:
 
 * **It works toward a goal** – You describe the outcome, for example, a new feature or a change to existing logic. The agent determines which documents to create or change.
@@ -47,7 +45,7 @@ In Mendix, an app is a model. The model consists of documents with a defined str
 
 ### A Higher Level of Abstraction
 
-Model elements describe an app at a higher level than code. For example, a **Retrieve** activity in a microflow describes a complete data retrieval, including its source and its constraints. When an agent generates a model, it works at this level. You review the result at the same level, as model elements that you already know.
+Model elements describe an app at a higher level than code. For example, a **Retrieve** activity in a microflow describes a complete data retrieval, including its source and its constraints. When an agent generates a model, it works at this level.
 
 ### Built-in Validation
 
@@ -86,7 +84,7 @@ The table below shows how the work is divided:
 | --- | --- | --- |
 | Requirements | Defines the problem, the scope, and the acceptance criteria. | Helps turn an idea into a scope, epics, and user stories. |
 | Architecture | Decides on the module structure, integrations, and data model. | Proposes domain models and explains existing documents. |
-| Building | Gives goals and context, models complex parts, and refines generated documents. | Creates and changes documents, and recommends next steps in the editors. |
+| Building | Gives goals and context, reviews and refines generated documents, and models parts by hand when needed. | Creates and changes documents, from simple to complex, and recommends next steps in the editors. |
 | Review | Checks each generated or changed document, and decides what to keep. | Shows the list of changed documents, and explains its changes on request. |
 | Quality and security | Owns the quality, security, and performance of the app. | Detects anti-patterns and helps solve consistency errors. |
 | Delivery | Commits the changes, and deploys and operates the app. | Summarizes logs and organizes feedback for the next iteration. |
@@ -136,7 +134,7 @@ After Maia completes a request, review the result:
 1. Open each document in the list of changed items above the chat box.
 2. Check the documents in their editors.
 3. Check the **Errors** pane for consistency errors.
-4. If a change is not what you want, undo it per document or for all documents, and refine your request.
+4. If a change is not what you want, ask Maia to fix it. You can also undo the change per document or for all documents, and refine your request.
 
 You can also ask Maia to explain its changes. Review changes from an external agent in the same way, in the Studio Pro editors and the **Errors** pane.
 

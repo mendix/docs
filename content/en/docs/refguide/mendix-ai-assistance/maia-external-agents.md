@@ -47,7 +47,7 @@ To set up the Studio Pro MCP Server, see the [Enabling the MCP Server](/refguide
 
 By default, Maia uses the Mendix platform AI service. This is the recommended option. It requires no configuration and includes Mendix platform optimizations.
 
-If you configure a custom AI provider, Maia Make sends its requests to the provider that you select, such as Amazon Bedrock or an OpenAI-compatible endpoint. OQL generation is an exception: it always uses the Mendix Platform, regardless of the configured AI provider. Custom AI provider settings are per project and local to your workstation. They are not committed to version control. Some Mendix platform optimizations may not be available with a custom provider.
+If you configure a custom AI provider, Maia Make sends its requests to the provider that you select, such as Amazon Bedrock or an OpenAI-compatible endpoint. Custom AI provider settings are per project and local to your workstation. They are not committed to version control. Some Mendix platform optimizations may not be available with a custom provider.
 
 To configure a custom AI provider, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section of *Maia Make Capabilities*.
 
@@ -79,7 +79,7 @@ Keep the following points in mind when you connect external AI tools:
 * **Credentials** – Store personal access tokens and API keys securely, for example, in environment variables. Do not commit them to version control.
 * **Tool access** – Enable only the MCP tools that Maia needs. Tools from new servers are disabled by default.
 * **Web access** – Maia asks for your approval before it fetches web content. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).
-* **Data** – When you use an external agent or a custom AI provider, your prompts and project context go to that provider. OQL generation with Maia always uses the Mendix Platform. Check that the provider meets the data requirements of your organization. For information on the services that Maia uses by default, see the [Maia Third-Party Services](/refguide/mendix-ai-assistance/#maia-third-party-services) section of *Mendix AI Assistance (Maia)*.
+* **Data** – When you use an external agent or a custom AI provider, your prompts and project context go to that provider. Check that the provider meets the data requirements of your organization. For information on the services that Maia uses by default, see the [Maia Third-Party Services](/refguide/mendix-ai-assistance/#maia-third-party-services) section of *Mendix AI Assistance (Maia)*.
 * **Review** – Changes from an external agent are regular changes to your app. Review them before you commit them.
 
 ## Read More

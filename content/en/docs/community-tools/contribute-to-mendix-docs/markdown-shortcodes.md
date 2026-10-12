@@ -108,19 +108,19 @@ public class Hello1
 
 2. Second list item
 
-### Expandable Tables {#expandable-tables}
+### Expandable Tables
 
 Use the `expandable-table` shortcode to add an **Expand Table** button above a wide table. When readers click the button, the table opens in a window on the same page, which makes it easier to read. Place the table between the opening and closing tags, with a blank line after the opening tag and before the closing tag:
 
 ```md
-{{%/* expandable-table title="Attribute Mapping" */%}}
+{{% expandable-table title="Attribute Mapping" %}}
 
 | IdP Attribute | Configured Entity Attribute |
 | --- | --- |
 | email | Email |
 | name | FullName |
 
-{{%/* /expandable-table */%}}
+{{% /expandable-table %}}
 ```
 
 The optional `title` parameter sets the title shown at the top of the window. If you omit it or leave it blank, the window has no title.
@@ -136,7 +136,24 @@ Here is an example:
 
 {{% /expandable-table %}}
 
-Do not indent the table inside the shortcode, even when the shortcode is part of a list. Indented table rows are rendered as a code block.
+#### Expandable Tables in Lists
+
+To use the shortcode in a list item, indent the shortcode tags and the table by four spaces, like any other content in the list item, and use the `<` delimiter instead of `%`. The shortcode removes the indentation from the table, so the table does not render as a code block:
+
+```md
+1. Review the mapping:
+
+    {{< expandable-table title="Attribute Mapping" >}}
+
+    | IdP Attribute | Configured Entity Attribute |
+    | --- | --- |
+    | email | Email |
+    | name | FullName |
+
+    {{< /expandable-table >}}
+
+2. Continue with the next step.
+```
 
 ### Images (Figures)
 

@@ -7,7 +7,8 @@
         </button>
     </div>
     <div class="expandable-table-inner">
-        {{ .Inner | markdownify | safeHTML }}
+        {{/* Strip leading indentation so tables indented inside a list are not rendered as code blocks */}}
+        {{ .Inner | replaceRE `(?m)^[ \t]+` "" | markdownify | safeHTML }}
     </div>
 </div>
 

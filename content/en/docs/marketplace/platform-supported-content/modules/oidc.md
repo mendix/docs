@@ -372,11 +372,15 @@ In this case, the OIDC client is the app you are making.
 
 9. On the **Creating User** tab, select your **User creation microflow**. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses opaque tokens. You can set up user provisioning by setting the following standard flows:
 
+    {{< expandable-table >}}
+
     | Default Microflow | Use |
     | --- | --- |
     | OIDC_CustomUserParsing_Standard <br>(renamed from UserProvisioning_Standard) | It implements some standard OpenID claims to find/provision a user. |
     | OIDC_CustomUserParsing_UserInfo <br>(renamed from UserProvisioning_UserInfo) | It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
     | OIDC_CustomUserParsing_Salesforce <br>(renamed from UserProvisioning_Salesforce) | It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
+
+    {{< /expandable-table >}}
 
     In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above of the OIDC SSO module, you can set the timezone and language using any standard microflow.
 

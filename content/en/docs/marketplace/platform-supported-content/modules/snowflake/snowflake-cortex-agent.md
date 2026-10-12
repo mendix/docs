@@ -11,10 +11,10 @@ weight: 20
 
 Snowflake Cortex Agent is a fully managed, LLM-powered feature that enables you to build intelligent conversational applications capable of answering business questions by orchestrating across multiple tools - including structured data queries, document search, custom Snowflake procedures, and web search. The agent reasons over user input and selects the most appropriate tool to generate a response.
 
+This functionality is part of the AI Data Connector. For more information about other available functionalities, see [Snowflake AI Data Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
+
 {{% alert color="info" %}}
 Snowflake Cortex Agents are available through the Agent REST API. For more information, refer to the the [Snowflake Cortex Agent documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents).
-
-Integrating Snowflake Cortex Agents into your Mendix app also requires the functionalities provided by [Snowflake AI Data Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
 {{% /alert %}}
 
 ## Prerequisites {#prerequisites}

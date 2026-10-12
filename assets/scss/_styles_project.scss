@@ -807,8 +807,10 @@ body.expandable-table-open {
             display: flex;
         }
 
-        // Auto margins center small tables in the flex container and never clip wide ones
-        .expandable-table-inner table { flex: 0 0 auto; width: auto; margin: 0 auto !important; }
+        // Auto margins center small tables in the flex container; shrinking lets wide tables wrap their text to fit the dialog
+        .expandable-table-inner table { flex: 0 1 auto; width: auto; max-width: 100%; margin: 0 auto !important; }
+        .expandable-table-inner th,
+        .expandable-table-inner td { white-space: normal; overflow-wrap: break-word; }
     }
 }
 

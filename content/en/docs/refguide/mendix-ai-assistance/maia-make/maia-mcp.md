@@ -23,7 +23,7 @@ For details on the current limitations, see the [Limitations](#limitations) sect
 
 There are two ways to open the MCP Client panel:
 
-* Click the **Configure MCP Connections** ({{% icon name="plug" %}}) icon under the **Maia Chat** tab.
+* Click the **Configure MCP Connections** ({{% icon name="plug" %}}) icon under the **Chat** tab of the **Maia** pane.
 * Go to the **View** menu and click **MCP Settings**.
 
 ### Preset Servers {#preset-servers}
@@ -169,4 +169,4 @@ Maia MCP Client has the following limitations:
 ## Read More
 
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Maia Chat](/refguide/maia-chat/)
+* [Questions and Guidance in Maia Make](/refguide/maia-chat/)

@@ -60,4 +60,4 @@ You can attach a maximal of one image or one PDF and the attachment must meet th
 ## Read More
 
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Maia Chat](/refguide/maia-chat/)
+* [Questions and Guidance in Maia Make](/refguide/maia-chat/)

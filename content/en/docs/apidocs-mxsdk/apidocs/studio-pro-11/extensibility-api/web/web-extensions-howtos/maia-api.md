@@ -38,7 +38,7 @@ export const component: IComponent = {
             menuId,
             caption: "Ask Maia about my app",
             action: async () => {
-                await maiaChatApi.setChatPrompt("Explain what this app does and suggest improvements.");
+                await maiaChatApi.setChatPrompt("Explain what this app does and suggest improvements.", true);
             }
         });
     }
@@ -48,17 +48,18 @@ export const component: IComponent = {
 This code does the following:
 
 * It uses `maiaChatApi` from `studioPro.ai.chat` to access the Maia chat API.
-* It adds a menu item named **Ask Maia about my app** that calls `setChatPrompt` to populate the Maia Agent chat input.
+* It adds a menu item named **Ask Maia about my app** that calls `setChatPrompt` to populate the Maia Agent chat input and the true value sends it to Maia without the user reviewing it.
 
 You can also set the prompt from text the user selects in your own editor UI. For example, from a context-menu action on a text area:
 
 ```typescript
 const sendToMaiaHandler = async (textarea: HTMLTextAreaElement | null) => {
     if (textarea) {
-        await studioPro.ai.chat.setChatPrompt(textarea.value);
+        await studioPro.ai.chat.setChatPrompt(textarea.value, false);
     }
 };
 ```
+The value false will allow the user to review the text and hit send themselves in the Maia chat window.
 
 ## Maia Chat API
 
@@ -68,7 +69,7 @@ This API provides a method that allows interacting with the Maia Agent chat.
 
 ### Setting the Chat Prompt
 
-The `setChatPrompt` method takes a `prompt` string and places it into the Maia Agent chat input. The prompt is not sent automatically, so the user can review, edit, and send it. If the Maia tab is not open, it is opened and made active.
+The `setChatPrompt` method takes a `prompt` string and places it into the Maia Agent chat input and an `autoSend` that decides if the prompt will be automatically send to the maia chat(set value to `true`) or if the user can review, edit, and send it(set value to `false`). If the Maia tab is not open, it is opened and made active.
 
 ## Extensibility Feedback
 

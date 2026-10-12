@@ -21,17 +21,17 @@ The preferred maintenance window is a three-hour time range that you can set to 
 
 The preferred maintenance window is used only when environment maintenance is scheduled. Mendix will always inform you about any upcoming maintenance operations in accordance with your SLA.
 
-### Environment Maintenance
+### Environment Maintenance {#environment-maintenance}
 
-Environment maintenance is a maintenance operation that will be (or has been) carried out for an application environment running on Mendix Cloud. It is shown in local time, with the offset from Coordinated Universal Time noted. For example, if you are in a time zone two hours ahead of Coordinated Universal Time, you might see the following environment maintenance message: "Maintenance will be executed between Fri 09/08/2023, 14:00 +0200 and Fri 09/08/2023, 17:00 +0200."
+Environment maintenance is a maintenance operation that will be (or has been) carried out for an application environment running on Mendix Cloud. It is shown in local time, with the offset from Coordinated Universal Time noted. For example, if you are in a time zone two hours ahead of Coordinated Universal Time, you might see the following environment maintenance message: "Maintenance will be executed between Fri 09/08/2023, 14:00 +0200 and Fri 09/08/2023, 17:00 +0200." Whenever possible, environment maintenance is carried out within your preferred maintenance window.
 
-Whenever possible, environment maintenance is carried out within your preferred maintenance window.
+Environment maintenance is announced by email to the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and on the [Maintenance tab](/developerportal/deploy/environments-details/#maintenance-tab). When it is carried out, it is logged on the [Activity](/developerportal/deploy/environments/#activity-tab) tab under the **Maintenance Service** account. No other system or service accounts appear in the Activity log or the activity log on the **Logs** page.
 
 For more information about the status of environment maintenance, refer to the [Planned Maintenance](/developerportal/deploy/environments-details/#planned-maintenance) section in *Environment Details*.
 
 ### Mendix Cloud Maintenance
 
-Mendix Cloud must be updated regularly too. Platform infrastructure maintenance requires an update to an entire Mendix Cloud region at once, so it may occur outside of your preferred maintenance window. Platform maintenance is announced on the [Mendix Platform Status](https://status.mendix.com/#) page.
+Mendix Cloud must be updated regularly too. Platform infrastructure maintenance requires an update to an entire Mendix Cloud region at once, so it may occur outside of your preferred maintenance window. Platform maintenance is announced on the [Mendix Platform Status](https://status.mendix.com/#) page. Platform maintenance does not appear in your application's **Activity** tab.
 
 This infrastructure maintenance uses rolling updates, so multi-instance applications continue to be available. However, applications with a single instance see brief downtime (~1-2 minutes) when their instance is restarted.
 

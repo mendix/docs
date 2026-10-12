@@ -26,9 +26,63 @@ On Linux, the *Mendix Workstation/logs* folder is located at either `$XDG_CONFIG
 * Start the Workstation Client. Click the three-dot icon in the top tight, then click **Logs**. Debug level logs are only available in *Developer Mode*
 * Start the Workstation Client from PowerShell: `start "C:\Program Files\Mendix Workstation\Mendix Workstation.exe" -ArgumentList "--log-level=debug" -wait`.
 
-### Diagnostics
+### Diagnostics {#diagnostics}
 
 When [Developer Mode](/mendix-workstation/management-stations/#developer-mode) is enabled, the Client also shows a **Diagnostics** page. This page displays information about the available devices, credentials, station configuration, system info, and log levels, which you can use to help you troubleshoot any issues.
+
+You can also view some diagnostics in Workstation Management, without access to the computer and regardless of whether Developer Mode is enabled. For more information, see the [Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics) section in *Managing Stations*.
+
+## Safe Storage Is Unavailable {#safe-storage-unavailable}
+
+The Client does not start and shows the following error: *Safe storage is unavailable. Install or unlock the system keyring and retry.* On Linux, the computer may also show a prompt to unlock the keyring.
+
+### Cause
+
+The Client encrypts its API key with the secret store of the operating system, and cannot start without it. On Linux, the secret store is the keyring of the desktop environment, which is usually unlocked with the password that the user enters at login. The Client cannot start in the following cases:
+
+* The keyring is not installed.
+* The keyring is locked.
+* The desktop environment provides no supported keyring. This can be the case with minimal kiosk sessions.
+* The Client is started from an SSH session. No desktop login takes place, so the keyring may not be running or may be locked.
+* The computer logs in automatically, for example a shop floor computer in kiosk mode. No password is entered at login, so the keyring stays locked and the operating system prompts for its password. On an unattended computer, nobody enters it, and the Client does not start.
+
+### Solution
+
+Depending on the cause, use one of the following approaches. For the exact steps, see the documentation of your Linux distribution, desktop environment, or keyring.
+
+{{% alert color="warning" %}}
+Do not work around this issue by setting a blank password for the keyring. The Client then starts and encrypts its API key, but depending on the keyring, its contents may no longer be protected. This could lead to a situation where the credentials of the Client are not protected from being copied off the computer.
+{{% /alert %}}
+
+#### Keyring Not Installed, Locked or Unsupported
+
+Install a supported keyring. On Linux, ensure that the keyring is unlocked. After installing or unlocking the keyring, start the Client again.
+
+#### Client Started from an SSH Session
+
+Before you start the Client, start the keyring service in the SSH session and unlock it with the password of the user. Alternatively, log in to the desktop session of the user on the computer, which unlocks the keyring, and then start the Client.
+
+#### Computer Logs in Automatically
+
+Configure the login of the computer so that it unlocks the keyring.
+
+## Client Must Be Registered Again {#client-registered-again}
+
+After a change to the computer, a previously registered Client shows the registration screen again.
+
+### Cause
+
+The API key of the Client can only be decrypted with the secret store that encrypted it. If the secret store changes, the Client cannot read its credentials. This happens in the following scenarios:
+
+* The configuration folder is copied between computers or into an image, for example for a shared installation.
+* A computer is replaced and its configuration folder is restored from a backup.
+* An administrator resets the password of the user, for installations per user.
+* The keyring changes on Linux.
+* The Client is downgraded from version 4.3 to a lower version.
+
+### Solution
+
+Register the Client again. For more information, see [Registering Workstation Clients](/mendix-workstation/register/).
 
 ## Registration Token Could Not Be Parsed
 

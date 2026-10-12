@@ -53,15 +53,14 @@ To connect your Mendix application to Amazon Athena with the External Database c
 
 For advanced connection use cases, see [Amazon Athena JDBC 3.x connection parameters - Amazon Athena](https://docs.aws.amazon.com/athena/latest/ug/jdbc-v3-driver-connection-parameters.html).
 
-## Metadata Discovery
+## Configuring Metadata Discovery
 
-After a successful connection you would see an error log stating Unrecognized table type: "BASE TABLE" and empty tables/views explorer. The reason of this is, the External Database Connector module does not support AWS Athena out of the box and therefore does not know how to explore tables and view.
+After the connection is established, you will see an error log like the following: *Unrecognized table type: "BASE TABLE"*. The tables and views explorer will be empty.This is because the External Database Connector module does not support Amazon Athena out of the box and therefore cannot explore the tables and views. 
 
-      External Database Connector allows adding a custom Java class for exploring database objects.
-      For more details refer : External Database Connector 
+To enable metadata discovery, you must add a custom Java class for exploring database objects. For more information, see [External Database Connector](/appstore/modules/external-database-connector/#configure-database-schema-information).
 
 ## Running Queries and Handling Query Responses
 
-     Execute queries as you would with supported databases and retrieve responses in the associated         entity. Refer to the documentation of your specific JDBC library for detailed syntax and execution options.
+Execute queries in the same way as you would with the supported databases and retrieve responses in the associated entity. For more information about syntax and execution options, refer to the documentation of your specific JDBC library.
 
-Follow External Database Connector for full usage documentation, including to use query output as an entity and so.
+For full usage documentation, including how to use query output as an entity, see [External Database Connector](/appstore/modules/external-database-connector/#configure-database-schema-information).

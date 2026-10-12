@@ -90,12 +90,12 @@ The default value is `SAML.Default_CreateIDPConfiguration`. This microflow creat
 
 | Approach | `IdPConfiguration_MicroflowName` | Behavior at startup or deployment |
 | --- | --- | --- |
-| Runtime-managed (default) | Not Applicable | No IdP configurations are created or updated automatically. You manage them in the Administration UI. You should not provide the values of the eight constants. To know more about the manadatory constants, see [Setting up Eight Mandatory Constants](/appstore/modules/saml/installation-configuration/#setup-eight-constants). | 
-| Deployment-managed ([easy default flow](/appstore/modules/saml/installation-configuration/#easy-flow)) | `SAML.Default_CreateIDPConfiguration` | IdP configurations are created or updated from the deployment settings. Changes made in the Administration UI are overwritten on restart. |
-| Deployment-managed ([custom](/appstore/modules/saml/installation-configuration/#non-default)) | Name of your custom microflow | Your microflow returns the list of IdP configurations, which the module creates or updates. Changes made in the Administration UI are overwritten on restart. |
+| Runtime-managed (default) | Not Applicable | No IdP configurations are created or updated automatically. You manage them in the Administration UI. You should not provide the values of the eight constants. To know more about the manadatory constants, see [Setting up Eight Mandatory Constants](#setup-eight-constants). | 
+| Deployment-managed ([easy default flow](#easy-flow)) | `SAML.Default_CreateIDPConfiguration` | IdP configurations are created or updated from the deployment settings. Changes made in the Administration UI are overwritten on restart. |
+| Deployment-managed ([custom](#non-default)) | Name of your custom microflow | Your microflow returns the list of IdP configurations, which the module creates or updates. Changes made in the Administration UI are overwritten on restart. |
 
 {{% alert color="warning" %}}
-If you manage IdP configuration in the Administration UI, do not configure [manadatory eight constants]((/appstore/modules/saml/installation-configuration/#setup-eight-constants)). Otherwise, the module can create or update configurations when the app starts (at deploy time).
+If you manage IdP configuration in the Administration UI, do not configure [manadatory eight constants](#setup-eight-constants). Otherwise, the module can create or update configurations when the app starts (at deploy time).
 {{% /alert %}}
 
 ### Easy Default Flow{#easy-flow}
@@ -158,7 +158,7 @@ After configuring the eight constants, you need to deploy the application. For d
 
 {{% alert color="info" %}}It is recommended to modify the values using constants. Any changes made from the runtime screen will be overwritten by the constant values upon restarting the app.{{% /alert %}}
 
-### Non-default (custom) Configuration{#non-default}
+### Non-Default (Custom) Configuration{#non-default}
 
 The [Easy Default Flow](#easy-flow) section above gives you an overview of the default settings. If you have requirements to deviate from these defaults, for example, to enable Force Authentication, change encryption settings from the default, or support multiple Identity Providers (IdPs), Non-default (custom) 
 configuration setup offers advanced options for your SAML integration needs. With these features, you can customize the SAML configuration to meet your specific requirements.

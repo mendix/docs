@@ -9,7 +9,7 @@ description: "Describes the list of IdP Attributes for the SAML module"
 
 ## Introduction
 
-This document provides you with a detailed description of each IdP attribute and its default value for deploy-time configuration. You need to use these attributes when configuring the SAML module to create the IdP configuration. For more details, see [Non-default Configuration](/appstore/modules/saml/installation-configuration/#non-default).
+This document provides you with a detailed description of each IdP attribute and its default value for deploy-time configuration. You need to use these attributes when configuring the SAML module to create the IdP configuration. For more details, see [Non-default (Custom) Configuration](/appstore/modules/saml/installation-configuration/#non-default).
 
 ## Identity Configuration
 

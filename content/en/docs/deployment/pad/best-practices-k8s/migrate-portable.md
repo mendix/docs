@@ -12,51 +12,60 @@ The Mendix Portable Runtime Helm Chart provides a reference deployment template 
 
 This deployment approach is intended for customers who want to run Mendix Portable Runtime in self-managed Kubernetes environments without using the Mendix Operator. The chart can serve as a starting point for production deployments and can be extended to meet organisation-specific requirements.
 
-Note
-
+{{% alert color="info" %}}
 The Helm Chart is provided as an open-source Mendix Labs project and should be considered a reference implementation and deployment template. Customers are responsible for validating, maintaining, and adapting the chart to their infrastructure, security, and operational standards. Mendix supports the Mendix Portable Runtime package itself, but not the open-source Helm Chart implementation. 
+{{% /alert %}}
 
-Prerequisites
-Before deploying a Mendix Portable Runtime application using Helm, ensure that you have:
+### Open Source Disclaimer
 
-A Mendix Portable Runtime deployment package
+The Mendix Portable Runtime Helm Chart is an open-source Mendix Labs project provided for guidance purposes. The repository serves as a deployment template demonstrating one possible approach for running Mendix Portable Runtime applications on Kubernetes and OpenShift environments. Customers should review and adapt the implementation to align with their platform standards and operational requirements.
 
-A container image containing your Mendix application
+### Support Considerations
 
-Helm 3.x installed
+The Helm Chart provides deployment automation for Kubernetes resources but does not change the Mendix Portable Runtime support model.
 
-Kubernetes 1.34+ or OpenShift 4.x
+Mendix supports the Portable Runtime package and runtime capabilities. Customers remain responsible for the following tasks:
 
-Access to a Kubernetes or OpenShift cluster
+* Kubernetes cluster management
+* Container image management
+* Security hardening
+* Networking and ingress configuration
+* Storage configuration
+* Backup and disaster recovery procedures
+* Operational monitoring and alerting
 
-Database and storage services provisioned for your application requirements
+The Helm Chart should therefore be treated as a deployment accelerator rather than a fully supported deployment product.
 
-For information on creating Portable Runtime deployment packages, see Mendix Portable Runtime. 
+## Prerequisites
 
-Obtaining the Helm Chart
-The reference Helm Chart is available from the Mendix Labs GitHub repository:
+Before deploying a Mendix Portable Runtime application using Helm, ensure that you have the following prerequisites:
 
-Mendix Portable Runtime Helm Charts Repository
+* A Mendix Portable Runtime deployment package
+* A container image containing your Mendix application
+* Helm 3.x installed
+* Kubernetes 1.34+ or OpenShift 4.x
+* Access to a Kubernetes or OpenShift cluster
+* Database and storage services provisioned for your application requirements
 
-The repository contains:
+For information on creating Portable Runtime deployment packages, see [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/). 
 
-Helm chart templates
+## Obtaining the Helm Chart
 
-Example deployment configurations
+The reference Helm Chart is available from the [Mendix Portable Runtime Helm Charts Repository](https://github.com/mendixlabs/mendix-portable-runtime-helm-charts).
 
-Sample configuration files
+The repository contains the following artifacts:
 
-Kubernetes and OpenShift deployment examples
+* Helm chart templates
+* Example deployment configurations
+* Sample configuration files
+* Kubernetes and OpenShift deployment examples
+* Documentation and usage guidance 
 
-Documentation and usage guidance 
+## Helm Chart Structure
 
-Helm Chart Structure
 The chart follows a standard Helm layout:
 
- 
-
-
-
+```text
 mendix-portable-runtime/
 ├── Chart.yaml
 ├── values.yaml
@@ -73,132 +82,93 @@ mendix-portable-runtime/
 └── examples/
     ├── dev-simple.yaml
     └── custom-config.conf
-The templates directory contains Kubernetes resource definitions, while values.yaml provides the deployment configuration used during chart installation. 
+```
 
-How the Helm Chart Works
+The templates directory contains Kubernetes resource definitions, while *values.yaml* provides the deployment configuration used during chart installation. 
+
+### How the Helm Chart Works
+
 The Helm Chart deploys a container image containing a Mendix Portable Runtime application. During startup, the application is launched using the standard Portable Runtime startup mechanism:
 
- 
-
-
-
+```text
 ./bin/start <baseConfig> [customConfigFile...]
 `
- 
+```
 
 Configuration is applied using the Portable Runtime layered configuration model:
 
- 
-
-
-
+```text
 Base Configuration
    ↓
 Environment Variables
    ↓
 Custom Configuration Files
 `
+```
+
 This model enables common settings to be maintained in a base configuration while environment-specific overrides are supplied through mounted configuration files or environment variables. 
 
-Installing the Chart
-Clone or download the Helm Chart repository and navigate to the chart directory.
+## Installing the Chart
 
-Install the application using:
+To install the Helm Chart, perform the following steps:
 
- 
+1. Clone or download the Helm Chart repository and navigate to the chart directory.
+2. Install the application by running the following command:
 
-
-
+```text
 helm install myapp . \
   -f examples/dev-simple.yaml \
   -n <namespace>
-To preview the generated Kubernetes resources before deployment, run:
+```
 
+3. To preview the generated Kubernetes resources before deployment, run the following command:
 
-
+```text
 helm template myapp . \
   -f examples/dev-simple.yaml
-To upgrade an existing deployment:
+```
 
+### Upgrading a Deployment
 
+To upgrade an existing deployment, run the following command:
 
+```text
 helm upgrade myapp . \
   -f examples/dev-simple.yaml \
   -n <namespace>
-To uninstall the deployment:
+```
 
+### Uninstalling a Deployment
 
+To uninstall the deployment, run the following command:
 
+```text
 helm uninstall myapp \
   -n <namespace>
- 
+``` 
 
-Configuring the Deployment
-The primary deployment configuration is stored in:
+## Configuring the Deployment
 
-values.yaml
+The primary deployment configuration is stored in *values.yaml*. The chart exposes configuration options for ingress and Openshift Route in the following sections:
 
-The chart exposes configuration options for ingress / Openshift Route.
+* `image` - Container image repository and tag or digest
+* `runtime` - Portable Runtime configuration
+* `env` - Environment variables
+* `secrets` - Secret creation
+* `secretKeyRefs` - References to external Kubernetes secrets
+* `configMaps` - ConfigMap creation and mounting
+* `ingress` - Kubernetes Ingress configuration
+* `route` - OpenShift Route configuration
+* `storage` - Persistent storage configuration
+* `resources` - CPU and memory requests and limits
+* `livenessProbe` - Runtime health monitoring
+* `readinessProbe` - Traffic readiness validation
 
-Section
+### Using Custom Configuration Files
 
-Description
+Portable Runtime supports layered configuration through external configuration files. The Helm Chart allows configuration files to be mounted through Kubernetes ConfigMaps:
 
-image
-
-Container image repository and tag or digest
-
-runtime
-
-Portable Runtime configuration
-
-env
-
-Environment variables
-
-secrets
-
-Secret creation
-
-secretKeyRefs
-
-References to external Kubernetes secrets
-
-configMaps
-
-ConfigMap creation and mounting
-
-ingress
-
-Kubernetes Ingress configuration
-
-route
-
-OpenShift Route configuration
-
-storage
-
-Persistent storage configuration
-
-resources
-
-CPU and memory requests and limits
-
-livenessProbe
-
-Runtime health monitoring
-
-readinessProbe
-
-Traffic readiness validation
-
-Using Custom Configuration Files
-Portable Runtime supports layered configuration through external configuration files.
-
-The Helm Chart allows configuration files to be mounted through Kubernetes ConfigMaps:
-
-
-
+```text
 runtime:
   baseConfig: "etc/Default"
   customConfigFiles:
@@ -207,109 +177,93 @@ runtime:
       key: custom-config.conf
       filename: custom-config.conf
       mountPath: /opt/app/etc
-Example configuration file:
+```
 
+#### Example Configuration File
 
-
+```text
 runtime {
   params {
     "DTAPMode" = "D"
     "SessionTimeout" = 2 minutes
   }
 }
+```
+
 Configuration values supplied through environment variables take precedence over configuration file settings. 
 
-Managing Secrets
+## Managing Secrets
+
 Database credentials and application secrets can be supplied through Kubernetes Secrets.
 
-Referencing Existing Secrets
+### Referencing Existing Secrets
 
-
+```text
 secretKeyRefs:
   - envName: RUNTIME_PARAMS_DATABASEJDBCURL
     secretName: my-db-secret
     key: DATABASE_URL
-Importing All Secret Values
+```
+
+### Importing All Secret Values
  
-
-
-
+```text
 secretEnvFrom:
   - name: my-db-secret
-Creating Secrets Through the Chart
+```
 
+### Creating Secrets Through the Chart
 
+```text
 secrets:
   - name: db-credentials
     stringData:
       DATABASE_URL: jdbc:postgresql://host:5432/db 
- 
+``` 
 
 For production environments, it is recommended to use externally managed Kubernetes secrets. 
 
-Operations and Monitoring
+## Operations and Monitoring
+
 The following commands can be used to manage the deployment.
 
-List running pods:
+### Listing Running Pods
 
+```text
 kubectl get pods -n <namespace>
+```
 
-View application logs:
+### Viewing Application Logs
 
- 
-
-
-
+```text
 kubectl logs \
   -l app=myapp-mendix-portable-runtime \
   -n <namespace>
-Restart the deployment after updating ConfigMaps or Secrets:
+```
 
+### Restarting the Deployment after Updating ConfigMaps or Secrets
 
-
+```text
 kubectl rollout restart deployment \
   myapp-mendix-portable-runtime \
   -n <namespace>
-View configured Ingress resources:
+```
 
+### Viewing Configured Ingress Resources
+
+```text
 kubectl get ingress -n <namespace>
+```
 
-For OpenShift deployments, view Routes:
+### Viewing Routes for OpenShift Deployments
 
+```text
 kubectl get route -n <namespace>
-
+```
  
+## Read More
 
-Support Considerations
-The Helm Chart provides deployment automation for Kubernetes resources but does not change the Mendix Portable Runtime support model.
-
-Mendix supports the Portable Runtime package and runtime capabilities. Customers remain responsible for:
-
-Kubernetes cluster management
-
-Container image management
-
-Security hardening
-
-Networking and ingress configuration
-
-Storage configuration
-
-Backup and disaster recovery procedures
-
-Operational monitoring and alerting
-
-The Helm Chart should therefore be treated as a deployment accelerator rather than a fully supported deployment product. 
-
-Related Documentation
-Mendix Portable Runtime
-
-Best practices for Kubernetes 
-
-Reference Guide for Docker Deployment 
-
-Mendix Portable Runtime Helm Charts Repository
-
-Open Source Disclaimer
-
-The Mendix Portable Runtime Helm Chart is an open-source Mendix Labs project provided for guidance purposes. The repository serves as a deployment template demonstrating one possible approach for running Mendix Portable Runtime applications on Kubernetes and OpenShift environments. Customers should review and adapt the implementation to align with their platform standards and operational requirements.
+* [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/)
+* [Best practices for Kubernetes](/developerportal/deploy/docker-deploy-k8s/)
+* [Reference Guide for Docker Deployment](/developerportal/deploy/docker-deploy-pad/)
+* [Mendix Portable Runtime Helm Charts Repository](https://github.com/mendixlabs/mendix-portable-runtime-helm-charts)

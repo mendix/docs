@@ -90,7 +90,7 @@ The default value is `SAML.Default_CreateIDPConfiguration`. This microflow creat
 
 | Approach | `IdPConfiguration_MicroflowName` | Behavior at startup or deployment |
 | --- | --- | --- |
-| Runtime-managed (default) | Not Applicable | No IdP configurations are created or updated automatically. You manage them in the Administration UI. You should not provide the values of the eight constants. To know more about the manadatory constants, see [Setting up Eight Mandatory Constants](#setup-eight-constants). | 
+| Runtime-managed (default) | Not Applicable | No IdP configurations are created or updated automatically. You manage them in the Administration UI. You should not provide the values of the eight constants. | 
 | Deployment-managed ([easy default flow](#easy-flow)) | `SAML.Default_CreateIDPConfiguration` | IdP configurations are created or updated from the deployment settings. Changes made in the Administration UI are overwritten on restart. |
 | Deployment-managed ([custom](#non-default)) | Name of your custom microflow | Your microflow returns the list of IdP configurations, which the module creates or updates. Changes made in the Administration UI are overwritten on restart. |
 

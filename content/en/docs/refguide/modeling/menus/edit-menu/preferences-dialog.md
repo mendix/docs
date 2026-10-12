@@ -2,170 +2,355 @@
 title: "Preferences"
 url: /refguide/preferences-dialog/
 weight: 50
-tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
-## 1 Introduction
+## Introduction
 
-The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
+The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences that apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
 
-## 2 General Tab {#general}
+## General Tab {#general}
 
-### 2.1 Interface {#interface}
+### Enable Autosave {#autosave}
 
-#### 2.1.1 Keep Active Document Selected in App Explorer
+When enabled, this option automatically saves your changes on various actions, such as running and deploying your app, executing version control operations (for example, committing, merging, or reverting), closing files or apps, exporting modules, or exiting Studio Pro.
+
+Additionally, you have the option to enable autosave for any of these actions when you have unsaved changes. In such cases, a dialog box opens, where you can choose to save or discard your changes. You can speed up this process by checking the **Do not ask me again** checkbox, which prevents further prompts and enables the autosave functionality.
+
+### Interface {#interface}
+
+#### Keep Active Document Selected in the App Explorer
 
 When enabled, **App Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **App Explorer** remains unchanged when the active document changes.
 
-#### 2.1.2 Show Styling For
+#### Show Styling For
 
-The **Show styling for** setting configures, which styling files are shown in the App Explorer. 
+The **Show styling for** setting configures which styling files are shown in the App Explorer. 
 
 You can select one of the following options:
 
 * **App Only** – This option covers the most common case and lets you customize your app-specific styling. By choosing this, you can see all files from the **theme** folder in App Explorer > **App** > **Styling**.
-* **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, e.g. to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
+* **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, for example, to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
 * **App and all modules** – Additionally to the option above, this one adds a **Styling** folder to all modules, regardless of whether they are marked as UI resources or not.
 
 For more information about the styling editor, see the [Using the Styling Editor](/howto/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
 
-### 2.2 Error List
+### Error List
 
-#### 2.2.1 Auto-Check Delay
+#### Auto-Check Delay
 
-The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large apps if Studio Pro responses slowly after changes.
+The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change before starting the consistency checks. Increase this setting for large apps if Studio Pro responds slowly after changes.
 
-#### 2.2.2 Highlight Shown Errors and Warnings in the Editor
+#### Highlight Shown Errors and Warnings in the Editor
 
 When **Highlight shown errors and warnings in the editor** is checked, the errors and warnings which are currently shown in the Error List (as determined by the **Errors** and **Warnings** toggle buttons and the suppression rules) will be highlighted on the affected elements in the editor.
 
-### 2.3 Deployment
+### Disk Location
 
-#### 2.3.1 JDK directory
+#### Default App Directory {#default-directory}
 
-This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
+This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
 
-The JDK is necessary to run Mendix applications, because the Mendix Runtime is written in Java.
+## Deployment Tab {#deployment}
 
-### 2.4 Disk Location
+In the **Deployment** tab you can configure various settings related to application deployment.
 
-#### 2.4.1 Default app directory
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences-deployment-tab.png" alt="Preferences" width="600" class="no-border" >}}
 
-This is the default directory that Studio Pro creates your apps in. The setting is automatically updated when a new app is created in a different location.
+### JDK {#jdk}
 
-#### 2.3.2 Enable Run Optimizations
+Here you can select the directories of the Java Development Kit (JDK) for each supported Java version. These JDKs are used when you locally deploy an application. Usually, the correct directories are located automatically.
 
-Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+A JDK is necessary to run Mendix applications, because the Mendix Runtime runs on the Java Virtual Machine (JVM).
 
-### 3 Mendix Assist Tab
+### Deployment
 
-#### 3.1 Logic Bot
+#### Enable Run Optimizations
 
-The **Logic Bot** tab contains the following settings:
+Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. If only pages, layouts, or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
-* **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
-* **Show Suggestions for System Variables** – when enabled, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like currentUser or currentSession).
+#### Optimize Bundle {#bundle}
 
-#### 3.2 Performance Bot
+This setting is visible and effective when the React client is enabled. By default, it is already enabled to reduce the size of the generated app bundle and speeds up the bundling process by disabling source maps generation. Source maps are used for debugging the bundled code during development. If you want to generate source maps for debugging pluggable widgets, you can disable this setting.
 
-The **Performance Bot** tab contains the **Show recommendation in editors** setting. When enabled, [MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain performance issues in visual editors. 
+### Build
 
-## 4 Model Tab
+#### Generate Full Debug Info {#debug-info}
 
-### 4.1 When Prompted by a Widget to Automatically Fill Its Contents, Select 'Yes' by Default
+Enabling this option includes debug information about local variables in the Java actions when building them, which aids debugging from Eclipse. Without this option, only line numbers and source information will be included.
+
+#### Gradle Synchronization {#gradle-synchronization}
+
+This option controls the synchronization of managed dependencies. For more information, see the [Offline Usage](/refguide/managed-dependencies/#disabling-synchronization) section in *Managed Dependencies*.
+
+#### Gradle Directory
+
+A directory where Gradle is located on the computer that you use to deploy the application. The correct directory is usually located automatically.
+
+#### Extra Arguments
+
+This option can be used to add extra arguments to the Gradle process.
+
+#### Use Custom Repositories
+
+Enabling this option allows you to specify which repositories should be used by Gradle. For more information, see the [Custom Repositories](/refguide/managed-dependencies/#custom-repos) section in *Managed Dependencies*.
+
+#### Repositories
+
+This option becomes available if **Use custom repositories** is set to **Yes**. 
+
+You can specify which repositories to use for Gradle. The content of this field should be specified using Groovy syntax and is what is inside the `repositories { }` section in a Gradle build file. By default, this field contains `mavenCentral()` and `gradlePluginPortal()`. 
+
+## AI Tab
+
+### Maia
+
+#### Generative AI
+
+* **Enable Maia** - When enabled, you can access all Maia capabilities in Studio Pro. It is enabled by default.
+* **Enable web tools** (in Studio Pro 11.11 and above) - When enabled, you can use the [Maia Web Fetch](/refguide/maia-web-fetch/) feature to fetch and read content from public websites and APIs. It is enabled by default. Restart Studio Pro for the change to take effect. For Studio Pro 11.12 and above, the changes take effect immediately and do not require restart. 
+
+In Studio Pro 11.7 and below, the **Generative AI** section contains the following settings:
+
+* **Enable Start with Maia** – when enabled, you can use the **Start with Maia** starting point in Studio Pro to help you create an app. For more information on how to use this feature, see [Start with Maia](/refguide/start-with-maia/). It is enabled by default.
+* **Enable Maia Explain** – when enabled, you can use it to explain a microflow or a nanoflow in the logic editors. For more information, see [Maia Explain](/refguide/maia-explain/). It is enabled by default.
+* **Enable Maia for Domain Model** – when enabled, you can use it to generate a new domain model or to explain and improve an existing one. For more information, see [Maia for Domain Model](/refguide/maia-for-domain-model/). It is enabled by default.
+* **Enable Maia for OQL Generation** – when enabled, you can use it to generate and manage OQL (Object Query Language) queries through an intuitive interface. For more information, see [Maia for OQL](/refguide/maia-for-oql/). It is disabled by default.
+* **Enable Maia for Pages** – when enabled, you can use it to generate a new page or to explain and improve an existing one. For more information, see [Maia for Pages](/refguide/maia-for-pages/). It is disabled by default.
+* **Enable Maia for Workflows** – when enabled, you can use it to generate workflows by adding and configuring activities. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/). It is disabled by default.
+* **Enable translation generator** – when enabled, you can use it to translate your model into different languages through the **Batch translate** option under the **Language** menu or to translate [system texts](/refguide/system-texts/). For more information, see [Translation Generator](/refguide/translation-generator/). It is disabled by default.
+
+#### In-Editor Recommender
+
+* **Enable for microflow, nanoflow, and rule editors** – this allows you to enable and disable [Logic Recommender](/refguide/logic-recommender/) in the microflow, nanoflow, and rule editors. It is enabled by default. 
+* **Enable for workflow editor** – this allows you to enable and disable [Workflow Recommender](/refguide/workflow-recommender/) in the workflow editor. It is enabled by default.
+* **Enable for page editor** - this allows you to enable and disable the [UI Recommender](/refguide/ui-recommender/). It is enabled by default.
+
+#### Best Practice Recommender
+
+* **Show recommendation in editors** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) highlights elements that contain anti-patterns in visual editors. It is enabled by default.
+
+* **Automatically run an inspection after opening an app** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run. It is enabled by default.
+
+### MCP Server
+
+* **Enable MCP Server** - When enabled, you can use the [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/), which enables you to leverage Maia's capabilities directly from external clients, including AI coding assistants, agents, and other MCP-based LLM tools. It is disabled by default.
+
+    **Port** (Default: 7782) - You can configure the port of the server with this setting. 
+
+## Model Tab
+
+### Pages
+
+#### When Prompted by a Widget to Automatically Fill Its Contents, Select 'Yes' by Default
 
 This setting defines the default response to the question whether to automatically fill the contents of a data widget. This question is asked, for example, when dragging an Entity onto a Data View widget. When enabled, the pre-selected answer is **yes**; otherwise, it is **no**.
 
-## 5 Version Control Tab
+## Version Control Tab {#version-control}
 
-### 5.1 File Comparison
+### General
 
-#### 5.1.1 Executable
+#### History {#history-pane}
 
-This is the path and name of the program that is used to view the details of file changes in the [commit dialog box](/refguide/commit-dialog/).
+Select this option to use the blocking **History** dialog instead of the non-blocking, searchable History pane.
 
-#### 5.1.2 Argument Pattern
+#### Solution Warning
 
-This is the pattern from which the arguments are derived that are passed to the file comparison program. The following two placeholders can be used in this pattern:
+Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
 
-* `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
-* `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
+### Git{#git}
 
-### 5.2 Subversion 
-#### 5.2.1 Enable Private Version Control with Subversion {#enable}
+#### Git Location {#git-location}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
+This setting allows users to specify a path for Git installation in their system. By default, Studio Pro automatically detects installed Git, ensuring a smooth setup for most users. However, there may be cases where manually configuring the path is beneficial, such as when multiple versions of Git are installed or when the default detection does not align with specific project requirements.
 
-### 5.3 Git 
-#### 5.3.1 Name
-Specify your name for Git to use it in commit messages and make them more informative.
+#### Enable Private Version Control with Git {#enable-with-Git}
 
-#### 5.3.2 Email
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/repository/team-server/), but in a private Git server that you have access to. This allows you to specify the location of the app on the Git server when opening, downloading, or uploading the app. With this setting, you also need to specify [name and email](#name) that will be used to identify your commits with Git.
 
-Specify your email for Git to use it in commit messages and make them more informative.
+#### Name and Email {#name}
 
-#### 5.3.3 Enable Automatic Repository Optimization {#optimization}
-Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
+Specify your name and email for Git to use in commit messages and make them more informative. These values are stored in the global Git configuration, which can also be used for other applications.
 
-#### 5.3.4 Number of Commits
+{{% alert color="warning" %}}
 
-This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
+**Name** and **Email** settings are not used for authenticating with the version control server and can be changed freely by the user.
 
-#### 5.3.5 Enable Private Version Control with Git (Beta)
-
-{{% alert color="info" %}}
-
-This functionality is currently in [Public Beta](/releasenotes/beta-features/).
+The commit is made on the user's workstation, so no authentication is required at that stage. However, when pushing changes to the version control server, it is expected that the user is fully aware of the content they are pushing. Pushes to the server are only allowed for authorized users.
 
 {{% /alert %}}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
-
-## 6 Advanced Tab
-
-### 6.1 Proxy Server
-
-Sometimes the computer running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
-
-## 7 Work Environment Tab
-
-### 7.1 Default Page Editor {#default-page-editor}
-
-This option sets the default page editor mode that your page opens in: **Structure mode** or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide/page/#page-editor-modes) section in *Page*.
-
-## 8 New Features Tab {#new-features}
-
-The **New features** tab allows you to turn new features on and off. These are features which are being worked on but are either not yet developed sufficiently to remove the previous version, or which are currently optional.
-
 {{% alert color="info" %}}
-You need to restart Studio Pro for changes to these settings to take effect.
+
+Changing these values for another application will also affect the commits made from Studio Pro. If you notice a suspicious value in the commit history, it is likely a private email address set through another tool in the global Git configuration.
+
 {{% /alert %}}
 
-### 8.1 Browser Sign In
+#### Enable Current Windows User Authentication {#enable-windows-authentication}
 
-The **Use your default browser to sign in** option allows you to use your default browser to sign into Studio Pro. If there is an active Mendix session in your browser, you will be signed in with this session.
+When this option is selected, the application automatically uses credentials of the currently logged-in Windows user to authenticate and connect to the on-premises Git server. This feature streamlines the authentication process by eliminating the need for users to manually enter their credentials, enhancing both security and user convenience. By leveraging Windows authentication, organizations can ensure that access to the Git server is seamlessly integrated with their existing IT infrastructure, providing a smooth and efficient workflow for development teams.
 
-Default: *enabled*
+#### Clone {#clone}
 
-### 8.2 Dark Mode Preview {#dark-mode}
+Select a [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
 
-The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
+#### Combine Local and Remote Changes
+
+When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge that contains conflicts.
+
+#### Git Version Warning
+
+Select **Do not show warning about Git version** to suppress a warning shown when Studio Pro starts.
+
+### Background Tasks
+
+#### Enable Automatic Fetching from a Remote Repository {#enable-auto-fetch}
+
+Select **Enable automatic fetching from a remote repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
+
+#### Fetch Interval, Minutes
+
+The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
+
+#### Enable Automatic Repository Optimization {#optimization}
+
+Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure, providing benefits from both performance and repository size perspectives. 
+
+#### Number of Commits
+
+This option is available when the [Enable automatic repository optimization](#optimization) setting is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of commits needed to start the background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
+
+## Work Environment Tab
+
+### Theme {#studio-pro-theme}
+
+This option allows you to choose between Studio Pro themes: **Auto (System theme)**, **Light**, or **Dark**. The default is **Auto (System theme)**, which detects the theme set in the operating system and uses an appropriate theme for Studio Pro (**Light** or **Dark**). Changing this option requires a restart of Studio Pro to take effect.
+
+### Default Page Editor {#default-page-editor}
+
+This option sets the default page editor mode that your page opens in: **Structure mode** (the default) or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide/page/#page-editor-modes) section in *Page*.
+
+### Language {#language}
+
+This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, German (Beta), and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
+
+| Language               | Introduced | General Availability |
+| ---------------------- | ---------- | -------------------- |
+| Chinese                | 10.17      | 10.24                |           |
+| Japanese               | 10.17      | 10.24                |
+| Korean                 | 10.17      | 10.24                |
+| Portuguese (Brazilian) | 10.23      | TBD                  |
+| German                 | 11.13      | TBD       
+
+### Editor Tabs Closing Policy {#closing-policy}
+
+It is recommended to limit the number of open tabs (open documents) to improve the performance of Studio Pro. This option is enabled by default and set to a limit of 15 tabs. However, you can disable this behavior completely or change the limit value.
 
 {{% alert color="info" %}}
-Not all screens of Studio Pro support the dark mode yet.
+The closing policy is not applied to tabs with unsaved changes.
 {{% /alert %}}
 
-Default: *disabled*
+### Navigation {#navigation}
 
-### 8.3 New Merge Algorithm with Fine-Grained Conflict Resolution
+This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. This feature is enabled by default. 
 
-With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide/new-merge-algorithm/).
+### Dialogs {#dialogs}
 
-Default: *enabled*
+When a pop-up dialog box is resized, Studio Pro will remember the new size and use it when the same dialog box is opened again. This option allows you to disable this behavior and always show the dialog boxes at their default size.
 
-## 9 Read More
+## Advanced Tab
+
+### Rendering Settings {#rendering}
+
+Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in the form of dialog boxes opening and closing much more slowly than expected and general slowness of the UI. If the hardware problems cannot be solved, you can mitigate these issues by turning the **Enable software rendering mode** setting on. This option is available for Native UI and Web Content. For Web Content, you can select **Auto**, which enables software rendering mode automatically when running on Parallels or another virtual machine.
+
+Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
+
+### Proxy Server
+
+Sometimes the computer running Studio Pro cannot access the internet directly but has to connect to a proxy server that requires authentication. If this is the case, you can use these settings to specify the user name and password to connect to the proxy server.
+
+### Usage Data {#usage-data}
+
+When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. You can disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific, and changing this feature does not affect any existing installed version.
+
+### XPath {#visual-builder}
+
+**Visual Builder** is the default way to construct XPath constraints. To change the default, clear **Enable the XPath Builder as the default XPath constraint editor**.
+
+### Feedback Survey
+
+When **Show feedback survey periodically** is enabled, Studio Pro periodically displays a feedback survey to gather input on your experience. This helps Mendix improve the product based on user feedback. For more information, see [Feedback Survey](/refguide/feedback-survey/).
+
+### Antivirus Exclusion
+
+When **Do not show antivirus exclusion notifications** is enabled, Studio Pro does not display notifications related to antivirus exclusions. For more information, see [Antivirus Exclusion](/refguide/antivirus-exclusion/).
+
+### Extension Development
+
+When **Extension Development** mode is enabled, you can start Studio Pro without using the extensibility feature flag. This allows you to develop extensions for Studio Pro. You must restart Studio Pro to use this feature.
+
+## New Features Tab {#new-features}
+
+### App Explorer
+
+Select this option to use the modernized version of the App Explorer. You must restart Studio Pro to use this feature.
+
+### Console
+
+Select this option to use the modernized (web) Runtime console. You must restart Studio Pro to use this feature.
+
+### Debug Windows
+
+Select this option to use the modernized Debugger pane, which includes the new Breakpoints, Debugger, and Variables panes. You must restart Studio Pro to use this feature.
+
+### Errors Pane
+
+Select this option to use the modernized version of the Errors Pane. You must restart Studio Pro to use this feature.
+
+### Expression Editor
+
+This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+
+### Find Results
+
+Select this option to use the modernized Find Results pane. You must restart Studio Pro to use this feature.
+
+### GraphQL {#graphql}
+
+You can publish data as a GraphQL service. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
+
+### JavaScript Action Editor
+
+Select this option to use the modernized version of the JavaScript action editor. You must close all open JavaScript actions to use this feature.
+
+### Maia
+
+Select this option to use a custom AI provider for Maia.
+
+### Mapping Editor
+
+This setting allows you to set the beta version as the default editor.
+
+### Microflow, Nanoflow, and Rule Editor {#microflow-nanoflow-rule-editor}
+
+Select this option to allow rendering sequence flows as orthogonal (right-angled) lines in the microflow, nanoflow, and rule editors. When enabled, you can convert flow types between curved and orthogonal through the context menu. For more information, see the [Flow Type](/refguide/sequence-flow/#flow-type) section in *Sequence Flow*.
+
+{{% alert color="info" %}}
+This is a beta feature, available in Studio Pro 11.15 and above.
+{{% /alert %}}
+
+### Project Loading
+
+Select this option to enable optimizations during project loading.
+
+### System Texts Editor
+
+This option allows you to use the web version of the system texts editor. It is enabled by default.
+
+If Translation Generator is also enabled, you can use it in this editor. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
+
+## Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)
-* [Working with an On-Premises Version Control Server](/refguide/on-premises-svn/)

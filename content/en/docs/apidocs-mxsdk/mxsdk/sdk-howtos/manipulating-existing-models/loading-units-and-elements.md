@@ -7,16 +7,14 @@ After finding your unit or element you have to obtain it in its fully-loaded for
 
 Each element (whether in interface or full form) has an `isLoaded` property and `load` and `asLoaded` functions. The [`isLoaded`](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/istructure.html#isloaded) property indicates whether this element is fully loaded already. In practice you should never need to test its value, but simply make sure that you always `load` a unit/element first.
 
-The [`load`](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/iabstractelement.html#load) interface loads the element or unit fully. This process is asynchronous. In JavaScript terms, the fully-loaded object is actually the very same instance as the interface, but it is returned from the the `load` method nonetheless, for convenience. The parameter is upcast to the full, non-interface type so that type system (for example, that of TypeScript or your smart IDE) allows access to all members. `load` always fetches the complete unit, even if you only called it on a specific element. Load always returns units from the local cache if they have already been loaded before.
+The [`load`](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/iabstractelement.html#load) interface loads the element or unit fully. This process is asynchronous. In JavaScript terms, the fully-loaded object is actually the very same instance as the interface, but it is returned from the `load` method nonetheless, for convenience. The parameter is upcast to the full, non-interface type so that type system (for example, that of TypeScript or your smart IDE) allows access to all members. `load` always fetches the complete unit, even if you only called it on a specific element. Load always returns units from the local cache if they have already been loaded before.
 
 Since a unit might already have been loaded before, you are also allowed to use `asLoaded` on an element/unit without arguments in which case it just acts as an upcast from the interface type to the full type. But beware: if the unit that contains that element was not loaded before, an exception will be thrown.
 
 The following (slightly) contrived example demonstrates the behavior of `load`. The type information is made explicit in this example for demonstration purposes, but you can just omit this code since the TypeScript compiler will infer it. Note that this example is contrived: a normal flow would be to call `load` on the `domainModel` and work with the fully-loaded domain model inside its callback.
 
 ```ts
-import {domainmodels} from "mendixmodelsdk";
-
-const model = workingCopy.model();
+const model = await workingCopy.openModel();
 
 // at first, only interfaces are available:
 const domainModel = model.allDomainModels()[0];

@@ -2,11 +2,10 @@
 title: "Label"
 url: /refguide/label/
 weight: 30
-tags: ["studio pro", "label", "text widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}The label widget is not supported on native mobile pages.{{% /alert %}}
 
@@ -18,36 +17,46 @@ You can also use the [text widget](/refguide/text/) as it provides more features
 
 A label shows static text, which describes the purpose of a specific widget to a user.
 
-## 2 Properties
+## Properties Pane
 
-An example of label properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Label properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/text-widgets/label/label-properties.png" alt="Label Properties"   width="300"  >}}
+Properties:
 
-Label properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
+* [Common](#common)
 
-### 2.1 Common Section {#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 2.2 Design Properties Section {#design-properties}
+## Properties
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
-
-### 2.3 General Section {#general}
+### General Section {#general}
 
 The **General** section contains the **Caption** property. **Caption** defines the text that will be shown to a user.
 
-### 2.4 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+### Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## Styling
+
+### Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## Read More
 
 * [Page](/refguide/page/)
 * [Text Widgets](/refguide/text-widgets/)

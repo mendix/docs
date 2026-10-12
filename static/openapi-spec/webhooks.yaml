@@ -1,0 +1,634 @@
+openapi: 3.0.0
+x-stoplight:
+  id: 7u48ni33z77ev
+info:
+  title: Webhook
+  description: Public webhook API
+  version: 1.0.0
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+  termsOfService: 'https://www.mendix.com/terms-of-use/'
+tags:
+  - name: webhook
+    description: Webhooks
+paths:
+  '/apps/{app-id}/webhooks':
+    parameters:
+      - $ref: '#/components/parameters/app-id'
+    get:
+      summary: Get webhooks
+      tags:
+        - webhook
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/webhooks'
+              examples: {}
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+        '429':
+          description: Too Many Requests
+        '500':
+          $ref: '#/components/responses/error500'
+      operationId: get-webhooks
+      parameters:
+        - $ref: '#/components/parameters/cursor'
+        - $ref: '#/components/parameters/limit'
+        - schema:
+            type: boolean
+          in: query
+          name: ascOrder
+          description: If the order should be ascending. Sorted by the creation time.
+      description: Get all webhooks of the app.
+    post:
+      summary: Create a new webhook
+      operationId: create-webhook
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/webhook-detailed'
+              examples:
+                Create webhook response:
+                  value:
+                    id: mxep_mfiHo9gZw6RcGisubUfhyfuCllim5q
+                    name: string
+                    url: 'https://some.domain.com/webhooks'
+                    eventTypes:
+                      - teamserver.push
+                    isActive: true
+                    validationSecret: string
+                    headers:
+                      - key: Authorization
+                        value: Beaerer DG4R4GT6R43
+          headers: {}
+        '201':
+          description: Created
+        '202':
+          description: Accepted
+        '203':
+          description: Non-Authoritative Information
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+        '429':
+          $ref: '#/components/responses/error429'
+        '500':
+          $ref: '#/components/responses/error500'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/upsert-webhook'
+            examples:
+              Create webhook:
+                value:
+                  name: string
+                  url: 'https://some.domain.com/webhooks'
+                  eventTypes:
+                    - teamserver.push
+                  isActive: true
+                  validationSecret: PMJhiGo1nTL6wlNyZVFh5v9rLZdcLsG2O
+                  headers:
+                    - key: Authorization
+                      value: Beaerer DG4R4GT6R43
+      tags:
+        - webhook
+      description: Create a new webhook for the app. The response will return the unique Id of the created webhook.
+  '/apps/{app-id}/webhooks/{webhook-id}':
+    parameters:
+      - $ref: '#/components/parameters/app-id'
+      - $ref: '#/components/parameters/webhook-id'
+    get:
+      summary: Get all webhook details
+      tags:
+        - webhook
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/webhook-detailed'
+              examples:
+                Webhook details:
+                  value:
+                    id: mxep_mfiHo9gZw6RcGisubUfhyfuCllim5q
+                    name: string
+                    url: 'https://some.domain.com/webhooks'
+                    eventTypes:
+                      - teamserver.push
+                    isActive: true
+                    validationSecret: string
+                    headers:
+                      - key: Authorization
+                        value: Beaerer DG4R4GT6R43
+          headers: {}
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+        '429':
+          $ref: '#/components/responses/error429'
+        '500':
+          $ref: '#/components/responses/error500'
+      operationId: get-webhook-details
+      description: Get the details of a specific webhook.
+    put:
+      summary: Update a webhook
+      operationId: update-webhook
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/webhook-detailed'
+              examples:
+                Webhook updated:
+                  value:
+                    id: mxep_mfiHo9gZw6RcGisubUfhyfuCllim5q
+                    name: string
+                    url: 'https://some.domain.com/webhooks'
+                    eventTypes:
+                      - teamserver.push
+                    isActive: true
+                    validationSecret: string
+                    headers:
+                      - key: Authorization
+                        value: Beaerer DG4R4GT6R43
+          headers: {}
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+        '429':
+          $ref: '#/components/responses/error429'
+        '500':
+          $ref: '#/components/responses/error500'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/upsert-webhook'
+            examples:
+              Update webhook:
+                value:
+                  name: string
+                  url: 'https://some.domain.com/webhooks'
+                  eventTypes:
+                    - teamserver.push
+                  isActive: true
+                  validationSecret: PMJhiGo1nTL6wlNyZVFh5v9rLZdcLsG2O
+                  headers:
+                    - key: Authorization
+                      value: Beaerer DG4R4GT6R43
+      tags:
+        - webhook
+      description: Update an existing webhook.
+    delete:
+      summary: Delete a webhook
+      operationId: delete-webhook
+      responses:
+        '204':
+          description: No Content
+          headers: {}
+        '400':
+          description: Bad Request
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+        '429':
+          $ref: '#/components/responses/error429'
+        '500':
+          $ref: '#/components/responses/error500'
+      tags:
+        - webhook
+      description: Delete a webhook.
+components:
+  schemas:
+    webhook:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/webhook-id'
+        name:
+          type: string
+        url:
+          type: string
+          example: 'https://some.domain.com/webhooks'
+        eventTypes:
+          $ref: '#/components/schemas/event-types'
+        isActive:
+          type: boolean
+      required:
+        - id
+        - name
+        - url
+        - eventTypes
+        - isActive
+      x-stoplight:
+        id: pfnuapef3qeph
+    webhook-detailed:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/webhook-id'
+        name:
+          type: string
+        url:
+          type: string
+          example: 'https://some.domain.com/webhooks'
+        eventTypes:
+          $ref: '#/components/schemas/event-types'
+        isActive:
+          type: boolean
+        validationSecret:
+          type: string
+        headers:
+          $ref: '#/components/schemas/headers'
+      required:
+        - id
+        - name
+        - url
+        - eventTypes
+        - isActive
+        - validationSecret
+      x-stoplight:
+        id: 66m6dkxy7znc4
+    webhooks:
+      title: webhooks
+      x-stoplight:
+        id: eai9fd971c0v2
+      type: object
+      properties:
+        webhooks:
+          type: array
+          items:
+            $ref: '#/components/schemas/webhook'
+        cursors:
+          $ref: '#/components/schemas/cursors'
+      required:
+        - webhooks
+        - cursors
+    upsert-webhook:
+      type: object
+      title: Create and update webhook
+      x-stoplight:
+        id: 4aznhsh7gtqle
+      properties:
+        name:
+          type: string
+          pattern: '^([a-zA-Z0-9_ ]+)$'
+          minLength: 1
+        url:
+          type: string
+          example: 'https://some.domain.com/webhooks'
+          minLength: 1
+          maxLength: 65536
+        eventTypes:
+          $ref: '#/components/schemas/event-types'
+        isActive:
+          type: boolean
+          default: true
+        validationSecret:
+          type: string
+          example: PMJhiGo1nTL6wlNyZVFh5v9rLZdcLsG2O
+          pattern: '^(whsec_)?[a-zA-Z0-9+/=]{32,100}$'
+        headers:
+          $ref: '#/components/schemas/headers'
+      required:
+        - name
+        - url
+        - eventTypes
+        - isActive
+        - validationSecret
+    headers:
+      title: headers
+      x-stoplight:
+        id: yzt0lo9uc70q6
+      type: array
+      items:
+        type: object
+        properties:
+          key:
+            type: string
+            example: Authorization
+          value:
+            type: string
+            example: Beaerer DG4R4GT6R43
+        required:
+          - key
+          - value
+      description: |-
+        Keys should not start with the following prefixes:
+        "x-amz-",
+        "x-amzn-",
+        "x-google",
+        "x-goog-",
+        "x-gfe",
+        "x-amz-",
+        "x-azure-",
+        "x-fd-",
+        "x-svix-",
+        "svix-"
+
+        Or have the following values:
+        "user-agent",
+        "keep-alive",
+        "proxy-authenticate",
+        "proxy-authorization",
+        "te",
+        "trailers",
+        "transfer-encoding",
+        "upgrade",
+        "age",
+        "cache-control",
+        "clear-site-data",
+        "expires",
+        "pragma",
+        "warning",
+        "content-length",
+        "content-type",
+        "content-encoding",
+        "content-language",
+        "content-location"
+    cursors:
+      title: cursors
+      type: object
+      description: Pagination attributes that reflect the data to iterate over a list of objects
+      x-stoplight:
+        id: 5o9jrtoienrms
+      properties:
+        prev:
+          type: string
+          description: The iterator to access the previous page of objects. If it's not provided the previous page of objects doesn't exist.
+          x-stoplight:
+            id: vyo4kwcycczmf
+          example: 812c54b4-181f-4c58-9c8f-aeca6cf9eb08
+        next:
+          type: string
+          description: The iterator to access the next page of objects. If it's not provided the previous page of objects doesn't exist.
+          x-stoplight:
+            id: oevbj6sz0hvvf
+          example: e8151c8a-3682-4346-85f9-d976e441c254
+      x-examples: {}
+    error:
+      description: An error object explaining what happened.
+      type: object
+      properties:
+        error:
+          type: object
+          required:
+            - code
+            - message
+          properties:
+            code:
+              type: integer
+              minimum: 0
+              description: The HTTP status code.
+              example: 400
+            message:
+              type: string
+              description: Explanation of what happened.
+              example: Request validation errors
+            invalid-params:
+              type: array
+              uniqueItems: true
+              minItems: 1
+              description: RFC7807 compatible list with detailed feedback.
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: query-parameter
+                    description: The group or type this message is for.
+                  reason:
+                    type: string
+                    example: Value 'license' is not supported
+                    description: Feedback on what is wrong or what was expected.
+                required:
+                  - name
+                  - reason
+      required:
+        - error
+      x-stoplight:
+        id: 3kwt9bbojnhez
+    webhook-id:
+      type: string
+      title: webhook-id
+      x-stoplight:
+        id: wjhgvibks9g0s
+      example: mxep_mfiHo9gZw6RcGisubUfhyfuCllim5q
+      description: The unique Id of a webhook
+    event-types:
+      title: event-types
+      x-stoplight:
+        id: f55ze8pkcrc0y
+      type: array
+      items:
+        type: string
+        example: teamserver.push
+  securitySchemes:
+    PersonalAccessToken:
+      name: API Key
+      type: apiKey
+      in: header
+  parameters:
+    app-id:
+      name: app-id
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: 76ef1b0f-4050-4810-a159-cb419268636c
+      description: The app's Id
+    cursor:
+      name: cursor
+      in: query
+      schema:
+        type: string
+        minimum: 0
+        example: ''
+      description: Used as an iterator for pagination
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        example: 20
+      description: Used with paging and defines the maximum number of objects to return.
+    webhook-id:
+      name: webhook-id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: mxep_mfiHo9gZw6RcGisubUfhyfuCllim5q
+  responses:
+    error400:
+      description: |-
+        The request probably contains invalid data or there is data missing from the request.
+
+        The error response gives additional feedback.ponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Bad query parameter value:
+              value:
+                error:
+                  code: 400
+                  message: Request validation errors
+                  invalid-params:
+                    - name: query-parameter
+                      reason: Value 'other' is not supported
+    error401:
+      description: |-
+        There were no usable authentication credentials found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Missing header:
+              value:
+                error:
+                  code: 401
+                  message: Unauthorized
+                  invalid-params:
+                    - name: Authentication
+                      reason: Missing or invalid Authorization header
+    error403:
+      description: |-
+        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Token not accepted:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: authentication
+                      reason: The token is not accepted
+    error404:
+      description: |-
+        The requested item could not be found.
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            App not found:
+              value:
+                error:
+                  code: 404
+                  message: App not found
+                  invalid-params:
+                    - name: validation
+                      reason: Application '76ef1b0f-4050-4810-a159-cb419268636c' not found
+            Webhook not found:
+              value:
+                error:
+                  code: 404
+                  message: Webhook not found
+                  invalid-params:
+                    - name: validation
+                      reason: Webhook 'mxep_mfiHo9gZw6RcGisubUfhyfuCllim5q' not found
+    error500:
+      description: Internal System Error.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Unexpected system error error:
+              value:
+                error:
+                  code: 500
+                  message: A system error occurred
+            Unexpected authentication error:
+              value:
+                error:
+                  code: 500
+                  message: Not able to authenticate the request due a technical failure
+    error429:
+      description: |-
+        Too Many Requests
+
+        The HTTP 429 Too Many Requests response status code indicates the user has sent too many requests in a given amount of time ("rate limiting").
+
+        The error response gives additional feedback.
+      content:
+        application/json:
+          schema:
+            properties:
+              id:
+                type: string
+        application/xml:
+          schema:
+            $ref: '#/components/schemas/error'
+      headers:
+        X-RateLimit-Limit:
+          schema:
+            type: integer
+            format: int32
+          description: The maximum number of requests you're permitted to make per hour.
+        X-RateLimit-Remaining:
+          schema:
+            type: integer
+            format: int32
+          description: The number of requests remaining in the current rate limit window.
+        X-RateLimit-Reset:
+          schema:
+            type: integer
+            format: int32
+          description: 'The remaining window before the rate limit resets, in UTC epoch seconds.'
+servers:
+  - url: 'https://webhook-portal.home.mendix.com/api/v1'
+    description: Production

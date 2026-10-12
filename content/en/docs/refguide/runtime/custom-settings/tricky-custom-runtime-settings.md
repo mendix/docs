@@ -3,18 +3,17 @@ title: "Advanced Custom Settings in Mendix Runtime"
 linktitle: "Advanced Custom Settings"
 url: /refguide/tricky-custom-runtime-settings/
 description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
-tags: ["Support", "custom settings"]
 ---
 
-## 1 Introduction
+## Introduction
 
 There are many custom settings in Mendix, most of which are described in [Runtime Customization](/refguide/custom-settings/).
 
 However, a few of the more commonly used custom settings can be complicated and have far-reaching implications. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
 
-## 2 Session Duration {#session-duration}
+## Session Duration {#session-duration}
 
-### 2.1 Web Client Settings
+### Web Client Settings
 
 The following settings influence the behavior of the Mendix web client:
 
@@ -22,54 +21,73 @@ The following settings influence the behavior of the Mendix web client:
 | --- | --- | --- |
 | `EnableKeepAlive` | Defines whether the web client sends a keep alive request every `SessionTimeout`/2 milliseconds in order to prevent a session timeout. Each click in the browser also acts as `KeepAlive`. Disabling this property will result in the user being logged out automatically after `SessionTimeout` milliseconds of inactivity (default 10 minutes), even if the browser remains open. See `SessionTimeout` in the next section for more information. | true |
 
-### 2.2 General Settings {#general-settings}
+### General Settings {#general-settings}
 
 The following custom settings can be configured:
 
 | Name | Description | Default value |
 | --- | --- | --- |
 | `SessionTimeout` | Defines after how much time the session becomes invalid (in milliseconds). After that timeout, a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
-| `LongLivedSessionTimeout` | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
-| `com.mendix.offline.DeleteAutoCommittedObjectsAfterSync` | Defines if auto-committed created during offline synchronization will be deleted from the database immediately. (Available since Mendix 9.18) | true |
-| `ClusterManagerActionInterval` | The interval (in milliseconds) used for performing all cluster manager actions. These actions include unblocking users and removing invalid sessions. If nothing is specified, the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
-| `SessionKeepAliveUpdatesInterval` | Defines after how much time expired sessions can be removed from the database. | one sixth of the value configured for the `SessionTimeout` setting; if the `SessionTimeout` is not set, this value defaults to 100000 (100 seconds) |
+| `ClusterManagerActionInterval` | The interval (in milliseconds) used for performing all cluster manager actions. These actions include unblocking users and removing invalid sessions. See the constraints section below for default value details. | |
+| `SessionKeepAliveUpdatesInterval` | Defines how often a runtime writes session LastActive dates in its memory back to the database. See the constraints section below for default value details. | |
 
-Increasing the session timeout can improve the user experience, especially on mobile devices. It is important to keep in mind that entities used to present data to the user or entities that are created or retrieved when a user executes a microflow are tied to that user's session, and those entities can remain in memory for long periods of time. When a user signs out, these entities will be removed from memory, but if the user idles but does not sign out (for example, if they leave the browser tab open while executing other tasks or simply close the browser without signing out), the session timeout can act as a safeguard that prevents memory usage from being tied up by idle sessions. The first case can also be mitigated by setting the `EnableKeepAlive` custom setting to false. On most browsers, this setting will ensure that any idle browser tab will be affected by the session timeout as well.
+Changing these settings can have a significant impact on your app, particularly regarding memory usage, security, and user experience. Consider the following points carefully before altering any of these values.
 
-Since the frequency of the session timeout checks and other important events is tied to the `ClusterManagerActionInterval`, it makes sense to not use the default of half the session timeout when the value is increased by a lot (for example, 24 hours or more). It might make sense to put a maximum value on `ClusterManagerActionInterval`, regardless of how high the value of `SessionTimeout` is set. An approximate figure is 15 minutes, but ultimately this will depend on the functional requirements of the application.
+Increasing the session timeout can improve the user experience, especially on mobile devices.
 
-Another consideration is that configuring `ClusterManagerActionInterval` to be much longer than the `SessionTimeout` will lead to expired sessions remaining in the database longer.
-Configuring `SessionKeepAliveUpdatesInterval` to be longer than the `ClusterManagerActionInterval` or configuring `SessionKeepAliveUpdatesInterval` to be longer than the `SessionTimeout` will cause active sessions to be cleaned up. In Studio Pro 9.13 and later the runtime will fail to start if these three settings are not configured correctly.
+When increasing the session timeout, be aware of the user restrictions imposed by your Mendix license. If the end-user idles but does not sign out (for example, if they leave the browser tab open while executing other tasks or simply close the browser without signing out), the session timeout can act as a safeguard that prevents sessions continuing for idle sessions. Longer sessions might mean more concurrent users at any given time. This is something to keep in mind when deciding on the specifics of the license you will need to run your application. If the browser tab remains open, setting the `EnableKeepAlive` custom setting to false will ensure, in most browsers, that the session timeout will apply to any idle browser tab.
 
-With stateless runtime, the potential of memory usage leading to problems has been reduced for two reasons. The first reason is the ability to run in a horizontally scaled environment. Multiple runtimes will mean unintended memory usage is also divided over those runtimes, reducing the impact of any one idle user session. But the main (and second) reason is that most of the memory usage has been moved to the client. So instead of all entities in the memory ending up on the application node, a large share of them will end up in the browser of the client. This should significantly reduce the potential strain on the application node that can be caused by increasing the `SessionTimeout` default value to a much higher value.
+Increasing the session timeout could also have an impact on the security of your app. An idle session means that there is a potential for a session to be hijacked in case the user does not follow standard security procedures. If they leave their computer unlocked at any given time and do not remain present at their computer afterwards, any person with physical access to that user’s computer could steal or use it and would be able to make use of the session for their own gain. With the default session timeout value this risk is reduced, as the window in which physical access is possible is much more limited (meaning, a session timeout of 24 hours is riskier than a session timeout of 10 minutes). How much of a concern this is will depend on the application’s core business goal and the type of people working with the app. For example, IT professionals are more likely to follow standard security procedures than most other user groups.
 
-Another important matter that can be affected by increasing the session timeout is the user restrictions imposed by your Mendix license. Longer sessions might mean more concurrent users at any given time. This is something to keep in mind when deciding on the specifics of the license you will need to run your application.
+Since the frequency of session timeout checks and other important events is tied to `ClusterManagerActionInterval`, using the default value (half the session timeout) does not make sense when `SessionTimeout` is increased significantly (for example, to 24 hours or more). In this case Mendix recommends that you set a lower value for `ClusterManagerActionInterval`, regardless of how high the value of `SessionTimeout` is set. Mendix suggests a value of around 15 minutes, but ultimately this will depend on the functional requirements of the application.
 
-Finally, there is a security consideration to be made. An idle session means that there is a potential for a session to be hijacked in case the user does not follow standard security procedures. If they leave their computer unlocked at any given time and do not remain present at the their computer afterwards, any person with physical access to that user’s computer could steal or use it and would be able to make use of the session for their own gain. With the default session timeout value this risk is reduced, as the window in which physical access is possible is much more limited (meaning, a session timeout of 24 hours is riskier than a session timeout of 10 minutes). How much of a concern this is will depend on the application’s core business goal and the type of people working with the app. For example, IT professionals should be more likely to follow standard security procedures than most other user groups.
+If you set `ClusterManagerActionInterval` to be much longer than `SessionTimeout`, this will lead to expired sessions remaining in the database longer. On the other hand, if you set `SessionKeepAliveUpdatesInterval` to be longer than `ClusterManagerActionInterval` or set `SessionKeepAliveUpdatesInterval` to be longer than `SessionTimeout`, active sessions will be cleaned up.
 
-So, make sure to keep in mind all of the above when changing these values. Also, make sure your decision to alter any of these values is made with the right considerations.
+{{% alert color="warning" %}}
+The Runtime will fail to start if `ClusterManagerActionInterval`, `SessionKeepAliveUpdatesInterval`, and `SessionTimeout` are not configured correctly. The valid relationships between the three settings are described below.
+{{% /alert %}}
 
-## 3 Query Logging
+### Session Timing Constraints and Defaults {#session-timing}
 
-### 3.1 Database Settings: Common settings
+The following constraints apply to `ClusterManagerActionInterval` and `SessionKeepAliveUpdatesInterval`:
+
+**ClusterManagerActionInterval:**
+
+* Must not exceed twice `SessionTimeout`, or expired sessions may remain in the database too long
+* If explicitly set to a value exceeding twice the `SessionTimeout`, startup fails with an error
+* Default value:
+    * Below Mendix 11.11.0: 300000 (5 minutes), or half the `SessionTimeout` if not explicitly specified
+    * In Mendix 11.11.0 and above: 300000 (5 minutes), unless `SessionTimeout` ≤ 10 minutes and the default (5 minutes) would exceed twice the `SessionTimeout`, in which case it is automatically set to `SessionTimeout` / 2 (and a warning is logged)
+
+**SessionKeepAliveUpdatesInterval:**
+
+* Must not be greater than half the `ClusterManagerActionInterval`, or else active sessions may be cleaned up
+* Must not be greater than the `SessionTimeout`, or else active sessions may be cleaned up
+* Default value:
+    * Before Mendix 11.11.0: one sixth of the `SessionTimeout`, or 100000 (100 seconds) if `SessionTimeout` is not set
+    * In Mendix 11.11.0 and above: 100000 (100 seconds), unless `SessionTimeout` or half the `ClusterManagerActionInterval` is ≤ 100 seconds, in which case `ClusterManagerActionInterval` / 3 is used (and a warning is logged)
+
+## Query Logging
+
+### Database Settings: Common settings
 
 | Name | Description | Default value |
 | --- | --- | --- |
-| `LogMinDurationQuery` | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the amount of milliseconds specified here. By default, only the concerning SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to TRACE to show more information about the page or the microflow that leads to this query. |   |
+| `LogMinDurationQuery` | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the amount of milliseconds specified here. By default, only the concerning SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to TRACE to show the SQL queries that precede this query. | 10000  |
 
 `LogMinDurationQuery` can be a very helpful tool in detecting queries that are taking longer than expected. This is especially useful for queries that only take longer than expected after the data used in and by the app grows larger, because this might mean the queries will only become slower after a few months of usage and might not have turned up in pre-release performance tests. Determining that a query is slow depends on the type of app you are running. But in general, any query that directly affects a user using the app (meaning, not a background process) will have a lower threshold for determining it as slow than a query running in the background. For example, a drop-down menu that takes 5 seconds to load before anything can be selected is many times worse than a PDF generated in the background taking 8 instead of 4 seconds because of a “slow” query that takes 5 seconds instead of 1 second.
 
-In the Mendix Cloud, we have chosen a default value of 10000 (meaning, 10 seconds). As any such query would be noticeable on the front end of the application. If your application has no background processes, this value might be too high. On the other hand, if your application is running many background processes with minimal user interaction, this value might be too low. In the end, the right value to set will depend on the functional requirements of your app and needs to be set accordingly.
+In Mendix Cloud, we have chosen a default value of 10000 (meaning, 10 seconds). As any such query would be noticeable on the front end of the application. If your application has no background processes, this value might be too high. On the other hand, if your application is running many background processes with minimal user interaction, this value might be too low. In the end, the right value to set will depend on the functional requirements of your app and needs to be set accordingly.
 
 The most important part of this setting is to regularly check the application log for any queries exceeding this value and to resolve them if they are deemed problematic. Setting this value without following up on it is as useful as not setting the value at all. Queries running slowly can negatively affect the user experience, the throughput of any action affected by them, the memory usage of the application, the CPU usage of the application, and can even lead to outages in extreme cases. Given all that, Mendix strongly advises setting this value to a number that makes sense for your application and following up on any query that is logged. 
 
 You can find these log entries by looking for the following phrase in your application log: **Query executed in**. The phrase will appear in an example like this: `Jan 01 02:03:04.567 - WARNING - ConnectionBus_Queries: (1/4) Query executed in 642 seconds and 694 milliseconds: UPDATE "somemodule$someentity”`.
 
-## 4 The Number of Database Connections
+## Connection Pooling
 
-### 4.1 Connection Pooling
+### The Number of Database Connections{#num-connections}
 
-The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/).
+The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/commons-pool/).
 
 | Name | Value | Default value |
 | --- | --- | --- |
@@ -102,9 +120,9 @@ And/or you get a **Number of database connections** graph that regularly peaks, 
 It will be tempting to increase the `ConnectionPoolingMaxActive` value to a (much) higher number. But if any of the following are true, this is not the right action to take:
 
 * Long running queries show up in the application log – in that case, it makes more sense to try and fix those first, as otherwise you will eventually run in to the same problem, but it will take a bit longer to occur after a (re)start of the application
-* A database is running low on memory or is even out of memory regularly — in that case, it makes more sense to upgrade the database node size first
+* A database is running low on memory or is even out of memory regularly—in that case, it makes more sense to upgrade the database node size first
     * In this case, there will probably also be long running queries in your application log
-* Only a few user sessions are active at any given time — your application might need refactoring unless you can explain why each user is constantly using several parallel database connections
+* Only a few user sessions are active at any given time—your application might need refactoring unless you can explain why each user is constantly using several parallel database connections
 
 However, if all of the following are true, you should increase the `ConnectionPoolingMaxActive` value to a (much) higher number:
 
@@ -114,8 +132,22 @@ However, if all of the following are true, you should increase the `ConnectionPo
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.
 
-In addition, keep in mind that changing this value for an application running in Mendix Cloud v3 will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support Portal](https://support.mendix.com/) stating the number to which you intend to change the value. When your application is running in Mendix Cloud v4, you can change the value without a change on the database node.
+### Validating Database Connections
 
-## 5 Read More
+In some deployments, database connections can be closed by the network infrastructure, for example by a firewall when they have been inactive for a long time.
+This may cause the Mendix Runtime to raise an error when it attempts to use the database connection that has now been closed.
+Mendix recommends avoiding such deployments but, if one is used, the consequences can be mitigated by letting the connection pool validate connections.
+This validation is performed using the `java.sql.Connection.isValid` method, which the JDBC driver will implement in a vendor specific way.
+
+There are a number of custom runtime settings to enable this validation:
+
+* `ConnectionPoolingTestOnBorrow`: Validate connections before returning them to the application.
+* `ConnectionPoolingTestOnCreate`: Validate connections after creating them.
+* `ConnectionPoolingTestOnReturn`: Validate connections after they are returned to the pool.
+* `ConnectionPoolingTestWhileIdle`: Validate connections when the idle object evictor runs.
+
+These options may have a small performance impact, which is the reason they are not enabled by default.
+
+## Read More
 
 * [Runtime Customization](/refguide/custom-settings/)

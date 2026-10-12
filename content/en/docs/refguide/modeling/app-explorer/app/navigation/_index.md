@@ -3,69 +3,73 @@ title: "Navigation"
 url: /refguide/navigation/
 weight: 20
 description: "Describes the concept of navigation in apps and the properties of a profile."
-tags: ["studio pro", "navigation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
-This document describes the concept of navigation in Mendix applications and the properties of a profile. The **Navigation** document can be found by expanding the **App** node in the **App Explorer**. It defines the navigation structure of the application for users. It also allows you to set the home page of your application and to define the menu structures that can be used in [Menus and Navigation](/refguide/menu-widgets/). 
+This page describes the concept of navigation in Mendix applications and the properties of a profile. The **Navigation** document can be found by expanding the **App** node in the **App Explorer**. It defines the navigation structure of the application for end-users. It also lets you set the home page of your application and to define the menu structures that can be used in [Menus and Navigation](/refguide/menu-widgets/). 
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/navigation-profile-properties.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/navigation-profile-properties.png" alt="Navigation document showing Responsive web profile with General settings, Home pages, and Menu configuration" >}}
 
-A user's home page can vary based on their [user roles](/refguide/user-roles/).
+An end-user's home page can vary based on their [user roles](/refguide/user-roles/).
 
-## 2 Profiles {#profiles}
+## Profiles {#profiles}
 
-At the heart of the navigation model in Mendix, these are the available profiles:
+The core of Mendix's navigation model is founded on the following profiles:
 
-* Responsive
-* Hybrid tablet app online
-* Hybrid tablet app offline
-* Hybrid phone
-* Hybrid phone app offline
-* Tablet web
-* Phone web
-* Native phone
+* [Responsive web](#responsive-web)
+    * Responsive web offline
+* [Tablet web](#tablet-web)
+    * Tablet web offline
+* [Phone web](#phone-web)
+    * Phone web offline
+* [Native mobile (tablet & phone)](#native-phone)
+* [Embedded](#embedded) (Beta - introduced in Mendix 11.12.0)
 
-Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
+End-users that access the app via a particular device type are automatically redirected to the homepage of the appropriate browser or mobile profile based on the profile type (for details see [Redirection to Profiles](#redirection), below). This does not apply to the Embedded profile which is used when a host application loads the embedded client. 
 
-The device type of the currently logged-in user is available in [microflows](/refguide/microflows/) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](/refguide/enumerations/) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use `$currentDeviceType` to perform different actions based on the device type. A typical example is to show different pages based on the device type.
+The device type of the currently logged-in end-user is available in [microflows](/refguide/microflows/) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](/refguide/enumerations/) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use `$currentDeviceType` to perform different actions based on the device type. A typical example is to show different pages based on the device type.
 
-### 2.1 Responsive
+### Responsive Web{#responsive-web}
 
-Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications.
+Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications. This profile also has an offline version.
 
-### 2.2 Hybrid Profiles {#hybrid-profiles}
+### Tablet Web{#tablet-web}
 
-A Mendix app can be installed on a tablet or phone as an app by creating a [local build](/howto8/mobile/build-hybrid-locally/) hybrid package. Hybrid profiles can be accessed from such a locally built app. Hybrid app profiles are determined by device type (phone or tablet) and by the offline accessibility feature enabled (online or offline). If no profile exists with the requested combination, an error will be displayed in the app.
+All the end-users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet web type. If no profile exists of that type, the end-user will be redirected to the Responsive profile. This profile can be used to make web applications. This profile also has an offline version.
 
-Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline First](/refguide/offline-first/).
+### Phone Web{#phone-web}
 
-Four different hybrid profiles are available:
+All the end-users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the end-user will be redirected to the Responsive profile. This profile can be used to make web applications. This profile also has an offline version.
 
-* Hybrid tablet app online
-* Hybrid tablet app offline
-* Hybrid phone
-* Hybrid phone app offline
+### Native Mobile{#native-phone}
 
-### 2.3 Tablet Web
+A Mendix app can be installed on a phone as a native application which offers several advantages:
 
-All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
+* **Enhanced Performance** – Native apps are optimized for the specific platform, resulting in faster load times and smoother user interactions.
+* **Access to Device Features** – Native apps can harness the full potential of a phone's hardware features, such as GPS, camera, and push notifications, enhancing the user experience.
+* **Offline Functionality** – Native apps store data locally on the phone, ensuring that end-users can access content even without an internet connection. 
 
-### 2.4 Phone Web
+The Mendix app will run in [offline-first](/refguide/offline-first/) mode. This means that all the data is stored on the phone and only synchronized with the server on request.
 
-All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
+{{% alert color="info" %}}
+You must enable anonymous users in your app's security settings and include anonymous user roles on native login pages. This is because there is no built-in login screen in the native profile; login pages are modeled as regular native pages. 
+{{% /alert %}}
 
-### 2.5 Native Phone {#native-phone}
+### Embedded{#embedded}
 
-A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline-first](/refguide/offline-first/), which means all the data is stored on the phone and only synchronized with the server on request.
+{{% alert color="info" %}}
+Embedded profiles were introduced in Mendix version 11.12.0.
+{{% /alert %}}
 
-You are required to enable anonymous users in your app's security settings and include anonymous user roles on native login pages. This is because there is no built-in login screen in the native profile; login pages are modeled as regular native pages. 
+The Embedded profile lets you use a Mendix web app as a component inside another non-Mendix web application. The host application loads the embedded client and owns browser-level navigation, while the Mendix app renders and navigates inside its mounted region.
 
-## 3 Redirection to Profiles {#redirection}
+The Embedded profile defines a default home page and can also define a fallback page. When the configured home page expects page parameters, the host application can pass them through the `parameters` object in `render(…)`. For more information, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 
-Mendix Runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the `User-Agent` string that is sent by the device. The default configuration for this redirection is as follows:
+## Redirection to Profiles {#redirection}
+
+Mendix Runtime automatically redirects end-users to the home page of the appropriate device type based on the device they are using. This happens by examining the `User-Agent` string that is sent by the device. The default configuration for this redirection is as follows:
 
 | User-Agent String Regular Expression | Device Type |
 | --- | --- |
@@ -73,77 +77,90 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 | Android&#124;iPad | Tablet |
 | *(other)* | Responsive |
 
-To configure the regular expressions used to match phone or tablet users, see [Runtime Customization](/refguide/custom-settings/).
+To configure the regular expressions used to match phone or tablet end-users, see [Runtime Customization](/refguide/custom-settings/).
 
-It is also possible to force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles, which are Responsive, Tablet, Phone, HybridTablet, and HybridPhone. For example:
+You can also force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles, which are `Responsive`, `Tablet`, and `Phone`. For example:
 
 `https://myapp.mendixcloud.com/index.html?profile=Responsive`
 
-## 4 Navigation Profile Properties {#properties}
+## Navigation Profile Properties {#properties}
 
-A profile can be added with the **Add navigation profile** button. Only one profile per type is allowed. While adding the profile, it is possible to copy the settings from an existing profile.
+A profile can be added with the **Add navigation profile** button. Only one profile per type is allowed. You can copy the settings from an existing profile when adding the new profile.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/add-navigation-profile.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/add-navigation-profile.png" class="no-border" width="600" alt="Add Navigation Profile dialog with Native mobile (tablet & phone) profile type selected" >}}
 
-### 4.1 General
+### General
 
-#### 4.1.1 Application Title
+#### Application Title
 
 This specifies the application title. This title is shown in the title bar of the browser.
 
-#### 4.1.2 Application Icon
+#### Application Icon
 
 This specifies the application icon. This icon is shown as favicon in the title bar and bookmarks of the browser. It can only be set in the Responsive profile, but will also be used by the other browser profiles.
 
-### 4.2 Home Pages
+### Home Pages
 
-#### 4.2.1 Default Home Page {#default-home-page}
+#### Default Home Page {#default-home-page}
 
-The default home page indicates which [page](/refguide/page/) or [microflow](/refguide/microflow/) is opened after a user signs in. If role-based home pages (see below) are specified for one of the [user roles](/refguide/user-roles/) of the user, then that home page will be used instead.
+The default home page indicates which [page](/refguide/page/) or [microflow](/refguide/microflow/) is opened after an end-user signs in. If role-based home pages (see below) are specified for one of the [user roles](/refguide/user-roles/) of the end-user, then that home page will be used instead.
 
 {{% alert color="info" %}}
-The default home page is visible to all unauthenticated users.
+The default home page is visible to all unauthenticated end-users.
 {{% /alert %}}
 
-#### 4.2.2 Role-Based Home Pages
+For the Embedded profile, the default home page is the first page shown when the host application calls `render(…)`.
 
-By using role-based home pages, you can show different home pages for different users. If a user logs in, the first role-based home page of which the user role matches the user role of the user is displayed. If no match is found, the default home page is used.
+#### Role-Based Home Pages{#role-based}
+
+Role-based home pages can show different home pages for different end-users. If an end-user signs in, the first role-based home page where the user role matches the user role of the end-user is displayed. If no match is found, the default home page is used.
 
 For each role-based home page, you can specify the user role it applies to and the target (page or microflow) that will be opened.
 
-### 4.3 Authentication {#authentication}
+#### Fallback Page
 
-If an [anonymous user](/refguide/anonymous-users/) tries to access a resource to which the user has no access, the configured [sign-in page](/refguide/authentication-widgets/) will be displayed, prompting the user to sign in.
+The fallback page is a page or microflow to be used when trying to access a [microflow](/refguide/microflow/#url) or [page](/refguide/page-properties/#url) URL that does not exist. For more information, see [Setting a Fallback Page](/refguide/setting-up-the-navigation-structure/#fallback) in *Setting Up Navigation*.
 
-If the sign-in page is set to none, a built-in pop-up window will appear instead. The page title is translatable and may be overridden.
+For Embedded profiles, you can configure a fallback page as well. This page is shown when the embedded app cannot open the configured home page during startup or navigation. This could happen if page parameter values passed through `render(…)` do not match the expected parameter types, or if a configured home page is not accessible for the signed-in end-user, among other reasons. For more information, see [Embedding the Client](/refguide/mendix-client/embedding-the-client/).
 
-### 4.4 Menu
+### Authentication {#authentication}
+
+If an end-user, [anonymous](/refguide/anonymous-users/) or authenticated, tries to access a resource to which they have no access, the configured [sign-in page](/refguide/authentication-widgets/) is displayed, prompting the end-user to sign in.
+
+If the sign-in page is set to `none`, a built-in pop-up window will appear instead. The page title is translatable and may be overridden.
+
+### Menu
 
 Each device type contains a default menu. You can use these menus in [Menus and Navigation](/refguide/menu-widgets/). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](/refguide/menu/).
 
 {{% alert color="warning" %}}
-If [security](/refguide/app-security/) is enabled, the menu will only show the items to which the user has access.
+If [security](/refguide/app-security/) is enabled, the menu will only show the items to which the end-user has access.
 {{% /alert %}}
 
-### 4.5 Profile Buttons
+### Profile Buttons
 
-#### 4.5.1 Change Profile Type
+#### Change Profile Type
 
-Allows for changing the [profile type](/refguide/navigation/).
+Allows you to change the [profile type](/refguide/navigation/).
 
-#### 4.5.2 Delete
+#### Delete
 
-This deletes the profile. If [Menus and Navigation](/refguide/menu-widgets/) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
+This deletes the profile. If [Menus and Navigation](/refguide/menu-widgets/) are still referring to the profile, errors will appear. You can undo the deletion of a profile.
 
-#### 4.5.2 Synchronization Configuration {#customize}
+#### Synchronization Configuration {#customize}
 
+{{% alert color="info" %}}
 Only available on profiles supporting offline synchronization.
+{{% /alert %}}
 
-This opens the **Customize offline synchronization** dialog box that is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. For more details on the settings and when to use them, see the [Offline-First Reference Guide](/refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/#customizable-synchronization).
+This opens the **Customize offline synchronization** dialog box that is used to override offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden by the developer in which case the setting will appear in boldface. 
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/customize-offline-synchronization.png" >}}
+For more details on the settings and when to use them, see the [Offline-First Reference Guide](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
 
-## 5 Read More
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/customize-offline-synchronization.png" class="no-border" alt="Customize offline synchronization dialog showing entity download settings and XPath constraints" >}}
+
+## Read More
 
 * [App Explorer](/refguide/app-explorer/)
+* [Embedding the Client](/refguide/mendix-client/embedding-the-client/)
 * [Navigation Tree](/refguide/navigation-tree/)

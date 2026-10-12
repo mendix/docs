@@ -1,13 +1,11 @@
 ---
-title: "Implement Styles"
+title: "Implement Classes"
 url: /howto/front-end/styles/
-category: "Front End"
 description: "Describes details on using class names for text colors, buttons, and other style elements."
 weight: 45
-tags: ["style", "class name", "user interface", "front end", "classes"]
 ---
 
-## 1 Introduction
+## Introduction
 
 This page contains useful class names that can be used to make your app more beautiful without writing CSS. Class names can be added to the properties of page widgets. Several classes can be added to the same widget by separating the class names with a space.
 
@@ -16,11 +14,11 @@ Class names can be entered in two locations:
 * The **Properties** panel of Studio Pro
 * The **Properties** pop-up window for the widget
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
 
-## 2 Text Colors
+## Text Colors
 
 Add these classes to an element to change the text color to your theme colors:
 
@@ -42,7 +40,7 @@ These are standard useful text colors:
 * `text-gray-light`: light gray text
 * `text-gray-lighter`: lighter gray text
 
-## 3 Background Colors
+## Background Colors
 
 The background colors are based on your theme colors. These are the same colors as for the buttons:
 
@@ -70,7 +68,7 @@ These are background colors for your layout:
 * `background-default-light`: light layout background
 * `background-default-lighter`: lighter layout background
 
-## 4 Typography
+## Typography
 
 These are useful classes for text items:
 
@@ -93,7 +91,7 @@ Other:
 
 * `nowrap`: don't wrap texts
 
-## 5 Buttons
+## Buttons
 
 You can change the appearance of a button:
 
@@ -109,7 +107,7 @@ You can change the appearance of a button:
 * `btn-attached-bottom`: adds top margin
 * `btn-attached-top`: adds bottom margin
 
-## 6 Layout Grid
+## Layout Grid
 
 You can change the appearance of a layout grid:
 
@@ -124,37 +122,37 @@ For phones, also add `col-xs-N` (where `N` is the size of the column) to the lay
 
 For more information on grid options, including suggestions and examples, see [Bootstrap CSS Grid Options](https://getbootstrap.com/docs/3.3/css/#grid-options).
 
-## 7 List View
+## List View
 
 Change the way items appear in a list:
 
 * `listview-lined`: list view widget with only a bordered bottom in a list view item
-* `listview-striped`: list view widget with striped listview items
-* `listview-seperated`: list view widget with list view items seperated
+* `listview-striped`: list view widget with striped list view items
+* `listview-seperated`: list view widget with list view items separated
 * `listview-stylingless`: list view widget without spacing and background
 
-## 8 Alerts
+## Alerts
 
 Create alerts with standard containers.
 
 * `alert`: makes an alert of a container; use in combination with the next classes
 * `alert-success`: creates a success alert
-* `alert-info`: creates a info alert
+* `alert-info`: creates an info alert
 * `alert-warning`: creates a warning alert
 * `alert-danger`: creates a danger alert
 
 Also see [Bootstrap Alert Component](https://getbootstrap.com/docs/3.3/components/#alerts).
 
-## 9 Other
+## Other
 
 Change the way tabs appear:
 
 * `tab-mobile`: makes the tab full width and stick to the header
 
-## 10 More Bootstrap
+## More Bootstrap
 
 Many of these classes are part of Bootstrap. For more information about classes and Bootstrap, see [Bootstrap CSS](https://getbootstrap.com/docs/3.3/css/).
 
-## 11 Read More
+## Read More
 
 * [Mendix Atlas UI](https://www.mendix.com/atlas/)

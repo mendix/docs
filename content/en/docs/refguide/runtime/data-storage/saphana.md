@@ -2,45 +2,43 @@
 title: "SAP HANA"
 url: /refguide/saphana/
 weight: 70
-tags: ["studio pro"]
 ---
 
-## 1 Introduction
+## Introduction
 
-The behavior of Mendix using an SAP HANA  database has some minor differences when compared with using a PostgreSQL database. These differences are documented below.
+The behavior of Mendix using an SAP HANA database has some minor differences when compared with using a PostgreSQL database. These differences are documented below.
 
-## 2 Ordering on Associated Attributes
+## Adding SAP HANA JDBC Driver
 
-Retrieving an entity that is sorted on an attribute of one of its associated entities is not supported in SAP HANA.
+Mendix Studio Pro versions 11.15.0 and above, and Mendix Studio Pro version 11.12 ([LTS](/releasenotes/studio-pro/lts-mts/)) patch versions 11.12.5 and above, no longer include the SAP HANA JDBC driver. This is because of licensing issues.
 
-For example, you have two associated entities — **Person** and **Address** — and they have the **name** and **street** attributes, respectively. You cannot retrieve `Person` objects sorted on `Person_Address/Address/street`. 
+If you deploy your app to SAP BTP using the [Mendix Portal](/developerportal/deploy/sap-cloud-platform/), the driver will be added to your app during deployment. You do not have to take any additional steps.
 
-{{% alert color="info" %}}
-This limitation has been removed in Studio Pro version [9.8.0](/releasenotes/studio-pro/9.8/) and above, and also from MTS version [9.6.3](/releasenotes/studio-pro/9.6/#963) and above.
-{{% /alert %}}
+If you want to test your app locally against a SAP HANA database or deploy it using your own infrastructure, you must add the JDBC driver to your app like any other 3rd party jar file using one of the following two methods:
 
-## 3 Behavior of Unlimited and Very Long Strings
+* Download the SAP HANA JDBC driver manually from [Maven Central](https://central.sonatype.com/artifact/com.sap.cloud.db.jdbc/ngdbc) and add it to the `userlib` folder in your app.
+* Use [Managed Dependencies](/refguide/managed-dependencies/) to add a dependency with Group ID `com.sap.cloud.db.jdbc` and Artifact ID `ngdbc`. This adds the driver to the `vendorlib` folder in your app.
 
-### 3.1 Comparison Functions
+Mendix recommends using the latest driver version that has major version 2.
+
+## Behavior of Unlimited and Very Long Strings
+
+### Comparison Functions
 
 SAP HANA does not support unlimited strings or strings with a specified length greater than 5000 characters when using the equal (`=`) or not equal (`!=`) operators in XPath constraints. However, it does support functions including `contains()`, `starts-with()`, and `ends-with()`.
 
 See also [Case-Sensitive Database Behavior](/refguide/case-sensitive-database-behavior/).
 
-{{% alert color="warning" %}}
-In versions of Mendix below 8.11.0, string comparisons in SAP HANA were case sensitive.
-{{% /alert %}}
+### Sorting, Grouping, and Aggregating
 
-### 3.2 Sorting, Grouping, and Aggregating
+You cannot sort, group, or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 5000 characters. This is because such long or unlimited strings are implemented with the data type CLOB (Character Large Object). Consider decreasing the length of the string attribute or removing it from data grids.  
 
-It is not possible to sort, group, or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 5000 characters. This is because such long or unlimited strings are implemented with the data type CLOB. Consider decreasing the length of the string attribute or removing it from data grids.  
-
-### 3.3 Selecting DISTINCT Attribute
+### Selecting DISTINCT Attribute
 
 Selecting DISTINCT attributes of the string type with a size greater than 5000 characters is not supported by Mendix due to a known SAP HANA limitation of selecting DISTINCT columns with a CLOB data type.
  
-## 4 Known Issues
+## Known Issues
 
-### 4.1 Unicode Support
+### Unicode Support
 
 Currently, only [Basic Multilingual Plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane) Unicode characters are supported.

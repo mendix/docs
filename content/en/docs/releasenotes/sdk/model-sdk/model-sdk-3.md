@@ -6,13 +6,13 @@ weight: 98
 
 ## 3.3.0
 
-**Release date: April 13th, 2017**
+**Release date: April 13, 2017**
 
 * Added support for Modeler version 7.2.0.
 
 ## 3.2.0
 
-**Release date: March 17th, 2017**
+**Release date: March 17, 2017**
 
 * Property `pageSettings` of element `pages.NewButton` is no longer optional.
 * Added support for Modeler version 7.1.0.

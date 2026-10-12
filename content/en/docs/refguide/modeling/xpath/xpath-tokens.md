@@ -1,7 +1,7 @@
 ---
 title: "XPath Tokens"
 url: /refguide/xpath-tokens/
-tags: ["studio pro"]
+weight: 3
 ---
 
 

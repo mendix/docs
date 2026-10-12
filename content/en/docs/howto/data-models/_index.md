@@ -5,11 +5,10 @@ weight: 50
 description: "Presents a list of how-tos on creating data layers and setting up data validation."
 no_list: false
 description_list: true
-tags: ["studio pro"]
 ---
 
-## 1 Introduction
+## Introduction
 
-This category includes how-to's on creating data layers and setting up data validation.
+This category includes how-tos on creating data layers and setting up data validation.
 
-## 2 Documents in This Category
+## Documents in This Category

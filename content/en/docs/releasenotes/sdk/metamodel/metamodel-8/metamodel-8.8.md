@@ -6,7 +6,7 @@ weight: 93
 
 ## 8.8.0
 
-**Release date: April 1st, 2020**
+**Release date: April 1, 2020**
 
 ### CodeActions
 

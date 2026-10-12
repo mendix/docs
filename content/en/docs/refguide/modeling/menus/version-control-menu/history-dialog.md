@@ -2,44 +2,131 @@
 title: "History"
 url: /refguide/history-dialog/
 weight: 50
-tags: ["studio pro"]
+description: "Describes the History pane in Studio Pro, which shows committed changes to an app's development line."
 ---
-## 1 Introduction
+## Introduction
 
-Use the **History** dialog box to look at all the changes that have been committed to a development line of an app. This dialog box is also used when selecting a revision to merge from, create a branch line off of, or create a deployment archive of.
+Use the **History** pane to see the changes that have been committed to a development line of an app. You can open this pane by selecting **Version Control** > **History** from the menu. The **History** pane displays all revisions at once in a searchable grid, making it easy to view the detailed project history.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/collaborative-development/history-dialog.png" >}}
 
-## 2 Revisions
+{{% alert color="info" %}}
+In Studio Pro versions 11.6-11.14, partially cloned apps automatically use the older blocking **History** dialog. You can choose to use the new version of the dialog in [Version Control Preferences](/refguide/preferences-dialog/#history-pane).
+The Revision Selector still uses the blocking dialog when you select a revision to revert, merge from, create a branch line from, or create a deployment archive from.
 
-Each line in the grid represents a revision in the repository. For each revision the following information is shown:
+For more information on the blocking dialog, see the [Mendix 10 documentation](/refguide10/history-dialog/).
+{{% /alert %}}
 
-* **Revision** – a unique alphanumeric identifier of the revision in the repository. Revision is unique for a whole repository.
-* **Changes** – a visual summary of the changes in the selected revision. It shows whether there are model changes, disk changes and whether there was a change in Studio Pro version that was used to commit the revision (green arrow up). Hover over this column to get a textual summary.
-* **Author** – the person who committed this revision.
-* **Date** – the date of the commit.
-* **Time** – the time of the commit.
-* **Message** – the user entered message of the commit. If the message is long, you can more easily read it in the Message tab page below.
+## Revisions
 
-By selecting a revision in this grid, the tab pages below it will be filled with information about this revision.
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/revisions.png" alt="History pane showing a grid of revisions" class="no-border" >}}
 
-## 3 Message
+Each line in the grid represents a revision in the repository. 
 
-This tab page shows the message a Studio Pro user entered when they committed these changes.
+### Search and Filters
 
-## 4 Related Stories
+There are different filter options available to help find specific revisions:
 
-This tab page shows a list of stories that are related to the changes.
+* The search bar looks in all fields of the revisions grid and in the details of the commit, such as the Model changes, Disk changes and Stories.
+* The date filter allows specifying a date range for revisions. The available presets help to quickly select a range.
+* The document filter allows selecting a document, such as a specific microflow, to filter all revisions on.
+* The branch line filter limits the history to commits from a selected branch. See [Branch Line Filter](#branch-line-filter) below.
 
-## 5 Changes in Model
+#### Branch Line Filter {#branch-line-filter}
 
-This tab page shows a list of documents that were changed in the selected revision. From here you can quickly jump to the changed documents, assuming they still exist in the current version. The Mendix model version that was used to commit the revision is also shown. 
+The **Branch Line** drop-down list is in the **History** dialog toolbar. It filters the commit history to show only commits from a selected branch line.
 
-## 6 Changes on Disk
+By default, no filter is active and the history shows all commits on the current branch. The current branch is highlighted at the top of the drop-down list; all other branches are listed alphabetically.
 
-This tab page shows a list of the files that were changed on disk. You see whether files were added, deleted or modified.
+To filter by branch, do the following:
 
-## 7 Read More
+1. Click the **Branch line** drop-down list in the toolbar.
+2. Select a branch from the drop-down list, or type its name to narrow the list.
+The history grid filters commits from the selected branch.
+
+ When the filter is active, the **Clear branch filter** button appears to the right of the drop-down list. To clear the filter, click **Clear branch filter** and the filter resets to the current branch.
+
+To reload the branch list without losing your current filter selection, click the **Refresh branch list** icon to the right of the drop-down list.
+
+### Content
+
+For each revision the following information is shown, more information about each of these values is available below:
+
+* [Revision](#revision)
+* [Status](#status)
+* [Author](#author)
+* [Date/Time](#datetime)
+* [Message](#message)
+
+By selecting a revision in this grid, the tabs below the grid will be filled with information about this revision.
+
+### Comparing Revisions
+
+Revisions can be compared in the following ways:
+
+* To compare a revision to your current working state, right-click a revision and select **Compare to current state**. This opens the [Comparison pane](/refguide/comparison-pane/), which shows all differences between the selected revision and your current state, including uncommitted changes.
+
+* To compare any two commits, do the following: 
+    * Select the first commit, hold <kbd>Ctrl</kbd> (Windows/Linux) or <kbd>Cmd</kbd> (Mac) and then select the second commit. 
+    * When two commits are selected, open the **Compare** dropdown and select **Compare revisions (2/2 selected)**, or right-click a selected row, point to **Compare...**, and select **Compare revisions (2/2 selected)**. This opens the [Comparison pane](/refguide/comparison-pane/). These options are unavailable until exactly two commits are selected.
+
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/comparison-pane/history-right-click-menu.png" alt="Right-click menu showing Compare options" class="no-border" >}}
+
+For more information, see [Comparison Pane](/refguide/comparison-pane/).
+
+#### Revision{#revision}
+
+A unique alphanumeric identifier of the revision in the repository. The revision identifier is the Git hash for the commit and is unique for a whole repository.
+
+#### Status{#status}
+
+Shows the state of the revision in relation to the server. It can have one of the following values:
+
+* **Synced** – shown when revision exists locally as well as on the server
+* **Local** – shown when the revision is only available locally, because a local commit was made
+* **On server** – shown when the revision is only available on the server; this is an indicator there is incoming work that will have to be merged before being able to push new commits to the server
+
+#### Author{#author}
+
+The person who committed the change.
+
+#### Date/Time{#datetime}
+
+The date the revision was created.
+
+#### Message{#message}
+
+The message saved with the commit. If the message is long, you can read it more easily in the **Message** tab page by selecting the revision.
+
+## Details of Revisions
+
+On the right of the grid are a number of tabs which give further details about the currently-selected revision.
+
+### Message
+
+This tab shows the message saved when these changes were committed.
+
+The **Mendix version** that was used to commit the revision to the model is also shown. 
+
+### Model Changes
+
+This tab shows a list of documents that were changed in the selected revision. From here you can jump to the currently selected changed document by clicking **Go to**, assuming the document still exists in the current version.
+
+The search bar within the tab can be used to filter the list of documents.
+
+### Disk Changes
+
+This tab shows a list of the files that were changed on disk. You can see whether files were added, deleted or modified. To compare a modified file with its committed version, use **Compare with original** in the [Changes pane](/refguide/changes-pane/), which opens the [File Differences Viewer](/refguide/file-diff-viewer/).
+
+The search bar within the tab can be used to filter the list of files.
+
+### Stories
+
+This tab shows a list of stories that are related to the changes.
+
+## Read More
 
 * [Version Control](/refguide/version-control/)
 * [Stories Pane](/refguide/stories-pane/)
+* [Using Version Control History](/refguide/version-control-using-history/)
+* [Comparison Pane](/refguide/comparison-pane/)
+* [Comparing Revisions](/refguide/comparing-revisions/)

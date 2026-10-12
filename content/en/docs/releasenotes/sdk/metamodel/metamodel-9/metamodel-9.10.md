@@ -6,7 +6,7 @@ weight: 90
 
 ## 9.10.0
 
-**Release date: January 14th, 2022**
+**Release date: January 14, 2022**
 
 ### CodeActions
 

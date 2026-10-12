@@ -6,7 +6,7 @@ weight: 94
 
 ## 8.7.0
 
-**Release date: February 25th, 2020**
+**Release date: February 25, 2020**
 
 ### Pages
 

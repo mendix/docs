@@ -1,0 +1,163 @@
+---
+title: "Managing Stations"
+linktitle: "Stations"
+url: /mendix-workstation/management-stations/
+description: "Describes the administration of stations in Mendix Workstation Management."
+weight: 50
+---
+
+## Introduction
+
+The **Stations** page displays a comprehensive overview of all your configured stations. This page provides quick insights into the status of each station and offers various actions for creation, management, and bulk operations.
+
+{{< figure src="/attachments/workstation/wks-stations1.png" class="no-border" >}}
+
+## Station Status Indicators
+
+The overview page displays the current status of each station, helping you quickly identify any issues or pending actions:
+
+* **No computer registered** - The station has been created in Workstation Management, but no physical computer running the Workstation Client has been linked to it yet.
+* **Computer registered** - A Workstation Client on a physical computer is successfully registered and actively linked to this station.
+* **Client's config is out of sync** - The configuration defined in Workstation Management for this station has changed, but the Workstation Client on the registered computer has not yet received or applied these updates. This can happen if auto-refresh is disabled or if there's a temporary connectivity issue.
+* **Unknown computer** - The Workstation Client on the registered computer is reporting an unrecognized identifier, or there's an issue with its registration.
+* **Error while registering** - An error occurred during the attempt to register a Workstation Client to this station. Further investigation (for example, checking client logs) may be required.
+
+## Creating a New Station {#create-station}
+
+To create a new station, choose one of the following options, depending on your deployment scenario.
+
+### Creating a Station from Scratch
+
+To create a station from scratch, perform the following steps:
+
+1. Click **Create Station**.
+2. Provide a unique name in the **Provide a Station Name** field.
+
+    The name is a mandatory identifier for your station.
+
+3. Optional: In the **Add to Station Group** field, select a group to organize your stations (for example, by location, department, or function). For more information, see [Station Groups](#station-groups).
+4. Optional: Specify an **Auto-Accepted Computer Name**. 
+
+    If provided, during a bulk registration process, any Workstation Client reporting this computer name is automatically mapped and registered to this specific station, streamlining large-scale deployments.
+
+### Creating a Station from Clipboard
+
+If you have previously copied the configuration of an existing station (for example, from another workspace or for duplication purposes), you can use the **Create Station from Clipboard** option to paste and create a new station based on that data.
+
+### Create Station from File
+
+This option allows you to import a station's configuration from a previously exported file. This is particularly useful for migrating or replicating single station configurations.
+
+## Create Copy from Station
+
+This option allows you to directly copy an existing station's configuration without needing to import it from the clipboard or from file.
+
+## Station Groups {#station-groups}
+
+A station group is a label that you assign to stations in order to organize them, for example by location in the factory ("line A") or function ("assembly"). Station groups are defined per workspace, and a station belongs to at most one group.
+
+Station groups additionally control which stations may run an app: in the **Enable in station groups** field of an app, select the groups that should have access to it. For more information, see [Managing Apps](/mendix-workstation/management-apps/).
+
+You can assign a group to a station in the following ways:
+
+* While creating the station, in the **Add to Station Group** field. If the group does not exist yet, click **Create Station Group** on the same page.
+* Afterwards, by clicking **Edit Station** and selecting a group in the **Station Group** field.
+
+### Managing Station Groups
+
+To review the station groups of a workspace, click **Station Groups** in the workspace menu. The overview lists each group together with the number of **Stations** that belong to it.
+
+From this page you can perform the following actions:
+
+* **Create Station Group** - Click **Create Station Group**, enter a name in the **Station Group Name** field, and then click **Create Station Group**.
+* **Rename Station Group** - Click the three-dot menu of the group, and then click **Rename Station Group**.
+* **Delete Station Group** - Click the three-dot menu of the group, and then click **Delete Station Group**. The group is removed from every station that used it, but those stations are not deleted.
+
+## Exporting and Importing Stations
+
+Workstation Management provides robust features for managing stations in bulk, facilitating migration, backup, and replication tasks.
+
+* **Export Stations** - Export all stations in the current workspace, or select specific stations from the overview list to export only those you need.
+* **Import Stations** - When importing stations from a file, you have fine-grained control over how duplicates are handled:
+
+    * **Ignore** - If a station with the same identifier already exists, the imported station will be skipped.
+    * **Duplicate** - A new station will be created, even if one with the same identifier already exists, resulting in a duplicate entry.
+    * **Replace** - The existing station with the matching identifier will be completely overwritten by the imported station's data.
+    * **Merge** - The imported station's data will be intelligently merged with the existing station's configuration, updating fields where there are differences.
+
+The import process allows you to specify what information to include:
+
+* **Include Apps** - Specify whether to include the associated Mendix applications configured for the imported stations.
+* **Include Devices** - Specify whether to include the device configurations linked to the imported stations.
+
+## Bulk Registration Tokens
+
+For large-scale deployments, administrators can generate bulk registration tokens to simplify the process of linking multiple Workstation Clients to stations without manual intervention for each client.
+
+### Generating a Token
+
+Specify a valid time period for the token, after which it will automatically expire.
+Upon generation, the system provides the registration command for the terminal, which can be used to register Workstation Clients.
+
+### Managing Tokens
+
+You can revoke an active bulk registration token at any time, immediately invalidating it and preventing further registrations using that token.
+
+## Station Detail Page
+
+Once a station is created, clicking on the arrow in the **Stations Overview** page will take you to the **Station Detail** page. This page is your central hub for viewing and configuring all specific settings and associated devices for that individual station.
+
+From here, you can perform the following tasks:
+
+* Change the station name.
+* Manually refresh configuration to the client, forcing the Workstation Client on the registered computer to immediately pull the latest settings from Workstation Management.
+* Configure advanced settings like **Detect Card Readers** and **Station Developer Mode**.
+* Manage and configure all devices associated with this station.
+* Retrieve diagnostics from the Workstation Client on the registered computer.
+
+### Client Diagnostics {#client-diagnostics}
+
+The Workstation Client scans the computer it runs on for connected peripherals and reports on its own state. You can retrieve that information from Workstation Management, which lets you check what a station has attached without asking the operator to read it off the computer.
+
+To retrieve the diagnostics of a station, click **Diagnostics** on the **Station Detail** page. The diagnostics appear as JSON in a side panel next to the name of the registered computer, and cover the following:
+
+* The serial ports, Bluetooth devices, card readers, printers, and cameras that the Workstation Client detects, with the metadata it has for each of them.
+* System information about the computer and the Workstation Client, such as the operating system, the client type, the client version, and how long it has been running.
+* A count of the log entries the Workstation Client has recorded per log level.
+
+The **Diagnostics** button appears only when a computer is registered to the station and its Workstation Client is connected. This is the same condition as for the **Refresh on Computer** button. The diagnostics are pulled from the Workstation Client when you click the button, and discarded again when you close the panel. Because of that, they always reflect the current state of the computer rather than a stored snapshot. If the request fails, Workstation Management reports that it cannot retrieve the diagnostics for that computer.
+
+Workstation Management retrieves a subset of the information on the **Diagnostics** page of the Workstation Client itself. The local file system paths that the client's own page shows are left out. For the client-side page, see [Troubleshooting the Workstation Client: Diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics).
+
+## Advanced Station Settings
+
+### Detect Card Readers
+
+The Workstation Client can automatically detect the card readers attached to the computer and add them to its device list. Alternatively, you can configure card readers as devices of the station. For more information, see [Configuring Devices: Card Readers](/mendix-workstation/management-devices/#card-readers).
+
+Auto detecting card readers is disabled by default. To enable this feature, perform the following steps:
+
+1. In **Station** view, click the **three dots** icon.
+2. Click **Edit Station**.
+3. Select the **Detect Card Readers** checkbox.
+
+### Developer Mode {#developer-mode}
+
+When developer mode is enabled, users of the Workstation Client can perform the following actions:
+
+* Quit the program from the Start menu.
+* Deregister the Workstation Client, allowing it to be registered to another station.
+* Access debug level live logs displayed in the Logs pane of the Workstation Client, even if the workspace's log level is set to a different level.
+
+Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Workspaces](/mendix-workstation/management-workspaces/).
+
+Disabling developer mode requires Workstation licenses. In a workspace without an entitlement, developer mode is enabled by default. Losing the entitlement does not re-enable developer mode on existing stations.
+
+{{% alert color="info" %}}
+For production environments, it is strongly recommended to disable Developer Mode, which requires Workstation licenses. This prevents Workstation operators from accidentally quitting or deregistering the Workstation Client, and restricts access to debugging tools that are not needed in a live operational setting.
+{{% /alert %}}
+
+To configure developer mode, perform the following steps:
+    1. In **Station** view, click the **three dots** icon.
+    2. Click **Edit Station**.
+    3. Check or clear the **Developer Mode** check box.

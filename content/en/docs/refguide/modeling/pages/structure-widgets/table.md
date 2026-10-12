@@ -2,26 +2,25 @@
 title: "Table"
 url: /refguide/table/
 weight: 60
-tags: ["studio pro", "table", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="warning" %}}The table widget is not supported on native mobile pages.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 Tables can be used to give structure to a page. They contain [rows](/refguide/table/#rows), columns, and [cells](/refguide/table/#cells). Each cell can contain widgets. 
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table.png" class="no-border" >}}
 
-## 2 Components
+## Components
 
 A table consist of [rows](#rows), columns, and [cells](#cells). 
 
-### 2.1 Rows and Their Properties {#rows}
+### Rows and Their Properties {#rows}
 
 A table can contain one or more rows. Each row contains columns and the number of columns can differ per row.
 
@@ -33,7 +32,7 @@ A row has the following properties:
 
 For more information on properties listed above, see [Properties Common in the Page Editor](/refguide/common-widget-properties/).
 
-### 2.2 Cells and Their Properties {#cells}
+### Cells and Their Properties {#cells}
 
 Each section of a table row or column is called a cell. Cells can contain widgets.
 
@@ -48,20 +47,9 @@ A cell has the following properties:
     * **Normal** – ordinary cell containing data
     * **Header** – a table header cell
 
-### 2.3 Performing Actions on Rows
+### Performing Actions on Rows
 
-To perform an action on a row , select a row and right-click it. A list of actions will open. 
-
-You can perform the following actions:
-
-* **Add column left** – creates a column to the left of the selected one
-* **Add column right** – creates a column to the right of the selected one
-* **Move left** – moves a column left in the row
-* **Move right** – moves a column right in the row
-
-### 2.4 Performing Actions on Columns
-
-To perform an action on a column , select a column and right-click it. A list of actions will open. 
+To perform an action on a row, select a row and right-click it. A list of actions will open. 
 
 You can perform the following actions:
 
@@ -70,7 +58,18 @@ You can perform the following actions:
 * **Move up** – moves a row up
 * **Move down** – moves a row down
 
-### 2.5 Performing Actions on Cells
+### Performing Actions on Columns
+
+To perform an action on a column, select a column and right-click it. A list of actions will open. 
+
+You can perform the following actions:
+
+* **Add column left** – creates a column to the left of the selected one
+* **Add column right** – creates a column to the right of the selected one
+* **Move left** – moves a column left
+* **Move right** – moves a column right
+
+### Performing Actions on Cells
 
 To perform an action on a cell, select a cell and right-click it. A list of actions will open. 
 
@@ -92,32 +91,28 @@ You can perform the following actions:
 
 To merge cells to the right, left, up, or down, you can also click the corresponding icon:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/merge-icons.png" alt="Merge Icons" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/merge-icons.png" alt="Merge Icons" class="no-border" >}}
 
-## 3 Properties
+## Properties Pane
 
-An example of table properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Table properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table-properties.png" alt="Table Properties"   width="250"  >}}
+Properties:
 
-Table properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
+* [Common](#common)
 
-### 3.1 Common Section {#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 3.2 Design Properties Section {#design-properties}
+## Properties
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+### General Section {#general}
 
-### 3.3 General Section {#general}
-
-#### 3.3.1 Width Unit
+#### Width Unit
 
 The **Width Unit** defines whether the [Column widths](#column-widths) property is set in percentage or in pixels. 
 
@@ -126,11 +121,11 @@ The **Width Unit** defines whether the [Column widths](#column-widths) property 
 | Percentage  *(default)* | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
 | Pixels | The **Column widths** property is specified in pixels. When resizing, the pixel width columns will keep the same size; auto columns will become wider/narrower. |
 
-#### 3.3.2 Column Widths {#column-widths}
+#### Column Widths {#column-widths}
 
 The **Column widths** property defines the widths of each column as a list of numbers separated by semi-colons. The **Width unit** (described above) determines if these numbers mean percentages or pixels. 
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" class="no-border" >}}
 
 When **Width unit** is set to *Pixels*, you can set column width to the following:
 
@@ -139,11 +134,25 @@ When **Width unit** is set to *Pixels*, you can set column width to the followin
 
 For example, you can you can have three columns of which the first is 200 pixels wide (*Fixed* width), the second is 100 pixels (*Fixed* width), and the last one is set to *Auto* which means that it will take up the rest of the space in the row.
 
-### 3.4 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 4 Read More
+### Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## Styling
+
+### Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

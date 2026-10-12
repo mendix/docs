@@ -1,0 +1,93 @@
+---
+title: "Pages in Maia Make"
+linktitle: "Pages"
+url: /refguide/maia-for-pages/
+weight: 60
+description: "Describes how Maia Make generates, changes, and explains pages in Studio Pro."
+aliases:
+    - /refguide/page-generator/
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+---
+
+## Introduction
+
+{{% alert color="info" %}}
+In Studio Pro 11.8 and above, page generation is part of [Maia Make](/refguide/maia-make/). In Studio Pro 11.7 and below, it was a separate tool called Maia for Pages.
+
+To use this capability, you need an internet connection and must be signed in to Studio Pro.
+{{% /alert %}}
+
+In the Maia Make chat, Maia can generate a [page](/refguide/page/) by adding and configuring widgets based on text input and optional image input. You can also ask Maia to edit or remove existing widgets, or to provide further improvements and explanations. You can work on pages in the same conversation in which you create the domain model, logic, and other parts of your app. For information on the current limitations, see the [Limitations](#limitation) section below.
+
+## Working with Pages in Maia Make
+
+Describe your page or its main goals in the chat. Maia uses this information to add relevant widgets to the page and configure them for you. When generating a page, Maia knows about the domain model of the module you are currently working on. For example, it might include a [Data View](/refguide/data-view/) with some [Text Box](/refguide/text-box/) widgets for an attribute of an entity.
+
+You can also supplement text input with an image. Maia uses the image to interpret your request better. For example, it can recognize the layout of a page from the image and replicate it. The image can be a screenshot, photo, wireframe, or drawing. With text input, you can also specify differences between the provided image and how you would like the generated page to appear. For example, you might write: *Generate a page based on this image, but change the header to Welcome.*
+
+On pages that have already been created, either by Maia or manually, you can ask Maia to further improve the page and provide explanations. For example, you can add extra widgets, edit widgets by changing their properties, or remove widgets.
+
+### In Studio Pro 11.8 and Above
+
+In Studio Pro 11.8 and above, you work on pages in the Maia Make chat, which is enabled by default. There is no dedicated interface for pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+
+In Studio Pro 11.8, only overview pages can be generated.
+
+In Studio Pro 11.9 and above, you can generate custom pages from scratch and modify existing pages. Local variables, additional data sources, client actions, XPath constraints, and expressions are also supported.
+
+### Maia for Pages in Studio Pro 11.7 and Below
+
+In Studio Pro 11.7 and below, to enable Maia for Pages, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Pages**.
+
+Once enabled, you can find it in the the toolbar of a page:
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-pages/maia-for-pages.png" max-width=80% >}}
+
+{{% alert color="info" %}}
+Maia for Pages is available in both the **Structure mode** and **Design mode**.
+{{% /alert %}}
+
+After clicking **Maia for Pages**, a dedicated chat interface appears on the right side of Studio Pro under the **Maia** tab:
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-pages/chat-interface.png" alt="" max-width=42% >}}
+
+{{% alert color="info" %}}
+In this dedicated chat, only requests related to Pages are handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
+{{% /alert %}}
+
+## Limitations {#limitation}
+
+Maia does not support all widgets when it generates pages.
+
+The following widgets are supported:
+
+* [Container](/refguide/container/)
+* [Layout Grid](/refguide/layout-grid/)
+* [Data View](/refguide/data-view/)
+* [Text](/refguide/text/)
+* [Button](/refguide/button-widgets/)
+* [Text Box](/refguide/text-box/)
+* [Text Area](/refguide/text-area/)
+* [Checkbox](/refguide/check-box/)
+* [Radio Buttons](/refguide/radio-buttons/)
+* [Date Picker](/refguide/date-picker/)
+
+The following widgets are supported if they have been installed:
+
+* [Data Grid 2](/appstore/modules/data-grid-2/)
+* [Combo Box](/appstore/widgets/combobox/)
+* [Image](/appstore/widgets/image/)
+* [Charts](/appstore/widgets/charts/)
+* [Progress Bar](/appstore/widgets/progress-bar/) (Studio Pro 11.1 and above)
+* [Progress Circle](/appstore/widgets/progress-circle/) (Studio Pro 11.1 and above)
+
+{{% alert color="info" %}}
+In Studio Pro 11.6 and above, Maia can understand customized pluggable widgets when you enhance your widget definition XML file with the `<prompt>` element. For more information, see the [How to Enhance Your Pluggable Widget for Maia by Using `<prompt>`](/apidocs-mxsdk/apidocs/pluggable-widgets/#using-prompt-for-maia) section in *Pluggable Widgets API*.
+{{% /alert %}}
+
+## Read More
+
+* [Maia Make Capabilities](/refguide/maia-make/)
+* [Pages](/refguide/page/)
+* [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
+* [Questions and Guidance in Maia Make](/refguide/maia-chat/)

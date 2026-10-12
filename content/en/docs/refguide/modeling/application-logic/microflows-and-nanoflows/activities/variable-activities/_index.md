@@ -2,10 +2,9 @@
 title: "Variable Activities"
 url: /refguide/variable-activities/
 weight: 40
-tags: ["studio pro", "variable activities", "variable", "variables"]
 ---
 
-## 1 Introduction
+## Introduction
 
 A *variable* is a temporary storage for data. Variables are used to store information and refer to it when needed. For this purpose variables should have a unique name.
 In a microflow or nanoflow you can add a variable, assign a value to it and then use it in activities or events. You can then change this value later if necessary. 

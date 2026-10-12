@@ -6,7 +6,7 @@ weight: 96
 
 ## 9.4.0
 
-**Release date: July 20th, 2021**
+**Release date: July 20, 2021**
 
 ### Rest
 

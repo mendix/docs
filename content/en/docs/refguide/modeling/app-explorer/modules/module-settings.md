@@ -2,67 +2,184 @@
 title: "Module Settings"
 url: /refguide/module-settings/
 weight: 10
-tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
-{{% /alert %}}
+## Introduction
 
-## 1 Introduction
+Module settings allow you to configure various properties of a module, including Java managed dependencies, module type, version, and the location where the module appears in the App Explorer.
 
-Module settings allow you to choose the type of the module when you build your app and to set a version for certain module types:
+To open module settings, double-click **Settings** in the required module.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-dialog.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/settings.png" class="no-border" >}}
 
-To open module settings, select the module in the App Explorer and double-click **Settings**:
+## Java Dependencies
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/settings.png" >}}
+You can add managed dependencies for each module on the **Java Dependencies** tab. For more information, see [Managed Dependencies](/refguide/managed-dependencies/).
 
-## 2 Module Type {#module-type}
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-java-dependencies.png" class="no-border" >}}
 
-There are three different types of modules and the choice of the type depends on the purpose of the module. You can choose one the following:
+## Export
+
+Select the **Export** tab:
+
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-export.png" class="no-border" >}}
+
+## Configure
+
+The **Configure** tab contains the module's basic settings.
+
+### Module Type {#module-type}
+
+There are three types of modules, and the choice of type depends on the purpose of the module. You can choose one the following:
 
 * [App module](#app-module)
 * [Add-on module](#add-on-module)
 * [Solution Module](#solution-module)
 
-### 2.1 App Module {#app-module}
-
-**App module** is a standard way of structuring your app. Use app modules to distinguish between functional domains: create an app module for each relevant domain and put all pages, microflows, entities, and other documents in one place.
-
-An **App module** is exported as a package file (*.mpk* ) that includes the full source code of the module.
-
-### 2.2 Add-on Module {#add-on-module}
-
-An **add-on module** is a stand-alone module that is not dependent on other modules and is used as a separate element, for example, as a connector. 
-
-An add-on module is exported as an module file (*.mxmodule*) that only exposes the elements with the **Usable** export level. For more information on Export levels, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/). Its source cannot be inspected by the consumer of the module.
-
-If you are creating functionality that can be exported and used by other users separately and independently of the rest of the app, you can set your module to an add-on type.  
-
-When the module is set as the add-on module, it gets the letter A as an icon.
-
-### 2.3 Solution Module {#solution-module}
-
-**Solution modules** are only used for developing a solution and are an inseparable part of it. Set of solution modules used for the solution form the **solution core**. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information on solutions, see [Creating Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
-
-When the module is set as the solution module, it gets the letter S as an icon.
-
-## 3 Module Version
-
-{{% alert color="info" %}}
-This setting is available for only add-on and solution module types.
+{{% alert color="warning" %}}
+If you switch from an add-on or solution module to an app module, or from an app module to a solution or an add-on module, the module data is lost once the new version of the app is deployed. Switching from an add-on to a solution module and from a solution to an add-on module is possible without loss of data. 
 {{% /alert %}}
 
-A version number of the module. The version should be a semantic version (i.e. consisting of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
+#### App Module {#app-module}
 
-We recommend setting a new version every time changes are made to the module. 
+An app module is a standard way of structuring your app. Use app modules to distinguish between functional domains: create an app module for each relevant domain and put all pages, microflows, entities, and other documents in one place.
 
-## 5 Read More
+An app module is exported as a package file (*.mpk* ) that includes the full source code of the module.
+
+#### Add-on Module {#add-on-module}
+
+An add-on module is a standalone module that is not dependent on other modules. It is used as a separate element (for example, as a connector). 
+
+An add-on module is exported as a module file (*.mxmodule*) that only exposes the elements with the **Usable** export level. For more information on export levels, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/). Its source cannot be inspected by the consumer of the module.
+
+If you are creating functionality that can be exported and used by other users separately and independently of the rest of the app, you can set your module to an add-on type.
+
+When the module is set as the add-on module, it gets the letter **A** as an icon.
+
+#### Solution Module {#solution-module}
+
+Solution modules are only used for developing a solution and are an inseparable part of it. The set of solution modules used for the solution form the solution core. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information, see [Creationg Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
+
+When the module is set as the solution module, it gets the letter **S** as an icon.
+
+### Module Version {#module-version}
+
+{{% alert color="info" %}}
+Version is available for all module types for Studio Pro 11.12 and above. In earlier versions of Studio Pro, version is available only for add-on and solution module types. 
+{{% /alert %}}  
+
+This is the version number of the module which is shown in various places in the Studio Pro user interface, as well as in the Marketplace.
+
+{{% alert color="info" %}}
+Starting in Studio Pro 11.15, the module version appears next to the module name in the **App Explorer** tree. Regular modules show the version in brackets (for example, `[1.0.0]`). Marketplace modules that have a Marketplace version set show it with an `mp` prefix (for example, `[mp 3.2.1]`).
+{{% /alert %}}
+
+When redistributing a module, you should always change the version number when changes are made. For modules that will be published to the Marketplace, the version must be set before exporting the package.
+
+{{% alert color="info" %}}
+Marketplace automatically uses the version from the exported package for packages exported from Studio Pro 11.12 and above. You cannot change this manually. If the version is already in use, the Marketplace rejects the package.
+{{% /alert %}}  
+
+#### Version format
+
+The version should be a semantic version, consisting of at least three numerical parts: major, minor, and patch version, such as *1.3.7*.
+Refer to the following guidance when changing the version number:
+
+* Increase the major version when making breaking changes, such as removing a functionality like an entity or a microflow, or upgrading the module to a new major version of Studio Pro.
+* Increase the minor version when adding new features in a backward compatible manner. For example, when adding a microflow or entity that do not interfere with existing behavior.
+* Increase the patch version when making backward compatible bug fixes, such as fixing a styling issue on a page or changing a calculation in a microflow without changing the parameters and output type.
+
+Next to the numerical major, minor and patch version, alphanumerical characters are allowed. This is considered to be an advanced feature, for more information, please see [Semantic Versioning](https://semver.org/). An example of an advanced version number is *1.3.7-beta.2*.
+
+{{% alert color="warning" %}}
+Mendix Marketplace does not support module packages with alphanumerical characters in the version number. To publish on Marketplace, the version number should consist of three numerical parts. Support for alphanumerical characters will be added in a future release.
+{{% /alert %}}
+
+## Package {#package}
+
+{{% alert color="info" %}}
+Improved package management is available for [Studio Pro 11.12](/releasenotes/studio-pro/11.12/) and above.
+{{% /alert %}}
+
+Studio Pro 11.12 introduces improved package management to enable reliable module tracking and updates.
+
+Key improvements are delivered through new module properties and a new `manifest.json` file format in module packages (*.mpk* files):
+
+* **Package identification** – Each module receives a [Module ID](#module-id) that uniquely identifies it across all versions. This allows Studio Pro to reliably track modules across updates, even if the module name changes.
+* **Package integrity** – Each package includes a checksum (SHA-256 hash) that verifies the integrity of the package itself and the imported module in the app.
+* **Metadata tracking** – The manifest includes information about the package name, version (following semantic versioning), type, and the Mendix metamodel version used to create it.
+
+The **Package** section on the **General** tab displays package identification information for the module. Studio Pro uses this information to track modules across versions, which is the foundation for more reliable module updates.
+
+### Module ID {#module-id}
+
+The module ID is a unique identifier for the module that remains the same across all versions. It determines whether two module packages represent the same module and is therefore the basis for module update compatibility. If two modules share the same module ID, Studio Pro can update one with the other. If the IDs differ, Studio Pro treats them as distinct modules.
+
+#### Automatic Module ID Assignment
+
+The module ID is assigned automatically and is stable across devices, so multiple developers working on the same module independently receive the same value.
+
+* For modules imported from the Marketplace, the module ID is derived from the Marketplace component ID.
+* For all other modules, the module ID is derived from the app ID and the module name. This ensures the ID remains consistent across devices when multiple developers work independently.
+
+When you open an existing app in Studio Pro, every module that does not yet have a module ID receives one automatically. No action is required.
+
+#### Manual Module ID Override
+
+In some cases, you may want to override the automatically assigned module ID. To change it, click {{% icon name="pencil" %}} to open a dialog where you can enter a new value.
+
+{{% alert color="warning" %}}
+Changing the module ID may break existing installations that depend on this module. Only override this value if you understand the implications.
+
+Marketplace does not allow you to publish a module with a module ID that is already used by another publisher.
+
+{{% /alert %}}
+
+### Checksum {#checksum}
+
+The **Checksum** is a read-only SHA-256 hash that uniquely identifies a specific version of the module package. It serves two purposes:
+
+* **Integrity** – It is a hash of the contents of the original module package that Studio Pro uses to detect any user modifications after the module was imported.
+* **Version identification** – It allows you to compare two module packages for equality without inspecting their contents.
+
+The checksum is displayed only for modules imported from a module package. For modules created directly in your app, the checksum is calculated when you export the module and is not displayed in the **Package** section.
+
+### Package Manifest {#package-manifest}
+
+When you export a module package (a *.mpk* file), Studio Pro adds a `manifest.json` file to the package alongside the existing metadata. The manifest contains the following:
+
+* The module ID and module name
+* The module version
+* The checksum of the package
+* A version GUID – a unique identifier for this build of the package, generated from its checksum
+* The module type (`source`, `add-on`, or `solution`)
+* The content types included in the package (for example, `extension` or `ai-skill`), if applicable
+* The Mendix metamodel version used to create the package
+* The list of files included in the package
+
+{{% alert type="info" %}}
+The legacy `package.xml` metadata file is not mentioned in `manifest.json` but is still included in the package for backward compatibility.
+{{% /alert %}}
+
+If you try to import a module package that was created with a newer version of Studio Pro than the one you are using, Studio Pro shows an error and cancels the import. Upgrade to a compatible version of Studio Pro before importing the package.
+
+### Location {#location}
+
+{{% alert color="info" %}}
+This setting is available for Studio Pro 11.13 and above.
+{{% /alert %}}
+
+The **Location** setting determines where the module appears in the App Explorer. You can choose one of the following options:
+
+* **Module list** (default) – The module appears in the regular module list at the bottom of the App Explorer
+* **Marketplace modules** – The module appears under the **Marketplace modules** node in the **App** node within the App Explorer
+
+Modules imported from the Marketplace are automatically set to **Marketplace modules**. You can change this setting at any time to organize your modules based on your preferences.
+
+## Read More
 
 * [Modules](/refguide/modules/)
-* [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
-* [IP Protection](/appstore/creating-content/sol-ip-protection/)
+* [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
+* [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/)
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)

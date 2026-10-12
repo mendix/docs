@@ -6,13 +6,13 @@ weight: 86
 
 ## 9.14.0
 
-**Release date: May 20th, 2022**
+**Release date: May 20, 2022**
 
 ### DomainModels
 
 #### AssociationBase (Element)
 
-* We introduced the `navigability` property for indicating in which direction(s) the association can be navigated.
+* We introduced the `navigability` property for indicating in which direction (or directions) the association can be navigated.
 
 ### Microflows
 
@@ -48,7 +48,7 @@ weight: 86
 
 #### ODataRemoteAssociationSource (Element)
 
-* We introduced the `navigability2` property for describing the direction(s) in which the association can be traversed.
+* We introduced the `navigability2` property for describing the direction (or directions) in which the association can be traversed.
 * We deleted the `navigability` property, which has been replaced by `navigability2`.
 
 #### PublishedODataContract (Element)

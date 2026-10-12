@@ -1,11 +1,10 @@
 ---
 title: "Nanoflow Source"
 url: /refguide/nanoflow-source/
-tags: ["studio pro", "nanoflow source", "data source"]
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Nanoflow** data source is available for [data views](/refguide/data-view/) and [list views](/refguide/list-view/). 
 
@@ -15,19 +14,19 @@ When a data widget with a nanoflow data source is displayed in the browser or re
 
 A nanoflow data source ignores all context. It performs actions described in the nanoflow, nothing else. For example, nested data containers with a nanoflow data source will not automatically create or invoke associations to the encasing data widget.
 
-## 2 Nanoflow Data Source Example
+## Nanoflow Data Source Example
 
 For example, you have a list that needs to display a list of potential orders based on the order type:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/nanoflow-source/nanoflow-source.png" alt="Nanoflow Source" >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/nanoflow-source/nanoflow-source.png" alt="Nanoflow Source" class="no-border" >}}
 If the *OrderType* of the *Order* entity is set to *Cars*, then the data grid should display all *Products* for which the Boolean *Motorized* is set to true. If the *OrderType* is *Bicycles* only objects for which *Motorized* is set to false need be shown. If *OrderType* is empty the data grid should remain empty.
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/entities-example.jpg" alt="Entities Example" >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/entities-example.jpg" alt="Entities Example" class="no-border" >}}
 Because of the mismatch in attribute types this cannot be constrained by XPath and a nanoflow data source is required. 
 
 The nanoflow for the use-case should look like this:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/microflow-nanoflow-example.jpg" alt="Nanoflow Example" >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/microflow-source/microflow-nanoflow-example.jpg" alt="Nanoflow Example" class="no-border" >}}
 This nanoflow does the following:
 
 1. It passes the *Order* of the enclosing data view as a parameter. 
@@ -38,13 +37,13 @@ This nanoflow does the following:
 
     {{% alert color="info" %}}The *empty* path also requires a value, where `empty` is also a value.{{% /alert %}}
 
-## 3 Properties
+## Properties
 
-### 3.1 Nanoflow
+### Nanoflow
 
 Defines the nanoflow used to populate the widget. This nanoflow will be run whenever the widget is loaded into the browser or refreshed. The nanoflow must have a return value of either an object or a list of objects, depending on the widget being used.
 
-## 4 Read More
+## Read More
 
 * [Nanoflows](/refguide/nanoflows/)
 * [Data Containers](/refguide/data-widgets/)

@@ -76,26 +76,26 @@ Configuring the SAML module is crucial for setting up secure authentication with
 
 In versions below 3.6.9 of the SAML module, configuration can be done using the app pages – see the [Using SSO Landing pages](#ssolandingpage) section above. However, in version 4.0.0 and above, you have the option to use constants or custom microflows to configure your app at deploy time.
 
-This section explains three different ways to complete the deploy-time configuration of the SAML module. The [Easy Flow configuration](#easy-flow) offers a default and straightforward setup, while the [Non-default configuration](#non-default) enables customization of the IdP configuration by implementing custom microflows. Alternatively, in the [Runtime Configuration Flow](#runtime-config), you can deploy your app first and then complete the configuration within the app interface.
+This section explains three different ways to complete the deploy-time configuration of the SAML module. The [Easy Flow configuration](#easy-flow) offers a default and straightforward setup, while the [Non-default (custom) configuration](#non-default) enables customization of the IdP configuration by implementing custom microflows. Alternatively, in the [Runtime Configuration Flow](#runtime-config), you can deploy your app first and then complete the configuration within the app interface.
 
 {{% alert color="info" %}}
-For IdP configuration, during deploy-time ([Easy default](#easy-flow) and [Non-default flow](#non-default)), users are not allowed to edit the fields except for the **Encryption Settings**. This can lead to a mismatch in the fields when they run the application.
+For IdP configuration, during deploy-time ([Easy default](#easy-flow) and [Non-default (custom) flow](#non-default)), users are not allowed to edit the fields except for the **Encryption Settings**. This can lead to a mismatch in the fields when they run the application.
 {{% /alert %}}
 
 ### Choosing Between Deployment-Managed and Runtime-Managed Configuration{#config-approach}
 
-The `IdPConfiguration_MicroflowName` constant controls whether the SAML module creates and maintains IdP configurations automatically when the app starts. It was added to support a "zero-touch" upgrade experience, where you manage SAML configuration through deployment settings instead of repeating manual setup after every deployment.
+Starting from 4.2.0 of the module, the `IdPConfiguration_MicroflowName` constant controls whether the SAML module creates and maintains IdP configurations automatically when the app starts. It was added to support a "zero-touch" upgrade experience, where you manage SAML configuration through deployment settings instead of repeating manual setup after every deployment.
 
-The default value is `SAML.Default_CreateIDPConfiguration`. This microflow creates or updates IdP configurations based on the values you set in the deployment configuration, such as **IdPAlias** and **IdPMetaDataURL**. If you do not set these values, the microflow does not create a configuration.
+The default value is `SAML.Default_CreateIDPConfiguration`. This microflow creates or updates IdP configurations based on the values you set in the deployment configuration, such as **IdPAlias** and **IdPMetaDataURL**. If you do not set these values, the microflow does not create an IdP configuration.
 
 | Approach | `IdPConfiguration_MicroflowName` | Behavior at startup or deployment |
 | --- | --- | --- |
-| Deployment-managed (default) | `SAML.Default_CreateIDPConfiguration` | IdP configurations are created or updated from the deployment settings. Changes made in the Administration UI are overwritten on restart. |
-| Deployment-managed (custom) | Name of your custom microflow | Your microflow returns the list of IdP configurations, which the module creates or updates. |
-| Runtime-managed | Empty | No IdP configurations are created or updated automatically. You manage them in the Administration UI. |
+| Runtime-managed (default) | Not Applicable | No IdP configurations are created or updated automatically. You manage them in the Administration UI. You should not provide the values of the eight constants. To know more about the manadatory constants, see [Setting up Eight Mandatory Constants](/appstore/modules/saml/installation-configuration/#setup-eight-constants). | 
+| Deployment-managed ([easy default flow](/appstore/modules/saml/installation-configuration/#easy-flow)) | `SAML.Default_CreateIDPConfiguration` | IdP configurations are created or updated from the deployment settings. Changes made in the Administration UI are overwritten on restart. |
+| Deployment-managed ([custom](/appstore/modules/saml/installation-configuration/#non-default)) | Name of your custom microflow | Your microflow returns the list of IdP configurations, which the module creates or updates. Changes made in the Administration UI are overwritten on restart. |
 
 {{% alert color="warning" %}}
-If you manage IdP configuration in the Administration UI, clear the `IdPConfiguration_MicroflowName` constant. Otherwise, the module can create or update configurations when the app starts.
+If you manage IdP configuration in the Administration UI, do not configure [manadatory eight constants]((/appstore/modules/saml/installation-configuration/#setup-eight-constants)). Otherwise, the module can create or update configurations when the app starts (at deploy time).
 {{% /alert %}}
 
 ### Easy Default Flow{#easy-flow}
@@ -158,11 +158,12 @@ After configuring the eight constants, you need to deploy the application. For d
 
 {{% alert color="info" %}}It is recommended to modify the values using constants. Any changes made from the runtime screen will be overwritten by the constant values upon restarting the app.{{% /alert %}}
 
-### Non-default Configuration{#non-default}
+### Non-default (custom) Configuration{#non-default}
 
-The [Easy Default Flow](#easy-flow) section above gives you an overview of the default settings. If you have requirements to deviate from these defaults, for example, to enable Force Authentication, change encryption settings from the default, or support multiple Identity Providers (IdPs), Non-default configuration setup offers advanced options for your SAML integration needs. With these features, you can customize the SAML configuration to meet your specific requirements.
+The [Easy Default Flow](#easy-flow) section above gives you an overview of the default settings. If you have requirements to deviate from these defaults, for example, to enable Force Authentication, change encryption settings from the default, or support multiple Identity Providers (IdPs), Non-default (custom) 
+configuration setup offers advanced options for your SAML integration needs. With these features, you can customize the SAML configuration to meet your specific requirements.
 
-In this configuration, you have several options to customize the Identity Provider (IdP) settings. Firstly, you can configure the IdP using constants. Additionally, the SAML module supports further customization of the IdP configuration. From version 4.2.0 onward, you can define your custom microflow name in the `IdPConfiguration_MicroflowName` constant. For the available values, see [Choosing Between Deployment-Managed and Runtime-Managed Configuration](#config-approach). The custom microflow must return a list of configured IdPs (`Dep_IdPConfiguration.return`), which the SAML module then uses to generate the necessary SSO configurations for multiple IdPs. The default value of the `IdPConfiguration_MicroflowName` constant is `SAML.Default_CreateIDPConfiguration`.
+In this configuration, you have several options to customize the Identity Provider (IdP) settings. Firstly, you can configure the IdP using constants. Additionally, the SAML module supports further customization of the IdP configuration. From version 4.2.0 onward, you can define your custom microflow name in the `IdPConfiguration_MicroflowName` constant. For the available values, see [Choosing Between Deployment-Managed and Runtime-Managed Configuration](#config-approach). The custom microflow must return a list of configured IdPs (`Dep_IdPConfiguration`), which the SAML module then uses to generate the necessary SSO configurations for multiple IdPs. The default value of the `IdPConfiguration_MicroflowName` constant is `SAML.Default_CreateIDPConfiguration`.
 
 In versions earlier than 4.2.0, IdP customization was supported through the implementation of a custom microflow called `Custom_Create_IdPConfiguration`. However, this microflow has been deprecated as of version 4.2.0.
 

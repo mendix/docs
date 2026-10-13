@@ -157,8 +157,6 @@ If a currently running workflow instance is executing an activity that is moved 
 
 Conversely, moving an activity from a parent path into a nested scope, such as a boundary event path or a sub-process, can also prevent the workflow from progressing. In these scenarios, the Workflow Engine cannot guarantee the integrity of the execution flow. This can result in the workflow instance remaining stuck in the **In Progress** state indefinitely, preventing it from ever reaching a completed state.
 
-This conflict can also occur when you change the type of an ongoing non-interrupting boundary event. For more information, see [Changing Boundary Event Type](/refguide/workflow-boundary-events/#changing-boundary-event-type).
-
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.

@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
   
 ## October 2026
 
+### October 15, 2026
+
+#### New Features
+
+* We have added a [Dashboard](/developerportal/operate/logs/#dashboard) tab to the **Logs** page. The dashboard gives an overview of your app's log activity for a selected time interval of up to seven days, including the most frequent error and warning messages, endpoints with the highest error rate, dependency failures, and security markers. The dashboard is now the default tab of the **Logs** page; archived logs and the live log are on the **Log Files** tab, and the activity log is on the **Activity** tab.
+
 ### October 5, 2026
 
 #### New Features

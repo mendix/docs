@@ -21,11 +21,11 @@ When deploying your Private Mendix Platform app for production use, it needs to 
 
 Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix on Kubernetes that are not connected to the internet (air-gapped).
 
-Rather than having to apply and update licenses for each environment individually, the Private Cloud License Manager (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
+Rather than having to apply and update licenses for each environment individually, Private Cloud License Manager (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
 
 PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
 
-## Prerequisites{#prerequisites}
+## Prerequisites {#prerequisites}
 
 To install and use PCLM, you need the following prerequisites:
 
@@ -83,7 +83,7 @@ Where you need to supply the following parameters
 * `<authMode>` – authentication mode of the database, `aws-irsa` or `azure-wi` or `static` *(default)* 
 * `<azure-client-id>` – azure client id when authMode is set to `azure-wi`
 * `<aws-iam-role>` – aws iam role when authMode is set to `aws-irsa`  
-* `<db-name>` – the name of the database where you want to hold PCLM data
+* `<db-name>` – the name of the database where you want to hold the PCLM data
 * `<db-user>` – a database user with the rights described in the prerequisites section
 * `<db-pass>` – the password for the database user
 * `<port>` – the port used to access the database, default: *5432*
@@ -473,7 +473,7 @@ If you do not have any unused licenses, new app environments will not be license
 
 The Mendix Operator will also pick up a Mendix Operator license if one has been imported into the PCLM server.
 
-### Verifying That the Licenses Are Applied{#verify}
+### Verifying That the Licenses Are Applied {#verify}
 
 There are multiple ways to verify whether the licenses (both Operator and MendixApp) are applied and where.
 

@@ -14,7 +14,7 @@ For web apps, Atlas Core uses the following types of design properties:
 
 * **Toggle** – Can be turned on or off, and applies a class when it is turned on.
 * **Dropdown** – Offers a set of related options, of which one can be selected.
-* **Colorpicker** – Is like a **Dropdown**, and can show a preview of the color of each option. The preview can be a theme variable, such as `--brand-primary`.
+* **Colorpicker** – Resembles a **Dropdown**, and shows a preview of the color of each option. The preview can be a theme variable, such as `--brand-primary`.
 * **ToggleButtonGroup** – Offers a set of related options, and can be configured to allow selecting multiple options. For example, the **Screen width** design property applies a theme variable such as `--screen-lg` to `--max-screen-width`.
 * **Spacing** – Sets both the margin and the padding of a widget.
 

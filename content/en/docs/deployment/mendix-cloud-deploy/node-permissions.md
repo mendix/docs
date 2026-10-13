@@ -89,7 +89,7 @@ Because the API does not require two-factor authentication, it is disabled for t
 Other permissions are needed in addition to **API Access**. For example, to access backups via the API, you need **Backups Access** in addition to **API Access**.
 {{% /alert %}}
 
-#### Monitoring Access
+#### Monitoring Access {#access-to-monitoring}
 
 Team members with **Monitoring Access** permissions can view the application metrics, logs, and alerts in [Projects](https://projects.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
 

@@ -21,17 +21,17 @@ When deploying your Private Mendix Platform app for production use, it needs to 
 
 Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix on Kubernetes that are not connected to the internet (air-gapped).
 
-Rather than having to apply and update licenses for each environment individually, the Mendix **Mendix on Kubernetes License Manager** (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
+Rather than having to apply and update licenses for each environment individually, the Private Cloud License Manager (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
 
-The PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
+PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
 
 ## Prerequisites{#prerequisites}
 
-To install and use the PCLM, you need the following prerequisites:
+To install and use PCLM, you need the following prerequisites:
 
 * A Mendix on Kubernetes cluster
 * Mendix Operator in version 2.11.0 or above
-* Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix on Kubernetes cluster, or in another cluster which is accessible over HTTP
+* Administrative rights to a Kubernetes namespace to install the PCLM server (a dedicated namespace is recommended). This can be within your Mendix on Kubernetes cluster, or in another cluster which is accessible over HTTP
 * A Postgres or SQLServer database server and within it:
     * A dedicated database with remote access which will be used to store your licenses, user authorization details, and usage information
         * The database server should be accessible to the cluster where the application is deployed.
@@ -46,13 +46,13 @@ To install and use the PCLM, you need the following prerequisites:
 The PCLM server will not create the database for the licenses, you need to create this yourself using the guidance above.
 {{% /alert %}}
 
-## Installing the PCLM server
+## Installing the PCLM Server
 
 {{% alert color="info" %}}
 To prevent unexpected issues, as a best practice, install the PCLM server in a separate namespace.
 {{% /alert %}}
 
-You install the PCLM server by applying a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool. The mx-pclm-cli tool is available for download in the **Installation** tab of the **Namespace Details** page.
+To install the PCLM server, apply a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool. The mx-pclm-cli tool is available for download in the **Installation** tab of the **Namespace Details** page.
 
 ### Creating the Manifest
 
@@ -83,7 +83,7 @@ Where you need to supply the following parameters
 * `<authMode>` – authentication mode of the database, `aws-irsa` or `azure-wi` or `static` *(default)* 
 * `<azure-client-id>` – azure client id when authMode is set to `azure-wi`
 * `<aws-iam-role>` – aws iam role when authMode is set to `aws-irsa`  
-* `<db-name>` – the name of the database where you want to hold the PCLM data
+* `<db-name>` – the name of the database where you want to hold PCLM data
 * `<db-user>` – a database user with the rights described in the prerequisites section
 * `<db-pass>` – the password for the database user
 * `<port>` – the port used to access the database, default: *5432*
@@ -169,7 +169,7 @@ You can confirm that you can connect to the PCLM server using the following URLs
 
 ### Using the Kubernetes Service
 
-If PCLM is installed in the same Kubernetes cluster as the Mendix on Kubernetes environments, the PCLM server can be reached at `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local`, where `<namespace>` is the namespace where the PCLM Server was installed.
+If PCLM is installed in the same Kubernetes cluster as the Mendix on Kubernetes environments, the PCLM server can be reached at `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local`, where `<namespace>` is the namespace where the PCLM server was installed.
 
 You can confirm that you can connect to the PCLM server using the following URLs:
 
@@ -216,7 +216,7 @@ The PCLM server supports two **user types:**
 
 ### Administrator
 
-When the PCLM server is set up, it contains one user `administrator` with a default password. This password should be modified immediately using the command:
+When the PCLM server is set up, it contains one `administrator` user with a default password. This password should be modified immediately using the command:
 
 ```bash
 mx-pclm-cli user update \
@@ -549,7 +549,7 @@ spec:
 
 If you have manually configured static runtime licenses (offline licenses), PCLM will not replace those licenses. Only the runtime licenses applied through a Subscription secret will be replaced. If your namespace was never licensed, please ignore this section.
 
-Once you have configured the Mendix Operator running in a specific `<namespace>` to use the PCLM (following steps 7.1 and 7.2) you need to restart the Mendix operator to remove the existing licenses. You can do this as follows:
+Once you have configured the Mendix Operator running in a specific `<namespace>` to use PCLM (following steps 7.1 and 7.2) you need to restart the Mendix operator to remove the existing licenses. You can do this as follows:
 
 ```bash
 kubectl -n <namespace> scale deployment mendix-operator --replicas=0
@@ -578,7 +578,7 @@ This will indicate that licenses have been applied to the operator and apps in t
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  |
 
-## Upgrade PCLM Server
+## Upgrade the PCLM Server
 
 To upgrade the PCLM server, update the image tag in the PCLM server deployment and restart it.
 

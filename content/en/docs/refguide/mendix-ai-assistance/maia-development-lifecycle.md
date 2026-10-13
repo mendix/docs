@@ -35,7 +35,7 @@ Maia helps in the following ways:
 * [Maia Learn](/refguide/maia-learn/) – Maia Learn guides you through the Mendix core concepts, such as domain models, pages, logic, security, and integrations, directly in Studio Pro. 
 * [Maia Make](/refguide/maia-make/) – Maia Make answers questions about all aspects of Mendix development in the same chat in which you build, so you can move from a question to a change in your app in one conversation. Maia uses sources such as [Mendix Docs](https://docs.mendix.com/) and the [Mendix Community](https://community.mendix.com/link/home). In Studio Pro 11.8 and above, Maia Make replaces [Maia Chat](/refguide/maia-chat/), the earlier chat interface in Studio Pro. Maia Chat is still available in Studio Pro 11.7 and below and Mendix Portal.
 
-Below are example prompts you can use with Maia Make:
+Below are example prompts you can use:
 
 * What is the difference between a microflow and a nanoflow?
 * How do I set up entity access for a role that can only see its own records?
@@ -59,7 +59,7 @@ You have the following options:
 
 * **From Maia Plan** – In Maia Plan, select **Open in Studio Pro** to continue to work on the new app in Studio Pro with Maia Make. For more information, see [Starting the Development](/developerportal/maia-plan/start-development/).
 * [Start with Maia](/refguide/start-with-maia/) – In Studio Pro, select **Start with Maia** as your starting point. Describe your app using a text description and an optional image or PDF. Maia uses this input to generate a domain model, data management overview pages, test data, and a homepage. 
-* [Maia Make](/refguide/maia-make/). – In an existing app, describe a new module or feature in the **Maia** pane. Maia then generates the necessary documents. 
+* **Maia Make** – In an existing app, describe a new module or feature in the **Maia** pane. Maia then generates the necessary documents. 
 
 Review the generated app in the same way as any other change. For more information, see the [Review Every Change](/refguide/agentic-development/#working-practices) section of *Agentic and Model-Driven Development*.
 
@@ -69,9 +69,9 @@ The domain model is the foundation of every Mendix app. The other documents, suc
 
 Maia helps in the following ways:
 
-* **Maia Make** – Generates new domain models, adds entities, attributes, and associations, and explains or improves existing domain models. In Studio Pro 11.9 and above, it can also work with [view entities](/refguide/view-entities/), enumerations, and constants, and generate OQL queries from a description of the data that you need. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/) and [OQL in Maia Make](/refguide/maia-for-oql/).
+* **Maia Make** – Maia Make generates new domain models, adds entities, attributes, and associations, and explains or improves existing domain models. In Studio Pro 11.9 and above, it can also work with [view entities](/refguide/view-entities/), enumerations, and constants, and generate OQL queries from a description of the data that you need. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/) and [OQL in Maia Make](/refguide/maia-for-oql/).
 
-Example prompts:
+Below are example prompts you can use:
 
 * *The app will help field engineers register maintenance visits. Each visit belongs to one asset and can have several photos.*
 * *Add a status enumeration to the Order entity with the values Draft, Submitted, and Approved.*
@@ -83,11 +83,11 @@ Logic defines how your app behaves. In Mendix, you model logic with microflows, 
 
 Maia helps in the following ways:
 
-* **Maia Make** – Generates and changes microflows from a description. In Studio Pro 11.10 and above, it can also generate JavaScript actions. For the current scope per document type, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
-* **Logic Recommender** – Recommends the next best activity while you model a microflow, nanoflow, or rule, and pre-fills its parameters. For more information, see [Logic Recommender](/refguide/logic-recommender/).
-* **Validation Assist** – Helps you build validation microflows with pre-built expressions, for example, for a button with the **Save changes** on-click event. For more information, see [Validation Assist](/refguide/validation-assist/).
+* **Maia Make** – Maia Make generates and changes microflows from a description. In Studio Pro 11.10 and above, it can also generate JavaScript actions. For the current scope per document type, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
+* [Logic Recommender](/refguide/logic-recommender/) – The Logic Recommender recommends the next best activity while you model a microflow, nanoflow, or rule, and prefills its parameters. 
+* [Validation Assist](/refguide/validation-assist/) – Validation Assist helps you build validation microflows with pre-built expressions, for example, for a button with the **Save changes** on-click event. 
 
-Example prompts:
+Below are example prompts you can use:
 
 * *Create a microflow that retrieves all open orders older than 30 days, changes their status to Expired, and commits them.*
 * *Add a decision to this microflow that shows an error message when the order has no order lines.*
@@ -98,10 +98,10 @@ Pages, navigation, and styling define how end-users experience your app.
 
 Maia helps in the following ways:
 
-* **Maia Make** – Generates pages from a text description and an optional image, such as a wireframe or screenshot. Maia knows the domain model of the module that you work in, so it can connect widgets to your entities. It can also change existing pages. In Studio Pro 11.11 and above, it can work with navigation and menus. In Studio Pro 11.12 and above, it can change theme variables and create custom styling. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
-* **UI Recommender** – Recommends widgets while you work in the page editor. For more information, see [UI Recommender](/refguide/ui-recommender/).
+* **Maia Make** – Maia Make generates pages from a text description and an optional image, such as a wireframe or screenshot. Maia knows the domain model of the module that you work in, so it can connect widgets to your entities. It can also change existing pages. In Studio Pro 11.11 and above, it can work with navigation and menus. In Studio Pro 11.12 and above, it can change theme variables and create custom styling. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
+* [UI Recommender](/refguide/ui-recommender/) – The UI Recommender recommends widgets while you work in the page editor. 
 
-Example prompts:
+Below are example prompts you can use:
 
 * *Generate a page based on this image, but change the header to Welcome.*
 * *Add a list of the open maintenance visits for the current engineer to this page.*
@@ -112,10 +112,10 @@ Workflows model processes that involve people and several steps, such as approva
 
 Maia helps in the following ways:
 
-* **Maia Make** – Generates a workflow from a description of a business process or from a BPMN image, and changes existing workflows. For more information, see [Workflows in Maia Make](/refguide/maia-for-workflows/).
-* **Workflow Recommender** – Recommends the next best activity while you model a workflow. For more information, see [Workflow Recommender](/refguide/workflow-recommender/).
+* **Maia Make** – Maia Make generates a workflow from a description of a business process or from a BPMN image, and changes existing workflows. For more information, see [Workflows in Maia Make](/refguide/maia-for-workflows/).
+* [Workflow Recommender](/refguide/workflow-recommender/) – The Workflow Recommender recommends the next best activity while you model a workflow. 
 
-Example prompt:
+Below is an example prompt you can use:
 
 * *Generate a workflow based on this BPMN image, but make sure it waits before sending an email to the new employee.*
 

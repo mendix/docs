@@ -8,13 +8,11 @@ description: "Describes how Maia supports you at each stage of the application l
 
 ## Introduction
 
-Mendix AI Assistance (Maia) supports you at each stage of the application lifecycle. This document describes each stage. For each stage, it explains what you do, how Maia helps, and which capabilities to use. It also gives example prompts that you can use as a starting point.
+Mendix AI Assistance (Maia) supports you at each stage of the application lifecycle. In the build stages, Maia works as an agent. You describe the goal, and Maia creates or changes the necessary documents. In other stages, Maia gives guidance, recommendations, and insights.
 
-In the build stages, Maia works as an agent: you describe the goal, and Maia creates or changes the necessary documents. In other stages, Maia gives guidance, recommendations, or insights.
+The stages do not need to be followed in a specific order. You will often move between them as you develop an app, such as when adding a feature to an existing app. Maia supports you through each stage, including when you revisit earlier work.
 
-The stages are not a strict sequence. In practice, you go through them many times, for example, when you add a feature to an existing app. Maia supports each of these iterations.
-
-For the principles behind this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
+This document decribes each stage of the application lifecycle. For the principles behind this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
 
 ## One Conversation for the Whole App Model {#one-conversation}
 

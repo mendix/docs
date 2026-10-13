@@ -99,6 +99,8 @@ Currently, the SCIM module does not support the following features of the SCIM s
 
 * Multi-tenancy
 
+* Unknown users can be queried by their full user name using the filter `filter=userName eq "john"`.
+
 The SCIM module does not support the following features of the SCIM protocol:
 
 * `/Me` endpoint
@@ -108,6 +110,12 @@ The SCIM module does not support the following features of the SCIM protocol:
 * Bulk operations `/bulk`
 
 * `/group` endpoint
+
+* Filtering other than `filter=Username eq "john"` is not supported
+
+* The SCIM module does not support returning multiple users in a single response
+
+* Pagination is not supported.
 
 ### Prerequisites
 

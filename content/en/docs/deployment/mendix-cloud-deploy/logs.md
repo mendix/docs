@@ -23,7 +23,7 @@ To access the **Logs** page, open your app in [Projects](https://projects.home.m
 Use the drop-down menu in the upper-right corner to select the environment you want to view logs for.
 
 {{% alert color="info" %}}
-To view logs, you must have **Access to Monitoring** permission. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
+To view logs, you must have **Monitoring Access** permission. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 {{% /alert %}}
 
 ## Apps Deployed to Mendix Cloud

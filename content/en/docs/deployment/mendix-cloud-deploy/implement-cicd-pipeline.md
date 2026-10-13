@@ -33,11 +33,11 @@ The basic process for building a CI/CD pipeline is described below. The process 
 
 For access to Mendix Cloud environments, an authorized user is needed when executing the APIs. With Mendix APIs, this is achieved via API keys. To create a Mendix API key and set the required authentication headers, follow the steps in [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 
-#### Mendix API Rights
+#### Mendix API Access
 
-To be able to use the Mendix APIs to access your environment, the user who is going to access the APIs needs API rights.
+To be able to use the Mendix APIs to access your environment, the user who is going to access the APIs needs API access.
 
-To grant API rights, open your app in [Projects](https://projects.home.mendix.com/), then go to the **Permissions** tab of the app's **Environments** page and select the **API Rights** option for the user for whom you created an API key in the [User API Key](#user-API-key) step, above. For more details on how to configure permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
+To grant API access, open your app in [Projects](https://projects.home.mendix.com/), then go to the **Permissions** tab of the app's **Environments** page and select the **API Access** option for the user for whom you created an API key in the [User API Key](#user-API-key) step, above. For more details on how to configure permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 ### Building the Deployment Package
 

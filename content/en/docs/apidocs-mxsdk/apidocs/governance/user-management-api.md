@@ -40,7 +40,7 @@ Use the following request headers to authenticate an API call:
 
 ### Configuring Permissions
 
-To perform an action via the User Management API, you need **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
+To perform an action via the User Management API, you need **API Access** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## Error Handling
 

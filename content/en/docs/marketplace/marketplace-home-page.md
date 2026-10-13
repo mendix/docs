@@ -68,6 +68,8 @@ The following details are displayed for each component:
 
         For details on editing, refer to the [Adding New Marketplace Content](/appstore/submit-content/#adding) section of *Uploading to the Marketplace*.
 
+    * **Manage Guests** – Click this option to add people who can download the component. To do that, add the email addresses of the guests in the **Guest Email Address** field. The guests you added receive the download link via email.
+   
     * **Deprecate Component** – Deprecate the component, and select alternatives.    
         For details on deprecating components, refer to [Deprecating Marketplace Content](/appstore/deprecate-content/).
 

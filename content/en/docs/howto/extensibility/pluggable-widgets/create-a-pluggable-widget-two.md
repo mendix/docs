@@ -492,7 +492,7 @@ To make the input widget more accessible for people using screen readers, you wi
     Then add the `id` and `aria` attributes to be rendered:
 
     ```tsx
-    export function TextInput({ value, onLeave, tabIndex, style, className, disabled }: TextInputProps): ReactElement {
+    export function TextInput({ id, value, onLeave, tabIndex, style, className, disabled, hasError, required }: TextInputProps): ReactElement {
         const [state, setState] = useState<TextInputState>({ editedValue: undefined });
         useEffect(() => setState({ editedValue: undefined }), [value]);
         
@@ -516,9 +516,9 @@ To make the input widget more accessible for people using screen readers, you wi
                 disabled={disabled}
                 style={style}
                 tabIndex={tabIndex}
-                aria-labelledby={`${props.id}-label`}
-                aria-invalid={props.hasError}
-                aria-required={props.required}
+                aria-labelledby={`${id}-label`}
+                aria-invalid={hasError}
+                aria-required={required}
             />
         );
     }

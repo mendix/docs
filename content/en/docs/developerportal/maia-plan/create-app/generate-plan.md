@@ -31,6 +31,11 @@ Maia translates your defined scope into a concrete plan, which includes a series
 
    After the project plan is fully generated and you have made any necessary changes, click **Start Building**.
 
+
+### Related Company Guidelines
+
+Maia identifies company guidelines which apply to each story, and displays them at the story level, in the side panel.
+
 ### Recommended Marketplace Components {#recommender}
 
 {{% alert color="warning" %}}

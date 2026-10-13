@@ -1,9 +1,11 @@
 ---
 title: "Private Cloud License Manager"
 linktitle: "PCLM – License Manager"
-url: /developerportal/deploy/private-cloud/private-cloud-license-manager/
-description: "Describes setting up a license server and applying licenses to your Mendix app namespaces in private cloud"
-weight: 47
+url: /private-mendix-platform/private-cloud-license-manager/
+description: "Describes setting up a license server and applying licenses to your Mendix app namespaces in Private Mendix Platform."
+weight: 16
+aliases:
+    - /developerportal/deploy/private-cloud/private-cloud-license-manager/
 beta: true
 ---
 
@@ -15,7 +17,7 @@ Mendix highly recommends that you upgrade to the latest available version to ens
 
 ## Introduction
 
-When deploying your Mendix app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix on Kubernetes](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
+When deploying your Private Mendix Platform app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix on Kubernetes](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
 
 Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix on Kubernetes that are not connected to the internet (air-gapped).
 

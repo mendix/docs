@@ -73,9 +73,9 @@ Maia helps in the following ways:
 
 Below are example prompts you can use:
 
-* *The app will help field engineers register maintenance visits. Each visit belongs to one asset and can have several photos.*
-* *Add a status enumeration to the Order entity with the values Draft, Submitted, and Approved.*
-* *Show all active orders with customer names.*
+* The app will help field engineers register maintenance visits. Each visit belongs to one asset and can have several photos.
+* Add a status enumeration to the Order entity with the values Draft, Submitted, and Approved.
+* Show all active orders with customer names.
 
 ## Create Logic {#create-logic}
 
@@ -89,8 +89,8 @@ Maia helps in the following ways:
 
 Below are example prompts you can use:
 
-* *Create a microflow that retrieves all open orders older than 30 days, changes their status to Expired, and commits them.*
-* *Add a decision to this microflow that shows an error message when the order has no order lines.*
+* Create a microflow that retrieves all open orders older than 30 days, changes their status to Expired, and commits them.
+* Add a decision to this microflow that shows an error message when the order has no order lines.
 
 ## Create UI {#create-ui}
 
@@ -103,8 +103,8 @@ Maia helps in the following ways:
 
 Below are example prompts you can use:
 
-* *Generate a page based on this image, but change the header to Welcome.*
-* *Add a list of the open maintenance visits for the current engineer to this page.*
+* Generate a page based on this image, but change the header to Welcome.
+* Add a list of the open maintenance visits for the current engineer to this page.
 
 ## Create Workflows {#create-workflows}
 
@@ -117,7 +117,7 @@ Maia helps in the following ways:
 
 Below is an example prompt you can use:
 
-* *Generate a workflow based on this BPMN image, but make sure it waits before sending an email to the new employee.*
+* Generate a workflow based on this BPMN image, but make sure it waits before sending an email to the new employee.
 
 ## Integrate {#integrate}
 
@@ -135,14 +135,14 @@ You often work on documents that someone else created, or that you created a lon
 
 Maia helps in the following ways:
 
-* **Maia Make** – Ask in the chat about any document, concept, or error. Maia Explain describes the purpose and the technical details of an existing document. You can also start it in the **App Explorer**: right-click a document and select **Maia Explain**. For more information, see [Maia Explain](/refguide/maia-explain/).
+* **Maia Make** – Ask in the chat about any document, concept, or error. [Maia Explain](/refguide/maia-explain/) describes the purpose and the technical details of an existing document. You can also start it in the **App Explorer** by right-clicking a document and selecting **Maia Explain**. 
 * **Explain consistency errors** – In Studio Pro 11.12.1 and above, right-click an item in the **Errors** pane to ask Maia to explain or solve it.
-* **Agent instructions and agent skills** – Give Maia your team conventions and domain knowledge, so that its guidance and output follow your standards. For more information, see [Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) and [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/).
+* [Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) and [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/) – Give Maia your team conventions and domain knowledge so its guidance and output follow your standards. 
 
-Example prompts:
+Below are example prompts you can use:
 
-* *Can you explain the function and purpose of this document?*
-* *Could you identify any potential issues with this document and recommend solutions?*
+* Can you explain the function and purpose of this document?
+* Could you identify any potential issues with this document and recommend solutions?
 
 ## Improve Quality {#improve-quality}
 
@@ -150,8 +150,8 @@ Quality includes correctness, performance, security, and maintainability.
 
 Maia helps in the following ways:
 
-* **Best Practice Recommender** – Inspects your app model against Mendix best practices. It detects anti-patterns, explains their impact, and in some cases fixes them automatically. For more information, see [Best Practice Recommender](/refguide/best-practice-recommender/).
-* **Maia Make** – Explains and solves consistency errors, suggests improvements to existing documents, and helps you refactor. In Studio Pro 11.9 and above, Maia can remove elements as part of a refactoring.
+* [Best Practice Recommender](/refguide/best-practice-recommender/) – Use the Best Practice Recommender to inspect your app model against Mendix best practices. It detects anti-patterns, explains their impact, and in some cases fixes them automatically. 
+* **Maia Make** – Maia Make explains and solves consistency errors, suggests improvements to existing documents, and helps you refactor. In Studio Pro 11.9 and above, Maia can remove elements as part of a refactoring.
 
 Use these capabilities on all documents, including the documents that Maia generates.
 
@@ -162,7 +162,7 @@ If your app serves users in several countries, it needs translated texts.
 Maia helps in the following ways:
 
 * **Maia Make** – In Studio Pro 11.15 and above, ask Maia in the chat to create or update the translations of texts in your app, as part of the same conversation in which you build the feature.
-* **Translation Generator** – Translates the texts in your app that do not have a translation yet in one batch, and translates system texts. For more information, see [Translation Generator](/refguide/translation-generator/).
+* [Translation Generator](/refguide/translation-generator/) – The Translation Generator translates the texts in your app that do not have a translation yet in one batch, and translates system texts. 
 
 ## Work with External AI Agents {#external-agents}
 
@@ -170,9 +170,9 @@ Some teams use AI coding assistants or their own AI agents next to Studio Pro. S
 
 Maia supports these scenarios in the following ways:
 
-* **Studio Pro MCP Server** – Exposes Maia capabilities to external AI agents through the Model Context Protocol (MCP). Changes appear in Studio Pro in real time. For more information, see [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/).
-* **Maia Plan as MCP Server** – Gives external AI agents read-only access to the scope and solution of a Maia Plan project. For more information, see [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/).
-* **Custom AI provider** – Lets Maia use your own LLM provider. This feature is available in Studio Pro 11.12 and above as a beta feature. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section of *Maia Make Capabilities*.
+* [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) – The Studio Pro MCP Server exposes Maia capabilities to external AI agents through the Model Context Protocol (MCP). Changes appear in Studio Pro in real time. 
+* [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/) – Maia Plan as MCP Server gives external AI agents read-only access to the scope and solution of a Maia Plan project. 
+* **Custom AI provider** – The Custom AI provider feature lets Maia use your own LLM provider. This feature is available in Studio Pro 11.12 and above as a beta feature. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section of *Maia Make Capabilities*.
 
 For an overview of how these options work together, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
 
@@ -182,9 +182,9 @@ After you deploy your app, you monitor it, collect feedback, and plan the next i
 
 Maia helps in the following ways:
 
-* **AI Log Summary** – This feature is in Public Beta. For apps that run on Mendix Cloud, it gives an AI-generated overview of the log activity of an environment over the previous 24 hours. It groups errors by pattern and shows lifecycle events and security signals. It is not available in Mendix Cloud Africa (Cape Town). For more information, see [AI Log Summary](/developerportal/maia-operate/ai-log-summary/).
-* **Maia for Feedback** – Organizes end-user feedback into groups. You can create stories from feedback with Maia. For more information, see the [Feedback](/developerportal/app-insights/feedback/) documentation.
-* **Maia Make** – Changes existing documents for new requirements. Use Maia Explain first to understand the current behavior, then ask Maia to make the change.
+* [AI Log Summary](/developerportal/maia-operate/ai-log-summary/) – This feature is in Public Beta. For apps that run on Mendix Cloud, it gives an AI-generated overview of the log activity of an environment over the previous 24 hours. It groups errors by pattern and shows lifecycle events and security signals. It is not available in Mendix Cloud Africa (Cape Town). 
+* **Maia for Feedback** – This feature organizes end-user feedback into groups. You can create stories from feedback with Maia. For more information, see [Feedback](/developerportal/app-insights/feedback/).
+* **Maia Make** – Maia Make changes existing documents for new requirements. Use Maia Explain first to understand the current behavior, then ask Maia to make the change.
 
 New stories from feedback bring you back to the [Plan and Design](#plan-and-design) stage. This closes the loop of the lifecycle.
 

@@ -19,12 +19,12 @@ The following widgets are not fully compliant with strict CSP. See the widgets' 
 
 ### Charts {#charts}
 
-[Charts](/appstore/widgets/charts/) is not fully compliant with strict CSP. The Plotly library used by the widget adds its styles to the page at runtime, and strict CSP blocks this. The charts are still drawn, but their layers are positioned incorrectly. As a result, chart elements such as legends are displaced or missing.
+The [Charts](/appstore/widgets/charts/) widget is not fully compliant with strict CSP. The Plotly library used by the widget adds its styles to the page at runtime, and strict CSP blocks this. The charts are still drawn, but their layers are positioned incorrectly. As a result, chart elements such as legends are displaced or missing.
 
 You can resolve this in one of the following ways:
 
-* [Allow inline styles](#charts-allowlist) – This is the simplest option, but it relaxes your CSP.
-* [Add the Plotly styles to your theme](#charts-strict) – This option keeps the strict CSP.
+* [Allow inline styles](#charts-allowlist): this is the simplest option, but it relaxes your CSP
+* [Add the Plotly styles to your theme](#charts-strict): this option keeps strict CSP
 
 #### Allowing Inline Styles {#charts-allowlist}
 

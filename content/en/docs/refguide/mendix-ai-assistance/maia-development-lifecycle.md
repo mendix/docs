@@ -16,11 +16,15 @@ This document decribes each stage of the application lifecycle. For the principl
 
 ## One Conversation for the Whole App Model {#one-conversation}
 
-In Studio Pro, [Maia Make](/refguide/maia-make/) is the single chat interface for agentic development. In one conversation, you can create and change any part of your app model, such as the domain model, logic, pages, workflows, and translations. In the same conversation, you can ask for guidance and explanations.
+In Studio Pro, [Maia Make](/refguide/maia-make/) provides a single chat interface for agentic development. You can use the same conversation to create and change any part of your app model, such as the domain model, logic, pages, workflows, and translations. You can also ask to get guidance and explanations.
 
-You do not need to switch between separate tools. The earlier document-specific tools, such as Maia for Pages and Maia for Workflows, are consolidated into Maia Make. Pages such as [Pages in Maia Make](/refguide/maia-for-pages/) and [Workflows in Maia Make](/refguide/maia-for-workflows/) describe what Maia Make can do for a specific document type. For the version in which support for each document type was introduced, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*. Translations are available in Maia Make from Studio Pro 11.15.
+In Studio Pro 11.8 and above, the earlier document-specific tools, such as Maia for Pages and Maia for Workflows, are consolidated into [Maia Make](/refguide/maia-make/). This means you can use Maia Make to work with any supported part of your app model, without switching between tools. Individual documents such as [Pages in Maia Make](/refguide/maia-for-pages/) and [Workflows in Maia Make](/refguide/maia-for-workflows/) describe what Maia Make can do for a specific document type. For a full list of supported document types and the Studio Pro version that supports them, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
 
-Next to the chat, the in-editor recommenders and Best Practice Recommender help you while you model by hand.
+Next to the chat, the [in-editor recommenders](/preferences-dialog/#in-editor-recommender) and [Best Practice Recommender](/refguide/best-practice-recommender/) provide guidance as you model your app.
+
+{{% alert type="info" %}}
+In Studio Pro 11.7 and below, Maia Make capabilities are available through separate tools. See the relevant [Make Make Capabilities](/refguide/maia-make/#maia-make-capabilities-overview) documentation for information about accessing and using each tool.
+{{% /alert %}}
 
 ## Discover and Learn {#discover-and-learn}
 
@@ -28,13 +32,13 @@ When you start with Mendix, or with a new part of the platform, you need to unde
 
 Maia helps in the following ways:
 
-* **Maia Learn** – Guides you through the Mendix core concepts, such as domain models, pages, logic, security, and integrations, directly in Studio Pro. For more information, see [Maia Learn](/refguide/maia-learn/).
-* **Maia Make** – Answers questions about all aspects of Mendix development in the same chat in which you build, so you can move from a question to a change in your app in one conversation. Maia uses sources such as Mendix Docs and the Mendix Community. Maia Make supersedes Maia Chat, the earlier chat interface in Studio Pro. Maia Chat is still available in Mendix Portal. For more information, see [Questions and Guidance in Maia Make](/refguide/maia-chat/).
+* [Maia Learn](/refguide/maia-learn/) – Maia Learn guides you through the Mendix core concepts, such as domain models, pages, logic, security, and integrations, directly in Studio Pro. 
+* [Maia Make](/refguide/maia-make/) – Maia Make answers questions about all aspects of Mendix development in the same chat in which you build, so you can move from a question to a change in your app in one conversation. Maia uses sources such as [Mendix Docs](https://docs.mendix.com/) and the [Mendix Community](https://community.mendix.com/link/home). In Studio Pro 11.8 and above, Maia Make replaces [Maia Chat](/refguide/maia-chat/), the earlier chat interface in Studio Pro. Maia Chat is still available in Studio Pro 11.7 and below and Mendix Portal.
 
-Example prompts:
+Below are example prompts you can use with Maia Make:
 
-* *What is the difference between a microflow and a nanoflow?*
-* *How do I set up entity access for a role that can only see its own records?*
+* What is the difference between a microflow and a nanoflow?
+* How do I set up entity access for a role that can only see its own records?
 
 ## Plan and Design {#plan-and-design}
 
@@ -42,22 +46,22 @@ Before you build, you define what the app must do, for whom, and how you measure
 
 Maia helps in the following ways:
 
-* **Maia Plan** – Turns your project context, such as goals, target users, requirements, and attached documents, into a project scope. After you approve the scope, Maia generates a solution with epics and user stories. It can also recommend Marketplace components for specific stories. For more information, see [Maia Plan](/developerportal/maia-plan/).
-* **Create Story with Maia and Refine Story with Maia** – Help you write new user stories and improve existing ones on the **Board** and **Planning** pages in Mendix Portal. For more information, see [Maia in Mendix Portal](/portal/maia/).
+* [Maia Plan](/developerportal/maia-plan/) – Maia Plan turns your project context, such as goals, target users, requirements, and attached documents, into a project scope. After you approve the scope, Maia generates a solution with epics and user stories. It can also recommend Marketplace components for specific stories.
+* **Create and Refine a Story with Maia** – Maia can help write new user stories and improve existing ones on the **Board** and **Planning** pages in Mendix Portal. For more information, see [Maia in Mendix Portal](/portal/maia/).
 
 You can use the stories from the plan as input when you build with Maia Make, which supports story-based development. Clear user stories with acceptance criteria give Maia better context.
 
 ## Generate the App {#generate-the-app}
 
-When the scope is clear, you can let Maia generate a first version of the app. This gives you a working starting point instead of an empty model.
+When the scope is clear, use Maia to generate a first version of the app. This gives you a working starting point instead of an empty model.
 
 You have the following options:
 
-* **From Maia Plan** – When you select **Open in Studio Pro** in Maia Plan, you continue to work on the new app in Studio Pro with Maia Make. For more information, see [Starting the Development](/developerportal/maia-plan/start-development/).
-* **Start with Maia** – In Studio Pro, choose the **Start with Maia** starting point. Based on a text description and an optional image or PDF, Maia generates a domain model, data management overview pages, test data, and a homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
-* **Maia Make** – In an existing app, describe a new module or feature in the **Maia** pane. Maia generates the necessary documents. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+* **From Maia Plan** – In Maia Plan, select **Open in Studio Pro** to continue to work on the new app in Studio Pro with Maia Make. For more information, see [Starting the Development](/developerportal/maia-plan/start-development/).
+* [Start with Maia](/refguide/start-with-maia/) – In Studio Pro, select **Start with Maia** as your starting point. Describe your app using a text description and an optional image or PDF. Maia uses this input to generate a domain model, data management overview pages, test data, and a homepage. 
+* [Maia Make](/refguide/maia-make/). – In an existing app, describe a new module or feature in the **Maia** pane. Maia then generates the necessary documents. 
 
-Review the generated app in the same way as any other change. For more information, see the [Review Every Change](/refguide/agentic-development/#working-practices) practice.
+Review the generated app in the same way as any other change. For more information, see the [Review Every Change](/refguide/agentic-development/#working-practices) section of *Agentic and Model-Driven Development*.
 
 ## Model Data {#model-data}
 

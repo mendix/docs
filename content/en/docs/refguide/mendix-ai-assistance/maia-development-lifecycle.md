@@ -125,9 +125,9 @@ Most apps exchange data with other systems.
 
 Maia helps in the following ways:
 
-* **Maia Make** – Creates [JSON structures](/refguide/json-structures/) (Studio Pro 11.13 and above) and [data transformers](/refguide/data-transformers/) (Studio Pro 11.12 and above).
-* **Maia Web Fetch** – Reads public API documentation and endpoints, after you approve each request. Maia can use this information when it creates integration documents. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).
-* **Maia MCP Client** – Connects Maia to external MCP servers, such as design tools or source code platforms. Maia can then use the tools of these servers during the conversation. For more information, see [Maia MCP Client](/refguide/maia-mcp/).
+* **Maia Make** – Maia Make creates [JSON structures](/refguide/json-structures/) (Studio Pro 11.13 and above) and [data transformers](/refguide/data-transformers/) (Studio Pro 11.12 and above).
+* [Maia Web Fetch](/refguide/maia-web-fetch/) – Maia Web Fetch reads public API documentation and endpoints, after you approve each request. Maia can use this information when it creates integration documents. 
+* [Maia MCP Client](/refguide/maia-mcp/) – Maia MCP Client connects Maia to external MCP servers, such as design tools or source code platforms. Maia can then use the tools of these servers during the conversation. 
 
 ## Understand and Get Guidance {#understand-and-get-guidance}
 

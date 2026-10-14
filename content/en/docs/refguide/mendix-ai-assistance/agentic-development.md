@@ -113,7 +113,7 @@ The following practices help you get reliable results from Maia and other agents
 
 ### Start with Clear Intent
 
-Describe the outcome that you want and the context in which it is used. If you work with user stories, use them as input. Maia Make supports story-based development and can generate app artifacts from existing user stories. For larger initiatives, use [Maia Plan](/developerportal/maia-plan/) to define the scope and solution before you build.
+Describe the outcome you want and the context in which it is used. If you work with user stories, use them as input. Maia Make supports story-based development and can generate app artifacts from existing user stories. For larger initiatives, use [Maia Plan](/developerportal/maia-plan/) to define the scope and solution before you build.
 
 For guidance on how to write effective prompts, see [Prompt Engineering](/agents/prompt-engineering/) and the [Best Practices](/refguide/maia-make/#best-practices) section of *Maia Make Capabilities*.
 
@@ -121,7 +121,7 @@ For guidance on how to write effective prompts, see [Prompt Engineering](/agents
 
 Maia uses your app model as context. You can add more context in the following ways:
 
-* **Documents** – Add the relevant microflows or pages to the conversation with the @ option, or from the **App Explorer**.
+* **Documents** – Add the relevant microflows or pages to the conversation with the `@` option, or from the **App Explorer**.
 * **Attachments** – Attach images, PDFs, Markdown documents, or user stories.
 * **Agent instructions** – Use [AGENTS.md](/refguide/maia-agent-instructions/) files for context that applies to every conversation in a project or module, such as company conventions.
 * **Agent skills** – Use [agent skills](/refguide/maia-agent-skills/) for knowledge that applies only in certain situations, such as your microflow conventions.

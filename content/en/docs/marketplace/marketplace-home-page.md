@@ -68,7 +68,9 @@ The following details are displayed for each component:
 
         For details on editing, refer to the [Adding New Marketplace Content](/appstore/submit-content/#adding) section of *Uploading to the Marketplace*.
 
-    * **Manage Guests** – Click this option to add people who can download the component. To do that, add the email addresses of the guests in the **Guest Email Address** field. The guests you added receive the download link via email.
+    * **Manage Guests** – Add guests who can download private components. A guest is a Mendix Platform user from outside your organization who can download the selected private [content](#group-content) of this group.     
+        When you click **Manage Guests**, the **Guests** window is displayed for that component. Click **Share with Guests**, and add the email addresses of the guests you want to invite in the **Guest Email Address** field. The guests you added receive the download link via email, but you can also copy the link using the dedicated button, and share it with them directly.    
+        The guests can then see all the private Marketplace content shared with them on their [Shared with Me](#shared-with-me) page.
    
     * **Deprecate Component** – Deprecate the component, and select alternatives.    
         For details on deprecating components, refer to [Deprecating Marketplace Content](/appstore/deprecate-content/).
@@ -170,7 +172,10 @@ To remove a member, click **Remove** next to their name.
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [content](#group-content) of this group. 
 
-To add a guest, enter their email address in the box and click **Add Guest**. They will receive an email notifying them of access to the private content. 
+You can add guests by using the **Manage Guests** option available in the following places:
+
+* In the **Actions** menu of the component on the **Manage Components** window
+* In the component's details page in Mendix Marketplace
 
 The guest can then see all the private Marketplace content shared with them on their [Shared with Me](#shared-with-me) page.
 

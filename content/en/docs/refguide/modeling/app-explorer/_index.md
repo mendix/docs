@@ -17,6 +17,7 @@ The **App Explorer** consists of the following:
 * **App** folder – contains settings and documents that apply to your app as a whole (for more information, see [Apps](/refguide/app/))
 * **Modules** – contain settings, a domain model, and documents that apply to this module (for more information, see [Modules](/refguide/modules/)) 
     * **Domain model** – a model that describes the information (or data) used by your application in an abstract way; one module can have one domain model only 
+    * **Setup** – shortcuts to the documents that consumers of the module should use (for more information, see [Module Setup](/refguide/module-setup/))
     * **Document** – an individual file, for example, a [page](/refguide/pages/), [microflow](/refguide/microflows/), or a [scheduled event](/refguide/scheduled-events/)
 
 ## Performing Basic Functions {#basic-functions}

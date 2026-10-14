@@ -15,6 +15,8 @@ The domain model is a data model that describes the information in your applicat
 
 Within a module you can define [module security](/refguide/module-security/) via module roles and specify the security settings of those module roles for pages, microflows, entities, and datasets.
 
+Each module also has a **Setup** node in the App Explorer, where module publishers can highlight the documents that consumers of the module should use. For more information, see [Module Setup](/refguide/module-setup/).
+
 Furthermore, a module can contain many different types of documents. Each type of document is described in its own domain-specific language (DSL). For example, user-interface forms are described by using a visual language with elements like text boxes, tables, and grids.
 
 {{% alert color="info" %}}

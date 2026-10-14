@@ -19,7 +19,9 @@ Secret values are never stored in the Private Mendix Platform database or conver
 
 Your Private Mendix Platform must be deployed in standalone mode on AKS.
 
-Your environments must be configured to use Azure Key Vault as the external secret store through the CSI Secrets Store Driver.
+When creating the environment, in the **Configure Resources** steps, you must select Azure Key Vault as the external secret store through the CSI Secrets Store Driver.
+
+{{< figure src="/attachments/private-platform/pmp-keyvault1.png" class="no-border" >}}
 
 You must map the following supported secret types 1-to-1 to entries in the environment's `SecretProviderClass`:
 
@@ -53,7 +55,7 @@ Private Mendix Platform automatically determines the correct path. When you enab
 
 If the ServiceAccount exists, Private Mendix Platform reads the UAMI Client ID directly from the ServiceAccount's existing annotation. No customer input is required.
 
-If the ServiceAccount does not exist, Private Mendix PlatformP shows a message like the following:
+If the ServiceAccount does not exist, Private Mendix Platform shows a message like the following:
 
 *Private Mendix Platform has detected that an auto-provisioned managed identity does not exist for this environment. In order to use the automatic secret store, request your infrastructure team to provision an Azure Managed Identity for this environment and provide the Client ID.*
 
@@ -164,7 +166,7 @@ kubectl auth can-i create secretproviderclasses --as=system:serviceaccount:kube-
 
 ### Namespace-Level Flag
 
-The namespace must have external secret store support enabled through Automatic AKS" mode before any environment in it can toggle the per-environment flag below.
+The namespace must have external secret store support enabled before any environment in it can toggle the per-environment flag below.
 
 ## Per-Environment Setup - Approach A
 
@@ -174,9 +176,15 @@ For environments which use an `azure-wi` storage or database plan, the configura
 2. The customer's Infrastructure Team creates an empty Key Vault named `mendix-<environment internal name>`, with Azure RBAC selected as the permission model. For more information, see [Naming Conventions and Kubernetes Object Reference](#naming-conventions).
 3. The customer's Infrastructure Team grants the Key Vault Secrets Officer role on that Key Vault to the [Private Mendix Platform managed identity](#identity-pmp).
 4. The customer's Infrastructure Team grants the Key Vault Secrets User role on that Key Vault to the environment's [UAMI](#identity-uami).
-5. The customer (portal user) toggles **Enable Secret Store** for the environment in the Private Mendix Platform portal. Private Mendix Platform reads the UAMI Client ID from the existing ServiceAccount annotation automatically. 
+5. The customer (portal user) enables the secret store for the environment in the Private Mendix Platform portal by performing the following steps:
 
-No manual Kubernetes object creation or Client ID entry is needed for this path.
+    1. Log in to Private Mendix Platform as a user with [company administrator](/private-mendix-platform/reference-guide/admin/company/) access rights.
+    2. Switch to Admin Mode by clicking the profile picture in the top right corner of the screen and selecting **Switch to Admin Mode**.
+    3. In the left navigation menu, open the **Manage** section and go to **Deployment > Cluster Manager**.
+    4. Edit the target environment and toggle **Enable Secret Store**.
+    5. Select **Automatic (Azure Key Vault Only)** as the mode. 
+
+In automatic mode, Mendix Operator creates the UAMI, including federated credentials, Secret Provider Class and ServiceAccount annotations during environment provisioning. No manual Kubernetes object creation or Client ID entry is needed for this path.
 
 ## Per-Environment Setup - Approach B {#environment-b}
 
@@ -188,7 +196,14 @@ For environments which do not use any `azure-wi` plans, the configuration requir
 4. Create an empty Key Vault named `mendix-<environment internal name>`, with Azure RBAC selected as the permission model. 
 5. The customer's Infrastructure Team grants the Key Vault Secrets Officer role on that Key Vault to the [Private Mendix Platform managed identity](#identity-pmp).
 6. The customer's Infrastructure Team grants the Key Vault Secrets User role on that Key Vault to the environment's [UAMI](#identity-uami).
-7. The customer (portal user) toggle **Enable Secret Store** for the environment in the Private Mendix Platform portal. Private Mendix Platform detects that no ServiceAccount exists yet and prompts the user to provide a Client ID.
+7. The customer (portal user) enables the secret store for the environment in the Private Mendix Platform portal by performing the following steps:
+
+    1. Log in to Private Mendix Platform as a user with [company administrator](/private-mendix-platform/reference-guide/admin/company/) access rights.
+    2. Switch to Admin Mode by clicking the profile picture in the top right corner of the screen and selecting **Switch to Admin Mode**.
+    3. In the left navigation menu, open the **Manage** section and go to **Deployment > Cluster Manager**.
+    4. Edit the target environment and toggle **Enable Secret Store**.
+    5. Select **Manual** as the mode. Private Mendix Platform detects that no ServiceAccount exists yet, and prompts the user to provide a Client ID.
+
 8. The customer (portal user) enters the UAMI's Client ID created in step 2 above. Private Mendix Platform creates the Kubernetes ServiceAccount for the environment with both required annotations, and stores the Client ID for use when secrets are written. 
 
 You do not need to manually run any `kubectl create serviceaccount` or `kubectl annotate` commands. Private Mendix Platform performs this step after the user has entered the Client ID.

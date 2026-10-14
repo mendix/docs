@@ -7,7 +7,7 @@ weight: 10
 
 ## Introduction
 
-Module settings allow you to configure various properties of a module, including Java managed dependencies, module type, version, and the location where the module appears in the App Explorer.
+Module settings allow you to configure various properties of a module, including Java managed dependencies, module type, version, whether the module is an [imported module](#imported-module), and the location where the module appears in the App Explorer.
 
 To open module settings, double-click **Settings** in the required module.
 
@@ -96,6 +96,55 @@ Next to the numerical major, minor and patch version, alphanumerical characters 
 Mendix Marketplace does not support module packages with alphanumerical characters in the version number. To publish on Marketplace, the version number should consist of three numerical parts. Support for alphanumerical characters will be added in a future release.
 {{% /alert %}}
 
+### Imported Module {#imported-module}
+
+{{% alert color="info" %}}
+This setting is available for Studio Pro 11.16 and above. <!-- TODO verify: target release. ImportState is introduced in metamodel v11_16_0 on branch solp/4308-import-state-metamodel-changes (MR !41078, not merged). -->
+{{% /alert %}}
+
+The **Imported module** setting indicates that a module was imported into your app, for example from the Marketplace or from a module package (*.mpk* file), instead of being developed in the app. Imported modules are read-only. <!-- TODO verify: final caption and helper text of the toggle. Design shows "Imported module" with "Mark this module as an imported module. Imported modules are read-only by default."; SOLP-4282 asks for the description to be reworded. --> <!-- TODO verify: whether the setting is shown only for app modules (the Configure group currently shows settings only for modules of type Source). -->
+
+Imported modules are listed under the **Marketplace modules** node in the App Explorer. Modules that are not imported are listed in the regular module list. <!-- TODO verify: node name after this change (may be renamed to "Imported modules"), and that toggling the setting moves the module between the two lists. -->
+
+#### Immutability of Imported Modules {#immutability}
+
+An imported module is immutable: its contents stay identical to the module package it was imported from. This allows Studio Pro to [verify the integrity](#checksum) of the module and to update it reliably to a newer version. It also ensures that you keep receiving fixes and support from the module publisher.
+
+The following restrictions apply to an imported module:
+
+* You cannot edit documents in the module.
+* You cannot add, delete, or rename documents or folders in the module. <!-- TODO verify: exact set of blocked operations (rename, add, duplicate) and that folders are included. -->
+* You cannot move documents or folders into or out of the module, including by dragging and dropping in the App Explorer.
+* Context menu items in the App Explorer that would change the module contents are hidden, in the same way as for the **System** module. <!-- TODO verify: which context menu items are hidden. -->
+* Maia cannot make changes to the module. <!-- TODO verify: Maia enforcement (SOLP-4282) and separate Maia endpoint to flip the state (SOLP-4305). -->
+
+When you open a document from an imported module, a banner at the top of the editor explains that the document is read-only because it is part of an imported module. <!-- TODO verify: banner is delivered by SOLP-4306 (not started). Proposed text: "This document is read-only because it is part of an imported module." -->
+
+Updating an imported module to a newer version, for example with **Update from file…**, is not considered a change to the module and remains possible. <!-- TODO verify: "Update from file…" context menu item is currently only shown for modules of type Source; confirm it stays available for imported modules, and confirm Marketplace updates. -->
+
+#### Making an Imported Module Editable {#make-editable}
+
+If you need to change an imported module, you can make it editable:
+
+1. Open the **Settings** of the module.
+1. On the **General** tab, turn off **Imported module**.
+1. Confirm that you want to make the module editable. <!-- TODO verify: confirmation dialog title, message, and button captions. -->
+1. Click **OK**.
+
+The module becomes editable and is moved to the regular module list. <!-- TODO verify: module moves from the imported list to the module list. --> To make the module read-only again, turn on **Imported module**.
+
+{{% alert color="warning" %}}
+When you change an imported module, it no longer matches the module package it was imported from. Your changes can be overwritten when you update the module to a newer version, and the module publisher may no longer be able to support it. <!-- TODO verify: effect on the checksum/module integrity check (SOLP-3875) and on subsequent updates. -->
+{{% /alert %}}
+
+If documents from the module are open in an editor when you change the **Imported module** setting, Studio Pro asks you to save any unsaved changes in those documents. If you save, Studio Pro closes and reopens the open editors so that they reflect the new state. If you cancel, the **Imported module** setting is reverted and the **Module Settings** dialog stays open. <!-- TODO verify: save prompt behavior and captions (SOLP-4282 acceptance criteria; not implemented). -->
+
+#### Imported Modules in Existing Apps {#imported-modules-existing-apps}
+
+When you open an app created in an earlier version of Studio Pro, every module whose [Location](#location) is set to **Marketplace modules** becomes an imported module and is therefore read-only. This includes modules that you moved to **Marketplace modules** manually. <!-- TODO verify: based on ImportStateConversion on branch solp/4308 (copies FromAppStore to ImportState = Imported); not merged. -->
+
+Modules that you import into your app from the Marketplace or from a module package are imported modules. <!-- TODO verify: SOLP-4291 (not started) – whether the imported state is set on import or stored in the package on export, and whether this applies to packages published with older Studio Pro versions. -->
+
 ## Package {#package}
 
 {{% alert color="info" %}}
@@ -167,7 +216,7 @@ If you try to import a module package that was created with a newer version of S
 ### Location {#location}
 
 {{% alert color="info" %}}
-This setting is available for Studio Pro 11.13 and above.
+This setting is available for Studio Pro 11.13 and above. In Studio Pro 11.16 and above, it is replaced by the [Imported module](#imported-module) setting. <!-- TODO verify: whether Location is removed/replaced (SOLP-4282: "Existing Location setting should be rewired to use a new property instead of FromAppStore") and the release version. -->
 {{% /alert %}}
 
 The **Location** setting determines where the module appears in the App Explorer. You can choose one of the following options:

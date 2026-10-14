@@ -8,34 +8,37 @@ description: "Describes agentic development, how agentic development and model-d
 
 ## Introduction
 
-AI changes how teams build software. AI agents can now take a development goal, decide which steps are necessary, use tools, and change several parts of an application in one task. This way of working is called agentic development. It creates new questions for development teams. How do you direct an agent? How do you keep the quality of its output high? How do you review its work? What is the role of the developer?
+AI changes how teams build software. AI agents can now take a development goal, decide which steps are necessary, use tools, and change several parts of an application in one task. This way of working is called agentic development. It creates new questions for development teams, such as:
 
-This document describes how Mendix answers these questions. It explains what agentic development is, why model-driven development and agentic development reinforce each other, and how Mendix AI Assistance (Maia) and other agents work with professional developers. It ends with practical working practices for agentic development in Mendix.
+* How do you direct an agent? 
+* How do you keep the quality of its output high? 
+* How do you review its work? 
+* What is the role of the developer?
 
-For an overview of all Maia capabilities, see [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/).
+This document describes what agentic development is, why model-driven development and agentic development reinforce each other, and how Mendix AI Assistance (Maia) and other agents work with professional developers. For an overview of all Maia capabilities, see [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/).
 
 ## What Is Agentic Development {#what-is-agentic-development}
 
 In agentic development, you give an AI agent a goal, and the agent carries out the development work to reach it. An agent has the following characteristics:
 
-* **It works toward a goal** – You describe the outcome, for example, a new feature or a change to existing logic. The agent determines which documents to create or change.
+* **It works toward a goal** – You describe the outcome, for example, a new feature or a change to existing logic. The agent uses this information to determine which documents to create or change.
 * **It uses tools** – The agent uses built-in capabilities and connected tools, such as MCP servers or web content, to get information and to make changes.
 * **It works across documents** – One request can result in changes to the domain model, pages, and microflows together.
 * **It asks when it needs more information** – The agent can ask clarifying questions before it continues.
 * **It works with context that you provide** – The agent follows your instructions, conventions, and domain knowledge.
 
-The developer directs the agent, gives it context, and reviews its work. The agent does the production work.
+The developer directs the agent, provides context, and reviews the results, while the agent handles the actual implementation work.
 
-In Mendix, Maia is the agent that is built into the platform. In Studio Pro, [Maia Make](/refguide/maia-make/) works as an agent: it uses your app model as context, considers its built-in capabilities and your enabled MCP tools, and creates and changes regular Mendix documents. You can also use your own agent with Studio Pro through the [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/).
+In Mendix, Maia is the agent built into the platform. In Studio Pro, [Maia Make](/refguide/maia-make/) works as an agent: it uses your app model as context, considers its built-in capabilities and your enabled MCP tools, and creates and changes regular Mendix documents. You can also use your own agent with Studio Pro through the [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/).
 
 ## How Agentic Development Changes Software Delivery {#agentic-changes-delivery}
 
-In traditional software delivery, a large part of the effort goes into producing the application: writing code or modeling each element by hand. Agentic development changes where the effort goes:
+In traditional software delivery, a large part of the effort goes into producing the application, such as writing code and modeling each element by hand. Agentic development changes where the effort goes:
 
-* **From producing to specifying** – When an agent produces a first version of a feature, the quality of the result depends on how clearly you describe the intent. Clear requirements, user stories, and acceptance criteria become more important, not less.
-* **From producing to reviewing** – Agent output can contain mistakes. Every result needs a review by someone who understands the app. Review becomes a central development activity.
-* **From single steps to complete tasks** – An agent can apply changes to several parts of an app in one task. This makes the scope of a single request larger. It also makes context and guardrails more important.
-* **From individual knowledge to shared context** – An agent only knows what you give it. Teams that write down their conventions, architecture decisions, and domain knowledge get more consistent results from agents.
+* **From producing to specifying** – The quality of an agent's output depends on how clearly you describe the intented behavior. Provide clear requirements, user stories, and acceptance criteria to help the agent implement the feature as expected.
+* **From producing to reviewing** – Agent output can contain mistakes. Review every change to verify they meet the requirements and work correctly within the application.
+* **From single steps to complete tasks** – An agent can apply changes to several parts of an app in one task. Define the scope of the task clearly and provide sufficient context and constraints to guide the changes.
+* **From individual knowledge to shared context** – An agent rely on the context provided to it. Document team conventions, architecture decisions, and domain knowledge to get more consistent results.
 
 These shifts apply to all forms of software development. The way a platform represents an application determines how well a team can work with agents within these shifts.
 
@@ -45,15 +48,17 @@ In Mendix, an app is a model. The model consists of documents with a defined str
 
 ### A Higher Level of Abstraction
 
-Model elements describe an app at a higher level than code. For example, a **Retrieve** activity in a microflow describes a complete data retrieval, including its source and its constraints. When an agent generates a model, it works at this level.
+Model elements describe an app at a higher level than code. For example, a [Retrieve](/refguide/retrieve-objects/) activity in a microflow describes a complete data retrieval, including its source and its constraints. When an agent generates a model, it works at this level.
 
 ### Built-in Validation
 
-Studio Pro continuously checks the model for [consistency errors](/refguide/consistency-errors/). This check applies to every document, whether you or an agent created it. For example, if a generated microflow refers to an attribute that does not exist, the **Errors** pane shows the error immediately. You do not have to run the app to find this type of mistake. In Studio Pro 11.12.1 and above, you can also ask Maia to explain or solve a consistency error from the **Errors** pane.
+Studio Pro continuously checks the model for [consistency errors](/refguide/consistency-errors/). This check applies to every document, whether you or an agent created it. For example, if a generated microflow refers to an attribute that does not exist, the **Errors** pane shows the error immediately. You do not have to run the app to find this type of mistake. 
+
+In Studio Pro 11.12.1 and above, you can ask Maia to explain or solve a consistency error from the **Errors** pane.
 
 ### Visual Review
 
-Agents create regular model documents. You review a generated microflow as a diagram, a generated page in the page editor, and a generated domain model in the domain model editor. You use the same editors for documents that an agent creates as for the documents that you model yourself.
+Agents create standard model documents that you can review in the same editors you use to create them. For example, review a generated microflow as a diagram, a generated page in the page editor, and a generated domain model in the domain model editor.
 
 ### Platform-Provided Foundations
 
@@ -68,15 +73,15 @@ Developers, business analysts, and agents all work with the same model documents
 Agents also make model-driven development stronger. Maia helps in the following areas:
 
 * **Starting** – Maia generates a first version of an app, a module, or a document. You do not start from an empty model.
-* **Learning** – New developers learn Mendix concepts with Maia Learn and ask questions in the Maia Make chat while they model.
-* **Understanding** – Maia Explain describes the purpose and details of existing logic and pages. This helps when you take over an app that someone else built.
+* **Learning** – New developers learn Mendix concepts with [Maia Learn](/refguide/maia-learn/) and ask questions in the [Maia Make chat](/refguide/maia-chat/) while they model.
+* **Understanding** – [Maia Explain](/refguide/maia-explain/) describes the purpose and details of existing logic and pages. This helps when you take over an app that someone else built.
 * **Repetitive work** – Maia creates overview pages, validation logic, translations, and similar repetitive parts. You can focus on the parts that need your expertise.
-* **Consistency** – Agent instructions and agent skills let Maia and other agents apply your team conventions, such as naming rules, every time they create a document.
-* **Quality** – Best Practice Recommender detects anti-patterns in the model and helps you fix them.
+* **Consistency** – [Agent instructions](/refguide/maia-agent-instructions/) and [agent skills](/refguide/maia-agent-skills/) let Maia and other agents apply your team conventions, such as naming rules, every time they create a document.
+* **Quality** – [Best Practice Recommender](/refguide/best-practice-recommender/) detects anti-patterns in the model and helps you fix them.
 
 ## The Role of the Developer {#role-of-developer}
 
-Agents complement professional developers. They do not replace them. An agent can create documents and carry out tasks, but it does not know your business context, your users, or your quality standards unless you tell it. In agentic development, the developer directs the work, and the responsibility for the app stays with the development team.
+Agents complement professional developers; they do not replace them. An agent can create documents and carry out tasks, but it relies on the context developers provide to understand business requirements, users, and quality standards. In agentic development, the developer directs the work, and the development team remains responsible for the application.
 
 The table below shows how the work is divided:
 
@@ -84,7 +89,7 @@ The table below shows how the work is divided:
 | --- | --- | --- |
 | Requirements | Defines the problem, the scope, and the acceptance criteria. | Helps turn an idea into a scope, epics, and user stories. |
 | Architecture | Decides on the module structure, integrations, and data model. | Proposes domain models and explains existing documents. |
-| Building | Gives goals and context, reviews and refines generated documents, and models parts by hand when needed. | Creates and changes documents, from simple to complex, and recommends next steps in the editors. |
+| Building | Gives goals and context, reviews and refines generated documents, and models parts by hand when needed. | Creates and changes documents, and recommends next steps in the editors. |
 | Review | Checks each generated or changed document, and decides what to keep. | Shows the list of changed documents, and explains its changes on request. |
 | Quality and security | Owns the quality, security, and performance of the app. | Detects anti-patterns and helps solve consistency errors. |
 | Delivery | Commits the changes, and deploys and operates the app. | Summarizes logs and organizes feedback for the next iteration. |
@@ -95,10 +100,10 @@ Maia offers a range of capabilities, from assistance with single steps to agenti
 
 | Level | What Maia Does | Examples |
 | --- | --- | --- |
-| Guidance | Answers questions and explains concepts or existing documents. Maia does not change your app. | [Questions and guidance in Maia Make](/refguide/maia-chat/), [Maia Learn](/refguide/maia-learn/), [Maia Explain](/refguide/maia-explain/) |
-| Recommendation | Suggests the next step in the editor that you have open, or detects issues in your app model. You decide which suggestion to apply. | [Logic Recommender](/refguide/logic-recommender/), [UI Recommender](/refguide/ui-recommender/), [Workflow Recommender](/refguide/workflow-recommender/), [Best Practice Recommender](/refguide/best-practice-recommender/) |
-| Generation | Creates or changes one or more documents based on your request. | [Start with Maia](/refguide/start-with-maia/), [Maia Make](/refguide/maia-make/) |
-| Agentic development | Carries out a goal that involves several steps or documents. It can ask clarifying questions and use tools, such as external MCP servers or web content. | [Maia Make](/refguide/maia-make/) with [Maia MCP Client](/refguide/maia-mcp/) and [Maia Web Fetch](/refguide/maia-web-fetch/), external agents through the [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) |
+| Guidance | Answers questions and explains concepts or existing documents. Maia does not change your app. | <ul><li>[Questions and guidance in Maia Make](/refguide/maia-chat/)</li><li>[Maia Learn](/refguide/maia-learn/)</li><li>[Maia Explain](/refguide/maia-explain/)</li> |
+| Recommendation | Suggests the next step in the editor that you have open, or detects issues in your app model. You decide which suggestion to apply. | <ul><li>[Logic Recommender](/refguide/logic-recommender/)</li><li>[UI Recommender](/refguide/ui-recommender/)</li><li>[Workflow Recommender](/refguide/workflow-recommender/)</li><li>[Best Practice Recommender](/refguide/best-practice-recommender/)</li> |
+| Generation | Creates or changes one or more documents based on your request. | <ul><li>[Start with Maia](/refguide/start-with-maia/)</li><li>[Maia Make](/refguide/maia-make/)</li> |
+| Agentic development | Carries out a goal that involves several steps or documents. It can ask clarifying questions and use tools, such as external MCP servers or web content. | <ul><li>[Maia Make](/refguide/maia-make/) with [Maia MCP Client](/refguide/maia-mcp/) and [Maia Web Fetch](/refguide/maia-web-fetch/)</li><li>External agents through the [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)</li> |
 
 Choose the level that fits the task. For a small change in a microflow, a recommendation is often faster than a conversation. For a new feature that affects several documents, give the goal to Maia Make or to your own agent.
 

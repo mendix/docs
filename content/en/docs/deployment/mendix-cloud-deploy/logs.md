@@ -30,7 +30,7 @@ To view logs, you must have **Monitoring Access** permission. For more informati
 
 When your app is deployed to Mendix Cloud, it automatically creates daily app and access logs. The **Logs** page has the following tabs:
 
-* **Dashboard** – an overview of errors, warnings, failed dependencies, and security events in your app's logs. This is the default tab.
+* **Dashboard** – an overview of errors, warnings, failed dependencies, and security markers in your app's logs. This is the default tab.
 * **Log Files** – archived app and access logs, and the live log
 * **Activity** – a record of who has viewed or downloaded the logs
 
@@ -54,7 +54,7 @@ The dashboard contains the following sections:
 
 | Section | Description |
 | --- | --- |
-| **Summary** | Shows the **Total Errors**, **Total Warnings**, **Failed Dependencies** (the number of grouped failure types), and **Security Events** (the number of grouped pattern types) in the selected time interval. |
+| **Summary** | Shows the **Total Errors**, **Total Warnings**, **Failed Dependencies** (the number of grouped failure types), and **Security Markers** (the number of grouped pattern types) in the selected time interval. |
 | **Logs Activity Timeline** | Shows the number of errors and the total log volume (log lines) over time, so you can see when errors started or peaked. |
 | **Top Error Messages** | Lists the most frequent error messages, with the number of occurrences (**Count**) and when each message was last logged (**Last Seen**). |
 | **Top Warning Messages** | Lists the most frequent warning messages, with the number of occurrences (**Count**) and when each message was last logged (**Last Seen**). |

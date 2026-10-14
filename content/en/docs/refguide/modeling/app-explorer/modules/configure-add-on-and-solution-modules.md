@@ -97,7 +97,15 @@ The solution package gets an *.mxsolution* extension.
 When you update an individual add-on or a solution module to another version, you can export this module and distribute the new module package to your consumers. 
 
 {{% alert color="warning" %}}
-If for some reason you switch the add-on and solution module to an app module (for example, to provide the source code to customers), their module data is lost once they upload a new version of this module to their app.
+In Studio Pro versions below 11.XX, if you switch an add-on or solution module to an app module (for example, to provide the source code to customers), your customers lose their module data when they import the new version of this module into their app. <!-- TODO verify: target release. -->
+{{% /alert %}}
+
+### Providing an Add-on Module as an App Module {#provide-as-app-module}
+
+Starting with Studio Pro 11.XX, you can provide a new version of an add-on or solution module as an app module. To do this, change the module type to app module and export the module as a module package (*.mpk*). Your customers can then replace the add-on module in their apps with the app module, and their data is retained. For more information, see the [Replacing an Add-on Module with an App Module](/refguide/consume-add-on-modules-and-solutions/#replace-add-on-module) section in *Consuming Add-on Modules and Solutions*.
+
+{{% alert color="info" %}}
+Add-on modules that contain an extension cannot be converted to app modules.
 {{% /alert %}}
 
 ## Read More

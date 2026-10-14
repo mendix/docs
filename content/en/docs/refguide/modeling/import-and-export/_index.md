@@ -108,6 +108,10 @@ If you are importing a module with the *.mxmodule* extension, a dialog informing
 
 ##### Rules for Replacing an Existing Module {#replace-existing-modules}
 
+{{% alert color="info" %}}
+In Studio Pro 11.XX and above, you can also replace an add-on module (*.mxmodule*) with an app module package (*.mpk*) that the publisher provides. For more information, see the [Replacing an Add-on Module with an App Module](/refguide/consume-add-on-modules-and-solutions/#replace-add-on-module) section in *Consuming Add-on Modules and Solutions*. <!-- TODO verify: target release. -->
+{{% /alert %}}
+
 {{% alert color="warning" %}}
 If you delete a module and then add a newer version of it, all the existing data in the module will be lost.
 {{% /alert %}}

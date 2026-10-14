@@ -40,6 +40,34 @@ When you import an add-on module, it shows up in the **Add-ons** folder in the A
 
 You also might not see the full domain model of the module, only entities, attributes, and associations that were specifically exposed by the publisher. The visible parts of the domain model are intended to be reused; hidden elements are not needed for proper use of the module.
 
+## Replacing an Add-on Module with an App Module {#replace-add-on-module}
+
+{{% alert color="info" %}}
+This feature requires Studio Pro 11.XX or above. <!-- TODO verify: target release (SOLP-4040 has no fix version; it blocks SOLP-4162 which targets 11.18). -->
+{{% /alert %}}
+
+Add-on and solution modules are being deprecated. Publishers can therefore provide a new version of a previously protected module as a standard app module (*.mpk* file). When you receive this package, you can replace the add-on module (*.mxmodule* file) in your app with the app module without losing data. <!-- TODO verify: whether solution modules are covered as well. -->
+
+When you replace the add-on module, Studio Pro keeps the storage identifiers of entities, attributes, and associations from the add-on module. Existing data in your database is therefore retained. Studio Pro also keeps the document identifiers, so references from your own modules to documents in the replaced module continue to work.
+
+To replace an add-on module with an app module, follow these steps: <!-- TODO verify: entry point and captions. SOLP-4040 mentions Import Module Package and Marketplace download, while its title mentions Update from file. Not implemented yet. -->
+
+1. Commit all your changes. <!-- TODO verify: whether version control or a clean working copy is required. -->
+1. Obtain the app module package (*.mpk*) of the module from the publisher, either from the Marketplace or as a file.
+1. Right-click your app in the **App Explorer** and select **Import Module Package**, then select the *.mpk* file. Alternatively, download the new version from the Marketplace.
+1. In the **Import Module** dialog box, select **Replace existing module** and select the add-on module as the **Module to replace**.
+1. Click **Import**.
+
+The module is now shown as an app module in the **App Explorer**, and you can view and change its implementation.
+
+{{% alert color="info" %}}
+You can only replace an add-on module with a package that the publisher provides. You cannot convert an add-on module that is already in your app into an app module yourself.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Add-on modules that contain an extension cannot be converted to app modules.
+{{% /alert %}}
+
 ## Deleting a Consumed Add-on Module 
 
 To delete an add-on module, do one of the following:

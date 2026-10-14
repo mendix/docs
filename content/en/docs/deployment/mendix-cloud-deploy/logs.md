@@ -54,7 +54,7 @@ The dashboard contains the following sections:
 
 | Section | Description |
 | --- | --- |
-| **Summary** | Shows the number of **Errors**, **Warnings**, **Failed Dependencies** (the number of grouped failure types), and **Security Events** (the number of grouped pattern types) in the selected time interval. |
+| **Summary** | Shows the **Total Errors**, **Total Warnings**, **Failed Dependencies** (the number of grouped failure types), and **Security Events** (the number of grouped pattern types) in the selected time interval. |
 | **Logs Activity Timeline** | Shows the number of errors and the total log volume (log lines) over time, so you can see when errors started or peaked. |
 | **Top Error Messages** | Lists the most frequent error messages, with the number of occurrences (**Count**) and when each message was last logged (**Last Seen**). |
 | **Top Warning Messages** | Lists the most frequent warning messages, with the number of occurrences (**Count**) and when each message was last logged (**Last Seen**). |

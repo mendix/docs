@@ -18,7 +18,7 @@ This page describes logs for licensed apps deployed to Mendix Cloud. Logs are no
 To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For more information, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/) or [Monitoring Environments in Mendix Apps on SAP BTP](/developerportal/deploy/sap-cloud-platform/sap-monitoring/).
 {{% /alert %}}
 
-To access the **Logs** page, open your app in [Projects](https://projects.home.mendix.com/). Then select **Logs** in the navigation pane.
+To access the **Logs** page, open your app in [Projects](https://projects.home.mendix.com/). Navigate to **Monitoring** and select **Logs** in the navigation pane.
 
 Use the drop-down menu in the upper-right corner to select the environment you want to view logs for.
 
@@ -30,7 +30,7 @@ To view logs, you must have **Monitoring Access** permission. For more informati
 
 When your app is deployed to Mendix Cloud, it automatically creates daily app and access logs. The **Logs** page has the following tabs:
 
-* **Dashboard** – an overview of errors, warnings, failed dependencies, and security events in your app's logs; this tab opens by default
+* **Dashboard** – an overview of errors, warnings, failed dependencies, and security events in your app's logs. This is the default tab.
 * **Log Files** – archived app and access logs, and the live log
 * **Activity** – a record of who has viewed or downloaded the logs
 
@@ -42,7 +42,7 @@ Logging for apps deployed to Mendix Cloud is limited to 500 loglines per second.
 
 ### Dashboard {#dashboard}
 
-The **Dashboard** tab summarizes your app's logs for the selected environment, so you can quickly see whether your app needs attention and where to start investigating.
+The **Dashboard** tab summarizes your app's logs for the selected environment, to help you identify issues and decide where to start investigating.
 
 Use the **Time interval** drop-down menu to select the period that the dashboard covers. You can select **Last 6 hrs**, **Last 12 hrs**, **Last 24 hrs**, **Last 2 days**, or **Last 7 days**. All time intervals are in UTC.
 
@@ -54,7 +54,7 @@ The dashboard contains the following sections:
 
 | Section | Description |
 | --- | --- |
-| Summary | Shows the number of **Errors** and **Warnings** in the selected time interval. The **Failed Dependencies** and **Security Events** counts are not the total number of individual dependency failures and security markers. Instead, **Failed Dependencies** shows the number of grouped failure types and **Security Events** shows the number of grouped pattern types in the selected time interval. |
+| **Summary** | Shows the number of **Errors**, **Warnings**, **Failed Dependencies** (the number of grouped failure types), and **Security Events** (the number of grouped pattern types) in the selected time interval. |
 | **Logs Activity Timeline** | Shows the number of errors and the total log volume (log lines) over time, so you can see when errors started or peaked. |
 | **Top Error Messages** | Lists the most frequent error messages, with the number of occurrences (**Count**) and when each message was last logged (**Last Seen**). |
 | **Top Warning Messages** | Lists the most frequent warning messages, with the number of occurrences (**Count**) and when each message was last logged (**Last Seen**). |
@@ -65,10 +65,12 @@ The dashboard contains the following sections:
 In the **Dependency Failures** and **Security Markers** sections, each group is a collapsible section. Use **Expand All Sections** or **Collapse All Sections** to show or hide the details of all groups at once.
 
 {{% alert color="info" %}}
-Security markers are based only on the requests recorded in your access log. A marker does not mean that your app was compromised; apps that are reachable from the internet regularly receive this kind of automated traffic. Injection-type patterns, such as SQL injection, are only counted when your app responded with an error status code.
+Security markers are based only on the requests recorded in your access log. A marker does not mean that your app was compromised, because apps that are reachable from the internet regularly receive this kind of automated traffic. Injection-type patterns, such as SQL injection, are counted only when your app responded with an error status code.
 {{% /alert %}}
 
 ### Log Files
+
+The **Log Files** tab shows the archived app and access logs, and the live log.
 
 #### Archived App and Access Logs
 
@@ -78,9 +80,9 @@ File sizes are displayed for archived logs, but in-progress logs show the **Unkn
 
 By default, archived logs are sorted by date; the current log is the first one listed. You can manually click through the archived logs or use the search field to find logs for a specific date.
 
-##### Rotation and Retention Schedule{#retention-schedule}
+##### Rotation and Retention Schedule {#retention-schedule}
 
-For apps deployed to Mendix Cloud, application logs and acccess logs are rotated and archived every day. They are kept for six months. If you want to keep a log for longer than that, you can download the log to your computer.
+For apps deployed to Mendix Cloud, application logs and access logs are rotated and archived every day. They are kept for six months. If you want to keep a log for longer than that, you can download the log to your computer.
 
 #### Live Log
 

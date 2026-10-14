@@ -60,6 +60,19 @@ The **Setup** node is kept up to date when you change the original documents:
 * When you delete a document or folder that is referenced in the **Setup** node, the corresponding shortcuts are removed from the **Setup** node.
 * When you move a document or folder that is referenced in the **Setup** node to another module, Studio Pro asks for confirmation, because the shortcuts are removed from the **Setup** node of the original module. Click **Continue** to move the item and remove the shortcuts, or **Cancel** to keep the item in its current module.
 
+## Automatic Conversion of USE_ME Folders {#use-me-conversion}
+
+When you open an existing app in Studio Pro 11.16 or above for the first time, Studio Pro checks each app module and Marketplace module for a folder that follows the USE_ME convention. Only folders directly in the module are checked, not folders inside other folders. The folder name is not case-sensitive and can start with an underscore and contain a space, underscore, or hyphen between *Use* and *Me*, for example, **USE_ME**, **_USE ME**, **UseMe**, or **Use-Me**.
+
+If such a folder is found, its contents are added to the **Setup** node of that module:
+
+* Each document in the folder is added as a shortcut directly in the **Setup** node.
+* Each subfolder is added as a folder in the **Setup** node, containing shortcuts to its documents and subfolders.
+
+The original **USE_ME** folder and its documents are not moved or changed. After the conversion, you can find the documents both in the **USE_ME** folder and as shortcuts in the **Setup** node, and you can manage the shortcuts like any other Setup items.
+
+This conversion runs only once per app. Folders that you create or rename to **USE_ME** later are not converted automatically, but you can add them to the **Setup** node yourself, as described in [Adding Items to Setup](#add).
+
 ## Read More
 
 * [Modules](/refguide/modules/)

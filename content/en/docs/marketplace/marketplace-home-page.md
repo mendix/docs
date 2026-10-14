@@ -69,7 +69,7 @@ The following details are displayed for each component:
         For details on editing, refer to the [Adding New Marketplace Content](/appstore/submit-content/#adding) section of *Uploading to the Marketplace*.
 
     * **Manage Guests** – Add guests who can download private components. A guest is a Mendix Platform user from outside your organization who can download the selected private [content](#group-content) of this group.     
-        When you click **Manage Guests**, the **Guests** window is displayed for that component. Click **Share with Guests**, and add the email addresses of the guests you want to invite in the **Guest Email Address** field. The guests you added receive the download link via email, but you can also copy the link using the dedicated button, and share it with them directly.    
+        When you click **Manage Guests**, the **Guests** window is displayed for that component. Click **Add Guests**, and add the email addresses of the guests you want to invite in the **Guest Email Address** field. The guests you added receive the download link via email.    
         The guests can then see all the private Marketplace content shared with them on their [Shared with Me](#shared-with-me) page.
    
     * **Deprecate Component** – Deprecate the component, and select alternatives.    

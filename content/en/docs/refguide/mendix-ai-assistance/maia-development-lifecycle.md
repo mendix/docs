@@ -12,7 +12,7 @@ Mendix AI Assistance (Maia) supports you at each stage of the application lifecy
 
 The stages do not need to be followed in a specific order. You will often move between them as you develop an app, such as when adding a feature to an existing app. Maia supports you through each stage, including when you revisit earlier work.
 
-This document decribes each stage of the application lifecycle. For the principles behind this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
+This document describes each stage of the application lifecycle. For the principles behind this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
 
 ## One Conversation for the Whole App Model {#one-conversation}
 

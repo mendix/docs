@@ -61,7 +61,7 @@ Tools from a new server are disabled by default, so you can choose which tools M
 
 ## Example: From Plan to Implementation with an External Agent {#example}
 
-The followwing example shows how you can combine the options. 
+The following example shows how you can combine the options. 
 
 A team plans an app in Mendix Portal and uses an AI coding assistant to implement the stories in Studio Pro.
 

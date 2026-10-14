@@ -35,7 +35,7 @@ In Mendix, Maia is the agent built into the platform. In Studio Pro, [Maia Make]
 
 In traditional software delivery, a large part of the effort goes into producing the application, such as writing code and modeling each element by hand. Agentic development changes where the effort goes:
 
-* **From producing to specifying** – The quality of an agent's output depends on how clearly you describe the intented behavior. Provide clear requirements, user stories, and acceptance criteria to help the agent implement the feature as expected.
+* **From producing to specifying** – The quality of an agent's output depends on how clearly you describe the intended behavior. Provide clear requirements, user stories, and acceptance criteria to help the agent implement the feature as expected.
 * **From producing to reviewing** – Agent output can contain mistakes. Review every change to verify they meet the requirements and work correctly within the application.
 * **From single steps to complete tasks** – An agent can apply changes to several parts of an app in one task. Define the scope of the task clearly and provide sufficient context and constraints to guide the changes.
 * **From individual knowledge to shared context** – An agent rely on the context provided to it. Document team conventions, architecture decisions, and domain knowledge to get more consistent results.

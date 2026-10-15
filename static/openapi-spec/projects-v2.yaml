@@ -594,7 +594,7 @@ components:
     limit:
       name: limit
       in: query
-      description: The maximum number of items to be returned per request. The default and maximum value is 100.
+      description: The maximum number of items to be returned per request. The default and maximum value is 100. If the limit is set to 0, the default limit is used.
       schema:
         type: integer
     offset:
@@ -642,6 +642,7 @@ components:
               name:
                 type: string
                 description: The name of the project.
+                pattern: '^\w[\w- ]*'
                 maxLength: 100
               summary:
                 type: string
@@ -675,7 +676,7 @@ components:
   securitySchemes:
     PersonalAccessToken:
       type: apiKey
-      description: "For more information about requesting and using a token, refer to the [documentation](https://docs.mendix.com//portal/user-settings/#pat).<br/>The header must be set to `MxToken <Your PAT>`."
+      description: "For more information about requesting and using a token, refer to the [documentation](https://docs.mendix.com/portal/user-settings/#pat).<br/>The header must be set to `MxToken <Your PAT>`."
       name: Authorization
       in: header
   responses:

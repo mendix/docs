@@ -2487,4 +2487,4 @@ The default class to style all gallery text filter widgets is named `com_mendix_
 ## Read More
 
 * [Native Styling](/refguide10/mobile/designing-mobile-user-interfaces/native-styling/)
-* [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties/)
+* [Design Properties Documentation](/apidocs-mxsdk/apidocs/design-properties-10/)

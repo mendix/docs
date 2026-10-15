@@ -822,7 +822,7 @@ svix-server:
   useRedis: true
 ```
 
-##### With Azure Key Vault
+##### With Azure Key Vault {#svix-key-vault}
 
 ```text
 svix-server:
@@ -924,7 +924,7 @@ mxplatform:
       dtapMode: "P"
 ```
 
-##### With Secret Provider
+##### With Secret Provider {#secret-provider-key}
 
 ```text
 mxplatform:

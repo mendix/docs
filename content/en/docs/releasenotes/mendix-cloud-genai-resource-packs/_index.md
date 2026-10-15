@@ -12,6 +12,40 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 ## 2026
 
+### October 1, 2026
+
+#### New Features
+
+* You can now set a **Technical Contact** for a Mendix GenAI resource.
+
+### September 17, 2026
+
+#### New Features
+
+* We enabled multi-factor authentication (MFA) for **Keys Management** within a resource.
+
+### September 10, 2026
+
+#### Improvements
+
+* Model are now clearly labeled in the **Model** dropdown, helping you identify deprecated and end-of-life models directly on the **Consumption** page.
+
+#### Fixes
+
+* We fixed an issue that made **Metadata** tags with a large number of characters difficult to view on the knowledge base resource **Content** page.
+
+### August 13, 2026
+
+#### New Features
+
+* We introduced the **Created For** field on the resource **Settings** page. This field indicates the user for whom the resource is originally provisioned.
+
+### July 23, 2026
+
+#### Fixes
+
+* We fixed an issue where entering the **Email address** field for invitations was case-sensitive, improving search reliability and user experience.
+
 ### July 16, 2026
 
 #### New Features
@@ -87,7 +121,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 #### Improvements
 
 * Users can now open GenAI resources directly in a new tab for easier access from the Control Center.
-* The default **Cross Region Inference** (CRI) settings is now enabled when creating text generation resources.
+* The default **Cross Region Inference** (CRI) setting is now enabled when creating text generation resources.
 * When creating a knowledge base resource, users can open the **Create Embeddings Resource** in a new tab to help prevent data loss.
 
 ### October 28, 2025
@@ -100,7 +134,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### New Features
 
-* Admins can now view the **Last Used Date** for all configuration keys in the **Configuration Key Overview** page.
+* Admins can now view the **Last Used Date** for all configuration keys on the **Configuration Key Overview** page.
 
 #### Improvements
 
@@ -114,8 +148,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### New Features
 
-* [Mendix GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) are now generally available. They enable seamless integration of GenAI into your Mendix ecosystem by leveraging GenAI Models and Knowledge Bases. With these packs, you can accelerate advanced use cases such as Retrieval-Augmented Generation (RAG) and Agentic AI.
-You can access them through the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
+* [Mendix GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) are now generally available. They enable seamless integration of GenAI into your Mendix ecosystem by leveraging GenAI Models and Knowledge Bases. With these packs, you can accelerate advanced use cases such as Retrieval-Augmented Generation (RAG) and Agentic AI. You can access them through the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
 
 #### Improvements
 

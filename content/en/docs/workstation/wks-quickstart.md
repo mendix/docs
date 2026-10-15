@@ -49,11 +49,11 @@ A *station* represents a workstation on the shop floor. It can connect to one or
 
     Workstation Management opens the new station.
 
-6. Optional: If you do not want Workstation Management to detect smart card readers, perform the following steps:
+6. Optional: If you want Workstation Management to detect smart card readers, perform the following steps:
 
     1. In **Station** view, click the **three dots** icon.
     2. Click **Edit Station**.
-    3. Clear the **Detect Card Readers** check box.
+    3. Select the **Detect Card Readers** checkbox.
 
 ## Installing the Workstation Client
 

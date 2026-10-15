@@ -67,7 +67,7 @@ By default Mendix has a default set of design properties which enable developers
 
 For example, Mendix offers a set of button variants (default, secondary, warning, success, and danger). However, during your design process you can choose to just have a default and a secondary variant. Choices like this are a part of UI design. It is up to people in UI and front-end design roles to determine how much freedom a Mendix developer should have.
 
-The design properties are located in *theme/settings-native.json*, and more information be found in the [Design Properties API Documentation](/apidocs-mxsdk/apidocs/design-properties/).
+The design properties are located in *theme/settings-native.json*, and more information be found in the [Design Properties API Documentation](/apidocs-mxsdk/apidocs/design-properties-9/).
 
 #### Creating the App Layouts
 

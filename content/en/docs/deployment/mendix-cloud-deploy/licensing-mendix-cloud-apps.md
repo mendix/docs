@@ -1,7 +1,7 @@
 ---
 title: "Licensing Mendix Cloud Apps"
 url: /developerportal/deploy/licensing-apps/
-weight: 20
+weight: 10
 description: "Licensing apps for production by linking them to a licensed cloud node."
 aliases:
     - /developerportal/howto/how-to-link-a-different-app-to-a-node.html
@@ -10,6 +10,8 @@ aliases:
     - /developerportal/howto/how-to-link-a-different-app-to-a-node
     - /developerportal/howto/how-to-link-app-to-node
     - /mendixcloud/how-to-link-app-to-node
+    - /developerportal/deploy/basic-package/
+    - /developerportal/deploy/migrate-free-app-to-basic/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

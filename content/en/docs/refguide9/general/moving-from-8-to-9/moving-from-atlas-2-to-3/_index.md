@@ -429,7 +429,7 @@ As this is a custom-defined design property, this needs to be added to the web's
 
 #### Merging Options for Design Properties
 
-Design property options can also be merged across themesource modules. For more information see the [Extending or Overriding Design Properties of Other Modules](/apidocs-mxsdk/apidocs/design-properties/#extend-existing-design-properties) section of the *Design Properties API Documentation*.
+Design property options can also be merged across themesource modules. For more information see the [Extending or Overriding Design Properties of Other Modules](/apidocs-mxsdk/apidocs/design-properties-9/#extend-existing-design-properties) section of the *Design Properties API Documentation*.
 
 ## Expected Issues After Upgrading to Atlas 3 {#expected-issues}
 

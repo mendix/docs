@@ -560,7 +560,7 @@ Always review regex replacements carefully before applying them. Complex SASS us
 
 * [Atlas UI Kit for Figma](/howto/front-end/figma-ui-kit/)
 * [Customize Styling](/howto/front-end/customize-styling-new/)
-* [Design Properties](/apidocs-mxsdk/apidocs/design-properties/)
+* [Design Properties](/apidocs-mxsdk/apidocs/design-properties-11/)
 * [Atlas UI Reference App](https://atlasdesignsystem.mendixcloud.com/)
 * [CSS Custom Properties - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 * [CSS color-mix() Function - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix)

@@ -156,7 +156,6 @@ Mendix licenses are sold as part of plans. Plans consist of the following items:
 The following plans are available:
 
 * Free
-* Basic
 * Standard
 * Premium
 * Premium Plus
@@ -241,7 +240,7 @@ You can also purchase a Premium Plus plan, which provides all the features of th
 
 With Regional Fallback, a copy of your database and FileDocuments is maintained in a completely separate region. For example, if your app normally runs in us-east-1, a copy of your data is made in us-west-2. If all the AZs in the primary region become unavailable, you can choose to run your app temporarily in the secondary region with the data that has been copied to that region. Once the primary region is back online, you can revert your app to run in the primary region.
 
-Because this is designed for a catastrophic regional failure, there are some limitations to your normal operations. For example, you cannot deploy a new version of the app while it is running in the secondary region. The decision to switch to the secondary region is completely under your control.
+Because this is designed for a catastrophic regional failure, there are some limitations to your normal operations. For example, you cannot deploy a new version of the app while it is running in the secondary region. 
 
 #### On-Premises and Mendix on Kubernetes
 

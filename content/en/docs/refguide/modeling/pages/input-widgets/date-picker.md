@@ -66,7 +66,7 @@ If you choose **Custom** as the date format (see above), this property determine
 Custom date formats, as well as date handling in general, are tricky technologies with real business ramifications. Be aware of the following behaviors when using this widget:
 
 * When the custom date format uses `yyyy`, the date picker also accepts a two-digit year (`yy`).
-*  The date picker uses a reference date for parsing partial date inputs (for example `mm/dd` or `yy/mm/dd`) into complete date inputs `yyyy/mm/dd`. The reference date is the date from the value already in the field. If the field is empty, the current date is the reference date.
+* The date picker uses a reference date for parsing partial date inputs (for example `mm/dd` or `yy/mm/dd`) into complete date inputs `yyyy/mm/dd`. The reference date is the date from the value already in the field. If the field is empty, the current date is the reference date.
 * For two-digit year input, the date picker chooses the century that places the entered year closest to the reference year. If two years are equally close, it chooses the earlier year.
     * For example, with `2026` as the reference year (if the field previously contained a date in `1970`, entering `24` results in `1924`):
         * `24` {{< icon name="arrow-narrow-right" >}} `2024`

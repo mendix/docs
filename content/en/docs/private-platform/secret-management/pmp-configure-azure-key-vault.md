@@ -156,7 +156,13 @@ When creating the JSON structure for your secret, you must use a flat key-value 
 
 Private Mendix Platform uses Azure AD Workload Identity to securely access Azure Key Vault without storing credentials. This requires creating a User-Assigned Managed Identity, granting it permissions to the Key Vault, and linking it to the Kubernetes Service Account used by the Private Mendix Platform.
 
+If your Managed Identity was already created by Mendix Operator, you only need to perform the steps described in [Grant the Managed Identity Access to Key Vault](#grant-key-vault-access). The other steps are not necessary.
+
 #### Creating a User-Assigned Managed Identity
+
+{{% alert color="info" %}}
+The steps in this section are not necessary if .your Managed Identity was already created by Mendix Operator.
+{{% /alert %}}
 
 To create a User-Assigned Managed Identity, perform the following steps:
 
@@ -169,7 +175,7 @@ To create a User-Assigned Managed Identity, perform the following steps:
 7. Once deployed, navigate to the new identity. 
 8. From the **Overview** page, make note of the **Client ID**. This will be needed later to configure the service account.
 
-#### Grant the Managed Identity Access to Key Vault
+#### Grant the Managed Identity Access to Key Vault {#grant-key-vault-access}
 
 To grant the Managed Identity access to the Key Vault, perform the following steps:
 
@@ -183,6 +189,10 @@ To grant the Managed Identity access to the Key Vault, perform the following ste
 8. Select the identity, and then click **Review + assign**.
 
 #### Configuring the Federated Identity
+
+{{% alert color="info" %}}
+The steps in this section are not necessary if .your Managed Identity was already created by Mendix Operator.
+{{% /alert %}}
 
 To configure the federated identity, perform the following steps:
 
@@ -199,6 +209,10 @@ To configure the federated identity, perform the following steps:
 Click **Add**.
 
 #### Modifying the Operation Configuration
+
+{{% alert color="info" %}}
+The steps in this section are not necessary if .your Managed Identity was already created by Mendix Operator.
+{{% /alert %}}
 
 For more information about advanced configuration settings, see [Advanced Operator Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-operator-configuration).
 
@@ -233,6 +247,10 @@ To modify the configuration, perform the following steps:
     ```
 
 #### Configuring the Kubernetes Service Account
+
+{{% alert color="info" %}}
+The steps in this section are not necessary if .your Managed Identity was already created by Mendix Operator.
+{{% /alert %}}
 
 To enable Azure AD Workload Identity, the Kubernetes Service Account used by your Private Mendix Platform application needs specific annotations to link it to the Azure User-Assigned Managed Identity. You have two options: use a dedicated custom Service Account or use the existing default Service Account in your application's namespace.
 

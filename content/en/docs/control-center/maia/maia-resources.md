@@ -40,6 +40,8 @@ The **Monthly Consumption** section displays your company’s Maia Unit usage fo
 * The number of remaining units
 * The date your monthly consumption resets
 
+For more information on how to manage your company's monthly consumption, see [Maia Consumption](/control-center/maia-consumption/).
+
 ## Increasing Your Maia Units Capacity {#increase-maia-units}
 
 1. Make sure you have Cloud Tokens available.    

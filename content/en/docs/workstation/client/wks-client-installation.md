@@ -19,7 +19,8 @@ Before you install the Workstation Client, ensure that you fulfill the following
 
 * Operating System - Windows 10 or Windows 11 (64-bit);  Linux ARM64; macOS (Apple Silicon)
 * Memory - Minimum 4 GB RAM (8 GB recommended for optimal performance)
-* Disk Space - 400 MB of free disk space for installation
+* Disk Space - 450 MB of free disk space for installation
+* Secret Store - A secret store of the operating system, which the Client uses to encrypt its API key. It exists by default on Windows and macOS. On Linux, ensure that a keyring is installed and unlocked; otherwise, the Client does not start. For more information, see [Troubleshooting the Workstation Client: Safe Storage Is Unavailable](/mendix-workstation/troubleshooting-workstation-client/#safe-storage-unavailable).
 
 ### Access Requirements
 

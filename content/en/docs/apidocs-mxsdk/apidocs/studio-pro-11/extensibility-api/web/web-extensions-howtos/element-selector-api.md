@@ -27,6 +27,8 @@ The Element Selector API provides two main methods:
 * `selectDocument()` – opens a dialog to select a document from your application
 * `selectEntity()` – opens a dialog to select an entity from your domain model
 
+The element selector will throw an error when trying to select an element before the project is fully open and initialized.
+
 ## Selecting Documents
 
 Use basic document selection to select any document in your application without filters:
@@ -283,7 +285,7 @@ The optional query parameter allows you to filter selector results:
 
 ## Preselecting Elements
 
-You can also pass an element ID as the `selectedElementId` property of the `Selector`. This ID can be either a Document, an Entity, or a Module. If a document or entity, the corresponding node on the selector form appears selected. If the ID belongs to a module, the corresponding node appears selected and  expanded, and the `New` button is enabled so the user can immediately create a new document in that module.
+You can also pass an element ID as the `selectedElementId` property of the `Selector`. This ID can be either a document, an entity, or a module. If the ID is a document or an entity, the corresponding node on the selector form appears selected. If the ID belongs to a module, the corresponding node appears selected and expanded, and the **New** button is enabled so you can immediately create a new document in that module.
 
 ## Extensibility Feedback
 

@@ -7,8 +7,7 @@ beta: true
 ---
 
 {{% alert color="warning" %}}
-Private Connectivity is out of Public Beta, and being prepared for General Availability (GA). The feature cannot be used until it is released as GA.     
-Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
+Private Connectivity is out of Public Beta, and being prepared for General Availability (GA). The feature cannot be used until it is released as GA. Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
 {{% /alert %}}
 
 ## Introduction

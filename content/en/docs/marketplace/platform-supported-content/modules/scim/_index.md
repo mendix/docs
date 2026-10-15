@@ -99,6 +99,8 @@ Currently, the SCIM module does not support the following features of the SCIM s
 
 * Multi-tenancy
 
+* Unknown users can be queried by their full user name using the filter `filter=userName eq "john"`.
+
 The SCIM module does not support the following features of the SCIM protocol:
 
 * `/Me` endpoint
@@ -108,6 +110,12 @@ The SCIM module does not support the following features of the SCIM protocol:
 * Bulk operations `/bulk`
 
 * `/group` endpoint
+
+* Filtering other than `filter=Username eq "john"` is not supported
+
+* The SCIM module does not support returning multiple users in a single response
+
+* Pagination is not supported.
 
 ### Prerequisites
 
@@ -134,6 +142,10 @@ If you are using Mendix version 10.21.1, use User Commons module version 2.1.0 o
 ## Upgrading the SCIM Module
 
 This section provides an overview of updates for the SCIM and UserCommons modules across different versions. It includes several key updates to ensure a smooth transition while migrating to higher module versions.
+
+{{% alert color="warning" %}}
+The SCIM module supports UserCommons V3.0.0 and below. If you use the SCIM module, do not upgrade UserCommons to V3.0.0, as it requires changes to the dependent SCIM module that are not yet available. 
+{{% /alert %}}
 
 {{% alert color="info" %}}
 When upgrading to version 4.0.0 of the SCIM module, ensure you are also using version 2.0.0 of the UserCommons module.

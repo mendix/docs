@@ -15,15 +15,13 @@ Maia Make capabilities are available in Studio Pro 11.8 and above.
 To use Maia Make capabilities, you need an internet connection. You must be signed in to Studio Pro unless you have configured a bring your own agent (BYO Agent).
 {{% /alert %}}
 
-Maia Make is a set of agentic development capabilities in Studio Pro that are available through a unified conversational interface. Describe your requirements in natural language, and Maia generates development artifacts such as data structures, pages, and microflows.
+Maia Make is a set of agentic development capabilities in Studio Pro that are available through a unified conversational interface. In one conversation, you can describe your requirements in natural language, and have Maia generate or modify any part of your app model, including domain models, pages, microflows, workflows, and translations. You can also ask Maia to explain existing documents, provide guidance, and integrate with external tools, such as Playwright and Figma, via MCP servers. 
 
-You can also ask Maia to provide explanations of your existing documents, such as microflows, workflows, and pages. Moreover, this interface allows you to integrate with external tools, such as Playwright and Figma, via MCP servers. It also supports story-based development by generating app artifacts based on existing user stories.
+Maia Make also supports story-based development, allowing you to generate app artifacts based on existing user stories. As an agent that works directly with your app model, Maia determines which documents to create or change based on your goals, its built-in capabilities, and the MCP tools you enable. When necessary, it asks clarifying questions to gather more information.
 
-Maia Make is the single chat interface for agentic development in Studio Pro. In one conversation, you can create and change any part of your app model, such as the domain model, logic, pages, workflows, and translations, and ask for guidance and explanations.
+Maia creates and modifies regular Mendix documents that you can review in the Studio Pro editors and undo as needed. That makes Maia Make useful throughout the application lifecycle, from generating a first version of an app to refactoring and extending an existing one. For more information, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
 
-Maia Make works as an agent on your app model. You describe a goal, and Maia determines which documents to create or change. It considers its built-in capabilities and the MCP tools that you enable, and it asks clarifying questions when it needs more information. Maia creates and changes regular Mendix documents. You review the results in the Studio Pro editors, and you can undo them. Because of this, you can use Maia Make in most stages of the application lifecycle, from generating a first version of an app to refactoring and extending an existing one. For more information, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
-
-For guidance on how to best prompt Maia, refer to [Prompt Engineering](/agents/prompt-engineering/).
+For guidance on writing effective prompts for Maia, refer to [Prompt Engineering](/agents/prompt-engineering/).
 
 ## Maia Make Capabilities Overview
 

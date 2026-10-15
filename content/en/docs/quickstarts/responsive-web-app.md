@@ -147,9 +147,9 @@ You have created a new persistable entity called **Employee**. This means the en
 {{% alert type="info" %}}
 You can also create a domain model by describing your application to Maia. Maia generates the domain model based on your input. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/).
 
-To use it in Studio Pro 11.8 and above, open the **Maia** pane in the upper-right corner of Studio Pro, then describe your application in the chat. In Studio Pro 11.7 and below, click **Maia for Domain Model** in the **Working Area**, then describe your application in the chat box on the right.
+To use it in Studio Pro 11.8 and above, open the **View** menu and select the **Maia** pane, then describe your application in the chat. In Studio Pro 11.7 and below, click **Maia for Domain Model** in the **Working Area**, then describe your application in the chat box on the right.
 
-In our case, you can ask Maia: “Create a domain model that stores employee information: first name, last name, job role, and employee ID.” 
+In this case, you can ask Maia: “Create a domain model that stores employee information: first name, last name, job role, and employee ID.” 
 {{% /alert %}}
 
 ### Add an Association
@@ -260,7 +260,9 @@ Throughout this guide, you built your **Employee** app by hand—dragging entiti
 
 Unlike a typical chatbot that only answers questions, Maia is agentic: it can read your app's current domain model, pages, and logic, understand the context you are working in, and then directly create or modify app elements on your behalf. Ask it to add an entity, generate a page, or build out a microflow, and it will produce real, editable Studio Pro artifacts—not just a suggestion or a code snippet for you to copy in.
 
-Maia is not one single feature but a collection of capabilities woven into Studio Pro. [Maia Make](/refguide/maia-make/) is a conversational interface where you describe what you want in plain language, and Maia generates the model elements, such as domain models, pages, or microflows, to match. In the same Maia Make chat, you can create domain models, pages, workflows, and OQL queries, and ask questions or ask [Maia Explain](/refguide/maia-explain/) for an explanation when you want to understand something rather than change your app. Next to Maia Make, recommenders suggest the next best widget or microflow activity as you build. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
+Maia is not one single feature but a collection of capabilities woven into Studio Pro. [Maia Make](/refguide/maia-make/) is a conversational interface where you describe what you want in plain language, and Maia generates the corresponding model elements, such as domain models, pages, or microflows, to match. In the same chat, you can create workflows and OQL queries, ask questions, or ask [Maia Explain](/refguide/maia-explain/) to understand existing functionalities without changing your app. 
+
+Next to Maia Make, recommenders suggest the next best widget or microflow activity as you build. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
 
 ### Try It Yourself: Extending the Employee App
 

@@ -208,7 +208,7 @@ The following shortcut keys are assigned to menu actions that can be used in all
 
 ## Maia Shortcut Keys {#maia-chat-shortcuts}
 
-You can use the following shortcut keys in the [Maia Make](/refguide/maia-make/) chat. In Studio Pro 11.7 and below, they also work in [Maia Chat](/refguide/maia-chat/), including on the feedback page:
+You can use the following shortcut keys in the [Maia Make](/refguide/maia-make/) chat. In Studio Pro 11.7 and below, these shortcuts work in [Maia Chat](/refguide/maia-chat/), including on the feedback page:
 
 | Windows | Mac | Description |
 | --- | --- | --- |

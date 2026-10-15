@@ -7,17 +7,20 @@ description: "Describes the configuration and usage of the Data Widgets module, 
 
 ## Introduction
 
-[Data Widgets](https://marketplace.mendix.com/link/component/116540) is a module containing widgets that show data in a specific structure.
+[Data Widgets](https://marketplace.mendix.com/link/component/116540) is a module containing widgets that show data in a specific structure. It requires Studio Pro 10.24.0 or above.
 
 This module contains the following widgets:
 
 * [Data Grid 2](/appstore/modules/data-grid-2/)
-* [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/)
+    * [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/)
+* [Date Filter](/appstore/modules/datagrid-date-filter/)
 * [Drop-Down Sort](/appstore/modules/gallery/#dropdown)
-* [Filters](/appstore/modules/data-grid-2/#filters)
+* [Dropdown Filter](/appstore/modules/datagrid-dropdown-filter/)
 * [Gallery](/appstore/modules/gallery/)
-* [Selection helper](/appstore/modules/selection-helper/)
-* [Tree node](/appstore/modules/tree-node/)
+* [Number Filter](/appstore/modules/datagrid-number-filter/)
+* [Selection Helper](/appstore/modules/selection-helper/)
+* [Text Filter](/appstore/modules/datagrid-text-filter/)
+* [Tree Node](/appstore/modules/tree-node/)
 
 ## Migration
 

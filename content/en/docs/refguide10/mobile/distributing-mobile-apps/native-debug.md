@@ -4,7 +4,7 @@ url: /refguide10/mobile/distributing-mobile-apps/native-debug/
 weight: 40
 description: "A guide for debugging native mobile apps using the Make It Native app."
 aliases:
-    - /howto/mobile/native-debug/
+    - /howto10/mobile/native-debug/
 ---
 
 ## Introduction
@@ -12,7 +12,7 @@ aliases:
 When changing your native mobile app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native mobile apps for expert developers.
 
 {{% alert color="warning" %}}
-**Open DevTools** appears in the developer menu of the Make It Native app, but it does not open React Native DevTools. This is a known issue and a limitation of React Native, which does not include its debugger in release builds of an app. As the Make It Native app is distributed as a release build, you cannot use React Native DevTools with it.
+**Open DevTools** appears in the developer menu of the Make It Native app, but it does not open React Native DevTools. This is a known issue and a limitation of React Native, which does not include its debugger in an app's release builds. As the Make It Native app is distributed as a release build, you cannot use React Native DevTools with it.
 
 To debug with React Native DevTools, use a custom developer app built with a debug configuration, for example the `devDebug` variant. For more information, see [Creating a Custom Developer App](/refguide10/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). To inspect your app in the Make It Native app, use [React Developer Tools](#rn-dev).
 {{% /alert %}}
@@ -22,15 +22,15 @@ To debug with React Native DevTools, use a custom developer app built with a deb
 To start a debugging session in a custom developer app built with a debug configuration, do the following:
 
 1. Run your Mendix app locally on your desktop.
-2. Start your custom developer app.
-3. Select **Enable dev mode** on the initial screen of the app.
-4. Start your app on your mobile device in Mendix Studio Pro by clicking **View App** > **View on your device**.
-5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
+1. Start your custom developer app.
+1. Select **Enable dev mode** on the initial screen of the app.
+1. Start your app on your mobile device in Mendix Studio Pro by clicking **View App** > **View on your device**.
+1. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
 
 When the custom developer app finishes loading your app, do the following:
 
 1. Open the developer menu by using a three-finger long press.
-2. Tap **Open DevTools**.
+1. Tap **Open DevTools**.
 
 React Native DevTools opens on your desktop and connects to your app. You can inspect your app and set breakpoints in its JavaScript files.
 
@@ -49,23 +49,23 @@ To install React Developer Tools, do the following:
 Open your native app in iOS Simulator or Android emulator and then do the following:
 
 1. Select **Enable dev mode** on your native app.
-2. Run `npx react-devtools`.
-3. React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
+1. Run `npx react-devtools`.
+1. React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
     {{< figure src="/attachments/howto10/mobile/native-mobile/distribution/build-native-apps/native-debug/simulator-rn-dev.png" alt="debug simulator"   width="350"  class="no-border" >}}
 
-4. In the Make It Native App, use a three-finger tap to **Toggle Element Inspector** and enable enhanced inspection capabilities.
+1. In the Make It Native App, use a three-finger tap to **Toggle Element Inspector** and enable enhanced inspection capabilities.
 
 #### Debugging with the Make It Native App
 
 To use the Make It Native app with React Developer Tools, do the following: 
 
 1. Connect your mobile device to your laptop with a USB cord.
-2. Run `adb devices` to ensure your device is listed.
-3. Start your native app on your device with **Enable dev mode** selected.
-4. Run `adb reverse tcp:8097 tcp:8097` to allow the applet to interact with your device.
-5. Run `npx react-devtools`.
-6. React Developer Tools will launch and connect to your device. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
+1. Run `adb devices` to ensure your device is listed.
+1. Start your native app on your device with **Enable dev mode** selected.
+1. Run `adb reverse tcp:8097 tcp:8097` to allow the applet to interact with your device.
+1. Run `npx react-devtools`.
+1. React Developer Tools will launch and connect to your device. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
     {{< figure src="/attachments/howto10/mobile/native-mobile/distribution/build-native-apps/native-debug/min-app-rn-devtools.png" alt="debug min app"   width="350"  class="no-border" >}}
 
@@ -74,17 +74,17 @@ To use the Make It Native app with React Developer Tools, do the following:
 With the Make It Native app, you can examine your styling and the structure of your pages. This makes it easier to debug, test, and inspect styling. Inspect and debug your styling by doing the following:
 
 1. Install the LTS of [Node.js](https://nodejs.org/en/).
-2. Open your command-line interface (CLI).
-3. Run `npm i -g react-devtools` to install the React developer tools.
-4. Run `react-devtools`.
+1. Open your command-line interface (CLI).
+1. Run `npm i -g react-devtools` to install the React developer tools.
+1. Run `react-devtools`.
 
 After running `react-devtools` you will see the React developer tools GUI. To use the tools to debug your styling, do the following:
 
 1. Open your app in the Make It Native app with **Enable dev mode** selected.
-2. When running your app, shake your device to open developer settings.
-3. Tap **Toggle Element Inspector** to start inspecting. 
-4. Tap any styled element in your app (like a text element) to see its style information on your device and inspect and debug it in your React developer tools GUI.
-5. Shake your device and tap **Toggle Element Inspector** to turn off the inspector off.
+1. When running your app, shake your device to open developer settings.
+1. Tap **Toggle Element Inspector** to start inspecting. 
+1. Tap any styled element in your app (like a text element) to see its style information on your device and inspect and debug it in your React developer tools GUI.
+1. Shake your device and tap **Toggle Element Inspector** to turn off the inspector off.
 
 ## Debugging the OS Logs
 

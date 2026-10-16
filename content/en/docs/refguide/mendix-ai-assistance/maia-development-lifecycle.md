@@ -57,9 +57,9 @@ When the scope is clear, use Maia to generate a first version of the app. This g
 
 You have the following options:
 
-* **From Maia Plan** – In Maia Plan, select **Open in Studio Pro** to continue to work on the new app in Studio Pro with Maia Make. For more information, see [Starting the Development](/developerportal/maia-plan/start-development/).
+* From Maia Plan – In Maia Plan, select **Open in Studio Pro** to continue to work on the new app in Studio Pro with Maia Make. For more information, see [Starting the Development](/developerportal/maia-plan/start-development/).
 * [Start with Maia](/refguide/start-with-maia/) – In Studio Pro, select **Start with Maia** as your starting point. Describe your app using a text description and an optional image or PDF. Maia uses this input to generate a domain model, data management overview pages, test data, and a homepage. 
-* **Maia Make** – In an existing app, describe a new module or feature in the **Maia** pane. Maia then generates the necessary documents. 
+* Maia Make – In an existing app, describe a new module or feature in the **Maia** pane. Maia then generates the necessary documents. 
 
 Review the generated app in the same way as any other change. For more information, see the [Review Every Change](/refguide/agentic-development/#working-practices) section of *Agentic and Model-Driven Development*.
 
@@ -69,7 +69,7 @@ The domain model is the foundation of every Mendix app. The other documents, suc
 
 Maia helps in the following ways:
 
-* **Maia Make** – Maia Make generates new domain models, adds entities, attributes, and associations, and explains or improves existing domain models. In Studio Pro 11.9 and above, it can also work with [view entities](/refguide/view-entities/), enumerations, and constants, and generate OQL queries from a description of the data that you need. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/) and [OQL in Maia Make](/refguide/maia-for-oql/).
+* Maia Make – Maia Make generates new domain models, adds entities, attributes, and associations, and explains or improves existing domain models. In Studio Pro 11.9 and above, it can also work with [view entities](/refguide/view-entities/), enumerations, and constants, and generate OQL queries from a description of the data that you need. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/) and [OQL in Maia Make](/refguide/maia-for-oql/).
 
 Below are example prompts you can use:
 
@@ -83,7 +83,7 @@ Logic defines how your app behaves. In Mendix, you model logic with microflows, 
 
 Maia helps in the following ways:
 
-* **Maia Make** – Maia Make generates and changes microflows from a description. In Studio Pro 11.10 and above, it can also generate JavaScript actions. For the current scope per document type, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
+* Maia Make – Maia Make generates and changes microflows from a description. In Studio Pro 11.10 and above, it can also generate JavaScript actions. For the current scope per document type, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
 * [Logic Recommender](/refguide/logic-recommender/) – The Logic Recommender recommends the next best activity while you model a microflow, nanoflow, or rule, and prefills its parameters. 
 * [Validation Assist](/refguide/validation-assist/) – Validation Assist helps you build validation microflows with pre-built expressions, for example, for a button with the **Save changes** on-click event. 
 
@@ -98,7 +98,7 @@ Pages, navigation, and styling define how end-users experience your app.
 
 Maia helps in the following ways:
 
-* **Maia Make** – Maia Make generates pages from a text description and an optional image, such as a wireframe or screenshot. Maia knows the domain model of the module that you work in, so it can connect widgets to your entities. It can also change existing pages. In Studio Pro 11.11 and above, it can work with navigation and menus. In Studio Pro 11.12 and above, it can change theme variables and create custom styling. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
+* Maia Make – Maia Make generates pages from a text description and an optional image, such as a wireframe or screenshot. Maia knows the domain model of the module that you work in, so it can connect widgets to your entities. It can also change existing pages. In Studio Pro 11.11 and above, it can work with navigation and menus. In Studio Pro 11.12 and above, it can change theme variables and create custom styling. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
 * [UI Recommender](/refguide/ui-recommender/) – The UI Recommender recommends widgets while you work in the page editor. 
 
 Below are example prompts you can use:
@@ -112,7 +112,7 @@ Workflows model processes that involve people and several steps, such as approva
 
 Maia helps in the following ways:
 
-* **Maia Make** – Maia Make generates a workflow from a description of a business process or from a BPMN image, and changes existing workflows. For more information, see [Workflows in Maia Make](/refguide/maia-for-workflows/).
+* Maia Make – Maia Make generates a workflow from a description of a business process or from a BPMN image, and changes existing workflows. For more information, see [Workflows in Maia Make](/refguide/maia-for-workflows/).
 * [Workflow Recommender](/refguide/workflow-recommender/) – The Workflow Recommender recommends the next best activity while you model a workflow. 
 
 Below is an example prompt you can use:
@@ -125,7 +125,7 @@ Most apps exchange data with other systems.
 
 Maia helps in the following ways:
 
-* **Maia Make** – Maia Make creates [JSON structures](/refguide/json-structures/) (Studio Pro 11.13 and above) and [data transformers](/refguide/data-transformers/) (Studio Pro 11.12 and above).
+* Maia Make – Maia Make creates [JSON structures](/refguide/json-structures/) (Studio Pro 11.13 and above) and [data transformers](/refguide/data-transformers/) (Studio Pro 11.12 and above).
 * [Maia Web Fetch](/refguide/maia-web-fetch/) – Maia Web Fetch reads public API documentation and endpoints, after you approve each request. Maia can use this information when it creates integration documents. 
 * [Maia MCP Client](/refguide/maia-mcp/) – Maia MCP Client connects Maia to external MCP servers, such as design tools or source code platforms. Maia can then use the tools of these servers during the conversation. 
 
@@ -135,8 +135,8 @@ You often work on documents that someone else created, or that you created a lon
 
 Maia helps in the following ways:
 
-* **Maia Make** – Ask in the chat about any document, concept, or error. [Maia Explain](/refguide/maia-explain/) describes the purpose and the technical details of an existing document. You can also start it in the **App Explorer** by right-clicking a document and selecting **Maia Explain**. 
-* **Explain consistency errors** – In Studio Pro 11.12.1 and above, right-click an item in the **Errors** pane to ask Maia to explain or solve it.
+* Maia Make – Ask in the chat about any document, concept, or error. [Maia Explain](/refguide/maia-explain/) describes the purpose and the technical details of an existing document. You can also start it in the **App Explorer** by right-clicking a document and selecting **Maia Explain**. 
+* Explain consistency errors – In Studio Pro 11.12.1 and above, right-click an item in the **Errors** pane to ask Maia to explain or solve it.
 * [Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) and [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/) – Give Maia your team conventions and domain knowledge so its guidance and output follow your standards. 
 
 Below are example prompts you can use:
@@ -151,7 +151,7 @@ Quality includes correctness, performance, security, and maintainability.
 Maia helps in the following ways:
 
 * [Best Practice Recommender](/refguide/best-practice-recommender/) – Use the Best Practice Recommender to inspect your app model against Mendix best practices. It detects anti-patterns, explains their impact, and in some cases fixes them automatically. 
-* **Maia Make** – Maia Make explains and solves consistency errors, suggests improvements to existing documents, and helps you refactor. In Studio Pro 11.9 and above, Maia can remove elements as part of a refactoring.
+* Maia Make – Maia Make explains and solves consistency errors, suggests improvements to existing documents, and helps you refactor. In Studio Pro 11.9 and above, Maia can remove elements as part of a refactoring.
 
 Use these capabilities on all documents, including the documents that Maia generates.
 
@@ -183,8 +183,8 @@ After you deploy your app, you monitor it, collect feedback, and plan the next i
 Maia helps in the following ways:
 
 * [AI Log Summary](/developerportal/maia-operate/ai-log-summary/) – This feature is in Public Beta. For apps that run on Mendix Cloud, it gives an AI-generated overview of the log activity of an environment over the previous 24 hours. It groups errors by pattern and shows lifecycle events and security signals. It is not available in Mendix Cloud Africa (Cape Town). 
-* **Maia for Feedback** – This feature organizes end-user feedback into groups. You can create stories from feedback with Maia. For more information, see [Feedback](/developerportal/app-insights/feedback/).
-* **Maia Make** – Maia Make changes existing documents for new requirements. Use Maia Explain first to understand the current behavior, then ask Maia to make the change.
+* Maia for Feedback – This feature organizes end-user feedback into groups. You can create stories from feedback with Maia. For more information, see [Feedback](/developerportal/app-insights/feedback/).
+* Maia Make – Maia Make changes existing documents for new requirements. Use Maia Explain first to understand the current behavior, then ask Maia to make the change.
 
 New stories from feedback bring you back to the [Plan and Design](#plan-and-design) stage. This closes the loop of the lifecycle.
 

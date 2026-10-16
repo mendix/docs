@@ -120,7 +120,7 @@ This option ({{% icon name="plug" %}}) allows you to connect external [MCP](http
 
 #### Add File to Maia Chat
 
-The **Add file to Maia chat** option (@ icon) allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer**, where it appears in the context menu.
+The **Add file to Maia** option (@ icon) allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer**, where it appears in the context menu.
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add-files.jpg" width="250px" alt="" >}}
 

@@ -21,11 +21,11 @@ This document describes what agentic development is, why model-driven developmen
 
 In agentic development, you give an AI agent a goal, and the agent carries out the development work to reach it. An agent has the following characteristics:
 
-* **It works toward a goal** – You describe the outcome, for example, a new feature or a change to existing logic. The agent uses this information to determine which documents to create or change.
-* **It uses tools** – The agent uses built-in capabilities and connected tools, such as MCP servers or web content, to get information and to make changes.
-* **It works across documents** – One request can result in changes to the domain model, pages, and microflows together.
-* **It asks when it needs more information** – The agent can ask clarifying questions before it continues.
-* **It works with context that you provide** – The agent follows your instructions, conventions, and domain knowledge.
+* It works toward a goal. You describe the outcome, for example, a new feature or a change to existing logic. The agent uses this information to determine which documents to create or change.
+* The agent uses built-in capabilities and connected tools, such as MCP servers or web content, to get information and to make changes.
+* It works across documents. One request can result in changes to the domain model, pages, and microflows together.
+* The agent can ask clarifying questions before it continues.
+* It works with context that you provide. The agent follows your instructions, conventions, and domain knowledge.
 
 The developer directs the agent, provides context, and reviews the results, while the agent handles the actual implementation work.
 
@@ -35,10 +35,10 @@ In Mendix, Maia is the agent built into the platform. In Studio Pro, [Maia Make]
 
 In traditional software delivery, a large part of the effort goes into producing the application, such as writing code and modeling each element by hand. Agentic development changes where the effort goes:
 
-* **From producing to specifying** – The quality of an agent's output depends on how clearly you describe the intended behavior. Provide clear requirements, user stories, and acceptance criteria to help the agent implement the feature as expected.
-* **From producing to reviewing** – Agent output can contain mistakes. Review every change to verify they meet the requirements and work correctly within the application.
-* **From single steps to complete tasks** – An agent can apply changes to several parts of an app in one task. Define the scope of the task clearly and provide sufficient context and constraints to guide the changes.
-* **From individual knowledge to shared context** – An agent rely on the context provided to it. Document team conventions, architecture decisions, and domain knowledge to get more consistent results.
+* From producing to specifying – The quality of an agent's output depends on how clearly you describe the intended behavior. Provide clear requirements, user stories, and acceptance criteria to help the agent implement the feature as expected.
+* From producing to reviewing – Agent output can contain mistakes. Review every change to verify they meet the requirements and work correctly within the application.
+* From single steps to complete tasks – An agent can apply changes to several parts of an app in one task. Define the scope of the task clearly and provide sufficient context and constraints to guide the changes.
+* From individual knowledge to shared context – An agent rely on the context provided to it. Document team conventions, architecture decisions, and domain knowledge to get more consistent results.
 
 These shifts apply to all forms of software development. The way a platform represents an application determines how well a team can work with agents within these shifts.
 
@@ -72,12 +72,12 @@ Developers, business analysts, and agents all work with the same model documents
 
 Agents also make model-driven development stronger. Maia helps in the following areas:
 
-* **Starting** – Maia generates a first version of an app, a module, or a document. You do not start from an empty model.
-* **Learning** – New developers learn Mendix concepts with [Maia Learn](/refguide/maia-learn/) and ask questions in the [Maia Make chat](/refguide/maia-chat/) while they model.
-* **Understanding** – [Maia Explain](/refguide/maia-explain/) describes the purpose and details of existing logic and pages. This helps when you take over an app that someone else built.
-* **Repetitive work** – Maia creates overview pages, validation logic, translations, and similar repetitive parts. You can focus on the parts that need your expertise.
-* **Consistency** – [Agent instructions](/refguide/maia-agent-instructions/) and [agent skills](/refguide/maia-agent-skills/) let Maia and other agents apply your team conventions, such as naming rules, every time they create a document.
-* **Quality** – [Best Practice Recommender](/refguide/best-practice-recommender/) detects anti-patterns in the model and helps you fix them.
+* Starting – Maia generates a first version of an app, a module, or a document. You do not start from an empty model.
+* Learning – New developers learn Mendix concepts with [Maia Learn](/refguide/maia-learn/) and ask questions in the [Maia Make chat](/refguide/maia-chat/) while they model.
+* Understanding – [Maia Explain](/refguide/maia-explain/) describes the purpose and details of existing logic and pages. This helps when you take over an app that someone else built.
+* Repetitive work – Maia creates overview pages, validation logic, translations, and similar repetitive parts. You can focus on the parts that need your expertise.
+* Consistency – [Agent instructions](/refguide/maia-agent-instructions/) and [agent skills](/refguide/maia-agent-skills/) let Maia and other agents apply your team conventions, such as naming rules, every time they create a document.
+* Quality – [Best Practice Recommender](/refguide/best-practice-recommender/) detects anti-patterns in the model and helps you fix them.
 
 ## The Role of the Developer {#role-of-developer}
 
@@ -121,10 +121,10 @@ For guidance on how to write effective prompts, see [Prompt Engineering](/agents
 
 Maia uses your app model as context. You can add more context in the following ways:
 
-* **Documents** – Add the relevant microflows or pages to the conversation with the `@` option, or from the **App Explorer**.
-* **Attachments** – Attach images, PDFs, Markdown documents, or user stories.
-* **Agent instructions** – Use [AGENTS.md](/refguide/maia-agent-instructions/) files for context that applies to every conversation in a project or module, such as company conventions.
-* **Agent skills** – Use [agent skills](/refguide/maia-agent-skills/) for knowledge that applies only in certain situations, such as your microflow conventions.
+* Documents – Add the relevant microflows or pages to the conversation with the `@` option, or from the **App Explorer**.
+* Attachments – Attach images, PDFs, Markdown documents, or user stories.
+* Agent instructions – Use [AGENTS.md](/refguide/maia-agent-instructions/) files for context that applies to every conversation in a project or module, such as company conventions.
+* Agent skills – Use [agent skills](/refguide/maia-agent-skills/) for knowledge that applies only in certain situations, such as your microflow conventions.
 
 Agent instructions and agent skills follow industry standards, so they work with Maia and with other agentic tools.
 

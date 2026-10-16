@@ -12,12 +12,12 @@ aliases:
 ## Introduction
 
 {{% alert color="info" %}}
-In Studio Pro 11.8 and above, [Maia Make](/refguide/maia-make/) supersedes Maia Chat, the earlier chat interface in Studio Pro. Maia Chat is still available in Mendix Portal. For more information, refer to the [Maia Chat](/portal/maia/#maia-chat) section in *Maia in Mendix Portal*.
+In Studio Pro 11.8 and above, [Maia Make](/refguide/maia-make/) replaces Maia Chat, the earlier chat interface in Studio Pro. Maia Chat is still available in Mendix Portal. For more information, refer to the [Maia Chat](/portal/maia/#maia-chat) section in *Maia in Mendix Portal*.
 
 To ask questions in Studio Pro, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-In Studio Pro, you ask questions about Mendix development in the Maia Make chat. You can ask about all aspects of Mendix, including how to apply concepts, best practices, governance tools, and development patterns. Because you ask questions in the same chat in which you build, you can move from a question to a change in your app in one conversation.
+In Studio Pro, you can ask Maia questions about Mendix development in the **Chat** tab of the **Maia** pane. You can ask about all aspects of Mendix, including how to apply concepts, best practices, governance tools, and development patterns. Because you ask questions in the same chat in which you build, you can move from a exploring an idea to a implementing a change in your app in a single conversation.
 
 To answer questions about Mendix, Maia uses the following data sources:
 
@@ -29,11 +29,11 @@ To answer questions about Mendix, Maia uses the following data sources:
 * [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/)
 * [Mendix Support Knowledge Base](https://support.mendix.com/hc/en-us/p/knowledge-base) (in Studio Pro 11.10 and above)
 
-## Asking Questions in Maia Make {#asking-questions}
+## Asking Questions in Maia {#asking-questions}
 
-In Studio Pro 11.8 and above, open the **Maia** pane and ask your question in the chat. There is no separate interface for questions. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+In Studio Pro 11.8 and above, open the **Maia** pane and ask your question in the **Chat** tab. There is no separate interface for questions. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
-For the shortcut keys that you can use in the chat, see the [Maia Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*. The same shortcut keys work in Maia Chat in Studio Pro 11.7 and below.
+For shortcut keys you can use in the chat, see the [Maia Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*. These shortcuts also work in Maia Chat in Studio Pro 11.7 and below.
 
 For tips on getting better responses, see the [Best Practices](/portal/maia/#best-practices) section in *Maia in Mendix Portal* or the [Text Input](/refguide/maia-make/#text-input) section of *Maia Make Capabilities*.
 

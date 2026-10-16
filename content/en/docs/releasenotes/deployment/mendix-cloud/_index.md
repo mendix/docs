@@ -22,6 +22,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * The **Logs** page now has a [Dashboard](/developerportal/operate/logs/#dashboard) tab that gives an overview of your app's log activity for up to the last seven days, including the most frequent error and warning messages, endpoints with the highest error rate, dependency failures, and security markers. The archived logs and the live log are now on the **Log Files** tab, and the activity log is on the **Activity** tab.
 
+### October 8, 2026
+
+#### Improvements
+
+* We have added three new columns to the component list on the **Components** tab of [Software Composition](/developerportal/deploy/software-composition/#component-list): **Company Approved**, **Deprecated**, and **React/Dojo**.
+
 ### October 5, 2026
 
 #### New Features

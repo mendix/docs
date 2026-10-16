@@ -167,7 +167,7 @@ Certain configuration changes require Mendix intervention and can only be perfor
 
 | Configuration Change | Description |
 | --- | --- |
-| Configure conditional DNS forwarding for internal domain resolution | Raise a support ticket. For more information, see [DNS name resolution towards resources in other networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#name-resolution-dns-override). |
+| Configure conditional DNS forwarding for internal domain resolution | Raise a support ticket. For more information, see [DNS name resolution toward resources in other networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#name-resolution-dns-override). |
 | PostgreSQL Maintenance Window | Configure a dedicated maintenance window for the PostgreSQL database hosting your Mendix app databases. Since maintenance might cause temporary app downtime, you can request a custom schedule instead of the default system-managed one. For more information, see the [Microsoft documentation on PostgreSQL maintenance windows](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-maintenance). This is separate from AKS maintenance windows, which you can configure directly (see [Configuring AKS Planned Maintenance Windows](#aks-maintenance-windows)). |
 
 {{% alert color="info" %}} 

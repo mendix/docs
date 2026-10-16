@@ -99,29 +99,26 @@ This is standard Azure Private DNS configuration, not something specific to Mend
 
 If your Mendix applications need to resolve internal domains in your organization's network (for example, on-premises services or resources in peered Azure VNets), Mendix Support can configure conditional DNS forwarding via CoreDNS.
 
-###### How It Works
-
 Mendix on Azure uses CoreDNS within the Kubernetes cluster to handle DNS resolution for your application pods. Support can configure specific domain suffixes (for example, `internal.yourcompany.com`) to be forwarded to your organization's DNS servers, while all other DNS queries continue to use Azure's default DNS.
 
 ###### Prerequisites
 
-Before requesting conditional DNS forwarding, ensure:
+Before requesting conditional DNS forwarding, ensure that you fulfill the following prerequisites:
 
-1. **Network connectivity** - Your DNS servers must be reachable from the Mendix on Azure virtual network (via VNet peering, VPN Gateway, or ExpressRoute)
-2. **Firewall rules** - Allow UDP and TCP traffic on port 53 from the Mendix on Azure virtual network to your DNS servers
-3. **DNS server configuration** - Your DNS servers must be configured to resolve the domains you want to forward
+* Network connectivity - Your DNS servers must be reachable from the Mendix on Azure virtual network (through VNet peering, VPN Gateway, or ExpressRoute).
+* Firewall rules - You must allow UDP and TCP traffic on port 53 from the Mendix on Azure virtual network to your DNS servers.
+* DNS server configuration - Your DNS servers must be configured to resolve the domains which you want to forward.
 
-###### How to Request
+###### Requesting Conditional DNS Forwarding
 
-Raise a support ticket with Mendix Support, providing:
+To request conditional DNS forwarding, raise a support ticket with Mendix Support and provide the following information:
+* Environment names - Specify which Mendix on Azure environments need this configuration.
+* Domain suffixes - List the internal domains which your apps need to resolve (for example, `internal.yourcompany.com`, `onprem.company.local`).
+* DNS server IP addresses - List the IP addresses of your organization's DNS servers that should receive forwarded queries.
 
-1. **Environment name(s)** - Which Mendix on Azure environment(s) need this configuration
-2. **Domain suffix(es)** - The internal domain(s) your apps need to resolve (for example, `internal.yourcompany.com`, `onprem.company.local`)
-3. **DNS server IP address(es)** - The IP address(es) of your organization's DNS servers that should receive forwarded queries
-
-###### Important Notes
-
-- CoreDNS matches domains by longest suffix - configuring `yourcompany.com` automatically covers all subdomains like `api.internal.yourcompany.com`
+{{% alert color="info" %}}
+CoreDNS matches domains by longest suffix. Because of that, configuring `yourcompany.com` automatically covers all subdomains like `api.internal.yourcompany.com`.
+{{% /alert %}}
 
 ### Solution 2: PrivateLink with Private Endpoints
 

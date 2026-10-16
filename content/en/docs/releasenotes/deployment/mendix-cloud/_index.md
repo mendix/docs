@@ -20,7 +20,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### New Features
 
-* The [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) now support authentication with personal access tokens (PATs) in addition to API keys.
+* The [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) now support authentication with personal access tokens (PATs), in addition to API keys.
+
+#### Fixes
+
+* We fixed an issue where failed deployments were incorrectly logged as successful. Failed deployments are now logged correctly, and a notification banner informs users when a deployment fails. (Tickets #287659, #289294)
+* We fixed an issue with backups in sandbox apps that was caused by a missing environment display name. (Ticket #287851)
 
 #### Deprecations
 

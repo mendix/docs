@@ -9,18 +9,18 @@ aliases:
 
 ## Introduction 
 
-Mendix AI Assistance (Maia) is the agentic development capability of the Mendix Platform. With agentic development, you give an agent a development goal, and the agent carries out the work: it determines which documents to create or change, uses tools, and asks clarifying questions when it needs more information. You direct the work and review the result. Maia supports you in this way across the full application lifecycle: from learning and planning, through modeling and building, to quality improvement, operation, and the ongoing evolution of your app.
+Mendix AI Assistance (Maia) is the agentic development capability of the Mendix Platform. With agentic development, you give an agent a development goal, and the agent carries out the work by determining which documents to create or change, using tools, and asking clarifying questions when it needs more information. You direct the work and review the result. Maia supports you in this way across the full application lifecycle, from learning and planning, through modeling and building, to quality improvement, operation, and the ongoing evolution of your app.
 
 Maia is not a single feature. It is a set of capabilities that share one foundation: the Mendix app model. A Mendix app consists of model documents, such as domain models, pages, microflows, and workflows. Maia reads and changes these same documents. When Maia generates a microflow, the result is a regular microflow that you can open, inspect, and change in Studio Pro, just like a microflow that you model yourself.
 
 This foundation has the following practical results for you as a developer:
 
-* **Maia is model-aware** – Maia works with your app as context. For example, when Maia generates a page, it knows the domain model of the module that you work in. You can also add specific documents to the conversation as extra context.
-* **You can review everything** – Generated and changed documents appear in the regular Studio Pro editors. Studio Pro checks them for consistency errors in the same way as documents that you create yourself.
-* **You stay in control** – You decide what Maia builds, you review the changes, and you can undo them. You commit the changes to version control when you are satisfied.
-* **Maia is open** – You can extend Maia with your own conventions, connect Maia to external tools, use your own AI provider, or use your own agent with Studio Pro. Agent instructions and agent skills follow industry standards, so they work with any agentic tool.
+* Maia works with your app as context when generating content. For example, when Maia generates a page, it knows the domain model of the module you are working in. You can also add specific documents to the conversation to give Maia more context.
+* Maia creates and updates documents directly in the regular Studio Pro editors. Studio Pro checks these documents for consistency errors just as it does with documents you create yourself.
+* You stay in control of the development process. You decide what Maia builds, review the changes, and undo them if needed. When you are satisfied with the result, you commit the changes to version control.
+* You can extend Maia with your own conventions, connect external tools, use your own AI provider, or use your own agent with Studio Pro. Agent instructions and agent skills follow industry standards, so they work with any agentic tool.
 
-Maia works with professional developers. It does not replace them. Maia takes on tasks such as creating a first version of a document, applying conventions, explaining existing logic, and detecting anti-patterns. You keep ownership of the requirements, the architecture, and the quality of your app. For more information on this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
+Maia works with professional developers; it does not replace them. Maia takes on tasks such as creating a first version of a document, applying conventions, explaining existing logic, and detecting anti-patterns. You keep ownership of the requirements, the architecture, and the quality of your app. For more information on this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
 
 Maia does not use any project, customer, company, or user-entered data for model training. Maia operates on pre-trained, off-the-shelf large language models (LLMs). For more information on Mendix data storage policies and practices for Maia, see [Maia Privacy Policy](https://www.mendix.com/legal/privacy/maia/). 
 

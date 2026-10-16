@@ -77,7 +77,7 @@ Your Mendix app will be deployed with and run by the Private Mendix Platform Ope
 | Object storage | S3-type Bucket | S3 API compatible | |
 | Application management | Mendix on Kubernetes Operator | See the [Release Notes](/releasenotes/private-platform/) for your Private Mendix Platform version | Will be installed by Private Mendix Platform installer |
 | Runtime | Mendix | See the [Release Notes](/releasenotes/private-platform/) for your Private Mendix Platform version | Will be installed by Private Mendix Platform installer |
-| License | Private Cloud License Manager (PCLM) | Latest | Will be installed by Private Mendix Platform installer<br />Requires PostgreSQL 12 or MS SQL Server 19 or 22, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/#prerequisites) for more information |
+| License | Private Cloud License Manager (PCLM) | Latest | Will be installed by Private Mendix Platform installer<br />Requires PostgreSQL 12 or MS SQL Server 19 or 22, see [Private Cloud License Manager](/private-mendix-platform/private-cloud-license-manager/#prerequisites) for more information |
 | TLS | TLS certificate | | Optional, needs to be provided by you |
 
 #### Additional Recommendations

@@ -165,7 +165,7 @@ After the standard namespaces are converted to Global Operator Managed namespace
 
 ### Installing Private Cloud License Manager
 
-Configure Private Cloud License Management (PCLM) in the Global Operator namespace. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+Configure Private Cloud License Management (PCLM) in the Global Operator namespace. For more information, see [Private Cloud License Manager](/private-mendix-platform/private-cloud-license-manager/).
 
 {{% alert color="info" %}}
 For Global Operator installations, execute the commands from the PCLM section in both the Global Operator namespace and its managed namespaces where the license must be applied. Make sure that identical PCLM license details are configured for both the Managed and Global Operator namespaces to avoid unexpected outcomes.

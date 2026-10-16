@@ -211,7 +211,7 @@ You must make the following changes:
 * **mxAdminPassword** - Change the password for the MxAdmin user. It must follow the [password requirements](/refguide/password-policy/) specified in the Mendix model. If you leave this field blank, no MxAdmin user will be created; if the MxAdmin user already exists, the current password will remain unchanged.
 * **debuggerPassword** – Optional. Provide the password for the debugger. Setting an empty `debuggerPassword` disables the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/).
 * **dtapMode** - For app development, for example acceptance testing, select **D**. For production deployments, select **P**.
-* **runtimeLicenseProduct** - This setting is applicable to PCLM licenses. If the product type for the license is anything other than Standard, then the value of the Product type needs to be set here. For more information, see [PCLM Runtime License Product](/developerportal/deploy/private-cloud/private-cloud-license-manager/)
+* **runtimeLicenseProduct** - This setting is applicable to PCLM licenses. If the product type for the license is anything other than Standard, then the value of the Product type needs to be set here. For more information, see [PCLM Runtime License Product](/private-mendix-platform/private-cloud-license-manager/)
 
     {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). {{% /alert %}}
 

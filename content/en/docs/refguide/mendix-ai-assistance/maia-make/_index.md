@@ -143,10 +143,10 @@ When Maia needs more information, it asks clarifying questions through a dedicat
 Maia changes regular documents in your app. You stay in control of these changes in the following ways:
 
 * **Changed list** – After each request, the [Changed List](#changed-list) shows the documents that Maia added or changed. Select an entry to open the document in its editor.
-* **Consistency checks** – Studio Pro checks the documents that Maia creates or changes for consistency errors, in the same way as the documents that you create yourself. In Studio Pro 11.12.1 and above, you can right-click an item in the **Errors** pane to ask Maia to explain or solve it.
+* **Consistency checks** – Studio Pro checks the documents that Maia creates or changes for consistency errors. In Studio Pro 11.12.1 and above, you can right-click an item in the **Errors** pane to ask Maia to explain or solve it.
 * **Undo** – In Studio Pro 11.9 and above, you can undo Maia changes per document or for all documents.
-* **Version control** – Maia changes are part of your local changes. You decide when to commit them. For more information, see [Version Control](/refguide/version-control/).
-* **Settings** – You can disable Maia Make capabilities in Studio Pro **Preferences**, on the **Maia** tab.
+* **Version control** – Maia changes are part of your local changes, so you decide when to commit them. For more information, see [Version Control](/refguide/version-control/).
+* **Settings** – You can disable Maia Make capabilities in Studio Pro **Preferences** on the **Maia** tab.
 
 For practices that help you review and control AI-generated changes, see the [Working Practices for Agentic Development](/refguide/agentic-development/#working-practices) section of *Agentic and Model-Driven Development*.
 

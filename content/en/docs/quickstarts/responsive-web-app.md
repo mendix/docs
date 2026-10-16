@@ -262,7 +262,7 @@ Unlike a typical chatbot that only answers questions, Maia is agentic: it can re
 
 Maia is not one single feature but a collection of capabilities woven into Studio Pro. [Maia Make](/refguide/maia-make/) is a conversational interface where you describe what you want in plain language, and Maia generates the corresponding model elements, such as domain models, pages, or microflows, to match. In the same chat, you can create workflows and OQL queries, ask questions, or ask [Maia Explain](/refguide/maia-explain/) to understand existing functionalities without changing your app. 
 
-Next to Maia Make, recommenders suggest the next best widget or microflow activity as you build. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
+Next to Maia, recommenders suggest the next best widget or microflow activity as you build. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
 
 ### Try It Yourself: Extending the Employee App
 

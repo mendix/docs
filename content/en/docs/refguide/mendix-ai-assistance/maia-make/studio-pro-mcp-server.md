@@ -22,11 +22,11 @@ It has the following highlights:
 * Full Maia feature parity – The MCP Server exposes the same capabilities that Maia offers within Studio Pro.
 * Live updates – Any changes made through Maia via the MCP Server are reflected in real time within Studio Pro.
 
+For an overview of all the ways in which Maia works with external AI tools, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
+
 {{% alert color="info" %}}
 When you connect external agents or AI tools to Studio Pro's MCP Server, those tools consume tokens from your own LLM provider account each time they interact with Maia. Because these requests occur outside of the Mendix environment, usage and billing details are managed through your LLM provider's dashboard rather than within Mendix.
 {{% /alert %}}
-
-For an overview of all the ways in which Maia works with external AI tools, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
 
 ## How It Works {#how-it-works}
 

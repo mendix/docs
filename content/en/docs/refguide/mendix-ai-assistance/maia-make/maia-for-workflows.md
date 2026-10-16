@@ -15,9 +15,9 @@ In Studio Pro 11.9 and above, workflow generation is part of [Maia Make](/refgui
 To use this capability, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-In the Maia Make chat, Maia can generate a [workflow](/refguide/workflows/). It can also provide explanations or suggest improvements to the generated elements. You can work on workflows in the same conversation in which you create the domain model, pages, logic, and other parts of your app. There are some limitations. For more details, see the [Limitations](#limitation) section below.
+Maia can generate a [workflow](/refguide/workflows/). It can also provide explanations or suggest improvements to the generated elements. You can work on workflows in the same conversation in which you create the domain model, pages, logic, and other parts of your app. There are some limitations. For more details, see the [Limitations](#limitation) section below.
 
-## Working with Workflows in Maia Make
+## Working with Workflows in Maia
 
 Describe a business process you want to model. Maia uses this information to add relevant workflow activities and configures them where possible. For more information on how to communicate with Maia to achieve better results when configuring a workflow, see the [Best Practices](/refguide/maia-make/#workflows-best-practices) section of *Maia Make Capabilities*.
 
@@ -25,7 +25,7 @@ Describe a business process you want to model. Maia uses this information to add
 
 #### Studio Pro 11.9 and Above
 
-You work on workflows in the [Maia Make](/refguide/maia-make/) chat, which is enabled by default.
+You work on workflows with [Maia](/refguide/maia-make/) in the **Chat** tab, which is enabled by default.
 
 #### Studio Pro 11.8
 

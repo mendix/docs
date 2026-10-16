@@ -17,9 +17,9 @@ In Studio Pro 11.8 and above, domain model generation is part of [Maia Make](/re
 To use this capability, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-In the Maia Make chat, Maia can generate new [domain models](/refguide/domain-model/) and explain and improve existing domain models. You can work on the domain model in the same conversation in which you create pages, logic, and other parts of your app. There are some limitations. For more information, see the [Limitations](#limitation) section below.
+Maia can generate new [domain models](/refguide/domain-model/) and explain and improve existing domain models. You can work on the domain model in the same conversation in which you create pages, logic, and other parts of your app. There are some limitations. For more information, see the [Limitations](#limitation) section below.
 
-## Working with Domain Models in Maia Make
+## Working with Domain Models in Maia
 
 Describe your application or its main goals in the chat. Maia uses this information to generate a relevant domain model for you. In Studio Pro 11.1 and above, you can also attach up to one image and one PDF to help Maia better understand your request. For more information, see the [Attachment Requirements](#attachment-requirements) section below.
 
@@ -27,7 +27,7 @@ After Maia generates a domain model, you can continue asking Maia to add entitie
 
 ### In Studio Pro 11.8 and Above
 
-In Studio Pro 11.8 and above, you work on domain models in the Maia Make chat, which is enabled by default. There is no dedicated interface for domain models. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+In Studio Pro 11.8 and above, you can work on domain models with Maia in the **Chat** tab, which is enabled by default. There is no dedicated interface for domain models. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 ### Maia for Domain Model in Studio Pro 11.7 and Below
 

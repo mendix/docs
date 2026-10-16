@@ -17,9 +17,9 @@ In Studio Pro 11.8 and above, page generation is part of [Maia Make](/refguide/m
 To use this capability, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-In the Maia Make chat, Maia can generate a [page](/refguide/page/) by adding and configuring widgets based on text input and optional image input. You can also ask Maia to edit or remove existing widgets, or to provide further improvements and explanations. You can work on pages in the same conversation in which you create the domain model, logic, and other parts of your app. For information on the current limitations, see the [Limitations](#limitation) section below.
+Maia can generate a [page](/refguide/page/) by adding and configuring widgets based on text input and optional image input. You can also ask Maia to edit or remove existing widgets, or to provide further improvements and explanations. You can work on pages in the same conversation in which you create the domain model, logic, and other parts of your app. For information on the current limitations, see the [Limitations](#limitation) section below.
 
-## Working with Pages in Maia Make
+## Working with Pages in Maia
 
 Describe your page or its main goals in the chat. Maia uses this information to add relevant widgets to the page and configure them for you. When generating a page, Maia knows about the domain model of the module you are currently working on. For example, it might include a [Data View](/refguide/data-view/) with some [Text Box](/refguide/text-box/) widgets for an attribute of an entity.
 
@@ -29,7 +29,7 @@ On pages that have already been created, either by Maia or manually, you can ask
 
 ### In Studio Pro 11.8 and Above
 
-In Studio Pro 11.8 and above, you work on pages in the Maia Make chat, which is enabled by default. There is no dedicated interface for pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+In Studio Pro 11.8 and above, you can work on pages with Maia in the **Chat** tab, which is enabled by default. There is no dedicated interface for pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 In Studio Pro 11.8, only overview pages can be generated.
 

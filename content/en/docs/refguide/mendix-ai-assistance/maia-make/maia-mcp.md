@@ -23,7 +23,7 @@ For details on the current limitations, see the [Limitations](#limitations) sect
 
 There are two ways to open the MCP Client panel:
 
-* Click the **Configure MCP Connections** ({{% icon name="plug" %}}) icon under the **Chat** tab of the **Maia** pane.
+* Open the **Chat** tab in the **Maia** pane, then click **Configure MCP Connections** ({{% icon name="plug" %}}).
 * Go to the **View** menu and click **MCP Settings**.
 
 ### Preset Servers {#preset-servers}

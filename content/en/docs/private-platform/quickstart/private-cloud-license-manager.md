@@ -93,7 +93,7 @@ Where you need to supply the following parameters
 * `<docker-tag>` – the docker image tag, default: `0.10.0`
 * `<out-file>` – the name of the file where the yaml is written, for example `manifest.yaml`
 
-### Authentication mode
+### Authentication Mode
 
 By default, static credentials are used for authentication, meaning that if `--db-auth-mode` is not specified, you must provide `--db-password`. For enhanced security, AWS providers can use Postgres IAM authentication, while Azure providers can use Postgres managed identity authentication. When the authentication mode is set to `aws-irsa`, you need to specify `--db-aws-iam-role`, and the `--db-password` is no longer required. Similarly, for `azure-wi`, `--db-azure-client-id` must be provided, and `--db-password` is not necessary.
 
@@ -276,8 +276,10 @@ Where:
 ## Installing Licenses
 
 Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and a Mendix Operator license.
+
 Runtime licenses are required for each Mendix runtime environment, and an Operator license is required for each namespace where the Operator runs.
 To purchase a license bundle, please contact [Mendix Support](https://support.mendix.com/). You will receive your license (or licenses) as a .zip file.
+
 The following command will import a license bundle into the PCLM server:
 
 ```bash

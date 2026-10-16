@@ -29,8 +29,8 @@ Click **Mendix Core Concepts**, you can start your learning journey with Maia Le
 
 You can also access additional materials on the topic, such as related documentation or a learning path.
 
-If you have any questions during the learning journey, you can always click **Ask Maia** and ask your questions in [Maia Chat](/refguide/maia-chat/) for further assistance. 
+If you have any questions during the learning journey, you can always click **Ask Maia** and ask your questions in the Maia chat. In Studio Pro 11.8 and above, this is the [Maia Make](/refguide/maia-make/) chat for further assistance. 
 
 ## Read More
 
-* [Maia Chat](/refguide/maia-chat/)
+* [Questions and Guidance in Maia Make](/refguide/maia-chat/)

@@ -9,6 +9,8 @@ weight: 51
 
 Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development. Maia is designed to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality. 
 
+For an overview of how Maia supports each stage of the application lifecycle, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/). Not all capabilities on that page are available in Private Mendix Platform. The following section lists the capabilities that are supported.
+
 ## Maia Capabilities in Private Mendix Platform
 
 Mendix AI Assistance (Maia) in Private Mendix Platform has the following capabilities: 
@@ -16,7 +18,7 @@ Mendix AI Assistance (Maia) in Private Mendix Platform has the following capabil
 Starting point for app creation:
 
 * **Start with Maia** - a starting point in Studio Pro that helps you to start the app development process. Based on a required text description and an optional image or PDF, it generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
-* **Maia Make** - a unified conversational interface in Studio Pro that groups all AI-assisted development capabilities into a single chat experience. With this interface, everything happens in one place. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask it to explain documents for you, including your app logic and pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+* **Maia Make** - a unified conversational interface in Studio Pro that groups all agentic development capabilities into a single chat experience. With this interface, everything happens in one place. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask it to explain documents for you, including your app logic and pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 Recommenders:
 

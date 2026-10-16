@@ -27,8 +27,12 @@ The following versions are required:
 | **Beta** | 11.12 or above | 2512 | 2606.0.0 or above |
 | **GA (planned)** | 11.18 | 2612 | TBD |
 
+Currently, only on-premises Teamcenter deployments are supported.
+
 The following requirements must also be met:
 
+* You have administrator access to Teamcenter, including the Teamcenter Deployment Center and Active Workspace.
+* You have administrator access to your Mendix app.
 * The Teamcenter Active Workspace instance is customizable and can be rebuilt and redeployed.
 * The Teamcenter Content Security Policy (CSP) is configurable.
 * The Mendix app is registered with the identity provider used by Teamcenter Security Services (TcSS).
@@ -232,8 +236,6 @@ Follow these steps to configure authentication.
 2. **Configure the Teamcenter Connector Connection**:
 
     In your Mendix app, configure a Teamcenter Connector connection using **Teamcenter SSO** as the authentication method. For instructions, see [Configuring the Connection to Teamcenter](/appstore/industry/teamcenter-connector/configuring-connection-2512/).
-
-    {{% alert color="info" %}}This step requires administrator access to your Mendix application.{{% /alert %}}
 
 3. **Configure User Provisioning**:
 

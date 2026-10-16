@@ -33,6 +33,11 @@ The Backups API supports authentication via a personal access token (PAT) or an 
 
 For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
 
+Select at least the following scopes:
+
+* `mx:deployment:read` – to perform `GET` operations
+* `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
+
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
 ```http
@@ -55,7 +60,7 @@ Use the following request headers to authenticate an API call:
 
 ### Configuring Permissions
 
-To perform an action via the Backups API, you need **Backups Access** and **API Access** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
+To perform an action via the Backups API, you need **Backups Access** and **API Access** permissions. These permissions are required whether you authenticate with a PAT or an API key. PAT scopes alone are not enough. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## Examples
 

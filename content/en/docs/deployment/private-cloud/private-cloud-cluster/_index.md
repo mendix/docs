@@ -111,7 +111,7 @@ For Mendix version 11.5.0 and above, you will need to install Mendix Operator ve
 
 ### Licensing the Application with Private Cloud License Manager
 
-You can license the Operator and Runtime of your application by configuring the Operator configuration with License Manager details. In order to start using Private Cloud License Manager, you need to first download the PCLM executable available in the Installation page. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/). The PCLM executable is available for download from this page.
+You can license the Operator and Runtime of your application by configuring the Operator configuration with License Manager details. In order to start using Private Cloud License Manager, you need to first download the PCLM executable available in the Installation page. For more information, see [Private Cloud License Manager](/private-mendix-platform/private-cloud-license-manager/). The PCLM executable is available for download from this page.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/PCLMDownload.png" class="no-border" >}}
 
@@ -120,7 +120,7 @@ In order to configure PCLM, make sure that the Operator version is 2.11.0 and ab
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In the context of the Global Operator, it is necessary to configure both the managed namespace and the Global Operator namespace with the License Manager details. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+In the context of the Global Operator, it is necessary to configure both the managed namespace and the Global Operator namespace with the License Manager details. For more information, see [Private Cloud License Manager](/private-mendix-platform/private-cloud-license-manager/).
 {{% /alert %}}
 
 ## Advanced Operator Configuration
@@ -1459,10 +1459,10 @@ If you would like to see the license payload, click **Show License Payload**.
 If you want to use the Private Cloud License Manager, the Mendix Operator must be in version 2.11.0 or later.
 {{% /alert %}}
 
-For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+For more information, see [Private Cloud License Manager](/private-mendix-platform/private-cloud-license-manager/).
 
 {{% alert color="info" %}}
-If Global Operator is configured with [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/), you can view the **Runtime** and **Operator** list of licenses for the main namespace, and only the list of **claims** for the managed namespace.
+If Global Operator is configured with [Private Cloud License Manager](/private-mendix-platform/private-cloud-license-manager/), you can view the **Runtime** and **Operator** list of licenses for the main namespace, and only the list of **claims** for the managed namespace.
 {{% /alert %}}
 
 ## Current Limitations

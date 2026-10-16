@@ -442,7 +442,7 @@ The order of these headers is not guaranteed.
 
 On this page, you can view the status of your Private Mendix Platform license, and upload a new license bundle if necessary.
 
-[Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) must be used to manage the Private Mendix Platform license. It can also be used to manage and provision your own app licenses.
+[Private Cloud License Manager](/private-mendix-platform/private-cloud-license-manager/) must be used to manage the Private Mendix Platform license. It can also be used to manage and provision your own app licenses.
 
 Private Mendix Platform licenses are either **valid** or **not found**; when not found, the Platform operates in developer mode, where access to some features and capabilities is restricted.
 

@@ -621,7 +621,7 @@ Subscription secrets are obtained from [Mendix support](https://support.mendix.c
 
 For Operator version 2.24.0 and newer, we have introduced a new field, **Enable Fallback License**, in the **Environment Details** section. When enabled, this option allows Connected environments using subscription secrets to use a fallback license if communication with the licensing server fails, preventing the system from switching to Trial mode. 
 
-We have also released an alternate way of licensing your apps in Mendix on Kubernetes by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+We have also released an alternate way of licensing your apps in Mendix on Kubernetes by using PCLM. For more information, see [Private Cloud License Manager](/private-mendix-platform/private-cloud-license-manager/).
 
 For users of the Private Cloud License Manager who wish to set the product type for the Runtime license in a particular environment, it can be done by editing the Product type. This ensures that the associated environment obtains the license from the license bundle with the specified Product type. By default, the value is set to the one defined in the Namespace configuration page.
 

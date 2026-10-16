@@ -99,9 +99,9 @@ Check the YAML output for sensitive data like passwords or keys. Replace them wi
 
 For more information, refer to the following topics:
 
-* [Listing the Runtime License](/developerportal/deploy/private-cloud/private-cloud-license-manager/#listing-the-runtime-license)
-* [Listing the Operator License](/developerportal/deploy/private-cloud/private-cloud-license-manager/#listing-the-operator-license)
-* [Verifying That the Licenses Are Applied](/developerportal/deploy/private-cloud/private-cloud-license-manager/#verify)
+* [Listing the Runtime License](/private-mendix-platform/private-cloud-license-manager/#listing-the-runtime-license)
+* [Listing the Operator License](/private-mendix-platform/private-cloud-license-manager/#listing-the-operator-license)
+* [Verifying That the Licenses Are Applied](/private-mendix-platform/private-cloud-license-manager/#verify)
 
 ### CI/CD Failures
 

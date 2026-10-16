@@ -174,4 +174,4 @@ If your app is unable to contact the Mendix license server, you will receive a *
 
 #### Private Cloud Licensing Manager
 
-With Mendix Operator version 2.11.0 and above, you can start using the Private Cloud Licensing Manager to import a license bundle consisting of Operator and Runtime licenses. Private Cloud Licensing Manager automatically retrieves the licenses from the license bundle, so that you do not need to apply the license per environment. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+With Mendix Operator version 2.11.0 and above, you can start using the Private Cloud Licensing Manager to import a license bundle consisting of Operator and Runtime licenses. Private Cloud Licensing Manager automatically retrieves the licenses from the license bundle, so that you do not need to apply the license per environment. For more information, see [Private Cloud License Manager](/private-mendix-platform/private-cloud-license-manager/).

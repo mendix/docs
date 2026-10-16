@@ -22,7 +22,7 @@ This setting controls the bar format:
 
 {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/bar-chart-formats.png" width="450px" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." class="no-border" >}}
 
-## Edit Series Dialog Box – Appearance Tab
+## Edit Series Item Dialog Box – Appearance Tab
 
 * **Bar color** – The color of the bars for this series.
 

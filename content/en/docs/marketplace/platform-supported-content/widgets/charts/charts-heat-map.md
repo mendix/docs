@@ -41,6 +41,8 @@ The heat map also has the **X axis label**, **Y axis label**, and **Grid lines**
 * **Show values** – If set to **Yes**, the value of each cell is shown on the chart.
 * **Font value color** – The font color of the values shown on the chart.
 
+**Smooth color**, **Show values**, and **Font value color** are visible only when [Enable advanced options](/appstore/widgets/charts/#enable-advanced-options) is set to **Yes**.
+
 ## Events Section
 
 * **On click action** – The action that runs when the user clicks a cell.

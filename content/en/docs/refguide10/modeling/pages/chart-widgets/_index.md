@@ -17,14 +17,14 @@ The chart widgets are part of the [Charts](https://marketplace.mendix.com/link/c
 
 The Charts module contains these chart widgets:
 
-* **Area** chart – a line chart with a fill to the X-axis {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-area-chart.png" alt="Sample Area Chart"   width="200"  class="no-border" >}}
-* **Bar** chart – horizontal bars, grouped or stacked {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-bar-chart.png" alt="Sample Bar Chart" width="200" class="no-border" >}}
-* **Bubble** chart – add a size dimension to your chart {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-bubble-chart.png" alt="Sample Bubble Chart" width="200" class="no-border" >}}
-* **Column** chart – vertical bars, grouped or stacked {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-column-chart.png" alt="Sample Column Chart" width="200" class="no-border" >}}
-* **Heat map** – show data values by color in a 2D matrix {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-heat-map.png" alt="Sample Heat Map" width="200" class="no-border" >}}
-* **Line** chart – straight or curved lines, with or without markers {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-line-chart.png" alt="Sample Line Chart" width="200" class="no-border" >}}
-* **Pie** chart – a pie or a doughnut chart {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-pie-chart.png" alt="Sample Pie Chart" width="200" class="no-border" >}}
-* **Time series** – show data ordered by time {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-time-series.png" alt="Sample Time Series" width="200" class="no-border" >}}
+* **Area** chart – a line chart with a fill to the X-axis {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-area-chart.png" alt="Area chart with three stacked series"   width="200"  class="no-border" >}}
+* **Bar** chart – horizontal bars, grouped or stacked {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-bar-chart.png" alt="Horizontal bar chart with three grouped series" width="200" class="no-border" >}}
+* **Bubble** chart – add a size dimension to your chart {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-bubble-chart.png" alt="Bubble chart with three series of different-sized bubbles" width="200" class="no-border" >}}
+* **Column** chart – vertical bars, grouped or stacked {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-column-chart.png" alt="Column chart with two grouped series" width="200" class="no-border" >}}
+* **Heat map** – show data values by color in a 2D matrix {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-heat-map.png" alt="Heat map with a grid of colored cells and a color scale" width="200" class="no-border" >}}
+* **Line** chart – straight or curved lines, with or without markers {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-line-chart.png" alt="Line chart with three series" width="200" class="no-border" >}}
+* **Pie** chart – a pie or a doughnut chart {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-pie-chart.png" alt="Pie chart with three slices" width="200" class="no-border" >}}
+* **Time series** – show data ordered by time {{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/sample-time-series.png" alt="Time series area chart with two series and a range slider" width="200" class="no-border" >}}
 
 The widgets have settings in Studio Pro to customize the look and feel, and support on click actions and custom tooltips. For details on each chart type, see [Charts](/appstore/widgets/charts/).
 
@@ -52,7 +52,7 @@ The plotly charts require a configuration based on JSON, therefore *Any Chart* h
 
 This module also contains several [building blocks](/refguide10/charts-any-building-blocks/) for inspiration and as starting point. If you want to create a new chart, Mendix suggests checking out the plotly.js website.
 
-For the legacy Any Chart documentation, see [Any Chart Widgets](/refguide10/charts-any-configuration/), [Any Chart Building Blocks](/refguide10/charts-any-building-blocks/), and [Any Chart Cheat Sheet](/refguide10/charts-any-cheat-sheet/).
+For the legacy Any Chart documentation, see [Any Chart Widgets](/refguide10/charts-any-configuration/) and [Any Chart Cheat Sheet](/refguide10/charts-any-cheat-sheet/).
 
 For the legacy chart widgets below version 3.0.0, see [Chart Configuration](/refguide10/charts-configuration/).
 

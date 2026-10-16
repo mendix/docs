@@ -31,7 +31,7 @@ To add a Chart playground to a chart, do the following:
 1. In the **Toolbox**, find the **Chart playground** widget.
 1. Drag the **Chart playground** widget into the **Playground slot**.
 
-    {{% todo %}}[SCR-147: Chart in the page editor with a Chart playground widget in the Playground slot, Toolbox visible]{{% /todo %}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/chart-playground-add.png" alt="Chart in the page editor with a Chart playground widget in its Playground slot, and the Chart playground widget in the Toolbox" class="no-border" >}}
 
 1. Run the app and open the page with the chart.
 
@@ -43,7 +43,7 @@ The Chart playground widget has no properties of its own. It gets all its data f
 
 In the running app, click **Toggle Editor** on the chart to open the editor panel.
 
-{{% todo %}}[SCR-148: Running app, chart with the Chart playground editor panel open, Layout selected in the drop-down list]{{% /todo %}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/chart-playground-editor.png" alt="Chart playground editor panel next to a line chart, with Layout selected in the drop-down list, an empty Custom settings editor, and the Settings from the Studio Pro view" class="no-border" >}}
 
 The editor panel has these parts:
 
@@ -63,7 +63,7 @@ The playground does not save anything. Copy the JSON from **Custom settings** to
 | Playground Item | Chart Widgets | Custom Chart |
 | --- | --- | --- |
 | **Layout** | **Advanced** tab > **Custom layout** | **Layout options** tab > **Static** |
-| A series | **Edit Series** dialog box > **Advanced** tab > **Custom series options** (for pie charts and heat maps: **Advanced** tab > **Custom series options**) | **Data** tab > **Static** (the item at the same position in the array) |
+| A series | **Edit Series Item** dialog box > **Advanced** tab > **Custom series options** (for pie charts and heat maps: **Advanced** tab > **Custom series options**) | **Data** tab > **Static** (the item at the same position in the array) |
 | **Configuration** | **Advanced** tab > **Custom configurations** | **Configuration options** tab > **Configuration options** |
 
 ## Removing Chart Playground {#remove}

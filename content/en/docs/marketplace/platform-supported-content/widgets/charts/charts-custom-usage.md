@@ -70,11 +70,11 @@ To create a line chart with the **Custom Chart** widget, follow these steps:
     [ { "x": [ 1, 2 ], "y": [ 1, 2 ] } ]
     ```
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/any-chart-configuration.png" alt="Any Chart Configuration" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-configuration.png" alt="Data tab of the Custom chart properties with the Static and Sample data JSON filled in" max-width="80%" class="no-border" >}}
 
 7. Run the app to preview the chart.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/charts-any-sample.png" alt="Any Chart result" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-sample.png" alt="Line chart with one line from point 1,1 to point 2,2" class="no-border" >}}
 
 ## Exporting Data
 

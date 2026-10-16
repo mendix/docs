@@ -17,19 +17,17 @@ The pie chart does not use a series list. It uses one data source, and each obje
 
 ### Series
 
-The data source for the slices of the pie chart.
+This required property is the data source for the slices of the pie chart.
 
 ### Series Name
 
 This required property is a text template that returns a unique name for each slice:
 
-{{% todo %}}[SCR-145: Pie chart Data source section with Series name filled in]{{% /todo %}}
-
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/pie-chart-series-name-example.png" alt="Series name property of a pie chart" width="450px" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/pie-chart-series-name-example.png" alt="Data source section of a pie chart with a microflow data source and the Series name text template {1}" width="450px" class="no-border" >}}
 
 ### Value Attribute
 
-The attribute used to get the value for each slice.
+This required property is the attribute used to get the value for each slice.
 
 ### Sort Attribute and Sort Order
 

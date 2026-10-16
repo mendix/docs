@@ -11,7 +11,7 @@ An area chart shows one or more series as lines with the area under each line fi
 
 For the properties that all series-based charts share, such as the **Series** list, **Dimensions**, and **Advanced** settings, see [Common Chart Properties](/appstore/widgets/charts/#common-properties). This page describes the properties that are specific to the area chart.
 
-## Edit Series Dialog Box – Appearance Tab
+## Edit Series Item Dialog Box – Appearance Tab
 
 * **Interpolation** – Determines the line shape:
     * **Linear** – Data points are connected with straight lines.

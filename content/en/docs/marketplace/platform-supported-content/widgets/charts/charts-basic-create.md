@@ -56,18 +56,16 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 4. The final page should look like this.
 
-    {{% todo %}}[SCR-161: Replace image below — ShowChart page with the Area chart widget placed directly on the page, without a data view]{{% /todo %}}
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-widget-page.png" alt="Final widget Page" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-widget-page.png" alt="Area chart widget on the ShowChart page in Studio Pro, showing sample data for three series" class="no-border" >}}
 
 ### Configuring the Charts Widget
 
 To configure a Charts widget, follow these steps:
 
 1. Open the page with the Charts widget.
-2. Right-click the **Area chart** and select **Properties**.
-3. On the **General** tab, in the **Data source** section, add a new **Series** item.
-4. In the **General** section of the series, leave **Data set** set to **Single series**.
+2. Double-click the **Area chart** widget to open its properties.
+3. On the **General** tab, in the **Data source** section, click **New** in the **Series** list. The **Edit Series Item** dialog box opens.
+4. On the **General** tab of the dialog box, leave **Data set** set to **Single series**.
 5. Set **Data source** to **Database** and select the *Value* entity.
 6. Select *xValue* as the **X axis attribute** and *yValue* as the **Y axis attribute**.
 

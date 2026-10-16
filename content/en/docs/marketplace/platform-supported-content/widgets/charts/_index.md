@@ -51,24 +51,20 @@ Area, bar, bubble, column, line, and time series charts share the series-based p
 
 The **Series** property contains the list of data series that the chart shows. Each series is drawn as a separate line, set of bars, or set of bubbles. The order of the list influences how series overlay one another: the first series in the list is drawn lowest, and the series after it are drawn on top.
 
-{{% todo %}}[SCR-141: Series list on the General tab of a line chart, with two series added]{{% /todo %}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/data-source-example.png" alt="Series list on the General tab with three single series named Alpha, Beta, and Gamma, and the New, Delete, Edit, Move Up, and Move Down buttons" width="450px" class="no-border" >}}
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/data-source-example.png" alt="Series property with a list of configured series" width="450px" class="no-border" >}}
-
-You do not need to put a chart into a data view to feed data into a widget. To add a series, click **New** in the **Series** list. To change a series, select it and click **Edit**. The **Edit Series** dialog box has four tabs: **General**, **Appearance**, **Events**, and **Advanced**.
+You do not need to put a chart into a data view to feed data into a widget. To add a series, click **New** in the **Series** list. To change a series, select it and click **Edit**. The **Edit Series Item** dialog box has four tabs: **General**, **Appearance**, **Events**, and **Advanced**.
 
 ##### General Tab {#series-general}
 
-{{% todo %}}[SCR-142: Edit Series dialog box, General tab, Data set set to Single series]{{% /todo %}}
-
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/series-item-example.png" alt="General tab of the Edit Series dialog box" width="450px" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/series-item-example.png" alt="General tab of the Edit Series Item dialog box with Data set set to Single series, a microflow data source, and the series name Alpha" width="450px" class="no-border" >}}
 
 The **General** tab has these properties:
 
 * **Data set** – Defines how the series gets its data:
     * **Single series** – One data source draws one series. This is a good option to start with. To show more data, add more **Single series** items to the list.
     * **Multiple series** – One data source draws several series, split by the **Group by** attribute. This is useful if you have a more complex data model or a microflow that returns the data for all series at once.
-* **Data source** – The source of the data points for the series. Click **Edit** to set the data source type and the entity.
+* **Data source** – The source of the data points for the series. Click **Edit** to set the data source type and the entity. For a **Database** data source, you can also add an **XPath constraint**.
 * **Group by** – The attribute used to split data points into groups. Each group becomes one series. This property is visible only when **Data set** is set to **Multiple series**.
 * **Series name** – The series name shown in the legend. When **Data set** is set to **Multiple series**, use an attribute of the group in this text template, so each series gets its own name.
 * **X axis attribute** – The attribute used for the value on the X axis.
@@ -82,10 +78,10 @@ The **Appearance** tab contains the styling properties for the current series, s
 
 Color properties on this tab accept a CSS color value, such as `blue`, `#48B0F7`, or `rgb(72, 176, 247)`.
 
-{{% todo %}}[SCR-143: Edit Series dialog box, Appearance tab of a line chart, Line style set to Line with markers]{{% /todo %}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/series-appearance-tab.png" alt="Appearance tab of the Edit Series Item dialog box for a line chart, with Line style set to Line with markers and the Line color and Marker color properties" width="450px" class="no-border" >}}
 
 {{% alert color="info" %}}
-The **Appearance** tab of the **Edit Series** dialog box only styles the data series. To style the chart widget as a whole, use its design properties, classes, and styles. For more information, see [Design Properties API](/apidocs-mxsdk/apidocs/design-properties/).
+The **Appearance** tab of the **Edit Series Item** dialog box only styles the data series. To style the chart widget as a whole, use its design properties, classes, and styles. For more information, see [Design Properties API](/apidocs-mxsdk/apidocs/design-properties/).
 {{% /alert %}}
 
 ##### Events Tab {#series-events}
@@ -94,15 +90,19 @@ The **Events** tab contains the **On click action** property. This action runs w
 
 ##### Advanced Tab {#series-advanced}
 
-The **Advanced** tab contains the **Custom series options** property. This property holds a JSON object with advanced configuration for this series. For more information, see [Custom Series Settings](#custom-series-settings).
+The **Advanced** tab contains the **Custom series options** property. This property holds a JSON object with advanced configuration for this series. For more information, see [Custom Series Settings](#custom-series-settings). This property is visible only when [Enable advanced options](#enable-advanced-options) is set to **Yes**.
 
 ### General Section {#general}
+
+#### Enable Advanced Options {#enable-advanced-options}
+
+If set to **Yes**, the chart shows the properties on its **Advanced** tab and the **Custom series options** property on the **Advanced** tab of each series. The default value is **No**.
 
 #### Show Playground Slot {#show-playground-slot}
 
 If set to **Yes**, the chart shows a **Playground slot** in the page editor. Place a Chart playground widget in this slot to edit the chart's layout, configuration, and series settings live while the app runs. For more information, see [Fine-Tune a Chart with Chart Playground](/appstore/widgets/chart-advanced-tuning/).
 
-{{% todo %}}[SCR-144: Line chart in the page editor with Show playground slot set to Yes and a Chart playground widget in the Playground slot]{{% /todo %}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/show-playground-slot.png" alt="Line chart in the page editor with a Chart playground widget in its Playground slot, shown as a Toggle Editor button" width="300px" class="no-border" >}}
 
 {{% alert color="warning" %}}
 All changes made in the Chart playground are temporary. To keep your changes, copy the JSON from the playground to the **Custom layout**, **Custom configurations**, or **Custom series options** properties in Studio Pro.
@@ -122,7 +122,7 @@ These two properties set the labels for the X and Y axis.
 
 #### Show Legend {#show-legend}
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/chart-with-legend.png" width="450px" alt="Column chart. The legend list on right side is highlighted with red square." class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/chart-with-legend.png" width="450px" alt="Column chart with Alpha and Beta series. The legend on the right side is highlighted with a red square." class="no-border" >}}
 
 This setting controls the visibility of a chart's legend block (highlighted in the picture above). If set to **No**, the legend block is hidden.
 
@@ -164,6 +164,8 @@ This property sets the height of the widget. The default value is **75**.
 
 ### Advanced Section {#advanced}
 
+The properties in this section are visible only when [Enable advanced options](#enable-advanced-options) is set to **Yes**.
+
 #### Enable Theme Folder Config Loading {#enable-theme-folder-config}
 
 If set to **Yes**, this widget loads global chart settings from the `theme/web/com.mendix.charts.json` file. Before using this feature, make sure this file is present in your app. For more information, see [Use the Charts Theme](/appstore/widgets/charts-theme/).
@@ -197,15 +199,14 @@ The Plotly library allows you to configure each series in a chart individually.
 
 To add custom settings to a series, do the following:
 
-1. On the **General** tab of the chart, go to **Data source** > **Series**.
+1. On the **General** tab of the chart, set **Enable advanced options** to **Yes**.
+1. On the same tab, go to **Data source** > **Series**.
 1. Select the series you want to configure, then click **Edit**.
 1. Open the **Advanced** tab and paste your custom series settings object in JSON format into **Custom series options**:
 
-    {{% todo %}}[SCR-146: Replace both images below — Series list with Edit button, and Edit Series dialog box with Advanced tab and Custom series options]{{% /todo %}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/custom-series-settings-step-1.png" width="450px" alt="Series list with the first series, Alpha, selected and the Edit button enabled" class="no-border" >}}
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/custom-series-settings-step-1.png" width="450px" alt="Two dialog boxes. First shows Data source property with list of series records. Second dialog box show settings for the first series in list. Big red arrow pointing to the Advanced tab of the second dialog box." class="no-border" >}}
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea element." class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/custom-series-settings-step-2.png" width="450px" alt="Advanced tab of the Edit Series Item dialog box with a JSON object in Custom series options that sets the line width, line dash, and marker size" class="no-border" >}}
 
 To see available series options, see the [JavaScript Figure Reference](https://plotly.com/javascript/reference/index/) in the Plotly documentation.
 

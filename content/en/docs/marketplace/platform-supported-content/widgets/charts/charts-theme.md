@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 This is how the original chart looks:
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="Line chart with two series and the Toggle Editor button, using the default font" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="Line chart with three series and the Toggle Editor button, using the default font" class="no-border" >}}
 
 ### Finding the Settings with Chart Playground
 
@@ -51,7 +51,7 @@ To find the settings you want, follow these steps:
 
 1. Change the font settings until the chart shows the font you want, then copy the JSON.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="Chart playground editor open next to a chart with changed font settings" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="Chart playground editor with Layout selected and a font JSON object in Custom settings, next to a line chart whose axis labels use the Impact font" class="no-border" >}}
 
     {{% alert color="warning" %}}Changes made in the playground do not persist. Store them in the advanced settings of the widget or in the theme file.{{% /alert %}}
 
@@ -67,9 +67,9 @@ To add a theme file that applies to all charts in the app, follow these steps:
 
     {{% alert color="info" %}}The file name is case-sensitive, and the file extension is *.json*. The file must contain a JSON object, even if it is empty, for example `{ }`.{{% /alert %}}
 
-1. For each chart that should use the theme, open the chart properties, go to the **Advanced** tab, and set **Enable theme folder config loading** to **Yes**.
+1. For each chart that should use the theme, open the chart properties, set **Enable advanced options** to **Yes** on the **General** tab, then go to the **Advanced** tab and set **Enable theme folder config loading** to **Yes**.
 
-    {{% todo %}}[SCR-154: Chart Advanced tab with Enable theme folder config loading set to Yes]{{% /todo %}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-theme/charts-enable-theme-config.png" alt="Advanced tab of the chart properties with Enable theme folder config loading set to Yes" width="450px" class="no-border" >}}
 
     {{% alert color="info" %}}Charts that have **Enable theme folder config loading** set to **No** ignore the theme file.{{% /alert %}}
 
@@ -95,7 +95,7 @@ To change the font in all charts in the app, follow these steps:
 1. Restart the Mendix app.
 1. Check the result.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="Line chart using the Impact font from the theme file" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="Line chart whose axis labels use the Impact font from the theme file" class="no-border" >}}
 
 ## Theme File Structure {#theme-file-structure}
 

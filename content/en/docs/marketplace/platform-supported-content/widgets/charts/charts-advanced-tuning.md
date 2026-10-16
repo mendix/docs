@@ -43,13 +43,13 @@ To open the playground on your chart, follow these steps:
 1. In your browser, open the page with the chart.
 1. Click **Toggle Editor**.
 
-    {{% todo %}}[SCR-149: Running app, chart with the Toggle Editor button visible, before opening the editor]{{% /todo %}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-closed.png" alt="Line chart in the running app with the Toggle Editor button in the top right corner" max-width="60%" class="no-border" >}}
 
 ## Changing the Layout {#layout-changes}
 
 This is what the original chart looks like:
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="Line chart with two series and the Toggle Editor button, using the default font" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="Line chart with three series and the Toggle Editor button, using the default font" class="no-border" >}}
 
 To create a custom layout, follow these steps:
 
@@ -73,39 +73,33 @@ To create a custom layout, follow these steps:
 
     After making some changes, the chart looks like this:
 
-    {{% todo %}}[SCR-150: Replace image below — Chart playground editor open with Layout selected and the font JSON in Custom settings]{{% /todo %}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="Chart playground editor with Layout selected and a font JSON object in Custom settings, next to a line chart whose axis labels use the Impact font" class="no-border" >}}
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-open.png" alt="Chart playground editor open next to a chart with changed font settings" class="no-border" >}}
-
-1. In Studio Pro, paste the JSON into the **Custom layout** property on the **Advanced** tab of the chart.
+1. In Studio Pro, on the **General** tab of the chart, set **Enable advanced options** to **Yes**. Then paste the JSON into the **Custom layout** property on the **Advanced** tab.
 
 ## Changing the Chart Type of a Series {#series-changes}
 
 This is what the chart looks like before making any changes:
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar.png" alt="Column chart with two series" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar.png" alt="Column chart with Alpha and Beta series and the Toggle Editor button" class="no-border" >}}
 
 To change how one series is drawn, follow these steps:
 
 1. Open the playground as described in [Opening the Playground](#open-playground).
-1. In the drop-down list, select the series you want to display differently. In this example, this is **Series 1**.
+1. In the drop-down list, select the series you want to display differently. In this example, this is **Alpha**.
 1. Change **Custom settings** to `{ "type": "line" }`.
 
-    {{% todo %}}[SCR-151: Replace image below — Chart playground editor with Series 1 selected and { "type": "line" } in Custom settings]{{% /todo %}}
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination.png" alt="Chart playground editor with a series changed to a line" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination.png" alt="Chart playground editor with the Alpha series selected and a JSON object that sets type to line in Custom settings, next to a column chart that shows Alpha as a line" class="no-border" >}}
 
 1. Copy the JSON.
-1. In Studio Pro, open the chart properties, select **Series 1** in the **Series** list, and click **Edit**.
-1. On the **Advanced** tab of the **Edit Series** dialog box, paste the JSON into **Custom series options**.
+1. In Studio Pro, open the chart properties and set **Enable advanced options** to **Yes** on the **General** tab. Then select **Alpha** in the **Series** list and click **Edit**.
+1. On the **Advanced** tab of the **Edit Series Item** dialog box, paste the JSON into **Custom series options**.
 
-    {{% todo %}}[SCR-152: Replace image below — Edit Series dialog box, Advanced tab, Custom series options with { "type": "line" }]{{% /todo %}}
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-properties.png" alt="Custom series options property in the Edit Series dialog box" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-properties.png" alt="Advanced tab of the Edit Series Item dialog box with a JSON object that sets type to line in Custom series options" width="450px" class="no-border" >}}
 
 After the changes, the chart looks like this:
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-result.png" alt="Chart with one series shown as columns and one series shown as a line" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-result.png" alt="Chart with the Alpha series shown as a line and the Beta series shown as columns" class="no-border" >}}
 
 ## Changing the Configuration {#configuration-changes}
 
@@ -116,15 +110,13 @@ To create a custom configuration, follow these steps:
 1. Change **Custom settings** to `{ "displayModeBar": true }`.
 1. Add more settings as needed. For all configuration settings, see [Configuration Options](https://plotly.com/javascript/configuration-options/) in the Plotly documentation.
 1. Copy the JSON.
-1. In Studio Pro, paste the JSON into the **Custom configurations** property on the **Advanced** tab of the chart.
+1. In Studio Pro, on the **General** tab of the chart, set **Enable advanced options** to **Yes**. Then paste the JSON into the **Custom configurations** property on the **Advanced** tab.
 
-    {{% todo %}}[SCR-153: Replace image below — chart Advanced tab with Custom configurations filled in]{{% /todo %}}
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced-config.png" alt="Custom configurations property on the Advanced tab of the chart" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced-config.png" alt="Advanced tab of the chart properties with a JSON object that sets displayModeBar to true in Custom configurations" width="450px" class="no-border" >}}
 
 The chart now shows the toolbar:
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-config-toolbar.png" alt="Chart with the Plotly toolbar visible in the top right corner" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-config-toolbar.png" alt="Stacked area chart with the Plotly toolbar visible in the top right corner" class="no-border" >}}
 
 ## Removing the Playground {#remove-playground}
 

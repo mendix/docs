@@ -22,13 +22,7 @@ Follow these steps to have Maia create a project plan based on a starter app:
 
 2. Select **Plan & Create App**. The **Plan & Build with Maia** window is displayed.
 
-3. In the **Project Starting Point** section, select the radio button corresponding to the way in which you want to start your project. You can choose between the following:
-
-    * **Use the latest LTS version**
-    * **Use the latest version**
-    * **Use a starter app with a predefined Studio Pro version**
-
-    Selecting an option opens the list of starter apps corresponding to that version.
+3. In the **Project Starting Point** section, select **Use a starter app with a predefined Studio Pro version**. This opens the list of available starter apps.
 
 4. Click **Select Starter App**. The **Select Starter App** window is displayed, listing the available starter apps that correspond to the option you selected at the previous step.    
     You can search by name or filter by app type (Company-Approved, Public, Private). 

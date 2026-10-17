@@ -49,7 +49,7 @@ This is the storage location for data files used by the app. More specifically, 
 
 Database Synchronization is initiated when an app is started. It manages changes to the database structure which must be applied when you deploy an app after updating the domain model. For example, if a user adds a new attribute to an entity, the database structure must be updated to support this.
 
-If there is more than one instance of the Runtime Server, this activity is carried out by the cluster leader. While this activity takes place, all other instances pause until the database synchronization is complete.
+If there is more than one instance of the Runtime Server, this activity is coordinated across the cluster. Depending on how the Runtime is started, either the cluster leader performs the synchronization while the other instances pause until it is complete, or the instances use a database lock to agree on which instance performs it. For details, see [Cluster Leader and Cluster Followers](/refguide10/clustered-mendix-runtime/#cluster-leader-follower).
 
 ### External Service Calls
 

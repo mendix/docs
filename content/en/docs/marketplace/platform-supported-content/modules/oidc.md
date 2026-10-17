@@ -201,6 +201,8 @@ If your app is already developed using Mendix 9 or above, but uses the community
 
 This section provides an overview of updates for the OIDC SSO module across different versions. It includes new dependencies, snippet replacements, and microflow renaming to ensure a smooth transition while migrating to higher module versions.
 
+{{% expandable-table %}}
+
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
 | 10.24.0 and above | 5.0.0 | - | Use `Token` as the parameter name in custom microflows or if you create a custom microflow based on `ACT_Token_CustomATPRetrieveRoles`. It was previously `AccessToken`. |
@@ -225,6 +227,8 @@ This section provides an overview of updates for the OIDC SSO module across diff
 | 9.24.2 and above | 3.0.0 (migrating to 3.0.0 and above) | Include [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency. | New UserCommons module |
 | | | Set `OIDC.Startup` microflow as part of the after-startup microflow. | Assign UserProvisioning for existing IdP configurations. |
 
+{{% /expandable-table %}}
+
 ## Design-time App Configuration{#app-configuration}
 
 This section shows you how to configure your app to use OIDC for SSO.
@@ -237,10 +241,14 @@ If you are using OIDC module version 3.1.0 and above, you need to configure your
 
 Ensure that you have allocated the following user roles to the OIDC module and UserCommons (in version 3.0.0 and above) roles:
 
+{{% expandable-table %}}
+
 | User Role | OIDC Module Role |
 | --- | --- |
 | Administrator | OIDC.Administrator, UserCommons.Administrator |
 | User | OIDC.User |
+
+{{% /expandable-table %}}
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/user-roles.png" alt="User roles tab showing Administrator and User roles with their assigned module roles" >}}
 
@@ -367,11 +375,15 @@ In this case, the OIDC client is the app you are making.
 
 9. On the **Creating User** tab, select your **User creation microflow**. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses opaque tokens. You can set up user provisioning by setting the following standard flows:
 
+    {{< expandable-table >}}
+
     | Default Microflow | Use |
     | --- | --- |
     | OIDC_CustomUserParsing_Standard <br>(renamed from UserProvisioning_Standard) | It implements some standard OpenID claims to find/provision a user. |
     | OIDC_CustomUserParsing_UserInfo <br>(renamed from UserProvisioning_UserInfo) | It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
     | OIDC_CustomUserParsing_Salesforce <br>(renamed from UserProvisioning_Salesforce) | It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
+
+    {{< /expandable-table >}}
 
     In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above of the OIDC SSO module, you can set the timezone and language using any standard microflow.
 
@@ -623,6 +635,8 @@ You can set up custom user provisioning by setting constants when you deploy you
 
 You can set up custom user provisioning by setting the following constants. You can set default values when you build your app, but you can override these in the app's environment.
 
+{{% expandable-table %}}
+
 | Constant | Use | Notes | Example |
 | --- | --- | --- | --- |
 | `CustomUserEntity` | a custom user entity | in the form `modulename.entityname` – a specialization of `System.User` | `Administration.Account` |
@@ -634,6 +648,8 @@ You can set up custom user provisioning by setting the following constants. You 
 | `UserType` | assigns user type to the created user | *optional* | `Internal` |
 | `CustomUserProvisioning` | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `UC_CustomProvisioning` | `Mymodule.UC_CustomProvisioning` |
 | `DisableMxAdmin` | deactivates Mx admin | *optional* | `True` |
+
+{{% /expandable-table %}}
 
 {{% alert color="info" %}}
 You may have a requirement that users log in to your application only via SSO. However, when you deploy your app on the Mendix Cloud, the platform may still create an MxAdmin user with a local password. From version 2.1.0 of the UserCommons module, if the flag for the `DisableMxAdmin` constant is set to `True`, the MxAdmin user will be deactivated via the startup microflow `ASU_UserCommons_StartUp`.
@@ -690,11 +706,15 @@ If the standard configuration meets your needs and your application does not hav
 
 In the default configuration, the custom user entity is set as `Administration.Account`, the principal attribute is set as `Name`, and the default attribute mapping is provided.
 
+{{% expandable-table title=" Default Attribute Mapping"%}}
+
 |  IdP Attribute       | Configured Entity Attribute |
 | -------------------- | --------------------------- |
 | email                | Email                       |
 | name                 | FullName                    |
 | sub                  | Name                        |
+
+{{% /expandable-table %}}
 
 ##### Modifying Default Attribute Mapping{#modify-default}
 
@@ -759,11 +779,15 @@ The section below shows the methods to configure user provisioning when using OI
 
 By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies to the following mapping:
 
+{{% expandable-table %}}
+
 | ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
 | ----------------------------- | -----------------------------                | 
 | sub                           | Name                                         |
 | name                          | Fullname                                     |
 | email                         | Email                                        |
+
+{{% /expandable-table %}}
 
 {{% alert color="warning" %}}
 Do not change the `UserProvisioning_StandardOIDC` microflow. This may cause problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.

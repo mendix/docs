@@ -20,7 +20,7 @@ In Studio Pro, [Maia Make](/refguide/maia-make/) provides a single chat interfac
 
 In Studio Pro 11.8 and above, the earlier document-specific tools, such as Maia for Pages and Maia for Workflows, are consolidated into [Maia Make](/refguide/maia-make/). This means you can use Maia Make to work with any supported part of your app model, without switching between tools. Individual documents such as [Pages in Maia Make](/refguide/maia-for-pages/) and [Workflows in Maia Make](/refguide/maia-for-workflows/) describe what Maia Make can do for a specific document type. For a full list of supported document types and the Studio Pro version that supports them, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
 
-Next to the chat, the [in-editor recommenders](/preferences-dialog/#in-editor-recommender) and [Best Practice Recommender](/refguide/best-practice-recommender/) provide guidance as you model your app.
+Next to the chat, the [in-editor recommenders](/refguide/preferences-dialog/#in-editor-recommender) and [Best Practice Recommender](/refguide/best-practice-recommender/) provide guidance as you model your app.
 
 {{% alert type="info" %}}
 In Studio Pro 11.7 and below, Maia Make capabilities are available through separate tools. See the relevant [Make Make Capabilities](/refguide/maia-make/#maia-make-capabilities-overview) documentation for information about accessing and using each tool.

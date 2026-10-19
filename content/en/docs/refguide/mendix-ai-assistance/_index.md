@@ -185,7 +185,7 @@ The table below presents all the third-party services each Maia capability uses 
 | Logic Recommender | No third-party services used | N/A |
 | UI Recommender | No third-party services used | N/A |
 | Workflow Recommender | No third-party services used | N/A |
-| Maia for Domain Model | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
+| Domain Models in Maia Make | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
 | Maia for Pages | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
 | Maia for OQL | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
 | Maia for Workflows | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |

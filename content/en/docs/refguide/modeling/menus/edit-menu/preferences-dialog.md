@@ -115,7 +115,7 @@ In Studio Pro 11.7 and below, the **Generative AI** section contains the followi
 
 * **Enable Start with Maia** – when enabled, you can use the **Start with Maia** starting point in Studio Pro to help you create an app. For more information on how to use this feature, see [Start with Maia](/refguide/start-with-maia/). It is enabled by default.
 * **Enable Maia Explain** – when enabled, you can use it to explain a microflow or a nanoflow in the logic editors. For more information, see [Maia Explain](/refguide/maia-explain/). It is enabled by default.
-* **Enable Maia for Domain Model** – when enabled, you can use it to generate a new domain model or to explain and improve an existing one. For more information, see [Maia for Domain Model](/refguide/maia-for-domain-model/). It is enabled by default.
+* **Enable Maia for Domain Model** – when enabled, you can use it to generate a new domain model or to explain and improve an existing one. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/). It is enabled by default.
 * **Enable Maia for OQL Generation** – when enabled, you can use it to generate and manage OQL (Object Query Language) queries through an intuitive interface. For more information, see [Maia for OQL](/refguide/maia-for-oql/). It is disabled by default.
 * **Enable Maia for Pages** – when enabled, you can use it to generate a new page or to explain and improve an existing one. For more information, see [Maia for Pages](/refguide/maia-for-pages/). It is disabled by default.
 * **Enable Maia for Workflows** – when enabled, you can use it to generate workflows by adding and configuring activities. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/). It is disabled by default.

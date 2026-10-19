@@ -28,7 +28,7 @@ Recommenders:
 
 Generators:
 
-* **Maia for Domain Model** – helps you generate new [domain models](/refguide/domain-model/), and explain and provide suggestions for existing domain models. For more information, see [Maia for Domain Model](/refguide/maia-for-domain-model/). 
+* **Domain Models in Maia Make** – helps you generate new [domain models](/refguide/domain-model/), and explain and provide suggestions for existing domain models. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/). 
 
     For Private Mendix Platform, this feature is supported for version 11.6 and newer.
     

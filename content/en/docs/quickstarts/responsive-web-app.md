@@ -92,7 +92,7 @@ When you launch **Studio Pro** for the first time, you’ll see the **Welcom** t
 
 * [Maia Learn](/refguide/maia-learn/) – learning materials to help you get started
 
-* [Maia Make](/refguide/maia-make/) – the Maia chat, where you can build with Maia and get quick answers, support, and guidance
+* [Maia Make](/refguide/maia-make/) – a group of agentic development capabilities in Studio Pro where you can describe your app requirements and get quick answers, support, and guidance in one single conversation
 
 We recommend watching the introduction videos to get familiar with the basic concepts of Mendix development before you start building your app.
 {{% /alert %}}

@@ -52,7 +52,7 @@ After clicking **Maia for Pages**, a dedicated chat interface appears on the rig
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-pages/chat-interface.png" alt="" max-width=42% >}}
 
 {{% alert color="info" %}}
-In this dedicated chat, only requests related to Pages are handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
+In this dedicated chat, only requests related to Pages are handled. If you have other questions, close this chat and go back to the general [Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
 ## Limitations {#limitation}

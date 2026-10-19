@@ -246,7 +246,7 @@ For specific Maia features, use the feature name directly: Logic Recommender, Wo
 
 It is okay to include "Maia" as part of the feature name if it is introduced for the first time or if no near context about Maia is given: Maia Logic Recommender, Maia Workflow Recommender, Maia Translation Generator, for instance.
 
-Maia Chat is an exception: use "Maia Chat" instead of "Chat". Only use "Chat" in very rare cases: as a page title in the left navigation menu under the [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/) category.
+Chat with Maia is an exception: use "Maia Chat" instead of "Chat". Only use "Chat" in very rare cases: as a page title in the left navigation menu under the [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/) category.
 
 Capitalize in all instances.
 

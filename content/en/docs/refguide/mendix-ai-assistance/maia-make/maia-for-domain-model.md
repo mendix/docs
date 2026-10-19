@@ -46,7 +46,7 @@ Maia for Domain Model does not support deleting items in the domain model. You c
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In this dedicated chat, only requests related to the domain model are handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
+In this dedicated chat, only requests related to the domain model are handled. If you have other questions, close this chat and go back to the general [Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
 #### Attachment Requirements {#attachment-requirements}

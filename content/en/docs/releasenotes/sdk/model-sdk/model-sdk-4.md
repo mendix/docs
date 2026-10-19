@@ -667,6 +667,8 @@ weight: 97
 
 **Release date: October 31, 2018**
 
+<!-- todo: table below has the horizontal scroll, thus Safari issue --> 
+
 | Story | Impact | Description |
 |---|---|---|
 | MS-1144 | None | Upgraded to TypeScript 3.1. |

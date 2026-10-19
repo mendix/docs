@@ -32,7 +32,7 @@ The plan is a Markdown file stored at `maia/plans/<plan-name>/plan.md` in your a
 After creating a plan, Maia asks you to review it. To review the plan and start implementation, follow these steps:
 
 1. In the **App Explorer**, expand **App** > **Maia** > **plans** and select the plan.
-2. Review the plan. Edit it yourself or ask Maia to make changes.
+2. Review the plan. Edit it yourself or ask Maia to make changes. Make sure any manual changes are saved.
 3. When you are satisfied with the plan, confirm Maia's request to exit Plan Mode and start implementation.
 
 ## Tracking Progress

@@ -68,7 +68,7 @@ To perform an action via the Backups API, you need **Backups Access** and **API 
 
 To download a backup of your data, do as follows:
 
-1. Make sure that you have an API key and the **API Access** and **Backups** permissions.
+1. Make sure that you have an API key or a PAT, and the **API Access** and **Backups** permissions.
 
 2. If the snapshot already exists, find the [snapshot ID](/developerportal/operate/backups/#backups-details).
 

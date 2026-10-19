@@ -246,6 +246,8 @@ For specific Maia features, use the feature name directly: Logic Recommender, Wo
 
 It is okay to include "Maia" as part of the feature name if it is introduced for the first time or if no near context about Maia is given: Maia Logic Recommender, Maia Workflow Recommender, Maia Translation Generator, for instance.
 
+As of Studio Pro 11.8, Maia Make replaces Maia's individual features. Refer to "Maia" or "Maia Make" as a set of capabilities. Do not refer to older individual tools, such as "Maia Chat", "Maia for Domain Models", or "Maia for Pages" unless referring to Studio Pro 11.7 and below.
+
 Capitalize in all instances.
 
 ### Make It Native app

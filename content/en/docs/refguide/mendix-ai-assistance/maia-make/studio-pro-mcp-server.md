@@ -83,4 +83,4 @@ The following limitations apply only to Studio Pro 11.10:
 * [Maia Make Capabilities](/refguide/maia-make/)
 * [Maia MCP Client](/refguide/maia-mcp/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Questions and Guidance in Maia Make](/refguide/maia-chat/)
+* [Chat with Maia](/refguide/maia-chat/)

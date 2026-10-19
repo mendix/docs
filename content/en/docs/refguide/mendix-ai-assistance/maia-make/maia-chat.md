@@ -1,6 +1,6 @@
 ---
-title: "Questions and Guidance in Maia Make"
-linktitle: "Questions and Guidance"
+title: "Chat with Maia"
+linktitle: "Chat"
 url: /refguide/maia-chat/
 weight: 5
 description: "Describes how to ask questions about Mendix development in Maia Make, and how Maia Chat worked in earlier versions of Studio Pro."

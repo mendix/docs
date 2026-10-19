@@ -60,4 +60,4 @@ In this dedicated chat, only requests related to Maia Explain are properly handl
 ## Read More
 
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Questions and Guidance in Maia Make](/refguide/maia-chat/)
+* [Chat with Maia](/refguide/maia-chat/)

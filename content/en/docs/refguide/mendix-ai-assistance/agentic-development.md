@@ -100,7 +100,7 @@ Maia offers a range of capabilities, from assistance with single steps to agenti
 
 | Level | What Maia Does | Examples |
 | --- | --- | --- |
-| Guidance | Answers questions and explains concepts or existing documents. Maia does not change your app. | <ul><li>[Questions and guidance in Maia Make](/refguide/maia-chat/)</li><li>[Maia Learn](/refguide/maia-learn/)</li><li>[Maia Explain](/refguide/maia-explain/)</li> |
+| Guidance | Answers questions and explains concepts or existing documents. Maia does not change your app. | <ul><li>[Chat with Maia](/refguide/maia-chat/)</li><li>[Maia Learn](/refguide/maia-learn/)</li><li>[Maia Explain](/refguide/maia-explain/)</li> |
 | Recommendation | Suggests the next step in the editor that you have open, or detects issues in your app model. You decide which suggestion to apply. | <ul><li>[Logic Recommender](/refguide/logic-recommender/)</li><li>[UI Recommender](/refguide/ui-recommender/)</li><li>[Workflow Recommender](/refguide/workflow-recommender/)</li><li>[Best Practice Recommender](/refguide/best-practice-recommender/)</li> |
 | Generation | Creates or changes one or more documents based on your request. | <ul><li>[Start with Maia](/refguide/start-with-maia/)</li><li>[Maia Make](/refguide/maia-make/)</li> |
 | Agentic development | Carries out a goal that involves several steps or documents. It can ask clarifying questions and use tools, such as external MCP servers or web content. | <ul><li>[Maia Make](/refguide/maia-make/) with [Maia MCP Client](/refguide/maia-mcp/) and [Maia Web Fetch](/refguide/maia-web-fetch/)</li><li>External agents through the [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)</li> |

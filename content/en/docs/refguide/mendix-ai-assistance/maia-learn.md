@@ -33,4 +33,4 @@ If you have any questions during the learning journey, you can always click **As
 
 ## Read More
 
-* [Questions and Guidance in Maia Make](/refguide/maia-chat/)
+* [Chat with Maia](/refguide/maia-chat/)

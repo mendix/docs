@@ -70,4 +70,4 @@ Maia has the following limitations when it works with domain models:
 * [Maia Make Capabilities](/refguide/maia-make/)
 * [Data in the Domain Model](/refguide/domain-model/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Questions and Guidance in Maia Make](/refguide/maia-chat/)
+* [Chat with Maia](/refguide/maia-chat/)

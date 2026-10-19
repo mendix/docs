@@ -105,7 +105,7 @@ For all document types that Maia Make supports, see the [Supported Document Type
 
 In Studio Pro 11.8 and above, you ask questions and request explanations in the Maia Make chat. Maia Make supersedes Maia Chat, the earlier chat interface in Studio Pro.
 
-* **Questions and guidance** – Ask questions about app development in Mendix using Maia's chat feature, including how to apply concepts, best practices, and development patterns. For more information, see [Questions and Guidance in Maia Make](/refguide/maia-chat/). 
+* **Questions and guidance** – Ask questions about app development in Mendix using Maia's chat feature, including how to apply concepts, best practices, and development patterns. For more information, see [Chat with Maia](/refguide/maia-chat/). 
 * [Maia Learn](/refguide/maia-learn/) – Maia Learn helps you to learn Mendix core concepts quickly to get started with Studio Pro. 
 * [Maia Explain](/refguide/maia-explain/) – Maia Explain helps you understand existing documents, such as microflows and pages. It explains the general purpose of the document and highlights specific technical details. 
 

@@ -169,4 +169,4 @@ Maia MCP Client has the following limitations:
 ## Read More
 
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Questions and Guidance in Maia Make](/refguide/maia-chat/)
+* [Chat with Maia](/refguide/maia-chat/)

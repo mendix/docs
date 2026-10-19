@@ -36,7 +36,7 @@ Generators:
 
     For Private Mendix Platform, this feature is supported for version 11.6 and newer.
 
-* **Maia for Workflows** – helps you generate a [Workflow](/refguide/workflows/). By providing a use case via text input or an image, Maia can help you start creating your workflows. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/).
+* **Workflows in Maia Make** – helps you generate a [Workflow](/refguide/workflows/). By providing a use case via text input or an image, Maia can help you start creating your workflows. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/).
 * **Validation Assist** – helps you build validation microflows in a more automated way using pre-built expressions. For more information, see [Validation Assist](/refguide/validation-assist/).
 
 ## Changing the LLM Provider for Maia
@@ -63,7 +63,7 @@ The following table shows which Maia capabilities are supported by various model
 | --- | --- | --- | --- | --- |
 | **Maia for Pages** | Full support | Full support | Simple requests only | Simple requests only |
 | **Maia for Domain Model** | Full support | Full support | Full support | Full support |
-| **Maia for Workflows** | Full support | Full support | Simple requests only | Does not support workflow creation |
+| **Workflows in Maia Make** | Full support | Full support | Simple requests only | Does not support workflow creation |
 | **Start with Maia** | Full support | Full support | Full support | Full support |
 | **Best Practice Recommender** | Full support | Full support | Full support | Full support |
 | **UI Recommender** | Full support | Full support | Full support | Full support |

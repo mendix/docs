@@ -32,7 +32,7 @@ Generators:
 
     For Private Mendix Platform, this feature is supported for version 11.6 and newer.
     
-* **Maia for Pages** – helps you generate a [page](/refguide/page/). It helps you add and configure widgets based on a text input and an optional image. After a page is generated, you can continue in the same session to ask Maia for further improvements and explanations. For more information, see [Maia for Pages](/refguide/maia-for-pages/).
+* **Pages in Maia Make** – helps you generate a [page](/refguide/page/). It helps you add and configure widgets based on a text input and an optional image. After a page is generated, you can continue in the same session to ask Maia for further improvements and explanations. For more information, see [Maia for Pages](/refguide/maia-for-pages/).
 
     For Private Mendix Platform, this feature is supported for version 11.6 and newer.
 

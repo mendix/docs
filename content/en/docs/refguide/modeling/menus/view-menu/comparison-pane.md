@@ -153,6 +153,8 @@ For the following document types, you can open the version of the document from 
 
 * Microflows
 * Workflows
+* Nanoflows
+* Domain model
 
 These versions open in a separate tab in read-only mode. You cannot edit the document or its properties. The tab indicates whether it shows the **Older** or **Newer** version. Read-only tabs close when you stop the comparison.
 

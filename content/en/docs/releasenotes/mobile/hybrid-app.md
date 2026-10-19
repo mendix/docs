@@ -134,6 +134,8 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 <resource-file src="config/build-extras.gradle" target="build-extras.gradle" />
 ```
 
+    <!-- TODO: change color of SRC olive green text so it meets WCAG contrast ratios. The current hot pink is a little too bright to meet the requirements. -->  
+
 * We changed how the *build-extras.xml* file is included in your app. Now PhoneGap Build properly includes that file.
 * The build process no longer fails when you do not provide a *GoogleServices-Info.plist* file. This is useful if you use Firebase Cloud Messaging for push notifications on Android, but use the Apple Push Notification service for push notifications on iOS.
 
@@ -240,6 +242,9 @@ The goal of this release is to upgrade all major dependencies to their latest ve
 | Cordova iOS     | 4.5.4       | 4.5.5       |
 
 ##### Plugins
+
+<!-- TODO: Make this table scrollable on Safari keyboards. This is a severe WCAG error, which axe guides us to fix with the following instructions: https://dequeuniversity.com/rules/axe/4.13/scrollable-region-focusable?application=AxeChrome&lang=en . I think this is something we have to apply to all table code, not just this instance. -->  
+
 
 | Name                                                        | Old Version          | New Version          | Comments                                                     |
 | ----------------------------------------------------------- | -------------------- | -------------------- | ------------------------------------------------------------ |

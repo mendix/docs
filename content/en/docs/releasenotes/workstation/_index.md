@@ -64,6 +64,16 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 * We fixed an issue where long messages in the device logger were not wrapped.
 
+### Marketplace
+
+#### New Modules
+
+* Workstation Starter App - The new [Workstation Starter App](https://marketplace.mendix.com/link/component/308268) gives you a foundation for building an app connected to peripheral devices, so that you do not have to build the complete structure from scratch. It includes the following:
+
+    * A Peripheral Template module, which is the recommended starting point for device-specific logic. It provides the structure for a peripheral device connected through the Workstation Connector, and keeps the hardware-specific behavior separate from the business logic.
+    * An Admin Center to manage the station and its connected devices, including the station status, device connectivity, and runtime setup.
+    * An example implementation that shows the basic flow of using the device data in the app.
+
 ## 4.2.1
 
 ### Release date: September 16, 2026

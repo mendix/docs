@@ -16,6 +16,21 @@ For information on the current status of deployment to Mendix Cloud and any plan
   
 ## October 2026
 
+### October 18, 2026
+
+#### New Features
+
+* The [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) now support authentication with personal access tokens (PATs), in addition to API keys.
+
+#### Fixes
+
+* We fixed an issue where failed deployments were incorrectly logged as successful. Failed deployments are now logged correctly, and a notification banner informs users when a deployment fails. (Tickets #287659, #289294)
+* We fixed an issue with backups in sandbox apps that was caused by a missing environment display name. (Ticket #287851)
+
+#### Deprecations
+
+* API keys are now deprecated, and support ends on January 1, 2027 for [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/). To keep using these APIs, [migrate to PATs](/apidocs-mxsdk/apidocs/deploy-api/#migrate-to-pat).
+
 ### October 15, 2026
 
 #### New Features

@@ -9,6 +9,8 @@ description: "Describes the steps required to use the Mendix External Database c
 
 The [External Database connector](/appstore/modules/external-database-connector/) allows you to connect to databases and select data to use in your app. You can use it to directly test connections and queries during configuration in Studio Pro at design time. For Mendix apps that use Databricks as their database, the External Database connector is the recommended integration option for Mendix 10.20.0 and above.
 
+If you are using Studio Pro 11.13 or later, you do not need to download this module from the Marketplace, as the External Database Connector comes included with Studio Pro. For more information, see [Connect to an External Database](/refguide/external-database-connection/).
+
 This how-to describes the steps required to enable your app to use the External Database connector with Databricks.
 
 ## Prerequisites
@@ -19,10 +21,10 @@ For some general information on how to use bring your own JDBC driver with the e
 
 To connect your Mendix application to Databricks with the External Database connector, follow these steps:
 
-1. Install the [External Database connector](https://marketplace.mendix.com/link/component/219862) version 5.1.1 or higher. 
+1. Optional: If your Studio Pro version is older than 11.13, install the [External Database connector](https://marketplace.mendix.com/link/component/219862) version 5.1.1 or higher. 
 2. Ensure that you have the required Databricks JDBC Driver by choosing one of the following options:
 
-    * To have the dependency downloaded automatically on running your project, add a **Java Dependency** in the **Settings** of you module and provide the following information:    
+    * To have the dependency downloaded automatically on running your project, add a **Java Dependency** in the **Settings** of your module and provide the following information:    
         * **Group ID** - set to **com.databricks**
         * **Artifact ID** - set to **databricks-jdbc**
         * **Version** - set to the latest **2.x** version

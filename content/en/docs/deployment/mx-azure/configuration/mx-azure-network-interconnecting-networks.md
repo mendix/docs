@@ -95,11 +95,30 @@ Because the zone lives in a resource group you own, you can add, change, or remo
 This is standard Azure Private DNS configuration, not something specific to Mendix on Azure. Refer to the Microsoft documentation linked above for full details on managing Private DNS zones and virtual network links.
 {{% /alert %}}
 
-##### Option 2: Override DNS Resolution on the Mendix Virtual Network
+##### Option 2: Configure Conditional DNS Forwarding
 
-Configuring the Mendix virtual network to use your own DNS server, as described in [Microsoft's DNS configuration instructions](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances), requires modifying the virtual network itself. Because the Mendix virtual network is located in the [Managed Resource Group](/developerportal/deploy/mendix-on-azure/configuration/#mrg), which is protected by [Azure deny assignments](https://learn.microsoft.com/en-us/azure/role-based-access-control/deny-assignments), you cannot make this change yourself.
+If your Mendix applications need to resolve internal domains in your organization's network (for example, on-premises services or resources in peered Azure VNets), Mendix Support can configure conditional DNS forwarding via CoreDNS.
 
-To apply this change, [raise a support ticket](/developerportal/deploy/mendix-on-azure/support/) with Mendix Support, specifying your desired DNS server IP addresses and the names of the Mendix on Azure environments the change should be applied to.
+Mendix on Azure uses CoreDNS within the Kubernetes cluster to handle DNS resolution for your application pods. Support can configure specific domain suffixes (for example, `internal.yourcompany.com`) to be forwarded to your organization's DNS servers, while all other DNS queries continue to use Azure's default DNS.
+
+###### Prerequisites
+
+Before requesting conditional DNS forwarding, ensure that you fulfill the following prerequisites:
+
+* Network connectivity - Your DNS servers must be reachable from the Mendix on Azure virtual network (through VNet peering, VPN Gateway, or ExpressRoute).
+* Firewall rules - You must allow UDP and TCP traffic on port 53 from the Mendix on Azure virtual network to your DNS servers.
+* DNS server configuration - Your DNS servers must be configured to resolve the domains which you want to forward.
+
+###### Requesting Conditional DNS Forwarding
+
+To request conditional DNS forwarding, raise a support ticket with Mendix Support and provide the following information:
+* Environment names - Specify which Mendix on Azure environments need this configuration.
+* Domain suffixes - List the internal domains which your apps need to resolve (for example, `internal.yourcompany.com`, `onprem.company.local`).
+* DNS server IP addresses - List the IP addresses of your organization's DNS servers that should receive forwarded queries.
+
+{{% alert color="info" %}}
+CoreDNS matches domains by longest suffix. Because of that, configuring `yourcompany.com` automatically covers all subdomains like `api.internal.yourcompany.com`.
+{{% /alert %}}
 
 ### Solution 2: PrivateLink with Private Endpoints
 

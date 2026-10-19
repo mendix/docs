@@ -48,11 +48,32 @@ From this page you can perform the following actions:
 Renaming or deleting a class that is used to lookup a device in a Workstation app breaks the logic of every app that relies on it, so check the **Devices** count and active **Apps** before you change a class.
 {{% /alert %}}
 
-## Card Readers
+## Card Readers {#card-readers}
 
-Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 
+A card reader device describes a smart card reader that is attached to the computer that runs the Workstation Client and connects using the PC/SC protocol. You can add card readers to a station in the following ways:
 
-Auto-detecting card readers is disabled by default. You can enable this setting on a **Station** page by selecting **Detect Card Readers**. 
+* Configure each card reader as a device in the **Devices** section of the **Station Detail** page. The Workstation Client uses only the card readers whose names match the configured names. Configured card readers are part of the station configuration, so they are kept when you copy a station.
+* Let the Workstation Client detect the attached card readers automatically. Auto-detecting card readers is disabled by default. For more information, see [Managing Stations: Detect Card Readers](/mendix-workstation/management-stations/#detect-card-readers).
+
+### Configuring Card Readers
+
+To add a card reader device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, select **Card Reader**, and then click **Next**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. In the **Card Reader Name** field, enter the name of the card reader as it is defined by the operating system. To find the name of the card reader, access the [Workstation Client diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics) by using one of the following methods:
+
+    * In Workstation Management, go to the **Station Detail** page and click **Diagnostics**.
+    * In the Workstation Client, go to the **Diagnostics** page.
+
+    The diagnostics show all attached card readers and their names in the `cardReaders` section. Viewing them requires a registered station. That is, the Workstation Client must run on a computer with the card reader attached, and be registered to a station.
+
+7. Click **Add Device**.
+
+When the Workstation Client receives the station configuration, it connects to the card reader with the configured name. If no card reader with that name is attached, the device stays unavailable until the card reader is attached. If **Detect Card Readers** is also enabled, the Workstation Client displays only the configured device for a configured card reader, and does not add that card reader a second time as a detected device. This also applies when the **Device Name** of the configured device is the name of the card reader. Card readers that are not configured are still detected and displayed.
 
 For the message syntax used to communicate with this device, see [Card Readers](/mendix-workstation/device-syntax/#card-readers).
 
@@ -154,6 +175,31 @@ To add a Bluetooth device, perform the following steps:
 
 For the message syntax used to communicate with this device, see [Bluetooth](/mendix-workstation/device-syntax/#bluetooth).
 
+## Camera {#camera}
+
+A camera device describes a camera attached to the computer that runs the Workstation Client. It defines which camera to use, the video feed properties to request from it, and which detection features to enable. Only USB cameras and webcams are currently supported.
+
+### Configuring Cameras
+
+To add a camera device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, select **Camera**, and then click **Next**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
+
+    * **Camera Type** - Required; the type of camera connection. Only **USB/Webcam** is currently supported. Support for camera streams over Real Time Streaming Protocol (RTSP), User Datagram Protocol (UDP), and HTTP with Motion JPEG (MJPEG) is planned.
+    * **Camera Name** - Optional; the name of the camera to use. The Workstation Client uses the first camera whose name contains this value, ignoring case. Leave the field empty to use the first camera that the Client finds.
+    * **Width** - Optional; the requested width of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty.
+    * **Height** - Optional; the requested height of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty.
+    * **Frame Rate** - Optional; the requested frame rate of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty.
+    * **Enable Barcode Detection** - Optional; when enabled, the video feed is processed and an event is sent when a barcode is detected in the frame. The default value is **No**.
+    * **Enable Motion Detection** - Optional; when enabled, the video feed is processed and an event is sent when motion is detected in the frame. The default value is **No**.
+
+7. Click **Add Device**.
+
 ## Keyboard Wedge {#keyboard-wedge}
 
 You can configure Workstation to connect with devices that emulate a keyboard by sending data as key strokes, such as barcode scanners, RFID readers, or measurement devices. Because these devices present themselves to the operating system as a standard keyboard, keyboard events are captured wherever the current focus is, for example in the web app or in an input field. The operator does not have to place the cursor in a specific input field first.
@@ -173,14 +219,12 @@ To add a keyboard emulator device, perform the following steps:
 5. Click **Next**.
 6. Configure the following connection parameters:
 
-    | Parameter | Description |
-    | --- | --- |
-    | **Inter Character Timeout (ms)** | Required; the maximum allowed amount of time in milliseconds between key strokes for them to be considered as coming from a device. The value must be a positive integer. The default value is `50`. |
-    | **Keyboard Layout** | Required; the keyboard layout of the device. To use the active keyboard layout as defined by your operating system, select **System**. Select **en-US** as a fallback when the system keyboard layout is not compatible with the device. For example, many barcode scanners send characters from the Latin alphabet, which the system layout cannot resolve if the operating system uses a non-Latin layout such as Chinese. The default value is **System**. |
-    | **Suffix** | Required; a series of characters denoting the end of a message. The suffix is removed from the payload before it is forwarded to the Workstation Connector. The default value is `\r`, which corresponds to the carriage return that most keyboard emulating devices append to the key stroke. How this carriage return arrives depends on the platform: on Windows the operating system adds a line feed `\n` to the default carriage return, so the key strokes are followed by `\r\n`, while on macOS and Linux only a line feed `\n` is received. Set the suffix to match what your platform delivers, for example `\r` on Windows and `\n` on macOS and Linux. |
-    | **Minimum Message Length** | Optional; the shortest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. |
-    | **Maximum Message Length** | Optional; the longest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. If you set both values, the maximum must be greater than or equal to the minimum. |
-    | **Prefix** | Optional; a series of characters denoting the start of a message. The prefix is removed from the payload before it is forwarded to the Workstation Connector. |
+    * **Inter Character Timeout (ms)** - Required; the maximum allowed amount of time in milliseconds between key strokes for them to be considered as coming from a device. The value must be a positive integer. The default value is `50`.
+    * **Keyboard Layout** - Required; the keyboard layout of the device. To use the active keyboard layout as defined by your operating system, select **System**. Select **en-US** as a fallback when the system keyboard layout is not compatible with the device. For example, many barcode scanners send characters from the Latin alphabet, which the system layout cannot resolve if the operating system uses a non-Latin layout such as Chinese. The default value is **System**.
+    * **Suffix** - Required; a series of characters denoting the end of a message. The suffix is removed from the payload before it is forwarded to the Workstation Connector. The default value is `\r`, which corresponds to the carriage return that most keyboard emulating devices append to the key stroke. How this carriage return arrives depends on the platform: on Windows the operating system adds a line feed `\n` to the default carriage return, so the key strokes are followed by `\r\n`, while on macOS and Linux only a line feed `\n` is received. Set the suffix to match what your platform delivers, for example `\r` on Windows and `\n` on macOS and Linux.
+    * **Minimum Message Length** - Optional; the shortest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length.
+    * **Maximum Message Length** - Optional; the longest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. If you set both values, the maximum must be greater than or equal to the minimum.
+    * **Prefix** - Optional; a series of characters denoting the start of a message. The prefix is removed from the payload before it is forwarded to the Workstation Connector.
 
 7. Click **Add Device**.
 

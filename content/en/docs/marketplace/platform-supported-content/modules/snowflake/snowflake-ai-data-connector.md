@@ -37,6 +37,7 @@ The Snowflake AI Data Connector supports the following:
         * [EMBED_TEXT_1024](https://docs.snowflake.com/en/sql-reference/functions/embed_text_1024-snowflake-cortex) – Given a piece of text, returns a vector embedding of 1024 dimensions that represents that text.
           
     * Use [Snowflake Cortex Analyst](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst) – This Snowflake Cortex feature is used to get information/insights out of structured data sets using natural language instead of sql. Cortex Analyst works with semantic models or semantic model views that define how your data should be interpreted.
+    * Invoke the [Snowflake Cortex Agent](/appstore/connectors/snowflake/cortex-agent/) - Snowflake Cortex Agent is a fully managed, LLM-powered feature that enables you to build intelligent conversational applications capable of answering business questions by orchestrating across multiple tools - including structured data queries, document search, custom Snowflake procedures, and web search.
     * Execute synchroneous calls.
     * Query your Cortex Search services.
 

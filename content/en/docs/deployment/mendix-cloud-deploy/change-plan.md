@@ -71,7 +71,7 @@ Changing plan consumes [Mendix Cloud Tokens](/control-center/cloud-tokens/#cloud
 
 ### Plan Change Request Status {#plan-change-status}
 
-This diagram illustrates the lifecycle of a plan change request, from its submission to its final resolution (rejected, completed, or failed).
+This diagram illustrates the lifecycle of a plan change request, from its submission to its final resolution (rejected, canceled, completed, or failed).
 <!-- Diagram created with draw.io. Source file: /attachments/deployment/mendix-cloud-deploy/change-plan/change-plan-status.draw.io. Instructions: https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+Icons+and+Videos#Draw.io  -->
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/change-plan/change-plan-status.png" >}}
@@ -87,6 +87,7 @@ A Technical Contact initiates the process by submitting a plan change request.
 5. **Ineligible** – The plan change did not execute because it failed the necessary validations.
 6. **Completed** – Plan change was successfully applied to the environment
 7. **Failed** – The plan change did not complete successfully.
+8. **Canceled** – The Technical Contact canceled the request. You can cancel a request until it is **In Progress**, including after it is scheduled. You cannot cancel a request that is **In Progress**, **Rejected**, or **Completed**.
 
 ## Managing Plan Requests {#manage-plan-requests}
 
@@ -98,7 +99,7 @@ To access it:
 2. Click **Environments** on your app.
 3. Open the **Change Requests** tab.
 
-Plan change requests have **Plan Upgrade** as the **Request Type**. For more information on the **Change Requests** tab, refer to the [Change Requests](/developerportal/deploy/environments/#change-requests) section in *Environments and Deployment*.
+Plan change requests have **Plan Change** as the **Request Type**. For more information on the **Change Requests** tab, refer to the [Change Requests](/developerportal/deploy/environments/#change-requests) section in *Environments and Deployment*.
 
 ### Plan Change Requests Details {#change-requests-action}
 
@@ -125,7 +126,7 @@ In the **Request Details** page, depending on the request's [status](#plan-chang
 * **Ineligible** – Click **Re-Schedule Change** to schedule the plan change again after addressing the validation issues.
 
 {{% alert color="warning" %}}
-If the Technical Contact cancels a request, the plan change process is canceled entirely. To proceed with a plan change, the Technical Contact must start over and submit a new request.
+If the Technical Contact cancels a request, its status changes to **Canceled** and the plan change process is canceled entirely. To proceed with a plan change, the Technical Contact must start over and submit a new request.
 {{% /alert %}}
 
 ## Scheduling a Plan Change {#scheduling-a-plan-change}
@@ -167,4 +168,4 @@ After a plan change is applied, you cannot change to a new plan for the same env
 
 ## Monitoring Updates {#monitoring-updates}
 
-To stay informed about changes and status updates, open notifications by clicking on the **Notifications** icon ({{< icon name="alarm-bell" >}}) at the upper-right corner of the Mendix platform.
+To stay informed about changes and status updates, open notifications by clicking the **Notifications** icon ({{< icon name="alarm-bell" >}}) at the upper-right corner of the Mendix platform.

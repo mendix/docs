@@ -215,7 +215,11 @@ Secret key naming inside the Key Vault or SecretProviderClass follows the genera
 | MxAdmin Password | `mx-admin-password` (fixed literal) | `mx-admin-password` |
 | Debugger Password | `mx-debugger-password` (fixed literal) | `mx-debugger-password` |
 
-Azure Key Vault secret names cannot contain periods, so any periods in a constant or runtime setting name are converted to hyphens for the Key Vault entry (`objectName`). The `objectAlias` - that is, the file name actually mounted into the pod and read by the Mendix Runtime - always keeps the periods, exactly matching the format in the official documentation, for example, `mx-const-MyFirstModule.WelcomePageTitle`. Private Mendix Platform performs this conversion consistently both when it writes the value to Key Vault and when it builds the SecretProviderClass entry, so the two always stay in sync.
+#### Disallowed Characters for Azure Key Vault Secret Names
+
+Azure Key Vault secret names cannot contain underscores (`_`), periods (`.`), spaces, and special symbols. Private Mendix Platform converts any periods in a constant or runtime setting name to hyphens for the Key Vault entry (`objectName`). The `objectAlias` - that is, the file name actually mounted into the pod and read by the Mendix Runtime - always keeps the periods, exactly matching the format in the official documentation, for example, `mx-const-MyFirstModule.WelcomePageTitle`. Private Mendix Platform performs this conversion consistently both when it writes the value to Key Vault and when it builds the SecretProviderClass entry, so the two always stay in sync.
+
+However, other special characters are not automatically converted, so constant names that contain them cannot be stored in Azure Key Vault.
 
 ## Using Key Vault Integration
 

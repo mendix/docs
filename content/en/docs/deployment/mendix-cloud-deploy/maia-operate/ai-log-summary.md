@@ -22,7 +22,7 @@ AI Log Summary is currently not available in Mendix Cloud Africa (Cape Town).
 
 ## Prerequisites
 
-To use AI Log Summary, you must have **Access to Monitoring** permission for the environment. For more information, refer to [Node Permissions](/developerportal/deploy/node-permissions/#access-to-monitoring).
+To use AI Log Summary, you must have **Monitoring Access** permission for the environment. For more information, refer to [Node Permissions](/developerportal/deploy/node-permissions/#access-to-monitoring).
 
 ## Generating a Log Summary {#generate-log-summary}
 

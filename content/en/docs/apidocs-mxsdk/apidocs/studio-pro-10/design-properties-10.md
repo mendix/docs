@@ -1,8 +1,8 @@
 ---
 title: "Design Properties API"
-url: /apidocs-mxsdk/apidocs/design-properties/
+url: /apidocs-mxsdk/apidocs/design-properties-10/
 description: "This API guide outlines how design properties work in Atlas UI and can help you create custom design properties."
-weight: 50
+weight: 56
 ---
 
 ## Introduction
@@ -10,9 +10,9 @@ weight: 50
 The Mendix Design Properties API allows you to create or extend design properties for your Mendix apps.
 
 {{% alert color="info" %}}
-This document pertains to Mendix 11. For other Design Properties API documents, see the other documents in this category:
+This document pertains to Mendix 10. For other Design Properties API documents, see these documents:
 
-* [Mendix 10](/apidocs-mxsdk/apidocs/design-properties-10/)
+* [Mendix 11](/apidocs-mxsdk/apidocs/design-properties-11/)
 * [Mendix 9](/apidocs-mxsdk/apidocs/design-properties-9/)
 {{% /alert %}}
 
@@ -68,7 +68,6 @@ Here is a simplified example of a design properties file:
             "name": "My Toggle Property",
             "type": "Toggle",
             "description": "Description of My Toggle Design Property",
-            "category": "Best place for this toggle property",
             "class": "hereMyClass"
         },
         {
@@ -117,29 +116,17 @@ As you can see, design properties are defined as a *JSON* object where the keys 
 
 Every design property in the array is also represented by a *JSON* object. The exact structure of each object is dependent on its type, as indicated by the `type` property. All types also share common fields such as `name` and `description`. Those names determine how a design property appears to a user in Mendix Studio Pro.
 
-#### Common Fields {#common-fields}
+#### Common Fields
 
-The common fields, as seen within the example above, are available on all the design properties as defined in the following table.
+The examples above show that the fields `name` and `description` define the UI, the name of a form control in Studio Pro, and the description under it. They are required string values naming and describing a design property. 
 
-| Field          | Required | Type   | Description                                                                                   |
-| -------------- | -------- | ------ | --------------------------------------------------------------------------------------------- |
-| `name`         | Yes      | String | The name and identifier for the design property, which are displayed in the UI.            |
-| `description`  | Yes      | String | A short description of the design property and what it provides.                              |
-| `type`         | Yes      | String | Defines a property's type.                                                              |
-| `category`     | No       | String | An identifier that will be used to group design properties in the UI (defaults to **General**). |
+Field `type` defines the type of a property and must be one of the design property types: `Toggle`, `Dropdown`, `Colorpicker`, `ToggleButtonGroup` or `Spacing`.
 
 {{% alert color="warning" %}}
 Name your design property and its options carefully. Those names cannot be changed easily when there are apps already using them. 
 
 If you want to rename a design property which is already being used in an app, see the [Renaming Design Properties](#old-names) section below.
 {{% /alert %}}
-
-##### Limitations
-
-Please note the following design property limitations:
-
-* It is important to note that the `category` should not be **Common**, as this is a reserved category. Setting `category` to **Common** will cause Studio Pro to raise a warning and display that design property within the default category.
-* The `type`property must be one of the following design property types: `Toggle`, `Dropdown`, `Colorpicker`, `ToggleButtonGroup`, or `Spacing`.
 
 #### Toggle-Specific Fields
 
@@ -763,6 +750,33 @@ In that situation, you can combine **Dropdown**, **Colorpicker**, **ToggleButton
 ```
 
 When the **Small** option is selected, the `borderRadiusSmall` class will be applied to the widget. On the other hand, when **Large** is selected, the `--radius-large` variable will be assigned to the `border-radius` property of the widget.
+
+## Translating Design Properties
+
+Design properties can be translated to match the end-user's preferred user interface language. This includes the name of the design property, its description, and any of its options (if it has any) as shown in the **Properties** tab. The provided translations do not affect the behavior of the design property.
+
+To provide translations for your design properties, create a file *locales/{language-code}/translation.json* in the **Styling** folder of your module. The language code can be any of the user interface languages supported by Studio Pro, such as *en-US*, *ja-JP*, *ko-KR*, or *zh-CN*. Other files in the **locales/{language-code}** folders will be ignored. As a result, custom namespaces cannot be used. As an example, a resulting structure could look like this:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/translations.png" alt="A translation.json file in the Styling/locales/de-DE folder" class="no-border" max-width=50% >}}
+
+These JSON files follow the format used by the i18next library, specifically v3. See the [the i18next JSON format documentation](https://www.i18next.com/misc/json-format) for more information. For example to translate a design property with the name **Text align** with the options **left**, **center** and **right**, the contents of *locales/ko-KR/translation.json* might look something like this:
+
+```json
+{
+    "Text align": "텍스트 정렬",
+    "left": "왼쪽",
+    "center": "센터",
+    "right": "오른쪽"
+}
+```
+
+All design properties and options with the same name will be translated the same way, even if they are defined in different modules. When two or more modules define a translation for the same design property or design property option, the one used is not guaranteed to be the same as the one outlined in [Extending or Overriding Design Properties of Other Modules](#extend-existing-design-properties). As a result, we recommend to only translate design properties and design property options in the same module in which they are defined.
+
+If a translation is not available, the names and descriptions as defined in *design-properties.json* are used as a fallback instead. For example, the user changes their settings to work with Studio Pro in Korean, but the module does not have a *locales/ko-KR/translation.json* file. This can also happen if the name of a design property, any of its options or descriptions are missing from the corresponding *translation.json* file.
+
+{{% alert color="warning" %}}
+When adding translations for existing design properties, do not change the name of existing design properties or their options as defined in *design-properties.json*. Those names cannot be changed easily when there are apps already using them. For more information, see the [Renaming Design Properties](#old-names) section above.
+{{% /alert %}}
 
 ## Read More
 

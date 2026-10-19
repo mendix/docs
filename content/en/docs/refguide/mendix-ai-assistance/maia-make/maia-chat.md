@@ -72,4 +72,4 @@ Click **Submit feedback** to send your feedback. Maia Chat then returns you to t
 ## Read More
 
 * [Maia Make Capabilities](/refguide/maia-make/)
-* [Maia Learn](/refguide/maia-learn/) – the **Maia** pane also includes a **Learn** tab
+* [Maia Learn](/refguide/maia-learn/) 

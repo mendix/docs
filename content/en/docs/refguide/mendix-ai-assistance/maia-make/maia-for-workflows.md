@@ -10,12 +10,12 @@ description: "Describes how Maia Make generates, explains, and improves workflow
 ## Introduction
 
 {{% alert color="info" %}}
-In Studio Pro 11.9 and above, workflow generation is part of [Maia Make](/refguide/maia-make/). In Studio Pro 11.7 and below, it was a separate tool called Maia for Workflows.
+In Studio Pro 11.9 and above, workflow generation is part of [Maia Make](/refguide/maia-make/). In Studio Pro 11.7 and below, it is a separate tool called Maia for Workflows.
 
 To use this capability, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Maia can generate a [workflow](/refguide/workflows/). It can also provide explanations or suggest improvements to the generated elements. You can work on workflows in the same conversation in which you create the domain model, pages, logic, and other parts of your app. There are some limitations. For more details, see the [Limitations](#limitation) section below.
+Maia can generate a [workflow](/refguide/workflows/). It can also provide explanations or suggest improvements to the generated elements. You can work on workflows in the same conversation in which you create the domain model, pages, logic, and other parts of your app. For information on the current limitations, see the [Limitations](#limitation) section below.
 
 ## Working with Workflows in Maia
 

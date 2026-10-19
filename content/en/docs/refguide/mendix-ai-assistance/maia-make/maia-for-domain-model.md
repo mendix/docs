@@ -12,12 +12,12 @@ aliases:
 ## Introduction
 
 {{% alert color="info" %}}
-In Studio Pro 11.8 and above, domain model generation is part of [Maia Make](/refguide/maia-make/). In Studio Pro 11.7 and below, it was a separate tool called Maia for Domain Model.
+In Studio Pro 11.8 and above, domain model generation is part of [Maia Make](/refguide/maia-make/). In Studio Pro 11.7 and below, it is a separate tool called Maia for Domain Model.
 
 To use this capability, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Maia can generate new [domain models](/refguide/domain-model/) and explain and improve existing domain models. You can work on the domain model in the same conversation in which you create pages, logic, and other parts of your app. There are some limitations. For more information, see the [Limitations](#limitation) section below.
+Maia can generate new [domain models](/refguide/domain-model/) and explain and improve existing domain models. You can work on the domain model in the same conversation in which you create pages, logic, and other parts of your app. For information on the current limitations, see the [Limitations](#limitation) section below.
 
 ## Working with Domain Models in Maia
 

@@ -11,7 +11,7 @@ aliases:
 
 Mendix AI Assistance (Maia) is the agentic development capability of the Mendix Platform. With agentic development, you give an agent a development goal, and the agent carries out the work by determining which documents to create or change, using tools, and asking clarifying questions when it needs more information. You direct the work and review the result. Maia supports you in this way across the full application lifecycle, from learning and planning, through modeling and building, to quality improvement, operation, and the ongoing evolution of your app.
 
-Maia is not a single feature. It is a set of capabilities that share one foundation: the Mendix app model. A Mendix app consists of model documents, such as domain models, pages, microflows, and workflows. Maia reads and changes these same documents. When Maia generates a microflow, the result is a regular microflow that you can open, inspect, and change in Studio Pro, just like a microflow that you model yourself.
+Maia is not a single feature. It is a set of capabilities that share one foundation: the Mendix app model. A Mendix app consists of model documents, such as domain models, pages, microflows, and workflows. Maia reads and changes these same documents. For example, when Maia generates a microflow, the result is a regular microflow that you can open, inspect, and change in Studio Pro, just like a microflow that you model yourself.
 
 This foundation has the following practical results for you as a developer:
 
@@ -70,7 +70,7 @@ Mendix AI Assistance (Maia) in Studio Pro has the following capabilities.
 
 ### Starting Points
 
-* [Start with Maia](/refguide/start-with-maia/) – Start with Maia helps you to start the app development process in Studio Pro. Provide a text description and an optional image or PDF, and Maia generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. 
+* [Start with Maia](/refguide/start-with-maia/) – Start with Maia helps you start the app development process in Studio Pro. Provide a text description and an optional image or PDF, and Maia generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. 
 
 ### Agentic Development with Maia Make
 
@@ -90,13 +90,13 @@ The following pages explain how Maia Make works with each document type and desc
 For Private Mendix Platform, this feature is supported for version 11.6 and above.
 {{% /alert %}}
 
-* **Pages** – Maia generates a [page](/refguide/page/) and adds and configures widgets based on a text input and an optional image. You can continue in the same conversation to ask Maia for further improvements and explanations. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
+* **Pages** – Maia generates a [page](/refguide/page/) and adds and configures widgets based on text input and an optional image. You can continue in the same conversation to ask Maia for further improvements and explanations. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
 
 {{% alert type="info" %}}
 For Private Mendix Platform, this feature is supported for version 11.6 and above.
 {{% /alert %}}
 
-* **OQL** – Maia generates and manages OQL (Object Query Language) queries. For more information, see [OQL in Maia Make](/refguide/maia-for-oql/).
+* **OQL** – Maia generates and manages [OQL (Object Query Language)](/refguide/oql/) queries. For more information, see [OQL in Maia Make](/refguide/maia-for-oql/).
 * **Workflows** – Maia generates a [workflow](/refguide/workflows/) from a use case in text or an image. For more information, see [Workflows in Maia Make](/refguide/maia-for-workflows/).
 
 For all document types that Maia Make supports, see the [Supported Document Types](/refguide/maia-make/#supported-document-types) section of *Maia Make Capabilities*.
@@ -106,7 +106,7 @@ For all document types that Maia Make supports, see the [Supported Document Type
 In Studio Pro 11.8 and above, [Maia Make](/refguide/maia-make/) replaces Maia Chat, the earlier chat interface in Studio Pro. You can use Maia's chat interface to ask questions and request explanations.
 
 * **[Chat with Maia](/refguide/maia-chat/)** – Ask questions about app development in Mendix using Maia's chat feature, including how to apply concepts, best practices, and development patterns. 
-* [Maia Learn](/refguide/maia-learn/) – Maia Learn helps you to learn Mendix core concepts quickly to get started with Studio Pro. 
+* [Maia Learn](/refguide/maia-learn/) – Learn Mendix core concepts quickly to get started with Studio Pro. 
 * [Maia Explain](/refguide/maia-explain/) – Maia Explain helps you understand existing documents, such as microflows and pages. It explains the general purpose of the document and highlights specific technical details. 
 
 ### Context and Customization
@@ -130,7 +130,7 @@ In Studio Pro 11.8 and above, [Maia Make](/refguide/maia-make/) replaces Maia Ch
 ### External AI Agents and AI Providers
 
 * [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) – The Studio Pro MCP Server exposes Maia capabilities to external AI agents and AI coding assistants through the Model Context Protocol (MCP). This is also known as bring your own agent (BYO Agent).
-* **Custom AI provider** – A custom AI provider lets Maia use your own LLM provider instead of the Mendix platform AI service. This is also known as bring your own LLM (BYO LLM). This feature is available in Studio Pro 11.12 and above as a beta feature. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section in *Maia Make Capabilities*.
+* Custom AI provider – A custom AI provider lets Maia use your own LLM provider instead of the Mendix platform AI service. This is also known as bring your own LLM (BYO LLM). This feature is available in Studio Pro 11.12 and above as a beta feature. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section in *Maia Make Capabilities*.
 
 For an overview of how these options work together, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
 
@@ -185,7 +185,7 @@ The table below presents all the third-party services each Maia capability uses 
 | Logic Recommender | No third-party services used | N/A |
 | UI Recommender | No third-party services used | N/A |
 | Workflow Recommender | No third-party services used | N/A |
-| Domain Models in Maia Make | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
+| Maia for Domain Models | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
 | Maia for Pages | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
 | Maia for OQL | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
 | Maia for Workflows | [Claude in Amazon Bedrock](https://aws.amazon.com/bedrock/claude/) | Project context to fulfill user prompt request |
@@ -207,4 +207,4 @@ For more working practices, such as how to give Maia context and how to review i
 * [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/)
 * [Using Maia with External AI Agents](/refguide/maia-external-agents/)
 * [Maia Make Capabilities](/refguide/maia-make/)
-* [Enrich Your Mendix App with Agentic Capabilities](/agents/) – for building AI features into your apps
+* [Enrich Your Mendix App with Agentic Capabilities](/agents/)

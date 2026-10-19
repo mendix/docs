@@ -32,11 +32,11 @@ Generators:
 
     For Private Mendix Platform, this feature is supported for version 11.6 and newer.
     
-* **Pages in Maia Make** – helps you generate a [page](/refguide/page/). It helps you add and configure widgets based on a text input and an optional image. After a page is generated, you can continue in the same session to ask Maia for further improvements and explanations. For more information, see [Maia for Pages](/refguide/maia-for-pages/).
+* **Pages in Maia Make** – helps you generate a [page](/refguide/page/). It helps you add and configure widgets based on a text input and an optional image. After a page is generated, you can continue in the same session to ask Maia for further improvements and explanations. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
 
     For Private Mendix Platform, this feature is supported for version 11.6 and newer.
 
-* **Workflows in Maia Make** – helps you generate a [Workflow](/refguide/workflows/). By providing a use case via text input or an image, Maia can help you start creating your workflows. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/).
+* **Workflows in Maia Make** – helps you generate a [Workflow](/refguide/workflows/). By providing a use case via text input or an image, Maia can help you start creating your workflows. For more information, see [Workflows in Maia Make](/refguide/maia-for-workflows/).
 * **Validation Assist** – helps you build validation microflows in a more automated way using pre-built expressions. For more information, see [Validation Assist](/refguide/validation-assist/).
 
 ## Changing the LLM Provider for Maia
@@ -61,8 +61,8 @@ The following table shows which Maia capabilities are supported by various model
 
 | Maia Capability | AWS Bedrock | Anthropic | Azure | OpenAI |
 | --- | --- | --- | --- | --- |
-| **Maia for Pages** | Full support | Full support | Simple requests only | Simple requests only |
-| **Maia for Domain Model** | Full support | Full support | Full support | Full support |
+| **Pages in Maia Make** | Full support | Full support | Simple requests only | Simple requests only |
+| **Domain Models in Maia Make** | Full support | Full support | Full support | Full support |
 | **Workflows in Maia Make** | Full support | Full support | Simple requests only | Does not support workflow creation |
 | **Start with Maia** | Full support | Full support | Full support | Full support |
 | **Best Practice Recommender** | Full support | Full support | Full support | Full support |

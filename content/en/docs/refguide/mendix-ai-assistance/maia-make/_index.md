@@ -54,7 +54,7 @@ The following table lists Maia Make Standalone Capabilities and the Studio Pro v
 
 | Capability | Description | Available in Maia Make from | Remarks |
 | --- | --- | --- | --- |
-| [Questions and guidance](/refguide/maia-chat/) | Answers questions about all aspects of Mendix development in the same chat in which you build. | Studio Pro 11.8 | Supersedes Maia Chat, the earlier chat interface in Studio Pro. |
+| [Chat](/refguide/maia-chat/) | Answers questions about all aspects of Mendix development in the same chat in which you build. | Studio Pro 11.8 | Replaces Maia Chat, the earlier chat interface in Studio Pro. |
 | [Maia Explain](/refguide/maia-explain/) | Explains the purpose and logic of existing documents. | Studio Pro 11.8 | Can be used directly in the chat interface, or in the App Explorer by right-clicking a document and clicking **Maia Explain**. |
 | [Maia MCP Client](/refguide/maia-mcp/) | Connects Maia to external MCP servers, giving it access to third-party tools. | Studio Pro 11.8 | |
 | [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) | Exposes Studio Pro as an MCP server for use by external AI tools. | Studio Pro 11.10 | |
@@ -78,7 +78,7 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Themes and styling | Allows Maia to modify theme variables, create custom styling, and manage design properties. | Studio Pro 11.12 | |
 | Markdown attachment support | Allows you to provide Markdown documents as input to help Maia better understand your requirements. | Studio Pro 11.12 | |
 | Explain and solve consistency errors | Allows you to use Maia to explain or solve problems by right-clicking the item in the **Errors** pane. | Studio Pro 11.12.1 | |
-| Translations | Allows Maia to create and update translations of the texts in your app. | Studio Pro 11.15 | |
+| Translations | Allows Maia to create and update translations in your app. | Studio Pro 11.15 | |
 
 ## Using Maia Make Capabilities
 
@@ -120,7 +120,7 @@ This option ({{% icon name="plug" %}}) allows you to connect external [MCP](http
 
 #### Add File to Maia Chat
 
-The **Add file to Maia** option (@ icon) allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer**, where it appears in the context menu.
+The **Add file to Maia Chat** option (@ icon) allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer**, where it appears in the context menu.
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add-files.jpg" width="250px" alt="" >}}
 
@@ -142,11 +142,11 @@ When Maia needs more information, it asks clarifying questions through a dedicat
 
 Maia changes regular documents in your app. You stay in control of these changes in the following ways:
 
-* **Changed list** – After each request, the [Changed List](#changed-list) shows the documents that Maia added or changed. Select an entry to open the document in its editor.
-* **Consistency checks** – Studio Pro checks the documents that Maia creates or changes for consistency errors. In Studio Pro 11.12.1 and above, you can right-click an item in the **Errors** pane to ask Maia to explain or solve it.
-* **Undo** – In Studio Pro 11.9 and above, you can undo Maia changes per document or for all documents.
-* **Version control** – Maia changes are part of your local changes, so you decide when to commit them. For more information, see [Version Control](/refguide/version-control/).
-* **Settings** – You can disable Maia Make capabilities in Studio Pro **Preferences** on the **Maia** tab.
+* Changed list – After each request, the [Changed List](#changed-list) shows the documents that Maia added or changed. Select an entry to open the document in its editor.
+* Consistency checks – Studio Pro checks the documents that Maia creates or changes for consistency errors. In Studio Pro 11.12.1 and above, you can right-click an item in the [Errors](/refguide/errors-pane/) pane to ask Maia to explain or solve it.
+* Undo – In Studio Pro 11.9 and above, you can undo Maia changes per document or for all documents.
+* Version control – Maia changes are part of your local changes, so you decide when to commit them. For more information, see [Version Control](/refguide/version-control/).
+* Settings – You can disable Maia Make capabilities in Studio Pro [Preferences](/refguide/preferences-dialog/#ai-tab) on the **AI** tab.
 
 For practices that help you review and control AI-generated changes, see the [Working Practices for Agentic Development](/refguide/agentic-development/#working-practices) section of *Agentic and Model-Driven Development*.
 

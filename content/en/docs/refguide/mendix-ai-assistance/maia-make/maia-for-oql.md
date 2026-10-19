@@ -9,12 +9,12 @@ description: "Describes how Maia Make generates OQL queries for view entities in
 ## Introduction
 
 {{% alert color="info" %}}
-In Studio Pro 11.9 and above, OQL generation is part of [Maia Make](/refguide/maia-make/). In Studio Pro 11.8 and below, it was a separate tool called Maia for OQL.
+In Studio Pro 11.9 and above, OQL generation is part of [Maia Make](/refguide/maia-make/). In Studio Pro 11.8 and below, it is a separate tool called Maia for OQL.
 
 To use this capability, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-Maia can generate and manage OQL (Object Query Language) queries. This simplifies query creation and reduces manual effort. There are some limitations. For more details, see the [Limitations](#limitations) section below.
+Maia can generate and manage OQL (Object Query Language) queries. This simplifies query creation and reduces manual effort. For information on the current limitations, see the [Limitations](#limitations) section below.
 
 ## Working with OQL in Maia
 

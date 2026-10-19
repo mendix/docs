@@ -12,7 +12,7 @@ aliases:
 ## Introduction
 
 {{% alert color="info" %}}
-In Studio Pro 11.8 and above, page generation is part of [Maia Make](/refguide/maia-make/). In Studio Pro 11.7 and below, it was a separate tool called Maia for Pages.
+In Studio Pro 11.8 and above, page generation is part of [Maia Make](/refguide/maia-make/). In Studio Pro 11.7 and below, it is a separate tool called Maia for Pages.
 
 To use this capability, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}

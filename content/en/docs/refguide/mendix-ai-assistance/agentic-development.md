@@ -15,7 +15,7 @@ AI changes how teams build software. AI agents can now take a development goal, 
 * How do you review its work? 
 * What is the role of the developer?
 
-This document describes what agentic development is, why model-driven development and agentic development reinforce each other, and how Mendix AI Assistance (Maia) and other agents work with professional developers. For an overview of all Maia capabilities, see [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/).
+This document describes what agentic development is, why model-driven development and agentic development reinforce each other, and how Mendix AI Assistance (Maia) and other agents work with professional developers. For an overview of all Maia capabilities, see [Maia Make Capabilities](/refguide/maia-make/).
 
 ## What Is Agentic Development {#what-is-agentic-development}
 

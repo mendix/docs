@@ -54,7 +54,7 @@ Studio Pro sends a message to Maia, and a chat interface with an initial answer 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-explain/maia-explain-interface.png" alt="" width="300px">}}
 
 {{% alert color="info" %}}
-In this dedicated chat, only requests related to Maia Explain are properly handled. If you have other questions, close this chat and go back to the general [Chat](/refguide/maia-chat/) interface.
+Only requests related to Maia Explain are properly handled in this chat. If you have other questions, close this chat and go back to the general [Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
 ## Read More

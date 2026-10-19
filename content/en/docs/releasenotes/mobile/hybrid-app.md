@@ -134,7 +134,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 <resource-file src="config/build-extras.gradle" target="build-extras.gradle" />
 ```
 
-    <!-- TODO: change color of SRC olive green text so it meets WCAG contrast ratios. The current hot pink is a little too bright to meet the requirements. -->  
+    <!-- TODO: change color of SRC olive green text so it meets WCAG contrast ratios. -->  
 
 * We changed how the *build-extras.xml* file is included in your app. Now PhoneGap Build properly includes that file.
 * The build process no longer fails when you do not provide a *GoogleServices-Info.plist* file. This is useful if you use Firebase Cloud Messaging for push notifications on Android, but use the Apple Push Notification service for push notifications on iOS.

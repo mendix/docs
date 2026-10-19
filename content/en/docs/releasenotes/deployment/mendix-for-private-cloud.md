@@ -16,9 +16,9 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 #### Portal Improvements
 
-* We have fixed an issue where existing cluster manager and namespace member avatars were not visible.
+* We have fixed an issue where the avatars of the cluster manager and namespace members were not visible.
 * We have fixed an issue where the **Compare and Edit** feature bypassed both environment access controls and mask settings. (Ticket 287517)
-* We have fixed an issue where stopping and redeploying a scaled production environment resets its replica count to 1, causing extra downtime during go-live. (Ticket 288080)
+* We have fixed an issue where stopping and redeploying a scaled production environment reset its replica count to 1, causing extra downtime during go-live. (Ticket 288080)
 
 ### September 10, 2026
 

@@ -60,6 +60,7 @@ Guidance:
 * **Maia Explain** – helps you easily understand a microflow or a nanoflow. It explains the general purpose of the logic and highlights specific technical details to help you understand the logic further. For more information, see [Maia Explain](/refguide/maia-explain/).
 * **Maia Agent Skills** – lets you define modular, reusable instructions that extend Maia with domain-specific knowledge. Maia applies them automatically whenever relevant, eliminating the need to repeat the same context across conversations. For more information, see [Maia Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/).
 * **Maia Agent Instructions** – allows you to define project- or module-level instructions (AGENTS.md) that steer agent behavior. You can use them to set common context for your prompts, such as company conventions or environment restrictions. For more information, see [Maia Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/).
+* **Maia Plan Mode** – allows you to create detailed plans of implementation for whole apps or large application features. For more information, see [Maia Plan Mode](/refguide/maia-plan-mode/).
 
 Recommenders:
 

@@ -161,7 +161,7 @@ You can sign in with your Mendix account or with your own company account if thi
 
 In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
 
-{{< figure src="/attachments/refguide/installation/install/untrusted-certificate.png" width="600px" class="no-border" >}}
+{{< figure src="/attachments/refguide/installation/install/untrusted-certificate.png" width="600px" class="no-border" alt="Untrusted certificate warning dialog." >}}
 
 To continue, you may accept the certificate for the current session by clicking **Accept for this session**, or install it permanently by clicking **View certificate information**. 
 

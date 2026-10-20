@@ -124,4 +124,6 @@ The Workstation Client sets up the required auto-start settings during the first
 
 ## Upgrading the Workstation Client
 
-To upgrade the Workstation Client, download the newest version from the above links, and re-run the installer. The installer detects if an older version of the Client is already running on the computer, and automatically stops it before performing the upgrade. If the Client cannot be automatically stopped, you must stop it yourself before proceeding with the upgrade.
+To benefit from bug fixes and newest features, we recommend that you always use the newest available Workstation Client version. Any breaking changes are explicitly mentioned in the [Mendix Workstation Release Notes](/releasenotes/workstation/), and usually happen only between major versions.
+
+To upgrade the Client, download the newest version from the above links, and re-run the installer. The installer detects if an older version of the Client is already running on the computer, and automatically stops it before performing the upgrade. If the Client cannot be automatically stopped, you must stop it yourself before proceeding with the upgrade.

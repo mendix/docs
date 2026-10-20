@@ -78,7 +78,7 @@ These are the available [merging and diffing commands](/refguide/mx-command-line
 | --- | --- |
 | [merge](/refguide/mx-command-line-tool/merge/#merge) | Merges the *.mpr* files. |
 | [diff](/refguide/mx-command-line-tool/merge/#diff) | Shows the diff of the *.mpr* files. |
-| [git-merge](/refguide/mx-command-line-tool/merge/#git-merge) | Merges a conflicting *.mpr *file. |
+| [git-merge](/refguide/mx-command-line-tool/merge/#git-merge) | Merges a conflicting *.mpr* file. |
 | [dump-mpr](/refguide/mx-command-line-tool/dump-mpr/) | Creates a JSON description of the model of a Mendix app. |
 
 ### Private Values Commands

@@ -22,7 +22,7 @@ Before starting this how-to, complete the following prerequisites:
 
 With the user authentication API, you can create a menu item that shows whether a user is currently signed in and, when signed in, displays the user's profile details. You also subscribe to the `signedIn` and `signedOut` events to show a notification whenever the authentication state changes.
 
-Replace your `src/main/index.ts` file with the following:
+Replace your `src/main/index.ts` file with the following text:
 
 ```typescript
 import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
@@ -86,16 +86,16 @@ export const component: IComponent = {
 };
 ```
 
-This code does the following:
+This code:
 
-* It uses `userAuthenticationApi` from `studioPro.ui.userAuthentication` to access the user authentication API.
-* It subscribes to the `signedIn` event to show a notification with the user's display name whenever a user signs in.
-* It subscribes to the `signedOut` event to show a notification whenever a user signs out.
-* It adds a menu item named **Current user authentication** that checks `isSignedIn()` and, when a user is signed in, shows the user's display name and username in a message box.
+* Uses `userAuthenticationApi` from `studioPro.ui.userAuthentication` to access the user authentication API
+* Subscribes to the `signedIn` event to show a notification with the user's display name whenever a user signs in
+* Subscribes to the `signedOut` event to show a notification whenever a user signs out
+* Adds a menu item named **Current user authentication** that checks `isSignedIn()` and, when a user is signed in, shows the user's display name and username in a message box
 
 ## User Authentication API
 
-This API provides events and methods that relate to the signed-in user's authentication state and profile.
+This API provides events and methods that relate to the signed-in user's authentication state and profile:
 
 * `signedIn`
 * `signedOut`
@@ -128,15 +128,15 @@ studioPro.ui.userAuthentication.addEventListener("signedOut", async () => {
 
 ### Checking Whether a User Is Signed In
 
-This API provides an `isSignedIn` method that returns a `Promise<boolean>` that resolves to `true` when a user is currently signed in to Studio Pro, and `false` otherwise.
+This API provides a `isSignedIn` method that returns a `Promise<boolean>` that resolves to `true` when a user is currently signed in to Studio Pro, and `false` if they are not.
 
 ### Getting the User Profile
 
 This API provides a `getUserProfile` method that returns a `Promise<UserProfileResult>` describing the signed-in user's profile. The result is a discriminated union on the `result` property:
 
-* `{ result: "error" }` – the profile could not be retrieved.
-* `{ result: "userNotSignedIn" }` – no user is currently signed in.
-* `{ result: "success"; profile: UserProfile }` – the profile was retrieved successfully, where `UserProfile` contains the properties listed above.
+* `{ result: "error" }` – the profile could not be retrieved
+* `{ result: "userNotSignedIn" }` – no user is currently signed in
+* `{ result: "success"; profile: UserProfile }` – the profile was retrieved successfully, where `UserProfile` contains the properties listed above
 
 ## Extensibility Feedback
 

@@ -6,6 +6,10 @@ weight: 40
 
 ## Introduction
 
+{{% alert color="info" %}}
+This feature was introduced in Studio Pro 11.2.0 as a beta feature and was released for GA in 11.6.0.
+{{% /alert %}}
+
 A workflow group provides the means to group users for [user task targeting](/refguide/user-task/#workflow-group).
 
 The advantage of targeting users through groups is that it is a dynamic concept: when users are added or removed from the group, the targeted users of a user task change accordingly. This does not happen when targeting users directly. For example, when a new user "John" is created and added to a "Managers" group, he will instantly see all the current tasks that are targeting this group. Similarly, those tasks will disappear from his inbox when he is removed from the group.

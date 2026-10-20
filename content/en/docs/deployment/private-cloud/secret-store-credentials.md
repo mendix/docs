@@ -296,7 +296,7 @@ To enable your environment to use Vault as external secret storage, follow these
           #  secretPath: "secret/data/<{env-configuration-secret}>"
     ```
 
-14. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true` in the Mendix app CRD.
+14. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. To configure this via the Mendix app CRD, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true`.
     The following yaml shows an example Mendix app CRD:
 
     ```yaml
@@ -383,7 +383,7 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
     kubectl -n <{Kubernetes namespace}> annotate serviceaccount <{environment name}> eks.amazonaws.com/role-arn=<{aws role ARN}>
     ```
 
-11. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
+11. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. To configure this via the Mendix app CRD, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true`.
 
     The following yaml shows an example Mendix app CRD:
 
@@ -513,7 +513,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
    ```sql
-   kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
+   kubectl run postgrestools docker.io/library/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
    export PGDATABASE=postgres
    export PGUSER=<database-username>
    export PGHOST=<database-host>
@@ -583,7 +583,7 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-vault/aks-keyvault-keys.png" >}}
 
-7. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
+7. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. To configure this via the Mendix app CRD, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true`.
 
     The following yaml shows an example Mendix app CRD:
 
@@ -844,7 +844,7 @@ To enable your environment to use [Google Secret Manager Provider](https://githu
 
 5. Create an app with the secret store enabled.
 
-    If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
+    If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. To configure this via the Mendix app CRD, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true`.
 
     The following yaml shows an example Mendix app CRD:
 
@@ -1019,7 +1019,7 @@ To enable your environment to use a regular, existing Kubernetes Secret for some
       # mx-const-MyFirstModule.MyConstant: "SecretValue"
     ```
 
-3. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true` in the Mendix app CRD.
+3. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. To configure this via the Mendix app CRD, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true`.
     The following yaml shows an example Mendix app CRD:
 
     ```yaml
@@ -1071,7 +1071,7 @@ When implementing a secret store, keep in mind the following considerations:
     * In Mendix 9.22 or above, database password rotation is processed without restarting the app.
 * Dynamic secrets in HashiCorp Vault are supported - from the app environment, they are identical to regular secrets.
 * The internal name of the environment must match an existing `ServiceAccount` and `SecretProviderClass` (or regular Kubernetes Secret).
-* CSI Secrets Storage can override app settings — if a parameter is configured in the Mendix Portal or `MendixApp` CR, the value from CSI Secrets Storage will have a higher priority and will override the value specified elsewhere. For example, CSI Secrets Storage can override the `MxAdmin` password, app constants, and runtime custom settings.
+* CSI Secrets Storage can override app settings—if a parameter is configured in the Mendix Portal or `MendixApp` CR, the value from CSI Secrets Storage will have a higher priority and will override the value specified elsewhere. For example, CSI Secrets Storage can override the `MxAdmin` password, app constants, and runtime custom settings.
 * If the secret is expected to be synchronized from an external source, create configuration for this synchronization process. For example, the [External Secrets Operator](https://external-secrets.io) needs an addititional `ExternalSecret` CR to specify where to get the data and any additional processing rules.
 * Consider enabling etcd encryption, which is available in [AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/enable-kms.html), [Azure AKS](https://learn.microsoft.com/en-us/azure/aks/use-kms-etcd-encryption) and other enterprise-grade Kubernetes distributions.
 * If the namespace has both a `SecretProviderClass` and regular Kubernetes Secret that match a `<{Mendix App CR name}>`, the `SecretProviderClass` takes priority, and the regular Kubernetes Secret will be ignored.

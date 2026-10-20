@@ -41,17 +41,17 @@ Getting all the required knowledge in each team might be difficult while keeping
 
 The core team is made up of the following:
 
-* Product Owner (PO) — Responsible for defining the direction of a project. They have a clear understanding of what the business and users need from the product being developed and the value to be delivered, and they translate these needs to the Scrum team. Ideally, a PO would have these five key [skills & characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/). The PO is expected to do the following:
+* Product Owner (PO) – Responsible for defining the direction of a project. They have a clear understanding of what the business and users need from the product being developed and the value to be delivered, and they translate these needs to the Scrum team. Ideally, a PO would have these five key [skills & characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/). The PO is expected to do the following:
 
     * Be a liaison between the business and the development team to build, prioritize, and manage the backlog to drive production forward.
     * Ensure the product being developed delivers the required value for the business and users. 
     * Accept or reject the completed work.          
-* Scrum Master (SM) — Ensures that the team follows Agile best practices and oversees addressing and removing any productivity blockers that may come up. Essentially, the SM is the authority in Agile and Scrum, and keeps the team working together efficiently and effectively. The SM is expected to do the following:
+* Scrum Master (SM) – Ensures that the team follows Agile best practices and oversees addressing and removing any productivity blockers that may come up. Essentially, the SM is the authority in Agile and Scrum, and keeps the team working together efficiently and effectively. The SM is expected to do the following:
     
     * Be a supportive leader. 
     * Help POs define the product’s value, plan work, and manage the backlog. 
     * Help developers self-organize.
-* Development Team — Consists of the people who actually build the app. They are responsible for turning requirements into functionality, based on the input provided by the Product Owner. The development team:
+* Development Team – Consists of the people who actually build the app. They are responsible for turning requirements into functionality, based on the input provided by the Product Owner. The development team:
     
     * Is comprised of one or more people with the skills needed to build the product as envisioned by the PO.
     * May be comprised of non-developers and traditional developers alike: architects, writers, technical BAs, designers, and other specialized roles can all be part of the development team. 
@@ -59,9 +59,9 @@ The core team is made up of the following:
 
 Accelerators are the following:
 
-* Business Analyst (BA) or Subject Matter Expert (SME) — They get involved when a team requires detailed knowledge about such subjects as UX/UI, QA, testing and integration. 
-* Business Owner — The primary stakeholder who is ultimately responsible and accountable for the end-result of the project and product, including the actual value delivered. 
-* Stakeholders — The end-users of the product under development, who represent strategical, tactical, and operational levels of the business. 
+* Business Analyst (BA) or Subject Matter Expert (SME) – They get involved when a team requires detailed knowledge about such subjects as UX/UI, QA, testing and integration. 
+* Business Owner – The primary stakeholder who is ultimately responsible and accountable for the end-result of the project and product, including the actual value delivered. 
+* Stakeholders – The end-users of the product under development, who represent strategical, tactical, and operational levels of the business. 
 
 Your team does not have to fit this exact mold, but it is important that all the responsibilities outlined here are covered to ensure success in your low-code program. This is a typical team structure:
 
@@ -141,7 +141,7 @@ A sample agenda of a successful program kickoff can include:
 * Why Mendix was chosen 
 * Business and IT alignment on:
    
-    * Organizational challenges and needs Mendix is solving (this is where your low-code vision will be very important — you always need to be able to tie Mendix work back to the larger business needs)
+    * Organizational challenges and needs Mendix is solving (this is where your low-code vision will be very important—you always need to be able to tie Mendix work back to the larger business needs)
     * An overview of the Mendix vision and strategy for your organization: 
         * Goals and success at both the organizational and project levels 
         * Important milestones 

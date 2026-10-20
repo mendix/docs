@@ -123,15 +123,158 @@ The flag `readOnly` indicates whether a value can actually be edited. It will be
 
 The value can be read from the `value` field and modified using `setValue` function. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
-When setting a value, a new value might not satisfy certain validation rules — for example a value might be bigger that the underlying attribute allows. In this case, your change will affect only `value` and `displayValue` received through a prop. Your change will not be propagated to an object’s attribute and will not be visible outside of your component. The component will also receive a validation error text through the `validation` field of `EditableValue`.
+When setting a value, a new value might not satisfy certain validation rules—for example a value might be bigger that the underlying attribute allows. In this case, your change will affect only `value` and `displayValue` received through a prop. Your change will not be propagated to an object’s attribute and will not be visible outside of your component. The component will also receive a validation error text through the `validation` field of `EditableValue`.
 
-It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
+It is possible for a component to extend the defined set of validation rules. A new validator—a function that checks a passed value and returns a validation message string if any—can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle—specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
 
-In practice, many client components present values as nicely formatted strings which take locale-specific settings into account. To facilitate such cases `EditableValue` exposes a field `displayValue` formatted version of `value`, and a method `setTextValue` — a version of `setValue` that takes care of parsing. `setTextValue` also validates that a passed value can be parsed and assigns the target attribute’s type. Similarly to `setValue`, a change to an invalid value will not be propagated further that the prop itself, but a `validation` is reported. Note that if a value cannot be parsed, the prop will contain only a `displayValue` string and `value` will become undefined.
+In practice, many client components present values as nicely formatted strings which take locale-specific settings into account. To facilitate such cases `EditableValue` exposes a field `displayValue` formatted version of `value`, and a method `setTextValue`—a version of `setValue` that takes care of parsing. `setTextValue` also validates that a passed value can be parsed and assigns the target attribute’s type. Similarly to `setValue`, a change to an invalid value will not be propagated further that the prop itself, but a `validation` is reported. Note that if a value cannot be parsed, the prop will contain only a `displayValue` string and `value` will become undefined.
 
 There is a way to use more the convenient `displayValue`  and `setTextValue` while retaining control over the format. A component can use a `setFormatter` method passing a formatter object: an object with `format` and `parse` methods. The Mendix Platform provides a convenient way of creating such objects for simple cases. An existing formatter exposed using a `EditableValue.formatter` field can be modified using its `withConfig` method. For complex cases formatters still can be created manually. A formatter can be reset back to default settings by calling `setFormatter(undefined)`.
 
 The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide9/attributes/#type).
+
+#### Formatter Details {#formatter-details}
+
+The `formatter` field on `EditableValue` is defined as follows:
+
+```ts
+type ParseResult<T> = { valid: true; value: T } | { valid: false };
+
+interface SimpleFormatter<T> {
+    format(value: T | undefined): string;
+    parse(value: string): ParseResult<T>;
+}
+```
+
+##### Built-in Formatter Types {#built-in-formatter-types}
+
+The Mendix platform provides two typed, configurable built-in formatters that extend `SimpleFormatter<T>`: `NumberFormatter` and `DateTimeFormatter`. The actual type of `EditableValue.formatter` is `ValueFormatter<T>` — a union that covers both built-in and plain formatters:
+
+```ts
+type ValueFormatter<T> =
+    | (TypedFormatter<T> & (NumberFormatter | DateTimeFormatter))
+    | (SimpleFormatter<T> & { readonly type?: never });
+```
+
+Use the `type` property as a type guard to narrow to a specific built-in formatter before accessing its extra API:
+
+```ts
+if (myAttribute.formatter.type === "datetime") {
+    // DateTimeFormatter — has withConfig, getFormatPlaceholder
+} else if (myAttribute.formatter.type === "number") {
+    // NumberFormatter — has withConfig
+} else {
+    // Plain SimpleFormatter — string, enum, or boolean
+}
+```
+
+##### DateTimeFormatter
+
+**Date/DateTime** attributes receive a `DateTimeFormatter`, which extends `SimpleFormatter<Date>`:
+
+```ts
+interface DateTimeFormatter extends SimpleFormatter<Date> {
+    readonly type: "datetime";
+    readonly config: DateTimeFormatterConfig;
+    withConfig(config: DateTimeFormatterConfig): DateTimeFormatter;
+    getFormatPlaceholder(): string | undefined;
+}
+```
+
+The `withConfig` method returns a **new formatter** with a different date pattern while preserving the user's locale. It accepts a `DateTimeFormatterConfig` with the following options:
+
+* `{ type: "date" }`: platform default date format
+* `{ type: "time" }`: platform default time format
+* `{ type: "datetime" }`: platform default datetime format
+* `{ type: "custom", pattern: "..." }`: custom Unicode date pattern (for example `"EEEE"`, `"dd MMMM"`, `"MMMM YYYY"`)
+
+The following example formats a date attribute using a custom month-year pattern:
+
+```ts
+if (myDateAttribute.formatter.type === "datetime") {
+    const customFormatter = myDateAttribute.formatter.withConfig({
+        type: "custom",
+        pattern: "MMMM YYYY"
+    });
+    const formatted = customFormatter.format(myDateAttribute.value); // e.g. "March 2026"
+}
+```
+
+`getFormatPlaceholder` returns a locale-appropriate placeholder string for the active date pattern, useful for input field `placeholder` attributes:
+
+```ts
+const placeholder = myDateAttribute.formatter.type === "datetime"
+    ? myDateAttribute.formatter.getFormatPlaceholder()
+    : undefined;
+```
+
+##### NumberFormatter
+
+**Decimal**, **Integer**, and **Long** attributes receive a `NumberFormatter`, which extends `SimpleFormatter<Big>`:
+
+```ts
+interface NumberFormatter extends SimpleFormatter<Big> {
+    readonly type: "number";
+    readonly config: NumberFormatterConfig;
+    withConfig(config: NumberFormatterConfig): NumberFormatter;
+}
+```
+
+`NumberFormatterConfig` has the following options:
+
+```ts
+interface NumberFormatterConfig {
+    readonly groupDigits: boolean;       // e.g. 1,000,000
+    readonly decimalPrecision?: number;
+}
+```
+
+The following example disables the thousands separator and fixes the output to four decimal places:
+
+```ts
+if (myNumberAttribute.formatter.type === "number") {
+    const customFormatter = myNumberAttribute.formatter.withConfig({
+        groupDigits: false,
+        decimalPrecision: 4
+    });
+    const formatted = customFormatter.format(myNumberAttribute.value); // e.g. "1234.5600"
+}
+```
+
+##### Plain SimpleFormatter
+
+For **string**, **enumeration**, and **Boolean** attributes the platform provides a plain `SimpleFormatter<T>` without a `type` property. These formatters convert raw values to human-readable captions (for example, enum captions configured in Studio Pro) and parse text input back to the typed value. They do **not** have `withConfig` or `getFormatPlaceholder`:
+
+```ts
+// myEnumAttribute is an EditableValue<string>
+const caption = myEnumAttribute.formatter.format(myEnumAttribute.value); // e.g. "In Progress"
+```
+
+##### Custom Formatters via setFormatter
+
+You can supply a fully custom formatter for any attribute type using `setFormatter`. The object must implement `format` and `parse`:
+
+```ts
+myDecimalAttribute.setFormatter({
+    format(value: Big | undefined): string {
+        return value !== undefined ? `$${Number(value).toFixed(2)}` : "";
+    },
+    parse(text: string): { valid: true; value: Big } | { valid: false } {
+        const num = Number(text.replace(/[$,]/g, ""));
+        return isNaN(num) ? { valid: false } : { valid: true, value: new Big(num) };
+    }
+});
+```
+
+Call `setFormatter(undefined)` to reset the formatter to the platform default.
+
+##### Quick Reference
+
+| Formatter type | `type` value | `withConfig` | `getFormatPlaceholder` | Applies to |
+|---|---|---|---|---|
+| `DateTimeFormatter` | `"datetime"` | ✅ `DateTimeFormatterConfig` | ✅ | `Date` |
+| `NumberFormatter` | `"number"` | ✅ `NumberFormatterConfig` | ❌ | `Big` (Decimal, Integer, Long) |
+| `SimpleFormatter` | `undefined` | ❌ | ❌ | `string`, `boolean`, Enum |
 
 ### ModifiableValue {#modifiable-value}
 
@@ -176,7 +319,7 @@ The value can be read from the `value` field and modified using the `setValue` f
 
 When setting a value, the `ObjectItem` must be items from the selectable object's data source. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
-It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
+It is possible for a component to extend the defined set of validation rules. A new validator—a function that checks a passed value and returns a validation message string if any—can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle—specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
 
 ### IconValue {#icon-value}
 

@@ -9,7 +9,7 @@ description: "Describes how to set deployment targets for Mendix Studio Pro."
 
 ## Introduction
 
-If you have a licensed app in Mendix Cloud, you can deploy it directly to an environment from Studio Pro. To do this, designate a target environment in [Apps](https://sprintr.home.mendix.com/), then click **App** > **Deploy to Licensed Cloud Node** in Studio Pro. These steps are described in detail below.
+If you have a licensed app in Mendix Cloud, you can deploy it directly to an environment from Studio Pro. To do this, designate a target environment in [Projects](https://projects.home.mendix.com/), then click **App** > **Deploy to Licensed Cloud Node** in Studio Pro. These steps are described in detail below.
 
 ## Selecting the Target Environment {#studio-pro-target}
 
@@ -21,7 +21,7 @@ If an environment is designated as the deployment target, you can see this on it
 
 To select a target environment for Studio Pro deployment, do the following:
 
-1. From [Apps](https://sprintr.home.mendix.com/), click **Environments** on your app.
+1. From [Projects](https://projects.home.mendix.com/), click **Environments** on your app.
 
 2. <a id="target"></a>In the **Overview** tab, click **Environment Settings** ({{% icon name="cog" %}}) .
 

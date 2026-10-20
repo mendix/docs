@@ -64,6 +64,26 @@ If the selected object originated from the server (not created on the device), a
 
 If the set of objects selected for synchronization contains objects without local changes, synchronization updates the local copy from the server database. If there is an object that has been deleted from the server or is no longer accessible due to access rules, that object will be removed from the local database too.
 
+### Background Synchronization {#background-sync}
+
+In Mendix version 11.15.0 and above, synchronization actions can run in the background, allowing users to continue working without waiting for synchronization to complete. Previously, this required additional steps to avoid blocking the nanoflow. Now, the Synchronize activity runs without blocking by default—no extra configuration is needed.
+
+{{% alert color="warning" %}}
+Background synchronization is only supported for **Synchronize Unsynchronized objects** and **Synchronize Selected object(s)**. Do not use background synchronization with **Synchronize All objects**. [All objects](#all-objects) synchronization rewrites the entire local database, and any changes made to offline data between the start and completion of the sync will be lost.
+{{% /alert %}}
+
+#### Behavior during Background Synchronization
+
+* Concurrent synchronizations are not supported.
+* Reading offline objects or files while a synchronization is running is safe.
+* Creating, updating, or writing offline objects and files is safe during background synchronization but may temporarily fail if the operation conflicts with an in-progress synchronization. Use error handling in your nanoflow to handle these cases.
+
+#### Background Synchronization Before Mendix Version 11.15.0
+
+In versions of Mendix before 11.15.0, avoid running synchronization processes in the background. For example, do not schedule periodic refreshes at fixed intervals. This approach can reduce application performance and result in unclear or misleading error messages for users.
+
+Instead, you can trigger synchronization explicitly when data updates are required. Ensure that users are informed of the synchronization status by displaying progress indicators or relevant feedback during the process.
+
 ## Properties
 
 The **Synchronize** activity properties consists of the following sections:
@@ -90,12 +110,6 @@ Running multiple synchronization processes at the same time is not supported, re
 If you try to trigger another synchronization process while the synchronization is in progress, the following error message will be shown: "Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-handling-in-nanoflows/#errorhandlers-nano).
-
-### Background Synchronization {#background-sync}
-
-Avoid running synchronization processes in the background, such as scheduling periodic refreshes at fixed intervals. This approach can negatively impact application performance and may result in unclear or misleading error messages for users.
-
-Instead, trigger synchronization explicitly when data updates are required. Ensure that users are informed of the synchronization status by displaying progress indicators or relevant feedback during the process.
 
 ## Read More
 

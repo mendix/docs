@@ -69,8 +69,49 @@ Every parameter must have a value specified unless the service indicates that th
 
 When the service indicates that a value cannot be empty (with `Nullable="false"`), the microflow will throw an error if the value evaluates to `empty`.
 
-If you have selected a variable for an entity that has associations, you can select which associations you want to include in the arguments that you call the external action with.
+{{% alert color="info" %}}
+The ability to not specify a value for optional parameters was introduced in [Studio Pro 11.4.0](/releasenotes/studio-pro/11.4/).
+{{% /alert %}}
+
+### Additional Attributes
+
+If you have selected a variable for an entity that is an open type (`OpenType="true"`), you can add additional attributes. The runtime adds these attributes to the attributes of the object when calling the action.
 
 {{% alert color="info" %}}
-The possibility to not specify a value for optional parameters was introduced in Studio Pro 11.4.0.
+The ability to add additional attributes was introduced in [Studio Pro 11.5.0](/releasenotes/studio-pro/11.5/).
 {{% /alert %}}
+
+#### Add/Edit Additional Attribute
+
+An additional attribute can have one of the following types:
+
+* Boolean
+* Date and time
+* Decimal
+* Enumeration
+* Integer/Long
+* String
+* List of Boolean
+* List of Date and time
+* List of Decimal
+* List of Enumeration
+* List of Integer/Long
+* List of String
+
+For types **Enumeration** and **List of Enumeration**, Studio Pro lets you choose the enumeration. This must be an external enumeration of the action's service.
+
+For types that are not a list, you type an expression of the given type.
+
+For list types, you:
+
+1. Choose an entity.
+2. Type an expression that is a list of that entity.
+3. Choose an attribute of that entity with the given type.
+
+{{% alert color="info" %}}
+List-types were introduced in [Studio Pro 11.6.0](/releasenotes/studio-pro/11.6/).
+{{% /alert %}}
+
+### Associations to Include
+
+If you have selected a variable for an entity that has associations, you can select the associations you want to include in the arguments that you call the external action with.

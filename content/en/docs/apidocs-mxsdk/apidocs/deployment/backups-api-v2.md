@@ -21,24 +21,46 @@ You cannot currently upload an archive through this API. This function is curren
 
 This API focuses on working with snapshots and archives asynchronously, because these can be very long-running tasks for large quantities of data. It replaces the deprecated Backups API v1.
 
-## Authentication
+## Authentication{#authentication}
 
-The Backups API requires authentication via API keys that are bound to your Mendix account.
+The Backups API supports authentication via a personal access token (PAT) or an API key. Mendix recommends using a PAT.
 
-### Obtaining an API Key
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/api-key-deprecation-warning.md" %}}
+{{% /alert %}}
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+### Authenticating with a PAT{#authenticating-with-pat}
 
-### Using Authentication Headers
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
+
+Select at least the following scopes:
+
+* `mx:deployment:read` – to perform `GET` operations
+* `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
+
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
+
+```http
+GET /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots HTTP/1.1
+Authorization: MxToken 7LJE…vk
+```
+
+### Authenticating with an API Key{#authenticating-with-api-key}
+
+To obtain a Mendix API key, follow the instructions in the [API Keys](/portal/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
 Use the following request headers to authenticate an API call:
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user
 
+### Migrating from an API Key to a PAT{#migrate-to-pat}
+
+{{% snippet file="/static/_includes/apidocs-mxsdk/migrate-api-key-to-pat.md" %}}
+
 ### Configuring Permissions
 
-To perform an action via the Backups API, you need **Access to Backups** and **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
+To perform an action via the Backups API, you need **Backups Access** and **API Access** permissions. These permissions are required whether you authenticate with a PAT or an API key. PAT scopes alone are not enough. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## Examples
 
@@ -46,7 +68,7 @@ To perform an action via the Backups API, you need **Access to Backups** and **A
 
 To download a backup of your data, do as follows:
 
-1. Make sure that you have an API key and the **API Access** and **Backups** permissions.
+1. Make sure that you have an API key or a PAT, and the **API Access** and **Backups** permissions.
 
 2. If the snapshot already exists, find the [snapshot ID](/developerportal/operate/backups/#backups-details).
 
@@ -171,7 +193,11 @@ A JSON object with the following attributes:
 
 * `comment` (String): Optional comment for this snapshot.
 
-**Example Request**
+{{% alert color="info" %}}
+The `comment` attribute is optional, but the API requires an empty JSON object (`{}`) to return a successful response.
+{{% /alert %}}
+
+**Example Request 1**
 
 ```bash
 POST /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots
@@ -180,10 +206,19 @@ Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+{"comment": "My snapshot"}
+```
 
-{
-     "comment" :  "My snapshot"
-}
+**Example Request 2**
+
+```bash
+POST /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+{}
 ```
 
 #### Output

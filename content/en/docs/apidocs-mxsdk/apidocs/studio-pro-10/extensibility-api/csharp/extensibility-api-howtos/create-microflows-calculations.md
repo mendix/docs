@@ -7,6 +7,10 @@ weight: 8
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-10/) instead.
+{{% /alert %}}
+
 This how-to describes how to create microflows that perform calculations and return the result.
 
 You can download the example in this how-to from [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
@@ -165,7 +169,7 @@ You can also see that the `DataType` of both parameters is integer.
 
  {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/multiplication-microflow.png" >}}
 
- ### Addition Microflow
+### Addition Microflow
 
 To create a microflow that performs addition between two decimal values, use the code below:
 

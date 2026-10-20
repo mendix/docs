@@ -32,24 +32,48 @@ This image provides a domain model representation of the concepts discussed belo
 
 ## Authentication{#authentication}
 
-The Deploy API v1 requires authentication via API keys that are bound to your Mendix account.
+The Deploy API v1 supports authentication via a personal access token (PAT) or an API key. Mendix recommends using a PAT.
 
-### Obtaining an API Key
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/api-key-deprecation-warning.md" %}}
+{{% /alert %}}
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+### Authenticating with a PAT{#authenticating-with-pat}
 
-### Using Authentication Headers
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
+
+Select at least the following scopes:
+
+* `mx:deployment:read` – to perform `GET` operations
+* `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
+* `mx:build:read` – to read build information
+* `mx:build:write` – to trigger and manage builds
+
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
+
+```http
+GET /api/1/apps HTTP/1.1
+Authorization: MxToken 7LJE…vk
+```
+
+### Authenticating with an API Key{#authenticating-with-api-key}
+
+To obtain a Mendix API key, follow the instructions in the [API Keys](/portal/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
 Use the following request headers to authenticate an API call:
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user
 
+### Migrating from an API Key to a PAT{#migrate-to-pat}
+
+{{% snippet file="/static/_includes/apidocs-mxsdk/migrate-api-key-to-pat.md" %}}
+
 ### Configuring Permissions
 
 Because APIs are designed for automated systems, the Deploy API does not require two-factor authentication, which is normally required to make changes to production environments. This is a potential security risk. Therefore, API access must be explicitly allowed for team members who want to use the Deploy API.
 
-To perform an action via the Deploy API, such as transporting a new deployment package, you need **API Rights** and **Transport Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
+To perform an action via the Deploy API, such as transporting a new deployment package, you need **API Access** and **Transport Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## API Calls
 
@@ -70,7 +94,7 @@ In the Mendix Portal:
 
 * The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Mendix Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
 
-* The [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps, but also includes apps that are deployed to other platforms (such as Mendix on Kubernetes or SAP BTP) and Free Apps that have not yet been deployed and therefore have no environments set up for them.
+* The [My Projects](/developerportal/#my-projects) screen shows both licensed apps and Free Apps, but also includes apps that are deployed to other platforms (such as Mendix on Kubernetes or SAP BTP) and Free Apps that have not yet been deployed and therefore have no environments set up for them.
 {{% /alert %}}
 
 ```bash

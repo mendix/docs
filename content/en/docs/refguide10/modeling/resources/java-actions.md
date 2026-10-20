@@ -43,9 +43,13 @@ Common use cases include but are not limited to the following:
 * Mapping a query result to a certain entity type
 * Querying, searching, and filtering entities by type
 
+In Studio Pro 10.24.22 and above, a parameter of type **Entity** can be configured as not required, unless it fills a type parameter. If omitted, it will be null in the Java action.
+
 #### Microflow Type
 
 The **Microflow** parameter type allows users of Java actions to pass a microflow into a Java action. In the generated Java action template code, this type is represented as a string (as in, the name of the microflow).
+
+In Studio Pro 10.24.22 and above, a parameter of type **Microflow** can be configured as not required. If omitted, it will be null in the Java action.
 
 #### Import Mapping Type
 

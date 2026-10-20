@@ -131,6 +131,90 @@ The Drop-Down Sort widget has two options you can set:
 * Empty option caption: value to be used when no value is selected
 * Screen reader caption: value to be announced by screen readers when using assistive technology
 
+## Selection
+
+Enabling **Selection** allows users to select gallery items via clicking. Selection is disabled by default and can be activated by changing the **Selection** setting from **None** to either **Single** or **Multi**.
+
+The Gallery widget keeps selected items in memory and supports selection persistence across page navigation when the **Keep selection** option is enabled. This allows users to maintain their selections while browsing through paginated data or navigating between different pages in your application. See [Keep Selection](#keep-selection) for more information about managing selection persistence and its limitations.
+
+### Selection Property
+
+The **Selection** property determines what type of selection is available to users:
+
+* **None**: Selection is disabled. Users cannot select gallery items.
+* **Single**: Users can select only one item at a time. Selecting a new item automatically deselects the previously selected item.
+* **Multi**: Users can select multiple items simultaneously using various interaction methods.
+
+When **Selection** is enabled, the Gallery automatically provides visual feedback to indicate selected items and supports keyboard navigation for accessibility.
+
+### Selection and Click Actions Constraint
+
+{{% alert color="info" %}}
+It is not possible to use both selection and onClick actions simultaneously when the **On click trigger** is set to **Single click**. This constraint prevents ambiguous user interactions where a single click could both select an item and trigger an action.
+{{% /alert %}}
+
+#### Supported Combinations
+
+| Selection Mode | On Click Trigger | Selection Method | Click Action                                  | Supported |
+| -------------- | ---------------- | ---------------- | --------------------------------------------- | --------- |
+| None           | Single click     | N/A              | ✓ Click triggers action                       | ✓ Yes     |
+| None           | Double click     | N/A              | ✓ Double-click triggers action                | ✓ Yes     |
+| Single/Multi   | Single click     | Item click       | ✗ Ambiguous interaction                       | ✗ No  |
+| Single/Multi   | Double click     | Item click       | ✓ Click selects, double-click triggers action | ✓ Yes     |
+
+#### Error Prevention
+
+If you attempt to configure both selection (Single or Multi) and an onClick action with **Single click** trigger, the Gallery will display a design-time error:
+
+> "The item click action is ambiguous. Change 'On click trigger' to 'Double click' or set 'Selection' to 'None'."
+
+#### Recommended Approach
+
+For galleries that need both selection and click actions:
+
+1. Set **On click trigger** to **Double click**.
+1. Configure your desired selection mode (**Single** or **Multi**).
+1. Users can then select items with single clicks and trigger actions with double clicks.
+
+### Selection with Action Buttons in Header
+
+Gallery selection works seamlessly with action buttons and other widgets placed in the gallery header. This pattern enables powerful bulk operation workflows.
+
+#### Selection Helper Integration
+
+Place a **Selection Helper** widget in the gallery header to provide bulk selection controls:
+
+* **Select All**: Quickly select all visible items
+* **Clear Selection**: Remove all current selections
+* **Selection Status**: Visual indicator of current selection state (all, some, or none selected)
+
+#### Selection Count Display
+
+Enable the **Show selection count** property to display the number of selected items:
+
+* **Top**: Shows count above the gallery items
+* **Bottom**: Shows count below the gallery items
+* **Off**: Hides the selection count
+
+The selection count automatically updates as users select or deselect items and includes a "Clear selection" button for easy deselection.
+
+#### Event Handling
+
+Use the **On selection change** action to trigger custom logic when selection changes:
+
+* Update UI elements based on selection state
+* Enable/disable action buttons
+* Load additional data for selected items
+* Validate selection before allowing operations
+
+### Keep Selection
+
+If this setting is enabled, then selected items persist across page navigation, data refreshes, filtering, and sorting operations. By default, Keep selection is disabled and the selection is cleared when the items are not in the current set of datasource items. When enabled, selected items remain selected until manually cleared by the user or through a nanoflow action.
+
+{{% alert color="warning" %}}
+Keep Selection cannot be used with non-persistent entities (NPEs) or view entities, as their IDs change on refresh.
+{{% /alert %}}
+
 ## Keyboard Navigation and Selection
 
 In the Gallery widget it is possible to navigate and select items using the keyboard. Keyboard navigation can increase user speed, as well as makes the widget more accessible.

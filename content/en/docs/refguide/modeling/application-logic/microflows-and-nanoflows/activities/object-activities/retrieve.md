@@ -73,7 +73,11 @@ This property specifies the entity from which to retrieve instances (objects).
 The [XPath constraint](/refguide/xpath-constraints/) defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
 
 {{% alert color="info" %}}
-Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the retrieve object(s) activity is in a nanoflow.
+In nanoflows, date functions, user-role tokens, and computations based on tokens are not supported in the XPath constraints.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+In nanoflows, following associations is only supported in the XPath constraints in Mendix version 11.9.0 and above.
 {{% /alert %}}
 
 #### Range

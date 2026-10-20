@@ -33,6 +33,10 @@ With Mendix Studio Pro, you can build both native mobile apps and progressive we
 
 For more information on the capabilities of various mobile apps, see [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/).
 
+## PWA Wrapper
+
+If you want to package a Mendix PWA as a native Android or iOS app while keeping a web-based application architecture, use [PWA Wrapper](/refguide/mobile/pwa-wrapper/). PWA Wrapper adds a Studio Pro extension for packaging and a capabilities package for device integrations such as biometric authentication, barcode and QR scanning, file download, URL opening, printing, sharing, media upload, geolocation, local notifications, permissions, and network information.
+
 ## Designing Mobile User Interfaces
 
 Well-designed mobile apps take various design requirements into consideration. For example, users frequently change location while using them, often do so on a small screen, and might only use the app in short bursts of activity. Luckily Mendix uses technology that addresses these requirements, and provides design documentation to help you build user-friendly apps.

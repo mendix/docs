@@ -52,6 +52,10 @@ In the **Edit Microflow URL** dialog box, the configured URL is shown together w
 URLs are not supported for microflows that have non-persistable entities or lists as parameters.
 {{%/alert %}}
 
+{{% alert color="info" %}}
+Page and microflow URL patterns must be unambiguous. If two patterns match the same URL, the Mendix Runtime cannot determine which page or microflow to open. For best practices on structuring URLs and resolving conflicts, see the [Page and Microflow URLs](/refguide/general-best-practices/#page-and-microflow-urls) section in *General Development Best Practices*.
+{{% /alert %}}
+
 ### Common Section {#common}
 
 #### Name

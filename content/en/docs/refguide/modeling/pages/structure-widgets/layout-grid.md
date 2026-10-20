@@ -179,12 +179,13 @@ A new column is added, the weight 1 is automatically set for it.
 Sometimes on a native page, data is not clearly visible when using a native layout grid. To see the data more clearly, nest the layout grid inside the scroll container.
 {{% /alert %}}
 
-### Performing Other Actions on Rows
+### Performing Other Actions on Rows {#performing-other-actions-on-rows}
 
 In adding to inserting a new row, you can perform the following actions when right-clicking a row:
 
 * **Move up** – moves a row up in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>↑</kbd> 
 * **Move down** – moves a row down in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>↓</kbd> 
+* **Extract to new grid** – extracts the right-clicked row into a new, separate layout grid
 
 ### Performing Other Actions on Columns
 

@@ -10,7 +10,7 @@ aliases:
 
 You can use the **Environments** page to access information about your environments, deployment packages, manage certificates and access restrictions, and more.
 
-To access your app's **Environments** page, go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app. You can also directly visit the **Environments** page using this link: `https://cloud.home.mendix.com/link/deploy/`*`APP_ID`*, with *`APP_ID`* replaced by your [project ID](/developerportal/deploy/environments-details/#general-tab).
+To access your app's **Environments** page, go to [Projects](https://projects.home.mendix.com/) and click **Environments** on your app. You can also directly visit the **Environments** page using this link: `https://cloud.home.mendix.com/link/deploy/`*`APP_ID`*, with *`APP_ID`* replaced by your [project ID](/developerportal/deploy/environments-details/#general-tab).
 
 ## Available Tabs
 
@@ -49,12 +49,12 @@ You can see the following details for each environment shown in the **Overview**
 You can perform the following actions on your environments:
 
 * **Deploy** ({{< icon name="deploy" >}}) – Launch the [Deploy wizard](#deploy-wizard), where you can configure and start a new deployment for the selected environment.
-* **View Details** ({{< icon name="notes-paper-edit" >}}) – Access the [Environment Details](/developerportal/deploy/environments-details/) page.
+* **Re-Start** ({{< icon name="environment-start" >}}) – Stop the running app and restart. Restarting your app is required for applying new constant values or scheduled events to the environment.
+* **Start** ({{< icon name="environment-start" >}}) – Start a stopped app.
+* **Details** ({{< icon name="notes-paper-edit" >}}) – Access the [Environment Details](/developerportal/deploy/environments-details/) page.
 * **View App** {{< icon name="external" >}} – Launch the app in a new browser tab.
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
-    * **Restart** – Stop the running app and restart. Restarting your app is required for applying new constant values or scheduled events to the environment.
-    * **Start** – Start a stopped app.
-    * **Live Log** – Display a live log for your app. This option performs the same action as the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
+    * **Live Logs** – Display a live log for your app. This option performs the same action as the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
     * **Debugger Info** – Display the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
     * **Running Now** – Monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
     * **Logged In Users** – Display all users who are logged in to your app.
@@ -129,8 +129,9 @@ The **Create a Package** wizard walks you through creating deployment packages. 
 1. On the [Deployment Packages](#deployment-packages-tab) tab, click **Create a Package**. This launches the **Create Package** wizard.
 2. On the **Select Branch** tab, select the branch on which to base the build.
 3. On the **Select Revision** tab, select the branch revision on which to base the package.
-4. On the **Choose a Tag** tab, specify the version tag. This includes the major, minor, and patch version numbers.
-5. Click **Build this revision**.
+4. On the **Other Options** tab, add the version tag. This tag should include the major and minor version numbers, patch, and revision.
+5. Add a tag description.
+6. Click **Build this revision**.
 
 #### Uploading a Package {#upload-package}
 
@@ -146,9 +147,10 @@ Follow these steps to deploy packages to selected environments using the **Deplo
 2. Perform one of the following actions, depending on whether you selected the package or the environment first:
     * If you launched the wizard by selecting an environment, the first screen of the wizard is the **Select Package** tab. Use it to select a package from the repository.
     * If you launched the wizard by selecting a package, the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
-3. On the **Configure Environment** tab, review the [constants](/refguide/constants/) and adjust them as required.
-4. In the **Other Options** tab, choose whether to stage the package without deploying, and when to create the backup: either before or after deploying the new package. The app is unavailable while the backup runs.
-5. On the **Deploy** tab, review the deployment settings:
+3. The **Clean Environment** tab appears only when deploying a package with a different model than the currently deployed one. For more information on cleaning environments, see [Clearing an Environment](/developerportal/deploy/environments-details/#clear-environment) in *Environment Details*.
+4. On the **Configure Environment** tab, review the [constants](/refguide/constants/) and adjust them as required.
+5. In the **Other Options** tab, choose whether to stage the package without deploying, and when to create the backup: either before or after deploying the new package. The app is unavailable while the backup runs. You can also choose to deploy with [zero-downtime](/developerportal/deploy/zero-downtime/).
+6. On the **Deploy** tab, review the deployment settings:
     1. To see an overview of the configuration for this deployment, click **View Summary**. This summary displays the selected package, selected backup option, and any changed constants or [scheduled events](/refguide/scheduled-events/).
     2. Review this summary, then click **Deploy Now**.
 
@@ -174,14 +176,12 @@ If you are the [Technical Contact](/developerportal/general/app-roles/#technical
 
 ### Change Requests Tab {#change-requests}
 
-On the **Change Requests** tab, the Technical Contact can view details of all past and current [Change Plan](/developerportal/deploy/change-plan/) requests and perform certain actions based on the current request status.
+On the **Change Requests** tab, the Technical Contact can view details of all past and current [Plan](/developerportal/deploy/change-plan/) and [Connection](/developerportal/deploy/connecting-to-external-resource/) requests and perform actions based on each request's current status.
 
 For each submitted request, the following information is available:
 
 * **Request Type** – Type of change requested
-* **Environment** – The environment the plan change was requested for (such as, acceptance or production)
-* **Current Plan** – The environment's existing plan
-* **Requested Plan** – The plan requested for change
+* **Environment** – The environment the change was requested for (such as, acceptance or production)
 * **Submitted on** – Request submission date
 * **Status** – Current request state
 * **Action** – Shows more details of each request and provides options based on the request status
@@ -192,9 +192,25 @@ If you click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any
 
 ### Custom Domains
 
-On the **Custom Domains** tab, you can manage your custom domain certificates at the application level. You can also see an overview of linked custom domains.
+On the **Custom Domains** tab, the Technical Contact can perform the following actions:
 
-When you need your Mendix app to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you must provide a custom SSL/TLS certificate for your domain. This ensures a secure connection to your Mendix app. For more information, refer to [Custom Domains](/developerportal/deploy/custom-domains/).
+* Request a new application-level certificate
+* Upload a new application-level certificate
+* Edit, delete, and view application-level certificates
+* View centralized certificates created by a Mendix Admin through **Certificate Management**
+* View the custom domains associated with each certificate
+
+To make your Mendix application accessible through a custom URL (for example, `https://myapp.mycompany.com`), you must configure a custom domain secured with an SSL/TLS certificate. In Mendix Cloud, certificates can be created in one of the following ways:
+
+* **Application level** – Technical Contacts can create and manage application-level certificates, which are marked as **Local**. For more information, refer to [Application-Level Certificates](/developerportal/deploy/application-level-certificates/).
+
+* **Central level** – Mendix Admins can upload and manage SSL/TLS certificates centrally in Control Center using [Certificate Management](/control-center/certificate-management/). These certificates can be reused across multiple applications and are marked as **Central**.
+
+{{% alert color="info" %}}
+Certificates created through **Certificate Management** can only be managed by Mendix Admins. Technical Contacts can view these certificates, but cannot edit or delete them.
+{{% /alert %}}
+
+For step-by-step instructions on configuring custom domains for your Mendix application, refer to [Custom Domains](/developerportal/deploy/custom-domains/).
 
 ### Access Restriction Profiles
 
@@ -217,3 +233,7 @@ The Technical Contact can only see services that have been licensed for their co
 Team members who have a role with **Cloud Access** can see which services are enabled or disabled.
 
 Once a service has been enabled for an app, Technical Contacts can selectively enable it for each environment. For more information, refer to the [Services](/developerportal/deploy/environments-details/#services) section of the *Environment Details* page.
+
+## Read More
+
+* [Version Pinning](/developerportal/deploy/version-pinning/)

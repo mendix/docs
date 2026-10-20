@@ -12,8 +12,8 @@ aliases:
 This feature is in beta. For more information, see [Release Status](/releasenotes/release-status/).
 {{% /alert %}}
 
-{{% alert color="info" %}}
-For information on new releases of the Extensibility API, see [Extensibility: C# API Release Notes](/releasenotes/studio-pro/csharp-extensibility-api/).
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-10/) instead.
 {{% /alert %}}
 
 ## Introduction

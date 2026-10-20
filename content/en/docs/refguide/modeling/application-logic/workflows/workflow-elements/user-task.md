@@ -68,8 +68,8 @@ The following table lists the sources you can use to target users:
 
 | Source | Description |
 | --- | --- |
-| Database | Allows you to use XPath constraints to filter which users should see the user task in their inbox. For example, you can target a certain task only to users in a specific department (assuming such information is available in your domain model). You can use any attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows).|
-| Microflow | Allows you to use a microflow to target the user task to certain users. You can check, for example, which users have the right to approve user tasks and are currently not on vacation, and assign the task only to users who passed the check. <br/> The return type of the microflow should be a list of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
+| Database | Allows you to use XPath constraints to filter which users should see the user task in their inbox. For example, you can target a certain task only to users in a specific department (assuming such information is available in your domain model). You can use any attributes of the **User Entity** set in [App Settings](/refguide/workflow-tab/).|
+| Microflow | Allows you to use a microflow to target the user task to certain users. You can check, for example, which users have the right to approve user tasks and are currently not on vacation, and assign the task only to users who passed the check. <br/> The return type of the microflow should be a list of the **User Entity** set in [App Settings](/refguide/workflow-tab/). |
 
 {{% alert color="warning" %}}
 If an XPath constraint or a microflow results in an empty list (0 objects), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
@@ -82,7 +82,7 @@ When enabled, you can automatically assign a user task when a single user is tar
 #### Target Workflow Group(s) {#workflow-group}
 
 {{% alert color="info" %}}
-**Target Workflow group(s)** was introduced in Studio Pro 11.2.0 as a beta feature. To enable this option, go to **Edit** > **Preferences** > the **New features** tab > the **Workflow** section. 
+**Target Workflow group(s)** was introduced in Studio Pro 11.2.0 as a beta feature and was released for GA in 11.6.0.
 
 For more information on how to configure workflow groups, see [Workflow Groups](/refguide/workflow-groups/).
 {{% /alert %}}
@@ -174,7 +174,12 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" class="no-border" >}}
 
-   {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
+   {{% alert color="info" %}}
+   Make sure that the attribute you use in the expression is of the **String** type. If your attribute is of a different data type, you must convert it using a build-in function:
+   
+   * For **Date and time** attributes, use the `formatDateTime()` function to define the desired display format.
+   * For all other types (such as **Integer**, **Decimal**, or **Boolean**), use the `toString()` function.
+   {{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 
@@ -195,7 +200,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### Boundary Events Section {#boundary-events}
 
-For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
+Boundary events can be attached to this element and are triggered by certain events to handle exceptional situations during its execution. For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

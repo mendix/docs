@@ -98,6 +98,7 @@ This list is currently incomplete and is being updated.
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
 | StorageLocal | Logs messages related to file handling if you are using the local file system as your file store. |
 | StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
+| SystemTask | Logs system management actions on clusters and nodes. *Moved from Core in Mendix version 10.18.13 MTS and 10.24.14 LTS* |
 | WebServices | Traces SOAP call request and response contents. |
 | WebUI | Logs if thresholds related to feedback size defined in [Client Runtime Settings](/refguide10/custom-settings/#web-client-settings) have exceeded the defined threshold, or creating a valid session has failed. |
 | Workflow Engine | Logs messages related to workflow executions, for example, lifecycle events, such as a start or an end of a workflow, execution of workflow actions, and errors that occur during the execution. |

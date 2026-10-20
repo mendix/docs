@@ -11,7 +11,8 @@ description: "Overview of how to configure the [External Database Connection doc
 The [External Database Connector](/appstore/modules/external-database-connector/) integrates with Studio Pro with an **External database connection** service document. Use this document to connect to external databases in Studio Pro.
 
 {{% alert color="info" %}}
-You must install the [External Database Connector](https://marketplace.mendix.com/link/component/219862) for external database connections to work properly while running your app. For instructions on adding modules or connectors to your app, see [Use Marketplace Content in Studio Pro](/appstore/use-content/).
+For Studio Pro 11.13 and later, external database connectivity is built into Studio Pro. Therefore you do not need to download the Marketplace module for use.
+For Studio Pro 11.12 and earlier, you must install the [External Database Connector](https://marketplace.mendix.com/link/component/219862) from the Marketplace for external database connections to work. For instructions, see [Use Marketplace Content in Studio Pro](/appstore/use-content/).
 {{% /alert %}}
 
 ## Connect to the Database Wizard {#wizard}
@@ -22,35 +23,45 @@ Right-click your module and click **Add other > External database connection** t
 
 Enter or select the following:
 
-* **Name** — name of your database connection
-* **Database Type** — Microsoft SQL, MySQL, Oracle, PostgreSQL, or Snowflake
+* **Name** – The name of your database connection.
+* **Database Type** – Either Microsoft SQL, MySQL, Oracle, PostgreSQL, or Snowflake.
+
+{{% alert color="info" %}}
+From Studio Pro 11.13 and later, when you select a database type, the required JDBC library is automatically added to the **Java Dependencies** tab in [Module Settings](/refguide/module-settings/) of the module you are working on. The dependency is downloaded to the **vendorlib** folder when you run the app or trigger Java dependency management. To use a different version, you can edit the dependency in [Module Settings](/refguide/module-settings/).
+
+For BYOD, you have to add the required JDBC driver details in Module Settings.
+{{% /alert %}}
 
 ### Connection Details
 
 If you select **Use connection details**, enter:
 
-* **Host** — the host name (`localhost` when testing locally)
-* **Port** — the port number
-* **Database Name** — the name of the database
-* **User Name** — the username to access the database
-* **Password** — the password to access the database
+* **Host** – the host name (`localhost` when testing locally)
+* **Port** – the port number
+* **Database Name** – the name of the database
+* **User Name** – the username to access the database
+* **Password** – the password to access the database
 
 ### Connection String
 
 If you select **Use connection string**, enter the following:
 
-* **Username** — the username to access the database
-* **Password** — the password to access the database
-* **JDBC Connection String** — the connection string, in the following formats for each database type:
-    * **Microsoft SQL** — `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
-    * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
-    * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
-    * **PostgreSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
-    * **Snowflake** — `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
+* **Username** – the username to access the database
+* **Password** – the password to access the database
+* **JDBC Connection String** – the connection string, in the following formats for each database type:
+    * **Microsoft SQL** – `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
+    * **MySQL** – `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
+    * **Oracle** – `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
+    * **PostgreSQL** – `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
+    * **Snowflake** – `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
 
 ### Password Security
 
 The password you provide when using one of the above connection methods will be stored in a constant, which can be altered upon deployment on a Cloud node. You can indicate which constants contain private or sensitive information to ensure this information is saved locally, and that it is not shared on the TeamServer or Cloud Portal.
+
+### Using Integrated Security for SQL Server
+
+If you plan to connect to SQL Server using integrated security, ensure the JDBC driver in the `userlib` folder or version mentioned in the module settings matches the version supplied with Studio Pro (via the `runtime/bundles/` folder inside the Mendix installation directory).
 
 ## External Database Connection Document {#external-database-document}
 
@@ -68,14 +79,14 @@ View data from the database in the [Tables & Columns](#tables-columns) screen on
 
 The Query field includes the following fields:
 
-* **Query Name** — query name, which is saved and can be used later
-* **SQL Query** — text box where you can enter your query
+* **Query Name** – query name, which is saved and can be used later
+* **SQL Query** – text box where you can enter your query
 
 In the **Parameters** field, click **Add Parameter** to enter the following information:
 
-* **Name** — name of the parameter that can be used in the **SQL Query** field (in the form of `{parameter_name}`)
-* **Data Type** — the type of data for your parameter
-* **Test Value** — enter or select the value of the parameter
+* **Name** – name of the parameter that can be used in the **SQL Query** field (in the form of `{parameter_name}`)
+* **Data Type** – the type of data for your parameter
+* **Test Value** – enter or select the value of the parameter
 
 Click **Run Query** to view a preview of the response.
 
@@ -97,5 +108,4 @@ The **Response Structure** tab displays a preview of an entity that can be creat
 
 * To configure the connector with an external database, follow the steps in [External Database Connector](/appstore/modules/external-database-connector/).
 * To utilize the connector to integrate data into your Mendix application, see [Querying and Integrating External Data](/refguide/use-the-external-database-connector/).
-* To use SQL, see [Execute an SQL Statement on an External Database](/refguide/execute-an-sql-statement-on-an-external-database/).
 * To learn about how to use the data in a microflow, see the [Query External Database](/refguide/query-external-database/) activity. 

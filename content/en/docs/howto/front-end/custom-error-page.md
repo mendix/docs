@@ -41,6 +41,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## Creating a Custom Error Page {#create-custom-error}
 
+{{% alert color="info" %}}
+These steps apply to Atlas 3, which is used from Mendix 9 and above. If you are on Mendix 9 and your app still uses **Atlas 2**, the folder structure is different: the entire **theme** folder acts as the web root. In that case, create the **error_page** folder directly inside **theme** (not inside **theme/web**), otherwise it is nested one level too deep in the deployment package and the custom error pages are not served. Alternatively, [upgrade the app to Atlas 3](/refguide9/moving-from-atlas-2-to-3/).
+{{% /alert %}}
+
 If you are using Atlas 3, do the following:
 
 1. Open the local folder of your app.

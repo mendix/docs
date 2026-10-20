@@ -15,6 +15,10 @@ It is essential to ensure that each namespace is exclusively managed by a single
 
 Global Operator installation is supported officially from Operator version v2.20.0 and above.
 
+{{% alert color="info" %}}
+For Mendix version 11.5.0 and above, you will need to install Mendix Operator version 2.24 or above.
+{{% /alert %}}
+
 ## Installing the Global Operator
 
 While installing the Mendix Operator in Global mode, you must first deploy the Mendix Operator and Agent within the *Global Operator namespace*. A Global Operator namespace comprises the Operator itself, the Agent, and the configuration that instructs the Operator on the namespaces it should oversee.
@@ -51,7 +55,7 @@ To install and configure the Global Operator, perform the following steps:
     2. [Sign into the Platform](/developerportal/deploy/standard-operator/#openshift-signin).
     3. Perform the [Base Installation](/developerportal/deploy/standard-operator/#base-installation).
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator6.png" class="no-border" >}}
+        {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator6.png" class="no-border" >}}
 
     4. You can apply the custom TLS and proxy settings in the Global Operator main namespace by just selecting only the **Custom TLS** and **Proxy** options in the Configuration Tool.
 

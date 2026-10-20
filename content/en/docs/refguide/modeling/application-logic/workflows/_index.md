@@ -54,8 +54,7 @@ Below are situations where the use of workflows might not be appropriate:
 
 * Lack of applicability – if not MOST of the criteria outlined in the section above are met, it may not be a suitable use case for workflow implementation.
 * High degree of collaboration and interaction – processes characterized by extensive collaboration and interaction among individuals, where no clear path can be defined, may not align well with workflow structures.
-* Dynamic or unpredictable work – processes that involve dynamic or unknown elements, or where individuals require a high degree of freedom to decide their next actions, may not fit within the constraints of a workflow.
-* Outcome-driven processes – processes focused more on achieving specific outcomes rather than following a predefined series of steps may not be best suited for workflow implementation. It might be beneficial to consider alternative approaches, such as utilizing multiple smaller workflows that are loosely coupled with other logic.
+* Business processes with no clear path from start to finish – a workflow needs a clear path that you can draw. If the whole process has no such path, consider a case management approach with [Mendix Dynamic Case Management](/appstore/partner-solutions/dcm/).
 
 ## Mendix Workflow Use Cases {#use-case}
 
@@ -98,7 +97,7 @@ You can trigger workflows or user tasks from pages via specific on-click events 
 
 ## Workflow Commons Module
 
-The [Workflow Commons](/appstore/modules/workflow-commons/) module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in [Apps](https://sprintr.home.mendix.com/). These templates already contain the **Workflows Commons** module.
+The [Workflow Commons](/appstore/modules/workflow-commons/) module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in [Projects](https://projects.home.mendix.com/). These templates already contain the **Workflows Commons** module.
 
 For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App with Workflow Commons](/refguide/workflow-setting-up-app/).
 

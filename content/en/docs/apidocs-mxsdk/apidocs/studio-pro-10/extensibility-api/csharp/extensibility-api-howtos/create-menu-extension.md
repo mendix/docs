@@ -7,6 +7,10 @@ weight: 4
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-10/) instead.
+{{% /alert %}}
+
 This how-to describes how to create an extension that adds an item to Studio Pro menu from scratch.
 
 You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
@@ -26,7 +30,7 @@ You can download the example in this how-to in [this GitHub repository](https://
         { "mx_extensions": [ "<name_of_your_project>.dll" ] }
         ```
 
-    3. For the `manifest.json` file, right-click **Solution Explorer** > **Properties** and change the **Copy to Output Directory** property to **Copy always**.
+    4. For the `manifest.json` file, right-click **Solution Explorer** > **Properties** and change the **Copy to Output Directory** property to **Copy always**.
 
 ## Creating a Test Mendix App
 

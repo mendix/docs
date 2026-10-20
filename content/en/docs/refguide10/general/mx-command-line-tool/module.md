@@ -17,7 +17,7 @@ To see the command parameters for each command, use the `--help` parameter. For 
 
 ## mx show-module-version Command {#show-module-version}
 
-The `mx show-module-verion` command outputs the version of a module.
+The `mx show-module-version` command outputs the version of a module. This command works for all modules in the app, except the System module.
 
 ### Usage
 
@@ -42,13 +42,13 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | `0` | No errors. |
-| `1` | The module does not have a version. |
+| `1` | The specified project file does not exist, the module does not exist, or the module is the System module. |
 
 The command will output the version of the module to the command line output.
 
 ## mx set-module-version Command {#set-module-version}
 
-The `mx set-module-version` changes the version of an add-on module.
+The `mx set-module-version` command changes the version of a module. This command works for all modules in the app, except the System module.
 
 ### Usage
 
@@ -75,7 +75,7 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | `0` | No errors. |
-| `1` | The module does not have a version. |
+| `1` | The specified project file does not exist, the module does not exist, or the module is the System module. |
 
 ## mx module-import Command {#module-import}
 

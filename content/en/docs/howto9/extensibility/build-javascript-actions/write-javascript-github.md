@@ -8,7 +8,7 @@ description: "This advanced how-to teaches you how to make a JavaScript action w
 
 ## Introduction
 
-Nanoflows are even more powerful with pluggable nanoflow actions — called JavaScript actions. [How to Build JavaScript Actions: Part 1 (Basic)](/howto9/extensibility/write-javascript-actions/) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
+Nanoflows are even more powerful with pluggable nanoflow actions—called JavaScript actions. [How to Build JavaScript Actions: Part 1 (Basic)](/howto9/extensibility/write-javascript-actions/) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
 This how-to teaches you how to do the following:
 
@@ -26,7 +26,7 @@ This how-to teaches you how to do the following:
 In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, you will make an API which allows you to search for GitHub users. Before continuing, you can do the following to practice your API skills: 
 
 * Learn how the GitHub API works using the [GitHub developer documentation](https://developer.github.com/v3/search/#search-users)
-* Use test tooling to see how the GitHub API in action — an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
+* Use test tooling to see how the GitHub API in action—an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
 
 ## Downloading the App Package
 

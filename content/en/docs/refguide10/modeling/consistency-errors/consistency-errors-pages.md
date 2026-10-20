@@ -342,7 +342,7 @@ The most common errors for input elements, their causes, and ways to fix them ar
 
 ### Error Code: CE0544
 
-CE0544 error message: *This widget can only function inside a data context — like a data view, list view, or a {document type} with variables.*
+CE0544 error message: *This widget can only function inside a data context—like a data view, list view, or a {document type} with variables.*
 
 You get CE0544 if you have added an input widget but it is not inside a data container or the page or snippet does not define any variables. Input elements either need to refer to a variable or an attribute of a specific entity type. 
 

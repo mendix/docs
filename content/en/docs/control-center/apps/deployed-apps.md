@@ -24,12 +24,12 @@ The **Deployed Apps Overview** page has the following tabs: [Mendix Cloud](#mend
 
 The **Mendix Cloud** tab gives you an overview of all the apps that are deployed on Mendix Cloud and allows you to manage your cloud resources using the self-service tool.
 
-To activate this capability for your company, contact your Customer Success Manager.
+To activate this capability for your company, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 
 The list on this tab shows the following information:
 
 * **App Name** – The name of the app. To view the [app environment details](#mendix-cloud-app-environment), click the app name.
-* **Technical Contact** – The registered email address to which license keys are sent. Each app can only have one Technical Contact. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address and selecting a new Technical Contact from the list. After you update the Technical Contact, both the new and the old contact will receive a notification email.
+* **Technical Contact** – The Technical Contact of the app. Each app can only have one Technical Contact. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address and selecting a new Technical Contact from the list. After you update the Technical Contact, both the new and the old contact will receive a notification email.
 * **Status** – Indicates whether app is active.
 * **Env Count** – The number of the environments available for the app.
 * **Credits Used** – The total number of credits the app has used.
@@ -84,7 +84,7 @@ The list shows the following information:
 
 * **App Name** – The name of the app.
 * **App ID** – The app/project ID.
-* **Technical Contact** – The registered email address to which license keys are sent. Each app can only have one Technical Contact. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address and selecting a new Technical Contact from the list. After you update the Technical Contact, both the new and the old contact will receive a notification email.
+* **Technical Contact** – The Technical Contact of the app.
 * **Status** – Indicates whether app is active or not.
 
 ## Apps with License Keys {#apps-license-keys}
@@ -192,4 +192,4 @@ If the Technical Contact of the app does not update the license keys by the end 
 
 #### Our App Stopped Working Because the License Key Expired. What Should We Do?
 
-Contact your Customer Success Manager (CSM) to renew your contract.
+Contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to renew your contract.

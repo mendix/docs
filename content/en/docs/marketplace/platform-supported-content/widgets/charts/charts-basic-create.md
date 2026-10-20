@@ -75,18 +75,10 @@ To configure a Charts widget, follow these steps:
 
 1. Open the page with the Charts widget.
 2. Right-click the **Area chart** and select **Properties**.
-3. In the tab **Chart properties**, add a new **Series** property.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-series.png" alt="Chart Series" class="no-border" >}}
-
-4. In the tab **Data source**, select *Value* as the **Entity**.
-5. Set the **Data source** as **Database**.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/chart-add-entity.png" alt="select Entity" class="no-border" >}}
-
-6. In the tab **Data points**, select *xValue* as the **X-axis data attribute** and *yValue* as the **Y-axis data attribute**.
-
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-data-points.png" alt="select Data Points" class="no-border" >}}
+3. On the **General** tab, in the **Data source** section, add a new **Series** item.
+4. In the **General** section of the series, leave **Data set** set to **Single series**.
+5. Set **Data source** to **Database** and select the *Value* entity.
+6. Select *xValue* as the **X axis attribute** and *yValue* as the **Y axis attribute**.
 
 ### Viewing the Chart
 
@@ -105,6 +97,7 @@ To view the chart, follow these steps:
 
 ## Read More
 
-* [Use a Chart With a REST Data Source](/howto/front-end/charts-basic-rest/)
+* [Create a Multiple Series Chart](/appstore/widgets/charts-dynamic-series/)
+* [Use a Chart With a REST Data Source](/appstore/widgets/charts-basic-rest/)
 * [Use Any Chart](/appstore/widgets/charts-any-usage/)
-* [Use Charts Themes](/howto/front-end/charts-theme/)
+* [Use Charts Themes](/appstore/widgets/charts-theme/)

@@ -19,7 +19,7 @@ View entities are read-only. To change the resulting data of a view entity retri
 
 ## Prerequisites
 
-Your app must use OQL version 2 to use view entities. You can change this setting by clicking **App 'APP_NAME'** > **Settings** > **Runtime** and setting [OQL version 2](/refguide/app-settings/#oql-version-2) to **Yes**. Alternatively, you can drag a new view entity from the toolbar or **Toolbox** to the domain model, which opens a dialog box where you can confirm upgrading to OQL version 2 if it has not been upgraded yet.
+Your app must use OQL version 2 to use view entities. You can change this setting by clicking **App 'APP_NAME'** > **Settings** > **Runtime** and setting [OQL version 2](/refguide/runtime-tab/#oql-version-2) to **Yes**. Alternatively, you can drag a new view entity from the toolbar or **Toolbox** to the domain model, which opens a dialog box where you can confirm upgrading to OQL version 2 if it has not been upgraded yet.
 
 ## Properties Dialog
 
@@ -72,7 +72,7 @@ Alternatively, you can right-click the view entity and click **Go to OQL query**
 The OQL query tab consists of the following sections:
 
 * [OQL editor](#oql-editor)
-* [Maia for OQL](#maia-for-oql)
+* [Generating OQL with Maia](#maia-for-oql)
 * [Preview data table](#preview-data)
 
 {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-entity-document.png">}}
@@ -131,9 +131,9 @@ FROM Shop.Order AS o
 
 {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/association-alias.png" >}}
 
-### Maia for OQL {#maia-for-oql}
+### Generating OQL with Maia {#maia-for-oql}
 
-You can ask Maia to suggest OQL queries for you. For more information, see [Maia for OQL](/refguide/maia-for-oql/).
+You can ask Maia to suggest OQL queries for you. For more information, see [OQL in Maia Make](/refguide/maia-for-oql/).
 
 ### Preview Data Table {#preview-data}
 

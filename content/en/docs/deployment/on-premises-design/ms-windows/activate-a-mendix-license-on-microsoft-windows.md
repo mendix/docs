@@ -16,7 +16,7 @@ You will need to apply a separate license to each environment for which you want
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* To activate a Mendix instance on-premises you need an on-premises license (call your Customer Success Manager for more information)
+* To activate a Mendix instance on-premises you need an on-premises license (call your Technical Account Manager, Specialized Account Executive, or Partner Contact for more information)
 * Install Mendix on your Microsoft Windows server (for more information, see [Deploying Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/))
 * Be registered as the technical contact for the license
     * This is usually done in the license request process

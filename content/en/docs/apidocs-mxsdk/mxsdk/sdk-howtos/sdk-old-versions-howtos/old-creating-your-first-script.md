@@ -50,7 +50,7 @@ After setting up all the prerequisites, follow these steps to write your first s
     main();
     ```
 
-3. Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/mendix-profile/user-settings/#profile-api-keys), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication/).
+3. Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/portal/user-settings/#profile-api-keys), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication/).
 
 ## Code Explanation
 
@@ -142,6 +142,6 @@ The steps for app creation (line 3) and committing to the Team Server (line 10) 
 
 ## Opening the App in Studio Pro
 
-1. In [Apps](/developerportal/#my-apps), verify the app you just created is visible at the top of the list.
+1. In Projects, verify the app you just created is visible at the top of the list.
 2. Open the new app, and on the right side, click **Edit**.
 3. If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.

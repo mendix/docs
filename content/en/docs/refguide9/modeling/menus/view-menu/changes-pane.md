@@ -88,10 +88,6 @@ The left side of the grid contains the following columns:
 
 The zoomed-in level for conflicted documents is split into two grids, with conflicting elements on the left and conflicting properties on the right.
 
-{{% alert color="info" %}}
-Mendix 9 has an improved conflict resolution method compared to Mendix 8. You can turn this off in the **Edit > Preferences > New features** dialog. If this is turned off, you should refer to the Mendix 8 version of this documentation [Changes Pane - Mendix 8](/refguide8/changes-pane/#conflicts).
-{{% /alert %}}
-
 There are two sorts of conflict:
 
 * For a standard conflict a change has been made to the same element in each branch and Mendix cannot automatically choose which is the desired change after the merge
@@ -101,7 +97,7 @@ The toolbar at this level contains the following buttons:
 
 * **Back** – takes you back to the top level
 * **Go to** – takes you directly to the selected element
-* **Merge** – start the merge process — instructions for resolving conflicts are in the document [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide9/new-merge-algorithm/) 
+* **Merge** – start the merge process—instructions for resolving conflicts are in the document [New Merge Algorithm with Fine-Grained Conflict Resolution](/refguide9/new-merge-algorithm/) 
 * **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
 
 The grid on the left contains the following columns

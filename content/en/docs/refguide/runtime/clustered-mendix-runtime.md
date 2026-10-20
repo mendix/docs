@@ -15,7 +15,7 @@ The main feature enabling clustering is Mendix's stateless runtime architecture.
 
 Clustering support is built natively into our Cloud Foundry buildpack implementation. This means that you can simply scale up using Cloud Foundry. The buildpack ensures that your system automatically starts behaving as a cluster.
 
-Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in the [Some Notes on Scaling](/developerportal/deploy/run-mendix-on-minikube/#scaling) section of *Use Docker with Minikube*.
+Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*.
 
 ## Cluster Infrastructure
 
@@ -93,7 +93,7 @@ Whenever the Mendix Client is restarted, all the state is discarded, as it is on
 
 The more objects that are part of the dirty state, the more data has to be transferred in the requests and responses between the Mendix Runtime and the Mendix Client. As such, this has an impact on performance. In clustered environments, it is advised to minimize the amount of dirty state to minimize the impact of the synchronization on performance.
 
-The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow that gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled via the [Optimize network calls](/refguide/app-settings/#optimize-network-calls) app setting.
+The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow that gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled via the [Optimize network calls](/refguide/runtime-tab/#optimize-network-calls) app setting.
 
 {{% alert color="warning" %}}
 It is important to realize that when calling external web services in Mendix to fetch external data, the responses of those actions are converted into Mendix entities. As long as they are not persisted in the Mendix database, they will be part of the dirty state and have a negative impact on the performance of the application. To reduce this impact, this behavior is likely to change in the future.

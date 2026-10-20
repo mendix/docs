@@ -1,13 +1,14 @@
 ---
 title: "OQL Version 2 Features"
 linktitle: "Switching to OQL Version 2"
+description: "A guide to the differences between Mendix OQL versions 1 and 2, plus a guide to switching to version 2"
 url: /refguide/oql-v2/
 weight: 100
 ---
 
 ## Introduction
 
-OQL v2 can be enabled by setting the [OQL version 2](/refguide/app-settings/#oql-version-2) app setting to *Yes*. You will have to switch to OQL v2 in order to enable [View entities](/refguide/view-entities/).
+OQL v2 can be enabled by setting the [OQL version 2](/refguide/runtime-tab/#oql-version-2) app setting to *Yes*. You will have to switch to OQL v2 in order to enable [View entities](/refguide/view-entities/).
 
 OQL v2 syntax is the same as OQL. However, there are a few differences in the handling of specific, mostly not very common, cases.
 
@@ -183,7 +184,7 @@ JOIN (SELECT Name AS N FROM Module.City) C
 ON P/Residence = C/Name
 ```
 
-### `ORDER BY` in Subquery {#order-by-in-subquery}
+### `ORDER BY` in Subqueries {#order-by-in-subqueries}
 
 You must now have a `LIMIT` and/or `OFFSET` in subquery containing `ORDER BY`. Using `ORDER BY` in subquery makes sense only when it is combined with `LIMIT` and/or `OFFSET`. Without the limitations, database engines do not guarantee that the row order in the subquery will be preserved in the outer query.
 
@@ -209,6 +210,22 @@ FROM (
     FROM Module.Person
     ORDER BY Name
     LIMIT 20
+)
+```
+
+The same restriction applies to a subquery which is a `select_query`, or a nested `UNION` as part of a [`UNION`](/refguide/oql-clauses/#oql-union). Consequently, you can only use `ORDER BY` in a parenthesized `UNION` clause if it is combined with `LIMIT` and/or `OFFSET`:
+
+```sql
+(
+    SELECT Name
+    FROM Module.Person
+    ORDER BY Name
+    LIMIT 20
+)
+UNION
+(
+    SELECT Name
+    FROM Module.City
 )
 ```
 

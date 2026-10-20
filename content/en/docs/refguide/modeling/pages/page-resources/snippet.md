@@ -46,7 +46,11 @@ The values for the platform property are:
 
 #### Parameters {#parameters}
 
-**Snippet Parameters** works the same way as [Page Parameter](/refguide/page-properties/#parameters) with the difference that a snippet's parameter can be accessed at the top level, for example when creating expressions or selecting attributes.
+**Snippet parameters** allow snippets to be re-used with different data. They work the same way as [Page Parameters](/refguide/page-properties/#parameters).
+
+{{% alert color="info" %}}
+Snippet parameters do not support primitive types and cannot be made optional, like [page parameters](/refguide/page-parameter/) do.
+{{% /alert %}}
 
 #### Variables {#variables}
 
@@ -97,9 +101,9 @@ After selecting **Extract snippet**, a dialog box shows an overview of the snipp
 
 The table showing the snippet parameters has the following columns:
 
-* **Name** — the suggested name for the snippet parameter.
-* **Type** — the type of the snippet parameter.
-* **Substitute for** — the elements in the original document for which the snippet parameter is substituted in the extracted snippet.
+* **Name** – The suggested name for the snippet parameter.
+* **Type** – The type of the snippet parameter.
+* **Substitute for** – The elements in the original document for which the snippet parameter is substituted in the extracted snippet.
 
 The names of the snippet parameters can be changed only if they are unique and not already used in the extracted content. The order of the parameters can also be changed.
 

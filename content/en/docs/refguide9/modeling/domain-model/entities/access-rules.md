@@ -11,12 +11,24 @@ The access rules of an entity define what a user is allowed to do with objects o
 
 Every access rule is applicable to one or more [module roles](/refguide9/module-security/#module-role). An access rule grants certain access rights to those roles. Rules are additive, which means that if multiple access rules apply to the same module role, all access rights of those rules are combined for that module role.
 
-{{% alert color="warning" %}}
+{{% alert color="info" %}}
 Access rules are not inherited from an entity's [generalization](/refguide9/entities/#generalization), because the security for every entity is specified explicitly. So when adding an access rule to an entity, always make sure that all required XPath constraints are applied. If the entity has a generalization with access rules defining XPath constraints, these will not apply to its specializations and will therefore not limit its visibility.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-The **System.User** entity has inbuilt access rules where access is given to its attributes if the user can manage the role of that user. Specializations of **System.User** (such as **Administration.Account**) cannot restrict this access with their own access rules.
+The **System.User** entity is a special case when considering access rules. It has the following features:
+
+* **System.User** has built-in platform-enforced access rules.
+
+    These rules grant access to its attributes when the requesting user's role is configured to manage the role assigned to that User object.
+    
+* **System.User** built-in access rules apply to specializations of **System.User**.
+
+    Unlike regular access rules, which are defined per entity and are not inherited from generalizations, these built-in rules operate at the platform level and cannot be overridden or restricted by access rules defined on a specialization.
+
+    This means that if you create a specialization of **System.User** (for example, **Administration.Account**), any user with a role which manages the role assigned to that User object can always read the **System.User** attributes of objects of your specialization. This is the case, even if you add XPath constraints on the specialization entity to prevent this.
+
+For example, suppose you want to limit managers to only see users in their own department. Using only XPath constraints on the specialization cannot enforce this restriction because the [User management](/refguide9/user-roles/#user-management) setting in **App Security** can grant access to **System.User** attributes for any role configured to manage that User object's role. To enforce the department restriction, configure each user role in **App Security** to manage only the roles it strictly needs—avoid granting broad "manage all roles" permissions unless your use case requires it.
 {{% /alert %}}
 
 ## Defining Access Rules

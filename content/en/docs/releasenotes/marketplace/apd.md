@@ -3,7 +3,7 @@ title: "APD Release Notes"
 linktitle: "APD"
 url: /releasenotes/marketplace/apd/
 description: "The release notes for Mendix Application Performance Diagnostics (APD) with details on new features, bug fixes, and known issues."
-weight: 10
+weight: 40
 numberless_headings: true
 ---
 
@@ -97,7 +97,7 @@ We made the following improvements to the runtime agent:
 
 ## 2.0.10 {#2010}
 
-This is the first release for [Mendix 8](/releasenotes/studio-pro/8.0/).
+This is the first release for Mendix 8.
 
 We made the following improvements to the browser agent:
 

@@ -14,7 +14,7 @@ Strings are surrounded by quotes. If the string contains a quote, it should be e
 
 For a great deep-dive look into string functions call, check out this video:
 
-{{< vidyard "EpVivdyB4i1jGvc8J9yXkt" >}}
+{{< vidyard id="EpVivdyB4i1jGvc8J9yXkt" >}}
 
 ## `toLowerCase` {#toLowerCase}
 

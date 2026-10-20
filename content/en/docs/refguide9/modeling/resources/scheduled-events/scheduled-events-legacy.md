@@ -36,7 +36,7 @@ A `ScheduledEventInformation` object is created every time the scheduled event d
 * **Status** – the current status of this run of the scheduled event:
     * **Running** – the event is currently running and has not yet ended
     * **Completed** – the event has completed successfully
-    * **Error** – the event completed with an error — you can find the error on the error log using the *StartTime* and *EndTime* to locate it if necessary
+    * **Error** – the event completed with an error—you can find the error on the error log using the *StartTime* and *EndTime* to locate it if necessary
     * **Stopped** – the scheduled event was stopped before completion, for example by the app being stopped or a cluster node becoming unhealthy
 
 {{% alert color="warning" %}}
@@ -55,7 +55,7 @@ The `ScheduledEventInformation` objects are not cleared automatically. If you ha
 | Property | Description |
 | --- | --- |
 | Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](/refguide9/microflow/)). |
-| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example [Apps](https://sprintr.home.mendix.com/) or Windows Service Console). |
+| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example [Projects](https://projects.home.mendix.com/) or Windows Service Console). |
 
 ## Timing Properties
 

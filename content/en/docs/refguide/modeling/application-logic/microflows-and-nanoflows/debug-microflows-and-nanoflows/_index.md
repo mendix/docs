@@ -1,6 +1,6 @@
 ---
 title: "Debugging Microflows and Nanoflows"
-url: /refguide/debug-microflows-and-nanoflows//
+url: /refguide/debug-microflows-and-nanoflows/
 weight: 120
 ---
 
@@ -19,6 +19,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Read [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
 * Read [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+
+{{% alert color="info" %}}
+Debugging with breakpoints is not supported for microflows executed during application startup (for example, the [After startup](/refguide/runtime-tab/#after-startup) microflow and any microflows it calls).
+{{% /alert %}}
 
 ## Debugging Overview
 

@@ -86,7 +86,7 @@ If the `mendix-operator` deployment is stopped and started again after some time
 
 Most resources are managed (owned) by the Operator, which means the Operator will roll back any properties it doesn't expect, allowing the Operator to automatically recover (heal) non-working configurations.
 
-It is safe to update the an existing `MendixApp` CR while the Operator is still processing changes. For example, if you have decided to deploy a new MDA, but forgot to update some microflow constants, you can edit (update) the `MendixApp` CR immediately with the right configuration — the Mendix Operator will cancel any changes it is still processing and start applying the updated configuration.
+It is safe to update the an existing `MendixApp` CR while the Operator is still processing changes. For example, if you have decided to deploy a new MDA, but forgot to update some microflow constants, you can edit (update) the `MendixApp` CR immediately with the right configuration—the Mendix Operator will cancel any changes it is still processing and start applying the updated configuration.
 
 However, do not modify resources (deployments, services, or ConfigMaps) which are not covered in the documentation. This might lead to the Operator seeing that a resource needs to be updated and either not being able to process changes to reach the desired state or rolling back your changes.
 
@@ -99,7 +99,7 @@ Mendix on Kubernetes includes multiple Custom Resources (CRs).
 These CRs provide the configuration for the Operator:
 
 * `OperatorConfiguration` specifies a common configuration for all environments in a namespace. Most of the `OperatorConfiguration` can be managed with the Mendix on Kubernetes Configuration Tool `mxpc-cli`, with a few advanced options that can be updated manually.
-* `OperatorVersion` is used to specify Operator versions and the registry containing auxiliary container images. This CR should not be modified manually — it is updated automatically when the Operator is installed or upgraded.
+* `OperatorVersion` is used to specify Operator versions and the registry containing auxiliary container images. This CR should not be modified manually—it is updated automatically when the Operator is installed or upgraded.
 * `StoragePlan` provides the Operator with instructions on how to provide a database or file blob storage to a new environment, and how to clean up storage after an environment has been deleted. It is not meant to be edited manually, the `mxpc-cli` Cloud Configuration Tool creates and updates `StoragePlan` CRs and ensures that the configuration is valid.
 
 #### CRs Which Control the App Environment
@@ -135,7 +135,7 @@ If you want to prevent developers from accessing secrets or other Kubernetes obj
 
 ### Scope
 
-Mendix Operator is limited in scope to one namespace. If you need to use the Mendix Operator in multiple namespaces, you have to install it and configure it in each namespace. This allows the use of multiple versions of the Operator, with different configurations, in the same cluster — as long as each Operator runs in its own dedicated namespace.
+Mendix Operator is limited in scope to one namespace. If you need to use the Mendix Operator in multiple namespaces, you have to install it and configure it in each namespace. This allows the use of multiple versions of the Operator, with different configurations, in the same cluster—as long as each Operator runs in its own dedicated namespace.
 It is not possible to install one global instance of the Operator for the entire cluster.
 
 On the other hand, CRDs are global within the cluster. Since all Mendix Operators in a cluster will be using the same shared CRD, it is critical that the latest version of the CRDs are installed in a cluster.  See the [Mendix on Kubernetes upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/) for more information.
@@ -152,7 +152,7 @@ Some actions, such as building a container image or managing an Azure SQL databa
 For example, building a container image can take several minutes. To push the resulting image into a registry, additional authentication helpers might be required.
 Databases and file storage buckets require client libraries – and in some cases additional packages.
 
-For some tasks, the Operator uses “task” pods: pods that execute a certain task and then terminate. These pods are an equivalent to CI/CD jobs — the Operator will provide all parameters to the task, then wait for the pod to complete and check its final status.
+For some tasks, the Operator uses “task” pods: pods that execute a certain task and then terminate. These pods are an equivalent to CI/CD jobs—the Operator will provide all parameters to the task, then wait for the pod to complete and check its final status.
 This allows the Operator to support extensions and provider-specific add-ons that are delivered as separate containers, keeping the Operator image compact and free of code and dependencies that are optional.
 Running separate pods also allows the Operator to be restarted without interrupting any tasks that are in progress. This approach also allows lengthy or resource-consuming tasks to run separately from the Operator, in separate pods or even on different nodes, without consuming resources from the Operator.
 

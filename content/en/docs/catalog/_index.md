@@ -2,7 +2,7 @@
 title: "Catalog"
 url: /catalog/
 description: "Describes the processes and properties of Catalog."
-weight: 41
+weight: 44
 no_list: false
 description_list: true
 cascade:
@@ -18,7 +18,7 @@ aliases:
 
 The [Catalog](https://catalog.mendix.com) is a development tool provided in Mendix Cloud. 
 
-{{< figure src="/attachments/catalog/catalog-home.png" class="no-border" >}}
+{{< figure src="/attachments/catalog/catalog-home.png" alt="Catalog home page" class="no-border" >}}
 
 REST services provided by Mendix Apps running in Mendix Cloud (published [OData](/refguide/published-odata-services/) and OpenAPI REST Services), Web Services, and Business Events are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData, OpenAPI, Web Service and Business Event endpoints published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
 
@@ -26,9 +26,6 @@ Learn about updates and improvements in the [Catalog](/releasenotes/data-hub/) r
 
 {{% alert color="info" %}}
 If you deploy your Mendix apps in an alternative environment, like on-prem or Mendix on Kubernetes, you can use the Catalog APIs to register your apps and services in the Catalog to enable visibility of your deployed APIs. For information about using Catalog for local deployment, see [Register Services without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).{{% /alert %}}
-
-{{% alert color="info" %}}
-The Catalog and [external entities](/refguide/external-entities/) are supported in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above.{{% /alert %}}
 
 ## Catalog and Mendix Connect {#catalog-mx-connect}
 
@@ -56,9 +53,6 @@ From the **Home** screen, you can do the following:
 * **Popular Services** – view the most popular services
 
 The Catalog is also integrated in Mendix Studio Pro to find and connect to shared services in your apps. For further details on using Catalog in Studio Pro, see [Integration Pane](/refguide/integration-pane/) in the *Studio Pro Guide*.
-
-{{% alert color="info" %}}
-The Catalog integration is available in Studio Pro 8.14 and above. {{% /alert %}}
 
 ## Information Available in the Catalog {#available-info}
 

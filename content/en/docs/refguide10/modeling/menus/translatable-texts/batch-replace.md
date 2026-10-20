@@ -10,8 +10,8 @@ weight: 20
 
 There are a number of reasons that you may wish to do this:
 
-* The same text should appear in different places in the app, however, it has been entered inconsistently, for example sometimes with capital letters and sometimes not — if you reuse existing text across your app, this will improve the user experience
-* If all occurrences of a piece of text are identical, you only need to enter the translation once — this saves time and improves consistency
+* The same text should appear in different places in the app, however, it has been entered inconsistently, for example sometimes with capital letters and sometimes not—if you reuse existing text across your app, this will improve the user experience
+* If all occurrences of a piece of text are identical, you only need to enter the translation once—this saves time and improves consistency
 * If you find better wording for a common label or text, you can change them all at once with a single command
 
 {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/batch-replace/batch-replace.png" class="no-border" width="600" >}}

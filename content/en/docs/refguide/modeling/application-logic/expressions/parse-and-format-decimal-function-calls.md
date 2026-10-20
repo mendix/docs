@@ -126,7 +126,7 @@ The examples below illustrate which value the expression returns:
     the output is (depending on language settings):
 
     ```java
-    '€ 1.234,50' or '$ 1,234.50'
+    '€ 1.234,56' or '$ 1,234.56'
     ```
 
 * If you use the following input:

@@ -57,7 +57,7 @@ During sprint 0, you need to lay the groundwork for a successful project by focu
 
 You need to determine which Agile practices will become your organizational standard. This could be:
 
-* Scrum — The Mendix platform is optimized for Scrum at the team level.
+* Scrum – The Mendix platform is optimized for Scrum at the team level.
 * Kanban
 * Other variants
 
@@ -99,9 +99,9 @@ Certain requirements, such as access management or standardized navigation, are 
 
 Here are a few topics to keep in mind:
 
-* End-user login — Every app needs a way for end-users to get access to it. We advise using the [OIDC SSO module](/appstore/modules/oidc/) for your B2E apps. This is the easiest and most flexible approach for Single Sign-On, and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative, you can use [SAML](/appstore/modules/saml/) for regulated B2C-apps, [LDAP](/appstore/modules/ldap/) for on-prem apps, or the [Forgot My Password](/appstore/modules/forgot-password/) module for non-SSO apps.
+* End-user login – Every app needs a way for end-users to get access to it. We advise using the [OIDC SSO module](/appstore/modules/oidc/) for your B2E apps. This is the easiest and most flexible approach for Single Sign-On, and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative, you can use [SAML](/appstore/modules/saml/) for regulated B2C-apps, [LDAP](/appstore/modules/ldap/) for on-prem apps, or the [Forgot My Password](/appstore/modules/forgot-password/) module for non-SSO apps.
 
-* Getting familiar with the Marketplace — Low-code development may be fast, but using modules or content from the Marketplace may even be faster. You may find modules relevant to your portfolio or your first app in particular and create a shortlist for your teams.  Marketplace content may be supported by Mendix, by Mendix partners or by the Mendix community.
+* Getting familiar with the Marketplace – Low-code development may be fast, but using modules or content from the Marketplace may even be faster. You may find modules relevant to your portfolio or your first app in particular and create a shortlist for your teams.  Marketplace content may be supported by Mendix, by Mendix partners or by the Mendix community.
 
 ### Continuous Collaboration Through Mendix
 

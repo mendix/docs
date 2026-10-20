@@ -49,3 +49,8 @@ For more information about development lines, see [Version Control](/refguide/ve
 ## App Directory
 
 Choose the **App directory** to which want to download the app. The suggested name includes the name of the development line (*main* or the name of the branch line), but you can change this if you want.
+
+## Read More
+
+* [Enabling Version Control for Your App](/refguide/version-control/enable/)
+* [Optional: Working with Private Git](/refguide/on-premises-git/)

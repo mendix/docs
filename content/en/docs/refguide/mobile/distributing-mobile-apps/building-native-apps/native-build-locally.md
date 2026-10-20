@@ -77,7 +77,7 @@ Now that the Native Template is ready and includes the app's bundle, resources, 
 
 In the sections below you can see the basic steps to get an app up and running on an emulator or device using Android or iOS IDEs.
 
-### Building an Android App with Android Studio
+### Building an Android App with Android Studio {#building-android-app}
 
 {{% alert color="warning" %}}
 During this process, do not accept any suggestions to update to latest Gradle or Kotlin version.
@@ -111,7 +111,7 @@ To build an Android app with Android Studio, do the following:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/avd-manager.png" alt="AVD Manager"   width="250"  class="no-border" >}}
 
-### Building an iOS App with Xcode
+### Building an iOS App with Xcode {#building-ios-app}
 
 To build an iOS app with Xcode, do the following:
 

@@ -54,22 +54,22 @@ Use the new view entity to create a chart. Follow the steps below:
 3. Double-click the chart and in the **Data Source** field, click **New**. 
 4. Configure the chart by filling out the following:
 
-   * Data set - **Multiple series**
-   * Data source - **YearlySalesByCategoryVE**
-   * Group by - **CategoryId** 
-   * X axis attribute - **OrderYear**
-   * Y axis attribute - **TotalSales*
+    * Data set – **Multiple series**
+    * Data source – **YearlySalesByCategoryVE**
+    * Group by – **CategoryId** 
+    * X axis attribute – **OrderYear**
+    * Y axis attribute – **TotalSales**
 
 5. Set the series name to reflect the category name. Do the following:
   
-   * In the **Series name** field, click **Edit** and add **{1}** in the **Template** field. 
-   * In the **Parameters** field, click **New** > **Select** > **CategoryName** > **Select** > **OK**.
+    * In the **Series name** field, click **Edit** and add **{1}** in the **Template** field. 
+    * In the **Parameters** field, click **New** > **Select** > **CategoryName** > **Select** > **OK**.
 
-        {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/charting-with-view-entities/series-name.png" width="400" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/charting-with-view-entities/series-name.png" width="400" >}}
 
- The chart should be configured as seen below: 
+    The chart should be configured as seen below: 
 
-  {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/charting-with-view-entities/chart-final.png" width="400" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/charting-with-view-entities/chart-final.png" width="400" >}}
 
 6. Click **OK** to save.
 

@@ -6,6 +6,7 @@ description: "Various test cases and examples for Markdown and shortcodes. Use t
 linktitle: "Shortcodes, Markdown, and HTML"
 ---
 <!-- markdownlint-disable-file -->
+<!-- vale off -->
 
 ## Introduction
 
@@ -189,7 +190,7 @@ If the tab pane contains code with an asterisk (`*`) in it, the linter rule for 
 
 Mendix videos are hosted on Vidyard. For more information, see [the Videos section of the Style Guide](https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+Icons+and+Videos#Videos).
 
-{{< vidyard "GwE17mzGma5NAvDnXrVdFA" >}}
+{{< vidyard id="GwE17mzGma5NAvDnXrVdFA" date_updated="YYYY-MM-DD" >}}
 
 ## Other Markdown and HTML Guidelines
 

@@ -65,7 +65,7 @@ To scaffold your app folder for the group box widget, follow these steps:
 3. Start the generator by executing the following command:
 
     ```shell
-    npx @mendix/generator-widget GroupBox
+    npx @mendix/generator-widget@latest GroupBox
     ```
 
 4. The generator will ask you for some input during setup. Provide this information to the generator:

@@ -36,7 +36,7 @@ To use AppDynamics and send data to AppDynamics from your Mendix app, you need t
 
 To send your runtime information to AppDynamics, you must set it up using environment variables in the Mendix Portal.
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** on the environment you wish to monitor with AppDynamics. 
 1. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 1. Add the following **Custom Environment Variables**.

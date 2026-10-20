@@ -5,7 +5,7 @@ weight: 30
 description: "Describes the Integration Pane in Mendix Studio Pro."
 aliases:
     - /refguide10/data-hub-pane/
-# SB: The images on this page are created using the Lato-LandscapeDemoApp (https://sprintr.home.mendix.com/link/project/1b515494-d818-4358-8c91-6c3d54e9cae5)
+# SB: The images on this page are created using the Lato-LandscapeDemoApp (https://projects.home.mendix.com/link/project/1b515494-d818-4358-8c91-6c3d54e9cae5)
 ---
 
 ## Introduction
@@ -34,7 +34,7 @@ When you do not enter search text in the Integration pane, then the **Used in th
 
 {{< figure src="/attachments/refguide10/modeling/menus/view-menu/integration-pane/used-in-your-app.png" alt="User in Your App Section" class="no-border" width="300" >}}
 
-For more information on how to add entities and actions to your app, see [Adding an External Entity to an App](/refguide10/external-entities/#adding-external-entities) section in *External Entities* or [Call external action](/refguide10/call-external-action/). For working with business events, see [Using Business Events](/appstore/services/business-events/#two-way-be).
+For more information on how to add entities and actions to your app, see [Adding an External Entity to an App](/refguide10/external-entities/#adding-external-entities) section in *External Entities* or [Call external action](/refguide10/call-external-action/). For working with business events, see [Using Business Events](/appstore/services/business-events-configuration/#two-way-be).
 
 ## Searching Catalog Sources {#search}
 
@@ -157,5 +157,5 @@ A business event can be **Pub**lished or **Sub**scribed to, or both.
 * [External Entities](/refguide10/external-entities/)
 * [Consumed OData Service](/refguide10/consumed-odata-service/)
 * [Business Event Services](/refguide10/business-event-services/)
-* [Using Business Events](/appstore/services/business-events/#two-way-be)
+* [Using Business Events](/appstore/services/business-events-configuration/#two-way-be)
 * [How to Consume Registered Assets](/catalog/consume/)

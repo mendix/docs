@@ -1,9 +1,14 @@
 ---
 title: "Any Chart Widgets"
+deprecated: true
 url: /refguide/charts-any-configuration/
 description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 weight: 30
 ---
+
+{{% alert color="warning" %}}
+The Any Chart widget is not compatible with the [Mendix React Client](/refguide/mendix-client/react/). We have published a version of Any Chart that supports the React client called Custom Chart. Update your [Charts](/appstore/widgets/charts/) widget (to version 6.0 or above) to use the Custom Chart feature.
+{{% /alert %}}
 
 ## Introduction
 

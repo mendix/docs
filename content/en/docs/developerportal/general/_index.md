@@ -1,8 +1,8 @@
 ---
-title: "Apps ‒ General"
+title: "Projects ‒ General"
 linktitle: "General"
 url: /developerportal/general/
-description: "Describes the tools and settings available in the General category in the Apps navigation pane."
+description: "Describes the tools and settings available in the General category in the Projects navigation pane."
 weight: 5
 no_list: false
 description_list: true
@@ -14,6 +14,6 @@ aliases:
 
 ## Introduction
 
-The **General** category in the **Apps** [navigation pane](/developerportal/#navigation-pane) offers general tools and settings for your app.
+The **General** category in the **Projects** [navigation pane](/developerportal/#navigation-pane) offers general tools and settings for your app.
 
 ## Documents in This Category

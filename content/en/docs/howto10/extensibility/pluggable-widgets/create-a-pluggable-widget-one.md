@@ -63,7 +63,7 @@ Using a terminal or command line, navigate to your new Mendix app's folder, crea
 ```shell
 mkdir myPluggableWidgets
 cd myPluggableWidgets
-npx @mendix/generator-widget TextBox
+npx @mendix/generator-widget@10.24-latest TextBox
 ```
 
 The generator will ask you a few questions during setup. Answer the questions by specifying the following information:

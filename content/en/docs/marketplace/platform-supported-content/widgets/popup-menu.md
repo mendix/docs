@@ -49,3 +49,9 @@ Other main properties of the widget are as follows:
     * **Fixed** - positions the floating element relative to the viewport. It breaks the element out of any clipping ancestor.
 
 If you want to use dynamic content, make sure to wrap the widget in a [data view](/refguide/data-view/) and set **Enable advanced options** to **Yes**.
+
+## Limitations
+
+Current notable limitations are as follows:
+
+* Menu items are not hidden based on user access to actions set in an **On click action**. For example, if a user does not have access to a microflow assigned to a menu item, the item will still be visible, but clicking it will have no effect.

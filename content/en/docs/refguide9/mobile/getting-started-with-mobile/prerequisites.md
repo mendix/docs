@@ -58,20 +58,9 @@ Building native mobile apps is not supported on the [Private Mendix Platform](/p
 
 ## Getting the Make It Native App {#get-min-app}
 
-The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro 9.24.0 and above.
-
-This app is available for both Android and iOS devices.
-
-For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](/refguide9/system-requirements/#mobile) section of *System Requirements*.
-
-### Direct Download Links {#direct-links}
-
-For Make it Native 9 apps, download the following Android or iOS Make It Native apps directly using these QR codes:
-
-|                                  Android                                  |                                iOS                                |
-| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/android-min-qr-code.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/ios-min-qr-code.png" alt="iOS QR Code" class="no-border" >}} |
-|   [Link](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=en_US&gl=US)    |        [Link](https://apps.apple.com/us/app/make-it-native-9/id1542182000)         |
+{{% alert color="warning" %}}
+The Make It Native app is no longer supported for Mendix 9. Please create a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) instead.
+{{% /alert %}}
 
 ## Troubleshooting Common Mobile Issues {#troubleshooting}
 
@@ -141,3 +130,8 @@ The latest version of Make It Native 9 is only compatible with versions of Mendi
 ### Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide9/using-mendix-studio-pro-on-a-mac/).
+
+If the Make It Native app cannot connect when you use Parallels, check the following:
+
+* Enter your Mac's IP address in the Make It Native app's **Host** field, not the IP address of the Windows virtual machine that Studio Pro shows. For instructions on finding your Mac's IP address, see the [Viewing Your App on Your Testing Device](/refguide9/using-mendix-studio-pro-on-a-mac/#viewing-your-app-on-your-testing-device) section of *Configuring Parallels*.
+* Make sure port forwarding is enabled for ports 8080, 8083, and 8100 in your Parallels network preferences. For setup steps, see the [Configuring Your Windows Virtual Machine for Mendix Studio Pro](/refguide9/using-mendix-studio-pro-on-a-mac/#configuring-your-windows-virtual-machine-for-mendix-studio-pro) section of *Configuring Parallels*.

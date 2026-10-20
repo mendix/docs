@@ -75,10 +75,6 @@ The dynamic classes property allows you to specify one or more cascading stylesh
 
 {{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/dynamic-classes.png" class="no-border" >}}
 
-{{% alert color="info" %}}
-The dynamic classes property was introduced in Mendix Studio Pro 8.14.
-{{% /alert %}}
-
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
 
 ### Documentation{#documentation}
@@ -307,8 +303,8 @@ The possible values of a predefined validation are the following:
 * **Required** – can be used for attributes of *all* data types
 * **E-mail** – applies to *String* attributes
 * **Positive number** – applies to *Decimal*, *Integer*, and *Long* attributes
-* **Date in the future** – applies to *Date and time* attributes — compares the date *and time* to `[%CurrentDateTime%]`
-* **Date in the past** – applies to *Date and time* attributes — compares the date *and time* to `[%CurrentDateTime%]`
+* **Date in the future** – applies to *Date and time* attributes—compares the date *and time* to `[%CurrentDateTime%]`
+* **Date in the past** – applies to *Date and time* attributes—compares the date *and time* to `[%CurrentDateTime%]`
 
 #### Custom Validation{#custom-validation}
 

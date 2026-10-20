@@ -9,8 +9,8 @@ numberless_headings: true
 
 ## Hello Mendix: Create, Run, and Deploy a Hello World App with Mendix
 
-{{< youtube 5kRDyHfkwoI >}}
+{{< vidyard id="LLE6md3WTtvhai9FYjgMff" >}}
 
 ## Continuing with the Next Tutorial
 
-To continue learning, see [Building a Responsive Web App](/quickstarts/responsive-web-app/).
+To continue learning, see [Building a Responsive Web App](/quickstarts/part1/).

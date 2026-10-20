@@ -51,12 +51,12 @@ To configure the web service call, follow these steps:
     {{< figure src="/attachments/refguide/modeling/integration/web-services/consume-a-complex-web-service/select-web-service-op.png" alt="select web service op" class="no-border" width="700" >}}
 
 5. In the **SOAP Request Body** tab of the **Call Web Service** properties editor, you can configure the SOAP body. This contains the parameters needed to execute the web service request. The **Simple**, **Export Mapping**, and **Custom** options enable you to select the type of SOAP body to use. Click **Edit value** and use one of the following to change the domain-to-XML mapping or the variables from the microflow used as input arguments:
-    * **Simple expressions for each request parameter** — if the imported web service requires only primitive arguments:
+    * **Simple expressions for each request parameter** – if the imported web service requires only primitive arguments:
 
         {{< figure src="/attachments/refguide/modeling/integration/web-services/consume-a-complex-web-service/simple-expression-param.png" class="no-border" width="700" >}}
 
-    * **Export mappings for each request parameter** or **Export mapping for the entire request**  — if the domain model entities need to be mapped to XML elements
-    * **Custom request template** — for the definition of a custom XML body with parameters:
+    * **Export mappings for each request parameter** or **Export mapping for the entire request**  – if the domain model entities need to be mapped to XML elements
+    * **Custom request template** – for the definition of a custom XML body with parameters:
 
         {{< figure src="/attachments/refguide/modeling/integration/web-services/consume-a-complex-web-service/custom-request-temp.png" alt="custom-request-temp" class="no-border" width="700" >}}
 
@@ -69,7 +69,7 @@ To configure the web service call, follow these steps:
 
         {{< figure src="/attachments/refguide/modeling/integration/web-services/consume-a-complex-web-service/18581790.png" class="no-border" width="700" >}}
 
-    * If the return is a primitive, you can store it in a variable by selecting **Store in variable** — **Yes**  and provide the **Type** and **Variable**:
+    * If the return is a primitive, you can store it in a variable by selecting **Store in variable** > **Yes**, and then provide the **Type** and **Variable**:
 
         {{< figure src="/attachments/refguide/modeling/integration/web-services/consume-a-complex-web-service/18581789.png" class="no-border" width="700" >}}
 

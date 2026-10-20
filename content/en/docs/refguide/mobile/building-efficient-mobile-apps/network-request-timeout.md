@@ -25,5 +25,5 @@ Exclusions ensure that complex operations (like data synchronization and server-
 
 The following operations are excluded from the configured timeout settings:
 
-* **Data Synchronization Operations** — all `synchronize_objects` calls
-* **Microflow Runtime Operations** — all `runtimeOperation` calls
+* **Data Synchronization Operations** – all `synchronize_objects` calls
+* **Microflow Runtime Operations** – all `runtimeOperation` calls

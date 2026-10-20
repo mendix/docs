@@ -72,7 +72,7 @@ The **Search** screen is divided into the [search](#search-pane) pane on the lef
 
 The collapsible **Search** pane is used to search for registered assets in the Catalog.
 
-{{< figure src="/attachments/catalog/search/search-pane.png" alt="search pane"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/catalog/search/search-pane.png" alt="Studio Pro search pane"   width="300"  class="no-border" >}}
 
 #### Specifying the Search
 
@@ -139,7 +139,7 @@ When a **Dataset** is selected in the search results, the following details are 
 
 The source and endpoint details of the dataset are displayed:
 
-{{< figure src="/attachments/catalog/search/dataset-details.png" alt="associations info" >}}
+{{< figure src="/attachments/catalog/search/dataset-details.png" alt="Sample dataset with example attributes" >}}
 
 * Dataset name
 * **Part of** – a link to the service details page that the dataset is exposed in
@@ -160,7 +160,7 @@ The **Attributes** tab lists the attributes that are exposed for the dataset in 
 
 Under the **Associations** tab for each dataset, the associations are displayed:
 
-{{< figure src="/attachments/catalog/search/attributes-associations.png" alt="associations info" class="no-border" >}}
+{{< figure src="/attachments/catalog/search/attributes-associations.png" alt="Sample dataset with example association" class="no-border" >}}
 
 * **Name** – the name of the association that is exposed in the OData service contract.
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
@@ -170,7 +170,7 @@ Under the **Associations** tab for each dataset, the associations are displayed:
 
 The metadata panel at the right of the asset details screen displays details from the service metadata contract and values that have been curated in the Catalog:
 
-{{< figure src="/attachments/catalog/search/metadata.png" alt="metadata pane"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/catalog/search/metadata.png" alt="Sample Catalog metadata pane"   width="300"  class="no-border" >}}
 
 #### Tags
 
@@ -219,7 +219,7 @@ The environment type indicates the quality and the status of the data that the e
 
 The **Curation Option** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit**, you can edit the information that is displayed in the Catalog for an asset.
 
-{{< figure src="/attachments/catalog/search/curation-option.png" alt="curation option"   width="300"  >}}
+{{< figure src="/attachments/catalog/search/curation-option.png" alt="Sample app curation option"   width="300"  >}}
 
 For the selected service, you can edit the [Application Details](/catalog/manage/curate/#curate-application), the [Service Details](/catalog/manage/curate/#service-details), and the Authentication.
 
@@ -237,7 +237,7 @@ The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<techn
 
 Here is an example:
 
-{{< figure src="/attachments/catalog/search/download_example.png" alt="download example" class="no-border" >}}
+{{< figure src="/attachments/catalog/search/download_example.png" alt="Sample app download location" class="no-border" >}}
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains all the metadata files that define the service.
 

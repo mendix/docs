@@ -17,11 +17,11 @@ The `mx export-security-overview` command can be used to export the data in the 
 
 Use the following command pattern: `mx export-security-overview [OPTIONS] [MPR-FILE]`
 
- `OPTIONS` are presented in the table below::
+ `OPTIONS` are presented in the table below:
 
 | Option                    | Value             | Result |
 |---------------------------|-------------------|----------|
-| `-t, --export-format`     | `json` or `xlsx`  | The format to export to. |
+| `-t, --export-format`     | `json` or *xlsx*  | The format to export to. |
 | `-e, --exclude-appstore`  | *-*               | When set, excludes Marketplace modules. |
 | `-o, --output-file`       | file path         | The path to the output file. |
 

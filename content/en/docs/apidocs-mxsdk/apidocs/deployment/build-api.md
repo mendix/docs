@@ -20,24 +20,47 @@ The image below provides a domain model representation of the concepts discussed
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" class="no-border" >}}
 
-## Authentication
+## Authentication{#authentication}
 
-The Build API requires authentication via API keys that are bound to your Mendix account.
+The Build API supports authentication via a personal access token (PAT) or an API key. Mendix recommends using a PAT.
 
-### Obtaining an API Key
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/api-key-deprecation-warning.md" %}}
+{{% /alert %}}
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+### Authenticating with a PAT{#authenticating-with-pat}
 
-### Using Authentication Headers
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
+
+Select at least the following scopes:
+
+* `mx:build:read` – to read build information
+* `mx:build:write` – to trigger and manage builds
+
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
+
+```http
+GET /api/1/apps/calc/packages HTTP/1.1
+Host: deploy.mendix.com
+Authorization: MxToken 7LJE…vk
+```
+
+### Authenticating with an API Key{#authenticating-with-api-key}
+
+To obtain a Mendix API key, follow the instructions in the [API Keys](/portal/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
 Use the following request headers to authenticate an API call:
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user
 
+### Migrating from an API Key to a PAT{#migrate-to-pat}
+
+{{% snippet file="/static/_includes/apidocs-mxsdk/migrate-api-key-to-pat.md" %}}
+
 ### Configuring Permissions
 
-To perform an action via the Build API, you need **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
+To perform an action via the Build API, you need **API Access** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## API Calls
 
@@ -281,7 +304,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### Payload
 
-The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
+The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control/#which-team-server).
 
 An object with the following key-value pairs:
 

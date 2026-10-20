@@ -96,7 +96,7 @@ The Mendix Client uses a REST-like protocol to request data from the Runtime Ser
 }
 ```
 
-The XPath expression states what data is needed. This can be an object containing data of an entity — or just some attributes of an object — as required by the application.
+The XPath expression states what data is needed. This can be an object containing data of an entity—or just some attributes of an object—as required by the application.
 
 The schema section can be used to specify additional restrictions on what data is required (what attributes and how many objects). This approach ensures that the amount of data transferred between Runtime Server and Mendix Client is minimized.
 

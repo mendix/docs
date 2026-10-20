@@ -9,13 +9,17 @@ description: "Native Template 15"
 
 **Release date: November 10, 2025**
 
-* We updated the version of @mendix/native to 10.3.1 to update op-sqlite version to 15.0.7.
+### Improvements
+
+* We updated the version of `@mendix/native` to 10.3.1 to update `op-sqlite` version to 15.0.7.
 
 ## 15.4.3 {#1543}
 
 **Release date: November 5, 2025**
 
-* We updated the version of @mendix/native to 10.3.0 to fix the `components.json` errors.
+### Improvements
+
+* We updated the version of `@mendix/native` to 10.3.0 to fix the `components.json` errors.
 
 ## 15.4.2 {#1542}
 

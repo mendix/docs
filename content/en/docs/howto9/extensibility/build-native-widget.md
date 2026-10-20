@@ -35,18 +35,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the latest version of Mendix Studio Pro
 * Install the Mendix Make It Native app on a mobile device or an emulator.
 * Install the LTS version of [Node.js](https://nodejs.org).
-* Install the latest [Yeoman](https://yeoman.io/) with the following command:
-
-    ```shell
-    npm install -g yo
-    ```
-
-* Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
-
-    ```shell
-    npm install -g @mendix/generator-widget
-    ```
-
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of:
     * Microsoft's Command Prompt or the Unix command line
@@ -77,7 +65,7 @@ To scaffold your app folder for the group box widget, follow these steps:
 3. Start the generator by executing the following command:
 
     ```shell
-    yo @mendix/widget GroupBox
+    npx @mendix/generator-widget@10.24-latest GroupBox
     ```
 
 4. The generator will ask you for some input during setup. Provide this information to the generator:
@@ -1090,7 +1078,7 @@ First change the widget property configuration:
     2. Rename the file to *GroupBox.icon.png*
     3. Add the file to the *src* folder which contains the *xml* file
 
-    {{% alert color="info" %}}This functionality was introduced in Studio Pro 9.6. To show a widget icon in Studio Pro 9.5 or below, the icon needs to be added to the *xml* file. To do this, follow the steps from the [Mendix 8](/howto8/extensibility/build-native-widget/#adding-a-collapsible-property) version of this document.{{% /alert %}}
+    {{% alert color="info" %}}This functionality was introduced in Studio Pro 9.6. To show a widget icon in Studio Pro 9.5 or below, the icon needs to be added to the *xml* file. {{% /alert %}}
 
 Now support this section's two features with your display component:
 

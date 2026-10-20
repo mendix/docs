@@ -9,20 +9,22 @@ description: "Describes the steps required to use the Mendix External Database c
 
 The [External Database connector](/appstore/modules/external-database-connector/) allows you to connect to databases and select data to use in your app. You can use it to directly test connections and queries during configuration in Studio Pro at design time. For Mendix apps that use Databricks as their database, the External Database connector is the recommended integration option for Mendix 10.20.0 and above.
 
+If you are using Studio Pro 11.13 or later, you do not need to download this module from the Marketplace, as the External Database Connector comes included with Studio Pro. For more information, see [Connect to an External Database](/refguide/external-database-connection/).
+
 This how-to describes the steps required to enable your app to use the External Database connector with Databricks.
 
 ## Prerequisites
 
-For some general information on how to use bring your own JDBC driver with the external database connector, read [External Database Connector: Configure for Any Database](https://docs.mendix.com/appstore/modules/external-database-connector/#byod).
+For some general information on how to use bring your own JDBC driver with the external database connector, read [External Database Connector: Configure for Any Database](/appstore/modules/external-database-connector/#byod).
 
 ## Configuring the Connection Between Your Mendix App and Databricks
 
 To connect your Mendix application to Databricks with the External Database connector, follow these steps:
 
-1. Install the [External Database connector](https://marketplace.mendix.com/link/component/219862) version 5.1.1 or higher. 
+1. Optional: If your Studio Pro version is older than 11.13, install the [External Database connector](https://marketplace.mendix.com/link/component/219862) version 5.1.1 or higher. 
 2. Ensure that you have the required Databricks JDBC Driver by choosing one of the following options:
 
-    * To have the dependency downloaded automatically on running your project, add a **Java Dependency** in the **Settings** of you module and provide the following information:    
+    * To have the dependency downloaded automatically on running your project, add a **Java Dependency** in the **Settings** of your module and provide the following information:    
         * **Group ID** - set to **com.databricks**
         * **Artifact ID** - set to **databricks-jdbc**
         * **Version** - set to the latest **2.x** version
@@ -43,12 +45,12 @@ To connect your Mendix application to Databricks with the External Database conn
 
    {{< figure src="/attachments/appstore/platform-supported-content/modules/databricks/PAT.png" >}}
    
-7. In your Databricks account find the JDBC URL related to the SQL warehouse or cluster which you are using.
-8. Copy the URL into the **JDBC URL** field and add *UID=token;PWD=`PAT`*, where `PAT` is your actual PAT.
+6. In your Databricks account find the JDBC URL related to the SQL warehouse or cluster which you are using.
+7. Copy the URL into the **JDBC URL** field and add *UID=token;PWD=`PAT`*, where `PAT` is your actual PAT.
 
    {{< figure src="/attachments/appstore/platform-supported-content/modules/databricks/JDBC_URL.png" >}}
   
-9. Click **Test Connection** to verify the connection details, and then click **Save**.
+8. Click **Test Connection** to verify the connection details, and then click **Save**.
 
 Your Mendix app now connects to Databricks with the provided connection details. When the connection is successful, you can see your Databricks tables in your Mendix app.
 
@@ -112,11 +114,11 @@ After you have created a table with some entries, you can now be query from your
     5. Double-click the **Query External Database** microflow activity to configure the required parameters.
     6. In the **Database** section, select your Databricks database.
     7. In the **Query** list, select the query name that you entered in step 2.
-    10. In the **Output** section, provide the following values:
+    8. In the **Output** section, provide the following values:
         * **Return type** - **List of *{your module name}*.customerdata**
         * **Use return value** - set to **Yes**
         * **List name** - enter *Customerdata_list*
-    11. Click **OK**.
+    9. Click **OK**.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/databricks/JA_Query.png" >}}
 

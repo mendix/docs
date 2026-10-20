@@ -1,0 +1,24 @@
+# Mendix custom rule: Use 'click' not 'click on'
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md (click)
+extends: substitution
+message: "Use '%s' instead of '%s'"
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/terminology/#click
+level: warning
+ignorecase: false
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
+swap:
+  'click on': 'click'
+  'Click on': 'Click'
+  'clicking on': 'clicking'
+  'Clicking on': 'Clicking'
+  'clicked on': 'clicked'
+  'Clicked on': 'Clicked'
+  'clicks on': 'clicks'
+  'Clicks on': 'Clicks'

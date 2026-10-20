@@ -32,7 +32,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### Generating a PAT
 
-You can generate a PAT in the **Developer Settings** section of your Mendix Profile. For details, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+You can generate a PAT in the **Developer Settings** section of your Mendix Profile. For details, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 
@@ -112,4 +112,4 @@ Follow the steps below to upload a deployment package by using the API.
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/private-cloud-build-api.yaml"  >}}
+{{< swaggerui src="/openapi-spec/privatecloud-build-v4.yaml"  >}}

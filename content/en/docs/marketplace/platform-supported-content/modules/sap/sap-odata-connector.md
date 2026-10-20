@@ -182,7 +182,7 @@ The OData Connector for SAP solutions module gives you access to additional acti
 This section describes all the actions of the OData Connector for SAP solutions. They are categorized as being either for [entity and attribute manipulation](#EntityManipulation) or [helper actions](#HelperActions).
 
 {{% alert color="info" %}}
-Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData v4. Currently, only **Get List** and **Get Entry** are supported for services using OData v4.
+With version 5.5.0, the OData Connector for SAP solutions supports all actions for services using OData v4.
 {{% /alert %}}
 
 Some inputs are necessary for the connector to work and these are marked **(required)**. Other inputs are not required, but in some cases this must be made explicit by setting them to *empty*.
@@ -867,8 +867,8 @@ This domain model is part of the OData Connector for SAP solutions module and ca
     * **Message** – the textual description or reason phrase from the HTTP status line
     * **Payload** –  the raw HTTP response content for the operation. Internally parsed by:
 
-        * Fetch Batch Response (Single) — for individual entity responses
-        * Fetch Batch Response (List) — for list-type responses
+        * **Fetch Batch Response (Single)** – for individual entity responses
+        * **Fetch Batch Response (List)** – for list-type responses
         
     * **ChangeSet** – indicates whether the **BatchResponse** is part of a ChangeSet, a grouped set of write operations
 

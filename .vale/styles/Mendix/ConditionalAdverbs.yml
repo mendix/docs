@@ -1,0 +1,16 @@
+# Mendix custom rule: Avoid conditional adverbs that add uncertainty
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Conditional Adverbs)
+# "These words add uncertainty and cloud the meaning of sentences."
+extends: existence
+message: "Avoid '%s'. These words add uncertainty to technical writing."
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#conditional-adverbs
+level: warning
+ignorecase: true
+tokens:
+  - '\bwould\b'
+  - '\bcould\b'
+  - '\bshould\b'
+  - '\bpossibly\b'
+  - '\bmight\b'
+  - '\bactually\b'
+  - '\bpotentially\b'

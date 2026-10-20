@@ -40,7 +40,7 @@ Create a view entity to join the customer and address tables. To do this, follow
         LEFT JOIN c/Shop.DeliveryAddress/Shop.Address da
     ```
 
-3. Click **Run Query** to view the data. Then, click **OK**.
+4. Click **Run Query** to view the data. Then, click **OK**.
 
 ### Create a JSON Structure
 

@@ -2,7 +2,7 @@
 title: "Application Autoscaler for SAP Business Technology Platform"
 linktitle: "Application Autoscaler for SAP BTP"
 url: /developerportal/deploy/sap-cloud-platform/sap-autoscaler/
-weight: 47
+weight: 70
 description: "How to set up the SAP Autoscaler"
 aliases:
     - /partners/sap/sap-autoscaler/
@@ -16,16 +16,16 @@ For more information on the application autoscaler, see [Application Autoscaler 
 
 ## Binding the Application Autoscaler{#binding}
 
-The **autoscaler** service can be found on the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) of the environment details page of your app's environment.
+The **autoscaler** service can be found on the [Services Tab](/developerportal/deploy/sap-cloud-platform/environments/#binding-services) of the environment details page of your app's environment.
 
-Selecting the **autoscaler** service expands the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
+Selecting the **autoscaler** service expands the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the file which contains the configuration.
 
-{{< figure src="/attachments/deployment/sap-btp/sap-autoscaler/autoscaler-service.png" alt="Autoscaler service on the environment details page" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-autoscaler/autoscaler-service.png" alt="Autoscaler service on the environment details page" >}}
 
 You need to specify the following:
 
-* **Plan** – the plan you wish to use for the autoscaler, either *Lite* or *Standard*
-* **File** – the file which contains the JSON to configure the autoscaler — more information, including the contents of the configuration file can be found in [Application Autoscaler Service](https://help.sap.com/docs/application-autoscaler/application-autoscaler/defining-scaling-policy) on the SAP Help Portal
+* **Plan** – the plan you wish to use for the autoscaler, either *Lite* or *Standard*.
+* **File** – the file which contains the JSON to configure the autoscaler. For more information on the contents of the configuration file, refer [Application Autoscaler Service](https://help.sap.com/docs/application-autoscaler/application-autoscaler/defining-scaling-policy) on the SAP Help Portal.
 
 Having provided this information, you can click **Connect Services** to connect the autoscaler to your app.
 

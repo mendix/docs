@@ -7,7 +7,7 @@ description: "Describes how to populate the Maia Agent chat prompt from an exten
 
 ## Introduction
 
-This document describes how to populate the Maia Agent chat prompt from an extension in Studio Pro, ready for the user to review and send. For example, an extension can take text that the user selects and send it to the Maia chat as a prompt.
+This document describes how to use an extension in Studio Pro to populate the Maia Agent chat prompt for the user to review and send. For example, an extension can add text selected by the user and send it to Maia as a prompt.
 
 The Maia chat API is available to extensions through `studioPro.ai.chat`.
 
@@ -20,9 +20,9 @@ Before starting this how-to, complete the following prerequisites:
 
 ## Setting the Maia Chat Prompt
 
-With the Maia chat API, you can set a prompt text in the Maia Agent chat.
+With the Maia Chat API, you can set a prompt text in the Maia Agent chat.
 
-Replace your `src/main/index.ts` file with the following:
+To do this, replace your `src/main/index.ts` file with the following text:
 
 ```typescript
 import { IComponent, getStudioProApi } from "@mendix/extensions-api";
@@ -45,12 +45,12 @@ export const component: IComponent = {
 };
 ```
 
-This code does the following:
+This code:
 
-* It uses `maiaChatApi` from `studioPro.ai.chat` to access the Maia chat API.
-* It adds a menu item named **Ask Maia about my app** that calls `setChatPrompt` to populate the Maia Agent chat input and the true value sends it to Maia without the user reviewing it.
+* Uses `maiaChatApi` from `studioPro.ai.chat` to access the Maia Chat API
+* Adds a menu item named *Ask Maia about my app* that calls `setChatPrompt` to populate the Maia Agent chat input and sends the prompt to Maia without user review
 
-You can also set the prompt from text the user selects in your own editor UI. For example, from a context-menu action on a text area:
+You can also populate the prompt with text the user selects in your own editor UI, for example, from a context-menu action on a text area:
 
 ```typescript
 const sendToMaiaHandler = async (textarea: HTMLTextAreaElement | null) => {
@@ -59,17 +59,15 @@ const sendToMaiaHandler = async (textarea: HTMLTextAreaElement | null) => {
     }
 };
 ```
-The value false will allow the user to review the text and hit send themselves in the Maia chat window.
+The value `false` allows the user to review the text and send it themselves in the Maia chat window.
 
 ## Maia Chat API
 
-This API provides a method that allows interacting with the Maia Agent chat.
-
-* `setChatPrompt`
+The `setChatPrompt` API provides a method that allows users to interact with the Maia Agent chat.
 
 ### Setting the Chat Prompt
 
-The `setChatPrompt` method takes a `prompt` string and places it into the Maia Agent chat input and an `autoSend` that decides if the prompt will be automatically send to the maia chat(set value to `true`) or if the user can review, edit, and send it(set value to `false`). If the Maia tab is not open, it is opened and made active.
+The `setChatPrompt` method takes a `prompt` string to populate the Maia Agent chat input and an `autoSend` to control whether the prompt is automatically send to the Maia chat. Set `autoSend` to `true` to send the prompt automatically, or `false` to let the user review, edit, and send it. If the Maia tab is not open, the method opens it and makes it active.
 
 ## Extensibility Feedback
 

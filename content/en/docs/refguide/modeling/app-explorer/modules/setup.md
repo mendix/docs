@@ -10,10 +10,10 @@ The **Setup** node helps consumers of a module quickly identify which documents 
 
 Adding a document to **Setup** does not move it. The document remains in its original folder and is also shown under **Setup** for easier discovery.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/setup/setup.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/setup/setup.png" class="no-border" width="300" >}}
 
 {{% alert color="info" %}}
-The **Setup** node is available only for [app module](/refguide/module-settings/#app-module). It is not available for [add-on](/refguide/module-settings/#add-on-module) or [solution](/refguide/module-settings/#solution-module) modules.
+The **Setup** node is available only for [app modules](/refguide/module-settings/#app-module). It is not available for [add-on](/refguide/module-settings/#add-on-module) or [solution](/refguide/module-settings/#solution-module) modules.
 {{% /alert %}}
 ## Adding Documents to Setup
 
@@ -34,26 +34,30 @@ When you remove an item from **Setup**, a confirmation dialog is displayed. In t
 
 ## Context Menu Behavior
 
-When you right-click the **Setup** node, the context menu shows one option
-* Add folder – adds a folder to **Setup**. You can then drag documents into this folder.
+### Right-Click the Setup Node
 
-When you right-click a folder in **Setup**, the context menu shows three options
+When you right-click the **Setup** node, the context menu shows the option **Add folder**, which adds a folder to **Setup**. You can then drag documents into this folder.
+
+### Right-Click a Folder in Setup
+
+When you right-click a folder in **Setup**, the context menu shows three options:
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/modules//setup/folder-context-options.png" class="no-border" >}}
 
-* Add folder – adds a subfolder to the selected folder
-* Rename – renames the selected folder
-* Remove from Setup – shows a warning message and after the confirmation removes the folder from **Setup**
+* **Add folder** – adds a subfolder to the selected folder
+* **Rename** – renames the selected folder
+* **Remove from Setup** – shows a warning message and, after confirmation, removes the folder from **Setup**
 
     {{< figure src="/attachments/refguide/modeling/app-explorer/modules/setup/folder-remove-warning.png" class="no-border" >}}
 
+### Right-Click a Document
 
-When you right-click a document in **Setup**, the context menu shows two options
+When you right-click a document in **Setup**, the context menu shows two options:
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/modules/setup/document-context-options.png" class="no-border" >}}
 
-* Open – opens the original document in the module structure
-* Remove from Setup – shows a warning message and after confirmation removes the document or folder from **Setup** (with the option to also remove the original document)
+* **Open** – opens the original document in the module structure
+* **Remove from Setup** – shows a warning message and, after confirmation, removes the document or folder from **Setup** with the option to also remove the original document 
 
     {{< figure src="/attachments/refguide/modeling/app-explorer/modules/setup/document-remove-warning.png" class="no-border" >}}
 
@@ -65,4 +69,4 @@ For each module, Studio Pro checks whether there is a first-level folder whose n
 
 All documents in the matching folder are automatically shown under the **Setup** node. If the folder contains subfolders, that structure is also shown under **Setup**.
 
-This conversion does not move the original documents. They remain in their existing folder locations.
+This conversion does not move the original documents. The original documents remain in their existing folder locations.

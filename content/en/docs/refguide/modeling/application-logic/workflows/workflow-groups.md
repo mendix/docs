@@ -2,6 +2,8 @@
 title: "Workflow Groups"
 url: /refguide/workflow-groups/
 weight: 40
+description: "Describes how to define and manage workflow groups."
+
 ---
 
 ## Introduction
@@ -18,7 +20,7 @@ The advantage of targeting users through groups is that it is a dynamic concept:
 
 To configure workflow groups, open **App** > **Settings** and select the **Workflow** tab:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-groups/workflow-groups-config.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-groups/workflow-groups-config.png" alt="The Workflow tab of the App Settings dialog with Group definition set to Studio Pro and a Managers group listed in the workflow groups table">}}
 
 ### Group Definition {#group-definition}
 
@@ -31,7 +33,7 @@ The **Group definition** setting determines where workflow groups are created an
 * **Studio Pro** (default) – Workflow groups are defined in the app settings in Studio Pro and are synchronized to the database when the app is (re)deployed. For more information, see [Defining Groups in Studio Pro](#studio-pro-groups).
 * **Runtime** – Workflow groups are created and deleted by administrators in the running app, for example, by using the [Workflow Commons](/appstore/modules/workflow-commons/) module. Adding or removing a group does not require a redeployment. In this mode, groups are not defined in Studio Pro. For more information, see [Managing Groups at Runtime](#runtime-groups).
 
-When you change this setting, Studio Pro asks you to confirm the change, because it can affect existing groups and XPath constraints. For more information, see [Changing the Group Definition](#changing-group-definition).
+When you change this setting, Studio Pro asks you to confirm the change because it can affect existing groups and XPath constraints. For more information, see [Changing the Group Definition](#changing-group-definition).
 
 ### Defining Groups in Studio Pro {#studio-pro-groups}
 
@@ -44,11 +46,11 @@ When **Group definition** is set to **Studio Pro**, a workflow group can be defi
 
 When **Group definition** is set to **Runtime**, the list of workflow groups is not shown in the app settings:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-groups/workflow-groups-config-runtime.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-groups/workflow-groups-config-runtime.png" alt="The Workflow tab of the App Settings dialog with Group definition set to Runtime and no workflow groups table">}}
 
 Instead, administrators create, edit, and delete workflow groups in the running app. This is useful when the set of groups is not known at design time, or when it changes frequently and you do not want to redeploy the app for every change.
 
-In this mode, the app does not synchronize workflow groups on (re)deployment: groups that exist in the database are neither updated nor removed on start-up.
+In this mode, the app does not synchronize workflow groups on (re)deployment. Groups in the database are neither updated nor removed on start-up.
 
 The [Workflow Commons](/appstore/modules/workflow-commons/) module provides default pages to manage workflow groups at runtime. You can also build your own pages and microflows that create, change, and delete **System.WorkflowGroup** objects.
 
@@ -64,7 +66,7 @@ Each workflow group corresponds to one **System.WorkflowGroup** object.
 
 When **Group definition** is set to **Studio Pro**, the **Name** attribute of the **System.WorkflowGroup** object matches the **Name** property of the workflow group, and the **Description** attribute matches the **Documentation** property of the workflow group.
 
-When **Group definition** is set to **Runtime**, **System.WorkflowGroup** objects are created, changed, and deleted in the running app.
+When **Group definition** is set to **Runtime**, administrators create, change, and delete **System.WorkflowGroup** objects in the running app.
 
 ### Synchronization
 
@@ -102,7 +104,7 @@ For instance, to select a workflow group called *Managers*, you can use the foll
 
 ```[ id = '[%WorkflowGroup_Managers%]' ]```
 
-Mendix does not recommend to use the following when **Group definition** is set to **Studio Pro**, because it will NOT be updated automatically when a workflow group is renamed:
+Mendix recommends against using the following when **Group definition** is set to **Studio Pro**, because it will NOT be updated automatically when a workflow group is renamed:
 
 ```[ Name = 'Managers' ]```
 
@@ -114,7 +116,7 @@ Instead, select the group by its **Name** attribute:
 
 ```[ Name = 'Managers' ]```
 
-For XPath constraints in [user task targeting](/refguide/user-task/#workflow-group), Studio Pro offers a quick fix for this consistency error: right-click the error in the **Errors** pane and select **Convert group targeting to attribute targeting**. This replaces each token comparison, such as `id = '[%WorkflowGroup_Managers%]'`, with the corresponding comparison on the **Name** attribute, such as `Name = 'Managers'`.
+For XPath constraints in [user task targeting](/refguide/user-task/#workflow-group), Studio Pro offers a quick fix for this consistency error. Right-click the error in the **Errors** pane and select **Convert group targeting to attribute targeting**. This replaces each token comparison, such as `id = '[%WorkflowGroup_Managers%]'`, with the corresponding comparison on the **Name** attribute, such as `Name = 'Managers'`.
 
 {{% alert color="warning" %}}
 Selecting a group by name depends on the group name in the database. If an administrator renames or deletes the group at runtime, the XPath constraint no longer selects it.
@@ -129,14 +131,14 @@ You can change the **Group definition** setting at any time, but the change has 
 When you switch from **Studio Pro** to **Runtime**, the following happens:
 
 * The workflow groups defined in the app settings are removed from the model.
-* The existing **System.WorkflowGroup** objects in the database, including their user memberships, are preserved. However, Studio Pro no longer manages them: they are not updated or removed on (re)deployment, and must be managed at runtime from then on.
+* The existing **System.WorkflowGroup** objects in the database, including their user memberships, are preserved. Studio Pro no longer manages them. They are not updated or removed on (re)deployment, and you must manage them at runtime.
 * XPath constraints that use workflow group tokens, such as `[%WorkflowGroup_Managers%]`, result in consistency errors. Replace them with constraints on the **Name** attribute, as described in [Selecting Groups in Runtime Mode](#selecting-groups-in-runtime-mode).
 
 If no workflow groups are defined in the app settings, Studio Pro switches to **Runtime** without asking for confirmation.
 
 ### From Runtime to Studio Pro
 
-When you switch from **Runtime** to **Studio Pro**, Studio Pro manages the workflow groups again, and they are synchronized on the next (re)deployment.
+When you switch from **Runtime** to **Studio Pro**, Studio Pro manages the workflow groups again and synchronizes them on the next (re)deployment.
 
 {{% alert color="warning" %}}
 On the next deployment, every workflow group in the database that is not defined in the app settings in Studio Pro is permanently deleted, including all its user memberships. This cannot be undone.

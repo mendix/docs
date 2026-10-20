@@ -87,10 +87,10 @@ This table shows the return codes and their description:
 
 ## mx module-import Command {#module-import}
 
-The `mx module-import` command imports a source module (*.mpk*) into an app, or updates a module that already exists in the app.
+The `mx module-import` command imports a source module (*.mpk*) into an app, or updates a module that already exists.
 
 {{% alert color="info" %}}
-As of Studio Pro 11.16, the `update` import mode performs a three-way merge and restores storage GUIDs, in the same way as the **Update from file** option in Studio Pro. The `replace` import mode, and with it the `--metadata` option, is no longer available.
+As of Studio Pro 11.16, the `update` import mode performs a three-way merge and restores storage GUIDs, in the same way as the **Update from file** option in Studio Pro. The `replace` import mode and the `--metadata` option is no longer available.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -128,21 +128,21 @@ The app is only reverted automatically when it is under Git version control. Mak
 
 ### Examples
 
-Add a module to an app:
+* Add a module to an app:
 
-`mx module-import MyNewModule.mpk MyApp.mpr`
+    `mx module-import MyNewModule.mpk MyApp.mpr`
 
-Update an existing module from version 1.0.0 to version 2.0.0:
+* Update an existing module from version 1.0.0 to version 2.0.0:
 
-`mx module-import MyModule_2.0.0.mpk MyApp.mpr --import-mode update --original-mpk MyModule_1.0.0.mpk`
+    `mx module-import MyModule_2.0.0.mpk MyApp.mpr --import-mode update --original-mpk MyModule_1.0.0.mpk`
 
-Update an existing module and resolve any conflicts by using the new version:
+* Update an existing module and resolve any conflicts by using the new version:
 
-`mx module-import MyModule_2.0.0.mpk MyApp.mpr --import-mode update --original-mpk MyModule_1.0.0.mpk --conflict take_theirs`
+    `mx module-import MyModule_2.0.0.mpk MyApp.mpr --import-mode update --original-mpk MyModule_1.0.0.mpk --conflict take_theirs`
 
-Update a module that has a different name in the app than in the module package:
+* Update a module that has a different name in the app than in the module package:
 
-`mx module-import MyModule_2.0.0.mpk MyApp.mpr --import-mode update --original-mpk MyModule_1.0.0.mpk --module-name MyRenamedModule`
+    `mx module-import MyModule_2.0.0.mpk MyApp.mpr --import-mode update --original-mpk MyModule_1.0.0.mpk --module-name MyRenamedModule`
 
 ### Return Codes
 
@@ -152,9 +152,9 @@ In case of errors, the exit code consists of three digits `XYZ`:
 
 * X determines the error type:
 
-    * 1 – parameter validation error
-    * 2 – output-related error
-    * 3 – errors related to the execution of the operation
+    * 1 – Parameter validation error
+    * 2 – Output-related error
+    * 3 – Errors related to the execution of the operation
 
 * Y is the number of the parameter the error is related to. This component is only valid if X = 1. If the error is not related to the parameters, Y contains the error details code described in Z below.
 
@@ -164,16 +164,16 @@ In case of errors, the exit code consists of three digits `XYZ`:
     * 2 – Module you are trying to import is a Theme module and cannot be imported.
     * 3 – Project already contains a module with the same name as the module you are importing. Thus the module cannot be imported.
     * 4 – No module is found in the MPK package.
-    * 5 – Project Version is not supported by the current version of mx.exe
-    * 6 – Project can't be loaded
-    * 7 – Module can't be loaded
+    * 5 – Project Version is not supported by the current version of mx.exe.
+    * 6 – Project can't be loaded.
+    * 7 – Module can't be loaded.
     * 8 – Import of a module failed. Resulting project can't be saved.
-    * 9 – File does not exist
-    * 10 – `--import-mode replace` was specified but no module with that name exists in the project (Studio Pro 11.14 and 11.15 only)
-    * 11 – The *.mpk* file has an unrecognized extension
-    * 12 – `--original-mpk` was not provided for `--import-mode update`
+    * 9 – File does not exist.
+    * 10 – `--import-mode replace` was specified but no module with that name exists in the project (Studio Pro 11.14 and 11.15 only).
+    * 11 – The *.mpk* file has an unrecognized extension.
+    * 12 – `--original-mpk` was not provided for `--import-mode update`.
     * 13 – The three-way merge resulted in unresolved conflicts and the project has been reverted. Retry with `--conflict take_mine` or `--conflict take_theirs` to resolve the conflicts automatically.
-    * 14 – `--import-mode update` was specified but no module with that name exists in the project
+    * 14 – `--import-mode update` was specified but no module with that name exists in the project.
     * 15 – A previous module update was interrupted. Revert the project and delete the `.mendix-cache/updates/<module-name>` directory before retrying.
     * 16 – A module update is already in progress. Commit or revert the pending changes and delete the `.mendix-cache/updates/<module-name>` directory before retrying.
 

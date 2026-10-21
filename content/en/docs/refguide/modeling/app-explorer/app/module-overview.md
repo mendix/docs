@@ -6,7 +6,7 @@ url: /refguide/module-overview/
 
 ## Introduction
 
-  The **Module overview** gives you a single view of all the modules in your app, together with some basic information about each one.
+  The **Module overview** gives you a single view of all the modules in your app and provides basic information about each one.
 
   You can open **Module overview** in the following ways:
 
@@ -17,7 +17,7 @@ url: /refguide/module-overview/
 
 ### View in Marketplace
 
-  Select a module and click **View in Marketplace** to open the module's page in the Marketplace pane within Studio Pro. This option is available only for Marketplace modules. 
+  Select a module and click **View in Marketplace** to open the module's page in the **Marketplace** pane in Studio Pro. This option is available only for Marketplace modules. 
 
 ### Update 
 
@@ -29,7 +29,7 @@ url: /refguide/module-overview/
 
   | Column | Description |
   | --- | --- |
-  | **Local name** | The name with which the module is displayed in the **App Explorer**. |                                                          
+  | **Local name** | The name displayed for the module in the App Explorer. |                                                          
   | **Local version** | The version of the module that is currently in the app. |
 
 

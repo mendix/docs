@@ -37,9 +37,9 @@ For more information, see [System Texts](/refguide/system-texts/).
 
 ## Module Overview
 
- **Module overview** shows a list of all the modules in your app along with some basic information about each module for example, the local name and local version of your module. 
+**Module overview** lists all modules in your app and provides basic information about each one, such as the local name and local version. 
 
-  For more information, see [Module Overview](/refguide/module-overview/).
+For more information, see [Module Overview](/refguide/module-overview/).
 
 ## Export Documentation {#export}
 

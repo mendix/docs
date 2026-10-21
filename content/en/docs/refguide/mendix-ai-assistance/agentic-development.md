@@ -62,7 +62,7 @@ Agents create standard model documents that you can review in the same editors y
 
 ### Platform-Provided Foundations
 
-The Mendix Platform provides many foundations of an app, such as the runtime, data persistence, and the [security](/refguide/security/) model. An agent creates the parts that are specific to your app, such as entities, pages, and logic. These parts build on the same platform foundations as documents that you model yourself.
+The Mendix Platform provides many foundations of an app, such as the runtime, data persistence, and the [security](/refguide/security/) model. An agent creates the parts that are specific to your app, such as entities, pages, and logic. These parts build on the same platform foundations as documents that you model yourself. These platform foundations help reduce the time it takes to build [trusted compliant applications](http://mendix.com/trust).
 
 ### One Shared Language for People and Agents
 

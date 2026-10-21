@@ -10,6 +10,16 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.3.2
+
+### Release date: October 8, 2026
+
+### Workstation Commons
+
+#### Bug Fixes
+
+* Build and deployment - We fixed a bug that would cause compilation errors when using the Workstation Commons module in Studio Pro 11.
+
 ## 4.3.0
 
 ### Release date: October 8, 2026

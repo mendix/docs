@@ -112,10 +112,6 @@ Click **New** in the relevant tab, name the role, and select its permissions. Ch
 
 Name custom roles for the responsibility they represent rather than for the seniority of the people who will hold them, and avoid names that echo the default roles of the other system.
 
-{{% alert color="info" %}}
-**Reviewer note:** supply the individual permission labels in both schemas, and screenshots of the two tabs. A full role-to-permission matrix should be added to [Access Model and Role Reference for Private Mendix Platform](/private-mendix-platform/access-model/) and cross-referenced from here.
-{{% /alert %}}
-
 ## Managing Groups
 
 On the **Group Management** page you build and maintain the group hierarchy. Groups typically reflect your organization's structure, and they are what deliver Resource Roles to users at scale.
@@ -171,10 +167,6 @@ This keeps group structure aligned with the organizational data your identity pr
 
 This is a separate mechanism from the **Parse Roles** setting on your identity provider configuration, which maps role and group claims from the token itself. The two can be used together. For how both fit into first-login behavior, see [Federated Users](/private-mendix-platform/access-model/#federated-users).
 
-{{% alert color="info" %}}
-**Reviewer note:** supply the exact field labels in Automation Settings, which profile attributes can be used, where a newly created group is placed in the hierarchy, and what role its members receive.
-{{% /alert %}}
-
 ### Monitoring the Hierarchy
 
 The Group Management page reports live figures for the number of groups, the number of resources owned, the number of namespaces associated with groups, and the average number of members per group. They are useful as a quick check that the hierarchy still matches expectations, particularly where group creation is automated.
@@ -182,7 +174,3 @@ The Group Management page reports live figures for the number of groups, the num
 ## Auditing Access Changes
 
 Changes to user accounts are recorded in the platform activity log, along with app creation and deletion, package creation, and platform setting changes. Retention and logging level are configurable, and expired entries can be downloaded from the archive for audit purposes. See [Activity Logs](/private-mendix-platform/reference-guide/admin/company/#activity-logs).
-
-{{% alert color="info" %}}
-**Reviewer note:** confirm which access-management events are captured in the activity log - specifically whether role edits, group membership changes, and namespace associations are logged, or only account changes. This determines how much of an audit story this section can honestly tell.
-{{% /alert %}}

@@ -16,7 +16,7 @@ To start collecting support information, click **Help** > **Support Tools** > **
 
 ### Studio Pro and Computer Information
 
-The following information is always included:
+The following information is shown in the **Support Information** dialog and is always included in the saved ZIP file:
 
 * System information (operating system, processor, screens, and so on)
 * CPU, memory, graphics, and disk information
@@ -26,7 +26,7 @@ The following information is always included:
 
 ### Device Information from the Make It Native App {#device-information}
 
-When your app has a native mobile profile and a device is connected, the following information is added to the report:
+Device information is not shown in the **Support Information** dialog. Studio Pro collects it from the device when you save the support information, and adds it to the ZIP file. This happens when your app has a native mobile profile and a device is connected. The following information is added:
 
 | Section | Contents |
 | --- | --- |
@@ -44,53 +44,37 @@ The client logs are kept in a limited buffer on the device. Only the most recent
 
 ## Prerequisites
 
-To include device-specific information in the report, the following conditions must be met:
+To include device-specific information in the ZIP file, the following conditions must be met when you save the support information:
 
 * Your app has a native mobile profile.
 * The Studio Pro native packager is running. This is the case when you view your app on a device through Studio Pro.
 * The Make It Native app, or a custom developer app, is running on your device and is connected to the runtime of your app.
 
-If one of these conditions is not met, you can still collect the other support information, but the device-specific information will not be included.
+If one of these conditions is not met, the ZIP file contains all other support information, but the device-specific information is skipped. Studio Pro does not display a warning in this case.
 
 ## Collecting Support Information
 
 1. Click **Help** > **Support Tools** > **Collect Support Information…**.
-1. Depending on your app and device, one of the following happens:
-
-    * **Your app has no native mobile profile:** Studio Pro starts collecting information straight away.
-    * **Your app has a native mobile profile and a device is connected:** Studio Pro starts collecting information straight away and includes device-specific information. A **Gather Native Device Information** step appears in the progress dialog.
-    * **Your app has a native mobile profile, but no device is connected:** Studio Pro displays a dialog explaining that the Make It Native app is not currently connected. For more information, see [Collecting Without a Connected Device](#no-device).
-
 1. Wait for Studio Pro to finish gathering the information. You can cancel the process at any time from the progress dialog.
 1. Review the report in the **Support Information** dialog.
+1. Click **Save** and select a folder. Studio Pro collects the device-specific information at this moment, if the [prerequisites](#prerequisites) are met, and saves everything in a ZIP file.
 
-### Collecting Without a Connected Device {#no-device}
+For more information about the dialog and the ZIP file, see [Working with the Report](#working-with-the-report).
 
-If your app has a native mobile profile but no device is connected, Studio Pro shows the following message:
+### Including Device Information {#include-device-information}
 
-> The Make It Native app is not currently connected. You can continue collecting support information, but device-specific information will not be included.
->
-> To include device-specific information, connect the Make It Native app before continuing.
+Studio Pro collects the device logs when you click **Save**, not while the report is being built. The logs only contain entries from the time the app was connected. To make sure the ZIP file contains the information that Support needs, do the following before you click **Save**:
 
-You can choose between the following options:
-
-* **Continue** – collects the support information without device-specific information
-* **Cancel** – closes the dialog and does not collect any information
-
-To include device-specific information:
-
-1. Click **Cancel**.
 1. Connect the Make It Native app to the runtime of your app. For more information, see [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/).
 1. Reproduce the scenario you want to report, so that the app generates the relevant logs.
-1. Run **Collect Support Information…** again.
 
 {{% alert color="info" %}}
-The device logs only contain entries from the time the app was connected. Connect the app and repeat the problematic scenario before you collect the support information, otherwise the logs may not contain the information that Support needs.
+Studio Pro does not ask for confirmation when no device is connected. If the Make It Native app is not connected, the ZIP file is saved without device-specific information.
 {{% /alert %}}
 
 ## Working with the Report
 
-The **Support Information** dialog shows the collected information as text. You can do the following:
+The **Support Information** dialog shows the collected Studio Pro and computer information as text. You can do the following:
 
 * **Copy to Clipboard** – copies the report so you can paste it into a support ticket or message
 * **Save** – asks you to select a folder and saves a `Support_Information_<date>_<time>.zip` file in it
@@ -99,6 +83,7 @@ The **Support Information** dialog shows the collected information as text. You 
 The ZIP file contains the following:
 
 * `system_information.txt` – the report that is displayed in the dialog
+* `native-diagnostics-<date>_<time>.txt` – the device-specific information as a readable report (only if a device was connected when you saved)
 * `native-diagnostics-<date>_<time>.json` – the device-specific information in JSON format (only if it was collected)
 * The Studio Pro log files
 * Additional diagnostic exports, such as the console log, the error list, and the software bill of materials (SBOM)
@@ -111,7 +96,7 @@ The report and the device logs can contain details about your app, such as the r
 
 ## Troubleshooting
 
-If Studio Pro cannot collect the device-specific information, the report still contains all other information. In place of the device section, the report contains a note describing why the device information is missing:
+If a device is connected when you save, but Studio Pro cannot collect the device-specific information, the ZIP file still contains all other information. In this case, the `native-diagnostics-<date>_<time>.txt` file contains a note describing why the device information is missing, and no JSON file is created:
 
 | Message | Possible Cause and Solution |
 | --- | --- |
@@ -119,6 +104,8 @@ If Studio Pro cannot collect the device-specific information, the report still c
 | Could not reach the native packager. It may have stopped or become unreachable. | The native packager is no longer running. View your app on the device again from Studio Pro, and then collect the support information again. |
 | Native diagnostics collection is not supported by the current packager build. | The packager does not support collecting device information. Make sure you are using a version of Studio Pro that includes this functionality. |
 | The device may have disconnected or the request timed out. | The device lost its connection while the information was collected. Reconnect the device and try again. |
+
+If the ZIP file does not contain a `native-diagnostics` file at all, no device was connected when you saved. Check the [prerequisites](#prerequisites), and then collect the support information again.
 
 ## Read More
 

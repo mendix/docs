@@ -29,7 +29,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Deprecations
 
-* API keys are now deprecated, and support ends on January 1, 2027 for [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/). To keep using these APIs, [migrate to PATs](/apidocs-mxsdk/apidocs/deploy-api/#migrate-to-pat).
+* API keys are now deprecated, and support ends on February 1, 2027 for [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/). To keep using these APIs, [migrate to PATs](/apidocs-mxsdk/apidocs/deploy-api/#migrate-to-pat).
 
 ### October 15, 2026
 

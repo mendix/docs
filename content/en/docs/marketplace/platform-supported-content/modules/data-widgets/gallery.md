@@ -84,8 +84,6 @@ For more information, see the [Filters](/appstore/modules/data-grid-2/#filters) 
 
 ## Sorting
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/sorting.gif" alt="Example of sorting"   width="300"  class="no-border" >}}
-
 To sort the gallery items, place a [Drop-Down Sort](#dropdown) widget in the gallery's filters placeholder. If you place it outside the filters placeholder, the widget shows an error that it is out of context. The gallery does not have its own sorting configuration. Instead, you select the attributes that end-users can sort by in the Drop-Down Sort widget.
 
 {{% alert color="info" %}}

@@ -7,28 +7,33 @@ description: "Documents the administrator tasks for managing user accounts, defi
 
 ## Introduction
 
-This page documents the tasks that configure access in Private Mendix Platform: creating and maintaining user accounts, defining what roles exist and what they grant, building the group hierarchy, and associating apps and deployment namespaces with the groups that need them.
+This document describes the tasks that configure access in Private Mendix Platform: 
 
-These tasks require the **CompanyAdmin** Platform Role. Configuring the identity provider that federated users authenticate against is a separate concern requiring **SystemAdmin**, and is documented in [Private Mendix Platform Functionalities - System Administrators](/private-mendix-platform/reference-guide/admin/system/).
+* Creating and maintaining user accounts
+* Defining what roles exist and what they grant
+* Building the group hierarchy
+* Associating apps and deployment namespaces with the groups that need them.
+
+### Prerequisites
+
+To perform the above tasks, you must have the **CompanyAdmin** platform role. Configuring the identity provider that federated users authenticate against is a separate concern requiring **SystemAdmin**, and is documented in [Private Mendix Platform Functionalities - System Administrators](/private-mendix-platform/reference-guide/admin/system/).
 
 Before making structural changes, read [Access Model and Role Reference for Private Mendix Platform](/private-mendix-platform/access-model/). Two rules in particular have consequences that are not visible from the screens described below: group membership inherits downward without limit, and deployment namespace associations do not inherit at all.
 
 ## Accessing the Access Management Pages
 
+To open the **Access Management** page, peform the following steps:
+
 1. Click your profile picture in the top right corner of the screen and select **Switch to Admin Mode**.
 2. In the left navigation menu, open the **Manage** section.
 
-User accounts, groups, and roles are managed from this section.
-
-{{% alert color="info" %}}
-**Reviewer note:** confirm the exact navigation path and page names in the current release, in particular whether Role Management is a page of its own under **Manage** or a tab within User Management.
-{{% /alert %}}
+From this section, you can manage user accounts, groups, and roles.
 
 ## Managing User Accounts
 
 On the **User Management** page you can create and maintain the accounts that use your platform, whether they belong to people or to services.
 
-There is one kind of account. What an account can do comes from the Platform Roles assigned to it, not from any account type, so the same page and the same procedure serve a developer, an administrator, and an integration.
+What an account can do comes from the platform roles assigned to it, not from any account type, so the same page and the same procedure serve a developer, an administrator, and an integration.
 
 To create an account, click **New** and provide the user's name and email address, then assign the Platform Roles the account requires. An account with no Platform Role cannot use the platform, so at minimum assign **User**.
 
@@ -45,10 +50,6 @@ By clicking **More Actions** by an existing account you can:
 The **Actions** tab additionally lets you log out every user currently signed in to the platform.
 
 Some of these actions depend on how the account authenticates rather than on what kind of account it is. Setting a password, for instance, applies to accounts that sign in with platform credentials and not to accounts that authenticate through your identity provider.
-
-{{% alert color="info" %}}
-**Reviewer note:** confirm which of the actions above are unavailable for accounts that authenticate through an identity provider. The current [Company Administrators](/private-mendix-platform/reference-guide/admin/company/#user-management) page marks several of them "local users only", which reads as an account-type restriction; the list needs restating in terms of authentication method.
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 Assigning a Platform Role gives a user platform-wide capability and nothing else. It does not give them access to any app, namespace, or Marketplace item. Access to resources comes from group membership or an app team invitation, described below.

@@ -94,7 +94,7 @@ When `AuthorizationServerUrl` is set, the MCP Server does the following:
 
 The MCP Server module does not validate access tokens itself. Your authentication microflow must do this for every request:
 
-1. Read the `Authorization` header from `System.HttpRequest`. If it is missing return empty, so that the client starts the sign-in flow.
+1. Read the `Authorization` header from `System.HttpRequest`. If missing, return empty to initiate the client sign-in flow.
 2. Validate the token. Depending on the authorization server, you can do this in one of the following ways:
     * Call the token introspection endpoint ([RFC 7662](https://datatracker.ietf.org/doc/html/rfc7662#section-2)) of the authorization server, for example, with a **Call REST service** activity.
     * Use the [OIDC SSO](/appstore/modules/oidc/) module, which supports validating tokens against the signing keys of the authorization server. This is required for authorization servers without an introspection endpoint, such as Microsoft Entra ID. For example use the `DecodeVerifyJWTPlainText` action to verify and get the JWT token. Note that the `APIAuthentication` action is currently not supported when called from the MCP Server module.

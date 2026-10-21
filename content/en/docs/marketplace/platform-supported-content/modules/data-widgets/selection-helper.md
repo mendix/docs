@@ -7,7 +7,11 @@ description: "Describes the configuration and usage of the Selection Helper widg
 
 ## Introduction
 
-The [Selection Helper](https://marketplace.mendix.com/link/component/116540) widget provides bulk-selection controls for data widgets, enabling users to quickly select all or clear all items when multi-selection is enabled. It works with both Gallery and Data Grid 2 widgets.
+The [Selection Helper](https://marketplace.mendix.com/link/component/116540) widget provides bulk-selection controls for data widgets, enabling users to quickly select or deselect all items on the current page when multi-selection is enabled. It works with both Gallery and Data Grid 2 widgets.
+
+{{% alert color="info" %}}
+The Selection Helper currently only selects and deselects items on the current page. When **Keep selection** is set to **Yes** on the data widget, items on other pages are not affected.
+{{% /alert %}}
 
 Here is an example of a Selection Helper widget in a Gallery:
 
@@ -92,11 +96,11 @@ The **Selection Helper** works with both **Gallery** and **Data Grid 2** selecti
 
 ### Gallery Bulk Selection
 
-Place a Selection Helper with default checkbox style in the Gallery header for simple select-all functionality in grid or list layouts.
+Place a Selection Helper with default checkbox style in the Gallery's filters placeholder for simple select-all functionality in grid or list layouts.
 
 ### Data Grid 2 Bulk Selection
 
-Use the Selection Helper in Data Grid 2 headers for tabular data bulk operations.
+Use the Selection Helper in the Data Grid 2 filters placeholder for tabular data bulk operations.
 
 ### Custom Bulk Operations Interface
 

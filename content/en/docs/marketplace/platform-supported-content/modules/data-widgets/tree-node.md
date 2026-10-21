@@ -18,14 +18,14 @@ Mendix recommends using multiple Tree Node widgets in a nested manner. In this w
 * Allows you to nest tree nodes to map out your entire domain model into a tree view
 * Delivers out-of-the-box performance and network optimizations through lazy loading and caching of tree nodes
 * Offers additional styling customizations through Atlas UI
-* Displays an infinite amount of tree nodes by using self-reference entity (available from data widgets version 3.11.0 and above)
+* Displays an infinite amount of tree nodes by using self-reference entity (available from Data Widgets version 3.11.0 and above)
 
-### Child Detection Mode
+### Child Detection Mode {#child-detection-mode}
 
-Starting from data widgets version 3.11.0, Tree Node offers 2 ways of rendering child nodes:
+Starting from Data Widgets version 3.11.0, Tree Node offers two ways of rendering child nodes:
 
 * **Manual child rendering** – You place a Tree Node widget (child) inside another Tree Node widget (parent) and set its data source accordingly. The widget uses this mode when **Parent association** is not set.
-* **Infinite tree node** – A recursive mode in which the children have a self-referencing association to the same entity as the parent. In this mode, the widget renders child nodes automatically. Objects with an empty parent are used as root nodes.
+* **Infinite tree node** – A recursive mode in which each child refers to its parent through the self-referencing association selected in **Parent association**. The widget uses this mode when **Parent association** is set. In this mode, the widget renders child nodes automatically. Objects with an empty parent are used as root nodes.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/treenode/infinite_treenode.png" alt="self reference entity for treenode" class="no-border" >}}
 
@@ -57,7 +57,7 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 
 * **Data source** – the data source of the widget, which can also be optionally used as the data source for the header and content of the widget
     * Required
-* **Parent association** – the association used to select a parent. If set, tree node will automatically use infinite tree node child detection modes. 
+* **Parent association** – the association used to select a parent. If set, the widget uses [Infinite tree node](#child-detection-mode) mode.
 * **Header type** – defines the type of the header:
     * Default: **Text**
     * When set to **Text**, you can configure the **Header caption** property
@@ -75,11 +75,11 @@ Drag the Tree Node widget onto the page and use the configuration properties des
     * Configurable when **Parent association** is not set
     * When configured, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
 
-    {{% alert color="info" %}}The **Has children** configuration will be set automatically on infinite tree node child detection mode.{{% /alert %}}
+    {{% alert color="info" %}}In **Infinite tree node** mode, **Has children** is hidden and the widget detects child nodes automatically.{{% /alert %}}
 * **Start expanded** – determines whether the content of the current level of tree nodes starts expanded or collapsed
     * Configurable when **Has children** is configured or **Parent association** is set; default: **No**
 
-    {{% alert color="info" %}}In infinite tree node child detection mode, Mendix recommends setting **Start expanded** to **No** for large data sets. When **Start expanded** is set to **Yes**, the widget expands all tree nodes directly and loads all data at once.{{% /alert %}}
+    {{% alert color="info" %}}In **Infinite tree node** mode, Mendix recommends setting **Start expanded** to **No** for large data sets. When **Start expanded** is set to **Yes**, the widget expands all tree nodes directly and loads all data at once.{{% /alert %}}
 
 * **Animate** – defines whether the content is animated when a tree node expands and collapses
     * Default: **Yes**

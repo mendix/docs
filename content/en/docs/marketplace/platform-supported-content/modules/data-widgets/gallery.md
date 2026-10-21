@@ -23,7 +23,7 @@ Data source specifies the source of the data being presented in the Gallery. You
 
 ### Columns
 
-We provide a mechanism that automatically applies a different number of columns based on the device being used. In the Gallery widget, you can set **Desktop columns**, **Tablet columns**, and **Phone columns**.
+The Gallery widget applies a different number of columns based on the device being used. You can set **Desktop columns**, **Tablet columns**, and **Phone columns**.
 
 ### Items
 
@@ -36,7 +36,7 @@ Defines the amount of data shown for each page or the limit to be presented when
 #### Pagination
 
 {{% alert color="info" %}}
-The pagination status text and the screen reader labels of the paging buttons are always in English and cannot be translated.
+The pagination status text and the screen reader labels of the paging buttons are currently written in English and cannot be translated. We are working to improve this in the future.
 {{% /alert %}}
 
 You can choose between paging buttons (buttons presented below or above the grid), virtual scrolling (a mechanism that automatically loads data when the user reaches the bottom of the scroll bar), or load more (a button that loads more items).
@@ -53,9 +53,9 @@ When this option is defined as custom it will show a composable region. Here you
 
 #### Dynamic Item Class
 
-In the new Gallery widget we offer an option to dynamically apply a CSS class to a specific item. You can achieve this by adding an expression based on the item values (attributes) like the example below.
+The Gallery widget can dynamically apply a CSS class to a specific item. You can achieve this by adding an expression based on the item values (attributes), as in the example below.
 
-In this example we check the value of `CountryName`, then if the attribute is equal to `Spain` apply the class `my-custom-class` to the items:
+This example checks the value of `CountryName` and, if the attribute is equal to `Spain`, applies the class `my-custom-class` to the items:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/dynamic-item-class.png" alt="Example of dynamic item class"   width="300"  class="no-border" >}}
 
@@ -80,7 +80,7 @@ For more information, see the [Filters](/appstore/modules/data-grid-2/#filters) 
 * [Text Filter](/appstore/modules/datagrid-text-filter/)
 * [Number Filter](/appstore/modules/datagrid-number-filter/)
 * [Date Filter](/appstore/modules/datagrid-date-filter/)
-* [Dropdown Filter](/appstore/modules/datagrid-dropdown-filter/)
+* [Drop-Down Filter](/appstore/modules/datagrid-dropdown-filter/)
 
 ## Sorting
 
@@ -146,7 +146,7 @@ For galleries that need both selection and click actions:
 1. Configure your desired selection mode (**Single** or **Multi**).
 1. Users can then select items with single clicks and trigger actions with double clicks.
 
-### Selection with Action Buttons in Header
+### Selection with Action Buttons in the Filters Placeholder
 
 Gallery selection works seamlessly with action buttons and other widgets placed in the gallery's filters placeholder. This pattern enables powerful bulk operation workflows.
 
@@ -155,8 +155,10 @@ Gallery selection works seamlessly with action buttons and other widgets placed 
 Place a **Selection Helper** widget in the gallery's filters placeholder to provide bulk selection controls:
 
 * **Select All**: Select all items on the current page
-* **Clear Selection**: Remove all current selections
-* **Selection Status**: Visual indicator of current selection state (all, some, or none selected)
+* **Clear Selection**: Deselect all items on the current page
+* **Selection Status**: Visual indicator of the selection state of the current page (all, some, or none selected)
+
+The Selection Helper only acts on the items on the current page. When **Keep selection** is set to **Yes**, items selected on other pages stay selected.
 
 #### Selection Count Display
 

@@ -13,7 +13,7 @@ This document focusing on explaining module features. For precise details on Dat
 
 The data source determines which objects will be shown in a Data Grid 2 widget. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
 
-The widget uses a flexible, modular approach for filtering. You can place dedicated filter widgets (text filter, date filter, number filter, dropdown filter) in the filters placeholder above the grid, or within individual column headers. These specialized filter widgets provide tailored behavior for different data types and use cases. This system is superior to a built-in filtering system in that it allows for a more maintainable and customizable architecture.
+The widget uses a flexible, modular approach for filtering. You can place dedicated filter widgets (text filter, date filter, number filter, drop-down filter) in the filters placeholder above the grid, or within individual column headers. These specialized filter widgets provide tailored behavior for different data types and use cases. This system is superior to a built-in filtering system in that it allows for a more maintainable and customizable architecture.
 
 Here is an example of a data grid using filters:
 
@@ -207,7 +207,7 @@ This property is not available if you enable **Custom content** for the column
 ### Association Filter {#association-filter}
 
 {{% alert color="warning" %}}
-Association filtering configuration has been moved from column properties to the dedicated dropdown filter widget. Configure association filtering directly in the drop-down filter widget properties by setting **Filter by** to **Association**.
+Association filtering configuration has been moved from column properties to the dedicated drop-down filter widget. Configure association filtering directly in the drop-down filter widget properties by setting **Filter by** to **Association**.
 {{% /alert %}}
 
 The drop-down filter widget supports association filtering when **Filter by** is set to **Association**:
@@ -273,8 +273,8 @@ Also the desired attribute must be filterable. For example, not a value which is
 
 The text, number, and date filters have a **Filter attributes** property. The drop-down filter has an **Attribute config** property, which is available only when **Filter by** is set to **Attribute**. Both properties have two values:
 
-* **Auto**: uses the attribute of the column that the filter is placed in (works only when placed in grid columns)
-* **Custom**: you specify the data source to filter and select the attributes in **Attributes** (or the attribute in **Attribute** for the drop-down filter), for more flexible filtering scenarios
+* **Auto** – Uses the attribute of the column that the filter is placed in. This option works only when the filter is placed in a column.
+* **Custom** – You select the attributes in **Attributes** (or the attribute in **Attribute** for the drop-down filter). The filter is linked to the data source of the data widget it is placed in. Use this option when the filter is placed outside a column.
 
 When the drop-down filter's **Filter by** is set to **Association**, there is no **Auto** or **Custom** choice.
 
@@ -485,7 +485,7 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### Grid Wide Filtering {#grid-wide-filtering}
+### Grid-Wide Filtering {#grid-wide-filtering}
 
 {{% alert color="info" %}}
 Starting with [Data Widgets](/appstore/modules/data-widgets/) 3.0.0, filtering is configured in the filter widgets. When you update the module, existing grid-wide filtering configurations are automatically converted to the new setup.
@@ -496,7 +496,7 @@ To filter across multiple attributes from the data grid header (outside the colu
 * [Text Filter](/appstore/modules/datagrid-text-filter/)
 * [Number Filter](/appstore/modules/datagrid-number-filter/)
 * [Date Filter](/appstore/modules/datagrid-date-filter/)
-* [Dropdown Filter](/appstore/modules/datagrid-dropdown-filter/)
+* [Drop-Down Filter](/appstore/modules/datagrid-dropdown-filter/)
 
 ## Export to Excel
 
@@ -526,7 +526,7 @@ Here is an example of an unlimited string attribute:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/unlimited-string-attribute.png" alt="Example of unlimited string attribute" class="no-border" >}}
 
-When **Store configuration in** is set to **Attribute**, you need to surround the data grid with a data view in order to select an attribute. This will allow you to select an attribute. You can also define an action when the attribute will be updated with the new configurations.
+When **Store configuration in** is set to **Attribute**, you need to surround the data grid with a data view in order to select an attribute. You can also define an action when the attribute will be updated with the new configurations.
 
 Here is an example of a configuration containing an On change action:
 
@@ -581,13 +581,13 @@ The setting for action triggers is related to the selection method and can somet
 
 To use the **Row click** selection method together with an on-click action, set the **On click trigger** to **Double click**. When a data grid is configured this way, the end-user selects a row with a single click and triggers the action by double-clicking the row.
 
-### Selection and Header Actions
+### Selection and Actions in the Filters Placeholder
 
-When the button is placed in a grid header, the assigned action can receive the currently selected rows as a parameter.
+When the button is placed in the [filters placeholder](/appstore/modules/data-grid-2-properties/#filters-placeholder), the assigned action can receive the currently selected rows as a parameter.
 
 #### How Selection is Passed to Actions
 
-When a button placed in header triggers a **microflow** or **nanoflow**, the selected rows are passed as input:
+When a button placed in the filters placeholder triggers a **microflow** or **nanoflow**, the selected rows are passed as input:
 
 * If **Selection** is set to **Single**:
     * The action receives a **single object**.
@@ -607,7 +607,7 @@ This allows developers to build logic that operates on one or several items.
 To configure selection, do the following:
 
 1. Enable **Selection** in the data grid 2 widget.
-1. Insert an **Action Button** into the **Header**.
+1. Insert an **Action Button** into the **Filters placeholder**.
 1. Configure the button to trigger a microflow or nanoflow.
 1. Set the input parameter of the flow to match the selection type (single object or list).
 
@@ -655,7 +655,7 @@ The name of the filter or data grid can be found at **Properties** > **Common** 
 * Widget placement is incorrect.
 
 **Solution**:
-Place widget inside Gallery header, Data Grid 2 header, or Data Grid 2 column.
+Place the widget in the filters placeholder of Gallery or Data Grid 2, or in a Data Grid 2 column.
 
 **Error**:
 

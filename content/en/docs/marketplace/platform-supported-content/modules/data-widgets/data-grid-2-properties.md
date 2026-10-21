@@ -206,7 +206,7 @@ This property is only shown when **Pagination** is set to **Paging buttons** and
 
 ##### Show Number of Rows
 
-When set to **Yes**, the total number of rows is displayed in the pagination area, providing users with context about the dataset size. The default value is **No**.
+When set to **Yes**, the pagination area shows the number of loaded rows and the total number of rows, such as "20 of 150". The default value is **No**. On large datasets, calculating the total number of rows can slow down the initial load.
 
 This property is only shown when **Pagination** is set to **Virtual scrolling** or **Load more**.
 

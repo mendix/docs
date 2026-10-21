@@ -1,12 +1,12 @@
 ---
-title: "Dropdown Filter"
+title: "Drop-Down Filter"
 url: /appstore/modules/datagrid-dropdown-filter/
-description: "This document describes the properties of the Dropdown Filter widget and their configurations."
+description: "This document describes the properties of the Drop-Down Filter widget and their configurations."
 ---
 
 ## Introduction
 
-This guide lists all the properties of the Dropdown Filter widget used with the [Data Grid 2](/appstore/modules/data-grid-2/) widget. The dropdown filter allows users to filter enumeration values, Boolean attributes, or associations through a dropdown selection interface with advanced features like multi-select and search capabilities.
+This guide lists all the properties of the Drop-Down Filter widget used with the [Data Grid 2](/appstore/modules/data-grid-2/) widget. The drop-down filter allows users to filter enumeration values, Boolean attributes, or associations through a drop-down list with advanced features like multi-select and search capabilities.
 
 For more information on using filter widgets, see [Data Grid 2](/appstore/modules/data-grid-2/#filters).
 
@@ -18,7 +18,7 @@ For more information on using filter widgets, see [Data Grid 2](/appstore/module
 
 ##### Filter By
 
-Determines the type of filtering the dropdown filter performs:
+Determines the type of filtering the drop-down filter performs:
 
 * **Attribute**: filters based on entity attributes (enumerations, Booleans)
 * **Association**: filters based on entity associations and references
@@ -43,11 +43,11 @@ Specifies the target attribute for filtering. This property is only shown when *
 
 ##### Automatic Options
 
-When set to **Yes**, the dropdown shows options based on the enumeration values and captions, or on the Boolean values. When set to **No**, custom options must be manually configured in the **Options** list. This property is only available when **Filter by** is set to **Attribute**.
+When set to **Yes**, the drop-down list shows options based on the enumeration values and captions, or on the Boolean values. When set to **No**, custom options must be manually configured in the **Options** list. This property is only available when **Filter by** is set to **Attribute**.
 
 ##### Options
 
-Allows manual specification of dropdown options. This property is only shown when **Filter by** is set to **Attribute** and **Automatic options** is set to **No**. Each option contains the following:
+Allows manual specification of drop-down options. This property is only shown when **Filter by** is set to **Attribute** and **Automatic options** is set to **No**. Each option contains the following:
 
 * **Caption**: display text shown to users
 * **Value**: an expression that returns the value used for filtering; for an enumeration, it must match the enumeration value exactly
@@ -58,7 +58,7 @@ Defines the association that is used for filtering. Supports both **Reference** 
 
 ##### Selectable Objects
 
-Defines the data source that provides the list of objects available for selection. This data source should return all possible objects that could be associated with the filtered entity. The dropdown filter displays these objects as selectable options. This property is only available when **Filter by** is set to **Association**.
+Defines the data source that provides the list of objects available for selection. This data source should return all possible objects that could be associated with the filtered entity. The drop-down filter displays these objects as selectable options. This property is only available when **Filter by** is set to **Association**.
 
 ##### Caption Source
 
@@ -69,7 +69,7 @@ Determines how the caption of each option is defined when **Filter by** is set t
 
 ##### Caption
 
-Specifies the text that is displayed for each option in the dropdown filter. When **Caption source** is set to **Attribute**, select a string attribute from the entity of the **Selectable objects** data source. When **Caption source** is set to **Expression**, define an expression that returns a string.
+Specifies the text that is displayed for each option in the drop-down filter. When **Caption source** is set to **Attribute**, select a string attribute from the entity of the **Selectable objects** data source. When **Caption source** is set to **Expression**, define an expression that returns a string.
 
 ##### Search Attribute
 
@@ -77,17 +77,17 @@ Specifies the string attribute of the selectable objects that is used to search 
 
 ##### Use Lazy Load
 
-Controls when dropdown filter options are loaded. When set to **No** (recommended), options are loaded immediately providing better personalization support and value restoration. When set to **Yes**, options are loaded on demand when the dropdown filter is first opened, improving initial page load performance but limiting personalization capabilities. This property is only available when **Filter by** is set to **Association**.
+Controls when drop-down filter options are loaded. When set to **No** (recommended), options are loaded immediately providing better personalization support and value restoration. When set to **Yes**, options are loaded on demand when the drop-down filter is first opened, improving initial page load performance but limiting personalization capabilities. This property is only available when **Filter by** is set to **Association**.
 
 #### General
 
 ##### Default Value
 
-Sets the initial value that is selected in the dropdown filter when the page loads. The expression returns a String. To select multiple options, separate the values with commas; when **Multiselect** is set to **No**, only the first value is used. For attribute filtering, each value must match an enumeration value, a Boolean value (`true` or `false`), or the **Value** of a custom option. For association filtering, each value must be the object ID of one of the selectable objects. The empty option caption is shown by default, or when the configured default value matches none of the options.
+Sets the initial value that is selected in the drop-down filter when the page loads. The expression returns a String. To select multiple options, separate the values with commas; when **Multiselect** is set to **No**, only the first value is used. For attribute filtering, each value must match an enumeration value, a Boolean value (`true` or `false`), or the **Value** of a custom option. For association filtering, each value must be the object ID of one of the selectable objects. The empty option caption is shown by default, or when the configured default value matches none of the options.
 
 ##### Filterable
 
-When set to **Yes**, adds a search input to the dropdown allowing users to quickly find options by typing. This is especially useful for dropdowns with many options.
+When set to **Yes**, adds a search input to the drop-down list allowing users to quickly find options by typing. This is especially useful for drop-down lists with many options.
 
 ##### Multiselect
 
@@ -99,7 +99,7 @@ Defines the text displayed for the "empty" or "no selection" option. This option
 
 ##### Clearable
 
-When set to **Yes**, adds a clear button that allows users to quickly remove their current selection. This provides an easy way to reset the filter without having to manually deselect options. This property is hidden when **Filterable** is set to **Yes**, because a filterable dropdown is always clearable.
+When set to **Yes**, adds a clear button that allows users to quickly remove their current selection. This provides an easy way to reset the filter without having to manually deselect options. This property is hidden when **Filterable** is set to **Yes**, because a filterable drop-down filter is always clearable.
 
 ##### Show Selected Items As
 
@@ -133,7 +133,7 @@ Defines an action to be executed whenever the filter selection changes. This eve
 
 ##### Input Caption
 
-Defines the accessible label for the dropdown input element. Screen readers announce this label when users focus on the dropdown. Employing this correctly is essential for users relying on assistive technology.
+Defines the accessible label for the drop-down input element. Screen readers announce this label when users focus on the drop-down filter. Employing this correctly is essential for users relying on assistive technology.
 
 #### Texts
 

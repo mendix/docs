@@ -8,7 +8,7 @@ description: "Describes how to collect support information from Studio Pro, incl
 
 When you report an issue to Mendix Support, it helps to share details about your environment. **Collect Support Information** gathers these details in one place: information about your computer, Studio Pro, and your app, together with the Studio Pro log files.
 
-If your app has a native mobile profile, Studio Pro can also include device-specific information from the Make It Native app running on your phone or tablet. This information includes the device model, the operating system, network status, and the recent client logs of your app. It helps Support reproduce problems that only occur on a specific device or only at runtime.
+If your app has a native mobile profile, Studio Pro can also include device-specific information from the Make It Native app running on your phone or tablet. This information includes the device model, the operating system, network status, and the recent client logs of your app. It helps Support reproduce problems that only occur on a specific device or only at runtime. Including device information is available in Studio Pro 11.17 and above.
 
 To start collecting support information, click **Help** > **Support Tools** > **Collect Support Information…**.
 
@@ -102,7 +102,7 @@ If a device is connected when you save, but Studio Pro cannot collect the device
 | --- | --- |
 | The connected device did not respond within the timeout period. | The device is connected but did not answer in time, for example because the app is in the background or the device went to sleep. Bring the app to the foreground and try again. |
 | Could not reach the native packager. It may have stopped or become unreachable. | The native packager is no longer running. View your app on the device again from Studio Pro, and then collect the support information again. |
-| Native diagnostics collection is not supported by the current packager build. | The packager does not support collecting device information. Make sure you are using a version of Studio Pro that includes this functionality. |
+| Native diagnostics collection is not supported by the current packager build. | The packager does not support collecting device information. Make sure you are using Studio Pro 11.17 or above. |
 | The device may have disconnected or the request timed out. | The device lost its connection while the information was collected. Reconnect the device and try again. |
 
 If the ZIP file does not contain a `native-diagnostics` file at all, no device was connected when you saved. Check the [prerequisites](#prerequisites), and then collect the support information again.

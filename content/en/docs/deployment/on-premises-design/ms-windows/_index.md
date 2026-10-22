@@ -27,9 +27,9 @@ To set up an environment to run Mendix applications, you will need to install th
 
 Before starting this how-to, make sure you have the following prerequisites:
 
-* MS Windows Server 2012 or higher
+* MS Windows Server 2016 or above
     * The Mendix Service Console will run and deploy a Mendix app on the [minimum hardware requirements for MS Windows Server 2012](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134246(v=ws.11)#system-requirements). However, you may need to increase the specifications depending on the functionality of your app. Although not directly comparable, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) used when deploying to Mendix Cloud for comparative information.
-* .NET Framework 4.7.2 or higher
+* .NET Framework 10 LTS or above
 * IIS 8 or higher with the following service roles enabled:
 
     * IIS Management console

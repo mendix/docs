@@ -22,7 +22,7 @@ Before making structural changes, read [Access Model and Role Reference for Priv
 
 ## Accessing the Access Management Pages
 
-To open the **Access Management** page, peform the following steps:
+To open the **Access Management** page, perform the following steps:
 
 1. Click your profile picture in the top right corner of the screen and select **Switch to Admin Mode**.
 2. In the left navigation menu, open the **Manage** section.
@@ -35,9 +35,13 @@ On the **User Management** page you can create and maintain the accounts that us
 
 What an account can do comes from the platform roles assigned to it, not from any account type, so the same page and the same procedure serve a developer, an administrator, and an integration.
 
+### Creating Accounts
+
 To create an account, click **New** and provide the user's name and email address, then assign the Platform Roles the account requires. An account with no Platform Role cannot use the platform, so at minimum assign **User**.
 
-By clicking **More Actions** by an existing account you can:
+### More Actions
+
+By clicking **More Actions** by an existing account, you can perform the following tasks:
 
 * Edit the user's name and email address.
 * Assign or remove Platform Roles.
@@ -51,8 +55,8 @@ The **Actions** tab additionally lets you log out every user currently signed in
 
 Some of these actions depend on how the account authenticates rather than on what kind of account it is. Setting a password, for instance, applies to accounts that sign in with platform credentials and not to accounts that authenticate through your identity provider.
 
-{{% alert color="warning" %}}
-Assigning a Platform Role gives a user platform-wide capability and nothing else. It does not give them access to any app, namespace, or Marketplace item. Access to resources comes from group membership or an app team invitation, described below.
+{{% alert color="info" %}}
+Assigning a Platform Role gives a user platform-wide capability to perform specific tasks. However, it does not give them access to any app, namespace, or Marketplace item. Access to resources comes from group membership or an app team invitation, as described in the following sections.
 {{% /alert %}}
 
 ### Accounts Used by Services

@@ -729,6 +729,14 @@ img.ToC-icon{
     }
 }
 
+.expandable-table-inner[tabindex],
+.expandable-table-body[tabindex] {
+    &:focus-visible {
+        outline: 2px solid $link-color;
+        outline-offset: 2px;
+    }
+}
+
 body.expandable-table-open {
     overflow: hidden;
 }

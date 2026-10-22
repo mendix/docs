@@ -201,7 +201,7 @@ If your app is already developed using Mendix 9 or above, but uses the community
 
 This section provides an overview of updates for the OIDC SSO module across different versions. It includes new dependencies, snippet replacements, and microflow renaming to ensure a smooth transition while migrating to higher module versions.
 
-{{% expandable-table %}}
+{{% expandable-table title="Title of the table"%}}
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |

@@ -12,6 +12,18 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 ## 2026
 
+### Oct 29, 2026
+
+#### New Features
+
+POST and GET request steps now support variable concatenation, allowing you to combine static text with one or more pipeline variables using the `{{variableName}}` syntax.
+
+* **Request URL:** Combine static text and multiple variables to construct dynamic URLs.
+* **HTTP Headers:** Use variables in header keys and values, including combinations of static text and multiple variables.
+* **POST Request Body:** Include variables directly in the request payload alongside static JSON content.
+
+The Variable Selector is available in supported configuration fields by typing `{{`. The POST Request Body does not currently support variable suggestions, so variable references must be entered manually.
+
 ### Aug 06, 2026
 
 #### New Features

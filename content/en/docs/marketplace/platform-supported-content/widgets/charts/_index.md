@@ -15,12 +15,14 @@ The [Charts](https://marketplace.mendix.com/link/component/105695/) module conta
 For more examples of what Charts widgets can do, see the following documents:
 
 * [Create a Basic Chart](/appstore/widgets/charts-basic-create/)
-* [Use Any Chart](/appstore/widgets/charts-any-usage/)
 * [Use Custom Chart](/appstore/widgets/charts-custom-usage/)
+* [Use Any Chart](/appstore/widgets/charts-any-usage/)
 * [Fine-Tune a Chart with Chart Playground](/appstore/widgets/chart-advanced-tuning/)
 * [Use the Charts Theme](/appstore/widgets/charts-theme/)
 * [Create a Multiple Series Chart](/appstore/widgets/charts-dynamic-series/)
 * [Use a Chart with a REST Data Source](/appstore/widgets/charts-basic-rest/)
+* [Chart Playground](/appstore/widgets/chart-specific-settings/)
+* [Chart-Specific Settings](/appstore/widgets/chart-playground/)
 
 {{% alert color="info" %}}
 This document assumes that you are using Charts widget v3.0.0 or above. To read documentation for older versions, see the [Legacy Chart Widget Documentation](#legacy-widget-docs) section below.

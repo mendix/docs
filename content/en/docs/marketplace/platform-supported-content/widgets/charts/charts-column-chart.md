@@ -11,7 +11,7 @@ A column chart shows one or more series as vertical columns.
 
 For the properties that all series-based charts share, such as the **Series** list, **Dimensions**, and **Advanced** settings, see [Common Chart Properties](/appstore/widgets/charts/#common-properties). This page describes the properties that are specific to the column chart.
 
-## General Section
+## General Tab
 
 ### Column Format
 
@@ -20,9 +20,10 @@ This setting controls the column format:
 * **Grouped** – Columns of different series are placed next to each other.
 * **Stacked** – Columns of different series are stacked on top of each other, forming one column.
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/column-chart-format-grouped-vs-stacked.png" alt="Two column charts. On the left, Alpha and Beta columns are side by side. On the right, Beta is stacked on top of Alpha." title="Two format types of column chart, where group format is present on the left and stack format is present on the right." class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/column-chart-format-grouped-vs-stacked.png" alt="Two column charts. On the left, Alpha and Beta columns are side by side. On the right, Beta is stacked on top of Alpha." class="no-border" >}}
+    Two format types of column chart, where group format is present on the left and stack format is present on the right.
 
-## Edit Series Item Dialog Box – Appearance Tab
+## Appearance Tab
 
 * **Column color** – The color of the columns for this series.
 

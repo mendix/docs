@@ -11,7 +11,7 @@ A line chart shows one or more series as lines.
 
 For the properties that all series-based charts share, such as the **Series** list, **Dimensions**, and **Advanced** settings, see [Common Chart Properties](/appstore/widgets/charts/#common-properties). This page describes the properties that are specific to the line chart.
 
-## Edit Series Item Dialog Box – Appearance Tab
+## Appearance Tab
 
 * **Interpolation** – Determines the line shape:
     * **Linear** – Data points are connected with straight lines.

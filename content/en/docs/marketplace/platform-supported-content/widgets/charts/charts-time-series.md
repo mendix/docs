@@ -31,7 +31,7 @@ This property controls the range of the Y axis:
 * **From zero** – The Y axis starts from zero. This is the default value.
 * **Non-negative** – The Y axis only shows positive values.
 
-## Edit Series Item Dialog Box – Appearance Tab
+## Appearance Tab
 
 * **Interpolation** – Determines the line shape:
     * **Linear** – Data points are connected with straight lines.

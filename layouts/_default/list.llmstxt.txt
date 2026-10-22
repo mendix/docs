@@ -1,0 +1,14 @@
+# {{ .Site.Title }}
+
+> Documentation for Mendix Studio Pro, platform features, APIs, and how-to guides.
+
+{{- /* The docs root section has type: landingpage and url: /
+       Its immediate children are the top-level sections (refguide, howto, etc.) */ -}}
+{{- $docsRoot := index (where .Site.Sections "Type" "landingpage") 0 -}}
+{{- if $docsRoot -}}
+{{- partial "llms-tree.txt" (dict "page" $docsRoot "depth" 0) -}}
+{{- end }}
+
+## Optional
+
+- [llms-full.txt]({{ .Site.BaseURL }}llms-full.txt): Full Markdown content of all documentation pages for offline indexing.

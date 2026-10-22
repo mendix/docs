@@ -72,28 +72,28 @@ To create a line chart with the **Custom Chart** widget, follow these steps:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-configuration.png" alt="Data tab of the Custom chart properties with the Static and Sample data JSON filled in" max-width="80%" class="no-border" >}}
 
-7. Run the app to preview the chart.
+7. Run the app to preview the chart:
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-sample.png" alt="Line chart with one line from point 1,1 to point 2,2" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-sample.png" alt="Line chart with one line from point 1,1 to point 2,2" class="no-border" max-width="80%" >}}
 
 ## Exporting Data
 
 To generate JSON data for the Charts widget, follow these steps:
 
 1. Add a **Data** string (unlimited length) attribute to the Chart (context) entity.
-2. In the widget, set the **Source attribute** field in the **Data** tab.
+1. In the widget, set the **Source attribute** field in the **Data** tab:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-configuration-attribute.png" alt="Select data attribute" class="no-border" >}}
-3. Create a **JSON Structure** and use the **Sample data** as the snippet.
+1. Create a **JSON Structure** and use the **Sample data** as the snippet:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/any-chart-json-structure-line-chart-data.png" alt="Create export mapping" class="no-border" >}}
-4. Create an **Export Mapping** with the **JSON Structure**.
+1. Create an **Export Mapping** with the **JSON Structure**:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/any-chart-line-chart-export-mapping-select.png" alt="Select data structure" class="no-border" >}}
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/any-chart-line-chart-export-mapping.png" alt="Map objects" class="no-border" >}}
-5. Create a microflow that retrieves the data.
-6. Use the **Export Mapping** to generate a **String Variable**. Store the value in the object attribute that is selected as **Source attribute**.
+1. Create a microflow that retrieves the data.
+1. Use the **Export Mapping** to generate a **String Variable**. Store the value in the object attribute that is selected as **Source attribute**:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/any-chart-export-microflow.png" alt="Export microflow" class="no-border" >}}
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/any-chart-export-microflow-structure.png" alt="Export microflow" class="no-border" >}}
 
-If need be, the layout can also be generated in the same way as the data. In most cases, a **Static** layout will suffice.
+If needed, the layout can also be generated in the same way as the data. In most cases, a **Static** layout will suffice.
 
 ## Fine-Tuning
 
@@ -144,13 +144,13 @@ When **Height unit** is set to **Auto**, these properties are also available:
 ### Events Tab
 
 * **On click** – The action that runs when the user clicks a part of the chart.
-* **Event data attribute** – A string attribute in which the chart stores the raw Plotly event data when the user clicks the chart. You can use this attribute in the **On click** action to read which part of the chart was clicked. For the format of the data, see [Event Data](https://plotly.com/javascript/plotlyjs-events/#event-data) in the Plotly documentation.
+* **Event data attribute** – A string attribute in which the chart stores the raw Plotly event data when the user clicks the chart. You can use this attribute in the **On click** action to read which part of the chart was clicked. For the format of the data, see [Event Data](https://plotly.com/javascript/plotlyjs-events/#event-data) in the Plotly documentation:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-events-attribute.png" alt="On click action that uses the event data attribute" class="no-border" >}}
 
 ## Read More
 
-* **Any Chart** properties: [Any Chart](/refguide/charts-any-configuration/)
+* Any Chart properties: [Any Chart](/refguide/charts-any-configuration/)
 * The most common chart types:  [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet/)
 * The most common settings: [Configuration Cheat Sheet](/refguide/charts-advanced-cheat-sheet/)
 * The full JSON reference: [https://plot.ly/javascript/reference/](https://plot.ly/javascript/reference/)

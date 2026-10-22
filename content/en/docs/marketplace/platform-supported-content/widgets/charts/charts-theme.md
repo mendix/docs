@@ -63,11 +63,11 @@ To add a theme file that applies to all charts in the app, follow these steps:
 
 1. In Studio Pro, go to **App** > **Show App Directory in Explorer** (or **Show App Directory in Finder** on macOS).
 1. Open the *[YOUR-APP]/theme/web* folder (or *[YOUR-APP]/theme/native* if using native apps).
-1. Create a new file named *com.mendix.charts.json*.
+1. Create a new file named *com.mendix.charts.json*:
 
     {{% alert color="info" %}}The file name is case-sensitive, and the file extension is *.json*. The file must contain a JSON object, even if it is empty, for example `{ }`.{{% /alert %}}
 
-1. For each chart that should use the theme, open the chart properties, set **Enable advanced options** to **Yes** on the **General** tab, then go to the **Advanced** tab and set **Enable theme folder config loading** to **Yes**.
+1. For each chart that should use the theme, open the chart properties, set **Enable advanced options** to **Yes** on the **General** tab, then go to the **Advanced** tab and set **Enable theme folder config loading** to **Yes**:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-theme/charts-enable-theme-config.png" alt="Advanced tab of the chart properties with Enable theme folder config loading set to Yes" width="450px" class="no-border" >}}
 
@@ -93,7 +93,7 @@ To change the font in all charts in the app, follow these steps:
     ```
 
 1. Restart the Mendix app.
-1. Check the result.
+1. Check the result:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="Line chart whose axis labels use the Impact font from the theme file" class="no-border" >}}
 

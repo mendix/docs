@@ -31,7 +31,7 @@ In this section, you will create a chart with basic sample data.
 To use the Charts widget, a specific data structure is set up. This is defined by entities and attributes in the domain model.
 
 1. Create a new module called **charts**.
-2. Configure your domain model to contain an entity **Value** with a string attribute **xValue** and a decimal attribute **yValue**.
+2. Configure your domain model to contain an entity **Value** with a string attribute **xValue** and a decimal attribute **yValue**:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-entity.png" alt="Value entity" class="no-border" >}}
 
@@ -40,7 +40,7 @@ To use the Charts widget, a specific data structure is set up. This is defined b
 To create a basic data entry page from which the Charts widget will fetch data, follow these steps:
 
 1. Right-click the **Value** entity.
-2. Select **Generate overview pages**.
+2. Select **Generate overview pages**:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-rest-generate-overview-pages.png" alt="Generate overview pages for Value entity" class="no-border" >}}
 
@@ -50,11 +50,11 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 1. Create a page named *ShowChart*.
 2. Add it to the user navigation.
-3. On the ShowChart page, add the widget **Area chart**.
+3. On the ShowChart page, add the widget **Area chart**:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-select-chart.png" alt="Select widget" class="no-border" >}}
 
-4. The final page should look like this.
+4. The final page should look like this:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-widget-page.png" alt="Area chart widget on the ShowChart page in Studio Pro, showing sample data for three series" class="no-border" >}}
 
@@ -63,24 +63,24 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 To configure a Charts widget, follow these steps:
 
 1. Open the page with the Charts widget.
-2. Double-click the **Area chart** widget to open its properties.
-3. On the **General** tab, in the **Data source** section, click **New** in the **Series** list. The **Edit Series Item** dialog box opens.
-4. On the **General** tab of the dialog box, leave **Data set** set to **Single series**.
-5. Set **Data source** to **Database** and select the *Value* entity.
-6. Select *xValue* as the **X axis attribute** and *yValue* as the **Y axis attribute**.
+1. Double-click the **Area chart** widget to open its properties.
+1. On the **General** tab, in the **Data source** section, click **New** in the **Series** list. The **Edit Series Item** dialog box opens.
+1. On the **General** tab of the dialog box, leave **Data set** set to **Single series**.
+1. Set **Data source** to **Database** and select the *Value* entity.
+1. Select *xValue* as the **X axis attribute** and *yValue* as the **Y axis attribute**.
 
 ### Viewing the Chart
 
 To view the chart, follow these steps:
 
 1. Run the app.
-2. In your browser, open the data entry page.
-3. Enter data values for **x value** and **y value**.
+1. In your browser, open the data entry page.
+1. Enter data values for **x value** and **y value**:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-front-end.png" alt="Enter Data" class="no-border" >}}
 
-4. Click the **Save** button.
-5. Open the **ShowChart** page to view the chart created.
+1. Click the **Save** button.
+1. Open the **ShowChart** page to view the chart you just created:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-area-chart.png" alt="Show Chart" class="no-border" >}}
 

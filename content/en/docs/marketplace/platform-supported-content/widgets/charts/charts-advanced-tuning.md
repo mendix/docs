@@ -41,7 +41,7 @@ To open the playground on your chart, follow these steps:
 1. Drag the **Chart playground** widget into the **Playground slot**.
 1. Run the app.
 1. In your browser, open the page with the chart.
-1. Click **Toggle Editor**.
+1. Click **Toggle Editor**:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-toggle-editor-closed.png" alt="Line chart in the running app with the Toggle Editor button in the top right corner" max-width="60%" class="no-border" >}}
 
@@ -87,13 +87,13 @@ To change how one series is drawn, follow these steps:
 
 1. Open the playground as described in [Opening the Playground](#open-playground).
 1. In the drop-down list, select the series you want to display differently. In this example, this is **Alpha**.
-1. Change **Custom settings** to `{ "type": "line" }`.
+1. Change **Custom settings** to `{ "type": "line" }`:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination.png" alt="Chart playground editor with the Alpha series selected and a JSON object that sets type to line in Custom settings, next to a column chart that shows Alpha as a line" class="no-border" >}}
 
 1. Copy the JSON.
 1. In Studio Pro, open the chart properties and set **Enable advanced options** to **Yes** on the **General** tab. Then select **Alpha** in the **Series** list and click **Edit**.
-1. On the **Advanced** tab of the **Edit Series Item** dialog box, paste the JSON into **Custom series options**.
+1. On the **Advanced** tab of the **Edit Series Item** dialog box, paste the JSON into **Custom series options**:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-properties.png" alt="Advanced tab of the Edit Series Item dialog box with a JSON object that sets type to line in Custom series options" width="450px" class="no-border" >}}
 
@@ -110,7 +110,7 @@ To create a custom configuration, follow these steps:
 1. Change **Custom settings** to `{ "displayModeBar": true }`.
 1. Add more settings as needed. For all configuration settings, see [Configuration Options](https://plotly.com/javascript/configuration-options/) in the Plotly documentation.
 1. Copy the JSON.
-1. In Studio Pro, on the **General** tab of the chart, set **Enable advanced options** to **Yes**. Then paste the JSON into the **Custom configurations** property on the **Advanced** tab.
+1. In Studio Pro, on the **General** tab of the chart, set **Enable advanced options** to **Yes**. Then paste the JSON into the **Custom configurations** property on the **Advanced** tab:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced-config.png" alt="Advanced tab of the chart properties with a JSON object that sets displayModeBar to true in Custom configurations" width="450px" class="no-border" >}}
 

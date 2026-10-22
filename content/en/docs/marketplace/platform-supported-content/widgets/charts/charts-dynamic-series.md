@@ -75,7 +75,7 @@ To give the series distinct colors, use the **Appearance** tab of the **Edit Ser
 To view the chart, follow these steps:
 
 1. Run the app (locally).
-1. Open the page containing the chart.
+1. Open the page containing the chart:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-dynamic-series/charts-dynamic-series-chart.png" alt="Stacked area chart with one area for each series name found in the data: Alpha, Beta, and Gamma" class="no-border" >}}
 

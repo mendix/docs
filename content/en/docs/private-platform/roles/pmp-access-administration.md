@@ -69,7 +69,7 @@ Give each integration its own account and its own narrowly scoped role rather th
 **Reviewer note:** confirm whether a role named API User ships with the platform or is customer-defined. Note also that [Private Mendix Platform Functionalities - Company Administrators](/private-mendix-platform/reference-guide/admin/company/#user-management) currently presents "API users" as a separate kind of account, and that several of the per-account actions on that page are described as available to "local users only". Both need reconciling with the single-account-kind model as part of this change.
 {{% /alert %}}
 
-### Sign-In and Lockout Behavior
+### Sign-in and Lockout Behavior
 
 Session limits, automatic disabling of unused accounts, failed sign-in lockout, and lockout duration are platform-wide settings rather than per-account ones, and are configured by a system administrator. See [Preferences](/private-mendix-platform/reference-guide/admin/system/#preferences-1).
 

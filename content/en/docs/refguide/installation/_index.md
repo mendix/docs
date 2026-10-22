@@ -14,3 +14,5 @@ Before installing Studio Pro 11, it is important to understand the [System Requi
 If you have been using Studio Pro 10, see [Upgrading from Mendix Studio Pro 10 to 11](/refguide/upgrading-from-10-to-11/).
 
 ## Documents in This Category
+
+<!-- TODO: Resolve serious flag about how our metadata Lists and Description Lists organize parent and child elements. Direct children are not allowed. Help here: https://dequeuniversity.com/rules/axe/4.13/list?application=AxeChrome&lang=en -->  

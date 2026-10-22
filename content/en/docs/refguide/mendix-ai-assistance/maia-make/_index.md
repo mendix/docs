@@ -105,31 +105,31 @@ The conversational interface includes the following features.
 
 Clicking **New Chat** allows you to clear the messages and start a new conversation that does not reference your current chat.
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/new-chat.jpg" width="250px" alt="" >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/new-chat.jpg" width="250px" alt="Click new chat to clear previous messages." >}}
 
 #### Configure MCP Connections
 
 This option ({{% icon name="plug" %}}) allows you to connect external [MCP](https://modelcontextprotocol.io/introduction) servers to Maia, giving it access to third-party tools during chat. For more information on how to configure MCP connections, see [Maia MCP Client](/refguide/maia-mcp/).
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/configure.jpg" width="250px" alt="" >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/configure.jpg" width="250px" alt="Shows the configure MCP connections option." >}}
 
 #### Add
 
 **{{% icon name="paperclip" %}} Add** allows you to attach images, PDFs, or user stories to help Maia understand your requirements better.
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add.jpg" width="250px" alt="" >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add.jpg" width="250px" alt="Shows the Add option." >}}
 
 #### Add File to Maia Chat
 
 The **Add file to Maia Chat** option (@ icon) allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer**, where it appears in the context menu.
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add-files.jpg" width="250px" alt="" >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add-files.jpg" width="250px" alt="Shows the Add File to Maia Chat option." >}}
 
 #### Changed List
 
 A list of items added or changed by Maia appears above the chat box. Click an entry to open the relevant document. To undo all changes, click **Undo all**. To undo a single change, click the undo button on the right side of that item.
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/changed-list.png" width="250px" alt="" >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/changed-list.png" width="250px" alt="Shows the changed list option." >}}
 
 #### Clarifying Questions
 
@@ -206,7 +206,7 @@ To configure an OpenAI-compatible provider, follow these steps:
 
 [Private Mendix Platform](/private-mendix-platform/) provides an environment where you can develop and deploy your applications within your own enterprise security boundary to ensure the highest levels of data security and compliance. Because Private Mendix Platform instances are hosted within the enterprise firewall, selecting an LLM provider other than the default [Mendix Platform](#mendix-platform) requires you to also configure the LLM Gateway URL.
 
-{{< figure src="/attachments/private-platform/pmp-llm-gateway.png" class="no-border" alt="" >}}
+{{< figure src="/attachments/private-platform/pmp-llm-gateway.png" class="no-border" alt="Shows LLM gateway configuration." >}}
 
 The LLM Gateway URL is configured during the installation or upgrade of Private Mendix Platform. For more information, see [Installing Maia for Private Mendix Platform](/private-mendix-platform/interactive-installation/#maia).
 

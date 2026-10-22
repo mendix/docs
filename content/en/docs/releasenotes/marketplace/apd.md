@@ -368,7 +368,7 @@ developer) and a page with test features from the APM tool.
 
 The theme for this version is further enhancement of UX. 
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.9/Dashboard_1.9.0.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.9/Dashboard_1.9.0.png" class="no-border" alt="Shows the upgraded UX theming of version 1.9." >}}
 
 The measurements tool has been enhanced to allow for calculated measurements. This allows for 
 measuring memory as a percentage and triggering on 70% instead of some large number. The measurements tool
@@ -475,7 +475,7 @@ The theme for this version is a tool summary on a dashboard and improved styling
 
 The new console is more about presenting information instead of more stop/start buttons and navigation.
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Console.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Console.png" class="no-border" alt="Shows the new console GUI." >}}
 
 The new console has four parts:
 
@@ -488,9 +488,9 @@ The new console has four parts:
 
 The Trap tool separates the trap and the messages, so that it is clearer which messages belong to which trap, and in order to show a list of traps without messages in the GUI.
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Trap_View.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Trap_View.png" class="no-border" alt="Showcases trap view features.">}}
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Statistics_Tool.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Statistics_Tool.png" class="no-border" alt="Showcases statistics tool." >}}
 
 ### Gathering Statistics Over More Periods
 
@@ -503,7 +503,7 @@ The statistics tool now gathers statistics over different time periods:
 * For measurement triggers (between once and twice according to the console frequency, in order to prevent the statistics from just being reset when a trigger fires)
 * These statistics are saved in the stored statistics when a trigger fires and is configured to store statistics
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Traps.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Traps.png" class="no-border" alt="Illustration of a trigger firing when configured to show statistics." >}}
 
 ### Bug Fixes and Minor Changes
 
@@ -547,7 +547,7 @@ The installation has been simplified by removing the layout linking step and by 
 * Use button to send mail with license request
 * Upon receiving the license, copy-paste and save
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Welcome.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Welcome.png" class="no-border" alt="Shows the welcome page as a user is installing.">}}
 
 ### Upgrades
 
@@ -561,13 +561,13 @@ Upgrades have been simplified to:
 ### GUI
 
 The GUI is simplified by removing the configuration menu items and reducing this to 1 settings item. By removing the dependency of the enclosing App style, by removing counters, by adding tool info buttons.
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Console.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Console.png" class="no-border" alt="Shows the simplified GUI console.">}}
 
 The GUI now uses it's own style and is no longer dependent on the style of the App/Project where it is placed in.
 
 All options dialogs are redesigned to show advised production/non-production settings besides the custom settings.
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Settings.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Settings.png" class="no-border" alt="Redesigned settings layout." >}}
 
 ### Simplified Licensing
 
@@ -630,9 +630,9 @@ The theme for this version is Mendix 6 and a visual trend on microflow statistic
 
 ### New Feature: Graph on Microflow Statistics to Show Trend
 
-To better visualize and show trends in the history of microflow statistics a graph has been added to show the last 100 statistics. A button called [History] in the statistics tool and called [Show History Graph] on the microflow history (under search menu) shows the graph (to visualize a trend) on microflow statistics.
+To better visualize and show trends in the history of microflow statistics a graph has been added to show the last 100 statistics. A button called **History** in the statistics tool and called **Show History Graph** on the microflow history (under search menu) shows the graph (to visualize a trend) on microflow statistics.
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.6/Microflow_Trend.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.6/Microflow_Trend.png" class="no-border" alt="Graph showing trends on microflow statistics." >}}
 
 With this feature during a performance analysis you can see if a microflow is taking more time to execute after a certain period of time. This can indicate a database table getting populated.
 

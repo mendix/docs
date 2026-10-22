@@ -28,7 +28,7 @@ The following sections contain more information about platform and resource role
 
 ### Platform Roles {#platform-role}
 
-Platform roles define what a user can do on the platform in general. They are assigned to a user account at creation, and can be edited afterwards. Their scope involves the whole plaform. Having multiple platform roles gives a user all the access rights of every role they hold.
+Platform roles define what a user can do on the platform in general. They are assigned to a user account at creation, and can be edited afterward. Their scope involves the whole plaform. Having multiple platform roles gives a user all the access rights of every role they hold.
 
 ### Resource Roles {#resource-role}
 

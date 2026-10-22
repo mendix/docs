@@ -61,21 +61,17 @@ Assigning a Platform Role gives a user platform-wide capability to perform speci
 
 ### Accounts Used by Services
 
-A service that calls the platform API signs in as an ordinary account, and what it can do is determined by that account's Platform Role. A role such as **API User**, carrying only the permissions one integration needs, is an example of a Platform Role defined for this purpose.
+A service that calls the platform API signs in as an ordinary account, and what it can do is determined by that account's platform role. A role such as *API User*, carrying only the permissions one integration needs, is an example of a platform role defined for this purpose.
 
-Give each integration its own account and its own narrowly scoped role rather than reusing an administrator account. Because the account is ordinary, everything else on this page applies to it: it can be blocked, its roles can be changed, and its actions appear in the activity log.
-
-{{% alert color="info" %}}
-**Reviewer note:** confirm whether a role named API User ships with the platform or is customer-defined. Note also that [Private Mendix Platform Functionalities - Company Administrators](/private-mendix-platform/reference-guide/admin/company/#user-management) currently presents "API users" as a separate kind of account, and that several of the per-account actions on that page are described as available to "local users only". Both need reconciling with the single-account-kind model as part of this change.
-{{% /alert %}}
+Give each integration its own account and its own narrowly scoped role rather than reusing an administrator account. Accounts used by services behave the same as all other accounts. That is, they can be blocked, their roles can be changed, and their actions appear in the activity log.
 
 ### Sign-in and Lockout Behavior
 
-Session limits, automatic disabling of unused accounts, failed sign-in lockout, and lockout duration are platform-wide settings rather than per-account ones, and are configured by a system administrator. See [Preferences](/private-mendix-platform/reference-guide/admin/system/#preferences-1).
+Session limits, automatic disabling of unused accounts, failed sign-in lockout, and lockout duration are platform-wide settings rather than per-account ones, and are configured by a system administrator. For more information, see [Preferences](/private-mendix-platform/reference-guide/admin/system/#preferences-1).
 
 ## Managing Roles
 
-Role Management is where you decide what roles exist and what each one grants. It presents Platform Roles and Resource Roles separately, because they are separate systems with separate permission schemas. For what each default role grants, see [The Two Role Systems](/private-mendix-platform/access-model/#the-two-role-systems).
+On the **Role Management > Platform Roles** and **Role Management > Resource Roles** pages, you can create roles and configure their permissions. For more information about what each default role grants, see [Understanding the Two Role Systems](/private-mendix-platform/access-management/#role-systems).
 
 In both systems:
 
@@ -84,7 +80,7 @@ In both systems:
 * You can create new roles with any combination of permissions.
 
 {{% alert color="warning" %}}
-Editing a role changes the effective access of everyone who holds it, immediately. Before editing, check how many users hold the role and what resources they reach through it. Where a change applies to some users and not others, create a new role instead of editing an existing one.
+Editing a role immediately changes the effective access of everyone who holds it. Before editing, check how many users hold the role and what resources they reach through it. Where a change applies to some users and not others, create a new role instead of editing an existing one.
 {{% /alert %}}
 
 ### Editing a Platform Role
@@ -124,7 +120,7 @@ The root group is created by Private Mendix Platform automatically and is the fo
 
 ### Creating a Group
 
-Click **New** and provide:
+To create a group, click **New** and specify the following information:
 
 * **Parent Group** - where the group sits in the hierarchy. Choose this carefully: every member of the parent, and of everything above it, becomes an inherited member of the new group with the role they already hold.
 * **Group Admins** - one or more users who will manage this group's membership. Naming someone here is what allows them to add and remove members, and it requires no administrator role. See [Group Admin](/private-mendix-platform/access-model/#group-admin).
@@ -138,7 +134,7 @@ Roles are assigned to the members of a group, not to the group itself. Add a use
 
 Members of parent groups appear in the group as inherited members, holding the same role they hold above. You cannot change an inherited member's role from the child group; change it where the membership originates, or add the user directly with a different role.
 
-{{% alert color="warning" %}}
+{{% alert color="info" %}}
 Because membership cascades downward, a role assigned in a group near the root of the hierarchy reaches every group beneath it. Assign broad roles such as Administrator and Maintainer as close as possible to the groups that need them, rather than high in the tree.
 {{% /alert %}}
 
@@ -146,21 +142,27 @@ Because membership cascades downward, a role assigned in a group near the root o
 
 A group needs resources for its members' roles to act upon.
 
-**Apps.** An app is owned by exactly one group. Assign or move ownership from the App Management page. Apps created through Mendix Studio Pro are owned by the Mendix root group on creation, so transfer ownership after creation if a different group should own them. See [Assigning the App to a New Owner](/private-mendix-platform/reference-guide/admin/company/#ownership).
+#### Apps
 
-**Deployment namespaces.** A namespace can be associated with several groups at once, so operational responsibility can be shared. The namespace's purpose is configured on the namespace itself, in Cluster Manager, rather than on the association. See [Cluster Manager](/private-mendix-platform/reference-guide/admin/company/#cluster-manager).
+An app is owned by exactly one group. Assign or move ownership from the App Management page. Apps created through Mendix Studio Pro are owned by the Mendix root group on creation, so transfer ownership after creation if a different group should own them. See [Assigning the App to a New Owner](/private-mendix-platform/reference-guide/admin/company/#ownership).
+
+#### Deployment Namespaces
+
+A namespace can be associated with several groups at once, so operational responsibility can be shared. The namespace's purpose is configured on the namespace itself, in Cluster Manager, rather than on the association. See [Cluster Manager](/private-mendix-platform/reference-guide/admin/company/#cluster-manager).
 
 {{% alert color="warning" %}}
-**Namespace associations do not inherit.** Unlike membership, a namespace association extends neither upward to a group's parents nor downward to its children. A group that owns an app and needs to deploy it must be associated with the target namespace itself.
+Unlike membership, namespace associations are not inherited. That is, a namespace association does not extend to a parent group, or to child groups. A group that owns an app and needs to deploy it must be associated with the target namespace itself.
 
-If a team reports that they can build an app but not deploy it, this is the first thing to check: confirm that the group owning the app is directly associated with the namespace, not merely descended from a group that is.
+If a team reports that they can build an app but not deploy it, verify that the group owning the app is directly associated with the namespace, not merely descended from a group that is.
 {{% /alert %}}
 
-**Marketplace content.** Components published to the private Marketplace are owned by the user who published them rather than by a group, and are shared with groups by their publisher. See [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups). Administering Marketplace content is a Platform Role capability and is documented in [Marketplace](/private-mendix-platform/reference-guide/admin/company/#marketplace).
+#### Marketplace Contents
+
+Components published to the private Marketplace are owned by the user who published them rather than by a group, and are shared with groups by their publisher. See [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups). Administering Marketplace content is a platform role capability, and is documented in [Marketplace](/private-mendix-platform/reference-guide/admin/company/#marketplace).
 
 ### Automating Group Assignment {#automating-group-assignment}
 
-**Automation Settings** on the Group Management page lets group membership follow the identity provider information mapped onto users' profiles, rather than being assigned by hand.
+**Automation Settings** on the Group Management page let group membership follow the identity provider information mapped onto users' profiles, rather than being assigned by hand.
 
 Once configured for a profile attribute, membership is derived from that attribute's value when a user arrives:
 

@@ -18,7 +18,7 @@ Both axes are configured by administrators at runtime through Dynamic Role Manag
 
 This document explains the two axes. Other articles in this section describe the model, the administrative tasks that configure it, and the day-to-day tasks that users, group administrators, and app owners perform within it.
 
-## Understanding the Two Role Systems
+## Understanding the Two Role Systems {#role-systems}
 
 Instead of a single ladder of roles, with an administrator at the top who can do everything, Private Mendix Platform has two role systems, that is, [platform roles](#platform-role) and [resource roles](#resource-role). Each role system has its own permission schema, its own assignment mechanism, and its own scope.
 

@@ -384,9 +384,21 @@ The value from the attribute can be displayed and updated using the other input,
     * The `onUpdate` function is optional and it should be checked for availability before executing it
     * The custom widget TextBox will still not pass text to the Text box widget after this step—it will gain this functionality in [Build a Text Box Pluggable Widget: Part 2 (Advanced)](/howto9/extensibility/create-a-pluggable-widget-two/).
 
+## Building & Releasing Your Widget
+
+Development build tested successfully. You can now create a release build to bundle with your module or publish the widget to the Marketplace.
+
+{{% alert color="info" %}}**Dev Build vs. Release Build**: Release builds are minified, optimized, and stripped of heavy console logging/source maps for optimal runtime performance in production. {{% /alert %}}
+
+1. Run `npm run prerelease` to scan for any linting errors.
+1. Fix any errors that are found.
+1. Run `npm run release` to create a release build.
+1. Locate the generated `.mpk` file at `{widgetName}/dist/{version}/{widgetName}.mpk`.
+1. Use this `.mpk` file for the Marketplace release or include it in your module for production.
+
 Congratulations, you have now made a fully functional input widget!
 
-Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Mendix Studio Pro preview.
+Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Studio Pro preview.
 
 ## Read More
 

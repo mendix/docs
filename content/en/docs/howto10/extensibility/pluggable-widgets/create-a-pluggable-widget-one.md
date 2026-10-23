@@ -357,6 +357,18 @@ Our widget now looks like a Mendix widget, but does not behave like one yet. Whi
 
     * By defining a callback prop, a component advertises what data it is able to provide. Consumers of the callback get to decide how to respond to the availability of the new data. In this case we decided in `TextBox` that each time `TextInput` has new data, it is given to `props.textAttribute.setValue()`.
 
+## Building & Releasing Your Widget
+
+Development build tested successfully. You can now create a release build to bundle with your module or publish the widget to the Marketplace.
+
+{{% alert color="info" %}}**Dev Build vs. Release Build**: Release builds are minified, optimized, and stripped of heavy console logging/source maps for optimal runtime performance in production. {{% /alert %}}
+
+1. Run `npm run prerelease` to scan for any linting errors.
+1. Fix any errors that are found.
+1. Run `npm run release` to create a release build.
+1. Locate the generated `.mpk` file at `{widgetName}/dist/{version}/{widgetName}.mpk`.
+1. Use this `.mpk` file for the Marketplace release or include it in your module for production.
+
 Congratulations, you have now made a fully functional input widget!
 
 Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Studio Pro preview.

@@ -62,6 +62,7 @@ The following table lists Maia Make Standalone Capabilities and the Studio Pro v
 | [Maia Web Fetch](/refguide/maia-web-fetch/) | Fetches and reads content from public websites and APIs. | Studio Pro 11.10 | |
 | [Maia Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/) | Extends Maia with reusable knowledge. | Studio Pro 11.11 | Maia can create and edit skills directly in chat, for both project-level and module-level skills, from Studio Pro 11.15. |
 | [Maia Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) | Extends Maia with instructions to be followed with every prompt | Studio Pro 11.12 | |
+| [Maia Plan Mode](/refguide/maia-plan-mode/) | Allows Maia to maintain implementation plans. | Studio Pro 11.16 | |
 
 ### Maia Make General Capabilities
 

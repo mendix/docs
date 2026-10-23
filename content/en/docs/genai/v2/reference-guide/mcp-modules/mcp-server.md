@@ -85,7 +85,7 @@ If authentication fails, return empty instead of throwing an error. An empty ret
 MCP clients that support [MCP authorization](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization), such as Visual Studio Code, can sign in users at an OAuth 2.0 authorization server (identity provider) and send the access token to the MCP Server. To let clients discover where to obtain a token, set the following optional parameters in the `Create MCP Server` action:
 
 * `AuthorizationServerUrl`: The issuer URL of the authorization server, for example, `https://login.microsoftonline.com/<tenant-id>/v2.0` for Microsoft Entra ID. This parameter requires an authentication microflow.
-* `Scopes` (optional): The scopes that clients should request, separated by spaces, for example, `openid email`. This parameter requires `AuthorizationServerUrl`. Mendix recommends setting it, because without it, many clients request all scopes that the authorization server offers, which the authorization server may reject.
+* `Scopes` (optional): The OAuth scopes that clients should request when obtaining an access token for this MCP Server. Configure scopes that represent access to the MCP Server or its capabilities, as defined by your authorization server. For example, an authorization server might define a scope such as *mymcp.access*. Avoid using OpenID Connect scopes such as *openid* or *email* as required scopes for your MCP. You must register the scope value (e.g. *mymcp.access*) at your IdP, which enables your IdP to make authorization decisions for access to your MCP server.
 
 When `AuthorizationServerUrl` is set, the MCP Server does the following:
 
@@ -96,16 +96,16 @@ The MCP Server module does not validate access tokens itself. Your authenticatio
 
 1. Read the `Authorization` header from `System.HttpRequest`. If missing, return empty to initiate the client sign-in flow.
 2. Validate the token. Depending on the authorization server, you can do this in one of the following ways:
-    * Call the token introspection endpoint ([RFC 7662](https://datatracker.ietf.org/doc/html/rfc7662#section-2)) of the authorization server, for example, with a **Call REST service** activity.
-    * Use the [OIDC SSO](/appstore/modules/oidc/) module, which supports validating tokens against the signing keys of the authorization server. This is required for authorization servers without an introspection endpoint, such as Microsoft Entra ID. For example use the `DecodeVerifyJWTPlainText` action to verify and get the JWT token. Note that the `APIAuthentication` action is currently not supported when called from the MCP Server module.
+    * Use the [OIDC SSO](/appstore/modules/oidc/) module, which supports validating tokens against the signing keys of the authorization server. This is required for authorization servers without an introspection endpoint, such as Microsoft Entra ID. For example use the `DecodeVerifyJWTPlainText` action to verify and get the JWT token to validate further fields, such as scopes. Note that the `APIAuthentication` action is currently not supported when called from the MCP Server module.
+    * In exceptional cases where case your IdP issues opaque tokens - i.e. not being a JWT - or when your IdP supports token revocation, you may want to call the token introspection endpoint [(RFC 7662)](https://datatracker.ietf.org/doc/html/rfc7662#section-2) of the authorization server, for example, with a `Call REST service` activity. In most scenarios this is not needed. Common IdP-technologies such as Entra ID, Okta, KeyCloak issue access tokens having the JWT profile.
 3. Check that the token is active and not expired, and that the audience (`aud`) is the value that the authorization server issues for your MCP Server. Otherwise, your MCP Server accepts tokens that were issued for other applications. Based on your requirements, check other fields such as scopes or issuer.
-4. Return the `System.User` that belongs to the token, for example, by retrieving the user by name based on the `preferred_username` claim or creating a new user.
+4. Return the `System.User` that belongs to the token, for example, by retrieving the user by name based on the `preferred_username` claim or creating a new user, consider [user classification](/developerportal/deploy/implementing-user-metering/#user-classification).
 
 {{% alert color="info" %}}
 The authentication microflow runs for every request, including several requests when the client connects. If your microflow calls an external service, such as an introspection endpoint, consider the additional response time or implement custom logic for expiry state management.
 {{% /alert %}}
 
-The MCP client must be registered at the authorization server. Clients use [dynamic client registration](https://datatracker.ietf.org/doc/html/rfc7591) if the authorization server allows it. Otherwise, register the client at the authorization server and enter its client ID in the MCP client when asked.
+The MCP client must be registered at the authorization server in order to obtain an Access Token. Typically this is done via manual client registration via your IdP's admin pages.
 
 #### Protocol Version
 

@@ -12,7 +12,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 ## 4.3.2
 
-### Release date: October 22, 2026
+### Release date: October 23, 2026
 
 ### Workstation Commons
 

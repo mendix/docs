@@ -40,7 +40,7 @@ The customer is responsible for configuring the following prerequisites. They mu
 
 ### Kubernetes RBAC Configuration {#rbac-configuration}
 
-Private Mendix Platform authenticates to the Kubernetes API using a bearer token (a dedicated ServiceAccount, for example, `pmp-event-all`), distinct from the app-environment identities. This token needs a namespaced Role and RoleBinding in every namespace where app environments using this feature are deployed, granting the following:
+Private Mendix Platform authenticates to the Kubernetes API using a bearer token (a dedicated ServiceAccount, for example, `mxplatform-cicd`), distinct from the app-environment identities. This token needs a namespaced Role and RoleBinding in every namespace where app environments using this feature are deployed, granting the following:
 
 | Resource | Verbs | Used for |
 | --- | --- | --- |
@@ -48,13 +48,13 @@ Private Mendix Platform authenticates to the Kubernetes API using a bearer token
 | `serviceaccounts` | `get, create, patch` | Reading the UAMI annotation (for Approach A) or creating and annotating the ServiceAccount (Approach B) |
 
 {{% alert color="warning" %}}
-Without Kubernetes RBAC for the Private Mendix Platform cluster credentials, calls from Private Mendix Platform fail with a *403 Forbidden* error and a message like the following `system:serviceaccount:kube-system:pmp-event-all cannot ... in the namespace`. 
+Without Kubernetes RBAC for the Private Mendix Platform cluster credentials, calls from Private Mendix Platform fail with a *403 Forbidden* error and a message like the following `system:serviceaccount:kube-system:mxplatform-cicd cannot ... in the namespace`. 
 {{% /alert %}}
 
 Verify the configuration by using the following command:
 
 ```text
-kubectl auth can-i create secretproviderclasses --as=system:serviceaccount:kube-system:pmp-event-all -n <namespace>
+kubectl auth can-i create secretproviderclasses --as=system:serviceaccount:kube-system:mxplatform-cicd -n <namespace>
 ```
 
 ## Known Limitations

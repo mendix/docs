@@ -299,7 +299,9 @@ In the published MCP service document, configure the following fields:
 * **Version**: Enter a version for the MCP service in semantic versioning format. This defaults to `1.0.0`.
 * **Endpoint**: Enter the path to append to the app URL. External MCP clients use this endpoint to connect to the service. The endpoint path may only contain lowercase letters, numbers, hyphens, underscores, and forward slashes.
 * **Protocol version**: Select the MCP protocol version that connecting clients must support. This defaults to `v2025_03_26`.
-* **Requires authentication**: Select whether MCP clients must be authenticated. Mendix recommends setting up authentication if the Mendix application is reachable outside of your local environment. If set to **No**, the MCP service is accessible to anyone without authentication. When authentication is required, select a microflow that authenticates incoming requests. The microflow input can only be `System.HttpRequest` and/or `MCPServer.MCcperver`, and its output must be `System.User`. Return empty if authentication fails.
+* **Requires authentication**: Select whether MCP clients must be authenticated. Mendix recommends setting up authentication if the Mendix application is reachable outside of your local environment. If set to **No**, the MCP service is accessible to anyone without authentication. When authentication is required, select a microflow that authenticates incoming requests. The microflow input can only be `System.HttpRequest` and/or `MCPServer.McpServer`, and its output must be `System.User`. Return empty if authentication fails.
+* **Authorization server URL**: Optionally, when authentication is required, enter the issuer URL of the OAuth authorization server where MCP clients obtain access tokens. Your authentication microflow must validate the tokens. For more information, see [Enable OAuth](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/#oauth).
+* **Scopes**: Optionally, when an authorization server URL is set, enter the scopes that MCP clients should request, separated by spaces.
 
 To add tools, click **New** in the **Tools** section and configure the following fields:
 

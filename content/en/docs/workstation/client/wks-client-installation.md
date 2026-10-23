@@ -121,3 +121,16 @@ To configure the Workstation Client on a macOS machine, perform the following st
 ## Stopping the Workstation Client
 
 The Workstation Client sets up the required auto-start settings during the first start. Afterward, it runs automatically on system startup. To change this behavior, see [Autostart Configuration for the Workstation Client](/mendix-workstation/autostart-configuration/)
+
+## Upgrading the Workstation Client
+
+To benefit from bug fixes and newest features, we recommend that you always use the newest available Workstation Client version. Any breaking changes are explicitly mentioned in the [Mendix Workstation Release Notes](/releasenotes/workstation/), and usually happen only between major versions.
+
+To upgrade the Client, perform the following steps:
+
+1. Download the newest version of the Client.
+2. Optional: For [Workstation Client Portable](https://marketplace.mendix.com/link/component/247456), [Workstation Client Linux ARM 64](https://marketplace.mendix.com/link/component/247459), [Workstation Client macOS](https://marketplace.mendix.com/link/component/253905), stop the current version of the Client manually. If [developer mode](/mendix-workstation/management-stations/#developer-mode) is not enabled, you cannot quit the Client from the Client UI, but you can still do it through the Task Manager or CLI commands.
+
+    This step is not required for global Windows installations of [Workstation Client](https://marketplace.mendix.com/link/component/247448), because the global installer detects if an older version of the Client is already running on the computer, and automatically stops it before performing the upgrade.
+
+3. Re-run the installer.

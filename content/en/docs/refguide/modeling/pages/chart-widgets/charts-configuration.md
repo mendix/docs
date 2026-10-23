@@ -2,9 +2,14 @@
 title: "Chart Configuration"
 url: /refguide/charts-configuration/
 weight: 10
+description: "Describes the configuration options of the legacy chart widgets, below version 3.0.0."
 ---
 
 ## Introduction
+
+{{% alert color="warning" %}}
+This page describes the legacy chart widgets (below version 3.0.0). For the current Charts module, see [Charts](/appstore/widgets/charts/) in the *Marketplace Guide*.
+{{% /alert %}}
 
 This guide explains the options for configuring chart widgets. Charts are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/105695/). For more documentation, see [Charts](/appstore/widgets/charts/) in the *Marketplace Guide*.
 
@@ -20,19 +25,19 @@ This guide covers the following widgets:
 * Time series
     * Note that some apps may have two *Time series* widgets. This document refers to the one with this icon: {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/time-series-icon.png" alt="Image of correct Time series widget" class="no-border" >}}
 
-The configuration of *Any chart* widgets is in another document, here: [Any Chart Widgets](/refguide/charts-any-configuration/).
+To learn about the configuration of **Any chart** widgets see [Any Chart Widgets](/refguide/charts-any-configuration/).
 
-## Common configuration
+## Common Configuration
 
-The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type), below.
+The common configuration for all charts is described in this section. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type), below.
 
-### Chart properties
+### Chart Properties
 
 {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/line-chart-chart-properties.png" alt="Generic Chart properties dialog" class="no-border" >}}
 
 #### Series
 
-Add series and configure their properties, each series represents a dataset. For example a line on a line chart.
+Allows you to add series and configure their properties. Each series represents a dataset, for example: a line on a line chart.
 
 * The *Pie Charts* and *Heat Maps* support only a single series containing a single set of data
 
@@ -48,7 +53,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     {{% alert color="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/).{{% /alert %}}
 
-1. Data source<a id="data-source"></a>
+* Data source<a id="data-source"></a>
 
     The data for each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
 
@@ -57,11 +62,11 @@ Add series and configure their properties, each series represents a dataset. For
     * **Static/Dynamic**: Choose whether there is a fixed number of data series (lines, for example), or whether the number of data series is variable and will be decided by the app.
     * **Entity**: The entity from which the data values will be retrieved
     * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
-    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST endpoint see [REST Charts](/howto/front-end/charts-basic-rest/)
+    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST endpoint see [REST Charts](/appstore/widgets/charts-basic-rest/)
     * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
     * **Microflow**: A microflow that returns a list object with data values
 
-2. Data points<a id="data-points"></a>
+* Data points<a id="data-points"></a>
 
     The attribute (or attributes) within the data source used for the values to be plotted.
 
@@ -76,19 +81,19 @@ Add series and configure their properties, each series represents a dataset. For
         * Average: plot the mean of the two values (2,3.5)
         * None: plot just the first data point (2,3)
 
-3. Appearance
+* Appearance
 
     The appearance of the series. This is customized for each type of chart, see: [3 Configuration per chart type](#configuration-by-chart-type), below.
 
     {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/series-item-appearance.png" alt="Edit series Appearance tab" class="no-border" >}}
 
-4. Static Series
+* Static Series
 
     Additional configuration for the appearance of the series if it is a static series. This is customized for each type of chart, see: [3 Configuration per chart type](#configuration-by-chart-type), below.    
 
     {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/series-item-static.png" alt="Data series Static series tab" class="no-border" >}}
 
-5. Dynamic Series
+* Dynamic Series
 
     Configuration of the series if it is a dynamic series.
 
@@ -96,14 +101,14 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Series entity**: the entity which defines a series – the list of objects of this entity type will be used to construct the series; one series for each object.
 
-        Each entity is associated with the values which will be plotted, see [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series/) for more information.
+        Each entity is associated with the values which will be plotted, see [How to Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/) for more information.
 
     * **Series name attribute**: the attribute in the series entity which will be displayed as the series name if a legend is displayed
     * **Color attribute**: the attribute in the series entity which defines the HTML color used when displayed this series – *there may be more than one color attribute if the chart allows different values (for example an area chart has separate line and fill colors)
     * **Series sort attribute**: allows you to sort the series by an attribute of the series entity – *this is not supported for **non-persistable** entities, such as those used when defining a REST datasource*
     * **Series sort order**: *Ascending* or *Descending*
 
-6. Events
+* Events
 
     The events to be supported if the user interacts with the chart.
 
@@ -129,7 +134,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Tooltip form**: The page to show when a user hovers over a chart plot point
 
-7. Advanced <a id="advanced"></a>
+* Advanced <a id="advanced"></a>
 
     {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/series-item-advanced.png" alt="Edit series Advanced tab" class="no-border" >}}
 
@@ -163,7 +168,7 @@ Add parameters to a REST request (see [Data source](#data-source)). The contextI
 
 The charts are based on the popular framework plotly.js which uses JSON to configure the charts. In the advanced and developer mode, you can specify additional JSON: unlocking the many features of plotly.js. You can also do this with a live preview.
 
-See the following link for more information about plotly.js and the options: https://plot.ly/javascript/.
+Understanding the plotly.js framework is essential for understanding Mendix widget configuration, because we match their framework closely. See the following link for more information about plotly.js and the options: https://plot.ly/javascript/.
 
 {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/widget-advanced.png" alt="Generic Chart Advanced Tab" class="no-border" >}}
 
@@ -173,7 +178,7 @@ See the following link for more information about plotly.js and the options: htt
     * **Advanced**: specify additional JSON configuration
     * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 
-    {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/toggle-editor.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-configuration/toggle-editor.png" alt="Toggle Editor button on a chart" class="no-border" >}}
 
 * **Layout options**: The JSON containing the Plotly layout options
     * [Samples](/refguide/charts-advanced-cheat-sheet/#layout-all)
@@ -205,12 +210,16 @@ The properties above are common across the chart types. In this section, the pro
 
 **Series New or Edit**
 
-1. **Appearance** Tab
+* **Dimensions** Tab
 
-    * **Line mode**: *Lines* (without showing markers where the data points are) or *Lines with markers*
-    * **Line style**: join the data points with a *Straight line* or a *Curved line (spline)*
+    * **Width unit**: can be one of the following:
+        * **Percentage** (default): portion of parent size.
+        * **Pixels**: absolute number of pixels.
+    * **Width**: sets the portion of the width per your selected unit.
+    * **Height unit**: can be **Percentage** (default) or **Pixels**.
+    * **Height**: sets the portion of the height per your selected unit.
 
-2. **Static series** Tab
+* **Static series** Tab
 
     * **Series name**: this will be displayed in any legend on the chart
     * **Line color**: HTML color of the line, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
@@ -228,16 +237,16 @@ The properties above are common across the chart types. In this section, the pro
 
 **Series New or Edit**
 
-1. **Data source** Tab
+* **Data source** Tab
 
     * **Series name**: this will be displayed in any legend on the chart
 
-2. **Appearance** Tab
+* **Appearance** Tab
 
     * **Border**: No, Yes, Yes with markers
     * **Border style**: Straight, Curved
 
-3. **Static series** Tab
+* **Static series** Tab
 
     * **Border color**: HTML color of the border, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
     * **Area color**: HTML color of the area within the border, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
@@ -246,7 +255,7 @@ The properties above are common across the chart types. In this section, the pro
 
 **Series New or Edit**
 
-1. **Static series** Tab
+* **Static series** Tab
 
     * **Series name**: this will be displayed in any legend on the chart
     * **Bar color**: HTML color of the bar, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
@@ -255,13 +264,13 @@ The properties above are common across the chart types. In this section, the pro
 
 **Series New or Edit**
 
-1. **Appearance** Tab
+* **Appearance** Tab
 
     * **Border**: No, Yes, Yes with markers
     * **Border style**: Straight, Curved
     * **Fill area**: Fill area between data points and X-axis: Yes, No
 
-2. **Static series** Tab
+* **Static series** Tab
 
     * **Series name**: this will be displayed in any legend on the chart
     * **Line color**: HTML color of the line, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
@@ -283,7 +292,7 @@ The properties above are common across the chart types. In this section, the pro
 
 **Series New or Edit**
 
-1. **Static series** Tab
+* **Static series** Tab
 
     * **Series name**: this will be displayed in any legend on the chart
     * **Serie color**[sic]: Color of the bubbles e.g green,#00FF00, rgb(2,255,0)

@@ -2,6 +2,7 @@
 title: "Chart Advanced Cheat Sheet"
 url: /refguide/charts-advanced-cheat-sheet/
 weight: 20
+description: "Shows, with JSON examples, how to use the advanced layout, series, and configuration options of the chart widgets."
 ---
 
 ## Introduction

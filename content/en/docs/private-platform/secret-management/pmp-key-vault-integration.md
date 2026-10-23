@@ -102,7 +102,7 @@ The configuration requires the following steps:
 
     * **Cluster** and **Namespace** - Select the cluster and namespace where you previously enabled secret store support.
     * **Database Plan** and **Storage Plan** - Select an azure-wi database and/or storage plan.
-    * **Secrets** - Select the check box **Use external secret store for environment configurations**.
+    * **Secrets** - Select the checkbox **Use external secret store for environment configurations**.
 
         {{< figure src="/attachments/private-platform/pmp-keyvault1.png" class="no-border" >}}
     
@@ -125,7 +125,7 @@ The configuration requires the following steps:
 
     * **Cluster** and **Namespace** - Select the cluster and namespace where you previously enabled secret store support.
     * **Database Plan** and **Storage Plan** - Select a database and/or storage plan without `azure-wi`.
-    * **Secrets** - Select the check box **Use external secret store for environment configurations**.
+    * **Secrets** - Select the checkbox **Use external secret store for environment configurations**.
 
         {{< figure src="/attachments/private-platform/pmp-keyvault1.png" class="no-border" >}}
     

@@ -1,0 +1,110 @@
+---
+title: "Working with Groups and App Teams in Private Mendix Platform"
+url: /private-mendix-platform/groups-and-app-teams/
+weight: 30
+description: "Documents how users manage the membership of groups they administer, and how app owners manage the team and sharing of their apps in Private Mendix Platform."
+---
+
+## Introduction
+
+Not all access management in Private Mendix Platform requires an administrator. Two responsibilities are deliberately delegated to ordinary users: managing the membership of a group you have been made responsible for, and managing the team on an app you own.
+
+This page documents both, along with how to work out what access you yourself hold and why. None of it requires switching to admin mode.
+
+## Understanding Your Own Access
+
+Your access comes from two independent sources, and it is worth knowing which one is responsible for what you can and cannot do.
+
+Your **Platform Role** determines what you can do on the platform in general, such as signing in and creating an app. It is set on your account by an administrator.
+
+Your **Resource Roles** determine what you can do to individual apps and namespaces. You hold these as a member of a group, or by direct invitation onto an app's team. A powerful Platform Role does not give you access to any app, and a powerful role on an app does not give you any platform-wide privilege.
+
+If you cannot reach an app you expect to reach, the question to ask is not what role you have, but *through which group*. You have access to an app if you are a member of the group that owns it, or of a group above that one in the hierarchy, or if the app's owner invited you directly. Membership of an unrelated group, however senior, grants nothing.
+
+You can review your own profile, password, personal access tokens, and service credentials from your account page. See [Configuring Your User Profile and Settings](/private-mendix-platform/user-guide/#configuring-your-user-profile-and-settings).
+
+{{% alert color="info" %}}
+**Reviewer note:** confirm whether users have a screen that shows the roles they hold and the groups they hold them in. If one exists, it should be named here, as this is the first thing a user needs when access does not behave as expected.
+{{% /alert %}}
+
+## Managing Your Group's Membership
+
+If you have been named a group admin on a group, you can manage that group's membership from the **Manage My Group** page. The left navigation menu lists every group you administer.
+
+For each group you can:
+
+* View its current members.
+* Search the platform's users by name or email address and add them to the group.
+* Remove members from the group.
+
+Being a group admin lets you change *who is in* the group. It does not let you create groups, change the hierarchy, change which resources the group owns, or edit roles. Those require an administrator. See [Administering Users, Groups, and Roles in Private Mendix Platform](/private-mendix-platform/access-administration/).
+
+{{% alert color="warning" %}}
+Adding a member to your group gives them access to everything your group owns, and to everything owned by every group beneath yours in the hierarchy, with the role they hold in your group. Before adding someone, be clear about what sits below your group.
+{{% /alert %}}
+
+Members shown as inherited come from groups above yours. You cannot remove them from your group, because their membership does not originate there. If an inherited member should not have access, raise it with the administrator of the group they come from.
+
+{{% alert color="info" %}}
+**Reviewer note:** confirm whether a group admin assigns a member's Resource Role when adding them, or whether membership and role assignment are separate actions with the latter reserved to administrators. The current reference page describes only adding and removing members, which suggests the latter, but this needs confirming because it materially changes what delegation means.
+{{% /alert %}}
+
+## Managing Your App's Team
+
+The **Teams** page of an app shows everyone who has access to it and the role each of them holds.
+
+### Owner
+
+The user who created the app becomes its owner automatically, and ownership cannot be assigned as a role. The owner has full control of the app, including inviting members, assigning their roles, and transferring ownership. Apps created through Mendix Studio Pro are owned by the Mendix root group on creation, so ask an administrator to transfer ownership if it should sit elsewhere.
+
+### Direct and Inherited Members
+
+The Teams page distinguishes two kinds of member.
+
+**Direct members** were invited onto this app specifically, and their roles were assigned by the owner. Their access applies to this app and nothing else.
+
+**Inherited members** reach the app through the group hierarchy rather than through an invitation. Members of the group that owns the app are inherited into it, as are members of the groups above it, each carrying the role they hold in their own group. Their roles are determined by group configuration, not by the app owner, and cannot be changed from the Teams page. To change an inherited member's role, the change has to be made in the group it comes from.
+
+This split is deliberate: direct membership handles the individual exceptions, and inherited membership handles the standing arrangement, so team composition stays consistent with organizational governance without being maintained app by app.
+
+### Inviting a Member
+
+As the app's owner, invite a user onto the team and assign the role they should hold on it, such as **Developer**, **Contributor**, or **Operator**. Which of these to choose follows from what the person will do:
+
+* **Developer** if they will change the app's source and deploy it.
+* **Contributor** if they will change the app's source but should not deploy it.
+* **Operator** if they will deploy the app but should not change its source.
+
+For what each role grants in full, see [Resource Roles](/private-mendix-platform/access-model/#resource-roles).
+
+The user must already have an account on the platform before you can invite them. If they do not, ask an administrator to create one.
+
+{{% alert color="warning" %}}
+An invitation grants access to this app only. It is the right mechanism for a genuine exception, such as a specialist joining for one project. Where a whole team needs standing access, group membership is the mechanism to use instead, because it does not have to be maintained app by app.
+{{% /alert %}}
+
+### Sharing Your App with Other Groups
+
+You can share your app with groups that do not own it. Sharing makes the app visible to those groups, so that people who would otherwise not know it exists can find it. It grants no access of any kind.
+
+Members of a group the app has been shared with can request access from you. You decide whether to grant it, and with which role.
+
+Share an app when you want it discoverable across the organization, for example a reference implementation or an internal service other teams may want to build against. Do not use sharing to grant access; use a team invitation or group membership for that.
+
+{{% alert color="info" %}}
+**Reviewer note:** confirm how an access request reaches the app owner, whether the owner is notified, and what granting a request produces - a direct team membership with a chosen role, or something else.
+{{% /alert %}}
+
+### Deploying to a Namespace
+
+Holding a role that permits deployment is necessary but not sufficient: the group that owns the app must also be associated with the namespace you are deploying to. That association is made by an administrator, and it does not follow the group hierarchy, so a parent group's association does not help.
+
+If you hold Developer or Operator on an app and deployment is nevertheless unavailable, the likely cause is a missing namespace association rather than a role problem. Ask an administrator to confirm that the group owning the app is directly associated with the target namespace. See [Associating Resources with a Group](/private-mendix-platform/access-administration/#associating-resources-with-a-group).
+
+## Finding Your Group's Apps and Content
+
+Apps owned by groups you belong to are listed on the **My Group Apps** page. See [My Group Apps](/private-mendix-platform/reference-guide/common/group-apps/).
+
+Marketplace content shared with your groups is listed on the **Group Content** page. See [Group Content](/private-mendix-platform/reference-guide/common/group-content/).
+
+Content you have published yourself is listed on **My Content**, and you can share it with groups from there. See [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups).

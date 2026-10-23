@@ -173,6 +173,10 @@ To enable custom LLM provider configuration, follow these steps:
 
 After enabling this feature, a **Settings** ({{% icon name="cog" %}}) icon appears in the upper-right corner of the Maia pane.
 
+{{% alert color="info" %}}
+Mendix recommends using Claude Sonnet 4.6 for optimal Maia performance.
+{{% /alert %}}
+
 ### Provider Configuration {#provider-configuration}
 
 Custom AI provider settings are per-project and local to your workstation. Each app can have its own configuration, and settings are not committed to version control.
@@ -188,7 +192,7 @@ To configure Amazon Bedrock as your LLM provider, follow these steps:
 1. Click **Settings** ({{% icon name="cog" %}}) in the Maia pane.
 2. Select **Amazon Bedrock** from the **LLM Provider** list.
 3. Create an API key in AWS, then enter the **Base URL** and your **API Key**. Studio Pro stores the API key securely across sessions.
-4. Enter the **Model ID**. You can find available model IDs in your AWS Bedrock console. Mendix recommends Claude Sonnet 4.6 for optimal Maia performance.
+4. Enter the **Model ID**. You can find available model IDs in your AWS Bedrock console. 
 5. Click **Save Config**.
 
 #### OpenAI Compatible {#openai-compatible}

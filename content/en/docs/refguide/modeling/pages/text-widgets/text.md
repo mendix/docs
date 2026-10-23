@@ -69,7 +69,7 @@ You can use the formatter functions in the expression editor when using expressi
 
 ##### Adding New Parameters
 
-To be able to use parameters, the Text widget must be in the context of an entity such as a [Data widget](/refguide/data-view), [Snippet parameter](http://localhost:1313/refguide/snippet/#parameters), or [Page parameter](/refguide/page-properties/#parameters). To use parameters, do the following:
+To be able to use parameters, the Text widget must be in the context of an entity such as a [Data widget](/refguide/data-view/), [Snippet parameter](http://localhost:1313/refguide/snippet/#parameters), or [Page parameter](/refguide/page-properties/#parameters). To use parameters, do the following:
 
 1. Open the properties for the Text widget.
 1. Click the **Edit ...** button of the PROPERTY_NAME to open its dialog box.

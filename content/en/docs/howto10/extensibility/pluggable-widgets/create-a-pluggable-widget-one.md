@@ -101,7 +101,7 @@ NPM version 7 changed the resolution behavior of peerDependencies. Try adding `-
 
 ### Using the Widget
 
-When the build script completes it will package your widget as a `.mpk` file and copy it to the `widgets/` directory in your Mendix app. Now that the generator has finished its job it is time to use the widget in Studio Pro. To use the widget, do the following:
+When the build script completes it will package your widget as a *.mpk* file and copy it to the `widgets/` directory in your Mendix app. Now that the generator has finished its job it is time to use the widget in Studio Pro. To use the widget, do the following:
 
 1. To find your widget for the first time, you need to refresh the file system Studio Pro is looking at. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu bar.
 1. Open the **Home_Web** page in the page editor.
@@ -366,8 +366,8 @@ Development build tested successfully. You can now create a release build to bun
 1. Run `npm run prerelease` to scan for any linting errors.
 1. Fix any errors that are found.
 1. Run `npm run release` to create a release build.
-1. Locate the generated `.mpk` file at `{widgetName}/dist/{version}/{widgetName}.mpk`.
-1. Use this `.mpk` file for the Marketplace release or include it in your module for production.
+1. Locate the generated *.mpk* file at `{widgetName}/dist/{version}/{widgetName}.mpk`.
+1. Use this *.mpk* file for the Marketplace release or include it in your module for production.
 
 Congratulations, you have now made a fully functional input widget!
 

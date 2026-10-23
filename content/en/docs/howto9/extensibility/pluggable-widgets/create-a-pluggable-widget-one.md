@@ -393,8 +393,8 @@ Development build tested successfully. You can now create a release build to bun
 1. Run `npm run prerelease` to scan for any linting errors.
 1. Fix any errors that are found.
 1. Run `npm run release` to create a release build.
-1. Locate the generated `.mpk` file at `{widgetName}/dist/{version}/{widgetName}.mpk`.
-1. Use this `.mpk` file for the Marketplace release or include it in your module for production.
+1. Locate the generated *.mpk* file at `{widgetName}/dist/{version}/{widgetName}.mpk`.
+1. Use this *.mpk* file for the Marketplace release or include it in your module for production.
 
 Congratulations, you have now made a fully functional input widget!
 

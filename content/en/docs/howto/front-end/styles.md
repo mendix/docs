@@ -5,7 +5,7 @@ description: "Describes details on using class names for text colors, buttons, a
 weight: 45
 ---
 
-## 1 Introduction
+## Introduction
 
 This page contains useful class names that can be used to make your app more beautiful without writing CSS. Class names can be added to the properties of page widgets. Several classes can be added to the same widget by separating the class names with a space.
 
@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 
 * Use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
 
-## 2 Text Colors
+## Text Colors
 
 Add these classes to an element to change the text color to your theme colors:
 
@@ -32,15 +32,10 @@ Add these classes to an element to change the text color to your theme colors:
 These are standard useful text colors:
 
 * `text-white`: white text
-* `text-black`: black text
-* `text-gray-primary`: primary gray text
-* `text-gray`: gray text
-* `text-gray-dark`: dark gray text
-* `text-gray-darker`: darker gray text
-* `text-gray-light`: light gray text
-* `text-gray-lighter`: lighter gray text
+* `text-header`: header text color
+* `text-detail`: detail text color
 
-## 3 Background Colors
+## Background Colors
 
 The background colors are based on your theme colors. These are the same colors as for the buttons:
 
@@ -60,22 +55,30 @@ A lighter variant of the background color also sets the matching foreground colo
 
 These are background colors for your layout:
 
-* `background-layout`: default layout background
-* `background-layout-secondary`: alternative layout background
+* `background-main`: default layout background
+* `background-secondary`: alternative layout background
 * `background-default`: default layout background
 * `background-default-dark`: dark layout background
 * `background-default-darker`: darker layout background
 * `background-default-light`: light layout background
 * `background-default-lighter`: lighter layout background
 
-## 4 Typography
+## Color Shades
+
+Atlas generates a scale of shades for each theme color. To use a shade, add a `shade-N` class next to one of the classes `text-primary`, `text-success`, `text-warning`, `text-danger`, `text-default`, `background-primary`, `background-success`, `background-warning`, `background-danger`, or `background-default`. `N` is `50`, `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, or `900`, where a lower number is a lighter shade:
+
+* `background-primary shade-100`: light shade of the primary background color
+* `background-primary shade-700`: dark shade of the primary background color
+* `text-danger shade-700`: dark shade of the danger text color
+
+For more information on shades, see the [Using Color Shades](/howto/front-end/customize-styling-new/#color-shades) section of *How to Customize Styling*.
+
+## Typography
 
 These are useful classes for text items:
 
 * `text-normal`: normal text
 * `text-bold`: bold text
-* `text-spacing`: adds spacing to the text bottom and top
-* `text-lined`: underlines the text-lined
 * `text-break`: breaks text over multiple lines
 * `text-uppercase`: transforms the text to upper case
 * `text-lowercase`: transforms the text to lower case
@@ -91,7 +94,7 @@ Other:
 
 * `nowrap`: don't wrap texts
 
-## 5 Buttons
+## Buttons
 
 You can change the appearance of a button:
 
@@ -99,20 +102,14 @@ You can change the appearance of a button:
 * `btn-sm`: small button
 * `btn-block`: spans the full width of the parent
 * `btn-bordered`: bordered button
-* `btn-transparent`: transparent background
 * `btn-image`: transparent button with image nicely align
-* `pull-right` or `btn-right`: aligns the button to the right
-* `btn-attached-right`: adds left margin
-* `btn-attached-left`: adds right margin
-* `btn-attached-bottom`: adds top margin
-* `btn-attached-top`: adds bottom margin
+* `pull-right`: aligns the button to the right
 
-## 6 Layout Grid
+## Layout Grid
 
 You can change the appearance of a layout grid:
 
-* `v-center`: vertically aligns elements in a Bootstrap row; add this class on a row in a layout grid
-* `no-gutter`: removes padding for Bootstrap columns; add this class on a row in a layout grid
+* `no-gutters`: removes padding for Bootstrap columns; add this class on a row in a layout grid
 
 {{% alert color="info" %}}**Phones:**
 
@@ -122,7 +119,7 @@ For phones, also add `col-xs-N` (where `N` is the size of the column) to the lay
 
 For more information on grid options, including suggestions and examples, see [Bootstrap CSS Grid Options](https://getbootstrap.com/docs/3.3/css/#grid-options).
 
-## 7 List View
+## List View
 
 Change the way items appear in a list:
 
@@ -131,7 +128,7 @@ Change the way items appear in a list:
 * `listview-seperated`: list view widget with list view items separated
 * `listview-stylingless`: list view widget without spacing and background
 
-## 8 Alerts
+## Alerts
 
 Create alerts with standard containers.
 
@@ -143,16 +140,16 @@ Create alerts with standard containers.
 
 Also see [Bootstrap Alert Component](https://getbootstrap.com/docs/3.3/components/#alerts).
 
-## 9 Other
+## Other
 
 Change the way tabs appear:
 
 * `tab-mobile`: makes the tab full width and stick to the header
 
-## 10 More Bootstrap
+## More Bootstrap
 
 Many of these classes are part of Bootstrap. For more information about classes and Bootstrap, see [Bootstrap CSS](https://getbootstrap.com/docs/3.3/css/).
 
-## 11 Read More
+## Read More
 
 * [Mendix Atlas UI](https://www.mendix.com/atlas/)

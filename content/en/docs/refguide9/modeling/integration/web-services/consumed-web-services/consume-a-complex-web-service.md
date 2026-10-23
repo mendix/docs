@@ -7,7 +7,7 @@ aliases:
     - /howto9/integration/consume-a-complex-web-service/
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and re-use functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Mendix, calling a web service is done in a microflow using the call web service action.
 
@@ -17,11 +17,11 @@ This how-to teaches you how to do the following:
 * Directly import a web service document into your app
 * Configure a web service call
 
-## 2 Importing a Web Service Using the Wizard
+## Importing a Web Service Using the Wizard
 
 This section describes the powerful wizard that enables integrating—in just a few clicks—the creation of an imported web service, the related data entities, the XML-mapping, and a microflow to trigger the web service.
 
-### 2.1 The Configuration
+### The Configuration
 
 To import a web service using the wizard, follow these steps:
 
@@ -39,7 +39,7 @@ To import a web service using the wizard, follow these steps:
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/wizard-import-schema.png" alt="wizard banner" class="no-border" >}}
 
 3. On the **Import Web Service** dialog box, select **Web service operation** and click **Next**.
-4. In the **New Web Service Operation** dialog box, for **WSDL source** , specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide the **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
+4. In the **New Web Service Operation** dialog box, for **WSDL source**, specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide the **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/wizard-new-operation.png" class="no-border" >}}
 
@@ -62,7 +62,7 @@ To import a web service using the wizard, follow these steps:
 
 10. Click **Finish** to create the web service.
 
-### 2.1 The Outcome
+### The Outcome
 
 When finished the wizard will add the following to your model based on the options selected:
 
@@ -73,7 +73,7 @@ When finished the wizard will add the following to your model based on the optio
 
 {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/web-service-entity.png" class="no-border" >}}
 
-## 3 Importing a Web Service Directly
+## Importing a Web Service Directly
 
 An alternative to using the wizard described above is to import a web service document directly into your app. For further information, see [Consumed Web Services](/refguide9/consumed-web-services/) in the *Studio Pro Guide*.
 
@@ -91,7 +91,7 @@ To import a web service directly, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/consumed-web-service-doc.png" class="no-border" >}}  
 
-## 4 Configuring the Web Service Call
+## Configuring the Web Service Call
 
 To configure the web service call, follow these steps:
 
@@ -108,12 +108,12 @@ To configure the web service call, follow these steps:
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/select-web-service-op.png" alt="select web service op" class="no-border" >}}
 
 5. In the **SOAP Request Body** tab of the **Call Web Service** properties editor, you can configure the SOAP body. This contains the parameters needed to execute the web service request. The **Simple**, **Export Mapping**, and **Custom** options enable you to select the type of SOAP body to use. Click **Edit value** and use one of the following to change the domain-to-XML mapping or the variables from the microflow used as input arguments:
-    * **Simple expressions for each request parameter** — if the imported web service requires only primitive arguments:
+    * **Simple expressions for each request parameter** – if the imported web service requires only primitive arguments:
 
         {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/simple-expression-param.png" class="no-border" >}}
 
-    * **Export mappings for each request parameter** or **Export mapping for the entire request**  — if the domain model entities need to be mapped to XML elements
-    * **Custom request template** — for the definition of a custom XML body with parameters:
+    * **Export mappings for each request parameter** or **Export mapping for the entire request**  – if the domain model entities need to be mapped to XML elements
+    * **Custom request template** – for the definition of a custom XML body with parameters:
 
         {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/custom-request-temp.png" alt="custom-request-temp" class="no-border" >}}
 
@@ -126,14 +126,14 @@ To configure the web service call, follow these steps:
 
         {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/18581790.png" class="no-border" >}}
 
-    * If the return is a primitive, you can store it in a variable by selecting **Store in variable** — **Yes**  and provide the **Type** and **Variable**:
+    * If the return is a primitive, you can store it in a variable by selecting **Store in variable** – **Yes**  and provide the **Type** and **Variable**:
 
         {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/18581789.png" class="no-border" >}}
 
     * If you want to ignore the return, select **Ignore**
 8. Your imported web service is now ready to be used in your application.
 
-## 5 Read More
+## Read More
 
 * [Consume a Simple Web Service](/howto9/integration/consume-a-simple-web-service/)
 * [Export XML Documents](/howto9/integration/export-xml-documents/)

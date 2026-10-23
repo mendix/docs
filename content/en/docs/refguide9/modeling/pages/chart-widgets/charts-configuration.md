@@ -4,7 +4,7 @@ url: /refguide9/charts-configuration/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 This guide explains the options for configuring chart widgets. Charts are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/105695/). For more documentation, see [Charts](/appstore/widgets/charts/) in the *Marketplace Guide*.
 
@@ -22,15 +22,15 @@ This guide covers the following widgets:
 
 The configuration of *Any chart* widgets is in another document, here: [Any Chart Widgets](/refguide9/charts-any-configuration/).
 
-## 2 Common configuration
+## Common configuration
 
-The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type),  below.
+The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type), below.
 
-### 2.1 Chart properties
+### Chart properties
 
 {{< figure src="/attachments/refguide9/modeling/pages/chart-widgets/charts-configuration/line-chart-chart-properties.png" alt="Generic Chart properties dialog" class="no-border" >}}
 
-#### 2.1.1 Series
+#### Series
 
 Add series and configure their properties, each series represents a dataset. For example a line on a line chart.
 
@@ -50,7 +50,7 @@ Add series and configure their properties, each series represents a dataset. For
 
 1. Data source<a id="data-source"></a>
 
-    The data for each each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
+    The data for each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
 
     {{< figure src="/attachments/refguide9/modeling/pages/chart-widgets/charts-configuration/series-item-data-source.png" alt="Edit series Data source tab" class="no-border" >}}
 
@@ -135,7 +135,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Options**: The Plotly *series options* in JSON format; these options will only be used when the *widget* tab **Advanced > Mode** is set to *Advanced* or *Developer*: see [Advanced](#advanced-mode), below.
 
-#### 2.1.2 Appearance
+#### Appearance
 
 The **Appearance** settings are used to set the size of the chart on the page.
 
@@ -153,13 +153,13 @@ The **Appearance** settings are used to set the size of the chart on the page.
 
 * **Height**: The height in pixels or percentage based on the setting of **Height unit**
 
-#### 2.1.3 REST
+#### REST
 
 Add parameters to a REST request (see [Data source](#data-source)). The contextId, and series name are provided by default.
 
 {{< figure src="/attachments/refguide9/modeling/pages/chart-widgets/charts-configuration/widget-rest.png" alt="Generic Chart REST tab" class="no-border" >}}
 
-#### 2.1.4 Advanced {#advanced-mode}
+#### Advanced {#advanced-mode}
 
 The charts are based on the popular framework plotly.js which uses JSON to configure the charts. In the advanced and developer mode, you can specify additional JSON: unlocking the many features of plotly.js. You can also do this with a live preview.
 
@@ -169,7 +169,7 @@ See the following link for more information about plotly.js and the options: htt
 
 * **Mode**: You can use these charts in three different modes:
 
-    * **Basic**: quickly setup a chart with the various widget options
+    * **Basic**: quickly set up a chart with the various widget options
     * **Advanced**: specify additional JSON configuration
     * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 
@@ -184,15 +184,15 @@ See the following link for more information about plotly.js and the options: htt
     * [Documentation](https://plot.ly/javascript/configuration-options/)
     * [Full reference](https://github.com/plotly/plotly.js/blob/master/src/plot_api/plot_config.js)
 
-#### 2.1.5 Common
+#### Common
 
 These are properties which are common to many widgets. For information see [Properties Common in the Page Editor](/refguide9/common-widget-properties/#common-properties).
 
-## 3 Configuration by Chart Type {#configuration-by-chart-type}
+## Configuration by Chart Type {#configuration-by-chart-type}
 
 The properties above are common across the chart types. In this section, the properties described are specific to the chart type.
 
-### 3.1 Column Chart
+### Column Chart
 
 **Series New or Edit**
 
@@ -201,7 +201,7 @@ The properties above are common across the chart types. In this section, the pro
     * **Series name**: this will be displayed in any legend on the chart
     * **Column color**: HTML color of the column, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-### 3.2 Line Chart
+### Line Chart
 
 **Series New or Edit**
 
@@ -215,7 +215,7 @@ The properties above are common across the chart types. In this section, the pro
     * **Series name**: this will be displayed in any legend on the chart
     * **Line color**: HTML color of the line, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-### 3.3 Pie Chart
+### Pie Chart
 
 **Chart properties**
 
@@ -224,7 +224,7 @@ The properties above are common across the chart types. In this section, the pro
 * **Colors**: Contains the color of each slice, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 * **Refresh interval (ms)**: Refresh the chart in intervals of milliseconds, when set to 0 refresh is disabled
 
-### 3.4 Area Chart
+### Area Chart
 
 **Series New or Edit**
 
@@ -242,7 +242,7 @@ The properties above are common across the chart types. In this section, the pro
     * **Border color**: HTML color of the border, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
     * **Area color**: HTML color of the area within the border, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
 
-### 3.5 Bar Chart
+### Bar Chart
 
 **Series New or Edit**
 
@@ -251,7 +251,7 @@ The properties above are common across the chart types. In this section, the pro
     * **Series name**: this will be displayed in any legend on the chart
     * **Bar color**: HTML color of the bar, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-### 3.6 Time Series Chart
+### Time Series Chart
 
 **Series New or Edit**
 
@@ -267,7 +267,7 @@ The properties above are common across the chart types. In this section, the pro
     * **Line color**: HTML color of the line, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
     * **Area color**: HTML color of the area within the border, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the line color with transparency
 
-### 3.7 Heat Map
+### Heat Map
 
 **Scale**
 
@@ -279,7 +279,7 @@ The properties above are common across the chart types. In this section, the pro
 * **Y-axis label**: Label to be displayed on the Y-axis
 * **Smooth color**: Gradual color gradient between data points: Yes , No
 
-### 3.8 Bubble Chart
+### Bubble Chart
 
 **Series New or Edit**
 
@@ -288,7 +288,7 @@ The properties above are common across the chart types. In this section, the pro
     * **Series name**: this will be displayed in any legend on the chart
     * **Serie color**[sic]: Color of the bubbles e.g green,#00FF00, rgb(2,255,0)
 
-## 4 Chart Theming
+## Chart Theming
 
 Advanced JSON settings can also be added in a global context via the theme folder of your Mendix app root directory.
 
@@ -344,6 +344,6 @@ Please use with caution, as the configuration set up here shall be applied to ev
 Only the advanced configurations set up in the widget itself have a higher precedence.
 {{% /alert %}}
 
-## 5 Strict CSP Compatibility
+## Strict CSP Compatibility
 
 This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.

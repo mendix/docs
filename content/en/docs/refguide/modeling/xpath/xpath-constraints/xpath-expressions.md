@@ -3,7 +3,7 @@ title: "XPath Expressions"
 url: /refguide/xpath-expressions/
 ---
 
-## 1 Overview
+## Overview
 
 Expressions are used within constraints to generate a value that is true.
 
@@ -13,11 +13,11 @@ There are three types of expressions usable for constraints:
 * Functions
 * Exist-expressions
 
-## 2 Comparisons
+## Comparisons
 
 A comparison expression consists of two attributes or values separated by a comparison [operator](/refguide/xpath-operators/) like `=`, `<=`, or `>`.
 
-### 2.1 Examples
+### Examples
 
 For example, the following query retrieves all customers whose name is "Jansen":
 
@@ -130,7 +130,7 @@ The following query retrieves the same customer as the previous query:
     {{% /tab %}}
 {{< /tabpane >}}
 
-### 2.2 Implicit type conversions
+### Implicit type conversions
 
 If two sides of a comparison (`=`, `!=`, `<`, `<=`, `>`, `>=`) have different types, one of the sides may be converted implicitly to the type of the other side.
 
@@ -177,15 +177,36 @@ Conversions work in the following way:
 * A String is converted to a Boolean by comparing it to the string `'true'` in a case insensitive way.
 * A String is converted to a Decimal or Integer/Long by parsing it as a number.
 
-## 3 Functions
+### Empty values {#empty-values}
+
+If the value of an attribute in the database is empty, this is interpreted as "unknown" and any comparison of that attribute to another attribute will not match, even if both are empty.
+This follows the semantics of `NULL` values in SQL, to which XPath expressions are translated.
+
+Here are two examples – you will get similar results with other comparisons (for example `<`) :
+
+* `[Attribute1 = Attribute2]` is `true` if both attributes are not empty and the values are equal. It is `false` if both attributes are empty.
+* `[Attribute1 != Attribute2]` is `true` if both attributes are not empty and the values are not equal. It is `false` if one attribute is empty and the other is not.
+
+If one of the sides of the comparison is a constant, there are some exceptions that are treated as special cases:
+
+* `[Attribute = empty]` is `true` if the attribute is empty.
+* `[Attribute != empty]` is `true` if the attribute is not empty.
+* `[Attribute != 'value']` is `true` if the attribute is not equal to the constant `'value'` or if the attribute is empty.
+* `[not(Attribute = 'value')]` is `true` if the attribute is not equal to the constant `'value'` or if the attribute is empty.
+
+{{% alert color="info" %}}
+For the purpose of evaluating an XPath expression, a microflow variable is also treated as a constant, because it has a fixed value during the XPath evaluation.
+{{% /alert %}}
+
+## Functions
 
 For information on the available functions, see [XPath Constraint Functions](/refguide/xpath-constraint-functions/).
 
-## 4 Exist-Expressions {#exist}
+## Exist-Expressions {#exist}
 
 The last type of expression is the exist-expression, which can be used to check whether a specific association is filled or not.
 
-### 4.1 Examples
+### Examples
 
 This query retrieves all the customers who have placed at least one order:
 

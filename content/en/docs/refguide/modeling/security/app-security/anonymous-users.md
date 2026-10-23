@@ -4,11 +4,11 @@ url: /refguide/anonymous-users/
 weight: 40
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use anonymous users to allow end-users access your application without having to sign in. You can restrict the data that anonymous users can view and access by assigning a specific user role to them. 
 
-## 2 Anonymous Users Properties
+## Anonymous Users Properties {#properties}
 
 Open **App Security** > the **Anonymous users** tab to access the properties:
 
@@ -21,7 +21,15 @@ The properties of anonymous users are described in the table below:
 | Allow anonymous users | When **Yes** is selected, anonymous users are allowed. End-users do not have to sign in to access the application. <br />When **No** is selected, anonymous users are not allowed. End-users have to sign in to access the application. |
 | Anonymous user role   | The user role that end-users of your application have when they are not signed in. This tells the application which role should be automatically applied to anonymous users who access the app. The **Allow anonymous users** property should be set to **Yes** to select an anonymous user role. |
 
-## 3 Read More
+{{% alert color="info" %}}
+Mendix advises always naming a user role which allows anonymous users in an app or module as `Anonymous`. This ensures that it is clear to all users what it is being used for. 
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Enabling anonymous users allows anyone to use your app without signing in. To prevent unintended data exposure, ensure that the anonymous user role has limited access across your app by configuring appropriate entity and microflow access rules. See [Configuring User Roles and Access](/howto/security/best-practices-security/#access-control) in *Implement Best Practices for App Security* for more advice on configuring user roles.
+{{% /alert %}}
+
+## Read More
 
 * [App Security](/refguide/app-security/)
 * [User Roles](/refguide/user-roles/)

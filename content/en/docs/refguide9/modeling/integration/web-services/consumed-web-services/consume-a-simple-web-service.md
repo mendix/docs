@@ -7,7 +7,7 @@ aliases:
     - /howto9/integration/consume-a-simple-web-service/
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix is the app platform for the enterprise, and in enterprise software it is not likely that you work in a [greenfield project](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, and this how-to focuses on how you can consume web services with Mendix.
 
@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 * Import a WSDL
 * Create logic to call the web service
 
-## 2 Importing a WSDL
+## Importing a WSDL
 
 A WSDL describes the operations of a web service and can be imported in Studio Pro. After importing the WSDL, you can invoke the operations of the web service instantly within the microflow editor.
 
@@ -35,7 +35,7 @@ To import a WSDL, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-simple-web-service/18582084.png" class="no-border" >}}
 
-## 3 Creating Logic to Call the Web Service
+## Creating Logic to Call the Web Service
 
 To create logic to call the web service, follow these steps:
 
@@ -63,7 +63,7 @@ To create logic to call the web service, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-simple-web-service/18582076.png" class="no-border" >}}
 
-10. In the **Location** section for this operation , check the **Override location** box to override the location and use the secure location of the web service.
+10. In the **Location** section for this operation, check the **Override location** box to override the location and use the secure location of the web service.
 11. Click **Edit** and change `http` to `https` for the URL in the **Location** editor and click **OK**.
 12. In the **SOAP Request Body** tab of the **Call Web Service** properties editor, double-click the **Celsius (optional)** input parameter and enter `toString($TemperatureInCelsius)` for the expression. The web service operation expects a string value, which is why you need to use the `toString` function. Then click **OK**.
 
@@ -96,7 +96,7 @@ To create logic to call the web service, follow these steps:
 
 21. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 
-## 4 Read More
+## Read More
 
 * [Create a Secure App](/howto9/security/create-a-secure-app/)
 * [Consume a Complex Web Service](/refguide9/integration/consume-a-complex-web-service/)

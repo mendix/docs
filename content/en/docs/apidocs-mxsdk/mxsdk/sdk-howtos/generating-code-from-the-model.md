@@ -5,11 +5,11 @@ url: /apidocs-mxsdk/mxsdk/generating-code-from-the-model/
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 To help you to find out how you can write code to alter your model, the SDK ships with a nice reverse engineering tool. Given a [fully loaded model unit](/apidocs-mxsdk/mxsdk/loading-units-and-elements/), you can generate the JavaScript code that would create that very same unit using code. This way, you can build a template model in Studio Pro, then generate the code you would need to write to achieve the same.
 
-## 2 For the Impatient
+## For the Impatient
 
 To generate the code for a fully-loaded unit you can use the following code:
 
@@ -19,7 +19,7 @@ import { JavaScriptSerializer } from "mendixmodelsdk";
 console.log(JavaScriptSerializer.serializeToJs(someFullyLoadedModelUnit));
 ```
 
-## 3 Example
+## Example
 
 Let's say you want to generate a set of entities in a domain model that looks like this:
 
@@ -137,7 +137,7 @@ function generate(domainModel1: domainmodels.DomainModel, model: IModel) {
 The original code expects a unit as the first argument. The unit is supposed to be the container for the domain model. However, you don't want to create a new domain model, you are going to re-use an existing domain model instead. Therefore, you need to remove this line:
 
 ```ts
-const domainModel1 = domainmodels.DomainModel.createIn(unit);
+var domainModel1 = domainmodels.DomainModel.createIn(unit);
 ```
 
 Remove the last bracket on the last line so your JavaScript code will look like this:

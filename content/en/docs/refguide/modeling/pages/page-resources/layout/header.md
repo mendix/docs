@@ -5,7 +5,7 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A **header** combines the functionality of a page title and a control bar for your page. Due to its compact design and versatility it is often used in mobile pages. A header can only be used in a [layout](/refguide/layout/).
 
@@ -23,7 +23,7 @@ For example, the image below shows an edit page derived from a layout with a hea
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/header/header-page.png"   width="350"  class="no-border" >}}
 
-## 2 Properties Pane
+## Properties Pane
 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Header properties consist of the following sections:
 
@@ -36,18 +36,18 @@ Styling:
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
-## 3 Properties
+## Properties
 
-### 3.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 4 Styling
+## Styling
 
-### 4.1 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 4.2 Common Section {#common-styling}
+### Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}

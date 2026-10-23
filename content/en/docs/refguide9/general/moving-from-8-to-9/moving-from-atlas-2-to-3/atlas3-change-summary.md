@@ -4,17 +4,17 @@ url: /refguide9/atlas3-change-summary/
 weight: 7
 ---
 
-## 1 Introduction
+## Introduction
 
 This document is a high-level summary of the changes Atlas 3 brings to Mendix.
 
-## 2 High-Level Summary
+## High-Level Summary
 
 Atlas 3 includes many changes to style and branding, and has a more modern look and feel. The differences between Atlas 2 and Atlas 3 are best expressed through comparison, using our reference apps. To learn more about how your app can look with Atlas 3, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
 On both web and native, improvements have been made to layouts, widgets, building blocks, and page templates. These changes include but are not limited to layout and spacing, colors and aesthetics, and user experience.
 
-### 2.1 New Theme
+### New Theme
 
 Our new theme has the following advantages:
 
@@ -24,7 +24,7 @@ Our new theme has the following advantages:
 * Changed from Mendix Blue to Ultramarine
 * MxDock added to template to create one unified platform experience
 
-### 2.2 Grid System
+### Grid System
 
 Our new grid system has the following advantages:
 
@@ -32,7 +32,7 @@ Our new grid system has the following advantages:
 * Provides a good basic unit to work with (the numbers 4 and 8 are easily multiplied)
 * Offers more uniformity in design
 
-### 2.3 Float Removal
+### Float Removal
 
 Our removal of float has the following advantages:
 
@@ -40,7 +40,7 @@ Our removal of float has the following advantages:
 * Migration of float to flex layout
 * Removal of the reliance on floats for layout (flex is more a modern option than float)
 
-### 2.4 Design Properties 
+### Design Properties 
 
 Consult the table below for a summary of the changes to existing design properties.
 
@@ -59,9 +59,9 @@ Consult the table below for a summary of additional design properties.
 | Progress Circle                  | Addition of design properties for styling the new updated progress circle. Properties including bar color and bar thickness. |
 | Progress Bar                     | Addition of design properties for the styling the new updated progress bar. Properties including bar color and bar thickness. |
 | Additional background variants   | Dark and light variations can be added to your background colors via design properties. |
-| Responsive images with image-fit | Options can now be added for images to be resized to fit its container. options include fill, contain, cover and scale-down. |
+| Responsive images with image-fit | Options can now be added for images to be resized to fit its container. Options include fill, contain, cover and scale-down. |
 
-### 2.5 Web Environment Changes
+### Web Environment Changes
 
 Here is a list of key changes pertaining to the web environment:
 
@@ -71,8 +71,8 @@ Here is a list of key changes pertaining to the web environment:
 * Many design properties have been introduced, and existing ones have received added options:
     * **Inner** spacing options allowing users to configure **padding** for widgets. This applies to all widgets
         * Previous spacing options are now renamed to **Outer** to be more explicit and apply to **margin** for widgets
-    * Structure  widgets get a new **gradient** option for background color
-    * Structure  widgets get a **shade** design property with options to apply shades to background colors
+    * Structure widgets get a new **gradient** option for background color
+    * Structure widgets get a **shade** design property with options to apply shades to background colors
     * List View widgets get a **style** option to add horizontal borders at the top and bottom of each list item
     * Static and dynamic images each get a new design property to assist with fitting images (for example fill, contain, cover, or scale-down)
     * Tab container widgets get new design properties to style and space tabs
@@ -90,7 +90,7 @@ Here is a list of key changes pertaining to the web environment:
     * List View widgets’ **styleless** option
 * Design properties such as **Style**, **Color**, and **Background color** that had a **Brand Default** option are now called **Brand Secondary**
 
-## 3 UI Content
+## UI Content
 
 If you are using building blocks or page templates, please make sure you download the corresponding modules from the [Mendix Marketplace](https://marketplace.mendix.com/).
 
@@ -102,7 +102,7 @@ For the native platform, download the [Atlas Native Mobile Content](https://mark
 
 {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-native-content-marketplace.png" alt="Atlas native content" class="no-border" >}}
 
-## 4 Design Properties for Web
+## Design Properties for Web
 
 These are the design property changes for Atlas 3 web:
 
@@ -128,7 +128,7 @@ These are the design property changes for Atlas 3 web:
 | com.mendix.widget.custom.badgebutton.BadgeButton (new)       |   |    |   |   |
 | com.mendix.widget.custom.progresscircle.ProgressCircle (new) |   |    |   |   |
 
-## 5 Design Properties for Native Mobile
+## Design Properties for Native Mobile
 
 These are the design property changes for Atlas 3 native mobile:
 
@@ -158,7 +158,7 @@ These are the design property changes for Atlas 3 native mobile:
 | com.mendix.widget.native.floatingactionbutton.FloatingActionButton | Style                     |                                                              | {<br>    "name": "Secondary",<br>    "class": "floatingActionButtonSecondary"<br>}, |
 | com.mendix.widget.native.safeareaview.SafeAreaView           | Background color          | {<br>    "name": "Secondary",<br>    "class": "backgroundSecondary"<br>}, | {<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
 
-## 6 Read More
+## Read More
 
 * [Atlas 3 Website](https://www.mendix.com/atlas/)
 * [Atlas Design System App](https://atlasdesignsystem.mendixcloud.com/)

@@ -11,7 +11,7 @@ description: "Native Template 6 release notes."
 ### Fixes
 
 * We fixed an issue with cookie management in native apps. (Ticket 178053)
-* We fixed an issue which affected compiling a native iOS app using XCode 14 or higher.
+* We fixed an issue which affected compiling a native iOS app using Xcode 14 or higher.
   
 ## 6.3.5
 
@@ -43,9 +43,9 @@ description: "Native Template 6 release notes."
 Due to a library update, your Native Template must be aligned with Native Mobile Resources or else your build will fail. Please make sure you are using the newest version of the Native Mobile Resources module from Marketplace (currently [version 3.13.0](https://marketplace.mendix.com/link/component/109513)).
 {{% /alert %}}
 
-If you already have a project in AppCenter, then you must add the following environment variable to ensure compatibility:
+If you already have a project in App Center, then you must add the following environment variable to ensure compatibility:
 
-1. Open your project in AppCenter and go to **Build** menu item.
+1. Open your project in App Center and go to **Build** menu item.
 1. In **all branches**, click the wrench icon ({{% icon name="wrench" %}}).
 1. In **Environment Variable**, add the following **Name** and **Value** (if this option is not enabled, enable it):
     1. Name: **JAVA_HOME**.
@@ -131,7 +131,7 @@ In the end, your variable should be set up like this:
 
 ### Fixes
 
-* We updated the NDK version to match AppCenter.
+* We updated the NDK version to match App Center.
 * We updated the react-native-permissions library.
 * We removed `mendix.templateVersion` from *package.json*.
 
@@ -143,7 +143,7 @@ In the end, your variable should be set up like this:
 
 * We fixed an issue affecting iOS apps uploading to the App Store. (Ticket 160571)
 * We fixed an issue with crashes affecting Xiaomi smartphones. (Tickets 147158, 147350)
-* We fixed an issue affecting iOS apps building in AppCenter.
+* We fixed an issue affecting iOS apps building in App Center.
 
 ## 6.2.23
 
@@ -157,7 +157,7 @@ In the end, your variable should be set up like this:
 ### Fixes
 
 * We removed the QUERY_ALL_PACKAGES permission for Android apps. (Ticket 152645)
-* We fixed an issue affecting iOS apps building in AppCenter. (Ticket 154462)
+* We fixed an issue affecting iOS apps building in App Center. (Ticket 154462)
 
 ## 6.2.22
 
@@ -299,7 +299,7 @@ In the end, your variable should be set up like this:
 
 ### Improvements
 
-* iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+* iOS 15 requires you to recompile your apps with Xcode 13. This release bumps the configuration of App Center to use Xcode 13.
 
 ## 6.2.4
 

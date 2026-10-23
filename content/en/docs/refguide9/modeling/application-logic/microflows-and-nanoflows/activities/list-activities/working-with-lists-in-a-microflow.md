@@ -5,7 +5,7 @@ weight: 60
 description: "Describes how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
 ---
 
-## 1 Introduction
+## Introduction
 
 In this document, you will learn how to enrich the data management capabilities of your microflow by using a list. A list consists of objects of the same type, which can be filtered by using an XPath constraint. For example, you can configure your microflow to retrieve a list of completed orders from the database. You can also further process this data, for example, by calculating the total value of those orders.
 
@@ -15,12 +15,13 @@ This document teaches you how to do the following:
 * Update multiple objects by iterating over a list
 * Calculate the total list value
 
-## 2 Preparing the Data Structure, GUI, and Example Data
+## Preparing the Data Structure, GUI, and Example Data
 
 Before you continue, you should first set up a test app, and populate it with test data. To do so, follow these steps:
 
 1. Create a [domain model](/refguide9/create-a-basic-data-layer/) with the following entities:
     * **Customer**
+
         | Attribute name | Attribute type |
         | --- | --- |
         | *CustomerID* | String |
@@ -28,7 +29,9 @@ Before you continue, you should first set up a test app, and populate it with te
         | *Address* | String |
         | *ZipCode* | String |
         | *City* | String |
+
     * **Order**
+
        | Attribute name | Attribute type |
        | --- | --- |
        | *Number* | Integer |
@@ -43,6 +46,7 @@ Before you continue, you should first set up a test app, and populate it with te
 2. Create [overview and detail pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/) to manage the **Customer** and **Order** objects.
 3. Create [menu items](/refguide9/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and **Order** overview pages.
 4. Add the following **Customer** data to your app:
+
     | Name | Address | Zip code | City |
     | --- | --- | --- | --- |
     | Olav | Gedempte Zalmhaven 34 | 3050 TE | Rotterdam |
@@ -51,6 +55,7 @@ Before you continue, you should first set up a test app, and populate it with te
     | Harry | Emmerreklaan 25 | 1458 PE | Utrecht |
 
 5. Add the following **Order** data to your app:
+
     | Number | Customer | Date | Total price | Order status |
     | --- | --- | --- | --- | --- |
     | 1 | Harry | 1/28/2022 | 345.00 | Open |
@@ -60,7 +65,7 @@ Before you continue, you should first set up a test app, and populate it with te
     | 5 | Olav | 1/21/2022 | 25.60 | Open |
     | 6 | Peter | 1/16/2022 | 154.00 | Complete |
 
-## 3 Retrieving and Filtering a List of Objects from the Database
+## Retrieving and Filtering a List of Objects from the Database
 
 Use a microflow with a [Retrieve](/refguide9/retrieve/) activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](/refguide9/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the **Processing** status.
 
@@ -91,7 +96,7 @@ Use a microflow with a [Retrieve](/refguide9/retrieve/) activity to retrieve a l
 Apart from filtering the list of orders by an attribute of the Order entity itself, you can also define a constraint by using attributes of an associated entity, such as **Customer**. For example, to filter the orders based on the city where the customer is located, apply the following constraint: `Sales.Order_Customer/Sales.Customer/City = 'Rotterdam'`.
 {{% /alert %}}
 
-## 4 Updating Multiple Objects by Iterating over a List
+## Updating Multiple Objects by Iterating over a List
 
 After retrieving a list of orders with the status **Processing**, use a [loop](/refguide9/loop/) to iterate over this list and change the status of each object to **Complete**.
 
@@ -126,7 +131,7 @@ After retrieving a list of orders with the status **Processing**, use a [loop](/
 
     {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581113.png" alt="Setting the order status to Complete" class="no-border" >}}
 
-## 5 Calculating the Total List Value by Using a Variable and a Loop
+## Calculating the Total List Value by Using a Variable and a Loop
 
 To calculate the total sum of all your orders via a loop, create a variable which will be modified by every iteration of the loop.  
 
@@ -175,7 +180,7 @@ To calculate the total sum of all your orders via a loop, create a variable whic
 
     {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581103.png" alt="Calculating the total price" class="no-border" >}}
 
-## 6 Calculating the Total List Value by Using an Aggregate Function
+## Calculating the Total List Value by Using an Aggregate Function
 
 Instead of a loop, you can also calculate the total price by using the [aggregate list](/refguide9/aggregate-list/) function. Use the aggregate list to calculate values such as the maximum, minimum, sum, average, and total number of objects over a list of objects.
 
@@ -204,7 +209,7 @@ Instead of a loop, you can also calculate the total price by using the [aggregat
 
     {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581103.png" alt="Calculating the total price" class="no-border" >}}
 
-## 7 Read More
+## Read More
 
 * [Microflows](/refguide9/microflows/)
 * [Object Activities](/refguide9/object-activities/)

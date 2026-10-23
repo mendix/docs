@@ -4,7 +4,7 @@ url: /refguide9/data-widgets/
 weight: 15
 ---
 
-## 1 Introduction
+## Introduction
 
 Data containers display contents of one object or a list of objects. 
 
@@ -28,11 +28,11 @@ The Data containers category contains the following widgets:
 
 A [snippet](/refguide9/snippet/) can also function as a data container when it has at least one snippet parameter. Unlike other data containers, a snippet never exposes a `$currentObject` variable because it can represent multiple independent objects.
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide9/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide9/page/)
 * [Pages](/refguide9/pages/)

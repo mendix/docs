@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The layout grid is a widget that gives structure to your pages.  
 
@@ -15,12 +15,12 @@ A layout grid consists of [rows](#rows) and [columns](#columns):
 In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](https://getbootstrap.com/css/#grid).
 
 {{% alert color="info" %}}
-Row and column properties described below are available if your app has [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 2.4.0 or above. 
+Row and column properties described below are available if your app has [Atlas Core](https://marketplace.mendix.com/link/component/117187) version 3.0 or above. 
 
 For more information on row and column properties, see the [Rows and Their Properties](#rows) and [Columns and Their Properties](#columns) sections. 
 {{% /alert %}}
 
-## 2 Layout Grid Properties
+## Layout Grid Properties
 
 An example of layout grid properties is represented in the image below:
 
@@ -33,17 +33,17 @@ Layout grid properties consist of the following sections:
 * [General](#general)
 * [Visibility](#visibility)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
-### 2.2 Design Properties Section{#design-properties}
+### Design Properties Section{#design-properties}
 
 {{% snippet file="/static/_includes/refguide9/design-section-link.md" %}}
 
-### 2.3 General Section {#general}
+### General Section {#general}
 
-#### 2.3.1 Width
+#### Width
 
 The **General** section contains the **Width** property, which determines the width of the layout grid. 
 
@@ -56,11 +56,11 @@ The **General** section contains the **Width** property, which determines the wi
 As the layout grid responds to the viewport width, and not to the width of its container, a fixed width layout grid should only be used on top-level.
 {{% /alert %}}
 
-### 2.4 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
-## 3 Rows and Their Properties {#rows}
+## Rows and Their Properties {#rows}
 
 A layout grid can contain one or more rows. Each row contains [columns](#columns) and the number of columns can differ per row.
 
@@ -74,11 +74,11 @@ Row properties consist of the following sections:
 * [General](#row-general)
 * [Visibility](#row-visibility)
 
-### 3.1 Common Section {#row-common}
+### Common Section {#row-common}
 
 {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
-### 3.2 General Section {#row-general}
+### General Section {#row-general}
 
 The **General** section of a row contains the following properties:
 
@@ -95,11 +95,11 @@ The **General** section of a row contains the following properties:
 
 * **Spacing between columns** – when set to *Yes*, adds spacing between columns
 
-### 3.3 Visibility Section {#row-visibility}
+### Visibility Section {#row-visibility}
 
 {{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
-## 4 Columns and Their Properties {#columns}
+## Columns and Their Properties {#columns}
 
 Columns form a row of a layout grid.
 
@@ -112,13 +112,13 @@ Layout grid column properties consist of the following sections:
 * [Common](#column-common)
 * [General](#column-general)
 
-### 4.1 Common Section {#column-common}
+### Common Section {#column-common}
 
 {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
-### 4.2 General Section {#column-general}
+### General Section {#column-general}
 
-#### 4.2.1 **Width** {#column-width}
+#### **Width** {#column-width}
 
 This property allows you to define the column width. 
 
@@ -148,19 +148,19 @@ On the picture below you can see the settings for two column described above:
 
 {{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/layout-grid/column-settings-example.png" class="no-border" >}}
 
-#### 4.2.2 **Size** {#column-size}
+#### **Size** {#column-size}
 
 The **Size** option is displayed only if the [width](#column-width) is set to **Manual**. 
 
 This setting allows you to manually set the column size for desktop, tablet, or phone by using the corresponding property: **Desktop Size**, **Tablet Size**, **Phone Size**. 
 
-#### 4.2.3 Align Vertically
+#### Align Vertically
 
 The **Align vertically** property overrides the **Align columns vertically** property on the row and sets alignment for an individual column.  
 
-## 5 Performing Basic Actions
+## Performing Basic Actions
 
-### 5.1 Adding a New Row or a Column
+### Adding a New Row or a Column
 
 To add a new row, do the following:
 
@@ -184,14 +184,14 @@ A new column is added, the weight 1 is automatically set for it.
 Sometimes on a native page, data is not clearly visible when using a native layout grid. To see the data more clearly, nest the layout grid inside the scroll container.
 {{% /alert %}}
 
-### 5.2 Performing Other Actions on Rows
+### Performing Other Actions on Rows
 
 In adding to inserting a new row, you can perform the following actions when right-clicking a row:
 
 * **Move up** – moves a row up in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>↑</kbd> 
 * **Move down** – moves a row down in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>↓</kbd> 
 
-### 5.3 Performing Other Actions on Columns
+### Performing Other Actions on Columns
 
 In adding to inserting a new column, you can perform the following actions when right-clicking a column:
 
@@ -199,7 +199,7 @@ In adding to inserting a new column, you can perform the following actions when 
 * **Move right** – moves a column right in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>→</kbd> 
 * **Row** – allows you to perform actions on the column's row 
 
-## 6 Read More
+## Read More
 
 * [Page](/refguide9/page/)
 * [Structure](/refguide9/structure-widgets/)

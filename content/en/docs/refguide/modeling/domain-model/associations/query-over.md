@@ -4,13 +4,17 @@ url: /refguide/query-over/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 Sometimes, you want to create a more generic domain model to allow more flexibility in the type and structure of your data. In this case, you often turn to using inheritance or self references to allow for simple yet efficiently designed models. This makes building your microflows and application logic much easier, but it can become challenging to query the correct objects: especially when you are using a self-reference.
 
-## 2 The Example
+## The Example
 
 This example is for an implementation of folders on a computer, where one folder can contain several subfolders.
+
+{{% alert color="info" %}}
+This example describes an implementation using association tables. You can also specify direct associations. Although the technical implementation details are different, the XPath constraints in the use cases do not change.
+{{% /alert %}}
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-example-structure.png" class="no-border" >}}
 
@@ -40,7 +44,7 @@ There are six folders in the example above, and the database is structured and t
 
 For more information on how domain models are implemented in databases, see the [Implementation](/refguide/domain-model/#implementation) section of *Domain Model*.
 
-### 2.1 Retrieving the SubFolder (or SubFolders) (Children) from a Folder (Parent)
+### Retrieving the SubFolder (or SubFolders) (Children) from a Folder (Parent)
 
 If you have the $ChosenFolder object available in your microflow you can easily retrieve the subfolder (or subfolders). Each association has a right side (parent in the association) and a left side (child or owner of the association).  The platform reads each association and determines whether the parent is equal to the $ChosenFolder.
 
@@ -52,7 +56,7 @@ If the $ChosenFolder object has **Code** `202002141355334` and **Name** `SubFold
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-retrieve-normal-tables.png" class="no-border" >}}
 
-### 2.2 Retrieving the Parent Folder from a Folder
+### Retrieving the Parent Folder from a Folder
 
 When you have the $ChosenFolder object available and you want to retrieve its ParentFolder (the folder next higher in the hierarchy, for example given **SubFolder2** you want to retrieve **MainFolder**) from the database, it becomes more complicated.
 
@@ -76,7 +80,7 @@ Here is a video created by our community member [Mike Kumpf](https://developer.m
 
 {{< youtube 5tznw5ZUQgk >}}
 
-### 2.3 Creating More Complex Queries {#more-complex}
+### Creating More Complex Queries {#more-complex}
 
 The previous example was a simple one. However the `[reversed()]` expression can be used in more complicated queries.
 
@@ -92,17 +96,17 @@ Use the constraint `[QueryOver.File_Folder/QueryOver.Folder/QueryOver.SubFolder_
 
 If the $ChosenFolder object is `SubFolder2`, you will retrieve all the **File** objects associated with `MainFolder` over the association **File_Folder**.
 
-## 3 Associations to Specializations
+## Associations to Specializations
 
-In the special case of self-reference when a one-to-many association is with a specialization of itself, you cannot retrieve [by association](/refguide/retrieve/#source).
+In the special case of self-reference when a one-to-many association is with a specialization of itself, you cannot retrieve [by association](/refguide/retrieve-objects/#source).
 
 Here is an example inheritance:
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/limitation.png" class="no-border" >}}
 
-In this example, a list of **Specializations** cannot be retrieved when using a standard by-association retrieve in a microflow if the input is the specialization.
+In this example, if a standard by-association retrieve in a microflow is used starting from a `Specialization` this will return the `Specialization` that the starting point `Specialization` points to and not the list of `Generalization` which are associated via the `Generalization_Specialization` association.
 
-However, there is a workaround for this limitation: The list of Specializations can be retrieved with a Java action using the Java API. This Java action needs two parameters: the **Specialization** and a Boolean **Reverse** via this code snippet:
+The list of `Generalization`'s that points to `Specialization` can be retrieved with a Java action using the [Runtime API](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/core/Core.html#retrieveByPath(com.mendix.systemwideinterfaces.core.IContext,com.mendix.systemwideinterfaces.core.IMendixObject,java.lang.String,boolean)), as shown in this Java action which takes the `Specialization` object and a Boolean `Reverse` to indicate that the object instance is the child of the path of a self association:
 
 ```java
 public class RetrieveAsAssociatedWithB extends CustomJavaAction<java.util.List<IMendixObject>>

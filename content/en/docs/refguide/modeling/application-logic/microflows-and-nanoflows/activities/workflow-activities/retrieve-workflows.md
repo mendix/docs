@@ -8,7 +8,7 @@ weight: 40
 This activity can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A **Retrieve workflows** activity can be used to retrieve a list of **System.Workflow** objects.
 
@@ -20,7 +20,7 @@ You can use this activity to check if the workflow context object is already use
 All the workflow objects this activity returns are of type **System.Workflow**, but they can be related to different workflow definitions that are of type [System.WorkflowDefinition](/refguide/workflow-engine/#definition).
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 An example of retrieve workflows properties is presented in the image below:
 
@@ -33,7 +33,7 @@ The **Retrieve workflow context** properties pane consists of the following sect
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -41,14 +41,14 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow Context
+### Workflow Context
 
 An object of the workflow context entity available from the microflow parameters.
 
-### 3.2 Variable Name
+### Variable Name
 
 The name of the variable returned by the activity.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

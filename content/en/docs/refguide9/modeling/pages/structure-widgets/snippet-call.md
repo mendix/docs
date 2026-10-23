@@ -5,13 +5,13 @@ weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Snippet call** widget allows you to use a [snippet](/refguide9/snippet/) on a [page](/refguide9/page/), a [layout](/refguide9/layout/), or another snippet:
 
 {{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/snippet-call-example.png" alt="Snippet Call Example" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 An example of snippet call properties is represented in the image below:
 
@@ -23,32 +23,32 @@ Snippet call properties consist of the following sections:
 * [Design Properties](#design-properties)
 * [General](#general)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
-### 2.2 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
-### 2.3 General Section {#general}
+### General Section {#general}
 
-#### 2.3.1 Snippet
+#### Snippet
 
 The **Snippet** property shows the name of the snippet that the snippet call will display.
 
-#### 2.3.2 Snippet Settings {#snippet-settings}
+#### Snippet Settings {#snippet-settings}
 
 The **Snippet settings** property opens a dialog box that shows a list of parameters of the selected snippet and the objects that will be passed to each of them.
 
-## 3 Performing Specific Actions
+## Performing Specific Actions
 
 To perform actions on a snippet call, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select snippet**, are a quick way to set the properties, the following actions are specific actions that you can perform:
 
 * **Show snippet** – opens a snippet selected for a snippet call
 * **Inline snippet** – turns the snippet call into widgets that the selected snippet consists of
 
-### 3.1 Inline Snippet {#inline-snippet}
+### Inline Snippet {#inline-snippet}
 
 When you select **Inline snippet**, Studio Pro will analyze the snippet call to determine if it is safe to inline. If it is safe, the following will occur: 
 
@@ -58,14 +58,14 @@ When you select **Inline snippet**, Studio Pro will analyze the snippet call to 
 This is basically the inverse operation of [Extract Snippet](/refguide9/snippet/#extract-snippet). 
 
 {{% alert color="info" %}}
-After clicking **Inline snippet**, note that the snippet is not automatically deleted — even if the inlined snippet call was the last remaining usage of the snippet.
+After clicking **Inline snippet**, note that the snippet is not automatically deleted—even if the inlined snippet call was the last remaining usage of the snippet.
 {{% /alert %}}
 
 Not every snippet call can be inlined, because certain configurations cannot be represented correctly outside a snippet. Attempting to inline such a snippet call could result in a consistency error or produce inlined content which does not have the same behavior as the original snippet call. In this case, a warning dialog box is shown to ask whether you want to proceed:
 
 {{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/inline-snippet-warning-dialog.png" alt="Warning dialog for Inline snippet" width="600" class="no-border" >}}
 
-## 4 Limitations
+## Limitations
 
 The following are examples of configurations which cannot be correctly inlined:
 
@@ -74,7 +74,7 @@ The following are examples of configurations which cannot be correctly inlined:
 
 In such cases, the inlined content needs to be fixed manually by adding or removing a Data view (depending on the configuration) and reconfiguring the affected widgets to refer to the correct object again.
 
-## 5 Read More
+## Read More
 
 * [Snippet](/refguide9/snippet/)
 * [Page](/refguide9/page/)

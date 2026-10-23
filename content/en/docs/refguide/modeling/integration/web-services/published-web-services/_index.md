@@ -5,7 +5,7 @@ weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes published web services. If you're looking for specific information on the published web services screen, see the [Published web service](/refguide/published-web-service/) documentation.
 
@@ -13,27 +13,27 @@ You can publish your own web services in a Mendix application. Published web ser
 
 To enable usage of a microflow as a web service, right-click anywhere in the white space of the microflow and select **Publish as web service operation...**.
 
-## 2 Runtime Documentation
+## Runtime Documentation
 
 When running, Studio Pro projects publish web services documentation. The address is (if running locally) `http://localhost:8080/ws-doc/`. This documentation explains how the service can be used in two ways.
 
-### 2.1 WSDL
+### WSDL
 
 This is an XML document that is computer-readable. Studio Pro can read this document and automatically figure out how to interact with the web service.
 
-### 2.2 Example Request/Response XML Messages
+### Example Request/Response XML Messages
 
 On the **Published web services** page (`http://localhost:8080/ws-doc/`), you will find a list of all operations per published web service. These link to pages which describe sample messages. Note that you do not need these examples when building a Mendix-to-Mendix interaction; they are there solely to help users who want to create their own clients.
 
-## 3 How Does a Published Web Service Call Work?
+## How Does a Published Web Service Call Work?
 
 A microflow that has been published can be called by systems from the outside. This section describes how this process works.
 
-### 3.1 Call Is Initiated
+### Call Is Initiated
 
 A web service call is simply a HTTP call that the Runtime receives and recognizes as a web service call. An XML message is received and parsed to a format that the Runtime understands.
 
-#### 3.1.1 Authentication
+#### Authentication
 
 Every web service call requires authentication. Specifically, the SOAP envelope header should contain an **Authentication** element, which contains a user name and password:
 
@@ -50,22 +50,22 @@ These details must match an existing web service user in the Runtime. These user
 
 Otherwise, there is no difference between how normal users and web service users call microflows.
 
-#### 3.1.2 Parameter Handling
+#### Parameter Handling
 
 Depending on which types of parameters are inputs to the published microflow, two things can happen:
 
 1. If an input is a domain entity, the XML is translated to the entity using an XML-to-Domain mapping. Note that these mappings create actual domain objects, depending on the mapping.
 2. Normal parameters (integer, string, etc.) aren't converted in any way and are used as inputs directly.
 
-### 3.2 Microflow Is Executed
+### Microflow Is Executed
 
 Once the parameters have been parsed from the XML, the microflow call proceeds as normal.
 
-### 3.3 Result Is Converted Back to XML
+### Result Is Converted Back to XML
 
 If the microflow has a return value, it will be returned as a result of the web service call. As with the parameters, basic types will be returned directly, and domain entities require a mapping to be converted to XML. Number formatting is consistent between consumed and published web services. Trailing zeroes are removed from numbers and scientific notation is not used.
 
-### 3.4 Response Statuses
+### Response Statuses
 
 The default HTTP status code in the response is 200 (OK). When the client sends a malformed request, or when an internal server error occurs, the Runtime responds with a SOAP fault. The HTTP header will contain status 500 in these cases.
 

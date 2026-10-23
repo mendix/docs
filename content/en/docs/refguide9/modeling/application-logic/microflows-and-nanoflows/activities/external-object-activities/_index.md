@@ -7,7 +7,7 @@ weight: 100
 These activities can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 When working with external object there is a microflow activity which enables you to call the service to update the state of the object in the other system.
 
@@ -22,6 +22,6 @@ The following are the integration activities you can use in your microflow:
 This group of activities was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/).
 {{% /alert %}}
 
-## 2 Read More
+## Read More
 
 * [Activities](/refguide9/activities/)

@@ -3,11 +3,11 @@ title: "Numeric Formatting"
 url: /refguide9/numeric-formatting/
 ---
 
-## 1 Behavior in Your Mendix Application
+## Behavior in Your Mendix Application
 
 A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The rounding mode used is configured in the [App Settings](/refguide9/app-settings/).
 
-## 2 XML Schema Facets
+## XML Schema Facets
 
 How numbers in XML should be represented can be specified in an XSD (or WSDL) by using schema facets.
 
@@ -16,7 +16,7 @@ Mendix currently supports `totalDigits` and `fractionDigits` for numeric element
 * `totalDigits` -  defines the maximum number of digits in the number (excluding the dot and minus sign)
 * `fractionDigits` - defines the maximum number of digits after the decimal dot
 
-This means that if a number is encountered that does not match the required output format,  it will be rounded it so it does match. If it is not possible to represent the number correctly by formatting the number, then it will simply be put in the XML as is. For example, an XSD specifies a maximum amount of digits of 3, but the number is 1000.
+This means that if a number is encountered that does not match the required output format, it will be rounded it so it does match. If it is not possible to represent the number correctly by formatting the number, then it will simply be put in the XML as is. For example, an XSD specifies a maximum amount of digits of 3, but the number is 1000.
 
 Mendix does not enforce compliance to these restrictions unless **Validate against WSDL** is enabled in web service calls or **Validate against schema** is enabled in XML export actions.
 

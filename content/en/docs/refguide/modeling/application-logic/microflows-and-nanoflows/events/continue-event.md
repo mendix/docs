@@ -4,7 +4,7 @@ url: /refguide/continue-event/
 weight: 4
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 Continue events can only be used inside [loops](/refguide/loop/).
@@ -18,7 +18,7 @@ For example, you have a list of objects of the *OrderLine* entity and you want t
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/continue-event/continue-event.png" class="no-border" >}}
 
-## 2 Read More
+## Read More
 
 * [Loop](/refguide/loop/)
 * [Break Event](/refguide/break-event/)

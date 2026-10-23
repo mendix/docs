@@ -11,7 +11,7 @@ aliases:
     - /howto9/mobile/push-notifications/
 ---
 
-## 1 Introduction
+## Introduction
 
 Hybrid mobile applications are web applications that run inside a native application. They can access device capabilities via JavaScript or by relying on the native application to provide the required functionality in native code.
 
@@ -20,8 +20,3 @@ Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile 
 {{% /alert %}}
 
 For more information see this [Hybrid Mobile Apps Deprecation with Mendix 9](https://www.mendix.com/blog/hybrid-mobile-apps-deprecation-with-mendix-9/) blog entry.
-
-For hybrid mobile documentation see these Mendix 8 documents:
-
-* [Hybrid Mobile How To Documentation](/howto8/mobile/hybrid-mobile/)
-* [Hybrid Mobile Reference Guide](/refguide8/hybrid-mobile/)

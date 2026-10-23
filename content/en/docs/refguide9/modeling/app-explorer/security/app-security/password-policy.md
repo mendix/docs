@@ -4,11 +4,11 @@ url: /refguide9/password-policy/
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 You can specify a number of requirements for passwords. These requirements will be applied when creating new users or changing passwords of existing users.
 
-## 2 Password Policy Properties
+## Password Policy Properties
 
 To set password policy properties, open **App Security** > the **Password policy** tab:
 
@@ -23,7 +23,7 @@ Password policy properties are described in the table below:
 | Require mixed case | Specifies whether a password must contain at least one lowercase character and one uppercase character. |
 | Require symbol     | Specifies whether passwords must contain at least one special symbol. The following characters are considered symbols: <br /> <code> ` ~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ </code> |
 
-## 3 Read More
+## Read More
 
 * [App Security](/refguide9/app-security/)
 * [User Roles](/refguide9/user-roles/)

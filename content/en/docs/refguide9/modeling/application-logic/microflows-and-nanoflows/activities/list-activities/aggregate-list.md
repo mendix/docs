@@ -9,7 +9,7 @@ weight: 1
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Aggregate list** activity can be used to calculate aggregated values over a list of objects. The aggregated values supported by this activity are:
 
@@ -19,7 +19,7 @@ The **Aggregate list** activity can be used to calculate aggregated values over 
 * minimum
 * sum
 
-## 2 Properties
+## Properties
 
 An example of **Aggregate list** properties is represented in the image below:
 
@@ -32,7 +32,7 @@ The **Aggregate list** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section{#action}
+## Action Section{#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -40,11 +40,11 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 List
+### List
 
 The name of the list to aggregate.
 
-### 3.2 Function
+### Function
 
 Defines which type of aggregation is applied.
 
@@ -56,7 +56,7 @@ Defines which type of aggregation is applied.
 | Maximum | The maximum of all values of an attribute from the list of objects. |
 | Sum | The sum of all values of an attribute from the list of objects. |
 
-### 3.3 Attribute
+### Attribute
 
 Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, or Decimal).
 
@@ -64,15 +64,15 @@ Defines which attribute of the objects in the list is used to aggregate over. Th
 When using the `Count` function, it is not necessary to select an attribute, as it simply counts the number of objects in the list.
 {{% /alert %}}
 
-### 3.4 Variable Name
+### Variable Name
 
 The name of the variable in which the result of the aggregation is stored. This variable will have a numeric data type that depends on the selected function.
 
-## 4 Common Section{#common}
+## Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
-## 5 Optimizing Aggregate Activities
+## Optimizing Aggregate Activities
 
 In some apps, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If there are a lot of [retrieves](/refguide9/retrieve/) and aggregates on large datasets in a microflow, it is easy to run into performance or memory problems. 
 
@@ -84,7 +84,7 @@ For instance, in this microflow, the Mendix Runtime merges the two activities in
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/one-single-retrieve-query.png" width="500px" class="no-border" >}}
 
-### 5.1 Examples for When Optimization is Not Applied
+### Examples for When Optimization is Not Applied
 
 If you reuse the same list for multiple **Aggregates list** activities, an optimization process is not applied. The Mendix Runtime only creates an optimized SQL query if the list is not used in the microflow afterwards and a custom range is not configured. If you use the list later (for example, to iterate over the list) or a custom range is configured, the query is not optimized. 
 
@@ -94,7 +94,7 @@ For instance, in this example, the same list is used multiple times, and hence t
 
 If the list is not merged into a single query, all these records are kept in memory. Basically, this has the same effect as when you iterate over the list. If you iterate over the list, you have to think about the memory consumption, meaning that you cannot retrieve 10,000 objects with a single retrieve query. To prevent memory errors (for example, heap space or GC limit overhead), you should not use a list multiple times in a microflow unless you use a limit and offset.
 
-### 5.2 Recommended Optimization Approaches
+### Recommended Optimization Approaches
 
 If you do want to use the list more than once and you also want the optimized query, do two separate retrieves. As shown in the following example, an optimized query is applied and you can use the second retrieve in your microflow.
 
@@ -104,6 +104,6 @@ When an average is calculated within an optimized SQL query, the rounding mode c
 
 Since the Mendix Runtime merges list retrieve and aggregate activities, you do not have to think about the memory consumption of these activities. If you are dealing with datasets of thousands and larger, it is even faster to do multiple aggregates in the database, as a database is designed for doing retrieves and aggregates as fast as possible. The only reason you do not want to use multiple retrieves is when there are very complex constraints (for example, multiple associations and attributes) or when your data is likely to change in the few milliseconds between the two queries.
 
-## 6 Read More
+## Read More
 
 * [Retrieve Activities](/refguide9/retrieve/)

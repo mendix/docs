@@ -10,7 +10,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A scroll container is used to divide the layout in regions (for details on regions, see the [Scroll Container Region](#scroll-container-region) section) such as the header, sidebar, or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
 
@@ -22,7 +22,7 @@ The scroll container example below divides the layout in three parts: a header c
 
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
 
-## 2 Properties Pane
+## Properties Pane
 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Scroll container properties consist of the following sections:
 
@@ -41,11 +41,11 @@ Miscellaneous:
 
 * [Scroll Container Region](#scroll-container-region)
 
-## 3 Properties
+## Properties
 
-### 3.1 General Section {#general}
+### General Section {#general}
 
-#### 3.1.1 Layout Mode
+#### Layout Mode
 
 This property determines in which mode the scroll container operates.
 
@@ -56,7 +56,7 @@ This property determines in which mode the scroll container operates.
 
 {{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 3.1.2 Scroll Behavior
+#### Scroll Behavior
 
 This property determines what happens when the content of a region does not fit in the region.
 
@@ -67,7 +67,7 @@ This property determines what happens when the content of a region does not fit 
 
 {{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 3.1.3 Width {#width}
+#### Width {#width}
 
 By default the scroll container will extend the full width of its parent widget. It can also be given a specific width, which can be defined either in pixels or percentage of its parent widget.
 
@@ -75,21 +75,21 @@ Default: *Full width*
 
 {{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 3.1.4 Width Value
+#### Width Value
 
 This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. This property determines the width of the scroll container, either in pixels or a percentage.
 
-#### 3.1.5 Alignment 
+#### Alignment 
 
 This property is displayed only when the [Width](#width) property is set to *Pixels* or *Percentage*. The scroll container can be aligned to the left, to the right, or in the middle of its parent widget.
 
 Default: *Center*
 
-### 3.2 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 3.3 Regions Section {#region}
+### Regions Section {#region}
 
 {{% alert color="info" %}}Regions are not supported on native mobile pages.{{% /alert %}}
 
@@ -99,35 +99,35 @@ Regions define the content area of a scroll container. For more information see 
 If you add regions in a [layout](/refguide/layout/), they will automatically be filled with [placeholders](/refguide/placeholder/).
 {{% /alert %}}
 
-#### 3.3.1 Enable Top
+#### Enable Top
 
 Determines whether the scroll container should contain a top region.
 
-#### 3.3.2 Enable Bottom
+#### Enable Bottom
 
 Determines whether the scroll container should contain a bottom region.
 
-#### 3.3.3 Enable Left
+#### Enable Left
 
 Determines whether the scroll container should contain a left region.
 
-#### 3.3.4 Enable Right
+#### Enable Right
 
 Determines whether the scroll container should contain a right region.
 
-## 4 Styling
+## Styling
 
-### 4.1 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 4.2 Common Section {#common-styling}
+### Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 5 Miscellaneous
+## Miscellaneous
 
-### 5.1 Scroll Container Region Section {#scroll-container-region}
+### Scroll Container Region Section {#scroll-container-region}
 
 A scroll container region is part of a scroll container, and defines a content area. A scroll container can contain the following regions:
 
@@ -139,7 +139,7 @@ A scroll container region is part of a scroll container, and defines a content a
 
 You can add and remove all the regions listed above except the center one. 
 
-## 6 Read More
+## Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

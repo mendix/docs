@@ -7,11 +7,11 @@ url: /refguide9/oql-upper/
 This function is only available for Mendix Studio Pro 9.21.0 and above.
 {{% /alert %}}
 
-## 1 Description
+## Description
 
 The `UPPER` function converts all lowercase characters in a given string to uppercase and returns the result.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 

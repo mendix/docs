@@ -5,13 +5,13 @@ description: "Describes the File Menu in Studio Pro."
 weight: 5
 ---
 
-## 1 Introduction
+## Introduction
 
 The **File** menu allows you to manage documents and apps, for example, to create a new app or save changes:
 
 {{< figure src="/attachments/refguide9/modeling/menus/file-menu/file-menu.png" alt="File Menu" class="no-border" >}}
 
-## 2 Menu Items Overview {#overview}
+## Menu Items Overview {#overview}
 
 The **File** menu items are described in the table below:
 
@@ -26,11 +26,11 @@ The **File** menu items are described in the table below:
 | **Close**                  | Closes the current document. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>W</kbd>                    |
 | **Close All**              | Closes all document tabs. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> |
 | **Close App**          | Closes the currently open App and returns to the home page. |                                                   |
-| **Export as Image**        | Exports the current document as an image in the *.png* format. The following document types can be exported as images: domain models, workflows, document templates. |                                                   |
+| **Export as Image**        | Exports the current document as an image in the *.png* format. The following document types can be exported as images: domain models, workflows, microflows, nanoflows, rules, and document templates. |                                                   |
 | **Export App Package** | Exports the current app to a package (*.mpk*) file. This is useful for example when you want to give someone the entire app, or when you need to provide a test app when submitting a ticket. For more information, see [Export App Package](/refguide9/export-app-package-dialog/). |                                                   |
 | **Import App Package** | Imports a package that was created with the **Export App Package** menu item. For more information, see [Import App Package](/refguide9/import-app-package-dialog/). |                                                   |
 | **Exit**                   | Closes Studio Pro                                            |                                                   |
 
-## 3 Read More
+## Read More
 
 * [Studio Pro Overview](/refguide9/studio-pro-overview/)

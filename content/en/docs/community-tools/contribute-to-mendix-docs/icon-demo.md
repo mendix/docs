@@ -6,23 +6,28 @@ description: "Demo file for SVG icon shortcodes."
 draft: true
 ---
 <!-- markdownlint-disable-file -->
+<!-- vale off -->
 
-## 1 Introduction
+## Introduction
 
 Mendix provides a standard set of approved icons in [The Mendix Icon Set](https://mendix.atlassian.net/l/cp/U89wu3oL). This icon set is downloaded to the [docs/static/mx-icons](https://github.com/mendix/docs/tree/development/static/mx-icons) library in SVG format for use in the docs via shortcodes, like this:
 
+```
+{{%/* icon name="three-dots-menu-horizontal" */%}}
+```
+
 To see more information about the pipeline, click **Details** ({{% icon name="notes-paper-text" %}}).
 
-## 2 Syntax
+## Syntax
 
 This shortcode has two attributes:
 
-* `name` (required) — This must exactly match the name of the file in the *docs/static/mx-icons* library.
+* `name` (required) – This must exactly match the name of the file in the *docs/static/mx-icons* library.
 * `color` (optional) – By default, the icon has the same color as the surrounding text. You can override this by specifying an optional `color` attribute, like this: {{% icon name="alert-circle" color="red" %}}. You can set the color to green, red, blue, gray, yellow, or purple.
 
 {{% alert color="info" %}}For details on the icon style guidance, see the [Documentation Style Guide](https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+and+Icons#Icons).{{% /alert %}}
 
-## 3 Some Suggested Icons
+## Some Suggested Icons
 
 {{% figure src="/attachments/community-tools/contribute-to-mendix-docs/common-icons.png" %}}
 
@@ -37,6 +42,7 @@ Here are some icons that might be particularly useful for the docs. In the list 
 * checkmark-circle: **Save** ({{% icon name="checkmark-circle" %}})
 * checkmark-circle-filled: **Success** ({{% icon name="checkmark-circle-filled" color="green" %}})
 * chevron-down: **Move Down** ({{% icon name="chevron-down" %}})
+* copy: **Copy** ({{% icon name="copy" %}})
 * chevron-left: **Move Left** ({{% icon name="chevron-left" %}})
 * chevron-right: **Move Right** ({{% icon name="chevron-right" %}})
 * chevron-up: **Move Up** ({{% icon name="chevron-up" %}})

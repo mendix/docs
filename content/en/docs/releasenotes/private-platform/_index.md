@@ -1,19 +1,20 @@
 ---
-title: "Private Mendix Platform"
+title: "Private Mendix Platform Release Notes"
+linktitle: Private Mendix Platform
 url: /releasenotes/private-platform/
 description: "Release notes for updates to the Private Mendix Platform"
 weight: 40
+cascade:
+    - numberless_headings: true
 ---
 
 These release notes cover changes made to the [Private Mendix Platform](/private-mendix-platform/).
 
-Release notes are available for the following versions of Private Mendix Platform:
+Release notes are available for the following major versions of Private Mendix Platform:
 
-* [1.10](/releasenotes/private-platform/1-10/)
-* [1.9](/releasenotes/private-platform/1-9/)
-* [1.8](/releasenotes/private-platform/1-8/)
-* [1.7](/releasenotes/private-platform/1-7/)
-* [1.6](/releasenotes/private-platform/1-6/)
-* [1.5](/releasenotes/private-platform/1-5/)
+* [2](/releasenotes/private-platform-2/)
+* [1](/releasenotes/private-platform-1/)
+
+Additional release notes are available for the [Private Mendix Platform Download Portal](/releasenotes/private-platform-download-portal/).
 
 For details on title long-term support, medium-term support, and monthly release versions, see [LTS, MTS, and Monthly Release Versions](/releasenotes/studio-pro/lts-mts/).

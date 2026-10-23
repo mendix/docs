@@ -5,7 +5,7 @@ weight: 5
 description: "Describes how to debug a Mendix app that is running in the Mendix Developer App on your mobile phone."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains the steps involved in debugging a Mendix application that is running in the Mendix Developer App on your mobile phone.
 
@@ -13,21 +13,21 @@ This how-to teaches you how to do the following:
 
 * Debug a mobile application
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/)
 * Install the Mendix Developer App on your mobile device
 
-## 3 Start weinre
+## Start weinre
 
 From your console, start weinre with the following parameters: `weinre --boundHost 1.2.3.4 --httpPort 9090`:
 
 * `1.2.3.4` is your local IP, which will most probably match the address that you see in the history of your Mendix Developer App
 * You can change `9090` to a different port as long as it doesn't clash with your application's port, which is usually 8080
 
-## 4 Connect Your Mendix Developer App
+## Connect Your Mendix Developer App
 
 Click **Settings** ({{% icon name="cog" %}}) on the upper-right corner of the screen to configure your debugger:
 
@@ -37,7 +37,7 @@ On the configure screen, fill in the same settings that you used to start weinre
 
 You can now navigate to the same address on your local browser to start the debugging session.
 
-## 5 Read More
+## Read More
 
 * [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages in Mendix](/howto9/monitoring-troubleshooting/clear-warning-messages/)

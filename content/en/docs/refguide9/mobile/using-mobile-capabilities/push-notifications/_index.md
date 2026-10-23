@@ -7,7 +7,7 @@ aliases:
     - /howto9/mobile/notifications/
 ---
 
-## 1 Introduction {#intro}
+## Introduction {#intro}
 
 These guides teach you how to configure push notifications (also known as remote notifications) for your Mendix apps. The guides are meant to be completed in order, and they teach you how to **send a test push notification to a single device**. Depending on your app's starting template your app may already satisfy certain prerequisites and conditions. Complete only the steps which apply to your use case, and skip what does not apply.
 
@@ -16,7 +16,7 @@ These guides teach you how to configure push notifications (also known as remote
 * [Setting Up the Google Firebase Cloud Messaging Server](/refguide9/mobile/using-mobile-capabilities/push-notifications/setting-up-google-firebase-cloud-messaging-server/) – Set up a Firebase account and configure the service in your app so that you can send push notifications.
 * [Configuring Push Notifications](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-config-push/) – Learn to configure push notifications in the runtime.
 * [Implementing Push Notifications in Your Native App](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-implement-native/) – Implement push notifications for a native app.
-* [Building a Native App with Push Notifications Enabled](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) – Build a native app with push notifications enabled.
+* [Implementing Push Notifications in Your Progressive Web App](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-implement-pwa/) – Implement push notifications for a progressive web app.
 * [Sending Your First Test Push Notification](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-send-test/) – Send a test notification to confirm your app is working properly.
 
 After you complete the tasks above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this documentation:

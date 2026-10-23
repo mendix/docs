@@ -1,15 +1,15 @@
 ---
-title: "MPR dump"
-url: /refguide/mx-command-line-tool/dump-mpr
+title: "MPR Dump"
+url: /refguide/mx-command-line-tool/dump-mpr/
 weight: 60
-description: "Describes the command used to create a JSON description of the model of a Mendix App."
+description: "Describes the command used to create a JSON description of the model of a Mendix app."
 ---
 
-## 1 Introduction
+## Introduction
 
-The `mx dump-mpr` command enables you to export the app model of Mendix in the form of JSON. This command is available as of Mendix 10.4.
+The `mx dump-mpr` command enables you to export the app model of Mendix in the form of JSON.
 
-## 2 Usage
+## Usage
 
 Use the following command pattern: `mx dump-mpr [OPTIONS] [TARGET-FILE]`
 
@@ -19,15 +19,21 @@ These are the `OPTIONS`:
 
 | Option | Value | Result |
 | --- | --- | --- |
-| `--unit-type` | A single unit type, or a comma-separated list of unit types. | Filters the results on the supplied unit types and limits the JSON export. |
+| `--unit-type` | A single unit type, or a comma-separated list of unit types. To find a specific unit type, refer to the [Model SDK API documentation](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Each unit includes a `structureTypeName` property that identifies its type. For example, the unit type for a [Page document](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.Page.html#structureTypeName-1) is `Pages$Page`, as indicated in the documentation. Additionally, the unit type is included in the output JSON in the `$Type` field. You can use the command without this argument to list the unit types in your project. | Filters the results on the supplied unit types and limits the JSON export. |
+| `--exclude-system-module` | | Exclude the system module from the JSON export. |
+| `--exclude-protected-modules` | | Exclude protected modules from the JSON export. |
+| `--module-names` | A single module name, or a comma-separated list of module names. | Filters the results on the supplied modules and limits the JSON export. |
 
-### 2.1 Examples
+### Examples
 
 These are valid examples:
 
-* `mx dump-mpr temp.mpr`
-* `mx dump-mpr temp.mpr --unit-type DomainModels$DomainModel`
-* `mx dump-mpr --unit-type DomainModels$DomainModel,Texts$SystemTextCollection temp.mpr`
+* `mx dump-mpr app.mpr`
+* `mx dump-mpr --unit-type DomainModels$DomainModel app.mpr`
+* `mx dump-mpr --unit-type DomainModels$DomainModel,Texts$SystemTextCollection app.mpr`
+* `mx dump-mpr --module-names MyFirstModule app.mpr`
+* `mx dump-mpr --module-names MyFirstModule --unit-type DomainModels$DomainModel app.mpr`
+* `mx dump-mpr --exclude-system-module --exclude-protected-modules app.mpr`
 
 A sample output with the unit type filter on domain models would be:
 
@@ -421,7 +427,7 @@ A sample output with the unit type filter on domain models would be:
   
 </details>
 
-### 2.2 Return Codes
+### Return Codes
 
 This table shows the return codes and their description:
 

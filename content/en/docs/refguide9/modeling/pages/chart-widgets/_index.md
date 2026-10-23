@@ -6,15 +6,15 @@ no_list: false
 description_list: true 
 ---
 
-## 1 Introduction
+## Introduction
 
 Charts allow you to display data series visually on your app pages in a wide range of charts.
 
-[Basic Charts](#basic-charts) are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix Marketplace (for more information on various charts and their configurations, see [Charts](/appstore/widgets/charts/)). Basic charts are based on version 1.47.4 of plotly.js.
+[Basic Charts](#basic-charts) are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix Marketplace (for more information on various charts and their configurations, see [Charts](/appstore/widgets/charts/)). Basic charts are based on plotly.js 3.x as of Charts widget version 6.0.0. For the exact plotly.js version in the release you are using, see the [Charts](https://marketplace.mendix.com/link/component/105695/) listing in the Mendix Marketplace.
 
 [Any Chart](#any-chart) gives much more control and allows more flexible use of the features of [plotly.js](https://plot.ly/). The [Any Chart](/appstore/modules/any-chart/) widget can be included in your app. See the widget description in the Marketplace to see what version of plotly.js is supported.
 
-## 2 Basic Charts {#basic-charts}
+## Basic Charts {#basic-charts}
 
 With Mendix Charts you can quickly create beautiful charts. The following charts are included:
 
@@ -31,13 +31,17 @@ The widgets contain several settings which can be changed in Studio Pro to custo
 
 If the standard chart settings are not sufficient for your purposes, see [Chart Advanced Cheat Sheet](/refguide9/charts-advanced-cheat-sheet/) for information on advanced configuration of your basic charts.
 
-Note that only features up to version 1.47.4 of plotly.js can be used when configuring charts.
+Only plotly.js features available in the version bundled with your Charts widget release can be used when configuring charts.
 
 **Dynamic Series Chart**
 
 From version 1.4 of the basic charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/appstore/widgets/charts-dynamic-series/).
 
-## 3 Any Chart {#any-chart}
+## Any Chart {#any-chart}
+
+{{% alert color="warning" %}}
+The Any Chart widget is deprecated. Its successor, Custom Chart, is not available for Studio Pro 9: it requires [Charts](/appstore/widgets/charts/) widget version 6.0 or above, which is supported in Studio Pro 10 and above.
+{{% /alert %}}
 
 With *Any Chart* you can build all the chart types that are possible with Plotly.js up to the version supported by the widget (see the widget description in the Marketplace for more details). If you want to build a chart which is not available in the Basic charts, *Any Chart* is your friend.
 
@@ -51,8 +55,8 @@ See [Any Chart Widgets](/refguide9/charts-any-configuration/) to learn how to co
 
 The [Any Chart Cheat Sheet](/refguide9/charts-any-cheat-sheet/) lists the most common chart types and the JSON required to create them in Any Chart.
 
-## 4 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide9/performing-basic-functions-widgets.md" %}}
 
-## 5 Documents in This Section
+## Documents in This Section

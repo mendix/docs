@@ -1,16 +1,17 @@
 ---
 title: "Translating Your App Content"
 url: /refguide/translate-your-app-content/
-weight: 50
+weight: 150
+description: "Describes how to add languages to your app, translate text, and manage multilingual content."
 aliases:
   - /howto/collaboration-requirements-management/translate-your-app-content/
 ---
 
-## 1 Introduction
+## Introduction
 
-Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
+Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content into many other languages.
 
-This how-to teaches you how to do the following:
+This document teaches you how to do the following:
 
 * Add a new language to your app
 * Change the working language
@@ -19,11 +20,11 @@ This how-to teaches you how to do the following:
 * Change multiple items of text in one operation
 * Copy a translation from one language to another
 
-It is assumed that you know the basics of creating new apps and editing them.
+This document assumes that you know the basics of creating new apps and editing them.
 
-## 2 Creating a Sample App
+## Creating a Sample App
 
-To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app, as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.
+To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.
 
 When you create an app from a Mendix template, there is one language available: **English, United States**. You usually set this to be the **Default language**. This is the language that is displayed when an end-user has no language selected, or when your app does not support their selected language.
 
@@ -36,7 +37,7 @@ To create your app, do the following:
     * **Order** with the **Integer** attribute **OrderNumber**
     * **Product** with the **String** attribute **ProductName**
 
-        {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/domain-model.png" alt="Domain model for How To" class="no-border" >}}
+        {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/domain-model.png" alt="Domain model with Order and Product entities" class="no-border" >}}
 
 4. Right-click one of the entities and select **Generate overview pages**.
 5. In the **Generate pages** dialog box, ensure both entities are selected and click **OK**.
@@ -56,7 +57,7 @@ To create your app, do the following:
 
 You now have an app with some translatable texts.
 
-## 3 Adding App Languages
+## Adding App Languages
 
 You can now add an additional language to your app.
 
@@ -78,7 +79,7 @@ To add an additional language, do the following:
 
 5. Click **OK**. 
 
-## 4 Changing the Current Language
+## Changing the Current Language
 
 The current language is the language of the dictionary where any text you enter is stored. At the lower-right corner of the Studio Pro window, the language indicator shows which language is the current language.
 
@@ -91,7 +92,7 @@ To change your current language to Chinese, do the following:
 
     {{% alert color="warning" %}}If you do more development later on, remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.{{% /alert %}}
 
-## 5 Translating an Individual Piece of Text
+## Translating an Individual Piece of Text
 
 Now that your current language is Chinese, you can translate some of the texts into that language.
 
@@ -99,7 +100,7 @@ Now that your current language is Chinese, you can translate some of the texts i
 
     The untranslated texts appear in the default language (English, United States) between angle brackets `<>`.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/untranslated-texts.png" alt="untranslated-texts" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/untranslated-texts.png" alt="Untranslated texts shown in angle brackets" class="no-border" >}}
 
 2. Enter your translation for the two text items on the page.
 
@@ -107,20 +108,20 @@ Now that your current language is Chinese, you can translate some of the texts i
 
 You have now added a translation for these two pieces of text.
 
-## 6 Using Batch Translate
+## Using Batch Translate
 
 You can translate each piece of text individually. However, there are texts which appear multiple times (for example, **Cancel**, **Delete**, and **Edit**).
 
 Mendix offers you a way to add a translation for all occurrences of a text at once.
 
-### 6.1 Translating Multiple Texts {#translate-multiple-texts}
+### Translating Multiple Texts {#translate-multiple-texts}
 
-To translate multiple occurrences and multiple texts from the default language, English, to Chinese in a single operation, do the following:
+To translate multiple occurrences and multiple texts from the default language (English) to Chinese in a single operation, do the following:
 
 1. Select the menu option **Language** > **Batch Translate**.
 2. Select **English, United States (default)** as the **Source language** and **Chinese (Simplified), China** as the **Destination language**.
 3. Click **OK**.
-4. The **Documents/modules** field is set to **(all)**. You initially want to work just on your module, rather than everything. To change this, click **Select** next to **Documents/modules**.
+4. The **Documents/modules** field is set to **(all)**. You initially want to work just on your module rather than everything. To change this, click **Select** next to **Documents/modules**.
 5. Make sure only the module **MyFirstModule** is selected. This restricts batch translation to this module.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-myfirstmodule.png" alt="Select only MyFirstModule" class="no-border" width="300" >}}
@@ -139,13 +140,13 @@ To translate multiple occurrences and multiple texts from the default language, 
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Chinese" class="no-border" width="350" >}}
 
-### 6.2 Dealing With More Complex Translations
+### Dealing With More Complex Translations
 
 Sometimes a single word in the source language does not have a single translation in the destination language.
 
 To handle this, follow the steps below:
 
-1. Follow steps **1** through **6** in the [previous section](#translate-multiple-texts) to see the list of texts in your module which can be translated from **English, United States** to **(Chinese (Simplified), China**.
+1. Follow steps **1** through **6** in the [previous section](#translate-multiple-texts) to see the list of texts in your module that can be translated from **English, United States** to **Chinese (Simplified), China**.
 2. In the **Search** field, enter *Order*.
 3. In the grid, there are two lines for the text **Order**. The **#** column shows that there are three places where this text is used (one instance in the first line, and two in the second). The locations are listed in the **Show occurrence** field.
 
@@ -159,27 +160,27 @@ To handle this, follow the steps below:
 
 5. If you made any translations, click **Translate** to save them.
 6. Click **Close** to close the dialog box.
-7. In your app, the text *Order* is used as the command to order a product, and is used to refer to the Order entity. However, in Chinese, the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
+7. In your app, the text *Order* is used as the command to order a product and is used to refer to the Order entity. However, in Chinese, the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
 8. Edit the text on the button to reflect the verb *to order*. In Chinese, this is *下单*.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-chinese.png" alt="Order button on Product New Edit page translated into Chinese" class="no-border" width="300" >}}
 
-9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
+9. Go to **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
 
-    Now in the grid, **Order** has two rows: one row has the translation *下单*, and the other row has no translation.
+    Now in the grid, **Order** has two rows. One row has the translation *下单*, and the other row has no translation.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately" class="no-border" width="600" >}}
 
 10. In the row where **Order** has no translation, enter *订单*. This is the Chinese translation for *an order*.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-2-translations.png" alt="All source texts containing the word 'order' showing two different translations for Order. " class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-2-translations.png" alt="All source texts containing the word 'order' showing two different translations for Order" class="no-border" >}}
 
 11. Click **Translate** to save the translation.
 12. Click **Close** to close the dialog box.
 
-You can now check that the correct translation has been applied to the other instances of Order (for example, on the **Order_Overview** page).
+You can now verify that the correct translation has been applied to the other instances of Order (for example, on the **Order_Overview** page).
 
-## 7 Replacing Text in Current Language
+## Replacing Text in Current Language
 
 Once you have made some translations, you may want to look at the translations to check for spelling or consistency. To do this, use **Batch Replace** as follows:
 
@@ -188,13 +189,13 @@ Once you have made some translations, you may want to look at the translations t
 
     The **Documents/modules** field is set to **(all)**, so the dialog box shows all the translations in the current language dictionary. You can click **Select** next to this field and select only one module to reduce the scope. You can also search for a specific word in the **Search** field. The **#** column shows the locations where the text is used. These locations are listed in the **Show occurrence** section.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-initial.png" alt="All texts which have been translated into Chinese." class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-initial.png" alt="All texts that have been translated into Chinese" class="no-border" >}}
 
 3. Enter any translations that need to be replaced in the **Replace with** column, then click **Replace**.
 
-## 8 Copying to a New Language
+## Copying to a New Language
 
-Having translated your app, you may want to translate it into another related language (for example **Dutch, Netherlands** into **Dutch, Belgium**, **English, United States** into **English, United Kingdom**, or **Chinese (Simplified), China** into **Chinese (Simplified), Singapore**). Many of the translations will be the same, so you do not want to type them again.
+Having translated your app, you may want to translate it into another related language (for example, **Dutch, Netherlands** into **Dutch, Belgium**, **English, United States** into **English, United Kingdom**, or **Chinese (Simplified), China** into **Chinese (Simplified), Singapore**). Many of the translations will be the same, so you do not want to type them again.
 
 To copy our Chinese (Simplified), China translations into a Chinese (Simplified), Singapore dictionary, do the following:
 
@@ -209,16 +210,16 @@ To copy our Chinese (Simplified), China translations into a Chinese (Simplified)
 6. Select **Copy** for the **Operation**.
 7. Select **Chinese (Simplified), China** as the **Source language**.
 8. Select **Chinese (Simplified), Singapore** as the **Destination language**.
-9. Click **Apply**. Now in the **Chinese (Simplified), Singapore** column, it shows **8**, too. Your Chinese (Simplified), China texts are copied to the Chinese (Simplified), Singapore dictionary. You can go to **Language** > **Batch Replace** to review them or go to **Language** > **Batch Translate** to change any cases where the Chinese (Simplified), China and Chinese (Simplified), Singapore translations are different.
+9. Click **Apply**. Now the **Chinese (Simplified), Singapore** column shows **8** as well. Your Chinese (Simplified), China texts are copied to the Chinese (Simplified), Singapore dictionary. You can go to **Language** > **Batch Replace** to review them or go to **Language** > **Batch Translate** to change any cases where the Chinese (Simplified), China and Chinese (Simplified), Singapore translations are different.
 10. Click **Close** to close the dialog box.
 
-## 9 Other Considerations
+## Other Considerations
 
 Now that you know how to make translations of translatable texts, there are a couple of other things you may wish to investigate.
 
-### 9.1 Completeness
+### Completeness
 
-To ensure all your text is properly translate, do a completeness check for your languages.
+To ensure all your text is properly translated, do a completeness check for your languages.
 
 To set up the completeness check, do the following:
 
@@ -226,11 +227,11 @@ To set up the completeness check, do the following:
 2. In the grid, double-click the language for which you want to set the completeness check. 
 3. In the **Check** field, select the **Check completeness** checkbox.
 4. Click **OK** to close the **Edit Language** dialog box. 
-5. In the **App Settings** dialog box, click **OK** to save the changes and close the dialog box. You then receive warnings about all text which has not been translated into that language. There is always a completeness check for the default language.
+5. In the **App Settings** dialog box, click **OK** to save the changes and close the dialog box. You then receive warnings about all text that has not been translated into that language. There is always a completeness check for the default language.
 
 For more information, see [Advanced Language Settings](/refguide/language-settings/#advanced) in the *Language Settings* reference guide.
 
-### 9.2 Sharing Translations With Other Apps
+### Sharing Translations With Other Apps
 
 You have seen how to create translations easily and copy your new translation to a new language in the current app.
 
@@ -240,6 +241,6 @@ Mendix allows you to export a translation to an Excel file, either for the whole
 
 For more information, see [Exporting and Importing Text](/refguide/batch-translate/#export-import) in the *Batch Translate* reference guide.
 
-## 10 Read More
+## Read More
 
 * [Language Menu](/refguide/translatable-texts/)

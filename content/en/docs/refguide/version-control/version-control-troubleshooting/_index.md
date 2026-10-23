@@ -1,16 +1,17 @@
 ---
 title: "Troubleshooting Version Control"
 url: /refguide/troubleshoot-version-control-issues/
-linktitle: "Troubleshoot Version Control"
-weight: 20
+weight: 90
 description: "Presents a list of problems and fixes for version control issues."
 aliases:
     - /howto/collaboration-requirements-management/troubleshoot-version-control-issues/
+no_list: false
+description_list: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #cannot-create-package below is mapped from Studio Pro, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro contains a version control system that supports collaborating with team members. This document describes issues and limitations with Git version control and their workarounds.
 
@@ -19,14 +20,16 @@ For more information and general help on version control, see the following docu
 * [Version Control](/refguide/version-control/)
 * [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/)
 
-## 2 Troubleshooting {#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-### 2.1 Getting an Unexpected Error: `The project contains changes that have not been committed yet. Please commit first before attempting to merge again.` {#css-error}
+### Team Server Connectivity Issues
+
+Mendix Studio Pro needs to connect to the Team Server, where all your apps are stored. If you are having issues connecting to the Team Server, see [Troubleshooting Team Server Issues](/refguide/troubleshoot-team-server-issues/).
+
+### Getting a Changes Have Not Been Committed Error {#css-error}
 
 {{% alert color="info" %}}
-
 This is a known issue for Mendix version 10.0 and above. For more information, see [10.0](/releasenotes/studio-pro/10.0/#css-ki) release notes.
-
 {{% /alert %}}
 
 You may get the error `The project contains changes that have not been committed yet. Please commit first before attempting to merge again.` when you feel there are no uncommitted changes. 
@@ -47,11 +50,11 @@ The workaround corrects the issue for future commits. If you have other branches
 
 {{% /alert %}}
 
-### 2.2 Proxy Servers Are Not Supported
+### Proxy Servers Are Not Supported
 
-Studio Pro communicates with Git repositories by two means: the LibGit2 library and the Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. However, it is not performant enough when it comes to communication with remote Git servers. This is when the Git CLI is used and Studio Pro switches to this client while performing fetch, pull, and push operations (that is why the Git for Windows package, which ships Git CLI to your computer, is an integral part of the Studio Pro installation). Therefore, any operation that requires transferring data to or from remote Git repositories, uses the Git CLI client.
+Studio Pro communicates with version control Git repositories by two means: the LibGit2 library and the Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. However, it is not performant enough when it comes to communication with remote Git servers. This is when the Git CLI is used and Studio Pro switches to this client while performing fetch, pull, and push operations (that is why the Git for Windows package, which ships Git CLI to your computer, is an integral part of the Studio Pro installation). Therefore, any operation that requires transferring data to or from remote Git repositories, uses the Git CLI client.
 
-Unfortunately, Git for Windows is not synchronized with the system proxy settings by default, which means it may be tricky to integrate it into Studio Pro seamlessly. We are trying our best to provide integration as soon as possible but, as a workaround, you can configure the proxy settings directly by either overriding **http_proxy**, **https_proxy**, and **all_proxy** (for more information, see the [Git documentation](https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy)), or by setting the proxy URL in your local **.git/config** using the following commands:
+Unfortunately, Git for Windows is not synchronized with the system proxy settings by default, which means it may be tricky to integrate it into Studio Pro seamlessly. We are trying our best to provide integration as soon as possible but, as a workaround, you can configure the Git version control proxy settings directly by either overriding **http_proxy**, **https_proxy**, and **all_proxy** (for more information, see the [Git documentation](https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy)), or by setting the proxy URL in your local **.git/config** using the following commands:
 
 * Configure the proxy settings:
 
@@ -63,9 +66,9 @@ Unfortunately, Git for Windows is not synchronized with the system proxy setting
 
 You can also use the `--global` modifier to apply the changes system-wise, but this is not recommended if you are using Git for things other than Mendix development.
 
-### 2.3 Getting an "Oops" Pop-Up Menu
+### Getting an Oops Pop-Up Menu
 
-You may get an "Oops" pop-up menu when setting a name and an email for Git in the **Preferences** dialog box or while committing. This problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
+You may get an **Oops** pop-up menu when setting a name and an email for Git in the **Preferences** dialog box or while committing. This problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
 
 * Specify the user name:
   `git config --global user.name "<Name>"`
@@ -74,7 +77,7 @@ You may get an "Oops" pop-up menu when setting a name and an email for Git in th
 
 Any of these commands will create a global Git config. Subsequent interactions via the Studio Pro interface will succeed from now on.
 
-### 2.4 Merging Branches Results in No Changes Being Applied
+### Merging Branches Results in No Changes Being Applied
 
 When two branches are merged, changes sometimes do not come through.
 To fix this issue, take the following steps:
@@ -84,16 +87,16 @@ To fix this issue, take the following steps:
     `git config --global user.name "<Name>"`
     * Specify the email:
     `git config --global user.email "<Email>"` 
-2. Ensure the git version on your machine is 2.43.x or above:
+2. Ensure the git version on your machine is 2.48.1 or above:
     * Check your installed git version by running the following command:
     `git version`.
     * If needed, install the correct version from the [git website](https://git-scm.com/download/win).
 
-### 2.5 Connection Problems When Cloning the Git Repository
+### Connection Problems When Cloning the Git Repository
 
 If you face connection problems when cloning the Git repository using the **Open App** or **Download App** dialog box, the first thing to check is whether the URL of the remote Git repository is correct. It should not be copied from the browser address bar. Most Git services have a noticeable colored **Clone** button which provides the correct URL in a pop-up window. You should use this URL with Studio Pro.
 
-### 2.6 Reporting Issues
+### Reporting Issues
 
 For the Studio Pro developers to be able to troubleshoot any issues that you face with beta Git support, Studio Pro provides a logging mechanism.
 
@@ -101,40 +104,54 @@ When filing a Git support issue with Mendix Support, attach the log files by doi
 
 1. Navigate to the **Help** menu > **Open Log File Directory**:
 
-   {{< figure src="/attachments/refguide/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" class="no-border" >}}
+   {{< figure src="/attachments/refguide/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" class="no-border" width="250" >}}
 
 2. Copy the file called *log.txt* into your ticket. You can also attach additional *log.X.txt* files if they exist.
 
-### 2.7 Git Properties Useful for Troubleshooting
+### Git Properties Useful for Troubleshooting
 
 {{% alert color="warning" %}}
 The properties described below might contain personal information. We advise you to make sure that all the private information is removed before sharing them. 
 {{% /alert %}}
 
-There are properties of the Git repository that provide you with information useful for troubleshooting different issues. Execute the following using the command line in the app’s folder:
+Several properties of the Git repository can provide you with information useful for troubleshooting different [general](#general-properties) and [configuration](#config-properties) issues. You can view them by executing the commands from the command line in the app's folder.
 
-`git status -b` — provides information on the current state of the repository
+#### General {#general-properties}
 
-`git remote -v` — lists the remotes specified for the repository
+The following properties provide general information about the repository status and remotes.
 
-`git config --list --show-origin --show-scope` — provides information on user's Git config
+* `git status -b` - Provides information on the current state of the repository.
+* `git remote -v` - Lists the remotes specified for the repository.
 
-### 2.8 Cannot Create Package from a Revision{#cannot-create-package}
+#### Configuration {#config-properties}
+
+Git stores configuration at several levels:
+
+* System - Affects the entire Git installation.
+* Global - Affects the current user.
+* Local - Affects a specific repository.
+
+More specific configuration overrides more generic configuration (for example, local overrides global). You can inspect the configuration and see where each value is defined by using the following command:
+
+`git config --list --show-origin --show-scope`
+
+This command shows all active configuration values along with the file and scope they come from.
+
+### Cannot Create Package from a Revision{#cannot-create-package}
 
 Sometimes it is impossible to create a package from a certain revision. See below for a description of the most common case and troubleshooting steps for resolving it.
 
-#### 2.8.1 Missing Metadata
+#### Missing Metadata
 
-##### 2.8.1.1 Issue
+##### Cause
 
-When you commit (and push) changes to the repository, Studio Pro adds an additional commit with so called metadata to a special refspec `.git/refs/notes/mx_metadata`. Making it a refspec means that you will not see this commit in your commits history.
-This metadata contains the information needed to create a deployment package (for instance the version of Studio Pro that was used to create this revision).
+When you commit (and push) changes to the repository, Studio Pro adds an additional commit with so called metadata to a special refspec `.git/refs/notes/mx_metadata`. Making it a refspec means that you will not see this commit in your commits history. This metadata contains the information needed to create a deployment package (for instance the version of Studio Pro that was used to create this revision).
 
 To create a deployment package, Studio Pro downloads the specific revision into a temporary folder and then creates the package from there. Studio Pro checks the Mendix version of the selected revision to confirm that it is compatible with the version of Studio Pro. 
 
 Without the metadata, Studio Pro cannot find out this information.
 
-##### 2.8.1.2 Solution
+##### Solution
 
 You can force Studio Pro to recreate the metadata by doing the following:
 
@@ -146,13 +163,49 @@ You can force Studio Pro to recreate the metadata by doing the following:
 
 This will recreate the metadata and you should now be able to create a deployment package from this new revision.
 
-### 2.9 Installed Git Version Does Not Meet Studio Pro's Requirement
+### Installed Git Version Does Not Meet Studio Pro's Requirement
 
 Studio Pro requires a specific minimum version of Git (for more information, see [System Requirements](/refguide/system-requirements/)). If this version is not installed on your device, Studio Pro will show a message during a start-up indicating that certain features will not be available.
 
 You can download and install a recent version of Git from [here](https://git-scm.com/downloads). 
 
-### 2.10 The Index Is Locked
+### The Index Is Locked
 
 Sometimes the Git process may crash while performing any operation on the repository. The reason for this can be a dead battery, a blue screen on Windows, or any other unexpected shutdown. As a result, there is a leftover *index.lock* file, which blocks other Git operations.
 To fix this, go to `<directory of your app>/.git/` and delete the *index.lock* file.
+
+### Unknown Author Shown in Version Control History
+
+In case of a configuration error, an unknown author may appear in the commit history for one or more commits. The values used for commit messages originate from the Git configuration. This information is not used for authentication on Team Server and can be adjusted in [Preferences](/refguide/preferences-dialog/#name).
+
+Other tools on your machine that use the Git configuration, such as a traditional IDE, are typically also capable of changing this Git configuration. If you have chosen a name and email for a hobby project in another IDE, that information may also appear in commits made from Studio Pro.
+
+To fix the issue, ensure that responsible users change their Git configuration in [Preferences](/refguide/preferences-dialog/#name). Changing historical commits is not possible within Studio Pro. 
+
+### Retrieve and Commit + Push Actions Are Getting Slower
+
+This may be caused by the way the storage format of Git interacts with the way the Mendix model stores changes, which can accumulate substantial disk space over time. Studio Pro periodically optimizes your repository if [automatic repository optimization](/refguide/preferences-dialog/#optimization) is enabled.
+
+You can run `git gc` in the command line to manually optimize the repository. `git gc` runs a number of housekeeping tasks, but primarily pack files are created. Pack files store just the changes to the files, which reduces the amount of data which needs to be stored. 
+
+### Cloning my Project Takes a Long Time
+
+Cloning or downloading your app consists of several steps. First the required data is downloaded from the server and then a local unpacking process is executed. The duration of the clone process depends on your repository size, internet connection and computer performance. In case cloning is taking a very long time, consider changing the [clone type](/refguide/clone-type/), or follow the steps described in [Troubleshooting Repository Size](/refguide/troubleshoot-repository-size/).
+
+### Unable to Save Conflicting Files
+
+When performing operations such as rebase, merge, cherry-pick, revert, or merging a feature branch, you may encounter an error stating that access to a certain path is denied, or see a a message like the following: *Saving the conflicting mpr files failed, please abort and try again.*
+
+#### Cause
+
+Studio Pro is unable to save changes to the project files due to file locks or conflicts.
+
+#### Solution
+
+To solve this issue, perform the following steps:
+
+1. Close the error dialog.
+2. Abort the current operation in Studio Pro.
+3. Retry the operation. 
+
+## Read More

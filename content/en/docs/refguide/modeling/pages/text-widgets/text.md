@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The text widget displays a text which can optionally contain parameters. A parameter can be an attribute of a context object or an [expression](/refguide/expressions/) which also has access to the surrounding context objects and their attributes. When used with parameters, every parameter placeholder in the text (which may appear as {0}, {1}, or {2} for example) is replaced with the value of its corresponding attribute or expression. 
 
@@ -17,7 +17,7 @@ For example, if you want to build a page that shows some detailed information ab
 If you start typing in any empty container, Studio Pro will automatically generate a text widget to display your text.
 {{% /alert %}}
 
-## 2 Properties Pane
+## Properties Pane
 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Text properties consist of the following sections:
 
@@ -32,17 +32,18 @@ Styling:
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
-## 3 Properties
+## Properties
 
-### 3.1 General Section {#general}
+### General Section {#general}
 
-
-#### 3.1 Caption {#caption}
+#### Caption {#caption}
 
 **Caption** defines the text that will be shown. It supports dynamic text using templating. The final text is determined by the given [**Template**](#caption-template), [**Parameters**](#caption-parameters), and [**Fallback Text**](#caption-fallback), which can be found in the 'Edit Caption' dialog box. The dialog box can be opened in two ways:
 
 * From the properties sidebar: double-click the property (for example, "Caption") or click the "more" ellipsis (...)
 * From the widget properties dialog box: click the **Edit ...** button next to the property's textbox
+
+#### Parameters {#parameters}
 
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters" width="450" >}}
 
@@ -66,7 +67,7 @@ Parameters have the following settings:
 You can use the formatter functions in the expression editor when using expressions. For more information, see [this list](/refguide/expressions/#expressions-formatter-functions).
 {{% /alert %}}
 
-###### 3.1.2.1 Adding New Parameters
+##### Adding New Parameters
 
 To be able to use parameters, the Text widget must be in the context of an entity such as a [Data widget](/refguide/data-view), [Snippet parameter](http://localhost:1313/refguide/snippet/#parameters), or [Page parameter](/refguide/page-properties/#parameters). To use parameters, do the following:
 
@@ -83,8 +84,7 @@ In the example below, the placeholder `{1}` corresponds to the **Title** attribu
 
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example"  width="450" >}}
 
-
-###### 3.1.2.2 Performing Other Actions on Parameters
+##### Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -110,7 +110,7 @@ For example: The template `Hello, {1}!` with the fallback text _"Nobody to greet
 | Empty attribute  | "Hello, !"         |
 | Missing object   | "Nobody to greet." |
 
-#### 3.1.3 Render Mode
+#### Render Mode
 
 The render mode determines how the text will be displayed. 
 
@@ -120,25 +120,25 @@ The render mode determines how the text will be displayed.
 | Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML).  |
 | Heading 1 - Heading 6 | The text will be rendered as a selected heading (for example, `<h1>` tag in HTML). **Heading 1** is the largest type of heading, **Heading 6** is the smallest one. |
 
-### 3.2 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-### 3.3 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 4 Styling
+## Styling
 
-### 4.2 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 4.3 Common Section {#common-styling}
+### Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 5 Read More
+## Read More
 
 * [Page](/refguide/page/)
 * [Text Widgets](/refguide/text-widgets/)

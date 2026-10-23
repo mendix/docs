@@ -6,7 +6,7 @@ description: "Parameters for a published REST query"
 # Merge into published rest service document
 ---
 
-## 1 Introduction
+## Introduction
 
 The specification of a [published REST operation](/refguide/published-rest-operation/) includes a microflow that implements the operation. This microflow may take parameters that come from the query string of the request.
 
@@ -16,6 +16,6 @@ Query parameters are added to the end of the path following a question mark in t
 
 These are some additional notes about query parameters:
 
-* Query parameters are case sensitive
-* Date and time parameters should be entered in the [ISO-8601](https://www.w3schools.com/xml/schema_dtypes_date.asp) format (for example, `2018-12-31T09:00:00`)
-* When a client calls the operation without specifying the query parameter, it will have the value `empty` in the microflow (except when it has the Boolean type, which is `false` by default)
+* Query parameters are case sensitive.
+* Date and time parameters should be entered in the [ISO-8601](https://www.w3schools.com/xml/schema_dtypes_date.asp) format (for example, `2018-12-31T09:00:00`).
+* When a client calls the operation without specifying the query parameter, it will have the value `empty` in the microflow (except when it has the Boolean type, which is `false` by default).

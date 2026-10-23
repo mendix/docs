@@ -6,7 +6,7 @@ description: "Describes how to configure a form in Mendix Studio Pro."
 weight: 50
 ---
 
-## 1 Introduction 
+## Introduction 
 
 This how-to explains how you can configure a page with a form and how to show items related to this form on the same page. For example, to show a page with a report and a checklist associated with this report and use the page for a [workflow user task](/refguide9/user-task/) afterwards. 
 
@@ -38,7 +38,7 @@ For example, your app already contains a list of all inspection reports:
 
 You would like the **Details** button in this list to open a page showing the details of the selected report and a table with checklist items related to this report. You also would like to be able to add new checklists to the table or edit existing ones. 
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -56,7 +56,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/refguide9/modeling/pages/data-widgets/configure-form/inspection-report-list.jpg"   class="no-border" >}}
 
-## 3 Adding a Page with a Form
+## Adding a Page with a Form
 
 The **Details** button in the inspection report list should open a page with the inspection report details. To configure the page, do the following:
 
@@ -80,7 +80,7 @@ The page with a form (a data view) is created. The **InspectionReport** paramete
 
 {{< figure src="/attachments/refguide9/modeling/pages/data-widgets/configure-form/data-view-configured.jpg"   width="350"  class="no-border" >}}
 
-## 4 Showing Checklist Items
+## Showing Checklist Items
 
 An inspector has a list of *checks* and indicates with **Yes** or **No** whether the company meets the requirements: whether the company has posters with emergency contacts, whether it conducts safety trainings regularly, etc. You would like to show a table with the checklist items and their results below the inspection report: 
 

@@ -7,10 +7,10 @@ no_list: false
 description_list: true
 ---
 
-## 1 Introduction
+## Introduction
 
 Before installing Mendix 9, it is important to understand the [System Requirements](/refguide9/system-requirements/). 
 
 If you have been using Studio Pro 8, we advise reading [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/).
 
-## 2 Documents in This Category
+## Documents in This Category

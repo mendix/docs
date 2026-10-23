@@ -1,5 +1,6 @@
 ---
-title: "Hybrid App Base and Template"
+title: "Hybrid App Base and Template Release Notes"
+linktitle: "Hybrid App Base and Template"
 url: /releasenotes/mobile/hybrid-app/
 weight: 30
 description: "Mendix Hybrid App Base and Hybrid App Template release notes."
@@ -7,9 +8,9 @@ description: "Mendix Hybrid App Base and Hybrid App Template release notes."
 
 If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
-If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**.
+If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from [Projects](https://projects.home.mendix.com/index.html) > **DEPLOY**.
 
-For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide8/hybrid-mobile/) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto8/mobile/hybrid-mobile/) section of the *Studio Pro 8 How-tos*.
+For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide9/hybrid-mobile/) section of the *Studio Pro 9 Guide*.
 
 ## 2021
 
@@ -80,7 +81,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 **Release date: January 3, 2020**
 
 * We fixed an issue with race conditions in asynchronous hooks.
-* We introduced a new **onBeforeSynchonization** hook.
+* We introduced a new **onBeforeSynchronization** hook.
 
 ## 2019
 
@@ -114,7 +115,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 **Release date: August 15, 2019**
 
 * We fixed an issue where Android devices with older WebView versions might get stack in a loading loop.
-* We fixed an unhandled exception with Secure Storage when using a PIN view. Users on devices with no OS-level security features enabled — like pin, password, biometrics — will now be prompted to enable any of them before proceeding to set their app's PIN.
+* We fixed an unhandled exception with Secure Storage when using a PIN view. Users on devices with no OS-level security features enabled—like pin, password, biometrics—will now be prompted to enable any of them before proceeding to set their app's PIN.
 
 ### Hybrid App Base 4.1.3 / Hybrid App Template 4.1.3
 
@@ -128,7 +129,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 * We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder. Thus, if you have an existing **config.xml** file, make sure that lines `213-214` read as follows:
 
-```xml {linenostart=213}
+```xml
 <resource-file src="config/google-services.json" target="app/google-services.json" />
 <resource-file src="config/build-extras.gradle" target="build-extras.gradle" />
 ```
@@ -337,7 +338,7 @@ Unfortunately, Crosswalk is not compatible with SDK versions 24 and above. There
 
 {{% alert color="info" %}}
 
-For this update, Mendix recommends downloading a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
+For this update, Mendix recommends downloading a fresh hybrid app package from [Projects](https://projects.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
 
 {{% /alert %}}
 
@@ -364,7 +365,7 @@ For this update, Mendix recommends downloading a fresh hybrid app package from t
 **Release date: April 19, 2018**
 
 * We improved the styling of the loader screen.
-* We added backwards compatibility with respect to quality vs. density properties (for Android only).
+* We added backwards compatibility with respect to quality versus density properties (for Android only).
 
 ### Hybrid App Base 2.0.3 / Hybrid App Template 2.0.1
 
@@ -390,7 +391,7 @@ This patch fixes an issue with an upstream dependency (`com.android.support:supp
 
 {{% alert color="info" %}}
 
-This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, Mendix recommends downloading a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
+This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, Mendix recommends downloading a fresh hybrid app package from [Projects](https://projects.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
 
 {{% /alert %}}
 
@@ -406,7 +407,7 @@ This is a major release, because it is not fully compatible with older versions 
 
 {{% alert color="info" %}}
 
-For this update, Mendix recommends downloading a fresh hybrid app package from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**).
+For this update, Mendix recommends downloading a fresh hybrid app package from [Projects](https://projects.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**).
 
 {{% /alert %}}
 

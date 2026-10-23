@@ -1,43 +1,19 @@
 ---
-title: "Consumed REST Services"
+title: "Consumed REST Service"
 url: /refguide/consumed-rest-services/
-description: "Presents an overview of consumed REST services and JSON in Mendix."
+description: "Describes how to interact with REST APIs in Mendix and build REST requests."
 weight: 15
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 REST {#rest}
+## Consumed REST Services
 
-Representational state transfer (REST) is an approach to consuming or exposing resources. It has gained popularity because of its simplicity, because no extensive schemas or contracts are needed to transfer data between endpoints. It uses the following:
+Mendix offers features that allow you to interact with any REST API. You can use them to build and test your REST requests or create data structures in your project.
 
-* HTTP URLs to locate resources
-* HTTP headers to authenticate and specify [content types](#content-types) (such as XML or JSON)
-* HTTP methods to identify operations on resources, such as `GET` (retrieve data) or `POST` (send data)
+## Read More
 
-Lack of contracts and schemas give you an easy start to using REST. However, many REST endpoints return complex data.
-
-The [JSON Structure](/refguide/json-structures/) document helps to give structure to JSON data. From an example JSON snippet, a lightweight schema is extracted that is used in [Mapping Documents](/refguide/mapping-documents/). The [Import Mapping](/refguide/import-mappings/) document converts JSON (or XML) to Mendix objects, and the [Export Mapping](/refguide/export-mappings/) document serializes Mendix objects to JSON (or XML).
-
-### 1.1 Content Types {#content-types}
-
-Content types are included in [custom HTTP headers](/refguide/call-rest-action/#custom-http-headers) to specify the output of the call, including media type or data format. For more information on content types, see [Content Negotiation in REST](https://restfulapi.net/content-negotiation/).
-
-## 2 JSON
-
-JavaScript object notation (JSON) is a lightweight representation of data. 
-
-```js
-{
-	"name": "John Smith",
-	"age": 23,
-	"address": 
-	{
-		"street": "Dopeylane 14",
-		"city": "Worchestire"
-	}
-}
-```
-
-Above, the object `person` is described with the corresponding values for the attributes `name`, `age`, and the referred object `address`.
-
-REST calls that output JSON need to declare the [content type](#content-types) as `application/JSON`. 
+* [Consumed REST Service](/refguide/consumed-rest-service/) – Describes how to consume a REST service
+* [Import an OpenAPI/Swagger contract](/refguide/consumed-rest-service/#installation) – Describes how to create a consumed REST service from an OpenAPI/Swagger contract
+* [Call REST Service](/refguide/call-rest-action/) – Describes the Call REST Service microflow action
+* [Use Call REST Service Action in a Microflow](/refguide/integration/use-call-rest-action-in-microflow/) – Describes how to use the Call REST Service action in a microflow
+* [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/) – Describes these system entities in your domain model

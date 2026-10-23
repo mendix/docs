@@ -7,7 +7,7 @@ description: "Presents an overview of the features of pages and relevant page re
 #This document also has a redirect from opening-pages (which has been deleted)
 ---
 
-## 1 Introduction
+## Introduction
 
 A page is the basic end-user interface of a Mendix application. It is used to display information to the end-user, allow end-users to create and edit information, and enable end-users to trigger additional automated processing.
 
@@ -25,7 +25,7 @@ Pages are opened either in the current pane of the browser or in a pop-up, child
 
 For more information on page properties, see [Page](/refguide9/page/).
 
-## 2 Page and Page Resources
+## Page and Page Resources
 
 In addition to a page, you can add page resources in the page editor. They help structure your page, style it, and fill it with data. For more on how to add page resources, see [Page Resources](/refguide9/page-resources/). 
 
@@ -39,7 +39,7 @@ Type | Description
 [{{< figure src="/attachments/refguide9/modeling/pages/menu-icon.png" class="no-border" >}}Menu](/refguide9/menu/) | A [menu](/refguide9/menu/) defines a menu structure that can be used by a menu widget. 
 [{{< figure src="/attachments/refguide9/modeling/pages/image-collection-icon.png" class="no-border" >}}Image collection](/refguide9/image-collection/) | An [image collection](/refguide9/image-collection/) is a page resource where you place custom images to use them in your application. For more information, see [Images](/refguide9/images/). 
 
-## 3 Widgets and Their Categories {#widgets-categories}
+## Widgets and Their Categories {#widgets-categories}
 
 All the documents described above are built using widgets. There are many kinds of widgets, and not every widget can be used on all of the document types. Layouts support widgets for giving structure to pages, but not widgets for showing data. This is to make the intention of layouts clear: they should define what comes where and not much more. However, snippets can be placed in layouts, and that is an indirect way to include more kinds of widgets in a layout.
 
@@ -47,7 +47,7 @@ Widgets are grouped into the following categories:
 
 * [Data containers](/refguide9/data-widgets/) are central to building forms in Mendix; with these widgets, you can view and edit the data in the application
 * [Text widgets](/refguide9/text-widgets/) are used to display textual information to the end-user
-* [Structure  widgets](/refguide9/structure-widgets/) can contain other widgets 
+* [Structure widgets](/refguide9/structure-widgets/) can contain other widgets 
 * [Input elements](/refguide9/input-widgets/) make it possible to show and edit the values of attributes and associations
 * [Images, Videos, and Files](/refguide9/image-and-file-widgets/) allow you to work with files, images, and videos 
 * [Buttons](/refguide9/button-widgets/) are buttons that trigger actions
@@ -57,7 +57,7 @@ Widgets are grouped into the following categories:
 * Add-ons can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) or created by yourself using JavaScript
     * [Charts](/refguide9/chart-widgets/) are add-on widgets that graphically represent data using various chart types
 
-## 4 Read More
+## Read More
 
 * [Page Resources](/refguide9/page-resources/)
 * [Page](/refguide9/page/)

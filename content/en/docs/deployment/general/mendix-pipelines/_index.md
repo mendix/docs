@@ -303,9 +303,13 @@ Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) >
 
 ### Masked Variables
 
-Select **Mask > Yes** for confidential values. It will never be printed in the logs or error messages.
+Select **Mask > Yes** for confidential values. Once a variable is masked, its value cannot be unmasked by changing **Mask > No**. This prevents the saved value from being exposed.
 
-While editing a saved variable, selecting **Mask > No** will allow you to verify the value. Make sure to set it back to **Mask > Yes** before saving the variable.
+When creating a masked variable, enter the value and save it. The value will be displayed as `********` in the UI.
+
+To update an existing masked variable, replace the displayed `********` with the new value and save the variable. The updated value will continue to be displayed as `********` in the UI.
+
+Masked values are never printed in logs or error messages.
 
 ## The Settings Tab{#settings-tab}
 

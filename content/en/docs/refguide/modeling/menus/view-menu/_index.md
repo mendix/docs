@@ -111,7 +111,7 @@ The [Integration pane](/refguide/integration-pane/) enables you to browse the [C
 
 ### Maia
 
-The **Maia** pane displays the Maia Chat interface where you can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/).
+The **Maia** pane displays the Maia interface. In this chat, you can create and change parts of your app, and ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Make Capabilities](/refguide/maia-make/). In Studio Pro 11.7 and below, the **Maia** pane displays the Maia Chat interface. For more information, see [Chat with Maia](/refguide/maia-chat/).
 
 ### Marketplace
 

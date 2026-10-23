@@ -58,4 +58,4 @@ If Maia says it cannot fetch a URL, check the following:
 
 * [Maia Make Capabilities](/refguide/maia-make/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Maia Chat](/refguide/maia-chat/)
+* [Chat with Maia](/refguide/maia-chat/)

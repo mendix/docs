@@ -91,6 +91,24 @@ To deprovision, select a plan of type **Provisioned** from your resources overvi
 Your subscription plan operates on a monthly bundle cycle. When you deprovision a resource, the deprovisioning takes effect at the end of the current subscription month. Until that date, you can still use the resource and the status in the overview reads **Plan Deprovision Scheduled**.
 {{% /alert %}}
 
+## Estimating Your Maia Units Needs {#estimating-maia-units}
+
+The number of Maia Units a prompt consumes depends on the task you ask Maia to perform. Small, focused changes consume few units. Tasks that involve multiple steps, such as running and validating your app, consume more.
+
+The table below shows how many Maia Units some example prompts currently consume. Use these examples as a reference when you estimate how many Maia Units your organization needs each month.
+
+| Example Prompt | Maia Units |
+| --- | --- |
+| Generate an order entity | 4 |
+| Create a plan for an order management system for an electric vehicle company | 30 |
+| Generate overview pages for the order entity | 42 |
+| Create a delete microflow for the orders entity | 50 |
+| Run and validate my app | 90 |
+
+{{% alert color="info" %}}
+These values are indicative. Actual consumption varies with the size and complexity of your app, how specific your prompt is, and how much follow-up is needed in the conversation. To see your company's actual usage, see the [Monthly Consumption](#consumption) section.
+{{% /alert %}}
+
 ## Audit Logs
 
 Audit logging provides a reliable record of company administrator changes and other relevant user interactions performed within the Maia Resources application.

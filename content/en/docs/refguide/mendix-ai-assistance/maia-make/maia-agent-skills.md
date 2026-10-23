@@ -153,6 +153,6 @@ To apply the updated skills immediately, click the **Sync** button in the **Skil
 
 * [Maia Make Capabilities](/refguide/maia-make/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Maia Chat](/refguide/maia-chat/)
+* [Chat with Maia](/refguide/maia-chat/)
 * [Best Practices for Skill Creators](https://agentskills.io/skill-creation/best-practices) – guidance on writing effective skill content
 * [Agent Skills Specification](https://agentskills.io/specification) – the full specification for the agent skills format

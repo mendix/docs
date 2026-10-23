@@ -88,11 +88,11 @@ The top bar includes several key elements:
 **At the center of the screen** is the **working area**, where you'll see the currently open document tab. It's the main space within the IDE where you design, model, and configure application components visually. Think of it as the code editor in a text-based programming IDE.
 
 {{% alert type="info" %}}
-When you launch **Studio Pro** for the first time, you’ll see the **Welcom** tab. From here, you can access:
+When you launch **Studio Pro** for the first time, you’ll see the **Welcome** tab. From here, you can access:
 
 * [Maia Learn](/refguide/maia-learn/) – learning materials to help you get started
 
-* [Maia Chat](/refguide/maia-chat/) – an AI-powered assistant for quick support and guidance
+* [Maia Make](/refguide/maia-make/) – a group of agentic development capabilities in Studio Pro where you can describe your app requirements and get quick answers, support, and guidance in one conversation
 
 We recommend watching the introduction videos to get familiar with the basic concepts of Mendix development before you start building your app.
 {{% /alert %}}
@@ -145,11 +145,11 @@ You have created a new persistable entity called **Employee**. This means the en
     {{< figure src="/attachments/quickstarts/part1/7.2 CreateAttributes.png" width="450px" alt="Create attributes on an entity">}}
 
 {{% alert type="info" %}}
-You can create a domain model by simply describing your application using [Maia for Domain Model](/refguide/maia-for-domain-model/) an AI-powered tool that generates domain models based on your input.
+You can also create a domain model by describing your application to Maia. Maia generates the domain model based on your input. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/).
 
-To use it, **click Maia for Domain Model** in the **Working Area**, then describe your application in the chat box on the right.
+To use it in Studio Pro 11.8 and above, open the **View** menu and select the **Maia** pane, then describe your application in the chat. In Studio Pro 11.7 and below, click **Maia for Domain Model** in the **Working Area**, then describe your application in the chat box on the right.
 
-In our case, you can ask Maia: “Create a domain model that stores employee information: first name, last name, job role, and employee ID.” 
+In this case, you can ask Maia: “Create a domain model that stores employee information: first name, last name, job role, and employee ID.” 
 {{% /alert %}}
 
 ### Add an Association
@@ -258,9 +258,9 @@ To deploy your app to the Mendix Cloud (Paid), there are multiple options for ho
 
 Throughout this guide, you built your **Employee** app by hand—dragging entities onto the canvas, wiring up buttons, and writing microflow logic step by step. That is a great way to learn how Studio Pro works under the hood. But once you are comfortable with the basics, you do not have to do everything manually. Maia, Mendix's built-in AI assistant, can take over much of this repetitive modeling work for you.
 
-Unlike a typical chatbot that only answers questions, Maia is agentic: it can read your app's current domain model, pages, and logic, understand the context you are working in, and then directly create or modify app elements on your behalf. Ask it to add an entity, generate a page, or build out a microflow, and it will produce real, editable Studio Pro artifacts—not just a suggestion or a code snippet for you to copy in.
+Unlike a traditional chatbot that only answers questions, Maia is agentic: it can use your app's existing domain model, pages, and logic as context to create or modify elements directly in Studio Pro. Through [Maia Make](/refguide/maia-make/), you can describe what you want in plain language, and Maia generates artifacts such as domain models, pages, microflows, workflows, and OQL queries. In the same conversation, you can ask development questions or use [Maia Explain](/refguide/maia-explain/) to understand existing functionality without changing your app.
 
-Maia is not one single feature but a collection of capabilities woven into Studio Pro. [Maia Make](/refguide/mendix-ai-assistance/), is a conversational interface where you describe what you want in plain language and Maia generates the domain model changes, pages, or microflows to match. Within Maia Make are focused generators (for domain models, pages, workflows, and OQL queries), recommenders that suggest the next best widget or microflow activity as you build, and guidance tools like [Maia Chat](/refguide/maia-chat/) and [Maia Explain](/refguide/mendix-ai-assistance/) for when you want an explanation rather than a change to your app. As you grow more advanced, [Maia Agent Skills](/refguide/maia-agent-skills/) and Agent Instructions let you teach Maia your team's own conventions so Maia's suggestions stay consistent with how your organization builds apps.
+Studio Pro also includes recommenders that the next best widget or microflow activity as you build. For more advanced use cases, [Maia Agent Skills](/refguide/maia-agent-skills/) and [Agent Instructions](/refguide/maia-agent-instructions/) let you tailor Maia to your team's conventions, helping it produce suggestions that align with how your organization builds apps.
 
 ### Try It Yourself: Extending the Employee App
 

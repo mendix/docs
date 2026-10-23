@@ -2,7 +2,7 @@
 title: "Access Model and Role Reference for Private Mendix Platform"
 url: /private-mendix-platform/access-model/
 weight: 10
-description: "Describes the access model of Private Mendix Platform, including Platform Roles, Resource Roles, group hierarchy and inheritance, resource ownership, and how permissions combine."
+description: "Describes the access model of Private Mendix Platform, including platform roles, Resource Roles, group hierarchy and inheritance, resource ownership, and how permissions combine."
 ---
 
 ## Introduction
@@ -23,9 +23,9 @@ Private Mendix Platform separates platform-wide privilege from privilege over an
 
 ### Platform Roles
 
-A Platform Role answers the question *what can this person do on the platform in general?* It is assigned to a user account when the account is created, and can be changed at any time afterwards. Platform Roles are stackable: a user can hold several, and the effective set of permissions is simply everything those roles grant, added together.
+A platform role answers the question *what can this person do on the platform in general?* It is assigned to a user account when the account is created, and can be changed at any time afterwards. Platform roles are stackable: a user can hold several, and the effective set of permissions is simply everything those roles grant, added together.
 
-Private Mendix Platform includes the following default Platform Roles.
+Private Mendix Platform includes the following default platform roles.
 
 | Role | Grants |
 | --- | --- |
@@ -37,13 +37,13 @@ Private Mendix Platform includes the following default Platform Roles.
 **CompanyAdmin and SystemAdmin are parallel, not nested.** Neither contains the other. They address different audiences and grant access to different halves of admin mode. Granting CompanyAdmin does not give someone access to identity or licensing settings, and granting SystemAdmin does not give someone the ability to manage users and groups. A user who needs both must be given both.
 {{% /alert %}}
 
-There is only one kind of account. Accounts used by services rather than people are not a separate account type: a service that calls the platform API authenticates as an ordinary account, and what it can do is determined by that account's Platform Role, exactly as it would be for a person. A role such as **API User**, holding only the permissions a particular integration needs, is an example of a Platform Role defined for that purpose.
+There is only one kind of account. Accounts used by services rather than people are not a separate account type: a service that calls the platform API authenticates as an ordinary account, and what it can do is determined by that account's platform role, exactly as it would be for a person. A role such as **API User**, holding only the permissions a particular integration needs, is an example of a platform role defined for that purpose.
 
 {{% alert color="info" %}}
 **Reviewer note:** confirm whether a role named API User ships with the platform or is customer-defined, so this paragraph can state it plainly. Note also that [Private Mendix Platform Functionalities - Company Administrators](/private-mendix-platform/reference-guide/admin/company/#user-management) currently describes "API users" as a distinct kind of account. That wording contradicts the model and should be corrected on that page as part of this change.
 {{% /alert %}}
 
-Permissions in a Platform Role fall into the following broad categories:
+Permissions in a platform role fall into the following broad categories:
 
 * Generic platform access, such as reaching the web interface and creating an app.
 * Management capabilities on the **Manage** side, such as app management, user and group management, Marketplace administration, and activity logs.
@@ -77,7 +77,7 @@ Private Mendix Platform includes the following default Resource Roles.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-**The Resource Role named Administrator is not a platform administrator.** It grants no access to admin mode and no privilege over the platform. It reaches only the resources owned by the group in which its holder holds it. The platform-wide equivalents are the **CompanyAdmin** and **SystemAdmin** Platform Roles.
+**The Resource Role named Administrator is not a platform administrator.** It grants no access to admin mode and no privilege over the platform. It reaches only the resources owned by the group in which its holder holds it. The platform-wide equivalents are the **CompanyAdmin** and **SystemAdmin** platform roles.
 {{% /alert %}}
 
 Permissions in a Resource Role fall into four categories:
@@ -111,7 +111,7 @@ Changing a role changes the effective access of everyone who holds it, so review
 
 ### Group Admin
 
-Group Admin sits outside both role systems. It is not a Platform Role, not a Resource Role, and not governable: it does not appear anywhere among the roles you can view or edit, and its permissions cannot be changed or extended.
+Group Admin sits outside both role systems. It is not a platform role, not a Resource Role, and not governable: it does not appear anywhere among the roles you can view or edit, and its permissions cannot be changed or extended.
 
 It is assigned invisibly and automatically to the users named in the **Group Admins** field of a group, as a consequence of naming them there. You never assign it yourself and you will not see it listed against a user.
 
@@ -191,7 +191,7 @@ This rule is specific to deployment namespaces. App projects are already exclusi
 
 A component published to the private Marketplace is owned by the user who published it, rather than by a group. Ownership therefore does not follow the group hierarchy.
 
-Access to the Marketplace administration area, where content is approved, categorized, and imported, is a Platform Role permission and not a Resource Role. A user who administers Marketplace content does not need any Resource Role to do so.
+Access to the Marketplace administration area, where content is approved, categorized, and imported, is a platform role permission and not a Resource Role. A user who administers Marketplace content does not need any Resource Role to do so.
 
 Marketplace content can additionally be shared with groups by its publisher. See [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups).
 
@@ -213,7 +213,7 @@ The two role systems combine differently, and conflating them is the source of m
 
 ### Platform Roles Combine as a Union
 
-Platform Roles are not scoped to a resource, so there is nothing to reconcile. A user's effective platform permissions are every permission granted by every Platform Role they hold, added together.
+Platform roles are not scoped to a resource, so there is nothing to reconcile. A user's effective platform permissions are every permission granted by every platform role they hold, added together.
 
 ### Resource Roles Combine Only on a Shared Resource
 
@@ -230,7 +230,7 @@ When a member's role in a group changes, the change is applied at once to every 
 When users sign in through your identity provider rather than with a local account, they still need a place in the group hierarchy and a Resource Role in order to do anything. Three settings determine what happens on first arrival.
 
 * **Default Group and Default Role.** Every incoming user with no other placement is put into a configured group with a configured role. Pointing these at a deliberately low-privilege landing group gives new arrivals somewhere to be that has no access to real projects, until they are assigned to their actual team.
-* **Parse Roles.** When enabled, Private Mendix Platform reads group and role claims from the incoming token and maps them onto Platform Roles and groups automatically. When disabled, no such mapping occurs and every federated user lands on the defaults above, to be assigned afterwards manually, through SCIM, or through the platform API.
+* **Parse Roles.** When enabled, Private Mendix Platform reads group and role claims from the incoming token and maps them onto platform roles and groups automatically. When disabled, no such mapping occurs and every federated user lands on the defaults above, to be assigned afterwards manually, through SCIM, or through the platform API.
 * **Automation Settings.** For users whose identity provider information is mapped onto their platform profile, group membership can be driven from the values of those profile attributes. When a user arrives with a value that already corresponds to a group, they are added to that group. When a user arrives with a value that does not, a group is created for it and the user is made a member. This is configured on the Group Management page and is separate from Parse Roles. See [Automating Group Assignment](/private-mendix-platform/access-administration/#automating-group-assignment).
 
 Users can also be provisioned before their first login, using SCIM, so that their accounts and group placement exist in advance.

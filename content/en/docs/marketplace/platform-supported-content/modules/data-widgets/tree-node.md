@@ -9,7 +9,7 @@ description: "Describes the purpose, features, and configurations of the Tree No
 
 The [Tree Node](https://marketplace.mendix.com/link/component/116540) widget displays a level of tree nodes.
 
-Mendix recommends using multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion/) widget is a better alternative.
+Mendix recommends using multiple Tree Node widgets in a nested manner. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion/) widget is a better alternative.
 
 ## Features
 
@@ -18,14 +18,14 @@ Mendix recommends using multiple Tree Node widgets in a nested matter. In this w
 * Allows you to nest tree nodes to map out your entire domain model into a tree view
 * Delivers out-of-the-box performance and network optimizations through lazy loading and caching of tree nodes
 * Offers additional styling customizations through Atlas UI
-* Displays an infinite amount of tree nodes by using self-reference entity (available from data widgets version 3.11.0 and above)
+* Displays an infinite amount of tree nodes by using self-reference entity (available from Data Widgets version 3.11.0 and above)
 
-### Child Detection Mode
+### Child Detection Mode {#child-detection-mode}
 
-Starting from data widgets version 3.11.0, Tree Node offers 2 ways of rendering child nodes:
+Starting from Data Widgets version 3.11.0, Tree Node offers two ways of rendering child nodes:
 
-* **Manual child rendering** – This is the current available configuration. The end-user needs to put tree node widget (child) inside another treenode widget (parent) and set data source accordingly.
-* **Infinite tree node** – This is a recursive mode whereas the children have self reference to the same entity as the parent. In this mode, the widget will render child automatically. Data with empty parents will be automatically used as root.
+* **Manual child rendering** – You place a Tree Node widget (child) inside another Tree Node widget (parent) and set its data source accordingly. The widget uses this mode when **Parent association** is not set.
+* **Infinite tree node** – A recursive mode in which each child refers to its parent through the self-referencing association selected in **Parent association**. The widget uses this mode when **Parent association** is set. In this mode, the widget renders child nodes automatically. Objects with an empty parent are used as root nodes.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/treenode/infinite_treenode.png" alt="self reference entity for treenode" class="no-border" >}}
 
@@ -57,7 +57,7 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 
 * **Data source** – the data source of the widget, which can also be optionally used as the data source for the header and content of the widget
     * Required
-* **Parent association** – the association used to select a parent. If set, tree node will automatically use infinite tree node child detection modes. 
+* **Parent association** – the association used to select a parent. If set, the widget uses [Infinite tree node](#child-detection-mode) mode.
 * **Header type** – defines the type of the header:
     * Default: **Text**
     * When set to **Text**, you can configure the **Header caption** property
@@ -65,17 +65,21 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 
     {{% alert color="info" %}}The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.{{% /alert %}}
 
-* **Header caption** – you can enter the header caption in the field or click **Edit** to configure a text template in the **Edit Caption** dialog box
+* **Header caption** – the text template used as the header caption
     * Configurable when **Header type** is set to **Text**
-* **Has children** – indicates if the current level of tree nodes has children tree nodes
-    * Default: **Yes**
-    * When set to **Yes**, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
+* **Open node when** – defines which part of the node opens or closes the node when clicked
+    * Configurable when **Header type** is set to **Custom**; default: **Header is clicked**
+    * When set to **Header is clicked**, the whole header is clickable
+    * When set to **Icon is clicked**, only the icon opens or closes the node; in this case, **Show icon** cannot be set to **No**
+* **Has children** – a Boolean expression that indicates whether a tree node has child nodes or is an end node
+    * Configurable when **Parent association** is not set
+    * When configured, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
 
-    {{% alert color="info" %}}The **Has children** configuration will be set automatically on infinite tree node child detection mode.{{% /alert %}}
+    {{% alert color="info" %}}In **Infinite tree node** mode, **Has children** is hidden and the widget detects child nodes automatically.{{% /alert %}}
 * **Start expanded** – determines whether the content of the current level of tree nodes starts expanded or collapsed
-    * Configurable when **Has children** is set to **Yes**; default: **No**
+    * Configurable when **Has children** is configured or **Parent association** is set; default: **No**
 
-    {{% alert color="info" %}}On infinite tree node child detection modes, we recommend setting **Has children** to **No** for large data sets. Otherwise, the setting will force the tree node to expand directly, loading all data at once.{{% /alert %}}
+    {{% alert color="info" %}}In **Infinite tree node** mode, Mendix recommends setting **Start expanded** to **No** for large data sets. When **Start expanded** is set to **Yes**, the widget expands all tree nodes directly and loads all data at once.{{% /alert %}}
 
 * **Animate** – defines whether the content is animated when a tree node expands and collapses
     * Default: **Yes**
@@ -95,6 +99,8 @@ The **Visualization** tab includes the following properties:
     * Configurable when **Show icon** is set to either **Left** or **Right**
 * **Animate icon**– defines whether the icon is animated when you expand or collapse a tree node
     * Default: **Yes**
+* **No data message** – the text shown when there are no items to display
+    * Configurable when **Parent association** is set; default: **No data available**
 
 ### Styling
 
@@ -104,5 +110,4 @@ These are the design properties shipped with Atlas UI for this widget:
 
 * **Borders** – changes the border appearance
     * **Horizontal**, **Both**, **None** (default)
-* **Hover** – highlights an item when hovering over it
-    * **Yes**, **No** (default)
+* **Hover** – a toggle that highlights an item when hovering over it; only useful when the item is clickable

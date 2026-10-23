@@ -7,22 +7,11 @@ description: "Describes the configuration and usage of the Gallery widget, which
 
 ## Introduction
 
-The [Gallery](https://marketplace.mendix.com/link/component/116540) widget, a replacement for both the template grid and list view, helps you build beautiful lists and grids for desktop, tablet, and mobile devices. Featuring the same filtering and sorting as seen in [Data Grid 2](https://marketplace.mendix.com/link/component/116540), the Gallery widget also provides options for varying columns per device type and gives you the power to create amazing grid and list experiences for every user.
+The [Gallery](https://marketplace.mendix.com/link/component/116540) widget, a replacement for both the template grid and list view, helps you build beautiful lists and grids for desktop, tablet, and mobile devices. Featuring the same filtering and sorting as seen in [Data Grid 2](/appstore/modules/data-grid-2/), the Gallery widget also provides options for varying columns per device type and gives you the power to create amazing grid and list experiences for every user.
 
-Here is an example of a Gallery widget using filters:
+Here is an example of a Gallery widget using a filter and a sort:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/example.png" alt="Example of gallery using filter and sort"   width="300"  class="no-border" >}}
-
-### Advanced Options
-
-The gallery has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your gallery:
-
-* Pagination type
-* Pagination position
-* Empty list option
-* Dynamic item class
-* Filtering
-* Sorting
 
 ## Configuration
 
@@ -30,15 +19,15 @@ Several options can be defined in the Gallery widget:
 
 ### Data Source
 
-Data source specifies the source of the data being presented in the Gallery. You can select data from **Database**, **Association**, **Microflow**, **Nanoflow**, or **Xpath**.
+Data source specifies the source of the data being presented in the Gallery. You can select data from **Database** (optionally with an XPath constraint), **Association**, **Microflow**, or **Nanoflow**.
 
 ### Columns
 
-We provide a mechanism that automatically applies a different number of columns based on the device being used. In the Gallery widget, you can select columns for **Desktops**, **Tablets**, or **Phone/Mobile**.
+The Gallery widget applies a different number of columns based on the device being used. You can set **Desktop columns**, **Tablet columns**, and **Phone columns**.
 
 ### Items
 
-In the items group you can define the properties related to the items being presented.
+On the **Behavior** tab, you can define the properties related to the items being presented. **Page size**, **Pagination**, and **Position of pagination** are in the **Pagination** group. **Empty message** and **Dynamic item class** are in the **Appearance** group.
 
 #### Page size
 
@@ -47,14 +36,14 @@ Defines the amount of data shown for each page or the limit to be presented when
 #### Pagination
 
 {{% alert color="info" %}}
-This widget does not support [system texts](/refguide/system-texts/), meaning is not possible to translate its content to another language.
+The pagination status text and the screen reader labels of the paging buttons are currently written in English and cannot be translated. We are working to improve this in the future.
 {{% /alert %}}
 
-You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scroll bar).
+You can choose between paging buttons (buttons presented below or above the grid), virtual scrolling (a mechanism that automatically loads data when the user reaches the bottom of the scroll bar), or load more (a button that loads more items).
 
-#### Position of Paging Buttons
+#### Position of Pagination
 
-This option is only available when `Pagination` is marked as `Paging buttons` and defines its position relative to the grid items.
+This option defines the position of the pagination relative to the grid items: **Below grid**, **Above grid**, or **Both**. It is available when **Pagination** is set to **Paging buttons**, or when **Pagination** is set to **Virtual scrolling** or **Load more** and **Show total count** is enabled.
 
 #### Empty Message
 
@@ -64,9 +53,9 @@ When this option is defined as custom it will show a composable region. Here you
 
 #### Dynamic Item Class
 
-In the new Gallery widget we offer an option to dynamically apply a CSS class to a specific item. You can achieve this by adding an expression based on the item values (attributes) like the example below.
+The Gallery widget can dynamically apply a CSS class to a specific item. You can achieve this by adding an expression based on the item values (attributes), as in the example below.
 
-In this example we check the value of `CountryName`, then if the attribute is equal to `Spain` apply the class `.my-custom-class` to the items:
+This example checks the value of `CountryName` and, if the attribute is equal to `Spain`, applies the class `my-custom-class` to the items:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/dynamic-item-class.png" alt="Example of dynamic item class"   width="300"  class="no-border" >}}
 
@@ -80,60 +69,39 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 ## Filtering
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/filtering.gif" alt="Example of filtering"   width="300"  class="no-border" >}}
-
-In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
-
-* Autonumber
-* Boolean
-* Date & time
-* Decimal
-* Enumeration
-* Hashed string
-* Integer
-* Long
-* String
-
-The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you just have one filter widget for each type, for example `Text Filter` and `Number Filter`.
-
 {{% alert color="info" %}}
-If a filter is being used and its type does not match with any selected attribute it will throw an error requesting you to select the correct filter widget.
+Starting with [Data Widgets](/appstore/modules/data-widgets/) 3.0.0, filtering is configured in the filter widgets. When you update the module, existing grid-wide filtering configurations are automatically converted to the new setup.
 {{% /alert %}}
 
-An example of filtering configuration:
+To filter the gallery items, place filter widgets in the gallery's filters placeholder. The gallery does not have its own filtering configuration. Instead, configure the filter widgets themselves. Filter widgets placed in the filters placeholder are linked to the gallery automatically. To choose which attributes a filter applies to, set the filter widget to custom mode and select the attributes.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/filtering.png" alt="Example of filtering configuration"   width="300"  class="no-border" >}}
+For more information, see the [Filters](/appstore/modules/data-grid-2/#filters) section of *Data Grid 2* and the documentation for each filter widget:
 
-An example of text filter being used in the composable region combined with a drop-down sort:
-
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/filter-region.png" alt="Example of filtering composable region"   width="300"  class="no-border" >}}
-
-For more information about filters, see the [Filters](/appstore/modules/data-grid-2/#filters) section of *Data Grid 2*.
+* [Text Filter](/appstore/modules/datagrid-text-filter/)
+* [Number Filter](/appstore/modules/datagrid-number-filter/)
+* [Date Filter](/appstore/modules/datagrid-date-filter/)
+* [Drop-Down Filter](/appstore/modules/datagrid-dropdown-filter/)
 
 ## Sorting
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/sorting.gif" alt="Example of sorting"   width="300"  class="no-border" >}}
-
-In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the **Sorting** tab. In order to make the attributes available for the sorting widgets, you must select an attribute and define the name it will show via the sort button.
+To sort the gallery items, place a [Drop-Down Sort](#dropdown) widget in the gallery's filters placeholder. If you place it outside the filters placeholder, the widget shows an error that it is out of context. The gallery does not have its own sorting configuration. Instead, you select the attributes that end-users can sort by in the Drop-Down Sort widget.
 
 {{% alert color="info" %}}
-If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined.
+If the data source of the gallery has a sort order, the Drop-Down Sort widget pre-selects it when it matches one of the attributes configured in the widget. When end-users select a different option, it overrides the sort order of the data source.
 {{% /alert %}}
-
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/sorting.png" alt="Example of sorting configuration"   width="300"  class="no-border" >}}
 
 ### Drop-Down Sort {#dropdown}
 
-The Drop-Down Sort widget is a widget you can use in combination with the Gallery widget. The Drop-Down Sort widget just needs to be placed inside a composable region of the Gallery widget after defining the sorting attributes in the Gallery widget's **Sorting** tab.
+The Drop-Down Sort widget lets end-users choose the attribute and direction to sort the gallery items by. Place it inside the filters placeholder of the Gallery widget and configure these properties:
 
-The Drop-Down Sort widget has two options you can set:
-
-* Empty option caption: value to be used when no value is selected
-* Screen reader caption: value to be announced by screen readers when using assistive technology
+* **Datasource to sort**: the data source of the gallery, linked automatically when the widget is placed in the filters placeholder
+* **Attributes**: the attributes that end-users can sort by; for each attribute, set the **Caption** shown in the drop-down
+* **Empty option caption**: the text shown when no sort option is selected
+* **Sort order button caption** and **Input caption**: the text announced by screen readers when using assistive technology
 
 ## Selection
 
-Enabling **Selection** allows users to select gallery items via clicking. Selection is disabled by default and can be activated by changing the **Selection** setting from **None** to either **Single** or **Multi**.
+Enabling **Selection** allows users to select gallery items via clicking. Selection is disabled by default and can be activated by changing the **Selection** setting on the **Behavior** tab from **None** to either **Single** or **Multi**.
 
 The Gallery widget keeps selected items in memory and supports selection persistence across page navigation when the **Keep selection** option is enabled. This allows users to maintain their selections while browsing through paginated data or navigating between different pages in your application. See [Keep Selection](#keep-selection) for more information about managing selection persistence and its limitations.
 
@@ -166,7 +134,7 @@ It is not possible to use both selection and onClick actions simultaneously when
 
 If you attempt to configure both selection (Single or Multi) and an onClick action with **Single click** trigger, the Gallery will display a design-time error:
 
-> "The item click action is ambiguous. Change 'On click trigger' to 'Double click' or set 'Selection' to 'None'."
+> The item click action is ambiguous. Change "On click trigger" to "Double click" or set "Selection" to "None".
 
 #### Recommended Approach
 
@@ -176,21 +144,23 @@ For galleries that need both selection and click actions:
 1. Configure your desired selection mode (**Single** or **Multi**).
 1. Users can then select items with single clicks and trigger actions with double clicks.
 
-### Selection with Action Buttons in Header
+### Selection with Action Buttons in the Filters Placeholder
 
-Gallery selection works seamlessly with action buttons and other widgets placed in the gallery header. This pattern enables powerful bulk operation workflows.
+Gallery selection works seamlessly with action buttons and other widgets placed in the gallery's filters placeholder. This pattern enables powerful bulk operation workflows.
 
 #### Selection Helper Integration
 
-Place a **Selection Helper** widget in the gallery header to provide bulk selection controls:
+Place a **Selection Helper** widget in the gallery's filters placeholder to provide bulk selection controls:
 
-* **Select All**: Quickly select all visible items
-* **Clear Selection**: Remove all current selections
-* **Selection Status**: Visual indicator of current selection state (all, some, or none selected)
+* **Select All**: Select all items on the current page
+* **Clear Selection**: Deselect all items on the current page
+* **Selection Status**: Visual indicator of the selection state of the current page (all, some, or none selected)
+
+The Selection Helper only acts on the items on the current page. When **Keep selection** is set to **Yes**, items selected on other pages stay selected.
 
 #### Selection Count Display
 
-Enable the **Show selection count** property to display the number of selected items:
+When **Selection** is set to **Multi**, use the **Show selection count** property to set where the number of selected items is displayed (default: **Bottom**):
 
 * **Top**: Shows count above the gallery items
 * **Bottom**: Shows count below the gallery items
@@ -209,7 +179,7 @@ Use the **On selection change** action to trigger custom logic when selection ch
 
 ### Keep Selection
 
-If this setting is enabled, then selected items persist across page navigation, data refreshes, filtering, and sorting operations. By default, Keep selection is disabled and the selection is cleared when the items are not in the current set of datasource items. When enabled, selected items remain selected until manually cleared by the user or through a nanoflow action.
+If this setting is enabled, then selected items persist across page navigation, data refreshes, filtering, and sorting operations. This setting is only available when **Selection** is set to **Multi**. By default, Keep selection is disabled and the selection is cleared when the items are not in the current set of datasource items. When enabled, selected items remain selected until manually cleared by the user or through a nanoflow action.
 
 {{% alert color="warning" %}}
 Keep Selection cannot be used with non-persistent entities (NPEs) or view entities, as their IDs change on refresh.
@@ -221,16 +191,16 @@ In the Gallery widget it is possible to navigate and select items using the keyb
 
 To improve user experience, it is possible to detect which item has keyboard focus. Visually, you can see which item has keyboard focus by spotting the thin blue border.
 
-You can also see when an item is selected: an item with a light gray background is selected.
+You can also see when an item is selected: an item with a light brand primary background is selected.
 
-For the keyboard navigation and keyboard selection to work, the user must open the **General** tab and then set the **Selection** property to one of the following:
+For the keyboard navigation and keyboard selection to work, you must open the **Behavior** tab and then set the **Selection** property to one of the following:
 
 * **Single**: enables keyboard navigation with just single selection
 * **Multi**: to enable keyboard navigation with multi-selection
 
 ### Keyboard Navigation
 
-Using the keyboard arrow keys (<kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>←</kbd>, <kbd>→</kbd>) the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>Page&nbsp;up<</kbd>, and <kbd>Page&nbsp;down</kbd>.
+Using the keyboard arrow keys (<kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>←</kbd>, <kbd>→</kbd>) the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>Page&nbsp;up</kbd>, and <kbd>Page&nbsp;down</kbd>.
 
 With the keyboard, the user can press <kbd>Tab</kbd> and navigate between elements to reach the Gallery items.
 

@@ -47,11 +47,11 @@ Styling:
 
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters" width="450" >}}
 
-##### 3.1.1 Template {#caption-template}
+##### Template {#caption-template}
 
 The **Caption** can be made dynamic by placing placeholders in the **Template**. Placeholders must follow the format `{i}`, where _i_ is the **Index** of a specific parameter from the list of [parameters](#caption-parameters). Parameters can be referenced multiple times, and can be referenced out of order.
 
-##### 3.1.2 Parameters {#caption-parameters}
+##### Parameters {#caption-parameters}
 
 Parameters define what data is inserted into the template and how it is formatted. Parameters can refer to object attributes or expressions. Editing parameters is done in the 'Edit Caption' dialog box.
 
@@ -96,7 +96,7 @@ In addition to adding new parameters, you can perform the following actions on p
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions" width="450" >}}
 
 
-##### 3.1.3 Fallback Text {#caption-fallback}
+##### Fallback Text {#caption-fallback}
 
 The fallback text is shown when the datasource of the **Parameters** is empty or unavailable. 
 

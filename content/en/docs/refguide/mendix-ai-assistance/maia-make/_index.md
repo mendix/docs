@@ -70,7 +70,7 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Capability | Description | Available in Maia Make from | Remarks |
 | --- | --- | --- | --- |
 | Story-based development | Generates app artifacts based on existing user stories to support story-driven development workflows. | Studio Pro 11.8 | |
-| PDF/image support | Allows you to provide PDFs and images as input to help Maia better understand your requirements. | Studio Pro 11.8 | |
+| Attach files | Allows you to provide PDFs and images as input to help Maia better understand your requirements. | Studio Pro 11.8 | From Studio Pro 11.16, you can attach CSV, JSON, XML, YAML, HTML, and Excel files to your chat. Attached files are made available to Maia for the rest of the session. |
 | Adding documents as context | Lets you add relevant documents to provide Maia with additional context. | Studio Pro 11.8 | |
 | Editing existing documents | Enables Maia to modify existing documents, including renaming elements. | Studio Pro 11.8 | |
 | Removing elements | Allows Maia to remove elements from documents to support more advanced refactoring tasks. | Studio Pro 11.9 | |
@@ -80,6 +80,7 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Markdown attachment support | Allows you to provide Markdown documents as input to help Maia better understand your requirements. | Studio Pro 11.12 | |
 | Explain and solve consistency errors | Allows you to use Maia to explain or solve problems by right-clicking the item in the **Errors** pane. | Studio Pro 11.12.1 | |
 | Translations | Allows Maia to create and update translations in your app. | Studio Pro 11.15 | |
+| Delete documents | Allows Maia to delete documents in your app. | Studio Pro 11.16 | |
 
 ## Using Maia Make Capabilities
 

@@ -25,7 +25,7 @@ If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, t
 
 ## Accessing the Metrics Graphs
 
-To access the graphs on the **Metrics** page, you must have **Access to Monitoring** permissions enabled. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
+To access the graphs on the **Metrics** page, you must have **Monitoring Access** permissions enabled. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 If you meet the above conditions, you can find the graphs by following these steps:
 

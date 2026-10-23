@@ -113,27 +113,51 @@ From here, you can perform the following tasks:
 * Manually refresh configuration to the client, forcing the Workstation Client on the registered computer to immediately pull the latest settings from Workstation Management.
 * Configure advanced settings like **Detect Card Readers** and **Station Developer Mode**.
 * Manage and configure all devices associated with this station.
+* Retrieve diagnostics from the Workstation Client on the registered computer.
+
+### Client Diagnostics {#client-diagnostics}
+
+The Workstation Client scans the computer it runs on for connected peripherals and reports on its own state. You can retrieve that information from Workstation Management, which lets you check what a station has attached without asking the operator to read it off the computer.
+
+To retrieve the diagnostics of a station, click **Diagnostics** on the **Station Detail** page. The diagnostics appear as JSON in a side panel next to the name of the registered computer, and cover the following:
+
+* The serial ports, Bluetooth devices, card readers, printers, and cameras that the Workstation Client detects, with the metadata it has for each of them.
+* System information about the computer and the Workstation Client, such as the operating system, the client type, the client version, and how long it has been running.
+* A count of the log entries the Workstation Client has recorded per log level.
+
+The **Diagnostics** button appears only when a computer is registered to the station and its Workstation Client is connected. This is the same condition as for the **Refresh on Computer** button. The diagnostics are pulled from the Workstation Client when you click the button, and discarded again when you close the panel. Because of that, they always reflect the current state of the computer rather than a stored snapshot. If the request fails, Workstation Management reports that it cannot retrieve the diagnostics for that computer.
+
+Workstation Management retrieves a subset of the information on the **Diagnostics** page of the Workstation Client itself. The local file system paths that the client's own page shows are left out. For the client-side page, see [Troubleshooting the Workstation Client: Diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics).
 
 ## Advanced Station Settings
 
 ### Detect Card Readers
 
-Card readers are handled uniquely within Workstation Management. They are not configured as separate devices in the Devices overview of a Station page. Instead, the Workstation Client automatically detects connected card readers.
+The Workstation Client can automatically detect the card readers attached to the computer and add them to its device list. Alternatively, you can configure card readers as devices of the station. For more information, see [Configuring Devices: Card Readers](/mendix-workstation/management-devices/#card-readers).
 
-Auto detecting card readers is enabled by default. You can toggle the **Detect Card Readers** setting on the **Station Detail Page** to **Off** if you do not want the Workstation Client to automatically detect smart card readers for this specific station.
+Auto detecting card readers is disabled by default. To enable this feature, perform the following steps:
+
+1. In **Station** view, click the **three dots** icon.
+2. Click **Edit Station**.
+3. Select the **Detect Card Readers** checkbox.
 
 ### Developer Mode {#developer-mode}
-
-Developer mode can be configured on the **Station** page by selecting **Enable Developer Mode**.
-
-Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Workspaces](/mendix-workstation/management-workspaces/).
 
 When developer mode is enabled, users of the Workstation Client can perform the following actions:
 
 * Quit the program from the Start menu.
 * Deregister the Workstation Client, allowing it to be registered to another station.
-* Debug level live logs displayed in the Logs pane of the Workstation Client, even if the workspace's log level is set to a different level.
+* Access debug level live logs displayed in the Logs pane of the Workstation Client, even if the workspace's log level is set to a different level.
+
+Environments created with the Test environment type have developer mode enabled by default for easier testing. Changing the environment type after creation does not enable or disable developer mode. For more information about creating environments, see [Configuring Workspaces](/mendix-workstation/management-workspaces/).
+
+Disabling developer mode requires Workstation licenses. In a workspace without an entitlement, developer mode is enabled by default. Losing the entitlement does not re-enable developer mode on existing stations.
 
 {{% alert color="info" %}}
-For production environments, it is strongly recommended to disable Developer Mode. This prevents Workstation operators from accidentally quitting or deregistering the Workstation Client, and restricts access to debugging tools that are not needed in a live operational setting.
+For production environments, it is strongly recommended to disable Developer Mode, which requires Workstation licenses. This prevents Workstation operators from accidentally quitting or deregistering the Workstation Client, and restricts access to debugging tools that are not needed in a live operational setting.
 {{% /alert %}}
+
+To configure developer mode, perform the following steps:
+    1. In **Station** view, click the **three dots** icon.
+    2. Click **Edit Station**.
+    3. Check or clear the **Developer Mode** check box.

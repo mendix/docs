@@ -17,7 +17,7 @@ Workstation Commons requires the [Workstation Connector](https://marketplace.men
 
 ## Usage
 
-All functions in this module are nanoflows, because device communication runs in the client. Call them with a [nanoflow call](/refguide/nanoflow-call/) from your own nanoflow. Every function takes a `StationConnector.Device` object as its first parameter, which you retrieve through the Workstation Connector.
+The majority of functions in this module are nanoflows, because device communication runs in the client. Call them with a [nanoflow call](/refguide/nanoflow-call/) from your own nanoflow. Every function that communicates with a device takes a `StationConnector.Device` object as a parameter, which you retrieve through the Workstation Connector.
 
 ## Function List
 
@@ -35,39 +35,93 @@ The `Managed` subfolder contains variants of this function. They check the conne
 
 ### Device Utils
 
-Each Device Utils function covers a single operation on a device type and builds the matching Workstation device message from plain parameters, so you can work with service UUIDs, paths, and print jobs directly.
+Each Device Utils function covers a single operation on a device type and builds the matching Workstation device message from plain parameters, so you can work with service UUIDs, paths, barcode types, and print jobs directly.
 
-For the message syntax behind these functions and the replies each device type sends, see [Device Message Syntax](/mendix-workstation/device-syntax/) in the Mendix Workstation documentation.
+For the message syntax behind these functions and the replies each device type sends, see [Device Message Syntax](/mendix-workstation/device-syntax/).
+
+#### Request and SendMessage {#request-sendmessage}
+
+Every operation is available in two variants, in the `Request` and `SendMessage` subfolders of each device type:
+
+* **Request** - Sends the message and waits for the response of the device.
+* **SendMessage** - Sends the message without waiting. The response arrives later through the `OnMessage` callback of the device.
+
+Which variant to use depends on the architecture of your app and on how the device behaves.
+
+##### Use Requests by Default
+
+Use requests whenever possible. A request lets you send a command and handle the response of the device in the same microflow or nanoflow that sent it. The related logic stays in one place, which makes the execution path easier to follow and debug.
+
+##### Use SendMessage for Subscriptions and Asynchronous Responses
+
+Use the SendMessage variant for device subscriptions, and when the response arrives at a later time. When a device pushes data independently, or when you listen to a subscription, you need an event-driven `OnMessage` callback to handle the incoming data whenever it arrives.
+
+##### Use SendMessage for Consistent Message Handling
+
+You can also use the SendMessage variant when your whole app is built around processing device messages in callbacks, to keep the app consistent. The trade-off is that the logic is split across several flows, which can make debugging more complex.
+
+The `Parse` subfolder of each device type contains functions that convert a received message into a non-persistable object, so you can work with its values instead of the raw message string. For more information, see [Parsing Messages](#parsing-messages).
 
 #### Bluetooth {#bluetooth}
 
-These functions target a characteristic on a BLE device.
+These functions target a characteristic on a BLE device. They have the following parameters: `ServiceUUID`, `CharacteristicUUID`.
 
-* `BLE_Subscribe` - Subscribes to notifications for a characteristic. It has the following parameters: `ServiceUUID`, `CharacteristicUUID`.
-* `BLE_Unsubscribe` - Stops notifications for a characteristic. It has the following parameters: `ServiceUUID`, `CharacteristicUUID`.
-* `BLE_Read` - Reads the current value of a characteristic. It has the following parameters: `ServiceUUID`, `CharacteristicUUID`.
-* `BLE_Write` - Writes a value to a characteristic. It has the following parameters: `ServiceUUID`, `CharacteristicUUID`, `Value`.
+* `BLE_RequestSubscribe` and `BLE_SendSubscribe` - Subscribe to notifications for a characteristic.
+* `BLE_RequestUnsubscribe` and `BLE_SendUnsubscribe` - Stop notifications for a characteristic.
+* `BLE_RequestRead` and `BLE_SendRead` - Read the current value of a characteristic. `BLE_RequestRead` returns the value.
+* `BLE_RequestWrite` and `BLE_SendWrite` - Write a value to a characteristic. They have the additional parameter `Value`.
+
+#### Camera {#camera}
+
+These functions control barcode scanning and motion detection on a camera device. The barcode functions have the optional parameter `BarcodeTypes`, a comma-separated list of barcode types to scan for. Leave it empty to scan for all barcode types.
+
+* `Camera_RequestBarcode` and `Camera_SendGetBarcode` - Scan the next available frame for barcodes. `Camera_RequestBarcode` returns the barcodes found.
+* `Camera_RequestStartBarcodeDetection` and `Camera_SendStartBarcodeDetection` - Start continuous barcode detection.
+* `Camera_RequestStopBarcodeDetection` and `Camera_SendStopBarcodeDetection` - Stop continuous barcode detection.
+* `Camera_RequestStartMotionDetection` and `Camera_SendStartMotionDetection` - Start motion detection.
+* `Camera_RequestStopMotionDetection` and `Camera_SendStopMotionDetection` - Stop motion detection.
 
 #### File Device
 
-These functions operate on a path on the workstation computer.
+These functions operate on a path on the workstation computer. They have the following parameter: `Path`.
 
-* `File_Watch` - Starts watching a file or directory for changes. It has the following parameters: `Path`.
-* `File_Unwatch` - Stops watching a file or directory. It has the following parameters: `Path`.
-* `File_Read` - Reads the content of a file. It has the following parameters: `Path`.
-* `File_Write` - Writes content to a file. It has the following parameters: `Path`, `Value`, `Flag`. The flag can be `w` for overwrite or `a` for append.
+* `File_RequestWatch` and `File_SendWatch` - Start watching a file or directory for changes.
+* `File_RequestUnwatch` and `File_SendUnwatch` - Stop watching a file or directory.
+* `File_RequestRead` and `File_SendRead` - Read the content of a file. `File_RequestRead` returns the content.
+* `File_RequestWrite` and `File_SendWrite` - Write content to a file. They have the additional parameters `Value` and `Flag`. The flag can be `w` for overwrite or `a` for append.
 
-#### Printer
+#### Printer {#printer}
 
-These functions return the printer's answer as a string.
+The following functions print a document. They have the parameter `DocumentName`, which is the name of the print job, and encode the content in Base64 for you:
 
-* `Printer_Print` - Submits a print job and returns the accepted job, including its job id. It has the following parameters: `PrintJobDocumentName`, `Format`, `DataPayloadBase64`. Use `RAW` as the format for printer command languages such as ZPL, EPL, or PCL, and pass the payload base64-encoded.
-* `Printer_GetStatus` - Returns the printer state and its queued jobs.
-* `Printer_CancelJob` - Cancels a queued print job. It has the following parameters: `JobId`.
+* `Printer_RequestPrintText` and `Printer_SendPrintText` - Print plain text. They have the additional parameter `Text`.
+* `Printer_RequestPrintRaw` and `Printer_SendPrintRaw` - Print raw data in a printer command language such as ZPL, EPL, or PCL. They have the additional parameter `RawData`.
+* `Printer_RequestPrintPDF` and `Printer_SendPrintPDF` - Print a PDF document. They have the additional parameter `FileDocument`. These functions read the file contents on the server. For more information, see [General Utils](#general-utils).
 
-#### SmartCard Reader
+The following functions give you full control over the print job and the printer queue:
 
-* `CardReader_TransmitAPDU` - Transmits an APDU command to a smart card reader. Provide the command as a hexadecimal string. It has the following parameters: `APDUCommand`.
+* `Printer_RequestPrint` and `Printer_SendPrint` - Submit a print job. They have the parameters `DocumentName`, `Format`, and `DataBase64`. The format is `RAW`, `TEXT`, or `PDF`, and the payload is encoded in Base64. `Printer_RequestPrint` returns the accepted job, including its job ID.
+* `Printer_RequestStatus` and `Printer_SendGetStatus` - Get the printer state and its queued jobs. `Printer_RequestStatus` returns them.
+* `Printer_RequestCancelJob` and `Printer_SendCancelJob` - Cancel a queued print job. They have the parameter `JobId`.
+
+#### Parsing Messages {#parsing-messages}
+
+The following functions take a received message string as their `Message` parameter and return a non-persistable object with its values:
+
+* `BLE_ParseMessage` - Returns a `BluetoothMessage` object with the `Characteristic` and the `ResponseHex` value.
+* `Camera_ParseBarcodeMessage` - Returns a `CameraBarcodeMessage` object with the `BarcodeCount`, whether the detection `IsContinuous`, and whether the barcodes are `IsLeavingFrame`. Each barcode found is an associated `BarcodeInfo` object with its `Format` and its decoded `Content`.
+* `Camera_ParseMotionMessage` - Returns a `CameraMotionMessage` object with `IsMotionDetected` and the `MotionScore`.
+* `File_ParseMessage` - Returns a `FileMessage` object with the `MessageType` (`RenameEvent`, `ChangeEvent`, `Data`, or `Success`) and the `Data` of the message.
+* `Printer_ParsePrintAcceptedMessage` - Returns a `PrinterPrintAcceptedMessage` object with the `DocumentName` and `JobId` of the accepted job.
+* `Printer_ParseStateMessage` - Returns a `PrinterStateMessage` object with the printer `State`, its `StateReasons`, and the `JobCount`. Each queued job is an associated `JobInfo` object with its `JobId`, `JobName`, and `JobState`.
+
+### General Utils {#general-utils}
+
+These functions convert content to and from Base64, the encoding that device messages use for binary content:
+
+* `JS_String_Base64Encode` - Encodes a string in Base64.
+* `JS_String_Base64Decode` - Decodes a Base64 string.
+* `FileDocument_Base64Encode` - Encodes the contents of a `System.FileDocument` in Base64. This function is a microflow that calls the `JA_FileDocument_Base64Encode` Java action, the exception in this module. The contents of a file document are not available in the client, so they must be read on the server. Calling this microflow from a nanoflow therefore adds a round trip to the server.
 
 ### Device Logger
 
@@ -80,7 +134,7 @@ To use it, show `Snippet_DeviceConsole` on a page, or open the `DeviceLogger` po
 The following are reusable web snippets for the screens which most Workstation apps need:
 
 * `Snippet_StationInfo` - Displays the current workstation, and reports when the Workstation Client is unavailable. It has no parameter. Use it as a header or status panel.
-* `Snippet_DeviceCard` - Displays a single device as a card, with its state and connect/disconnect controls, and opens the device logger when the device name is clicked.
+* `Snippet_DeviceCard` - Displays a single device as a card, with its name, device class, state, and connect and disconnect controls.
 * `Snippet_DeviceState` - Shows the connection state of a device together with its connect and disconnect buttons.
 * `Snippet_DeviceConsole` - Provides the interactive [device logger](#device-logger) console.
 

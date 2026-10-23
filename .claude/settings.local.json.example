@@ -1,0 +1,13 @@
+{
+  "_comment": "Copy this file to .claude/settings.local.json and edit the values to match your machine. That file is gitignored and overrides .claude/settings.json. Delete any key you do not need - every one of these is optional. The settings here are for using Bedrock, your configuration may be different.",
+  "env": {
+    "AWS_PROFILE": "my-sandbox-name",
+    "AWS_REGION": "eu-central-1",
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "ANTHROPIC_MODEL": "eu.anthropic.claude-sonnet-5-5",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "eu.anthropic.claude-opus-5-5",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "eu.anthropic.claude-sonnet-5-5",
+    "DISABLE_PROMPT_CACHING": "0"
+  }
+}

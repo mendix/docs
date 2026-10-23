@@ -41,7 +41,7 @@ To upload a certificate, you need to have the following things prepared:
 
 To upload the certificate, follow these steps:
 
-1. Go to **Certificate Management** in [Control Center](https://controlcenter.mendix.com/p/admin/apps).
+1. Go to **Certificate Management** in [Control Center](https://controlcenter.mendix.com/p/admin/apps), in the **Security** menu.
 2. Click **Upload Certificate.**
 3. In the **Upload Certificate** wizard:
     1. Review the information in **General Info**, then click **Next**.

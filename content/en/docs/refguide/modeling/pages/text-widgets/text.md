@@ -38,10 +38,10 @@ Styling:
 
 #### Caption {#caption}
 
-**Caption** defines the text that will be shown. It supports dynamic text using templating. The final text is determined by the given [**Template**](#caption-template), [**Parameters**](#caption-parameters), and [**Fallback Text**](#caption-fallback), which can be found in the 'Edit Caption' dialog box. The dialog box can be opened in two ways:
+**Caption** defines the text that will be shown. It supports dynamic text using templating. The final text is determined by the given [Template](#caption-template), [Parameters](#caption-parameters), and [Fallback Text](#caption-fallback), which can be found in the 'Edit Caption' dialog box. The dialog box can be opened in two ways:
 
 * From the properties sidebar: double-click the property (for example, "Caption") or click the "more" ellipsis (...)
-* From the widget properties dialog box: click the **Edit ...** button next to the property's textbox
+* From the widget properties dialog box: click the **Edit** button next to the property's textbox
 
 #### Parameters {#parameters}
 
@@ -102,7 +102,7 @@ The fallback text is shown when the datasource of the **Parameters** is empty or
 
 Empty attributes used as parameters do not cause the fallback text to be shown. Instead the template is rendered as normal and the placeholders for the empty parameters are substituted by empty strings. 
 
-For example: The template `Hello, {1}!` with the fallback text _"Nobody to greet."_ would get rendered as follows:
+For example: The template `Hello, {1}!` with the fallback text `"Nobody to greet."` would get rendered as follows:
 
 | Scenario         | Rendered text      |
 | ---------------- | ------------------ |

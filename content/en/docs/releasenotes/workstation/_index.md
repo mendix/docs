@@ -20,6 +20,10 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 * Build and deployment - We fixed a bug that would cause compilation errors when using the Workstation Commons module in Studio Pro 11.
 
+### Workstation Starter App
+
+* Updated dependency version - We updated the Starter App to use Workstation Commons 4.3.2. This prevents errors when upgrading to Studio Pro 11.
+
 ## 4.3.1
 
 ### Release date: October 14, 2026

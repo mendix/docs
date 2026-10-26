@@ -61,7 +61,7 @@ The toolbar contains a filter to control which documents are shown:
 * **Maia only** – filters the list to show only documents that Maia has edited
 
 {{% alert color="info" %}}
-When Maia adds a new document and you commit without explicitly keeping or undoing the Maia changes, the commit succeeds. However, the newly added document may still appear as **Modified** in the **Changes** pane afterwards, even though the document contains no further changes. Refreshing or reopening the project resolves the display.
+When Maia adds a new document and you commit without explicitly keeping Maia changes or undoing them, the commit succeeds. However, the newly added document may still appear as **Modified** in the **Changes** pane afterwards, even though the document contains no further changes. Refreshing or reopening the project resolves it.
 {{% /alert %}}
 
 ## Zoomed-In Level {#zoomed-in-level}
@@ -99,7 +99,7 @@ For text-based properties, you can double-click a property row to open the [File
 If the document has been edited by Maia, a Maia icon column appears in the element grid.
 
 {{% alert color="info" %}}
-If a document has been edited by Maia, all changed elements in that document are marked with a Maia icon, regardless of whether the changes were made by Maia or manually.
+If a document has been edited by Maia, all changed elements in the document are marked with a Maia icon, regardless of whether the changes were made by Maia or manually.
 {{% /alert %}}
 
 The left side of the grid contains the following columns:

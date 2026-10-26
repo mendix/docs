@@ -726,6 +726,14 @@ img.ToC-icon{
 
     .expandable-table-inner {
         overflow-x: auto;
+
+        // Docsy makes tables display:block with overflow:auto; keep the wrapper as the only scroll container
+        table {
+            display: table;
+            overflow: visible;
+            width: auto;
+            min-width: 100%;
+        }
     }
 }
 

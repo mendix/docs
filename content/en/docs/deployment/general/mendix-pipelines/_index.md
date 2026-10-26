@@ -256,7 +256,7 @@ There are two types of variables:
 
 1. Mendix-defined variables
 
-    * These are provided by Mendix. Every Mendix Pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment. Click **Outputs** inside a Mendix Pipeline **Designs** tab to view a step’s output variables. Step outputs are always written in the format `$StepName.OutputName` for easy reference across other steps.
+    * These are provided by Mendix. Every Mendix Pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `{{Build.DeploymentPackage}}`. Similarly, Deploy uses `{{Publish.DeploymentPackage}}` to deploy to the selected environment. Click **Outputs** inside a Mendix Pipeline **Designs** tab to view a step’s output variables. Step outputs are always written in the format `{{StepName.OutputName}}` for easy reference across other steps.
     * The scope of these variables is specific to a particular Mendix Pipeline design within a Mendix app.
 
 2. User-defined variables
@@ -303,11 +303,11 @@ Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) >
 
 ### Masked Variables
 
-Select **Mask > Yes** for confidential values. Once a variable is masked, its value cannot be unmasked by changing **Mask > No**. This prevents the saved value from being exposed.
+Select **Mask > Yes** for confidential values. Once a variable is masked, you cannot unmask it by changing **Mask > No**. This prevents the saved value from being exposed.
 
-When creating a masked variable, enter the value and save it. The value will be displayed as `********` in the UI.
+When you create a masked variable, enter the value and save it. The UI displays the value as `********`.
 
-To update an existing masked variable, replace the displayed `********` with the new value and save the variable. The updated value will continue to be displayed as `********` in the UI.
+To update an existing masked variable, replace the displayed `********` with the new value and save the variable. The UI continues to display the updated value as `********`.
 
 Masked values are never printed in logs or error messages.
 

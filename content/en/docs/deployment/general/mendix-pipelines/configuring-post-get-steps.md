@@ -30,24 +30,25 @@ Before running a request step in Mendix Pipelines, Mendix recommends testing the
 
 ## Configurable Fields for POST and GET Request Steps
 
-The following table summarizes the available configuration fields.
-With **variable concatenation**, supported text fields and text areas can combine static text with dynamic values. You can reference a variable directly using the `{{variableName}}` syntax or include it within a string alongside static text.
-
-**Examples:**
-- Direct variable reference: `{{JobID}}`
-- Variable combined with static text: `https://api.com/1/{{JobID}}/`
+The following table summarizes the available configuration fields:
 
 | Field | Required? | Description | Example |
-|------------------------|---:|-------------------------------------------------------------------------------------------------|-----------|
+| ---------------------- | ---: | ----------------------------------------------------------------------------------------------- | --------- |
 | **Request URL** | Yes | The complete URL of the external endpoint to call. Must start with the protocol. | `https://api.com/1/JobID/` or `https://api.com/1/{{JobID}}/` |
-| **Additional URL path** | No | String or variable to append to the **Base URL Path**. Can reference a stored variable. | `{{POST Request.Result1}}` or `a12f3` |
-| **HTTP header key-value pairs** | No | HTTP headers to include with the request as metadata. Values can reference stored variables. | `Authorization` = `{{API_Key}}` |
+| **HTTP header key-value pairs** | No | HTTP headers to include with the request as metadata. Keys and values can reference stored variables. | `Authorization` = `{{API_Key}}` |
 | **Variable extraction** | No | Expressions to extract values from the response body and store them as reusable output variables. | `.JobId` |
 | **Success condition** | No | Success condition that must evaluate to `true` to continue to the next pipeline step. Must be a [jq expression](https://jqlang.org/manual/). | `.Result == "Success"` |
 | **Failure condition** | No (GET only) | Failure condition that must evaluate to `true` to stop polling and fail the pipeline. Must be a jq expression. | `.Result == "Failed"` |
 | **Polling delay** | Yes (GET only) | Time in seconds before the first GET request runs. Range: 0–10800. | `30` |
 | **Polling interval** | Yes (GET only) | Time in seconds between GET retries. Range: 5–300. | `10` |
 | **Polling duration** | Yes (GET only) | Maximum time in seconds to poll before timing out and failing. Range: 0–10800. | `600` |
+
+### Variable Concatenation{#variable-concatenation}
+
+Supported text fields and text areas can combine static text with dynamic values. You can reference a variable directly using the `{{variableName}}` syntax or include it within a string alongside static text. For example:
+
+* Direct variable reference: `{{JobID}}`
+* Variable combined with static text: `https://api.com/1/{{JobID}}/`
 
 ### Variable Selector
 
@@ -61,35 +62,31 @@ To reduce errors caused by manual typing and speed up configuration, Mendix Pipe
     * `{{Mendix.Branch}}` (Git Push only)
     * `{{Mendix.Revision}}` (Git Push only)
 
-{{< figure src="/attachments/deployment/general/mx-pipelines/VariableSelectorDropdown.png" alt="Image of the Variable Selector dropdown displaying a list of available pipeline variables in a configuration field." >}}
+{{< figure src="/attachments/deployment/general/mx-pipelines/mx-pipelines-variable-selector.png" alt="Variable Selector dropdown displaying a list of available pipeline variables while a user types two opening curly braces in a header value field." >}}
 
 Selecting a variable inserts it into the field.
 
 ## API Endpoint
 
-Both POST and GET request steps require a **Request URL** that specifies the endpoint to call.
+Both POST and GET request steps require a **Request URL** that specifies the endpoint to call. The Request URL supports [variable concatenation](/developerportal/deploy/configuring-post-get-request-steps/#variable-concatenation). The following examples show valid Request URLs:
 
-The Request URL supports **variable concatenation**, allowing you to combine static text with dynamic pipeline variables using the `{{variableName}}` syntax.
+* Static URL: `https://api.example.com/jobs`
+* URL with a variable: `https://api.example.com/jobs/{{JobID}}`
+* URL with multiple variables: `https://api.example.com/jobs/{{ProjectID}}/jobs/{{JobID}}`
+* URL with variables and static text: `https://api.example.com/{{Environment}}/jobs/{{JobID}}/status`
 
-Examples:
-- Static URL: `https://api.example.com/jobs`
-- URL with a variable: `https://api.example.com/jobs/{{JobID}}`
-- URL with multiple variables: `https://api.example.com/jobs/{{ProjectID}}/jobs/{{JobID}}`
-- Variables combined with static text: `https://api.example.com/{{Environment}}/jobs/{{JobID}}/status`
 ## HTTP Request Headers
 
-HTTP headers can be added along with the API calls to provide metadata for the request, such as content type, authentication credentials, or other API-specific values. Mendix recommends storing secrets such as API keys or tokens as [pipeline variables](/developerportal/deploy/mendix-pipelines/#variable-tab). 
+HTTP headers can be added along with the API calls to provide metadata for the request, such as content type, authentication credentials, or other API-specific values. Mendix recommends storing secrets such as API keys or tokens as [pipeline variables](/developerportal/deploy/mendix-pipelines/#variable-tab).
 
 POST and GET request steps support the following header rules:
 
 * You can define up to five headers as key-value pairs.
-* Header keys and values support static text, pipeline variables, or a combination of both using the `{{variableName}}` syntax.
-* You can combine multiple variables with static text in a single header key or value.
+* Header keys and values support static text, pipeline variables, or a [combination of both](/developerportal/deploy/configuring-post-get-request-steps/#variable-concatenation) using the `{{variableName}}` syntax.
 * Header values are resolved when the step starts.
 * For GET request steps, header values are fixed and are not re-evaluated during polling.
 
-For example, you can define an `Authorization` header with the value `Bearer {{API_Token}}`, or combine static text and variables in a custom header value such as 
-`mx-{{Environment}}-{{API_Token}}`.
+For example, you can define an `Authorization` header with the value `Bearer {{API_Token}}`, or combine static text and variables in a custom header value such as `mx-{{Environment}}-{{API_Token}}`.
 
 ## Request Body (POST Only)
 
@@ -97,15 +94,7 @@ The request body is available for POST request steps only. It is a plain text in
 
 ### Dynamic Values in the Request Body
 
-The request body supports static JSON content and **variable concatenation**, allowing you to combine static text with dynamic pipeline variable values using the `{{variableName}}` syntax.
-
-You can reference variables directly or combine multiple variables with static text within the request body.
-
-{{% alert color="warning" %}}
-The **Request Body** field in the POST request step does not currently support the Variable Selector. To use pipeline variables in the request body, enter the variable references manually using the `{{variableName}}` syntax.
-{{% /alert %}}
-
-For example:
+The request body supports static JSON content and [variable concatenation](/developerportal/deploy/configuring-post-get-request-steps/#variable-concatenation). For example:
 
 ```json
 {
@@ -114,6 +103,10 @@ For example:
   "name": "scan-{{ProjectName}}-{{BuildNumber}}"
 }
 ```
+
+{{% alert color="info" %}}
+The **Request Body** field in the POST request step does not currently support the Variable Selector. To use pipeline variables in the request body, enter the variable references manually using the `{{variableName}}` syntax.
+{{% /alert %}}
 
 ## Success and Failure Conditions
 
@@ -184,7 +177,7 @@ POST and GET request steps currently support the following constraints:
 
 * A pipeline can contain at most one POST request step and one GET request step.
 * Up to five HTTP headers can be configured.
-* Header keys and values support static text and pipeline variables using the `{{variableName}}` syntax, including combinations of static text and multiple variables.
+* The **Request Body** field does not support the Variable Selector. You must enter variable references manually.
 * For GET request steps, header values are resolved once and are not re-evaluated during polling.
 * Each request step can extract up to three output values.
 * Output variable names are generated automatically and cannot be customized.

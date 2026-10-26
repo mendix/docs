@@ -61,7 +61,7 @@ To create a new agent skill in Studio Pro, follow these steps:
 
 Studio Pro creates the `SKILL.md` file. You can now add the skill content.
 
-In Studio Pro 11.15 and above, you can see a full over of the agent skills in your app in the **Maia Settings** pane in the **Skills** tab. 
+In Studio Pro 11.15 and above, you can see a full overview of the agent skills in your app in the **Skills** tab of the **Maia Settings** pane.
 
 ### SKILL.md Format {#skill-md-format}
 

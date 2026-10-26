@@ -23,9 +23,10 @@ You can use one of the existing templates to create your own policy.
 
 2. Select one of the available templates:
 
-    * Only allow Marketplace components that are platform-supported
+    * Only platform-supported Marketplace components are allowed
     * Only medium or low findings are allowed
     * Only Mendix runtime versions >= 9.24.43 are allowed
+    * Only company-approved components are allowed
 
 3. In the **Policy Name** field, add a name for the new policy.
 
@@ -58,7 +59,7 @@ You can create a policy by defining your own details.
 
         * **Mendix runtime version is lower than** – Indicate which Mendix version is the minimum that your apps must use.
 
-        * **Marketplace component license is not** – Select the licenses that are acceptable. If a Marketplace component has a license which is not one of the ones you select here, the policy is violated. These are the possible values:
+        * **Marketplace component license is not** and **Marketplace component license is** – Select the licenses that are acceptable. If a Marketplace component has a license which is not one of the ones you select here, the policy is violated. These are the possible values:
 
             * MIT
             * BSD_2_0
@@ -70,12 +71,15 @@ You can create a policy by defining your own details.
             * GNU_GENERAL_PUBLIC_LICENSE_V3
             * MENDIX_MARKETPLACE_CONTENT_TERMS
 
-        * **Marketplace component support is not** – Select the support types that are acceptable. If a Marketplace component has a support type which is not one of the ones you select here, the policy is violated. These are the possible values:
+        * **Marketplace component support is not** and **Marketplace component support is** – Select the support types that are acceptable. If a Marketplace component has a support type which is not one of the ones you select here, the policy is violated. These are the possible values:
 
             * PARTNER
             * SIEMENS
             * PLATFORM
             * COMMUNITY
+
+        * **Marketplace component is not Company-approved** – Choose to only allow company-approved components. This enables you to have granular control over the components in your app. You can define the criteria that company-approved components must meet on the **Company-Approved** page of the **Marketplace** section in Control Center. For details, refer to [Company-Approved](/control-center/company-approved/).    
+            If you choose to define this policy, you no longer need to also define other license or support policies.
 
     * **Checkpoints & Action(s)** – Select the trigger which causes the policy to be checked, and the action that is taken if the policy is violated. Currently, policy violations are checked at the time of package creation, and violations generate warnings.
 

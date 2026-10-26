@@ -27,4 +27,6 @@ Providing context is the foundation for Maia to build your project plan. Give Ma
     * **Use the latest version**
     * **Use a starter app with a predefined Studio Pro version**
 
-5. Click **Generate Plan**.
+5. Click **Create Plan**.
+
+Maia analyzes the context in the background, and starts producing a scope.

@@ -44,7 +44,9 @@ The plan remains available in your application after Maia implements part or all
 
 ## Manually Entering Plan Mode
 
-The Maia input box now includes the **Plan Mode** button, which you can click to enter Plan Mode manually. This signals to Maia that you are planning to implement a larger feature. While in Plan Mode, Maia can read your app and create an implementation plan.
+Maia's chat interface now includes the **Plan Mode** button, which you can click to enter Plan Mode manually. This signals to Maia that you are planning to implement a larger feature. While in Plan Mode, Maia can read your app and create an implementation plan.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-plan-mode/maia-plan-mode.png" width="400" >}}
 
 ## Limitations
 

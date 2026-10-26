@@ -107,7 +107,13 @@ Clicking **New Chat** allows you to clear the messages and start a new conversat
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/new-chat.jpg" width="250px" alt="" >}}
 
-#### Configure MCP Connections
+#### Settings
+
+The Settings option ({{% icon name="cog" %}}) allows you to manage your MCP Servers, agent skills, and export your Maia agent session.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/maia-settings.jpg" width="250px" alt="" >}}
+
+##### Configure MCP Connections (Studio Pro 11.14 and below)
 
 This option ({{% icon name="plug" %}}) allows you to connect external [MCP](https://modelcontextprotocol.io/introduction) servers to Maia, giving it access to third-party tools during chat. For more information on how to configure MCP connections, see [Maia MCP Client](/refguide/maia-mcp/).
 

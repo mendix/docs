@@ -53,15 +53,15 @@ The grid contains information on the following items:
 * **Module** – the module where the changed document is located
 * **Details** – can contain details on the status, for example, when you have conflicting changes 
 
-When at least one document has been edited by Maia, a Maia icon column appears in the grid. Documents edited by Maia are marked with a Maia icon in this column.
+When Maia has edited at least one document, a Maia icon column appears in the grid. This column marks the documents that Maia edited.
 
-The toolbar contains a filter to control which documents are shown:
+The toolbar contains a filter that controls which documents the grid shows:
 
-* **All changes** (default) – shows all local changes, including Maia-edited documents
-* **Maia only** – filters the list to show only documents that Maia has edited
+* **All changes** *(default)* – shows all local changes, including documents that Maia edited
+* **Maia only** – shows only documents that Maia edited
 
 {{% alert color="info" %}}
-When Maia adds a new document and you commit without explicitly keeping Maia changes or undoing them, the commit succeeds. However, the newly added document may still appear as **Modified** in the **Changes** pane afterwards, even though the document contains no further changes. Refreshing or reopening the project resolves it.
+When Maia adds a new document and you commit without explicitly keeping or undoing the Maia changes, the commit succeeds. However, the new document can still appear as **Modified** in the **Changes** pane afterward, even though it contains no further changes. Refreshing or reopening the app resolves this.
 {{% /alert %}}
 
 ## Zoomed-In Level {#zoomed-in-level}
@@ -96,10 +96,10 @@ The toolbar at this level contains the following buttons:
 
 For text-based properties, you can double-click a property row to open the [File Differences Viewer](/refguide/file-diff-viewer/), which shows a detailed side-by-side comparison of the old and new values. To compare file-level changes at the top level, double-click a file row or right-click and select **Compare with original**.
 
-If the document has been edited by Maia, a Maia icon column appears in the element grid.
+If Maia has edited the document, a Maia icon column appears in the element grid.
 
 {{% alert color="info" %}}
-If a document has been edited by Maia, all changed elements in the document are marked with a Maia icon, regardless of whether the changes were made by Maia or manually.
+If Maia has edited a document, the Maia icon marks all changed elements in the document, whether Maia or you made the changes.
 {{% /alert %}}
 
 The left side of the grid contains the following columns:

@@ -11,7 +11,7 @@ A column chart shows one or more series as vertical columns.
 
 For the properties that all series-based charts share, such as the **Series** list, **Dimensions**, and **Advanced** settings, see [Common Chart Properties](/appstore/widgets/charts/#common-properties). This page describes the properties that are specific to the column chart.
 
-## General Tab
+## General Section
 
 ### Column Format
 

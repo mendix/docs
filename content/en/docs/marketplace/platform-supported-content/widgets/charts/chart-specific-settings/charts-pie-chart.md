@@ -41,7 +41,7 @@ An expression that returns the color of each slice. You can use attributes of th
 
 Set to **Single** to let users select a slice. Other widgets can then listen to the selection.
 
-## General Tab
+## General Section
 
 ### Hole Radius
 
@@ -49,7 +49,7 @@ A percentage between 0 and 100 that sets the radius of the hole in the middle of
 
 The pie chart also has the **Show legend** property described in [General Section](/appstore/widgets/charts/#general), and a **Tooltip hover text** property for the message shown when the user hovers over a slice.
 
-## Events Tab
+## Events Section
 
 * **On click action** – The action that runs when the user clicks a slice.
 

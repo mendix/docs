@@ -11,7 +11,7 @@ A bar chart shows one or more series as horizontal bars.
 
 For the properties that all series-based charts share, such as the **Series** list, **Dimensions**, and **Advanced** settings, see [Common Chart Properties](/appstore/widgets/charts/#common-properties). This page describes the properties that are specific to the bar chart.
 
-## General Tab
+## General Section
 
 ### Bar Format
 

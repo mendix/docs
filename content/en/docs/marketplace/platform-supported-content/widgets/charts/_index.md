@@ -104,7 +104,7 @@ If set to **Yes**, the chart shows the properties on its **Advanced** tab and th
 
 If set to **Yes**, the chart shows a **Playground slot** in the page editor. Place a Chart playground widget in this slot to edit the chart's layout, configuration, and series settings live while the app runs. For more information, see [Fine-Tune a Chart with Chart Playground](/appstore/widgets/chart-advanced-tuning/).
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/show-playground-slot.png" alt="Line chart in the page editor with a Chart playground widget in its Playground slot, shown as a Toggle Editor button" width="300px" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/show-playground-slot.png" alt="Line chart in the page editor with Show playground slot enabled, showing an empty Playground slot drop zone above the chart" width="350px" class="no-border" >}}
 
 {{% alert color="warning" %}}
 All changes made in the Chart playground are temporary. To keep your changes, copy the JSON from the playground to the **Custom layout**, **Custom configurations**, or **Custom series options** properties in Studio Pro.

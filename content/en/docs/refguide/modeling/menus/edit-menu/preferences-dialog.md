@@ -8,7 +8,7 @@ weight: 50
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences that apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.jpg" alt="Preferences" width="600" class="no-border" >}}
 
 ## General Tab {#general}
 

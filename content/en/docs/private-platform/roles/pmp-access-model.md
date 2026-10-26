@@ -11,87 +11,38 @@ Access in Private Mendix Platform is governed by two role systems that operate i
 
 This page describes that model. It is the reference to consult before you design a group hierarchy or define a custom role, and the place to look when the access someone has does not match the access you expected them to have. For the procedures that configure the model, see [Administering Users, Groups, and Roles in Private Mendix Platform](/private-mendix-platform/access-administration/).
 
-Administrators configure all of it at runtime, from the **Manage** section of admin mode. No part of the model requires a code change to the platform or to your apps.
+Administrators configure all of it at runtime, from the **Manage** section of the [Admin menu](/private-mendix-platform/reference-guide/admin/). No part of the model requires a code change to the platform or to your apps.
 
-## The Two Role Systems
+## Resource and Platform Roles
 
 Private Mendix Platform separates platform-wide privilege from privilege over an individual resource. Role Management presents the two as separate tabs, and they share no permissions.
-
-{{% alert color="info" %}}
-**Reviewer note:** confirm the exact tab labels used in the Role Management page of the current release, so this page matches the UI wording.
-{{% /alert %}}
-
-### Platform Roles
-
-A platform role answers the question *what can this person do on the platform in general?* It is assigned to a user account when the account is created, and can be changed at any time afterwards. Platform roles are stackable: a user can hold several, and the effective set of permissions is simply everything those roles grant, added together.
-
-Private Mendix Platform includes the following default platform roles.
-
-| Role | Grants |
-| --- | --- |
-| **User** | Baseline access to the platform web interface. Every human user needs this role at minimum. |
-| **CompanyAdmin** | Everything under **Admin** > **Manage**: app management, user and group management, Marketplace content, deployment clusters, activity logs, and platform statistics. Intended for the people who own day-to-day platform operations. |
-| **SystemAdmin** | Everything under **Admin** > **Settings**: identity provider and SSO configuration, version control and CI/CD integrations, licensing, branding, and platform capabilities. Intended for the people who own the infrastructure the platform depends on. |
-
-{{% alert color="warning" %}}
-**CompanyAdmin and SystemAdmin are parallel, not nested.** Neither contains the other. They address different audiences and grant access to different halves of admin mode. Granting CompanyAdmin does not give someone access to identity or licensing settings, and granting SystemAdmin does not give someone the ability to manage users and groups. A user who needs both must be given both.
-{{% /alert %}}
-
-There is only one kind of account. Accounts used by services rather than people are not a separate account type: a service that calls the platform API authenticates as an ordinary account, and what it can do is determined by that account's platform role, exactly as it would be for a person. A role such as **API User**, holding only the permissions a particular integration needs, is an example of a platform role defined for that purpose.
-
-{{% alert color="info" %}}
-**Reviewer note:** confirm whether a role named API User ships with the platform or is customer-defined, so this paragraph can state it plainly. Note also that [Private Mendix Platform Functionalities - Company Administrators](/private-mendix-platform/reference-guide/admin/company/#user-management) currently describes "API users" as a distinct kind of account. That wording contradicts the model and should be corrected on that page as part of this change.
-{{% /alert %}}
-
-Permissions in a platform role fall into the following broad categories:
-
-* Generic platform access, such as reaching the web interface and creating an app.
-* Management capabilities on the **Manage** side, such as app management, user and group management, Marketplace administration, and activity logs.
-* Management capabilities on the **Settings** side, such as identity and access configuration, licensing, cluster manager configuration, and webhooks.
-
-{{% alert color="info" %}}
-**Reviewer note:** the three categories above are representative rather than a literal reproduction of the permission schema. Supply the exact category names and the individual permission labels as they appear in the UI, and this list will be replaced with a complete table.
-{{% /alert %}}
 
 ### Resource Roles
 
 A Resource Role answers the question *what can this person do to this app, or this namespace?* It is held by an individual, and it applies only to the resources that the individual reaches it through: the resources owned by the group in which they hold the role, or the single app whose team they were invited to.
 
-Private Mendix Platform includes the following default Resource Roles.
+Private Mendix Platform includes the following default resource roles:
 
-| Role | Covers |
-| --- | --- |
-| **Owner** | Full control of an app, including transferring ownership, inviting team members, and assigning their roles. |
-| **Developer** | The complete development and operations set: change the app's source and deploy it. |
-| **Contributor** | Development only. Can change the app's source, cannot deploy it. |
-| **Operator** | Operations only. Can deploy the app, cannot change its source. |
-| **Maintainer** | Oversight of the deployment settings of the apps in scope. |
-| **Administrator** | Oversight of the deployment settings of the apps in scope. |
+* **Owner** - Has full control of an app, including transferring ownership, inviting team members, and assigning their roles. 
 
-{{% alert color="info" %}}
-**Reviewer note:** Maintainer and Administrator are both concerned with deployment settings, and the table above does not yet distinguish them. Supply the actual difference in their permission sets so each row says something a reader can act on, rather than describing the two identically.
-{{% /alert %}}
+    This role is automatically granted to the user that created the app. It cannot be granted manually, except by transfering ownership of the app to a new owner. For more information, see [Assigning the App to a New Owner](/private-mendix-platform/reference-guide/admin/company/#ownership).
 
-{{% alert color="warning" %}}
-**Owner is assigned automatically and cannot be granted manually.** It is held by whoever created the app. To move it, transfer ownership of the app rather than assigning the role. See [Assigning the App to a New Owner](/private-mendix-platform/reference-guide/admin/company/#ownership).
-{{% /alert %}}
+* **Developer** - Has the complete development and operations set; can change the app's source and deploy it.
+* **Contributor** - Development only; can change the app's source but cannot deploy it.
+* **Operator** - Operations only; can deploy the app, but cannot change its source.
+* **Maintainer** - Can manage logs, events, and metrics, as well as applications and apps.
+* **Administrator** - Can oversee the deployment settings of the apps in scope.
 
-{{% alert color="warning" %}}
-**The Resource Role named Administrator is not a platform administrator.** It grants no access to admin mode and no privilege over the platform. It reaches only the resources owned by the group in which its holder holds it. The platform-wide equivalents are the **CompanyAdmin** and **SystemAdmin** platform roles.
-{{% /alert %}}
+    The Administrator resource role is not the same as a platform administrator.It does not grant access to admin mode and has no privilege over the platform. It reaches only the resources owned by the relevant group. The platform-wide equivalents are the **CompanyAdmin** and **SystemAdmin** platform roles.
 
-Permissions in a Resource Role fall into four categories:
+Permissions in a Resource Role have the following categories:
 
-* **Project** - the app lifecycle, its team, version control, and viewing its environments.
-* **Build** - packaging, the build pipeline, and the software bill of materials.
-* **Deployment** - deploying and managing the app's environments. This is the largest category, and the only one that can be scoped per environment.
-* **Monitoring** - logs and metrics.
+* **Project** - The app lifecycle, its team, version control, and viewing its environments
+* **Build** - Packaging, the build pipeline, and the software bill of materials.
+* **Deployment** - Deploying and managing the app's environments; this is the largest category, and the only one that can be scoped per environment
+* **Monitoring** - Logs and metrics
 
-Every permission in a Resource Role is expressed as an action on an app, which is why the schema reads as a set of app permissions even for roles concerned mainly with deployment settings.
-
-{{% alert color="info" %}}
-**Reviewer note:** supply the individual permission labels within each of the four categories, and this section will be replaced with a full role-to-permission matrix.
-{{% /alert %}}
+Every permission in a resource role is expressed as an action on an app, which is why the schema reads as a set of app permissions even for roles concerned mainly with deployment settings.
 
 #### Per-Environment Scoping
 
@@ -99,39 +50,119 @@ Deployment is the only permission category that can be limited by environment. E
 
 This is what makes it possible to express a role such as *may deploy freely to Development and Test, and may not deploy to Production at all* without creating separate roles per environment, and it is the mechanism to reach for when a compliance requirement separates production deployment from everyday development.
 
+### Platform Roles
+
+A platform role answers the question *what can this person do on the platform in general?* It is assigned to a user account when the account is created, and can be changed at any time afterward. Platform roles are stackable. That is, a user can hold several, and the effective set of permissions is everything those roles grant, added together.
+
+Private Mendix Platform includes the following default platform roles:
+
+* **User** - Baseline access to the platform web interface. Every human user needs this role at minimum.
+* **CompanyAdmin** - Company admins have access to everything under the **Manage** section of the Admin menu, including the following capabilities:
+
+    * App management
+    * User and group management
+    * Marketplace content
+    * Deployment clusters
+    * Activity logs
+    * Platform statistics
+    
+    This role is intended for users who own day-to-day platform operations.
+
+* **SystemAdmin** - Company admins have access to everything under the **Settings** section of the Admin menu, including the following capabilities:
+
+    * Identity provider and SSO configuration, version control and CI/CD integrations, licensing, branding, and platform capabilities. Intended for the people who own the infrastructure the platform depends on.
+
+{{% alert color="info" %}}
+CompanyAdmin and SystemAdmin address different audiences and grant access to different capabilities of Admin mode. Granting CompanyAdmin does not give someone access to identity or licensing settings, and granting SystemAdmin does not give someone the ability to manage users and groups. A user who needs both must be given both.
+{{% /alert %}}
+
+#### Platform Role Permissions
+
+Permissions in a platform role fall into the following broad categories.
+
+##### Generic Permissions
+
+Generic permissions grant basic platform access:
+
+* **Web** - Can reach the web interface.
+* **App** - Can create an app.
+
+##### Management Permissions
+
+Management permissions involve the capabilities available in the **Manage** section of the Admin menu, such as app management, user and group management, Marketplace administration, and activity logs:
+
+* **Apps** - Includes the following permissions:
+    
+    * **Access App management pane**
+    * **Access software composition pane**
+    * **Access import apps pane**
+
+* **Marketplace** - Includes the following permissions:
+
+    * **Manage content in content management pane**
+    * **Approve content in content management pane**
+    * **Delete content in content management pane**
+    * **Access import content in content management pane**
+    * **Access taxonomy management pane**
+
+* **Deployment** - Includes the following permissions:
+
+    * **Access cluster manager pane**
+    * **Access environment overview pane**
+
+* **Users** - Includes the following permissions:
+
+    * **Access role management pane**
+    * **Edit user management pane**
+    * **View user management pane**
+    * **Edit group management pane**
+    * **View group management pane**
+
+* **Platform** - Includes the following permissions:
+
+    * **Access platform statistics pane**
+    * **Access activity logs pane**
+    * **Access webhooks pane**
+    * **Access licensing pane**
+    * **Access Maia pane**
+
+##### Settings Permissions
+
+Settings permissions involve the capabilities available in the **Settings** section of the Admin menu, such as identity and access configuration, licensing, cluster manager configuration, and webhooks:
+
+#### Managing API User Accounts
+
+There is only one kind of account. Accounts used by services rather than people are not a separate account type. A service that calls the platform API authenticates as an ordinary account, and what it can do is determined by that account's platform role, in the same way as for a person. A role such as **API User**, holding only the permissions a particular integration needs, is an example of a platform role defined for that purpose.
+
 ### Editing Roles and Creating Custom Roles
 
-Both systems are fully editable by administrators:
+Administrators can edit both types of roles, change their permissions, and create new roles. Changing a role changes the effective access of everyone who holds it, so review who holds a role before editing it.
 
-* The permissions of a default role can be changed.
-* A default role cannot be deleted.
-* Entirely new roles can be created in either system, with any combination of permissions.
-
-Changing a role changes the effective access of everyone who holds it, so review who holds a role before editing it.
+Unlike custom roles, default roles cannot be deleted.
 
 ### Group Admin
 
-Group Admin sits outside both role systems. It is not a platform role, not a Resource Role, and not governable: it does not appear anywhere among the roles you can view or edit, and its permissions cannot be changed or extended.
+Group Admin exists outside both role systems. It is not a platform role, not a resource role, and not governable. That is, you cannot view or edit this role, and its permissions cannot be changed or extended.
 
-It is assigned invisibly and automatically to the users named in the **Group Admins** field of a group, as a consequence of naming them there. You never assign it yourself and you will not see it listed against a user.
+It is automatically assigned to users assigned in the **Group Admins** field of a group. It is not visible in the list of user roles.
 
-Its only effect is to let those users manage that group's membership, meaning they can add and remove members. It grants nothing else, and it applies only to the groups for which its holder was designated.
+This role lets group admins manage a group's membership, that is, add and remove members. It does not grant any other rights, and it applies only to the groups for which its holder was designated.
 
-Consequently, delegating group membership management does not require giving anyone an administrator role. Naming a person as a group admin on their own group is sufficient. See [Working with Groups and App Teams in Private Mendix Platform](/private-mendix-platform/groups-and-app-teams/).
+Consequently, delegating group membership management does not require giving anyone an administrator role. Naming a person as a group admin on their own group is sufficient. For more information, see [Working with Groups and App Teams in Private Mendix Platform](/private-mendix-platform/groups-and-app-teams/).
 
 ## Groups
 
-Groups are how users are organized and how Resource Roles are delivered at scale. They typically mirror your organization: a division, a department, a portfolio, a team.
+Groups organize users and deliver resource roles at scale. They typically mirror your organization and can represent, for example, a division, a department, a portfolio, or a team.
 
 ### Structure
 
 Groups form a hierarchical tree. Private Mendix Platform creates the root group automatically, and it is the foundation of everything beneath it. You can edit the root group's details to match your organization.
 
-Every group other than the root requires three things:
+Every group other than the root must have the following properties:
 
-* **Parent Group** - the group's place in the hierarchy. There is no such thing as a group outside the tree.
-* **Group Admins** - one or more users who will manage the group's membership.
-* **Description** - a clear statement of the group's purpose.
+* **Parent Group** - The group's place in the hierarchy. There is no such thing as a group outside the tree.
+* **Group Admins** - One or more users who manage the group's membership.
+* **Description** - A clear statement of the group's purpose.
 
 The depth of the hierarchy is not limited.
 

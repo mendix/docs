@@ -832,7 +832,8 @@ body.expandable-table-open {
         }
 
         // Auto margins center small tables in the flex container; shrinking lets wide tables wrap their text to fit the dialog
-        .expandable-table-inner table { flex: 0 1 auto; width: auto; max-width: 100%; margin: 0 auto !important; }
+        // The modal is outside .expandable-table-wrap, so reset Docsy's display:block/overflow:auto here too; the modal body must be the only (focusable) scroll container
+        .expandable-table-inner table { display: table; overflow: visible; flex: 0 1 auto; width: auto; max-width: 100%; margin: 0 auto !important; }
         .expandable-table-inner th,
         .expandable-table-inner td { white-space: normal; overflow-wrap: break-word; }
     }

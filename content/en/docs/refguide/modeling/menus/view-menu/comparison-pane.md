@@ -166,7 +166,7 @@ The table below shows which version opens when you click **Go to** or double-cli
 | **Modified** | The current version opens in edit mode | The version from the newer revision opens in read-only mode |
 | **Deleted** | The version from the selected revision opens in read-only mode | The version from the older revision opens in read-only mode |
 
-To open a specific version, right-click a document in Level 1 and select **View**:
+To open a specific version, right-click a document in Level 1, select **View**, and then select one of the following options:
 
 | Option | What Opens | Available For |
 |--------|------------|---------------|
@@ -176,11 +176,11 @@ To open a specific version, right-click a document in Level 1 and select **View*
 
 ### Other Document Types
 
-For all other document types, the document opens as it currently exists in your app, regardless of the type of comparison. If the document no longer exists in your app, for example, because it was deleted, a message indicates that the document no longer exists and nothing opens.
+For all other document types, the document opens as it currently exists in your app, regardless of the type of comparison. If the document no longer exists in your app (for example, because it was deleted), a message says so and nothing opens.
 
 ### Files and Text-Based Properties
 
-For text-based properties, double-click a property row or use the context menu to open a detailed side-by-side comparison in the [File Differences Viewer](/refguide/file-diff-viewer/). For modified file-type documents in Level 1, double-click or click **Go to** to open the File Differences Viewer instead of a document editor. You cannot open added or deleted files.
+For text-based properties, double-click a property row or use the context menu to open a detailed side-by-side comparison in the [File Differences Viewer](/refguide/file-diff-viewer/). For modified file-type documents in Level 1, double-click the document or click **Go to** to open the File Differences Viewer instead of a document editor. You cannot open added or deleted files.
 
 ## Refresh Behavior
 
@@ -188,7 +188,7 @@ When you are comparing a revision to your current state and save changes to your
 
 ## Stopping a Comparison
 
-Click **Stop comparison** to close the comparison. This action closes the **Comparison** pane and returns it to a blank state. Documents that were opened in their current version remain open in the editor. Read-only versions of documents are closed.
+Click **Stop comparison** to close the comparison. This action closes the **Comparison** pane and returns it to a blank state. Documents that were open in their current version remain open in the editor. The pane closes read-only versions.
 
 In the blank state, the **Comparison** pane displays a message with a link to start a new comparison. The **Go to** and **Stop comparison** buttons are disabled until a new comparison is started.
 

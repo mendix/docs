@@ -7,6 +7,10 @@ weight: 12
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-10/) instead.
+{{% /alert %}}
+
 Wherever the Studio Pro Extensibility API allows you to add custom UI, you can implement it using web technologies.
 
 Studio Pro includes a built-in web view for displaying your web-based UI. It also provides a built-in web server that can be used to serve both the web UI and the data it requires.

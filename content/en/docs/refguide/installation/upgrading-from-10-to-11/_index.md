@@ -19,7 +19,7 @@ If your app is on a Studio Pro version below 10, you must upgrade in order of ve
 * [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)
 * [Upgrading from Mendix Studio Pro 9 to 10](/refguide10/upgrading-from-9-to-10/)
 
-If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the Control Center dashboard. Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
+If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the Control Center dashboard. Alternatively, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to find out how to check the Mendix version of your app.
 
 ### Steps Required for Upgrade
 

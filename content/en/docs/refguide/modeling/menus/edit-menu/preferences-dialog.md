@@ -8,7 +8,7 @@ weight: 50
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences that apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.jpg" alt="Preferences" width="600" class="no-border" >}}
 
 ## General Tab {#general}
 
@@ -115,7 +115,7 @@ In Studio Pro 11.7 and below, the **Generative AI** section contains the followi
 
 * **Enable Start with Maia** – when enabled, you can use the **Start with Maia** starting point in Studio Pro to help you create an app. For more information on how to use this feature, see [Start with Maia](/refguide/start-with-maia/). It is enabled by default.
 * **Enable Maia Explain** – when enabled, you can use it to explain a microflow or a nanoflow in the logic editors. For more information, see [Maia Explain](/refguide/maia-explain/). It is enabled by default.
-* **Enable Maia for Domain Model** – when enabled, you can use it to generate a new domain model or to explain and improve an existing one. For more information, see [Maia for Domain Model](/refguide/maia-for-domain-model/). It is enabled by default.
+* **Enable Maia for Domain Model** – when enabled, you can use it to generate a new domain model or to explain and improve an existing one. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/). It is enabled by default.
 * **Enable Maia for OQL Generation** – when enabled, you can use it to generate and manage OQL (Object Query Language) queries through an intuitive interface. For more information, see [Maia for OQL](/refguide/maia-for-oql/). It is disabled by default.
 * **Enable Maia for Pages** – when enabled, you can use it to generate a new page or to explain and improve an existing one. For more information, see [Maia for Pages](/refguide/maia-for-pages/). It is disabled by default.
 * **Enable Maia for Workflows** – when enabled, you can use it to generate workflows by adding and configuring activities. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/). It is disabled by default.
@@ -332,6 +332,14 @@ Select this option to use a custom AI provider for Maia.
 ### Mapping Editor
 
 This setting allows you to set the beta version as the default editor.
+
+### Microflow, Nanoflow, and Rule Editor {#microflow-nanoflow-rule-editor}
+
+Select this option to allow rendering sequence flows as orthogonal (right-angled) lines in the microflow, nanoflow, and rule editors. When enabled, you can convert flow types between curved and orthogonal through the context menu. For more information, see the [Flow Type](/refguide/sequence-flow/#flow-type) section in *Sequence Flow*.
+
+{{% alert color="info" %}}
+This is a beta feature, available in Studio Pro 11.15 and above.
+{{% /alert %}}
 
 ### Project Loading
 

@@ -211,6 +211,12 @@ html {
     position: absolute; // NK - custom edit
 }
 
+// Olu - Keep Mx-dock dropdowns above page content
+#mx-dock-header {
+    position: relative;
+    z-index: $zindex-fixed;
+}
+
 .td-main main {
     padding-top: 4rem;  // DB - Moved out of breakpoint
         @include media-breakpoint-up(md) {

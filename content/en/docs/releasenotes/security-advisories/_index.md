@@ -12,8 +12,8 @@ Mendix publishes security advisories by leveraging [Siemens ProductCERT](https:/
 
 Mendix adds the CVSS score and CVSS vector for security vulnerabilities described in the Studio Pro release notes. Mendix also adds the Mendix-specific CVE IDs when they become available.
 
-{{% alert color="warning" %}}
-Siemens publishes their common vulnerabilities and exposures (CVE) on the second Tuesday of every month.
+{{% alert color="info" %}}
+Siemens publishes their common vulnerabilities and exposures (CVE) as soon as a fix is published or a workaround is available.
 {{% /alert %}}
 
 ## Security Advisory Details {#details}
@@ -21,7 +21,6 @@ Siemens publishes their common vulnerabilities and exposures (CVE) on the second
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
 | <a id="80465">CVE-2026-80465 | 8.7 | [Account Hijacking Vulnerability in Mendix SAML module](https://cert-portal.siemens.com/productcert/html/ssa-887643.html) | See the SSA description for remediation details. |
-| <a id="7891">CVE-2026-7891 | 9.1 | [Insecure Inherited Permission in Mendix](https://cert-portal.siemens.com/productcert/html/ssa-814963.html) | See the SSA description for remediation details. |
 | <a id="48192">CVE-2026-48192 | 5.4 | [Arbitrary Code Execution Vulnerability in Mendix Studio Pro Before V11.12](https://cert-portal.siemens.com/productcert/html/ssa-779310.html) | See the SSA description for remediation details. |
 | <a id="40834">CVE-2025-40834 | 5.7 | [Cross-Site Scripting Vulnerability in Mendix Rich Text Widget](https://cert-portal.siemens.com/productcert/html/ssa-190588.html) | See the SSA description for remediation details. |
 | <a id="40758">CVE-2025-40758 | 8.7 | [Account Hijacking Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-395458.html) | See the SSA description for remediation details. |

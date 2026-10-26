@@ -7,6 +7,10 @@ weight: 14
 
 ## Introduction
 
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-10/) instead.
+{{% /alert %}}
+
  This how-to describes how to create a new microflow and add activities to it. The `IMicroflowService` is used to perform actions related to microflows.
 
 ## Creating and Initializing a Microflow Using `Initialize`

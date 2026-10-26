@@ -15,7 +15,7 @@ Private Mendix Platform supports the following types of Git repositories as the 
 * GitHub Enterprise Server
 * GitHub Enterprise Cloud
 * Bitbucket
-* Azure DevOps
+* Azure DevOps Services (cloud, `dev.azure.com`). Azure DevOps Server (on-premises) is not supported.
 
 To select the repository type, perform the following steps:
 
@@ -169,10 +169,12 @@ This section describes the configuration of an Azure DevOps repository for use w
 
 Before configuring Azure DevOps for Private Mendix Platform, ensure that you fulfill the following prerequisites:
 
+* You use Azure DevOps Services (cloud). Azure DevOps Server (on-premises) is not supported, because Private Mendix Platform requires the Azure DevOps cloud PAT API to generate your Azure PAT.
 * You have access to an Azure DevOps organization.
 * An Azure DevOps project exists to host applications created by the Private Mendix Platform.
 * You can generate Personal Access Tokens (PATs) in Azure DevOps.
 * A Microsoft Entra ID (Azure AD) application can be registered.
+* Your Azure DevOps organization must be connected to the same Microsoft Entra ID tenant as the app registration used for Azure OAuth.
 
 ### Microsoft Entra ID Configuration
 
@@ -197,7 +199,7 @@ In Azure DevOps, perform the following tasks:
 
 ### Private Mendix Platform Configuration
 
-* **Host URL** - This is the host URL of your Azure DevOps enterprise server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your Azure DevOps enterprise server host name is `myazure.example.com`, you should input `https://myazure.example.com` here.
+* **Host URL** - The Azure DevOps Services URL, `https://dev.azure.com`. Azure DevOps Server (on-premises) is not supported.
 * **Organization** – Enter the name of the Azure DevOps organization that you created.
 * **Organization Admin PAT** – Enter the Personal Access Token of the Azure DevOps organization admin user.
 

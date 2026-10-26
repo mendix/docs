@@ -53,7 +53,7 @@ For more information on legal definitions, refer to [Order Form Definitions](htt
 ## Obtaining a Mendix License{#get-license}
 
 {{% alert color="info" %}}
-If you want to create a new licensed node in Mendix Cloud but your contract does not allow for more licensed nodes, contact your Customer Success Manager (CSM) first.
+If you want to create a new licensed node in Mendix Cloud but your contract does not allow for more licensed nodes, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact first.
 {{% /alert %}}
 
 You can obtain a Mendix license from Mendix Support, as described below. If you want to deploy to SAP BTP or Mendix on Kubernetes, you can also use this process to obtain a subscription secret. Follow these steps:

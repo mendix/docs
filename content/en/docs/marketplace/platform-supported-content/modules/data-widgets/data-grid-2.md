@@ -163,15 +163,15 @@ You can define how each cell will be rendered in the data grid. We offer three c
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-width.png" alt="Settings for column width for each column item" class="no-border" >}}
 
 * **Auto-fill** – With this option it will auto define the width of your column, if all columns are using auto-fill, it will divide evenly the same width, if another column is configured with auto-fit or manual, it will fill the available space.
-* **Auto-fit** – Content With this option it will calculate the width of your column based on the content of each row.
+* **Auto-fit content** – With this option it will calculate the width of your column based on the content of the header and each visible row.
 * **Manual** – With this option you will manually define the size of your column based of flexbox grow values, for more information, please [check here](https://www.w3.org/TR/css-flexbox-1/).
 
 ### Alignment
 
 You can choose how the content inside your columns will be aligned. We offer three choices: left, center, and right.
 
-{{% alert color="info" %}}
-This will also change the alignment of your header.
+{{% alert color="warning" %}}
+This setting has no effect on columns that use **Custom content** in the **Show** option of the **General** tab.
 {{% /alert %}}
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-alignment.png" alt="Settings for alignment of each column item" class="no-border" >}}

@@ -42,7 +42,7 @@ You have 30 days to start the exam.
 
 ### Booking for Other People
 
-You can order exam seats for other people and place bulk orders for multiple Mendix certification exam seats for your organization. In this case, contact your CSM to get the order form or for more details. You can also contact Mendix Academy directly at [academy@mendix.com](mailto:academy@mendix.com).
+You can order exam seats for other people and place bulk orders for multiple Mendix certification exam seats for your organization. In this case, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to get the order form or for more details. You can also contact Mendix Academy directly at [academy@mendix.com](mailto:academy@mendix.com).
 
 After receiving the order, Mendix assigns an exam admin to it. The exam admin is then responsible for overseeing the details of the order and allocating the purchased exam seats to individuals within your organization.
 

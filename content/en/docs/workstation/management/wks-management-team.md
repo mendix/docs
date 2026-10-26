@@ -30,6 +30,14 @@ For more information about the available roles, see [User Roles](#user-roles).
 
 To change a user's role or remove them from the workspace, click the three-dot icon in the right column of the user list. This action requires the Owner or Workspace Admin role.
 
+### Transfer Workspace Ownership
+
+By default, the user who created a workspace is assigned the owner role. For an owner to hand over the workspace to another user, click the three-dot icon in the right column of the user, click **Transfer Ownership**, and confirm this action by clicking **Transfer Ownership** on the confirmation popup.
+
+{{% alert color="info" %}}
+Only the current owner can transfer ownership, so make sure owners hand over their workspaces before they leave your company. If an owner has already left, contact Mendix Support to have the ownership transferred.
+{{% /alert %}}
+
 ## Workspace Roles {#user-roles}
 
 You can assign the following roles to your users:
@@ -41,10 +49,7 @@ You can assign the following roles to your users:
     * Registering and deregistering computers to and from stations
     * Refreshing computer configurations
     * Managing workspace settings
-    * Deleting a workspace or transfering ownership to a new owner
-    
-        By default, the user who created a workspace is assigned the owner role. Contact Mendix Support if a Workspace owner has left the company to transfer the ownership. 
-    
+    * Deleting a workspace or transferring ownership to a new owner
     * Viewing bulk registration tokens
     * Copying existing bulk registration tokens
     * Creating new bulk registration tokens

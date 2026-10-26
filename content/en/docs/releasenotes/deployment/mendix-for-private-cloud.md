@@ -12,6 +12,22 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### October 22, 2026
+
+#### Portal Improvements
+
+* We have fixed an issue where the avatars of the cluster manager and namespace members were not visible.
+* We have fixed an issue where the **Compare and Edit** feature bypassed both environment access controls and mask settings. (Ticket 287517)
+* We have fixed an issue where stopping and redeploying a scaled production environment reset its replica count to 1, causing extra downtime during go-live. (Ticket 288080)
+
+### September 10, 2026
+
+#### Mendix Operator 2.28.1 {#2.28.1}
+
+* We have added an option to specify a custom OCI registry in the Helm chart UI (for air-gapped setups).
+* We have added an option to configure PCLM client settings in the Helm chart UI.
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+
 ### September 3, 2026
 
 #### Portal Improvements

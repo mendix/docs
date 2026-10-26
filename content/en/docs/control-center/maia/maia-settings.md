@@ -7,27 +7,30 @@ weight: 10
 
 ## Maia Settings
 
-The **Maia Settings** page allows company administrators to manage Maia access and usage limits for their organization. These settings apply across both the Mendix Portal and Studio Pro, providing centralized control over Maia availability and company-wide usage.
+The Maia **Settings** page allows company administrators to manage Maia access and usage limits for their organization. These settings apply across Studio Pro, providing centralized control over Maia availability and company-wide usage.
 
-## General {#general}
+## Page Tabs
+
+The Maia **Settings** page is made up of the tabs described in the following sections.
+
+### General Tab {#general}
 
 The **General** tab controls whether Maia is available for users in the company.
 
 {{< figure src="/attachments/control-center/maia/maia-settings-general.png" alt="" >}}
 
-### Company Access
+#### Company Access
 
 This setting gives company administrators a single control point for enabling or disabling Maia access across the organization.
 
-#### When Enabled
+##### When Enabled
 
 When Maia access is enabled:
 
 * Maia Make is available in Studio Pro
-* Maia features are available in the Mendix Portal
 * Company and user usage limits are enforced according to the configured settings
 
-#### When Disabled
+##### When Disabled
 
 When Maia access is disabled:
 
@@ -35,13 +38,13 @@ When Maia access is disabled:
 * The company-wide usage limit is automatically set to 0
 * Individual user limits are preserved but remain inactive until Maia access is enabled again
 
-## Resources {#resources}
+### Resources Tab {#resources}
 
 The **Resources** tab allows company administrators to configure the default monthly Maia usage limit for users in the company.
 
 {{< figure src="/attachments/control-center/maia/maia-settings-resources.png" alt="" >}}
 
-### Default Limit Per User
+#### Default Limit Per User
 
 Company administrators can define the default Maia usage limit that applies to all company users without an individual custom limit.
 

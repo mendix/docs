@@ -8,7 +8,9 @@ weight: 20
 
 ## Introduction
 
-In interactive mode, you manually install Private Mendix Platform components. If you would like to perform an automatic installation instead, see [Install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/).
+In interactive mode, you manually install Private Mendix Platform components. For other installation types, see the following topic:
+
+* [Install Private Mendix Platform with Helmfile](/private-mendix-platform/helmfile-installation/)
 
 ## Preparing the Installation Files
 
@@ -311,17 +313,17 @@ The installer does not catch your pod's running status. In case of issues, verif
 
 If you want to uninstall Svix, you must do it manually, by running the following command: `helm helm uninstall  svix-server  -n=<Private Mendix Platform namespace>`.
 
-## Optional: Installing Private Cloud Components for Connected Mode
+## Optional: Installing Private Cloud Components for Interactor-Agent Mode
 
-Private Mendix Platform now supports installation in [Connected mode](/developerportal/deploy/private-cloud/#connected-clusters). To enable this functionality, you must install the relevant Private Cloud components.
+Private Mendix Platform now supports installation in Interactor-Agent (called [Connected mode](/developerportal/deploy/private-cloud/#connected-clusters) in Mendix on Kubernetes). To enable this functionality, you must install the relevant Private Cloud components.
 
 {{% alert color="info" %}}
-As of Private Mendix Platform 2.6, some functionalities are not yet available in Connected mode, and will be added in future releases. For more information, see [Known Issues](/releasenotes/private-platform/2-6/#known-issues).
+As of Private Mendix Platform 2.6, some functionalities are not yet available in Interactor-Agent mode, and will be added in future releases. For more information, see [Known Issues](/releasenotes/private-platform/2-6/#known-issues).
 {{% /alert %}}
 
 ### Database Prerequisites
 
-To enable connected mode, you must create the database Authenticator and Collector, and install NATS at your cluster.
+To enable Interactor-Agent mode, you must create the database Authenticator and Collector, and install NATS at your cluster.
 
 * For the Authenticator, run the following commands:
 
@@ -543,7 +545,7 @@ Install the Private Mendix Platform by doing the following steps:
 
 ## Installing Maia for the Private Mendix Platform {#maia}
 
-[Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development. Private Mendix Platform currently offers support for Maia-assisted app creation. Other Maia capabilities, such as Maia Chat, will be made available in future releases.
+[Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development. Private Mendix Platform currently offers support for Maia-assisted app creation. Other Maia capabilities will be made available in future releases.
 
 To enable [Maia for Private Mendix Platform](/private-mendix-platform/maia/), perform the following steps:
 

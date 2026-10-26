@@ -70,7 +70,7 @@ The Mendix SAML SSO supports the usage of SAML metadata in the following way:
 
 For easy configuration, the SAML module offers the following:
 
-* From version 4.0.0 of the SAML module, if you want to connect your Mendix application with a single IdP, you can do the necessary configurations at design time (using a microflow) and/or deploy time using Application Constants. This is described in the section [Non-default Configuration](/appstore/modules/saml/installation-configuration/#non-default).
+* From version 4.0.0 of the SAML module, if you want to connect your Mendix application with a single IdP, you can do the necessary configurations at design time (using a microflow) and/or deploy time using Application Constants. This is described in the section [Custom Configuration](/appstore/modules/saml/installation-configuration/#non-default).
 * You can create a custom SAML configuration microflow and share it across all SAML applications in your portfolio, such as using a custom module in your private marketplace. This approach makes SAML configurations both automatable and repeatable.
 * Runtime configuration by a local Admin is still available in the following cases:
 
@@ -105,7 +105,7 @@ Some SAML services, such as eHerkenning and DigID in the Netherlands, use option
 * RequestedAuthnContext in the SAML requests
 * HTTP-SOAP Logout Request
 
-If you need any of these features, contact your Mendix CSM to discuss the inclusion of these features on the Mendix roadmap or the customization of the SAML SSO module.
+If you need any of these features, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to discuss the inclusion of these features on the Mendix roadmap or the customization of the SAML SSO module.
 
 Versions of the SAML module below 3.5.0 are limited to a single key pair. If you are using one of those older versions and you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a certificate authority (CA). For more details, see the [Use a Certificate Issued by a Certificate Authority](/appstore/modules/saml/advanced-configuration/#use-ca) section of *Advanced Configuration for SAML*.
 

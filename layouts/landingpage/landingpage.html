@@ -5,6 +5,8 @@
         {{ partial "head.html" . }}
     </head>
     <body class="td-{{ .Kind }}">
+        <!-- MvM - Include mx-dock at the top of all pages, except print versions -->
+        {{ partial "mx-dock.html" . }}
         <div class="container-fluid td-outer">
             <div class="td-main">
                 <div class="row flex-xl-nowrap stretch-main">

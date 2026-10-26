@@ -53,7 +53,7 @@ See the **Example Implementations** folder inside the module containing example 
 
 #### Protocol Version
 
-When creating an MCP client, specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The MCP Client module supports `v2024-11-05` with HTTP+SSE transport and `v2025-03-26` with streamable HTTP transport. MCP servers must support the same version as the client. Note that Mendix supports the capabilities provided by the MCP Java SDK.
+When creating an MCP client, specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-11-25/changelog). The MCP Client module supports versions `v2025-11-25` and `v2025-03-26` with streamable HTTP transport, and version `v2024-11-05` with HTTP+SSE transport. MCP servers must support the same version as the client. Note that Mendix supports the capabilities provided by the MCP Java SDK.
 
 ### Discovering Resources {#discover-resources}
 
@@ -90,7 +90,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ### MCP Client Cannot Connect to the MCP Server
 
-There are several possible reasons why the client cannot connect to your server. First, check the MCP Client logs. Then, verify that the endpoint is set to the correct URL and that the server supports the same protocol version and transport method (HTTP + SSE or Streamable HTTP) as the client. If authentication is required, make sure to pass the necessary information via HTTP headers.
+There are several possible reasons why the client cannot connect to your server. First, check the MCP Client logs. Then, verify that the endpoint is set to the correct URL and that the server supports the same protocol version and transport method (Streamable HTTP or HTTP+SSE) as the client. If authentication is required, make sure to pass the necessary information via HTTP headers.
    
 ## Read More
 

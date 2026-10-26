@@ -301,8 +301,8 @@ Example:
 
 In order to fetch the container images from container registry, patch the `default` service account with the registry credentials. Mxpc-cli and mx-ops-cli automatically generate the following secrets:
 
-* Mxpc-cli (the classic installer) creates `mendix-generic-registry-secret`.
-* Mx-ops-cli (the Helm chart UI installer) creates `mendix-registry-generic-secret`.
+* Mxpc-cli (the classic installer) creates `mendix-registry-generic-secret`.
+* Mx-ops-cli (the Helm chart UI installer) creates `mendix-generic-registry-secret`.
 
 These secrets hold the necessary registry credentials, enabling pods to pull images.
 

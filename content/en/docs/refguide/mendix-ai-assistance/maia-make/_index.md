@@ -131,6 +131,12 @@ The **Add file to Maia Chat** option (@ icon) allows you to add certain logic or
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add-files.jpg" width="250px" alt="" >}}
 
+#### Skills
+
+The **Skills** option opens the **Skills** tab of the **Maia Settings** pane and gives you a full overview of the agent skills in your app. This button only appears when you add an agent skill to your app.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/skills.jpg" width="250px" alt="" >}}
+
 #### Changed List
 
 A list of items added or changed by Maia appears above the chat box. Click an entry to open the relevant document. To undo all changes, click **Undo all**. To undo a single change, click the undo button on the right side of that item.

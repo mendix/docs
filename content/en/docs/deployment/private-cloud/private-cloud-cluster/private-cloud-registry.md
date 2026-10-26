@@ -299,7 +299,7 @@ Example:
    kubectl patch serviceaccount default -n <namespace> -p '{"imagePullSecrets": [{"name": "<secret-name>"}]}'
    ```
 
-In order to fetch the container images from container registry, patch the `default` service account with the registry credentials. Both mxpc-cli and mx-ops-cli automatically generate a secret named `mendix-generic-registry-secret`. This secret holds the necessary registry credentials, enabling pods to pull images.
+In order to fetch the container images from container registry, patch the `default` service account with the registry credentials. Both mxpc-cli and mx-ops-cli automatically generate a secret named `mendix-registry-generic-secret`. This secret holds the necessary registry credentials, enabling pods to pull images.
 
 ### Existing Docker Registry Secret
 

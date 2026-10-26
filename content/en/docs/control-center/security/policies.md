@@ -22,10 +22,10 @@ You can use one of the existing templates to create your own policy.
 
 2. Select one of the available templates:
 
+    * Only company-approved components are allowed
     * Only platform-supported Marketplace components are allowed
     * Only medium or low findings are allowed
     * Only Mendix runtime versions >= 9.24.43 are allowed
-    * Only company-approved components are allowed
 
 3. In the **Policy Name** field, add a name for the new policy.
 

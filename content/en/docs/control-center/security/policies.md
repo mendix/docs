@@ -74,7 +74,7 @@ You can create a policy by defining your own details.
             * PLATFORM
             * COMMUNITY
 
-        * **Marketplace component is not Company-approved** – Choose to only allow company-approved components. This enables you to have granular control over the components in your app. You can define the criteria that company-approved components must meet on the **Company-Approved** page of the **Marketplace** section in Control Center. For details, refer to [Company-Approved](/control-center/company-approved/).    
+        * **Marketplace component is not Company-approved** – Choose to only allow company-approved components. This enables you to have granular control over the components in your app based on curation settings. Curation settings let you specify the criteria that Marketplace components must meet in order to get a company-approved badge, as well as exceptions for specific components. You can define these settings on the **Company-Approved** page of the **Marketplace** section in Control Center. For details, refer to [Company-Approved](/control-center/company-approved/).    
             If you choose to define this policy, you no longer need to also define other license or support policies.
     
     * **Checkpoints & Action(s)** – Select the trigger which causes the policy to be checked, and the action that is taken if the policy is violated. Currently, policy violations are checked at the time of package creation, and violations generate warnings.

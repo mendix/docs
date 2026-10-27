@@ -51,22 +51,6 @@ Ask for confirmation before making these changes:
 
 The canonical tree is **`/content/en/docs`**. Top‑level directories correspond to major product areas (e.g. `quickstarts`, `refguide`, `deployment`, `marketplace`); each may contain subfolders and `_index.md` files that define section landing pages.
 
-Typical structure:
-
-```
-content/en/docs/
-├── _index.md
-├── quickstarts/
-│   ├── _index.md
-│   ├── hello-world.md
-│   └── responsive-web-app.md
-├── refguide/
-│   ├── _index.md
-│   ├── modeling/ …
-│   └── runtime/ …
-…
-```
-
 * **Index files (`_index.md`)** define landing pages or categories. They often use `cascade` to pass metadata to children and may set `type`, `layout`, `no_list`, `description_list`, etc.
 * Other `.md` files represent individual articles, how‑tos, reference topics, release notes, etc. File names must be simple, lowercase, and hyphen‑separated.
 
@@ -108,11 +92,6 @@ Call tools in parallel for independent operations (reading multiple files, multi
 
 * **Helper Scripts**
     * For URL resolution, use `bash .claude/scripts/resolve-doc-url.sh` instead of spawning agents. This resolves documentation URLs (e.g., `/community-tools/contribute-to-mendix-docs/`) to their source Markdown files and ensures Grep uses efficient flags consistently.
-* **Read** – Use to view specific files you know the path to
-* **Edit** – Use to modify existing files with targeted changes
-* **Glob** – Use to find files by pattern (e.g., `*.md`, `**/*config*`)
-* **Grep** – Use to search file contents for specific text or patterns
-* **Write** – Use only for creating new files (prefer Edit for existing files)
 
 ### Cross-Reference Verification
 

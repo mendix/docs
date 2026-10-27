@@ -109,7 +109,7 @@ Clicking **New Chat** allows you to clear the messages and start a new conversat
 
 #### Settings
 
-The Settings option ({{% icon name="cog" %}}) allows you to manage your MCP Servers, agent skills, and export your Maia agent session.
+The Settings option ({{% icon name="cog" %}}) allows you to manage your MCP Servers, agent skills, and export your Maia agent session. It also allows you to view and manage your tool permissions. You can configure permissions to **Always Allow** or allow only in the current session.
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/maia-settings.jpg" width="250px" alt="" >}}
 

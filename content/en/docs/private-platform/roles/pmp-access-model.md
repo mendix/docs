@@ -130,9 +130,29 @@ Management permissions involve the capabilities available in the **Manage** sect
 
 Settings permissions involve the capabilities available in the **Settings** section of the Admin menu, such as identity and access configuration, licensing, cluster manager configuration, and webhooks:
 
+* **Preferences** - Includes the following permissions:
+
+    * **Access notification setting pane**
+    * **Access general setting pane**
+    * **Access marketplace setting pane**
+    * **Access version support setting pane**
+
+* **Integrations** - Includes the following permissions:
+
+    * **Access identity & access setting pane**
+    * **Access project management setting pane**
+    * **Access version control setting pane**
+    * **Access build setting pane**
+    * **Access deployment setting pane**
+
+* **Advanced** - Includes the following permissions:
+
+    * **Access capability setting pane**
+    * **Access operational setting pane**
+
 #### Managing API User Accounts
 
-There is only one kind of account. Accounts used by services rather than people are not a separate account type. A service that calls the platform API authenticates as an ordinary account, and what it can do is determined by that account's platform role, in the same way as for a person. A role such as **API User**, holding only the permissions a particular integration needs, is an example of a platform role defined for that purpose.
+There is only one type  of account. Accounts used by services rather than people are not a separate account type. A service that calls the platform API authenticates as an ordinary account, and what it can do is determined by that account's platform role, in the same way as for a person. A role such as **API User**, holding only the permissions a particular integration needs, is an example of a platform role defined for that purpose.
 
 ### Editing Roles and Creating Custom Roles
 
@@ -142,7 +162,7 @@ Unlike custom roles, default roles cannot be deleted.
 
 ### Group Admin
 
-Group Admin exists outside both role systems. It is not a platform role, not a resource role, and not governable. That is, you cannot view or edit this role, and its permissions cannot be changed or extended.
+The Group Admin role exists outside both role systems. That is, it is not a platform or resource role. You cannot view or edit this role, and its permissions cannot be changed or extended.
 
 It is automatically assigned to users assigned in the **Group Admins** field of a group. It is not visible in the list of user roles.
 

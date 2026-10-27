@@ -107,7 +107,13 @@ Clicking **New Chat** allows you to clear the messages and start a new conversat
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/new-chat.jpg" width="250px" alt="" >}}
 
-#### Configure MCP Connections
+#### Settings
+
+The Settings option ({{% icon name="cog" %}}) allows you to manage your MCP Servers, agent skills, and export your Maia agent session.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/maia-settings.jpg" width="250px" alt="" >}}
+
+##### Configure MCP Connections (Studio Pro 11.14 and below)
 
 This option ({{% icon name="plug" %}}) allows you to connect external [MCP](https://modelcontextprotocol.io/introduction) servers to Maia, giving it access to third-party tools during chat. For more information on how to configure MCP connections, see [Maia MCP Client](/refguide/maia-mcp/).
 
@@ -124,6 +130,12 @@ This option ({{% icon name="plug" %}}) allows you to connect external [MCP](http
 The **Add file to Maia Chat** option (@ icon) allows you to add certain logic or pages to Maia as context. You can also access this option by right-clicking the documents (microflows or pages) in the **App Explorer**, where it appears in the context menu.
 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/add-files.jpg" width="250px" alt="" >}}
+
+#### Skills
+
+The **Skills** option opens the **Skills** tab of the **Maia Settings** pane and gives you a full overview of the agent skills in your app. This button only appears when you add an agent skill to your app.
+
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-capabilities/skills.jpg" width="250px" alt="" >}}
 
 #### Changed List
 

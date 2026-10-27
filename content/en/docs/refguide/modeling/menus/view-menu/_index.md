@@ -117,9 +117,15 @@ The **Maia** pane displays the Maia interface. In this chat, you can create and 
 
 For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content](/appstore/use-content/).
 
-### MCP Settings
+### Maia Settings
 
-The **MCP Settings** pane allows you to connect Maia to External Model Context Protocol (MCP) servers. For more information, see [Maia MCP Client](/refguide/maia-mcp/).
+{{% alert type="info" %}}
+In Studio Pro 11.14 and below, this tab is called **MCP Settings**.
+{{% /alert %}}
+
+The **Maia Settings** pane allows you to connect Maia to External Model Context Protocol (MCP) servers. For Studio Pro 11.15 and above, this pane also stores [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/).
+
+For more information, see [Maia MCP Client](/refguide/maia-mcp/).
 
 ### OpenAPI Documentation {#api-documentation}
 

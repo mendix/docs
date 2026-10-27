@@ -38,5 +38,5 @@ Work with Maia to refine and detail the project scope, including the goal, succe
 
     You can use the pane on the right to chat with Maia about your requirements for the new app.
 
-2. After you review the project scope and make any necessary changes, click **Approve to Create Specs**. This prompts Maia to start turning your input into a detailed set of specs, with each spec mapping to each distinct capability.    
+2. After you review the project scope and make any necessary changes, click **Create Specs**. This prompts Maia to start turning your input into a detailed set of specs, with each spec mapping to each distinct capability.    
     You can also click **Save** to save all the changes and leave the flow.

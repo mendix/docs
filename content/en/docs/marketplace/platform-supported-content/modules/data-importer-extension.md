@@ -77,7 +77,7 @@ Once you have [created the Data Importer document](#create-document), click **Se
 
 Click **Upload File** to import an Excel file (*.xls* or *.xlsx*). [Note: App should be running to preview data.]
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/select-file-for-preview.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-file-for-preview.png" class="no-border" width="600" >}}
 
 Select the file in the **Select Source File** field. An Excel workbook can have single or multiple sheets; you can choose which sheet to import data from and specify the header row and starting data row.
 
@@ -85,7 +85,7 @@ Select the file in the **Select Source File** field. An Excel workbook can have 
 * **Header Row No.** – row number of the file header; the default is 1
 * **Read Data From** – starting line for reading data; the default is 2
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/select-sheet-and-header-data-row.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-sheet-and-header-data-row.png" class="no-border" width="600" >}}
 
 Click **Preview Data** to view the data from the file. The first 10 data rows from the source file are shown in the data preview section. If there are less than 10 data rows in the sample file, only the available rows are shown. The column names correspond to the attribute name within the entity, and the sheet name is used to define the entity.
 
@@ -93,7 +93,7 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. For **Number** cell types, the target Mendix type is mapped to **Decimal** to accommodate integers and decimals. {{% /alert %}}
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/preview-data-and-entity.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/preview-data-and-entity.png" class="no-border" width="600" >}}
 
 ##### Header and data row numbering
 
@@ -120,11 +120,11 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 For example, for the following source data (CSV), the separator is specified as Comma. The Quote and Escape Characters are set to Double Quote, and the header is included in the input file.
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/source-csv-data.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/source-csv-data.png" class="no-border" width="600" >}}
 
 The data preview and resulting entity are shown below:
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/preview-csv-data-and-entity.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/preview-csv-data-and-entity.png" class="no-border" width="600" >}}
 
 ### Editing an Entity {#edit-entity}
 
@@ -174,7 +174,7 @@ When you are done editing the entity, click **Create Entity**. You will see a in
 
 When the entity is created, you can view the mapping of the source columns to the target entity attributes.
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/source-to-target-mapping.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/source-to-target-mapping.png" class="no-border" width="600" >}}
 
 The Data Importer document creation is complete and can be used to import data in a microflow.
 
@@ -186,7 +186,7 @@ The newly created Data Importer document allows you to periodically import data 
 
 The **Import data from file** activity is found under **Integration activities** in the **Toolbox**. Double-click to view its properties:
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/custom-activity-params.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/custom-activity-params.png" class="no-border" width="600" >}}
 
 The **Input** section includes:
 
@@ -206,17 +206,17 @@ The **Import data from file** custom activity needs an input file to import data
 2. Double-click the button and in the **Events** field under the **On click** drop-down, select **Create object** to create a `System.FileDocument` entity.
 3. Pass the control to a new page (**UploadCustomerData**) where the file is uploaded.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/home-page-button.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/home-page-button.png" class="no-border" width="600" >}}
 
 4. On the **UploadCustomerData** page, include a data view for the *FileDocument* and include a 'File Manager' to assist with a file upload.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/data-view-file-manager.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/data-view-file-manager.png" class="no-border" width="600" >}}
 
 5. Open the **Toolbox** and add a **Call microflow button**.
 
 6. Click **New** and name the microflow *Import Customer Data*. **FileDocument** appears in the parameters section; make sure this box is checked to include it as a parameter and click **OK**.
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/add-parameter.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/add-parameter.png" class="no-border" width="600" >}}
 
 ### Configuring the Import data from file Activity in a Microflow 
 
@@ -226,40 +226,40 @@ The steps below are shown using an Excel input file with its corresponding Data 
 
 1. In the created microflow, drag the **Import data from file** activity into it. You can find this activity in the **Toolbox** under **Integration activities**.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/integration-activity.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/integration-activity.png" class="no-border" width="600" >}}
 
 2. When the **Import data from file** activity is added to the microflow, you see three errors in the console:
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/custom-activity.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/custom-activity.png" class="no-border" width="600" >}}
 
    To address these errors, double-click the activity and in the **File** field, choose the input file that is passed from the file upload page to this microflow as a parameter.
 
 3. In the **Data Importer document** field, click **Select** and choose the Data Importer document you want to use.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/choose-data-importer-template.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/choose-data-importer-template.png" class="no-border" width="600" >}}
 
    After selecting the Data Importer document, the **Return type** and **Variable name** are auto-populated. You can change the name of the output variable if needed.
 
 4. Click **OK**. The custom activity is configured and all errors are resolved.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/configured-custom-activity.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/configured-custom-activity.png" class="no-border" width="600" >}}
 
 5. Add an **Aggregate list** activity and configure it to count the size of the **CustomerList** returned from the previous activity.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/aggregate-list.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/aggregate-list.png" class="no-border" width="600" >}}
 
 6. Configure a **Show message** activity. You can use a template message and a parameter, as in the example below.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/show-message-with-list-size.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/show-message-with-list-size.png" class="no-border" width="600" >}}
 
 7. Set `$CustomerList` as the return value from the **Import data from file** activity for later use. Your completed microflow should look like the image below.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/example-microflow.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/example-microflow.png" class="no-border" width="600" >}}
 
 8. Deploy your app locally. Browse and upload an input file that resembles the file used to create the Data Importer document.
 9. Check that you see a message stating **Imported xx rows from input file into a list of NPEs**.
 
-   {{< figure src="/attachments/refguide/modeling/integration/data-importer/local-app-run.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/local-app-run.png" class="no-border" width="600" >}}
 
 You have successfully configured and used the Data Importer. You can extend this as needed — for example, by converting the list of NPEs into persistable entities using a message definition, or by using a loop to individually create and commit entities to your database.
 
@@ -273,13 +273,13 @@ The [Import Mapping](/refguide/import-mappings/) document and the [Import with M
 2. Name the document and enable the **Use with Import mapping** checkbox.
 3. Click **OK**. The new Data Importer document opens.
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/create-DI-doc-with-import-mapping.png" class="no-border" width="400" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/create-DI-doc-with-import-mapping.png" class="no-border" width="400" >}}
 
 ### Previewing Structure {#preview-structure}
 
 [Note: App should be running to preview data] Once you have [created the Data Importer document](#create-document-with-imm), click **Upload File** to upload a Excel file (*.xls* or *.xlsx*) or CSV file (*.csv*).
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/select-file-for-structure-preview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-file-for-structure-preview.png" class="no-border" >}}
 
 Choose which sheet to import data from, and specify the header row and starting data row:
 
@@ -289,7 +289,7 @@ Choose which sheet to import data from, and specify the header row and starting 
 
 Click **Preview Structure Elements** to view the data structure from the file. The data from the first row of the source file is shown in the **Schema elements** section. You can change **Primitive Type** and **Custom Name** for the as per your requirements. Click **Create Structure**. You are notified that a new structure has been generated successfully.
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/preview-data-structure.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/preview-data-structure.png" class="no-border" >}}
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
@@ -300,22 +300,22 @@ Click **Preview Structure Elements** to view the data structure from the file. T
 3. From the **Schema source**, choose **Excel/CSV structure**.
 4. Select the sheet from the Excel file that was uploaded as a sample:
 
-    {{< figure src="/attachments/refguide/modeling/integration/data-importer/select-schema-elements-for-imm.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-schema-elements-for-imm.png" class="no-border" >}}
 
 5. Select the columns you want to import. To select all columns, click **Check all**.
 6. Click **OK** to create the import mapping:
 
-    {{< figure src="/attachments/refguide/modeling/integration/data-importer/create-import-mapping.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/create-import-mapping.png" class="no-border" >}}
 
 7. You can now:
     * Map an existing entity by dragging and dropping it from your domain model via the **Connector** tab
     * Click **Map automatically** to create a new NPE in your domain model:
 
-    {{< figure src="/attachments/refguide/modeling/integration/data-importer/map-automatically.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/map-automatically.png" class="no-border" >}}
 
 8. If you chose **Map automatically**, open the domain model to change the entity name and persistence as needed:
 
-    {{< figure src="/attachments/refguide/modeling/integration/data-importer/entity-name-persist-change.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/entity-name-persist-change.png" class="no-border" >}}
 
 ### Using the Import with Mapping Activity in a Microflow {#import-with-mapping-MF}
 
@@ -326,7 +326,7 @@ Click **Preview Structure Elements** to view the data structure from the file. T
 5. Select **Range** and **Commit** options as needed.
 6. In the **Output** section, choose **Store in variable**, then click **OK**:
 
-    {{< figure src="/attachments/refguide/modeling/integration/data-importer/import-with-mapping-params.png" class="no-border" width="500" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/import-with-mapping-params.png" class="no-border" width="500" >}}
 
 ### Support for Mapping Parameter in Import Mapping {#mapping-param-import-mapping}
 
@@ -346,7 +346,7 @@ To define an import mapping with a mapping parameter:
 
 The import mapping should look like the example below:
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/IM-with-mapping-param-association.png" class="no-border" width="500" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/IM-with-mapping-param-association.png" class="no-border" width="500" >}}
 
 ### Before Running Your App {#data-import-with-mapping-app}
 
@@ -358,7 +358,7 @@ Before running your app:
 
 You should see the data from the file imported and displayed in the page's data grid.
 
-{{< figure src="/attachments/refguide/modeling/integration/data-importer/data-imported-from-input-file.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/data-imported-from-input-file.png" class="no-border" >}}
 
 ## Edit Data Importer Document {#edit-di-document}
 
@@ -371,13 +371,13 @@ To edit the Data Importer document:
 1. Double-click the Data Importer document you want to edit. The document opens in read-only mode.
 2. Click **Update File** in the top-right corner. You are notified that uploading a new file will erase and replace the existing mapping or structure elements.
 
-    {{< figure src="/attachments/refguide/modeling/integration/data-importer/update-data-importer-doc-confirmation.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/update-data-importer-doc-confirmation.png" class="no-border" >}}
 
 3. Click **OK**, then upload the new file.
 4. Change the configuration as needed, such as **Sheet Name** and **Header Row No.**
 5. Click **Create Structure Elements** to update the document.
 
-    {{< figure src="/attachments/refguide/modeling/integration/data-importer/data-importer-doc-updated.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/data-importer-doc-updated.png" class="no-border" >}}
 
 After updating, revise the domain model entities, microflows, pages, and any other documents referenced by this Data Importer document to reflect the changes in your app.
 

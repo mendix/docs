@@ -83,7 +83,7 @@ Color properties on this tab accept a CSS color value, such as `blue`, `#48B0F7`
 {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/series-appearance-tab.png" alt="Appearance tab of the Edit Series Item dialog box for a line chart, with Line style set to Line with markers and the Line color and Marker color properties" width="450px" class="no-border" >}}
 
 {{% alert color="info" %}}
-The **Appearance** tab of the **Edit Series Item** dialog box only styles the data series. To style the chart widget as a whole, use its design properties, classes, and styles. For more information, see [Design Properties API](/apidocs-mxsdk/apidocs/design-properties/).
+The **Appearance** tab of the **Edit Series Item** dialog box only styles the data series. To style the chart widget as a whole, use its design properties, classes, and styles. For more information, see [Design Properties API](/apidocs-mxsdk/apidocs/design-properties-11/).
 {{% /alert %}}
 
 ##### Events Tab {#series-events}

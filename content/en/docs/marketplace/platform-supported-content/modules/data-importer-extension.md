@@ -75,7 +75,7 @@ Once you have [created the Data Importer document](#create-document), click **Se
 
 #### Previewing Excel Data {#preview-data-excel}
 
-Click **Upload File** to import an Excel file (*.xls* or *.xlsx*). [Note: App should be running to preview data.]
+Click **Upload File** to import an Excel file (*.xls* or *.xlsx*). Note that your app should be running to preview the data.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-file-for-preview.png" class="no-border" width="600" >}}
 
@@ -103,14 +103,12 @@ For example, the below file will result in a confusing preview if **Header Row N
 
 #### Previewing CSV Data {#preview-csv-data}
 
-[Note: App should be running to preview the data] Select the CSV file in the **Select Source File** field. CSV import supports multiple combinations of separator/delimiter, quote, and escape characters. It also supports importing files where the header row is absent.
+Select the CSV file in the **Select Source File** field. CSV import supports multiple combinations of delimiter, quote, and escape characters. It also supports files without a header row. Configure the following settings:
 
-Specify the values for all four configurations:
-
-* **Delimiter (Separator)** – supported delimiters are comma, semicolon, pipe, and tab; the default is comma
-* **Quote Characters** – supported quote characters are single and double quotes; the default is double quotes
-* **Escape Characters** – supported escape characters are backslash, single, and double quotes; the default is double quotes
-* **Add Header Row** – specify if you want to add a header row or if the header row is already part of the CSV file; the default is the header row already included in the file
+* **Delimiter (Separator)** – supported delimiters are comma, semicolon, pipe, and tab. The default is comma.
+* **Quote Characters** – supported quote characters are single and double quotes; the default is double quotes.
+* **Escape Characters** – supported escape characters are backslash, single, and double quotes; the default is double quotes.
+* **Add Header Row** – specify if you want to add a header row or if the header row is already part of the CSV file; the default is the header row already included in the file.
 
 Click **Preview Data** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to create a NPE, but this can be edited. The column names correspond to the attribute names within the entity.
 
@@ -134,7 +132,7 @@ You can edit the entity in the **Entity Preview** section. The Data Importer sup
 * Edit the name of one or more attributes of the entity
 * Edit the data type of a given attribute
 
-Click **Edit** at the bottom-right corner of **Entity Preview**. A dialog opens where you can change the name of the entity. You can also change the name of the attribute — *Original Name* is the column name from the input file and *Attribute Name* is the new name you want to assign to it. You can also change the data type of the attribute by selecting a value from the drop-down.
+Click **Edit** at the bottom-right corner of **Entity Preview**. A dialog opens where you can change the name of the entity. You can also change the name of the attribute. **Original Name** is the column name from the input file and **Attribute Name** is the new name you want to assign to it. You can also change the data type of the attribute by selecting a value from the drop-down.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/edit-csv-entity.png" class="no-border" >}}
 
@@ -146,17 +144,17 @@ The **Edit Entity** feature is useful for CSV import, as all the columns of a CS
 Input CSV File
 
 | Source Type | Target- String | Target- Int | Target- Long | Target- Decimal | Target- Boolean | Target- DateTime |
-| :-------- | :------- | :-------- | :------- | :-------- | :------- | :-------- |
-| String  | Yes    | Partial    | Partial    | Partial    | Partial    | No    |
+| -------- | ------- | -------- | ------- | -------- | ------- | -------- |
+| String | Yes | Partial | Partial | Partial | Partial | No |
 
 Input Excel File
 
 | Source Type | Target- String | Target- Int | Target- Long | Target- Decimal | Target- Boolean | Target- DateTime |
-| :-------- | :------- | :-------- | :------- | :-------- | :------- | :-------- |
-| String  | Yes    | Partial    | Partial    | Partial    | Partial    | No    |
-| Boolean  | Yes    | No    | No    | No    | Yes    | No    |
-| Decimal  | Yes    | Partial    | Partial    | Yes    | No    | No    |
-| DateTime  | Yes    | No    | No    | No    | No    | Yes    |
+| -------- | ------- | -------- | ------- | -------- | ------- | -------- |
+| String | Yes | Partial | Partial | Partial | Partial | No |
+| Boolean | Yes | No | No | No | Yes | No |
+| Decimal | Yes | Partial | Partial | Yes | No | No |
+| DateTime | Yes | No | No | No | No | Yes |
 
 **Partial** - If the source data is valid and within range, it will be converted into the target data type.
 
@@ -170,7 +168,7 @@ Input Excel File
 
 ### Creating an Entity {#create-entity}
 
-When you are done editing the entity, click **Create Entity**. You will see a information message that an entity has been created in the domain model and is ready to use. This will create the entity in your domain model
+When you are done editing the entity, click **Create Entity**. You will see a information message that an entity has been created in the domain model and is ready to use. This will create the entity in your domain model.
 
 When the entity is created, you can view the mapping of the source columns to the target entity attributes.
 

@@ -7,4 +7,4 @@ no_list: false
 
 ## Introduction
 
-These chart-specific settings documents will help you learn and configure the specific chart widgets listed below.
+These documents will help you learn and configure specific chart widgets:

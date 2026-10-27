@@ -122,6 +122,10 @@ For `--conflict`, enter one of the following values to control what happens when
 * `take_mine` – Resolve all conflicts by keeping the version in your app.
 * `take_theirs` – Resolve all conflicts by using the version from the new module package.
 
+{{% alert color="warning" %}}
+Updating a module from the command line is not supported if the package IDs of the original module package, the new module package, and the module in your app do not match.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 The app is only reverted automatically when it is under Git version control. Make sure there are no uncommitted changes before you update a module. If the app is not under version control, you need to restore it manually after a failed update.
 {{% /alert %}}

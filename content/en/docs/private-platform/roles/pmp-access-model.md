@@ -273,21 +273,31 @@ Users can also be provisioned before their first login, using SCIM, so that thei
 
 For information about configuring the identity provider connection, including OIDC and SAML setup, attribute mapping, and SCIM tokens, see [Private Mendix Platform Functionalities - System Administrators](/private-mendix-platform/reference-guide/admin/system/#identity--access).
 
-## Designing Your Access Model {#designing-your-access-model}
+## Best Practices for Designing Your Access Model {#designing-your-access-model}
 
-The rules above have direct consequences for how a hierarchy should be laid out.
+When designing your access hierarchy, keep in mind the following recommendations.
 
-**Keep broad roles rare and high, and let narrow roles do the work low down.** Because membership cascades downward, a Resource Role granted near the root reaches everything beneath it. Roles such as Administrator and Maintainer should be granted sparingly, and as close as possible to the groups that actually need them. Developer, Contributor, and Operator are the roles intended to carry everyday work further down the tree.
+* Keep broad roles rare and high-level. 
 
-**Associate an app and the namespace it deploys to at the same level.** Since namespace associations do not inherit, a group that owns an app but is not itself associated with a namespace cannot deploy that app, no matter what its parent is associated with. Placing both at the same level avoids the problem entirely.
+    Because membership cascades downward, a resource role granted near the root reaches everything beneath it. Roles such as Administrator and Maintainer should be granted sparingly, and as close as possible to the groups that actually need them. Developer, Contributor, and Operator are the roles intended to carry everyday work further down the tree.
 
-**Give federated arrivals a landing group.** A low-privilege group configured as the Default Group means an unrecognized user who signs in successfully still reaches nothing of consequence until an administrator places them.
+* Associate an app and the namespace it deploys to at the same level.
 
-**Use per-environment scoping instead of parallel roles.** Where the requirement is that a team may deploy to some environments and not others, scope the Deployment permissions of one role rather than maintaining two similar roles.
+    Since namespace associations are not inherited, a group that owns an app but is not associated with the namespace cannot deploy that app. Place both at the same level to avoid this issue.
 
-**Mirror your organization, but only as deeply as you need.** Depth is unlimited, and each additional level adds inherited membership to reason about. Add a level when it corresponds to a real boundary of accountability.
+* Give federated users a landing group.
 
-### Worked Example
+    A low-privilege group configured as the Default Group means an unrecognized user who signs in successfully has limited access rights until an administrator places them in the appropriate group.
+
+* Use per-environment scoping instead of parallel roles.
+
+    If a team should be allowed to deploy to some environments and not others, scope the Deployment permissions of one role rather than maintaining two similar roles.
+
+* Only create as many hierarchy levels as you need.
+
+    Each hierarchy level potentially increases complexity by adding more inherited membership levels to consider.
+
+### Example Hierarchy
 
 Consider the following hierarchy.
 
@@ -299,14 +309,10 @@ Mendix (root)
 └── Preboarding
 ```
 
-A user who is a member of **App Portfolios** with the Developer role is also, by inheritance, a Developer in **App Portfolio 1**, and can develop and deploy the apps that group owns. That same user is not a member of **Preboarding**, which is not beneath their group, and has no access to anything Preboarding owns.
+A user who is a member of *App Portfolios* with the Developer role is also, by inheritance, a Developer in *App Portfolio 1*, and can develop and deploy the apps that group owns. That same user is not a member of *Preboarding*, which is not beneath their group, and has no access to anything Preboarding owns.
 
-A user who is a member of **Platform Admin** with the Administrator role holds it in **App Portfolios** and **App Portfolio 1** as well, because both are beneath Platform Admin. Adding a new portfolio group under App Portfolios extends that user's Administrator role into it automatically. This is the reason to grant Administrator low rather than high.
+A user who is a member of *Platform Admin* with the Administrator role holds it in *App Portfolios* and *App Portfolio 1* as well, because both are beneath Platform Admin. Adding a new portfolio group under App Portfolios extends that user's Administrator role into it automatically. This is the reason to grant Administrator low rather than high.
 
-If **App Portfolio 1** owns an app that must deploy to a namespace, App Portfolio 1 must be associated with that namespace itself. Associating the namespace with **App Portfolios**, or with **Mendix**, does not enable the deployment.
+If *App Portfolio 1* owns an app that must deploy to a namespace, App Portfolio 1 must be associated with that namespace itself. Associating the namespace with *App Portfolios*, or with *Mendix*, does not enable the deployment.
 
-**Preboarding** is a natural candidate for the Default Group in an SSO configuration: users who arrive without a recognized placement land there, hold whatever low-privilege Default Role is configured, and reach nothing owned elsewhere in the tree.
-
-{{% alert color="info" %}}
-**Reviewer note:** a diagram of this hierarchy showing groups, members, roles, owned apps, and namespace associations exists in the supporting document set and should be attached here in place of the code block above.
-{{% /alert %}}
+*Preboarding* is a good choice for the Default Group in an SSO configuration. Users who arrive without a recognized placement land there, hold whatever low-privilege Default Role is configured, and cannot reach anything owned elsewhere in the tree.

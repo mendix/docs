@@ -153,7 +153,7 @@ To reclaim the disk space used by bloat, click **Repack** in the **Plan Details*
 
 Only the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app can use **Repack**. The Technical Contact can run the repack immediately or schedule it for a later time. Although the expected impact on the running app is minimal, scheduling provides control over when the repack happens.
 
-Use the [Average Database Bloat Ratio](/developerportal/operate/metrics/#Trends-dbavgbloatratio) and [Maximum Table Bloat Ratio](/developerportal/operate/metrics/#Trends-dbmaxtablebloatratio) graphs to decide whether a repack is needed. The repack temporarily requires free database disk space approximately equal to the size of the largest table. Before you start, compare the [Largest Table Size](/developerportal/operate/metrics/#Trends-dblargesttablesize) and [Database Disk Usage](/developerportal/operate/metrics/#Trends-dbdfabs) graphs to verify that enough free space is available.
+Use the [Average Database Bloat Ratio](/developerportal/operate/metrics/#Trends-dbavgbloatratio) and [Maximum Table Bloat Ratio](/developerportal/operate/metrics/#Trends-dbmaxtablebloatratio) graphs to decide whether a repack is needed. The repack temporarily requires free database disk space approximately equal to the size of the largest table. Before starting the repack, compare the [Largest Table Size](/developerportal/operate/metrics/#Trends-dblargesttablesize) and [Database Disk Usage](/developerportal/operate/metrics/#Trends-dbdfabs) graphs to verify that enough free space is available.
 
 #### Scaling {#scaling}
 

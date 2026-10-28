@@ -96,7 +96,7 @@ If a column contains interactive elements such as buttons, this might lead to un
 ## Pagination
 
 {{% alert color="info" %}}
-The paging status text (for example, "1 to 20 of 150") is built into the widget and cannot be translated.
+The paging status text (for example, `1 to 20 of 150`) is built into the widget and cannot be translated.
 {{% /alert %}}
 
 The data grid offers three types of pagination: **Paging buttons**, **Virtual scrolling**, and **Load more**.

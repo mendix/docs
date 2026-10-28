@@ -22,7 +22,7 @@ weight: 52 # Reduce weight by 1 to add this document to the top of the navigatio
 
 #### MessageDefinitionCollection (ModelUnit)
 
-* We deleted this modelunit. 
+* We deleted this model unit. 
 
 #### MessageDefinition (Element)
 

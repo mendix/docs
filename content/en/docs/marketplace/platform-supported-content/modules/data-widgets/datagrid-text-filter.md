@@ -18,7 +18,7 @@ For more information on using filter widgets, see [Data Grid 2](/appstore/module
 
 ##### Filter Attributes
 
-Provides flexibility in how the filter determines which data to filter. **Auto** mode automatically detects filterable attributes from the parent grid when placed in grid columns. **Custom** mode shows the **Attributes** property, where you select the attributes to filter on, including multiple attributes.
+This provides flexibility in how the filter determines which data to filter. **Auto** mode automatically detects filterable attributes from the parent grid when placed in grid columns. **Custom** mode shows the **Attributes** property, where you select the attributes to filter on, including multiple attributes.
 
 ##### Datasource to Filter
 
@@ -26,15 +26,15 @@ This property is always hidden in Studio Pro, so you do not configure it directl
 
 ##### Attributes
 
-Allows specification of multiple string attributes that users can filter on. Each attribute in the list becomes a potential target for filtering operations, enabling multi-attribute search. For each item, select an **Attribute** of type String. This property is only shown when **Filter attributes** is set to **Custom**.
+This allows specification of multiple string attributes that users can filter on. Each attribute in the list becomes a potential target for filtering operations, enabling multi-attribute search. For each item, select an **Attribute** of type String. This property is only shown when **Filter attributes** is set to **Custom**.
 
 ##### Default Value
 
-Sets the initial text value that appears in the filter input when the page loads. This value is applied immediately when the widget initializes. The default value is an expression that returns a String, so it can be determined dynamically.
+This sets the initial text value that appears in the filter input when the page loads. This value is applied immediately when the widget initializes. The default value is an expression that returns a String, so it can be determined dynamically.
 
 ##### Default Filter
 
-Determines the initial filter operation type when the widget loads. The default is **Contains**. Available options include:
+This determines the initial filter operation type when the widget loads. The default is **Contains**. Available options include:
 
 * **Contains**: matches records where the attribute contains the search text
 * **Starts with**: matches records where the attribute begins with the search text
@@ -50,29 +50,29 @@ Determines the initial filter operation type when the widget loads. The default 
 
 ##### Placeholder
 
-Displays hint text in the input field when no value is entered. Helps users understand what type of input is expected. Supports text templates for dynamic content and localization.
+This displays hint text in the input field when no value is entered. Helps users understand what type of input is expected. Supports text templates for dynamic content and localization.
 
 ##### Adjustable by User
 
-Controls whether users can change the filter operation type. When set to **Yes**, a drop-down button appears next to the input allowing users to select different filter operations. When set to **No**, only the default filter operation is available and the drop-down button is hidden.
+This controls whether users can change the filter operation type. When set to **Yes**, a drop-down button appears next to the input allowing users to select different filter operations. When set to **No**, only the default filter operation is available and the drop-down button is hidden.
 
 #### On Change Behavior
 
 ##### Apply After (ms)
 
-Specifies the delay in milliseconds before filter changes are applied to the grid. This debouncing mechanism prevents excessive server requests while users are typing. The default value of 500ms provides a good balance between responsiveness and performance. Lower values provide faster feedback but may impact performance with large datasets.
+This specifies the delay in milliseconds before filter changes are applied to the grid. This debouncing mechanism prevents excessive server requests while users are typing. The default value of 500ms provides a good balance between responsiveness and performance. Lower values provide faster feedback but may impact performance with large datasets.
 
 #### Configurations
 
 ##### Saved Attribute
 
-Specifies an entity attribute used to store the last filter value for persistence. The attribute must be of type String or Hashed string. When configured, the filter automatically saves its current value to this attribute when changes occur. The saved value is not applied to the widget automatically. To restore a previously saved value, use the same attribute in the **Default value** expression.
+This specifies an entity attribute used to store the last filter value for persistence. The attribute must be of type String or Hashed string. When configured, the filter automatically saves its current value to this attribute when changes occur. The saved value is not applied to the widget automatically. To restore a previously saved value, use the same attribute in the **Default value** expression.
 
 #### Events
 
 ##### On Change
 
-Defines an action to be executed whenever the filter value or filter type changes. This event is triggered for every user interaction including typing, selecting different filter operations, or clearing the filter. Can be used to trigger microflows, nanoflows, or other actions for custom business logic.
+This defines an action to be executed whenever the filter value or filter type changes. This event is triggered for every user interaction including typing, selecting different filter operations, or clearing the filter. Can be used to trigger microflows, nanoflows, or other actions for custom business logic.
 
 ### Accessibility Tab
 
@@ -80,8 +80,8 @@ Defines an action to be executed whenever the filter value or filter type change
 
 ##### Comparison Button Caption
 
-Provides an accessible label for the filter type selection button. This label is announced by screen readers when users navigate to the drop-down menu that shows available filter operations. Employing this correctly is essential for users relying on assistive technology. This property is only shown when **Adjustable by user** is set to **Yes**.
+This provides an accessible label for the filter type selection button. This label is announced by screen readers when users navigate to the drop-down menu that shows available filter operations. Employing this correctly is essential for users relying on assistive technology. This property is only shown when **Adjustable by user** is set to **Yes**.
 
 ##### Input Caption
 
-Defines the accessible label for the text input field. Screen readers announce this label when users focus on the input field. The default value is "Search", with built-in translations for English, German ("Suche"), and Dutch ("Zoeken"). Can be customized to provide context-specific information about the expected search text.
+This defines the accessible label for the text input field. Screen readers announce this label when users focus on the input field. The default value is "Search", with built-in translations for English, German ("Suche"), and Dutch ("Zoeken"). Can be customized to provide context-specific information about the expected search text.

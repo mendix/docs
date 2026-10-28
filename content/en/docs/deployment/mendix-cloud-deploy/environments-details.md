@@ -135,8 +135,7 @@ In this section, you can find information about the deployment package that is l
 
 ### Plan Details
 
-This section shows details of the plan that applies to this environment.    
-It also includes the option to change your plan. For details, refer to [Changing Plan](/developerportal/deploy/change-plan/).
+This section shows details of the plan that applies to this environment.
 
 * **Name** – the type of plan associated with your license
 * **Instances** – the number and memory allocation of instances in the environment (for more information, see the [Scaling](#scaling))
@@ -147,13 +146,10 @@ It also includes the option to change your plan. For details, refer to [Changing
 * **File Storage** – available size for storing blobs
 * **Multi-AZ Enabled** –  a **Yes** or **No** value indicating whether multiple availability zones are enabled
 
-#### Repacking the Database {#repack}
+From this section, you can also do the following:
 
-To reclaim the disk space used by bloat, click **Repack** in the **Plan Details** section. Repack uses the PostgreSQL extension `pg_repack` to rebuild tables and indexes without holding exclusive locks, so your app stays running during the process. After the repack, the database disk usage reflects only live data.
-
-Only the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app can use **Repack**. The Technical Contact can run the repack immediately or schedule it for a later time. Although the expected impact on the running app is minimal, scheduling provides control over when the repack happens.
-
-Use the [Average Database Bloat Ratio](/developerportal/operate/metrics/#Trends-dbavgbloatratio) and [Maximum Table Bloat Ratio](/developerportal/operate/metrics/#Trends-dbmaxtablebloatratio) graphs to decide whether a repack is needed. The repack temporarily requires free database disk space approximately equal to the size of the largest table. Before starting the repack, compare the [Largest Table Size](/developerportal/operate/metrics/#Trends-dblargesttablesize) and [Database Disk Usage](/developerportal/operate/metrics/#Trends-dbdfabs) graphs to verify that enough free space is available.
+* Change your plan. For details, refer to [Changing Plan](/developerportal/deploy/change-plan/).
+* Reclaim database disk space. For details, refer to [Repacking Your Database in Mendix Cloud](/developerportal/deploy/repack-database/).
 
 #### Scaling {#scaling}
 

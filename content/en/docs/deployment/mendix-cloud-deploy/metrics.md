@@ -432,7 +432,7 @@ The value is calculated by dividing the sum of dead rows by the sum of live and 
 
 Interpret this graph together with the [Database Transactions and Mutations](#Trends-dbpgstatdatabaseVERSIONmain) and [Database Disk Usage](#Trends-dbdfabs) graphs. Heavy update or delete traffic combined with rising bloat is a strong indicator that reclaim is falling behind.
 
-If the average bloat ratio remains high for an extended period, the Technical Contact of the app can [repack the database](/developerportal/deploy/environments-details/#repack). Before starting the repack, check the [Largest Table Size](#Trends-dblargesttablesize) graph to verify that the disk space precondition is met.
+If the average bloat ratio remains high for an extended period, the Technical Contact of the app can [repack the database](/developerportal/deploy/repack-database/). Before starting the repack, check the [Largest Table Size](#Trends-dblargesttablesize) graph to verify that the disk space precondition is met.
 
 ### Maximum Table Bloat Ratio{#Trends-dbmaxtablebloatratio}
 
@@ -449,7 +449,7 @@ Only tables larger than 16 MiB are included. This excludes trivially small table
 
 A consistently high value in the **non_system** series typically indicates an application table with a heavy update or delete workload. A consistently high value in the **system** series is unusual and usually indicates that Mendix Runtime background tasks (such as session or scheduled events) are generating changes faster than autovacuum can reclaim them.
 
-As with the [Average Database Bloat Ratio](#Trends-dbavgbloatratio), if a series remains high for an extended period, the Technical Contact of the app can [repack the database](/developerportal/deploy/environments-details/#repack).
+As with the [Average Database Bloat Ratio](#Trends-dbavgbloatratio), if a series remains high for an extended period, the Technical Contact of the app can [repack the database](/developerportal/deploy/repack-database/).
 
 ### Largest Table Size{#Trends-dblargesttablesize}
 

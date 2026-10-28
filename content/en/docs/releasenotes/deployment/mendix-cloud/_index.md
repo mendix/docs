@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### New Features
 
-* Technical Contacts can now reclaim database disk space used by table bloat without contacting Support. Click **Repack** in the **Plan Details** section of the [Environment Details](/developerportal/deploy/environments-details/#repack) page to run the repack immediately or schedule it for later.
+* Technical Contacts can now reclaim database disk space used by table bloat without contacting Support. For more information, refer to [Repacking Your Database in Mendix Cloud](/developerportal/deploy/repack-database/).
 
 ## October 2026
 

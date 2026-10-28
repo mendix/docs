@@ -20,8 +20,8 @@ For more information on using filter widgets, see [Data Grid 2](/appstore/module
 
 Determines which attributes the filter applies to. The default is **Auto**. The options are the following:
 
-* **Auto** – Uses the attribute of the Data Grid 2 column that the filter is placed in. This option works only when the filter is placed in a column.
-* **Custom** – Shows the **Attributes** property, where you select one or more attributes to filter on. Use this option when the filter is placed outside a column, such as in the filters placeholder of Data Grid 2 or Gallery.
+* **Auto** – This uses the attribute of the Data Grid 2 column that the filter is placed in. This option works only when the filter is placed in a column.
+* **Custom** – This shows the **Attributes** property, where you select one or more attributes to filter on. Use this option when the filter is placed outside a column, such as in the filters placeholder of Data Grid 2 or Gallery.
 
 ##### Datasource to Filter {#data-source-to-filter}
 

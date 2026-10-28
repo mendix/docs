@@ -45,7 +45,7 @@ All services listed in the table below use the HTTPS protocol (port 443).
 | `https://registry.mendix.com` | OCI registry with Mendix Operator container images |
 | `https://private-cloud.registry.mendix.com` | Legacy OCI registry with Mendix Operator container images |
 | `https://subscription-api.mendix.com` | Service to verify call-home license |
-| `https://privatecloud.mendixcloud.com` | Private Cloud Portal (used to submit names of Storage Plans) |
+| `https://privatecloud.mendixcloud.com` | Private Cloud Portal (used to register names of Storage Plans) |
 
 {{% alert color="info" %}}
 The `private-cloud.registry.mendix.com` container registry will be decomissioned on August 1, 2027.

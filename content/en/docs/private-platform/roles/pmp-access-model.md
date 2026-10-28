@@ -19,7 +19,7 @@ Private Mendix Platform separates platform-wide privilege from privilege over an
 
 ### Resource Roles
 
-A Resource Role answers the question *what can this person do to this app, or this namespace?* It is held by an individual, and it applies only to the resources that the individual reaches it through: the resources owned by the group in which they hold the role, or the single app whose team they were invited to.
+A Resource role answers the question *what can this person do to this app, or this namespace?* Their scope involves only the resources the relevant group owns or is associated with. Multiple resource roles are only combined where two roles apply to the same resource.
 
 Private Mendix Platform includes the following default resource roles:
 
@@ -52,7 +52,7 @@ This is what makes it possible to express a role such as *may deploy freely to D
 
 ### Platform Roles
 
-A platform role answers the question *what can this person do on the platform in general?* It is assigned to a user account when the account is created, and can be changed at any time afterward. Platform roles are stackable. That is, a user can hold several, and the effective set of permissions is everything those roles grant, added together.
+A platform role answers the question *what can this person do on the platform in general?* It is assigned to a user account when the account is created, and can be changed at any time afterward. Platform roles are stackable. That is, if a user has more than one platform role, they get all the access rights of every role they hold.
 
 Private Mendix Platform includes the following default platform roles:
 
@@ -186,111 +186,92 @@ Every group other than the root must have the following properties:
 
 The depth of the hierarchy is not limited.
 
-### A Group Does Not Hold a Role
+### Groups vs Roles
 
-This is the point at which the model is most often misread. A group is not granted a role, and a group has no permissions of its own. A group holds *members*, and each member individually holds a Resource Role. The group's function is to own resources, so that the roles its members hold have something to apply to.
+A group is not granted a role, and a group has no permissions of its own. A group holds *members*, and each member individually holds a resource role. The group owns resources, to which its members' roles apply.
 
-Two members of the same group can legitimately hold different Resource Roles, and often should. A team group might contain several Developers, a few Contributors, and one Operator, all with access to the same app, doing different things to it.
+Two members of the same group can have different resource roles. For example, a team group can contain several Developers, a few Contributors, and one Operator. All of these roles have access to the same app, but can do different things in the app.
 
-It follows that a statement such as *this group grants Administrator, so its members are administrators* has the relationship backwards. Members hold roles; the group supplies the scope.
+When a member's role in a group changes, the change is applied at once to every resource that group owns or is associated with.
 
-### Membership Inherits Downward
+### Membership Inheritance
 
-Members of a group automatically become members of every group beneath it in the hierarchy, carrying forward the same Resource Role they hold in the higher group. These are shown as inherited members, as distinct from members added directly.
+Members of a group automatically become members of every group beneath it in the hierarchy, carrying forward the same resource role they hold in the higher group. Granting a broad resource role at or near the root group extends that role across the entire platform. See [Designing Your Access Model](#designing-your-access-model). These are shown as inherited members, as distinct from members added directly.
 
-Inheritance goes to any depth. A member two levels up appears in a grandchild group with the same role they hold two levels up. It does not travel upward: membership of a child group confers nothing in the parent.
+Membership of a child group does not give any roles in the groups higher in the hierarchy.
 
-{{% alert color="warning" %}}
-Because membership cascades downward without limit, a role granted high in the hierarchy reaches every group below it. Granting a broad Resource Role at or near the root group extends that role across the entire platform. See [Designing Your Access Model](#designing-your-access-model).
-{{% /alert %}}
+### Resource Ownership for Groups
 
-## Resources Owned by Groups
+A group can own or be associated with the following kinds of resource, with different ownership rules and behavior depending on the resource type:
 
-A group can own or be associated with three kinds of resource. The ownership rules differ for each, and so does the behavior of that ownership with respect to the hierarchy.
+* **App Projects** - Exclusive. An app is owned by exactly one group, so accountability is unambiguous.
+* **Deployment Namespaces** - Shareable. A namespace can be associated with several groups at once, allowing operational responsibility to be shared between teams.
+* **Marketplace Components** - Owned by the individual user who published the component.
 
-| Resource | Ownership model |
-| --- | --- |
-| **App Projects** | Exclusive. An app is owned by exactly one group, so accountability is unambiguous. |
-| **Deployment Namespaces** | Shareable. A namespace can be associated with several groups at once, allowing operational responsibility to be shared between teams. |
-| **Marketplace Components** | Owned by the individual user who published the component. |
-
-### App Projects
+#### App Projects
 
 An app is owned by one group and one user within it. Members of the owning group reach the app through the Resource Role they hold in that group, whether they hold it directly or by inheritance from a group further up.
 
-{{% alert color="warning" %}}
-**Apps created through Mendix Studio Pro are owned by the Mendix root group.** Ownership is assigned to the root group on creation rather than to the group the creating developer belongs to. An app left in this state is reachable by everyone holding a Resource Role in the root group, and by nobody further down the hierarchy, since membership inherits downward and resource access does not travel upward. Neither is usually what was intended.
-
-Transfer ownership to the group that should hold it as a routine step after creating an app from Studio Pro. See [Assigning the App to a New Owner](/private-mendix-platform/reference-guide/admin/company/#ownership).
-{{% /alert %}}
-
-### Deployment Namespaces
-
-Two concepts are involved here and both are meaningful. A **deployment namespace** is the resource. A **namespace purpose** is a scoping tied to that resource, describing what the namespace is for.
-
-They form a chain: a namespace is associated with a group, and the namespace's purpose is tied to the namespace in turn. So the group is associated with the namespace, and the purpose comes with it as a property of the namespace rather than as something set on the association. Purpose is therefore configured once, on the namespace, and holds for every group associated with it. For how purpose relates to environments, see [Deployment Purpose and DTAP Mode](/private-mendix-platform/user-guide/#deployment-purpose-and-dtap-mode).
-
-{{% alert color="warning" %}}
-**A namespace association does not inherit, in either direction.** Group membership and the Resource Roles that come with it cascade down the hierarchy. A deployment namespace association does not: it extends neither to a group's parents nor to its children.
-
-For a group to deploy to a namespace, **that group must itself be directly associated with the namespace**, regardless of where either sits in the tree. In practice this means keeping an app project and the namespace it deploys to associated at the same level of the hierarchy.
-
-This rule is specific to deployment namespaces. App projects are already exclusive to a single group, and Marketplace components follow their own ownership model, so neither is affected by it.
-{{% /alert %}}
-
-### Marketplace Components
-
-A component published to the private Marketplace is owned by the user who published it, rather than by a group. Ownership therefore does not follow the group hierarchy.
-
-Access to the Marketplace administration area, where content is approved, categorized, and imported, is a platform role permission and not a Resource Role. A user who administers Marketplace content does not need any Resource Role to do so.
-
-Marketplace content can additionally be shared with groups by its publisher. See [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups).
-
-## How a User Gets Access to an App
-
-There are three distinct paths, and it is worth keeping them separate when diagnosing why someone can or cannot reach an app.
-
-1. **Through the owning group.** The user is a member, directly or by inheritance, of the group that owns the app, and holds a Resource Role there. This is the primary path and the one that scales.
-2. **Through a direct invitation to the app team.** The app's owner invites an individual onto the team and assigns them a role such as Developer, Contributor, or Operator. This bypasses groups entirely and applies to that one app. Before a user can be invited, their account must exist. See [Editing App Details](/private-mendix-platform/reference-guide/admin/company/#app-details).
-3. **Through app sharing, followed by a request.** An app can be shared with groups that do not own it. Sharing makes the app *visible* to those groups; it grants no access. Members who can see a shared app can request access from the app's owner, who decides whether to grant it and with which role. See [Sharing the App with Selected User Groups](/private-mendix-platform/reference-guide/admin/company/#share).
-
 {{% alert color="info" %}}
-**Reviewer note:** confirm the mechanics of the request flow in path 3 - how the request reaches the owner, whether it is notified, and whether granting it creates a direct team membership.
+Apps created through Mendix Studio Pro are owned by the Mendix root group. Ownership is assigned to the root group on creation rather than to the group the creating developer belongs to. An app left in this state is reachable by everyone holding a resource role in the root group, and by nobody further down the hierarchy.
+
+Because of that, you should transfer ownership to the group that should hold it as a routine step after creating an app from Studio Pro. See [Assigning the App to a New Owner](/private-mendix-platform/reference-guide/admin/company/#ownership).
 {{% /alert %}}
 
-## How Permissions Combine
+#### Deployment Namespaces
 
-The two role systems combine differently, and conflating them is the source of most incorrect expectations about effective access.
+A deployment namespace is a resource associated with a group. The *namespace purpose* is a scoping tied to that resource, describing what the namespace is for.
 
-### Platform Roles Combine as a Union
+Because purpose is configured on the namespace level, it applies to every group associated with the namespace. For how purpose relates to environments, see [Deployment Purpose and DTAP Mode](/private-mendix-platform/user-guide/#deployment-purpose-and-dtap-mode).
 
-Platform roles are not scoped to a resource, so there is nothing to reconcile. A user's effective platform permissions are every permission granted by every platform role they hold, added together.
+Unlike group membership, a namespace association is not inherited by grops lower in the hierarchy. For a group to deploy to a namespace, the group must be directly associated with the namespace. Because of that, an app project and the namespace to which it deploys should be associated at the same level of the hierarchy.
 
-### Resource Roles Combine Only on a Shared Resource
+This rule is specific to deployment namespaces. App projects are already exclusive to a single group, and Marketplace components follow their own ownership model.
 
-Resource Roles do not blanket-combine across every group a user belongs to. Two groups that are not in a parent-and-child relationship share no resources, so a user's roles in them never interact: the role held in one group applies to that group's resources and nowhere else.
+#### Marketplace Components
 
-Combination happens only when two roles land on the *same* resource. The common case is a user who has been invited directly onto an app's team in one role, and who also inherits a different role on that same app through the group hierarchy. There, and only there, the two are reconciled into a single effective set of permissions on that app.
+Marketplace component ownership does not follow the group hierarchy. A component published to the private Marketplace is owned by the user who published it, rather than by a group. 
 
-### Changes Take Effect Immediately
+Access to the Marketplace administration area, where content is approved, categorized, and imported, is a platform role permission and not a resource role. Administering Marketplace content does not require any resource roles.
 
-When a member's role in a group changes, the change is applied at once to every resource that group owns or is associated with. There is no separate synchronization step to run, and no need to reapply access to individual apps or namespaces after a role change.
+Marketplace content can additionally be shared with groups by its publisher. For more information, see [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups).
 
-## Federated Users {#federated-users}
+## Granting Users Access to an App
 
-When users sign in through your identity provider rather than with a local account, they still need a place in the group hierarchy and a Resource Role in order to do anything. Three settings determine what happens on first arrival.
+Users can get access to an app in the following ways.
 
-* **Default Group and Default Role.** Every incoming user with no other placement is put into a configured group with a configured role. Pointing these at a deliberately low-privilege landing group gives new arrivals somewhere to be that has no access to real projects, until they are assigned to their actual team.
-* **Parse Roles.** When enabled, Private Mendix Platform reads group and role claims from the incoming token and maps them onto platform roles and groups automatically. When disabled, no such mapping occurs and every federated user lands on the defaults above, to be assigned afterwards manually, through SCIM, or through the platform API.
-* **Automation Settings.** For users whose identity provider information is mapped onto their platform profile, group membership can be driven from the values of those profile attributes. When a user arrives with a value that already corresponds to a group, they are added to that group. When a user arrives with a value that does not, a group is created for it and the user is made a member. This is configured on the Group Management page and is separate from Parse Roles. See [Automating Group Assignment](/private-mendix-platform/access-administration/#automating-group-assignment).
+### Owning Group
+
+The user is a member, directly or by inheritance, of the group that owns the app, and holds a Resource Role there. This is the primary path and the one that scales.
+
+### Invitation to App Team
+
+The app's owner invites an individual onto the team and assigns them a role such as Developer, Contributor, or Operator. This bypasses groups entirely and applies only to the specific app. Before a user can be invited, their account must exist. For more information, see [Editing App Details](/private-mendix-platform/reference-guide/admin/company/#app-details).
+
+
+### App Sharing
+
+An app can be shared with groups that do not own it. Sharing makes the app visible to those groups but grants no access. Members can then request access from the app's owner, who decides whether to grant it and with which role. For more infomration, see [Sharing the App with Selected User Groups](/private-mendix-platform/reference-guide/admin/company/#share).
+
+## Managing Federated Users {#federated-users}
+
+When users sign in through your identity provider rather than with a local account, they still need a place in the group hierarchy and a resource role in order to do anything. The following settings determine what happens on first arrival.
+
+### Default Group and Role
+
+Every incoming user with no other placement is put into a configured group with a configured role. Pointing these at a deliberately low-privilege landing group gives new arrivals somewhere to be that has no access to real projects, until they are assigned to their actual team.
+
+### Role Parsing
+
+When enabled, Private Mendix Platform reads group and role claims from the incoming token and maps them onto platform roles and groups automatically. When disabled, no such mapping occurs and every federated user lands on the defaults above, to be assigned afterwards manually, through SCIM, or through the platform API.
+
+### Automation Settings
+
+For users whose identity provider information is mapped onto their platform profile, group membership can be derived from the values of those profile attributes. When a user arrives with a value that already corresponds to a group, they are added to that group. When a user arrives with a value that does not, a group is created for it and the user is made a member. This is configured on the Group Management page and is separate from Parse Roles. See [Automating Group Assignment](/private-mendix-platform/access-administration/#automating-group-assignment).
 
 Users can also be provisioned before their first login, using SCIM, so that their accounts and group placement exist in advance.
 
-Configuring the identity provider connection itself, including OIDC and SAML setup, attribute mapping, and SCIM tokens, is documented in [Private Mendix Platform Functionalities - System Administrators](/private-mendix-platform/reference-guide/admin/system/#identity--access).
-
-{{% alert color="info" %}}
-**Reviewer note:** supply the exact field labels and locations for Default Group, Default Role, and Parse Roles so this section can point readers at the right screen.
-{{% /alert %}}
+For information about configuring the identity provider connection, including OIDC and SAML setup, attribute mapping, and SCIM tokens, see [Private Mendix Platform Functionalities - System Administrators](/private-mendix-platform/reference-guide/admin/system/#identity--access).
 
 ## Designing Your Access Model {#designing-your-access-model}
 

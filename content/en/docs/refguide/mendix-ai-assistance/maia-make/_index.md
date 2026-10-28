@@ -40,7 +40,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | Enumerations | Studio Pro 11.9 | |
 | Constants | Studio Pro 11.9 | |
 | Modules | Studio Pro 11.9 | |
-| Java actions | Studio Pro 11.9 | Read-only; Java actions cannot be generated. |
+| Java actions | Studio Pro 11.9 | In Studio Pro 11.9 and above, Java actions are read-only and cannot be generated. In Studio Pro 11.16 and above, Java action documents and source code files can be generated and edited. |
 | JavaScript actions | Studio Pro 11.9 | Explain-only in Studio Pro 11.9. Generation, adding parameters, and updating the associated JavaScript file available from Studio Pro 11.10. |
 | Navigation | Studio Pro 11.11 | |
 | Menu | Studio Pro 11.11 | |

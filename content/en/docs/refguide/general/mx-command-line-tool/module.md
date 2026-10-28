@@ -87,55 +87,66 @@ This table shows the return codes and their description:
 
 ## mx module-import Command {#module-import}
 
-The `mx module-import` command imports a source module (*.mpk*) into an app.
+The `mx module-import` command imports a source module (*.mpk*) into an app, or updates a module that already exists.
+
+{{% alert color="info" %}}
+As of Studio Pro 11.16, the `update` import mode performs a three-way merge and restores storage GUIDs, in the same way as the **Update from file** option in Studio Pro. The `replace` import mode and the `--metadata` option is no longer available.
+{{% /alert %}}
 
 {{% alert color="warning" %}}
-In Studio Pro 11.14, the `mx.exe module-import replace` and `mx.exe module-import update` commands will not rescue storage GUIDs after a module update, which will result in data loss.
+In Studio Pro 11.14 and 11.15, the `mx.exe module-import replace` and `mx.exe module-import update` commands will not rescue storage GUIDs after a module update, which will result in data loss.
 {{% /alert %}}
 
 ### Usage
 
 Use the following command pattern for `mx module-import`:
 
-`mx module-import MPK_PATH MPR_PATH [--import-mode <add|replace|update>] [--conflict <fail|take_mine|take_theirs>] [--metadata <take_new|take_existing|erase>]`
+`mx module-import MPK_PATH MPR_PATH [--import-mode <add|update>] [--original-mpk <ORIGINAL_MPK_PATH>] [--module-name <MODULE_NAME>] [--conflict <fail|take_mine|take_theirs>]`
 
-For `MPK_PATH`, enter a *.mpk* file with the module you want to import.
+For `MPK_PATH`, enter a *.mpk* file with the module you want to import. When updating a module, this is the new version of the module.
 
 For `MPR_PATH`, enter a *.mpr* file of the project you want to import a module into.
 
-For `--import-mode`, enter one of the following values to control what happens when a module with the same name already exists in the app:
+For `--import-mode`, enter one of the following values:
 
 * `add` – Add the module. Fails if a module with the same name already exists. This is the default.
-* `replace` – Replace the existing module. Fails with exit code `310` if no module with that name is found in the app.
-* `update` – Replace the module if it already exists, or add it if it does not.
+* `update` – Update a module that already exists in the app by performing a three-way merge between the original module package, your app's version of the module, and the new module package. Storage GUIDs are restored, so no data is lost. Fails with exit code `314` if the module is not found in the app.
 
-For `--conflict`, enter one of the following values to control what happens when a same-name module already exists. This applies to the `add` and `update` modes:
+For `--original-mpk`, enter the *.mpk* file of the module version that is currently installed in the app. This is used as the common base for the three-way merge. This option is required when `--import-mode update` is used.
 
-* `fail` – Return an error. This is the default.
-* `take_mine` – Keep the existing module and skip the import silently.
-* `take_theirs` – Replace the existing module.
+For `--module-name`, enter the name of the module in the app that you want to update. This option only applies to `--import-mode update`. Use it when the module in your app has a different name than the module in the *.mpk* file, for example, when the same module was imported more than once under different names. If this option is not specified, the name of the module in the *.mpk* file is used.
 
-For `--metadata`, enter one of the following values to control how Marketplace identity fields are handled when a module is replaced. This option only takes effect when a replacement actually occurs:
+For `--conflict`, enter one of the following values to control what happens when the three-way merge results in conflicts. This applies to the `update` mode:
 
-* `take_new` – Use the identity fields from the incoming module. This is the default.
-* `take_existing` – Copy the identity fields from the module being replaced.
-* `erase` – Clear all identity fields.
+* `fail` – Return an error with exit code `313` and revert the app to its state before the update. This is the default.
+* `take_mine` – Resolve all conflicts by keeping the version in your app.
+* `take_theirs` – Resolve all conflicts by using the version from the new module package.
 
-Regardless of the chosen strategy, `FromAppStore` is always inherited from the existing module, and `AppStoreVersion` falls back to the existing values when the incoming module does not provide them.
+{{% alert color="warning" %}}
+Updating a module from the command line is not supported if the package IDs of the original module package, the new module package, and the module in your app do not match.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+The app is only reverted automatically when it is under Git version control. Make sure there are no uncommitted changes before you update a module. If the app is not under version control, you need to restore it manually after a failed update.
+{{% /alert %}}
 
 ### Examples
 
-Add a module to an app:
+* Add a module to an app:
 
-`mx module-import MyNewModule.mpk MyApp.mpr`
+    `mx module-import MyNewModule.mpk MyApp.mpr`
 
-Replace an existing module, keeping its marketplace identity:
+* Update an existing module from version 1.0.0 to version 2.0.0:
 
-`mx module-import MyNewModule.mpk MyApp.mpr --import-mode replace --metadata take_existing`
+    `mx module-import MyModule_2.0.0.mpk MyApp.mpr --import-mode update --original-mpk MyModule_1.0.0.mpk`
 
-Update a module if it exists or add it if not, overwriting on collision:
+* Update an existing module and resolve any conflicts by using the new version:
 
-`mx module-import MyNewModule.mpk MyApp.mpr --import-mode update --conflict take_theirs`
+    `mx module-import MyModule_2.0.0.mpk MyApp.mpr --import-mode update --original-mpk MyModule_1.0.0.mpk --conflict take_theirs`
+
+* Update a module that has a different name in the app than in the module package:
+
+    `mx module-import MyModule_2.0.0.mpk MyApp.mpr --import-mode update --original-mpk MyModule_1.0.0.mpk --module-name MyRenamedModule`
 
 ### Return Codes
 
@@ -145,9 +156,9 @@ In case of errors, the exit code consists of three digits `XYZ`:
 
 * X determines the error type:
 
-    * 1 – parameter validation error
-    * 2 – output-related error
-    * 3 – errors related to the execution of the operation
+    * 1 – Parameter validation error
+    * 2 – Output-related error
+    * 3 – Errors related to the execution of the operation
 
 * Y is the number of the parameter the error is related to. This component is only valid if X = 1. If the error is not related to the parameters, Y contains the error details code described in Z below.
 
@@ -157,13 +168,18 @@ In case of errors, the exit code consists of three digits `XYZ`:
     * 2 – Module you are trying to import is a Theme module and cannot be imported.
     * 3 – Project already contains a module with the same name as the module you are importing. Thus the module cannot be imported.
     * 4 – No module is found in the MPK package.
-    * 5 – Project Version is not supported by the current version of mx.exe
-    * 6 – Project can't be loaded
-    * 7 – Module can't be loaded
+    * 5 – Project Version is not supported by the current version of mx.exe.
+    * 6 – Project can't be loaded.
+    * 7 – Module can't be loaded.
     * 8 – Import of a module failed. Resulting project can't be saved.
-    * 9 – File does not exist
-    * 10 – `--import-mode replace` was specified but no module with that name exists in the project
-    * 11 – The *.mpk* file has an unrecognized extension
+    * 9 – File does not exist.
+    * 10 – `--import-mode replace` was specified but no module with that name exists in the project (Studio Pro 11.14 and 11.15 only).
+    * 11 – The *.mpk* file has an unrecognized extension.
+    * 12 – `--original-mpk` was not provided for `--import-mode update`.
+    * 13 – The three-way merge resulted in unresolved conflicts and the project has been reverted. Retry with `--conflict take_mine` or `--conflict take_theirs` to resolve the conflicts automatically.
+    * 14 – `--import-mode update` was specified but no module with that name exists in the project.
+    * 15 – A previous module update was interrupted. Revert the project and delete the `.mendix-cache/updates/<module-name>` directory before retrying.
+    * 16 – A module update is already in progress. Commit or revert the pending changes and delete the `.mendix-cache/updates/<module-name>` directory before retrying.
 
 For example:
 

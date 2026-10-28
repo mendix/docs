@@ -171,6 +171,7 @@ To ensure the smooth operation of Mendix AI Assistance (Maia), the following net
 | Studio Pro Version | Model |
 | --- | --- |
 | 11.17 and above | Claude Sonnet 5.5 |
+| 11.12.7 and above in 11.12 | Claude Sonnet 5.5 |
 | 11.12 and above | Claude Sonnet 4.6 |
 | 11.8 and above | Claude Sonnet 4.5 |
 

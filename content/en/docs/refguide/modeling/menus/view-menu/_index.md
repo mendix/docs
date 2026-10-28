@@ -123,9 +123,9 @@ For details on using Mendix Marketplace components in your app modeling, see [Ho
 In Studio Pro 11.14 and below, this tab is called **MCP Settings**.
 {{% /alert %}}
 
-The **Maia Settings** pane allows you to connect Maia to External Model Context Protocol (MCP) servers. For Studio Pro 11.15 and above, this pane also stores [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/).
+The **Maia Settings** pane allows you to connect Maia to External Model Context Protocol (MCP) servers. For more information, see [Maia MCP Client](/refguide/maia-mcp/).
 
-For more information, see [Maia MCP Client](/refguide/maia-mcp/).
+For Studio Pro 11.15 and above, this pane also stores [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/). For Studio Pro 11.16 and above, you can view and manage all tool permissions, such as Web Fetch and MCP Tools. 
 
 ### OpenAPI Documentation {#api-documentation}
 

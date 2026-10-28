@@ -23,7 +23,8 @@ For details on the current limitations, see the [Limitations](#limitations) sect
 
 There are two ways to open the MCP Client panel:
 
-* Open the **Chat** tab in the **Maia** pane, then click **Configure MCP Connections** ({{% icon name="plug" %}}).
+* Open the **Chat** tab in the **Maia** pane, then click **Settings** ({{% icon name="cog" %}}) > **MCP Servers***.
+    * For Studio Pro 11.14 and below, open the **Chat** tab in the **Maia** pane, then click **Configure MCP Connections** ({{% icon name="plug" %}}).
 * Go to the **View** menu and click **Maia Settings**.
 
 ### Preset Servers {#preset-servers}

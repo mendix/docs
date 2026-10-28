@@ -135,8 +135,7 @@ In this section, you can find information about the deployment package that is l
 
 ### Plan Details
 
-This section shows details of the plan that applies to this environment.    
-It also includes the option to change your plan. For details, refer to [Changing Plan](/developerportal/deploy/change-plan/).
+This section shows details of the plan that applies to this environment.
 
 * **Name** – the type of plan associated with your license
 * **Instances** – the number and memory allocation of instances in the environment (for more information, see the [Scaling](#scaling))
@@ -146,6 +145,11 @@ It also includes the option to change your plan. For details, refer to [Changing
 * **Database Plan Memory** – the database's RAM size
 * **File Storage** – available size for storing blobs
 * **Multi-AZ Enabled** –  a **Yes** or **No** value indicating whether multiple availability zones are enabled
+
+From this section, you can also do the following:
+
+* Change your plan. For details, refer to [Changing Plan](/developerportal/deploy/change-plan/).
+* Reclaim database disk space. For details, refer to [Repacking Your Database in Mendix Cloud](/developerportal/deploy/repack-database/).
 
 #### Scaling {#scaling}
 

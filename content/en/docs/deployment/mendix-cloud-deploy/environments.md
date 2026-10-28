@@ -176,7 +176,11 @@ If you are the [Technical Contact](/developerportal/general/app-roles/#technical
 
 ### Change Requests Tab {#change-requests}
 
-On the **Change Requests** tab, the Technical Contact can view details of all past and current [Plan](/developerportal/deploy/change-plan/) and [Connection](/developerportal/deploy/connecting-to-external-resource/) requests and perform actions based on each request's current status.
+On the **Change Requests** tab, the Technical Contact can view details of all past and current requests of the following types, and perform actions based on each request's current status:
+
+* [Plan](/developerportal/deploy/change-plan/)
+* [Connection](/developerportal/deploy/connecting-to-external-resource/)
+* [Database Repack](/developerportal/deploy/repack-database/)
 
 For each submitted request, the following information is available:
 

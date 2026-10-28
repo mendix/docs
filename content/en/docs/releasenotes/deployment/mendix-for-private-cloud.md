@@ -12,6 +12,26 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### November ???, 2026
+
+#### Mendix Operator 2.29.0 {#2.29.0}
+
+* New Mendix on Kubernetes namespaces will be using a new `registry.mendix.com/private-cloud` container registry by default.
+   The new registry is based on a scalable, geo-distributed architecture and will increase image downloads speeds in certain regions.
+* We have fixed an issue where applying pod labels from the Private Cloud Portal would cause Azure Workload Identity authentication to fail. (Ticket 290587)
+* We have fixed an issue with IAM authentication in AWS China regions. (Ticket 290116)
+* We have updated components to use Go 1.27 and the latest dependency versions in order to improve security score ratings for container images.
+
+#### Deprecations
+
+* Mendix on Kubernetes components are migrating from the `private-cloud.registry.mendix.com` container registry to `registry.mendix.com/private-cloud`.
+   The `private-cloud.registry.mendix.com` registry will remain available and will continue to receive new images until August 1, 2027.
+   It is possible to specify which container registry to use during installation of the Mendix Operator.
+* `ubi8` runtime base images will no longer receive updates after March 1, 2027.
+   `ubi9` and `hi` (Red Hat Hardened Images) will continue to be maintained and supported.
+   For more information on switching to these images, see the [Runtime Base Image](/developerportal/deploy/private-cloud-cluster/#runtime-base-image) configuration.
+   The Helm chart UI allows to choose the base image from the dropdown.
+
 ### October 22, 2026
 
 #### Portal Improvements

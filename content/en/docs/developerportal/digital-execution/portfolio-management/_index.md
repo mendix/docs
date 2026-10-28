@@ -4,7 +4,7 @@ url: /developerportal/portfolio-management/
 weight: 35
 description: "Describes the Mendix Portfolio Management app."
 cascade:
-    - banner: "Portfolio Management will be retired on April 8, 2027. Refer to the <a href=\"https://mendix.atlassian.net/wiki/spaces/CC/pages/5141692566/Why+we+re+retiring+Portfolio+Management+and+where+to+go+next\">Why we're retiring Portfolio Management and where to go next</a> blog post to find out more and to prepare for this change."
+    - banner: "Portfolio Management will be retired on April 8, 2027. Until then, everything works as usual.<br>Mendix recommends <a href=\"/developerportal/portfolio-management/export-import-initiatives/#export-initiatives\">exporting</a> any initiatives you want to keep.<br>Refer to the <a href=\"https://mendix.atlassian.net/wiki/spaces/CC/pages/5141692566/Why+we+re+retiring+Portfolio+Management+and+where+to+go+next\">Why we're retiring Portfolio Management and where to go next</a> blog post to find out more and to prepare for this change."
 
 #The anchor #portfolios-settings and #privacy-settings below is mapped, so it should not be removed or changed. If changing the URL of this document, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

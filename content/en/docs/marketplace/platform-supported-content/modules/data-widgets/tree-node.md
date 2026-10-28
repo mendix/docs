@@ -9,7 +9,7 @@ description: "Describes the purpose, features, and configurations of the Tree No
 
 The [Tree Node](https://marketplace.mendix.com/link/component/116540) widget displays a level of tree nodes.
 
-Mendix recommends using multiple Tree Node widgets in a nested manner. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion/) widget is a better alternative.
+Mendix recommends using multiple Tree Node widgets in a nested structure. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion/) widget is a better alternative.
 
 ## Features
 
@@ -55,51 +55,51 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 
 ### General Tab {#general}
 
-* **Data source** – the data source of the widget, which can also be optionally used as the data source for the header and content of the widget
+* **Data source** – This sets the data source of the widget, which can also be optionally used as the data source for the header and content of the widget:
     * Required
-* **Parent association** – the association used to select a parent. If set, the widget uses [Infinite tree node](#child-detection-mode) mode.
-* **Header type** – defines the type of the header:
+* **Parent association** – This sets the association used to select a parent. If set, the widget uses [Infinite tree node](#child-detection-mode) mode.
+* **Header type** – This defines the type of the header:
     * Default: **Text**
     * When set to **Text**, you can configure the **Header caption** property
     * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
 
     {{% alert color="info" %}}The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.{{% /alert %}}
 
-* **Header caption** – the text template used as the header caption
+* **Header caption** – This sets the text template used as the header caption:
     * Configurable when **Header type** is set to **Text**
-* **Open node when** – defines which part of the node opens or closes the node when clicked
+* **Open node when** – This defines which part of the node opens or closes the node when clicked:
     * Configurable when **Header type** is set to **Custom**; default: **Header is clicked**
     * When set to **Header is clicked**, the whole header is clickable
     * When set to **Icon is clicked**, only the icon opens or closes the node; in this case, **Show icon** cannot be set to **No**
-* **Has children** – a Boolean expression that indicates whether a tree node has child nodes or is an end node
+* **Has children** – This is a Boolean expression that indicates whether a tree node has child nodes or is an end node:
     * Configurable when **Parent association** is not set
     * When configured, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
 
     {{% alert color="info" %}}In **Infinite tree node** mode, **Has children** is hidden and the widget detects child nodes automatically.{{% /alert %}}
-* **Start expanded** – determines whether the content of the current level of tree nodes starts expanded or collapsed
+* **Start expanded** – This determines whether the content of the current level of tree nodes starts expanded or collapsed:
     * Configurable when **Has children** is configured or **Parent association** is set; default: **No**
 
     {{% alert color="info" %}}In **Infinite tree node** mode, Mendix recommends setting **Start expanded** to **No** for large data sets. When **Start expanded** is set to **Yes**, the widget expands all tree nodes directly and loads all data at once.{{% /alert %}}
 
-* **Animate** – defines whether the content is animated when a tree node expands and collapses
+* **Animate** – This defines whether the content is animated when a tree node expands and collapses:
     * Default: **Yes**
 
 ### Visualization Tab {#visualization}
 
 The **Visualization** tab includes the following properties:
 
-* **Show icon** – defines the location of the icon relative to the header
+* **Show icon** – This defines the location of the icon relative to the header:
     * Default: **Left**
     * When set to **Left**, the icon is placed to the left to the header
     * When set to **Right**, the icon is placed to the right to the header
     * When set to **No**, the header has no icon
-* **Expanded icon** – defines the custom icon used to indicate that the tree node is expanded
+* **Expanded icon** – This defines the custom icon used to indicate that the tree node is expanded:
     * Configurable when **Show icon** is set to either **Left** or **Right**
-* **Collapsed icon** – defines the custom icon used to indicate that the tree node is collapsed
+* **Collapsed icon** – This defines the custom icon used to indicate that the tree node is collapsed:
     * Configurable when **Show icon** is set to either **Left** or **Right**
-* **Animate icon**– defines whether the icon is animated when you expand or collapse a tree node
+* **Animate icon** – This defines whether the icon is animated when you expand or collapse a tree node:
     * Default: **Yes**
-* **No data message** – the text shown when there are no items to display
+* **No data message** – This sets the text shown when there are no items to display:
     * Configurable when **Parent association** is set; default: **No data available**
 
 ### Styling
@@ -108,6 +108,6 @@ The Tree Node widget has default styles and works out of the box without Atlas U
 
 These are the design properties shipped with Atlas UI for this widget:
 
-* **Borders** – changes the border appearance
+* **Borders** – This changes the border appearance:
     * **Horizontal**, **Both**, **None** (default)
-* **Hover** – a toggle that highlights an item when hovering over it; only useful when the item is clickable
+* **Hover** – This is a toggle that highlights an item when hovering over it; only useful when the item is clickable.

@@ -8,6 +8,17 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.16.0
+
+### New Features
+
+* We added a new user authentication API (`studioPro.ui.userAuthentication`) to check the signed-in state (`isSignedIn`), retrieve the user's profile information (`getUserProfile`), and subscribe to `signedIn`/`signedOut` events.
+* We added a new API for interacting with the Maia agent chat (`studioPro.ai.chat`) to prefill the Maia chat window with input text and either let the user review it before sending it or automatically send it.
+
+### Fixes
+
+* We fixed a bug that caused permissions to be missing from the Extensions Overview tab when using an extension created with an older version of Studio Pro.
+
 ## Version 11.15.0
 
 ### New Features

@@ -19,7 +19,7 @@ For more information on using Data Grid 2 features, see [Data Grid 2](/appstore/
 
 ##### Data Source
 
-Specifies the source of the data being presented in the data grid. You can select data from **Database**, **Microflow**, **Nanoflow**, or **Association**.
+This specifies the source of the data being presented in the data grid. You can select data from **Database**, **Microflow**, **Nanoflow**, or **Association**.
 
 ##### Refresh Time (in Seconds)
 
@@ -39,14 +39,14 @@ If set to **No**, then all column filters are hidden, and the **Filter** propert
 
 ##### On Click Trigger
 
-Determines how the click action is triggered. The following options are available:
+This determines how the click action is triggered. The following options are available:
 
 * **Single click** (default): triggers the action on a single click on a row
 * **Double click**: triggers the action when the row is double-clicked
 
 ##### On Click Action
 
-Sets the action to be performed when the row is clicked.
+This sets the action to be performed when the row is clicked.
 
 {{% alert color="info" %}}
 The setting for actions and action triggers is related to the selection method and can sometimes be ambiguous. When **Selection method** is set to **Row click**, set **On click trigger** to **Double click**; otherwise Studio Pro shows a consistency error.
@@ -56,11 +56,11 @@ For the combinations of selection method and action triggers that are supported,
 
 ##### On Selection Change
 
-Sets the action to be performed when the row is selected or unselected. This property is only shown when **Selection** is set to **Single** or **Multi**.
+This sets the action to be performed when the row is selected or unselected. This property is only shown when **Selection** is set to **Single** or **Multi**.
 
 ##### On Before Export
 
-Sets the action to be performed before data is exported from the data grid. The action receives the following variables:
+This sets the action to be performed before data is exported from the data grid. The action receives the following variables:
 
 * **Grid Name** (String)
 * **Column Titles** (String)
@@ -101,7 +101,7 @@ Grid-wide filtering, which was configured on the data grid itself, was removed i
 
 ##### Selection
 
-Controls row selection capabilities. The following options are available:
+This controls row selection capabilities. The following options are available:
 
 * **None**: selection is turned off
 * **Single**: only one row can be selected at a time
@@ -113,7 +113,7 @@ When **Keep selection** is set to **No**, the selection is cleared when the sele
 
 ##### Selection Method
 
-Specifies the method of selection. This property is only shown when **Selection** is set to **Single** or **Multi**. The following options are available:
+This specifies the method of selection. This property is only shown when **Selection** is set to **Single** or **Multi**. The following options are available:
 
 * **Checkbox** (default): adds a checkbox to the beginning of the row, which acts as the primary way to select the row
 * **Row click**: makes the whole row clickable; clicking a row selects it
@@ -124,7 +124,7 @@ When set to **Yes**, the first row is selected automatically. This property is o
 
 ##### Toggle on Click
 
-Defines the selection behavior when a row is clicked. When set to **Yes**, clicking a row toggles its selection and keeps the other selected rows. When set to **No**, clicking a row selects that row and clears the rest of the selection. The default value is **No**.
+This defines the selection behavior when a row is clicked. When set to **Yes**, clicking a row toggles its selection and keeps the other selected rows. When set to **No**, clicking a row selects that row and clears the rest of the selection. The default value is **No**.
 
 This property is only shown when **Selection** is set to **Single** or **Multi** and **Selection method** is set to **Row click**.
 
@@ -154,7 +154,7 @@ This property is only shown when **Selection** is set to **Single** or **Multi**
 
 ##### Show Selection Count
 
-Sets where the number of selected rows is displayed, together with a button to clear the selection. The following options are available:
+This sets where the number of selected rows is displayed, together with a button to clear the selection. The following options are available:
 
 * **Top**: displays the count above the grid
 * **Bottom** (default): displays the count below the grid
@@ -166,7 +166,7 @@ This property is only shown when **Selection** is set to **Multi**.
 
 ##### Loading Type
 
-Controls how the loading state is displayed while the grid loads data. The following options are available:
+This controls how the loading state is displayed while the grid loads data. The following options are available:
 
 * **Spinner** (default): displays a spinner
 * **Skeleton**: displays placeholder content in the shape of the grid rows
@@ -179,7 +179,7 @@ When set to **Yes**, the grid shows a refresh indicator while the data is being 
 
 ##### Page Size
 
-The number of rows to display per page. When **Pagination** is set to **Virtual scrolling** or **Load more**, this number defines how many rows are added each time more data is loaded. The default value is 20.
+This sests the number of rows to display per page. When **Pagination** is set to **Virtual scrolling** or **Load more**, this number defines how many rows are added each time more data is loaded. The default value is 20.
 
 ##### Pagination
 
@@ -197,7 +197,7 @@ These properties are only shown when **Pagination** is set to **Paging buttons**
 
 ##### Show Paging Buttons
 
-Controls the visibility of navigation buttons. The following options are available:
+This controls the visibility of navigation buttons. The following options are available:
 
 * **Always** (default): navigation buttons are always visible
 * **Auto**: navigation buttons are only visible when the number of elements in the data source exceeds the page size
@@ -222,46 +222,46 @@ When **Pagination** is set to **Virtual scrolling** or **Load more**, this prope
 
 ##### Load More Caption
 
-Sets the caption of the button that loads more rows. The default value is "Load More". This property is only shown when **Pagination** is set to **Load more**.
+This sets the caption of the button that loads more rows. The default value is **Load More**. This property is only shown when **Pagination** is set to **Load more**.
 
 ##### Page Size Attribute
 
-An Integer attribute used to set the page size dynamically. When this attribute is set, it is used as the page size instead of **Page size**.
+This is an **Integer** attribute used to set the page size dynamically. When this attribute is set, it is used as the page size instead of **Page size**.
 
 ##### Page Attribute
 
-An Integer attribute used to set the current page dynamically. The data grid also writes the current page back to this attribute when the user navigates between pages.
+This is an **Integer** attribute used to set the current page dynamically. The data grid also writes the current page back to this attribute when the user navigates between pages.
 
 ##### Total Count
 
-An Integer attribute in which the data grid stores the current total number of rows.
+This is an **Integer** attribute in which the data grid stores the current total number of rows.
 
 ##### Loaded Rows
 
-A read-only Integer attribute that reflects the number of rows currently loaded. This property is only shown when **Pagination** is set to **Virtual scrolling** or **Load more**.
+This is a read-only **Integer** attribute that reflects the number of rows currently loaded. This property is only shown when **Pagination** is set to **Virtual scrolling** or **Load more**.
 
 #### Appearance
 
 ##### Empty List Message
 
-Controls whether a message is displayed when there is no data in the data source, or the filter result is empty. The following options are available:
+This controls whether a message is displayed when there is no data in the data source, or the filter result is empty. The following options are available:
 
 * **None** (default): no message is displayed
 * **Custom**: displays the content of the **Empty placeholder** area
 
 ##### Empty Placeholder
 
-A widget area where you place the widgets to display when the list is empty. This property is only shown when **Empty list message** is set to **Custom**.
+This is a widget area where you place the widgets to display when the list is empty. This property is only shown when **Empty list message** is set to **Custom**.
 
 ##### Dynamic Row Class
 
-An expression that returns the CSS class for the row. The data source entity is available as `$currentObject` within the scope of the expression.
+This is an expression that returns the CSS class for the row. The data source entity is available as `$currentObject` within the scope of the expression.
 
 #### Advanced
 
 ##### Custom Row Key
 
-An expression that returns a stable identifier for each row. Use it to maintain the scroll position when using view entities. When it is not set, the object ID is used.
+This is an expression that returns a stable identifier for each row. Use it to maintain the scroll position when using view entities. When it is not set, the object ID is used.
 
 ### Personalization Tab
 
@@ -269,42 +269,42 @@ An expression that returns a stable identifier for each row. Use it to maintain 
 
 ##### Sorting
 
-Controls column sorting for the entire data grid. If set to **No**, then sorting is disabled for all columns and the **Can sort** column property is not shown. The default value is **Yes**.
+This controls column sorting for the entire data grid. If set to **No**, then sorting is disabled for all columns and the **Can sort** column property is not shown. The default value is **Yes**.
 
 ##### Resizing
 
-Controls column resizing for the entire data grid. If set to **No**, then resizing is disabled for all columns and the **Can resize** column property is not shown. The default value is **Yes**.
+This controls column resizing for the entire data grid. If set to **No**, then resizing is disabled for all columns and the **Can resize** column property is not shown. The default value is **Yes**.
 
 ##### Reordering
 
-Controls column reordering for the entire data grid. If set to **No**, then reordering is disabled for all columns and the **Can reorder** column property is not shown. The default value is **Yes**.
+This controls column reordering for the entire data grid. If set to **No**, then reordering is disabled for all columns and the **Can reorder** column property is not shown. The default value is **Yes**.
 
 ##### Hiding
 
-Controls column hiding for the entire data grid. If set to **No**, then hiding is disabled for all columns and the **Can hide** column property is not shown. The default value is **Yes**.
+This controls column hiding for the entire data grid. If set to **No**, then hiding is disabled for all columns and the **Can hide** column property is not shown. The default value is **Yes**.
 
 #### Configuration
 
 ##### Store Configuration In
 
-Sets where the personalized configuration of the data grid is stored. The following options are available:
+This sets where the personalized configuration of the data grid is stored. The following options are available:
 
 * **Attribute** (default): stores the configuration in the attribute selected in **Attribute**
 * **Browser local storage**: stores the configuration in the browser's local storage. The configuration is scoped to a browser profile and is not tied to a Mendix user.
 
 ##### Attribute
 
-Sets the entity attribute that is used to store the personalized configuration of the data grid. The configuration is automatically stored and loaded. The attribute must be an unlimited String.
+This sets the entity attribute that is used to store the personalized configuration of the data grid. The configuration is automatically stored and loaded. The attribute must be an unlimited String.
 
 This property is only shown when **Store configuration in** is set to **Attribute**.
 
 ##### Store Filters
 
-Controls whether filter states are saved as part of the personalized configuration. When set to **Yes** (default), filter values are stored together with the rest of the configuration, so they persist across sessions and page refreshes. When set to **No**, filters are not stored and reset to their default values on every page load. This is useful for shared screens, dashboards, or public interfaces.
+This controls whether filter states are saved as part of the personalized configuration. When set to **Yes** (default), filter values are stored together with the rest of the configuration, so they persist across sessions and page refreshes. When set to **No**, filters are not stored and reset to their default values on every page load. This is useful for shared screens, dashboards, or public interfaces.
 
 ##### On Change
 
-Sets the action to be performed when the **Attribute** value is changed. This property is only shown when **Store configuration in** is set to **Attribute**.
+This sets the action to be performed when the **Attribute** value is changed. This property is only shown when **Store configuration in** is set to **Attribute**.
 
 ### Texts Tab
 
@@ -312,61 +312,61 @@ Sets the action to be performed when the **Attribute** value is changed. This pr
 
 ##### Filter Section
 
-Defines a string value that labels the header area of the data grid, which contains the filtering and sorting section. Used by assistive technologies and screen readers.
+This defines a string value that labels the header area of the data grid, which contains the filtering and sorting section. Used by assistive technologies and screen readers.
 
 ##### Export Progress
 
-Defines a string value that labels the export dialog of the data grid. Used by assistive technologies and screen readers. The default value is "Export progress".
+This defines a string value that labels the export dialog of the data grid. Used by assistive technologies and screen readers. The default value is "Export progress".
 
 ##### Cancel Data Export
 
-Defines a string value that labels the cancel button of the export dialog. Used by assistive technologies and screen readers. The default value is "Cancel data export".
+This defines a string value that labels the cancel button of the export dialog. Used by assistive technologies and screen readers. The default value is "Cancel data export".
 
 ##### Select Row Label
 
-Defines a string value that labels the checkbox of a row when selection is enabled. Used by assistive technologies and screen readers. The default value is "Select row".
+This defines a string value that labels the checkbox of a row when selection is enabled. Used by assistive technologies and screen readers. The default value is "Select row".
 
 ##### Select All Label
 
-Defines a string value that labels the **Select all** checkbox in the grid header when selection is enabled. Used by assistive technologies and screen readers. The default value is "Select all rows".
+This defines a string value that labels the **Select all** checkbox in the grid header when selection is enabled. Used by assistive technologies and screen readers. The default value is "Select all rows".
 
 ##### Single Selection Column Label
 
-Defines a string value that labels the header of the selection column when single selection is enabled. Used by assistive technologies and screen readers. The default value is "Select single row". This property is only shown when **Selection** is set to **Single**.
+This defines a string value that labels the header of the selection column when single selection is enabled. Used by assistive technologies and screen readers. The default value is "Select single row". This property is only shown when **Selection** is set to **Single**.
 
 ##### Selecting All Label
 
-Defines a string value that labels the progress dialog shown while all items are being selected. Used by assistive technologies and screen readers. The default value is "Selecting all items...".
+This defines a string value that labels the progress dialog shown while all items are being selected. Used by assistive technologies and screen readers. The default value is "Selecting all items...".
 
 ##### Cancel Selection Label
 
-Defines a string value that labels the cancel button in the selection progress dialog. Used by assistive technologies and screen readers. The default value is "Cancel selection".
+This defines a string value that labels the cancel button in the selection progress dialog. Used by assistive technologies and screen readers. The default value is "Cancel selection".
 
 #### Captions
 
 ##### Row Count Singular
 
-The text displayed when one row is selected. It must include `%d` to denote the position of the number. The default value is "%d row selected".
+This sets the text displayed when one row is selected. It must include `%d` to denote the position of the number. The default value is "%d row selected".
 
 ##### Row Count Plural
 
-The text displayed when several rows are selected. It must include `%d` to denote the position of the number. The default value is "%d rows selected".
+This sets the text displayed when several rows are selected. It must include `%d` to denote the position of the number. The default value is "%d rows selected".
 
 ##### Select All Text
 
-The text of the button that selects all rows in the data source. The default value is "Select all rows in the data source".
+This sets the text of the button that selects all rows in the data source. The default value is "Select all rows in the data source".
 
 ##### Select All Template
 
-The text of the button that selects all rows in the data source, used when the total count is available. Use `%d` to denote the position of the number. The default value is "Select all %d rows in the data source".
+This sets the text of the button that selects all rows in the data source, used when the total count is available. Use `%d` to denote the position of the number. The default value is "Select all %d rows in the data source".
 
 ##### Select Status Template
 
-The text displayed when all rows are selected. Use `%d` to denote the position of the number. The default value is "All %d rows selected.".
+This sets the text displayed when all rows are selected. Use `%d` to denote the position of the number. The default value is "All %d rows selected.".
 
 ##### Clear Selection Label
 
-The label of the button that clears the selection. The default value is "Clear selection". This property is only shown when **Selection** is set to **Multi**.
+This controls the label of the button that clears the selection. The default value is **Clear selection**. This property is only shown when **Selection** is set to **Multi**.
 
 ## Column Properties {#column-properties}
 
@@ -384,7 +384,7 @@ Controls the type of the data displayed in the column. The following options are
 
 #### Attribute
 
-Sets the attribute used for the column. This property is required when **Show** is set to **Attribute**, and when the column can be sorted or filtered.
+This sets the attribute used for the column. This property is required when **Show** is set to **Attribute**, and when the column can be sorted or filtered.
 
 This property is hidden when **Show** is not set to **Attribute**, **Can sort** is set to **No**, and **Show column filters** is set to **No**.
 
@@ -394,15 +394,15 @@ A widget area where you place the widgets to display in each cell of the column.
 
 #### Dynamic Text
 
-A text template that sets the text displayed in each cell of the column. This property is only shown when **Show** is set to **Dynamic text**.
+This is a text template that sets the text displayed in each cell of the column. This property is only shown when **Show** is set to **Dynamic text**.
 
 #### Export Value
 
-A text template that sets the value exported for this column when data is exported to Excel. Columns with custom content are only included in the export when this property is set. This property is only shown when **Show** is set to **Custom content**.
+This is a text template that sets the value exported for this column when data is exported to Excel. Columns with custom content are only included in the export when this property is set. This property is only shown when **Show** is set to **Custom content**.
 
 #### Export Type
 
-Sets the cell type used for the column's values when data is exported to Excel. The following options are available:
+This sets the cell type used for the column's values when data is exported to Excel. The following options are available:
 
 * **Default** (default)
 * **Number**
@@ -413,31 +413,31 @@ This property is hidden when **Show** is set to **Dynamic text**.
 
 #### Export Number Format
 
-An optional expression that returns the Excel number format for exported numeric values, for example `"#,##0.00"`, `"$0.00"`, or `"0.00%"`. For the available formats, see [Number Formats](https://docs.sheetjs.com/docs/csf/features/nf/) in the SheetJS documentation.
+THis is an optional expression that returns the Excel number format for exported numeric values, for example `"#,##0.00"`, `"$0.00"`, or `"0.00%"`. For the available formats, see [Number Formats](https://docs.sheetjs.com/docs/csf/features/nf/) in the SheetJS documentation.
 
 This property is only shown when **Export type** is set to **Number**, and is hidden when **Show** is set to **Dynamic text**.
 
 #### Export Date Format
 
-An optional expression that returns the Excel date format for exported date and time values, for example `"yyyy-mm-dd"` or `"dd/mm/yyyy hh mm"`.
+This is an optional expression that returns the Excel date format for exported date and time values, for example `"yyyy-mm-dd"` or `"dd/mm/yyyy hh mm"`.
 
 This property is only shown when **Export type** is set to **Date**, and is hidden when **Show** is set to **Dynamic text**.
 
 #### Caption
 
-Text to be displayed in the column header. A caption is required when the column can be hidden; otherwise Studio Pro shows a warning.
+This sets the text to be displayed in the column header. A caption is required when the column can be hidden; otherwise Studio Pro shows a warning.
 
 #### Tooltip
 
-Text to display when hovering over a cell of the column. The text is set as the `title` attribute of the cell content. This property is hidden when **Show** is set to **Custom content**.
+This sets the text to display when hovering over a cell of the column. The text is set as the `title` attribute of the cell content. This property is hidden when **Show** is set to **Custom content**.
 
 #### Filter
 
-A widget area where you place a filter widget for the column. The filter is displayed in the column header. This property is hidden when **Show column filters** is set to **No**.
+This is a widget area where you place a filter widget for the column. The filter is displayed in the column header. This property is hidden when **Show column filters** is set to **No**.
 
 #### Visible
 
-A Boolean expression that controls the visibility of the column in the data grid. If the expression returns **false**, then the column is hidden and remains hidden unless the expression value is changed to **true**. The default value is `true`.
+This is a Boolean expression that controls the visibility of the column in the data grid. If the expression returns **false**, then the column is hidden and remains hidden unless the expression value is changed to **true**. The default value is `true`.
 
 ### Column Capabilities
 
@@ -455,7 +455,7 @@ If set to **Yes**, then the column position in the grid can be changed by the us
 
 #### Can Hide
 
-Controls whether the column can be hidden in the view settings. The following options are available:
+This controls whether the column can be hidden in the view settings. The following options are available:
 
 * **Yes** (default): the column can be hidden in the view settings
 * **Yes, hidden by default**: the column is hidden on first render and can be shown using the view settings
@@ -473,7 +473,7 @@ For more information, see the [Allow Row Events](/appstore/modules/data-grid-2/#
 
 #### Column Width
 
-Controls how the column width is calculated. The following options are available:
+This controls how the column width is calculated. The following options are available:
 
 * **Auto-fill** (default): fills the available space
 * **Auto-fit content**: uses just enough space to display the column content
@@ -481,11 +481,11 @@ Controls how the column width is calculated. The following options are available
 
 #### Column Size
 
-The number used to size the column relative to the other columns, as the flex-grow CSS property. The default value is 1. This property is only shown when **Column width** is set to **Manual**.
+This sets the number used to size the column relative to the other columns, as the flex-grow CSS property. The default value is 1. This property is only shown when **Column width** is set to **Manual**.
 
 #### Min Width
 
-Sets the minimum width of the column. The following options are available:
+This sets the minimum width of the column. The following options are available:
 
 * **Auto** (default): no specific minimum width is set
 * **Set by content**: the minimum width is the minimum width of the column content
@@ -493,11 +493,11 @@ Sets the minimum width of the column. The following options are available:
 
 #### Min Width Value (px)
 
-The minimum width of the column in pixels. The default value is 100. This property is only shown when **Min width** is set to **Manual**.
+This sets the minimum width of the column in pixels. The default value is 100. This property is only shown when **Min width** is set to **Manual**.
 
 #### Alignment
 
-Sets the text alignment in the column. The following options are available:
+This sets the text alignment in the column. The following options are available:
 
 * **Left** (default)
 * **Center**
@@ -505,7 +505,7 @@ Sets the text alignment in the column. The following options are available:
 
 #### Dynamic Cell Class
 
-An expression that returns the CSS class for each cell of the column. The data source entity is available as `$currentObject` within the scope of the expression.
+This is an expression that returns the CSS class for each cell of the column. The data source entity is available as `$currentObject` within the scope of the expression.
 
 #### Wrap Text
 

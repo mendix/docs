@@ -17,7 +17,7 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 
 ### Fixes
 
-* We fixed a bug, when using an extension created from an older version of Studio Pro, would cause permissions to be missing in the Extensions Overview tab.
+* We fixed a bug that caused permissions to be missing from the Extensions Overview tab when using an extension created with an older version of Studio Pro.
 
 ## Version 11.15.0
 

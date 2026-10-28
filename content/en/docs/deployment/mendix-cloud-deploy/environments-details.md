@@ -147,6 +147,14 @@ It also includes the option to change your plan. For details, refer to [Changing
 * **File Storage** – available size for storing blobs
 * **Multi-AZ Enabled** –  a **Yes** or **No** value indicating whether multiple availability zones are enabled
 
+#### Repacking the Database {#repack}
+
+To reclaim the disk space used by bloat, click **Repack** in the **Plan Details** section. Repack uses the PostgreSQL extension `pg_repack` to rebuild tables and indexes without holding exclusive locks, so your app stays running during the process. After the repack, the database disk usage reflects only live data.
+
+Only the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app can use **Repack**. The Technical Contact can run the repack immediately or schedule it for a later time. Although the expected impact on the running app is minimal, scheduling provides control over when the repack happens.
+
+Use the [Average Database Bloat Ratio](/developerportal/operate/metrics/#Trends-dbavgbloatratio) and [Maximum Table Bloat Ratio](/developerportal/operate/metrics/#Trends-dbmaxtablebloatratio) graphs to decide whether a repack is needed. The repack temporarily requires free database disk space approximately equal to the size of the largest table. Before you start, compare the [Largest Table Size](/developerportal/operate/metrics/#Trends-dblargesttablesize) and [Database Disk Usage](/developerportal/operate/metrics/#Trends-dbdfabs) graphs to verify that enough free space is available.
+
 #### Scaling {#scaling}
 
 To see the options for changing scaling, click **Scale** on the **Instances** row. This will open the **Change Scaling** dialog box, which includes two sliders that you can control:

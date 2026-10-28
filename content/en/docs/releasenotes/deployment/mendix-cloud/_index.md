@@ -14,6 +14,14 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
   
+## November 2026
+
+### November 1, 2026
+
+#### New Features
+
+* Technical Contacts can now reclaim database disk space used by table bloat without contacting Support. Click **Repack** in the **Plan Details** section of the [Environment Details](/developerportal/deploy/environments-details/#repack) page to run the repack immediately or schedule it for later.
+
 ## October 2026
 
 ### October 18, 2026

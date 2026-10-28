@@ -99,7 +99,7 @@ The **Advanced** tab contains the **Custom series options** property. This prope
 The **Refresh time (in seconds)** property reloads a chart's data automatically. It is the last property in the **Data source** section. It is available for all chart types except **Custom chart**.
 
 * **0** (default) – Automatic refresh is disabled.
-* **Greater than 0** – The chart reloads all of its data sources this number of seconds after its data was last updated.
+* **Greater than 0** – The chart reloads all of its data sources this number of seconds after its last data update.
 
 Keep the following in mind:
 

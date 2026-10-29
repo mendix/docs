@@ -48,7 +48,7 @@ All services listed in the table below use the HTTPS protocol (port 443).
 | `https://privatecloud.mendixcloud.com` | Private Cloud Portal (used to register names of Storage Plans) |
 
 {{% alert color="info" %}}
-The `private-cloud.registry.mendix.com` container registry will be decomissioned on August 1, 2027.
+The `private-cloud.registry.mendix.com` container registry will be decommissioned on August 1, 2027.
 
 Starting from Mendix Operator version 2.29.0, new namespaces will be using `registry.mendix.com/private-cloud` by default.
 If your network blocks access to `https://registry.mendix.com`, it's possible to manually switch to the legacy registry by running 

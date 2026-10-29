@@ -1096,6 +1096,7 @@ When an OQL query is executed, `DATEFORMAT` is converted to the corresponding da
 
     1. Casing (`SUN 3:12 PM` in PostgreSQL, `Sun 3:12 PM` in SQL Server and `Sun 3:12 pm` in HSQLDB)
     2. Year formatting (`YY` is formatted as `2026` in MySQL, as `26` in HSQLDB and PostgreSQL, and is not supported at all in SQL Server and SAP HANA).
+	3. In Oracle, display language of month and day is tied to the default language of your app. In other databases, it is tied to the database locale.
 
 {{% alert color="warning" %}}
 Always test usages of `DATEFORMAT` with the database engine on which your app runs. OQL queries with `DATEFORMAT` may return different results in HSQLDB and in the production database.

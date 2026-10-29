@@ -24,15 +24,17 @@ Before you include the SCIM module in your app, you need to check if your IdP su
 
 ### Typical Use Cases
 
-* **Seamless integration into the JML process:** Organizations need to handle employee access rights efficiently, when employees join, switch roles, or leave the organization. The Joiner, Mover, Leaver (JML) process is crucial for this, and the SCIM module helps your app integrate smoothly into these processes.
+* Seamless integration into the JML process: Organizations need to handle employee access rights efficiently, when employees join, switch roles, or leave the organization. The Joiner, Mover, Leaver (JML) process is crucial for this, and the SCIM module helps your app integrate smoothly into these processes.
 
-* **User onboarding before first login:** The SCIM module can be used when you want to create users in your Mendix app before their first login. For example, if your app has workflow logic, you can assign tasks to users even before their first login.
+* User onboarding before first login: The SCIM module can be used when you want to create users in your Mendix app before their first login. For example, if your app has workflow logic, you can assign tasks to users even before their first login.
 
-* **Use user groups to control access to your app:** Entra ID helps you organize various groups based on their jobs and roles. To manage app access based on these groups, you can use the SCIM module. If someone changes their job or role and is no longer part of a group that allows access to the app, the SCIM module automatically deactivates the user in the app. Even if the user still has an active Entra ID account, it becomes inactive in your app. This way, you can also save on licensing costs.
+* Use user groups to control access to your app: Entra ID helps you organize various groups based on their jobs and roles. To manage app access based on these groups, you can use the SCIM module. If someone changes their job or role and is no longer part of a group that allows access to the app, the SCIM module automatically deactivates the user in the app. Even if the user still has an active Entra ID account, it becomes inactive in your app. This way, you can also save on licensing costs.
 
-* **Update local user profile:** Changes in the personal details of your employees, such as email address or username modifications due to life events like marriage, are synchronized between the local user profile and Entra ID through the SCIM module.
+* Update local user profile: Changes in the personal details of your employees, such as email address or username modifications due to life events like marriage, are synchronized between the local user profile and Entra ID through the SCIM module.
 
-* **B2E vs. B2C apps:** Many organizations use a common Identity Provider, such as Entra ID in Microsoft’s Office 365 suite, to centralize employee accounts. If you are building apps for employees (Business-to-Employee or B2E), connecting them with Entra ID is a common and easy choice. As an app developer, you can use OIDC SSO or SAML for Single Sign-On and the SCIM module for managing users. For apps designed for customers (Business-to-Customer or B2C), the use of the SCIM module may not be as obvious. If your organization uses a third-party solution, such as Entra ID to handle customer accounts, you can also use the SCIM module for that.
+* B2E vs. B2C apps: Many organizations use a common Identity Provider, such as Entra ID in Microsoft’s Office 365 suite, to centralize employee accounts. If you are building apps for employees (Business-to-Employee or B2E), connecting them with Entra ID is a common and easy choice. As an app developer, you can use OIDC SSO or SAML for Single Sign-On and the SCIM module for managing users. For apps designed for customers (Business-to-Customer or B2C), the use of the SCIM module may not be as obvious. If your organization uses a third-party solution, such as Entra ID to handle customer accounts, you can also use the SCIM module for that.
+
+* Manage workflow group members: Use identity information provisioned through SCIM, such as roles or other user attributes, to automatically assign users to [workflow groups](/refguide/workflow-groups/). With custom user provisioning logic, applications using runtime-managed workflow groups can also create workflow groups based on information maintained in the identity provider.
 
 ### Features {#features}
 
@@ -70,10 +72,11 @@ If you are using the SCIM module in combination with Entra ID and OIDC SSO, you 
 
 The SCIM module has the following limitations:
 
-* The SCIM module does not sync groups (or group memberships) to your app. Starting from version 4.1.0, you can assign user roles using the SCIM `roles` attribute. See [Assigning Roles Through SCIM Provisioning] (#role-assignment) below. For earlier versions, you can assign user roles using the features offered by [SAML SSO](/appstore/modules/saml/) or [OIDC SSO](/appstore/modules/oidc/) modules.
+* The SCIM module does not sync groups (or group memberships) to your app. Starting from version 4.1.0, you can assign user roles using the SCIM `roles` attribute. See [Assigning Roles Through SCIM Provisioning](#role-assignment) below. For earlier versions, you can assign user roles using the features offered by [SAML SSO](/appstore/modules/saml/) or [OIDC SSO](/appstore/modules/oidc/) modules.
 * If you want to do **Provision on demand** from Entra ID to test the SCIM integration of your app you cannot trigger a partial sync based on a group. This will trigger Entra ID to invoke a `/groups` endpoint, which is not yet supported.
 * The module does not support the development of a SCIM client application.
 * Multiple clients can be configured only at runtime via the admin screen.
+* The SCIM module does not support full management of workflow groups using SCIM. However, starting from version 4.1.0, you can use attributes on the SCIM user to associate users with workflow groups. In Mendix 11.16 and above, you can create [workflow groups](/refguide/workflow-groups/) in your app. This mechanism supports implicit, on-demand creation of workflow groups. The SCIM module currently does not support updating or deleting existing groups.
 
 ### SCIM Protocol Adherence
 
@@ -312,6 +315,16 @@ For different `Expression` and `Target Attribute` values, refer to [Provisioning
 {{% alert color="info" %}}
 The default `UC_CustomProvisioning` microflow handles role assignment automatically when configured. You can customize this microflow to implement your own role mapping logic based on your application's requirements.
 {{% /alert %}}
+
+#### Assigning Workflow Group
+
+The `roles` or any other attribute of a SCIM user (or other user attribute ) can also be used to manage [workflow group](/refguide/workflow-groups/) membership.
+
+Customize `UC_CustomProvisioning` to map the relevant provisioned attributes to workflow groups and add or remove the provisioned user as a member of those groups.
+
+When runtime-managed workflow groups are enabled, the custom provisioning logic can also create a corresponding workflow group if one does not yet exist (supported from Mendix 11.16 onwards). For more information, see the[Managing Groups at Runtime](/refguide/workflow-groups/#runtime-groups) section of *Workflow Groups*.
+
+This enables workflow group membership to follow identity information maintained in the organization's identity provider.
 
 ### Runtime Configuration
 

@@ -17,7 +17,7 @@ Secret values are never stored in the Private Mendix Platform database or conver
 
 The customer is responsible for configuring the following prerequisites. They must be in place once per cluster, before any environment can use this feature.
 
-* Your cluster type must be set to AKS. To confirm this, go to **Switch to Admin Mode > Manage > Cluster Manager**, and edit or create a cluster. On the **Cluster Information** page, verify that the **Cluster Type** field shows **AKS**. Other cluster types do not currently support Azure Key Vault integration.
+* Your cluster type must be set to AKS. To confirm this, go to **Switch to Admin Mode > Manage > Cluster Manager**, and edit or create a cluster. On the **Cluster Information** page, verify that the **Cluster Type** field shows **AKS**. The other cluster types available in the **Cluster Type** dropdown are supported by Private Mendix Platform for other purposes, but do not currently support Azure Key Vault integration.
 * You must map the following supported secret types 1-to-1 to entries in the environment's `SecretProviderClass`:
 
     * App constant  - This secret type is configured as a constant name and value in the Private Mendix Platform UI. It represents a Mendix app constant, for example, `MyFirstModule.WelcomePageTitle`.

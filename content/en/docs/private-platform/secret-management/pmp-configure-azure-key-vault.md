@@ -215,7 +215,7 @@ Click **Add**.
 #### Modifying the Operation Configuration
 
 {{% alert color="info" %}}
-The steps in this section are not necessary if .your Managed Identity was already created by Mendix Operator.
+The steps in this section are not necessary if your Managed Identity was already created by Mendix Operator.
 {{% /alert %}}
 
 For more information about advanced configuration settings, see [Advanced Operator Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-operator-configuration).

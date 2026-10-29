@@ -50,6 +50,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | Task Queues | Studio Pro 11.15 | |
 | Import Mappings | Studio Pro 11.16 | Maia can create import mappings with a JSON structure as the source and map them automatically to new entities. Changing existing import mappings is not supported. |
 | Export Mappings | Studio Pro 11.16 | Maia can create export mappings with a JSON structure as the source and map them automatically to new entities. Changing existing export mappings is not supported. |
+| External Database Connector | Studio Pro 11.16 | |
 
 ### Maia Make Standalone Capabilities
 

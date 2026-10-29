@@ -658,11 +658,42 @@ Legend:
 | 1      | Available only when selection is enabled.               |
 | 2      | Available only when selection mode should be **Multi**. |
 
-## Resetting Filters
 
-Resetting filters is possible using **Reset_Filter** and **Reset_All_Filters** actions available as part of the Data Widgets module. Setting up these actions is a manual process that requires creating a nanoflow and setting the name of the filter or data grid to be reset.
+## Resetting Filters {#resetting-filters}
 
-The name of the filter or data grid can be found at **Properties** > **Common** > **Name**.
+The [Data Widgets](/appstore/modules/data-widgets/) module includes two JavaScript actions that reset filters from a nanoflow:
+
+* **Reset Filter** (`Reset_Filter`) – This resets a single filter widget.
+* **Reset All Filters** (`Reset_All_Filters`) – This resets all filter widgets of a Data Grid 2 or Gallery widget.
+
+Both actions are available for web apps only. In the nanoflow toolbox, you can find them in the **Data widgets** category.
+
+### Parameters
+
+Both actions have the following parameters:
+
+* **targetName** – The name of the widget to reset, as a String. For **Reset Filter**, this is the name of a text, number, date, or drop-down filter. For **Reset All Filters**, this is the name of a Data Grid 2 or Gallery widget. You can find the name of a widget in its properties, at **Common** > **Name**.
+* **setToDefault** – A Boolean that sets how the filters are reset:
+    * **true** – The filter returns to its default state. For text, number, and date filters, this is the filter type set in **Default filter** and the value set in **Default value** (or **Default start date** and **Default end date** when the default filter is **Between**). For the drop-down filter, this is the selection set in **Default value**.
+    * **false** – The filter is emptied. Text, number, and date filters keep the filter type that is currently selected, and their value is cleared. The drop-down filter clears its selection.
+
+**Reset All Filters** resets both the filters in the column headers and the filters in the [filters placeholder](/appstore/modules/data-grid-2-properties/#filters-placeholder) of the data grid.
+
+{{% alert color="info" %}}
+The action above find the widget by its name. If no widget with the specified name is on the current page, the action does nothing and does not show an error. To address this issue, confirm that **targetName** matches the name of the widget exactly.
+{{% /alert %}}
+
+### Adding a Reset Button
+
+To add a button that resets all filters of a data grid, do the following:
+
+1. Create a nanoflow.
+1. Drag the **Reset All Filters** action from the **Data widgets** category of the toolbox into the nanoflow.
+1. Set **targetName** to the name of the data grid, as a String expression, for example `'productsGrid'`.
+1. Set **setToDefault** to `true` to return the filters to their default values, or to `false` to clear them.
+1. Place a button on the page, for example in the filters placeholder of the data grid, and set its **On click** action to call the nanoflow.
+
+To reset a single filter, follow the same steps with the **Reset Filter** action, and set **targetName** to the name of the filter widget.
 
 ## Troubleshooting Runtime Errors {#troubleshooting-runtime-errors}
 

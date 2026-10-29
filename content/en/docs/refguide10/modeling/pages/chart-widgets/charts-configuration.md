@@ -229,6 +229,8 @@ The properties above are common across the chart types. In this section, the pro
 * **Colors**: Contains the color of each slice, for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 * **Refresh interval (ms)**: Refresh the chart in intervals of milliseconds, when set to 0 refresh is disabled
 
+    {{% alert color="info" %}}The current Charts module (v3.0.0 and above) uses the **Refresh time (in seconds)** property instead, which is set in seconds rather than milliseconds. For details, see the [Refresh Time (in Seconds)](/appstore/widgets/charts/#refresh-time) section of *Charts*.{{% /alert %}}
+
 ### Area Chart
 
 **Series New or Edit**

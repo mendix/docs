@@ -94,6 +94,21 @@ The **Events** tab contains the **On click action** property. This action runs w
 
 The **Advanced** tab contains the **Custom series options** property. This property holds a JSON object with advanced configuration for this series. For more information, see [Custom Series Settings](#custom-series-settings). This property is visible only when [Enable advanced options](#enable-advanced-options) is set to **Yes**.
 
+#### Refresh Time (in Seconds) {#refresh-time}
+
+The **Refresh time (in seconds)** property reloads a chart's data automatically. It is the last property in the **Data source** section. It is available for all chart types except **Custom chart**.
+
+* **0** (default) – Automatic refresh is disabled.
+* **Greater than 0** – The chart reloads all of its data sources this number of seconds after its last data update.
+
+Keep the following in mind:
+
+* The timer restarts every time the chart's data is updated. This means the chart reloads a set time after the most recent update, not at a fixed clock interval.
+* If a data source is still loading when the timer ends, it is not reloaded again.
+* The chart keeps showing its current data while it reloads, so it does not go blank between refreshes.
+
+Use this property when a chart cannot detect that its data has changed, for example when it shows data from a view entity or aggregated data.
+
 ### General Section {#general}
 
 #### Enable Advanced Options {#enable-advanced-options}

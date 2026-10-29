@@ -7,7 +7,11 @@ description: "Describes the configuration and usage of the Selection Helper widg
 
 ## Introduction
 
-The [Selection Helper](https://marketplace.mendix.com/link/component/116540) widget provides bulk-selection controls for data widgets, enabling users to quickly select all or clear all items when multi-selection is enabled. While primarily used for Gallery widgets, it also supports Data Grid 2 applications.
+The [Selection Helper](https://marketplace.mendix.com/link/component/116540) widget provides bulk-selection controls for data widgets, enabling users to quickly select or deselect all items on the current page when multi-selection is enabled. It works with both Gallery and Data Grid 2 widgets.
+
+{{% alert color="info" %}}
+The Selection Helper currently only selects and deselects items on the current page. When **Keep selection** is set to **Yes** on the data widget, items on other pages are not affected.
+{{% /alert %}}
 
 Here is an example of a Selection Helper widget in a Gallery:
 
@@ -20,18 +24,18 @@ Before using the Selection Helper widget, ensure the following:
 * **For Gallery** – Gallery widget is configured with Selection set to Multi.
 * **For Data Grid 2** – Data Grid 2 is configured with Selection set to Multi.
 
-The Selection Helper must be placed inside the data widget's header content area. For specific guidance, see the subsections below.
+The Selection Helper must be placed inside the data widget's **Filters placeholder** area. For specific guidance, see the subsections below.
 
 ### For Gallery Widgets
 
 1. Go to your Gallery widget.
-1. In the Header section, add the Selection Helper widget to the header content area.
+1. Add the Selection Helper widget to the **Filters placeholder** area.
 1. Configure the Selection Helper properties as needed.
 
 ### For Data Grid 2 Widgets
 
 1. Go to your Data Grid 2 widget.
-1. In the **Header** section, add the Selection Helper widget to the header content area.
+1. Add the Selection Helper widget to the **Filters placeholder** area.
 1. Configure the Selection Helper properties as needed.
 
 ## Properties
@@ -45,11 +49,11 @@ Controls how the selection control appears to users:
 
 #### Custom Style
 
-Available when `Style` is set to `Custom`. Defines custom widgets that display based on the current selection state:
+Available when **Style** is set to **Custom**. Defines custom widgets that display based on the current selection state:
 
-* **None Selected Widget** – Widget displayed when no items are currently selected. Usually contains **Select all** controls or empty state indicators.
-* **Some Selected Widget** – Widget displayed when some (but not all) items are selected. Often used to show **Select all** controls or partial selection indicators.
-* **All Selected Widget** – Widget displayed when all visible items in the grid are selected. Typically used to show **Clear selection** controls or indicators.
+* **None selected** – Widget displayed when no items are currently selected. Usually contains **Select all** controls or empty state indicators.
+* **Some selected** – Widget displayed when some (but not all) items are selected. Often used to show **Select all** controls or partial selection indicators.
+* **All selected** – Widget displayed when all items on the current page are selected. Typically used to show **Clear selection** controls or indicators.
 
 Here is an example of a **Selection Helper** widget with a custom style configured:
 
@@ -61,9 +65,9 @@ The Selection Helper automatically manages three distinct selection states:
 
 | State | Checkbox Appearance  | Click Behavior            | Use Case                                  |
 | ----- | -------------------- | ------------------------- | ----------------------------------------- |
-| None  | Unchecked            | Selects all visible items | Starting state, no selections made        |
-| Some  | Indeterminate (dash) | Selects all visible items | Partial selection, complete the selection |
-| All   | Checked              | Clears all selections     | Full selection, allow deselection         |
+| None  | Unchecked            | Selects all items on the current page | Starting state, no selections made        |
+| Some  | Indeterminate (dash) | Selects all items on the current page | Partial selection, complete the selection |
+| All   | Checked              | Deselects all items on the current page | Full selection, allow deselection         |
 
 ### Check Box Caption
 
@@ -92,11 +96,11 @@ The **Selection Helper** works with both **Gallery** and **Data Grid 2** selecti
 
 ### Gallery Bulk Selection
 
-Place a Selection Helper with default checkbox style in the Gallery header for simple select-all functionality in grid or list layouts.
+Place a Selection Helper with default checkbox style in the Gallery's filters placeholder for simple select-all functionality in grid or list layouts.
 
 ### Data Grid 2 Bulk Selection
 
-Use the Selection Helper in Data Grid 2 headers for tabular data bulk operations.
+Use the Selection Helper in the Data Grid 2 filters placeholder for tabular data bulk operations.
 
 ### Custom Bulk Operations Interface
 

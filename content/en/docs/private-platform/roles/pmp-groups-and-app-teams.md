@@ -83,9 +83,9 @@ Share an app when you want it discoverable across the organization, for example 
 
 ### Deploying to a Namespace
 
-Holding a role that permits deployment is necessary but not sufficient: the group that owns the app must also be associated with the namespace you are deploying to. That association is made by an administrator, and it does not follow the group hierarchy, so a parent group's association does not help.
+In addition to holding a role that permits deployment, the group that owns the app must also be associated with the namespace you are deploying to. That association is made by an administrator, and it does not follow the group hierarchy, so a parent group's association does not help.
 
-If you hold Developer or Operator on an app and deployment is nevertheless unavailable, the likely cause is a missing namespace association rather than a role problem. Ask an administrator to confirm that the group owning the app is directly associated with the target namespace. See [Associating Resources with a Group](/private-mendix-platform/access-administration/#associating-resources-with-a-group).
+If you cannot deploy an app despite having a Developer or Operator role, the likely cause is a missing namespace association rather than a role problem. Ask an administrator to confirm that the group owning the app is directly associated with the target namespace. For more information, see [Associating Resources with a Group](/private-mendix-platform/access-administration/#associating-resources-with-a-group).
 
 ## Finding Your Group's Apps and Content
 
@@ -93,4 +93,4 @@ Apps owned by groups you belong to are listed on the **My Group Apps** page. See
 
 Marketplace content shared with your groups is listed on the **Group Content** page. See [Group Content](/private-mendix-platform/reference-guide/common/group-content/).
 
-Content you have published yourself is listed on **My Content**, and you can share it with groups from there. See [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups).
+Content which you have published yourself is listed on **My Content**, and you can share it with groups from there. See [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups).

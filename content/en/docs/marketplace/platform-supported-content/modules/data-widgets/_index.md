@@ -12,7 +12,7 @@ description: "Describes the configuration and usage of the Data Widgets module, 
 This module contains the following widgets:
 
 * [Data Grid 2](/appstore/modules/data-grid-2/)
-    * [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/)
+* [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/)
 * [Date Filter](/appstore/modules/datagrid-date-filter/)
 * [Drop-Down Sort](/appstore/modules/gallery/#dropdown)
 * [Drop-Down Filter](/appstore/modules/datagrid-dropdown-filter/)

@@ -299,7 +299,7 @@ When designing your access hierarchy, keep in mind the following recommendations
 
 ### Example Hierarchy
 
-Consider the following hierarchy.
+The following figure shows a sample group hierarchy.
 
 ```text
 Mendix (root)

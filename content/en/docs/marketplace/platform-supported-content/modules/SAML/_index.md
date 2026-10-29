@@ -70,7 +70,7 @@ The Mendix SAML SSO supports the usage of SAML metadata in the following way:
 
 For easy configuration, the SAML module offers the following:
 
-* From version 4.0.0 of the SAML module, if you want to connect your Mendix application with a single IdP, you can do the necessary configurations at design time (using a microflow) and/or deploy time using Application Constants. This is described in the section [Non-default Configuration](/appstore/modules/saml/installation-configuration/#non-default).
+* From version 4.0.0 of the SAML module, if you want to connect your Mendix application with a single IdP, you can do the necessary configurations at design time (using a microflow) and/or deploy time using Application Constants. This is described in the section [Custom Configuration](/appstore/modules/saml/installation-configuration/#non-default).
 * You can create a custom SAML configuration microflow and share it across all SAML applications in your portfolio, such as using a custom module in your private marketplace. This approach makes SAML configurations both automatable and repeatable.
 * Runtime configuration by a local Admin is still available in the following cases:
 

@@ -12,6 +12,12 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 ## 2026
 
+### October 15, 2026
+
+#### New Features
+
+* We introduced consumption overage alerting for GenAI resources to keep you informed when resource consumption exceeds defined limits.
+
 ### October 1, 2026
 
 #### New Features

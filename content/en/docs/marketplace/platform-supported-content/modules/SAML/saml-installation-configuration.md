@@ -10,7 +10,7 @@ description: "Describes the installation, configuration and usage of the SAML mo
 ## Installation
 
 {{% alert color="warning" %}}
-The SAML module supports UserCommons V3.0.0 and below. If you use the SAML module, do not upgrade UserCommons to V3.0.0, as it requires changes to the dependent SAML module that are not yet available. 
+The SAML module does not support UserCommons V3.0.0. If you use the SAML module, do not upgrade UserCommons to V3.0.0, as it requires changes to the dependent SAML module that are not yet available. 
 {{% /alert %}}
 
 There are different versions of the SAML module, depending on which version of Mendix you are using. To find and install the correct release, follow these steps:
@@ -30,11 +30,11 @@ There are different versions of the SAML module, depending on which version of M
 3. To download the required release, in the **Releases** tab, find the release that is compatible with your app per the guidelines in the **Documentation** tab, and then click the **Download** button by the number of the release.
 4. Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to import the SAML module into your app.
 
-### Post-installation Configuration Steps
+### Post-Installation Configuration Steps
 
 By default, the SAML module will be installed as the **SAML20** module in your app’s Marketplace modules. You can find all microflows and other configuration elements in this module.
 
-1. Configure the **Startup** microflow in the SAML module (**SAML20.Startup**) to run as (part of) the [After startup](/refguide/runtime-tab/#after-startup) microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
+1. Configure the **Startup** microflow in the SAML module (**SAML20.Startup**) to run as (part of) the [After startup](/refguide/runtime-tab/#after-startup) microflow. This microflow will initialize the custom request handler `/SSO/` (note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
 2. If you have set up path-based access restrictions in your cloud (for example, [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in Mendix Cloud), ensure that access to `/SSO/` is allowed.
 3. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this microflow.
 4. Review and configure all the constants:
@@ -42,7 +42,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
     * **DefaultLogoutPage** – Removing the sign-out button is recommended, but if you keep it, the end user will be redirected to a page. You can choose where the end-user is redirected to (for example, back to `/SSO/` or your `login.html` page). Every user signed in via SAML is redirected to this location when logged out.
     * **SSOLandingPage** – Set this if you redirect the `index.html` to log into your app automatically. See [Using SSOLandingPage](#ssolandingpage) for further information about this.
 
-5. Sign in to the application and configure the SAML module as described in the [Configuration SAML Module](#config) section.
+5. Sign in to the application and configure the SAML module as described in the [Configuration the SAML Module](#config) section.
 
 ### Using SSOLandingPage{#ssolandingpage}
 
@@ -70,19 +70,65 @@ The table below introduces you to several key updates when you upgrade the SAML 
 | InCommon Federation Support | Pre-configured support for InCommon Federation has been removed. You now need to create custom user provisioning microflows in version 4.0.0 |
 | MxModeleReflection | In the **MxObjects_Overview** page, the MxModeleReflection module refresh is no longer required. It is handled automatically in the **SAML20.Startup**. |
 
-## Configuring SAML Module{#config}
+## Choosing a SAML Configuration Approach{#config-approach}
+
+The SAML module offers several ways to configure the Service Provider (SP) and Identity Provider (IdP). The best approach depends on when you want to define the configuration, how you deploy your applications, and whether you need to support one or multiple IdPs.
+
+You can define or apply SAML configuration at three stages:
+
+* **Design time** – The configuration is part of the application model, which you create in Studio Pro. It can include custom configuration logic packaged with the application.
+* **Deploy time** – You supply environment-specific values as part of the deployment configuration. When the application starts, the SAML module uses these values to create or update its SAML configuration.
+* **Runtime** – An administrator configures SAML manually through the Administration UI after the application is deployed and when it is running.
+
+These stages support two main approaches: deployment-managed configuration and runtime configuration.
+
+### Deployment-Managed Configuration
+
+With deployment-managed configuration, you prepare the configuration at design time, deploy time, or both. The SAML module uses it to create the IdP configuration when the application starts.
+
+This approach makes SAML configuration repeatable, automatable, and reusable across applications and environments. For example, you can place custom SAML configuration logic in a reusable module and distribute it through your organization's private Marketplace. Applications with similar SAML requirements can then include this module instead of each implementing and maintaining the same configuration. You can still supply environment-specific values at deploy time.
+
+There are two deployment-managed options:
+
+* Easy configuration – uses configuration values defined at design time or overridden at deploy time to create a single IdP configuration when the application starts. It uses sensible defaults provided by the SAML module.
+* Custom configuration – uses a custom microflow defined at design time to create one or multiple IdP configurations when the application starts. It allows you to customize IdP-specific settings while continuing to use applicable defaults provided by the SAML module.
+
+### Manual Configuration Through the Administration UI
+
+With manual configuration, an administrator configures one or more IdPs manually through the Administration UI after the application has been deployed. This lets you deviate from the defaults and makes it easier to configure and test SAML settings iteratively without redeploying the application. It is particularly useful during initial setup and troubleshooting.
+
+The trade-off is that you configure each deployed application manually. This requires access to the running (production) environment, and it is less suitable when configuration must be repeatable and automated as part of a DevOps process.
+
+## Comparing the Configuration Options
+
+The following table compares the easy, custom, and runtime configuration options.
+
+| | [Easy](#easy-flow) | [Custom](#non-default) | [Manual](#runtime-config) |
+| --- | --- | --- | --- |
+| Configuration approach | Deployment-managed | Deployment-managed | Manually managed |
+| Number of IdPs | One | Multiple | Multiple |
+| Configuration flexibility | Sensible defaults | Defaults with IdP-specific customization | Flexible configuration through the Administration UI |
+| Automation | Yes | Yes | Manual |
+| Reuse across applications/environments | Suitable | Suitable | Requires configuration per deployed application |
+| Configuration changes | Requires restart/redeploy | Requires restart/redeploy | Can be changed and tested without redeploying |
+| Best suited for | Single IdP, automation and reuse | Multiple IdPs or customized configuration, with automation and reuse | Interactive setup and iterative configuration |
+| Design time | Set default values for the [eight configuration constants](#setup-eight-constants) in the app | Define custom configuration microflow | No IdP configuration required at design time |
+| Deploy time | Override the design-time values where environment-specific settings are required | Provide environment-specific settings | No IdP configuration required at deploy time |
+| At application startup | IdP configuration is created from the configured values. | Custom microflow creates one or multiple IdPs configuration. | Existing manually managed configuration is used. |
+
+## Configuring the SAML Module{#config}
 
 Configuring the SAML module is crucial for setting up secure authentication within your application. It involves reviewing and updating the Service Provider (SP) settings and creating or updating the Identity Provider (IdP) configuration.
 
-In versions below 3.6.9 of the SAML module, configuration can be done using the app pages – see the [Using SSO Landing pages](#ssolandingpage) section above. However, in version 4.0.0 and above, you have the option to use constants or custom microflows to configure your app at deploy time.
+In versions below 3.6.9 of the SAML module, configuration can be done using the app pages. However, in version 4.0.0 and above, you have the option to use constants or custom microflows to configure your app at deploy time.
 
-This section explains three different ways to complete the deploy-time configuration of the SAML module. The [Easy Flow configuration](#easy-flow) offers a default and straightforward setup, while the [Non-default configuration](#non-default) enables customization of the IdP configuration by implementing custom microflows. Alternatively, in the [Runtime Configuration Flow](#runtime-config), you can deploy your app first and then complete the configuration within the app interface.
+This section explains three different ways to complete the configuration of the SAML module. The [Easy Configuration](#easy-flow) offers a default and straightforward setup, while the [Custom Configuration](#non-default) enables customization of the IdP configuration by implementing custom microflows. Alternatively, in the [Manual Configuration](#runtime-config), you can deploy your app first and then complete the configuration within the app interface.
 
 {{% alert color="info" %}}
-For IdP configuration, during deploy-time ([Easy default](#easy-flow) and [Non-default flow](#non-default)), users are not allowed to edit the fields except for the **Encryption Settings**. This can lead to a mismatch in the fields when they run the application.
+For IdP configuration, during deploy-time ([Easy Configuration](#easy-flow) and [Custom Configuration](#non-default)), users are not allowed to edit the fields except for the **Encryption Settings**. This can lead to a mismatch in the fields when they run the application.
 {{% /alert %}}
 
-### Easy Default Flow{#easy-flow}
+### Easy Configuration{#easy-flow}
 
 This configuration offers simple and default settings. It is the ideal configuration for quickly implementing the SAML module, particularly for users aiming to kickstart their SSO application. With this approach, users can create an SSO app in the IdP without complete dependency on SP metadata. The following sub-sections guide you through the detailed configuration steps:
 
@@ -118,7 +164,7 @@ For the IdP configuration, the default value for the **Assertion consumer servic
 
 #### Setting up Eight Mandatory Constants{#setup-eight-constants}
 
-To configure the Service Provider (SP) and Identity Provider (IdP) metadata, you need to set up eight mandatory constants. In the **App Explorer** of your Mendix app, you can find the following six constants within the **SPConfiguration** > **USE_ME** folder. These constants are used to configure the SP Metadata.
+To configure the Service Provider (SP) and Identity Provider (IdP) metadata, you need to set up eight mandatory constants. These configuration constants can have values defined at design time, those values can be overridden with environment-specific values at deploy time, and the resulting IdP configuration is created when the application starts. In the **App Explorer** of your Mendix app, you can find the following six constants within the **SPConfiguration** > **USE_ME** folder. These constants are used to configure the SP Metadata.
 
 * `Org_Name`: This constant represents Name. 
 * `Org_DisplayName`: This constant represents Display Name. 
@@ -142,17 +188,18 @@ After configuring the eight constants, you need to deploy the application. For d
 
 {{% alert color="info" %}}It is recommended to modify the values using constants. Any changes made from the runtime screen will be overwritten by the constant values upon restarting the app.{{% /alert %}}
 
-### Non-default Configuration{#non-default}
+### Custom Configuration{#non-default}
 
-The [Easy Default Flow](#easy-flow) section above gives you an overview of the default settings. If you have requirements to deviate from these defaults, for example, to enable Force Authentication, change encryption settings from the default, or support multiple Identity Providers (IdPs), Non-default configuration setup offers advanced options for your SAML integration needs. With these features, you can customize the SAML configuration to meet your specific requirements.
+The [Easy Configuration](#easy-flow) section above gives you an overview of the default settings. If you have requirements to deviate from these defaults, for example, to enable Force Authentication, change encryption settings from the default, or support multiple Identity Providers (IdPs), Non-default (custom) 
+configuration setup offers advanced options for your SAML integration needs. With these features, you can customize the SAML configuration to meet your specific requirements.
 
-In this configuration, you have several options to customize the Identity Provider (IdP) settings. Firstly, you can configure the IdP using constants. Additionally, the SAML module supports further customization of the IdP configuration. From version 4.2.0 onward, you can define your custom microflow name in the `IdPConfiguration_MicroflowName` constant. The custom microflow must return a list of configured IdPs (`Dep_IdPConfiguration.return`), which the SAML module then uses to generate the necessary SSO configurations for multiple IdPs. The default value of the `IdPConfiguration_MicroflowName` constant is `SAML.Default_CreateIDPConfiguration`.
+In this configuration, you have several options to customize the Identity Provider (IdP) settings. Firstly, you can configure the IdP using constants. Additionally, the SAML module supports further customization of the IdP configuration. From version 4.2.0 onward, you can define your custom microflow name in the `IdPConfiguration_MicroflowName` constant. For the available values, see [Choosing a SAML Configuration Approach](#config-approach). The custom microflow must return a list of configured IdPs (`Dep_IdPConfiguration`), which the SAML module then uses to generate the necessary SSO configurations for multiple IdPs. The default value of the `IdPConfiguration_MicroflowName` constant is `SAML.Default_CreateIDPConfiguration`.
 
 In versions earlier than 4.2.0, IdP customization was supported through the implementation of a custom microflow called `Custom_Create_IdPConfiguration`. However, this microflow has been deprecated as of version 4.2.0.
 
 In this configuration, users have the flexibility to introduce their own constants by creating custom IdP configurations. To enable this configuration, you need the IdP metadata obtained by creating an SSO app in the IdP without complete dependency on SP metadata.
 
-Follow the steps mentioned in the [Easy Default Flow](#easy-flow) with an additional custom configuration in Studio Pro. After [setting the eight mandatory constants](#setup-eight-constants), proceed with the [custom configuration](#custom-config).
+Follow the steps mentioned in the [easy configuration](#easy-flow) with an additional custom configuration in Studio Pro. After [setting the eight mandatory constants](#setup-eight-constants), proceed with the [custom configuration](#custom-config).
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/saml/non-default.png" >}}
 
@@ -173,43 +220,43 @@ The table below shows you the different attributes and their values for quick re
 | --- | --- | --- |
 | **Alias** (mandatory) | This represents IdPconfiguration Alias | |
 | **IdPMetadataURL** (mandatory) | This represents the URL of the IdPMetadataURL | |
-| **IdPConfiguration_MicroflowName**  | This constant specifies a custom microflow that returns a list of IdP configurations and is used to create SAML IdP configurations at deploy time. | `SAML.Default_CreateIDPConfiguration` |
-| **ResponseProtocolBinding**  | Response protocol binding contains a caption value of SAML20.Enum_ProtocolBinding | POST_BINDING |
+| **IdPConfiguration_MicroflowName** | This constant specifies a custom microflow that returns a list of IdP configurations and is used to create SAML IdP configurations at deploy time. | `SAML.Default_CreateIDPConfiguration` |
+| **ResponseProtocolBinding** | Response protocol binding contains a caption value of SAML20.Enum_ProtocolBinding | POST_BINDING |
 | **EnableAssertionConsumerServiceIndex** | EnableAssertionConsumerService Concept contains caption value of SAML20.Enum_AssertionConsumerServiceIndex | NO |
 | **AssertionConsumerServiceIndex** | This should hold the same value for the SAML configuration and the IdPs. | 0 |
 | **EnableInitialLoginAttributeConsumingService** | This will be returned when the end-user initially signs in | FALSE | 
-| **InitialLoginServiceName** |  It represents the Initial login Attribute Consuming Service name | Service1 | 
+| **InitialLoginServiceName** | It represents the Initial login Attribute Consuming Service name | Service1 | 
 | **InitialLoginAttributeConsumingServiceIndex** | It represents the Initial login Attribute Consuming Service Index | 1 | 
 | **InitialLoginDep_SPAttribute_Dep_IdPConfiguration** | It will display the details of Value, Name, IsRequired details | | 
 | **EnableInSessionAttributeConsumingService** | To enable this feature, configure at least one request attribute for the in-session attribute consuming service. | FALSE | 
 | **InSessionServiceName** | It represents the In-Session Attribute Consuming Service name | Service2 |  
-| **InSessionAttributeConsumingServiceIndex** |  It represents the In-Session Attribute Consuming Service Index | 2 | 
-| **InSessionDep_SPAttribute_Dep_IdPConfiguration**| It will display the details of Value, Name, IsRequired details | | 
+| **InSessionAttributeConsumingServiceIndex** | It represents the In-Session Attribute Consuming Service Index | 2 | 
+| **InSessionDep_SPAttribute_Dep_IdPConfiguration** | It will display the details of Value, Name, IsRequired details | | 
 | **PreferredEntityDescriptor** | It represents the entityID of the EntityDescriptor | | 
 | **AllowIdpInitiatedAuthentication** | Authentication should start at this application, which generates an ID. The authenticated response should match this generated Id. If no request can be found that matches the response Id the information is rejected. If your IdP can initiate a new transaction (with a new or no Id) and you want to allow this you can check this box. | FALSE |
 | **EnableForceAuthentication** | will force the SAML IdP to (re)authenticate end-users, even if they are already signed in at the SAML IdP. | FALSE |
 | **EnableMobileAuthToken** | If enabled, an auth token cookie will be set on login that can be used by Mendix hybrid mobile apps to log in after the app is closed. | FALSE |
 | DelegatedAuthenticationURL | This will allow you to use a SAML token and delegate the authentication through SAML. | |
-| **CustomPrepareInSessionAuthenticationMicroflow**  | This represents the Custom Prepare In-Session Authentication microflow. It sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app. | |
-| **CustomEvaluateInSessionAuthenticationMicroflow**  | It implements the logic that handles the authentication details of the in-session authentication. | |
+| **CustomPrepareInSessionAuthenticationMicroflow** | This represents the Custom Prepare In-Session Authentication microflow. It sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app. | |
+| **CustomEvaluateInSessionAuthenticationMicroflow** | It implements the logic that handles the authentication details of the in-session authentication. | |
 | **NameIDFormat** | This attribute represents the Description of SAML20.NameIDFormat. Disable NameID policy is true when this attribute (NameIDFormat) is invalid. | |
 | **AuthenticationContext** | It represents Authentication context comparison contains the caption value of SAML20.TypeOfAuthnContext | Exact (Default) |
 | **UserEntity** | The Mendix entity in which you will store and look up the user account. | Administration.Account |
 | **UserPrincipalAttribute** | Determines the attribute on which you want to do the lookup in Entity attributes. | Name |
 | **UserIdPPrincipalAttribute** | We need to provide the attribute that contains the user name that uniquely identifies the user. It should be Assertion Name | UseNameID |
 | **CreateUsers** | The module will always search for the user, based on the Identifying Assertion. You can allow the module to create users with a predefined user role. If you allow the module to create users, it will automatically create a new user account if the user cannot be found. If the module is not allowed to create users, it will present a message to the user stating that the login action was successful but no user has been configured. | true |
-| **UserRoleName**  | This role will be assigned to newly created users. | User |
+| **UserRoleName** | This role will be assigned to newly created users. | User |
 | **UserType** | Assign user type to the created users | Internal |
-| **CustomUserProvisioning**  | This is an optional configuration to run a microflow to persist user information in your app model using some of your own specific logic. First, you need to develop a custom microflow in your app and select it for the CustomUserProvisioning. | |
-| **CustomAfterSigninLogic**  | Checking the box will execute the `CustomAfterSigninLogic microflow`. You can replace the default with your custom microflow below. This microflow runs after a new session is created, allowing you to copy or review data from the original (anonymous) session to the new session or user. This functionality is similar to the after-sign-in microflow in Mendix project security. Only custom microflows starting with 'Custom' will appear in the list. | |
-| **UseEncryption**  | Enable better security for app | TRUE |
-| **EncryptionMethod**  | This represents the Encryption Algorithm | SHA256 - RSA |
-| **EncryptionKeyLength**  | This constant represents the Encryption length | 2048 bits |
+| **CustomUserProvisioning** | This is an optional configuration to run a microflow to persist user information in your app model using some of your own specific logic. First, you need to develop a custom microflow in your app and select it for the CustomUserProvisioning. | |
+| **CustomAfterSigninLogic** | Checking the box will execute the `CustomAfterSigninLogic microflow`. You can replace the default with your custom microflow below. This microflow runs after a new session is created, allowing you to copy or review data from the original (anonymous) session to the new session or user. This functionality is similar to the after-sign-in microflow in Mendix project security. Only custom microflows starting with 'Custom' will appear in the list. | |
+| **UseEncryption** | Enable better security for app | TRUE |
+| **EncryptionMethod** | This represents the Encryption Algorithm | SHA256 - RSA |
+| **EncryptionKeyLength** | This constant represents the Encryption length | 2048 bits |
 | Active | After completion of IdP config it will make the Toggle Active | true |
 
 Deploy the application and log in with the SSO. For more information, see the [Deploy the Application and Login with SSO](#deploy-application) section above.
 
-### Runtime Configuration Flow{#runtime-config}
+### Manual Configuration{#runtime-config}
 
 This process involves configuring both the Identity Provider (IdP) and the Service Provider (SP) metadata to establish secure authentication for the user. In some IdPs, SSO app creation is not allowed without having SP metadata. This configuration method is ideal for such scenarios. The following subsections provide you with detailed instructions on integrating your application with SSO:
 
@@ -255,7 +302,7 @@ Before configuring any IdP, you need to configure the Service Provider (SP), whi
 
 Each IdP should have its own configuration set. Every IdP can be configured and enabled separately. All changes made in the configuration are immediately applied when you save the configuration.
 
-If you have multiple IdPs, please make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexpected behavior where a different SSO configuration is selected than the alias provided.
+If you have multiple IdPs, make sure each IdP has a unique **Entity descriptor**. If you add multiple IdPs with the same entity descriptor, you might experience unexpected behavior where a different SSO configuration is selected than the alias provided.
 
 ### Downloading SP Metadata
 
@@ -305,7 +352,7 @@ End-users can access your app through the following endpoints when using the SAM
     * **on={contextname}** – this gives context to the initiation of in-session authentication, (see [In-session Authentication](/appstore/modules/saml/idp-attributes/#in-session) for more information)
 * **/SSO/login** or **/SSO/login?action=verify&on={contextname}** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message. The optional parameters work as described above.
 
-Your SAML IdP can consume the following endpoints at your app. Typically the SP-metadata is used to communicate the URLs to your SAML IdP. As a Low-Code Developer, you don’t have to consider these endpoints. This information is included here for completeness and as a reference when questions arise around integration with your SAML IdP.
+Your SAML IdP can consume the following endpoints at your app. Typically the SP-metadata is used to communicate the URLs to your SAML IdP. As a Low-Code Developer, you do not have to consider these endpoints. This information is included here for completeness and as a reference when questions arise around integration with your SAML IdP.
 
 * **/SSO/metadata/[IDP-Alias]** – This provides a point for the IdP to automatically download the metadata from this SP
 * **/SSO/assertion** – This is the endpoint where the IdP submits the SAML assertion to the so-called ‘Assertion Consumer Service’

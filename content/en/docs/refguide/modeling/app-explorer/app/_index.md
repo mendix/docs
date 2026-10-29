@@ -35,6 +35,12 @@ For more information, see [Navigation](/refguide/navigation/).
 
 For more information, see [System Texts](/refguide/system-texts/).
 
+## Module Overview
+
+**Module overview** lists all modules in your app and provides basic information about each one, such as the local name and local version. 
+
+For more information, see [Module Overview](/refguide/module-overview/).
+
 ## Export Documentation {#export}
 
 Right-clicking the **App** allows you to export documentation. This exports an HTML file with all the documents in your app and their documentation.

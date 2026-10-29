@@ -104,7 +104,6 @@ The following configurations can be modified directly through the [Microsoft Azu
 | Configure virtual network peering on the vNet hosting Mendix on Azure | For more information, see [Implementing private connectivity using Azure Virtual Network Peering](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#network-peering). |
 | Deploy Private Link Service to expose Mendix apps in other Azure virtual networks | For more information, see [Using Private Link Service to expose Mendix apps in other Azure virtual networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#pls). |
 | Deploy Private Endpoints to establish connectivity between Mendix apps and other services | For more information, see [Accessing private services via Private Endpoints](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#pe-internal). |
-| Override DNS configuration on the vNet hosting Mendix on Azure | For more information, see [DNS name resolution towards resources in other networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#name-resolution-dns-override). |
 | Tune server parameters on the shared PostgreSQL Flexible Server | For more information, see [Tuning PostgreSQL Server Parameters](/developerportal/deploy/mendix-on-azure/configuration/postgresql-parameter-tuning/). |
 
 ### Configuring AKS Planned Maintenance Windows {#aks-maintenance-windows}
@@ -168,6 +167,7 @@ Certain configuration changes require Mendix intervention and can only be perfor
 
 | Configuration Change | Description |
 | --- | --- |
+| Configure conditional DNS forwarding for internal domain resolution | Raise a support ticket. For more information, see [DNS name resolution toward resources in other networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#name-resolution-dns-override). |
 | PostgreSQL Maintenance Window | Configure a dedicated maintenance window for the PostgreSQL database hosting your Mendix app databases. Since maintenance might cause temporary app downtime, you can request a custom schedule instead of the default system-managed one. For more information, see the [Microsoft documentation on PostgreSQL maintenance windows](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-maintenance). This is separate from AKS maintenance windows, which you can configure directly (see [Configuring AKS Planned Maintenance Windows](#aks-maintenance-windows)). |
 
 {{% alert color="info" %}} 

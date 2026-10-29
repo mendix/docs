@@ -78,6 +78,39 @@ Within your microflow, you can implement your custom logic to authenticate the u
 
 The `User` returned in the microflow is used for all subsequent prompt and tool microflows within the same session. This makes the `currentUser` and `currentSession` variables available, allowing you to apply entity access for user-based access control based on the default Mendix entity access settings.
 
+If authentication fails, return empty instead of throwing an error. An empty return value results in a `401 Unauthorized` response, while an error results in a `500 Internal Server Error` response.
+
+#### Enable OAuth {#oauth}
+
+MCP clients that support [MCP authorization](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization), such as Visual Studio Code can sign in users at an OAuth 2.0 authorization server (identity provider) and send the access token to the MCP Server. To let clients discover where to obtain a token, set the following optional parameters in the `Create MCP Server` action:
+
+* `AuthorizationServerUrl`: The issuer URL of the authorization server, for example, `https://login.microsoftonline.com/<tenant-id>/v2.0` for Microsoft Entra ID. This parameter requires an authentication microflow.
+* `Scopes`: The OAuth scopes that clients should request when obtaining an access token for this MCP Server. Configure scopes that represent access to the MCP Server or its capabilities, as defined by your authorization server. For example, an authorization server might define a scope such as `mymcp.access`. Do not use OpenID Connect scopes such as `openid` or `email` as required scopes for your MCP server. You must register the scope value (for example, `mymcp.access`) at your IdP, which enables your IdP to make authorization decisions for access to your MCP server.
+
+When `AuthorizationServerUrl` is set, the MCP Server does the following:
+
+* It publishes [Protected Resource Metadata (RFC 9728)](https://datatracker.ietf.org/doc/html/rfc9728#name-protected-resource-metadata) at `<application root URL>/<path>/.well-known/oauth-protected-resource`. The metadata contains the MCP endpoint as `resource`, the authorization server, the scopes, and the server name.
+* It adds a `WWW-Authenticate` header to `401 Unauthorized` responses. The header refers to the metadata URL and includes the scopes.
+
+The MCP Server module does not validate access tokens itself. Your authentication microflow must do the following for every request:
+
+1. Read the `Authorization` header from `System.HttpRequest`. If missing, return empty to initiate the client sign-in flow.
+
+2. Validate the token. Depending on the authorization server, you can do this in one of the following ways:
+
+    * Use the [OIDC SSO](/appstore/modules/oidc/) module, which supports validating tokens against the signing keys of the authorization server. This is required for authorization servers without an introspection endpoint, such as Microsoft Entra ID. For example, use the `DecodeVerifyJWTPlainText` action to verify and get the JWT token to validate further fields, such as, scopes. Note that the `APIAuthentication` action is currently not supported when called from the MCP Server module.
+    * In exceptional cases where your IdP issues opaque tokens that is not being a JWT or when your IdP supports token revocation, you may want to call the token introspection endpoint [(RFC 7662)](https://datatracker.ietf.org/doc/html/rfc7662#section-2) of the authorization server, for example, with a `Call REST service` activity. In most scenarios this is not needed. Common IdP-technologies such as Entra ID, Okta, Keycloak issue access tokens having the JWT profile.
+
+3. Check that the token is active and not expired, and that the audience (`aud`) is the value that the authorization server issues for your MCP Server. Otherwise, your MCP Server accepts tokens that were issued for other applications. Based on your requirements, check other fields such as scopes or issuer.
+
+4. Return the `System.User` that belongs to the token. For example, retrieve the user by name based on the `preferred_username` claim, or create a new user. For more information, see [user classification](/developerportal/deploy/implementing-user-metering/#user-classification).
+
+{{% alert color="info" %}}
+The authentication microflow runs for every request, including several requests when the client connects. If your microflow calls an external service, such as an introspection endpoint, consider the additional response time or implement custom logic for expiry state management.
+{{% /alert %}}
+
+The MCP client must be registered at the authorization server to obtain an access token. Typically, you register the client manually in your IdP's admin pages.
+
 #### Protocol Version
 
 When creating an MCP server, you need to specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The latest version of the MCP Server module only supports `v2025-03-26` and the Streamable HTTP transport. MCP clients that need to connect to a Mendix MCP server must support the same version. Note that Mendix follows the offered capabilities of the MCP Java SDK.
@@ -137,6 +170,22 @@ The error `Fatal error: SseError: SSE error: Could not convert argument of type 
 Remove-Item -Path "$env:LocalAppData\npm-cache\_npx" -Recurse -Force
 npm cache clean --force
 ```
+
+### MCP Client Does Not Start the OAuth Sign-In
+
+If the client receives a `401 Unauthorized` response but does not start the sign-in flow, check the following:
+
+* `AuthorizationServerUrl` is set and the MCP server was restarted afterward. The metadata URL `<application root URL>/<path>/.well-known/oauth-protected-resource` must return the authorization server.
+* The authentication microflow returns empty instead of throwing an error when no valid token is sent.
+* The client configuration does not contain a fixed `Authorization` header, which would be sent instead of the OAuth token.
+
+### Authorization Server Rejects the Sign-In
+
+If the authorization server reports invalid scopes, set the `Scopes` parameter of the `Create MCP Server` action, so that the client only requests these scopes. Make sure that the scopes are assigned to the client at the authorization server.
+
+### Microsoft Entra ID Error AADSTS9010010 {#entra-id}
+
+If Microsoft Entra ID rejects the request with error `AADSTS9010010: the resource parameter provided in the request doesn't match with the requested scopes.`, then the `resource` parameter ([RFC 8707](https://datatracker.ietf.org/doc/html/rfc8707#name-resource-parameter)) does not match the Application ID URI of the scope. To avoid this, set in the Azure portal the Application ID URI to the MCP endpoint, for example, `https://mymendixapp.com/<path>/mcp`. This requires that the domain of your app is a verified domain in your tenant.
 
 ### Conflicted Lib Error After Module Import
 

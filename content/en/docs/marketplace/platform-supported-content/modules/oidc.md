@@ -835,7 +835,7 @@ By default, the well-known endpoint (**Automatic configuration URL**) does not i
 You can create your own APIs within your Mendix app and secure the end point over OIDC using a custom authentication microflow. To do this:
 
 1. Create a REST API endpoint which needs to be secured.
-2. Use **Custom** as the [authentication method](/refguide/published-rest-service/#authentication) to secure the endpoint with an access token.
+2. Use **Custom** as the authentication method to secure the endpoint with an access token.
 3. Select the `OIDC.APIAuthentication` microflow from the **OIDC.APIAuthentication** folder of the module which has `HTTPRequest` as the input and returns `System.User` as the output.
 
 ### Using `APIAuthentication` for Client Credentials Grant
@@ -987,9 +987,9 @@ To confirm that the authorization is working, get an access token from your Entr
 From version 4.3.0 of the OIDC SSO module, optionally, you can select `ID-TOKEN` as a **Custom ATP Token Type** for all custom access token parsing. Default is `ACCESS-TOKEN`.
 {{% /alert %}}
 
-#### Parsing OIDC Provider Access Tokens
+#### Parsing Access Tokens From Mendix OIDC Provider
 
-The OIDC SSO module version 2.3.0 and above provides a default access token parsing microflow to use when you are authenticating using the OIDC Provider module as your IdP.
+The OIDC SSO module version 2.3.0 and above provides a default access token parsing microflow to use when you are authenticating using the [OIDC Provider](/appstore/services/oidc-provider/) module as your IdP.
 
 To parse the OIDC Provider access tokens you need to do the following when performing OIDC Client Configuration:
 

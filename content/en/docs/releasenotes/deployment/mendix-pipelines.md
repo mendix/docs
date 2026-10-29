@@ -12,6 +12,16 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 ## 2026
 
+### Oct 29, 2026
+
+#### New Features
+
+* POST and GET request steps now support [variable concatenation](/developerportal/deploy/configuring-post-get-request-steps/#variable-concatenation), allowing you to combine static text with one or more pipeline variables using the `{{variableName}}` syntax.
+
+#### Improvements
+
+* In POST and GET request steps, the **Request URL** field replaces **Base URL path** and **Additional URL path**.
+
 ### Aug 06, 2026
 
 #### New Features

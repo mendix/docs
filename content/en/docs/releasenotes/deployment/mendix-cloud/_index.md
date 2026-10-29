@@ -16,6 +16,33 @@ For information on the current status of deployment to Mendix Cloud and any plan
   
 ## October 2026
 
+### October 18, 2026
+
+#### New Features
+
+* The [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) now support authentication with personal access tokens (PATs), in addition to API keys.
+
+#### Fixes
+
+* We fixed an issue where failed deployments were incorrectly logged as successful. Failed deployments are now logged correctly, and a notification banner informs users when a deployment fails. (Tickets #287659, #289294)
+* We fixed an issue with backups in sandbox apps that was caused by a missing environment display name. (Ticket #287851)
+
+#### Deprecations
+
+* API keys are now deprecated, and support ends on February 1, 2027 for [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/). To keep using these APIs, [migrate to PATs](/apidocs-mxsdk/apidocs/deploy-api/#migrate-to-pat).
+
+### October 15, 2026
+
+#### New Features
+
+* The **Logs** page now has a [Dashboard](/developerportal/operate/logs/#dashboard) tab that gives an overview of your app's log activity for up to the last seven days, including the most frequent error and warning messages, endpoints with the highest error rate, dependency failures, and security markers. The archived logs and the live log are now on the **Log Files** tab, and the activity log is on the **Activity** tab.
+
+### October 8, 2026
+
+#### Improvements
+
+* We have added three new columns to the component list on the **Components** tab of [Software Composition](/developerportal/deploy/software-composition/#component-list): **Company Approved**, **Deprecated**, and **React/Dojo**.
+
 ### October 5, 2026
 
 #### New Features

@@ -7,27 +7,22 @@ description: "Documents how users manage the membership of groups they administe
 
 ## Introduction
 
-Not all access management in Private Mendix Platform requires an administrator. Two responsibilities are deliberately delegated to ordinary users: managing the membership of a group you have been made responsible for, and managing the team on an app you own.
+The following access management tasks in Private Mendix Platform are performed by end users and do not require switching to admin mode:
 
-This page documents both, along with how to work out what access you yourself hold and why. None of it requires switching to admin mode.
+* Managing group memberships
+* Managing app teams
 
-## Understanding Your Own Access
+## Understanding Platform and Resource Roles for End Users
 
-Your access comes from two independent sources, and it is worth knowing which one is responsible for what you can and cannot do.
+Your platform role determines what you can do on the platform in general, such as signing in and creating an app. It is set on your account by an administrator.
 
-Your **Platform Role** determines what you can do on the platform in general, such as signing in and creating an app. It is set on your account by an administrator.
+Your resource roles determine what you can do to individual apps and namespaces. You hold these as a member of a group, or by direct invitation onto an app's team. A powerful platform role does not give you access to any app, and a powerful role on an app does not give you any platform-wide privilege.
 
-Your **Resource Roles** determine what you can do to individual apps and namespaces. You hold these as a member of a group, or by direct invitation onto an app's team. A powerful Platform Role does not give you access to any app, and a powerful role on an app does not give you any platform-wide privilege.
+If you cannot reach an app you expect to reach, check your group memberships. You have access to an app if you are a member of the group that owns it, or of a group above that one in the hierarchy, or if the app's owner invited you directly.
 
-If you cannot reach an app you expect to reach, the question to ask is not what role you have, but *through which group*. You have access to an app if you are a member of the group that owns it, or of a group above that one in the hierarchy, or if the app's owner invited you directly. Membership of an unrelated group, however senior, grants nothing.
+You can review your own profile, password, personal access tokens, and service credentials from your account page. See [Configuring Your User Profile and Settings](/private-mendix-platform/user-guide/#configuring-your-user-profile-and-settings). The **My Groups** section of the Private Mendix Platform home page shows a list of all the groups to which you belong.
 
-You can review your own profile, password, personal access tokens, and service credentials from your account page. See [Configuring Your User Profile and Settings](/private-mendix-platform/user-guide/#configuring-your-user-profile-and-settings).
-
-{{% alert color="info" %}}
-**Reviewer note:** confirm whether users have a screen that shows the roles they hold and the groups they hold them in. If one exists, it should be named here, as this is the first thing a user needs when access does not behave as expected.
-{{% /alert %}}
-
-## Managing Your Group's Membership
+## Managing Your Group Memberships
 
 If you have been named a group admin on a group, you can manage that group's membership from the **Manage My Group** page. The left navigation menu lists every group you administer.
 
@@ -37,17 +32,13 @@ For each group you can:
 * Search the platform's users by name or email address and add them to the group.
 * Remove members from the group.
 
-Being a group admin lets you change *who is in* the group. It does not let you create groups, change the hierarchy, change which resources the group owns, or edit roles. Those require an administrator. See [Administering Users, Groups, and Roles in Private Mendix Platform](/private-mendix-platform/access-administration/).
+Being a group admin lets you change who is in the group. It does not let you create groups, change the hierarchy, change which resources the group owns, or edit roles. Those require an administrator. See [Administering Users, Groups, and Roles in Private Mendix Platform](/private-mendix-platform/access-administration/).
 
 {{% alert color="warning" %}}
-Adding a member to your group gives them access to everything your group owns, and to everything owned by every group beneath yours in the hierarchy, with the role they hold in your group. Before adding someone, be clear about what sits below your group.
+Adding a member to your group gives them access to everything your group owns, and to everything owned by every group beneath yours in the hierarchy, with the role they hold in your group. Before adding someone, review the ownership held by all these groups.
 {{% /alert %}}
 
 Members shown as inherited come from groups above yours. You cannot remove them from your group, because their membership does not originate there. If an inherited member should not have access, raise it with the administrator of the group they come from.
-
-{{% alert color="info" %}}
-**Reviewer note:** confirm whether a group admin assigns a member's Resource Role when adding them, or whether membership and role assignment are separate actions with the latter reserved to administrators. The current reference page describes only adding and removing members, which suggests the latter, but this needs confirming because it materially changes what delegation means.
-{{% /alert %}}
 
 ## Managing Your App's Team
 

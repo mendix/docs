@@ -67,7 +67,7 @@ The following table lists Maia Make Standalone Capabilities and the Studio Pro v
 | [Maia Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) | Extends Maia with instructions to be followed with every prompt | Studio Pro 11.12 | |
 | [Maia Plan Mode](/refguide/maia-plan-mode/) | Allows Maia to maintain implementation plans. | Studio Pro 11.16 | |
 
-### Maia Make General Capabilities
+### Maia Make General Capabilities {#general-capabilities}
 
 The following table lists the general capabilities of Maia Make and the Studio Pro version in which support for each capability was introduced:
 
@@ -84,6 +84,7 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Explain and solve consistency errors | Allows you to use Maia to explain or solve problems by right-clicking the item in the **Errors** pane. | Studio Pro 11.12.1 | |
 | Translations | Allows Maia to create and update translations in your app. | Studio Pro 11.15 | |
 | Delete documents | Allows Maia to delete documents in your app. | Studio Pro 11.16 | |
+| UI testing | Allows Maia to test the running app in the browser. | Studio Pro 11.16 | Testing needs to be done in Edge or Chrome. |
 
 ## Using Maia Make Capabilities
 

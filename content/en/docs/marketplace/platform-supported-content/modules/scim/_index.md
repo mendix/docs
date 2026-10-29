@@ -72,7 +72,6 @@ If you are using the SCIM module in combination with Entra ID and OIDC SSO, you 
 
 The SCIM module has the following limitations:
 
-* The SCIM module does not sync groups (or group memberships) to your app. Starting from version 4.1.0, you can assign user roles using the SCIM `roles` attribute. See [Assigning Roles Through SCIM Provisioning](#role-assignment) below. For earlier versions, you can assign user roles using the features offered by [SAML SSO](/appstore/modules/saml/) or [OIDC SSO](/appstore/modules/oidc/) modules.
 * If you want to do **Provision on demand** from Entra ID to test the SCIM integration of your app you cannot trigger a partial sync based on a group. This will trigger Entra ID to invoke a `/groups` endpoint, which is not yet supported.
 * The module does not support the development of a SCIM client application.
 * Multiple clients can be configured only at runtime via the admin screen.

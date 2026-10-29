@@ -90,19 +90,19 @@ Before workflow groups can be used effectively, they must first be populated wit
 
 This is done by setting the **WorkflowGroup_User** association between the **System.WorkflowGroup** object and the **User** objects that should belong to the workflow group. The [Workflow Commons](/appstore/modules/workflow-commons/) module provides default pages to do so.
 
-#### Managing Workflow Group Members Using an Identity Provider
+#### Managing Users in a Workflow Group Using an Identity Provider
 
 You can manage workflow group membership based on user attributes provided by an external identity provider (IdP), such as Entra ID. This allows organizations to centrally manage roles and group memberships in their IdP, rather than maintaining them separately in each application.
 
 This can be done when a user logs in, using the user provisioning logic in the [SAML](/appstore/modules/saml/user-provisioning/) or [OIDC SSO](/appstore/modules/oidc/#user-provisioning-end-user-onboarding) module, or before the user's first login by provisioning the user through the SCIM module. SCIM also lets changes in the IdP take effect without requiring the user to log in first.
 
-You can customize the user provisioning microflow to use roles or other provisioned attributes to determine workflow group membership. The custom provisioning logic can:
+You can customize the user provisioning microflow to use `roles` or other provisioned attributes to determine workflow group membership. The custom provisioning logic can:
 
 * Find the corresponding workflow group
 
 * Add or remove the user as a member of the workflow group, either at login or when the user is created, or updated through SCIM
 
-* W hen using runtime-managed workflow groups, create the workflow group if it does not yet exist.
+* When using runtime-managed workflow groups, create the workflow group if it does not yet exist.
 
 For more information about customizing SCIM provisioning, see the [SCIM](/appstore/modules/scim/) module documentation.
 

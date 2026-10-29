@@ -28,7 +28,7 @@ This document describes how entities are represented in a published OData servic
 <small>¹ When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).<br />
 ² Even though the binary data type is not supported, the FileDocument and Image system entities are supported and represented as Base64-encoded strings with the `Edm.Binary` type.<br />
 ³ When the string attribute has a limited length, the `MaxLength` attribute is specified.<br />
-⁴ For more information, see [Exposed As](/refguide/published-odata-attribute/#exposed-as-guid).</small>
+⁴ For more information, see the [Exposed As](/refguide/published-odata-attribute/#exposed-as-guid) section of *Published OData Attribute*.</small>
 
 Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not published, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
 

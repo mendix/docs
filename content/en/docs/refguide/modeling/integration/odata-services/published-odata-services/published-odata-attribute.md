@@ -39,8 +39,8 @@ The type of the attribute.
 
 This field is shown in the following cases:
 
-* The type is an enumeration that was previously exposed as a string, and only for OData v4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
-* The type is a string, and only for OData v4. Change the value to **GUID** to publish the string attribute as a GUID. For more information, see [Exposing a String Attribute as a GUID](#exposed-as-guid).
+* The type is an enumeration that was previously exposed as a string (only for OData v4). Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
+* The type is a string (only for OData v4). Change the value to **GUID** to publish the string attribute as a GUID. For more information, see the [Exposing a String Attribute as a GUID](#exposed-as-guid) section below.
 
 #### Exposing a String Attribute as a GUID {#exposed-as-guid}
 

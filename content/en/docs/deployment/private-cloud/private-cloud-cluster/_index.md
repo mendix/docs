@@ -50,11 +50,9 @@ All services listed in the table below use the HTTPS protocol (port 443).
 {{% alert color="info" %}}
 The `private-cloud.registry.mendix.com` container registry will be decommissioned on August 1, 2027.
 
-Starting from Mendix Operator version 2.29.0, new namespaces will be using `registry.mendix.com/private-cloud` by default.
-If your network blocks access to `https://registry.mendix.com`, it's possible to manually switch to the legacy registry by running 
-the `mxpc-cli` **Configuration Tool** with a `--registry private-cloud.registry.mendix.com` flag.
+Starting from Mendix Operator version 2.29.0, new namespaces will use `registry.mendix.com/private-cloud` by default. If your network blocks access to `https://registry.mendix.com`, you can manually switch to the legacy registry by running the `mxpc-cli` **Configuration Tool** with a `--registry private-cloud.registry.mendix.com` flag.
 
-In Helm chart installations, switching to the `private-cloud.registry.mendix.com` registry is possible by using the **Custom OCI Registry** configuration option.
+In Helm chart installations, you can switch to the `private-cloud.registry.mendix.com` registry by using the **Custom OCI Registry** configuration option.
 {{% /alert %}}
 
 ## Creating a Cluster and Namespace {#create-cluster-namespace}

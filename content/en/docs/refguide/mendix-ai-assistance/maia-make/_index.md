@@ -83,7 +83,7 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Explain and solve consistency errors | Allows you to use Maia to explain or solve problems by right-clicking the item in the **Errors** pane. | Studio Pro 11.12.1 | |
 | Translations | Allows Maia to create and update translations in your app. | Studio Pro 11.15 | |
 | Delete documents | Allows Maia to delete documents in your app. | Studio Pro 11.16 | |
-| UI testing | Allows Maia to test the running app in the browser. | Studio Pro 11.16 | To allow Maia to UI test your app, you need to have either Edge or Chrome installed. |
+| UI testing | Allows Maia to test the running app in the browser. | Studio Pro 11.16 | Testing needs to be done in Edge or Chrome. |
 
 ## Using Maia Make Capabilities
 

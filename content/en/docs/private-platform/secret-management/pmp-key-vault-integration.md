@@ -40,7 +40,9 @@ The customer is responsible for configuring the following prerequisites. They mu
 
 ### Kubernetes RBAC Configuration {#rbac-configuration}
 
-Private Mendix Platform authenticates to the Kubernetes API using a bearer token (a dedicated ServiceAccount, for example, `mxplatform-cicd`), distinct from the app-environment identities. This token needs a namespaced Role and RoleBinding in every namespace where app environments using this feature are deployed, granting the following:
+Private Mendix Platform authenticates to the Kubernetes API using a bearer token (a dedicated ServiceAccount, for example, `mxplatform-cicd`), distinct from the app-environment identities. For information about configuring the bearer token, see [Private Mendix Platform Functionalities: Cluster Manager](/private-mendix-platform/reference-guide/admin/company/#cluster-manager).
+
+This token needs a namespaced Role and RoleBinding in every namespace where app environments using this feature are deployed, granting the following:
 
 | Resource | Verbs | Used for |
 | --- | --- | --- |

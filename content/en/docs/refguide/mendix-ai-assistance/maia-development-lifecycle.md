@@ -152,6 +152,7 @@ Maia helps in the following ways:
 
 * [Best Practice Recommender](/refguide/best-practice-recommender/) – Use the Best Practice Recommender to inspect your app model against Mendix best practices. It detects anti-patterns, explains their impact, and in some cases fixes them automatically. 
 * Maia Make – Maia Make explains and solves consistency errors, suggests improvements to existing documents, and helps you refactor. In Studio Pro 11.9 and above, Maia can remove elements as part of a refactoring.
+* UI testing – In Studio Pro 11.16 and above, Maia can test the running app in the browser. For more information, see the [Maia Make General Capabilities](/refguide/maia-make/#general-capabilities) section of *Maia Make Capabilities*.
 
 Use these capabilities on all documents, including the documents that Maia generates.
 

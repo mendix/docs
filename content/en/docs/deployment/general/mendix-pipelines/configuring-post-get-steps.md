@@ -162,8 +162,8 @@ Each output slot is populated by a [jq-style expression](https://jqlang.org/manu
 
 Output variables are automatically named and you cannot assign custom name or change the names. Mendix Pipelines exposes extracted values using a fixed naming pattern such as:
 
-* `{{GET Request.Output_1}}`
-* `{{POST Request.Output_2}}`
+* `{{GET_Request.Output_1}}`
+* `{{POST_Request.Output_2}}`
 
 {{% alert color="warning" %}}
 Mendix Pipelines does not validate whether an extraction expression matches the response, nor does it provide tooling to inspect the response structure interactively.

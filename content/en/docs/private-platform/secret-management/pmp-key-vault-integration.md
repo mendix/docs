@@ -77,9 +77,14 @@ To enable the integration, you must first enable secret store support for the na
 3. In the left navigation menu, open the **Manage** section and go to **Deployment > Cluster Manager**.
 4. Select or create a cluster with the **Cluster Type** set to **AKS**. 
 5. Edit or create the target namespace and toggle **Enable Secret Store**.
-6. Select **Automatic (Azure Key Vault Only)** as the mode.
+6. Select one of the following options:
 
-    In automatic mode, if the environment uses an `azure-wi` storage or database plan, Mendix Operator creates the UAMI, including federated credentials, Secret Provider Class and ServiceAccount annotations during environment provisioning. Automatic mode is required for Azure Key Vault integration. Manual mode can be used to configure secret stores other than Azure Key Vault.
+    * **Automatic mode** - This mode is available only for clusters with the **Cluster Type** set to **AKS**. Automatic mode only supports Azure Key Vault integration.
+
+        * If the environment uses azure-wi storage plans, the Mendix Operator creates a user-assigned managed identity and service account for the environment. You must create a Key Vault and grant it the relevant permissions for this managed identity.
+        * If the environment does not use azure-wi storage plans, the Mendix Operator does not create a user-assigned managed identity and service account for the environment. You must create a user-assigned managed identity and a Key Vault with the relevant permissions for this managed identity. Private Mendix Platform will use this information to create the SecretProviderClass and the service account.
+    
+    * **Manual mode** - This is a legacy mode where the customer creates manages the CSI driver integration, the SecretProviderClass, the Key Vault, the mappings and the permissions for Azure workload identities, AWS IRSA, or Hashicorp vault. Manual mode can be used to configure secret stores other than Azure Key Vault.
 
 {{< figure src="/attachments/private-platform/pmp-keyvault2.png" class="no-border" >}}
 

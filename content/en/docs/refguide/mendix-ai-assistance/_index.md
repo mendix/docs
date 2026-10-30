@@ -166,13 +166,14 @@ To ensure the smooth operation of Mendix AI Assistance (Maia), the following net
 
 ## Maia Third-Party Services {#maia-third-party-services}
 
-{{% alert color="info" %}}
-As of Studio Pro 11.12, Maia Make uses Claude Sonnet 4.6.
-{{% /alert %}}
+[Maia Make](/refguide/maia-make/) uses the following Claude model, depending on your Studio Pro version. If you [configure a custom AI provider](/refguide/maia-make/#custom-provider), Maia Make sends requests to that provider instead.
 
-[Maia Make](/refguide/maia-make/), introduced in Studio Pro 11.8, uses Claude Sonnet 4.5. Any Maia Make capability in Studio Pro 11.8 and above uses this model to generate Mendix models. 
-
-If you [configure a custom AI provider](/refguide/maia-make/#custom-provider), Maia Make sends requests to the provider that you configure instead.
+| Studio Pro Version | Model |
+| --- | --- |
+| 11.17 and above | Claude Sonnet 5.5 |
+| 11.12.7 and above in 11.12 | Claude Sonnet 5.5 |
+| 11.12 and above | Claude Sonnet 4.6 |
+| 11.8 and above | Claude Sonnet 4.5 |
 
 The table below presents all the third-party services each Maia capability uses for Studio Pro versions below 11.8, and what data are sent to the third-party services.
 

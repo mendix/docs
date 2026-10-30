@@ -127,6 +127,10 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 | Disabled *(default)*  | It is possible to execute the microflow more than once concurrently. |
 | Enabled | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
 
+{{% alert color="info" %}}
+This property relates to microflows running on a single node in a clustered environment. See [Cluster-Wide Locking](/refguide10/clustered-mendix-runtime/#cluster-lock) in *Clustered Mendix Runtime* for more information.
+{{% /alert %}}
+
 #### Error Message
 
 **Error message** defines the message the user gets when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. This will not be shown if there is an **Error microflow** defined.

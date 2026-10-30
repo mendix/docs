@@ -7,8 +7,6 @@ description: "Describes the cluster functionality of the Mendix Runtime, which a
 
 ## Introduction
 
-{{% todo %}}Copy changes to Mx10{{% /todo %}}
-
 This page describes the behavior and impact of running Mendix Runtime as a cluster. Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture.
 
 The main feature enabling clustering is Mendix's stateless runtime architecture. This means that the dirty state (the non-persistable entity instances and not-yet-persisted changes) are stored on the client and not on the server. This enables much easier scaling of the Mendix Runtime, as each cluster node can handle any request from the client. The stateless runtime architecture also allows for better dirty state maintainability and better insight in application state.

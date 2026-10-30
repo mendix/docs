@@ -16,7 +16,7 @@ Before starting this how-to, make sure you complete the following prerequisites:
 
 * Manually deploy your Mendix app and ensure that there are no errors during the deployment. For more information, see [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
 * Ensure that your Windows PowerShell version is 5.1. Other versions are currently not supported.
-* Ensure that your Mendix Service Console version is 4.7.4 or above.
+* To run powershell cmdlets on Mendix Service Console 4.9.0 and above, ensure that your Windows PowerShell version is [7.6.5](https://github.com/PowerShell/PowerShell/releases/download/v7.6.5/PowerShell-7.6.5-win-x64.msi).
 * Familiarize yourself with the update process for Mendix apps running on Windows. For more information, see [MS Windows: Update a Mendix App](/developerportal/deploy/updating-a-mendix-application/).
 
 ## Importing Mendix-Specific Cmdlets into Windows PowerShell {#powershell}
@@ -111,6 +111,14 @@ The `AdminPassword` parameter to the Start-MxApp cmdlet sets the administrator p
 
 ```text
 Start-MxApp $appName -AdminPassword "Abcd@1234"
+```
+
+#### `CreateDatabase`
+
+The `CreateDatabase` parameter to the Start-MxApp cmdlet creates database for a Mendix app if does not exists.
+
+```text
+Start-MxApp $appName -CreateDatabase -SynchronizeDatabase
 ```
 
 ### Sample Script - Determine the Mendix Runtime Version
@@ -220,6 +228,19 @@ $app = Start-MxApp "MyAppName" -NoService -SynchronizeDatabase
 
 # Display the Server ID
 Write-Host "Server ID: $($app.ServerId)"
+```
+
+### Sample Script - Get Runtime Status and App Health Status
+
+The `Start-MxApp` cmdlet retrieves the runtime status and app health status when starting a Mendix app. The following script example demonstrates the process required to retrieve `RuntimeStatus` and `AppHealth`.
+
+```text
+# Start the Mendix app and get runtime status and app health status
+$app = Start-MxApp "MyAppName" -NoService -SynchronizeDatabase
+
+# Display the runtime status and app health status
+Write-Host "Runtime Status: $($app.RuntimeStatus)"
+Write-Host "App Health Status: $($app.AppHealth)"
 ```
 
 ## Troubleshooting

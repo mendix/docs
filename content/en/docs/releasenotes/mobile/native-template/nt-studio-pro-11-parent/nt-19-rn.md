@@ -5,6 +5,18 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.1.8
+
+**Release date: Oct 28, 2026**
+
+### Improvements
+
+- We excluded `react-native-vision-camera-barcode-scanner` from iOS. The Barcode Scanner widget only uses it on Android; on iOS it uses Apple's built-in scanner from `react-native-vision-camera`.
+- This version of Native Template is required for the Barcode Scanner widget version 4.6.0 or above (Native Mobile Resources version 12.6.0 or higher).
+
+### Fixes
+- We fixed an issue on Android where the **Clear data** checkbox on the Developer App starting page was hidden behind the bottom navigation bar due to edge-to-edge display.
+
 ## 19.1.7
 
 **Release date: Sep 23, 2026**

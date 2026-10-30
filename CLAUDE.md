@@ -21,7 +21,6 @@ When instructions conflict, follow this order of precedence:
 * Edit existing files in place using the Edit tool. Do not create new files unless explicitly requested.
 * Preserve meaning and intent. Make the smallest set of edits that fully resolves the request.
 * Never add product claims, technical behavior, ticket numbers, or release facts unless explicitly requested and sourced from provided content.
-* Use Read to view files, Edit to modify them, Glob to find files by pattern, and Grep to search file contents.
 
 ### Autonomy Guidelines
 
@@ -82,26 +81,11 @@ When encountering style questions not covered in this file, read the relevant st
 
 Project‑specific preferences are also documented in the templates; consult them for tricky formatting cases.
 
-## Tool Usage Guidelines
+## URL Resolution and Modification
 
-### Parallel Tool Calls
+To resolve a documentation URL (for example, `/community-tools/contribute-to-mendix-docs/`) to its source Markdown file, run `bash .claude/scripts/resolve-doc-url.sh "/url/path/"` instead of spawning an agent.
 
-Call tools in parallel for independent operations (reading multiple files, multiple searches). Use sequential only when later operations depend on earlier results.
-
-### Tool Selection
-
-* **Helper Scripts**
-    * For URL resolution, use `bash .claude/scripts/resolve-doc-url.sh` instead of spawning agents. This resolves documentation URLs (e.g., `/community-tools/contribute-to-mendix-docs/`) to their source Markdown files and ensures Grep uses efficient flags consistently.
-
-### Cross-Reference Verification
-
-When following or verifying documentation links:
-* Use `bash .claude/scripts/resolve-doc-url.sh "/url/path/"` to quickly find the source file for a URL
-
-When modifying URLs or anchor IDs:
-1. Use Grep to search for the old URL/anchor across all documentation files
-2. Identify all references that need updating
-3. Update or fix those references in the same change to prevent broken links
+When modifying URLs or anchor IDs, search for the old value across all documentation files and update every reference in the same change to prevent broken links.
 
 ## Technical Implementation Details
 
@@ -149,7 +133,7 @@ For comprehensive shortcode examples and edge cases, read `community-tools/contr
 
 ## Editorial Workflow
 
-1. **Locate target content** - Use Glob to find files by pattern or Grep to search content. Read the target page(s) and related section index files. When reading multiple related files, make parallel Read calls.
+1. **Locate target content** - Use Glob to find files by pattern or Grep to search content. Read the target page(s) and related section index files. Make independent tool calls in parallel.
 2. **Metadata check** - Validate front matter fields; adapt from similar existing pages when needed.
 3. **Edit pass** - Use Edit tool to apply style, clarity, terminology, and structure fixes without changing intent unless requested.
 4. **Cross-reference check** - Use absolute paths to the document URL (not the Markdown file path). Use Glob to verify linked pages exist. If updating or removing an existing URL or anchor ID, use Grep to search for it across all documentation files to identify any links that reference it. Update or fix those links to prevent broken cross-references.

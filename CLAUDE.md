@@ -9,10 +9,9 @@
 When instructions conflict, follow this order of precedence:
 
 1. The user's current request.
-2. Task-specific prompt files in `.github/prompts/*.prompt.md` (for Copilot) or skills in `.claude/skills/*/SKILL.md` (for Claude) when explicitly referenced or invoked.
-3. Overlay instruction files (for example, `.github/release-notes-instructions.md`) when path-scoped.
-4. This file (`CLAUDE.md`).
-5. Mendix Style Guide files in `content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/` for detailed grammar, terminology, and formatting rules.
+2. Task-specific skills in `.claude/skills/*/SKILL.md` when explicitly referenced or invoked.
+3. This file (`CLAUDE.md`).
+4. Mendix Style Guide files in `content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/` for detailed grammar, terminology, and formatting rules.
 6. Existing conventions in nearby pages within the same folder.
 7. Microsoft Writing Style Guide.
 
@@ -94,7 +93,7 @@ When modifying URLs or anchor IDs, search for the old value across all documenta
 All Markdown files begin with YAML metadata.
 
 * `title` – Human‑readable page title. (Required)
-* `url` – Page URL. Start and end with `/`, use only lowercase letters, numbers, and hyphens. Doesn't need to match the file path. (Required)
+* `url` – Page URL. Start and end with `/`, use only lowercase letters, numbers, and hyphens. Doesn't need to match the file path. Must be unique. (Required)
 * `description` – Summary used for metadata, search snippets, and content lists. Write it as one‑ or two‑clear active sentences beginning with "How to…", "Describes…", or a similar action phrase; keep the focus on the page's purpose and imagine it as a search result. (Required)
 * `linktitle` – Short text shown in the left navigation pane; use when `title` is longer than 40 characters. (Optional)
 * `aliases` – Redirect paths for moved or renamed pages. Add old URLs as alias entries. (Optional)
@@ -133,21 +132,19 @@ For comprehensive shortcode examples and edge cases, read `community-tools/contr
 
 ## Editorial Workflow
 
-1. **Locate target content** - Use Glob to find files by pattern or Grep to search content. Read the target page(s) and related section index files. Make independent tool calls in parallel.
-2. **Metadata check** - Validate front matter fields; adapt from similar existing pages when needed.
-3. **Edit pass** - Use Edit tool to apply style, clarity, terminology, and structure fixes without changing intent unless requested.
-4. **Cross-reference check** - Use absolute paths to the document URL (not the Markdown file path). Use Glob to verify linked pages exist. If updating or removing an existing URL or anchor ID, use Grep to search for it across all documentation files to identify any links that reference it. Update or fix those links to prevent broken cross-references.
-5. **Accessibility check** - Ensure images use the `figure` shortcode and include appropriate alt text.
-6. **Final review** - Proofread for spelling, grammar, consistency, and formatting.
+1. **Locate and read** - Find the target page and its section `_index.md`. Run independent lookups in parallel.
+2. **Check front matter** - Confirm the required fields (`title`, `url`, `description`) are present and follow the Front Matter rules above.
+3. **Proofread and edit** - Apply style, clarity, terminology, accessibility (alt text, `figure` shortcode), and structure fixes. Keep the meaning unless the user asks otherwise. Stop and ask before any change listed under "Ask for confirmation".
+4. **Verify links** - Link by page `url`, not file path, and confirm each target exists. If you changed or removed a `url` or anchor ID, search all docs for the old value and update every reference.
 
-## Content Templates
+## Content Creation Workflow
 
 If asked to create new content:
 
-1. Read the appropriate template from `templates/`: `how-to-template.md`, `reference-template.md`, `marketplace-component-page-template.md`, or `release-notes-template.md`
-2. Use Write tool to create the new file based on the template
-3. Remove comment lines (`#`) from the template
-4. Follow the editorial workflow above
+1. Read the appropriate template from `templates/`: `how-to-template.md`, `reference-template.md`, `marketplace-component-page-template.md`, or `release-notes-template.md`.
+2. Use Write tool to create the new file based on the template.
+3. Remove comment lines (`#`) from the template.
+4. Follow the editorial workflow above.
 
 For all pages, required sections are front matter and the introduction; other sections vary by content type.
 

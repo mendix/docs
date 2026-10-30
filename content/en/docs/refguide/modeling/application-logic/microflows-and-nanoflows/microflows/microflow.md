@@ -6,6 +6,8 @@ weight: 1
 
 ## Introduction
 
+{{% todo %}}Copy changes to Mx10{{% /todo %}}
+
 This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check [Microflows](/refguide/microflows/). If you want to know about the settings of the **Call a microflow** event action, you can check [Microflow Settings](/refguide/on-click-event/#microflow-settings).
 
 ## Properties
@@ -130,6 +132,10 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 | --- | --- |
 | Disabled *(default)*  | It is possible to execute the microflow more than once concurrently. |
 | Enabled | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
+
+{{% alert color="info" %}}
+This property relates to microflows running on a single node in a clustered environment. See [Cluster-Wide Locking](/refguide/clustered-mendix-runtime/#cluster-lock) in *Clustered Mendix Runtime* for more information.
+{{% /alert %}}
 
 #### Error Message
 

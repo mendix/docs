@@ -1,8 +1,10 @@
 ---
 title: "Starting the Development"
-url: /developerportal/maia-plan/start-development/
-description: "Describes the development step of creating an app with Maia Plan."
+url: /developerportal/maia-spec/start-development/
+description: "Describes the development step of creating an app with Maia Spec."
 weight: 40
+aliases:
+    - /developerportal/maia-plan/start-development/
 ---
 
 ## Introduction
@@ -15,20 +17,20 @@ After you click **Start Building**, the **Start Development** window is displaye
     * **Jira** – Use Jira to organize and prioritize your work. To do that, follow the steps in the [Connecting to Jira](#connect-jira) section.  
     
    {{% alert color="info" %}}
-   If you start prioritizing your work before Maia is done [finding recommendations](/developerportal/maia-plan/generate-plan/#recommender), recommended components are not displayed in the **Planning** window.
+   If you start prioritizing your work before Maia is done [finding recommendations](/developerportal/maia-spec/generate-plan/#recommender), recommended components are not displayed in the **Planning** window.
    {{% /alert %}}
 
-* **Build** – Click the **Open in Studio Pro** button in the **Build** section to open Studio Pro, where you can continue working on the new app. Studio Pro does not currently take into account [recommended components](/developerportal/maia-plan/generate-plan/#recommender).
+* **Build** – Click the **Open in Studio Pro** button in the **Build** section to open Studio Pro, where you can continue working on the new app. Studio Pro does not currently take into account [recommended components](/developerportal/maia-spec/generate-plan/#recommender).
     
     For details, refer to [Maia Make](/refguide/maia-make/) in the Studio Pro documentation.    
 
-## Connecting Maia Plan to Jira {#connect-jira}
+## Connecting Maia Spec to Jira {#connect-jira}
 
-The following two sections describe the two main actions you need to take to use Jira as your project management tool in Maia Plan.
+The following two sections describe the two main actions you need to take to use Jira as your project management tool in Maia Spec.
 
-### Configuring Jira for Maia Plan
+### Configuring Jira for Maia Spec
 
-Follow these steps to configure Jira for use with Maia Plan.
+Follow these steps to configure Jira for use with Maia Spec.
 
 New Jira projects/spaces:
 
@@ -44,7 +46,7 @@ New Jira projects/spaces:
 Existing Jira projects/spaces:
 
 1. Open your existing Jira project/space.
-2. Select the board you want to use with Maia Plan, or create a new one.
+2. Select the board you want to use with Maia Spec, or create a new one.
 3. Ensure the board includes a filter for the project's Jira key:
 
     * For an existing board:
@@ -53,13 +55,13 @@ Existing Jira projects/spaces:
         2. Confirm that the filter is set to *project = "your project key"*.
 
     * For a new board, select **All work items from your space**.     
-        {{% alert color="info" %}} When you select **All work items from your space**, a consolidated backlog view is created. This view includes work items from all boards in the project, not just those managed through Maia Plan. {{% /alert %}}
+        {{% alert color="info" %}} When you select **All work items from your space**, a consolidated backlog view is created. This view includes work items from all boards in the project, not just those managed through Maia Spec. {{% /alert %}}
 
-### Configuring Maia Plan for Jira
+### Configuring Maia Spec for Jira
 
 Before you begin, make sure that the [prerequisites for using Jira](/developerportal/project-management/jira-connector/#prerequisites) are met.
 
-Follow these steps to connect Maia Plan to Jira:
+Follow these steps to connect Maia Spec to Jira:
 
 1. In the **Connect Planning Tool** window, select **Jira**.
 2. Fill in the information as follows:
@@ -70,12 +72,12 @@ Follow these steps to connect Maia Plan to Jira:
     * **Jira Account** – The login name of a user on the Jira platform with project administration rights.
     * **API Token** – A valid API token issued by the Jira platform and assigned to the admin user mentioned above. For more information on how to get this API token, refer to [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).    
 
-## Using Jira with Maia Plan
+## Using Jira with Maia Spec
 
-After you connect Maia Plan to Jira, you can use Jira as your project management tool:
+After you connect Maia Spec to Jira, you can use Jira as your project management tool:
 
-1. In Maia Plan, in the **Start Development** window, set the planning tool to Jira, as previously indicated.
-2. Click **Open Jira** to open the connected Jira board from Maia Plan. Your epics and stories are displayed in the Jira backlog.    
-     {{% alert color="warning" %}} The redirection from Maia Plan to team-managed project boards is not currently working as expected. To see your team-managed project board, you need to have the correct URL yourself. This issue does not occur for company-managed project boards, which open correctly from Maia Plan. {{% /alert %}}
+1. In Maia Spec, in the **Start Development** window, set the planning tool to Jira, as previously indicated.
+2. Click **Open Jira** to open the connected Jira board from Maia Spec. Your epics and stories are displayed in the Jira backlog.    
+     {{% alert color="warning" %}} The redirection from Maia Spec to team-managed project boards is not currently working as expected. To see your team-managed project board, you need to have the correct URL yourself. This issue does not occur for company-managed project boards, which open correctly from Maia Spec. {{% /alert %}}
 3. If an active sprint does not already exist, create one in Jira.
 4. Move the stories you want to work on from the backlog into the active sprint. The stories in the active sprint are now also available in Studio Pro.

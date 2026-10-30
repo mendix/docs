@@ -1,8 +1,10 @@
 ---
 title: "Defining the Scope"
-url: /developerportal/maia-plan/define-scope/
-description: "Describes the scope definition step of creating an app with Maia Plan."
+url: /developerportal/maia-spec/define-scope/
+description: "Describes the scope definition step of creating an app with Maia Spec."
 weight: 20
+aliases:
+    - /developerportal/maia-plan/define-scope/
 ---
 
 ## Introduction

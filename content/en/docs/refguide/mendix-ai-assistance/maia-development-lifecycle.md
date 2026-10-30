@@ -46,7 +46,7 @@ Before you build, you define what the app must do, for whom, and how you measure
 
 Maia helps in the following ways:
 
-* [Maia Plan](/developerportal/maia-plan/) – Maia Plan turns your project context, such as goals, target users, requirements, and attached documents, into a project scope. After you approve the scope, Maia generates a solution with epics and user stories. It can also recommend Marketplace components for specific stories.
+* [Maia Spec](/developerportal/maia-spec/) – Maia Spec turns your project context, such as goals, target users, requirements, and attached documents, into a project scope. After you approve the scope, Maia generates a solution with epics and user stories. It can also recommend Marketplace components for specific stories.
 * **Create and Refine a Story with Maia** – Maia can help write new user stories and improve existing ones on the **Board** and **Planning** pages in Mendix Portal. For more information, see [Maia in Mendix Portal](/portal/maia/).
 
 You can use the stories from the plan as input when you build with Maia Make, which supports story-based development. Clear user stories with acceptance criteria give Maia better context.
@@ -57,7 +57,7 @@ When the scope is clear, use Maia to generate a first version of the app. This g
 
 You have the following options:
 
-* From Maia Plan – In Maia Plan, select **Open in Studio Pro** to continue to work on the new app in Studio Pro with Maia Make. For more information, see [Starting the Development](/developerportal/maia-plan/start-development/).
+* From Maia Spec – In Maia Spec, select **Open in Studio Pro** to continue to work on the new app in Studio Pro with Maia Make. For more information, see [Starting the Development](/developerportal/maia-spec/start-development/).
 * [Start with Maia](/refguide/start-with-maia/) – In Studio Pro, select **Start with Maia** as your starting point. Describe your app using a text description and an optional image or PDF. Maia uses this input to generate a domain model, data management overview pages, test data, and a homepage. 
 * Maia Make – In an existing app, describe a new module or feature in the **Maia** pane. Maia then generates the necessary documents. 
 
@@ -171,7 +171,7 @@ Some teams use AI coding assistants or their own AI agents next to Studio Pro. S
 Maia supports these scenarios in the following ways:
 
 * [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) – The Studio Pro MCP Server exposes Maia capabilities to external AI agents through the Model Context Protocol (MCP). Changes appear in Studio Pro in real time. 
-* [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/) – Maia Plan as MCP Server gives external AI agents read-only access to the scope and solution of a Maia Plan project. 
+* [Maia Spec as MCP Server](/developerportal/maia-plan-mcp/) – Maia Spec as MCP Server gives external AI agents read-only access to the scope and solution of a Maia Spec project. 
 * **Custom AI provider** – The Custom AI provider feature lets Maia use your own LLM provider. This feature is available in Studio Pro 11.12 and above as a beta feature. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section of *Maia Make Capabilities*.
 
 For an overview of how these options work together, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).

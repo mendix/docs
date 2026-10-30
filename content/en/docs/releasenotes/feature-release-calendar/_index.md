@@ -45,8 +45,8 @@ General Availability means that a feature is available for all users. This type 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Maia Plan <ul><li>Starter app support</li><li>Marketplace recommendations</li></ul> | Public Beta: Mx 11.8 <br/>General Availability: Mx 11.9 |
-| Maia Plan <ul><li>Versioning, iterations and multi-user collaboration</li><li>Jira integration</li></ul> | General Availability: Mx 11.12 |
+| Maia Spec <ul><li>Starter app support</li><li>Marketplace recommendations</li></ul> | Public Beta: Mx 11.8 <br/>General Availability: Mx 11.9 |
+| Maia Spec <ul><li>Versioning, iterations and multi-user collaboration</li><li>Jira integration</li></ul> | General Availability: Mx 11.12 |
 | Maia: Text to OQL | Public Beta: Q2 2025 <br/>General Availability: Q4 2025 |
 | Maia: Generate test data | Private Beta: 2026 |
 | Maia: Convert Feedback to story | General Availability: Mx 11.9 |

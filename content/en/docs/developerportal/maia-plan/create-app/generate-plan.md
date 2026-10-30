@@ -1,8 +1,10 @@
 ---
 title: "Generating the Plan"
-url: /developerportal/maia-plan/generate-plan/
-description: "Describes the plan generation step of creating an app with Maia Plan."
+url: /developerportal/maia-spec/generate-plan/
+description: "Describes the plan generation step of creating an app with Maia Spec."
 weight: 30
+aliases:
+    - /developerportal/maia-plan/generate-plan/
 ---
 
 ## Introduction

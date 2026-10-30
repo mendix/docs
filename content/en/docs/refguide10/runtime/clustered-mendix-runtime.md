@@ -27,27 +27,30 @@ This means that a Mendix cluster requires a load balancer to distribute the load
 
 ## Cluster Leader and Cluster Followers{#cluster-leader-follower}
 
-Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs the initial database synchronization with Domain Model changes and initiates other cluster management activities which can be be picked by any node in a multi-node environment. These are the activities:
+Database synchronization is coordinated across cluster nodes depending on how Mendix Runtime is started:
 
-* **Session cleanup handling** – each node expires its sessions (meaning, not being used for a configured timespan) and the cluster leader removes the sessions persisted in the database
-    * In exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader makes sure this removal still happens
-* **Cluster node expiration handling** – removing cluster nodes after they have expired (meaning, not giving a heartbeat for a configured timespan)
-* **Background job expiration handling** – removing data about background jobs after the information has expired (meaning, older than a specific timespan)
-* **Unblocking blocked users**
-* **Cleanup unreferenced files** - removing from storage any file documents that have been deleted, replaced, or were never committed
-* **Executing Scheduled Events** – legacy scheduled events are only executed on the cluster leader; task queue based scheduled events are executed on an arbitrary cluster node
-* **Performing database synchronization after new deploy**
-* **Clear persistent sessions after new deploy** – invalidating all existing sessions so that they get in sync with the latest model version
+* **Leader-based startup** – This is used when the Runtime is started through the administrative API. This is how most managed deployments start the app: for example, the Cloud Foundry buildpack, SAP BTP, or an on-premises installation managed with the Mendix Service Console. With this mechanism, exactly one node is the *cluster leader* and the other nodes are *cluster followers*. The cluster leader initially synchronizes the database with any Domain Model changes and clears persistent sessions after a new deploy; see [Cluster Startup](#cluster-startup) below. The cluster leader node is controlled by the `com.mendix.core.isClusterSlave` custom setting (see [Runtime Customization](/refguide10/custom-settings/#commendixcoreisClusterSlave)).
 
-The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which become cluster followers.
+    {{% alert color="info" %}}If you deploy manually using the Mendix Service Console (or another on-premises installation managed through the administrative API), you are responsible for configuring the cluster leader yourself by setting `com.mendix.core.isClusterSlave` to `true` on every node except one.{{% /alert %}}
 
-## Cluster Startup
+* **Leaderless startup** – This is used when the Runtime is started directly from a configuration file instead of through the administrative API. [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/) (previously called Portable App Distribution, or PAD) always runs this way: its start script always launches the Runtime with a configuration file. In this model, there is no cluster leader. Database synchronization is coordinated using a database lock: whichever node acquires the lock performs the synchronization while the other nodes wait. The `com.mendix.core.isClusterSlave` setting has no effect when using this mechanism and is ignored. Persistent sessions are not explicitly cleared as a separate deploy step in this model; they are left to expire normally, as described in [Sessions Are Always Persistent](#sessions-are-always-persistent) below.
 
-Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app the whole cluster is restarted and the cluster leader determines whether database synchronization is required. This means that there will be some downtime when the app is deployed while this is done.
+## Other Cluster Management Activities
 
-If database synchronization is required, all the cluster followers will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, all the cluster nodes will become fully functional.
+Besides the startup activities described above, Mendix Runtime nodes also perform the following recurring cluster management activities. These run independently of the leader-based or leaderless startup model, and are not tied to a single designated node:
 
-If no database synchronization is required, all the cluster nodes will become fully functional directly after startup.
+* **Session cleanup handling** – removing expired sessions from the database is handled by an arbitrary cluster node
+* **Cluster node expiration handling** – every node independently removes other cluster nodes that have expired (meaning, not giving a heartbeat for a configured timespan)
+* **Background job expiration handling** – removing data about background jobs after the information has expired (meaning, older than a specific timespan) is handled by an arbitrary cluster node
+* **Unblocking blocked users** is handled by an arbitrary cluster node
+* **Cleanup of unreferenced files** – each node removes its own file documents that were deleted, replaced, or never committed; cleaning up files left behind by a crashed node is handled by an arbitrary cluster node
+* **Executing Scheduled Events** – scheduled events are executed by an arbitrary cluster node; for details, see [Task Queue](/refguide10/task-queue/)
+
+## Cluster Startup {#cluster-startup}
+
+Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app the whole cluster should be restarted, and the database may need to be synchronized with the updated Domain Model, as described in [Cluster Leader and Cluster Followers](#cluster-leader-follower), above.
+
+Once database synchronization has finished, all the cluster nodes become fully functional. If no database synchronization is required, all the cluster nodes become fully functional directly after startup.
 
 ## File Storage {#file-storage}
 
@@ -65,12 +68,16 @@ It is possible to configure `After-Startup` and `Before-Shutdown` microflows in 
 
 While running a multi-node cluster, you cannot predict the node on which a microflow will be executed. Therefore, it is not possible to debug such a microflow execution in a cluster from Mendix Studio Pro. However, you can still debug a microflow while running a single instance of the Mendix Runtime.
 
-### Cluster-Wide Locking (Guaranteed Single Execution)
+### Cluster-Wide Locking (Guaranteed Single Execution){#cluster-lock}
 
-Some apps require a guaranteed single execution of a certain activity at a given point in time. In a single node Mendix Runtime, this could be guaranteed by using JVM locks. However, in a distributed scenario, those JVMs run on different machines, so there is no locking system available. Mendix does not support cluster-wide locking, either. If this cannot be circumvented, you might need to resort to an external distributed lock manager. However, keep in mind that locking in a distributed system is complex and prone to failure (for example, via lock starvation or lock expiration.).
+Some apps require a guaranteed single execution of a certain activity at a given point in time. In a single-node Mendix Runtime, this can be guaranteed with a lock which is local to a Java virtual machine (a JVM-local lock). In a cluster, you cannot set a JVM-local lock across the separate JVMs that make up the cluster.
+
+If the activity can be modeled as a microflow or Java action, you can use a [Task Queue](/refguide10/task-queue/) with a cluster-wide scope and a single thread to guarantee it runs on only one node at a time (see [Limitations](/refguide10/task-queue/#limitations) in *Task Queue*). Keep in mind that this is an at-least-once guarantee rather than a strict exactly-once guarantee: if the node running the task fails, another node picks it up and reruns it, so the activity must be idempotent (safe to run multiple times with the same parameters). For details, see [Behavior If App Stops Unexpectedly](/refguide10/task-queue/#behavior-if-app-stops-unexpectedly) in *Task Queue*.
+
+Mendix Runtime does not provide a cluster-wide locking mechanism for other cases, for example holding a lock for an arbitrary duration around work that cannot be modeled as a queued task. In these cases, you need to use an external distributed lock manager. Keep in mind that locking in a distributed system is complex and prone to failure (for example, through lock starvation or lock expiration).
 
 {{% alert color="info" %}}
-For the reason described above, the **Disallow concurrent execution** property of a microflow only applies to a single node.
+The **Disallow** property in the [Concurrent Execution Section](/refguide10/microflow/#concurrent) of a microflow is implemented as a JVM-local lock. It prevents the microflow from being executed more than once at the same time on a single node, but it does not prevent the same microflow from running concurrently on different nodes of a cluster. To guarantee single execution across the cluster, use a cluster-wide Task Queue instead, as described above.
 {{% /alert %}}
 
 ## Dirty State in a Cluster

@@ -42,8 +42,18 @@ All services listed in the table below use the HTTPS protocol (port 443).
 |-----|-------------|
 | `https://interactor-bridge.private-cloud.api.mendix.com` | Websocket based main communication API |
 | `https://package-store-prod-2.s3-accelerate.amazonaws.com/` | Registry for downloading MDA artifacts |
-| `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |
+| `https://registry.mendix.com` | OCI registry with Mendix Operator container images |
+| `https://private-cloud.registry.mendix.com` | Legacy OCI registry with Mendix Operator container images |
 | `https://subscription-api.mendix.com` | Service to verify call-home license |
+| `https://privatecloud.mendixcloud.com` | Private Cloud Portal (used to register names of Storage Plans) |
+
+{{% alert color="info" %}}
+The `private-cloud.registry.mendix.com` container registry will be decommissioned on August 1, 2027.
+
+Starting from Mendix Operator version 2.29.0, new namespaces will use `registry.mendix.com/private-cloud` by default. If your network blocks access to `https://registry.mendix.com`, you can manually switch to the legacy registry by running the `mxpc-cli` **Configuration Tool** with a `--registry private-cloud.registry.mendix.com` flag.
+
+In Helm chart installations, you can switch to the `private-cloud.registry.mendix.com` registry by using the **Custom OCI Registry** configuration option.
+{{% /alert %}}
 
 ## Creating a Cluster and Namespace {#create-cluster-namespace}
 
@@ -174,16 +184,16 @@ spec:
 
 At the moment, the `baseOSImageTagTemplate` can be set to one of the following values:
 
-* `ubi8-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 8 Micro images; this option can be used for some cases where backward compatibility is needed.
+* `ubi8-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 8 Micro images; this is a legacy option and will no longer be supported after March 1, 2027.
 * `ubi9-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 9 Micro images; this is the default option.
 * `hi-1-jre{{.JavaVersion}}-entrypoint` - to use [Red Hat Hardened Images](https://www.redhat.com/en/products/hardened-images)
 
 {{% alert color="info" %}}
-If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA. Because of that, Java 17 or Java 21-based applications should use the Operator in version 2.15.0 or above.
+If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA. Because of that, Java 17, Java 21 or Java 25-based applications should use the Operator in version 2.15.0 or above.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Red Hat Hardened Images do not provide images for Java 8, 11, or 17. Only Java 21 is supported at the moment.
+Red Hat Hardened Images do not provide images for Java 8, 11, or 17. Only Java 21 and 25 are supported at the moment.
 
 To use Hardened Images, upgrade to Mendix 11, or any supported LTS version of Mendix.
 {{% /alert %}}

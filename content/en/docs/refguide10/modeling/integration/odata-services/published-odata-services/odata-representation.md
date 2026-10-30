@@ -23,11 +23,13 @@ This document describes how entities are represented in a published OData servic
 | Integer  | Edm.Int64 | 50 | 50 |
 | Long ¹ | Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | String ³ | Edm.String | John | John |
+| String exposed as GUID ⁵ | Edm.Guid | 1B4E28BA-2FA1-11D2-883F-0016D3CCA427 | 1b4e28ba-2fa1-11d2-883f-0016d3cca427 |
 
 <small>¹ When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).<br />
 ² Even though the binary data type is not supported, the FileDocument and Image system entities are supported and represented as Base64-encoded strings with the `Edm.Binary` type.<br />
-³ When the string attribute has a limited length, the `MaxLength` attribute is specified. </small>
-⁴ In Studio Pro 9.23 and below, all enumeration attributes were published as strings.
+³ When the string attribute has a limited length, the `MaxLength` attribute is specified.<br />
+⁴ In Studio Pro 9.23 and below, all enumeration attributes were published as strings.<br />
+⁵ Available in Studio Pro 10.12 and above. For more information, see the [Exposed As](/refguide10/published-odata-attribute/#exposed-as-guid) section of *Published OData Attribute*.</small>
 
 Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not published, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
 

@@ -37,7 +37,19 @@ The type of the attribute.
 
 ### Exposed As {#exposed-as}
 
-This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData v4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
+This field is shown in the following cases:
+
+* The type is an enumeration that was previously exposed as a string (only for OData v4). Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
+* The type is a string (only for OData v4). Change the value to **GUID** to publish the string attribute as a GUID. For more information, see the [Exposing a String Attribute as a GUID](#exposed-as-guid) section below.
+
+#### Exposing a String Attribute as a GUID {#exposed-as-guid}
+
+When you expose a string attribute as a GUID, the following applies:
+
+* The attribute must be a string with unlimited length or a maximum length of at least 36 characters, and store GUIDs in a format such as `1b4e28ba-2fa1-11d2-883f-0016d3cca427`.
+* If the value stored at runtime cannot be parsed as a GUID, the runtime throws an error.
+* Clients can specify GUIDs in uppercase or lowercase letters. The runtime always returns GUIDs in lowercase letters.
+* If a `POST` or `PUT` request attempts to set a value that is not a GUID, the runtime returns a `422` status code.
 
 ### Capabilities
 

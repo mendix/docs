@@ -41,7 +41,7 @@ Database synchronization is coordinated across cluster nodes depending on how Me
 
 Besides the startup activities described above, Mendix Runtime nodes also perform the following recurring cluster management activities. These run independently of the leader-based or leaderless startup model, and are not tied to a single designated node:
 
-* **Session cleanup handling** – each node expires its own sessions from its local cache (meaning, not being used for a configured timespan); removing expired sessions from the database is handled by an arbitrary cluster node, based on when each session was last active
+* **Session cleanup handling** – removing expired sessions from the database is handled by an arbitrary cluster node
 * **Cluster node expiration handling** – every node independently removes other cluster nodes that have expired (meaning, not giving a heartbeat for a configured timespan)
 * **Background job expiration handling** – removing data about background jobs after the information has expired (meaning, older than a specific timespan) is handled by an arbitrary cluster node
 * **Unblocking blocked users** is handled by an arbitrary cluster node
@@ -50,7 +50,7 @@ Besides the startup activities described above, Mendix Runtime nodes also perfor
 
 ## Cluster Startup {#cluster-startup}
 
-Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app, the whole cluster is restarted, and the database may need to be synchronized with the updated Domain Model, as described in [Cluster Leader and Cluster Followers](#cluster-leader-follower) above. This means that there might be some downtime while this is done.
+Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app the whole cluster should be restarted, and the database may need to be synchronized with the updated Domain Model, as described in [Cluster Leader and Cluster Followers](#cluster-leader-follower), above.
 
 Once database synchronization has finished, all the cluster nodes become fully functional. If no database synchronization is required, all the cluster nodes become fully functional directly after startup.
 

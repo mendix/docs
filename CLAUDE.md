@@ -120,15 +120,13 @@ Hugo shortcodes start with `{{`. Some common ones:
   {{% /alert %}}
   ```
 
-* `button` – Link buttons with `color`, `href`, `text`, and optional `title`.
 * `icon` – Inline SVG icons stored in `static/mx-icons` (`name` required, optional `color`) for use in UI descriptions.
-* `youtube` / `vidyard` – Embed videos by ID.
-* `swaggerui` / `swaggerui-disable-try-it-out` – Render OpenAPI specs on pages with `type:swagger`.
-* `snippet` – Include external code or page content.
-* `tabpane` / `tab` – Create tabbed code examples.
-* `todo` – Internal draft notes; omitted in production.
 
-For comprehensive shortcode examples and edge cases, read `community-tools/contribute-to-mendix-docs/markdown-shortcodes.md`.
+  ```md
+  Click **Delete** ({{< icon name="trash-can" >}}).
+  ```
+
+Less common shortcodes (`button`, `youtube`, `vidyard`, `swaggerui`, `snippet`, `tabpane`, `tab`, `todo`) are documented in `community-tools/contribute-to-mendix-docs/markdown-shortcodes.md`. Read it before using or editing one.
 
 ## Editorial Workflow
 

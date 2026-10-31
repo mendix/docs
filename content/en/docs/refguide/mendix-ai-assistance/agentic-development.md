@@ -113,7 +113,7 @@ The following practices help you get reliable results from Maia and other agents
 
 ### Start with Clear Intent
 
-Describe the outcome you want and the context in which it is used. If you work with user stories, use them as input. Maia Make supports story-based development and can generate app artifacts from existing user stories. For larger initiatives, use [Maia Plan](/developerportal/maia-plan/) to define the scope and solution before you build.
+Describe the outcome you want and the context in which it is used. If you work with user stories, use them as input. Maia Make supports story-based development and can generate app artifacts from existing user stories. For larger initiatives, use [Maia Spec](/developerportal/maia-spec/) to define the scope and solution before you build.
 
 For guidance on how to write effective prompts, see [Prompt Engineering](/agents/prompt-engineering/) and the [Best Practices](/refguide/maia-make/#best-practices) section of *Maia Make Capabilities*.
 

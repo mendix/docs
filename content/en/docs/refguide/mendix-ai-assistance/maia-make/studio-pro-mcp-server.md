@@ -12,7 +12,7 @@ description: "Describes the features in Studio Pro MCP Server."
 {{% alert color="info" %}}
 This feature is available from Studio Pro 11.10.
 
-To use Studio Pro MCP Server, you need an internet connection. The MCP Server runs locally on your workstation, so you do not need to be signed in to Studio Pro to use it. To use Mendix platform MCP servers, such as [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/), you need to authenticate with your Mendix account.
+To use Studio Pro MCP Server, you need an internet connection. The MCP Server runs locally on your workstation, so you do not need to be signed in to Studio Pro to use it. To use Mendix platform MCP servers, such as [Maia Spec as MCP Server](/developerportal/maia-plan-mcp/), you need to authenticate with your Mendix account.
 {{% /alert %}}
 
 Studio Pro MCP Server enables bring your own agent (BYO Agent) capabilities, allowing you to use Maia's capabilities directly from external clients, including AI coding assistants, agents, and other MCP-based LLM tools.
@@ -44,7 +44,7 @@ The external client works with Mendix documents, such as domain models and micro
 Use the Studio Pro MCP Server in the following situations:
 
 * You use an AI coding assistant for other work, such as code in other repositories, documentation, or tickets. With the MCP Server, you can use the same assistant for your Mendix app.
-* Your agent has access to other MCP servers, such as [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/). The agent can use information from these sources, then change your app through the Studio Pro MCP Server.
+* Your agent has access to other MCP servers, such as [Maia Spec as MCP Server](/developerportal/maia-plan-mcp/). The agent can use information from these sources, then change your app through the Studio Pro MCP Server.
 * You need an alternative to Maia Units. Requests from an external client use your own LLM provider account. For more information, see the [Maia Usage Limits](/refguide/mendix-ai-assistance/#maia-usage) section of *Mendix AI Assistance (Maia)*.
 
 ## Enabling the MCP Server

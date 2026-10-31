@@ -1,13 +1,13 @@
 ---
-title: "Maia Plan as MCP Server"
+title: "Maia Spec as MCP Server"
 url: /developerportal/maia-plan-mcp/
-description: "Describes how to configure and use Maia Plan as an MCP server to retrieve project scope and solution content."
+description: "Describes how to configure and use Maia Spec as an MCP server to retrieve project scope and solution content."
 weight: 2
 ---
 
 ## Introduction
 
-The Maia Plan MCP Server provides read-only access to selected Maia Plan artifacts through the Model Context Protocol (MCP). External MCP clients can retrieve plan content, including project scope and project solution, including epics and stories.
+The Maia Spec MCP Server provides read-only access to selected Maia Spec artifacts through the Model Context Protocol (MCP). External MCP clients can retrieve plan content, including project scope and project solution, including epics and stories.
 
 The MCP server has the following key characteristics:
 
@@ -20,9 +20,9 @@ The MCP server has the following key characteristics:
 
 ## Prerequisites
 
-Before you can use the Maia Plan MCP Server, you need the following:
+Before you can use the Maia Spec MCP Server, you need the following:
 
-* Access to at least one Maia Plan project in Mendix Portal.
+* Access to at least one Maia Spec project in Mendix Portal.
 * A personal access token (PAT) with the appropriate scopes. For details on how to create and configure your PAT, refer to:
 
     * The [Personal Access Tokens](/portal/user-settings/#pat) section of the *User Settings* page
@@ -32,20 +32,20 @@ Before you can use the Maia Plan MCP Server, you need the following:
 
 ## Configuring the MCP Server {#configure}
 
-To connect your MCP client to the Maia Plan MCP Server, configure the server URL and authentication method.
+To connect your MCP client to the Maia Spec MCP Server, configure the server URL and authentication method.
 
 ### Server Configuration
 
 Configure your MCP client with the following server details:
 
 * **Protocol** – The server uses the standard MCP protocol over HTTPS.
-* **URL** – The Maia Plan MCP Server endpoint URL, which is `https://plan.home.mendix.com/mcp-server/mcp`.
+* **URL** – The Maia Spec MCP Server endpoint URL, which is `https://plan.home.mendix.com/mcp-server/mcp`.
 
 ### Authentication {#authentication}
 
-The Maia Plan MCP Server requires authentication using a personal access token (PAT).
+The Maia Spec MCP Server requires authentication using a personal access token (PAT).
 
-Create a PAT with the `mx:plan:v1:read` scope for Maia Plan access. For details on how to create and configure your PAT, refer to:
+Create a PAT with the `mx:plan:v1:read` scope for Maia Spec access. For details on how to create and configure your PAT, refer to:
 
 * The [Personal Access Tokens](/portal/user-settings/#pat) section of the *User Settings* page
 * [Setting Up Your Personal Access Token](/apidocs-mxsdk/mxsdk/set-up-your-pat/)   
@@ -72,14 +72,14 @@ The steps to configure your MCP client depend on the client you are using. The f
 
 #### Configuring Claude Code
 
-To configure Claude Code to connect to the Maia Plan MCP Server, follow these steps:
+To configure Claude Code to connect to the Maia Spec MCP Server, follow these steps:
 
 1. Open your Claude Code configuration file. This is available at the following paths:
 
     * Windows: `C:/Users/<YourUsername>/.claude/settings.json`
     * macOS/Linux: `~/.claude/settings.json`
 
-2. Add the Maia Plan MCP Server to the list of available MCP servers and specify the server URL and authentication method (using the `MENDIX_TOKEN` environment variable). To do that, add the following server configuration:
+2. Add the Maia Spec MCP Server to the list of available MCP servers and specify the server URL and authentication method (using the `MENDIX_TOKEN` environment variable). To do that, add the following server configuration:
 
     ```json
     {
@@ -106,14 +106,14 @@ For detailed instructions, refer to the [Claude Code documentation](https://clau
 
 #### Configuring Visual Studio Code Copilot {#configuring-visual-studio-code-copilot}
 
-To configure Visual Studio Code Copilot to connect to the Maia Plan MCP server, follow these steps:
+To configure Visual Studio Code Copilot to connect to the Maia Spec MCP server, follow these steps:
 
 1. Open the Visual Studio Code MCP configuration file:
 
     * User-level: `C:/Users/<YourUsername>/AppData/Roaming/Code/User/mcp.json`
     * Workspace-level (optional): `.vscode/mcp.json`
 
-2. Add the Maia Plan MCP Server to the list of available MCP servers and specify the server URL and authentication method (using the `MENDIX_TOKEN` environment variable). To do that, add the following server configuration:
+2. Add the Maia Spec MCP Server to the list of available MCP servers and specify the server URL and authentication method (using the `MENDIX_TOKEN` environment variable). To do that, add the following server configuration:
 
     ```json
     {
@@ -160,17 +160,17 @@ For other MCP clients, refer to the client documentation for instructions on add
 
 ## Available Tools {#tools}
 
-The Maia Plan MCP Server provides the following tools to be used by AI agents for retrieving plan data. You can communicate with AI agents using natural language.
+The Maia Spec MCP Server provides the following tools to be used by AI agents for retrieving plan data. You can communicate with AI agents using natural language.
 
 ### Get_Project_Plan {#get-plan}
 
-This tool is used by AI agents to search for Maia Plan projects using the project title, the project ID, or keywords. The tool returns a sorted list of accessible plans, along with their UUIDs. You can use a plan's UUID to retrieve plan details using the `Get_Plan_Content` tool.
+This tool is used by AI agents to search for Maia Spec projects using the project title, the project ID, or keywords. The tool returns a sorted list of accessible plans, along with their UUIDs. You can use a plan's UUID to retrieve plan details using the `Get_Plan_Content` tool.
 
 The tool only returns plans for projects you have permission to view. If you do not have access to a project, it does not appear in the search results.
 
 #### Input
 
-Enter one or more of the following to search for a Maia Plan project:
+Enter one or more of the following to search for a Maia Spec project:
 
 * `projectID` – The project's UUID. 
 * `query` – A search string. The `query` field must not exceed 500 characters, and is best for a title match.
@@ -192,7 +192,7 @@ If validation fails, a plain string is returned, not a JSON object.
 
 ### Get_Plan_Content {#get-content}
 
-This tool is used by AI agents to retrieve the full content of a specific Maia Plan project by UUID. The tool returns a structured JSON that includes the project scope and/or the solution (epics, stories, acceptance criteria).
+This tool is used by AI agents to retrieve the full content of a specific Maia Spec project by UUID. The tool returns a structured JSON that includes the project scope and/or the solution (epics, stories, acceptance criteria).
 
 Keep in mind the following:
 
@@ -216,7 +216,7 @@ The tool returns the selected sections as a JSON string.
 
 ## How It Works {#how-it-works}
 
-The following steps describe how the Maia Plan MCP Server processes requests:
+The following steps describe how the Maia Spec MCP Server processes requests:
 
 1. An MCP client calls one of the available tools and includes an `Authorization` header with a bearer token, which is your personal access token.
 2. The server validates the token and identifies you.
@@ -226,7 +226,7 @@ The following steps describe how the Maia Plan MCP Server processes requests:
 
 ## Security and Access Control {#security}
 
-The Maia Plan MCP Server enforces the following security measures:
+The Maia Spec MCP Server enforces the following security measures:
 
 * Authentication required – All requests must include a valid bearer token (personal access token) in the authorization header.
 * Project-level authorization – Access is checked for each project. You can only retrieve data for projects you have permission to view in Mendix Portal.

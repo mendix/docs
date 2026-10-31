@@ -41,7 +41,7 @@ Maia is available at each stage of the application lifecycle. In Studio Pro, Mai
 | Lifecycle Stage | How Maia Helps | Capabilities |
 | --- | --- | --- |
 | Discover and learn | Explains Mendix concepts and answers development questions. | <ul><li>[Maia Learn](/refguide/maia-learn/)</li><li>[Maia Make](/refguide/maia-make/)</li> |
-| Plan and design | Turns an app idea into a project scope, epics, and user stories. |  <ul><li>[Maia Plan](/developerportal/maia-plan/)</li><li>[Create Story with Maia and Refine Story with Maia](/portal/maia/#maia-capabilities-in-mendix-portal)</li> |
+| Plan and design | Turns an app idea into a project scope, epics, and user stories. |  <ul><li>[Maia Spec](/developerportal/maia-spec/)</li><li>[Create Story with Maia and Refine Story with Maia](/portal/maia/#maia-capabilities-in-mendix-portal)</li> |
 | Generate the app | Generates a first version of an app from a description, an image, a PDF, or a plan. |  <ul><li>[Start with Maia](/refguide/start-with-maia/)</li><li>[Maia Make](/refguide/maia-make/)</li> |
 | Model data | Generates and changes domain models, view entities, enumerations, and OQL queries. | <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Domain Models in Maia Make](/refguide/maia-for-domain-model/)</li><li>[OQL in Maia Make](/refguide/maia-for-oql/)</li>  |
 | Create logic | Generates and changes microflows, recommends the next activity in a flow, and builds validation logic. | <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Logic Recommender](/refguide/logic-recommender/)</li><li>[Validation Assist](/refguide/validation-assist/)</li> |
@@ -51,7 +51,7 @@ Maia is available at each stage of the application lifecycle. In Studio Pro, Mai
 | Understand and get guidance | Explains existing documents and consistency errors, and applies your team conventions. |  <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Maia Explain](/refguide/maia-explain/)</li><li>[Agent Instructions](/refguide/maia-agent-instructions/)</li><li>[Agent Skills](/refguide/maia-agent-skills/)</li>|
 | Improve quality | Detects anti-patterns, explains their impact, and fixes some of them automatically. Explains and solves consistency errors. |  <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Best Practice Recommender](/refguide/best-practice-recommender/)  |
 | Localize | Creates and updates translations of the texts in your app (Studio Pro 11.15 and above). | <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Translation Generator](/refguide/translation-generator/)</li>  |
-| Work with external AI agents | Lets external AI agents use Maia capabilities, and lets Maia use your own AI provider. | <ul><li>[Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)</li><li>[Maia Plan as MCP Server](/developerportal/maia-plan-mcp/)</li><li>[Custom AI provider](/refguide/maia-make/#custom-provider) (beta)</li>   |
+| Work with external AI agents | Lets external AI agents use Maia capabilities, and lets Maia use your own AI provider. | <ul><li>[Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)</li><li>[Maia Spec as MCP Server](/developerportal/maia-plan-mcp/)</li><li>[Custom AI provider](/refguide/maia-make/#custom-provider) (beta)</li>   |
 | Operate and evolve | Summarizes application logs, organizes end-user feedback, and changes existing documents for new requirements. | <ul><li>[AI Log Summary](/developerportal/maia-operate/ai-log-summary/) (beta)</li><li>[Maia for Feedback](/portal/maia/#maia-capabilities-in-mendix-portal)</li><li> [Maia Make](/refguide/maia-make/)</li> |
 
 ## Ways to Work with Maia {#ways-to-work}
@@ -137,7 +137,7 @@ For an overview of how these options work together, see [Using Maia with Externa
 
 ## Maia in Mendix Portal
 
-[Maia in Mendix Portal](/portal/maia/) supports the planning and collaboration stages of the lifecycle. You can use Maia Plan to turn an app idea into a project scope and solution, create and refine user stories, organize end-user feedback, and ask questions in Maia Chat. 
+[Maia in Mendix Portal](/portal/maia/) supports the planning and collaboration stages of the lifecycle. You can use Maia Spec to turn an app idea into a project scope and solution, create and refine user stories, organize end-user feedback, and ask questions in Maia Chat. 
 
 ## Maia in Mendix Cloud
 

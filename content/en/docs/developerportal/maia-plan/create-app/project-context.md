@@ -1,8 +1,10 @@
 ---
 title: "Adding Project Context"
-url: /developerportal/maia-plan/project-context/
-description: "Describes the project context step of creating an app with Maia Plan."
+url: /developerportal/maia-spec/project-context/
+description: "Describes the project context step of creating an app with Maia Spec."
 weight: 10
+aliases:
+    - /developerportal/maia-plan/project-context/
 ---
 
 ## Introduction
@@ -27,4 +29,6 @@ Providing context is the foundation for Maia to build your project plan. Give Ma
     * **Use the latest version**
     * **Use a starter app with a predefined Studio Pro version**
 
-5. Click **Generate Plan**.
+5. Click **Create Plan**.
+
+Maia analyzes the context in the background, and starts producing a scope.

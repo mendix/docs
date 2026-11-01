@@ -112,6 +112,7 @@ Before requesting conditional DNS forwarding, ensure that you fulfill the follow
 ###### Requesting Conditional DNS Forwarding
 
 To request conditional DNS forwarding, raise a support ticket with Mendix Support and provide the following information:
+
 * Environment names - Specify which Mendix on Azure environments need this configuration.
 * Domain suffixes - List the internal domains which your apps need to resolve (for example, `internal.yourcompany.com`, `onprem.company.local`).
 * DNS server IP addresses - List the IP addresses of your organization's DNS servers that should receive forwarded queries.

@@ -121,7 +121,7 @@ helm install myapp . \
   -n <namespace>
 ```
 
-3. To preview the generated Kubernetes resources before deployment, run the following command:
+1. To preview the generated Kubernetes resources before deployment, run the following command:
 
 ```text
 helm template myapp . \

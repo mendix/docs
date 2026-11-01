@@ -38,7 +38,7 @@ To connect your Mendix application to Amazon Athena with the External Database c
 3. Rerun your app to load the driver.
 4. Run the [Connect to Database wizard](/appstore/modules/external-database-connector/#configuration), selecting **Other** as the database type, and provide the following configuration parameters:
 
-    *  **JDBC Connection String** - Provide the JDBC URL. You can create it using the following template:
+    * **JDBC Connection String** - Provide the JDBC URL. You can create it using the following template:
 
         ```text
         jdbc:awsathena://athena.eu-central-1.amazonaws.com:443;AwsRegion=<AWS-REGION>;Workgroup=<ATHENA-WORGROUP>;S3OutputLocation=<S3-LOCATION-FOR-QUERY-RESULTS>

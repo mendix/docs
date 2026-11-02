@@ -85,7 +85,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 
 Updating a native app can take several days because Apple must review each app store release. During this time, both the old and the new version of the app must keep working.
 
-To solve this, split the release of the feature into two steps. First, use an OTA update to build and prepare the feature while it stays hidden from users. Then, use a small app store release to turn the feature on. Because the app store release only changes a small setting instead of the feature itself, it does not require any other changes to the model. This keeps the old and the new version of the app compatible with each other while the release is under review.
+To solve this, split the release of the feature into two steps. First, use an OTA update to build and prepare the feature while it stays hidden from users. See further in the document for OTA update instructions. Then, use a small app store release to turn the feature on. Because the app store release only changes a small setting instead of the feature itself, it does not require any other changes to the model. This keeps the old and the new version of the app compatible with each other while the release is under review.
 
 You can hide a feature with a nanoflow decision or a conditional visibility setting. A good way to control this is with a constant that is exposed to the client. You can turn the feature on or off by setting the constant to a different value per environment, or by changing its default value in a later deployment.
 

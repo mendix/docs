@@ -58,6 +58,6 @@ For more information, see the [Association Storage](/refguide/association-proper
 Before deciding to switch from an association table to a direct association, bear the following in mind:
 
 * Do not use direct associations in modules which are designed to be imported into apps (for example, Marketplace modules) as this could cause unexpected migrations in an app the module is being imported into.
-* Associations have to be rewritten to the database so migration can take a long time, especially where you have a large amount of data already stored in your database — Mendix has done some testing around this and you can find the results in [Association Storage Migration Time](/refguide/association-storage-migration-time/)
+* Associations have to be rewritten to the database so migration can take a long time, especially where you have a large amount of data already stored in your database—Mendix has done some testing around this and you can find the results in [Association Storage Migration Time](/refguide/association-storage-migration-time/)
 * Queries are not always faster, and might not be faster in your use case
 * If you have written any custom SQL that accesses Mendix tables directly, this might break, but existing XPaths and OQL queries will not be affected

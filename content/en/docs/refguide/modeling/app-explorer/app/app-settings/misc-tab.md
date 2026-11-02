@@ -48,6 +48,14 @@ For more information, including which types of association this applies to, see 
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
+### Default Sequence Flow Type {#default-flow-type}
+
+This setting determines the type of new sequence flows in the microflow, nanoflow, and rule editors: **Curved** or **Orthogonal** (right-angled). Because it is an app setting, it applies to new flows for everyone working on this app, regardless of whether the [Orthogonal Flows](/refguide/preferences-dialog/#microflow-nanoflow-rule-editor) preference is enabled. For more information, see the [Flow Type](/refguide/sequence-flow/#flow-type) section in *Sequence Flow*.
+
+{{% alert color="info" %}}
+This is a beta feature, available in Studio Pro 11.15 and above. To use it, you must first enable orthogonal flows in the **Preferences** dialog box. For more information, see [Enabling Orthogonal Flows](/refguide/sequence-flow/#enable-orthogonal) in *Sequence Flow*.
+{{% /alert %}}
+
 ### Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

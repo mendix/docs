@@ -5,6 +5,8 @@
         <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
     </head>
     <body class="td-{{ .Kind }}">
+        <!-- MvM - Include mx-dock at the top of all pages, except print versions -->
+        {{ partial "mx-dock.html" . }}
         {{/* NK - deactivation of original navbar 
         <header>
             {{ partial "navbar.html" . }}

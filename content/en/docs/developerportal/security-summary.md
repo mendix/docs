@@ -66,4 +66,4 @@ For information about security practices for app governance, refer to the follow
 
 ## Getting Support
 
-For additional information, frequently asked questions, and troubleshooting tis, refer to [Frequently Asked Questions – Security](/support/security-findings-faq/). If you have more questions, contact your Customer Success Manager (CSM), or join the [Mendix Community forum](https://community.mendix.com/p/community).
+For additional information, frequently asked questions, and troubleshooting tis, refer to [Frequently Asked Questions – Security](/support/security-findings-faq/). If you have more questions, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact, or join the [Mendix Community forum](https://community.mendix.com/p/community).

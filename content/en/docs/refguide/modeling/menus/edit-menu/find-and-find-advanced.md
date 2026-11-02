@@ -108,8 +108,6 @@ Double-click an item in the **Find Results** pane to open the corresponding docu
 
 Click **Lock results** in the **Find Results** pane to keep the current results. The next time you click **Find Usages**, the results display in a second **Find Results** pane. This allows you to keep several search results.
 
-
-
 ## Read More
 
 * [Go to Option](/refguide/go-to-option/)

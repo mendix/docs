@@ -33,7 +33,7 @@ If you exceed your subscription entitlements:
 
 * No immediate service disruption: Your applications continue to run normally.    
     Alert displayed: A warning icon appears in the end-of-month Usage Report in Control Center.
-* Compliance discussion: Your Customer Success Manager (CSM) will contact you to discuss:
+* Compliance discussion: Your Technical Account Manager, Specialized Account Executive, or Partner Contact will contact you to discuss:
 
     * Purchasing additional user subscriptions
     * Assessing user classification
@@ -63,7 +63,7 @@ Assign the Single-App User Subscription to your application in Control Center. F
 
 ### How Do I Assign a Single-App User Subscription to Multiple Applications With Unique User Bases?
 
-You must purchase a separate Single-App User Subscription for each application and assign them individually. Contact your CSM or account team to purchase additional subscriptions, if needed.
+You must purchase a separate Single-App User Subscription for each application and assign them individually. Contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to purchase additional subscriptions, if needed.
 
 ## User-Specific Questions
 

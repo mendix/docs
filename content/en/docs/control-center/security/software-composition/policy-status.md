@@ -14,5 +14,5 @@ The **Policy Status** tab lists the policies that apply to all apps in your land
 * **Package Name** – The name of the package which violated the policy.
 * **Environment Name** – If applicable, the name of the environment where the violating app package is deployed.
 * **Runtime** – The runtime version of the deployment package.
-* **Target Cloud** — The type of cloud where the deployment package is deployed.
+* **Target Cloud** – The type of cloud where the deployment package is deployed.
 * **Last Checked On** – The date when the policy was last checked.

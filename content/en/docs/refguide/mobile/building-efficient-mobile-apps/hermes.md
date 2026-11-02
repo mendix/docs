@@ -9,7 +9,7 @@ aliases:
 
 ## Introduction
 
-As Mendix applications grow in complexity and scale, optimizing performance is essential for a smooth user experience. The Hermes engine, an optimized JavaScript engine designed for React Native, offers significant performance enhancements — particularly in terms of application startup time and runtime efficiency. This guide will introduce the Hermes engine, describe its benefits, and explain its impact on code.
+As Mendix applications grow in complexity and scale, optimizing performance is essential for a smooth user experience. The Hermes engine, an optimized JavaScript engine designed for React Native, offers significant performance enhancements—particularly in terms of application startup time and runtime efficiency. This guide will introduce the Hermes engine, describe its benefits, and explain its impact on code.
 
 {{% alert color="info" %}}
 Hermes is enabled for all projects with no option to disable it.
@@ -19,9 +19,9 @@ Hermes is enabled for all projects with no option to disable it.
 
 The Hermes engine can provide substantial performance improvements for Mendix applications. Key benefits include:
 
-* **Faster Startup Times** — Hermes compiles JavaScript into bytecode ahead of time, reducing the time used to parse and execute JavaScript at startup.
-* **Reduced Memory Usage** — Hermes features efficient garbage collection and memory management, which can lead to lower memory consumption.
-* **Improved Execution Speed** — Hermes optimizes the execution of JavaScript, enhancing the performance of complex operations and interactions within the application.
+* **Faster Startup Times** – Hermes compiles JavaScript into bytecode ahead of time, reducing the time used to parse and execute JavaScript at startup.
+* **Reduced Memory Usage** – Hermes features efficient garbage collection and memory management, which can lead to lower memory consumption.
+* **Improved Execution Speed** – Hermes optimizes the execution of JavaScript, enhancing the performance of complex operations and interactions within the application.
 
 These performance gains are particularly noticeable in applications with extensive JavaScript logic or large data sets.
 

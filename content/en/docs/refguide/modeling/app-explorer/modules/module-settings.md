@@ -69,7 +69,11 @@ When the module is set as the solution module, it gets the letter **S** as an ic
 Version is available for all module types for Studio Pro 11.12 and above. In earlier versions of Studio Pro, version is available only for add-on and solution module types. 
 {{% /alert %}}  
 
-This is the version number of the module which is shown in various places in the Studio Pro user interface, as well as in the Marketplace. 
+This is the version number of the module which is shown in various places in the Studio Pro user interface, as well as in the Marketplace.
+
+{{% alert color="info" %}}
+Starting in Studio Pro 11.15, the module version appears next to the module name in the **App Explorer** tree. Regular modules show the version in brackets (for example, `[1.0.0]`). Marketplace modules that have a Marketplace version set show it with an `mp` prefix (for example, `[mp 3.2.1]`).
+{{% /alert %}}
 
 When redistributing a module, you should always change the version number when changes are made. For modules that will be published to the Marketplace, the version must be set before exporting the package.
 
@@ -108,6 +112,7 @@ Key improvements are delivered through new module properties and a new `manifest
 
 The **Package** section on the **General** tab displays package identification information for the module. Studio Pro uses this information to track modules across versions, which is the foundation for more reliable module updates.
 
+For more information on how to use package management when updating modules, see [Updating Marketplace Modules](/refguide/updating-marketplace-modules/).
 
 ### Module ID {#module-id}
 
@@ -177,6 +182,7 @@ Modules imported from the Marketplace are automatically set to **Marketplace mod
 ## Read More
 
 * [Modules](/refguide/modules/)
+* [Updating Marketplace Modules](/refguide/updating-marketplace-modules/)
 * [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
 * [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/)
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)

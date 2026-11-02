@@ -88,11 +88,11 @@ The top bar includes several key elements:
 **At the center of the screen** is the **working area**, where you'll see the currently open document tab. It's the main space within the IDE where you design, model, and configure application components visually. Think of it as the code editor in a text-based programming IDE.
 
 {{% alert type="info" %}}
-When you launch **Studio Pro** for the first time, you’ll see the **Welcom** tab. From here, you can access:
+When you launch **Studio Pro** for the first time, you’ll see the **Welcome** tab. From here, you can access:
 
 * [Maia Learn](/refguide/maia-learn/) – learning materials to help you get started
 
-* [Maia Chat](/refguide/maia-chat/) – an AI-powered assistant for quick support and guidance
+* [Maia Make](/refguide/maia-make/) – a group of agentic development capabilities in Studio Pro where you can describe your app requirements and get quick answers, support, and guidance in one conversation
 
 We recommend watching the introduction videos to get familiar with the basic concepts of Mendix development before you start building your app.
 {{% /alert %}}
@@ -145,11 +145,11 @@ You have created a new persistable entity called **Employee**. This means the en
     {{< figure src="/attachments/quickstarts/part1/7.2 CreateAttributes.png" width="450px" alt="Create attributes on an entity">}}
 
 {{% alert type="info" %}}
-You can create a domain model by simply describing your application using [Maia for Domain Model](/refguide/maia-for-domain-model/) an AI-powered tool that generates domain models based on your input.
+You can also create a domain model by describing your application to Maia. Maia generates the domain model based on your input. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/).
 
-To use it, **click Maia for Domain Model** in the **Working Area**, then describe your application in the chat box on the right.
+To use it in Studio Pro 11.8 and above, open the **View** menu and select the **Maia** pane, then describe your application in the chat. In Studio Pro 11.7 and below, click **Maia for Domain Model** in the **Working Area**, then describe your application in the chat box on the right.
 
-In our case, you can ask Maia: “Create a domain model that stores employee information: first name, last name, job role, and employee ID.” 
+In this case, you can ask Maia: “Create a domain model that stores employee information: first name, last name, job role, and employee ID.” 
 {{% /alert %}}
 
 ### Add an Association
@@ -253,6 +253,33 @@ To deploy your app to a cloud environment, you can hit **publish** to deploy you
 {{% alert type="info" %}}
 To deploy your app to the Mendix Cloud (Paid), there are multiple options for hosting. Please refer to this guide on [our hosting options](/developerportal/deploy/mendix-cloud-deploy/) for more information on which plan is best for your project.
 {{% /alert %}}
+
+## Build Faster with Maia
+
+Throughout this guide, you built your **Employee** app by hand—dragging entities onto the canvas, wiring up buttons, and writing microflow logic step by step. That is a great way to learn how Studio Pro works under the hood. But once you are comfortable with the basics, you do not have to do everything manually. Maia, Mendix's built-in AI assistant, can take over much of this repetitive modeling work for you.
+
+Unlike a traditional chatbot that only answers questions, Maia is agentic: it can use your app's existing domain model, pages, and logic as context to create or modify elements directly in Studio Pro. Through [Maia Make](/refguide/maia-make/), you can describe what you want in plain language, and Maia generates artifacts such as domain models, pages, microflows, workflows, and OQL queries. In the same conversation, you can ask development questions or use [Maia Explain](/refguide/maia-explain/) to understand existing functionality without changing your app.
+
+Studio Pro also includes recommenders that the next best widget or microflow activity as you build. For more advanced use cases, [Maia Agent Skills](/refguide/maia-agent-skills/) and [Agent Instructions](/refguide/maia-agent-instructions/) let you tailor Maia to your team's conventions, helping it produce suggestions that align with how your organization builds apps.
+
+### Try It Yourself: Extending the Employee App
+
+Put Maia to work on the app you just built. Right now, your **Employee** entity captures a job role as free text. Next, let us use Maia to turn that into a proper **Department** entity, linked to **Employee** along with an overview page:
+
+1. In Studio Pro, open **Maia Make** from the top bar.
+1. In the chat box, describe what you want:
+
+    > "Add a Department entity with a Name attribute. Create a one-to-many association from Department to Employee, so each employee belongs to one department. Then generate an overview page listing all departments with their employees, and add that page to the app's navigation."
+
+1. Maia will process the request and propose a set of changes—typically a new entity in your domain model, the association to Employee, a new page with a data grid, and a navigation entry linking to it. **Review** the proposed changes in the preview panel.
+1. Click **Accept** to apply the changes to your app. You will see the new **Department** entity appear in your App Explorer, already connected to Employee, along with a new item in your app's navigation menu.
+1. **Open** the generated page and run your app locally (<kbd>F5</kbd> ) to see the new **Department** overview—now reachable directly from the navigation menu—alongside your existing **Employee Overview** page. 
+
+{{% alert type="info" %}}
+You can keep iterating conversationally from here—for example, asking Maia to "add validation so a department name can't be empty" or "add a dropdown on the Employee page to select a department." Each request builds on the app state Maia already understands, so you do not need to re-explain your app every time.
+{{% /alert %}}
+
+As you get more comfortable, you can ask Maia to explain the microflow you built earlier (`Act_Employee_NewEdit`) to see how Maia summarizes logic you already created—a useful way to sanity-check your own work or onboard a teammate to the app quickly.
 
 ## Finished!
 

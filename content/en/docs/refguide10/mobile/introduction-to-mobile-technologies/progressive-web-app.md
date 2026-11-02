@@ -152,41 +152,10 @@ For more information on sessions and how to customize the timeout, see the [Sess
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide10/javascript-actions/) or [Pluggable Widgets](/howto10/extensibility/pluggable-widgets/).
 
-This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
-
-**Legend** — The symbols below correspond to the following definitions:
-
-* Fully compatible: {{< icon name="checkmark-circle-filled" color="green" >}}
-
-* Compatible only when using HTTPS protocol: {{< icon name="alert-triangle-filled" color="yellow" >}}
-
-* Not compatible: {{< icon name="remove-circle-filled" color="red" >}}
-
-| Feature | Chrome/Edge | Firefox | Safari |
-|---------|-----------|-------|------|
-| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
-| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
-| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
-| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
-| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
-| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-
-For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
-
-{{% alert color="warning" %}}
-In iOS, using the Camera feature (`MediaDevices` in [Mozilla's API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)) in any browser requires HTTPS.
-{{% /alert %}}
+The availability and behavior of these Web APIs may differ depending on the browser and operating system in use. For detailed compatibility information, refer to the [MDN Web API documentation](https://developer.mozilla.org/en-US/docs/Web/API).
 
 {{% alert color="info" %}}
-In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
+Certain device features, such as camera access on iOS or support for push notifications, require that your Progressive Web App is served over HTTPS. For local development and testing, you can use tools like [ngrok](https://ngrok.com/) to expose your local server via a secure HTTPS tunnel.
 {{% /alert %}}
 
 ## Troubleshooting

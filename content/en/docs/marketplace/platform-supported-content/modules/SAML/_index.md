@@ -26,16 +26,16 @@ Mendix also offers an [OIDC SSO](/appstore/modules/oidc/) module if you want to 
 The following use cases are supported by both the SAML and OIDC SSO modules:
 
 * Your app is designed for your company’s employees, and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP).
-* Authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS) — the SAML protocol allows for the encryption of all information transferred between the two servers, so, VPN connections, LDAP, or Kerberos authentication are no longer needed.
+* Authenticating against your Microsoft Active Directory server in a secure manner utilizing the SAML capabilities of Active Directory Federation Services (ADFS)—the SAML protocol allows for the encryption of all information transferred between the two servers, so, VPN connections, LDAP, or Kerberos authentication are no longer needed.
 
 The following use cases are supported by SAML:
 
 * Implementing SSO in your Mendix App through a Shibboleth Identity Provider.
 * Identifying the end-users of your Mendix app through SAML-enabled national identity schemes such as eHerkenning, a Dutch eID scheme for B2B or B2G scenarios, or DigiD, which gives Dutch citizens access to (semi) governmental services.
 
-    {{% alert color="info" %}}Some of these identity schemes use optional features of SAML, which are not yet supported in the SAML SSO module — see [Limitations](#limitations) for more information.{{% /alert %}}
+    {{% alert color="info" %}}Some of these identity schemes use optional features of SAML, which are not yet supported in the SAML SSO module. See [Limitations](#limitations) for more information.{{% /alert %}}
 
-* Authenticating within a Mendix session — for example, requiring end-users to re-authenticate shortly before they are allowed to do critical transactions in your app, or having a second user authenticate within the context of the first user’s session in your Mendix app.
+* Authenticating within a Mendix session, for example, requiring end-users to re-authenticate shortly before they are allowed to do critical transactions in your app, or having a second user authenticate within the context of the first user’s session in your Mendix app.
 * Single Logout is supported.
 
 ### Features
@@ -70,7 +70,7 @@ The Mendix SAML SSO supports the usage of SAML metadata in the following way:
 
 For easy configuration, the SAML module offers the following:
 
-* From version 4.0.0 of the SAML module, if you want to connect your Mendix application with a single IdP, you can do the necessary configurations at design time (using a microflow) and/or deploy time using Application Constants. This is described in the section [Non-default Configuration](/appstore/modules/saml/installation-configuration/#non-default).
+* From version 4.0.0 of the SAML module, if you want to connect your Mendix application with a single IdP, you can do the necessary configurations at design time (using a microflow) and/or deploy time using Application Constants. This is described in the section [Custom Configuration](/appstore/modules/saml/installation-configuration/#non-default).
 * You can create a custom SAML configuration microflow and share it across all SAML applications in your portfolio, such as using a custom module in your private marketplace. This approach makes SAML configurations both automatable and repeatable.
 * Runtime configuration by a local Admin is still available in the following cases:
 
@@ -105,7 +105,7 @@ Some SAML services, such as eHerkenning and DigID in the Netherlands, use option
 * RequestedAuthnContext in the SAML requests
 * HTTP-SOAP Logout Request
 
-If you need any of these features, contact your Mendix CSM to discuss the inclusion of these features on the Mendix roadmap or the customization of the SAML SSO module.
+If you need any of these features, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to discuss the inclusion of these features on the Mendix roadmap or the customization of the SAML SSO module.
 
 Versions of the SAML module below 3.5.0 are limited to a single key pair. If you are using one of those older versions and you want to connect your app to multiple SAML IdPs, you cannot use different key pairs and certificates for each of the SSO federations. Instead, you must use a single key pair and certificate for all SAML IdPs. The certificate can be either a self-signed certificate or a certificate issued by a certificate authority (CA). For more details, see the [Use a Certificate Issued by a Certificate Authority](/appstore/modules/saml/advanced-configuration/#use-ca) section of *Advanced Configuration for SAML*.
 

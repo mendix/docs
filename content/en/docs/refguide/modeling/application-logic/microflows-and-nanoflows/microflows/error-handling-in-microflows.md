@@ -151,6 +151,10 @@ In microflows that apply entity access, you may not be able to inspect the attri
 The `$latestError` variable is a special variable that does not behave like normal variables. This variable should not be returned as the result of a microflow to a nanoflow, page, or widget that calls it. Doing so will result in unexpected behavior.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+The Mendix Runtime does not support having multiple instances of `System.Error` or its specializations. If you want to store the information present in a System.Error object, copy the information to a separate entity that is not a specialization of `System.Error`.
+{{% /alert %}}
+
 ### Inspecting REST Errors
 
 If the error is a REST fault (an error that occurs as a result of a REST call), the result of the call will be stored in the `$latestHttpResponse` variable which is an object of type `HttpResponse`.  This object is available in your custom error flows and you can use it to write more focused messages to the log or to make other decisions within the error flow. For more information, see the [Response Tab](/refguide/call-rest-action/#response) section in *Call REST Service*.

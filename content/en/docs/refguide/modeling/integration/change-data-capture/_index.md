@@ -21,7 +21,7 @@ Read events are triggered as snapshots during startup or when a stream changes i
 
 The broker that receives these events is either the [Mendix Event Broker](/appstore/services/event-broker/) or a Bring Your Own Kafka (BYOK) cluster. For BYOK configuration details, see [Mendix Event Broker](/appstore/services/event-broker/).
 
-To move the streamed data to a destination (such as Azure Blob Storage or AWS S3), you configure an [Event Broker Bridge](/appstore/services/event-broker/#manage-mx-broker-bridge) separately in the Event Broker Manager after deployment.
+To move the streamed data to a destination (such as Azure Blob Storage or AWS S3), you configure an [Event Broker Bridge](/appstore/services/event-broker-bridges/) separately in the Event Broker Manager after deployment.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Change Data Capture is not available for Free Apps. A licensed Mendix Cloud envi
 
 * A licensed Mendix Cloud environment
 * A [Mendix Event Broker](/appstore/services/event-broker/) license, or a BYOK Kafka cluster configured as described in [Mendix Event Broker](/appstore/services/event-broker/)
-* An [Event Broker Bridge](/appstore/services/event-broker/#manage-mx-broker-bridge) configured in the Event Broker Manager if you want to route CDC events to external storage
+* An [Event Broker Bridge](/appstore/services/event-broker-bridges/) configured in the Event Broker Manager if you want to route CDC events to external storage
 
 ## Setting Up Change Data Capture
 
@@ -40,7 +40,7 @@ Set up a CDC service in Studio Pro by following the steps below:
 1. In Studio Pro, right-click a module in the App Explorer and choose **Add other** > **Change data capture service**.
 2. Select the entities to track and set an exposed name for each. For more information on configuring entities, see the [Entities to Track](/refguide/published-cdc-services/#entities) section of *Published CDC Services*.
 3. Deploy the app. The Runtime creates Kafka topics for each tracked entity automatically.
-4. In the [Event Broker Manager](https://broker.mendix.com/), configure an [Event Broker Bridge](/appstore/services/event-broker/#manage-mx-broker-bridge) to route CDC events to your destination.
+4. In the [Event Broker Manager](https://broker.mendix.com/), configure an [Event Broker Bridge](/appstore/services/event-broker-bridges/) to route CDC events to your destination.
 
 ## Runtime Configuration {#runtime-configuration}
 
@@ -102,4 +102,4 @@ For details on setting up a BYOK cluster with the Mendix Event Broker, see [Mend
 
 * [Published CDC Services](/refguide/published-cdc-services/)
 * [Mendix Event Broker](/appstore/services/event-broker/)
-* [Event Broker Bridges](/appstore/services/event-broker/#manage-mx-broker-bridge)
+* [Event Broker Bridges](/appstore/services/event-broker-bridges/)

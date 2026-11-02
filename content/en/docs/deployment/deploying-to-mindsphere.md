@@ -32,7 +32,7 @@ To help you with your first Insights Hub apps, there is also an example app whic
 To deploy and register your app within Insights Hub you need the following prerequisites.
 
 * An Insights Hub user account on a **Developer** or a **Start for Free** tenant
-* An Insights Hub developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin` — these are already granted on Start for Free tenants.
+* An Insights Hub developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin`—these are already granted on Start for Free tenants.
 * [Mendix Studio Pro](https://marketplace.mendix.com/)
 
 The following are also required if you want to deploy and run the Mendix app on Insights Hub Cloud Foundry:

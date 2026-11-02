@@ -15,7 +15,7 @@ You can restore a backup that has been stored in Mendix Cloud, associated with t
 For licensed nodes, it is also possible to restore a backup that has been stored locally. For example, you can restore a backup that has been [downloaded from Mendix Cloud](/developerportal/operate/download-backup/).
 
 {{% alert color="info" %}}
-You can only restore a backup if you have **Access to Backups** permissions for the target node. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
+You can only restore a backup if you have **Backups Access** permissions for the target node. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 {{% /alert %}}
 
 ## Important Notes

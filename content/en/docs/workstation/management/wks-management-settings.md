@@ -12,7 +12,7 @@ Navigate to the **Settings** page in a workspace to configure settings that are 
 
 ## Log Settings
 
-The Workstation Client always stores logs to the file system it is installed on (for more information, see [Troubleshooting the Workstation Client](/mendix-workstation/troubleshooting-workstation-client/)). No logs are send to the Workstation Management. However, you can configure the log level and retention policy of all the Workstation Clients that are registered to stations in the workspace.
+The Workstation Client always stores logs to the file system it is installed on (for more information, see [Troubleshooting the Workstation Client](/mendix-workstation/troubleshooting-workstation-client/)). No logs are sent to the Workstation Management. However, you can configure the log level and retention policy of all the Workstation Clients that are registered to stations in the workspace.
 
 ### Log Level
 
@@ -41,7 +41,7 @@ The **Check Interval** setting is only available when the auto-refresh mode is e
 
 ## Local Device Testing
 
-When enabled, this allows local device communication between the Workstation Client and Workstation Management App to use the **Test Your Station** feature of Studio Pro. You can use this option to test your devices.
+When enabled, this allows local device communication between the Workstation Client and Workstation Management to use the **Test Your Station** page. You can use this option to test your devices.
 
 ## Delete Workspace
 

@@ -83,7 +83,7 @@ If the **Select / deselect all** box is checked (that is, all roles are manageab
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Internally, user management properties are translated into implicit entity access rules for **System.User**. This means that they are not applied in microflows that do not check entity access.
+Internally, user management properties are translated into implicit entity access rules for **System.User**. These implicit rules are not applied when a microflow runs with [Apply entity access](/refguide/microflow/#security) enabled as only explicitly configured entity access rules are checked.
 {{% /alert %}}
 
 ### What Can User Roles Manage?

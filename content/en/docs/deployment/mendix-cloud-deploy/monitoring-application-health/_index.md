@@ -206,16 +206,6 @@ Warning Threshold | Not used.
 Critical Threshold | If the JVM process has run out of memory and the application's JVM crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.
 
-## Basic License
-
-### Database Errors In the Log
-
-You might see database connection errors in your app logs. For example, you might see something like "ERROR - ConnectionBus: Error occurred on rollback database transaction. This connection has been closed." You do not have to do anything; your app will continue to work as expected.
-
-The reason you receive a message is that when you are using a [basic license](/developerportal/deploy/basic-package/), you get your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will cause these error messages.
-
-The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
-
 ## Read More
 
 * [Metrics](/developerportal/operate/metrics/)

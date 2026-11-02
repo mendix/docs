@@ -437,7 +437,7 @@ Hyphenate for the verb.
 
 ## role
 
-Do not capitalize job roles (for example, "business developer") unless they are Mendix user roles (for example, "Business Engineer," "SCRUM Master") or Mendix-internal titles (for example, "Product Manager" and "Customer Success Manager" for referring to communication between the Mendix community and Mendix).
+Do not capitalize job roles (for example, "business developer") unless they are Mendix user roles (for example, "Business Engineer," "SCRUM Master") or Mendix-internal titles (for example, "Product Manager" and "Technical Account Manager" for referring to communication between the Mendix community and Mendix).
 
 ## SQL
 

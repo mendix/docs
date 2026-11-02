@@ -11,7 +11,7 @@ aliases:
 
 With the Charts widget, you can plot data that comes from a REST service.
 
-The widget does not call a REST service itself. Its data source accepts a database query (a microflow, a nanoflow, or an association) so you retrieve the REST data in a microflow and point the chart at that microflow.
+The widget does not call a REST service itself. Its data source can be **Database**, **Microflow**, **Nanoflow**, or **Association**, so you retrieve the REST data in a microflow and use that microflow as the data source.
 
 This how-to teaches you how to do the following:
 
@@ -41,9 +41,9 @@ For more information on publishing a REST API refer to this Mendix document: [Pu
 1. Create a new Module in your app.
 1. Rename the module to *ChartsREST*.
 1. Open the Domain model.
-1. Create **Value** and **Series** entities with the attributes and association shown in the picture below.
+1. Create **Value** and **Series** entities with the attributes and association shown below:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-domain.png" alt="Chart Rest Domain" class="no-border" >}}  
-1. Right-click **Value** and select **Generate overview pages...**.
+1. Right-click **Value** and select **Generate overview pages**:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-create/charts-rest-generate-overview-pages.png" alt="Chart Rest Enter Data" class="no-border" >}}
 1. Add the **Value_NewEdit** page generated to your navigation.
 1. Run the app.
@@ -56,20 +56,20 @@ To use data from a model in the REST service, you need to create a JSON structur
 
 ### Creating the Structure
 
-1. Create a **JSON Structure**  
+1. Create a **JSON Structure**:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/chart-series-json-structure.png" alt="Charts Rest MD" class="no-border" >}}
 
 ### Configuring the REST Service
 
 To configure the REST service, follow these steps:
 
-1. Add **Published REST service**.
+1. Add **Published REST service**:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-publish.png" alt="Charts Rest Publish" class="no-border" >}}
 
-1. Add REST Service **Microflow**.
+1. Add REST Service **Microflow**:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-microflow.png" alt="Charts Rest Microflow" class="no-border" >}}
 
-1. Add **Export mapping**.
+1. Add **Export mapping**:
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-export-mapping.png" alt="Charts Rest Export Mapping" class="no-border" >}}
 
 ## Retrieving the REST Data in a Microflow
@@ -92,12 +92,12 @@ To plot the retrieved data, follow these steps:
 
 1. Create a page in your app containing an **Area chart** widget.
 1. Double-click the **Area chart** widget to open its properties.
-1. On the **General** tab, in the **Data source** section, add a new **Series** item.
-1. In the **General** section of the series, leave **Data set** set to **Single series**.
+1. On the **General** tab, in the **Data source** section, click **New** in the **Series** list. The **Edit Series Item** dialog box opens.
+1. On the **General** tab of the dialog box, leave **Data set** set to **Single series**.
 1. Set **Data source** to **Microflow** and select *DS_ValuesFromREST*.
 1. Set **Series name** to the text that should appear in the legend.
 1. Select the **X axis attribute** and the **Y axis attribute**.
-1. Run your app and view the chart.
+1. Run your app and view the chart:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-basic-rest/charts-rest-area-chart.png" alt="Area chart plotting data retrieved from a REST service" class="no-border" >}}
 

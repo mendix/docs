@@ -8,7 +8,7 @@ weight: 60
 
 ## Introduction
 
-This section details how to configure various device types in Workstation Management, along with the specific message syntax required for Mendix applications to communicate with the device through the Workstation Client.
+This section details how to configure various device types in Workstation Management. For the message syntax that Mendix applications use to communicate with a device through the Workstation Connector, see [Device Message Syntax](/mendix-workstation/device-syntax/).
 
 ## Device Connectivity
 
@@ -22,30 +22,60 @@ Before connecting devices with Mendix Workstation, perform the following steps:
     * For TCP/IP connection - IP address and port.
 
 4. Obtain the manual and technical documentation for your devices, including chapters describing the communication protocol and how to configure it.
-5. Test the connection and protocol on your operating system using the tool recommended in the device technical documentation or using common tool such as PuTTY.
+5. Test the connection and protocol on your operating system using the tool recommended in the device technical documentation or using a common tool such as PuTTY.
     * For Serial Port connection - Open the device and test device basic commands.
     * For TCP/IP connection - Ping the device to make sure that it is reachable on the network and not blocked by a firewall, and then test the basic device commands.
 
-## Card Readers
+## Device Classes {#device-classes}
 
-Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 
+A device class is a label that you assign to devices in order to group the ones that fulfil the same role. For example, you can give every barcode scanner in the workspace the *Scanner* class, even when the stations name their scanners differently.
 
-Auto detecting card readers is disabled by default. You can enable this setting on a **Station** page by selecting **Detect Card Readers**. 
+Device classes are defined per workspace and are available to every station in that workspace. You assign a class in the **Device Class** field while adding or editing a device. All device types support classes, and the field is always optional.
 
-### Message Syntax {#card-readers}
+Because the class identifies a device by role rather than by name, a Mendix application can address the same kind of device on every station without knowing the individual device names. In the Workstation Connector, the `deviceClass` parameter of the `GetCreateDevice` JavaScript action refers to this value. For more information, see [Developing an App with the Workstation Connector](/mendix-workstation/develop-app/).
 
-This device type requires the following message and response:
+### Managing Device Classes
 
-#### Message
+To review the device classes of a workspace, click **Device Classes** in the workspace menu. The overview lists each class together with the number of **Devices** that use it.
 
-Send instruction in hexadecimal as a string, for example, *FFCA000000* to read the smart card ID. The messages exchanged with the smart card are APDU messages. For more information, refer to the documentation of the APDU command for your smart card reader.
+From this page you can perform the following actions:
 
-#### Response
+* **Create Device Class** - Click **Create Device Class**, enter a name in the **Device Class Name** field, and then click **Create Device Class**.
+* **Rename Device Class** - Click the three-dot menu of the class, and then click **Rename Device Class**.
+* **Delete Device Class** - Click the three-dot menu of the class, and then click **Delete Device Class**.
 
-* `0#` - Card connected
-* `1#` - Card disconnected
-* `2# Response` - Response from device as raw hexadecimal.
-* `3# Error` - Error message from device.
+{{% alert color="warning" %}}
+Renaming or deleting a class that is used to lookup a device in a Workstation app breaks the logic of every app that relies on it, so check the **Devices** count and active **Apps** before you change a class.
+{{% /alert %}}
+
+## Card Readers {#card-readers}
+
+A card reader device describes a smart card reader that is attached to the computer that runs the Workstation Client and connects using the PC/SC protocol. You can add card readers to a station in the following ways:
+
+* Configure each card reader as a device in the **Devices** section of the **Station Detail** page. The Workstation Client uses only the card readers whose names match the configured names. Configured card readers are part of the station configuration, so they are kept when you copy a station.
+* Let the Workstation Client detect the attached card readers automatically. Auto-detecting card readers is disabled by default. For more information, see [Managing Stations: Detect Card Readers](/mendix-workstation/management-stations/#detect-card-readers).
+
+### Configuring Card Readers
+
+To add a card reader device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, select **Card Reader**, and then click **Next**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. In the **Card Reader Name** field, enter the name of the card reader as it is defined by the operating system. To find the name of the card reader, access the [Workstation Client diagnostics](/mendix-workstation/troubleshooting-workstation-client/#diagnostics) by using one of the following methods:
+
+    * In Workstation Management, go to the **Station Detail** page and click **Diagnostics**.
+    * In the Workstation Client, go to the **Diagnostics** page.
+
+    The diagnostics show all attached card readers and their names in the `cardReaders` section. Viewing them requires a registered station. That is, the Workstation Client must run on a computer with the card reader attached, and be registered to a station.
+
+7. Click **Add Device**.
+
+When the Workstation Client receives the station configuration, it connects to the card reader with the configured name. If no card reader with that name is attached, the device stays unavailable until the card reader is attached. If **Detect Card Readers** is also enabled, the Workstation Client displays only the configured device for a configured card reader, and does not add that card reader a second time as a detected device. This also applies when the **Device Name** of the configured device is the name of the card reader. Card readers that are not configured are still detected and displayed.
+
+For the message syntax used to communicate with this device, see [Card Readers](/mendix-workstation/device-syntax/#card-readers).
 
 ## Serial Port
 
@@ -56,17 +86,16 @@ Serial Port devices allow you to connect to a device with a serial port.
 To add a serial port device, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device** and, and then click **Serial Port**.
-3. Click **Next**.
-4. Enter a meaningful name for the device.
-5. Optional: Select or create a class to help you manage your devices.
-6. Click **Next**.
-7. In the **Detect Serial Device By** section, select one of the following values, depending on whether the serial port device uses static or dynamic port assignment:
+2. Click **Add Device**, select **Serial Port**, and then click **Next**.
+3. Enter a meaningful name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. In the **Detect Serial Device By** section, select one of the following values, depending on whether the serial port device uses static or dynamic port assignment:
 
     * For static port assignment, select **Port**.
     * For dynamic port assignment, select **Identifiers**.
 
-8. For static port assignment, configure the following connection parameters:
+7. For static port assignment, configure the following connection parameters:
 
     * **Port** - Required; the identifier of the serial port
     * **Baudrate** - Required; the Bits per Second rate
@@ -75,7 +104,7 @@ To add a serial port device, perform the following steps:
     * **Flowcontrol** - Optional; the handshake mechanism between the server and receiver, used to prevent data overflow
     * **Stop Bits** - Required; the bits when data transmission ends.
 
-9. For dynamic port assignment, configure the following connection parameters:
+8. For dynamic port assignment, configure the following connection parameters:
 
     * At least one of the following required identifiers:
 
@@ -90,16 +119,45 @@ To add a serial port device, perform the following steps:
     * **Flowcontrol** - Optional; the handshake mechanism between the server and receiver, used to prevent data overflow
     * **Stop Bits** - Required; the bits when data transmission ends.
 
-10. Click **Next**.
-11. In the **Split Incoming Message By** section, select one of the following options:
+9. Click **Next**.
+10. In the **Split Incoming Message By** section, select one of the following options:
 
     * **Delimiter** - Messages received from the device are split by the specified character or characters marking the end of the message, for example, `\r\n`.
     * **Time and Size** - Messages received from the device are split by time interval in milliseconds and maximum message size in bytes.
     * **Do Not Split** - Messages received from the device are not automatically split.
 
-12. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
-13. In the **Encoding** field, select the message encoding.
-14. Click **Add Device**.
+11. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
+12. In the **Encoding** field, select the message encoding.
+13. Click **Add Device**.
+
+## TCP/IP Client
+
+TCP/IP clients allow you to connect to remote devices over the network.
+
+### Configuring TCP/IP Clients
+
+To add a TCP/IP client, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, select **TCP/IP Client**, and then click **Next**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
+
+    * **Host** - The host to which the TCP/IP Client connects. For test scenarios, you can use `localhost` to connect to a TCP/IP server on the same machine. For production scenarios, it is usually a local IP address. 
+    * **Port** - The port to which the TCP/IP Client connects. The value must be in the range of `0-65535`.
+
+7. Click **Next**.
+8. In the **Split Incoming Message By** section, select one of the following options:
+
+    * **Delimiter** - Messages received from the device are split by the specified character or characters marking the end of the message, for example, `\r\n`.
+    * **Time and Size** - Messages received from the device are split by time interval in milliseconds and maximum message size in bytes.
+    * **Do Not Split** - Messages received from the device are not automatically split.
+
+9. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
+10. In the **Encoding** field, select the message encoding.
+11. Click **Add Device**.
 
 ## Bluetooth
 
@@ -110,26 +168,90 @@ Add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact d
 To add a Bluetooth device, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device** and, and then click **Bluetooth**.
-3. Click **Next**.
-4. Enter the exact device name as it is displayed in your operating system's Device Manager.
-5. Optional: Select or create a class to help you manage your devices.
-6. Click **Add Device**.
+2. Click **Add Device**, select **Bluetooth**, and then click **Next**.
+3. Enter the exact device name as it is displayed in your operating system's Device Manager.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Add Device**.
 
-### Message Syntax
+For the message syntax used to communicate with this device, see [Bluetooth](/mendix-workstation/device-syntax/#bluetooth).
 
-This device type requires the following message and response:
+## Camera {#camera}
 
-#### Message
+A camera device describes a camera attached to the computer that runs the Workstation Client. It defines which camera to use, the video feed properties to request from it, and which detection features to enable. Only USB cameras and webcams are currently supported.
 
-* `0#ServiceUUID#CharacteristicUUID` - Subscribe to characteristic `CharacteristicUUID` from service `ServiceUUID`.
-* `1#ServiceUUID#CharacteristicUUID` - Unsubscribe from characteristic `CharacteristicUUID` from service `ServiceUUID`.
-* `2#ServiceUUID#CharacteristicUUID` - Read characteristic `CharacteristicUUID` from service `ServiceUUID`.
-* `3#ServiceUUID#CharacteristicUUID` - Write to characteristic `CharacteristicUUID` from service `ServiceUUID`.
+### Configuring Cameras
 
-### Response
+To add a camera device, perform the following steps:
 
-* `CharacteristicUUID#Response`
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, select **Camera**, and then click **Next**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
+
+    * **Camera Type** - Required; the type of camera connection. Only **USB/Webcam** is currently supported. Support for camera streams over Real Time Streaming Protocol (RTSP), User Datagram Protocol (UDP), and HTTP with Motion JPEG (MJPEG) is planned.
+    * **Camera Name** - Optional; the name of the camera to use. The Workstation Client uses the first camera whose name contains this value, ignoring case. Leave the field empty to use the first camera that the Client finds.
+    * **Width** - Optional; the requested width of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty.
+    * **Height** - Optional; the requested height of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty.
+    * **Frame Rate** - Optional; the requested frame rate of the camera feed. If the camera does not support the requested value, the closest supported value is used. The value must be greater than `0`, or empty.
+    * **Enable Barcode Detection** - Optional; when enabled, the video feed is processed and an event is sent when a barcode is detected in the frame. The default value is **No**.
+    * **Enable Motion Detection** - Optional; when enabled, the video feed is processed and an event is sent when motion is detected in the frame. The default value is **No**.
+
+7. Click **Add Device**.
+
+## Keyboard Wedge {#keyboard-wedge}
+
+You can configure Workstation to connect with devices that emulate a keyboard by sending data as key strokes, such as barcode scanners, RFID readers, or measurement devices. Because these devices present themselves to the operating system as a standard keyboard, keyboard events are captured wherever the current focus is, for example in the web app or in an input field. The operator does not have to place the cursor in a specific input field first.
+
+The Workstation Client recognizes messages from a keyboard wedge device by combining several criteria. It measures the rate at which the characters arrive, which for a device is faster than a person can type, and it uses the configured prefix, suffix, and message length requirements to tell the device apart from other sources of key strokes such as macro pads or automation scripts.
+
+Because a keyboard wedge device is indistinguishable from a keyboard at the operating system level, this recognition is a best-effort mechanism. The Workstation Client cannot tell two sources apart if they produce messages with the same character throughput, length, and prefix and suffix. Give each keyboard wedge device a distinctive combination of these settings when you configure more than one device, or when macro pads or automation scripts are in use on the same computer.
+
+### Configuring Keyboard Wedges
+
+To add a keyboard emulator device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, select **Keyboard Wedge**, and then click **Next**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Configure the following connection parameters:
+
+    * **Inter Character Timeout (ms)** - Required; the maximum allowed amount of time in milliseconds between key strokes for them to be considered as coming from a device. The value must be a positive integer. The default value is `50`.
+    * **Keyboard Layout** - Required; the keyboard layout of the device. To use the active keyboard layout as defined by your operating system, select **System**. Select **en-US** as a fallback when the system keyboard layout is not compatible with the device. For example, many barcode scanners send characters from the Latin alphabet, which the system layout cannot resolve if the operating system uses a non-Latin layout such as Chinese. The default value is **System**.
+    * **Suffix** - Required; a series of characters denoting the end of a message. The suffix is removed from the payload before it is forwarded to the Workstation Connector. The default value is `\r`, which corresponds to the carriage return that most keyboard emulating devices append to the key stroke. How this carriage return arrives depends on the platform: on Windows the operating system adds a line feed `\n` to the default carriage return, so the key strokes are followed by `\r\n`, while on macOS and Linux only a line feed `\n` is received. Set the suffix to match what your platform delivers, for example `\r` on Windows and `\n` on macOS and Linux.
+    * **Minimum Message Length** - Optional; the shortest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length.
+    * **Maximum Message Length** - Optional; the longest message that can be sent to the Connector from this device, excluding the prefix and suffix. Leave the field empty to accept messages of any length. If you set both values, the maximum must be greater than or equal to the minimum.
+    * **Prefix** - Optional; a series of characters denoting the start of a message. The prefix is removed from the payload before it is forwarded to the Workstation Connector.
+
+7. Click **Add Device**.
+
+Configure the prefix, suffix, and message length limits to match the data that your device sends. The more specific these settings are, the more reliably the Workstation Client attributes an incoming message to the correct device.
+
+For the message syntax used to communicate with this device, see [Keyboard Wedge](/mendix-workstation/device-syntax/#keyboard-wedge).
+
+## Printer
+
+You can integrate your Workstations with printer devices.
+
+### Configuring Printers
+
+To add a printer device, perform the following steps:
+
+1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device**, select **Printer**, and then click **Next**.
+3. In the **Device Name** field, enter an identifying name for the device.
+4. Optional: Select or create a class to help you manage your devices.
+5. Click **Next**.
+6. Enter the exact device name as it is displayed in your operating system's device manager.
+
+    Alternatively, leave the field blank and the Workstation Client will automatically connect to the default printer as defined by the operating system.
+
+7. Click **Add Device**.
+
+For the message syntax used to communicate with this device, see [Printer](/mendix-workstation/device-syntax/#printer).
 
 ## File Device
 
@@ -140,7 +262,7 @@ The file device allows Mendix applications to interact with the local file syste
 To add a file device, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **File Device**.
+2. Click **Add Device**, select **File Device**, and then click **Next**.
 3. In the **Device Name** field, enter an identifying name for the device.
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Next**.
@@ -170,28 +292,7 @@ Windows and Unix-style paths can be used independently of the operating system t
 * Unix-style with backslash: `$EnvVar\test`
 * Unix-style with forward slash: `$EnvVar/test`
 
-### Message Syntax {#file-device}
-
-Before sending messages to the file device, review the following points:
-
-* Path handling - You can provide the paths either as absolute (for example, `/var/log/app.log` or `C:\Data\report.txt`), or as relative paths. Relative paths are always interpreted relative to the allowed folder configured in Workstation Management.
-* Delimiter - The `#` character is used as a delimiter within messages. Paths and data may not contain the `#` character. 
-* Case sensitivity - File and directory paths may be case-sensitive depending on the underlying operating system. For example, Linux paths are typically case-sensitive, while Windows paths are not.
-
-#### Message
-
-* `0#Path` - Initiate watching for changes in the specified `Path`. If `Path` is a directory, the device will watch for changes within that directory (creation, deletion, renaming, or modification of files/subdirectories). If `Path` is a file, the device will watch for changes to that specific file (modification, deletion, or renaming).
-* `1#Path` - Stop watching for changes in the specified `Path`.
-* `2#File path` - Read the content of the file at the specified `File Path`.
-* `3#File path#Data#flag` - Write `Data` to the file at the specified `File Path`. The `flag` can be `w` for overwrite, `a` for append If left blank, the value defaults to `w`.
-
-#### Response
-
-* `R#Path` - File or directory at the specified `Path` was renamed, created, or deleted.
-* `C#Path` - File or directory at the specified `Path` was changed. This is triggered both when a file is modified and when the contents of a directory changes. 
-* `D#Data` - `Data` from file read.
-* `E#Error` - `Error` message from operating system.
-* `S#{0,1,2,3}#directory` - The command `{0,1,2,3}` on `directory` was successful.
+For the message syntax used to communicate with this device, see [File Device](/mendix-workstation/device-syntax/#file-device).
 
 ### Example Test: Verifying File Device Configuration
 
@@ -215,35 +316,6 @@ Follow these steps to verify that your file device configuration is working corr
 7. Go to *C:\MyTestFolder* and verify that it contains the text file.
 8. Open the test file and verify that it contains the text *Hello from Mendix*.
 
-## TCP/IP Client
-
-TCP/IP clients allow you to connect to remote devices over the network.
-
-### Configuring TCP/IP Clients
-
-To add a TCP/IP client, perform the following steps:
-
-1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **TCP/IP Client**.
-3. In the **Device Name** field, enter an identifying name for the device.
-4. Optional: Select or create a class to help you manage your devices.
-5. Click **Next**.
-6. Configure the following connection parameters:
-
-    * **Host** - The host to which the TCP/IP Client connects. For test scenarios, you can use `localhost` to connect to a TCP/IP server on the same machine. For production scenarios, it is usually a local IP address. 
-    * **Port** - The port to which the TCP/IP Client connects. The value must be in the range of `0-65535`.
-
-7. Click **Next**.
-8. In the **Split Incoming Message By** section, select one of the following options:
-
-    * **Delimiter** - Messages received from the device are split by the specified character or characters marking the end of the message, for example, `\r\n`.
-    * **Time and Size** - Messages received from the device are split by time interval in milliseconds and maximum message size in bytes.
-    * **Do Not Split** - Messages received from the device are not automatically split.
-
-9. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
-10. In the **Encoding** field, select the message encoding.
-11. Click **Add Device**.
-
 ## TCP/IP Server
 
 TCP/IP clients allow you to host connections over the network.
@@ -253,13 +325,13 @@ TCP/IP clients allow you to host connections over the network.
 To add a TCP/IP server, perform the following steps:
 
 1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **TCP/IP Server**.
+2. Click **Add Device**, select **TCP/IP Server**, and then click **Next**.
 3. In the **Device Name** field, enter an identifying name for the device.
 4. Optional: Select or create a class to help you manage your devices.
 5. Click **Next**.
 6. Configure the following connection parameters:
 
-    * **Port** - The port on which the TCP/IP Server is initalized. The value must be in the range of `0-65535`.
+    * **Port** - The port on which the TCP/IP Server is initialized. The value must be in the range of `0-65535`.
 
 7. Click **Next**.
 8. In the **Split Incoming Message By** section, select one of the following options:
@@ -271,49 +343,3 @@ To add a TCP/IP server, perform the following steps:
 9. In the **Characters Added to Message** field, specify the character or characters marking the end of the message sent to the device, for example, `\r\n`.
 10. In the **Encoding** field, select the message encoding.
 11. Click **Add Device**.
-
-## Printers
-
-You can integrate your Workstations with printer devices.
-
-### Configuring Printers
-
-To add a printer device, perform the following steps:
-
-1. In Workstation Management, navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device**, and then select **Printer**.
-3. In the **Device Name** field, enter an identifying name for the device.
-4. Optional: Select or create a class to help you manage your devices.
-5. Click **Next**.
-6. Enter the exact device name as it is displayed in your operating system's device manager.
-
-    Alternatively, leave the field blank and the Workstation Client will automatically connect to the default printer as defined by the operating system.
-
-7. Click **Add Device**.
-
-### Message Syntax
-
-This device type requires the following message and response:
-
-#### Message
-
-* `P#PrintJobDocName#Format#DataPayloadInBase64` - Submit a print job.
-* `S` - Get printer status and queued jobs.
-* `C#JobId` - Cancel print job.
-
-#### Response
-
-* `P#DocName#JobId` - Print job accepted by OS print interface.
-* `S#State#StateReason1,...#NumJobs#JobId1:JobName1:JobState1,...` - Printer state and job list summary.
-* `E#ErrorMessage` - Error.
-
-#### Example
-
-The sample print command `P#TESTHELLO#RAW#aGVsbG8=` contains the following elements:
-
-1. `P (command prefix)` - Tells the Workstation Client that the incoming instruction is a Print command.
-2. Separator
-3. `TESTHELLOFILE` (file name) - Name assigned to the print job. The client uses this to create the temporary file (for example, `TESTHELLOFILE.prn`) before sending it to the printer spooler.
-4. Separator
-5. `RAW` (format type) - Tells the Workstation Client that the following data is a Raw Printer Command (such as ZPL for Zebra printers, EPL, or PCL) rather than a standard document like a PDF or a Word file. Printing in RAW bypasses the standard printer drivers' formatting. It sends the exact code the printer needs to generate labels, barcodes, or specific layouts.
-6. `aGVsbG8=` (payload) - A data string encoded to Base64. Base64 decoded, it translates to the text `hello`. If you are testing this and the printer is not reacting, verify that the string you are encoding in Base64 matches the specific language your printer speaks. For example, a Zebra printer cannot process a plain text `hello` unless it is wrapped in ZPL commands like `^XA^FO50,50^A0N,50,50^FDhello^FS^XZ`.

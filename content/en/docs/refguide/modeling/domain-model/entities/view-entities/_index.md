@@ -72,7 +72,7 @@ Alternatively, you can right-click the view entity and click **Go to OQL query**
 The OQL query tab consists of the following sections:
 
 * [OQL editor](#oql-editor)
-* [Maia for OQL](#maia-for-oql)
+* [Generating OQL with Maia](#maia-for-oql)
 * [Preview data table](#preview-data)
 
 {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-entity-document.png">}}
@@ -131,9 +131,9 @@ FROM Shop.Order AS o
 
 {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/association-alias.png" >}}
 
-### Maia for OQL {#maia-for-oql}
+### Generating OQL with Maia {#maia-for-oql}
 
-You can ask Maia to suggest OQL queries for you. For more information, see [Maia for OQL](/refguide/maia-for-oql/).
+You can ask Maia to suggest OQL queries for you. For more information, see [OQL in Maia Make](/refguide/maia-for-oql/).
 
 ### Preview Data Table {#preview-data}
 

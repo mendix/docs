@@ -41,10 +41,10 @@ There are several advantages to this clone type:
 * Cloning goes faster. Only relevant data is downloaded so you can get started very quickly.
 * Limited disk space usage. Your local repository will be much smaller compared to a full clone.
 
-The disadvantage of this clone type is that you may need an additional download. For example, when [combining changes](/refguide/new-merge-algorithm/) from an older branch, more data will have to be downloaded compared to the full clone. This means it can take slightly longer. The same applies when interacting with the history.<br/>
+The disadvantage of this clone type is that you may need an additional download. For example, when [combining changes](/refguide/new-merge-algorithm/) from an older branch, more data will have to be downloaded compared to the full clone. This means it can take slightly longer. The same applies when interacting with the history.
 
 {{% alert color="info" %}}
-The **History** pane is not available when the app is partially cloned.
+For apps with Studio Pro versions 11.6-11.14, the **History** pane is not available when the app is partially cloned.
 {{% /alert %}}
 
 ## Preferences

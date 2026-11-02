@@ -13,7 +13,7 @@ aliases:
 If you have questions related to the Digital Execution Practice and organizational aspects:
 
 * Reach out to your Mendix team. They are always willing to answer questions, help you make decisions, and provide extra information.  
-  If you do not have a dedicated customer success manager (CSM), this guide contains the necessary resources to help you out.
+  If you do not have a dedicated Technical Account Manager or Specialized Account Executive, this guide contains the necessary resources to help you out.
 * Ask the Community in our [Digital Execution Practice space](https://community.mendix.com/link/space/digital-execution-community). This is a part of the Mendix Community that is specifically dedicated to helping others succeed with their digital execution practice.  
   Your questions will be answered by our own Mendix experts, as well as other companies who have used Mendix to their benefit.  
   If you haven’t already joined, you can do that by clicking [here](https://community.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9).

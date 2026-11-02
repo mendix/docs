@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.13.0
+  version: 4.14.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -207,6 +207,7 @@ paths:
       tags:
         - namespaces
       description: Deletes a specific namespace.
+      parameters: []
     put:
       summary: Update Namespace
       operationId: update_namespace_manifest
@@ -355,6 +356,12 @@ paths:
       tags:
         - environments
       deprecated: true
+      parameters:
+        - schema:
+            type: boolean
+          in: query
+          name: force
+          description: 'Used to bypass the Default Studio Target validation and any errors received from the cluster while deleting the object from the portal. If the deleted environment was set as Default Studio Target, a new one must be selected from the UI or via API .'
     put:
       summary: Update Environment
       operationId: update_environment_for_namespace
@@ -449,6 +456,12 @@ paths:
       description: Deletes an environment for a specified namespace.
       tags:
         - environments
+      parameters:
+        - schema:
+            type: boolean
+          in: query
+          name: force
+          description: 'Used to bypass the Default Studio Target validation and any errors received from the cluster while deleting the object from the portal. If the deleted environment was set as Default Studio Target, a new one must be selected from the UI or via API .'
     put:
       summary: Update Environment for a specified Namespace
       operationId: update_environment_for_namespace
@@ -847,10 +860,19 @@ components:
                   x-stoplight:
                     id: zn13vlv5opnxw
                   description: Maximum percentage of Pods that can be offline during updates.
+                podDisruptionMinAvailable:
+                  type: integer
+                  x-stoplight:
+                    id: 99i5xldc8glcz
+                  description: 'Pod Disruption Min Available defines the minimum number or percentage of Pods that must remain available during voluntary disruptions. This setting ensures a baseline level of running Pods is maintained; for example, if set to 50%, Kubernetes will only allow evictions that keep at least 50% of the Pods available.'
+                podDisruptionMaxUnavailable:
+                  type: integer
+                  x-stoplight:
+                    id: b4bf76evwb3pu
+                  description: 'Pod Disruption Max Unavailable defines the maximum number or percentage of Pods that can be unavailable during voluntary disruptions (evictions or node drains). This setting controls how many existing Pods can be taken offline at once without affecting overall availability. For example, if set to 20%, Kubernetes can allow up to 20% of the Pods to be unavailable during voluntary disruptions.'
       required:
         - manifestVersion
         - environment
-      title: ''
     getEnvironmentManifest:
       type: object
       x-examples:
@@ -1061,6 +1083,16 @@ components:
                   x-stoplight:
                     id: 1jiigc3wgjc3r
                   description: Maximum percentage of Pods that can be offline during updates.
+                podDisruptionMinAvailable:
+                  type: integer
+                  x-stoplight:
+                    id: l6gl3aovn6c3g
+                  description: 'Pod Disruption Min Available defines the minimum number or percentage of Pods that must remain available during voluntary disruptions. This setting ensures a baseline level of running Pods is maintained; for example, if set to 50%, Kubernetes will only allow evictions that keep at least 50% of the Pods available.'
+                podDisruptionMaxUnavailable:
+                  type: integer
+                  x-stoplight:
+                    id: xqms1dq6go2wn
+                  description: 'Pod Disruption Max Unavailable defines the maximum number or percentage of Pods that can be unavailable during voluntary disruptions (evictions or node drains). This setting controls how many existing Pods can be taken offline at once without affecting overall availability. For example, if set to 20%, Kubernetes can allow up to 20% of the Pods to be unavailable during voluntary disruptions.'
       required:
         - manifestVersion
         - environment
@@ -1657,7 +1689,6 @@ components:
       required:
         - manifestVersion
         - namespace
-      title: ''
     updateNamespaceManifest:
       type: object
       x-examples:

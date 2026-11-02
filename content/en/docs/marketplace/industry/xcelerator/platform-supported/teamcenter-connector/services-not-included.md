@@ -57,11 +57,11 @@ $Response[/Association]</Attribute>
 
 Where:
 
-* **Association** — Optional association name on the given entity type. Multiple associations can be sequenced, each separated by a '/'.
-* **Attribute** — Optional attribute name on the given entity type.
-* **Instruction** — Optional instruction to be applied to the substitution. Multiple instructions can be used, each separated with a semicolon. The supported instructions are:
-* **AttributeAsArray** — single valued JSONArray for each attribute value.
-* **DateFormat=Format** — Use the custom date format for serializing date attributes.
+* **Association** – Optional association name on the given entity type. Multiple associations can be sequenced, each separated by a '/'.
+* **Attribute** – Optional attribute name on the given entity type.
+* **Instruction** – Optional instruction to be applied to the substitution. Multiple instructions can be used, each separated with a semicolon. The supported instructions are:
+* **AttributeAsArray** – Single valued JSONArray for each attribute value.
+* **DateFormat=Format** – Use the custom date format for serializing date attributes.
 * **ignoreNull** – Use to omit the key if the value of that key is null.
 
 Examples of which attributes that will be mapped:

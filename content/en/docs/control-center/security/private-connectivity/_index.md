@@ -8,8 +8,7 @@ beta: true
 ---
 
 {{% alert color="warning" %}}
-Private Connectivity is out of Public Beta, and being prepared for General Availability (GA). The feature cannot be used until it is released as GA.     
-Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
+Private Connectivity is out of Public Beta, and being prepared for General Availability (GA). The feature cannot be used until it is released as GA. Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
 {{% /alert %}}
 
 ## Introduction
@@ -17,7 +16,7 @@ Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) fo
 The **Private Connectivity** page allows you to view and manage your company's Private Connectivity assets: networks, agents, resources, and connections.
 
 {{% alert color="info" %}}
-If you cannot access the **Private Connectivity** page, contact your CSM or Mendix Support.
+If you cannot access the **Private Connectivity** page, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact or Mendix Support.
 {{% /alert %}}
 
 ## Use Cases

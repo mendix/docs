@@ -11,12 +11,12 @@ Contributors may use AI tools such as large language models and writing assistan
 
 ## Contributor Responsibility
 
-If you use AI tools, before contributing, you must:
+If you use AI tools, before contributing you must:
 
 * Review and verify the accuracy of all AI-assisted content.
-* Ensure the content does not infringe on third-party copyrights.
+* Ensure the content does not infringe third-party copyrights.
 * Remove hallucinated content or unsupported claims.
-* Confirm that the AI tool's terms do not impose restrictions inconsistent with Mendix's contributors license agreement.
+* Confirm that the AI tool's terms do not impose restrictions inconsistent with the Mendix Contributor License Agreement.
 
 AI output must be treated as unverified draft material.
 
@@ -26,27 +26,32 @@ Maintainers may request clarification, edits, or removal of AI-assisted content 
 
 ## Using AI Assistants
 
-This repository is configured for use with [Claude Code](https://code.claude.com/docs/en/vs-code), an AI-powered coding assistant. There is also GitHub Copilot customization for contributors who use it.
+This repository is configured for use with [Claude Code](https://code.claude.com/docs/en/vs-code), an AI-powered coding assistant. It also includes customization for GitHub Copilot.
 
 ### Claude Code Configuration
 
-The default AWS profile name is `my-sandbox`. If your AWS sandbox profile has a different name, create `.claude/settings.local.json` in the repo root and include the following lines:
+The shared Claude Code settings for this repository are in [.claude/settings.json](https://github.com/mendix/docs/blob/development/.claude/settings.json). They define the following:
 
-```json
-{
-  "env": {
-    "AWS_PROFILE": "your-sandbox-name"
-  }
-}
-```
+* Permissions that allow or deny specific commands and tools
+* Guardrail hooks that check commands before they run
+* A status line
+* Telemetry turned off
 
-This file is gitignored and will override the shared settings.
+#### Personalizing Claude Code
+
+These settings do not configure or mandate any specific provider or language model. You need to set up your own access to a model, either by signing in to Claude Code or by configuring a provider. To add or override settings, create `.claude/settings.local.json` in the root of your repo clone. This file overrides the shared settings. It is gitignored, so Git doesn't commit it.
+
+To get started, copy [.claude/settings.local.json.example](https://github.com/mendix/docs/blob/development/.claude/settings.local.json.example) to `.claude/settings.local.json` and edit the values. The example shows one setup that uses Amazon Bedrock. Delete any keys you don't need. See the [Environment variables](https://code.claude.com/docs/en/env-vars) page of the Claude Code documentation for information on environment variables.
 
 {{% alert color="warning" %}}
 Do not modify `.claude/settings.json` or other files in the `.claude/` directory for personal configuration. These files contain shared configuration for all contributors.
 {{% /alert %}}
 
-### Custom Skills {#custom-skills}
+#### Fixing Truncated Output
+
+If you are updating a lot of documentation, Claude Code may truncate its output. In this case, increase the output token limit by setting `CLAUDE_CODE_MAX_OUTPUT_TOKENS` to a higher value in your `.claude/settings.local.json` file. You can find more information about `CLAUDE_CODE_MAX_OUTPUT_TOKENS` on the [Environment variables](https://code.claude.com/docs/en/env-vars) page of the Claude Code documentation.
+
+#### Custom Skills {#custom-skills}
 
 This repository includes custom Claude Code skills optimized for documentation work:
 
@@ -58,7 +63,14 @@ This repository includes custom Claude Code skills optimized for documentation w
 * `/docs-pr-review` – Reviews all changes in a PR rather than just a single document
 * `/docs-alt-text` – Suggests W3C-compliant alt text for images on a page
 
-These skills are available to all contributors using Claude Code with this repository.
+These skills are available to all contributors using Claude Code with this repository. If you use GitHub Copilot, use the prompt files described in the next section instead.
+
+### GitHub Copilot Configuration
+
+If you use GitHub Copilot, the repository provides the following:
+
+* [.github/copilot-instructions.md](https://github.com/mendix/docs/blob/development/.github/copilot-instructions.md) – Editorial conventions that Copilot applies to documentation work
+* [.github/prompts/](https://github.com/mendix/docs/tree/development/.github/prompts) – Prompt files for common tasks: `add`, `enhance`, `polish`, `proofread`, and `review`
 
 ## Read More
 

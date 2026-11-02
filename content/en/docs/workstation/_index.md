@@ -68,9 +68,9 @@ Mendix Workstation consists of the following components:
 
 ## Licensing Mendix Workstation
 
-Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use Mendix Workstation for development, but workspaces are individual and cannot be shared.
+Since version 4.0.0, Mendix Workstation is [Generally Available](/releasenotes/release-status/#ga). For production use, a Mendix Workstation Client license is required for each station used, that is, each station that has been connected to at least one app within the current day. For more information about monitoring station usage, see [Monitoring Mendix Workstation](/mendix-workstation/monitoring/).
 
-The following functionalities are only available with a license:
+Without a license you can use Mendix Workstation for development, but workspaces are individual and cannot be shared. The following functionalities are not available without a license:
 
 * [Bulk import of stations](/mendix-workstation/import-export/)
 * [Bulk registration of Workstation Clients](/mendix-workstation/register/)

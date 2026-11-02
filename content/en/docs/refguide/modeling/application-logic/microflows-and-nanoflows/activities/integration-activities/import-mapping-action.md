@@ -46,11 +46,11 @@ The [import mapping](/refguide/import-mappings/) defines how to transform the XM
 
 ### Input Content Type
 
-If the import mapping is based on a [message definitions](/refguide/message-definitions/), it can import both XML and JSON. Select whether the input object contains XML or JSON.
+If the import mapping is based on a [message definition](/refguide/message-definitions/), it can import both XML and JSON. Select whether the input object contains XML or JSON.
 
 ### The Input Contains
 
-If the import mapping is based on a [message definitions](/refguide/message-definitions/), it can import both single objects and lists. Select whether the input is a single object or a list of objects.
+If the import mapping is based on a [message definition](/refguide/message-definitions/), it can import both single objects and lists. Select whether the input is a single object or a list of objects.
 
 ### If No Object Was Found
 

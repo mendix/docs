@@ -9,7 +9,7 @@ aliases:
 
 ## Introduction
 
-After [creating one or more workspaces](/mendix-workstation/management-config/) for your organization, you can proceed by installing the Workstation Client on the computers which you want to register as stations in Workstation Management.
+After [creating one or more workspaces](/mendix-workstation/management-workspaces/) for your organization, you can proceed by installing the Workstation Client on the computers which you want to register as stations in Workstation Management.
 
 ## Prerequisites {#prerequisites}
 
@@ -19,7 +19,8 @@ Before you install the Workstation Client, ensure that you fulfill the following
 
 * Operating System - Windows 10 or Windows 11 (64-bit);  Linux ARM64; macOS (Apple Silicon)
 * Memory - Minimum 4 GB RAM (8 GB recommended for optimal performance)
-* Disk Space - 400 MB of free disk space for installation
+* Disk Space - 450 MB of free disk space for installation
+* Secret Store - A secret store of the operating system, which the Client uses to encrypt its API key. It exists by default on Windows and macOS. On Linux, ensure that a keyring is installed and unlocked; otherwise, the Client does not start. For more information, see [Troubleshooting the Workstation Client: Safe Storage Is Unavailable](/mendix-workstation/troubleshooting-workstation-client/#safe-storage-unavailable).
 
 ### Access Requirements
 
@@ -36,7 +37,7 @@ You can download the Client from the Mendix Marketplace at the following links:
 
 Alternatively, you can download the [global Microsoft Windows](https://marketplace.mendix.com/link/component/247448) version of the Client directly from Workstation Management by performing the following steps:
 
-1. Open the [station that you created](/mendix-workstation/management-config/) and click **Register Computer**.
+1. Open the [station that you created](/mendix-workstation/management-workspaces/) and click **Register Computer**.
 
     {{< figure src="/attachments/workstation/wks-install5.png" class="no-border" >}}
 
@@ -120,3 +121,16 @@ To configure the Workstation Client on a macOS machine, perform the following st
 ## Stopping the Workstation Client
 
 The Workstation Client sets up the required auto-start settings during the first start. Afterward, it runs automatically on system startup. To change this behavior, see [Autostart Configuration for the Workstation Client](/mendix-workstation/autostart-configuration/)
+
+## Upgrading the Workstation Client
+
+To benefit from bug fixes and newest features, we recommend that you always use the newest available Workstation Client version. Any breaking changes are explicitly mentioned in the [Mendix Workstation Release Notes](/releasenotes/workstation/), and usually happen only between major versions.
+
+To upgrade the Client, perform the following steps:
+
+1. Download the newest version of the Client.
+2. Optional: For [Workstation Client Portable](https://marketplace.mendix.com/link/component/247456), [Workstation Client Linux ARM 64](https://marketplace.mendix.com/link/component/247459), [Workstation Client macOS](https://marketplace.mendix.com/link/component/253905), stop the current version of the Client manually. If [developer mode](/mendix-workstation/management-stations/#developer-mode) is not enabled, you cannot quit the Client from the Client UI, but you can still do it through the Task Manager or CLI commands.
+
+    This step is not required for global Windows installations of [Workstation Client](https://marketplace.mendix.com/link/component/247448), because the global installer detects if an older version of the Client is already running on the computer, and automatically stops it before performing the upgrade.
+
+3. Re-run the installer.

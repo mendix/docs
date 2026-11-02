@@ -83,11 +83,11 @@ Adding autocomplete to input fields can help individuals with reduced cognitive 
 
 You should avoid using autocomplete in the following situations:
 
-* **Sensitive Information** — Fields that collect sensitive data, such as credit card numbers, government IDs, or personal identification numbers. It helps protect user privacy and prevents unauthorized access to sensitive information.
-* **Public Computers** — If forms are likely to be filled out on public or shared computers, disabling autocomplete can prevent users from accessing previously entered information.
-* **One-Time Inputs** — For fields that require unique, one-time entries (like a temporary PIN), autocomplete can be unnecessary and may confuse users.
-* **Complex Forms** — In lengthy or complex forms, autocomplete might lead to incorrect autofill suggestions, which can frustrate users and lead to errors.
-* **Regulatory Compliance** — Certain regulations may require that sensitive information not be stored or auto-filled. Disabling autocomplete can help ensure compliance with such regulations.
+* **Sensitive Information** – Fields that collect sensitive data, such as credit card numbers, government IDs, or personal identification numbers. It helps protect user privacy and prevents unauthorized access to sensitive information.
+* **Public Computers** – If forms are likely to be filled out on public or shared computers, disabling autocomplete can prevent users from accessing previously entered information.
+* **One-Time Inputs** – For fields that require unique, one-time entries (like a temporary PIN), autocomplete can be unnecessary and may confuse users.
+* **Complex Forms** – In lengthy or complex forms, autocomplete might lead to incorrect autofill suggestions, which can frustrate users and lead to errors.
+* **Regulatory Compliance** – Certain regulations may require that sensitive information not be stored or auto-filled. Disabling autocomplete can help ensure compliance with such regulations.
 
 ### Aria Labels
 
@@ -254,9 +254,9 @@ Although it is the most time-consuming, a manual test is a good way to assess yo
 
 Doing just a few checks already goes a long way:
 
-* **Keyboard navigability** — Can you reach all the input elements with your keyboard? Does your <kbd>Tab</kbd> key take you through all the elements of your page?
-* **Screen reader** — Is all the information clear to a sighted person also available to a low vision or non-sighted person? Are labels of input fields being read out correctly?
-* **Color contrast** — Does both text and non-text content have enough contrast?
+* **Keyboard navigability** – Can you reach all the input elements with your keyboard? Does your <kbd>Tab</kbd> key take you through all the elements of your page?
+* **Screen reader** – Is all the information clear to a sighted person also available to a low vision or non-sighted person? Are labels of input fields being read out correctly?
+* **Color contrast** – Does both text and non-text content have enough contrast?
 
 Find more info on this in [the W3C Easy Checks – A First Review of Web Accessibility](https://www.w3.org/WAI/test-evaluate/preliminary/)
 

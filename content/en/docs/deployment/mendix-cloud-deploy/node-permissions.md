@@ -55,7 +55,7 @@ To access the node permissions, do the following:
 
 ### Permissions
 
-The Technical Contact can enable and disable **Manage Permissions** for the other team members. Any team members with **Manage Permissions** enabled can set the following node permissions: **Transport Rights**, **Access to Backups**, **API Rights**, and **Access to Monitoring**.
+The Technical Contact can enable and disable **Manage Permissions** for the other team members. Any team members with **Manage Permissions** enabled can set the following node permissions: **Transport Rights**, **Backups Access**, **API Access**, and **Monitoring Access**.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/node-permissions/node-permission.png" alt="Node permissions dashboard" >}}
 
@@ -73,25 +73,25 @@ Team members with **Transport Rights** permissions can deploy new versions of th
 
 For more information about deployment, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 
-#### Access to Backups
+#### Backups Access
 
-Team members with **Access to Backups** permissions can access the backups of the environment. They can view, [create](/developerportal/operate/create-backup/), [download](/developerportal/operate/download-backup/), and [restore](/developerportal/operate/restore-backup/) backups.
+Team members with **Backups Access** permissions can access the backups of the environment. They can view, [create](/developerportal/operate/create-backup/), [download](/developerportal/operate/download-backup/), and [restore](/developerportal/operate/restore-backup/) backups.
 
 For more information, see [Backups](/developerportal/operate/backups/).
 
-#### API Rights
+#### API Access
 
-Team members with **API Rights** permissions can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) to get programmatic access to the environment.
+Team members with **API Access** permissions can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) to get programmatic access to the environment.
 
 Because the API does not require two-factor authentication, it is disabled for the production environment by default. The Technical Contact can assign API access for each user.
 
 {{% alert color="info" %}}
-Other permissions are needed in addition to **API Rights**. For example, to access backups via the API, you need **Access to Backups** in addition to **API Rights**.
+Other permissions are needed in addition to **API Access**. For example, to access backups via the API, you need **Backups Access** in addition to **API Access**.
 {{% /alert %}}
 
-#### Access to Monitoring
+#### Monitoring Access {#access-to-monitoring}
 
-Team members with **Access to Monitoring** permissions can view the application metrics, logs, and alerts in [Projects](https://projects.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
+Team members with **Monitoring Access** permissions can view the application metrics, logs, and alerts in [Projects](https://projects.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
 
 For more information, see [Metrics](/developerportal/operate/metrics/), [Logs](/developerportal/operate/logs/), and [Alerts](/developerportal/operate/monitoring-application-health/).
 

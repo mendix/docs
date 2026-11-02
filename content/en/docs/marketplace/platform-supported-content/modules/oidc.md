@@ -203,6 +203,9 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
+| 10.24.0 and above | 5.0.0 | - | Use `Token` as the parameter name in custom microflows or if you create a custom microflow based on `ACT_Token_CustomATPRetrieveRoles`. It was previously `AccessToken`. |
+| | | | The microflow `ACT_ShowCusomExceptionMessage` has been renamed to `SUB_ShowCustomExceptionMessage`. |
+| | | | New constant (`GlobalUserProvisioningMicroflow`) has been introduced. It specifies the qualified name of the global user-provisioning microflow that runs after login. |
 | 10.24.0 and above | 4.7.0 | - | A new constant (`EnableAudienceValidation`) has been introduced for API security. Because it is enabled by default, you need to configure the **Resource path** and **Expected audience** value. You can disable audience validation, but Mendix does not recommend this. |
 | 10.24.0 and above | 4.6.0 | - | New constant (`OIDC.NonceCookieSameSite`) has been introduced. |
 | 10.24.0 and above | 4.5.0 | - | New Admin UI and new constants have been introduced. |
@@ -493,7 +496,7 @@ For more information on creating user provisioning with constants, see the [Depl
 
 The following constants are optional:
 
-* **ClientAuthenticationMethod** (*default: client_secret_basic*) – the client authentication method — the caption of OIDC.ENU_ClientAuthenticationMethod
+* **ClientAuthenticationMethod** (*default: client_secret_basic*) – The client authentication method—the caption of OIDC.ENU_ClientAuthenticationMethod
 
     Examples: `client_secret_post`, `client_secret_basic`, or `private_key_jwt`
 
@@ -517,17 +520,17 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
 
     Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 
-* **CustomATPTokenType**: an optional deploy-time constant — when **CustomATP** is enabled, optionally, **CustomATPTokenType** can be set to `ID-TOKEN`. Default is `ACCESS-TOKEN`.
+* **CustomATPTokenType**: an optional deploy-time constant—when **CustomATP** is enabled, optionally, **CustomATPTokenType** can be set to `ID-TOKEN`. Default is `ACCESS-TOKEN`.
 
     Example: `ID-TOKEN`
     
 * **CustomCallbackURL** – the custom callback URL
 
-* **SelectedClaim** – selected claim values — multiple values can be separated by a space
+* **SelectedClaim** – selected claim values—multiple values can be separated by a space
 
     Example: `auth_time created_at`
 
-* **SelectedScope** – selected scopes — multiple values can be separated by a space
+* **SelectedScope** – selected scopes—multiple values can be separated by a space
 
     Example: `openid profile email`
 
@@ -537,7 +540,7 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
 
 * **SessionEndPoint** – the end session endpoint
 
-* **ACRValues** – selected ACRvalues — the selected Acr with multiple values separated by a space  
+* **ACRValues** – selected ACRvalues—the selected Acr with multiple values separated by a space  
 
     Example: `acr1 acr2`
 
@@ -569,7 +572,7 @@ The following constants are mandatory when creating an OIDC SSO Client Credentia
 
 * **ClientAlias** – the client alias
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
-* **CustomATP** – a custom access token processing microflow — the value of `CompleteName` in the `mxmodelreflection$microflows` table
+* **CustomATP** – a custom access token processing microflow—the value of `CompleteName` in the `mxmodelreflection$microflows` table
 Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 * **IsClientGrantOnly** (*default: false*) – allow to create Client Credential Configuration in the application
 
@@ -766,6 +769,8 @@ By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Con
 Do not change the `UserProvisioning_StandardOIDC` microflow. This may cause problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
 {{% /alert %}}
 
+From version 5.0.0 of the module, the `GlobalUserProvisioningMicroflow` constant specifies the qualified name (`Module.Microflow`) of the global user-provisioning microflow that runs after login. The default value is `OIDC.CUSTOM_UserProvisioning`. The module calls this microflow dynamically, so you can substitute your own flow without modifying the OIDC module. The target microflow must accept an OAuthToken parameter of type `OIDC.Token` and return a `System.User` object.
+
 #### User Provisioning Using a Microflow{#custom-provisioning-mf}
 
 {{% alert color="warning" %}}
@@ -830,7 +835,7 @@ By default, the well-known endpoint (**Automatic configuration URL**) does not i
 You can create your own APIs within your Mendix app and secure the end point over OIDC using a custom authentication microflow. To do this:
 
 1. Create a REST API endpoint which needs to be secured.
-2. Use **Custom** as the [authentication method](/refguide/published-rest-service/#authentication) to secure the endpoint with an access token.
+2. Use **Custom** as the authentication method to secure the endpoint with an access token.
 3. Select the `OIDC.APIAuthentication` microflow from the **OIDC.APIAuthentication** folder of the module which has `HTTPRequest` as the input and returns `System.User` as the output.
 
 ### Using `APIAuthentication` for Client Credentials Grant
@@ -927,7 +932,7 @@ If you want to use the information in an access token which is a JWT, you need t
 
 * The OIDC module provides you with default microflows for parsing access tokens from the following IdPs:
 
-    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
+    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted—for example:
 
         ```json
         "sws.samauth.role.name": [
@@ -935,7 +940,7 @@ If you want to use the information in an access token which is a JWT, you need t
         ]
         ```
 
-    * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
+    * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token—for example:
 
         ```json
         "roles": [
@@ -982,13 +987,13 @@ To confirm that the authorization is working, get an access token from your Entr
 From version 4.3.0 of the OIDC SSO module, optionally, you can select `ID-TOKEN` as a **Custom ATP Token Type** for all custom access token parsing. Default is `ACCESS-TOKEN`.
 {{% /alert %}}
 
-#### Parsing OIDC Provider Access Tokens
+#### Parsing Access Tokens From Mendix OIDC Provider
 
-The OIDC SSO module version 2.3.0 and above provides a default access token parsing microflow to use when you are authenticating using the OIDC Provider module as your IdP.
+The OIDC SSO module version 2.3.0 and above provides a default access token parsing microflow to use when you are authenticating using the [OIDC Provider](/appstore/services/oidc-provider/) module as your IdP.
 
 To parse the OIDC Provider access tokens you need to do the following when performing OIDC Client Configuration:
 
-1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
+1. Select `OIDC.Default_MendixOIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 
@@ -1139,6 +1144,12 @@ authentication in your Mendix App.
 4. In the **PUBLIC KEYS** section, go to the **Configuration** and choose **Use a URL to fetch keys dynamically**.
 5. In the **Url** field, enter the location where your public key is stored. The following is the new endpoint in the OIDC SSO to fetch public keys based on the configured alias For example, `https:/`*`BASE_URL`*`/oauth/v2/jwks/`*`ALIAS`*. Here, *`ALIAS`* is the client alias configured in the OIDC application. For example, Okta.
 6. **Save** the configuration.
+
+### Creating Custom Error Pages
+
+From version 5.0.0 of the OIDC module, you can create a custom error page for your app. For more information, see [Create Custom Error Pages](/howto/front-end/custom-error-page/).
+
+Do not modify the module's default error pages, as changes may be overwritten during upgrades. Add custom HTML files with the same names under `theme/web/error_page/` in your app.
 
 ## URLs
 

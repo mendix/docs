@@ -46,8 +46,8 @@ The **Siemens Insights Hub Mobile Starter Application** template provides the ab
 
     * ```Type = Mobile```
     * ```Infrastructure = none```
-    * ```Display Name``` — give your app a nice display Name. Currently this name is only used in Developer Cockpit
-    * ```Internal Name``` — give an internal name. We need this name later and will call it **internal_name**
+    * ```Display Name``` – Give your app a nice display Name. Currently this name is only used in Developer Cockpit
+    * ```Internal Name``` – Give an internal name. We need this name later and will call it **internal_name**
     * ```Version = 1.0.0```
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_CreateApp.png" alt="DeveloperCockpit" >}}

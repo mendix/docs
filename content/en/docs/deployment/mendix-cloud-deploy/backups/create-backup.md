@@ -15,7 +15,7 @@ This how-to describes creating a backup of a licensed cloud node.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * You have a licensed cloud node. This option is not available for Free Apps.
-* You have **Access to Backups** permissions for the node. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
+* You have **Backups Access** permissions for the node. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 ## Creating a Backup
 

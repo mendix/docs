@@ -47,8 +47,8 @@ To add a certificate, do the following:
 
 1. Go to the **Signing Identities** module from the left navigation menu and select **Apple Certificates**.
 1. Click **Add New** and choose one of the following:
-   * **Create an Apple Certificate** — Generates a certificate via your App Store Connect API Key. Select a Certificate Signing Request (CSR) or generate one, then choose the certificate type (Apple Distribution).
-   * **Upload Certificate Bundle (.p12)** — Upload a pre-existing *.p12* file directly.
+   * **Create an Apple Certificate** – Generates a certificate via your App Store Connect API Key. Select a Certificate Signing Request (CSR) or generate one, then choose the certificate type (Apple Distribution).
+   * **Upload Certificate Bundle (.p12)** – Upload a pre-existing *.p12* file directly.
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/apple-certificates.png" alt="Repository connection options in Appcircle" class="no-border" >}}
 
@@ -62,9 +62,9 @@ To add a provisioning profile, do the following:
 
 1. In the **Signing Identities** module, select **Apple Profiles**.
 1. Enact one of the following methods:
-   * **Register a New Profile** — Select a distribution method (App Store, Ad Hoc, or Enterprise), an App ID, and a certificate. Appcircle registers the profile on the Apple Developer Portal automatically.
-   * **Fetch from App Store Connect** — Select **Get Provisioning Profiles from App Store Connect** and import profiles from your account.
-   * **Upload manually** — Upload one or more *.mobileprovision* files. Profiles are automatically matched with certificates; a green checkmark indicates a match.
+   * **Register a New Profile** – Select a distribution method (App Store, Ad Hoc, or Enterprise), an App ID, and a certificate. Appcircle registers the profile on the Apple Developer Portal automatically.
+   * **Fetch from App Store Connect** – Select **Get Provisioning Profiles from App Store Connect** and import profiles from your account.
+   * **Upload manually** – Upload one or more *.mobileprovision* files. Profiles are automatically matched with certificates; a green checkmark indicates a match.
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/apple-profiles.png" alt="Repository connection options in Appcircle" class="no-border" >}}
 
@@ -72,12 +72,12 @@ To add a provisioning profile, do the following:
 
 In the **Build** module, open the iOS build profile and go to **Build Configuration**. Under the **Signing** section, choose one of the following signing methods:
 
-* **Automatic Signing** — Appcircle automatically handles provisioning profile management during the build. This process requires the following prerequisites be met:
+* **Automatic Signing** – Appcircle automatically handles provisioning profile management during the build. This process requires the following prerequisites be met:
     * Xcode 13 or above
     * A **Developer** or **Distribution** certificate
     * An **App Store Connect API key** (configured in the **API Integrations** settings)
     * The bundle identifier must already be registered in your Apple Developer account
-* **Manual Signing** — You manually select the certificate and provisioning profile for each build configuration. This gives you full control over which profiles are used. Select your bundle identifier from the dropdown, then choose the provisioning profile you added in the **Signing Identities** module. The certificate will be automatically matched based on the profile.
+* **Manual Signing** – You manually select the certificate and provisioning profile for each build configuration. This gives you full control over which profiles are used. Select your bundle identifier from the dropdown, then choose the provisioning profile you added in the **Signing Identities** module. The certificate will be automatically matched based on the profile.
 
 {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/assign-code-signing.png" alt="Repository connection options in Appcircle" class="no-border" >}}
 
@@ -128,8 +128,8 @@ Environment variables let you configure build-time and runtime settings without 
 
 Appcircle provides two levels of environment variable configuration:
 
-* **Global environment variables** — shared across all build profiles in your organization
-* **Build profile environment variables** — specific to a single build profile
+* **Global environment variables** – Shared across all build profiles in your organization.
+* **Build profile environment variables** – Specific to a single build profile.
 
 ### Common Use Cases
 
@@ -172,8 +172,8 @@ To configure environment variables for a specific build profile, do the followin
 
 Environment variables configured in Appcircle are available during the build process. How you access them depends on your app's configuration:
 
-* **React Native environment files** — If your app uses *.env* files or libraries like `react-native-config`, you can pass Appcircle environment variables to these configuration files using custom build scripts.
-* **Build scripts** — Environment variables are accessible in workflow steps and custom scripts using standard environment variable syntax (for example, `$RUNTIME_URL` in shell scripts).
+* **React Native environment files** – If your app uses *.env* files or libraries like `react-native-config`, you can pass Appcircle environment variables to these configuration files using custom build scripts.
+* **Build scripts** – Environment variables are accessible in workflow steps and custom scripts using standard environment variable syntax (for example, `$RUNTIME_URL` in shell scripts).
 
 For more details on environment variable management and advanced configurations, see [Appcircle's environment variables documentation](https://docs.appcircle.io/environment-variables/).
 
@@ -192,7 +192,7 @@ Appcircle has 70+ native pipeline integration steps. You can see all steps in th
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Older versions of Mendix might require a specific Node version. The Appcircle workflow already includes a [Node Install](https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/node-install) step — simply update the version number there to match the version in the **.nvmrc** file of your app's generated native template.
+Older versions of Mendix might require a specific Node version. The Appcircle workflow already includes a [Node Install](https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/node-install) step—simply update the version number there to match the version in the **.nvmrc** file of your app's generated native template.
 {{% /alert %}}
 
 ### Set Up Automatic Builds

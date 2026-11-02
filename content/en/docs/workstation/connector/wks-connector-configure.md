@@ -1,8 +1,8 @@
 ---
-title: "Integrating with Mendix Studio Pro"
+title: "Authenticating your App with Mendix Studio Pro"
 url: /mendix-workstation/configure-connector/
 description: "Describes how to configure a Mendix app for Workstation Connector."
-weight: 202
+weight: 22
 ---
 
 ## Introduction

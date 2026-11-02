@@ -38,7 +38,7 @@ After you click **Add security contact** and add the required **Name** and **Ema
 
 For an existing security contact, there are two menu options available:
 
-* **Edit** — Edit the Security Contact's **Name**.
-* **Delete** — Delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
+* **Edit** – Edit the Security Contact's **Name**.
+* **Delete** – Delete the existing Security Contact. This is the first step in changing a validated Security Contact. After you make the deletion, you can add the new Security Contact.
 
 For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).

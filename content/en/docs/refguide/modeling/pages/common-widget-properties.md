@@ -89,6 +89,12 @@ Dynamic classes do not require a data container.
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
 
+### Texts {#texts}
+
+Widgets that include translatable texts display an overview of their [system texts](/refguide/system-texts/). To manage the translations, click **Go to system texts** to open the system text editor.
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/widget-system-texts-properties-dialog.png" alt="The Studio Pro properties dialog box showing the widget's system texts" class="no-border" >}}
+
 ## Data Source Section{#data-source}
 
 {{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/data-source-section.png" alt="Data Source Section" class="no-border" >}}
@@ -189,9 +195,9 @@ The expression provided is evaluated in the browser and, currently, does not sup
 
 This property can be configured in the following ways:
 
-* **Default** — The position of the label is determined by the read-only style configuration. In the control case, the label is positioned after the control; in the text case, it is positioned before the control.
-* **Before control** — The label is placed before the check box.
-* **After control** — The label is placed after the check box.
+* **Default** – The position of the label is determined by the read-only style configuration. In the control case, the label is positioned after the control; in the text case, it is positioned before the control.
+* **Before control** – The label is placed before the check box.
+* **After control** – The label is placed after the check box.
 
 ## Editability Section{#editability}
 
@@ -344,8 +350,8 @@ The possible values of a predefined validation are the following:
 * **Required** – Can be used for values of *all* data types.
 * **E-mail** – Applies to *String* values.
 * **Positive number** – Applies to *Decimal*, *Integer*, and *Long* values.
-* **Date in the future** – Applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`.
-* **Date in the past** – Applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`.
+* **Date in the future** – Applies to *Date and time* values—compares the date *and time* to `[%CurrentDateTime%]`.
+* **Date in the past** – Applies to *Date and time* values—compares the date *and time* to `[%CurrentDateTime%]`.
 
 #### Custom Validation{#custom-validation}
 

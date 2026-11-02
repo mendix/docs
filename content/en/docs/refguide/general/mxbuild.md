@@ -57,6 +57,12 @@ You can also run MxBuild under Linux using the following command line format:
 
 `mxbuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
+{{% alert color="info" %}}
+As of Studio Pro 11.15.0, MxBuild reads the Java home directory from the `JAVA_HOME` environment variable if `--java-home` is not specified. The Java executable path is also inferred from the Java home directory if `--java-exe-path` is not specified.
+
+You can still set either value by passing `--java-home` or `--java-exe-path` on the command line.
+{{% /alert %}}
+
 After creating the deployment package, the MxBuild process quits.
 
 ### General Command-Line Options

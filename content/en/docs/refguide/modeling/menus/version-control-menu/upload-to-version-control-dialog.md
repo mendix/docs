@@ -50,4 +50,5 @@ If you select **Private server**, enter the address of the repository to which y
 
 ## Read More
 
-* [How to Work with an On-Premises Git Version Control Server](/refguide/on-premises-git/)
+* [Enabling Version Control for Your App](/refguide/version-control/enable/)
+* [Optional: Working with Private Git](/refguide/on-premises-git/)

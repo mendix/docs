@@ -15,7 +15,7 @@ Epics is the default tool for managing the development process of new apps.  The
 
 ## Opening an App in Epics
 
-Open the app in [Apps](https://sprintr.home.mendix.com/link/myapps), then go to the [Project Management](/developerportal/project-management/) section. This sections shows all the pages of the Epics tool:
+Open the app in [Projects](https://projects.home.mendix.com/link/myapps), then go to the [Project Management](/developerportal/project-management/) section. This sections shows all the pages of the Epics tool:
 
 * [Board](/developerportal/project-management/epics/board/)
 * [Planning](/developerportal/project-management/epics/planning/)

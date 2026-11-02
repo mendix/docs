@@ -10,6 +10,48 @@ These release notes cover changes to the functionality and other features of the
 
 To see the current status of the Mendix Pipelines, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2026
+
+### Oct 29, 2026
+
+#### New Features
+
+* POST and GET request steps now support [variable concatenation](/developerportal/deploy/configuring-post-get-request-steps/#variable-concatenation), allowing you to combine static text with one or more pipeline variables using the `{{variableName}}` syntax.
+
+#### Improvements
+
+* In POST and GET request steps, the **Request URL** field replaces **Base URL path** and **Additional URL path**.
+
+### Aug 06, 2026
+
+#### New Features
+
+* The variable selector now provides suggestions for Mendix-provided variables within the pipeline designer. Users can reference these variables directly in their pipelines instead of hardcoding their values. For more information, refer to the [Variable Selector](/developerportal/deploy/configuring-post-get-request-steps/#variable-selector) section of *Configuring POST and GET Request Steps*.
+  
+### May 28, 2026
+
+#### New Features
+
+* We have added a **Variable Selector** to the POST and GET request steps, allowing you to discover and insert available variables while configuring request steps. For more information, refer to the [Variable Selector](/developerportal/deploy/configuring-post-get-request-steps/#variable-selector)  section of *Configuring POST and GET Request Steps*.
+
+### May 14, 2026
+
+#### New Features
+
+* We have added [GET](/developerportal/deploy/mendix-pipelines/#get-request) and [POST](/developerportal/deploy/mendix-pipelines/#post-request) request steps to Mendix Pipelines. These new steps allow Mendix Pipelines to retrieve and send structured data to external APIs. For information about how to configure these steps, refer to [Configuring POST and GET Request Steps](/developerportal/deploy/configuring-post-get-request-steps/).
+
+### April 30, 2026
+
+#### New Features
+
+* We have added the [Unit Testing](/developerportal/deploy/mendix-pipelines/#unit-testing) pipeline step for [Mendix on Kubernetes](/developerportal/deploy/private-cloud/), including support for the **App Readiness Timeout (seconds)** parameter.
+
+### February 26, 2026
+
+#### New Features
+
+* We have added [AI-powered log summary](/developerportal/deploy/mendix-pipelines/#ai-log-summary) to all Mendix Pipeline steps to provide insights into pipeline operations.
+
 ## 2025
 
 ### November 27, 2025

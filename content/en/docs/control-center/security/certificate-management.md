@@ -3,19 +3,18 @@ title: "Certificate Management"
 linktitle: "Certificate Management"
 url: /control-center/certificate-management/
 description: "Describes the Certificate Management page in Mendix Control Center."
-weight: 40
-beta: true
+weight: 50
 ---
-
-{{% alert color="warning" %}}
-This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 
+{{% alert color="warning" %}}
+For detailed information about how Mendix Admins can use the **Certificate Management** page to upload, configure and manage centralized certificates, refer to [Centralized Certificates](/developerportal/deploy/certificates/centralized-certificates/).
+{{% /alert %}}
+
 In Mendix Cloud, SSL/TLS certificates enable secure HTTPS communication for incoming connections to applications that use custom domains.
 
-The **Certificate Management** page provides Mendix Admins with a centralized view of all company-wide certificates. From this page, you can upload, replace, renew, and monitor certificates that can be reused across multiple applications and environments.
+The **Certificate Management** page provides Mendix Admins with a centralized view of all company-wide certificates. From this page, you can [upload](/developerportal/deploy/certificates/centralized-certificates/#uploading-central-certificate), [replace](/developerportal/deploy/certificates/centralized-certificates/#replacing-existing-central-certificate), [renew](/developerportal/deploy/certificates/centralized-certificates/#renewing-central-certificate), and monitor certificates that can be reused across multiple applications and environments.
 
 After a certificate is added:
 
@@ -56,8 +55,6 @@ Each configured certificate is shown in a table with the following fields:
     * **Delete** 
     {{% alert color="info" %}}You cannot delete a certificate that is currently in use.
     {{% /alert %}}
-
-For detailed information about how Mendix Admins can use the **Certificate Management** page to upload, configure and manage centralized certificates, refer to [Centralized Certificates](/developerportal/deploy/certificates/centralized-certificates/).
 
 ## Read More
 

@@ -22,7 +22,7 @@ You can select the **Email Alerts** checkbox on the **Alerts** page to set up em
 
 To enable email alerts, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), open your app.
+1. From [Projects](https://projects.home.mendix.com), open your app.
 1. Click **Alerts** in the navigation pane.
 1. Select the environment for which you want to set the alerts from the drop-down list at the top of the page. It is possible to set this option separately for each environment.
 1. Click **Settings** to open the **Settings** tab.
@@ -42,7 +42,7 @@ For details on webhooks, see the [Webhooks](/developerportal/deploy/webhooks/) p
 
 To set a new webhook in the Mendix Portal, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), open your app.
+1. From [Projects](https://projects.home.mendix.com), open your app.
 1. In the navigation pane, click **Webhooks**.
 1. Click **New Webhook**.
 1. Name your webhook and provide the webhook receiver URL and Validation Secret as described in the [Configuring a Webhook](/developerportal/deploy/webhooks/#setting-up) section of the *Webhooks* page.

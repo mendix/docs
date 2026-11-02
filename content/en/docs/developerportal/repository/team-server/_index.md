@@ -18,13 +18,13 @@ Team Server is where all the committed versions of Mendix apps are stored. Mendi
 
 When you commit your app model changes to the Team Server in Studio Pro, you can select stories that you have been working on. Team Server automatically creates links between stories and model changes, allowing you to navigate from commits to the associated requirements. 
 
-After opening your app in [Apps](https://sprintr.home.mendix.com/), on the **Team Server** page, you can see a URL to access you app, revision history, and revision details.
+After opening your app in [Projects](https://projects.home.mendix.com/), on the **Team Server** page, you can see a URL to access you app, revision history, and revision details.
 
 Team Server is hosted on AWS in Frankfurt, Germany.
 
 ## Versioning with Git
 
-In the **Versioning with Git** section, Scrum Masters can migrate apps from SVN version control system to Git. For more information, see [Migrate to Git](/developerportal/general/migrate-to-git/). 
+In the **Versioning with Git** section, Scrum Masters can migrate apps from SVN version control system to Git. For more information, see [Migrate to Git](/developerportal/general/migrate-to-git/).
 
 ## Team Server URL
 
@@ -33,14 +33,10 @@ The **Team Server URL** can be used to manually access the repo (using the Git/S
 The URL can have the following form:
 
 * `https://git.api.mendix.com/<your AppID>/` if it is a Git-enabled app
-* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app 
-
-{{% alert color="warning" %}}
-The `https://teamserver.sprintr.com/<your AppID>/` endpoint is deprecated and cannot be used after March 31, 2026.
-{{% /alert %}}
+* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app
 
 {{% alert color="info" %}}
-You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
+You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server.
 {{% /alert %}}
 
 If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
@@ -73,7 +69,7 @@ For each revision, you can see the following information:
 * The Mendix Studio Pro version used
 * The revision number
 
-You can also access the revision history in Studio Pro. For more information, see the [History](/refguide/using-version-control-in-studio-pro/#history) section in *Using Version Control in Studio Pro*.
+You can also access the revision history in Studio Pro. For more information, see the [Using History](/refguide/version-control-using-history/) section in *Using Version Control in Studio Pro*.
 
 ## Revision Details {#revision-details}
 
@@ -85,5 +81,5 @@ Related stories will only appear if you select them in the **Commit** dialog box
 
 ## Read More
 
-* [Version Control FAQ](/refguide/version-control-faq/)
+* [Version Control FAQ](/refguide/version-control/)
 * [App Roles](/developerportal/general/app-roles/)

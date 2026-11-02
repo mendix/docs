@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-To open the **Environment Details** page, go to [Apps](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to [Projects](https://projects.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{% alert color="info" %}}You must have permissions for **Transport Rights** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
 
@@ -135,8 +135,7 @@ In this section, you can find information about the deployment package that is l
 
 ### Plan Details
 
-This section shows details of the plan that applies to this environment.    
-It also includes the option to change your plan. For details, refer to [Changing Plan](/developerportal/deploy/change-plan/).
+This section shows details of the plan that applies to this environment.
 
 * **Name** – the type of plan associated with your license
 * **Instances** – the number and memory allocation of instances in the environment (for more information, see the [Scaling](#scaling))
@@ -146,6 +145,11 @@ It also includes the option to change your plan. For details, refer to [Changing
 * **Database Plan Memory** – the database's RAM size
 * **File Storage** – available size for storing blobs
 * **Multi-AZ Enabled** –  a **Yes** or **No** value indicating whether multiple availability zones are enabled
+
+From this section, you can also do the following:
+
+* Change your plan. For details, refer to [Changing Plan](/developerportal/deploy/change-plan/).
+* Reclaim database disk space. For details, refer to [Repacking Your Database in Mendix Cloud](/developerportal/deploy/repack-database/).
 
 #### Scaling {#scaling}
 
@@ -179,6 +183,10 @@ On this tab, you can edit the model options for constants and scheduled events.
 ### Constants {#constants}
 
 In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
+
+{{% alert color="warning" %}}
+The combined length of all constant keys and values is limited to 128 KB (approximately 32,000 characters). For more information, refer to [Behavior of Your App in Mendix Cloud](/developerportal/deploy/behavior-of-app/#constants-size-limit).
+{{% /alert %}}
 
 To fill in a new value, select the constant and click **Edit** to bring up the **Edit Constant** dialog box.
 
@@ -255,7 +263,7 @@ Mendix Cloud supports the following HTTP headers in the Mendix Portal:
 | `X-Content-Type-Options`      | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
 | `X-Frame-Options`             | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>`, or `<object>`. The default is not to allow apps to be rendered inside frames. This was the value set previously to prevent embedding in an iframe.<br/>For details on running your app inside an iframe, see [Running Your App in an Iframe](#iframe), below. |
 | `X-Permitted-Cross-Domain-Policies` | Specifies whether the page can load resources from a different domain. |
-| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. |
+| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.<br/>{{% alert color="warning" %}}This header is [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) and not recommended for new implementations.{{% /alert %}} |
 
 There are three types of values for these headers:
 
@@ -300,14 +308,9 @@ To avoid security issues when you want to embed the app in an iframe, use [custo
 
 ##### Applying a Different SameSite Setting {#samesite}
 
-From Studio Pro 8.12, you can control the value of `SameSite` in your cookies. The default for all cookies depends on the version of Mendix you are using:
-
-* For Studio Pro 8 (8.12 and above), the default is `SameSite=None`, which means that they can be used in an iframe
-* For Studio Pro 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
+You can control the value of `SameSite` in your cookies. For Studio Pro 9.0 and above, the default is `SameSite=Strict`, which means that they cannot be used in an iframe
 
 You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
-
-For Mendix 8.11 and below, there was no `SameSite` value set on cookies, and the behavior depended on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in the **Custom Environment Variables** section; this sets `SameSite=None; Secure;` for all your cookies.
 
 {{% alert color="warning" %}}
 The `SAMESITE_COOKIE_PRE_MX812` setting is implemented the next time your app is deployed after you apply the change.
@@ -329,7 +332,7 @@ document.cookie = "originURI=/login.html" + (window.location.protocol === "https
 A Content Security Policy (CSP) informs the client (browser) where your page loads resources from. Setting this can make your app more secure by declaring trusted sources for your resources. For more information, see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/).
 
 {{% alert color="info" %}}
-For complete CSP support, including nonce-based CSP, use the [Headers](/refguide/configuration/#headers) custom runtime setting instead of the HTTP Headers UI. For detailed implementation instructions, see [Content Security Policy](/howto/security/csp/).
+For complete CSP support, including nonce-based CSP, use the [Headers](/refguide/configurations-tab/#headers) custom runtime setting instead of the HTTP Headers UI. For detailed implementation instructions, see [Content Security Policy](/howto/security/csp/).
 {{% /alert %}}
 
 The process for setting a full content security policy depends on what your app does. However, a starting point that declares the content security policy that works with a basic Mendix app is given below:
@@ -350,7 +353,7 @@ On the **Connectivity** tab, you can manage the elements described below.
 
 ### Connections {#connections}
 
-You can connect from your applications on Mendix Cloud to resources on your own infrastructure using Mendix Cloud Private Connectivity.
+You can connect from your applications on Mendix Cloud to resources on your own infrastructure using [Mendix Cloud Private Connectivity](/control-center/private-connectivity/).
 
 The **Connections** tab contains the following information:
 
@@ -530,12 +533,12 @@ Click **Add** and select **Supported** to choose from the following variables:
 * **JVM_GARBAGE_COLLECTOR** – This overrides the automatic configuration of the Java garbage collector. Accepted values are `Serial` or `G1`.
 * **METRICS_AGENT_CONFIG** – This passes a configuration JSON to control the metrics passed to Datadog.
 * **SAMESITE_COOKIE_PRE_MX812** – This sets `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section.
-* **USAGE_METRICS_EMAIL_FIELDS** (deprecated) – If your app uses specializations of the `System.User` entity to store users, use this variable to point to them. This enables Mendix to identify [internal and external users](/developerportal/deploy/populate-user-type/) of your app.
+* **USAGE_METRICS_EMAIL_FIELDS** (deprecated) – If your app uses specializations of the `System.User` entity to store users, use this variable to point to them. This enables Mendix to identify [internal and external users](/developerportal/deploy/implementing-user-metering/#user-classification) of your app.
 
     * The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app that contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user.
     * If you have multiple specializations of `System.User`, you can specify the values in comma-separated format (that is, `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`). In the following example, there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
 
-    To ensure accurate user metering, it is important to distinguish external users from internal users. The recommended approach is to implement logic in your app to classify users (see [Populate User Types](/developerportal/deploy/populate-user-type/) and the [User Classification](/appstore/modules/user-classification/) module). A previous method relied on using email domains via the `USAGE_METRICS_EMAIL_FIELDS` constant, as described above. However, this method has now been deprecated. 
+    To ensure accurate user metering, it is important to distinguish external users from internal users. The recommended approach is to implement logic in your app to classify users (see [Implementing User Metering](/developerportal/deploy/implementing-user-metering/) and the [User Classification](/appstore/modules/user-classification/) module). A previous method relied on using email domains via the `USAGE_METRICS_EMAIL_FIELDS` constant, as described above. However, this method has now been deprecated. 
 
 Unsupported environment variables can only be used to control Mendix beta features. To configure an unsupported variable, click **Add** and select **Unsupported**. If you are using a beta feature, you will be informed what **Name** and **Value** to enter.
 

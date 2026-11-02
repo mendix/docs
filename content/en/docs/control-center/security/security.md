@@ -17,15 +17,6 @@ The **Settings** page in the **Security** category in Control Center allows you 
 
 ## Security Settings Tab
 
-### Password Policy
-
-Mendix enforces a 90-day password validity period for all platform passwords used to sign in to the Mendix Platform or Studio Pro. 
-If Mendix Admins [set up SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/), the organization's IdP manages all sign-ins and passwords. In this case, the Mendix Platform's password validity policy no longer applies. 
-
-{{% alert color="info" %}}
-The Mendix Platform no longer allows you to configure a password validity period other than 90 days or to disable password expiry. This capability will be removed on March 31, 2026.
-{{% /alert %}}
-
 ### Email Signing {#disable-enable-digital-signing-emails}
 
 The Mendix Platform digitally signs the content of emails from senders [no-reply@notifications.mendix.com](mailto:no-reply@notifications.mendix.com) and [no-reply@platform-mail.mendix.com](mailto:no-reply@platform-mail.mendix.com). By digitally signing the content of an email, Mendix provides assurance to the recipient of the email that the content of an email has not been altered in transit. For reasons of security, this feature is enabled by default. However, if digitally signing the content of an email interferes with the delivery of that email to the recipient, a Mendix Admin can disable this feature for emails sent to receivers in the company domains. For more information, see the [Why Would You Want to Disable the Digital Signing of Email Content?](#why-disable-email-signing) section below.
@@ -89,7 +80,7 @@ If you want to automate the process of assigning project-level roles to project 
 You can use your IT processes and IT systems to request and approve the Mendix Admin role for certain employees, and include the entitled employees in a user group in your IdP. The Mendix platform assigns or removes the Mendix Admin role from a user at login time, based on a group membership. When using IdP-managed admins, Mendix Admins can no longer be manually assigned through the Control Center.
 
 {{% alert color="info" %}}
-The IdP-managed Mendix Admin feature is currently in [Limited Availability](/releasenotes/release-status/#limited-availability) due to the lack of self-service configuration in the Control Center. As a result, it requires Mendix-assisted onboarding. To arrange onboarding, contact `jaap.francke@mendix.com`.
+The IdP-managed Mendix Admin feature is currently in [Limited Availability](/releasenotes/release-status/#limited-availability) due to the lack of self-service configuration in the Control Center. As a result, it requires Mendix-assisted onboarding. To arrange onboarding, contact `jacob.francke@siemens.com`.
 {{% /alert %}}
 
 Note that enabling this feature on the Mendix platform may affect your existing set of Mendix Admins. The changes will take place at login:

@@ -16,7 +16,7 @@ Documents available for this topic:
 
 * [Business Event Services](/refguide/business-event-services/)
 
-* [Use the Data Importer](/refguide/use-the-data-importer/)
+* [Data Importer](/refguide/data-importer/)
 
    Overview of how to use the Data Importer to import data from a representative file (Excel and CSV) and create a non-persistable entity in your domain model. 
 
@@ -27,10 +27,6 @@ Documents available for this topic:
 * [Querying and Integrating External Data](/refguide/query-and-integrate-external-data/)
 
    Details how to use the External Database Connector to query external databases and integrate the data into your Mendix application.
-
-* [Execute an SQL Statement on an External Database](/refguide/execute-an-sql-statement-on-an-external-database/)
-
-   Describes how to execute an SQL statement on relational external databases using the Database Connector.
 
 ## Read More
 

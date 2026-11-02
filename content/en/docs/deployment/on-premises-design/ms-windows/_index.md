@@ -13,7 +13,7 @@ aliases:
 
 This document describes the installation and configuration of Mendix software on a system running Microsoft (MS) Windows. It covers:
 
-* Installing the Mendix Service Console
+* Installing and upgrading the Mendix Service Console
 
 * Deploying a Mendix app
 
@@ -45,7 +45,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
     * Suitable database servers are MariaDB, MS SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements/#databases) for more information
 
-* A local or domain user with the *“log on as a service”* local security policy set
+* A local user, domain user or group managed service account (gMSA) with the *“log on as a service”* local security policy set
 
 ## Installing the Mendix Service Console {#service-console}
 
@@ -76,6 +76,16 @@ To download and install the Mendix Service Console, follow these steps:
 
     In addition, there will be a file called `Settings.yaml` that contains your application configuration.
 
+## Upgrading the Mendix Service Console {#service-console-upgrade}
+
+To upgrade the Mendix Service Console to a new version, follow these steps:
+
+1. Download the latest version of the [Mendix Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
+2. Stop the Mendix application in the Mendix Service Console.
+3. Exit the Mendix Service Console without uninstalling it.
+4. Run the downloaded Mendix Service Console installer and perform an overwrite installation.
+5. After the installation completes, start the Mendix Service Console.
+
 ## Deploying a Mendix App
 
 To deploy a Mendix app using the Mendix Service Console, follow these steps:
@@ -88,32 +98,36 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
     * **Display name** – the description of the app which is visible as a tooltip for the app in the left bar of the Mendix Service Console or as a column in the list of Windows services
     * **Description** – a description of the application that will be visible in the Mendix Service Console
     * **Startup type** – select whether you want the app to be started automatically when the server starts, started with a delay, started manually, or disabled altogether
-    * **User name** and **Password** – the app will always run under the user account given here, and the service will be installed with this user account configured (for more information, see [Prerequisites](#Prerequisites))
+    * **User name** and **Password** – the app will run under the user account given here, and the service will be installed with this user account configured (for more information, see [Prerequisites](#Prerequisites))
+    * **Install service with LocalSystem account** – optionally, select the checkbox if you want to use a gMSA account for a Mendix app instead of the user account given under **User name** and **Password**.
+    
+4. Click **Next >**. 
 
-4. Click **Next >**.
+5. Optionally, if you selected the **Install service with LocalSystem account** checkbox while creating the app, install the service once your app is created. The service will be installed with the LocalSystem account. (You can verify the service account type in the Services app of Windows.) Execute the following command in the administrator command prompt to change the account type to your gMSA: `sc.exe config MyServiceName obj= "YOURDOMAIN\MyGMSAAccount$"`. 
+Configure folder access permissions for gMSA account on the directory selected in the **Preferences** setting. For more information, refer to the [Installing the Mendix Service Console](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#service-console) section above.
 
-    {{< figure src="/attachments/deployment/on-premises-design/ms-windows/18580728.png" >}}
+    {{< figure src="/attachments/deployment/on-premises-design/ms-windows/gmsa.png" >}}
 
-5. On the **Project Files** screen, click **Select app…**.
+6. On the **Project Files** screen, click **Select app…**.
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/service_console_selectapp.png" >}}
 
-6. Now select the **MDA** file that was [created in Mendix Studio Pro](/refguide/create-deployment-package-dialog/) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
+7. Now select the **MDA** file that was [created in Mendix Studio Pro](/refguide/create-deployment-package-dialog/) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
 
-7. Configure the **Database Settings**:
+8. Configure the **Database Settings**:
 
     * **Type** – the database server type
     * **Host** – the IP address or host name of the database server
     * **Name** – the database name
     * **User name** and **Password** – the database user name and password
 
-8. Click **Next >**.
+9. Click **Next >**.
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/18580726.png" >}}
 
-9. On the **Common Configuration** screen, keep the default settings. These settings should only be changed if this is needed for your application setup.
+10. On the **Common Configuration** screen, keep the default settings. These settings should only be changed if this is needed for your application setup.
 
-10. Click **Finish** and start the application.
+11. Click **Finish** and start the application.
 
 ## Configuring the Microsoft Internet Information Services Server{#configure-msiis}
 

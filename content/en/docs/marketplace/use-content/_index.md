@@ -1,7 +1,7 @@
 ---
 title: "Using Marketplace Content"
 url: /appstore/use-content/
-weight: 5
+weight: 4
 description: "Covers the basics of how to access the Marketplace from Studio Pro and provides examples of how to add a widget and module to your app."
 no_list: false
 aliases:
@@ -46,7 +46,7 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 4. You can explore Marketplace content in the following ways:
     * Use **Search in the Marketplace** to find the component that you want to download.    
       You can paste the content ID here if you copied it via the [Use in Studio Pro button](/appstore/component-details/) in the web Marketplace.
-    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/overview/).
+    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/#components-type).
     * Filter for **All Content**, **My Company Content**, or **Platform-Supported Content**.
 
 5. Select a component from the pane to see its details.
@@ -124,7 +124,7 @@ To download content in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and abo
 1. Open Studio Pro and sign in with your Mendix credentials.
 2. Open the app in which you want to install the component from the Marketplace.
 3. Click the Marketplace icon in the top menu bar to open it in Studio Pro. The Marketplace opens within Studio Pro. The **Categories** menu item on the left side gives an overview of which types of content are available.
-4. Use the **Search** bar to find the component that you want to download. Note that results for Marketplace content searches within Studio Pro may differ from those in the online [Marketplace](/appstore/overview/) due to a synchronization issue.
+4. Use the **Search** bar to find the component that you want to download. Note that results for Marketplace content searches within Studio Pro may differ from those in the online [Marketplace](/appstore/) due to a synchronization issue.
 5. Click the component or the **Read more** button on the right side to show the details of the component.
 6. Click **Download** to download the component.     
    The correct version of the component that is compatible with your Studio Pro version is integrated directly into your application. By default, the highest correct version of the component is downloaded. If you want to download an older component version, go to the **Releases** tab and click **Download** for the desired version.    

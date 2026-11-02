@@ -28,7 +28,7 @@ This how-to teaches you how to do the following:
 
 For a deep dive into installing and configuring Parallels on Mac to run Studio Pro, check out this video:
 
-{{< vidyard "nJ9Tz8VnHPPKPrtSBgHv3U" >}}
+{{< vidyard id="nJ9Tz8VnHPPKPrtSBgHv3U" >}}
 
 ## Prerequisites
 

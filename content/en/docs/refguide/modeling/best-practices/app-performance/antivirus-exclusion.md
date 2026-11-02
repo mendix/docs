@@ -35,6 +35,10 @@ To exclude the app folder, click **Exclude Folder** in the notification.
 
 After completion, a confirmation pop-up appears. If the operation fails, a failure pop-up is displayed instead.
 
+{{% alert color="info" %}}
+Studio Pro does not check if your antivirus is still active in the folder. It only checks if there is antivirus software running on your machine. This means that when the notification appears, it is a general warning that antivirus software could be scanning the folder, not confirmation that it actually is.
+{{% /alert %}}
+
 ### Disabling the Antivirus Exclusion Notification
 
 Studio Pro displays a notification when an app is loaded, prompting you to exclude the app folder. To disable the notification, follow the steps below:

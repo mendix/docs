@@ -4,12 +4,7 @@ linktitle: "Centralized Certificates"
 url: /developerportal/deploy/certificates/centralized-certificates/
 description: "Learn how Mendix Admins centrally manage SSL/TLS certificates for custom domains in Mendix Control Center, including uploading, renewing, replacing, and monitoring certificate status."
 weight: 40
-beta: true
 ---
-
-{{% alert color="warning" %}}
-This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 
@@ -46,7 +41,7 @@ To upload a certificate, you need to have the following things prepared:
 
 To upload the certificate, follow these steps:
 
-1. Go to **Certificate Management** in [Control Center](https://controlcenter.mendix.com/p/admin/apps).
+1. Go to **Certificate Management** in [Control Center](https://controlcenter.mendix.com/p/admin/apps), in the **Security** menu.
 2. Click **Upload Certificate.**
 3. In the **Upload Certificate** wizard:
     1. Review the information in **General Info**, then click **Next**.

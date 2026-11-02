@@ -1,6 +1,6 @@
 ---
 title: "Debugging Microflows and Nanoflows"
-url: /refguide9/debug-microflows-and-nanoflows//
+url: /refguide9/debug-microflows-and-nanoflows/
 weight: 120
 ---
 
@@ -19,6 +19,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Read [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/)
 * Read [How to Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/)
+
+{{% alert color="info" %}}
+Debugging with breakpoints is not supported for microflows executed during application startup (for example, the [After startup](/refguide9/app-settings/#after-startup) microflow and any microflows it calls).
+{{% /alert %}}
 
 ## Debugging Overview
 

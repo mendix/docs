@@ -96,7 +96,7 @@ The input parameters are described in the table below:
 
 | Value                        | Type                                                         |
 | ---------------------------- | ------------------------------------------------------------ |
-| Date                         | A string which contains the textual representation of a date — for example `dd/MM/yyyy` or `MM/dd/yyyy` |
+| Date                         | A string which contains the textual representation of a date—for example `dd/MM/yyyy` or `MM/dd/yyyy` |
 | Format                       | String                                                       |
 | Default value (**optional**) | Date and time                                                |
 
@@ -179,10 +179,10 @@ the output is:
 'Sun, 8 Jun 2008 10:12:01 +0200'
 ```
 
-To get a format like `'2008-06-08T10:12:01'`, you need to concatenate two formatDateTime[UTC] functions:
+To get a format like `'2008-06-08T10:12:01'`, you can escape the T with `''`:
 
 ```java
-formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,'HH:mm:ss')
+formatDateTime($object/Date1,'yyyy-MM-dd''T''HH:mm:ss')
 ```
 
 ## `formatTime[UTC]` {#formatTime}

@@ -9,6 +9,12 @@ description: "Describes the configuration and usage of the PDF Document Generati
 
 The [PDF Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app. 
 
+For detailed information on how to install and use the PDF Document Generation module, refer to these pages:
+
+* [Installation and Configuration](/appstore/modules/document-generation/installation-configuration/)
+* [Usage](/appstore/modules/document-generation/usage/)
+* [Troubleshooting](/appstore/modules/document-generation/troubleshooting/)
+
 ## Features
 
 * Generate pixel-perfect PDF documents based on regular pages in your app.

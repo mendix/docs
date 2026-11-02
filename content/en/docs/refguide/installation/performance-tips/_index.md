@@ -52,4 +52,4 @@ Antivirus software can sometimes impact the performance of Studio Pro. To mitiga
 ## Read More
 
 * [Community Best Practices for App Performance](/refguide/community-best-practices-for-app-performance/)
-* [Mendix Best Practices for Development](/refguide/dev-best-practices/)
+* [Development Best Practices](/refguide/dev-best-practices/)

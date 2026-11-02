@@ -325,4 +325,4 @@ Gather all files from the log and provide them to Mendix Support. Please mention
 
 ## Read More
 
-* [Version Control FAQ](/refguide/version-control-faq/)
+* [Version Control FAQ](/refguide/version-control/)

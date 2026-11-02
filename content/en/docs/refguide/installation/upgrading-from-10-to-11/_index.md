@@ -19,7 +19,7 @@ If your app is on a Studio Pro version below 10, you must upgrade in order of ve
 * [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)
 * [Upgrading from Mendix Studio Pro 9 to 10](/refguide10/upgrading-from-9-to-10/)
 
-If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the Control Center dashboard. Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
+If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the Control Center dashboard. Alternatively, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact to find out how to check the Mendix version of your app.
 
 ### Steps Required for Upgrade
 
@@ -58,7 +58,7 @@ After the upgrade of your marketplace content, take the next steps:
 1. Fix any deprecation warnings you see in development in Studio Pro, as well as in the Mendix Runtime using your console and browser console. These deprecations could include, but are not limited to, the following:
     * [Document Templates](/refguide/document-templates/): deprecated in 10.24 
     * [Dojo-based Mendix Client](/refguide/mendix-client/): deprecated in 11.0
-    * Deprecated Java Version: depending on your Java version you may see errors — to resolve those errors, see [Java Version Migration](/refguide/java-version-migration/)
+    * Deprecated Java Version: depending on your Java version you may see errors—to resolve those errors, see [Java Version Migration](/refguide/java-version-migration/)
 1. Review the major changes in the sections below.
 1. Run your app, test all functionality, and ensure it works without error.
 1. Back up or commit your Mendix 10 app so you can return to it if necessary.
@@ -101,11 +101,19 @@ In a Microflow, this distinction exists and the expression would yield `false`.
 
 Moreover, on the client side a String attribute with a value set to `empty` would be treated as if it contains `''`. This made it impossible to check in a Nanoflow whether an attribute is `empty` or if it has an empty String value `''`.
 
+#### Mendix 11.0.0
+
 In Mendix 11.0.0, we have made this behavior consistent. Now, strings are handled in the same way no matter where you use them. 
 
 We understand that this change might cause unexpected changes in existing applications migrated from older versions of Mendix. 
 
-We recommend carefully analyzing all expressions that are comparing strings against `''` or `empty` and doing extensive testing after the migration. 
+#### Mendix 11.6.3
+
+In Mendix 11.6.3, we introduced [an option](/refguide/runtime-tab/#new-string-behavior) to toggle between the old and the new client-side String attribute behaviors. Projects migrating from Mendix 10 to 11 will retain the old String behavior unless you manually switch to the new one.
+
+It is recommended to migrate your pre-existing projects to use the new behavior as soon as possible. The new behavior will improve consistency between nanoflows and microflows, which will lead to fewer bugs in your applications.
+
+Make sure to carefully analyze all expressions that are comparing strings against `''` or `empty` and do extensive testing after the migration. 
 
 #### Example 1
 
@@ -140,15 +148,15 @@ In Mendix 11.0 you won’t run into any ambiguity around this anymore.
 #### Example 3
 
 ```
-$User/Name + "@mendix.com"
+$User/Name + "@siemens.com"
 ```
 
-In this example, Mendix will handle string concatenation correctly no matter if `$User/Name` is `empty` or `''`. The resulting string will be `@mendix.com`.
+In this example, Mendix will handle string concatenation correctly no matter if `$User/Name` is `empty` or `''`. The resulting string will be `@siemens.com`.
 
 In this particular example, if you want to prevent the generation of email addresses without the first part you should add a validation check before doing concatenation: 
 
 ```
-if trim($User/Name) = '' then '' else $User/Name + "@mendix.com"
+if trim($User/Name) = '' then '' else $User/Name + "@siemens.com"
 ```
 
 ### React 19 {#react-19}
@@ -228,5 +236,5 @@ If you use an encryption algorithm other than `AES`, then all existing files sho
 * When COALESCE function in OQL has attributes of different numeric types, the result type is defined according to type precedence. Before, the result type would match the type of the first argument.
 * Client API `mx.logger` is no longer supported. All calls to it should be replaced with standard `console.log`, `console.warn`, and other such standard calls. All widgets that use the `mx.logger` need to be updated.
 * We no longer convert `empty` values sent to the client into empty strings. All client side expressions must be adjusted accordingly.
-* We no longer support the runtime API class `com.mendix.modules.email.EmailModule` which was deprecated in [Mendix 10.12](https://docs.mendix.com/releasenotes/studio-pro/10.12/#deprecate-email). We recommend using the [Email Connector](https://marketplace.mendix.com/link/component/120739) module instead.
+* We no longer support the runtime API class `com.mendix.modules.email.EmailModule` which was deprecated in [Mendix 10.12](/releasenotes/studio-pro/10.12/#deprecate-email). We recommend using the [Email Connector](https://marketplace.mendix.com/link/component/120739) module instead.
 * The [Deep Link module](https://marketplace.mendix.com/link/component/43) is deprecated, and no longer receives active support starting with Studio Pro 11. The functionality this module offers has been replaced with built-in features of the Mendix Platform, such as Page URLs and Microflow URLs. Refer to the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section in *Deep Link* for details on how to migrate to these built-in features.

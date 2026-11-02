@@ -12,7 +12,7 @@ aliases:
 
 Scrum Masters can migrate apps from SVN version control system to Git. For more information on version control, see [Version Control](/refguide/version-control/) in the *Studio Pro Guide*. 
 
-Git is a more modern version control system that has several advantages over SVN. For more information, see [Version Control FAQ](/refguide/version-control-faq/).
+Git is a more modern version control system that has several advantages over SVN. For more information, see [Version Control FAQ](/refguide/version-control/).
 
 If your main line is Studio Pro version 9.24.28 or above and your team role is Scrum Master, you see a notification on a possible migration at the top of the **Team Server** page for your app. Click **Migrate to Git** to check for migration eligibility and to start the migration.
 
@@ -75,7 +75,7 @@ If your app is not eligible for migration the reason(s) will be listed on a page
 
 ##### MPR File Size
 
-When the size of the *.mpr* file exceeds the threshold, migration is blocked to prevent rapid repository growth after migrating to Git. To get your app approved for migration, you have to agree on the following steps with Support or your Customer Success Manager:
+When the size of the *.mpr* file exceeds the threshold, migration is blocked to prevent rapid repository growth after migrating to Git. To get your app approved for migration, you have to agree on the following steps with Support or your Technical Account Manager, Specialized Account Executive, or Partner Contact:
 
 1. [Migrate without history](#without-history). This requires converging all branches which you want to retain.
 2. Update your app to Studio Pro version 10.24 LTS to automatically convert to [MPRv2](/refguide10/troubleshoot-repository-size/#mprv2).
@@ -200,4 +200,3 @@ The most likely reason your migration has failed is that you have branches that 
 ## Read More
 
 * [Version Control](/refguide/version-control/)
-* [Version Control FAQ](/refguide/version-control-faq/)

@@ -77,16 +77,21 @@ By default, **Autofocus** is set to "Off" for any newly created pages. For backw
 
 A page's URL allows end users to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p/` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
 
-Pages with parameters can also have URLs. For those pages, all page parameters must be present in the URL. To do this, define which attribute of each page parameter you want to be used in the URL. The syntax for this is the name of the page parameter, a `/`, and then the name of the attribute that should be used placed between curly brackets. 
+{{% alert color="info" %}}
+The `/p/` URL prefix can be configured in [runtime settings](/refguide/runtime-tab/#url-prefix).
+{{%/alert %}}
 
-For example, in the URL `product/{Product/Name}` the `Name` attribute of the page parameter `Product` will be used in the URL (in a browser, the URL appears as `http://example.mendixcloud.com/p/product/hammer`). Any attribute of type `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long`, or `String` can be used in the URL. 
+Pages with parameters can also have URLs. For those pages, all page parameters must be present in the URL. The URL syntax depends on the type of parameter:
 
-Next to this, you can use `Id` as an attribute to include the identifier of the entity in the URL. This would appear as `product/{Product/Id}` for example. In the page URL dialog box, the configured URL is shown together with an example URL (with example values filled in for the parameters), and also shows which XPath queries the runtime will use to retrieve the page parameters. See this example URL in a dialog box:
+* **Entity parameters** – Use the parameter name, a `/`, and then the attribute name enclosed in curly brackets: `{ParameterName/Attribute}`. Any attribute of type `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long`, or `String` can be used. For example, in the URL `product/{Product/Name}`, the `Name` attribute of the page parameter `Product` will be used (in a browser, the URL appears as `http://example.mendixcloud.com/p/product/hammer`).
+* **Primitive parameters** – Primitive parameters are page parameters of a simple type (such as `String` or `Integer`) rather than an entity type. Use the parameter name enclosed in curly brackets: `{ParameterName}`. For example, in the URL `product/{ProductName}`, the value of the primitive page parameter `ProductName` will be used.
+
+Additionally, you can use `Id` as an attribute to include the identifier of the entity in the URL. This would appear as `product/{Product/Id}`, for example. In the page URL dialog box, the configured URL is shown together with an example URL (with example values filled in for the parameters), and also shows which XPath queries the runtime will use to retrieve the page parameters. See this example URL in a dialog box:
 
 {{< figure src="/attachments/refguide/modeling/pages/page/page-url-dialog.png" alt="page url dialog" class="no-border" >}}
 
 {{% alert color="warning" %}}
-Page URLs are not supported for pages that have non-persistable entities as parameters
+Page URLs are not supported for pages that have non-persistable entities as parameters, or have optional parameters.
 {{%/alert %}}
 
 In simple e-commerce applications, the URLs can be configured as follows:
@@ -96,6 +101,14 @@ In simple e-commerce applications, the URLs can be configured as follows:
 * *order/{Order/Id}* – the URL for a page with data from a particular `Order` (in a browser, the URL will look like `http://example.mendixcloud.com/p/order/3212449487634321`, where `3212449487634321` is the unique identifier of the `Order`)
 
 * *category/{Category/Code}/product/{Product/Name}* - the URL for a page that shows a product and a category (in a browser, the URL will look like `http://example.mendixcloud.com/p/category/tools/product/hammer` where `tools` is used to retrieve the `Category` by its `Code`, and `hammer` is used to retrieve the `Product` by its `Name`)
+
+{{% alert color="warning" %}}
+Mendix does not recommend configuring page URLs for pages that are displayed as a pop-up. Navigating to such a URL will result in layout issues.
+{{%/alert %}}
+
+{{% alert color="info" %}}
+Page and microflow URL patterns must be unambiguous. If two patterns match the same URL, the Mendix Runtime cannot determine which page or microflow to open. For best practices on structuring URLs and resolving conflicts, see the [Page and Microflow URLs](/refguide/general-best-practices/#page-and-microflow-urls) section in *General Development Best Practices*.
+{{% /alert %}}
 
 ### Common Section {#common}
 

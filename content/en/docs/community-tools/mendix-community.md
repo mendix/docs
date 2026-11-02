@@ -39,7 +39,7 @@ The following tabs are available in **Posts**:
 * **Commented** – The questions, exchanges, and ideas that you have commented on
 * **Drafts** – The post drafts you have started
 
-## General
+## Forum
 
 ### Questions {#questions-tab}
 

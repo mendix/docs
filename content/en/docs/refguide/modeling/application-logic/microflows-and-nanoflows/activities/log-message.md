@@ -54,7 +54,7 @@ This property is only available in microflows.
 The log node name is a microflow expression that defines the source of the log message. For example, if you log messages from an email module, the log node name could be *Email module*. Use your own log node names as this avoids confusion with messages from the Mendix runtime which are written to the Mendix log nodes. The Mendix log nodes are listed in the [Default Mendix Log Nodes](/refguide/logging/#mendix-nodes) section of *Logging*.
 
 {{% alert color="info" %}}
-You can only set custom [log node levels](/developerportal/deploy/environments-details/#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](/refguide/app-settings/#after-startup).
+You can only set custom [log node levels](/developerportal/deploy/environments-details/#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](/refguide/runtime-tab/#after-startup).
 {{% /alert %}}
 
 ### Template

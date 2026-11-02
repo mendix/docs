@@ -1,0 +1,519 @@
+openapi: 3.1.1
+info:
+  title: Audit Logging API V1
+  version: 1.0.0
+# Multiple docs
+servers:
+  - url: https://audit-api-prod.datalab.mendix.com/v1
+x-logo:
+  url: https://mendix.com/logo.png
+  altText: Audit Logging API Logo
+x-termsOfService: https://mendix.com/terms
+x-contact:
+  name: Support Team
+  url: https://mendix.com/support
+paths:
+  "/logs":
+    get:
+      tags:
+        - Audit Logs
+      summary: Retrieve audit logs
+      operationId: getAuditLogs
+      security:
+        - SSOToken: []
+        - PAT: []
+      description: |
+        <p>Retrieves a list of audit logs filtered by Owner ID with pagination, sorting, and filtering support.</p>
+        <p>The Owner ID is derived from the token used in the request.</p>
+        <p>Logs cannot be retrieved for an Owner ID that is different to the one in the token.</p>
+        <h2>Authorization</h2>
+        <p><code>Authorization: Bearer &lt;sso_token&gt;</code> or <code>Authorization: MxToken &lt;token&gt;</code></p>
+        <p>Requires the <strong><code>mx:audit-logging:read</code></strong> scope.</p>
+      parameters:
+        - $ref: "#/components/parameters/eventOutcome"
+        - $ref: "#/components/parameters/resourceId"
+        - $ref: "#/components/parameters/contextId"
+        - $ref: "#/components/parameters/contextType"
+        - $ref: "#/components/parameters/resourceType"
+        - $ref: "#/components/parameters/searchQuery"
+        - $ref: "#/components/parameters/fromDate"
+        - $ref: "#/components/parameters/toDate"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/limit"
+        - $ref: "#/components/parameters/sortBy"
+        - $ref: "#/components/parameters/sortOrder"
+      responses:
+        '200':
+          $ref: "#/components/responses/LogsResponse"
+        '400':
+          $ref: "#/components/responses/Error400"
+        '401':
+          $ref: "#/components/responses/Error401"
+        '403':
+          $ref: "#/components/responses/Error403"
+        '500':
+          $ref: "#/components/responses/Error500"
+  "/logs-chain":
+    get:
+      tags:
+        - Audit Logs
+      summary: Retrieve audit logs chain
+      description: |
+        <p>Retrieves a chain of audit logs for a specific owner. If a cursor is not provided, the first page is returned.</p>
+        <p>Output is ordered chronologically, from newest to oldest.</p>
+        <h2>Authorization</h2>
+        <p><code>Authorization: Bearer &lt;sso_token&gt;</code> or <code>Authorization: MxToken &lt;token&gt;</code></p>
+        <p>Requires the <strong><code>mx:audit-logging:read</code></strong> scope.</p>
+      operationId: getAuditLogsChain
+      security:
+        - SSOToken: []
+        - PAT: []
+      parameters:
+        - $ref: "#/components/parameters/cursor"
+        - $ref: "#/components/parameters/chainLimit"
+      responses:
+        '200':
+          $ref: "#/components/responses/LogsChainResponse"
+        '400':
+          $ref: "#/components/responses/Error400"
+        '401':
+          $ref: "#/components/responses/Error401"
+        '403':
+          $ref: "#/components/responses/Error403"
+        '500':
+          $ref: "#/components/responses/Error500"
+  
+components:
+  parameters:
+    eventOutcome:
+      name: eventOutcome
+      in: query
+      required: false
+      schema:
+        type: string
+      description: The outcome of the event
+      example: "Success"
+    resourceId:
+      name: resourceId
+      in: query
+      required: false
+      schema:
+        type: string
+      description: The unique identifier for the affected resource
+      example: "resource-123"
+    contextId:
+      name: contextId
+      in: query
+      required: false
+      schema:
+        type: string
+      description: The unique identifier for the affected resource context
+      example: "context-456"
+    contextType:
+      name: contextType
+      in: query
+      required: false
+      schema:
+        type: string
+      description: The type of Context
+      example: "Environment"
+    resourceType:
+      name: resourceType
+      in: query
+      required: false
+      schema:
+        type: string
+      description: The type of resource (e.g., Company, User, Environment)
+      example: "Company"
+    searchQuery:
+      name: q
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Search query
+      example: "Control Center"
+    fromDate:
+      name: from
+      in: query
+      required: false
+      schema:
+        type: string
+        format: date-time
+      description: Start date filter, ISO 8601 UTC format
+      example: "2024-06-01T00:00:00Z"
+    toDate:
+      name: to
+      in: query
+      required: false
+      schema:
+        type: string
+        format: date-time
+      description: End date filter, ISO 8601 UTC format
+      example: "2025-10-01T23:59:59Z"
+    page:
+      name: page
+      in: query
+      required: false
+      schema:
+        type: integer
+        default: 1
+      description: Page number for pagination
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        default: 50
+        maximum: 100
+      description: Maximum number of items per page. The default is 50, the maximum is 100.
+    sortBy:
+      name: sortBy
+      in: query
+      required: false
+      schema:
+        type: string
+        enum:
+          - timestamp
+          - logId
+      description: Field to sort by
+    sortOrder:
+      name: sortOrder
+      in: query
+      required: false
+      schema:
+        type: string
+        enum:
+          - asc
+          - desc
+        default: asc
+      description: Sort order
+    cursor:
+      name: cursor
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Base64 encoded cursor for pagination, generated from the last logId and timestamp. If not provided, the first page is returned.
+    chainLimit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        default: 25
+        maximum: 100
+      description: Maximum number of items per page. The default is 25, and the maximum is 100.
+  responses:
+    LogsResponse:
+      description: Audit logs retrieved successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              pagination:
+                $ref: "#/components/schemas/pagination"
+              cursors:
+                $ref: "#/components/schemas/cursors"
+              items:
+                type: array
+                description: List of audit logs for the current page
+                items:
+                  $ref: "#/components/schemas/AuditLog"
+    LogsChainResponse:
+      description: Audit logs chain retrieved successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              cursors:
+                $ref: "#/components/schemas/cursors"
+              pagination:
+                $ref: "#/components/schemas/pagination"
+              items:
+                type: array
+                description: List of audit logs in the chain
+                items:
+                  $ref: "#/components/schemas/AuditLog"
+    Error400:
+      description: Bad request, invalid input
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error400"
+    Error401:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error401"
+    Error403:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error403"
+    Error500:
+      description: Internal server error, please try again later
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error500"
+  securitySchemes:
+    SSOToken:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      # Support both Bearer tokens and MxTokens
+      description: |
+        Use <code>Bearer $SSO_TOKEN_HERE</code> for Mendix SSO tokens. Scope required: <code>mx:audit-logging:read</code>.
+    PAT:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: |
+        Use <code>MxToken $PAT_TOKEN_HERE</code> for Personal Access Tokens. Scope required: <code>mx:audit-logging:read</code>.
+  schemas:
+    AuditLog:
+      type: object
+      required:
+      - logId
+      - timestamp
+      - ownerId
+      - ownerIdType
+      - internalService
+      - externalService
+      - client
+      - event
+      properties:
+        logId:
+          type: string
+          description: Unique identifier of the audit log record
+        timestamp:
+          type: string
+          format: date-time
+          description: Date and time the event occurred, in ISO 8601 UTC format
+        ownerId:
+          type: string
+          description: The unique identifier of the owner
+        ownerIdType:
+          type: string
+          enum:
+          - CompanyID
+          - PlatformAccountID
+          description: The type of ownerId. Only CompanyID and PlatformAccountID are supported.
+        internalService:
+          type: string
+          description: This field identifies the service that produced the audit log, and can be used to retrieve logs for the service.
+          example: "Backups"
+        externalService:
+          type: string
+          enum:
+          - Mendix Portal
+          - Deployment
+          - Control Center
+          - Marketplace
+          - Compass
+          - Portfolio
+          - Catalog
+          description: The external system or service involved in the event
+        client:
+          $ref: "#/components/schemas/Client"
+        event:
+          $ref: "#/components/schemas/Event"
+    Client:
+      type: object
+      required:
+      - userName
+      - userAccountEmail
+      properties:
+        userUuid:
+          type: string
+          description: UserID of the logged-in user
+        userAccountEmail:
+          type: string
+          format: email
+          description: Email of the user who performed the action
+        userName:
+          type: string
+          description: Name of the logged-in user
+        ipAddress:
+          type: string
+          format: ipv4
+          description: IP address from where the request originated
+        originType:
+          type: string
+          enum:
+          - User
+          - API
+          - SystemScheduledTask
+          description: Source of the request
+    Event:
+      type: object
+      required:
+      - action
+      - description
+      - outcome
+      properties:
+        action:
+          type: string
+          description: Action taken
+        description:
+          type: string
+          description: Description of the event, clarifying what happened
+        outcome:
+          type: string
+          enum:
+          - SuccessAction
+          - Error
+          - Warning
+          - FailedAudit
+          - SuccessAudit
+          description: Result of the event
+        errorMessage:
+          type: string
+          description: Details about the outcome, especially in case of failure
+        oldValue:
+          type: string
+          description: Previous value before the change
+        newValue:
+          type: string
+          description: New value after the change
+        resource:
+          $ref: "#/components/schemas/Resource"
+        context:
+          $ref: "#/components/schemas/Context"
+    ContextAndResourceType:
+      type: string
+      enum:
+        - Company
+        - Project
+        - Environment
+        - GenAIResource
+        - User 
+        - ProjectRole 
+        - Portfolio
+        - MarketplaceComponent
+        - Story
+        - Epic
+        - FeedbackItem
+        - Backup
+        - Page
+        - AppLog
+        - AccessLog
+        - AuditLog
+        - ApprovalRequest
+    Resource:
+      type: object
+      properties:
+        resourceId:
+          type: string
+          description: Unique identifier for the affected resource
+        resourceType:
+          $ref: "#/components/schemas/ContextAndResourceType"
+          description: Type of resource (e.g., Company, User, Environment)
+        name:
+          type: string
+          description: Name of the resource
+        description:
+          type: string
+          description: Details of the resource
+    Context:
+      type: object
+      properties:
+        contextId:
+          type: string
+          description: Unique identifier for the affected resource context
+        contextType: 
+          $ref: "#/components/schemas/ContextAndResourceType"
+          description: Type of Context
+        name:
+          type: string
+          description: Name of the resource context
+        description:
+          type: string
+          description: Details
+    Error400:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            status:
+              type: integer
+              example: 400
+            message:
+              type: string
+              example: "Bad request, invalid input"
+    Error401:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            status:
+              type: integer
+              example: 401
+            message:
+              type: string
+              example: "Unauthorized, please provide valid credentials"
+    Error403:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            status:
+              type: integer
+              example: 403
+            message:
+              type: string
+              example: "Forbidden"
+    Error500:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            status:
+              type: integer
+              example: 500
+            message:
+              type: string
+              example: "Internal server error, please try again later"
+    pagination:
+      type: object
+      properties:
+        self:
+          type: string
+          description: URL of the current page
+        page:
+          type: integer
+          description: Current page number
+        pageSize:
+          type: integer
+          description: Number of items in the current page
+        total:
+          type: integer
+          description: Total number of items across all pages
+    cursors:
+      type: object
+      properties:
+        self:
+          type: string
+          description: URL of the current page
+        prev:
+          type: string
+          description: URL of the previous page, if available
+        next:
+          type: string
+          description: URL of the next page, if available
+        first:
+          type: string
+          description: URL of the first page
+        last:
+          type: string
+          description: URL of the last page

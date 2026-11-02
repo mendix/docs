@@ -168,7 +168,7 @@ Lastly, ensure you are not using any external fonts by checking your theme's sty
 
 #### Testing Your Changes Locally
 
-To check that your changes are working locally, you can add a custom `Content-Security-Policy` header in your [configuration](/refguide/configuration/#headers).
+To check that your changes are working locally, you can add a custom `Content-Security-Policy` header in your [configuration](/refguide/configurations-tab/#headers).
 
 After redeploying your app locally, it should function as normal. If your app does not load or if there are errors, check that you have completed all steps listed above.
 
@@ -337,5 +337,5 @@ if (Core.csp().hasNonce(response)) {
 
 There are two ways to enable the header in the cloud:
 
-1. **[Headers](/refguide/configuration/#headers) custom runtime setting (Recommended)**: Use this if you need nonce-based CSP support. Configure this in the Developer Portal under [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings).
+1. **[Headers](/refguide/configurations-tab/#headers) custom runtime setting (Recommended)**: Use this if you need nonce-based CSP support. Configure this in the Developer Portal under [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings).
 2. **HTTP Headers UI:** This method works for basic CSP support. For more details, refer to the [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) section of *Environment Details*.

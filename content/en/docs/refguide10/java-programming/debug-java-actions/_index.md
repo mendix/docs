@@ -32,18 +32,18 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 1. Open Eclipse and locate the app in the **Package Explorer**.
 2. Double-click **ReverseCustomerName.java**:
-    {{< figure src="/attachments/refguide10/java-programming/debug-java-actions/18581041.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/java-programming/debug-java-actions/18581041.png" 
+    class="no-border" >}}
 3. Place the cursor on the line that needs debugging, press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to enable a breakpoint. A blue dot in front of the line will appear: 
+{{% alert color="info" %}}
+You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a breakpoint.
+{{% /alert %}}
     {{< figure src="/attachments/refguide10/java-programming/debug-java-actions/18580059.png" class="no-border" >}}
-    {{% alert color="info" %}}
-    You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a breakpoint.
-    {{% /alert %}}
 
 ## Debugging in Eclipse
 
 1. Select the app root node in the package explorer and click the debug icon in the Eclipse toolbar:
     {{< figure src="/attachments/refguide10/java-programming/debug-java-actions/18580062.png" class="no-border" >}}
-
     The application will now be started with Eclipse attached as debugger.
 
 2. As soon as the deployment process is ready, open the application in your browser and trigger the Java action:
@@ -52,10 +52,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 3. Open Eclipse. You should now see the "debug" perspective of Eclipse.
 4. Click **Step into** (or press <kbd>F5</kbd>) or **Step over** (or press <kbd>F6</kbd>) to move on the next step in the microflow:
     {{< figure src="/attachments/refguide10/java-programming/debug-java-actions/18580056.png" class="no-border" >}}
-
     {{% alert color="info" %}}With debugger options, the difference between **Step into** and **Step over** is only noticeable if you run into a function call. **Step into** means that the debugger steps into the function, and **Step over** just moves the debugger to the next line in the same Java action. With **Step return** (pressing <kbd>F7</kbd>), you can instruct the debugger to leave the function; this is basically the opposite of **Step into**. Clicking **Resume** (pressing <kbd>F8</kbd>) instructs the debugger to continue until it reaches another breakpoint.{{% /alert %}}
 
 5. Place your cursor on any of the variables in the Java action to see its value in a pop-up window:
+
     {{< figure src="/attachments/refguide10/java-programming/debug-java-actions/18580057.png" class="no-border" >}}
 
     {{% alert color="warning" %}}A current limitation is that local variables may not be visible when debugging Java actions in Eclipse. This can affect your ability to inspect variable values during execution.{{% /alert %}}

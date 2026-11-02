@@ -58,7 +58,7 @@ In the pop-up window that appears, enter a **name** for your app. Leave all othe
 Just as in part one, we will need to create the entity to store employee data. In the **domain model** for the Native Mobile Module, add a **new entity**.
 
 1. Name the entity Employee.
-1. The entity should be a generalization of the Account entity.
+1. The entity should be a specialization of the Account entity.
 1. Add three attributes to the entity:
     * FirstName as String
     * LastName as String
@@ -163,7 +163,7 @@ Looking to get in touch with us or the community? Join our [Slack community work
 ## Read More
 
 * [Studio Pro Overview](/refguide/studio-pro-overview/) – describes Studio Pro tabs, menus, and shortcut keys
-* [Mendix Best Practices for Development](/refguide/dev-best-practices/) – a reference for adopting consistent naming and modeling conventions while developing your Mendix apps
+* [Development Best Practices](/refguide/dev-best-practices/) – a reference for adopting consistent naming and modeling conventions while developing your Mendix apps
 * [Starting with App from a Spreadsheet](/refguide/app-from-spreadsheet/) – describes importing a Microsoft Excel spreadsheet and building an app using your data
 * [Mendix Academy Become a Rapid Developer](https://academy.mendix.com/link/paths/31/Become-a-Rapid-Developer) – the learning path recommended for new Mendix users who want to create their first app using low-code
 * [Mendix Academy Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) – the learning path recommended for new Mendix users who are also experienced developers

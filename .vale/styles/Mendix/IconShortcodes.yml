@@ -1,0 +1,31 @@
+# Mendix custom rule: Use icon shortcodes with tooltips when describing clickable icons
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/icon-demo.md
+# Known issue: Only matches plaintext
+extends: substitution
+message: "Use the icon shortcode and tooltip: '%s' instead of '%s'"
+link: https://docs.mendix.com/icons/
+level: warning
+ignorecase: false
+scope:
+  - paragraph
+  - list
+  - table
+action:
+  name: replace
+swap:
+  'the play icon': '**Run** ({{% icon name="controls-play-filled" %}})'
+  'the ellipsis icon': '**More Options** ({{% icon name="three-dots-menu-horizontal" %}})'
+  'the three dots icon': '**More Options** ({{% icon name="three-dots-menu-horizontal" %}})'
+  'three dot icon': '**More Options** ({{% icon name="three-dots-menu-horizontal" %}})'
+  'the three-dot icon': '**More Options** ({{% icon name="three-dots-menu-horizontal" %}})'
+  'the edit icon': '**Edit** ({{% icon name="pencil" %}})'
+  'the pencil icon': '**Edit** ({{% icon name="pencil" %}})'
+  'the trash can icon': '**Delete** ({{% icon name="trash-can" %}})'
+  'the delete icon': '**Delete** ({{% icon name="trash-can" %}})'
+  'the copy icon': '**Copy** ({{% icon name="copy" %}})'
+  'the information icon': '**Information** ({{% icon name="info-circle" %}})'
+  'the alert icon': '**Alert** ({{% icon name="alert-circle" %}})'
+  'the error icon': '**Error** ({{% icon name="remove-circle-filled" %}})'
+  'the paperclip icon': '**Attach** ({{% icon name="paperclip" %}})'
+  'the checkmark icon': '**Save** ({{% icon name="checkmark-circle" %}})'
+  'the check mark icon': '**Save** ({{% icon name="checkmark-circle" %}})'

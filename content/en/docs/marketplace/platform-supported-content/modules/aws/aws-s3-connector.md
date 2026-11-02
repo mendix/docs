@@ -125,12 +125,12 @@ For additional reference, the available activities are listed below.
 The Amazon S3 connector contains the following activities:
 
 * `CreateBucket` - Create a new S3 Bucket. 
-* `PutObject` - Put an object into a specified S3 bucket.
+* `PutObject` - Put an object into a specified S3 bucket. Optional: You can attach `PutObjectClientsideEncryptionConfig` to the call if you want to encrypt your file.
 * `DeleteObject` - Delete an object from a specified S3 bucket.
 * `ListBuckets` - Retrieve a list of all buckets in your Amazon S3 environment.
 * `ListObjects` - Retrieve a list of the metadata of the objects for a specified bucket in your Amazon S3 environment.
 * `DeleteBucket` - Delete a bucket.
-* `GetObject` - Get an object from the s3 simple storage service. 
+* `GetObject` - Get an object from the s3 simple storage service. Optional: You can attach `GetObjectClientsideEncryptionConfig` to the call if you want to decrypt your file.
 * `CopyObject` - Copy an s3 object placed within a bucket or prefix to an other bucket or prefix.
 * `MoveObject` - Move an s3 object between buckets or prefixes.
 * `GeneratePresignedUrl` - Presign a request and generates and returns the presigned url.

@@ -2,7 +2,7 @@
 title: "Content Curation"
 url: /control-center/content-curation/
 description: "Describes the Content Curation category in the Mendix Control Center."
-weight: 80
+weight: 90
 no_list: false
 ---
 ## Introduction 

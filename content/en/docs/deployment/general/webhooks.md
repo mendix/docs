@@ -28,7 +28,7 @@ Webhooks are only available for licensed Mendix apps that are deployed to Mendix
 
 To set up a webhook, do the following:
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 1. From the navigation pane, open the **Webhooks** page. On this page, you can see any current webhooks. You can also see whether each webhook is active or inactive. An inactive webhook does not send any payloads to the endpoint.
 1. Click **New Webhook**.
 1. Enter the following information:
@@ -160,12 +160,6 @@ Make sure to use the correct key names when using this payload information to ca
 {{% /alert %}}
 
 ## Teamserver Push (Git)
-
-{{% alert color="info" %}}
-This webhook is not visible to first-time Mendix Pipeline users. 
-
-For existing Mendix Pipeline users who can view this webhook, do not delete it. Deleting it causes failures for Mendix Pipelines that rely on the Teamserver push (Git) trigger.
-{{% /alert %}}
 
 When you push a model change to the [Git Team Server](/developerportal/repository/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 

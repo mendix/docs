@@ -1,15 +1,15 @@
 ---
-title: "Apps Release Notes"
-linktitle: "Apps"
+title: "Projects Release Notes"
+linktitle: "Projects"
 url: /releasenotes/developer-portal/
-description: "Release notes for app management and other parts of Apps"
+description: "Release notes for project management and other parts of Projects"
 weight: 20
 cascade:
     - numberless_headings: true
 # This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the app management functionality and other features of [Apps](/developerportal/) in the Mendix Portal.     
+These release notes cover changes to the project management functionality and other features of [Projects](/developerportal/) in Mendix Portal.     
 
 Click the link corresponding to the year for which you want to read release notes:
 

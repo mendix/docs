@@ -1,13 +1,13 @@
 ---
 title: "Export Package Commands"
-url: /refguide/mx-command-line-tool/export
+url: /refguide/mx-command-line-tool/export/
 weight: 40
-description: "Describes the commands related to package export for the mx command-line tool."
+description: "Describes commands that export different package types from your app using the mx command-line tool."
 ---
 
 ## Introduction
 
-The commands in this group enable exporting different kinds of packages from your app.
+The commands in this group export different package types from your app.
 
 ## mx create-project-package Command {#create-project-package}
 
@@ -21,24 +21,22 @@ Use the following command pattern:
 
 These are the `OPTIONS`:
 
-| Option | Result |
+| Option | Description |
 | --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
-| `-k, --skip-managed-dependency-sync` | Do not synchronize managed dependencies; use existing files in `vendorlib` instead. |
+| `-k, --skip-managed-dependency-sync` | Does not synchronize managed dependencies; uses existing files in `vendorlib` instead. |
 | `--help` | Displays the help screen. |
 
 For `TARGET-FILE`, specify the *.mpr* app you want to export.
 
-### Examples
-
-Here is an example:
+### Example
 
 `mx create-project-package c:\MyApps\MyApp.mpr` 
 
 ### Return Codes
 
-This table shows the return codes and their description:
+This table shows the return codes and their descriptions:
 
 | Return Code | Description |
 | --- | --- |
@@ -61,25 +59,23 @@ These are the `OPTIONS`:
 
 | Option | Description |
 | --- | --- |
-| `-l, --filter-required-libs` | Includes all the files except the userlibs that do not have an accompanying `[ModuleName].RequiredLib` file. | 
-| `-e, --exclude-files` | Excludes all the files that match the given regular expression. |
+| `-l, --filter-required-libs` | Includes all files except the userlibs that do not have an accompanying `[ModuleName].RequiredLib` file. | 
+| `-e, --exclude-files` | Excludes all files that match the given regular expression. |
 | `-d, --package-dir` | Exports the module package to the directory. |
-| `-m, --exclude-managed-dependencies` | Excludes managed dependencies from synchronization and the exported module package. Note that this will prevent the module from being used if Gradle synchronization is disabled in Studio Pro. |
+| `-m, --exclude-managed-dependencies` | Excludes managed dependencies from synchronization and the exported module package. This prevents the module from being used if Gradle synchronization is disabled in Studio Pro. |
 | `--help` | Displays the help screen. |
 
 For `TARGET-FILE`, specify the *.mpr* app you want to export.
 
 For `MODULE-NAME`, specify the name of the module you want to export.
 
-### Examples
-
-Here is an example:
+### Example
 
 `mx create-module-package c:\MyApps\MyApp.mpr Module1` 
 
 ### Return Codes
 
-This table shows the return codes and their description:
+This table shows the return codes and their descriptions:
 
 | Return Code | Description |
 | --- | --- |
@@ -101,24 +97,22 @@ Use the following command pattern:
 
 These are the `OPTIONS`:
 
-| Option | Result |
+| Option | Description |
 | --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
-| `-k, --skip-managed-dependency-sync` | Do not synchronize managed dependencies; use existing files in `vendorlib` instead. |
+| `-k, --skip-managed-dependency-sync` | Does not synchronize managed dependencies; uses existing files in `vendorlib` instead. |
 | `--help` | Displays the help screen. |
 
 For `TARGET-FILE`, specify the *.mpr* app you want to export.
 
-### Examples
-
-Here is an example:
+### Example
 
 `mx create-solution-package c:\MyApps\MyApp.mpr` 
 
 ### Return Codes
 
-This table shows the return codes and their description:
+This table shows the return codes and their descriptions:
 
 | Return Code | Description |
 | --- | --- |

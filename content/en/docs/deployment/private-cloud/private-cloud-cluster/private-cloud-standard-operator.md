@@ -108,9 +108,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 1. Click **Base Installation**.
 
-2. Select the required **Cluster Mode** – *connected* or *standalone*.
-
-    For more information, see [Connected and Standalone Clusters](/developerportal/deploy/private-cloud/#connected-standalone) in the *Mendix on Kubernetes* documentation.
+2. Select the required **Cluster Mode** – *connected*.
 
 3. Select the required **Cluster Type** – *openshift* or *generic*.
 
@@ -152,14 +150,14 @@ For example, if you'd like to change the database hostname, or if you exited wit
 
 The options do the following:
 
-* **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
-* **Storage Plan** – will create a new storage plan for your cluster — you must have at least one storage plan in your namespace, but you can have more than one
-* **Ingress** – will configure the ingress for your namespace — if there is already an ingress, this will replace it with new settings
-* **Registry** – will configure a registry for your namespace — if there is already a registry, this will replace it with new settings
-* **Proxy** – will configure a proxy for your namespace — if there is already a proxy, this will replace it with new settings
-* **Custom TLS** – will configure custom CA trust for your namespace — if there is already a custom CA trust configuration, this will replace it with new settings
+* **Database Plan** – will create a new database plan for your cluster—you must have at least one database plan in your namespace, but you can have more than one
+* **Storage Plan** – will create a new storage plan for your cluster—you must have at least one storage plan in your namespace, but you can have more than one
+* **Ingress** – will configure the ingress for your namespace—if there is already an ingress, this will replace it with new settings
+* **Registry** – will configure a registry for your namespace—if there is already a registry, this will replace it with new settings
+* **Proxy** – will configure a proxy for your namespace—if there is already a proxy, this will replace it with new settings
+* **Custom TLS** – will configure custom CA trust for your namespace—if there is already a custom CA trust configuration, this will replace it with new settings
 
-1. Select the options you need to configure – the first time you configure your namespace you must check *all the first four options*.  **Proxy** is optional.
+1. Select the options you need to configure—the first time you configure your namespace you must check *all the first four options*. **Proxy** is optional.
 
 2. Click **Configure Namespace**.
 
@@ -306,10 +304,6 @@ These custom CAs will be trusted by:
 
 {{% alert color="info" %}}
 To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for MinIO. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
 {{% alert color="info" %}}

@@ -56,7 +56,7 @@ You can choose which certificate to use when you configure a custom domain for a
 
 To manage custom domains, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 2. Click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any of the [available tabs](/developerportal/deploy/environments/#available-tabs) to open the **Manage Cloud Settings** page.
 3. Switch to the **Custom Domains** tab.
 
@@ -90,7 +90,7 @@ Make sure you have configured a CNAME record for your custom domain with your do
 
 For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself.
 
-To tell the runtime where it lives, set the `ApplicationRootUrl` [custom runtime setting](/refguide/custom-settings/#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings) section of *Environment Details*.
+To tell the runtime where it lives, set the `ApplicationRootUrl` [custom runtime setting](/refguide/custom-settings/#applicationrooturl-section). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings) section of *Environment Details*.
 
 ### Can You Configure Multiple Custom Domains for the Same Application? {#multiple-custom-domains}
 

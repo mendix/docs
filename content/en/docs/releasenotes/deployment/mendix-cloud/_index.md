@@ -14,6 +14,18 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
   
+## November 2026
+
+### November 1, 2026
+
+#### New Features
+
+* Technical Contacts can now reclaim database disk space used by table bloat without contacting Support. For more information, refer to [Repacking Your Database in Mendix Cloud](/developerportal/deploy/repack-database/).
+
+#### Fixes
+
+* Fixed an issue where activity logs were not generated when a custom domain was created for an environment (Ticket #290051).
+
 ## October 2026
 
 ### October 18, 2026

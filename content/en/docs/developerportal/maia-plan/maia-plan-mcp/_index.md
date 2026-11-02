@@ -192,7 +192,11 @@ If validation fails, a plain string is returned, not a JSON object.
 
 ### Get_Plan_Content {#get-content}
 
-This tool is used by AI agents to retrieve the full content of a specific Maia Spec project by UUID. The tool returns a structured JSON that includes the project scope and/or the solution (epics, stories, acceptance criteria).
+{{% alert color="warning" %}}
+This feature is deprecated, and only retrieves legacy plans, i.e. plans created before the switch from Maia Plan to Maia Spec.
+{{% /alert %}}
+
+This tool is used by AI agents to retrieve the full content of a specific Maia Plan project by UUID. The tool returns a structured JSON that includes the project scope and/or the solution (epics, stories, acceptance criteria).
 
 Keep in mind the following:
 

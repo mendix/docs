@@ -9,18 +9,18 @@ aliases:
 
 ## Introduction
 
-After you click **Start Building**, the **Start Development** window is displayed, showing the following options:
+In the **Spec** window, you must follow these steps to start developing your project:
 
-* **Prioritize** – Click the **Connect Planning Tool** button in the **Prioritize** section to select the project management tool you want to use for organizing and planning your work. This opens the **Connect Planning Tool** window, where you can select one of these options:
+1. Click **Open in Jira**. The **Connect Planning Tool** window is displayed, allowing you to connect your preferred project management tool for organizing and planning your work. You can select between these options:
 
     * **Mendix Planning Board (default)** – Use the Mendix planning board, where you can reorganize the sprints as needed.     
     * **Jira** – Use Jira to organize and prioritize your work. To do that, follow the steps in the [Connecting to Jira](#connect-jira) section.  
     
    {{% alert color="info" %}}
-   If you start prioritizing your work before Maia is done [finding recommendations](/developerportal/maia-spec/generate-plan/#recommender), recommended components are not displayed in the **Planning** window.
+   If you start prioritizing your work before Maia is done [finding recommendations](/developerportal/maia-spec/generate-spec/#recommender), recommended components are not displayed in the **Planning** window.
    {{% /alert %}}
 
-* **Build** – Click the **Open in Studio Pro** button in the **Build** section to open Studio Pro, where you can continue working on the new app. Studio Pro does not currently take into account [recommended components](/developerportal/maia-spec/generate-plan/#recommender).
+2. Click **Build in Maia Make**. This opens Studio Pro, where you can continue working on your new project. Studio Pro does not currently take into account [recommended components](/developerportal/maia-spec/generate-spec/#recommender).
     
     For details, refer to [Maia Make](/refguide/maia-make/) in the Studio Pro documentation.    
 

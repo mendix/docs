@@ -27,8 +27,10 @@ Providing context is the foundation for Maia to build your project plan. Give Ma
 
     * **Use the latest LTS version**
     * **Use the latest version**
-    * **Use a starter app with a predefined Studio Pro version**
+    * **Use a starter app with a predefined Studio Pro version**. For details, refer to [Creating an App from a Starter App](/developerportal/maia-spec/using-starter-app/).
 
-5. Click **Create Plan**.
+5. Click **Create Scope**. The **Scope** window is displayed. 
 
 Maia analyzes the context in the background, and starts producing a scope.
+     
+For details on the next steps, refer to [Defining the Scope](/developerportal/maia-spec/define-scope/).

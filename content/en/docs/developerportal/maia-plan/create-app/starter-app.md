@@ -37,6 +37,6 @@ Follow these steps to have Maia create a project plan based on a starter app:
 
 7. Define the project scope as described in [Defining the Scope](/developerportal/maia-spec/define-scope/). With starter apps, Maia brings in all existing information to the **Define Scope** window.
 
-8. Turn the project scope into a concrete plan, as described in [Generating the Plan](/developerportal/maia-spec/generate-plan/). The side panel displays the resources which are being used from the starter app.
+8. Turn the project scope into a concrete plan, as described in [Generating the Spec](/developerportal/maia-spec/generate-spec/). The side panel displays the resources which are being used from the starter app.
 
 9. Select your project management tool and send your project plan to Maia Make, as described in [Starting the Development](/developerportal/maia-spec/start-development/).

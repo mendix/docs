@@ -45,9 +45,9 @@ You can also open the dialog box by double-clicking the activity, or right-click
 
 ### Page
 
-The [page](/refguide/page/) that is displayed to an end-user. If the page has parameters, the [Parameters](#parameters) section allows you to specify the which objects should be passed to the page.
+The [page](/refguide/page/) that is displayed to an end-user. If the page has parameters, the [Parameters](#parameters) section allows you to specify which values should be passed to the page.
 
-To create a new page that **Show page** activity will show, click the **Select** button > **New**. Studio Pro will ask you whether you want to pass a variable as an argument to the new page. If you select a variable to pass, Studio Pro will automatically create a page parameter of that type and a data view to edit that object.
+To create a new page that **Show page** activity will show, click the **Select** button > **New**. Studio Pro will ask you whether you want to pass a variable as an argument to the new page. If you select a variable to pass, Studio Pro will automatically create a page parameter of that type and a data view to edit that value.
 
 ### Page Title
 
@@ -72,7 +72,7 @@ Often you need to have control of page history, for example to show the correct 
 
 ### Parameters Section {#parameters}
 
-Depending on the selected page, you will see a list of its parameters. For each parameter, you can configure a variable or expression to specify which object should be passed to it. These objects are used by [data views](/refguide/data-view/) with a page parameter data source. If only one variable of the expected type for a certain parameter is available, that variable is automatically filled in.
+Depending on the selected page, you will see a list of its [parameters](/refguide/page-parameter/). For each parameter, you can configure a variable or expression to specify which value should be passed to it. These values are used by [data views](/refguide/data-view/) with a page parameter data source. If only one variable of the expected type for a certain parameter is available, that variable is automatically filled in.
 
 ## Common Section{#common}
 

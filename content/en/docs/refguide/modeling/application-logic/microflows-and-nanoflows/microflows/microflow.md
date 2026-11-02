@@ -52,6 +52,10 @@ In the **Edit Microflow URL** dialog box, the configured URL is shown together w
 URLs are not supported for microflows that have non-persistable entities or lists as parameters.
 {{%/alert %}}
 
+{{% alert color="info" %}}
+Page and microflow URL patterns must be unambiguous. If two patterns match the same URL, the Mendix Runtime cannot determine which page or microflow to open. For best practices on structuring URLs and resolving conflicts, see the [Page and Microflow URLs](/refguide/general-best-practices/#page-and-microflow-urls) section in *General Development Best Practices*.
+{{% /alert %}}
+
 ### Common Section {#common}
 
 #### Name
@@ -126,6 +130,10 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 | --- | --- |
 | Disabled *(default)*  | It is possible to execute the microflow more than once concurrently. |
 | Enabled | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
+
+{{% alert color="info" %}}
+This property relates to microflows running on a single node in a clustered environment. See [Cluster-Wide Locking](/refguide/clustered-mendix-runtime/#cluster-lock) in *Clustered Mendix Runtime* for more information.
+{{% /alert %}}
 
 #### Error Message
 

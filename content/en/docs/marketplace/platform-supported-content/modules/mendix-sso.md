@@ -1,12 +1,21 @@
 ---
 title: "Mendix SSO"
 url: /appstore/modules/mendix-sso/
+deprecated: true
 description: "Describes the configuration and usage of the Mendix SSO module, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchor #supplements in this document as it is used in links from the module release notes.
 ---
 
 ## Introduction
+
+{{% alert color="warning" %}}
+This module is deprecated as of May 1, 2026, and will be removed from the public Marketplace on November 1, 2026.  
+
+To ensure uninterrupted single sign-on functionality for end users, Mendix recommends migrating to the [OIDC SSO](/appstore/modules/oidc/) module, which requires configuring an identity provider (IdP). 
+
+If an external IdP is not available, you may alternatively use local in-app credentials or implement a custom SSO solution using the [OIDC Provider](/appstore/services/oidc-provider/) module.
+{{% /alert %}}
 
 With the [Mendix SSO](https://marketplace.mendix.com/link/component/111349/) module, you can utilize single sign-on functionality by directly integrating with the Mendix identity provider and leveraging the [OpenID Connect](https://openid.net/connect/) framework.
 
@@ -146,7 +155,7 @@ You can deactivate Mendix SSO in two simple steps. This will remove the end-user
 
 To deactivate Mendix SSO, follow these two steps:
 
-1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme/web** or **theme** folder of your app to *login.html* — this removes the single sign-on button from your sign in screen:
+1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme/web** or **theme** folder of your app to *login.html*—this removes the single sign-on button from your sign in screen:
     1. Open your app directory in File Explorer by selecting the menu item **App** > **Show App Directory in Explorer**.
 
     2. Go to the **theme/web** folder (for Mendix versions below 9.0.0, this is the **theme** folder).
@@ -187,7 +196,7 @@ All files installed by Mendix SSO are marked with *.MendixSSO.RequiredLib*. Once
 ## Customizing Mendix SSO {#customizing}
 
 {{% alert color="info" %}}
-In v2 of the [Mendix SSO module](/appstore/modules/mendix-sso/), there was a default implementation of end-user administration. This had dependencies on specific versions of [Atlas UI](/howto8/front-end/atlas-ui/) and was removed so that Mendix SSO v3.0 and above retain compatibility with all Mendix apps, whichever UI they are using.
+In v2 of the [Mendix SSO module](/appstore/modules/mendix-sso/), there was a default implementation of end-user administration. This had dependencies on specific versions of Atlas UI and was removed so that Mendix SSO v3.0 and above retain compatibility with all Mendix apps, whichever UI they are using.
 {{% /alert %}}
 
 This section explains how to customize Mendix SSO in your apps and how to base your own user administration module on this section if you want to do things in a different way.
@@ -386,7 +395,7 @@ The TokensOverview page allows administrators to see all tokens that have been i
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-sso/token-administration.png" alt="List of all Mendix SSO tokens issued to the app" class="no-border" >}}
 
-The page can be used for troubleshooting — you can see the creation and expiry dates of the tokens, and by clicking **View**, you can view the values held in the tokens.
+The page can be used for troubleshooting. You can see the creation and expiry dates of the tokens, and by clicking **View**, you can view the values held in the tokens.
 
 The **ID Token** is held in *JWT* format, so you can paste it into a [JWT decoder](https://jwt.io) to confirm what information it holds.
 
@@ -400,7 +409,7 @@ The **MyTokensOverview** page allows end-users to see their own access tokens.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-sso/my-tokens.png" alt="List of all my Mendix SSO tokens" class="no-border" >}}
 
-The page can be used for troubleshooting — the end-user can see the creation and expiry dates of the tokens, and by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
+The page can be used for troubleshooting. The end-user can see the creation and expiry dates of the tokens, and by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
 
 #### Displaying Tokens Using Snippets
 

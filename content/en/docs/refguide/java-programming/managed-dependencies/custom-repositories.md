@@ -24,6 +24,12 @@ This is also the recommended setup when there is limited or no access to the int
 * **JFrog Artifactory** and **Sonatype Nexus** are popular tools that act as these "personal libraries." They can store your own libraries, and also "proxy" public repositories, meaning they download from the internet once and then serve it to everyone in your team from their local cache.
 * **Local repository:** This is a folder on your network which contains your project dependencies. The folder can either follow the Maven-style layout or can be a simple folder containing your dependencies.
 
+## Custom Repositories and the Build Process
+
+When building Mendix applications in Mendix Cloud, dependencies are not downloaded. Instead, the build process relies on the dependencies being present in the `vendorlib` folder.
+
+Studio Pro manages this by downloading dependencies from the configured repositories using Gradle and then committing the `vendorlib` folder to version control. When you set up a custom Gradle repository, this is used during the download phase, meaning all dependencies stored in vendorlib originate from that repository.
+
 ## How to Set up a Remote Repository 
 
 ### Prerequisites

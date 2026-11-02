@@ -46,7 +46,7 @@ The debugger supports only debugging of single-instance environments. Multi-inst
 
 When your application is in Mendix Cloud, follow these steps:
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 
 2. Click **Environments** in the navigation pane.
 
@@ -64,15 +64,15 @@ When your application is in Mendix Cloud, follow these steps:
 
 You will need to provide these credentials to Studio Pro to connect the debugger to the app running in the cloud.
 
-#### Obtain Debugging Credentials from Mendix on Kubernetes Connected{#private-cloud}
+#### Obtain Debugging Credentials from Mendix on Kubernetes Connected or Private Mendix Platform {#private-cloud}
 
-If your application is on a connected Mendix on Kubernetes instance, you can get the credentials from the Mendix Portal:
+If your application is on a connected Mendix on Kubernetes instance, or on Private Mendix Platform, you can get the credentials from the Mendix Portal:
 
 {{% alert color="warning" %}}
 You can only remotely debug apps deployed to Mendix on Kubernetes if you are using Mendix Operator version 1.6.0 or above.
 {{% /alert %}}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+1. Open your app in [Projects](https://projects.home.mendix.com/).
 
 2. Click **Environments** in the navigation pane.
 

@@ -7,13 +7,13 @@ weight: 30
 
 ## Introduction
 
-In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For example, you can create a deployment package.
+In the **App** menu, you can view and modify settings related to your app and deployment. For example, you can create a deployment package.
 
 {{< figure src="/attachments/refguide/modeling/menus/app-menu/app-menu.png" alt="App Menu" class="no-border" >}}
 
 ## Tools
 
-Under **App** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to **Design** properties.
+Under **App** > **Tools**, you can find settings for updating widgets, button icons, and layouts; checking widgets; and converting your classes to **Design** properties.
 
 ### Batch Update Button Icons {#batch-update-button-icons}
 
@@ -29,7 +29,7 @@ The **Check Widgets** option checks that the widgets you have implemented in the
 
 ### Update Widgets {#update-widgets}
 
-The **Update Widgets** option presents the current versions of the widgets you are using in your app, what the latest versions of the widgets are, and an update option
+The **Update Widgets** option shows the current versions of the widgets you are using in your app, the latest available versions, and an update option.
 
 ### Convert Classes to Design Properties
 
@@ -37,11 +37,11 @@ The **Convert classes to design properties** option allows you to convert classe
 
 ### Generate Bill of Materials {#generate-bill-of-materials}
 
-The **Generate Bill of Materials** option allows you to generate a bill of materials for the current project. See [SBOM Generation](/refguide/sbom-generation/) for more information.
+The **Generate Bill of Materials** option allows you to generate a Software Bill of Materials (SBOM) for the current app. For more information, see [SBOM Generation](/refguide/sbom-generation/).
 
 ## Synchronize App Directory {#synchronize}
 
-The **Synchronize App Directory** option creates folders inside the app directory (resources, widgets, theme, etc.), if necessary. It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the app directory for them to appear in the **Toolbox**.
+The **Synchronize App Directory** option creates folders inside the app directory (resources, widgets, theme, and so on) if necessary. It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you need to synchronize the app directory for them to appear in the **Toolbox**.
 
 Shortcut key: <kbd>F4</kbd>
 
@@ -61,15 +61,15 @@ The **Deploy for Eclipse** option deploys the app to the deployment directory. T
 
 Shortcut key: <kbd>F6</kbd>
 
-For more information on how write Java actions from Eclipse, see [Using Eclipse](/refguide/using-eclipse/).
+For more information on how to write Java actions from Eclipse, see [Using Eclipse](/refguide/using-eclipse/).
 
 ## Create Deployment Package{#create-package}
 
-The **Create Deployment Package** option creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the app. This can be used if you want to deploy your app on a Windows server or on a custom Mendix Cloud.
+The **Create Deployment Package** option creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the app. Use this option if you want to deploy your app on a Windows server or on a custom Mendix Cloud.
 
 Shortcut key:  <kbd>F7</kbd>
 
-For more information on settings displayed on the Create Deployment Package dialog box, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
+For more information on the settings displayed in the Create Deployment Package dialog box, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
 
 ## Clean Deployment Directory {#clean-deployment-directory}
 
@@ -89,22 +89,21 @@ For more information on using this option, see [Deploy to the Cloud](/refguide/d
 
 ## Build Native Mobile App
 
-If you have an app with a [native profile](/refguide/navigation/#native-phone), this option launches the [Mendix Native Mobile Builder](/releasenotes/mobile/mendix-native-mobile-builder/). This wizard will guide you through the required steps for configuring and publishing your app. 
+If you have an app with a [native profile](/refguide/navigation/#native-phone), this option launches the [Mendix Native Mobile Builder](/releasenotes/mobile/mendix-native-mobile-builder/). This wizard guides you through the required steps for configuring and publishing your app.
 
-For the first step in your native mobile journey, see [Build a Mendix Native App Locally
-](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
+For the first step in your native mobile journey, see [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
 
 ## Synchronize Dependencies 
 
-Dependency synchronization is automatically triggered to run in the background whenever changes are made to a specific dependency. It also occurs when you open your app in Studio Pro.
+Dependency synchronization automatically runs in the background whenever you make changes to a specific dependency. It also runs when you open your app in Studio Pro.
 
-You can trigger manual synchronization by opening the **App** menu and selecting **Synchronize Dependencies**. 
+You can trigger manual synchronization by opening the **App** menu and selecting **Synchronize Dependencies**.
 
-For more information, see the [Dependency Sychronization](/refguide/managed-dependencies/#dependency-synchronization) section of *Managed Dependencies*.
+For more information, see the [Dependency Synchronization](/refguide/managed-dependencies/#dependency-synchronization) section of *Managed Dependencies*.
 
 ## Show Security Overview
 
-The **Show Security Overview** option opens the [Security Overview](/refguide/security-overview/), where you can view a unified overview of your app's security. 
+The **Show Security Overview** option opens the [Security Overview](/refguide/security-overview/), which displays a unified overview of your app's security. 
 
 ## Read More
 

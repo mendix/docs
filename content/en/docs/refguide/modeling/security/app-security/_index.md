@@ -88,7 +88,7 @@ Additionally, at the **Production** security level, the status of entity access 
 
 ## User Roles {#user-roles}
 
-A user role aggregates a number of access rights on data, pages, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent. For more information, see [User Roles](/refguide/user-roles/).
+A user role aggregates a number of access rights on data, pages, and microflows. Each end-user of the application is assigned one or more user roles by an end-user with user management rights, and gets all access rights that these user roles represent. For more information, see [User Roles](/refguide/user-roles/).
 
 ## Administrator {#administrator}
 

@@ -22,7 +22,7 @@ Currently OTA does not update your app while the app is open or minimized.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Mendix OTA updates are the replacement for the deprecated [Release Over the Air Updates with App Center's CodePush (Deprecated)](/howto8/mobile/how-to-ota/). When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
+Mendix OTA updates are the replacement for the former, deprecated method of handling OTA updates with App Center's Codepush. When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
 {{% /alert %}}
 
 This guide teaches you how to do the following:
@@ -75,11 +75,38 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * The initial release of your app
 * A Studio Pro version upgrade that requires a new [Native Template](/refguide10/native-template/) version
 * You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple—your app might be removed if you do not comply)
-* A new native module has been added (such as the [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module — for more information see [Modules](/refguide10/modules/)
+* A new native module has been added (such as the [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module—for more information see [Modules](/refguide10/modules/)
 * The app has been renamed
 * The app's launcher icons have been changed
 * The splash screen has been changed
 * The native template was updated (NT patch updates also require a full release)
+
+## Rolling Out Features That Span an App Store Release {#rolling-out-features}
+
+Updating a native app can take several days because Apple must review each app store release. During this time, both the old and the new version of the app must keep working.
+
+To solve this, split the release of the feature into two steps. First, use an OTA update to build and prepare the feature while it stays hidden from users. See further in the document for OTA update instructions. Then, use a small app store release to turn the feature on. Because the app store release only changes a small setting instead of the feature itself, it does not require any other changes to the model. This keeps the old and the new version of the app compatible with each other while the release is under review.
+
+You can hide a feature with a nanoflow decision or a conditional visibility setting. A good way to control this is with a constant that is exposed to the client. You can turn the feature on or off by setting the constant to a different value per environment, or by changing its default value in a later deployment.
+
+Use the following steps to release a feature that needs a full app store release, without breaking the app for users who have not updated yet:
+
+1. Build a new version of your app that includes the feature. Use a nanoflow decision or conditional visibility, controlled by a constant, to keep the feature disabled.
+1. Deploy this version with an OTA update.
+1. Build a new version of the app that changes the constant to enable the feature. Publish this version through a new app store release. Do not use OTA for this step, because the feature that requires a full release cannot be enabled through OTA alone. Wait for Apple to approve the release.
+
+Because only the constant changes, the old and the new version of the app behave the same way while the release is waiting for approval. Both versions continue to work until the app store release is approved.
+
+## Upgrading the Mendix Version {#upgrading-mendix-version}
+
+Keep Mendix version upgrades separate from new feature work. Combining them makes it harder to tell whether a problem comes from the version upgrade or from a new feature. It can also break the app for existing users if the new feature changes the model in a way that is not compatible with the old client.
+
+When you upgrade the Mendix version, keep changes to your model as small as possible. Do not change data, and do not change the parameters or return type of microflows that your native app depends on. For more information on keeping your model compatible, see [Offline Best Practices](/refguide10/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/).
+
+A Mendix version upgrade is backwards compatible as long as the model stays compatible with the previous native client, and as long as you do not change the Native Template, native modules, or other elements that require a full release. When these conditions are met, the old client and the new client can both connect to the upgraded runtime and continue to work correctly.
+
+Because both clients continue to work, you can release the new native client through a normal app store release. You cannot use OTA to update the Mendix version itself, because OTA updates do not support version changes. Some users keep the old client and some users get the new client, and both work with the upgraded Mendix runtime until every user has updated.
+
 
 ## Enabling and Building an App with Mendix OTA Updates Enabled {#build-with-ota-support}
 

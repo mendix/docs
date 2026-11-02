@@ -1,9 +1,14 @@
 ---
 title: "Any Chart Widgets"
+deprecated: true
 url: /refguide10/charts-any-configuration/
 description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 weight: 30
 ---
+
+{{% alert color="warning" %}}
+The Any Chart widget is not compatible with the [Mendix React Client](/refguide10/mendix-client/react/). We have published a version of Any Chart that supports the React client called Custom Chart. Update your [Charts](/appstore/widgets/charts/) widget (to version 6.0 or above) to use the Custom Chart feature.
+{{% /alert %}}
 
 ## Introduction
 
@@ -35,7 +40,7 @@ This is an unlimited string attribute which is an attribute of the entity which 
 
 In the image below, the **Source attribute** is the *data* attribute of the *ChartContext* entity which is the data view context in which the Any Chart widget is placed.
 
-{{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/charts-any-configuration/any-chart-page-placement.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/chart-widgets/charts-any-configuration/any-chart-page-placement.png" alt="Any Chart widget inside a ChartContext data view, with its Source attribute set to an attribute of ChartContext" class="no-border" >}}
 
 The **Source attribute** contains a JSON structure which will merge with, and overwrite, the **Static** data. Commonly, this contains the data which you wish to plot, but it can also overwrite other static elements such as the type of chart, colors of lines, or the orientation of bars in a bar chart.
 

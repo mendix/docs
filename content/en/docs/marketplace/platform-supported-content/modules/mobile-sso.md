@@ -20,7 +20,7 @@ There are below versions of the Mobile SSO module, compatible with Mendix and OI
 
 | Mobile SSO Version | Mendix Version | OIDC SSO Version |
 | --- | --- | --- |
-| 2.1.0 | 10.12.3 and above | 3.0.0 and above |
+| 2.1.0 | 10.12.3 and above | from 3.0.0 to 4.1.2 |
 | 2.0.0 | 10.9.0 and above | 2.4.0 and above |
 | 1.1.0 | 9.24.2 | 3.0.0 and above |
 | 1.0.1 | 9.24.2 | 2.4.0 and above |
@@ -28,7 +28,7 @@ There are below versions of the Mobile SSO module, compatible with Mendix and OI
 ### Typical Usage Scenarios
 
 * **B2E app:** Your app is aimed at your company’s employees, and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP) that supports the OIDC protocol. In this case, your app may have its own logic to assign user roles, or you may use authorization information from your IdP as provided to your app using an access token.
-* **B2C app:** Your app is aimed at your customers, which could be consumers or employees of the other companies. Consumers may have an identity at a social IdP which uses OIDC, such as Google.
+* **B2C app:** Your app is aimed at your customers, which could be consumers or employees of the other companies. Consumers may have an identity at a social IdP which uses OIDC, such as Azure.
 
 ### Features and Limitations
 
@@ -61,7 +61,7 @@ The [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module re
 
 It requires the following Marketplace modules to be included in your app:
 
-* [OIDC SSO](https://marketplace.mendix.com/link/component/120371)
+* [OIDC SSO](https://marketplace.mendix.com/link/component/120371) (below version 4.2.0)
 * [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
 
 ## Installation

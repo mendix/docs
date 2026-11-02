@@ -266,9 +266,9 @@ The table below presents the compatibility list for your models per Studio Pro v
 
 | Studio Pro Version | ONNX Runtime Version |
 | --- | --- |
-| 10.6 MTS  | 1.14.0 |
-| 10.12 MTS (10.12.18 and above) | 1.22.0 |
-| 10.18 MTS (10.18.10 and above) | 1.22.0 |
+| 10.6  | 1.14.0 |
+| 10.12 (10.12.18 and above) | 1.22.0 |
+| 10.18 (10.18.10 and above) | 1.22.0 |
 | 10.24 LTS (10.24.3 and above)  | 1.22.0 |
 
  For more information on the required IR/ML opset versions, see [ONNX Runtime Compatibility](https://onnxruntime.ai/docs/reference/compatibility.html).

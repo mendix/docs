@@ -1,9 +1,14 @@
 ---
 title: "Any Chart Building Blocks"
+deprecated: true
 url: /refguide/charts-any-building-blocks/
 description: "A reference for the Any Chart building blocks which are provided as part of the Any Chart widget"
 weight: 40
 ---
+
+{{% alert color="warning" %}}
+The Any Chart widget is not compatible with the [Mendix React Client](/refguide/mendix-client/react/). We have published a version of Any Chart that supports the React client called Custom Chart. Update your [Charts](/appstore/widgets/charts/) widget (to version 6.0 or above) to use the Custom Chart feature.
+{{% /alert %}}
 
 ## Introduction
 

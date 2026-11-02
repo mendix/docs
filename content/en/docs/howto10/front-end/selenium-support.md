@@ -58,7 +58,6 @@ Note that the fourth row in a grid has an index of `3`.
 
 ## Read More
 
-* [Test Mendix Applications Using Selenium IDE](/howto10/testing/testing-mendix-applications-using-selenium-ide/)
 * [Consume a Complex Web Service](/howto10/integration/consume-a-complex-web-service/)
 * [Consume a Simple Web Service](/howto10/integration/consume-a-simple-web-service/)
 * [Import Excel Documents](/howto10/integration/importing-excel-documents/)

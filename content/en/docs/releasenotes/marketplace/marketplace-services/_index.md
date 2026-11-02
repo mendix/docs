@@ -3,7 +3,7 @@ title: "Marketplace Services Release Notes"
 linktitle: "Marketplace Services"
 url: /releasenotes/marketplace-services/
 description: "Release notes for updates to Mendix Marketplace services"
-weight: 45
+weight: 50
 numberless_headings: true
 ---
 

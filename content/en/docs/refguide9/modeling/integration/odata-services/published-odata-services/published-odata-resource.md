@@ -106,7 +106,7 @@ Default: *10000*
 
 ## Key {#key}
 
-Every entity in Mendix has an [ID](/refguide9/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that a published OData resource should not use the ID as a key, and needs to have a combination of attributes that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
+Every entity in Mendix has an [ID](/refguide9/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that a published OData resource should not use the ID as a key, and needs to have a combination of attributes that form a key instead. The attribute(s) can be of type **Integer**, **Long**, **String**, or **AutoNumber**. An ID can also exceed JavaScript's largest safe integer (`Number.MAX_SAFE_INTEGER`), which can cause a loss of precision when parsed as a JavaScript number. For more information, see the [Large Long Values and JavaScript](/refguide9/odata-representation/#large-long-values) section of *OData Representation*.
 
 Select a combination of attributes with the following constraints:
 

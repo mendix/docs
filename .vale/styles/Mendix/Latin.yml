@@ -1,0 +1,18 @@
+# Override Microsoft.Foreign for better i.e./e.g. replacements
+# The Microsoft rule removes spacing incorrectly when applying quick fixes
+extends: substitution
+message: "Use '%s' instead of '%s'."
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#latin-abbreviations
+level: error
+ignorecase: false
+action:
+  name: replace
+swap:
+  'i\.e\., ': 'that is, '
+  'i\.e\. ': 'that is, '
+  'e\.g\., ': 'for example, '
+  'e\.g\. ': 'for example, '
+  '\(i\.e\., ': '(that is, '
+  '\(i\.e\. ': '(that is, '
+  '\(e\.g\., ': '(for example, '
+  '\(e\.g\. ': '(for example, '

@@ -7,9 +7,13 @@ weight: 10
 
 ## Introduction
 
+{{% alert color="warning" %}}
+The Dojo client is deprecated and will be removed in Mendix 12. It continues receiving security and stability updates until the end of support of Mendix 11.24. 
+{{% /alert %}}
+
 The Mendix Client has transitioned to a modern implementation using React. As of Mendix 11, the React Client is the default for all new applications created in Studio Pro, and the legacy Dojo client has been deprecated.
 
-You can enable the React client for existing applications in [App Settings](/refguide/app-settings/#react-client).
+You can enable the React client for existing applications in [App Settings](/refguide/runtime-tab/#react-client).
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This change allows for improved performance, enables incremental loading, and future-proofs your application. For more information on these three aspects, see the sections below:
 
@@ -73,7 +77,7 @@ Fore more information on React and APIs in Mendix, see our [Mendix 11 React Clie
 
 ### Enable React Client{#enable-react}
 
-To enable the React client for your Mendix project, make sure it fulfills the prerequisites above. Then, enable the React client in [App Settings](/refguide/app-settings/#react-client).
+To enable the React client for your Mendix project, make sure it fulfills the prerequisites above. Then, enable the React client in [App Settings](/refguide/runtime-tab/#react-client).
 
 The migration mode will show deprecation warnings instead of errors for all incompatible widgets found in your project. This can help you explore and test the React client without being blocked by errors. When deploying an app leveraging the React client, we recommend setting **React Client** to **Yes** and resolving all errors before deploying.
 
@@ -121,8 +125,8 @@ Because the reference set selector widget is technically a grid, while combo box
 
 The [HTML/JavaScript snippet](/appstore/widgets/html-javascript-snippet/) widget is not supported in the React Client. To leverage React, this widget can be replaced using [HTML Element](/appstore/widgets/htmlelement/) widget or [JavaScript actions](/refguide/javascript-actions/):
 
-* **Content Type** HTML — The HTML Element can be downloaded [here](https://marketplace.mendix.com/link/component/204843).
-* **Content Type** JavaScript — Write the code inside the supported JavaScript actions. If the user needs to execute the code in a certain way, calling the JavaScript action via nanoflow that triggers by [Events](/appstore/widgets/events/) widget is recommended.
+* **Content Type** HTML – The HTML Element can be downloaded [here](https://marketplace.mendix.com/link/component/204843).
+* **Content Type** JavaScript – Write the code inside the supported JavaScript actions. If the user needs to execute the code in a certain way, calling the JavaScript action via nanoflow that triggers by [Events](/appstore/widgets/events/) widget is recommended.
 
 #### Data Grid{#data-grid}
 

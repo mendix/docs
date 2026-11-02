@@ -26,7 +26,7 @@ This document explains how to access the application status page, what the infor
 
 Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), open the app that you want to monitor.
+1. From [Projects](https://projects.home.mendix.com), open the app that you want to monitor.
 
 1. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
@@ -153,7 +153,7 @@ Database Freeable Memory | |
 Description | Track the amount of freeable memory for the database belonging to the application.
 Example message | Database has 35% freeable memory.
 Warning Threshold | Not used.
-Critical Threshold | Database has 5% freeable memory for XS21, XS20, S, and Strato [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Database has 10% freeable memory for all other cloud resource packs.
+Critical Threshold | Database has 5% freeable memory for XS21 Standard, XS20, S, and Strato [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Database has 10% freeable memory for all other cloud resource packs.
 First actions to take | Inspect the metrics graph **Database memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or upgrading the cloud resource pack (for example, by ordering more memory).
 
 ### Database IOPS Burst Balance {#dbase-iops}
@@ -176,6 +176,16 @@ Warning Threshold | If the health check microflow returns a non-empty string val
 Critical Threshold | If the health check microflow itself experiences an error, a CRITICAL alert is generated. This will also happen when no database connection can be established.
 First actions to take | Because the health check microflow is specific to your application, Mendix cannot generically advise actions to take.
 
+### Jetty Thread Pool Usage {#jetty-thread-pool-usage}
+
+Jetty Thread Pool Usage | |
+:---|:---|
+Description | Track how much of the application's Jetty thread pool is in use. When the pool is close to full, the application can no longer accept new requests and end users may experience timeouts or degraded performance.
+Example message | Jetty thread pool at 92.0% (thread pool exhaustion), it may cause the application to stop processing requests.
+Warning Threshold | Not used.
+Critical Threshold | Active threads reach 90% or more of the maximum thread pool size.
+First actions to take | Inspect the metrics graph **Threadpool for handling external requests** for anomalies and correlate those with application behavior.
+
 ### Virtual Machine Error {#virtual-machine-error}
 
 Virtual Machine Error | |
@@ -195,16 +205,6 @@ Example message | Your application's virtual machine ran out of memory and died 
 Warning Threshold | Not used.
 Critical Threshold | If the JVM process has run out of memory and the application's JVM crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.
-
-## Basic License
-
-### Database Errors In the Log
-
-You might see database connection errors in your app logs. For example, you might see something like "ERROR - ConnectionBus: Error occurred on rollback database transaction. This connection has been closed." You do not have to do anything; your app will continue to work as expected.
-
-The reason you receive a message is that when you are using a [basic license](/developerportal/deploy/basic-package/), you get your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will cause these error messages.
-
-The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
 
 ## Read More
 

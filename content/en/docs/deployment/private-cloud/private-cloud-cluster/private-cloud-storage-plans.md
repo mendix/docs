@@ -145,6 +145,27 @@ If you delete an environment, make sure that it is completely deleted by running
 
 If the commands return a *not found* response, your environment database and blob file storage have been fully removed. If either the database or the blob file storage were not deleted, you must find and troubleshoot the reason, and then do a [manual cleanup](/developerportal/deploy/private-cloud-deploy/#delete-storage) if necessary. Until the cleanup is done, you should not create a new environment that uses the same name as the environment that is still being deleted.
 
+#### S3 Bucket Region Might Need to Be Set Manually
+
+In Studio Pro version 11.6, the AWS S3 library was updated from version 1 to version 2. This new AWS library version can no longer automatically detect an S3 bucket's region from its endpoint address, and needs the bucket endpoint to be specified manually.
+
+The AWS S3 library is also updated in the latest LTS versions of Studio Pro:
+
+* 9.24.41 (or later)
+* 10.24.14 (or later).
+
+Mendix Operator 2.25 (or later versions) will automatically recognise an S3 bucket's region from its endpoint address:
+
+* If the bucket endpoint has a `<subdomains>.<region>.amazonaws.com` format (or `<subdomains>.<region>.amazonaws.com.<suffix>` format for AWS China regions), the Operator uses `<region>` as the S3 region name.
+* For buckets that use the `<bucketname>.s3.amazonaws.com` [Legacy global endpoint](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html#VirtualHostingBackwardsCompatibility) format, Mendix Operator 2.26.1 (or later versions) detects the bucket region with a [HeadBucket call](https://docs.aws.amazon.com/AmazonS3/latest/API/API_HeadBucket.html#API_HeadBucket_ResponseSyntax). If the call fails, the Mendix Operator uses the default `us-east-1` region instead.
+* If the S3 bucket endpoint does not match this format, the Mendix Operator uses a default `us-east-1` region, as this works with most S3-compatible buckets (for example, [Minio](#blob-minio) and [Google Cloud Storage](#blob-gcp-storage-bucket)).
+
+In some scenarios (legacy or custom S3 endpoints), this autodetection might not work correctly. In this case, you can manually specify the S3 bucket region by setting the [com.mendix.storage.s3.Region](/refguide/custom-settings/#commendixstorages3Region) Custom Runtime Setting. A manually specified `com.mendix.storage.s3.Region` will override the autodetected bucket region.
+
+Mendix Operator versions 2.24.2 (and older) does not autodetect S3 bucket regions. To use Mendix versions with version 2 of the AWS S3 library, manually set the `com.mendix.storage.s3.Region` custom Runtime setting. You can also consider upgrading to Mendix Operator 2.25.0 or newer.
+
+This issue does not affect [Azure Blob Storage](#blob-azure) or [ephemeral](#blob-ephemeral) data storage plans.
+
 ## Database Plans {#database}
 
 Every Mendix app needs a database to store persistable and non-persistable entities. A database plan tells the Mendix Operator how to provide a database to a new Mendix app environment.
@@ -193,6 +214,10 @@ The Postgres database is an automated, on-demand database. The Postgres plan off
 If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 If your provider is AWS, [Postgres IAM authentication](#database-postgres-iam) can be used instead to increase security.
 If your provider is Azure, [Postgres managed identity authentication](#database-postgres-azwi) can be used instead to increase security.
+
+{{% alert color="info" %}}
+In case of STACKIT PostgreSQL Flex, the Mendix on-demand PostgreSQL provisioner cannot be used directly. STACKIT PostgreSQL Flex does not expose the `CREATEROLE` privilege, which is necessary for Mendix to automatically create database users with SQL commands. In order to facilitate the use of Postgres, switch to [JDBC plan](#database-jdbc) and create a dedicated database user for the new Mendix environment using the STACKIT CLI or API.
+{{% /alert %}}
 
 ##### Prerequisites
 
@@ -743,6 +768,10 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
 JDBC databases are dedicated, basic databases. The **Dedicated JDBC** plan enables you to enter the [database configuration parameters](/refguide/custom-settings/) for an existing database directly, as supported by the Mendix Runtime. This plan allows to configure and use any database supported by the Mendix Runtime, including Oracle.
 
+{{% alert color="info" %}}
+In order to use **STACKIT PostgreSQL Flex** database, use the JDBC plan and provide the connection details, as described in the STACKIT documentation. Use the STACKIT CLI or API to create a dedicated database user for the new Mendix environment.
+{{% /alert %}}
+
 #### Prerequisites
 
 * A database server, for example Postgres or Oracle.
@@ -912,6 +941,18 @@ If you would like to simply share a bucket between environments, or to manually 
 {{% alert color="info" %}}
 Although we offer additional flexibility and provide other options, Mendix recommends using one of the options listed above.
 {{% /alert %}}
+
+{{% alert color="warning" %}}
+In Studio Pro version 11.6, the AWS S3 library was updated from version 1 to version 2. This new AWS library version can no longer automatically detect an S3 bucket's region from its endpoint address. You must specify the bucket endpoint manually.
+
+Mendix Operator 2.25 (or later versions) will automatically recognise an S3 bucket's region from its endpoint address:
+
+* If the bucket endpoint has a `<subdomains>.<region>.amazonaws.com` format (or `<subdomains>.<region>.amazonaws.com.<suffix>` format for AWS China regions),
+the Operator will use the `<region>` part.
+* If the S3 bucket endpoint does not match this format, the Mendix Operator will use a default `us-east-1` region, as this works with most S3-compatible buckets like [Minio](#blob-minio) and [Google Cloud Storage](#blob-gcp-storage-bucket).
+
+In some scenarios (legacy or custom S3 endpoints), this autodetection might not work correctly. In this case, you can manually specify the S3 bucket region by setting the [com.mendix.storage.s3.Region](/refguide/custom-settings/#commendixstorages3Region) Custom Runtime Setting. A manually specified `com.mendix.storage.s3.Region` will override the autodetected bucket region.
+{{% /alert %}}.
 
 #### Create Account with Existing Policy {#s3-create-account-existing-policy}
 
@@ -1851,6 +1892,54 @@ In the Ceph plan configuration, enter the following details:
 * **Access Key** and **Secret Key** - Credentials to access the bucket.
 * **Type** - Specifies if the container can be shared between environments (create an on-demand storage plan); or that the container can only be used by one environment (create a dedicated storage plan). To increase security and prevent environments from being able to access each other's data, select **Dedicated**.
 
+### STACKIT Object Storage {#stackit-object-storage}
+
+This basic, dedicated option allows to attach an existing S3-compatible bucket and credentials (access and secret keys) to one or more environments.
+All apps (environments) will use the same bucket and credentials (access and secret keys). However, with this approach, environments share a common storage namespace, which can lead to potential data isolation issues and increased security risks if not managed carefully. 
+Another option is to use a dedicated object storage bucket for each environment.
+
+#### Prerequisites
+
+* A S3-compatible bucket.
+* An Access and Secret key with permissions to access the bucket.
+
+#### Limitations
+
+* Access/Secret keys used by existing environments can only be rotated manually.
+* No isolation between environments using the storage plan if using same bucket for all environments
+* Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start, and the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
+
+#### Environment Isolation
+
+* The S3-compatible bucket and credentials (access and secret keys) are shared between all environments using this plan.
+* An environment can access data from other environments using this Storage Plan.
+* By creating a dedicated bucket per environment, isolation between the environments can be achieved.
+
+#### Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
+
+* Generate a unique prefix based on the environment's name, so that each environment stores files in a separate prefix (directory).
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+
+#### Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
+
+* Delete that environment's Kubernetes blob file storage credentials secret.
+
+#### Configuring the Plan
+
+In the S3 plan configuration, enter the following details:
+
+* **IRSA Authentication** - Set to **no**.
+* **Create bucket per environment** - Set to **No**.
+* **Create account (IAM user) per environment** - Set to **No**.
+* **Endpoint** - The S3 bucket's endpoint address.
+* **Access Key** and **Secret Key** - The credentials for the environment user account.
+* **Autogenerate prefix** - Leave it empty.
+* **Share bucket between environments** - Specifies if the bucket can be shared between environments (create an on-demand storage plan); Enable this option and the bucket will be shared between multiple environments. 
+
 ## Walkthroughs
 
 This section provides instructions how to set up storage for the most typical use cases.
@@ -1887,7 +1976,7 @@ To configure the required settings for an RDS database, do the following steps:
 2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
     ```sql
-    kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
+    kubectl run postgrestools docker.io/library/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
     export PGDATABASE=postgres
     export PGUSER=<database-username>
     export PGHOST=<database-host>

@@ -24,7 +24,7 @@ You can specify multiple access restriction profiles for your application, each 
 
 To view or manage access restriction profiles, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to your app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to your app's **Environments** page.
 2. Click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any of the [available tabs](/developerportal/deploy/environments/#available-tabs) to open the **Manage Cloud Settings** page.
 3. Switch to the **Access Restriction Profiles** tab.
 
@@ -32,7 +32,7 @@ When configuring an access restriction profile, keep the following consideration
 
 * Access restriction profiles are configured at the application level. They can be reused in all the environments (for example test, acceptance, production) of an app.
 * Access restriction profiles can contain any number of IPv4 address ranges, client CAs, or both.
-* If an access restriction profile contains both IP address ranges and client CAs, then any match on either the IP range or the client certificate will grant access.
+* If an access restriction profile contains both IP address ranges and client CAs, then any match on either the IP range or the client certificate will grant or deny access.
 
 ### Configuring Access Restriction Profiles {#access-restriction}
 
@@ -54,7 +54,7 @@ To rename an access restriction profile. follow these steps:
 1. Locate the profile of interest from the **Access Restriction Profiles** page.
 2. Click the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) icon.
 3. Click **Edit**.
-4. In the edit page enter the new name.
+4. In the edit page enter the new **Profile Name**.
 5. Click **Save** to apply your changes.
 
 #### Specifying TLS Client Certificate Verification
@@ -81,23 +81,31 @@ Click **Save** to save the current certificate profile.
 Your CA for TLS client certificate verification should be different from the CA used to sign the SSL certificate configured for any custom domain of the app. Using the same CA for both can result in browsers requesting client certificates on all paths of your application.
 {{% /alert %}}
 
-#### Specifying IP Ranges {#ip-ranges}
+#### Configuring Allowed IP Ranges {#ip-ranges}
 
-You can specify a number of different IP ranges. Click **Create New Profile** to add a new IP range, or use **Edit** or **Delete** to modify an existing IP range.
+You can define IP profiles to specify which IP addresses or ranges are explicitly allowed to access your application.
 
-For each IP range, you can do the following:
+To manage these profiles:
 
-* Enter a **Profile  Name** 
-* Specify a range of addresses. Mendix Cloud supports both IPv4 and IPv6 format addresses.
+* In the **IP Filtering Profiles** section, click **Create New Profile** to add a new IP range
+* To modify an existing profile, select it and click **Edit**({{% icon name="pencil" %}})
+* To delete a profile, select it and click **Delete**({{% icon name="trash-can" %}})
 
-## Applying a Restriction to an Application Environment
+For each profile, specify the following details:
 
-To apply a restriction to a specific application environment, follow these steps:
+* **Profile Name**: Enter a descriptive name for the IP range
+* **IPv4/IPv6 range**: Enter the specific IP address range. Mendix Cloud supports both IPv4 and IPv6 formats
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
+Requests originating from an IP address within these allowed profiles will be granted access to your application.
+
+### Applying Access Restriction to an Application Environment
+
+To apply access restrictions to a specific application environment, follow these steps:
+
+1. From [Projects](https://projects.home.mendix.com), go to the app's **Environments** page.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
-3. Go to the **Network** tab.
-4. The **Path Based Access Restrictions** section allows for applying access restrictions to a single environment.
+3. Go to the **Connectivity** tab.
+4. Navigate to the [Path Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) section to apply access restrictions to a single environment.
 
 {{% alert color="info" %}}
 
@@ -107,7 +115,7 @@ To apply a restriction to a specific application environment, follow these steps
 
 {{% /alert %}}
 
-### Default Settings
+#### Default Settings
 
 These are the default settings:
 
@@ -115,7 +123,65 @@ These are the default settings:
 * All paths ending in `-doc` have a preset **Deny all access** profile set by default
 * All the remaining paths have no restriction applied by default
 
-## Use Cases for Access Restrictions
+## IP Restriction Profiles {#ip-restriction-profiles}
+
+IP restriction profiles allow you to deny access to your application from specific IP addresses or IP ranges. You can configure multiple profiles, each with a descriptive name that clearly reflects its purpose.
+
+To view or manage IP restriction profiles, follow these steps:
+
+1. From [Projects](https://projects.home.mendix.com), go to your app's **Environments** page.
+2. Click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any of the [available tabs](/developerportal/deploy/environments/#available-tabs) to open the **Manage Cloud Settings** page.
+3. Switch to the **IP Restriction Profiles** tab.
+
+When configuring an IP restriction profile, keep the following considerations in mind:
+
+* IP restriction profiles are configured at the application level. They can be reused in all the environments (for example test, acceptance, production) of an app.
+* IP restriction profiles can contain any number of IPv4 or IPv6 address ranges
+
+### Configuring IP Restriction Profiles {#access-restriction}
+
+To configure IP restriction profiles, from the **IP Restriction Profiles** page, you can either:
+
+* Create a new profile by clicking **New Profile**
+* Modify an existing profile by selecting the profile:
+    * Click the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) icon
+    * Click the **Edit** option to modify the profile
+    * Click **Delete** to delete an existing certificate profile
+    * Click **Clone** to copy and duplicate an existing certificate profile
+
+When you create or edit a profile, you can add IP ranges as described below.
+
+#### Configuring Denied IP Ranges {#denied-ip-ranges}
+
+You can define IP profiles to specify which IP addresses or ranges are explicitly denied access to your application.
+
+To manage these profiles:
+
+* Click **Create New Profile** to add a new IP range
+* To modify an existing profile, select it and click **Edit**({{% icon name="pencil" %}})
+* To delete a profile, select it and click **Delete**({{% icon name="trash-can" %}})
+
+For each profile, specify the following details:
+
+* **Profile Name**: Enter a descriptive name for the IP range
+* **IPv4/IPv6 range**: Enter the specific IP address range. Mendix Cloud supports both IPv4 and IPv6 formats
+
+Requests originating from an IP address within these denied profiles will be blocked from accessing your application.
+
+### Applying IP Restriction to an Application Environment
+
+To apply IP restrictions to a specific application environment, follow these steps:
+
+1. From [Projects](https://projects.home.mendix.com), go to the app's **Environments** page.
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
+3. Go to the **Connectivity** tab.
+4. Navigate to the [IP Access Restrictions](/developerportal/deploy/environments-details/#ip-access-restrictions) section to apply access restrictions to a single environment.
+
+{{% alert color="info" %}}
+Following the migration from Cloud Foundry to Kubernetes, access rule violations are now logged in the **Access Log** instead of the **App Log**. For more details on logs, refer to the [Apps Deployed to Mendix Cloud](/developerportal/operate/logs/#apps-deployed-to-mendix-cloud) section of *Logs*.
+{{% /alert %}}
+
+## Use Cases {#use-cases-for-access-restrictions}
 
 Two scenarios in which you can use access restrictions are described below.
 
@@ -125,22 +191,23 @@ Consider this example scenario in which a basic IP range restriction could be us
 
 To restrict access to the app to an IP range, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to the app's **Environments** page.
 2. Click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any of the [available tabs](/developerportal/deploy/environments/#available-tabs) to open the **Manage Cloud Settings** page.
 3. Switch to the **Access Restriction Profiles** tab.
 
 4. Create an access restriction profile.
-5. Add one or more IP ranges to the access restriction profile.
+5. Add one or more IP ranges to the **Denied IP Profiles**.
 
 6. Save the access restriction profile.
-7. Go to the **Deploy** tab of the **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
-8. Switch to the **Network** tab.
-9. Select the top-level path (`/`) and click **Edit**.
+7. Go to the **Overview** tab on the **Environments** page.
+8. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
+9. Switch to the **Connectivity** tab.
+10. Select the top-level path (`/`) and click **Edit**.
 
     {{% alert color="info" %}}Any path below this path that does not have an explicit restriction will inherit this access restriction profile.{{% /alert %}}
 
-10. Select **Custom Profile for Client Certificates and/or IP ranges** as the **New Restriction Type**.
-11. Select your access restriction profile as the **New Restriction Profile**, and save it.
+11. Select **Custom Profile for Client Certificates and/or IP ranges** as the **New Restriction Type**.
+12. Select your access restriction profile as the **New Restriction Profile**, and save it.
 
 ### Example Scenario 2 – Back-End Administration with Third-Party Web Service Integrations
 
@@ -154,16 +221,17 @@ Additionally, the company has decided to use TLS client certificates so they do 
 
 To add this additional access restriction profile, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
+1. From [Projects](https://projects.home.mendix.com), go to the app's **Environments** page.
 2. Click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any of the [available tabs](/developerportal/deploy/environments/#available-tabs) to open the **Manage Cloud Settings** page.
 3. Switch to the **Access Restriction Profiles** tab.
 
 4. Create a new access restriction profile.
 5. Upload the certificate of the internal CA that is used to sign the client certificates.
 6. Save the new access restriction profile.
-7. Go to the **Deploy** tab of the **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
-8. Switch to the **Network** tab.
-9. Edit the `/ws/` path of the environment to apply the new access restriction profile. This overrides the default profile (for the top level `/`) for the selected path (`/ws/`).
+7. Go to the **Overview** tab on the **Environments** page.
+8. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
+9. Switch to the **Connectivity** tab.
+10. Edit the `/ws/` path of the environment to apply the new access restriction profile. This overrides the default profile (for the top level `/`) for the selected path (`/ws/`).
 
 {{% alert color="info" %}}
 If the `/ws/` path should still be reachable from the office location without using a client certificate, add the IP ranges of the office location to the profile used for `/ws/`.

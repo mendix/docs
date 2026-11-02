@@ -7,7 +7,7 @@ description: "Overview of business event services in Studio Pro"
 
 ## Introduction
 
-Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/services/business-events/) module, applications can signal when something important happens, and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
+Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with the Mendix Business Events module functionality, which supports multiple deployment options including the Mendix Business Events module and alternatives such as Bring Your Own Kafka ([BYOK](/appstore/services/business-events-deployment/#byok)). With the [Mendix Business Events](/appstore/services/business-events/) module, applications can signal when something important happens, and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
 This page references the **Business Event Service** documents in Studio Pro. See [Mendix Business Events](/appstore/services/business-events/) for the complete documentation. 
 
@@ -47,7 +47,7 @@ To create a new business service in Studio Pro 9.24 and above, right-click on a 
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/new-business-event-service.png" class="no-border" >}}
 
-See the [Creating a New Business Event Service](/appstore/services/business-events/#two-way-be-create) section of *Mendix Business Events* for more extensive documentation.
+See the [Creating a New Business Event Service](/appstore/services/business-events-configuration/#two-way-be-create) section of *Mendix Business Events* for more extensive documentation.
 
 ##### Using an Existing Business Event Service {#use-existing}
 
@@ -55,4 +55,4 @@ To create a new business service in Studio Pro 9.24 and above, right-click on a 
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/existing-business-event-service.png" class="no-border" >}}
 
-See the [Using an Existing Business Event Service](/appstore/services/business-events/#two-way-be-existing) section of *Mendix Business Events* for more extensive documentation.
+See the [Using an Existing Business Event Service](/appstore/services/business-events-configuration/#two-way-be-existing) section of *Mendix Business Events* for more extensive documentation.

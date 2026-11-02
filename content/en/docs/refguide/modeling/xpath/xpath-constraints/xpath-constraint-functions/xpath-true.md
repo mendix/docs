@@ -1,5 +1,6 @@
 ---
 title: "XPath true"
+linktitle: "true"
 url: /refguide/xpath-true/
 weight: 1
 ---

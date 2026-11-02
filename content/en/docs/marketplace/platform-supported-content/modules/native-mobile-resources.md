@@ -11,9 +11,9 @@ The [Native Mobile Resources](https://marketplace.mendix.com/link/component/1095
 
 For excellent deep-dive demonstrations of how to use these native mobile widgets, check out the videos below on the [Carousel](#carousel) and [Popup Menu](#popup-menu) widgets:
 
-{{< vidyard "2Mzw7r4zLuyrvDcP1bhz4j" >}}
+{{< vidyard id="2Mzw7r4zLuyrvDcP1bhz4j" >}}
 
-{{< vidyard "wBDgxvFKGwFYkyxKhpHVLT" >}}
+{{< vidyard id="wBDgxvFKGwFYkyxKhpHVLT" >}}
 
 {{% alert color="info" %}}
 Native Mobile Resources v3.1.4 and above will indicate their version inside *themesource/nativemobileresources/.version* located in the app directory. Versions v3.1.3 and below included a constant in the module indicating version.
@@ -58,7 +58,7 @@ These are the native widgets included in these resources along with links to the
 | [Rating](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/rating-native) | Gives a rating by selecting stars. |
 | [Repeater](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/repeater-native) | Iterates over a data source or nanoflow and repeats the content while changing the values assigned to it. |
 | [Safe Area View](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/safe-area-view-native) | Prevents content from being rendered in unsafe areas (iOS only). |
-| [Signature](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/signature-native) | Creates a canvas on which a user can draw. The drawing will be saved as a *base64* string. |
+| [Signature](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/signature-native) | Creates a canvas on which a user can draw.</br>From version 12.5.0 of **Native Mobile Resources**, the drawing is saved as a `System.Image` specialization.</br>In versions below 12.5.0, the drawing is saved as a *base64* string.</br>This is a breaking change. See the [Signature widget readme](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/signature-native#signature-widget) in the *Native Mobile Resources* repo for more information. |
 | [Slider](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/slider-native) | Changes a numeric value using a slider. |
 | [Switch](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/switch-native) | Changes a Boolean value using a switch. |
 | [Toggle Buttons](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/toggle-buttons-native) | Changes an enumeration value using a group of buttons. |
@@ -73,7 +73,7 @@ This section contains information about the nanoflow actions included in the Nat
 
 These are the nanoflow actions in the client activities category:
 
-* **Download file** – lets the user save a file to the device or cloud storage, or let the user open it in another app
+* **Download native file** – lets the user save a file to the device or cloud storage, or let the user open it in another app
 
 ### Native Authentication Category
 

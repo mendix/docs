@@ -206,9 +206,9 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Closes all document tabs. |
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the selected element. |
 
-## Maia Chat Shortcut Keys {#maia-chat-shortcuts}
+## Maia Shortcut Keys {#maia-chat-shortcuts}
 
-You can use the following shortcut keys in [Maia Chat](/refguide/maia-chat/), including on the feedback page:
+You can use the following shortcut keys in [Maia](/refguide/maia-make/) in the **Chat** tab. In Studio Pro 11.7 and below, these shortcuts work in [Maia Chat](/refguide/maia-chat/), including on the feedback page:
 
 | Windows | Mac | Description |
 | --- | --- | --- |

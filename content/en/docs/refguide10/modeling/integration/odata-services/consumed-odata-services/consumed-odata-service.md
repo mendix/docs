@@ -4,7 +4,7 @@ url: /refguide10/consumed-odata-service/
 weight: 10
 aliases:
     - /refguide10/consumed-odata-service-properties/
-# SB: The images on this page are created using the Lato-LandscapeDemoApp (https://sprintr.home.mendix.com/link/project/1b515494-d818-4358-8c91-6c3d54e9cae5)
+# SB: The images on this page are created using the Lato-LandscapeDemoApp (https://projects.home.mendix.com/link/project/1b515494-d818-4358-8c91-6c3d54e9cae5)
 ---
 
 ## Introduction
@@ -52,6 +52,10 @@ Custom authentication can be done with the microflow where the authentication va
 {{% /alert %}}
 
 #### Authenticating with Mendix SSO {#authenticate-mendix-sso}
+
+{{% alert color="warning" %}}
+The Mendix SSO module is deprecated as of May 1, 2026. For new implementations, it is recommended to configure custom authentication using [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/) modules.
+{{% /alert %}}
 
 Publishers can set up [custom authentication](/refguide10/published-odata-services/#authentication-microflow) using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide10/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*. 
 

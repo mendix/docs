@@ -88,6 +88,10 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 * */order/{Id}* – the URL for a page with data from a particular `Order` (in a browser, the URL will look like `http://example.mendixcloud.com/p/order/3212449487634321`, wherein `3212449487634321` is the unique identifier of the `Order`)
 
+{{% alert color="warning" %}}
+Mendix does not recommend configuring page URLs for pages that are displayed as a pop-up. Navigating to such a URL will result in layout issues.
+{{%/alert %}}
+
 ### Navigation Section {#navigation}
 
 #### Visible For

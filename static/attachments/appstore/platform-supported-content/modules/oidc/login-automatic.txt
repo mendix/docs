@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<script>
+            self.location = "openid/login" + window.location.search + window.location.hash;
+        </script>-->
+		<script>
+window.onload = function () {
+    const cont = window.location.search + window.location.hash;
+    const base = window.location.pathname.replace(/\/login\.html$/, '');
+    const loginUrl = base + '/oauth/v2/login';
+
+    window.location.href = cont
+        ? loginUrl + '?cont=' + encodeURIComponent(cont)
+        : loginUrl;
+};
+</script>
+    </head>
+    <body>
+        <noscript>
+            <div class="loginpage-fullscreenDiv">
+                <div class="loginpage-center">
+                    Your browser does not support JavaScript! You need to enable JavaScript to continue.
+                </div>
+            </div>
+        </noscript>
+    </body>
+</html>

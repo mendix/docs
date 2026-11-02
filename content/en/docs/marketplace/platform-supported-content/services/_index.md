@@ -2,7 +2,6 @@
 title: "Services"
 url: /appstore/services/
 description: "Presents details on the platform-supported services in the Mendix Marketplace."
-weight: 3
 no_list: false
 ---
 

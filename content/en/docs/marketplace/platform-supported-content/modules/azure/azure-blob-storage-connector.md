@@ -74,20 +74,21 @@ To configure application-based Azure Entra ID authentication, perform the follow
 
 ### Configuring Operation Microflows{#configure-operation-microflows}
 
-[Operations](/refguide/operations/) define the operations that are executed in a microflow or a nanoflow.
+Operations define the operations that are executed in a microflow or a nanoflow.
 
 The Azure Blob Storage connector contains the following operations:
 
-* `PutBlob` - Allows you to upload a file of any type to Azure Blob Storage as a blob. For more information, see [Put Blob to Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/put-blob).
-* `GetBlob` - Allows you to retrieve a blob. For more information, see [Get Blob to Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob).
-* `DeleteBlob` - Allows you to delete a blob. For more information, see [Delete Blob from Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/delete-blob).
-* `ListBlobs` - Allows you to list the blobs in a specified container. For more information, see [List Blobs from a Azure Blob Storage container](https://learn.microsoft.com/en-us/rest/api/storageservices/list-blobs?tabs=microsoft-entra-id).
-* `ListContainers` - Allows you to list the containers you have access to in your Azure account. For more information, see [List Containers](https://learn.microsoft.com/en-us/rest/api/storageservices/list-containers2).
-* `GetApplicationBearerToken` - Allows the application to request a bearer token. The response is mapped to a **EntraCredentials** object that can be used to authenticate calls to Blob Storage.
-* `GetUserDelegationKey` - Allows you to retrieve a user delegation key. For more information, see [Get User Delegation Key](https://learn.microsoft.com/en-us/rest/api/storageservices/get-user-delegation-key).
-* `Create_SAS_Token_Blob` - Allows you to create an SAS with which to access a specific Blob.
-* `Create_SAS_Token_Container` - Allows you to create an SAS with which to access a specific Container.
-* `Create_SAS_Token_Directory` - Allows you to create an SAS with which to access a specific Directory.
+* `Put Blob` - Allows you to upload a file of any type to Azure Blob Storage as a blob. For more information, see [Put Blob to Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/put-blob).
+* `Get Blob` - Allows you to retrieve a blob. For more information, see [Get Blob to Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob).
+* `Delete Blob` - Allows you to delete a blob. For more information, see [Delete Blob from Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/delete-blob).
+* `List Blobs` - Allows you to list the blobs in a specified container. For more information, see [List Blobs from a Azure Blob Storage container](https://learn.microsoft.com/en-us/rest/api/storageservices/list-blobs?tabs=microsoft-entra-id).
+* `List Containers` - Allows you to list the containers you have access to in your Azure account. For more information, see [List Containers](https://learn.microsoft.com/en-us/rest/api/storageservices/list-containers2).
+* `Get Application Bearer Token` - Allows the application to request a bearer token. The response is mapped to a **EntraCredentials** object that can be used to authenticate calls to Blob Storage.
+* `Get User Delegation Key` - Allows you to retrieve a user delegation key. For more information, see [Get User Delegation Key](https://learn.microsoft.com/en-us/rest/api/storageservices/get-user-delegation-key).
+* `Create SAS Token Blob` - Allows you to create an SAS with which to access a specific Blob.
+* `Create SAS Token Container` - Allows you to create an SAS with which to access a specific Container.
+* `Create SAS Toke _Directory` - Allows you to create an SAS with which to access a specific Directory.
+* `Revoke All User Delegation Keys` - Revoke all the retrieved User Delegation Keys of an account in order to invalidate all existing SAS tokens of an account. To be able to invoke this service, you have to make sure that the application had been granted the Azure Entra Authoraization scope `https://management.azure.com/user_impersonation`, otherwise you will get an `HTTP-401 Unauthorized error`. Keep in mind that also new created SAS tokens which have been created with a revoked User Delegation Key will be invalid as well. For more information, see [Storage Accounts - Revoke User Delegation Keys](https://learn.microsoft.com/en-us/rest/api/storagerp/storage-accounts/revoke-user-delegation-keys). 
 
 You can implement the operations of the connector by using them in microflows. 
 
@@ -107,7 +108,7 @@ To use this operation in your microflow, perform the following steps:
     For the `PUT_v1_Azure_PutBlob` operation, retrieve the `System.FileDocument` you want to store and provide a configured `SASCredentials` or `EntraCredentials` object. You must then create a `PutBlobRequest` object in your microflow as the last parameter. This entity requires the following parameters:
 
     * `StorageAccount` - Storage account name you want to perform blob storage operations on
-    * `VersionAPI` - API version for the Azure Storage service (for example, `2021-04-01`)
+    * `VersionAPI` - Required; API version for the Azure Storage service, value `2025-05-05` is required for this operation.
     * `BlobName` - Desired name for the blob in storage
     * `ContainerName` - Target container for blob storage
     * `BlobType` - Type of blob (currently supports BlockBlob only)
@@ -120,6 +121,8 @@ To use this operation in your microflow, perform the following steps:
 7. Configure a method to trigger the `ACT_PutBlob` microflow. 
     For example, you can call the microflow with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
+The operation returns a **PutBlobRequestResponse** object, which is empty on itself, only its generalization AbstractResponse entity contains the http status code and optional the http reason phrase.
+
 #### GET_v1_Azure_GetBlob
 
 `GetBlob` – Retrieves the contents of a blob stored in Azure Blob Storage. This operation requires a valid `GetBlobRequest` object and an appropriate credentials object (either `SASCredentials` or `EntraCredentials`). For more information, see [Get Blob from Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob).
@@ -128,6 +131,8 @@ To use this operation in your microflow, perform the following steps:
 
 1. Create a **GetBlobRequest** object and populate the following attributes:
 
+    * `StorageAccount` - Required; storage account name you want to perform Blob Storage operations on
+    * `VersionAPI` - Required; API version for the Azure Storage service, value `2025-05-05` is required for this operation.
     * `BlobName` - Required; name of the blob to retrieve
     * `ContainerName` - Required; name of the container the blob is stored in
     * `BlobType` - Required; type of blob (currently supports BlockBlob only)
@@ -137,6 +142,7 @@ To use this operation in your microflow, perform the following steps:
 3. Call the **GET_v1_Azure_GetBlob** action in your microflow.
 
 The operation returns a **GetBlobResponse** object with the returned Blob associated with it.
+Its generalization AbstractResponse entity contains the http status code and optional the http reason phrase.
 
 #### DELETE_v1_Azure_DeleteBlob
 
@@ -147,14 +153,15 @@ To use this operation in your microflow, perform the following steps:
 1. Create a **DeleteBlobRequest** object and populate the following attributes:
 
     * `StorageAccount` - Required; storage account name you want to perform Blob Storage operations on
-    * `VersionAPI` - Required; API version for the Azure Storage service (for example, `2021-04-01`)
+    * `VersionAPI` - Required; API version for the Azure Storage service, value `2025-05-05` is required for this operation.
     * `BlobName` - Required; name of the blob to delete
     * `ContainerName` - Required; name of the container where the blob is stored
 
-3. Provide a valid credentials object by using the **AbstractCredentials** parameter.
-4. Call the **DELETE_v1_Azure_DeleteBlob** action in your microflow.
+2. Provide a valid credentials object by using the **AbstractCredentials** parameter.
+3. Call the **DELETE_v1_Azure_DeleteBlob** action in your microflow.
 
 The operation returns a **DeleteBlobResponse** object, which is a generalization of **AbstractResponse** and contains the **StatusCode** and **ReasonPhrase**.
+Its generalization AbstractResponse entity contains the http status code and optional the http reason phrase.
 
 #### GET_v1_Azure_ListBlobs
 
@@ -164,17 +171,18 @@ To use this operation in your microflow, perform the following steps:
 
 1. Create a **ListBlobsRequest** object and populate the following attributes:
 
-    * `StorageAccount` - Required; storage account name you want to perform Blob Storage operations on
-    * `VersionAPI` - Required; API version for the Azure Storage service (for example, `2021-04-01`)
-    * `ContainerName` - Required; name of the container where the blob is stored
-    * `Prefix` - Optional; used to list only blobs from a folder within your container that match the specified prefix
-    * `MaxResults` - Optional; the maximum number of results listed by the **ListBlobs** operation
-    * `Marker` - Optional; the marker used to get the next (sub)set of blobs from the specified location.
+    * `StorageAccount` - Required; storage account name you want to perform Blob Storage operations on.
+    * `VersionAPI` - Required; API version for the Azure Storage service, value `2025-05-05` is required for this operation.
+    * `ContainerName` - Required; name of the container where the blob is stored.
+    * `Prefix` - Optional; used to list only blobs from a folder within your container that match the specified prefix.
+    * `MaxResults` - Optional; the maximum number of results listed by the **ListBlobs** operation.
+    * `Marker` - Optional; the marker used to get the next (sub)set of blobs from the specified location..
 
-3. Provide a valid credentials object by using the **AbstractCredentials** parameter.
-4. Call the **GET_v1_Azure_ListBlobs** action in your microflow.
+2. Provide a valid credentials object by using the **AbstractCredentials** parameter.
+3. Call the **GET_v1_Azure_ListBlobs** action in your microflow.
 
 The operation returns a list of **Blob** objects associated to the **ListBlobResponse**, which is a generalization of **AbstractResponse** and contains the **StatusCode** and **ReasonPhrase**.
+Its generalization AbstractResponse entity contains the http status code and optional the http reason phrase.
 
 #### GET_v1_Azure_ListContainers
 
@@ -184,43 +192,47 @@ To use this operation in your microflow, perform the following steps:
 
 1. Create a **ListContainersRequest** object and populate the following attributes:
 
-    * `StorageAccount` - Required; storage account name you want to perform Blob Storage operations on
-    * `VersionAPI` - Required; API version for the Azure Storage service (for example, `2021-04-01`)
-    * `Prefix` - Optional; filters the results to return only containers whose names begin with the specified prefix
-    * `MaxResults` - Optional; the maximum number of results listed by the **ListContainers** operation
-    * `Marker` - Optional; the marker used to get the next (sub)set of containers from the specified location.
+    * `StorageAccount` - Required; storage account name you want to perform Blob Storage operations on.
+    * `VersionAPI` - Required; API version for the Azure Storage service, value `2025-05-05` is required for this operation.
+    * `Prefix` - Optional; filters the results to return only containers whose names begin with the specified prefix.
+    * `MaxResults` - Optional; the maximum number of results listed by the **ListContainers** operation.
+    * `Marker` - Optional; the marker used to get the next (sub)set of containers from the specified location..
 
 2. Provide a valid credentials object by using the **AbstractCredentials** parameter.
 3. Call the **GET_v1_Azure_ListContainers** action in your microflow.
 
 The operation returns a list of **Container** objects associated to the **ListContainersResponse**, which is a generalization of **AbstractResponse** and contains the **StatusCode** and **ReasonPhrase**.
+Its generalization AbstractResponse entity contains the http status code and optional the http reason phrase.
 
 #### POST_v1_Azure_GetApplicationBearerToken
 
-`GetApplicationBearerToken` – Retrieves a bearer token from the registered app you need configured on Entra Id. This operation requires a valid `GetApplicationBearerTokenRequest` object. For more information, see [Get Bearer Token](https://learn.microsoft.com/en-us/community/content/azure-rest-api-how-to-create-a-bearer-token).
+Retrieves a bearer token from the registered app you need configured on Entra Id. This operation requires a valid `GetApplicationBearerTokenRequest` object. For more information, see [Get Bearer Token](https://learn.microsoft.com/en-us/community/content/azure-rest-api-how-to-create-a-bearer-token).
 
 To use this operation in your microflow, perform the following steps:
 
-1. Create a **GetApplicationBearerToken** object and populate the following attributes:
+1. Create a **GetApplicationBearerTokenRequest** object and populate the following attributes:
 
-    * `TenantId` - Required; the Tenant ID of the registered app you have configured in your Microsoft Entra environment
-    * `ClientId` - Required; the Client ID of the registered app you have configured in your Microsoft Entra environment
-    * `ClientSecret` - Required; the Client Secret you have created on the registered app you configured in your Microsoft Entra environment
+    * `TenantId` - Required; the Tenant ID of the registered app you have configured in your Microsoft Entra environment.
+    * `ClientId` - Required; the Client ID of the registered app you have configured in your Microsoft Entra environment.
+    * `ClientSecret` - Required; the Client Secret you have created on the registered app you configured in your Microsoft Entra environment.
 
 2. Call the **POST_v1_Azure_GetApplicationBearerToken** action in your microflow.
 
 The operation returns a **GetApplicationBearerTokenResponse** object with the returned **EntraCredentialsUsage** associated to it. The **EntraCredentialsUsage** entity is a specialization of the **EntraCredentials** entity so the returned object can be used to authenticate Blob operations.
+Its generalization AbstractResponse entity contains the http status code and optional the http reason phrase.
 
 #### POST_v1_Azure_GetUserDelegationKey{#get-user-delegation-key}
 
-`GetUserDelegationKey` – Retrieves a user delegation key. This operation requires a valid `GetUserDelegationKeyRequest` object. For more information, see [Create User Delegation Key](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas).
+Retrieves a user delegation key. This operation requires a valid `GetUserDelegationKeyRequest` object. For more information, see [Create User Delegation Key](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas).
 
 To use this operation in your microflow, perform the following steps:
 
-1. Create a **GetUserDelegationKey** object and populate the following attributes:
+1. Create a **GetUserDelegationKeyRequest** object and populate the following attributes:
 
-    * `ExpiryDateTime` - Required; timestamp of when the validity period of the user delegation token ends
-    * `OptionalStartDateTime` - Optional; timestamp of when the validity period of the user delegation token starts
+    * `StorageAccount` - Required; storage account name you want to perform Blob Storage operations on.
+    * `VersionAPI` - Required; API version for the Azure Storage service, value `2025-07-05` is required for this operation.
+    * `ExpiryDateTime` - Required; timestamp of when the validity period of the user delegation token ends.
+    * `OptionalStartDateTime` - Optional; timestamp of when the validity period of the user delegation token starts.
 
 2. Provide a valid **EntraCredentials** object by using the **EntraCredentials** parameter.
 3. Call the **POST_v1_Azure_GetUserDelegationKey** action in your microflow.
@@ -229,18 +241,18 @@ The operation returns a **GetUserDelegationKeyResponse** object with the returne
 
 #### Create_SAS_Token_Blob 
 
-`Create_SAS_Token_Blob` – Uses the **UserDelegationKey** generated with **POST_v1_Azure_GetUserDelegationKey** to create an SAS that can be used to access the specified Blob. For more information, see [Create SAS](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas).
+Uses the **UserDelegationKey** generated with **POST_v1_Azure_GetUserDelegationKey** to create an SAS that can be used to access the specified Blob. For more information, see [Create SAS](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas).
 
 To use this operation in your microflow, perform the following steps:
 
 1. Perform the steps in the [POST_v1_Azure_GetUserDelegationKey](#get-user-delegation-key) section and use the acquired **UserDelegationKey** as input for the **Create_SAS_Token_Blob** operation microflow.
 2. Create a **CreateSASTokenBlobInputFields** object and populate the following attributes:
 
-    * `BlobName` - Required; the name of the blob you want to provide access to
-    * `StorageAccount` - Required; the storage account on which you want to perform Blob storage operations
-    * `ContainerName` - Required; the target container name where the blob will be stored
-    * `OptionalStartDateTime` - Optional; timestamp of when the validity period of the user delegation token starts
-    * `ExpiryDateTime` - Required; timestamp of when the validity period of the user delegation token ends
+    * `BlobName` - Required; the name of the blob you want to provide access to.
+    * `StorageAccount` - Required; the storage account on which you want to perform Blob storage operations.
+    * `ContainerName` - Required; the target container name where the blob will be stored.
+    * `OptionalStartDateTime` - Optional; timestamp of when the validity period of the user delegation token starts.
+    * `ExpiryDateTime` - Required; timestamp of when the validity period of the user delegation token ends.
     
 3. Create a **StoragePermissions** object to specify the permissions you want the SAS to grant. To do that, populate the following attributes:
 
@@ -275,17 +287,17 @@ The operation returns an **SASCredentials** object. This **SASCredentials** obje
 
 #### Create_SAS_Token_Container
 
-`Create_SAS_Token_Container` – Uses the **UserDelegationKey** generated with **POST_v1_Azure_GetUserDelegationKey** to create an SAS that can be used to access the specified Container. For more information, see [Create SAS](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas).
+Uses the **UserDelegationKey** generated with **POST_v1_Azure_GetUserDelegationKey** to create an SAS that can be used to access the specified Container. For more information, see [Create SAS](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas).
 
 To use this operation in your microflow, perform the following steps:
 
 1. Perform the steps in the [POST_v1_Azure_GetUserDelegationKey](#get-user-delegation-key) section and use the acquired **UserDelegationKey** as input for the **Create_SAS_Token_Container** operation microflow.
 2. Create a **CreateSASTokenContainerInputFields** object and populate the following attributes:
 
-    * `StorageAccount` - Required; the storage account on which you want to perform Blob storage operations
-    * `ContainerName` - Required; the container to which you want to provide access
-    * `OptionalStartDateTime` - Optional; timestamp of when the validity period of the user delegation token starts
-    * `ExpiryDateTime` - Required; timestamp of when the validity period of the user delegation token ends
+    * `StorageAccount` - Required; the storage account on which you want to perform Blob storage operations.
+    * `ContainerName` - Required; the container to which you want to provide access.
+    * `OptionalStartDateTime` - Optional; timestamp of when the validity period of the user delegation token starts.
+    * `ExpiryDateTime` - Required; timestamp of when the validity period of the user delegation token ends.
     
 3. Create a **StoragePermissions** object to specify the permissions you want the SAS to grant. To do that, populate the following attributes:
 
@@ -320,18 +332,18 @@ The operation returns an **SASCredentials** object. This **SASCredentials** obje
 
 #### Create_SAS_Token_Directory
 
-`Create_SAS_Token_Directory` – Uses the **UserDelegationKey** generated with **POST_v1_Azure_GetUserDelegationKey** to create an SAS that can be used to access the specified Directory. For more information, see [Create SAS](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas).
+Uses the **UserDelegationKey** generated with **POST_v1_Azure_GetUserDelegationKey** to create an SAS that can be used to access the specified Directory. For more information, see [Create SAS](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas).
 
 To use this operation in your microflow, perform the following steps:
 
 1. Perform the steps in the [POST_v1_Azure_GetUserDelegationKey](#get-user-delegation-key) section and use the acquired **UserDelegationKey** as input for the **Create_SAS_Token_Directory** operation microflow.
 2. Create a **CreateSASTokenDirectoryInputFields** object and populate the following attributes:
 
-    * `DirectoryName` - Required; the name of the folder/directory you have within a specific container
-    * `StorageAccount` - Required; the storage account on which you want to perform Blob storage operations
-    * `ContainerName` - Required; the container to which you want to provide access
-    * `OptionalStartDateTime` - Optional; timestamp of when the validity period of the user delegation token starts
-    * `ExpiryDateTime` - Required; timestamp of when the validity period of the user delegation token ends
+    * `DirectoryName` - Required; the name of the folder/directory you have within a specific container.
+    * `StorageAccount` - Required; the storage account on which you want to perform Blob storage operations.
+    * `ContainerName` - Required; the container to which you want to provide access.
+    * `OptionalStartDateTime` - Optional; timestamp of when the validity period of the user delegation token starts.
+    * `ExpiryDateTime` - Required; timestamp of when the validity period of the user delegation token ends.
     
 3. Create a **StoragePermissions** object to specify the permissions you want the SAS to grant. To do that, populate the following attributes:
 
@@ -363,6 +375,24 @@ To use this operation in your microflow, perform the following steps:
     * `Immutability` - Required. Set or delete the immutability policy or legal hold on a blob. This is always `False` for the **Create_SAS_Token_Directory** operation.
 
 The operation returns an **SASCredentials** object. This **SASCredentials** object can be used to authenticate blob storage API calls for the specified directory.
+
+#### POST_v1_Azure_RevokeAllUserDelegationKeys{#revoke-all-user-delegation-keys}
+
+Revokes all the user delegation keys thas have been retrieved for a storage account, so that all the SAS tokens of that account are invalidated.
+
+To use this operation in your microflow, perform the following steps:
+
+1. Create a **RevokeAllUserDelegationKeysRequest** object and populate the following attributes:
+
+    * `StorageAccount` - Required; storage account name you want to perform Blob Storage operations on.
+    * `VersionAPI` - Required; API version for the Azure Storage service, value `2024-01-01` is required for this operation.
+    * `SubscriptionId` - Required; the Subscription ID of the Storage Account.
+    * `OptionalStartDateTime` - Required; the name of the ResourceGroup for the Storage Account.
+
+2. Provide a valid **EntraCredentials** object by using the **EntraCredentials** parameter.
+3. Call the **POST_v1_Azure_RevokeAllUserDelegationKeys** action in your microflow.
+
+The operation returns a **RevokeAllUserDelegationKeysResponse** object, which is empty on itself. Its generalization AbstractResponse entity contains the HTTP status code, and optionally the HTTP reason phrase.
 
 ## Technical Reference {#technical-reference}
 

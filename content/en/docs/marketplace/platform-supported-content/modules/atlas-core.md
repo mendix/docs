@@ -16,7 +16,7 @@ Further documentation on styling can be found here:
 * [Create a Company Design System](/howto/front-end/create-a-company-design-system/)
 * [Extend Design Properties](/howto/front-end/extend-design-properties/)
 
-To migrate from Atlas 2 to Atlas 3, see [Migrate From Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/).
+To migrate from Atlas 3 to Atlas 4, see [Migrating to Atlas UI 4](/refguide/frontend/atlas4-migration/). To migrate from Atlas 2 to Atlas 3, see [Migrate From Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/).
 
 ## Read More
 

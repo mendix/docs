@@ -1,5 +1,6 @@
 ---
 title: "XPath seconds-from-dateTime"
+linktitle: "seconds-from-dateTime"
 url: /refguide/xpath-seconds-from-datetime/
 weight: 11
 ---

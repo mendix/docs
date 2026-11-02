@@ -46,9 +46,9 @@ All the users accessing the Mendix app from a browser on a phone will automatica
 
 A Mendix app can be installed on a phone as a native application which offers several advantages:
 
-* **Enhanced Performance** — Native apps are optimized for the specific platform, resulting in faster load times and smoother user interactions.
-* **Access to Device Features** — Native apps can harness the full potential of a phone's hardware features, such as GPS, camera, and push notifications, enhancing the user experience.
-* **Offline Functionality** — Native apps store data locally on the phone, ensuring that users can access content even without an internet connection. 
+* **Enhanced Performance** – Native apps are optimized for the specific platform, resulting in faster load times and smoother user interactions.
+* **Access to Device Features** – Native apps can harness the full potential of a phone's hardware features, such as GPS, camera, and push notifications, enhancing the user experience.
+* **Offline Functionality** – Native apps store data locally on the phone, ensuring that users can access content even without an internet connection. 
 
 The Mendix app will run in [offline-first](/refguide10/offline-first/) mode. This means that all the data is stored on the phone and only synchronized with the server on request.
 

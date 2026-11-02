@@ -1,6 +1,7 @@
 ---
 title: "OQL Clauses"
 url: /refguide/oql-clauses/
+description: "A reference guide to OQL clauses"
 weight: 10
 aliases:
     - /refguide/oql-from-clause/
@@ -36,7 +37,11 @@ Clauses must be presented in the following order, but can be left out if they ar
 7. [`LIMIT`](#limit-offset)
 8. [`OFFSET`](#limit-offset)
 
-The `UNION` clause defies the usual order presented above. It will be presented in a [Union Clause](#oql-union) section at the end.
+The `UNION` clause combines multiple SELECT queries and each of these SELECT queries must maintain the order presented above. See [`UNION` Clause](#oql-union), below.
+
+The domain model used in the various examples is shown below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/oql/oql-clauses-domain-model.png" >}}
 
 ## `SELECT` Clause {#select}
 
@@ -111,7 +116,7 @@ The following query returns all attributes of objects of `Sales.Request` that ar
 ```
 SELECT Sales.Request/*
 FROM Sales.Customer
-JOIN Sales.Customer/Sales.Customer_Request/Sales.Request
+JOIN Sales.Customer/Sales.Request_Customer/Sales.Request
 ```
 
 The following query is equivalent to the previous one, but it uses table aliases
@@ -119,7 +124,7 @@ The following query is equivalent to the previous one, but it uses table aliases
 ```
 SELECT Req/*
 FROM Sales.Customer Cust
-JOIN Cust/Sales.Customer_Request/Sales.Request Req
+JOIN Cust/Sales.Request_Customer/Sales.Request Req
 ```
 
 ### Selecting Distinct Values with `DISTINCT` {#distinct}
@@ -199,7 +204,7 @@ It is possible to use more complex expressions in `SELECT`. This is explained in
 
 It is also possible to use a subquery. See [Subquery in `SELECT`](/refguide/oql-clauses/#subquery-in-select) for more details.
 
-### Selecting Attributes over Associations
+### Selecting Attributes over Associations {#longpath}
 
 A unique feature of OQL is the ability to access attributes of associated objects using paths. For example:
 
@@ -849,7 +854,7 @@ This clause can include items that do not appear in the `SELECT` clause, except 
 {{% alert color="info" %}}
 The `ORDER BY` clause cannot be used in view entities without a `LIMIT` or an `OFFSET` clause. See [Sorting of View Entity Results](/refguide/use-view-entities/#sorting) in *How To Use View Entities* for more details.
 
-If OQL v2 is enabled, an `ORDER BY` clause cannot be used in subqueries without a `LIMIT` or an `OFFSET` clause because the order of the subquery results may not be retained in the outer query. See the [`ORDER BY` in Subquery](/refguide/oql-v2/#order-by-in-subquery) section of *OQL Version 2 Features* for more details.
+If OQL v2 is enabled, an `ORDER BY` clause cannot be used in subqueries without a `LIMIT` or an `OFFSET` clause because the order of the subquery results may not be retained in the outer query. See the [`ORDER BY` in Subqueries](/refguide/oql-v2/#order-by-in-subqueries) section of *OQL Version 2 Features* for more details.
 {{% /alert %}}
 
 ### Syntax
@@ -978,7 +983,7 @@ In the example below `Sales.Customer` object for Jim Elk does not have any assoc
 ```sql
 SELECT LastName
 FROM Sales.Customer
-ORDER BY Sales.Customer/Sales.Customer_Request/Sales.Request/Number
+ORDER BY Sales.Customer/Sales.Request_Customer/Sales.Request/Number
 ```
 
 | LastName     |
@@ -1072,16 +1077,22 @@ All select queries must define the same number of columns in the same order and 
 The syntax is as follows:
 
 ```sql
-  select_query
+  select_query | ( select_query )
     { 
-       UNION [ALL] select_query
+       UNION [ALL] { select_query | ( select_query ) }
     } [ ,...n ]
     [ order_by_clause ]
     [ LIMIT number ]
     [ OFFSET number ]
 ```
 
-### Result data type {#oql-union-type}
+By default, any `order_by_clause`, `LIMIT`, or `OFFSET` in a `UNION` clause will apply to the whole query. Wrapping a select_query in parentheses enables two things. First, it scopes any order_by_clause, LIMIT, or OFFSET inside the parentheses to only that subquery's results. Second, it allows a UNION to be nested inside another UNION, for example, `SELECT query_a UNION (SELECT query_b UNION ALL SELECT query_c)`. The outer UNION can still have its own order_by_clause, LIMIT, and OFFSET applying to the final combined result. See [Parenthesized `UNION` Subqueries](#oql-union-parentheses), below, for an example.
+
+{{% alert color="info" %}}
+Adding parentheses in `UNION` clauses was introduced in Mendix version 11.15.0. It is supported only in Java actions.
+{{% /alert %}}
+
+### Result Data Type {#oql-union-type}
 
 The data types used in `select_query` statements are considered when determining the final return type of the `UNION` clause. All data types used in `select_query` statements must be compatible. All data types are compatible with themselves. Differing types are only compatible in these cases:
 
@@ -1192,7 +1203,40 @@ SELECT LastName AS Name FROM Sales.Customer
 | Doe    |
 | Moose  |
 
-#### Union of different types
+#### Parenthesized `UNION` Subqueries {#oql-union-parentheses}
+
+{{% alert color="info" %}}
+This feature was introduced in Mendix version 11.15.0. It is supported only in Java actions.
+{{% /alert %}}
+
+You can wrap an individual subquery in parentheses to sort and limit only the results from that subquery rather than the sorting and limiting applying to the result of the `UNION`. This is done by giving each subquery its own `ORDER BY`, `LIMIT` and `OFFSET` clauses.
+
+For example, the following query uses `UNION` to return the brand and location with the highest and second-lowest stock levels, sorted in ascending order of the amount of stock.
+
+```sql
+(
+    SELECT Brand, City, Stock
+    FROM Sales.Location
+    ORDER BY Stock DESC
+    LIMIT 1
+)
+UNION
+(
+    SELECT Brand, City, Stock
+    FROM Sales.Location
+    ORDER BY Stock ASC
+    LIMIT 1
+    OFFSET 1
+)
+ORDER BY Stock ASC
+```
+
+| Brand  | City       | Stock |
+| ------ | ---------- | ----- |
+| Veidt  | Utrecht    | 2     |
+| Veidt  | Rotterdam  | 23    |
+
+#### Union of Different Types
 
 Presume two entities that have columns of types `INTEGER` and `DECIMAL`:
 
@@ -1231,7 +1275,7 @@ SELECT Sale FROM Sales.Sales
 | 42.25        |
 | 15.5         |
 
-#### Union of associations
+#### Union of Associations
 
 Performing a `UNION` with columns that are associations is possible, given the columns refer to the same entity for all select clauses. 
 
@@ -1269,6 +1313,10 @@ SELECT Cust.LastName as CustomerName FROM (
 ## Subqueries
 
 A subquery is an OQL query nested inside another query. A subquery can contain the same clauses as a regular OQL query. The entities from the outer query can be referred to in a subquery. A subquery can be used in different parts of the query.
+
+{{% alert color="info" %}}
+For the use of subqueries in `UNION` clauses, see [Parenthesized `UNION` Subqueries](#oql-union-parentheses), above.
+{{% /alert %}}
 
 ### Subquery in `SELECT` {#subquery-in-select}
 

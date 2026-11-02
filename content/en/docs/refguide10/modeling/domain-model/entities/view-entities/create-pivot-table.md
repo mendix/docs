@@ -51,11 +51,9 @@ Create a view entity that shows each order together with its total value, calcul
     GROUP BY o.OrderId, o.OrderDate, o.RequiredDate, o.ShippedDate
     ```
 
-{{% alert color="info" %}}
+    {{% alert color="info" %}} With view entities, you can take the relevant component of `DateTime` as a column using the `DATEPART` function. For more information, see the [`DATEPART` and `DATEDIFF`](/refguide10/oql-v2/#date-validations) section of *OQL Version 2 Features*.
 
-With view entities, you can take the relevant component of `DateTime` as a column using the `DATEPART` function. For more information, see the [`DATEPART` and `DATEDIFF`](/refguide10/oql-v2/#date-validations) section of *OQL Version 2 Features*.
-
-{{% /alert %}}
+    {{% /alert %}}
 
 3. Add another view entity to the domain model and name it *OrderQuarterlyPivotVE*. This entity will show a table, similar to the format above.
 4. Add the following query to the OQL editor:

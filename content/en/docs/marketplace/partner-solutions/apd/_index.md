@@ -2,6 +2,7 @@
 title: "APD"
 url: /appstore/partner-solutions/apd/
 description: "Presents all the documentation for versions 1 and 2 of Application Performance Monitor (APM) and version 3 of Application Performance Diagnostics (APD)."
+weight: 50
 no_list: false
 description_list: true
 aliases:

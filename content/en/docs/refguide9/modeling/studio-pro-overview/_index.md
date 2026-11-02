@@ -50,9 +50,9 @@ For more information on deploying your app and versioning it, see the [Versionin
 
 ### Links and User Profile Menu {#links}
 
-You can find links to [Apps](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
+You can find links to [Projects](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
-Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option. 
+Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, your apps, and signing out option. 
 
 ## App Structure (App Explorer)
 

@@ -32,7 +32,7 @@ There are several things you can do to customize your company theme module:
 
 * Customize the styling as described in the [Create a Theme Module](/howto10/front-end/customize-styling-new/#create-theme-mod) section of *How to Customize Styling*
 * Based on new styling, you can [add design properties](/howto10/front-end/extend-design-properties/)
-* Add your own layouts, page templates, building blocks — or change the existing ones
+* Add your own layouts, page templates, building blocks—or change the existing ones
 
 ## Extending and Previewing
 

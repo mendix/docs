@@ -35,7 +35,7 @@ Additionally, do not run your solution from a USB drive. Copy it to your hard-di
 
 In some exceptional cases, hardware acceleration can cause errors when rendering desktop applications. When this occurs, Mendix recommends enabling software rendering.
 
-To do this, navigate to **Preferences** > **Work Environment** and select [Enable software rendering mode](/refguide10/preferences-dialog/#rendering). Then, restart Studio Pro. After restarting, check if you notice improvements. If you do not notice improvements, it is preferable to turn this setting off.
+To do this, navigate to **Preferences** > **Advanced** and select [Enable software rendering mode](/refguide10/preferences-dialog/#rendering). Then, restart Studio Pro. After restarting, check if you notice improvements. If you do not notice improvements, it is preferable to turn this setting off.
 
 ### Parallels
 

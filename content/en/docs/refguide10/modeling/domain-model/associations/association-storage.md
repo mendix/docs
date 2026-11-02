@@ -17,7 +17,7 @@ Prior to Mendix 10.21, all associations (except the system associations `owner` 
 
 In Mendix 10.21 you can choose to implement some associations as direct associations. This means that the ID of the **Child** object is stored as a foreign key column of the **Parent** object (for example the "many" side of the association) in the underlying database table, thus removing the need for an association table.
 
-XPath and OQL queries work identically for both association tables and direct associations. You do not have to change anything or learn different flavors of these languages to work with them.  
+XPath and OQL queries work identically for both association tables and direct associations. You do not have to change anything or learn different flavors of these languages to work with them.
 
 ## Default Association Storage
 
@@ -29,7 +29,7 @@ In Mendix 10.21 and above, the following defaults apply:
 * **Upgraded projects** – for projects which are upgraded from an older version of Mendix, all new associations continue to be implemented as association tables
 
 {{% alert color="info" %}}
-In your app settings you can [change the default](/refguide10/app-settings/#miscellaneous) for all new associations. This does not affect existing associations.
+In your app settings you can [change the default](/refguide10/app-settings/#miscellaneous) for all new associations. Existing associations will not be affected. Please note that some associations managed in the System module will be updated even if you haven't created new associations.
 {{% /alert %}}
 
 ## Advantages of Direct Associations

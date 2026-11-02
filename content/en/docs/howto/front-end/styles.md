@@ -32,13 +32,8 @@ Add these classes to an element to change the text color to your theme colors:
 These are standard useful text colors:
 
 * `text-white`: white text
-* `text-black`: black text
-* `text-gray-primary`: primary gray text
-* `text-gray`: gray text
-* `text-gray-dark`: dark gray text
-* `text-gray-darker`: darker gray text
-* `text-gray-light`: light gray text
-* `text-gray-lighter`: lighter gray text
+* `text-header`: header text color
+* `text-detail`: detail text color
 
 ## Background Colors
 
@@ -60,13 +55,23 @@ A lighter variant of the background color also sets the matching foreground colo
 
 These are background colors for your layout:
 
-* `background-layout`: default layout background
-* `background-layout-secondary`: alternative layout background
+* `background-main`: default layout background
+* `background-secondary`: alternative layout background
 * `background-default`: default layout background
 * `background-default-dark`: dark layout background
 * `background-default-darker`: darker layout background
 * `background-default-light`: light layout background
 * `background-default-lighter`: lighter layout background
+
+## Color Shades
+
+Atlas generates a scale of shades for each theme color. To use a shade, add a `shade-N` class next to one of the classes `text-primary`, `text-success`, `text-warning`, `text-danger`, `text-default`, `background-primary`, `background-success`, `background-warning`, `background-danger`, or `background-default`. `N` is `50`, `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, or `900`, where a lower number is a lighter shade:
+
+* `background-primary shade-100`: light shade of the primary background color
+* `background-primary shade-700`: dark shade of the primary background color
+* `text-danger shade-700`: dark shade of the danger text color
+
+For more information on shades, see the [Using Color Shades](/howto/front-end/customize-styling-new/#color-shades) section of *How to Customize Styling*.
 
 ## Typography
 
@@ -74,8 +79,6 @@ These are useful classes for text items:
 
 * `text-normal`: normal text
 * `text-bold`: bold text
-* `text-spacing`: adds spacing to the text bottom and top
-* `text-lined`: underlines the text-lined
 * `text-break`: breaks text over multiple lines
 * `text-uppercase`: transforms the text to upper case
 * `text-lowercase`: transforms the text to lower case
@@ -99,20 +102,14 @@ You can change the appearance of a button:
 * `btn-sm`: small button
 * `btn-block`: spans the full width of the parent
 * `btn-bordered`: bordered button
-* `btn-transparent`: transparent background
 * `btn-image`: transparent button with image nicely align
-* `pull-right` or `btn-right`: aligns the button to the right
-* `btn-attached-right`: adds left margin
-* `btn-attached-left`: adds right margin
-* `btn-attached-bottom`: adds top margin
-* `btn-attached-top`: adds bottom margin
+* `pull-right`: aligns the button to the right
 
 ## Layout Grid
 
 You can change the appearance of a layout grid:
 
-* `v-center`: vertically aligns elements in a Bootstrap row; add this class on a row in a layout grid
-* `no-gutter`: removes padding for Bootstrap columns; add this class on a row in a layout grid
+* `no-gutters`: removes padding for Bootstrap columns; add this class on a row in a layout grid
 
 {{% alert color="info" %}}**Phones:**
 

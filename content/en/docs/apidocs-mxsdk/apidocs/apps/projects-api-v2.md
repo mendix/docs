@@ -21,7 +21,7 @@ Authentication for the Projects API uses a personal access token (PAT).
 
 ### Generating a PAT {#generate}
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *User Settings*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *User Settings*.
 
 Select the appropriate scopes, depending on the endpoints that need to be invoked. Refer to the [API Reference](#api-reference) for more information on which scopes to use in which endpoints.
 
@@ -35,6 +35,10 @@ Each request must contain an `Authorization` header with the value `MxToken {GEN
 GET /projects HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
+
+## Retrieving the UUID
+
+Multiple API calls require you to add the user's UUID. Mendix Admins can retrieve the UUID through the User Identifiers API. For details on how to do that, refer to the [Using the API to Retrieve User UUIDs](/apidocs-mxsdk/apidocs/user-identifiers-api/#using-the-api-to-retrieve-user-uuids) section in *User Identifiers API*.
 
 ## API Reference{#api-reference}
 

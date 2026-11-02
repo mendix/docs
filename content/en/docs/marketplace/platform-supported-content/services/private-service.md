@@ -117,7 +117,7 @@ When using Docker to run the image, add the configuration using the provided env
 | Environment variable | Default value | Description |
 |----------------------|---------------|-------------|
 | `MAX_DOCUMENT_SIZE` | `25000000` (25 MB) | The maximum size for PDF documents generated using the service. When a PDF exceeds this file size, the request is aborted. |
-| `MAX_PAGE_RENDERING_TIME` | `30000` (30 seconds) | The maximum time to wait for the page to finish loading and rendering. If loading the page exceeds this time, a [Wait for Content](/appstore/modules/document-generation/#wait-for-content-exception) exception is sent to the module. |
+| `MAX_PAGE_RENDERING_TIME` | `30000` (30 seconds) | The maximum time to wait for the page to finish loading and rendering. If loading the page exceeds this time, a [Wait for Content](/appstore/modules/document-generation/troubleshooting/#wait-for-content-exception) exception is sent to the module. |
 | `ACCEPT_INSECURE_CERTIFICATES` | `false` | <p> Allows the use of untrusted certificates, such as when using self-signed certificates.</p> <p> **Warning:** This disables certificate validation, and allows the use of invalid certificates. Be aware of any resulting security risks. Alternatively, for better security, you can provide your certificates to the service. For details, refer to the [Importing a Self-Signed Certificate](#importing-a-self-signed-certificate) section.</p>|
 
 ### Importing a Self-Signed Certificate {#importing-a-self-signed-certificate}

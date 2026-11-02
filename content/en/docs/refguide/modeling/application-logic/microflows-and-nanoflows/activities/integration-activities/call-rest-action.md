@@ -107,7 +107,7 @@ The options are:
 When you select **Override**, you can configure which client certificate will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
 
 * When you deploy the app in Mendix Cloud, set the **Client certificate identifier** in the app and the  **Web Service Call name** [in Mendix Cloud](/developerportal/deploy/certificates/#outgoing-client-certificates) to the same value to use a specific client certificate for this REST call.
-* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide/custom-settings/#CACertificates). For testing locally, this can be set as a custom server setting in a [Configuration](/refguide/configuration/#custom).
+* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](/refguide/custom-settings/#CACertificates). For testing locally, this can be set as a custom server setting in a [Configuration](/refguide/configurations-tab/#custom).
 
 When this identifier is not set for the environment where your app is deployed (either not pinned or not present in *ClientCertificateUsages*), the default settings will be used (as if **Use app settings** were selected).
 
@@ -130,6 +130,10 @@ The **Password** property defines the password that will be used to authenticate
 ### Custom HTTP Headers {#custom-http-headers}
 
 These headers are added to the HTTP request header. Each custom header is a pair with a key and a value (a microflow expression).
+
+{{% alert color="info" %}}
+The actual computed value for the **Content-Length header** takes precedence over the user-specified value. In case of an unknown length (for example, streamed or binary content), the user-specified value is used.
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 REST endpoints which are using NGINX as a webserver will ['silently drop'](https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/#missing-disappearing-http-headers) HTTP headers which contain an underscore `_`.

@@ -49,13 +49,3 @@
       </div>
   </div>
 </div>
-
-<script> // Script for .alert.has-line-breaks styling in _styles_project.scss
-$(document).ready(() => {
-  $('.alert-text').each((index, element) => { // Iterate over each element with class 'alert-text'
-      if ($(element).find('p, ul, ol').length) { // Check for <p>, <ul>, or <ol> elements in the current 'alert-text' element
-          $(element).closest('.alert').addClass('has-line-breaks'); // Add class 'has-line-breaks' to the closest 'alert' ancestor element
-      }
-  });
-});
-</script>

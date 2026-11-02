@@ -12,7 +12,7 @@ Standard charts provide the most common settings through the widget configuratio
 
 This cheat sheet with JSON snippets will provide some samples of advance configuration.
 
-The full reference can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/). Charts support plotly.js version 1.47.4.
+The full reference can be found at [Plotly JavaScript Open Source Graphing Library](https://plotly.com/javascript/). Charts support plotly.js 3.x as of Charts widget version 6.0.0.
 
 When the advanced configuration does not suffice have a look at the [Any Chart](https://marketplace.mendix.com/link/component/106437/Mendix/Any-Chart) widget in the Marketplace.
 

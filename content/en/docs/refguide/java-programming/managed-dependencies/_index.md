@@ -54,9 +54,13 @@ Exclusions are identified through their [Maven naming convention](https://maven.
 
 ## Dependency Synchronization {#dependency-synchronization}
 
-When a change is made to a specified dependency, for example, the dependency is removed or the module is updated from the Marketplace, dependency synchronization will automatically run in the background.
+When a change is made to a specified dependency, for example, the dependency is removed or the module is updated from the Marketplace, dependency synchronization will automatically run in the background. Dependency synchronization will also run every time you open your app in Studio Pro.
 
-Dependency synchronization also occurs when you open your app in Studio Pro.
+{{% alert color="info" %}}
+Each time dependency synchronization is run, Studio Pro retrieves the latest compatible versions of all managed dependencies. If a package receives frequent patches, this can result in regular updates if no exact version is specified. Since each update must be committed to version control, this may lead to a high volume of commits over time.
+
+To reduce the frequency of updates and associated version control commits, you can configure your managed dependencies to use exact version numbers. This prevents automatic updates during dependency synchronization and helps maintain a more stable and predictable build environment. You can read about gradle's version ranges on [gradle.org](https://docs.gradle.org/current/userguide/dependency_versions.html)
+{{% /alert %}}
 
 You can trigger a manual synchronization in the menu **App** > **Synchronize dependencies**. You may want to do this, for example, when synchronization failed due to connectivity issues.
 

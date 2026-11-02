@@ -23,7 +23,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 | Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime so you can identify when this scheduled event has been processed. See [Task Queues](/refguide/task-queue/) for additional information about this object.<br/>⚠ For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix 11. |
 | Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and does not influence the behavior of your application. |
 
-## Execution Properties
+## Execution Properties{#execution-properties}
 
 | Property | Description |
 | --- | --- |
@@ -206,3 +206,18 @@ If you want to implement complex interval patterns, such as running a scheduled 
 1. Perform the actions relating to the event only if the condition evaluates to true.
 
 This approach allows you to maintain flexibility in scheduling while keeping the logic centralized and easy to manage.
+
+### Renaming Scheduled Events and Deployment Behavior
+
+When a scheduled event is deployed to an environment, its [enabled/disabled state](#execution-properties) is tracked by using the name of the scheduled event, not by a unique identifier.
+
+This means that if you rename a scheduled event in your model (for example, from `SE_Current` to `SE_Old`) and then create a new scheduled event with the original name (`SE_Current`), the deployment platform will treat the new scheduled event as if it is the old one because the name matches.
+
+This means that:
+
+* The new scheduled event (`SE_Current`) will inherit the enabled state of the previously deployed scheduled event that carried the same name.
+* The renamed scheduled event (`SE_Old`) will be treated as a new, previously unseen, event and will default to disabled.
+
+{{% alert color="info" %}}
+Be mindful of this behavior when renaming scheduled events and reusing names within the same application. If you rename a scheduled event and introduce a new one with the original name, verify the enabled/disabled states of all affected scheduled events after deployment to ensure they match your intentions.
+{{% /alert %}}

@@ -59,7 +59,7 @@ The keys of the dictionary represent the Mendix Studio Pro version. The `min` an
 
 {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/mendix-version.png" alt="iOS output"   width="200"  class="no-border" >}}
 
-So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
+So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template version from 4.0.0 to the latest. Ideally you should choose the most recent supported version. <!-- What to update it to? -->
 
 There is no best way of getting a copy of the Native Template. In the following sections we provide two ways to get the version you need.
 
@@ -103,7 +103,7 @@ Now that you have a copy of the Native Template checked out and ready, you can b
 
 Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
-For bundling your resources, Mendix Studio Pro comes with a helpful tool called [MxBuild](/refguide/mxbuild/). MxBuild can be found relatively to the location of the Studio Pro executable (for example *C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe*).
+For bundling your resources, Mendix Studio Pro comes with a helpful tool called [MxBuild](/refguide/mxbuild/). MxBuild's location can be found relative to the location of the Studio Pro executable (for example, `C:\Program Files\Mendix\Studio Pro [version #]\mxbuild.exe`).
 
 1. Run the following command:
 

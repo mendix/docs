@@ -46,21 +46,21 @@ Now when an end-user clicks the menu item, a new *ProgramItem* object will be cr
 
 ### Error Code: CE0529
 
-CE0529 error message: *The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object.*
+CE0529 error message: *The selected page '{Name of page}' contains required parameters and can not be used as home page.*
 
-You get CE0529 if you have set a page that expects an object to be passed to it (for example, a page with a data view) as a home page. But the home page has no object that is passed to it, because it is the starting point of a flow.
+You get CE0529 if you have set a page that expects one or more required parameters to be passed to it (for example, a page with a data view) as a home page. But the home page has no parameter(s) passed to it, because it is the starting point of a flow.
 
-To fix CE0529, you can use a microflow as the home page that opens the preferred page and pass a specific object to the home page. For more information, see the [Error Fix Example for CE0529](#home-page-expects-an-object) section below.
+To fix CE0529, you can use a microflow as the home page that opens the preferred page and pass the required parameter(s) to the home page. For more information, see the [Error Fix Example for CE0529](#home-page-expects-an-object) section below.
 
 #### Error Fix Example for CE0529 {#home-page-expects-an-object}
 
-If you set a page that expects an object to be passed to it as a home page for a [navigation profile](/refguide/navigation/#properties), you will get a consistency error.
+If you set a page that expects required parameter(s) to be passed to it as a home page for a [navigation profile](/refguide/navigation/#properties), you will get a consistency error.
 
-For example, you have added a data view that expects an object of type *Customer* to the home page of the responsive profile, and you get a consistency error. 
+For example, you have added a data view that expects a required object of type *Customer* to the home page of the responsive profile, and you get a consistency error. Optional parameters will not trigger a consistency error if they are not passed.
 
 {{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-navigation/home-page-error.png" alt="Home Page Error" class="no-border" >}}
 
-You can fix this error by creating a microflow that will that will create a new *Customer* object and pass it to the page. Do the following:
+You can fix this error by creating a microflow that will create a new *Customer* object and pass it to the page. Do the following:
 
 1. Open the responsive navigation profile.
 2. In **Default home page field** click **Select**.

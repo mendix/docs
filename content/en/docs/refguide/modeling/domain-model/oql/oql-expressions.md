@@ -20,6 +20,10 @@ An OQL expression is a query building block that returns a value or a list of va
 
 OQL expressions can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION`, `HAVING`, and `ON` conditions of `JOIN` clauses. For more information, see [OQL clauses](/refguide/oql-clauses/).
 
+The domain model used in the various examples is shown below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/oql/oql-expressions-domain-model.png" >}}
+
 ## Aggregations{#aggregates}
 
 Aggregations are functions that reduce a list of values from a retrieved column (or columns) into a single value. They can be used in the following ways:
@@ -171,7 +175,7 @@ SELECT MAX(Stock) as StockMax FROM Sales.Product
 To return the name(s) of the product(s) with the highest stock level you have to use a subquery. The subquery returns the maximum stock number, which is then compared to each product's stock in the `WHERE` clause:
 
 ```sql
-SELECT HighestStockProductName FROM Sales.Product
+SELECT Name AS HighestStockProductName FROM Sales.Product
 WHERE Stock = (SELECT MAX(P.Stock) FROM Sales.Product P)
 ```
 

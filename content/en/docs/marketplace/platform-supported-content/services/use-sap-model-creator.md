@@ -62,13 +62,9 @@ The enumeration **FunctionNames** contains a list of functions which are exposed
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Identify the SAP back-end system and OData service or BAPI you wish to use
-* Create an app in Mendix Studio Pro (version 8.18.10 or above)
+* Create an app in Mendix Studio Pro
 * For a BAPI you will need to download a BAPI Schema – see [BAPI Schema for Model Creator](/appstore/modules/sap/sap-bapi-connector/#bapi-schema) in *BAPI Connector for SAP Solutions* for more information
 * Obtain authentication credentials, if needed, for the SAP Catalog Service or SAP back-end system you wish to use
-
-{{% alert color="warning" %}}
-The Model Creator for SAP Integrations will produce a module which is in Mendix 8.18.10. To use the module you will have to create your app in, or upgrade your app to, Mendix 8.18.10 or above.
-{{% /alert %}}
 
 ## Generating an OData Data Model
 

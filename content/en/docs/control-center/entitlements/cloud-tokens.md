@@ -35,7 +35,7 @@ For the technical details of each Cloud Resource Pack (CRP), refer to the [Cloud
 
 All your current CRPs are converted to their equivalent Mendix Cloud Tokens and aggregated with any other Mendix Cloud Tokens. You can then use these to provision Cloud resources of any type and size, as specified in your contracts. 
 
-You can see available and used Mendix Cloud Tokens on the **Entitlements** page. If you cannot, contact your Customer Success Manager (CSM).
+You can see available and used Mendix Cloud Tokens on the **Entitlements** page. If you cannot, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact.
 
 These tables show how many Mendix Cloud Tokens each CRP requires:
 
@@ -46,29 +46,29 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M21 | 40 |
 | L21 | 80 |
 | XL21 | 160 |
-| 2XL21 | 320 |
-| 3XL21 | 640 |
-| 4XL21 | 1280 |
-| 4XL-5XLDB | 2240 |
+| XXL21 | 320 |
+| XXXL21 | 640 |
+| XXXXL21 | 1280 |
+| XXXXL-5XLDB | 2240 |
 
-|Premium Resource Packs | Mendix Cloud Tokens |
+| Premium Resource Packs | Mendix Cloud Tokens |
 | --- | --- |
 | S21 | 30 |
 | M21 | 60 |
 | L21 | 120 |
 | XL21 | 240 |
-| 2XL21 | 480 |
-| 3XL21 | 960 |
-| 4XL21 | 1920 |
-| 4XL-5XLDB | 3360 |
+| XXL21 | 480 |
+| XXXL21 | 960 |
+| XXXXL21 | 1920 |
+| XXXXL-5XLDB | 3360 |
 
-|Premium Plus Resource Packs | Mendix Cloud Tokens |
+| Premium Plus Resource Packs | Mendix Cloud Tokens |
 | --- | --: |
 | XL21 | 400 |
-| 2XL21 | 800 |
-| 3XL21 | 1600 |
-| 4XL21 | 3200 |
-| 4XL-5XLDB | 5600 |
+| XXL21 | 800 |
+| XXXL21 | 1600 |
+| XXXXL21 | 3200 |
+| XXXXL-5XLDB | 5600 |
 
 | Legacy Resource Packs | Mendix Cloud Tokens |
 | --- | --: |
@@ -77,7 +77,7 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M20 | 40 |
 | L20 | 80 |
 | XL20 | 160 |
-| 2XL20 | 320 |
+| XXL20 | 320 |
 | Strato | 12 |
 | Meso | 47 |
 | Iono | 67 |
@@ -86,29 +86,31 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M | 16 |
 | L | 37 |
 | XL | 73 |
-| 2XL | 167 |
-| 3XL | 640 |
+| XXL | 167 |
+| XXXL | 640 |
 
 {{% alert color="info" %}} 
 
 * You can no longer purchase legacy CRPs. You can now only purchase and provision Standard, Premium, and Premium Plus CRPs. Any legacy CRPs that you have already purchased will be converted into Mendix Cloud Tokens if they are deprovisioned. This will use the rate specified in the previous tables, and the Mendix Cloud Tokens will be added to your Token pool.
-* Self-service cloud consumption capabilities are exclusively available for Standard, Premium, and Premium Plus CRPs. If you are using a legacy CRP in combination with fallback, you may experience consumption inaccuracies in the self-service tool. For access to the latest capabilities, Mendix recommends contacting your customer success manager to transition to a Standard, Premium, or Premium Plus CRP.
+* Self-service cloud consumption capabilities are exclusively available for Standard, Premium, and Premium Plus CRPs. If you are using a legacy CRP in combination with fallback, you may experience consumption inaccuracies in the self-service tool. For access to the latest capabilities, Mendix recommends contacting your Technical Account Manager, Specialized Account Executive, or Partner Contact to transition to a Standard, Premium, or Premium Plus CRP.
 
 {{% /alert %}}
 
 ## GenAI Resource Packs {#grps}
 
-GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For the technical details of each GenAI Resource Pack (GRP), refer to [GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
-
-| GenAI Model Resource Packs | Mendix Cloud Tokens |
-| --- | --: |
-| S | 36 |
-| M | 72 |
-| L | 144 |
+GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For text generation and embeddings resources, one Mendix Cloud Token equals 100 GenAI Units. You choose any Cloud Token amount when provisioning a resource. There are no fixed plan sizes. For technical details, GenAI Unit exchange rates, and model pricing, see [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
 
 | GenAI Knowledge Base Resource Packs | Mendix Cloud Tokens |
+| --- | -- |
+| Standard | 48 |
+
+## Maia Units {#maia-units}
+
+Maia Units allow you to use Maia Make in Studio Pro and are managed through [Maia Resources](/control-center/maia-resources/). Admins can provision, upgrade, downgrade, and deprovision Maia Units for their company. For technical details, see [Maia Resources](/control-center/maia-resources/).
+
+| Maia Units per Month | Mendix Cloud Tokens |
 | --- | --: |
-| S | 48 |
+| 100 | 1 |
 
 ## Key Takeaways
 

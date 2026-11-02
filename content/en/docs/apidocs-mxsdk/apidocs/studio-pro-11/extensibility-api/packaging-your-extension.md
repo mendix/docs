@@ -1,29 +1,36 @@
 ---
 title: "Packaging Your Extension"
-url: /apidocs-mxsdk/apidocs/extensibility-api-11/packaging-your-extension
+url: /apidocs-mxsdk/apidocs/extensibility-api-11/packaging-your-extension/
 weight: 30
+description: "Explains how to package extensions into add-on modules and publish them to the Mendix Marketplace."
 ---
 
-# Packaging your extension
+# Packaging Your Extension
 
-Once you have finished development on your extension, you might want to package it into an add-on module so that others can start using it. Once you have created the add-on module, it can then be published to the Mendix Marketplace for your extension users to download into their Studio Pro app.
+After you complete development on your extension, you can package it into an add-on module so others can use it. You can then publish the module to the Mendix Marketplace so other users can download it into their apps.
 
-To package your extension, you will still need the `--enable-extension-development` command line option turned on. Create a new module in your Studio Pro app containing your dev extension, give it an appropriate name. Open the module's settings form and set it to be an Add-on module. In the `Extension name` dropdown, select the extension you want to package into it.
+To package your extension, follow these steps:
 
-![Extension Add-on Module](/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensionAddOnModule.png)
+1. Verify that you have enabled the [Extension Development](/refguide/preferences-dialog/#extension-development) setting in your app's **Preferences**. Alternatively, start Studio Pro with the `--enable-extension-development` command-line option.
+2. In your app, create a new module and include your development extension.
+3. Name the module.
+4. Open the module's settings and on the **Export** tab, select **Add-on module**.
+5. In the **Extension name** list, select the extension you want to package.
 
-After you've created your add-on module with its extension, you can now export it, by right-clicking the module in the App Explorer and choosing `Export add-on module package`, as shown below.
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensionAddOnModule.png" alt="Extension settings showing Add-on module selected with Extension name dropdown" width="400" >}}
 
-![Export Module](/attachments/apidocs-mxsdk/apidocs/extensibility-api/exportAddOnModule.png)
+After you create your add-on module with its extension, export it by right-clicking the module in the **App Explorer** and selecting **Export add-on module package**.
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/exportAddOnModule.png" width="400" >}}
 
 You can now save the add-on module to a location of your choice.
 
-# Importing the extension add-on module
+# Importing the Extension Add-on Module
 
-Once the add-on module is available to a Studio Pro user, they are now able to add it in their application. They can so so by right-clicking the app in the App Explorer and choosing `Import module package`, as shown below.
+When the add-on module is available to a Studio Pro user, they can add to their app. This is done by right-clicking the app in the **App Explorer** and selecting **Import module package**.
 
-![Import Module](/attachments/apidocs-mxsdk/apidocs/extensibility-api/importAddOnModule.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/importAddOnModule.png" width="400" >}}
 
-Once an add-on module containing an extension is imported in the app, Studio Pro will show a warning to the user, asking to trust the extension contained in it. If the user does not choose to trust, the module will still be imported but the extension inside it won't be loaded.
+When an add-on module containing an extension is imported in the app, Studio Pro displays a warning to the user, asking to trust the extension contained in it. If the user does not choose to trust the extension, the module is still imported but the extension inside it will not be loaded.
 
-![Trust Extension](/attachments/apidocs-mxsdk/apidocs/extensibility-api/trustExtension.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/trustExtension.png" width="400" >}}

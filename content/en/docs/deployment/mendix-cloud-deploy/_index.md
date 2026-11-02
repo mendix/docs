@@ -2,7 +2,7 @@
 title: "Mendix Cloud"
 url: /developerportal/deploy/mendix-cloud-deploy/
 weight: 8
-description: "Describes what Mendix Cloud is."
+description: "This document describes Mendix Cloud, the default AWS-powered deployment for Mendix applications. It also provides information about Free App features, limitations, manual and automatic deletion policies, and archiving. This document also provides information to learn about Licensed App capabilities, including resource packs, high availability, regional fallback, database configurations, URLs, and Mendix pricing plans to optimize your app deployment and management."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #plans, below, is mapped from Control Center within the Mendix Portal.
@@ -53,16 +53,32 @@ If your app does not wake up after a few minutes, contact [Mendix Support](https
 
 To prevent your Free App going into sleep mode, upgrade to a licensed app running on a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-#### Archiving of Free Apps {#free-apps-archival}
+#### Deleting Free Apps
 
-If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps that are going to be archived, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project on the Mendix Platform and repository on the [Team Server](/developerportal/repository/team-server/) are retained and will remain active and accessible, but the running app, database, files, and backups for the Free App are deleted.
+This section outlines the different ways Free Apps can be deleted from the Mendix Platform.
+
+##### Manually Deleting Free Apps {#free-apps-manual-deletion}
+
+As a [Technical Contact](/developerportal/general/app-roles/#technical-contact) you can manually delete a Free App after publishing it from Studio Pro by following these steps:
+
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
+2. Click **More Options** ({{< icon name="three-dots-menu-horizontal" >}}) on the **Sandbox** environment.
+3. Click **Delete**.
+
+Deleting a Free App deletes the running app, its database, files, and backups. However, the project on the Mendix Platform and its repository on the [Team Server](/developerportal/repository/team-server/) remain active and accessible.
+
+##### Automatic Archiving of Free Apps {#free-apps-archival}
+
+If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps that are going to be archived, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is informed two weeks beforehand. 
+
+Upon archiving, the project on the Mendix Platform and repository on the [Team Server](/developerportal/repository/team-server/) are retained and will remain active and accessible, but the running app, database, files, and backups for the Free App are deleted.
 
 There are two ways to prevent your Free App from being archived:
 
 * Visit the Free App
 * Deploy a new version of your app to your Free App environment
 
-#### Deletion of Unused Projects {#projects-deletion}
+##### Automatic Deletion of Unused Projects {#projects-deletion}
 
 If a project has never seen any activity since it was created, it is kept on the Team Server for a maximum of one year. After this, the project on the Mendix Platform, its repository on the Team Server, and any Mendix Cloud resources associated with the project will be permanently deleted.
 
@@ -80,10 +96,10 @@ Once a project is marked for deletion, the system applies a grace period of 14 c
 You can prevent this clean up by performing one of the following actions:
 
 * Make changes and commit them to the Team Server
-* [Pin your app](/developerportal/#app-tiles)
+* [Pin your app](/developerportal/#project-tiles)
 * [Invite someone](/developerportal/general/team/#inviting) to collaborate with you on your app
 
-Pinning a project that has been marked for deletion unmarks it immediately. Changes to the other criteria do not effect the mark-for-deletion immediately, but are verified before the actual deletion.
+Pinning a project that has been marked for deletion unmarks it immediately. Changes to the other criteria do not affect the mark-for-deletion immediately, but are verified before the actual deletion.
 
 ### Licensed App
 
@@ -121,7 +137,7 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 ### Number of End-Users for Licensed Apps
 
-The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You need to report this for licensing purposes, using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between end-users) or by [populating the user type](/developerportal/deploy/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
+The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You must report this classification for licensing purposes by [implementing User Metering](/developerportal/deploy/implementing-user-metering/) for each end user of your app. The [`USAGE_METRICS_EMAIL_FIELDS` custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) is deprecated and should no longer be used for user classification.
 
 ### Supported Mendix Versions {#mendix-cloud-supported-versions}
 
@@ -140,7 +156,6 @@ Mendix licenses are sold as part of plans. Plans consist of the following items:
 The following plans are available:
 
 * Free
-* Basic
 * Standard
 * Premium
 * Premium Plus
@@ -157,15 +172,15 @@ The technical details for the cloud resource packs are listed below.
 
 | Pack                                                                   | App RAM | App vCPU | DB RAM  | DB vCPU | DB Storage | File Storage |
 | ---------------------------------------------------------------------- | ------- | -------- | ------- | ------- | ---------- | ------------ |
-| XS21                                                                   | 1 GiB   | 0.25     | 1 GiB   | 2       | 5 GiB      | 10 GiB       |
-| S21,<br>S21 Premium                                                    | 2 GiB   | 0.5      | 2 GiB   | 2       | 10 GiB     | 20 GiB       |
-| M21,<br>M21 Premium                                                    | 4 GiB   | 1        | 4 GiB   | 2       | 20 GiB     | 40 GiB       |
-| L21,<br>L21 Premium                                                    | 8 GiB   | 2        | 8 GiB   | 2       | 40 GiB     | 80 GiB       |
-| XL21,<br>XL21 Premium,<br>XL21 Premium Plus                            | 16 GiB  | 4        | 16 GiB  | 4       | 80 GiB     | 160 GiB      |
-| XXL21,<br>XXL21 Premium,<br>XXL21 Premium Plus                         | 32 GiB  | 8        | 32 GiB  | 4       | 160 GiB    | 320 GiB      |
-| XXXL21,<br>XXXL21 Premium,<br>XXXL21 Premium Plus                      | 64 GiB  | 16       | 64 GiB  | 8       | 320 GiB    | 640 GiB      |
-| XXXXL21,<br>XXXXL21 Premium,<br>XXXXL21 Premium Plus                   | 128 GiB | 32       | 128 GiB | 16      | 640 GiB    | 1280 GiB     |
-| XXXXL21-5XLDB,<br>XXXXL21-5XLDB Premium,<br>XXXXL21-5XLDB Premium Plus | 128 GiB | 32       | 256 GiB | 32      | 1280 GiB   | 1280 GiB     |
+| XS21 Standard                                                                   | 1 GiB   | 0.25     | 1 GiB   | 2       | 5 GiB      | 10 GiB       |
+| S21 Standard,<br>S21 Premium                                                    | 2 GiB   | 0.5      | 2 GiB   | 2       | 10 GiB     | 20 GiB       |
+| M21 Standard,<br>M21 Premium                                                    | 4 GiB   | 1        | 4 GiB   | 2       | 20 GiB     | 40 GiB       |
+| L21 Standard,<br>L21 Premium                                                    | 8 GiB   | 2        | 8 GiB   | 2       | 40 GiB     | 80 GiB       |
+| XL21 Standard,<br>XL21 Premium,<br>XL21 Premium Plus                            | 16 GiB  | 4        | 16 GiB  | 4       | 80 GiB     | 160 GiB      |
+| XXL21 Standard,<br>XXL21 Premium,<br>XXL21 Premium Plus                         | 32 GiB  | 8        | 32 GiB  | 4       | 160 GiB    | 320 GiB      |
+| XXXL21 Standard,<br>XXXL21 Premium,<br>XXXL21 Premium Plus                      | 64 GiB  | 16       | 64 GiB  | 8       | 320 GiB    | 640 GiB      |
+| XXXXL21 Standard,<br>XXXXL21 Premium,<br>XXXXL21 Premium Plus                   | 128 GiB | 32       | 128 GiB | 16      | 640 GiB    | 1280 GiB     |
+| XXXXL21-5XLDB Standard,<br>XXXXL21-5XLDB Premium,<br>XXXXL21-5XLDB Premium Plus | 128 GiB | 32       | 256 GiB | 32      | 1280 GiB   | 1280 GiB     |
 
 {{% alert color="info" %}}Premium plans provide multi-AZ fallback, and Premium Plus plans provide multi-region fallback. For more details, see [Additional Resources](#additional-resources), below.{{% /alert %}}
 
@@ -205,7 +220,15 @@ With a Premium plan, your app can be [horizontally scaled](/developerportal/depl
 
 Fallback ensures that the data in your database is automatically copied to a database in a second AZ. This ensures that all your data is still available to your app if there is an issue with the primary availability zone and app instances have to be started in the second AZ. 
 
-The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds per query compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
+#### Database Latency
+
+For Standard plan apps, the app and database are deployed in the same AZ. Latency is typically less than 1ms, but can vary depending on server placement within the data center.
+
+For Premium and Premium Plus plan apps, the high availability configuration spreads app instances across multiple AZs, so an app instance may or may not be in the same AZ as the database. When they are in the same AZ, latency is similar to the Standard plan. When they are in different AZs, latency is typically in the range of 1–3ms.
+
+These are typical observed values. Mendix Cloud does not guarantee latency between app and database. AWS does not publish latency SLAs for EC2 network traffic, and physical server placement within a data center can vary.
+
+Applications with a hard dependency on low database latency need to be architected with connection pooling, local caching, and bulk-fetching rather than loop-based retrieval. For guidance on efficient queries, refer to [Object Query Language (OQL)](/refguide/oql/).
 
 #### Application Data Replication
 
@@ -217,7 +240,7 @@ You can also purchase a Premium Plus plan, which provides all the features of th
 
 With Regional Fallback, a copy of your database and FileDocuments is maintained in a completely separate region. For example, if your app normally runs in us-east-1, a copy of your data is made in us-west-2. If all the AZs in the primary region become unavailable, you can choose to run your app temporarily in the secondary region with the data that has been copied to that region. Once the primary region is back online, you can revert your app to run in the primary region.
 
-Because this is designed for a catastrophic regional failure, there are some limitations to your normal operations. For example, you cannot deploy a new version of the app while it is running in the secondary region. The decision to switch to the secondary region is completely under your control.
+Because this is designed for a catastrophic regional failure, there are some limitations to your normal operations. For example, you cannot deploy a new version of the app while it is running in the secondary region. 
 
 #### On-Premises and Mendix on Kubernetes
 

@@ -12,8 +12,8 @@ aliases:
 This feature is in beta. For more information, see [Release Status](/releasenotes/release-status/).
 {{% /alert %}}
 
-{{% alert color="info" %}}
-For information on new releases of the Extensibility API, see [Extensibility: C# API Release Notes](/releasenotes/studio-pro/csharp-extensibility-api/).
+{{% alert color="warning" %}}
+C# Extensibility is no longer being actively developed and will receive only critical fixes going forward. For new, modern extensions, use the TypeScript [Web Extensibility APIs](/apidocs-mxsdk/apidocs/web-extensibility-api-11/) instead.
 {{% /alert %}}
 
 ## Introduction
@@ -28,7 +28,7 @@ To use the C# API, you must have:
 
 * A basic understanding of the Mendix platform
 * Some understanding of the Mendix Model
-* Come C# development experience
+* Some C# development experience
 
  Extensions are developed using [C#](https://docs.microsoft.com/en-us/dotnet/) and compiled into a `.dll` assembly file.
 

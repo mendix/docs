@@ -1,13 +1,18 @@
 ---
 title: "Any Chart Cheat Sheet"
+deprecated: true
 url: /refguide/charts-any-cheat-sheet/
 description: "Shows, with examples, how the most common types of chart can be configured using the Any Chart Widget"
 weight: 50
 ---
 
+{{% alert color="warning" %}}
+The Any Chart widget is not compatible with the [Mendix React Client](/refguide/mendix-client/react/). We have published a version of Any Chart that supports the React client called Custom Chart. Update your [Charts](/appstore/widgets/charts/) widget (to version 6.0 or above) to use the Custom Chart feature.
+{{% /alert %}}
+
 ## Introduction
 
-This *cheat sheet* lists the most common chart types, together with a visual sample and the json required to create them. More chart types can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
+This cheat sheet lists the most common chart types, together with a visual sample and the .JSON required to create them. More chart types can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
 
 ## Basic Charts
 

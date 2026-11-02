@@ -36,7 +36,7 @@ If you are an existing customer, you should deploy to your licensed cloud node.
 
 ## Deploying a Licensed App {#deploy-licensed-app}
 
- Deploying a licensed app is usually a two-step process:
+Deploying a licensed app is usually a two-step process:
 
 * First, create a deployment package
 * Second, deploy it to a node environment where you can run your app
@@ -74,7 +74,7 @@ To create a deployment package via Studio Pro, follow these steps:
 
 You can also create a deployment package through the Mendix Portal, using a model committed to the Team Server. To do this, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 2. On the [Deployment Packages](/developerportal/deploy/environments/#deployment-packages-tab) tab, click **Create a Package**. This launches the **Create Package** wizard.
 3. On the **Select Branch** tab, select the branch on which to base the build.
 4. On the **Select Revision** tab, select the branch revision on which to base the package.
@@ -85,7 +85,7 @@ You can also create a deployment package through the Mendix Portal, using a mode
 
 The previous steps explained how to create a deployment package on Mendix Cloud, but the app based on the deployment package is not running yet. To deploy a deployment package to a node environment where you can run the app, follow these steps:
 
-1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. From [Projects](https://projects.home.mendix.com), go to the **Environments** page of your app.
 2. On the [Deployment Packages](/developerportal/deploy/environments/#deployment-packages-tab) tab, choose your preferred deployment package.
 3. Click **Deploy** ({{% icon name="deploy" %}}) to launch the deploy wizard.
 4. On the **Select Environment** tab of the wizard, choose the environment to which you want to deploy the package.
@@ -135,4 +135,4 @@ To resolve this issue, try one of the following solutions:
 This option is not available for Free or Sandbox apps.
 {{% /alert %}}
 * **Update your Mendix application** – Update your Mendix application to use Studio Pro version 9.17.x or higher.
-* **When using the Build API** – If your application uses Git for version control, specify a full commit hash for the `Revision` value in the [Build API](//apidocs-mxsdk/apidocs/backups-api/).
+* **When using the Build API** – If your application uses Git for version control, specify a full commit hash for the `Revision` value in the [Build API](/apidocs-mxsdk/apidocs/build-api/#payload).

@@ -57,57 +57,57 @@ Combine the languages in the two entities into a single view. To do this, join t
 3. Filter the translation that corresponds to the user’s current language by creating a new view entity. Name this new entity *TranslatedProductVE*.
 4. Add the query below to your entity:
 
+      ```sql
+      SELECT
+          pt.ProductId as ProductId,
+          pt.ProductName as ProductName,
+          pt.QuantityPerUnit as QuantityPerUnit,
+          pt.Discontinued as Discontinued,
+          pt.LanguageCode as LanguageCode,
+          pt.Description as Description
+      FROM Shop.AllProductTranslationVE pt
+          LEFT JOIN System.User as u on (u.ID = '[%CurrentUser%]')
+          LEFT JOIN u/System.User_Language/System.Language as l
+      WHERE (l.Code = pt.LanguageCode)
+      ```
+
+      {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/multilingual-apps/translated-product-ve.png" width="200" >}}
+
+    Alternatively, you can also combine the view entities into one with a nested query:
+
     ```sql
     SELECT
-        pt.ProductId as ProductId,
-        pt.ProductName as ProductName,
-        pt.QuantityPerUnit as QuantityPerUnit,
-        pt.Discontinued as Discontinued,
+      cp.ProductId as ProductId,
+      cp.ProductName as ProductName,
+      cp.QuantityPerUnit as QuantityPerUnit,
+      cp.Discontinued as Discontinued,
+      cp.Description as Description,
+      cp.LanguageCode as LanguageCode
+    FROM
+    (
+      SELECT
+        p.ProductId as ProductId,
+        p.ProductName as ProductName,
+        p.QuantityPerUnit as QuantityPerUnit,
+        p.Discontinued as Discontinued,
         pt.LanguageCode as LanguageCode,
-        pt.Description as Description
-    FROM Shop.AllProductTranslationVE pt
-        LEFT JOIN System.User as u on (u.ID = '[%CurrentUser%]')
-        LEFT JOIN u/System.User_Language/System.Language as l
-    WHERE (l.Code = pt.LanguageCode)
+        coalesce(pt.Description, p.Description) as Description
+      FROM Shop.Product p
+        JOIN p/Shop.ProductTranslation_Product/Shop.ProductTranslation pt
+      UNION
+      SELECT
+        p.ProductId as ProductId,
+        p.ProductName as ProductName,
+        p.QuantityPerUnit as QuantityPerUnit,
+        p.Discontinued as Discontinued,
+        cast('en_US' as STRING) as LanguageCode,
+        p.Description as Description
+      FROM Shop.Product p
+    ) as cp
+      LEFT JOIN System.User as u on (u.ID = '[%CurrentUser%]')
+      LEFT JOIN u/System.User_Language/System.Language as l
+    WHERE (l.Code = cp.LanguageCode)
     ```
-
-    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/multilingual-apps/translated-product-ve.png" width="200" >}}
-
-Alternatively, you can also combine the view entities into one with a nested query:
-
-```sql
-SELECT
-  cp.ProductId as ProductId,
-  cp.ProductName as ProductName,
-  cp.QuantityPerUnit as QuantityPerUnit,
-  cp.Discontinued as Discontinued,
-  cp.Description as Description,
-  cp.LanguageCode as LanguageCode
-FROM
-(
-  SELECT
-    p.ProductId as ProductId,
-    p.ProductName as ProductName,
-    p.QuantityPerUnit as QuantityPerUnit,
-    p.Discontinued as Discontinued,
-    pt.LanguageCode as LanguageCode,
-    coalesce(pt.Description, p.Description) as Description
-  FROM Shop.Product p
-    JOIN p/Shop.ProductTranslation_Product/Shop.ProductTranslation pt
-  UNION
-  SELECT
-    p.ProductId as ProductId,
-    p.ProductName as ProductName,
-    p.QuantityPerUnit as QuantityPerUnit,
-    p.Discontinued as Discontinued,
-    cast('en_US' as STRING) as LanguageCode,
-    p.Description as Description
-  FROM Shop.Product p
-) as cp
-  LEFT JOIN System.User as u on (u.ID = '[%CurrentUser%]')
-  LEFT JOIN u/System.User_Language/System.Language as l
-WHERE (l.Code = cp.LanguageCode)
-```
 
 5. Generate an overview page for the view entity by right-clicking **TranslatedProductVE** > **Generate overview pages**. 
 6. Open the new page and remove the columns you do not need from the data grid.

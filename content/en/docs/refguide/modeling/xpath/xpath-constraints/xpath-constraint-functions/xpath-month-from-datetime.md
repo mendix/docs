@@ -1,5 +1,6 @@
 ---
 title: "XPath month-from-dateTime"
+linktitle: "month-from-dateTime"
 url: /refguide/xpath-month-from-datetime/
 weight: 7
 ---

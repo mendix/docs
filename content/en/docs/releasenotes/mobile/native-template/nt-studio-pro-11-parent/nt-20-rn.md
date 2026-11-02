@@ -9,11 +9,6 @@ description: "Release notes for Native Template 20."
 
 **Release date: Oct 28, 2026**
 
-### Improvements
-
-- We excluded `react-native-vision-camera-barcode-scanner` from iOS. The Barcode Scanner widget only uses it on Android; on iOS it uses Apple's built-in scanner from `react-native-vision-camera`.
-- This version of Native Template is required for the Barcode Scanner widget version 4.6.0 or above (Native Mobile Resources version 12.6.0 or above).
-
 ### Fixes
 
 - We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.

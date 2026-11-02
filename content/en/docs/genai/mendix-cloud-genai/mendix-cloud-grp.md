@@ -78,7 +78,7 @@ For example, if you allocate 50 Cloud Tokens per month, your resource receives 5
 | Model Family | GenAI Units per 1M Input Tokens | GenAI Units per 1M Output Tokens |
 | ------------ | ------------------------------- | -------------------------------- |
 | Claude Haiku 4.5 | 35.81 | 179.07 |
-| Claude Haiku 5.5 | 3.58 | 17.91 |
+| Claude Haiku 5.5 | 17.91 | 89.53 |
 | Claude Sonnet 4.5 | 107.44 | 537.21 |
 | Claude Sonnet 4.6 | 107.44 | 537.21 |
 | Claude Sonnet 5 | 71.63 | 358.14 |

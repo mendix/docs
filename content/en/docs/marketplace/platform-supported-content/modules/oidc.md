@@ -993,7 +993,7 @@ The OIDC SSO module version 2.3.0 and above provides a default access token pars
 
 To parse the OIDC Provider access tokens you need to do the following when performing OIDC Client Configuration:
 
-1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
+1. Select `OIDC.Default_MendixOIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 

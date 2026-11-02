@@ -1,13 +1,12 @@
 {
-  "_comment": "Copy this file to .claude/settings.local.json and edit the values to match your machine. That file is gitignored and overrides .claude/settings.json. The settings here are for using Bedrock; your configuration may be different. If you use Bedrock, CLAUDE_CODE_USE_BEDROCK, AWS_PROFILE, and AWS_REGION are required; otherwise, you can delete them. The default model keys are optional. awsAuthRefresh is also optional and runs when your AWS SSO credentials expire; it opens your browser to sign in again. The awsAuthRefresh profile name must match AWS_PROFILE.",
+  "_comment": "Copy this file to .claude/settings.local.json and edit the values to match your machine. That file is gitignored and overrides .claude/settings.json. The settings here are for using Bedrock; your configuration may be different. If you use Bedrock, CLAUDE_CODE_USE_BEDROCK, AWS_PROFILE, and AWS_REGION are required; otherwise, you can delete them. The default model keys are optional.",
   "env": {
-    "AWS_PROFILE": "my-sandbox-name",
+    "AWS_PROFILE": "my-profile",
     "AWS_REGION": "eu-central-1",
     "CLAUDE_CODE_USE_BEDROCK": "1",
     "ANTHROPIC_MODEL": "eu.anthropic.claude-sonnet-5-5",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "eu.anthropic.claude-haiku-5-5",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "eu.anthropic.claude-opus-5-5",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "eu.anthropic.claude-sonnet-5-5"
-  },
-  "awsAuthRefresh": "aws sso login --profile my-sandbox-name"
+  }
 }

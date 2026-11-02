@@ -12,8 +12,8 @@ When instructions conflict, follow this order of precedence:
 2. Task-specific skills in `.claude/skills/*/SKILL.md` when explicitly referenced or invoked.
 3. This file (`CLAUDE.md`).
 4. Mendix Style Guide files in `content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/` for detailed grammar, terminology, and formatting rules.
-6. Existing conventions in nearby pages within the same folder.
-7. Microsoft Writing Style Guide.
+5. Existing conventions in nearby pages within the same folder.
+6. Microsoft Writing Style Guide.
 
 ### Critical Constraints
 
@@ -113,7 +113,7 @@ Hugo shortcodes start with `{{`. Some common ones:
   {{< figure src="/attachments/quickstarts/part1/3.login.png" alt="Sign in to Studio Pro" max-width="80%" >}}
   ```
 
-* `alert` – Callouts of type `info` and `warning`.
+* `alert` – Callouts of `color` (required) `info` or `warning`.
   ```md
   {{% alert color="warning" %}}
   This action cannot be undone.

@@ -12,8 +12,8 @@ description: "Release notes for Native Template 20."
 ### Fixes
 
 - We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.
-- We removed some unused Android Permissions coming in from Manifest mergers.
-- We fixed an issue on Android where the **Clear data** checkbox on the Developer App starting page was hidden behind the bottom navigation bar due to edge-to-edge display.
+- We removed some unused Android Permissions coming in from **Manifest** mergers.
+- We fixed an issue on Android where the **Clear data** checkbox on the **Developer App** starting page was hidden behind the bottom navigation bar due to edge-to-edge display.
 
 ## 20.0.1
 

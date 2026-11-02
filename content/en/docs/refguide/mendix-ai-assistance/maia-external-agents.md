@@ -18,7 +18,7 @@ The table below lists the integration options available. Each option connects Ma
 | --- | --- | --- | --- |
 | [Maia MCP Client](/refguide/maia-mcp/) | Maia uses tools from external MCP servers. | When a conversation requires information or actions from other systems, such as design assets or a source code platform. | Studio Pro 11.8 |
 | [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) | External AI agents use Maia capabilities in Studio Pro. | When working with an AI agent or AI coding assistant to create and modify Mendix documents. This is also known as bring your own agent (BYO Agent). | Studio Pro 11.10 |
-| [Maia Spec as MCP Server](/developerportal/maia-plan-mcp/) | External AI agents read Maia Spec content. | When an external AI agent needs access to the scope, epics, and stories of a Maia Spec project. | Mendix Portal |
+| [Maia Spec as MCP Server](/developerportal/maia-spec-mcp/) | External AI agents read Maia Spec content. | When an external AI agent needs access to the scope, epics, and stories of a Maia Spec project. | Mendix Portal |
 | [Custom AI provider](/refguide/maia-make/#custom-provider) | Maia uses your LLM provider. | When an organization requires a specific LLM provider or uninterrupted access to Maia without Maia Units. This is also known as bring your own LLM (BYO LLM). | Studio Pro 11.12 (beta) |
 | [Agent Instructions](/refguide/maia-agent-instructions/) and [Agent Skills](/refguide/maia-agent-skills/) | Shared context for Maia and other agents. | When all agents need to follow the same conventions and use the same domain knowledge. Both follow industry standards, making them compatible with any agentic tool that supports these standards. | Studio Pro 11.11 (Agent SKills), Studio Pro 11.12 (Agent Instructions) |
 
@@ -66,7 +66,7 @@ The following example shows how you can combine the options.
 A team plans an app in Mendix Portal and uses an AI coding assistant to implement the stories in Studio Pro.
 
 1. Create a plan in [Maia Spec](/developerportal/maia-spec/). Review the scope, epics, and stories.
-2. In your AI coding assistant, configure the [Maia Spec MCP Server](/developerportal/maia-plan-mcp/#configure) with a personal access token that has the `mx:plan:v1:read` scope.
+2. In your AI coding assistant, configure the [Maia Spec MCP Server](/developerportal/maia-spec-mcp/#configure) with a personal access token that has the `mx:plan:v1:read` scope.
 3. Open the app in Studio Pro and [enable the Studio Pro MCP Server](/refguide/studio-pro-mcp-server/#enabling-the-mcp-server). Connect your AI coding assistant to it.
 4. Add an [AGENTS.md](/refguide/maia-agent-instructions/) file with your team conventions, such as naming rules and the modules that the agent must not change. Agent instructions guide the agent, but they do not enforce restrictions, so check the result in step 6.
 5. In your AI coding assistant, ask the agent to get one story from the plan and implement it in a specific module.
@@ -90,6 +90,6 @@ Keep the following points in mind when you connect external AI tools:
 
 * [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)
 * [Maia MCP Client](/refguide/maia-mcp/)
-* [Maia Spec as MCP Server](/developerportal/maia-plan-mcp/)
+* [Maia Spec as MCP Server](/developerportal/maia-spec-mcp/)
 * [Agentic and Model-Driven Development](/refguide/agentic-development/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)

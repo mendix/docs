@@ -1,8 +1,10 @@
 ---
 title: "Maia Spec as MCP Server"
-url: /developerportal/maia-plan-mcp/
+url: /developerportal/maia-spec-mcp/
 description: "Describes how to configure and use Maia Spec as an MCP server to retrieve project scope and solution content."
 weight: 2
+aliases:
+    - /developerportal/maia-plan-mcp/
 ---
 
 ## Introduction

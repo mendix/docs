@@ -1,9 +1,11 @@
 ---
 title: "Troubleshooting Maia Spec as MCP Server"
 linktitle: "Troubleshooting"
-url: /developerportal/maia-plan-mcp-troubleshooting/
+url: /developerportal/maia-spec-mcp-troubleshooting/
 description: "Describes how to fix potential Maia Spec as an MCP server issues."
 weight: 10
+aliases:
+    - /developerportal/maia-plan-mcp-troubleshooting/
 ---
 
 ## Introduction
@@ -18,7 +20,7 @@ Your personal access tokem (PAT) is invalid or expired. Regenerate the PAT in [U
 
 Confirm that `mcp.json` is in the correct location, then open **Command Palette** and run **MCP: Reset Cached Tools**.
 
-Refer to [Configuring Visual Studio Code Copilot](/developerportal/maia-plan-mcp/#configuring-visual-studio-code-copilot) for details.
+Refer to [Configuring Visual Studio Code Copilot](/developerportal/maia-spec-mcp/#configuring-visual-studio-code-copilot) for details.
 
 ## Server Does Not Start
 

@@ -146,29 +146,10 @@ If asked to create new content:
 
 For all pages, required sections are front matter and the introduction; other sections vary by content type.
 
-## Mendix AI Engineering Toolkit Safety Rules (NON-NEGOTIABLE)
+## Safety Rules
 
-- NEVER run commands that delete, destroy, or modify production resources
-- NEVER use AWS credentials for production accounts — only sandbox accounts
-- NEVER deploy code, infrastructure, or configuration changes — a human must do this
-- NEVER run `terraform apply`, `terraform destroy`, `kubectl apply`, `kubectl delete` against production
-- NEVER read or output secrets, API keys, tokens, or credentials from files or environment variables
-- NEVER run commands with `sudo`
-- NEVER run `rm -rf` on any path outside the current project directory
-- NEVER disable, bypass, or modify the guardrail hooks in `.claude/hooks/`
-- NEVER push to `main` or `master` branches directly
+Non-negotiable safety and AWS rules are in `.claude/rules/security.md` and `.claude/rules/aws.md`, which load automatically. Follow them.
 
-### When In Doubt
-
-If you are unsure whether a command is safe to run, **do not run it**. Instead, explain what you would do and let the human decide.
-
-### AWS Context
-
-- We use AWS Bedrock for AI model invocation
-- Sandbox and nonprod accounts are accessed via Mendix SSO
-- Production accounts exist on the same machine — DO NOT use them
-- If a command references an AWS profile or region you don't recognize, STOP and ask
-
-### Claude Code Settings Management
+## Claude Code Settings Management
 
 For personal configuration changes (AWS_PROFILE, etc.), always suggest `.claude/settings.local.json` instead of modifying `.claude/settings.json`. The local file is gitignored and overrides shared settings.

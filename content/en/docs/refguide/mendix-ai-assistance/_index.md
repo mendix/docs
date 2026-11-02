@@ -124,6 +124,7 @@ In Studio Pro 11.8 and above, [Maia Make](/refguide/maia-make/) replaces Maia Ch
 * [UI Recommender](/refguide/ui-recommender/) – UI Recommender helps you add new widgets to a page in Mendix Studio Pro without losing the context of what you are currently working on. 
 * [Workflow Recommender](/refguide/workflow-recommender/) – Workflow Recommender helps you model and configure workflows in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your workflow based on context-related information.
 * [Validation Assist](/refguide/validation-assist/) – Validation Assist helps you build validation microflows in a more automated way using pre-built expressions. 
+
 ### Localization
 
 * [Translation Generator](/refguide/translation-generator/) – The Translation Generator helps with [batch translate](/refguide/translation-generator/#batch-translate) and [translating system texts](/refguide/translation-generator/#translate-system-text) in the web-based system texts editor.

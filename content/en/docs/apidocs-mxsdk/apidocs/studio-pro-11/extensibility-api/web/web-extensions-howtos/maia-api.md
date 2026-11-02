@@ -59,6 +59,7 @@ const sendToMaiaHandler = async (textarea: HTMLTextAreaElement | null) => {
     }
 };
 ```
+
 The value `false` allows the user to review the text and send it themselves in the Maia chat window.
 
 ## Maia Chat API

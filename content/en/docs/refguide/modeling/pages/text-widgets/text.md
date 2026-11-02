@@ -49,7 +49,7 @@ Styling:
 
 ##### Template {#caption-template}
 
-The **Caption** can be made dynamic by placing placeholders in the **Template**. Placeholders must follow the format `{i}`, where _i_ is the **Index** of a specific parameter from the list of [parameters](#caption-parameters). Parameters can be referenced multiple times, and can be referenced out of order.
+The **Caption** can be made dynamic by placing placeholders in the **Template**. Placeholders must follow the format `{i}`, where *i* is the **Index** of a specific parameter from the list of [parameters](#caption-parameters). Parameters can be referenced multiple times, and can be referenced out of order.
 
 ##### Parameters {#caption-parameters}
 
@@ -94,7 +94,6 @@ In addition to adding new parameters, you can perform the following actions on p
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions" width="450" >}}
-
 
 ##### Fallback Text {#caption-fallback}
 

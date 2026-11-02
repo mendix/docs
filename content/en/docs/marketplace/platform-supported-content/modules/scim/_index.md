@@ -75,7 +75,7 @@ The SCIM module has the following limitations:
 * If you want to do **Provision on demand** from Entra ID to test the SCIM integration of your app you cannot trigger a partial sync based on a group. This will trigger Entra ID to invoke a `/groups` endpoint, which is not yet supported.
 * The module does not support the development of a SCIM client application.
 * Multiple clients can be configured only at runtime via the admin screen.
-* The SCIM module does not support full management of workflow groups using SCIM. However, starting from version 4.1.0, you can use attributes (`roles` or any other attributes) on the SCIM user to associate users with [workflow groups]{#workflow-group-assignment}. In Mendix 11.16 and above, you can create [workflow groups](/refguide/workflow-groups/) in your app using custom provisioning logic. This mechanism creates workflow groups automatically when a provisioned user needs one. The SCIM module currently does not support updating or deleting existing groups.
+* The SCIM module does not support full management of workflow groups using SCIM. However, starting from version 4.1.0, you can use attributes (`roles` or any other attributes) on the SCIM user to associate users with [workflow groups](#workflow-group-assignment). In Mendix 11.16 and above, when **Group definition** is set to **Runtime**, you can create [workflow groups](/refguide/workflow-groups/) in your app using custom provisioning logic. This mechanism creates workflow groups automatically when a provisioned user needs one. The SCIM module currently does not support updating or deleting existing groups.
 
 ### SCIM Protocol Adherence
 

@@ -59,6 +59,47 @@ Verify the configuration by using the following command:
 kubectl auth can-i create secretproviderclasses --as=system:serviceaccount:kube-system:mxplatform-cicd -n <namespace>
 ```
 
+#### Example Manifest
+
+The following manifest is an example showing how to create roles and role bindings for each namespace where you wish to deploy apps using the automatic Key Vault feature.
+
+{{% alert color="warning" %}}
+The examples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
+```text
+Key Vault permissions for app namespace ns-apps-1 (Role + RoleBinding pointing to mxplatform-cicd SA)
+NS=ns-apps-1
+kubectl apply -f - <<EOF
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: pmp-secret-management
+  namespace: ${NS}
+rules:
+- apiGroups: ["secrets-store.csi.x-k8s.io"]
+  resources: ["secretproviderclasses"]
+  verbs: ["get","create","patch","delete"]
+- apiGroups: [""]
+  resources: ["serviceaccounts"]
+  verbs: ["get","create","patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: pmp-secret-management-binding
+  namespace: ${NS}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: pmp-secret-management
+subjects:
+- kind: ServiceAccount
+  name: mxplatform-cicd
+  namespace: kube-system
+EOF
+```
+
 ## Known Limitations
 
 The following limitations apply:

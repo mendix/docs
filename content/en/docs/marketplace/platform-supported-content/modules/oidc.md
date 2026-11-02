@@ -835,7 +835,7 @@ By default, the well-known endpoint (**Automatic configuration URL**) does not i
 You can create your own APIs within your Mendix app and secure the end point over OIDC using a custom authentication microflow. To do this:
 
 1. Create a REST API endpoint which needs to be secured.
-2. Use **Custom** as the [authentication method](/refguide/published-rest-service/#authentication) to secure the endpoint with an access token.
+2. Use **Custom** as the authentication method to secure the endpoint with an access token.
 3. Select the `OIDC.APIAuthentication` microflow from the **OIDC.APIAuthentication** folder of the module which has `HTTPRequest` as the input and returns `System.User` as the output.
 
 ### Using `APIAuthentication` for Client Credentials Grant

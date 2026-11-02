@@ -22,6 +22,10 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * Technical Contacts can now reclaim database disk space used by table bloat without contacting Support. For more information, refer to [Repacking Your Database in Mendix Cloud](/developerportal/deploy/repack-database/).
 
+#### Fixes
+
+* Fixed an issue where activity logs were not generated when a custom domain was created for an environment (Ticket #290051).
+
 ## October 2026
 
 ### October 18, 2026

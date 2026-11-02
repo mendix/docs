@@ -108,6 +108,7 @@ In Studio Pro 11.8 and above, [Maia Make](/refguide/maia-make/) replaces Maia Ch
 * **[Chat with Maia](/refguide/maia-chat/)** – Ask questions about app development in Mendix using Maia's chat feature, including how to apply concepts, best practices, and development patterns. 
 * [Maia Learn](/refguide/maia-learn/) – Learn Mendix core concepts quickly to get started with Studio Pro. 
 * [Maia Explain](/refguide/maia-explain/) – Maia Explain helps you understand existing documents, such as microflows and pages. It explains the general purpose of the document and highlights specific technical details. 
+* [Maia Plan Mode](/refguide/maia-plan-mode/) – Maia Plan Mode allows you to create detailed implementation plans for whole apps or large application features. 
 
 ### Context and Customization
 

@@ -82,6 +82,10 @@ If the Technical Contact cancels a request, its status changes to **Canceled** a
 
 ## Scheduling a Repack {#scheduling-a-repack}
 
+{{% alert color="warning" %}}
+Before scheduling a database repack request, check the [Mendix Status Page](https://status.mendix.com) for planned platform maintenance or Cloud Portal releases. Scheduling a database repack during maintenance windows may cause the request to fail.
+{{% /alert %}}
+
 If the status of your request is **Pending Schedule**, follow these steps:
 
 1. On the **Change Requests** tab, click **Details** on the request.

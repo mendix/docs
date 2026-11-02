@@ -89,7 +89,7 @@ To solve this, split the release of the feature into two steps. First, use an OT
 
 You can hide a feature with a nanoflow decision or a conditional visibility setting. A good way to control this is with a constant that is exposed to the client. You can turn the feature on or off by setting the constant to a different value per environment, or by changing its default value in a later deployment.
 
-Use the following steps to release a feature that needs a full app store release, without breaking the app for users who have not updated yet.
+Use the following steps to release a feature that needs a full app store release, without breaking the app for users who have not updated yet:
 
 1. Build a new version of your app that includes the feature. Use a nanoflow decision or conditional visibility, controlled by a constant, to keep the feature disabled.
 1. Deploy this version with an OTA update.
@@ -101,12 +101,11 @@ Because only the constant changes, the old and the new version of the app behave
 
 Keep Mendix version upgrades separate from new feature work. Combining them makes it harder to tell whether a problem comes from the version upgrade or from a new feature. It can also break the app for existing users if the new feature changes the model in a way that is not compatible with the old client.
 
-When you upgrade the Mendix version, keep changes to your model as small as possible. Do not change data, and do not change the parameters or return type of microflows that your native app depends on. For more information on keeping your model compatible, see [Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/).
+When you upgrade the Mendix version, keep changes to your model as small as possible. Do not change data, and do not change the parameters or return type of microflows that your native app depends on. For more information on keeping your model compatible, see [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/).
 
 A Mendix version upgrade is backwards compatible as long as the model stays compatible with the previous native client, and as long as you do not change the Native Template, native modules, or other elements that require a full release. When these conditions are met, the old client and the new client can both connect to the upgraded runtime and continue to work correctly.
 
 Because both clients continue to work, you can release the new native client through a normal app store release. You cannot use OTA to update the Mendix version itself, because OTA updates do not support version changes. Some users keep the old client and some users get the new client, and both work with the upgraded Mendix runtime until every user has updated.
-
 
 ## Enabling and Building an App with Mendix OTA Updates Enabled {#build-with-ota-support}
 

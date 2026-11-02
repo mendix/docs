@@ -9,7 +9,7 @@ weight: 60
 ---
 
 {{% alert color="info" %}}
-This document is about [Private Mendix Platform](/private-mendix-platform/) API. This API is only available on instances of Private Mendix Platform. For [Mendix on Kubernetes](/developerportal/deploy/private-cloud/) API, see [Mendix on Kubernetes Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/) and [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+This document is about [Private Mendix Platform Download Portal](/private-mendix-platform/download-portal/) API. This API is only available on the Private Mendix Download Portal, available to select customer accounts at [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/).
 {{% /alert %}}
 
 ## Introduction

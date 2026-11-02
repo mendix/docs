@@ -38,6 +38,23 @@ In OData 4, IDs are annotated with vocabulary annotation `Com.Mendix.IsAttribute
 
 In OData 3, IDs are marked with `isAttribute="false"`, using a Mendix-specific XML attribute in the `http://www.mendix.com/Protocols/MendixData` namespace.
 
+### Large Long Values and JavaScript {#large-long-values}
+
+A Mendix Long can hold values up to 2^63 − 1. In JavaScript, the largest safe integer is `Number.MAX_SAFE_INTEGER`, which is 2^53 − 1 (9007199254740991). 
+
+When a client parses a larger integer as a JavaScript number, it can lose precision, so it no longer has the exact Long value. This can affect data in a browser. For example, consider the following OData response:
+
+```json
+{"@odata.context":"...snip...","value":[{"LongValue":12345678901234567}]}
+```
+
+Depending on the browser and how it parses and displays the response, the value of `LongValue` can appear as `12345678901234568`.
+
+This loss of precision is not caused by Mendix. However, you should take it into account when modeling published services. To avoid it, consider the following:
+
+* In the domain model, change the attribute type to String.
+* Do not expose the Mendix [ID](#id-representation). Large values frequently occur in IDs because of the way they are constructed.
+
 ## Associations {#associations}
 
 In the settings of the OData service, you can choose how associations are represented. There are two options, which are described below.

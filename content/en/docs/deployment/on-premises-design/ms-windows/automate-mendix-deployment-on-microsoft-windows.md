@@ -15,8 +15,11 @@ On Windows servers, instead of deploying your application manually, you can auto
 Before starting this how-to, make sure you complete the following prerequisites:
 
 * Manually deploy your Mendix app and ensure that there are no errors during the deployment. For more information, see [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
-* Ensure that your Windows PowerShell version is 5.1. Other versions are currently not supported.
-* To run powershell cmdlets on Mendix Service Console 4.9.0 and above, ensure that your Windows PowerShell version is [7.6.5](https://github.com/PowerShell/PowerShell/releases/download/v7.6.5/PowerShell-7.6.5-win-x64.msi).
+* To run powershell cmdlets on Mendix Service Console 4.9.0 and above, ensure that your PowerShell version is [7.6.5](https://github.com/PowerShell/PowerShell/releases/download/v7.6.5/PowerShell-7.6.5-win-x64.msi).
+
+    {{% alert color="warning" %}} For Mendix Service Console 4.8.3 and below, use Windows PowerShell version 5.1. Currently, other versions are not supported.
+    {{% /alert %}}
+
 * Familiarize yourself with the update process for Mendix apps running on Windows. For more information, see [MS Windows: Update a Mendix App](/developerportal/deploy/updating-a-mendix-application/).
 
 ## Importing Mendix-Specific Cmdlets into Windows PowerShell {#powershell}

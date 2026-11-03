@@ -137,8 +137,8 @@ To use custom user provisioning, do the following:
 1. Create a custom user entity inheriting from `System.User`.
 2. Create a custom provisioning microflow in your app.
 3. Set the `FDSGatewayLoginConnector.UserProvisioning` constant to point to your custom microflow.
-4. Ensure the custom microflow:
-    * has a parameter of type String named *RequestJson*
+4. Ensure the custom microflow (`CUSTOM_UserProvisioning`):
+    * takes a `UserProvisioningRequest` entity as an input parameter
     * returns a `System.User` object
 
 ### Mendix Cloud Portal Runtime Setting

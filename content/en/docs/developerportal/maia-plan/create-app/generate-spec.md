@@ -13,11 +13,8 @@ Maia translates your defined scope into a concrete set of specs, where each spec
 
 1. After you click **Create Specs**, the **Spec** window is displayed, and Maia starts populating it with the proposed specs based on the project scope. The generated specs are listed in the left-hand pane. Each spec is made up of several requirements. For project management purposes, a spec corresponds to an epic, and a requirement corresponds to a story.
 
-2. While the project plan is being generated, you have these options:
-
-    * **Previous** – Click this button to return to the **Define Scope** window. Any changes you have made are saved.
-    * **Save and Exit** – Save all the changes and leave the flow.
-
+2. While the project plan is being generated, you can click **Previous** to return to the **Scope** window. Any changes you have made are automatically saved.
+   
 3. Once the scope is generated, you can see the following information for each spec:
 
     * **Dependencies** – Any dependencies that the current spec might have on other specs.
@@ -41,7 +38,9 @@ Maia translates your defined scope into a concrete set of specs, where each spec
    * **Open in Jira** – Start managing the project in Jira.
    * **Build in Maia Make** – Open the project in Studio Pro's Maia Make.
 
-You can go back to the scope view by clicking **Previous**. However, if you edit the scope, all the specs are regenerated.
+After all the specs are generated, you can go back to the scope view by clicking **Previous**. However, if you edit the scope, all the specs are regenerated.
+
+{{% alert color="warning" %}} Maia Chat is not available for specs.{{% /alert %}}
 
 For details on the next steps, refer to [Starting the Development](/developerportal/maia-spec/start-development/).
 

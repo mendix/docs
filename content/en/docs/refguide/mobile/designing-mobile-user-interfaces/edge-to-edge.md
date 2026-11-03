@@ -44,8 +44,6 @@ You may need to set a height for your bottom bar if you have customized it. See 
 
 ### Common Issues to Avoid
 
-{{% alert color="warning" %}}
-
 #### Do Not Place Buttons Near the Android Navigation Bar
 
 ```
@@ -62,9 +60,7 @@ You may need to set a height for your bottom bar if you have customized it. See 
 
 **Solution**: Add sufficient padding/margin at the bottom of your layouts to account for the navigation bar height.
 
-{{% /alert %}}
-
-## Configuration via `custom-variables.js`
+## Configuration via custom-variables.js
 
 Find `// Navigation Styles` within `custom-variables.js`, where you can adjust the proper design according to your needs. The configuration JavaScript is usually located in `<your-native-template>/src/custom-variables.js`
 

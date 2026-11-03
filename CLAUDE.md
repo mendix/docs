@@ -9,19 +9,17 @@
 When instructions conflict, follow this order of precedence:
 
 1. The user's current request.
-2. Task-specific prompt files in `.github/prompts/*.prompt.md` (for Copilot) or skills in `.claude/skills/*/SKILL.md` (for Claude) when explicitly referenced or invoked.
-3. Overlay instruction files (for example, `.github/release-notes-instructions.md`) when path-scoped.
-4. This file (`CLAUDE.md`).
-5. Mendix Style Guide files in `content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/` for detailed grammar, terminology, and formatting rules.
-6. Existing conventions in nearby pages within the same folder.
-7. Microsoft Writing Style Guide.
+2. Task-specific skills in `.claude/skills/*/SKILL.md` when explicitly referenced or invoked.
+3. This file (`CLAUDE.md`).
+4. Mendix Style Guide files in `content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/` for detailed grammar, terminology, and formatting rules.
+5. Existing conventions in nearby pages within the same folder.
+6. Microsoft Writing Style Guide.
 
 ### Critical Constraints
 
 * Edit existing files in place using the Edit tool. Do not create new files unless explicitly requested.
 * Preserve meaning and intent. Make the smallest set of edits that fully resolves the request.
 * Never add product claims, technical behavior, ticket numbers, or release facts unless explicitly requested and sourced from provided content.
-* Use Read to view files, Edit to modify them, Glob to find files by pattern, and Grep to search file contents.
 
 ### Autonomy Guidelines
 
@@ -50,22 +48,6 @@ Ask for confirmation before making these changes:
 ## Content Structure and Hierarchy
 
 The canonical tree is **`/content/en/docs`**. Top‑level directories correspond to major product areas (e.g. `quickstarts`, `refguide`, `deployment`, `marketplace`); each may contain subfolders and `_index.md` files that define section landing pages.
-
-Typical structure:
-
-```
-content/en/docs/
-├── _index.md
-├── quickstarts/
-│   ├── _index.md
-│   ├── hello-world.md
-│   └── responsive-web-app.md
-├── refguide/
-│   ├── _index.md
-│   ├── modeling/ …
-│   └── runtime/ …
-…
-```
 
 * **Index files (`_index.md`)** define landing pages or categories. They often use `cascade` to pass metadata to children and may set `type`, `layout`, `no_list`, `description_list`, etc.
 * Other `.md` files represent individual articles, how‑tos, reference topics, release notes, etc. File names must be simple, lowercase, and hyphen‑separated.
@@ -98,31 +80,11 @@ When encountering style questions not covered in this file, read the relevant st
 
 Project‑specific preferences are also documented in the templates; consult them for tricky formatting cases.
 
-## Tool Usage Guidelines
+## URL Resolution and Modification
 
-### Parallel Tool Calls
+To resolve a documentation URL (for example, `/community-tools/contribute-to-mendix-docs/`) to its source Markdown file, run `bash .claude/scripts/resolve-doc-url.sh "/url/path/"` instead of spawning an agent.
 
-Call tools in parallel for independent operations (reading multiple files, multiple searches). Use sequential only when later operations depend on earlier results.
-
-### Tool Selection
-
-* **Helper Scripts**
-    * For URL resolution, use `bash .claude/scripts/resolve-doc-url.sh` instead of spawning agents. This resolves documentation URLs (e.g., `/community-tools/contribute-to-mendix-docs/`) to their source Markdown files and ensures Grep uses efficient flags consistently.
-* **Read** – Use to view specific files you know the path to
-* **Edit** – Use to modify existing files with targeted changes
-* **Glob** – Use to find files by pattern (e.g., `*.md`, `**/*config*`)
-* **Grep** – Use to search file contents for specific text or patterns
-* **Write** – Use only for creating new files (prefer Edit for existing files)
-
-### Cross-Reference Verification
-
-When following or verifying documentation links:
-* Use `bash .claude/scripts/resolve-doc-url.sh "/url/path/"` to quickly find the source file for a URL
-
-When modifying URLs or anchor IDs:
-1. Use Grep to search for the old URL/anchor across all documentation files
-2. Identify all references that need updating
-3. Update or fix those references in the same change to prevent broken links
+When modifying URLs or anchor IDs, search for the old value across all documentation files and update every reference in the same change to prevent broken links.
 
 ## Technical Implementation Details
 
@@ -131,7 +93,7 @@ When modifying URLs or anchor IDs:
 All Markdown files begin with YAML metadata.
 
 * `title` – Human‑readable page title. (Required)
-* `url` – Page URL. Start and end with `/`, use only lowercase letters, numbers, and hyphens. Doesn't need to match the file path. (Required)
+* `url` – Page URL. Start and end with `/`, use only lowercase letters, numbers, and hyphens. Doesn't need to match the file path. Must be unique. (Required)
 * `description` – Summary used for metadata, search snippets, and content lists. Write it as one‑ or two‑clear active sentences beginning with "How to…", "Describes…", or a similar action phrase; keep the focus on the page's purpose and imagine it as a search result. (Required)
 * `linktitle` – Short text shown in the left navigation pane; use when `title` is longer than 40 characters. (Optional)
 * `aliases` – Redirect paths for moved or renamed pages. Add old URLs as alias entries. (Optional)
@@ -151,73 +113,43 @@ Hugo shortcodes start with `{{`. Some common ones:
   {{< figure src="/attachments/quickstarts/part1/3.login.png" alt="Sign in to Studio Pro" max-width="80%" >}}
   ```
 
-* `alert` – Callouts of type `info` and `warning`.
+* `alert` – Callouts of `color` (required) `info` or `warning`.
   ```md
   {{% alert color="warning" %}}
   This action cannot be undone.
   {{% /alert %}}
   ```
 
-* `button` – Link buttons with `color`, `href`, `text`, and optional `title`.
 * `icon` – Inline SVG icons stored in `static/mx-icons` (`name` required, optional `color`) for use in UI descriptions.
-* `youtube` / `vidyard` – Embed videos by ID.
-* `swaggerui` / `swaggerui-disable-try-it-out` – Render OpenAPI specs on pages with `type:swagger`.
-* `snippet` – Include external code or page content.
-* `tabpane` / `tab` – Create tabbed code examples.
-* `todo` – Internal draft notes; omitted in production.
 
-For comprehensive shortcode examples and edge cases, read `community-tools/contribute-to-mendix-docs/markdown-shortcodes.md`.
+  ```md
+  Click **Delete** ({{< icon name="trash-can" >}}).
+  ```
+
+Less common shortcodes (`button`, `youtube`, `vidyard`, `swaggerui`, `snippet`, `tabpane`, `tab`, `todo`) are documented in `community-tools/contribute-to-mendix-docs/markdown-shortcodes.md`. Read it before using or editing one.
 
 ## Editorial Workflow
 
-1. **Locate target content** - Use Glob to find files by pattern or Grep to search content. Read the target page(s) and related section index files. When reading multiple related files, make parallel Read calls.
-2. **Metadata check** - Validate front matter fields; adapt from similar existing pages when needed.
-3. **Edit pass** - Use Edit tool to apply style, clarity, terminology, and structure fixes without changing intent unless requested.
-4. **Cross-reference check** - Use absolute paths to the document URL (not the Markdown file path). Use Glob to verify linked pages exist. If updating or removing an existing URL or anchor ID, use Grep to search for it across all documentation files to identify any links that reference it. Update or fix those links to prevent broken cross-references.
-5. **Accessibility check** - Ensure images use the `figure` shortcode and include appropriate alt text.
-6. **Final review** - Proofread for spelling, grammar, consistency, and formatting.
+1. **Locate and read** - Find the target page and its section `_index.md`. Run independent lookups in parallel.
+2. **Check front matter** - Confirm the required fields (`title`, `url`, `description`) are present and follow the Front Matter rules above.
+3. **Proofread and edit** - Apply style, clarity, terminology, accessibility (alt text, `figure` shortcode), and structure fixes. Keep the meaning unless the user asks otherwise. Stop and ask before any change listed under "Ask for confirmation".
+4. **Verify links** - Link by page `url`, not file path, and confirm each target exists. If you changed or removed a `url` or anchor ID, search all docs for the old value and update every reference.
 
-## Content Templates
+## Content Creation Workflow
 
 If asked to create new content:
 
-1. Read the appropriate template from `templates/`: `how-to-template.md`, `reference-template.md`, `marketplace-component-page-template.md`, or `release-notes-template.md`
-2. Use Write tool to create the new file based on the template
-3. Remove comment lines (`#`) from the template
-4. Follow the editorial workflow above
+1. Read the appropriate template from `templates/`: `how-to-template.md`, `reference-template.md`, `marketplace-component-page-template.md`, or `release-notes-template.md`.
+2. Use Write tool to create the new file based on the template.
+3. Remove comment lines (`#`) from the template.
+4. Follow the editorial workflow above.
 
 For all pages, required sections are front matter and the introduction; other sections vary by content type.
 
-## Mendix AI Engineering Toolkit Safety Rules (NON-NEGOTIABLE)
+## Safety Rules
 
-- NEVER run commands that delete, destroy, or modify production resources
-- NEVER use AWS credentials for production accounts — only sandbox accounts
-- NEVER deploy code, infrastructure, or configuration changes — a human must do this
-- NEVER run `terraform apply`, `terraform destroy`, `kubectl apply`, `kubectl delete` against production
-- NEVER read or output secrets, API keys, tokens, or credentials from files or environment variables
-- NEVER run commands with `sudo`
-- NEVER run `rm -rf` on any path outside the current project directory
-- NEVER disable, bypass, or modify the guardrail hooks in `.claude/hooks/`
-- NEVER push to `main` or `master` branches directly
+Non-negotiable safety and AWS rules are in `.claude/rules/security.md` and `.claude/rules/aws.md`, which load automatically. Follow them.
 
-### When In Doubt
-
-If you are unsure whether a command is safe to run, **do not run it**. Instead, explain what you would do and let the human decide.
-
-### AWS Context
-
-- We use AWS Bedrock for AI model invocation
-- Sandbox accounts are accessed via Mendix SSO
-- Production accounts exist on the same machine — DO NOT use them
-- If a command references an AWS profile or region you don't recognize, STOP and ask
-
-### Coding Standards
-
-- Follow existing code patterns in the repository
-- Run tests after making changes: see project-specific test commands
-- Do not add dependencies without asking
-- Do not refactor code beyond what was requested
-
-### Claude Code Settings Management
+## Claude Code Settings Management
 
 For personal configuration changes (AWS_PROFILE, etc.), always suggest `.claude/settings.local.json` instead of modifying `.claude/settings.json`. The local file is gitignored and overrides shared settings.

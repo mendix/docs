@@ -36,7 +36,7 @@ The buttons allow you to perform the following actions:
 * **Refresh** – refreshes the pane
 * **Maia only** – shows only changes made by Maia
 * **All changes** *(default)* – shows both manual and Maia changes
-* **Show on disk changes**
+* **Show on disk changes** – shows you changes in the third party files only
 
 The **Back** and **Go to** buttons are common throughout all the levels, while other buttons will only apply to a specific one.
 

@@ -53,6 +53,17 @@ The grid contains information on the following items:
 * **Module** – the module where the changed document is located
 * **Details** – can contain details on the status, for example, when you have conflicting changes 
 
+When Maia has edited at least one document, a Maia icon column appears in the grid. This column marks the documents that Maia edited.
+
+The toolbar contains a filter that controls which documents the grid shows:
+
+* **All changes** *(default)* – shows all local changes, including documents that Maia edited
+* **Maia only** – shows only documents that Maia edited
+
+{{% alert color="info" %}}
+When Maia adds a new document and you commit without explicitly keeping or undoing the Maia changes, the commit succeeds. However, the new document can still appear as **Modified** in the **Changes** pane afterward, even though it contains no further changes. Refreshing or reopening the app resolves this.
+{{% /alert %}}
+
 ## Zoomed-In Level {#zoomed-in-level}
 
 You can zoom into a changed or conflicting document by doing one of the following:
@@ -84,6 +95,12 @@ The toolbar at this level contains the following buttons:
 * **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
 
 For text-based properties, you can double-click a property row to open the [File Differences Viewer](/refguide/file-diff-viewer/), which shows a detailed side-by-side comparison of the old and new values. To compare file-level changes at the top level, double-click a file row or right-click and select **Compare with original**.
+
+If Maia has edited the document, a Maia icon column appears in the element grid.
+
+{{% alert color="info" %}}
+If Maia has edited a document, the Maia icon marks all changed elements in the document, whether Maia or you made the changes.
+{{% /alert %}}
 
 The left side of the grid contains the following columns:
 
@@ -151,3 +168,4 @@ The left and right panes will contain the same information as in [Zoomed-In Leve
 * [File Differences Viewer](/refguide/file-diff-viewer/)
 * [Comparison Pane](/refguide/comparison-pane/)
 * [Comparing Revisions](/refguide/comparing-revisions/) 
+* [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)

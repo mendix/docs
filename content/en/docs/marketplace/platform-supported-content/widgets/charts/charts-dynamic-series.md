@@ -40,7 +40,7 @@ The **Group by** property can only use an attribute of the entity the data sourc
 Now you need to enter data for the chart.
 
 1. Right-click the **Value** entity.
-1. Choose **Generate overview pages...**.
+1. Choose **Generate overview pages**.
 1. Connect the **Value_Overview** page to the navigation.
 1. Click **Run Locally** ({{% icon name="controls-play" %}}) to run the app locally.
 1. Enter some sample data. Give every data point that belongs to the same line the same **seriesName** value.
@@ -60,24 +60,24 @@ Now you need to create a page containing the chart.
 To configure a chart that builds its series from the data, follow these steps:
 
 1. Double-click the **Area chart** widget to open its properties.
-1. On the **General** tab, in the **Data source** section, add a new **Series** item.
-1. In the **General** section of the series, set **Data set** to **Multiple series**.
+1. On the **General** tab, in the **Data source** section, click **New** in the **Series** list. The **Edit Series Item** dialog box opens.
+1. On the **General** tab of the dialog box, set **Data set** to **Multiple series**.
 1. Set **Data source** to **Database** and select the **Value** entity. This is the entity from which all data points are retrieved.
 1. Set **Group by** to **seriesName**. Data points that share a value form one series.
 1. Set **Series name** to a text template that renders the label shown in the legend, for example the **seriesName** attribute. The name is taken from the first data point in each group.
 1. Set **X axis attribute** to **xValue** and **Y axis attribute** to **yValue**.
 1. Optionally, set **Aggregation function** to combine data points when several Y values share the same X value.
 
-To give the series distinct colors, use the **Appearance** section of the series. **Line color**, **Marker color**, and **Area fill color** are expressions that return a color string, and each is evaluated against the first data point of the group, so the value applies to the whole series. For example, store a color on the **Value** entity and enter `$currentObject/color` as the expression.
+To give the series distinct colors, use the **Appearance** tab of the **Edit Series Item** dialog box. **Line color**, **Marker color**, and **Area fill color** are expressions that return a color string, and each is evaluated against the first data point of the group, so the value applies to the whole series. For example, store a color on the **Value** entity and enter `$currentObject/color` as the expression.
 
 ## Viewing the Chart
 
 To view the chart, follow these steps:
 
 1. Run the app (locally).
-1. Open the page containing the chart.
+1. Open the page containing the chart:
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-dynamic-series/charts-dynamic-series-chart.png" alt="Area chart showing one line for each series name found in the data" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-dynamic-series/charts-dynamic-series-chart.png" alt="Stacked area chart with one area for each series name found in the data: Alpha, Beta, and Gamma" class="no-border" >}}
 
 ## Read More
 

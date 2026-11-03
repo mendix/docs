@@ -5,6 +5,14 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.1.8
+
+**Release date: Oct 28, 2026**
+
+### Fixes
+
+- We fixed an issue on Android where the **Clear data** checkbox on the **Developer App** starting page was hidden behind the bottom navigation bar due to edge-to-edge display.
+
 ## 19.1.7
 
 **Release date: Sep 23, 2026**

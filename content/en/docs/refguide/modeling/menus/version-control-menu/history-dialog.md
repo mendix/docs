@@ -8,7 +8,6 @@ description: "Describes the History pane in Studio Pro, which shows committed ch
 
 Use the **History** pane to see the changes that have been committed to a development line of an app. You can open this pane by selecting **Version Control** > **History** from the menu. The **History** pane displays all revisions at once in a searchable grid, making it easy to view the detailed project history.
 
-
 {{% alert color="info" %}}
 In Studio Pro versions 11.6-11.14, partially cloned apps automatically use the older blocking **History** dialog. You can choose to use the new version of the dialog in [Version Control Preferences](/refguide/preferences-dialog/#history-pane).
 The Revision Selector still uses the blocking dialog when you select a revision to revert, merge from, create a branch line from, or create a deployment archive from.
@@ -58,6 +57,17 @@ For each revision the following information is shown, more information about eac
 * [Message](#message)
 
 By selecting a revision in this grid, the tabs below the grid will be filled with information about this revision.
+
+#### Actions 
+
+You can trigger the following actions by right-clicking a revision: 
+
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/history-pane-actions.png" alt="History pane actions" class="no-border" >}}
+
+* **Copy / Copy Full Hash** – This allows you to copy the value in any cell across all columns in the history pane. For the **Revision** column specifically, you can choose **Copy** to copy the first seven characters of the revision hash, or **Copy Full Hash** to copy the entire hash value.
+* **Compare to Current State** – This enables the comparison of the selected revision with your current working state. For more information, see [Comparing Revisions](#comparing-revisions).
+* **Revert Commit** – This allows you to undo changes from a specific revision by rolling back to a previous state. For more information, see [Reverting Changes](/refguide/reverting-changes/).
+* **Create Branch** – This allows you to create a new branch line from the selected revision, enabling parallel development. For more information, see [Creating a New Branch](/refguide/managing-branches/#new-feature).
 
 ### Comparing Revisions
 

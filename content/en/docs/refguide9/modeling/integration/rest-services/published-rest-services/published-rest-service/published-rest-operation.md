@@ -121,6 +121,10 @@ The import mapping is also used to generate object schemas for operation respons
 
 This defines the response of the operation. You can specify the type of the microflow result and the export mapping applied to it (if any).
 
+{{% alert color="info" %}}
+A Mendix Long can exceed JavaScript's largest safe integer (`Number.MAX_SAFE_INTEGER`, which is 2^53 − 1). When a JavaScript client parses such a value as a JavaScript number in a JSON response, it can lose precision. For attributes that may exceed this limit and will be consumed by JavaScript clients, consider mapping the values to strings. For more information, see the [Large Long Values and JavaScript](/refguide9/odata-representation/#large-long-values) section of *OData Representation*.
+{{% /alert %}}
+
 ##### Type
 
 This shows the result type of the microflow.

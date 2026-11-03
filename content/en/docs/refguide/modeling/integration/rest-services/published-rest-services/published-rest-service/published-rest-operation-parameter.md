@@ -10,7 +10,7 @@ description: "Configure a published REST Operation by adding parameters to an op
 
 When a client calls a published REST operation, it calls a URL with an optional query string and possibly a body. These parameters can be passed to the microflow and import mapping as query parameters, path parameters, body parameters, header parameters, and form parameters.
 
-When you add or edit a parameter in a published REST operation, you can specify the settings described below. These settings are in the **Add parameter** section of the **Add operation for resource** dialog box.
+When you add or edit a parameter in a published REST operation, you can specify the settings described below.
 
 ## General
 

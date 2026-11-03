@@ -93,7 +93,7 @@ Selecting a key is required when the **Readable** capability is enabled.
 Selecting more than one attribute as the key is only available for published OData services that use OData v4.
 {{% /alert %}}
 
-Mendix recommends that you do not use the entity [ID](/refguide/odata-representation/#id-representation) as a key as it has no meaning outside the Mendix app. 
+Mendix recommends that you do not use the entity [ID](/refguide/odata-representation/#id-representation) as a key as it has no meaning outside the Mendix app. In addition, an ID can exceed JavaScript's largest safe integer (`Number.MAX_SAFE_INTEGER`), which can cause a loss of precision when parsed as a JavaScript number. For more information, see the [Large Long Values and JavaScript](/refguide/odata-representation/#large-long-values) section of *OData Representation*.
 
 ## Capabilities {#capabilities}
 

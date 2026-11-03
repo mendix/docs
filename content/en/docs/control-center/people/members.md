@@ -29,7 +29,7 @@ These are the fields on the **Active Members** tab:
 
 When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member, as well as their **App role** for each app. These are the actions you can take in the profile window:
 
-* Click **Deactivate Member** to deactivate that specific member.
+* Click **Deactivate Member** to deactivate that specific member. Once you deactivate a member, you need to manually remove them from that company's projects.
 * Click **Remove** to remove the member from the app. 
 * Click an app name to go to its [details page](/control-center/apps-overview/#app-details).
 

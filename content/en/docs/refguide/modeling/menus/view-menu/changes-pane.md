@@ -23,7 +23,7 @@ This pane consists of the following:
 
 The top bar of the top level of the **Changes** pane consists of various buttons:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-bar.png" alt="Top Bar of the Changes Pane" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-bar.png" alt="Top Bar of the Changes Pane" >}}
 
 The buttons allow you to perform the following actions:
 
@@ -44,7 +44,7 @@ The **Back** and **Go to** buttons are common throughout all the levels, while o
 
 The top level of the **Changes** pane is a grid listing changed documents, for example, a page or a nanoflow:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-level.png" alt="Top Level of the Changes Pane" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-level.png" alt="Top Level of the Changes Pane"  >}}
 
 The grid contains information on the following items:
 

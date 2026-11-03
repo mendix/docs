@@ -5,7 +5,7 @@ user-invocable: true
 disable-model-invocation: false
 ---
 
-> **Skill progression:** This is the lightest touch. If more clarity and style guide work is needed, suggest `/docs-polish`.
+> **Skill progression:** This is the lightest touch. If style guide and clarity fixes are needed, suggest that the user run `/docs-copyedit`.
 
 Do NOT rewrite, rephrase, or improve clarity. Proofread only:
 
@@ -30,4 +30,4 @@ Priority order for determining scope:
 3. If there are multiple open files, list them and ask which to process.
 4. If no files are open, ask for a file path.
 
-If you notice style or clarity issues that need improvement, finish proofreading first, then suggest that the user run `/docs-polish` for those improvements.
+If you notice style or clarity issues that need improvement, finish proofreading first, then suggest that the user run `/docs-copyedit` for those improvements.

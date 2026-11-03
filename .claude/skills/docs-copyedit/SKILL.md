@@ -1,15 +1,15 @@
 ---
-name: docs-polish
-description: Applies style guide standards to a documentation page without changing meaning or reorganizing structure. This includes fixing grammar, improving clarity and readability, simplifying complex sentences, using active voice, and standardizing terminology and formatting. Use when the user wants to polish, check style guide compliance, improve language, or clean up documentation while preserving its structure.
+name: docs-copyedit
+description: Applies style guide standards to a documentation page without changing meaning or reorganizing structure. This includes fixing grammar, improving clarity and readability, simplifying complex sentences, using active voice, and standardizing terminology and formatting. Use when the user wants to copyedit, polish, check style guide compliance, improve language, or clean up documentation while preserving its structure.
 user-invocable: true
 disable-model-invocation: false
 ---
 
-> **Skill progression:** This does everything `/docs-proofread` does plus style guide enforcement including clarity improvements. If only grammar and spelling fixes are needed, use `/docs-proofread`. If missing alt text is found, suggest `/docs-alt-text`.
+> **Skill progression:** This does everything `/docs-proofread` does plus style guide enforcement including clarity improvements. If only grammar and spelling fixes are needed, use `/docs-proofread`. If missing alt text is found, suggest that the user run `/docs-alt-text`.
 
 Improve clarity and readability without changing meaning, structure, or paragraph order:
 
-**docs-polish should**:
+**docs-copyedit should**:
 * Read Mendix style guides first (in parallel): `grammar-formatting.md`, `terminology.md`, and `product-naming-guide.md` from `/content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/`
 * Fix all spelling, grammar, and punctuation errors
 * Check all figure shortcodes for missing alt text. If the alt text parameter is missing, insert `alt=""` as a placeholder.
@@ -29,7 +29,7 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 * Report what was changed in a concise summary
 * If any images were found with missing or empty alt text, state "I found [N] image(s) with missing alt text. Consider running `/docs-alt-text` to generate alt text."
 
-**docs-polish should NOT**:
+**docs-copyedit should NOT**:
 * Move paragraphs or restructure sections
 * Change technical meaning or accuracy
 * Significantly increase document length

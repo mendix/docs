@@ -12,7 +12,7 @@ The **My Content** page shows a list of all the content owned by the groups to w
 
 {{< figure src="/attachments/private-platform/pmp-refguide-mygroupcontent.png" class="no-border" >}}
 
-You can click **Add Content** to add a new content item. For more information, see [Sharing Marketplace Content](/private-mendix-platform/user-guide/#sharing-content-with-groups).
+You can click **Add Content** to add a new content item. For more information, see [Sharing Marketplace Content](/private-mendix-platform/marketplace/#sharing-content-with-groups).
 
 You can also click a content item to view or download it from the Private Platform Marketplace.
 

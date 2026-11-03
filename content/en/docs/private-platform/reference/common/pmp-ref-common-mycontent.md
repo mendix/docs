@@ -12,7 +12,7 @@ The **My Content** page shows a list of all the content owned by the user.
 
 {{< figure src="/attachments/private-platform/pmp-refguide-mycontent.png" class="no-border" >}}
 
-You can click **Add Content** to add a new content item. For more information, see [Sharing Marketplace Content](/private-mendix-platform/user-guide/#sharing).
+You can click **Add Content** to add a new content item. For more information, see [Sharing Marketplace Content](/private-mendix-platform/marketplace/#sharing).
 
 You can also click a content item to view or edit its details.
 

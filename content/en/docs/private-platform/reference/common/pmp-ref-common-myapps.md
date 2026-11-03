@@ -20,7 +20,7 @@ The top section of the **My Apps** page contains elements that help new users ge
 
 * **Download & Install Studio Pro** - Click this block to download the highest version of Studio Pro available in your Private Mendix Platform.
 * **Patch Studio Pro** - Click this block to download the required patch file for Studio Pro.
-* **Create a New App Project** - Click this block to create a new app. For more information, see [Creating a New App](/private-mendix-platform/user-guide/#create-app).
+* **Create a New App Project** - Click this block to create a new app. For more information, see [Creating a New App](/private-mendix-platform/apps/#create-app).
 
 To hide the **Onboarding** section, click **Hide onboarding**.
 
@@ -29,5 +29,5 @@ To hide the **Onboarding** section, click **Hide onboarding**.
 The bottom section of the **My Apps** page contains an overview of your active and archived applications. It contains the following elements:
 
 * Search bar - Use the search bar to search through apps by name or description.
-* **Active** tab - Displays all currently active apps. Each tile shows the current member count for the app, as well as a sub-menu to archive or delete it. To view more details about an app, click on its tile. For more information, see [Managing Your App](/private-mendix-platform/user-guide/#manage-app).
+* **Active** tab - Displays all currently active apps. Each tile shows the current member count for the app, as well as a sub-menu to archive or delete it. To view more details about an app, click on its tile. For more information, see [Managing Your App](/private-mendix-platform/apps/#manage-app).
 * **Archived** tab - Displays all archived apps. To reactivate an archived project, click on its tile. Apps cannot be archived if they have more than one member.

@@ -5,7 +5,7 @@ user-invocable: true
 disable-model-invocation: false
 ---
 
-> **Skill progression:** This does everything `/docs-proofread` does plus style guide enforcement including clarity improvements. If only grammar and spelling fixes are needed, use `/docs-proofread`. For deeper reorganization, suggest `/docs-enhance`. If missing alt text is found, suggest `/docs-alt-text`.
+> **Skill progression:** This does everything `/docs-proofread` does plus style guide enforcement including clarity improvements. If only grammar and spelling fixes are needed, use `/docs-proofread`. If missing alt text is found, suggest `/docs-alt-text`.
 
 Improve clarity and readability without changing meaning, structure, or paragraph order:
 
@@ -30,7 +30,7 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 * If any images were found with missing or empty alt text, state "I found [N] image(s) with missing alt text. Consider running `/docs-alt-text` to generate alt text."
 
 **docs-polish should NOT**:
-* Move paragraphs or restructure sections (that's `/docs-enhance`)
+* Move paragraphs or restructure sections
 * Change technical meaning or accuracy
 * Significantly increase document length
 * Generate alt text for images

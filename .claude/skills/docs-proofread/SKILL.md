@@ -5,7 +5,7 @@ user-invocable: true
 disable-model-invocation: false
 ---
 
-> **Skill progression:** This is the lightest touch. If more clarity and style guide work is needed, suggest `/docs-polish`. For deeper restructuring, suggest `/docs-enhance`.
+> **Skill progression:** This is the lightest touch. If more clarity and style guide work is needed, suggest `/docs-polish`.
 
 Do NOT rewrite, rephrase, or improve clarity. Proofread only:
 

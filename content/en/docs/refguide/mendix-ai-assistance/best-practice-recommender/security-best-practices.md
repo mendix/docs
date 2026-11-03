@@ -11,7 +11,7 @@ description: "Describes the security best practices from Best Practice Recommend
 This document outlines the security best practices provided by [Best Practice Recommender](/refguide/best-practice-recommender/) in Studio Pro.
 
 {{% alert color="info" %}}
-The security best practices were introduced in Mendix 11.6.12 and 11.15.0.
+The security best practices were introduced in Mendix 11.15.0. They are also available in Mendix MTS version 11.6, patch version 12 and above.
 
 The guidance here applies to all versions of Mendix. However, in previous versions, you will not see the best practice messages.  
 {{% /alert %}}

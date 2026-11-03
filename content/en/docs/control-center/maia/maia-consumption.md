@@ -53,12 +53,12 @@ Once a user reaches their individual limit, they cannot use Maia for the rest of
 To manage usage limits for multiple users at once, follow these steps:
 
 1. Click **Manage multiple users**.
-2. In the **Select users** section, choose one of the following options:
-    * **Manually** – Enter one or more email addresses in the field below
+2. In the **Select users** field, choose one of the following options:
+    * **Manually** – Enter one or more email addresses
     * **All users with a custom limit** – Selects all users who currently have a custom limit set
 3. In the **Monthly Maia Unit Limit** section, select one of the following options:
     * **Use default** – Apply the default company-wide limit to the selected users
-    * **Set custom limit** – Enter a custom limit value in the **Custom Limit** field
+    * **Set custom limit** – Enter a custom limit value
 4. Click **Apply**.
 
 {{< figure src="/attachments/control-center/maia/manage-multiple-users.png" alt="Manage multiple users dialog box showing selection options, email field, and limit settings" max-width="60%" >}}

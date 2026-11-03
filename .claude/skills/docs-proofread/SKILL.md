@@ -30,4 +30,7 @@ Priority order for determining scope:
 3. If there are multiple open files, list them and ask which to process.
 4. If no files are open, ask for a file path.
 
-If you notice style or clarity issues that need improvement, finish proofreading first, then suggest that the user run `/docs-copyedit` for those improvements.
+**After completing edits**:
+* Report what was changed in a concise summary.
+* Under the heading "Flagged for your review", list anything you did not change but that needs the writer's attention, with a one-line reason for each. This includes unclear typos, text in code formatting, and linter warnings that don't apply.
+* If there are style or clarity issues, end the summary with: "I found style or clarity issues that proofreading doesn't cover. Consider running `/docs-copyedit` to address them."

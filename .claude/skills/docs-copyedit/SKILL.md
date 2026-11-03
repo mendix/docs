@@ -26,7 +26,8 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 * Apply Microsoft Writing Style Guide standards, unless they conflict with the Mendix style guide standards
 
 **After completing edits**:
-* Report what was changed in a concise summary
+* Report what was changed in a concise summary.
+* Under the heading "Flagged for your review", list anything you did not change but that needs the writer's attention, with a one-line reason for each. This includes ambiguities in technical meaning or accuracy, text in code formatting, and linter warnings that don't apply.
 * If any images were found with missing or empty alt text, state "I found [N] image(s) with missing alt text. Consider running `/docs-alt-text` to generate alt text."
 
 **docs-copyedit should NOT**:
@@ -39,7 +40,7 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 Every edit should serve a clear purpose in making the text easier to read, scan, and understand.
 
 Priority order for determining scope:
-1. If the user has selected text in a file (check for `ide_selection` tags), only polish the selected text in that file. Don't polish the entire document.
+1. If the user has selected text in a file (check for `ide_selection` tags), only copyedit the selected text in that file. Don't copyedit the entire document.
 2. If there's one open file (check for `ide_opened_file` tags) and no selection, work on the entire file.
 3. If there are multiple open files, list them and ask which to process.
 4. If no files are open, ask for a file path.

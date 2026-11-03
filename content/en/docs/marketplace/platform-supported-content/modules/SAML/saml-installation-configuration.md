@@ -62,6 +62,8 @@ If you use this method, do not forget to set the **SSOLandingPage** constant to 
 
 The table below introduces you to several key updates when you upgrade the SAML module from V3.x to V4.x.
 
+{{% expandable-table title="Changes in SAML Module Version 4.X" %}}
+
 | Feature | Changes in Version 4.X |
 | --- | --- |
 | SSO Configuration | You can perform SSO configuration during design time and deploy time. <br>For versions below 4.2.0, the module introduced deploy-time configuration and `Custom_Create_IdPConfiguration` microflow for customized SSO configuration. <br> From version 4.2.0 onwards, you can instead use the `IdPConfiguration_MicroflowName` constant and configure your custom microflow name in it. |
@@ -69,6 +71,8 @@ The table below introduces you to several key updates when you upgrade the SAML 
 | User Commons Module Integration | 1. From versions 4.0.0 and above, SAML2.0 is compatible with the UserCommons v2.0.0. <br> 2. The SAML module now integrates with the User Commons module, offering a more uniform experience with the OIDC SSO module. <br> 3. A new method for creating custom user provisioning microflows using User Commons simplifies development and allows you to automatically set the user-type for users <br> 4. Deprecated: SAML 3.x provisioning flows will be unsupported in future versions. It’s recommended to create new provisioning flows using User Commons after upgrading.<br> 5. From UserCommons 2.0.0, new users without IdP-specified time zone or language will use default App settings; existing users retain their previously set values. |
 | InCommon Federation Support | Pre-configured support for InCommon Federation has been removed. You now need to create custom user provisioning microflows in version 4.0.0 |
 | MxModeleReflection | In the **MxObjects_Overview** page, the MxModeleReflection module refresh is no longer required. It is handled automatically in the **SAML20.Startup**. |
+
+{{% /expandable-table %}}
 
 ## Choosing a SAML Configuration Approach{#config-approach}
 
@@ -216,6 +220,8 @@ The following entities are used to create IdP configurations:
 
 The table below shows you the different attributes and their values for quick reference. You can see the details of these attributes of the above entities in the [Reference Guide for SAML IdP Configuration](/appstore/modules/saml/idp-attributes/) document.
 
+{{% expandable-table title="IdP Configuration Attributes" %}}
+
 | IDPConfiguration(Non-Persistable entity) | Description | Default Value |
 | --- | --- | --- |
 | **Alias** (mandatory) | This represents IdPconfiguration Alias | |
@@ -253,6 +259,8 @@ The table below shows you the different attributes and their values for quick re
 | **EncryptionMethod** | This represents the Encryption Algorithm | SHA256 - RSA |
 | **EncryptionKeyLength** | This constant represents the Encryption length | 2048 bits |
 | Active | After completion of IdP config it will make the Toggle Active | true |
+
+{{% /expandable-table %}}
 
 Deploy the application and log in with the SSO. For more information, see the [Deploy the Application and Login with SSO](#deploy-application) section above.
 

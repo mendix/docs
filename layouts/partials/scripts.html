@@ -62,7 +62,7 @@ window.markmap = {
 <!--DB: Remove jsAnchor references and anchor.js, enable render hook after upgrading to Hugo 0.123+. See https://www.docsy.dev/docs/adding-content/navigation/#heading-self-links and https://github.com/google/docsy/pull/1463 -->
 {{ $jsAnchor := resources.Get "js/anchor.js" -}}
 <!-- MvM: Add scripts used by ToC Highlighting. Consider replacing with https://github.com/google/docsy/pull/1049 when merged. -->
-{{ $jsLodashDebouncd := resources.Get "js/lodash-debounce.js" }}
+{{ $jsLodashDebounced := resources.Get "js/lodash-debounce.js" }}
 {{ $jsLodashThrottle := resources.Get "js/lodash-throttle.js" }}
 {{ $jsProgressTracking := resources.Get "js/progress-tracking.js" }}
 <!-- MvM: end -->
@@ -74,8 +74,9 @@ window.markmap = {
   {{ $jsSearch = resources.Get "js/offline-search.js" -}}
 {{ end -}}
 
-<!--DB: Anchor, LodashDebouncd, Throttle, and ProgressTracking are custom-->
-{{ $jsArray := slice $jsBs $jsBase $jsAnchor $jsLodashDebouncd $jsLodashThrottle $jsProgressTracking $jsSearch $jsPlantuml $jsMarkmap $jsDrawio -}}
+{{ $jsExpandableTable := resources.Get "js/expandable-table.js" }}
+<!--DB: Anchor, LodashDebounced, Throttle, ProgressTracking, and ExpandableTable are custom-->
+{{ $jsArray := slice $jsBs $jsBase $jsAnchor $jsLodashDebounced $jsLodashThrottle $jsProgressTracking $jsExpandableTable $jsSearch $jsPlantuml $jsMarkmap $jsDrawio -}}
 
 {{ if .Page.Store.Get "hasmermaid" -}}
 {{- partial "scripts/mermaid.html" . -}}

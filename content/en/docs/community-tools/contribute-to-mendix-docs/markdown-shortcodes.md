@@ -108,6 +108,49 @@ public class Hello1
 
 2. Second list item
 
+### Expandable Tables
+
+Use the `expandable-table` shortcode to add an **Expand Table** button above a wide table. When readers click the button, the table opens in a window on the same page, which makes it easier to read. Place the table between the opening and closing tags, with a blank line after the opening tag and before the closing tag:
+
+{{% expandable-table %}}
+
+| Column1 | Column2 |
+| --- | --- |
+| Item1 | Item2 |
+| Item3 | Item4 |
+
+{{% /expandable-table %}}
+
+The optional `title` parameter sets the title shown at the top of the window. If you omit it or leave it blank, the window has no title.
+
+Here is an example:
+
+{{% expandable-table title="Title of the table" %}}
+
+| Column1 | Column2 |
+| --- | --- |
+| Item1 | Item2 |
+| Item3 | Item4 |
+
+{{% /expandable-table %}}
+
+#### Expandable Tables in Lists
+
+To use the shortcode in a list item, indent the shortcode tags and the table by four spaces, like any other content in the list item, and use the `<` delimiter instead of `%`. The shortcode removes the indentation from the table, so the table does not render as a code block:
+
+1. Step 1.
+
+    {{< expandable-table title="Title of the table" >}}
+
+    | Column1 | Column2 |
+    | --- | --- |
+    | Item1 | Item2 |
+    | Item3 | Item4 |
+
+    {{< /expandable-table >}}
+
+2. Continue with the next step.
+
 ### Images (Figures)
 
 #### Image with Alt Text and Max-Width Class

@@ -6,9 +6,10 @@ Vale is configured but needs to be installed locally before you can use it in VS
 
 ## Why Install Locally?
 
-* **Immediate feedback** - See violations as you write, not after pushing
-* **Faster iteration** - Fix issues before creating a PR
+* **Immediate feedback** - See violations as you write, not after pushing.
+* **Faster iteration** - Fix issues before creating a PR.
 * **More feedback** - See suggestions and warnings locally on the entire file; the GitHub Action is configured to show only errors on changed lines.
+* **LLM integration** - If you're using Claude to edit locally, it picks up on issues flagged by Vale.
 
 **Note:** Even without local installation, your PRs will be checked automatically by a GitHub Action: [.github/workflows/vale.yml](../.github/workflows/vale.yml).
 

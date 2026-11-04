@@ -44,6 +44,8 @@ Durations and intervals can be specified in the following formats:
 
 The following custom settings can be configured:
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="ApplicationRootUrl" href="#ApplicationRootUrl">ApplicationRootUrl</a> | see [ApplicationRootUrl](#applicationrooturl-section), below | In Mendix Cloud, https://\[domain\].<wbr>mendixcloud.<wbr>com |
@@ -89,6 +91,8 @@ The following custom settings can be configured:
 | <a id="SessionKeepAliveUpdateBatchSize" href="#SessionKeepAliveUpdateBatchSize">SessionKeepAliveUpdateBatchSize</a> | This setting specifies how many sessions should be updated per batch when updating the `LastActive` attribute in the periodic system task. | 1000 *Introduced in Mendix 11.6.1 and 11.7.0.* |
 | <a id="UseOldExceptionBehavior" href="#UseOldExceptionBehavior">UseOldExceptionBehavior</a> | Allows you to set the exception message and wrapping behavior in the Mendix Runtime Server to the behavior below Mendix version 11.6.0. From Mendix 11.6.0 we changed the way messages are constructed to prevent the actual cause of the error being hidden in the details and exception wrapping is reduced significantly.<br/><br/>This change means that error messages will be different and have a significantly less deep exception nesting. Consequently, code which depends on finding some specific exception hardcoded at X levels deep (using `exception.getCause().getCause()` for example), will probably fail.<br/><br/>To restore the previous behavior, set `UseOldExceptionBehavior` to `true`. | false *Introduced in Mendix 11.6.0.* |
 
+{{< /expandable-table >}}
+
 ### ApplicationRootUrl {#applicationrooturl-section}
 
 The ApplicationRootUrl setting is used to specify the protocol, domain, and path to your application. This can be used within Java actions to get the public location of the application, for example when including a URL to the application when sending emails from a scheduled event.
@@ -121,11 +125,15 @@ Mendix systems like OData that generate content based on a http request to the s
 
 The settings below influence the behavior of the log files. These settings can only be used on premises. In the cloud, these settings do not change any behavior.
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="LogFileName" href="#LogFileName">LogFileName</a> | The name of the log file. The log files (actual log file plus back-up files) will be placed in the folder specified by the setting log path. | Application.log |
 | <a id="MaxLogFileSize" href="#MaxLogFileSize">MaxLogFileSize</a> | The maximum size per log file. When the log file reaches this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | <a id="MaxLogFileCount" href="#MaxLogFileCount">MaxLogFileCount</a> | The maximum count of log files preserved (actual file plus back-up files). When the maximum count is reached, the oldest backup file will be removed. | 10 |
+
+{{< /expandable-table >}}
 
 ## Database Settings {#database-settings}
 

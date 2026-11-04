@@ -22,7 +22,7 @@ After clicking a specific resource, you land on its details page, which provides
 
 {{% alert color="info" %}} The **Consumption** tab is available for Model resources only.{{% /alert %}} 
 
-{{% alert color="warning" %}}Once a resource reaches its monthly GenAI Unit allocation, it will be subject to being blocked. A blocked resource stays blocked until a Company Admin increases its GenAI Unit capacity or the current bundle month ends. For details, see [Consumption Limit Notifications](#consumption-limit-notifications).{{% /alert %}}
+{{% alert color="warning" %}}A resource reaches its monthly GenAI Unit allocation is blocked. A blocked resource stays blocked until a company admin increases its GenAI Unit capacity or the current bundle month ends. For details, see [Consumption Limit Notifications](#consumption-limit-notifications).{{% /alert %}}
 
 The **Consumption** tab provides an overview of GenAI Unit and Large Language Model (LLM) token consumption for the resource. Use this overview to see current usage, view daily consumption insights, and compare the current period with previous periods. 
 
@@ -44,14 +44,14 @@ Below the summary, the page shows **Consumption Over Selected Time Range**. You 
 Mendix notifies you when a resource approaches or reaches its monthly GenAI Unit allocation:
 
 * **80% of the allocation** – The resource's [Technical Contact](#technical-contact) receives an email that the resource is approaching its limit. A yellow **Consumption limit warning** banner and a **REACHING TOKEN LIMIT** label appear on the resource in the resource overview and on the resource details page.
-* **100% of the allocation** – The Technical Contact receives an email that the resource has reached its limit. A red **Token limit reached** banner and a **TOKEN LIMIT EXCEEDED** label appear on the resource in the resource overview and on the resource details page. From this point, the resource will be subject to being blocked. When the resource is blocked, the Technical Contact receives an email that the resource is blocked. A red **Blocked** banner appears at the top of the resource details page, and the **GenAI Units** card on the **Consumption** tab is highlighted in red with a **BLOCKED** label.
+* **100% of the allocation** – The Technical Contact receives an email that the resource has reached its limit. A red **Token limit reached** banner and a **TOKEN LIMIT EXCEEDED** label appear on the resource in the resource overview and on the resource details page. From this point, the resource is blocked. When the resource is blocked, the Technical Contact receives an email. A red **Blocked** banner appears at the top of the resource details page, and the **GenAI Units** card on the **Consumption** tab is highlighted in red with a **BLOCKED** label.
 
 A blocked resource stays blocked until one of the following happens:
 
-* A Company Admin increases the GenAI Unit capacity of the resource so that it covers the current consumption. For more information, see [Adjusting the GenAI Unit Capacity of a Resource](#adjusting-the-genai-unit-capacity-of-a-resource).
+* A company admin increases the GenAI Unit capacity of the resource so that it covers to a value above the current consumption. For more information, see [Adjusting the GenAI Unit Capacity of a Resource](#adjusting-the-genai-unit-capacity-of-a-resource).
 * The current bundle month ends and the allocation resets.
 
-To avoid blocking, increase the allocation as soon as you receive the 80% or 100% notification. For more information, see [Adjusting the GenAI Unit Capacity of a Resource](#adjusting-the-genai-unit-capacity-of-a-resource).
+To avoid blocking, increase the allocation as soon as you receive the 80% or 100% notification.
 
 ### What Are Tokens and GenAI Units?
 
@@ -212,4 +212,4 @@ For knowledge base resources, you can also see details of the associated embeddi
 
 ### Adjusting the GenAI Unit Capacity of a Resource
 
-After a resource is provisioned, you can change its GenAI Unit capacity to match your actual usage. Company Admins can adjust the capacity through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting Resource GenAI Unit Capacity](/control-center/genai-resources-self-service/#adjusting-resource-genai-unit-capacity) section of *GenAI Resources*.
+After a resource is provisioned, you can change its GenAI Unit capacity to match your actual usage. Company admins can adjust the capacity through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting Resource GenAI Unit Capacity](/control-center/genai-resources-self-service/#adjusting-resource-genai-unit-capacity) section of *GenAI Resources*.

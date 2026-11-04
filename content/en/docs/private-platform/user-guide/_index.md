@@ -11,4 +11,4 @@ aliases:
 
 ## Introduction
 
-See the following articles for information about the business-as-usual use cases available for Private Mendix Platform.
+The Private Mendix Platform User Guide provides information about the business-as-usual use cases available for Private Mendix Platform.

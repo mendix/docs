@@ -14,13 +14,15 @@ Refer to the following sections for information about creating, managing, and de
 Before you can create your first app, you must first install Mendix Studio Pro by performing the following steps:
 
 1. Log in to Private Mendix Platform.
-2. On the home page, click **Download Studio Pro** and **Download Studio Pro Patch file**.
+2. On the home page, click **Download Studio Pro**
+3. Download the Studio Pro release, the patch, and optionally the dependency package.
 
     {{< figure src="/attachments/private-platform/pmp-ug2.png" class="no-border" >}}
 
-3. Install Studio Pro. For more information, see [Installing Studio Pro](/refguide/install/#install).
-4. Extract the Studio Pro patch file to the *modeler* directory located in the Studio Pro installation directory, and let it patch the files inside.
-5. Launch Studio Pro and log in to it with the same credentials as for Private Mendix Platform.
+4. If required, install the tools included in the dependency package.
+5. Install Studio Pro. For more information, see [Installing Studio Pro](/refguide/install/#install).
+6. Extract the Studio Pro patch file to the *modeler* directory located in the Studio Pro installation directory, and let it patch the files inside.
+7. Launch Studio Pro and log in to it with the same credentials as for Private Mendix Platform.
 
 ## Creating a New App {#create-app}
 
@@ -31,7 +33,7 @@ To create a new app, perform the following steps:
 
     For more information, see [Service Credentials](/private-mendix-platform/user-profile/#service-credentials).
 
-3. On the home page, click **Create App Project**.
+3. On the home page, click **Create App**.
 
     {{< figure src="/attachments/private-platform/pmp-ug3.png" class="no-border" >}}
 
@@ -44,17 +46,12 @@ To create a new app, perform the following steps:
 
 ## Managing Your App {#manage-app}
 
-As a user of Private Mendix Platform, you can view the apps that you own directly on the home page of Private Mendix Platform.
-
-{{< figure src="/attachments/private-platform/pmp-ug4.png" class="no-border" >}}
-
-This includes the apps that you created, as well as the apps that are shared with your user group. To view more details about an app, click on its tile.
+As a user of Private Mendix Platform, you can view the apps that you own directly on the home page of Private Mendix Platform. This includes the apps that you created, as well as the apps that are shared with your user group. To view more details about an app, click on its tile.
 
 {{< figure src="/attachments/private-platform/pmp-ug5.png" class="no-border" >}}
 
 In the **General** section, you can you can quickly perform a number of actions:
 
-* Edit details such as app name and description
 * Invite users to work on the app
 * View the Git revisions per branch for the app
 * Assign the app to a new owner or group

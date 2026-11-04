@@ -7,7 +7,7 @@ description: "Describes the Fieldset widget, which is available in the Mendix Ma
 
 ## Introduction
 
-The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Fieldset) widget is a container which groups widgets within a form. Structuring a form helps end-users fill it out, especially when they rely on accessibility tools like a screen reader. For example, you could use this widget to group input widgets that belong to the same address when a form requires multiple addresses.
+The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Fieldset) widget is a container which groups widgets within a form. Structuring a form helps end-users fill it out, especially when they rely on accessibility tools like a screen reader. 
 
 ## Features
 
@@ -37,6 +37,15 @@ The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Field
 
 ## Usage Examples
 
+Grouping multiple widgets in a form with fieldset can make your app's user experience smoother. You can apply fieldsets in any situation where multiple widgets would benefit from organization.
+
+For example, use a fieldset to group input widgets that belong to the same address when a form requires multiple addresses:
+
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/fieldset/fieldset-address-example.png" alt="Grouping widgets for an address using Fieldset" class="no-border" >}}
+
+Another example use is ???
+
+Another example use is ???
 
 ## Limitations
 

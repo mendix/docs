@@ -9,7 +9,7 @@ disable-model-invocation: false
 
 Improve clarity and readability without changing meaning, structure, or paragraph order:
 
-**docs-copyedit should**:
+**Do**:
 * Read Mendix style guides first (in parallel): `grammar-formatting.md`, `terminology.md`, and `product-naming-guide.md` from `/content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/`
 * Fix all spelling, grammar, and punctuation errors
 * Check all figure shortcodes for missing alt text. If the alt text parameter is missing, insert `alt=""` as a placeholder.
@@ -30,7 +30,7 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 * Under the heading "Flagged for your review", list anything you did not change but that needs the writer's attention, with a one-line reason for each. This includes ambiguities in technical meaning or accuracy, text in code formatting, and linter warnings that don't apply.
 * If any images were found with missing or empty alt text, state "I found [N] image(s) with missing alt text. Consider running `/docs-alt-text` to generate alt text."
 
-**docs-copyedit should NOT**:
+**Don't**:
 * Move paragraphs or restructure sections
 * Change technical meaning or accuracy
 * Significantly increase document length

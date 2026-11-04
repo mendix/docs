@@ -147,6 +147,7 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
     * **HTTP** – one-way bridge that uses HTTP requests to send events from external systems to the Mendix Event Broker
     * **Azure Blob Storage** – one-way bridge that receives events via Azure object storage
     * **AWS S3** – one-way bridge that receives events via AWS object storage
+    * **Kafka** – one-way bridge that sends events to external Kafka clusters
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/ebb_general_bridge_create.png" >}}
 
@@ -156,6 +157,7 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
     * For instructions on configuring HTTP, see [Configuring a Bridge with HTTP](#bridge-with-http).
     * For instructions on configuring Azure Blob Storage, see [Configuring a Bridge with Azure Blob Storage](#bridge-with-azure-blob-storage).
     * For instructions on configuring AWS S3, see [Configuring a Bridge with AWS S3](#bridge-with-aws-s3).
+    * For instructions on configuring Kafka, see [Configuring a Bridge with Kafka](#bridge-with-kafka).
 
 4. After configuring the service and connecting events (as described in the bridge-specific sections above), click **Start** on the confirmation screen to deploy the bridge.
 
@@ -435,13 +437,48 @@ The policy above grants the minimum required permissions for the Event Broker to
 
 Use the Role ARN and External ID when configuring your AWS S3 bridge in the Event Broker Manager.
 
+### Configuring a Bridge with Kafka {#bridge-with-kafka}
+
+#### Configure Service
+
+1. Configure the service by filling out the following:
+
+    * **Event Broker Space** – the space where the bridge will operate
+    * **Name** – the name you want to call the bridge
+    * **Kafka Bootstrap Servers** – the Kafka bootstrap server addresses
+    * **Username** – the username for Kafka authentication
+    * **Password** – the password for Kafka authentication
+
+    {{% alert color="info" %}}The supported authentication method is SASL SCRAM SHA-512.{{% /alert %}}
+
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/kafka/ebb_aws_kafka_configure.png" >}}
+
+2. Click **Next** to connect events to your bridge.
+
+#### Connect Events
+
+Select the business events to integrate with Kafka:
+
+1. Click **Add Business Events** to open a dialog displaying all events managed by the Event Broker, including Mendix app-defined events and uploaded AsyncAPI events. Only events capable of publishing are shown, as this bridge operates in one direction.
+2. Select the event(s) to integrate and specify the external topic name for each event.
+
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/kafka/ebb_kafka_connect_events.png" >}}
+
+3. Click **Next** to proceed to the confirmation screen.
+
+#### Overview of Kafka Bridge
+
+Once the Mendix Event Broker Bridge has been successfully deployed, its configuration and status can be viewed on the **Overview** page.
+
+{{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/kafka/ebb_kafka_overview.png" class="no-border" >}}
+
 ### Managing Bridges
 
 After creating a bridge, you can modify and manage its configuration through the Event Broker Manager.
 
 #### Editing Bridges
 
-You can edit HTTP, Azure Blob Storage, and AWS S3 bridges to modify their configuration as your integration requirements evolve, without needing to recreate the bridge.
+You can edit HTTP, Azure Blob Storage, AWS S3, and Kafka bridges to modify their configuration as your integration requirements evolve, without needing to recreate the bridge.
 
 {{% alert color="info" %}}You can only edit a bridge when its status is **Running**.{{% /alert %}}
 
@@ -450,6 +487,7 @@ You can edit:
 * **HTTP Bridge** – add or remove business events
 * **Azure Blob Storage Bridge** – add or remove business events, update Storage Account, Storage SAS Token, Container Path, or Prefix Path
 * **AWS S3 Bridge** – add or remove business events, update Bucket, AWS Region for Bucket, or Prefix Path
+* **Kafka Bridge** – add or remove business events, update Kafka Bootstrap Servers, Username, Password, or External Topic names
 
 To edit a bridge:
 
@@ -471,10 +509,11 @@ To edit a bridge:
 
            {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_http_edit_mode.png" class="no-border" >}}
       
-      * **Update Service Configuration** (Azure Blob Storage and AWS S3 only):
+      * **Update Service Configuration** (Azure Blob Storage, AWS S3, and Kafka only):
       
           * **Azure Blob Storage** – update the Storage Account, Storage SAS Token, Container Path, or Prefix Path as needed
           * **AWS S3** – update the Bucket, AWS Region for Bucket, or Prefix Path as needed
+          * **Kafka** – update the Kafka Bootstrap Servers, Username, Password, or External Topic names as needed
 
         **HTTP** 
         {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_http_edit_mode.png" class="no-border" >}}
@@ -484,6 +523,9 @@ To edit a bridge:
 
         **AWS S3** 
         {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_aws_s3_edit_mode.png" class="no-border" >}}
+
+        **Kafka** 
+        {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_kafka_edit_mode.png" class="no-border" >}}
 
 4. Once you have made your changes, you can:
    * Click **Apply** to save and apply the changes. A confirmation message will indicate if the changes were successful. Changes to the event configuration take effect when applied. After applying changes, the bridge status will change to **Reconfiguring** and will return to **Running** once the reconfiguration is complete.

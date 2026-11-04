@@ -44,6 +44,8 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
+        '409':
+          $ref: '#/components/responses/error-409'  
 
     get:
       tags:
@@ -481,6 +483,18 @@ components:
                 status: 404
                 title: Not Found
                 detail: App package not found
+    error-409:
+      description: Resource already exist
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            409 - App package already exist
+              value:
+                status: 404
+                title: Not Found
+                detail: Package file exists for this revision.
 
     package:
       description: App build package

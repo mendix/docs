@@ -23,8 +23,8 @@ Please note that this way is not a full integration with Insights Hub and has th
 
 If you prefer a full Insights Hub app, please see [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/), [Insights Hub Module Details](/appstore/industry/mindsphere/mindsphere-module-details/) or follow the following learning paths:
 
-* [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this learning path will teach you how to develop an app for Insights Hub with Mendix
-* [Build an Insights Hub App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform
+* [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/paths/80/Build-an-Insights-Hub-App-with-Mendix) - this learning path will teach you how to develop an app for Insights Hub with Mendix
+* [Build an Insights Hub App - Continued](https://academy.mendix.com/link/paths/93/Build-an-Insights-Hub-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform
 
 ## Technical User
 

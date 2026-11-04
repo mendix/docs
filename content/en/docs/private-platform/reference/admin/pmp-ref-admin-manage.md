@@ -295,7 +295,7 @@ As the administrator, you can perform the following actions:
 
 #### User Management
 
-In the **User Management** tab, you can create and edit accounts for your local users and API users (that is, accounts that are used by an API service to access your Private Mendix Platform). By clicking **More Actions** ({{% icon name="three-dots-menu-horizontal" %}}) by an account, you can quickly perform a number of actions:
+In the **User Management** tab, you can create and edit accounts for your users. By clicking **More Actions** ({{% icon name="three-dots-menu-horizontal" %}}) by an account, you can quickly perform a number of actions:
 
     * Edit a user's name and email
     * Assign or remove user roles (local users only)

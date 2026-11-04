@@ -126,7 +126,7 @@ Hugo shortcodes start with `{{`. Some common ones:
   Click **Delete** ({{< icon name="trash-can" >}}).
   ```
 
-Less common shortcodes (`button`, `youtube`, `vidyard`, `swaggerui`, `snippet`, `tabpane`, `tab`, `todo`) are documented in `community-tools/contribute-to-mendix-docs/markdown-shortcodes.md`. Read it before using or editing one.
+Less common shortcodes (`button`, `expandable-table`, `youtube`, `vidyard`, `swaggerui`, `snippet`, `tabpane`, `tab`, `todo`) are documented in `community-tools/contribute-to-mendix-docs/markdown-shortcodes.md`. Read it before using or editing one.
 
 ## Editorial Workflow
 

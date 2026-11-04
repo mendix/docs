@@ -41,7 +41,7 @@ Grouping multiple widgets in a form with fieldset can make your app's user exper
 
 For example, use a fieldset to group input widgets that belong to the same address when a form requires multiple addresses:
 
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/fieldset/fieldset-address-example.png" alt="Grouping widgets for an address using Fieldset" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/fieldset/fieldset-address-example.png" alt="Grouping widgets for an address using Fieldset" class="no-border" max-width=80% >}}
 
 Another example use is ???
 

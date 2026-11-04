@@ -36,4 +36,8 @@ For information about Project API version 1, see [Project API - Version 1](/apid
 
 ## API Reference
 
+{{% alert color="info" %}}
+The server URL shown in the API reference below is a placeholder. You must replace it with the URL of your own Private Mendix Platform instance.
+{{% /alert %}}
+
 {{< swaggerui src="/openapi-spec/openapi-project-v2.0.1.yaml"  >}}

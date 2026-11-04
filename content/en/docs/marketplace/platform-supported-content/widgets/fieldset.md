@@ -14,6 +14,30 @@ The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Field
 * Group widgets in a form
 * Attaches a legend to the group
 
+## Properties
+
+### General Section
+
+* **Legend** – ???
+
+### Visibility
+
+* **Visibility** 
+    * **Context** – This allows you to specify how the fieldset is shown:
+        * **Always** (default) – This makes the fieldset always shown.
+        * **Based on value** – This makes the fieldset show depending on a value in context. The fieldset widget must have X be true in for this property to be togggled.
+        * **Based on expression** – This allows the fieldset to be shown based on an expression, which you can write in the emergent window.
+    * **Module roles** 
+        * **Show the fieldset for selected roles** – If selected, allows you to specify certain roles in your app to show the fieldset to. Roles not assigned in the emergent list will not see the fieldset.
+
+### Common
+
+* **Name** – This allows you to set the name.
+* **Tab index** – This allows you to set the tab index value.
+
+## Usage Examples
+
+
 ## Limitations
 
 * This widget should only be used to group widgets belonging to a form

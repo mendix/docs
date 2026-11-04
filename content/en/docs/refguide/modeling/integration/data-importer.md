@@ -64,6 +64,8 @@ After previewing the data, go to the **Mapping** tab. You can either create a ne
 To create a new entity for the imported data, click **Create Entity**. In the dialog box:
 
 * Change the entity **Name**.
+* Rename Attributes: Use **Attribute Name** to specify the new name to the attribute in the entity.
+* Change Attribute Data Type: Select the desired data type from the **Primitive Type** column drop-down list in the **Source Element** tab.
 * Select which columns to include in the entity by selecting or clearing the checkbox next to each column.
 
 Click **Create** to create the entity. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data. For more details, see the [Using in the Import Data from File Activity](#using-in-the-activity) section below.

@@ -84,6 +84,8 @@ To adjust the GenAI Unit capacity of a resource, do the following:
 
 Increases take effect immediately. The additional GenAI Units are added to the current bundle month and apply to all future months. Your account must have sufficient available Cloud Tokens to cover the increase.
 
+Overconsumption of the GenAI Unit allocation can lead to a blocked resource. To unblock it, increase the GenAI Unit capacity of the resource or wait until the new bundle month starts so that it exceeds the current consumption. For more information, see [Consumption Limit Notifications](/agents/mx-cloud-genai/Navigate-MxGenAI/#consumption-limit-notifications).
+
 ### Decreasing GenAI Unit Capacity
 
 The behavior depends on how much of the current month's allocation has already been consumed:

@@ -46,18 +46,18 @@ Before you build, you define what the app must do, for whom, and how you measure
 
 Maia helps in the following ways:
 
-* [Maia Spec](/developerportal/maia-spec/) – Maia Spec turns your project context, such as goals, target users, requirements, and attached documents, into a project scope. After you approve the scope, Maia generates a solution with epics and user stories. It can also recommend Marketplace components for specific stories.
+* [Maia Spec](/developerportal/maia-spec/) – Maia Spec turns your project context, such as goals, target users, requirements, and attached documents, into a project scope. After you approve the scope, Maia generates a spec made up of requirements. It can also recommend Marketplace components for specific requirements.
 * **Create and Refine a Story with Maia** – Maia can help write new user stories and improve existing ones on the **Board** and **Planning** pages in Mendix Portal. For more information, see [Maia in Mendix Portal](/portal/maia/).
 
-You can use the stories from the plan as input when you build with Maia Make, which supports story-based development. Clear user stories with acceptance criteria give Maia better context.
+You can use the requirements from the spec as input when you build with Maia Make, which supports story-based development. Clear requirements with acceptance criteria give Maia better context.
 
 ## Generate the App {#generate-the-app}
 
-When the scope is clear, use Maia to generate a first version of the app. This gives you a working starting point instead of an empty model.
+When the spec is clear, use Maia to generate a first version of the app. This gives you a working starting point instead of an empty model.
 
 You have the following options:
 
-* From Maia Spec – In Maia Spec, select **Open in Studio Pro** to continue to work on the new app in Studio Pro with Maia Make. For more information, see [Starting the Development](/developerportal/maia-spec/start-development/).
+* From Maia Spec – In Maia Spec, select **Build in Maia Make** to continue to work on the new app in Studio Pro with Maia Make. For more information, see [Starting the Development](/developerportal/maia-spec/start-development/).
 * [Start with Maia](/refguide/start-with-maia/) – In Studio Pro, select **Start with Maia** as your starting point. Describe your app using a text description and an optional image or PDF. Maia uses this input to generate a domain model, data management overview pages, test data, and a homepage. 
 * Maia Make – In an existing app, describe a new module or feature in the **Maia** pane. Maia then generates the necessary documents. 
 

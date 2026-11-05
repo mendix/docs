@@ -166,7 +166,7 @@ The Maia Spec MCP Server provides the following tools to be used by AI agents fo
 
 ### Get_Project_Plan {#get-plan}
 
-This tool is used by AI agents to search for Maia Spec projects using the project title, the project ID, or keywords. The tool returns a sorted list of accessible plans, along with their UUIDs. You can use a plan's UUID to retrieve plan details using the `Get_Plan_Content` tool.
+This tool is used by AI agents to search for Maia Spec projects using the project title, the project ID, or keywords. The tool returns a sorted list of accessible specs, along with their UUIDs. You can use a spec's UUID to retrieve spec details using the `Get_Plan_Content` tool.
 
 The tool only returns plans for projects you have permission to view. If you do not have access to a project, it does not appear in the search results.
 

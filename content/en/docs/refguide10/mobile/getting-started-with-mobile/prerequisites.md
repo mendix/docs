@@ -87,7 +87,7 @@ To troubleshoot issues related to the Make it Native app, see the sections below
 
 Mendix recommends keeping the **Runtime port** in your [configuration](/refguide10/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
-##### App Not Running in MIN
+##### Edge Case - Firewall Allow Edge Traversal Rule
 
 If you have completed all the set up guidance for your app and Make It Native (setting up ports, resolving errors in your app, etc.) and it still does not load on your device, it might be due to a setting regarding edge traversal: **Allow Edge traversal**.
 

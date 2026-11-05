@@ -18,22 +18,16 @@ The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Field
 
 ### General Section
 
-* **Legend** – ???
+* **Legend** – This defines the text shown as the caption of the group. This can include parameters. When no legend is set, the widget does not render a legend. The legend is also shown as the widget's caption in the page explorer
+* **Content** – This defines which widgets the fieldset will group.
 
 ### Visibility
 
-* **Visibility** 
-    * **Context** – This allows you to specify how the fieldset is shown:
-        * **Always** (default) – This makes the fieldset always shown.
-        * **Based on value** – This makes the fieldset show depending on a value in context. The fieldset widget must have X be true in for this property to be togggled.
-        * **Based on expression** – This allows the fieldset to be shown based on an expression, which you can write in the emergent window.
-    * **Module roles** 
-        * **Show the fieldset for selected roles** – If selected, allows you to specify certain roles in your app to show the fieldset to. Roles not assigned in the emergent list will not see the fieldset.
+{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
 ### Common
 
-* **Name** – This allows you to set the name.
-* **Tab index** – This allows you to set the tab index value.
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ## Usage Examples
 
@@ -50,3 +44,4 @@ Another example use is ???
 ## Limitations
 
 * This widget should only be used to group widgets belonging to a form
+* The legend supports text only; you cannot place widgets in a legend

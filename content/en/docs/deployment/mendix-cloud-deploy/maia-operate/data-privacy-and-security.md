@@ -54,7 +54,7 @@ Yes. Two layers run on every request, before the model sees any data:
 
 If a prompt-injection attempt is detected, the request is blocked.
 
-The sensitive information filter is based on machine learning, so detection is probabilistic. You remain responsible for your applications logs.
+The sensitive information filter is based on machine learning, so detection is probabilistic. You remain responsible for your applications' logs.
 
 ## Is the Data Processed Securely? {#secure-processing}
 
@@ -65,7 +65,9 @@ Data is encrypted in transit and at rest:
 
 ## Who Has Access to My Data? {#access}
 
-* **Mendix employees** – Support and technical teams need your permission before they can access your logs. Log download events are recorded in the activity logs.
+Access to your data is limited as follows:
+
+* **Mendix employees** – Mendix Support and technical teams need your permission before they can access your logs. Log download events are recorded in the activity logs.
 * **Model providers** – Model providers have no access to the Amazon Bedrock deployment accounts, logs, prompts, or completions.
 
 ## Do Model Providers Retain or Reuse My Data? {#provider-retention}
@@ -80,15 +82,9 @@ No. Prompts and responses are not stored, and Amazon Bedrock model invocation lo
 
 The service records the environment ID, so Mendix can identify the environment for which a summary was requested. It does not record which user clicked **Explain**.
 
-{{% todo %}}
-Waiting on the #dep team to confirm whether Mendix Portal records which user clicked Explain.
-{{% /todo %}}
-
 ## Can I Disable This Feature for My Company? {#disable-feature}
 
-{{% todo %}}
-Answer not yet confirmed.
-{{% /todo %}}
+Yes. To disable it, contact Mendix Support.
 
 ## Read More
 

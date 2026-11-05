@@ -89,7 +89,7 @@ Mendix recommends keeping the **Runtime port** in your [configuration](/refguide
 
 ##### App Not Running in MIN
 
-If you have completed all the setup guidance for your app and Make It Native (setting up ports, resolving errors in your app, etc.) and it still does not load on your device, it might be due to a setting regarding edge traversal: **Allow Edge traversal**.
+If you have completed all the set up guidance for your app and Make It Native (setting up ports, resolving errors in your app, etc.) and it still does not load on your device, it might be due to a setting regarding edge traversal: **Allow Edge traversal**.
 
 To fix this issue, please ensure after you confirm ports `8080` and `8083` are set up for Mendix per our generic [Firewall Settings requirements](/refguide10/system-requirements/#firewall-settings) or our Mac-specific [Paralells](/refguide10/using-mendix-studio-pro-on-a-mac/) requirements, then click the **Advanced** tab for those ports. There you can select the **Allow Edge Traversal** option for both ports so that your mobile testing app opens as expected.
 

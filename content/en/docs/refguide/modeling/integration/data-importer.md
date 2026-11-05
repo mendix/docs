@@ -47,7 +47,7 @@ CSV import supports multiple combinations of delimiter, quote, and escape charac
 
 Click **Preview Data** to view the data from the selected file.
 
-Data Importer creates the data structure based on the first ten rows of the source file and displays it in the **Structure elements** section. If the file settings do not provide valid data, an error is displayed. To modify **Custom Name** or **Primitive Type**, click the edit icon ({{% icon name="pencil" %}}) in the bottom-right corner of the structure elements table.
+Data Importer creates the data structure based on the first ten rows of the source file and displays it in the **Source elements** section. If the file settings do not provide valid data, an error is displayed. To modify **Custom Name** or **Primitive Type**, edit the values directly in the source elements table.
 
 {{% alert color="warning" %}}
 Column names that do not adhere to Mendix naming conventions are autocorrected. For Number cell types, the target Mendix type is mapped to **Decimal** to support both integers and decimals.
@@ -55,27 +55,33 @@ Column names that do not adhere to Mendix naming conventions are autocorrected. 
 
 You can now use the data importer document in the import mapping. For more information, see the [Using in an Import Mapping](#using-import-mapping) section below.
 
-## Editing an Entity
+## Mapping to an Entity
 
-Optionally, if you are not using an import mapping, you can create a mapping flow first by adjusting the entity structure in the **Entity Preview** section before creating the entity.
+After previewing the data, go to the **Mapping** tab. You can either create a new entity based on the structure elements, or map the data to an existing non-persistable entity.
 
-Click the edit icon ({{% icon name="pencil" %}}) in the bottom-right corner of **Entity Preview**. In the dialog box:
+### Creating an Entity {#creating-an-entity}
+
+To create a new entity for the imported data, click **Create Entity**. In the dialog box:
 
 * Change the entity **Name**.
-* Rename attributes: **Original Name** shows the column name from the input file, and **Attribute Name** is the new name you want to assign to that column.
-* Change the data type of an attribute by selecting a value from the drop-down list.
+* Rename Attributes: Use **Attribute Name** to specify the new name to the attribute in the entity.
+* Change Attribute Data Type: Select the desired data type from the **Primitive Type** column drop-down list in the **Source Element** tab.
+* Select which columns to include in the entity by selecting or clearing the checkbox next to each column.
 
-In the **Entity Preview**, select which columns to import by selecting or clearing the checkbox next to each attribute.
-
-Click **OK** to save your changes, or click **Cancel** to discard them.
+Click **Create** to create the entity. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data. For more details, see the [Using in the Import Data from File Activity](#using-in-the-activity) section below.
 
 {{% alert color="warning" %}}
 **Enum** is not supported as a target data type. Runtime exceptions can occur if the input data cannot be converted to the target data type, for example because of invalid data, data truncation, or casting issues.
 {{% /alert %}}
 
-## Creating an Entity
+### Selecting an Existing Entity {#selecting-an-existing-entity}
 
-After reviewing the entity structure in **Entity Preview**, click **Create Entity**. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data. For more details, see the [Using in the Import Data from File Activity](#using-in-the-activity) section below.
+To map the imported data to an existing non-persistable entity instead of creating a new one, click **Select Entity**, then select the entity in the dialog box and click **Select**.
+
+The **Mapping** tab then displays a table for mapping each imported column to an attribute of the selected entity. To map the columns, do one of the following:
+
+* Select an attribute for each column manually from the drop-down list.
+* Click **Map Attribute by Name** to automatically map columns to attributes with matching names.
 
 To change the source file at any point, click **Remove File**, upload a new file, and reconfigure the document. Note that removing the file clears all structure elements and configured mappings.
 

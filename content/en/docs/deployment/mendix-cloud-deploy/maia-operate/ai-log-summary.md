@@ -51,7 +51,10 @@ Summaries are AI-generated and may miss edge cases or omit patterns that appear 
 
 Log retention follows the existing log retention policies for your environment, independent of this feature. For more information, refer to the [Rotation and Retention Schedule](/developerportal/operate/logs/#retention-schedule) section of *Logs*.
 
+For answers to common questions about how your data is processed and secured, see [Maia Operate Data Privacy and Security FAQ](/developerportal/maia-operate/data-privacy-and-security/).
+
 ## Read More
 
+* [Maia Operate Data Privacy and Security FAQ](/developerportal/maia-operate/data-privacy-and-security/)
 * [Logs](/developerportal/operate/logs/)
 * [Monitoring Your Mendix Apps](/developerportal/operate/monitoring-application-health/)

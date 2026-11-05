@@ -39,7 +39,7 @@ For example, use a fieldset to group input widgets that belong to the same addre
 
 Another common use case for fieldset widgets is using them to group contact information:
 
-```
+```html
 <form>
     <fieldset>
         <legend>Contact Information</legend>

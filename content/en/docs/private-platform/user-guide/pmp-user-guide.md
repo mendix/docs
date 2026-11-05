@@ -26,6 +26,8 @@ On the **Profile** page, you can view general information about yourself. This i
 You can update your full name yourself. To update other information in this section, contact your Private Mendix Platform administrator.
 {{% /alert %}}
 
+{{< figure src="/attachments/private-platform/pmp-manage-profile.png" class="no-border" >}}
+
 ## Change Password
 
 In the **Change Password** tab, you can set a new password for your account. The password must fulfill the following criteria:
@@ -37,15 +39,15 @@ In the **Change Password** tab, you can set a new password for your account. The
 
 ## Personal Access Tokens
 
-Personal Access Tokens (PATs) are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not present at the time of access, so the user cannot log in using a browser (web SSO). The client application can be any application (that is, even an app not built with Mendix).
+A Personal Access Token (PAT) is used to identify the user account and its corresponding privileges and permissions when interacting with Private Mendix Platform over APIs and other non-GUI interactions, for example, when setting up automated API calls to and from an external service. For more information, see [APIs for Private Mendix Platform](/apidocs-mxsdk/apidocs/private-platform/).
 
 ### Creating a PAT {#create-pat}
 
 On the **Personal Access Tokens** page, you can create a new PAT. To do so, click **New Token**, and set the following characteristics of the PAT:
 
 * **Token Name** - Give the PAT a name that reflects where or why you intend to use it.
-* **Expiry Date** - Specify the date and time after which the token will expire.
-* **Scopes** - Select the scopes (authorizations) that you want to grant to your PAT.
+* **Expiry Date** - Specify the date and time after which the token will expire. As a best practice, never set the expiration time for the token to be more than one year.
+* **Scopes** - Select the scopes (authorizations) that you want to grant to your PAT. To reduce risk and impact, follow the least-privilege principle for token scope and use different tokens for different purposes instead of creating one token with a large scope.
 
 After you click **Create**, the PAT appears on the **Personal Access Tokens** page. To copy it to your clipboard, click **Actions > Copy PAT**.
 
@@ -61,15 +63,15 @@ To delete a PAT, click **Actions > Delete**. This will prevent anyone who has ob
 
 ## Service Credentials {#service-credentials}
 
-On the **Service Credentials** page, you can view and manage the credentials for various external systems that Private Mendix Platform can connect with. These services include GitHub, GitLab, Bitbucket, and AzureDevOps, used for managing your app projects.
+On the **Service Credentials** page, you can view and manage the credentials for various external systems that Private Mendix Platform can connect with. These services include GitHub, GitLab, Bitbucket, and AzureDevOps, used for managing your app projects. Depending on settings configured by the admin, they can automatically provisioned through the integrations or manually configured for the user account.
 
 To create or work on app projects in Private Mendix Platform, you must create an access token in GitHub, GitLab, AzureDevOps, or Bitbucket, and then add it on the **Register Credentials** screen. The token must have read and write access to a repository where the app project is stored.
 
-## Notifications
+## Notifications {#notifications}
 
 On the **Notification Settings** page, you can enable or disable the following notification types for Private Mendix Platform:
 
 * **Alerts** - Notifications about events that require attention, for example, app availability and status
 * **Following** - Notifications about comments and reactions to your stories, posts, or projects
-* ** Recommendation** - Notifications about new Private Mendix Platform releases
+* **Recommendation** - Notifications about new Private Mendix Platform releases
 * **Requests/Approvals** - Notifications about status changes for your requests, for example, the publication of a Marketplace content item

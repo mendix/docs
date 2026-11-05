@@ -9,9 +9,9 @@ weight: 20
 
 Refer to the following sections for information about creating, managing, and deploying your applications.
 
-## Installing Studio Pro
+## Installing Studio Pro {#install-studio-pro}
 
-Before you can create your first app, you must first install Mendix Studio Pro by performing the following steps:
+Before you can create your first app, you must first install Mendix Studio Pro. Not all Studio Pro versions published by Mendix on the [Mendix Marketplace](https://marketplace.mendix.com/) are compatible with Private Mendix Platform. Private Mendix Platform offers predefined compatible versions of Studio Pro, which are tied to supported Runtime versions and reusable components (such as Starter App templates).
 
 1. Log in to Private Mendix Platform.
 2. On the home page, click **Download Studio Pro**

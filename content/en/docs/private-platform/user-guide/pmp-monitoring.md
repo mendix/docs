@@ -16,7 +16,7 @@ From the **Logs** page, you can access the logs produced by your app. For inform
 
 To access the logs, perform the following steps:
 
-1. Open your app in the Private Mendix Platform portal.
+1. Click on your app on the Private Mendix Platform [Home page](/private-mendix-platform/reference-guide/common/signin/).
 2. In the left navigation pane, click **Monitoring > Logs & Events**.
 3. Select the environment for which you want to view the logs.
 

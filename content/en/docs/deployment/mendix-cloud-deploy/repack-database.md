@@ -4,9 +4,13 @@ linktitle: "Repacking the Database"
 url: /developerportal/deploy/repack-database/
 weight: 80
 description: "Describes how to reclaim database disk space in Mendix Cloud by repacking the database."
+aliases:
+    - /developerportal/operate/database-size-reduction/
 ---
 
 ## Introduction
+
+The database of a Mendix app in Mendix Cloud usually grows over time. Deleting records does not free the physical disk space, because the space is kept so that new records can reuse it.
 
 PostgreSQL keeps old versions of updated and deleted rows to support concurrent reads. Over time, these dead rows can accumulate and cause table bloat, which increases disk usage and can reduce query performance. Mendix Cloud runs autovacuum on all PostgreSQL databases, which is sufficient for most apps. For apps with a high number of transactions that create, update, and delete large amounts of data, autovacuum can fail to keep up.
 

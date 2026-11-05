@@ -36,7 +36,10 @@ These are the available [app commands](/refguide/mx-command-line-tool/app/):
 | [show-java-version](/refguide/mx-command-line-tool/app/#show-java-version) | Shows the configured Java version of the app. |
 | [sync-java-dependencies](/refguide/mx-command-line-tool/app/#java-dependencies) | Synchronizes the managed Java dependencies that are configured in the modules of the app. |
 | [translate](/refguide/mx-command-line-tool/app/#translate) | Exports and imports all translatable texts included in your application. |
-| [analyze-mpr](/refguide/mx-command-line-tool/analyze-mpr/) | Shows the contents of the MPR file and their contribution to file size. |
+| [update-widgets](/refguide/mx-command-line-tool/app/#update-widgets) | Updates widgets in the Mendix project to match widget definitions in MPK files. |
+| [collect-native-deps](/refguide/mx-command-line-tool/app/#collect-native-deps) | Collects native dependencies. |
+| [rename-design-properties](/refguide/mx-command-line-tool/app/#rename-design-properties) | Updates renamed design properties. |
+| [analyze-mpr](/refguide/mx-command-line-tool/analyze-mpr/) | Shows the contents of the *.mpr* file and their contribution to file size. |
 
 ### Adaptable Solutions Commands
 
@@ -75,6 +78,7 @@ These are the available [merging and diffing commands](/refguide/mx-command-line
 | --- | --- |
 | [merge](/refguide/mx-command-line-tool/merge/#merge) | Merges the *.mpr* files. |
 | [diff](/refguide/mx-command-line-tool/merge/#diff) | Shows the diff of the *.mpr* files. |
+| [git-merge](/refguide/mx-command-line-tool/merge/#git-merge) | Merges a conflicting *.mpr* file. |
 | [dump-mpr](/refguide/mx-command-line-tool/dump-mpr/) | Creates a JSON description of the model of a Mendix app. |
 
 ### Private Values Commands

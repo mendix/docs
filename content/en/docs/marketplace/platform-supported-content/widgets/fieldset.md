@@ -37,9 +37,24 @@ For example, use a fieldset to group input widgets that belong to the same addre
 
 {{< figure src="/attachments/appstore/platform-supported-content/widgets/fieldset/fieldset-address-example.png" alt="Grouping widgets for an address using Fieldset" class="no-border" max-width=80% >}}
 
-Another example use is ???
+Another common use case for fieldset widgets is using them to group contact information:
 
-Another example use is ???
+```
+<form>
+    <fieldset>
+        <legend>Contact Information</legend>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br>
+        <fieldset>
+            <legend>Alternative Contact</legend>
+            <label for="altPhone">Alternative Phone:</label>
+            <input type="tel" id="altPhone" name="altPhone"><br>
+            <label for="altEmail">Alternative Email:</label>
+            <input type="email" id="altEmail" name="altEmail">
+        </fieldset>
+    </fieldset>
+</form>
+```
 
 ## Limitations
 

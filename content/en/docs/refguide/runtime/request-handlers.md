@@ -7,7 +7,7 @@ weight: 45
 
 ## Introduction
 
-Communication between the Mendix client and the runtime server happens through various different request handlers. 
+The Mendix Runtime receives requests through various request handlers. Standard request handlers handle the communication between the Mendix client and the runtime server. Other request handlers expose the services that your app publishes.
 
 ## Standard Request Handlers
 
@@ -32,6 +32,33 @@ The following standard request handlers are used:
 {{% alert color="info" %}}
 The admin port `root` (`/`) URL is not exposed to clients. It uses a different port from the standard request handlers and is only accessible to system administrators.
 {{% /alert %}}
+
+## Service Endpoints {#service-endpoints}
+
+Apps that contain published services expose additional endpoints for handling service requests and for documentation.
+
+### Published Service Request Handlers {#published-service-handlers}
+
+[Published REST services](/refguide/published-rest-services/) and [published OData services](/refguide/published-odata-services/) register their own request handlers, based on the location that you configure for each service. For example, a published REST service with the location `rest/myservice/v1` is served on `/rest/myservice/v1`.
+
+If the app contains published web services, the `/ws` request handler handles the web service requests.
+
+### Documentation Endpoints {#documentation-endpoints}
+
+The following endpoints provide documentation for the services published by your app:
+
+| Endpoint | Enabled When | Description |
+| -------- | ------------ | ----------- |
+| `/api-doc` | The app contains a published REST, OData, or web service. | Overview page that links to the other documentation endpoints. See [Mendix Runtime](/refguide/runtime/#apis). |
+| `/rest-doc` | The app contains a [published REST service](/refguide/published-rest-services/). | Serves the [OpenAPI documentation](/refguide/open-api/) of each published REST service. |
+| `/odata-doc` | The app contains a [published OData service](/refguide/published-odata-services/). | Serves the API documentation of each published OData service. See [API Documentation](/refguide/published-odata-services/#api-documentation). |
+| `/ws-doc` | The app contains a [published web service](/refguide/published-web-services/). | Serves the documentation of each published web service, including its WSDL. |
+
+#### Restricting Access to Documentation Endpoints {#restricting-access}
+
+Mendix Cloud denies access to the documentation endpoints by default. The runtime has no setting to disable them. On other deployments, you can restrict access to these paths with a reverse proxy or a web application firewall (WAF).
+
+For more information, see [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) and [Applying Access Restrictions to Unnecessary Request Handlers](/howto/security/best-practices-security/#request-handlers).
 
 ## Custom Request Handlers
 

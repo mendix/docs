@@ -47,7 +47,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 To build a group box widget for native mobile, you will follow these steps:
 
 1. Scaffold a pluggable widget app.
-2. Create a Mendix test app.
+2. Create a Mendix test app (MyTestProject).
 3. Build the group box widget.
 
 The following subsections will elaborate on each of these steps.

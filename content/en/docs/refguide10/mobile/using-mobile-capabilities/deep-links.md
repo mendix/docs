@@ -31,6 +31,10 @@ For this tutorial, Mendix recommends running your app from source against a loca
 
 Please note that the Make It Native app has already the registered schema `makeitnative://` and can be used out of the box. To use the Make It Native app with that schema, see the [Using Deep Linking in Your App](#using-deep-linking) section below. If you want to change this schema, see [How to Create a Custom Developer App](/refguide10/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) to build your own custom developer app and then use the [Setting up App Deep Linking](#set-up) section below to change its schema.
 
+{{% alert color="info" %}}
+Mendix recommends testing deep links in a custom developer app or your own app build instead of the Make It Native app. When the Make It Native app receives a deep link, it reloads your app, which can show an error message in addition to the result of your deep link handling.
+{{% /alert %}}
+
 ## Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
@@ -128,11 +132,11 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 1. To parse the URL into an object, you need a non-persistable entity to hold the URL parts. The Native Mobile Resources module does not include this entity, so you create it yourself:
 
     1. In your module's domain model, add a non-persistable entity named *DeepLinkParameter*.
-    1. Add a String attribute for each URL part your implementation requires, using the attribute names from the table in [Parsing a URL To a Mendix Object](#parsing-url). For this tutorial, add at least *Href* and *Host*. The attribute names are not case sensitive.
+    1. Add a string attribute for each URL part your implementation requires, using the attribute names from the table in [Parsing a URL To a Mendix Object](#parsing-url). For this tutorial, add at least *Href* and *Host*. The attribute names are not case sensitive.
 
         You can also add attributes for query string keys (for example `?name=Jhon&title=sir`) and for path segments, which are split into `Path0`, `Path1`, and more. The image below shows an example:
 
-        {{< figure src="/attachments/howto10/mobile/native-mobile/implementation/native-deep-link/entity-parameter.png" alt="DeepLinkParameter entity with String attributes" class="no-border" >}}
+        {{< figure src="/attachments/howto10/mobile/native-mobile/implementation/native-deep-link/entity-parameter.png" alt="DeepLinkParameter entity with string attributes" class="no-border" >}}
 
     1. If your app has security enabled, configure the entity's access rules so that your user roles can create the entity and read and write its attributes.
 
@@ -157,7 +161,32 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 
 ### Testing Deep Linking
 
-Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative://task/123}, to your web page, then re-run your app. Open the your app in your device's browser by typing *{your local IP address}:8080* into the browser. With the app loaded, tap the links to test. You should be brought out of your browser and into your app's page!
+Add a few test links, for example `app://myapp/task/123` (or `makeitnative://task/123` for the Make It Native app), to a page in your app's responsive web navigation profile, then re-run your app. On your device, open the app in a browser by going to *{your local IP address}:8080*. Tap one of the links. Your device switches from the browser to your native app, and **DL_ShowUrlDetails** shows a message with the URL and its host.
+
+### Opening a Specific Page {#open-page}
+
+The message confirms that your app receives the URL. In most apps, you use the URL data to open a specific page instead. This example opens the details page of an invoice, based on an invoice number in the URL's query string, for example `app://myapp/invoice?number=INV-42`.
+
+This example assumes that your app has an *Invoice* entity with a string attribute *Number*, and an *Invoice_Details* page with an *Invoice* page parameter. Your **DeepLinkParameter** entity also needs the string attributes *Path0* and *Number*. Because native apps are [offline-first](/refguide10/mobile/building-efficient-mobile-apps/offlinefirst-data/), the invoice must be synchronized to the device.
+
+The table below shows where the parts of these URLs end up in the **DeepLinkParameter** object:
+
+| URL                                 | Host    | Path0     | Path1 | Number   |
+| ----------------------------------- | ------- | --------- | ----- | -------- |
+| `app://myapp/task/123`              | `myapp` | `task`    | `123` |          |
+| `app://myapp/invoice?number=INV-42` | `myapp` | `invoice` |       | `INV-42` |
+
+The host is the same for every link to your app, so use **Path0** to decide which page to open, and use query parameters such as `number` to pass values.
+
+To open the invoice instead of showing a message, extend **DL_ShowUrlDetails**. After **Parse URL to Object**, the nanoflow needs to do the following:
+
+1. Check whether the link is meant for an invoice, which is the case when `$DeepLinkParameter/Path0` is `invoice`. Links meant for other pages then only open the app. For more information, see [Decision](/refguide10/decision/).
+1. Retrieve the invoice whose *Number* matches `$DeepLinkParameter/Number` from the database. For more information, see [Retrieve](/refguide10/retrieve/).
+1. Open *Invoice_Details* with the retrieved invoice, or show a message if no invoice was found. For more information, see [Show Page](/refguide10/show-page/).
+
+If you test with the Make It Native app, a link such as `makeitnative://invoice?number=INV-42` has `invoice` as its host, so check `$DeepLinkParameter/Host` instead of `$DeepLinkParameter/Path0`.
+
+To test the example, add the link `app://myapp/invoice?number=INV-42` to your test page and tap it. Your app opens the details page of invoice INV-42.
 
 ## Read more
 

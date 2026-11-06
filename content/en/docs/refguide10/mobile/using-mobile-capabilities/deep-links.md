@@ -146,7 +146,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Click **Parameters** > **New**, write *$Parameter/Host*, and click **OK**.
 1. Right-click your **Parse URL to Object** activity, click **Set error handling**, and click **Custom without rollback**.
 1. Drop an **End event** below your **Parse URL to Object** activity. Drag a line from **Parse URL to Object** down to the end event, right click it, and click **Set as error handler**.
-1. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.*. Your finished nanoflow will look like this:
+1. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.* Your finished nanoflow will look like this:
 
     {{< figure src="/attachments/howto10/mobile/native-mobile/implementation/native-deep-link/deep-link-nano-full.png" alt="full nanoflow" class="no-border" >}}
 

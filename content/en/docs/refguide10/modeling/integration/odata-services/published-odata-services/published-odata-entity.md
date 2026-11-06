@@ -125,7 +125,9 @@ In the publishing app, you can use a validation message action to report a valid
 There are two options to handle an incoming GET request for a published entity:
 
 1. **Read from database** – This action will parse the incoming query to a database query and retrieve the data from the database. This is the default action for **Readable** section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
-2. **Call a microflow** – This action will call a microflow. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request.
+2. **Call a microflow** – This action will call a microflow. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request. For more information, see [Handling a Request with a Microflow](#handle-get-request).
+
+The resulting list of objects from either action is transformed into an OData payload. If this fails, the service returns a [status code](/refguide10/published-odata-services/#status-codes) of `500`.
 
 You can also set the [query options](#query-options) for each request.
 
@@ -136,6 +138,44 @@ When **Readable** is enabled, you can configure how data is queried in the [expo
 {{% alert type="info" %}}
 Support for publishing entities without the **Readable** capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
 {{% /alert %}}
+
+#### Handling a Request with a Microflow {#handle-get-request}
+
+The microflow is executed when a consumer sends a request to the service endpoint. The microflow takes care of the following:
+
+1. Parse the incoming OData query.
+2. Decide what data needs to be collected.
+3. Retrieve the required data.
+4. Retrieve the count when requested, storing the count value in the **ODataResponse** object.
+5. Return a list of objects that matches the published entity.
+
+{{% alert color="info" %}}
+When you use a microflow to provide data, any security constraints are applied to the result of the microflow.
+{{% /alert %}}
+
+The microflow accepts the following optional parameters:
+
+* **HttpRequest** – The first parameter is an HTTP request of the entity type [System.HttpRequest](/refguide10/http-request-and-response-entities/).
+
+    When a consumer sends a request to the published OData service, the `HttpRequest` string attribute `Uri` contains the OData query that the consumer requested. Based on that information, the microflow needs to decide what to return. For more information about how OData v4 requests work, see [OData v4.0. Part 2: URL Conventions Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
+
+* **ODataResponse** – The second parameter is an OData response of the entity type **System.ODataResponse**.
+
+    The **ODataResponse** entity has a **Count** attribute where you can store the count value.
+
+    OData has two different count types:
+
+    1. **Count as a request** – Use this when the consumer is only interested in the number of objects and not the objects themselves.
+
+        For example, the request `persons/$count?$filter=name eq 'John'` returns the number of people named John.
+
+        If **ODataResponse** is present as a microflow parameter, the **Count** attribute value is returned regardless of the resulting list of objects. Otherwise, the objects in the resulting list are counted.
+
+    2. **Inline count in the request** – Use this when the consumer is interested in the total number of objects while retrieving some of the objects.
+
+        For example, the request `persons?$count=true&$skip=5&$top=5` returns an OData payload with a maximum of five objects, and a count of the total number of objects that would have been returned if the request did not include `$skip` and `$top`. The count is included in the payload. This is useful when paging through all the objects.
+
+        If **ODataResponse** is present as a microflow parameter, the **Count** attribute value is returned regardless of the resulting list of objects. Otherwise, the count is `-1`, which means not defined and is the default value. A **Count** value of `0` means that there are no records.
 
 #### Query Options {#query-options}
 

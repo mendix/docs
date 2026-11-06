@@ -7,7 +7,7 @@ weight: 80
 
 ## Introduction
 
-Features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) expand on existing OData capabilities in Studio Pro. These features allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with [external entities](/refguide9/external-entities/) and the [Catalog](/catalog/)). 
+Features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) expand on existing OData capabilities in Studio Pro. These features allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with [external entities](/refguide9/external-entities/) and the [Catalog](/catalog/). 
 
 You can also use these features to more easily [build connectors](/appstore/creating-content/connector-guide-build/) that access external data. This set of features adds to the tools described in [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), and are collectively referred to as *Connector Kit 2.0*.
 
@@ -50,7 +50,7 @@ Publishing a non-persistable entity as a published OData resource is supported f
 
 ## Data Sources for Published OData Resources {#odata-data-sources}
 
-In Studio Pro, you can expose entities as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service by using a microflow that determines the result of the incoming request. This is now possible for the [Readable](/refguide9/published-odata-resource/#readable) capability of your service you can define how your resources should be retrieved and stored.
+In Studio Pro, you can expose entities as OData resources by adding them to a published OData service. You can expose any number of related resources in a published OData service by using a microflow that determines the result of the incoming request. This is possible for the [Readable](/refguide9/published-odata-resource/#readable) capability of your service, where you can define how your resources should be retrieved and stored.
 
 When a consuming app reads your published OData service, it sends a GET request. You can handle an incoming GET request for an OData resource in the following ways:
 
@@ -91,7 +91,7 @@ When you use a microflow to provide data, any security constraints are applied t
 
 * **HttpRequest** – The first accepted parameter is an HTTP request of the entity type **System.HttpRequest**. This parameter is optional.
 
-    When a consumer sends a request to the published OData service, the `HttpRequest` string attribute *Uri* will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData v4.0. Part 2: URL Conections Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
+    When a consumer sends a request to the published OData service, the `HttpRequest` string attribute `Uri` will contain the OData query that consumer requested. Based on that information, the microflow needs to decide what should be returned. For more information on how an OData v4 requests work, see [OData v4.0. Part 2: URL Conventions Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
 
 * **ODataResponse** – The second accepted parameter is an OData response of the entity type **System.ODataResponse**. This parameter is optional.
 
@@ -109,11 +109,11 @@ When you use a microflow to provide data, any security constraints are applied t
 
     1. **Inline count in the request** – Use this when the consumer is interested in the total number of objects while retrieving some of the objects.
 
-        For example, consider the following request: `persons?$count=true&$skip=5&top=5`
+        For example, consider the following request: `persons?$count=true&$skip=5&$top=5`
 
-        This returns an OData payload with maximum give objects, and a count of the total number of objects that would have been returned if the request did not include $skip and $top. The count information will be included in the payload. This information is useful when paging through all the objects.
+        This returns an OData payload with maximum five objects, and a count of the total number of objects that would have been returned if the request did not include $skip and $top. The count information will be included in the payload. This information is useful when paging through all the objects.
 
-        If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A **Count** value of 0 means that there no record.
+        If the **ODataResponse** is present as a microflow parameter, then it will return the **Count** attribute value regardless of the result list of objects. Otherwise, it will return -1 for not defined, which is the default value. A **Count** value of 0 means that there are no records.
 
 {{% alert color="info" %}}
 In Studio Pro [9.16](/releasenotes/studio-pro/9.16/) and below, the inline count value will be retrieved from the count microflow. For Studio Pro [9.17](/releasenotes/studio-pro/9.17/) and above, the count value can be stored in the `ODataResponse` object.
@@ -125,7 +125,7 @@ Select which attribute(s) to use as a [key](/refguide9/published-odata-resource/
 
 To learn more about selecting a key, see the [Key](/refguide9/published-odata-resource/#key) section of *Published OData Resource*.
 
-### Selecting Attributes as a Key {#select-key}
+### Selecting Attributes as a Key {#select-attributes-key}
 
 To select different attributes as a key, do the following:
 
@@ -200,7 +200,7 @@ Set up an X client module that allows users to input an X ID and communicates to
 
     {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/showuserpage-microflow.png" alt="Microflow that handles TwitterClientInput request and shows a page." class="no-border" >}}
 
-5. On the **XPage**, use a **Data Grid**, and pull data **by Association** from the to get the tweets and followers connected to the user.
+5. On the **XPage**, use a **Data Grid**, and pull data **by Association** from the **User** entity to get the tweets and followers connected to the user.
 
 #### Parsing the URI
 
@@ -214,18 +214,18 @@ Ensure that you have created microflows for all entities used in your connector.
 
 ## Updatable Operational Data Stores {#operational-data-stores}
 
-Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/refguide9/create-a-basic-data-layer/) for other Mendix apps. For example, you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, can provide full read-write APIs to your frontend apps. To ensure data consistency, you can use [OData as a data source microflows](#odata-data-sources) to update your backend systems when a front-end app changes data through an OData API.
+Wrapped OData APIs can function as an operational data store, or as a [Data Layer](/refguide9/create-a-basic-data-layer/) for other Mendix apps. For example, you have one Mendix app where you define a central data model that is being used by multiple frontend apps. This central app gets data from different backend systems, caches it, and makes it available as a unified model to the frontend apps. With OData, you can provide full read-write APIs to your frontend apps. To ensure data consistency, you can use [OData as a data source microflows](#odata-data-sources) to update your backend systems when a front-end app changes data through an OData API.
 
 Operational data stores are often used to unify and cache external data used by multiple apps. Reasons for this include the following:
 
-* Service APIs do not fit well with interactive use by frontend apps (no sorting,paging, filtering available on the APIs).
+* Service APIs do not fit well with interactive use by frontend apps (no sorting, paging, filtering available on the APIs).
 * You want to centrally manage security on the data, instead of handling this in every frontend app.
 * You want to simplify the data model by unifying data from different services.
 
 To implement a low-code operational data store, include these steps:
 
 * Define a unified model using persistable entities.
-* Cache data in a persistable entity. When you call the OData source, it will any updates since it was last called, and will retrieve older records from a local database.
+* Cache data in a persistable entity. When you call the OData source, it will retrieve any updates since it was last called, and will retrieve older records from a local database.
 * Expose the unified model with OData, including write-back logic in your microflows.
 
 For general information on building connectors, see the [Build Connectors](/appstore/creating-content/connector-guide-build/) guide.

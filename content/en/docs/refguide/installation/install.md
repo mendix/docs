@@ -104,11 +104,11 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
          * On ARM64, rename *windowsdesktop-runtime-10.0.7-win-arm64.exe* to *windowsdesktop-runtime-10.0-arm64.exe*
    2. Eclipse Temurin JDK
       * For Studio Pro versions 11.13 and below, rename the Java Development Kit 21 *msi*
-         * On x64, rename *OpenJDK25U-jdk_x64_windows_hotspot_25.0.3_9.msi* to *adoptiumjdk_25_x64.msi*
-         * On ARM64, rename *OpenJDK25U-jdk_aarch64_windows_hotspot_25.0.3_9.msi* to *adoptiumjdk_25_arm64.msi*
+         * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.13_9.msi* to *adoptiumjdk_21_x64.msi*
+         * On ARM64, rename *microsoft-jdk-21.0.13.0.2-windows-aarch64.msi* to *microsoftjdk_21_arm64.msi*
       * For Studio Pro versions 11.14 and above, rename the Java Development Kit 25 *msi*
-         * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_x64.msi*
-         * On ARM64, rename *OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_arm64.msi*
+         * On x64, rename *OpenJDK25U-jdk_x64_windows_hotspot_25.0.5_8.msi* to *adoptiumjdk_25_x64.msi*
+         * On ARM64, rename *microsoft-jdk-25.0.5.0.2-windows-aarch64.msi* to *microsoftjdk_25_arm64.msi*
    3. Visual C++ Redistributable for Visual Studio 2019 (x64)
       * Rename the executable 
         * For example, *VC_redist.x64.exe* to *vcredist2019_x64.exe*

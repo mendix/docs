@@ -79,7 +79,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 * Camera functions - We added functions for barcode scanning and motion detection with camera devices. For more information, see [Workstation Commons: Camera](/mendix-workstation/commons/#camera).
 * Printing functions - We added functions to print plain text, raw printer commands, and PDF documents. For more information, see [Workstation Commons: Printer](/mendix-workstation/commons/#printer).
-* Message parsing - We added functions that convert the messages received from Bluetooth, camera, file, and printer devices into objects. For more information, see [Workstation Commons: Parsing Messages](/mendix-workstation/commons/#parsing-messages).
+* Message parsing - We added functions that convert the messages received from Bluetooth, camera, card reader, file, and printer devices into Mendix objects. For more information, see [Workstation Commons: Parsing Messages](/mendix-workstation/commons/#parsing-messages).
 * General utilities - We added functions to encode and decode Base64 content. For more information, see [Workstation Commons: General Utils](/mendix-workstation/commons/#general-utils).
 
 #### Improvements

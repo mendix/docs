@@ -189,7 +189,7 @@ To enable custom LLM provider configuration, follow these steps:
 After enabling this feature, a **Settings** ({{% icon name="cog" %}}) icon appears in the upper-right corner of the Maia pane.
 
 {{% alert color="info" %}}
-Mendix recommends using the same model that Maia Make uses by default. For the current model, see [Maia Third-Party Services](/refguide/mendix-ai-assistance/#maia-third-party-services).
+Mendix recommends using the same model that Maia Make uses by default. For the current model, see the [Maia Third-Party Services](/refguide/mendix-ai-assistance/#maia-third-party-services) section in *Mendix AI Assistance (Maia)*.
 {{% /alert %}}
 
 ### Provider Configuration {#provider-configuration}

@@ -161,8 +161,7 @@ General Availability means that a feature is available for all users. This type 
 | Cluster Manager API | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
 | Multiple Build and Deploy Pipelines | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
 | Enhanced Logging, Events, and Metrics | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
-| CI/CD for Windows Server | Beta: Private Mendix Platform 2.9 (November 2026) |
-| Maia Operate on Private Mendix Platform | Beta: Private Mendix Platform 2.9 (November 2026) |
+| Azure DevOps Server support | Private Mendix Platform 2.8.2 (November 2026) |
 
 ## Siemens Xcelerator (Integrations)
 

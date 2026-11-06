@@ -132,11 +132,11 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 1. To parse the URL into an object, you need a non-persistable entity to hold the URL parts. The Native Mobile Resources module does not include this entity, so you create it yourself:
 
     1. In your module's domain model, add a non-persistable entity named *DeepLinkParameter*.
-    1. Add a String attribute for each URL part your implementation requires, using the attribute names from the table in [Parsing a URL To a Mendix Object](#parsing-url). For this tutorial, add at least *Href* and *Host*. The attribute names are not case sensitive.
+    1. Add a string attribute for each URL part your implementation requires, using the attribute names from the table in [Parsing a URL To a Mendix Object](#parsing-url). For this tutorial, add at least *Href* and *Host*. The attribute names are not case sensitive.
 
         You can also add attributes for query string keys (for example `?name=Jhon&title=sir`) and for path segments, which are split into `Path0`, `Path1`, and more. The image below shows an example:
 
-        {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-deep-link/entity-parameter.png" alt="DeepLinkParameter entity with String attributes" class="no-border" >}}
+        {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-deep-link/entity-parameter.png" alt="DeepLinkParameter entity with string attributes" class="no-border" >}}
 
     1. If your app has security enabled, configure the entity's access rules so that your user roles can create the entity and read and write its attributes.
 
@@ -167,7 +167,7 @@ Add a few test links, for example `app://myapp/task/123` (or `makeitnative://tas
 
 The message confirms that your app receives the URL. In most apps, you use the URL data to open a specific page instead. This example opens the details page of an invoice, based on an invoice number in the URL's query string, for example `app://myapp/invoice?number=INV-42`.
 
-This example assumes that your app has an *Invoice* entity with a String attribute *Number*, and an *Invoice_Details* page with an *Invoice* page parameter. Your **DeepLinkParameter** entity also needs the String attributes *Path0* and *Number*. Because native apps are [offline-first](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/), the invoice must be synchronized to the device.
+This example assumes that your app has an *Invoice* entity with a string attribute *Number*, and an *Invoice_Details* page with an *Invoice* page parameter. Your **DeepLinkParameter** entity also needs the string attributes *Path0* and *Number*. Because native apps are [offline-first](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/), the invoice must be synchronized to the device.
 
 The table below shows where the parts of these URLs end up in the **DeepLinkParameter** object:
 

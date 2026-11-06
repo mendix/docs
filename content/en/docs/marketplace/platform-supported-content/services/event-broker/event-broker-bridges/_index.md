@@ -2,7 +2,7 @@
 title: "Mendix Event Broker Bridges"
 url: /appstore/services/event-broker-bridges/
 linktitle: "Event Broker Bridges"
-description: "Describes how to create and manage Mendix Event Broker Bridges to integrate the Event Broker with external technologies such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, and Apache Iceberg."
+description: "Describes how to create and manage Mendix Event Broker Bridges to integrate the Event Broker with external technologies such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, Apache Iceberg, and Kafka."
 aliases:
     - /appstore/services/event-broker/#manage-mx-broker-bridge
 ---
@@ -13,7 +13,7 @@ aliases:
 Mendix Event Broker Bridges were released for GA in 11.4.0.
 {{% /alert %}}
 
-Mendix Event Broker Bridges integrate the Mendix Event Broker with external technologies, such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, and Apache Iceberg. These bridges enable the exchange of events between your Mendix Cloud environment and external systems.
+Mendix Event Broker Bridges integrate the Mendix Event Broker with external technologies, such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, Apache Iceberg, and Kafka. These bridges enable the exchange of events between your Mendix Cloud environment and external systems.
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_bridges.png" alt="" class="no-border" >}}
 
@@ -43,6 +43,7 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
     * [Azure Blob Storage](/appstore/services/event-broker-bridges/blob-bridge/)
     * [AWS S3](/appstore/services/event-broker-bridges/aws-s3-bridge/) 
     * [Iceberg](/appstore/services/event-broker-bridges/iceberg-bridge/) 
+    * [Kafka](/appstore/services/event-broker-bridges/kafka-bridge/)
 
 3. Click **Next** to continue creating your bridge.
 4. After configuring the service and connecting events (as described in the bridge-specific sections above), click **Start** on the confirmation screen to deploy the bridge.

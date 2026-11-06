@@ -107,6 +107,7 @@ Mendix Event Broker Bridges support integration with the following technologies:
 * [Azure Blob Storage](/appstore/services/event-broker-bridges/blob-bridge/)
 * [AWS S3](/appstore/services/event-broker-bridges/aws-s3-bridge/) 
 * [Iceberg](/appstore/services/event-broker-bridges/iceberg-bridge/) 
+* [Kafka](/appstore/services/event-broker-bridges/kafka-bridge/)
 
 ## Externally Defined Events {#externally-defined-events}
 

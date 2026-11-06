@@ -23,13 +23,13 @@ The following example rewrites all Java files in your app's  `javasource/` folde
 
 This example assumes:
 
-* The Java executable is saved to `C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot\bin\java`
+* The Java executable is saved to `C:\Program Files\Eclipse Adoptium\jdk-21.0.13.9-hotspot\bin\java`
 * `jmt-1.0.2.jar` is saved to the current folder
 * Mendix 11.11.0 is installed at `C:\Program Files\Mendix\11.11.0`
 * Your app folder is `C:\Users\YourName\Mendix\MyApp`
 
 ```cmd
-"C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot\bin\java" -jar jmt-1.0.2.jar rewrite --to-version 11.11 --studio-pro "C:\Program Files\Mendix\11.11.0" --project-root "C:\Users\YourName\Mendix\MyApp"
+"C:\Program Files\Eclipse Adoptium\jdk-21.0.13.9-hotspot\bin\java" -jar jmt-1.0.2.jar rewrite --to-version 11.11 --studio-pro "C:\Program Files\Mendix\11.11.0" --project-root "C:\Users\YourName\Mendix\MyApp"
 ```
 
 Replace the paths and version number with the actual values for your installation. For all available commands and options, see [Commands](#commands) and [Options](#options).

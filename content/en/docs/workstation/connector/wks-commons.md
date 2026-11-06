@@ -157,9 +157,9 @@ To use it, show `Snippet_DeviceConsole` on a page and pass it a device, or open 
 
 ### UI Snippets
 
-The following are reusable web snippets for the screens which most Workstation apps need. Except for `Snippet_StationInfo`, they have the parameter `Device`, which is a `StationConnector.Device` object:
+The `UI_Snippets` folder contains reusable [snippets](/refguide/snippet/#introduction) to display common information about the station and your devices. All device snippets require a `StationConnector.Device` object or a specialization as a parameter.
 
-* `Snippet_StationInfo` - Displays the current workstation, and reports when the Workstation Client is unavailable. It has no parameter. Use it as a header or status panel.
+* `Snippet_StationInfo` - Displays workspace, station, and computer name, and links to a page to manage the key pair. For more information, see [Authenticating your App with Mendix Studio Pro: Configuring the App](/mendix-workstation/configure-connector/#configuring-the-app). It has no parameter. Use it as a header or status panel.
 * `Snippet_DeviceCard` - Displays a single device as a card, with its name, device class, state, and connect and disconnect controls.
 * `Snippet_DeviceState` - Shows the connection state of a device together with its connect and disconnect buttons.
 * `Snippet_DeviceConsole` - Provides the interactive [device logger](#device-logger) console.

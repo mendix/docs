@@ -117,8 +117,8 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
       * For Studio Pro versions 10.11.0 - 10.18.0, rename the Java Development Kit 21 (x64) *msi* 
         * For example, *OpenJDK21U-jdk_x64_windows_hotspot_21.0.4_7.msi* to *adoptiumjdk_21_x64.msi*
       * For Studio Pro versions 10.12.11 and 10.18.1 and above, rename the Java Development Kit 21 *msi*
-        * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_x64.msi*
-        * On ARM64, rename *OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_arm64.msi*
+        * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.13_9.msi* to *adoptiumjdk_21_x64.msi*
+        * On ARM64, rename *microsoft-jdk-21.0.13.0.2-windows-aarch64.msi* to *microsoftjdk_21_arm64.msi*
    3. Visual C++ Redistributable for Visual Studio 2019 (x64)
       * Rename the executable 
         * For example, *VC_redist.x64.exe* to *vcredist2019_x64.exe*

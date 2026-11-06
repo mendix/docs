@@ -8,7 +8,8 @@
     </div>
     <div class="expandable-table-inner">
         {{/* Strip leading indentation so tables indented inside a list are not rendered as code blocks */}}
-        {{ .Inner | replaceRE `(?m)^[ \t]+` "" | markdownify | safeHTML }}
+        {{/* Join lines that do not start with a pipe to the previous line, so multi-line output of shortcodes (for example, alert and figure) inside a table cell does not end the table row */}}
+        {{ .Inner | replaceRE `(?m)^[ \t]+` "" | replaceRE `\s*\n\s*([^|\s])` " $1" | markdownify | safeHTML }}
     </div>
 </div>
 

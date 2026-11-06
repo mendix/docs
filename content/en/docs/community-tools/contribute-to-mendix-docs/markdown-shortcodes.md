@@ -110,33 +110,52 @@ public class Hello1
 
 ### Expandable Tables
 
-Use the `expandable-table` shortcode to add an **Expand Table** button above a wide table. When readers click the button, the table opens in a window on the same page, which makes it easier to read. Place the table between the opening and closing tags, with a blank line after the opening tag and before the closing tag:
+Use the `expandable-table` shortcode to add an **Expand Table** button above a wide table. When readers click the button, the table opens in a window on the same page, which makes it easier to read. Place the table between the opening and closing tags, with a blank line after the opening tag and before the closing tag. Use the `<` delimiter, as in the following example:
 
-{{% expandable-table %}}
+{{< expandable-table >}}
 
 | Column1 | Column2 |
 | --- | --- |
 | Item1 | Item2 |
 | Item3 | Item4 |
 
-{{% /expandable-table %}}
+{{< /expandable-table >}}
 
 The optional `title` parameter sets the title shown at the top of the window. If you omit it or leave it blank, the window has no title.
 
 Here is an example:
 
-{{% expandable-table title="Title of the table" %}}
+{{< expandable-table title="Title of the table" >}}
 
 | Column1 | Column2 |
 | --- | --- |
 | Item1 | Item2 |
 | Item3 | Item4 |
 
-{{% /expandable-table %}}
+{{< /expandable-table >}}
+
+#### Shortcodes in Expandable Tables
+
+You can use other shortcodes, such as `alert` and `figure`, inside a table cell. Write the shortcode in the cell as you would elsewhere on the page. The expandable table joins the lines of the shortcode output, so the table row is not broken:
+
+{{< expandable-table title="Table with an alert" >}}
+
+| Column1 | Column2 |
+| --- | --- |
+| Item1 | Item2 {{% alert color="info" %}}This is an alert in a table cell.{{% /alert %}} |
+| Item3 | Item4 |
+
+{{< /expandable-table >}}
+
+Keep the following in mind:
+
+* Write each table row on a single line.
+* Place only table rows between the opening and closing tags. The shortcode joins any line that does not start with `|` to the previous line.
+* Fenced code blocks cannot be used in a table cell. Use inline code instead.
 
 #### Expandable Tables in Lists
 
-To use the shortcode in a list item, indent the shortcode tags and the table by four spaces, like any other content in the list item, and use the `<` delimiter instead of `%`. The shortcode removes the indentation from the table, so the table does not render as a code block:
+To use the shortcode in a list item, indent the shortcode tags and the table by four spaces, like any other content in the list item. The shortcode removes the indentation from the table, so the table does not render as a code block:
 
 1. Step 1.
 

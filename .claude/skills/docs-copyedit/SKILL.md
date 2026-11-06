@@ -1,15 +1,15 @@
 ---
-name: docs-polish
-description: Applies style guide standards to a documentation page without changing meaning or reorganizing structure. This includes fixing grammar, improving clarity and readability, simplifying complex sentences, using active voice, and standardizing terminology and formatting. Use when the user wants to polish, check style guide compliance, improve language, or clean up documentation while preserving its structure.
+name: docs-copyedit
+description: Applies style guide standards to a documentation page without changing meaning or reorganizing structure. This includes fixing grammar, improving clarity and readability, simplifying complex sentences, using active voice, and standardizing terminology and formatting. Use when the user wants to copyedit, polish, check style guide compliance, improve language, or clean up documentation while preserving its structure.
 user-invocable: true
 disable-model-invocation: false
 ---
 
-> **Skill progression:** This does everything `/docs-proofread` does plus style guide enforcement including clarity improvements. If only grammar and spelling fixes are needed, use `/docs-proofread`. For deeper reorganization, suggest `/docs-enhance`. If missing alt text is found, suggest `/docs-alt-text`.
+> **Skill progression:** This does everything `/docs-proofread` does plus style guide enforcement including clarity improvements. If only grammar and spelling fixes are needed, use `/docs-proofread`. If missing alt text is found, suggest that the user run `/docs-alt-text`.
 
 Improve clarity and readability without changing meaning, structure, or paragraph order:
 
-**docs-polish should**:
+**Do**:
 * Read Mendix style guides first (in parallel): `grammar-formatting.md`, `terminology.md`, and `product-naming-guide.md` from `/content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/`
 * Fix all spelling, grammar, and punctuation errors
 * Check all figure shortcodes for missing alt text. If the alt text parameter is missing, insert `alt=""` as a placeholder.
@@ -26,11 +26,12 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 * Apply Microsoft Writing Style Guide standards, unless they conflict with the Mendix style guide standards
 
 **After completing edits**:
-* Report what was changed in a concise summary
+* Report what was changed in a concise summary.
+* Under the heading "Flagged for your review", list anything you did not change but that needs the writer's attention, with a one-line reason for each. This includes ambiguities in technical meaning or accuracy, text in code formatting, and linter warnings that don't apply.
 * If any images were found with missing or empty alt text, state "I found [N] image(s) with missing alt text. Consider running `/docs-alt-text` to generate alt text."
 
-**docs-polish should NOT**:
-* Move paragraphs or restructure sections (that's `/docs-enhance`)
+**Don't**:
+* Move paragraphs or restructure sections
 * Change technical meaning or accuracy
 * Significantly increase document length
 * Generate alt text for images
@@ -39,7 +40,7 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 Every edit should serve a clear purpose in making the text easier to read, scan, and understand.
 
 Priority order for determining scope:
-1. If the user has selected text in a file (check for `ide_selection` tags), only polish the selected text in that file. Don't polish the entire document.
+1. If the user has selected text in a file (check for `ide_selection` tags), only copyedit the selected text in that file. Don't copyedit the entire document.
 2. If there's one open file (check for `ide_opened_file` tags) and no selection, work on the entire file.
 3. If there are multiple open files, list them and ask which to process.
 4. If no files are open, ask for a file path.

@@ -28,4 +28,8 @@ This API is available in Private Mendix Platform 1.5 and newer.
 
 ## API Reference
 
+{{% alert color="info" %}}
+The server URL shown in the API reference below is a placeholder. You must replace it with the URL of your own Private Mendix Platform instance.
+{{% /alert %}}
+
 {{< swaggerui src="/openapi-spec/openapi-user-v1.yaml"  >}}

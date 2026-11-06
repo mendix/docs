@@ -5,6 +5,12 @@ url: /refguide/configure-add-on-and-solution-modules/
 weight: 20
 ---
 
+{{% alert color="warning" %}}
+
+Add-on and solution modules will soon be deprecated. They are being replaced by other functionality that you can use across modules. For more information, see [Substitute Features for Add-On and Solution Modules](#substitute-features). 
+
+{{% /alert %}}
+
 ## Introduction
 
 Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have intellectual property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/). 
@@ -99,6 +105,18 @@ When you update an individual add-on or a solution module to another version, yo
 {{% alert color="warning" %}}
 If for some reason you switch the add-on and solution module to an app module (for example, to provide the source code to customers), their module data is lost once they upload a new version of this module to their app.
 {{% /alert %}}
+
+## Substitute Features for Add-On and Solution Modules {#substitute-features}
+
+The deprecated add-on and solution module concepts are being replaced with the following features and capabilities:
+
+1. Access control replacements:
+   1. Private documents and domain model elements – Publishers can mark documents, entities, attributes, and associations as **Private**. Private elements cannot be referenced from outside the module (with consistency errors triggered if violated) and are hidden by default, though consumers can toggle to inspect them. Solution modules receive an exception so core functionality works.
+   2. Module lock – Instead of completely hiding implementations, all document implementations are visible. To prevent accidental edits, modules are imported as **Locked** by default. Consumers must explicitly unlock them to modify them.
+2. Replacing the **USE_ME** folder – Introducing **Setup** node, a formal replacement for the **USE_ME** folder. Publishers can add folders and shortcuts within a dedicated **Setup** node to clearly indicate the public entry points and public API of their module.
+3. Module integrity and updates: 
+   1. Retaining customizations on update – Instead of losing changes when updating a Marketplace module, a Merge algorithm with conflict resolution automatically retains consumer customizations. Renamed entities by publishers no longer cause data loss.
+   2. Module integrity check – An integrity check that validates whether the current state of a module is still the same as the original package, provided that the original package is available for comparison. The modifications that Studio Pro makes to the module when converting to newer versions are ignored during this comparison.
 
 ## Read More
 

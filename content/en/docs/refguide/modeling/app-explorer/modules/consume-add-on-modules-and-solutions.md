@@ -6,6 +6,12 @@ weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+
+Add-on and solution modules will soon be deprecated. They will be replaced by other functionality that you can use across modules. 
+
+{{% /alert %}}
+
 ## Introduction
 
 An *add-on module* is a special type of module that adds functionality to your app. It has Intellectual Property (IP) protection enabled and has the *.mxmodule* extension. An add-on module is developed to be a *standalone functionality* that other users can consume in their apps, for example, an add-on can be a connector. 

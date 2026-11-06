@@ -191,7 +191,7 @@ To enable custom LLM provider configuration, follow these steps:
 After enabling this feature, a **Settings** ({{% icon name="cog" %}}) icon appears in the upper-right corner of the Maia pane.
 
 {{% alert color="info" %}}
-Mendix recommends using Claude Sonnet 4.6 for optimal Maia performance.
+Mendix recommends using the same model that Maia Make uses by default. For the current model, see [Maia Third-Party Services](/refguide/mendix-ai-assistance/#maia-third-party-services).
 {{% /alert %}}
 
 ### Provider Configuration {#provider-configuration}

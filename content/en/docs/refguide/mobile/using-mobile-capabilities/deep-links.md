@@ -9,7 +9,9 @@ aliases:
 
 ## Introduction
 
-While URLs typically open websites, they can also open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix native app installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`. 
+While URLs typically open websites, they can also open an installed app on your mobile device. Certain links can even open a specific page in an installed app on your mobile device. The technology that makes this possible is called deep linking. 
+
+With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix native app installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`. 
 
 Deep links are always called or triggered within the schema that they define. For example, using `makeitnative://` instead of `http://` in the mobile browser would force the Make It Native app to open. 
 

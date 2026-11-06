@@ -86,7 +86,7 @@ For example, you can view the [list of errors](/refguide/errors-pane/), run the 
 
 At the bottom of the Studio Pro main window pane is a status bar:
 
-{{< figure src="/attachments/refguide/studio-pro-overview/status-bar.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/studio-pro-overview/status-bar.png" class="no-border" alt="Status bar example">}}
 
 On the left is the current status of your app.
 

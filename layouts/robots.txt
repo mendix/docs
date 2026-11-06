@@ -17,4 +17,28 @@ Disallow: /404.html
 Disallow: /
 {{- end }}
 
+# AI crawlers — explicitly allow indexing and training data collection
+{{- $aiBots := slice
+  "GPTBot" "OAI-SearchBot" "ChatGPT-User"
+  "ClaudeBot" "Claude-SearchBot" "Claude-User"
+  "Google-Extended"
+  "Meta-ExternalAgent"
+  "PerplexityBot"
+  "Applebot-Extended"
+  "Diffbot"
+  "CCBot"
+  "Bytespider" -}}
+{{- range $aiBots }}
+
+User-agent: {{ . }}
+{{- if $isProduction }}
+Allow: /
+Disallow: /_includes/
+Disallow: /_print/
+Disallow: /attachments/
+{{- else }}
+Disallow: /
+{{- end }}
+{{- end }}
+
 # End of robots.txt file

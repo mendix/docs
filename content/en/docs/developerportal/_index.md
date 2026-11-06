@@ -29,7 +29,7 @@ The following sections describe the process for each option.
 
 ### Creating an App with Maia
 
-Follow the steps in [Maia Plan](/developerportal/maia-plan/) to enlist Maia's help in planning and creating an app.
+Follow the steps in [Maia Spec](/developerportal/maia-spec/) to enlist Maia's help in planning and creating an app.
 
 ### Creating an App from a Starter App Template
 

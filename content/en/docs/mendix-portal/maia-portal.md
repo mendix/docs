@@ -13,7 +13,7 @@ Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage
 
 {{< figure src="/attachments/developerportal/global-nav/maia-mendix-portal.jpg" alt="Maia in Mendix Portal" width="500" >}}
 
-Maia in Mendix Portal supports the planning, collaboration, and feedback stages of the application lifecycle. For example, you can use Maia Plan to define the scope of a new app, then continue in Studio Pro with Maia Make to build it. For an overview of how Maia supports each stage, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
+Maia in Mendix Portal supports the planning, collaboration, and feedback stages of the application lifecycle. For example, you can use Maia Spec to define the scope of a new app, then continue in Studio Pro with Maia Make to build it. For an overview of how Maia supports each stage, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
 
 ## Maia Capabilities in Mendix Portal
 
@@ -35,9 +35,9 @@ These are the tasks you can achieve with Maia in Mendix Portal:
 
 * **Maia for Feedback** – An AI-assisted tools that help you organize unsorted feedback into groups and themes. This is available on the [Feedback](/developerportal/app-insights/feedback/#organizing-feedback-with-maia) page.
 
-## Maia Plan
+## Maia Spec
 
-Maia Plan helps you plan and generate an app from within Mendix Portal. All you need to do is provide project context, review and refine the generated project scope, and approve the solution proposal to start your app development. For detailed steps, refer to [Maia Plan](/developerportal/maia-plan/).
+Maia Spec helps you plan and generate an app from within Mendix Portal. All you need to do is provide project context, review and refine the generated project scope, and approve the solution proposal to start your app development. For detailed steps, refer to [Maia Spec](/developerportal/maia-spec/).
 
 ## Maia Chat {#maia-chat}
 

@@ -32,7 +32,8 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the latest version of Mendix Studio Pro
+* Install the latest version of Mendix Studio Pro.
+* Install the latest version of Visual Studio Code.
 * Install the Mendix Make It Native app on a mobile device or an emulator.
 * Install the LTS version of [Node.js](https://nodejs.org).
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))

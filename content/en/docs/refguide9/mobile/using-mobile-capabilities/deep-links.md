@@ -9,7 +9,9 @@ aliases:
 
 ## Introduction
 
-While URLs typically open websites, they can also open an installed app on your mobile device. With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix native app installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`. 
+While URLs typically open websites, they can also open an installed app on your mobile device. Certain links can even open a specific page in an installed app on your mobile device. The technology that makes this possible is called deep linking.
+
+With this tutorial you will learn how to connect the URL `app://myapp` to your Mendix native app installed on your Android or iOS device. It is also possible to pass additional data using paths, query parameters, and hashes. Passing additional data could look like this: `app://myapp/task/123?action=close#info`. 
 
 Deeplinks are always called or triggered within the schema that they define. For example, using `makeitnative://` instead of `http://` in the mobile browser would force the Make It Native app to open. 
 
@@ -142,7 +144,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 1. Click **Parameters** > **New**, write *$Parameter/Host*, and click **OK**.
 1. Right-click your **Parse URL to Object** activity, click **Set error handling**, and click **Custom without rollback**.
 1. Drop an **End event** below your **Parse URL to Object** activity. Drag a line from **Parse URL to Object** down to the end event, right click it, and click **Set as error handler**.
-1. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.*. Your finished nanoflow will look like this:
+1. Add a **Show message** activity to this line. Set it as type **Error**, and into template type *Failed to parse deep link data.* Your finished nanoflow will look like this:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/native-deep-link/deep-link-nano-full.png" alt="full nanoflow" class="no-border" >}}
 

@@ -26,6 +26,7 @@ paths:
         <p>Retrieves a list of audit logs filtered by Owner ID with pagination, sorting, and filtering support.</p>
         <p>The Owner ID is derived from the token used in the request.</p>
         <p>Logs cannot be retrieved for an Owner ID that is different to the one in the token.</p>
+        <p>A maximum of 10.000 records can be retrieved in a single request.</p>
         <h2>Authorization</h2>
         <p><code>Authorization: Bearer &lt;sso_token&gt;</code> or <code>Authorization: MxToken &lt;token&gt;</code></p>
         <p>Requires the <strong><code>mx:audit-logging:read</code></strong> scope.</p>
@@ -61,6 +62,7 @@ paths:
       description: |
         <p>Retrieves a chain of audit logs for a specific owner. If a cursor is not provided, the first page is returned.</p>
         <p>Output is ordered chronologically, from newest to oldest.</p>
+        <p>A maximum of 10.000 records can be retrieved in a single request.</p>
         <h2>Authorization</h2>
         <p><code>Authorization: Bearer &lt;sso_token&gt;</code> or <code>Authorization: MxToken &lt;token&gt;</code></p>
         <p>Requires the <strong><code>mx:audit-logging:read</code></strong> scope.</p>
@@ -165,9 +167,9 @@ components:
       required: false
       schema:
         type: integer
-        default: 50
+        default: 100
         maximum: 100
-      description: Maximum number of items per page. The default is 50, the maximum is 100.
+      description: Maximum number of items per page. The default is 100, the maximum is 100.
     sortBy:
       name: sortBy
       in: query
@@ -202,9 +204,9 @@ components:
       required: false
       schema:
         type: integer
-        default: 25
+        default: 100
         maximum: 100
-      description: Maximum number of items per page. The default is 25, and the maximum is 100.
+      description: Maximum number of items per page. The default is 100, and the maximum is 100.
   responses:
     LogsResponse:
       description: Audit logs retrieved successfully

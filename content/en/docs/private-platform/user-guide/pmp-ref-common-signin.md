@@ -51,14 +51,14 @@ The navigation menu contains the options that you need to make or manage your ap
 It consists of the following sections:
 
 * **Home** - Click this option to go to the Home page.
-* **Apps > Direct Access** - Click this option to go to the **Direct Access** section of the [My Apps](/private-mendix-platform/reference-guide/common/my-apps/) page.
-* **Apps > Access via Groups** - Click this option to go to the **Access via groups** section of the [My Apps](/private-mendix-platform/reference-guide/common/my-apps/) page.
-* **Groups** - Click this option to go to the [My Group](/private-mendix-platform/reference-guide/common/manage-group/) page.
-* **Marketplace > Company Content** - Click this option to go to the [Company Content](/private-mendix-platform/reference-guide/common/company-content/) page.
-* **Marketplace > Group Content** - Click this option to go to the [Group Content](/private-mendix-platform/reference-guide/common/group-content/) page.
-* **Marketplace > My Content** - Click this option to go to the [My Content](/private-mendix-platform/reference-guide/common/my-content/) page.
+* **Apps > Direct Access** - Click this option to access a list of all apps where you are granted access directly through your user account.
+* **Apps > Access via Groups** - Click this option to access a list of all apps where you are granted access through your user groups.
+* **Groups** - Click this option to go to the **My Groups** page, where you can see a list of the groups to which you belong, and manage the groups where you have the Group Admin role.
+* **Marketplace > Company Content** - Click this option to go to the [Company Content](/private-mendix-platform/marketplace/) page.
+* **Marketplace > Group Content** - Click this option to go to the [Group Content](/private-mendix-platform/marketplace/) page.
+* **Marketplace > My Content** - Click this option to go to the [My Content](/private-mendix-platform/marketplace/) page.
 * **Create App** - Click this option to [start creating your application](/private-mendix-platform/apps/) page.
-* **Download Studio Pro** - Click this option to go to the [Get Studio Pro](/private-mendix-platform/reference-guide/common/get-studio/) page.
+* **Download Studio Pro** - Click this option to go to the [Get Studio Pro](/private-mendix-platform/apps/#install-studio-pro) page.
 
 ### Notifications {#notifications}
 

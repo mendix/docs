@@ -111,12 +111,12 @@ If for some reason you switch the add-on and solution module to an app module (f
 The deprecated add-on and solution module concepts are being replaced with the following features and capabilities:
 
 1. Access control replacements:
-   1. Private documents and domain model elements – Publishers can mark documents, entities, attributes, and associations as **Private**. Private elements cannot be referenced from outside the module (with consistency errors triggered if violated) and are hidden by default, though consumers can toggle to inspect them. Solution modules receive an exception so core functionality works.
-   2. Module lock – Instead of completely hiding implementations, all document implementations are visible. To prevent accidental edits, modules are imported as **Locked** by default. Consumers must explicitly unlock them to modify them.
-2. Replacing the **USE_ME** folder – Introducing **Setup** node, a formal replacement for the **USE_ME** folder. Publishers can add folders and shortcuts within a dedicated **Setup** node to clearly indicate the public entry points and public API of their module.
+   1. Private documents and domain model elements *(future release)* – Publishers can mark documents, entities, attributes, and associations as **Private**. Private elements cannot be referenced from outside the module (with consistency errors triggered if violated) and are hidden by default, though consumers can toggle to inspect them. Solution modules receive an exception so core functionality works.
+   2. Module lock *(future release)* – Instead of completely hiding implementations, all document implementations are visible. To prevent accidental edits, modules are imported as **Locked** by default. Consumers must explicitly unlock them to modify them.
+2. Replacing the **USE_ME** folder *(future release)* – Introducing **Setup** node, a formal replacement for the **USE_ME** folder. Publishers can add shortcuts to documents that form the public API of their module using the **Setup** node.
 3. Module integrity and updates: 
-   1. Retaining customizations on update – Instead of losing changes when updating a Marketplace module, a Merge algorithm with conflict resolution automatically retains consumer customizations. Renamed entities by publishers no longer cause data loss.
-   2. Module integrity check – An integrity check that validates whether the current state of a module is still the same as the original package, provided that the original package is available for comparison. The modifications that Studio Pro makes to the module when converting to newer versions are ignored during this comparison.
+   1. Retaining customizations on update *(already available)* – Instead of losing changes when updating a Marketplace module, a Merge algorithm with conflict resolution automatically retains consumer customizations. Renamed entities by publishers no longer cause data loss.
+   2. Module integrity check *(future release)* – An integrity check that validates whether the current state of a module is still the same as the original package, provided that the original package is available for comparison. The modifications that Studio Pro makes to the module when converting to newer versions are ignored during this comparison.
 
 ## Read More
 

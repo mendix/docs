@@ -8,7 +8,7 @@ weight: 30
 
 {{% alert color="warning" %}}
 
-Add-on and solution modules will soon be deprecated. They will be replaced by other functionality that you can use across modules. 
+Add-on and solution modules will soon be deprecated. They are being replaced by other functionality that you can use across modules. For more information, see [Substitute Features for Add-On and Solution Modules](/refguide/configure-add-on-and-solution-modules/#substitute-features) in *Configuring Add-on and Solution Modules for Publishing*. 
 
 {{% /alert %}}
 

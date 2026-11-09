@@ -23,7 +23,7 @@ This page describes how to do the following:
 * Understand how CSS styling behaves in an embedded app
 * Understand how navigation behaves in an embedded app
 * Understand authentication options for an embedded app
-* Configure host app requirements such as Cross-Origin Resource Sharing(CORS) and Content Security Policy(CSP)
+* Configure host app requirements such as Cross-Origin Resource Sharing (CORS) and Content Security Policy (CSP)
 * Mount and unmount the client at the correct lifecycle moment
 
 {{% alert color="info" %}}

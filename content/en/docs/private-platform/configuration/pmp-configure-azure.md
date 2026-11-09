@@ -15,7 +15,7 @@ This document explains the configuration options available when configuring a Co
 
 To configure the CI/CD pipeline, prepare the following:
 
-* An Azure organization where you want to build your Mendix app.
+* An Azure DevOps Services organization where you want to build your Mendix app. The Azure DevOps CI build utility runs on Microsoft-hosted agents and works with Azure DevOps Services only; with Azure DevOps Server (on-premises), use the Kubernetes build method, see [Azure DevOps Server Builds](/private-mendix-platform/configure-k8s/#azure-devops-server).
 * An Azure blob or an AWS S3 endpoint where you can store the built MDA files.
 
 ## Configuring the CI/CD Pipeline

@@ -62,6 +62,8 @@ To share the connector that you built, perform the following steps:
     4. Select the type of **License** you want applied to your app. For details about the available open-source software licenses and their requirements, refer to [Open-Source Software Licenses](/appstore/submit-content/#license).
     5. In the **Owner** field, select the group that owns the component, and then click **Next**.
 
+        This is a required field. If an asset was created without a group association and its visibility was later changed to Private (which would effectively make it group content), there would be no group to which the asset belongs. This would create ambiguity around ownership and prevent the asset from appearing correctly under group-owned resources, making governance and management more difficult.
+
 6. In the **Media and Documentation** tab, perform the following actions:
 
     1. Use the **Upload Screenshots** option to add a maximum of 10 screenshots of your component.    

@@ -21,6 +21,17 @@ Studio Pro 11.12 introduces improved package management with package IDs and doc
 
 ## How Module Updates Work
 
+### How to start an update
+To start a module update:
+1. Right-click the module in the Project Explorer and select **Update from file**.
+   
+   {{< figure src="/attachments/refguide/modeling/app-explorer/modules/UpdateFromFile/update-from-file-option.png" class="no-border" width="300" >}}
+2. Update from file dialog opens. Select the **Original version** and **New version** of the module and click **OK**. 
+   * The **Original version** is the version of the Marketplace module that you originally imported. You must provide this file to enable the three-way merge.
+   * The **New version** is the updated version of the Marketplace module that you want to upgrade to. You can download the new version from the Marketplace. 
+   
+   {{< figure src="/attachments/refguide/modeling/app-explorer/modules/UpdateFromFile/update-from-file-dialog.png" class="no-border" width="300" >}}
+
 ### Three-Way Merge Process
 
 To retain your customizations when updating a module, Studio Pro performs a three-way merge using three versions:

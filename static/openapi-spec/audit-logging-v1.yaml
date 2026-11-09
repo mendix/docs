@@ -72,6 +72,7 @@ paths:
         - PAT: []
       parameters:
         - $ref: "#/components/parameters/cursor"
+        - $ref: "#/components/parameters/page"
         - $ref: "#/components/parameters/chainLimit"
       responses:
         '200':
@@ -169,7 +170,7 @@ components:
         type: integer
         default: 100
         maximum: 100
-      description: Maximum number of items per page. The default is 100, the maximum is 100.
+      description: Maximum number of items per page. The default is 100, the maximum is 100. This parameter is only taken into account if the `page` parameter is also provided.
     sortBy:
       name: sortBy
       in: query
@@ -204,9 +205,9 @@ components:
       required: false
       schema:
         type: integer
-        default: 100
+        default: 25
         maximum: 100
-      description: Maximum number of items per page. The default is 100, and the maximum is 100.
+      description: Maximum number of items per page. The default is 25, and the maximum is 100. This parameter is only taken into account if the `page` parameter is also provided.
   responses:
     LogsResponse:
       description: Audit logs retrieved successfully

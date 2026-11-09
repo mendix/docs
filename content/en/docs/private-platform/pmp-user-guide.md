@@ -48,7 +48,7 @@ For more information about Personal Access Tokens, as well as creating and using
 
 In the **Service Credentials** tab, you can view and manage the credentials for various external systems that Private Mendix Platform can connect with. These services include GitHub, GitLab, Bitbucket, and AzureDevOps, used for managing your app projects.
 
-To create or work on app projects in Private Mendix Platform, you must create an access token in GitHub, GitLab, AzureDevOps, or Bitbucket, and then add it in the **Service Credentials** tab. The token must have read and write access to a repository where the app project is stored.
+To create or work on app projects in Private Mendix Platform, you must create an access token in GitHub, GitLab, AzureDevOps, or Bitbucket, and then add it in the **Service Credentials** tab. The token must have read and write access to a repository where the app project is stored. For Azure DevOps Server, the token is a Personal Access Token of your own account with the scopes Code (Read & write) and Project and Team (Read); the **Get My Azure PAT** button is available for Azure DevOps Services only.
 
 ## Installing Mendix Studio Pro
 

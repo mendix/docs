@@ -396,6 +396,7 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Version control | GitHub Enterprise Server | 3.6 or higher | Required for projects and collaboration |
 | Version control | Bitbucket | Latest | Required for projects and collaboration |
 | Version control | Azure DevOps Services | Cloud | Required for projects and collaboration |
+| Version control | Azure DevOps Server (on-premises) | 2022.1 or higher | Required for projects and collaboration |
 | CI/CD | Kubernetes | See See [Supported Cluster Types](#supported-clusters) | Default for CI/CD |
 | CI/CD | Jenkins | 2.346.1 or newer, with support for the Docker agent | Required for CI/CD |
 | CI/CD | Azure DevOps  | Latest | Required for CI/CD |

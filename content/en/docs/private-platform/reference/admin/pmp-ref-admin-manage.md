@@ -162,7 +162,8 @@ On the **Import Apps** page, administrators can import existing Mendix apps that
 * GitLab
 * GitHub
 * Bitbucket
-* Azure DevOps Services (cloud, `dev.azure.com`). Azure DevOps Server (on-premises) is not supported.
+* Azure DevOps Services (cloud, `dev.azure.com`)
+* Azure DevOps Server (on-premises). A project is listed when it has exactly one repository (the default repository, named like the project) with an `.mpr` file in its root, that your Personal Access Token can read, and that is not yet linked to an app. After the import, the app behaves like an app created in Private Mendix Platform; deleting the app deletes the Azure DevOps project.
 
 {{< figure src="/attachments/private-platform/pmp-admin6.png" class="no-border" >}}
 

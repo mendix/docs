@@ -15,3 +15,4 @@ swap:
   '^([^—]{0,40}) — ': '$1 – '  # em dash with spaces on both sides
   '^([^—]{0,40}) —': '$1 – '   # em dash with space before, no space after
   '^([^—]{0,40})— ': '$1 – '   # em dash with no space before, space after
+  '^([^—]{0,40}) - ': '$1 – '  # hyphen with spaces on both sides

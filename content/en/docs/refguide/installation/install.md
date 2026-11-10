@@ -62,10 +62,10 @@ The prerequisites are the following:
 
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
-* [Git for Windows (x64)](https://git-scm.com/download/win) (Git version [2.48.1](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe) or above is required)
+* [Git for Windows (x64)](https://git-scm.com/download/win) (Git version [2.56.0.4](https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/Git-2.56.0.4-64-bit.exe) or above is required)
 
 {{% alert color="warning" %}} 
-Git version 2.48.1 is automatically installed during Studio Pro installation. However, for [non-administrative installation](#offline), you must install Git manually.
+Git version 2.56 is automatically installed during Studio Pro installation. However, for [non-administrative installation](#offline), you must install Git manually.
 {{% /alert %}}
 
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
@@ -115,7 +115,7 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
    4. Mendix Native Mobile Builder one-click installer
       * Rename the *latest.exe* executable to *mendix_native_mobile_builder.exe*
    5. Git for Windows (x64)
-      * Rename the *Git-2.48.1-64-bit.exe* executable to *git_for_windows_installer.exe*
+      * Rename the *Git-2.56.0.4-64-bit.exe* executable to *git_for_windows_installer.exe*
    6. Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64)
       * The *MicrosoftEdgeWebview2Setup.exe* does not need to be renamed
    7. Gradle

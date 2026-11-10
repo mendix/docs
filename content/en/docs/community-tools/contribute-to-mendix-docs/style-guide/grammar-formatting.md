@@ -8,7 +8,7 @@ description: "Guidelines on grammar, formatting, capitalization, punctuation, li
 
 ## Acronyms and Initialisms {#acronyms-and-initialisms}
 
-Define technical or obscure acronyms and initialisms. Write them out fully the first time they are used in a document.
+Define technical or obscure acronyms and initialisms. Write them out fully the first time they are used in a document, followed by the acronym in parentheses. For example, write "integrated development environment (IDE)".
 
 Add an "s" to make an acronym plural. For example, write "your choice of IDEs" instead of "your choice of IDE's".
 

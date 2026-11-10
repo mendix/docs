@@ -49,6 +49,6 @@ The Mendix runtime has no setting to disable documentation endpoints. Mendix Clo
 
 For more information, see [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in *Environment Details* and [Applying Access Restrictions to Unnecessary Request Handlers](/howto/security/best-practices-security/#request-handlers) in *Implement Best Practices for App Security*.
 
-## Custom Request Handlers{#custom-handlers}
+## Custom Request Handlers {#custom-handlers}
 
 Custom request handlers can be added using the `com.mendix.core.Core#addRequestHandler({name of the request handler})` API call.

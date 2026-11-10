@@ -5,8 +5,6 @@ description: "Describes the various request handlers that are available in the r
 weight: 45
 ---
 
-{{% todo %}}Copy changes to Mendix 10 documentation{{% /todo %}}
-
 ## Introduction
 
 The Mendix Runtime receives requests through various request handlers. [Standard request handlers](#standard-handlers) handle the communication between the Mendix client and the runtime server. [Service endpoints](#service-endpoints) expose the services that your app publishes. You can also create [custom request handlers](#custom-handlers) for your own purposes.

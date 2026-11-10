@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-Page templates are the starting point for creating new pages. Every time a new page is created, a page template is selected as a baseline that can then be edited to match the pages specific needs. 
+Page templates are the starting point for creating new pages. Every time you create a new page, you must first select a page template to base it off of. Once you select a specific template as a baseline, the individual page is made, which can then be edited further to match that specific page's needs. 
 
 When creating a new page, the user is presented with an overview of all the compatible page templates in the app. Page templates as document types allow users to edit existing page templates and even create entirely new ones.
 

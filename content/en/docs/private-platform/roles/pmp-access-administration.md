@@ -102,7 +102,7 @@ Select the role and adjust its permissions, which are grouped into four categori
 
 ### Scoping Deployment Permissions per Environment
 
-Permissions in the **Deployment** category, and only in that category, can be limited to specific environments. For each such permission, select the combination of Development, Test, Acceptance, and Production it should apply to.
+Permissions in the **Deployment** category can be limited to specific environments. For each such permission, select the combination of Development, Test, Acceptance, and Production it should apply to.
 
 Use this rather than maintaining several near-identical roles. A single role in which deployment is permitted for Development and Test and withheld for Production expresses a common compliance requirement in one place, and stays correct as teams change.
 

@@ -16,7 +16,7 @@ When creating a new page, the user is presented with an overview of all the comp
 
 ## Custom Page Templates
 
-By mapping out the common design patterns of an app, a great deal of the initial work involved in creating new pages can be mitigated. 
+By mapping out the common design patterns of an app in a custom page template, a great deal of the initial work involved in creating new pages can be mitigated. We recommend making a custom page template for any often-used page type your app's use case requires. Then, with every new page you make, you save development time as you leverage the templates' convienence. 
 
 Generally, page templates are stored in the app's [UI resources package](/refguide9/ui-resources-package/). This keeps them in sync with the app theme, as well as providing a handy place to consolidate all design-related data. 
 

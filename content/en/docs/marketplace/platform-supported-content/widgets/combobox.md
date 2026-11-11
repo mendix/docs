@@ -138,9 +138,9 @@ The **Accessibility** tab allows you to configure settings for combo box accessi
     * **Clear selection button** (default: *Clear selection*) – This clears all selected values.
     * **Remove value button** (default: *Remove value*) – This removes individual selected values when using labels with multi-selection.
 * **Accessibility status message**: 
-    * **Selected value** – This allows you to set values for ???.
-    * **Options available** – This denotes the number of options of ??? per value ???.
-    * **Instructions** – This sets the instructions to be read out after announcing the accessibility status.
+    * **Selected value** – This sets the text announced before the currently selected values, for example, "Selected value: Avocado, Apple, Banana." The widget appends the selected values automatically, so you do not need to calculate them. The default is *Selected value:*.
+    * **Options available** – This sets the text announced before the number of options currently available in the options menu, for example, "Number of options available: 1". The widget appends the number automatically, so you do not need to calculate it. The default is *Number of options available:*.
+    * **Instructions** – This sets the instructions to be read out after announcing the accessibility status. The default is *Use up and down arrow keys to navigate. Press Enter or Space Bar keys to select.*
 
 ### Advanced Tab {#advanced}
 
@@ -151,14 +151,14 @@ The **Advanced** tab allows you to configure settings for features that is beyon
     * **Loading type** – Allows the user to configure the loading animation of a combo box.
 * **Multiple selection:**
     * **Selected items sorting** – This governs how items are sorted:
-        * **Caption** –
-        * **Default** –
+        * **Caption** – Sorts the selected items alphabetically by their caption.
+        * **Default** – Does not sort the selected items.
 * **Filter**
     * **Filter type:**
-        * **Contains (fuzzy)** –
-        * **Contains (exact)** –
-        * **Starts-with** –
-        * **None** –
+        * **Contains (fuzzy)** – Shows options whose caption contains the typed text (default).
+        * **Contains (exact)** – Shows options whose caption contains the typed text exactly.
+        * **Starts-with** – Shows options whose caption starts with the typed text.
+        * **None** – Turns off filtering. Users cannot type in the input to search the options.
     * **Debounce interval** (ms) – This sets the debounce interval for each filter input change event.
 {{% alert color="info" %}}
 Lazy loading always fetches 100 data items for each request. Pagination is triggered when the user scrolls to the bottom of the options menu.

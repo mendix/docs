@@ -20,10 +20,10 @@ This directory contains custom Vale rules specific to Mendix documentation.
 * **Inclusive.yml**: Flags non-inclusive language
 * **Latin.yml**: Flags Latin abbreviations and phrases that should be replaced with plain English
 * **LinkText.yml**: Prohibits generic link text like "click here"
-* **ListIntroductions.yml**: Enforces en dashes in list item introductions (≤40 chars)
+* **ListIntroductions.yml**: Enforces en dashes (–) in list item introductions (≤40 chars) by replacing em dashes and spaced hyphens
 * **ProductNames.yml**: Enforces correct Mendix product names
 * **SignIn.yml**: Enforces "sign in/out" instead of "log in/out"
-
+* **Wordiness.yml**: Suggests simpler, more concise alternatives for wordy phrases
 ## Adding New Rules
 
 Create a new `.yml` file in this directory, following [Vale's style documentation](https://vale.sh/docs/styles):
@@ -47,5 +47,5 @@ In `.vale.ini`:
 Microsoft.Contractions = NO
 
 # Change severity
-Microsoft.Wordiness = warning
+Microsoft.Quotes = warning
 ```

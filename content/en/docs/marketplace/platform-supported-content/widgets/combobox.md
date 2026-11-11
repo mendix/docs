@@ -159,7 +159,7 @@ The **Advanced** tab allows you to configure settings for features that is beyon
         * **Contains (exact)** –
         * **Starts-with** –
         * **None** –
-    * **Debounce interval** –
+    * **Debounce interval** (ms) – This sets the debounce interval for each filter input change event.
 {{% alert color="info" %}}
 Lazy loading always fetches 100 data items for each request. Pagination is triggered when the user scrolls to the bottom of the options menu.
 {{% /alert %}}

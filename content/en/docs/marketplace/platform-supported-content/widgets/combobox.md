@@ -129,7 +129,18 @@ The following configurations are available:
 
 ### Accessibility Tab {#accessibility}
 
-The **Accessibility** tab allows you to configure settings for combo box accessibility features.
+The **Accessibility** tab allows you to configure settings for combo box accessibility features:
+
+* **Accessibility**:
+    * **Aria required** (default: *false*) – When set to *true*, assistive technologies will read out the field aloud. When set to *false* in the expression editor, assistive technologies will not read the field out.
+* **Aria labels**:
+    * **Aria label** (default: *Combo box*) – This sets the text label assistive technologies will read aloud. 
+    * **Clear selection button** (default: *Clear selection*) – This clears all selected values.
+    * **Remove value button** (default: *Remove value*) – This removes individual selected values when using labels with multi-selection.
+* **Accessibility status message**: 
+    * **Selected value** – This allows you to set values for ???.
+    * **Options available** – This denotes the number of options of ??? per value ???.
+    * **Instructions** – This sets the instructions to be read out after announcing the accessibility status.
 
 ### Advanced Tab {#advanced}
 

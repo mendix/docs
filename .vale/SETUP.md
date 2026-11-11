@@ -52,6 +52,10 @@ After installing Vale:
    vale --version
    ```
 
+   Vale 3.20 or later is required. If you have an older version, update it:
+      * On macOS, run `brew upgrade vale`
+      * On Windows, download the latest version from the releases page and replace `vale.exe`
+
 2. **Sync the Microsoft Style Guide rules:**
 
    Navigate to the root of your docs repository (for example, `cd ~/docs`), then run:

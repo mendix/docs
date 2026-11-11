@@ -50,7 +50,7 @@ jobs:
         with:
           files: ${{ steps.changed-files.outputs.files }}
           separator: ','
-          version: 3.14.2
+          version: 3.26.0
           fail_on_error: false
           reporter: github-pr-review  # Uses filter_mode=added (default): only comment on modified lines
           vale_flags: '--minAlertLevel=error'  # Only flag errors, not warnings or suggestions

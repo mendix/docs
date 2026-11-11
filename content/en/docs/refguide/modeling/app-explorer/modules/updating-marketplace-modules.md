@@ -39,11 +39,9 @@ To start a module update:
 
 1. Right-click the module in the App Explorer and select **Update from file**.
 
-    {{< figure src="/attachments/refguide/modeling/app-explorer/modules/UpdateFromFile/update-from-file-option.png" alt="Module context menu with the Update from file option" class="no-border" width="300" >}}
+    {{< figure src="/attachments/refguide/modeling/app-explorer/modules/updating-marketplace-modules/update-from-file-option.png" alt="Module context menu with the Update from file option"  >}}
 
 2. The **Update from file** dialog opens. Select the **Original version** and **New version** of the module and click **OK**.
-
-    {{< figure src="/attachments/refguide/modeling/app-explorer/modules/UpdateFromFile/update-from-file-dialog.png" alt="Update from file dialog with the Original version and New version fields" class="no-border" width="300" >}}
 
 ### Document Mapping
 

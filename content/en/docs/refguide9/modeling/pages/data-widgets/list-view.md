@@ -40,7 +40,7 @@ List view properties consist of the following sections:
 
 ### Data Source Section {#data-source}
 
-The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide9/data-sources/).
+The data source determines which objects will be shown in a list view. For general information on data sources (and details on their respective **Entity (Path)**, **Show Search Bar**, **Wait for Search**, and **Constraints** properties), see [Data Sources](/refguide9/data-sources/).
 
 #### Type
 

@@ -10,7 +10,9 @@ description: "Describes how to deploy using a Docker image by using Mendix Porta
 This guide provides a walkthrough for deploying your Mendix application using [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/) with Docker. This approach is particularly useful for containerized environments, and can significantly ease your CI/CD setup.
 
 {{% alert color="info" %}}
-This document is not an official Mendix implementation, or a substitute for recommended production deployment strategies. For more features, such as app management or governance, we suggest using [Mendix on Kubernetes](/developerportal/deploy/private-cloud/) or [Mendix on Azure](/developerportal/deploy/mendix-on-azure/), which offer a structured, tested experience with cloud infrastructure. 
+This document provides an example of how to deploy an app using Mendix Portable Runtime. Mendix Portable Runtime is supported for production use. The pipeline, infrastructure, and other components shown here are for illustration purposes only and are not part of the Mendix support scope. You are responsible for designing, operating, and supporting these parts of your deployment.
+
+If you want a managed experience with features such as app management, governance, and tested cloud infrastructure, consider [Mendix on Kubernetes](/developerportal/deploy/private-cloud/) or [Mendix on Azure](/developerportal/deploy/mendix-on-azure/).
 
 For information about the scope of support, see [Support for Different Deployment Strategies](/support/deployment-strategy-support/).
 {{% /alert %}}

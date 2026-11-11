@@ -44,7 +44,7 @@ To specify which attributes to use when searching, configure the search attribut
 
 ### Data Source Section {#data-source}
 
-The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide10/data-sources/).
+The data source determines which objects will be shown in a list view. For general information on data sources (and details on their respective **Entity (Path)**, **Constraints**, **Show Search Bar**, and **Wait for Search** properties), see [Data Sources](/refguide10/data-sources/).
 
 #### Type
 

@@ -129,16 +129,37 @@ The following configurations are available:
 
 ### Accessibility Tab {#accessibility}
 
-The **Accessibility** tab allows you to configure settings for combo box accessibility features.
+The **Accessibility** tab allows you to configure settings for combo box accessibility features:
+
+* **Accessibility**:
+    * **Aria required** (default: *false*) – When set to *true*, assistive technologies will read out the field aloud. When set to *false* in the expression editor, assistive technologies will not read the field out.
+* **Aria labels**:
+    * **Aria label** (default: *Combo box*) – This sets the text label assistive technologies will read aloud. 
+    * **Clear selection button** (default: *Clear selection*) – This clears all selected values.
+    * **Remove value button** (default: *Remove value*) – This removes individual selected values when using labels with multi-selection.
+* **Accessibility status message**: 
+    * **Selected value** (default: *Selected value*) – This sets the text announced before the currently selected values, for example, "Selected value: Avocado, Apple, Banana." The widget appends the selected values automatically, so you do not need to calculate them. 
+    * **Options available** (default:Number of options available)– This sets the text announced before the number of options currently available in the options menu, for example, "Number of options available: 1". The widget appends the number automatically, so you do not need to calculate it.
+    * **Instructions** (default: *Use up and down arrow keys to navigate. Press Enter or Space Bar keys to select.*) – This sets the instructions to be read out after announcing the accessibility status. 
 
 ### Advanced Tab {#advanced}
 
 The **Advanced** tab allows you to configure settings for features that is beyond the normal configurations.
 
-* **Performance group**
-
-    * **Lazy loading** – Allows the user to configure when to load the combo box's options data. Set it to **yes** to ensure that the data is not loaded until the user opens the options menu.
-    * **Loading type** – Allows the user to configure the loading animation of a combo box.
+* **Performance:**
+    * **Lazy loading** – This allows the user to configure when to load the combo box's options data. Set it to **yes** to ensure that the data is not loaded until the user opens the options menu.
+    * **Loading type** – This allows the user to configure the loading animation of a combo box.
+* **Multiple selection:**
+    * **Selected items sorting** – This governs how items are sorted:
+        * **Caption** – This sorts the selected items alphabetically by their caption.
+        * **Default** – This does not sort the selected items.
+* **Filter**
+    * **Filter type:**
+        * **Contains (fuzzy)** (default) – This shows options whose captions contain the typed characters in the same order, even if they are not next to each other. When lazy loading is on and the options come from an association or a database, the data source filters the options instead, and **Contains (fuzzy)** works like **Contains (exact)**.
+        * **Contains (exact)** – This shows options whose caption contains the typed text as one continuous string.
+        * **Starts-with** – This shows options in which a word of the caption starts with the typed text.
+        * **None** – This turns off filtering. Users cannot type in the input to search the options.
+    * **Debounce interval** (ms) – This sets the debounce interval for each filter input change event.
 
 {{% alert color="info" %}}
 Lazy loading always fetches 100 data items for each request. Pagination is triggered when the user scrolls to the bottom of the options menu.

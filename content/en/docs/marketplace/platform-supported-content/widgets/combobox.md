@@ -146,11 +146,20 @@ The **Accessibility** tab allows you to configure settings for combo box accessi
 
 The **Advanced** tab allows you to configure settings for features that is beyond the normal configurations.
 
-* **Performance group**
-
+* **Performance:**
     * **Lazy loading** – Allows the user to configure when to load the combo box's options data. Set it to **yes** to ensure that the data is not loaded until the user opens the options menu.
     * **Loading type** – Allows the user to configure the loading animation of a combo box.
-
+* **Multiple selection:**
+    * **Selected items sorting** – This governs how items are sorted:
+        * **Caption** –
+        * **Default** –
+* **Filter**
+    * **Filter type:**
+        * **Contains (fuzzy)** –
+        * **Contains (exact)** –
+        * **Starts-with** –
+        * **None** –
+    * **Debounce interval** –
 {{% alert color="info" %}}
 Lazy loading always fetches 100 data items for each request. Pagination is triggered when the user scrolls to the bottom of the options menu.
 {{% /alert %}}

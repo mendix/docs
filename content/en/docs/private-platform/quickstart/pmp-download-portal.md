@@ -27,11 +27,13 @@ Before using the Download Portal, ensure that you have the following prerequisit
 
 * ORAS tool for working with OCI artifacts
 
-## Accessing the Download Portal
+## Accessing the Download Portal {#access}
 
 To access the Download Portal, go to [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/) and log in with your Mendix account.
 
 If your account is associated with multiple organizations, you must then select which company context to use. 
+
+If you do not have access to the Download portal, an **Access Denied** page appears instead. To gain access, submit a request form with your details and the specific permissions you need. After an administrator approves your request, the portal will become available.
 
 ### Selecting a Company at Login
 

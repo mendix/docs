@@ -21,17 +21,6 @@ Studio Pro 11.12 introduces improved package management with package IDs and doc
 
 ## How Module Updates Work
 
-### How to start an update
-To start a module update:
-1. Right-click the module in the Project Explorer and select **Update from file**.
-   
-   {{< figure src="/attachments/refguide/modeling/app-explorer/modules/UpdateFromFile/update-from-file-option.png" class="no-border" width="300" >}}
-2. Update from file dialog opens. Select the **Original version** and **New version** of the module and click **OK**. 
-   * The **Original version** is the version of the Marketplace module that you originally imported. You must provide this file to enable the three-way merge.
-   * The **New version** is the updated version of the Marketplace module that you want to upgrade to. You can download the new version from the Marketplace. 
-   
-   {{< figure src="/attachments/refguide/modeling/app-explorer/modules/UpdateFromFile/update-from-file-dialog.png" class="no-border" width="300" >}}
-
 ### Three-Way Merge Process
 
 To retain your customizations when updating a module, Studio Pro performs a three-way merge using three versions:
@@ -43,6 +32,18 @@ To retain your customizations when updating a module, Studio Pro performs a thre
 You must manually provide both the original and target versions. If document mapping succeeds, the merge begins. If mapping fails, you cannot upgrade while keeping your customizations and must fully replace the module instead.
 
 During the merge, conflicts may occur if you and the publisher both modified the same element (for example, the same microflow). For information on resolving conflicts, see [Combining Changes and Resolving Conflicts](/refguide/resolving-conflicts/).
+
+### How to Start an Update
+
+To start a module update:
+
+1. Right-click the module in the App Explorer and select **Update from file**.
+
+    {{< figure src="/attachments/refguide/modeling/app-explorer/modules/UpdateFromFile/update-from-file-option.png" alt="Module context menu with the Update from file option" class="no-border" width="300" >}}
+
+2. The **Update from file** dialog opens. Select the **Original version** and **New version** of the module and click **OK**.
+
+    {{< figure src="/attachments/refguide/modeling/app-explorer/modules/UpdateFromFile/update-from-file-dialog.png" alt="Update from file dialog with the Original version and New version fields" class="no-border" width="300" >}}
 
 ### Document Mapping
 

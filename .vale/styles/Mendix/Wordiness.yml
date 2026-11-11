@@ -1,6 +1,7 @@
 # Extends Microsoft.Wordiness (requires Vale 3.20 or later).
 extends: Microsoft.Wordiness
 ignorecase: false
+link: https://learn.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences
 swap+:
   # Added/changed entries
   "(?:take away|eliminate)": remove

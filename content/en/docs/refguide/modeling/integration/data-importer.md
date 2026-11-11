@@ -64,7 +64,7 @@ After previewing the data, go to the **Mapping** tab. You can either create a ne
 To create a new entity for the imported data, click **Create Entity**. In the dialog box:
 
 * Change the entity **Name**.
-* Rename Attributes: Use **Attribute Name** to specify the new name to the attribute in the entity.
+* Rename Attributes: Use **Custom Name** in the **Source Element** tab to specify the new name to the attribute in the entity.
 * Change Attribute Data Type: Select the desired data type from the **Primitive Type** column drop-down list in the **Source Element** tab.
 * Select which columns to include in the entity by selecting or clearing the checkbox next to each column.
 

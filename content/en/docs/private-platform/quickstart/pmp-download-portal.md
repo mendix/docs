@@ -277,12 +277,14 @@ To create a new bundle, perform the following steps:
 
     * **Search by [something]** - Enter a component name or keyword.
     * **Filter by Type/Category** dropdown - Filter by category.
-    * **Supported Mx Versions** dropdown - Filter by compatible Mendix version.
+    * **Supported Mx Versions** dropdown - Use this to filter by compatible Mendix versions.
+      * Select your target Mendix version
+      * Click Releases to display only the releases that support your selection.
 
     Alternatively, you can directly select the components from the list.
 
-3. Click **Save as Bundle**.
-4. Enter a name for the bundle and click **Save**.
+4. Click **Save as Bundle**.
+5. Enter a name for the bundle and click **Save**.
 
 Your new bundle appears in the bundle list.
 

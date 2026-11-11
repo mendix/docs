@@ -155,9 +155,9 @@ The **Advanced** tab allows you to configure settings for features that is beyon
         * **Default** – Does not sort the selected items.
 * **Filter**
     * **Filter type:**
-        * **Contains (fuzzy)** – Shows options whose caption contains the typed text (default).
-        * **Contains (exact)** – Shows options whose caption contains the typed text exactly.
-        * **Starts-with** – Shows options whose caption starts with the typed text.
+        * **Contains (fuzzy)** – Shows options whose caption contains the typed characters in the same order, even if they are not next to each other. This is the default. When lazy loading is on and the options come from an association or a database, the data source filters the options instead, and **Contains (fuzzy)** works like **Contains (exact)**.
+        * **Contains (exact)** – Shows options whose caption contains the typed text as one continuous string.
+        * **Starts-with** – Shows options in which a word of the caption starts with the typed text.
         * **None** – Turns off filtering. Users cannot type in the input to search the options.
     * **Debounce interval** (ms) – This sets the debounce interval for each filter input change event.
 {{% alert color="info" %}}

@@ -17,7 +17,7 @@ When instructions conflict, follow this order of precedence:
 
 ### Critical Constraints
 
-* Edit existing files in place using the Edit tool. Do not create new files unless explicitly requested.
+* Edit existing files in place using the Edit tool. Do not create new files unless explicitly requested. When a new file is requested, use the `docs-new-page` skill.
 * Preserve meaning and intent. Make the smallest set of edits that fully resolves the request.
 * Never add product claims, technical behavior, ticket numbers, or release facts unless explicitly requested and sourced from provided content.
 

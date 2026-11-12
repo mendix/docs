@@ -17,7 +17,7 @@ Your Mendix profile displays your activities on the Mendix Platform and includes
 
 To access your Mendix profile, click your picture in the upper-right corner of the Mendix Portal, then select **See Your Profile**.
 
-If you use Studio Pro in a [Private Mendix Platform](/private-mendix-platform/) environment, a **PMP** badge is displayed next to your profile picture in Studio Pro, and the user profile menu displays the name of your portal. For more information, see the [Links and User Profile Menu](/refguide/studio-pro-overview/#links) section of *Studio Pro Overview*.
+If you use Studio Pro in a [Private Mendix Platform](/private-mendix-platform/) environment, a **PMP** badge is displayed next to your profile picture, and the user profile menu displays the name of your PMP portal. For more information, refer to the [Links and User Profile Menu](/refguide/studio-pro-overview/#links) section of *Studio Pro Overview*.
 
 {{% alert color="info" %}}
 By default, all newly created Mendix accounts come with their own Mendix profile.

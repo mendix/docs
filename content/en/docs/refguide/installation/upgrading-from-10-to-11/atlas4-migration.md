@@ -6,6 +6,8 @@ weight: 10
 tags: ["atlas", "atlas ui", "theming", "css", "css variables", "sass", "migration", "styling", "frontend"]
 ---
 
+<!-- TODO: This doc has highest # of text color contrast violations: over 50. Makes it a good litmus test for if we changed all the colors we needed to in the core code. -->  
+
 ## Introduction
 
 Atlas UI 4 marks a significant evolution in Mendix theming, bringing modern web standards and enhanced flexibility to your application's design. The most significant change to custom styling in Atlas 4 is the shift from **SASS variables** to **native CSS variables**.

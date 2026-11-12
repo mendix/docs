@@ -84,6 +84,7 @@ The image below illustrates the meaning of the parameters:
 In the diagram, note the following:
 
 * <span style="color:green">**A"**</span> is `MINE`, the current commit you want to merge changes into
+<!-- TODO: change color of B below (style color orange) so it meets WCAG contrast ratios. -->  
 * <span style="color:orange">**B'**</span> is `THEIRS`, the last commit on the branch you want to merge changes from
 * <span style="color:red">**A**</span> is `BASE`, the common commit where the branches diverged
 

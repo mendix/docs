@@ -68,7 +68,7 @@ This diagram illustrates the LTS concept with version and [end of support](#end)
 
 [//]: # (Original image in PowerPoint /source_files/refguide/lts-support.pptx)
 
-{{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" class="no-border" alt="Graphic showing the ways support durations overlap with regards to major versions.">}}
 
 {{% alert color="info" %}}For details on extending support for an older major version, see the [Extended Support](/support/#extended-support) section in *Mendix Support*.{{% /alert %}}
 

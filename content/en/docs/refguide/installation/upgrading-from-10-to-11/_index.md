@@ -191,6 +191,8 @@ The `com.mendix.storage.s3.EndPoint` setting must either not be set or set to an
 
 When the region is not specified or there is an incompatibility between the two settings above, error logs will contain entries similar to following:
 
+<!-- TODO: change color of "in" as it renders purple, below threshold of required contrast ratio. -->  
+
 ```
 - Unable to load region from any of the providers in the chain.
 - The bucket you are attempting to access must be addressed using the specified endpoint.

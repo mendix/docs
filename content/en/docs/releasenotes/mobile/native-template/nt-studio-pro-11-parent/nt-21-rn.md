@@ -1,8 +1,9 @@
 ---
 title: "Native Template 21"
 url: /releasenotes/mobile/nt-21-rn/
-weight: 1
+weight: 7
 description: "Native Template 21"
+description: "Release notes for Native Template 21."
 ---
 
 ## 21.0.0

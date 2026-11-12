@@ -70,12 +70,9 @@ The prerequisites are the following:
     {{% alert color="info" %}}If .NET Desktop Runtime is not installed on your machine, Mendix will install a version which was current at the time this version of Studio Pro was released.{{% /alert %}}
     
 * Java JDK
-
     * For Mendix Studio Pro 9.24.34 and above - [Eclipse Temurin JDK 21 (x64)](https://github.com/adoptium/temurin21-binaries/releases)
     * For Mendix Studio Pro 9.24.16 and above – [Eclipse Temurin JDK 17 (x64)](https://github.com/adoptium/temurin17-binaries/releases)
-    * For Mendix Studio Pro 9.18.0 and 9.24.15 – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
-    * For Mendix Studio Pro 9.14 to 9.17 – [Adoptium Temurin Java SDK](https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_windows_hotspot_11.0.14.1_1.msi)
-    * For Mendix Studio Pro 9.13 and below – [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
+    * For Mendix Studio Pro 9.24.15 and below – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
@@ -112,7 +109,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
             * Rename *windowsdesktop-runtime-8.0.14-win-x64.exe* to *windowsdesktop-runtime-8.0-x64.exe*
         * For Studio Pro versions 9.24.42 and above, rename the Microsoft .NET Desktop Runtime 10.0.x to remove the patch version. For example, if you have downloaded .NET Desktop Runtime 10.0.7:
             * Rename *windowsdesktop-runtime-10.0.7-win-x64.exe* to *windowsdesktop-runtime-10.0-x64.exe*
-    * The Java Development Kit 11, 17 or 21 (x64) *msi* (for example, *OpenJDK17U-jdk_x64_windows_hotspot_17.0.10_7.msi*) to one of the following, depending on the Studio Pro version:
+    * The Java Development Kit 11, 17 or 21 (x64) *msi* (for example, *OpenJDK17U-jdk_x64_windows_hotspot_17.0.21_9.msi*) to one of the following, depending on the Studio Pro version:
         * *adoptiumjdk_21_x64.msi* – for versions 9.24.34 and above
         * *adoptiumjdk_17_x64.msi* – for versions 9.24.16 and above
         * *adoptiumjdk_11_x64.msi* – for versions between 9.14.0 and 9.24.15 

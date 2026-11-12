@@ -279,7 +279,10 @@ To create a new bundle, perform the following steps:
 
     * **Search by [something]** - Enter a component name or keyword.
     * **Filter by Type/Category** dropdown - Filter by category.
-    * **Supported Mx Versions** dropdown - Filter by compatible Mendix version.
+    * **Supported Mx Versions** dropdown - Use this dropdown to filter by compatible Mendix versions:
+
+        1. Select your target Mendix version.
+        2. Click Releases to display only the releases that support your selection.
 
     Alternatively, you can directly select the components from the list.
 

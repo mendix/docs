@@ -104,7 +104,7 @@ To control the size of the embedded app, set a height on the host element with C
 ```
 
 {{% alert color="info" %}}
-In Mendix versions below 11.17.0, pass a `minHeight` value in the `render(…)` configuration, for example `minHeight: "620px"`. Otherwise, scroll containers in the embedded app can collapse to a height of 0 pixels. In Mendix 11.17.0 and above, the embedded client ignores `minHeight`.
+In Mendix versions below 11.17.0, pass a `minHeight` value in the `render(…)` configuration, for example `minHeight: "620px"` (see [Loading and Rendering the Embedded Client](#loading), below). Otherwise, scroll containers in the embedded app can collapse to a height of 0 pixels, even if you have set a height. In Mendix 11.17.0 and above, the embedded client ignores `minHeight`.
 {{% /alert %}}
 
 ## Loading and Rendering the Embedded Client{#loading}

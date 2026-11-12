@@ -1,17 +1,21 @@
-name: Branch Deletion Phase One (PR Creation)
+name: Branch Cleanup Report (PR Creation)
 permissions:
   contents: write
   pull-requests: write
 on:
   schedule:
-    - cron: '00 22 1 * *'  # 10PM on 1st of every month
+    - cron: '00 22 1 */2 *'  # 10PM on the 1st every two months
   workflow_dispatch:
     inputs:
       min_age_days:
         description: "Minimum age in days since merge"
         required: true
-        default: 27
+        default: 60
         type: number
+      branch_name:
+        description: "Optional branch name to limit the report to a single branch"
+        required: false
+        type: string
 
 jobs:
   identify-branches:
@@ -30,7 +34,7 @@ jobs:
 
       - name: Create timestamp file
         run: |
-          echo "Last scan for stale merged branches: $(TZ='Europe/Amsterdam' date +'%Y-%m-%d %H:%M:%S %Z (UTC%:z)')" > branch-cleanup-timestamp.txt
+          echo "Last branch cleanup report: $(TZ='Europe/Amsterdam' date +'%Y-%m-%d %H:%M:%S %Z (UTC%:z)')" > branch-cleanup-timestamp.txt
 
       - name: Fetch all branches
         run: |
@@ -39,13 +43,18 @@ jobs:
       - name: Process branches
         id: branch-data
         env:
-          MIN_AGE_DAYS: ${{ github.event.inputs.min_age_days || '27' }}
+          MIN_AGE_DAYS: ${{ github.event.inputs.min_age_days || '60' }}
+          TARGET_BRANCH: ${{ github.event.inputs.branch_name || '' }}
         run: |
           set -e
           ALL_BRANCHES=$(git branch -r | grep -v "origin/HEAD" | sed 's/origin\///')
-          MIN_AGE_DAYS=${MIN_AGE_DAYS:-27}
+          MIN_AGE_DAYS=${MIN_AGE_DAYS:-60}
+          TARGET_BRANCH=${TARGET_BRANCH:-}
 
           echo "MIN_AGE_DAYS=${MIN_AGE_DAYS}"
+          if [ -n "$TARGET_BRANCH" ]; then
+            echo "TARGET_BRANCH=${TARGET_BRANCH}"
+          fi
 
           PROTECTED_COUNT=0
           MERGED_COUNT=0
@@ -61,6 +70,10 @@ jobs:
           echo "CURRENT_DATE=$CURRENT_DATE" >> $GITHUB_ENV
 
           for BRANCH in $ALL_BRANCHES; do
+            if [ -n "$TARGET_BRANCH" ] && [ "$BRANCH" != "$TARGET_BRANCH" ]; then
+              continue
+            fi
+
             branch_lower=$(echo "$BRANCH" | tr '[:upper:]' '[:lower:]')
             if [[ $branch_lower == *backup* || $branch_lower =~ ^(development|main|master|production)(-[0-9]+)?$ ]]; then
               PROTECTED_BRANCHES+=("$BRANCH")
@@ -77,22 +90,27 @@ jobs:
           echo "branch totals: protected=${PROTECTED_COUNT} merged=${MERGED_COUNT} unmerged=${UNMERGED_COUNT}"
 
           for BRANCH in "${MERGED_BRANCHES_TO_PROCESS[@]}"; do
-            MERGE_HASH=$(git log --grep="Merge branch.*$BRANCH" origin/development -n 1 --pretty=format:"%H" || true)
+            BRANCH_NAME="$BRANCH"
+            MERGE_HASH=$(git log --grep="Merge branch.*$BRANCH_NAME" origin/development -n 1 --pretty=format:"%H" || true)
             if [ -z "$MERGE_HASH" ]; then
-              MERGE_HASH=$(git log -n 1 origin/$BRANCH --pretty=format:"%H" || true)
+              MERGE_HASH=$(git log -n 1 "origin/$BRANCH_NAME" --pretty=format:"%H" || true)
             fi
 
             if [ -z "$MERGE_HASH" ]; then
-              echo "WARN: no merge commit found for $BRANCH — skipping"
-              UNMERGED_BRANCHES+=("$BRANCH (no-merge-hash)")
+              echo "WARN: no merge commit found for $BRANCH_NAME — keeping it in the report"
+              UNMERGED_BRANCHES+=("$BRANCH_NAME (no merge hash)")
               UNMERGED_COUNT=$((UNMERGED_COUNT+1))
               continue
             fi
 
             MERGE_DATE_EPOCH=$(git show -s --format=%ct $MERGE_HASH 2>/dev/null || true)
+            MERGE_OWNER=$(git show -s --format='%an' "$MERGE_HASH" 2>/dev/null || true)
+            if [ -z "$MERGE_OWNER" ]; then
+              MERGE_OWNER="unknown"
+            fi
             if [ -z "$MERGE_DATE_EPOCH" ]; then
-              echo "WARN: could not read commit date for $BRANCH (hash=$MERGE_HASH) — skipping"
-              UNMERGED_BRANCHES+=("$BRANCH (no-merge-date)")
+              echo "WARN: could not read commit date for $BRANCH_NAME (hash=$MERGE_HASH) — keeping it in the report"
+              UNMERGED_BRANCHES+=("$BRANCH_NAME (owner: $MERGE_OWNER, no merge date)")
               UNMERGED_COUNT=$((UNMERGED_COUNT+1))
               continue
             fi
@@ -100,27 +118,27 @@ jobs:
             DAYS_AGO=$(( ($(date +%s) - MERGE_DATE_EPOCH) / 86400 ))
 
             if [[ $DAYS_AGO -ge $MIN_AGE_DAYS ]]; then
-              BRANCHES_TO_DELETE+=("$BRANCH (${DAYS_AGO}d since merge)")
+              BRANCHES_TO_DELETE+=("$BRANCH_NAME (owner: $MERGE_OWNER, ${DAYS_AGO}d since merge)")
             else
-              BRANCHES_TOO_RECENT+=("$BRANCH (${DAYS_AGO}d since merge)")
+              BRANCHES_TOO_RECENT+=("$BRANCH_NAME (owner: $MERGE_OWNER, ${DAYS_AGO}d since merge)")
             fi
-            echo "checked $BRANCH: hash=$MERGE_HASH date=$MERGE_DATE_EPOCH days=${DAYS_AGO}"
+            echo "checked $BRANCH_NAME: hash=$MERGE_HASH date=$MERGE_DATE_EPOCH days=${DAYS_AGO} owner=$MERGE_OWNER"
           done
 
-          echo "HAS_BRANCHES=$([ ${#BRANCHES_TO_DELETE[@]} -gt 0 ] && echo true || echo false)" >> $GITHUB_ENV
+          echo "HAS_BRANCHES=true" >> $GITHUB_ENV
           echo "BRANCHES_TO_DELETE=$(printf -- '- %s\n' "${BRANCHES_TO_DELETE[@]}" | jq -Rs .)" >> $GITHUB_ENV
           echo "PROTECTED_BRANCHES=$(printf -- '- %s\n' "${PROTECTED_BRANCHES[@]}" | jq -Rs .)" >> $GITHUB_ENV
           echo "BRANCHES_TOO_RECENT=$(printf -- '- %s\n' "${BRANCHES_TOO_RECENT[@]}" | jq -Rs .)" >> $GITHUB_ENV
           echo "UNMERGED_BRANCHES=$(printf -- '- %s\n' "${UNMERGED_BRANCHES[@]}" | jq -Rs .)" >> $GITHUB_ENV
 
-      - name: Create Deletion PR
+      - name: Create Report PR
         if: env.HAS_BRANCHES == 'true'
         uses: peter-evans/create-pull-request@v8 # NOTE: If you upgrade the version of this action, you must also update the GitHub Actions allowlist in mendix/docs > Settings > Actions > General to permit the new version tag, otherwise the workflow will fail.
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: "[Auto] Branch Deletion Candidates - ${{ env.CURRENT_DATE }}"
+          title: "[Auto] Branch Cleanup Report - ${{ env.CURRENT_DATE }}"
           body: |
-            ### Branches for Deletion
+            ### Branches for Review
             ${{ fromJSON(env.BRANCHES_TO_DELETE) }}
 
             ### Protected Branches
@@ -134,8 +152,7 @@ jobs:
           base: development
           labels: Internal WIP
           assignees: MarkvanMents,OlufunkeMoronfolu
-          reviewers: MarkvanMents,OlufunkeMoronfolu
-          commit-message: "Add branch cleanup candidates for ${{ env.CURRENT_DATE }}"
+          commit-message: "Add branch cleanup report for ${{ env.CURRENT_DATE }}"
           add-paths: |
             branch-cleanup-timestamp.txt
           author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"

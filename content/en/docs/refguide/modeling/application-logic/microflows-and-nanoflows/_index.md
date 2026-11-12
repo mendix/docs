@@ -36,6 +36,10 @@ Auto layout is applied as a single action that you can undo.
 Auto layout is an experimental feature, enabled by default. You can disable it in **Edit** > [Preferences](/refguide/preferences-dialog/) > **New features** tab, under [Microflow, Nanoflow, and Rule Editor](/refguide/preferences-dialog/#microflow-nanoflow-rule-editor).
 {{% /alert %}}
 
+{{% alert color="info" %}}
+This feature is available in Studio Pro 11.17 and above.
+{{% /alert %}}
+
 ## Differences between Microflows and Nanoflows {#differences}
 
 Microflows run in the runtime server and can therefore not be used in offline apps, while nanoflows run directly on the client side (that is, on the browser/device), and can be used in an offline app. Furthermore, most of the actions in nanoflows run directly on the device, so there is also a speed benefit for logic which does not need access to the server. 

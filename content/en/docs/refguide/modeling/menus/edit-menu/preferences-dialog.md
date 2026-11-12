@@ -343,6 +343,10 @@ This is a beta feature, available in Studio Pro 11.15 and above.
 
 Select **Enable auto layout for microflows (Experimental)** to add an **Auto layout** option to the context menu of the microflow, nanoflow, and rule editors, which automatically arranges activities on the canvas. This setting is enabled by default. For more information, see the [Auto Layout](/refguide/microflows-and-nanoflows/#auto-layout) section in *Microflows and Nanoflows*.
 
+{{% alert color="info" %}}
+This feature is available in Studio Pro 11.17 and above.
+{{% /alert %}}
+
 ### Project Loading
 
 Select this option to enable optimizations during project loading.

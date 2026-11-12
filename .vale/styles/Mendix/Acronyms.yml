@@ -1,6 +1,5 @@
 # Extends Microsoft.Acronyms (requires Vale 3.20 or later).
 # Ensures that the existence of 'first' implies the existence of 'second'.
-# Known issue: Doesn't recognize hyperlinks for acronym definitions
 extends: Microsoft.Acronyms
 message: "Define '%s' on first use."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#acronyms-and-initialisms

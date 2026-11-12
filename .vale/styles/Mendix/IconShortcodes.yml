@@ -1,6 +1,6 @@
 # Mendix custom rule: Use icon shortcodes with tooltips when describing clickable icons
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/icon-demo.md
-# Known issue: Only matches plaintext
+# Known issue: Doesn't match code font icon descriptions.
 extends: substitution
 message: "Use the icon shortcode and tooltip: '%s' instead of '%s'"
 link: https://docs.mendix.com/icons/

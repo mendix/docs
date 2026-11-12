@@ -21,7 +21,10 @@ Since version 4.0, the Workstation Connector connects with Workstation Client us
 
 ## Prerequisites
 
-* Mendix Workstation 3.0.0 or newer
+* Mendix Workstation 4.0.0 or newer
+
+    The Workstation Connector is backward compatible with pre GA Workstation Client 3.0 and newer, except for `SendDeviceRequest`, which requires Workstation Client 4.0 or later.
+
 * Mendix Studio Pro 9.24.11 or newer
 
 ## Installing the Workstation Connector {#install-connector}

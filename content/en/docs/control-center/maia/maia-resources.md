@@ -10,7 +10,7 @@ weight: 20
 The Maia **Resources** page allows you to increase the capacity of Maia Units for using Maia Make in Studio Pro. From here, you can provision, upgrade, downgrade, and deprovision Maia Units and manage the resources for Maia Make for your company. For more information on Maia Make’s capabilities, see [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/).
 
 {{% alert color="info" %}}
-Maia Units are only required for Maia Make. Other Maia features (for example, Maia Plan) do not require Maia Units.
+Maia Units are only required for Maia Make. Other Maia features (for example, Maia Spec) do not require Maia Units.
 {{% /alert %}}
 
 ## Prerequisites

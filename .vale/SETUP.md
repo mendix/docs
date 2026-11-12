@@ -54,7 +54,7 @@ After installing Vale:
 
    Vale 3.20 or later is required. If you have an older version, update it:
       * On macOS, run `brew upgrade vale`
-      * On Windows, download the latest version from the releases page and replace `vale.exe`
+      * On Windows, download the latest version from [the releases page](https://github.com/vale-cli/vale/releases) and replace `vale.exe`
 
 2. **Sync the Microsoft Style Guide rules:**
 

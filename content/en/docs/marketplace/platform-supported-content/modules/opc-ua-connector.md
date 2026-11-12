@@ -60,7 +60,7 @@ The descriptions of the actions are as follows:
 3. Run the app locally and open the app.
 4. Log in as a user with the `CanConfigure` user role.
 5. Go to the added **Configurations** page.
-6. If you want to connect to a server with a message security mode `Sign` or `Sign&Encrypt`, add your client certificate by clicking **Update application certificate** in the upper-right corner of the page.
+6. If you want to connect to a server with a message security mode `Sign` or `Sign&Encrypt`, open the `Certifcates` page by clicking **Manage certificates** and then add your client certificate by clicking **Update application certificate** in the upper-right corner of the page. 
 
 7. Click **New configuration** in the upper-right corner of the page.
 
@@ -87,7 +87,7 @@ Once the configuration is saved, the APIs can be used in your application.
 ## Advanced Connection {#advanced-connection}
 
 This section shows you how to configure a connection to an OPC-UA server without the discovery service.
-If you have succesfully set up your configuration in the Basic Configuration section, this section can be omited and please continue to section {[Using Services](#using-services)
+If you have successfully set up your configuration in the **Basic Configuration** section, you can omit this step and continue to section [Using Services](#using-services).
 
 1. Create a microflow to set up a manual connection. Make sure that the microflow do the following in order:
 
@@ -155,6 +155,15 @@ To do so, add the server certificate to the Mendix certificate list on the **Cer
 The association between the client and the server certificates does not need to be set in the domain model.
 
 If you ever want to reject a certificate from the server, remove it from the list of trusted certificates and restart the application.
+
+### Advanced Server Certificate Validation
+
+Setting the `AdvancedConfiguration` constant to *true* enables advanced server certificate validation options during configuration. This allows developers to customize validation checks, such as making checks more strict or disabling specific checks.    
+By default, only `ApplicationUri` validation is enabled. According to OPC UA specifications, this check should not be disabled. Other checks that can be enabled are hostname, validity, revocation status, certificate revocation lists (CRLs), end-entity key usage, and end-entity extended key usage.
+
+{{% alert color="warning" %}}
+Disabling server validation checks completely reduces connection security.
+{{% /alert %}}
 
 ## Using Services {#using-services}
 

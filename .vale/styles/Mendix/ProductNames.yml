@@ -1,7 +1,7 @@
 # Mendix custom rule: Deprecated product names
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide.md
 extends: substitution
-message: "Use '%s' instead of '%s'"
+message: "Use '%s' instead of '%s', which is a deprecated product name."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide/
 level: error
 ignorecase: false

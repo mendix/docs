@@ -78,3 +78,10 @@ After installing Vale:
    - If desired, you can adjust the extension's settings in VS Code to show a different minimum alert level. For example, if you set `minAlertLevel` to `warning`, it will report only warnings and errors, not suggestions.
 
 4. **If you have open PRs without the Vale configuration files:** Merge `development` into your branch.
+
+## Updates
+
+The Microsoft rules are maintained in https://github.com/vale-cli/Microsoft. To pull the latest rules onto your machine, run `vale sync` in your terminal.
+
+      * On macOS, run `brew upgrade vale`
+      * On Windows, download the latest version from [the releases page](https://github.com/vale-cli/vale/releases) and replace `vale.exe`

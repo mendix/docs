@@ -20,7 +20,7 @@ jobs:
     if: github.repository_owner == 'mendix' && github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     env:
-      VALE_VERSION: 3.26.0
+      VALE_VERSION: 3.27.0
     # Cancel old runs when new commits are pushed
     concurrency:
       group: ${{ github.workflow }}-${{ github.event.pull_request.number }}

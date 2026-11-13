@@ -254,6 +254,12 @@ To configure the connection, follow these steps:
 
 When the sign-in succeeds, the settings show that you are signed in. To sign out, click **Sign out**.
 
+#### Testing the Connection {#test-connection}
+
+In Studio Pro 11.17 and above, you can check that Maia can reach your provider before you save the settings.
+
+To test the connection, enter the settings for your provider and click **Test connection**. Maia shows whether the connection works or the error that it received.
+
 ### LLM Gateway Configuration for Private Mendix Platform
 
 [Private Mendix Platform](/private-mendix-platform/) provides an environment where you can develop and deploy your applications within your own enterprise security boundary to ensure the highest levels of data security and compliance. Because Private Mendix Platform instances are hosted within the enterprise firewall, selecting an LLM provider other than the default [Mendix Platform](#mendix-platform) requires you to also configure the LLM Gateway URL.

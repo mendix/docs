@@ -286,8 +286,8 @@ To create a new bundle, perform the following steps:
 
     Alternatively, you can directly select the components from the list.
 
-4. Click **Save as Bundle**.
-5. Enter a name for the bundle and click **Save**.
+3. Click **Save as Bundle**.
+4. Enter a name for the bundle and click **Save**.
 
 Your new bundle appears in the bundle list.
 

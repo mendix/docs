@@ -155,7 +155,7 @@ To make the nanoflow shown above, do the following:
 1. Connect the **Read NFC Tag** activity with a **Show message** activity. Right-click the connection to the **Show message** action and select **Set as error handler**.
 1. Connect this **Show message** action to an end point. Set the type as information, and set the template as *Your NFC tags says: {1}*. Use *$TagValue* as a parameter.
 1. Optionally you can add **Show progress** and **Hide progress** activities to give your user more information while using the NFC reader. This action can be found in the **Nanoflow Commons** module.
-1. Deploy your app to the sandbox.
+1. Deploy your app.
 
 ### Writing an NFC Tag {#write-nfc-tag}
 

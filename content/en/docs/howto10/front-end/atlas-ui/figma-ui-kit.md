@@ -13,7 +13,7 @@ The Figma UI Kit helps you understand what UI components are available in Mendix
 
 * **Save time** – Start with ready-made components instead of designing everything from scratch.
 * **Stay consistent** – Keep your application aligned with the Atlas UI design and styling.
-* **Design with confidence** – Preview components and their variations before implementing them in Mendix Studio pro.
+* **Design with confidence** – Preview components and their variations before implementing them in Mendix Studio Pro.
 * **Bridge design and development** – If you work with designers in your team, use the UI Kit to align on designs and simplify task transfers. If you do not have a designer, you can use Figma yourself to explore, plan, and communicate your UI designs before building them in Mendix.
 
 To start creating your designs with a UI kit, you must download [Atlas UI Kit for Figma](https://www.figma.com/community/file/1291681319513425134). You can design using any components that are up-to-date with the most recent [Atlas framework](https://atlasdesignsystem.mendixcloud.com/p/dashboard).

@@ -1,0 +1,17 @@
+# {{ .Site.Title }} — Full Documentation
+
+> This file contains the complete Markdown content of all Mendix documentation pages for AI agent indexing.
+> For a page index with descriptions, see llms.txt.
+
+{{- /* Walk the same tree as llms.txt: start from the landingpage root's children */ -}}
+{{- $docsRoot := index (where .Site.Sections "Type" "landingpage") 0 -}}
+
+{{- /* Include the root (home/landing) page itself */ -}}
+{{- if $docsRoot -}}
+{{- printf "\n---\n\n# %s\n\nURL: %s\nMarkdown: %sindex.html.md" $docsRoot.Title $docsRoot.Permalink $docsRoot.Permalink -}}
+{{- with $docsRoot.Description -}}{{- printf "\nDescription: %s" . -}}{{- end -}}
+{{- printf "\n\n%s" ($docsRoot.RawContent | strings.ReplaceRE `\]\((/[^:)#" ]+/)(#[^)"]*)?\)` `](${1}index.html.md${2})`) -}}
+{{- range $docsRoot.Pages -}}
+  {{- partial "llms-tree-full.txt" (dict "page" .) -}}
+{{- end -}}
+{{- end }}

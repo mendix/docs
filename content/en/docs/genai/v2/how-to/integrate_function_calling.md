@@ -17,7 +17,7 @@ This document explains how to use [function calling](/agents/glossary/#tool-call
 Through this document, you will:
 
 * Understand how to implement function calling within your Mendix application.
-* Learn to integrate GenAI capabilities to address specific business requirements effectively.
+* Learn to integrate GenAI capabilities to address specific business requirements.
 
 ### Prerequisites {#prerequisites}
 
@@ -106,7 +106,7 @@ Create a new microflow with the name `GetCurrentUserName_Function`.
     * Location: `https://openholidaysapi.org/PublicHolidays?countryIsoCode=NL&validFrom=2025-01-01&validTo=2025-12-31&languageIsoCode=EN`
     * HTTP method: `GET`
     * Use timeout on request: `Yes`
-    * Timeout (s): You can choose the value, here we set it to `300`
+    * Timeout (s): You can choose the value, here it is set to `300`
     * The rest can be set to default.
 
     Response tab:

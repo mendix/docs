@@ -174,7 +174,7 @@ Leave the remaining actions as they are currently set. Now that everything is im
 
 ### Navigation Setup
 
-Add a way to call the following microflows from your navigation menu or homepage:
+Add a way to call the following microflows from your navigation menu or home page:
 
 * **Chatbot** – The `MyFirstModule.ACT_FullScreenChat_Open` microflow created in the [Chat Setup](#chatsetup) section.
 * **Create Demo Data and Populate KB** – The `MyFirstModule.ACT_CreateDemoData_LoadAllIntoKnowledgeBase` created in the [Joining the Microflows](#joining-microflows) section.

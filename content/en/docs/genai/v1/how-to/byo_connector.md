@@ -26,7 +26,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page to gain foundational knowledge and become familiar with the key [concepts](/agents/get-started/).
 
-* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/agents/get-started/#llm) and [prompt engineering](/agents/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
+* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/agents/get-started/#llm) and [prompt engineering](/agents/get-started/#prompt-engineering) to use these within the Mendix ecosystem.
 
 ### GenAI for Mendix
 
@@ -61,7 +61,7 @@ Additionally, refer to the [GenAI Commons](/agents/agents-kit-1/reference-guide/
 * The domain model (data structure) to see how existing entities can be reused. 
 * The **Connector Building** folders contain useful microflows and helper activities for working with the provided entities.
 
-If you would like to explore the [GenAICommons](https://marketplace.mendix.com/link/component/227933) module, check out the [public repository](https://github.com/mendix/genai-showcase-app).
+If you want to explore the [GenAICommons](https://marketplace.mendix.com/link/component/227933) module, check out the [public repository](https://github.com/mendix/genai-showcase-app).
 
 ## Building Your Own Connector
 
@@ -76,14 +76,14 @@ During development, you will get the key considerations to keep in mind when cre
 
 To enable chat completion, the key microflow to consider is `ChatCompletions_WithHistory`, located in the GenAICommons module. This microflow plays a crucial role as it derives and calls the appropriate microflow from the provided DeployedModel, ensuring that the module remains independent of individual connectors. This is especially important for modules like ConversationalUI, which should work seamlessly with any connector following the same principles.
 
-To integrate properly, the microflow must supply two essential input objects:
+To integrate, the microflow must supply two essential input objects:
 
-* [DeployedModel](/agents/agents-kit-1/reference-guide/commons/#deployed-model) - Represents the specific model being used and determines which connector (microflow) is being called.
-* [Request](/agents/agents-kit-1/reference-guide/commons/#request) - Contains the details of the user's input and conversation history as well as other configurations.
+* [DeployedModel](/agents/agents-kit-1/reference-guide/commons/#deployed-model) – Represents the specific model being used and determines which connector (microflow) is being called.
+* [Request](/agents/agents-kit-1/reference-guide/commons/#request) – Contains the details of the user's input and conversation history as well as other configurations.
 
 And one output object:
 
-* [Response](/agents/agents-kit-1/reference-guide/commons/#response) - Contains the details of the LLM's results.
+* [Response](/agents/agents-kit-1/reference-guide/commons/#response) – Contains the details of the LLM's results.
 
 Since this structure is already standardized, no modifications are needed for the `Request` entity. Instead, when implementing a new connector, map the request data from the existing `Request` object to the format required by the specific provider—in this case, the Echo Connector.
 
@@ -93,8 +93,8 @@ Just as the `Request` entity structures input for the LLM, the Response entity d
 
 The `Response` entity includes key attributes such as:
 
-* Message - A single message that the model generated. 
-* Tool Call - A request from the model to call one or multiple tools, for example, a microflow. Available tools are defined in the request via the [ToolCollection](/agents/agents-kit-1/reference-guide/commons/#toolcollection).
+* Message – A single message that the model generated. 
+* Tool Call – A request from the model to call one or multiple tools, for example, a microflow. Available tools are defined in the request via the [ToolCollection](/agents/agents-kit-1/reference-guide/commons/#toolcollection).
 
 Since different providers return responses in different formats, when implementing a new connector, map the provider’s response to match the `Response` entity’s structure. If it is required to have additional attributes on the `Request` or `Response` entity, it is recommended to extend those entities in your own connector by either creating an association or a specialization. For example, you can find both patterns being applied in the OpenAIConnector (association to `Request`) and AmazonBedrockConnector (specialization of `Response`).
 
@@ -102,7 +102,7 @@ Since different providers return responses in different formats, when implementi
 
 #### Specialization
 
-The `Request` and `Response` objects are essential for enabling chat functionalities in ConversationalUI. However, to correctly call and interact with an LLM, the model must be properly configured. This is where the `DeployedModel` entity becomes essential.
+The `Request` and `Response` objects are essential for enabling chat functionalities in ConversationalUI. However, to correctly call and interact with an LLM, the model must be configured. This is where the `DeployedModel` entity becomes essential.
 
 The `DeployedModel` represents a GenAI model that the Mendix app can invoke, ensuring your app module knows which microflow to call and how to communicate with the model. It also includes a set of generic attributes commonly used across different LLM providers. However, since each provider may require additional model-specific details, the `DeployedModel` entity does not cover all necessary attributes.
 
@@ -143,16 +143,16 @@ As mentioned earlier, in the EchoConnector, the microflow simply returns the inp
 Since the microflow follows the same input parameters and returns a `Response` object, it remains fully compatible with the reusable components in the GenAICommons and ConversationalUI modules. This ensures that responses are seamlessly processed and displayed in existing chat interfaces without any additional UI customization.
 
 {{% alert color="info" %}}
-If you would like to track the consumption usage of tokens of your models, please look into the `GenAICommons.Usage_Create_TextAndFiles` microflow and related [documentation](/agents/agents-kit-1/reference-guide/commons/#token-usage). This microflow can be added at the end of your microflow.
+If you want to track the consumption usage of tokens of your models, please look into the `GenAICommons.Usage_Create_TextAndFiles` microflow and related [documentation](/agents/agents-kit-1/reference-guide/commons/#token-usage). This microflow can be added at the end of your microflow.
 {{% /alert %}}
 
-### Testing the Echo connector
+### Testing the Echo Connector
 
 To test the connector, first set up the configuration and deployed models. While the setup approach is flexible, the Echo Connector includes UI components to configure settings and create `EchoDeployedModel` objects, which can be used in the GenAI Showcase App's Chat UI examples.
 
 To set this up:
 
-1. Find **Echo Configurations** in the **Management** section of the homepage. This will lead you to the page where the configuration can be set up for the Echo Connector.
+1. Find **Echo Configurations** in the **Management** section of the home page. This will lead you to the page where the configuration can be set up for the Echo Connector.
 2. Click **New**, fill in the required fields, and click **Save**. For this example, the input can be left empty as no real credentials are needed. When you click **Save**, two `EchoDeployedModel` objects are created for the new configuration. Since the Echo Connector simply returns the request content as the response, these serve as test models for the Chat UI examples. In a custom connector, this step could involve importing available models based on the configuration or allowing the admin to create models manually.
 3. After the configuration and the models have been created, go back to the home page and open one of the showcases in the **Conversational UI** section.
 4. In the **Model** drop-down list, select one of the models created by the Echo Connector and start chatting.

@@ -35,7 +35,7 @@ You can define an agent for your Mendix app using any of the following approache
 
 * Use [Agent Editor in Studio Pro](/agents/agents-kit-2/how-to/create-agent-with-agent-editor/) for creating and iterating on agent definitions as part of the app model. This is the recommended approach for most use cases because it uses existing development capabilities of the platform to define, manage, and deploy agents as part of a Mendix app.
 * Use the [Agent Builder UI to define agents](/agents/agents-kit-2/how-to/create-agent-with-agent-commons/) at runtime based on the principles of Agent Commons. It enables versioning, development iteration, and refinement at runtime, separate from the traditional app logic development cycle.
-* Use the building blocks of GenAI Commons to [define the agent programmatically](/agents/agents-kit-2/how-to/create-agent-programmatically/). This is useful for very specific use cases, especially when the agent needs to be part of the code repository of the app.
+* Use the building blocks of GenAI Commons to [define the agent programmatically](/agents/agents-kit-2/how-to/create-agent-programmatically/). This is useful for specific use cases, especially when the agent needs to be part of the code repository of the app.
 
 ## Getting Started
 

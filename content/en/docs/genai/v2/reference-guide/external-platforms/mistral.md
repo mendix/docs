@@ -117,7 +117,7 @@ The GenAI Commons chat completions operations mentioned earlier run this impleme
 Function microflows can have none, one, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer, or String. Additionally, they may accept the [Request](/agents/agents-kit-2/reference-guide/commons/#request) or [Tool](/agents/agents-kit-2/reference-guide/commons/#tool) objects as inputs. The function microflow must return a string value.
 
 {{% alert color="warning" %}}
-Function calling is a very powerful capability and should be used with caution. Note that function microflows run in the context of the current user without enforcing entity-access. You can use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view; otherwise, confidential information may become visible to the end-user in the assistant's response.
+Function calling is a powerful capability and should be used with caution. Note that function microflows run in the context of the current user without enforcing entity-access. You can use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view; otherwise, confidential information may become visible to the end-user in the assistant's response.
 
 Mendix recommends building user confirmation logic into function microflows that potentially impact the world on behalf of the end-user. Examples of such microflows include sending an email, posting online, or making a purchase.
 {{% /alert %}}

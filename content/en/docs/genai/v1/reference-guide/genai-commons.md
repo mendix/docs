@@ -17,7 +17,7 @@ Looking for Mendix's newest agentic and generative AI features? [This page has b
 
 The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/agents/agents-kit-1/reference-guide/conversational-ui/) module.
 
-Connectors that adhere to the GenAI Commons module can be easily swapped, reducing dependency on model providers. The connectors provide a drag-and-drop experience for implementing AI capabilities and help you get started quickly. The module exposes useful operations for building requests to a large language model (LLM) and handling responses.
+Connectors that adhere to the GenAI Commons module can be swapped, reducing dependency on model providers. The connectors provide a drag-and-drop experience for implementing AI capabilities and help you get started. The module exposes useful operations for building requests to a large language model (LLM) and handling responses.
 
 If you want to connect to another LLM provider or your own service, Mendix recommends using the GenAI Commons module in this case too. This speeds up development and ensures that common principles are taken into account. Other developers or consumers of the connector can also adapt to it more quickly.
 
@@ -452,7 +452,7 @@ Use the exposed microflows and Java Actions to map the required information for 
 
 #### GenAI (Generate) {#genai-generate}
 
-Chat completions, embeddings, and image generation operations can be used by passing a [DeployedModel](#deployed-model) object of the desired connector. The action calls the internally assigned microflow of the connector and returns the response. Operations from different connectors can be exchanged very easily without much additional development effort.
+Chat completions, embeddings, and image generation operations can be used by passing a [DeployedModel](#deployed-model) object of the desired connector. The action calls the internally assigned microflow of the connector and returns the response. Operations from different connectors can be exchanged without much additional development effort.
 
 It is recommended that you adapt to the same interface when developing custom chat completions or image generation operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 

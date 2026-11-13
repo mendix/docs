@@ -11,13 +11,13 @@ aliases:
 
 ## Introduction
 
-Generative AI can be very powerful in providing user-friendly interactions with your app. However, using generative AI is very different from writing low- or high-code. This page introduces some important concepts in generative AI and suggests ways in which it can enhance your low-code app.
+Generative AI can be very powerful in providing user-friendly interactions with your app. However, using generative AI is different from writing low- or high-code. This page introduces some important concepts in generative AI and suggests ways in which it can enhance your low-code app.
 
 ## Large Language Model (LLM) {#llm}
 
 By understanding both the capabilities and limitations of LLMs, you can more effectively integrate generative AI into your apps. Mendix recommends that you use it to accelerate business processes, but still "keep the human in the loop".
 
-### What is an LLM?
+### What Is an LLM?
 
 One of the most important components for generative AI is the Large Language Model (LLM). It is an advanced neural network trained on large amounts of textual data. This allows the model to understand textual input, and generate output. LLMs are designed to handle a variety of natural language processing tasks, making them versatile tools for developers and businesses alike.
 
@@ -66,7 +66,7 @@ Adding knowledge bases helps to tailor response generation to specific contexts 
 Knowledge bases are often used for:
 
 1. [Retrieval Augmented Generation (RAG)](/agents/rag/) retrieves relevant knowledge from the knowledge base, incorporates it into a prompt, and sends it to the model to generate a response.
-2. Semantic search enables advanced search capabilities by considering the semantic meaning of the text, going beyond exact and approximate matching. It allows the knowledge base to be searched for similar chunks effectively.
+2. Semantic search enables advanced search capabilities by considering the semantic meaning of the text, going beyond exact and approximate matching. It allows the knowledge base to be searched for similar chunks.
 
 ### What is an LLM Not?
 
@@ -102,7 +102,7 @@ With prompt engineering you can guide the model to generate accurate, applicable
 
 The knowledge of LLMs is limited to the data they have been trained on. This is generally available information, for example from Wikipedia and other internet sources.
 
-For use cases where the LLM needs to be aware of domain-specific or private enterprise data, you can use the RAG pattern. This allows you to add large amounts of additional context to a request without making the prompts extremely lengthy. To implement RAG, you need to set up a knowledge base that contains the data. When evaluating the actual user prompt, the basic pattern of RAG consists of three phases:
+For use cases where the LLM needs to be aware of domain-specific or private enterprise data, you can use the RAG pattern. This allows you to add large amounts of additional context to a request without making the prompts lengthy. To implement RAG, you need to set up a knowledge base that contains the data. When evaluating the actual user prompt, the basic pattern of RAG consists of three phases:
 
 1. Use the user input to **retrieve** relevant data from the knowledge base.
 2. **Augment** the prompt with the retrieved data.
@@ -123,7 +123,7 @@ For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedro
 
 ### PgVector Knowledge Base {#pgvectorknowledgebase}
 
-If your chosen architecture does not have fully-integrated RAG capabilities, or if you want tighter control of the RAG process, you can create and use your own knowledge base.
+If your chosen architecture does not have fully integrated RAG capabilities, or if you want tighter control of the RAG process, you can create and use your own knowledge base.
 
 In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
 

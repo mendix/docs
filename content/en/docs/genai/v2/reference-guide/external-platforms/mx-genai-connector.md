@@ -148,7 +148,7 @@ Document chat enables the model to interpret and analyze documents, such as PDFs
 
 For [Chat Completions (without history)](/agents/agents-kit-2/reference-guide/commons/#chat-completions-without-history), `OptionalFileCollection` is an optional input parameter. For [Chat completions (with history)](/agents/agents-kit-2/reference-guide/commons/#chat-completions-with-history), a `FileCollection` can optionally be added to individual user messages using [Add Message to Request](/agents/agents-kit-2/reference-guide/commons/#chat-add-message-to-request).
 
-In the entire conversation, you can pass up to five documents that are smaller than 4.5 MB each. There is also a practical, model-dependent limit on the number of pages a document can contain, typically around 100 pages. This is not fixed and can vary with the selected model and the complexity of the file. For example, images, heavy formatting, or embedded content can reduce the effective page limit. If you expect to work with very large documents, consider splitting them into smaller files or providing summarized extracts to improve reliability.
+In the entire conversation, you can pass up to five documents that are smaller than 4.5 MB each. There is also a practical, model-dependent limit on the number of pages a document can contain, typically around 100 pages. This is not fixed and can vary with the selected model and the complexity of the file. For example, images, heavy formatting, or embedded content can reduce the effective page limit. If you expect to work with large documents, consider splitting them into smaller files or providing summarized extracts to improve reliability.
 
 The following file types are accepted: PDF, CSV, DOC, DOCX, XLS, XLSX, HTML, TXT, and MD.
 

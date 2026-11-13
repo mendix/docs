@@ -75,7 +75,7 @@ Click **Export** to export consumption data in CSV format. The export contains i
 
 {{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-team.png" alt="Team page showing the list of resource members with the Technical Contact label next to one member" >}}
 
-The **Team** page allows you to manage access to the Mendix Cloud GenAI resource. By default, internal members listed in this **Overview** have access to the resource in the GenAI resource portal and can create new keys or invite new users. You can add new users via the **Add Member** button. To remove a member, click the three-dot icon ({{% icon name="three-dots-menu-horizontal-filled" %}}) at the end of the member's row and select **Remove Member**.
+The **Team** page allows you to manage access to the Mendix Cloud GenAI resource. By default, internal members listed in this **Overview** have access to the resource in the GenAI resource portal and can create new keys or invite new users. You can add new users via the **Add Member** button. To remove a member, click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) at the end of the member's row and select **Remove Member**.
 
 ### Technical Contact {#technical-contact}
 
@@ -90,7 +90,7 @@ The Technical Contact is responsible for informing the development teams or mana
 
 When a resource is provisioned, the user selected in the **Technical Contact** section of the provisioning form becomes the Technical Contact. After that, the Technical Contact can be changed to any other member of the resource. A user can be the Technical Contact for multiple resources.
 
-To change the Technical Contact, click the three-dot icon ({{% icon name="three-dots-menu-horizontal-filled" %}}) at the end of the member's row and select **Set as Technical Contact**. Only Mendix Admins and the current Technical Contact can change the Technical Contact. The new Technical Contact does not receive an invitation to accept or decline the role.
+To change the Technical Contact, click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) at the end of the member's row and select **Set as Technical Contact**. Only Mendix Admins and the current Technical Contact can change the Technical Contact. The new Technical Contact does not receive an invitation to accept or decline the role.
 
 {{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-team-technical-contact.png" alt="Team page with the three-dot menu open for a member, showing the Set as Technical Contact and Remove Member options" >}}
 

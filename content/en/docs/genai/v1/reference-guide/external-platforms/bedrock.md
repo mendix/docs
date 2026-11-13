@@ -16,7 +16,7 @@ Looking for Mendix's newest agentic and generative AI features? [This page has b
 
 The [Amazon Bedrock connector](https://marketplace.mendix.com/link/component/215042) enables you to enrich your Mendix app with generative AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/).
 
-Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started, easily experiment with FMs, and seamlessly integrate and deploy them into your applications using AWS tools and capabilities.
+Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can get started, experiment with FMs, and seamlessly integrate and deploy them into your applications using AWS tools and capabilities.
 
 ### Available Model Families
 
@@ -136,7 +136,7 @@ You can also take a look at the [GenAI Showcase Application](https://marketplace
 
 For operations that do not depend on the GenAI Commons, you can take a different approach. For example, to list all foundational models, implement the **List Foundation Models** activity by doing the following steps:
 
-1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+1. In the **App Explorer**, right-click the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.
 3. From the **Toolbox**, drag a **Create Object** activity to your microflow and create an object of type `ListFoundationModelsRequest`.
 4. In the **Toolbox**, in the **Amazon Bedrock (other)** section, find the **ListFoundationModels** activity.
@@ -145,7 +145,7 @@ For operations that do not depend on the GenAI Commons, you can take a different
 7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type `ENUM_Region` of the AWS Authentication connector.
 8. For the **Credentials** parameter, provide a **Credentials** object from the AWS Authentication connector:
     1. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GetStaticCredentials** or **GetTemporaryCredentials** action.
-    2. Drag the one you would like to use to the beginning of your microflow.
+    2. Drag the one you want to use to the beginning of your microflow.
     3. Double-click the microflow action to configure the required parameters and provide a value for the AWS Region. For the **ListFoundationModels** parameter, provide the `ListFoundationModelsRequest` created in step 3.
 9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.
 10. From the **Toolbox**, drag a **Retrieve object(s)** activity to your microflow and place it after the **ListFoundationModels** activity.
@@ -170,7 +170,7 @@ To build a simple microflow that uses the ChatCompletions operation to send a si
     1. For the **ModelID** parameter, enter the model id of the LLM you want to send a message to. The model id of Claude 3.5 Sonnet is *anthropic.claude-3-5-sonnet-20240620-v1:0*.
     2. Click **OK**.
 5. In the **Toolbox**, search for the **Chat Completions (without history)** activity in the *GenAI (Generate)* and drag it onto your microflow.
-6. Double click on the activity to see its parameters.
+6. Double click the activity to see its parameters.
     1. The **OptionalRequest** and **OptionalFileCollection** parameters are not needed for this example, so you can set them to **empty**.
     2. For the **UserPrompt** parameter, enter a string of your choice, for example *Hi, Claude!*. 
     3. For the **DeployedModel** parameter, pass the retrieved **BedrockDeployedModel** object.
@@ -192,7 +192,7 @@ To invoke a specific model that is not covered by the ChatCompletions operation,
 2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
 3. Create your domain model inspired by the JSON structures that you found. You can use a tool to visualize Json structures if needed, such as [JSON Crack](https://jsoncrack.com/editor).
 4. In Mendix Studio Pro, create a JSON structure by doing the following steps:
-    1. Right-click on the target folder.
+    1. Right-click the target folder.
     2. Click **Add other** > **JSON structure**.
     3. Create a structure for the request JSON.
     4. Repeat the previous steps to create a structure for the response JSON.
@@ -252,7 +252,7 @@ The module includes technical reference documentation for the available entities
 The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
 
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
-2. Click on the element for which you want to view the documentation.
+2. Click the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
 
@@ -266,7 +266,7 @@ The [ChatCompletions (with history)](/agents/agents-kit-1/reference-guide/common
 
 Some capabilities of the chat completions operations are currently only available for specific models:
 
-* **Function Calling** - You can use function calling in all chat completions operations. To do this, use a [supported model](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html) by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/agents/agents-kit-1/reference-guide/commons/#add-function-to-request) operation. You can also first retrieve data from a knowledge base and then call `ChatCompletions` with the information required using the connector's function calling properties. In order to use a function calling pattern with knowledge bases, add a knowledge base to your Request using [Tools: Add Knowledge Base](/agents/agents-kit-1/reference-guide/commons/#add-knowledge-base-to-request). Here the collection identifier that needs to be passed is the `KnowledgeBaseID`.
+* **Function Calling** – You can use function calling in all chat completions operations. To do this, use a [supported model](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html) by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/agents/agents-kit-1/reference-guide/commons/#add-function-to-request) operation. You can also first retrieve data from a knowledge base and then call `ChatCompletions` with the information required using the connector's function calling properties. In order to use a function calling pattern with knowledge bases, add a knowledge base to your Request using [Tools: Add Knowledge Base](/agents/agents-kit-1/reference-guide/commons/#add-knowledge-base-to-request). Here the collection identifier that needs to be passed is the `KnowledgeBaseID`.
 For additional general information about function calling, see [Function Calling](/agents/function-calling/). 
 
 **Function calling microflows**: A microflow used as a tool for function calling must satisfy the following conditions:
@@ -279,9 +279,9 @@ For additional general information about function calling, see [Function Calling
 
 2. Return value of the type String.
 
-* **Vision** - This operation supports the *vision* capability for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` to the `Message` using the [Files: Initialize Collection with File](/agents/agents-kit-1/reference-guide/commons/#initialize-filecollection) or the [Files: Add to Collection](/agents/agents-kit-1/reference-guide/commons/#add-file-to-collection) operation. Make sure to set the `FileType` attribute to **image**.
+* **Vision** – This operation supports the *vision* capability for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` to the `Message` using the [Files: Initialize Collection with File](/agents/agents-kit-1/reference-guide/commons/#initialize-filecollection) or the [Files: Add to Collection](/agents/agents-kit-1/reference-guide/commons/#add-file-to-collection) operation. Make sure to set the `FileType` attribute to **image**.
 
-* **Document Chat** – This operation supports the ability to chat with documents for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). To send a document to the model add a `FileCollection` with a `System.FileDocument` to the `Message` using the [Files: Initialize Collection with File](/agents/agents-kit-1/reference-guide/commons/#initialize-filecollection) or the [Files: Add to Collection](/agents/agents-kit-1/reference-guide/commons/#add-file-to-collection) operation. For Document Chat, it is not supported to create a `FileContent` from a URL using the above mentioned operations; Please use the `System.FileDocument` option. Make sure to set the `FileType` attribute to **document**.
+* **Document Chat** – This operation supports the ability to chat with documents for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). To send a document to the model add a `FileCollection` with a `System.FileDocument` to the `Message` using the [Files: Initialize Collection with File](/agents/agents-kit-1/reference-guide/commons/#initialize-filecollection) or the [Files: Add to Collection](/agents/agents-kit-1/reference-guide/commons/#add-file-to-collection) operation. For Document Chat, it is not supported to create a `FileContent` from a URL using the above mentioned operations; please use the `System.FileDocument` option. Make sure to set the `FileType` attribute to **document**.
 
 ##### Tool Choice
 
@@ -682,7 +682,7 @@ Without action groups, the agent will still access associated knowledge bases, b
 
 For example, it might be beneficial for the agent to dynamically retrieve more information via a REST endpoint or other source, rather than storing all possible information in a knowledge base. To achieve this, a lambda function must first be specified for the REST request and then associated with the agent as part of an action group. 
 
-If you would like to add lambda functions to your agent, refer to the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html).
+If you want to add lambda functions to your agent, refer to the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html).
 
 #### ListAgents {#list-agents}
 
@@ -766,7 +766,7 @@ The operation returns an integer that indicates how many objects were created or
 
 ### Knowledge Base {#knowledge-base}
 
-In Bedrock, a *knowledge base* denotes a substantial storehouse of data and information. This serves as a foundational resource, enabling the AI system to glean insights and effectively comprehend and respond to natural language queries.
+In Bedrock, a *knowledge base* denotes a substantial storehouse of data and information. This serves as a foundational resource, enabling the AI system to glean insights and comprehend and respond to natural language queries.
 
 For more information about knowledge bases, see [Knowledge Base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) in the Amazon Bedrock documentation.
 
@@ -835,9 +835,9 @@ Your AWS organization may not have been granted access to the model which you ar
 
 To solve this issue, follow these steps:
 
-1. In your Amazon Bedrock environment, navigate to **Model Access** for the region in which you would like to work.
+1. In your Amazon Bedrock environment, navigate to **Model Access** for the region in which you want to work.
 2. If the status of a model is **Available**, enable access to this model for your AWS organization by doing the following steps:
-    1. In the top-right corner of the overview, click on **Edit**.
+    1. In the upper-right corner of the overview, click **Edit**.
     2. Select the check boxes by the models which you want to access with your credential set.
     3. Click **Save Changes**.
 

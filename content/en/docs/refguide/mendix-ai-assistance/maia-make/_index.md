@@ -223,6 +223,43 @@ To configure an OpenAI-compatible provider, follow these steps:
 5. Optional: Enter your **API Key**. Studio Pro stores this key securely across sessions.
 6. Click **Save Config**.
 
+In Studio Pro 11.17 and above, the **Authentication Mode** list lets you choose between **API Key** and **Sign in with Microsoft Entra ID**. For the second option, see [Signing In with Microsoft Entra ID](#openai-entra-id).
+
+##### Signing In with Microsoft Entra ID {#openai-entra-id}
+
+In Studio Pro 11.17 and above, you can connect Maia to an OpenAI-compatible model that is protected by Microsoft Entra ID, such as Azure AI Foundry. You sign in with your Microsoft account, so you do not need an API key.
+
+{{% alert color="info" %}}
+This option has only been tested with Azure AI Foundry.
+{{% /alert %}}
+
+Before you start, register an app in Microsoft Entra ID:
+
+1. Register a new application in your Microsoft Entra ID tenant.
+2. Add the **Mobile and desktop applications** platform, and set the redirect URI to `http://localhost`. The app is a public client, so you do not need a client secret.
+3. Note the **Application (client) ID** of the registration, and your tenant ID or domain name.
+
+To configure the connection, follow these steps:
+
+1. Click **Settings** ({{% icon name="cog" %}}) in the Maia pane.
+2. Select **OpenAI Compatible** from the **LLM Provider** list.
+3. Select **Sign in with Microsoft Entra ID** from the **Authentication Mode** list.
+4. Enter the **Base URL** of your server. It must start with `https://`, for example, `https://<resource>.services.ai.azure.com/openai/v1`.
+5. Enter the **Model ID**.
+6. Enter the **Authority**. This is `https://login.microsoftonline.com/` followed by your tenant ID or domain name.
+7. Enter the **Client ID**. This is the **Application (client) ID** of your app registration.
+8. Check the **Scope**. Change it only if your server needs a different permission.
+9. Click **Save Config**. You must save the settings before you can sign in.
+10. Click **Sign in**, and complete the sign-in with your Microsoft account in your browser. To stop, click **Cancel sign-in**.
+
+When the sign-in succeeds, the settings show that you are signed in. To sign out, click **Sign out**.
+
+#### Testing the Connection {#test-connection}
+
+In Studio Pro 11.17 and above, you can check that Maia can reach your provider before you save the settings.
+
+To test the connection, enter the settings for your provider and click **Test connection**. Maia shows whether the connection works or the error that it received.
+
 ### LLM Gateway Configuration for Private Mendix Platform
 
 [Private Mendix Platform](/private-mendix-platform/) provides an environment where you can develop and deploy your applications within your own enterprise security boundary to ensure the highest levels of data security and compliance. Because Private Mendix Platform instances are hosted within the enterprise firewall, selecting an LLM provider other than the default [Mendix Platform](#mendix-platform) requires you to also configure the LLM Gateway URL.

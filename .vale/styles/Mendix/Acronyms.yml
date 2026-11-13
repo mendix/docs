@@ -1,87 +1,29 @@
-extends: conditional
+# Extends Microsoft.Acronyms (requires Vale 3.20 or later).
+# Ensures that the existence of 'first' implies the existence of 'second'.
+# Link text is excluded from the scope (& ~link), so acronyms that appear only as link text aren't flagged.
+# Known issue: Definitions inside link text aren't recognized, so later plain uses of the acronym are flagged
+extends: Microsoft.Acronyms
 message: "Define '%s' on first use."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#acronyms-and-initialisms
-level: suggestion
-ignorecase: false
 scope:
-  - paragraph
-  - heading
-  - list
-  - table
-  - blockquote
-# Ensures that the existence of 'first' implies the existence of 'second'.
-# Known issue: Doesn't recognize hyperlinks for acronym definitions
-# Known issue: Doesn't recognize CLOB (Character Large Object) always expects definition first—"Character Large Object (CLOB)" even if acronym is more common than definition
+  - paragraph & ~link
+  - heading & ~link
+  - list & ~link
+  - table & ~link
+  - blockquote & ~link
 # Modified from Microsoft.Acronyms to accept sentence-case definitions (e.g., "personal access token (PAT)" not just "Personal Access Token (PAT)")
-first: '\b([A-Z]{3,5})\b'
 second: '(?:\b[A-Za-z][a-z]+ )+\(([A-Z]{3,5})\)'
-# ... with the exception of these:
-exceptions:
-  - API
-  - ASP
+# ... with the exception of these (and the Microsoft.Acronyms exceptions):
+exceptions+:
   - BTP
-  - CLI
-  - CPU
-  - CSS
-  - CSV
-  - DEBUG
-  - DOM
-  - DPI
-  - FAQ
-  - GCC
-  - GDB
-  - GET
   - GIF
-  - GPU
-  - GTK
-  - GUI
   - HANA
-  - HTML
-  - HTTP
-  - HTTPS
-  - IDE
-  - JAR
   - JDBC
   - JPEG
   - JPG
-  - JSON
-  - JSX
-  - LESS
-  - LLDB
-  - LTS
   - MCP
   - MDA
   - MPR
-  - MTS
-  - NET
-  - NOTE
-  - NVDA
-  - OSS
-  - PATH
-  - PDF
-  - PHP
   - PNG
-  - POST
-  - RAM
-  - REPL
   - REST
-  - RSA
   - SAP
-  - SCM
-  - SCSS
-  - SDK
-  - SQL
-  - SSH
-  - SSL
-  - SVG
-  - TBD
-  - TCP
-  - TODO
-  - URI
-  - URL
-  - USB
-  - UTF
-  - XML
-  - XSS
-  - YAML
-  - ZIP

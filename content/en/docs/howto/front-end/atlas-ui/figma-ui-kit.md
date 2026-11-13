@@ -29,7 +29,7 @@ To use the Atlas UI Kit for Figma to its fullest potential you will need the fol
 
 * A Figma subscription (required to use the kit's file as a library)
 * The Figma desktop app (download it to take advantage of Figma's best features)
-    * To install the Figma desktop app, go to the [Figma website](https://www.figma.com/), download the app, and install it.
+    * To install the Figma desktop app, go to the [Figma website](https://www.figma.com/), download the app, and install it
 
 ## Basics 
 

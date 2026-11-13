@@ -31,7 +31,7 @@ Typical use cases for Conversational UI include the following:
 * Create a chat interface for users to chat with Large Language Models (LLM). 
 * Allow users to switch between different implementations by switching providers. 
 * Include advanced capabilities to control the model's behavior, for example, by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [GenAI Concepts](/agents/get-started/).
+* Extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [GenAI Concepts](/agents/get-started/).
 
 ### Features {#features}
 
@@ -116,7 +116,7 @@ All pages expect a [ChatContext](#chat-context) that needs to have an active [Pr
 
 #### Snippets {#snippets}
 
-Drag the following snippets onto your other pages to quickly build your version of the chat interface.
+Drag the following snippets onto your other pages to build your version of the chat interface.
 
 ##### Chat Interface Snippets {#snippet-chat-interface}
 
@@ -223,7 +223,7 @@ Since version 6.0.0, the module stores messages from tool calling persistently i
 
 This changes how action microflows are used, because they are called each time a tool is called and the UI changes for the user, for example, displaying a tool call or waiting for a user decision if a tool can be executed. Logic that only needs to happen right after the user sends their message (preprocessing) or after the final assistant's message was returned (postprocessing), should perhaps only be executed for those cases.
 
-If no [user-visibility](/agents/agents-kit-1/reference-guide/commons/#enum-useraccessapproval) is configured for tools and you would like not to store tool messages (and therefore retain the behavior from versions before 6.0.0), you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-1/reference-guide/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-1/reference-guide/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
+If no [user-visibility](/agents/agents-kit-1/reference-guide/commons/#enum-useraccessapproval) is configured for tools and you do not want to store tool messages (and therefore retain the behavior from versions before 6.0.0), you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-1/reference-guide/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-1/reference-guide/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
 
 ### Human in the loop {#human-in-the-loop}
 

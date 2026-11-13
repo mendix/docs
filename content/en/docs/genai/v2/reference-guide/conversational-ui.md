@@ -25,7 +25,7 @@ Typical use cases for Conversational UI include the following:
 * Create a chat interface for users to chat with [large language models](/agents/glossary/#large-language-model) (LLMs). 
 * Allow users to switch between different implementations by switching providers. 
 * Include advanced capabilities to control the model's behavior, for example, by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as [RAG](/agents/glossary/#retrieval-augmented-generation) or the ReAct pattern. For more information, see [GenAI Concepts](/agents/get-started/).
+* Extend the chat interface with advanced concepts, such as [RAG](/agents/glossary/#retrieval-augmented-generation) or the ReAct pattern. For more information, see [GenAI Concepts](/agents/get-started/).
 
 ### Features {#features}
 
@@ -111,7 +111,7 @@ All pages expect a [ChatContext](#chat-context) that needs to have an active [Pr
 
 #### Snippets {#snippets}
 
-Drag the following snippets onto your other pages to quickly build your version of the chat interface.
+Drag the following snippets onto your other pages to build your version of the chat interface.
 
 ##### Chat Interface Snippets {#snippet-chat-interface}
 

@@ -19,7 +19,7 @@ This document explains how to add data to your smart app to integrate with a Lar
 In this document, you will:
 
 * Learn how to ground your LLM in data within your Mendix application using the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
-* Discover how to integrate GenAI capabilities with a knowledge base to effectively address specific business requirements.
+* Discover how to integrate GenAI capabilities with a knowledge base to address specific business requirements.
 
 ### Prerequisites
 
@@ -180,7 +180,7 @@ To use the knowledge in a chat interface, create and adjust certain microflows a
 
 4. Open your `MyFirstBot.ChatContext_ChatWithHistory_ActionMicroflow` microflow in your **MyFirstBot** module.
 
-5. After the `Request found` decision, add a `Retrieve` action. In this example, we retrieve the same as in the insertion microflow.
+5. After the `Request found` decision, add a `Retrieve` action. In this example, you retrieve the same as in the insertion microflow.
     
     * **Source**: `From database`
     * **Entity**: `GenAICommons.ConsumedKnowledgeBase`

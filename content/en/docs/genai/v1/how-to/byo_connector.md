@@ -26,7 +26,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page to gain foundational knowledge and become familiar with the key [concepts](/agents/get-started/).
 
-* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/agents/get-started/#llm) and [prompt engineering](/agents/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
+* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/agents/get-started/#llm) and [prompt engineering](/agents/get-started/#prompt-engineering) to use these within the Mendix ecosystem.
 
 ### GenAI for Mendix
 
@@ -61,7 +61,7 @@ Additionally, refer to the [GenAI Commons](/agents/agents-kit-1/reference-guide/
 * The domain model (data structure) to see how existing entities can be reused. 
 * The **Connector Building** folders, contain useful microflows and helper activities for working with the provided entities.
 
-If you would like to explore the [GenAICommons](https://marketplace.mendix.com/link/component/227933) module, check out the [public repository](https://github.com/mendix/genai-showcase-app).
+If you want to explore the [GenAICommons](https://marketplace.mendix.com/link/component/227933) module, check out the [public repository](https://github.com/mendix/genai-showcase-app).
 
 ## Building Your Own Connector
 
@@ -76,7 +76,7 @@ During development, you will get the key considerations to keep in mind when cre
 
 To enable chat completion, the key microflow to consider is `ChatCompletions_WithHistory`, located in the GenAICommons module. This microflow plays a crucial role as it derives and calls the appropriate microflow from the provided DeployedModel, ensuring that the module remains independent of individual connectors. This is especially important for modules like ConversationalUI, which should work seamlessly with any connector following the same principles.
 
-To integrate properly, the microflow must supply two essential input objects:
+To integrate, the microflow must supply two essential input objects:
 
 * [DeployedModel](/agents/agents-kit-1/reference-guide/commons/#deployed-model) – Represents the specific model being used and determines which connector (microflow) is being called.
 * [Request](/agents/agents-kit-1/reference-guide/commons/#request) – Contains the details of the user's input and conversation history as well as other configurations.
@@ -102,7 +102,7 @@ Since different providers return responses in different formats, when implementi
 
 #### Specialization
 
-The `Request` and `Response` objects are essential for enabling chat functionalities in ConversationalUI. However, to correctly call and interact with an LLM, the model must be properly configured. This is where the `DeployedModel` entity becomes essential.
+The `Request` and `Response` objects are essential for enabling chat functionalities in ConversationalUI. However, to correctly call and interact with an LLM, the model must be configured. This is where the `DeployedModel` entity becomes essential.
 
 The `DeployedModel` represents a GenAI model that the Mendix app can invoke, ensuring your app module knows which microflow to call and how to communicate with the model. It also includes a set of generic attributes commonly used across different LLM providers. However, since each provider may require additional model-specific details, the `DeployedModel` entity does not cover all necessary attributes.
 
@@ -143,7 +143,7 @@ As mentioned earlier, in the EchoConnector, the microflow simply returns the inp
 Since the microflow follows the same input parameters and returns a `Response` object, it remains fully compatible with the reusable components in the GenAICommons and ConversationalUI modules. This ensures that responses are seamlessly processed and displayed in existing chat interfaces without any additional UI customization.
 
 {{% alert color="info" %}}
-If you would like to track the consumption usage of tokens of your models, please look into the `GenAICommons.Usage_Create_TextAndFiles` microflow and related [documentation](/agents/agents-kit-1/reference-guide/commons/#token-usage). This microflow can be added at the end of your microflow.
+If you want to track the consumption usage of tokens of your models, please look into the `GenAICommons.Usage_Create_TextAndFiles` microflow and related [documentation](/agents/agents-kit-1/reference-guide/commons/#token-usage). This microflow can be added at the end of your microflow.
 {{% /alert %}}
 
 ### Testing the Echo Connector

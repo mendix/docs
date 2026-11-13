@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction
 
-Generative AI can be very powerful in providing user-friendly interactions with your app. However, using generative AI is very different from writing low- or high-code. This page introduces some important concepts in generative AI and suggests ways in which it can enhance your low-code app.
+Generative AI can be very powerful in providing user-friendly interactions with your app. However, using generative AI is different from writing low- or high-code. This page introduces some important concepts in generative AI and suggests ways in which it can enhance your low-code app.
 
 ## Large Language Model (LLM) {#llm}
 
@@ -66,7 +66,7 @@ Adding knowledge bases helps to tailor response generation to specific contexts 
 Knowledge bases are often used for:
 
 1. [Retrieval Augmented Generation (RAG)](/agents/rag/) retrieves relevant knowledge from the knowledge base, incorporates it into a prompt, and sends it to the model to generate a response.
-2. Semantic search enables advanced search capabilities by considering the semantic meaning of the text, going beyond exact and approximate matching. It allows the knowledge base to be searched for similar chunks effectively.
+2. Semantic search enables advanced search capabilities by considering the semantic meaning of the text, going beyond exact and approximate matching. It allows the knowledge base to be searched for similar chunks.
 
 ### What is an LLM Not?
 
@@ -102,7 +102,7 @@ With prompt engineering you can guide the model to generate accurate, applicable
 
 The knowledge of LLMs is limited to the data they have been trained on. This is generally available information, for example from Wikipedia and other internet sources.
 
-For use cases where the LLM needs to be aware of domain-specific or private enterprise data, you can use the RAG pattern. This allows you to add large amounts of additional context to a request without making the prompts extremely lengthy. To implement RAG, you need to set up a knowledge base that contains the data. When evaluating the actual user prompt, the basic pattern of RAG consists of three phases:
+For use cases where the LLM needs to be aware of domain-specific or private enterprise data, you can use the RAG pattern. This allows you to add large amounts of additional context to a request without making the prompts lengthy. To implement RAG, you need to set up a knowledge base that contains the data. When evaluating the actual user prompt, the basic pattern of RAG consists of three phases:
 
 1. Use the user input to **retrieve** relevant data from the knowledge base.
 2. **Augment** the prompt with the retrieved data.

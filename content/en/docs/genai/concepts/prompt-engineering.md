@@ -111,7 +111,7 @@ There is a difference between how models behave. For example, newer models might
 
 ## Tips for Better Prompting
 
-There are some techniques that have been found to produce better responses from GenAI models. The following examples are focusing on [system prompts](#system-prompt). If you would like to see some examples, visit our [Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/).
+There are some techniques that have been found to produce better responses from GenAI models. The following examples are focusing on [system prompts](#system-prompt). If you want to see some examples, visit the [Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/).
 
 ### Be Clear
 
@@ -216,7 +216,7 @@ Only use the ticket information from the GetTicketInformationForIdentifier funct
 
 When the prompt becomes longer it can help to use XML-like tags to give more structure to the prompt. This will help the model interpret the different sections and their role in the prompt better.
 
-For example, you could use something like:
+For example, you can use something like:
 
 ```xml
 <instructions>
@@ -234,13 +234,13 @@ Skip the preamble.
 </output_formatting>
 ```
 
-{{% alert color="info" %}}If you would like to know more tips on prompt engineering, read [Part 1](https://www.mendix.com/blog/part-one-hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering/) and [Part 2](https://www.mendix.com/blog/hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering-part-2/) of our blog post *Hey ChatGPT, Can You Write Me a Blog Post About Prompt Engineering?*.{{% /alert %}}
+{{% alert color="info" %}}If you want to know more tips on prompt engineering, read [Part 1](https://www.mendix.com/blog/part-one-hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering/) and [Part 2](https://www.mendix.com/blog/hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering-part-2/) of the blog post *Hey ChatGPT, Can You Write Me a Blog Post About Prompt Engineering?*.{{% /alert %}}
 
 ## Learn More
 
 ### Prompt Library
 
-Check out our [Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/) for examples you can apply or use as inspiration for the prompts in your apps.
+See the [Mendix Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/) for examples you can apply or use as inspiration for the prompts in your apps.
 
 ### Showcases
 

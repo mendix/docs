@@ -16,7 +16,7 @@ Looking for Mendix's newest agentic and generative AI features? [This page has b
 
 The [Amazon Bedrock connector](https://marketplace.mendix.com/link/component/215042) enables you to enrich your Mendix app with generative AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/).
 
-Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started, easily experiment with FMs, and seamlessly integrate and deploy them into your applications using AWS tools and capabilities.
+Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can get started, experiment with FMs, and seamlessly integrate and deploy them into your applications using AWS tools and capabilities.
 
 ### Available Model Families
 
@@ -145,7 +145,7 @@ For operations that do not depend on the GenAI Commons, you can take a different
 7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type `ENUM_Region` of the AWS Authentication connector.
 8. For the **Credentials** parameter, provide a **Credentials** object from the AWS Authentication connector:
     1. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GetStaticCredentials** or **GetTemporaryCredentials** action.
-    2. Drag the one you would like to use to the beginning of your microflow.
+    2. Drag the one you want to use to the beginning of your microflow.
     3. Double-click the microflow action to configure the required parameters and provide a value for the AWS Region. For the **ListFoundationModels** parameter, provide the `ListFoundationModelsRequest` created in step 3.
 9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.
 10. From the **Toolbox**, drag a **Retrieve object(s)** activity to your microflow and place it after the **ListFoundationModels** activity.
@@ -682,7 +682,7 @@ Without action groups, the agent will still access associated knowledge bases, b
 
 For example, it might be beneficial for the agent to dynamically retrieve more information via a REST endpoint or other source, rather than storing all possible information in a knowledge base. To achieve this, a lambda function must first be specified for the REST request and then associated with the agent as part of an action group. 
 
-If you would like to add lambda functions to your agent, refer to the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html).
+If you want to add lambda functions to your agent, refer to the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html).
 
 #### ListAgents {#list-agents}
 
@@ -766,7 +766,7 @@ The operation returns an integer that indicates how many objects were created or
 
 ### Knowledge Base {#knowledge-base}
 
-In Bedrock, a *knowledge base* denotes a substantial storehouse of data and information. This serves as a foundational resource, enabling the AI system to glean insights and effectively comprehend and respond to natural language queries.
+In Bedrock, a *knowledge base* denotes a substantial storehouse of data and information. This serves as a foundational resource, enabling the AI system to glean insights and comprehend and respond to natural language queries.
 
 For more information about knowledge bases, see [Knowledge Base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) in the Amazon Bedrock documentation.
 
@@ -835,7 +835,7 @@ Your AWS organization may not have been granted access to the model which you ar
 
 To solve this issue, follow these steps:
 
-1. In your Amazon Bedrock environment, navigate to **Model Access** for the region in which you would like to work.
+1. In your Amazon Bedrock environment, navigate to **Model Access** for the region in which you want to work.
 2. If the status of a model is **Available**, enable access to this model for your AWS organization by doing the following steps:
     1. In the upper-right corner of the overview, click **Edit**.
     2. Select the check boxes by the models which you want to access with your credential set.

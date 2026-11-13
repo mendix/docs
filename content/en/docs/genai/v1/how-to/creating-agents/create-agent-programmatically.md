@@ -110,7 +110,7 @@ The button currently does not perform any actions, so you need to create a micro
     * **Member**: `ModelResponse`
     * **Value**: `$Response/ResponseText` (expression)
 
-Now, the user can ask the model questions and receive responses. However, this interaction is still quite basic and does not yet qualify as a true 'agent,' since no complex tools have been integrated.
+Now, the user can ask the model questions and receive responses. However, this interaction is still basic and does not yet qualify as a true 'agent,' since no complex tools have been integrated.
 
 ## Empowering the Agent
 
@@ -180,7 +180,7 @@ You have successfully integrated a knowledge base into your agent interaction. R
 
 {{< figure src="/attachments/genai/howto-singleagent/Microflow_GenAICommons.png" alt="Microflow showing GenAI Commons implementation" >}}
 
-If you would like to learn how to enable user confirmation for tools, similar to what is described for the [Agent Commons approach](/agents/agents-kit-1/how-to/create-agent-with-agent-commons/), you can find examples in the `ExampleMicroflows` module of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
+If you want to learn how to enable user confirmation for tools, similar to what is described for the [Agent Commons approach](/agents/agents-kit-1/how-to/create-agent-with-agent-commons/), you can find examples in the `ExampleMicroflows` module of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 ## Testing and Troubleshooting
 

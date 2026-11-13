@@ -345,7 +345,7 @@ You can use the **Search** field to search for a specific action by name.
 
 This tab contains a list of actions that were archived after the period specified in the **Log Settings** tab has expired. You can download the archive if required for auditing purposes.
 
-##### Log Settings
+##### Log Settings {#log-settings}
 
 You can select how long the actions are kept in the logs, in days. The minimum number of days is 1, and the maximum is 365. You can also specify the logging level, from no logging to complete logging.
 

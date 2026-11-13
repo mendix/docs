@@ -6,6 +6,10 @@
 @import "badge";
 @import "numbered-headings";
 
+body {
+    color: $primary; // Set base text color for body
+}
+
 // _alert.scss - Style alert boxes (alert layout defined in alert.html)
 
 .alert {
@@ -36,6 +40,65 @@
     margin-right:12px;
 }
 
+// Feedback Style for the feedback section defined in feedback.html
+.feedback--footer {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-top-width: 0.15rem;
+    border-top-style: solid;
+    border-top-color: $info-7;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feedback-container {
+    margin-right: 2rem;
+}
+
+.feedback--answer {
+    display: inline-block;
+    background-color: $primary-light !important;
+    border-color: $primary-light !important;
+    border-radius: 0 !important;
+    color: $primary !important;
+}
+
+.feedback--answer:hover,
+.feedback--answer:focus,
+.feedback--answer:active {
+    background-color: darken($primary-light, 6%) !important;
+    border-color: darken($primary-light, 6%) !important;
+    border-radius: 0 !important;
+    color: #000028 !important;
+}
+
+.feedback--answer-no {
+    margin-left: 1em;
+}
+
+.feedback--response {
+    display: none;
+    margin-top: 1em;
+}
+
+.feedback--response__visible {
+    display: block;
+}
+
+.get-started-container {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.get-started svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 // Anchor icon styling for anchor.js
 
 .anchor-icon {
@@ -49,9 +112,13 @@
     background: $gray-light;
 }
 
-// _code.scss -  Code formatting
+// Style Markdown content
 
 .td-content {
+    order: 1;
+    margin-left: 2rem; // NK - custom edit
+    max-width: 90%;  // NK - fixed width of all content to 90%
+
     // Highlighted code.
     .highlight {
         @extend .card;
@@ -79,15 +146,7 @@
             padding: .0rem;
         }
     }
-}
-
-// _content.scss - Style Markdown content
-
-.td-content {
-    order: 1;
-    margin-left: 2rem; // NK - custom edit
-    max-width: 90%;  // NK - fixed width of all content to 90%
-
+ 
     p, li, td {
         font-weight: $td-font-weight-body-text;
     }
@@ -147,29 +206,33 @@ a:not(.btn):not(.td-sidebar-link):not(.card-text a):visited {
 
 // Add icon after external links in main content (but exclude some content)
 main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started):not(.lp-panel-list a)::after {
+    content: "";
     display: inline-block;
     width: 1rem;
     height: 1rem;
     margin-left: .2rem;
     vertical-align: sub;
-    content: url("/mx-icons/external.svg");
-    filter: invert(14%) sepia(99%) saturate(4690%) hue-rotate(225deg) brightness(93%) contrast(95%); // Matches to $link-color (blue-8 from PDS). Keep updated with _variables_project.scss.
+    background-color: $info-7; 
+    -webkit-mask: url("/mx-icons/external.svg") center / contain no-repeat;
+    mask: url("/mx-icons/external.svg") center / contain no-repeat;
 }
 
 // Add icon after external links in lp-panel-list - need to be a different colour
 .lp-panel-list a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::after {
+    content: "";
     display: inline-block;
     width: 1rem;
     height: 1rem;
     margin-left: .2rem;
     vertical-align: sub;
-    content: url("/mx-icons/external.svg");
-    filter: invert(81%) sepia(55%) saturate(2783%) hue-rotate(181deg) brightness(103%) contrast(101%); // Matches to #8AC4FF specified in lp-panel-list in _front-page.scss. Keep updated with _variables_project.scss. Calculated using https://isotropic.co/tool/hex-color-to-css-filter/
+    background-color: $info-7; 
+    -webkit-mask: url("/mx-icons/external.svg") center / contain no-repeat;
+    mask: url("/mx-icons/external.svg") center / contain no-repeat;
 }
 
 // Change external link icon color upon hover
 main a[href*="https://"]:hover::after {
-    filter: invert(15%) sepia(65%) saturate(5388%) hue-rotate(231deg) brightness(79%) contrast(121%); // Matches to $link-hover-color (blue-9 from PDS). Keep updated with _variables_project.scss. 
+      background-color: $link-hover-color;
 }
 
 .btn {
@@ -218,6 +281,7 @@ html {
 }
 
 .td-main main {
+    background-color: $gray-300;
     padding-top: 4rem;  // DB - Moved out of breakpoint
         @include media-breakpoint-up(md) {
             border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
@@ -405,7 +469,7 @@ img {
     .td-sidebar-link {
         display: block;
         padding-bottom: 0.375rem;
-
+       
         // NK - overrides special styling for pages with no children
         &__page {
             color: inherit;//$gray-700;

@@ -1,0 +1,209 @@
+// # Siemens Design Language semantic color tokens
+
+// ## Background
+$background-0: light-dark($main-sand-200, $main-deep-blue-900);
+$background-1: light-dark($main-brand-white, $main-deep-blue-800);
+$background-2: light-dark($main-sand-300, $main-deep-blue-875);
+$background-3: light-dark($main-brand-white, $main-deep-blue-775);
+$background-4: light-dark($main-sand-100, $main-deep-blue-850);
+$background-hover: light-dark($main-sand-400, $main-deep-blue-750);
+$background-active: light-dark($main-sand-500, $main-deep-blue-700);
+$background-accent: light-dark($main-interactive-blue-700, $main-brand-interactive-coral);
+$background-accent-hover: light-dark($main-brand-teal, $main-bold-green-400);
+$background-accent-active: light-dark($main-interactive-blue-800, $main-bold-green-500);
+$background-accent-secondary: rgba(0, 204, 204, 0);
+$background-accent-secondary-hover: light-dark($main-bold-green-100, $main-interactive-blue-900);
+$background-accent-secondary-active: light-dark($main-bold-green-200, $main-bold-green-900);
+$background-caution: light-dark($main-yellow-500, $main-yellow-300);
+$background-caution-hover: light-dark($main-yellow-400, $main-yellow-500);
+$background-caution-active: light-dark($main-yellow-300, $main-yellow-600);
+$background-caution-subtle: light-dark($main-yellow-100, $main-yellow-900);
+$background-critical: $data-orchid-500;
+$background-critical-hover: $data-orchid-700;
+$background-critical-active: $data-orchid-900;
+$background-critical-subtle: light-dark($data-orchid-100, $data-orchid-900);
+$background-danger: $main-red-500;
+$background-danger-hover: $main-red-600;
+$background-danger-active: $main-red-700;
+$background-danger-subtle: light-dark($main-red-100, $main-red-900);
+$background-danger-secondary: rgba(215, 35, 57, 0);
+$background-disabled: light-dark($main-deep-blue-300, $main-deep-blue-700);
+$background-information: $main-blue-500;
+$background-information-hover: $main-blue-600;
+$background-information-active: $main-blue-700;
+$background-information-subtle: light-dark($main-blue-100, $main-blue-900);
+$background-inverse: light-dark($main-deep-blue-900, $main-brand-white);
+$background-neutral: light-dark($main-sand-500, $main-deep-blue-600);
+$background-neutral-hover: light-dark($main-sand-600, $main-deep-blue-750);
+$background-neutral-active: light-dark($main-sand-700, $main-deep-blue-775);
+$background-success: light-dark($main-green-700, $main-green-500);
+$background-success-hover: light-dark($main-green-800, $main-green-400);
+$background-success-active: light-dark($main-green-900, $main-green-300);
+$background-success-subtle: light-dark($main-green-100, $main-green-900);
+$background-warning: light-dark($main-orange-600, $main-orange-400);
+$background-warning-hover: light-dark($main-orange-700, $main-orange-500);
+$background-warning-active: light-dark($main-orange-800, $main-orange-600);
+$background-warning-subtle: light-dark($main-orange-100, $main-orange-900);
+$background-warning-secondary: rgba(199, 83, 0, 0);
+
+// ## Border
+$border-1: light-dark($main-deep-blue-900, $main-brand-white);
+$border-2: light-dark($main-deep-blue-600, $main-deep-blue-400);
+$border-3: light-dark($main-deep-blue-400, $main-deep-blue-600);
+$border-4: light-dark($main-deep-blue-100, $main-deep-blue-650);
+$border-accent: light-dark($main-interactive-blue-700, $main-brand-interactive-coral);
+$border-accent-hover: light-dark($main-brand-teal, $main-bold-green-400);
+$border-accent-active: light-dark($main-interactive-blue-800, $main-bold-green-500);
+$border-caution: light-dark($main-yellow-500, $main-yellow-400);
+$border-critical: $data-orchid-500;
+$border-danger: $main-red-500;
+$border-danger-secondary: light-dark($main-red-600, $main-red-300);
+$border-information: $main-blue-500;
+$border-inverse: light-dark($main-sand-200, $main-deep-blue-900);
+$border-neutral: light-dark($main-deep-blue-400, $main-deep-blue-600);
+$border-success: light-dark($main-green-700, $main-green-500);
+$border-warning: light-dark($main-orange-600, $main-orange-400);
+$border-warning-secondary: light-dark($main-orange-700, $main-orange-300);
+
+// ## Code
+$code-1: light-dark($main-deep-blue-900, $main-deep-blue-100);
+$code-2: light-dark($main-blue-800, $data-royal-blue-200);
+$code-3: light-dark($data-blue-900, $data-blue-200);
+$code-4: light-dark($main-orange-700, $data-orange-200);
+$code-5: light-dark($main-yellow-700, $data-yellow-200);
+$code-6: light-dark($main-green-700, $data-green-200);
+$code-7: light-dark($data-orchid-500, $data-orchid-200);
+$code-8: light-dark($data-sand-900, $data-sand-500);
+$code-9: light-dark($data-deep-blue-700, $data-deep-blue-400);
+$code-10: light-dark($data-purple-900, $data-purple-400);
+$code-11: light-dark($data-turquoise-700, $data-turquoise-100);
+$code-12: light-dark($main-red-700, $main-red-300);
+
+// ## Data
+$data-categorical-1: light-dark($data-brand-petrol, $data-brand-light-petrol);
+$data-categorical-2: light-dark($data-turquoise-900, $data-brand-bold-green);
+$data-categorical-3: light-dark($data-green-700, $data-green-400);
+$data-categorical-4: light-dark($data-turquoise-700, $data-turquoise-100);
+$data-categorical-5: light-dark($data-royal-blue-500, $data-royal-blue-400);
+$data-categorical-6: light-dark($data-interactive-coral-900, $data-interactive-coral-100);
+$data-categorical-7: light-dark($data-purple-700, $data-purple-500);
+$data-categorical-8: light-dark($data-purple-900, $data-purple-200);
+$data-categorical-9: light-dark($data-orchid-700, $data-orchid-400);
+$data-categorical-10: light-dark($data-red-700, $data-red-500);
+$data-categorical-11: light-dark($data-plum-900, $data-plum-400);
+$data-categorical-12: light-dark($data-plum-500, $data-plum-200);
+$data-categorical-13: light-dark($data-royal-blue-700, $data-royal-blue-200);
+$data-categorical-14: light-dark($data-orange-900, $data-orange-400);
+$data-categorical-15: light-dark($data-yellow-900, $data-yellow-400);
+$data-categorical-16: light-dark($data-sand-700, $data-sand-500);
+$data-categorical-17: light-dark($data-deep-blue-700, $data-deep-blue-500);
+$data-rating-bad: $main-red-500;
+$data-rating-poor: $main-orange-500;
+$data-rating-average: $main-yellow-500;
+$data-rating-good: $data-avocado-400;
+$data-rating-excellent: $data-green-500;
+$data-sequential-avocado-1: light-dark($data-avocado-400, $data-avocado-200);
+$data-sequential-avocado-2: light-dark($data-avocado-500, $data-avocado-400);
+$data-sequential-avocado-3: light-dark($data-avocado-700, $data-avocado-500);
+$data-sequential-avocado-4: light-dark($data-avocado-900, $data-avocado-700);
+$data-sequential-blue-1: light-dark($data-blue-400, $data-blue-200);
+$data-sequential-blue-2: light-dark($data-blue-500, $data-blue-400);
+$data-sequential-blue-3: light-dark($data-blue-700, $data-blue-500);
+$data-sequential-blue-4: light-dark($data-blue-900, $data-blue-700);
+$data-sequential-deep-blue-1: light-dark($data-deep-blue-400, $data-deep-blue-200);
+$data-sequential-deep-blue-2: light-dark($data-deep-blue-500, $data-deep-blue-400);
+$data-sequential-deep-blue-3: light-dark($data-deep-blue-700, $data-deep-blue-500);
+$data-sequential-deep-blue-4: light-dark($data-deep-blue-900, $data-deep-blue-700);
+$data-sequential-green-1: light-dark($data-green-400, $data-green-200);
+$data-sequential-green-2: light-dark($data-green-500, $data-green-400);
+$data-sequential-green-3: light-dark($data-green-700, $data-green-500);
+$data-sequential-green-4: light-dark($data-green-900, $data-green-700);
+$data-sequential-interactive-coral-1: light-dark($data-interactive-coral-400, $data-interactive-coral-200);
+$data-sequential-interactive-coral-2: light-dark($data-interactive-coral-500, $data-interactive-coral-400);
+$data-sequential-interactive-coral-3: light-dark($data-interactive-coral-700, $data-interactive-coral-500);
+$data-sequential-interactive-coral-4: light-dark($data-interactive-coral-900, $data-interactive-coral-700);
+$data-sequential-orange-1: $data-orange-200;
+$data-sequential-orange-2: $data-orange-400;
+$data-sequential-orange-3: $data-orange-500;
+$data-sequential-orange-4: $data-orange-700;
+$data-sequential-orchid-1: light-dark($data-orchid-400, $data-orchid-200);
+$data-sequential-orchid-2: light-dark($data-orchid-500, $data-orchid-400);
+$data-sequential-orchid-3: light-dark($data-orchid-700, $data-orchid-500);
+$data-sequential-orchid-4: light-dark($data-orchid-900, $data-orchid-700);
+$data-sequential-plum-1: light-dark($data-plum-400, $data-plum-200);
+$data-sequential-plum-2: light-dark($data-plum-500, $data-plum-400);
+$data-sequential-plum-3: light-dark($data-plum-700, $data-plum-500);
+$data-sequential-plum-4: light-dark($data-plum-900, $data-plum-700);
+$data-sequential-purple-1: light-dark($data-purple-400, $data-purple-200);
+$data-sequential-purple-2: light-dark($data-purple-500, $data-purple-400);
+$data-sequential-purple-3: light-dark($data-purple-700, $data-purple-500);
+$data-sequential-purple-4: light-dark($data-purple-900, $data-purple-700);
+$data-sequential-red-1: light-dark($data-red-400, $data-red-200);
+$data-sequential-red-2: light-dark($data-red-500, $data-red-400);
+$data-sequential-red-3: light-dark($data-red-700, $data-red-500);
+$data-sequential-red-4: light-dark($data-red-900, $data-red-700);
+$data-sequential-royal-blue-1: light-dark($data-royal-blue-200, $data-royal-blue-100);
+$data-sequential-royal-blue-2: light-dark($data-royal-blue-400, $data-royal-blue-200);
+$data-sequential-royal-blue-3: light-dark($data-royal-blue-500, $data-royal-blue-400);
+$data-sequential-royal-blue-4: light-dark($data-royal-blue-700, $data-royal-blue-500);
+$data-sequential-sand-1: light-dark($data-sand-400, $data-sand-200);
+$data-sequential-sand-2: light-dark($data-sand-500, $data-sand-400);
+$data-sequential-sand-3: light-dark($data-sand-700, $data-sand-500);
+$data-sequential-sand-4: light-dark($data-sand-900, $data-sand-700);
+$data-sequential-turquoise-1: light-dark($data-turquoise-400, $data-turquoise-200);
+$data-sequential-turquoise-2: light-dark($data-turquoise-500, $data-turquoise-400);
+$data-sequential-turquoise-3: light-dark($data-turquoise-700, $data-turquoise-500);
+$data-sequential-turquoise-4: light-dark($data-turquoise-900, $data-turquoise-700);
+$data-sequential-yellow-1: light-dark($data-yellow-400, $data-yellow-200);
+$data-sequential-yellow-2: light-dark($data-yellow-500, $data-yellow-400);
+$data-sequential-yellow-3: light-dark($data-yellow-700, $data-yellow-500);
+$data-sequential-yellow-4: light-dark($data-yellow-900, $data-yellow-700);
+
+// ## Effects
+$effects-backdrop: light-dark(rgba(0, 0, 0, 0.3), color-mix(in srgb, $main-deep-blue-900 70%, transparent));
+$effects-focus: light-dark($main-brand-focus-light, $main-brand-focus);
+$effects-logo: light-dark($main-brand-petrol, $main-brand-white);
+// Per level: layer-1 shadow, layer-2 shadow
+$effects-shadow-1:
+  0 0.5px 1px 0 light-dark(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 1)),
+  0 -0.25px 1px 0 light-dark(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.8));
+$effects-shadow-2:
+  0 1px 2px 0 light-dark(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.6)),
+  0 -0.25px 2px 0 light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+$effects-shadow-3:
+  0 2px 6px 0 light-dark(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.6)),
+  0 -0.25px 2px 0 light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+$effects-shadow-4:
+  0 4px 12px 0 light-dark(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.6)),
+  0 -0.25px 2px 0 light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+
+// ## Text
+$text-accent: light-dark($main-interactive-blue-700, $main-brand-interactive-coral);
+$text-accent-hover: light-dark($main-brand-teal, $main-bold-green-400);
+$text-accent-active: light-dark($main-interactive-blue-800, $main-bold-green-500);
+$text-caution: light-dark($main-yellow-800, $main-yellow-300);
+$text-critical: light-dark($data-orchid-700, $data-orchid-200);
+$text-danger: light-dark($main-red-700, $main-red-300);
+$text-disabled: light-dark($main-deep-blue-400, $main-deep-blue-600);
+$text-information: light-dark($main-blue-700, $main-blue-200);
+$text-inverse: light-dark($main-brand-white, $main-deep-blue-900);
+$text-on-accent: light-dark($main-brand-white, $main-deep-blue-900);
+$text-on-accent-secondary: light-dark($main-interactive-blue-700, $main-brand-interactive-coral);
+$text-on-accent-secondary-hover: light-dark($main-brand-teal, $main-bold-green-400);
+$text-on-accent-secondary-active: light-dark($main-interactive-blue-800, $main-bold-green-500);
+$text-on-caution: $main-deep-blue-900;
+$text-on-critical: $main-brand-white;
+$text-on-danger: $main-brand-white;
+$text-on-danger-secondary: light-dark($main-red-600, $main-red-300);
+$text-on-information: $main-brand-white;
+$text-on-neutral: light-dark($main-deep-blue-900, $main-brand-white);
+$text-on-success: light-dark($main-brand-white, $main-deep-blue-900);
+$text-on-warning: light-dark($main-brand-white, $main-deep-blue-900);
+$text-on-warning-secondary: light-dark($main-orange-700, $main-orange-300);
+$text-primary: light-dark($main-deep-blue-900, $main-brand-white);
+$text-secondary: light-dark($main-deep-blue-650, $main-deep-blue-300);
+$text-success: light-dark($main-green-700, $main-green-300);
+$text-warning: light-dark($main-orange-700, $main-orange-300);
+
+// ## MxDock additions (not in the Siemens spec)
+$mxdock-logo: light-dark($main-interactive-blue-700, $main-brand-white);

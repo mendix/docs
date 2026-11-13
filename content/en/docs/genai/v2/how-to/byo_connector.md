@@ -152,7 +152,7 @@ To test the connector, set up the configuration and deployed models. The Echo co
 
 To set this up:
 
-1. Find **Echo Configurations** in the **Management** section of the homepage. This leads you to the page where you can set up the configuration for the Echo connector.
+1. Find **Echo Configurations** in the **Management** section of the home page. This leads you to the page where you can set up the configuration for the Echo connector.
 2. Click **New**, fill in the required fields, and click **Save**. For this example, leave the input empty because no real credentials are needed. When you click **Save**, two `EchoDeployedModel` objects are created for the new configuration. Because the Echo connector simply returns the request content as the response, these serve as test models for the Chat UI examples. In a custom connector, this step involves importing available models based on the configuration or allowing the admin to create models manually.
-3. After you create the configuration and the models, go back to the homepage and open one of the showcases in the **Conversational UI** section.
+3. After you create the configuration and the models, go back to the home page and open one of the showcases in the **Conversational UI** section.
 4. In the **Model** drop-down list, select one of the models created by the Echo connector and start chatting.

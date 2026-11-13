@@ -144,7 +144,7 @@ This microflow first checks whether a list of tickets already exists in the data
     * **Store in variable**: `No` (optional, not needed here)
     * **Variable name**: (optional) only when stored in a variable
 
-With both microflows created, they must be combined and added to the homepage to populate the knowledge base.
+With both microflows created, they must be combined and added to the home page to populate the knowledge base.
 
 #### Joining the Microflows {#joining-microflows}
 
@@ -195,7 +195,7 @@ The rest of the actions can remain as they are currently set. Now that everythin
 
 ### Navigation Setup
 
-For the application to function as expected, ensure that the following microflows can be called from the navigation menu or homepage:
+For the application to function as expected, ensure that the following microflows can be called from the navigation menu or home page:
 
 * Chatbot: Add the `MyFirstModule.ACT_FullScreenChat_Open` microflow which was created in the [Chat Setup](#chatsetup) section.
 

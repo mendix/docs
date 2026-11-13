@@ -119,7 +119,7 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
  
 9. Add the admin role under **Allowed Roles** in the `ACT_CreateDemoData_LoadAllIntoKnowledgeBase` microflow properties.
 
-10. Add the new microflow to your navigation or homepage.
+10. Add the new microflow to your navigation or home page.
 
 When the microflow is called, the demo data is created and ingested into the knowledge base for later use. This needs to be called only once at the beginning. Make sure to first add a knowledge base resource. For more details, see [Configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration).
 
@@ -151,7 +151,7 @@ Create a user interface to test and use the agent. It will look like this:
 
 7. In the page properties, add your user and admin role to the **Visible for** selection.
 
-8. Add a button to your navigation or homepage with the caption *Show agent*. For the **On click** event, select `Create object`, select the `TicketHelper` entity, and set the **On click page** to **TicketHelper_Agent**.
+8. Add a button to your navigation or home page with the caption *Show agent*. For the **On click** event, select `Create object`, select the `TicketHelper` entity, and set the **On click page** to **TicketHelper_Agent**.
 
 You have now successfully added a page that allows users to ask an agent questions. You can verify this in the running app by opening the page and entering text into the **User input** field. However, the button does not do anything yet. You will add logic to the microflow behind the button in your chosen implementation approach.
 

@@ -17,7 +17,7 @@ Generative AI can be very powerful in providing user-friendly interactions with 
 
 By understanding both the capabilities and limitations of LLMs, you can more effectively integrate generative AI into your apps. Mendix recommends that you use it to accelerate business processes, but still "keep the human in the loop".
 
-### What is an LLM?
+### What Is an LLM?
 
 One of the most important components for generative AI is the Large Language Model (LLM). It is an advanced neural network trained on large amounts of textual data. This allows the model to understand textual input, and generate output. LLMs are designed to handle a variety of natural language processing tasks, making them versatile tools for developers and businesses alike.
 
@@ -123,7 +123,7 @@ For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedro
 
 ### PgVector Knowledge Base {#pgvectorknowledgebase}
 
-If your chosen architecture does not have fully-integrated RAG capabilities, or if you want tighter control of the RAG process, you can create and use your own knowledge base.
+If your chosen architecture does not have fully integrated RAG capabilities, or if you want tighter control of the RAG process, you can create and use your own knowledge base.
 
 In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
 

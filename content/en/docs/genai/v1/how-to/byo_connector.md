@@ -78,12 +78,12 @@ To enable chat completion, the key microflow to consider is `ChatCompletions_Wit
 
 To integrate properly, the microflow must supply two essential input objects:
 
-* [DeployedModel](/agents/agents-kit-1/reference-guide/commons/#deployed-model) - Represents the specific model being used and determines which connector (microflow) is being called.
-* [Request](/agents/agents-kit-1/reference-guide/commons/#request) - Contains the details of the user's input and conversation history as well as other configurations.
+* [DeployedModel](/agents/agents-kit-1/reference-guide/commons/#deployed-model) – Represents the specific model being used and determines which connector (microflow) is being called.
+* [Request](/agents/agents-kit-1/reference-guide/commons/#request) – Contains the details of the user's input and conversation history as well as other configurations.
 
 And one output object:
 
-* [Response](/agents/agents-kit-1/reference-guide/commons/#response) - Contains the details of the LLM's results.
+* [Response](/agents/agents-kit-1/reference-guide/commons/#response) – Contains the details of the LLM's results.
 
 Since this structure is already standardized, no modifications are needed for the `Request` entity. Instead, when implementing a new connector, map the request data from the existing `Request` object to the format required by the specific provider—in this case, the Echo Connector.
 
@@ -93,8 +93,8 @@ Just as the `Request` entity structures input for the LLM, the Response entity d
 
 The `Response` entity includes key attributes such as:
 
-* Message - A single message that the model generated. 
-* Tool Call - A request from the model to call one or multiple tools, for example, a microflow. Available tools are defined in the request via the [ToolCollection](/agents/agents-kit-1/reference-guide/commons/#toolcollection).
+* Message – A single message that the model generated. 
+* Tool Call – A request from the model to call one or multiple tools, for example, a microflow. Available tools are defined in the request via the [ToolCollection](/agents/agents-kit-1/reference-guide/commons/#toolcollection).
 
 Since different providers return responses in different formats, when implementing a new connector, map the provider’s response to match the `Response` entity’s structure. If it is required to have additional attributes on the `Request` or `Response` entity, it is recommended to extend those entities in your own connector by either creating an association or a specialization. For example, you can find both patterns being applied in the OpenAIConnector (association to `Request`) and AmazonBedrockConnector (specialization of `Response`).
 
@@ -146,13 +146,13 @@ Since the microflow follows the same input parameters and returns a `Response` o
 If you would like to track the consumption usage of tokens of your models, please look into the `GenAICommons.Usage_Create_TextAndFiles` microflow and related [documentation](/agents/agents-kit-1/reference-guide/commons/#token-usage). This microflow can be added at the end of your microflow.
 {{% /alert %}}
 
-### Testing the Echo connector
+### Testing the Echo Connector
 
 To test the connector, first set up the configuration and deployed models. While the setup approach is flexible, the Echo Connector includes UI components to configure settings and create `EchoDeployedModel` objects, which can be used in the GenAI Showcase App's Chat UI examples.
 
 To set this up:
 
-1. Find **Echo Configurations** in the **Management** section of the homepage. This will lead you to the page where the configuration can be set up for the Echo Connector.
+1. Find **Echo Configurations** in the **Management** section of the home page. This will lead you to the page where the configuration can be set up for the Echo Connector.
 2. Click **New**, fill in the required fields, and click **Save**. For this example, the input can be left empty as no real credentials are needed. When you click **Save**, two `EchoDeployedModel` objects are created for the new configuration. Since the Echo Connector simply returns the request content as the response, these serve as test models for the Chat UI examples. In a custom connector, this step could involve importing available models based on the configuration or allowing the admin to create models manually.
-3. After the configuration and the models have been created, go back to the homepage and open one of the showcases in the **Conversational UI** section.
+3. After the configuration and the models have been created, go back to the home page and open one of the showcases in the **Conversational UI** section.
 4. In the **Model** dropdown, select one of the models created by the Echo Connector and start chatting.

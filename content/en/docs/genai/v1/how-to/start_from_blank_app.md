@@ -23,7 +23,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page to gain foundational knowledge and become familiar with the key [concepts](/agents/get-started/).
 
-* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/agents/get-started/#llm) and [prompt engineering](/agents/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
+* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/agents/get-started/#llm) and [prompt engineering](/agents/get-started/#prompt-engineering) to use these within the Mendix ecosystem.
 
 ### Learning Goals
 

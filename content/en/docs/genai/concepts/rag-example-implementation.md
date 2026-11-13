@@ -32,7 +32,7 @@ In the context of GenAI Commons in a Mendix app, embedding vectors are generated
 
 This is the place to store discrete pieces of information. If information and its vector representation are stored together, a knowledge base can also be called a **vector database**. Common vector databases have built-in logic to execute similarity searches based on a search vector.
 
-In the context of GenAI Commons in a Mendix app, we use the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module to store and retrieve vectors.
+In the context of GenAI Commons in a Mendix app, you can use the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module to store and retrieve vectors.
 
 #### Knowledge Base Chunk
 
@@ -80,7 +80,7 @@ Before you start experimenting with the end-to-end process, make sure that you h
 
 3. [Set Up a PostgreSQL vector database](/agents/agents-kit-2/reference-guide/external-connectors/pgvector-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
 
-4. Go to **Step 3: Knowledge Base** and create embeddings from a text and store. You can use our default text about ornamental flowering plants, or paste your own content.
+4. Go to **Step 3: Knowledge Base** and create embeddings from a text and store. You can use the default text about ornamental flowering plants, or paste your own content.
 
 5. Go to **Step 4: Embedding Vectors**. Verify the embedding vectors have been created in your new database. If you ever want to go back to load different content instead, any existing records are replaced automatically.
 
@@ -103,7 +103,7 @@ If you want to know more about RAG, embeddings, or [vector databases](/agents/ag
 
 This section lists some general key points that apply regardless of which architecture you choose.
 
-If you would like to build your own RAG setup, feel free to learn from the GenAI Showcase App and start building your own app. Below you can find the key takeaways from the GenAI Showcase App:
+If you want to build your own RAG setup, feel free to learn from the GenAI Showcase App and start building your own app. Below you can find the key takeaways from the GenAI Showcase App:
 
 * For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the GenAI Showcase App uses the Mendix database connector. See [Vector Database Setup](/agents/agents-kit-2/reference-guide/external-connectors/pgvector-setup/) for more details.
 

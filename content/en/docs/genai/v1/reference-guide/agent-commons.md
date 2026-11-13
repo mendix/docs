@@ -35,7 +35,7 @@ Typical use cases for Agent Commons include:
 
 The Agent Commons module offers the following features:
 
-* Agent Builder UI components and data model for managing, storing, and rapidly iterating on agent versions at runtime. No app deployment is required to update an agent.
+* Agent Builder UI components and data model for managing, storing, and iterating on agent versions at runtime. No app deployment is required to update an agent.
 
 * Drag-and-drop operations for calling both task and chat agents from microflows and workflows.
 

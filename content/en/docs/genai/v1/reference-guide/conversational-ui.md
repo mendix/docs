@@ -31,7 +31,7 @@ Typical use cases for Conversational UI include the following:
 * Create a chat interface for users to chat with Large Language Models (LLM). 
 * Allow users to switch between different implementations by switching providers. 
 * Include advanced capabilities to control the model's behavior, for example, by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [GenAI Concepts](/agents/get-started/).
+* Extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [GenAI Concepts](/agents/get-started/).
 
 ### Features {#features}
 
@@ -108,15 +108,15 @@ A set of reusable pages, layouts, and snippets is included in this module to all
 
 You can include the following pages in your navigation, or copy them to your module and modify them to suit your use case:
 
-* **ConversationalUI_FullScreenChat** - This page displays a centered chat interface on a full-screen responsive page. 
-* **ConversationalUI_Sidebar** - This page displays the chat interface on the right side with the full height.
-* **ConversationalUI_PopUp** - This is a floating pop-up in the lower-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the lower-right corner. Alternatively, you can use the building block **Floating Chat Button** from the toolbox to create your custom opening logic.
+* **ConversationalUI_FullScreenChat** – This page displays a centered chat interface on a full-screen responsive page. 
+* **ConversationalUI_Sidebar** – This page displays the chat interface on the right side with the full height.
+* **ConversationalUI_PopUp** – This is a floating pop-up in the lower-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the lower-right corner. Alternatively, you can use the building block **Floating Chat Button** from the toolbox to create your custom opening logic.
 
 All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all these pages, but cannot configure additional settings, such as the model or system prompt. There are many ways to enable this: on a custom page before the chat was opened, on a custom version of the chat page itself, or in the [action microflow](#action-microflow) that is stored in the active [ProviderConfig](#provider-config).
 
 #### Snippets {#snippets}
 
-Drag the following snippets onto your other pages to quickly build your version of the chat interface.
+Drag the following snippets onto your other pages to build your version of the chat interface.
 
 ##### Chat Interface Snippets {#snippet-chat-interface}
 
@@ -124,7 +124,7 @@ Chat interface snippets show the entire message history of a conversation in a l
 
 The following versions are available and can be swapped as needed:
 
-* **Snippet_ChatContext_ConversationalUI** - This snippet shows both the user messages and the responses on the left side of the container.
+* **Snippet_ChatContext_ConversationalUI** – This snippet shows both the user messages and the responses on the left side of the container.
 * **Snippet_ChatContext_ConversationalUI_Bubbles** - This snippet shows the user messages on the right side and the responses on the left side, similar to common chat apps. The content is placed inside colored cards (bubbles).
 
 If the snippet does not fit your use case, you can [inline the snippet](/refguide/snippet-call/#inline-snippet) to customize it to your needs.
@@ -135,16 +135,16 @@ The message snippets are already part of the [Chat Interface Snippets](#snippet-
 
 The following versions are available and can be swapped as needed:
 
-* **Snippet_Message** - This snippet shows both the user messages and the responses on the left side of the list.
-* **Snippet_Message_Bubble** - This snippet shows the user messages on the right side and the responses on the left side, similar to common chat apps. The content is placed inside colored cards (bubbles).
+* **Snippet_Message** – This snippet shows both the user messages and the responses on the left side of the list.
+* **Snippet_Message_Bubble** – This snippet shows the user messages on the right side and the responses on the left side, similar to common chat apps. The content is placed inside colored cards (bubbles).
 
 ##### Advanced Configuration Snippets {#snippet-configuration}
 
 The following additional snippets can be used to give the user more control over the chat conversations.
 
-* **Snippet_ChatContext_AdvancedSettings** - This snippet can be placed on pages to let users configure specific parameters (current **temperature**). Use the microflow **AdvancedSettings_GetAndUpdate** to set the boundaries and default value for advanced settings in the UI. 
+* **Snippet_ChatContext_AdvancedSettings** – This snippet can be placed on pages to let users configure specific parameters (current **temperature**). Use the microflow **AdvancedSettings_GetAndUpdate** to set the boundaries and default value for advanced settings in the UI. 
 * **Snippet_ChatContext_SelectActiveProviderConfig** - With this snippet, users can select an active [Provider Config](#provider-config) from all associated configurations, for example, to let them select a model.
-* **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view to show past conversations. It displays the **topic** of the chat context as well as a delete icon on hover. For details on how to set the topic, see [ChatContext operations](#chatcontext-operations).
+* **Snippet_ChatContext_HistorySideBar** – This snippet can be used in a list view to show past conversations. It displays the **topic** of the chat context as well as a delete icon on hover. For details on how to set the topic, see [ChatContext operations](#chatcontext-operations).
 
 See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
 
@@ -223,7 +223,7 @@ Since version 6.0.0, the module stores messages from tool calling persistently i
 
 This changes how action microflows are used, because they are called each time a tool is called and the UI changes for the user, for example, displaying a tool call or waiting for a user decision if a tool can be executed. Logic that only needs to happen right after the user sends their message (preprocessing) or after the final assistant's message was returned (postprocessing), should perhaps only be executed for those cases.
 
-If no [user-visibility](/agents/agents-kit-1/reference-guide/commons/#enum-useraccessapproval) is configured for tools and you would like not to store tool messages (and therefore retain the behavior from versions before 6.0.0), you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-1/reference-guide/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-1/reference-guide/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
+If no [user-visibility](/agents/agents-kit-1/reference-guide/commons/#enum-useraccessapproval) is configured for tools and you do not want to store tool messages (and therefore retain the behavior from versions before 6.0.0), you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-1/reference-guide/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-1/reference-guide/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
 
 ### Human in the loop {#human-in-the-loop}
 
@@ -307,8 +307,8 @@ If you are using a custom layout in your application, you may need to use a layo
 
 A separate set of snippets has been made available to display and export token usage information in the running application. This is applicable for LLM connectors that follow the principles of [GenAI Commons](/agents/agents-kit-1/reference-guide/commons/#token-usage) and as a result store token usage information. The following snippets can be added to (admin) pages independently from the conversation logic described in earlier sections. 
 
-* **Snippet_TokenMonitor** - This snippet can be used to display token usage information in charts and contains several other snippets that you can use to build your token consumption monitor dashboard. To display the token usage data, users will need the `UsageMonitoring` user role.
-* **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage information in a grid and export it as *.xlsx*. 
+* **Snippet_TokenMonitor** – This snippet can be used to display token usage information in charts and contains several other snippets that you can use to build your token consumption monitor dashboard. To display the token usage data, users will need the `UsageMonitoring` user role.
+* **Snippet_TokenMonitor_Export** – This snippet can be used to display token usage information in a grid and export it as *.xlsx*. 
 
 ### Traceability {#traceability}
 
@@ -373,7 +373,7 @@ The messages that are sent and received do not show up in the user interface, ev
 
 #### Cause 
 
-The chat UI snippets from this module rely on the height property of the parent element(s) to be defined. Any additional custom containers around the Conversational UI components might cause the `messages-container` element to shrink to zero height, which makes the messages disappear even in successful interactions. 
+The chat UI snippets from this module rely on the height property of the parent elements to be defined. Any additional custom containers around the Conversational UI components might cause the `messages-container` element to shrink to zero height, which makes the messages disappear even in successful interactions. 
 
 #### Solution 
 

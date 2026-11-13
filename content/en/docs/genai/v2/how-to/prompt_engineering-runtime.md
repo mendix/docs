@@ -44,7 +44,7 @@ Agent Commons enables users to create powerful agents at runtime, enriching requ
 
 If you are using an Agents Kit starter app, you can skip ahead to [the next section](#configuration) because the following steps are already completed. Otherwise, follow these setup steps to add Agent Commons capabilities to your app and navigation:
 
-1. Install the [Agent Commons module](/agents/agents-kit-2/reference-guide/agent-commons/) module and its dependencies from Mendix Marketplace.
+1. Install the [Agent Commons module](/agents/agents-kit-2/reference-guide/agent-commons/) and its dependencies from Mendix Marketplace.
 2. Open your app's [Security](/refguide/security/#user-role) settings and edit the user role that you want to be able to create agents at runtime. This is typically the Administrator role, but this may vary depending on your use case. Follow these steps:
 
     1. For the Agent Commons module, assign the **AgentAdmin** module role.
@@ -102,11 +102,11 @@ You can now create your first agent in the user interface. The final agent will 
 
 To further improve your prompts and the user experience, you can add some placeholder variables.
 
-1. Once you have saved an agent version, you cannot edit its fields anymore. So, in the **Agent version** dropdown, click **Draft** to start a new version and edit the fields again.
+1. Once you have saved an agent version, you cannot edit its fields anymore. So, in the **Agent version** drop-down list, click **Draft** to start a new version and edit the fields again.
 
 2. Change the **User Prompt** to `Generate a short product description for a {{ProductName}}. The description should not be longer than {{NumberOfWords}} words.`
 
-3. Notice that two variables appear in the **Test Case** card on the right. You can use these variables later in your in your application to allow users to dynamically modify the user prompt without needing to understand what a prompt is, and without requiring any changes or restarts to the application. Enter the following values for the variables:
+3. Notice that two variables appear in the **Test Case** card on the right. You can use these variables later in your application to allow users to dynamically modify the user prompt without needing to understand what a prompt is, and without requiring any changes or restarts to the application. Enter the following values for the variables:
 
     * `30` for **NumberOfWords**
     * `chair` for **ProductName**
@@ -121,7 +121,7 @@ To further improve your prompts and the user experience, you can add some placeh
 
 To further refine the agent's responses, add a [system prompt](/agents/glossary/#system-prompt) that defines the assistant's role and create an additional test case for comparison.
 
-1. In the **Agent version** dropdown, click **Draft** so that you can edit the fields again. This time, add instructions in the [System Prompt](/agents/prompt-engineering/#system-prompt) field. Enter the following: `You are a sales assistant that can write engaging and inspiring product descriptions for our online marketplace. The user asks you to create a description for various products. You should always respond in {{Language}}.` Notice that the **Language** variable appears in the **Test Card**.
+1. In the **Agent version** drop-down list, click **Draft** so that you can edit the fields again. This time, add instructions in the [System Prompt](/agents/prompt-engineering/#system-prompt) field. Enter the following: `You are a sales assistant that can write engaging and inspiring product descriptions for our online marketplace. The user asks you to create a description for various products. You should always respond in {{Language}}.` Notice that the **Language** variable appears in the **Test Card**.
 
 2. Add a new test case by clicking **New Blank Test Case** ({{% icon name="add"%}}) next to the **Test variable input** dropdown. 
    
@@ -130,7 +130,7 @@ To further refine the agent's responses, add a [system prompt](/agents/glossary/
     
 3. Click **Test** to test the new input, then save the test case with the title `Chair 30 words German`.
 
-4. Now that you have saved at least two test cases, open the dropdown next to the **Test** button, and click **Test All**. This runs both test cases, allowing you to compare the different input values. Note that the **Language** variable was not set in the first test case, as it did not exist at the time. As a result, the model's response may be in English or another random language.
+4. Now that you have saved at least two test cases, open the drop-down list next to the **Test** button, and click **Test All**. This runs both test cases, allowing you to compare the different input values. Note that the **Language** variable was not set in the first test case, as it did not exist at the time. As a result, the model's response may be in English or another random language.
 
 5. Once you are satisfied with your agent, save the version with the title `Added system prompt and language`.
 

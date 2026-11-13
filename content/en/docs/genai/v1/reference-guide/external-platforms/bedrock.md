@@ -96,12 +96,12 @@ The following actions only list the available resources as non-persistent object
 
 #### Adding Custom Models to your Bedrock Configuration {#adding-custom-model}
 
-When syncing your Bedrock configuration, only publicly available foundation models can be retrieved using the `List Foundation Models` action from the Bedrock Connector. To use cross-region inference (CRI) or provisioned-throughput models that you have setup in your AWS console, you must manually add these models to your database. To add a custom model, follow the steps below:
+When syncing your Bedrock configuration, only publicly available foundation models can be retrieved using the `List Foundation Models` action from the Bedrock Connector. To use cross-region inference (CRI) or provisioned-throughput models that you have set up in your AWS console, you must manually add these models to your database. To add a custom model, follow the steps below:
 
 1. Click **Add model** above the model's table.
 2. Fill out the form with the relevant information of your custom model.
 
-    The display name is shown in the model dropdowns while choosing a model to use. The model ID is required to use the model with Amazon Bedrock. The other fields must be filled out according to the functionalities the model can use.
+    The display name is shown in the model drop-down lists while choosing a model to use. The model ID is required to use the model with Amazon Bedrock. The other fields must be filled out according to the functionalities the model can use.
 
 3. Save the model.
 
@@ -139,7 +139,7 @@ For operations that do not depend on the GenAI Commons, you can take a different
 1. In the **App Explorer**, right-click the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.
 3. From the **Toolbox**, drag a **Create Object** activity to your microflow and create an object of type `ListFoundationModelsRequest`.
-4. In the **Toolbox**, in the in the **Amazon Bedrock (other)** section, find the **ListFoundationModels** activity.
+4. In the **Toolbox**, in the **Amazon Bedrock (other)** section, find the **ListFoundationModels** activity.
 5. Drag the **ListFoundationModels** activity onto the work area of your microflow.
 6. Double-click the **ListFoundationModels** activity to configure the required parameters.
 7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type `ENUM_Region` of the AWS Authentication connector.
@@ -281,7 +281,7 @@ For additional general information about function calling, see [Function Calling
 
 * **Vision** – This operation supports the *vision* capability for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` to the `Message` using the [Files: Initialize Collection with File](/agents/agents-kit-1/reference-guide/commons/#initialize-filecollection) or the [Files: Add to Collection](/agents/agents-kit-1/reference-guide/commons/#add-file-to-collection) operation. Make sure to set the `FileType` attribute to **image**.
 
-* **Document Chat** – This operation supports the ability to chat with documents for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). To send a document to the model add a `FileCollection` with a `System.FileDocument` to the `Message` using the [Files: Initialize Collection with File](/agents/agents-kit-1/reference-guide/commons/#initialize-filecollection) or the [Files: Add to Collection](/agents/agents-kit-1/reference-guide/commons/#add-file-to-collection) operation. For Document Chat, it is not supported to create a `FileContent` from an URL using the above mentioned operations; Please use the `System.FileDocument` option. Make sure to set the `FileType` attribute to **document**.
+* **Document Chat** – This operation supports the ability to chat with documents for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html). To send a document to the model add a `FileCollection` with a `System.FileDocument` to the `Message` using the [Files: Initialize Collection with File](/agents/agents-kit-1/reference-guide/commons/#initialize-filecollection) or the [Files: Add to Collection](/agents/agents-kit-1/reference-guide/commons/#add-file-to-collection) operation. For Document Chat, it is not supported to create a `FileContent` from a URL using the above mentioned operations; please use the `System.FileDocument` option. Make sure to set the `FileType` attribute to **document**.
 
 ##### Tool Choice
 
@@ -574,7 +574,7 @@ The input and output for this service are shown in the table below:
 
 #### GetIngestionJob {#get-ingestion-job}
 
-The `GetIngestionJob` activity allows you to retrieve information about a ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
+The `GetIngestionJob` activity allows you to retrieve information about an ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
 
 To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).  
 
@@ -712,7 +712,7 @@ The input and output for this service are shown in the table below:
 
 The Amazon Bedrock Connector offers a range of operations to retrieve and store metadata information in the Mendix app's database.
 
-This can be useful to, for example, associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabilities on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
+This can be useful to, for example, associate a chatbot configuration to an available model by selecting the model via a drop-down list at runtime. The persistent domain model allows for simple and efficient filtering capabilities on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
 
 The syncing process works the same for all of these operations:
 
@@ -804,7 +804,7 @@ The guardrail feature will allow you to:
 
 The watermark detection feature will make it possible to tell if an image has been created using Amazon Titan.
 
-More information about guardrails can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/en/bedrock/guardrails/).
+More information about guardrails can be found in this [AWS blog post](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/en/bedrock/guardrails/).
 
 ### Advanced Prompts for Agents
 
@@ -841,7 +841,7 @@ To solve this issue, follow these steps:
     2. Select the check boxes by the models which you want to access with your credential set.
     3. Click **Save Changes**.
 
-After the status of the models changes to **Access Granted**, you can use it with the Amazon Bedrock connector.
+After the status of the models changes to **Access Granted**, you can use them with the Amazon Bedrock connector.
 
 ### Error Code 403 - AccessDeniedException
 

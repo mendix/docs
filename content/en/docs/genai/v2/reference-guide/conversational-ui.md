@@ -350,7 +350,7 @@ To manage trace data retention, you can enable the daily scheduled event `ScE_Tr
 
 #### Traceability Page {#traceability-pages}
 
-The ConversationalUI module includes a dedicated page in the **USE_ME > Traceability** folder for viewing trace data. the page **Trace_Overview** provides a high-level view of all traces in the system, allowing administrators to browse and search through GenAI traces. It displays key information such as trace ID, agent information (if applicable), start time, duration. You can filter for specific traces and agents' invocations. The data can be visualized over time to identify patterns or anomalies. By double-clicking, users are navigated to the details page to learn more about a particular trace, including all associated spans, tool calls, and performance metrics.
+The ConversationalUI module includes a dedicated page in the **USE_ME > Traceability** folder for viewing trace data. The page **Trace_Overview** provides a high-level view of all traces in the system, allowing administrators to browse and search through GenAI traces. It displays key information such as trace ID, agent information (if applicable), start time, and duration. You can filter for specific traces and agents' invocations. The data can be visualized over time to identify patterns or anomalies. By double-clicking, users are navigated to the details page to learn more about a particular trace, including all associated spans, tool calls, and performance metrics.
 
 These pages are designed for administrators and developers who need to monitor GenAI usage and investigate specific interactions. They provide the primary interface for accessing traceability data without requiring custom development.
 

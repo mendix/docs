@@ -115,7 +115,7 @@ The following steps use sample values suitable for experimentation:
 8. [Add the pgVector extension to the allowed extensions list](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-use-pgvector):
    1. Search for **Server parameters** in the search bar on the left. A list of parameters is loaded.
    2. Search for **azure.extensions**.
-   3. In the column *VALUE*, search in the dropdown for **VECTOR** (this is the extension name in Azure, not *pgVector*).
+   3. In the column *VALUE*, search in the drop-down list for **VECTOR** (this is the extension name in Azure, not *pgVector*).
    4. Save the changes.
    
 9. Search for **Databases** in the search bar on the left. Verify that you have a PostgreSQL database with schema type "User", or create a new database by clicking **Add**.
@@ -211,7 +211,7 @@ To resolve this, connect to a network that allows these connections, such as a p
 
 ## Read More {#read-more}
 
-* [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
+* [Embeddings-based Search – OpenAI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
 * [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)
 * [Vector Database Options – OpenAI Cookbook](https://cookbook.openai.com/examples/vector_databases/readme)
 * [How to: AI-powered search in AWS Relational Database Service (RDS) For PostgreSQL Using pgvector](https://aws.amazon.com/blogs/database/building-ai-powered-search-in-postgresql-using-amazon-sagemaker-and-pgvector/)

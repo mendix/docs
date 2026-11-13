@@ -28,7 +28,7 @@ The MCP host is typically the application that facilitates interaction with LLMs
 
 ### MCP Client
 
-The MCP client usually runs inside of the MCP Host and is responsible of connecting to one MCP server outside of the MCP host application. The client follows the MCP principles and should technically be able to connect to any MCP server. A host can maintain multiple clients at the same time and thus connecting to multiple MCP servers or maintaining a client-server connection for each end-user.
+The MCP client usually runs inside of the MCP Host and is responsible for connecting to one MCP server outside of the MCP host application. The client follows the MCP principles and should technically be able to connect to any MCP server. A host can maintain multiple clients at the same time and thus connecting to multiple MCP servers or maintaining a client-server connection for each end-user.
 
 ### MCP Server
 
@@ -38,7 +38,7 @@ Servers can expose the following three main types of resources:
 
 #### Tools
 
-The most common type of resource is [tool](https://modelcontextprotocol.io/specification/2025-06-18/server/tools), which exposes executable functionality such as microflows to clients. Those can not only contain simple retrieve logic to get information from a database, but also perform actions on behalf of the user, for example, submitting a report or changing values. Typically, a model in the MCP host chooses when to call a tool based on the context of the chat.
+The most common type of resource is a [tool](https://modelcontextprotocol.io/specification/2025-06-18/server/tools), which exposes executable functionality such as microflows to clients. Those can not only contain simple retrieve logic to get information from a database, but also perform actions on behalf of the user, for example, submitting a report or changing values. Typically, a model in the MCP host chooses when to call a tool based on the context of the chat.
 
 #### Prompts
 
@@ -52,7 +52,7 @@ In general, generic [resources](https://modelcontextprotocol.io/specification/20
 
 An example for setting up an MCP server is available in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). The app guides you through available tools and prompts that will be exposed when the server is started. Additionally, it shows an example for setting up authentication using username and password. You can use a Mendix application or third-party tools such as Claude Desktop as an MCP host to connect to the server.
 
-Furthermore, an MCP Client example teaches you how to establish a connection to a server, discover tools and prompts, and finally uses them in a chat interface. You can use this example to inspect MCP servers, similar as the [MCP Inspector](https://github.com/modelcontextprotocol/inspector) can do, by testing prompts and tools without any LLM integration.
+Furthermore, an MCP Client example teaches you how to establish a connection to a server, discover tools and prompts, and finally use them in a chat interface. You can use this example to inspect MCP servers, similar as the [MCP Inspector](https://github.com/modelcontextprotocol/inspector) can do, by testing prompts and tools without any LLM integration.
 
 ## Read More
 

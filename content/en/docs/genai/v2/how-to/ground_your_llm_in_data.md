@@ -31,7 +31,7 @@ Before implementing this capability into your app, ensure you meet the following
 
 ### Choosing the Infrastructure
 
-This document focuses on the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/). Follow the instructions in [Navigate through the Mendix Cloud GenAI Portal](/agents/mx-cloud-genai/Navigate-MxGenAI/) to collect the resources keys and configure the connector within your application. The keys bridge the gap between your app and the resources, enabling you to access models and add to or retrieve data from a Mendix Cloud GenAI knowledge base.
+This document focuses on the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/). Follow the instructions in [Navigate through the Mendix Cloud GenAI Portal](/agents/mx-cloud-genai/Navigate-MxGenAI/) to collect the resource keys and configure the connector within your application. The keys bridge the gap between your app and the resources, enabling you to access models and add to or retrieve data from a Mendix Cloud GenAI knowledge base.
 
 While this documentation focuses on adding data to your knowledge base from a Mendix application, you can also fill the knowledge base directly within the portal, for example, by uploading files.
 

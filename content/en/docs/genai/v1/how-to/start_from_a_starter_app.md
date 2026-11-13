@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction
 
-This document guides on building a smart app using a starter template. Alternatively, you can create your smart app from scratch using a blank GenAI app template. For more details, see [Build a Smart App from a Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/).
+This document guides you on building a smart app using a starter template. Alternatively, you can create your smart app from scratch using a blank GenAI app template. For more details, see [Build a Smart App from a Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/).
 
 ### Prerequisites
 
@@ -45,7 +45,7 @@ To simplify your first use case, start building a chatbot using the [AI Bot Star
 
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
-* [Mendix Cloud GenAI Resources Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
+* [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
 
 * [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports OpenAI's platform and Microsoft Foundry.
 
@@ -65,7 +65,7 @@ Next, follow the steps below based on the infrastructure you chose.
 
 #### Mendix Cloud GenAI Configuration
 
-Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and for more background information, look at the [Mendix Cloud GenAI Configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration) documentation:
+Follow these steps to configure the Mendix Cloud GenAI Resource Packs for your application and for more background information, look at the [Mendix Cloud GenAI Configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration) documentation:
 
 1. Run the application locally.
 

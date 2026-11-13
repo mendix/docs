@@ -122,7 +122,7 @@ You can optionally control both reference creation and the output returned for t
 
 Function calling enables LLMs to connect with external tools to gather information, execute actions, convert natural language into structured data, and more. Function calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response.
 
-The model does not call the function. Instead, it returns a tool called JSON structure that builds the input of the function (or functions) so they can be executed as part of the chat completions operation. Functions in Mendix are microflows that can be registered within the request to the LLM. The connector handles the tool call response and executes the function microflows until the API returns the assistant's final response.
+The model does not call the function. Instead, it returns a tool call JSON structure that builds the input of the function (or functions) so they can be executed as part of the chat completions operation. Functions in Mendix are microflows that can be registered within the request to the LLM. The connector handles the tool call response and executes the function microflows until the API returns the assistant's final response.
 
 Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer, or String. Additionally, they may accept the [Request](/agents/agents-kit-2/reference-guide/commons/#request) or [Tool](/agents/agents-kit-2/reference-guide/commons/#tool) objects as inputs. The function microflow must return a String value.
 

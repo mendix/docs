@@ -49,13 +49,13 @@ The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227
 
 * The [Conversational UI](/agents/agents-kit-1/reference-guide/conversational-ui/) module: offers UI elements for chat interfaces and usage data monitoring.
 
-* The [Mendix Cloud GenAI Resources Packs](/agents/mx-cloud-genai/resource-packs/) connector: supports the usage of LLMs in your applications.
+* The [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) connector: supports the usage of LLMs in your applications.
 
 ### Choosing the Infrastructure
 
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
-* [Mendix Cloud GenAI Resources Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
+* [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
 * [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
 
 * [Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
@@ -106,7 +106,7 @@ You may encounter an error about allowed roles. To resolve this, go to the **Pro
 
 #### Mendix Cloud GenAI Configuration
 
-Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and more background information, look at the [Mendix Cloud GenAI Configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration) documentation:
+Follow these steps to configure the Mendix Cloud GenAI Resource Packs for your application and more background information, look at the [Mendix Cloud GenAI Configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration) documentation:
 
 1. Run the application locally.
 

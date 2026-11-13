@@ -174,7 +174,7 @@ After a few quick iterations, the first version of the agent is typically ready 
 
 #### Creating a Version
 
-New agents will be created in the draft status by default, meaning they are still being worked on and can be tested using the agent commons module only. Once an agent is ready to be integrated into the app logic (that is, logic triggered by end-users), it must be saved as a version. This will store a snapshot of the prompt texts and the configured microflows as tools and knowledge bases. To select the active version for the agent, use the three-dot ({{% icon name="three-dots-menu-horizontal" %}}) menu option on the agent overview and click  **Select Version in use**.
+New agents will be created in the draft status by default, meaning they are still being worked on and can be tested using the Agent Commons module only. Once an agent is ready to be integrated into the app logic (that is, logic triggered by end-users), it must be saved as a version. This will store a snapshot of the prompt texts and the configured microflows as tools and knowledge bases. To select the active version for the agent, use the three-dot ({{% icon name="three-dots-menu-horizontal" %}}) menu option on the agent overview and click  **Select Version in use**.
 
 #### Calling the Agent from a Microflow {#call-agent-microflow}
 

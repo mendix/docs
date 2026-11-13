@@ -203,7 +203,7 @@ You have now successfully created your first function microflow to link to the a
 #### Get Ticket by Identifier
 
 1. Create a new microflow named `Ticket_GetTicketByID`.
-2. In the new microflow, Add a *String* input parameter called `Identifier`.
+2. In the new microflow, add a *String* input parameter called `Identifier`.
 
 3. Add a `Retrieve` action to retrieve the ticket of the given identifier:
 

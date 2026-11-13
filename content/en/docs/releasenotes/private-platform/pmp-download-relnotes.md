@@ -12,7 +12,7 @@ These release notes cover changes made to the Private Mendix Platform Download P
 
 ## 2026
 
-### November 12, 2026
+### November 13, 2026
 
 #### Form Submission
 

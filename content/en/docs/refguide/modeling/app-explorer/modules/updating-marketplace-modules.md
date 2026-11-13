@@ -33,6 +33,16 @@ You must manually provide both the original and target versions. If document map
 
 During the merge, conflicts may occur if you and the publisher both modified the same element (for example, the same microflow). For information on resolving conflicts, see [Combining Changes and Resolving Conflicts](/refguide/resolving-conflicts/).
 
+### How to Start an Update
+
+To start a module update:
+
+1. Right-click the module in the App Explorer and select **Update from file**.
+
+    {{< figure src="/attachments/refguide/modeling/app-explorer/modules/updating-marketplace-modules/update-from-file-option.png" alt="Module context menu with the Update from file option"  >}}
+
+2. The **Update from file** dialog opens. Select the **Original version** and **New version** of the module and click **OK**.
+
 ### Document Mapping
 
 To merge your customizations with the updated module, Studio Pro matches documents between the old and new versions. The method depends on whether the module has package IDs:

@@ -17,12 +17,13 @@ The embedded client lets you use a Mendix web app as a component inside another 
 This page describes how to do the following:
 
 * Configure an Embedded navigation profile in your Mendix app
+* Size the embedded app from the host application
 * Load the embedded client from a host application
 * Pass page parameters to the embedded home page
 * Understand how CSS styling behaves in an embedded app
 * Understand how navigation behaves in an embedded app
 * Understand authentication options for an embedded app
-* Configure host app requirements such as Cross-Origin Resource Sharing(CORS) and Content Security Policy(CSP)
+* Configure host app requirements such as Cross-Origin Resource Sharing (CORS) and Content Security Policy (CSP)
 * Mount and unmount the client at the correct lifecycle moment
 
 {{% alert color="info" %}}
@@ -92,6 +93,20 @@ Or in a framework component:
 
 The host only needs to provide a real DOM node.
 
+### Sizing the Embedded App
+
+The embedded app takes the height of its host element. If the host element has no height, the embedded app takes the height of its content.
+
+To control the size of the embedded app, set a height on the host element with CSS. For example:
+
+```html
+<div id="embedded-mendix-host" style="height: 800px;"></div>
+```
+
+{{% alert color="info" %}}
+In Mendix versions below 11.17.0, pass a `minHeight` value in the `render(…)` configuration, for example `minHeight: "620px"` (see [Loading and Rendering the Embedded Client](#loading), below). Otherwise, scroll containers in the embedded app can collapse to a height of 0 pixels, even if you have set a height. In Mendix 11.17.0 and above, the embedded client ignores `minHeight`.
+{{% /alert %}}
+
 ## Loading and Rendering the Embedded Client{#loading}
 
 The embedded bundle exposes a `render(…)` function. A minimal framework-agnostic integration looks like this:
@@ -104,7 +119,6 @@ export async function mountEmbeddedMendix(container) {
 
     return embeddedModule.render(container, {
         remoteUrl: REMOTE_URL,
-        minHeight: "620px",
         parameters: {
             customerId: "12345"
         }

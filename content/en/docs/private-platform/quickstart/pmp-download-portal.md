@@ -27,11 +27,13 @@ Before using the Download Portal, ensure that you have the following prerequisit
 
 * ORAS tool for working with OCI artifacts
 
-## Accessing the Download Portal
+## Accessing the Download Portal {#access}
 
 To access the Download Portal, go to [https://privateplatform.mendix.com/](https://privateplatform.mendix.com/) and log in with your Mendix account.
 
 If your account is associated with multiple organizations, you must then select which company context to use. 
+
+If you do not have access to the Download portal, an **Access Denied** page appears instead. To gain access, submit a request form with your details and the specific permissions you need. After an administrator approves your request, the portal will become available.
 
 ### Selecting a Company at Login
 
@@ -277,7 +279,10 @@ To create a new bundle, perform the following steps:
 
     * **Search by [something]** - Enter a component name or keyword.
     * **Filter by Type/Category** dropdown - Filter by category.
-    * **Supported Mx Versions** dropdown - Filter by compatible Mendix version.
+    * **Supported Mx Versions** dropdown - Use this dropdown to filter by compatible Mendix versions:
+
+        1. Select your target Mendix version.
+        2. Click Releases to display only the releases that support your selection.
 
     Alternatively, you can directly select the components from the list.
 

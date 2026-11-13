@@ -1,0 +1,234 @@
+// # Siemens Design Language primitive color tokens
+
+// ## Brand
+$main-brand-white: #ffffff;
+$main-brand-interactive-coral: #00cccc;
+$main-brand-light-petrol: #00c1b6;
+$main-brand-petrol: #009999;
+$main-brand-teal-90: #196269;
+$main-brand-teal: #005159;
+$main-brand-black: #000000;
+$main-brand-focus: #199fff; 
+$main-brand-focus-light: #008ff5;
+
+// ## Deep blue
+$main-deep-blue-50: #ebebee;
+$main-deep-blue-100: #e5e5e9;
+$main-deep-blue-200: #ccccd4;
+$main-deep-blue-300: #b3b3be;
+$main-deep-blue-400: #9999a9;
+$main-deep-blue-500: #7d8099;
+$main-deep-blue-600: #66667e;
+$main-deep-blue-650: #4c4c68;
+$main-deep-blue-700: #40405e;
+$main-deep-blue-750: #333353;
+$main-deep-blue-775: #2d2d45;
+$main-deep-blue-800: #23233c;
+$main-deep-blue-850: #161632;
+$main-deep-blue-875: #12122e;
+$main-deep-blue-900: #000028;
+
+// ## Sand
+$main-sand-100: #fafafa;
+$main-sand-200: #f5f5f5;
+$main-sand-300: #f0f0ef;
+$main-sand-400: #ededed;
+$main-sand-500: #e0e0de;
+$main-sand-600: #cfcfcb;
+$main-sand-700: #b0b0ab;
+$main-sand-800: #8a8a85;
+$main-sand-900: #5e5e5a;
+
+// ## Interactive blue
+$main-interactive-blue-100: #e0f1f4;
+$main-interactive-blue-200: #c2e2e9;
+$main-interactive-blue-300: #a9d5df;
+$main-interactive-blue-400: #8ec7d4;
+$main-interactive-blue-500: #73bac9;
+$main-interactive-blue-600: #3d95a9;
+$main-interactive-blue-700: #006b80;
+$main-interactive-blue-800: #004f60;
+$main-interactive-blue-900: #00333e;
+
+// ## Bold green
+$main-bold-green-100: #d1fff2;
+$main-bold-green-200: #c2ffee;
+$main-bold-green-300: #66ffd5;
+$main-bold-green-400: #00ffb9;
+$main-bold-green-500: #00e5aa;
+$main-bold-green-600: #00997f;
+$main-bold-green-700: #007369;
+$main-bold-green-800: #16565c;
+$main-bold-green-900: #001f39;
+
+// ## Blue
+$main-blue-100: #d2e2f7;
+$main-blue-200: #a9c7f1;
+$main-blue-300: #81adeb;
+$main-blue-400: #518de2;
+$main-blue-500: #206ed9;
+$main-blue-600: #1f60b9;
+$main-blue-700: #1e5299;
+$main-blue-800: #1c4680;
+$main-blue-900: #193966;
+
+// ## Green
+$main-green-100: #c1f2d6;
+$main-green-200: #99ecbd;
+$main-green-300: #72e6a3;
+$main-green-400: #4dd384;
+$main-green-500: #28bf66;
+$main-green-600: #229753;
+$main-green-700: #1c703f;
+$main-green-800: #17522f;
+$main-green-900: #12331f;
+
+// ## Yellow
+$main-yellow-100: #fff2ba;
+$main-yellow-200: #ffe576;
+$main-yellow-300: #ffd732;
+$main-yellow-400: #ffd00f;
+$main-yellow-500: #edbf00;
+$main-yellow-600: #ba9600;
+$main-yellow-700: #876d00;
+$main-yellow-800: #4d3901;
+$main-yellow-900: #322501;
+
+// ## Orange
+$main-orange-100: #fee1cc;
+$main-orange-200: #ffcd88;
+$main-orange-300: #ffa525;
+$main-orange-400: #ff9000;
+$main-orange-500: #e37200;
+$main-orange-600: #c75300;
+$main-orange-700: #a84100;
+$main-orange-800: #8f3700;
+$main-orange-900: #421a00;
+
+// ## Red
+$main-red-100: #fcccd7;
+$main-red-200: #fda7b0;
+$main-red-300: #ff8e9c;
+$main-red-400: #eb5361;
+$main-red-500: #d72339;
+$main-red-600: #bf162e;
+$main-red-700: #a60823;
+$main-red-800: #650011;
+$main-red-900: #42000c;
+
+// ## Data brand
+$data-brand-bold-green: #00ffb9;
+$data-brand-light-petrol: #00c1b6;
+$data-brand-petrol: #009999;
+
+// ## Data deep blue
+$data-deep-blue-100: #e5e5e9;
+$data-deep-blue-200: #ccccd4;
+$data-deep-blue-400: #9999a9;
+$data-deep-blue-500: #7d8099;
+$data-deep-blue-700: #4c4c68;
+$data-deep-blue-900: #262648;
+
+// ## Data turquoise
+$data-turquoise-100: #85e9d2;
+$data-turquoise-200: #47e2bb;
+$data-turquoise-400: #00d7a0;
+$data-turquoise-500: #00af8e;
+$data-turquoise-700: #1a747d;
+$data-turquoise-900: #005159;
+
+// ## Data sand
+$data-sand-100: #efefec;
+$data-sand-200: #dfdfd9;
+$data-sand-400: #c5c5b8;
+$data-sand-500: #aaaa96;
+$data-sand-700: #757563;
+$data-sand-900: #5e5e4a;
+
+// ## Data royal blue
+$data-royal-blue-100: #b2e0ff;
+$data-royal-blue-200: #97c7ff;
+$data-royal-blue-400: #6895f6;
+$data-royal-blue-500: #3664c6;
+$data-royal-blue-700: #00237a;
+$data-royal-blue-900: #00004a;
+
+// ## Data blue
+$data-blue-100: #ccf2f8;
+$data-blue-200: #80dfed;
+$data-blue-400: #4dd1e7;
+$data-blue-500: #00bedc;
+$data-blue-700: #0087be;
+$data-blue-900: #00557c;
+
+// ## Data interactive coral
+$data-interactive-coral-100: #ccf5f5;
+$data-interactive-coral-200: #66e0e0;
+$data-interactive-coral-400: #00cccc;
+$data-interactive-coral-500: #00a3ab;
+$data-interactive-coral-700: #007082;
+$data-interactive-coral-900: #002949;
+
+// ## Data plum
+$data-plum-100: #ffbeda;
+$data-plum-200: #ff98c4;
+$data-plum-400: #e5659b;
+$data-plum-500: #c04774;
+$data-plum-700: #9f1853;
+$data-plum-900: #4f153d;
+
+// ## Data purple
+$data-purple-100: #d2cbff;
+$data-purple-200: #bfb0f3;
+$data-purple-400: #a68dff;
+$data-purple-500: #805cff;
+$data-purple-700: #7353e5;
+$data-purple-900: #553ba3;
+
+// ## Data orchid
+$data-orchid-100: #edd6f2;
+$data-orchid-200: #d59cde;
+$data-orchid-400: #b95cc9;
+$data-orchid-500: #a733bc;
+$data-orchid-700: #740089;
+$data-orchid-900: #52245c;
+
+// ## Data orange
+$data-orange-100: #ffdeb2;
+$data-orange-200: #ffbc66;
+$data-orange-400: #ff9000;
+$data-orange-500: #e57700;
+$data-orange-700: #be5925;
+$data-orange-900: #801100;
+
+// ## Data yellow
+$data-yellow-100: #fff7d6;
+$data-yellow-200: #ffe784;
+$data-yellow-400: #ffd732;
+$data-yellow-500: #e5bd19;
+$data-yellow-700: #b28a00;
+$data-yellow-900: #805800;
+
+// ## Data red
+$data-red-100: #fcccd7;
+$data-red-200: #ffa8b3;
+$data-red-400: #ff6779;
+$data-red-500: #ff2640;
+$data-red-700: #d72339;
+$data-red-900: #990000;
+
+// ## Data green
+$data-green-100: #ccf7de;
+$data-green-200: #80ebac;
+$data-green-400: #01d65a;
+$data-green-500: #00a327;
+$data-green-700: #00890e;
+$data-green-900: #005700;
+
+// ## Data avocado
+$data-avocado-100: #f3f9e0;
+$data-avocado-200: #d1e98a;
+$data-avocado-400: #9ec625;
+$data-avocado-500: #637d17;
+$data-avocado-700: #435410;
+$data-avocado-900: #2e3a0a;

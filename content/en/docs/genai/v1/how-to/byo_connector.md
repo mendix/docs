@@ -59,7 +59,7 @@ If your provider's API differs significantly from OpenAI's, it is best to start 
 Additionally, refer to the [GenAI Commons](/agents/agents-kit-1/reference-guide/commons/) to explore available out-of-the-box components that can help accelerate development. Pay close attention to:
 
 * The domain model (data structure) to see how existing entities can be reused. 
-* The **Connector Building** folders, contain useful microflows and helper activities for working with the provided entities.
+* The **Connector Building** folders contain useful microflows and helper activities for working with the provided entities.
 
 If you would like to explore the [GenAICommons](https://marketplace.mendix.com/link/component/227933) module, check out the [public repository](https://github.com/mendix/genai-showcase-app).
 
@@ -154,5 +154,5 @@ To set this up:
 
 1. Find **Echo Configurations** in the **Management** section of the homepage. This will lead you to the page where the configuration can be set up for the Echo Connector.
 2. Click **New**, fill in the required fields, and click **Save**. For this example, the input can be left empty as no real credentials are needed. When you click **Save**, two `EchoDeployedModel` objects are created for the new configuration. Since the Echo Connector simply returns the request content as the response, these serve as test models for the Chat UI examples. In a custom connector, this step could involve importing available models based on the configuration or allowing the admin to create models manually.
-3. After the configuration and the models have been created, go back to the homepage and open one of the showcases in the **Conversational UI** section.
-4. In the **Model** dropdown, select one of the models created by the Echo Connector and start chatting.
+3. After the configuration and the models have been created, go back to the home page and open one of the showcases in the **Conversational UI** section.
+4. In the **Model** drop-down list, select one of the models created by the Echo Connector and start chatting.

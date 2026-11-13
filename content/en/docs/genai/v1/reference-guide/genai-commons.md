@@ -458,7 +458,7 @@ It is recommended that you adapt to the same interface when developing custom ch
 
 ##### Chat Completions (With History) {#chat-completions-with-history}
 
-The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop) module, this is automatically handled.
+The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [tool calls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop) module, this is automatically handled.
 
 ###### Input Parameters
 
@@ -475,7 +475,7 @@ The `Chat Completions (with history)` operation supports more complex use cases 
 
 ##### Chat Completions (Without History) {#chat-completions-without-history}
 
-The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop).
+The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [tool calls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop).
 
 ###### Input Parameters
 
@@ -508,7 +508,7 @@ The `Generate Embeddings (Chunk Collection)` operation allows the invocation of 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | An response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |
+| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | A response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |
 
 ##### Generate Embeddings (String) {#embeddings-string}
 
@@ -671,7 +671,7 @@ This microflow does not have a return value.
 
 ##### Tools: Add Knowledge Base {#add-knowledge-base-to-request}
 
-This tool adds a function that performs a retrieval from a knowledge base to a [ToolCollection](#toolcollection) that is part of a Request. Use this microflow when you have knowledge bases in your application that may be called to retrieve the required information as part of a GenAI interaction. If you want the model to be aware of these knowledge base, you can use this operation to add them as functions to the request. If supported by the LLM connector, the chat completion operation calls the appropriate knowledge base function based on the LLM response and continue the process until the assistant's final response is returned.
+This tool adds a function that performs a retrieval from a knowledge base to a [ToolCollection](#toolcollection) that is part of a Request. Use this microflow when you have knowledge bases in your application that may be called to retrieve the required information as part of a GenAI interaction. If you want the model to be aware of these knowledge bases, you can use this operation to add them as functions to the request. If supported by the LLM connector, the chat completion operation calls the appropriate knowledge base function based on the LLM response and continues the process until the assistant's final response is returned.
 
 `ConsumedKnowledgeBase` objects have provider-specific specializations, for example, `MxCloudKnowledgeBaseResource` for Mendix Cloud.
 
@@ -746,7 +746,7 @@ Use this microflow to get the list of references that may be included in the mod
 
 | Name | Type | Description |
 |---|---|---|
-| `ReferenceList` | List of [Reference](#reference) | The references with optional citations were part of the response message. |
+| `ReferenceList` | List of [Reference](#reference) | The references with optional citations that were part of the response message. |
 
 ##### Get Response Text {#chat-get-model-response-text}
 
@@ -789,8 +789,8 @@ This microflow creates new [ImageOptions](#imageoptions-entity).
 
 | Name | Type | Notes | Description |
 |--- |--- |--- |--- |
-| `Height` | Integer/Long | optional | To set Width. |
-| `Width` | Integer/Long | optional | To set Height. |
+| `Height` | Integer/Long | optional | To set Height. |
+| `Width` | Integer/Long | optional | To set Width. |
 | `NumberOfImages` | Integer/Long | optional | To set NumberOfImages to create. |
 
 ###### Return Value
@@ -998,7 +998,7 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 
 #### `ENUM_ModelModality` {#enum-modalmodality}
 
-`ENUM_ModelModality` describes the modalities that the model supports input or output.
+`ENUM_ModelModality` describes the modalities that the model supports as input or output.
 
 | Name | Caption | Description |
 | --- | --- | --- |

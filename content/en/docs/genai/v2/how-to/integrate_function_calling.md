@@ -145,7 +145,7 @@ As shown in the image, two key steps must be completed to enable the execution o
 
 ### Optional: Changing the System Prompt {#edit-systemprompt}
 
-Optionally, you can change the [system prompt](/agents/glossary/#system-prompt) to provide the model with additional instructions, such as specifying its the tone.
+Optionally, you can change the [system prompt](/agents/glossary/#system-prompt) to provide the model with additional instructions, such as specifying the tone.
 
 1. Open the copied `ACT_FullScreenChat_Open` microflow from your `MyFirstBot` module.
 2. Locate the **New Chat** action.
@@ -159,7 +159,7 @@ When adding tools to a request, you can optionally set a [User Access Approval](
 
 ## Testing and Troubleshooting {#testing-troubleshooting}
 
-Before testing, ensure that you have completed the connector's configuration as described in its documentation. For example, if you are using Mendix Cloud GenAI, follow the intructions in the [Configuration](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/#configuration) section of *Mendix Cloud GenAI Connector*.
+Before testing, ensure that you have completed the connector's configuration as described in its documentation. For example, if you are using Mendix Cloud GenAI, follow the instructions in the [Configuration](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/#configuration) section of *Mendix Cloud GenAI Connector*.
 
 To test the chatbot, go to the **Home** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box. For example, type `Write a message to my colleague Max asking about a meeting to discuss the content for our next GenAI how-to.` or `How many bank holidays do I have in December?`.
 

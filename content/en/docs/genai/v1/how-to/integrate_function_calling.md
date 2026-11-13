@@ -26,7 +26,7 @@ Through this document, you will:
 
 Before integrating function calling into your app, make sure you meet the following requirements:
 
-* An existing app: To simplify your first use case, start building from a preconfigured set up [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/). 
+* An existing app: To simplify your first use case, start building from the preconfigured [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/). 
 
 * Be on Mendix Studio Pro 10.12.4 or higher.
 

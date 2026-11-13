@@ -104,7 +104,7 @@ When JSON mode is used, the model is programmatically instructed to return valid
 
 Function calling enables LLMs to connect with external tools to gather information, execute actions, convert natural language into structured data, and much more. Function calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response.
 
-Gemini does not call the function. The model returns a tool called JSON structure that is used to build the input of the function (or functions) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflows until the API returns the assistant's final response for Gemini. 
+Gemini does not call the function. The model returns a tool call JSON structure that is used to build the input of the function (or functions) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflows until the API returns the assistant's final response for Gemini. 
 
 This is all part of the implementation that is executed by the GenAI Commons chat completions operations. As a developer, make the system aware of your functions and what is done by registering the functions with the request. This is done using the GenAI Commons operation [Tools: Add Function to Request](/agents/agents-kit-1/reference-guide/commons/#add-function-to-request) once per function before passing the request to the chat completions operation.
 
@@ -173,7 +173,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ### Tool Choice
 
-Gemini supports the following [tool choice types](/agents/agents-kit-1/reference-guide/commons/#enum-toolchoice) of GenAI Commons for the [Tools: Set Tool Choice](/agents/agents-kit-1/reference-guide/commons/#set-toolchoice) action is supported. For API mapping reference, see the table below:
+Gemini supports the following [tool choice types](/agents/agents-kit-1/reference-guide/commons/#enum-toolchoice) of GenAI Commons for the [Tools: Set Tool Choice](/agents/agents-kit-1/reference-guide/commons/#set-toolchoice) action. For API mapping reference, see the table below:
 
 | GenAI Commons (Mendix) | Gemini |
 | ----------------------- | ------- |

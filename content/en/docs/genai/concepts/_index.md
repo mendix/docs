@@ -133,7 +133,7 @@ An example of how this can be done with OpenAI is described in [RAG Example Impl
 
 Another way to provide the LLM with additional information and capabilities is to use function calling, also known as tool use. With function calling you can make specific microflows available to the LLM. While evaluating the prompt, the LLM will, optionally, ask to execute a particular microflow. The Mendix application will execute this microflow and return additional information for the LLM to add to the prompt being processed.
 
-This microflow runs in the context of the user, allowing you to make sure that it only shows data that is relevant for the current user. You can also use it to execute actions on behalf of the user, or interact with page that the user is looking at.
+This microflow runs in the context of the user, allowing you to make sure that it only shows data that is relevant for the current user. You can also use it to execute actions on behalf of the user, or interact with the page that the user is looking at.
 
 See [Function Calling](/agents/function-calling/) for more information on ReAct. You can see ReAct implemented in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
 

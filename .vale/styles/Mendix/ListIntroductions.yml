@@ -1,7 +1,7 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Lists)
 # Known issue: Doesn't match code font list intros
 extends: substitution
-message: "Set off list item introductions with an en dash (–), not an em dash (—)."
+message: "Set off list item introductions with an en dash (–), not an em dash (—) or hyphen (-)."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#en-dash
 ignorecase: false
 nonword: true

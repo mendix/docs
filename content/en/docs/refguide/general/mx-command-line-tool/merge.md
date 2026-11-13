@@ -211,3 +211,50 @@ Now, if you open your app on the **Main** branch, you should see the following:
 {{% alert color="info" %}}
 If you get different output, the custom merge driver is not configured correctly. Abort the merge using the command `$git merge --abort` and close the Git command line tool before making changes to the configuration. Changes made to the *config* and *.gitattributes* files are picked up when you reopen the Git command line tool.
 {{% /alert %}}
+
+## mx git-merge Command {#git-merge}
+
+The `mx git-merge` command merges a conflicting *.mpr* file during a Git merge operation.
+
+This command is used to resolve merge conflicts in Mendix projects that occur during Git operations. It performs a three-way merge using commit information from Git.
+
+The input is three *.mpr* files and three commit SHAs (Secure Hash Algorithm values) representing the base, mine, and theirs versions.
+
+### Usage
+
+Use the following command pattern for `mx git-merge`:
+
+`mx git-merge [OPTIONS] BASE MINE THEIRS BASE_COMMIT MINE_COMMIT THEIRS_COMMIT`
+
+These are the `OPTIONS`:
+
+| Option | Shortcut | Result |
+| --- | --- | --- |
+| `--verbose` | `-v` | Tries to resolve possible conflicts and reports them if autoresolving is impossible. |
+| `--help` | | Shows help for the `mx git-merge` command and exits. |
+
+`BASE` is the base project (*.mpr* file) representing the common ancestor.
+
+`MINE` is the 'mine' project (*.mpr* file) representing your local version.
+
+`THEIRS` is the 'theirs' project (*.mpr* file) representing the version being merged in.
+
+`BASE_COMMIT` is the base (common) ancestor SHA.
+
+`MINE_COMMIT` is the 'mine' (local) head SHA.
+
+`THEIRS_COMMIT` is the 'theirs' (other) commit SHA.
+
+### Examples
+
+This is an example command:
+
+`mx git-merge C:\MyApp\MyApp-base.mpr C:\MyApp\MyApp-mine.mpr C:\MyApp\MyApp-theirs.mpr abc123 def456 ghi789`
+
+### Return Codes
+
+These are the return codes:
+
+| Return Code | Description |
+| --- | --- |
+| `0` | The command ran successfully. |

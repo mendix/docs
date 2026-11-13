@@ -54,6 +54,8 @@ You can find links to the [Mendix Portal](/developerportal/) and [Marketplace](/
 
 Your profile picture is displayed next to these links if you are signed in. When you click the profile picture, the drop-down menu is displays your full name and email, a link to your user profile, and the **Sign Out** option. 
 
+If you use Studio Pro in a [Private Mendix Platform](/private-mendix-platform/) environment, a **PMP** badge is displayed next to your profile picture in the top bar and in the user profile menu. The user profile menu also displays the name of your Private Mendix Platform portal below your full name. 
+
 ## App Explorer
 
 An app consists of individual files (also known as documents) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/).

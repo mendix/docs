@@ -12,6 +12,17 @@ These release notes cover changes made to the Private Mendix Platform Download P
 
 ## 2026
 
+### November 13, 2026
+
+#### Form Submission
+
+Users who lack access to the Download Portal can now submit an access request directly through a form available in the Portal itself. For more information, see [Accessing the Download Portal](/private-mendix-platform/download-portal/#access).
+
+#### Fixes
+
+* We have resolved an issue where not all content was retrieved when creating new Marketplace bundles, and improved release retrieval accuracy based on the selected Mendix version. (Ticket 286142)
+* We have fixed an issue that caused the Marketplace bundle creation page to freeze when closing the save dialog. (Ticket 290758)
+
 ### September 25, 2026
 
 #### Improvements

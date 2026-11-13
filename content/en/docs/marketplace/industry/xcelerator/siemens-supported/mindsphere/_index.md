@@ -23,8 +23,7 @@ Within the Mendix Academy two learning paths are provided to show how to develop
 Once your app is registered in Insights Hub, there are a number of things you need to consider as you develop your Mendix app. These are covered in the following two documents:
 
 * [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/) – covers things which you should address when developing for Insights Hub, including the following:
-
-    * [Cloud Foundry environment variables](/appstore/industry/mindsphere/mindsphere-development-considerations/#cfenvvars)
+    
     * [Local testing](/appstore/industry/mindsphere/mindsphere-development-considerations/#localtesting)
     * [Multi-tenancy](/appstore/industry/mindsphere/mindsphere-development-considerations/#multitenancy)
     * [Validation<br style="margin-bottom: 10px;">](/appstore/industry/mindsphere/mindsphere-development-considerations/#validation)

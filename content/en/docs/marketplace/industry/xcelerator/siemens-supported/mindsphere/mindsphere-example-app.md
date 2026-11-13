@@ -62,83 +62,42 @@ Once your app is deployed to Mendix, click **View App**.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/autoreg-view-app.png" >}}
 
-Your default Browser will open and when your app starts, it will trigger the registration process.
+Your default Browser will open and when your app starts, it will show an error page indicating that the app needs to be registered in the Developer Cockpit first.
 
-### Auto Registration
+### App Registration
 
-All apps running within Insights Hub need to be registered. When you open your app for the first time, it will recognize that is currently unregistered and ask you to perform the registration. You can do this manually in the Developer Cockpit, but the easier way is the Auto Registration process we follow here.
+Create a new application in [Developer Cockpit](/developerportal/deploy/deploying-to-mindsphere#deploying-your-app)
 
-1. Click **Start Auto Registration**.
+Add the following Insights Hub API Roles to your app and assign them to correct application roles **admin** and **user**, as shown in the table below:
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/autoreg-choose-app-registration.png" alt="Choose app registration" >}}
+| **Insights Hub application role** | **Admin** | **User** |
+| ------------------------------- | --------- | -------- |
+| mdsp:core:assetmanagement.standarduser | X |  X |
+| mdsp:core:em.eventcreator | X |   |
+| mdsp:core:em.eventmanager | X |   |
+| mdsp:core:em.eventviewer | X |  X |
+| mdsp:core:iot.filAdmin | X |   |
+| mdsp:core:iot.filUser | X |  X |
+| mdsp:core:.iot.tsaUser | X |  X |
+| mdsp:core:.iot.timUser | X |  X |
+| mdsp:core:mindconnect.fullaccess | X |   |
+| mdsp:core:mindconnect.readonly | X |  X |
+| mdsp:core:tm.tenantUser | X |  X |
+| mdsp:core:tsm.full-access | X |   |
+| mdsp:core:tsm.read-only | X |  X |
 
-    The process now tries to figure out on which tenant your app should be registered. Therefore you have to sign in.
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/devcockpit-mdsp-api-roles.png" alt="Choose app registration" >}}
 
-2. Enter your credentials and click **Sign In**.
-
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/autoreg-web-key.png" alt="Choose app registration" >}}
-
-    {{% alert color="info" %}}If you have more then one tenant with a Developer Cockpit option, Insights Hub will present you with a list of those tenants. Choose the tenant in which you want to register your app.<br/><br/>If you have only one tenant on Insights Hub, the process will automatically select this tenant for you.{{% /alert %}}
-
-3. Give a **Display Name**, **Internal Name**, and, optionally, a **Description** in order to register your app.
-
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/autoreg-name-description.png" alt="Choose app registration" >}}
-
-    On a **Start for Free** tenant the **admin** role will be assigned automatically to your account. For all other tenants, you have to select at least one application user role which will be assigned to your account automatically.
-
-4. Click **Register** to start the registration process on your tenant.
-
-    After a few seconds, a summary page is shown.
-
-    {{% alert color="warning" %}}Do **not** launch your application directly.{{% /alert %}}
-
-    The Siemens Insights Hub Monitor Example app uses quite a lot of Insights Hub APIs. When you register an application you also have to grant access to each API you want to use in your application. Therefore, you have to do this for the Operations Insight application.
-
-5. Click **Developer Cockpit** to take you to grant access to the APIs.
-
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/autoreg-registration-completed.png" alt="Choose app registration" >}}
-
-    A new tab opens showing the registration detail of your app.
-
-6. Click **Configure** to add the required Insights Hub roles.
-
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/devcockpit-app-details.png" alt="Choose app registration" >}}
-
-7. Add the following Insights Hub API Roles to your app and assign them to correct application roles **admin** and **user**, as shown in the table below:
-
-    | **Insights Hub application role** | **Admin** | **User** |
-    | ------------------------------- | --------- | -------- |
-    | mdsp:core:assetmanagement.standarduser | X |  X |
-    | mdsp:core:em.eventcreator | X |   |
-    | mdsp:core:em.eventmanager | X |   |
-    | mdsp:core:em.eventviewer | X |  X |
-    | mdsp:core:iot.filAdmin | X |   |
-    | mdsp:core:iot.filUser | X |  X |
-    | mdsp:core:.iot.tsaUser | X |  X |
-    | mdsp:core:.iot.timUser | X |  X |
-    | mdsp:core:mindconnect.fullaccess | X |   |
-    | mdsp:core:mindconnect.readonly | X |  X |
-    | mdsp:core:tm.tenantUser | X |  X |
-    | mdsp:core:tsm.full-access | X |   |
-    | mdsp:core:tsm.read-only | X |  X |
-
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/devcockpit-mdsp-api-roles.png" alt="Choose app registration" >}}
-
-    The app configuration is finished now.
-
-8. Switch back to the **Registration completed!** browser tab and click **Launch your application**, which will start the app.  
-
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/oi-home.png" alt="Choose app registration" >}}
 
 ### Scopes and Roles{#scopesroles}
 
-The auto registration process has created two Insights Hub application Roles *admin* and *user*:
+During the app registration process two Insights Hub application Roles *admin* and *user* has been created:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/devcockpit-app-roles.png" alt="Developer Cockpit application roles" >}}
 
 You can assign these application roles to users in the *Settings* app found on the launchpad.
 
-In addition, the auto registration process has created two Insights Hub application Scopes *admin* and *user* and assigned these to the roles as follows:
+Create two Insights Hub application Scopes *admin* and *user* and assigned these to the roles as follows:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/devcockpit-app-scopes.png" alt="Developer Cockpit application roles" >}}
 

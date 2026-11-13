@@ -52,9 +52,7 @@ After installing Vale:
    vale --version
    ```
 
-   Vale 3.20 or later is required. If you have an older version, update it:
-      * On macOS, run `brew upgrade vale`
-      * On Windows, download the latest version from [the releases page](https://github.com/vale-cli/vale/releases) and replace `vale.exe`
+   Vale 3.20 or later is required. If you have an older version, see [Updates](#updates).
 
 2. **Sync the Microsoft Style Guide rules:**
 
@@ -81,7 +79,6 @@ After installing Vale:
 
 ## Updates
 
-The Microsoft rules are maintained in https://github.com/vale-cli/Microsoft. To pull the latest rules onto your machine, run `vale sync` in your terminal.
+To update the rules, merge `development` into your branch and run `vale sync` in the root of the docs repository. The Microsoft rules are maintained in https://github.com/vale-cli/Microsoft, and `.vale.ini` pins the version that `vale sync` installs.
 
-      * On macOS, run `brew upgrade vale`
-      * On Windows, download the latest version from [the releases page](https://github.com/vale-cli/vale/releases) and replace `vale.exe`
+To update Vale, run `brew upgrade vale` on macOS. On Windows, download the latest version from [the releases page](https://github.com/vale-cli/vale/releases) and replace `vale.exe`. Vale 3.20 or later is required.

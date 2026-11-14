@@ -13,13 +13,11 @@ aliases:
 This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights APIs.
 {{% /alert %}}
 
-When developing a Mendix app which will be deployed to Insights Hub, there are a number of extra things you need to take into consideration. The following subjects are discussed below:
+When developing a Mendix app running on Insights Hub, there are a number of extra things you need to take into consideration. The following subjects are discussed below:
 
 * [Authorizing Insights Hub REST Calls](#mstoken)
-* [Cloud Foundry Environment Variables](#cfenvvars)
 * [Licensing Your App](#licensing)
 * [Local Testing](#localtesting)
-* [Insights Hub Icons](#atlasui)
 * [Multi-Tenancy](#multitenancy)
 * [Validation](#validation)
 
@@ -27,11 +25,13 @@ Finally, there is a section on some [Limitations](#limitations) which apply to M
 
 ## Authorizing Insights Hub REST Calls{#mstoken}
 
-The **AccessToken** entity contains the *Access_token* attribute which needs to be passed as the Authorization header in REST calls to Insights Hub APIs.
-
-To improve security of your app, it is recommended that you delete the AccessToken object returned by the *Access token* action, provided by the Siemens Insights Hub SSO module, before showing a page or reaching the end of the microflow.
+The **Token** string returned by the **AccessToken** action needs to be passed as the Authorization header in REST calls to Insights Hub APIs.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/delete-mindspheretoken.png" alt="Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action" >}}
+
+{{% alert color="info" %}}
+Use optionally the **BuildCoreURL** microflow when your app should support dual token, running against **Insights Hub** and **Xcelerator**.
+{{% /alert %}}
 
 ### Authorizing Insights Hub REST Calls from within Scheduled Events
 
@@ -45,9 +45,9 @@ The microflow uses the [Insights Hub Application Credentials](#app-creds) functi
 
     The microflow uses the application credentials you entered at startup to fetch a token. See also [Application Credentials](#app-creds).
 
-2. Developer Tenant:
+2. Developer / Operator Tenant:
 
-    The following Cloud Foundry environment variables must be set for the app:
+    The following environment variables must be set for the app:
 
     | Developer Tenant | Description |
     | ----- | ----- |
@@ -55,17 +55,6 @@ The microflow uses the [Insights Hub Application Credentials](#app-creds) functi
     | `MDSP_KEY_STORE_CLIENT_SECRET` | enable Application Credentials in the Developer Cockpit for your app and use the Client Secret |
     | `MDSP_OS_VM_APP_NAME` | enter the name of your app in Developer Cockpit |
     | `MDSP_OS_VM_APP_VERSION` | enter the version of your app in Developer Cockpit |
-
-3. Operator Tenant:
-
-    Some of the following environment variables are set automatically:
-
-    | Operator Tenant | Description |
-    | ----- | ----- |
-    | `MDSP_KEY_STORE_CLIENT_ID` | created automatically on an Operator Tenant, when application credentials are enabled for the app |
-    | `MDSP_KEY_STORE_CLIENT_SECRET` | created automatically on an Operator Tenant when application credentials are enabled for the app |
-    | `MDSP_OS_VM_APP_NAME` | name of your app |
-    | `MDSP_OS_VM_APP_VERSION` | version of your app |
 
 Make sure these environment variables exists. Use the returned token as usual in your REST calls to Insights Hub. Do not delete the token after usage as it is not transferred to the client and it is cached in SiemensInsightsHubSingleSignOn module.
 
@@ -79,35 +68,13 @@ Do not create a Tenant object yourself as this is done automatically during logi
 
 For more information on how to perform REST calls see the [Importing and Exporting Your Data](https://academy.mendix.com/link/path/44) learning path (you must be signed in to the Mendix Platform to see this learning path).
 
-## Cloud Foundry Environment Variables {#cfenvvars}
-
-If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the Cloud Foundry Command Line Interface (CF CLI).
-
-1. Use `cf set-env {app_name} {environment_variable_name} {value}`
-2. You will need to restage the app to use the new value.
-    Use `cf restage {app_name}`
-
-{{% alert color="warning" %}}
-Restaging your app will cause your app to be temporarily unavailable.
-
-If you do **not** restage your app, it will continue to run using the old values. If your app is an unlicensed (free) app, it will stop running after a time and this could cause the environment to be restarted and pick up the new environment variable values without an explicit restage.
-{{% /alert %}}
-
-**Mendix Constants**
-
-Your app will define the default values for [constants](/refguide/constants/). You can override these default values with Cloud Foundry environment variables. To do this, you need to replace the dot with an underscore and prefix the name with `MX_`. For example, a constant `MyConstant` in module `MyModule` (that is, `MyModule.MyConstant`), in app `MyApp` could be set to `ABC123` like this:
-
-```bash
-    cf set-env MyApp MX_MyModule_MyConstant "ABC123"
-```
-
 ## Licensing Your App {#licensing}
 
 When you initially deploy a Mendix App, it is treated as a *Free App*. For an Insights Hub app the most important restriction is that the app will go into sleep mode after 1-2 hours: this could cause the Cloud Foundry environment to be restarted and pick up the latest values of environment variables.
 
 To license your app, you need to obtain a license key from [Mendix Support](https://support.mendix.com).
 
-Instructions for licensing apps are available in the [License Activation](https://github.com/mendix/cf-mendix-buildpack#license-activation) section of the *Mendix Cloud Foundry Buildpack Readme*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
+Instructions for licensing apps are available in the [License Activation](https://github.com/mendix/cf-mendix-buildpack#license-activation) section of the *Mendix Cloud Foundry Buildpack Readme*. 
 
 ## Local Testing {#localtesting}
 
@@ -181,7 +148,7 @@ To ensure that the correct application credentials are requested, you have to se
 
 **AskForCredentialsOnStartUp**
 
-Set this to *True* if you want your app to ask for credentials as soon as it starts up, before the first page is displayed. If this is set to *False* then the app will ask for credentials the first time that it attempts to retrieve your access token.
+Set this to *True* if you want your app to ask for credentials as soon as it starts up, before the first page is displayed. If this is set to *False* then the app will not ask for credentials and no token is available for calling Insights Hub APIs.
 
 If you trigger microflows consuming Insights Hub APIs on the home page, setting this to *True* ensures that they will work the first time the page is displayed.
 
@@ -193,15 +160,23 @@ This setting has no effect on apps which are deployed to the cloud. The credenti
 
 This is the version of the Insights Hub app linked to the application credentials, as registered in the Developer Cockpit under the name *CockpitApplicationName*.
 
+**CockpitApplicationName**
+
+This is the name as registered in the Developer Cockpit.
+
 **EnableLocalApiReverseProxy**
 
 Set this to *True* to enable a reverse proxy for Insights Hub API calls which are made directly from the html pages (for example, the calls from the Insights Hub OS Bar).
 
 This endpoint forwards all calls to \api… from within native HTML pages, and adds an Insights Hub token to them. For example, the calls from the Insights Hub OS Bar or the Siemens Insights Hub Widgets.
 
+**PlatformType**
+
+Set this to either to **Xcelerator** or **Insights Hub**. 
+
 **HostTenant**
 
-This should be the tenant where your credentials are stored. It is needed when retrieving your Service Credentials.
+This should be the tenant where your credentials are stored. It is needed when retrieving your Application Credentials.
 
 The definition of a tenant on Insights Hub is available in the Insights Hub document [Definition of Tenant](https://developer.mindsphere.io/apis/core-identitymanagement/api-identitymanagement-overview.html#tenants).
 
@@ -229,43 +204,6 @@ When a new user is identified during SSO, the SSO process generates a random pas
 
 {{% alert color="info" %}}
 This policy is set up as the default in the Insights Hub starter and example apps and should not be changed.
-{{% /alert %}}
-
-## Insights Hub Icons {#atlasui}
-
-The **Siemens Insights Hub Web Content** module includes two ways of including Insights Hub icons in your app.
-
-### Insights Hub Icons as 'glyphicons'
-
-You can select Insights Hub icons from Siemens Insights Hub Web Content to be displayed in your application.
-
-1. Open the properties of a widget which can display an icon (for example a button).
-2. Click **Select...** next to *Icon*.
-3. Choose the **Insights Hub** tab.
-4. Find the image that you want and click **Select**. The Insights Hub icons are in the module *SiemensInsightsHubWebContent*.
-
-{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/SelectIcon.png" alt="Add icon as an image" >}}
-
-### Insights Hub Icons via CSS
-
-**Siemens Insights Hub Web Content** provides a font which contains icons. This means that you can use an Insights Hub icon in any page element where you can assign a class.
-
-To do this:
-
-1. Find the icon you wish to use. These have the same names as the icons in Siemens Insights Hub Web Content and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **SiemensInsightsHubWebContent** > **InsightsHub**.
-
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/mindsphere-icons.png" alt="List of Insights Hub icons" >}}
-
-2. Open the properties of the element to which you wish to add an icon.
-3. Set **Icon** to *(none)*.
-4. Add the class `iconUxt {icon-name}`.
-
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/css-icon.png" alt="Add an icon as CSS" >}}
-
-{{% alert color="info" %}}
-You will not see the icon in Studio Pro when it is in **Structure mode**. Switch to **Design mode** to confirm that you have selected the correct icon.
-
-You can only add one icon per element.
 {{% /alert %}}
 
 ## Multi-Tenancy {#multitenancy}
@@ -347,16 +285,6 @@ Your app should, as a minimum, meet the requirements of the checklist on the Ins
 The following limitations apply to Mendix apps which are deployed to Insights Hub.
 
 If these limitations affect the design of your app, you can still create a Mendix app to use Insights Hub APIs from outside Insights Hub.
-
-### Binary File Storage
-
-Insights Hub does not currently have a compatible file service available in its Cloud Foundry stack. Therefore, you cannot use any Mendix features which rely on having a file service.
-
-In particular, this means that you cannot use entities which are specializations of the *System.FileDocument* entity. This also includes all entities which are specializations of the *System.Image* entity, as this is also a specialized type of FileDocument.
-
-You can store small amounts of binary information in persistable entities. However, the database management system (DBMS) will have strict limits on the size of binary attributes and using them as a replacement for FileDocument entities can lead to performance issues.
-
-Alternatively, you can use a separate AWS S3 bucket. See [Connect an External Filestore](https://github.com/mendix/cf-mendix-buildpack#connect-an-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
 
 ### App Name {#appname}
 

@@ -24,6 +24,7 @@ exceptions+:
   - MCP
   - MDA
   - MPR
+  - NOT
   - PNG
   - REST
   - SAP

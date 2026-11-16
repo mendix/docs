@@ -1,6 +1,6 @@
 ---
 title: "{Major.Minor Version Number, for example 10.18}"
-#url: Match the URL pattern of sibling release notes. For example, /releasenotes/studio-pro/11.16/
+url: /releasenotes/{product}/{version}/ # Match the URL pattern of sibling release notes, for example /releasenotes/studio-pro/11.16/
 #weight: Match the order of sibling release notes
 description: "The release notes for {PRODUCT} {VERSION} (including all patches) with details on new features, bug fixes, and known issues."
 #If this page is mapped to a landing page, update the link there when renaming or moving it.

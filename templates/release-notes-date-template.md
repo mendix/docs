@@ -1,7 +1,7 @@
 ---
 title: "{YYYY} {Product} Release Notes"
 linktitle: "{YYYY}"
-#url: Match the URL pattern of sibling release notes. For example, /releasenotes/catalog/2026/
+url: /releasenotes/{product}/{year}/ # Match the URL pattern of sibling release notes, for example /releasenotes/catalog/2026/
 #weight: Assign newer years a lower weight than older years
 description: "Release notes for updates to {PRODUCT} in {YYYY}."
 #If this page is mapped to a landing page, update the link there when renaming or moving it.

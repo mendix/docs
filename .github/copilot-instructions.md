@@ -125,7 +125,7 @@ For comprehensive shortcode examples and edge cases, read `community-tools/contr
 
 If asked to create new content:
 
-1. Read the appropriate template from `templates/`: `how-to-template.md`, `reference-template.md`, `marketplace-component-page-template.md`, or `release-notes-template.md`
+1. Read the appropriate template from `templates/`
 2. Create the new file based on the template
 3. Remove comment lines (`#`) from the template
 4. Follow the editorial workflow above

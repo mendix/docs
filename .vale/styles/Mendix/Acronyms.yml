@@ -26,6 +26,7 @@ exceptions+:
   - MDA
   - MPR
   - NOT
+  - OQL
   - PNG
   - REST
   - SAP

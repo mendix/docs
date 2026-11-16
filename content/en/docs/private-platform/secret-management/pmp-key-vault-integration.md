@@ -108,7 +108,7 @@ The following limitations apply:
 * Database and blob storage connection secrets are not supported through this automatic flow. You must provision them manually. For more information, refer to the general Secret Store documentation.
 * Azure-wi storage and database plans are not compatible with Interactor-Agent deployments that also use the external secret store. The `azure.workload.identity/client-id` annotation on the ServiceAccount can only hold one value at a time, and the Operator may overwrite it. This feature is supported only in Standalone mode.
 * An environment can use either a `SecretProviderClass` or a regular Kubernetes Secret for its configuration, never both at the same time.
-* Secret store cannot be enabled for the following custom properties:
+* In versions of Private Mendix Platform older than 2.8.2, the secret store cannot be enabled for the following custom properties:
 
     * Custom environment variables
     * Custom JVM options

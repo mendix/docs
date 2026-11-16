@@ -139,7 +139,7 @@ Less common shortcodes (`button`, `expandable-table`, `youtube`, `vidyard`, `swa
 
 If asked to create new content:
 
-1. Read the appropriate template from `templates/`: `how-to-template.md`, `reference-template.md`, `marketplace-component-page-template.md`, or `release-notes-template.md`.
+1. List `templates/` and read the template that matches the content type.
 2. Use Write tool to create the new file based on the template.
 3. Remove comment lines (`#`) from the template.
 4. Follow the editorial workflow above.

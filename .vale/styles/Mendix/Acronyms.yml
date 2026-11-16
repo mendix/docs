@@ -12,7 +12,8 @@ scope:
   - table & ~link
   - blockquote & ~link
 # Modified from Microsoft.Acronyms to accept sentence-case definitions (e.g., "personal access token (PAT)" not just "Personal Access Token (PAT)")
-second: '(?:\b[A-Za-z][a-z]+ )+\(([A-Z]{3,5})\)'
+# and plural definitions (e.g., "personal access tokens (PATs)")
+second: '(?:\b[A-Za-z][a-z]+ )+\(([A-Z]{3,5})s?\)'
 # ... with the exception of these (and the Microsoft.Acronyms exceptions):
 exceptions+:
   - BTP

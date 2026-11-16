@@ -35,15 +35,23 @@ Tab container properties consist of the following sections:
 
 {{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
-### Visibility Section {#visibility}
-
-{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
-
 ## Tab Page {#tab-page}
 
 A tab container contains one or more tab pages where you place widgets. For example, a tab page can contain a grid of orders.
 
 ### Tab Page-Specific Properties
+
+#### Caption
+
+**Caption** sets the caption of the widget for assistive technologies like screen readers (default: *Page 1*).
+
+#### Show Badge
+
+**Show badge** indicates whether a badge is shown next to the tab page caption. If set to *Yes*, an additional *Badge* property will be available to set its content dynamically.
+
+#### Badge
+
+**Show badge** indicates whether a badge is shown next to the tab page caption. If set to *Yes*, an additional *Badge* property will be available to set its content dynamically.
 
 #### Default Tab Page
 
@@ -60,6 +68,14 @@ Default: *True*
 {{% alert color="info" %}}
 This property is not supported on native mobile pages.
 {{% /alert %}}
+
+#### Name
+
+**Name** sets the name of the tab page (default: *tabPage1*).
+
+### Visibility Section {#visibility}
+
+{{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
 ## Read More
 

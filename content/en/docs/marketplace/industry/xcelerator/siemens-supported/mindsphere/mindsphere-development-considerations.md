@@ -10,7 +10,7 @@ aliases:
 ## Introduction
 
 {{% alert color="warning" %}}
-This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights APIs.
+This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights Hub APIs.
 {{% /alert %}}
 
 When developing a Mendix app running on Insights Hub, there are a number of extra things you need to take into consideration. The following subjects are discussed below:

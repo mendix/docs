@@ -41,7 +41,7 @@ You must customize your app to allow it to be deployed, registered, and shown in
 
 ### Option A: Using the Siemens Insights Hub Starter Application
 
-The **Siemens Insights Hub Starter Application** in the Mendix Marketplace contains all the modules and styling which you need to create an app you want to deploy to Insights Hub.
+The **Siemens Insights Hub Starter Application** in the Mendix Marketplace contains all the modules which you need to create an app you want to deploy to Insights Hub.
 
 {{% alert color="info" %}}
 This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
@@ -60,7 +60,7 @@ Open Studio Pro and select the follow these steps:
 
 ### Option B: Customizing an Existing App{#existingapp}
 
-If you have an existing app which was not based on the Insights Hub app template, you must import the required customization. The three modules which must be imported are:
+If you have an existing app which was not based on the Insights Hub app template, you must import the required customization. The two modules which must be imported are:
 
 * **Siemens Insights Hub SSO** from the Mendix Marketplace here: [Siemens Insights Hub SSO](https://marketplace.mendix.com/link/component/108805/)
 
@@ -115,7 +115,7 @@ Change the JSON to contain appropriate values for the following information:
 * appCopyright – app owner’s name and year of publication
 * links – links to additional information about the app
 
-More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://design.mindsphere.io/osbar/get-started.html#app-information), on the Insights Hub developer site.
+More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://documentation.mindsphere.io/MindSphere/resources/osbar/getting-started.html), on the Insights Hub developer site.
 
 ## Deploying Your App{#deploying-your-app}
 
@@ -142,7 +142,7 @@ To create a new app manually in the Insights Hub launchpad, do the following:
 1. Go to the **Developer Cockpit > Dashboard**.
 2. Click **Create new application**.
 3. Set the **Type** to *Standard*.
-4. Set the **Infrastructure** to *Cloud Foundry*.
+4. Set the **Infrastructure** to *Self Hosted*.
 5. Fill in the **Display Name** of your app, as you want it shown in the Launchpad.
 6. Fill in the **Internal Name** of your app. This must be identical to the value of *CockpitApplicationName* which you set in the SSO module of your app.
 7. Fill in a **Version** for your app.
@@ -151,7 +151,7 @@ To create a new app manually in the Insights Hub launchpad, do the following:
 10. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
 11. Click the **+** next to the component to add **Endpoints**.
 12. Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
-13. Fill in the **Cloud Foundry Direct URL**. This can be found using the Cloud Foundry command `cf app {app_name}`.
+13. Fill in the **URL**. If you have deployed your app to the Mendix free offering, just press the **View App** button to open the app in a browser. Take the URL from here.
 14. Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
     If your app is running on Insights Hub on **AWS** use Region `eu1`:
@@ -172,7 +172,7 @@ To create a new app manually in the Insights Hub launchpad, do the following:
 15. Click **Save** to save these details.
 16. Click **Register** to register your app with the Insights Hub launchpad.
 
-    {{% alert color="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
+    {{% alert color="info" %}}If the app has not been deployed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have deployed your app.{{% /alert %}}
 
 ##### Setting Application Scopes in Developer Cockpit{#scopes}
 

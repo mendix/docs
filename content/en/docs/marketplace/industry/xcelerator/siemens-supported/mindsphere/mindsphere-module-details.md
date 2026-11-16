@@ -16,7 +16,7 @@ aliases:
 ## Introduction
 
 {{% alert color="warning" %}}
-This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights APIs.
+This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights Hub APIs.
 {{% /alert %}}
 
 This page contains detailed information about the content of Insights Hub modules for Mendix apps and what they are used for. If you want to deploy a Mendix app to Insights Hub, the instructions are in [Deployment on Siemens Insights Hub](/developerportal/deploy/deploying-to-mindsphere/).
@@ -165,7 +165,7 @@ The JSON should contain the following information:
 * appCopyright – app owner’s name and year of publication
 * links – links to additional information about the app
 
-More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://design.mindsphere.io/osbar/get-started.html#app-information), on the Insights Hub developer site.
+More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://documentation.mindsphere.io/MindSphere/resources/osbar/getting-started.html), on the Insights Hub developer site.
 
 ### sso-login.html
 
@@ -173,11 +173,11 @@ The Siemens Insights Hub Starter Application, example apps, and Siemens Insights
 
 ### Error pages
 
-These error pages are included in the Siemens Insights Hub Starter Application, example apps, and Siemens Insights Hub Web Content. This section explains why they are there.
+These error pages are included in the Siemens Insights Hub Starter Application, example apps, and Siemens Insights SSO. This section explains why they are there.
 
 #### Permission Denied Page
 
-This is the general *permission denied* page, and will be shown if your app is called with an invalid token. The SSO module expects to find this Insights Hub compliant file as error_page/403.html within your ‘Theme’ folder.
+This is the general *permission denied* page, and will be shown if your app is called with an invalid token.
 
 #### License exceeded
 

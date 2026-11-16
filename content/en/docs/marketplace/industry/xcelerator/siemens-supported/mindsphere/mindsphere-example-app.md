@@ -21,7 +21,7 @@ To run your app on Insights Hub, you need to complete the prerequisites describe
 
 ### Roles
 
-You need an Insights Hub user account on a tenant including a Developer Cockpit - for example, a [Start for free](https://siemens.mindsphere.io/en/start) tenant. This account needs the following core roles:
+You need an Insights Hub user account on a tenant including a Developer Cockpit. This account needs the following core roles:
 
 * mdsp:core:Developer
 * mdsp:core:StandardUser
@@ -51,10 +51,10 @@ Open Studio Pro without opening an app and follow these steps:
 
 ## Deploy and Run the Example App
 
-A Mendix-based application for Insights Hub can be deployed to Mendix or to Insights Hub. Deploying to Mendix is quite easy and is the preferred option as you can then use the Auto Registration process.
+A Mendix-based application for Insights Hub can be deployed directly to Mendix. Deploying to Mendix is quite easy and the preferred way.
 For more information about the deployment options see [Deploying to Insights Hub](/developerportal/deploy/deploying-to-mindsphere/#deploying-your-app).
 
-To start the Auto Registration process just click the **Publish** button.
+To start the deployment process just click the **Publish** button.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/autoreg-publish.png" >}}
 

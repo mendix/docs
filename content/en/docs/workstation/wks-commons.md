@@ -2,7 +2,7 @@
 title: "Workstation Commons"
 url: /mendix-workstation/commons/
 description: "Describes the configuration and usage of the Workstation Commons module, which is available in the Mendix Marketplace."
-weight: 35
+weight: 14
 ---
 
 ## Introduction

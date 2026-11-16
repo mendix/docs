@@ -20,13 +20,13 @@ This document explains how to use function calling in your smart app. To do this
 Through this document, you will:
 
 * Understand how to implement function calling within your Mendix application.
-* Learn to integrate GenAI capabilities to address specific business requirements effectively.
+* Learn to integrate GenAI capabilities to address specific business requirements.
 
 ### Prerequisites {#prerequisites}
 
 Before integrating function calling into your app, make sure you meet the following requirements:
 
-* An existing app: To simplify your first use case, start building from a preconfigured set up [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/). 
+* An existing app: To simplify your first use case, start building from the preconfigured [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/). 
 
 * Be on Mendix Studio Pro 10.12.4 or higher.
 
@@ -111,7 +111,7 @@ Create a new microflow with the name `GetCurrentUserName_Function`.
     * Location: `https://openholidaysapi.org/PublicHolidays?countryIsoCode=NL&validFrom=2025-01-01&validTo=2025-12-31&languageIsoCode=EN`
     * HTTP method: `GET`
     * Use timeout on request: `Yes`
-    * Timeout (s): You can choose the value, here we set it to `300`
+    * Timeout (s): You can choose the value, here it is set to `300`
     * The rest can be set to default.
 
     Response tab:

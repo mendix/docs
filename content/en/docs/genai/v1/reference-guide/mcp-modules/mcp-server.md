@@ -18,7 +18,7 @@ Looking for Mendix's newest agentic and generative AI features? [This page has b
 The [MCP Server](https://marketplace.mendix.com/link/component/240380) module provides easy low-code capability to set up an MCP ([Model Context Protocol](/agents/mcp/)) server within a Mendix app. An MCP server can seamlessly expose resources (such as tools or prompts) to other external AI applications that support MCP. The Mendix MCP Server module builds a bridge between Mendix and MCP client applications, such as Claude Desktop, through the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation, it is possible to:
 
 * Expose reusable prompts, including the ability to use prompt parameters
-* List and execute microflow implemented in the application as tools
+* List and execute microflows implemented in the application as tools
 * The `Path` of the MCP Server cannot contain `/`, so your server cannot have a multi-level path.
 
 To use function calling within the same Mendix application and integrating to an LLM, consider [function calling](/agents/function-calling/).

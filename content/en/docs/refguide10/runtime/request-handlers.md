@@ -7,9 +7,9 @@ weight: 45
 
 ## Introduction
 
-Communication between the Mendix client and the runtime server happens through various different request handlers. 
+The Mendix Runtime receives requests through various request handlers. [Standard request handlers](#standard-handlers) handle the communication between the Mendix client and the runtime server. [Service endpoints](#service-endpoints) expose the services that your app publishes. You can also create [custom request handlers](#custom-handlers) for your own purposes.
 
-## Standard Request Handlers
+## Standard Request Handlers {#standard-handlers}
 
 The following standard request handlers are used:
 
@@ -22,6 +22,33 @@ The following standard request handlers are used:
 | PWA Manifest | `/manifest.webmanifest` | Serves the manifest file that is required for [PWA applications](/refguide10/mobile/introduction-to-mobile-technologies/progressive-web-app/). |
 | Mx Dev Tools | `/mxdevtools` | Websocket endpoint that handles client logs and nanoflow debugging. Only enabled during development. |
 
-## Custom Request Handlers
+## Service Endpoints {#service-endpoints}
+
+Apps that contain published services expose endpoints for handling service requests and for documentation.
+
+### Published Service Request Handlers {#published-service-handlers}
+
+[Published REST services](/refguide10/published-rest-services/) and [published OData services](/refguide10/published-odata-services/) register their own request handlers, based on the location that you configure for each service. For example, a published REST service with the location `rest/myservice/v1` is served on `/rest/myservice/v1`.
+
+If the app contains published web services, the `/ws` request handler handles the web service requests.
+
+### Documentation Endpoints {#documentation-endpoints}
+
+The following endpoints provide documentation for the services published by your app:
+
+| Endpoint | Enabled When | Description |
+| -------- | ------------ | ----------- |
+| `/api-doc` | The app contains a published REST, OData, or web service. | Overview page that links to the other documentation endpoints. See [Mendix Runtime](/refguide10/runtime/#apis). |
+| `/rest-doc` | The app contains a [published REST service](/refguide10/published-rest-services/). | Serves the [OpenAPI documentation](/refguide10/open-api/) of all published REST services. |
+| `/odata-doc` | The app contains a [published OData service](/refguide10/published-odata-services/). | Serves the API documentation of all published OData services. See [API Documentation](/refguide10/published-odata-services/#api-documentation). |
+| `/ws-doc` | The app contains a [published web service](/refguide10/published-web-services/). | Serves the documentation of all published web services, including its WSDL. |
+
+#### Restricting Access to Documentation Endpoints {#restricting-access}
+
+The Mendix runtime has no setting to disable documentation endpoints. Mendix Cloud denies access to the documentation endpoints by default (see [Default Settings](/developerportal/deploy/access-restrictions/#defaults) in *Restrict Access for Incoming Requests*). On other deployment platforms, you can restrict access to these paths with a reverse proxy or a web application firewall (WAF).
+
+For more information, see [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in *Environment Details* and [Applying Access Restrictions to Unnecessary Request Handlers](/howto/security/best-practices-security/#request-handlers) in *Implement Best Practices for App Security*.
+
+## Custom Request Handlers {#custom-handlers}
 
 Custom request handlers can be added using the `com.mendix.core.Core#addRequestHandler({name of the request handler})` API call.

@@ -35,7 +35,7 @@ Mendix recommends following the steps below per release to ensure a smooth upgra
 
 * Read the full migration guide for the specific release and ensure that you cover each module used in your app.
 * Perform the upgrade in a non-production environment first.
-* Keep the back up of your database before starting.
+* Keep a backup of your database before starting.
 * Upgrade all modules to the versions listed in the upgrade matrix for the release.
 * Update any custom application logic by referencing deprecated entities, associations, attributes, microflows, or enumerations.
 * Run all required migration microflows upon starting the application (for example, as part of the after-startup microflow).
@@ -94,7 +94,7 @@ The following modules require an upgrade:
 
 ###### Impact
 
-Existing custom code that use any of the renamed pages and microflows will show consistency errors in the Studio Pro. Furthermore, agent definitions containing Single MCP tools require migration to prevent failing agent calls at runtime. 
+Existing custom code that uses any of the renamed pages and microflows will show consistency errors in Studio Pro. Furthermore, agent definitions containing Single MCP tools require migration to prevent failing agent calls at runtime. 
 
 Data migration is only required if your app uses Agent definitions containing Single MCP tools.
 
@@ -175,7 +175,7 @@ To prevent the need to recreate existing data related to Agent definitions and k
 6. If your app has the PgVector Knowledge Base module:
 
    1. Upgrade the PgVector Knowledge Base module to V6.0.1 in your Mendix app.
-   2. Include logic to run the data migration microflow upon starting your application (forexample, include it in the after-startup): **PgVectorKnowledgeBase** > **USE_ME** > **Migration** > `ConsumedKnowledgeBase_Migrate`. This microflow makes sure the new attributes on the generalization are set properly, and the `DisplayName` field is migrated.
+   2. Include logic to run the data migration microflow upon starting your application (for example, include it in the after-startup): **PgVectorKnowledgeBase** > **USE_ME** > **Migration** > `ConsumedKnowledgeBase_Migrate`. This microflow makes sure the new attributes on the generalization are set properly, and the `DisplayName` field is migrated.
    3. If the **Agent Commons** is part of your app and there are Agents defined using knowledge bases, include the following initially excluded sub-microflow into the project and add it as a microflow call according to the annotation in the above-mentioned microflow: **PgVectorKnowledgeBase** > **USE_ME** > **Migration** > `PgVector_KnowledgeBase_Migrate`. This microflow sets the `CollectionIdentifier` field on the `KnowledgeBase` entity and outgoing reference to the `ConsumedKnowledgeBase`.
    4. Set the `DisplayName` field for each `ConsumedKnowledgeBase` object by logging into the running app and using the `DatabaseConfiguration_Overview` page.
 

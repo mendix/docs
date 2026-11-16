@@ -65,15 +65,15 @@ $success-7: $main-green-700;
 $success-8: $main-green-800;
 $success-9: $main-green-900;
 
-$warning-1: $main-yellow-100;
-$warning-2: $main-yellow-200;
-$warning-3: $main-yellow-300;
-$warning-4: $main-yellow-400;
-$warning-5: $main-yellow-500;
-$warning-6: $main-yellow-600;
-$warning-7: $main-yellow-700;
-$warning-8: $main-yellow-800;
-$warning-9: $main-yellow-900;
+$warning-1: $main-orange-100;
+$warning-2: $main-orange-200;
+$warning-3: $main-orange-300;
+$warning-4: $main-orange-400;
+$warning-5: $main-orange-500;
+$warning-6: $main-orange-600;
+$warning-7: $main-orange-700;
+$warning-8: $main-orange-800;
+$warning-9: $main-orange-900;
 
 $danger-1: $main-red-100;
 $danger-2: $main-red-200;
@@ -145,14 +145,20 @@ $link-hover-color: $main-brand-teal;
 
 // Fonts
 
-$google_font_name: "Noto Sans"; // NK - changed to Mendix font
-$google_font_family: "Noto+Sans:ital,wght@0,400;0,600;1,400;1,600"; // MvM - changed by request in #docs 2023-12-11
-$web-font-path: "https://fonts.googleapis.com/css2?family=#{$google_font_family}&display=swap"; // NK - changed to Mendix font
-$font-family: "Noto Sans"; // NK - changed to Mendix font
+$family-regular: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-$font-family-base: $font_family; // NK - changed to Mendix font
-$font-size-base: 0.875rem; // NK - if we want 14px default -> 0.875rem
-$line-height-base: 1.4; // NK - changed
+$google_font_name: "system-ui";
+$google_font_family: "system-ui";
+$web-font-path: "";
+
+$font-family: $family-regular;
+$font-family-base: $family-regular;
+$font-family-monospace: $family-mono;
+$font-family-sans-serif: $family-regular;
+
+$font-size-base: 0.875rem; // Base text size for the site
+$line-height-base: 1.5; // NK - changed
 
 // Tooltip
 $tooltip-bg: $secondary;

@@ -18,8 +18,19 @@ body {
     padding: 14px;
     @each $color, $value in $theme-colors {
         &-#{$color} {
-            background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
-            border: 1px solid map-get($custom-theme-colors, '#{$color}-2'); //Add border color from _variables_project.scss
+            @if $color == "info" {
+                background-color: $main-blue-100;
+                border: 1px solid $main-blue-500;
+            } @else if $color == "warning" {
+                background-color: $main-orange-100;
+                border: 1px solid $warning-5;
+            } @else if $color == "danger" {
+                background-color: $main-red-100;
+                border: 1px solid $danger-5;
+            } @else {
+                background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
+                border: 1px solid map-get($custom-theme-colors, '#{$color}-2'); //Add border color from _variables_project.scss
+            }
         }
     }
 }
@@ -118,6 +129,7 @@ body {
     order: 1;
     margin-left: 2rem; // NK - custom edit
     max-width: 90%;  // NK - fixed width of all content to 90%
+    font-size: 16px; // Main doc content stays at 16px
 
     // Highlighted code.
     .highlight {
@@ -134,7 +146,8 @@ body {
     p code, li code, table code {
         padding: 0.1em 0.1em;  // NK - made padding smaller
         font-size: $font-size-base; // NK - added to match rest of text
-        background-color: rgba($info, 0.07); // NK - changed background color
+        font-family: $family-mono;
+        background-color: rgba($info-7, 0.09); // NK - changed background color
         border-radius: 0; // DB – Removed radius
     }
 
@@ -160,8 +173,8 @@ body {
     }
 
     > h1 {
-        font-family: "Patron"; //LZ - to set the font for the page titles of the docs to Patron according to PDS
-        font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
+        font-family: $family-regular;
+        font-weight: 600;
         margin-bottom: 1rem;
         font-size: 2rem; // NK - custom edit
         line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
@@ -201,7 +214,7 @@ body {
 
 // Style visited links but exclude buttons, left sidebar, and card text
 a:not(.btn):not(.td-sidebar-link):not(.card-text a):visited {
-    color: $purple;
+    color: $dark;
 }
 
 // Add icon after external links in main content (but exclude some content)
@@ -281,7 +294,7 @@ html {
 }
 
 .td-main main {
-    background-color: $gray-300;
+    background-color: $gray-200;
     padding-top: 4rem;  // DB - Moved out of breakpoint
         @include media-breakpoint-up(md) {
             border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
@@ -328,7 +341,7 @@ div.date-format{
 
 // DB – Add borders around images
 main img {
-    border-color: $gray-400;
+    border-color: $info-6;
     border-width: 1px;
     border-style: solid;
 }
@@ -376,6 +389,7 @@ img {
 // sidebar-toc.scss - Right side toc
 
 .td-sidebar-toc {
+    background-color: $gray-300;
     border-left: 0; // NK - changed to 0, the actual border moved to td-main main, to fully span height of screen
     font-size: 0.9rem; // NK - decreased
     line-height: 1.2; // NK - decreased
@@ -392,7 +406,7 @@ img {
 }
 
 .td-toc {
-
+    background-color: $gray-300;
     height: calc(100vh - 180px); // NK - added to allow scrolling
     overflow-x:hidden !important; // NK - added to allow scrolling
 
@@ -408,7 +422,6 @@ img {
 
     #TableOfContents {
         // Hugo's ToC is a mouthful, this can be used to style the top level h2 entries.
-        > ul > li > ul > li > a {}
 
         // Override Docsy 0.15+ which makes ToC bold by default
         > ul > li > :not(ul) {
@@ -417,7 +430,7 @@ img {
 
         a {
             // NK - styling for ToC
-            color: $gray-800;
+            color: $secondary;
             padding-left: 20px;
             padding-bottom: .25rem;
             padding-top: .25rem;
@@ -462,17 +475,18 @@ img {
         }
 
         a {
-            color: $gray-900;
+            color: $primary;
         }
     }
 
     .td-sidebar-link {
         display: block;
         padding-bottom: 0.375rem;
-       
+        // color: $gray-800;
+        
         // NK - overrides special styling for pages with no children
         &__page {
-            color: inherit;//$gray-700;
+            color: inherit;
             font-weight: inherit;//$font-weight-light;`
         }
         .link-title:hover {
@@ -522,7 +536,7 @@ img {
     td {
       padding: 0.75rem 0.75rem; // YL - set bigger padding values
       vertical-align: top;
-      border: $table-border-width solid $table-border-color; // NK - added borders to tables
+      border: $table-border-width solid $info-6;
       font-size: 0.8rem; // NK - smaller font size
   
       ul, ol > ul li, > ol li {
@@ -532,14 +546,14 @@ img {
   
     thead th {
       vertical-align: bottom;
-      border-bottom: calc(#{$table-border-width} * 2) solid $table-border-color;  // NK - added borders to tables
-      border-top: $table-border-width solid $table-border-color;
-      border-left: $table-border-width solid $table-border-color;
-      border-right: $table-border-width solid $table-border-color;
+      border-bottom: calc(#{$table-border-width} * 2) solid $info-6; 
+      border-top: $table-border-width solid $info-6;
+      border-left: $table-border-width solid $info-6;
+      border-right: $table-border-width solid $info-6;
     }
   
     tbody + tbody {
-      border: calc(#{$table-border-width} * 2) solid $table-border-color; // NK - added borders to tables
+      border: calc(#{$table-border-width} * 2) solid $info-6;
     }
   }
 
@@ -621,7 +635,7 @@ img {
          text-align: center;
          border-top: 1px solid $gray-300;
          padding: 1rem;
-         font-family: 'noto-sans', 'Noto Sans', sans-serif;
+         font-family: $family-regular;
    }
     
    .mx-footer__copyright {

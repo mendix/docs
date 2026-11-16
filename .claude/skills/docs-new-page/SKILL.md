@@ -17,10 +17,10 @@ Draft a new page by following these steps:
 4. Read the appropriate template from `templates/`.
 5. Create the new file based on the template. File names must be simple, lowercase, and hyphen-separated.
 6. Clean up the template:
-    * In the front matter, uncomment and complete `url` and `description`. Delete any unused commented fields.
+    * In the front matter, complete `title`, `url`, and `description`, plus any other fields the page needs. Uncomment those fields, and delete the commented fields you don't use.
     * Replace or remove every `{…}` placeholder and instruction comment.
     * Delete optional sections that don't apply.
-7. Complete the introduction and the remaining sections. Content varies by content type.
+7. Complete the introduction and the remaining sections. Content varies by content type. Add images only if the user provides them. Where an image is needed and none is available, leave out the `figure` shortcode and list the location in your final summary.
 8. Verify that any linked pages exist in the repo, using each target page's `url` front matter field. Link to the related pages found in step 3.
 9. Run the `docs-copyedit` and `docs-alt-text` skills on the new page.
 

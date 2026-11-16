@@ -51,6 +51,10 @@ A tab container contains one or more tab pages where you place widgets. For exam
 
 Default: *False*
 
+#### Show badge 
+
+**Show badge** indicates whether a badge is shown next to the tab page caption. If set to *Yes*, an additional *Badge* property will be available to set its content dynamically.
+
 #### Refresh on Show {#refresh}
 
 **Refresh on show** indicates whether the contents of the tab page should be refreshed when the tab page is shown. Set this property to *No* if you know that nothing will affect the information on the tab page.

@@ -36,6 +36,24 @@ The runtime generates spans for the following:
 * Microflow execution within the runtime, including sub-microflow calls
 * Microflow loops and loop iterations
 * Execution of task queue tasks
+* Change Data Capture (CDC) publishing
+
+### Change Data Capture Spans {#cdc-spans}
+
+Starting with Mendix 11.16.0, [Change Data Capture](/refguide/change-data-capture/) generates the following spans when tracing is enabled:
+
+| Span | Description | Count Attribute |
+| --- | --- | --- |
+| `CDC publish change events` | Processes fetched event IDs in batches. The count is the number of IDs fetched for the poll. | `mx.cdc.producer.change_events.count` |
+| `CDC process change events` | Processes one batch of loaded change events. The count is the number of events in the batch. | `mx.cdc.producer.change_events.count` |
+| `CDC create producer records` | Creates Kafka records for a batch. The record count is set after successful creation. | `mx.cdc.producer.records.count` |
+| `CDC publish Kafka records` | Publishes a non-empty batch of records to Kafka. The count is the number of submitted records. | `mx.cdc.producer.records.count` |
+| `CDC update snapshot state` | Plans snapshots and updates snapshot state. The count is the number of entities planned for a snapshot. | `mx.cdc.producer.snapshot.entities.count` |
+
+Record creation and Kafka publishing are nested within batch processing. These spans are not generated for individual change events.
+Snapshot updating is a separate operation. Its entity count does not indicate how many snapshots completed.
+
+These spans are excluded when [Minimal Tracing Mode](#minimal-tracing-mode) is enabled.
 
 ## Configuration
 

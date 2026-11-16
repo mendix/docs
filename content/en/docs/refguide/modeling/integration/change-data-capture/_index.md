@@ -103,3 +103,4 @@ For details on setting up a BYOK cluster with the Mendix Event Broker, see [Mend
 * [Published CDC Services](/refguide/published-cdc-services/)
 * [Mendix Event Broker](/appstore/services/event-broker/)
 * [Event Broker Bridges](/appstore/services/event-broker-bridges/)
+* [Change Data Capture Spans](/refguide/opentelemetry-in-runtime/#cdc-spans)

@@ -5,6 +5,14 @@ weight: 70
 description: "Release notes for Native Template 21."
 ---
 
+## 21.0.1
+
+**Release date: Nov 17, 2026**
+
+### Fixes
+
+- We fixed an issue on Android 15 and later where the last word of some single-line text elements, such as button captions, could be cut off.
+
 ## 21.0.0
 
 **Release date: Nov 12, 2026**

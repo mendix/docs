@@ -252,8 +252,12 @@ main a[href*="https://"]:hover::after {
       background-color: $color-link-hover;
 }
 
-.btn {
-    border-radius: 0.25rem;
+button,
+.btn,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+    border-radius: 0 !important;
 }
 
 // main.scss
@@ -434,7 +438,7 @@ img {
 
         a {
             // NK - styling for ToC
-            color: $color-link;
+            color: $color-text-secondary;
             padding-left: 20px;
             padding-bottom: .25rem;
             padding-top: .25rem;

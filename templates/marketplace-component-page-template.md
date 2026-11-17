@@ -45,7 +45,7 @@ Before using {Component Name}, make sure you have the following:
 
 ### Dependencies
 
-[//]: # "Optional: Keep this subsection to list the Marketplace modules the component requires. If a module is required only for certain versions of the component or Studio Pro, say which."
+[//]: # "Optional: Keep this subsection to list the Marketplace modules the component requires. If a module is required only for certain versions of the component or Studio Pro, specify the version."
 
 {Component Name} requires the following Marketplace modules:
 

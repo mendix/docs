@@ -78,14 +78,14 @@ If you use the installation step in the builder, keep the following in mind:
 
 For iOS packaging, install or prepare the following:
 
-* Xcode or Xcode Command Line Tools to bundle and sign the iOS app on macOS
+* Xcode or Xcode Command Line Tools to bundle and sign the iOS app on macOS, unless you use the experimental **Build without a Mac** option
 * Apple signing assets, including a `.p12` certificate and a `.mobileprovision` profile, if you want to build for a physical device or distribute the app
 * A bundle identifier that matches the Apple signing configuration, if you want to build for a physical device or distribute the app
 
 Install full Xcode if you want to use the iOS simulator for testing.
 
 {{% alert color="warning" %}}
-iOS packaging for a final signed device build requires macOS. On Windows, you can prepare the portable signing package, but you still need a Mac to generate the final signed IPA.
+To generate a signed IPA on Windows, use the experimental **Build without a Mac** option. Without this option, PWA Wrapper on Windows prepares a portable signing package, and you need a Mac to generate the final signed IPA.
 {{% /alert %}}
 
 ### Steps for iOS on macOS{#steps-on-mac}
@@ -105,7 +105,7 @@ To generate a signed iOS package on macOS, do the following:
     * screen orientation
 
 3. Review the available permissions and enable only the permissions related to the capabilities your app uses. For capability-to-permission guidance, see [Capability to Permission Mapping](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/#capability-to-permission-mapping).
-4. Go to the signing step and create or select an iOS signing configuration. For platform-specific details, see [Sign iOS Apps on macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos).
+4. Go to the signing step and create or select an iOS signing configuration. For details, see [Set Up iOS Signing](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#set-up-ios-signing).
 5. Continue to the packaging step and click **Generate Package**.
 
     {{< figure src="/attachments/refguide10/mobile/pwa-wrapper/package-ios-app.png" alt="Packaging step for building an iOS package with PWA Wrapper" max-width="500px" >}}
@@ -118,9 +118,18 @@ To generate a signed iOS package on macOS, do the following:
 
 ### Steps for iOS on Windows
 
-On Windows, PWA Wrapper can prepare the iOS bundle but not complete the final signing step. The builder produces a portable signing package that can be moved to a Mac.
+On Windows, you can sign the iOS app directly with the experimental **Build without a Mac** option. Without this option, the builder produces a portable signing package that you must move to a Mac for the final signing step.
 
-On Windows, use the same steps 1 through 7 as in [Steps for iOS on macOS](#steps-on-mac), then continue as follows:
+To generate a signed IPA on Windows without a Mac, use the same steps 1 through 4 as in [Steps for iOS on macOS](#steps-on-mac), then continue as follows:
+
+1. Select **Build without a Mac (experimental)**, then click **OK** in the **Experimental Feature** dialog.
+2. Continue to the packaging step and click **Generate Package**.
+3. Wait for the build to complete.
+4. Open the output directory and retrieve the signed `.ipa`.
+
+For more information, see [Build a Signed IPA Without a Mac](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#build-without-a-mac) in *Sign PWA Wrapper Apps*.
+
+To use the portable signing package instead, use the same steps 1 through 7 as in [Steps for iOS on macOS](#steps-on-mac), then continue as follows:
 
 1. Open the output folder and locate the portable signing ZIP.
 2. Copy the portable signing ZIP to a Mac.
@@ -134,7 +143,7 @@ Keep the following limitations in mind:
 * The builder installation step for iOS is available only on macOS hosts
 * Copying packaged web resources is currently not supported on iOS, so the wrapped app must load its frontend resources from the deployed Mendix runtime
 
-For platform-specific details about the signing step inside this build flow, see [Sign iOS Apps on macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos) in *Sign PWA Wrapper Apps* for macOS builds and [Prepare iOS Apps on Windows](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#prepare-ios-apps-on-windows)  in *Sign PWA Wrapper Apps* for Windows builds.
+For platform-specific details about the signing step inside this build flow, see [Sign iOS Apps on macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos) in *Sign PWA Wrapper Apps* for macOS builds and [Sign iOS Apps on Windows](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#prepare-ios-apps-on-windows)  in *Sign PWA Wrapper Apps* for Windows builds.
 
 ## Choosing Permissions and Packaging Options
 
@@ -188,6 +197,6 @@ If your app depends on device hardware, validate the final packaged app on repre
 
 After building the wrapper app, continue with the appropriate distribution process for your target platform.
 
-If you still need platform-specific details for the signing step in the build flow, see [Sign Android Apps on Windows and macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-android-apps-on-windows-and-macos), [Sign iOS Apps on macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos), or [Prepare iOS Apps on Windows](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#prepare-ios-apps-on-windows).
+If you still need platform-specific details for the signing step in the build flow, see [Sign Android Apps on Windows and macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-android-apps-on-windows-and-macos), [Sign iOS Apps on macOS](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#sign-ios-apps-on-macos), or [Sign iOS Apps on Windows](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/sign-pwa-wrapper-apps/#prepare-ios-apps-on-windows).
 
 To understand which capabilities you can use from your Mendix app, see [PWA Wrapper Capabilities](/refguide10/mobile/distributing-mobile-apps/pwa-wrapper/pwa-wrapper-capabilities/).

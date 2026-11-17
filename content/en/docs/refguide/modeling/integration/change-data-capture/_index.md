@@ -39,38 +39,67 @@ Set up a CDC service in Studio Pro by following the steps below:
 
 1. In Studio Pro, right-click a module in the App Explorer and choose **Add other** > **Change data capture service**.
 2. Select the entities to track and set an exposed name for each. For more information on configuring entities, see the [Entities to Track](/refguide/published-cdc-services/#entities) section of *Published CDC Services*.
-3. Deploy the app. The Runtime creates Kafka topics for each tracked entity automatically.
-4. In the [Event Broker Manager](https://broker.mendix.com/), configure an [Event Broker Bridge](/appstore/services/event-broker-bridges/) to route CDC events to your destination.
+3. Configure the [Kafka broker connection](#runtime-configuration).
+4. Deploy the app. The Runtime creates Kafka topics for each tracked entity automatically.
+5. In the [Event Broker Manager](https://broker.mendix.com/), configure an [Event Broker Bridge](/appstore/services/event-broker-bridges/) to route CDC events to your destination.
 
 ## Runtime Configuration {#runtime-configuration}
 
-CDC requires runtime settings to connect to a Kafka broker. Follow the steps below:
+CDC requires runtime settings to connect to a Kafka broker.
 
-1. In Studio Pro, open **App** > **Settings**.
-2. Open the **Configurations** tab.
-3. Select an existing configuration or click **New** to make a new one.
-4. In the configuration, open the **Custom** tab to add the settings documented in the section below. For deployed environments, set these via your environment's custom runtime settings.
+If your app has no [CDC service document](/refguide/published-cdc-services/), you do not need to configure this connection. These settings do not enable CDC by themselves.
 
-{{< figure src="/attachments/refguide/modeling/integration/change-data-capture/cdc-custom-configuration.png" alt="Edit Configuration dialog in Studio Pro showing the Custom tab with Kafka.BootstrapServers set to an IP address and port" >}}
+### Kafka Connection Settings {#kafka-connection-settings}
+
+The following runtime settings control connections to the Kafka broker:
+
+| Name | Description | Default Value |
+| --- | --- | --- |
+| `Kafka.BootstrapServers` | One or more Kafka broker addresses. Supply a comma-separated list of `host:port` pairs, such as `broker1:9092,broker2:9092`. | Not set |
+| `Kafka.Username` | The username for SCRAM-SHA-512 authentication over TLS. This setting is ignored when `Kafka.Security.Protocol` is set. | Not set |
+| `Kafka.Password` | The password for SCRAM-SHA-512 authentication over TLS. This setting is ignored when `Kafka.Security.Protocol` is set. | Not set |
+| `Kafka.Security.Protocol` | The Kafka `security.protocol` value. This setting was introduced in Mendix 11.16.0. | Not set |
+| `Kafka.Sasl.Mechanism` | The Kafka `sasl.mechanism` value, such as `PLAIN` or `SCRAM-SHA-512`. Requires `Kafka.Security.Protocol` to be set. This setting was introduced in Mendix 11.16.0. | Not set |
+| `Kafka.Sasl.Jaas.Config` | The Kafka `sasl.jaas.config` value, including the login module and its options. Requires `Kafka.Security.Protocol` to be set. This setting was introduced in Mendix 11.16.0. | Not set |
+| `EventBroker.Space` | The Event Broker space in which the app is placed. This defines which other applications can exchange events with this app. | `local` |
+
+In Mendix Cloud environments with Mendix Event Broker enabled, the platform manages broker connection credentials. For Bring Your Own Kafka (BYOK) deployments, configure the settings above through [custom runtime settings](/refguide/custom-settings/) in your environment.
 
 ### Running Locally {#local-configuration}
 
-When running the app locally, only the bootstrap server address is required.
+Starting with Mendix 11.16.0, Studio Pro provides a **Kafka** tab for simplified local configuration.
 
-| Name | Description | Default Value |
-| --- | --- | --- |
-| `Kafka.BootstrapServers` | The address of the Kafka broker, in the format `host:port`. | |
+The **Kafka** tab can be found by opening your active Studio Pro [configuration](/refguide/configurations-tab/) and select the **Kafka** tab.
 
-### Bring Your Own Kafka (BYOK) {#byok-configuration}
+Use the following fields to connect to your broker:
 
-When connecting to a BYOK Kafka cluster, provide the bootstrap server address and credentials for authentication. The supported authentication method is `SASL/SCRAM-SHA-512`.
+* **Kafka Bootstrap Servers** – the broker addresses (maps to `Kafka.BootstrapServers`).
+* **User name** – the broker username (maps to `Kafka.Username`).
+* **Password** – the broker password (maps to `Kafka.Password`).
 
-| Name | Description | Default Value |
-| --- | --- | --- |
-| `Kafka.BootstrapServers` | The address of the Kafka broker, in the format `host:port`. | |
-| `Kafka.Username` | The username for `SASL/SCRAM-SHA-512` authentication with the Kafka cluster. | |
-| `Kafka.Password` | The password for `SASL/SCRAM-SHA-512` authentication with the Kafka cluster. | |
-| `EventBroker.Space` | The Event Broker space in which the app is placed. This defines which other applications can exchange events with this app. | `local` |
+Studio Pro supplies these three runtime settings from the **Kafka** tab. Do not add them again under **Custom**.
+
+By default, supplying both `Kafka.Username` and `Kafka.Password` selects `SASL_SSL` with `SCRAM-SHA-512`. For Mendix Event Broker authentication, these credentials are sufficient.
+
+Starting with Mendix 11.17.0, Studio Pro migrates `Kafka.BootstrapServers`, `Kafka.Username`, and `Kafka.Password` from **Custom** into empty **Kafka** fields.
+
+### Kafka Custom Authentication {#byok-configuration}
+
+If your broker requires authentication other than SCRAM-SHA-512 over TLS, configure the protocol, SASL mechanism, and JAAS configuration below.
+
+For local runs, keep the broker addresses in the **Kafka** tab and add the authentication settings under **Custom**.
+
+For example, for a broker configured for SASL/PLAIN over TLS, use the following authentication settings by replacing the example credentials with your broker credentials:
+
+| Name | Example Value |
+| --- | --- |
+| `Kafka.Security.Protocol` | `SASL_SSL` |
+| `Kafka.Sasl.Mechanism` | `PLAIN` |
+| `Kafka.Sasl.Jaas.Config` | `org.apache.kafka.common.security.plain.PlainLoginModule required username="your-username" password="your-password";` |
+
+JAAS configuration can contain credentials. Do not share real credentials in screenshots or commit them to version control.
+
+For an unauthenticated plaintext connection, leave the credentials empty and remove any custom authentication settings for that connection.
 
 ### Active-Producer Election {#active-producer-election}
 

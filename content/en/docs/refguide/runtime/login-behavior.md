@@ -18,6 +18,18 @@ The cluster manager does more than just unblocking users. For example, it also r
 Cluster manager behavior currently cannot be changed.
 {{% /alert %}}
 
+## Blocked and Inactive Users and Existing Sessions
+
+Blocking a user, either automatically after failed login attempts or manually by setting the **Blocked** attribute of the user, only prevents that user from signing in again. It does not end sessions the user already has. This is deliberate: otherwise anyone could sign another user out by entering a wrong password for their account three times.
+
+Setting the **Active** attribute of a user to false does end their existing sessions. The session is ended on the user's next request, on every node of the cluster.
+
+If you block a user manually because they should lose access immediately, also set them to inactive or delete their sessions (`System.Session` objects associated with the user).
+
+{{% alert color="info" %}}
+Ending the sessions of inactive users was introduced in Mendix 11.17.0, 11.12.9, and 11.6.14. In earlier versions, an inactive user could keep using an existing session for as long as it was kept alive.
+{{% /alert %}}
+
 ## Customizing Login Behavior
 
 Login behavior can be customized by implementing a custom Java action and registering it to be used instead of the default login action. To do this you need to perform the following steps, saving the updated Java in the `javasource` folder of your app.

@@ -2,7 +2,7 @@
 title: "Mendix Event Broker Bridges"
 url: /appstore/services/event-broker-bridges/
 linktitle: "Event Broker Bridges"
-description: "Describes how to create and manage Mendix Event Broker Bridges to integrate the Event Broker with external technologies such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, Iceberg, and Kafka."
+description: "Describes how to create and manage Mendix Event Broker Bridges to integrate the Event Broker with external technologies such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, Apache Iceberg, and Kafka."
 aliases:
     - /appstore/services/event-broker/#manage-mx-broker-bridge
 ---
@@ -13,7 +13,7 @@ aliases:
 Mendix Event Broker Bridges were released for GA in 11.4.0.
 {{% /alert %}}
 
-Mendix Event Broker Bridges integrate the Mendix Event Broker with external technologies, such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, Iceberg, and Kafka. These bridges enable the exchange of events between your Mendix Cloud environment and external systems.
+Mendix Event Broker Bridges integrate the Mendix Event Broker with external technologies, such as AWS SQS, HTTP, Azure Blob Storage, AWS S3, Apache Iceberg, and Kafka. These bridges enable the exchange of events between your Mendix Cloud environment and external systems.
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/event_broker_bridges.png" alt="" class="no-border" >}}
 

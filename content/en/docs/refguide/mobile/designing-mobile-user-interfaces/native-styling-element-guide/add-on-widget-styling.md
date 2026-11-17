@@ -7,7 +7,7 @@ description: "This guide describes the classes and style properties of add-on wi
 
 ## Introduction
 
-
+Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module, and are not shipped with Mendix Studio Pro. Other add-ons might also be distributed through app templates, as well as modules importing pages from other apps. 
 
 ## Documents in this Section
 

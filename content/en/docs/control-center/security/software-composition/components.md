@@ -54,6 +54,9 @@ The component list contains the following information:
 * **Apps using component** – The number of apps where the component is used.
 * **Latest version** – For components derived from the Mendix Marketplace, this is the latest version of the component.
 * **Publisher** – For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
+* **Company Approved** – Whether the component was marked as [Company-Approved](/control-center/company-approved/) by a company admin.
+* **Deprecated** – Whether the component is deprecated.
+* **React/Dojo** – This field displays **Yes** if the component is compatible with [React](/refguide/mendix-client/react/), and **No** if the component is compatible with Dojo.
 * **View details** – Clicking this opens the [Component Details](#component-details) page.
 * Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 

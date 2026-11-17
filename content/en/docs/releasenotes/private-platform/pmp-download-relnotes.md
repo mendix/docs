@@ -1,8 +1,8 @@
 ---
 title: "Private Mendix Platform Download Portal Release Notes"
-linktitle: Private Mendix Platform Download Portal
+linktitle: "Download Portal"
 url: /releasenotes/private-platform-download-portal/
-description: "Release notes for updates to the Private Mendix Platform Download Portal"
+description: "Release notes for updates to the Private Mendix Platform Download Portal."
 weight: 40
 cascade:
     - numberless_headings: true
@@ -11,6 +11,37 @@ cascade:
 These release notes cover changes made to the Private Mendix Platform Download Portal:
 
 ## 2026
+
+### November 13, 2026
+
+#### Form Submission
+
+Users who lack access to the Download Portal can now submit an access request directly through a form available in the Portal itself. For more information, see [Accessing the Download Portal](/private-mendix-platform/download-portal/#access).
+
+#### Fixes
+
+* We have resolved an issue where not all content was retrieved when creating new Marketplace bundles, and improved release retrieval accuracy based on the selected Mendix version. (Ticket 286142)
+* We have fixed an issue that caused the Marketplace bundle creation page to freeze when closing the save dialog. (Ticket 290758)
+
+### September 25, 2026
+
+#### Improvements
+
+##### Artifact Management Enhancements
+
+* To streamline downloading artifacts, you can now download charts, images and Helm file installer files from the **Artifact Management** page instead of the **Add-on** option on the **Releases** page. The **Add-on** option is now removed.
+* To make finding artifacts easier, we have added a new column to **Artifact Management** for filtering by artifact type.
+* We have removed the *Images* folder from the installer package available on the **Releases** page. All images are now available in **Artifact Management** instead.
+
+##### New APIs for Direct Release Downloads
+
+We have introduced new APIs to allow directly downloading the Private Mendix Platform release versions release manifests. For more information, see [Download Package API](/private-mendix-platform/download-portal/#download-api).
+
+#### Export Selection
+
+On the **Artifact Management** page, clicking **Select All** only selects all artifacts on the current page. As a workaround, select the artifacts page by page.
+
+We are aware of this limitation and are working on a fix.
 
 ### August 27, 2026
 

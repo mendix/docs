@@ -55,11 +55,13 @@ To save a service's [OpenAPI (Swagger) documentation](/refguide/open-api/) on yo
 
 When the app is running, these files are available under */rest-doc/{location}/openapi.json* and */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service (for instance, *rest/myservice/v1*).
 
+## Enable CORS
+
+Check this box when your service needs to be available on websites other than your own.
+
+Click [Settings](/refguide/cors-settings/) to specify this access in more detail (for example, which websites are allowed to access the service).
+
 ## Security
-
-### Requires Authentication {#authentication}
-
-Select if clients need to authenticate or not.
 
 ### Authentication Methods
 
@@ -80,11 +82,11 @@ If authentication is required, you can select which authentication methods to su
     xmlHttp.send(null);
     ```
 
-* Select **Custom** to authenticate using a microflow. This microflow is called every time a user wants to access a resource.
+* Select **Custom microflow** to authenticate using a microflow. This microflow is called every time a user wants to access a resource.
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**. For more details, see [Published REST Routing](/refguide/published-rest-routing/).
 
-### Microflow {#authentication-microflow}
+### Custom Microflow {#authentication-microflow}
 
 Specify which microflow to use for custom authentication.
 
@@ -110,12 +112,6 @@ The allowed roles define which [module role](/refguide/module-security/#module-r
 Web service users cannot access REST services.
 {{% /alert %}}
 
-## Enable CORS
-
-Check this box when your service needs to be available on websites other than your own.
-
-Click [Settings](/refguide/cors-settings/) to specify this access in more detail (for example, which websites are allowed to access the service).
-
 ## Resources
 
 A REST service exposes a number of [resources](/refguide/published-rest-resource/). On a resource, you can define the following operations:
@@ -127,8 +123,6 @@ A REST service exposes a number of [resources](/refguide/published-rest-resource
 * `DELETE`
 * `HEAD`
 * `OPTIONS`
-
-You can drag an entity or a message definition onto this list to [generate a complete resource](/refguide/generate-rest-resource/).
 
 ## Operations
 

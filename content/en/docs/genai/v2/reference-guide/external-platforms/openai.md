@@ -13,7 +13,7 @@ aliases:
 
 ## Introduction {#introduction}
 
-The [OpenAI connector](https://marketplace.mendix.com/link/component/220472) lets you generative AI capabilities into Mendix apps. It is compatible with [OpenAI's platform](https://platform.openai.com/) and [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-ai-foundry), where you can access OpenAI models. 
+The [OpenAI connector](https://marketplace.mendix.com/link/component/220472) lets you integrate generative AI capabilities into Mendix apps. It is compatible with [OpenAI's platform](https://platform.openai.com/) and [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-ai-foundry), where you can access OpenAI models. 
 
 ### Features {#features}
 
@@ -161,7 +161,7 @@ JSON mode instructs the model to return valid JSON. To use JSON mode with OpenAI
 
 Function calling enables LLMs to connect with external tools to gather information, run actions, convert natural language into structured data, and more. Function calling enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information for the assistant's response.
 
-OpenAI does not call the function. The model returns a tool called JSON structure that builds the input of the function (or functions) so they can run as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM. The OpenAI connector handles the tool call response and runs the function microflows until the API returns the assistant's final response. 
+OpenAI does not call the function. The model returns a tool call JSON structure that builds the input of the function (or functions) so they can run as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM. The OpenAI connector handles the tool call response and runs the function microflows until the API returns the assistant's final response. 
 
 The GenAI Commons chat completions operations mentioned earlier run this implementation. As a developer, you must make the system aware of your functions and their purposes by registering the functions to the request. To do so, use the GenAI Commons operation [Tools: Add Function to Request](/agents/agents-kit-2/reference-guide/commons/#add-function-to-request) once per function before passing the request to the chat completions operation.
 
@@ -179,11 +179,11 @@ For more information, see [Function Calling](/agents/function-calling/).
 
 Adding Azure indexes to a call enables LLMs to retrieve information when related topics are mentioned. By including these indexes in the request object along with a name and description, the model can intelligently decide when to let the Mendix app call one or more predefined indexes, allowing the assistant to include additional information in its response.
 
-OpenAI does not directly connect to the Azure AI Search resource. The model returns a tool called JSON structure that builds the input of the retrievals so they can run as part of the chat completions operation. The OpenAI connector handles the tool call response and runs the function microflows until the API returns the assistant's final response.
+OpenAI does not directly connect to the Azure AI Search resource. The model returns a tool call JSON structure that builds the input of the retrievals so they can run as part of the chat completions operation. The OpenAI connector handles the tool call response and runs the function microflows until the API returns the assistant's final response.
 
 The GenAI Commons chat completions operations mentioned earlier run this functionality. As a developer, make the system aware of your indexes and their purpose by registering them with the request. Use the GenAI Commons operation [Tools: Add Knowledge Base](/agents/agents-kit-2/reference-guide/commons/#add-knowledge-base-to-request), which must be called once per index before passing the request to the chat completions operation.
 
-Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling, as it relies on the generalized `GenAICommons.ConsumedKnowledgeBase`entity. For Azure indexes specifically, as part of this module, when collection identifiers need to be passed to operations, the `Name` of the `Index` should be used. 
+Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling, as it relies on the generalized `GenAICommons.ConsumedKnowledgeBase` entity. For Azure indexes specifically, as part of this module, when collection identifiers need to be passed to operations, the `Name` of the `Index` should be used. 
 
 #### Vision {#chatcompletions-vision}
 

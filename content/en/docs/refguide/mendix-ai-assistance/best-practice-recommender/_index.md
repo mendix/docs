@@ -26,7 +26,7 @@ It consists of a three-level assistance:
 
 ## Best Practice Recommender Pane
 
-To access settings of Best Practice Recommender, open **Edit** > **Preferences** > the **Maia** tab > **Best Practice Recommender** section. For more information, see [Preferences](/refguide/preferences-dialog/).
+To access settings of Best Practice Recommender, open the **Edit** menu > **Preferences** > **AI** tab > **Maia** tab > Best Practice Recommender** section. For more information, see [Preferences](/refguide/preferences-dialog/).
 
 Best Practice Recommender is enabled by default and is designed as a pane. To access the **Best Practice Recommender** pane, click **View** > **Best Practice Recommender**.
 

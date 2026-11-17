@@ -20,11 +20,16 @@ The Private Mendix Platform User API allows you to manage users in Private Mendi
 * Get a list of all users for the current organization.
 * Create, update, or delete a user.
 * Change the password of a user with a specific ID.
+* Create a Personal Access Token (PAT) for a user.
 
 ## Supported Private Mendix Platform Version
 
 This API is available in Private Mendix Platform 1.5 and newer.
 
 ## API Reference
+
+{{% alert color="info" %}}
+The server URL shown in the API reference below is a placeholder. You must replace it with the URL of your own Private Mendix Platform instance.
+{{% /alert %}}
 
 {{< swaggerui src="/openapi-spec/openapi-user-v1.yaml"  >}}

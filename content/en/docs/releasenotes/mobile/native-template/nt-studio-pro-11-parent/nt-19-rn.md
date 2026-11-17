@@ -1,9 +1,33 @@
 ---
 title: "Native Template 19"
 url: /releasenotes/mobile/nt-19-rn/
-weight: 6
+weight: 80
 description: "Native Template 19"
 ---
+
+## 19.1.8
+
+**Release date: Oct 28, 2026**
+
+### Fixes
+
+- We fixed an issue on Android where the **Clear data** checkbox on the **Developer App** starting page was hidden behind the bottom navigation bar due to edge-to-edge display.
+
+## 19.1.7
+
+**Release date: Sep 23, 2026**
+
+### Fixes
+
+* We removed unused Android permissions coming in from manifest mergers.
+
+## 19.1.6
+
+**Release date: Sep 16, 2026**
+
+### Improvements
+
+* We migrated iOS to the UIKit scene delegate lifecycle.
 
 ## 19.1.5
 
@@ -11,7 +35,7 @@ description: "Native Template 19"
 
 ### Fixes
 
-- We addressed a random scenario where Gradle would resolve to using the Hermes v1 compiler instead of the old Hermes override in `gradle.properties`. This threw issues with `"...bytecode mismatch..."`.
+* We addressed a random scenario where Gradle would resolve to using the Hermes v1 compiler instead of the old Hermes override in `gradle.properties`. This threw issues with `"...bytecode mismatch..."`.
 
 ## 19.1.4
 

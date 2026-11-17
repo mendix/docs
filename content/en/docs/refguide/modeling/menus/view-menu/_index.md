@@ -111,15 +111,21 @@ The [Integration pane](/refguide/integration-pane/) enables you to browse the [C
 
 ### Maia
 
-The **Maia** pane displays the Maia Chat interface where you can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/).
+The **Maia** pane displays the Maia interface. In this chat, you can create and change parts of your app, and ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Make Capabilities](/refguide/maia-make/). In Studio Pro 11.7 and below, the **Maia** pane displays the Maia Chat interface. For more information, see [Chat with Maia](/refguide/maia-chat/).
 
 ### Marketplace
 
 For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content](/appstore/use-content/).
 
-### MCP Settings
+### Maia Settings
 
-The **MCP Settings** pane allows you to connect Maia to External Model Context Protocol (MCP) servers. For more information, see [Maia MCP Client](/refguide/maia-mcp/).
+{{% alert type="info" %}}
+In Studio Pro 11.14 and below, this tab is called **MCP Settings**.
+{{% /alert %}}
+
+The **Maia Settings** pane allows you to connect Maia to External Model Context Protocol (MCP) servers. For more information, see [Maia MCP Client](/refguide/maia-mcp/).
+
+For Studio Pro 11.15 and above, this pane also stores [Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/). For Studio Pro 11.16 and above, you can view and manage all tool permissions, such as Web Fetch and MCP Tools. 
 
 ### OpenAPI Documentation {#api-documentation}
 

@@ -10,7 +10,7 @@ description: "Explains how to access, navigate, and troubleshoot Running Now in 
 
 You can use the **Running Now** dialog box to monitor all actions that are currently running in an environment. To access this information, click **Show Running Now** on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page for one of your app's environments. This button is only visible while the app is running.
 
-You must have **Access to Monitoring** enabled to launch the **Running Now** dialog box. For details on how to manage these permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
+You must have **Monitoring Access** enabled to launch the **Running Now** dialog box. For details on how to manage these permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 ## Running Now Navigation
 

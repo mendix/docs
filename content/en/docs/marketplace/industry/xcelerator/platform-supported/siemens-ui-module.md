@@ -6,11 +6,11 @@ description: "Provides high-level usage information about the Siemens UI Module,
 
 ## Introduction
 
-The Siemens UI Module provides the foundational user interface implementation for Siemens‑aligned Mendix apps. It delivers a consolidated set of layouts, styling, and core UI components based on the DI SW Product Design System, as well as on selected structural elements from the iX Design System, such as the application frame and icon set. This enables development teams to build consistent user experiences aligned with the Siemens Design Language and the underlying software design.
+The [Siemens UI Module](https://marketplace.mendix.com/link/component/239207) provides the foundational user interface implementation for Siemens‑aligned Mendix apps. It delivers a consolidated set of layouts, styling, and core UI components based on the DI SW Product Design System, as well as on selected structural elements from the iX Design System, such as the application frame and icon set. This enables development teams to build consistent user experiences aligned with the Siemens Design Language and the underlying software design.
 
 ## Intended Use Cases
 
-The Siemens UI Module is intended as a base UI layer for Mendix apps developed by:
+The [Siemens UI Module](https://marketplace.mendix.com/link/component/239207) is intended as a base UI layer for Mendix apps developed by:
 
 * Siemens customers
 * Siemens solution partners

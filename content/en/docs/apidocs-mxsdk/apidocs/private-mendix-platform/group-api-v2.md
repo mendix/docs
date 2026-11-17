@@ -37,4 +37,8 @@ For information about Group API version 1, see [Group API - Version 1](/apidocs-
 
 ## API Reference
 
+{{% alert color="info" %}}
+The server URL shown in the API reference below is a placeholder. You must replace it with the URL of your own Private Mendix Platform instance.
+{{% /alert %}}
+
 {{< swaggerui src="/openapi-spec/openapi-group-v2.yaml"  >}}

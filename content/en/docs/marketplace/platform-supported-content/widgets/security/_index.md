@@ -17,15 +17,59 @@ For information on setting up your application's CSP, see the [Content Security 
 
 The following widgets are not fully compliant with strict CSP. See the widgets' documents below for additional information and setup instructions to enable CSP:
 
-### Charts
+### Charts {#charts}
 
-Use [Charts](/appstore/widgets/charts/) version 6.0 and above for strict CSP compliance.
+The [Charts](/appstore/widgets/charts/) widget is not fully compliant with strict CSP. The Plotly library used by the widget adds its styles to the page at runtime, and strict CSP blocks this. The charts are still drawn, but their layers are positioned incorrectly. As a result, chart elements such as legends are displaced or missing.
 
-For older versions, you can enable `allowlist` CSP for [Charts](/appstore/widgets/charts/) by including these directives:
+You can resolve this in one of the following ways:
+
+* [Allow inline styles](#charts-allowlist): this is the simplest option, but it relaxes your CSP
+* [Add the Plotly styles to your theme](#charts-strict): this option keeps strict CSP
+
+#### Allowing Inline Styles {#charts-allowlist}
+
+You can enable `allowlist` CSP for Charts by including these directives:
 
 ```text
 style-src 'self' 'unsafe-inline';
 ```
+
+#### Adding the Plotly Styles to Your Theme {#charts-strict}
+
+Plotly publishes its styles as a static CSS file. When this file is part of your theme, the charts are displayed correctly with `default-src 'self'`.
+
+To add the Plotly styles to your theme, follow these steps:
+
+1. Download the Plotly CSS file for the Plotly version used by your Charts version. For example, Charts version 6.3.2 uses Plotly 3.6.0, so the file is `https://cdn.plot.ly/plotly-3.6.0.css`.
+1. Save the file as *plotly.css* in the **theme/web** folder of your app. Do not link to the file on the CDN, because strict CSP blocks stylesheets from other domains.
+1. Add the file to the `cssFiles` property in *theme/web/settings.json*:
+
+    ```json
+    {
+        "cssFiles": ["theme.compiled.css", "plotly.css"]
+    }
+    ```
+
+1. Run your app again.
+
+For more information on adding CSS files to your theme, see the [Adding Custom Styling](/howto/front-end/customize-styling-new/#add-custom-styling) section of *Customize Styling*.
+
+{{% alert color="info" %}}
+The Plotly CSS file must match the Plotly version used by the widget. When you update Charts, check whether you need to replace *plotly.css*.
+{{% /alert %}}
+
+With these steps, the charts are displayed correctly, but the browser console still shows CSP errors because Plotly continues to try to add its styles. These errors do not affect the charts. To stop Plotly from adding its styles, add the following element to the `<head>` tag of your *theme/web/index.html* file:
+
+```html
+<meta id="plotly.js-style-global" class="no-inline-styles" />
+```
+
+If you do not have this file, see the [Customizing index.html (Web)](/howto/front-end/customize-styling-new/#custom-web) section of *Customize Styling*.
+
+The following CSP errors can remain in the browser console. They do not affect charts that do not use maps:
+
+* An inline style error for the styles of the map library included in Plotly.
+* Two image errors for a `data:` image that Plotly uses to detect WebP support. To remove these errors, you can add `img-src 'self' data:` to your CSP.
 
 ### Color Picker
 

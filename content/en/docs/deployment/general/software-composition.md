@@ -217,6 +217,9 @@ The component list contains the following information:
 * **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is only available for your organisation. On the Marketplace homepage, you can use the **Visibility** filter to display specific components.
 * **Latest version** – For components derived from the Mendix Marketplace, this is the latest version of the component.
 * **Publisher** – For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
+* **Company Approved** – Whether the component was marked as [Company-Approved](/control-center/company-approved/) by a company admin.
+* **Deprecated** – Whether the component is deprecated.
+* **React/Dojo** – This field displays **Yes** if the component is compatible with [React](/refguide/mendix-client/react/), and **No** if the component is compatible with Dojo.
 * **View details** – Clicking this opens the [Component App Details](#component-usage) page.
 * Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 

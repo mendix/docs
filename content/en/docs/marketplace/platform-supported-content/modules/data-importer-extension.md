@@ -1,10 +1,14 @@
 ---
-title: "Data Importer"
+title: "Data Importer Extension"
 url: /appstore/modules/data-importer/
 description: "Overview of the Data Importer in Studio Pro"
 aliases:
     -  /appstore/modules/data-importer-extension/
 ---
+
+{{% alert color="warning" %}}
+For Studio Pro version 11.15 and above, see [Data Importer](/refguide/data-importer/).
+{{% /alert %}}
 
 ## Introduction
 

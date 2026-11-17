@@ -5,7 +5,7 @@ user-invocable: true
 disable-model-invocation: false
 ---
 
-> **Skill progression:** This is the lightest touch. If more clarity and style guide work is needed, suggest `/docs-polish`. For deeper restructuring, suggest `/docs-enhance`.
+> **Skill progression:** This is the lightest touch. If style guide and clarity fixes are needed, suggest that the user run `/docs-copyedit`.
 
 Do NOT rewrite, rephrase, or improve clarity. Proofread only:
 
@@ -24,10 +24,15 @@ Do NOT:
 * Reorganize content
 * Remove Markdown comments
 
+While proofreading, note any obvious style or clarity problems you come across, but don't fix them.
+
 Priority order for determining scope:
 1. If the user has selected text in a file (check for `ide_selection` tags), only proofread the selected text in that file. Don't proofread the entire document.
 2. If there's one open file (check for `ide_opened_file` tags) and no selection, work on the entire file.
 3. If there are multiple open files, list them and ask which to process.
 4. If no files are open, ask for a file path.
 
-If you notice style or clarity issues that need improvement, finish proofreading first, then suggest that the user run `/docs-polish` for those improvements.
+**After completing edits**:
+* Report what was changed in a concise summary.
+* Under the heading "Flagged for your review", list anything you did not change but that needs the writer's attention, with a one-line reason for each. This includes unclear typos, text in code formatting, and linter warnings that don't apply.
+* If you noticed style or clarity issues, end the summary with: "I found style or clarity issues that proofreading doesn't cover. Consider running `/docs-copyedit` to address them."

@@ -11,7 +11,9 @@ aliases:
 
 Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development. Maia is designed to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality.
 
-{{< figure src="/attachments/developerportal/global-nav/maia-mendix-portal.jpg" width="500" >}}
+{{< figure src="/attachments/developerportal/global-nav/maia-mendix-portal.jpg" alt="Maia in Mendix Portal" width="500" >}}
+
+Maia in Mendix Portal supports the planning, collaboration, and feedback stages of the application lifecycle. For example, you can use Maia Plan to define the scope of a new app, then continue in Studio Pro with Maia Make to build it. For an overview of how Maia supports each stage, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/).
 
 ## Maia Capabilities in Mendix Portal
 
@@ -49,7 +51,7 @@ Maia Chat does not use any project, customer, or company information. It only us
 
 Maia Chat is a built-in chat interface in the Mendix Platform powered by Generative AI. Developers can ask questions about all aspects of Mendix, including how to apply concepts, best practices, governance tools, and development patterns.
 
-Maia Chat is also available in Studio Pro 10.12.0 and above. See [Maia Chat](/refguide/maia-chat/) for more information.
+Maia Chat is also available in Studio Pro 10.12.0 to 11.7. In Studio Pro 11.8 and above, Maia Chat is part of Maia Make, where you can ask questions directly to Maia in the **Chat** tab. For more information, see [Chat with Maia](/refguide/maia-chat/).
 
 For information on Mendix data storage policies and practices for Maia, see [Maia Privacy Policy](https://www.mendix.com/legal/privacy/maia/).
 

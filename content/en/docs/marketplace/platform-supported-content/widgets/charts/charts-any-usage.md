@@ -93,7 +93,7 @@ To generate JSON data for the Charts widget, follow these steps:
 
 If need be, the layout can also be generated in the same way as the data. In most cases, a **Static** layout will suffice.
 
-## Fine tuning
+## Fine-Tuning
 
 Editing the JSON configuration in Studio Pro can be cumbersome. With the live preview editor, developers can directly see the output of their changes. 
 

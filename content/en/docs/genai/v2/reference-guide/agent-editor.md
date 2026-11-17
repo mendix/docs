@@ -47,6 +47,7 @@ Agent Editor provides the following features:
 * Microflow integration through the **Call Agent** toolbox action under the **Agent Editor** category.
 * Agent definitions as app-model documents under version control, making changes traceable and allowing rollback to previously committed states when needed.
 * Deployment together with the app model, with environment-specific flexibility through constant overrides.
+* Agentic development with Maia. Through conversation, you can set up all the building blocks your agent depends on (Models, Knowledge Bases, Consumed MCP Services, and microflow tools), create Published MCP Services to expose your app logic, and refine your agent's prompts and tool configuration. Maia can also install or update missing or incompatible Agents Kit modules to compatible Marketplace versions. This feature is available in Agent Editor version 2.5.1 and above.
 
 ### Dependencies {#dependencies}
 
@@ -84,6 +85,8 @@ If you are starting from a blank app or adding agent-editing functionality to an
 
 Before proceeding, ensure your app includes the latest versions of the required [dependencies](#dependencies). Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install Agent Editor. 
 
+If you have Agent Editor version 2.5.1 or above, you can ask Maia to check that your app's modules are compatible with Agents Kit 2. For example, you can ask, "Fix my Agents Kit" or "Make my app compatible." Maia reports the status of each module (compatible, incompatible, or missing) and installs or updates required modules to compatible Marketplace versions.
+
 Installation adds two modules to your app:
 
 * **Agent Editor** in the **Add-ons** folder. This module contains the Studio Pro extension that adds the new document types and editors.
@@ -101,6 +104,10 @@ After installing the modules, complete the following setup before defining the m
     Ensure it is 32 characters long. For more information, see the [EncryptionKey Constant](/appstore/modules/encryption/#encryptionkey-constant) section of *Encryption*.
 3. Configure startup import logic.
     Select `ASU_AgentEditor` as your [after-startup microflow](/refguide/runtime-tab/#after-startup) in **App** > **Settings** > **Runtime**. Alternatively, add it to your existing after-startup microflow.
+4. Enable extension features by going to **View** > **Extensions**. Enable the following:
+
+    * `runtime-configuration-private` permission for the extension to access private constant values that were set in Studio Pro app settings. The extension uses constant values to connect with LLM model providers or MCP servers.
+    * `register-ai-tools` permission for Maia to be able to create, edit, and iterate on Mendix agents entirely through conversation in Studio Pro. This setting is only available in Agent Editor version 2.4.0 and above.
 
 ## Configuration {#configuration}
 
@@ -113,6 +120,8 @@ To use Agent Editor functionalities in your app, you must perform the following 
 5. Include the agent in the app logic.
 6. Deploy the agent to cloud environments.
 7. Improve the agent in the next iterations.
+
+You can perform all the above manually in Studio Pro, or, if you have Agent Editor version 2.4.0 or above, with the assistance of Maia. Simply describe what you want to build and Maia will guide you through the configuration steps.
 
 For a step-by-step tutorial, see [Create an Agent with Agent Editor](/agents/agents-kit-2/how-to/create-agent-with-agent-editor/).
 
@@ -149,7 +158,7 @@ After defining the model, define the Agent document and configure the prompts an
 Defining an agent is also document-based and can be configured using Agent Editor:
 
 * Add an Agent document from the **App Explorer** at the module level. Right-click the module or folder where you want to create your Agent document, then select **Add other** > **Agent**.
-* Select a **Model** document for the agent to call a text generation resource. Depending on the platform chosen, an additional dropdown will appear to select a model version (Mendix Cloud GenAI) or deployment (Azure AI Foundry). Make sure the agent is set up to use a text generation model. 
+* Select a **Model** document for the agent to call a text generation resource. Depending on the platform chosen, an additional drop-down list will appear to select a model version (Mendix Cloud GenAI) or deployment (Azure AI Foundry). Make sure the agent is set up to use a text generation model. 
 * Configure the **System prompt**. Additionally, define a **User prompt** for task-style execution. In both prompts, include placeholders with double braces (for example, `{{variable}}`).
 * When you use placeholders, select a **Context entity** to resolve values at runtime. The placeholders used within the prompts must match the attribute names of the selected entity so that attribute values can be inserted instead of the placeholders at runtime.
 * Optionally, adjust the **Model settings** as needed (maximum tokens, temperature, and TopP), based on the supported ranges of the model provider.
@@ -212,7 +221,7 @@ To link a knowledge base to an agent, use the **Knowledge bases** section in Age
 In the knowledge base entry:
 
 * Select the configured knowledge base document in the **Knowledge base**.
-* In **Collection**, select one of the available collections from the dropdown. Alternatively, type or paste a collection name to reference a collection that does not exist yet.
+* In **Collection**, select one of the available collections from the drop-down list. Alternatively, type or paste a collection name to reference a collection that does not exist yet.
 * Provide **Name** and **Description** so the LLM can determine when to use this knowledge base. This serves the same purpose as naming tools.
 * Optionally configure retrieval settings:
     * **Max results** controls the maximum number of chunks returned in a single retrieval.
@@ -290,7 +299,9 @@ In the published MCP service document, configure the following fields:
 * **Version**: Enter a version for the MCP service in semantic versioning format. This defaults to `1.0.0`.
 * **Endpoint**: Enter the path to append to the app URL. External MCP clients use this endpoint to connect to the service. The endpoint path may only contain lowercase letters, numbers, hyphens, underscores, and forward slashes.
 * **Protocol version**: Select the MCP protocol version that connecting clients must support. This defaults to `v2025_03_26`.
-* **Requires authentication**: Select whether MCP clients must be authenticated. Mendix recommends setting up authentication if the Mendix application is reachable outside of your local environment. If set to **No**, the MCP service is accessible to anyone without authentication. When authentication is required, select a microflow that authenticates incoming requests. The microflow input can only be `System.HttpRequest` and/or `MCPServer.MCcperver`, and its output must be `System.User`. Return empty if authentication fails.
+* **Requires authentication**: Select whether MCP clients must be authenticated. Mendix recommends setting up authentication if the Mendix application is reachable outside of your local environment. If set to **No**, the MCP service is accessible to anyone without authentication. When authentication is required, select a microflow that authenticates incoming requests. The microflow input can only be `System.HttpRequest` and/or `MCPServer.McpServer`, and its output must be `System.User`. Return empty if authentication fails.
+* **Authorization server URL**: Optionally, when authentication is required, enter the issuer URL of the OAuth authorization server where MCP clients obtain access tokens. Your authentication microflow must validate the tokens. For more information, see [Enable OAuth](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/#oauth).
+* **Scopes**: Optionally, when an authorization server URL is set, enter the scopes that MCP clients should request, separated by spaces.
 
 To add tools, click **New** in the **Tools** section and configure the following fields:
 
@@ -355,3 +366,11 @@ If you import Agent Editor for the first time and the options to create Agent, M
 If you previously used Agent Editor and now see an error such as `The parameter 'Agent' is of unknown type 'agenteditor.agent'.`, restart Studio Pro.
 
 In both cases, confirm that the Agent Editor extension is loaded and enabled under **View** > **Extensions**.
+
+### Maia Is Unable to Create or Edit Agents or Other Agent Editor Documents
+
+You need Agent Editor version 2.4.0 and above to allow Maia to create or edit agent editor documents.
+
+You must also give permission for Maia to be able to access the tools provided by this extension. You can enable this in Studio Pro **View** > **Extensions** and set the checkmark next to the `register-ai-tools` permission.
+
+If this permission does not show up in the list of available permissions, delete the Agent Editor add-on module and download it again from Marketplace. When prompted about the Agent Editor Commons module, choose overwriting the existing module.

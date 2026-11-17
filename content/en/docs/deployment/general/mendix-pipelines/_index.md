@@ -256,7 +256,7 @@ There are two types of variables:
 
 1. Mendix-defined variables
 
-    * These are provided by Mendix. Every Mendix Pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment. Click **Outputs** inside a Mendix Pipeline **Designs** tab to view a step’s output variables. Step outputs are always written in the format `$StepName.OutputName` for easy reference across other steps.
+    * These are provided by Mendix. Every Mendix Pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `{{Build.DeploymentPackage}}`. Similarly, Deploy uses `{{Publish.DeploymentPackage}}` to deploy to the selected environment. Click **Outputs** inside a Mendix Pipeline **Designs** tab to view a step’s output variables. Step outputs are always written in the format `{{StepName.OutputName}}` for easy reference across other steps.
     * The scope of these variables is specific to a particular Mendix Pipeline design within a Mendix app.
 
 2. User-defined variables
@@ -303,9 +303,13 @@ Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) >
 
 ### Masked Variables
 
-Select **Mask > Yes** for confidential values. It will never be printed in the logs or error messages.
+Select **Mask > Yes** for confidential values. Once a variable is masked, you cannot unmask it by changing **Mask > No**. This prevents the saved value from being exposed.
 
-While editing a saved variable, selecting **Mask > No** will allow you to verify the value. Make sure to set it back to **Mask > Yes** before saving the variable.
+When you create a masked variable, enter the value and save it. The UI displays the value as `********`.
+
+To update an existing masked variable, replace the displayed `********` with the new value and save the variable. The UI continues to display the updated value as `********`.
+
+Masked values are never printed in logs or error messages.
 
 ## The Settings Tab{#settings-tab}
 

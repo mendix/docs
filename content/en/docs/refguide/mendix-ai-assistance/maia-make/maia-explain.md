@@ -12,6 +12,8 @@ description: "Describes the features in Maia Explain."
 To use Maia Explain, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
+Maia Explain helps you understand existing documents in your app, such as microflows and pages. It describes the overall purpose of a document and highlights its technical details. Use Maia Explain when you take over an app from another developer, before you change existing logic, or when you review documents that Maia generated.
+
 ## Using Maia Explain
 
 The initial answer consists of two parts:
@@ -52,10 +54,10 @@ Studio Pro sends a message to Maia, and a chat interface with an initial answer 
 {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-explain/maia-explain-interface.png" alt="" width="300px">}}
 
 {{% alert color="info" %}}
-In this dedicated chat, only requests related to Maia Explain are properly handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
+Only requests related to Maia Explain are properly handled in this chat. If you have other questions, close this chat and go back to the general [Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
 ## Read More
 
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Maia Chat](/refguide/maia-chat/)
+* [Chat with Maia](/refguide/maia-chat/)

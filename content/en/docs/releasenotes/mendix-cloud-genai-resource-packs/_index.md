@@ -12,6 +12,16 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 ## 2026
 
+### November 5, 2026
+
+#### New Features
+
+* We introduced resource blocking for GenAI resources. Portal users can now see when a resource is blocked because its usage reached the overage threshold. For more information, see [Consumption Limit Notifications](/agents/mx-cloud-genai/Navigate-MxGenAI/#consumption-limit-notifications).
+
+#### Improvements
+
+* When you [provision a resource](/control-center/genai-resources-self-service/#provisioning-genai-resources), the cross region inference (CRI) settings now adjust to your region, so only the relevant options are shown. This applies to Company Admins.
+
 ### October 15, 2026
 
 #### New Features

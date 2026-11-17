@@ -14,7 +14,34 @@ Mendix Cloud deployments are also dependent on the latest version of the [Mendix
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
   
+## November 2026
+
+### November 1, 2026
+
+#### New Features
+
+* Technical Contacts can now reclaim database disk space used by table bloat without contacting Support. For more information, refer to [Repacking Your Database in Mendix Cloud](/developerportal/deploy/repack-database/).
+
+#### Fixes
+
+* Fixed an issue where activity logs were not generated when a custom domain was created for an environment (Ticket #290051).
+
 ## October 2026
+
+### October 18, 2026
+
+#### New Features
+
+* The [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) now support authentication with personal access tokens (PATs), in addition to API keys.
+
+#### Fixes
+
+* We fixed an issue where failed deployments were incorrectly logged as successful. Failed deployments are now logged correctly, and a notification banner informs users when a deployment fails. (Tickets #287659, #289294)
+* We fixed an issue with backups in sandbox apps that was caused by a missing environment display name. (Ticket #287851)
+
+#### Deprecations
+
+* API keys are now deprecated, and support ends on February 1, 2027 for [Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/), [Deploy API v2](/apidocs-mxsdk/apidocs/deploy-api-2/), [Build API](/apidocs-mxsdk/apidocs/build-api/), and [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/). To keep using these APIs, [migrate to PATs](/apidocs-mxsdk/apidocs/deploy-api/#migrate-to-pat).
 
 ### October 15, 2026
 

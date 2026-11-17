@@ -145,7 +145,6 @@ This table breaks down the roles and permissions for content groups:
 | Group Admin                                 | ✘                               | ✔                    | ✔                       | ✔                                                  | ✔                             | ✔               |    ✔      |
 | Group Member                                | ✘                               | ✘                    | ✘                       | ✔                                                  | ✔                             | ✔               |      ✔     |
 | Organization member (not part of any group) | ✘                               | ✘                    | ✘                       | ✘                                                  | ✔                             | ✔               |      ✘     |
-| Guest                                       | ✘                               | ✘                    | ✘                       | ✘                                                  | ✔                             | ✘               |      ✘    |
 | Developer (not part of any group)           |       ✘                  |   ✘              |      ✘          |   ✔       |    ✔  | ✔ | ✔ |
 
 ### Content Tab {#group-content}

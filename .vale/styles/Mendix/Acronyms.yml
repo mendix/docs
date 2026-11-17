@@ -49,6 +49,7 @@ exceptions:
   - LESS
   - LLDB
   - LTS
+  - MCP
   - MDA
   - MPR
   - MTS

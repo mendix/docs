@@ -17,18 +17,20 @@ action:
 swap:
   agents kit: Agents Kit
   boolean: Boolean
-  git: Git
+  '(^|[^.])git': '$1Git'  # Skips .git folder
   idp: IdP
-  ios: iOS
-  java: Java
+  '(^|[^/])ios': '$1iOS'  # Skips ios in paths
+  '(^|[^./-])java': '$1Java'  # Skips .java files, java-in-names, and java in paths
   macos: macOS
+  maia: Maia
   markdown: Markdown
   marketplace: Marketplace
-  mendix: Mendix
+  '(^|[^.>@])mendix': '$1Mendix'  # Skips com.mendix names, domains, link text after >, and @mendix emails
   'n/a': 'N/A'
   postgres: Postgres
   postgresql: PostgreSQL
   scrum: Scrum
+  '(^|[^@])siemens': '$1Siemens'  # Skips siemens in email addresses
   sql: SQL
   'agile scrum': 'Agile Scrum'
   'atlas ui': 'Atlas UI'

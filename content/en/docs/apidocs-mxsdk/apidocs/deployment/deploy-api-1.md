@@ -32,18 +32,42 @@ This image provides a domain model representation of the concepts discussed belo
 
 ## Authentication{#authentication}
 
-The Deploy API v1 requires authentication via API keys that are bound to your Mendix account.
+The Deploy API v1 supports authentication via a personal access token (PAT) or an API key. Mendix recommends using a PAT.
 
-### Obtaining an API Key
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/api-key-deprecation-warning.md" %}}
+{{% /alert %}}
+
+### Authenticating with a PAT{#authenticating-with-pat}
+
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
+
+Select at least the following scopes:
+
+* `mx:deployment:read` – to perform `GET` operations
+* `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
+* `mx:build:read` – to read build information
+* `mx:build:write` – to trigger and manage builds
+
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
+
+```http
+GET /api/1/apps HTTP/1.1
+Authorization: MxToken 7LJE…vk
+```
+
+### Authenticating with an API Key{#authenticating-with-api-key}
 
 To obtain a Mendix API key, follow the instructions in the [API Keys](/portal/user-settings/#profile-api-keys) section of *Mendix Profile*.
-
-### Using Authentication Headers
 
 Use the following request headers to authenticate an API call:
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user
+
+### Migrating from an API Key to a PAT{#migrate-to-pat}
+
+{{% snippet file="/static/_includes/apidocs-mxsdk/migrate-api-key-to-pat.md" %}}
 
 ### Configuring Permissions
 

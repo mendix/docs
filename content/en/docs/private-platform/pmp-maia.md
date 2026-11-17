@@ -9,6 +9,8 @@ weight: 51
 
 Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development. Maia is designed to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality. 
 
+For an overview of how Maia supports each stage of the application lifecycle, see [Maia Across the Development Lifecycle](/refguide/maia-development-lifecycle/). Not all capabilities on that page are available in Private Mendix Platform. The following section lists the capabilities that are supported.
+
 ## Maia Capabilities in Private Mendix Platform
 
 Mendix AI Assistance (Maia) in Private Mendix Platform has the following capabilities: 
@@ -16,7 +18,7 @@ Mendix AI Assistance (Maia) in Private Mendix Platform has the following capabil
 Starting point for app creation:
 
 * **Start with Maia** - a starting point in Studio Pro that helps you to start the app development process. Based on a required text description and an optional image or PDF, it generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
-* **Maia Make** - a unified conversational interface in Studio Pro that groups all AI-assisted development capabilities into a single chat experience. With this interface, everything happens in one place. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask it to explain documents for you, including your app logic and pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+* **Maia Make** - a unified conversational interface in Studio Pro that groups all agentic development capabilities into a single chat experience. With this interface, everything happens in one place. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask it to explain documents for you, including your app logic and pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 Recommenders:
 
@@ -26,15 +28,15 @@ Recommenders:
 
 Generators:
 
-* **Maia for Domain Model** – helps you generate new [domain models](/refguide/domain-model/), and explain and provide suggestions for existing domain models. For more information, see [Maia for Domain Model](/refguide/maia-for-domain-model/). 
+* **Domain Models in Maia Make** – helps you generate new [domain models](/refguide/domain-model/), and explain and provide suggestions for existing domain models. For more information, see [Domain Models in Maia Make](/refguide/maia-for-domain-model/). 
 
     For Private Mendix Platform, this feature is supported for version 11.6 and newer.
     
-* **Maia for Pages** – helps you generate a [page](/refguide/page/). It helps you add and configure widgets based on a text input and an optional image. After a page is generated, you can continue in the same session to ask Maia for further improvements and explanations. For more information, see [Maia for Pages](/refguide/maia-for-pages/).
+* **Pages in Maia Make** – helps you generate a [page](/refguide/page/). It helps you add and configure widgets based on a text input and an optional image. After a page is generated, you can continue in the same session to ask Maia for further improvements and explanations. For more information, see [Pages in Maia Make](/refguide/maia-for-pages/).
 
     For Private Mendix Platform, this feature is supported for version 11.6 and newer.
 
-* **Maia for Workflows** – helps you generate a [Workflow](/refguide/workflows/). By providing a use case via text input or an image, Maia can help you start creating your workflows. For more information, see [Maia for Workflows](/refguide/maia-for-workflows/).
+* **Workflows in Maia Make** – helps you generate a [Workflow](/refguide/workflows/). By providing a use case via text input or an image, Maia can help you start creating your workflows. For more information, see [Workflows in Maia Make](/refguide/maia-for-workflows/).
 * **Validation Assist** – helps you build validation microflows in a more automated way using pre-built expressions. For more information, see [Validation Assist](/refguide/validation-assist/).
 
 ## Changing the LLM Provider for Maia
@@ -59,9 +61,9 @@ The following table shows which Maia capabilities are supported by various model
 
 | Maia Capability | AWS Bedrock | Anthropic | Azure | OpenAI |
 | --- | --- | --- | --- | --- |
-| **Maia for Pages** | Full support | Full support | Simple requests only | Simple requests only |
-| **Maia for Domain Model** | Full support | Full support | Full support | Full support |
-| **Maia for Workflows** | Full support | Full support | Simple requests only | Does not support workflow creation |
+| **Pages in Maia Make** | Full support | Full support | Simple requests only | Simple requests only |
+| **Domain Models in Maia Make** | Full support | Full support | Full support | Full support |
+| **Workflows in Maia Make** | Full support | Full support | Simple requests only | Does not support workflow creation |
 | **Start with Maia** | Full support | Full support | Full support | Full support |
 | **Best Practice Recommender** | Full support | Full support | Full support | Full support |
 | **UI Recommender** | Full support | Full support | Full support | Full support |

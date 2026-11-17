@@ -20,6 +20,8 @@ Siemens publishes their common vulnerabilities and exposures (CVE) as soon as a 
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| <a id="112137">CVE-2026-112137 | 5.4 | [Multiple Vulnerabilities in Mendix Studio Pro's MCP Server](https://cert-portal.siemens.com/productcert/html/ssa-710379.html) | See the SSA description for remediation details. |
+| <a id="112136">CVE-2026-112136 | 8.8 | [Multiple Vulnerabilities in Mendix Studio Pro's MCP Server](https://cert-portal.siemens.com/productcert/html/ssa-710379.html) | See the SSA description for remediation details. |
 | <a id="80465">CVE-2026-80465 | 8.7 | [Account Hijacking Vulnerability in Mendix SAML module](https://cert-portal.siemens.com/productcert/html/ssa-887643.html) | See the SSA description for remediation details. |
 | <a id="48192">CVE-2026-48192 | 5.4 | [Arbitrary Code Execution Vulnerability in Mendix Studio Pro Before V11.12](https://cert-portal.siemens.com/productcert/html/ssa-779310.html) | See the SSA description for remediation details. |
 | <a id="40834">CVE-2025-40834 | 5.7 | [Cross-Site Scripting Vulnerability in Mendix Rich Text Widget](https://cert-portal.siemens.com/productcert/html/ssa-190588.html) | See the SSA description for remediation details. |
@@ -69,4 +71,4 @@ Siemens publishes their common vulnerabilities and exposures (CVE) as soon as a 
 
 * [Siemens ProductCERT and Siemens CERT](https://new.siemens.com/global/en/products/services/cert.html)
     * [Search](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) for relevant security advisories with the keyword "Mendix"
-* Mendix-specific security advisories can be read using an [Atom feed](https://cert-portal.siemens.com/productcert/rss/advisories_mendix_products.atom) and an [RSS feed](https://cert-portal.siemens.com/productcert/rss/advisories_mendix_products.rss)
+* Mendix-specific security advisories can be read using an [Atom feed](https://cert-portal.siemens.com/productcert/rss/advisories_mendix_products.atom)

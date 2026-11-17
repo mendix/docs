@@ -62,4 +62,4 @@ Project-level instructions are stored as `skillssource/AGENTS.md`, while module-
 
 * [Agent Skills](/refguide/maia-agent-skills/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
-* [Maia Chat](/refguide/maia-chat/)
+* [Chat with Maia](/refguide/maia-chat/)

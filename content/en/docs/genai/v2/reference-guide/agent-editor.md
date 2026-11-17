@@ -158,7 +158,7 @@ After defining the model, define the Agent document and configure the prompts an
 Defining an agent is also document-based and can be configured using Agent Editor:
 
 * Add an Agent document from the **App Explorer** at the module level. Right-click the module or folder where you want to create your Agent document, then select **Add other** > **Agent**.
-* Select a **Model** document for the agent to call a text generation resource. Depending on the platform chosen, an additional dropdown will appear to select a model version (Mendix Cloud GenAI) or deployment (Azure AI Foundry). Make sure the agent is set up to use a text generation model. 
+* Select a **Model** document for the agent to call a text generation resource. Depending on the platform chosen, an additional drop-down list will appear to select a model version (Mendix Cloud GenAI) or deployment (Azure AI Foundry). Make sure the agent is set up to use a text generation model. 
 * Configure the **System prompt**. Additionally, define a **User prompt** for task-style execution. In both prompts, include placeholders with double braces (for example, `{{variable}}`).
 * When you use placeholders, select a **Context entity** to resolve values at runtime. The placeholders used within the prompts must match the attribute names of the selected entity so that attribute values can be inserted instead of the placeholders at runtime.
 * Optionally, adjust the **Model settings** as needed (maximum tokens, temperature, and TopP), based on the supported ranges of the model provider.
@@ -221,7 +221,7 @@ To link a knowledge base to an agent, use the **Knowledge bases** section in Age
 In the knowledge base entry:
 
 * Select the configured knowledge base document in the **Knowledge base**.
-* In **Collection**, select one of the available collections from the dropdown. Alternatively, type or paste a collection name to reference a collection that does not exist yet.
+* In **Collection**, select one of the available collections from the drop-down list. Alternatively, type or paste a collection name to reference a collection that does not exist yet.
 * Provide **Name** and **Description** so the LLM can determine when to use this knowledge base. This serves the same purpose as naming tools.
 * Optionally configure retrieval settings:
     * **Max results** controls the maximum number of chunks returned in a single retrieval.
@@ -299,7 +299,9 @@ In the published MCP service document, configure the following fields:
 * **Version**: Enter a version for the MCP service in semantic versioning format. This defaults to `1.0.0`.
 * **Endpoint**: Enter the path to append to the app URL. External MCP clients use this endpoint to connect to the service. The endpoint path may only contain lowercase letters, numbers, hyphens, underscores, and forward slashes.
 * **Protocol version**: Select the MCP protocol version that connecting clients must support. This defaults to `v2025_03_26`.
-* **Requires authentication**: Select whether MCP clients must be authenticated. Mendix recommends setting up authentication if the Mendix application is reachable outside of your local environment. If set to **No**, the MCP service is accessible to anyone without authentication. When authentication is required, select a microflow that authenticates incoming requests. The microflow input can only be `System.HttpRequest` and/or `MCPServer.MCcperver`, and its output must be `System.User`. Return empty if authentication fails.
+* **Requires authentication**: Select whether MCP clients must be authenticated. Mendix recommends setting up authentication if the Mendix application is reachable outside of your local environment. If set to **No**, the MCP service is accessible to anyone without authentication. When authentication is required, select a microflow that authenticates incoming requests. The microflow input can only be `System.HttpRequest` and/or `MCPServer.McpServer`, and its output must be `System.User`. Return empty if authentication fails.
+* **Authorization server URL**: Optionally, when authentication is required, enter the issuer URL of the OAuth authorization server where MCP clients obtain access tokens. Your authentication microflow must validate the tokens. For more information, see [Enable OAuth](/agents/agents-kit-2/reference-guide/mcp-modules/mcp-server/#oauth).
+* **Scopes**: Optionally, when an authorization server URL is set, enter the scopes that MCP clients should request, separated by spaces.
 
 To add tools, click **New** in the **Tools** section and configure the following fields:
 
@@ -369,6 +371,6 @@ In both cases, confirm that the Agent Editor extension is loaded and enabled und
 
 You need Agent Editor version 2.4.0 and above to allow Maia to create or edit agent editor documents.
 
-You must also give permission for Maia to be able to access the tools provided by this extensions. You can enable this in Studio Pro **View** > **Extensions** and set the checkmark next to the `register-ai-tools` permission.
+You must also give permission for Maia to be able to access the tools provided by this extension. You can enable this in Studio Pro **View** > **Extensions** and set the checkmark next to the `register-ai-tools` permission.
 
 If this permission does not show up in the list of available permissions, delete the Agent Editor add-on module and download it again from Marketplace. When prompted about the Agent Editor Commons module, choose overwriting the existing module.

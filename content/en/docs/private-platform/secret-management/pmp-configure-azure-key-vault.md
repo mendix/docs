@@ -58,24 +58,24 @@ When creating the JSON structure for your secret, you must use a flat key-value 
 
         * Bitbucket
 
-            * **VCS.BitbucketProjectAdminPAT** - Personal access token for the Bitbucket project admin
-            * **VCS.BitbucketAdminPassword** - Password for the Bitbucket admin user
+            * **VCS-BitbucketProjectAdminPAT** - Personal access token for the Bitbucket project admin
+            * **VCS-BitbucketAdminPassword** - Password for the Bitbucket admin user
 
         * GitLab
 
-            * **VCS.GitlabGroupOwnerPAT** - Personal access token for the GitLab group owner
-            * **VCS.GitlabAdminPAT** - Personal access token for the GitLab admin
+            * **VCS-GitlabGroupOwnerPAT** - Personal access token for the GitLab group owner
+            * **VCS-GitlabAdminPAT** - Personal access token for the GitLab admin
 
         * GitHub
 
-            * **VCS.GithubOrgOwnerPAT** - Personal access token for the GitHub organization owner
-            * **VCS.GithubAdminPAT** - Personal access token for the GitHub admin
-            * **VCS.GithubEnterpriseClientSecret** - Client secret for the GitHub Enterprise app
+            * **VCS-GithubOrgOwnerPAT** - Personal access token for the GitHub organization owner
+            * **VCS-GithubAdminPAT** - Personal access token for the GitHub admin
+            * **VCS-GithubEnterpriseClientSecret** - Client secret for the GitHub Enterprise app
 
         * Azure
 
-            * **VCS.AzureDevOpsOrgAdminPAT** - Personal access token for the Azure DevOps organization owner
-            * **VCS.AzureAuthSecret** - Currently unused
+            * **VCS-AzureDevOpsOrgAdminPAT** - Personal access token for the Azure DevOps organization owner
+            * **VCS-AzureAuthSecret** - Currently unused
 
     * Kubernetes Build Settings
 
@@ -83,74 +83,78 @@ When creating the JSON structure for your secret, you must use a flat key-value 
 
             * fileServerBasic
                
-                * **BuildPackage.FileBasicAuthPassword** - Password for the file server
+                * **BuildPackage-FileBasicAuthPassword** - Password for the file server
 
             * AwsAKSK
 
-                * **BuildPackage.AwsSecretAccessKey** - AWS secret access key for the file server
+                * **BuildPackage-AwsSecretAccessKey** - AWS secret access key for the file server
 
         * RuntimeBaseImage
 
             * privateRegistry
 
-                * **RuntimeBaseImage.PrivateRegistryPassword** - Base image for the runtime
+                * **RuntimeBaseImage-PrivateRegistryPassword** - Base image for the runtime
 
             * S3compatibleAccessKey
 
-                * **RuntimeBaseImage.S3CompatibleAccessKey** - S3-compatible access key for the base image
+                * **RuntimeBaseImage-S3CompatibleAccessKey** - S3-compatible access key for the base image
 
         * MDAStorage
 
             * fileServerBasic
 
-                * **MDAStorage.FileBasicAuthPassword** - Password for the file server
+                * **MDAStorage-FileBasicAuthPassword** - Password for the file server
 
             * awsAKSK
 
-                * **MDAStorage.AwsSecretAccessKey** - AWS secret access key for the MDA storage
+                * **MDAStorage-AwsSecretAccessKey** - AWS secret access key for the MDA storage
 
         * OCIRegistry
 
             * privateRegistry
 
-                * **OCIRegistry.PrivateRegistryPassword** - Password for the private registry
+                * **OCIRegistry-PrivateRegistryPassword** - Password for the private registry
 
             * S3compatibleAccessKey
 
-                * **OCIRegistry.S3CompatibleAccessKey** - S3 compatible access key for the OCI registry
+                * **OCIRegistry-S3CompatibleAccessKey** - S3 compatible access key for the OCI registry
 
     * Build Cluster Settings
 
-        * **BuildCluster.KubernetesConfigureToken** - Token for the Kubernetes cluster configuration
-        * **CIAdmin.JenkinsConfigureAPIToken** - Token for the Jenkins configuration
-        * **CIAdmin.JenkinsTriggerAuthToken** - Token for the Jenkins trigger configuration
-        * **CIAdmin.AzureOrgAdminPAT** - Personal access token for the Azure DevOps configuration
-        * **CIAdmin.AzureBlobStorageToken** - SAS token for the Azure Blob Storage
-        * **CIAdmin.AzureAwsS3SK** - Name of the Azure DevOps organization
+        * **BuildCluster-KubernetesConfigureToken** - Token for the Kubernetes cluster configuration
+        * **CIAdmin-JenkinsConfigureAPIToken** - Token for the Jenkins configuration
+        * **CIAdmin-JenkinsTriggerAuthToken** - Token for the Jenkins trigger configuration
+        * **CIAdmin-AzureOrgAdminPAT** - Personal access token for the Azure DevOps configuration
+        * **CIAdmin-AzureBlobStorageToken** - SAS token for the Azure Blob Storage
+        * **CIAdmin-AzureAwsS3SK** - Name of the Azure DevOps organization
 
     * **Cluster Manager**
         
-        * **ClusterManager.OCIRegistryAWSSK** - OCI Registry: AWS secret access key for the OCI registry
-        * **serverClusterManager.OCIBasicAuthPassword** - OCI Registry: Password for the OCI registry
-        * **serverClusterManager.MDAAWSSK** - MDA Storage: AWS secret access key for the MDA file
-        * **serverClusterManager.MDAFileBasicAuthPassword** - MDA Storage: Password for the MDA file
-        * **serverClusterManager.KubernetesApiToken** - Kubernetes API: Token for accessing the Kubernetes API
-        * **serverClusterManager.GrafanaAPIKey** - Grafana: API key for accessing the Grafana server
+        * **ClusterManager-OCIRegistryAWSSK** - OCI Registry: AWS secret access key for the OCI registry
+        * **serverClusterManager-OCIBasicAuthPassword** - OCI Registry: Password for the OCI registry
+        * **serverClusterManager-MDAAWSSK** - MDA Storage: AWS secret access key for the MDA file
+        * **serverClusterManager-MDAFileBasicAuthPassword** - MDA Storage: Password for the MDA file
+        * **serverClusterManager-KubernetesApiToken** - Kubernetes API: Token for accessing the Kubernetes API
+        * **serverClusterManager-GrafanaAPIKey** - Grafana: API key for accessing the Grafana server
 
     * Marketplace
 
-        * **Marketplace.ImportCDNPassword** - Personal access token for the Marketplace admin
+        * **Marketplace-ImportCDNPassword** - Personal access token for the Marketplace admin
 
     * Email
 
-        * **Email.SMTPPassword** - Password for the SMTP server
+        * **Email-SMTPPassword** - Password for the SMTP server
     
     * Maia
 
-        * **Maia.AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
-        * **Maia.AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
-        * **Maia.AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
-        * **Maia.OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia-AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
+        * **Maia-AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia-AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **Maia-OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+
+{{% alert color="info" %}}
+Azure Key Vault secret names cannot contain underscores (`_`), periods (`.`), spaces, and special symbols. Private Mendix Platform converts any periods in a constant or runtime setting name to hyphens for the Key Vault entry (`objectName`). The `objectAlias` - that is, the file name actually mounted into the pod and read by the Mendix Runtime - always keeps the periods, exactly matching the format in the official documentation, for example, `mx-const-MyFirstModule.WelcomePageTitle`. Private Mendix Platform performs this conversion consistently both when it writes the value to Key Vault and when it builds the SecretProviderClass entry, so the two always stay in sync. However, other special characters are not automatically converted, so constant names that contain them cannot be stored in Azure Key Vault. Because of that, we recommend that you do not create secret names with underscores (`_`), periods (`.`), spaces, and special symbols.
+{{% /alert %}}
 
 ### Configuring Azure AD Workload Identity
 
@@ -211,7 +215,7 @@ Click **Add**.
 #### Modifying the Operation Configuration
 
 {{% alert color="info" %}}
-The steps in this section are not necessary if .your Managed Identity was already created by Mendix Operator.
+The steps in this section are not necessary if your Managed Identity was already created by Mendix Operator.
 {{% /alert %}}
 
 For more information about advanced configuration settings, see [Advanced Operator Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-operator-configuration).

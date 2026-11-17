@@ -1,27 +1,24 @@
 ---
 name: docs-new-page
-description: Creates a new documentation page from the matching template in `templates/`. Use when the user asks to create, write, draft, or start a new documentation page or file.
+description: Drafts new documentation content, as one or more new pages from the matching templates in `templates/`, as additions to existing pages, or both. Use when the user asks to create, write, draft, add to, or start new documentation pages, files, or content.
 user-invocable: true
 ---
 
-Draft a new page by following these steps:
+Draft new content by following these steps:
 
-1. Check whether the user has provided source material for the page's content. If material is missing, ask for it in a single prompt before continuing:
+1. Check whether the user has provided source material for the content. If material is missing, ask for it in a single prompt before continuing:
     * Links, such as Jira tickets or Confluence pages
     * Pasted content, such as specs, notes, a Slack thread, a transcript, a draft, a README, code or config snippets, or screenshots
-    * An existing page to use as a model
 
     If the user provides a link, read it only if you have a tool that can access it. If you can't access it, say so and ask the user to paste the content.
-2. Explore `content/en/docs/` and decide where the page belongs (if it isn't clear, ask the user to confirm). Read the section's `_index.md` and nearby pages to match their conventions.
-3. Search `content/en/docs/` for the page's main terms. Ignore the versioned folders for older Mendix versions (`refguide10`, `howto9`, and so on) unless the user says the page is for an older version. If a page already covers the entire topic, tell the user and ask whether to update that page instead. If a page covers part of it, link to that page instead of repeating the covered content, and ask the user whether the missing content belongs on the existing page or on the new one. Note any pages that need a link to the new page, and tell the user at the end.
-4. Read the appropriate template from `templates/`.
-5. Create the new file based on the template. File names must be simple, lowercase, and hyphen-separated.
-6. Clean up the template:
-    * In the front matter, complete `title`, `url`, and `description`, plus any other fields the page needs. Uncomment those fields, and delete the commented fields you don't use.
-    * Replace or remove every `{…}` placeholder and instruction comment.
-    * Delete optional sections that don't apply.
-7. Complete the introduction and the remaining sections. Content varies by content type. Add images only if the user provides them. Where an image is needed and none is available, leave out the `figure` shortcode and list the location in your final summary.
-8. Verify that any linked pages exist in the repo, using each target page's `url` front matter field. Link to the related pages found in step 3.
-9. Run the `docs-copyedit` and `docs-alt-text` skills on the new page.
-
-Don't add product claims, technical behavior, or release facts that the user didn't provide. If more information is needed, ask the user to provide it.
+2. Explore `content/en/docs/` and decide whether the content needs new pages, additions to existing pages, or both, and where each belongs (if it isn't clear, add it to the plan as an open question). Read the section's `_index.md` and nearby pages to match their conventions.
+3. Search `content/en/docs/` for the content's main terms. Ignore the versioned folders for older Mendix versions (`refguide10`, `howto9`, and so on) unless the user says the page is for an older version. If a page already covers the entire topic, add to the plan the question of whether to update that page instead. If a page covers part of it, link to that page instead of repeating the covered content, and add to the plan the question of whether the missing content belongs on that page or on a new one.
+4. For each new page, read `templates/README.md` to choose the appropriate template, then read that template from `templates/`. If only `general-page-template.md` fits a page, say so in the plan and ask whether to base its structure on sibling pages. For additions to an existing page, follow that page's structure.
+5. Present a plan to the user for confirmation or adjustments. List each new page with its template, location, file name, and sections. List each existing page you will change with what you will add and where. Include the source material you will use. Put the open questions from steps 2 to 4 in the plan, and ask them together in one prompt. If the user hasn't said, also ask whether a release note is needed. Don't fill in missing or ambiguous information. Ask for it.
+6. Create each new file based on its template. Add the planned content to existing pages in place.
+7. Clean up each new page's template as described in the Content Creation Workflow in CLAUDE.md, and uncomment any optional front matter fields the page needs. Compare the optional sections with the nearby pages from step 2, and delete the ones that most of those pages don't have. If nearby pages have a section that the source material doesn't cover, don't fill it in. Ask the user for the information in a single question, and delete the section if they have none.
+8. Complete the introduction and the remaining sections of each new page. Add images only if the user provides them. Where an image is needed and none is available, leave out the `figure` shortcode and list the location in your final summary.
+9. Compare the files you created or changed with the input the user provided, and give the user a summary of what you did. Flag any input you left out and why. Search sibling pages and flag anything in other files that the new pages make outdated (such as labels or dates) and any conflicts with the new pages. Note any pages that need a link to the new pages. Prioritize technical accuracy. If it isn't clear which source to trust, ask the user.
+10. Verify that any linked pages exist in the repo. Link to the related pages found in step 3, and link the new pages to each other where relevant.
+11. Run the `docs-copyedit` and `docs-alt-text` skills on each new page and on the content you added to existing pages.
+12. Run the `docs-pr-review` skill.

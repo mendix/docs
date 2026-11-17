@@ -3,7 +3,7 @@
 .td-main main.lp {
     padding: 2rem 2.5rem;
     padding-top: 0 !important; // top clearance handled by lp-mobile-bar (mobile) and lp-hero (desktop)
-    background-color: $gray-200;
+    background-color: $color-surface-page;
 
     @include media-breakpoint-up(md) {
         padding-top: 0 !important;
@@ -16,12 +16,12 @@ div.lp-container {
     max-width: none;
 }
 
-.lp-row{
+.lp-row {
     margin-bottom: 2rem !important;
 }
 
 .lp-hero {
-    background-color: $gray-300;
+    background-color: $color-surface-hero;
     min-height: 350px;
     margin-left: -2.5rem;
     margin-right: -2.5rem;
@@ -32,11 +32,11 @@ div.lp-container {
     }
 }
 
-.hero-text  {
+.hero-text {
     flex: 0 0 100%;
-    color: $primary;
+    color: $color-text-primary;
     margin-right: 4rem;
-    
+
     // Stretch out text once image disappears (smaller viewports)
     @include media-breakpoint-up(lg) {
         flex: 0 0 auto;
@@ -78,12 +78,12 @@ img.card-icon {
 }
 
 h4.card-title {
-    color: $primary;
+    color: $color-text-primary;
     font-weight: 600;
     font-size: 1.25rem;
     border-top: 3px solid;
     padding-top: 1rem;
-    border-color: $green;
+    border-color: $color-accent;
 }
 
 ul.card-text {
@@ -91,21 +91,24 @@ ul.card-text {
     padding-left: 0rem;
     list-style: none;
     font-size: 1rem;
+
     a {
+        color: $color-text-primary;
         text-decoration: none;
+
         &::after {
             content: "\00a0→"; // Add a nonbreaking space (\00a0) and arrow to links
         }
+
         &:hover {
-            color: $link-color;
+            color: $color-link-hover;
             text-decoration: underline;
         }
-        color: $primary;
     }
 }
 
 div.lp-panel {
-    background: $white;
+    background: $color-surface-panel;
     box-sizing: border-box;
     border-radius: 8px;
     padding: 1.5rem 1.25rem;
@@ -113,7 +116,7 @@ div.lp-panel {
 }
 
 h4.lp-panel-title {
-    color: $primary;
+    color: $color-text-primary;
     font-weight: 600;
     font-size: 1.125rem;
     margin-bottom: 0.875rem !important;
@@ -124,17 +127,18 @@ li.lp-panel-list {
     font-weight: 600;
     list-style: none;
     margin-bottom: 0.5rem;
+
     a {
-        color:  $info-7 !important;
+        color: $color-link !important;
+
         &:hover {
-            color: $info-9 !important;
+            color: $color-link-hover !important;
         }
     }
-
 }
 
 p.rn-date {
-    color: $info-10;
+    color: $color-text-muted;
     font-size: 0.75rem;
     font-weight: 400;
     margin-bottom: 0rem;
@@ -142,14 +146,14 @@ p.rn-date {
 
 // Mobile hamburger bar on landing page — matches hero background
 .lp-mobile-bar {
-    background-color: $dark;
+    background-color: $color-surface-hero-inverse;
     margin-left: -2.5rem;
     margin-right: -2.5rem;
     padding: 4rem 2.5rem 0.75rem;
-    color: white;
+    color: $color-text-inverse;
 
     .btn {
-        color: white;
+        color: $color-text-inverse;
         font-size: 0.75rem;
         font-weight: 400;
         margin-bottom: 0rem;

@@ -7,7 +7,7 @@
 @import "numbered-headings";
 
 body {
-    color: $primary; // Set base text color for body
+    color: $color-text-primary; // Set base text color for body
 }
 
 // _alert.scss - Style alert boxes (alert layout defined in alert.html)
@@ -57,7 +57,7 @@ body {
     padding: 2rem;
     border-top-width: 0.15rem;
     border-top-style: solid;
-    border-top-color: $info-7;
+    border-top-color: $color-link;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -70,19 +70,19 @@ body {
 
 .feedback--answer {
     display: inline-block;
-    background-color: $primary-light !important;
-    border-color: $primary-light !important;
+    background-color: $color-surface-feedback !important;
+    border-color: $color-surface-feedback !important;
     border-radius: 0 !important;
-    color: $primary !important;
+    color: $color-text-primary !important;
 }
 
 .feedback--answer:hover,
 .feedback--answer:focus,
 .feedback--answer:active {
-    background-color: darken($primary-light, 6%) !important;
-    border-color: darken($primary-light, 6%) !important;
+    background-color: $color-surface-feedback-hover !important;
+    border-color: $color-surface-feedback-hover !important;
     border-radius: 0 !important;
-    color: #000028 !important;
+    color: $color-text-primary !important;
 }
 
 .feedback--answer-no {
@@ -120,7 +120,7 @@ body {
 }
 
 .anchor-icon:hover {
-    background: $gray-light;
+    background: $color-surface-subtle;
 }
 
 // Style Markdown content
@@ -129,18 +129,18 @@ body {
     order: 1;
     margin-left: 2rem; // NK - custom edit
     max-width: 90%;  // NK - fixed width of all content to 90%
-    background-color: $gray-200;
+    background-color: $color-surface-page;
     font-size: 16px; // Main doc content stays at 16px
 
     // Highlighted code.
     .highlight {
         @extend .card;
-        border: 1px solid $gray-border;
+        border: 1px solid $color-border-default;
 
         display: block;
         pre {
             padding: 1rem .75rem;
-            border: 1px solid $gray-border;
+            border: 1px solid $color-border-default;
         }
     }
 
@@ -150,7 +150,7 @@ body {
         padding: 0.1em 0.1em;  // NK - made padding smaller
         font-size: $font-size-base; // NK - added to match rest of text
         font-family: $family-mono;
-        background-color: rgba($info-7, 0.09); // NK - changed background color
+        background-color: $color-surface-inline-code; // NK - changed background color
         border-radius: 0; // DB – Removed radius
     }
 
@@ -158,7 +158,7 @@ body {
     pre {
         line-height: 1.25; // NK - added to match code text
         font-size: $font-size-base; // NK - added to match code text
-        border: 1px solid $gray-border;
+        border: 1px solid $color-border-default;
         > code {
             padding: .0rem;
         }
@@ -218,7 +218,7 @@ body {
 
 // Style visited links but exclude buttons, left sidebar, and card text
 a:not(.btn):not(.td-sidebar-link):not(.card-text a):visited {
-    color: $dark;
+    color: $color-link-visited;
 }
 
 // Add icon after external links in main content (but exclude some content)
@@ -229,7 +229,7 @@ main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started):not(
     height: 1rem;
     margin-left: .2rem;
     vertical-align: sub;
-    background-color: $info-7; 
+    background-color: $color-link;
     -webkit-mask: url("/mx-icons/external.svg") center / contain no-repeat;
     mask: url("/mx-icons/external.svg") center / contain no-repeat;
 }
@@ -242,14 +242,14 @@ main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started):not(
     height: 1rem;
     margin-left: .2rem;
     vertical-align: sub;
-    background-color: $info-7; 
+    background-color: $color-link;
     -webkit-mask: url("/mx-icons/external.svg") center / contain no-repeat;
     mask: url("/mx-icons/external.svg") center / contain no-repeat;
 }
 
 // Change external link icon color upon hover
 main a[href*="https://"]:hover::after {
-      background-color: $link-hover-color;
+      background-color: $color-link-hover;
 }
 
 .btn {
@@ -298,11 +298,11 @@ html {
 }
 
 .td-main main {
-    background-color: $gray-200;
+background-color: $color-surface-page;
     padding-top: 4rem;  // DB - Moved out of breakpoint
         @include media-breakpoint-up(md) {
-            border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
-            border-right: 1px solid $gray-border; // NK - moved from left menu, to fully span height of screen
+        border-left: 1px solid $color-border-default; // NK - moved from toc, to fully span height of screen
+        border-right: 1px solid $color-border-default; // NK - moved from left menu, to fully span height of screen
         }
     padding-bottom: 0rem;
     }
@@ -318,9 +318,9 @@ html {
     }
 
 div.footer{
-    background-color: $gray-100;
-    border-top: 1px solid $gray-border;
-    border-bottom: 1px solid $gray-border;
+    background-color: $color-surface-subtle;
+    border-top: 1px solid $color-border-default;
+    border-bottom: 1px solid $color-border-default;
     margin: 0 -15px; // to fully stretch the footer & bottom of dock
     padding: 0.5rem 0;
 }
@@ -345,7 +345,7 @@ div.date-format{
 
 // DB – Add borders around images
 main img {
-    border-color: $gray-border;
+    border-color: $color-border-default;
     border-width: 1px;
     border-style: solid;
 }
@@ -393,7 +393,7 @@ img {
 // sidebar-toc.scss - Right side toc
 
 .td-sidebar-toc {
-    background-color: $white;
+    background-color: $color-surface-panel;
     border-left: 0; // NK - changed to 0, the actual border moved to td-main main, to fully span height of screen
     font-size: 0.9rem; // NK - decreased
     line-height: 1.2; // NK - decreased
@@ -406,11 +406,11 @@ img {
 }
 
 .toc-title { // DB – added class for ToC title styling 
-    color: $gray-800 !important;
+    color: $color-text-secondary !important;
 }
 
 .td-toc {
-    background-color: $white;
+    background-color: $color-surface-panel;
     height: calc(100vh - 180px); // NK - added to allow scrolling
     overflow-x:hidden !important; // NK - added to allow scrolling
 
@@ -434,7 +434,7 @@ img {
 
         a {
             // NK - styling for ToC
-            color: $secondary;
+            color: $color-link;
             padding-left: 20px;
             padding-bottom: .25rem;
             padding-top: .25rem;
@@ -479,7 +479,7 @@ img {
         }
 
         a {
-            color: $primary;
+            color: $color-text-primary;
         }
     }
 
@@ -532,7 +532,7 @@ img {
 .table {
     margin-bottom: $spacer;
     color: $table-color;
-    background-color: $gray-200; // Match the main content background so smaller tables do not show white gaps
+    background-color: $color-surface-page; // Match the main content background so smaller tables do not show white gaps
     position: relative; // NK - added to allow movement of horizontal scroll bar, when overlaping with header below
     z-index: 2; // NK - added to allow movement of horizontal scroll bar, when overlaping with header below
    
@@ -540,27 +540,27 @@ img {
     td {
       padding: 0.75rem 0.75rem; // YL - set bigger padding values
       vertical-align: top;
-      background-color: $gray-200;
-      border: $table-border-width solid $gray-border;
+      background-color: $color-surface-page;
+      border: $table-border-width solid $color-border-default;
       font-size: 0.8rem; // NK - smaller font size
-   
+    
       ul, ol > ul li, > ol li {
           margin-bottom: .25rem;  // NK - removes margin padding at end of list item in table cell
       }
     }
-  
+   
     thead th {
       vertical-align: bottom;
-      background-color: $gray-200;
-      border-bottom: calc(#{$table-border-width} * 2) solid $gray-border; 
-      border-top: $table-border-width solid $gray-border;
-      border-left: $table-border-width solid $gray-border;
-      border-right: $table-border-width solid $gray-border;
+      background-color: $color-surface-page;
+      border-bottom: calc(#{$table-border-width} * 2) solid $color-border-default; 
+      border-top: $table-border-width solid $color-border-default;
+      border-left: $table-border-width solid $color-border-default;
+      border-right: $table-border-width solid $color-border-default;
     }
-  
+   
     tbody + tbody {
-      background-color: $gray-200;
-      border: calc(#{$table-border-width} * 2) solid $gray-border;
+      background-color: $color-surface-page;
+      border: calc(#{$table-border-width} * 2) solid $color-border-default;
     }
   }
 
@@ -592,7 +592,7 @@ img {
   // size of where your table will overflow.
   
   .table-responsive {
-    background-color: $gray-200;
+    background-color: $color-surface-page;
 
     @each $breakpoint in map-keys($grid-breakpoints) {
       $next: breakpoint-next($breakpoint, $grid-breakpoints);
@@ -638,21 +638,20 @@ img {
          justify-content: center;
          gap: 0.5rem;
          flex-wrap: wrap;
-         background-color: $gray-100;
-         color: rgba(10, 19, 36, 0.7);
+         background-color: $color-surface-subtle;
+         color: rgba($color-text-primary, 0.7);
          font-size: 0.75rem;
          text-align: center;
-         border-top: 1px solid $gray-300;
+         border-top: 1px solid $color-border-default;
          padding: 1rem;
          font-family: $family-regular;
-   }
-    
+   }    
    .mx-footer__copyright {
          margin: 0;
    }
     
    .mx-footer__link {
-         color: rgba(10, 19, 36, 0.7);
+         color: rgba($color-text-primary, 0.7);
          text-decoration: none;
          white-space: nowrap;
          border-radius: 0.125rem;
@@ -670,7 +669,7 @@ img {
     
          > li::before {
                content: '';
-               border-left: 1px solid $gray-300;
+               border-left: 1px solid $color-border-default;
                margin-right: 0.5rem;
          }
    }
@@ -685,7 +684,7 @@ img {
    }
     
    .mx-footer__link:focus-visible {
-         outline: 2px solid $info-6;
+         outline: 2px solid $color-link;
          outline-offset: 2px;
     }
 
@@ -696,7 +695,7 @@ img {
 
 
 .badge-restapi {
-    background-color: #007BFF;
+    background-color: $color-link;
 }
 
 // Swagger styling
@@ -729,7 +728,7 @@ img.ToC-icon{
     padding: 0.3rem;
     border-radius: 4px;
     &:hover {
-        background-color: $gray-light;
+        background-color: $color-surface-subtle;
     };
 }
 

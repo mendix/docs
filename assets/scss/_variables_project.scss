@@ -10,10 +10,12 @@ $enable-shadows: true; //TODO: consider removing this duplicate variable from th
 
 // Theme colors
 
-// Changed almost all colors to better match Mendix palette
-// Codes taken mostly from PDS (https://designsystem.mendix.com)
-// See also filters in _styles_project.scss if any of these colours is changed
+// Changed almost all colors to better match the Mendix palette.
+// Codes are taken mostly from the Siemens PDS and the Mendix design system.
+// See also the semantic token layer below and the compatibility aliases used by Docsy/Bootstrap.
 
+// Compatibility aliases are intentionally limited to third-party integration boundaries.
+// Do not add new app styling on top of $primary/$secondary/$dark; prefer the semantic $color-* tokens.
 $primary: $main-deep-blue-900; 
 $primary-light: $main-brand-light-petrol; 
 $secondary: $main-deep-blue-650;
@@ -41,7 +43,6 @@ $gray-900: $main-sand-900;
 $gray-border: $main-deep-blue-100;
 $gray-light: $gray-200;
 
-
 $black: $main-brand-black;
 
 $info-1: $main-interactive-blue-100;
@@ -54,6 +55,27 @@ $info-7: $main-interactive-blue-700;
 $info-8: $main-interactive-blue-800;
 $info-9: $main-interactive-blue-900;
 $info-10: $data-deep-blue-700;
+
+// Semantic tokens are the source of truth for app styling. Use these in component styles.
+// Compatibility aliases remain only for Docsy/Bootstrap and other third-party integrations.
+$color-surface-page: $gray-200;
+$color-surface-subtle: $gray-100;
+$color-surface-hero: $gray-300;
+$color-surface-hero-inverse: $main-brand-teal;
+$color-surface-panel: $white;
+$color-surface-feedback: $main-interactive-blue-100;
+$color-surface-feedback-hover: $main-interactive-blue-200;
+$color-surface-inline-code: rgba($info-7, 0.09);
+$color-text-primary: $primary;
+$color-text-secondary: $main-deep-blue-650;
+$color-text-inverse: $white;
+$color-text-muted: $info-10;
+$color-border-default: $gray-border;
+$color-border-subtle: $gray-600;
+$color-accent: $main-brand-light-petrol;
+$color-link: $info-7;
+$color-link-hover: $info-9;
+$color-link-visited: $main-deep-blue-900;
 
 $success-1: $main-green-100;
 $success-2: $main-green-200;
@@ -137,11 +159,12 @@ $td-sidebar-bg-color: $white;
 // Background colors for the sections on home page etc. It is a paint by number system, starting at 0, where the number is taken from the shortcode's ordinal
 // if not provided by the user.
 // These colors are all part of the theme palette, but the mix is fairly random to create variation. This can be overridden by the project if needed.
-$td-box-colors: $dark, $primary, $secondary, $info, $primary-light, $gray-600, $success, $warning, $dark, $danger, $primary, $secondary, !default;
+// Keep the legacy Docsy box-color loop, but anchor it to semantic-first values rather than app-specific alias usage.
+$td-box-colors: $color-surface-hero-inverse, $color-text-primary, $color-text-secondary, $color-link, $color-accent, $color-border-subtle, $success-7, $warning-6, $color-surface-hero-inverse, $danger-5, $color-text-primary, $color-text-secondary, !default;
 
 
-$link-color: $main-interactive-blue-700;
-$link-hover-color: $main-brand-teal;
+$link-color: $color-link;
+$link-hover-color: $color-link-hover;
 
 // Fonts
 

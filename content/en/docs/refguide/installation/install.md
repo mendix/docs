@@ -111,7 +111,7 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
          * On ARM64, rename *microsoft-jdk-25.0.5.0.2-windows-aarch64.msi* to *microsoftjdk_25_arm64.msi*
    3. Visual C++ Redistributable for Visual Studio 2019 (x64)
       * Rename the executable 
-        * For example, *VC_redist.x64.exe* to *vcredist2019_x64.exe*
+        * For example, *VC_redist.x64.exe* to *vcredist_x64.exe*
    4. Mendix Native Mobile Builder one-click installer
       * Rename the *latest.exe* executable to *mendix_native_mobile_builder.exe*
    5. Git for Windows (x64)

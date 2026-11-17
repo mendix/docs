@@ -456,8 +456,8 @@ Additionally, a suffix may be added for the unit of the metric (for example, `_b
 
 #### Change Data Capture Producer Metrics {#cdc-producer-metrics}
 
-Starting with Mendix 11.17, [Change Data Capture (CDC)](/refguide/change-data-capture/) exposes the following Kafka producer metrics as gauges.
-They register automatically after the producer initializes successfully. You do not need a microflow or Java action to register them.
+As of Studio Pro 11.17, [Change Data Capture (CDC)](/refguide/change-data-capture/) exposes the following Kafka producer metrics as gauges. They register automatically after the producer initializes successfully. You do not need a microflow or Java action to register them.
+
 These metrics describe the producer client as a whole, not individual topics.
 
 | Name | Unit | Description |

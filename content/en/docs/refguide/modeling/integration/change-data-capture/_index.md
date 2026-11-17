@@ -100,8 +100,7 @@ For details on setting up a BYOK cluster with the Mendix Event Broker, see [Mend
 
 ## Tracing {#tracing}
 
-Starting with Mendix 11.16.0, CDC supports OpenTelemetry tracing.
-The runtime generates the following spans during CDC publishing and snapshot updates:
+As of Studio Pro 11.16.0, CDC supports OpenTelemetry tracing. The runtime generates the following spans during CDC publishing and snapshot updates:
 
 | Span | Description | Count Attribute |
 | --- | --- | --- |

@@ -9,10 +9,10 @@ description: "Documents how Private Mendix Platform controls what users can do o
 
 ## Introduction
 
-Private Mendix Platform controls access along the following independent: 
+Private Mendix Platform offers roles controlling the following types of tasks: 
 
 * What a user can do on the platform as a whole
-* what a user can do to a specific app, deployment namespace, or Marketplace item. 
+* what a user can do to a specific app, deployment namespace, or Marketplace component. 
 
 Both axes are configured by administrators at runtime through Dynamic Role Management, without a code change and without redeploying the platform.
 

@@ -67,7 +67,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/), 
 
 ## Troubleshooting
 
-[//]: # "Optional: Use a subsection for each common problem and its solution.
+[//]: # "Optional: Use a subsection for each common problem and its solution."
 
 ### {Problem}
 

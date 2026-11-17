@@ -2,6 +2,7 @@
 title: "Configure a Bridge with Apache Iceberg"
 url: /appstore/services/event-broker-bridges/iceberg-bridge/
 linktitle: "Apache Iceberg Bridge"
+description: "Describes how to configure an Apache Iceberg bridge that delivers CDC events from the Mendix Event Broker to Iceberg tables in AWS S3 or Azure Blob Storage."
 ---
 
 ## Introduction
@@ -22,9 +23,109 @@ Configure the service by filling out the following:
     * **AWS S3**
         * **Bucket** – the bucket where the data is stored
         * **AWS Region for Bucket** – the AWS region where the bucket is located
-        * **AWS Role (to Assume)** – the AWS role to assume for the required permissions 
+        * **AWS Role (to Assume)** – the Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that the bridge assumes to write to your S3 bucket
+{{% alert color="info" %}}For instructions on creating the IAM role and getting its ARN, see the [Create an IAM Role for AWS S3](#create-iam-role) section.{{% /alert %}}
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_configure.png" alt="" width="400" >}}
+
+### Create an IAM Role for AWS S3 {#create-iam-role}
+
+If you store your data in AWS S3, create an IAM role in your AWS account that the bridge can assume to write Iceberg tables to your bucket. The role needs a trust policy that allows the Mendix Tableflow agent role to assume it, and a permissions policy that grants access to the bucket.
+
+#### Prerequisites
+
+* Access to your AWS account with permissions to create and manage IAM roles and policies
+* The S3 bucket where the Iceberg tables are stored
+* The ARN of the Mendix Tableflow agent role
+
+#### Create the Role with a Trust Policy
+
+The trust policy defines who can assume the role.
+
+1. In the AWS Management Console, go to **IAM** > **Roles**.
+2. Click **Create role**.
+3. Select **Custom trust policy** as the trusted entity type.
+4. Enter the following trust policy:
+
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "AllowMendixTableflowAgent",
+                "Effect": "Allow",
+                "Principal": {
+                    "AWS": "MENDIX_TABLEFLOW_AGENT_ROLE_ARN"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    }
+    ```
+
+5. Replace *`MENDIX_TABLEFLOW_AGENT_ROLE_ARN`* with the ARN of the Mendix Tableflow agent role.
+6. Click **Next**.
+
+#### Attach a Permissions Policy
+
+The permissions policy defines what the bridge can do after it assumes the role.
+
+1. On the **Add permissions** page, click **Create policy**. The policy editor opens in a new browser tab.
+2. Select **JSON** and enter the following policy to grant the required S3 permissions:
+
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "AllowListBucket",
+                "Effect": "Allow",
+                "Action": "s3:ListBucket",
+                "Resource": "arn:aws:s3:::BUCKET_NAME"
+            },
+            {
+                "Sid": "AllowReadWriteObjects",
+                "Effect": "Allow",
+                "Action": [
+                    "s3:GetObject",
+                    "s3:PutObject",
+                    "s3:DeleteObject"
+                ],
+                "Resource": "arn:aws:s3:::BUCKET_NAME/*"
+            }
+        ]
+    }
+    ```
+
+3. If your bucket is encrypted with an AWS Key Management Service (KMS) key, add the following statement to the `Statement` array, separated from the previous statement by a comma:
+
+    ```json
+    {
+        "Sid": "AllowKmsForBucketEncryption",
+        "Effect": "Allow",
+        "Action": [
+            "kms:Decrypt",
+            "kms:GenerateDataKey"
+        ],
+        "Resource": "KMS_KEY_ARN"
+    }
+    ```
+
+4. Replace *`BUCKET_NAME`* with the name of your S3 bucket and, if applicable, *`KMS_KEY_ARN`* with the ARN of the KMS key that encrypts the bucket.
+5. Name the policy (for example, `MendixIcebergBridgeS3Policy`) and create it.
+6. Return to the browser tab where you are creating the role, refresh the list of policies, and select the policy you created.
+7. Click **Next**.
+
+{{% alert color="info" %}}
+The bridge does not need AWS Glue permissions.
+{{% /alert %}}
+
+#### Complete the Role Creation
+
+1. Enter a name for the role (for example, `MendixIcebergBridgeRole`).
+2. Review the role configuration and click **Create role**.
+3. Open the role and copy its ARN. The ARN has the format `arn:aws:iam::ACCOUNT_ID:role/MendixIcebergBridgeRole`, where *`ACCOUNT_ID`* is your AWS account ID.
+4. When you configure the bridge, enter the role ARN in the **AWS Role (to Assume)** field.
 
 ### Bridge Statuses
 

@@ -45,7 +45,7 @@ The **Snippet settings** property opens a dialog box that shows a list of parame
 
 An argument must be passed to every [snippet parameter](/refguide/snippet/#parameters) of the snippet that is called. The **Snippet settings** dialog box lists the parameters of the snippet with their **Name**, **Type**, and **Argument**. To configure the argument of a parameter, select the parameter and click **Edit parameter value**. In the dialog box that opens, set **Type** to **Variable** or **Expression**. This works the same for object and primitive parameters.
 
-In the example below, the snippet has an object parameter **Order** and a primitive parameter **Amount** of type `Integer/Long`. No arguments have been configured yet:
+In the example below, the snippet has an object parameter **Order** and a primitive parameter **Amount** of type `Integer/Long`:
 
 {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/snippet-arguments-mapping.png" alt="example of the snippet settings dialog box" width="500px" >}}
 

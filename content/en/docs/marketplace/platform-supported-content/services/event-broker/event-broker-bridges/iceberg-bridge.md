@@ -1,13 +1,13 @@
 ---
-title: "Configure a Bridge with Apache Iceberg"
+title: "Configure a Bridge with Iceberg"
 url: /appstore/services/event-broker-bridges/iceberg-bridge/
-linktitle: "Apache Iceberg Bridge"
-description: "Describes how to configure an Apache Iceberg bridge that delivers CDC events from the Mendix Event Broker to Iceberg tables in AWS S3 or Azure Blob Storage."
+linktitle: "Iceberg Bridge"
+description: "Describes how to configure an Iceberg bridge that delivers CDC events from the Mendix Event Broker to Iceberg tables in AWS S3 or Azure Blob Storage."
 ---
 
 ## Introduction
 
-An Apache Iceberg Bridge is a one-way bridge that delivers [Change Data Capture (CDC)](/refguide/change-data-capture/) events to Apache Iceberg tables stored in AWS S3 or Azure Blob Storage.
+An Iceberg Bridge is a one-way bridge that delivers [Change Data Capture (CDC)](/refguide/change-data-capture/) events to Iceberg tables stored in AWS S3 or Azure Blob Storage.
 
 ## Configure Service
 
@@ -154,7 +154,7 @@ Select the CDC events that you want to deliver from the Event Broker to Iceberg:
 
 ## Editing Bridges
 
-You can edit an Apache Iceberg bridge bridge to modify the configuration as your integration requirements evolve, without needing to recreate it. For an Iceberg bridge, you can add or remove CDC events.
+You can edit an Iceberg bridge to modify the configuration as your integration requirements evolve, without needing to recreate it. For an Iceberg bridge, you can add or remove CDC events.
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_iceberg_edit_mode.png" class="no-border" >}}
 

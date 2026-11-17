@@ -30,13 +30,13 @@ Configure the service by filling out the following:
 
 ### Create an IAM Role for AWS S3 {#create-iam-role}
 
-If you store your data in AWS S3, create an IAM role in your AWS account that the bridge can assume to write Iceberg tables to your bucket. The role needs a trust policy that allows the Mendix Tableflow agent role to assume it, and a permissions policy that grants access to the bucket.
+If you store your data in AWS S3, create an IAM role in your AWS account that the bridge can assume to write Iceberg tables to your bucket. The role needs a trust policy that allows the Mendix Iceberg bridge role to assume it, and a permissions policy that grants access to the bucket.
 
 #### Prerequisites
 
 * Access to your AWS account with permissions to create and manage IAM roles and policies
 * The S3 bucket where the Iceberg tables are stored
-* The ARN of the Mendix Tableflow agent role
+* The ARN of the Mendix Iceberg bridge role
 
 #### Create the Role with a Trust Policy
 
@@ -52,10 +52,10 @@ The trust policy defines who can assume the role.
         "Version": "2012-10-17",
         "Statement": [
             {
-                "Sid": "AllowMendixTableflowAgent",
+                "Sid": "AllowMendixIcebergBridge",
                 "Effect": "Allow",
                 "Principal": {
-                    "AWS": "MENDIX_TABLEFLOW_AGENT_ROLE_ARN"
+                    "AWS": "MENDIX_ICEBERG_BRIDGE_ROLE_ARN"
                 },
                 "Action": "sts:AssumeRole"
             }
@@ -63,7 +63,7 @@ The trust policy defines who can assume the role.
     }
     ```
 
-5. Replace *`MENDIX_TABLEFLOW_AGENT_ROLE_ARN`* with the ARN of the Mendix Tableflow agent role.
+5. Replace *`MENDIX_ICEBERG_BRIDGE_ROLE_ARN`* with the ARN of the Mendix Iceberg bridge role.
 6. Click **Next**.
 
 #### Attach a Permissions Policy

@@ -7,13 +7,12 @@ on:
     paths:
       - 'content/en/docs/**/*.md'
 
-# Allow reading repo contents and posting PR comments
-# Note: Fork PRs from org members run automatically but get read-only tokens,
-# so reviewdog falls back to check annotations instead of review comments.
-# External contributors require workflow approval per repo settings.
+# Fork PRs don't have write permissions, so posting review comments happens in vale-comment.yml after this workflow finishes.
+# This workflow only runs Vale and uploads the results as an artifact.
+
 permissions:
   contents: read
-  pull-requests: write
+  pull-requests: read
 
 jobs:
   vale:
@@ -21,7 +20,7 @@ jobs:
     if: github.repository_owner == 'mendix' && github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      VALE_VERSION: 3.27.0
     # Cancel old runs when new commits are pushed
     concurrency:
       group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
@@ -39,18 +38,38 @@ jobs:
       - name: Get changed files
         id: changed-files
         run: |
-          FILES=$(gh api repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files --paginate --jq '.[] | select(.status != "removed") | .filename' | { grep '^content/en/docs/.*\.md$' || true; } | paste -sd, -)
-          echo "files=$FILES" >> $GITHUB_OUTPUT
+          # Also writes the PR number and an empty results file for vale-comment.yml
+          mkdir -p vale-results
+          echo "${{ github.event.pull_request.number }}" > vale-results/pr-number
+          gh api repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files --paginate --jq '.[] | select(.status != "removed") | .filename' | { grep '^content/en/docs/.*\.md$' || true; } > changed-files.txt
+          : > vale-results/results.rdjsonl
+          if [ -s changed-files.txt ]; then echo "has_files=true" >> "$GITHUB_OUTPUT"; fi
         env:
           GH_TOKEN: ${{ github.token }}
 
+      - name: Install Vale
+        if: steps.changed-files.outputs.has_files == 'true'
+        run: |
+          cd "$RUNNER_TEMP"
+          ARCHIVE="vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          BASE_URL="https://github.com/vale-cli/vale/releases/download/v${VALE_VERSION}"
+          curl -sSfLO "$BASE_URL/$ARCHIVE"
+          mkdir bin && tar -xzf "$ARCHIVE" -C bin vale
+          echo "$PWD/bin" >> "$GITHUB_PATH"
+          cd "$GITHUB_WORKSPACE" && "$RUNNER_TEMP/bin/vale" sync
+
       - name: Run Vale
-        if: steps.changed-files.outputs.files != ''
-        uses: vale-cli/vale-action@v2
+        run: |
+          if [ -s changed-files.txt ]; then
+            # Only flag errors, not warnings or suggestions. Vale exits non-zero on errors; that is expected.
+            xargs -d '\n' vale --output=JSON --minAlertLevel=error < changed-files.txt > vale.json || true
+            # Convert Vale JSON to reviewdog's rdjsonl format
+            jq -c 'to_entries[] | .key as $f | .value[] | {message: ("[" + .Check + "] " + .Message), location: {path: $f, range: {start: {line: .Line, column: .Span[0]}}}, severity: (.Severity | ascii_upcase)}' vale.json > vale-results/results.rdjsonl
+          fi
+
+      - name: Upload results
+        uses: actions/upload-artifact@v7
         with:
-          files: ${{ steps.changed-files.outputs.files }}
-          separator: ','
-          version: 3.14.2
-          fail_on_error: false
-          reporter: github-pr-review  # Uses filter_mode=added (default): only comment on modified lines
-          vale_flags: '--minAlertLevel=error'  # Only flag errors, not warnings or suggestions
+          name: vale-results
+          path: vale-results/
+          retention-days: 3

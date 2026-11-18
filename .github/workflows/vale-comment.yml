@@ -1,0 +1,67 @@
+name: Vale Comments
+
+# Posts Vale results from vale.yml as PR review comments, including for fork PRs.
+
+on:
+  workflow_run:
+    workflows: ['Vale Linting']
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+
+jobs:
+  comment:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      # SECURITY: This workflow has write permissions, so never add a step that checks out or runs code from the PR.
+
+      - name: Download results
+        uses: actions/download-artifact@v8
+        with:
+          name: vale-results
+          path: vale-results
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Validate PR number
+        id: pr
+        run: |
+          PR_NUMBER=$(head -n 1 vale-results/pr-number)
+          # The artifact is untrusted: accept only a plain integer
+          if ! [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]; then
+            echo "Invalid PR number"
+            exit 1
+          fi
+          # Confirm the PR's head commit is the commit that was linted
+          PR_SHA=$(gh api "repos/${{ github.repository }}/pulls/$PR_NUMBER" --jq '.head.sha')
+          if [ "$PR_SHA" != "${{ github.event.workflow_run.head_sha }}" ]; then
+            echo "PR head ($PR_SHA) differs from linted commit; skipping stale results"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          if [ -s vale-results/results.rdjsonl ]; then echo "has_results=true" >> "$GITHUB_OUTPUT"; fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Set up reviewdog
+        if: steps.pr.outputs.has_results == 'true'
+        # Pin to a commit (v1.5.0) because this job has write permissions
+        uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f
+
+      - name: Post review comments
+        if: steps.pr.outputs.has_results == 'true'
+        run: |
+          # reviewdog needs a git repo; filter-mode=added comments only on lines the PR changed
+          git init -q
+          env -u GITHUB_ACTIONS reviewdog -f=rdjsonl -name=vale -reporter=github-pr-review -filter-mode=added -fail-on-error=false -level=info < vale-results/results.rdjsonl
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ github.token }}
+          CI_PULL_REQUEST: ${{ steps.pr.outputs.number }}
+          CI_COMMIT: ${{ github.event.workflow_run.head_sha }}
+          CI_REPO_OWNER: ${{ github.repository_owner }}
+          CI_REPO_NAME: ${{ github.event.repository.name }}

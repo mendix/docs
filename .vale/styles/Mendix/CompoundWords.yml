@@ -1,6 +1,5 @@
 # Mendix custom rule: Compound word formatting
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md
-# See specific terms: checkbox, dataset, endpoint, home page
 extends: substitution
 message: "Use '%s' instead of '%s'"
 level: error
@@ -14,13 +13,35 @@ scope:
 action:
   name: replace
 swap:
-  'data[ -]set': 'dataset'
-  'Data[ -]set': 'Dataset'
-  'end point': 'endpoint'
-  'End point': 'Endpoint'
   'check box': 'checkbox'
   'Check box': 'Checkbox'
-  'home-?page': 'home page'
-  'Home-?page': 'Home page'
+  'data[ -]set': 'dataset'
+  'Data[ -]set': 'Dataset'
+  'dropzone': 'drop-zone'
+  'drop zone': 'drop-zone'
+  'dropzones': 'drop-zones'
+  'drop zones': 'drop-zones'
+  'end point': 'endpoint'
+  'End point': 'Endpoint'
   'end user': 'end-user'
   'End user': 'End-user'
+  'home-?page': 'home page'
+  'Home-?page': 'Home page'
+  'in-line': 'inline'
+  'In-line': 'Inline'
+  'life cycle': 'lifecycle'
+  'Life cycle': 'Lifecycle'
+  'meta model': 'metamodel'
+  'Meta model': 'Metamodel'
+  'read only': 'read-only'
+  'Read only': 'Read-only'
+  'run[ -]time': 'runtime'
+  'Run[ -]time': 'Runtime'
+  'single sign on': 'single sign-on'
+  'Single sign on': 'Single sign-on'
+  'submicroflow': 'sub-microflow'
+  'sub microflow': 'sub-microflow'
+  'submicroflows': 'sub-microflows'
+  'sub microflows': 'sub-microflows'
+  'tool tip': 'tooltip'
+  'Tool tip': 'Tooltip'

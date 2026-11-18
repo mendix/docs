@@ -260,7 +260,7 @@ To test the connection, enter the settings for your provider and click **Test co
 
 [Private Mendix Platform](/private-mendix-platform/) provides an environment where you can develop and deploy your applications within your own enterprise security boundary to ensure the highest levels of data security and compliance. Because Private Mendix Platform instances are hosted within the enterprise firewall, selecting an LLM provider other than the default [Mendix Platform](#mendix-platform) requires you to also configure the LLM Gateway URL.
 
-{{< figure src="/attachments/private-platform/pmp-llm-gateway.png" class="no-border" alt="" >}}
+{{< figure src="/attachments/private-platform/pmp-llm-gateway.png" alt="" >}}
 
 The LLM Gateway URL is configured during the installation or upgrade of Private Mendix Platform. For more information, see [Installing Maia for Private Mendix Platform](/private-mendix-platform/interactive-installation/#maia).
 

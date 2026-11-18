@@ -51,7 +51,7 @@ Maia is available at each stage of the application lifecycle. In Studio Pro, Mai
 | Understand and get guidance | Explains existing documents and consistency errors, and applies your team conventions. |  <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Maia Explain](/refguide/maia-explain/)</li><li>[Agent Instructions](/refguide/maia-agent-instructions/)</li><li>[Agent Skills](/refguide/maia-agent-skills/)</li>|
 | Improve quality | Detects anti-patterns, explains their impact, and fixes some of them automatically. Explains and solves consistency errors. |  <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Best Practice Recommender](/refguide/best-practice-recommender/)  |
 | Localize | Creates and updates translations of the texts in your app (Studio Pro 11.15 and above). | <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Translation Generator](/refguide/translation-generator/)</li>  |
-| Work with external AI agents | Lets external AI agents use Maia capabilities, and lets Maia use your own AI provider. | <ul><li>[Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)</li><li>[Maia Plan as MCP Server](/developerportal/maia-plan-mcp/)</li><li>[Custom AI provider](/refguide/maia-make/#custom-provider) (beta)</li>   |
+| Work with external AI agents | Lets external AI agents use Maia capabilities, and lets Maia use your own AI provider. | <ul><li>[Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)</li><li>[Maia Plan as MCP Server](/developerportal/maia-plan-mcp/)</li><li>[Custom AI provider](/refguide/maia-make/#custom-provider) </li>   |
 | Operate and evolve | Summarizes application logs, organizes end-user feedback, and changes existing documents for new requirements. | <ul><li>[AI Log Summary](/developerportal/maia-operate/ai-log-summary/) (beta)</li><li>[Maia for Feedback](/portal/maia/#maia-capabilities-in-mendix-portal)</li><li> [Maia Make](/refguide/maia-make/)</li> |
 
 ## Ways to Work with Maia {#ways-to-work}
@@ -132,7 +132,7 @@ In Studio Pro 11.8 and above, [Maia Make](/refguide/maia-make/) replaces Maia Ch
 ### External AI Agents and AI Providers
 
 * [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) – The Studio Pro MCP Server exposes Maia capabilities to external AI agents and AI coding assistants through the Model Context Protocol (MCP). This is also known as bring your own agent (BYO Agent).
-* Custom AI provider – A custom AI provider lets Maia use your own LLM provider instead of the Mendix platform AI service. This is also known as bring your own LLM (BYO LLM). This feature is available in Studio Pro 11.12 and above as a beta feature. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section in *Maia Make Capabilities*.
+* Custom AI provider – A custom AI provider lets Maia use your own LLM provider instead of the Mendix platform AI service. This is also known as bring your own LLM (BYO LLM). This feature is available in Studio Pro 11.12 and above. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section in *Maia Make Capabilities*.
 
 For an overview of how these options work together, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
 

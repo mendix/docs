@@ -32,7 +32,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | Document Type | Available in Maia Make from | Remarks |
 | --- | --- | --- |
 | [Domain model](/refguide/maia-for-domain-model/) | Studio Pro 11.8 | |
-| [Pages](/refguide/maia-for-pages/) | Studio Pro 11.8 | |
+| [Pages](/refguide/maia-for-pages/) | Studio Pro 11.8 | In Studio Pro 11.15 and above, Maia can read document templates and generate a page from them. |
 | Microflows | Studio Pro 11.8 | In Studio Pro 11.9 and above, Maia can delete flows and microflow objects, but cannot change activity types or replace complex configuration settings. In Studio Pro 11.8, Maia can change variable names, move objects, and reconnect flows for existing objects, but cannot delete objects or flows or change activity types. |
 | [Workflows](/refguide/maia-for-workflows/) | Studio Pro 11.9 | |
 | [OQL](/refguide/maia-for-oql/) | Studio Pro 11.9 | |
@@ -48,6 +48,8 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | JSON Structures | Studio Pro 11.13 | |
 | Change Data Capture | Studio Pro 11.14 | |
 | Task Queues | Studio Pro 11.15 | |
+| App Settings | Studio Pro 11.15 | |
+| Security | Studio Pro 11.15 | |
 | Import Mappings | Studio Pro 11.16 | Maia can create import mappings with a JSON structure as the source and map them automatically to new entities. Changing existing import mappings is not supported. |
 | Export Mappings | Studio Pro 11.16 | Maia can create export mappings with a JSON structure as the source and map them automatically to new entities. Changing existing export mappings is not supported. |
 | External Database Connector | Studio Pro 11.16 | |
@@ -66,6 +68,8 @@ The following table lists Maia Make Standalone Capabilities and the Studio Pro v
 | [Maia Agent Skills (SKILLS.md)](/refguide/maia-agent-skills/) | Extends Maia with reusable knowledge. | Studio Pro 11.11 | Maia can create and edit skills directly in chat, for both project-level and module-level skills, from Studio Pro 11.15. |
 | [Maia Agent Instructions (AGENTS.md)](/refguide/maia-agent-instructions/) | Extends Maia with instructions to be followed with every prompt | Studio Pro 11.12 | |
 | [Maia Plan Mode](/refguide/maia-plan-mode/) | Allows Maia to maintain implementation plans. | Studio Pro 11.16 | |
+| [Tools API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/tools-api/) | Lets a Studio Pro extension register custom tools that Maia can call. | Studio Pro 11.15 | |
+| [Maia Chat API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/maia-chat-api/) | Lets a Studio Pro extension fill in the Maia chat prompt, for the user to review or to send automatically. | Studio Pro 11.16 | |
 
 ### Maia Make General Capabilities {#general-capabilities}
 
@@ -74,7 +78,7 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Capability | Description | Available in Maia Make from | Remarks |
 | --- | --- | --- | --- |
 | Story-based development | Generates app artifacts based on existing user stories to support story-driven development workflows. | Studio Pro 11.8 | |
-| Attach files | Allows you to provide PDFs and images as input to help Maia better understand your requirements. | Studio Pro 11.8 | In Studio Pro 11.12 and above, you can attach Markdown files. In Studio Pro 11.16 and above, you can attach CSV, JSON, XML, YAML, and HTML files. Attached files are available to Maia for the rest of the session. |
+| Attach files | Allows you to provide PDFs and images as input to help Maia better understand your requirements. | Studio Pro 11.8 | In Studio Pro 11.12 and above, you can attach Markdown files. In Studio Pro 11.16 and above, you can attach CSV, JSON, XML, YAML, HTML, and Excel files. Attached files are available to Maia for the rest of the session. |
 | Adding documents as context | Lets you add relevant documents to provide Maia with additional context. | Studio Pro 11.8 | |
 | Editing existing documents | Enables Maia to modify existing documents, including renaming elements. | Studio Pro 11.8 | |
 | Removing elements | Allows Maia to remove elements from documents to support more advanced refactoring tasks. | Studio Pro 11.9 | |
@@ -83,7 +87,10 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Themes and styling | Allows Maia to modify theme variables, create custom styling, and manage design properties. | Studio Pro 11.12 | |
 | Explain and solve consistency errors | Allows you to use Maia to explain or solve problems by right-clicking the item in the **Errors** pane. | Studio Pro 11.12.1 | |
 | Translations | Allows Maia to create and update translations in your app. | Studio Pro 11.15 | |
-| Delete documents | Allows Maia to delete documents in your app. | Studio Pro 11.16 | |
+| Run the app | Allows Maia to start and stop your app, check its status, and read its logs. | Studio Pro 11.15 | |
+| Tool permissions | Maia asks for your permission before it runs tools that access external resources or make changes. | Studio Pro 11.15 | You can allow a tool once, for the current session, or always. Studio Pro remembers **Always Allow** choices across restarts. |
+| Automatic saving | Maia saves the documents it changes, so you do not need to save them manually. | Studio Pro 11.15 | |
+| Delete documents | Allows Maia to delete documents in your app. | Studio Pro 11.16 | Maia asks for your permission first. You cannot undo a deletion. |
 | UI testing | Allows Maia to test the running app in the browser. | Studio Pro 11.16 | Testing needs to be done in Edge or Chrome. |
 
 ## Using Maia Make Capabilities
@@ -163,7 +170,7 @@ Maia changes regular documents in your app. You stay in control of these changes
 * Changed list – After each request, the [Changed List](#changed-list) shows the documents that Maia added or changed. Select an entry to open the document in its editor.
 * Consistency checks – Studio Pro checks the documents that Maia creates or changes for consistency errors. In Studio Pro 11.12.1 and above, you can right-click an item in the [Errors](/refguide/errors-pane/) pane to ask Maia to explain or solve it.
 * Undo – In Studio Pro 11.9 and above, you can undo Maia changes per document or for all documents.
-* Version control – Maia changes are part of your local changes, so you decide when to commit them. For more information, see [Version Control](/refguide/version-control/).
+* Version control – Maia changes are part of your local changes, so you decide when to commit them. In Studio Pro 11.16 and above, the **Changes** pane shows what Maia changed inside each document. For more information, see [Version Control](/refguide/version-control/).
 * Settings – You can disable Maia Make capabilities in Studio Pro [Preferences](/refguide/preferences-dialog/#ai-tab) on the **AI** tab.
 
 For practices that help you review and control AI-generated changes, see the [Working Practices for Agentic Development](/refguide/agentic-development/#working-practices) section of *Agentic and Model-Driven Development*.
@@ -179,7 +186,7 @@ In Studio Pro 11.9 - 11.11, this option is found at **Help** > **Support Tools**
 By default, Maia uses the Mendix platform's AI service. You can configure Maia to use your own LLM provider instead (also known as bring your own LLM or BYO LLM).
 
 {{% alert color="info" %}}
-Configuring a custom AI provider is available in Studio Pro 11.12 and above as a beta feature.
+Configuring a custom AI provider is available in Studio Pro 11.12 and above.
 {{% /alert %}}
 
 To enable custom LLM provider configuration, follow these steps:
@@ -196,7 +203,7 @@ Mendix recommends using the same model that Maia Make uses by default. For the c
 
 ### Provider Configuration {#provider-configuration}
 
-Custom AI provider settings are per-project and local to your workstation. Each app can have its own configuration, and settings are not committed to version control.
+Custom AI provider settings are per developer and local to your workstation. You configure your provider once, and Maia uses it for all your apps. The settings are not committed to version control.
 
 #### Mendix Platform {#mendix-platform}
 

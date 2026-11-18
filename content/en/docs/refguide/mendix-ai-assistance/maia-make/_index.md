@@ -230,19 +230,6 @@ To configure an OpenAI-compatible provider, follow these steps:
 5. Optional: Enter your **API Key**. Studio Pro stores this key securely across sessions.
 6. Click **Save Config**.
 
-#### Signing In with OAuth {#oauth}
-
-{{% alert color="info" %}}
-Signing in to a custom AI provider with OAuth is available in Studio Pro 11.17 and above.
-{{% /alert %}}
-
-Instead of an API key, you can sign in to your AI provider with OAuth. Then Maia uses your own identity, and your team does not need to share API keys. Maia supports the following identity providers:
-
-* Microsoft Entra ID – for Azure OpenAI, AI Foundry, and LLM gateways that Entra ID protects
-* Generic OAuth 2.0 or OpenID Connect (OIDC) providers
-
-To sign in with OAuth, open the custom AI provider settings, select OAuth as the sign-in method, and sign in through your browser.
-
 ### LLM Gateway Configuration for Private Mendix Platform
 
 [Private Mendix Platform](/private-mendix-platform/) provides an environment where you can develop and deploy your applications within your own enterprise security boundary to ensure the highest levels of data security and compliance. Because Private Mendix Platform instances are hosted within the enterprise firewall, selecting an LLM provider other than the default [Mendix Platform](#mendix-platform) requires you to also configure the LLM Gateway URL.

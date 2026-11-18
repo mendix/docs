@@ -10,6 +10,29 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 4.4.0
+
+### Release date: November 19, 2026
+
+### Workstation Management
+
+#### Improvements
+
+* Dependency security and updates – We updated the dependencies of Workstation Management to address common vulnerabilities and exposures (CVEs).
+* Private management – We upgraded Private Workstation Management to Mendix 11.12.6.
+
+### Workstation Client
+
+#### Improvements
+
+* Dependency security and updates – We updated the dependencies of the Workstation Client to address common vulnerabilities and exposures (CVEs).
+
+#### Bug Fixes
+
+* We fixed an issue where Workstation Client processes kept running after quitting when the **Detect Card Readers** option was enabled.
+* We fixed a crash that occurred when disconnecting from a card reader.
+* We fixed an error that occurred when disconnecting from a TCP client.
+
 ## 4.3.2
 
 ### Release date: October 23, 2026

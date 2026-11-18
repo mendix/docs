@@ -186,7 +186,7 @@ In Studio Pro 11.9 - 11.11, this option is found at **Help** > **Support Tools**
 By default, Maia uses the Mendix platform's AI service. You can configure Maia to use your own LLM provider instead (also known as bring your own LLM or BYO LLM).
 
 {{% alert color="info" %}}
-Configuring a custom AI provider is generally available in Studio Pro 11.17 and above. In Studio Pro 11.12 to 11.16, it is a beta feature.
+Configuring a custom AI provider is available in Studio Pro 11.12 and above.
 {{% /alert %}}
 
 To enable custom LLM provider configuration, follow these steps:

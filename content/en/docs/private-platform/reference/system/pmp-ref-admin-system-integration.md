@@ -10,7 +10,7 @@ weight: 20
 
 In the **Integrations** section of the administrator menu, you can configure settings related to identity and access, version control, CI/CD, and others.
 
-## Identity & Access
+## Identity & Access {#identity}
 
 In this section, you can configure SSO authentication for your users logging in to Private Mendix Platform. OIDC and SAML are supported as protocols.
 

@@ -18,3 +18,5 @@ exceptions:
   - During
   - Through
   - Without
+  # Exclude filenames with extensions (but consider if these should get code font instead)
+  - '[\w-]+\.(?:html|json|js|scss|gz)'

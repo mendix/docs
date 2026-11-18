@@ -53,7 +53,7 @@ General Availability means that a feature is available for all users. This type 
 | Maia for Pipeline Logs | General Availability: Mx 11.9 |
 | Maia Learn | General Availability: Mx 11.12 |
 | Maia Make (see separate table for capabilities) | General Availability: Mx 11.8 |
-| BYO Agent (use your own coding agent in the Studio Pro terminal) | Private Beta: Mx 11.16 |
+| BYO Agent (use your own coding agent in the Studio Pro terminal) | Private Beta: Mx 11.16<br/>General Availability: Mx 11.18 |
 
 ### Maia Make
 
@@ -72,7 +72,7 @@ General Availability means that a feature is available for all users. This type 
 | Maia Make: MCP Server | General Availability: Mx 11.12 |
 | Maia Make: Modules | General Availability: Mx 11.9 |
 | Maia Make: editing/work with existing Microflows and Workflows | General Availability: Mx 11.9 |
-| Maia Make: Custom AI provider (BYO LLM) | Public Beta: Mx 11.12 <br/>General Availability: Mx 11.17 |
+| Maia Make: Custom AI provider (BYO LLM) | Public Beta: Mx 11.12 <br/>General Availability: Mx 11.16 |
 | Maia Make: Translations | General Availability: Mx 11.15 |
 | Maia Make: Task Queues, App Settings, and Security | General Availability: Mx 11.15 |
 | Maia Make: Run the app and read its logs | General Availability: Mx 11.15 |

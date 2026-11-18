@@ -139,6 +139,10 @@ To add a step, launch the **Pipeline Steps** dialog box by clicking **Add Step**
 Some steps are specific to particular target environments (Mendix Public Cloud or Mendix on Kubernetes and Azure), while others apply universally.
 {{% /alert %}}
 
+Your Mendix Pipeline can contain multiple instances of the same step, allowing you to perform the same operation multiple times within a single pipeline. For example, you can deploy the same deployment package to multiple environments, make multiple API requests, or run the same operation with different configurations.
+When a step is duplicated, each instance is automatically assigned a unique name with a numeric suffix (for example, **Deploy**, **Deploy copy 1**, and **Deploy copy 2**) to distinguish the steps and maintain their execution order.
+The **Build**, **Checkout**, and **Publish** steps can only be used once in a pipeline. All other steps can be added multiple times.
+
 Your Mendix Pipeline can include the following steps:
 
 {{% alert color="info" %}}

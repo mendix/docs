@@ -11,7 +11,7 @@ description: "Release notes for Native Template 21."
 
 ### Fixes
 
-- We fixed an issue on Android 15 and later where the last word of some single-line text elements, such as button captions, could be cut off.
+- We fixed an issue affecting Android 15 and above where the last word of some single-line text elements, such as button captions, were cut off.
 
 ## 21.0.0
 

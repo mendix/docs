@@ -36,6 +36,8 @@ In Studio Pro, you can click **Run Locally** ({{% icon name="controls-play-fille
 
 To speed up the development process, most changes you make within Studio Pro use "Instant Update" and are reflected immediately in the locally running app. However, some changes (such as changes to the domain model) are not reflected until the whole app is restarted.
 
+For additional configuration that you may need when you run your app locally, see [Local Deployment](/developerportal/deploy/local-deployment/).
+
 ## Mendix Cloud {#mendix-cloud}
 
 Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, a licensed node on Mendix Cloud includes multiple environments, backups, monitoring, and high availability.

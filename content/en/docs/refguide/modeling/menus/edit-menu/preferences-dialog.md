@@ -325,6 +325,10 @@ You can publish data as a GraphQL service. When you enable this feature, you can
 
 Select this option to use the modernized version of the JavaScript action editor. You must close all open JavaScript actions to use this feature.
 
+{{% alert color="info" %}}
+This option is not available in Studio Pro 11.17 and above. In Studio Pro 11.12, the modernized editor became generally available and this option was replaced by **Use the legacy JavaScript Action editor**. The legacy editor was removed in Studio Pro 11.17, so the option was removed as well. For more information, see [JavaScript Actions](/refguide/javascript-actions/).
+{{% /alert %}}
+
 ### Maia
 
 Select this option to use a custom AI provider for Maia.

@@ -14,7 +14,7 @@ There are two ways to create a snippet:
 * You can add a new empty snippet (see [Page Resources](/refguide/page-resources/)).
 * You can extract a snippet from a widget on an existing document (see [Extract Snippet](#extract-snippet)).
 
-A snippet expects zero or more parameters. To change the parameters of the snippet, click the **Parameters** button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The **Parameters** button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. A parameter can be an object or a primitive value, such as a string or a boolean. For more information about snippet parameters, see the [Parameters](#parameters) section in snippet properties.
+A snippet expects zero or more parameters. To change the parameters of the snippet, click the **Parameters** button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The **Parameters** button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. A parameter can be an object or a primitive value, such as a string or a Boolean. For more information about snippet parameters, see the [Parameters](#parameters) section in snippet properties.
 
 In the example below, the snippet defines two parameters: an object parameter named **Order** with type **MyFirstModule.Order**, and a primitive parameter named **Amount** with type `Integer/Long`.
 

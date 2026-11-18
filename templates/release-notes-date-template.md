@@ -5,7 +5,6 @@ url: /releasenotes/{product}/{year}/ # Match the URL pattern of sibling release 
 #weight: Assign newer years a lower weight than older years
 description: "Release notes for updates to {PRODUCT} in {YYYY}."
 #If this page is mapped to a landing page, update the link there when renaming or moving it.
-numberless_headings: true
 ---
 
 [//]: # "Use for products released by date. Text in {braces} is a placeholder; replace it. Headings without braces are literal. One file per year, newest first. For each later date, add a new date section above the previous one. For a new month, add a new month section above the previous one, with the same structure. Create the year file only if none exists. Write only customer-facing changes. Use only the elements that apply, and match sibling release notes."

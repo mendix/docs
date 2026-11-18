@@ -91,12 +91,13 @@ Because CompanyAdmin and SystemAdmin are parallel rather than nested, a custom r
 
 ### Editing a Resource Role
 
-Select the role and adjust its permissions, which are grouped into four categories:
+Select the role and adjust its permissions, which are grouped into the following categories:
 
-* **Project** - the app lifecycle, its team, version control, and viewing environments.
-* **Build** - packaging, the build pipeline, and the software bill of materials.
-* **Deployment** - deploying to and managing environments.
-* **Monitoring** - logs and metrics.
+* **Project** - App lifecycle, its team, version control, and viewing environments
+* **Build** - Packaging, the build pipeline, and the software bill of materials
+* **Deployment** - Deploying to and managing environments
+* **Monitoring** - Logs and metrics
+* **Marketplace** - Editing rights to Marketplace content items owned by a group to which the user belongs
 
 **Owner** is a special case. It is assigned automatically to whoever creates an app and cannot be granted to anyone manually. To change who holds it, transfer ownership of the app.
 

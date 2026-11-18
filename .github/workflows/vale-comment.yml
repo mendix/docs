@@ -48,17 +48,24 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
 
-      - name: Set up reviewdog
+      - name: Install reviewdog
         if: steps.pr.outputs.has_results == 'true'
-        # Pin to a commit (v1.5.0) because this job has write permissions
-        uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f
+        # Pin the version and verify its checksum
+        run: |
+          VERSION=0.21.3
+          SHA256=7029c2faf54e1237454cae8f1adf876c965b3d13d054f1a392206459091af4a1
+          curl -fsSL -o reviewdog.tar.gz "https://github.com/reviewdog/reviewdog/releases/download/v${VERSION}/reviewdog_${VERSION}_Linux_x86_64.tar.gz"
+          echo "$SHA256  reviewdog.tar.gz" | sha256sum -c -
+          mkdir -p "$RUNNER_TEMP/bin"
+          tar -xzf reviewdog.tar.gz -C "$RUNNER_TEMP/bin" reviewdog
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
 
       - name: Post review comments
         if: steps.pr.outputs.has_results == 'true'
         run: |
           # reviewdog needs a git repo; filter-mode=added comments only on lines the PR changed
           git init -q
-          env -u GITHUB_ACTIONS reviewdog -f=rdjsonl -name=vale -reporter=github-pr-review -filter-mode=added -fail-on-error=false -level=info < vale-results/results.rdjsonl
+          env -u GITHUB_ACTIONS reviewdog -f=rdjsonl -name=vale -reporter=github-pr-review -filter-mode=added -fail-level=none -level=info < vale-results/results.rdjsonl
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ github.token }}
           CI_PULL_REQUEST: ${{ steps.pr.outputs.number }}

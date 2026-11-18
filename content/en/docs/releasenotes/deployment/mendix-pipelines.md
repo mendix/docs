@@ -12,6 +12,13 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 ## 2026
 
+### Nov 19, 2026
+
+#### New Features
+* Pipeline steps can now be duplicated, allowing multiple instances of the same step within a single pipeline. This enables use cases such as deploying to multiple environments, making multiple API calls, or running the same operation with different configurations.
+* Duplicated steps are automatically assigned unique names with numeric suffixes (for example, Deploy copy 1 and Deploy copy 2) to distinguish them and maintain execution order.
+* Build, Checkout, and Publish steps remain limited to a single instance per pipeline, while all other steps can be added multiple times.
+
 ### Oct 29, 2026
 
 #### New Features

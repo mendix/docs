@@ -223,7 +223,7 @@ To configure an OpenAI-compatible provider, follow these steps:
 5. Optional: Enter your **API Key**. Studio Pro stores this key securely across sessions.
 6. Click **Save Config**.
 
-In Studio Pro 11.17 and above, the **Authentication Mode** list lets you choose between **API Key** and **Sign in with Microsoft Entra ID**. For the second option, see [Signing In with Microsoft Entra ID](#openai-entra-id).
+In Studio Pro 11.17 and above, the **Authentication Mode** list lets you choose between **API Key** and **Sign in with Microsoft Entra ID**. For the second option, see the [Signing In with Microsoft Entra ID](#openai-entra-id) section below.
 
 ##### Signing In with Microsoft Entra ID {#openai-entra-id}
 
@@ -254,7 +254,7 @@ When the sign-in succeeds, the settings show that you are signed in. To sign out
 
 In Studio Pro 11.17 and above, you can check that Maia can reach your provider before you save the settings.
 
-To test the connection, enter the settings for your provider and click **Test connection**. Maia shows whether the connection works or the error that it received.
+To test the connection, enter the settings for your provider and click **Test connection**. Maia shows whether the connection works or the error that it receives.
 
 ### LLM Gateway Configuration for Private Mendix Platform
 

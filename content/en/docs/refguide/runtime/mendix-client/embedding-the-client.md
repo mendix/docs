@@ -180,6 +180,8 @@ If the host app uses CSP, make sure its policy allows JavaScript to load from th
 
 Cross-site cookies must be enabled in the browser when the Mendix application is hosted on a different domain from the host application.
 
+If the host application runs on HTTPS, the Mendix app is rendered inside a secure context, and the Mendix runtime has to set its cookies as `Secure` and `SameSite=None`. When you run the Mendix app locally, put a reverse proxy in front of the app so that the Mendix runtime sets its cookies as `Secure`. For more information, see the [Setting the Header with a Reverse Proxy](/developerportal/deploy/deployment-location/#reverse-proxy) section in *Deployment Location*.
+
 ## Read More
 
 * [Mendix Client](/refguide/mendix-client/)

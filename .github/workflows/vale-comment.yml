@@ -1,5 +1,8 @@
 name: Vale Comments
 
+# Show the PR title of the linted PR in the Actions run list
+run-name: Vale Comments – ${{ github.event.workflow_run.display_title }}
+
 # Posts Vale results from vale.yml as PR review comments, including for fork PRs.
 
 on:

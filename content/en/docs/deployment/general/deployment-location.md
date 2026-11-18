@@ -74,9 +74,7 @@ The `X-Forwarded-Proto` and `X-Forwarded-Schema` headers will take precedence ov
 
 ### Setting the Header with a Reverse Proxy {#reverse-proxy}
 
-If your app is not behind a load balancer that sets the `X-Forwarded-Proto` header, you can put a reverse proxy in front of the app to set it. You need this, for example, when you run your app locally and it is rendered inside a secure context, such as when it is embedded in an application that runs on HTTPS. In that case, the Mendix runtime has to set its cookies as `Secure`.
-
-You can use any reverse proxy, as long as it does the following:
+If your app is not behind a load balancer that sets the `X-Forwarded-Proto` header, you can put a reverse proxy in front of the app to set it. You can use any reverse proxy, as long as it does the following:
 
 * Forwards every request to the Mendix app
 * Sets the `X-Forwarded-Proto` header to `https` on every request it forwards

@@ -98,7 +98,7 @@ See [custom settings](/refguide/custom-settings/#Headers) for details.
 Both the Mendix runtime and the Active Workspace server must be served over HTTPS. Browsers only accept cookies with `SameSite=None` if the cookies also have the `Secure` attribute, and the Mendix runtime sets this attribute when the app is served over HTTPS.
 {{% /alert %}}
 
-When you run the Mendix app locally, it is not served over HTTPS. In that case, put a reverse proxy in front of the app that sets the `X-Forwarded-Proto` header to `https`, so that the Mendix runtime sets its cookies as `Secure`. For more information, see the [Using a Reverse Proxy for Secure Cookies](/developerportal/deploy/local-deployment/#reverse-proxy) section in *Local Deployment*. Use the URL of the reverse proxy as the URL of your Mendix runtime everywhere you consume the Mendix app.
+When you run the Mendix app locally, it is not served over HTTPS. In that case, put a reverse proxy in front of the app that sets the `X-Forwarded-Proto` header to `https`, so that the Mendix runtime sets its cookies as `Secure`. For more information, see the [Using a Reverse Proxy for Setting Secure Cookies](/developerportal/deploy/local-deployment/#reverse-proxy) section in *Local Deployment*. Use the URL of the reverse proxy as the URL of your Mendix runtime everywhere you consume the Mendix app.
 
 #### CORS for TcSSO Published REST Service
 

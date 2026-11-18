@@ -52,6 +52,8 @@ After installing Vale:
    vale --version
    ```
 
+   Vale 3.20 or later is required. If you have an older version, see [Updates](#updates).
+
 2. **Sync the Microsoft Style Guide rules:**
 
    Navigate to the root of your docs repository (for example, `cd ~/docs`), then run:
@@ -74,3 +76,9 @@ After installing Vale:
    - If desired, you can adjust the extension's settings in VS Code to show a different minimum alert level. For example, if you set `minAlertLevel` to `warning`, it will report only warnings and errors, not suggestions.
 
 4. **If you have open PRs without the Vale configuration files:** Merge `development` into your branch.
+
+## Updates
+
+To update the rules, merge `development` into your branch and run `vale sync` in the root of the docs repository. The Microsoft rules are maintained in https://github.com/vale-cli/Microsoft, and `.vale.ini` pins the version that `vale sync` installs.
+
+To update Vale, run `brew upgrade vale` on macOS. On Windows, download the latest version from [the releases page](https://github.com/vale-cli/vale/releases) and replace `vale.exe`. Vale 3.20 or later is required.

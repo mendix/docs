@@ -2,7 +2,7 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Conditional Adverbs)
 # "These words add uncertainty and cloud the meaning of sentences."
 extends: existence
-message: "Avoid '%s'. These words add uncertainty to technical writing."
+message: "Rephrase to avoid '%s'. This word adds uncertainty to technical writing."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#conditional-adverbs
 level: warning
 ignorecase: true

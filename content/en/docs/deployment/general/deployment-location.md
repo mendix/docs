@@ -72,43 +72,6 @@ Setting the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-s
 * **For Mendix versions 10.24 and above:**
 The `X-Forwarded-Proto` and `X-Forwarded-Schema` headers will take precedence over the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section). Mendix recommends using the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) setting as the default approach and only set `X-Forwarded-Proto` and `X-Forwarded-Schema` headers if needed. 
 
-### Setting the Header with a Reverse Proxy {#reverse-proxy}
-
-If your app is not behind a load balancer that sets the `X-Forwarded-Proto` header, you can put a reverse proxy in front of the app to set it. You can use any reverse proxy, as long as it does the following:
-
-* Forwards every request to the Mendix app
-* Sets the `X-Forwarded-Proto` header to `https` on every request it forwards
-
-The following example shows a configuration for nginx:
-
-```nginx
-events {
-    worker_connections 1024;
-}
-
-http {
-    server {
-        listen 8081;
-        server_name localhost;
-
-        location / {
-            proxy_pass http://127.0.0.1:8080;
-            proxy_http_version 1.1;
-            proxy_set_header Host $http_host;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto https;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection "upgrade";
-        }
-    }
-}
-```
-
-In this example, nginx listens on `localhost:8081` and forwards every request to the Mendix app on `localhost:8080`, adding the `X-Forwarded-Proto` header.
-
-Use the address of the reverse proxy everywhere you refer to the app. In this example, that means using port `8081` instead of port `8080`.
-
 ## Main Domain Name
 
 Do not deploy your app directly at the apex domain (`https://domain/`).

@@ -180,7 +180,46 @@ If the host app uses CSP, make sure its policy allows JavaScript to load from th
 
 Cross-site cookies must be enabled in the browser when the Mendix application is hosted on a different domain from the host application.
 
-If the host application runs on HTTPS, the Mendix app is rendered inside a secure context, and the Mendix runtime has to set its cookies as `Secure` and `SameSite=None`. When you run the Mendix app locally, put a reverse proxy in front of the app so that the Mendix runtime sets its cookies as `Secure`. For more information, see the [Setting the Header with a Reverse Proxy](/developerportal/deploy/deployment-location/#reverse-proxy) section in *Deployment Location*.
+If the host application runs on HTTPS, the Mendix app is rendered inside a secure context, and the Mendix runtime has to set its cookies as `Secure` and `SameSite=None`.
+
+### Using a Reverse Proxy When Running Locally {#reverse-proxy}
+
+The Mendix runtime sets the `Secure` attribute on its cookies when the app is served over HTTPS. When you run the Mendix app locally, it is not served over HTTPS. To make the runtime set the attribute anyway, put a reverse proxy in front of the app. You can use any reverse proxy, as long as it does the following:
+
+* Forwards every request to the Mendix app
+* Sets the `X-Forwarded-Proto` header to `https` on every request it forwards
+
+The following example shows a configuration for nginx:
+
+```nginx
+events {
+    worker_connections 1024;
+}
+
+http {
+    server {
+        listen 8081;
+        server_name localhost;
+
+        location / {
+            proxy_pass http://127.0.0.1:8080;
+            proxy_http_version 1.1;
+            proxy_set_header Host $http_host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+    }
+}
+```
+
+In this example, nginx listens on `localhost:8081` and forwards every request to the Mendix app on `localhost:8080`, adding the `X-Forwarded-Proto` header.
+
+Use the URL of the reverse proxy as the Mendix runtime URL everywhere you consume the Mendix app. In this example, that means using port `8081` instead of port `8080`.
+
+This setup is for running your app locally. For a deployed app that is behind a load balancer, see the [Secure Cookies for On-Premise Applications](/developerportal/deploy/deployment-location/#secure-cookies-for-on-premise-applications) section in *Deployment Location*.
 
 ## Read More
 

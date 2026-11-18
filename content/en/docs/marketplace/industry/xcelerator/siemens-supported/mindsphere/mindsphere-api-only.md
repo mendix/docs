@@ -16,9 +16,9 @@ This information is for standalone Mendix application which are not fully integr
 If you have your own user management or SSO solution, but want to gather insights via the Insights Hub APIs, this page explains how you can achieve it. It describes how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
 Please note that this way is not a full integration with Insights Hub and has the following limitations:
 
-* You cannot make your app multitenant – see [Multi-tenancy](/appstore/industry/mindsphere/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multitenancy
-* Your app cannot be added to the Insights Hub Developer Cockpit
-* End-users cannot use Insights Hub credentials to sign in to your app, so Insights Hub does not know anything about individual app end-users—you must design your app to handle any required security for each end-user
+* You cannot make your app multitenant. Refer to [Multi-tenancy](/appstore/industry/mindsphere/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multitenancy.
+* Your app cannot be added to the Insights Hub Developer Cockpit.
+* End-users cannot use Insights Hub credentials to sign in to your app, so Insights Hub does not know anything about individual app end-users—you must design your app to handle any required security for each end-user.
 * You cannot use the fine grain access control on asset level via SDS.
 
 If you prefer a full Insights Hub app, please see [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/), [Insights Hub Module Details](/appstore/industry/mindsphere/mindsphere-module-details/) or follow the following learning paths:
@@ -57,24 +57,16 @@ However, authentication will only be successful if the correct credentials are p
 * **ClientID** – this is the *clientID* from the **Technical User** you generated
 * **ClientSecret** – this is the *clientSecret* from the **Technical User** you generated
 * **GatewayURL** 
-    * for **Xcelerator** use: `https://api.eu1.siemens.app`
-    * for **Insights Hub** use: `https://gateway.eu1.mindsphere.io`
+    * for **Xcelerator** use `https://api.eu1.siemens.app`
+    * for **Insights Hub** use `https://gateway.eu1.mindsphere.io`
 * **TokenURL** – this is the *TokenURL* where to fetch the Insights Hub token from and is in the format:
-    * for **Xcelerator** use:
+    * for **Xcelerator** use `https://{{tenantId}}.{region}.sws.siemens.com/oauth/token?grant_type=client_credentials`
 
-        `https://{{tenantId}}.{region}.sws.siemens.com/oauth/token?grant_type=client_credentials`
+        You have to replace `tenantId` and `region` regarding your destination tenant e.g. `https://1224319040.eu1.sws.siemens.com/oauth/token?grant_type=client_credentials`
 
-        You have to replace `tenantId` and `region` regarding your destination tenant e.g.
+    * for **Insights Hub** use `https://{tenantName}.piam.{region}.{mindsphere-domain}/oauth/token?grant_type=client_credentials`
 
-        `https://1224319040.eu1.sws.siemens.com/oauth/token?grant_type=client_credentials`
-
-    * for **Insights Hub** use:
-
-        `https://{tenantName}.piam.{region}.{mindsphere-domain}/oauth/token?grant_type=client_credentials`
-
-        You have to replace `tenantName`, `region` and `mindsphere-domain` regarding your destination tenant e.g.
-
-        `https://demo.piam.eu1.mindsphere.io/oauth/token?grant_type=client_credentials`
+        You have to replace `tenantName`, `region` and `mindsphere-domain` regarding your destination tenant e.g. `https://demo.piam.eu1.mindsphere.io/oauth/token?grant_type=client_credentials`
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/ModuleConfiguration.png" alt="Authentication" >}}
 

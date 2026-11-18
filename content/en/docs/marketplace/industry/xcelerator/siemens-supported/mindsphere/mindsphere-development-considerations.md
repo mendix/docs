@@ -30,7 +30,7 @@ The **Token** string returned by the **AccessToken** action needs to be passed a
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/delete-mindspheretoken.png" alt="Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action" >}}
 
 {{% alert color="info" %}}
-Use optionally the **BuildCoreURL** microflow when your app should support dual token, running against **Insights Hub** and **Xcelerator**.
+Optionally, use the **BuildCoreURL** microflow when your app should support dual token, running against **Insights Hub** and **Xcelerator**.
 {{% /alert %}}
 
 ### Authorizing Insights Hub REST Calls from within Scheduled Events
@@ -45,11 +45,11 @@ The microflow uses the [Insights Hub Application Credentials](#app-creds) functi
 
     The microflow uses the application credentials you entered at startup to fetch a token. See also [Application Credentials](#app-creds).
 
-2. Developer / Operator Tenant:
+2. Developer/Operator Tenant:
 
     The following environment variables must be set for the app:
 
-    | Developer Tenant | Description |
+    | Developer/Operator Tenant | Description |
     | ----- | ----- |
     | `MDSP_KEY_STORE_CLIENT_ID` | enable Application Credentials in the Developer Cockpit for your app and use the Client ID |
     | `MDSP_KEY_STORE_CLIENT_SECRET` | enable Application Credentials in the Developer Cockpit for your app and use the Client Secret |
@@ -70,11 +70,9 @@ For more information on how to perform REST calls see the [Importing and Exporti
 
 ## Licensing Your App {#licensing}
 
-When you initially deploy a Mendix App, it is treated as a *Free App*. For an Insights Hub app the most important restriction is that the app will go into sleep mode after 1-2 hours: this could cause the Cloud Foundry environment to be restarted and pick up the latest values of environment variables.
+When you initially deploy a Mendix App, it is treated as a *Free App*. For an Insights Hub app the most important restriction is that the app will go into sleep mode after 1-2 hours.
 
 To license your app, you need to obtain a license key from [Mendix Support](https://support.mendix.com).
-
-Instructions for licensing apps are available in the [License Activation](https://github.com/mendix/cf-mendix-buildpack#license-activation) section of the *Mendix Cloud Foundry Buildpack Readme*. 
 
 ## Local Testing {#localtesting}
 
@@ -172,11 +170,11 @@ This endpoint forwards all calls to \api… from within native HTML pages, and a
 
 **PlatformType**
 
-Set this to either to **Xcelerator** or **Insights Hub**. 
+Set this to either **Xcelerator** or **Insights Hub**. 
 
 **HostTenant**
 
-This should be the tenant where your credentials are stored. It is needed when retrieving your Application Credentials.
+This should be the tenant where your credentials are stored. It is needed when retrieving your app credentials.
 
 The definition of a tenant on Insights Hub is available in the Insights Hub document [Definition of Tenant](https://developer.mindsphere.io/apis/core-identitymanagement/api-identitymanagement-overview.html#tenants).
 

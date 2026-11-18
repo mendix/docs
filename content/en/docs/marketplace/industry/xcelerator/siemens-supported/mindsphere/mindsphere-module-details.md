@@ -45,7 +45,7 @@ These constants are only needed for local development and testing. For details o
 
 #### CockpitApplicationName
 
-This is the name of your app as registered in the Insights Hub Developer Cockpit. See [Siemens Insights Hub Deployment](/developerportal/deploy/deploying-to-mindsphere) for more information.
+This is the name of your app as registered in the Insights Hub Developer Cockpit. See [Siemens Insights Hub Deployment](/developerportal/deploy/deploying-to-mindsphere/) for more information.
 
 ### Microflows{#microflows}
 
@@ -124,15 +124,15 @@ And in the Mendix app they will be mapped to these roles:
 
 The [Siemens Insights Hub Starter Application](https://marketplace.mendix.com/link/component/109130), example apps, and Siemens Insights Hub Single Sign On have an updated `index.html` file to allow integration with Insights Hub.
 
-If you are developing your app from a different app template just add the Siemens Insights Hub Single Sign on module to your app to get the updated index.html. See the [index.html](#indexhtml) section, below, for details about the changes to the file.
+If you are developing your app from a different app template, add the Siemens Insights Hub Single Sign On module to your app to get the updated `index.html` file. Refer to the [index.html](#indexhtml) section on this page for details about the changes to the file.
 
-The changes are required to support:
+The changes are required to support the following:
 
-* OS Bar – the Insights Hub bar needs to be supported by your app
-* XSRF – Insights Hub needs to receive an XSRF token to work with your app
-* SSO login – the login process needs to be adjusted to support Single Sign-on
+* OS Bar – The Insights Hub bar needs to be supported by your app.
+* XSRF - Insights Hub needs to receive an XSRF token to work with your app.
+* SSO login – The login process needs to be adjusted to support single sign-on.
 
-The modified `index.html` file can be found in the /themesource/siemensinsightshubsinglesignon/public folder of your app.
+The modified `index.html` file can be found in the `/themesource/siemensinsightshubsinglesignon/public` folder of your app.
 
 ## Insights Hub OS Bar {#msosbar}
 
@@ -145,7 +145,7 @@ The SiemensInsightsHubOSBarConfig module provides a constant **OSBarURL** for sp
 The SiemensInsightsHubOSBarConfig module creates an endpoint which is used by the Insights Hub OS Bar to provide tenant context and information about the application. The SiemensInsightsHubOSBarConfig module is included in the Insights Hub app template, or can be downloaded from the Mendix Marketplace here: [Insights Hub OS Bar Connector](https://marketplace.mendix.com/link/component/108804/).
 
 {{% alert color="info" %}}
-The Insights Hub OS Bar Connector also needs the Siemens Insights Hub Single Sign On module, or manual configuration of the index.html file, in order to work. See [Customizing an Existing App](/developerportal/deploy/deploying-to-mindsphere/#existingapp) in *Siemens Insights Hub – deploy* and [index.html Changes](#indexhtmlchanges), below, for more information.
+The Insights Hub OS Bar Connector also needs the Siemens Insights Hub Single Sign On module, or manual configuration of the index.html file, in order to work. See [Customizing an Existing App](/developerportal/deploy/deploying-to-mindsphere/#existingapp) in *Siemens Insights Hub – deploy* and [index.html Changes](#indexhtmlchanges) for more information.
 {{% /alert %}}
 
 ### Configuring the OS Bar
@@ -177,7 +177,7 @@ These error pages are included in the Siemens Insights Hub Starter Application, 
 
 #### Permission Denied Page
 
-This is the general *permission denied* page, and will be shown if your app is called with an invalid token.
+This is the general *permission denied* page, which is shown if your app is called with an invalid token.
 
 #### License exceeded
 
@@ -199,12 +199,12 @@ Run your app locally, copy the *index.html* from the /deployment folder to /them
 
 #### XSRF / Gatway session expired
 
-In index.html, in the body after the line `<noScript>` tag, the following script needs to be included in the file.
+In `index.html`, in the body after the `<noScript>` tag, the following script needs to be included in the file.
 
 This change does two things:
 
-* adds the `x-xsrf-token` header to each request. This is needed by the Insights Hub Gateway.
-* handles the gateway session expired case. If the session has expired, it shows a popup and asks the user to reload the app. The message / title shown in the popup can be modified and localized via the "i18n" enumeration of the module "SiemensInsightsHubWebContent".
+* Adds the `x-xsrf-token` header to each request. This is needed by the Insights Hub Gateway.
+* Handles the gateway session expired case. If the session has expired, it shows a popup and asks the user to reload the app. The message / title shown in the popup can be modified and localized via the "i18n" enumeration of the module "SiemensInsightsHubWebContent".
 
     {{% alert color="info" %}}Please add the "Siemens Insights Hub Web Single Sign On" module role "User" to all your apps user roles to ensure that the localized session expired message / title can be loaded during app startup.    
     {{% /alert %}}
@@ -377,8 +377,7 @@ and directly after the script of the X-XRSR put the following script
 For the OS Bar to work correctly in your Mendix app, the following script has to be added after the just added SSO script. Please note the comments in the code regarding the order in which things need to be done if you are inserting this manually.
 
 {{% alert color="info" %}}
-In client *strict mode* mx.data.create() is not allowed due to security reasons. Use the nanoflow *SessionExpiredMessage* provided in the Siemens Insights Hub Single Sign On module
-in order to localize your session expired message and run it on your home page. With strict mode the function "sessionExpiredValues()" is not needed at all. Remove it and it's usage in the function loadMendix() as well.
+In the client's strict mode, `mx.data.create()` is not allowed due to security reasons. Use the nanoflow *SessionExpiredMessage* provided in the Siemens Insights Hub Single Sign On module in order to localize your session expired message and run it on your home page. With strict mode, the function `sessionExpiredValues()` is not needed at all. Remove it and its usage in the `loadMendix()` function.
 {{% /alert %}}
 
 ```javascript
@@ -403,8 +402,8 @@ in order to localize your session expired message and run it on your home page. 
                     } catch (error) {
                         if (!sessionStorage.getItem('sessionExpired') && error.message === "mx.data.create is disabled") {
                             console.error(`Unable to create Entity. Strict mode enabled? 
-If you use strict mode use the NF SessionExpiredMessage on your home page to ensure localized message is present in the sessionStorage. 
-With strict mode the function "sessionExpiredValues()" is not needed at all. Remove it and it's usage in the function loadMendix() as well.`);
+If you use strict mode, use the NF SessionExpiredMessage on your home page to ensure the localized message is present in the `sessionStorage`. 
+With strict mode, the `sessionExpiredValues()` function is not needed at all. Remove it and its usage in the `loadMendix()` function.`);
                         } else
                             console.log(error);
                     }
@@ -473,11 +472,9 @@ With strict mode the function "sessionExpiredValues()" is not needed at all. Rem
     </script>
 ```
 
-
-
 ### sso-login.html{#mindspherelogin}
 
-A new login file `sso-login.html` is needed to support Insights Hub SSO. This is supplied by default in the MindSphere app template, example app, and Siemens Insights Hub Single Sign On.
+A new `sso-login.html` login file is needed to support Insights Hub SSO. This is supplied by default in the Insights Hub Starter Application, example app, and Siemens Insights Hub Single Sign On.
 
 You will only have to create a `sso-login.html` file in the folder /theme/web/public with the following content if you are configuring your existing Mendix app manually, without importing Siemens MindSphere Web Content.
 

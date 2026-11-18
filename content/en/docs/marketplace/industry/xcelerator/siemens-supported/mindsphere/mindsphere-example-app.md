@@ -13,7 +13,7 @@ You can write Mendix apps which analyze data held in Insights Hub, the open, clo
 
 This documentation provides more explanation of the Insights Hub example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/Insights Hub app.
 
-You can get more detailed information on how to deploy your app to the Insights Hub Platform in [Siemens Insights Hub – deployment](/developerportal/deploy/deploying-to-mindsphere/). If your are interested in how to develop an Insights Hub app with Mendix, visit the [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/paths/80/Build-an-Insights-Hub-App-with-Mendix) learning path.
+You can get more detailed information on how to deploy your app to the Insights Hub Platform in [Siemens Insights Hub – deployment](/developerportal/deploy/deploying-to-mindsphere/). If your are interested in how to develop an Insights Hub app with Mendix, visit the [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/paths/80/Build-an-Insights-Hub-App-with-Mendix/) learning path.
 
 ## Prerequisites
 
@@ -62,11 +62,11 @@ Once your app is deployed to Mendix, click **View App**.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/autoreg-view-app.png" >}}
 
-Your default Browser will open and when your app starts, it will show an error page indicating that the app needs to be registered in the Developer Cockpit first.
+Your default browser opens and, when your app starts, it will show an error page indicating that the app needs to be registered in the Developer Cockpit first.
 
 ### App Registration
 
-Create a new application in [Developer Cockpit](/developerportal/deploy/deploying-to-mindsphere#deploying-your-app)
+Create a new app in [Developer Cockpit](/developerportal/deploy/deploying-to-mindsphere#deploying-your-app).
 
 Add the following Insights Hub API Roles to your app and assign them to correct application roles **admin** and **user**, as shown in the table below:
 
@@ -88,16 +88,15 @@ Add the following Insights Hub API Roles to your app and assign them to correct 
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/devcockpit-mdsp-api-roles.png" alt="Choose app registration" >}}
 
-
 ### Scopes and Roles{#scopesroles}
 
-During the app registration process two Insights Hub application Roles *admin* and *user* has been created:
+During the app registration process, two Insights Hub application roles are created: *admin* and *user*.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/devcockpit-app-roles.png" alt="Developer Cockpit application roles" >}}
 
 You can assign these application roles to users in the *Settings* app found on the launchpad.
 
-Create two Insights Hub application Scopes *admin* and *user* and assigned these to the roles as follows:
+Create two Insights Hub application Scopes, *admin* and *user*, and assign these to the roles as follows:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/devcockpit-app-scopes.png" alt="Developer Cockpit application roles" >}}
 

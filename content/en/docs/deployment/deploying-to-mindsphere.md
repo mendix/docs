@@ -41,17 +41,17 @@ You must customize your app to allow it to be deployed, registered, and shown in
 
 ### Option A: Using the Siemens Insights Hub Starter Application
 
-The **Siemens Insights Hub Starter Application** in the Mendix Marketplace contains all the modules which you need to create an app you want to deploy to Insights Hub.
+The **Siemens Insights Hub Starter Application** in the Mendix Marketplace contains all the modules you need to create an app you want to deploy to Insights Hub.
 
 {{% alert color="info" %}}
 This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
 {{% /alert %}}
 
-Open Studio Pro and select the follow these steps:
+Follow these steps:
 
-1. Start your browser and open the [Mendix Marketplace](https://marketplace.mendix.com/).
+1. Open [Mendix Marketplace](https://marketplace.mendix.com/).
 
-2. Enter *Insights Hub* in the search box, and press <kbd>Enter</kbd>.
+2. Enter *Insights Hub* in the search box, and press Enter.
 3. Select **Siemens Insights Hub Starter Application** in the search results.
 4. Click **Start with Template** to create a new app using this app as the template.  
 5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**.
@@ -60,7 +60,7 @@ Open Studio Pro and select the follow these steps:
 
 ### Option B: Customizing an Existing App{#existingapp}
 
-If you have an existing app which was not based on the Insights Hub app template, you must import the required customization. The two modules which must be imported are:
+If you have an existing app which was not based on the Siemens Insights Hub Starter Application, you must import the required customization. The modules which must be imported are:
 
 * **Siemens Insights Hub SSO** from the Mendix Marketplace here: [Siemens Insights Hub SSO](https://marketplace.mendix.com/link/component/108805/)
 
@@ -119,25 +119,15 @@ More information on the structure and content of this JSON object, together with
 
 ## Deploying Your App{#deploying-your-app}
 
-A Mendix based application for Insights Hub can be deployed to Mendix. Deploying to Mendix is quite easy and is the preferred option.
+A Mendix-based app for Insights Hub can be deployed to Mendix. Deploying to Mendix is quite easy: click the **Publish** button in Studio Pro.
 
-### Deploy with Mendix Studio Pro to Mendix Cloud
+Once your app is deployed, you must register the app in your Insights Hub tenant for it to work and to appear on the Insights Hub Launchpad.
 
-Just click the Publish Button in Mendix Studio Pro.
+### Configuring the Mendix App in the Developer Cockpit{#launchpad}
 
-{{< figure src="/attachments/deployment/deploying-to-mindsphere/runMendixApp.png" alt="Deploy to Mendix" class="no-border" >}}
+#### Creating a New App
 
-Once your app is deployed you have to register the app in your Insights Hub tenant.
-
-### Setting up Insights Hub Launchpad{#launchpad}
-
-You have to register your application for it to work and appear on the Insights Hub Launchpad.
-
-#### Configuring the Mendix App in the Developer Cockpit
-
-##### Creating a New Application
-
-To create a new app manually in the Insights Hub launchpad, do the following:
+To create a new app manually in the Insights Hub launchpad, follow these steps:
 
 1. Go to the **Developer Cockpit > Dashboard**.
 2. Click **Create new application**.
@@ -186,7 +176,7 @@ To set up the appropriate scopes in Insights Hub, do the following:
     {{< figure src="/attachments/deployment/deploying-to-mindsphere/image15.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-If you are using the app template, you should create two scopes, *user* and *admin*.
+If you are using the Siemens Insights Hub Starter Application, you should create two scopes: *user* and *admin*.
 {{% /alert %}}
 
 For an explanation of the relationship between Mendix roles and Insights Hub roles, see section [Roles and Scopes](/appstore/industry/mindsphere/mindsphere-module-details/#rolesscopes) in *Insights Hub Module Details*.

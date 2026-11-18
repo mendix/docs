@@ -189,13 +189,13 @@ By default, Maia uses the Mendix platform's AI service. You can configure Maia t
 Configuring a custom AI provider is generally available in Studio Pro 11.17 and above. In Studio Pro 11.12 to 11.16, it is a beta feature.
 {{% /alert %}}
 
-In Studio Pro 11.12 to 11.16, you must first enable custom LLM provider configuration. To do this, follow these steps:
+To enable custom LLM provider configuration, follow these steps:
 
 1. Open the Studio Pro settings.
 2. In the **Preferences** dialog box that opens, go to the **New Features** tab.
 3. Select the **Enable configuring a custom AI provider for Maia** checkbox, then click **OK**.
 
-After enabling this feature, a **Settings** ({{% icon name="cog" %}}) icon appears in the upper-right corner of the Maia pane. In Studio Pro 11.17 and above, you do not need to enable the feature.
+After enabling this feature, a **Settings** ({{% icon name="cog" %}}) icon appears in the upper-right corner of the Maia pane.
 
 {{% alert color="info" %}}
 Mendix recommends using the same model that Maia Make uses by default. For the current model, see the [Maia Third-Party Services](/refguide/mendix-ai-assistance/#maia-third-party-services) section in *Mendix AI Assistance (Maia)*.

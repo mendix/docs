@@ -3,6 +3,7 @@ title: "{Major.Minor Version Number, for example 10.18}"
 url: /releasenotes/{product}/{version}/ # Match the URL pattern of sibling release notes, for example /releasenotes/studio-pro/11.16/
 #weight: Match the order of sibling release notes
 description: "The release notes for {PRODUCT} {VERSION} (including all patches) with details on new features, bug fixes, and known issues."
+numberless_headings: true
 #If this page is mapped to a landing page, update the link there when renaming or moving it.
 #KI: Reference Jira issues for known issues here. Example: # KI: "Short issue name": ABC-1234
 ---
@@ -23,7 +24,7 @@ description: "The release notes for {PRODUCT} {VERSION} (including all patches) 
 
 ### New Features
 
-[//]: # "Use for a major new feature that customers can see and use. Give a major feature its own heading, then group the rest under Other New Features. If no feature needs its own heading, use a flat list."
+[//]: # "Use for a major new feature that customers can see and use. Give a major feature its own heading, then group the rest under Other New Features. If no feature needs its own heading, use a flat list. State who is affected and any action required. Link to the product documentation if required. State who is affected and any action required."
 
 #### {Major New Feature Name}
 
@@ -35,7 +36,7 @@ description: "The release notes for {PRODUCT} {VERSION} (including all patches) 
 
 ### Improvements
 
-[//]: # "Use for a functional fix or minor new feature that makes behavior more consistent or predictable. Group the rest under Other Improvements when you use subheadings, such as Performance. Otherwise use a flat list."
+[//]: # "Use for a functional fix or minor new feature that makes behavior more consistent or predictable. Group the rest under Other Improvements when you use subheadings, such as Performance. Otherwise use a flat list. State who is affected and any action required. Link to the product documentation if required."
 
 #### Performance
 
@@ -53,7 +54,7 @@ description: "The release notes for {PRODUCT} {VERSION} (including all patches) 
 
 ### Deprecations
 
-[//]: # "Use for functionality that is no longer available or will be removed in a future version."
+[//]: # "Use for functionality that is no longer available or will be removed in a future version. State who is affected and any action required. Link to the product documentation if required."
 
 * We deprecated {description}. It will be removed in {version}. Use {alternative} instead.
 * We removed {description}. Use {alternative} instead.
@@ -61,9 +62,9 @@ description: "The release notes for {PRODUCT} {VERSION} (including all patches) 
 
 ### Breaking Changes
 
-[//]: # "Use for a technical change that can break existing apps or workflows."
+[//]: # "Use for a technical change that can break existing apps or workflows. State who is affected and any action required. Link to the product documentation if required."
 
-* We changed {description}.
+* We changed {description}. {Who is affected.} To continue, {required action}. For more information, see [{Doc title}]({URL}).
 
 ### Limitations
 

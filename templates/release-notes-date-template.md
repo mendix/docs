@@ -5,9 +5,10 @@ url: /releasenotes/{product}/{year}/ # Match the URL pattern of sibling release 
 #weight: Assign newer years a lower weight than older years
 description: "Release notes for updates to {PRODUCT} in {YYYY}."
 #If this page is mapped to a landing page, update the link there when renaming or moving it.
+numberless_headings: true
 ---
 
-[//]: # "Use for products released by date. Text in {braces} is a placeholder; replace it. Headings without braces are literal. One file per year, newest first. For each later date, add a new date section above the previous one. For a new month, add a new month section above the previous one, with the same structure. Write only customer-facing changes. Use only the elements that apply, and match sibling release notes."
+[//]: # "Use for products released by date. Text in {braces} is a placeholder; replace it. Headings without braces are literal. One file per year, newest first. For each later date, add a new date section above the previous one. For a new month, add a new month section above the previous one, with the same structure. Create the year file only if none exists. Write only customer-facing changes. Use only the elements that apply, and match sibling release notes."
 
 ## {Month YYYY}
 
@@ -15,13 +16,13 @@ description: "Release notes for updates to {PRODUCT} in {YYYY}."
 
 #### New Features
 
-[//]: # "Use for a major new feature that customers can see and use."
+[//]: # "Use for a major new feature that customers can see and use. State who is affected and any action required. Link to the product documentation."
 
 * We added {description}.
 
 #### Improvements
 
-[//]: # "Use for a functional fix or minor new feature that makes behavior more consistent or predictable."
+[//]: # "Use for a functional fix or minor new feature that makes behavior more consistent or predictable. State who is affected and any action required. Link to the product documentation."
 
 * We improved {description}.
 
@@ -33,7 +34,7 @@ description: "Release notes for updates to {PRODUCT} in {YYYY}."
 
 #### Deprecations
 
-[//]: # "Use for functionality that is no longer available or will be removed in a future version."
+[//]: # "Use for functionality that is no longer available or will be removed in a future version. State who is affected and any action required. Link to the product documentation."
 
 * We deprecated {description}. It will be removed on {Month D, YYYY}. Use {alternative} instead.
 * We removed {description}. Use {alternative} instead.

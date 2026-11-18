@@ -18,14 +18,14 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### Improvements
 
-* Dependency security and updates - We updated the dependencies of Workstation Management to address common vulnerabilities and exposures (CVEs).
-* Private management - We upgraded Private Workstation Management to Mendix 11.12.6.
+* Dependency security and updates – We updated the dependencies of Workstation Management to address common vulnerabilities and exposures (CVEs).
+* Private management – We upgraded Private Workstation Management to Mendix 11.12.6.
 
 ### Workstation Client
 
 #### Improvements
 
-* Dependency security and updates - We updated the dependencies of the Workstation Client to address common vulnerabilities and exposures (CVEs).
+* Dependency security and updates – We updated the dependencies of the Workstation Client to address common vulnerabilities and exposures (CVEs).
 
 #### Bug Fixes
 
@@ -41,11 +41,11 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### Bug Fixes
 
-* Build and deployment - We fixed a bug that would cause compilation errors when using the Workstation Commons module in Studio Pro 11.
+* Build and deployment – We fixed a bug that would cause compilation errors when using the Workstation Commons module in Studio Pro 11.
 
 ### Workstation Starter App
 
-* Updated dependency version - We updated the Starter App to use Workstation Commons 4.3.2. This prevents errors when upgrading to Studio Pro 11.
+* Updated dependency version – We updated the Starter App to use Workstation Commons 4.3.2. This prevents errors when upgrading to Studio Pro 11.
 
 ## 4.3.1
 
@@ -55,7 +55,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Modules
 
-* Workstation Starter App - The new [Workstation Starter App](https://marketplace.mendix.com/link/component/308268) gives you a foundation for building an app connected to peripheral devices, so that you do not have to build the complete structure from scratch. It includes the following:
+* Workstation Starter App – The new [Workstation Starter App](https://marketplace.mendix.com/link/component/308268) gives you a foundation for building an app connected to peripheral devices, so that you do not have to build the complete structure from scratch. It includes the following:
 
     * A Peripheral Template module, which is the recommended starting point for device-specific logic. It provides the structure for a peripheral device connected through the Workstation Connector, and keeps the hardware-specific behavior separate from the business logic.
     * An Admin Center to manage the station and its connected devices, including the station status, device connectivity, and runtime setup.
@@ -69,13 +69,13 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Camera devices - We added a new *camera* connection type to configure USB cameras and webcams. For more information, see [Configuring Devices: Camera](/mendix-workstation/management-devices/#camera).
-* Client diagnostics - We added the option to retrieve the diagnostics of the Workstation Client of a station, without access to its computer. For more information, see [Managing Stations: Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics).
-* Card reader devices - We added a new *card reader* connection type to configure card readers by their name, in addition to detecting them automatically. For more information, see [Configuring Devices: Card Readers](/mendix-workstation/management-devices/#card-readers).
+* Camera devices – We added a new *camera* connection type to configure USB cameras and webcams. For more information, see [Configuring Devices: Camera](/mendix-workstation/management-devices/#camera).
+* Client diagnostics – We added the option to retrieve the diagnostics of the Workstation Client of a station, without access to its computer. For more information, see [Managing Stations: Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics).
+* Card reader devices – We added a new *card reader* connection type to configure card readers by their name, in addition to detecting them automatically. For more information, see [Configuring Devices: Card Readers](/mendix-workstation/management-devices/#card-readers).
 
 #### Improvements
 
-* Developer mode - Turning off developer mode now requires Workstation licenses. For more information, see [Managing Stations: Developer Mode](/mendix-workstation/management-stations/#developer-mode).
+* Developer mode – Turning off developer mode now requires Workstation licenses. For more information, see [Managing Stations: Developer Mode](/mendix-workstation/management-stations/#developer-mode).
 
 #### Bug Fixes
 
@@ -86,30 +86,30 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Client diagnostics - The Workstation Client now provides its diagnostics to Workstation Management. For more information, see [Managing Stations: Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics).
-* Camera devices - We added support for USB cameras and webcams, including barcode and motion detection. For more information, see [Device Message Syntax: Camera](/mendix-workstation/device-syntax/#camera).
-* Device testing - We added a test view to the Workstation Client to test devices directly on the computer, like the **Test Your Station** page in Workstation Management. For more information, see [Using the Workstation Client: Testing Devices](/mendix-workstation/use-client/#testing-devices).
+* Client diagnostics – The Workstation Client now provides its diagnostics to Workstation Management. For more information, see [Managing Stations: Client Diagnostics](/mendix-workstation/management-stations/#client-diagnostics).
+* Camera devices – We added support for USB cameras and webcams, including barcode and motion detection. For more information, see [Device Message Syntax: Camera](/mendix-workstation/device-syntax/#camera).
+* Device testing – We added a test view to the Workstation Client to test devices directly on the computer, like the **Test Your Station** page in Workstation Management. For more information, see [Using the Workstation Client: Testing Devices](/mendix-workstation/use-client/#testing-devices).
 
 #### Improvements
 
-* Credential storage - The Workstation Client now encrypts its API key at rest with the secret store of the operating system. Existing API keys are encrypted automatically after the upgrade. This has the following implications:
-    * Potentially breaking change - The Workstation Client now requires a secret store of the operating system and does not start without it. On Linux, ensure that a keyring is available. For more information, see [Troubleshooting the Workstation Client: Safe Storage Is Unavailable](/mendix-workstation/troubleshooting-workstation-client/#safe-storage-unavailable).
+* Credential storage – The Workstation Client now encrypts its API key at rest with the secret store of the operating system. Existing API keys are encrypted automatically after the upgrade. This has the following implications:
+    * Potentially breaking change – The Workstation Client now requires a secret store of the operating system and does not start without it. On Linux, ensure that a keyring is available. For more information, see [Troubleshooting the Workstation Client: Safe Storage Is Unavailable](/mendix-workstation/troubleshooting-workstation-client/#safe-storage-unavailable).
     * In some scenarios, such as copying the configuration folder to another computer or downgrading the Client, the Workstation Client must be registered again. For more information, see [Troubleshooting the Workstation Client: Client Must Be Registered Again](/mendix-workstation/troubleshooting-workstation-client/#client-registered-again).
 
 ### Workstation Commons
 
 #### New Features
 
-* Camera functions - We added functions for barcode scanning and motion detection with camera devices. For more information, see [Workstation Commons: Camera](/mendix-workstation/commons/#camera).
-* Printing functions - We added functions to print plain text, raw printer commands, and PDF documents. For more information, see [Workstation Commons: Printer](/mendix-workstation/commons/#printer).
-* Message parsing - We added functions that convert the messages received from Bluetooth, camera, file, and printer devices into objects. For more information, see [Workstation Commons: Parsing Messages](/mendix-workstation/commons/#parsing-messages).
-* General utilities - We added functions to encode and decode Base64 content. For more information, see [Workstation Commons: General Utils](/mendix-workstation/commons/#general-utils).
+* Camera functions – We added functions for barcode scanning and motion detection with camera devices. For more information, see [Workstation Commons: Camera](/mendix-workstation/commons/#camera).
+* Printing functions – We added functions to print plain text, raw printer commands, and PDF documents. For more information, see [Workstation Commons: Printer](/mendix-workstation/commons/#printer).
+* Message parsing – We added functions that convert the messages received from Bluetooth, camera, file, and printer devices into objects. For more information, see [Workstation Commons: Parsing Messages](/mendix-workstation/commons/#parsing-messages).
+* General utilities – We added functions to encode and decode Base64 content. For more information, see [Workstation Commons: General Utils](/mendix-workstation/commons/#general-utils).
 
 #### Improvements
 
-* Request and SendMessage - Every device operation is now available as a request, which waits for the response of the device, and as a message, which is sent without waiting. For more information, see [Workstation Commons: Request and SendMessage](/mendix-workstation/commons/#request-sendmessage). This has the following implications:
-    * Breaking change - We renamed the existing Device Utils functions to their `Request` or `SendMessage` names. For example, `Printer_Print` is now `Printer_RequestPrint`, and `BLE_Read` is now `BLE_SendRead`. Update the calls in your app after upgrading the module.
-    * Breaking change - We removed the `CardReader_TransmitAPDU` function.
+* Request and SendMessage – Every device operation is now available as a request, which waits for the response of the device, and as a message, which is sent without waiting. For more information, see [Workstation Commons: Request and SendMessage](/mendix-workstation/commons/#request-sendmessage). This has the following implications:
+    * Breaking change – We renamed the existing Device Utils functions to their `Request` or `SendMessage` names. For example, `Printer_Print` is now `Printer_RequestPrint`, and `BLE_Read` is now `BLE_SendRead`. Update the calls in your app after upgrading the module.
+    * Breaking change – We removed the `CardReader_TransmitAPDU` function.
 
 #### Bug Fixes
 
@@ -123,7 +123,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Keyboard wedge devices - We added keyboard wedge support for Linux.
+* Keyboard wedge devices – We added keyboard wedge support for Linux.
 
 #### Bug Fixes
 
@@ -143,15 +143,15 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Keyboard wedge devices - We added a new *keyboard wedge* connection type to connect with devices sending data as keyboard strokes. This connection enables basic integration with input devices like barcode scanners, RFID readers, or measurement devices. For more information, see [Configuring Devices: Keyboard Wedge](/mendix-workstation/management-devices/#keyboard-wedge).
+* Keyboard wedge devices – We added a new *keyboard wedge* connection type to connect with devices sending data as keyboard strokes. This connection enables basic integration with input devices like barcode scanners, RFID readers, or measurement devices. For more information, see [Configuring Devices: Keyboard Wedge](/mendix-workstation/management-devices/#keyboard-wedge).
 
 #### Improvements
 
-* Station creation - We added the option to create a new station by copying an existing station. For more information, see [Managing Stations: Creating a New Station](/mendix-workstation/management-stations/#create-station).
-* Station details - The station details now display if there is a live connection to a Workstation Client on a registered computer.  
-* Adding devices - We improved the UX of the **Add Device** wizard when selecting a connection type.
-* Registering computers - When clipboard permissions are disabled in the browser, the registration key is instead fully displayed in a text area.
-* Private management - We made the following improvement to Private Workstation Management:
+* Station creation – We added the option to create a new station by copying an existing station. For more information, see [Managing Stations: Creating a New Station](/mendix-workstation/management-stations/#create-station).
+* Station details – The station details now display if there is a live connection to a Workstation Client on a registered computer.  
+* Adding devices – We improved the UX of the **Add Device** wizard when selecting a connection type.
+* Registering computers – When clipboard permissions are disabled in the browser, the registration key is instead fully displayed in a text area.
+* Private management – We made the following improvement to Private Workstation Management:
 
     * We made it easier to see if a specific SSO configuration was created at runtime or deploy time. A warning appears when editing a deploy-time configuration at runtime.
     * To provide more flexibility when switching SSO protocols, we made it possible to edit SSO users and their principal attributes.
@@ -168,23 +168,23 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Keyboard wedge connector - The Workstation Client can now receive On Event messages from input devices sending data as keystrokes wherever the current focus is, for example, in the web app or in an input field.
+* Keyboard wedge connector – The Workstation Client can now receive On Event messages from input devices sending data as keystrokes wherever the current focus is, for example, in the web app or in an input field.
 
 #### Improvements
 
-* Registering computers - We improved computer registration to prevent accidental double submissions. We also added a **Registering...** indicator while the request is in progress.
+* Registering computers – We improved computer registration to prevent accidental double submissions. We also added a **Registering...** indicator while the request is in progress.
 
 ### Workstation Connector
 
 #### Improvements
 
-* UX improvements - We added new toolbox icons for all exposed Javascript actions that dark-mode compatible and aligned with the icons in Studio Pro.
+* UX improvements – We added new toolbox icons for all exposed Javascript actions that dark-mode compatible and aligned with the icons in Studio Pro.
 
 ### Marketplace
 
 #### New Modules
 
-* Workstation Commons - The new Workstation Commons module contains a collection of nanoflows and snippets commonly used when building an app connected to peripherals devices, including the following:
+* Workstation Commons – The new Workstation Commons module contains a collection of nanoflows and snippets commonly used when building an app connected to peripherals devices, including the following:
 
     * A high-level nanoflow to simplify the interface with smartcard readers, Bluetooth, printers and file devices
     * Nanoflows to manage connecting and disconnecting to and from devices
@@ -201,29 +201,29 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Enhanced system information - Workstation Management can now receive and display additional system information from clients, including the specific client type.
+* Enhanced system information – Workstation Management can now receive and display additional system information from clients, including the specific client type.
 
 ### Workstation Client
 
 #### New Features
 
-* Improved client reporting - The client now sends detailed installation information (**Client Type**) to the Management system, providing better visibility into your deployment.
-* Consistent device states - We refactored how devices are managed to ensure they consistently report their status as available, connected, or in an error state.
+* Improved client reporting – The client now sends detailed installation information (**Client Type**) to the Management system, providing better visibility into your deployment.
+* Consistent device states – We refactored how devices are managed to ensure they consistently report their status as available, connected, or in an error state.
 
 #### Improvements
 
-* Enhanced Bluetooth reliability - Bluetooth devices now actively scan (poll) for status updates, and peripherals not seen within 30 seconds are automatically marked as unavailable. Connect can now be aborted through disconnecting. Disconnects are no longer marked as an error. Scanning state and seen devices are now visible in diagnostics.
-* Card reader - Card connection failure no longer results in an error and make the device unusable.
-* Improved printer status - Printers now actively poll to keep their availability status up-to-date.
-* Serial device polling - Serial devices now poll for status whenever a device is not connected, ensuring you always have the latest availability information. Disconnects are no longer marked as error.
-* TCP client validation - TCP client connections now include a 10-second timeout, can be aborted through disconnecting, and include validation to ensure the host and port are correctly configured.
-* Configuration warnings - The system now provides warnings if it detects potentially incorrect serial or TCP delimiter configurations, helping you avoid setup issues.
+* Enhanced Bluetooth reliability – Bluetooth devices now actively scan (poll) for status updates, and peripherals not seen within 30 seconds are automatically marked as unavailable. Connect can now be aborted through disconnecting. Disconnects are no longer marked as an error. Scanning state and seen devices are now visible in diagnostics.
+* Card reader – Card connection failure no longer results in an error and make the device unusable.
+* Improved printer status – Printers now actively poll to keep their availability status up-to-date.
+* Serial device polling – Serial devices now poll for status whenever a device is not connected, ensuring you always have the latest availability information. Disconnects are no longer marked as error.
+* TCP client validation – TCP client connections now include a 10-second timeout, can be aborted through disconnecting, and include validation to ensure the host and port are correctly configured.
+* Configuration warnings – The system now provides warnings if it detects potentially incorrect serial or TCP delimiter configurations, helping you avoid setup issues.
 
 ### Workstation Connector
 
 #### Bug Fixes
 
-* Connection stability - Fixed an issue that occasionally prevented the connector from successfully reconnecting to devices after a period of Workstation Client downtime.
+* Connection stability – Fixed an issue that occasionally prevented the connector from successfully reconnecting to devices after a period of Workstation Client downtime.
 
 ## 4.0.0
 
@@ -237,16 +237,16 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 #### New Features
 
-* Default printer usage - You can now create a printer device without specifying a name. The Workstation Client will then automatically connect to the default printer as defined by the operating system, simplifying printer setup.
-* PDF Printing Support (Windows) - We added support for PDF printing on Windows Workstation Clients, expanding your printing capabilities.
-* Enhanced usage report filters - The usage report now includes a workspace environment type filter (Test, Acceptance, or Production). This allows for more granular analysis of Workstation usage across different stages of your deployment.
-* More accurate usage metrics - We refined the usage report by switching unique client counting from Station ID to Client ID and added an environment-type filter. This provides more precise and insightful usage data.
-* Downloadable company usage report - You can now download the company usage report, making it easier to analyze and share your Workstation usage data offline.
-* Device class and station group management - We introduced full Create, Read, Update, and Delete (CRUD) capabilities for device classes and station groups. Newly created station groups and device classes are automatically selected during station creation, editing, or acceptance, streamlining your workflow.
+* Default printer usage – You can now create a printer device without specifying a name. The Workstation Client will then automatically connect to the default printer as defined by the operating system, simplifying printer setup.
+* PDF Printing Support (Windows) – We added support for PDF printing on Windows Workstation Clients, expanding your printing capabilities.
+* Enhanced usage report filters – The usage report now includes a workspace environment type filter (Test, Acceptance, or Production). This allows for more granular analysis of Workstation usage across different stages of your deployment.
+* More accurate usage metrics – We refined the usage report by switching unique client counting from Station ID to Client ID and added an environment-type filter. This provides more precise and insightful usage data.
+* Downloadable company usage report – You can now download the company usage report, making it easier to analyze and share your Workstation usage data offline.
+* Device class and station group management – We introduced full Create, Read, Update, and Delete (CRUD) capabilities for device classes and station groups. Newly created station groups and device classes are automatically selected during station creation, editing, or acceptance, streamlining your workflow.
 
 #### Improvements
 
-* Dependency security and updates - We fixed some vulnerabilities in dependencies, and updated the modules to enhance security and performance.
+* Dependency security and updates – We fixed some vulnerabilities in dependencies, and updated the modules to enhance security and performance.
 
 #### Bug Fixes
 
@@ -256,7 +256,7 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 #### New Features
 
-* Self-hosting option - With this GA release, we are introducing Private Workstation Management, providing you with the option to self-host the management solution. This offers greater control and flexibility over your deployment.
+* Self-hosting option – With this GA release, we are introducing Private Workstation Management, providing you with the option to self-host the management solution. This offers greater control and flexibility over your deployment.
 
 {{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Technical Account Manager, Specialized Account Executive, or Partner Contact. {{% /alert %}}
 
@@ -264,9 +264,9 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 #### New Features
 
-* Anonymized Client ID reporting - The Workstation Client now generates and sends an anonymized Client ID, derived from the machine's hardware/OS identifier, to the Management server. This enables more accurate and privacy-conscious usage metrics.
-* Single WebSocket connection for multiple devices - The Workstation Client can now connect to multiple devices over a single WebSocket connection, improving efficiency and reducing overhead.
-* New `SendDeviceRequest` API Support - The client now supports the new `SendDeviceRequest` API, allowing for more direct and streamlined communication with devices.
+* Anonymized Client ID reporting – The Workstation Client now generates and sends an anonymized Client ID, derived from the machine's hardware/OS identifier, to the Management server. This enables more accurate and privacy-conscious usage metrics.
+* Single WebSocket connection for multiple devices – The Workstation Client can now connect to multiple devices over a single WebSocket connection, improving efficiency and reducing overhead.
+* New `SendDeviceRequest` API Support – The client now supports the new `SendDeviceRequest` API, allowing for more direct and streamlined communication with devices.
 
 #### Bug Fixes
 
@@ -276,8 +276,8 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 #### New Features
 
-* Single WebSocket communication - The Workstation Connector now supports communication over a single WebSocket connection, enhancing performance and simplifying network configurations in the future.
-* New `SendDeviceRequest` JSA - A new SendDeviceRequest JSA (JavaScript API) has been introduced. This API returns the device response or error directly, and the request is not passed to the onMessage channel. This feature is applicable only on devices that support requests and requires Workstation Client 4.0 or later for full usage.
+* Single WebSocket communication – The Workstation Connector now supports communication over a single WebSocket connection, enhancing performance and simplifying network configurations in the future.
+* New `SendDeviceRequest` JSA – A new SendDeviceRequest JSA (JavaScript API) has been introduced. This API returns the device response or error directly, and the request is not passed to the onMessage channel. This feature is applicable only on devices that support requests and requires Workstation Client 4.0 or later for full usage.
 
 ## 3.8.0
 
@@ -287,37 +287,37 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 #### New Features
 
-* Workspace Usage Reports - You can now view detailed usage reports that show how Workstations are being used across your different workspaces and company. This helps you understand and optimize your Workstation deployment.
-* Automated Usage Metrics Collection - Workstation Clients now automatically report their daily active usage to the server, tracking which stations were used and on which days. This data powers the new usage reports, giving you valuable insights without extra effort.
-* Printer Device Support - We added full support for setting up and managing new printer device types directly within the Management UI. This expands the range of peripherals you can integrate with your Workstations.
-* Manual Bulk Configuration Push - A new **Sync Clients** button has been added to the station overview page, allowing you to manually sync client configurations for workstations that are out of sync. This provides a quick way to ensure all clients have the latest settings.
-* Workspace Environment Types - Workspaces can now be assigned an environment type (Test, Acceptance, Production) when created, and this can be changed in the workspace settings. This helps you better organize and manage your different development and deployment stages.
-* Serial Device Detection by pnpId - We added support for detecting serial devices using their pnpId. This provides another robust method for reliably identifying and connecting to serial devices.
+* Workspace Usage Reports – You can now view detailed usage reports that show how Workstations are being used across your different workspaces and company. This helps you understand and optimize your Workstation deployment.
+* Automated Usage Metrics Collection – Workstation Clients now automatically report their daily active usage to the server, tracking which stations were used and on which days. This data powers the new usage reports, giving you valuable insights without extra effort.
+* Printer Device Support – We added full support for setting up and managing new printer device types directly within the Management UI. This expands the range of peripherals you can integrate with your Workstations.
+* Manual Bulk Configuration Push – A new **Sync Clients** button has been added to the station overview page, allowing you to manually sync client configurations for workstations that are out of sync. This provides a quick way to ensure all clients have the latest settings.
+* Workspace Environment Types – Workspaces can now be assigned an environment type (Test, Acceptance, Production) when created, and this can be changed in the workspace settings. This helps you better organize and manage your different development and deployment stages.
+* Serial Device Detection by pnpId – We added support for detecting serial devices using their pnpId. This provides another robust method for reliably identifying and connecting to serial devices.
 
 #### Improvements
 
-* Streamlined Station Detail Page - The station detail page UI has been improved by making options like **detect card reader** and **dev mode edit** less prominent. This declutters the interface and highlights the most frequently used settings.
+* Streamlined Station Detail Page – The station detail page UI has been improved by making options like **detect card reader** and **dev mode edit** less prominent. This declutters the interface and highlights the most frequently used settings.
 
 ### Workstation Client
 
 #### New Features
 
-* Printer Device Support - The Workstation Client now fully supports the new printer device type. This means your Workstation Clients can seamlessly interact with configured printers.
+* Printer Device Support – The Workstation Client now fully supports the new printer device type. This means your Workstation Clients can seamlessly interact with configured printers.
 
     {{% alert color="info" %}}Only raw text and label printers are supported.{{% /alert %}}
 
-* New Diagnostics Page - A new Diagnostics page is available on the Client (when developer mode is enabled). This page displays crucial information like available printers, serial ports, card readers, credentials, station configuration, system info, and log levels, making troubleshooting much easier.
-* Serial Device Detection by pnpId - The client now supports detecting serial devices using their pnpId. This enhances the reliability of connecting to serial devices, especially in environments where port assignments might change.
+* New Diagnostics Page – A new Diagnostics page is available on the Client (when developer mode is enabled). This page displays crucial information like available printers, serial ports, card readers, credentials, station configuration, system info, and log levels, making troubleshooting much easier.
+* Serial Device Detection by pnpId – The client now supports detecting serial devices using their pnpId. This enhances the reliability of connecting to serial devices, especially in environments where port assignments might change.
 
 #### Fixes
 
-* Studio Pro Login Blocked - Fixed an issue where the client blocked sign-in to Studio Pro when six or more devices were configured, due to an overlap in port usage. Studio Pro users can now sign in without issues, regardless of the number of configured devices.
+* Studio Pro Login Blocked – Fixed an issue where the client blocked sign-in to Studio Pro when six or more devices were configured, due to an overlap in port usage. Studio Pro users can now sign in without issues, regardless of the number of configured devices.
 
 ### Workstation Connector
 
 #### Improvements
 
-* Improved Get/Create Device Action - The `Get/Create Device` action now returns an empty object instead of throwing an error when no matching device is found. This makes your custom integrations more robust and prevents unexpected crashes.
+* Improved Get/Create Device Action – The `Get/Create Device` action now returns an empty object instead of throwing an error when no matching device is found. This makes your custom integrations more robust and prevents unexpected crashes.
 
 ## 3.7.0
 
@@ -327,28 +327,28 @@ We are thrilled to announce the General Availability (GA) release of our Worksta
 
 #### New Features
 
-* Smart configuration updates (auto-refresh) - You can now choose if your workstation configurations should automatically update when changes are made, or if you prefer to trigger updates manually. This gives you more control and ensures your workstations always have the correct settings with less effort.
-* Real-time workstation status - The Workstation Management UI now shows the live configuration status of each Workstation Client, letting you quickly see if a workstation is **Up to Date** or **Outdated**. This provides immediate insight into your deployment's health.
-* Enhanced Serial Device detection settings - You can now configure Workstation Management to identify your serial devices using more reliable information like their Friendly Name, Serial Number, or Manufacturer. This helps your Workstation Clients reliably find and connect to the correct serial device, even if its port number changes.
+* Smart configuration updates (auto-refresh) – You can now choose if your workstation configurations should automatically update when changes are made, or if you prefer to trigger updates manually. This gives you more control and ensures your workstations always have the correct settings with less effort.
+* Real-time workstation status – The Workstation Management UI now shows the live configuration status of each Workstation Client, letting you quickly see if a workstation is **Up to Date** or **Outdated**. This provides immediate insight into your deployment's health.
+* Enhanced Serial Device detection settings – You can now configure Workstation Management to identify your serial devices using more reliable information like their Friendly Name, Serial Number, or Manufacturer. This helps your Workstation Clients reliably find and connect to the correct serial device, even if its port number changes.
 
 #### Improvements
 
-* Configurable auto-refresh behavior - We provided options for how auto-refresh works, including default settings for workspaces and how clients respond in both automatic and manual modes. This allows for flexible management of your workstation configurations.
+* Configurable auto-refresh behavior – We provided options for how auto-refresh works, including default settings for workspaces and how clients respond in both automatic and manual modes. This allows for flexible management of your workstation configurations.
 
 #### Fixes
 
-* UI inconsistencies - We fixed several visual inconsistencies in the Management UI, particularly improving the display and user experience when using dark mode. This makes the interface cleaner and more consistent for everyone.
+* UI inconsistencies – We fixed several visual inconsistencies in the Management UI, particularly improving the display and user experience when using dark mode. This makes the interface cleaner and more consistent for everyone.
 
 ### Workstation Client
 
 #### New Features
 
-* Automatic Client startup - The Workstation Client application now automatically launches silently in the background when your system starts up. This ensures your workstations are always ready to go without needing manual intervention after a reboot.
-* Smart Serial Device finder - The client can now use the Friendly Name, Serial Number, or Manufacturer to find and connect to serial devices. This means your client can reliably connect to the right device even if its assigned port changes.
+* Automatic Client startup – The Workstation Client application now automatically launches silently in the background when your system starts up. This ensures your workstations are always ready to go without needing manual intervention after a reboot.
+* Smart Serial Device finder – The client can now use the Friendly Name, Serial Number, or Manufacturer to find and connect to serial devices. This means your client can reliably connect to the right device even if its assigned port changes.
 
 #### Improvements
 
-* Granular configuration change response - The client now handles configuration changes more smoothly and with less downtime. This means your stations will experience fewer interruptions and apply new settings more efficiently.
+* Granular configuration change response – The client now handles configuration changes more smoothly and with less downtime. This means your stations will experience fewer interruptions and apply new settings more efficiently.
 
 ## 3.6.1
 
@@ -419,9 +419,9 @@ For more information, see [Nanoflows](/mendix-workstation/develop-app/#javascrip
 
 * We deprecated the following actions:
 
-    * `SendMessage` - Deprecated in favor of `SendDeviceMessage` and `WaitForDeviceMessage`
-    * `SubscribeToMessages` - Deprecated in favor of `GetCreateDevice`
-    * `SubscribeToErrors` - Deprecated in favor of `GetCreateDevice`
+    * `SendMessage` – Deprecated in favor of `SendDeviceMessage` and `WaitForDeviceMessage`
+    * `SubscribeToMessages` – Deprecated in favor of `GetCreateDevice`
+    * `SubscribeToErrors` – Deprecated in favor of `GetCreateDevice`
 
     The deprecated actions are longer exposed as nanoflows and have been moved to the `_USE_ME/Deprecated` folder.
 
@@ -433,21 +433,21 @@ For more information, see [Nanoflows](/mendix-workstation/develop-app/#javascrip
 
 #### New Features
 
-* Updated access controls for Computer Admin role - The Computer Admin role now has updated access permissions, allowing them only to read and view existing bulk registration tokens and their associated details.
+* Updated access controls for Computer Admin role – The Computer Admin role now has updated access permissions, allowing them only to read and view existing bulk registration tokens and their associated details.
 
-* Improved UI for bulk registration token management - We updated the user interface for managing bulk registration tokens, enhancing the overall user experience and making it more intuitive to work with.
+* Improved UI for bulk registration token management – We updated the user interface for managing bulk registration tokens, enhancing the overall user experience and making it more intuitive to work with.
 
 #### Fixes
 
-* Unassigned computers excluded from station export - We fixed an issue where unassigned computers were incorrectly included in station exports. Now, unassigned computers are no longer exportable as stations and will not appear in the list of stations available for download, ensuring cleaner and more accurate exports.
+* Unassigned computers excluded from station export – We fixed an issue where unassigned computers were incorrectly included in station exports. Now, unassigned computers are no longer exportable as stations and will not appear in the list of stations available for download, ensuring cleaner and more accurate exports.
 
-* Duplicate station naming in single import - The single import behavior has been updated to accept duplicate names by automatically adding a numeric suffix when a station with the same name is imported, ensuring unique identification and smoother workflow. We addressed an issue where empty stations were unintentionally created.
+* Duplicate station naming in single import – The single import behavior has been updated to accept duplicate names by automatically adding a numeric suffix when a station with the same name is imported, ensuring unique identification and smoother workflow. We addressed an issue where empty stations were unintentionally created.
 
 ### Workstation Client
 
 #### Fixes
 
-* Robust remote deregistration error handling - We fixed an issue where an uncaught error pop-up could occasionally appear if Workstation Management crashed immediately after a remote deregistration of a station. This ensures a more stable and resilient client experience.
+* Robust remote deregistration error handling – We fixed an issue where an uncaught error pop-up could occasionally appear if Workstation Management crashed immediately after a remote deregistration of a station. This ensures a more stable and resilient client experience.
 
 ## 3.4.0
 
@@ -457,43 +457,43 @@ For more information, see [Nanoflows](/mendix-workstation/develop-app/#javascrip
 
 #### New Features
 
-* Enhanced bulk registration process - We improved the bulk registration experience to make managing multiple workstations even more efficient and intuitive.
+* Enhanced bulk registration process – We improved the bulk registration experience to make managing multiple workstations even more efficient and intuitive.
 
-    * New unassigned stations list - If a newly registered station cannot be automatically matched with a preconfigured station, it now appears in the new **Unassigned Stations** list. Before you can edit these unassigned stations, you must first either accept or manually assign them, giving you better control over station assignments.
-    * Code snippet copier - To simplify the registration process from the terminal, we added a convenient code snippet copier, making the process quicker and less prone to errors.
-    * Reopenable registration token - You can now reopen and copy the registration token if you need to access it again after initial generation.
-    * Token expiration banner - A clear banner now displays if your registration token has expired, helping you stay informed and avoid registration issues.
+    * New unassigned stations list – If a newly registered station cannot be automatically matched with a preconfigured station, it now appears in the new **Unassigned Stations** list. Before you can edit these unassigned stations, you must first either accept or manually assign them, giving you better control over station assignments.
+    * Code snippet copier – To simplify the registration process from the terminal, we added a convenient code snippet copier, making the process quicker and less prone to errors.
+    * Reopenable registration token – You can now reopen and copy the registration token if you need to access it again after initial generation.
+    * Token expiration banner – A clear banner now displays if your registration token has expired, helping you stay informed and avoid registration issues.
 
-* Advanced station import options - We enhanced the station import process by providing more robust options for handling duplicate stations. When importing, you can now specify how you want to manage existing named stations. The following options are available:
+* Advanced station import options – We enhanced the station import process by providing more robust options for handling duplicate stations. When importing, you can now specify how you want to manage existing named stations. The following options are available:
  
-    * **Ignore** - Existing stations will not be updated or imported.
-    * **Duplicate** - A new station will be created with a suffix number.
-    * **Replace** - The existing station will be entirely replaced by the imported one.
-    * **Merge** - This option allows for a more granular approach. If you choose to merge, you can then decide whether to ignore, replace, or duplicate individual duplicate devices.
+    * **Ignore** – Existing stations will not be updated or imported.
+    * **Duplicate** – A new station will be created with a suffix number.
+    * **Replace** – The existing station will be entirely replaced by the imported one.
+    * **Merge** – This option allows for a more granular approach. If you choose to merge, you can then decide whether to ignore, replace, or duplicate individual duplicate devices.
 
 #### Fixes
 
-* **Add Device Configuration** dialog stability - We fixed a bug that was causing the **Add Device Configuration** dialog to close unexpectedly, ensuring a smoother configuration experience.
-* Improved import summary UI - We reworked the import summary UI for better usability and user experience, providing clearer and more intuitive feedback on your import operations.
+* **Add Device Configuration** dialog stability – We fixed a bug that was causing the **Add Device Configuration** dialog to close unexpectedly, ensuring a smoother configuration experience.
+* Improved import summary UI – We reworked the import summary UI for better usability and user experience, providing clearer and more intuitive feedback on your import operations.
 
 #### Known Bugs and Limitations
 
-* Linux terminal registration errors - When registering clients from the terminal on Linux, users may encounter misleading error messages. Despite the error messages, the registration process itself is successful. 
-* Manual refresh required for UI updates - To display the most up-to-date information, you must currently refresh the token expiration banner and the unassigned stations list manually by using the **Refresh** button.
+* Linux terminal registration errors – When registering clients from the terminal on Linux, users may encounter misleading error messages. Despite the error messages, the registration process itself is successful. 
+* Manual refresh required for UI updates – To display the most up-to-date information, you must currently refresh the token expiration banner and the unassigned stations list manually by using the **Refresh** button.
 
 ### Workstation Client
 
 #### New Features
 
-* Automatic client reset on deregistration - To ensure a clean state and seamless management, the client now automatically resets itself when it is deregistered from Workstation Management.
-* Improved handling of unknown computer status - When a computer is not matched to an available station, the client now displays a **Waiting** message, indicating that the system is awaiting configuration.
+* Automatic client reset on deregistration – To ensure a clean state and seamless management, the client now automatically resets itself when it is deregistered from Workstation Management.
+* Improved handling of unknown computer status – When a computer is not matched to an available station, the client now displays a **Waiting** message, indicating that the system is awaiting configuration.
 
 #### Fixes
 
-* Uninstallation cleanup - We resolved an issue where the *Mendix Workstation* folder was not being completely removed during uninstallation. This fix ensures a cleaner uninstallation process.
-* Error handling for bulk registration - We fixed an error that occurred when attempting to bulk re-register an unassigned station from PowerShell, leading to a more robust registration experience.
-* Special character display in license agreements - We fixed an issue that caused special characters to display incorrectly within the license agreement. All text is now rendered accurately.
-* Flexible BLE characteristic matching - We resolved an issue where BLE characteristics and services were case-sensitive and did not accept standard UUID formats. Now, BLE characteristics can be specified in uppercase and can contain dashes, providing greater flexibility and compatibility. For example, `EF680301-9B35-4933-9B10-52FFA9740042` will now be correctly recognized.
+* Uninstallation cleanup – We resolved an issue where the *Mendix Workstation* folder was not being completely removed during uninstallation. This fix ensures a cleaner uninstallation process.
+* Error handling for bulk registration – We fixed an error that occurred when attempting to bulk re-register an unassigned station from PowerShell, leading to a more robust registration experience.
+* Special character display in license agreements – We fixed an issue that caused special characters to display incorrectly within the license agreement. All text is now rendered accurately.
+* Flexible BLE characteristic matching – We resolved an issue where BLE characteristics and services were case-sensitive and did not accept standard UUID formats. Now, BLE characteristics can be specified in uppercase and can contain dashes, providing greater flexibility and compatibility. For example, `EF680301-9B35-4933-9B10-52FFA9740042` will now be correctly recognized.
 
 ## 3.3.0
 
@@ -503,25 +503,25 @@ For more information, see [Nanoflows](/mendix-workstation/develop-app/#javascrip
 
 #### New Features
 
-* Automatic suffixing for duplicate workstations - To make managing your workstations even smoother, we implemented automatic suffixing for imported workstations that have duplicate names. This helps prevent naming conflicts and keeps your environment tidy.
-* Feedback module replaced by the new Forum Space - We removed the Feedback function in the Workstation Management. Don't worry, your voice is still incredibly important to us! Please share your questions, ideas, and feedback in the new dedicated [Mendix Community Space for Mendix Workstation](https://community.mendix.com/link/spaces/mendix-workstation-client). This change will help us centralize discussions and provide better support.
-* Special characters in workspace names - You can now use special characters in your workspace names, giving you more flexibility and personalization.
-* Unique auto-accepted computer names - We added a uniqueness validation to the **Auto-Accepted Computer Name** field used for bulk registration. This ensures that each computer name is distinct, preventing potential conflicts during the registration process.
+* Automatic suffixing for duplicate workstations – To make managing your workstations even smoother, we implemented automatic suffixing for imported workstations that have duplicate names. This helps prevent naming conflicts and keeps your environment tidy.
+* Feedback module replaced by the new Forum Space – We removed the Feedback function in the Workstation Management. Don't worry, your voice is still incredibly important to us! Please share your questions, ideas, and feedback in the new dedicated [Mendix Community Space for Mendix Workstation](https://community.mendix.com/link/spaces/mendix-workstation-client). This change will help us centralize discussions and provide better support.
+* Special characters in workspace names – You can now use special characters in your workspace names, giving you more flexibility and personalization.
+* Unique auto-accepted computer names – We added a uniqueness validation to the **Auto-Accepted Computer Name** field used for bulk registration. This ensures that each computer name is distinct, preventing potential conflicts during the registration process.
 
 #### Fixes
 
-* Enhanced export and import experience - We revised the UI for the import and export process for a better user experience.
+* Enhanced export and import experience – We revised the UI for the import and export process for a better user experience.
     * The **Select individual stations** dropdown has been reworked for better usability.
     * The **Import summary** now provides clearer insights into your import operations.
-* Runtime error prevention - We addressed and fixed several issues that were causing runtime errors, leading to a more stable experience.
-* Duplicate application prevention during import - We resolved a bug that caused applications to be duplicated when importing stations. Now, when importing stations that reference an application, the system checks for existing applications with the same identifying properties (like URL and Public Key). If an application already exists, it is reused, preventing unnecessary duplicates and ensuring a cleaner application registry.
-* Input validation for station creation - We fixed an issue in the station creation process where clicking **Continue** with an empty input field could lead to an error. The process is now more robust.
+* Runtime error prevention – We addressed and fixed several issues that were causing runtime errors, leading to a more stable experience.
+* Duplicate application prevention during import – We resolved a bug that caused applications to be duplicated when importing stations. Now, when importing stations that reference an application, the system checks for existing applications with the same identifying properties (like URL and Public Key). If an application already exists, it is reused, preventing unnecessary duplicates and ensuring a cleaner application registry.
+* Input validation for station creation – We fixed an issue in the station creation process where clicking **Continue** with an empty input field could lead to an error. The process is now more robust.
 
 ### Workstation Client
 
 #### Fixes
 
-* File name emission for the file connector - We resolved an issue where the file connector was not returning the changed file name when subscribing to file changes. Now, when you subscribe to a file path, the file connector correctly emits the specific file names on file change events, providing more precise information.
+* File name emission for the file connector – We resolved an issue where the file connector was not returning the changed file name when subscribing to file changes. Now, when you subscribe to a file path, the file connector correctly emits the specific file names on file change events, providing more precise information.
 
 ## 3.2.0
 
@@ -545,20 +545,20 @@ On the **Station** page, have added a new **Refresh Client** action. You can use
 
 #### Fixes
 
-* Dark mode display - We resolved some display issues which could occur when using Workstation Management in dark mode.
-* Workspace sorting - We corrected an issue affecting the sorting behavior of workspaces.
-* Application configuration duplication - We fixed a problem that could lead to users inadvertently creating duplicate application configurations by adding a space before or after the key or URL.
+* Dark mode display – We resolved some display issues which could occur when using Workstation Management in dark mode.
+* Workspace sorting – We corrected an issue affecting the sorting behavior of workspaces.
+* Application configuration duplication – We fixed a problem that could lead to users inadvertently creating duplicate application configurations by adding a space before or after the key or URL.
 
 #### Known Bugs and Limitations
 
-* Importing duplicate app configurations - Attempting to import a configuration that includes applications already defined (for example, with an existing URL and Public Key) results in UI errors.
+* Importing duplicate app configurations – Attempting to import a configuration that includes applications already defined (for example, with an existing URL and Public Key) results in UI errors.
 
 {{% alert color="info" %}}
 To work around this issue, you can can import the configuration by excluding the applications and then manually setting them up afterward.
 {{% /alert %}}
 
-* Indistinguishable station duplicates - Importing the same station multiple times creates duplicates that are currently not distinguishable within the system.
-* Duplicate application creation on import - When importing multiple stations that all use the same application, and applications are included in the import, the application is created multiple times (once for each station).
+* Indistinguishable station duplicates – Importing the same station multiple times creates duplicates that are currently not distinguishable within the system.
+* Duplicate application creation on import – When importing multiple stations that all use the same application, and applications are included in the import, the application is created multiple times (once for each station).
 
 ### Workstation Client
 
@@ -574,14 +574,14 @@ The Workstation Client automatically resets on the next refresh when its associa
 
 #### Fixes and Other Changes
 
-* Linux ARM64 executable name - For improved consistency, we removed the spaces from the executable name of the Workstation Client (Linux ARM64 version).
-* Bluetooth LE device discovery - We addressed an issue where the discovery process for Bluetooth LE devices did not correctly recognize the full device name, which previously led to failed connection attempts. The Workstation Client now accurately matches Bluetooth BT advertisement names.
+* Linux ARM64 executable name – For improved consistency, we removed the spaces from the executable name of the Workstation Client (Linux ARM64 version).
+* Bluetooth LE device discovery – We addressed an issue where the discovery process for Bluetooth LE devices did not correctly recognize the full device name, which previously led to failed connection attempts. The Workstation Client now accurately matches Bluetooth BT advertisement names.
 
 ### Workstation Connector
 
 #### Fixes
 
-* Refresh of the updated device list - We fixed an issue where updates to the device list were not immediately sent to the web application after a configuration update, requiring a manual refresh. The list is now updated immediately.
+* Refresh of the updated device list – We fixed an issue where updates to the device list were not immediately sent to the web application after a configuration update, requiring a manual refresh. The list is now updated immediately.
 
 ## 3.1.0
 
@@ -725,7 +725,7 @@ The third pre-release of Mendix Workstation is available under the conditions of
 #### Workstation Management
 
 * The **Team** page enables users to share workspaces and assign individual permissions, facilitating collaborative deployment of Workstation projects across multiple environments and sites at scale.
-* Apps are managed at workspace level on the **Apps** page. Each app can be enabled or disabled individually - per station, for a group of stations, or for all stations within a workspace.
+* Apps are managed at workspace level on the **Apps** page. Each app can be enabled or disabled individually – per station, for a group of stations, or for all stations within a workspace.
 * App keys are generated from **Apps** and then copied into a workspace app, allowing a single instance of a deployed app to be used with multiple workspaces.
 * The **Test Your Station** page can be activated or deactivated on the **Settings** page.
 * Stations in a workspace can be grouped into a **Station Group**.

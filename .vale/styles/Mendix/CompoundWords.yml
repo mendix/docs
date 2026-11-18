@@ -4,7 +4,7 @@
 extends: substitution
 message: "Use '%s' instead of '%s'"
 level: error
-ignorecase: true
+ignorecase: false
 scope:
   - paragraph
   - heading
@@ -14,10 +14,13 @@ scope:
 action:
   name: replace
 swap:
-  'data-set': 'dataset'
-  'data set': 'dataset'
+  'data[ -]set': 'dataset'
+  'Data[ -]set': 'Dataset'
   'end point': 'endpoint'
+  'End point': 'Endpoint'
   'check box': 'checkbox'
-  'home-page': 'home page'
-  'homepage': 'home page'
+  'Check box': 'Checkbox'
+  'home-?page': 'home page'
+  'Home-?page': 'Home page'
   'end user': 'end-user'
+  'End user': 'End-user'

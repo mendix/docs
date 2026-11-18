@@ -129,7 +129,7 @@ You can optionally control both reference creation and the output returned for t
 
 Function calling enables LLMs to connect with external tools to gather information, execute actions, convert natural language into structured data, and more. Function calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response.
 
-The model does not call the function. Instead, it returns a tool called JSON structure that builds the input of the function (or functions) so they can be executed as part of the chat completions operation. Functions in Mendix are microflows that can be registered within the request to the LLM. The connector handles the tool call response and executes the function microflows until the API returns the assistant's final response.
+The model does not call the function. Instead, it returns a tool call JSON structure that builds the input of the function (or functions) so they can be executed as part of the chat completions operation. Functions in Mendix are microflows that can be registered within the request to the LLM. The connector handles the tool call response and executes the function microflows until the API returns the assistant's final response.
 
 Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer, or String. Additionally, they may accept the [Request](/agents/agents-kit-1/reference-guide/commons/#request) or [Tool](/agents/agents-kit-1/reference-guide/commons/#tool) objects as inputs. The function microflow must return a String value.
 
@@ -155,7 +155,7 @@ Document chat enables the model to interpret and analyze documents, such as PDFs
 
 For [Chat Completions (without history)](/agents/agents-kit-1/reference-guide/commons/#chat-completions-without-history), `OptionalFileCollection` is an optional input parameter. For [Chat completions (with history)](/agents/agents-kit-1/reference-guide/commons/#chat-completions-with-history), a `FileCollection` can optionally be added to individual user messages using [Add Message to Request](/agents/agents-kit-1/reference-guide/commons/#chat-add-message-to-request).
 
-In the entire conversation, you can pass up to five documents that are smaller than 4.5 MB each. There is also a practical, model-dependent limit on the number of pages a document can contain, typically around 100 pages. This is not fixed and can vary with the selected model and the complexity of the file. For example, images, heavy formatting, or embedded content can reduce the effective page limit. If you expect to work with very large documents, consider splitting them into smaller files or providing summarized extracts to improve reliability.
+In the entire conversation, you can pass up to five documents that are smaller than 4.5 MB each. There is also a practical, model-dependent limit on the number of pages a document can contain, typically around 100 pages. This is not fixed and can vary with the selected model and the complexity of the file. For example, images, heavy formatting, or embedded content can reduce the effective page limit. If you expect to work with large documents, consider splitting them into smaller files or providing summarized extracts to improve reliability.
 
 The following file types are accepted: PDF, CSV, DOC, DOCX, XLS, XLSX, HTML, TXT, and MD.
 
@@ -330,7 +330,7 @@ To check your JDK version and update it if necessary, follow these steps:
 
 ### Migrating From Add-on Module to App Module
 
-Because the module has been changed with version 3.0.0 from an add-on to an app module, updating it via Marketplace requires a migration to ensure it works properly with your app.
+Because the module has been changed with version 3.0.0 from an add-on to an app module, updating it via Marketplace requires a migration to ensure it works with your app.
 
 To do this, follow these steps:
 

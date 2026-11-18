@@ -13,7 +13,7 @@ aliases:
 
 This guide explains how to build a custom connector that uses [GenAICommons](/agents/agents-kit-2/reference-guide/commons/) entities to integrate the large language model (LLM) of your choice with the [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/) module.
 
-Build a custom connector when you need to integrate an LLM provider that is not supported by the existing [Agents Kit connectors](/agents/agents-kit-2/#connectors). Building a connector that follows the [GenAICommons](/agents/agents-kit-2/reference-guide/commons/) interface means that your connector is compatible with other Agents Kit modules, so you can reuse chat UI components from [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/), build agentic functionality with [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/), and set up quickly using [starter apps](/agents/agents-kit-2/#starter-apps) such as the Blank GenAI App.
+Build a custom connector when you need to integrate an LLM provider that is not supported by the existing [Agents Kit connectors](/agents/agents-kit-2/#connectors). Building a connector that follows the [GenAICommons](/agents/agents-kit-2/reference-guide/commons/) interface means that your connector is compatible with other Agents Kit modules, so you can reuse chat UI components from [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/), build agentic functionality with [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/), and set up using [starter apps](/agents/agents-kit-2/#starter-apps) such as the Blank GenAI App.
 
 {{< figure src="/attachments/genai/howto-byo/connectors_diagram.png" alt="" >}}
 
@@ -76,7 +76,7 @@ During development, you learn the key considerations for creating your own conne
 
 To enable chat completion, the key microflow to consider is `ChatCompletions_WithHistory`, located in the GenAICommons module. This microflow derives and calls the appropriate microflow from the provided DeployedModel. This ensures that the module remains independent of individual connectors. This is especially important for modules like ConversationalUI, which should work seamlessly with any connector following the same principles.
 
-To integrate properly, the microflow must supply two essential input objects:
+To integrate, the microflow must supply two essential input objects:
 
 * [DeployedModel](/agents/agents-kit-2/reference-guide/commons/#deployed-model) – Represents the specific model being used and determines which connector (microflow) is being called.
 * [Request](/agents/agents-kit-2/reference-guide/commons/#request) – Contains the details of the user's input and conversation history as well as other configurations.
@@ -102,7 +102,7 @@ Because different providers return responses in different formats, map the provi
 
 #### Specialization
 
-The `Request` and `Response` objects are essential for enabling chat functionalities in ConversationalUI. However, to correctly call and interact with an LLM, the model must be properly configured. This is where the `DeployedModel` entity becomes essential.
+The `Request` and `Response` objects are essential for enabling chat functionalities in ConversationalUI. However, to correctly call and interact with an LLM, the model must be configured. This is where the `DeployedModel` entity becomes essential.
 
 The `DeployedModel` represents a GenAI model that the Mendix app can invoke. It tells your app module which microflow to call and how to communicate with the model. It includes generic attributes commonly used across different LLM providers. However, because each provider may require additional model-specific details, the `DeployedModel` entity does not cover all necessary attributes.
 
@@ -152,7 +152,7 @@ To test the connector, set up the configuration and deployed models. The Echo co
 
 To set this up:
 
-1. Find **Echo Configurations** in the **Management** section of the homepage. This leads you to the page where you can set up the configuration for the Echo connector.
+1. Find **Echo Configurations** in the **Management** section of the home page. This leads you to the page where you can set up the configuration for the Echo connector.
 2. Click **New**, fill in the required fields, and click **Save**. For this example, leave the input empty because no real credentials are needed. When you click **Save**, two `EchoDeployedModel` objects are created for the new configuration. Because the Echo connector simply returns the request content as the response, these serve as test models for the Chat UI examples. In a custom connector, this step involves importing available models based on the configuration or allowing the admin to create models manually.
-3. After you create the configuration and the models, go back to the homepage and open one of the showcases in the **Conversational UI** section.
+3. After you create the configuration and the models, go back to the home page and open one of the showcases in the **Conversational UI** section.
 4. In the **Model** drop-down list, select one of the models created by the Echo connector and start chatting.

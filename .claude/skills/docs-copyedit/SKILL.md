@@ -21,7 +21,8 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 * Improve word choice (more precise or accessible terms)
 * Change passive voice to active voice where appropriate
 * Remove first-person plural (we, us, our, let's), except in release notes
-* Remove bold and italics used for emphasis (reword or use alert shortcodes if needed)
+* Remove bold, italics, and all caps used for emphasis (reword or use alert shortcodes if needed)
+* Flag any icons described in words instead of the `icon` shortcode, and suggest a matching icon name and tooltip from `icon-demo.md`
 * Apply Mendix style guide standards (overrides the Microsoft Writing Style Guide)
 * Apply Microsoft Writing Style Guide standards, unless they conflict with the Mendix style guide standards
 

@@ -1,6 +1,6 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Headings and Titles)
 extends: capitalization
-message: "Use title case capitalization for '%s'."
+message: "Use title case for '%s': Capitalize the main words. Lowercase articles, short prepositions, and conjunctions."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#capitalization
 level: error
 scope: heading
@@ -9,7 +9,12 @@ style: Chicago
 indicators:
   - ':'
 exceptions:
-  # Words with non-standard capitalization that shouldn't be modified
+  # Don't modify these words with non-standard capitalization
   - macOS
   - iOS
   - IdP
+  # Don't force lowercase for these words
+  - Between
+  - During
+  - Through
+  - Without

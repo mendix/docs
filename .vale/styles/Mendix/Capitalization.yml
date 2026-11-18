@@ -23,6 +23,7 @@ swap:
   '(^|[^./-])java': '$1Java'  # Skips .java files, java-in-names, and java in paths
   macos: macOS
   maia: Maia
+  'maia make': 'Maia Make'
   markdown: Markdown
   marketplace: Marketplace
   '(^|[^.>@])mendix': '$1Mendix'  # Skips com.mendix names, domains, link text after >, and @mendix emails

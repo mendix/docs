@@ -615,6 +615,12 @@ After setting up the MCP server, you can now create a Mendix AI agent and connec
 
 10. Test your agent by asking questions related to the exposed tools of the Snowflake MCP server, for example, *Do I have a desk reservation for tomorrow?*.
 
+### Video Walkthrough
+
+For a walkthrough showing the configuration steps, refer to the following video:
+
+{{< youtube UAMmNvTrplo >}}
+
 ### Example System Prompt {#example-prompt}
 
 The following is an example of a system prompts that specifies the schema and table name, and provides instructions on how to use the MCP server tools:

@@ -4,7 +4,8 @@ linktitle: "Community"
 url: /releasenotes/community-tools/
 description: "Release notes for the community tools in the Mendix Platform."
 weight: 37
-numberless_headings: true
+cascade:
+    - numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

@@ -20,11 +20,11 @@ For auditing purposes, you can view a log of the most recent actions taken by us
 
 Private Mendix Platform activity logs track actions that impact the state or configuration of the platform and its managed resources. This includes the following activities:
 
-* Creation - When a new resource or configuration is initiated.
-* Update or modification - When an existing resource or configuration is changed.
-* Deletion - When a resource or configuration is removed.
-* State Changes - Significant transitions in the lifecycle of a resource (for example, publishing, retiring, archiving).
-* Authentication - User login attempts.
+* Creation – When a new resource or configuration is initiated.
+* Update or modification – When an existing resource or configuration is changed.
+* Deletion – When a resource or configuration is removed.
+* State Changes – Significant transitions in the lifecycle of a resource (for example, publishing, retiring, archiving).
+* Authentication – User login attempts.
 
 ### Recent Actions
 
@@ -32,72 +32,72 @@ The **Recent Actions** tab contains a list of the recent actions, logged for the
 
 The following actions are logged:
 
-* User management - Activities related to user accounts and their access within Private Mendix Platform:
+* User management – Activities related to user accounts and their access within Private Mendix Platform:
 
-    * User creation - New user accounts created
-    * User deletion - User accounts removed
-    * User profile updates - Changes to user details (for example, name, contact information)
-    * User role settings updates - Modifications to a user's assigned roles and permissions
-    * User login - Successful and failed login attempts
+    * User creation – New user accounts created
+    * User deletion – User accounts removed
+    * User profile updates – Changes to user details (for example, name, contact information)
+    * User role settings updates – Modifications to a user's assigned roles and permissions
+    * User login – Successful and failed login attempts
 
-* Role management - Activities related to the definition and modification of access roles:
+* Role management – Activities related to the definition and modification of access roles:
 
-    * Role creation - New custom roles defined
-    * Role deletion - Existing custom roles removed
-    * Role permissions updates - Changes to the permissions granted by a role across various scopes (Platform, group, project, environment, cluster, build, deploy, Marketplace contents)
+    * Role creation – New custom roles defined
+    * Role deletion – Existing custom roles removed
+    * Role permissions updates – Changes to the permissions granted by a role across various scopes (Platform, group, project, environment, cluster, build, deploy, Marketplace contents)
 
-* Group management - Activities related to user groups and their association with resources:
+* Group management – Activities related to user groups and their association with resources:
 
-    * Group creation - New user groups created
-    * Group deletion - Existing user groups removed
-    * Group settings updates - Modifications to group associations and permissions within projects, environments, clusters, build and deploy processes, and Marketplace contents
+    * Group creation – New user groups created
+    * Group deletion – Existing user groups removed
+    * Group settings updates – Modifications to group associations and permissions within projects, environments, clusters, build and deploy processes, and Marketplace contents
 
-* Project management - Activities related to the lifecycle and configuration of projects:
+* Project management – Activities related to the lifecycle and configuration of projects:
 
-    * Project creation - New projects initiated
-    * Project archival and unarchival - Projects moved to or from an archived state
-    * Project deletion - Projects permanently removed
-    * Project settings updates - Changes to project configurations, owner, team members, or sharing settings
-    * Build and Deploy actions - Initiating builds or deployments of project applications
+    * Project creation – New projects initiated
+    * Project archival and unarchival – Projects moved to or from an archived state
+    * Project deletion – Projects permanently removed
+    * Project settings updates – Changes to project configurations, owner, team members, or sharing settings
+    * Build and Deploy actions – Initiating builds or deployments of project applications
 
-* App package management - Activities related to app packages within projects:
+* App package management – Activities related to app packages within projects:
 
-    * App package build - Initiation and completion of application package builds
-    * App package lock or unlock - Changing the lock status of an app package.
-    * App package deletion - Removal of application packages
+    * App package build – Initiation and completion of application package builds
+    * App package lock or unlock – Changing the lock status of an app package.
+    * App package deletion – Removal of application packages
 
-* Environment management - Activities concerning the creation and configuration of deployment environments:
+* Environment management – Activities concerning the creation and configuration of deployment environments:
 
-    * Environment creation - New deployment environments provisioned
-    * Environment deletion - Existing deployment environments removed
-    * Environment settings and configuration updates - Modifications to environment-specific settings (for example, variables, scaling, network configurations)
+    * Environment creation – New deployment environments provisioned
+    * Environment deletion – Existing deployment environments removed
+    * Environment settings and configuration updates – Modifications to environment-specific settings (for example, variables, scaling, network configurations)
 
-* Marketplace management - Activities related to content within the Private Mendix Platform Marketplace:
+* Marketplace management – Activities related to content within the Private Mendix Platform Marketplace:
 
-    * Marketplace content creation - New Marketplace items (such as templates or components) added.
-    * Marketplace content deletion - Existing Marketplace items removed
-    * Marketplace version creation - New versions of Marketplace content published
-    * Marketplace content updates - Changes to content details, owner, group, or sharing settings
-    * Content state changes - Approval, decline, publishing, retiring, or unretiring of marketplace content
+    * Marketplace content creation – New Marketplace items (such as templates or components) added.
+    * Marketplace content deletion – Existing Marketplace items removed
+    * Marketplace version creation – New versions of Marketplace content published
+    * Marketplace content updates – Changes to content details, owner, group, or sharing settings
+    * Content state changes – Approval, decline, publishing, retiring, or unretiring of marketplace content
 
-* Cluster management - Activities related to Kubernetes clusters and their configurations:
+* Cluster management – Activities related to Kubernetes clusters and their configurations:
 
-    * Cluster creation - New Kubernetes clusters provisioned
-    * Cluster deletion - Existing Kubernetes clusters decommissioned
-    * Namespace creation and deletion - Management of namespaces within clusters
-    * Plan creation and deletion - Management of cluster plans
-    * Updates to cluster, namespace, and plan settings and configuration - Modifications to cluster, namespace, or plan-specific settings
+    * Cluster creation – New Kubernetes clusters provisioned
+    * Cluster deletion – Existing Kubernetes clusters decommissioned
+    * Namespace creation and deletion – Management of namespaces within clusters
+    * Plan creation and deletion – Management of cluster plans
+    * Updates to cluster, namespace, and plan settings and configuration – Modifications to cluster, namespace, or plan-specific settings
 
-* Pipeline management - Activities related to Continuous Integration/Continuous Delivery (CI/CD) pipelines:
+* Pipeline management – Activities related to Continuous Integration/Continuous Delivery (CI/CD) pipelines:
 
-    * Build pipeline template creation and deletion - Management of Build pipeline templates
-    * Deploy pipeline template creation and deletion - Management of Deployment pipeline templates.
-    * Pipeline step settings and configuration updates - Modifications to individual steps or configurations within Build and Deploy pipelines
+    * Build pipeline template creation and deletion – Management of Build pipeline templates
+    * Deploy pipeline template creation and deletion – Management of Deployment pipeline templates.
+    * Pipeline step settings and configuration updates – Modifications to individual steps or configurations within Build and Deploy pipelines
 
-* General platform settings - Activities related to overarching platform capabilities and features:
+* General platform settings – Activities related to overarching platform capabilities and features:
 
-    * Platform settings updates - Modifications to core platform capabilities and integrations
-    * Feature flag management - Toggling platform features **on** or **off**.
+    * Platform settings updates – Modifications to core platform capabilities and integrations
+    * Feature flag management – Toggling platform features **on** or **off**.
 
 You can use the **Search** field to search for a specific action by name.
 
@@ -110,8 +110,8 @@ To generate the report, perform the following steps:
 1. Click **Create Custom Report**.
 2. In the **Create Custom Report** dialog, specify the following parameters:
 
-    * **User action log level** - Select **Event**, **Summary**, or **Complete**
-    * **User action archive file type** - Select **PDF**, **Doc2007**, **JSON**, or **XML**.
+    * **User action log level** – Select **Event**, **Summary**, or **Complete**
+    * **User action archive file type** – Select **PDF**, **Doc2007**, **JSON**, or **XML**.
     * **Start date** and **End date** for the report.
 
 ### Archived Actions
@@ -124,19 +124,19 @@ Logs are archived at a period specified in the **Log Settings** tab. Users can d
 
 The **Log Settings** tab provides granular control over how activity logs are managed and stored within Private Mendix Platform. Administrators can configure the following parameters to suit their organizational needs and compliance requirements:
 
-* **Number of days to retain user action logs backups** - Defines the duration (in days) for which user action log backups are retained within the system before being permanently deleted or moved to long-term storage. For example, a setting of 30 days means that backups are kept for one month.
-* **Expose database entries from the logs as MXApp Log Nodes** - A toggle to determine whether raw database entries from the activity logs should be exposed or made available as MXApp Log Nodes, potentially for integration with Mendix application logging or advanced debugging.
-* **User log timestamp output in preferred time zone** - Allows administrators to select the time zone for timestamps displayed in the user activity logs, ensuring that logs are presented in a locally relevant or standardized time zone.
-* **User action log time unit** - Specifies the precision of the timestamps recorded for user actions.
-* **User action log level** - Controls the verbosity or completeness of the information captured in the user action logs.
-* **User action archive file type** - Defines the format in which archived user action logs are saved.
-* **External backup target** - Allows administrators to configure an external system or location where activity log backups can be sent for additional redundancy or compliance. The following options are available:
+* **Number of days to retain user action logs backups** – Defines the duration (in days) for which user action log backups are retained within the system before being permanently deleted or moved to long-term storage. For example, a setting of 30 days means that backups are kept for one month.
+* **Expose database entries from the logs as MXApp Log Nodes** – A toggle to determine whether raw database entries from the activity logs should be exposed or made available as MXApp Log Nodes, potentially for integration with Mendix application logging or advanced debugging.
+* **User log timestamp output in preferred time zone** – Allows administrators to select the time zone for timestamps displayed in the user activity logs, ensuring that logs are presented in a locally relevant or standardized time zone.
+* **User action log time unit** – Specifies the precision of the timestamps recorded for user actions.
+* **User action log level** – Controls the verbosity or completeness of the information captured in the user action logs.
+* **User action archive file type** – Defines the format in which archived user action logs are saved.
+* **External backup target** – Allows administrators to configure an external system or location where activity log backups can be sent for additional redundancy or compliance. The following options are available:
 
-    * **S3** - You must specify the endpoint, region, bucket, access key ID, and secret access key.
-    * **Azure Blob Storage** - Supports authentication with Azure Blob Managed Identity, or with static credentials.
+    * **S3** – You must specify the endpoint, region, bucket, access key ID, and secret access key.
+    * **Azure Blob Storage** – Supports authentication with Azure Blob Managed Identity, or with static credentials.
 
-* **External database target** - Provides an option to configure an external database where activity log data can be replicated or stored, potentially for advanced analytics or long-term data warehousing.
-* **Send email when any audit logging fail** - A toggle to enable email notifications to administrators if there are any failures in the audit logging process, ensuring immediate awareness of potential data loss or compliance issues.
+* **External database target** – Provides an option to configure an external database where activity log data can be replicated or stored, potentially for advanced analytics or long-term data warehousing.
+* **Send email when any audit logging fail** – A toggle to enable email notifications to administrators if there are any failures in the audit logging process, ensuring immediate awareness of potential data loss or compliance issues.
 
 ## Webhooks {#webhooks}
 

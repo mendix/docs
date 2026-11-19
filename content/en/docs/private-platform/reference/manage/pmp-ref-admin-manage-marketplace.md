@@ -34,9 +34,9 @@ The versions listed on the **Supported Versions** page indicate the Mendix Studi
 
 The **Licenses** tab allows administrators to specify the licenses that are available to their apps. To add a new license, click **New License** and specify the following values:
 
-* **Name** - Name of the license
-* **URL** - URL at which the license can be accessed
-* **Contents** - Optional additional information about the license.
+* **Name** – Name of the license
+* **URL** – URL at which the license can be accessed
+* **Contents** – Optional additional information about the license.
 
 ### App Categories
 

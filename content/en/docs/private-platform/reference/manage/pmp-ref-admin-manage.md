@@ -31,17 +31,17 @@ Company admins can edit app details such as the app branding or ownership, team 
 1. In the **App Management** page, in the **Action** column, click **More Actions** > **Edit**.
 2. Configure any of the following settings:
 
-* **App Details** - Configure the following basic app details:
-    * **App ID** - An automatically assigned internal ID. This value cannot be adjusted.
-    * **Name** - The name of your app. This value should be meaningful, so that users can easily identify the app.
-    * **Description** - An optional description of the application.
-    * **App Logo** - A browser logo for your app. This value can only be adjusted by the app owner.
-* **Team Membership** - Invite users to join your app, or remove them from the app. Before you can invite a user, you must first configure their account on the [User Management](#users) page. 
+* **App Details** – Configure the following basic app details:
+    * **App ID** – An automatically assigned internal ID. This value cannot be adjusted.
+    * **Name** – The name of your app. This value should be meaningful, so that users can easily identify the app.
+    * **Description** – An optional description of the application.
+    * **App Logo** – A browser logo for your app. This value can only be adjusted by the app owner.
+* **Team Membership** – Invite users to join your app, or remove them from the app. Before you can invite a user, you must first configure their account on the [User Management](#users) page. 
     
     When adding a member, the dialog displays any roles inherited from groups. If the user is not a member of any groups, the dialog shows **NONE**.
 
-* **Git Server** - View the revisions per branch for this app.
-* **Ownership and Sharing** - Select the user and optionally the group that owns this app. If an app is owned by a specific group, the owner must be a user who belongs to that group.
+* **Git Server** – View the revisions per branch for this app.
+* **Ownership and Sharing** – Select the user and optionally the group that owns this app. If an app is owned by a specific group, the owner must be a user who belongs to that group.
 
 ### Assigning the App to a New Owner {#ownership}
 
@@ -85,7 +85,7 @@ The app list contains the following information:
 
 * **App Name** – The name of the app. Clicking this opens the **Application Environment Summary** page, if it is available.
 * **Environment** – The name of the environment.
-* **Purpose** - The purpose of the environment (Development, Test, Acceptance, or Production).
+* **Purpose** – The purpose of the environment (Development, Test, Acceptance, or Production).
 * **Runtime** – The Mendix Runtime version. Unsupported versions of the Mendix Runtime display a warning.
 * **Owner** – The owner of the app.
 * **Cluster** – The type of cluster where the environment is deployed.
@@ -121,9 +121,9 @@ The **Findings** tab allows you to view a list of all the findings discovered in
 
 The findings are divided into the following types:
 
-* Vulnerable - A finding is generated when a component is published on the [Security Advisories](/releasenotes/security-advisories/) page, and is assigned a specific CVSS score. CVSS scores are based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework, and cannot be orverriden.
-* Outdated - A finding is generated when a component becomes outdated, meaning when a new runtime compatible version is published.
-* Deprecated - A finding is generated when a component has been labeled as deprecated in the Private Marketplace.
+* Vulnerable – A finding is generated when a component is published on the [Security Advisories](/releasenotes/security-advisories/) page, and is assigned a specific CVSS score. CVSS scores are based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework, and cannot be orverriden.
+* Outdated – A finding is generated when a component becomes outdated, meaning when a new runtime compatible version is published.
+* Deprecated – A finding is generated when a component has been labeled as deprecated in the Private Marketplace.
 
 These are the severity levels of a finding:
 

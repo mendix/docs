@@ -58,9 +58,9 @@ If you have already configured a custom CA certificate, you must only add your n
 
 The settings in this section configure the Kubernetes cluster.
 
-* **API Server** - Your Kubernetes API server.
-* **Namespace** - The namespace used to create the Kubernetes pod.
-* **Token** - You must create a service account, role, and role binding in the above namespace, and then get the service account's token. For reference, see the following shell script:
+* **API Server** – Your Kubernetes API server.
+* **Namespace** – The namespace used to create the Kubernetes pod.
+* **Token** – You must create a service account, role, and role binding in the above namespace, and then get the service account's token. For reference, see the following shell script:
 
 ```text
 # create ServiceAccount, Role, and RoleBinding
@@ -123,26 +123,26 @@ kubectl get secret mxplatform-cicd -n$NAMESPACE -o jsonpath='{.metadata.annotati
 
 The settings in this section configure the images.
 
-* **Keep Build Pod** - Select this checkbox to keep the build pod after the build is completed. This is useful for troubleshooting if the build failed due to pod creation failure or build failure. You can describe the pod to see its status, or check the logs of the pod.
-* **Run As User** - The default value is *1001110000*. For an OpenShift cluster, you must check the user ID range by using the below command, and check the annotations. For example, for `openshift.io/sa.scc.uid-range: 1001190000/10000`, you can choose one ID from the *1001190000 - 1001199999* range.
+* **Keep Build Pod** – Select this checkbox to keep the build pod after the build is completed. This is useful for troubleshooting if the build failed due to pod creation failure or build failure. You can describe the pod to see its status, or check the logs of the pod.
+* **Run As User** – The default value is *1001110000*. For an OpenShift cluster, you must check the user ID range by using the below command, and check the annotations. For example, for `openshift.io/sa.scc.uid-range: 1001190000/10000`, you can choose one ID from the *1001190000 - 1001199999* range.
 
     ```text
     export NAMESPACE=default
     kubectl get ns $NAMESPACE -oyaml
     ```
 
-* **Build Image** - The default value is `private-cloud.registry.mendix.com/privateplatform/pmp-pipeline-tools`. This image is used to build MDA package and OCI image.
-* **Build Package Source** - Select the download source for the *mxbuild* package. The following values are supported:
+* **Build Image** – The default value is `private-cloud.registry.mendix.com/privateplatform/pmp-pipeline-tools`. This image is used to build MDA package and OCI image.
+* **Build Package Source** – Select the download source for the *mxbuild* package. The following values are supported:
 
-    * **File Server** - This option allows anonymous access without any authentication.
-    * **S3 Bucket** - This option requires an access key ID and secret access key for authentication.
-    * **Azure Blob** - This option requires the Azure Workload identity authentication. The default service account is used in the build pod for downloading the *mxbuild* package. To configure the managed identity and service account, perform the following steps:
+    * **File Server** – This option allows anonymous access without any authentication.
+    * **S3 Bucket** – This option requires an access key ID and secret access key for authentication.
+    * **Azure Blob** – This option requires the Azure Workload identity authentication. The default service account is used in the build pod for downloading the *mxbuild* package. To configure the managed identity and service account, perform the following steps:
 
         1. Create a managed identity in the Azure portal
         2. Configure federated credentials for the Kubernetes service account.
         3. In the **Managed Identity** section, add a role assignment with the following role:
 
-            * **Storage Blob Data Contributor** - This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient. As a best practice, for increased security, this role should be scoped at the container level, although scoping it to the storage account is also permitted.
+            * **Storage Blob Data Contributor** – This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient. As a best practice, for increased security, this role should be scoped at the container level, although scoping it to the storage account is also permitted.
 
         4. Add an annotation to the service account, as in the following example:
 
@@ -155,14 +155,14 @@ The settings in this section configure the images.
                 azure.workload.identity/client-id: {client-id-build}
             ```
 
-* **Build Package Path** - This setting is required for the **File Server** build package source. The default value is `https://cdn.mendix.com/runtime`. If you have your own file server, you must download the package from the Mendix Content Delivery Network, and then upload it to your file server. The file name format is *mxbuild-9.24.1.4658.tar.gz*.
-* **S3 Endpoint**, **S3 Bucket Name**, **Region**, **Access Key ID**, **Secret Access Key** - These settings are required for the **S3 Bucket** build package source.
-* **Storage Account**, **Container** - These settings are required for the **Azure Blob** build package source.
-* **Build OCI Image** - Select this check box to build the OCI image besides the MDA file. Only OCI image can be used for deployment if this is checked. This option can be used to avoid configuring anonymous access to your S3 bucket or Azure Blob container.
-* **Registry Type** - This setting is only applicable if you selected the **Build OCI Image check box.** The following values are supported:
+* **Build Package Path** – This setting is required for the **File Server** build package source. The default value is `https://cdn.mendix.com/runtime`. If you have your own file server, you must download the package from the Mendix Content Delivery Network, and then upload it to your file server. The file name format is *mxbuild-9.24.1.4658.tar.gz*.
+* **S3 Endpoint**, **S3 Bucket Name**, **Region**, **Access Key ID**, **Secret Access Key** – These settings are required for the **S3 Bucket** build package source.
+* **Storage Account**, **Container** – These settings are required for the **Azure Blob** build package source.
+* **Build OCI Image** – Select this check box to build the OCI image besides the MDA file. Only OCI image can be used for deployment if this is checked. This option can be used to avoid configuring anonymous access to your S3 bucket or Azure Blob container.
+* **Registry Type** – This setting is only applicable if you selected the **Build OCI Image check box.** The following values are supported:
 
-    * **Generic** - Supports user and password authentication
-    * **AWS ECR** - Supports IRSA authentication; add the following policy to the IAM role:
+    * **Generic** – Supports user and password authentication
+    * **AWS ECR** – Supports IRSA authentication; add the following policy to the IAM role:
 
         ```text
         {
@@ -195,26 +195,26 @@ The settings in this section configure the images.
         }
         ```
 
-    * **Azure ACR** - Supports Workload Identity authentication; add the **AcrPush** role to the build managed identity.
+    * **Azure ACR** – Supports Workload Identity authentication; add the **AcrPush** role to the build managed identity.
 
-* **Runtime Base Image** - This setting is only applicable if you selected the **Build OCI Image** check box. The default value is `private-cloud.registry.mendix.com/app-building-blocks`. If you are in an air gap environment, sync tag `ubi9-1-jre{XX}-entrypoint` and `runtime-{YYYYY}`, where `{XX}` is java version in your app, and `{YYYYY}` is your app runtime version. For example: `app-building-blocks:ubi9-1-jre21-entrypoint` and `app-building-blocks:runtime-10.12.1.39914`.
-* **Allow Anonymous Access** - Select this checkbox if above Runtime Base Image is accessible without authentication.
-* **Runtime Base Registry User** - This setting is only applicable if you did not select the **Allow Anonymous Access** check box. User name for the registry authentication.
-* **Runtime Base Registry Password** - This setting is only applicable if you did not select the **Allow Anonymous Access** check box. Password for the registry authentication.
-* **OCI Registry** - This setting is only applicable if you selected the **Build OCI Image** check box. This registry is used to store OCI image, also repository name should be appended to the registry, quay.io/pmp as an example. 
-* **OCI Registry User** - This setting is only applicable if you selected the **Build OCI Image** check box. User name for the registry authentication.
-* **OCI Registry Password** - This setting is only applicable if you selected the **Build OCI Image** check box. Password for the registry authentication.
+* **Runtime Base Image** – This setting is only applicable if you selected the **Build OCI Image** check box. The default value is `private-cloud.registry.mendix.com/app-building-blocks`. If you are in an air gap environment, sync tag `ubi9-1-jre{XX}-entrypoint` and `runtime-{YYYYY}`, where `{XX}` is java version in your app, and `{YYYYY}` is your app runtime version. For example: `app-building-blocks:ubi9-1-jre21-entrypoint` and `app-building-blocks:runtime-10.12.1.39914`.
+* **Allow Anonymous Access** – Select this checkbox if above Runtime Base Image is accessible without authentication.
+* **Runtime Base Registry User** – This setting is only applicable if you did not select the **Allow Anonymous Access** check box. User name for the registry authentication.
+* **Runtime Base Registry Password** – This setting is only applicable if you did not select the **Allow Anonymous Access** check box. Password for the registry authentication.
+* **OCI Registry** – This setting is only applicable if you selected the **Build OCI Image** check box. This registry is used to store OCI image, also repository name should be appended to the registry, quay.io/pmp as an example. 
+* **OCI Registry User** – This setting is only applicable if you selected the **Build OCI Image** check box. User name for the registry authentication.
+* **OCI Registry Password** – This setting is only applicable if you selected the **Build OCI Image** check box. Password for the registry authentication.
 
 ### Configuring MDA Storage Setting {#mda-storage}
 
 The settings in this section configure the storage for build output artifacts.
 
-* **Mda Storage Option** - Configure where to store the build output artifacts. The supported values are S3 Bucket and Azure Blob. This option requires the Azure Workload identity authentication. The default service account is used in the build pod for uploading the build artifacts. To configure the managed identity and service account, perform the following steps:
+* **Mda Storage Option** – Configure where to store the build output artifacts. The supported values are S3 Bucket and Azure Blob. This option requires the Azure Workload identity authentication. The default service account is used in the build pod for uploading the build artifacts. To configure the managed identity and service account, perform the following steps:
 
     1. Create or reuse a managed identity on Azure portal, and configure federated credentials for the Kubernetes service account.
     2. In the **Managed Identity**, add a role assignment with the following role:
 
-        * **Storage Blob Data Contributor** - This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient. As a best practice, for increased security, this role should be scoped at the container level, although scoping it to the storage account is also permitted.
+        * **Storage Blob Data Contributor** – This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient. As a best practice, for increased security, this role should be scoped at the container level, although scoping it to the storage account is also permitted.
 
     3. Optional: Add annotations for the build pod and Private Mendix Platform to the service account, as in the following example:
 
@@ -231,8 +231,8 @@ The settings in this section configure the storage for build output artifacts.
 
     4. Add the following role assignments to the Private Mendix Platform Managed Identity:
 
-        * **Storage Blob Data Contributor** - This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient. As a best practice, for increased security, this role should be scoped at the container level, although scoping it to the storage account is also permitted.
-        * **Storage Blob Delegator** - This role permits Private Mendix Platform to delegate access to blobs by generating presigned (user delegation SAS) download URLs. It grants no data access of its own. MDA downloads may fail even when a blob data role is correctly assigned if Delegator is missing. This role must be scoped to the storage account.
+        * **Storage Blob Data Contributor** – This role permits Private Mendix Platform to read and write MDA blobs (upload deployment packages, read package metadata and SBOM contents). Private Mendix Platform requires the role to upload deployment packages. Read only access is not sufficient. As a best practice, for increased security, this role should be scoped at the container level, although scoping it to the storage account is also permitted.
+        * **Storage Blob Delegator** – This role permits Private Mendix Platform to delegate access to blobs by generating presigned (user delegation SAS) download URLs. It grants no data access of its own. MDA downloads may fail even when a blob data role is correctly assigned if Delegator is missing. This role must be scoped to the storage account.
     
     5. Optional: Add **customPodLabels** to the Mendix Operator to label the Private Mendix Platform pod with the proper configuration. This configuration allows Private Mendix Platform to get build artifacts from Azure Storage Blob.
 
@@ -251,22 +251,22 @@ The settings in this section configure the storage for build output artifacts.
     
     6. Restart Private Mendix Platform to ensure that the labels are applied.
 
-* **S3 Endpoint** - For example, `https://s3.ap-southeast-1.amazonaws.com`.
-* **No Verify SSL** - Select this checkbox if you use your own bucket server, and its certificate is self-signed. Selecting this option adds *--no-verify-ssl* to the AWS CLI command to avoid failure.
-* **S3 Bucket Name** - Your S3 bucket name, for example, *mybucket*.
-* **Mda Location** - Your S3 bucket name's domain, for example, `https://mybucket.s3.ap-southeast-1.amazonaws.com`. This URL is used to access build artifacts, the whole path is: `Mda Location + Appid + Mda/Meta file`. Make sure that the S3 bucket is configured to allow anonymous access.
-* **Region** - For example, `ap-southeast-1`.
-* **Use K8S Secret** - Select whether you want to input the **Access Key ID** and **Secret Access Key**, or set them in a Kubernetes secret. Enable this setting to avoid showing sensitive credentials in a build pod.
-* **Secret Name** - This setting is only applicable if you selected the **Use K8S Secret** check box. This is the secret name where you want to store the **Access Key ID** and **Secret Access Key**. Use the following command to create this secret, where your-namespace is the namespace that you specified in **Build Cluster Setting** > **Namespace**.
+* **S3 Endpoint** – For example, `https://s3.ap-southeast-1.amazonaws.com`.
+* **No Verify SSL** – Select this checkbox if you use your own bucket server, and its certificate is self-signed. Selecting this option adds *--no-verify-ssl* to the AWS CLI command to avoid failure.
+* **S3 Bucket Name** – Your S3 bucket name, for example, *mybucket*.
+* **Mda Location** – Your S3 bucket name's domain, for example, `https://mybucket.s3.ap-southeast-1.amazonaws.com`. This URL is used to access build artifacts, the whole path is: `Mda Location + Appid + Mda/Meta file`. Make sure that the S3 bucket is configured to allow anonymous access.
+* **Region** – For example, `ap-southeast-1`.
+* **Use K8S Secret** – Select whether you want to input the **Access Key ID** and **Secret Access Key**, or set them in a Kubernetes secret. Enable this setting to avoid showing sensitive credentials in a build pod.
+* **Secret Name** – This setting is only applicable if you selected the **Use K8S Secret** check box. This is the secret name where you want to store the **Access Key ID** and **Secret Access Key**. Use the following command to create this secret, where your-namespace is the namespace that you specified in **Build Cluster Setting** > **Namespace**.
 
     ```text
     kubectl create secret generic mxplatform-awssecret -n your-namespace --from-literal=aws_access_key_id=your-aws-access-key-id --from-literal=aws_secret_access_key=your-aws-secret-access-key
     ```
 
-* **Access Key ID** - This setting is only applicable if you did not select the **Use K8S Secret** check box. This value is used to access the S3 bucket.
-* **Secret Access Key** - This setting is only applicable if you did not select the **Use K8S Secret** check box. This value is used to access the S3 bucket.
-* **Storage Account, Container** - This setting is used to configure Azure Blob when the **Mda Storage Option** is set to **Azure Blob**.
-* **Mda Location** - Your Azure Blob container's domain, for example, `https://your-storage-account.blob.core.windows.net/your-container`. This setting is only applicable if **Build OCI Image** is not selected. Make sure that the container's anonymous access level is set to **Blob**.
+* **Access Key ID** – This setting is only applicable if you did not select the **Use K8S Secret** check box. This value is used to access the S3 bucket.
+* **Secret Access Key** – This setting is only applicable if you did not select the **Use K8S Secret** check box. This value is used to access the S3 bucket.
+* **Storage Account, Container** – This setting is used to configure Azure Blob when the **Mda Storage Option** is set to **Azure Blob**.
+* **Mda Location** – Your Azure Blob container's domain, for example, `https://your-storage-account.blob.core.windows.net/your-container`. This setting is only applicable if **Build OCI Image** is not selected. Make sure that the container's anonymous access level is set to **Blob**.
 
 ### Registering a Kubernetes Cluster {#register-cluster}
 
@@ -275,9 +275,9 @@ Before creating any environments, you must register your Kubernetes clusters by 
 1. Click **Register New Cluster**.
 2. Configure the following values:
     
-    * **Cluster Name** - Specify a name for the cluster.
-    * **API Server** - Specify your Kubernetes API server.
-    * **Token** - You must first create a service account, cluster role, and cluster role binding in the cluster, and then get the service account's token. For reference, see the following shell script:
+    * **Cluster Name** – Specify a name for the cluster.
+    * **API Server** – Specify your Kubernetes API server.
+    * **Token** – You must first create a service account, cluster role, and cluster role binding in the cluster, and then get the service account's token. For reference, see the following shell script:
 
         ```text
         # create ServiceAccount, ClusterRole, and ClusterRoleBinding
@@ -445,11 +445,11 @@ Before creating any environments, you must register your Kubernetes clusters by 
 
 When the version control system is Azure DevOps Server (on-premises), the build pods clone the app from your server with the PAT of the user who starts the build. They need the following:
 
-1. **DNS** - The build cluster resolves the server host name. A hosts entry on a single machine is not visible to the cluster.
-2. **Network** - TCP 443 (or the server port) is open from the cluster's outbound addresses to the server.
-3. **Build image** - pmp-pipeline-tools 0.11.1 or above. Earlier images fail with *Authentication failed* when the server offers Windows authentication (NTLM), which is the default for Azure DevOps Server.
-4. **Certificate trust** - If the server certificate is not issued by a public CA, use a build image that trusts your CA (see below). Do not use **Skip SSL Verification** in production: it also switches off the certificate checks for the storage and registry calls.
-5. **Secrets** - The build pod receives the user's Git token. Restrict read access to the build namespace.
+1. **DNS** – The build cluster resolves the server host name. A hosts entry on a single machine is not visible to the cluster.
+2. **Network** – TCP 443 (or the server port) is open from the cluster's outbound addresses to the server.
+3. **Build image** – pmp-pipeline-tools 0.11.1 or above. Earlier images fail with *Authentication failed* when the server offers Windows authentication (NTLM), which is the default for Azure DevOps Server.
+4. **Certificate trust** – If the server certificate is not issued by a public CA, use a build image that trusts your CA (see below). Do not use **Skip SSL Verification** in production: it also switches off the certificate checks for the storage and registry calls.
+5. **Secrets** – The build pod receives the user's Git token. Restrict read access to the build namespace.
 
 #### Building an Image That Trusts Your CA
 

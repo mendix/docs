@@ -45,13 +45,13 @@ To create a new group, perform the following steps:
 1. In the **Group Management** page, click **Create a Group**.
 2. Fill out the following information:
 
-    * **Group Name** - Enter a unique name for this group.
-    * **Group Description** - Provide details about the group's purpose.
-    * **Parent Group** - Select the higher-level group this belongs to.
+    * **Group Name** – Enter a unique name for this group.
+    * **Group Description** – Provide details about the group's purpose.
+    * **Parent Group** – Select the higher-level group this belongs to.
 
         When selecting the parent group, keep in mind that members of the parent group and all its parent groups automatically receive access rights to the new group, with the same role they hold in the parent.
 
-    * **Group Admin** - Assign the user responsible for managing this group.
+    * **Group Admin** – Assign the user responsible for managing this group.
 
 3. Click **Create**.
 
@@ -65,9 +65,9 @@ To edit a group, click **Edit Group Details** and modify the group name, descrip
 
 The **Group Resources > Members** section shows a list of users who have access roles granted by this group. Access roles can be granted in the following ways:
 
-* Directly - For users who are members of this group.
-* Indirectly - For users who are members of a parent group to which this group belongs.
-* As a combination of both - For users who have both direct and indirect roles in this group. In this case, the roles are combined, and permissions apply cumulatively.
+* Directly – For users who are members of this group.
+* Indirectly – For users who are members of a parent group to which this group belongs.
+* As a combination of both – For users who have both direct and indirect roles in this group. In this case, the roles are combined, and permissions apply cumulatively.
 
 The **Group Resources > Resource** section shows a list of apps, components, and namespaces owned by this group, or by its child groups. Apps and components inherited from child groups are indicated by the **Inherited** label.
 

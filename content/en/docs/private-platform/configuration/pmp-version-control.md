@@ -39,18 +39,18 @@ Before configuring GitLab for Private Mendix Platform, ensure that you fulfill t
 
 ### Configuration
 
-* **Host URL** - This is the host URL of your GitLab server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your GitLab server host name is `mygitlab.example.com`, you should input `https://mygitlab.example.com` here.
-* **Group ID** - All the apps on Private Mendix Platform are created under a GitLab group. You need to create a group in GitLab and then input the *Group ID* in this field.
-* **Group owner PAT** - This is the PAT from the above group owner. When generating the access token for group owner, select all scopes and set expiration date to **never**.
-* **Automatic Access Provisioning** - If you use a self-managed GitLab server, you can enable this feature to automatically create GitLab user and PAT for private platform users. During logging in the platform, user email is used as unique key to search in GitLab server. If this email name is not registered in GitLab, Private Mendix Platform creates a GitLab user with this email. A PAT is then generated for this user. 
-* **Admin PAT** - This is the PAT of the GitLab administrator, which is the root user access token with all scopes selected.
+* **Host URL** – This is the host URL of your GitLab server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your GitLab server host name is `mygitlab.example.com`, you should input `https://mygitlab.example.com` here.
+* **Group ID** – All the apps on Private Mendix Platform are created under a GitLab group. You need to create a group in GitLab and then input the *Group ID* in this field.
+* **Group owner PAT** – This is the PAT from the above group owner. When generating the access token for group owner, select all scopes and set expiration date to **never**.
+* **Automatic Access Provisioning** – If you use a self-managed GitLab server, you can enable this feature to automatically create GitLab user and PAT for private platform users. During logging in the platform, user email is used as unique key to search in GitLab server. If this email name is not registered in GitLab, Private Mendix Platform creates a GitLab user with this email. A PAT is then generated for this user. 
+* **Admin PAT** – This is the PAT of the GitLab administrator, which is the root user access token with all scopes selected.
 
 ### Normal User Credentials
 
 When the **Automatic Access Provisioning** is disabled, private platform users need to manually input the GitLab user id and PAT at first login.
 
-* **User ID** - The user ID (integer number) of this GitLab user. It is not the user name. You can obtain the value from the user profile page.
-* **Personal Access Token** - The access token of this GitLab user.
+* **User ID** – The user ID (integer number) of this GitLab user. It is not the user name. You can obtain the value from the user profile page.
+* **Personal Access Token** – The access token of this GitLab user.
 
 ### Supported Predefined Push Rules
 
@@ -88,14 +88,14 @@ Before configuring GitHub for Private Mendix Platform, ensure that you fulfill t
 
 The following configuration applies to all GitHub server types, unless stated otherwise.
 
-* **Organization Name** - All the apps on Private Mendix Platform are created under an organization. You need to create an organization to host all the Mendix apps. Type the organization name into this field.
-* **Organization Owner PAT** - This is the Personal Access Token (PAT) of the organization owner. The PAT must have sufficient permissions to manage repositories and organization access. It is recommended to use a classic PAT with the required scopes selected and the expiration date set to **No Expiration**.
+* **Organization Name** – All the apps on Private Mendix Platform are created under an organization. You need to create an organization to host all the Mendix apps. Type the organization name into this field.
+* **Organization Owner PAT** – This is the Personal Access Token (PAT) of the organization owner. The PAT must have sufficient permissions to manage repositories and organization access. It is recommended to use a classic PAT with the required scopes selected and the expiration date set to **No Expiration**.
 
 ### GitHub Enterprise Server
 
-* **Host URL** - This is the host URL of your GitHub server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your GitHub server host name is `mygithub.example.com`, you should input `https://mygithub.example.com` here.
-* **Automatic Access Provisioning** - If you are running a self-managed GitHub enterprise server, you can enable this feature to automatically create GitHub users and Personal Access Tokens for Private Mendix Platform users. When logging in to the platform, the user email is used as unique key to search in GitHub server. If this email name is not registered in GitHub, Private Mendix Platform creates a GitHub user with this email. A PAT is then generated for this user. 
-* **AdminPAT** - This is the PAT of the GitHub Enterprise Server administrator. The token must be generated with sufficient privileges to manage users and access permissions.
+* **Host URL** – This is the host URL of your GitHub server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your GitHub server host name is `mygithub.example.com`, you should input `https://mygithub.example.com` here.
+* **Automatic Access Provisioning** – If you are running a self-managed GitHub enterprise server, you can enable this feature to automatically create GitHub users and Personal Access Tokens for Private Mendix Platform users. When logging in to the platform, the user email is used as unique key to search in GitHub server. If this email name is not registered in GitHub, Private Mendix Platform creates a GitHub user with this email. A PAT is then generated for this user. 
+* **AdminPAT** – This is the PAT of the GitHub Enterprise Server administrator. The token must be generated with sufficient privileges to manage users and access permissions.
 
 {{< figure src="/attachments/private-platform/pmp-vc2.png" alt="Version Control Settings for GitHub Enterprise Server" class="no-border" >}}
 
@@ -105,7 +105,7 @@ The following configuration applies to all GitHub server types, unless stated ot
 Automatic access provisioning is not supported for GitHub Enterprise Cloud.
 {{% /alert %}}
 
-* **Data Residency** - When toggled **off**, you only need to configure the [common settings](#common-config). When toggled **on**, OAuth‑based authentication is required.
+* **Data Residency** – When toggled **off**, you only need to configure the [common settings](#common-config). When toggled **on**, OAuth‑based authentication is required.
 * **Dedicated Host URL** – This is the dedicated GitHub Enterprise Cloud host URL associated with the data residency configuration for your organization.
 * **OAuth App Configuration** – You must create an OAuth App in GitHub with the **Authorization Callback URL** set to the callback URL provided by the Private Mendix Platform.
 
@@ -136,9 +136,9 @@ Before configuring Bitbucket for Private Mendix Platform, ensure that you fulfil
 
 ## Configuration
 
-* **Host URL** - This is the host URL of your Bitbucket enterprise server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your Bitbucket enterprise server host name is `mybitbucket.example.com`, you should input `https://mybitbucket.example.com` here.
-* **Project Key** - All the Mendix apps on the Private Mendix Platform are created under a Bitbucket project. You must create an project to host all the Mendix apps and input the project key in this field. You can view the project key at `https://mybitbucket.example.com/projects`.
-* **Project Admin PAT** - This is the Personal Access Token of a Bitbucket project administrator user.
+* **Host URL** – This is the host URL of your Bitbucket enterprise server. The format should be `https://<HOST>`. There is no slash in the end. For example, if your Bitbucket enterprise server host name is `mybitbucket.example.com`, you should input `https://mybitbucket.example.com` here.
+* **Project Key** – All the Mendix apps on the Private Mendix Platform are created under a Bitbucket project. You must create an project to host all the Mendix apps and input the project key in this field. You can view the project key at `https://mybitbucket.example.com/projects`.
+* **Project Admin PAT** – This is the Personal Access Token of a Bitbucket project administrator user.
 
 ### Automatic Access Provisioning
 
@@ -157,8 +157,8 @@ When the Automatic Access Provisioning is disabled, Private Mendix Platform user
 
 This user needs to be invited into the project with the **Create repository** permission. You can add users and grant permissions at `https://mybitbucket.example.com/projects/<PROJECT KEY>/permissions`.
 
-* **User Name** - The Bitbucket login name of this user. 
-* **Personal Access Token** - The Personal Access Token of this Bitbucket user. The permission level must be at least **Project Admin**, and the expiration date should be set to **No Expiration**.
+* **User Name** – The Bitbucket login name of this user. 
+* **Personal Access Token** – The Personal Access Token of this Bitbucket user. The permission level must be at least **Project Admin**, and the expiration date should be set to **No Expiration**.
 
 {{< figure src="/attachments/private-platform/pmp-vc4.png" alt="Version Control Settings for Bitbucket" class="no-border" >}}
 
@@ -208,8 +208,8 @@ In Azure DevOps, perform the following tasks:
 
 #### Private Mendix Platform Configuration
 
-* **Deployment Type** - Select **Azure DevOps Services (cloud)**.
-* **Host URL** - The Azure DevOps Services URL, `https://dev.azure.com`.
+* **Deployment Type** – Select **Azure DevOps Services (cloud)**.
+* **Host URL** – The Azure DevOps Services URL, `https://dev.azure.com`.
 * **Organization** – Enter the name of the Azure DevOps organization that you created.
 * **Organization Admin PAT** – Enter the Personal Access Token of the Azure DevOps organization admin user.
 
@@ -218,14 +218,14 @@ In Azure DevOps, perform the following tasks:
 1. Click **New**.
 2. Fill out the following information:
 
-    * **Name** - Enter a meaningful name for the OAuth configuration.
-    * **Client ID** - Enter the Application ID that you obtained from Microsoft Entra ID.
-    * **Tenant ID** - Enter the Directory ID that you obtained from Microsoft Entra ID.
-    * **Client Secret** - Enter the Client Secret that you obtained from Microsoft Entra ID.
-    * **Resource** - Enter the following value: `499b84ac-1321-427f-aa17-267ca6975798/.default`.
-    * **Single OAuth Account** - Set to **No**.
-    * **Default config** - Set to **Yes**.
-    * **Active** - Set to **Yes**.
+    * **Name** – Enter a meaningful name for the OAuth configuration.
+    * **Client ID** – Enter the Application ID that you obtained from Microsoft Entra ID.
+    * **Tenant ID** – Enter the Directory ID that you obtained from Microsoft Entra ID.
+    * **Client Secret** – Enter the Client Secret that you obtained from Microsoft Entra ID.
+    * **Resource** – Enter the following value: `499b84ac-1321-427f-aa17-267ca6975798/.default`.
+    * **Single OAuth Account** – Set to **No**.
+    * **Default config** – Set to **Yes**.
+    * **Active** – Set to **Yes**.
 
 ##### Normal User Credentials
 
@@ -256,10 +256,10 @@ Before configuring Azure DevOps Server for Private Mendix Platform, ensure that 
 
 #### Private Mendix Platform Configuration
 
-* **Deployment Type** - Select **Azure DevOps Server (on-premises)**.
-* **Host URL** - The server URL without the collection, in the format `https://<HOST>`, optionally with a port and a virtual directory, for example `https://ado.example.com` or `https://ado.example.com/tfs`. There is no slash at the end.
-* **Collection** - The name of the project collection, for example `DefaultCollection`.
-* **Organization Admin PAT** - The PAT of the service account. You can also store it in an external secret store (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
+* **Deployment Type** – Select **Azure DevOps Server (on-premises)**.
+* **Host URL** – The server URL without the collection, in the format `https://<HOST>`, optionally with a port and a virtual directory, for example `https://ado.example.com` or `https://ado.example.com/tfs`. There is no slash at the end.
+* **Collection** – The name of the project collection, for example `DefaultCollection`.
+* **Organization Admin PAT** – The PAT of the service account. You can also store it in an external secret store (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
 
 When you save, Private Mendix Platform checks the connection, the server type and the PAT, and shows an error code if the check fails (see [Troubleshooting](#ado-server-troubleshooting)). The **Azure OAuth Config** section is not used for Azure DevOps Server and is hidden.
 
@@ -316,7 +316,7 @@ The build pods do not read this secret; see [Azure DevOps Server Builds](/privat
 
 #### Studio Pro and Windows Authentication {#ado-server-studio-pro}
 
-Developers open an app with **Edit in Studio Pro**. Private Mendix Platform gives Studio Pro the repository URL and the user's PAT; Studio Pro then does all Git work itself, directly against Azure DevOps Server. Studio Pro uses two Git clients, LibGit2Sharp (inside Studio Pro) and Git for Windows. Both must trust the server certificate, and both follow the setting **Edit** > **Preferences** > **Version control** > **Git** > **Enable Current Windows User Authentication for git**. The setting is off by default and must match what your server offers.
+Developers open an app with **Edit in Studio Pro**. Private Mendix Platform gives Studio Pro the repository URL and the user's PAT; Studio Pro then does all Git work itself, directly against Azure DevOps Server. Studio Pro uses two Git clients, LibGit2Sharp (inside Studio Pro) and Git for Windows. Both must trust the server certificate, and both follow the setting **Edit** > **Preferences** > **Version control** > **Git** > **Enable Current Windows User Authentication for Git**. The setting is off by default and must match what your server offers.
 
 To find out what your server offers, request the collection URL without credentials and read the `WWW-Authenticate` header:
 
@@ -324,7 +324,7 @@ To find out what your server offers, request the collection URL without credenti
 curl.exe -k -sS -o NUL -D - https://YOUR-SERVER/YOUR-COLLECTION/_apis/projects | findstr /i www-authenticate
 ```
 
-| The Server Offers | Enable Current Windows User Authentication for git | Git Setting on the Windows Machine | What Signs In to Git |
+| The Server Offers | Enable Current Windows User Authentication for Git | Git Setting on the Windows Machine | What Signs In to Git |
 | --- | --- | --- | --- |
 | Negotiate and NTLM (Windows authentication on, the default) | **On** | `git config --global http.emptyAuth true` | The signed-in Windows user. The machine must be joined to the domain, and the Windows account must be the account of the PAT saved in Private Mendix Platform. The PAT is not sent to the server. |
 | Bearer and Basic only (Windows authentication off) | **Off** | None | The PAT from the user's Private Mendix Platform profile |
@@ -345,7 +345,7 @@ To set up a Windows machine (once per Windows user, or by group policy), follow 
     git config --global http.sslBackend schannel
     ```
 
-3. For Windows authentication only: let Git use the signed-in Windows user, and select the **Enable Current Windows User Authentication for git** checkbox in Studio Pro. Studio Pro gives Git no credential in this mode; without this setting Git asks its credential helper, which cannot prompt inside Studio Pro, and fails with exit code 128:
+3. For Windows authentication only: let Git use the signed-in Windows user, and select the **Enable Current Windows User Authentication for Git** checkbox in Studio Pro. Studio Pro gives Git no credential in this mode; without this setting Git asks its credential helper, which cannot prompt inside Studio Pro, and fails with exit code 128:
 
     ```text
     git config --global http.emptyAuth true
@@ -360,7 +360,7 @@ If opening the app fails, check the following messages. The Git output of Studio
 
 | Message | Cause | What to Do |
 | --- | --- | --- |
-| *user cancelled certificate check* | Windows does not trust the server certificate | Step 1 |
+| *user canceled certificate check* | Windows does not trust the server certificate | Step 1 |
 | *SSL certificate problem: self-signed certificate* (in the Git log) | Git for Windows uses its own CA list | Step 2 |
 | *Git command line client has exited with code 128*, with *terminal prompts disabled* in the Git log | Git got a 401 and no credential | Windows authentication server: step 3. Basic-only server: clear the checkbox |
 | *too many redirects or authentication replays* | The checkbox is cleared and the server offers NTLM, so the PAT was answered with NTLM | Select the checkbox and set `http.emptyAuth true` |
@@ -382,7 +382,7 @@ Private Mendix Platform manages access to each app's project with the Organizati
 * Removing a member removes the user from these groups and from the project's default team. Access that the user gets through other groups you set up in Azure DevOps stays.
 * To open and push in Studio Pro, a user needs Read and Contribute on the repository, which **Contributors** gives. No project or collection administrator role is needed.
 * Only Mendix app projects are changed: projects that Private Mendix Platform created, and existing projects that hold exactly one repository with an `.mpr` file (apps added with Import Apps). Other projects are never changed.
-* Azure DevOps Server can only find users it already knows, that is, users who signed in or used a PAT before, or who are members of a group in the collection (for example an Active Directory group). For other users, Private Mendix Platform logs a warning and changes nothing; a direct invite is cancelled.
+* Azure DevOps Server can only find users it already knows, that is, users who signed in or used a PAT before, or who are members of a group in the collection (for example an Active Directory group). For other users, Private Mendix Platform logs a warning and changes nothing; a direct invite is canceled.
 * A user must have saved their own PAT in Private Mendix Platform before they can be added to a project, because the saved PAT provides the account name. The account forms `DOMAIN\user`, the plain account name and the email address are accepted; a name that matches more than one person is refused.
 
 To manage project access only in Azure DevOps, set the constant `AzureDevopsIntegration.ServerManageMembership` to `false`. Private Mendix Platform then changes no groups and logs each skipped change.

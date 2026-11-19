@@ -518,7 +518,7 @@ Install the Private Mendix Platform by doing the following steps:
     * **Storageplan** – Enter the storage plan from [Installing and Configuring the Mendix Operator](#install-operator), or select **USE-Secret-Provider**. A plan name makes the operator create the file storage. **USE-Secret-Provider** leaves the plan unset. You create the container and its permissions. See [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
     * **StoragePlanwithIRSA** – If your storage plan uses AWS IRSA or Azure Workload Identity, set this to **enabled**.
 
-        Enabling this option disables **Use Secret Provider**. The operator creates the ServiceAccount from the storage plan, and the secret store needs the installer to create that account. Leave this disabled when **Use Secret Provider** is enabled. You can still use a workload identity. The identity is the one you created, and the installer uses it to annotate the ServiceAccount.
+        Enabling this option disables **Use Secret Provider**. The operator creates the ServiceAccount from the storage plan, and the secret store needs the installer to create that account. Leave this disabled when **Use Secret Provider** is enabled. You can still use a Workload identity. The identity is the one you created, and the installer uses it to annotate the ServiceAccount.
 
     * **AppUrl** – The endpoint where you can connect to your running app. It must be a URL which is supported by your platform. If you leave it blank, Mendix Operator will create it.
     * **EnableTLS** – Allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Router. The default value is use the default settings.

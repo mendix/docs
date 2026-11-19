@@ -25,20 +25,18 @@ Explore the documentation for details on microflow and nanoflow definitions, pro
 
 ## Auto Layout {#auto-layout}
 
+{{% alert color="info" %}}
+This feature is available in Studio Pro 11.17 and above.
+
+This feature is enabled by default. You can disable it in **Edit** > **Preferences** > **New features** tab, under [Microflow, Nanoflow, and Rule Editor](/refguide/preferences-dialog/#microflow-nanoflow-rule-editor).
+{{% /alert %}}
+
 In the microflow, nanoflow, and rule editors, you can automatically arrange activities on the canvas through the context menu:
 
 * Right-click an empty part of the canvas and select **Auto layout** to arrange the entire microflow, nanoflow, or rule.
 * Right-click a selected activity, or a selection of multiple activities, and select **Auto layout** to arrange only the selected activities.
 
 Auto layout is applied as a single action that you can undo.
-
-{{% alert color="info" %}}
-Auto layout is an experimental feature, enabled by default. You can disable it in **Edit** > [Preferences](/refguide/preferences-dialog/) > **New features** tab, under [Microflow, Nanoflow, and Rule Editor](/refguide/preferences-dialog/#microflow-nanoflow-rule-editor).
-{{% /alert %}}
-
-{{% alert color="info" %}}
-This feature is available in Studio Pro 11.17 and above.
-{{% /alert %}}
 
 ## Differences between Microflows and Nanoflows {#differences}
 

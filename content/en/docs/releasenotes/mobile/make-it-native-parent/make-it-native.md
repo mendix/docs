@@ -15,7 +15,7 @@ Depending on the Mendix version your app is developed in and the device you want
 ### Breaking Changes / Improvements
 
 -   We updated `react-native-vision-camera` from v4.7.3 to v5.2.3 and added `react-native-vision-camera-barcode-scanner` v5.2.3 and `react-native-nitro-image` v0.15.2. We also updated `react-native-nitro-modules to v0.37.0. `react-native-vision-camera-barcode-scanner` is only used on Android; on iOS the Barcode Scanner widget uses Apple's built-in scanner from `react-native-vision-camera`.
-  -   Because of this update, the Barcode Scanner widget is required to be version 4.6.0 or above (Native Mobile Resources version 12.7.0 or above) for compatibility. Older versions of the widget will not work in this version or above of Make It Native.
+  -   Because of this update, the [Barcode Scanner](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/barcode-scanner-native) widget is required to be version 4.6.0 or above (Native Mobile Resources version 12.7.0 or above) for compatibility. Older versions of the widget will not work in this version or above of Make It Native.
 -   We updated `react-native-video` from v6.19.2 to v6.19.3.
 -   We removed the unused `react-native-track-player` library and its patch.
 

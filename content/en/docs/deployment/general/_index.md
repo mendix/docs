@@ -20,7 +20,7 @@ The subjects covered in this documentation section are as follows:
 * [Version Downgrade Protection](/developerportal/deploy/version-downgrade-prevention/)
 * [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/)
 * [Deployment Location](/developerportal/deploy/deployment-location/)
-* [Local Deployment](/developerportal/deploy/local-deployment/)
+* [Configuring a Reverse Proxy](/developerportal/deploy/reverse-proxy/)
 * [Webhooks](/developerportal/deploy/webhooks/)
 * [Software Composition](/developerportal/deploy/software-composition/)
 * [Siemens Advanced License Technology](/developerportal/deploy/salt/)

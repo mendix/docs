@@ -174,7 +174,7 @@ Cross-site cookies must be enabled in the browser when the Mendix application is
 
 If the host application runs on HTTPS, the Mendix app is rendered inside a secure context, and the Mendix runtime has to set its cookies as `Secure` and `SameSite=None`. For information on how to set `SameSite=None`, see the [Settings to Configure](/refguide/configure-cors/#settings) section in *Configuring CORS in the Mendix Runtime*.
 
-The Mendix runtime sets the `Secure` attribute on its cookies when the app is served over HTTPS. When you run the Mendix app locally, it is not served over HTTPS. To make the runtime set the attribute anyway, see the [Using a Reverse Proxy for Setting Secure Cookies](/developerportal/deploy/local-deployment/#reverse-proxy) section in *Local Deployment*.
+The Mendix runtime sets the `Secure` attribute on its cookies when the app is served over HTTPS. When you run the Mendix app locally, it is not served over HTTPS. To make the runtime set the attribute anyway, see the [Setting Secure Cookies](/developerportal/deploy/reverse-proxy/#local-secure-cookies) section in *Configuring a Reverse Proxy*.
 
 ## Cross-Origin Requests
 

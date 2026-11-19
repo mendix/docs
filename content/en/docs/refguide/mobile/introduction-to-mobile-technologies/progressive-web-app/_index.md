@@ -34,7 +34,7 @@ Within the navigation profiles the following PWA features can be configured:
 
 {{< figure src="/attachments/refguide/mobile/progressive-web-app/settings.png" alt="PWA settings"   width="350"  class="no-border" >}}
 
-To fully test PWA functionality, the app needs to be deployed to the cloud. This is because some PWA features are only available over HTTPS protocol. For more information, see [Accessing Device Features](#accessing-device-features) below. To test these features when you run your app locally, see the [Running Your App Locally over HTTPS](/developerportal/deploy/local-deployment/#https) section in *Local Deployment*.
+To fully test PWA functionality, the app needs to be deployed to the cloud. This is because some PWA features are only available over HTTPS protocol. For more information, see [Accessing Device Features](#accessing-device-features) below. To test these features when you run your app locally, see the [Running Your App over HTTPS](/developerportal/deploy/reverse-proxy/#local-https) section in *Configuring a Reverse Proxy*.
 
 ### Publishing as a Progressive Web App
 
@@ -141,7 +141,7 @@ Browsers offer access to device features through APIs that can be leveraged in P
 The availability and behavior of these Web APIs may differ depending on the browser and operating system in use. For detailed compatibility information, refer to the [MDN Web API documentation](https://developer.mozilla.org/en-US/docs/Web/API).
 
 {{% alert color="info" %}}
-Certain device features, such as camera access on iOS or support for push notifications, require that your Progressive Web App is served over HTTPS. For information on how to run your app over HTTPS for local development and testing, see the [Running Your App Locally over HTTPS](/developerportal/deploy/local-deployment/#https) section in *Local Deployment*.
+Certain device features, such as camera access on iOS or support for push notifications, require that your Progressive Web App is served over HTTPS. For information on how to run your app over HTTPS for local development and testing, see the [Running Your App over HTTPS](/developerportal/deploy/reverse-proxy/#local-https) section in *Configuring a Reverse Proxy*.
 {{% /alert %}}
 
 ## Troubleshooting

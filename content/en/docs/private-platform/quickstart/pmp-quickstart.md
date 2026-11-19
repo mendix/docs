@@ -20,12 +20,12 @@ Before you start the installation, download the required files by performing the
 
 2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
 
-    * **Tools** - *mx-pclm-cli*, which can be used to manage PCLM
+    * **Tools** – *mx-pclm-cli*, which can be used to manage PCLM
     * **helm**, and **helmfile** tools, which are used to deploy and manage Private Mendix Platform charts and Svix charts
-    * **images** - Private Mendix Platform image, PCLM image, Svix image, test application image
-    * **Installer** - installer tools
-    * **mxpc-cli** - installation tools which can be used to manage or configure the Mendix Operator
-    * **charts**  - charts, including Private Mendix Platform charts and Svix charts
+    * **images** – Private Mendix Platform image, PCLM image, Svix image, test application image
+    * **Installer** – installer tools
+    * **mxpc-cli** – installation tools which can be used to manage or configure the Mendix Operator
+    * **charts**  – charts, including Private Mendix Platform charts and Svix charts
     
     {{< figure src="/attachments/private-platform/pmp-binary.png" class="no-border" >}}
 
@@ -78,8 +78,8 @@ Install the Mendix Operator by doing the following steps:
 
 1. Run one of the following commands, where `-n` indicates the namespace: 
     
-    * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
-    * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
+    * `./mxpc-cli installer -n=<namespace name>` – To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
+    * `./mxpc-cli installer --global -n=<namespace name>` – To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
 
     In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
     
@@ -230,7 +230,7 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 3. Specify the following parameters:
 
     * **Databasetype** – The database type, either **postgres** (default) or **sqlserver**.
-    * **DB Authentication mode** - The authentication mode for the database:
+    * **DB Authentication mode** – The authentication mode for the database:
         * **static** (default)
         * **aws-irsa**
         * **azure-wi**
@@ -247,8 +247,8 @@ Private Cloud License Manager is a required component of Private Mendix Platform
     * **Admin Password** – A new PCLM admin password. When the PCLM server is set up, it contains an *administrator* user with a default password. This password should be modified immediately.
     * **PCLM Operator User** – A new PCLM operator user.
     * **PCLM Operator Password** – A new PCLM operator password.
-    * **Global Operator Namespace** - If you are using Mendix Operator in Global mode, enter the Global namespace information. If not, leave this field blank. 
-    * **Customized cluster domain** - The default is `cluster.local`. Change the value if you are using a different internal cluster domain.
+    * **Global Operator Namespace** – If you are using Mendix Operator in Global mode, enter the Global namespace information. If not, leave this field blank. 
+    * **Customized cluster domain** – The default is `cluster.local`. Change the value if you are using a different internal cluster domain.
 
 4. Click **Install PCLM**.
 
@@ -269,8 +269,8 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
 
     1. Configure the secret in AWS Secret Manager by providing the following information:
 
-        * **POSTGRES DSN** - The key is `svix-db-dsn`; an example value may be similar to `postgresql://postgres:postgres@pgbouncer/postgres`.
-        * **Redis DSN** - This value is only required if you also use Redis for Svix. The key is `svix-redis-dsn`; an example value may be similar to `redis://redis:6379`.
+        * **POSTGRES DSN** – The key is `svix-db-dsn`; an example value may be similar to `postgresql://postgres:postgres@pgbouncer/postgres`.
+        * **Redis DSN** – This value is only required if you also use Redis for Svix. The key is `svix-redis-dsn`; an example value may be similar to `redis://redis:6379`.
     
     2. Configure an IAM role with the **secretsmanager:GetSecretValue** and **secretsmanager:DescribeSecret** permissions and allow it to assume the Service Account which the Svix pod will use to retrieve the secret info.
 
@@ -310,28 +310,28 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
 3. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
 4. Select **Svix**, and then specify the following parameters:
 
-    * **Image Prefix** - The registry and namespace (if it exists) where the *svix-server* image is located
-    * **Image Name** - The image name, for example, *svix-server*
-    * **Image Tag** - The image tag of the Svix-server image
-    * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager or the Azure Key Vault. Selecting this option enables the following additional fields:
+    * **Image Prefix** – The registry and namespace (if it exists) where the *svix-server* image is located
+    * **Image Name** – The image name, for example, *svix-server*
+    * **Image Tag** – The image tag of the Svix-server image
+    * **Use Secret Provider** – Optional. Select this option to use the AWS Secret Manager or the Azure Key Vault. Selecting this option enables the following additional fields:
 
         * For AWS Secret Manager:
 
-            * **Secret Provider** - Set to **AWS**.
-            * **AWS-Role-ARN** - An AWS role ARN which can access the specified Secret Manager.
-            * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
+            * **Secret Provider** – Set to **AWS**.
+            * **AWS-Role-ARN** – An AWS role ARN which can access the specified Secret Manager.
+            * **AWS SecretManager Name** – The AWS Secret Manager name where the sensitive data is stored.
 
         * For Azure Key Vault:
 
-            * **Secret Provider** - Set to **Azure**.
-            * **Client ID** - Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources.
-            * **Tenant ID** - Enter the Directory ID of the key vault.
-            * **Key Vault Name** - Enter the key vault name.
-            * **Use identity auth for Blob** - Set to **True** if you use the Azure Blob Storage with managed identity auth; the default value is **false**.
+            * **Secret Provider** – Set to **Azure**.
+            * **Client ID** – Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources.
+            * **Tenant ID** – Enter the Directory ID of the key vault.
+            * **Key Vault Name** – Enter the key vault name.
+            * **Use identity auth for Blob** – Set to **True** if you use the Azure Blob Storage with managed identity auth; the default value is **false**.
 
-    * **POSTGRES_DSN** - Available only if you do not use the AWS Secret Manager. A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
-    * **Use Redis** - Optional. Select this check box if you want to use Redis for message cache and queues.
-    * **REDIS_DSN** - Available only if you do not use the AWS Secret Manager. The Redis DSN, for example, `redis://redis:6379`. This field is only available if you select the **Use Redis** check box.
+    * **POSTGRES_DSN** – Available only if you do not use the AWS Secret Manager. A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
+    * **Use Redis** – Optional. Select this check box if you want to use Redis for message cache and queues.
+    * **REDIS_DSN** – Available only if you do not use the AWS Secret Manager. The Redis DSN, for example, `redis://redis:6379`. This field is only available if you select the **Use Redis** check box.
 
 5. Click **Install Svix** or **Upgrade Svix**.
 
@@ -407,62 +407,62 @@ To install the Private Cloud components, perform the following steps:
 6. Click **Install Private Cloud**.
 7. Configure the **General Options**:
 
-    * **Image Prefix** - The registry and namespace (if it exists) where the *mx-private-cloud* images are located
-    * **Nats Address** - The address of your NATS server
+    * **Image Prefix** – The registry and namespace (if it exists) where the *mx-private-cloud* images are located
+    * **Nats Address** – The address of your NATS server
 
 8. Configure the **Authenticator** and **Collector** options:
 
-    * **Host** - Database Host
-    * **Port** - Database port 
-    * **DB Name** - Database name
-    * **DB User** - Database user
-    * **DB Password** - Database password
-    * **DB CA File Path** - If your database connection should [use SSL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html), specify the CA file path, otherwise leave blank
+    * **Host** – Database Host
+    * **Port** – Database port 
+    * **DB Name** – Database name
+    * **DB User** – Database user
+    * **DB Password** – Database password
+    * **DB CA File Path** – If your database connection should [use SSL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html), specify the CA file path, otherwise leave blank
 
 9. Configure the **Interactor** options.
 
-    * **Enable Ingress** - Enable this setting to expose the Interactor Bridge with a generic Ingress template
-    * **Ingress Class Name** - The Ingress class name 
-    * **Class as Annotation** - This option adds the legacy `kubernetes.io/ingress.class` annotation to set the Ingress class, instead of using the Ingress class name; enable it to add the legacy annotation
-    * **Enable TLS** - Enable this option if your TLS Certifcate is bound to Ingress 
-    * **TLS secret** - The TLS secret name   
+    * **Enable Ingress** – Enable this setting to expose the Interactor Bridge with a generic Ingress template
+    * **Ingress Class Name** – The Ingress class name 
+    * **Class as Annotation** – This option adds the legacy `kubernetes.io/ingress.class` annotation to set the Ingress class, instead of using the Ingress class name; enable it to add the legacy annotation
+    * **Enable TLS** – Enable this option if your TLS Certifcate is bound to Ingress 
+    * **TLS secret** – The TLS secret name   
 
         {{% alert color="info" %}} To allow other clusters to connect to Private Mendix Platform, you must expose the Interactor Bridge Service. Currently, the installer only supports using the generic Ingress template to expose the service. If you want to expose the Interactor Bridge with other method (for example, Openshift Route), contact the Private Mendix Platform team.{{% /alert %}}
 
 10. Optional: To support AWS IRSA and Azure workload identity for database connection, configure the following options:
 
-    * **Use AMI only** - Set to **enabled**.
-    * **Provider** - Enter **AWS** or **Azure**.
-    * **Client ID** - When using Azure, enter the Azure Managed Identity Client ID.
-    * **AWS-Role-ARN** - When using AWS, enter an AWS role ARN which can access the specified Secret Manager. 
+    * **Use AMI only** – Set to **enabled**.
+    * **Provider** – Enter **AWS** or **Azure**.
+    * **Client ID** – When using Azure, enter the Azure Managed Identity Client ID.
+    * **AWS-Role-ARN** – When using AWS, enter an AWS role ARN which can access the specified Secret Manager. 
 
 11. Optional: To use the AWS Secret Manager or the Azure Key Vault as secret provider, configure the following options:
 
-    * **Use Secret Provider** - Set to **enabled**.
-    * **Secret Provider** - Enter **AWS** or **Azure**.
+    * **Use Secret Provider** – Set to **enabled**.
+    * **Secret Provider** – Enter **AWS** or **Azure**.
     * For Azure, configure the following settings:
 
-        * **Client ID** - Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources. 
-        * **Tenant ID** - Enter the Directory ID of the key vault.
-        * **Key Vault Name** - Enter the key vault name.
+        * **Client ID** – Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources. 
+        * **Tenant ID** – Enter the Directory ID of the key vault.
+        * **Key Vault Name** – Enter the key vault name.
 
     * For AWS, configure the following settings:
 
-        * **AWS-Role-ARN** - When using AWS, enter an AWS role ARN which can access the specified Secret Manager. 
-        * **AWS SecretManager Name** - When using AWS, enter the AWS Secret Manager name where the sensitive data is stored.
+        * **AWS-Role-ARN** – When using AWS, enter an AWS role ARN which can access the specified Secret Manager. 
+        * **AWS SecretManager Name** – When using AWS, enter the AWS Secret Manager name where the sensitive data is stored.
 
 12. If you enabled the **Use Secret Provider** option, create the following secrets in your key vault or secret manager:
 
-    * `authenticator-db-name` - The Authenticator database name, for example, `authenticator`
-    * `authenticator-db-host` - The Authenticator database host, for example, `postgres.example.com`
-    * `authenticator-db-port` - The Authenticator database port, for example, `5432`
-    * `authenticator-db-user` - The Authenticator database username, for example, `auth_user`
-    * `authenticator-db-pass` - The Authenticator database password, for example, `StrongPassword123`
-    * `collector-db-name` - The Collector database name, for example, `collector`
-    * `collector-db-host` - The Collector database host, for example, `postgres.example.com
-    * `collector-db-port` - The Collector database port, for example, `5432`
-    * `collector-db-user` - The Collector database username, for example, `collector_user`
-    * `collector-db-pass` - The Collector database password, for example, `StrongPassword456`
+    * `authenticator-db-name` – The Authenticator database name, for example, `authenticator`
+    * `authenticator-db-host` – The Authenticator database host, for example, `postgres.example.com`
+    * `authenticator-db-port` – The Authenticator database port, for example, `5432`
+    * `authenticator-db-user` – The Authenticator database username, for example, `auth_user`
+    * `authenticator-db-pass` – The Authenticator database password, for example, `StrongPassword123`
+    * `collector-db-name` – The Collector database name, for example, `collector`
+    * `collector-db-host` – The Collector database host, for example, `postgres.example.com
+    * `collector-db-port` – The Collector database port, for example, `5432`
+    * `collector-db-user` – The Collector database username, for example, `collector_user`
+    * `collector-db-pass` – The Collector database password, for example, `StrongPassword456`
 
 13. Click **Review and Apply > Apply Configuration**.
 
@@ -487,10 +487,10 @@ The Build agent is required if you want to be able to build packages without hav
 6. In the **Components at any ns** section, select **Build Agent**.
 7. Configure the following settings:
 
-    * **Namespace** - The namespace where the Build agent will be installed
-    * **Image Prefix** - The registry and namespace (if it exists) where the *kube-agent* image is located
-    * **Image Name** - The image name, for example, *mxplatform-kube-agent*
-    * **Image Tag** - The image tag of the *mxplatform-kube-agent*
+    * **Namespace** – The namespace where the Build agent will be installed
+    * **Image Prefix** – The registry and namespace (if it exists) where the *kube-agent* image is located
+    * **Image Name** – The image name, for example, *mxplatform-kube-agent*
+    * **Image Tag** – The image tag of the *mxplatform-kube-agent*
 
 8. Click **Install Build Agent**.
 
@@ -513,53 +513,53 @@ Install the Private Mendix Platform by doing the following steps:
 
 3. Click **Configure**, and then specify the following parameters:
 
-    * **AppName** - The default app name is `mxplatform`. You can change it as required.
-    * **DatabasePlan** - Enter the database plan from [Installing and Configuring the Mendix Operator](#install-operator), or select **USE-Secret-Provider**. A plan name makes the operator create the database. **USE-Secret-Provider** leaves the plan unset. You create the database and store its settings in the secret store. See [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
-    * **Storageplan** - Enter the storage plan from [Installing and Configuring the Mendix Operator](#install-operator), or select **USE-Secret-Provider**. A plan name makes the operator create the file storage. **USE-Secret-Provider** leaves the plan unset. You create the container and its permissions. See [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
-    * **StoragePlanwithIRSA** - If your storage plan uses AWS IRSA or Azure Workload Identity, set this to **enabled**.
+    * **AppName** – The default app name is `mxplatform`. You can change it as required.
+    * **DatabasePlan** – Enter the database plan from [Installing and Configuring the Mendix Operator](#install-operator), or select **USE-Secret-Provider**. A plan name makes the operator create the database. **USE-Secret-Provider** leaves the plan unset. You create the database and store its settings in the secret store. See [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
+    * **Storageplan** – Enter the storage plan from [Installing and Configuring the Mendix Operator](#install-operator), or select **USE-Secret-Provider**. A plan name makes the operator create the file storage. **USE-Secret-Provider** leaves the plan unset. You create the container and its permissions. See [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
+    * **StoragePlanwithIRSA** – If your storage plan uses AWS IRSA or Azure Workload Identity, set this to **enabled**.
 
         Enabling this option disables **Use Secret Provider**. The operator creates the ServiceAccount from the storage plan, and the secret store needs the installer to create that account. Leave this disabled when **Use Secret Provider** is enabled. You can still use a workload identity. The identity is the one you created, and the installer uses it to annotate the ServiceAccount.
 
-    * **AppUrl** - The endpoint where you can connect to your running app. It must be a URL which is supported by your platform. If you leave it blank, Mendix Operator will create it.
-    * **EnableTLS** - Allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Router. The default value is use the default settings.
-    * **TLS option** - Allows you to use an existing `kubernetes.io/tls` secret containing the TLS certificate, or to provide the `tls.crt` and `tls.key` values directly.
-    * **TLS Secret** - An existing `kubernetes.io/tls` secret containing the TLS certificate. Cannot be used together with certificate and key. If you leave it blank, the default TLS certificate from the Ingress Controller or OpenShift Router will be used.
+    * **AppUrl** – The endpoint where you can connect to your running app. It must be a URL which is supported by your platform. If you leave it blank, Mendix Operator will create it.
+    * **EnableTLS** – Allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Router. The default value is use the default settings.
+    * **TLS option** – Allows you to use an existing `kubernetes.io/tls` secret containing the TLS certificate, or to provide the `tls.crt` and `tls.key` values directly.
+    * **TLS Secret** – An existing `kubernetes.io/tls` secret containing the TLS certificate. Cannot be used together with certificate and key. If you leave it blank, the default TLS certificate from the Ingress Controller or OpenShift Router will be used.
     * **TLS certificate** and **TLS key** – Allows you to provide the `tls.crt` and `tls.key` values directly (not recommended for production environments). Cannot be used together with secretName.
-    * **SourceUrl** - The location of the deployment package, in the format `oci-image://<your image location>`. This location must be accessible from your cluster.
+    * **SourceUrl** – The location of the deployment package, in the format `oci-image://<your image location>`. This location must be accessible from your cluster.
     * **Replicas** – When you deploy your app, one replica is deployed automatically. Do not increase the number of replicas yourself, as this may cause data to be duplicated.
 
     {{< figure src="/attachments/private-platform/pmp-install7.png" class="no-border" >}}
 
 4. Click **Runtime**, and then specify the following parameters:
 
-    * **MxAdminPassword** - The password for the admin user. Leave it empty when **Use Secret Provider** is enabled. The app then reads `mx-admin-password` from the secret store. Otherwise this password is required. It must have at least one number, one upper case letter, one lower case letter and one symbol, with a minimum length of 12 characters.
-    * **dtapmode** - For production deployments, leave this value set to **P**. For the development of the app, for example acceptance testing, set the value to **D**.
-    * **ApplicationRootUrl** - Optional. Manually specify the URL of your Private Mendix Platform, for example, for use with SSO or when sending emails. For more information about this functionality, see [ApplicationRootUrl Needs to be Set Manually](/developerportal/deploy/private-cloud-operator/#applicationrooturl-needs-to-be-set-manually).
-    * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager or the Azure Key Vault. Selecting this option enables the following additional fields:
+    * **MxAdminPassword** – The password for the admin user. Leave it empty when **Use Secret Provider** is enabled. The app then reads `mx-admin-password` from the secret store. Otherwise this password is required. It must have at least one number, one upper case letter, one lower case letter and one symbol, with a minimum length of 12 characters.
+    * **dtapmode** – For production deployments, leave this value set to **P**. For the development of the app, for example acceptance testing, set the value to **D**.
+    * **ApplicationRootUrl** – Optional. Manually specify the URL of your Private Mendix Platform, for example, for use with SSO or when sending emails. For more information about this functionality, see [ApplicationRootUrl Needs to be Set Manually](/developerportal/deploy/private-cloud-operator/#applicationrooturl-needs-to-be-set-manually).
+    * **Use Secret Provider** – Optional. Select this option to use the AWS Secret Manager or the Azure Key Vault. Selecting this option enables the following additional fields:
 
         * For AWS Secret Manager:
 
-            * **Secret Provider** - Set to **AWS**.
-            * **AWS-Role-ARN** - An [AWS role ARN](/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
-            * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
+            * **Secret Provider** – Set to **AWS**.
+            * **AWS-Role-ARN** – An [AWS role ARN](/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
+            * **AWS SecretManager Name** – The AWS Secret Manager name where the sensitive data is stored.
 
         * For Azure Key Vault:
 
-            * **Secret Provider** - Set to **Azure**.
-            * **Client ID** - Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources.
-            * **Tenant ID** - Enter the Directory ID of the key vault.
-            * **Key Vault Name** - Enter the key vault name.
-            * **Use identity auth for Blob** - Set to **True** if you use the Azure Blob Storage with managed identity auth; the default value is **false**.
+            * **Secret Provider** – Set to **Azure**.
+            * **Client ID** – Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources.
+            * **Tenant ID** – Enter the Directory ID of the key vault.
+            * **Key Vault Name** – Enter the key vault name.
+            * **Use identity auth for Blob** – Set to **True** if you use the Azure Blob Storage with managed identity auth; the default value is **false**.
 
 5. In the **Enabled Functions** section, select or clear the functions that you want to enable or disable:
  
-    * **Persist Config** - When enabled, this setting locks the Private Mendix Platform configuration, so that it can no longer be modified from the user interface.
-    * **Project Management** - Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
-    * **Marketplace** - Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
-    * **Marketplace Approvals** - Optional. If enabled, contents that users publish to the private Marketplace require administrator approval before publishing.
-    * **Marketplace Import** - Optional. Enables content import with an external source.
-    * **IDP** - Optional. Enable users to login using SSO by configuring your IdP integration.
-    * **Webhook** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
+    * **Persist Config** – When enabled, this setting locks the Private Mendix Platform configuration, so that it can no longer be modified from the user interface.
+    * **Project Management** – Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
+    * **Marketplace** – Recommended. Enables you to use the Private Platform's Marketplace capabilities to upload, import and manage Marketplace contents. The Marketplace enabled here is hosted entirely within your Private Mendix Platform.
+    * **Marketplace Approvals** – Optional. If enabled, contents that users publish to the private Marketplace require administrator approval before publishing.
+    * **Marketplace Import** – Optional. Enables content import with an external source.
+    * **IDP** – Optional. Enable users to login using SSO by configuring your IdP integration.
+    * **Webhook** – Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
 
 6. Click **Review and Apply** > **Evaluate Configuration**.
 7. Make any required changes or click **Run Test App**.
@@ -587,11 +587,11 @@ To enable [Maia for Private Mendix Platform](/private-mendix-platform/maia/), pe
 6. In the **Components at PMP ns** section, select **Maia**.
 7. Configure the following settings:
 
-    * **Image Prefix** - The registry and namespace (if it exists) where the *maia-appgen-pmp* image is located
-    * **Image Name** - The image name, for example, *maia-appgen-pmp* 
-    * **Image Tag** - The image tag of the AppGen image
-    * **Enable Ingress** - Enable or disable Nginx ingress
-    * **MXASSIST_COPILOT_MXID3_URL** - The OIDC URL of Private Mendix Platform, in the following format: `<your Private Mendix Platform URL>/oidc/`
+    * **Image Prefix** – The registry and namespace (if it exists) where the *maia-appgen-pmp* image is located
+    * **Image Name** – The image name, for example, *maia-appgen-pmp* 
+    * **Image Tag** – The image tag of the AppGen image
+    * **Enable Ingress** – Enable or disable Nginx ingress
+    * **MXASSIST_COPILOT_MXID3_URL** – The OIDC URL of Private Mendix Platform, in the following format: `<your Private Mendix Platform URL>/oidc/`
 
 ### Installing the LLM Gateway
 
@@ -605,11 +605,11 @@ Because Private Mendix Platform instances are hosted within the enterprise firew
 6. In the **Components at PMP ns** section, select **Maia LLM Gateway**.
 7. Configure the following settings:
 
-    * **Image Prefix** - The registry and namespace (if it exists) where the *maia-llm-gateway* image is located
-    * **Image Name** - The image name, for example, *maia-llm-gateway* 
-    * **Image Tag** - The image tag of the LLM Gateway image
-    * **Enable Ingress** - Enable or disable Nginx ingress
-    * **MXASSIST_COPILOT_MXID3_URL** - The OIDC URL of Private Mendix Platform, in the following format: `<your Private Mendix Platform URL>/oidc/`
+    * **Image Prefix** – The registry and namespace (if it exists) where the *maia-llm-gateway* image is located
+    * **Image Name** – The image name, for example, *maia-llm-gateway* 
+    * **Image Tag** – The image tag of the LLM Gateway image
+    * **Enable Ingress** – Enable or disable Nginx ingress
+    * **MXASSIST_COPILOT_MXID3_URL** – The OIDC URL of Private Mendix Platform, in the following format: `<your Private Mendix Platform URL>/oidc/`
 
 {{< figure src="/attachments/private-platform/pmp-install11.png" class="no-border" >}}
 
@@ -631,10 +631,10 @@ To enable PDF Document Generation for Private Mendix Platform, perform the follo
 6. In the **Components at PMP ns** section, select **PDF Gen**.
 7. Configure the following settings:
 
-    * **Namespace** - The namespace where PDF Document Generation will be installed
-    * **Image Prefix** - The registry and namespace (if it exists) where the *document-generation-service* image is located
-    * **Image Name** - The image name, for example, *document-generation-service* 
-    * **Image Tag** - The image tag of the AppGen image, for example, *1.0.2*
+    * **Namespace** – The namespace where PDF Document Generation will be installed
+    * **Image Prefix** – The registry and namespace (if it exists) where the *document-generation-service* image is located
+    * **Image Name** – The image name, for example, *document-generation-service* 
+    * **Image Tag** – The image tag of the AppGen image, for example, *1.0.2*
 
 {{% alert color="info" %}}
 PDF Document Generation requires additional configuration for your Mendix apps to use the private service. For more information, see [Private PDF Document Generation Service: Configuring your Mendix Apps](/appstore/services/private-document-generation-service/#configuring-your-mendix-apps).

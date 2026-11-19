@@ -441,6 +441,52 @@ Before creating any environments, you must register your Kubernetes clusters by 
 
 6. After the cluster is registered, create environments with the cluster, namespace and plans.
 
+### Azure DevOps Server Builds {#azure-devops-server}
+
+When the version control system is Azure DevOps Server (on-premises), the build pods clone the app from your server with the PAT of the user who starts the build. They need the following:
+
+1. **DNS** - The build cluster resolves the server host name. A hosts entry on a single machine is not visible to the cluster.
+2. **Network** - TCP 443 (or the server port) is open from the cluster's outbound addresses to the server.
+3. **Build image** - pmp-pipeline-tools 0.11.1 or above. Earlier images fail with *Authentication failed* when the server offers Windows authentication (NTLM), which is the default for Azure DevOps Server.
+4. **Certificate trust** - If the server certificate is not issued by a public CA, use a build image that trusts your CA (see below). Do not use **Skip SSL Verification** in production: it also switches off the certificate checks for the storage and registry calls.
+5. **Secrets** - The build pod receives the user's Git token. Restrict read access to the build namespace.
+
+#### Building an Image That Trusts Your CA
+
+The build image trusts public CAs only and ignores `CACertificates` and the Operator custom CA secret. Build a derived image that adds your CA to its system trust store. You need one image per CA, and you rebuild it for every pmp-pipeline-tools release and every CA change. To build the image, follow these steps:
+
+1. Find the image in **Admin Mode** > **Settings** > **Build** > **Build Utility** > **Build Pipeline Image** and pin a version tag.
+2. Create a Dockerfile next to `customer-ca.crt`:
+
+    ```text
+    ARG BASE=private-cloud.registry.mendix.com/privateplatform/pmp-pipeline-tools:<TAG>
+    FROM ${BASE}
+    USER root
+    COPY customer-ca.crt /etc/pki/ca-trust/source/anchors/customer-ca.crt
+    RUN update-ca-trust extract
+    USER mendix
+    ```
+
+3. Build and test it:
+
+    ```text
+    docker build -t <registry>/pmp-pipeline-tools-ca:<TAG> .
+    docker run --rm --entrypoint sh <registry>/pmp-pipeline-tools-ca:<TAG> -c 'git ls-remote https://<host>/<collection>/<project>/_git/<repo> 2>&1 | head -3'
+    ```
+
+    The output must not contain *unable to get local issuer certificate*; an authentication message is fine here.
+
+4. Push the image. If the registry needs credentials, create an image pull secret in the build namespace and enter it as **Pull Secret**.
+5. In **Build Utility**, set **Build Pipeline Image** to the new image and **Skip SSL Verification** to off.
+6. Run a build. The Git step must clone without a certificate error.
+
+| Build Log | Cause |
+| --- | --- |
+| *Could not resolve host* | DNS |
+| *unable to get local issuer certificate* | The image does not trust the CA, or the old image is still selected |
+| *certificate is valid for ..., not ...* | The server certificate has no SAN for the host name |
+| *Authentication failed* | Build image older than 0.11.1, or an invalid PAT |
+
 ## Architecture of the CI/CD Pipeline
 
 The diagram in this section presents the architecture and components of the pipeline. For more information, see [Build Images Setting](#build-images) above.

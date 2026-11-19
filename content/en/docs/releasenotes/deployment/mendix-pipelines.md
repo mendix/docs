@@ -12,6 +12,12 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 ## 2026
 
+### Nov 19, 2026
+
+#### New Features
+
+* We have added support for duplicate steps in Mendix Pipelines. You can now add multiple instances of the same step, such as **Deploy**, **POST Request**, or **GET Request**, to a single pipeline. For more information, refer to [Mendix Pipeline Steps](/developerportal/deploy/mendix-pipelines/#pipeline-steps).
+
 ### Oct 29, 2026
 
 #### New Features

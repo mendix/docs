@@ -330,8 +330,8 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
             * **Use identity auth for Blob** – Set to **True** if you use the Azure Blob Storage with managed identity auth; the default value is **false**.
 
     * **POSTGRES_DSN** – Available only if you do not use the AWS Secret Manager. A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
-    * **Use Redis** – Optional. Select this check box if you want to use Redis for message cache and queues.
-    * **REDIS_DSN** – Available only if you do not use the AWS Secret Manager. The Redis DSN, for example, `redis://redis:6379`. This field is only available if you select the **Use Redis** check box.
+    * **Use Redis** – Optional. Select this checkbox if you want to use Redis for message cache and queues.
+    * **REDIS_DSN** – Available only if you do not use the AWS Secret Manager. The Redis DSN, for example, `redis://redis:6379`. This field is only available if you select the **Use Redis** checkbox.
 
 5. Click **Install Svix** or **Upgrade Svix**.
 

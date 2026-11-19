@@ -41,10 +41,10 @@ You must customize your app to allow it to be deployed, registered, and shown in
 
 ### Option A: Using the Siemens Insights Hub Starter Application
 
-The **Siemens Insights Hub Starter Application** in the Mendix Marketplace contains all the modules you need to create an app you want to deploy to Insights Hub.
+The **Siemens Insights Hub Starter Application** in Mendix Marketplace contains all the modules you need to create an app you want to deploy to Insights Hub.
 
 {{% alert color="info" %}}
-This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
+This is the recommended approach if you are building a new app, as it will provide all the necessary building blocks to get started.
 {{% /alert %}}
 
 Follow these steps:
@@ -82,9 +82,7 @@ The following items in the SiemensInsightsHubSingleSignOn module need to be conf
 
 #### CockpitApplicationName
 
-Enter the name of your app as registered in the Insights Hub Mendix Portal as the value of *CockpitApplicationName*.
-
-These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/appstore/industry/mindsphere/mindsphere-development-considerations/#appname) section of *Insights Hub Development Considerations*.
+Enter the name of your app as registered in the Insights Hub Mendix Portal as the value of *CockpitApplicationName*. This must fit the constraints listed in the [App Name](/appstore/industry/mindsphere/mindsphere-development-considerations/#appname) section of *Insights Hub Development Considerations*.
 
 #### RegisterSingleSignOn
 
@@ -204,9 +202,7 @@ Once you have created the scopes for your app, you will need to assign them to t
 The user will have to sign out and sign in again for this assignment to take effect.
 {{% /alert %}}
 
-{{% alert color="success" %}}
 Your app is now set up and users can run it from within the Insights Hub Developer Cockpit.
-{{% /alert %}}
 
 ## Development Considerations
 

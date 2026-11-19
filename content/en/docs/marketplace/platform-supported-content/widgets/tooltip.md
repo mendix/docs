@@ -35,7 +35,7 @@ For the sake of simplicity, there are two methods for creating a tooltip:
 If the tooltip has no content, it does not open. This happens, for example, when the text contains only spaces, or when all the widgets in the custom content are hidden.
 
 {{% alert color="info" %}}
-From version 1.6.0, custom tooltip content loads together with the page instead of when the tooltip first opens. This lets screen readers announce the content. Data sources inside custom content, such as a data view or a list view, run when the page loads, even if the user never opens the tooltip. Avoid heavy data sources in tooltip content, because they can slow down page loading.
+From version 1.6.0 and above, custom tooltip content loads together with the page instead of when the tooltip first opens. This allows screen readers to announce the content. Data sources inside custom content, such as a data view or a list view, run when the page loads even if the user never opens the tooltip. We recommend you avoid heavy data sources in tooltip content, because they can decrease page performance.
 {{% /alert %}}
 
 ### Tooltip Position

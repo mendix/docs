@@ -61,27 +61,27 @@ jobs:
       - name: Run Vale
         run: |
           if [ -s changed-files.txt ]; then
-            # Only flag errors, not warnings or suggestions. Vale exits non-zero on errors; that is expected.
-            xargs -d '\n' vale --output=JSON --minAlertLevel=error < changed-files.txt > vale.json || true
-            # Convert Vale JSON to reviewdog's rdjsonl format
-            jq -c 'to_entries[] | .key as $f | .value[] | {message: ("[" + .Check + "] " + .Message), location: {path: $f, range: {start: {line: .Line, column: .Span[0]}}}, severity: (.Severity | ascii_upcase)}' vale.json > vale-results/results.rdjsonl
+            # Report errors and warnings, not suggestions. Vale exits non-zero on errors; that is expected.
+            xargs -d '\n' vale --output=JSON --minAlertLevel=warning < changed-files.txt > vale.json || true
+            # Convert Vale JSON to reviewdog's rdjsonl format. Only errors become review comments.
+            jq -c 'to_entries[] | .key as $f | .value[] | select(.Severity == "error") | {message: ("[" + .Check + "] " + .Message), location: {path: $f, range: {start: {line: .Line, column: .Span[0]}}}, severity: (.Severity | ascii_upcase)}' vale.json > vale-results/results.rdjsonl
           fi
 
       - name: Summarize findings
         run: |
-          # Lists every error Vale found in the changed files, including lines the PR didn't change
-          if [ -s vale-results/results.rdjsonl ]; then
+          # Lists every error and warning Vale found in the changed files, including lines the PR didn't change
+          if [ -s changed-files.txt ] && [ "$(jq 'length' vale.json)" -gt 0 ]; then
             {
-              echo "## Vale errors in changed files"
+              echo "## Vale errors and warnings in changed files"
               echo
-              echo "Note: The Vale Comments workflow posts review comments only for lines this PR changed. This table lists all errors in the changed files."
+              echo "Note: The Vale Comments workflow posts review comments only for errors on lines this PR changed. This table lists all errors and warnings in the changed files."
               echo
-              echo "| File | Line | Rule | Message |"
-              echo "| --- | --- | --- | --- |"
-              jq -r 'to_entries[] | .key as $f | .value[] | "| \($f) | \(.Line) | \(.Check) | \(.Message | gsub("[|<>]"; " ")) |"' vale.json
+              echo "| File | Line | Severity | Rule | Message |"
+              echo "| --- | --- | --- | --- | --- |"
+              jq -r 'to_entries[] | .key as $f | .value[] | "| \($f) | \(.Line) | \(.Severity) | \(.Check) | \(.Message | gsub("[|<>]"; " ")) |"' vale.json
             } >> "$GITHUB_STEP_SUMMARY"
           elif [ -s changed-files.txt ]; then
-            echo "No Vale errors found in the changed files." >> "$GITHUB_STEP_SUMMARY"
+            echo "No Vale errors or warnings found in the changed files." >> "$GITHUB_STEP_SUMMARY"
           else
             echo "Vale didn't run because this PR doesn't add or change any Markdown files under content/en/docs." >> "$GITHUB_STEP_SUMMARY"
           fi

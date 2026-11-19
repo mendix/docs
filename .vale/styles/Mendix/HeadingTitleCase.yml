@@ -14,7 +14,10 @@ exceptions:
   - iOS
   - IdP
   # Don't force lowercase for these words
+  - Against
   - Between
   - During
   - Through
   - Without
+  # Exclude filenames with extensions (but consider if these should get code font instead)
+  - '[\w-]+\.(?:html|json|js|scss|gz)'

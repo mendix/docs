@@ -1,6 +1,6 @@
 # Mendix custom rule: Compound word formatting
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md
-# See specific terms: checkbox, dataset, endpoint, home page
+# Each entry matches both capitalizations and carries them over: ([Cc]) captures the first letter, and $1 puts it back.
 extends: substitution
 message: "Use '%s' instead of '%s'"
 level: error
@@ -14,13 +14,20 @@ scope:
 action:
   name: replace
 swap:
-  'data[ -]set': 'dataset'
-  'Data[ -]set': 'Dataset'
-  'end point': 'endpoint'
-  'End point': 'Endpoint'
-  'check box': 'checkbox'
-  'Check box': 'Checkbox'
-  'home-?page': 'home page'
-  'Home-?page': 'Home page'
-  'end user': 'end-user'
-  'End user': 'End-user'
+  '([Cc])heck box': '$1heckbox'
+  '([Dd])ata[ -]set': '$1ataset'
+  '([Dd])ouble click (any|in|it|on|the|to)\b': '$1ouble-click $2'  # Matches the next word to exclude UI label hits
+  '([Dd])rop ?zone(s?)': '$1rop-zone$2'
+  '([Ee])nd point': '$1ndpoint'
+  '([Ee])nd user': '$1nd-user'
+  '([Hh])ome-?page': '$1ome page'
+  '([Ii])n-line': '$1nline'
+  '([Ll])ife cycle': '$1ifecycle'
+  '([Mm])eta model': '$1etamodel'
+  '([Rr])ead only': '$1ead-only'
+  '([Rr])e-(deploy(?:ing)?|generat(?:e|ing)|install|open(?:ed|ing)?|run(?:ning)?|us(?:e[ds]?|able))': '$1e$2'
+  '([Rr])ight click': '$1ight-click'
+  '([Rr])un[ -]time': '$1untime'
+  '([Ss])ingle sign on': '$1ingle sign-on'
+  '([Ss])ub ?microflow(s?)': '$1ub-microflow$2'
+  '([Tt])ool tip': '$1ooltip'

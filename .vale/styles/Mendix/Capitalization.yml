@@ -20,13 +20,13 @@ swap:
   '(^|[^.])git': '$1Git'  # Skips .git folder
   idp: IdP
   '(^|[^/])ios': '$1iOS'  # Skips ios in paths
-  '(^|[^./-])java': '$1Java'  # Skips .java files, java-in-names, and java in paths
+  '(^|[^./-])java(?!\.\w)': '$1Java'  # Skips .java files, java-in-names, java in paths, and java.lang-style names
   macos: macOS
   maia: Maia
   'maia make': 'Maia Make'
   markdown: Markdown
   marketplace: Marketplace
-  '(^|[^.>@])mendix': '$1Mendix'  # Skips com.mendix names, domains, link text after >, and @mendix emails
+  '(^|[^./>@-])mendix(?!/)': '$1Mendix'  # Skips com.mendix names, domains, link text after >, @mendix emails, hyphenated repo names, and paths or repos like mendix/docs
   'n/a': 'N/A'
   postgres: Postgres
   postgresql: PostgreSQL

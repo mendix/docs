@@ -38,7 +38,7 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
     1. Click **New**.
     2. Enter an identifying name.
     3. For API type, select **OpenAI**.
-    4. For **Endpoint**, enter your Snowflake account URL with the `/api/v2/cortex/v1/` suffix. For example, the URL may look like the following: `https:/<snowflake_accountname>.snowflakecomputing.com/api/v2/cortex/v1/`.
+    4. For **Endpoint**, enter your Snowflake account URL with the `/api/v2/cortex/v1/` suffix. For example, the URL may look like the following: `https:/<snowflake-accountname>.snowflakecomputing.com/api/v2/cortex/v1/`.
 
     5. Save your changes.
 
@@ -71,3 +71,7 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
     3. Click **Test**.
 
         {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/test.png" >}}
+
+## Updating the OpenAI Connector
+
+When updating the OpenAI connector, from version 9.40 or older to 9.50 or newer, keep in mind that the allowed format of the **Endpoint** URL has changed. If your endpoint URL contains underscores (`_`), you must replace them with hyphens (`-`) after the upgrade.

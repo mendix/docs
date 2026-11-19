@@ -23,24 +23,24 @@ Configure the service by filling out the following:
     * **AWS S3**
         * **Bucket** – the bucket where the data is stored
         * **AWS Region for Bucket** – the AWS region where the bucket is located
-        * **AWS Role (to Assume)** – the Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that the bridge assumes to write to your S3 bucket
-{{% alert color="info" %}}For instructions on creating the IAM role and getting its ARN, see the [Create an IAM Role for AWS S3](#create-iam-role) section.{{% /alert %}}
+        * **AWS Role (to Assume)** – the Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role the bridge assumes to write to your S3 bucket
+{{% alert color="info" %}}For details on creating the IAM role and getting its ARN, see the [Create an IAM Role for AWS S3](#create-iam-role) section below.{{% /alert %}}
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/iceberg/ebb_iceberg_configure.png" alt="" width="400" >}}
 
 ### Create an IAM Role for AWS S3 {#create-iam-role}
 
-If you store your data in AWS S3, create an IAM role in your AWS account that the bridge can assume to write Iceberg tables to your bucket. The role needs a trust policy that allows the Mendix Iceberg bridge role to assume it, and a permissions policy that grants access to the bucket.
+If you store your data in AWS S3, create an IAM role in your AWS account that the bridge can assume to write Iceberg tables to your bucket. . Configure the role with a [trust policy](#trust-policy) that allows the Mendix Iceberg bridge role to assume it, and a [permissions policy](#permissions-policy) that grants access to the bucket.
 
 #### Prerequisites
 
 * Access to your AWS account with permissions to create and manage IAM roles and policies
 * The S3 bucket where the Iceberg tables are stored
-* The ARN of the Mendix Iceberg bridge role, which [Event Broker Manager](https://broker.mendix.com/) shows when you configure an Iceberg bridge that uses AWS S3
+* The ARN of the Mendix Iceberg bridge role, which the [Event Broker Manager](https://broker.mendix.com/) shows when you configure an Iceberg bridge that uses AWS S3
 
-#### Create the Role with a Trust Policy
+#### Create the Role with a Trust Policy {#trust-policy}
 
-The trust policy defines who can assume the role.
+The trust policy defines who can assume the role. To create a trust policy, follow the steps below:
 
 1. In the AWS Management Console, go to **IAM** > **Roles**.
 2. Click **Create role**.
@@ -63,12 +63,12 @@ The trust policy defines who can assume the role.
     }
     ```
 
-5. Replace *`MENDIX_ICEBERG_BRIDGE_ROLE_ARN`* with the ARN of the Mendix Iceberg bridge role. You can copy this ARN from the bridge configuration in Event Broker Manager.
+5. Replace *`MENDIX_ICEBERG_BRIDGE_ROLE_ARN`* with the ARN of the Mendix Iceberg bridge role. You can copy this ARN from the bridge configuration in the Event Broker Manager.
 6. Click **Next**.
 
-#### Attach a Permissions Policy
+#### Attach a Permissions Policy {#permissions-policy}
 
-The permissions policy defines what the bridge can do after it assumes the role.
+The permissions policy defines what the bridge can do after it assumes the role. To create a permissions policy, follow the steps below:
 
 1. On the **Add permissions** page, click **Create policy**. The policy editor opens in a new browser tab.
 2. Select **JSON** and enter the following policy to grant the required S3 permissions:

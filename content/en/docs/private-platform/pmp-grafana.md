@@ -42,7 +42,7 @@ Install the monitoring components with Helm, using the official charts. The foll
 | Loki | `loki-21.0.0` | `3.7.9` |
 | Prometheus | `kube-prometheus-stack-92.18.0` | `v0.94.2` |
 
-### Prometheus - Scraping Mendix App Pods
+### Prometheus – Scraping Mendix App Pods
 
 Mendix app pods expose runtime metrics on port `8900` at `/metrics`. To enable Prometheus to scrape them, perform the following steps:
 
@@ -94,7 +94,7 @@ Mendix app pods expose runtime metrics on port `8900` at `/metrics`. To enable P
 
 Private Mendix Platform queries Prometheus by the labels namespace, pod, and container. `Alertmanager` and `NodeExporter` can remain disabled in the Prometheus chart without affecting Private Mendix Platform's ability to retrieve the correct data.
 
-### Alloy - Labeling Pod Logs
+### Alloy – Labeling Pod Logs
 
 Private Mendix Platform queries Loki by the labels namespace, pod, container, and app. Use the following Alloy configuration to set them:
 
@@ -199,8 +199,8 @@ Private Mendix Platform requires an Admin-level API key to authenticate with Gra
     2. Go to **Administration > Service Accounts**.
     3. Click **Add service account**, and add an account like the following:
 
-        * **Name** - *PMP-integration*
-        * **Role** - Admin
+        * **Name** – *PMP-integration*
+        * **Role** – Admin
     
     4. Click **Create**.
 
@@ -211,8 +211,8 @@ Private Mendix Platform requires an Admin-level API key to authenticate with Gra
     1. Click the **PMP-integration** service account.
     2. Click **Add service account token**, and add a token like the following:
 
-        * **Token name** - *PMP-key*
-        * **Expiration** - Leave blank (no expiration), or set as needed
+        * **Token name** – *PMP-key*
+        * **Expiration** – Leave blank (no expiration), or set as needed
 
     3. Click **Generate token**.
 
@@ -261,14 +261,14 @@ To configure a Private Mendix Platform cluster for Grafana, perform the followin
     2. In the **Logging and Monitoring** section, set **Use Grafana and Loki** and **Use Prometheus** to **Yes**.
     3. Fill in the following information:
 
-        * **Grafana Host** - Full URL to Grafana, for example, `https://grafana.yourcompany.com`.
-        * **Grafana API Key** - The admin API key generated in [Generating a Grafana API Key](#grafana-api-key), for example, `glsa_abc123...`.
-        * **Data Source Type** - Select **Loki** or **Azure Monitor**.
-        * **Prometheus Name** - Data source name in Grafana, for example, `prometheus`.
-        * **Loki Name** - Data source name in Grafana, for example, `loki`; required when the data source type is set to Loki.
-        * **Azure Monitor Name** - The name of the Azure Monitor data source in Grafana; required when the data source type is set to Azure Monitor.
-        * **AKS Name** - The AKS cluster from which to collect logs; required when the data source type is set to Azure Monitor.
-        * **Resource ID** - The Azure resource ID of the AKS cluster. It is filled in automatically when you select the AKS cluster. Required when the data source type is set to Azure Monitor.
+        * **Grafana Host** – Full URL to Grafana, for example, `https://grafana.yourcompany.com`.
+        * **Grafana API Key** – The admin API key generated in [Generating a Grafana API Key](#grafana-api-key), for example, `glsa_abc123...`.
+        * **Data Source Type** – Select **Loki** or **Azure Monitor**.
+        * **Prometheus Name** – Data source name in Grafana, for example, `prometheus`.
+        * **Loki Name** – Data source name in Grafana, for example, `loki`; required when the data source type is set to Loki.
+        * **Azure Monitor Name** – The name of the Azure Monitor data source in Grafana; required when the data source type is set to Azure Monitor.
+        * **AKS Name** – The AKS cluster from which to collect logs; required when the data source type is set to Azure Monitor.
+        * **Resource ID** – The Azure resource ID of the AKS cluster. It is filled in automatically when you select the AKS cluster. Required when the data source type is set to Azure Monitor.
 
     {{< figure src="/attachments/private-platform/pmp-grafana4.png" class="no-border" >}}
 
@@ -280,31 +280,31 @@ After configuring Private Mendix Platform, verify that it can retrieve data by n
 
 You can filter the results by the following properties:
 
-* **Container** - The container instance.
-* **Retrieve last** - The number of results to retrieve.
-* **Timespan** - The date and time range to display.
-* **Filter by Log Level** - The highest log level to display. The following log levels are available:
+* **Container** – The container instance.
+* **Retrieve last** – The number of results to retrieve.
+* **Timespan** – The date and time range to display.
+* **Filter by Log Level** – The highest log level to display. The following log levels are available:
 
-    * **Trace** - Provides highly detailed information. Trace level messages are written only to logs.
-    * **Debug** - Provides detailed information, typically of interest only when diagnosing problems.
-    * **Info** - Confirms that things are working as expected.
-    * **Warning** - Indicates that something unexpected happened or warns about an upcoming problem (for example, *disk space low*). The application is still working as expected.
-    * **Error** - Indicates a serious problem that prevented the application from performing some function.
-    * **Critical** - Indicates that a serious error has occurred; the application may be unable to continue running.
+    * **Trace** – Provides highly detailed information. Trace level messages are written only to logs.
+    * **Debug** – Provides detailed information, typically of interest only when diagnosing problems.
+    * **Info** – Confirms that things are working as expected.
+    * **Warning** – Indicates that something unexpected happened or warns about an upcoming problem (for example, *disk space low*). The application is still working as expected.
+    * **Error** – Indicates a serious problem that prevented the application from performing some function.
+    * **Critical** – Indicates that a serious error has occurred; the application may be unable to continue running.
 
-* **Keyword** - A keyword to use for filtering.
+* **Keyword** – A keyword to use for filtering.
 
 ## Grafana APIs Details
 
 Private Mendix Platform uses the following Grafana endpoints:
 
-* `GET /api/health` - This endpoint is used to check the health and status of the Grafana instance itself. It allows Private Mendix Platform to get the Grafana version and verify that Grafana is running before saving the logging and monitoring configuration.
-* `GET /api/datasources` - This endpoint is used to fetch the unique identifiers (IDs) of datasources, like Loki (logs) and Prometheus (metrics). These IDs are required for subsequent queries.
-* `GET /api/datasources/proxy/uid/:uid/*`  - This endpoint acts as a proxy for calls to the data source identified by the specified UID. Private Mendix Platform uses this to call Loki and Prometheus APIs to query logs and labels.
-* `GET /loki/api/v1/query_range` - This is the primary endpoint for fetching log data. Private Mendix Platform uses this Loki API to query application logs over a specific time range. The results of this query are used for real-time monitoring, and displayed within the Private Mendix Platform interface.
-* `GET /api/v1/labels` (Prometheus API through Grafana) - This endpoint queries the available labels from Prometheus. Private Mendix Platform uses this to check if a specific label (for example, `namespace`) exists in Prometheus.
-* `GET /api/v1/label/pod/values` (Prometheus API through Grafana) - This endpoint retrieves the list of all unique pod names for a target environment. This is used to populate the filter dropdown in the Private Mendix Platform interface.
-* `POST /api/ds/query?ds_type=prometheus` - This is a universal Grafana API endpoint for executing queries on a specific data source. Private Mendix Platform uses it to send PromQL queries to the Prometheus data source to fetch metric data for the Metrics dashboard.
+* `GET /api/health` – This endpoint is used to check the health and status of the Grafana instance itself. It allows Private Mendix Platform to get the Grafana version and verify that Grafana is running before saving the logging and monitoring configuration.
+* `GET /api/datasources` – This endpoint is used to fetch the unique identifiers (IDs) of datasources, like Loki (logs) and Prometheus (metrics). These IDs are required for subsequent queries.
+* `GET /api/datasources/proxy/uid/:uid/*`  – This endpoint acts as a proxy for calls to the data source identified by the specified UID. Private Mendix Platform uses this to call Loki and Prometheus APIs to query logs and labels.
+* `GET /loki/api/v1/query_range` – This is the primary endpoint for fetching log data. Private Mendix Platform uses this Loki API to query application logs over a specific time range. The results of this query are used for real-time monitoring, and displayed within the Private Mendix Platform interface.
+* `GET /api/v1/labels` (Prometheus API through Grafana) – This endpoint queries the available labels from Prometheus. Private Mendix Platform uses this to check if a specific label (for example, `namespace`) exists in Prometheus.
+* `GET /api/v1/label/pod/values` (Prometheus API through Grafana) – This endpoint retrieves the list of all unique pod names for a target environment. This is used to populate the filter dropdown in the Private Mendix Platform interface.
+* `POST /api/ds/query?ds_type=prometheus` – This is a universal Grafana API endpoint for executing queries on a specific data source. Private Mendix Platform uses it to send PromQL queries to the Prometheus data source to fetch metric data for the Metrics dashboard.
 
 ## Metrics and Labels
 

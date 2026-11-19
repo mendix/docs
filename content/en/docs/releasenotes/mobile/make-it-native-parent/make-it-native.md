@@ -21,23 +21,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ### Fixes
 
-- We have fixed the textinputs hiding behind on-screen keyboard.
-- We have fixed the Android splash screen being stretched. The Mendix logo is now centered and displayed with the correct proportions on all screen sizes.
-- We migrated iOS to the UIKit scene delegate lifecycle.
 - We have fixed the Android back button closing the app instead of navigating back within the Mendix app.
-
-### Changes
-
--   Migrated from react-native-push-notification to @notifee/react-native for better new architecture compatibility and enhanced push notification features
--   Removed `@react-native-masked-view/masked-view` dependency.
--   We migrated from react-native-file-viewer to react-native-file-viewer-turbo for new architecture compatibility
--   File viewer now uses modal to display content
--   We migrated from react-native-biometrics to @sbaiahmed1/react-native-biometrics for new architecture compatibility
--   We have removed react-native-system-navigation-bar dependency. Navigation bar visibility is now handled by the react-native-video package.
--   We migrated from react-native-fast-image to @d11/react-native-fast-image for new architecture compatibility.
--   Upgrade react-native-reanimated to v3.16.7.
--   We migrated from `react-native-splash-screen` to `react-native-bootsplash@6.3.10` for better splash screen support and autolinking compatibility.
--   Replaced @notifee/react-native with react-native-notify-kit library.
 
 ## Android 11.12.2 / iOS 11.12.2
 

@@ -50,6 +50,8 @@ http {
 
 In this example, nginx listens on `localhost:8081` and forwards every request to the Mendix app on `localhost:8080`, adding the `X-Forwarded-Proto` header.
 
+You can run nginx directly on your machine or in a Docker container. If you run nginx in a Docker container, `127.0.0.1` refers to the container, not to your machine. In that case, change the address in `proxy_pass` to one that reaches your machine from the container, such as `host.docker.internal` in Docker Desktop, and publish the port that nginx listens on.
+
 Use the URL of the reverse proxy as the Mendix runtime URL everywhere you consume the Mendix app. In this example, that means using port `8081` instead of port `8080`.
 
 ## Running Your App Locally over HTTPS {#https}
@@ -128,6 +130,8 @@ http {
 Replace `/path/to/` with the path to the folder that contains the certificate and the private key.
 
 In this example, nginx accepts HTTPS connections on `localhost:8443` and forwards every request to the Mendix app on `localhost:8080`, adding the `X-Forwarded-Proto` header. Your app is available at `https://localhost:8443`.
+
+As described in the [Using a Reverse Proxy for Setting Secure Cookies](#reverse-proxy) section, you can run nginx directly on your machine or in a Docker container. If you use a Docker container, also make the certificate and the private key available in the container.
 
 {{% alert color="info" %}}
 Browsers do not trust a self-signed certificate by default. They show a warning when you open the app, and they block requests that other web applications make to it. To avoid this, add the certificate to the trust store of your operating system or browser.

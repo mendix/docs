@@ -858,7 +858,7 @@ The `mxplatform` component is used for Mendix application platform deployment.
 | --- | --- | --- | --- |
 | `enable` | Boolean | Yes | Enables `mxplatform` deployment |
 | `name` | string | No (default: `mxplatform`) | The name of the MendixApp CR and ServiceAccount, if created |
-| `UseStoragePlanwithIRSA` | Boolean | No (default: `false`) | Set to `true` when using StoragePlans with Workload Identity |
+| `useStoragePlanwithIRSA` | Boolean | No (default: `false`) | Set to `true` when a storage plan with workload identity creates the ServiceAccount. Leave `false` when the secret store is enabled, so the chart creates the ServiceAccount |
 
 #### PCLM Integration (Required)
 
@@ -874,9 +874,19 @@ The `mxplatform` component is used for Mendix application platform deployment.
 | --- | --- | --- |
 | `spec.appURL` | Yes | A public domain for the app |
 | `spec.sourceURL` | Yes | The OCI image path in the following format: `oci-image://<registry>/<image>:<tag>` |
-| `spec.database.servicePlan` | Conditional | The database service plan name; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
-| `spec.storage.servicePlan` | Conditional | The storage service plan name; not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
-| `spec.runtime.mxAdminPassword` | Conditional | The admin password not required when `secretProviderclass.enable` is set to `true` (for credentials injected from a secret manager) |
+| `spec.database.servicePlan` | Conditional | The database service plan name. Required when the secret store is off. Optional when the secret store is on. Leave it unset to create the database yourself and store its settings in the secret store. A plan name makes the operator create the database |
+| `spec.storage.servicePlan` | Conditional | The storage service plan name. Required when the secret store is off. Optional when the secret store is on. Leave it unset to create the file storage yourself and store its settings in the secret store. A plan name makes the operator create the file storage |
+| `spec.runtime.mxAdminPassword` | Conditional | The MxAdmin password. Leave empty when `secretProviderclass.enable` is `true`. The app reads `mx-admin-password` from the secret store |
+
+#### Secret Store
+
+`SecretProviderclass.database.passwordless` and `secretProviderclass.create` are available starting from Private Mendix Platform 2.8.2. They are not included in the `mxplatform` charts shipped with 2.8.0 and 2.8.1. For more information, see [Enabling the Secret Store](/private-mendix-platform/helmfile-installation/#enable-secret-store).
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `secretProviderclass.database.passwordless` | Conditional | Available starting from Private Mendix Platform 2.8.2. Set to `true` to leave `database-password` out of the SecretProviderClass. The database is accessed with the pod identity. Requires `azureWorkloadIdentity.enable` or `awsIRSA.enable`, no database plan, and `secretProviderclass.create` left at `true` |
+| `secretProviderclass.create` | No (default: `true`) | Available starting from Private Mendix Platform 2.8.2. Set to `false` to supply your own SecretProviderClass, for example to add app constants such as `Encryption.EncryptionKey`. The chart still sets `allowOverrideSecretsWithSecretStoreCSIDriver`. See [Overriding App Constants](/private-mendix-platform/helmfile-installation/#override-constants) |
+| `secretProviderclass.azureparameters.useManagedIdentityForBlob` | No (default: `false`) | Set to `true` when Azure Blob Storage uses the workload identity. The chart then omits `storage-azure-account-name` and `storage-azure-account-key` |
 
 #### Automatic Integration Detection
 
@@ -929,57 +939,57 @@ mxplatform:
 ```text
 mxplatform:
   enable: true
-  # PCLM credentials from Secret Provider
+  useStoragePlanwithIRSA: false
+  azureWorkloadIdentity:
+    enable: true
+    clientID: "<client-id>"
+    tenantID: "<tenant-id>"
   pclm:
     serviceUrl: "http://mx-privatecloud-license-manager"
-    username: ""  # Empty - injected from Secret Provider
-    password: ""  # Empty - injected from Secret Provider
   secretProviderclass:
     enable: true
     provider: "azure"
+    database:
+      passwordless: true
     azureparameters:
-      clientID: "..."
-      tenantID: "..."
       keyvaultName: "my-keyvault"
+      useManagedIdentityForBlob: true
   spec:
     appURL: "app.example.com"
     sourceURL: "oci-image://registry/app:1.0"
-    # Leave empty when using Secret Provider
-    database:
-      servicePlan: ""
-    storage:
-      servicePlan: ""
-    runtime:
-      mxAdminPassword: ""  # Empty - injected from Secret Provider
 ```
 
-When using Azure Key Vault (with `provider` set to `azure`), you must create the following secrets in your Key Vault:
+The secret store can be used with a database plan or a storage plan. The operator creates a resource that has a plan. When the plan is left unset, the operator does not create the database, the file container, or the identity. You create them, and the role assignments, before installation. The procedure is in [Using a Secret Store for the Platform App](/private-mendix-platform/helmfile-installation/#disable-provisioners).
 
+When `provider` is set to `azure`, create the following secrets in Key Vault. The chart's SecretProviderClass requests each key in the **When required** column. A missing key causes the volume mount to fail.
+ 
 | Secret Name | Description | Example Value | When Required |
 | --- | --- | --- | --- |
-| `mx-admin-password` | The Mendix application admin password | `AdminPassword123` | Always |
-| `pclm-admin-username` | The PCLM administrator username | `administrator` | Always |
-| `pclm-admin-password` | The PCLM administrator password | `PCLMPassword123` | Always |
-| `database-type` | Database type | `PostgreSQL` | Database secrets; required when `spec.database.servicePlan` is empty |
-| `database-host` | Database host | `postgres.example.com` | Database secrets; required when `spec.database.servicePlan` is empty |
-| `database-name` | Database name | `mxplatform` | Database secrets; required when `spec.database.servicePlan` is empty |
-| `database-username` | Database username | `mxplatform_user` | Database secrets; required when `spec.database.servicePlan` is empty |
-| `database-password` | Database password | `DBPassword123` | Database secrets; required when `spec.database.servicePlan` is empty |
-| `database-jdbc-url` | JDBC connection URL | `jdbc:postgresql://postgres.example.com:5432/mxplatform` | Database secrets; required when `spec.database.servicePlan` is empty |
-| `storage-service-name` | Storage service name | `azure` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
-| `storage-azure-container` | Azure Blob container name | 
-`mxplatform-files` | Storage service name | `azure` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
-| `storage-azure-blob-endpoint` | Azure Blob endpoint | `https://mystorageaccount.blob.core.windows.net` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
-| `storage-azure-use-default-azure-credential` | Use Azure Workload Identity | `true` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
-| `storage-perform-delete` | Allow delete operations | `true` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
-| `storage-use-ca-certificates` | Use CA certificates | `false` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
-| `storage-azure-use-https` | Use HTTPS for Blob access | `true` | Azure Blob Storage secrets; required when `spec.storage.servicePlan is empty` |
+| `mx-admin-password` | MxAdmin password | A password of 12 or more characters, with uppercase, lowercase, a digit, and a symbol | Always |
+| `pclm-admin-username` | License-manager administrator username. Mounted as the constant `Common.PCLM_USERNAME` | `administrator` | Always |
+| `pclm-admin-password` | License-manager administrator password. Mounted as the constant `Common.PCLM_PASSWORD` | The password that administrator was created with | Always |
+| `database-type` | Database type | `PostgreSQL` | Secret store enabled |
+| `database-host` | Database host and port | `postgres.example.com:5432` | Secret store enabled |
+| `database-name` | Database name | `mxplatform` | Secret store enabled |
+| `database-username` | Database user. For passwordless Azure PostgreSQL this is the role bound to the app identity | `mxplatform` | Secret store enabled |
+| `database-password` | Database password | A password | Secret store enabled and `secretProviderclass.database.passwordless` is `false`. Do not create this secret when `passwordless` is `true`. Key Vault rejects an empty value, and any value you store is used instead of an Entra token |
+| `database-jdbc-url` | JDBC connection URL | `jdbc:postgresql://postgres.example.com:5432/mxplatform?sslmode=require` | Secret store enabled |
+| `storage-service-name` | Storage service name. Use `com.mendix.storage.azure` for Azure Blob Storage | `com.mendix.storage.azure` | Secret store enabled |
+| `storage-azure-container` | Blob container for the app's own files | `mxplatform-files` | Secret store enabled |
+| `storage-azure-blob-endpoint` | Blob endpoint | `https://mystorageaccount.blob.core.windows.net/` | Secret store enabled |
+| `storage-azure-use-default-azure-credential` | Use the workload identity for blob access | `true` | Secret store enabled. Set `true` when `useManagedIdentityForBlob` is `true`, and `false` when you store an account key |
+| `storage-perform-delete` | Delete blobs when the app deletes the file | `true` | Secret store enabled |
+| `storage-use-ca-certificates` | Use the app trust store for the storage endpoint | `true` | Secret store enabled |
+| `storage-azure-use-https` | Use HTTPS for blob access | `true` | Secret store enabled |
+| `storage-azure-account-name` | Storage account name | `mystorageaccount` | Secret store enabled and `useManagedIdentityForBlob` is `false` |
+| `storage-azure-account-key` | Storage account key | `<account-key>` | Secret store enabled and `useManagedIdentityForBlob` is `false` |
 
-Azure Blob Storage Secrets (with static credentials - when useManagedIdentityForBlob: false):
+For S3 and for HashiCorp Vault, use the same database and admin keys. The S3 storage keys are listed in [SecretProviderClass Keys](/developerportal/deploy/secret-store-credentials/#keys).
 
-| `storage-azure-account-name` | Azure Storage account name | `mystorageaccount` | Azure Blob Storage secrets with static credentials; required when `useManagedIdentityForBlob` is set to `false` |
-| `storage-azure-account-key` | Azure Storage account key | `base64encodedkey==` | Azure Blob Storage secrets with static credentials; required when `useManagedIdentityForBlob` is set to `false` |
+##### App Constants
 
+To override an app constant, mount an object named `mx-const-<Module.Constant>`. The chart's SecretProviderClass does not list extra constants. Starting from Private Mendix Platform 2.8.2, set `secretProviderclass.create` to `false` and add the object on a SecretProviderClass you maintain. Azure Key Vault names cannot contain a period or an underscore, so the vault name uses hyphens and `objectAlias` keeps the constant name. For `Encryption.EncryptionKey` the vault name is `encryption-key` and the alias is `mx-const-Encryption.EncryptionKey`. Runtime custom settings use `mx-runtime-<setting>`. The steps and a full object are in [Overriding App Constants](/private-mendix-platform/helmfile-installation/#override-constants).
+ 
 ### Mxplatform-kube-agent
 
 Mxplatform-kube-agent is the Build agent for `mxplatform` app deployments.

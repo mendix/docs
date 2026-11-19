@@ -13,7 +13,7 @@ aliases:
 
 This document provides a comprehensive guide for installing Private Mendix Platform, along with its optional components, in your own Kubernetes environment.
 
-Private Mendix Platform supports using secret storage. If required, you can store some configuration in a secret vault (for example, AWS, Azure, or Hashicorp) without setting up a storage plan, database plan, PCLM admin and Mendix admin info in the Private Mendix Platform installer.
+Private Mendix Platform can use an external secret store (for example, AWS Secrets Manager, Azure Key Vault, or HashiCorp Vault). This is the setup described in [Retrieve Environment-Sensitive Data from a Secret Store](/developerportal/deploy/secret-store-credentials/). The secret store can be used together with a database plan or a storage plan. The Mendix Operator still provisions a resource that has a plan. When you leave the plan unset, you create the database, the file storage, the identity, and the role assignments yourself, before installation. That is the default once the secret store is enabled. For the steps, see [Using a Secret Store for the Platform App](/private-mendix-platform/helmfile-installation/#disable-provisioners) and [What the Secret Store Does Not Provision](/private-mendix-platform/interactive-installation/#secret-store-no-provisioner).
  
 {{% alert color="info" %}}
 Using a secret storage incorrectly may reduce the security of your app. Consult your secrets store provider to ensure that it is set up securely for your production environment.  

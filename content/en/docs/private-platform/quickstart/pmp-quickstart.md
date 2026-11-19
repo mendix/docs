@@ -117,9 +117,11 @@ Configure the namespace by doing the following steps:
     
     {{< figure src="/attachments/private-platform/pmp-install5.png" class="no-border" >}}
 
-## Optional: Configuring the AWS Secret Manager
+## Optional: Configuring the AWS Secret Manager {#aws-secret-manager}
 
-To use the secret provider option for your database plan or storage plan, configure the following keys in your AWS Secret Manager:
+**USE-Secret-Provider** leaves that plan unset, so the Operator does not create the resource. Create it yourself, then store its settings in AWS Secrets Manager under the following keys. 
+
+You can instead enter a plan. The Operator then creates that resource, and the secret store supplies the settings that do not come from a plan. For more information, see [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
 
 ### Database Plan Keys
 
@@ -130,7 +132,9 @@ To use the secret provider option for your database plan or storage plan, config
 | Database host | **database-host**    | `pg.example.com:5432` |
 | Database name    | **database-name** | `my-app-1` |
 | Database user name | **database-username** | `my-app-user-1` |
-| Database password | **database-password**    |  |
+| Database password | **database-password** | |
+
+Leave `database-password` out when the database authenticates the app by its identity. See [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
 
 ### Storage Plan Keys
 
@@ -154,9 +158,11 @@ Currently, only AWS S3 or S3-compatible providers are supported.
 | Private Mendix Platform admin password | **mx-admin-password** |
 | PCLM admin username | **pclm-admin-username** |
 
-## Optional: Configuring Azure Key Vault
+## Optional: Configuring Azure Key Vault {#azure-key-vault}
 
-To use the secret provider option for your database plan or storage plan, configure the following keys in your Azure Key Vault. All keys are required unless noted otherwise.
+**USE-Secret-Provider** leaves that plan unset, so the operator does not create the resource. Create it yourself, then store its settings in Azure Key Vault under the following keys. All keys are required unless noted otherwise.
+
+You can instead enter a plan. The operator then creates that resource, and the secret store supplies the settings that do not come from a plan. For more information, see [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
 
 ### Database Plan Keys
 
@@ -168,6 +174,8 @@ To use the secret provider option for your database plan or storage plan, config
 | Database name | **database-name** | `testpmp` |
 | Database user name | **database-username** | `pxx` |
 | Database password | **database-password**    | `passxx` |
+
+Leave `database-password` out when the database authenticates the app by its identity. Key Vault rejects an empty value, and a stored value is used instead of an Entra token. For more information, see [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
 
 ### Storage Plan Keys
 
@@ -190,6 +198,28 @@ To use the secret provider option for your database plan or storage plan, config
 | PCLM admin password | **pclm-admin-password** |
 | Private Mendix Platform admin password | **mx-admin-password** |
 | PCLM admin username | **pclm-admin-username** |
+
+The chart mounts `pclm-admin-username` and `pclm-admin-password` as the constants `Common.PCLM_USERNAME` and `Common.PCLM_PASSWORD`.
+
+## What the Secret Store Does Not Provision {#secret-store-no-provisioner}
+
+Enabling **Use Secret Provider** turns on the secret store described in [Retrieve Environment-Sensitive Data from a Secret Store](/developerportal/deploy/secret-store-credentials/). For **DatabasePlan** and **Storageplan**, **USE-Secret-Provider** leaves the plan unset and the operator does not create that resource. You create it and store its settings in the vault. A plan name still makes the operator create that resource. The secret store supplies the settings that do not come from a plan, including the MxAdmin password and the license-manager credentials.
+
+You must create the following before you install the app:
+
+* The identity the pod will use, and a federated credential for the ServiceAccount. The ServiceAccount name is the **AppName** (the default is `mxplatform`). With **StoragePlanwithIRSA** left disabled, the installer creates that ServiceAccount.
+* The database, and a database user that can use that database only. Do not make the app identity a Microsoft Entra administrator of the whole PostgreSQL server. That role can read every database on the server, including the license manager database when they share a server.
+* The file container for the app's own files, and permission for the identity to use that container.
+* When the platform stores MDA files in Azure Blob Storage, the MDA container, **Storage Blob Data Contributor** on that container, and **Storage Blob Delegator** on the storage account. Set **Mda Location** as described in [Configuring MDA Storage Setting](/private-mendix-platform/configure-k8s/#mda-storage).
+* The secrets listed in [Configuring the AWS Secret Manager](#aws-secret-manager) or [Configuring Azure Key Vault](#azure-key-vault).
+
++In the installer, leave **StoragePlanwithIRSA** disabled. Enabling it turns **Use Secret Provider** off, because the operator would create the ServiceAccount from the storage plan.
+
+For a passwordless database, do not create `database-password`. Key Vault rejects an empty value, and any value you store is used as the password instead of a token. Starting from Private Mendix Platform 2.8.2, the Helmfile value `secretProviderclass.database.passwordless` keeps that key out of the SecretProviderClass. The charts shipped with Private Mendix Platform 2.8.0 and 2.8.1, and the interactive installer, always request the key. On those versions, remove the `database-password` object from the SecretProviderClass after install and after every upgrade that puts it back. See [Enabling the Secret Store](/private-mendix-platform/helmfile-installation/#enable-secret-store).
+
+**Use identity auth for Blob** corresponds to `useManagedIdentityForBlob`. Set it to **True** to omit `storage-azure-account-name` and `storage-azure-account-key`, and set `storage-azure-use-default-azure-credential` to `true`.
+
+To override any other app constant, such as `Encryption.EncryptionKey`, mount an object named `mx-const-<Module.Constant>`. The SecretProviderClass created by the installer lists only the fixed keys above. Starting from Private Mendix Platform 2.8.2, add further constants with Helmfile by setting `secretProviderclass.create` to `false` and writing the SecretProviderClass yourself. See [Overriding App Constants](/private-mendix-platform/helmfile-installation/#override-constants).
 
 ## Installing Private Cloud License Manager {#install-pclm}
 
@@ -484,11 +514,11 @@ Install the Private Mendix Platform by doing the following steps:
 3. Click **Configure**, and then specify the following parameters:
 
     * **AppName** - The default app name is `mxplatform`. You can change it as required.
-    * **DatabasePlan** - If you want to use AWS Secret Manager, select **USE-Secret-Provider**; the installer then uses the database configuration set in AWS Secret Manager. Otherwise, enter the name of the database plan that you created in [Installing and Configuring the Mendix Operator](#install-operator).
-    * **Storageplan** - If you want to use AWS Secret Manager, select **USE-Secret-Provider**; the installer then uses the storage configuration set in AWS Secret Manager. Otherwise, enter the name of the storage plan that you created in [Installing and Configuring the Mendix Operator](#install-operator).
+    * **DatabasePlan** - Enter the database plan from [Installing and Configuring the Mendix Operator](#install-operator), or select **USE-Secret-Provider**. A plan name makes the operator create the database. **USE-Secret-Provider** leaves the plan unset. You create the database and store its settings in the secret store. See [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
+    * **Storageplan** - Enter the storage plan from [Installing and Configuring the Mendix Operator](#install-operator), or select **USE-Secret-Provider**. A plan name makes the operator create the file storage. **USE-Secret-Provider** leaves the plan unset. You create the container and its permissions. See [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
     * **StoragePlanwithIRSA** - If your storage plan uses AWS IRSA or Azure Workload Identity, set this to **enabled**.
 
-        Enabling this option disables the **secretprovider** option. This is because for IRSA and Azure Workload Identity storage plans, the Service account is created by the Operator instead of Helm.
+        Enabling this option disables **Use Secret Provider**. The operator creates the ServiceAccount from the storage plan, and the secret store needs the installer to create that account. Leave this disabled when **Use Secret Provider** is enabled. You can still use a workload identity. The identity is the one you created, and the installer uses it to annotate the ServiceAccount.
 
     * **AppUrl** - The endpoint where you can connect to your running app. It must be a URL which is supported by your platform. If you leave it blank, Mendix Operator will create it.
     * **EnableTLS** - Allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Router. The default value is use the default settings.
@@ -502,7 +532,7 @@ Install the Private Mendix Platform by doing the following steps:
 
 4. Click **Runtime**, and then specify the following parameters:
 
-    * **MxAdminPassword** - Optional. The password for the admin user, required if you are not planning to use the AWS Secret Manager. It must have at least one number, one upper case letter, one lower case letter and one symbol, with a minimum length of 12 characters.
+    * **MxAdminPassword** - The password for the admin user. Leave it empty when **Use Secret Provider** is enabled. The app then reads `mx-admin-password` from the secret store. Otherwise this password is required. It must have at least one number, one upper case letter, one lower case letter and one symbol, with a minimum length of 12 characters.
     * **dtapmode** - For production deployments, leave this value set to **P**. For the development of the app, for example acceptance testing, set the value to **D**.
     * **ApplicationRootUrl** - Optional. Manually specify the URL of your Private Mendix Platform, for example, for use with SSO or when sending emails. For more information about this functionality, see [ApplicationRootUrl Needs to be Set Manually](/developerportal/deploy/private-cloud-operator/#applicationrooturl-needs-to-be-set-manually).
     * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager or the Azure Key Vault. Selecting this option enables the following additional fields:

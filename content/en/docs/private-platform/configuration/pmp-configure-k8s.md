@@ -227,7 +227,7 @@ The settings in this section configure the storage for build output artifacts.
                 azure.workload.identity/client-id: {client-id-pmp}
         ```
 
-        This step is not required if Private Mendix Platform is using a MI from Azure Managed Identity-based storage plans. In that case, the ServiceAccount already has the correct annotation. 
+        This step is not required when a storage plan already annotates the ServiceAccount, or when you install the platform app from the secret store with `azureWorkloadIdentity.enable` set to `true`. The chart then writes the client id annotation itself. See [Using a Secret Store for the Platform App](/private-mendix-platform/helmfile-installation/#disable-provisioners).
 
     4. Add the following role assignments to the Private Mendix Platform Managed Identity:
 
@@ -247,7 +247,7 @@ The settings in this section configure the storage for build output artifacts.
                 azure.workload.identity/use: "true"
         ```
 
-        This step is not required if Private Mendix Platform is using a MI from Azure Managed Identity-based storage plans. In that case, the customPodLabel is already configured.         
+        This step is not required when a storage plan already sets the label, or when `azureWorkloadIdentity.enable` or `secretProviderclass.azureparameters.useManagedIdentityForBlob` is `true`. The chart then sets `azure.workload.identity/use: "true"` on the platform pod.      
     
     6. Restart Private Mendix Platform to ensure that the labels are applied.
 

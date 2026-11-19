@@ -45,7 +45,7 @@ The **Snippet settings** property opens a dialog box that shows a list of parame
 
 An argument must be passed to every [snippet parameter](/refguide/snippet/#parameters) of the snippet that is called. The **Snippet settings** dialog box lists the parameters of the snippet with their **Name**, **Type**, and **Argument**. To configure the argument of a parameter, select the parameter and click **Edit parameter value**. In the dialog box that opens, set **Type** to **Variable** or **Expression**. This works the same for object and primitive parameters.
 
-In the example below, the snippet has an object parameter **Order** and a primitive parameter **Amount** of type `Integer/Long`:
+In the example below, the snippet has an object parameter **Order** and a primitive parameter **Amount** of type `Integer/Long`. Both parameters have an argument:
 
 {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/snippet-arguments-mapping.png" alt="example of the snippet settings dialog box" width="500px" >}}
 
@@ -61,7 +61,7 @@ In the example below, the argument for the parameter **Amount** is the variable 
 
 Expression-based arguments allow you to use functions and follow associations within the expression to set the argument value. The expression must return a value that matches the data type of the snippet parameter.
 
-In the example below, the argument for the parameter **Amount** is the expression `$Amount`, which uses the variable **Amount** that is available at the snippet call:
+In the example below, the argument for the parameter **Amount** is the expression `$Amount * 2`, which multiplies the variable **Amount** that is available at the snippet call by 2:
 
 {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/snippet-argument-expression.png" alt="example of an expression-based argument" width="500px" >}}
 

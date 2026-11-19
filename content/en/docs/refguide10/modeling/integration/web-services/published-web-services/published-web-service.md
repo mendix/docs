@@ -47,10 +47,10 @@ With this option, the SOAP header of each request is processed in the following 
 
 The call fails with a SOAP fault if one of the following situations occurs:
 
-* The request does not contain a SOAP header.
-* The header cannot be converted by the import mapping.
-* The microflow does not return a user.
-* The user that is returned is not active or is blocked.
+* The request does not contain a SOAP header
+* The header cannot be converted by the import mapping
+* The microflow does not return a user
+* The user that is returned is not active or is blocked
 
 The following settings are available:
 

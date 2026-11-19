@@ -94,7 +94,7 @@ CDC events follow the [Debezium](https://debezium.io/) envelope format. Each eve
 | `before` | The entity's attribute values before the change. This field is `null` for create operations. |
 | `after` | The entity's attribute values after the change. This field is `null` for delete operations. |
 | `ts_ms`, `ts_us`, `ts_ns` | The time the event was produced, in milliseconds, microseconds, and nanoseconds since the Unix epoch. |
-| `source` | A block containing metadata about the origin of the change, such as the timestamp and Mendix version. See the table below. |
+| `source` | A block containing metadata about the origin of the change, such as the timestamp and Mendix version. See the `source` table below for more information. |
 
 The `source` block contains the following fields:
  
@@ -109,8 +109,8 @@ The `source` block contains the following fields:
 | `txId` | *(Optional)* The ID of the transaction that made the change. |
 | `execution_id` | *(Optional)* The ID of the execution that made the change. |
 | `app_url` | The URL of the app that produced the event. |
-| `userName` | *(Optional)* The user who made the change. Introduced in **11.17.0**. |
-| `userRoles` | *(Optional)* The roles of the user who made the change. Introduced in **11.17.0**. |
+| `userName` | *(Optional)* The user who made the change. This feature was introduced in Studio Pro 11.17.0. |
+| `userRoles` | *(Optional)* The roles of the user who made the change. This feature was introduced in Studio Pro 11.17.0. |
 
 Because the format is Debezium-compatible, BYOK consumers that already support Debezium (such as Kafka Connect sink connectors for databases or data warehouses) can consume CDC events without any message transformation.
 

@@ -72,6 +72,8 @@ Setting the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-s
 * **For Mendix versions 10.24 and above:**
 The `X-Forwarded-Proto` and `X-Forwarded-Schema` headers will take precedence over the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section). Mendix recommends using the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) setting as the default approach and only set `X-Forwarded-Proto` and `X-Forwarded-Schema` headers if needed. 
 
+To set secure cookies for an app that you run locally, see the [Using a Reverse Proxy for Setting Secure Cookies](/developerportal/deploy/local-deployment/#reverse-proxy) section in *Local Deployment*.
+
 ## Main Domain Name
 
 Do not deploy your app directly at the apex domain (`https://domain/`).

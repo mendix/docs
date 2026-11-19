@@ -26,7 +26,7 @@ swap:
   'maia make': 'Maia Make'
   markdown: Markdown
   marketplace: Marketplace
-  '(^|[^.>@-])mendix': '$1Mendix'  # Skips com.mendix names, domains, link text after >, @mendix emails, and hyphenated repo names
+  '(^|[^./>@-])mendix(?!/)': '$1Mendix'  # Skips com.mendix names, domains, link text after >, @mendix emails, hyphenated repo names, and paths or repos like mendix/docs
   'n/a': 'N/A'
   postgres: Postgres
   postgresql: PostgreSQL

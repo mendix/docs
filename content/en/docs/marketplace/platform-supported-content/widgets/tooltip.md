@@ -90,7 +90,7 @@ How the tooltip responds to the keyboard depends on the **Open on** setting:
 - **Hover** – the tooltip does not open on keyboard focus.
 - **Click**
   - Pressing <kbd>Enter</kbd> or <kbd>Space</kbd> on a button or link in the trigger opens the tooltip, and pressing it again closes the tooltip. This also works when the trigger is an action button, and the button's action still runs.
-  - Clicking in a text box or on a check box in the trigger opens the tooltip but does not close it. Typing in a text box does not open or close the tooltip.
+  - Clicking in a text box or on a checkbox in the trigger opens the tooltip but does not close it. Typing in a text box does not open or close the tooltip.
   - Moving focus to the trigger does not open the tooltip.
 
 In every mode, pressing <kbd>Esc</kbd> closes the tooltip. If focus is inside the custom tooltip content, focus returns to the trigger.

@@ -37,8 +37,8 @@ A web service call is simply a HTTP call that the Runtime receives and recognize
 
 The authentication method depends on the **Authentication** setting of the [published web service](/refguide/published-web-service/#authentication):
 
-* With **No authentication**, the call does not need credentials.
-* With **Username and password**, the SOAP envelope header should contain an **Authentication** element, which contains a user name and password:
+* **No authentication** – The call does not need credentials.
+* **Username and password** – The SOAP envelope header should contain an **Authentication** element, which contains a user name and password:
 
     ```xml
     <soap:Header>
@@ -52,7 +52,7 @@ The authentication method depends on the **Authentication** setting of the [publ
     These details must match an existing web service user in the Runtime. These users can be created by signing in as an Administrator and clicking **Create web service user** in the **Users** data grid in the system module. Normal (non-web service) users cannot be used to call web services and web service users cannot sign in via the standard login page.
 
     Otherwise, there is no difference between how normal users and web service users call microflows.
-* With **Custom authentication**, an import mapping converts the first element of the SOAP envelope header into an object. This object is passed to a microflow that you define, which returns the user. For more information, see [Custom Authentication](/refguide/published-web-service/#authentication-custom).
+* **Custom authentication** – An import mapping converts the first element of the SOAP envelope header into an object. This object is passed to a microflow you define, which returns the user. For more information, see [Custom Authentication](/refguide/published-web-service/#authentication-custom).
 
 #### Parameter Handling
 

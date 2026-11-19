@@ -10,7 +10,7 @@ info:
     All requests require a Personal Access Token (PAT) in the `Authorization` header:
     - `Authorization: MxToken <Your PAT>`
 
-    See [Create a Personal Access Token](https://docs.mendix.com/portal/user-settings/#pat) for how to create a personal token.
+    Refer to [Create a Personal Access Token](https://docs.mendix.com/portal/user-settings/#pat) for details on how to create a personal token.
   
   license:
     name: Mendix Terms of Use
@@ -67,7 +67,7 @@ paths:
         - Projects
       summary: Create a project
       description: |
-        Creates a new project on the Mendix Platform. The user requesting the project will be added as the first project member with project administration rights. The project can optionally be created from a specific template; if not specified, the project will be created based on the latest available version of a Blank Web App. Creation of the project is asynchronous: the operation returns a `jobId`. Calling operation `get_project_job` returns the status of the creation process. If successful, a `projectId` is returned.
+        Creates a new project on the Mendix Platform. The user requesting the project will be added as the first project member with project administration rights. The project can optionally be created from a specific template; if not specified, the project will be created based on the latest available version of a Blank Web App. Creation of the project is asynchronous: the operation returns a `jobId`. Calling the `get_project_job` operation returns the status of the creation process. If successful, a `projectId` is returned.
         
         Every request must be authenticated by a Personal Access Token containing the scope `mx:app:create`.
       operationId: create_project
@@ -90,7 +90,7 @@ paths:
       description: |
         Returns full details of a single project: name, description, Studio Pro version, story tool, cloud provider, owning company account, technical contact, assigned team, categories, and the team members with their project roles.
         
-        Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`. Deactivated projects will only be returned if the requesting user is a Mendix Administrator for the company (or account) that owns the project.
+        Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`. Deactivated projects will only be returned if the requesting user is a Mendix Admin for the company (or account) that owns the project.
       operationId: get_project
       parameters:
         - $ref: '#/components/parameters/project-id'
@@ -130,7 +130,7 @@ paths:
         - Projects
       summary: Update project attributes
       description: |
-        Updates the attributes of a project. Currently only the category assignments of the project can be updated. Category IDs and their allowed values are available through operation `get_company_categories` of the Categories API, where the company represents the account that owns the project.
+        Updates the attributes of a project. Only the category assignments of the project can be updated. Category IDs and their allowed values are available through the `get_company_categories` operation of the Categories API, where the company represents the account that owns the project.
         
         Requests must be authenticated by a Personal Access Token containing the scope `mx:app:write`.
       operationId: update_project
@@ -186,7 +186,7 @@ paths:
         - Projects
       summary: Get project team members
       description: |
-        Returns a list of the team members of a project, including whether each member is active, the company they work for, and whether they were added directly or through a team. Note that the operation does not return the role the user has within the project. To get this information, please use operation `get_project`.
+        Returns a list of the team members of a project, including whether each member is active, the company they work for, and whether they were added directly or through a team. Note that the operation does not return the role the user has within the project. To get this information, use the `get_project` operation.
         
         This operation returns a maximum of 100 entries per request. Using the query parameters `limit` and `offset` will return more entries.
         
@@ -212,9 +212,9 @@ paths:
         - Projects
       summary: Add a project team member
       description: |
-        Adds a user to the team of a project with a specific project role, or sends an invitation if the user is not from the same company (or account) that owns the project. Available role IDs can be retrieved using the operation `get_company_roles`. The user must be an active member of the platform.
+        Adds a user to the team of a project with a specific project role, or sends an invitation if the user is not from the same company (or account) that owns the project. Available role IDs can be retrieved using the `get_company_roles` operation. The user must be an active member of the platform.
         
-        If the invited user is from the same company (or account) as the project, the server responds with a `201`. If an invitation was sent, the server responds with a `202`. In the latter case the invited user must first accept the invitation before becoming a team member.
+        If the invited user is from the same company (or account) as the project, the server responds with a `201`. If an invitation was sent, the server responds with a `202`. In the latter case, the invited user must first accept the invitation before becoming a team member.
         
         Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.
       operationId: add_project_member
@@ -269,7 +269,7 @@ paths:
         Changes one or more of the following attributes of a project membership:
         - the role of user within the project
         - whether the user has pinned the project
-        - whether the user is watching the project for any notifications.
+        - whether the user is watching the project for any notifications
 
         Mendix and project administrators are allowed to change the team member's project role assignment, regardless of whether the project or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and the project is active.
 
@@ -345,11 +345,11 @@ paths:
     get:
       tags:
         - Users
-      summary: Get a list of projects the user is a project member of
+      summary: Get a list of projects that the user is a member of
       description: |
-        Returns the projects that the specified user is a project member of, including the user's role and permissions in each project. Use this to find the projects a user works on; results can be filtered by permissions, pinned status, categories, and team. The output is restricted based on the authorization of the calling user. Mendix administrators will get a list of all projects (active or inactive) owned by their company for the specified user. This includes external users working on their company's projects. Project members must be active and will get a list of all active projects that they themselves are a project member of. Project members cannot request a list of projects on behalf of someone else.
+        Returns the projects that the specified user is a project member of, including the user's role and permissions in each project. Use this to find the projects a user works on. Results can be filtered by permissions, pinned status, categories, and team. The output is restricted based on the authorization of the calling user. Mendix admins will get a list of all projects (active or inactive) owned by their company for the specified user. This includes external users working on their company's projects. Project members must be active and will get a list of all active projects that they themselves are a project member of. Project members cannot request a list of projects on behalf of someone else.
 
-        The result is sorted alphabetically by project name in ascending order. Per request a maximum of 100 entries will be returned. Use the query parameters `limit` and `offset` if more are needed.
+        The results are sorted alphabetically by project name in ascending order. A maximum of 100 entries are returned per request. Use the query parameters `limit` and `offset` if you need more entries.
 
         Every request must be authenticated through a Personal Access Token containing the `mx:app:metadata:read` scope.
       operationId: get_user_projects
@@ -388,7 +388,7 @@ paths:
       description: |
         Returns the project roles defined by a company (or account) (for example Scrum Master or Developer) and the permissions each role grants. Use the returned `roleId` when adding or updating project members. The output is restricted based on the authorization of the calling user. The calling user must be a member of the specified company.
 
-        A maximum of 100 entries per request are returned. Use the query parameters `limit` and `offset` if more are needed.
+        A maximum of 100 entries per request are returned. Use the query parameters `limit` and `offset` if you need more entries.
         
         Every request must be authenticated through a Personal Access Token containing the `mx:app:roles:read` scope.
       operationId: get_company_roles
@@ -419,9 +419,9 @@ paths:
         - Accounts
       summary: Get a list of company-owned projects
       description: |
-        Returns all projects owned by the company (or account) of the requesting user. Use this to list or search across all projects of a company. To find only the projects a specific user works on, use operation `get_user_projects`. Inactive projects are only returned if the requesting user is a Mendix Administrator.
+        Returns all projects owned by the company (or account) of the requesting user. Use this to list or search across all projects of a company. To find only the projects a specific user works on, use the `get_user_projects` operation. Inactive projects are only returned if the requesting user is a Mendix Admin.
         
-        The list is sorted by creation date of the project in descending order. A maximum of 100 entries per request are returned. Use the query parameters `limit` and `offset` if more are needed.
+        The list is sorted by the creation date of the project in descending order. A maximum of 100 entries per request are returned. Use the query parameters `limit` and `offset` if you need more entries.
 
         Every request must be authenticated through a Personal Access Token containing the `mx:app:metadata:read` scope.
       operationId: get_account_projects
@@ -673,7 +673,7 @@ components:
     limit:
       name: limit
       in: query
-      description: The maximum number of items to be returned per request. The default and maximum value is 100. A limit of 0 implies a use of the default limit.
+      description: The maximum number of items to be returned per request. The default and maximum value is 100. If you set the limit to 0, the default limit is used.
       schema:
         type: integer
     offset:
@@ -807,7 +807,7 @@ components:
                       description: 'Indicates whether a project is active or not. Inactive projects will only be returned to Mendix Admins.'
                     teamId:
                       type: string
-                      description: 'Unique identifier of the team the project is assigned to. Omitted if the project is not assigned to a team.'
+                      description: 'Unique identifier of the team to which the project is assigned. This is omitted if the project is not assigned to a team.'
                     createdBy:
                       type: object
                       description: Contains information about the person that created this project.
@@ -950,7 +950,7 @@ components:
                               maxLength: 200
                         assignmentSource:
                           type: string
-                          description: 'Indicates how the member was assigned to the project team. `collaborator` means the member was added directly to the project; `team` means the member has access through a team assignment.'
+                          description: 'Indicates how the member was assigned to the project team. `collaborator` means the member was added directly to the project. `team` means the member has access through a team assignment.'
                           enum:
                           - collaborator
                           - team
@@ -1079,7 +1079,7 @@ components:
                           description: Name of the company to which the member belongs.
                     assignmentSource:
                       type: string
-                      description: 'Indicates how the member was assigned to the project team. `collaborator` means the member was added directly to the project; `team` means the member has access through a team assignment.'
+                      description: 'Indicates how the member was assigned to the project team. `collaborator` means the member was added directly to the project. `team` means the member has access through a team assignment.'
                       enum:
                       - collaborator
                       - team

@@ -1,4 +1,9 @@
-# Teamcenter Workflow Integration
+---
+title: "Teamcenter Workflow Integration"
+url: /appstore/industry/teamcenter-connector/unified-teamcenter-connector-workflow-integration/
+weight: 30
+description: "Describes how to work with Teamcenter workflows form a Mendix app."
+---
 
 ## Introduction
 
@@ -13,18 +18,18 @@ The TcConnector enables Mendix to interact with Teamcenter workflows, allowing d
 
 This makes it possible to treat Teamcenter workflows as one component in broader, cross-system business processes.
 
-### Teamcenter Workflow Concepts
+## Teamcenter Workflow Concepts
 
 - **`EPMJob`**: A running Teamcenter workflow process created from a Teamcenter workflow template.
 - **`EPMTask`**: A task or step within an `EPMJob`. Tasks can be assigned, tracked, and completed; some tasks require reviewer signoffs; target and reference attachments can be added to tasks.
 - **`EPMTaskTemplate`**: A reusable Teamcenter workflow definition that describes the tasks and transitions used to create an `EPMJob`.
 - **`Signoff`**: A reviewer assignment and its decision for a signoff task, such as approval or rejection.
 
-### Teamcenter Object Lookup Limitation
+## Teamcenter Object Lookup Limitation
 
 The TcConnector does not provide dedicated retrieval actions or TcConnector entities for `ResourcePool`, `User`, or `GroupMember`. These are object types on the Teamcenter side. If an action requires one of these objects, use `PerformSearch` with an appropriate Teamcenter saved query to retrieve it. The saved query must be available in the Teamcenter environment and return the required object type.
 
-### Action Categories by Object Type
+## Action Categories by Object Type
 
 **`EPMTask` Actions:** Abort, Assign Reviewer, Add Additional Reviewer, Complete, Complete with Custom Outcome, Suspend, Resume, Reassign
 
@@ -34,9 +39,9 @@ The TcConnector does not provide dedicated retrieval actions or TcConnector enti
 
 **Query Actions:** Retrieve Teamcenter workflow tasks to Perform for Inbox, Retrieve Workflow Tasks to Track for Inbox, Get My Task Inbox, Get Inbox List for Current User, Get All Tasks for Workflow Process, Get Parent Process, Get Signoff Profiles, Get User Actionable Signoffs, Get Workflow Template, Get Workflow Template Assigned, Get All Workflow Templates
 
-## Teamcenter workflow actions
+## Teamcenter Workflow Actions
 
-### Teamcenter workflow Template Administration
+### Teamcenter Workflow Template Administration
 
 #### Workflow Templates Get All
 

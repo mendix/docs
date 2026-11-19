@@ -622,7 +622,7 @@ Use this microflow to add a file to an existing [FileCollection](#filecollection
 | `URL` | String | Either URL or FileDocument is required. | The URL of the file. |
 | `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents are part of a message. |
 | `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | mandatory | The type of the file. |
-| `TextContent` | String | mandatory | An optional text content describing the file content or giving it a specific name. |
+| `TextContent` | String | optional | An optional text content describing the file content or giving it a specific name. |
 
 ###### Return Value
 

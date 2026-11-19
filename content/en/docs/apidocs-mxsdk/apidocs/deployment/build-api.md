@@ -34,8 +34,9 @@ For details on how to generate a PAT, see the [Personal Access Tokens](/portal/u
 
 Select at least the following scopes:
 
-* `mx:build:read` – to read build information
-* `mx:build:write` – to trigger and manage builds
+* `mx:build:read` – to read build information or perform GET operations
+* `mx:build:write` – to perform all operations (GET, POST, and DELETE)
+* `mx:modelrepository:write` – under **Model Repository**, to perform build package operation
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 

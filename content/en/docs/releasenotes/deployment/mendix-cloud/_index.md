@@ -16,6 +16,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
   
 ## November 2026
 
+### November 19, 2026
+
+#### Fixes
+
+* We have fixed an issue that caused build packages to fail when triggered via the API using PAT authentication.
+
+    {{% alert color="info" %}} You need to regenerate your PATs with the additional scope specified in the [Build API](/apidocs-mxsdk/apidocs/build-api/#authenticating-with-pat) documentation.
+    {{% /alert %}}
+
 ### November 1, 2026
 
 #### New Features

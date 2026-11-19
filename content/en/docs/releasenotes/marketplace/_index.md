@@ -4,7 +4,8 @@ linktitle: "Marketplace"
 url: /releasenotes/marketplace-category/
 description: "Release notes for updates to the Mendix Marketplace, ATD, and ATS"
 weight: 35
-numberless_headings: true
+cascade:
+    - numberless_headings: true
 aliases:
     - /releasenotes/app-store/index.html
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

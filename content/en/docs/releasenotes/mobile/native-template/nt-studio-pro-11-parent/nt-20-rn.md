@@ -1,7 +1,7 @@
 ---
 title: "Native Template 20"
 url: /releasenotes/mobile/nt-20-rn/
-weight: 5
+weight: 75
 description: "Release notes for Native Template 20."
 ---
 

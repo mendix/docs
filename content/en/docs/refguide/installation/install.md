@@ -60,7 +60,7 @@ The prerequisites are the following:
     | --- | --- |
     | [JDK 21](https://adoptium.net/temurin/releases/?version=21)| [JDK 25](https://adoptium.net/temurin/releases/?version=25)  |
 
-* [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
+* [Microsoft Visual C++ Redistributable for Visual Studio 2015-2022 (x64)](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) (Git version [2.48.1](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe) or above is required)
 
@@ -104,14 +104,14 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
          * On ARM64, rename *windowsdesktop-runtime-10.0.7-win-arm64.exe* to *windowsdesktop-runtime-10.0-arm64.exe*
    2. Eclipse Temurin JDK
       * For Studio Pro versions 11.13 and below, rename the Java Development Kit 21 *msi*
-         * On x64, rename *OpenJDK25U-jdk_x64_windows_hotspot_25.0.3_9.msi* to *adoptiumjdk_25_x64.msi*
-         * On ARM64, rename *OpenJDK25U-jdk_aarch64_windows_hotspot_25.0.3_9.msi* to *adoptiumjdk_25_arm64.msi*
+         * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.13_9.msi* to *adoptiumjdk_21_x64.msi*
+         * On ARM64, rename *microsoft-jdk-21.0.13.0.2-windows-aarch64.msi* to *microsoftjdk_21_arm64.msi*
       * For Studio Pro versions 11.14 and above, rename the Java Development Kit 25 *msi*
-         * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_x64.msi*
-         * On ARM64, rename *OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_arm64.msi*
-   3. Visual C++ Redistributable for Visual Studio 2019 (x64)
+         * On x64, rename *OpenJDK25U-jdk_x64_windows_hotspot_25.0.5_8.msi* to *adoptiumjdk_25_x64.msi*
+         * On ARM64, rename *microsoft-jdk-25.0.5.0.2-windows-aarch64.msi* to *microsoftjdk_25_arm64.msi*
+   3. Visual C++ Redistributable for Visual Studio 2022 (x64)
       * Rename the executable 
-        * For example, *VC_redist.x64.exe* to *vcredist2019_x64.exe*
+        * For example, *VC_redist.x64.exe* to *vcredist_x64.exe*
    4. Mendix Native Mobile Builder one-click installer
       * Rename the *latest.exe* executable to *mendix_native_mobile_builder.exe*
    5. Git for Windows (x64)

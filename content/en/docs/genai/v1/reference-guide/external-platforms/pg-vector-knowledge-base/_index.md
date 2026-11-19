@@ -16,7 +16,7 @@ Looking for Mendix's newest agentic and generative AI features? [This page has b
 
 ## Introduction {#introduction}
 
-The [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It lets you easily store vectors and perform cosine similarity calculations from your Mendix app. You can use knowledge bases to enhance your app functionality by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, large language models (LLMs), and embeddings, this is a key component in natural language processing (NLP) patterns such as retrieval augmented generation (RAG), recommendation algorithms, and similarity search operations.
+The [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It lets you store vectors and perform cosine similarity calculations from your Mendix app. You can use knowledge bases to enhance your app functionality by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, large language models (LLMs), and embeddings, this is a key component in natural language processing (NLP) patterns such as retrieval augmented generation (RAG), recommendation algorithms, and similarity search operations.
 
 ### Typical Use Cases {#use-cases}
 
@@ -125,7 +125,7 @@ A typical pattern for retrieval from a knowledge base uses GenAI Commons operati
 
 1. Use [Initialize MetadataCollection with Metadata](/agents/agents-kit-1/reference-guide/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
 2. Use [Add Metadata to MetadataCollection](/agents/agents-kit-1/reference-guide/commons/) (iteratively) to create a collection of the necessary metadata.
-3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
+3. Do the retrieval. For example, you can use [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
 For scenarios where the created chunks were based on Mendix objects at the time of population and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association toward the original object, if applicable.
 
@@ -133,7 +133,7 @@ A typical pattern for this retrieval is as follows:
 
 1. Use [Initialize MetadataCollection with Metadata](/agents/agents-kit-1/reference-guide/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
 2. Use [Add Metadata to MetadataCollection](/agents/agents-kit-1/reference-guide/commons/) (iteratively) to create a collection of the necessary metadata.
-3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
+3. Do the retrieval. For example, you can use [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
 4. For each retrieved chunk, retrieve the original Mendix object and do custom logic.
 
 #### `Retrieve` {#retrieve}

@@ -1,7 +1,7 @@
 ---
 title: "Native Template 15"
 url: /releasenotes/mobile/nt-15-rn/
-weight: 10
+weight: 100
 description: "Native Template 15"
 ---
 

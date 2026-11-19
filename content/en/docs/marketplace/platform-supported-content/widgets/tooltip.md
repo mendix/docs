@@ -13,7 +13,7 @@ You can use the [Tooltip](https://marketplace.mendix.com/link/component/119160) 
 
 When placing the new Tooltip widget onto a page, use the composable region to place the content which will trigger the tooltip. You can freely model and combine widgets per your use case.
 
-To make the tooltip available to keyboard and screen reader users, the trigger must contain at least one focusable widget, such as a button, a link, or an input widget. For more information, see the [Keyboard and Screen Reader Support](#keyboard-screen-reader) section below.
+To make the tooltip available to keyboard and screen reader users, the trigger must contain at least one focusable widget, such as a button, link, or an input widget. For more information, see the [Keyboard and Screen Reader Support](#keyboard-screen-reader) section below.
 
 ### Limitations
 

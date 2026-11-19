@@ -90,6 +90,17 @@ You can upload archives containing the following:
 
 Uploading a backup creates a new backup item in your backup list. You can then restore the new backup item via the regular restore process (as described in [Restore Backup](#restore-backup), below). This ensures less downtime for your application.
 
+An uploaded archive can contain a database file, file documents, or both. The following limits apply to each archive:
+
+* A maximum total size of 250 GB for the database and file documents combined
+* A maximum size of 100 GB for the database file
+* A maximum size of 250 GB for file documents
+* A maximum of 800,000 files
+
+For example, you can upload an archive with a 100 GB database file and 150 GB of file documents, or an archive with no database file and 250 GB of file documents. In both cases, the archive can contain no more than 800,000 files.
+
+Uploading a large archive takes a long time, and the duration depends on the speed of your internet connection. If you need to upload an archive that exceeds these limits, contact [Mendix Support](https://support.mendix.com/).
+
 ### Download Backup {#download-backup}
 
 To download a backup, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download** on the backup you want to download.

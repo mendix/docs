@@ -78,7 +78,7 @@ To use other authentication methods, you can create a `Credentials` object progr
 
 ### Syncing Available Models, Knowledge Bases, and Agents
 
-You can use the `SNIP_Settings_Admin_ConfigOverview` snippet under **_USE_ME > SyncBedrockMetadata > ReusableUI** on an administrator page to sync models, knowledge bases, and agents for the selected region at runtime. Admins on the page first need to configure the settings of the [AWS Authentication Connector](#configure-authentication) module by selecting the AWS region and how to authenticate. When saving the settings or when you sync the models for the current region, AWS metadata services are called to create persistent objects in the database that you can view in the tables at the bottom of the snippet. 
+You can use the `SNIP_Settings_Admin_ConfigOverview` snippet under **_USE_ME > SyncBedrockMetadata > ReusableUI** on an administrator page to sync models, knowledge bases, and agents for the selected region at runtime. Admins on the page first need to configure the settings of the [AWS Authentication Connector](#configure-authentication) module by selecting the AWS region and how to authenticate. When saving the settings or when you sync the models for the current region, AWS metadata services are called to create persistable objects in the database that you can view in the tables at the bottom of the snippet. 
 
 {{% alert color="info" %}}
 All models are shown, even those which you cannot access. Access to models must be configured in the AWS console.
@@ -93,7 +93,7 @@ If you do not want to configure the resources in an admin user interface, you ca
 * [Sync Knowledge Bases](#sync-knowledge-bases)
 * [Sync Agents](#sync-agents)
 
-The following actions only list the available resources as non-persistent objects:
+The following actions only list the available resources as non-persistable objects:
 
 * List Foundation Models
 * List Agents

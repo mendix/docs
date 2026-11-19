@@ -25,9 +25,9 @@ To help you develop your application, familiarize yourself with the [Mendix Stud
 
 The Workstation domain model contains the following entities:
 
-* **Station** - A non-persistent entity representing the Workstation Client configuration.
-* **Device** - A non-persistent entity representing a connectable peripheral device. Includes the name, class and state (Available, Connected, or Error). Specialize this to maintain your device-specific state.
-* **AppKeyPair** - A persistent entity to store the app's key pair. The public key needs to be entered in the corresponding app in Workstation Management.
+* **Station** - A non-persistable entity representing the Workstation Client configuration.
+* **Device** - A non-persistable entity representing a connectable peripheral device. Includes the name, class and state (Available, Connected, or Error). Specialize this to maintain your device-specific state.
+* **AppKeyPair** - A persistable entity to store the app's key pair. The public key needs to be entered in the corresponding app in Workstation Management.
 
 ## Using the Nanoflows and Actions {#javascript-actions}
 

@@ -68,14 +68,14 @@ The prerequisites are the following:
 
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.
 
-    | Studio Pro 10.0.0 - 10.1.0 | Studio Pro 10.2.0 - 10.9 | Studio Pro 10.6.10 (MTS), 10.10 to 10.20 | Studio Pro 10.21.0 and above |
-    | --- | --- | --- | --- |
-    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)|[2.48.1](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe)|
+    | Studio Pro 10.0.0 - 10.1.0 | Studio Pro 10.2.0 - 10.9 | Studio Pro 10.6.10 (MTS), 10.10 to 10.20 | Studio Pro 10.21.0 - 10.24.29 | Studio Pro 10.24.30 and above |
+    | --- | --- | --- | --- | --- |
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)|[2.48.1](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe)|[2.56.0.4](https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/Git-2.56.0.4-64-bit.exe)|
 
 {{% alert color="info" %}}
 You do not need to install Git for all operations, but you may need to install the Git CLI if you perform certain actions. For example, [rebase](/refguide10/merge-algorithm/#rebase) will not work without Git being installed. 
 
-Starting from Studio Pro 10.21.0, Git version 2.48.1 or above is required. This version is automatically installed during Studio Pro installation. However, for [non-administrative installation](#offline), you must install Git manually.
+Starting from Studio Pro 10.21.0, Git version 2.48.1 or above is required. Starting from Studio Pro 10.24.30, Git version 2.56 or above is required. This version is automatically installed during Studio Pro installation. However, for [non-administrative installation](#offline), you must install Git manually.
 {{% /alert %}}
 
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
@@ -127,7 +127,9 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
    5. Git for Windows (x64)
       * For Studio Pro versions 10.0.0 and 10.1.0, rename the *Git-2.37.1-64-bit.exe* executable to *git_for_windows_installer.exe*
       * For Studio Pro versions 10.2.0, 10.6.10 (or 10.6.x above 10.6.10), and 10.9.0, rename the *Git-2.41.0.3-64-bit.exe* executable to *git_for_windows_installer.exe*
-      * For Studio Pro versions 10.10.0 and above, rename the *Git-2.43.0-64-bit.exe* executable to *git_for_windows_installer.exe*
+      * For Studio Pro versions 10.10.0-10.24.29, rename the *Git-2.43.0-64-bit.exe* executable to *git_for_windows_installer.exe*
+      * For Studio Pro versions 10.21.0-10.24.29, rename the *Git-2.48.1-64-bit.exe* executable to *git_for_windows_installer.exe*
+      * For Studio Pro versions 10.24.30 and above, rename the *Git-2.56.0.4-64-bit.exe* executable to *git_for_windows_installer.exe*
    6. Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64)
       * The *MicrosoftEdgeWebview2Setup.exe* does not need to be renamed
    7. Gradle

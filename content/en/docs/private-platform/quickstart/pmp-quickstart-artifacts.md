@@ -880,7 +880,7 @@ The `mxplatform` component is used for Mendix application platform deployment.
 
 #### Secret Store
 
-`SecretProviderclass.database.passwordless` and `secretProviderclass.create` are available starting from Private Mendix Platform 2.8.2. They are not included in the `mxplatform` charts shipped with 2.8.0 and 2.8.1. For more information, see [Enabling the Secret Store](/private-mendix-platform/helmfile-installation/#enable-secret-store).
+The `secretProviderclass.database.passwordless` and `secretProviderclass.create` properties are available starting from Private Mendix Platform 2.8.2. They are not included in the `mxplatform` charts shipped with 2.8.0 and 2.8.1. For more information, see [Enabling the Secret Store](/private-mendix-platform/helmfile-installation/#enable-secret-store).
 
 | Field | Required | Description |
 | --- | --- | --- |

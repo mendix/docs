@@ -8,7 +8,7 @@ description: "Describes the configuration and usage of the Rich Text widget, whi
 ## Introduction
 
 {{% alert color="info" %}}
-This documentation applies to Rich Text widget versions 4.0 and above. 
+This documentation applies to Rich Text widget versions 4.0 and above. Starting with version 5.0.0, the widget uses the Tiptap editor library instead of Quill. The content is still stored as HTML in the attribute.
 
 For documentation on Rich Text widget versions 3 with TinyMCE, see [Rich Text v3](/appstore/widgets/rich-text-v3/).
 For documentation on Rich Text widget versions 2 with CKEditor4, see [Rich Text v2](/appstore/widgets/rich-text-v2/).
@@ -27,6 +27,8 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
 * Sanitizes the user's input automatically
 * Supports spelling and grammar checker in the editor
 * Supports code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
+* Shows the editor's toolbar, dialogs, and help texts in the page language, with bundled translations for English, Dutch, German, French, and Spanish (other languages fall back to English); available in Rich Text version 5 and above
+* Lets the user set the number that a numbered list starts at with the **Start at** field in the numbered list options; available in Rich Text version 5.2.0 and above
 
 {{% alert color="info" %}}
 Unlike Rich Text v3, this version no longer hosts the editor inside a sandboxed `iframe`. Thus, page styling will directly affect the rich text's styling.
@@ -49,25 +51,28 @@ To configure this widget, follow these steps:
         * **Yes** – if selected, you can define the label caption.
             * **Label caption** – defines the label caption of the widget that is displayed on the page.
         * **No** (default) – if selected, there is no label for this widget on the page.
-    * **Enable status bar** display status bar on the bottom of the editor.
+    * **Enable status bar** – displays a status bar at the bottom of the editor with document metrics (default: **No**). Configure the metric with **Status bar content** on the **Advanced** tab.
 * **Toolbar**
-    * **Toolbar** display toolbar based on the selected location on the editor.
-        * **Basic** – if selected, the following menu will be shown: 
-            * bold italic | numlist bullist | outdent indent | link | removeformat 
+    * **Toolbar** – displays a toolbar preset; this property is not available when **Location** is set to **Hide**.
+        * **Basic** (default) – if selected, the following menu will be shown: 
+            * bold italic underline strikethrough | bullist numlist checklist | outdent indent ltr/rtl | link image video | removeformat
         * **Standard** – if selected, the following menu will be shown: 
-            * undo redo | bold italic underlined | bullist numlist loweralphalist | outdent indent | ltr rtl | alignleft aligncenter alignjustify alignright | fontfamily fontsize forecolor backcolor | link image | blockquote codesample codeblock (view/edit)code, removeformat
+            * undo redo | bold italic underline strikethrough | bullist numlist checklist | outdent indent ltr/rtl | alignleft aligncenter alignright alignjustify | fontfamily fontsize forecolor backcolor | link image video | blockquote code codeblock (view/edit)code | removeformat | table | fullscreen
         * **Full** – if selected, the following menu will be shown: 
-            * undo redo | bold italic underlined strikethrough | superscript subscript | bullist numlist loweralphalist checklist | outdent indent | ltr rtl, alignleft aligncenter alignjustify alignright | fontfamily fontsize forecolor backcolor | link image video formula | heading | blockquote codesample codeblock (view/edit)code | removeformat
-        * **Custom** – allows you to make your own menubar selection based on the **full** selection list.
+            * undo redo | bold italic underline strikethrough | superscript subscript | bullist numlist checklist | outdent indent ltr/rtl | alignleft aligncenter alignright alignjustify | fontfamily fontsize forecolor backcolor | link image video | heading | blockquote code codeblock (view/edit)code | removeformat | table | fullscreen | keyboard shortcuts help
+        * **Custom** – allows you to make your own menubar selection on the **Custom toolbar** tab.
+
+        {{% alert color="info" %}}The toolbar lists above apply to Rich Text version 5 and above. The numbered list button offers the **1, 2, 3**, **a, b, c**, and **i, ii, iii** list styles.{{% /alert %}}
+
     * **Location** 
         * **Sticky** – if selected, toolbar will be placed on the top of the editor and sticky position will apply upon scrolled.
-        * **Top** – if selected, toolbar will be placed on the top of the editor.
+        * **Top** (default) – if selected, toolbar will be placed on the top of the editor.
         * **Bottom** – if selected, toolbar will be placed on the bottom of the editor.
         * **Hide** – if selected, toolbar will be hidden or not shown.
 
 * **Editable** – determines when the user can edit content in the editor and when it is read-only.
     * **Read-only style** - determines the style of the rich text widget when set to read-only. 
-        * **Rich Text** – shows disabled rich text with a similar look and feel as when it is enabled.
+        * **Rich text** (default) – shows disabled rich text with a similar look and feel as when it is enabled.
         * **Bordered** – shows content only with a surrounding border.
         * **Read panel** – shows only an HTML rendering of rich text content. 
 
@@ -78,26 +83,26 @@ To configure this widget, follow these steps:
     
 ### Custom Toolbar Tab
 
-* **Custom** – allows you to make your toolbar with customized options.
+* **Custom** – allows you to make your toolbar with customized options. The properties on this tab are available when **Toolbar** is set to **Custom**.
     * **Toolbar group** 
         * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar:
-            * **Edit history** - items: undo, redo.
+            * **Edit History** - items: undo, redo.
             * **Font style** - items: bold, italic, underline, strikethrough.
             * **Font script** - items: superscript, subscript.
-            * **List** - items: bullist numlist loweralphalist checklist.
+            * **List** - items: bullist numlist checklist.
             * **Indentation** - items: outdent, indent, ltr rtl.
-            * **Embedded media** - items: link, image, video, formula.
+            * **Embedded media** - items: link, image, video.
             * **Alignment** - items: alignleft aligncenter alignjustify alignright.
-            * **Syntax** - items: blockquote, codesample, codeblock, (view/edit)code.
+            * **Syntax** - items: blockquote, code, codeblock, (view/edit)code.
             * **Font colors** - items: fontfamily, fontsize, forecolor, backcolor.
             * **Content type** - items: header.
             * **View** - items: fullscreen.
             * **Removal** - items: clear.
             * **Table** - items: table.
-            * **Help** - items: help dialog contains keyboard shortcuts (available in rich text version 5 and above).
+            * **Keyboard shortcuts** - items: a help button that opens a dialog listing the keyboard shortcuts (available in rich text version 5 and above). The button is only shown when all the other toolbar groups are enabled.
         * **Advanced** – if selected, you can configure buttons for different toolbar groups:
 
-            {{% alert color="info" %}}All the toolbar groups that you configure will be available in the toolbar. With vertical bars or separator options ("|"), you can separate different toolbar groups.{{% /alert %}}
+            {{% alert color="info" %}}All the toolbar groups that you configure will be available in the toolbar. With vertical bars or separator options ("|"), you can separate different toolbar groups. Each button is shown only once, even if it is added more than once. In Rich Text version 5 and above, the **Lower Alpha List** and **Formula** buttons are not shown; use the list style options of the **Ordered List** button instead of **Lower Alpha List**.{{% /alert %}}
 
             * **New** – opens the **Edit Advanced Groups Item** dialog box where you can add a new button to a toolbar group
                 * **Button** – specifies the button to be included in the toolbar
@@ -107,21 +112,29 @@ To configure this widget, follow these steps:
 ### Dimensions Tab
 
 * **Width unit** – the width of the widget.
-    * **Percentage** – specifies the width in relation to the rest of the elements on the page.
+    * **Percentage** (default) – specifies the width in relation to the rest of the elements on the page.
     * **Pixels** – specifies the width in pixels.
-* **Width** – used as an appropriate CSS value.
+* **Width** – used as an appropriate CSS value (default: 100).
 * **Height unit** – the height of the widget.
-    * **Percentage of width** – specifies the height in relation to the width.
-    * **Pixels** – specifies the height in pixels.
-    * **Percentage of parent** – specifies the width in relation to the rest of the elements on the page.
-* **Height** – used as an appropriate CSS value.
-* **Minimum height** – applicable if height is relative to parent's percentage.
+    * **Auto** – the height adjusts to the content, within the limits of the **Minimum height** and **Maximum height** properties.
+    * **Pixels** (default) – specifies the height in pixels.
+    * **Percentage** – specifies the height as a percentage of the parent's height.
+    * **Viewport** – specifies the height as a percentage of the viewport's height.
+* **Height** – used as an appropriate CSS value (default: 250); not available when **Height unit** is set to **Auto**.
+
+The following properties are available when **Height unit** is set to **Auto**:
+
+* **Minimum Height unit** – the unit of the **Minimum height** property: **None**, **Pixels** (default), **Percentage**, or **Viewport**.
+* **Minimum height** – the minimum height of the widget (default: 250); not available when **Minimum Height unit** is set to **None**.
+* **Maximum Height unit** – the unit of the **Maximum height** property: **None** (default), **Pixels**, **Percentage**, or **Viewport**.
+* **Maximum height** – the maximum height of the widget (default: 250); not available when **Maximum Height unit** is set to **None**.
+* **Vertical Overflow** – determines what happens when the content is higher than the maximum height: **Auto** (default), **Scroll**, or **Hidden**; not available when **Maximum Height unit** is set to **None**.
 
 ### Events Tab
 
 * **On change** – specifies an action to execute when the user changes the value of the editor.
-    * **On change type** - specifies which type of event that will trigger the on change action.
-        * **When user leaves input field** - if selected, an on change action will be triggered when user moves focus out of the editor.
+    * **On change type** - specifies which type of event that will trigger the on change action. This property is available when an **On change** action is set.
+        * **When user leaves input field** (default) - if selected, an on change action will be triggered when user moves focus out of the editor.
         * **While user is entering data** - if selected, an on change action will be triggered each time a data change occurs.
 * **On enter** – specifies an action to execute when the user focuses on the editor.
 * **On leave** – specifies an action to execute when the user move focus out of the editor.
@@ -129,19 +142,21 @@ To configure this widget, follow these steps:
 
 ### Advanced Tab
 
-* **Enable spell checking** – configures to use the browser’s native spell checker.
-* **Default font family** – configures initial selection of the font family shown in the dropdown toolbar if no fonts are set. This configuration is only to adjust the font toolbar display with page's default font-family. No value is being set to the editor's text directly. The value set should be the same with selected `font-name-value` in `data-value` variable of fonts.
-* **Default font size** – configures initial font size to be shown in the dropdown of font size in the toolbar if no font sizes are set. This configuration only adjusts the font size toolbar with the page's default font size. No font size value is being set to the editor's text directly. The value set should be available in the font size toolbar selections.
+* **Enable spell checking** – configures to use the browser’s native spell checker (default: **No**).
+* **Enable link URL validation** – if enabled, only valid URLs are accepted in links (default: **Yes**). Disable it to allow non-standard URLs in links. Available in Rich Text version 4.12.0 and above.
 * **Custom fonts** – configures extra fonts selection for the font family.
 * **Selectable images** – configures image entity source to allow rich text to use images from entity instead of base64 string.
-* **Enable default upload** – if enabled, it will keep the current image upload method using base64 string, otherwise it is hidden (default value: **true**).
-* **Status bar content** - configures counter display on the status bar:
-    * **Word count** – displays the number of words in the status bar.
+* **Enable default upload** – if enabled, the user can upload images from the device, using the upload tab of the image dialog, dragging and dropping image files onto the editor, or pasting images from the clipboard; uploaded images are embedded in the content as base64 strings (default: **Yes**). This property is available when **Selectable images** is set.
+* **Status bar content** - configures counter display on the status bar; available when **Enable status bar** is set to **Yes**:
+    * **Word count** (default) – displays the number of words in the status bar.
     * **Character count (text only)** – displays the number of characters displayed in the editor.
-    * **Character count (includeing HTML)** – displays the number of characters saved into the attribute value. This includes the HTML tag inserted for the formatting of rich text.
+    * **Character count (including HTML)** – displays the number of characters saved into the attribute value. This includes the HTML tag inserted for the formatting of rich text.
 * **Style data format** - available from rich text version 5 and above. This allows user to use classnames for the styling of rich text's content.
     * **Inline** - uses inline styles on styling the HTML content. This is the current and default option. Inline styling is more reliable in styling the content. But using inline styles meant that the data cannot be parsed in [strict-CSP environment](/howto/security/csp/).
     * **Class** - uses class name to style the HTML content. Use this setting if rich text is deployed in a strict CSP environment.
+* **Dialog style** – determines how the insert image, insert video, and insert link dialogs are presented; available in Rich Text version 5.1.0 and above.
+    * **Inline** (default) – anchors the dialog to the toolbar button it was opened from.
+    * **Focused** – shows the dialog centered on the screen over a dimmed page, and keeps the keyboard focus inside the dialog until it is closed.
 
 ### Common Tab
 
@@ -187,10 +202,14 @@ To add a new custom font, simply click the **Advanced** tab and click new on cus
 The new font name will be display in the toolbar with data-value attribute as `data-value="your-font-name"`. The name will be derived from **Font name** configuration by set it to lower case, and replace all spaces (" ") with dashes ("-"). You can use this custom styling to display it correctly in the toolbar:
 
 ```css
-.widget-rich-text .ql-toolbar [data-value=your-font-name]:before {
+.widget-rich-text .toolbar-dropdown-item[data-value=your-font-name] {
     font-family: 'Your-font-family-name';
 }
 ```
+
+{{% alert color="info" %}}
+The selector above applies to Rich Text version 5 and above. In Rich Text version 4, use `.widget-rich-text .ql-toolbar [data-value=your-font-name]:before` instead.
+{{% /alert %}}
 
 ### Image From Entity
 
@@ -298,6 +317,7 @@ This code will trigger a new event called **imageSelected** and bubble up the ev
         <th>Formatting</th>
         <th>Paragraph</th>
         <th>History</th>
+        <th>Accessibility</th>
     </tr>
     <tr>
         <td>
@@ -327,6 +347,14 @@ This code will trigger a new event called **imageSelected** and bubble up the ev
                 <tr><th>Action</th><th>Shortcut</th></tr>
                 <tr><td>Undo</td><td>Ctrl+Z</td></tr>
                 <tr><td>Redo</td><td>Ctrl+Y</td></tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr><th>Action</th><th>Shortcut</th></tr>
+                <tr><td>Focus toolbar</td><td>Alt+F10</td></tr>
+                <tr><td>Focus status bar</td><td>Alt+F11</td></tr>
+                <tr><td>Return to editor / exit fullscreen</td><td>Escape</td></tr>
             </table>
         </td>
     </tr>

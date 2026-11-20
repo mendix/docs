@@ -53,6 +53,10 @@ The pie chart also has the **Show legend** property described in [General Sectio
 
 * **On click action** – The action that runs when the user clicks a slice.
 
+## Advanced Section
+
+In addition to the common [Advanced](/appstore/widgets/charts/#advanced) properties, the **Advanced** tab of the pie chart has a **Custom series options** property. It holds a JSON object with advanced configuration for the pie chart series. For more information, see [Custom Series Settings](/appstore/widgets/charts/#custom-series-settings). This property is visible only when [Enable advanced options](/appstore/widgets/charts/#enable-advanced-options) is set to **Yes**.
+
 ## Read More
 
 * [Charts](/appstore/widgets/charts/)

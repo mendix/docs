@@ -14,23 +14,21 @@ The [Maps](https://marketplace.mendix.com/link/component/108261/) widget enables
 * [Mapbox](https://www.mapbox.com)
 * [HERE maps](https://www.here.com/)
 
+{{% alert color="info" %}}
+Version 5.0.0 and above of the Maps widget requires Studio Pro 10.24.0 or above.
+{{% /alert %}}
+
 ## Basic Usage
 
 For the easiest way to get started with a basic map in your application, follow these steps:
 
 1. Drag the **Maps** widget onto your page.
-2. Open the widget properties and add a Google Maps access token in **General** > **Configurations** > **Google Maps API Key**.
-3. In the **General** > **Markers** properties section, select **New** for **Markers**.
-4. Create a new location marker based on either **Latitude and longitude** or an **Address**.
+2. Open the widget properties and add a Google Maps access token in **General** > **Configurations** > **API Key**.
+3. On the **Advanced** tab, add your Google Maps map ID in **Google MapId key**. This property is required when using Google Maps. For more information, see [Use Map IDs](https://developers.google.com/maps/documentation/get-map-id).
+4. In the **General** > **Markers** properties section, select **New** for **Marker**.
+5. Create a new location marker based on either **Latitude and longitude** or an **Address**.
 
 If you want to configure more of your map (for example, end-user interactions and styling) or use a different map provider, see the [Settings](#settings) section below.
-
-{{% alert color="info" %}}
-If you are using Google Maps, be sure to include an empty JSON array (specifically `{}`) in **Advanced** > **Map Styles** so your widget is successfully displayed in your app:
-
-{{< figure src="/attachments/appstore/platform-supported-content/widgets/maps/gmaps.png" class="no-border" >}}
-
-{{% /alert %}}
 
 ## Settings {#settings}
 
@@ -38,21 +36,27 @@ If you are using Google Maps, be sure to include an empty JSON array (specifical
 
 By default, the Maps widget will use Google Maps. 
 
-To change the map provider, go to the **General** properties of the map and enable the **Advanced** > **Show advanced** setting. This will introduce a new **Advanced** tab in the setting window. You can now select one of the map providers listed in the [Introduction](#introduction).
+To change the map provider, go to the **Advanced** tab of the widget properties and select one of the map providers listed in the [Introduction](#introduction) in **Map provider**.
+
+When using Google Maps, the **Google MapId key** property on the **Advanced** tab is required. It is used to render and style the map. For more information on how to get a map ID, see [Use Map IDs](https://developers.google.com/maps/documentation/get-map-id).
 
 ### Access Token
 
 For all the map providers except OpenStreetMap, you need to have a token in order to view the map. The appropriate tokens can be retrieved via the links to the map types listed in the [Introduction](#introduction).
 
-After obtaining the access token, provide it to the widget in the **General** > **Configurations** widget settings. For Google Maps, the **Google Maps API Key** property should be used, while for the other map providers the **API key** property should be used.
+After obtaining the access token, provide it to the widget in the **General** > **Configurations** > **API Key** widget setting. This property is an expression. The **API Key** property is not shown when the map provider is OpenStreetMap.
+
+{{% alert color="info" %}}
+Older versions of the widget used a static string for **API Key** and **Geo location API key**. These static values are deprecated, and Studio Pro shows a warning for them. Use the expression properties instead.
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 Make sure that you keep the API key secure. For more information, see [API security best practices](https://developers.google.com/maps/api-security-best-practices).
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Placing markers based on addresses does not work without an access token set for **General** > **Configurations** > **Google Maps API key**. This is especially relevant if you are opting into one of the non-Google Maps providers, since you should still provide a Google Maps API access token if you want to specify markers through their address.
-The token is necessary for converting addresses to their corresponding latitude and longitude values, which in turn are used to place the markers. If no Google Maps API token is provided, the map is still usable, but markers based on addresses will not be shown.
+Placing markers based on addresses does not work without an access token set for **General** > **Configurations** > **Geo location API key**. This key should be a [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) key, and the property is only shown when at least one marker is based on an address. This is especially relevant if you are opting into one of the non-Google Maps providers, since you should still provide a Google Geocoding API key if you want to specify markers through their address.
+The token is necessary for converting addresses to their corresponding latitude and longitude values, which in turn are used to place the markers. If no Geocoding API key is provided, the map is still usable, but markers based on addresses will not be shown.
 {{% /alert %}}
 
 ### Current Location
@@ -61,7 +65,7 @@ To show the user's location on the map, enable this in **General** > **Configura
 
 ### Markers
 
-To enhance the map widget, you can mark locations on the map by providing them in the widget through **General** > **Markers**. The following conditions apply:
+To enhance the map widget, you can mark locations on the map by providing them in the widget through **General** > **Markers** > **Marker**. The following conditions apply:
 
 * If exactly one location is provided, the map will center to that location
 * If multiple locations are provided, the map will center to a position in which all markers are visible
@@ -72,7 +76,7 @@ There are two ways to specify locations to be marked, either **Based on latitude
 You can customize each individual marker in the following ways:
 
 * You can provide each marker with a title that will be displayed in a pop-up window when the marker is clicked via the **Location** > **Title** setting
-* You can customize the icon of the location marker via the individual marker's setting in **Visualization** > **Marker style** (setting it to *Image* allows you to customize it with either a static resource or dynamic entity)
+* You can customize the icon of the location marker via the individual marker's setting in **Visualization** > **Marker style** (setting it to **Image** allows you to replace the default icon with an image in the **Image** property)
 * You can attach an event handler to the marker to trigger when an end-user clicks it via the **Events** > **On click** setting
 
 To make the process of marking batches of locations easier, it is also possible to specify entire lists of markers at once. You can do this through the **General** > **Markers** > **Marker list** setting, which requires a data source. All the usual Mendix data-source settings apply here, as well as the same marker requirements and customizability as the individual markers. 
@@ -85,7 +89,8 @@ Under the **Controls** properties tab, you can adjust the following settings rel
 * **Scroll to zoom** – when enabled, the end-user can change the zoom level of the map by mouse-scrolling on a desktop machine or using pinch gestures on mobile
     * Note that when using the Google Maps provider, this setting requires the **Drag** setting to be enabled in order to work
 * **Zoom** – when enabled, additional control buttons are shown on the map
-* **Attribution** – when enabled, attributions (credits) are shown at the bottom of the map 
+* **Attribution control** – when enabled, attributions (credits) are shown at the bottom of the map
+    * This setting is not available when using the Google Maps provider
 
 If you are using the Google Maps provider, these additional controls are available:
 
@@ -94,6 +99,7 @@ If you are using the Google Maps provider, these additional controls are availab
     * The available options are **Map**, with or without a **Terrain** layer, and **Satellite**, with or without a **Labels** layer
     * By default, this is set to **Map** without the **Terrain** layer
 * **Full screen** – when enabled, there is a button available in the upper-right corner of the map to view the map in full screen
+* **Rotate** – when enabled, the rotate control of Google Maps is shown on the map
 
 ### Dimensions
 

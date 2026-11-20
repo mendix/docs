@@ -18,24 +18,26 @@ The widget does the following:
 
 The Progress Circle widget requires three values: a **Minimum value** and **Maximum value** to describe the full range of progress as well as a **Current value** to indicate the progression on that range. 
 
-These values can be provided in three different ways: as a **Static** integer value, a **Dynamic** integer value, or an **Expression**. An On Click Action can be set onto the progress circle label to trigger custom logic during click interactions.
+These values can be provided in three different ways, set with the **Type** property: as a **Static** integer value (default), a **Dynamic** value from a Decimal, Integer, or Long attribute, or an **Expression** that returns a Decimal. The default static values are 0 for **Minimum value**, 100 for **Maximum value**, and 50 for **Current value**. An **On click** action can be set onto the progress circle label in the **Events** section to trigger custom logic during click interactions.
+
+By default, the widget shows an error when the **Current value** is higher than the **Maximum value**. To allow such values, set **Allow values above maximum** to **Yes** (default: **No**). The circle then stays full, the percentage label shows the actual value (for example, 120%), and the widget gets the `widget-progress-circle-overflow` class so you can style it. The widget still shows an error when the **Current value** is lower than the **Minimum value**, or when the **Maximum value** is lower than the **Minimum value**.
 
 ### Label
 
 Configuring the label on the progress circle can be done on the **Progress Label** tab and has the following options:
 
-* Whether to show a label or not
-* The type of the label:
-    * **Text**: a custom text
+* **Show label** – whether to show a label or not (default: **No**)
+* **Label type** – the type of the label:
+    * **Text** (default): a custom text, set in **Label text**
     * **Percentage**: the **Current value** converted onto the configured range as a percentage. 
-    * **Custom**: a custom widget
+    * **Custom**: a custom widget, placed in **Custom label**
 
 ### Styling
 
 Under the **Appearance** tab, the following styling properties can be adjusted for the progress circle:
 
-* Bar and background color based on brand styling
-* Size (small, medium, and large)
+* **Bar color** based on brand styling: **Primary**, **Success**, **Warning**, or **Danger**
+* **Size**, which sets the thickness of the circle (**Small**, **Medium**, and **Large**)
 
 ## Strict CSP Compatibility
 

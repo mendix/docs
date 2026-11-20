@@ -13,7 +13,7 @@ weight: 60
 {{% alert color="info" %}}
 This documentation applies to Rich Text widget versions 3 that use the TinyMCE library.
 
-For documentation on Rich Text widget versions 4 with QuillV2, see [Rich Text](/appstore/widgets/rich-text/) documentation.
+For documentation on Rich Text widget versions 4 (Quill V2) and 5 (Tiptap), see [Rich Text](/appstore/widgets/rich-text/) documentation.
 For documentation on Rich Text widget versions 2 with CKEditor4, see [Rich Text v2](/appstore/widgets/rich-text-v2/).
 
 Due to TinyMCE changing its public license, we transitioned to the Quill V2 library in Rich Text 4.

@@ -29,13 +29,13 @@ Several options can be defined in the Tooltip widget. For more information, see 
 
 For the sake of simplicity, there are two methods for creating a tooltip:
 
-- **Text** (default) – this mode lets you can enter text with or without parameters to quickly implement a tooltip in your app
-- **Custom** – enable this mode to freely design what will be shown in the tooltip such as the text, images, and widgets
+- **Text** (default) – this mode lets you enter text with or without parameters in the **Tooltip** property to quickly implement a tooltip in your app
+- **Custom** – enable this mode to freely design what will be shown in the tooltip such as the text, images, and widgets, using the **Tooltip content: place widgets here** region
 
 If the tooltip has no content, it does not open. This happens, for example, when the text contains only spaces, or when all the widgets in the custom content are hidden.
 
 {{% alert color="info" %}}
-From version 1.6.0 and above, custom tooltip content loads together with the page instead of when the tooltip first opens. This allows screen readers to announce the content. Data sources inside custom content, such as a data view or a list view, run when the page loads even if the user never opens the tooltip. We recommend you avoid heavy data sources in tooltip content, because they can decrease page performance.
+From version 1.6.0 and above, custom tooltip content loads together with the page instead of when the tooltip first opens. This allows screen readers to announce the content. Data sources inside custom content, such as a data view or a list view, run when the page loads even if the user never opens the tooltip. Avoid heavy data sources in tooltip content, because they can decrease page performance.
 {{% /alert %}}
 
 ### Tooltip Position
@@ -44,7 +44,7 @@ You can define how to position the tooltip in relation to the trigger element.
 
 **Tooltip Position** options are as follows:
 
-- Top
+- Top (default)
 - Left
 - Bottom
 - Right
@@ -56,7 +56,7 @@ With the new Tooltip widget you also can define how to position the tooltip arro
 **Arrow Position** options are as follows:
 
 - Start
-- Center
+- Center (default)
 - End
 
 ### Open On
@@ -74,6 +74,10 @@ From version 1.6.0, new Tooltip widgets use **Hover,focus** by default, so keybo
 {{% alert color="warning" %}}
 On mobile devices the **Hover** option will be triggered on touch.
 {{% /alert %}}
+
+### Styling
+
+To show the widget as an inline element, set the **Show inline** design property to **Yes**. This adds the `widget-tooltip-inline` class to the widget.
 
 ## Keyboard and Screen Reader Support {#keyboard-screen-reader}
 

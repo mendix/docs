@@ -9,7 +9,7 @@ description: "Describes the configuration and usage of the Data Grid 2 widget, w
 
 [Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. The Data Grid 2 widget offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control.
 
-This document focusing on explaining module features. For precise details on Data Grid 2 widget properties, see [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/).
+This document focuses on explaining module features. For precise details on Data Grid 2 widget properties, see [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/).
 
 The data source determines which objects will be shown in a Data Grid 2 widget. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
 
@@ -89,7 +89,7 @@ Here is an example containing a column with **Yes, hidden by default** in **Desi
 
 When set to **Yes**, default events such as On click action or selection will be triggered when the user interacts with the content.
 
-{{% alert color="alert" %}}
+{{% alert color="warning" %}}
 If a column contains interactive elements such as buttons, this might lead to unexpected behavior when both a click on the button and the action configured on the row are triggered. To prevent default events from triggering when interacting with content, set this setting to **No**.
 {{% /alert %}}
 
@@ -111,6 +111,8 @@ You can configure pagination based on the following properties:
 
 * **Position** – The **Position of pagination** options (**Below grid**, **Above grid**, or **Both**) set where the pagination appears. For **Virtual scrolling** and **Load more**, this option is available only when **Show number of rows** is set to **Yes**.
 * **Visibility** – The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page. This option is available only when **Pagination** is set to **Paging buttons** and **Custom pagination** is set to **No**.
+* **Custom pagination** – When **Custom pagination** is set to **Yes**, the built-in paging buttons are replaced by a widget area where you place your own pagination widgets, for example buttons that change the value of the **Page attribute**. The custom pagination follows **Position of pagination**, but with **Both** it is shown only once, below the grid.
+* **Dynamic paging** – Use **Page size attribute** and **Page attribute** to set the page size and current page from an attribute, and **Total count** to store the total number of rows in an attribute.
 
 ### Virtual Scrolling
 
@@ -186,7 +188,7 @@ In this example we check the value of `StringAttribute` and then apply the class
 
 ### Wrap Text
 
-You can choose if you want to wrap the text content of a column and apply ellipsis in the end of it.
+You can choose if you want to wrap the text content of a column. When **Wrap text** is set to **No**, long text stays on one line and is cut off with an ellipsis.
 
 {{% alert color="info" %}}
 If you are using **Custom content** in the **Show** option of the **General** tab, please make sure you are using a **Text Widget** without containers around it. Containers sometimes interfere with wrapping texts.
@@ -498,21 +500,29 @@ To filter across multiple attributes from the data grid header (outside the colu
 * [Date Filter](/appstore/modules/datagrid-date-filter/)
 * [Drop-Down Filter](/appstore/modules/datagrid-dropdown-filter/)
 
-## Export to Excel
+## Export to Excel {#export-to-excel}
 
 The Data Grid 2 widget ships with built-in functionality to export data from the data source you configured in the settings. The export is done via the **Export_To_Excel** JavaScript action that is distributed as part of the [Data Widgets](/appstore/modules/data-widgets/) module.
 
-To export data from the data grid, create a new nanoflow that calls **Export_To_Excel**. The **Export_To_Excel** action has a set of inputs:
+To export data from the data grid, create a new nanoflow that calls **Export_To_Excel**. In the nanoflow toolbox, you can find it as **Export To Excel** in the **Data widgets** category. The **Export_To_Excel** action has a set of inputs:
 
-* **Datagrid name**: the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
-* **File name**: the file name to use for the exported document (does not require an appended file extension)
-* **Sheet name**: the name to use for the Excel sheet of the exported document.
-* **Include column names**: a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
-* **Chunk size**: the number of rows fetched from the backend to the browser at a time.
+* **datagridName**: the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
+* **fileName**: the file name to use for the exported document (does not require an appended file extension)
+* **sheetName**: the name to use for the Excel sheet of the exported document.
+* **includeColumnHeaders**: a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
+* **chunkSize**: the number of rows fetched from the backend to the browser at a time.
 
 {{% alert color="info" %}}
-The recommended value for **Chunk size** is 200. However, because each data grid has a unique set of columns and varying amounts of data per row, a different chunk size might result in better performance.
+The recommended value for **chunkSize** is 200. However, because each data grid has a unique set of columns and varying amounts of data per row, a different chunk size might result in better performance.
 {{% /alert %}}
+
+The action returns a Boolean. It returns `true` when the file is created. It returns `false` when **datagridName**, **fileName**, or **sheetName** is empty, when no data grid with that name is on the page, when there is no data to export, or when the export is canceled.
+
+The export includes the columns that are currently visible in the grid, in their current order. Columns with custom content are only included when their **Export value** property is set. To control the cell type and format of each column in Excel, use the **Export type**, **Export number format**, and **Export date format** column properties. For more information, see the [Column Properties](/appstore/modules/data-grid-2-properties/#column-properties) section of *Data Grid 2 Properties*.
+
+While the export runs, the data grid shows a progress dialog with a button to cancel the export.
+
+To run logic before or after an export, for example to log export operations, use the **On before export** and **On after export** events of the data grid. For the variables these actions receive, see the [Configuration](/appstore/modules/data-grid-2-properties/#data-grid2-properties) section of *Data Grid 2 Properties*.
 
 ## Configuration
 
@@ -561,6 +571,12 @@ If the **"Select all" checkbox** setting is enabled, then the data grid widget s
 If this setting is enabled, then selected items persist across page navigation, data refreshes, filtering, and sorting operations. 
 
 By default, **Keep selection** is disabled and the selection is cleared when the data source changes. When enabled, selected items remain selected until manually cleared by the user.
+
+### Clearing the Selection From a Nanoflow {#clear-selection}
+
+The [Data Widgets](/appstore/modules/data-widgets/) module includes the **Clear Selection** (`Clear_Selection`) JavaScript action, which clears the selection of a Data Grid 2 or Gallery widget. In the nanoflow toolbox, you can find it in the **Data widgets** category.
+
+The action has one parameter, **targetName**: the name of the data grid, as a String. You can find the name of a widget in its properties, at **Common** > **Name**. If no widget with the specified name is on the current page, the action does nothing.
 
 ### Selection and Row Click Action
 
@@ -611,6 +627,23 @@ To configure selection, do the following:
 1. Configure the button to trigger a microflow or nanoflow.
 1. Set the input parameter of the flow to match the selection type (single object or list).
 
+## Styling {#styling}
+
+### Design Properties
+
+The [Data Widgets](/appstore/modules/data-widgets/) module adds the following design properties to Data Grid 2. You can find them in the **Design** properties of the data grid in Studio Pro:
+
+| Design property | Type | Options and CSS classes | Description |
+| --- | --- | --- | --- |
+| **Borders** | Drop-down | **Both** (`table-bordered-all`), **Vertical** (`table-bordered-vertical`), **Horizontal** (`table-bordered-horizontal`), **None** (`table-bordered-none`) | Adds a horizontal separator, a vertical separator, or both to the cells. |
+| **Compact** | Toggle | `table-compact` | Changes the cell spacing to compact. |
+| **Hover** | Toggle | `table-hover` | Highlights a row when the user hovers over it. This is only useful when the row is clickable. |
+| **Striped** | Toggle | `table-striped` | Adds alternating background colors to rows. |
+
+### Pagination Text Color
+
+The pagination text follows the default font color of the theme. To use a different color, set `color` on the `.pagination-bar` class in your theme.
+
 ## Keyboard Support {#keyboard-support}
 
 | Key                                                                  | Function                                                                                            |
@@ -620,13 +653,14 @@ To configure selection, do the following:
 | <kbd>↓</kbd>                                                         | Moves focus one cell down.                                                                          |
 | <kbd>↑</kbd>                                                         | Moves focus one cell up.                                                                            |
 | <kbd>Page&nbsp;up</kbd>                                              | Moves focus one page up.                                                                            |
-| <kbd>Page&nbsp;down</kbd>                                            | Moves focus once page down.                                                                         |
+| <kbd>Page&nbsp;down</kbd>                                            | Moves focus one page down.                                                                          |
 | <kbd>Home</kbd>                                                      | Moves focus to the first cell in the row.                                                           |
 | <kbd>End</kbd>                                                       | Moves focus to the last cell in the row.                                                            |
 | <kbd>Ctrl</kbd> + <kbd>Home</kbd>                                    | Moves focus to the first cell in grid.                                                              |
 | <kbd>Ctrl</kbd> + <kbd>End</kbd>                                     | Moves focus to the last cell in grid.                                                               |
+| <kbd>Enter</kbd> or <kbd>Space</kbd>                                 | Runs the **On click action** for the row of the focused cell. (3)                                   |
 | <kbd>Shift</kbd> + <kbd>Space</kbd>                                  | Selects current row. (1)                                                                            |
-| <kbd>Ctrl</kbd> + <kbd>A</kbd>                                       | Select all visible rows. (1)(2)                                                                     |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd> (<kbd>Command</kbd> + <kbd>A</kbd> on Mac) | Select all visible rows. (1)(2)                                                                |
 | <kbd>Shift</kbd> + <kbd>↑</kbd>/<kbd>↓</kbd>                         | Moves focus and selects current and row above/below. (1)(2)                                         |
 | <kbd>Shift</kbd> + <kbd>Page&nbsp;up</kbd>/<kbd>Page&nbsp;down</kbd> | Moves focus one page up/down and selects all rows between current and final row. (1)(2)             |
 | <kbd>Shift</kbd> + <kbd>Home</kbd>/<kbd>End</kbd>                    | Moves focus to the start/end of the grid and selects all rows between current and final row. (1)(2) |
@@ -636,7 +670,8 @@ Legend:
 | Symbol | Meaning                                                 |
 | ------ | ------------------------------------------------------- |
 | 1      | Available only when selection is enabled.               |
-| 2      | Available only when selection mode should be **Multi**. |
+| 2      | Available only when selection mode is **Multi**.        |
+| 3      | Available only when an **On click action** is set.      |
 
 ## Resetting Filters {#resetting-filters}
 
@@ -659,7 +694,7 @@ Both actions have the following parameters:
 **Reset All Filters** resets both the filters in the column headers and the filters in the [filters placeholder](/appstore/modules/data-grid-2-properties/#filters-placeholder) of the data grid.
 
 {{% alert color="info" %}}
-The action above find the widget by its name. If no widget with the specified name is on the current page, the action does nothing and does not show an error. To address this issue, confirm that **targetName** matches the name of the widget exactly.
+These actions find the widget by its name. If no widget with the specified name is on the current page, the action does nothing and does not show an error. To address this issue, confirm that **targetName** matches the name of the widget exactly.
 {{% /alert %}}
 
 ### Adding a Reset Button
@@ -673,6 +708,22 @@ To add a button that resets all filters of a data grid, do the following:
 1. Place a button on the page, for example in the filters placeholder of the data grid, and set its **On click** action to call the nanoflow.
 
 To reset a single filter, follow the same steps with the **Reset Filter** action, and set **targetName** to the name of the filter widget.
+
+## Setting Filters {#setting-filters}
+
+The [Data Widgets](/appstore/modules/data-widgets/) module includes the **Set Filter** (`Set_Filter`) JavaScript action, which sets a single text, number, date, or drop-down filter to a specific value from a nanoflow. The action is available for web apps only. In the nanoflow toolbox, you can find it in the **Data widgets** category.
+
+The action has the following parameters:
+
+* **targetName** – The name of the filter widget, as a String. You can find the name of a widget in its properties, at **Common** > **Name**.
+* **useDefaultValue** – A Boolean. When `true`, the filter returns to its default state, and the other value parameters are ignored. When `false`, the filter is set to the values below.
+* **operators** – A value of the **DataWidgets.Filter_Operators** enumeration that sets the filter type, for example **Contains**, **Equal**, or **Between**. It applies to text, number, and date filters.
+* **stringValue** – The value for a text filter or a drop-down filter. For a drop-down filter, use the same format as the **Default value** of the [Drop-Down Filter](/appstore/modules/datagrid-dropdown-filter/): to select several options, separate the values with commas; when **Multiselect** is set to **No**, only the first value is used.
+* **numberValue** – The value for a number filter.
+* **dateTimeValue** – The value for a date filter, or the start date when **operators** is **Between**.
+* **dateTimeValue_2** – The end date when **operators** is **Between**.
+
+Leave the parameters that do not apply to the target filter empty.
 
 ## Troubleshooting Runtime Errors {#troubleshooting-runtime-errors}
 

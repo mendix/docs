@@ -84,8 +84,9 @@ To receive notify messages in the client, place a widget on a page inside a [dat
 #### React-Compatible Widget
 
 1. Place the new widget on a page within a [data view](/refguide/data-view/) where the context matches the parameter object.
-2. Configure **Action list**. For each entry:
-    * **Action name** matches the notify message name sent from the server.
+2. Set **Object to listen** to the object that matches the parameter object of the **Notify** action.
+3. Configure **Event Handlers**. For each entry:
+    * **Action name** matches the notify message name sent from the server. Each action name must be unique within the widget.
     * **Action** defines the client action to run when the message is received. The new widget can run any configured client action. For example, you can run a microflow to retrieve committed data and refresh the page.
 
 #### Legacy Widget

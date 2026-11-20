@@ -7,12 +7,12 @@ description: "Describes the configuration and usage of the Barcode Generator wid
 
 ## Introduction
 
-The [Barcode Generator](https://marketplace.mendix.com/link/component/200681) widget generates a barcode or QR code from a string value and displays it in your Mendix web application.
+The [Barcode Generator](https://marketplace.mendix.com/link/component/200681) widget generates a barcode, QR code, or Data Matrix code from a string value and displays it in your Mendix web application.
 
 The widget does the following:
 
-* Encodes a static or dynamic string value as a barcode or QR code
-* Supports ten linear barcode formats as well as QR codes
+* Encodes a static or dynamic string value as a barcode, QR code, or Data Matrix code
+* Supports ten linear barcode formats as well as QR codes and Data Matrix codes (including GS1 Data Matrix)
 * Validates the input value against the selected format before rendering
 * Renders the result as a scalable SVG image
 * Lets end-users download the generated code as a PNG file
@@ -21,11 +21,12 @@ The widget does the following:
 
 ### Features
 
-* Two render modes selected through a single property: linear barcode or QR code
+* Three render modes selected through a single property: linear barcode, QR code, or Data Matrix
 * Per-format input validation with configurable logging
 * Optional download button with a customizable caption, file name, and position
 * EAN-2 and EAN-5 addon support for EAN barcodes
 * Error correction levels and image overlays for QR codes
+* Square or rectangular symbol shapes and GS1 encoding for Data Matrix codes
 * Offline capable
 
 ## Properties Pane
@@ -42,8 +43,8 @@ The following sections describe the available properties and how to configure th
 
 The **General** tab configures the value to encode, the code format, and the download button:
 
-* **Dynamic value** (required) – The string to encode as a barcode or QR code.
-* **Barcode Format** (required) – The type of code to generate. Choose **Barcode** to render a standard linear barcode, **QR Code** to render a QR code, or **Custom** to select a specific linear format on the **Advanced** tab.
+* **Dynamic value** (required) – The string to encode as a barcode, QR code, or Data Matrix code.
+* **Barcode Format** (required) – The type of code to generate. Choose **Barcode** to render a standard linear barcode, **QR Code** to render a QR code, **Data Matrix** to render a Data Matrix code, or **Custom** to select a specific linear format on the **Advanced** tab.
 * **Empty message** – The text shown when no value is provided to encode.
 * **Allow download** – When enabled, the widget shows a button that lets end-users download the generated code as a PNG file. Enabling this property reveals the following options:
     * **Button text** – The caption shown on the download button.
@@ -53,7 +54,7 @@ The **General** tab configures the value to encode, the code format, and the dow
 
 ### Advanced Tab {#advanced}
 
-The **Advanced** tab configures format-specific settings for linear barcodes and QR codes.
+The **Advanced** tab configures format-specific settings for linear barcodes, QR codes, and Data Matrix codes.
 
 #### Advanced Barcode Settings
 
@@ -74,6 +75,14 @@ The **Advanced** tab configures format-specific settings for linear barcodes and
 * **Level** (required) – The error correction level to use. Choose **L**, **M**, **Q**, or **H**, from lowest to highest correction.
 * **QR Size** (required) – The size of the QR code box, in pixels. In the Studio Pro preview, the maximum height is 200 pixels; the QR code renders at full size in your application.
 
+#### Advanced Data Matrix Settings
+
+These properties are available when **Barcode Format** is set to **Data Matrix**:
+
+* **GS1 Data Matrix** – When enabled, encodes the value as a GS1 Data Matrix (FNC1 and Application Identifiers), used for pharmaceutical serialization. The value must use Application Identifier syntax, for example `(01)09501101020917(17)261231(10)ABC123`.
+* **Symbol shape** (required) – The shape of the Data Matrix symbol. Choose **Square** or **Rectangle**.
+* **Data Matrix size** (required) – The size of the Data Matrix symbol, in pixels. The minimum value is 32. In the Studio Pro preview, the maximum height is 200 pixels; the symbol renders at full size in your application.
+
 #### Development
 
 * **Log Level** (required) – The level of logging when barcode generation fails. Choose **None** for no logging, **Info** to display a generic error message in the user interface, or **Debug** to log detailed information to the developer console.
@@ -88,6 +97,7 @@ The **Display** tab configures the size and appearance of the rendered code.
 * **Code height** (required) – The height of the barcode, in pixels. In the Studio Pro preview, the maximum height is 200 pixels; the barcode renders at full height in your application.
 * **Margin size** (barcode, required) – The barcode margin, in pixels.
 * **Margin size** (QR, required) – The QR code margin, expressed as a number of module units (QR grid cells). Increasing the margin compresses the QR pattern within the fixed size. The margin is not visible in the preview.
+* **Margin size** (Data Matrix, required) – The quiet zone around the Data Matrix symbol, expressed as a number of module units (Data Matrix cells). Increasing the margin compresses the symbol within the fixed size. Keep it at 1 or more for the code to stay scannable. The margin is not visible in the preview.
 * **Title** (required) – The title of the QR code, used for accessibility.
 * **Show title** – When enabled, displays the title on top of the QR code.
 * **Overlay image** (required) – When enabled, includes an image overlay on the QR code. Enabling this property reveals the following options:
@@ -104,18 +114,18 @@ The **Display** tab configures the size and appearance of the rendered code.
 
 The widget supports the following formats:
 
-| Linear     | 2D      |
-| ---------- | ------- |
-| CODE128    | QR Code |
-| EAN-13     |         |
-| EAN-8      |         |
-| UPC        |         |
-| CODE39     |         |
-| ITF-14     |         |
-| MSI        |         |
-| Pharmacode |         |
-| Codabar    |         |
-| CODE93     |         |
+| Linear     | 2D          |
+| ---------- | ----------- |
+| CODE128    | QR Code     |
+| EAN-13     | Data Matrix |
+| EAN-8      |             |
+| UPC        |             |
+| CODE39     |             |
+| ITF-14     |             |
+| MSI        |             |
+| Pharmacode |             |
+| Codabar    |             |
+| CODE93     |             |
 
 Each format accepts a specific set of values:
 
@@ -132,6 +142,7 @@ Each format accepts a specific set of values:
 | Codabar    | Up to 20 characters: digits, A–D, and `- $ : / . +`         |
 | CODE93     | Up to 47 characters                                         |
 | QR Code    | Up to 1200 characters                                       |
+| Data Matrix | Any text; with **GS1 Data Matrix** enabled, Application Identifier syntax |
 
 {{% alert color="info" %}}
 When a value does not match the requirements of the selected format, the widget does not render a code. Set the **Log Level** property to **Info** or **Debug** to surface the reason.

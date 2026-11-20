@@ -14,6 +14,8 @@ The widget does the following:
 * Displays markdown-formatted text as rendered HTML, supporting headings, bold, italic, lists, links, images, tables, code blocks, blockquotes, and horizontal rules
 * Applies typographic enhancements such as smart quotes, em dashes, en dashes, and ellipses
 * Automatically converts URLs in the text to clickable links
+* Renders subscript and superscript text
+* Renders math expressions with KaTeX
 * Shows a loading indicator while the data source is being retrieved
 
 ### Typical Use Cases
@@ -31,6 +33,8 @@ This widget leverages the following features:
 * Standard markdown syntax rendering, including headings, emphasis, lists, links, images, tables, code blocks, blockquotes, and horizontal rules
 * Typographic replacements (smart quotes, em dashes, en dashes, ellipses)
 * Automatic URL-to-link conversion (linkification)
+* Subscript (`H~2~O`) and superscript (`29^th^`) syntax
+* Math expressions rendered with [KaTeX](https://katex.org/) (see [Math Expressions](#math-expressions))
 * Offline capable
 * Conditional visibility support
 
@@ -50,6 +54,13 @@ Optionally, you can configure the widget further:
 * Navigate to the **Label** section to add a label for the widget
 * Navigate to the **Conditional visibility** section to control when the widget is displayed
 
+## Math Expressions {#math-expressions}
+
+The widget renders math expressions written in LaTeX syntax with KaTeX. Use one of the following notations:
+
+* **Inline math** – Wrap the expression in single dollar signs, for example `$E = mc^2$`.
+* **Block math** – Wrap the expression in double dollar signs (`$$...$$`), write it as a LaTeX environment (`\begin{...}...\end{...}`), or place it in a fenced code block with the `math` language.
+
 ## Styling
 
 The widget renders its content inside a container with the `widget-markdown` CSS class. The following default styles are applied:
@@ -57,6 +68,7 @@ The widget renders its content inside a container with the `widget-markdown` CSS
 * **Tables** – Renders with borders, padding, and left-aligned text. Header cells have a light gray background.
 * **Images** – Renders at a maximum of 35% of the container width by default.
 * **Horizontal rules** – Spans the full width of the container.
+* **Math expressions** – Uses the KaTeX stylesheet and fonts, which are included in the widget.
 
 You can override these styles by targeting the `.widget-markdown` class in your custom SCSS or theme.
 
@@ -71,3 +83,4 @@ This widget has the following limitations:
 ## Read More
 
 * [markdown-it](https://github.com/markdown-it/markdown-it): the markdown parsing library used by this widget
+* [KaTeX](https://katex.org/): the math typesetting library used by this widget

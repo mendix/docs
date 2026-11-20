@@ -11,6 +11,8 @@ A bubble chart shows one or more series as bubbles. The size of each bubble is s
 
 For the properties that all series-based charts share, such as the **Series** list, **Dimensions**, and **Advanced** settings, see [Common Chart Properties](/appstore/widgets/charts/#common-properties). This page describes the properties that are specific to the bubble chart.
 
+In the bubble chart properties, the list of series is called **Data source** instead of **Series**.
+
 ## General Tab
 
 In addition to the [common series properties](/appstore/widgets/charts/#series-general), the **General** tab has these properties:

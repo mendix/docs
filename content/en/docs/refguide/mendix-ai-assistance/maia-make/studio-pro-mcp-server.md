@@ -59,6 +59,8 @@ Once enabled, you can connect external clients to the MCP Server. For example, t
 
 Replace `<name>` with your preferred server name and `<port>` with the port configured in **Preferences**.
 
+For connecting Github CoPilot, install the github cli, open it in command line, enter 'copilot'. Then /mcp, select "Add MCP server...". Then give a name, set type to HTTP and set HOST to 'http://localhost:<port>/mcp'. Portnumber is by default 7782. You can find it in Studio Pro, as described in the previous step "Enabling the MCP Server".
+
 ## Working Practices {#working-practices}
 
 The following practices help you get reliable results when using an external client:

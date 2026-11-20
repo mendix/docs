@@ -133,10 +133,35 @@ The **Log Settings** tab provides granular control over how activity logs are ma
 * **External backup target** – Allows administrators to configure an external system or location where activity log backups can be sent for additional redundancy or compliance. The following options are available:
 
     * **S3** – You must specify the endpoint, region, bucket, access key ID, and secret access key.
-    * **Azure Blob Storage** – Supports authentication with Azure Blob Managed Identity, or with static credentials.
+    * **Azure Blob Storage** – Supports authentication with Azure Blob Managed Identity (AZWI), or with static credentials.
 
 * **External database target** – Provides an option to configure an external database where activity log data can be replicated or stored, potentially for advanced analytics or long-term data warehousing.
 * **Send email when any audit logging fail** – A toggle to enable email notifications to administrators if there are any failures in the audit logging process, ensuring immediate awareness of potential data loss or compliance issues.
+
+#### External Backup Target Configuration for Azure Blob (AZWI)
+
+With Azure Blob (AZWI), Private Mendix Platform writes the logs to an external backup target with the managed identity of the Private Mendix Platform pod. The Mendix Operator creates this identity. Do not create another identity for this option.
+
+Before you save the Azure Blob (AZWI) settings, assign the following role:
+
+| Property | Value |
+| --- | --- |
+| Role | Storage Blob Data Contributor |
+| Principal | Managed identity of the Private Mendix Platform pod |
+| Scope | The container selected for Azure Blob (AZWI) |
+| Granted by | Your infrastructure team |
+
+To find the Managed identity of the Private Mendix Platform pod, perform the following steps:
+
+1. Read the client ID from the platform ServiceAccount. The default name is `mxplatform`. If you set a different AppName during installation, use that name.
+
+    ```text
+    kubectl -n <pmp-namespace> get serviceaccount mxplatform -o jsonpath='{.metadata.annotations.azure\.workload\.identity/client-id}'
+    ```
+
+2. In the Azure portal, open the storage account, and then the container.
+3. Go to **Access Control (IAM) > Add role assignment**.
+4. Select **Storage Blob Data Contributor**, assign it to the managed identity with that client ID, and set the scope to this container.
 
 ## Webhooks {#webhooks}
 

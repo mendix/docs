@@ -39,4 +39,8 @@ The following services require you to download an external module from the Mendi
 
 In addition to the integration capabilities available in the Studio Pro, Mendix also supports integration with external systems through RapidMiner Graph Studio. The RapidMiner Graph Studio provides a scalable environment for connecting, managing, and analyzing graph-based data. For more information, see [Integrating Mendix with RapidMiner Graph Studio](/refguide/graph-studio/).
 
+## Authenticating with External Services
+
+To authenticate with external services, you can use an authentication document (beta). An authentication document lets you define the authentication method and credentials once, and reuse them in your microflows, for example with the [Authentication](/refguide/authentication-action/) and [Send Email](/refguide/send-email-action/) activities. Basic and OAuth 2.0 / Entra ID (Client Credentials) authentication are supported. For more information, see [Authentication](/refguide/authentication/).
+
 ## Documents in This Category

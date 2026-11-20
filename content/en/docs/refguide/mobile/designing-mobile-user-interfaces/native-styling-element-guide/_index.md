@@ -709,7 +709,7 @@ Buttons help your user perform actions. For more information about these widgets
 
 ### Action Button {#action-button}
 
-An action button can perform various actions such as calling a nanoflow, opening a page. 
+An action button can perform various actions such as calling a nanoflow, or opening a page. 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/action-button.png" alt="action button"   width="350"  class="no-border" >}}
 

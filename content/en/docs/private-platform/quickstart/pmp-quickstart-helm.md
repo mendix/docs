@@ -720,7 +720,7 @@ Leave `pclm.username`, `pclm.password`, and `spec.runtime.mxAdminPassword` out o
 
 Keep `useStoragePlanwithIRSA` set to `false`. With `true`, the operator creates the ServiceAccount from the storage plan, and the chart cannot attach the secret store to it.
 
-+The same identity can still open the database and the blob container without a stored password. That is workload identity on the ServiceAccount the chart creates. It is separate from the operator provisioner. See [Enabling the Secret Store](#enable-secret-store).
+The same identity can still open the database and the blob container without a stored password. That is workload identity on the ServiceAccount the chart creates. It is separate from the operator provisioner. See [Enabling the Secret Store](#enable-secret-store).
 
 On AWS and with HashiCorp Vault the same rule applies. A plan still provisions that resource. When the plan is unset, you create the database, the file storage, and the identity, and the operator does not. The key names for S3 are listed in [SecretProviderClass Keys](/developerportal/deploy/secret-store-credentials/#keys).
 
@@ -729,11 +729,11 @@ On AWS and with HashiCorp Vault the same rule applies. A plan still provisions t
 To enable the secret store for `mxplatform`, install the CSI driver and provider as in [Example - Install CSI Driver](#example), create the resources in [Using a Secret Store for the Platform App](#disable-provisioners), and use values like the following.
 
 {{% alert color="warning" %}}
-+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
 {{% /alert %}}
 
 ```text
-+mxplatform:
+mxplatform:
   enable: true
   name: mxplatform
   # The chart creates the ServiceAccount. The operator does not.
@@ -844,14 +844,14 @@ The code samples are intended to show the range of available options. No rights 
 {{% /alert %}}
 
 ```text
-+apiVersion: secrets-store.csi.x-k8s.io/v1
-+kind: SecretProviderClass
-+metadata:
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
   name: mxplatform
   namespace: <namespace>
   annotations:
     privatecloud.mendix.com/environment-class: "true"
-+spec:
+spec:
   provider: azure
   parameters:
     clientID: "<client-id>"

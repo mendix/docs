@@ -8,7 +8,7 @@ description: "How to update Marketplace modules in Studio Pro while retaining yo
 ## Introduction
 
 {{% alert color="info" %}}
-This feature requires Studio Pro 11.16 or above.
+This feature is available in Mendix LTS version 11.12 (11.12.3 and above) and in Mendix versions 11.16.0 or above.
 {{% /alert %}}
 
 Previously, when you wanted to update a Marketplace module to a newer version, you had to fully replace it, losing any customizations such as modified microflows or added functionality.

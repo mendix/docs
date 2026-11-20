@@ -58,9 +58,9 @@ The following runtime settings control connections to the Kafka broker:
 | `Kafka.BootstrapServers` | One or more Kafka broker addresses. Supply a comma-separated list of `host:port` pairs, such as `broker1:9092,broker2:9092`. | Not set |
 | `Kafka.Username` | The username for SCRAM-SHA-512 authentication over TLS. This setting is ignored when `Kafka.Security.Protocol` is set. | Not set |
 | `Kafka.Password` | The password for SCRAM-SHA-512 authentication over TLS. This setting is ignored when `Kafka.Security.Protocol` is set. | Not set |
-| `Kafka.Security.Protocol` | The [Kafka security protocol](https://kafka.apache.org/43/configuration/producer-configs/#producerconfigs_security.protocol) configured on your broker listener. The possible values are: `PLAINTEXT` (no authentication or encryption), `SSL` (TLS), `SASL_PLAINTEXT` (SASL authentication without encryption), and `SASL_SSL` (SASL authentication over TLS). Introduced in Mendix 11.16.0. | Not set |
-| `Kafka.Sasl.Mechanism` | The [SASL authentication mechanism](https://kafka.apache.org/43/configuration/producer-configs/#producerconfigs_sasl.mechanism) enabled on your broker listener. [Kafka's built-in mechanisms](https://kafka.apache.org/43/security/authentication-using-sasl/#sasl-mechanisms) are `GSSAPI` (Kerberos), `PLAIN`, `SCRAM-SHA-256`, `SCRAM-SHA-512`, and `OAUTHBEARER`. Requires `Kafka.Security.Protocol`. Introduced in Mendix 11.16.0. | Not set |
-| `Kafka.Sasl.Jaas.Config` | The [Kafka JAAS configuration](https://kafka.apache.org/43/configuration/producer-configs/#producerconfigs_sasl.jaas.config). It contains the client login module and options for your SASL mechanism. Requires `Kafka.Security.Protocol`. Introduced in Mendix 11.16.0. | Not set |
+| `Kafka.Security.Protocol` | The [Kafka security protocol](https://kafka.apache.org/44/configuration/producer-configs/#producerconfigs_security.protocol) configured on your broker listener. The possible values are: `PLAINTEXT` (no authentication or encryption), `SSL` (TLS), `SASL_PLAINTEXT` (SASL authentication without encryption), and `SASL_SSL` (SASL authentication over TLS). Introduced in Mendix 11.16.0. | Not set |
+| `Kafka.Sasl.Mechanism` | The [SASL authentication mechanism](https://kafka.apache.org/44/configuration/producer-configs/#producerconfigs_sasl.mechanism) enabled on your broker listener. [Kafka's built-in mechanisms](https://kafka.apache.org/44/security/authentication-using-sasl/#sasl-mechanisms) are `GSSAPI` (Kerberos), `PLAIN`, `SCRAM-SHA-256`, `SCRAM-SHA-512`, and `OAUTHBEARER`. Requires `Kafka.Security.Protocol`. Introduced in Mendix 11.16.0. | Not set |
+| `Kafka.Sasl.Jaas.Config` | The [Kafka JAAS configuration](https://kafka.apache.org/44/configuration/producer-configs/#producerconfigs_sasl.jaas.config). It contains the client login module and options for your SASL mechanism. Requires `Kafka.Security.Protocol`. Introduced in Mendix 11.16.0. | Not set |
 | `EventBroker.Space` | The Event Broker space in which the app is placed. This defines which other applications can exchange events with this app. | `local` |
 
 In Mendix Cloud environments with Mendix Event Broker enabled, the platform manages broker connection credentials. For Bring Your Own Kafka (BYOK) deployments, configure the settings above through [custom runtime settings](/refguide/custom-settings/) in your environment.
@@ -99,7 +99,7 @@ For example, for a broker configured for SASL/PLAIN over TLS, use the following 
 
 JAAS configuration can contain credentials. Do not share real credentials in screenshots or commit them to version control.
 
-For more examples by SASL mechanism, see [JAAS configuration for Kafka clients](https://kafka.apache.org/43/security/authentication-using-sasl/#jaas-configuration-for-kafka-clients).
+For more examples by SASL mechanism, see [JAAS configuration for Kafka clients](https://kafka.apache.org/44/security/authentication-using-sasl/#jaas-configuration-for-kafka-clients).
 
 For an unauthenticated plaintext connection, leave the credentials empty and remove any custom authentication settings for that connection.
 

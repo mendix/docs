@@ -729,7 +729,7 @@ On AWS and with HashiCorp Vault the same rule applies. A plan still provisions t
 To enable the secret store for `mxplatform`, install the CSI driver and provider as in [Example - Install CSI Driver](#example), create the resources in [Using a Secret Store for the Platform App](#disable-provisioners), and use values like the following.
 
 {{% alert color="warning" %}}
-+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
 {{% /alert %}}
 
 ```text

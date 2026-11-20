@@ -213,7 +213,7 @@ You must create the following before you install the app:
 * When the platform stores MDA files in Azure Blob Storage, the MDA container, **Storage Blob Data Contributor** on that container, and **Storage Blob Delegator** on the storage account. Set **Mda Location** as described in [Configuring MDA Storage Setting](/private-mendix-platform/configure-k8s/#mda-storage).
 * The secrets listed in [Configuring the AWS Secret Manager](#aws-secret-manager) or [Configuring Azure Key Vault](#azure-key-vault).
 
-+In the installer, leave **StoragePlanwithIRSA** disabled. Enabling it turns **Use Secret Provider** off, because the operator would create the ServiceAccount from the storage plan.
+In the installer, leave **StoragePlanwithIRSA** disabled. Enabling it turns **Use Secret Provider** off, because the operator would create the ServiceAccount from the storage plan.
 
 For a passwordless database, do not create `database-password`. Key Vault rejects an empty value, and any value you store is used as the password instead of a token. Starting from Private Mendix Platform 2.8.2, the Helmfile value `secretProviderclass.database.passwordless` keeps that key out of the SecretProviderClass. The charts shipped with Private Mendix Platform 2.8.0 and 2.8.1, and the interactive installer, always request the key. On those versions, remove the `database-password` object from the SecretProviderClass after install and after every upgrade that puts it back. See [Enabling the Secret Store](/private-mendix-platform/helmfile-installation/#enable-secret-store).
 

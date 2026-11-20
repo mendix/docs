@@ -776,7 +776,7 @@ The `secretProviderclass.database.passwordless` property is available starting f
 
 The `mxplatform` charts shipped with Private Mendix Platform 2.8.0 and 2.8.1 do not include this value. Those charts always request `database-password`. Helm ignores `passwordless` on those versions, so the key stays in the object. Remove that object from the SecretProviderClass after installation and after every upgrade that rewrites the object, and do not create the secret.
 
-`SecretProviderclass.create` is available in the same 2.8.2 release. See [Overriding App Constants](#override-constants).
+The `secretProviderclass.create` option is available in the same 2.8.2 release. See [Overriding App Constants](#override-constants).
 {{% /alert %}}
 
 For AWS, set `awsIRSA.enable` and `awsIRSA.roleArn`, set `secretProviderclass.provider` to `aws`, and set `awsparameters.secretName`. For HashiCorp Vault, set `secretProviderclass.provider` to `vault` and fill in `vaultparameters`.

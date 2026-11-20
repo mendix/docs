@@ -4,6 +4,8 @@ linktitle: "Administrator Guide"
 url: /private-mendix-platform/reference-guide/admin/
 description: "Provides details on the features and functionality of the Private Mendix Platform that are available to administrators."
 weight: 10
+no_list: false 
+description_list: true
 aliases:
     - /private-mendix-platform-administration/
     - /private-mendix-platform/administration/
@@ -28,3 +30,5 @@ Private Mendix Platform distinguishes between the following types of administrat
 * Systems admin - This role primarily manages key settings which must be configured during the initial implementation, and which are rarely modified during normal operation. Settings relevant for systems admins are available in the [Settings](/private-mendix-platform/reference-guide/admin/system/#settings) section of the admin navigation menu.
 
 {{< figure src="/attachments/private-platform/pmp-admin4.png" class="no-border" >}}
+
+## Read More

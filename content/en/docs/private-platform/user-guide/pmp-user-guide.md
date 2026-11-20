@@ -65,7 +65,7 @@ To delete a PAT, click **Actions > Delete**. This will prevent anyone who has ob
 
 On the **Service Credentials** page, you can view and manage the credentials for various external systems that Private Mendix Platform can connect with. These services include GitHub, GitLab, Bitbucket, and AzureDevOps, used for managing your app projects. Depending on settings configured by the admin, they can automatically provisioned through the integrations or manually configured for the user account.
 
-To create or work on app projects in Private Mendix Platform, you must create an access token in GitHub, GitLab, AzureDevOps, or Bitbucket, and then add it on the **Register Credentials** screen. The token must have read and write access to a repository where the app project is stored.
+To create or work on app projects in Private Mendix Platform, you must create an access token in GitHub, GitLab, AzureDevOps, or Bitbucket, and then add it on the **Register Credentials** screen. The token must have read and write access to a repository where the app project is stored. For Azure DevOps Server, the token is a Personal Access Token of your own account with the scopes Code (Read and Write) and Project and Team (Read). The **Get My Azure PAT** button is available for Azure DevOps Services only.
 
 ## Notifications {#notifications}
 

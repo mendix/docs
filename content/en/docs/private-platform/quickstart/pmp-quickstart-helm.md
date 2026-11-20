@@ -720,7 +720,7 @@ Leave `pclm.username`, `pclm.password`, and `spec.runtime.mxAdminPassword` out o
 
 Keep `useStoragePlanwithIRSA` set to `false`. With `true`, the operator creates the ServiceAccount from the storage plan, and the chart cannot attach the secret store to it.
 
-+The same identity can still open the database and the blob container without a stored password. That is workload identity on the ServiceAccount the chart creates. It is separate from the operator provisioner. See [Enabling the Secret Store](#enable-secret-store).
+The same identity can still open the database and the blob container without a stored password. That is workload identity on the ServiceAccount the chart creates. It is separate from the operator provisioner. See [Enabling the Secret Store](#enable-secret-store).
 
 On AWS and with HashiCorp Vault the same rule applies. A plan still provisions that resource. When the plan is unset, you create the database, the file storage, and the identity, and the operator does not. The key names for S3 are listed in [SecretProviderClass Keys](/developerportal/deploy/secret-store-credentials/#keys).
 

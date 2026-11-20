@@ -99,8 +99,6 @@ An uploaded archive can contain a database file, file documents, or both. The fo
 
 For example, you can upload an archive with a 100 GB database file and 150 GB of file documents, or an archive with no database file and 250 GB of file documents. In both cases, the archive can contain no more than 800,000 files.
 
-Uploading a large archive takes a long time, and the duration depends on the speed of your internet connection. If you need to upload an archive that exceeds these limits, contact [Mendix Support](https://support.mendix.com/).
-
 ### Download Backup {#download-backup}
 
 To download a backup, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download** on the backup you want to download.

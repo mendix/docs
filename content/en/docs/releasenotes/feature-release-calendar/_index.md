@@ -53,7 +53,8 @@ General Availability means that a feature is available for all users. This type 
 | Maia for Pipeline Logs | General Availability: Mx 11.9 |
 | Maia Learn | General Availability: Mx 11.12 |
 | Maia Make (see separate table for capabilities) | General Availability: Mx 11.8 |
-| BYO Agent (use your own coding agent in the Studio Pro terminal) | Private Beta: Mx 11.16<br/>General Availability: Mx 11.18 |
+| Maia Operate <ul><li>Status summary</li><li>Root cause analysis</li><li>Fix recommendations</li></ul> | Public Beta: Mx 11.17 <br/>General Availability: Mx 11.21 |
+| BYO Agent (use your own coding agent in the Studio Pro terminal) | Private Beta: Mx 11.16 <br/>General Availability: Mx 11.18 |
 
 ### Maia Make
 

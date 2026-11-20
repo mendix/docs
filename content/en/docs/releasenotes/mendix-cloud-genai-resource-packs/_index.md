@@ -12,6 +12,12 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 ## 2026
 
+### November 19, 2026
+
+#### Improvements
+
+* We improved file uploads for knowledge bases. You can now upload files up to 20 MB, which makes it easier to add larger documents and more content.
+
 ### November 5, 2026
 
 #### New Features

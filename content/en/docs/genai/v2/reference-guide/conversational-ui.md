@@ -229,7 +229,7 @@ The following limitations apply to streaming because microflows run in isolated 
 * Tool microflows can only read objects from the database. Changes to objects are stored only within the microflow if not committed. Additionally, user interaction is limited—for example, opening a page or showing a message to the user.
 * The same limitations apply to action microflows.
 
-A workaround is to make changes to persistent objects—for example, `ChatContext`, which is available in both the action microflow and on the page.
+A workaround is to make changes to persistable objects—for example, `ChatContext`, which is available in both the action microflow and on the page.
 
 ### Human in the Loop {#human-in-the-loop}
 

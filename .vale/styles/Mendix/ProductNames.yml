@@ -1,7 +1,7 @@
-# Mendix custom rule: Deprecated product names
+# Mendix custom rule: Deprecated and incorrect product names
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide.md
 extends: substitution
-message: "Use '%s' instead of '%s', which is a deprecated product name."
+message: "Use '%s' instead of '%s', which is a deprecated or incorrect product name."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide/
 level: error
 ignorecase: false
@@ -31,3 +31,7 @@ swap:
   'Native Oven': 'Native Builder'
   'MxAssist': 'Maia'
   'Mendix Assist': 'Maia'
+
+  # Incorrect names of third-party products
+  'Open AI': 'OpenAI'
+  'Open Telemetry': 'OpenTelemetry'

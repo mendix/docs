@@ -17,19 +17,13 @@ action:
 swap:
   agents kit: Agents Kit
   boolean: Boolean
-  '(^|[^.])git': '$1Git'  # Skips .git folder
   idp: IdP
-  '(^|[^/])ios': '$1iOS'  # Skips ios in paths
-  '(^|[^./-])java(?!\.\w)': '$1Java'  # Skips .java files, java-in-names, java in paths, and java.lang-style names
-  macos: macOS
   maia: Maia
   'maia make': 'Maia Make'
   markdown: Markdown
   marketplace: Marketplace
   '(^|[^./>@-])mendix(?!/)': '$1Mendix'  # Skips com.mendix names, domains, link text after >, @mendix emails, hyphenated repo names, and paths or repos like mendix/docs
   'n/a': 'N/A'
-  postgres: Postgres
-  postgresql: PostgreSQL
   scrum: Scrum
   '(^|[^@])siemens': '$1Siemens'  # Skips siemens in email addresses
   sql: SQL
@@ -45,3 +39,17 @@ swap:
   'team server': 'Team Server'
   'technical contact': 'Technical Contact'
   'workflow engine': 'Workflow Engine'
+
+  # Third-party names
+  '(^|[^.])git': '$1Git'  # Skips .git folder
+  hashicorp: HashiCorp
+  '(^|[^/])ios': '$1iOS'  # Skips ios in paths
+  '(^|[^./-])java(?!\.\w|script)': '$1Java'  # Skips .java files, java-in-names, java in paths, java.lang-style names, and javascript
+  '(^|[^./@#-])javascript(?![/.\w-])': '$1JavaScript'  # Skips paths, file names, and hyphenated names
+  macos: macOS
+  oauth: OAuth
+  '(^|[^./@#*-])openshift(?![/.\w*-])': '$1OpenShift'  # Skips paths, anchors, hyphenated names, and italic values
+  postgres: Postgres
+  postgresql: PostgreSQL
+  '(^|[^./@#-])powershell(?![/.\w-])': '$1PowerShell'  # Skips paths, anchors, and file names
+  typescript: TypeScript

@@ -18,8 +18,8 @@ swap:
   agents kit: Agents Kit
   boolean: Boolean
   idp: IdP
-  maia: Maia
   'maia make': 'Maia Make'
+  '(^|[^.])maia(?!-| make)': '$1Maia'  # Skips .maia files, hyphenated names like maia-appgen, and maia make (handled above)
   markdown: Markdown
   marketplace: Marketplace
   '(^|[^./>@-])mendix(?!/)': '$1Mendix'  # Skips com.mendix names, domains, link text after >, @mendix emails, hyphenated repo names, and paths or repos like mendix/docs

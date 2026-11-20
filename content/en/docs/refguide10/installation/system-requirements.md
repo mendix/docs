@@ -49,6 +49,7 @@ The following frameworks are required. They will be installed automatically by t
 * A Java Developer Kit (JDK) - if not yet installed on your machine, Mendix will install Eclipse Temurin (x64 or ARM64) - see [Java](#java) for the exact version required.
 * Gradle version 8.5 or above - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
 * Git for Windows (x64) version 2.56 or above (for more information, see the [Prerequisites](/refguide10/install/#prerequisites) section in *Installing Mendix Studio Pro*)
+    * For Studio Pro 10.24.29 and below, Git version 2.41.0 is required
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 

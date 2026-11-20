@@ -86,9 +86,9 @@ Your Mendix app will be deployed with and run by the Private Mendix Platform Ope
 
 | Tool | Version |
 | --- | --- |
-| Grafana | 12.2.1 |
-| Prometheus | 3.7.3 |
-| Loki | 2.6.1 |
+| Grafana | 12.4 |
+| Prometheus | 3.13 |
+| Loki | 3.7 |
 
 #### Supported Cluster Types{#supported-clusters}
 

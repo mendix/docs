@@ -88,9 +88,29 @@ If any of the three election settings is missing, the Mendix Runtime logs a warn
 
 CDC events follow the [Debezium](https://debezium.io/) envelope format. Each event includes the following fields:
 
-* An `op` field indicating the operation type (`c` for create, `u` for update, `d` for delete, `r` for read/snapshot)
-* A `before` and `after` payload with the entity attribute values
-* A `source` block with metadata such as the timestamp and Mendix version
+| Field | Description |
+|---|---|
+| `op` | The operation type: `c` for create, `u` for update, `d` for delete, and `r` for read/snapshot. |
+| `before` | The entity's attribute values before the change. This field is `null` for create operations. |
+| `after` | The entity's attribute values after the change. This field is `null` for delete operations. |
+| `ts_ms`, `ts_us`, `ts_ns` | The time the event was produced, in milliseconds, microseconds, and nanoseconds since the Unix epoch. |
+| `source` | A block containing metadata about the origin of the change, such as the timestamp and Mendix version. See the `source` table below for more information. |
+
+The `source` block contains the following fields:
+ 
+| Field | Description |
+|---|---|
+| `version` | The Mendix version that produced the event. |
+| `connector` | The connector that produced the event. |
+| `name` | The name of the source app. |
+| `ts_ms`, `ts_us`, `ts_ns` | The time the change occurred, in milliseconds, microseconds, and nanoseconds since the Unix epoch. |
+| `snapshot` | Indicates whether the event originates from a snapshot (`true`) or a live change (`false`). |
+| `sequence` | The sequence number of the change, which can be used to order events. |
+| `txId` | *(Optional)* The ID of the transaction that made the change. |
+| `execution_id` | *(Optional)* The ID of the execution that made the change. |
+| `app_url` | The URL of the app that produced the event. |
+| `userName` | *(Optional)* The user who made the change. This feature was introduced in Studio Pro 11.17.0. |
+| `userRoles` | *(Optional)* The roles of the user who made the change. This feature was introduced in Studio Pro 11.17.0. |
 
 Because the format is Debezium-compatible, BYOK consumers that already support Debezium (such as Kafka Connect sink connectors for databases or data warehouses) can consume CDC events without any message transformation.
 

@@ -13,8 +13,8 @@
   }
 
 .badge-beta {
-    color: $gray-900;
-    background-color: $gray-500;
+    color: $color-text-primary;
+    background-color: $color-surface-subtle;
 }
 
 .badge-lts {
@@ -26,9 +26,9 @@
 }
 
 .badge-deprecated {
-    background-color: $gray-100;
-    border: solid 1px $gray-500;
-    color: $gray-900;
+    background-color: $color-surface-subtle;
+    border: solid 1px $color-border-subtle;
+    color: $color-text-primary;
 }
 
 .badge-recommended {
@@ -38,7 +38,7 @@
 
 .badge-react {
     background-color: $info-1;
-    color: $info-7;
+    color: $color-link;
 }
 
 .badge-company-approved {

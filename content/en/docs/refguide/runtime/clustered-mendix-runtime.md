@@ -46,6 +46,16 @@ Besides the startup activities described above, Mendix Runtime nodes also perfor
 * **Cleanup of unreferenced files** – each node removes its own file documents that were deleted, replaced, or never committed; cleaning up files left behind by a crashed node is handled by an arbitrary cluster node
 * **Executing Scheduled Events** – scheduled events are executed by an arbitrary cluster node; for details, see [Task Queue](/refguide/task-queue/)
 
+### Node Heartbeat {#node-heartbeat}
+
+Every node writes a heartbeat to its row in the `System.XASInstance` table once per [ClusterManagerActionInterval](/refguide/custom-settings/#ClusterManagerActionInterval) (5 minutes by default). Other nodes treat a node as expired when its last heartbeat is older than twice this interval, and remove it from the cluster.
+
+A node shuts itself down if it cannot write its heartbeat within one and a half times the interval, or if its `System.XASInstance` row has been removed by another node. This prevents a node from continuing to run while the rest of the cluster treats it as stopped. The Runtime then exits with exit code 7, so that a service manager (for example, Windows service recovery) can treat the shutdown as a failure and restart the node. Exit code 7 was introduced in Mendix 11.16.0, 11.12.7, and 11.6.13; earlier versions exit with code 0.
+
+{{% alert color="warning" %}}
+Heartbeats are stored using the system clock of the node that writes them, and checked using the system clock of the other nodes. Keep the system clocks of all cluster nodes synchronized, for example using NTP. If the clocks differ by more than the `ClusterManagerActionInterval`, nodes can remove each other from the cluster, causing those nodes to shut down.
+{{% /alert %}}
+
 ## Cluster Startup {#cluster-startup}
 
 Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app the whole cluster should be restarted, and the database may need to be synchronized with the updated Domain Model, as described in [Cluster Leader and Cluster Followers](#cluster-leader-follower), above.

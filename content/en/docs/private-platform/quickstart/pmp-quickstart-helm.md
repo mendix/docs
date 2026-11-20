@@ -844,9 +844,9 @@ The code samples are intended to show the range of available options. No rights 
 {{% /alert %}}
 
 ```text
-+apiVersion: secrets-store.csi.x-k8s.io/v1
-+kind: SecretProviderClass
-+metadata:
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
   name: mxplatform
   namespace: <namespace>
   annotations:

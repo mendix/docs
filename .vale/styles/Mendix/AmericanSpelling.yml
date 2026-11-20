@@ -43,4 +43,5 @@ swap:
   '\bbackwards\b': 'backward'
   '\bupwards\b': 'upward'
   '\bdownwards\b': 'downward'
+  '\bonwards\b': 'onward'
   '\bprogramme([ds])?\b': 'program$1'

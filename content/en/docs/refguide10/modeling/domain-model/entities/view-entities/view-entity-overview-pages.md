@@ -128,7 +128,7 @@ You can calculate the total value of an order by joining the `OrderLine` and `Or
 4. Add the new overview page to the navigation.
 5. Run your app locally, then click **View App**. This results in a view entity that shows the total value of every order.
 
-## Update Underlying Persistent Entities
+## Update Underlying Persistable Entities {#update-pe}
 
 On the Product overview page above, there is no button to add or modify a product. This functionality can be added to a view entity to update its corresponding persistable entity object.
 

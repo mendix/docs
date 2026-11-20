@@ -772,7 +772,7 @@ To enable the secret store for `mxplatform`, install the CSI driver and provider
 * `useStoragePlanwithIRSA: false` makes the chart create the ServiceAccount and annotate it with `privatecloud.mendix.com/environment-account: "true"`. With `azureWorkloadIdentity.enable` set to `true`, it also annotates the client id and tenant id. The operator requires that ServiceAccount when a SecretProviderClass is used.
 
 {{% alert color="info" %}}
-`SecretProviderclass.database.passwordless` is available starting from Private Mendix Platform 2.8.2. With `passwordless` set to `true`, that chart leaves `database-password` out of the SecretProviderClass.
+The `secretProviderclass.database.passwordless` property is available starting from Private Mendix Platform 2.8.2. With `passwordless` set to `true`, that chart leaves `database-password` out of the SecretProviderClass.
 
 The `mxplatform` charts shipped with Private Mendix Platform 2.8.0 and 2.8.1 do not include this value. Those charts always request `database-password`. Helm ignores `passwordless` on those versions, so the key stays in the object. Remove that object from the SecretProviderClass after installation and after every upgrade that rewrites the object, and do not create the secret.
 

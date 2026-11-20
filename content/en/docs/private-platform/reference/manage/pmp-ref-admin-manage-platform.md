@@ -105,6 +105,8 @@ You can use the **Search** field to search for a specific action by name.
 
 Private Mendix Platform administrators can generate time-bounded audit reports in multiple formats for review, submission to auditors, or integration with external SIEM systems.
 
+{{< figure src="/attachments/private-platform/pmp-manage-recent-logs.png" >}}
+
 To generate the report, perform the following steps:
 
 1. Click **Create Custom Report**.

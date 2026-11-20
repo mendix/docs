@@ -36,7 +36,7 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
     * For version 2.8.1 and newer, go to **Artifacts Management**, select the version from the **Private Mendix Platform Version** dropdown, and select **Chart** as the **Artifact Type**. Select the charts and click **Export Selection**.
     * For version 2.8.0 and older, go to **Releases**, click the three-dot menu (**•••**) for the desired release, and then click **View addons**. Find the *Addons/pmp-charts-x.x.x.zip* file, where `x.x.x` is the version number, and click **Download**.
 
-3. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
+3. Unzip the release binary to a local folder on your server. The release binary contains the following files:
 
     * In the *Tools* folder:
 
@@ -49,7 +49,8 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
         * **mxpc-cli** - Installation tools which can be used to manage or configure the Mendix Operator
         * **charts** - Charts, including Private Mendix Platform charts and Svix charts
 
-4. If your clusters can connect to a public registry with a passable network, skip to step 4 below, otherwise initialize the installation by performing the following steps:
+4. On a Mac with Apple Silicon, make sure that Rosetta is installed before you run the installer binary. For more information, see [Quick Start Guide: Prerequisites](/private-mendix-platform/quickstart/).
+5. If your clusters can connect to a public registry with a passable network, skip to step 6 below, otherwise initialize the installation by performing the following steps:
 
     1. Upload the images to your private repository in an air-gapped environment:
 
@@ -88,21 +89,21 @@ For images downloaded from the Private Mendix Platform Download Portal or with t
         privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
         ```
 
-5. Migrate the files required to install the Private Cloud components by performing the following steps:
+6. Migrate the files required to install the Private Cloud components by performing the following steps:
 
     1. Download the *mx-private-cloud.zip* file from your Private Mendix Platform download portal.
     2. Unzip the *mx-private-cloud.zip* file.
     3. Copy the *images* from the *mx-private-cloud* directory to the *images* sub-directory of the installer by running the following command: `cp -r mx-private-cloud/images/* <your installer>/pmp-binary-linux/images`
     4. Upload the directory to your private registry by using the `installer init migrate` command. All the images must be in the same registry.
     
-6. Migrate the files required to enable Maia for Private Mendix Platform by performing the following steps:
+7. Migrate the files required to enable Maia for Private Mendix Platform by performing the following steps:
 
     1. Download the *maia-appgen-pmp.zip* file from your Private Mendix Platform download portal.
     2. Unzip the *maia-appgen-pmp.zip* file.
     3. Copy the *maia-appgen-pmp* directory to the *images* sub-directory of the installer by running the following command: `cp -r maia-appgen-pmp/images/* <your installer>/pmp-binary-linux/images`
     4. Upload the Maia directory to your private registry by using the `installer init migrate` command.
 
-7. After the migration is completed, [install Private Mendix Platform in interactive GUI mode](/private-mendix-platform/interactive-installation/).
+8. After the migration is completed, [install Private Mendix Platform in interactive GUI mode](/private-mendix-platform/interactive-installation/).
 
 ### Images from the Public Mendix Registry
 

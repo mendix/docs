@@ -17,8 +17,7 @@ In interactive mode, you manually install Private Mendix Platform components. Fo
 Before you start the installation, download the required files by performing the following steps:
 
 1. Download the release binary from your [Private Mendix Platform download portal](https://privateplatform.mendix.com/). If you do not have access to the download portal, contact your Mendix partner for information.
-
-2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
+2. Unzip the release binary to a local folder on your server. The release binary contains the following files:
 
     * **Tools** – *mx-pclm-cli*, which can be used to manage PCLM
     * **helm**, and **helmfile** tools, which are used to deploy and manage Private Mendix Platform charts and Svix charts
@@ -28,6 +27,8 @@ Before you start the installation, download the required files by performing the
     * **charts**  – charts, including Private Mendix Platform charts and Svix charts
     
     {{< figure src="/attachments/private-platform/pmp-binary.png" class="no-border" >}}
+
+3. On a Mac with Apple Silicon, make sure that Rosetta is installed before you run the installer binary. For more information, see [Quick Start Guide: Prerequisites](/private-mendix-platform/quickstart/).
 
 ## Optional: Initializing the Installation for Air-Gapped Environments
 

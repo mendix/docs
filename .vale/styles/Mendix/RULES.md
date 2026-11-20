@@ -21,6 +21,7 @@ This directory contains custom Vale rules specific to Mendix documentation.
 * **LinkText.yml**: Prohibits generic link text like "click here"
 * **ListIntroductions.yml**: Enforces en dashes (–) in list item introductions (≤40 chars) by replacing em dashes and spaced hyphens
 * **ProductNames.yml**: Enforces correct Mendix product names
+* **Spelling.yml**: Flags unknown words, using the Mendix vocabulary (`config/vocabularies/Mendix/accept.txt`)
 * **Terminology.yml**: Enforces preferred terms from the terminology guide
 * **Uppercase.yml**: Flags all-caps emphasis words (NEVER, NOT, ALWAYS, etc.); replaces Microsoft.Uppercase
 * **Wordiness.yml**: Suggests simpler, more concise alternatives for wordy phrases

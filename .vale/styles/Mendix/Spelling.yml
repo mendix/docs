@@ -1,0 +1,7 @@
+# Mendix custom rule: Spelling
+# Replaces Vale.Spelling so that plural acronyms (for example, APIs, JDKs) aren't flagged
+extends: spelling
+message: "Did you really mean '%s'?"
+level: warning
+filters:
+  - '[A-Z]{2,}s\b'

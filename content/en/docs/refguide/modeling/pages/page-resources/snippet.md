@@ -46,7 +46,7 @@ The values for the platform property are:
 
 #### Parameters {#parameters}
 
-**Snippet parameters** allow snippets to be re-used with different data. They work the same way as [Page Parameters](/refguide/page-properties/#parameters), with the exception that snippet parameters cannot be made optional.
+**Snippet parameters** allow snippets to be reused with different data. They work the same way as [Page Parameters](/refguide/page-properties/#parameters), with the exception that snippet parameters cannot be made optional.
 
 The data type of a snippet parameter defines the type of the value that it expects. Possible data types are **Objects**, and **Primitives** such as `Boolean`, `Date and time`, `Decimal`, `Enumeration`, `Integer/Long`, and `String`. For more information, see [Page Parameters](/refguide/page-parameter/#data-type).
 
@@ -120,7 +120,7 @@ This can be fixed after the extraction by manually wrapping the widget in a Data
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Variables used by the extracted widgets are turned into primitive snippet parameters.
+Variables used by the extracted widgets are turned into primitive snippet parameters. Snippets cannot modify the value of their parameters, so widgets that edit such a variable, such as an input widget, become read-only in the new snippet.
 {{% /alert %}}
 
 ## Read More

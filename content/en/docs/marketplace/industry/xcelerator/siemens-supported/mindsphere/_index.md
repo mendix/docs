@@ -9,11 +9,11 @@ aliases:
 
 ## Introduction
 
-Mendix offers powerful integration options to incorporate IIoT data provided by Siemens Insights Hub into your Mendix Applications. There are two ways to leverage these integrations.
+Mendix offers powerful integration options to incorporate IIoT data provided by Siemens Insights Hub into your Mendix apps. There are two ways to leverage these integrations:
 
-1. If you would like to have a standalone Mendix application and just want to incorporate IIoT Data coming from Insights Hub into your business logic, please see [Siemens Insights Hub – API calls only](/appstore/industry/mindsphere/mindsphere-api-only/).
+* If you want a standalone Mendix app and just want to incorporate IIoT Data coming from Insights Hub into your business logic, refer to [Siemens Insights Hub – API calls only](/appstore/industry/mindsphere/mindsphere-api-only/).
 
-1. If you would like to have full integration within Insights Hub displaying your application on the Insights Hub Launchpad, manage the user access via the Insights Hub Settings app, achieve OEM based use cases via [subtenancy](https://developer.mindsphere.io/howto/howto-subtenant-management.html), or offer your Mendix application within the Insights Hub eco system to other Insights Hub customers (multitenancy), then see the documentation described below.
+* If you want to fully integrate within Insights Hub and to display your app on the Insights Hub Launchpad, to manage user access via the Insights Hub Settings app, to achieve OEM based use cases via [subtenancy](https://developer.mindsphere.io/howto/howto-subtenant-management.html), or to offer your Mendix app within the Insights Hub ecosystem to other Insights Hub customers (multitenancy), then refer to the current documentation.
 
 Within the Mendix Academy two learning paths are provided to show how to develop a full integrated Insights Hub application:
 
@@ -23,8 +23,7 @@ Within the Mendix Academy two learning paths are provided to show how to develop
 Once your app is registered in Insights Hub, there are a number of things you need to consider as you develop your Mendix app. These are covered in the following two documents:
 
 * [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/) – covers things which you should address when developing for Insights Hub, including the following:
-
-    * [Cloud Foundry environment variables](/appstore/industry/mindsphere/mindsphere-development-considerations/#cfenvvars)
+    
     * [Local testing](/appstore/industry/mindsphere/mindsphere-development-considerations/#localtesting)
     * [Multi-tenancy](/appstore/industry/mindsphere/mindsphere-development-considerations/#multitenancy)
     * [Validation<br style="margin-bottom: 10px;">](/appstore/industry/mindsphere/mindsphere-development-considerations/#validation)

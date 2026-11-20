@@ -78,7 +78,7 @@ The following actions are logged:
     * Marketplace content deletion – Existing Marketplace items removed
     * Marketplace version creation – New versions of Marketplace content published
     * Marketplace content updates – Changes to content details, owner, group, or sharing settings
-    * Content state changes – Approval, decline, publishing, retiring, or unretiring of marketplace content
+    * Content state changes – Approval, decline, publishing, retiring, or unretiring of Marketplace content
 
 * Cluster management – Activities related to Kubernetes clusters and their configurations:
 

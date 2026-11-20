@@ -79,6 +79,9 @@ Before starting the installation process, make sure that you have all the necess
     * A command line terminal that supports the console API and mouse interactions. In Windows, this can be PowerShell or the Windows Command Prompt.
     * For OpenShift clusters, OpenShift CLI. For more information, see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html).
     * Kubectl installed if you are deploying to another Kubernetes platform. For more information, see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/).
+    * On a Mac with Apple silicon, Rosetta must be installed before you run the Mac installer binary. The Mac installer is built for Intel processors. Rosetta may already be installed. If it is missing, open Terminal and run `softwareupdate --install-rosetta --agree-to-license`. If Rosetta is already installed, the command reports that. 
+    
+        In case of an upgrade, macOS 27.0 and 27.1 do not restore an existing Rosetta installation. From macOS 27.2, the upgrade no longer removes Rosetta, but it does not put Rosetta back if an earlier upgrade already removed it. This applies only to the Mac installer binary, not to a Helmfile-only installation.
 
 * Optionally, if you plan to install the Svix component:
 

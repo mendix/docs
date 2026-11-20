@@ -136,7 +136,7 @@ To create a new app manually in the Insights Hub launchpad, follow these steps:
 7. Fill in a **Version** for your app.
 8. Fill in a **Description** of your app, if required.
 9. Click **Edit icon** to upload an **App Icon** for your app.
-10. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
+10. Fill in the **Component > Name**.
 11. Click the **+** next to the component to add **Endpoints**.
 12. Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
 13. Fill in the **URL**. If you have deployed your app to the Mendix free offering, just press the **View App** button to open the app in a browser. Take the URL from here.

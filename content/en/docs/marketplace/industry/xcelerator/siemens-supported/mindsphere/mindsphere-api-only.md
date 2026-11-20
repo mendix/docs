@@ -101,7 +101,7 @@ For Mendix Cloud, you can set the values of the constants on the [Model Options]
 
 ## Insights Hub Widgets
 
-If you want to use the [Siemens Insights Hub Widgets](https://marketplace.mendix.com/link/component/110119) in your app, the widgets must use the *Insights Hub API Reverse Proxy*.
+If you want to use the [Siemens Insights Hub Widgets](https://marketplace.mendix.com/link/component/110119) in your app, enable the *Insights Hub API Reverse Proxy* from the [Siemens Insights Hub API Authenticator](https://marketplace.mendix.com/link/component/226260).
 
 To enable the reverse proxy, follow these steps:
 

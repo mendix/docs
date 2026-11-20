@@ -28,7 +28,15 @@ The Mendix runtime uses the following request headers to determine the URL that 
 * `X-Forwarded-Prefix` – The subpath, if you host the app on a subpath
 * `Host` – The host of the request
 
-The reverse proxy can set these headers on the requests that it forwards to the Mendix runtime. The Mendix runtime uses the headers, for example, to generate URLs in OData contracts. The [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) runtime setting can take precedence over these headers. For more information, see the [Multiple External Domains](/refguide/custom-settings/#multiple-external-domains) section in *Runtime Customization*.
+The reverse proxy can set these headers on the requests that it forwards to the Mendix runtime.
+
+### Generating Public URLs {#public-urls}
+
+When a reverse proxy forwards requests to the Mendix runtime, the runtime only sees the internal address that the proxy forwards to. Most app content uses relative paths and works without knowing the public URL. However, some runtime features need to generate full public URLs for your app, for example in published OData services.
+
+To make sure the Mendix runtime generates the correct public URLs, configure your reverse proxy to set the headers that match your public URL on every forwarded request.
+
+The [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) runtime setting can take precedence over these headers. For more information, see the [Multiple External Domains](/refguide/custom-settings/#multiple-external-domains) section in *Runtime Customization*.
 
 ## Serving Your App over HTTPS {#https}
 

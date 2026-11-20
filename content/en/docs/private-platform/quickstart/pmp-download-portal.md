@@ -110,6 +110,8 @@ To download a release from the table, perform the following steps:
 3. Click **Download**.
 4. Select your platform (Mac, Windows, or Linux).
 
+    On a Mac with Apple Silicon, make sure that Rosetta is installed before you run the installer binary. For more information, see [Quick Start Guide: Prerequisites](/private-mendix-platform/quickstart/).
+
 The installer file downloads to your default download location.
 
 {{< figure src="/attachments/private-platform/pmp-downloadportal1.png" class="no-border" >}}

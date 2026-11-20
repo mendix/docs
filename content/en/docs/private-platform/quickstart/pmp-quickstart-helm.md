@@ -540,7 +540,7 @@ global:
 The SecretProviderClass allows you to store all sensitive credentials (passwords, connection strings, API keys) in a centralized vault (Azure Key Vault, AWS Secrets Manager, or HashiCorp Vault) instead of hardcoding them in configuration files.
 
 {{% alert color="warning" %}}
-Secret Management for mxplatform is not compatible with Azure Managed Identity-based Storage Plans.
+Do not set `secretProviderclass.enable` and `useStoragePlanwithIRSA` to `true` on `mxplatform` at the same time. A storage plan that uses workload identity and the secret store both need to own the app ServiceAccount. You can use a workload identity together with the secret store when `useStoragePlanwithIRSA` is `false`, so the chart creates the ServiceAccount. A database plan or a storage plan still provisions that resource. See [Using a Secret Store for the Platform App](#disable-provisioners).
 {{% /alert %}}
 
 ### Requirements
@@ -589,7 +589,7 @@ helm install vault-csi-provider hashicorp/vault-csi-provider --namespace kube-sy
 | `svix-server` | PostgreSQL and Redis connection strings |
 | `mxplatform` | PCLM credentials, admin passwords, database credentials, storage credentials |
 
-Secret Management for mxplatform is not compatible with Azure Managed Identity-based Storage Plans.
+On `mxplatform`, keep `useStoragePlanwithIRSA` set to `false` when the secret store is enabled. See [Using a Secret Store for the Platform App](#disable-provisioners).
 
 #### Configuration Pattern
 
@@ -690,6 +690,277 @@ mxplatform:
     # Authenticates with clientID: 33333333-3333-3333-3333-333333333333
 ```
 
+#### Using a Secret Store for the Platform App {#disable-provisioners}
+
+The secret store for the Private Mendix Platform app is the setup described in [Retrieve Environment-Sensitive Data from a Secret Store](/developerportal/deploy/secret-store-credentials/). You can use it together with a [database plan](/developerportal/deploy/private-cloud-storage-plans/#database) or a [storage plan](/developerportal/deploy/private-cloud-storage-plans/#blob-storage). The Mendix Operator still creates each resource that has a plan. The secret store supplies the settings that do not come from a plan, such as the MxAdmin password and the license-manager credentials.
+
+##### ServicePlan
+
+Leave `spec.database.servicePlan` or `spec.storage.servicePlan` unset when you want to create that resource yourself. With the secret store enabled, both stay unset unless you set them. The chart requires a plan only when the secret store is off. For each plan you leave unset, the operator does not create that resource and reads its settings from the secret store.
+
+With a database plan and a storage plan, and with the secret store left off, the operator creates the database, file container, and managed identity while the app is being deployed. A role that the identity needs beyond what the plan grants, such as **Storage Blob Delegator** for MDA downloads, can only be assigned after that deployment has started.
+
+##### SecretProviderClass
+
+Set `secretProviderclass.enable` to `true`. The chart sets `allowOverrideSecretsWithSecretStoreCSIDriver` to `true`. A plan you leave unset is left off the MendixApp. A plan you set is written onto the MendixApp, and the operator runs that provisioner. The chart then omits that resource's keys from the SecretProviderClass.
+
+When a plan is unset, you must create the following yourself, before you install the app:
+
+* The identity the pod will use (an Azure user-assigned managed identity, or an AWS IAM role), and the federated credential that ties it to the app ServiceAccount. The ServiceAccount name is the MendixApp name. The default is `mxplatform`. The chart creates that ServiceAccount when `useStoragePlanwithIRSA` is `false`. The account does not have to exist before you create the federated credential.
+* The database, and a database user that can use that database only.
+* The file container for the app's own files, and the permission that lets the identity use that container.
+* When the platform stores MDA files in Azure Blob Storage, the MDA container as well. Assign **Storage Blob Data Contributor** on that container and **Storage Blob Delegator** on the storage account. Delegator has no effect below the account, because a user-delegation key is an account operation. In Private Mendix Platform, set **Mda Location** to `https://<account>.blob.core.windows.net/<container>`. For the portal settings, see [Configuring MDA Storage Setting](/private-mendix-platform/configure-k8s/#mda-storage). The chart adds the pod label `azure.workload.identity/use: "true"` when `azureWorkloadIdentity.enable` is `true`, or when the secret store uses Azure and `useManagedIdentityForBlob` is `true`. You do not set that label on the operator.
+* The secrets in the vault, under the key names in [Installation Reference](/private-mendix-platform/installation-reference/#secret-provider-key).
+
+##### PCLM Username and Passwords
+
+Leave `pclm.username`, `pclm.password`, and `spec.runtime.mxAdminPassword` out of the values file. The chart reads `pclm-admin-username` and `pclm-admin-password` from the vault and mounts them as the constants `Common.PCLM_USERNAME` and `Common.PCLM_PASSWORD`. It reads `mx-admin-password` as the MxAdmin password.
+
+##### UseStoragePlanwithIRSA
+
+Keep `useStoragePlanwithIRSA` set to `false`. With `true`, the operator creates the ServiceAccount from the storage plan, and the chart cannot attach the secret store to it.
+
+The same identity can still open the database and the blob container without a stored password. That is workload identity on the ServiceAccount the chart creates. It is separate from the operator provisioner. See [Enabling the Secret Store](#enable-secret-store).
+
+On AWS and with HashiCorp Vault the same rule applies. A plan still provisions that resource. When the plan is unset, you create the database, the file storage, and the identity, and the operator does not. The key names for S3 are listed in [SecretProviderClass Keys](/developerportal/deploy/secret-store-credentials/#keys).
+
+#### Enabling the Secret Store {#enable-secret-store}
+
+To enable the secret store for `mxplatform`, install the CSI driver and provider as in [Example - Install CSI Driver](#example), create the resources in [Using a Secret Store for the Platform App](#disable-provisioners), and use values like the following.
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
+```text
+mxplatform:
+  enable: true
+  name: mxplatform
+  # The chart creates the ServiceAccount. The operator does not.
+  useStoragePlanwithIRSA: false
+  azureWorkloadIdentity:
+    enable: true
+    clientID: "<client-id>"
+    tenantID: "<tenant-id>"
+  secretProviderclass:
+    enable: true
+    provider: "azure"
+    # Omit database-password. The sidecar requests an Entra token instead.
+    database:
+      passwordless: true
+    azureparameters:
+      keyvaultName: "<key-vault-name>"
+      # Omit the storage account name and key. Blob access uses the workload identity.
+      useManagedIdentityForBlob: true
+  pclm:
+    serviceUrl: "http://mx-privatecloud-license-manager.<namespace>"
+  spec:
+    appURL: "mxplatform.example.com"
+    sourceURL: "oci-image://<registry>/mendix-private-platform:<tag>"
+    # Set this to the runtime version of the platform image.
+    mendixRuntimeVersion: "<runtime-version>"
+    runtime:
+      applicationRootUrl: "https://mxplatform.example.com"
+```
+
+##### Explanation of the Values
+
+* `secretProviderclass.enable` sets `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` and, when `secretProviderclass.create` is left at its default `true`, renders a SecretProviderClass with the same name as the app. The chart adds the annotation `privatecloud.mendix.com/environment-class: "true"`.
+* `spec.database.servicePlan` and `spec.storage.servicePlan` stay empty unless you set them. An empty plan means the operator takes that resource's settings from the vault. A plan name means the operator provisions that resource.
+* `secretProviderclass.database.passwordless` keeps `database-password` out of the SecretProviderClass. It requires `azureWorkloadIdentity.enable` or `awsIRSA.enable`, no database plan, and `secretProviderclass.create` left at `true`. For a SecretProviderClass you write yourself, leave `database-password` out of that object instead. The flag has no effect when `create` is `false`.
+* `useManagedIdentityForBlob` adds the pod label `azure.workload.identity/use: "true"` and leaves out `storage-azure-account-name` and `storage-azure-account-key`.
+* `useStoragePlanwithIRSA: false` makes the chart create the ServiceAccount and annotate it with `privatecloud.mendix.com/environment-account: "true"`. With `azureWorkloadIdentity.enable` set to `true`, it also annotates the client id and tenant id. The operator requires that ServiceAccount when a SecretProviderClass is used.
+
+{{% alert color="info" %}}
+The `secretProviderclass.database.passwordless` property is available starting from Private Mendix Platform 2.8.2. With `passwordless` set to `true`, that chart leaves `database-password` out of the SecretProviderClass.
+
+The `mxplatform` charts shipped with Private Mendix Platform 2.8.0 and 2.8.1 do not include this value. Those charts always request `database-password`. Helm ignores `passwordless` on those versions, so the key stays in the object. Remove that object from the SecretProviderClass after installation and after every upgrade that rewrites the object, and do not create the secret.
+
+The `secretProviderclass.create` option is available in the same 2.8.2 release. See [Overriding App Constants](#override-constants).
+{{% /alert %}}
+
+For AWS, set `awsIRSA.enable` and `awsIRSA.roleArn`, set `secretProviderclass.provider` to `aws`, and set `awsparameters.secretName`. For HashiCorp Vault, set `secretProviderclass.provider` to `vault` and fill in `vaultparameters`.
+
+##### Creating Azure Resources {#azure-resources}
+
+You must create the resources listed in [Using a Secret Store for the Platform App](#disable-provisioners) before you install the app. On Azure that is a Key Vault, one user-assigned managed identity, the platform database, and the file container.
+
+1. Provide an OIDC issuer and workload identity for the cluster. On AKS, the Key Vault CSI add-on does not enable them. 
+
+    1. Add a federated credential for the app identity with the subject `system:serviceaccount:<namespace>:<app name>`, and the audience `api://AzureADTokenExchange`. 
+    2. Put the client ID and tenant ID in `azureWorkloadIdentity`.
+
+2. Give the *Key Vault Secrets User* Vault role for the app identity, and the *Key Vault Secrets Officer* for the account which writes the secrets.
+
+    {{% alert color="warning" %}}
+    Do not register the app identity as a Microsoft Entra administrator of the PostgreSQL server. That role is an administrator of every database on the server. If the license manager uses the same server, the platform app can read and change its data. Create an ordinary role that can use only the platform database.
+    {{% /alert %}}
+
+3. Store the role name as `database-username`. 
+4. Assign the **Storage Blob Data Contributor** role on the file container. 
+5. If Private Mendix Platform must store MDA files in Azure Blob Storage, assign the **Storage Blob Data Contributor** role on the MDA container, and the **Storage Blob Delegator** role on the storage account.
+6. Set **Mda Location** as described in [Configuring MDA Storage Setting](/private-mendix-platform/configure-k8s/#mda-storage).
+7. Write the secrets listed in [Installation Reference](/private-mendix-platform/installation-reference/#secret-provider-key). 
+
+    Do not create `database-password` when `secretProviderclass.database.passwordless` is `true`. Key Vault rejects an empty value, and any value you store is used as the password instead of an Entra token.
+
+8. To store a database password instead of using an Entra token, leave `secretProviderclass.database.passwordless` at `false` and create `database-password`. 
+9. To use a storage account key instead of the workload identity, set `useManagedIdentityForBlob` to `false` and also create `storage-azure-account-name` and `storage-azure-account-key`.
+
+#### Overriding App Constants {#override-constants}
+
+A mounted object named `mx-const-<Module.Constant>` sets that constant. The secret store value overrides the same constant on the MendixApp. A mounted object named `mx-runtime-<setting>` overrides that [runtime custom setting](/refguide/custom-settings/).
+
+When the chart renders the SecretProviderClass, it maps the vault keys `pclm-admin-username` and `pclm-admin-password` to `mx-const-Common.PCLM_USERNAME` and `mx-const-Common.PCLM_PASSWORD`. You do not add those two constant names yourself. That class lists a fixed set of keys: the MxAdmin password, the two license-manager keys, and the database and storage keys the secret store supplies. It has no entry for any other constant, such as `Encryption.EncryptionKey`.
+
+Starting from Private Mendix Platform 2.8.2, set `secretProviderclass.create` to `false` and write the SecretProviderClass yourself. `secretProviderclass.enable` stays `true`, so the chart still sets `allowOverrideSecretsWithSecretStoreCSIDriver` to `true`. It does not render a SecretProviderClass, and it ignores the `secretProviderclass` provider parameters. On 2.8.0 and 2.8.1 this value does not exist. Helm ignores it, and the chart still renders its own SecretProviderClass.
+
+```text
+mxplatform:
+  secretProviderclass:
+    enable: true
+    # The chart still sets allowOverrideSecretsWithSecretStoreCSIDriver.
+    # It does not render a SecretProviderClass.
+    create: false
+```
+
+##### Requirements for SecretProviderClass
+
+Your SecretProviderClass must meet all of the following requirements:
+
+* Its name is the MendixApp name (`mxplatform` by default, or `<name>-test` when `testApp` is `true`). The name is the app name, not the name of a separate Helm release.
+* It is in the same namespace as the MendixApp.
+* It has the annotation `privatecloud.mendix.com/environment-class: "true"`.
+* It mounts the same object aliases the chart would have mounted (see the key table in [Installation Reference](/private-mendix-platform/installation-reference/#secret-provider-key)), plus the extra constants. When you write the class, include `mx-const-Common.PCLM_USERNAME` and `mx-const-Common.PCLM_PASSWORD` yourself.
+* For a passwordless database, leave `database-password` out of this list. `secretProviderclass.database.passwordless` has no effect when `create` is `false`, so the chart does not remove that key for you.
+* Keep `azureWorkloadIdentity.clientID` and `azureWorkloadIdentity.tenantID` in the values, so the chart can annotate the ServiceAccount. Repeat that client id and tenant id in the SecretProviderClass. The chart does not copy them when `create` is `false`.
+
+Azure Key Vault secret names cannot contain periods or underscores. Store the secret under a name that uses hyphens, and set `objectAlias` to the name the runtime reads. The alias keeps the periods and underscores. The chart does not rewrite those names.
+
+The following SecretProviderClass is a passwordless Azure setup. Blob access uses the workload identity, so the storage account name and key are absent. The license-manager keys are aliased to constants, and the remaining objects are further constants the chart cannot add. Keep the constants your app reads.
+
+{{% alert color="warning" %}}
+The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
+{{% /alert %}}
+
+```text
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
+  name: mxplatform
+  namespace: <namespace>
+  annotations:
+    privatecloud.mendix.com/environment-class: "true"
+spec:
+  provider: azure
+  parameters:
+    clientID: "<client-id>"
+    keyvaultName: "<key-vault-name>"
+    tenantID: "<tenant-id>"
+    objects: |
+      array:
+        - |
+          objectName: database-type
+          objectType: secret
+          objectAlias: database-type
+        - |
+          objectName: database-jdbc-url
+          objectType: secret
+          objectAlias: database-jdbc-url
+        - |
+          objectName: database-host
+          objectType: secret
+          objectAlias: database-host
+        - |
+          objectName: database-name
+          objectType: secret
+          objectAlias: database-name
+        - |
+          objectName: database-username
+          objectType: secret
+          objectAlias: database-username
+        - |
+          objectName: storage-service-name
+          objectType: secret
+          objectAlias: storage-service-name
+        - |
+          objectName: storage-azure-container
+          objectType: secret
+          objectAlias: storage-azure-container
+        - |
+          objectName: storage-azure-blob-endpoint
+          objectType: secret
+          objectAlias: storage-azure-blob-endpoint
+        - |
+          objectName: storage-azure-use-default-azure-credential
+          objectType: secret
+          objectAlias: storage-azure-use-default-azure-credential
+        - |
+          objectName: storage-perform-delete
+          objectType: secret
+          objectAlias: storage-perform-delete
+        - |
+          objectName: storage-use-ca-certificates
+          objectType: secret
+          objectAlias: storage-use-ca-certificates
+        - |
+          objectName: storage-azure-use-https
+          objectType: secret
+          objectAlias: storage-azure-use-https
+        - |
+          objectName: mx-admin-password
+          objectType: secret
+          objectAlias: mx-admin-password
+        - |
+          objectName: pclm-admin-username
+          objectType: secret
+          objectAlias: mx-const-Common.PCLM_USERNAME
+        - |
+          objectName: pclm-admin-password
+          objectType: secret
+          objectAlias: mx-const-Common.PCLM_PASSWORD
+        - |
+          objectName: encryption-key
+          objectType: secret
+          objectAlias: mx-const-Encryption.EncryptionKey
+        - |
+          objectName: portunus-authenticator-username
+          objectType: secret
+          objectAlias: mx-const-PortunusAdaptor.MXPC_AUTHENTICATOR_USERNAME
+        - |
+          objectName: portunus-authenticator-password
+          objectType: secret
+          objectAlias: mx-const-PortunusAdaptor.MXPC_AUTHENTICATOR_PASSWORD
+        - |
+          objectName: portunus-collector-username
+          objectType: secret
+          objectAlias: mx-const-PortunusAdaptor.MXPC_COLLECTOR_USERNAME
+        - |
+          objectName: portunus-collector-password
+          objectType: secret
+          objectAlias: mx-const-PortunusAdaptor.MXPC_COLLECTOR_PASSWORD
+        - |
+          objectName: portunus-interactor-username
+          objectType: secret
+          objectAlias: mx-const-PortunusAdaptor.MXPC_INTERACTOR_USERNAME
+        - |
+          objectName: portunus-interactor-password
+          objectType: secret
+          objectAlias: mx-const-PortunusAdaptor.MXPC_INTERACTOR_PASSWORD
+        - |
+          objectName: jenkins-build-agent-user
+          objectType: secret
+          objectAlias: mx-const-Jenkins.BuildAgentUser
+        - |
+          objectName: jenkins-build-agent-password
+          objectType: secret
+          objectAlias: mx-const-Jenkins.BuildAgentPassword
+```
+
+Apply this object in the app namespace before the platform pod starts. The full key list, including runtime settings, is in [SecretProviderClass Keys](/developerportal/deploy/secret-store-credentials/#keys).
+
+Changing a constant or a runtime setting in the vault is picked up by the CSI driver after a short delay. The running runtime does not apply that change until the app is restarted. File storage credentials and the MxAdmin password are applied without that limitation. For the operator behavior, see [Additional Considerations](/developerportal/deploy/secret-store-credentials/#additional-considerations).
+
 #### Auto-Generated Credentials
 
 Auto-generated credentials are used for internal component communication.
@@ -707,7 +978,7 @@ This method is upgrade-safe. Existing credentials are preserved through lookup.
 Workload Identity enables components to connect to cloud resources without passwords. Instead of storing passwords and access keys in configuration files, components use cloud-native identity (AWS IAM or Azure Managed Identity) to authenticate.
 
 {{% alert color="info" %}}
-You cannot combine Workload Identity with SecretProviderClass secret management. The two solutions are mutually exclusive.
+On `mxplatform`, do not combine `useStoragePlanwithIRSA: true` with `secretProviderclass.enable: true`. You can use a workload identity with the secret store when the chart creates the ServiceAccount. See [Using a Secret Store for the Platform App](#disable-provisioners).
 {{% /alert %}}
 
 ### Supported Components
@@ -897,23 +1168,17 @@ mx-privatecloud:
       password: ""  # Empty - Managed Identity authentication
 ```
 
-#### Workload Identity vs Secret Provider Class
+#### Workload Identity vs Secret Provider Class for PCLM and Mx-PrivateCloud
 
-Workload Identity and Secret Provider Class are different approaches for database credentials management.
+For `mx-privatecloud-license-manager` and `mx-privatecloud`, workload identity and the SecretProviderClass are two ways to supply database credentials. Use one of them for a component's database. For the Private Mendix Platform app, the secret store can be used with a plan and can still use a workload identity. A plan still provisions that resource. See [Storage Plans and the Secret Store for Mxplatform](#storage-plan-or-secret-store).
 
 | Feature | Workload Identity (IAM Authentication) | Secret Provider Class |
 | --- | --- | --- |
-| Purpose | Passwordless database connection at runtime | Inject all secrets from vault during installation |
-| What it secures | Database passwords only | Database credentials and all other secrets |
-| Configuration | `awsIRSA.enable: true` or azureWorkloadIdentity.enable: true` and empty passwords | `secretProviderclass.enable: true` |
+| Purpose | Passwordless database connection at runtime | Inject credentials from a vault |
+| What it secures | Database passwords for PCLM, Authenticator, and Collector | Database credentials and the other secrets those components read from the vault |
+| Configuration | `awsIRSA.enable: true` or `azureWorkloadIdentity.enable: true`, and an empty password | `secretProviderclass.enable: true` |
 | Works with | AWS RDS IAM authentication or Azure Database Managed Identity authentication | AWS Secrets Manager, Azure Key Vault, HashiCorp Vault |
-| Credential type | Temporary cloud tokens (auto-rotated) | Static secrets from vault |
-| Can it be combined? | No - mutually exclusive with Secret Provider Class | No - mutually exclusive with Workload Identity |
-
-##### Key Differences
-
-* Workload Identity - Components use cloud identity to connect to databases (no passwords stored anywhere).
-* Secret Provider Class - Helm retrieves database passwords from a vault and injects them during installation. Passwords exist in vault as static secrets.
+| Credential type | Temporary cloud tokens, rotated by the cloud provider | The values stored in the vault |
 
 ### Use Case 2: Mxplatform Database and Storage Authentication
 
@@ -922,7 +1187,7 @@ For `mxplatform`, Workload Identity provides passwordless authentication for bot
 For complete scenarios and Storage Plan configuration examples, see [Storage Plans](/developerportal/deploy/private-cloud-storage-plans/).
 
 {{% alert color="info" %}}
-This type of authentication applies to runtime data access. It does not apply to installation secrets (that is, admin passwords and PCLM credentials). For those secrets, use the Secret Provider Class.
+On this path the operator creates the database, the file storage, and the identity. The MxAdmin password and the PCLM credentials stay in the values file. To read those settings from a vault, and to leave provisioning to yourself where you do not set a plan, use [Enabling the Secret Store](#enable-secret-store).
 {{% /alert %}}
 
 #### Configuring Workload Identity Authentication
@@ -934,7 +1199,7 @@ To configure Workload Identity authentication, perform the following steps:
     * For AWS, specify the IAM role ARN that has permissions to access RDS/S3.
     * For Azure, specify the Managed Identity client ID that has permissions to access the Azure Database and Blob Storage.
 
-2. Set `UseStoragePlanwithIRSA` to `true` in the Helmfile configuration for `mxplatform`.
+2. Set `useStoragePlanwithIRSA` to `true` in the Helmfile configuration for `mxplatform`.
 3. Reference these plans in `spec.database.servicePlan` and `spec.storage.servicePlan`.
 
 #### How It Works
@@ -953,7 +1218,7 @@ Mendix Operator automatically performs the following tasks:
 * Configures mxplatform pods to use this ServiceAccount.
 
 {{% alert color="info" %}}
-When `UseStoragePlanwithIRSA` is set to `true`, the Mendix Operator creates the ServiceAccount, not the Helm chart. This causes the following limitations:
+When `useStoragePlanwithIRSA` is set to `true`, the Mendix Operator creates the ServiceAccount, not the Helm chart. This causes the following limitations:
 
 * Chart-level `azureWorkloadIdentity` configuration is not supported for mxplatform.
 * The chart cannot add `azure.workload.identity/client-id` annotation. The Service account will be created by the Operator.
@@ -1005,7 +1270,7 @@ To configure an Azure Storage Plan with Managed Identity, perform the following 
     mxplatform:
       enable: true
       # REQUIRED: Let Operator create ServiceAccount
-      UseStoragePlanwithIRSA: true
+      useStoragePlanwithIRSA: true
       pclm:
         serviceUrl: "http://mx-privatecloud-license-manager"
         username: "administrator"
@@ -1023,133 +1288,57 @@ To configure an Azure Storage Plan with Managed Identity, perform the following 
           mxAdminPassword: "admin-password"
     ```
 
-Mendix Operator creates the ServiceAccount with `azure.workload.identity/client-id annotation`, enabling passwordless Azure Database and Blob Storage access.
+The Mendix Operator creates the ServiceAccount with the `azure.workload.identity/client-id` annotation. The app then connects to Azure Database for PostgreSQL and Blob Storage with that identity.
 
-#### Workload Identity vs Secret Provider Class for Mxplatform
+#### Storage Plans and the Secret Store for Mxplatform {#storage-plan-or-secret-store}
 
-Workload Identity and Secret Provider Class are different approaches for database credentials management.
+A storage plan with workload identity and the secret store can be used for the same platform app, with one limit. Do not set `useStoragePlanwithIRSA` to `true` together with the secret store. Both need to own the ServiceAccount. A database plan or a storage plan can still be set while the secret store is enabled. The operator provisions that resource, and the chart creates the ServiceAccount.
 
-| Feature | Workload Identity (StoragePlan) | Secret Provider Class (CSI) |
+| | Storage plan with workload identity | Secret store |
 | --- | --- | --- |
-| Purpose | Runtime connection to cloud database and storage | Inject all secrets from vault |
-| What it authenticates | mxplatform app connecting to database and storage | Database, Storage, Admin password, and PCLM credentials |
-| Credentials | Temporary cloud tokens (auto-rotated by AWS or Azure) | Static secrets from vault |
-| Configuration | In StoragePlan CRDs and `UseStoragePlanwithIRSA: true` | `secretProviderclass.enable: true` |
-| ServiceAccount | Created by Mendix Operator (based on StoragePlan) | Created by Helm chart |
-| Can it be combined? | No - mutually exclusive with Secret Provider Class | No - mutually exclusive with Workload Identity |
+| Who creates the database, file container, and app identity | Mendix Operator, during deployment | You, when the plan is unset. The operator, when the plan is set |
+| Database and file settings | Taken from the plan | Taken from the vault |
+| ServiceAccount | Created by the operator. Set `useStoragePlanwithIRSA` to `true` | Created by the chart. Set `useStoragePlanwithIRSA` to `false` |
+| Passwordless database and blob access | Yes, through the plan | Yes, when `secretProviderclass.database.passwordless` and `useManagedIdentityForBlob` are `true` |
+| MxAdmin password and PCLM credentials | In the values file, unless you add them some other way | In the vault (`mx-admin-password`, `pclm-admin-username`, `pclm-admin-password`) |
+| Extra roles, such as Storage Blob Delegator for MDA files | Assigned after the operator has created the identity | Assigned before installation, on the identity you created |
+| App constants | On the MendixApp | Any `mx-const-<Module.Constant>` object in the secret store. See [Overriding App Constants](#override-constants) |
 
-##### Key Differences
+Use a storage plan when you want the operator to create the database, the file container, and the identity while the app is deployed, and you can assign any further roles after that identity exists.
 
-* Workload Identity - Your running Mendix application uses cloud identity to connect to its database and file storage (no database passwords in configuration).
-* Secret Provider Class - Helm chart retrieves secrets from vault to configure or install the components (admin passwords, PCLM credentials, database connection strings).
+Use the secret store when the MxAdmin password, the license-manager credentials, and any extra app constants should come from the vault. Leave a plan unset when you want to create that resource yourself, before installation, including roles the plan does not grant, such as **Storage Blob Delegator**. Passwordless access still uses a workload identity. The chart attaches that identity to the ServiceAccount. The steps are in [Using a Secret Store for the Platform App](#disable-provisioners) and [Enabling the Secret Store](#enable-secret-store).
 
-##### Decision Matrix
-
-Use Workload Identity (StoragePlan) when:
-
-* You want passwordless database and storage access for your running Mendix application.
-* You are on AWS EKS or Azure AKS with native cloud database or storage services.
-* You want automatic credential rotation (with the cloud provider handling the token refresh).
-* You only need to secure runtime database or storage connections; admin password and PCLM can be set in a values file or traditional secrets.
-* Example scenario: *My Mendix app should connect to Azure Database for PostgreSQL and Azure Blob Storage using Managed Identity, without storing any database passwords*.
-
-Use Secret Provider Class when:
-
-* You want all installation secrets (admin password, PCLM credentials, database connection strings, storage credentials) from a centralized vault.
-* You need multi-cloud secret management (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault).
-* You want centralized secret management across all Private Mendix Platform components (mx-privatecloud, svix-server, mxplatform).
-* You are using HashiCorp Vault or managing secrets across multiple cloud providers.
-* Example scenario: *I want to store all Private Mendix Platform installation secrets (PCLM password, admin password, database credentials) in Azure Key Vault and inject them during Helm installation.*
-
-The two solutions cannot be used together. They are mutually exclusive for `mxplatform`.
-
-If `UseStoragePlanwithIRSA` is set to `true`, the Operator creates the ServiceAccount with database and storage identity. The chart then cannot use Secret Provider Class for that ServiceAccount.
-
-If `secretProviderclass.enable` is set to `true`, the chart creates the ServiceAccount with vault access. The chart cannot then use StoragePlan with Workload Identity for database or storage.
-
-Both approaches must control the ServiceAccount annotations, but in different ways (through the Operator or Helm for Private Mendix Platform).
-
-##### Approach 1: Workload Identity (StoragePlan)
+##### Approach 1: Storage Plan with Workload Identity
 
 {{% alert color="warning" %}}
 The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
 {{% /alert %}}
 
-This approach secures how your Mendix application connects to its database and storage at runtime with passwordless runtime database and storage access.
+The Operator provisions the database and file storage and creates the ServiceAccount. Leave the secret store disabled.
 
 ```text
 mxplatform:
-  # Enable StoragePlan with Workload Identity
-  UseStoragePlanwithIRSA: true
-  # Installation secrets still in values file
+  useStoragePlanwithIRSA: true
   pclm:
     serviceUrl: "http://mx-privatecloud-license-manager"
     username: "administrator"
     password: "pclm-password"
   spec:
-    # Reference StoragePlans that have Managed Identity configuration
     database:
-      servicePlan: "azure-postgres-plan"  # StoragePlan with Managed Identity client ID
+      servicePlan: "azure-postgres-plan"
     storage:
-      servicePlan: "azure-blob-plan"      # StoragePlan with Managed Identity client ID
+      servicePlan: "azure-blob-plan"
     runtime:
-      mxAdminPassword: "admin-password"   # Still in values file
+      mxAdminPassword: "admin-password"
   secretProviderclass:
-    enable: false  # Cannot be used - ServiceAccount managed by Operator
+    enable: false
 ```
 
-This secures the following:
+The app connects to PostgreSQL and Blob Storage with the managed identity from the plan. The PCLM password and the MxAdmin password are still in the values file.
 
-* Runtime database connection - The app uses Managed Identity to connect to PostgreSQL (no database password in configuration).
-* Runtime storage connection - The app uses Managed Identity to access Blob Storage (no storage access key in configuration).
+##### Approach 2: Secret Store
 
-Installation secrets (PCLM password, admin password) are still in the values file.
-
-##### Approach 2: Secret Provider Class
-
-{{% alert color="warning" %}}
-The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
-{{% /alert %}}
-
-This approach secures centralized installation and configuration secrets by retrieving them from Azure Key Vault during Helm installation.
-
-```text
-mxplatform:
-  # No StoragePlan workload identity
-  UseStoragePlanwithIRSA: false
-  # All credentials from Key Vault (empty values = injected from vault)
-  pclm:
-    serviceUrl: "http://mx-privatecloud-license-manager"
-    username: ""  # Injected from Key Vault secret "pclm-admin-username"
-    password: ""  # Injected from Key Vault secret "pclm-admin-password"
-  spec:
-    # Database and storage credentials from Key Vault
-    database:
-      servicePlan: ""  # Credentials injected from Key Vault
-    storage:
-      servicePlan: ""  # Credentials injected from Key Vault
-    runtime:
-      mxAdminPassword: ""  # Injected from Key Vault secret "mx-admin-password"
-  # Managed Identity to ACCESS Key Vault (not for database/storage)
-  azureWorkloadIdentity:
-    enable: true
-    clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"  # Identity with Key Vault Secrets User role
-    tenantID: "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"
-  secretProviderclass:
-    enable: true
-    provider: "azure"
-    azureparameters:
-      keyvaultName: "my-keyvault"  # Vault containing all installation secrets
-```
-
-This secures the following:
-
-* PCLM credentials - Retrieved from Key Vault during installation.
-* Admin password - Retrieved from Key Vault during installation.
-* Database credentials - Retrieved from Key Vault (but stored as static passwords in Vault).
-* Storage credentials - Retrieved from Key Vault (but stored as static access keys in vault).
-
-Runtime connections still use static passwords and keys, not cloud-native passwordless authentication.
+Enable the secret store and set `useStoragePlanwithIRSA` to `false`. Leave the database plan and the storage plan unset. Create the database, file storage, identity, and role assignments yourself. The values are in [Enabling the Secret Store](#enable-secret-store). To override a constant, see [Overriding App Constants](#override-constants). A plan can be set as well. The operator then provisions that resource.
 
 ## Troubleshooting Critical Issues
 

@@ -230,7 +230,7 @@ To set up a webhook, do the following:
     * **URL** – This is the endpoint that will receive the payload when one of the event types selected in **Available Events** occurs.
     * **Validation Secret** – This is a secret that is shared with the endpoint to verify that it has been triggered by this webhook. If you leave this blank, a secret is generated automatically. You can see the generated value any time you return to edit the webhook.
     * **Available Events** – This is the event (or events) that triggers the webhook to send information to the endpoint. You can activate or deactivate specific event types in the **Event Management** tab of the **Webhooks** page.
-    * **Custom Headers** – This is a key-value pair that is sent as an HTTP header to the endpoint. You can configure a predefined custom header in the **Preset Headers** tab of the **Webhooks** page.
+    * **Custom Headers** – This is a key-value pair that is sent as an HTTP header to the endpoint. You can configure a predefined custom header in the **Preset Headers** tab of the **Webhooks** page. You cannot add custom HTTP headers through custom runtime settings.
 
 You can edit or delete an existing webhook by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the **Action** column for the webhook you want to change, and then selecting **Edit** or **Delete**.
 

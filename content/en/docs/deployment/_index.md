@@ -36,6 +36,8 @@ In Studio Pro, you can click **Run Locally** ({{% icon name="controls-play-fille
 
 To speed up the development process, most changes you make within Studio Pro use "Instant Update" and are reflected immediately in the locally running app. However, some changes (such as changes to the domain model) are not reflected until the whole app is restarted.
 
+To put a reverse proxy in front of your locally running app, for example to set secure cookies or to run the app over HTTPS, see the [Using a Reverse Proxy When You Run Your App Locally](/developerportal/deploy/reverse-proxy/#local) section in *Configuring a Reverse Proxy*.
+
 ## Mendix Cloud {#mendix-cloud}
 
 Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, a licensed node on Mendix Cloud includes multiple environments, backups, monitoring, and high availability.

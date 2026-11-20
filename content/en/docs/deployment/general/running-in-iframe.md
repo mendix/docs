@@ -36,6 +36,8 @@ When running your application in Mendix Cloud, you can set the SameSite cookie t
 
 If your application is deployed outside Mendix Cloud (on premises, for example), then you will need to configure your webserver to set the SameSite cookie to the correct value.
 
+If you run your application locally, it is not served over HTTPS, so the Mendix runtime does not set the `Secure` attribute that browsers require on cookies with `SameSite=None`. To make the runtime set this attribute, see the [Setting Secure Cookies](/developerportal/deploy/reverse-proxy/#local-secure-cookies) section in *Configuring a Reverse Proxy*.
+
 ## Limitations
 
 ### Runtime Dependency

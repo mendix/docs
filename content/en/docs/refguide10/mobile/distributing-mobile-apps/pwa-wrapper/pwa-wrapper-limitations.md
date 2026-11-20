@@ -23,7 +23,7 @@ For an overview of the supported capabilities, see [PWA Wrapper Capabilities](/r
 
 Keep the following build and installation constraints in mind:
 
-* Final iOS signing requires macOS
+* Final iOS signing requires macOS, unless you use the experimental **Build without a Mac** option on Windows
 * Copying packaged web resources is currently not supported on iOS, so the wrapped iOS app must load frontend resources from the deployed Mendix runtime
 * Real-device installation requires signed packages
 * If an incompatible or newer build of the app is already installed on a device, it may need to be uninstalled before your current build can be installed

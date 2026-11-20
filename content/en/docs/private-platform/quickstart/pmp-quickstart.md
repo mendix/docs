@@ -161,9 +161,9 @@ Currently, only AWS S3 or S3-compatible providers are supported.
 
 ## Optional: Configuring Azure Key Vault {#azure-key-vault}
 
-**USE-Secret-Provider** leaves that plan unset, so the operator does not create the resource. Create it yourself, then store its settings in Azure Key Vault under the following keys. All keys are required unless noted otherwise.
+**USE-Secret-Provider** for **DatabasePlan** or **Storageplan** leaves that plan unset, so the Operator does not create the resource. Create it yourself, then store its settings in Azure Key Vault under the following keys. All keys are required unless noted otherwise.
 
-You can instead enter a plan. The operator then creates that resource, and the secret store supplies the settings that do not come from a plan. For more information, see [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
+You can instead enter a plan name for **DatabasePlan** or **Storageplan**. The Operator then creates that resource, and you do not store that resource's keys in the vault. The secret store supplies the other settings, such as the MxAdmin password and the license-manager credentials. For more information, see [What the Secret Store Does Not Provision](#secret-store-no-provisioner).
 
 ### Database Plan Keys
 

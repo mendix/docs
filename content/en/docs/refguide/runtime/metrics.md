@@ -454,6 +454,25 @@ Note that the actual name may vary slightly depending on the back end (for examp
 Additionally, a suffix may be added for the unit of the metric (for example, `_bytes`).
 {{% /alert %}}
 
+#### Change Data Capture Producer Metrics {#cdc-producer-metrics}
+
+As of Studio Pro 11.17, [Change Data Capture (CDC)](/refguide/change-data-capture/) exposes the following Kafka producer metrics as gauges. They register automatically after the producer initializes successfully. You do not need a microflow or Java action to register them.
+
+These metrics describe the producer client as a whole, not individual topics.
+
+| Name | Unit | Description |
+| --- | --- | --- |
+| `mx.cdc.producer.kafka.batch_size_avg` | Bytes | Average number of bytes sent per partition per request. |
+| `mx.cdc.producer.kafka.batch_size_max` | Bytes | Maximum number of bytes sent per partition per request. |
+| `mx.cdc.producer.kafka.records_per_request_avg` | Records per request | Average number of records sent per request. |
+| `mx.cdc.producer.kafka.record_queue_time_avg` | Milliseconds | Average time record batches spend in the producer's send buffer. |
+| `mx.cdc.producer.kafka.record_send_rate` | Records per second | Average number of records sent per second. |
+| `mx.cdc.producer.kafka.request_latency_avg` | Milliseconds | Average Kafka producer request latency. |
+| `mx.cdc.producer.kafka.buffer_available_bytes` | Bytes | Buffer memory available to the producer. |
+
+A gauge can report `NaN` when its value is unavailable or cannot be read.
+The gauges read current Kafka client values, including after the client is recreated.
+
 ### Additional Metrics
 
 {{% alert color="info" %}}

@@ -121,3 +121,4 @@ These spans are excluded when [Minimal Tracing Mode](/refguide/opentelemetry-in-
 * [Mendix Event Broker](/appstore/services/event-broker/)
 * [Event Broker Bridges](/appstore/services/event-broker-bridges/)
 * [OpenTelemetry](/refguide/opentelemetry-in-runtime/)
+* [Change Data Capture Producer Metrics](/refguide/metrics/#cdc-producer-metrics)

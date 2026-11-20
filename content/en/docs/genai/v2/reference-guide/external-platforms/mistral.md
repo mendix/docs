@@ -65,7 +65,9 @@ The following inputs are required for the Mistral configuration:
 | ----------- | ------------------------------------------------------------ |
 | Display name | The name identifier of a configuration (for example, *MyConfiguration*). |
 | Endpoint | The API endpoint (for example, `https://api.mistral.ai/agents-kit-1/`). |
-| Token | The access token to authorize your API call. <br />To get an API key, see the [Quickstart](https://docs.mistral.ai/getting-started/quickstart). |
+| Authentication type | The way your API calls are authorized. Select **API Key** to use a stored API key, or **Microflow** to get the credentials from a microflow before each request. |
+| Token | Only for the **API Key** authentication type. The access token to authorize your API call. <br />To get an API key, see the [Quickstart](https://docs.mistral.ai/getting-started/quickstart). |
+| Get credentials microflow | Only for the **Microflow** authentication type. The microflow that returns the HTTP headers to authorize your API call. The microflow must return a list of `System.HttpHeader` objects and can have either no input parameters or a single input parameter of type `MistralConnector.MistralConfiguration` or `OpenAIConnector.Configuration`. For more information, see [Authenticating with a Microflow](/agents/agents-kit-2/reference-guide/external-connectors/openai/#get-credentials-microflow) in the OpenAI connector documentation. |
 
 #### Configuring the Mistral Deployed Models
 

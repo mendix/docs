@@ -204,7 +204,7 @@ The chart mounts `pclm-admin-username` and `pclm-admin-password` as the constant
 
 ## What the Secret Store Does Not Provision {#secret-store-no-provisioner}
 
-Enabling **Use Secret Provider** turns on the secret store described in [Retrieve Environment-Sensitive Data from a Secret Store](/developerportal/deploy/secret-store-credentials/). For **DatabasePlan** and **Storageplan**, **USE-Secret-Provider** leaves the plan unset and the operator does not create that resource. You create it and store its settings in the vault. A plan name still makes the operator create that resource. The secret store supplies the settings that do not come from a plan, including the MxAdmin password and the license-manager credentials.
+Enabling **Use Secret Provider** turns on the secret store described in [Retrieve Environment-Sensitive Data from a Secret Store](/developerportal/deploy/secret-store-credentials/). For **DatabasePlan** and **Storageplan**, **USE-Secret-Provider** leaves the plan unset and the operator does not create that resource. You create it and store its settings in the vault. If you enter a plan name, the operator creates that resource. The secret store supplies the settings that do not come from a plan, including the MxAdmin password and the license-manager credentials.
 
 You must create the following before you install the app:
 

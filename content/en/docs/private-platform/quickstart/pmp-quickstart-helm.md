@@ -733,7 +733,7 @@ The code samples are intended to show the range of available options. No rights 
 {{% /alert %}}
 
 ```text
-+mxplatform:
+mxplatform:
   enable: true
   name: mxplatform
   # The chart creates the ServiceAccount. The operator does not.

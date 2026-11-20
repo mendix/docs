@@ -25,7 +25,7 @@ If set to **Yes**, an additional range control is shown at the bottom of the cha
 
 ### Y-Axis Range Mode
 
-This property controls the range of the Y axis:
+This property controls the range of the Y axis. It is visible only when [Enable advanced options](/appstore/widgets/charts/#enable-advanced-options) is set to **Yes**.
 
 * **Auto** – The range is based on the plotted values.
 * **From zero** – The Y axis starts from zero. This is the default value.

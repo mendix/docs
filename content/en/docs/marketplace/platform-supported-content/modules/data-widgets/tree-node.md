@@ -55,6 +55,8 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 
 ### General Tab {#general}
 
+* **Enable advanced options** – This shows the **Animate** property and the icon properties on the **Visualization** tab (**Show icon**, **Expanded icon**, **Collapsed icon**, and **Animate icon**). When set to **No**, these properties are hidden:
+    * Default: **No**
 * **Data source** – This sets the data source of the widget, which can also be optionally used as the data source for the header and content of the widget:
     * Required
 * **Parent association** – This sets the association used to select a parent. If set, the widget uses [Infinite tree node](#child-detection-mode) mode.
@@ -82,11 +84,11 @@ Drag the Tree Node widget onto the page and use the configuration properties des
     {{% alert color="info" %}}In **Infinite tree node** mode, Mendix recommends setting **Start expanded** to **No** for large data sets. When **Start expanded** is set to **Yes**, the widget expands all tree nodes directly and loads all data at once.{{% /alert %}}
 
 * **Animate** – This defines whether the content is animated when a tree node expands and collapses:
-    * Default: **Yes**
+    * Configurable when **Enable advanced options** is set to **Yes**; default: **Yes**
 
 ### Visualization Tab {#visualization}
 
-The **Visualization** tab includes the following properties:
+The **Visualization** tab includes the following properties. **Show icon**, **Expanded icon**, **Collapsed icon**, and **Animate icon** are only shown when **Enable advanced options** is set to **Yes**.
 
 * **Show icon** – This defines the location of the icon relative to the header:
     * Default: **Left**

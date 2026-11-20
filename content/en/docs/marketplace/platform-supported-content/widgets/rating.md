@@ -17,12 +17,12 @@ To use this widget, place it in a [data container](/refguide/data-sources/) that
 
 The widget offers the following for configuration:
 
-* An Integer, Long, or Decimal attribute to store the rating on user-interaction
-* An action (such as microflow or nanoflow) to trigger when the value of rating changes
-* An empty icon, to be shown when the value is not yet selected
-* A selected icon, to be shown when the value is selected
-* An amount to define the maximum amount of icons to be rendered
-* Animation, to define whether the widget should animate when clicking on the desired icon  
+* An Integer, Long, or Decimal **Attribute** to store the rating on user-interaction
+* An **On change** action (such as microflow or nanoflow), on the **Events** tab, to trigger when the value of rating changes
+* An **Empty icon**, to be shown when the value is not yet selected
+* A **Selected icon**, to be shown when the value is selected
+* An **Amount** to define the maximum amount of icons to be rendered (default: 5)
+* **Animation**, to define whether the widget should animate when clicking on the desired icon (default: **Yes**)
 * A **Size** design property with two options (`Small` and `Large`) influencing icon size
 * [Common properties](/refguide/common-widget-properties/)
 

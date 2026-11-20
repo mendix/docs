@@ -34,9 +34,11 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 A **Custom Chart** widget can be configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** or with the **Sample data**.
 
-The configuration in the **Source attribute** is merged into the static settings and overwrites any common properties. The **Sample data** is for demo purposes: it is used in the Studio Pro preview, and at runtime when no **Source attribute** is selected.
+The configuration in the **Source attribute** is merged into the static settings and overwrites any common properties. The **Sample data** is for demo purposes: it is used in the Studio Pro preview, and at runtime when no **Source attribute** is selected or the attribute is empty.
 
 Data traces are merged by their position in the array. The first trace in the **Source attribute** is merged with the first trace in **Static**, the second with the second, and so on. When both have a value for the same property, the value from the **Source attribute** wins.
+
+If both traces at the same position contain the same data property, such as `x`, `y`, `z`, `values`, or `labels`, they are not merged. Instead, the chart shows them as two separate traces. To merge a trace, keep only styling properties, such as `type` or `marker`, in one of the two traces.
 
 {{% alert color="info" %}}
 In Charts versions below 6.3.0, the traces from the **Source attribute** were added after the **Static** traces as separate traces, instead of being merged by position.
@@ -111,14 +113,14 @@ In the Studio Pro page editor, the chart renders the **Static** and **Sample** d
 
 * **Static** – A JSON array of traces. For the available options, see the [JavaScript Figure Reference](https://plotly.com/javascript/reference/) in the Plotly documentation.
 * **Source attribute** – A string attribute that contains a JSON array of traces. These traces are merged with the **Static** data by position, as described in [Chart Structure](#chart-structure).
-* **Sample data** – A JSON array of traces used for the preview in Studio Pro, and at runtime when no **Source attribute** is selected. It is merged with the **Static** data.
+* **Sample data** – A JSON array of traces used for the preview in Studio Pro, and at runtime when no **Source attribute** is selected or the attribute is empty. It is merged with the **Static** data.
 * **Show playground slot** – If set to **Yes**, the chart shows a **Playground slot** for a [Chart playground](/appstore/widgets/chart-playground/) widget.
 
 ### Layout Options Tab
 
 * **Static** – A JSON object with the layout of the chart. For the available options, see [Layout](https://plotly.com/javascript/reference/layout/) in the Plotly documentation.
 * **Source attribute** – A string attribute that contains a JSON layout object. It is merged with the **Static** layout and overwrites it.
-* **Sample layout** – A JSON layout object used for the preview in Studio Pro, and at runtime when no **Source attribute** is selected. It is merged with the **Static** layout.
+* **Sample layout** – A JSON layout object used for the preview in Studio Pro, and at runtime when no **Source attribute** is selected or the attribute is empty. It is merged with the **Static** layout.
 
 ### Configuration Options Tab
 
@@ -144,7 +146,7 @@ When **Height unit** is set to **Auto**, these properties are also available:
 ### Events Tab
 
 * **On click** – The action that runs when the user clicks a part of the chart.
-* **Event data attribute** – A string attribute in which the chart stores the raw Plotly event data when the user clicks the chart. You can use this attribute in the **On click** action to read which part of the chart was clicked. For the format of the data, see [Event Data](https://plotly.com/javascript/plotlyjs-events/#event-data) in the Plotly documentation:
+* **Event data attribute** – A string attribute in which the chart stores data about the clicked point when the user clicks the chart. You can use this attribute in the **On click** action to read which part of the chart was clicked. The value is a JSON object with these properties of the first clicked point: `curveNumber`, `pointNumber`, `pointIndex`, `x`, `y`, `z`, `lat`, `lon`, `location`, and `pointNumbers`. Properties that do not apply to the chart type are left out. For the meaning of these properties, see [Event Data](https://plotly.com/javascript/plotlyjs-events/#event-data) in the Plotly documentation:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-events-attribute.png" alt="On click action that uses the event data attribute" class="no-border" >}}
 

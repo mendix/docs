@@ -22,6 +22,14 @@ Supported file types:
 * **Images**
     * All image file types, such as but not limited to JPEG, PNG, GIF, BMP, TIFF, and WebP.
 
+The viewer has a toolbar with the following controls:
+
+* **Download** – downloads the file
+* **Zoom in**, **Zoom out**, and **Fit to width** – change the zoom level of the document
+* For PDF files only:
+    * **Go to previous page** and **Go to next page** – move between pages; you can also type a page number to go to that page
+    * **Search in document** – searches the text of the PDF, highlights the matches, and moves between matches across pages with **Previous match** and **Next match**; the search is not case-sensitive
+
 ## Configuration
 
 To configure this widget, follow these steps:
@@ -40,18 +48,18 @@ To configure this widget, follow these steps:
 
 These are the dimension configurations for document viewer:
 
-* **Width** – Determines the width size for the document viewer. The developer can choose to use either pixels (px), percentage (%), or **Fit to content**.
-* **Height** – Determine the height size for the document viewer. The developer can choose to use either pixels (px), percentage (%), or **Viewport** (vp). Choosing setting to **Auto** will allow the developer to set minimum and maximum heights instead.
-* **Minimum Height** – Determines the minimum size for the custom charts container.
-* **Maximum Height** – Determines the maximum size for the custom charts container.
-* **Vertical Overflow** – If maximum height is set, vertical overflow will determine the widget's behavior to show overflowing content if that content exceeded the maximum height allowed.
+* **Width unit** and **Width** – Determines the width size for the document viewer. The developer can choose to use either **Pixels** (px), **Percentage** (%), or **Fit to content** (default). **Width** (default: 100) is not used with **Fit to content**.
+* **Height unit** and **Height** – Determine the height size for the document viewer. The developer can choose to use either **Pixels** (px), **Percentage** (%) of the parent, or **Viewport** (vp), and set the value in **Height** (default: 250). Choosing **Auto** (default) will allow the developer to set minimum and maximum heights instead.
+* **Minimum height unit** and **Minimum height** – Determines the minimum size for the document viewer when **Height unit** is **Auto**. The options are **None** (default), **Pixels**, **Percentage**, and **Viewport**. **Minimum height** defaults to 250.
+* **Maximum height unit** and **Maximum height** – Determines the maximum size for the document viewer when **Height unit** is **Auto**. The options are **None** (default), **Pixels**, **Percentage**, and **Viewport**. **Maximum height** defaults to 250.
+* **Vertical overflow** – If maximum height is set, vertical overflow will determine the widget's behavior to show overflowing content if that content exceeded the maximum height allowed. The options are **Auto** (default), **Scroll**, and **Hidden**.
 
 ## Advanced {#advanced}
 
 The **Advanced** tab allows you to configure settings for features beyond the normal configurations:
 
 * **PDF.js worker URL** – Configures the path for PDF.js worker script. This worker script is needed to render PDF type document using a [PDF.js](https://github.com/mozilla/pdf.js?tab=readme-ov-file#including-via-a-cdn) library. 
-    * If left empty, the document viewer widget will retrieve PDF.js from CDN `http://unpkg.com/pdfjs-dist@4.8.69/build/pdf.worker.min.mjs`.
+    * If left empty, the document viewer widget will retrieve the PDF.js worker from the unpkg CDN, using the PDF.js version bundled with the widget: `//unpkg.com/pdfjs-dist@<version>/build/pdf.worker.min.mjs` (for example, version 5.4.296 for Document Viewer version 1.3.0).
     * Alternatively, users can grab `pdf.worker.mjs` from `{LOCAL DEV PROJECT FOLDER HERE}/deployment/web/widgets/com/mendix/shared/pdfjs/pdf.worker.mjs`, put it into their own `App Module -> Styling/web/js/pdf.worker.mjs` file, and then set `./js/pdf.worker.mjs` as the worker URL configuration. This is the recommended practice to support [CSP](/howto/security/csp/).
 
 ### Common Tab

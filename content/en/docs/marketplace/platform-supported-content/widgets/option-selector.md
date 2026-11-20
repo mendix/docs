@@ -82,8 +82,10 @@ Use the database source type to set the value of a string, integer, long, or enu
 * **Selection type** – This determines how other [listen to widget](/refguide/listen-to-grid-source/) data sources perceive the data.
     * **Single** – This allows only one item to be selected from the options list (radio button list).
     * **Multi** – This allows multiple items to be selected from the options list (checkbox list).
-* **Value** (under **Store value**) – The attribute of the selectable objects that holds the value to store.
-* **Target attribute** (under **Store value**) – The attribute where the selected value is stored.
+* **Value** (under **Store value**) – The attribute of the selectable objects that holds the value to store. This property is available when **Target attribute** is set.
+* **Target attribute** (under **Store value**) – The string, integer, long, or enumeration attribute where the selected value is stored.
+
+The **Store value** properties are only available when **Selection type** is set to **Single**.
 
 ##### Static Values {#static}
 
@@ -92,7 +94,7 @@ Use the static source type to set the value of an attribute with manually config
 * **Attribute** (required) – The attribute to set. It can be a string, enumeration, integer, long, Boolean, date and time, or decimal attribute.
 * **Values** (required)– The list of options. Each option has the following properties:
     * **Value** – An expression that returns the value to set.
-    * **Custom content** – Sets widgets to display instead of the caption.
+    * **Custom content** – Sets widgets to display instead of the caption. This property is available when **Custom content** in the [General](#general-section) section is set to **Yes**.
     * **Caption** – The text to display for the option.
 
 #### Caption
@@ -104,15 +106,15 @@ For the **Association** and **Database** sources, the **Caption** section config
     * **Expression** – Uses an expression that returns a string.
 * **Caption** (required) – The attribute or expression that provides the caption.
 
-#### General
+#### General {#general-section}
 
 The **General** section configures general behavior and captions for the widget:
 
 * **No option text** – The text displayed when no options are available. The default is **No options available**.
-* **Custom content** – This determines whether the widget displays custom widgets instead of text for each option (not available for **Static** sources, which configure custom content per value):
+* **Custom content** – This determines whether the widget displays custom widgets instead of text for each option (not available for the **Enumeration** and **Boolean** types; for **Static** sources, you place the custom content in each value):
     * **Yes** – This displays the widgets that you place in the **Custom content** dropzone for each option.
-    * **No** – This displays the caption of each option.
-* **Render type** – This determines the type of control that the widget displays. The options are **Checkbox** and **Radio button**.
+    * **No** (default) – This displays the caption of each option.
+* **Render type** – This determines the type of control that the widget displays. The options are **Checkbox** (default) and **Radio button**. This property is only available when **Type** is set to **Boolean**.
 * **Group name** (optional) – This is an expression that returns the name for the group of associated inputs. 
 
 #### Label
@@ -127,28 +129,28 @@ For more information, see [Visibility Section](/refguide/common-widget-propertie
 
 The **Editability** section configures when users can change the selection. For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.
 
-The following additional properties are available:
+The following additional properties are available. **Editable** and **Condition** are only available for the **Database** source when no **Target attribute** is set; in that case, they replace the standard **Editable** property:
 
 * **Editable** – This determines when the widget is editable:
-    * **Default** – The widget is editable unless the context is read-only.
+    * **Default** (default) – The widget is editable unless the context is read-only.
     * **Never** – The widget is never editable.
     * **Conditionally** – The widget is editable when the **Condition** expression returns `true`.
 * **Condition** – The Boolean expression that determines editability when **Editable** is set to **Conditionally**.
 * **Read-only style** – This determines how the widget appears in read-only mode:
-    * **Control** – This displays the checkboxes or radio buttons as disabled controls,
-    * **Content only** – This displays only the selected items as text.
+    * **Control** – This displays the checkboxes or radio buttons as disabled controls.
+    * **Content only** (default) – This displays only the selected items as text.
 
 ### Events Tab {#events}
 
 The **Events** tab contains the following property:
 
-* **On change action** – the action that runs when the selection changes.
+* **On change action** – the action that runs when the selection changes. For the **Database** source, this action is linked to the **Selection type** property.
 
 ### Accessibility Tab {#accessibility}
 
 The **Accessibility** tab configures settings for the accessibility features of the widget:
 
-* **Aria required** – An expression that returns whether the widget is required for assistive technologies or not.
+* **Aria required** (default: `false`) – An expression that returns whether the widget is required for assistive technologies or not.
 * **Aria label** – A text template that provides an accessible label for the widget.
 
 ### Common Tab {#common}

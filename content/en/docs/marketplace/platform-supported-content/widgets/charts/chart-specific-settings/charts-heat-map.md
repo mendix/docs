@@ -30,7 +30,7 @@ The heat map does not use a series list. It uses one data source and draws a val
 
 ## General Section
 
-* **Show Scale** – If set to **Yes**, a color scale is shown on the right side of the chart.
+* **Show Scale** – If set to **Yes**, a color scale is shown on the right side of the chart. The properties on the **Scale** tab are visible only when this property is set to **Yes**.
 
 The heat map also has the **X axis label**, **Y axis label**, and **Grid lines** properties described in [General Section](/appstore/widgets/charts/#general). It does not have the **Show legend** property.
 
@@ -41,12 +41,16 @@ The heat map also has the **X axis label**, **Y axis label**, and **Grid lines**
 * **Show values** – If set to **Yes**, the value of each cell is shown on the chart.
 * **Font value color** – The font color of the values shown on the chart.
 
-**Smooth color**, **Show values**, and **Font value color** are visible only when [Enable advanced options](/appstore/widgets/charts/#enable-advanced-options) is set to **Yes**.
+**Colors** is visible only when **Show Scale** is set to **Yes**. **Smooth color** and **Show values** are visible only when **Show Scale** and [Enable Advanced Options](/appstore/widgets/charts/#enable-advanced-options) are both set to **Yes**. **Font value color** is also visible only when **Show values** is set to **Yes**.
 
 ## Events Section
 
 * **On click action** – The action that runs when the user clicks a cell.
 * **Tooltip hover text** – The text template for the message shown when the user hovers over a cell.
+
+## Advanced Section
+
+In addition to the common [Advanced](/appstore/widgets/charts/#advanced) properties, the **Advanced** tab of the heat map has a **Custom series options** property. It holds a JSON object with advanced configuration for the heat map series. For more information, see [Custom Series Settings](/appstore/widgets/charts/#custom-series-settings). This property is visible only when **Enable Advanced Options** is set to **Yes**.
 
 ## Read More
 

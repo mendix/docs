@@ -17,19 +17,19 @@ Almost any arbitrary custom HTML configuration can be used with HTML Element. He
 
 * Embedded video:
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-embedded-html.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-embedded-html.png" alt="HTML Element widget showing an embedded video" class="no-border" >}}
 
 * Text formatting:
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-formatting-text.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-formatting-text.png" alt="HTML Element widget showing formatted text" class="no-border" >}}
 
 * Building a custom UI component:
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-custom-ui.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-custom-ui.png" alt="HTML Element widget showing a custom UI component" class="no-border" >}}
 
 * Custom-tailored HTML:
 
-    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-tailored-html.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-tailored-html.png" alt="HTML Element widget showing custom-tailored HTML" class="no-border" >}}
 
 ## Configuration
 
@@ -44,19 +44,26 @@ To configure this widget, follow these steps:
 #### HTML Element Section
 
 * **Tag name** – Sets the type of the element (such as div, span, or img). If you would like to add a custom name for the element, select **Use custom name** in the drop-down menu.
+* **Custom tag** (Visible if **Tag name** is set to **Use custom name**) – The name of the custom element. The `script` tag is not supported.
+    * Default: **div**
 * **Repeat element**
     * **Yes** – If selected, repeats the element for each item in the data source assigned.
     * **No** (default) – If selected, the element is rendered once. 
-* **Content**
+* **Data source** (Visible if **Repeat element** is set to **Yes**) – The data source that provides the items for which the element is repeated.
+* **Content** – Not available for void elements that cannot have children, such as `img`.
     * **Container for widgets** (default) – If selected, the widget acts as a container for other widgets.
     * **HTML** – If selected, uses custom HTML markup as defined in the HTML settings. 
-* **HTML** (Visible if **Content** option is set to **HTML**) – Can be either an expression or a text template. This defines custom HTML markup for the widget, therefore the value should be valid HTML as it will be inserted as HTML element content.
+* **HTML** (Visible if **Content** option is set to **HTML**) – A text template that defines custom HTML markup for the widget, therefore the value should be valid HTML as it will be inserted as HTML element content.
+* **Content** (Visible if **Content** option is set to **Container for widgets**) – The widgets placed inside the element.
 
 #### HTML Attributes Section
 
-* **Attributes** – sets the attributes to be assigned into the HTML element.
+* **Attributes** – sets the attributes to be assigned into the HTML element, for example `title` or `href`. If `class` or `style` is added as an attribute, it is merged with the widget's **Class** or **Style** property. For events such as `onClick`, use the [Events](#events-tab) tab. Each attribute has the following properties:
+    * **Name** – The name of the attribute. Each attribute name must be unique.
+    * **Value based on** – Determines whether the value is an **Expression** (default) or a **Text template**.
+    * **Value** – The value of the attribute.
 
-### Events Tab
+### Events Tab {#events-tab}
 
 Sets the events for the created HTML element.
 

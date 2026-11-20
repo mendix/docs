@@ -19,26 +19,26 @@ The widget does the following:
 
 The Progress Bar widget requires three values: a **Minimum value** and **Maximum value** to describe the full range of progress as well as a **Current value** to indicate the progression on that range. 
 
-These values can be provided in three different ways: as a **Static** integer value, a **Dynamic** integer value, or an **Expression**. An On Click Action can be set onto the progress bar to trigger custom logic during click interactions.
+These values can be provided in three different ways, set with the **Type** property: as a **Static** integer value (default), a **Dynamic** value from a Decimal, Integer, or Long attribute, or an **Expression** that returns a Decimal. The default static values are 0 for **Minimum value**, 100 for **Maximum value**, and 50 for **Current value**. An **On click** action can be set onto the progress bar in the **Events** section to trigger custom logic during click interactions.
 
 ### Label
 
 Configuring the label on the progress bar can be done on the **Progress Label** tab and has the following options:
 
-* Whether to show a label or not
-* The type of the label:
-    * **Text**: a custom text
+* **Show label** – whether to show a label or not (default: **No**)
+* **Label type** – the type of the label:
+    * **Text** (default): a custom text, set in **Label text**
     * **Percentage**: the **Current value** converted onto the configured range as a percentage. 
-    * **Custom**: a custom widget
+    * **Custom**: a custom widget, placed in **Custom label**
 
 ### Styling
 
 Under the **Appearance** tab, the following styling properties can be adjusted for the progress bar:
 
-* Striped bar: whether the bar should be striped or plain
-* Bar color based on brand styling
-* Size (small, medium, and large)
-    * Note that when the size is configured to small no label will be shown due to limited space, and text labels will be included as a tooltip that shows on hover
+* **Striped bar**: whether the bar should be striped or plain
+* **Bar color** based on brand styling: **Primary**, **Success**, **Warning**, or **Danger**
+* **Size** (**Small**, **Medium**, and **Large**)
+    * Note that when the size is configured to small no label will be shown due to limited space: text and percentage labels are shown as a tooltip on hover, and custom labels are ignored
 
 ## Widgets Below Version 2.0.0
 

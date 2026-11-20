@@ -65,6 +65,9 @@ The **Crop area** section is used to configure the shape and proportions of the 
 * **Custom aspect height** (default **1**) – The height side of the ratio (for example, *2* in 3:2).
     * Configurable when **Aspect ratio** is set to **Custom**.
     * When either the custom width or custom height is not greater than *0*, the selection falls back to a free-form shape.
+* **Initial crop size (%)** (default **80**) – Sets the size of the crop box when it first appears and after a reset.
+    * The value is a percentage (1–100) of the largest box that fits the image at the selected aspect ratio.
+    * The crop box is centered. A value of *100* makes the crop box as large as possible.
 
 {{< figure src="/attachments/appstore/platform-supported-content/widgets/image-cropper/image-cropper-circle-demo.gif" alt="Cropping an image with a circular crop shape" class="no-border" >}}
 
@@ -130,6 +133,27 @@ The **Zoom** section is used to configure how the end-user zooms the image. It i
     * A value of *4* means the image can be zoomed up to four times the canvas size.
     * This value must be greater than **Minimum zoom**.
 
+### Accessibility Tab {#accessibility}
+
+#### Toolbar Captions Section
+
+The **Toolbar captions** section is used to configure the visible texts of the widget. It includes the following properties:
+
+* **Grayscale caption** (default **Grayscale**) – The visible text and tooltip for the grayscale toggle.
+* **Reset caption** (default **Reset**) – The visible text and tooltip for the reset button.
+* **Zoom caption** (default **Zoom**) – The visible label for the zoom slider.
+* **No image message** (default **No uploaded image to crop**) – The message shown when no image is bound to the image attribute.
+
+#### Aria Labels Section
+
+The **Aria labels** section is used to configure the accessible names that screen readers announce. It includes the following properties:
+
+* **Rotate left** (default **Rotate left**) – The accessible name and tooltip for the rotate-left button.
+* **Rotate right** (default **Rotate right**) – The accessible name and tooltip for the rotate-right button.
+* **Grayscale** (default **Grayscale**) – The accessible name for the grayscale toggle.
+* **Reset** (default **Reset crop**) – The accessible name for the reset button.
+* **Zoom** (default **Zoom**) – The accessible name for the zoom slider.
+
 ### Output Tab {#output}
 
 #### Output Section
@@ -148,7 +172,7 @@ The **Output** section is used to configure the format and resolution of the sav
 
 ## Usage
 
-When the widget loads, it shows the image bound to the **Image attribute** with a default crop box centered on the image and covering 80% of it at the configured aspect ratio. If no image is available, the widget shows a **No image** message.
+When the widget loads, it shows the image bound to the **Image attribute** with a crop box centered on the image. The crop box covers the percentage set in **Initial crop size (%)** of the largest box that fits the image at the configured aspect ratio. If no image is available, the widget shows the **No image message**.
 
 The end-user edits the image as follows:
 

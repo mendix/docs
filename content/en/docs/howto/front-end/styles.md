@@ -24,7 +24,7 @@ Add these classes to an element to change the text color to your theme colors:
 
 * `text-default`: default text color
 * `text-primary`: primary brand color
-* `text-info`: info brand color
+* `text-info`: info color (a light shade of the primary color)
 * `text-success`: success brand color
 * `text-warning`: warning brand color
 * `text-danger`: danger brand color
@@ -40,12 +40,12 @@ These are standard useful text colors:
 The background colors are based on your theme colors. These are the same colors as for the buttons:
 
 * `background-primary`: primary background color
-* `background-info`: info background color
+* `background-info`: info background color (a light shade of the primary color)
 * `background-success`: success background color
 * `background-warning`: warning background color
 * `background-danger`: danger background color
 
-A lighter variant of the background color also sets the matching foreground color:
+These background classes come from Bootstrap. Their colors are fixed and do not follow your theme colors:
 
 * `bg-primary`: primary background color
 * `bg-info`: info background color
@@ -77,7 +77,11 @@ For more information on shades, see the [Using Color Shades](/howto/front-end/cu
 
 These are useful classes for text items:
 
+* `text-small`: small text
+* `text-large`: large text
+* `text-light`: light text
 * `text-normal`: normal text
+* `text-semibold`: semibold text
 * `text-bold`: bold text
 * `text-break`: breaks text over multiple lines
 * `text-uppercase`: transforms the text to upper case
@@ -127,6 +131,10 @@ Change the way items appear in a list:
 * `listview-striped`: list view widget with striped list view items
 * `listview-seperated`: list view widget with list view items separated
 * `listview-stylingless`: list view widget without spacing and background
+* `listview-bordered`: list view widget with a border around each list view item
+* `listview-hover`: list view widget with a hover color on list view items
+* `listview-sm`: list view widget with small padding in list view items
+* `listview-lg`: list view widget with large padding in list view items
 
 ## Alerts
 

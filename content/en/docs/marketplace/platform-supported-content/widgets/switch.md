@@ -15,11 +15,13 @@ To use this widget, place it in a [data container](/refguide/data-sources/) that
 
 The widget offers the following for configuration:
 
-* A Boolean attribute to toggle on user-interaction
-* An action (such as Microflow or Nanoflow) to trigger when the Switch is toggled
-* A **Device style** design property with two options (`iOS` and `Android`) influencing the Switch's appearance
-* A **Style** design property for brand styling, influencing the Switch's colors
+* A **Boolean attribute** to toggle on user-interaction
+* An **On change** action (such as Microflow or Nanoflow) to trigger when the Switch is toggled
+* A **Device style** design property with two options (`iOS` and `Android`) influencing the Switch's appearance; when no option is selected, the iOS style is applied
+* A **Style** design property for brand styling, influencing the Switch's colors, with the options **Brand Primary**, **Brand Secondary**, **Brand Success**, **Brand Warning**, and **Brand Danger**
 * [Common properties](/refguide/common-widget-properties/)
+
+Clicking the widget's label also toggles the switch.
 
 This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).
 

@@ -75,6 +75,30 @@ The shades are calculated in the browser from the base color, so you do not have
 
 Lighter shades are mixed with `--color-base` (white by default), and darker shades are mixed with `--color-contrast` (black by default).
 
+#### Styling the Navigation Bars {#navigation-bars}
+
+In Atlas Core 4.6.0 and above, the navigation bars do not follow `--brand-primary`. Each layout has one primary bar (dark by default) and at most one secondary bar (light by default):
+
+| Layout | Primary Bar | Secondary Bar |
+| --- | --- | --- |
+| **Atlas_SideBar** | Sidebar | Top bar |
+| **Atlas_Default** | Top bar | Sidebar |
+| **Atlas_TopBar** | Top bar | None |
+
+To restyle the bars in every layout, set the `--bar-primary-*` and `--bar-secondary-*` variables. Each set has the variables `bg`, `bg-hover`, `bg-active`, `color`, `color-hover`, `color-active`, `sub-color`, `title-color`, `border-color`, and `edge`, for example `--bar-primary-bg` and `--bar-secondary-title-color`:
+
+```scss
+:root {
+    --bar-primary-bg: #0a2540;
+    --bar-primary-color: #d0d7de;
+    --bar-primary-title-color: #ffffff;
+}
+```
+
+Atlas Core does not set the region variables, such as `--topbar-bg`, `--sidebar-bg`, the `--navsidebar-*` and `--navtopbar-*` colors, and `--navigation-color`. You can still set them to give one region the same look in every layout. If you set only the background of a region, also set the text colors of that region (or `--navigation-color`). Otherwise, the text is dark where that region is the secondary bar.
+
+Layouts that you copy from Atlas Core get the bar colors only if they keep the `region-topbar` and `region-sidebar` classes. To show the app logo and app name, add the **AppInfo** snippet from Atlas Core. The app name uses the title color of the bar, unless you set `--navbar-brand-name`. The logo height is set by `--brand-logo-height`, and the width follows the logo. To replace the default logo, add your own *logo.svg* to *theme/web*, or to the **public** folder of a theme module.
+
 ### Using the Styling Editor {#styling-editor}
 
 The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) under App Explorer's **Styling** node. When you double-click a styling file, it will be opened in the styling editor:
@@ -381,7 +405,7 @@ The bullets below describe the file structure for the theme folder and for modul
             * *themes/_theme-default.scss* – This file contains all the theme settings (CSS variables) with their default values. Use it as a reference for the variables that can be overridden in your app.
             * *design-properties.json* – This file contains the design properties for the standard Mendix supported widgets.
         * **native** – This folder (and subfolders) contain the native mobile resources for the standard Mendix supported widgets.
-        * **public** – This folder contains the font files of the default font.
+        * **public** – This folder contains the bundled font files, the default app logo (*logo.svg*), and the default chart palette (*com.mendix.charts.json*). To override the logo or the chart palette, add a file with the same name to *theme/web* or to the **public** folder of a theme module.
     * **{MODULE_NAME}** – Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.
         * **web** – This folder contains re-usable web resources
             * *main.scss* – This file is the starting point for the module web based styling.
@@ -709,7 +733,7 @@ When an end-user opens a Mendix app in an unsupported browser, a page is shown t
 
 ## Serving Fonts Locally (Web) {#local-fonts}
 
-By default, Atlas uses the font Poppins. The font files are part of the Atlas Core module (*themesource/atlas_core/public/resources/fonts/poppins*) and are served by your own app. No font files are loaded from an external Content Delivery Network (CDN), which helps you comply with stricter [CSP](/howto/security/csp/) policies.
+In Atlas Core 4.6.0 and above, the default font (`--font-family-base`) is the system font stack of the device, so no font files are downloaded. Atlas Core still includes the font Poppins, which was the default font in earlier versions. The font files are part of the Atlas Core module (*themesource/atlas_core/public/resources/fonts/poppins*) and are served by your own app. No font files are loaded from an external Content Delivery Network (CDN), which helps you comply with stricter [CSP](/howto/security/csp/) policies. To use Poppins, set `--font-family-base: "Poppins", sans-serif;` in the `:root` block of your theme file.
 
 ### Using a Different Font
 

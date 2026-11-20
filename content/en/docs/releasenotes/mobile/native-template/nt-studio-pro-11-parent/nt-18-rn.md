@@ -1,7 +1,7 @@
 ---
 title: "Native Template 18"
 url: /releasenotes/mobile/nt-18-rn/
-weight: 7
+weight: 85
 description: "Native Template 18"
 ---
 

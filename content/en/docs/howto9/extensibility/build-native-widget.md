@@ -32,7 +32,8 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the latest version of Mendix Studio Pro
+* Install the latest version of Mendix Studio Pro.
+* Install the latest version of Visual Studio Code.
 * Install the Mendix Make It Native app on a mobile device or an emulator.
 * Install the LTS version of [Node.js](https://nodejs.org).
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
@@ -46,8 +47,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 To build a group box widget for native mobile, you will follow these steps:
 
 1. Scaffold a pluggable widget app.
-2. Create a Mendix test app.
-3. Build the group box widget.
+1. Create a Mendix test app (MyTestProject).
+1. Build the group box widget.
 
 The following subsections will elaborate on each of these steps.
 
@@ -58,17 +59,18 @@ The Pluggable Widget Generator is the quickest way to start developing a pluggab
 To scaffold your app folder for the group box widget, follow these steps:
 
 1. Open up a terminal.
-2. Change the current working directory to the folder where you want to store your widget app.
+1. Make a new directory where you want to store your widget app. This tutorial assumes it will be located and named the following: **./test/MxTestApp/**
+1. Change the current working directory to the folder you just created.
 
     {{% alert color="info" %}}Make sure to store your widget app in a folder not connected to Dropbox. Dropbox blocks files from being watched, which will prevent you from completing this document.{{% /alert %}}
 
-3. Start the generator by executing the following command:
+1. Start the generator by running the following command in terminal:
 
     ```shell
     npx @mendix/generator-widget@10.24-latest GroupBox
     ```
 
-4. The generator will ask you for some input during setup. Provide this information to the generator:
+1. The generator will ask you for some input during setup. Provide this information to the generator:
 
     * Widget name: {*GroupBox*}
     * Widget description: {*Widget to group building blocks, snippets, or other widgets.*}
@@ -79,21 +81,22 @@ To scaffold your app folder for the group box widget, follow these steps:
     * Author: {*Mendix*}
     * Mendix app path: {*./test/MxTestApp/*}
     * Programming language: {**TypeScript**}
+    * Which type of components do you want to use? {**Function Components**}
     * Widget type: {**For native mobile apps**}
     * Widget template: {**Empty widget (recommended for more experienced developers)**}
     * Unit tests: {**No**}
 
     {{< figure src="/attachments/howto9/extensibility/build-native-widget/pluggable-widget-generator-input.png" alt="Pluggable Widget Generator input" class="no-border" >}}
 
-5. Your widget will build. If your app has been scaffolded correctly, you will see the following message:
+1. Your widget will build. If your app has been scaffolded correctly, you will see the following message:
 
     `> Widget successfully built!! Please open Mendix Studio Pro and start playing with your new widget.`
 
-Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded pluggable widget app with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
+Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded pluggable widget app with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`. Also mark that in the folder C:\\Mendix\MyTestProject\CustomWidget\ there is a new folder called "GroupBox".
 
 ### Creating a Mendix Test App
 
-In order to test your group box widget, you will a Mendix application that uses this widget in various ways. Create a Mendix app for this application by following these steps:
+In order to test your group box widget, you will need a Mendix application that uses this widget in various ways. Create a Mendix app (MyTestProject) for this application by following these steps:
 
 1. Open Studio Pro.
 2. Create a new app by clicking **File** > **New App**.
@@ -115,7 +118,7 @@ Follow these steps to add the Mendix app as a test app to your widget app, so th
 1. Close the app in Mendix Studio Pro by clicking **File** > **Close App**.
 2. Move the contents of the Mendix app folder into **test/MxTestApp**, which is located inside your group box widget app folder.
 
-Create a test case by following these steps:
+Back in your **MyTestProject**, it is now time to create a test case, using following these steps:
 
 1. Open the Mendix test app in **test/MxTestApp** by selecting **File** > **Open App**.
 2. In the **Open App** dialog box, select **Locally on disk**.
@@ -133,7 +136,7 @@ Create a test case by following these steps:
 
 9. Double-click the widget, fill in your name as the **Default value**, and click **OK**.
 
-You have set up your test app. To verify that your Mendix test app is set up correctly, follow these steps:
+You have set up your **MyTestProject** test app. To verify that your Mendix test app is set up correctly, follow these steps:
 
 1. In Studio Pro, run the test app locally.
 2. Use the Make It Native app to open your new app.
@@ -185,13 +188,13 @@ Define the structure and default style of the group box widget with these steps:
 
 3. Open up a terminal.
 4. Change the current working directory to your app folder.
-5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test app:
+5. Run the following command in terminal to bundle your widget and update the widget bundle in your Mendix test app:
 
     ```shell
     npm start
     ```
 
-    The executed script will keep watching your source files and rebundle the widget every time you save one of these files.
+    The script will keep watching your source files and rebundle the widget every time you save one of these files.
 
 6. Open your Mendix test app in **test/MxTestApp** in Mendix Studio Pro.
 7. Run the app locally.
@@ -702,7 +705,7 @@ Now make it possible to expand or collapse the group box:
     };
     ```
 
-6. Let the **Touchable** component execute the **toggleCollapsed** method when it is tapped. Also, add a switch between a plus and minus character in the header depending on the state. The **renderHeader** method should look as follows:
+6. Let the **Touchable** component run the **toggleCollapsed** method when it is tapped. Also, add a switch between a plus and minus character in the header depending on the state. The **renderHeader** method should look as follows:
 
     ```tsx
     private renderHeader = () => {

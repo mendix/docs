@@ -113,14 +113,15 @@ Hugo shortcodes start with `{{`. Some common ones:
   {{< figure src="/attachments/quickstarts/part1/3.login.png" alt="Sign in to Studio Pro" max-width="80%" >}}
   ```
 
-* `alert` – Callouts of `color` (required) `info` or `warning`.
+* `alert` – Callouts of `color` (required) `info` or `warning`. Use one for information that doesn't fit the flow of text: `info` for context, such as a version-specific behavior, and `warning` for risk, such as data loss, an action that can't be undone, or a beta feature. Keep alerts to one or two short paragraphs.
+
   ```md
   {{% alert color="warning" %}}
   This action cannot be undone.
   {{% /alert %}}
   ```
 
-* `icon` – Inline SVG icons stored in `static/mx-icons` (`name` required, optional `color`) for use in UI descriptions.
+* `icon` – Inline SVG icons (`name` required, optional `color`). Choose `name` from the file names in `static/mx-icons`, without `.svg`. Show an icon in parentheses after its bold tooltip text, like this:
 
   ```md
   Click **Delete** ({{< icon name="trash-can" >}}).
@@ -139,9 +140,9 @@ Less common shortcodes (`button`, `expandable-table`, `youtube`, `vidyard`, `swa
 
 If asked to create new content:
 
-1. Read the appropriate template from `templates/`: `how-to-template.md`, `reference-template.md`, `marketplace-component-page-template.md`, or `release-notes-template.md`.
+1. Read the appropriate template from `templates/`.
 2. Use Write tool to create the new file based on the template.
-3. Remove comment lines (`#`) from the template.
+3. Remove the guidance comments from the template: `#` comments and inline comments in the front matter, and `[//]: #` comments in the body. Complete `title`, `url`, and `description`.
 4. Follow the editorial workflow above.
 
 For all pages, required sections are front matter and the introduction; other sections vary by content type.

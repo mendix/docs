@@ -36,7 +36,7 @@ The *Latest Released Version* column shows the most recent version for Agents Ki
 | App | Description | Latest Released Version |
 | --- | --- | --- |
 | [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Explore example use cases for Agents Kit connectors and modules, including multi-agent patterns, exposing and consuming tools via MCP, interactive chatbots, RAG, function calling, image generation, and semantic search. | 9.16.0 |
-| [Snowflake Showcase App](https://marketplace.mendix.com/link/component/225845) | Learn how to use Snowflake connectors to read and write data, leverage Snowflake Cortex ML and LLM capabilities, chat with structured data using Cortex Analyst, and implement role-based access control. | 4.0.0 |
+| [Snowflake Showcase App](https://marketplace.mendix.com/link/component/225845) | Learn how to use Snowflake connectors to read and write data, leverage Snowflake Cortex ML and LLM capabilities, chat with structured data using Cortex Analyst, and implement role-based access control. | 4.2.0 |
 
 ### Core Modules {#core-modules}
 
@@ -65,7 +65,7 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
 | [MCP Client](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 3.1.0 |
-| [MCP Server](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 4.1.1 |
+| [MCP Server](/agents/agents-kit-1/reference-guide/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 4.1.2 |
 
 {{% alert color="info" %}}
 Older versions of some modules and the GenAI Showcase App are available in Studio Pro 9.24.2.

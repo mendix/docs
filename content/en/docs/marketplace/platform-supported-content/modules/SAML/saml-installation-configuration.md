@@ -62,7 +62,7 @@ If you use this method, do not forget to set the **SSOLandingPage** constant to 
 
 The table below introduces you to several key updates when you upgrade the SAML module from V3.x to V4.x.
 
-{{% expandable-table title="Changes in SAML Module Version 4.X" %}}
+{{< expandable-table title="Changes in SAML Module Version 4.X" >}}
 
 | Feature | Changes in Version 4.X |
 | --- | --- |
@@ -72,7 +72,7 @@ The table below introduces you to several key updates when you upgrade the SAML 
 | InCommon Federation Support | Pre-configured support for InCommon Federation has been removed. You now need to create custom user provisioning microflows in version 4.0.0 |
 | MxModeleReflection | In the **MxObjects_Overview** page, the MxModeleReflection module refresh is no longer required. It is handled automatically in the **SAML20.Startup**. |
 
-{{% /expandable-table %}}
+{{< /expandable-table >}}
 
 ## Choosing a SAML Configuration Approach{#config-approach}
 
@@ -220,7 +220,7 @@ The following entities are used to create IdP configurations:
 
 The table below shows you the different attributes and their values for quick reference. You can see the details of these attributes of the above entities in the [Reference Guide for SAML IdP Configuration](/appstore/modules/saml/idp-attributes/) document.
 
-{{% expandable-table title="IdP Configuration Attributes" %}}
+{{< expandable-table title="IdP Configuration Attributes" >}}
 
 | IDPConfiguration(Non-Persistable entity) | Description | Default Value |
 | --- | --- | --- |
@@ -260,7 +260,7 @@ The table below shows you the different attributes and their values for quick re
 | **EncryptionKeyLength** | This constant represents the Encryption length | 2048 bits |
 | Active | After completion of IdP config it will make the Toggle Active | true |
 
-{{% /expandable-table %}}
+{{< /expandable-table >}}
 
 Deploy the application and log in with the SSO. For more information, see the [Deploy the Application and Login with SSO](#deploy-application) section above.
 

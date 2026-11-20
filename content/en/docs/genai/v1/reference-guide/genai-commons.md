@@ -17,7 +17,7 @@ Looking for Mendix's newest agentic and generative AI features? [This page has b
 
 The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/agents/agents-kit-1/reference-guide/conversational-ui/) module.
 
-Connectors that adhere to the GenAI Commons module can be easily swapped, reducing dependency on model providers. The connectors provide a drag-and-drop experience for implementing AI capabilities and help you get started quickly. The module exposes useful operations for building requests to a large language model (LLM) and handling responses.
+Connectors that adhere to the GenAI Commons module can be swapped, reducing dependency on model providers. The connectors provide a drag-and-drop experience for implementing AI capabilities and help you get started. The module exposes useful operations for building requests to a large language model (LLM) and handling responses.
 
 If you want to connect to another LLM provider or your own service, Mendix recommends using the GenAI Commons module in this case too. This speeds up development and ensures that common principles are taken into account. Other developers or consumers of the connector can also adapt to it more quickly.
 
@@ -452,13 +452,13 @@ Use the exposed microflows and Java Actions to map the required information for 
 
 #### GenAI (Generate) {#genai-generate}
 
-Chat completions, embeddings, and image generation operations can be used by passing a [DeployedModel](#deployed-model) object of the desired connector. The action calls the internally assigned microflow of the connector and returns the response. Operations from different connectors can be exchanged very easily without much additional development effort.
+Chat completions, embeddings, and image generation operations can be used by passing a [DeployedModel](#deployed-model) object of the desired connector. The action calls the internally assigned microflow of the connector and returns the response. Operations from different connectors can be exchanged without much additional development effort.
 
 It is recommended that you adapt to the same interface when developing custom chat completions or image generation operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 
 ##### Chat Completions (With History) {#chat-completions-with-history}
 
-The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop) module, this is automatically handled.
+The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [tool calls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop) module, this is automatically handled.
 
 ###### Input Parameters
 
@@ -475,7 +475,7 @@ The `Chat Completions (with history)` operation supports more complex use cases 
 
 ##### Chat Completions (Without History) {#chat-completions-without-history}
 
-The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop).
+The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [tool calls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/agents/agents-kit-1/reference-guide/conversational-ui/#human-in-the-loop).
 
 ###### Input Parameters
 
@@ -508,7 +508,7 @@ The `Generate Embeddings (Chunk Collection)` operation allows the invocation of 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | An response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |
+| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | A response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |
 
 ##### Generate Embeddings (String) {#embeddings-string}
 
@@ -671,7 +671,7 @@ This microflow does not have a return value.
 
 ##### Tools: Add Knowledge Base {#add-knowledge-base-to-request}
 
-This tool adds a function that performs a retrieval from a knowledge base to a [ToolCollection](#toolcollection) that is part of a Request. Use this microflow when you have knowledge bases in your application that may be called to retrieve the required information as part of a GenAI interaction. If you want the model to be aware of these knowledge base, you can use this operation to add them as functions to the request. If supported by the LLM connector, the chat completion operation calls the appropriate knowledge base function based on the LLM response and continue the process until the assistant's final response is returned.
+This tool adds a function that performs a retrieval from a knowledge base to a [ToolCollection](#toolcollection) that is part of a Request. Use this microflow when you have knowledge bases in your application that may be called to retrieve the required information as part of a GenAI interaction. If you want the model to be aware of these knowledge bases, you can use this operation to add them as functions to the request. If supported by the LLM connector, the chat completion operation calls the appropriate knowledge base function based on the LLM response and continues the process until the assistant's final response is returned.
 
 `ConsumedKnowledgeBase` objects have provider-specific specializations, for example, `MxCloudKnowledgeBaseResource` for Mendix Cloud.
 
@@ -746,7 +746,7 @@ Use this microflow to get the list of references that may be included in the mod
 
 | Name | Type | Description |
 |---|---|---|
-| `ReferenceList` | List of [Reference](#reference) | The references with optional citations were part of the response message. |
+| `ReferenceList` | List of [Reference](#reference) | The references with optional citations that were part of the response message. |
 
 ##### Get Response Text {#chat-get-model-response-text}
 
@@ -789,8 +789,8 @@ This microflow creates new [ImageOptions](#imageoptions-entity).
 
 | Name | Type | Notes | Description |
 |--- |--- |--- |--- |
-| `Height` | Integer/Long | optional | To set Width. |
-| `Width` | Integer/Long | optional | To set Height. |
+| `Height` | Integer/Long | optional | To set Height. |
+| `Width` | Integer/Long | optional | To set Width. |
 | `NumberOfImages` | Integer/Long | optional | To set NumberOfImages to create. |
 
 ###### Return Value
@@ -998,7 +998,7 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 
 #### `ENUM_ModelModality` {#enum-modalmodality}
 
-`ENUM_ModelModality` describes the modalities that the model supports input or output.
+`ENUM_ModelModality` describes the modalities that the model supports as input or output.
 
 | Name | Caption | Description |
 | --- | --- | --- |

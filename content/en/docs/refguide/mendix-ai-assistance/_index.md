@@ -22,10 +22,10 @@ This foundation has the following practical results for you as a developer:
 
 Maia works with professional developers; it does not replace them. Maia takes on tasks such as creating a first version of a document, applying conventions, explaining existing logic, and detecting anti-patterns. You keep ownership of the requirements, the architecture, and the quality of your app. For more information on this approach, see [Agentic and Model-Driven Development](/refguide/agentic-development/).
 
-Maia does not use any project, customer, company, or user-entered data for model training. Maia operates on pre-trained, off-the-shelf large language models (LLMs). For more information on Mendix data storage policies and practices for Maia, see [Maia Privacy Policy](https://www.mendix.com/legal/privacy/maia/). 
+Maia's agentic capabilities do not use any project, customer, company, or user-entered data for model training. Maia operates on pre-trained, off-the-shelf large language models (LLMs). The Maia recommenders leverage machine learning capabilities built on anonymized application data. For more information on Mendix data storage policies and practices for Maia, see [Maia Privacy Policy](https://www.mendix.com/legal/privacy/maia/). 
 
 {{% alert color="info" %}}
-You can use the **Usage Data** setting on the **Advanced** tab of the Studio Pro **Preferences** dialog to prevent Studio Pro from sending usage data to Mendix, including prompts entered when using Maia features in Studio Pro. When this setting is set to **No**, prompts entered are not stored by Mendix and are not used for analytics. Disabling this setting may affect the behavior of some features in Studio Pro. For more information, see the [Usage Data](/refguide/preferences-dialog/#usage-data) section in *Preferences*. 
+You can use the **Usage Data** setting on the **Advanced** tab of the Studio Pro **Preferences** dialog to prevent Studio Pro from sending usage data to Mendix for analytics purposes, including prompts entered when using Maia features in Studio Pro. When this setting is set to **No**, prompts entered are not stored by Mendix and are not used for analytics. Mendix does temporarily capture data for 14 days for troubleshooting purposes, but this data is not retained for analytics. Disabling this setting may affect the behavior of some features in Studio Pro. For more information, see the [Usage Data](/refguide/preferences-dialog/#usage-data) section in *Preferences*. 
 
 This setting does not prevent data from being sent to third-party services used by certain Maia features and applies only to Maia capabilities in Studio Pro. It does not affect [Maia in Mendix Portal](/portal/maia/#maia-capabilities-in-mendix-portal).
 {{% /alert %}}
@@ -51,7 +51,7 @@ Maia is available at each stage of the application lifecycle. In Studio Pro, Mai
 | Understand and get guidance | Explains existing documents and consistency errors, and applies your team conventions. |  <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Maia Explain](/refguide/maia-explain/)</li><li>[Agent Instructions](/refguide/maia-agent-instructions/)</li><li>[Agent Skills](/refguide/maia-agent-skills/)</li>|
 | Improve quality | Detects anti-patterns, explains their impact, and fixes some of them automatically. Explains and solves consistency errors. |  <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Best Practice Recommender](/refguide/best-practice-recommender/)  |
 | Localize | Creates and updates translations of the texts in your app (Studio Pro 11.15 and above). | <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Translation Generator](/refguide/translation-generator/)</li>  |
-| Work with external AI agents | Lets external AI agents use Maia capabilities, and lets Maia use your own AI provider. | <ul><li>[Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)</li><li>[Maia Plan as MCP Server](/developerportal/maia-plan-mcp/)</li><li>[Custom AI provider](/refguide/maia-make/#custom-provider) (beta)</li>   |
+| Work with external AI agents | Lets external AI agents use Maia capabilities, and lets Maia use your own AI provider. | <ul><li>[Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)</li><li>[Maia Plan as MCP Server](/developerportal/maia-plan-mcp/)</li><li>[Custom AI provider](/refguide/maia-make/#custom-provider) </li>   |
 | Operate and evolve | Summarizes application logs, organizes end-user feedback, and changes existing documents for new requirements. | <ul><li>[AI Log Summary](/developerportal/maia-operate/ai-log-summary/) (beta)</li><li>[Maia for Feedback](/portal/maia/#maia-capabilities-in-mendix-portal)</li><li> [Maia Make](/refguide/maia-make/)</li> |
 
 ## Ways to Work with Maia {#ways-to-work}
@@ -132,7 +132,7 @@ In Studio Pro 11.8 and above, [Maia Make](/refguide/maia-make/) replaces Maia Ch
 ### External AI Agents and AI Providers
 
 * [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) – The Studio Pro MCP Server exposes Maia capabilities to external AI agents and AI coding assistants through the Model Context Protocol (MCP). This is also known as bring your own agent (BYO Agent).
-* Custom AI provider – A custom AI provider lets Maia use your own LLM provider instead of the Mendix platform AI service. This is also known as bring your own LLM (BYO LLM). This feature is available in Studio Pro 11.12 and above as a beta feature. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section in *Maia Make Capabilities*.
+* Custom AI provider – A custom AI provider lets Maia use your own LLM provider instead of the Mendix platform AI service. This is also known as bring your own LLM (BYO LLM). This feature is available in Studio Pro 11.12 and above. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section in *Maia Make Capabilities*.
 
 For an overview of how these options work together, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
 
@@ -167,13 +167,13 @@ To ensure the smooth operation of Mendix AI Assistance (Maia), the following net
 
 ## Maia Third-Party Services {#maia-third-party-services}
 
-{{% alert color="info" %}}
-As of Studio Pro 11.12, Maia Make uses Claude Sonnet 4.6.
-{{% /alert %}}
+[Maia Make](/refguide/maia-make/) uses the following Claude model, depending on your Studio Pro version. If you [configure a custom AI provider](/refguide/maia-make/#custom-provider), Maia Make sends requests to that provider instead.
 
-[Maia Make](/refguide/maia-make/), introduced in Studio Pro 11.8, uses Claude Sonnet 4.5. Any Maia Make capability in Studio Pro 11.8 and above uses this model to generate Mendix models. 
-
-If you [configure a custom AI provider](/refguide/maia-make/#custom-provider), Maia Make sends requests to the provider that you configure instead.
+| Studio Pro Version | Model |
+| --- | --- |
+| 11.12.7 and above in 11.12 | Claude Sonnet 5.5 |
+| 11.12 and above | Claude Sonnet 4.6 |
+| 11.8 and above | Claude Sonnet 4.5 |
 
 The table below presents all the third-party services each Maia capability uses for Studio Pro versions below 11.8, and what data are sent to the third-party services.
 

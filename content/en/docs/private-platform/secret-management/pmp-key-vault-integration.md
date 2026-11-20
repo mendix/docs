@@ -151,7 +151,7 @@ For environments which will use an `azure-wi` storage or database plan, the mana
 
 The configuration requires the following steps:
 
-1. The customer (portal user) or Mendix Operator [creates the environment](/private-mendix-platform/user-guide/#deploy) in the Private Mendix Platform wizard, selecting the following options:
+1. The customer (portal user) or Mendix Operator [creates the environment](/private-mendix-platform/apps/#deploy) in the Private Mendix Platform wizard, selecting the following options:
 
     * **Cluster** and **Namespace** - Select the cluster and namespace where you previously enabled secret store support.
     * **Database Plan** and **Storage Plan** - Select an azure-wi database and/or storage plan.
@@ -174,7 +174,7 @@ Kubernetes ServiceAccount does not exist, Private Mendix Platform detects that i
 
 The configuration requires the following steps:
 
-1. The customer (portal user) [creates the environment](/private-mendix-platform/user-guide/#deploy) in the Private Mendix Platform wizard, selecting the following options:
+1. The customer (portal user) [creates the environment](/private-mendix-platform/apps/#deploy) in the Private Mendix Platform wizard, selecting the following options:
 
     * **Cluster** and **Namespace** - Select the cluster and namespace where you previously enabled secret store support.
     * **Database Plan** and **Storage Plan** - Select a database and/or storage plan without `azure-wi`.

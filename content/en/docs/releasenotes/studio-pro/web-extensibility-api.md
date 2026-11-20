@@ -56,6 +56,23 @@ These release notes cover changes to the [Extensibility API for Web Developers](
 ### Fixes 
 
 * We fixed an issue where reloading an extension with open tabs caused an Oops crash.
+  
+## Version 11.12.7
+
+### New Features
+
+* We added a new API for interacting with the Maia agent chat (`studioPro.ai.chat`) to prefill the Maia chat window with input text and either let the user review it before sending it or automatically send it.
+* We added a feature flag API under `studioPro.featureFlags.isCommandLineFlagProvided("flag-name")` so developers can check if a specified feature flag exists in the command-line arguments when running Studio Pro from the terminal.
+
+### Fixes
+
+* We fixed a bug that caused permissions to be missing from the Extensions Overview tab when using an extension created with an older version of Studio Pro.
+  
+## Version 11.12.6
+
+### Improvements
+
+* We improved the Extensions Overview UI to be more modern and consistent with the rest of Studio Pro.
 
 ## Version 11.12.5
 

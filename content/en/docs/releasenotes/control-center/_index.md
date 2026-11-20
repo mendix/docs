@@ -4,8 +4,9 @@ linktitle: "Control Center"
 url: /releasenotes/control-center/
 description: "Release notes for Control Center"
 weight: 30
-numberless_headings: true
-#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
+cascade:
+    - numberless_headings: true
+#This document is mapped to the landing page. Update the link there if renaming or moving the doc file.
 ---
 
 These release notes cover changes to the app management functionality and other features of the [Mendix Control Center](/control-center/).

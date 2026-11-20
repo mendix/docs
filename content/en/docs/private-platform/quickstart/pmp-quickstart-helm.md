@@ -851,7 +851,7 @@ metadata:
   namespace: <namespace>
   annotations:
     privatecloud.mendix.com/environment-class: "true"
-+spec:
+spec:
   provider: azure
   parameters:
     clientID: "<client-id>"

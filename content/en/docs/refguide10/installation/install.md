@@ -127,8 +127,8 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
    5. Git for Windows (x64)
       * For Studio Pro versions 10.0.0 and 10.1.0, rename the *Git-2.37.1-64-bit.exe* executable to *git_for_windows_installer.exe*
       * For Studio Pro versions 10.2.0, 10.6.10 (or 10.6.x above 10.6.10), and 10.9.0, rename the *Git-2.41.0.3-64-bit.exe* executable to *git_for_windows_installer.exe*
-      * For Studio Pro versions 10.10.0 - 10.24.29, rename the *Git-2.43.0-64-bit.exe* executable to *git_for_windows_installer.exe*
-      * For Studio Pro versions 10.21.0 - 10.24.29, rename the *Git-2.48.1-64-bit.exe* executable to *git_for_windows_installer.exe*
+      * For Studio Pro versions 10.10.0-10.24.29, rename the *Git-2.43.0-64-bit.exe* executable to *git_for_windows_installer.exe*
+      * For Studio Pro versions 10.21.0-10.24.29, rename the *Git-2.48.1-64-bit.exe* executable to *git_for_windows_installer.exe*
       * For Studio Pro versions 10.24.30 and above, rename the *Git-2.56.0.4-64-bit.exe* executable to *git_for_windows_installer.exe*
    6. Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64)
       * The *MicrosoftEdgeWebview2Setup.exe* does not need to be renamed

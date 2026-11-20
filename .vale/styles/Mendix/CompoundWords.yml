@@ -14,6 +14,7 @@ scope:
 action:
   name: replace
 swap:
+  '([Aa])ir ?gapped': '$1ir-gapped'
   '([Cc])heck box': '$1heckbox'
   '([Dd])ata[ -]set': '$1ataset'
   '([Dd])ouble click (any|in|it|on|the|to)\b': '$1ouble-click $2'  # Matches the next word to exclude UI label hits

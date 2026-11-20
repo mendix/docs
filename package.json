@@ -31,5 +31,10 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "bootstrap": "^5.3.3"
+  },
+  "allowScripts": {
+    "github:google/docsy#01c827ea890e8e498f6046a7666a3031f318cc7f": true,
+    "hugo-extended@0.156.0": true,
+    "fsevents@2.3.3": true
   }
 }

@@ -47,7 +47,7 @@ CSV import supports multiple combinations of delimiter, quote, and escape charac
 
 Click **Preview Data** to view the data from the selected file.
 
-Data Importer creates the data structure based on the first ten rows of the source file and displays it in the **Source elements** section. If the file settings do not provide valid data, an error is displayed. To modify **Custom Name** or **Primitive Type**, edit the values directly in the source elements table.
+Data Importer creates the data structure based on the first ten rows of the source file and displays it in the **Source elements** section. If the file settings do not provide valid data, an error is displayed. To modify **Custom Name** or **Primitive Type**, edit the values directly in the source elements table, and the changes will automatically update in the module.
 
 {{% alert color="warning" %}}
 Column names that do not adhere to Mendix naming conventions are autocorrected. For Number cell types, the target Mendix type is mapped to **Decimal** to support both integers and decimals.
@@ -64,8 +64,7 @@ After previewing the data, go to the **Mapping** tab. You can either create a ne
 To create a new entity for the imported data, click **Create Entity**. In the dialog box:
 
 * Change the entity **Name**.
-* Rename Attributes: Use **Custom Name** in the **Source Element** tab to specify the new name to the attribute in the entity.
-* Change Attribute Data Type: Select the desired data type from the **Primitive Type** column drop-down list in the **Source Element** tab.
+* To rename the **Attributes** or to change attribute data type, use **Custom Name** and **Primitive Type** in the **Source Element** tab first.
 * Select which columns to include in the entity by selecting or clearing the checkbox next to each column.
 
 Click **Create** to create the entity. This creates the entity in your domain model and displays a confirmation message. The Data Importer document is then ready to use in [Import Data from File](/refguide/import-data-from-file/) to import data. For more details, see the [Using in the Import Data from File Activity](#using-in-the-activity) section below.
@@ -76,12 +75,12 @@ Click **Create** to create the entity. This creates the entity in your domain mo
 
 ### Selecting an Existing Entity {#selecting-an-existing-entity}
 
-To map the imported data to an existing non-persistable entity instead of creating a new one, click **Select Entity**, then select the entity in the dialog box and click **Select**.
+To map the imported data to an existing non-persistable entity instead of creating a new one, click **Select** on the **Mapping** tab. Select the entity in the dialog box and click **Select**.
 
 The **Mapping** tab then displays a table for mapping each imported column to an attribute of the selected entity. To map the columns, do one of the following:
 
 * Select an attribute for each column manually from the drop-down list.
-* Click **Map Attribute by Name** to automatically map columns to attributes with matching names.
+* Click **Map attributes by Name** to automatically map columns to attributes with matching names.
 
 To change the source file at any point, click **Remove File**, upload a new file, and reconfigure the document. Note that removing the file clears all structure elements and configured mappings.
 

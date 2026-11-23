@@ -64,7 +64,7 @@ Mendix recommends building user confirmation logic into function microflows that
 
 ### Supported OpenAI Models {#supported-models-openai}
 
-OpenAI's latest GPT-3.5 Turbo, GPT-4 Turbo, and GPT-4o models are trained with tool calling (function calling) data. Older model versions may not support parallel tool calls. For details, see [OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling/supported-models).
+Check which models support function calling for the Chat Completions API in the [OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling/supported-models).
 
 For models used through Microsoft Foundry, feature availability differs depending on the method of input and deployment type. For details, see [Microsoft Foundry Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#differences-between-openai-and-azure-openai-gpt-4-turbo-ga-models).
 

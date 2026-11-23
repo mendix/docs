@@ -21,4 +21,10 @@ Providing context is the foundation for Maia to build your project plan. Give Ma
     * Add requirements.
     * Attach documents, sketches, and images.
 
-4. Click **Generate Plan**.
+4. In the **Project Starting Point** section, select the radio button corresponding to the way in which you want to start your project. You can choose between the following:
+
+    * **Use the latest LTS version**
+    * **Use the latest version**
+    * **Use a starter app with a predefined Studio Pro version**
+
+5. Click **Generate Plan**.

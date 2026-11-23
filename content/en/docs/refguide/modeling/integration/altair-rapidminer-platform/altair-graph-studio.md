@@ -147,7 +147,7 @@ Select which classes you need for your application and drag and drop them into a
 
 #### Building Pages Using External Entities
 
-You can use these external entities in your pages and microflows similarly to persistent entities. For this example, create your overview pages by right-clicking the entity and selecting **Generate overview pages**. 
+You can use these external entities in your pages and microflows similarly to persistable entities. For this example, create your overview pages by right-clicking the entity and selecting **Generate overview pages**. 
 
 {{< figure src="/attachments/refguide/modeling/integration/rapidminer/graph-studio/building-pages.png" >}}
 

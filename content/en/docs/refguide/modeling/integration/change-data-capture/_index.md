@@ -98,8 +98,26 @@ To parse messages, the schema for each tracked entity is available as an AsyncAP
 
 For details on setting up a BYOK cluster with the Mendix Event Broker, see [Mendix Event Broker](/appstore/services/event-broker/).
 
+## Tracing {#tracing}
+
+As of Studio Pro 11.16.0, CDC supports OpenTelemetry tracing. The runtime generates the following spans during CDC publishing and snapshot updates:
+
+| Span | Description | Count Attribute |
+| --- | --- | --- |
+| `CDC publish change events` | Processes fetched event IDs in batches. The count is the number of IDs fetched for the poll. | `mx.cdc.producer.change_events.count` |
+| `CDC process change events` | Processes one batch of loaded change events. The count is the number of events in the batch. | `mx.cdc.producer.change_events.count` |
+| `CDC create producer records` | Creates Kafka records for a batch. The record count is set after successful creation. | `mx.cdc.producer.records.count` |
+| `CDC publish Kafka records` | Publishes a non-empty batch of records to Kafka. The count is the number of submitted records. | `mx.cdc.producer.records.count` |
+| `CDC update snapshot state` | Plans snapshots and updates snapshot state. The count is the number of entities planned for a snapshot. | `mx.cdc.producer.snapshot.entities.count` |
+
+Record creation and Kafka publishing are nested within batch processing. These spans are not generated for individual change events.
+Snapshot updating is a separate operation. Its entity count does not indicate how many snapshots completed.
+
+These spans are excluded when [Minimal Tracing Mode](/refguide/opentelemetry-in-runtime/#minimal-tracing-mode) is enabled.
+
 ## Read More
 
 * [Published CDC Services](/refguide/published-cdc-services/)
 * [Mendix Event Broker](/appstore/services/event-broker/)
 * [Event Broker Bridges](/appstore/services/event-broker-bridges/)
+* [OpenTelemetry](/refguide/opentelemetry-in-runtime/)

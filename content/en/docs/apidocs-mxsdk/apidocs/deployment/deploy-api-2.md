@@ -23,24 +23,51 @@ The v2 Deploy API only supports the endpoints listed here. For all other deploym
 Mendix recommends using calls from the same version of the API where possible. This is because the naming varies across versions. For example, the `{appId}` in the version 4 API is retrieved as the `{ProjectId}` from the version 1 API.
 {{% /alert %}}
 
-The Deploy API v2 requires authentication via API keys that are bound to your Mendix account.
+## Authentication{#authentication}
 
-### Obtaining an API Key
+The Deploy API v2 supports authentication via a personal access token (PAT) or an API key. Mendix recommends using a PAT.
+
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/api-key-deprecation-warning.md" %}}
+{{% /alert %}}
+
+### Authenticating with a PAT{#authenticating-with-pat}
+
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
+
+Select at least the following scopes:
+
+* `mx:deployment:read` – to perform `GET` operations
+* `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
+* `mx:build:read` – to read build information
+* `mx:build:write` – to trigger and manage builds
+
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
+
+```http
+GET /api/v2/apps/calc/jobs/66046953-ecf7-4550-a889-4b7e9f1e1705 HTTP/1.1
+Host: deploy.mendix.com
+Authorization: MxToken 7LJE…vk
+```
+
+### Authenticating with an API Key{#authenticating-with-api-key}
 
 To obtain a Mendix API key, follow the instructions in the [API Keys](/portal/user-settings/#profile-api-keys) section of *Mendix Profile*.
-
-### Using Authentication Headers
 
 Use the following request headers to authenticate an API call:
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user
 
+### Migrating from an API Key to a PAT{#migrate-to-pat}
+
+{{% snippet file="/static/_includes/apidocs-mxsdk/migrate-api-key-to-pat.md" %}}
+
 ### Configuring Permissions
 
 Because APIs are designed for automated systems, the Deploy API does not require two-factor authentication, which is normally required to make changes to production environments. This is a potential security risk. Therefore, API access must be explicitly allowed for team members who want to use the Deploy API.
 
-To perform an action via the Deploy API, such as transporting a new deployment package, you need **API Rights** and **Transport Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
+To perform an action via the Deploy API, such as transporting a new deployment package, you need **API Access** and **Transport Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## API Calls
 

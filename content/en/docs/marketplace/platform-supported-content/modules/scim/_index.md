@@ -34,6 +34,8 @@ Before you include the SCIM module in your app, you need to check if your IdP su
 
 * **B2E vs. B2C apps:** Many organizations use a common Identity Provider, such as Entra ID in Microsoft’s Office 365 suite, to centralize employee accounts. If you are building apps for employees (Business-to-Employee or B2E), connecting them with Entra ID is a common and easy choice. As an app developer, you can use OIDC SSO or SAML for Single Sign-On and the SCIM module for managing users. For apps designed for customers (Business-to-Customer or B2C), the use of the SCIM module may not be as obvious. If your organization uses a third-party solution, such as Entra ID to handle customer accounts, you can also use the SCIM module for that.
 
+* **Manage workflow group members:** Use identity information provisioned through SCIM, such as roles or other user attributes, to automatically assign users to [workflow groups](/refguide/workflow-groups/). With custom user provisioning logic, applications using runtime-managed workflow groups can also create workflow groups based on information maintained in the identity provider.
+
 ### Features {#features}
 
 Your IdP can perform create, read, update, and delete (CRUD) operations on the users in your app when it includes the SCIM module. It has the following features:
@@ -70,10 +72,10 @@ If you are using the SCIM module in combination with Entra ID and OIDC SSO, you 
 
 The SCIM module has the following limitations:
 
-* The SCIM module does not sync groups (or group memberships) to your app. Starting from version 4.1.0, you can assign user roles using the SCIM `roles` attribute. See [Assigning Roles Through SCIM Provisioning] (#role-assignment) below. For earlier versions, you can assign user roles using the features offered by [SAML SSO](/appstore/modules/saml/) or [OIDC SSO](/appstore/modules/oidc/) modules.
 * If you want to do **Provision on demand** from Entra ID to test the SCIM integration of your app you cannot trigger a partial sync based on a group. This will trigger Entra ID to invoke a `/groups` endpoint, which is not yet supported.
 * The module does not support the development of a SCIM client application.
 * Multiple clients can be configured only at runtime via the admin screen.
+* The SCIM module does not support full management of workflow groups using SCIM. However, starting from version 4.1.0, you can use attributes (`roles` or any other attributes) on the SCIM user to associate users with [workflow groups](#workflow-group-assignment). In Mendix 11.16 and above, when **Group definition** is set to **Runtime**, you can create [workflow groups](/refguide/workflow-groups/) in your app using custom provisioning logic. This mechanism creates workflow groups automatically when a provisioned user needs one. The SCIM module currently does not support updating or deleting existing groups.
 
 ### SCIM Protocol Adherence
 
@@ -99,6 +101,8 @@ Currently, the SCIM module does not support the following features of the SCIM s
 
 * Multi-tenancy
 
+* Unknown users can be queried by their full user name using the filter `filter=userName eq "john"`.
+
 The SCIM module does not support the following features of the SCIM protocol:
 
 * `/Me` endpoint
@@ -108,6 +112,12 @@ The SCIM module does not support the following features of the SCIM protocol:
 * Bulk operations `/bulk`
 
 * `/group` endpoint
+
+* Filtering other than `filter=Username eq "john"` is not supported
+
+* The SCIM module does not support returning multiple users in a single response
+
+* Pagination is not supported.
 
 ### Prerequisites
 
@@ -134,6 +144,10 @@ If you are using Mendix version 10.21.1, use User Commons module version 2.1.0 o
 ## Upgrading the SCIM Module
 
 This section provides an overview of updates for the SCIM and UserCommons modules across different versions. It includes several key updates to ensure a smooth transition while migrating to higher module versions.
+
+{{% alert color="warning" %}}
+The SCIM module does not support UserCommons V3.0.0. If you use the SCIM module, do not upgrade UserCommons to V3.0.0, as it requires changes to the dependent SCIM module that are not yet available. 
+{{% /alert %}}
 
 {{% alert color="info" %}}
 When upgrading to version 4.0.0 of the SCIM module, ensure you are also using version 2.0.0 of the UserCommons module.
@@ -300,6 +314,14 @@ For different `Expression` and `Target Attribute` values, refer to [Provisioning
 {{% alert color="info" %}}
 The default `UC_CustomProvisioning` microflow handles role assignment automatically when configured. You can customize this microflow to implement your own role mapping logic based on your application's requirements.
 {{% /alert %}}
+
+#### Assigning Workflow Groups {#workflow-group-assignment}
+
+The `roles` or any other attribute of a SCIM user (or other user attribute) can also be used to manage [workflow group](/refguide/workflow-groups/) membership.
+
+Customize `UC_CustomProvisioning` to map the relevant provisioned attributes to workflow groups and add or remove the provisioned user as a member of those groups.
+
+When runtime-managed workflow groups are enabled, the custom provisioning logic can also create a corresponding workflow group if one does not yet exist (supported from Mendix 11.16 and above). For more information, see the [Managing Groups at Runtime](/refguide/workflow-groups/#runtime-groups) section of *Workflow Groups*.
 
 ### Runtime Configuration
 

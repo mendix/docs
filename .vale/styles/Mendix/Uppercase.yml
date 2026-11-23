@@ -1,0 +1,14 @@
+# Replaces Microsoft.Uppercase, which flags acronym pairs (REST API, SAP BTP)
+# and misses single emphasis words (NEVER, NOT, ALWAYS).
+extends: existence
+message: "Don't use all uppercase for emphasis. To add emphasis, rephrase or use an alert instead."
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#emphasis
+level: warning
+nonword: true
+tokens:
+  # NOT also captures a following all-caps word so the exceptions below can match it
+  - '\b(?:NEVER|ALWAYS|MUST|ONLY|DO NOT|NOT(?: [A-Z]{2,})?)\b'
+exceptions:
+  # HTTP status text
+  - 'NOT FOUND'
+  - 'NOT ALLOWED'

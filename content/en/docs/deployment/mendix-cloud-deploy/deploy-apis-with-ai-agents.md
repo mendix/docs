@@ -13,7 +13,7 @@ description: "Describes how to connect AI coding assistants to Mendix Cloud usin
 For example, you can ask the AI assistant to list your apps, deploy the latest package to an acceptance environment, or stop a production environment, without writing `curl` commands or navigating the Mendix Portal.
 
 {{% alert color="warning" %}}
-The use of AI tools is non-deterministic, outputs may vary between runs. AI Assistants/Agents will have permissions based on what the API Key and Personal Access Token (PAT) have access to. Through the [Backups API](/apidocs-mxsdk/apidocs/backups-api/) and [Logs](/developerportal/operate/logs/), they may have access to production environments and Personally Identifiable Information (PII) contained within your environments. Carefully review and limit the scope of credentials before use.
+The use of AI tools is non-deterministic, outputs may vary between runs. AI Assistants/Agents will have permissions based on what the Personal Access Token (PAT) has access to. Through the [Backups API](/apidocs-mxsdk/apidocs/backups-api/) and [Logs](/developerportal/operate/logs/), they may have access to production environments and Personally Identifiable Information (PII) contained within your environments. Carefully review and limit the scope of credentials before use.
 {{% /alert %}}
 
 ## Prerequisites
@@ -21,9 +21,7 @@ The use of AI tools is non-deterministic, outputs may vary between runs. AI Assi
 Before you start, make sure you have the following:
 
 * An MCP-compatible AI client that supports custom request headers, such as Claude Code or VS Code with GitHub Copilot
-* A Mendix account with API access enabled
 * A [Personal Access Token (PAT)](/portal/user-settings/#pat) with the `mx:deployment:write` and `mx:deployment:read` scopes selected
-* A [Mendix API key](/portal/user-settings/#profile-api-keys)
 
 ## Connecting Your AI Assistant {#connecting}
 
@@ -34,16 +32,10 @@ To add the Mendix MCP server in Claude Code, run the following command in your t
 ```bash
 claude mcp add --scope user --transport http mendix-cloud-mcp \
 https://mcp.home.mendix.com/ \
---header "Authorization: MxToken {GENERATED_PAT}" \
---header "Mendix-Username: {Mendix-Username}" \
---header "Mendix-ApiKey: {Mendix-ApiKey}"
+--header "Authorization: MxToken {GENERATED_PAT}"
 ```
 
-Replace the following placeholders with your credentials:
-
-* `{GENERATED_PAT}` – the generated Mendix Personal Access Token (PAT)
-* `{Mendix-Username}` – the login name of the user making the request, with the required privileges in the Mendix Platform
-* `{Mendix-ApiKey}` – the API key associated with that user
+Replace `{GENERATED_PAT}` with your Mendix Personal Access Token (PAT).
 
 To verify the connection, run the following command:
 
@@ -62,8 +54,6 @@ mendix-cloud-mcp:
   URL: https://mcp.home.mendix.com/
   Headers:
     Authorization: MxToken {GENERATED_PAT}
-    Mendix-Username: {Mendix-Username}
-    Mendix-ApiKey: {Mendix-ApiKey}
 
 To remove this server, run: claude mcp remove mendix-cloud-mcp -s user
 ```
@@ -80,9 +70,7 @@ To add the Mendix MCP server in VS Code, add the following configuration to your
             "type":"http",
             "url":"https://mcp.home.mendix.com/",
             "headers":{
-               "Authorization":"MxToken {GENERATED_PAT}",
-               "Mendix-Username":"{Mendix-Username}",
-               "Mendix-ApiKey":"{Mendix-ApiKey}"
+               "Authorization":"MxToken {GENERATED_PAT}"
             }
          }
       }
@@ -90,7 +78,7 @@ To add the Mendix MCP server in VS Code, add the following configuration to your
 }
 ```
 
-Replace the placeholder values with your credentials as described in the [Claude Code](#claude-code) section above.
+Replace `{GENERATED_PAT}` with your Mendix Personal Access Token (PAT).
 
 ## Available Capabilities {#capabilities}
 
@@ -149,15 +137,10 @@ Once connected, your AI assistant has access to the following capabilities.
 
 Your credentials are passed directly to the Mendix APIs and are not stored or inspected by the MCP gateway. Each user authenticates using their own credentials.
 
-Two authentication methods are used depending on the API:
-
-| API Version | Headers Required |
-| --- | --- |
-| Deploy API v4, App Permissions | `Authorization: MxToken {GENERATED_PAT}` |
-| Deploy API v1/v2, Build API, Backups API | `Mendix-Username` and `Mendix-ApiKey` |
+All APIs, including the Deploy API, Build API, Backups API, and App Permissions, use the `Authorization: MxToken {GENERATED_PAT}` header.
 
 {{% alert color="info" %}}
-Include all three headers in your connection configuration to ensure all tools work correctly.
+Include the `Authorization` header in your connection configuration to ensure all tools work correctly.
 {{% /alert %}}
 
 ## Client Compatibility {#compatibility}
@@ -165,7 +148,7 @@ Include all three headers in your connection configuration to ensure all tools w
 The Mendix MCP integration works with any MCP-compatible client that supports HTTP transport (streamable HTTP) and custom headers for authentication.
 
 {{% alert color="warning" %}}
-Clients that only support OAuth 2.0 authentication without custom header support are not compatible with the Mendix Cloud MCP integration, as Mendix APIs use token and API key-based authentication.
+Clients that only support OAuth 2.0 authentication without custom header support are not compatible with the Mendix Cloud MCP integration, as Mendix APIs use token-based authentication.
 {{% /alert %}}
 
 ## Known Limitations {#limitations}
@@ -187,7 +170,7 @@ The following limitations apply:
 
 ### 401 Unauthorized
 
-Your credentials are incorrect or have expired. Regenerate your PAT and verify that your API key is still active.
+Your credentials are incorrect or have expired. Regenerate your PAT.
 
 ### 403 Forbidden
 
@@ -201,9 +184,7 @@ Your MCP client is not sending the correct `Accept` header. This happens when yo
 claude mcp remove mendix-cloud-mcp
 claude mcp add --scope user --transport http mendix-cloud-mcp \
 https://mcp.home.mendix.com/ \
---header "Authorization: MxToken {GENERATED_PAT}" \
---header "Mendix-Username: {Mendix-Username}" \
---header "Mendix-ApiKey: {Mendix-ApiKey}"
+--header "Authorization: MxToken {GENERATED_PAT}"
 ```
 
 ### Tools Not Showing Up

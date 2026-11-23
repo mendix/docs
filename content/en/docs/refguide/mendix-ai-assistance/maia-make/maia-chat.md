@@ -1,9 +1,9 @@
 ---
-title: "Maia Chat"
+title: "Chat with Maia"
 linktitle: "Chat"
 url: /refguide/maia-chat/
 weight: 5
-description: "Describes the features in Maia Chat."
+description: "Describes how to ask questions about Mendix development in Maia Make, and how Maia Chat worked in earlier versions of Studio Pro."
 aliases:
     - /refguide/mendix-chat/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,20 +12,14 @@ aliases:
 ## Introduction
 
 {{% alert color="info" %}}
-Maia Chat is also available in the Mendix Portal. For more information, refer to the [Maia Chat](/portal/maia/#maia-chat) section in *Maia in Mendix Portal*.
+In Studio Pro 11.8 and above, [Maia Make](/refguide/maia-make/) replaces Maia Chat, the earlier chat interface in Studio Pro. Maia Chat is still available in Mendix Portal. For more information, refer to the [Maia Chat](/portal/maia/#maia-chat) section in *Maia in Mendix Portal*.
+
+To ask questions in Studio Pro, you need an internet connection and must be signed in to Studio Pro.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-To use Maia Chat, an internet connection and signing in to Studio Pro are required.
-{{% /alert %}}
+In Studio Pro, you can ask Maia questions about Mendix development in the **Chat** tab of the **Maia** pane. You can ask about all aspects of Mendix, including how to apply concepts, best practices, governance tools, and development patterns. Because you ask questions in the same chat in which you build, you can move from a exploring an idea to a implementing a change in your app in a single conversation.
 
-{{% alert color="info" %}}
-Maia Chat does not use any project, customer, or company information. It only uses the data that you have entered in the Chat to fulfill the user request. Please do not enter any personal or sensitive data!
-{{% /alert %}}
- 
-Maia Chat is a built-in chat interface in the Mendix Platform powered by generative AI. Developers can ask questions about all aspects of Mendix, including how to apply concepts, best practices, governance tools, and development patterns. It is based on large language models (LLMs) using data from various resources. 
-
-See below a list of Maia Chat's data sources:
+To answer questions about Mendix, Maia uses the following data sources:
 
 * [Mendix Docs](/)
 * [Mendix Community](https://community.mendix.com/)
@@ -35,68 +29,47 @@ See below a list of Maia Chat's data sources:
 * [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/)
 * [Mendix Support Knowledge Base](https://support.mendix.com/hc/en-us/p/knowledge-base) (in Studio Pro 11.10 and above)
 
-## Using Maia Chat
+## Asking Questions in Maia {#asking-questions}
 
-### In Studio Pro 11.8 and Above
+In Studio Pro 11.8 and above, open the **Maia** pane and ask your question in the **Chat** tab. There is no separate interface for questions. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
-In Studio Pro 11.8 and above, Maia Chat is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia Chat. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+For shortcut keys you can use in the chat, see the [Maia Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*. These shortcuts also work in Maia Chat in Studio Pro 11.7 and below.
 
-### In Studio Pro 11.7 and Below
+For tips on getting better responses, see the [Best Practices](/portal/maia/#best-practices) section in *Maia in Mendix Portal* or the [Text Input](/refguide/maia-make/#text-input) section of *Maia Make Capabilities*.
 
-In Studio Pro 11.7 and below, there are two ways to access Maia Chat in Studio Pro:
+## Maia Chat in Studio Pro 11.7 and Below {#maia-chat-legacy}
+
+In Studio Pro 11.7 and below, Maia Chat is a separate chat interface in Studio Pro.
+
+{{% alert color="info" %}}
+Maia Chat does not use any project, customer, or company information. It only uses the data you enter in the chat to fulfill the request. Do not enter any personal or sensitive data.
+{{% /alert %}}
+
+There are two ways to access Maia Chat in Studio Pro:
 
 * Click the **Maia** ({{% icon name="sparkles" %}}) icon to the right of the top bar.
 * Go to the **View** menu and click **Maia**.
 
-The chat interface appears at the right side of Studio Pro under the **Maia** pane:
+The chat interface appears on the right side of Studio Pro under the **Maia** pane:
 
-{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-chat/maia-chat-interface.png" width="250px">}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-chat/maia-chat-interface.png" alt="" width="250px">}}
 
-You can start using Maia Chat by clicking one of the demo questions. Alternatively, you can ask your own question, and press <kbd>Enter</kbd> or click **Ask** to send the question. For information on the supported shortcut keys in Maia Chat, see the [Maia Chat Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*.
+You can start using Maia Chat by clicking one of the demo questions. Alternatively, you can ask your own question, and press <kbd>Enter</kbd> or click **Ask** to send the question.
 
-For more information on Maia Chat features in Studio Pro, see the sub-sections below.
+### Giving Feedback {#feedback}
 
-If Maia is not giving you a good answer, check the [best practices](/portal/maia/#best-practices) in *Maia in Mendix Portal*. If you still can not get a good answer, please see the [Giving Feedback](#feedback) section below for information on how to let Mendix know.
-
-#### Maia Chat Features in Studio Pro
-
-After a question is sent to Maia Chat, you will see the following in the chat interface:
-
-* An answer generated by Maia Chat
-* Links to top relevant resources like Mendix documentation, Mendix Community, and Academy learning paths
-
-    {{% alert color="info" %}}You can also see the Mendix version of the references, the level of the learning path if the reference comes from Mendix Academy, and the date and answer status if the reference comes from the Mendix Community.{{% /alert %}}
-
-* A copy icon ({{% icon name="copy" %}}) which allows you to copy the given answer to a clipboard
-* Feedback icons
-
-##### Giving Feedback {#feedback}
-
-Mendix encourages giving feedback on the answers generated by Maia Chat. Feedback will be used to further improve Maia Chat.
+Mendix encourages you to provide feedback on Maia Chat answers to help improve the feature.
 
 There are several ways to give feedback on the generated answer:
 
 * Click the thumbs up icon ({{% icon name="thumbs-up" %}}) or the thumbs down icon ({{% icon name="thumbs-down" %}})
-* To provide more detailed feedback, click the add feedback icon ({{% icon name="notes-paper-edit" %}}). A detailed **Feedback** section shows below the answer:
+* To provide more detailed feedback, click the add feedback icon ({{% icon name="notes-paper-edit" %}}). A detailed **Feedback** section appears below the answer:
 
-    {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-chat/feedback-section.png" width="250px" >}}
+    {{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-chat/feedback-section.png" alt="" width="250px" >}}
+    
+Click **Submit feedback** to send your feedback. Maia Chat then returns you to the main chat interface, where you can continue asking questions.
 
-    * You can rate the **correctness**, **completeness**, and **readability** of the provided answer.
-    * You can also provide **Additional feedback** if you want to.
-    * Remember to click **Submit feedback** to submit your feedback. Afterwards, you will be brought back to the main chat interface where you can continue asking questions.
-
-##### Asking Follow-Up Questions
-
-Maia Chat supports asking follow-up questions based on your previous question and the answer you have received. For example, you can ask it to summarize the latest answer you received by typing the following in the chat: *Can you summarize that?*.
-
-{{% alert color="info" %}}
-Maia Chat will lose track of the conversation history if you exit Studio Pro.
-{{% /alert %}}
-
-##### New Chat
-
-There is a **New chat** option at the top left of the chat interface. It allows you to clear the messages and start a new conversation which does not reference your current chat.
- 
 ## Read More
 
-Under the **Maia** pane, there is also a tab called **Learn**. For more information, see [Maia Learn](/refguide/maia-learn/).
+* [Maia Make Capabilities](/refguide/maia-make/)
+* [Maia Learn](/refguide/maia-learn/) 

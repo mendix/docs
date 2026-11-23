@@ -77,7 +77,7 @@ For more information about each item, refer to the [Feedback Details](#feedback-
 
 To export all feedback into one CSV file, click **Export**.
 
-To search by **Subject**, **Description**, **User Email** and **Tags**, type the keywords in the search bar.
+To search by **ID**, **Subject**, **Submitter**, or **Description**, type keywords in the search bar.
 
 Clicking the filter bar opens the **Filter by** side panel. In this side panel, you can filter feedback using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**. The filters are saved until the page is refreshed.
 
@@ -86,9 +86,9 @@ Clicking the filter bar opens the **Filter by** side panel. In this side panel, 
 You can add new feedback manually yourself. To do that, follow these steps:
 
 1. Click **Create new feedback** if there is no feedback yet in the **Inbox** tab.    
-   Click **Add feedback** if there is already feedback in the **Inbox** tab.
+   Click **Create feedback** if there is already feedback in the **Inbox** tab.
 
-2. Fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback** dialog box.
+2. Fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **Create Feedback** dialog box.
 
 If you select feedback from the list, you can see the following options: 
 
@@ -208,34 +208,20 @@ On the [Inbox](#inbox) and the [Archive](#archive) tabs, you can open feedback d
 The following items are available: 
 
 * Buttons ({{% icon name="view-off" %}} {{% icon name="view" %}} {{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) in the upper-right corner
-    * {{% icon name="view-off" %}} – Click this button to start receiving [notifications](#notifications) for this feedback. You also automatically start receiving notifications for this feedback whenever you respond to the reporter of the feedback or leave a comment for your team in the **Communications** section within the feedback.
-    * {{% icon name="view" %}} – Click this button to stop receiving notifications for this feedback.
-    * **Copy Link** ({{% icon name="hyperlink" %}}) – Click this button to copy the URL to the feedback. You can send the URL to other people.
-    * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Click this button to open a menu with the following items:
-        * **Move** – Click this button to move the feedback to any other app of which you are a member. This action will remove the link to the group if the feedback is part of a feedback group.
+    * {{% icon name="view-off" %}} – Start receiving [notifications](#notifications) for this feedback. You also automatically start receiving notifications for this feedback whenever you respond to the reporter of the feedback or leave a comment for your team in the **Communications** section within the feedback.
+    * {{% icon name="view" %}} – Stop receiving notifications for this feedback.
+    * **Copy Link** ({{% icon name="hyperlink" %}}) – Copy the URL to the feedback. You can send the URL to other people.
+    * **More Actions** ({{% icon name="three-dots-menu-horizontal" %}}) – Open a menu with the following items:
+        * **Move to Project** – Move the feedback to any other project of which you are a member. This action will remove the link to the group if the feedback is part of a feedback group.
+        * **Add Feedback to Story** – Add the feedback to an existing story.
         * **Create Story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button converts the feedback to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.    
           You can also create feedback-based stories using Maia. For details, refer to the [Creating Stories with Maia](#create-with-maia) section.
-        * **Delete** – Click this button to remove the feedback permanently from **Feedback**. The result is irreversible.
+        * **View Story** – If the feedback is already associated to a story, clicking this button opens that specific story.
+        * **Delete Feedback Item** – Click this button to remove the feedback permanently from **Feedback**. The result is irreversible.
 
-* **Assigned To** – This shows to whom the feedback is assigned. When you assign the feedback to someone, they get an email notification.
+* **Description** – The feedback description, along with any screenshots.
 
-* **Priority** – This shows the priority that the feedback has.
-
-* **Status** – This is the status of the feedback. There are two default statuses: **New** and **Closed**. Whenever feedback arrives in the app, it is set to **New**. When you close feedback, it is set to **Closed** and moved to the **Archived** page.    
-   You can add custom statuses by clicking **Manage Statuses** ({{% icon name="cog" %}}) and adding the new statuses in the dialog box. Custom statuses can only be used for feedback that are not archived. You can filter your feedback based on the status.    
-    You can edit the default status name by clicking **Manage Statuses** ({{% icon name="cog" %}}), then clicking the status name.
-
-* **Tags** – These are the tags assigned to the feedback. You can select a tag from the drop-down list or create new tags by typing the tag name inside the text box and then clicking **create [the tag name]**. A tag should contain maximum 50 characters. You can assign multiple tags.
-
-    {{< figure src="/attachments/developerportal/app-insights/feedback/tags.png" class="no-border" >}}
-
-    {{% alert color="info" %}}For more information about how to manage tags, refer to the [Managing Tags](#manage-tags) section.{{% /alert %}}
-
-* **Summary** – This is the summary of the feedback. Only your team members can see this summary.
-
-* **User Feedback** – This shows the original feedback title, feedback description, and screenshot submitted by the reporter.
-
-* **Metadata** – This shows a list of metadata of the feedback.
+* **Metadata** – This shows a list of metadata of the feedback:
 
     * **Active Userrole** – This is the user role the reporter has in your app
     * **Active form** – This is the page from which the reporter sent the feedback
@@ -246,14 +232,25 @@ The following items are available:
     * **Submitter email** – This shows the email of the reporter
     * **Submission date** – This shows the date when the feedback was submitted
 
-* **Story** – This displays any stories that are linked to that feedback.    
-    To unlink a story from a piece of feedback, click its corresponding {{% icon name="unlink" %}} **unlink** button.    
-    If there are no linked stories, you have the following options:
-    
-    * **Add to Story** – Add the feedback to an existing story.
-    * **Create Story** – Create a new story based on the feedback.
+* **Attachments** – This contains attachments to this feedback. To upload an attachment, click **Add Attachment** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment can be a maximum of 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachment.
 
-* **Attachments** – This contains attachments to this feedback. To upload an attachment, click **Add** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment can be a maximum of 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachment.
+* **Details** – This shows a series of details about the feedback:
+
+    * **Linked Story** – This displays any stories that are linked to that feedback. If the feedback is not associated to any story, this button is not displayed.    
+        To unlink a story from a piece of feedback, click its corresponding {{% icon name="unlink" %}} **unlink** button.    
+    * **Assigned To** – This shows to whom the feedback is assigned. When you assign the feedback to someone, they get an email notification.
+    * **Priority** – This shows the priority that the feedback has.
+    * **Status** – This is the status of the feedback. There are two default statuses: **New** and **Closed**. Whenever feedback arrives in the app, it is set to **New**. When you close feedback, it is set to **Closed** and moved to the **Archived** page.    
+       You can add custom statuses by clicking **Manage Statuses** ({{% icon name="cog" %}}) and adding the new statuses in the dialog box. Custom statuses can only be used for feedback that are not archived. You can filter your feedback based on the status.    
+       You can edit the default status name by clicking **Manage Statuses** ({{% icon name="cog" %}}), then clicking the status name.
+
+    * **Tags** – These are the tags assigned to the feedback. You can select a tag from the drop-down list or create new tags by typing the tag name inside the text box and then clicking **create [the tag name]**. A tag should contain maximum 50 characters. You can assign multiple tags.
+
+        {{< figure src="/attachments/developerportal/app-insights/feedback/tags.png" class="no-border" >}}
+
+        {{% alert color="info" %}}For more information about how to manage tags, refer to the [Managing Tags](#manage-tags) section.{{% /alert %}}
+
+    * **Notes** – This is the summary of the feedback. Only your team members can see this summary.
 
 * **Communication** – This section is made up of the following tabs:
 

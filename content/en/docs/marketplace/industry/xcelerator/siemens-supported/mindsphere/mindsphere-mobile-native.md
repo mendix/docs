@@ -149,7 +149,7 @@ If you have trouble signing in to your application, it is a good idea to clear t
 
 ### Next steps
 
-You now have a blank application which supports authentication for your specific Insights Hub application, which is an excellent starting point for developing your app further. We also recommend investigating the basic tutorial for Insights Hub web applications [Build an Insights Hub app with Mendix](https://academy.mendixcloud.com/link/path/80/Build-a-MindSphere-app-with-Mendix) to learn more about Insights Hub application development in general.
+You now have a blank application which supports authentication for your specific Insights Hub application, which is an excellent starting point for developing your app further. We also recommend investigating the basic tutorial for Insights Hub web applications [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/paths/80/Build-an-Insights-Hub-App-with-Mendix) to learn more about Insights Hub application development in general.
 
 When you enhance your application with Insights Hub API calls to use the IoT capabilities of Insights Hub you must consider the following two steps:
 

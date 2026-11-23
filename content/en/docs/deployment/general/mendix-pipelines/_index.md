@@ -139,6 +139,14 @@ To add a step, launch the **Pipeline Steps** dialog box by clicking **Add Step**
 Some steps are specific to particular target environments (Mendix Public Cloud or Mendix on Kubernetes and Azure), while others apply universally.
 {{% /alert %}}
 
+Your Mendix Pipeline can contain multiple instances of the same step, so you can perform the same operation multiple times in a single pipeline. For example, you can deploy the same deployment package to multiple environments sequentially, send notifications to multiple services, make API requests to different endpoints, or run the same tests against different configurations.
+
+To add another instance of a step, click **Add Step** ({{% icon name="add" %}}) and select the step you want to add, even if the pipeline already contains that step. Each new instance is automatically assigned a unique name with a numeric suffix. For example, if the pipeline already contains a **Deploy** step, the next one you add is named **Deploy copy 1**, followed by **Deploy copy 2**. The names identify each instance and preserve the execution order.
+
+{{% alert color="info" %}}
+The **Build**, **Checkout**, and **Publish** steps can be used only once in a Mendix Pipeline, because each represents a unique stage in the build process. You can add all other steps multiple times, with no limit.
+{{% /alert %}}
+
 Your Mendix Pipeline can include the following steps:
 
 {{% alert color="info" %}}
@@ -256,7 +264,7 @@ There are two types of variables:
 
 1. Mendix-defined variables
 
-    * These are provided by Mendix. Every Mendix Pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment. Click **Outputs** inside a Mendix Pipeline **Designs** tab to view a step’s output variables. Step outputs are always written in the format `$StepName.OutputName` for easy reference across other steps.
+    * These are provided by Mendix. Every Mendix Pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `{{Build.DeploymentPackage}}`. Similarly, Deploy uses `{{Publish.DeploymentPackage}}` to deploy to the selected environment. Click **Outputs** inside a Mendix Pipeline **Designs** tab to view a step’s output variables. Step outputs are always written in the format `{{StepName.OutputName}}` for easy reference across other steps.
     * The scope of these variables is specific to a particular Mendix Pipeline design within a Mendix app.
 
 2. User-defined variables
@@ -303,9 +311,13 @@ Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) >
 
 ### Masked Variables
 
-Select **Mask > Yes** for confidential values. It will never be printed in the logs or error messages.
+Select **Mask > Yes** for confidential values. Once a variable is masked, you cannot unmask it by changing **Mask > No**. This prevents the saved value from being exposed.
 
-While editing a saved variable, selecting **Mask > No** will allow you to verify the value. Make sure to set it back to **Mask > Yes** before saving the variable.
+When you create a masked variable, enter the value and save it. The UI displays the value as `********`.
+
+To update an existing masked variable, replace the displayed `********` with the new value and save the variable. The UI continues to display the updated value as `********`.
+
+Masked values are never printed in logs or error messages.
 
 ## The Settings Tab{#settings-tab}
 
@@ -354,8 +366,6 @@ Mendix Pipelines time out if they run for more than three hours. In other words,
 ### Known Issues and Limitations
 
 * **Mendix Pipelines maintenance behavior** – Mendix Pipeline runs are not picked up and executed if the Mendix Pipelines functionality is undergoing maintenance.
-
-* **Duplicate pipeline steps not supported** – It is not currently possible to add the same Mendix Pipeline step more than once in a Mendix Pipeline. This will be improved in the future.
 
 * **System outages prevent pipeline execution** – In case of a system outage, Mendix Pipelines triggered during that time are not executed.
 

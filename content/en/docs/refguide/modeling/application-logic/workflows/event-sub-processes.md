@@ -51,7 +51,7 @@ The workflow will NOT complete until all active execution paths, both the main f
 Event sub-processes can be triggered by one of the following start event types:
 
 * **Notification start event** – The sub-process is triggered by a [Notify workflow](/refguide/notify-workflow/) microflow activity.
-* **Timer start event** – The sub-process is triggered automatically when the configured duration elapses or the configured date and time is reached. The timer configuration follows the same rules as the standalone [Timer](/refguide/timer/) activity. For more information, refer to the [Timer](/refguide/timer/#timer) section in *Timer*.
+* **Timer start event** – The sub-process is triggered automatically when the configured duration elapses or the configured date and time is reached. For more information, refer to the [Timer](/refguide/timer/#timer) section in *Timer*. A non-interrupting timer start event can also be configured to fire repeatedly; refer to the [Recurrence](/refguide/timer/#recurrence) section in *Timer*.
 
 When the trigger is received, the sub-process becomes **In Progress**.
 
@@ -64,13 +64,11 @@ Event sub-processes can be configured as either interrupting or non-interrupting
 
 #### Concurrency Limitation
 
-Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger it, either via the **Notify workflow** activity or when a timer fires again, are ignored. No new instances are created for that specific sub-process while one is **In Progress**. A new instance can be initiated only after the active sub-process has completed its execution path.
+Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger it via the **Notify workflow** activity are ignored. No new instances are created for that specific sub-process while one is **In Progress**. A new instance can be initiated only after the active sub-process has completed its execution path.
+
+A [recurring](/refguide/timer/#recurrence) timer start event is the exception: when it fires while an instance of its event sub-process is still **In Progress**, that instance is aborted and a new one is started. For more information, see [Recurrence While the Previous Instance Is Still Running](/refguide/timer/#recurrence-in-progress) in *Timer*.
 
 If your workflow has multiple, distinct event sub-processes defined (for example, one for "Address Change" and one for "Document Upload"), each one can have its own active instance simultaneously. One being active does not prevent a different one from being triggered.
-
-{{% alert color="info" %}}
-Currently, a timer start event fires only once. Support for recurring timers may be added in the future.
-{{% /alert %}}
 
 ## Getting Started
 

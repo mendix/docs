@@ -10,6 +10,11 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+## Release date: September 24, 2026
+
+* Customers can now view a dedicated **Activity Logs** page directly within the **Cluster Overview** to monitor an audit trail of key environment events, including cluster lifecycle changes, advanced configuration updates, role assignments, and JIT support access.
+* Preflight deployment failures during Platform account checks now automatically generate linked support tickets with relevant diagnostic details, speeding up troubleshooting and support resolution.
+
 ## Release date: August 27, 2026
 
 * Mendix on Azure now supports two Azure Marketplace plans: Standard Plan and Just-In-Time (JIT) Access. JIT Access provides enhanced security through time-limited access to resources with approval workflows for environment creation and configuration changes. Infrastructure upgrades can be scheduled and triggered for both JIT and regular environments.

@@ -13,7 +13,7 @@ Looking for Mendix's newest agentic and generative AI features? [This page has b
 
 ## Introduction
 
-[Snowflake Cortex AI](https://docs.snowflake.com/en/guides-overview-ai-features) allows users to quickly analyze data and build generative AI applications using fully managed LLMs, vector search, and fully managed text-to-SQL services. It also enables multiple users to use AI models with no-code, SQL, and Python interfaces.
+[Snowflake Cortex AI](https://docs.snowflake.com/en/guides-overview-ai-features) allows users to analyze data and build generative AI applications using fully managed LLMs, vector search, and fully managed text-to-SQL services. It also enables multiple users to use AI models with no-code, SQL, and Python interfaces.
 
 ## Integrating Your Mendix App with Snowflake Cortex
 

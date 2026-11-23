@@ -90,6 +90,15 @@ You can upload archives containing the following:
 
 Uploading a backup creates a new backup item in your backup list. You can then restore the new backup item via the regular restore process (as described in [Restore Backup](#restore-backup), below). This ensures less downtime for your application.
 
+An uploaded archive can contain a database file, file documents, or both. The following limits apply to each archive:
+
+* A maximum total size of 250 GB for the database and file documents combined
+* A maximum size of 100 GB for the database file
+* A maximum size of 250 GB for file documents
+* A maximum of 800,000 files
+
+For example, you can upload an archive with a 100 GB database file and 150 GB of file documents, or an archive with no database file and 250 GB of file documents. In both cases, the archive can contain no more than 800,000 files.
+
 ### Download Backup {#download-backup}
 
 To download a backup, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download** on the backup you want to download.
@@ -158,7 +167,7 @@ We will change the replication region for these regions if a new region is opene
 
 ### Application Data Replication {#application-data-replication}
 
-If you have a Premium platform subscription, you can opt out of application data replication for your licensed applications on Mendix Cloud. In that case, application data of licensed apps will not be replicated to a secondary region for any of your applications. Changing the application data replication setting only affects licensed applications and environments that have not yet been provisioned. This setting does not apply to applications with a Basic plan.
+If you have a Premium platform subscription, you can opt out of application data replication for your licensed applications on Mendix Cloud. In that case, application data of licensed apps will not be replicated to a secondary region for any of your applications. Changing the application data replication setting only affects licensed applications and environments that have not yet been provisioned.
 
 ## Limitations
 

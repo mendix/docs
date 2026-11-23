@@ -28,18 +28,12 @@ Mendix recommends using calls from the same version of the API where possible. T
 
 ## Authentication{#authentication}
 
-Authentication for the Deploy API v4 uses a personal access token (PAT).
-
-### Generating a PAT
-
-For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
+Authentication for the Deploy API v4 uses a personal access token (PAT). For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
 
 Select at least the following as **Deployment Mendix Cloud** scopes:
 
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
-
-Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud Deploy API calls.
 
 ### Using the PAT
 

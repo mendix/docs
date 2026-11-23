@@ -115,7 +115,7 @@ To apply access restrictions to a specific application environment, follow these
 
 {{% /alert %}}
 
-#### Default Settings
+#### Default Settings {#defaults}
 
 These are the default settings:
 

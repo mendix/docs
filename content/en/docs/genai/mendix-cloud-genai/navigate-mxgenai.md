@@ -22,6 +22,8 @@ After clicking a specific resource, you land on its details page, which provides
 
 {{% alert color="info" %}} The **Consumption** tab is available for Model resources only.{{% /alert %}} 
 
+{{% alert color="warning" %}}A resource that reaches its monthly GenAI Unit allocation is blocked. A blocked resource stays blocked until a company admin increases its GenAI Unit capacity or the current bundle month ends. For details, see [Consumption Limit Notifications](#consumption-limit-notifications).{{% /alert %}}
+
 The **Consumption** tab provides an overview of GenAI Unit and Large Language Model (LLM) token consumption for the resource. Use this overview to see current usage, view daily consumption insights, and compare the current period with previous periods. 
 
 Note that periods represent bundle months. A bundle month is the period during which consumption is tracked, beginning on the date of your last GenAI Resource entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your resource activation date, not the calendar month.
@@ -30,12 +32,26 @@ Note that periods represent bundle months. A bundle month is the period during w
 
 **Current Consumption** shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 1,521 / 1.6k). **Plan** shows the resource pack model type (for example, Anthropic Claude Opus) and the total GenAI Unit allocation for the bundle month. The bundle refill date is shown at the top of the page.
 
-Below the summary, the page shows **Consumption Over Selected Time Range**. You can switch between weekly (**W**), bundle month (**BM**), month to date (**MTD**), and six months (**6M**) views. Use the **Model** dropdown to filter the charts by a specific model, and the **Key** dropdown to filter them by a specific resource key. The charts show the following metrics:
+Below the summary, the page shows **Consumption Over Selected Time Range**. You can switch between weekly (**W**), bundle month (**BM**), month to date (**MTD**), and six months (**6M**) views. Use the **Model** drop-down list to filter the charts by a specific model, and the **Key** dropdown to filter them by a specific resource key. The charts show the following metrics:
 
 * **Monthly Bundle GenAI Units Consumption** – GenAI Units consumed per day, with a dashed line indicating the monthly allocation limit.
 * **Monthly Bundle Input Consumption** – Raw LLM input tokens consumed per day.
 * **Monthly Bundle Output Consumption** – Raw LLM output tokens consumed per day.
 * **Monthly Bundle API Calls** – Number of API calls made under the resource per day within a bundle month.
+
+### Consumption Limit Notifications {#consumption-limit-notifications}
+
+Mendix notifies you when a resource approaches or reaches its monthly GenAI Unit allocation:
+
+* **80% of the allocation** – The resource's [Technical Contact](#technical-contact) receives an email that the resource is approaching its limit. A yellow **Consumption limit warning** banner and a **REACHING TOKEN LIMIT** label appear on the resource in the resource overview and on the resource details page.
+* **100% of the allocation** – The Technical Contact receives an email that the resource has reached its limit. A red **Token limit reached** banner and a **TOKEN LIMIT EXCEEDED** label appear on the resource in the resource overview and on the resource details page. From this point, the resource is blocked. When the resource is blocked, the Technical Contact receives an email. A red **Blocked** banner appears at the top of the resource details page, and the **GenAI Units** card on the **Consumption** tab is highlighted in red with a **BLOCKED** label.
+
+A blocked resource stays blocked until one of the following happens:
+
+* A company admin increases the GenAI Unit capacity of the resource so that it covers a value above the current consumption. For more information, see [Adjusting the GenAI Unit Capacity of a Resource](#adjusting-the-genai-unit-capacity-of-a-resource).
+* The current bundle month ends and the allocation resets.
+
+To avoid blocking, increase the allocation as soon as you receive the 80% or 100% notification.
 
 ### What Are Tokens and GenAI Units?
 
@@ -57,17 +73,38 @@ Click **Export** to export consumption data in CSV format. The export contains i
 
 ## Team
 
-{{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-team.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-team.png" alt="Team page showing the list of resource members with the Technical Contact label next to one member" >}}
 
-The **Team** page allows you to manage access to the Mendix Cloud GenAI resource. By default, internal members listed in this **Overview** have access to the resource in the GenAI resource portal and can create new keys or invite new users. You can add new users via the **Add Member** button and remove them using the **Remove Member** button next to their name in the overview.
+The **Team** page allows you to manage access to the Mendix Cloud GenAI resource. By default, internal members listed in this **Overview** have access to the resource in the GenAI resource portal and can create new keys or invite new users. You can add new users via the **Add Member** button. To remove a member, click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) at the end of the member's row and select **Remove Member**.
+
+### Technical Contact {#technical-contact}
+
+Each resource has one Technical Contact. The Technical Contact is the person who receives notifications about the resource, such as:
+
+* Upcoming model deprecations and new models
+* Planned maintenance
+* Overage alerts, including [consumption limit notifications](#consumption-limit-notifications)
+* Other notifications related to the resource
+
+The Technical Contact is responsible for informing the development teams or managers on how to proceed. In the **Overview** tab, the Technical Contact is marked with a **TECHNICAL CONTACT** label next to their name.
+
+When a resource is provisioned, the user selected in the **Technical Contact** section of the provisioning form becomes the Technical Contact. After that, the Technical Contact can be changed to any other member of the resource. A user can be the Technical Contact for multiple resources.
+
+To change the Technical Contact, click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) at the end of the member's row and select **Set as Technical Contact**. Only Mendix Admins and the current Technical Contact can change the Technical Contact. The new Technical Contact does not receive an invitation to accept or decline the role.
+
+{{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-team-technical-contact.png" alt="Team page with the three-dot menu open for a member, showing the Set as Technical Contact and Remove Member options" >}}
+
+{{% alert color="info" %}}
+You cannot remove the Technical Contact from the team. To remove them, first set another member as the Technical Contact.
+{{% /alert %}}
 
 ### Inviting External Members
 
-You can invite members from outside your organization to access your GenAI resources by entering their email address in **Add Member**. This option is available only if your company admin has enabled external user invitations. 
+You can invite members from outside your organization to access your GenAI resources by entering their email address in **Add Member**. This option is available only if your company admin has enabled external user invitations.
 
-You can track invitations in the **Pending Invites** tab. Invited users receive an email with a link to accept or decline the invitation. If they do not yet have a Mendix account, the link redirects them to create one. Once the invitation is accepted, the resource appears in their GenAI portal overview.
+You can track invitations in the **Pending Invites** tab. Invited users receive an email with a link to accept or decline the invitation. If they do not yet have a Mendix account, the link redirects them to create one. When they accept the invitation, the resource appears in their GenAI portal overview.
 
-You can withdraw pending invitations at any time. Invitations automatically expire after two weeks. External members can create and delete keys, export consumption data, manage knowledge base content and collections, and change the model. However, they cannot modify the display name or environment, or manage team membership.
+You can withdraw pending invitations at any time. Invitations automatically expire after two weeks. External members can create and delete keys, export consumption data, manage knowledge base content and collections, and change the model. However, they cannot modify the display name or environment, or manage team membership. If an external member is the [Technical Contact](#technical-contact), they can set another member as the Technical Contact.
 
 ## Keys
 
@@ -156,6 +193,7 @@ The **Settings** tab contains the details of a GenAI resource. It shows the foll
 
 * **Display Name** – The name of the resource.
 * **ID** – The resource ID.
+* **Created For** – The user for whom the resource was originally provisioned. This value does not change. To see who receives notifications about the resource, check the [Technical Contact](#technical-contact) on the **Team** page.
 * **Company** – The company name.
 * **Region(s)** – The region where the resource is hosted.
 * **Cross Region Inference (CRI)** – Indicates whether cross region inference is enabled for this resource ¹.
@@ -174,4 +212,4 @@ For knowledge base resources, you can also see details of the associated embeddi
 
 ### Adjusting the GenAI Unit Capacity of a Resource
 
-After a resource is provisioned, you can change its GenAI Unit capacity to match your actual usage. Company Admins can adjust the capacity through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting Resource GenAI Unit Capacity](/control-center/genai-resources-self-service/#adjusting-resource-genai-unit-capacity) section of *GenAI Resources*.
+After a resource is provisioned, you can change its GenAI Unit capacity to match your actual usage. Company admins can adjust the capacity through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting Resource GenAI Unit Capacity](/control-center/genai-resources-self-service/#adjusting-resource-genai-unit-capacity) section of *GenAI Resources*.

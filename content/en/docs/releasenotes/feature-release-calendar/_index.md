@@ -53,6 +53,8 @@ General Availability means that a feature is available for all users. This type 
 | Maia for Pipeline Logs | General Availability: Mx 11.9 |
 | Maia Learn | General Availability: Mx 11.12 |
 | Maia Make (see separate table for capabilities) | General Availability: Mx 11.8 |
+| Maia Operate <ul><li>Status summary</li><li>Root cause analysis</li><li>Fix recommendations</li></ul> | Public Beta: Mx 11.17 <br/>General Availability: Mx 11.21 |
+| BYO Agent (use your own coding agent in the Studio Pro terminal) | Private Beta: Mx 11.16 <br/>General Availability: Mx 11.18 |
 
 ### Maia Make
 
@@ -71,6 +73,17 @@ General Availability means that a feature is available for all users. This type 
 | Maia Make: MCP Server | General Availability: Mx 11.12 |
 | Maia Make: Modules | General Availability: Mx 11.9 |
 | Maia Make: editing/work with existing Microflows and Workflows | General Availability: Mx 11.9 |
+| Maia Make: Custom AI provider (BYO LLM) | Public Beta: Mx 11.12 <br/>General Availability: Mx 11.16 |
+| Maia Make: Translations | General Availability: Mx 11.15 |
+| Maia Make: Task Queues, App Settings, and Security | General Availability: Mx 11.15 |
+| Maia Make: Run the app and read its logs | General Availability: Mx 11.15 |
+| Maia Make: Plan Mode | General Availability: Mx 11.16 |
+| Maia Make: UI testing with Playwright | General Availability: Mx 11.16 |
+| Maia Make: Java actions | General Availability: Mx 11.16 |
+| Maia Make: Import and Export Mappings | General Availability: Mx 11.16 |
+| Maia Make: Claude Sonnet 5.5 | General Availability: Mx 11.17 |
+| Maia Make: Sign in with Microsoft Entra ID to a custom AI provider | General Availability: Mx 11.17 |
+| Maia Make: XML Schemas | General Availability: Mx 11.17 |
 | Maia Make: Integrations | General Availability: Mx 11.24 |
 | Maia Make: Rules | General Availability: Q4 2026 |
 
@@ -83,12 +96,14 @@ General Availability means that a feature is available for all users. This type 
 | Studio Pro Enhancements | Included in monthly releases.<br/>Refer to release blogs. |
 | Multilingual Studio Pro and Platform: Chinese, Japanese, Korean | General Availability: Mx 11.0 |
 | Multilingual Studio Pro and Platform: Portuguese | Public Beta: Mx 11.0 |
-| Module updates while retaining customizations | General Availability: Q3 2026 |
+| Module updates while retaining customizations | General Availability: Mx 11.12.7 |
 | Module-to-module dependency specification | General Availability: Q1 2027 |
-| Module overview for quick updating | General Availability: H1 2027 |
+| Module overview for quick updating | General Availability: Mx 11.16 |
+| Private documents and entities | General Availability: Q1 2027 |
 | Easy comparison of revisions (textual diffing) | General Availability: Mx 11.9 |
-| Easy comparison of revisions (visual diffing) | Public Beta: H2 2026 |
+| Easy comparison of revisions (visual diffing) | Public Beta: Mx 11.18 |
 | Searchable commit history | Public Beta: Mx 11.4 <br/>General Availability: Mx 11.6 |
+| Support Git outside Studio Pro | General Availability: Q1 2027 |
 | Merge Requests (aka Pull requests) | Public Beta: Mx 12.x |
 | OpenTelemetry Tracing | General Availability: Mx 11.12 |
 | Atlas 4 UI Framework | General Availability: Mx 11.0 |
@@ -136,7 +151,7 @@ General Availability means that a feature is available for all users. This type 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Private Connectivity for Mendix Cloud | Public Beta: Mx 11.6<br/>General Availability: Mx 11.15 |
+| Private Connectivity for Mendix Cloud | Public Beta: Mx 11.6<br/>General Availability: Mx 11.18 |
 | Operations Home | General Availability: Mx 11.12 |
 | Mendix on Azure | General Availability: Mx 11.4 |
 | Workstation Client | General Availability: Mx 11.3 + Mx 10.24 |
@@ -161,8 +176,7 @@ General Availability means that a feature is available for all users. This type 
 | Cluster Manager API | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
 | Multiple Build and Deploy Pipelines | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
 | Enhanced Logging, Events, and Metrics | General Availability: Private Mendix Platform 2.8.1 (September 2026) |
-| CI/CD for Windows Server | Beta: Private Mendix Platform 2.9 (November 2026) |
-| Maia Operate on Private Mendix Platform | Beta: Private Mendix Platform 2.9 (November 2026) |
+| Azure DevOps Server support | Private Mendix Platform 2.8.2 (November 2026) |
 
 ## Siemens Xcelerator (Integrations)
 

@@ -21,7 +21,10 @@ Since version 4.0, the Workstation Connector connects with Workstation Client us
 
 ## Prerequisites
 
-* Mendix Workstation 3.0.0 or newer
+* Mendix Workstation 4.0.0 or newer
+
+    The Workstation Connector is backward-compatible with pre-GA Workstation Client 3.0 and newer, except for the `SendDeviceRequest` action, which requires Workstation Client 4.0 or later.
+
 * Mendix Studio Pro 9.24.11 or newer
 
 ## Installing the Workstation Connector {#install-connector}
@@ -37,4 +40,4 @@ To install and configure the Workstation Connector, perform the following steps:
 
     For more information, see [Registering Workstation Clients](/mendix-workstation/register/).
 
-4. Configure your application. For more information, see [Integrating with Mendix Studio Pro](/mendix-workstation/configure-connector/).
+4. Configure your application. For more information, see [Authenticating your App with Mendix Studio Pro](/mendix-workstation/configure-connector/).

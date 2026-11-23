@@ -17,8 +17,8 @@ Mendix offers powerful integration options to incorporate IIoT data provided by 
 
 Within the Mendix Academy two learning paths are provided to show how to develop a full integrated Insights Hub application:
 
-* [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this learning path teaches you how to develop an app for Insights Hub with Mendix
-* [Build an Insights Hub App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform
+* [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/paths/80/Build-an-Insights-Hub-App-with-Mendix) - this learning path teaches you how to develop an app for Insights Hub with Mendix
+* [Build an Insights Hub App - Continued](https://academy.mendix.com/link/paths/93/Build-an-Insights-Hub-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform
 
 Once your app is registered in Insights Hub, there are a number of things you need to consider as you develop your Mendix app. These are covered in the following two documents:
 

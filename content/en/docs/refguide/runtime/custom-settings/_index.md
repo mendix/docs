@@ -44,6 +44,8 @@ Durations and intervals can be specified in the following formats:
 
 The following custom settings can be configured:
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="ApplicationRootUrl" href="#ApplicationRootUrl">ApplicationRootUrl</a> | see [ApplicationRootUrl](#applicationrooturl-section), below | In Mendix Cloud, https://\[domain\].<wbr>mendixcloud.<wbr>com |
@@ -53,7 +55,7 @@ The following custom settings can be configured:
 | <a id="ClientCertificateUsages" href="#ClientCertificateUsages">ClientCertificateUsages</a> | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. See **NoClientCertificateUsages** if you want to make sure that no client certificate is used for a certain host or web service. The value of **ClientCertificateUsages** must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: {{< figure src="/attachments/refguide/runtime/custom-settings/code_snippet.png" class="no-border" >}} | |
 | <a id="NoClientCertificateUsages" href="#NoClientCertificateUsages">NoClientCertificateUsages</a> | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. | |
 | <a id="ClusterManagerActionInterval" href="#ClusterManagerActionInterval">ClusterManagerActionInterval</a> | The interval (in milliseconds) used for performing all cluster manager actions. These are actions such as unblocking users and removing invalid sessions. See [Session Timing Constraints and Defaults](/refguide/tricky-custom-runtime-settings/#session-timing) in  *Advanced Custom Settings* for important details about valid values and their relationship to other session settings. | 300000 (5 minutes) |
-| <a id="commendixcoreisClusterSlave" href="#commendixcoreisClusterSlave">com.<wbr>mendix.<wbr>core.<wbr>isClusterSlave</a> | Set to `true` in a high-availability scenario when this is *not* the [Cluster Leader](/refguide/clustered-mendix-runtime/#cluster-leader-follower). The buildpack will usually enforce this setting, but it may need to be set for some on-premises deployments. | `false` |
+| <a id="commendixcoreisClusterSlave" href="#commendixcoreisClusterSlave">com.<wbr>mendix.<wbr>core.<wbr>isClusterSlave</a> | Set to `true` on every node except the [Cluster Leader](/refguide/clustered-mendix-runtime/#cluster-leader-follower) in a high-availability scenario. This setting only applies when the Runtime is started through the administrative API (the leader-based startup model); it has no effect when the Runtime is started directly from a configuration file (the leaderless startup model), which is always the case for [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/). See [Cluster Leader and Cluster Followers](/refguide/clustered-mendix-runtime/#cluster-leader-follower) for details on both models.<br/>{{% alert color="info" %}}Managed platforms, such as the Cloud Foundry buildpack, usually set this for you. For a manual, on-premises installation managed through the administrative API (for example, using the Mendix Service Console), you need to set this yourself on all nodes except one.{{% /alert %}} | `false` |
 | <a id="commendixcoreLenientDateTimeParsing" href="#commendixcoreLenientDateTimeParsing">com.<wbr>mendix.<wbr>core.<wbr>LenientDateTimeParsing</a> | When set to `true`, the `parseDateTime` function will use more lenient parsing, as it did in Mendix 9. For example `parseDateTime("yyyyMMdd", "2021-11-10")` will return `2020-11-01` as a date if this is set to true, which is probably not the intended result.. If set to `false`, which is the default, this example will throw an error as it is expecting `20211110`. It is recommended to not enable this setting to avoid unexpected results. | `false` |
 | <a id="commendixcoreSameSiteCookies" href="#commendixcoreSameSiteCookies">com.<wbr>mendix.<wbr>core.<wbr>SameSiteCookies</a> | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `Strict`, `Lax`, and `None`. The default is `Strict`. Setting it to `None` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `None`. If the connection is plain HTTP, then this setting must be changed to `Strict` (recommended) or `Lax`. | |
 | <a id="commendixcoreScheduledEventsCleanupAge" href="#commendixcoreScheduledEventsCleanupAge">com.<wbr>mendix.<wbr>core.<wbr>ScheduledEventsCleanupAge</a> | This setting specifies (in milliseconds) how old objects in the System.<wbr>ScheduledEventInformation table have to be before they are removed from the database. See [Scheduled Events - Legacy](/refguide9/scheduled-events-legacy/#cleanup) for more details. | 365 days for projects migrated from Mendix 9 and 7 days for new projects or projects with an empty database. |
@@ -70,6 +72,7 @@ The following custom settings can be configured:
 | <a id="httpclientCleanupAfterSeconds" href="#httpclientCleanupAfterSeconds">http.<wbr>client.<wbr>CleanupAfterSeconds</a> | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup.<br/>{{% alert color="warning" %}}If the infrastructure provider closes this connection before this cleanup time, you can receive a `java.net. SocketException: Connection reset` error. You can reduce this value to prevent this, or handle the error in your [REST call](/refguide/call-rest-action/#troubleshooting).{{% /alert %}} | 355 (355 seconds) |
 | <a id="httpclientMaxConnectionsPerRoute" href="#httpclientMaxConnectionsPerRoute">http.<wbr>client.<wbr>MaxConnectionsPerRoute</a> | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities.<br/>{{% alert color="warning" %}}If your app uses these calls, it is strongly recommended that this value is increased. The default could prevent multiple end-users accessing the API simultaneously. A good value is around the number of concurrent users you expect, with a maximum of 250. The value of `http.client. MaxConnectionsTotal` may also need to increase.{{% /alert %}} | 2 |
 | <a id="httpclientMaxConnectionsTotal" href="#httpclientMaxConnectionsTotal">http.<wbr>client.<wbr>MaxConnectionsTotal</a> | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities.<br/>{{% alert color="warning" %}}If you change the value of `http.client. MaxConnectionsPerRoute`, you will need to increase this value in line with that, up to a maximum of 250.{{% /alert %}} | 20 |
+| <a id="HttpClientValidateAfterInactivityMs" href="#HttpClientValidateAfterInactivityMs">HttpClient.<wbr>ValidateAfterInactivityMs</a> | When set, pooled HTTP connections are validated after the specified number of milliseconds of inactivity before being reused. This helps detect stale connections in environments where intermediaries (for example, firewalls and load balancers) silently drop connections. Applies to the **Call REST service** and **Call web service** activities. | Disabled. *Introduced in Mendix 11.6.12, 11.12.5, and 11.15.0* |
 | <a id="JavaKeyStorePassword" href="#JavaKeyStorePassword">JavaKeyStorePassword</a> | Password for the default Java keystore. | changeit |
 | <a id="MyScheduledEvents" href="#MyScheduledEvents">MyScheduledEvents</a> | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). {{% alert color="warning" %}}When running in multiple nodes, each node should have the same value for all runtime settings. Setting different values for different nodes to force specific scheduled events to be executed by specific nodes is not supported. It will not work and can lead to unexpected runtime errors.{{% /alert %}} | |
 | <a id="ScheduledEventExecution" href="#ScheduledEventExecution">ScheduledEventExecution</a> | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. {{% alert color="warning" %}}This setting cannot be configured when running locally. To enable and disable scheduled events when running locally, please use the 'Enabled' setting on the [Scheduled Events execution properties](/refguide/scheduled-events/) in Studio Pro.{{% /alert %}} {{% alert color="warning" %}}When running in multiple nodes, each node should have the same value for all runtime settings. Setting different values for different nodes to force specific scheduled events to be executed by specific nodes is not supported. It will not work and can lead to unexpected runtime errors.{{% /alert %}} | NONE |
@@ -88,6 +91,8 @@ The following custom settings can be configured:
 | <a id="SessionKeepAliveUpdateBatchSize" href="#SessionKeepAliveUpdateBatchSize">SessionKeepAliveUpdateBatchSize</a> | This setting specifies how many sessions should be updated per batch when updating the `LastActive` attribute in the periodic system task. | 1000 *Introduced in Mendix 11.6.1 and 11.7.0.* |
 | <a id="UseOldExceptionBehavior" href="#UseOldExceptionBehavior">UseOldExceptionBehavior</a> | Allows you to set the exception message and wrapping behavior in the Mendix Runtime Server to the behavior below Mendix version 11.6.0. From Mendix 11.6.0 we changed the way messages are constructed to prevent the actual cause of the error being hidden in the details and exception wrapping is reduced significantly.<br/><br/>This change means that error messages will be different and have a significantly less deep exception nesting. Consequently, code which depends on finding some specific exception hardcoded at X levels deep (using `exception.getCause().getCause()` for example), will probably fail.<br/><br/>To restore the previous behavior, set `UseOldExceptionBehavior` to `true`. | false *Introduced in Mendix 11.6.0.* |
 
+{{< /expandable-table >}}
+
 ### ApplicationRootUrl {#applicationrooturl-section}
 
 The ApplicationRootUrl setting is used to specify the protocol, domain, and path to your application. This can be used within Java actions to get the public location of the application, for example when including a URL to the application when sending emails from a scheduled event.
@@ -101,7 +106,7 @@ There are two main ways that you might use to host multiple applications.
 * Routing based on a (sub)domain
 * Routing based on a subpath
 
-Say we are hosting two apps, App1 and App2. In domain-based routing, every app gets its own domain (for example. `app1.domain.com` and `app2.domain.com`). In subpath-based routing, this would be on a subpath, for example `domain.com/app1` and `domain.com/app2`.
+Say we are hosting two apps: App1 and App2. In domain-based routing, every app gets its own domain (for example. `app1.domain.com` and `app2.domain.com`). In subpath-based routing, this would be on a subpath, for example `domain.com/app1` and `domain.com/app2`.
 
 When setting up either routing variant, most content is correctly served automatically as it is relative to the path in which it is being served. Exceptions to this include:
 
@@ -120,15 +125,21 @@ Mendix systems like OData that generate content based on a http request to the s
 
 The settings below influence the behavior of the log files. These settings can only be used on premises. In the cloud, these settings do not change any behavior.
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="LogFileName" href="#LogFileName">LogFileName</a> | The name of the log file. The log files (actual log file plus back-up files) will be placed in the folder specified by the setting log path. | Application.log |
 | <a id="MaxLogFileSize" href="#MaxLogFileSize">MaxLogFileSize</a> | The maximum size per log file. When the log file reaches this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | <a id="MaxLogFileCount" href="#MaxLogFileCount">MaxLogFileCount</a> | The maximum count of log files preserved (actual file plus back-up files). When the maximum count is reached, the oldest backup file will be removed. | 10 |
 
+{{< /expandable-table >}}
+
 ## Database Settings {#database-settings}
 
 ### Common Settings
+
+{{< expandable-table >}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -148,11 +159,15 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="JdbcLoginTimeout" href="#JdbcLoginTimeout">JdbcLoginTimeout</a> | This setting defines the database connection establishment time in milliseconds. | 5000 (5 seconds) |
 | <a id="DataStorageOptimizeSecurityColumns" href="#DataStorageOptimizeSecurityColumns">DataStorage.OptimizeSecurityColumns</a> | When true, query columns generated to evaluate XPath constraints in access rules are optimized to `true` if the runtime can determine that the value will always be true for the objects that the query returns. This is almost always an improvement, but we have seen cases where the PostgreSQL query planner has worse performance for the simpler query. | true |
 
+{{< /expandable-table >}}
+
 ### Connection Pooling {#connection-pooling}
 
 The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/pool/). 
 
 These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment/), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
+
+{{< expandable-table >}}
 
 | Name | Value | Default Value |
 | --- | --- | --- |
@@ -168,11 +183,15 @@ These settings are configured *per runtime instance*. If you have [scaled your a
 | <a id="ConnectionPoolingTestOnReturn" href="#ConnectionPoolingTestOnReturn">ConnectionPoolingTestOnReturn</a> | If `true`, a database connection will be validated by the connection pool when it is returned to the pool by the application. | false |
 | <a id="ConnectionPoolingTestWhileIdle" href="#ConnectionPoolingTestWhileIdle">ConnectionPoolingTestWhileIdle</a> | If `true`, all idle database connections will be validated when the idle object evictor runs. | false |
 
+{{< /expandable-table >}}
+
 ### Migration Settings
 
-The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterwards, because they are not needed anymore.
+The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterward, because they are not needed anymore.
 
 Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than the current domain model specifies.
+
+{{< expandable-table >}}
 
 | Name | Value | Default Value |
 | --- | --- | --- |
@@ -187,6 +206,8 @@ Before the data copying process starts, the main database structure will be gene
 | <a id="SourceDatabaseUserName" href="#SourceDatabaseUserName">SourceDatabaseUserName</a> | The user name for the connection to the source database. | |
 | <a id="SourceOracleServiceName" href="#SourceOracleServiceName">SourceOracleServiceName</a> | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. | |
 
+{{< /expandable-table >}}
+
 ## S3 Storage Service Settings {#amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
@@ -194,6 +215,8 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 {{% alert color="warning" %}}
 For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
+
+{{< expandable-table >}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -215,6 +238,8 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settin
 | <a id="commendixstorages3UseCACertificates" href="#commendixstorages3UseCACertificates">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseCACertificates</a> | Set this value to `true` to use the configured [CACertificates](#CACertificates) for the connection to the S3 service. | false |
 | <a id="FileStorageS3DisableChunkedEncoding" href="#FileStorageS3DisableChunkedEncoding">FileStorage.<wbr>S3.<wbr>DisableChunkedEncoding</a> | Set this value to `true` to disable chunked transfer encoding when uploading files to S3 storage. This setting can be useful when working with S3-compatible storage services that do not fully support chunked encoding.`<br />*This setting was introduced in Mendix version 11.10.0 and 11.6.6 MTS* | false |
 
+{{< /expandable-table >}}
+
 ## Microsoft Azure SQL {#azure-sql}
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
@@ -225,6 +250,8 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settin
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="AzureDatabaseType" href="#AzureDatabaseType">DatabaseType</a> | `SQLSERVER` | |
@@ -232,6 +259,8 @@ First, you need to create an Azure SQL database (for information on how to do th
 | <a id="AzureDatabaseName" href="#AzureDatabaseName">DatabaseName</a> | `your-databasename` | |
 | <a id="AzureDatabaseUserName" href="#AzureDatabaseUserName">DatabaseUserName</a> | `your-username` | |
 | <a id="AzureDatabasePassword" href="#AzureDatabasePassword">DatabasePassword</a> | `your-password` | |
+
+{{< /expandable-table >}}
 
 {{% alert color="info" %}}
 An alternative to using `DatabaseUserName` and `DatabasePassword` is appending `Authentication=ActiveDirectoryDefault` to the [`DatabaseJdbcUrl`](#DatabaseJdbcUrl) setting.
@@ -245,6 +274,8 @@ These settings can be used to store files using the Microsoft Azure blob storage
 {{% alert color="warning" %}}
 For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
+
+{{< expandable-table >}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -260,6 +291,8 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settin
 | <a id="commendixstorageazureUseHttps" href="#commendixstorageazureUseHttps">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>UseHttps</a> | For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
 | <a id="commendixstorageazureTimeoutIntervalInMs" href="#commendixstorageazureTimeoutIntervalInMs">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>TimeoutIntervalInMs</a> | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No timeout |
 | <a id="commendixstorageazureMaximumExecutionTimeInMs" href="#commendixstorageazureMaximumExecutionTimeInMs">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>MaximumExecutionTimeInMs</a> | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
+
+{{< /expandable-table >}}
 
 {{% alert type="warning" %}}
 ¹ The `com.mendix.storage.azure.BlobEndpoint` setting can include the container name, as in `https://storageaccount.blob.core.windows.net/some-container-name`. In this case the value in the `com.mendix.storage.azure.Container` setting will be used as a directory name.
@@ -282,6 +315,9 @@ Azure blob storage's default connection protocol is HTTPS in order to encourage 
 The settings below influence the behavior of the Mendix web client.
 
 <!-- markdownlint-disable -->
+
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="EnableKeepAlive" href="#EnableKeepAlive">EnableKeepAlive</a> | Defines whether the web client sends a keep alive request every `SessionTimeout`/2 milliseconds in order to prevent a session timeout. Each click in the browser also acts as `KeepAlive`. Disabling this property will result in the user being logged out automatically after `SessionTimeout` milliseconds of inactivity (default 10 minutes), even if the browser remains open. See [`SessionTimeout`](#SessionTimeout) for more information. | true |
@@ -293,17 +329,36 @@ The settings below influence the behavior of the Mendix web client.
 | <a id="commendixwebuiStateSizeWarningThreshold" href="#commendixwebuiStateSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>StateSizeWarningThreshold</a> | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | <a id="commendixwebuiCommittedObjectsThreshold" href="#commendixwebuiCommittedObjectsThreshold">com.<wbr>mendix.<wbr>webui.<wbr>CommittedObjectsThreshold</a> | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 | <a id="MaxRetrieveAmount" href="#MaxRetrieveAmount">MaxRetrieveAmount</a> | The maximum number of objects the client is allowed to retrieve by list widgets using database datasource runtime operation.<br/>When requesting more objects than allowed, the runtime will enforce the `MaxRetrieveAmount` by setting a limit on the query and will log the following warning: `A retrieve action requested more objects than allowed by the `MaxRetrieveAmount` runtime setting. Amount requested: (...), MaxRetrieveAmount: (...)`.<br />*This setting was introduced in Mendix version 11.8.0 and 11.6.5 MTS* | |
+
+{{< /expandable-table >}}
+
 <!-- markdownlint-enable -->
 
 ## Metrics Settings{#metrics-settings}
 
 The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide/metrics/) for more information and the specification of the settings format.
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="commendixmetricsType" href="#commendixmetricsType">com.mendix.metrics.Type</a> | Enable access to Micrometer metrics through Java APIs | micrometer |
 | <a id="MetricsRegistries" href="#MetricsRegistries">Metrics.Registries</a> | Registries to send metrics to | |
 | <a id="MetricsApplicationTags" href="#MetricsApplicationTags">Metrics.ApplicationTags</a> | Common tags used for every meter | |
+
+{{< /expandable-table >}}
+
+## OpenTelemetry Settings{#tracing-settings}
+
+The setting below configures observability (metrics, tracing, logs) through [OpenTelemetry](https://opentelemetry.io/docs). See [OpenTelemetry](/refguide/opentelemetry-in-runtime/) for information on setting up OpenTelemetry.
+
+{{< expandable-table >}}
+
+| Name | Description | Default Value |
+| --- | --- | --- |
+| <a id="OpenTelemetryMinimalMode" href="#OpenTelemetryMinimalMode">OpenTelemetry.MinimalMode</a> | Enable OpenTelemetry minimal tracing mode. <br />When true, only generates incoming or outgoing spans. <br />*Introduced in Mendix version 11.15.0* | false |
+
+{{< /expandable-table >}}
 
 ## Proxy Settings {#proxy-settings}
 
@@ -318,6 +373,8 @@ The settings below configure the app to use a proxy for all connections, whether
 
 These settings can be set either as JVM properties or as custom Runtime settings. When both the JVM property and custom runtime setting are set, the app uses the custom runtime setting.
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="httpproxyHost" href="#httpproxyHost">http.proxyHost</a> | Defines the hostname of the HTTP proxy server. | |
@@ -325,6 +382,8 @@ These settings can be set either as JVM properties or as custom Runtime settings
 | <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | |
 | <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | |
 | <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | <a href="#httpnonProxyHosts">See below</a> | |
+
+{{< /expandable-table >}}
 
 {{% alert color="info" %}}
 The `http.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
@@ -338,6 +397,8 @@ The settings below configure the app to use a proxy to reach the Mendix license 
 These settings have to be set as JVM properties, not as custom runtime settings.
 {{% /alert %}}
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="httpsproxyHost" href="#httpsproxyHost">https.proxyHost</a> | Defines the hostname of the HTTPS proxy server. | |
@@ -346,11 +407,13 @@ These settings have to be set as JVM properties, not as custom runtime settings.
 | <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | |
 | <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | <a href="#httpnonProxyHosts">See below</a> | |
 
+{{< /expandable-table >}}
+
 {{% alert color="info" %}}
 The `https.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
 {{% /alert %}}
 
-### Non-proxy hosts {#non-proxy-hosts}
+### Non-Proxy Hosts {#non-proxy-hosts}
 
 {{% alert color="info" %}}
 Using `http.nonProxyHosts` for http(s) connections was introduced in Mendix 11.10.0.

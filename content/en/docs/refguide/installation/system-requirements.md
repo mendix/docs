@@ -45,6 +45,7 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) - if not yet installed on your machine, Mendix will install Eclipse Temurin (x64 or ARM64) - see [Java](#java) for the exact version required.
 * Gradle version 9.1 or above - if Gradle is not yet installed on your machine, Mendix will install Gradle version 9.5.1
+    * For Studio Pro 11.13 and below, Gradle version 8.5 or above is required
 * Git for Windows (x64) version 2.48.1 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -226,7 +227,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment 25 (JRE). To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, for Studio Pro 11.14 and above, you will need Java Runtime Environment 25 (JRE). For Studio Pro 11.13 and below, you will need JRE 21. To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert type="info" %}}
 A Java Runtime Environment (JRE) is the environment needed to run Mendix on a server. This is not to be confused with a Java Development Kit (JDK), which is supported by Studio Pro and used to create and develop apps. To learn more about JDKs, see 
@@ -325,7 +326,7 @@ MxBuild is a Windows, Linux, and macOS command-line tool that can be used to bui
     | --- | --- |
     | .NET 8 | .NET 10 |
 
-* JDK 25
+* JDK 25 (for Studio Pro 11.14 and above) or JDK 21 (for Studio Pro 11.13 and below)
 
 ## mx Command-Line Tool {#mxtool}
 

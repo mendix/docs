@@ -16,17 +16,33 @@ scope:
 second: '(?:\b[A-Za-z][a-z]+ )+\(([A-Z]{3,5})s?\)'
 # ... with the exception of these (and the Microsoft.Acronyms exceptions):
 exceptions+:
+  - AWS
   - BTP
+  - DNS
+  - GCP
   - GIF
   - HANA
+  - IAM
   - JDBC
   - JPEG
   - JPG
+  - JVM
   - MCP
   - MDA
+  - MIME
   - MPR
+  - NGINX
   - NOT
+  - OIDC
   - OQL
   - PNG
   - REST
+  - SAML
   - SAP
+  - SMS
+  - SMTP
+  - SOAP
+  - SSO
+  - TLS
+  - UTC
+  - UUID

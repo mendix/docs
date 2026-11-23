@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
   
 ## November 2026
 
+### November 25, 2026
+
+#### New Features
+
+* Maia Operate Status Check and Root Cause Analysis is now available in Public Beta on the **Environments** page. You can ask the Maia Operate assistant for a plain-language summary of an environment's health, or run a root cause analysis to find out why an environment is not working well. For more information, refer to [Status Check and Root Cause Analysis](/developerportal/maia-operate/status-check-root-cause-analysis/).
+
 ### November 19, 2026
 
 #### Fixes

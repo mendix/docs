@@ -102,9 +102,23 @@ For central certificates, a single certificate managed by the Mendix Admin can b
 
 ### Which Certificates and TLS Cipher Suites Does Mendix Cloud Support? {#supported-certificates}
 
-Mendix Cloud currently supports only RSA certificates. The default `*.mendixcloud.com` domains use an RSA certificate, and you can only upload RSA certificates for custom domains. The `TLS_ECDHE_ECDSA_*` cipher suites are enabled in the Mendix Cloud Transport Layer Security (TLS) configuration. However, a server can only negotiate them when it presents an Elliptic Curve Digital Signature Algorithm (ECDSA) certificate. As a result, these cipher suites cannot be used yet.
+Mendix Cloud currently supports only RSA certificates. The default `*.mendixcloud.com` domains use an RSA certificate, and you can only upload RSA certificates for custom domains.
 
-With an RSA certificate, the TLS 1.2 cipher suites that work are the `TLS_ECDHE_RSA_*` suites, such as `TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256` and `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`.
+The following cipher suites work for HTTPS connections to applications in Mendix Cloud:
+
+**TLS 1.3**
+
+* `TLS_AES_128_GCM_SHA256`
+* `TLS_AES_256_GCM_SHA384`
+* `TLS_CHACHA20_POLY1305_SHA256`
+
+**TLS 1.2**
+
+* `TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256`
+* `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`
+* `TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256`
+
+The `TLS_ECDHE_ECDSA_*` cipher suites are enabled in the Mendix Cloud Transport Layer Security (TLS) configuration. However, a server can only negotiate them when it presents an Elliptic Curve Digital Signature Algorithm (ECDSA) certificate. Because Mendix Cloud uses RSA certificates, these cipher suites cannot be used. If your client connects to Mendix Cloud, enable the `TLS_ECDHE_RSA_*` cipher suites on the client side.
 
 ## Read More
 

@@ -206,6 +206,10 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * [Version Pinning](/developerportal/deploy/version-pinning/) is now in general availability (GA) and enabled by default for all Mendix Cloud (Kubernetes) users. Company-level enablement is no longer required.
 
+#### Security
+
+* We removed support for the `TLS_DHE_RSA_WITH_AES_128_GCM_SHA256` and `TLS_DHE_RSA_WITH_AES_256_GCM_SHA384` cipher suites for HTTPS connections to applications in Mendix Cloud, as announced in the [October 1, 2025 release notes](/releasenotes/developer-portal/mendix-cloud/2025/#announcement--deprecation-of-https-ssltls-weak-ciphers-from-february-1-2026). For the cipher suites that Mendix Cloud supports, refer to [Which Certificates and TLS Cipher Suites Does Mendix Cloud Support?](/developerportal/deploy/custom-domains/#supported-certificates) in *Custom Domains*.
+
 #### New Features
 
 * Technical Contacts can now [configure custom domains](/developerportal/deploy/custom-domains/#Configuring) at the application level using [centralized certificates](/developerportal/deploy/certificates/centralized-certificates/) created by a Mendix Admin on the [Certificate Management](/control-center/certificate-management/) page in Control Center.

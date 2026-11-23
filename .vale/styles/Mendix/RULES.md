@@ -15,6 +15,7 @@ This directory contains custom Vale rules specific to Mendix documentation.
 * **Emphasis.yml**: Flags bold and italics around emphasis words (not, no, all, never, always, etc.)
 * **HeadingPunctuation.yml**: Prohibits end punctuation in headings (except question marks)
 * **HeadingTitleCase.yml**: Enforces title case in headings
+* **HttpLinks.yml**: Flags links that use http instead of https
 * **IconShortcodes.yml**: Suggests using icon shortcodes with tooltips instead of plain text icon descriptions
 * **Inclusive.yml**: Flags non-inclusive language
 * **Latin.yml**: Flags Latin abbreviations and phrases that should be replaced with plain English

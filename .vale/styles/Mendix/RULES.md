@@ -20,6 +20,7 @@ This directory contains custom Vale rules specific to Mendix documentation.
 * **Latin.yml**: Flags Latin abbreviations and phrases that should be replaced with plain English
 * **LinkText.yml**: Prohibits generic link text like "click here"
 * **ListIntroductions.yml**: Enforces en dashes (–) in list item introductions (≤40 chars) by replacing em dashes and spaced hyphens
+* **ParagraphBreaks.yml**: Suggests checking for a missing blank line when a sentence ends at the end of a line and the next line starts a new sentence
 * **ProductNames.yml**: Enforces correct Mendix product names
 * **Repetition.yml**: Flags repeated function words such as "the the"; replaces Vale.Repetition
 * **Spelling.yml**: Flags unknown words; accepted words are filters in the file; replaces Vale.Spelling

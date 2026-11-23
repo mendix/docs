@@ -43,7 +43,9 @@ The **Snippet settings** property opens a dialog box that shows a list of parame
 
 ## Passing Arguments {#passing-arguments}
 
-An argument must be passed to every [snippet parameter](/refguide/snippet/#parameters) of the snippet that is called. The **Snippet settings** dialog box lists the parameters of the snippet with their **Name**, **Type**, and **Argument**. To configure the argument of a parameter, select the parameter and click **Edit parameter value**. In the dialog box that opens, set **Type** to **Variable** or **Expression**. This works the same for object and primitive parameters.
+An argument must be passed to every [snippet parameter](/refguide/snippet/#parameters) of the snippet that is called. The **Snippet settings** dialog box lists the parameters of the snippet with their **Name**, **Type**, and **Argument**. 
+
+To configure the argument of a parameter, select the parameter and click **Edit parameter value**. In the subsequent dialog box, set **Type** to either **Variable** or **Expression**. This works the same for object and primitive parameters.
 
 In the example below, the snippet has an object parameter **Order** and a primitive parameter **Amount** of type `Integer/Long`. Both parameters have an argument:
 
@@ -51,7 +53,9 @@ In the example below, the snippet has an object parameter **Order** and a primit
 
 ### Variable Arguments {#variable-arguments}
 
-Variable arguments are used to pass a value from the context of the snippet call to the snippet. This is done by selecting from the available variables in the **Variable** dropdown. Only variables that match the data type of the snippet parameter are shown, for example a page parameter, a [variable](/refguide/page-properties/#variables) of the page, or an object from a surrounding data container. Variables that come from a data source, a selection, or the return value of an action cannot be passed.
+Variable arguments are used to pass a value from the context of the snippet call to the snippet. Do this by selecting from the available variables in the **Variable** dropdown. 
+
+Only variables that match the data type of the snippet parameter are shown, for example a page parameter, a [variable](/refguide/page-properties/#variables) of the page, or an object from a surrounding data container. Variables that come from a data source, a selection, or the return value of an action cannot be passed.
 
 In the example below, the argument for the parameter **Amount** is the variable **Amount**:
 

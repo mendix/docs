@@ -120,9 +120,9 @@ Expand a row at any time to read the following details:
 
 For each test case, the judge receives the agent's system prompt and user prompt with the test case's values filled in, the agent's response, the tools that the agent called with their input, the test case description, and the ground truth when there is one. For a Chat agent, the test case's user message takes the place of the user prompt. The agent is called with that single message, and the judge receives it as the user prompt.
 
-While a run is in progress or is being cancelled, the **Evaluation setup** box is locked. You cannot select another test set or evaluator, or add, edit, enable, disable, or delete test cases. You can still expand a test case to read its values.
+While a run is in progress or is being canceled, the **Evaluation setup** box is locked. You cannot select another test set or evaluator, or add, edit, enable, disable, or delete test cases. You can still expand a test case to read its values.
 
-You can cancel a run at any time. The call that is in progress finishes, the run stops, and all partial results are discarded. A cancelled run is not saved to the run history.
+You can cancel a run at any time. The call that is in progress finishes, the run stops, and all partial results are discarded. A canceled run is not saved to the run history.
 
 ### Reviewing Results {#review-results}
 
@@ -160,7 +160,7 @@ Run files are versioned with your app and appear in the **Commit** dialog in Stu
 
 Runs are never deleted. For each agent and test set, the 30 most recent runs keep full detail. Older runs are compacted in place to the summary and the verdict for each test case. Compacted runs still count in the comparison and the trend.
 
-Cancelled runs are not saved. Runs that were abandoned before they had a summary, for example because the action is not registered or an evaluator could not be loaded, are not saved either. If writing a file fails, the results are still shown and you are notified. Renaming an agent or its module moves its run files along, so the comparison continues.
+canceled runs are not saved. Runs that were abandoned before they had a summary, for example because the action is not registered or an evaluator could not be loaded, are not saved either. If writing a file fails, the results are still shown and you are notified. Renaming an agent or its module moves its run files along, so the comparison continues.
 
 #### Comparing Runs {#current-last-trend}
 

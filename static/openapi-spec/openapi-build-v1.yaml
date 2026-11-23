@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.0.3
 info:
   title: Build Service v1
   description: "Provide services for build, retrive, lock, unlock and download app packages and sbom files. \r\n"
@@ -490,11 +490,11 @@ components:
           schema:
             $ref: '#/components/schemas/error'
           examples:
-            409 - App package already exist
+            409 - App package already exist:
               value:
-                status: 404
-                title: Not Found
-                detail: Package file exists for this revision.
+                status: 409
+                title: Conflict
+                detail: Package file already exists for this revision.
 
     package:
       description: App build package

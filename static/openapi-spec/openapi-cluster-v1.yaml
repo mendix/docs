@@ -1,9 +1,9 @@
-openapi: 3.0.1
+openapi: 3.0.3
 info:
   title: Cluster Service v1
   version: 1.0.0
 servers:
-  - url: 'https://pmp-demo.privateplatform.mendix.com/clusterservice/v1'
+  - url: https://pmp-demo.privateplatform.mendix.com/clusterservice/v1
 paths:
   /clusters:
     post:

@@ -1,9 +1,9 @@
-openapi: 3.0.4
+openapi: 3.0.1
 info:
   title: Project Service v2
   version: 1.0.0
 servers:
-  - url: 'https://pmp-test-sgp.mxplatform.net/projectservice/v2'
+  - url: https://pmp-demo.privateplatform.mendix.com/projectservice/v2
 paths:
   /projects:
     get:

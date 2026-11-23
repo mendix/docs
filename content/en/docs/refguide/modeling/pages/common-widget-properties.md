@@ -102,9 +102,9 @@ To manage the translations for all widgets in the app, click **Go to system text
 A system text applies to all widgets in the app that use it. To use a different text for a single widget, override the system text for that widget:
 
 1. Select the row of the system text you want to override.
-2. Click **Override** to open the **Edit system text override** dialog box. The dialog box shows the **Category**, **Item**, **Original text**, and **Parameters** of the system text.
-3. Click **Edit...** to open the [text template](/refguide/text/#caption-template) editor for the override.
-4. Click **OK** to save the override.
+1. Click **Override** to open the **Edit system text override** dialog box. The dialog box shows the **Category**, **Item**, **Original text**, and **Parameters** of the system text.
+1. Click **Edit** to open the [text template](/refguide/text/#caption-template) editor for the override.
+1. Click **OK** to save the override.
 
 {{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/system-text-override.png" alt="The Studio Pro dialog showing the selected system text and its override." class="no-border" >}}
 

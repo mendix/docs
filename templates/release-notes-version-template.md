@@ -7,7 +7,7 @@ description: "The release notes for {PRODUCT} {VERSION} (including all patches) 
 #KI: Reference Jira issues for known issues here. Example: # KI: "Short issue name": ABC-1234
 ---
 
-[//]: # "Use for products released by version. Text in {braces} is a placeholder; replace it. Headings without braces are literal. Write only customer-facing changes, newest patch first. For each later patch, add a new version section above the previous one, with the same structure. Use only the elements that apply, and match sibling release notes."
+[//]: # "Use for products released by version. Text in {braces} is a placeholder; replace it. Headings without braces are literal. Write only customer-facing changes, newest patch first. For each later patch, add a new version section above the previous one, with the same structure. If the change affects only certain users, apps, or environments, say which. If users must take action, say what to do. Link to documentation when the source material or the user identifies new documentation written for this change. Use only the release note types that apply."
 
 [//]: # "Blog post used with Studio Pro only. Remove for other products."
 
@@ -23,7 +23,7 @@ description: "The release notes for {PRODUCT} {VERSION} (including all patches) 
 
 ### New Features
 
-[//]: # "Use for a major new feature that customers can see and use. Give a major feature its own heading, then group the rest under Other New Features. If no feature needs its own heading, use a flat list. State who is affected and any action required. Link to the product documentation if required. State who is affected and any action required."
+[//]: # "Use for a major new feature that customers can see and use. Give a major feature its own heading, then group the rest under Other New Features. If no feature needs its own heading, use a flat list."
 
 #### {Major New Feature Name}
 
@@ -35,7 +35,7 @@ description: "The release notes for {PRODUCT} {VERSION} (including all patches) 
 
 ### Improvements
 
-[//]: # "Use for a functional fix or minor new feature that makes behavior more consistent or predictable. Group the rest under Other Improvements when you use subheadings, such as Performance. Otherwise use a flat list. State who is affected and any action required. Link to the product documentation if required."
+[//]: # "Use for a functional fix or minor new feature that makes behavior more consistent or predictable. Group the rest under Other Improvements when you use subheadings, such as Performance. Otherwise use a flat list."
 
 #### Performance
 
@@ -53,7 +53,7 @@ description: "The release notes for {PRODUCT} {VERSION} (including all patches) 
 
 ### Deprecations
 
-[//]: # "Use for functionality that is no longer available or will be removed in a future version. State who is affected and any action required. Link to the product documentation if required."
+[//]: # "Use for functionality that is no longer available or will be removed in a future version."
 
 * We deprecated {description}. It will be removed in {version}. Use {alternative} instead.
 * We removed {description}. Use {alternative} instead.
@@ -61,7 +61,7 @@ description: "The release notes for {PRODUCT} {VERSION} (including all patches) 
 
 ### Breaking Changes
 
-[//]: # "Use for a technical change that can break existing apps or workflows. State who is affected and any action required. Link to the product documentation if required."
+[//]: # "Use for a technical change that can break existing apps or workflows."
 
 * We changed {description}. {Who is affected.} To continue, {required action}. For more information, see [{Doc title}]({URL}).
 

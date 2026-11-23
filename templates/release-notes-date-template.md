@@ -7,7 +7,7 @@ description: "Release notes for updates to {PRODUCT} in {YYYY}."
 #If this page is mapped to a landing page, update the link there when renaming or moving it.
 ---
 
-[//]: # "Use for products released by date. Text in {braces} is a placeholder; replace it. Headings without braces are literal. One file per year, newest first. For each later date, add a new date section above the previous one. For a new month, add a new month section above the previous one, with the same structure. Create the year file only if none exists. Write only customer-facing changes. Use only the elements that apply, and match sibling release notes."
+[//]: # "Use for products released by date. Text in {braces} is a placeholder; replace it. Headings without braces are literal. One file per year, newest first. For each later date, add a new date section above the previous one. For a new month, add a new month section above the previous one, with the same structure. Create the year file only if none exists. Write only customer-facing changes. If the change affects only certain users, apps, or environments, say which. If users must take action, say what to do. Link to documentation when the source material or the user identifies new documentation written for this change. Use only the release note types that apply."
 
 ## {Month YYYY}
 
@@ -15,13 +15,13 @@ description: "Release notes for updates to {PRODUCT} in {YYYY}."
 
 #### New Features
 
-[//]: # "Use for a major new feature that customers can see and use. State who is affected and any action required. Link to the product documentation."
+[//]: # "Use for a major new feature that customers can see and use."
 
 * We added {description}.
 
 #### Improvements
 
-[//]: # "Use for a functional fix or minor new feature that makes behavior more consistent or predictable. State who is affected and any action required. Link to the product documentation."
+[//]: # "Use for a functional fix or minor new feature that makes behavior more consistent or predictable."
 
 * We improved {description}.
 
@@ -33,7 +33,7 @@ description: "Release notes for updates to {PRODUCT} in {YYYY}."
 
 #### Deprecations
 
-[//]: # "Use for functionality that is no longer available or will be removed in a future version. State who is affected and any action required. Link to the product documentation."
+[//]: # "Use for functionality that is no longer available or will be removed in a future version."
 
 * We deprecated {description}. It will be removed on {Month D, YYYY}. Use {alternative} instead.
 * We removed {description}. Use {alternative} instead.

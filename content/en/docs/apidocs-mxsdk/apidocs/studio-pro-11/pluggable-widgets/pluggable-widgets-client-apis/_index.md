@@ -583,7 +583,7 @@ Parameters may be passed to external texts. Please note there is no type checkin
 
 #### Overrides {#overrides}
 
-A user can [override system texts](/refguide/common-widget-properties/#override-system-texts) for a single widget in Studio Pro. This applies to both the widget's own texts and its external texts. When an override exists for the current language, `translate()` returns the override instead of the system text. The parameters passed to `translate()` are substituted in the override in the same way. The widget does not need any changes to support overrides.
+A user can [override system texts](/refguide/common-widget-properties/#override-system-texts) for individual widgets in Studio Pro. Overriding applies to both the widget's own texts and its external texts. When an override exists for the current language, `translate()` returns the override instead of the system text. The parameters passed to `translate()` are substituted in the override in the same way. The widget does not need any additional changes to support overrides.
 
 {{% alert color="info" %}}
 Overriding system texts was introduced in Mendix 11.17.

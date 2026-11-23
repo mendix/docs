@@ -232,6 +232,22 @@ Pointing to a button is deprecated and results in a deprecation warning. Configu
 If you use the conditional visibility of the referenced button to run different close behaviors, that logic is not carried over when you switch to **Action**, because the close action is no longer a button reference. To keep conditional behavior, set the close action to call a nanoflow that contains the conditional logic.
 {{% /alert %}}
 
+#### Existing Pop-Ups
+
+Existing pop-ups that use the legacy button reference continue to work after you update the project. They are automatically converted to the new action model only when the referenced button uses one of the following client actions:
+
+* `DoNothingClientAction`
+* `CancelChangesClientAction`
+* `ClosePageClientAction`
+* `SaveChangesClientAction`
+* `SignOutClientAction`
+
+#### Manual Conversion
+
+If an existing pop-up cannot be converted automatically, switch its close action type from the deprecated button reference to the new action configuration.
+
+If you used the conditional visibility of the referenced close button to run different close behaviors, that logic is not carried over when you switch to the new action-based behavior. The close action is now a direct client action, so visibility conditions on the old button no longer affect it. To preserve conditional close behavior, configure the close action to call a nanoflow that contains the conditional logic.
+
 ## Styling {#styling}
 
 ### Common Section {#common-styling}

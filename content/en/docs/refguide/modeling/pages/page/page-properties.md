@@ -186,7 +186,7 @@ Default: *Yes*
 
 #### Close Action Type {#close-action-type}
 
-This property determines how you configure the behavior that runs when an end-user closes the pop-up, for example by clicking the close button in the title bar or by pressing <kbd>Esc</kbd>. The values are:
+This property determines how you configure the behavior that runs when an end-user closes the pop-up, for example by clicking the **Close** button in the title bar or by pressing <kbd>Esc</kbd>. The values are:
 
 * **Action** *(default)* – You configure a client action on the page itself, in the same way as for a button.
 * **Button (deprecated)** – You point to a button on the page.
@@ -244,7 +244,7 @@ Existing pop-ups that use the legacy button reference continue to work after you
 
 #### Manual Conversion
 
-If an existing pop-up cannot be converted automatically, switch its close action type from the deprecated button reference to the new action configuration.
+If an existing pop-up cannot be converted automatically, switch its **Close action type** from the deprecated button reference to the new action configuration.
 
 If you used the conditional visibility of the referenced close button to run different close behaviors, that logic is not carried over when you switch to the new action-based behavior. The close action is now a direct client action, so visibility conditions on the old button no longer affect it. To preserve conditional close behavior, configure the close action to call a nanoflow that contains the conditional logic.
 

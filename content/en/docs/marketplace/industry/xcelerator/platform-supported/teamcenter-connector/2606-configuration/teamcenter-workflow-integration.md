@@ -35,7 +35,7 @@ These are the action categories available for each type of object:
 
 | Object Type | Actions |
 | --- | --- |
-| `EPMTask` | <ul><li>Workflow Taks Aboart</li><li>Workflow Task Add Reviewer</li><li>Workflow Task Add Additional Reviewer</li><li>Workflow Task Complete</li><li>Workflow Task Complete with Task Result</li><li>Workflow Task Suspend</li><li>Workflow Task Resume</li><li>Workflow Task Reassign</li><li>Workflow Task Claim</li><li>Workflow Task Attach Target</li><li>Workflow Task Attach Reference</li></ul> |
+| `EPMTask` | <ul><li>Workflow Task Abort</li><li>Workflow Task Add Reviewer</li><li>Workflow Task Add Additional Reviewer</li><li>Workflow Task Complete</li><li>Workflow Task Complete with Task Result</li><li>Workflow Task Suspend</li><li>Workflow Task Resume</li><li>Workflow Task Reassign</li><li>Workflow Task Claim</li><li>Workflow Task Attach Target</li><li>Workflow Task Attach Reference</li></ul> |
 | `Signoff` | <ul><li>Claim</li><li>Workflow Task Approve</li><li>Workflow Task Reject</li><li>Workflow Signoff Replace Reviewer</li></ul> |
 | `ItemRevision` | <ul><li>Workflow Submit Item Revision</li></ul> |
 | Query actions | <ul><li>Retrieve Workflow Tasks to Perform for Inbox</li><li>Retrieve Workflow Tasks to Track for Inbox</li><li>Task Inboxes Get My Tasks for Current Teamcenter User</li><li>Task Inboxes Get Subscribed for Current Teamcenter User</li><li>Workflow Process Get All Tasks</li><li>Workflow Task Get Parent Process</li><li>Workflow Signoff Task Get Signoff Profiles</li><li>Workflow Task Get User Actionable Signoffs</li><li>Get Workflow Template by Name</li><li>Get Workflow Template Assigned</li><li>Get Workflow Templates Get All</li></ul> |
@@ -73,7 +73,7 @@ The action creates a new Teamcenter workflow process with tasks assigned accordi
 
 ### Retrieve User Tasks
 
-#### Task Inboxes Get My Task for Current Teamcenter User
+#### Task Inboxes Get My Tasks for Current Teamcenter User
 
 Retrieves the `TaskInbox` for the current Teamcenter user. It does not populate the associated `EPMTask` objects. Use the Retrieve Workflow Tasks actions to populate tasks after obtaining the inbox.
 
@@ -99,21 +99,21 @@ Retrieves the Teamcenter workflow process (`EPMJob`) associated with an `EPMTask
 
 ### User Task Actions
 
-#### Workflow Tasks Suspend
+#### Workflow Task Suspend
 
 Temporarily pauses a Teamcenter workflow task. This is useful when you are waiting on external dependencies or need additional information. Provide the `EPMTask` to suspend and, optionally, a reason for suspension. The task state becomes `Suspended`, and no progress can be made until you resume the task. This action throws an error if the task is already suspended.
 
-#### Workflow Tasks Resume
+#### Workflow Task Resume
 
 Continues work on a previously suspended task. Provide the suspended `EPMTask` to resume and, optionally, a reason for resuming. This action throws an error if the task is not suspended.
 
-#### Workflow Tasks Complete
+#### Workflow Task Complete
 
 Finishes a Teamcenter workflow task that does not require Approve/Reject decisions. This is common for informational tasks or simple acknowledgments.
 
 Provide the `EPMTask` to complete and, optionally, completion notes. The task's `fnd0Status` becomes `Completed`, and the Teamcenter workflow advances.
 
-#### Workflow Tasks Complete with Task Result
+#### Workflow Task Complete with Task Result
 
 Completes a task that has multiple predefined outcome options (for example, "Approve", "Investigate", and "Rework").
 
@@ -121,21 +121,21 @@ Provide the `EPMTask` to complete, a `TaskResult` decision outcome value, and, o
 
 The task's `fnd0Status` becomes `Completed`, `task_result` is set to the `TaskResult` value, and the Teamcenter workflow proceeds along the path corresponding to this decision. Valid `TaskResult` values are defined in the Teamcenter workflow template structure.
 
-#### Workflow Tasks Abort
+#### Workflow Task Abort
 
 Cancels an entire Teamcenter workflow process when it is no longer needed. Provide the `EPMTask` to abort and a required comment explaining the reason. The task's `fnd0Status` becomes `Aborted`, and the Teamcenter workflow terminates. This action cannot be undone, so use it only when you are certain you want to cancel the Teamcenter workflow.
 
-#### Attach Target
+#### Workflow Task Attach Target
 
 Targets in Teamcenter workflows are primary objects on which the workflow acts. The attach target action attaches an `ItemRevision`, a `Dataset`, or any other model object to a Teamcenter workflow. When successful, this model object can be found on the `EPMTask/root_target_attachments` relation to `ModelObject`.
 
-#### Attach Reference
+#### Workflow Task Attach Reference
 
 References in Teamcenter workflows are supporting documents or items that provide context. The attach reference action attaches an `ItemRevision`, a `Dataset`, or any other model object to a Teamcenter workflow. When successful, this model object can be found on the `EPMTask/root_reference_attachments` relation to `ModelObject`. This relation is not part of the TcConnector.
 
 ### Ownership Actions
 
-#### Workflow Tasks Reassign
+#### Workflow Task Reassign
 
 Transfers task ownership to a different user or resource pool. Provide the following:
 
@@ -145,7 +145,7 @@ Transfers task ownership to a different user or resource pool. Provide the follo
 
 The `fnd0Assignee` relation is updated to the new owner.
 
-#### Workflow Tasks Claim
+#### Workflow Task Claim
 
 Claims a signoff assigned to a resource pool for the current user. Provide the `EPMTask` and the `Signoff` to claim. The action clears the signoff's `resource_pool` relation and assigns it to the current user's `GroupMember`. Use **Get User Actionable Signoffs** to retrieve signoffs that the current user can claim.
 
@@ -159,7 +159,7 @@ Provide an `EPMTask`, which must be an `EPMSelectSignoffTask`. The action return
 
 This action throws an error if the provided task is not an `EPMSelectSignoffTask`.
 
-#### Workflow Tasks Add Reviewer
+#### Workflow Task Add Reviewer
 
 Adds a reviewer to an `EPMSelectSignoffTask`. Provide the following:
 
@@ -184,7 +184,7 @@ The action creates a new `Signoff` and links it to the `EPMTask` via the `Fnd0EP
 
 This action throws an error if the provided task is not an `EPMSelectSignoffTask`.
 
-##### `SignoffRequired` Values for Assign Reviewer and Add Additional Reviewer
+##### `SignoffRequired` Values for Add Reviewer and Add Additional Reviewer
 
 * `Optional` – Signoff decision not required if quorum is met. Can be changed to `Required Modifiable`.
 * `Required Modifiable` – Signoff decision required even if quorum is met. Can be changed back to `Optional`.
@@ -194,7 +194,7 @@ This action throws an error if the provided task is not an `EPMSelectSignoffTask
 
 Retrieves the signoffs that the current user can act on for an `EPMTask`. Use the returned signoffs with Claim, Approve, or Reject as appropriate.
 
-#### Workflow Tasks Approve
+#### Workflow Task Approve
 
 Records approval by a reviewer on an `EPMPerformSignoffTask`. Provide the following:
 
@@ -208,7 +208,7 @@ This action can be performed only on `EPMPerformSignoffTask` objects and must be
 
 Use **Get User Actionable Signoffs** to get available signoffs for the current user.
 
-#### Workflow Tasks Reject
+#### Workflow Task Reject
 
 Records rejection by a reviewer on an `EPMPerformSignoffTask`. Provide the following:
 

@@ -47,7 +47,7 @@ Set up a CDC service in Studio Pro by following the steps below:
 
 CDC requires runtime settings to connect to a Kafka broker.
 
-If your app has no [CDC service document](/refguide/published-cdc-services/), you do not need to configure this connection. These settings do not enable CDC by themselves.
+If your app does not have a [CDC service document](/refguide/published-cdc-services/), you do not need to configure this connection. These settings do not enable CDC by themselves.
 
 ### Kafka Connection Settings {#kafka-connection-settings}
 
@@ -58,30 +58,30 @@ The following runtime settings control connections to the Kafka broker:
 | `Kafka.BootstrapServers` | One or more Kafka broker addresses. Supply a comma-separated list of `host:port` pairs, such as `broker1:9092,broker2:9092`. | Not set |
 | `Kafka.Username` | The username for SCRAM-SHA-512 authentication over TLS. This setting is ignored when `Kafka.Security.Protocol` is set. | Not set |
 | `Kafka.Password` | The password for SCRAM-SHA-512 authentication over TLS. This setting is ignored when `Kafka.Security.Protocol` is set. | Not set |
-| `Kafka.Security.Protocol` | The [Kafka security protocol](https://kafka.apache.org/44/configuration/producer-configs/#producerconfigs_security.protocol) configured on your broker listener. The possible values are: `PLAINTEXT` (no authentication or encryption), `SSL` (TLS), `SASL_PLAINTEXT` (SASL authentication without encryption), and `SASL_SSL` (SASL authentication over TLS). Introduced in Mendix 11.16.0. | Not set |
-| `Kafka.Sasl.Mechanism` | The [SASL authentication mechanism](https://kafka.apache.org/44/configuration/producer-configs/#producerconfigs_sasl.mechanism) enabled on your broker listener. [Kafka's built-in mechanisms](https://kafka.apache.org/44/security/authentication-using-sasl/#sasl-mechanisms) are `GSSAPI` (Kerberos), `PLAIN`, `SCRAM-SHA-256`, `SCRAM-SHA-512`, and `OAUTHBEARER`. Requires `Kafka.Security.Protocol`. Introduced in Mendix 11.16.0. | Not set |
-| `Kafka.Sasl.Jaas.Config` | The [Kafka JAAS configuration](https://kafka.apache.org/44/configuration/producer-configs/#producerconfigs_sasl.jaas.config). It contains the client login module and options for your SASL mechanism. Requires `Kafka.Security.Protocol`. Introduced in Mendix 11.16.0. | Not set |
+| `Kafka.Security.Protocol` | The [Kafka security protocol](https://kafka.apache.org/44/configuration/producer-configs/#producerconfigs_security.protocol) configured on your broker listener (introduced in Mendix 11.16.0.). The possible values are: <br><ul><li> `PLAINTEXT` (no authentication or encryption)</li><li> `SSL` (TLS) </li><li> `SASL_PLAINTEXT` (SASL authentication without encryption) </li><li> `SASL_SSL` (SASL authentication over TLS) </li> | Not set |
+| `Kafka.Sasl.Mechanism` | The [SASL authentication mechanism](https://kafka.apache.org/44/configuration/producer-configs/#producerconfigs_sasl.mechanism) enabled on your broker listener (introduced in Mendix 11.16.0.). [Kafka's built-in mechanisms](https://kafka.apache.org/44/security/authentication-using-sasl/#sasl-mechanisms) requires `Kafka.Security.Protocol`. The built-in mechanisms are: <br><ul><li> `GSSAPI` (Kerberos) </li><li> `PLAIN` </li><li> `SCRAM-SHA-256` </li><li> `SCRAM-SHA-512` </li><li> `OAUTHBEARER` </li>   | Not set |
+| `Kafka.Sasl.Jaas.Config` | The [Kafka JAAS configuration](https://kafka.apache.org/44/configuration/producer-configs/#producerconfigs_sasl.jaas.config)(introduced in Mendix 11.16.0.). It contains the client login module and options for your SASL mechanism. Requires `Kafka.Security.Protocol`. | Not set |
 | `EventBroker.Space` | The Event Broker space in which the app is placed. This defines which other applications can exchange events with this app. | `local` |
 
 In Mendix Cloud environments with Mendix Event Broker enabled, the platform manages broker connection credentials. For Bring Your Own Kafka (BYOK) deployments, configure the settings above through [custom runtime settings](/refguide/custom-settings/) in your environment.
 
 ### Running Locally {#local-configuration}
 
-Starting with Mendix 11.16.0, Studio Pro provides a **Kafka** tab for simplified local configuration.
+As of Mendix 11.16.0, Studio Pro provides a **Kafka** tab for simplified local configuration.
 
-The **Kafka** tab can be found by opening your active Studio Pro [configuration](/refguide/configurations-tab/) and select the **Kafka** tab.
+The **Kafka** tab can be found in the App Explorer under **Settings** > [Configurations](/refguide/configurations-tab/) > **Kafka**.
 
 Use the following fields to connect to your broker:
 
-* **Kafka Bootstrap Servers** – the broker addresses (maps to `Kafka.BootstrapServers`).
-* **User name** – the broker username (maps to `Kafka.Username`).
-* **Password** – the broker password (maps to `Kafka.Password`).
+* **Kafka Bootstrap Servers** – the broker addresses (maps to `Kafka.BootstrapServers`)
+* **User name** – the broker username (maps to `Kafka.Username`)
+* **Password** – the broker password (maps to `Kafka.Password`)
 
 Studio Pro supplies these three runtime settings from the **Kafka** tab. Do not add them again under **Custom**.
 
 By default, supplying both `Kafka.Username` and `Kafka.Password` selects `SASL_SSL` with `SCRAM-SHA-512`. For Mendix Event Broker authentication, these credentials are sufficient.
 
-Starting with Mendix 11.17.0, Studio Pro migrates `Kafka.BootstrapServers`, `Kafka.Username`, and `Kafka.Password` from **Custom** into empty **Kafka** fields.
+As of Mendix 11.17.0, Studio Pro migrates `Kafka.BootstrapServers`, `Kafka.Username`, and `Kafka.Password` from **Custom** into empty **Kafka** fields.
 
 ### Kafka Custom Authentication {#byok-configuration}
 

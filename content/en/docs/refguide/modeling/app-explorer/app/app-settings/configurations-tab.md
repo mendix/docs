@@ -103,7 +103,7 @@ The following headers are considered special and are handled differently from ot
 ### Kafka {#kafka}
 
 The **Kafka** tab configures the broker connection for local Change Data Capture (CDC) publishing.
-For setup instructions, see [Running CDC Locally](/refguide/change-data-capture/#local-configuration).
+For setup instructions, see the [Running CDC Locally](/refguide/change-data-capture/#local-configuration) section of *Change Data Capture*.
 
 ## Example
 

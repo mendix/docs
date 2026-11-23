@@ -10,5 +10,11 @@ scope:
   - list
   - table
   - blockquote
+action:
+  name: edit
+  params:
+    - regex
+    - '^(\S+)\s+\S+$'
+    - '$1'
 tokens:
   - '\b(the|a|an|is|as|of|which|that|it|be|with|by|at)\s+\1\b'

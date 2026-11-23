@@ -72,8 +72,8 @@ Some fields only apply to specific component types, so follow the on-screen prom
 
 6. Select the **Studio Pro Version** on which you built the content.  
 
-7. If you are uploading a widget, select the **Compatible with Mendix React Client** checkbox to indicate compatibility.    
-   This checkbox is mandatory starting with Studio Pro 11.
+7. If you are uploading a widget, the **Compatible with Mendix React Client** note is displayed to indicate compatibility. Mendix scans the component during upload, and shows whether it is compatible with Mendix React Client.    
+   This note is displayed for all components built on Studio Pro 11 and above.
    
 8. Add a version for your component in the **Release Version** section.     
     {{% alert color="warning" %}}Starting with Studio Pro 11.12.0, you need to add the module version in the Studio Pro module settings before exporting the package. The version is stored in the `manifest.json` file which is included in the exported package. Marketplace picks up the version from the `manifest.json` file, so the **Studio Pro Version** and **Release Version** fields cannot be edited while uploading the module. For details, refer to the [Module Version](/refguide/module-settings/#module-version) section of the **Module Settings** page in the Studio Pro guide. {{% /alert %}}  

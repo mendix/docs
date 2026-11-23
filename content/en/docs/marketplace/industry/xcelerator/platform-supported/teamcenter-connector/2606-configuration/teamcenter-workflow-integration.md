@@ -35,10 +35,10 @@ These are the action categories available for each type of object:
 
 | Object Type | Actions |
 | --- | --- |
-| `EPMTask` | <ul><li>Abort</li><li>Assign Reviewer</li><li>Add Additional Reviewer</li><li>Complete</li><li>Complete with Custom Outcome</li><li>Suspend</li><li>Resume</li><li>Reassign</li></ul> |
-| `Signoff` | <ul><li>Claim</li><li>Approve</li><li>Reject</li><li>Replace Reviewer</li></ul> |
-| `ItemRevision` | <ul><li>Submit Item Revision to Teamcenter workflow</li></ul> |
-| Query actions | <ul><li>Retrieve Workflow Tasks to Perform for Inbox</li><li>Retrieve Workflow Tasks to Track for Inbox</li><li>Get My Task Inbox</li><li>Get Inbox List for Current User</li><li>Get All Tasks for Workflow Process</li><li>Get Parent Process</li><li>Get Signoff Profiles</li><li>Get User Actionable Signoffs</li><li>Get Workflow Template</li><li>Get Workflow Template Assigned</li><li>Get All Workflow Templates</li></ul> |
+| `EPMTask` | <ul><li>Workflow Taks Aboart</li><li>Workflow Task Add Reviewer</li><li>Workflow Task Add Additional Reviewer</li><li>Workflow Task Complete</li><li>Workflow Task Complete with Task Result</li><li>Workflow Task Suspend</li><li>Workflow Task Resume</li><li>Workflow Task Reassign</li><li>Workflow Task Claim</li><li>Workflow Task Attach Target</li><li>Workflow Task Attach Reference</li></ul> |
+| `Signoff` | <ul><li>Claim</li><li>Workflow Task Approve</li><li>Workflow Task Reject</li><li>Workflow Signoff Replace Reviewer</li></ul> |
+| `ItemRevision` | <ul><li>Workflow Submit Item Revision</li></ul> |
+| Query actions | <ul><li>Retrieve Workflow Tasks to Perform for Inbox</li><li>Retrieve Workflow Tasks to Track for Inbox</li><li>Task Inboxes Get My Tasks for Current Teamcenter User</li><li>Task Inboxes Get Subscribed for Current Teamcenter User</li><li>Workflow Process Get All Tasks</li><li>Workflow Task Get Parent Process</li><li>Workflow Signoff Task Get Signoff Profiles</li><li>Workflow Task Get User Actionable Signoffs</li><li>Get Workflow Template by Name</li><li>Get Workflow Template Assigned</li><li>Get Workflow Templates Get All</li></ul> |
 
 ## Teamcenter Workflow Actions
 
@@ -125,11 +125,11 @@ The task's `fnd0Status` becomes `Completed`, `task_result` is set to the `TaskRe
 
 Cancels an entire Teamcenter workflow process when it is no longer needed. Provide the `EPMTask` to abort and a required comment explaining the reason. The task's `fnd0Status` becomes `Aborted`, and the Teamcenter workflow terminates. This action cannot be undone, so use it only when you are certain you want to cancel the Teamcenter workflow.
 
-### Attach Target
+#### Attach Target
 
 Targets in Teamcenter workflows are primary objects on which the workflow acts. The attach target action attaches an `ItemRevision`, a `Dataset`, or any other model object to a Teamcenter workflow. When successful, this model object can be found on the `EPMTask/root_target_attachments` relation to `ModelObject`.
 
-### Attach Reference
+#### Attach Reference
 
 References in Teamcenter workflows are supporting documents or items that provide context. The attach reference action attaches an `ItemRevision`, a `Dataset`, or any other model object to a Teamcenter workflow. When successful, this model object can be found on the `EPMTask/root_reference_attachments` relation to `ModelObject`. This relation is not part of the TcConnector.
 
@@ -159,7 +159,7 @@ Provide an `EPMTask`, which must be an `EPMSelectSignoffTask`. The action return
 
 This action throws an error if the provided task is not an `EPMSelectSignoffTask`.
 
-#### Workflow Tasks Assign Reviewer
+#### Workflow Tasks Add Reviewer
 
 Adds a reviewer to an `EPMSelectSignoffTask`. Provide the following:
 

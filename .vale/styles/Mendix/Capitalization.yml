@@ -22,7 +22,7 @@ swap:
   '(^|[^.])maia(?!-| make)': '$1Maia'  # Skips .maia files, hyphenated names like maia-appgen, and maia make (handled above)
   markdown: Markdown
   marketplace: Marketplace
-  '(^|[^./>@-])mendix(?!/)': '$1Mendix'  # Skips com.mendix names, domains, link text after >, @mendix emails, hyphenated repo names, and paths or repos like mendix/docs
+  '(^|[^./>@-])mendix(?![/-])': '$1Mendix'  # Skips com.mendix names, domains, link text after >, @mendix emails, hyphenated repo names such as mendix-inside-teamcenter, and paths or repos like mendix/docs
   'n/a': 'N/A'
   scrum: Scrum
   '(^|[^@])siemens': '$1Siemens'  # Skips siemens in email addresses
@@ -37,6 +37,7 @@ swap:
   'product owner': 'Product Owner'
   'scrum master': 'Scrum Master'
   'studio pro': 'Studio Pro'
+  '(^|[^./>@-])(?-i:teamcenter)(?!-)': '$1Teamcenter'  # Skips all-caps UI labels, domains, link text after >, @ emails, and hyphenated names
   'team server': 'Team Server'
   'technical contact': 'Technical Contact'
   'workflow engine': 'Workflow Engine'

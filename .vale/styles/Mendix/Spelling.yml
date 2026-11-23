@@ -5,6 +5,8 @@
 extends: spelling
 message: "Did you really mean '%s'?"
 level: warning
+# Skips bold and italic text
+scope: text & ~strong & ~emphasis
 filters:
   # Plural acronyms, such as APIs and JDKs
   - '[A-Z]{2,}(?:''s|s)\b'
@@ -15,6 +17,7 @@ filters:
 
   # Mendix terms
   - '^Mendix(?:''s)?$'
+  - '^mendix$'  # Lowercase in com.mendix names and hyphenated repo names
   - '^[Cc]onfigurator$'
   - '^Interactor$'
   - '^javascriptsource$'
@@ -107,7 +110,7 @@ filters:
   - '^Sysdig$'
   - '^Tailnet$'
   - '^Tailscale(''s)?$'
-  - '^Teamcenter(''s)?$'
+  - '^[Tt]eamcenter(''s)?$'
   - '^Tekton$'
   - '^Temurin$'
   - '^Textract$'
@@ -170,6 +173,7 @@ filters:
   - '^[Pp]ersistable$'
   - '^Persistability$'
   - '^px$'
+  - '^[Rr]eauthenticat(e|es|ed|ion)$'
   - '^revalidated$'
   - '^rtl$'
   - '^[Ss]afelist(ed)?$'
@@ -192,3 +196,6 @@ filters:
   - '^xcodebuild$'
   - '^xlsx$'
   - '^XPaths?$'
+
+  # Terms covered by Mendix.Capitalization (listed here to prevent duplicate flags)
+  - '^(?i:hashicorp|idp|openshift|postgres|powershell|yaml)$'

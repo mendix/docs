@@ -15,8 +15,9 @@ scope:
 action:
   name: replace
 swap:
-  agents kit: Agents Kit
+  'agents kit': 'Agents Kit'
   boolean: Boolean
+  cartesian: Cartesian
   idp: IdP
   'maia make': 'Maia Make'
   '(^|[^.])maia(?!-| make)': '$1Maia'  # Skips .maia files, hyphenated names like maia-appgen, and maia make (handled above)

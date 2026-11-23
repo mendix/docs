@@ -32,7 +32,6 @@ exceptions+:
   - MIME
   - MPR
   - NGINX
-  - NOT
   - OIDC
   - OQL
   - PNG
@@ -46,3 +45,9 @@ exceptions+:
   - TLS
   - UTC
   - UUID
+
+# Flagged by Mendix.Uppercase, so don't flag them here
+  - MUST
+  - NEVER
+  - NOT
+  - ONLY

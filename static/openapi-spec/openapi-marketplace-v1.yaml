@@ -1,4 +1,4 @@
-openapi: 3.0.4
+openapi: 3.0.1
 info:
   title: Marketplace Service
   description: >-
@@ -6,7 +6,7 @@ info:
     (Packages/Versions).
   version: 1.0.0
 servers:
-  - url: 'https://pmp-test-sgp.mxplatform.net/marketplaceservice/v1'
+  - url: https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1
 paths:
   /packages:
     get:

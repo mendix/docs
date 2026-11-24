@@ -27,7 +27,7 @@ For information on which libraries Mendix supports when developing pluggable wid
 For information on how to update Pluggable Widgets Tools to a newer version, see [Updating Pluggable Widgets Tools](/howto/extensibility/update-pluggable-widgets-tools/)
 
 {{% alert color="info" %}}
-Using [System Texts](/refguide/system-texts/) to translate languages is not available for use with the Pluggable Widgets API.
+Pluggable widgets can use [system texts](/refguide/system-texts/) for translations. For more information, see the [SystemTextsValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#systemtexts) section of *Client APIs*. System texts for pluggable widgets were introduced in Mendix [11.15](/releasenotes/studio-pro/11.15/).
 {{% /alert %}}
 
 ## Client Component {#client-component}

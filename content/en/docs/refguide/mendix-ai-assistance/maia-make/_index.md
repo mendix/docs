@@ -53,6 +53,7 @@ Maia Make can generate new documents, modify existing documents, and explain app
 | Import Mappings | Studio Pro 11.16 | Maia can create import mappings with a JSON structure as the source and map them automatically to new entities. Changing existing import mappings is not supported. |
 | Export Mappings | Studio Pro 11.16 | Maia can create export mappings with a JSON structure as the source and map them automatically to new entities. Changing existing export mappings is not supported. |
 | External Database Connector | Studio Pro 11.16 | |
+| XML Schemas | Studio Pro 11.17 | |
 
 ### Maia Make Standalone Capabilities
 
@@ -78,7 +79,7 @@ The following table lists the general capabilities of Maia Make and the Studio P
 | Capability | Description | Available in Maia Make from | Remarks |
 | --- | --- | --- | --- |
 | Story-based development | Generates app artifacts based on existing user stories to support story-driven development workflows. | Studio Pro 11.8 | |
-| Attach files | Allows you to provide PDFs and images as input to help Maia better understand your requirements. | Studio Pro 11.8 | In Studio Pro 11.12 and above, you can attach Markdown files. In Studio Pro 11.16 and above, you can attach CSV, JSON, XML, YAML, HTML, and Excel files. Attached files are available to Maia for the rest of the session. |
+| Attach files | Allows you to provide PDFs and images as input to help Maia better understand your requirements. | Studio Pro 11.8 | In Studio Pro 11.12 and above, you can attach Markdown files. In Studio Pro 11.16 and above, you can attach CSV, JSON, XML, YAML, HTML, and Excel files. In Studio Pro 11.17 and above, you can attach XSD files. Attached files are available to Maia for the rest of the session. |
 | Adding documents as context | Lets you add relevant documents to provide Maia with additional context. | Studio Pro 11.8 | |
 | Editing existing documents | Enables Maia to modify existing documents, including renaming elements. | Studio Pro 11.8 | |
 | Removing elements | Allows Maia to remove elements from documents to support more advanced refactoring tasks. | Studio Pro 11.9 | |
@@ -230,11 +231,44 @@ To configure an OpenAI-compatible provider, follow these steps:
 5. Optional: Enter your **API Key**. Studio Pro stores this key securely across sessions.
 6. Click **Save Config**.
 
+In Studio Pro 11.17 and above, the **Authentication Mode** list lets you choose between **API Key** and **Sign in with Microsoft Entra ID**. For the second option, see the [Signing In with Microsoft Entra ID](#openai-entra-id) section below.
+
+##### Signing In with Microsoft Entra ID {#openai-entra-id}
+
+In Studio Pro 11.17 and above, you can connect Maia to an OpenAI-compatible model that is protected by Microsoft Entra ID, such as Azure AI Foundry. You sign in with your Microsoft account, so you do not need an API key.
+
+{{% alert color="info" %}}
+This option has only been tested with Azure AI Foundry.
+{{% /alert %}}
+
+Before you start, make sure you have a public client application registration in Microsoft Entra ID that supports authentication redirection to `http://localhost`. You need the client ID of the application, and your tenant ID or domain name.
+
+To configure the connection, follow these steps:
+
+1. Click **Settings** ({{% icon name="cog" %}}) in the Maia pane.
+2. Select **OpenAI Compatible** from the **LLM Provider** list.
+3. Select **Sign in with Microsoft Entra ID** from the **Authentication Mode** list.
+4. Enter the **Base URL** of your server. It must start with `https://`, for example, `https://<resource>.services.ai.azure.com/openai/v1`.
+5. Enter the **Model ID**.
+6. Enter the **Authority**. This is `https://login.microsoftonline.com/` followed by your tenant ID or domain name.
+7. Enter the **Client ID**. This is the **Application (client) ID** of your app registration.
+8. Check the **Scope**. Change it only if your server needs a different permission.
+9. Click **Save Config**. You must save the settings before you can sign in.
+10. Click **Sign in**, and complete the sign-in with your Microsoft account in your browser. To stop, click **Cancel sign-in**.
+
+When the sign-in succeeds, the settings show that you are signed in. To sign out, click **Sign out**.
+
+#### Testing the Connection {#test-connection}
+
+In Studio Pro 11.17 and above, you can check that Maia can reach your provider before you save the settings.
+
+To test the connection, enter the settings for your provider and click **Test connection**. Maia shows whether the connection works or the error that it receives.
+
 ### LLM Gateway Configuration for Private Mendix Platform
 
 [Private Mendix Platform](/private-mendix-platform/) provides an environment where you can develop and deploy your applications within your own enterprise security boundary to ensure the highest levels of data security and compliance. Because Private Mendix Platform instances are hosted within the enterprise firewall, selecting an LLM provider other than the default [Mendix Platform](#mendix-platform) requires you to also configure the LLM Gateway URL.
 
-{{< figure src="/attachments/private-platform/pmp-llm-gateway.png" class="no-border" alt="" >}}
+{{< figure src="/attachments/private-platform/pmp-llm-gateway.png" alt="" >}}
 
 The LLM Gateway URL is configured during the installation or upgrade of Private Mendix Platform. For more information, see [Installing Maia for Private Mendix Platform](/private-mendix-platform/interactive-installation/#maia).
 

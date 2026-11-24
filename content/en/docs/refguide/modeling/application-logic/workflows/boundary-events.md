@@ -111,9 +111,7 @@ Converting an already-triggered non-interrupting boundary event to interrupting 
 
 #### Implications of Changing the Boundary Event Type
 
-When you change the type of an ongoing **non-interrupting** boundary event (for example, from Timer to Notification), this causes a partially resolvable [Current Activity Moved out of Path](/refguide/workflow-versioning/#current-activity-moved-out-of-path) conflict. Affected workflow instances cannot be continued. This does not apply to interrupting boundary events.
-
-For more information on how to handle such conflicts, see [Workaround for Non-resolvable and Partially Resolvable Conflicts](/refguide/workflow-versioning/#workaround-for-non-resolvable-and-partially-resolvable-conflicts).
+In Studio Pro 11.16 and below, when you change the type of an ongoing **non-interrupting** boundary event (for example, from Timer to Notification), this causes a partially resolvable [Current Activity Moved out of Path](/refguide/workflow-versioning/#current-activity-moved-out-of-path) conflict. Affected workflow instances cannot be continued. This does not apply to interrupting boundary events. For more information on how to handle such conflicts, see [Workaround for Non-resolvable and Partially Resolvable Conflicts](/refguide/workflow-versioning/#workaround-for-non-resolvable-and-partially-resolvable-conflicts).
 
 ### Rearranging Boundary Events
 

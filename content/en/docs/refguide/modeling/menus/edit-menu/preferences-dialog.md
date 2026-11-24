@@ -325,6 +325,10 @@ You can publish data as a GraphQL service. When you enable this feature, you can
 
 Select this option to use the modernized version of the JavaScript action editor. You must close all open JavaScript actions to use this feature.
 
+{{% alert color="info" %}}
+This option is no longer available in Studio Pro 11.17 and above. In Studio Pro 11.12, the modernized editor became generally available, replacing this option with **Use the legacy JavaScript Action editor**. When the legacy editor was removed in Studio Pro 11.17, the option was removed as well. For more information, see [JavaScript Actions](/refguide/javascript-actions/).
+{{% /alert %}}
+
 ### Maia
 
 Select this option to use a custom AI provider for Maia.
@@ -335,11 +339,9 @@ This setting allows you to set the beta version as the default editor.
 
 ### Microflow, Nanoflow, and Rule Editor {#microflow-nanoflow-rule-editor}
 
-Select this option to allow rendering sequence flows as orthogonal (right-angled) lines in the microflow, nanoflow, and rule editors. When enabled, you can convert flow types between curved and orthogonal through the context menu. For more information, see the [Flow Type](/refguide/sequence-flow/#flow-type) section in *Sequence Flow*.
+In Studio Pro 11.15 and above, select **Enable orthogonal flows in the microflow, nanoflow, and rule editor** to allow rendering sequence flows as orthogonal (right-angled) lines in the microflow, nanoflow, and rule editors. When enabled, you can convert flow types between curved and orthogonal through the context menu. For more information, see the [Flow Type](/refguide/sequence-flow/#flow-type) section in *Sequence Flow*.
 
-{{% alert color="info" %}}
-This is a beta feature, available in Studio Pro 11.15 and above.
-{{% /alert %}}
+In Studio Pro 11.17 and above, select **Enable auto layout for microflows (Experimental)** to add an **Auto layout** option to the context menu of the microflow, nanoflow, and rule editors, which automatically arranges activities on the canvas. This setting is enabled by default. For more information, see the [Auto Layout](/refguide/microflows-and-nanoflows/#auto-layout) section in *Microflows and Nanoflows*.
 
 ### Project Loading
 

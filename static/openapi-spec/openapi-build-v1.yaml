@@ -490,11 +490,11 @@ components:
           schema:
             $ref: '#/components/schemas/error'
           examples:
-            409 - App package already exist
+            409 - App package already exist:
               value:
-                status: 404
-                title: Not Found
-                detail: Package file exists for this revision.
+                status: 409
+                title: Conflict
+                detail: Package file already exists for this revision.
 
     package:
       description: App build package

@@ -139,6 +139,8 @@ The settings below influence the behavior of the log files. These settings can o
 
 ### Common Settings
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="ClientQueryTimeout" href="#ClientQueryTimeout">ClientQueryTimeout</a> | Defines the timeout in seconds for most of the database queries which are executed to load data into client widgets, like data grids. After the duration as specified here, a query will be canceled and an exception will be thrown. | |
@@ -157,11 +159,15 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="JdbcLoginTimeout" href="#JdbcLoginTimeout">JdbcLoginTimeout</a> | This setting defines the database connection establishment time in milliseconds. | 5000 (5 seconds) |
 | <a id="DataStorageOptimizeSecurityColumns" href="#DataStorageOptimizeSecurityColumns">DataStorage.OptimizeSecurityColumns</a> | When true, query columns generated to evaluate XPath constraints in access rules are optimized to `true` if the runtime can determine that the value will always be true for the objects that the query returns. This is almost always an improvement, but we have seen cases where the PostgreSQL query planner has worse performance for the simpler query. | true |
 
+{{< /expandable-table >}}
+
 ### Connection Pooling {#connection-pooling}
 
 The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/pool/). 
 
 These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment/), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
+
+{{< expandable-table >}}
 
 | Name | Value | Default Value |
 | --- | --- | --- |
@@ -177,11 +183,15 @@ These settings are configured *per runtime instance*. If you have [scaled your a
 | <a id="ConnectionPoolingTestOnReturn" href="#ConnectionPoolingTestOnReturn">ConnectionPoolingTestOnReturn</a> | If `true`, a database connection will be validated by the connection pool when it is returned to the pool by the application. | false |
 | <a id="ConnectionPoolingTestWhileIdle" href="#ConnectionPoolingTestWhileIdle">ConnectionPoolingTestWhileIdle</a> | If `true`, all idle database connections will be validated when the idle object evictor runs. | false |
 
+{{< /expandable-table >}}
+
 ### Migration Settings
 
 The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterward, because they are not needed anymore.
 
 Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than the current domain model specifies.
+
+{{< expandable-table >}}
 
 | Name | Value | Default Value |
 | --- | --- | --- |
@@ -196,6 +206,8 @@ Before the data copying process starts, the main database structure will be gene
 | <a id="SourceDatabaseUserName" href="#SourceDatabaseUserName">SourceDatabaseUserName</a> | The user name for the connection to the source database. | |
 | <a id="SourceOracleServiceName" href="#SourceOracleServiceName">SourceOracleServiceName</a> | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. | |
 
+{{< /expandable-table >}}
+
 ## S3 Storage Service Settings {#amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
@@ -203,6 +215,8 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 {{% alert color="warning" %}}
 For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
+
+{{< expandable-table >}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -224,6 +238,8 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settin
 | <a id="commendixstorages3UseCACertificates" href="#commendixstorages3UseCACertificates">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseCACertificates</a> | Set this value to `true` to use the configured [CACertificates](#CACertificates) for the connection to the S3 service. | false |
 | <a id="FileStorageS3DisableChunkedEncoding" href="#FileStorageS3DisableChunkedEncoding">FileStorage.<wbr>S3.<wbr>DisableChunkedEncoding</a> | Set this value to `true` to disable chunked transfer encoding when uploading files to S3 storage. This setting can be useful when working with S3-compatible storage services that do not fully support chunked encoding.`<br />*This setting was introduced in Mendix version 11.10.0 and 11.6.6 MTS* | false |
 
+{{< /expandable-table >}}
+
 ## Microsoft Azure SQL {#azure-sql}
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
@@ -234,6 +250,8 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settin
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="AzureDatabaseType" href="#AzureDatabaseType">DatabaseType</a> | `SQLSERVER` | |
@@ -241,6 +259,8 @@ First, you need to create an Azure SQL database (for information on how to do th
 | <a id="AzureDatabaseName" href="#AzureDatabaseName">DatabaseName</a> | `your-databasename` | |
 | <a id="AzureDatabaseUserName" href="#AzureDatabaseUserName">DatabaseUserName</a> | `your-username` | |
 | <a id="AzureDatabasePassword" href="#AzureDatabasePassword">DatabasePassword</a> | `your-password` | |
+
+{{< /expandable-table >}}
 
 {{% alert color="info" %}}
 An alternative to using `DatabaseUserName` and `DatabasePassword` is appending `Authentication=ActiveDirectoryDefault` to the [`DatabaseJdbcUrl`](#DatabaseJdbcUrl) setting.
@@ -254,6 +274,8 @@ These settings can be used to store files using the Microsoft Azure blob storage
 {{% alert color="warning" %}}
 For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
+
+{{< expandable-table >}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -269,6 +291,8 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settin
 | <a id="commendixstorageazureUseHttps" href="#commendixstorageazureUseHttps">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>UseHttps</a> | For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
 | <a id="commendixstorageazureTimeoutIntervalInMs" href="#commendixstorageazureTimeoutIntervalInMs">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>TimeoutIntervalInMs</a> | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No timeout |
 | <a id="commendixstorageazureMaximumExecutionTimeInMs" href="#commendixstorageazureMaximumExecutionTimeInMs">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>MaximumExecutionTimeInMs</a> | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
+
+{{< /expandable-table >}}
 
 {{% alert type="warning" %}}
 ¹ The `com.mendix.storage.azure.BlobEndpoint` setting can include the container name, as in `https://storageaccount.blob.core.windows.net/some-container-name`. In this case the value in the `com.mendix.storage.azure.Container` setting will be used as a directory name.
@@ -291,6 +315,9 @@ Azure blob storage's default connection protocol is HTTPS in order to encourage 
 The settings below influence the behavior of the Mendix web client.
 
 <!-- markdownlint-disable -->
+
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="EnableKeepAlive" href="#EnableKeepAlive">EnableKeepAlive</a> | Defines whether the web client sends a keep alive request every `SessionTimeout`/2 milliseconds in order to prevent a session timeout. Each click in the browser also acts as `KeepAlive`. Disabling this property will result in the user being logged out automatically after `SessionTimeout` milliseconds of inactivity (default 10 minutes), even if the browser remains open. See [`SessionTimeout`](#SessionTimeout) for more information. | true |
@@ -302,11 +329,16 @@ The settings below influence the behavior of the Mendix web client.
 | <a id="commendixwebuiStateSizeWarningThreshold" href="#commendixwebuiStateSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>StateSizeWarningThreshold</a> | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | <a id="commendixwebuiCommittedObjectsThreshold" href="#commendixwebuiCommittedObjectsThreshold">com.<wbr>mendix.<wbr>webui.<wbr>CommittedObjectsThreshold</a> | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 | <a id="MaxRetrieveAmount" href="#MaxRetrieveAmount">MaxRetrieveAmount</a> | The maximum number of objects the client is allowed to retrieve by list widgets using database datasource runtime operation.<br/>When requesting more objects than allowed, the runtime will enforce the `MaxRetrieveAmount` by setting a limit on the query and will log the following warning: `A retrieve action requested more objects than allowed by the `MaxRetrieveAmount` runtime setting. Amount requested: (...), MaxRetrieveAmount: (...)`.<br />*This setting was introduced in Mendix version 11.8.0 and 11.6.5 MTS* | |
+
+{{< /expandable-table >}}
+
 <!-- markdownlint-enable -->
 
 ## Metrics Settings{#metrics-settings}
 
 The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide/metrics/) for more information and the specification of the settings format.
+
+{{< expandable-table >}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -314,13 +346,19 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 | <a id="MetricsRegistries" href="#MetricsRegistries">Metrics.Registries</a> | Registries to send metrics to | |
 | <a id="MetricsApplicationTags" href="#MetricsApplicationTags">Metrics.ApplicationTags</a> | Common tags used for every meter | |
 
+{{< /expandable-table >}}
+
 ## OpenTelemetry Settings{#tracing-settings}
 
 The setting below configures observability (metrics, tracing, logs) through [OpenTelemetry](https://opentelemetry.io/docs). See [OpenTelemetry](/refguide/opentelemetry-in-runtime/) for information on setting up OpenTelemetry.
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="OpenTelemetryMinimalMode" href="#OpenTelemetryMinimalMode">OpenTelemetry.MinimalMode</a> | Enable OpenTelemetry minimal tracing mode. <br />When true, only generates incoming or outgoing spans. <br />*Introduced in Mendix version 11.15.0* | false |
+
+{{< /expandable-table >}}
 
 ## Proxy Settings {#proxy-settings}
 
@@ -335,6 +373,8 @@ The settings below configure the app to use a proxy for all connections, whether
 
 These settings can be set either as JVM properties or as custom Runtime settings. When both the JVM property and custom runtime setting are set, the app uses the custom runtime setting.
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="httpproxyHost" href="#httpproxyHost">http.proxyHost</a> | Defines the hostname of the HTTP proxy server. | |
@@ -342,6 +382,8 @@ These settings can be set either as JVM properties or as custom Runtime settings
 | <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | |
 | <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | |
 | <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | <a href="#httpnonProxyHosts">See below</a> | |
+
+{{< /expandable-table >}}
 
 {{% alert color="info" %}}
 The `http.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
@@ -355,6 +397,8 @@ The settings below configure the app to use a proxy to reach the Mendix license 
 These settings have to be set as JVM properties, not as custom runtime settings.
 {{% /alert %}}
 
+{{< expandable-table >}}
+
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="httpsproxyHost" href="#httpsproxyHost">https.proxyHost</a> | Defines the hostname of the HTTPS proxy server. | |
@@ -362,6 +406,8 @@ These settings have to be set as JVM properties, not as custom runtime settings.
 | <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | |
 | <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | |
 | <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | <a href="#httpnonProxyHosts">See below</a> | |
+
+{{< /expandable-table >}}
 
 {{% alert color="info" %}}
 The `https.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.

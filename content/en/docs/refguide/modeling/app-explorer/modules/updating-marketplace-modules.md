@@ -8,7 +8,7 @@ description: "How to update Marketplace modules in Studio Pro while retaining yo
 ## Introduction
 
 {{% alert color="info" %}}
-This feature requires Studio Pro 11.16 or above.
+This feature is available in Mendix LTS version 11.12 (11.12.3 and above) and in Mendix versions 11.16.0 or above.
 {{% /alert %}}
 
 Previously, when you wanted to update a Marketplace module to a newer version, you had to fully replace it, losing any customizations such as modified microflows or added functionality.
@@ -32,6 +32,16 @@ To retain your customizations when updating a module, Studio Pro performs a thre
 You must manually provide both the original and target versions. If document mapping succeeds, the merge begins. If mapping fails, you cannot upgrade while keeping your customizations and must fully replace the module instead.
 
 During the merge, conflicts may occur if you and the publisher both modified the same element (for example, the same microflow). For information on resolving conflicts, see [Combining Changes and Resolving Conflicts](/refguide/resolving-conflicts/).
+
+### How to Start an Update
+
+To start a module update:
+
+1. Right-click the module in the App Explorer and select **Update from file**.
+
+    {{< figure src="/attachments/refguide/modeling/app-explorer/modules/updating-marketplace-modules/update-from-file-option.png" alt="Module context menu with the Update from file option"  >}}
+
+2. The **Update from file** dialog opens. Select the **Original version** and **New version** of the module and click **OK**.
 
 ### Document Mapping
 

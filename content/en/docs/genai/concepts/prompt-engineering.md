@@ -90,7 +90,7 @@ Different prompt techniques can be used to guide AI models in performing their s
 | Prompt technique | Description | Use Case and Prompt Example |
 |-------------------|---------------------------------------------------|----------------------------------|
 | Interview Pattern Approach| Using an interview-style approach allows the model to ask follow-up questions to the end-user to provide a better-fitting response. | Use case: Movie Recommendation Engine.<br>Prompt instruction: *You will act as a movie recommender expert. You will ask the user a series of detailed questions, one at a time, to understand their preferences in movies*. |
-| Instruction Prompt | The instruction gives the AI model directions on how to perform a task. It can be a guidance on the type of output, such as summarization or translation, style, format, and more. | Use case: Mendix ML Kit Python Script Generator.<br>Prompt instruction: *You will act as an expert Python developer specializing in the Mendix ML Kit. The output/response should be given in a python script with annotations for the Mendix ML Kit*. |
+| Instruction Prompt | The instruction gives the AI model directions on how to perform a task. It can be guidance on the type of output, such as summarization or translation, style, format, and more. | Use case: Mendix ML Kit Python Script Generator.<br>Prompt instruction: *You will act as an expert Python developer specializing in the Mendix ML Kit. The output/response should be given in a python script with annotations for the Mendix ML Kit*. |
 | Few-shot Prompt | It helps the model to learn a task or pattern dynamically by providing examples. It can also be part of the system prompt. | Use case: English-Spanish Translator.<br>Prompt instruction: *You are a kind assistant who helps translate English texts to Spanish. For example, “Good Evening” to Spanish: “Buenas Noches*” |
 | Chain-of-Thought | It simplifies complex tasks by turning them into discrete steps that happen in a certain order. | Use case: Medical Diagnosis for interns.<br>Prompt instruction: *You are a diagnosis assistant designed to help trainee doctors ask a series of questions for patients’ initial evaluation. Your goal is to identify the patient’s symptoms, health history, and other relevant variables to reach an accurate evaluation that, depending on the result, will be forwarded to nurses or doctors. Start by asking the patient about their primary symptoms and the reason for their visit. Then, ...* |
 | Tree-of-Thought | Similar to a decision tree, it includes several lines of thought to allow the model to evaluate and find its path to the correct outcome. | Use case: Support Assistant Bot.<br>Prompt instruction: *You are a helpful assistant supporting the IT department with employees’ requests, such as support tickets, licenses, or hardware inquiries. Follow the instructions below according to the type of request. If the user asks about ... If the request is vague or incomplete, ... If the request is about licenses or hardware, first ... then ... If the user wants to know about their support tickets, ...* |
@@ -111,7 +111,7 @@ There is a difference between how models behave. For example, newer models might
 
 ## Tips for Better Prompting
 
-There are some techniques that have been found to produce better responses from GenAI models. The following examples are focusing on [system prompts](#system-prompt). If you would like to see some examples, visit our [Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/).
+There are some techniques that have been found to produce better responses from GenAI models. The following examples are focusing on [system prompts](#system-prompt). If you want to see some examples, visit the [Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/).
 
 ### Be Clear
 
@@ -188,7 +188,7 @@ For the current question, please base the answer on the following pieces of info
 
 ### Let the Model Assume a Role
 
-You can prime the model by explaining what it does. This will create a bias in the model towards specific reasoning and increase the quality of their answer based on what you expect from the (stereotypical) persona.
+You can prime the model by explaining what it does. This will create a bias in the model toward specific reasoning and increase the quality of their answer based on what you expect from the (stereotypical) persona.
 
 Examples are:
 
@@ -216,7 +216,7 @@ Only use the ticket information from the GetTicketInformationForIdentifier funct
 
 When the prompt becomes longer it can help to use XML-like tags to give more structure to the prompt. This will help the model interpret the different sections and their role in the prompt better.
 
-For example, you could use something like:
+For example, you can use something like:
 
 ```xml
 <instructions>
@@ -234,13 +234,13 @@ Skip the preamble.
 </output_formatting>
 ```
 
-{{% alert color="info" %}}If you would like to know more tips on prompt engineering, read [Part 1](https://www.mendix.com/blog/part-one-hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering/) and [Part 2](https://www.mendix.com/blog/hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering-part-2/) of our blog post *Hey ChatGPT, Can You Write Me a Blog Post About Prompt Engineering?*.{{% /alert %}}
+{{% alert color="info" %}}If you want to know more tips on prompt engineering, read [Part 1](https://www.mendix.com/blog/part-one-hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering/) and [Part 2](https://www.mendix.com/blog/hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering-part-2/) of the blog post *Hey ChatGPT, Can You Write Me a Blog Post About Prompt Engineering?*.{{% /alert %}}
 
 ## Learn More
 
 ### Prompt Library
 
-Check out our [Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/) for examples you can apply or use as inspiration for the prompts in your apps.
+See the [Mendix Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/) for examples you can apply or use as inspiration for the prompts in your apps.
 
 ### Showcases
 

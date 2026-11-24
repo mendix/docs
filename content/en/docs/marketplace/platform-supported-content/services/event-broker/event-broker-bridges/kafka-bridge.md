@@ -7,7 +7,7 @@ description: "How to configure and manage a Kafka bridge using the Mendix Event 
 
 ## Introduction
 
-A Kafka Bridge is a one-way bridge that sends events from the Mendix Event Broker to topics on your own [Apache Kafka](https://kafka.apache.org/) cluster.
+A Kafka Bridge is a one-way bridge that sends events from the Mendix Event Broker to topics on your own Kafka cluster.
 
 ## Configure Service
 

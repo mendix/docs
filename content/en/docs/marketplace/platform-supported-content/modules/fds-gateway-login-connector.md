@@ -15,7 +15,7 @@ The connector abstracts the underlying OpenID Connect (OIDC) integration with Si
 
 This connector is intended for Siemens Xcelerator products and other applications that are required to authenticate users through Siemens Foundational Services (FDS).
 
-The following diagram gives an overview of architecture of the connector:
+The following diagram gives an overview of the architecture of the connector:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/fds/fds-connector.png" alt="Architecture diagram showing a client connecting to Your App via FDS Gateway, which authenticates with FDS IAM and forwards requests with a JWT." >}}
 
@@ -34,7 +34,7 @@ Siemens Access Management (SAM) and SAMv2 are legacy names for what is now calle
 
 * **Login session initiation** – After the FDS Gateway authenticates the end-user through FDS IAM, the connector initiates a local session in the Mendix application. The application does not display its own login page, providing a seamless SSO experience.
 
-* **Just-in-time user provisioning** – The connector does not require pre-provisioning of users into your app. When a user signs in for the first time, the connector automatically creates a corresponding user account in the Mendix application based on the JWT claims received. You can use the default provisioning logic or implement custom provisioning. On subsequent sign-ins, the connector can also update user information using the same provisioning logic.
+* **Just-in-time user provisioning** – The connector does not require pre-provisioning of users into your app. When a user signs in for the first time, the connector automatically creates a corresponding user account in the Mendix application based on the JWT claims received in the Access Token. You can use the default provisioning logic or implement custom user provisioning that uses both Access Token and ID Token to create a user. On subsequent sign-ins, the connector can also update user information using the same provisioning logic.
 
 * **Role-based access control** – User roles are assigned dynamically based on claims in the JWT tokens received from FDS, enabling centralized authorization management.
 
@@ -125,7 +125,7 @@ This ensures that the SSO flow is handled through the dedicated `sso-login.html`
 
 ### Custom User Provisioning
 
-The connector provides `FDSGatewayLoginConnector.CUSTOM_UserProvisioning` as the default user provisioning microflow. By default, it processes the JWT payload, creates or updates users in `System.User`, and assigns user roles.
+The connector provides `FDSGatewayLoginConnector.CUSTOM_UserProvisioning` as the default user provisioning microflow. By default, it processes the JWT payload of Access Token that originated from FDS IAM, creates or updates users in `System.User`, and assigns user roles.
 
 You may need a custom provisioning microflow in the following cases:
 
@@ -137,8 +137,12 @@ To use custom user provisioning, do the following:
 1. Create a custom user entity inheriting from `System.User`.
 2. Create a custom provisioning microflow in your app.
 3. Set the `FDSGatewayLoginConnector.UserProvisioning` constant to point to your custom microflow.
-4. Ensure the custom microflow:
-    * has a parameter of type String named *RequestJson*
+4. Ensure the custom microflow (`CUSTOM_UserProvisioning`):
+    * takes a `UserProvisioningRequest` entity as an input parameter. The `UserProvisioningRequest` entity contains both the Access Token and the ID Token that FDS IAM issued for the user.
+
+    {{% alert color="warning" %}}In 1.0.0 version, the custom provisioning microflow had a String parameter named `RequestJson`. From version 2.0.0, the microflow takes a `UserProvisioningRequest` entity instead. After upgrading, update your custom provisioning microflow to use the new entity.
+    {{% /alert %}}
+
     * returns a `System.User` object
 
 ### Mendix Cloud Portal Runtime Setting

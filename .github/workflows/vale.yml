@@ -74,7 +74,7 @@ jobs:
             {
               echo "## Vale errors and warnings in changed files"
               echo
-              echo "Note: The Vale Comments workflow posts review comments only for errors on lines this PR changed. This table lists all errors and warnings in the changed files."
+              echo "Note: The Vale Comments workflow posts review comments only for errors, only on lines this PR changed. This table lists all errors and warnings throughout the changed files."
               echo
               echo "| File | Line | Severity | Rule | Message |"
               echo "| --- | --- | --- | --- | --- |"

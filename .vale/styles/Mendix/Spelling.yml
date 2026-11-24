@@ -2,6 +2,9 @@
 # Replaces Vale.Spelling so that plural acronyms (for example, APIs, JDKs) aren't flagged
 # Accepted words are filters here, not a Vale vocabulary, because accepted vocabulary words also hide other rules' alerts on text that contains them
 # Each word is an anchored regex (^...$) so that it doesn't hide typos that contain it
+# Keep in sync with Capitalization.yml, CompoundWords.yml, and Terminology.yml:
+#   - If you add a term to one of those rules and the word isn't in the dictionary, add it to "Terms covered by other rules" below. Otherwise it is flagged twice.
+#   - If you remove a term from one of those rules, remove it from "Terms covered by other rules" too. Otherwise it is silently exempt from spelling checks.
 extends: spelling
 message: "Did you really mean '%s'?"
 level: warning
@@ -156,7 +159,8 @@ filters:
   - '^https$'
   - '^[Hh]yperscalers?$'
   - '^IdP''s$'
-  - '^(infographic|[Ii]nfographics)$'
+  - '^[Ii]nfographics?$'
+  - '^[Ii]nitialisms?$'
   - '^[Ii]nsertable$'
   - '^JCo$'
   - '^jdoe$'
@@ -209,10 +213,11 @@ filters:
   - '^upvoted$'
   - '^webp$'
   - '^webpages$'
+  - '^[Ww]ebservices?$'
   - '^wireframe$'
   - '^xcodebuild$'
   - '^xlsx$'
   - '^XPaths?$'
 
   # Terms covered by other rules (listed here to prevent duplicate flags)
-  - '^(?i:airgapped|dropzones?|hashicorp|idp|oauth|onwards|openshift|postgres|postgresql|powershell|sql|submicroflows?|yaml)$'
+  - '^(?i:airgapped|[Dd]atetime|dropzones?|hashicorp|idp|ios|javascript|jquery|macos|maia|oauth|onwards|openshift|postgres|postgresql|powershell|sql|submicroflows?|yaml)$'

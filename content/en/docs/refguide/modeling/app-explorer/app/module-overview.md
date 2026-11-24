@@ -10,8 +10,8 @@ url: /refguide/module-overview/
 
   You can open **Module overview** in the following ways:
 
-  * In the **App Explorer**, double-click **Module overview**.                                            
-  * In MxDock, go to **App** > **Tools** > **Module Overview**.
+* In the **App Explorer**, double-click **Module overview**.                                            
+* In MxDock, go to **App** > **Tools** > **Module Overview**.
 
 ## Toolbar 
 
@@ -31,6 +31,3 @@ url: /refguide/module-overview/
   | --- | --- |
   | **Local name** | The name displayed for the module in the App Explorer. |                                                          
   | **Local version** | The version of the module that is currently in the app. |
-
-
-

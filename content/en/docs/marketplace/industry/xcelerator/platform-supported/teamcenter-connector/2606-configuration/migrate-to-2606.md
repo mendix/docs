@@ -69,7 +69,7 @@ Follow these steps in this exact order to ensure a proper migration:
 5. Update security.
 
     1. Click **Update Security** in the domain model of the implementing module. This synchronizes the changes coming from `TcConnector`. 
-    1. Make sure that all attributes on persistent entities have read rights. The **Administrator** role now only has access to Teamcenter Configuration, so assign the **User** role to module roles that need entity access.
+    1. Make sure that all attributes on persistable entities have read rights. The **Administrator** role now only has access to Teamcenter Configuration, so assign the **User** role to module roles that need entity access.
 
 6. Enable the React client.
 

@@ -3,7 +3,7 @@
 ## Environment Context
 
 - We use **AWS Bedrock** for AI model invocation
-- Sandbox accounts are accessed via **Mendix SSO**
+- Sandbox and nonprod accounts are accessed via **Mendix SSO**
 - **Production accounts exist on the same machine** — DO NOT use them
 - If a command references an AWS profile or region you don't recognize, STOP and ask
 

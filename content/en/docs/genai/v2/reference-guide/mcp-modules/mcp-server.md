@@ -15,7 +15,7 @@ aliases:
 The [MCP Server](https://marketplace.mendix.com/link/component/240380) module provides easy low-code capability to set up an MCP ([Model Context Protocol](/agents/mcp/)) server within a Mendix app. An MCP server can seamlessly expose resources (such as tools or prompts) to other external AI applications that support MCP. The Mendix MCP Server module builds a bridge between Mendix and MCP client applications, such as Claude Desktop, through the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation, it is possible to:
 
 * Expose reusable prompts, including the ability to use prompt parameters
-* List and execute microflow implemented in the application as tools
+* List and execute microflows implemented in the application as tools
 
 To use function calling within the same Mendix application and integrating to an LLM, consider [function calling](/agents/function-calling/).
 
@@ -99,7 +99,7 @@ The MCP Server module does not validate access tokens itself. Your authenticatio
 2. Validate the token. Depending on the authorization server, you can do this in one of the following ways:
 
     * Use the [OIDC SSO](/appstore/modules/oidc/) module, which supports validating tokens against the signing keys of the authorization server. This is required for authorization servers without an introspection endpoint, such as Microsoft Entra ID. For example, use the `DecodeVerifyJWTPlainText` action to verify and get the JWT token to validate further fields, such as, scopes. Note that the `APIAuthentication` action is currently not supported when called from the MCP Server module.
-    * In exceptional cases where your IdP issues opaque tokens that is not being a JWT or when your IdP supports token revocation, you may want to call the token introspection endpoint [(RFC 7662)](https://datatracker.ietf.org/doc/html/rfc7662#section-2) of the authorization server, for example, with a `Call REST service` activity. In most scenarios this is not needed. Common IdP-technologies such as Entra ID, Okta, Keycloak issue access tokens having the JWT profile.
+    * In exceptional cases where your IdP issues opaque tokens that are not JWTs or when your IdP supports token revocation, you may want to call the token introspection endpoint [(RFC 7662)](https://datatracker.ietf.org/doc/html/rfc7662#section-2) of the authorization server, for example, with a `Call REST service` activity. In most scenarios this is not needed. Common IdP technologies such as Entra ID, Okta, Keycloak issue access tokens having the JWT profile.
 
 3. Check that the token is active and not expired, and that the audience (`aud`) is the value that the authorization server issues for your MCP Server. Otherwise, your MCP Server accepts tokens that were issued for other applications. Based on your requirements, check other fields such as scopes or issuer.
 

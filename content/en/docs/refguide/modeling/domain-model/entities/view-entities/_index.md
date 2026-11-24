@@ -52,7 +52,7 @@ When the security level of the app is set to **Production**, the **Access rules*
 Assigning write access to an attribute allows the selected module role to edit the in-memory representation of the query result, but not the underlying source entity. The access level set on the view entity is the sole determining factor for whether a role can read or write to it. The access levels of underlying entities are not considered. This is crucial to prevent unintended exposure of data that is restricted at the source entity level.
 
 {{% alert color="info" %}}
-Direct writing from the view entity to its source entities is not supported, but you can set up a microflow to retrieve and update the source entities to achieve this. See [Update Underlying Persistent Entities](/refguide/view-entity-overview-pages/#update-underlying-persistent-entities) in *Creating Overview Pages* for more information.
+Direct writing from the view entity to its source entities is not supported, but you can set up a microflow to retrieve and update the source entities to achieve this. See [Update Underlying Persistable Entities](/refguide/view-entity-overview-pages/#update-pe) in *Creating Overview Pages* for more information.
 {{% /alert %}}
 
 ### Documentation {#documentation}

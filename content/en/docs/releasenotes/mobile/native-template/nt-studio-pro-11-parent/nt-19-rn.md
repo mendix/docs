@@ -1,9 +1,17 @@
 ---
 title: "Native Template 19"
 url: /releasenotes/mobile/nt-19-rn/
-weight: 6
+weight: 80
 description: "Native Template 19"
 ---
+
+## 19.1.8
+
+**Release date: Oct 28, 2026**
+
+### Fixes
+
+- We fixed an issue on Android where the **Clear data** checkbox on the **Developer App** starting page was hidden behind the bottom navigation bar due to edge-to-edge display.
 
 ## 19.1.7
 

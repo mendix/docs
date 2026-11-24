@@ -115,18 +115,18 @@ To install the Helm Chart, perform the following steps:
 1. Clone or download the Helm Chart repository and navigate to the chart directory.
 2. Install the application by running the following command:
 
-```text
-helm install myapp . \
-  -f examples/dev-simple.yaml \
-  -n <namespace>
-```
+    ```text
+    helm install myapp . \
+      -f examples/dev-simple.yaml \
+      -n <namespace>
+    ```
 
 3. To preview the generated Kubernetes resources before deployment, run the following command:
-
-```text
-helm template myapp . \
-  -f examples/dev-simple.yaml
-```
+    
+    ```text
+    helm template myapp . \
+      -f examples/dev-simple.yaml
+    ```
 
 ### Upgrading a Deployment
 

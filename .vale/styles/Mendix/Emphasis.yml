@@ -1,0 +1,12 @@
+# Flags bold and italics used for emphasis.
+extends: existence
+message: "Don't use bold or italics for emphasis. To add emphasis, rephrase or use an alert instead."
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#emphasis
+level: warning
+scope: raw
+nonword: true
+tokens:
+  # Italics (the surrounding characters keep this from matching inside **bold**)
+  - '(?:^|[^*\w])\*(?:not|all|only|never|always|must|cannot|do not|without)\*(?:[^*\w]|$)'
+  # Bold
+  - '\*\*(?:not|all|only|never|always|must|cannot|do not)\*\*'

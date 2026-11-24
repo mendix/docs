@@ -15,13 +15,13 @@ Adding a document to **Setup** does not move it. The document remains in its ori
 {{% alert color="info" %}}
 The **Setup** node is available only for [app modules](/refguide/module-settings/#app-module). It is not available for [add-on](/refguide/module-settings/#add-on-module) or [solution](/refguide/module-settings/#solution-module) modules.
 {{% /alert %}}
+
 ## Adding Documents to Setup
 
 You can add a document or folder to **Setup** in the following ways:
 
 * Right-click the document or folder and select **Add to Setup**
 * Drag a document or folder to the **Setup** node
-
 
 ## Removing Documents from Setup
 
@@ -42,7 +42,7 @@ When you right-click the **Setup** node, the context menu shows the option **Add
 
 When you right-click a folder in **Setup**, the context menu shows three options:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules//setup/folder-context-options.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/setup/folder-context-options.png" class="no-border" >}}
 
 * **Add folder** – adds a subfolder to the selected folder
 * **Rename** – renames the selected folder

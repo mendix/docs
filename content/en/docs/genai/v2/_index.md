@@ -8,7 +8,7 @@ v11_12: true
 
 ## Introduction
 
-Agents Kit 2 provides a comprehensive set of Mendix components for building agentic and generative AI applications. It includes starter apps and showcase apps to help you get started quickly. It also includes connector modules to integrate with Mendix Cloud GenAI resources and external providers like Amazon Bedrock, OpenAI, Google Gemini, and Mistral. Core modules like Agent Editor, Agent Commons, and GenAI Commons provide reusable patterns and capabilities for building agentic functionality.
+Agents Kit 2 provides a comprehensive set of Mendix components for building agentic and generative AI applications. It includes starter apps and showcase apps to help you get started. It also includes connector modules to integrate with Mendix Cloud GenAI resources and external providers like Amazon Bedrock, OpenAI, Google Gemini, and Mistral. Core modules like Agent Editor, Agent Commons, and GenAI Commons provide reusable patterns and capabilities for building agentic functionality.
 
 {{% alert color="info" %}}
 Agents Kit 2 is available for Studio Pro 11.12 and above and provides Mendix's newest agentic features and improvements. [Agents Kit 1](/agents/agents-kit-1/) is available for Studio Pro 10.24 and above.
@@ -22,8 +22,8 @@ The following components are available in Agents Kit 2.
 
 | App | Description | Latest Released Version |
 | --- | --- | --- |
-| [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369) (formerly known as Support Assistant Starter App) | Build agentic apps with this starter app that includes Agent Commons and all its required dependencies. Includes a working conversational support agent that you can customize with prompts, tool calling, knowledge base integration, and human-in-the-loop capabilities. | 2.1.0 |
-| [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) | Start building with Mendix GenAI capabilities using this blank starter app that comes preloaded with connectors for Mendix Cloud GenAI, OpenAI, Amazon Bedrock, Google Gemini, and Mistral, plus Agent Editor and all its required dependencies. | 5.2.0 |
+| [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369) (formerly known as Support Assistant Starter App) | Build agentic apps with this starter app that includes Agent Commons and all its required dependencies. Includes a working conversational support agent that you can customize with prompts, tool calling, knowledge base integration, and human-in-the-loop capabilities. | 2.1.1 |
+| [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) | Start building with Mendix GenAI capabilities using this blank starter app that comes preloaded with connectors for Mendix Cloud GenAI, OpenAI, Amazon Bedrock, Google Gemini, and Mistral, plus Agent Editor and all its required dependencies. | 5.4.0 |
 | [RFP Assistant Starter App / Questionnaire Assistant Starter App](https://marketplace.mendix.com/link/component/235917) | Demonstrates a time-saving GenAI pattern for answering similar-but-different questions. Upload Request for Proposal (RFP) documents, generate responses from a historical knowledge base of question-answer pairs, edit with AI assistance, and keep the model's responses current with continuous knowledge base updates. Requires [Mendix Cloud GenAI](/agents/mx-cloud-genai/). | 4.0.1 |
 
 ### Showcase Apps {#showcase-apps}
@@ -37,7 +37,7 @@ The following components are available in Agents Kit 2.
 | Module | Description | Latest Released Version |
 | --- | --- | --- |
 | [Agent Commons](/agents/agents-kit-2/reference-guide/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 4.4.0 |
-| [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 2.6.0 |
+| [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 2.7.0 |
 | [Conversational UI](/agents/agents-kit-2/reference-guide/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 7.4.0 |
 | [GenAI Commons](/agents/agents-kit-2/reference-guide/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 7.3.0 |
 

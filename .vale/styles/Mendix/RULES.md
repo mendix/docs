@@ -14,16 +14,18 @@ This directory contains custom Vale rules specific to Mendix documentation.
 * **ConditionalAdverbs.yml**: Flags conditional adverbs that add uncertainty (would, could, should, might, etc.)
 * **Dashes.yml**: Removes spaces around em dashes (—)
 * **Directions.yml**: Enforces upper/lower instead of top/bottom for directional terms
+* **Emphasis.yml**: Flags bold and italics around emphasis words (not, no, all, never, always, etc.)
 * **HeadingPunctuation.yml**: Prohibits end punctuation in headings (except question marks)
 * **HeadingTitleCase.yml**: Enforces title case in headings
 * **IconShortcodes.yml**: Suggests using icon shortcodes with tooltips instead of plain text icon descriptions
 * **Inclusive.yml**: Flags non-inclusive language
 * **Latin.yml**: Flags Latin abbreviations and phrases that should be replaced with plain English
 * **LinkText.yml**: Prohibits generic link text like "click here"
-* **ListIntroductions.yml**: Enforces en dashes in list item introductions (≤40 chars)
+* **ListIntroductions.yml**: Enforces en dashes (–) in list item introductions (≤40 chars) by replacing em dashes and spaced hyphens
 * **ProductNames.yml**: Enforces correct Mendix product names
 * **SignIn.yml**: Enforces "sign in/out" instead of "log in/out"
-
+* **Uppercase.yml**: Flags all-caps emphasis words (NEVER, NOT, ALWAYS, etc.); replaces Microsoft.Uppercase
+* **Wordiness.yml**: Suggests simpler, more concise alternatives for wordy phrases
 ## Adding New Rules
 
 Create a new `.yml` file in this directory, following [Vale's style documentation](https://vale.sh/docs/styles):
@@ -47,5 +49,5 @@ In `.vale.ini`:
 Microsoft.Contractions = NO
 
 # Change severity
-Microsoft.Wordiness = warning
+Microsoft.Quotes = warning
 ```

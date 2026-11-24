@@ -638,7 +638,6 @@ Legend:
 | 1      | Available only when selection is enabled.               |
 | 2      | Available only when selection mode should be **Multi**. |
 
-
 ## Resetting Filters {#resetting-filters}
 
 The [Data Widgets](/appstore/modules/data-widgets/) module includes two JavaScript actions that reset filters from a nanoflow:

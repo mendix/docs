@@ -1,5 +1,5 @@
 ---
-name: docs-new-page
+name: docs-draft
 description: Drafts new documentation content, as one or more new pages from the matching templates in `templates/`, as additions to existing pages, or both. Use when the user asks to create, write, draft, add to, or start new documentation pages, files, or content.
 user-invocable: true
 ---

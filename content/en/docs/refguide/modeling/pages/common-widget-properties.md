@@ -89,11 +89,36 @@ Dynamic classes do not require a data container.
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
 
-### Texts {#texts}
+### System Texts {#texts}
 
-Widgets that include translatable texts display an overview of their [system texts](/refguide/system-texts/). To manage the translations, click **Go to system texts** to open the system text editor.
+Widgets that include translatable texts display an overview of their [system texts](/refguide/system-texts/) in the **System texts** property. The overview lists the texts that the widget defines and the texts it uses from other widgets or from the app. For each text, the overview shows the **Caption** and the **Text** in the current language.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/widget-system-texts-properties-dialog.png" alt="The Studio Pro properties dialog box showing the widget's system texts" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/system-text-grid.png" alt="The Studio Pro properties dialog box showing the widget's system texts. Some texts have overrides, indicated by bold text." class="no-border" >}}
+
+To manage the translations for all widgets in the app, click **Go to system texts** to open the system text editor.
+
+#### Overriding System Texts {#override-system-texts}
+
+A system text applies to all widgets in the app that use it. To use a different text for a single widget, override the system text for that widget:
+
+1. Select the row of the system text you want to override.
+1. Click **Override** to open the **Edit system text override** dialog box. The dialog box shows the **Category**, **Item**, **Original text**, and **Parameters** of the system text.
+1. Click **Edit** to open the [text template](/refguide/text/#caption-template) editor for the override.
+1. Click **OK** to save the override.
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/system-text-override.png" alt="The Studio Pro dialog showing the selected system text and its override." class="no-border" >}}
+
+Texts that have an override in the current language are shown in bold in the overview.
+
+You add an override per language. To add an override in another language, change the [current language](/refguide/translatable-texts/#current-language) and repeat the steps above. In languages without an override, the widget shows the system text.
+
+The parameter values of an override can use the parameters of the system text, as well as other variables on the page or snippet.
+
+To remove an override in the current language, select the text and click **Clear override**.
+
+{{% alert color="info" %}}
+Overrides for system texts per widget were introduced in Studio Pro 11.17.
+{{% /alert %}}
 
 ## Data Source Section{#data-source}
 

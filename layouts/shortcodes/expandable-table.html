@@ -8,8 +8,8 @@
     </div>
     <div class="expandable-table-inner">
         {{/* Strip leading indentation so tables indented inside a list are not rendered as code blocks */}}
-        {{/* Join lines that do not start with a pipe to the previous line, so multi-line output of shortcodes (for example, alert and figure) inside a table cell does not end the table row */}}
-        {{ .Inner | replaceRE `(?m)^[ \t]+` "" | replaceRE `\s*\n\s*([^|\s])` " $1" | markdownify | safeHTML }}
+        {{/* Join lines that do not start with a pipe to the previous line, so multi-line output of shortcodes (for example, alert and figure) inside a table cell does not end the table row. Also join a line that starts with a pipe when the previous line does not end with one, so the cell after a shortcode stays in the same row */}}
+        {{ .Inner | replaceRE `(?m)^[ \t]+` "" | replaceRE `\s*\n\s*([^|\s])` " $1" | replaceRE `([^|\s])\s*\n\s*\|` "$1 |" | markdownify | safeHTML }}
     </div>
 </div>
 

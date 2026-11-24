@@ -1075,7 +1075,13 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/widget-system-texts-properties-dialog.png" alt="The Studio Pro properties dialog box showing the widget's system texts" class="no-border" >}}
 
-Note that external texts are not listed.
+The overview lists both the widget's own texts and its external texts. When an `<externalTexts>` element has no `<text>` elements, all texts of that namespace are listed.
+
+From this overview, the user can [override a system text](/refguide/common-widget-properties/#override-system-texts) for a single widget instance. When a text is overridden, `translate()` returns the override instead of the system text. This is transparent to the widget.
+
+{{% alert color="info" %}}
+Overriding system texts was introduced in Mendix 11.17.
+{{% /alert %}}
 
 Clicking **Go to system texts** opens the system texts editor, where the texts appear categorized under the widget's name:
 

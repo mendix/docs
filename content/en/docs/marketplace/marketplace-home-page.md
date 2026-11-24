@@ -44,7 +44,9 @@ The **Manage Components** category contains the items described in the following
 
 ### Published {#published}
 
-The **Published** page includes all the components you can manage, based on your role. For an overview of who can manage components based on their role, refer to the [Company Groups](#content-groups) section on this page.    
+Clicking **Published** opens the **Manage Components** page. This page lists all the components for which you have maintenance access due to being the component owner, a contributor selected during the component development flow, a member of the component group, or a company admin.    
+For an overview of who can manage components based on their role, refer to the [Company Groups](#content-groups) section on this page.    
+
 The following details are displayed for each component:
 
 * **Name** – The component's name. Clicking the name of a component in the list opens its [details page](/appstore/component-details/).

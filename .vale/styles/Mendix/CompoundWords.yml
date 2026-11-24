@@ -1,10 +1,11 @@
 # Mendix custom rule: Compound word formatting
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md
-# See specific terms: checkbox, dataset, endpoint, home page
+# Each entry matches both capitalizations and carries them over: ([Cc]) captures the first letter, and $1 puts it back.
+# Keep in sync with Spelling.yml: if you add a term that isn't in the dictionary, also add it to "Terms covered by other rules" there. If you remove a term, remove it there too.
 extends: substitution
 message: "Use '%s' instead of '%s'"
 level: error
-ignorecase: true
+ignorecase: false
 scope:
   - paragraph
   - heading
@@ -14,10 +15,23 @@ scope:
 action:
   name: replace
 swap:
-  'data-set': 'dataset'
-  'data set': 'dataset'
-  'end point': 'endpoint'
-  'check box': 'checkbox'
-  'home-page': 'home page'
-  'homepage': 'home page'
-  'end user': 'end-user'
+  '([Aa])ir ?gapped': '$1ir-gapped'
+  '([Cc])heck box': '$1heckbox'
+  '([Dd])ata[ -]set': '$1ataset'
+  '([Dd])ouble click (any|in|it|on|the|to)\b': '$1ouble-click $2'  # Matches the next word to exclude UI label hits
+  '([Dd])rop ?zone(s?)': '$1rop-zone$2'
+  '([Ee])nd point': '$1ndpoint'
+  '([Ee])nd user': '$1nd-user'
+  '([Hh])ome-?page': '$1ome page'
+  '([Ii])n-line': '$1nline'
+  '([Ll])ife cycle': '$1ifecycle'
+  '([Mm])eta model': '$1etamodel'
+  '([Rr])ead only': '$1ead-only'
+  '([Rr])e-(deploy(?:ing)?|generat(?:e|ing)|install|open(?:ed|ing)?|run(?:ning)?|us(?:e[ds]?|able))': '$1e$2'
+  '([Rr])ight click': '$1ight-click'
+  '([Rr])un[ -]time': '$1untime'
+  '([Ss])ingle sign on': '$1ingle sign-on'
+  '([Ss])ub ?microflow(s?)': '$1ub-microflow$2'
+  '([Tt])ool tip': '$1ooltip'
+  '([Ww])ebservice(s?)': '$1eb service$2'
+

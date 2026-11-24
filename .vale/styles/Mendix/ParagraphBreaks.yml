@@ -1,0 +1,9 @@
+# Mendix custom rule: Possible missing paragraph break
+# Markdown joins lines that have no blank line between them into one paragraph
+# Known issue: Only checks for a sentence end followed by a line that starts with a capital letter, so it misses other missing breaks
+extends: existence
+message: "Should this render as two separate paragraphs? If so, add a blank line here."
+level: suggestion
+scope: paragraph
+raw:
+  - '[.!?:][ \t]*\n[A-Z]'

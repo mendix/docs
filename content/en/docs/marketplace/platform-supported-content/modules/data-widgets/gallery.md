@@ -182,7 +182,7 @@ Use the **On selection change** action to trigger custom logic when selection ch
 If this setting is enabled, then selected items persist across page navigation, data refreshes, filtering, and sorting operations. This setting is only available when **Selection** is set to **Multi**. By default, Keep selection is disabled and the selection is cleared when the items are not in the current set of datasource items. When enabled, selected items remain selected until manually cleared by the user or through a nanoflow action.
 
 {{% alert color="warning" %}}
-Keep Selection cannot be used with non-persistent entities (NPEs) or view entities, as their IDs change on refresh.
+Keep Selection cannot be used with non-persistable entities (NPEs) or view entities, as their IDs change on refresh.
 {{% /alert %}}
 
 ## Keyboard Navigation and Selection

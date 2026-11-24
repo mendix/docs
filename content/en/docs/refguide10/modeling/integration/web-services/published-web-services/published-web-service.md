@@ -25,7 +25,59 @@ Default: **Yes**
 
 ### Authentication
 
-The authentication settings to define for communicating with the web service.
+This option allows you to define authentication settings for communicating with the web service. Studio Pro offers the following options:
+
+* **No authentication** – clients do not need to provide credentials to call the web service
+* **Username and password** – clients authenticate with a web service user
+* **Custom authentication** – a microflow you define authenticates clients using information from the SOAP header
+
+#### Username and Password {#authentication-username-password}
+
+With this option, the SOAP header of each request must contain an `Authentication` element with a `Username` and a `Password` element, as shown in [Published Web Services](/refguide10/published-web-services/#authentication). The credentials must belong to a web service user. For more information, see [Authentication and Users](/refguide10/integration/expose-a-web-service/#authentication-and-users).
+
+If the header is missing, or if it does not contain a user name or a password, the call fails with a SOAP fault.
+
+#### Custom Authentication {#authentication-custom}
+
+With this option, the SOAP header of each request is processed in the following way:
+
+1. The first element of the SOAP header is converted into an object by the import mapping you select.
+2. This object is passed to the authentication microflow you select as its only parameter.
+3. The microflow returns the user the operation is executed as.
+
+The call fails with a SOAP fault if one of the following situations occurs:
+
+* The request does not contain a SOAP header
+* The header cannot be converted by the import mapping
+* The microflow does not return a user
+* The user that is returned is not active or is blocked
+
+The following settings are available:
+
+| Setting | Description |
+| --- | --- |
+| **Schema import wizard** | Opens the **Schema import wizard** dialog box, which creates the XML schema and the import mapping for the header. For more information, see [Schema Import Wizard](#schema-import-wizard). |
+| **Import mapping** | The [import mapping](/refguide10/import-mappings/) that converts the header element into an object. Select an import mapping that you created yourself or with the wizard. |
+| **If no object was found** | The action to perform when the import mapping cannot obtain a Mendix object, for example, when a database lookup finds no match. This setting is only shown when the selected import mapping has **Decide this at the place where the mapping gets used** selected. For more information, see [If No Object Was Found](/refguide10/import-mappings/#if-no-object-was-found). |
+| **Microflow** | The authentication microflow. It must have a single parameter of the entity type the import mapping creates, and it must return a `System.User` object. |
+
+##### Schema Import Wizard {#schema-import-wizard}
+
+In the **Schema import wizard** dialog box, select a **Source** for the header schema:
+
+* **Predefined** – use a schema that is included with Studio Pro; select a **Header schema**, then select which **Selected parameters** to include in the import mapping:
+    * **WS Security Username Token** – a WS-Security header with a username token
+    * **WS Security 2002-04 with Kerberos v5 Token Profile** – a WS-Security header that can also contain a binary security token
+
+    Each predefined schema offers these parameter sets:
+
+    * **Custom element selection** – you select the elements to include yourself
+    * **Username and Password** – the `Security`, `UsernameToken`, `Username`, and `Password` elements
+    * **Username and BinarySecurityToken** – the `Security`, `Username`, and `BinarySecurityToken` elements and the `Id`, `ValueType`, and `EncodingType` attributes of `BinarySecurityToken`; only available for the Kerberos schema
+* **Schema document** – use an XML schema document that is already in your app; click **Select** to choose it
+* **File** – use an XSD file from your local machine; click **Select.** to choose it
+
+When you confirm the dialog box, Studio Pro imports the schema and creates an import mapping for the elements you selected.
 
 ### Target Namespace
 

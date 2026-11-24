@@ -175,7 +175,6 @@ If the response format changes or does not match expectations, extracted values 
 
 POST and GET request steps currently support the following constraints:
 
-* A pipeline can contain at most one POST request step and one GET request step.
 * Up to five HTTP headers can be configured.
 * The **Request Body** field does not support the Variable Selector. You must enter variable references manually.
 * For GET request steps, header values are resolved once and are not re-evaluated during polling.

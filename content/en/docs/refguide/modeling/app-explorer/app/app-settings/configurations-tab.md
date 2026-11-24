@@ -1,6 +1,7 @@
 ---
 title: "Configurations Tab"
 url: /refguide/configurations-tab/
+description: "Describes how to configure local database, server, and Kafka settings in Studio Pro."
 weight: 10
 aliases:
     - /refguide/configuration/
@@ -34,6 +35,7 @@ A configuration contains the following:
 * [Custom](#custom)
 * [Headers](#headers)
 * [OpenTelemetry](/refguide/opentelemetry-in-runtime/#min-configuration)
+* [Kafka](/refguide/change-data-capture/#local-configuration)
 
 ### Database {#database}
 
@@ -97,6 +99,11 @@ Each header consists of a name and a value. By default, when configuring a custo
 The following headers are considered special and are handled differently from other custom headers.
 
 * `Content-Security-Policy`, this is only returned for HTML responses and responses for which it is added using `response.addContentSecurityPolicyHeader()`. Additionally, a `{{ NONCE }}` template variable can be used, which be replaced when the response is sent back by the value returned from `response.getNonce`.
+
+### Kafka {#kafka}
+
+The **Kafka** tab configures the broker connection for local Change Data Capture (CDC) publishing.
+For setup instructions, see the [Running CDC Locally](/refguide/change-data-capture/#local-configuration) section of *Change Data Capture*.
 
 ## Example
 

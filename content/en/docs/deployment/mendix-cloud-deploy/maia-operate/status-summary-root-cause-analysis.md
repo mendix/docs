@@ -1,8 +1,10 @@
 ---
-title: "Status Check and Root Cause Analysis"
-url: /developerportal/maia-operate/status-check-root-cause-analysis/
+title: "Status Summary and Root Cause Analysis"
+url: /developerportal/maia-operate/status-summary-root-cause-analysis/
 description: "Describes how to use Maia Operate to check the health of a Mendix Cloud environment and run a root cause analysis on the environment."
 weight: 20
+aliases:
+    - /developerportal/maia-operate/ai-log-summary/
 beta: true
 ---
 
@@ -12,7 +14,7 @@ This feature is in Public Beta. For more information, see [Release Status](/rele
 
 ## Introduction
 
-Status Check and Root Cause Analysis is a feature of Maia Operate that reports on the health of a single Mendix Cloud environment in plain language. You open the Maia Operate assistant for an environment and request a status summary. The summary covers reachability, deployment state, runtime health, and recent activity.
+Status Summary and Root Cause Analysis is a feature of Maia Operate that reports on the health of a single Mendix Cloud environment in plain language. You open the Maia Operate assistant for an environment and request a status summary. The summary covers reachability, deployment state, runtime health, and recent activity. The status summary includes the log analysis that was previously available as AI Log Summary.
 
 When an environment needs attention, you can run a root cause analysis. It identifies the most likely cause, shows the supporting evidence, and recommends a next step.
 
@@ -20,8 +22,8 @@ When an environment needs attention, you can run a root cause analysis. It ident
 
 To use this feature, you need the following:
 
-* A Mendix app deployed to a Mendix Cloud environment
-* Permission to view and monitor the environment in Mendix Portal
+* A Mendix app deployed to a Mendix Cloud environment.
+* **Monitoring Access** permission for the environment. For more information, refer to [Node Permissions](/developerportal/deploy/node-permissions/#access-to-monitoring).
 
 ## Checking Your Environment Status {#check-status}
 
@@ -39,6 +41,12 @@ If you have not used the assistant for a while, your first request can take long
 {{% /alert %}}
 
 The status summary always reports the same signals in the same order, so you can read it the same way each time. For details, see [Status Summary](#status-summary).
+
+{{% alert color="info" %}}
+The assistant runs one analysis at a time for your account. If you start a status summary or root cause analysis in another environment, browser tab, or window, any analysis already running for your account stops. Only the most recent analysis continues.
+
+An analysis also stops if you close the assistant panel while it is running. A stopped analysis does not resume on its own. To continue, reopen the assistant and run the action again.
+{{% /alert %}}
 
 ## Running a Root Cause Analysis {#run-rca}
 
@@ -89,4 +97,4 @@ Recommended actions are always steps that you can take yourself in Mendix Portal
 
 The status summary and root cause analysis are AI-generated. They help you understand and triage the state of your environment, but they are not an authoritative source. Confirm the findings against your environment and your logs before making important changes. The results might not capture every cause, especially for issues that occur rarely or originate outside the environment.
 
-The assistant reports on operational data for the environment that you select, such as deployment state, runtime status, route reachability, and recent log activity. Log data follows your existing log retention policies, independent of this feature. For more information, see the [Rotation and Retention Schedule](/developerportal/operate/logs/#retention-schedule) section of *Logs*.
+The assistant reports on operational data for the environment that you select, such as deployment state, runtime status, route reachability, metrics, alerts, platform events, and recent log activity. Log data follows your existing log retention policies, independent of this feature. For more information, see the [Rotation and Retention Schedule](/developerportal/operate/logs/#retention-schedule) section of *Logs*.

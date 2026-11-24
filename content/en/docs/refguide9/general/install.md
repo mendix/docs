@@ -108,7 +108,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
             * Rename *windowsdesktop-runtime-8.0.14-win-x64.exe* to *windowsdesktop-runtime-8.0-x64.exe*
         * For Studio Pro versions 9.24.42 and above, rename the Microsoft .NET Desktop Runtime 10.0.x to remove the patch version. For example, if you have downloaded .NET Desktop Runtime 10.0.7:
             * Rename *windowsdesktop-runtime-10.0.7-win-x64.exe* to *windowsdesktop-runtime-10.0-x64.exe*
-    * The Java Development Kit 11, 17 or 21 (x64) *msi* (for example, *OpenJDK17U-jdk_x64_windows_hotspot_17.0.21_9.msi*) to one of the following, depending on the Studio Pro version:
+    * The Java Development Kit 11, 17 or 21 (x64) *msi* (for example, *OpenJDK21U-jdk_x64_windows_hotspot_21.0.13.1_2.msi*) to one of the following, depending on the Studio Pro version:
         * *adoptiumjdk_21_x64.msi* – for versions 9.24.34 and above
         * *adoptiumjdk_11_x64.msi* – for versions between 9.14.0 and 9.24.33 
         * *adoptopenjdk_11_x64.msi* – for versions 9.13.x and below

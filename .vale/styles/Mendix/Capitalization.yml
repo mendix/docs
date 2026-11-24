@@ -1,6 +1,7 @@
 # Mendix custom rule: Capitalization errors
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Capitalization of Mendix Terminology)
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide.md
+# Known issue: Flags code that isn't marked as code, such as unfenced code inside tabpane shortcodes, function names in link text, and sample column names in table cells. Wrap these in backticks or ignore them.
 # Keep in sync with Spelling.yml: if you add a term that isn't in the dictionary, also add it to "Terms covered by other rules" there. If you remove a term, remove it there too.
 extends: substitution
 message: "Use '%s' (capitalized)"
@@ -37,7 +38,6 @@ swap:
   'agile scrum': 'Agile Scrum'
   boolean: Boolean
   cartesian: Cartesian
-  datetime: DateTime
   '(?<![.-])git': 'Git'  # Skips .git folder and hyphenated names
   hashicorp: HashiCorp
   '(?<!-)id': 'ID'  # Skips hyphenated names

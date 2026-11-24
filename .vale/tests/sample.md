@@ -394,7 +394,7 @@ Set the atribute_value value.
 Another rule flags the incorrect form of each of these words, so Mendix.Spelling must not flag them too. Each line must produce an alert from the rule named in its first sentence and no alert from Mendix.Spelling. Keep these lines in sync with the "Terms covered by other rules" filter in Spelling.yml.
 
 <!-- covered by other rules -->
-Mendix.Capitalization flags datetime, hashicorp, idp, ios, javascript, JQuery, macos, maia, oauth, openshift, postgres, postgresql, powershell, sql, and yaml.
+Mendix.Capitalization flags hashicorp, idp, ios, javascript, JQuery, macos, maia, oauth, openshift, postgres, postgresql, powershell, sql, and yaml.
 
 <!-- covered by other rules -->
 Mendix.CompoundWords flags airgapped, dropzone, dropzones, submicroflow, and submicroflows.

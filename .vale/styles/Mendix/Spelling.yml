@@ -14,7 +14,7 @@ filters:
   # Plural acronyms, such as APIs and JDKs
   - '[A-Z]{2,}(?:''s|s)\b'
 
-  # Code-like words (snake_case and lowerCamelCase), so the rule doesn't suggest code font
+  # Skips code-like (lowerCamelCase and snake_case) words, which are often flagged as typos. However, consider wrapping these in backticks.
   - '_'
   - '^[a-z]+([A-Z][a-z0-9]*)+$'
 
@@ -220,4 +220,4 @@ filters:
   - '^XPaths?$'
 
   # Terms covered by other rules (listed here to prevent duplicate flags)
-  - '^(?i:airgapped|[Dd]atetime|dropzones?|hashicorp|idp|ios|javascript|jquery|macos|maia|oauth|onwards|openshift|postgres|postgresql|powershell|sql|submicroflows?|yaml)$'
+  - '^(?i:airgapped|dropzones?|hashicorp|idp|ios|javascript|jquery|macos|maia|oauth|onwards|openshift|postgres|postgresql|powershell|sql|submicroflows?|yaml)$'

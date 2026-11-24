@@ -38,7 +38,7 @@ Defines the amount of data shown for each page or the limit to be presented when
 #### Pagination
 
 {{% alert color="info" %}}
-The pagination status text and the screen reader labels of the paging buttons are currently written in English and cannot be translated.
+The pagination status text and the screen reader labels of the paging buttons are currently written in English and cannot be translated. We are working to improve this in the future.
 {{% /alert %}}
 
 You can choose between paging buttons (buttons presented below or above the grid), virtual scrolling (a mechanism that automatically loads data when the user reaches the bottom of the scroll bar), or load more (a button that loads more items). The default value is **Paging buttons**.

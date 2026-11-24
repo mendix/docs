@@ -6,12 +6,14 @@ weight: 40
 
 ## Introduction
 
-Activities define the actions that are executed in a microflow or a nanoflow.
+Activities define the actions that are executed in a microflow, a nanoflow, or a testflow.
 
 There are different types of activity, and they are grouped together in the Studio Pro **Toolbox**. All the activities are listed below. Click on each activity for more details.
 
 {{% alert color="info" %}}
-Most activities can be used in both microflows and nanoflows. However, some can only be used in one of these types of flow, or the behavior may differ between in microflows and in nanoflows. For more information, see the [Differences between Microflows and Nanoflows](/refguide/microflows-and-nanoflows/#differences) section in *Microflows and Nanoflows*.
+Most activities can be used in both microflows and nanoflows. However, some can only be used in one of these types of flow, or the behavior may differ between in microflows and in nanoflows. For more information, see the [Differences between Microflows and Nanoflows](/refguide/microflows-and-nanoflows/#differences) section in *Microflows, Nanoflows, and Testflows*.
+
+A [testflow](/refguide/testflows/) can use all the activities that are available in microflows, as well as [testing activities](#testing-activities).
 {{% /alert %}}
 
 ## Object Activities
@@ -121,6 +123,20 @@ These activities can only be used in microflows.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/counter.png" alt="counter" link="/refguide/metrics-counter/" max-width=55% class="no-border" >}} | [Counter](/refguide/metrics-counter/) | Allows you to increment a counter by the specified value. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/increment-counter.png" alt="increment-counter" link="/refguide/metrics-increment-counter/" max-width=55% class="no-border" >}} | [Increment counter](/refguide/metrics-increment-counter/) | Allows you to increment a counter by 1. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/gauge.png" alt="gauge" link="/refguide/metrics-gauge/" max-width=55% class="no-border" >}} | [Gauge](/refguide/metrics-gauge/) | Allows you to specify the value of a gauge. |
+
+## Testing Activities {#testing-activities}
+
+{{% alert color="warning" %}} This feature is in beta. For more information, see [Release Status](/releasenotes/release-status/). {{% /alert %}}
+
+{{% alert color="info" %}}
+These activities can only be used in [testflows](/refguide/testflows/).
+{{% /alert %}}
+
+[Testing activities](/refguide/testing-activities/) are used to check the results of the logic you test.
+
+| Name | Description |
+| --- | --- |
+| [Assert](/refguide/assert/) | Checks whether a condition is true. If the condition is not true, the testflow stops and fails. |
 
 ## Email Activities
 

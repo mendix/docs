@@ -172,17 +172,22 @@ To clearly identify a [sub-microflow](/refguide/extracting-and-using-sub-microfl
 | ------------- | --------------------------- |
 | Sub-microflow | SUB_{Microflow description} |
 
-### Unit Test Microflows
+### Testflows and Test Microflows {#unit-test-microflows}
 
-Microflows containing unit tests should have the prefix **TEST_** or **UT_** (case-insensitive). For more information about the Unit Testing module, see [Unit Testing](/appstore/modules/unit-testing/).
+Use a prefix that shows the type of test. This applies to [testflows](/refguide/testflows/) and to test microflows for the [Unit Testing](/appstore/modules/unit-testing/) module.
 
 [//]: # (<!-- markdownlint-disable no-space-in-emphasis -->)
 
-| Event Type | Prefix       |
-| ---------- | ------------ |
-| Unit Test  | TEST_ or UT_ |
+| Test Type        | Prefix |
+| ---------------- | ------ |
+| Unit test        | UT_    |
+| Integration test | IT_    |
 
 [//]: # (<!-- markdownlint-enable no-space-in-emphasis -->)
+
+{{% alert color="info" %}}
+The Unit Testing module only recognizes microflows with the prefix **TEST_** or **UT_** (case-insensitive) as tests. If you use the Unit Testing module for integration tests, use the prefix **TEST_** instead of **IT_**.
+{{% /alert %}}
 
 ### Integration Microflows
 

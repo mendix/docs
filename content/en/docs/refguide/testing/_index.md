@@ -17,7 +17,7 @@ Testing is a vital component when creating a Mendix application. Finding and fix
 
 The testing pyramid is a convenient way to categorize tests according to their type, cost, speed, and scope.
 
-{{< figure src="/attachments/refguide/testing/testing-pyramid.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/testing/testing-pyramid.png" alt="Testing pyramid showing, from bottom to top, performance and security tests, unit tests and static code analysis, API and integration tests, and frontend, UI, and E2E tests, with the Mendix and partner offerings for each test type" class="no-border" >}}
 
 Tests at the bottom of the pyramid are generally cheaper and faster to run, giving you quicker feedback. As you move up, the scope of the tests increases, but so does their complexity and execution time.
 
@@ -42,6 +42,7 @@ For microflows or Java actions that can be isolated, you can perform unit tests.
 
 You can use the following offerings to help with this test type:
 
+* [Testflows](/refguide/testflows/) (beta, Studio Pro 11.18 and above) - Lets you build tests for your microflows in Studio Pro and run them in the [Test Runner](/refguide/test-runner/) pane, without installing a module. Testflows are intended to replace the Unit Testing module.
 * [Unit Testing](/appstore/modules/unit-testing/) - Enables developers to implement, run, and manage unit tests within the Mendix application that is being tested.
 * [Menditect Test Automation](/appstore/partner-solutions/mta/) - Offers a no-code, visual suite of automated regression testing tools. This solution is developed by Menditect.
 
@@ -51,6 +52,7 @@ Integration and API testing tests the interaction between different microflows, 
 
 You can use the following offerings to help with this test type:
 
+* [Testflows](/refguide/testflows/) (beta, Studio Pro 11.18 and above) - Lets you test how microflows and modules work together. A testflow can call several microflows, and each testflow runs in a dedicated runtime with its own in-memory database.
 * [Menditect Test Automation](/appstore/partner-solutions/mta/) - Offers a no-code, visual suite of automated regression testing tools. This solution is developed by Menditect.
 
 ### UI Tests

@@ -2,7 +2,7 @@
 title: "Using Teamcenter Services Included with the Teamcenter Connector"
 linktitle: "Using Included Teamcenter Services"
 url: /appstore/industry/teamcenter-connector/using-included-services/
-weight: 7
+weight: 80
 description: "Describes how to use Teamcenter services that are included in the connector."
 aliases:
     - /appstore/modules/siemens-plm/using-included-services/

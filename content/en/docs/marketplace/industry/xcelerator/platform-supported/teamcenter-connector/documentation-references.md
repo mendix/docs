@@ -1,7 +1,7 @@
 ---
 title: "Documentation References"
 url: /appstore/industry/teamcenter-connector/references/
-weight: 9
+weight: 100
 description: "Provides information on obtaining additional documentation."
 aliases:
     - /appstore/modules/siemens-plm/references/

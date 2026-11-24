@@ -426,6 +426,12 @@ Click on the button.
 | --- | --- |
 | Sign in | Log out of the portal. |
 
+<!-- flagged: before "corner", the compound needs a hyphen -->
+Click the top right corner of the page.
+
+<!-- flagged: without "corner", the rule keeps the writer's separator -->
+Select the top right of the page.
+
 ## Mendix.Uppercase
 
 Flags all-caps words used for emphasis.

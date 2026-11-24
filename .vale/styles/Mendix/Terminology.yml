@@ -58,11 +58,14 @@ swap:
   '3rd party': 'third party'
 
   # upper/lower (not "top/bottom") for directions
-  'top([ -])left': 'upper$1left'
-  'Top([ -])left': 'Upper$1left'
-  'top([ -])right': 'upper$1right'
-  'Top([ -])right': 'Upper$1right'
-  'bottom([ -])left': 'lower$1left'
-  'Bottom([ -])left': 'Lower$1left'
-  'bottom([ -])right': 'lower$1right'
-  'Bottom([ -])right': 'Lower$1right'
+  # Before "corner", the compound is hyphenated: upper-left corner
+  'top[ -](left|right) corner': 'upper-$1 corner'
+  'Top[ -](left|right) corner': 'Upper-$1 corner'
+  'bottom[ -](left|right) corner': 'lower-$1 corner'
+  'Bottom[ -](left|right) corner': 'Lower-$1 corner'
+  '([Uu]pper|[Ll]ower) (left|right) corner': '$1-$2 corner'
+  # Elsewhere, keep the writer's separator
+  'top([ -])(left|right)(?! corner)': 'upper$1$2'
+  'Top([ -])(left|right)(?! corner)': 'Upper$1$2'
+  'bottom([ -])(left|right)(?! corner)': 'lower$1$2'
+  'Bottom([ -])(left|right)(?! corner)': 'Lower$1$2'

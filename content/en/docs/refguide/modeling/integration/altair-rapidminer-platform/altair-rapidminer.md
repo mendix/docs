@@ -246,7 +246,7 @@ Set up the necessary data structures to communicate with the AI Hub endpoint:
 
 2. Prepare data structure (optional): If your master data does not fit the structure required by the REST call:
 
-   * Create a helper entity (non-persistent) specifically for the REST call operation.
+   * Create a helper entity (non-persistable) specifically for the REST call operation.
    * Map your existing data to this helper entity before making the API call.
    * This approach provides flexibility when your domain model differs from the API requirements.
 

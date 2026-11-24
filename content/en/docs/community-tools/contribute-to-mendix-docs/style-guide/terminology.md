@@ -369,7 +369,7 @@ Refer to parentheses – "()" – rather than "round brackets" or just "brackets
 
 "Persistable" is a property that is used in the UI of the Modeler, where you can choose to make an entity "persistable" or "non-persistable."
 
-"Persistable" can be used in this context to describe both the property and the entity. "Persistent" does not need to be used in this context, in order to avoid confusion.
+Use "persistable" and "non-persistable" to describe both the property and the entity. Do not use "persistent" or "non-persistent" to describe entities, objects, or attributes, as this causes confusion with the property name in Studio Pro. "Persistent" is acceptable only in its general sense, for example, a persistent connection.
 
 > The persistable property of an entity in the domain model defines…
 >

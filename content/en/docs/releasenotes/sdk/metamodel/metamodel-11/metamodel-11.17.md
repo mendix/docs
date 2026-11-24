@@ -115,5 +115,3 @@ weight: 50 # Reduce weight by 1 to add this document to the top of the navigatio
 #### ColumnMapping (Element)
 
 * We made the `attribute` property optional.
-
-This page has been generated automatically.

@@ -1,0 +1,71 @@
+# Mendix custom rule: Terminology substitutions
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md
+# Note: Deprecated and incorrect product names are covered by a separate rule, ProductNames.yml
+# Known issue: Flags terms in UI button text, which can't be changed. Ignore those cases.
+extends: substitution
+message: "Use '%s' instead of '%s'."
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/terminology/
+level: warning
+ignorecase: false
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
+swap:
+  # angle brackets and braces (not "pointy brackets" or "curly brackets")
+  'pointy brackets': 'angle brackets'
+  'curly brackets': 'braces'
+
+  # click (not "click on")
+  '\b([Cc]lick(?:s|ing|ed)?) on\b': '$1'
+
+  # functionality (not "functionalities")
+  'functionalities': 'functionality'
+
+  # hover over (not "mouse over")
+  'mouse over': 'hover over'
+  'Mouse over': 'Hover over'
+
+  # left, right (not "left-hand", "right-hand")
+  '\b([Ll]eft)-hand\b': '$1'
+  '\b([Rr]ight)-hand\b': '$1'
+
+  # on-premises (not "on-premise", "on prem", "on-prem")
+  '\b([Oo]n)[- ]?prem(?:ise)?\b': '$1-premises'
+
+  # persistable, non-persistable (not "persistent", "non-persistent") for entities, objects, and attributes
+  # Limited to these nouns because "persistent" is acceptable in its general sense, for example, a persistent connection
+  '\b([Nn]on)-?persistent (entity|entities|object|objects|attribute|attributes)\b': '$1-persistable $2'
+  '\b([Pp]ersist)ent (entity|entities|object|objects|attribute|attributes)\b': '$1able $2'
+
+  # sign in, sign out (not "log in", "log out")
+  # The first letter changes, so each term needs a lowercase and a capitalized line
+  'log in': 'sign in'
+  'Log in': 'Sign in'
+  'log out': 'sign out'
+  'Log out': 'Sign out'
+  'login to': 'sign in to'
+  'Login to': 'Sign in to'
+  'logout': 'sign out'
+  'Logout': 'Sign out'
+
+  # third-party (not "3rd party" or "3rd-party")
+  '3rd-party': 'third-party'
+  '3rd party': 'third party'
+
+  # upper/lower (not "top/bottom") for directions
+  # Before "corner", the compound is hyphenated: upper-left corner
+  'top[ -](left|right) corner': 'upper-$1 corner'
+  'Top[ -](left|right) corner': 'Upper-$1 corner'
+  'bottom[ -](left|right) corner': 'lower-$1 corner'
+  'Bottom[ -](left|right) corner': 'Lower-$1 corner'
+  '([Uu]pper|[Ll]ower) (left|right) corner': '$1-$2 corner'
+  # Elsewhere, keep the writer's separator
+  'top([ -])(left|right)(?! corner)': 'upper$1$2'
+  'Top([ -])(left|right)(?! corner)': 'Upper$1$2'
+  'bottom([ -])(left|right)(?! corner)': 'lower$1$2'
+  'Bottom([ -])(left|right)(?! corner)': 'Lower$1$2'

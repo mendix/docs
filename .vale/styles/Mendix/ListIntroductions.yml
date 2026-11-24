@@ -1,18 +1,25 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Lists)
 # Known issue: Doesn't match code font list intros
+# Known issue: May flag spaced em dashes and hyphens as list introductions even when they aren't. These dashes are still incorrect and need fixing:
+# - Number ranges use an unspaced en dash (10–20), not a spaced hyphen (10 - 20).
+# - Mid-sentence asides use an unspaced em dash (Click Save—the page closes), not a spaced em dash (Click Save — the page closes).
 extends: substitution
-message: "Set off list item introductions with an en dash (–), not an em dash (—) or hyphen (-)."
+message: "Set off list item introductions with a spaced en dash (–), not an em dash (—) or hyphen (-)."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#en-dash
 ignorecase: false
 nonword: true
-level: error
+level: warning
 scope: list
 action:
   name: replace
 swap:
-  # Match up to 40 chars (excluding em dashes) from start of line, then replace first em dash with en dash
+  # Match up to 40 chars (excluding em dashes) from start of line, then replace first em dash or spaced hyphen with en dash
   # Limit to first ~40 chars to avoid matching em dashes in the middle of list text
   '^([^—]{0,40}) — ': '$1 – '  # em dash with spaces on both sides
   '^([^—]{0,40}) —': '$1 – '   # em dash with space before, no space after
   '^([^—]{0,40})— ': '$1 – '   # em dash with no space before, space after
   '^([^—]{0,40}) - ': '$1 – '  # hyphen with spaces on both sides
+  '^([^—]{0,40}) -- ': '$1 – '  # double hyphen with spaces on both sides
+  # En dashes with wrong spacing. The docs use a non-breaking space (\xA0) before a dash to prevent a line break, so the patterns allow it.
+  '^([^—–]{0,40}) –([^\s\xA0])': '$1 – $2'  # en dash with space before, no space after
+  '^([^—–]{0,39}[^—–\s\xA0])– ': '$1 – '  # en dash with no space before, space after

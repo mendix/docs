@@ -1,6 +1,7 @@
 # Mendix custom rule: Compound word formatting
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md
 # Each entry matches both capitalizations and carries them over: ([Cc]) captures the first letter, and $1 puts it back.
+# Keep in sync with Spelling.yml: if you add a term that isn't in the dictionary, also add it to "Terms covered by other rules" there. If you remove a term, remove it there too.
 extends: substitution
 message: "Use '%s' instead of '%s'"
 level: error
@@ -14,6 +15,7 @@ scope:
 action:
   name: replace
 swap:
+  '([Aa])ir ?gapped': '$1ir-gapped'
   '([Cc])heck box': '$1heckbox'
   '([Dd])ata[ -]set': '$1ataset'
   '([Dd])ouble click (any|in|it|on|the|to)\b': '$1ouble-click $2'  # Matches the next word to exclude UI label hits
@@ -31,3 +33,5 @@ swap:
   '([Ss])ingle sign on': '$1ingle sign-on'
   '([Ss])ub ?microflow(s?)': '$1ub-microflow$2'
   '([Tt])ool tip': '$1ooltip'
+  '([Ww])ebservice(s?)': '$1eb service$2'
+

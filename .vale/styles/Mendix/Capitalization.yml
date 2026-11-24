@@ -1,6 +1,8 @@
 # Mendix custom rule: Capitalization errors
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Capitalization of Mendix Terminology)
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide.md
+# Known issue: Flags code that isn't marked as code, such as unfenced code inside tabpane shortcodes, function names in link text, and sample column names in table cells. Wrap these in backticks or ignore them.
+# Keep in sync with Spelling.yml: if you add a term that isn't in the dictionary, also add it to "Terms covered by other rules" there. If you remove a term, remove it there too.
 extends: substitution
 message: "Use '%s' (capitalized)"
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide/
@@ -15,33 +17,47 @@ scope:
 action:
   name: replace
 swap:
-  agents kit: Agents Kit
-  boolean: Boolean
-  '(^|[^.])git': '$1Git'  # Skips .git folder
-  idp: IdP
-  '(^|[^/])ios': '$1iOS'  # Skips ios in paths
-  '(^|[^./-])java(?!\.\w)': '$1Java'  # Skips .java files, java-in-names, java in paths, and java.lang-style names
-  macos: macOS
-  maia: Maia
-  'maia make': 'Maia Make'
-  markdown: Markdown
-  marketplace: Marketplace
-  '(^|[^./>@-])mendix(?!/)': '$1Mendix'  # Skips com.mendix names, domains, link text after >, @mendix emails, hyphenated repo names, and paths or repos like mendix/docs
-  'n/a': 'N/A'
-  postgres: Postgres
-  postgresql: PostgreSQL
-  scrum: Scrum
-  '(^|[^@])siemens': '$1Siemens'  # Skips siemens in email addresses
-  sql: SQL
-  'agile scrum': 'Agile Scrum'
+  # Mendix terms
+  'agents kit': 'Agents Kit'
   'atlas ui': 'Atlas UI'
   'build server': 'Build Server'
   'business engineer': 'Business Engineer'
   'control center': 'Control Center'
+  'maia make': 'Maia Make'
+  '(?<!\.)maia(?!-| make)': 'Maia'  # Skips .maia files, hyphenated names like maia-appgen, and maia make (handled above)
+  marketplace: Marketplace
+  '(?<![./>@-]|com\.\s)mendix(?![/-]|\.\w)': 'Mendix'  # Skips com.mendix names (including com.<wbr>mendix), domains, link text after >, @mendix emails, hyphenated repo names such as mendix-inside-teamcenter, and paths or repos like mendix/docs
   'model server': 'Model Server'
-  'product owner': 'Product Owner'
-  'scrum master': 'Scrum Master'
+  '(?<!@)siemens': 'Siemens'  # Skips siemens in email addresses
   'studio pro': 'Studio Pro'
   'team server': 'Team Server'
   'technical contact': 'Technical Contact'
   'workflow engine': 'Workflow Engine'
+
+  # Third-party and general terms
+  'agile scrum': 'Agile Scrum'
+  boolean: Boolean
+  cartesian: Cartesian
+  '(?<![.-])git': 'Git'  # Skips .git folder and hyphenated names
+  hashicorp: HashiCorp
+  '(?<!-)id': 'ID'  # Skips hyphenated names
+  idp: IdP
+  '(?<!/)ios': 'iOS'  # Skips ios in paths
+  '(?<![./-])java(?!\.\w|script)': 'Java'  # Skips .java files, java-in-names, java in paths, java.lang-style names, and javascript
+  '(?<![/-])javascript(?!-)': 'JavaScript'  # Skips paths and hyphenated names
+  JQuery: jQuery
+  macos: macOS
+  markdown: Markdown
+  'n/a': 'N/A'
+  oauth: OAuth
+  'openshift(?!-)': 'OpenShift'  # Skips hyphenated names
+  '(?<!")postgres(?!")': 'Postgres'  # Skips quoted usernames such as "postgres"
+  postgresql: PostgreSQL
+  'powershell(?!\.\w)': 'PowerShell'  # Skips powershell.exe
+  'product owner': 'Product Owner'
+  scrum: Scrum
+  'scrum master': 'Scrum Master'
+  sql: SQL
+  '(?<!-)(?-i:teamcenter)': 'Teamcenter'  # Skips all-caps UI labels and hyphenated names
+  typescript: TypeScript
+  '(?<![.-])yaml': 'YAML'  # Skips .yaml extensions and hyphenated names

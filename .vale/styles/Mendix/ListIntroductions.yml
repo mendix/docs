@@ -8,7 +8,7 @@ message: "Set off list item introductions with a spaced en dash (–), not an em
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#en-dash
 ignorecase: false
 nonword: true
-level: error
+level: warning
 scope: list
 action:
   name: replace

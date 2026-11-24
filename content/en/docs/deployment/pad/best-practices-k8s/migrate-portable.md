@@ -16,6 +16,10 @@ This deployment approach is intended for customers who want to run Mendix Portab
 The Helm Chart is provided as an open-source Mendix Labs project and should be considered a reference implementation and deployment template. Customers are responsible for validating, maintaining, and adapting the chart to their infrastructure, security, and operational standards. Mendix supports the Mendix Portable Runtime package itself, but not the open-source Helm Chart implementation. 
 {{% /alert %}}
 
+{{% alert color="info" %}}
+If you currently use Mendix on Kubernetes Standalone, Mendix Portable Runtime is one of the supported alternatives for Mendix 12 and later. For more information, see [Mendix on Kubernetes Standalone Deprecation FAQ](/developerportal/deploy/private-cloud/standalone-deprecation-faq/).
+{{% /alert %}}
+
 ### Open Source Disclaimer
 
 The Mendix Portable Runtime Helm Chart is an open-source Mendix Labs project provided for guidance purposes. The repository serves as a deployment template demonstrating one possible approach for running Mendix Portable Runtime applications on Kubernetes and OpenShift environments. Customers should review and adapt the implementation to align with their platform standards and operational requirements.

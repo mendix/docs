@@ -8,6 +8,12 @@ weight: 30
 
 ## Introduction
 
+{{% alert color="warning" %}}
+With the release of [Mendix Portable Runtime](/developerportal/deploy/portable-app-distribution-deploy/), Mendix is transitioning toward a container-native approach for packaging and running Mendix applications. As part of this shift, Mendix on Kubernetes Standalone will begin its deprecation journey by not supporting Mendix 12 and future Runtime versions. Standalone means using the Mendix Operator without connecting it to Mendix Portal or to Private Mendix Platform, for example by applying `MendixApp` CRs yourself as described on this page. Do not use Standalone for new deployments.
+
+For supported alternatives, see [Mendix on Kubernetes Standalone Deprecation FAQ](/developerportal/deploy/private-cloud/standalone-deprecation-faq/) and [Mendix Portable Runtime: Deployment, Simplified](https://www.mendix.com/blog/mendix-portable-runtime/).
+{{% /alert %}}
+
 Once you have the Mendix Operator installed in a namespace of your Red Hat OpenShift, or other Kubernetes cluster (see [Creating a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-cluster/)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the namespace, together with all the resources the app needs.
 
 This document explains how to provide the CRs through the console or command line. This enables you to automate your deployment processes and perform advanced configuration.

@@ -138,7 +138,7 @@ To use custom user provisioning, do the following:
 2. Create a custom provisioning microflow in your app.
 3. Set the `FDSGatewayLoginConnector.UserProvisioning` constant to point to your custom microflow.
 4. Ensure the custom microflow (`CUSTOM_UserProvisioning`):
-    * takes a `UserProvisioningRequest` entity as an input parameter. The `UserProvisioningRequest` entity contains both the Access Token and the ID Token that FDS IAM issued for the user. This gives your custom provisioning logic more identity information than the claims in the Access Token alone.
+    * takes a `UserProvisioningRequest` entity as an input parameter. The `UserProvisioningRequest` entity contains both the Access Token and the ID Token that FDS IAM issued for the user.
 
     {{% alert color="warning" %}}In 1.0.0 version, the custom provisioning microflow had a String parameter named `RequestJson`. From version 2.0.0, the microflow takes a `UserProvisioningRequest` entity instead. After upgrading, update your custom provisioning microflow to use the new entity.
     {{% /alert %}}

@@ -17,12 +17,14 @@ second: '\(([A-Z]{3,5})s?\)'
 exceptions+:
   - ATS
   - AWS
+  - BPMN
   - BTP
   - DNS
   - GCP
   - GIF
   - HANA
   - IAM
+  - ISO
   - JDBC
   - JPEG
   - JPG

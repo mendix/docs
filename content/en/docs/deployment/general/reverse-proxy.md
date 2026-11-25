@@ -20,7 +20,7 @@ This document describes how the Mendix runtime works with a reverse proxy, gives
 
 ## Headers the Mendix Runtime Uses {#headers}
 
-Configure your reverse proxy to pass the following headers to the Mendix runtime. The runtime uses them to work out how users reach your app.
+A reverse proxy can be configured to pass the following headers to the Mendix runtime:
 
 | Header | Description |
 | --- | --- |

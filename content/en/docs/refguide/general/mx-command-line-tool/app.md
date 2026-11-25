@@ -340,3 +340,122 @@ These are the return codes:
 | --- | --- |
 | `0` | The command ran successfully. |
 | `1` | The command failed, for example, because the *.mpr* file could not be found. |
+
+## mx update-widgets Command {#update-widgets}
+
+The `mx update-widgets` command updates widgets in the Mendix project to match the widget definitions in the *.mpk* files.
+
+This command is used when widget definitions in *.mpk* files have been updated and you need to synchronize the project with these updated definitions.
+
+The input is a single *.mpr* file.
+
+{{% alert color="info" %}}
+The *.mpr* file must be the same version as the mx tool, unless you use the `--loose-version-check` option.
+{{% /alert %}}
+
+### Usage
+
+Use the following command pattern for `mx update-widgets`:
+
+`mx update-widgets [OPTIONS] INPUT`
+
+These are the `OPTIONS`:
+
+| Option | Shortcut | Result |
+| --- | --- | --- |
+| `--loose-version-check` | `-l` | Automatically converts projects from earlier Mendix versions before updating widgets. |
+| `--help` | | Shows help for the `mx update-widgets` command and exits. |
+
+For `INPUT`, enter an *.mpr* file.
+
+### Examples
+
+These are example commands:
+
+| Example | Result |
+| --- | --- |
+| `mx update-widgets C:\Mendix\App1\App1.mpr` | Updates widgets in the project at *C:\Mendix\App1\App1.mpr*. |
+| `mx update-widgets --loose-version-check C:\Mendix\App1\App1.mpr` | Converts the project to the mx tool version if needed, then updates widgets. |
+
+### Return Codes
+
+These are the return codes:
+
+| Return Code | Description |
+| --- | --- |
+| `0` | The command ran successfully. |
+
+## mx collect-native-deps Command {#collect-native-deps}
+
+The `mx collect-native-deps` command collects the native dependencies of a Mendix project and writes them to standard output in JSON format.
+
+This command is used to retrieve a list of all native dependencies configured in the project, which is useful for build processes and dependency management.
+
+The input is a single *.mpr* file.
+
+{{% alert color="info" %}}
+The *.mpr* file must be the same version as the mx tool.
+{{% /alert %}}
+
+### Usage
+
+Use the following command pattern for `mx collect-native-deps`:
+
+`mx collect-native-deps INPUT`
+
+For `INPUT`, enter an *.mpr* file.
+
+### Examples
+
+These are example commands:
+
+| Example | Result |
+| --- | --- |
+| `mx collect-native-deps C:\Mendix\App1\App1.mpr` | Collects native dependencies from the project and outputs them as JSON. |
+| `mx collect-native-deps C:\Mendix\App1\App1.mpr > deps.json` | Collects native dependencies and saves the JSON output to *deps.json*. |
+
+### Return Codes
+
+These are the return codes:
+
+| Return Code | Description |
+| --- | --- |
+| `0` | The command ran successfully. |
+| `3` | The project is in an inconsistent state. |
+| `5` | There are dependency conflicts. |
+
+## mx rename-design-properties Command {#rename-design-properties}
+
+The `mx rename-design-properties` command updates renamed design properties in the Mendix project.
+
+This command is used after design properties have been renamed to update all references throughout the project to use the new property names.
+
+The input is a single *.mpr* file.
+
+{{% alert color="info" %}}
+The *.mpr* file must be the same version as the mx tool.
+{{% /alert %}}
+
+### Usage
+
+Use the following command pattern for `mx rename-design-properties`:
+
+`mx rename-design-properties INPUT`
+
+For `INPUT`, enter an *.mpr* file.
+
+### Examples
+
+These are example commands:
+
+| Example | Result |
+| --- | --- |
+| `mx rename-design-properties C:\Mendix\App1\App1.mpr` | Updates renamed design properties in the project at *C:\Mendix\App1\App1.mpr*. |
+
+### Return Codes
+
+These are the return codes:
+
+| Return Code | Description |
+| --- | --- |
+| `0` | The command ran successfully. |

@@ -30,9 +30,9 @@ A pluggable widget created with the Pluggable Widget Generator. For more informa
 
 ## Creating a Release Build
 
-To create a release build, run `npm run release` in the root directory of your widget. This command first checks your code for linting errors, and only creates the release build when no errors are found.
+To create a release build, run `npm run release` in the root directory of your widget. This command first checks your code for formatting and linting errors, and only creates the release build when no errors are found.
 
-If linting errors are reported, fix them and run `npm run release` again.
+If errors are reported, fix them and run `npm run release` again.
 
 ## Finding the Release Build
 

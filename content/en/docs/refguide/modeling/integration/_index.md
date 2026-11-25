@@ -41,6 +41,6 @@ In addition to the integration capabilities available in the Studio Pro, Mendix 
 
 ## Authenticating with External Services
 
-To authenticate with external services, you can use an authentication document (beta). An authentication document lets you define the authentication method and credentials once, and reuse them in your microflows, for example with the [Authentication](/refguide/authentication-action/) and [Send Email](/refguide/send-email-action/) activities. Basic and OAuth 2.0 / Entra ID (Client Credentials) authentication are supported. For more information, see [Authentication](/refguide/authentication/).
+To authenticate with external services, you can use an authentication document (beta). An authentication document lets you define the authentication method and credentials once, and reuse them in your microflows, for example with the [Authentication](/refguide/get-authentication-data/) and [Send Email](/refguide/send-email-action/) activities. Basic and OAuth 2.0 / Entra ID (Client Credentials) authentication are supported. For more information, see [Authentication](/refguide/authentication/).
 
 ## Documents in This Category

@@ -108,11 +108,11 @@ Click **Check Connection** to verify that your app can obtain an access token wi
 
 You can use an authentication document in the following places:
 
-* The [Authentication](/refguide/authentication-action/) microflow activity – runs the authentication that is configured in the document, and returns the result as a `System.Credentials` object that you can use in the rest of the microflow
+* The [Authentication](/refguide/get-authentication-data/) microflow activity – runs the authentication that is configured in the document, and returns the result as a `System.Credentials` object that you can use in the rest of the microflow
 * The [Send Email](/refguide/send-email-action/) microflow activity – uses the document to authenticate with the email server when you select **Use Authentication Document**
 
 ## Read More
 
-* [Authentication Activity](/refguide/authentication-action/)
+* [Authentication Activity](/refguide/get-authentication-data/)
 * [Integration Activities](/refguide/integration-activities/)
 * [Constants](/refguide/constants/)

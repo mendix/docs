@@ -182,8 +182,8 @@ paths:
             schema:
               $ref: '#/components/schemas/UserPasswordInput'
       responses:
-        '200':
-          description: Change user password successfully
+        '204':
+          description: Change user password successfully. The response has no body.
         '400':
           $ref: '#/components/responses/error-400'
         '401':

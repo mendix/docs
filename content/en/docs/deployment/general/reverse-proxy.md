@@ -20,15 +20,34 @@ This document describes how the Mendix runtime works with a reverse proxy, gives
 
 ## Headers the Mendix Runtime Uses {#headers}
 
-The Mendix runtime uses the following request headers to determine the URL that users use to access your app:
+Configure your reverse proxy to pass the following headers to the Mendix runtime. The runtime uses them to work out how users reach your app.
 
-* `X-Forwarded-Proto` or `X-Forwarded-Scheme` – The scheme, such as `https`
-* `X-Forwarded-Host` – The host name
-* `X-Forwarded-Port` – The port, if the app does not run on a standard port
-* `X-Forwarded-Prefix` – The subpath, if you host the app on a subpath
-* `Host` – The host of the request
+| Header | Description |
+| --- | --- |
+| `X-Forwarded-Proto` | The scheme users connect with, for example `https`. |
+| `X-Forwarded-Scheme` | An alternative to `X-Forwarded-Proto`. |
+| `X-Forwarded-Host` | The host name users connect to. It can include a port, for example `app.example.com:8443`. |
+| `X-Forwarded-Port` | The port users connect to. The runtime uses it only if `X-Forwarded-Host` does not include a port. |
+| `X-Forwarded-Prefix` | The subpath the app is hosted on, if any, for example `/my/sub/path`. |
 
-The reverse proxy can set these headers on the requests that it forwards to the Mendix runtime.
+The runtime uses these headers to determine the [app URL](#app-url) and to decide on [cookie security](#cookie-security). It applies different rules for each.
+
+### App URL {#app-url}
+
+The runtime determines the app URL as follows:
+
+1. If `ApplicationRootUrl` is configured, the runtime uses it and ignores the forwarded headers.
+2. If `ApplicationRootUrl` is not configured, the runtime builds the app URL from the forwarded headers. If both `X-Forwarded-Proto` and `X-Forwarded-Scheme` are set, `X-Forwarded-Proto` takes precedence. This only works if the proxy sends `X-Forwarded-Host`. Without it, the runtime ignores the forwarded headers and falls back to the `Host` header and the scheme of the connection between the proxy and the runtime.
+
+### Cookie Security {#cookie-security}
+
+The runtime only marks cookies as `Secure` (and adds the `__Host-` prefix and the SameSite attribute) if it considers the connection to be HTTPS. It decides this as follows:
+
+1. If either `X-Forwarded-Proto` or `X-Forwarded-Scheme` is `https`, cookies are secure.
+2. If not, and either header is `http`, cookies are not secure.
+3. If neither header is `http` or `https`, the runtime uses the scheme of the `ApplicationRootUrl`.
+
+This means that for cookie security, `X-Forwarded-Proto` and `X-Forwarded-Scheme` take precedence over `ApplicationRootUrl`.
 
 ### Generating Public URLs {#public-urls}
 

@@ -168,6 +168,8 @@ On the **Activity** tab, you can view a log of deployment, backup, and permissio
 Operations performed on a customer's behalf through an authorized Mendix Support ticket are not logged in the activity log.
 {{% /alert %}}
 
+Environment maintenance is logged under the **Maintenance Service** account. For more information, refer to [Maintenance Windows](/developerportal/deploy/maintenance-windows/#environment-maintenance).
+
 If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download a copy of the activity log by following these steps:
 
 1. Click **Download to CSV**. This button is only visible if you are the Technical Contact.

@@ -1,7 +1,7 @@
 ---
 title: "Integration Guides"
 url: /appstore/industry/teamcenter-extension/create-an-integration/integrations/
-weight: 2
+weight: 3
 description: "Overview with step by step guides for various integrations supported by the Teamcenter Extension."
 aliases:
     - /appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/integrations/

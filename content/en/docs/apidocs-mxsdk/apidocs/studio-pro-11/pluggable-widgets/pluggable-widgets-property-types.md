@@ -893,11 +893,27 @@ System properties is a way for a pluggable widget to adopt extended widget funct
 
 ### Label {#label}
 
-Label property allows a pluggable widget to have labeling functionality similar to a [core input widget](/refguide/text-box/#label). This allows a user to set a label, a label position, and a label width. If a widget has a label configured, its client component will automatically be wrapped into a correct markup.
+Label property allows a pluggable widget to have labeling functionality similar to a [core input widget](/refguide/text-box/#label). This allows a user to set a label, a label orientation, and a label width. If a widget has a label configured, its client component will automatically be wrapped into a correct markup.
 
 ```xml
 <systemProperty key="Label"/>
 ```
+
+In Studio Pro, the **Label orientation** property of the widget controls how the label is placed:
+
+* **Inherit** (default) – The label follows the [form orientation](/refguide/data-view/#orientation) of the closest horizontal data view around the widget. If the widget is not inside a data view, the label is placed above the widget.
+* **Horizontal** – The label is placed next to the widget. You set the width of the label in **Label width (weight)**, using column weights from 1 to 11. The default is 3.
+* **Vertical** – The label is placed above the widget, even inside a data view with a horizontal orientation.
+
+#### defaultShown {#defaultShown}
+
+When a user adds a widget with the `Label` system property to a page, Studio Pro shows the label by default. Set the `defaultShown` attribute to `false` to add new instances of the widget without a label:
+
+```xml
+<systemProperty key="Label" defaultShown="false"/>
+```
+
+Users can still turn on the label by setting **Show label** to **Yes** in the properties of the widget. The default value of `defaultShown` is `true`. You can use this attribute only on the `Label` system property.
 
 #### setLabel {#setLabel}
 

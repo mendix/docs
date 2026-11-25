@@ -109,13 +109,13 @@ In this example, nginx accepts HTTPS connections for `app.example.com` and forwa
 When the reverse proxy uses HTTP for internal communication, the Mendix runtime must be explicitly informed that end-users are accessing the application via HTTPS. This can be done through either of these methods:
 
 * Configure the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) runtime setting with an `https://` URL
-* Set the `X-Forwarded-Proto` or `X-Forwarded-Schema` header to `https` in the reverse proxy
+* Set the `X-Forwarded-Proto` or `X-Forwarded-Scheme` header to `https` in the reverse proxy
 
 The behavior of these two methods varies depending on your Mendix version:
 
-* **Mendix versions 10.17 and below** – Setting the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) runtime setting to an `https://` URL will not make the application aware of it being served via HTTPS. You must use the `X-Forwarded-Proto` and `X-Forwarded-Schema` headers instead.
-* **Mendix versions 10.18 and above** – Setting the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) runtime setting to an `http://` URL will take precedence over the `X-Forwarded-Proto` and `X-Forwarded-Schema` headers.
-* **Mendix versions 10.24 and above** – The `X-Forwarded-Proto` and `X-Forwarded-Schema` headers will take precedence over the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section). Mendix recommends using the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) setting as the default approach and only set `X-Forwarded-Proto` and `X-Forwarded-Schema` headers if needed.
+* **Mendix versions 10.17 and below** – Setting the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) runtime setting to an `https://` URL will not make the application aware of it being served via HTTPS. You must use the `X-Forwarded-Proto` and `X-Forwarded-Scheme` headers instead.
+* **Mendix versions 10.18 and above** – Setting the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) runtime setting to an `http://` URL will take precedence over the `X-Forwarded-Proto` and `X-Forwarded-Scheme` headers.
+* **Mendix versions 10.24 and above** – The `X-Forwarded-Proto` and `X-Forwarded-Scheme` headers will take precedence over the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section). Mendix recommends using the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) setting as the default approach and only set `X-Forwarded-Proto` and `X-Forwarded-Scheme` headers if needed.
 
 ### Other Considerations {#https-considerations}
 

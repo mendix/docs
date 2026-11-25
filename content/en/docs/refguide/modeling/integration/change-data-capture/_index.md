@@ -19,13 +19,13 @@ A CDC service document in Studio Pro defines which entities the Mendix Runtime s
 
 At startup, CDC checks whether a tracked entity needs a snapshot, for example, after a breaking change creates a new topic. A snapshot populates the topic with the entity's current data as read events. For more information, see the [Revisions](/refguide/published-cdc-services/#revisions) section of *Published CDC Services*.
 
-To publish a CDC event, the Runtime submits a Kafka record to the producer, the Kafka client that writes records. The record specifies the [topic for the tracked entity](/refguide/published-cdc-services/#topic) and carries the object ID as the key and the event as the JSON value. Kafka documentation may also call a record an event or a message.
+To publish a CDC event, the Runtime submits a [Kafka record](/refguide/kafka-concepts/#record-event-and-message) to the producer, the Kafka client that writes records. The record specifies the [topic for the tracked entity](/refguide/published-cdc-services/#topic) and carries the object ID as the key and the event as the JSON value.
 
 The Runtime processes CDC events in groups but submits each Kafka record individually. The producer chooses a partition for each record. A partition is an ordered log within a topic. The producer can combine records for the same partition into a Kafka record batch. The [batch-size gauges](/refguide/metrics/#cdc-producer-metrics) measure Kafka record batches, not the groups of events the Runtime processes.
 
 If the Runtime closes the producer after an error, it creates a replacement when needed.
 
-The [Mendix Event Broker](/appstore/services/event-broker/) or your own Kafka cluster receives the records. A Kafka cluster consists of one or more servers called brokers. For connection settings, see [Kafka Connection Settings](#kafka-connection-settings). For more about clusters, topics, and partitions, see [Apache Kafka Concepts and Terminology](https://kafka.apache.org/44/getting-started/introduction/#main-concepts-and-terminology).
+The [Mendix Event Broker](/appstore/services/event-broker/) or your own Kafka cluster receives the records. For connection settings, see [Kafka Connection Settings](#kafka-connection-settings). For more about clusters, topics, and partitions, see [Kafka Concepts](/refguide/kafka-concepts/).
 
 After deployment, configure an [Event Broker Bridge](/appstore/services/event-broker-bridges/) in the Event Broker Manager to route the stream to a destination such as Azure Blob Storage or AWS S3.
 
@@ -157,7 +157,7 @@ The `source` block contains the following fields:
 
 Because the format is Debezium-compatible, BYOK consumers that already support Debezium (such as Kafka Connect sink connectors for databases or data warehouses) can consume CDC events without any message transformation.
 
-To parse CDC events, use the schema for the tracked entity in its AsyncAPI document. An AsyncAPI channel describes where applications send or receive messages. For Kafka, a channel can represent a topic. You can download the AsyncAPI document from the CDC service details page in the [Event Broker Manager](https://broker.mendix.com/).
+To parse CDC events, use the schema for the tracked entity in its AsyncAPI document. The document uses an [AsyncAPI channel](/refguide/kafka-concepts/#asyncapi-channel) to describe where applications send or receive messages. You can download the AsyncAPI document from the CDC service details page in the [Event Broker Manager](https://broker.mendix.com/).
 
 For details on setting up a BYOK cluster with the Mendix Event Broker, see [Mendix Event Broker](/appstore/services/event-broker/).
 

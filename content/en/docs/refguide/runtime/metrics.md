@@ -460,7 +460,7 @@ As of Studio Pro 11.17, the Mendix Runtime exposes built-in Kafka producer metri
 
 The gauges report values for the producer as a whole, not for individual topics or partitions. For more about how the Runtime publishes CDC events to Kafka, see [How It Works](/refguide/change-data-capture/#how-it-works) in the CDC guide.
 
-The batch-size gauges measure Kafka record batches, not the total size of a produce request. A request can contain batches for multiple partitions.
+The batch-size gauges measure [Kafka record batches](/refguide/kafka-concepts/#kafka-record-batch), not the total size of a produce request. A request can contain batches for multiple partitions.
 
 | Mendix Gauge | Kafka Metric | Unit | Description |
 | --- | --- | --- | --- |

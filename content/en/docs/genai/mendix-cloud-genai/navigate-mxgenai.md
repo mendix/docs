@@ -57,6 +57,8 @@ Mendix notifies you when a resource approaches or reaches its monthly GenAI Unit
 * **80% of the allocation** – The resource's [Technical Contact](#technical-contact) receives an email that the resource is approaching its limit. A yellow **Consumption limit warning** banner and a **REACHING TOKEN LIMIT** label appear on the resource in the resource overview and on the resource details page.
 * **100% of the allocation** – The Technical Contact receives an email that the resource has reached its limit. A red **Token limit reached** banner and a **TOKEN LIMIT EXCEEDED** label appear on the resource in the resource overview and on the resource details page. From this point, the resource is blocked. When the resource is blocked, the Technical Contact receives an email. A red **Blocked** banner appears at the top of the resource details page, and the **GenAI Units** card on the **Consumption** tab is highlighted in red with a **BLOCKED** label.
 
+Other resource members can opt in to receive the same emails as the Technical Contact, including alerts about new models and model deprecations. To opt in, click **Notify Me** on the resource's **Overview** page. To stop receiving these emails, click **Turn Notifications Off**.
+
 A blocked resource stays blocked until one of the following happens:
 
 * A Company Admin increases the GenAI Unit capacity of the resource so that it covers a value above the current consumption. For more information, see [Adjusting the GenAI Unit Capacity of a Resource](#adjusting-the-genai-unit-capacity-of-a-resource).

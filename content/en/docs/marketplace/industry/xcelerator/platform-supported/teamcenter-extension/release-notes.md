@@ -2,7 +2,7 @@
 title: "Teamcenter Extension Release Notes"
 linktitle: "Release Notes"
 url: /appstore/industry/teamcenter-extension/release-notes/
-weight: 1
+weight: 10
 description: "Provides the release notes for Teamcenter Extension, grouped by major version, with details on new features, improvements, fixes, and breaking changes."
 numberless_headings: true
 ---
@@ -38,17 +38,17 @@ This page contains the release notes for [Teamcenter Extension](https://marketpl
 
 **Requirements:** Studio Pro 10.24.8 or higher
 
-(original publication 2 October 2025, republished to include OSS license information)
+(original publication October 2, 2025, republished to include OSS license information)
 
 #### New Features
 
 ##### Get Properties
 
-* We added the feature to generate a microflow to get the Properties for a Workspace object or specializations thereof and the corresponding domain model. The resulting microflow implements the Get Properties action from the TcConnector.
+* We added the feature to generate a microflow to get the properties for a Workspace object or specializations thereof and the corresponding domain model. The resulting microflow implements the Get Properties action from the TcConnector.
 
 #### Improvements
 
-* We have added the item revision id as a query parameter for the Search Item Revisions journey.
+* We have added the item revision ID as a query parameter for the Search Item Revisions journey.
 
 #### Changes
 
@@ -105,13 +105,13 @@ We added Teamcenter X SSO support to the Teamcenter Extension. With this new fea
 
 #### Fixes
 
-* We fixed a bug where no entities are created when performing an import mapping, clicking Generate, cancel generation and clicking Generate and confirming.
-* We fixed a bug where the domain model preview on the history tab would still show changes when you clicked on Edit to edit an integration, made changes and pressed back to cancel the changes.
+* We fixed a bug where no entities are created when performing an import mapping, clicking **Generate**, canceling the generation, and then clicking **Generate** and confirming.
+* We fixed a bug where the domain model preview on the history tab would still show changes when you clicked **Edit** to edit an integration, made changes, and pressed back to cancel the changes.
 * We fixed a bug where the user was redirected to the main tab instead of the history tab after deleting an integration.
 * We fixed a bug where tooltips for the checkboxes in the import mapping sidebar were no longer visible.
 * We fixed a bug where the indeterminate state of a select-all checkbox was no longer displayed correctly.
 * We fixed a React key-related issue in the frontend (history details).
-* We fixed a bug because of pressing <kbd>Enter</kbd> while logging out, which resulted in an incorrect connection status (connected instead of disconnected).
+* We fixed a bug where pressing <kbd>Enter</kbd> while logging out resulted in an incorrect connection status (connected instead of disconnected).
 * We fixed an issue where many Mendix Studio Pro log messages were created when checking the connection status when not connected.
 * We fixed a bug where the structure settings sidebar was not opened by default when starting a Get Structures integration.
 * We fixed an issue where canceling a background job would sometimes show a message to the user.
@@ -156,7 +156,7 @@ We added SSO support to the Teamcenter Extension. With this new feature, it is p
 
 #### Improvements
 
-* We changed the login flow for credentials-based sign in. Instead of storing the credentials on the Teamcenter configuration, the user is now prompted to log in in a login dialog when a login is necessary. This aligns credentials-based sign in with SSO sign in and prevents sharing credentials among developers through versioning.
+* We changed the login flow for credentials-based sign-in. Instead of storing the credentials on the Teamcenter configuration, the user is now prompted to log in in a login dialog when a login is necessary. This aligns credentials-based sign-in with SSO sign-in and prevents sharing credentials among developers through versioning.
 * We improved the way the communication between the React frontend and the C# backend was handled.
 * We improved how cookies are handled by the Teamcenter Extension.
 * We improved the error message when trying to navigate to a microflow that does not exist from the history tab.
@@ -166,7 +166,7 @@ We added SSO support to the Teamcenter Extension. With this new feature, it is p
 * We fixed a bug where it was not possible to create an integration to revise a specialization of ItemRevision.
 * We fixed an update issue with the dropdown to select the target module on the settings page.
 * We fixed an issue where the Teamcenter configuration was sometimes restored when manually deleting the configuration from disk.
-* We fixed an issue where canceling the retrieval of filetypes for Dataset types allowed creation of integrations where an incorrect combination of filetype and dataset type were used (attach dataset to item revision integration).
+* We fixed an issue where canceling the retrieval of file types for Dataset types allowed creation of integrations where an incorrect combination of file type and dataset type was used (attach dataset to item revision integration).
 * We fixed a UI bug where the Teamcenter object tree in the object mapping dialog was cut off in case of long object names.
 * We fixed an issue where the left-most part of the object row in the Teamcenter object tree in the object mapping dialog was not clickable.
 * We fixed the sorting of the default relations in the configuration sidebar for the get dataset for item revision integration.
@@ -206,7 +206,7 @@ We added the feature to generate a microflow to relate two WorkspaceObjects or s
 
 #### Fixes
 
-* Fixed an issue where canceling starting an integration prevented you to start the same integration a second time without first performing another action in the extension.
+* Fixed an issue where canceling starting an integration prevented you from starting the same integration a second time without first performing another action in the extension.
 * Fixed an issue where canceling a validation of an integration was not correctly displayed in the UI.
 * Fixed an issue where you could edit/duplicate an integration when no target module was configured.
 * Fixed an issue where annotations were not sorted correctly.
@@ -250,11 +250,11 @@ We added the feature to generate a microflow to relate two WorkspaceObjects or s
 
 ##### Dark Mode
 
-The Teamcenter Extension now supports dark mode. It will display the same mode as Studio Pro. Change your Studio Pro settings (**Edit** > **Preferences** > **Work Environment**) to Dark to see the new mode.
+The Teamcenter Extension now supports dark mode. It displays the same mode as Studio Pro. Change your Studio Pro settings (**Edit** > **Preferences** > **Work Environment**) to **Dark** to see the new mode.
 
 ##### Table Sorting
 
-Tables in the Teamcenter Extension now support sorting. For example, when configuring an import mapping, the columns in the sidebar displaying the details of Teamcenter properties are now sortable. Click on the column headers to sort the columns ascending and descending alphabetically, respectively.
+Tables in the Teamcenter Extension now support sorting. For example, when configuring an import mapping, the columns in the sidebar displaying the details of Teamcenter properties are now sortable. Click the column headers to sort the columns ascending and descending alphabetically, respectively.
 
 #### Improvements
 
@@ -262,7 +262,7 @@ Tables in the Teamcenter Extension now support sorting. For example, when config
 
 #### Fixes
 
-* Fixed an issue that when canceling the deletion of an integration, the integration was no longer visible, until reloading the Teamcenter Extension.
+* Fixed an issue where, after canceling the deletion of an integration, the integration was no longer visible until reloading the Teamcenter Extension.
 * Fixed an issue with the Attach Dataset integration. The default property `TC_manifestation` was misspelled.
 
 #### Known Issues
@@ -293,7 +293,7 @@ In addition, the extension generates (depending on configuration) microflows to:
 
 #### Improvements
 
-* Improved the validation of integrations where validations will pass when deleting and then restoring microflows or entities.
+* Improved the validation of integrations where validations pass when deleting and then restoring microflows or entities.
 * Added a dropdown with autocomplete functionality.
 * We renamed the empty parameter entity for clarity.
 * Dataset types are always fetched anew from Teamcenter, also when editing/duplicating an integration.
@@ -359,11 +359,11 @@ In addition, there is a change to the way Teamcenter Extension integrations are 
 
 * Improved the way the extension checks if editing or duplication of integrations is allowed.
 * Added validations to the history tab to check for conflicts in association names and multiplicities.
-* Developers can now leave the Teamcenter configuration name (ConfigName input parameter) empty. In that case, for the integrations the active Teamcenter configuration is retrieved from the database. If multiple active Teamcenter configurations exist, an exception will be thrown.
+* Developers can now leave the Teamcenter configuration name (ConfigName input parameter) empty. In that case, for the integrations the active Teamcenter configuration is retrieved from the database. If multiple active Teamcenter configurations exist, an exception is thrown.
 * Reorganized the menu of the extension and created more intuitive icons for the supported integrations.
 * Improved the checks to check the compatibility of the extension with the Mendix Studio Pro version and the TcConnector version. Also, the extension is now working with minimum versions of its dependencies instead of exact versions.
 * Improved the consistency of how exceptions are logged and communicated to the user.
-* Added support for macOS. Note, as macOS support for Mendix Studio Pro is still in beta, the same is true for the Teamcenter Extension.
+* Added support for macOS. As macOS support for Mendix Studio Pro is still in beta, the same is true for the Teamcenter Extension.
 * Added path to root Teamcenter object type in the object mapping dialog.
 * Improved the text in the get structures configuration sidebar.
 
@@ -381,7 +381,7 @@ In addition, there is a change to the way Teamcenter Extension integrations are 
 #### Known Issues
 
 * The Teamcenter Extension is not compatible with Mendix Studio Pro 10.13.0, 10.13.1, 10.14.0, and 10.15.0.
-* In the object mapping dialog, entities from add-on modules or entities where at least one of their generalizations is from an add-on module will not be visible and cannot be used in the object mapping.
+* In the object mapping dialog, entities from add-on modules or entities where at least one of their generalizations is from an add-on module are not visible and cannot be used in the object mapping.
 * Teamcenter properties can have spaces in their name; Mendix attributes cannot. This results in errors in the generated/updated domain model.
 
 ## Version 2
@@ -396,7 +396,7 @@ In addition, there is a change to the way Teamcenter Extension integrations are 
 
 #### New Features
 
-Teamcenter Extension 2.0.0 allows managing of integrations. We have added a new tab to the landing page of the extension where the integrations are listed. When clicking on an integration, details of the integration are shown including validation feedback showing the health of the integration. The developer can click on edit to change an integration and on duplicate to create a new integration using an existing integration as a starting point (the original integration will remain unchanged). Also, integrations can be deleted. Note that, in that case, the actual microflows and entities are not removed from the Mendix model.
+Teamcenter Extension 2.0.0 allows managing of integrations. We have added a new tab to the landing page of the extension where the integrations are listed. When you click an integration, details of the integration are shown, including validation feedback showing the health of the integration. The developer can click edit to change an integration and duplicate to create a new integration using an existing integration as a starting point (the original integration remains unchanged). Also, integrations can be deleted. In that case, the actual microflows and entities are not removed from the Mendix model.
 
 #### Breaking Changes
 
@@ -410,7 +410,7 @@ For steps on how to upgrade from 1.0.0 to 2.0.0, see [Upgrading Teamcenter Exten
 #### Improvements
 
 * Display integration title on the import mapping page for reference.
-* Added a link to Mendix docs in the object mapping dialog and **Teamcenter Settings** > **Edit** dialog.
+* Added a link to the Mendix documentation in the object mapping dialog and **Teamcenter Settings** > **Edit** dialog.
 * Enriched the documentation for the generated entities in the domain model.
 * Removed FMS URL from the Teamcenter settings as this was not actively used by the extension.
 * Removed spelling checker from the input fields.
@@ -425,11 +425,11 @@ For steps on how to upgrade from 1.0.0 to 2.0.0, see [Upgrading Teamcenter Exten
 * Teamcenter properties/relations/references with spaces in the name could be selected when configuring an integration. The current version of the TcConnector does not support properties/relations/references with spaces in the name.
 * Microflow generated by the extension had a conflicting object name.
 * Fixed the minimum height of an entity in the import mapping page.
-* Fixed merge conflicts were created for the Teamcenter cookie.
+* Fixed an issue where merge conflicts were created for the Teamcenter cookie.
 
 #### Known Issues
 
-* In the object mapping dialog, entities from add-on modules or entities where at least one of their generalizations is from an add-on module will not be visible and cannot be used in the object mapping.
+* In the object mapping dialog, entities from add-on modules or entities where at least one of their generalizations is from an add-on module are not visible and cannot be used in the object mapping.
 * Teamcenter properties can have spaces in their name; Mendix attributes cannot. This results in errors in the generated/updated domain model.
 
 ## Version 1
@@ -442,4 +442,4 @@ For steps on how to upgrade from 1.0.0 to 2.0.0, see [Upgrading Teamcenter Exten
 
 **Requirements:** Studio Pro 10.6.5 or higher
 
-Initial Release
+Initial release.

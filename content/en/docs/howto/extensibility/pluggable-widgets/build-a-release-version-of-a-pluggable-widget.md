@@ -54,7 +54,7 @@ Copying the release build to your app requires Pluggable Widgets Tools 11.16.1 o
 
 To test the release build in your app, do the following:
 
-1. In Studio Pro, synchronize the project directory by pressing <kbd>F4</kbd>, or select **App** > **Synchronize Project Directory**.
+1. In Studio Pro, synchronize the app directory by pressing <kbd>F4</kbd>, or select **App** > **Synchronize App Directory**.
 1. Run your app and verify that the widget works as expected.
 
 ## Read More

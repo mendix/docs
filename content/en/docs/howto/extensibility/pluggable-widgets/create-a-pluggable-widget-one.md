@@ -99,7 +99,7 @@ There is also a watcher available that will rebuild your widget as you make chan
 
 When the build script completes it will package your widget as a `.mpk` file and copy it to the `widgets/` directory in your Mendix app. Now that the generator has finished its job it is time to use the widget in Studio Pro. To use the widget, do the following:
 
-1. To find your widget for the first time, you need to refresh the file system Studio Pro is looking at. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu bar.
+1. To find your widget for the first time, you need to refresh the file system Studio Pro is looking at. Use <kbd>F4</kbd> or select **App** > **Synchronize App Directory** from the Studio Pro menu bar.
 1. Open the **Home_Web** page in the page editor.
 1. Open the toolbox on the right of your screen and locate the newly created **Text Box** widget. It should be at the bottom of the list.
 1. Drag the Text Box widget to the Data View added in [Creating a Test Project](#creating-a-test-project).

@@ -29,12 +29,12 @@ For the Teamcenter, Teamcenter X, and Mendix versions that each release supports
 
 ##### Connector
 
-* *Teamcenter context for Maia* The Teamcenter Connector now has Maia skills that help you create Teamcenter integrations in Mendix. The skills provide general information on Mendix Teamcenter integrations, as well as information on Teamcenter domain knowledge, the Teamcenter Connector and Service document and the concept of business object mappings. In addition, we added a dedicated skill to help developers set up their Teamcenter instances in connector and Service document.
-* *Teamcenter workflow* The Teamcenter Connector now has implementation microflows that make it a lot easier to integrate with Teamcenter workflow, for this there is a new category in the toolbox called **Teamcenter Connector - Implementations - Workflow**. With these microflows, you can retrieve workflow templates, submit item revisions to a workflow and retrieve the tasks for a user's inbox. We also added microflows that can act on workflow tasks, for example to complete, suspend, resume, reassign, abort and attach a reference or target. For the attach reference we have introduced the `root_reference_attachments` relation. In addition, you can manage reviewers and signoffs: you can assign, add or replace reviewers, claim signoffs assigned to a resource pool, and approve or reject signoffs. This means your Mendix app can act as an orchestration layer with Teamcenter workflows as one part of a business process that spans multiple systems.
+* **Teamcenter Context for Maia** – The Teamcenter Connector now has Mendix AI Assistance (Maia) skills that help you create Teamcenter integrations in Mendix. The skills provide general information on Mendix Teamcenter integrations, as well as information on Teamcenter domain knowledge, the Teamcenter Connector and Service document and the concept of business object mappings. In addition, we added a dedicated skill to help developers set up their Teamcenter instances in connector and Service document.
+* **Teamcenter Workflow** – The Teamcenter Connector now has implementation microflows that make it a lot easier to integrate with Teamcenter workflow. For this, there is a new category in the toolbox called **Teamcenter Connector - Implementations - Workflow**. With these microflows, you can retrieve workflow templates, submit item revisions to a workflow and retrieve the tasks for a user's inbox. We also added microflows that can act on workflow tasks, for example to complete, suspend, resume, reassign, abort and attach a reference or target. For the attach reference we have introduced the `root_reference_attachments` relation. In addition, you can manage reviewers and signoffs: you can assign, add or replace reviewers, claim signoffs assigned to a resource pool, and approve or reject signoffs. This means your Mendix app can act as an orchestration layer with Teamcenter workflows as one part of a business process that spans multiple systems.
 
 ##### Service document
 
-* *Update Workspace Object* The Teamcenter Service document now supports the generation of domain model and artifacts for updating the properties of Workspace Objects in Teamcenter.
+* **Update Workspace Object** – The Teamcenter Service document now supports the generation of domain model and artifacts for updating the properties of Workspace Objects in Teamcenter.
 
 #### Improvements
 
@@ -42,7 +42,7 @@ For the Teamcenter, Teamcenter X, and Mendix versions that each release supports
 
 * We improved the error message when saving a Teamcenter configuration fails: it now shows the cause instead of the generic Mendix error.
 * We changed the upload and download actions so they throw an error when something goes wrong, such as an FMS connection error, invalid input or incomplete data from Teamcenter, instead of failing silently.
-* There were three 'create BOM window' microflows exposed in the toolbox, we have removed one and gave the other two distinct exposed names.
+* There were three 'create BOM window' microflows exposed in the toolbox. We removed one and gave the other two distinct exposed names.
 
 ##### Service document
 
@@ -54,9 +54,9 @@ For the Teamcenter, Teamcenter X, and Mendix versions that each release supports
 
 ##### Connector
 
-* We fixed an issue that made it impossible to upload files to Teamcenter with `UploadFiles` and `UploadTemporaryFiles` when using TcX authentication.
-* We fixed an issue that made it impossible to download a File or Image from Teamcenter when using TcX authentication.
-* We now store the TcX access token encrypted.
+* We fixed an issue that made it impossible to upload files to Teamcenter with `UploadFiles` and `UploadTemporaryFiles` when using Teamcenter X authentication.
+* We fixed an issue that made it impossible to download a file or image from Teamcenter when using Teamcenter X authentication.
+* We now store the Teamcenter X access token encrypted.
 * We updated `jackson-core` and `jackson-databind` from 2.22.2 to 2.22.3 to resolve a vulnerability.
 
 ##### Service document
@@ -76,7 +76,7 @@ For the Teamcenter, Teamcenter X, and Mendix versions that each release supports
 * We upgraded the Teamcenter Connector to Studio Pro 11.12.4, so it now requires Studio Pro 11.12.4 or later.
 * We changed `ExpandPSOneLevel2` so that it no longer creates FileDocuments when `DownloadFiles` is false.
 * We removed support for comma-separated lists of FMS URLs.
-* We have deprecated the `TcConnector.task` association and this is replaced by the `TcConnector.actionableObject` association (`PerformAction3`). For the upgrade check all usages of the `TcConnector.task` association and replace it by `TcConnector.actionableObject`
+* We have deprecated the `TcConnector.task` association and this is replaced by the `TcConnector.actionableObject` association (`PerformAction3`). For the upgrade, check all usages of the `TcConnector.task` association and replace them with `TcConnector.actionableObject`.
 
 ### 2606.0.1
 
@@ -135,7 +135,7 @@ For the Teamcenter, Teamcenter X, and Mendix versions that each release supports
 
 **Requirements:** Studio Pro 11.12.1 or higher
 
-#### What's New in 2606?
+#### What Is New in 2606?
 
 Version 2606 of the Teamcenter Connector significantly consolidates and modernizes Teamcenter integrations. The Teamcenter Connector now includes a new Studio Pro extension for configuring your integrations, a complete rebuild with many quality of life improvements. We consolidated everything into one place. Previously, you had to download the Teamcenter Connector module and the Teamcenter Extension (which contained Teamcenter Toolkit and the Extension as part of an add-on module) separately. Now it is one single download, one import, and one version to track. The Teamcenter Toolkit has been integrated into the TcConnector module, with all of its microflows, entities, and Java actions.
 
@@ -166,7 +166,7 @@ We made some changes to the Teamcenter Connector that are required for embedding
 
 * We hardened security by removing Create and Delete rights from all entities to align with security best practices. The Administrator role no longer has direct entity-level access (except for Teamcenter Configuration). For all Teamcenter integrations, you should now use the User role.
 * We improved SSO configuration error logging. Messages now name the fields that may be wrong and match the Teamcenter Extension.
-* We added a consistent Teamcenter icon on all published actions. Actions marked with a Teamcenter icon in Studio Pro are published and intended for your use. Actions without the icon are internal implementation details and shouldn't be called directly from your microflows.
+* We added a consistent Teamcenter icon on all published actions. Actions marked with a Teamcenter icon in Studio Pro are published and intended for your use. Actions without the icon are internal implementation details and should not be called directly from your microflows.
 * We upgraded to Mendix 11.12.1.
 * We established clearer public and private boundaries in the structure of the TcConnector module. The Teamcenter Connector now has a well-defined public API.
 
@@ -179,7 +179,7 @@ We made some changes to the Teamcenter Connector that are required for embedding
 * We removed the sidebar from the import mapping page. Instead, the extension uses dialogs for selecting properties and configuring integration specific properties. This is more in line with Mendix Studio Pro.
 * We added a button to the toolbar of the import mapping page to launch the property mapping dialog for the selected business object / entity.
 * We introduced constants to store the secrets used in the Teamcenter X SSO configuration for the Teamcenter Extension. This way, you can choose to keep them secret and prevent committing them to version control.
-* We added the option to clear the object mapping for a business object / entity by selecting either and pressing <kbd>Delete</kbd>
+* We added the option to clear the object mapping for a business object / entity by selecting either and pressing <kbd>Delete</kbd>.
 * We added a new annotation to the Get structure integration that displays the integration specific properties: which revision rule to use, if variant rules are used and if BOM window properties are configured at design time.
 
 #### Fixes
@@ -204,9 +204,9 @@ We deprecated the following elements from the Teamcenter Connector. Deprecated e
 
 ##### Deprecated Microflows with a Replacement
 
-* `DownloadFile` — use the `DownloadFile`/`DownloadImage` Java actions instead
-* `ExecuteLogin` — use the `Login` microflow instead
-* `ExecuteLogout` — use the `Logout` microflow instead
+* `DownloadFile` – use the `DownloadFile`/`DownloadImage` Java actions instead
+* `ExecuteLogin` – use the `Login` microflow instead
+* `ExecuteLogout` – use the `Logout` microflow instead
 
 ##### Deprecated Microflows without a Direct Replacement
 
@@ -258,20 +258,20 @@ The following entities have been deprecated. To indicate this, the entities have
 
 ##### Moved to Private
 
-No longer published in the toolbox - use the wrapper microflow of the same name instead:
+No longer published in the toolbox. Use the wrapper microflow of the same name instead:
 
-* `Login` Java action — use the `Login` microflow
-* `Logout` Java action — use the `Logout` microflow
-* `LoginSSO` Java action — set up the SSO login flow as described in the documentation
+* `Login` Java action – use the `Login` microflow
+* `Logout` Java action – use the `Logout` microflow
+* `LoginSSO` Java action – set up the SSO login flow as described in the documentation
 
 #### Breaking Changes
 
 ##### Resources Folder
 
-* We changed the structure of the resources folder. All resources for the connector are now in the `Resources/TcConnector` folder.
-* When upgrading, please move all custom Operation Mapping JSONs to `Resources/TcConnector/OperationMapping` and remove the old Operation Mapping folder (`Resources/OperationMapping`).
-* The folder `Resources/TeamcenterCommon` may be removed.
-* The folder `Resources/TeamcenterConnector` may be removed.
+* We changed the structure of the resources folder. All resources for the connector are now in the **Resources/TcConnector** folder.
+* When upgrading, move all custom Operation Mapping JSONs to **Resources/TcConnector/OperationMapping** and remove the old Operation Mapping folder (**Resources/OperationMapping**).
+* The folder **Resources/TeamcenterCommon** may be removed.
+* The folder **Resources/TeamcenterConnector** may be removed.
 
 ##### Teamcenter Toolkit Integration
 
@@ -279,12 +279,12 @@ No longer published in the toolbox - use the wrapper microflow of the same name 
 
 ##### Removed Actions
 
-We removed the following microflow and Java actions. If they are still used in your project, please retain the old `TeamcenterToolkit` module until you have migrated away from these actions:
+We removed the following microflow and Java actions. If they are still used in your project, retain the old `TeamcenterToolkit` module until you have migrated away from these actions:
 
 * `ModelObject_AddToExistingOrNewList`
 * `JA_CopyModelObjectToNewCreateInput`
 * `JA_CreateDatasetSpecialization`
-* The pre-configured `CreateBOMWindow` variants (`CreateBOMWindow_Default`, `CreateBOMWindow_RevisionRule`, `CreateBOMWindow_VariantRule` and their combinations) — use `CreateBOMWindow` or `CreateBOMWindow_ByConfigurationContext` instead. We updated the `CreateBOMWindow` microflow: its parameters are now optional, and we've split off a separate `ByConfigurationContext` variant for cases where you need that level of control.
+* The pre-configured `CreateBOMWindow` variants (`CreateBOMWindow_Default`, `CreateBOMWindow_RevisionRule`, `CreateBOMWindow_VariantRule` and their combinations) – use `CreateBOMWindow` or `CreateBOMWindow_ByConfigurationContext` instead. We updated the `CreateBOMWindow` microflow: its parameters are now optional, and we have split off a separate `ByConfigurationContext` variant for cases where you need that level of control.
 
 ##### Security Model
 
@@ -301,7 +301,7 @@ We removed the following microflow and Java actions. If they are still used in y
 ##### Entity Changes
 
 * We removed the `LastError` attribute from the `Credentials` entity. Use exception handling instead.
-* We introduced a new naming convention for `CreateInput` and `CompoundCreateInput` specializations generated by the Teamcenter Service document. If you have existing integrations, you'll need to regenerate them by creating a new Teamcenter Service document, configure your integration, and generate the artifacts. Note that regeneration will not delete your previous input entities, so these need to be removed manually.
+* We introduced a new naming convention for `CreateInput` and `CompoundCreateInput` specializations generated by the Teamcenter Service document. If you have existing integrations, you will need to regenerate them by creating a new Teamcenter Service document, configure your integration, and generate the artifacts. Note that regeneration will not delete your previous input entities, so these need to be removed manually.
 
 ## 2512
 
@@ -317,12 +317,12 @@ We removed the following microflow and Java actions. If they are still used in y
 
 #### Fixes
 
-* Fixed an issue that made it impossible to upload files to Teamcenter with `UploadFiles` and `UploadTemporaryFiles` when using TcX authentication.
-* Fixed an issue that made it impossible to download a File or Image from Teamcenter when using TcX authentication.
-* The TcX access token is now stored encrypted.
+* Fixed an issue that made it impossible to upload files to Teamcenter with `UploadFiles` and `UploadTemporaryFiles` when using Teamcenter X authentication.
+* Fixed an issue that made it impossible to download a file or image from Teamcenter when using Teamcenter X authentication.
+* The Teamcenter X access token is now stored encrypted.
 * The upload and download actions now throw an error when something goes wrong, such as an FMS connection error, invalid input or incomplete data from Teamcenter, instead of failing silently.
 * Updated `jackson-core` and `jackson-databind` from 2.22.2 to 2.22.3 to resolve a vulnerability.
-* Updated the FMS client library (`fscjavaclientproxy.jar`) from the Teamcenter 2506 build to the 2512 build.
+* Updated the FMS client library (*fscjavaclientproxy.jar*) from the Teamcenter 2506 build to the 2512 build.
 
 #### Breaking Changes
 
@@ -341,13 +341,13 @@ We removed the following microflow and Java actions. If they are still used in y
 
 #### Improvements
 
-* Added support for custom session cookie names
+* Added support for custom session cookie names.
 
 #### Fixes
 
-* Fixed a bug where the session cookie could not be found when hosting on Mendix Cloud
+* Fixed a bug where the session cookie could not be found when hosting on Mendix Cloud.
 * Fixed an issue where `GetWorkflowTemplates2` did not work on a deployed application due to an incorrect folder name.
-* Updated Java dependencies to remove vulnerabilities
+* Updated Java dependencies to remove vulnerabilities.
 
 ### 2512.1.1
 
@@ -375,13 +375,13 @@ We removed the following microflow and Java actions. If they are still used in y
 
 #### Fixes
 
-* Added TC SSO compatibility with TC2406 and TC2312
+* Added Teamcenter SSO compatibility with Teamcenter 2406 and Teamcenter 2312
 * Updated Java dependencies to remove vulnerabilities in the dependencies
-* Improved `Core-2012-02-DataManagement/whereUsed` - `clientId` from the request is returned correctly in the response. Level is correctly mapped in the response.
+* Improved `Core-2012-02-DataManagement/whereUsed` – `clientId` from the request is returned correctly in the response. Level is correctly mapped in the response.
 
 #### Breaking Changes
 
-* User provisioning for TC SSO has changed as a result of the fix. `TcSSOUserInformation` now only contains `User` and `Locale`. To get the Teamcenter username in user provisioning use `User` instead of `sub`.
+* User provisioning for Teamcenter SSO has changed as a result of the fix. `TcSSOUserInformation` now only contains `User` and `Locale`. To get the Teamcenter username in user provisioning, use `User` instead of `sub`.
 
 ### 2512.0.1
 
@@ -394,7 +394,7 @@ We removed the following microflow and Java actions. If they are still used in y
 #### Fixes
 
 * Fixed an error due to Teamcenter responses containing arrays with a mix of empty strings and Model Object UIDs (Ticket 269666)
-* Allow for Teamcenter URLs without top-level domains (e.g. not ending in `.com`)
+* Allow for Teamcenter URLs without top-level domains (for example, not ending in `.com`)
 * Made the FMS URL configuration field optional
 * Throw a clear error when a Teamcenter URL that does not end with a slash is called
 
@@ -406,7 +406,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 **Requirements:** Studio Pro 10.24.8 or higher
 
-(original publication 11 December 2025, republished to include OSS license information)
+(original publication December 11, 2025, republished to include OSS license information)
 
 #### New Features
 
@@ -421,14 +421,14 @@ We removed the following microflow and Java actions. If they are still used in y
 * Reimplemented Teamcenter SSO to be consistent with Teamcenter X SSO
 * Improved the overall SSO setup experience to remove the need for startup microflow and custom home pages
 * Teamcenter SSO now supports user provisioning and anonymous user authentication from the login page
-* Aligned and simplified the authentication process - Credentials, Tc SSO and TcX SSO are now consistent
+* Aligned and simplified the authentication process – Credentials, Teamcenter SSO, and Teamcenter X SSO are now consistent
 * Updated styling of the Teamcenter login page
-* Support for Mx11
+* Support for Mendix 11
 * Support for the React client
 
 #### Changes
 
-* Updated `fmsutils.jar` to Tc2512 compatible version
+* Updated *fmsutils.jar* to Tc2512 compatible version
 
 #### Fixes
 
@@ -461,7 +461,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 #### Improvements
 
-* Support for Mx11
+* Support for Mendix 11
 * Support for the React client
 
 #### Fixes
@@ -484,7 +484,7 @@ Teamcenter versions supported: 2506
 
 * Cleaned up unused JARs.
 * Upgraded FMS/TcSS JARs to 2506 version.
-* Added support for using authenticated FSC for TcX
+* Added support for using authenticated FSC for Teamcenter X
 * Updated string property length of TcConnector domain model entities to align with corresponding Teamcenter property length.
 * Fixed error handling for `RetrieveConfigNameFromSingleActiveConfiguration` microflow. On error, exception is thrown. It is consumers' responsibility to deal with exceptions as per requirement.
 * Introduced `HandleActiveConfigErrors` to show configuration errors.
@@ -495,26 +495,26 @@ Teamcenter versions supported: 2506
 
 #### Configured Managed Dependencies for
 
-* `jackson-annotations-2.19.0.jar`
-* `jackson-core-2.19.0.jar`
-* `jackson-databind-2.19.0.jar`
-* `log4j-api-2.24.3.jar`
-* `log4j-core-2.24.3.jar`
+* *jackson-annotations-2.19.0.jar*
+* *jackson-core-2.19.0.jar*
+* *jackson-databind-2.19.0.jar*
+* *log4j-api-2.24.3.jar*
+* *log4j-core-2.24.3.jar*
 * `org.apache.httpcomponents-httpmime-4.5.13`
 * `org.apache.httpcomponents-httpcore-4.4.13`
 * `org.apache.httpcomponents-httpclient-4.5.13`
 
 #### Userlib Exclusions
 
-* `TcLogging.jar`
-* `fmsutil.jar`
-* `fscjavaclientproxy.jar`
-* `teamcenter_sso_applib.jar`
-* `teamcenter_sso_common.jar`
+* *TcLogging.jar*
+* *fmsutil.jar*
+* *fscjavaclientproxy.jar*
+* *teamcenter_sso_applib.jar*
+* *teamcenter_sso_common.jar*
 
 #### Known Issues
 
-* When setting up Teamcenter X, and the following error occurs: "Name has an issue: This field is required! FriendlyName has an issue: This field is required!" Then there is an empty claim being imported at microflow `CreateClaimwithFriendlyName`, please add an empty check as workaround.
+* When you set up Teamcenter X, the following error can occur: "Name has an issue: This field is required! FriendlyName has an issue: This field is required!" This means that an empty claim is imported in the `CreateClaimwithFriendlyName` microflow. As a workaround, add an empty check.
 
 ## 2412
 
@@ -552,16 +552,16 @@ Supported with Teamcenter version: 2412
 
 #### Improvements
 
-1. Cleaned up some unused JARs.
-2. Fixed Mendix-Teamcenter SSO connection issue. The issue is fixed by upgrading TCSS JARs to TCSS2412.
+* Cleaned up some unused JARs.
+* Fixed Mendix-Teamcenter SSO connection issue. The issue is fixed by upgrading TCSS JARs to TCSS2412.
 
-    Please refer to documentation for configuring Teamcenter with single sign-on.
+    Refer to the documentation for configuring Teamcenter with single sign-on.
 
-3. Updated `log4j` from 2.17.1 to 2.23.1 for managing conflicts with Excel Export module.
+* Updated `log4j` from 2.17.1 to 2.23.1 for managing conflicts with Excel Export module.
 
 #### Known Issues
 
-* When setting up Teamcenter X, and the following error occurs: "Name has an issue: This field is required! FriendlyName has an issue: This field is required!" Then there is an empty claim being imported at microflow `CreateClaimwithFriendlyName`, please add an empty check as workaround.
+* When you set up Teamcenter X, the following error can occur: "Name has an issue: This field is required! FriendlyName has an issue: This field is required!" This means that an empty claim is imported in the `CreateClaimwithFriendlyName` microflow. As a workaround, add an empty check.
 
 ### 2412.0.0
 
@@ -588,7 +588,7 @@ Note: This version of TcConnector is supported on Mendix 10.4.0 onwards
 
 #### Known Issues
 
-* When setting up Teamcenter X, and the following error occurs: "Name has an issue: This field is required! FriendlyName has an issue: This field is required!" Then there is an empty claim being imported at microflow `CreateClaimwithFriendlyName`, please add an empty check as workaround.
+* When you set up Teamcenter X, the following error can occur: "Name has an issue: This field is required! FriendlyName has an issue: This field is required!" This means that an empty claim is imported in the `CreateClaimwithFriendlyName` microflow. As a workaround, add an empty check.
 
 ## 2406
 
@@ -606,11 +606,11 @@ Note: This version of TcConnector is supported on Mendix 10.4.0 onwards
 
 * Upgraded to Mendix 10.24.8
 * Updated Java dependencies to remove unused JAR files and to resolve vulnerabilities
-* Dependencies now implemented using managed dependencies (`vendorlib`)
+* Dependencies now implemented using managed dependencies (**vendorlib**)
 
 #### Breaking Changes
 
-* Before updating this module, make sure to remove all old `.jar` files of the previous version of the Teamcenter Connector from the `userlib` folder
+* Before updating this module, make sure to remove all old *.jar* files of the previous version of the Teamcenter Connector from the **userlib** folder
 
 ### 2406.3.0
 
@@ -624,12 +624,12 @@ Following is the list of improvements/bug fixes in Teamcenter Connector version 
 
 #### Bug Fixes
 
-1. Upgraded TcSS JARs and modified `SSORedirectRequestHandler.processCallback` to allow create SSO app session using JSON type. XML type is no more supported.
-2. Added access rules for `TcConnector.Image` and `TcConnector.ImanFile` entity.
-3. Mendix Teamcenter Connector now can upload Dataset named references defined with `*`
-4. Changed length of `POM_application_object.object_string` and `BOMLine.object_string` to 4000 to match with Teamcenter data model
-5. Cleaned up `userlib` folder by removing unrequired JARs.
-6. Setting up timeout for `SendService` microflow to 300s.
+* Upgraded TcSS JARs and modified `SSORedirectRequestHandler.processCallback` to allow create SSO app session using JSON type. XML type is no more supported.
+* Added access rules for `TcConnector.Image` and `TcConnector.ImanFile` entity.
+* Mendix Teamcenter Connector now can upload Dataset named references defined with `*`
+* Changed length of `POM_application_object.object_string` and `BOMLine.object_string` to 4000 to match with Teamcenter data model
+* Cleaned up the **userlib** folder by removing unrequired JARs.
+* Setting up timeout for `SendService` microflow to 300s.
 
 ## 3.7
 

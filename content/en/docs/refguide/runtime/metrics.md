@@ -456,22 +456,23 @@ Additionally, a suffix may be added for the unit of the metric (for example, `_b
 
 #### Change Data Capture Producer Metrics {#cdc-producer-metrics}
 
-As of Studio Pro 11.17, [Change Data Capture (CDC)](/refguide/change-data-capture/) exposes the following Kafka producer metrics as gauges. They register automatically after the producer initializes successfully. You do not need a microflow or Java action to register them.
+As of Studio Pro 11.17, the Mendix Runtime exposes built-in Kafka producer metrics for [Change Data Capture (CDC)](/refguide/change-data-capture/). The table maps each Kafka metric to the Mendix gauge that reports its value. The descriptions are based on the [Apache Kafka 4.4 producer monitoring reference](https://kafka.apache.org/44/operations/monitoring/#producer-monitoring). The Runtime registers these gauges automatically after the producer initializes successfully. You do not need a microflow or Java action to register them.
 
-These metrics describe the producer client as a whole, not individual topics.
+The gauges report values for the producer as a whole, not for individual topics or partitions. For more about how the Runtime publishes CDC events to Kafka, see [How It Works](/refguide/change-data-capture/#how-it-works) in the CDC guide.
 
-| Name | Unit | Description |
-| --- | --- | --- |
-| `mx.cdc.producer.kafka.batch_size_avg` | Bytes | Average number of bytes sent per partition per request. |
-| `mx.cdc.producer.kafka.batch_size_max` | Bytes | Maximum number of bytes sent per partition per request. |
-| `mx.cdc.producer.kafka.records_per_request_avg` | Records per request | Average number of records sent per request. |
-| `mx.cdc.producer.kafka.record_queue_time_avg` | Milliseconds | Average time record batches spend in the producer's send buffer. |
-| `mx.cdc.producer.kafka.record_send_rate` | Records per second | Average number of records sent per second. |
-| `mx.cdc.producer.kafka.request_latency_avg` | Milliseconds | Average Kafka producer request latency. |
-| `mx.cdc.producer.kafka.buffer_available_bytes` | Bytes | Buffer memory available to the producer. |
+For batch size, Kafka measures bytes sent per partition in each produce request. A produce request sends one or more record batches to a broker. If a request carries a 100-byte batch for one partition and a 300-byte batch for another, Kafka measures two batch sizes, not one 400-byte request size.
 
-A gauge can report `NaN` when its value is unavailable or cannot be read.
-The gauges read current Kafka client values, including after the client is recreated.
+| Mendix Gauge | Kafka Metric | Unit | Description |
+| --- | --- | --- | --- |
+| `mx.cdc.producer.kafka.batch_size_avg` | `batch-size-avg` | Bytes | Average number of bytes sent per partition per request. |
+| `mx.cdc.producer.kafka.batch_size_max` | `batch-size-max` | Bytes | Maximum number of bytes sent per partition per request. |
+| `mx.cdc.producer.kafka.records_per_request_avg` | `records-per-request-avg` | Records per request | Average number of records sent per request. |
+| `mx.cdc.producer.kafka.record_queue_time_avg` | `record-queue-time-avg` | Milliseconds | Average time record batches spend in the producer's send buffer. |
+| `mx.cdc.producer.kafka.record_send_rate` | `record-send-rate` | Records per second | Average number of records sent per second. |
+| `mx.cdc.producer.kafka.request_latency_avg` | `request-latency-avg` | Milliseconds | Average time from sending a produce request to receiving its response. |
+| `mx.cdc.producer.kafka.buffer_available_bytes` | `buffer-available-bytes` | Bytes | Total amount of buffer memory not in use. |
+
+If the Runtime replaces the producer, the same gauges read values from the replacement. A gauge can report `NaN` when its value is unavailable or cannot be read.
 
 ### Additional Metrics
 

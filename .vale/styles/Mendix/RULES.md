@@ -44,7 +44,14 @@ swap:
 
 ## Testing Rules
 
-After you add or change a rule, add cases for it to [sample.md](../../tests/sample.md) and open that file in VS Code to check the alerts. That file explains how its cases are labeled.
+After you add or change a rule, open [sample.md](../../tests/sample.md) in VS Code, or run `vale .vale/tests/sample.md`, and check that the rule's section still behaves as its labels say. That file explains how its cases are labeled.
+
+Keep sample.md small. Change it only to cover something important and new, or to document a conflict:
+
+* A new rule, or a new kind of behavior in an existing rule, such as a new scope, guard, or exclusion.
+* A conflict between rules, or a known gap or false positive that you cannot fix.
+
+Do not add cases for individual terms in a list-based rule, such as a new swap entry in CompoundWords or a new filter in Spelling. The existing cases for the rule already show how it behaves. If an existing case can cover the change, edit that case instead of adding one.
 
 ## Overriding Microsoft Rules
 

@@ -66,10 +66,16 @@ Follow these steps to install the service through Docker:
 If you are using a self-signed certificate in your environment, skip these steps and refer to the [Importing a Self-Signed Certificate](#importing-a-self-signed-certificate) section.
 {{% /alert %}}
 
-1. Pull the Docker image using the following command: `docker pull private-cloud.registry.mendix.com/mendix/document-generation-service:latest`.
-2. Run the Docker container using the following command: `docker run -p 8085:8085 --name document-generation private-cloud.registry.mendix.com/mendix/document-generation-service:latest`. This creates a Docker container, which is exposed on port `8085`.    
+The Docker image is available at `registry.mendix.com/docgen/document-generation-service`. This registry contains version 1.0.2 and above.
 
-    The `latest` tag allows you to use the most recent released version of the service. If you want to use a specific version, replace `latest` with the desired version, such as `1.0.0`. You can find all versions and their release notes in the [Private PDF Document Generation Service Release Notes](/releasenotes/marketplace/private-service/).
+{{% alert color="info" %}}
+If you pull the image from the previous registry, `private-cloud.registry.mendix.com/mendix/document-generation-service`, switch to `registry.mendix.com/docgen/document-generation-service`. The previous registry does not receive new versions.
+{{% /alert %}}
+
+1. Pull the Docker image using the following command: `docker pull registry.mendix.com/docgen/document-generation-service:latest`.
+2. Run the Docker container using the following command: `docker run -p 8085:8085 --name document-generation registry.mendix.com/docgen/document-generation-service:latest`. This creates a Docker container, which is exposed on port `8085`.
+
+    The `latest` tag allows you to use the most recent released version of the service. If you want to use a specific version, replace `latest` with the desired version, such as `2.0.0`. You can find all versions and their release notes in the [Private PDF Document Generation Service Release Notes](/releasenotes/marketplace/private-service/).
 
 #### Setting Up a Health Check (Optional)
 
@@ -110,7 +116,7 @@ The approach for setting configuration values depends on the installation type. 
 
 #### Configuring through Docker
 
-When using Docker to run the image, add the configuration using the provided environment variables. An example of this is `docker run -p 8085:8085 -e MAX_DOCUMENT_SIZE=<value> --name document-generation private-cloud.registry.mendix.com/mendix/document-generation-service:<tag>`.
+When using Docker to run the image, add the configuration using the provided environment variables. An example of this is `docker run -p 8085:8085 -e MAX_DOCUMENT_SIZE=<value> --name document-generation registry.mendix.com/docgen/document-generation-service:<tag>`.
 
 ### Available configuration options {#configuration-options}
 
@@ -124,12 +130,86 @@ When using Docker to run the image, add the configuration using the provided env
 
 If your environment uses a self-signed certificate, you can extend the PDF Document Generation service Docker image to trust this certificate. This is required for secure communication when the service needs to connect to endpoints using your custom Certificate Authority (CA).
 
+The steps depend on the version of the service, because version 2.0.0 changed the base image of the service from Alpine Linux to Debian. A Docker file for one version does not work with the other version.
+
+#### Version 2.0.0 and Above {#import-certificate-v2}
+
 Follow these steps:
 
 1. Create a Docker file, such as `Dockerfile.import-cert`, with the following content:
 
     ```dockerfile
-    FROM private-cloud.registry.mendix.com/mendix/document-generation-service:latest
+    FROM registry.mendix.com/docgen/document-generation-service:latest
+
+    ARG CERT_FILE_PATH
+
+    RUN echo "Check if CERT_FILE_PATH is provided"
+    RUN if [ -z "$CERT_FILE_PATH" ]; then \
+            echo "ERROR: CERT_FILE_PATH build argument is required"; \
+            exit 1; \
+        fi
+
+    RUN echo "Copy certificate as DocumentGeneration_CA"
+    COPY ${CERT_FILE_PATH} /usr/local/share/ca-certificates/DocumentGeneration_CA.crt
+
+    USER root
+
+    RUN apt-get update && apt-get install -y --no-install-recommends \
+        libnss3-tools \
+        && rm -rf /var/lib/apt/lists/* \
+        && update-ca-certificates
+
+    # Node.js does not use the OS certificate store; trust the CA for callbacks to your app too
+    ENV NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/DocumentGeneration_CA.crt
+
+    USER 1000
+
+    RUN mkdir -p "$HOME/.pki/nssdb"
+    RUN certutil -d sql:$HOME/.pki/nssdb -N --empty-password
+
+    RUN echo "Add DocumentGeneration_CA to certificate store"
+    RUN certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n "DocumentGeneration_CA" -i /usr/local/share/ca-certificates/DocumentGeneration_CA.crt
+
+    RUN echo "Verify certificate installation"
+    RUN if certutil -d sql:$HOME/.pki/nssdb -L | grep -q "DocumentGeneration_CA"; then \
+            echo "Certificate setup completed!"; \
+        else \
+            echo "ERROR: DocumentGeneration_CA not found in certificate store" && exit 1; \
+        fi
+
+    WORKDIR /prod/docgen-worker-private
+
+    CMD [ "node", "bundle.js" ]
+    ```
+
+    To use a specific version instead of the most recent one, replace `latest` with the desired version, such as `2.0.0`.
+
+1. Build the Docker image with your certificate:
+
+    ```bash
+    docker build -f Dockerfile.import-cert --build-arg CERT_FILE_PATH=<path-to-your-ca.crt> -t document-generation-service-with-cert .
+    ```
+
+    Replace `<path-to-your-ca.crt>` with the path to your self-signed certificate's `.crt` or `.pem` file. The path must be relative to the build context, which is the current directory in the command above.
+
+1. Run the container as usual:
+
+    ```bash
+    docker run -p 8085:8085 --name document-generation document-generation-service-with-cert
+    ```
+
+#### Version 1.0.5 and Below {#import-certificate-v1}
+
+{{% alert color="warning" %}}
+These steps only apply to versions 1.0.5 and below, which use an Alpine Linux base image. Mendix recommends upgrading to version 2.0.0 or above and following the steps in the [Version 2.0.0 and Above](#import-certificate-v2) section.
+{{% /alert %}}
+
+Follow these steps:
+
+1. Create a Docker file, such as `Dockerfile.import-cert`, with the following content:
+
+    ```dockerfile
+    FROM registry.mendix.com/docgen/document-generation-service:1.0.5
 
     ARG CERT_FILE_PATH
 
@@ -172,13 +252,13 @@ Follow these steps:
     docker build -f Dockerfile.import-cert --build-arg CERT_FILE_PATH=<path-to-your-ca.crt> -t document-generation-service-with-cert .
     ```
 
+    Replace `<path-to-your-ca.crt>` with the path to your self-signed certificate's `.crt` or `.pem` file.
+
 1. Run the container as usual:
 
     ```bash
-    docker run -p 8085:8085 --name document-generation-service-with-cert
+    docker run -p 8085:8085 --name document-generation document-generation-service-with-cert
     ```
-
-    Replace `<path-to-your-ca.crt>` with the path to your self-signed certificate's `.crt` or `.pem` file.
 
 This approach ensures that the service trusts your self-signed certificate for secure connections.
 

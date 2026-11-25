@@ -52,7 +52,7 @@ Maia is available at each stage of the application lifecycle. In Studio Pro, Mai
 | Improve quality | Detects anti-patterns, explains their impact, and fixes some of them automatically. Explains and solves consistency errors. |  <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Best Practice Recommender](/refguide/best-practice-recommender/)  |
 | Localize | Creates and updates translations of the texts in your app (Studio Pro 11.15 and above). | <ul><li>[Maia Make](/refguide/maia-make/)</li><li>[Translation Generator](/refguide/translation-generator/)</li>  |
 | Work with external AI agents | Lets external AI agents use Maia capabilities, and lets Maia use your own AI provider. | <ul><li>[Studio Pro MCP Server](/refguide/studio-pro-mcp-server/)</li><li>[Maia Plan as MCP Server](/developerportal/maia-plan-mcp/)</li><li>[Custom AI provider](/refguide/maia-make/#custom-provider) </li>   |
-| Operate and evolve | Summarizes application logs, organizes end-user feedback, and changes existing documents for new requirements. | <ul><li>[AI Log Summary](/developerportal/maia-operate/ai-log-summary/) (beta)</li><li>[Maia for Feedback](/portal/maia/#maia-capabilities-in-mendix-portal)</li><li> [Maia Make](/refguide/maia-make/)</li> |
+| Operate and evolve | Summarizes the status of your environments, organizes end-user feedback, and changes existing documents for new requirements. | <ul><li>[Status Summary and Root Cause Analysis](/developerportal/maia-operate/status-summary-root-cause-analysis/) (beta)</li><li>[Maia for Feedback](/portal/maia/#maia-capabilities-in-mendix-portal)</li><li> [Maia Make](/refguide/maia-make/)</li> |
 
 ## Ways to Work with Maia {#ways-to-work}
 
@@ -142,7 +142,8 @@ For an overview of how these options work together, see [Using Maia with Externa
 
 ## Maia in Mendix Cloud
 
-[Maia Operate](/developerportal/deploy/maia-operate/) supports the operation stage of the lifecycle for apps that run on Mendix Cloud. For example, AI Log Summary, which is in Public Beta, gives you an AI-generated overview of the log activity of an environment. 
+[Maia Operate](/developerportal/deploy/maia-operate/) supports the operation stage of the lifecycle for apps that run on Mendix Cloud. For example, Status Summary and Root Cause Analysis, which is in Public Beta, gives you a plain-language summary of the health of an environment and helps you find the cause of problems.
+
 
 ## Maia in Private Mendix Platform
 

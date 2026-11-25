@@ -253,11 +253,11 @@ To fix CE1154, make sure that the snippet call is placed in a data container whi
 
 ### Error Code: CE1570
 
-CE1570 error message: *The selected snippet {Name of the snippet} expects an object of type {type of object}, which is not available here.*
+CE1570 error message: *The selected snippet {Name of the snippet} expects an argument of type {type of argument}, which is not available here.*
 
-You get CE1570 if the snippet has a snippet parameter that expects an object of a particular type to be passed to it. This error occurs when the snippet is called from another page, layout, or snippet which does not have this object available.
+You get CE1570 if the snippet has a snippet parameter that expects an argument of a particular type, such as an object or a primitive value like a string, and no argument is available for it. This error occurs when the snippet is called from another page, layout, or snippet which does not have a matching object or variable available, and no expression is configured for the argument.
 
-To fix CE1570, make sure that the object is passed correctly in the snippet settings of the snippet call.
+To fix CE1570, make sure that the argument is passed correctly in the snippet settings of the snippet call. Select an available variable of the correct type, or configure an expression. For more information, see [Passing Arguments](/refguide/snippet-call/#passing-arguments) in *Snippet Call*.
 
 ## Data Consistency Errors
 

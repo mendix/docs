@@ -1,0 +1,20 @@
+# Mendix custom rule: Repeated words
+# Replaces Vale.Repetition, which flags too many legitimate repeats (version placeholders such as x.x, bold labels followed by the same word)
+extends: existence
+message: "'%s' is repeated."
+level: error
+ignorecase: true
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: edit
+  params:
+    - regex
+    - '^(\S+)\s+\S+$'
+    - '$1'
+tokens:
+  - '\b(the|a|an|is|as|of|which|that|it|be|with|by|at)\s+\1\b'

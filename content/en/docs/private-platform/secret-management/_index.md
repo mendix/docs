@@ -3,6 +3,8 @@ title: "Configuring Secret Management for Private Mendix Platform"
 url: /private-mendix-platform/secret-management/
 description: "Documents the configuration of secret management for the Private Mendix Platform."
 weight: 32
+no_list: false 
+description_list: true
 ---
 
 ## Introduction

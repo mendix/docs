@@ -1,14 +1,13 @@
 # Vale Setup Guide
 
-<!-- vale off -->
-
 Vale is configured but needs to be installed locally before you can use it in VS Code. This guide walks you through setup.
 
 ## Why Install Locally?
 
-* **Immediate feedback** - See violations as you write, not after pushing
-* **Faster iteration** - Fix issues before creating a PR
-* **More feedback** - See suggestions and warnings locally on the entire file; the GitHub Action is configured to show only errors on changed lines.
+* **Immediate feedback** – See violations as you write, not after pushing.
+* **Faster iteration** – Fix issues before creating a PR.
+* **More feedback** – See suggestions and warnings locally on the entire file; the GitHub Action is configured to show only errors and warnings (not suggestions) on changed lines (not the entire file).
+* **LLM integration** – If you're using Claude to edit locally, it picks up on issues flagged by Vale, which results in more consistent enforcement. You can also use Claude to efficiently evaluate and fix the flagged Vale issues.
 
 **Note:** Even without local installation, your PRs will be checked automatically by a GitHub Action: [.github/workflows/vale.yml](../.github/workflows/vale.yml).
 
@@ -51,6 +50,8 @@ After installing Vale:
    vale --version
    ```
 
+   Vale 3.20 or later is required. If you have an older version, see [Updates](#updates).
+
 2. **Sync the Microsoft Style Guide rules:**
 
    Navigate to the root of your docs repository (for example, `cd ~/docs`), then run:
@@ -68,8 +69,14 @@ After installing Vale:
    - Restart VS Code.
    - Open any `.md` file in `content/en/docs/`.
       - Violations show as squiggly underlines in the file and appear in the **Problems** tab in the bottom pane.
-      - Many Vale rules support automatic fixes—hover over an underlined issue and click **Quick Fix** or click the lightbulb icon next to flagged text in the **Problems** tab.
+      - Many Vale rules support automatic fixes—hover over an underlined issue and click **Quick Fix** or click the light bulb icon next to flagged text in the **Problems** tab.
       - Save changes to rerun the linter.
    - If desired, you can adjust the extension's settings in VS Code to show a different minimum alert level. For example, if you set `minAlertLevel` to `warning`, it will report only warnings and errors, not suggestions.
 
 4. **If you have open PRs without the Vale configuration files:** Merge `development` into your branch.
+
+## Updates
+
+To update the rules, merge `development` into your branch and run `vale sync` in the root of the docs repository. The Microsoft rules are maintained in https://github.com/vale-cli/Microsoft, and `.vale.ini` pins the version that `vale sync` installs.
+
+To update Vale, run `brew upgrade vale` on macOS. On Windows, download the latest version from [the releases page](https://github.com/vale-cli/vale/releases) and replace `vale.exe`. Vale 3.20 or later is required.

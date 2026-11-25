@@ -23,7 +23,7 @@ This pane consists of the following:
 
 The top bar of the top level of the **Changes** pane consists of various buttons:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-bar.png" alt="Top Bar of the Changes Pane" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-bar.png" alt="Top Bar of the Changes Pane" >}}
 
 The buttons allow you to perform the following actions:
 
@@ -33,6 +33,10 @@ The buttons allow you to perform the following actions:
 * **Pull** – retrieves latest changes from the repository (for more information on the pull concept, see the [Pull](/refguide/version-control/glossary/#pull) section in *Version Control*) 
 * **Commit** – commits your changes to the repository and starts a new revision (for more information on the commit concept, see the [Commit](/refguide/version-control/glossary/#commit) section in *Version Control*)
 * **History** – opens the **History** pane that shows the changes made on the current development line of the app (for more information on history, see [History](/refguide/history-dialog/))
+* **Refresh** – refreshes the pane
+* **Maia only** – shows only changes made by Maia
+* **All changes** *(default)* – shows both manual and Maia changes
+* **Show on disk changes** – shows you changes in the third party files only
 
 The **Back** and **Go to** buttons are common throughout all the levels, while other buttons will only apply to a specific one.
 
@@ -40,10 +44,12 @@ The **Back** and **Go to** buttons are common throughout all the levels, while o
 
 The top level of the **Changes** pane is a grid listing changed documents, for example, a page or a nanoflow:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-level.png" alt="Top Level of the Changes Pane" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/changes-pane/changes-top-level.png" alt="Top Level of the Changes Pane"  >}}
 
 The grid contains information on the following items:
 
+* **Maia icon** – when Maia has edited at least one document, a Maia icon column appears in the grid and marks the documents that are edited by Maia
+	{{% alert color="info" %}}When Maia adds a new document and you commit without explicitly keeping or undoing the Maia changes, the commit succeeds. However, the new document can still appear as **Modified** in the **Changes** pane afterward, even though it contains no further changes. Refreshing or reopening the app resolves this.{{% /alert %}}
 * **Status** – shows the type of changes applied to the document. The status can be one of the following:
     * **Added** – a new document was created; indicated with a green circle
     * **Modified** – changes to an existing document were made, such as adding or deleting elements or changing element properties; indicated with a yellow circle
@@ -84,6 +90,12 @@ The toolbar at this level contains the following buttons:
 * **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
 
 For text-based properties, you can double-click a property row to open the [File Differences Viewer](/refguide/file-diff-viewer/), which shows a detailed side-by-side comparison of the old and new values. To compare file-level changes at the top level, double-click a file row or right-click and select **Compare with original**.
+
+If Maia has edited the document, a Maia icon column appears in the element grid.
+
+{{% alert color="info" %}}
+If Maia has edited a document, the Maia icon marks all changed elements in the document, whether Maia or you made the changes.
+{{% /alert %}}
 
 The left side of the grid contains the following columns:
 
@@ -151,3 +163,4 @@ The left and right panes will contain the same information as in [Zoomed-In Leve
 * [File Differences Viewer](/refguide/file-diff-viewer/)
 * [Comparison Pane](/refguide/comparison-pane/)
 * [Comparing Revisions](/refguide/comparing-revisions/) 
+* [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)

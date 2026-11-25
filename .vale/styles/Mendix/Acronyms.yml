@@ -1,86 +1,56 @@
-extends: conditional
+# Extends Microsoft.Acronyms (requires Vale 3.20 or later).
+# Ensures that the existence of 'first' implies the existence of 'second'.
+# Link text is excluded from the scope (& ~link), so acronyms that appear only as link text aren't flagged (but also aren't counted as definitions).
+extends: Microsoft.Acronyms
 message: "Define '%s' on first use."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#acronyms-and-initialisms
-level: suggestion
-ignorecase: false
 scope:
-  - paragraph
-  - heading
-  - list
-  - table
-  - blockquote
-# Ensures that the existence of 'first' implies the existence of 'second'.
-# Known issue: Doesn't recognize hyperlinks for acronym definitions
-# Known issue: Doesn't recognize CLOB (Character Large Object) always expects definition first—"Character Large Object (CLOB)" even if acronym is more common than definition
+  - paragraph & ~link
+  - heading & ~link
+  - list & ~link
+  - table & ~link
+  - blockquote & ~link
 # Modified from Microsoft.Acronyms to accept sentence-case definitions (e.g., "personal access token (PAT)" not just "Personal Access Token (PAT)")
-first: '\b([A-Z]{3,5})\b'
-second: '(?:\b[A-Za-z][a-z]+ )+\(([A-Z]{3,5})\)'
-# ... with the exception of these:
-exceptions:
-  - API
-  - ASP
+# and plural definitions (e.g., "personal access tokens (PATs)")
+second: '\(([A-Z]{3,5})s?\)'
+# ... with the exception of these (and the Microsoft.Acronyms exceptions):
+exceptions+:
+  - ATS
+  - AWS
   - BTP
-  - CLI
-  - CPU
-  - CSS
-  - CSV
-  - DEBUG
-  - DOM
-  - DPI
-  - FAQ
-  - GCC
-  - GDB
-  - GET
+  - DNS
+  - GCP
   - GIF
-  - GPU
-  - GTK
-  - GUI
   - HANA
-  - HTML
-  - HTTP
-  - HTTPS
-  - IDE
-  - JAR
+  - IAM
   - JDBC
   - JPEG
   - JPG
-  - JSON
-  - JSX
-  - LESS
-  - LLDB
-  - LTS
+  - JVM
+  - MCP
   - MDA
+  - MIME
   - MPR
-  - MTS
-  - NET
-  - NOTE
-  - NVDA
-  - OSS
-  - PATH
-  - PDF
-  - PHP
+  - NGINX
+  - OIDC
+  - OQL
   - PNG
-  - POST
-  - RAM
-  - REPL
   - REST
-  - RSA
+  - SAML
   - SAP
-  - SCM
-  - SCSS
-  - SDK
-  - SQL
-  - SSH
-  - SSL
-  - SVG
-  - TBD
-  - TCP
-  - TODO
-  - URI
-  - URL
-  - USB
-  - UTF
-  - XML
-  - XSS
-  - YAML
-  - ZIP
+  - SMS
+  - SMTP
+  - SOAP
+  - SSO
+  - TLS
+  - UTC
+  - UUID
+
+# Flagged by Mendix.Uppercase, so don't flag them here
+  - MUST
+  - NEVER
+  - NOT
+  - ONLY
+
+# Part of the NOT FOUND status text, which Mendix.Uppercase allows
+  - FOUND

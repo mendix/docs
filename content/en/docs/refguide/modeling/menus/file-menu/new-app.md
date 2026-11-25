@@ -20,8 +20,11 @@ To create a new app, follow these steps:
     1. Open the **File** menu in the top bar > **New App**.
     2. Click **Create New App** on the Studio Pro landing page.
 
-2. In the **My Apps** tab, select a starting point (an app template).
-3. Click **Use this app**.
+2. In the **Create New App** dialog box, select a starting point:
+    * **Create a new app in the Mendix Portal**
+    * **Create a new app using a blank template**
+    * **Create a new app using Maia**
+3. Click **Finish**.
 4. In the **App Settings** dialog box, select the settings for your app and click **Create app**. For more information on app settings, see the [App Settings](#app-settings) section. 
 
 The new app is created and opened. 

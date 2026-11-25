@@ -198,7 +198,7 @@ To link a knowledge base to an agent, use the **Knowledge bases** section in Age
 In the knowledge base entry:
 
 * Select the configured knowledge base document in the **Knowledge base**.
-* In **Collection**, select one of the available collections from the dropdown. Alternatively, type or paste a collection name to reference a collection that does not exist yet.
+* In **Collection**, select one of the available collections from the drop-down list. Alternatively, type or paste a collection name to reference a collection that does not exist yet.
 * Provide **Name** and **Description** so the LLM can determine when to use this knowledge base. This serves the same purpose as naming tools.
 * Optionally configure retrieval settings:
     * **Max results** controls the maximum number of chunks returned in a single retrieval.

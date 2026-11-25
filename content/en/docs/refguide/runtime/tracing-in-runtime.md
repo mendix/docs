@@ -36,6 +36,7 @@ The runtime generates spans for the following:
 * Microflow execution within the runtime, including sub-microflow calls
 * Microflow loops and loop iterations
 * Execution of task queue tasks
+* [Change Data Capture (CDC) publishing](/refguide/change-data-capture/#tracing)
 
 ## Configuration
 

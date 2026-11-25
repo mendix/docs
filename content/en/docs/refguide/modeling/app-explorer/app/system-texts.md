@@ -32,3 +32,7 @@ In the [App Settings](/refguide/project-settings/), you can manage the available
 Some system texts have parameters that can be inserted into the text. 
 
 For example, if you delete items in a data grid, the following question will appear: 'Delete {1} items?'. At the position of the text {1} the first parameter will be inserted. In this case, the parameter is the number of objects that are selected for deletion. You are not required to use the parameter and the text 'Delete these items?' would also be a valid text.
+
+## Overriding System Texts for a Widget
+
+System texts apply to the whole app but may be overridden per widget that uses them. For more information, see the [Overriding System Texts](/refguide/common-widget-properties/#override-system-texts) section in *Properties Common in the Page Editor*.

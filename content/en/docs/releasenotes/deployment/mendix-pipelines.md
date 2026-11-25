@@ -12,6 +12,22 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 ## 2026
 
+### Nov 19, 2026
+
+#### New Features
+
+* We have added support for duplicate steps in Mendix Pipelines. You can now add multiple instances of the same step, such as **Deploy**, **POST Request**, or **GET Request**, to a single pipeline. For more information, refer to [Mendix Pipeline Steps](/developerportal/deploy/mendix-pipelines/#pipeline-steps).
+
+### Oct 29, 2026
+
+#### New Features
+
+* POST and GET request steps now support [variable concatenation](/developerportal/deploy/configuring-post-get-request-steps/#variable-concatenation), allowing you to combine static text with one or more pipeline variables using the `{{variableName}}` syntax.
+
+#### Improvements
+
+* In POST and GET request steps, the **Request URL** field replaces **Base URL path** and **Additional URL path**.
+
 ### Aug 06, 2026
 
 #### New Features

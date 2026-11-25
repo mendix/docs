@@ -49,7 +49,7 @@ The rows of the data grid can be sorted using the `Sort order` property. It is o
 
 ### Data Source Section {#data-source}
 
-The data source determines which objects will be shown in a data grid. For general information on data sources, see [Data Sources](/refguide10/data-sources/).
+The data source determines which objects will be shown in a data grid. For general information on data sources (and details on their respective **Entity (Path)**, **Constraints**, **Show Search Bar**, and **Wait for Search** properties), see [Data Sources](/refguide10/data-sources/).
 
 #### Type
 

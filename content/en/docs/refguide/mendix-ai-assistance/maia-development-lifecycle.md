@@ -152,6 +152,7 @@ Maia helps in the following ways:
 
 * [Best Practice Recommender](/refguide/best-practice-recommender/) – Use the Best Practice Recommender to inspect your app model against Mendix best practices. It detects anti-patterns, explains their impact, and in some cases fixes them automatically. 
 * Maia Make – Maia Make explains and solves consistency errors, suggests improvements to existing documents, and helps you refactor. In Studio Pro 11.9 and above, Maia can remove elements as part of a refactoring.
+* UI testing – In Studio Pro 11.16 and above, Maia can test the running app in the browser. For more information, see the [Maia Make General Capabilities](/refguide/maia-make/#general-capabilities) section of *Maia Make Capabilities*.
 
 Use these capabilities on all documents, including the documents that Maia generates.
 
@@ -172,7 +173,7 @@ Maia supports these scenarios in the following ways:
 
 * [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) – The Studio Pro MCP Server exposes Maia capabilities to external AI agents through the Model Context Protocol (MCP). Changes appear in Studio Pro in real time. 
 * [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/) – Maia Plan as MCP Server gives external AI agents read-only access to the scope and solution of a Maia Plan project. 
-* **Custom AI provider** – The Custom AI provider feature lets Maia use your own LLM provider. This feature is available in Studio Pro 11.12 and above as a beta feature. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section of *Maia Make Capabilities*.
+* **Custom AI provider** – The Custom AI provider feature lets Maia use your own LLM provider. This feature is available in Studio Pro 11.12 and above. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section of *Maia Make Capabilities*.
 
 For an overview of how these options work together, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
 

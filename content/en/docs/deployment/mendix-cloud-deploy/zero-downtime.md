@@ -32,7 +32,7 @@ No special setup is required to enable ZDT. When your application and deployment
 
 When an eligible change is deployed with ZDT, Mendix Cloud orchestrates the following steps:
 
-1. **Initiate deployment** – The Technical Contact triggers deployment with **Deploy without Downtime** in Mendix Cloud.
+1. **Initiate deployment** – The Technical Contact triggers deployment with **Deploy without downtime** in Mendix Cloud.
 2. **Current version active** – The existing application version continues to serve all user traffic without interruption.
 3. **New version spin-up** – A new instance of your application starts, adding the updated configuration, in the background. This new version prepares its configuration.
 4. **Health check & readiness** – Once the new instance is fully operational and passes all internal health checks, it reports its readiness to Mendix Cloud.
@@ -86,6 +86,7 @@ Zero-downtime deployment will not apply under the following conditions:
 * Upgrading to a new Mendix Runtime version
 * Deploying a new MDA with changes outside the [model compatibility list](/developerportal/deploy/zero-downtime/#zdt-compatibility)
 * Changes involve database structure updates
+* Changes to the application performance monitoring (APM) configuration. The deployment happens with downtime, even if you select the **Deploy without downtime** option.
 
 For these scenarios, the Cloud Portal will display the standard restart message before deployment.
 
@@ -99,6 +100,7 @@ The table below illustrates the expected behavior for various types of deploymen
 | Adjusting CPU or memory settings                        | App remains available while the update completes.                    |
 | Uploading a new MDA or changing the data model          | Application restarts briefly (standard restart required).            |
 | Upgrading to a new Mendix Runtime version               | Standard restart required.                                           |
+| Changing APM configuration                              | Standard restart required. |
 
 ### Before Deployment
 

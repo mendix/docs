@@ -173,13 +173,12 @@ In case of errors, the exit code consists of three digits `XYZ`:
     * 7 – Module can't be loaded.
     * 8 – Import of a module failed. Resulting project can't be saved.
     * 9 – File does not exist.
-    * 10 – `--import-mode replace` was specified but no module with that name exists in the project (Studio Pro 11.14 and 11.15 only).
-    * 11 – The *.mpk* file has an unrecognized extension.
-    * 12 – `--original-mpk` was not provided for `--import-mode update`.
-    * 13 – The three-way merge resulted in unresolved conflicts and the project has been reverted. Retry with `--conflict take_mine` or `--conflict take_theirs` to resolve the conflicts automatically.
-    * 14 – `--import-mode update` was specified but no module with that name exists in the project.
-    * 15 – A previous module update was interrupted. Revert the project and delete the `.mendix-cache/updates/<module-name>` directory before retrying.
-    * 16 – A module update is already in progress. Commit or revert the pending changes and delete the `.mendix-cache/updates/<module-name>` directory before retrying.
+    * 10 – The *.mpk* file has an unrecognized extension.
+    * 11 – `--original-mpk` was not provided for `--import-mode update`.
+    * 12 – The three-way merge resulted in unresolved conflicts and the project has been reverted. Retry with `--conflict take_mine` or `--conflict take_theirs` to resolve the conflicts automatically.
+    * 13 – `--import-mode update` was specified but no module with that name exists in the project.
+    * 14 – A previous module update was interrupted. Revert the project and delete the `.mendix-cache/updates/<module-name>` directory before retrying.
+    * 15 – A module update is already in progress. Commit or revert the pending changes and delete the `.mendix-cache/updates/<module-name>` directory before retrying.
 
 For example:
 

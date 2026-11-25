@@ -98,6 +98,23 @@ There are no fixed capacity tiers. You choose any Cloud Token amount that matche
 Unused GenAI Units at the end of a bundle month do not carry over. Your balance is refilled at the start of each new bundle month.
 {{% /alert %}}
 
+## Guardrails {#guardrails}
+
+Text generation resources can have an optional guardrail that filters prompts and model responses. A guardrail can detect and block prompt attacks, and block or mask personally identifiable information (PII).
+
+A Company Admin enables guardrails in the Control Center, and resource members configure them in the Mendix Cloud GenAI Portal. For more information, see [Guardrails for Mendix Cloud GenAI Resources](/agents/mx-cloud-genai/guardrails/).
+
+### Guardrail GenAI Unit Rates {#guardrail-genai-unit-rates}
+
+An active guardrail consumes GenAI Units from the resource's balance, in addition to the GenAI Units that the model consumes. Guardrail consumption is measured in text units. A text unit contains up to 1,000 characters. Longer text is split into multiple text units.
+
+The guardrail evaluates both the prompt and the model response. Each filter type that you configure is charged once for the text it evaluates, regardless of how many settings it has. For example, a sensitive information filter with two PII types is charged once at the sensitive information filter rate, not once per PII type. The prompt attacks filter is charged at the content filter rate. The rates are as follows:
+
+| Guardrail Filter Type | GenAI Units per 1K Text Units |
+| --- | --- |
+| Content filters | 4.88 |
+| Sensitive information filters | 3.26 |
+
 ## Accessing GenAI Resources
 
 Company Admins can obtain access to GenAI resources through a self-service capability, enabling them to provision, deprovision, and manage resources independently from the Control Center. This enables faster provisioning and reduces manual dependency.
@@ -159,6 +176,7 @@ Compliance with these terms is mandatory to maintain access to the services.
 The [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/) allows easy access to manage your resources.
 
 * Monitor GenAI Unit consumption and input/output token usage for Text and Embeddings Generation Resources.
+* Configure and manage guardrails for Text Generation Resources.
 * Manage content for Knowledge Bases.
 * Manage team access to all resources, including assigning the Technical Contact.
 * Create and manage connection keys to connect your apps with all resources.

@@ -102,8 +102,8 @@ Each BPMN element is marked with a support level indicator:
 * Event Subprocess – [{{< icon name="controls-stop-filled" color="green" >}} Supported](/refguide/bpmn-coverage/#subprocesses)
 * Transaction Subprocess – {{< icon name="remove-circle-filled" color="red" >}}
  Not Supported
-* Ad-hoc Subprocess – {{< icon name="remove-circle-filled" color="red" >}}
- Not Supported
+* Ad-hoc Subprocess – {{< icon name="controls-stop-filled" color="blue" >}}
+ Planned
 
 ### Swimlanes
 

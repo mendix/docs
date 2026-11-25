@@ -54,6 +54,13 @@ The following details are displayed for each component:
     If a component is marked as private, that means the component is your company's private Marketplace content. For details on how this is configured, refer to the [Adding New Marketplace Content](/appstore/submit-content/#adding) section of *Uploading to the Marketplace*. This content can be shared with [guests](#guests).
 * **Support Type** – The category of support Mendix offers for the component.
 * **Component Type** – The type of component. For details, refer to the [Types of Marketplace Components](/appstore/#components-type) section in *Marketplace*.
+* **Issues Found** – This columns shows badges for the following scenarios:
+
+    * If the component has vulnerabilities.
+    * If the component is compatible with React or with Dojo.
+
+    Click **View Security Findings** in the **Actions** menu to open a page with details.
+
 * **Company Group** – The [company groups](#content-groups) that the component belongs to, if any.
 * **Last Updated On** – The date when the component was last updated.
 * **Latest Version** – The latest version of the component.
@@ -73,6 +80,8 @@ The following details are displayed for each component:
     * **Manage Guests** – Add guests who can download private components. A guest is a Mendix Platform user from outside your organization who can download the selected private [content](#group-content) of this group.     
         When you click **Manage Guests**, the **Guests** window is displayed for that component. Click **Add Guests**, and add the email addresses of the guests you want to invite in the **Guest Email Address** field. The guests you added receive the download link via email.    
         The guests can then see all the private Marketplace content shared with them on their [Shared with Me](#shared-with-me) page.
+
+    * **View Security Findings** – This option is only displayed if the component has vulnerabilities, as indicated in the **Issues Found** field.
    
     * **Deprecate Component** – Deprecate the component, and select alternatives.    
         For details on deprecating components, refer to [Deprecating Marketplace Content](/appstore/deprecate-content/).

@@ -1,6 +1,6 @@
 ---
-title: "Build a Release Version of a Pluggable Widget"
-linktitle: "3. Release Pluggable Widget"
+title: "Build a Pluggable Widget: Part 3 (Release Version)"
+linktitle: "Build a Pluggable Widget: Part 3"
 url: /howto/extensibility/build-a-release-version-of-a-pluggable-widget/
 weight: 30
 description: "Describes how to create a release build of a pluggable widget that you can bundle with a module or publish to the Marketplace."
@@ -8,21 +8,23 @@ description: "Describes how to create a release build of a pluggable widget that
 
 ## Introduction
 
-While you develop a pluggable widget, you use `npm start` or `npm run build`. These commands create a development build, which is meant for testing. Before you bundle your widget with a module or publish it to the Mendix Marketplace, you need to create a release build.
+While you develop a pluggable widget, you will regularly use `npm start` or `npm run build`. These commands create a development build, which is meant for testing. Before you bundle your widget with a module or publish it to the Mendix Marketplace, you need to create a release build.
 
 {{% alert color="warning" %}}
 Do not distribute a development build. It includes source maps and unminified code, which makes the widget much larger and slower to load. Always use a release build for modules and Marketplace content.
 {{% /alert %}}
 
-This how-to explains how a release build differs from a development build, how to create one, and how to find and test the result. It applies to both web and native pluggable widgets.
+This document explains how a release build differs from a development build, how to create a release build, and how to find and test your results. This document applies to both web and native pluggable widgets.
 
 ## Prerequisites
 
-A pluggable widget created with the Pluggable Widget Generator. For more information, see [Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one/) or [Build a Pluggable Native Widget](/howto/extensibility/build-native-widget/).
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Have a pluggable widget created with the Pluggable Widget Generator. For more information, see [Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one/) or [Build a Pluggable Native Widget: Part 2](/howto/extensibility/build-native-widget/).
 
 ## Differences Between a Development Build and a Release Build
 
-| | Development build | Release build |
+| Development build | Release build |
 | --- | --- | --- |
 | Source maps | Included | Not included |
 | Code | Not minified | Minified and transpiled |
@@ -47,7 +49,7 @@ Use this *.mpk* file to publish your widget to the Marketplace or to include it 
 The release build also copies the *.mpk* file to the **widgets** folder of your Mendix app, the same way a development build does.
 
 {{% alert color="info" %}}
-Copying the release build to your app requires Pluggable Widgets Tools 11.16.1 or above. With an earlier version, copy the *.mpk* file to the **widgets** folder of your app manually. For more information on updating, see [Update Pluggable Widgets Tools](/howto/extensibility/update-pluggable-widgets-tools/).
+Copying the release build to your app requires Pluggable Widgets Tools 11.16.1 or above. If you are using an earlier version of Pluggable Widget Tools, you must copy the *.mpk* file to the **widgets** folder of your app manually. For more information on updating, see [Update Pluggable Widgets Tools](/howto/extensibility/update-pluggable-widgets-tools/).
 {{% /alert %}}
 
 ## Testing the Release Build

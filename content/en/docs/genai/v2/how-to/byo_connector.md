@@ -47,7 +47,8 @@ If your provider's API is identical or very similar to OpenAI's, you may be able
 * Small changes in the request/response payload (for example, extra or fewer fields, slightly different JSON structure)
 * Modifying the base URL to align with the provider's endpoint structure
 * Adding additional query parameters in the URL or payload
-* Adapting the authentication mechanism (for example, switching from API Key to OAuth) 
+
+For token-based authentication, such as OAuth, you do not need to change the authentication mechanism. The OpenAI connector can get the HTTP headers that authorize a request from a microflow before every request. For more information, see [Authenticating with a Microflow](/agents/agents-kit-2/reference-guide/external-connectors/openai/#get-credentials-microflow).
 
 This approach reuses a well-structured connector, minimizes development effort, and ensures compatibility with [ConversationalUI](/agents/agents-kit-2/reference-guide/conversational-ui/) and [GenAICommons](/agents/agents-kit-2/reference-guide/commons/).
 
@@ -121,6 +122,8 @@ To enable seamless model invocation, Mendix recommends creating an entity to sto
 {{< figure src="/attachments/genai/howto-byo/EchoConnector_DomainModel.png" alt="" >}}
 
 When storing sensitive authentication data, use encryption methods to keep the application secure. The Echo connector implementation in the GenAI Showcase App provides an example of this setup.
+
+Some credentials, such as short-lived OAuth access tokens or tokens that are specific to the current user, change more often than an administrator can update a `Configuration` object. For these cases, consider letting app developers select a microflow that returns the credentials, and run it before every request to the provider. The OpenAI connector uses this pattern: its `GetCredentialsMicroflow` returns a list of `System.HttpHeader` objects, which the connector adds to each request. To store the name of such a microflow, you can use the `GetCredentialsMicroflow` attribute of the `GenAICommons.ConsumedModelResource` entity. For more information, see [Authenticating with a Microflow](/agents/agents-kit-2/reference-guide/external-connectors/openai/#get-credentials-microflow) in the OpenAI connector documentation.
 
 #### Microflow
 

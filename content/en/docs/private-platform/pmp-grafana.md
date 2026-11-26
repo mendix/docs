@@ -183,7 +183,7 @@ For AKS clusters, you can use Azure Monitor instead of Loki for logs and events.
 
 You must configure the following prerequisites:
 
-* Container Insights must be enabled on the AKS cluster and condifured to send pod logs (`ContainerLogV2`) and events (`KubeEvents`) to a **Log Analytics** workspace.
+* Container Insights must be enabled on the AKS cluster and configured to send pod logs (`ContainerLogV2`) and events (`KubeEvents`) to a **Log Analytics** workspace.
 * The Azure Monitor data source must be added in Grafana, with the type `grafana-azure-monitor-datasource` and the AKS cluster subscription.
 * Authentication of the data source must be configured correctly, using any authentication method that Grafana supports for Azure Monitor. The identity which Grafana uses to authenticate must be able to read the Log Analytics workspace and the AKS cluster resource. You are responsible for selecting and configuring the authentication method. For more information, refer to the [Grafana documentation](https://grafana.com/docs/grafana/latest/datasources/azure-monitor/configure/).
 

@@ -52,7 +52,7 @@ Because tool content is not evaluated, a guardrail does not block or mask sensit
 
 To configure a guardrail, do the following:
 
-1. On the **Guardrails** tab, click **Configure Guardrails**.
+1. On the **Guardrails** tab of a resource that has guardrails enabled, click **Configure Guardrails**.
 2. In **Filter Details**, enter the following information, then click **Next**:
     * **Guardrail name** – The name of the guardrail, up to 50 characters. This name is shown in the Portal only. This field is required.
     * **Description** – An optional description of the guardrail, up to 200 characters.

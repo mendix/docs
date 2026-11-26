@@ -19,7 +19,7 @@ Experimental features are not covered by your SLA, and Mendix can change or remo
 
 Agent Evaluation lets you test your agent systematically and improve it iteratively without leaving Studio Pro. You define test cases that represent realistic inputs, run them against your agent, and review the results. An LLM judge evaluates each response and reports whether it passed or failed, and why. You decide what counts as a pass by using the built-in evaluator or by defining your own. Each run produces suggestions for improving the system prompt, which you can apply in one click.
 
-Agent Evaluation is available for Task agents and Chat agents that you define in Studio Pro.
+Agent Evaluation is available for Task agents and Chat agents that you define in Studio Pro. This feature is available in Agent Editor version 2.8.0 and above.
 
 To evaluate an agent, follow this workflow:
 
@@ -33,7 +33,7 @@ Every completed run is saved. After a few iterations, you can [compare runs](#ru
 
 ### Prerequisites {#evaluation-prerequisites}
 
-Complete the [First-Time Setup](/agents/agents-kit-2/reference-guide/agent-editor/#setup) of Agent Editor, and make sure the conditions for [testing an agent](/agents/agents-kit-2/reference-guide/agent-editor/#test-agent) are met.
+Make sure you have Agent Editor version 2.8.0 or above. Complete the [First-Time Setup](/agents/agents-kit-2/reference-guide/agent-editor/#setup) of Agent Editor, and make sure the conditions for [testing an agent](/agents/agents-kit-2/reference-guide/agent-editor/#test-agent) are met.
 
 After you define the agent, make sure the app is running locally. If you change the agent afterward, the **Evaluate** view shows an **Unsaved agent changes detected** banner and new runs are unavailable. To synchronize the agent, run the local app again.
 

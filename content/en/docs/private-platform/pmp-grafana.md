@@ -257,7 +257,7 @@ To configure a Private Mendix Platform cluster for Grafana, perform the followin
 
 2. Provide the Grafana configuration.
 
-    1. Click **Register new cluster** and specify the **Cluster Type**.
+    1. Either edit an existing cluster, or click **Register new cluster** and specify the **Cluster Type**.
     2. In the **Logging and Monitoring** section, set **Use Grafana and Loki** and **Use Prometheus** to **Yes**.
     3. Fill in the following information:
 

@@ -13,15 +13,14 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately, as other deployment targets are also dependent on the buildpack.
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
+
 ## November 2026
 
 ### November 29, 2026
 
 #### New Features
 
-* Custom domains now support ECDSA certificates (#169326, #288664)
-  
-## November 2026
+* [Custom domains](/developerportal/deploy/custom-domains/) now support Elliptic Curve Digital Signature Algorithm (ECDSA) certificates, which allow you to use the `TLS_ECDHE_ECDSA_*` cipher suites in the Mendix Cloud Transport Layer Security (TLS) configuration (#169326, #288664).
 
 ### November 25, 2026
 

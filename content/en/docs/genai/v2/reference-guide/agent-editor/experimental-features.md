@@ -7,9 +7,13 @@ description: "Agents Kit 2: Reference documentation for experimental features of
 
 ## Introduction
 
-This page describes experimental features of the [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) module. Experimental features are available for you to try and are still under development. Their behavior and user interface can change in later releases.
+This page describes experimental features of the [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) module. Experimental features are available for you to try and are still under development.
 
 Your feedback helps shape these features. To share your experience, use the feedback link in the **Experimental feature** banner or the feedback card in the **Get Started** tab, which you can open from the **Extensions** menu.
+
+{{% alert color="warning" %}}
+Experimental features are not covered by your SLA, and Mendix can change or remove them in any release without guaranteeing backward compatibility. Do not use them in production applications. For more information, see [Release Status](/releasenotes/release-status/).
+{{% /alert %}}
 
 ## Agent Evaluation {#evaluation}
 
@@ -175,7 +179,7 @@ The pass rate trend is computed over the whole test set, so a run of only a few 
 
 ### Using Maia for Evaluation {#evaluation-maia}
 
-Maia can help you set up your evaluation suite. Describe what you want to check, and Maia can create evaluators with pass and fail criteria, and test sets with test cases, for example happy-path and adversarial scenarios. For Chat agents, Maia also writes the user message of each test case. Maia sets a ground truth only when you confirm it.
+[Maia](/refguide/maia-make/) can help you set up your evaluation suite. Describe what you want to check, and Maia can create evaluators with pass and fail criteria, and test sets with test cases, for example happy-path and adversarial scenarios. For Chat agents, Maia also writes the user message of each test case. Maia sets a ground truth only when you confirm it.
 
 ### Known Limitations {#evaluation-limitations}
 
